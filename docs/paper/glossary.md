@@ -48,7 +48,7 @@
 
 *   **$\hat{C}_{target}(t)$:** (Definition 21) System’s internal, dynamic estimate of environmental complexity or predictive difficulty, guiding complexity adaptation $C(t)$.
 
-*   **Causality (Postulate 2):** (Section 10.1.1) Defined operationally as the impossibility of constructing paradox-inducing causal loops, which requires the impossibility of controllable deterministic or zero-error faster-than-light (FTL) signaling: no decoder achieves zero error simultaneously across all preregistered Alice contexts in a finite pre-lightcone window. This does not exclude strictly noisy statistical influence with nonzero finite-error information.
+*   **Causality (Postulate 2):** (Section 10.1.1; Theorems 39a--39b) Defined operationally as the finite gate excluding controllable deterministic or zero-error faster-than-light (FTL) signaling: no decoder achieves zero error simultaneously across all preregistered Alice contexts in a finite pre-lightcone window. This does not exclude strictly noisy statistical influence with nonzero finite-error information, provided the regular common-support, no-loop, and current/precision certificates remain satisfied.
 
 *   **Causal Structure:** (Definition P.8.1) The constraint that event $A$ can causally influence event $B$ if and only if $A$'s predictive information can propagate to $B$ through ND-RID channels with correctable error accumulation. Emergent from the finite propagation speed $c$ (Theorem P.8.4 / Theorem 46) and error-correction range of the Golay code structure.
 
@@ -63,6 +63,16 @@
 *   **Complexity Hierarchy:** (Section 2.4.1) Iterative refinement sequence $\{C_{P,n}\}$ used to define $C_P$ self-consistently without presupposing derived physical laws.
 
 *   **Continuum Limit / Operational Continuum Limit:** (Section 11, Appendix F) The finite-resolution effective closure by which the discrete MPU network admits a manifold and AQFT compression at accessible scales. It is not the ontological claim that the substrate becomes an actual real-number continuum. On the $M=24$, $D=4$ shell branch, Theorem 43.5 packages the geometric branch using Appendix C.6d–C.6e, Appendix D.6e, Theorem C.6c, and Theorem 44a under their stated curvature-transfer, finite-core, and quantitative-rigidity hypotheses; Appendix F supplies the algebraic net under the controlled coarse-graining hypotheses of Theorem F.0, with lightcone normalization supplied on the strict single-clock ND-RID branch by Corollary F.1a.
+
+*   **Bordism-Anomaly Spectrum Closure Gate:** (Theorem G.8.4c.0e) The selected gauge algebra is not enough to close the matter spectrum. A chiral matter/defect package is selected only when its total finite anomaly-bordism class vanishes after accepted defect inflow and the response quotient carries a strict PCE minimizer.
+
+*   **Calibration Holonomy:** (Definition X.9.6i.3; Theorem X.9.6i.4) A sector constant is calibration-internal only when it is a registered holonomy or curvature-residual projection of one finite protocol-atlas calibration connection with fixed normalization before validation comparison. Flat calibration locks constants through the same record; nonzero calibration curvature appears only as an explicit residual class.
+
+*   **Finite-Response Bootstrap Strict-Gap Gate:** (Theorem X.8h.14) Spectra, thresholds, OPE coefficients, finite predictive amplitudes, Ward data, anomaly matching, and physical $S$-matrix identifications become joint theorem-level outputs only when they are registered projections of one finite bootstrap response datum with a strict PCE gap.
+
+*   **Modular Recoverability Gravity Gate:** (Corollary 12.5.3j) On the regular KMS/AQFT branch, the recoverability defect $D(\rho_D\Vert\omega_D)-D(\Phi_D\rho_D\Vert\Phi_D\omega_D)$ is nonnegative. The reversible Einstein equation is the zero-curvature branch of the local null recoverability ledger; positive retained curvature enters as an explicit non-equilibrium slack tensor.
+
+*   **Predictive Current Certificate:** (Definition 10.2c; Theorem 39b) A finite transport representation of statistical influence in which Bob's marginal shift is the Bob projection of a retained predictive-current divergence. It is admissible only with the no-zero-error common-support gate, and a thermodynamic precision law is theorem-level only when supplied by a finite Markov/KMS certificate.
 
 *   **Ginsparg-Wilson Chirality Gate:** (Appendix F.10.4a) Finite chiral-regulator rule replacing impossible naive exact lattice chirality with the Ginsparg-Wilson relation and finite index ledger $\operatorname{Tr}(\Gamma_5(1-a_{\mathrm{PU}}D/2))$. It supplies the finite-regulator bridge for chiral anomaly descent and the Appendix R/Y index statements.
 
@@ -379,7 +389,13 @@ It vanishes on SPAP-flat patterns and is unbounded above on the independent-regi
 $$
 \mathcal{E}_{\mathrm{src}}(S,\Delta t)=\sum_j Q_{\mathrm{src}}(S,E_j),
 $$
-where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of reflexive integration and vanishes on SPAP-flat inputs. It is distinct from the baseline operational cost of the predictive loop.
+where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of reflexive integration and vanishes on SPAP-flat inputs. It is distinct from the baseline operational cost of the predictive loop. Source Energy is not stored in the message; it is generated on the receiver side when the receiver integrates the pattern into its own self-model above baseline.
+
+*   **Perspectival Chain Reaction:** (Appendix P.15.5a) A finite cascade in which a compressed symbolic or contextual input changes a predictive agent's model and policy, causing downstream actions or communications that alter other perspectives or redirect ordinary external energy gradients. It is a control cascade, not a free-energy source.
+
+*   **Predictive Kernel / Local Dressing:** (Appendix P.16b.15a) A durable symbol has a retained predictive kernel $K_x$ and a local communicable dressing $D_\Gamma(K_x)$, written $\mathsf S_\Gamma(x)=(K_x,D_\Gamma(K_x))$. The kernel carries the response role; the dressing is the context-local form used for transmission.
+
+*   **Placebo Context:** (Appendix P.8.9a.7.5) An inert or semantically indirect intervention that changes a biological aggregate's physically instantiated context state and thereby shifts a reachable internal physiological channel. The represented proposition's truth value is not itself a causal primitive; the causal object is the encoded context state and its bounded coupling to the channel.
 
 
 *   **PCE-Attractor Orbit:** (Theorem Z.6.3a) The orbit of the PCE-Attractor state $\rho_0 = \frac{1}{a}I_a \oplus 0_b$ under unitary conjugation is $\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(2,8)$, a compact Hermitian symmetric space of complex dimension $ab = 12$ and real dimension $2ab = 24 = M$. This identification provides an independent geometric derivation of the interface mode count.
@@ -395,6 +411,18 @@ where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of refl
     is the unique determinant-compatible block-frame solution (Corollary G.8.4c). This is not a classification of all compact connected subgroups of $U(6)$; irreducible tensor-product embeddings are outside the block-frame admissible family. Theorems G.8.4e and G.8.4e.1 prove that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q \to \mathrm{Gr}(2,8)$ and that the minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$ is the corresponding universal ordered-splitting lift. The quantitative gauge-threshold sector is therefore formulated on $\widetilde X$, where $\pi^*Q$ tautologically splits. Definition G.8.4f.3 fixes a marked Golay-Leech half-swap representative available to the canonical marked branch, while Proposition G.8.4f.5 shows that the unmarked Golay-Leech structure does not force a unique $\mathcal J_G$.
 
 *   **QFI (Quantum Fisher Information):** (Appendix Z, Section Z.5) A fundamental measure of the information content of a quantum state about an unknown parameter, quantifying the maximum achievable precision in parameter estimation. For a state $\rho(\theta)$ parameterized by $\theta$, the QFI $F(\theta)$ bounds estimation precision via the quantum Cramér-Rao bound: $\text{Var}(\hat{\theta}) \ge 1/(nF)$. In the PU framework, the QFI spectrum determines the MPU's information-sensitivity modes.
+
+*   **Predictive Fisher Metric:** (Corollary 23c.1; Corollary 45b) The positive semidefinite tensor $h=\frac14F^Q$ on a retained MPU response-state chart. On pure-state branches it equals the Fubini-Study metric. After quotienting response-null directions it becomes the local identifiable distinguishability metric. It coincides with the positive operational propagation metric only on the finite certificate branch where the same retained protocol family supplies both Fisher distinguishability and the Cheeger propagation quadratic form.
+
+*   **Reflexive Exhaust Ledger:** (Theorem J.4a; Proposition U.2b) The finite entropy-action accounting term $\mathcal X_{\mathrm{ref}}=\sum_e\varepsilon_{\mathrm{phys}}(e)=N_{\mathrm{ref}}\ln2+\mathcal X_{\mathrm{diss}}$ for completed nontrivial SPAP/Evolve updates. In the vacuum sector it can enter only as a finite action factor inside an accepted Appendix U certificate.
+
+*   **Block-Frame Stabilizer Code:** (Corollary G.8.4c.0a.1) The finite-response code whose syndrome is the PCE-selected inactive-sector block decomposition $\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1$. Its capacity-saturating determinant-compatible retained stabilizer algebra is $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$.
+
+*   **Operational Record Consensus:** (Theorem M.4a) The finite record-merging step after perspectival actualization. Born actualization supplies the prior $p(k)$; finite record channels contribute likelihoods $L_r(k)$; the unique KL-minimizing merged record distribution is $q^*(k)\propto p(k)\prod_rL_r(k)^{w_r}$. Byzantine record robustness is a finite-record supermajority condition, not a separate collapse postulate.
+
+*   **Perspectival Simulation Admissibility:** (Theorem M.10.11; Corollary O.4.3a) A simulation, reconstruction, archive, or forecast is admissible for a receiver only when every finite prefix actually integrated by that receiver stays at finite SPAP proximity. The obstruction is receiver-relative and content-relative, not a function of temporal direction or Shannon size.
+
+*   **Predictive Momentum Ledger:** (Corollary Y.1.1; Corollary O.3a.4) The CP-odd, forward-oriented baryon transport sum $\mathcal P_B(\Omega)=\sum_e\chi(e)q_B(e)w(e)$. It vanishes pairwise on CP-symmetric equilibrium branches and becomes nonzero only when the Appendix Y anomaly, CP, out-of-equilibrium, sphaleron, washout, and transport certificates supply unequal paired weights.
 
 *   **QFI Mode Count ($M$):** (Appendix Z, Theorem Z.5, Proposition Z.1) The number of independent information-sensitivity modes in the PCE-Attractor state: $M = 2ab = 2 \times 2 \times 6 = 24$, with per-mode sensitivity $\lambda = 1$. Arises from off-diagonal QFI contributions connecting active ($a = 2$) and inactive ($b = 6$) subspaces. Fixed on the minimal branch and cross-checked by the eight-entry constraint ledger of Theorem Z.12 plus the Niemeier self-counting fixed point of Proposition Z.12.1a. Geometrically, $M = \dim_{\mathbb{R}}(\text{Gr}(2,8))$ equals the real dimension of the PCE-Attractor orbit, providing independent confirmation via differential geometry. It is an internal interface-mode count, not by itself a theorem-level graph degree asserting twenty-four distinct neighboring MPUs.
 
@@ -474,7 +502,7 @@ $$
 
 *   **Postulate 2 (Causality Definition):** (Section 10.1.1) Operational definition of causality preservation requiring the impossibility of deterministic or zero-error FTL signaling in a finite pre-lightcone window across any preregistered Alice context set.
 
-*   **Postulate 3 (Statistical FTL Influence):** (Section 10.3.1) Hypothesis asserting that the CC mechanism acting on entangled systems allows for statistical influence across space-like separations, including a distinct nonlocal/state-mediated branch on which Bob's marginal may shift under late randomization. Compatibility with Postulate 2 is claimed through the endpoint bound (Theorem 39), finite-window zero-error gate on the regular branch (Theorem 39a, Definition 10.2a), and ND-RID information limits.
+*   **Postulate 3 (Statistical FTL Influence):** (Section 10.3.1; Theorem 39b) Branch contract asserting that the CC mechanism acting on entangled systems may allow statistical influence across space-like separations, including a distinct nonlocal/state-mediated branch on which Bob's marginal may shift under late randomization. It is not a theorem-level consequence of the core substrate unless the corresponding protocol and empirical certificates close. Compatibility with Postulate 2 is claimed through the endpoint bound (Theorem 39), finite-window zero-error gate on the regular branch (Theorem 39a, Definition 10.2a), predictive-current no-loop gate when current language is asserted (Theorem 39b), and ND-RID information limits.
 
 *   **Theorem 48a.0 (Local Thermodynamic Equilibrium at Causal Horizons):** (Section 12.1.2) Derives local thermodynamic equilibrium for MPU networks near local causal horizons on the Appendix F/G operational-continuum branch. Theorem 48a sharpens this input by deriving the local Rindler KMS condition and first-order Clausius relation.
 

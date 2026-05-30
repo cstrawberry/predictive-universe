@@ -8,14 +8,14 @@ The PU framework adopts a specific operational definition of causality, focused 
 
 **10.1.1 Postulate 2 (Post 2): Causality as No Deterministic or Zero-Error FTL Signaling**
 
-Within the Predictive Universe framework, causality is defined operationally: it is preserved if and only if it is impossible to construct paradox-inducing causal loops (e.g., grandfather paradox, tachyonic anti-telephone). It is postulated that the construction of such paradoxes requires the ability to send controllable, deterministic information faster than the invariant speed $c$ (derived in Theorem 46). In the finite-window transcript formalization used below, this is enforced by requiring that for any finite pre-lightcone transcript $Y_B^n$ available to Bob and any preregistered Alice context set $\mathcal C$, there is no decoder $D$ achieving zero error simultaneously across all $c\in\mathcal C$, i.e. no $D$ satisfying
+Within the Predictive Universe framework, causality is defined operationally: it is preserved if and only if it is impossible to construct paradox-inducing causal loops (e.g., grandfather paradox, tachyonic anti-telephone). Within this operational postulate, construction of such paradoxes requires the ability to send controllable, deterministic information faster than the invariant speed $c$ (derived in Theorem 46). In the finite-window transcript formalization used below, this is enforced by requiring that for any finite pre-lightcone transcript $Y_B^n$ available to Bob and any preregistered Alice context set $\mathcal C$, there is no decoder $D$ achieving zero error simultaneously across all $c\in\mathcal C$, i.e. no $D$ satisfying
 $$
 P(D(Y_B^n)=c\mid C=c)=1
 \quad
 \text{for every }c\in\mathcal C.
 \tag{60a}
 $$
-Thus Postulate 2 forbids deterministic FTL channels and, in the finite-window transcript formalization, zero-error FTL decoders. It does not by itself forbid strictly noisy statistical influence, finite-error decision advantage, or positive Shannon mutual information when every finite pre-lightcone decoder retains nonzero error probability across the context set.
+Thus Postulate 2 is a finite operational gate: a branch that preserves common support and nonzero finite-window decoder error is causal at this level, while any branch that supplies a zero-error controllable decoder fails the gate. It forbids deterministic FTL channels and, in the finite-window transcript formalization, zero-error FTL decoders. It does not by itself forbid strictly noisy statistical influence, finite-error decision advantage, or positive Shannon mutual information when every finite pre-lightcone decoder retains nonzero error probability across the context set.
 
 **10.2 Derivation of the Consciousness Complexity Causality Constraint**
 
@@ -68,7 +68,7 @@ While deterministic FTL signaling is ruled out by Theorem 39, the proposed CC me
 
 **10.3.1 Postulate 3 (Post 3): Permissibility of Statistical FTL Influence (Three-Branch Statement)**
 
-As a consequence of Hypothesis 3 (CC influence mechanism) combined with quantum entanglement (Proposition 10) within the MPU network (Hypothesis 1), the Predictive Universe framework allows three operationally distinct branches of statistical influence, individuated by *which causal-temporal placement of Alice's context choice* is required to reproduce the predicted statistics.
+As a consequence of Hypothesis 3 (CC influence mechanism) combined with quantum entanglement (Proposition 10) within the MPU network (Hypothesis 1), the Predictive Universe framework allows three operationally distinct branches of statistical influence, individuated by *which causal-temporal placement of Alice's context choice* is required to reproduce the predicted statistics. The label Postulate 3 is a branch contract, not a theorem-level consequence of the core finite predictive substrate: each branch inherits only the status supplied by its no-loop, no-zero-error, protocol, and empirical certificates.
 
 **(i) Local CPTP branch.** If the CC mechanism is implemented by local CPTP channels on Alice's side, then Bob's local marginal $P(b)$ is preserved exactly for all fixed Bob settings, by the standard no-signaling theorem. On this branch, a change in Alice's context $\mathrm{context}_S$ can statistically alter Alice-side local statistics, the joint distribution $P(a,b)$, and conditional distributions $P(b|a)$ that are only accessible after classical comparison of records, but it cannot alter Bob's unconditional marginal. Branch (i) is the *Bob-marginal-preserving deformation* branch in the sense of Lemma 10.2 below.
 
@@ -76,7 +76,7 @@ As a consequence of Hypothesis 3 (CC influence mechanism) combined with quantum 
 
 **(iii) Nonlocal/state-mediated marginal-anomaly branch (statistical FTL influence).** Beyond branches (i) and (ii), the framework allows — as a distinct, stronger hypothesis — that a change in Alice's context $\mathrm{context}_S$, performed strictly after the spacelike-separated preparation event, can induce context-dependent shifts in Bob's local marginal $P(b)$ across a spacelike interval, mediated by the globally prepared entangled state rather than by any operator-level carrier and not reducible to the shared-past mechanism of branch (ii). This is a genuine statistical faster-than-light (FTL) influence on Bob's local statistics: it is not derivable from ordinary nonlocal correlations of standard quantum mechanics, it is a real departure from the no-signaling marginals of local CPTP, and it is a falsifiable prediction requiring a separate nonlocal/state-mediated operational model.
 
-In all three branches, the influence is asserted to be incapable of enabling deterministic or zero-error FTL signaling in the sense of Postulate 2. Theorem 39 excludes deterministic endpoint forcing; Theorem 39a excludes finite-window zero-error decoding on the regular statistical branch; Theorems 40 and 41 quantify the sample-complexity and information-rate limits of any branch-(iii) marginal shift. The discrimination between branches is operational: branch (i) is tested through Alice-local and post-comparison joint-correlation analysis with Bob's marginal invariant; branch (ii) is excluded as an explanation of a Bob-marginal shift only by late randomization of Alice's context strictly after the spacelike-separated preparation event; branch (iii) is the unique branch on which a Bob-marginal shift of $P(b)$ persists under late randomization. The existence and nature of branch (iii) is presented as a key, falsifiable prediction of the framework, requiring stringent empirical verification (Section 13.5).
+In all three branches, the influence is asserted to be incapable of enabling deterministic or zero-error FTL signaling in the sense of Postulate 2. Theorem 39 excludes deterministic endpoint forcing; Theorem 39a excludes finite-window zero-error decoding on the regular statistical branch; Theorem 39b adds the predictive-current no-loop and precision-cost gate whenever a current representation is asserted; Theorems 40 and 41 quantify the sample-complexity and information-rate limits of any branch-(iii) marginal shift. The discrimination between branches is operational: branch (i) is tested through Alice-local and post-comparison joint-correlation analysis with Bob's marginal invariant; branch (ii) is excluded as an explanation of a Bob-marginal shift only by late randomization of Alice's context strictly after the spacelike-separated preparation event; branch (iii) is the unique branch on which a Bob-marginal shift of $P(b)$ persists under late randomization. The existence and nature of branch (iii) is presented as a key, falsifiable prediction of the framework, requiring stringent empirical verification (Section 13.5).
 
 **Lemma 10.2 (Bob-Marginal Kernel Decomposition of CC Deformations).** Let $P_0(a,b\mid x,y)$ be the baseline joint probability for spacelike-separated POVM settings $x$ at Alice and $y$ at Bob, and let
 $$
@@ -300,6 +300,67 @@ $$
 This proves the claimed causality separation. ∎
 
 **Remark 10.2b (Why Asymptotic Overlap Decay Is Irrelevant to Causality).** For independent repetitions with $P_0\ne P_1$ at the per-trial level, $\Omega_n$ generically decays exponentially in $n$ at the Chernoff overlap rate of the per-trial laws; equivalently, classical Chernoff theory gives $-\log\Omega_n\sim n\,C_{\mathrm{Ch}}(P_0,P_1)$ under the usual iid regularity assumptions, with $C_{\mathrm{Ch}}>0$ when the laws are distinct and mutually absolutely continuous. Theorem 39a uses only the strict inequality $\Omega_n>0$ at the operational $n$ permitted by the pre-lightcone budget of Lemma 10.3, namely $n\le n_{\max}=\lfloor r_{\max}L/c\rfloor$. The causality argument therefore does not depend on uniform-in-$n$ behavior: even though $\Omega_n\to0$ as $n\to\infty$, the asymptotic regime is unreachable before ordinary causal contact, so the finite-window zero-error gate is not undermined by repetition-coding amplification.
+
+**Definition 10.2c (Finite Predictive Current Certificate).** A finite predictive current certificate for a regular statistical branch in a finite region $\Omega$ is a tuple
+$$
+\mathfrak J_\Omega
+=
+(\mathcal E_\Omega,J_{\mathrm{pred}},s_{\mathrm{pred}},\Pi_B,\mathcal A_{\mathrm{anom}},\mathcal D_{\mathrm{erase}},\mathcal I_{\mathrm{boundary}},\Sigma_\Omega)
+$$
+where $\mathcal E_\Omega$ is the finite event algebra, $J_{\mathrm{pred}}$ is the signed retained update-current assignment on events and boundary faces, $s_{\mathrm{pred}}$ is the entropy-action current assignment, $\Pi_B$ is the Bob-transcript projection, and
+$$
+\Sigma_\Omega
+:=
+\sum_{e\in\mathcal E_\Omega}\Delta s_{\mathrm{pred}}(e)
+\ge0
+$$
+is the finite entropy-production ledger. The certificate is accepted only if, for every retained finite test function $f$ on the event algebra,
+$$
+\langle \nabla\cdot J_{\mathrm{pred}},f\rangle
+=
+\langle\mathcal A_{\mathrm{anom}}-\mathcal D_{\mathrm{erase}}+\mathcal I_{\mathrm{boundary}},f\rangle,
+\tag{61f}
+$$
+and the Bob-side marginal shift is exactly the projected current divergence,
+$$
+\Delta P_B
+=
+\Pi_B(\nabla\cdot J_{\mathrm{pred}}).
+\tag{61g}
+$$
+On a smooth-envelope branch, (61f) is written as
+$$
+\nabla_\mu J^\mu_{\mathrm{pred}}
+=
+\mathcal A_{\mathrm{anom}}-\mathcal D_{\mathrm{erase}}+\mathcal I_{\mathrm{boundary}}
+$$
+only as continuum notation for the same finite event-algebra equality.
+
+**Theorem 39b (Predictive Current No-Loop and Precision-Cost Gate).** Let a branch-(iii) statistical influence model in the finite pre-lightcone window carry both Definition 10.2a and a finite predictive current certificate $\mathfrak J_\Omega$. Then the current representation cannot by itself create a deterministic or zero-error FTL causal loop: every decoder from Bob's projected current transcript still has strictly positive error probability whenever the two context-conditioned Bob transcript laws have common support.
+
+If, in addition, the selected finite Markov/KMS current branch carries the thermodynamic precision certificate
+$$
+\frac{\operatorname{Var}(Q)}{\langle Q\rangle^2}\,\Sigma_\Omega
+\ge
+2
+\tag{61h}
+$$
+for a controlled current observable $Q$ with $\langle Q\rangle\ne0$, then any nonzero finite-cost current signal has nonzero variance:
+$$
+\operatorname{Var}(Q)
+\ge
+\frac{2\langle Q\rangle^2}{\Sigma_\Omega}
+>
+0
+\quad
+\text{whenever }0<\Sigma_\Omega<\infty.
+\tag{61i}
+$$
+Thus a deterministic zero-variance current signal with nonzero mean is inadmissible on the finite-cost branch. If the branch lacks (61h), its current law remains a transport parametrization, not a theorem-level thermodynamic precision law.
+
+*Proof.* Equation (61g) says that the Bob observable produced by the current certificate is a function of the same finite Bob transcript algebra used in Theorem 39a. Theorem 39a proves that, under common support, every decoder on that finite transcript algebra has error at least $\Omega_n/2>0$. Passing through the current projection $\Pi_B$ is a deterministic coarse-graining of the transcript and cannot make two overlapping transcript laws disjoint. Hence the current representation does not create a zero-error decoder.
+
+Assume now that the branch also supplies (61h). If $0<\Sigma_\Omega<\infty$ and $\langle Q\rangle\ne0$, multiplying (61h) by $\langle Q\rangle^2/\Sigma_\Omega$ gives (61i). Therefore a nonzero mean current at finite entropy cost cannot have zero variance. If $\Sigma_\Omega=0$, (61h) is incompatible with $\langle Q\rangle\ne0$; if $\Sigma_\Omega=\infty$, the event is not in the finite-cost branch. These alternatives exhaust the finite-current certificate cases. ∎
 
 **Lemma 10.3 (Pre-Lightcone Information Budget and Sampling Gate).** Let $L$ be the spacelike separation between Alice and Bob, $r_{\max}$ the maximum local measurement rate per channel at Bob's station, $\alpha_{\mathrm{err}}\in(0,1/2)$ a target decoding error probability, and $\delta\le\kappa\,\mathrm{CC}(S_A)$ the per-trial Bob-marginal bias on branch (iii). Define the pre-lightcone mutual-information budget
 $$
@@ -656,11 +717,11 @@ $$
 +
 O(\|\Delta\|_1^3).
 $$
-Since $M_i\ge m_0$ and $\|\Delta\|_1\le\mathrm{CC}(S)$ by Theorem 36, (63a) follows. Theorem 39a supplies the separate zero-error statement needed for Postulate 2 on the regular finite-window branch: a positive Shannon rate does not by itself imply deterministic or zero-error FTL signaling. ∎
+Since $M_i\ge m_0$ and $\|\Delta\|_1\le\mathrm{CC}(S)$ by Theorem 36, (63a) follows. Theorem 39a supplies the separate zero-error statement needed for Postulate 2 on the regular finite-window branch, and Theorem 39b supplies the corresponding no-loop gate when the same shift is represented by a predictive current: a positive Shannon rate does not by itself imply deterministic or zero-error FTL signaling. ∎
 
 **10.4.3 Theorem 42 (Inability to Construct Causal Loops)**
 
-The hypothesized statistical FTL influence (Postulate 3), when constrained by the endpoint bound of Theorem 39, the zero-error gate of Theorem 39a on the regular finite-window branch (Definition 10.2a), and the finite-window sampling bounds of Theorems 40–41, cannot be used to construct paradox-inducing causal loops as defined by Postulate 2. This holds for any decoder $\mathcal D$ acting on a finite pre-lightcone transcript in the regular operating regime.
+The hypothesized statistical FTL influence (Postulate 3), when constrained by the endpoint bound of Theorem 39, the zero-error gate of Theorem 39a on the regular finite-window branch (Definition 10.2a), the predictive-current no-loop and precision-cost gate of Theorem 39b whenever a current certificate is asserted, and the finite-window sampling bounds of Theorems 40–41, cannot be used to construct paradox-inducing causal loops as defined by Postulate 2. This holds for any decoder $\mathcal D$ acting on a finite pre-lightcone transcript in the regular operating regime.
 
 *Proof:*
 1.  **Requirement for Paradox (Postulate 2):** The construction of a logical causal paradox requires controllable deterministic information, equivalently a zero-error FTL decoding step in a finite pre-lightcone window. A finite-error statistical estimate is insufficient: if the estimate is wrong with nonzero probability, no contradiction follows from Alice choosing otherwise.
@@ -669,11 +730,12 @@ The hypothesized statistical FTL influence (Postulate 3), when constrained by th
     $$
     P_{\mathrm{err}}\ge\Omega_n/2>0.
     $$
-    By Remark 10.2b, the relevant $n$ is bounded by the pre-lightcone budget of Lemma 10.3, so asymptotic overlap decay does not undermine this gate. Step 3 alone suffices to exclude the deterministic/zero-error decoding step required by Postulate 2; Steps 4–5 supply complementary quantitative bounds.
-4.  **Sample and rate bounds (Theorems 40–41):** Theorem 40 gives the direct two-context test's sample-complexity scale for resolving a small branch-(iii) effect at a chosen nonzero error tolerance. Theorem 41 upper-bounds the finite-error mutual information rate by $O(\mathrm{CC}^2)$ at a regular operating point. Lemma 10.3 bounds the mutual information that can be accumulated before an ordinary light signal crosses the separation. These are statistical-detection limits, not deterministic-message constructions.
-5.  **Failure to close a deterministic loop:** A tachyonic anti-telephone or grandfather-style loop requires Alice to receive a definite contradiction-producing message about her own future choice. The PU statistical-FTL branch supplies at most a noisy estimate with nonzero finite-window error, by Steps 3 and 4.
+    By Remark 10.2b, the relevant $n$ is bounded by the pre-lightcone budget of Lemma 10.3, so asymptotic overlap decay does not undermine this gate. Step 3 alone suffices to exclude the deterministic/zero-error decoding step required by Postulate 2; Steps 4–6 supply complementary quantitative bounds.
+4.  **Predictive-current gate (Theorem 39b, when asserted):** If the same branch is written as a finite predictive current, the Bob-side current transcript is a projection or coarse-graining of the same finite transcript algebra. It cannot turn overlapping transcript laws into disjoint laws. On branches carrying the thermodynamic precision certificate, a nonzero finite-cost current signal also has nonzero variance, so it cannot become a deterministic current pulse.
+5.  **Sample and rate bounds (Theorems 40–41):** Theorem 40 gives the direct two-context test's sample-complexity scale for resolving a small branch-(iii) effect at a chosen nonzero error tolerance. Theorem 41 upper-bounds the finite-error mutual information rate by $O(\mathrm{CC}^2)$ at a regular operating point. Lemma 10.3 bounds the mutual information that can be accumulated before an ordinary light signal crosses the separation. These are statistical-detection limits, not deterministic-message constructions.
+6.  **Failure to close a deterministic loop:** A tachyonic anti-telephone or grandfather-style loop requires Alice to receive a definite contradiction-producing message about her own future choice. The PU statistical-FTL branch supplies at most a noisy estimate with nonzero finite-window error, by Steps 3--5.
 
-**Branch-by-branch closing summary.** The three branches of Postulate 3 are individually compatible with Postulate 2: branch (i) by Lemma 10.2 and the standard no-signaling theorem (Bob's marginal is invariant); branch (ii) by absence of any late controllable Alice variable after the shared causal past, so no pre-lightcone message channel exists at all; branch (iii) on the regular finite-window branch by Theorem 39a, which gives positive transcript overlap and nonzero decoder error in any pre-lightcone window of operational size. Therefore none of the three branches enables a deterministic or zero-error FTL channel, and the CC mechanism is compatible with Postulate 2. ∎
+**Branch-by-branch closing summary.** The three branches of Postulate 3 are individually compatible with Postulate 2: branch (i) by Lemma 10.2 and the standard no-signaling theorem (Bob's marginal is invariant); branch (ii) by absence of any late controllable Alice variable after the shared causal past, so no pre-lightcone message channel exists at all; branch (iii) on the regular finite-window branch by Theorem 39a, which gives positive transcript overlap and nonzero decoder error in any pre-lightcone window of operational size, and by Theorem 39b whenever a predictive-current representation is asserted. Therefore none of the three branches enables a deterministic or zero-error FTL channel, and the CC mechanism is compatible with Postulate 2. ∎
 
 **10.5 Relation to Emergent Locality and AQFT Framework**
 

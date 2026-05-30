@@ -524,6 +524,55 @@ H_{\mathrm{grav},n}^{-1}D\Gamma_n(q_{\mathrm{grav},n}^*)^*\psi
 $$
 Writing this bilinear form in distribution kernel notation gives (12.1e.1) with $\Sigma_n$ as defined in (12.1d.4). Uniqueness follows because a centered Gaussian is determined by its covariance and the pushforward map is fixed by the accepted certificate. ∎
 
+**Corollary 12.1e.0a (Cramér-Rao Status of Metric Fluctuations).**
+Assume the finite gravitational channel ensemble $\mathfrak G_n$ of Definition 12.1d is locally asymptotically normal on the retained tangent subspace $\mathcal T_{\mathrm{grav},n}$, with classical Fisher matrix $F_{\mathrm{grav},n}$ for the accepted finite protocol family. For any unbiased estimator $\widehat{\Delta q}$ of the retained gravitational tangent coordinate $\Delta q$ from $N$ independent samples,
+$$
+\operatorname{Cov}(\widehat{\Delta q})
+\succeq
+\frac1N F_{\mathrm{grav},n}^{-1}
+\tag{12.1e.3}
+$$
+on the identifiable quotient, with $F_{\mathrm{grav},n}^{-1}$ read as the quotient inverse, equivalently the Moore-Penrose inverse on the identifiable image. Pushing forward by the reconstruction derivative gives the bilinear-form covariance bound
+$$
+\operatorname{Cov}(\widehat{\delta g}_n)
+\succeq
+\frac1N
+D\Gamma_n(q_{\mathrm{grav},n}^*)
+F_{\mathrm{grav},n}^{-1}
+D\Gamma_n(q_{\mathrm{grav},n}^*)^*.
+\tag{12.1e.4}
+$$
+Equivalently, for every retained metric test tensor $\phi$,
+$$
+\operatorname{Cov}(\widehat{\delta g}_n)(\phi,\phi)
+\ge
+\frac1N
+\left\langle
+D\Gamma_n(q_{\mathrm{grav},n}^*)^*\phi,
+F_{\mathrm{grav},n}^{-1}
+D\Gamma_n(q_{\mathrm{grav},n}^*)^*\phi
+\right\rangle.
+\tag{12.1e.4a}
+$$
+On the log-score LAN subbranch where the PCE Hessian equals the Fisher Hessian,
+$$
+H_{\mathrm{grav},n}=F_{\mathrm{grav},n},
+\tag{12.1e.5}
+$$
+and where $\tau_{\mathrm{PCE},n}=1/N$, Equation (12.1e.4) is exactly the covariance kernel $\Sigma_n$ of Theorem 12.1e. Thus the Cramér-Rao structure controls the finite metric-fluctuation and estimation sector. The Einstein equation itself remains the Clausius-area-law equation of state derived in Theorem 12.1.
+
+*Proof.* The first inequality is the finite-dimensional Cramér-Rao inequality applied on the locally identifiable quotient of $\mathcal T_{\mathrm{grav},n}$. The reconstructed metric estimator is the linear image
+$$
+\widehat{\delta g}_n=D\Gamma_n(q_{\mathrm{grav},n}^*)[\widehat{\Delta q}],
+$$
+so covariance transforms by pushforward:
+$$
+\operatorname{Cov}(D\Gamma_n\widehat{\Delta q})
+=
+D\Gamma_n\,\operatorname{Cov}(\widehat{\Delta q})\,D\Gamma_n^*.
+$$
+Applying this positive linear pushforward to the Cramér-Rao lower bound gives (12.1e.4), and evaluation on $\phi$ gives (12.1e.4a). If $H_{\mathrm{grav},n}=F_{\mathrm{grav},n}$ and $\tau_{\mathrm{PCE},n}=1/N$, the right-hand side of (12.1e.4) is identical to (12.1e.2), hence to the kernel $\Sigma_n$ of Theorem 12.1e. The derivation uses only estimator covariance and the accepted reconstruction derivative; it does not alter the Clausius, Raychaudhuri, area-law, or stress-energy-conservation premises of Theorem 12.1. ∎
+
 **Corollary 12.1e.1 (No Independent Graviton Hilbert Sector).** No microscopic gravitational carrier need be added to the PU framework to obtain $\delta g_n$ or $\Sigma_n$. The linearized metric response and its fluctuation covariance are deterministic images of the finite KMS-descent certificate together with the PCE functional already present on the operational-continuum branch.
 
 *Proof.* Definitions 12.1d and 12.1d.4 use only entries of the finite KMS-descent certificate $\mathfrak C^{\mathrm{KMS}}_n$, the Appendix B stress-energy flux functional, and the Appendix E channel-capacity area law. Theorems 12.1c and 12.1e then derive $\delta g_n$ and $\Sigma_n$ from those entries by linearization and Gaussian pushforward. No new Hilbert sector or carrier appears at any step. By Corollary P.6.1b.8, any additional fundamental gravitational carrier with the same finite protocol responses is response-null surplus and is removed by the PPI quotient. Any additional carrier that changes the finite responses is a different finite branch, evaluated by its own status ledger by Convention P.14.1l. ∎
@@ -1158,3 +1207,65 @@ S_{\mathrm{rel}}(\lambda+h)-2S_{\mathrm{rel}}(\lambda)+S_{\mathrm{rel}}(\lambda-
 S_{\mathrm{rel}}''(\lambda).
 $$
 Theorem 12.5.3f identifies $S_{\mathrm{rel}}''(\lambda)$ with $\mathfrak S_{\mathrm{QNEC}}(\lambda)$, proving (76z). The zero-curvature statement follows from Theorem 12.5.3f and Corollary 12.5.3g, which identify zero QNEC slack with local Clausius saturation. ∎
+
+**Corollary 12.5.3j (Modular Recoverability Gravity Gate).** Let $\mathcal D$ be a finite retained family of local diamonds on a regular KMS/AQFT branch. For each $D\in\mathcal D$, let $\mathfrak A_D$ be the retained finite algebra, let $\omega_D$ be the faithful KMS/reference state, and let
+$$
+\Phi_D:\mathfrak A_D\to\mathfrak A_{\partial D}
+$$
+be the retained boundary or compression channel. For any admissible state $\rho_D$, define the finite modular recoverability defect
+$$
+\mathfrak R_D(\rho)
+:=
+D(\rho_D\Vert\omega_D)
+-
+D(\Phi_D\rho_D\Vert\Phi_D\omega_D)
+\ge0.
+\tag{76aa}
+$$
+Let
+$$
+\mathcal J_{\mathrm{rec}}[g]
+=
+\sum_{D\in\mathcal D}w_D\mathfrak R_D(\rho[g])
++
+\sum_{D\in\mathcal D}\lambda_D\left|S_D[g]-\eta A_D[g]\right|
++
+\mathcal C_{\mathrm{reg}}[g]
+\tag{76ab}
+$$
+be a finite PCE recovery functional on the accepted regular metric-response class, with $w_D,\lambda_D\ge0$. For each retained local null-cut subfamily write
+$$
+\mathcal R_\lambda(\rho):=D(\rho_\lambda\Vert\omega_\lambda).
+$$
+If $g_*$ is selected by a strict PCE gap for (76ab) and every local null-cut subfamily has zero relative-entropy recoverability curvature,
+$$
+\frac{d^2}{d\lambda^2}\mathcal R_\lambda(\rho)=0,
+\tag{76ac}
+$$
+then the retained non-equilibrium slack tensor vanishes and Theorem 12.5.3h reduces to the reversible semiclassical Einstein branch.
+
+If the null recoverability curvature is nonzero but is represented by a conserved retained slack tensor $T_{\mu\nu}^{(\mathrm{rec})}$ with
+$$
+T_{kk}^{(\mathrm{rec})}
+=
+\frac{\mathcal Q(k)}{2\pi}
+\ge0,
+\tag{76ad}
+$$
+then the retained metric equation is
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}+8\pi G\,T_{\mu\nu}^{(\mathrm{rec})}
+=
+8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})},
+\tag{76ae}
+$$
+equivalently
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+8\pi G\left(T_{\mu\nu}^{(\mathrm{MPU})}-T_{\mu\nu}^{(\mathrm{rec})}\right).
+\tag{76af}
+$$
+Thus the recovery functional supplies a unifying certificate gate for the gravity branch: Einstein gravity is the zero-curvature recoverability limit, while positive retained curvature is an explicit finite non-equilibrium correction and not an independent ad hoc dark fluid.
+
+*Proof.* Monotonicity of relative entropy under the channel $\Phi_D$ gives (76aa). The finite functional (76ab) is an admissible PCE scalarization only on the branch where the diamond channels, reference states, area calibration, and regularity cost are fixed before comparison. Corollary 12.5.3i identifies the local QNEC slack with the second finite-difference curvature of the local relative-entropy recoverability ledger $\mathcal R_\lambda$. Hence (76ac) implies zero QNEC slack on every retained null patch. Corollary 12.5.3g identifies zero QNEC slack with local Clausius saturation, and Theorem 12.5.3h then gives the reversible Einstein branch. If the slack is nonzero and a conserved tensor with null projections (76ad) is supplied, Theorem 12.5.3h gives exactly the sign convention (76ae), which is the same equation written as (76af). ∎

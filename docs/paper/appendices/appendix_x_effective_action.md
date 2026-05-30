@@ -2105,6 +2105,34 @@ If no such map is supplied, there is no mathematical object with domain $\mathca
 
 Thus the internal finite predictive amplitude is theorem-level, while the physical scattering $S$-matrix identification is a separate branch theorem. ∎
 
+**Theorem X.8h.14 (Finite-Response Bootstrap Strict-Gap Gate).** Let $\mathcal B_{\mathrm{PU}}$ be a finite or compact family of retained low-energy response data
+$$
+B=(\Delta_i,C_{ij}^{k},\mathfrak A_{\mathrm{PU}},\mathcal S_{\mathrm{phys}},\mathcal W,\mathfrak A_{\mathrm{anom}},\mathcal N)
+\tag{X.8h.14.1}
+$$
+where $\Delta_i$ are finite spectral labels, $C_{ij}^{k}$ are finite OPE or response-composition coefficients, $\mathfrak A_{\mathrm{PU}}$ is the finite predictive amplitude package, $\mathcal S_{\mathrm{phys}}$ is included only when the physical-instantiation map of Theorem X.8h.13 is supplied, $\mathcal W$ records Ward identities, $\mathfrak A_{\mathrm{anom}}$ records anomaly matching, and $\mathcal N$ records normalization and tail certificates. Let $\mathcal F_{\mathrm{boot}}\subseteq\mathcal B_{\mathrm{PU}}$ be the closed feasible set satisfying finite positivity/unitarity, crossing, associativity, Ward identities, anomaly matching, modular covariance, and capacity bounds. If $\mathcal F_{\mathrm{boot}}$ is nonempty and compact and if $\mathcal C_{\mathrm{desc}}$ is lower semicontinuous, then at least one PCE-minimal bootstrap datum exists:
+$$
+B_*
+\in
+\operatorname*{argmin}_{B\in\mathcal F_{\mathrm{boot}}}\mathcal C_{\mathrm{desc}}(B).
+\tag{X.8h.14.2}
+$$
+If the quotient by finite response equivalence has a strict gap
+$$
+\mathcal C_{\mathrm{desc}}(B)-\mathcal C_{\mathrm{desc}}(B_*)
+\ge
+\Delta_{\mathrm{boot}}>0
+\tag{X.8h.14.3}
+$$
+for every response-distinct feasible $B\ne B_*$, then every registered projection
+$$
+I_a(B_*)
+\tag{X.8h.14.4}
+$$
+including masses, thresholds, OPE coefficients, finite predictive amplitudes, Ward residuals, anomaly-matching data, and physical $S$-matrix entries when $\mathcal S_{\mathrm{phys}}$ is supplied, is fixed by one finite-response bootstrap certificate. If any of compactness, closed feasibility, normalization, tail control, physical-instantiation, or strict-gap data is absent, the corresponding output remains a branch/model projection and not a theorem-level joint numerical closure.
+
+*Proof.* Compactness of $\mathcal F_{\mathrm{boot}}$ and lower semicontinuity of $\mathcal C_{\mathrm{desc}}$ give existence by the direct method. If two response-distinct minimizers existed, (X.8h.14.3) would force one to have strictly larger cost than $B_*$, contradiction. Hence the selected response class is unique. A registered observable $I_a$ is a fixed function on the selected response class, so $I_a(B_*)$ is unique. The physical $S$-matrix caveat follows from Theorem X.8h.13: without a physical-instantiation map and normalization theorem, the internal amplitude has no fixed external scattering domain. ∎
+
 ### X.8i Predictive Cosmic Galois Filtration
 
 **Definition X.8i.1 (Finite Update-Cost Graph Hopf Algebra).** Let $\mathcal H_{\mathrm{CK}}^{(L)}$ be the finite Connes-Kreimer Hopf algebra spanned by superficially divergent Feynman graphs up to loop order $L$, with coproduct
@@ -4108,3 +4136,34 @@ The status labels are preserved because the arithmetic evaluation does not chang
 **Corollary X.9.6i.2 (No Numerical Refit After Projection).** Once an entry of $\mathfrak P_{\mathrm{num}}$ is registered, changing any formula coefficient, prefactor, finite-part convention, residual interval, or status label after comparison with data defines a new branch and cannot confirm the original numerical projection.
 
 *Proof.* The numerical value is a deterministic image of the registered finite record by Theorem X.9.6i.1. Altering a coefficient, prefactor, finite-part convention, residual interval, or status label changes the finite record or the projection map. By Corollary X.9.6e it is then a different spectral or branch datum, and by Corollary P.6.1b.8 it cannot be treated as the same physical projection unless the change is response-null. A response-null change cannot alter the numerical value or its validation interval. ∎
+
+**Definition X.9.6i.3 (Finite Calibration Connection Record).** A finite calibration connection record is a tuple
+$$
+\mathfrak C_{\mathrm{cal}}
+=
+(\{U_i\},g_{ij},\mathcal A_{\mathrm{cal}},\mathcal F_{\mathrm{cal}},\{\gamma_a\},\{\Sigma_a\},\{\pi_a\},\chi_{\mathrm{cal}})
+\tag{X.9.6i.3}
+$$
+where $\{U_i\}$ is a finite protocol atlas over the retained response quotient, $g_{ij}$ are fixed transition maps on overlaps, $\mathcal A_{\mathrm{cal}}$ is a finite connection one-cochain, $\mathcal F_{\mathrm{cal}}$ is its curvature two-cochain, $\gamma_a$ are registered sector loops, $\Sigma_a$ are registered residual two-cycles, $\pi_a$ are sector projection maps, and $\chi_{\mathrm{cal}}$ records the regulator, finite-part convention, normalization, and tail certificate fixed before validation comparison. A sector constant $c_a$ is calibration-internal only if it is registered as
+$$
+c_a
+=
+\pi_a\operatorname{Hol}_{\gamma_a}(\mathcal A_{\mathrm{cal}})
+\tag{X.9.6i.4}
+$$
+or as a curvature residual
+$$
+R_a
+=
+\pi_a\langle[\mathcal F_{\mathrm{cal}}],\Sigma_a\rangle.
+\tag{X.9.6i.5}
+$$
+
+**Theorem X.9.6i.4 (Calibration Holonomy No-Retuning Gate).** Suppose a closed finite numerical branch carries a calibration connection record $\mathfrak C_{\mathrm{cal}}$. If the calibration curvature is exact or PPI-null on the retained overlap complex,
+$$
+[\mathcal F_{\mathrm{cal}}]=0,
+\tag{X.9.6i.6}
+$$
+then all calibration-internal sector constants are fixed by the same flat finite-response calibration record and cannot be renormalized independently sector by sector. If $[\mathcal F_{\mathrm{cal}}]\ne0$, then the only admissible mismatch terms are the explicitly registered curvature residuals (X.9.6i.5). Changing any transition map, finite part, normalization, regulator, loop, cycle, projection, or residual after comparison with data changes $\mathfrak C_{\mathrm{cal}}$ and therefore defines a new branch.
+
+*Proof.* The finite overlap complex gives the usual cochain identity: exact curvature changes are absorbed by a calibration gauge transformation and PPI-null curvature changes no retained response. Under (X.9.6i.6), holonomies of the fixed connection record are determined by the registered flat holonomy class together with the fixed transition maps and normalization data. Hence every $c_a$ defined by (X.9.6i.4) is a projection of the same record. When the curvature class is nonzero, its pairings with registered cycles are precisely the obstruction components (X.9.6i.5); no other residual is part of the accepted record. Altering any entry of $\mathfrak C_{\mathrm{cal}}$ changes either the finite response record or the projection map, so by Corollary X.9.6i.2 it is a new branch rather than a retuned confirmation of the old one. ∎

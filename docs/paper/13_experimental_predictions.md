@@ -1,6 +1,6 @@
 # 13 Experimental Predictions and Protocols
 
-The Predictive Universe framework, particularly the Consciousness Complexity (CC) hypothesis (Section 9) proposing a mechanism by which complex MPU aggregates can influence quantum outcomes, leads to specific, potentially falsifiable predictions that deviate from standard quantum mechanics. Because the predicted deviations can be small and are susceptible to experimental and statistical artifacts, the protocols in this section are formulated with strict methodological constraints: pre-specified hypotheses and analysis pipelines, blinding wherever feasible, rigorous environmental and device controls, and correction for multiple comparisons across outcomes, times, and experimental settings. The aim is not merely to detect an anomaly, but to isolate a reproducible, device-independent shift consistent with the bounded modification structure of Definition 33 and Theorem 36 while ruling out classical confounds (drift, selection effects, hidden feedback, and post-selection). This section details these predictions and outlines experimental protocols designed for their investigation, emphasizing near-term feasibility while acknowledging the significant challenges involved in distinguishing a genuine CC effect from systematic error.
+The Predictive Universe framework, particularly the Consciousness Complexity (CC) hypothesis (Section 9) proposing a mechanism by which complex MPU aggregates can influence quantum outcomes, leads to specific, potentially falsifiable predictions that deviate from standard quantum mechanics. Because the predicted deviations can be small and are susceptible to experimental and statistical artifacts, the protocols in this section are formulated with strict methodological constraints: pre-specified hypotheses and analysis pipelines, blinding wherever feasible, rigorous environmental and device controls, and correction for multiple comparisons across outcomes, times, and experimental settings. The aim is not merely to detect an anomaly, but to isolate a reproducible, device-independent shift consistent with the bounded modification structure of Definition 33 and Theorem 36 while ruling out classical confounds (drift, selection effects, hidden feedback, and post-selection). Protocol 1a adds a report-induced expectation variant of the QRNG test: a true or false report is treated as a provenance-marked input to the participant's physical context, and the measured question is whether the resulting expectation context correlates with later quantum outcomes. This section details these predictions and outlines experimental protocols designed for their investigation, emphasizing near-term feasibility while acknowledging the significant challenges involved in distinguishing a genuine CC effect from systematic error.
 
 ### Assumption Checklist
 
@@ -16,10 +16,11 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - Flavor and baryogenesis numerics use the flavor certificate of Definition T.79.4 and the baryogenesis transport certificate of Definition Y.11.7a when theorem-level numerical closure is claimed.
 - Uncertainty budgets follow the paper-wide canonical T1 (truncation), T2 (threshold/vacuum), T3 (scheme/mapping) decomposition of Appendix T.25.5.3, with certificate-specific residual intervals fixed before comparison.
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
+- Report-induced expectation protocols treat reports as provenance-marked context inputs. A false report may change the participant's physically instantiated expectation state, but it does not certify the reported outcome as true, does not rewrite a past measurement record, and can only be tested against target quantum outcomes generated after the expectation context has been formed under locked measurement settings. Human-subject deception requires prior consent procedures, ethics approval, and debriefing.
 
 **13.0a Operational Evidence Standard for CC and Statistical-Influence Tests**
 
-**Definition 13.0a (CC Evidence Triage).** For each Protocol L.1-L.3 or statistical-influence experiment, define three mutually exclusive explanatory classes:
+**Definition 13.0a (CC Evidence Triage).** For each CC-facing protocol in Section 13, including Protocol 1, Protocol 1a, Protocol 3, Protocol L.1-L.3, or any statistical-influence experiment, define three mutually exclusive explanatory classes:
 $$
 H_0=\text{standard quantum/statistical null},
 \qquad
@@ -145,7 +146,7 @@ $$
 $$
 For $\mathrm{CC}(S)\ll1$, the Fisher-budget subbranch gives $\mathrm{TV}(p,q)\lesssim\frac12\mathrm{CC}(S)$ and $|\Delta P(i)|\lesssim\mathrm{CC}(S)$.
 
-*Remark on numerical impact.* The operational total-variation bound $\mathrm{TV}\le\mathrm{CC}$ is a factor-of-two looser at leading order than the Fisher-budget total-variation bound $\mathrm{TV}\le\sin(\mathrm{CC}/2)\approx\mathrm{CC}/2$. The per-outcome operational and Fisher-budget bounds coincide to first order, because $4\sin(\mathrm{CC}/4)=\mathrm{CC}+O(\mathrm{CC}^3)$. The QRNG sensitivity protocol of §13.2 therefore reports two paired CC-extraction estimates: a **conservative** estimate $\widehat{\mathrm{CC}}_{\mathrm{op}}\ge\delta$ from the operational bound, which is always available, and a **sharp** estimate $\widehat{\mathrm{CC}}_{\mathrm{Fisher}}\ge 4\arcsin(\delta/4)$ on the Fisher-budget subbranch, which applies only when the protocol independently certifies the Fisher condition. The two per-outcome estimates differ by $O(\delta^3)$.
+*Remark on numerical impact.* The operational total-variation bound $\mathrm{TV}\le\mathrm{CC}$ is a factor-of-two looser at leading order than the Fisher-budget total-variation bound $\mathrm{TV}\le\sin(\mathrm{CC}/2)\approx\mathrm{CC}/2$. The per-outcome operational and Fisher-budget bounds coincide to first order, because $4\sin(\mathrm{CC}/4)=\mathrm{CC}+O(\mathrm{CC}^3)$. The QRNG sensitivity protocols of §13.2 and §13.2a therefore report two paired CC-extraction estimates: a **conservative** estimate $\widehat{\mathrm{CC}}_{\mathrm{op}}\ge\delta$ from the operational bound, which is always available, and a **sharp** estimate $\widehat{\mathrm{CC}}_{\mathrm{Fisher}}\ge 4\arcsin(\delta/4)$ on the Fisher-budget subbranch, which applies only when the protocol independently certifies the Fisher condition. The two per-outcome estimates differ by $O(\delta^3)$.
 
 *Remark:* The operational shift bound is Definition 30 applied to the retained event algebra; the Fisher-Rao formulas are the sharper geodesic estimates available on the stricter Fisher-budget subbranch recorded in Theorem 36.
 
@@ -230,6 +231,221 @@ is fixed in the analysis plan, the primary discriminant is not merely a scalar b
     *   **Outcome:** Deviations that survive all controls give an empirical estimate of $\mathrm{CC}(S)$ (cf. Theorem 51); null results tighten the exclusion curve $\mathrm{CC}_{\max}(S) < \epsilon(N)$.
 
 *   **Feasibility Assessment:** High statistics achievable. Shielding/control standard but requires extreme care. Biological context control depends on participants. AI interaction pathway is a major R&D challenge. Rigorous systematic error exclusion is the primary hurdle. Challenging but potentially feasible exploratory search.
+
+## 13.2a Protocol 1a: Report-Induced Expectation Tests for Passive CC
+
+This protocol is a controlled variant of Protocol 1. It tests whether a report-induced expectation inside a participant's perspective can become a physically instantiated context variable and weakly bias later quantum outcome frequencies. The tested claim is not that a false report becomes true, nor that a past observation is changed. The tested claim is that a true, false, or neutral report can produce a real expectation state in the aggregate $S_A$, and that this expectation state may enter the CC map on branches where expectation-context coupling is nonzero.
+
+<a id="definition-132a1-report-induced-expectation-context"></a>
+
+**Definition 13.2a.1 (Report-Induced Expectation Context).**
+
+Let $S_A$ be a human or other high-complexity aggregate satisfying the same operational screening assumptions as Protocol 1. Let $\Omega=\{0,1\}$ for a binary QRNG, or a finite outcome alphabet for a retained finite POVM. On trial $t$, define:
+
+1. $R_t\in\Omega$, a hidden reference/provenance record generated and locked before the report stage;
+2. $E_t\in\Omega\cup\{\varnothing\}$, the report content delivered to Alice through an automated Bob-channel, with $\varnothing$ used for neutral no-target content;
+3. $H_t\in\{\mathrm{true},\mathrm{false},\mathrm{neutral}\}$, the report-truth tag, with $H_t=\mathrm{true}$ iff $E_t\in\Omega$ and $E_t=R_t$, $H_t=\mathrm{false}$ iff $E_t\in\Omega$ and $E_t\ne R_t$, and $H_t=\mathrm{neutral}$ iff $E_t=\varnothing$;
+4. $V_t\in\{\mathrm{seen},\mathrm{unseen},\mathrm{delayed}\}$, the visibility tag recording whether Alice receives the report before, never before, or only after the target quantum event;
+5. $Y_t\in\Omega$, the target quantum outcome generated after the expectation window on seen trials and after the matched timing window on control trials;
+6. $Z_t$, the locked apparatus, block, timing, environmental, and calibration covariates.
+
+The reference record $R_t$ is not the target event $Y_t$, is not used to generate $Y_t$, and does not define the correctness of $Y_t$. It is only the provenance record used to construct true or false report content. The tested correlation is between Alice's physically instantiated expectation from $E_t$ and the later generated target outcome $Y_t$.
+
+The report-induced expectation context is the retained component
+$$
+\chi_A(t)
+=
+\chi\bigl(\mathrm{context}_{S_A}(t)\mid E_t,V_t,Z_t\bigr)
+\quad \text{(79a)}
+$$
+formed after report delivery and before the target event $Y_t$. On blinded true/false trials, $H_t$ is not available to Alice and is therefore not an input to $\chi_A(t)$ except through any ordinary leakage channel, which the protocol must bound separately. A false report may change $\chi_A(t)$ without changing $R_t$ and without certifying $E_t$ as a true measurement record.
+
+<a id="prediction-132a2-expectation-mediated-cc-branch"></a>
+
+**Prediction 13.2a.2 (Expectation-Mediated CC Branch).**
+
+Under the standard quantum null, once $Z_t$ is fixed and ordinary artifacts are closed,
+$$
+\Pr(Y_t=i\mid E_t,H_t,V_t,Z_t)
+=
+P_{\mathrm{Born}}(i\mid Z_t)
+\quad \text{(79b)}
+$$
+for all report contents, truth tags, and visibility tags.
+
+On the expectation-mediated CC branch, when $V_t=\mathrm{seen}$ and the report induces a retained expectation context $\chi_A(E_t)$, the target distribution may instead be
+$$
+\Pr(Y_t=i\mid E_t,V_t=\mathrm{seen},Z_t)
+=
+P_{\mathrm{Born}}(i\mid Z_t)
++
+\Delta_{\chi_A(E_t)}(i),
+\quad \text{(79c)}
+$$
+where the deviation obeys the operational CC budget
+$$
+\frac12\sum_i|\Delta_{\chi_A(E_t)}(i)|\le \mathrm{CC}(S_A),
+\qquad
+|\Delta_{\chi_A(E_t)}(i)|\le \mathrm{CC}(S_A),
+\qquad
+\sum_i\Delta_{\chi_A(E_t)}(i)=0.
+\quad \text{(79d)}
+$$
+On the CTB subbranch of Definition 34, the expectation context selects a target state $\sigma_{E_t}$ and an expectation-internalization coefficient $\eta_\chi(E_t)\in[0,1]$, giving
+$$
+\Delta_{\chi_A(E_t)}(i)
+=
+\frac{\eta_\chi(E_t)\,\mathrm{CC}(S_A)}{r(\sigma_{E_t})}
+\left(
+\mathrm{tr}(\sigma_{E_t}E_i)-\mathrm{tr}(\rho E_i)
+\right),
+\qquad
+r(\sigma_{E_t})=1-\lambda_{\min}(\sigma_{E_t}).
+\quad \text{(79e)}
+$$
+The saturated CTB subbranch is the special case $\eta_\chi(E_t)=1$.
+
+The report-truth tag $H_t$ is not the causal variable in (79c). The causal candidate is the physically instantiated expectation context $\chi_A(E_t)$. Therefore the diagnostic branch prediction is alignment with the report content $E_t$ on seen trials, including false-report trials, and no corresponding alignment on unseen or delayed-report controls.
+
+<a id="protocol-1a1-false-true-report-qrng-expectation-test"></a>
+
+**Protocol 1a.1 (False/True Report QRNG Expectation Test).**
+
+*   **Objective:** To test whether report-induced expectation produces a bounded Born-rule deviation in later QRNG or finite-POVM outcomes. The participant is not instructed to intentionally bias the device. The active context variable is passive expectation created by the report.
+
+*   **Experimental Setup:**
+    1.  **Target quantum device:** A well-characterized QRNG or retained finite-POVM device with locked settings and stable baseline probabilities $P_{\mathrm{Born}}(i\mid Z_t)$. Balanced binary QRNGs are allowed, but non-uniform or multi-outcome baselines are preferred when they improve drift diagnostics.
+    2.  **Reference generator:** An independent generator produces $R_t$ before the report stage. $R_t$ is locked in the forward record, is not the later target event, and is not used to generate $Y_t$.
+    3.  **Automated Bob-channel:** The report channel assigns each trial to true, false, neutral, unseen, or delayed-report status according to a preregistered randomization schedule. Human operators must not know $H_t$ during data collection.
+    4.  **Participant aggregate $S_A$:** Alice receives report content $E_t$ on seen trials and forms an expectation during a fixed expectation window. Optional confidence, attention, EEG, HRV, pupil, reaction-time, or other physiological markers may be recorded as secondary covariates, but they cannot redefine the primary endpoint after outcome inspection.
+    5.  **Blinding and ethics:** Alice is blinded to the true/false assignment. Analysts are blinded to report labels until the analysis code and exclusion ledger are frozen. Any use of false reports with human participants requires consent procedures, ethics review, and debriefing.
+
+*   **Procedure:**
+    1.  **Baseline calibration:** Collect device-only data to estimate $P_{\mathrm{Born}}(i\mid Z_t)$, drift, autocorrelation, detector asymmetry, and environmental sensitivity.
+    2.  **Trial construction:** For each trial or block, generate and lock $R_t$, assign the report condition, generate and lock $E_t$, $H_t$, and $V_t$, deliver $E_t$ only when the assigned condition requires delivery before the target event, wait through the fixed expectation window on seen trials, and only then generate and lock the target outcome $Y_t$.
+    3.  **True-report arm:** Set $E_t=R_t$ and show $E_t$ before $Y_t$.
+    4.  **False-report arm:** Set $E_t\ne R_t$ and show $E_t$ before $Y_t$.
+    5.  **Unseen/report-only control:** Generate and lock the same report record but do not show it to Alice before $Y_t$.
+    6.  **Delayed-report control:** Generate and lock $E_t$, $H_t$, and the report condition before $Y_t$, but withhold the report from Alice until after $Y_t$ is generated and locked. If delayed content is generated operationally after $Y_t$, it must be generated from a seed committed before $Y_t$ and unavailable to the outcome-recording process.
+    7.  **Neutral control:** Present report-neutral content with matched timing, attention demand, and sensory load.
+    8.  **Target-swap balance:** Counterbalance $E_t=0$ and $E_t=1$ or the corresponding multi-outcome target labels so that any genuine report-direction effect must reverse with the report content.
+
+*   **Primary Endpoint, Binary Balanced Case:** For a balanced binary target with $P_{\mathrm{Born}}(Y_t=E_t)=1/2$ on target-labelled trials, define
+$$
+A_t=\mathbf 1\{Y_t=E_t\}.
+\quad \text{(79f)}
+$$
+The primary false-report effect is
+$$
+\delta_{\mathrm{false}}
+=
+\mathbb E[A_t\mid H_t=\mathrm{false},V_t=\mathrm{seen}]
+-
+\mathbb E[A_t\mid H_t=\mathrm{false},V_t=\mathrm{unseen}].
+\quad \text{(79g)}
+$$
+The standard null predicts $\delta_{\mathrm{false}}=0$. The expectation-mediated branch with report-direction alignment predicts a preregistered nonzero sign, usually $\delta_{\mathrm{false}}>0$ when the target state is defined as the report-matching outcome.
+
+*   **Primary Endpoint, Non-Uniform or Multi-Outcome Case:** Let
+$$
+p_{E_t}^{\mathrm{Born}}(Z_t)=P_{\mathrm{Born}}(Y_t=E_t\mid Z_t).
+$$
+Use the centered report-match score
+$$
+S_t=\mathbf 1\{Y_t=E_t\}-p_{E_t}^{\mathrm{Born}}(Z_t).
+\quad \text{(79h)}
+$$
+The primary false-report contrast is
+$$
+D_{\mathrm{false}}
+=
+\mathbb E[S_t\mid H_t=\mathrm{false},V_t=\mathrm{seen}]
+-
+\mathbb E[S_t\mid H_t=\mathrm{false},V_t=\mathrm{unseen}].
+\quad \text{(79i)}
+$$
+For a retained multi-outcome CTB test, the full vector shift
+$$
+\widehat{\Delta\mathbf P}_{e}
+=
+\widehat{\mathbf P}(Y_t=\cdot\mid E_t=e,V_t=\mathrm{seen})
+-
+\widehat{\mathbf P}_{\mathrm{Born}}(\cdot)
+\quad \text{(79j)}
+$$
+must be tested against the preregistered target-displacement vector
+$$
+v^{(e)}_i
+=
+p^{\mathrm{tar}}_{e,i}
+-
+p_i,
+\qquad
+p^{\mathrm{tar}}_{e,i}=\mathrm{tr}(\sigma_eE_i),
+\qquad
+p_i=\mathrm{tr}(\rho E_i).
+\quad \text{(79k)}
+$$
+As in Protocol 1, the CTB branch requires the orthogonal residual
+$$
+R_{\perp,e}
+=
+\left\|
+\left(I-\frac{v^{(e)}(v^{(e)})^T}{\|v^{(e)}\|_2^2}\right)
+\widehat{\Delta\mathbf P}_{e}
+\right\|_2
+\quad \text{(79l)}
+$$
+to vanish up to the preregistered sampling and device-systematics budget whenever $v^{(e)}\ne0$.
+
+*   **Secondary Analyses:**
+    1.  **Report-content alignment:** On false-report trials, the shift should align with $E_t$, not with the hidden reference record $R_t$.
+    2.  **Visibility gate:** Seen reports may show the effect; unseen and delayed reports should not.
+    3.  **Confidence modulation:** If confidence is preregistered as a covariate, stronger internalization of $E_t$ may scale the effect, but this is secondary unless fixed as the primary endpoint before data collection.
+    4.  **Truth-tag independence:** Conditional on being seen and internalized, true and false reports may produce the same report-direction effect. A dependence on $H_t$ alone suggests leakage, artifact, or an ordinary information channel rather than passive expectation-mediated CC.
+    5.  **Target-swap sign reversal:** If report labels are swapped, the signed effect must reverse. A fixed device-channel bias independent of $E_t$ fails this discriminator.
+
+*   **Statistical Analysis and Power:** The primary analysis must be preregistered and run on locked data. For a one-arm balanced binary test against a known $1/2$ baseline, an approximate required sample size for detecting $|\delta|$ with two-sided type-I error $\alpha_{\mathrm{sig}}$ and power $1-\beta_{\mathrm{II}}$ is
+$$
+N_{\mathrm{one}}
+\approx
+\frac{\left(Z_{1-\alpha_{\mathrm{sig}}/2}+Z_{1-\beta_{\mathrm{II}}}\right)^2}{4\delta^2}.
+\quad \text{(79m)}
+$$
+For the equal-allocation two-arm seen-versus-unseen contrast in (79g), the approximate total sample size is
+$$
+N_{\mathrm{two}}
+\approx
+\frac{\left(Z_{1-\alpha_{\mathrm{sig}}/2}+Z_{1-\beta_{\mathrm{II}}}\right)^2}{\delta^2}.
+\quad \text{(79n)}
+$$
+If autocorrelation, block effects, participant effects, or drift are present, replace $N$ by an effective sample size $N_{\mathrm{eff}}$ and use mixed-effects logistic or multinomial regression with participant, block, device, and time as preregistered effects.
+
+*   **Evidence Rule:** A positive Protocol 1a result requires all of the following:
+    1.  the false-report seen contrast (79g) or (79i) satisfies the preregistered support rule of Definition 13.0a;
+    2.  unseen and delayed-report controls are null within their preregistered intervals;
+    3.  the signed effect follows report content $E_t$, including on false-report trials;
+    4.  target-swap conditions show the registered sign reversal;
+    5.  environmental, timing, software, operator, device-drift, and leakage ledgers satisfy the artifact bound $B_{art}\le\rho_*|\widehat\Delta|$ from Definition 13.0a;
+    6.  an independent replication satisfies the same primary endpoint.
+
+*   **Falsification Rule:** A null result with a confidence or posterior interval excluding the registered effect scale falsifies the expectation-mediated CC branch at that scale for the tested aggregate, device, and expectation-induction class. A result is classified as artifact or failure, not support, if the effect appears in unseen or delayed-report controls, tracks $R_t$ rather than $E_t$ on false-report trials, fails target-swap reversal, depends on post-hoc exclusions, or correlates with ordinary device/environment channels.
+
+*   **CC Extraction:** For a binary report-match shift $\widehat{\delta}_{\mathrm{false}}$, if unseen and delayed-report controls are null within the preregistered tolerance, then $|\widehat{\delta}_{\mathrm{false}}|$ estimates the seen-context Born-rule shift and the conservative operational estimate is
+$$
+\widehat{\mathrm{CC}}_{\mathrm{op}}\ge |\widehat{\delta}_{\mathrm{false}}|.
+\quad \text{(79o)}
+$$
+On the Fisher-budget subbranch, the paired estimate is
+$$
+\widehat{\mathrm{CC}}_{\mathrm{Fisher}}
+\ge
+4\arcsin(|\widehat{\delta}_{\mathrm{false}}|/4).
+\quad \text{(79p)}
+$$
+If the control arms are not null, the contrast alone does not license Protocol 1a support; at most it implies that at least one compared arm carries a context-dependent shift of size at least $|\widehat{\delta}_{\mathrm{false}}|/2$, subject to the artifact ledger. For multi-outcome tests, use the preregistered pointwise, total-variation, or CTB-vector norm corresponding to Theorem 51 and Corollary 37a.
+
+*   **Feasibility Assessment:** Protocol 1a is experimentally attractive because it avoids requiring active intention or deliberate biasing. It tests passive expectation as a physically instantiated context variable, using true/false report structure as a placebo-style discriminator. The main difficulties are psychological variability, deception ethics, report internalization strength, large required sample size, and exclusion of timing, leakage, and device-label artifacts.
 
 **13.3 Prediction/Protocol 2: Exploratory Coherence Time Tests**
 
@@ -375,7 +591,7 @@ $|\Delta P|_{\rm EM}\ \lesssim\ 2.68\times 10^{-13}\,T$ (with $T$ in seconds). T
 Addresses the most speculative prediction: potential statistical FTL influence mediated by CC acting on entangled systems (Postulate 3). The protocol targets the nonlocal/state-mediated marginal-anomaly branch (iii) of Postulate 3, on which Bob's marginal $P(b)$ shifts with Alice's *late-randomized* context; the local CPTP branch (i) preserves Bob's marginal and permits only Alice-local or joint-correlation changes detectable after classical comparison of records, and the preparation-context branch (ii) admits a Bob-marginal shift only when Alice's context is fixed in the shared causal past of the two measurement regions and is therefore excluded as an explanation of branch-(iii) data by a late-randomization design.
 
 *   **Objective:** Sensitive search for preregistered statistical dependence of Bob's local measurement outcomes on Alice's remote context $\mathrm{context}_S$ (associated with system $S_A$ at her station), with A and B space-like separated and with $\mathrm{context}_S$ randomized strictly later than the latest event in the shared causal past of the two measurement regions. On branch (i), only Alice-local or joint/conditional correlations after classical comparison can vary; on branch (ii), a Bob-marginal shift can occur only when context randomization precedes preparation; on branch (iii), Bob's marginal itself shifts under late randomization. Secondary search for context-dependent changes in Bell parameters.
-*   **Theoretical Basis:** Postulate 3 defines three branches. On branch (i), Bob's marginal probabilities are invariant by standard no-signaling (Bob-marginal kernel decomposition, Lemma 10.2). On branch (ii), Bob's marginal can depend on $C_A$ through common-cause statistics inherited from preparation in the shared causal past (Theorem L.12.8). On branch (iii), Alice's late-randomized context $C_A$ shifts Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while respecting Postulate 2 by remaining non-deterministic and zero-error inaccessible in finite pre-lightcone windows on the regular branch (Theorems 39a and 42; Definition 10.2a). Detection of a marginal shift requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40); joint-correlation tests require classical comparison of records; the pre-lightcone information budget and sampling gate are bounded by Lemma 10.3.
+*   **Theoretical Basis:** Postulate 3 defines three branches. On branch (i), Bob's marginal probabilities are invariant by standard no-signaling (Bob-marginal kernel decomposition, Lemma 10.2). On branch (ii), Bob's marginal can depend on $C_A$ through common-cause statistics inherited from preparation in the shared causal past (Theorem L.12.8). On branch (iii), Alice's late-randomized context $C_A$ shifts Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while respecting Postulate 2 by remaining non-deterministic and zero-error inaccessible in finite pre-lightcone windows on the regular branch (Theorems 39a, 39b, and 42; Definitions 10.2a and 10.2c, when a current certificate is asserted). Detection of a marginal shift requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40); joint-correlation tests require classical comparison of records; the pre-lightcone information budget and sampling gate are bounded by Lemma 10.3.
 *   **Experimental Setup:**
     1.  **Entanglement Source:** High-quality, stable source distributing entangled pairs to space-like separated stations (Alice, Bob).
     2.  **Measurement Stations (A, B):** Standard Bell test apparatus (independent, random settings $a, b$). High efficiency desirable. The setting generators are device‑independent and statistically independent of system $S$ and any hidden variables.
@@ -409,9 +625,9 @@ The CC term is itemized as (a) a *joint-correlation anomaly* $\Delta_{\rm CC}^{\
 
 A pragmatic, staged approach is recommended to systematically test the framework's predictions:
 
-1.  **Stage 1 (Near-Term Focus):** High-statistics QRNG tests (Protocol 1). This protocol is the most accessible for either detecting a signal or placing meaningful upper bounds on CC in the range of $10^{-3} - 10^{-4}$. Success is contingent on meticulous QRNG and interaction-pathway design, rigorous systematics control, and achieving the required statistical power as outlined in the protocol's power analysis.
-1.  **Stage 2 (Medium-Term):** If justified by positive and replicated results from Stage 1, coherence time tests (Protocol 2) should be pursued to seek complementary evidence. This stage would also involve refining the QRNG protocols based on initial findings.
-2.  **Stage 3 (Long-Term / Contingent):** The extraordinarily demanding Bell-type experiments for a statistical FTL search (Protocol 3) should only be undertaken if compelling, independently verified evidence emerges from the earlier stages.
+1.  **Stage 1 (Near-Term Focus):** High-statistics QRNG tests (Protocol 1) and report-induced expectation QRNG tests (Protocol 1a). Protocol 1 searches for context-correlated deviations under controlled internal states. Protocol 1a isolates passive expectation by comparing true, false, unseen, and delayed reports while generating the target quantum outcome only after the expectation window. These protocols are the most accessible for either detecting a signal or placing meaningful upper bounds on CC in the range of $10^{-3} - 10^{-4}$. Success is contingent on meticulous QRNG and interaction-pathway design, rigorous systematics control, and achieving the required statistical power as outlined in the protocols' power analyses.
+2.  **Stage 2 (Medium-Term):** If justified by positive and replicated results from Stage 1, coherence time tests (Protocol 2) should be pursued to seek complementary evidence. This stage would also involve refining the QRNG and expectation-induction protocols based on initial findings.
+3.  **Stage 3 (Long-Term / Contingent):** The extraordinarily demanding Bell-type experiments for a statistical FTL search (Protocol 3) should only be undertaken if compelling, independently verified evidence emerges from the earlier stages.
 
 All proposed experiments share common requirements for rigor and validity. They necessitate quantum systems with high stability over long integration times to achieve the required statistical power. Given the multiple hypotheses being tested, a clear, pre-registered statistical plan is mandatory to control the family-wise error rate. This should include specifying the use of sequential analyses with pre-defined stopping rules (e.g., O'Brien–Fleming boundaries) to allow for early termination for efficacy or futility while preserving the overall type-I error rate. As a concrete example, with three equally spaced looks, the canonical OBF boundaries (Z-scores) at a family-wise $\alpha_{\mathrm{sig}}=0.05$ are approximately $[3.47, 2.45, 2.00]$.
 
@@ -421,9 +637,9 @@ The experimental program, especially Protocol 3, probes the framework's non-stan
 
 **13.7.1 Theorem 53 (CC Compliance with Postulate 2)**
 
-The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\mathrm{CC}\le\alpha_{CC,max}<0.5$ (Theorem 39) and by the finite-window zero-error gate (Theorem 39a) on the regular statistical branch (Definition 10.2a), is consistent with the framework's definition of causality (Postulate 2) because it prevents deterministic or zero-error faster-than-light (FTL) signaling. The potential statistical FTL influence (Postulate 3) may still have positive finite-error statistical information (Theorem 41), but it remains sample-complexity limited (Theorem 40) and unusable for constructing paradox-inducing deterministic causal loops (Theorem 42, whose consistency is supported by the AQFT analysis in Appendix F).
+The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\mathrm{CC}\le\alpha_{CC,max}<0.5$ (Theorem 39) and by the finite-window zero-error gate (Theorem 39a) on the regular statistical branch (Definition 10.2a), and by the predictive-current no-loop/precision-cost gate when a current representation is asserted (Theorem 39b, Definition 10.2c), is consistent with the framework's definition of causality (Postulate 2) because it prevents deterministic or zero-error faster-than-light (FTL) signaling. The potential statistical FTL influence (Postulate 3) may still have positive finite-error statistical information (Theorem 41), but it remains sample-complexity limited (Theorem 40) and unusable for constructing paradox-inducing deterministic causal loops (Theorems 39b and 42, whose consistency is supported by the AQFT analysis in Appendix F).
 
-*Proof.* Theorem 39 bounds the operational bias strength on the bounded-bias branch by $\mathrm{CC}\le\alpha_{CC,max}<0.5$. In particular, the CC mechanism cannot force both deterministic endpoints of a binary trial; hence it cannot implement deterministic one-shot superluminal signaling. Theorem 39a then addresses the finite-window statistical branch on the regular operating regime: under the common-support condition of Definition 10.2a — motivated by the endpoint gate, ND-RID finite-transfer limits, irreducible $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, PPI admissibility of probability kernels, and refresh-branch strict contractivity where available — the context-conditioned transcript distributions retain positive overlap, so every finite pre-lightcone decoder has nonzero error probability. Theorem 40 shows that any nonzero CC signal can only be detected statistically, with required sample size scaling as $N=O(\mathrm{CC}^{-2})$. Theorem 41 bounds the finite-error information rate by a quantity of order $\mathrm{CC}^2$ at a regular operating point. Finally, Theorem 42 establishes that such a finite-error statistical channel cannot be concatenated into the deterministic or zero-error signaling loops excluded by Postulate 2. Appendix F supplies the AQFT locality framework for the Bob-marginal-preserving branch and the operator-local baseline; the branch-(iii) statistical-FTL consistency claim is furnished by Theorems 39a–42. Therefore the CC mechanism is compatible with Postulate 2 while remaining testable as a probabilistic Postulate 3 effect. ∎
+*Proof.* Theorem 39 bounds the operational bias strength on the bounded-bias branch by $\mathrm{CC}\le\alpha_{CC,max}<0.5$. In particular, the CC mechanism cannot force both deterministic endpoints of a binary trial; hence it cannot implement deterministic one-shot superluminal signaling. Theorem 39a then addresses the finite-window statistical branch on the regular operating regime: under the common-support condition of Definition 10.2a — motivated by the endpoint gate, ND-RID finite-transfer limits, irreducible $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, PPI admissibility of probability kernels, and refresh-branch strict contractivity where available — the context-conditioned transcript distributions retain positive overlap, so every finite pre-lightcone decoder has nonzero error probability. Theorem 39b adds that any current representation of such a signal is a coarse-graining of the same finite transcript algebra and therefore cannot create a zero-error decoder; when a finite Markov/KMS precision certificate is supplied, nonzero finite-cost current signals also carry nonzero variance. Theorem 40 shows that any nonzero CC signal can only be detected statistically, with required sample size scaling as $N=O(\mathrm{CC}^{-2})$. Theorem 41 bounds the finite-error information rate by a quantity of order $\mathrm{CC}^2$ at a regular operating point. Finally, Theorem 42 establishes that such a finite-error statistical channel cannot be concatenated into the deterministic or zero-error signaling loops excluded by Postulate 2. Appendix F supplies the AQFT locality framework for the Bob-marginal-preserving branch and the operator-local baseline; the branch-(iii) statistical-FTL consistency claim is furnished by Theorems 39a–42, with Theorem 39b supplying the current-level no-loop gate when that representation is used. Therefore the CC mechanism is compatible with Postulate 2 while remaining testable as a probabilistic Postulate 3 effect. ∎
 
 *Note:* Empirical investigation of Postulate 3 (Protocol 3) critically tests this distinct aspect of PU's locality/causality. Confirmation requires re-evaluating standard locality; null results constrain/falsify this prediction.
 
@@ -988,7 +1204,7 @@ The PU framework predicts that the extended binary Golay code $[24, 12, 8]$ repr
 
 The evidence confirms that the Golay code's theoretical optimality—predicted by PU from first principles—translates into practical performance advantages. While the existing evidence is *consistent with* rather than *discriminating for* PU (standard coding theory also predicts Golay excellence), Protocol 4 provides methodology to test whether the code's performance exceeds distance-based predictions, which would constitute discriminating evidence for substrate alignment.
 
-This constitutes an independent validation pathway for the PU framework, complementing the CC-focused protocols of Sections 13.2–13.5.
+This constitutes an independent validation pathway for the PU framework, complementing the CC-focused protocols of Sections 13.2–13.5, including the report-induced expectation test of §13.2a.
 
 ## 13.10 Consolidated Falsifiability Analysis
 
@@ -1163,6 +1379,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Gauge algebra / connected-cover notation on the finite-response block-frame positive-marginal capacity branch | $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak u(1)$; connected cover $SU(3) \times SU(2) \times U(1)$ | Standard Model gauge algebra; global form fixed by determinant interface | Theorem G.8.4b; Corollary G.8.4c | ◐ finite-response block-frame branch theorem |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
 | Chronometric curvature phase/dephasing | $\hbar|\dot\Theta|/|\Delta E|=|\Delta\Phi|/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/|\Delta E|=|\Delta\Phi|/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
+| Report-induced expectation CC | On the expectation-mediated branch, seen false reports can produce a report-content-aligned later outcome shift $\delta_{\mathrm{false}}\ne0$ while unseen and delayed-report controls remain null; CTB subbranch requires target-vector alignment and vanishing orthogonal residual | dedicated blinded true/false/unseen/delayed QRNG or finite-POVM expectation protocol required | Theorem 51; Definition 34; Corollary 37a; Protocol 1a | ◐ branch prediction; ○ untested |
 | Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch; incidence $253:77:21:5:1$; controlled weight-4 fibers form $1771$ six-tetrad sextets | dedicated 24-mode residual-noise and decoder-boundary tests required | Theorem Z.13b.3; Corollary Z.13b.5; Protocol 4.4 | ◐ branch prediction; ○ untested |
 | Golay-Steiner octad stiffness | normalized Hessian spectrum $0^{(1)}\oplus352^{(23)}$ on the exact octad stiffness branch | classical-emulator audit available now; physical 24-mode quadratic-response spectroscopy with $759$-term octad coupling is architecture-pending | Corollary Z.13b.1a; Definition T.10a; Lemma T.2; Protocol 4.5 | ◐ branch prediction (emulator gate); ○ untested (physical gate) |
 | Cosmological acceleration lock | $g_0=c^2\sqrt{\Lambda}/8$; $\Sigma_\dagger=c^2\sqrt{\Lambda}/(16\pi G)$ | $g_0\sim1.2\times10^{-10}\,\mathrm{m/s^2}$; surface-density tests pending | Cor H.1, Cor H.1a, Cor I.3a | ◐ bridge-law branch; ○ redshift/lensing tests pending |

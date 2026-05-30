@@ -52,9 +52,48 @@ The proposition therefore establishes a model-level correspondence between the p
 $$\varepsilon_0=\ln2 \text{ nats}.$$
 This Landauer floor is the thermodynamic input used in the branch-selection argument below.
 
-**Corollary Y.1.1** (Irreversible Branch Selection). *At the verification step of each SPAP cycle, the 2-to-1 merge selects one branch of the NOT duality and irreversibly erases the other. This selection determines whether the local predictive outcome manifests as "particle" or "antiparticle."*
+**Corollary Y.1.1** (Irreversible Branch Selection). At the verification step of each nontrivial SPAP cycle, the 2-to-1 merge selects one retained branch of the predictive $\mathbb Z_2$ ledger and exports at least $\ln2$ nats of entropy when the discarded branch is not retained as side information. Let $\mathcal E_\Omega$ be a finite set of baryon-relevant update events in a finite spacetime region $\Omega$, equipped with the charge-conjugation pairing $e\mapsto\bar e$ from Proposition Y.1 and an orientation character
+$$
+\chi(e)\in\{+1,-1\},
+\qquad
+\chi(\bar e)=-\chi(e).
+\tag{Y.1.1}
+$$
+Let $q_B(e)\ge0$ be the baryon-number magnitude contributed by event $e$ on the chosen transport branch, and let $w(e)$ be the forward-oriented event weight after the Appendix O time-orientation gate. Define the predictive momentum ledger
+$$
+\mathcal P_B(\Omega)
+:=
+\sum_{e\in\mathcal E_\Omega}
+\chi(e)q_B(e)w(e).
+\tag{Y.1.2}
+$$
+Then
+$$
+\mathcal P_B(\Omega)
+=
+\sum_{[e]}
+q_B(e)\big(w(e)-w(\bar e)\big),
+\tag{Y.1.3}
+$$
+where the sum is over charge-conjugation pairs with $q_B(e)=q_B(\bar e)$ and with the representative chosen so that $\chi(e)=+1$. In any CP-symmetric equilibrium branch for which
+$$
+w(e)=w(\bar e)
+\tag{Y.1.4}
+$$
+for every pair, the predictive momentum ledger vanishes:
+$$
+\mathcal P_B(\Omega)=0.
+\tag{Y.1.5}
+$$
+A nonzero matter excess on the Appendix Y branch is therefore exactly the finite retained value of the CP-odd, forward-oriented, baryon-number transport ledger (Y.1.2). This is the precise sense in which the matter excess is predictive momentum: its sign is the sign of the baryon transport ledger relative to the Appendix O update orientation, while its magnitude is fixed only by the anomaly, CP, out-of-equilibrium, sphaleron, washout, and transport certificates used later in Appendix Y.
 
-The global preponderance of matter over antimatter reflects the cumulative effect of branch selections across the cosmic MPU network, with the initial selection determined by boundary conditions on the primordial predictive state.
+*Proof.* The event set decomposes into disjoint charge-conjugation pairs $\{e,\bar e\}$ on the retained odd sector. A fixed point would require $\chi(e)=-\chi(e)$, impossible for $\chi\in\{\pm1\}$, so fixed points carry no retained odd contribution. Summing the two members of a pair gives
+$$
+\chi(e)q_B(e)w(e)+\chi(\bar e)q_B(\bar e)w(\bar e)
+=
+\chi(e)q_B(e)\big(w(e)-w(\bar e)\big).
+$$
+Choosing the representative with $\chi(e)=+1$ gives (Y.1.3). If CP symmetry and equilibrium make the paired weights equal, each pair contribution is zero, proving (Y.1.5). The positive entropy cost of the branch selection is Theorem J.1, and the forward orientation of the ledger is supplied by Appendix O. ∎
 
 ---
 

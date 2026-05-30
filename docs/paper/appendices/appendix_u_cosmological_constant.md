@@ -34,6 +34,52 @@ The following constants are derived elsewhere in the framework:
 | $D$ | 4 | Emergent spacetime dimension | Theorem Z.11 |
 | $C_{\max}/\varepsilon_0$ | 2 | PCE capacity ratio | Appendix Q |
 
+**Proposition U.2b (Reflexive Vacuum-Weight Accounting).**
+Let
+$$
+w_\Lambda:=\frac{\Lambda L_P^2}{8\pi}.
+\tag{U.2b.1}
+$$
+On an accepted Appendix U vacuum certificate using the Appendix U prefactor convention, write
+$$
+w_\Lambda=A_{\text{eff}}e^{-I_{\mathrm{vac}}},
+\tag{U.2b.2}
+$$
+where $I_{\mathrm{vac}}=2\kappa_{\mathrm{ref}}$ on the reference five-mode convention and $I_{\mathrm{vac}}$ denotes the corresponding accepted branch exponent on any other Appendix U vacuum branch. If the same finite certificate decomposes the Euclidean vacuum-transition action into a reduced non-reflexive contribution and the finite reflexive exhaust ledger of Theorem J.4a,
+$$
+I_{\mathrm{vac}}
+=
+I_{\mathrm{red}}
++
+\mathcal X_{\mathrm{ref}},
+\qquad
+\mathcal X_{\mathrm{ref}}
+=
+N_{\mathrm{ref}}\ln2+\mathcal X_{\mathrm{diss}},
+\qquad
+\mathcal X_{\mathrm{diss}}\ge0,
+\tag{U.2b.3}
+$$
+then
+$$
+w_\Lambda
+=
+A_{\text{eff}}e^{-I_{\mathrm{red}}}
+2^{-N_{\mathrm{ref}}}
+e^{-\mathcal X_{\mathrm{diss}}}.
+\tag{U.2b.4}
+$$
+Thus the reflexive contribution enters the vacuum weight only as a finite action-budget factor already counted inside the accepted instanton/Fredholm certificate. It is not an independent zero-point-energy sum and it cannot introduce an additional unconstrained positive vacuum density outside the Appendix U prefactor-and-exponent ledger.
+
+*Proof.* Substitute (U.2b.3) into (U.2b.2):
+$$
+w_\Lambda
+=
+A_{\text{eff}}
+\exp[-I_{\mathrm{red}}-N_{\mathrm{ref}}\ln2-\mathcal X_{\mathrm{diss}}].
+$$
+Since $\exp[-N_{\mathrm{ref}}\ln2]=2^{-N_{\mathrm{ref}}}$, this is (U.2b.4). The nonnegative dissipative part can only multiply the vacuum weight by $e^{-\mathcal X_{\mathrm{diss}}}\le1$. Every factor in (U.2b.4) is part of the finite accepted certificate: $I_{\mathrm{red}}$, $N_{\mathrm{ref}}$, $\mathcal X_{\mathrm{diss}}$, and $A_{\text{eff}}$. Therefore the reflexive exhaust ledger supplies finite vacuum-weight accounting, not a second independent cosmological-constant source. ∎
+
 ---
 
 ## U.3 The Golay Code and Steiner System

@@ -517,6 +517,22 @@ t=\left\lfloor\frac{8-1}{2}\right\rfloor=3.
 $$
 Theorem R.3.4 gives the minimal admissible value $N_g=3$ in the anomaly+CP family-charge class, and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. Hence $t=N_g$ on that branch. ∎
 
+**Corollary R.3.5a.1 (Code-Radius Family Ledger).**
+On the pre-flavor family-redundancy PPI branch, the realized family ledger is exactly the radius-three correction ledger of the selected Golay code:
+$$
+N_g
+=
+t_{\mathrm{Golay}}
+=
+\left\lfloor\frac{d_{\min}(\mathcal G_{24})-1}{2}\right\rfloor
+=
+3.
+\tag{R.3.5a.1}
+$$
+Any additional family label at this pre-flavor level is either response-null and removed by PPI, or response-active only after adding a separate flavor-sector datum with positive branch cost.
+
+*Proof.* The equality $t_{\mathrm{Golay}}=3$ is Corollary R.3.5a. Proposition R.3.5.1a proves that the pre-flavor PPI-realized family count is exactly $N_g=3$. Combining these gives (R.3.5a.1). If a fourth pre-flavor label has no distinct finite protocol response, Corollary P.6.1b.8 quotients it as response-null. If it has distinct masses, mixings, or flavor holonomy, then by Proposition R.3.5.1a it is not part of the pre-flavor family-redundancy ledger but belongs to a later response-active flavor layer with separate description cost. ∎
+
 **Corollary R.3.5b** (Topological Rank Identity). On the minimal Appendix Z branch,
 $$
 \operatorname{rank}\pi_2(\Sigma_8) = d_0 - 1 = N_g + D = 7.

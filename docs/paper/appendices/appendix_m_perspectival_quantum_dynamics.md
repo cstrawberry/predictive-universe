@@ -210,6 +210,71 @@ Using this mathematical framework, we provide a precise description of the quant
 
 This formalized process shows how the framework, augmented with the mathematical machinery for perspective dynamics, provides a consistent account of measurement, incorporating the derived Born rule and explaining the emergence of definite outcomes via perspective shifts without invoking amplitude collapse.
 
+**Theorem M.4a (Operational Record Consensus after Perspectival Actualization).**
+Let $K$ be the finite outcome set of a measurement interaction, and let
+$$
+p(k)=P_{\mathrm{Born}}(k\,|\,|\psi\rangle,s_{\mathrm{int}})
+$$
+be the Born distribution supplied by Equation (M.7). After a definite outcome has been actualized relative to a participating perspective, let $r=1,\ldots,N$ be finite record channels carrying likelihood functions
+$$
+L_r:K\to[0,\infty)
+$$
+with the nonzero normalizer below, and let $w_r\ge0$ be fixed finite record weights. Zero-weight channels are omitted from support restrictions and from the product below. Define, on the probability simplex over $K$, the record-merging functional
+$$
+\mathcal J(q)
+=
+D_{\mathrm{KL}}(q\Vert p)
+-
+\sum_{r=1}^N w_r\sum_{k\in K}q(k)\log L_r(k),
+\tag{M.4a.1}
+$$
+with zero positive-weight likelihoods handled by support restriction or by the limiting positive-likelihood approximation. If
+$$
+Z
+:=
+\sum_{k\in K}
+p(k)
+\prod_{r=1}^N L_r(k)^{w_r}
+\tag{M.4a.2}
+$$
+is finite and positive, then the unique minimizer is
+$$
+q^*(k)
+=
+\frac{
+p(k)\prod_{r=1}^NL_r(k)^{w_r}
+}{
+Z
+}.
+\tag{M.4a.3}
+$$
+If a nonempty positive-weight sharp record subfamily reports the same value $k_0$, $p(k_0)>0$, and each sharp record in that subfamily satisfies $L_r(k_0)=1$, $L_r(k)=0$ for $k\ne k_0$, then $q^*=\delta_{k_0}$ on the retained support. If there is no record evidence, so that every positive-weight $L_r$ is constant on the retained support, then $q^*=p$.
+
+For a Byzantine finite-record layer, suppose at most $f$ of the $N$ record labels are arbitrary, all nonfaulty record channels report the actualized value $k_0$, and
+$$
+N>3f.
+\tag{M.4a.4}
+$$
+Then $k_0$ is the unique label with more than $2N/3$ record support. Hence the finite record layer has a unique supermajority consensus value before the likelihood merge (M.4a.3) is applied.
+
+*Proof.* On the relative interior of the retained support of $p$, $D_{\mathrm{KL}}(q\Vert p)$ is strictly convex in $q$, and the second term in (M.4a.1) is linear in $q$. Therefore $\mathcal J$ is strictly convex on the retained support and has at most one minimizer. Introducing a Lagrange multiplier $\lambda$ for $\sum_k q(k)=1$ gives
+$$
+0
+=
+\frac{\partial}{\partial q(k)}
+\left[
+\mathcal J(q)+\lambda\left(\sum_jq(j)-1\right)
+\right]
+=
+\log\frac{q(k)}{p(k)}+1
+-
+\sum_r w_r\log L_r(k)
++\lambda.
+$$
+Solving for $q(k)$ and normalizing gives (M.4a.3). Constant positive-weight likelihoods cancel in the normalizer and return $q^*=p$. A positive-weight sharp record with value $k_0$ assigns zero likelihood to every $k\ne k_0$, so the retained support of the product in (M.4a.2) is contained in $\{k_0\}$. The conditions $p(k_0)>0$ and $Z>0$ leave exactly $k_0$, giving $q^*=\delta_{k_0}$. For the Byzantine layer, at least $N-f$ records report $k_0$. Since $N>3f$, one has $N-f>2N/3$, while any incorrect label can receive support from at most the $f<N/3$ arbitrary records. Thus $k_0$ is the unique supermajority label. ∎
+
+An observer with high Consciousness Complexity is a high-resource record-integrating subsystem within this theorem. The theorem does not add a separate collapse postulate: Born actualization is still the amplitude component of Evolve, while consensus is the finite record-merging step that aligns durable records across perspectives.
+
 ## M.5 Mathematical Consistency
 
 The formalism presented in this appendix utilizes standard mathematical concepts: complex Hilbert spaces, unitary operators, homogeneous spaces (manifolds) as state spaces for perspectives, Riemannian metrics and Laplace-Beltrami operators on manifolds, and Markov transition kernels (specifically heat kernels of drift-diffusion operators) for stochastic processes. These components are well-established and internally consistent. Constructing a model of this entire structure within a foundational system like Zermelo-Fraenkel set theory with Choice (ZFC) is feasible, ensuring the relative consistency of the mathematical framework employed.
@@ -1208,6 +1273,63 @@ for all $c_1,c_2\in\mathcal E$.
 
 *Proof.* Shape identity requires the subdiagram structure and the response-presheaf correspondence. Theorem M.10.10d identifies the role-level quotient represented by response presheaves. A coordinate chart on that quotient does not replace the full subdiagram and presheaf data. ∎
 
+**Theorem M.10.11 (Perspectival Simulation Admissibility).**
+Let $S$ be a predictive system with Effective Operational Property R and self-model $\mathcal M_S$. Let $\mathcal H^\tau$ be a finite simulation record or simulator, where $\tau=+$ denotes future-directed simulation, $\tau=-$ denotes past-directed reconstruction, and $\tau=0$ denotes an atemporal model archive. For an integration window $I$, define the $S$-exposure of $\mathcal H^\tau$ as the finite ordered stream of physical patterns actually processed by $S$:
+$$
+\mathcal O_S(\mathcal H^\tau,I)
+=
+(E_1,\dots,E_N).
+$$
+Let
+$$
+R_k:=E_1\oplus\cdots\oplus E_k
+$$
+denote the accumulated finite prefix integrated by $S$ after $k$ exposures. Then $\mathcal H^\tau$ is SPAP-admissible for $S$ on $I$ only if every operationally integrated prefix satisfies
+$$
+\mu_S(R_k)<\infty
+\qquad
+\text{for all }1\le k\le N.
+$$
+Equivalently, no integrated prefix may induce the candidate self-model update
+$$
+\theta'_S(R_k)
+=
+\theta_S+\delta\theta_S(R_k)
+$$
+lying in the prohibition set $\mathcal L_S^{\neg}$ of Definition P.16.1. If there exists a prefix $R_{k^*}$ such that
+$$
+\mu_S(R_{k^*})=\infty,
+$$
+then $R_{k^*}$ is unprocessable by $S$ at finite cost:
+$$
+C_{\mathrm{process}}(S,R_{k^*})=\infty.
+$$
+For finite but nonbaseline SPAP proximity, if $\mu_S(R_k)>1/\alpha_{SPAP}$, the integration cost satisfies
+$$
+C_{\mathrm{process}}(S,R_k)
+\ge
+\Omega\!\left(
+\log \mu_S(R_k)\cdot \mu_S(R_k)^2
+\right).
+$$
+Thus the admissibility of a simulation output is determined not by its temporal direction, total size, or Shannon information content, but by its perspectival SPAP proximity relative to the receiver.
+
+*Proof.* By Definition M.10.3, processing any physical pattern $E$, including an accumulated simulation prefix $R_k$, induces a candidate self-model update
+$$
+\theta'_S(R_k)=\theta_S+\delta\theta_S(R_k)
+$$
+and an associated SPAP proximity $\mu_S(R_k)$. By Definition P.16.1, the candidate update lies in $\mathcal L_S^{\neg}$ exactly when realizing it forces the system to the SPAP boundary, equivalently $\mu_S(R_k)=\infty$. By Theorem M.10.6, any pattern with $\mu_S(E)=\infty$ is unprocessable by $S$ at finite cost. Applying this to $R_k$ proves that any simulation exposure whose integrated prefix reaches $\mu_S=\infty$ cannot be finitely integrated by $S$.
+
+For finite $\mu_S(R_k)>1/\alpha_{SPAP}$, Theorem M.10.3 gives
+$$
+C_{\mathrm{process}}(S,R_k)
+\ge
+\Omega\!\left(
+\log \mu_S(R_k)\cdot \mu_S(R_k)^2
+\right).
+$$
+The theorem is independent of $\tau$, because Definition M.10.3 assigns $\mu_S$ to the receiver-pattern pair $(S,E)$, not to the temporal origin of $E$. Whether the pattern came from a past reconstruction, a future forecast, a memory archive, another observer, or a totality simulation is irrelevant to this cost gate. What matters is the model-change it induces in $S$, especially its self-model component $\Delta M_S^{(\mathrm{self})}(E)$. Therefore a simulation is not blocked because it is about the past or about the future. It is blocked exactly when its operationally integrated output contains SPAP-critical perspectival content for the receiver. ∎
+
 **Table M.6.10.1: Perspectival information compared with existing information types.**
 
 | Property | Shannon | Fisher | Kolmogorov | Quantum | Integrated ($\Phi$) | Perspectival |
@@ -1236,6 +1358,7 @@ for all $c_1,c_2\in\mathcal E$.
 | Theorem M.10.9 | Irreducibility | Structural comparison |
 | Theorem M.10.10 | Entropic perspective transport | Compactness, strict convexity, Born descent |
 | Theorem M.10.10d | Predictive role-position equivalence and profile overclaim guard | Response-presheaf quotient, separating-profile branch |
+| Theorem M.10.11 | Perspectival simulation admissibility | Def M.10.3, Def P.16.1, Thm M.10.3, Thm M.10.6 |
 | Theorem M.6.10a.2 | Finite frame-change cost and covariance defect | Relative entropy, data processing, Pinsker bound |
 
 ### M.6.10a Finite Perspective-Frame Backreaction

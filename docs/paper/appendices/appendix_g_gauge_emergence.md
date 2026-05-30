@@ -1297,6 +1297,38 @@ n_G(\lambda)=1+\sum_{i:n_i\ge2}(n_i^2-1)
 $$
 for each partition. Rows with $n_G>12$ violate the Lagrangian capacity bound of Theorem G.8.2e. Rows with $n_G<12$ are PCE-dominated in the positive-marginal regime because the partition $3+2+1$ is admissible and saturates $n_G=12$. The enumeration contains exactly one row with $n_G=12$, namely $3+2+1$. Corollary G.8.4h.3 removes exact response-null global phases, and anomaly descent retains only one determinant-compatible abelian response direction. Therefore no other compact connected faithful block-frame algebra on $\mathcal B$ has the same admissibility, capacity saturation, and finite-response quotient data. ∎
 
+**Corollary G.8.4c.0a.1 (Block-Frame Stabilizer-Code Form of the Gauge Algebra).**
+Let
+$$
+\mathcal B
+=
+\mathcal B_C\oplus\mathcal B_W\oplus\mathcal B_Y
+\cong
+\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1
+\tag{G.8.4c.0a.1}
+$$
+be the finite-response inactive-sector block frame selected on the positive-marginal branch of Theorem G.8.4b, with block projectors $P_C,P_W,P_Y$. Regard the finite block label measured by $(P_C,P_W,P_Y)$ as the syndrome of the retained block-frame code: transformations are retained precisely when they preserve the syndrome partition and act faithfully on the response-active degrees of freedom after quotienting response-null phases.
+
+The connected capacity-saturating determinant-compatible retained stabilizer algebra of this block-frame code is
+$$
+\mathfrak g_{\mathrm{stab}}
+=
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
+\tag{G.8.4c.0a.2}
+$$
+with
+$$
+\dim\mathfrak g_{\mathrm{stab}}=8+3+1=12.
+\tag{G.8.4c.0a.3}
+$$
+Equivalently, the gauge fields of Corollary G.8.4c are the continuous stabilizer connections of the PCE-selected finite-response block code.
+
+*Proof.* The syndrome projectors $P_C,P_W,P_Y$ force every syndrome-preserving continuous transformation to preserve the ordered decomposition (G.8.4c.0a.1). The nonabelian faithful parts on the rank-$3$ and rank-$2$ blocks are
+$$
+\mathfrak{su}(3)\oplus\mathfrak{su}(2),
+$$
+contributing $8+3=11$ generators. The PPI quotient removes response-null common phases, while determinant-compatible anomaly/hypercharge descent retains exactly one abelian response direction. Theorem G.8.2e bounds the total retained gauge generator count by $12$, and Theorem G.8.4b shows that the $3+2+1$ block frame is the unique admissible positive-marginal partition saturating that bound. Therefore the retained connected stabilizer algebra is exactly (G.8.4c.0a.2). This is the same algebra selected in Corollary G.8.4c, now written as the stabilizer algebra of the finite-response block-code syndrome. ∎
+
 **Remark G.8.4c.0b (Scope Guard: No Arbitrary $U(6)$-Subgroup Classification).** Theorem G.8.4b and Corollary G.8.4c classify the finite-response block-frame/interface-category branch. They do not classify all compact connected Lie subgroups of $U(6)$.
 
 In particular, the tensor-product image
@@ -1408,6 +1440,36 @@ has a unique saturating row at $b=6$, namely $3+2+1$, so the weak block has rank
 Although $\mathfrak{su}(3)$ contains embedded $\mathfrak{su}(2)$ subalgebras, those embedded subalgebras do not replace the weak block. The $3$-block contributes the full $\mathfrak{su}(3)$ with $8$ retained generators on the capacity branch; replacing it by a proper embedded $\mathfrak{su}(2)$ would discard response-changing generators and fail the saturation certificate. The weak algebra is $\mathfrak{su}(\widetilde Q_W)$, placed left-chirally by the existing chiral determinant-line and weak-left projection branch. An accepted low-energy independent $SU(2)_R$ or any non-$\mathfrak{su}(2)$ weak carrier at the same capacity level would require changing the $n_G=12$ ledger rather than silently coexisting with it.
 
 The downstream paragraphs at the end of Appendix G.10 (the causal-chain paragraph extending SPAP $\mathbb Z_2$ through the active-rank/weak-block identification) and in Section Z.14a (the weak-block caveat) cross-reference this theorem and should be read as the same local frame statement under different headings, not as independent transport claims.
+
+**Theorem G.8.4c.0e (Bordism-Anomaly Spectrum Closure Gate).** Let $\mathcal G_{\mathrm{pred}}$ be the determinant-compatible finite-response gauge object selected on the $3+2+1$ block-frame branch of Theorem G.8.4b and Corollary G.8.4c. Let $\mathcal M$ be a finite or compact admissible family of chiral matter/defect packages with fixed response maps and fixed defect-inflow channels. Suppose the branch supplies an additive finite anomaly-bordism character
+$$
+\mathfrak A_{\mathrm{tot}}(M)
+=
+\mathfrak A_{\mathrm{bulk}}+\mathfrak A_M+\partial\mathfrak A_{\mathrm{defect}}
+\in
+\operatorname{Hom}(\Omega^{\mathrm{Spin}}_5(B\mathcal G_{\mathrm{pred}}),\mathbb R/\mathbb Z)
+\tag{G.8.4c.0e.1}
+$$
+or its finite retained anomaly-group image. A package is anomaly-admissible exactly when
+$$
+[\mathfrak A_{\mathrm{tot}}(M)]=0.
+\tag{G.8.4c.0e.2}
+$$
+Let
+$$
+\mathcal K
+:=
+\{M\in\mathcal M:[\mathfrak A_{\mathrm{tot}}(M)]=0\}/\sim_{\mathrm{resp}}
+\tag{G.8.4c.0e.3}
+$$
+be the response quotient of admissible packages, read as a finite quotient when $\mathcal M$ is finite and as the induced compact quotient on compact branches. If $\mathcal K$ is nonempty and the description-cost functional $\mathcal C_{\mathrm{desc}}$ is lower semicontinuous on $\mathcal K$, then a PCE-minimal anomaly-closed matter package exists. If, moreover, the selected class $M_*$ has a strict gap
+$$
+\mathcal C_{\mathrm{desc}}(M)-\mathcal C_{\mathrm{desc}}(M_*)\ge\Delta_{\mathrm{matter}}>0
+\tag{G.8.4c.0e.4}
+$$
+for every response-distinct $M\ne M_*$, then $M_*$ is unique up to response-null conjugation and defect-gauge equivalence. In particular, if the one-generation Standard Model chiral package satisfies (G.8.4c.0e.2) and the strict-gap condition (G.8.4c.0e.4) against every admissible exotic package, then it is the selected matter package on that branch. Without the anomaly-bordism record and strict PCE gap, Corollary G.8.4c selects the gauge algebra only; it does not by itself select the full matter spectrum.
+
+*Proof.* Additivity of the anomaly character makes defect filling equivalent to vanishing of the total additive class (G.8.4c.0e.2). Packages whose finite protocol responses are naturally isomorphic are identified by the response quotient, so only $\mathcal K$ carries physical matter-package distinctions. On a finite response quotient, existence of a minimum is immediate; on a compact response quotient it follows from lower semicontinuity. The strict gap (G.8.4c.0e.4) excludes any second response-distinct minimizer, giving uniqueness up to the quotient equivalences. The final statement is the specialization of this selection criterion to the Standard Model one-generation package. If the required anomaly class or gap is absent, the minimization problem is not a closed finite certificate, so the spectrum claim cannot be promoted beyond branch or target status. ∎
 
 **Corollary G.8.4c.1 (Exclusion of Simple Unification Groups).**
 *Grand unified theories based on simple gauge groups are excluded by the capacity bound:*

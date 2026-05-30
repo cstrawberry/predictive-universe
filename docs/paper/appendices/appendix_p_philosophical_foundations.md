@@ -1358,6 +1358,104 @@ This leads us to the Simulation Hypothesis [Bostrom 2003], not as a probability 
 
 Instead, we adopt the simulation concept as a powerful methodological tool. If consciousness is primary and reality is fundamentally informational, then the universe can be productively modeled as a self-consistent information-processing system. By imposing the naturalistic constraint that this system operates with finite resources and capabilities, a crucial implication follows: the processes generating reality must be highly optimized. This implies that the laws of physics could be understood as the most efficient algorithms for generating a complex and consistent experiential universe, shaped by a meta-principle like the PU framework's Principle of Compression Efficiency (PCE, Definition 15).
 
+### P.5.3a Naturalist Finitude and Default Efficiency in Simulation Architecture
+
+The simulation framing introduced in Section P.5.3 invites an objection: even if reality is productively modeled as an information-processing system, why must such a system be efficient? A sufficiently advanced simulator might possess enormous resources, making inefficiency apparently irrelevant.
+
+This objection confuses abundance with selection. PU does not require that every implementation minimize cost absolutely, nor that all surplus structure be forbidden. Extra cost may be justified when it purchases robustness, observability, redundancy, security, error tolerance, aesthetic value, experimentation, or genuine novelty. Such cases are not inefficient relative to the full objective. The narrower claim is structural: when two implementations are equivalent with respect to all relevant internal responses and external design aims, while one carries strictly greater cost, the higher-cost implementation is not the naturalistic default. It is uncompensated surplus.
+
+Under methodological naturalism, implemented processes do not operate by appeal to unconditioned infinite resources. Whatever the ultimate size of the cosmos, any physically realized agent, computation, or simulation has finite accessible resources over any finite region, finite interval, finite protocol, or finite causal channel. A claim of literally infinite accessible computation, memory, energy, or maintenance capacity is an additional metaphysical postulate, not the default naturalistic assumption.
+
+**Definition P.5.3a.1 (Design-Response Equivalence).**
+
+Let $A$ and $B$ be candidate architectures for implementing an information-processing world or subsystem. Let $\mathsf P_B$ be the retained finite class of internally accessible prediction, verification, update, and observation protocols at budget $B$. The architectures are design-response equivalent over $\mathsf P_B$ when their induced finite protocol-response presheaves are naturally isomorphic:
+$$
+\mathcal R_A|_{\mathsf P_B}\cong \mathcal R_B|_{\mathsf P_B}.
+\tag{P.5.3a.1}
+$$
+Equivalently, no internal observer or subsystem using admissible finite procedures in $\mathsf P_B$ can distinguish $A$ from $B$.
+
+**Definition P.5.3a.2 (Uncompensated Surplus).**
+
+Given design-response equivalent architectures $A$ and $B$, architecture $B$ contains uncompensated surplus relative to $A$ when:
+
+1. $A$ and $B$ realize the same retained internal response structure:
+$$
+\mathcal R_A|_{\mathsf P_B}\cong \mathcal R_B|_{\mathsf P_B};
+$$
+2. $B$ has strictly greater implementation cost in at least one relevant finite resource coordinate;
+3. the additional cost realizes no additional retained external design value, including robustness, observability, redundancy, security, experimentation, error tolerance, aesthetic value, or novelty.
+
+In such a case, the extra cost is response-null with respect to the simulated world and value-null with respect to the simulator's stated design objective.
+
+**Proposition P.5.3a.1 (Weak Dominance of Efficient Equivalents).**
+
+Let $A$ and $B$ be design-response equivalent architectures over $\mathsf P_B$. Suppose $A$ is no more costly than $B$ in every retained resource coordinate, strictly less costly in at least one coordinate, and provides no less retained design value. Then no design-selection rule with strictly positive weights on the retained resource/value coordinates selects $B$ over $A$ as the default.
+
+*Proof.* Let the retained design vector be
+$$
+r(X)=
+\bigl(
+C_{\mathrm{op}}(X),
+C_{\mathrm{prop}}(X),
+C_{\mathrm{maint}}(X),
+C_{\mathrm{adapt}}(X),
+C_{\mathrm{risk}}(X),
+-U(X)
+\bigr),
+\tag{P.5.3a.2}
+$$
+where the positive coordinates are costs and $U$ is retained design utility. Since $A$ is no more costly and no less useful than $B$,
+$$
+r(B)-r(A)\in\mathbb R_{\ge0}^{n},
+\tag{P.5.3a.3}
+$$
+with at least one strictly positive component. For any strictly positive weighting vector $w\in\mathbb R_{>0}^{n}$,
+$$
+w\cdot r(B)-w\cdot r(A)
+=
+w\cdot(r(B)-r(A))>0.
+\tag{P.5.3a.4}
+$$
+Thus $w\cdot r(A)<w\cdot r(B)$ for every admissible positive valuation. Selecting $B$ would require a zero weight on the wasted coordinate, an additional hidden utility not included in $U$, or an arbitrary preference for surplus. In the first case the coordinate is outside the retained design problem; in the second case $B$ is not genuinely inefficient relative to the full objective; in the third case the selection is not a principled default. ∎
+
+**Corollary P.5.3a.2 (Low-Stakes Invariance).**
+
+The dominance relation does not disappear when the absolute cost is small. If $B$ is dominated by $A$ in the sense of Proposition P.5.3a.1, then for every scale factor $\lambda>0$,
+$$
+\lambda\bigl(w\cdot r(B)-w\cdot r(A)\bigr)>0.
+\tag{P.5.3a.5}
+$$
+Thus reducing the magnitude of the wasted cost reduces the penalty but does not reverse the ordering.
+
+*Proof.* Equation (P.5.3a.4) gives $w\cdot r(B)-w\cdot r(A)>0$. Multiplication by any $\lambda>0$ preserves strict positivity. ∎
+
+**Proposition P.5.3a.3 (Efficiency as a Finite-Ascent Condition).**
+
+Let a technological ascent path consist of finitely many required response classes $[F_1],\ldots,[F_m]$, each realized by an implementation $X_j$ under a finite resource budget vector $B$. Suppose some $X_j$ contains uncompensated surplus relative to a design-response equivalent $X_j^\star$. Let $\mathbf X$ be the original implementation sequence and $\mathbf X^\star$ the sequence obtained by replacing every surplus occurrence by its efficient equivalent. Then:
+
+1. $\mathbf X$ and $\mathbf X^\star$ realize the same retained response classes;
+2. $\mathbf X^\star$ uses no more total retained resources than $\mathbf X$ in every coordinate;
+3. $\mathbf X^\star$ uses strictly fewer resources in at least one coordinate whenever $\mathbf X$ contains at least one uncompensated surplus occurrence.
+
+Therefore no-surplus selection weakly dominates surplus-retaining selection at every finite ascent stage and strictly dominates it whenever surplus occurs.
+
+*Proof.* Design-response equivalence preserves each required response class $[F_j]$, proving item 1. By Definition P.5.3a.2, each replacement weakly decreases every retained cost coordinate and strictly decreases at least one coordinate for each surplus occurrence. Summing finitely many coordinatewise inequalities over $j=1,\ldots,m$ preserves the weak inequalities, and at least one strict inequality remains if any surplus occurrence is replaced. Thus items 2 and 3 follow. Proposition P.5.3a.1 then applies to the whole finite sequence. ∎
+
+**Corollary P.5.3a.4 (Simulation-Efficiency Default).**
+
+Under the simulation modeling stance of Section P.5.3, an internally equivalent but strictly more costly simulation architecture is not the default architecture. It is either:
+
+1. equivalent to the lower-cost architecture in the operational quotient;
+2. justified by an additional retained design value, in which case it is not inefficient relative to the full objective; or
+3. uncompensated surplus, in which case it is eliminated by the same no-surplus logic expressed by PCE.
+
+*Proof.* Case 1 is Definition P.5.3a.1. Case 2 removes the antecedent of uncompensated surplus because the additional cost buys retained value. Case 3 is Definition P.5.3a.2 and is excluded as a default by Proposition P.5.3a.1. These cases exhaust the alternatives for a strictly more costly design-response equivalent architecture. ∎
+
+**Remark P.5.3a.5 (Relation to PCE).**
+
+This subsection introduces no new physical primitive. It supplies a design-theoretic justification for applying PCE within the simulation modeling framework. PCE should not be read as the claim that all systems minimize every ordinary cost in isolation. It is the weaker claim that, among response-equivalent finite implementations, response-null and value-null surplus is not selected at the attractor.
+
 ### P.5.4 Authentic vs. Synthetic Simulations: The Architecture of Boundaries
 
 The simulation framing leads to a crucial architectural distinction:
@@ -3232,9 +3330,9 @@ This explains the apparent continuity of consciousness across species and develo
 
 ### P.8.9a.7.5 Self-Directed CTB and Contextual Physiological Bias
 
-Placebo and nocebo effects are treated here only at the structural level: as context-dependent physiological response patterns in systems whose internal event channels are within the aggregate's causal reach. The framework does not identify empirical placebo magnitudes with universal constants. Observed magnitudes estimate the product of aggregate CC, channel accessibility, context fidelity, and ordinary physiological coupling after artifact controls.
+Placebo and nocebo effects are treated here only at the structural level: as context-dependent physiological response patterns in systems whose internal event channels are within the aggregate's causal reach. A placebo effect is not modeled as belief directly creating external reality. It is modeled as a physically instantiated context update in which an inert or semantically indirect intervention changes $\mathrm{context}_S(t)$ and thereby shifts a reachable internal physiological event channel. The framework does not identify empirical placebo magnitudes with universal constants. Observed magnitudes estimate the product of aggregate CC, channel accessibility, context fidelity, internalization strength, and ordinary physiological coupling after artifact controls.
 
-Empirically, placebo/nocebo phenomena are known to involve expectation, conditioning, and treatment-context effects on subjective and physiological outcomes [Benedetti et al. 2005; Colloca & Barsky 2020]. Open-label placebo studies show that disclosure of inertness does not force the effect to zero [Kaptchuk et al. 2010; Fendel et al. 2025], which is consistent with a context-engagement mechanism rather than a belief-only mechanism.
+Empirically, placebo/nocebo phenomena are known to involve expectation, conditioning, and treatment-context effects on subjective and physiological outcomes [Benedetti et al. 2005; Colloca & Barsky 2020]. Open-label placebo studies show that disclosure of inertness does not force the effect to zero [Kaptchuk et al. 2010; Fendel et al. 2025], which is consistent with a context-engagement mechanism rather than a belief-only mechanism. The semantic truth of a belief, report, ritual, or treatment frame is not itself a control parameter in this subsection; it matters only through the physical state encoded inside the aggregate.
 
 **Definition P.8.9a.5b (Internal Physiological Event Channel).** Let $S$ be a biological MPU aggregate with $C_{agg}>C_{op}$. An internal physiological event channel of $S$ is a finite-outcome ND-RID event family
 $$
@@ -3278,6 +3376,25 @@ p_a
 \tag{P.8.9a.7.5.3}
 $$
 If $r_a(c)=0$ or $\gamma_a(c)=0$, set $p_{a,\mathrm{obs}}(c)=p_a$.
+
+**Definition P.8.9a.5d (Placebo and Nocebo Context).**
+
+A placebo context for channel $a$ is a finite intervention-context
+$$
+c_{\mathrm{pl}}
+\tag{P.8.9a.7.5.3a}
+$$
+such as an inert pill, clinical ritual, verbal report, expectation cue, conditioning signal, symbolic treatment frame, or practitioner interaction, satisfying:
+
+1. $c_{\mathrm{pl}}$ has no direct active pharmacological or mechanical causal ingredient for channel $a$;
+2. $c_{\mathrm{pl}}$ may nevertheless alter the physically instantiated context state of $S$:
+$$
+\mathrm{context}_S(t)\longrightarrow \mathrm{context}_S^{c_{\mathrm{pl}}}(t);
+\tag{P.8.9a.7.5.3b}
+$$
+3. the induced context enters Definition P.8.9a.5c through a target distribution $q_a(c_{\mathrm{pl}})$ and accessibility-fidelity coefficient $\gamma_a(c_{\mathrm{pl}})$.
+
+A nocebo context is the same structure with an adverse or opposite target direction. Semantic content contributes to $c_{\mathrm{pl}}$ only through its physical instantiation in $\mathrm{context}_S(t)$.
 
 **Theorem P.8.9a.7b (Self-Directed CTB Bound).** For every admissible self-directed CTB channel in Definition P.8.9a.5c:
 
@@ -3350,6 +3467,8 @@ q_a(c)=p_a.
 $$
 If a disclosed context $c_{\mathrm{OL}}$ still satisfies
 $$
+\mathrm{CC}(S)>0,
+\qquad
 \gamma_a(c_{\mathrm{OL}})>0,
 \qquad
 r_a(c_{\mathrm{OL}})>0,
@@ -3366,7 +3485,7 @@ p_{a,\mathrm{obs}}(c_{\mathrm{OL}},B)-p_a(B)
 \frac{\gamma_a(c_{\mathrm{OL}})\,\mathrm{CC}(S)}{r_a(c_{\mathrm{OL}})}
 \bigl(q_a(c_{\mathrm{OL}},B)-p_a(B)\bigr).
 $$
-The right-hand side is nonzero exactly when the accessibility-fidelity coefficient and target contrast are nonzero for that event. No term in the expression requires propositional belief that the context contains a pharmacologically active ingredient. ∎
+The right-hand side is nonzero exactly when $\mathrm{CC}(S)>0$, the accessibility-fidelity coefficient is nonzero, and the target contrast is nonzero for that event. No term in the expression requires propositional belief that the context contains a pharmacologically active ingredient. ∎
 
 **Corollary P.8.9a.7b.3 (Ritual and Context-Information Scaling).** Suppose two contexts $c_1,c_2$ define the same normalized target direction for channel $a$ and differ only in accessibility-fidelity coefficient, with
 $$
@@ -3409,6 +3528,32 @@ $$
 |\Delta_a(B)|\le\gamma_a(c)\mathrm{CC}(S).
 $$
 A measured shift can be decomposed as signal plus artifact residual with magnitude at most $B_{\mathrm{art}}$, so the signal component is at least $\max\{0,|\widehat\Delta_a(B)|-B_{\mathrm{art}}\}$ when the residual is assigned to the PU channel. Combining the two inequalities gives (P.8.9a.7.5.6). ∎
+
+**Corollary P.8.9a.7b.6 (Placebo and Nocebo as Bounded Context-Channel Effects).**
+
+Let $c_{\mathrm{pl}}$ be a placebo or nocebo context for channel $a$ in the sense of Definition P.8.9a.5d. Then, for every event $B\subseteq\Omega_a$,
+$$
+\left|
+p_{a,\mathrm{obs}}(c_{\mathrm{pl}},B)-p_a(B)
+\right|
+\le
+\gamma_a(c_{\mathrm{pl}})\mathrm{CC}(S).
+\tag{P.8.9a.7.5.7}
+$$
+If $\mathrm{CC}(S)>0$, $r_a(c_{\mathrm{pl}})>0$, $\gamma_a(c_{\mathrm{pl}})>0$, and
+$$
+q_a(c_{\mathrm{pl}},B)\ne p_a(B),
+$$
+then the channel shift is nonzero on $B$. If $r_a(c_{\mathrm{pl}})=0$, $\gamma_a(c_{\mathrm{pl}})=0$, $\mathrm{CC}(S)=0$, or the event contrast vanishes, the context produces no shift on that event through the self-directed CTB channel.
+
+*Proof.* This is Theorem P.8.9a.7b applied to the context $c_{\mathrm{pl}}$. When $r_a(c_{\mathrm{pl}})>0$, Definition P.8.9a.5c gives
+$$
+p_{a,\mathrm{obs}}(c_{\mathrm{pl}},B)-p_a(B)
+=
+\frac{\gamma_a(c_{\mathrm{pl}})\mathrm{CC}(S)}{r_a(c_{\mathrm{pl}})}
+\bigl(q_a(c_{\mathrm{pl}},B)-p_a(B)\bigr).
+$$
+The right-hand side is nonzero exactly when $\mathrm{CC}(S)>0$, $\gamma_a(c_{\mathrm{pl}})>0$, and the target event contrast is nonzero. If $r_a(c_{\mathrm{pl}})=0$ or $\gamma_a(c_{\mathrm{pl}})=0$, Definition P.8.9a.5c sets $p_{a,\mathrm{obs}}(c_{\mathrm{pl}})=p_a$. If $\mathrm{CC}(S)=0$, the interpolation coefficient is zero, so the shift also vanishes. ∎
 
 The result explains why contextual physiological effects are strongest for channels under tight aggregate regulation and weakest for channels outside the aggregate's effective causal reach. It also explains why disclosure need not abolish the effect: disclosure changes the context coefficient $\gamma_a(c)$ and target contrast $r_a(c)$, but it does not remove the CTB mechanism unless one of them becomes zero.
 
@@ -7412,6 +7557,131 @@ The Source Principle does not remove thermodynamic cost from the total ledger. I
 
 **Remark P.15.4 (Complexity Growth: What Is and Is Not Proven).** Theorem 13 proves that *if* recursive self-modeling depth increases, the associated model complexity grows at least linearly with that depth. Theorem D.5 proves ergodic convergence properties for PCE adaptation dynamics. The present framework does **not** prove that every self-referentially rich environment monotonically drives long-run growth of $C_{\mathrm{agg}}$. Theorem P.15.3c gives a source-energy rate on branches carrying a stationary Source-Principle Markov datum, while Theorem P.15.3f supplies the Foster-Harris condition under which that stationary datum is generated by the PCE event-chain lift. Definition P.15.3h and Theorem P.15.3i give a coercive-minorized sufficient condition for the lifted Foster-Harris drift. Corollary P.15.3d gives autonomous complexity growth only under the positive-drift condition $\int\Delta d\,d\pi>0$. Outside the Foster-Harris datum and positive-drift condition, autonomous self-deepening remains speculative.
 
+### P.15.5a Perspectival Chain Reactions and Proxy Gradient Access
+
+A source-energy trigger is not a message that contains energy. It is a processed pattern that, for a target system $S$, induces self-model-engaging integration above the SPAP-flat baseline:
+$$
+\Delta_\Sigma(S;E)>0.
+\tag{P.15.5a.1}
+$$
+A context or symbolic input may still produce ordinary physiological, behavioral, or policy effects when (P.15.5a.1) fails; it is Source-Energy-relevant only when the strict excess condition holds.
+
+**Definition P.15.5a.1 (Perspectival Cascade Datum).**
+
+A finite perspectival cascade datum is a finite directed chain
+$$
+\mathfrak C
+=
+\bigl((S_k,E_k,\mathcal M_{S_k},\pi_{S_k},a_k,E_{k+1},G_k)\bigr)_{k=0}^{m}
+\tag{P.15.5a.2}
+$$
+where:
+
+1. $S_k$ is a predictive aggregate or institution represented as a finite predictive system;
+2. $E_k$ is the pattern, report, symbol, incentive, observation, or instruction encountered by $S_k$;
+3. $\mathcal M_{S_k}$ is the retained world-model or context model of $S_k$;
+4. $\pi_{S_k}$ is the retained action or communication policy;
+5. $a_k$ is the action taken by $S_k$ after processing $E_k$;
+6. $E_{k+1}$ is the downstream pattern produced for another system, when the cascade continues;
+7. $G_k$ is the external physical gradient, resource flow, infrastructure, labor channel, heat flow, stored chemical energy, computation, or other ordinary energy source accessed or redirected by $a_k$.
+
+The cascade step is active when
+$$
+E_k
+\longrightarrow
+\Delta\mathcal M_{S_k}
+\longrightarrow
+\Delta\pi_{S_k}
+\longrightarrow
+(a_k,E_{k+1})
+\tag{P.15.5a.3}
+$$
+is nonzero in the retained response quotient. A sufficient Source-Energy activation condition is
+$$
+\mu_{S_k}(E_k)>\frac{1}{\alpha_{SPAP}},
+\tag{P.15.5a.4}
+$$
+but policy activation may also be recorded by a retained impact threshold
+$$
+\operatorname{Impact}_{S_k}(E_k)>\theta_k
+\tag{P.15.5a.5}
+$$
+when the branch is not claiming Source-Energy excess.
+
+**Definition P.15.5a.2 (Proxy Gradient Work).**
+
+For a cascade datum $\mathfrak C$, define the ordinary external work redirected by proxy as
+$$
+W_{\mathrm{ext}}(\mathfrak C)
+=
+\sum_{k=0}^{m} W(G_k,a_k),
+\tag{P.15.5a.6}
+$$
+where $W(G_k,a_k)\ge0$ is the work extracted from or redirected through the external gradient $G_k$ by action $a_k$, measured after ordinary thermodynamic efficiencies and losses. The initiating pattern $E_0$ is not counted as the energy source unless it physically carries the relevant energy in the ordinary sense.
+
+**Proposition P.15.5a.3 (No-Free-Energy Boundary for Perspectival Cascades).**
+
+For every finite cascade datum $\mathfrak C$,
+$$
+W_{\mathrm{ext}}(\mathfrak C)
+$$
+is ordinary work drawn from the gradients $G_k$, not energy created by the symbolic inputs $E_k$. If Source-Energy contributions occur along the cascade, then
+$$
+0
+\le
+\sum_{k=0}^{m} Q_{\mathrm{src}}(S_k,E_k)
+\le
+\sum_{k=0}^{m}\int_{\Delta t_k}P_{\mathrm{agg}}(S_k,t)\,dt.
+\tag{P.15.5a.7}
+$$
+
+*Proof.* By Definition P.15.5a.2, each term $W(G_k,a_k)$ is work drawn from an external physical gradient after ordinary efficiencies and losses. The symbolic or contextual input changes retained models and policies by (P.15.5a.3); it does not supply the gradient energy unless separately included as a physical energy carrier. For the Source-Energy part, Definition P.15.2 gives $Q_{\mathrm{src}}(S_k,E_k)\ge0$ and Proposition P.15.3 bounds the source-energy heat emitted by each aggregate over its processing interval by the aggregate's ordinary power budget. Summing over the finite cascade gives (P.15.5a.7). ∎
+
+**Proposition P.15.5a.4 (Compressed Statistical Perspectival Control).**
+
+Let $\mathcal E_{\mathrm{cand}}$ be a finite menu of candidate inputs for a target population or institution. For $E\in\mathcal E_{\mathrm{cand}}$, define the retained net leverage
+$$
+\Lambda(E)
+=
+\mathbb E[W_{\mathrm{ext}}(\mathfrak C_E)]
+-
+C_{\mathrm{model}}(E)
+-
+C_{\mathrm{send}}(E)
+-
+C_{\mathrm{risk}}(E),
+\tag{P.15.5a.8}
+$$
+where $\mathfrak C_E$ is the induced cascade distribution and the costs are the retained modeling, delivery, and risk costs. If $E_c$ is a compressed statistical input and $E_{\mathrm{ex}}$ is an exact-control input with
+$$
+\Lambda(E_c)>\Lambda(E_{\mathrm{ex}}),
+\tag{P.15.5a.9}
+$$
+then PCE selects $E_c$ over $E_{\mathrm{ex}}$ on the same retained leverage branch.
+
+*Proof.* On this branch PCE selects the candidate with greater retained benefit net of retained costs. Equation (P.15.5a.8) is exactly that net objective. The strict inequality (P.15.5a.9) therefore gives strict PCE preference for $E_c$. ∎
+
+**Remark P.15.5a.5 (Exact Perspectival Extraction Boundary).**
+
+Exact deterministic control of a complex perspective can require
+$$
+C_{\mathrm{exact}}
+=
+C_{\mathrm{measure}}
++
+C_{\mathrm{model}}
++
+C_{\mathrm{compute}}
++
+C_{\mathrm{control}}.
+\tag{P.15.5a.10}
+$$
+When $C_{\mathrm{exact}}$ exceeds the retained expected gain, exact extraction is not selected by PCE. Efficient leverage then uses lossy models, shared decoders, and probabilistic prediction. This is not a weakening of PU; it is PCE applied to perspective-bearing systems.
+
+**Remark P.15.5a.6 (Ethical Boundary).**
+
+False symbolic inputs can have real physical consequences when they alter a target's context state, self-model, or policy. That fact does not make the represented proposition true and does not license deception as a privileged strategy. On the finite-response branch, truthful compressed signals with consent, aligned action paths, and real gradients are more stable than false inputs whose collapse adds distrust, nocebo-like reversal, or coordination failure to $C_{\mathrm{risk}}(E)$.
+
 ### P.15.6 Bounds and Conservation (Derived)
 
 Source Energy is not a separately conserved quantity. It is a dissipation channel within the total power budget of a predictive aggregate.
@@ -8028,13 +8298,14 @@ The framework's existing commitments — finite-resource prediction, SPAP, PPI/P
 
 ### P.16b.0 Standing and Scope
 
-This section extends the philosophical foundations by formalizing five semantic and interpretive structures in PU notation:
+This section extends the philosophical foundations by formalizing six semantic and interpretive structures in PU notation:
 
 1. role-indexed self-reference and the failure of the Universality Assumption;
 2. perspective-indexed closure and guarded cross-perspective adoption;
 3. local classicality with global holonomy or process-type obstruction;
 4. cogito-centered perspective geometry;
-5. shape recognition, decompression, and bounded creative transfer.
+5. shape recognition, decompression, and bounded creative transfer;
+6. dual-layer symbolic compression inside collective predictive model presentations.
 
 This section introduces no new physical primitive. It is a semantic, epistemic, and philosophical extension of the existing operational PU layer. Physical consequences require the independent physical branch certificates already stated elsewhere in the manuscript.
 
@@ -8944,9 +9215,10 @@ On the named branches, Section P.16b establishes:
 11. provenance, conservative fusion, finite process typing, perspective metrics, and semantic holonomy are separated as distinct semantic structures;
 12. statistical self-similarity is a finite empirical branch with theorem-level recurrence statistics;
 13. perspectival self-organization represents engagement as configuration membership;
-14. information projections such as Shannon entropy are many-to-one and do not replace response-presheaf role identity.
+14. dual-layer symbolic compression separates retained predictive kernels from local symbolic dressings in collective predictive model presentations;
+15. information projections such as Shannon entropy are many-to-one and do not replace response-presheaf role identity.
 
-*Proof.* Items 1--10 are Theorem P.16b.1.3, Theorem P.16b.2.4, Theorem P.16b.3.2, Theorem P.16b.4.2, Theorem P.16b.5.2, Theorem P.16b.6.2, Theorem P.16b.6.6, Theorem P.16b.7.4, Theorem P.16b.8.5, and Theorem P.16b.10.6 respectively. Item 11 is Theorem P.16b.12.2 for provenance, Theorem P.16b.12.4 for conservative fusion, Theorem P.16b.12.6 for finite process typing, Theorems P.16b.12.8 and P.16b.12.10 for perspective and operational qualia metrics, and Theorems P.16b.5.2, P.16b.12.12, and P.16b.12.13 for semantic holonomy and obstruction separation. Item 12 is Theorem P.16b.13.4 and Theorem P.16b.13.5, item 13 is Theorem P.16b.14.5, and item 14 is Theorem P.16b.16.4. ∎
+*Proof.* Item 1 is Theorem P.16b.1.3. Item 2 is Theorem P.16b.2.4 for least closure and Theorem P.16b.2.7 for guarded import proof theory. Items 3--9 are Theorem P.16b.3.2, Theorem P.16b.4.2, Theorem P.16b.5.2, Theorem P.16b.6.2, Theorem P.16b.6.6, Theorem P.16b.7.4, and Theorem P.16b.8.5 respectively. Item 10 is Theorem P.16b.10.3 for structural decompression, Theorem P.16b.10.4 for annotation-status separation, and Theorem P.16b.10.6 for the creativity algorithm status partition. Item 11 is Theorem P.16b.12.2 for provenance, Theorem P.16b.12.4 for conservative fusion, Theorem P.16b.12.6 for finite process typing, Theorems P.16b.12.8 and P.16b.12.10 for perspective and operational qualia metrics, and Theorems P.16b.5.2, P.16b.12.12, and P.16b.12.13 for semantic holonomy and obstruction separation. Item 12 is Theorem P.16b.13.4 and Theorem P.16b.13.5. Item 13 is Theorem P.16b.14.5. Item 14 is Theorem P.16b.15a.4, Theorem P.16b.15a.5, Corollary P.16b.15a.6, and Theorem P.16b.15a.7. Item 15 is Theorem P.16b.16.4. ∎
 
 ---
 
@@ -9346,6 +9618,213 @@ This is not a claim of exact mathematical fractality, scale invariance at all re
 
 ---
 
+### P.16b.15a Dual-Layer Predictive Symbols in the Collective Model of Reality
+
+This subsection records a conservative PU reading of durable symbolic material. A symbol is not treated as a fixed inherited image, nor as a free-floating interpretation. It is treated as a finite, transmissible compression of predictive role. The same high-use predictive kernel may be dressed differently by different communities while preserving the action-relevant gist that made the symbol worth transmitting.
+
+All cross-context comparisons in this subsection are made on a retained comparison branch on which the dressings from the relevant contexts are decodable into the same collective response quotient $\mathcal F_{\mathcal S}^{\mathrm{col}}$. Without such a comparison branch, the subsection asserts no unguarded translation theorem between symbolic systems.
+
+**Definition P.16b.15a.1 (Collective Predictive Model Presentation).**
+
+Let $\mathcal S=\{S_i\}_{i=1}^N$ be a finite population of predictive systems with retained model presentations in the sense of Definition P.16b.9.1. A collective predictive model presentation at budget $B$ is a retained finite predictive model presentation
+$$
+\mathcal M_{\mathcal S,B}^{\mathrm{col}}
+=
+(\mathcal C_{\mathcal S},\mathcal R_{\mathcal S},\ell_{\mathcal S},\mu_{\mathcal S},\mathrm{Pred}_{\mathcal S})
+\tag{P.16b.15a.1}
+$$
+whose response data descend from communicable records, rituals, words, tools, diagrams, and practices transmitted through the finite population interface, and such that
+$$
+SC(\mathcal M_{\mathcal S,B}^{\mathrm{col}})\le B.
+\tag{P.16b.15a.2}
+$$
+
+Let $\mathsf{Cont}_{\mathcal S}$ be the retained finite class of communicable contents available on the collective presentation branch. For $c\in\mathsf{Cont}_{\mathcal S}$, let $\mathcal R_c^{\mathcal S}$ be the collective response presheaf induced by the finite population interface. Define
+$$
+c\equiv_{\mathrm{op}}^{\mathcal S}c'
+\quad\Longleftrightarrow\quad
+\mathcal R_c^{\mathcal S}\cong\mathcal R_{c'}^{\mathcal S}
+\tag{P.16b.15a.3}
+$$
+by natural isomorphism of collective response presheaves, exactly as in Definition P.16b.7.2. The collective predictive-function space is
+$$
+\mathcal F_{\mathcal S}^{\mathrm{col}}
+:=
+\mathsf{Cont}_{\mathcal S}/\equiv_{\mathrm{op}}^{\mathcal S}.
+\tag{P.16b.15a.4}
+$$
+The collective predictive role of $c$ is
+$$
+\operatorname{Role}_{\mathcal S}(c)
+:=
+[\mathcal R_c^{\mathcal S}]_{\cong}
+\in
+\mathcal F_{\mathcal S}^{\mathrm{col}}.
+\tag{P.16b.15a.5}
+$$
+
+**Definition P.16b.15a.2 (Predictive Kernel and Local Dressing).**
+
+Let $x$ be a recurrent phenomenon, relation, or event-class available to a population $\mathcal S$. A retained predictive kernel for $x$ is a finite tuple
+$$
+K_x
+=
+(\mathcal Q_x,\mathcal U_x,\mathcal A_x,\mathcal E_x,\mathcal T_x)
+\tag{P.16b.15a.6}
+$$
+where:
+
+1. $\mathcal Q_x$ is the finite query family for which $x$ reduces uncertainty;
+2. $\mathcal U_x$ is the retained recurrence or use-condition profile of $x$;
+3. $\mathcal A_x$ is the finite action-policy family licensed by the prediction;
+4. $\mathcal E_x$ is the embodied, affective, energetic, or survival-salience register;
+5. $\mathcal T_x$ is the finite transmission interface by which the kernel is taught, remembered, or coordinated.
+
+A local symbolic dressing of $K_x$ in a cultural context $\Gamma$ is a finite communicable code
+$$
+D_\Gamma(K_x)
+\tag{P.16b.15a.7}
+$$
+which may be a name, image, myth, ritual, taboo, diagram, calendar rule, tool practice, story, institution, or technical model. A dressed symbol is the pair
+$$
+\mathsf S_\Gamma(x):=(K_x,D_\Gamma(K_x)).
+\tag{P.16b.15a.8}
+$$
+Thus the kernel is the retained predictive content, while the dressing is the perspective-local communicable form.
+
+**Definition P.16b.15a.3 (Kernel-Role Pseudometric, Kernel Adequacy, and Predictive-Kernel Equivalence).**
+
+Fix a retained finite test family $\mathcal A_K=\{a_1,\ldots,a_m\}$ of kernel-role probes on the comparison branch. Suppose each probe induces a real-valued or finitely real-coded evaluation
+$$
+v_i:\mathcal F_{\mathcal S}^{\mathrm{col}}\to\mathbb R.
+$$
+Define
+$$
+d_K(r,r')
+=
+\frac1m\sum_{i=1}^{m}|v_i(r)-v_i(r')|.
+\tag{P.16b.15a.9}
+$$
+By the same finite-probe argument as Theorem P.16b.12.8, $d_K$ is a pseudometric on $\mathcal F_{\mathcal S}^{\mathrm{col}}$. It becomes a metric after quotienting by zero distance, and it becomes separating for kernel roles only on branches where the retained probes separate those roles.
+
+The kernel $K_x$ is treated as a retained kernel-content item when evaluated by $\operatorname{Role}_{\mathcal S}$. Let
+$$
+\operatorname{Dec}_\Gamma(D_\Gamma(K_x))\in\mathsf{Cont}_{\mathcal S}
+\tag{P.16b.15a.10}
+$$
+be the decoded content recovered by the population using the local dressing on the retained comparison branch. The dressing is $\epsilon$-kernel-adequate when
+$$
+d_K
+\bigl(
+\operatorname{Role}_{\mathcal S}(\operatorname{Dec}_\Gamma(D_\Gamma(K_x))),
+\operatorname{Role}_{\mathcal S}(K_x)
+\bigr)
+\le
+\epsilon.
+\tag{P.16b.15a.11}
+$$
+
+Two dressed symbols $\mathsf S_\Gamma(x)$ and $\mathsf S_{\Gamma'}(y)$ are predictive-kernel equivalent at tolerance $\epsilon$ when their decoded roles are within $\epsilon$ in $d_K$. In the zero-tolerance branch where the retained probes separate kernel roles, this reduces to equality in $\mathcal F_{\mathcal S}^{\mathrm{col}}$.
+
+**Theorem P.16b.15a.4 (Predictive Kernel Conservation under Local Dressing).**
+
+Suppose $\mathsf S_\Gamma(x)$ and $\mathsf S_{\Gamma'}(x)$ are two local dressings of the same retained predictive kernel $K_x$ on a common retained comparison branch, and both are $\epsilon$-kernel-adequate. Then
+$$
+d_K
+\bigl(
+\operatorname{Role}_{\mathcal S}(\operatorname{Dec}_\Gamma(D_\Gamma(K_x))),
+\operatorname{Role}_{\mathcal S}(\operatorname{Dec}_{\Gamma'}(D_{\Gamma'}(K_x)))
+\bigr)
+\le
+2\epsilon.
+\tag{P.16b.15a.12}
+$$
+In particular, when $\epsilon=0$ on a separating kernel-role branch, distinct local dressings preserve the same predictive role in $\mathcal F_{\mathcal S}^{\mathrm{col}}$.
+
+*Proof.* By $\epsilon$-adequacy, each decoded dressing lies within $d_K$-distance $\epsilon$ of the kernel role $\operatorname{Role}_{\mathcal S}(K_x)$. The pseudometric triangle inequality from Definition P.16b.15a.3 gives (P.16b.15a.12). If $\epsilon=0$ and the retained probes separate kernel roles, zero distance is equality in the separated quotient $\mathcal F_{\mathcal S}^{\mathrm{col}}$. ∎
+
+**Theorem P.16b.15a.5 (PCE Selection of Compressed Symbolic Encodings).**
+
+Let $E_x$ be an enumerative retained record of repeated encounters with $x$, and let $\mathsf S_\Gamma(x)$ be a dressed symbolic encoding of the same retained predictive kernel on the same collective model branch. For a candidate encoding $Y$, let
+$$
+\mathcal M_{\mathcal S,B}^{\mathrm{col}}[Y]
+$$
+be the collective presentation obtained by using $Y$ as the retained encoding of the kernel role while holding fixed the comparison branch, population interface, and query family. Write
+$$
+SC(Y):=SC(\mathcal M_{\mathcal S,B}^{\mathrm{col}}[Y]),
+\qquad
+MP(Y):=MP(\mathcal M_{\mathcal S,B}^{\mathrm{col}}[Y]).
+$$
+
+For a fixed PCE tradeoff parameter $\lambda>0$, suppose both encodings are feasible candidates in the finite PCE menu for $\mathcal M_{\mathcal S,B}^{\mathrm{col}}$. If
+$$
+MP(\mathsf S_\Gamma(x))=MP(E_x)
+\tag{P.16b.15a.13}
+$$
+and
+$$
+SC(\mathsf S_\Gamma(x))<SC(E_x),
+\tag{P.16b.15a.14}
+$$
+then PCE strictly selects the symbolic encoding over the enumerative record. More generally, $\mathsf S_\Gamma(x)$ is selected over any alternative $Y$ whenever
+$$
+SC(\mathsf S_\Gamma(x))-\lambda MP(\mathsf S_\Gamma(x))
+<
+SC(Y)-\lambda MP(Y)
+\tag{P.16b.15a.15}
+$$
+on the same PCE presentation branch.
+
+*Proof.* Equations (P.16b.15a.13)--(P.16b.15a.14) are exactly the equal-adequacy compression case of Theorem P.16b.9.3 applied to the induced presentations $\mathcal M_{\mathcal S,B}^{\mathrm{col}}[\mathsf S_\Gamma(x)]$ and $\mathcal M_{\mathcal S,B}^{\mathrm{col}}[E_x]$. Equation (P.16b.15a.15) is the defining strict comparison of the same PCE objective. ∎
+
+**Corollary P.16b.15a.6 (Dual-Layer Symbolic Universals Relative to Retained Probes).**
+
+On any branch where a recurrent phenomenon $x$ is publicly available, survival- or coordination-relevant, transmissible, and admits a compressed code satisfying Theorem P.16b.15a.5, every retained PCE-selected cultural symbol for $x$ has a dual structure
+$$
+\mathsf S_\Gamma(x)=(K_x,D_\Gamma(K_x)).
+\tag{P.16b.15a.16}
+$$
+The branch-invariant component, relative to the retained comparison probes, is the predictive kernel $K_x$; the local component is the dressing $D_\Gamma(K_x)$. Cultural variation may therefore change the image, name, myth, ritual, taboo, diagram, tool practice, story, institution, or technical model while conserving the kernel role needed for prediction, coordination, and transfer.
+
+*Proof.* Theorem P.16b.15a.5 gives the PCE condition under which a compressed symbolic code is selected rather than a costlier enumerative record. Definition P.16b.15a.2 gives every such retained symbolic encoding the pair structure $(K_x,D_\Gamma(K_x))$. Theorem P.16b.15a.4 shows that local dressings can vary while preserving the decoded kernel role up to the retained tolerance. ∎
+
+**Theorem P.16b.15a.7 (Culture as Amortized Decoder).**
+
+Let $\operatorname{Dec}_\Gamma$ be a shared decoder installed across a finite population interface with setup cost $C_{\mathrm{dec}}\ge0$. Suppose a kernel role must be transmitted $M$ times on the retained branch. Let $c_D$ be the per-transmission cost of using a dressed symbol decoded by $\operatorname{Dec}_\Gamma$, and let $c_E$ be the per-transmission cost of sending an enumerative or individually reconstructed equivalent with the same retained adequacy. If
+$$
+C_{\mathrm{dec}}+M c_D<M c_E,
+\tag{P.16b.15a.17}
+$$
+then PCE selects the shared symbolic decoder plus repeated dressed symbols over repeated enumerative reconstruction.
+
+*Proof.* Both strategies have the same retained adequacy by hypothesis. Their total signal costs are $C_{\mathrm{dec}}+M c_D$ and $M c_E$. Inequality (P.16b.15a.17) is exactly the strict lower-cost condition of Theorem P.16b.9.3 applied to the collective presentation. Therefore the shared decoder strategy is PCE-selected. ∎
+
+**Remark P.16b.15a.8 (Sun, Moon, and Kernel/Dressing Separation).**
+
+For the sun, the kernel may include day/night recurrence, light, warmth, direction, seasonal structure, visibility, agricultural timing, and order. Local dressings may include a solar deity, royal sign, eye image, calendar marker, ritual fire analogue, or scientific stellar model. For the moon, the kernel may include phase recurrence, night illumination, month-scale counting, change, ritual timing, and tide relevance where ecologically available. Local dressings may include a lunar deity, animal image, ancestor light, calendar rule, fertility-cycle symbol, or orbital-mechanics model. The PU claim is not that all cultures carry the same surface myth. The claim is that successful dressings preserve enough of the predictive kernel for the symbol to remain useful.
+
+**Remark P.16b.15a.9 (Kolmogorov-Style Boundary).**
+
+The analogy with Kolmogorov complexity is a description-cost heuristic, not a replacement for role-position identity. A short dressing is valuable only if its decoder preserves the relevant response role. By Theorem P.16b.16.4, equality of Shannon or Kolmogorov-style projections does not by itself imply equality of predictive role unless a separating projection branch is supplied.
+
+**Remark P.16b.15a.10 (Archetypal Vocabulary without Extra Ontology).**
+
+Vocabulary such as archetype, collective symbol, or collective-unconscious image can be read operationally here as recurrence of kernel-equivalent symbolic compressions in collective predictive model presentations. This does not assert a fixed inherited image dictionary, nor does it make a metaphysical claim beyond the finite response quotient. It states only that high-use recurrent prediction problems can be compressed into transmissible forms whose surface dressings differ while their predictive kernels survive.
+
+**Remark P.16b.15a.11 (Placebo as Dressed Kernel Coupled into Bodily Context).**
+
+A placebo-active symbol is a dressed predictive kernel whose decoding changes an aggregate's physically instantiated context state and couples to a reachable internal physiological channel in the sense of P.8.9a.7.5. In this notation, a healing context has the schematic form
+$$
+D_\Gamma(K_{\mathrm{heal}})
+\longrightarrow
+\chi_S(t)
+\longrightarrow
+\Delta p_a,
+\tag{P.16b.15a.18}
+$$
+where $\chi_S(t)$ is a retained component of $\mathrm{context}_S(t)$ and $\Delta p_a$ is bounded by Corollary P.8.9a.7b.6. The surface object is not pharmacologically active merely by being a symbol; it becomes placebo-active only when the decoded kernel is internalized with nonzero accessibility-fidelity coefficient for the relevant physiological channel.
+
+---
 
 ### P.16b.16 Information Projections and Many-to-One Boundaries
 
@@ -9446,11 +9925,15 @@ The zero of a profile cost identifies the cogito only on the separating-origin b
 | Theorem P.16b.14.9 | Cogito radial coordinate is 1-Lipschitz and unique on separating branch | theorem-level metric result |
 | Theorem P.16b.14.10 | Operational qualia are active configurations | branch-level boundary theorem |
 | Theorem P.16b.14.11 | Creativity is reconfiguration plus decompression/export | branch-level integration theorem |
+| Proposition P.16b.15.2 | Fractal-like psyche claim follows conditionally from SSSH on natural traces | conditional empirical branch |
+| Theorem P.16b.15a.4 | Local symbolic dressings of the same adequate predictive kernel preserve role up to $2\epsilon$ | theorem-level pseudometric result on retained comparison branch |
+| Theorem P.16b.15a.5 | PCE selects compressed symbolic encodings over costlier equal-adequacy enumerations | theorem-level on PCE presentation branch |
+| Corollary P.16b.15a.6 | Retained cultural symbols have kernel/dressing dual structure under the stated branch conditions | theorem-level semantic compression corollary |
+| Theorem P.16b.15a.7 | Shared cultural decoders amortize symbolic decompression cost when the setup inequality holds | theorem-level coding result |
 | Theorem P.16b.16.2 | Shannon projection recovers entropy on pure-information branch | theorem-level branch theorem |
 | Corollary P.16b.16.3 | Shannon projection is many-to-one | theorem-level boundary |
 | Theorem P.16b.16.4 | Information projections do not replace role-position equivalence | theorem-level boundary |
 | Corollary P.16b.16.5 | Cogito-zero boundary requires the separating-origin branch | theorem-level boundary |
-| Proposition P.16b.15.2 | Fractal-like psyche claim follows conditionally from SSSH on natural traces | conditional empirical branch |
 | Conjecture P.16b.10.7 | Shape recognition plus decompression suffices for intuitive structural creativity | open conjecture |
 
 ## P.16c Generative Non-Closure: Axioms as Stable Responses to Incompleteness

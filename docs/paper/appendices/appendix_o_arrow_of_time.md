@@ -157,6 +157,40 @@ Exponentiating and rearranging gives (O.3a.3). ∎
 
 **Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice and quantum-eraser protocols, a later experimental setting changes which verification channel becomes operationally relevant for the recorded event. It does not reverse the P-V-U order of the actualized MPU cycle. Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
 
+**Corollary O.3a.4 (Forward-Locked Orientation Ledger).**
+Let $\mathcal E$ be a finite class of coarse-grained update events equipped with an involution $e\mapsto e^\dagger$ and an orientation character
+$$
+\chi:\mathcal E\to\{+1,-1\},
+\qquad
+\chi(e^\dagger)=-\chi(e).
+\tag{O.3a.4.1}
+$$
+Suppose the forward and reversed path weights are defined on the same event algebra and obey
+$$
+\sigma(e)=\log\frac{P_F(e)}{P_R(e^\dagger)}.
+\tag{O.3a.4.2}
+$$
+Then the forward-oriented expectation is the pairwise antisymmetric ledger
+$$
+\langle\chi\rangle_F
+=
+\sum_{[e]}
+\chi(e)\big(P_F(e)-P_F(e^\dagger)\big),
+\tag{O.3a.4.3}
+$$
+where the sum is over unordered involution pairs; the summand is independent of which member is chosen as representative. If the pathwise guarantee-level bound $\sigma(e)\ge\varepsilon_0=\ln2$ holds on a pair, then
+$$
+\frac{P_R(e^\dagger)}{P_F(e)}\le e^{-\varepsilon_0}\le\frac12.
+\tag{O.3a.4.4}
+$$
+Thus Appendix O supplies an orientation gate for any later CP-odd or branch-odd transport ledger, while the existence and magnitude of the odd source remain separate branch data.
+
+*Proof.* Equation (O.3a.4.3) is obtained by partitioning the finite set $\mathcal E$ into involution pairs and using $\chi(e^\dagger)=-\chi(e)$. If the representative is changed from $e$ to $e^\dagger$, the factor $\chi$ and the probability difference both change sign, so the product is unchanged. Equation (O.3a.4.2) gives
+$$
+\frac{P_R(e^\dagger)}{P_F(e)}=e^{-\sigma(e)}.
+$$
+Under the pathwise guarantee-level bound this ratio is at most $e^{-\varepsilon_0}\le1/2$, proving (O.3a.4.4). No CP-odd or baryon-number source is produced by this statement; it only supplies the finite orientation ledger used by such branches. ∎
+
 **Definition O.3a.2 (Modular Thermal-Time Ledger).** On a finite faithful local branch, let $(\mathfrak A_O,\omega_O)$ be the local algebra-state pair for a retained region $O$, with modular Hamiltonian
 $$
 K_O:=-\log\rho_O
@@ -424,6 +458,16 @@ This partition is determined by what the information is about, not by how it arr
 
 This parallels the relativization of simultaneity in Structural Correspondence M.6.4: the arrow of time is physically real for every observer, but the internal accessibility of one's own past is relative to the observer's complexity and self-referential structure.
 
+**Corollary O.4.3a (Bidirectional Simulation Limit).**
+Let $S$ be an embedded Property-R predictive system, and let $\mathcal H^{-}$ be a past-directed reconstruction or $\mathcal H^{+}$ a future-directed simulation. If either simulation, when exposed to $S$, contains an integrated finite prefix $R_k$ such that
+$$
+\mu_S(R_k)=\infty,
+$$
+then that prefix cannot be processed by $S$ at finite cost. Hence no PPI-admissible finite process can give $S$ a past- or future-directed simulation output whose integration would realize a SPAP-prohibited self-model update.
+
+Complete self-model records and exact temporal self-restoration records are sufficient examples of such obstruction. Complete totality specifications are independently blocked as internally guaranteed totality records by Theorem P.3.5.9; they fall under the present receiver-side SPAP-processing obstruction only for the component whose integration would force the receiver to a prohibited self-model update. Smaller patterns are already blocked whenever they contain enough perspectival information to force $S$ to the SPAP boundary.
+
+*Proof.* Apply Theorem M.10.11 to $\mathcal H^{-}$ and $\mathcal H^{+}$. Temporal orientation does not enter $\mu_S(E)$; only the receiver-relative self-model update does. Exact temporal self-restoration is the special case handled by Theorem O.4. Complete self-model records are the boundary case illustrated in Remark M.10.7(5) and formalized by Theorem M.10.6. Theorem P.3.5.9 supplies the separate totality-specification obstruction; the present corollary uses that obstruction only when the totality record would be integrated by $S$ as a prohibited self-model update. ∎
 
 ## O.6 Temporal Dynamics as the Substrate for Consciousness Complexity and Gravity
 

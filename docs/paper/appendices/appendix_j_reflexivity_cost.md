@@ -120,6 +120,74 @@ Thus reversible refinement or hidden ancilla extension cannot remove the SPAP en
 
 If this side information is not retained in the closed system at the end of the cycle, the accessible map is many-to-one and the erased admissible ensemble has Shannon entropy $\ln2$. Landauer's bound gives at least $\ln2$ nats of exported entropy. If the side information is retained but the same finite-memory cycle is to be repeated with $G$ restored to a fixed ready state, the reset map on the two distinguishable $G$ states again erases one bit and costs at least $\ln2$ nats. ∎
 
+**Theorem J.4a (Finite Reflexive Exhaust Ledger).**
+Let $D$ be a finite causal diamond or finite protocol region, and let $\mathcal E_{\mathrm{ref}}(D)$ be the finite set of completed nontrivial SPAP/Evolve update events in $D$ whose cycle closes by reset, overwrite, or quotient of a prediction-support register. For each $e\in\mathcal E_{\mathrm{ref}}(D)$ write
+$$
+\varepsilon_{\mathrm{phys}}(e)
+=
+\varepsilon_0+\varepsilon_{\mathrm{diss}}(e),
+\qquad
+\varepsilon_0=\ln2,
+\qquad
+\varepsilon_{\mathrm{diss}}(e)\ge0.
+\tag{J.4a.1}
+$$
+Define the finite reflexive exhaust ledger
+$$
+\mathcal X_{\mathrm{ref}}(D)
+:=
+\sum_{e\in\mathcal E_{\mathrm{ref}}(D)}
+\varepsilon_{\mathrm{phys}}(e).
+\tag{J.4a.2}
+$$
+Then
+$$
+\mathcal X_{\mathrm{ref}}(D)
+=
+N_{\mathrm{ref}}(D)\ln2
++
+\mathcal X_{\mathrm{diss}}(D),
+\qquad
+N_{\mathrm{ref}}(D):=|\mathcal E_{\mathrm{ref}}(D)|,
+\qquad
+\mathcal X_{\mathrm{diss}}(D):=\sum_e\varepsilon_{\mathrm{diss}}(e)\ge0,
+\tag{J.4a.3}
+$$
+and hence
+$$
+\mathcal X_{\mathrm{ref}}(D)\ge N_{\mathrm{ref}}(D)\ln2.
+\tag{J.4a.4}
+$$
+If $D$ contains a retained horizon channel layer with independent boundary-channel count
+$$
+N_{eff\_links}(\partial D)
+=
+\sigma_{eff\_link}\mathcal A(\partial D)+o(\mathcal A),
+\tag{J.4a.5}
+$$
+as in Appendix E, and the layer has one completed reset-support event per retained independent boundary channel, then the structural part of the boundary reflexive exhaust is
+$$
+\mathcal X_{\mathrm{str}}(\partial D)
+=
+N_{eff\_links}(\partial D)\ln2
+=
+\sigma_{eff\_link}\ln2\,\mathcal A(\partial D)+o(\mathcal A).
+\tag{J.4a.6}
+$$
+The physical boundary exhaust is
+$$
+\mathcal X_{\mathrm{ref}}(\partial D)
+=
+\mathcal X_{\mathrm{str}}(\partial D)
++
+\mathcal X_{\mathrm{diss}}(\partial D),
+\qquad
+\mathcal X_{\mathrm{diss}}(\partial D)\ge0.
+\tag{J.4a.7}
+$$
+
+*Proof.* Equation (J.4a.1) is Theorem J.1 applied eventwise to completed nontrivial finite-memory update events. Summing over the finite event set gives (J.4a.3). Nonnegativity of each dissipative overhead gives (J.4a.4). On a retained horizon channel layer, Appendix E gives the independent channel count (J.4a.5). Assigning one completed reset-support event to each retained independent channel gives $N_{\mathrm{ref}}(\partial D)=N_{eff\_links}(\partial D)$ on that layer; substituting into the structural term $N_{\mathrm{ref}}\ln2$ gives (J.4a.6). Adding the nonnegative implementation overhead gives (J.4a.7). ∎
+
 **J.5 Novelty and Distinction from Existing Bounds**
 
 The SPAP-derived structural quantum $\varepsilon_0=\ln2$ and physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem J.1) are distinct from and complementary to other fundamental thermodynamic bounds:

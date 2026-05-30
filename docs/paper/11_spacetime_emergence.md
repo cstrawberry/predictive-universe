@@ -120,6 +120,39 @@ g_{\mu\nu}(x):=\langle \partial_\mu,\partial_\nu\rangle_x
 $$
 a.e. Symmetry and non-degeneracy follow from the Euclidean inner product on the tangent cone. By construction, (66) matches the quadratic approximation of $d_\infty$ in local coordinates on $M_{reg}$. The stated $C^{1,\alpha}$ regularity is exactly the regularity furnished on the selected branch by the Euclidean-rigidity/regularity hypothesis assumed in Theorem 44. ∎
 
+**Corollary 45b (Fisher-Propagation Compatibility).**
+Let $U\Subset M_{reg}$ be a regular chart domain. Suppose the finite protocol family used to define the local propagation-cost distance on $U$ has a smooth identifiable response map
+$$
+\theta:U\to\Theta
+$$
+into the MPU response-state chart of Corollary 23c.1. Define the pullback predictive Fisher tensor
+$$
+h_x(v,w)
+=
+\frac14F^Q_{\theta(x)}(d\theta_xv,d\theta_xw),
+\qquad
+v,w\in T_xU.
+\tag{45b.1}
+$$
+Then $h$ is a positive semidefinite quadratic tensor on $U$ and becomes positive definite after quotienting response-null tangent directions. Let $g^{sp}$ denote the positive operational-distance tensor supplied by the Cheeger/Mosco branch of Theorem 45 before the causal-clock direction is appended. If the same retained finite-response protocol family supplies both:
+
+1. the second variation of statistical distinguishability in Corollary 23c.1, and  
+2. the second variation of the rescaled propagation cost whose Mosco-Cheeger limit defines $g^{sp}$,
+
+then
+$$
+h_{\mu\nu}=g_{\mu\nu}^{sp}
+\tag{45b.2}
+$$
+on the positive operational-distance sector. More generally, whenever $h$ and $g^{sp}$ are positive definite on the same quotient tangent space, there is a unique positive $g^{sp}$-self-adjoint bundle endomorphism $B$ such that
+$$
+h(v,w)=g^{sp}(Bv,w).
+\tag{45b.3}
+$$
+The Lorentzian metric of Section 11.6 is obtained only after adding the causal-clock direction and the cone-orientation structure; the Fisher tensor above is the positive distinguishability tensor on the operational spatial/response quotient.
+
+*Proof.* The pullback of a positive semidefinite bilinear form is positive semidefinite, so (45b.1) follows from Corollary 23c.1. Its kernel consists of tangent vectors whose image under $d\theta$ is response-null; the PPI quotient removes exactly those vectors, leaving a positive definite form. The metric $g^{sp}$ of Theorem 45 is the pointwise quadratic form representing the Mosco-Cheeger limit of the rescaled propagation energy on the regular branch. If the retained protocol certificate identifies that quadratic variation with the Fisher distinguishability variation, the two quadratic forms agree on every tangent vector. Equality of quadratic forms implies equality of the associated symmetric bilinear forms by polarization, proving (45b.2). If the two positive definite forms are not identical, the finite-dimensional Riesz representation theorem gives a unique endomorphism $B$ satisfying (45b.3); symmetry of $h$ makes $B$ self-adjoint with respect to $g^{sp}$, and positivity of $h$ makes $B$ positive. ∎
+
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
 The emergent manifold description obtained via Gromov–Hausdorff convergence (Theorem 44) and the existence of a metric tensor (Theorem 45) does not endow the theory with a preferred coordinate chart: coordinates are bookkeeping devices introduced only after the substrate has been compressed into an effective continuum representation. Because the substrate description is fundamentally relational and label-free, any coordinate chart used to represent the continuum limit is physically redundant.

@@ -395,6 +395,77 @@ By the Braunstein-Caves theorem, $F_Q$ is the maximum classical Fisher informati
 
 *Remark.* The result identifies the geometric boundary between fully factorized and internally correlated pure states. No particular scalar entanglement measure is fixed here.
 
+**Corollary 23c.1 (Predictive Fisher Metric and Cramér-Rao Gate).**
+Let $\Theta$ be a finite-dimensional smooth chart of MPU protocol-response states and let
+$$
+\rho:\Theta\to\mathcal D(\mathcal H_0)
+$$
+be a $C^2$ family of density matrices on the retained Hilbert branch. The chart is read on the retained identifiable support stratum, with the usual lower-semicontinuous SLD extension at rank-change boundary points. For any finite retained protocol POVM $E=\{E_i\}$ define
+$$
+p_i(\theta)=\operatorname{tr}(\rho(\theta)E_i)
+$$
+and the classical Fisher matrix
+$$
+F^{(E)}_{ab}(\theta)
+=
+\sum_{i:p_i(\theta)>0}
+p_i(\theta)
+\partial_a\log p_i(\theta)
+\partial_b\log p_i(\theta),
+\tag{23c.1}
+$$
+again with the usual lower-semicontinuous extension at zero-probability boundary points. Let $F^Q_{ab}$ be the symmetric logarithmic derivative quantum Fisher matrix, defined by
+$$
+\partial_a\rho
+=
+\frac12(L_a\rho+\rho L_a),
+\qquad
+F^Q_{ab}
+=
+\frac12\operatorname{tr}\rho(L_aL_b+L_bL_a).
+\tag{23c.2}
+$$
+Then:
+
+1. for every finite retained protocol $E$,
+$$
+F^{(E)}(\theta)\preceq F^Q(\theta);
+\tag{23c.3}
+$$
+
+2. for every regular locally unbiased estimator $\hat\theta$ built from $n$ independent repetitions of the retained protocol $E$, on every identifiable subspace on which $F^{(E)}$ is nonsingular,
+$$
+\operatorname{Cov}_\theta(\hat\theta)
+\succeq
+\frac1n\big(F^{(E)}(\theta)\big)^{-1};
+\tag{23c.4}
+$$
+
+3. the tensor
+$$
+h_{ab}(\theta):=\frac14F^Q_{ab}(\theta)
+\tag{23c.5}
+$$
+is a canonical positive semidefinite predictive distinguishability tensor on the retained response-state chart. Its kernel consists exactly of tangent directions $v=v^a\partial_a$ for which
+$$
+\partial_v\rho=0
+$$
+as a retained density-operator tangent, equivalently for which every retained Born probability has zero first variation for every effect in the protocol-complete retained finite-response class. After quotienting PPI response-null directions, $h$ is positive definite on the locally identifiable quotient.
+
+On the pure-state branch of Theorem 23c,
+$$
+h=g_{FS}.
+\tag{23c.6}
+$$
+
+*Proof.* Equation (23c.2) is the standard SLD definition of quantum Fisher information on the retained finite-dimensional Hilbert branch. For any POVM $E$, the Braunstein-Caves information inequality gives $F^{(E)}\preceq F^Q$, proving (1). The finite-protocol Cramér-Rao inequality gives (2) for regular locally unbiased estimators on each identifiable subspace; if the Fisher matrix is singular, the statement is read on the quotient by its kernel, equivalently with the Moore-Penrose inverse restricted to the identifiable image. Positivity of $F^Q$ follows from
+$$
+F^Q(v,v)=\operatorname{tr}\rho L_v^2\ge0,
+\qquad
+L_v=v^aL_a.
+$$
+In the finite-dimensional SLD formula, $F^Q(v,v)=0$ exactly when the retained tangent $\partial_v\rho$ vanishes. Conversely, $\partial_v\rho=0$ permits $L_v=0$ on the retained support and hence gives $F^Q(v,v)=0$. Since Born probabilities satisfy $p_i=\operatorname{tr}(\rho E_i)$, vanishing of the retained density tangent is equivalent, on a protocol-complete retained finite-response chart, to vanishing first variation of every retained Born probability. These are precisely response-null directions under PPI, so the quotient removes the kernel. Finally, Theorem 23c gives $F^Q(v,v)=4g_{FS}(v,v)$ on every normalized pure-state one-parameter slice. Polarization gives the tensor identity, yielding (23c.6). ∎
+
 
 **7.2 MPU State Representation: Perspectival State and Hilbert Space**
 
