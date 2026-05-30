@@ -244,17 +244,17 @@ $$
 
 *   **Certificate-Complete:** A sector status indicating that the strict PPI/PCE certificate has all required finite entries and the overlap maps commute with the previously fixed dependency graph. Acyclic certificate-complete stacks have a unique global selected tuple by Theorem D.8.9c.
 
-*   **Unique Spectral Calibration Principle (USCP):** (Appendix V.3.11) Final calibration rule for continuous coefficients. Given an accepted finite spectral calibration datum $\mathfrak S_*=(\Omega_*,u_*,\{m_a,c_a^*\},\{\sigma_B\})$, the calibrated state is the unique minimizer
+*   **Unique Spectral Calibration Principle (USCP):** (Appendix V.3.11) Final calibration rule for continuous coefficients. Given a sealed branch and an accepted finite spectral calibration datum $\mathfrak S_*=(\mathcal A_*,\Omega_*,u_*,\{m_a,c_a^*\},\{\sigma_B\}_{B\in\mathcal I_*})$, the calibrated state is the unique minimizer
 $$
 \omega_*=
 \operatorname*{argmin}_{\omega\in\mathcal C_*}
 D_{\mathrm{KL}}(\omega\Vert u_*),
 $$
-and every response-active coefficient is the spectral moment $\langle\sigma_B\rangle_{\omega_*}$. USCP does not alter the discrete backbone; it promotes a continuous coefficient to theorem-level only when the spectral atoms, constraints, and operator symbols are fixed before comparison.
+and every response-active coefficient is the branch-scaled spectral moment $s_B\langle\sigma_B\rangle_{\omega_*}$. USCP does not alter the discrete backbone; it promotes a continuous coefficient to theorem-level only when the calibration algebra, spectral atoms, invariant reference state, constraints, symbols, unit bridge, and RG/threshold route are fixed before comparison.
 
-*   **Finite Spectral Calibration Datum:** (Definition V.3.11a) The finite record $\mathfrak S_*$ containing the response-active spectral atoms $\Omega_*$, the automorphism-invariant reference measure $u_*$, the accepted moment constraints $m_a,c_a^*$, and the fixed operator symbols $\sigma_B$ used to compute final calibrated coefficients.
+*   **Finite Spectral Calibration Datum:** (Definition V.3.11a) The finite record $\mathfrak S_*$ containing the finite calibration algebra $\mathcal A_*$, response-active spectral atoms $\Omega_*$, automorphism-invariant reference measure $u_*$, accepted moment constraints $m_a,c_a^*$, and fixed operator symbols $\sigma_B$ used to compute final calibrated coefficients. If a response-active operator lacks a symbol or a certified projection to $\mathcal A_*$, its coefficient is not final-calibrated.
 
-*   **SpectralMoment:** (Appendix P.14.1a; Appendix V.3.11) Parameter role for a coefficient or matrix entry obtained as $\langle\sigma_B\rangle_{\omega_*}$ from an accepted finite spectral calibration datum. A SpectralMoment is not a validation target, reference convention, phenomenological kernel, or empirical input.
+*   **SpectralMoment:** (Appendix P.14.1a; Appendix V.3.11) Parameter role for a coefficient or matrix entry obtained as $s_B\langle\sigma_B\rangle_{\omega_*}$ from an accepted finite spectral calibration datum. A SpectralMoment is not a validation target, reference convention, phenomenological kernel, or empirical input.
 
 *   **Core Discrete Backbone:** The theorem-level minimal finite-response chain $K_0=3$, $N_{\mathrm{vis}}^{\min}=8$, $\varepsilon_0=\ln2$, $d_0=8$, $a=2$, $b=6$, $M=24$, $k=12$, and $D=4$ on the stated Appendix Z/PPI/PCE branch. Here $N_{\mathrm{vis}}^{\min}=8$ is the finite operational-context result, while $d_0=8$ is the minimal complex Hilbert-carrier saturation. Later numerical sectors may depend on additional certificates or an accepted finite spectral calibration datum without changing this backbone.
 
