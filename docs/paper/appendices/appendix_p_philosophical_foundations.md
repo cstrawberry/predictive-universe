@@ -51,7 +51,7 @@ $$
 &\text{(4) Finite physicalization: PPI admits only finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c),} \\
 &\text{(5) No-surplus selection: PCE selects least-cost representatives among operationally equivalent predictive implementations (Definition 15),} \\
 &\text{(6) Self-reference floor: the SPAP-compatible loop satisfying O1--O3 has } K_0=3 \text{ bits (Theorem 15),} \\
-&\text{(7) Minimal Hilbert carrier: } d_0\ge 2^{K_0}=8 \text{ and the minimal branch takes } d_0=8 \text{ (Theorem 23; Theorem Z.2),} \\
+&\text{(7) Minimal Hilbert carrier: } N_{\mathrm{vis}}^{\min}=2^{K_0}=8,\ d_0\ge N_{\mathrm{vis}}^{\min}, \text{ and the minimal branch takes } d_0=8 \text{ (Theorem 15; Theorem 23; Theorem Z.2),} \\
 &\text{(8) MPU: the resulting no-surplus finite physical representative has } C_P=C_{op} \text{ and is the MPU (Definition 23),} \\
 &\text{(9) SPAP+Landauer: the SPAP cycle requires a }2\to 1 \text{ state merge, hence } \varepsilon_0=\varepsilon_{SPAP}=\ln2 \text{ (Theorem 31; Appendix J),} \\
 &\text{(10) Physical implementation cost: } \varepsilon_{\mathrm{phys}}:=\Delta S_{\mathrm{phys}}/k_B=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0 \text{ (Theorem 31),} \\
@@ -827,15 +827,15 @@ $$
 \xrightarrow{\text{operational modeling}}
 (P_{int}\to V\to D_{cyc})
 \xrightarrow{\text{SPAP/O1--O3}}
-K_0=3
+K_0=3,\\ N_{\mathrm{vis}}^{\min}=2^{K_0}=8
 \xrightarrow{\text{Hilbert capacity}}
-d_0\ge 2^{K_0}=8
+d_0\ge N_{\mathrm{vis}}^{\min}
 \xrightarrow{\text{PPI/PCE threshold carrier}}
 \mathrm{MPU}.
 $$
 The first arrow is not a second Cogito-level certainty; it records the framework's operational characterization of a knowledge-bearing process. The middle arrows use the self-reference and Hilbert-capacity theorems, and the final arrow uses PPI/PCE physicalization together with the threshold definition of an MPU.
 
-*Operational justification.* Foundational Certainty P.2.1 gives $\exists\mathcal{C}$; no extra ontology is used. A knowledge-bearing process cannot lack state distinction, because then no proposition, error, or update target is individuated. It cannot lack anticipation, because then it makes no predictive commitment. It cannot lack verification, because then success or failure is not defined. It cannot lack update, because then finite learning and adaptation are absent. The minimal operational schema used by PU for such a process is therefore the triple $P_{int}\to V\to D_{cyc}$ of Definition 4, with the integrated capabilities of Definition 5. If this loop is finite and instantiates the SPAP-compatible self-referential sub-dynamics satisfying O1--O3, Theorem 15 gives the minimal role capacity $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$, hence $K_0=3$. On the Hilbert branch, Theorem 23 gives $d_0\ge2^{K_0}=8$. PPI permits physical content only through finite instantiation conditions such as finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c). PCE selects the least-cost representative among implementations with the same operational functionality (Definition 15; Section P.6.1). In the PU physical model, Definition 23 names a threshold carrier with $C_P=C_{op}$ an MPU. Hence the Cogito does not directly assert MPUs; MPUs are the PPI/PCE-minimal threshold carriers used to physicalize the Cogito-certified predictive process under the framework's finite-response rules.
+*Operational justification.* Foundational Certainty P.2.1 gives $\exists\mathcal{C}$; no extra ontology is used. A knowledge-bearing process cannot lack state distinction, because then no proposition, error, or update target is individuated. It cannot lack anticipation, because then it makes no predictive commitment. It cannot lack verification, because then success or failure is not defined. It cannot lack update, because then finite learning and adaptation are absent. The minimal operational schema used by PU for such a process is therefore the triple $P_{int}\to V\to D_{cyc}$ of Definition 4, with the integrated capabilities of Definition 5. If this loop is finite and instantiates the SPAP-compatible self-referential sub-dynamics satisfying O1--O3, Theorem 15 gives the minimal role capacity $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$, hence $K_0=3$ and $N_{\mathrm{vis}}^{\min}=8$. On the Hilbert branch, Theorem 23 gives $d_0\ge N_{\mathrm{vis}}^{\min}=8$. PPI permits physical content only through finite instantiation conditions such as finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c). PCE selects the least-cost representative among implementations with the same operational functionality (Definition 15; Section P.6.1). In the PU physical model, Definition 23 names a threshold carrier with $C_P=C_{op}$ an MPU. Hence the Cogito does not directly assert MPUs; MPUs are the PPI/PCE-minimal threshold carriers used to physicalize the Cogito-certified predictive process under the framework's finite-response rules.
 
 ### P.3.2 The Space of Becoming: The Operational Domain of Prediction
 
@@ -5061,16 +5061,22 @@ $$K_0 = \log_2 8 = 3 \text{ bits} \quad \square$$
 
 **Reference:** Theorem 23 (Section 7), Theorem Z.2 (Appendix Z, Section Z.3.3)
 
-The minimal Hilbert space dimension for an MPU is:
-$$d_0 = 2^{K_0} = 8$$
+The minimal Hilbert space dimension for an MPU on the complex Hilbert-carrier branch is:
+$$
+d_0=N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
+$$
 
-*Proof.* By Convention 1, the Hilbert-space capacity is $C_{cap}=\log_2 d_0$ (bits). Encoding $K_0 = 3$ logically distinguishable bits requires $C_{cap}\ge K_0$, hence $d_0\ge 2^{K_0}=8$; PCE minimality selects the saturating case $d_0=8$.
+*Proof.* Theorem 15 first fixes the finite operational-context floor
+$$
+N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
+$$
+By Convention 1, the Hilbert-space capacity is $C_{cap}=\log_2 d_0$ (bits). Representing these $N_{\mathrm{vis}}^{\min}$ contexts as mutually perfectly distinguishable Hilbert alternatives requires $C_{cap}\ge\log_2N_{\mathrm{vis}}^{\min}=K_0$, hence $d_0\ge N_{\mathrm{vis}}^{\min}=8$. PCE minimality selects the saturating case $d_0=8$ on the minimal branch.
 
 Three structural constraints determine $d_0 = 8$ on the minimal branch:
 
-1. **Binary structure:** $d_0 = 2^n$ for integer $n$, from discrete quantum measurement and bit-based encoding of $K_0$.
+1. **Finite operational context count:** $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ from the three independent SPAP role readouts.
 
-2. **Self-referential logic:** $d_0 \geq 8$ from Theorem 15, as the minimum for SPAP operations.
+2. **Hilbert distinguishability:** $d_0 \geq N_{\mathrm{vis}}^{\min}=8$ from Theorem 23 on the Hilbert-carrier branch.
 
 3. **PCE minimality:** Dimensions $d_0 > 8$ incur operational cost $V_{\text{op}}$ without adding any theorem-level operational necessity at the minimal branch, violating Definition 15.
 
@@ -5078,7 +5084,7 @@ Therefore the saturating minimal-branch value is $d_0 = 8$.
 
 **Radon-Hurwitz coherence check.** Normed division algebras exist only in dimensions 1, 2, 4, 8 (real numbers, complex numbers, quaternions, octonions) [Hurwitz 1898]. The value $d_0 = 8$ therefore also coincides with the maximal normed-division-algebra dimension. This is a secondary algebraic coherence check, not an independent upper-bound proof inside PU.
 
-**Structural Consistency Check (Theorem Z.2).** The identity $d_0 = 2a^2$ derived in Theorem Z.2 from SPAP tensor product structure provides an independent verification: with $a = 2$ (Theorem Z.1), we obtain $d_0 = 2 \times 4 = 8$, consistent with $d_0 = 2^{K_0} = 2^3 = 8$. This consistency is non-trivial and reflects the mutual determination of $K_0$, $\varepsilon$, $a$, and $d_0$ by SPAP structure. $\square$
+**Structural Consistency Check (Theorem Z.2).** The identity $d_0 = 2a^2$ derived in Theorem Z.2 from SPAP tensor product structure provides an independent verification: with $a = 2$ (Theorem Z.1), we obtain $d_0 = 2 \times 4 = 8$, consistent with the Hilbert-carrier saturation $d_0=N_{\mathrm{vis}}^{\min}=2^{K_0}=2^3=8$. This consistency is non-trivial and reflects the mutual determination of $K_0$, $N_{\mathrm{vis}}^{\min}$, $\varepsilon$, $a$, and $d_0$ by SPAP structure. $\square$
 
 **Epistemic Status:** Framework-derived from Convention 1 and PCE minimality; Radon-Hurwitz and Theorem Z.2 provide secondary coherence checks.
 
@@ -6494,7 +6500,7 @@ The framework contains three categorically different types of claims:
 | Structural SPAP entropy quantum $\varepsilon_0=\ln2$ (Theorem 31) | Theorem | Exact binary SPAP quotient plus Landauer mapping (Appendix J) |
 | Physical implementation bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31) | Theorem | $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}$, $\varepsilon_{\mathrm{diss}}\ge0$ |
 | $K_0=3$ (Theorem 15) | Theorem | Three-register SPAP exactness: state, stored prediction, phase |
-| $d_0\ge8$ (Theorem 23) | Theorem | $d_0 = 2^{K_0}$ via Convention 1 |
+| $N_{\mathrm{vis}}^{\min}=8$ and $d_0\ge8$ (Theorem 15; Theorem 23) | Theorem | $N_{\mathrm{vis}}^{\min}=2^{K_0}$, then $d_0\ge N_{\mathrm{vis}}^{\min}$ on the Hilbert-carrier branch via Convention 1 |
 | $d_0=8$ on the minimal MPU branch | Branch theorem | Lower bound plus PCE no-surplus selection (Theorem Z.2) |
 
 **Selection principles and quotient theorems.** These specify how physically instantiated structures are compared when several implementations realize the same finite protocol responses:
@@ -6544,11 +6550,11 @@ The Principle of Compression Efficiency (Definition 15) proposes that adaptive s
 | $a$ | minimal integer with $\ln a\ge\varepsilon_0$ | gives $a=2$ |
 
 **Internal Consistency Constraint.** The minimum values are not merely convenient but are uniquely forced by the framework's internal structure. Three independent relations must hold simultaneously:
-- $d_0 = 2^{K_0}$ (Theorem 23, from encoding requirements)
-- $d_0 = 2a^2$ (Theorem Z.2, from SPAP tensor structure)
-- $a = 2$ (Theorem Z.1, from the structural admissibility condition $\ln a\ge\varepsilon_0=\ln2$ plus minimal integer/PCE no-surplus selection)
+- $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ (Theorem 15, from the finite operational role-readout)
+- $d_0\ge N_{\mathrm{vis}}^{\min}$, with minimal Hilbert-carrier saturation $d_0=N_{\mathrm{vis}}^{\min}=8$ on the no-surplus complex branch (Theorem 23; Theorem Z.2)
+- $d_0 = 2a^2$ and $a = 2$ on the Appendix Z minimal structural branch (Theorem Z.2; Theorem Z.1, from the structural admissibility condition $\ln a\ge\varepsilon_0=\ln2$ plus minimal integer/PCE no-surplus selection)
 
-Combining the minimal-branch equalities gives $2^{K_0}=2a^2$ with $a=2$, hence $K_0=3$ and $d_0=8$. The structural floor $\varepsilon_0=\ln2$ is the exact SPAP quotient that makes $a=2$ the minimal admissible active kernel. Alternative values such as a nonminimal branch with $a=3$ would give $d_0=18$, which violates $d_0=2^{K_0}$ for integer $K_0$ inside the same backbone. Thus the minimum is not arbitrary but is the unique value satisfying the stated structural constraints.
+Combining the minimal-branch equalities gives $N_{\mathrm{vis}}^{\min}=2^{K_0}=2a^2$ with $a=2$, hence $K_0=3$ and $d_0=8$. The structural floor $\varepsilon_0=\ln2$ is the exact SPAP quotient that makes $a=2$ the minimal admissible active kernel. Alternative values such as a nonminimal branch with $a=3$ would give $d_0=18$, which violates the same minimal Hilbert-carrier saturation $d_0=N_{\mathrm{vis}}^{\min}=2^{K_0}$ inside the same minimal backbone. Thus the minimum is not arbitrary but is the unique value satisfying the stated structural constraints.
 
 **Convention P.14.0a (Strict-Certificate Reading of Branch Conditions).** A branch condition is not a discretionary license to choose a favorable physical interpretation. It is a finite admissibility condition awaiting either exclusion, quotient collapse, or strict certificate closure. When a branch supplies a strict PPI/PCE certificate in the sense of Definition D.8.9a, its selected value is forced modulo response equivalence by Theorem D.8.9b. When a finite acyclic dependency stack supplies such certificates and all overlap maps commute, the whole stack is forced by Theorem D.8.9c. When a named finite entry is absent, the sector keeps the weakest unresolved status of that entry by Corollary D.8.9d and Corollary P.14.1g.
 
@@ -6583,6 +6589,7 @@ are not selected by an unconstrained PPI preference. Each value is the unique va
 | **Hypothesis** | non-derived ontological, empirical, or physical assumption whose truth is not established internally |
 | **Model layer** | depends on an ansatz, profile, texture, effective kernel, finite truncation, or unresolved quantitative construction |
 | **Convention** | normalization, reference branch, bookkeeping choice, or forward-evaluation convention |
+| **Final calibrated theorem** | proved on a branch carrying an accepted finite spectral calibration datum $\mathfrak S_*$ in the sense of Definition V.3.11a, with coefficients fixed by the unique $\omega_*$ of Principle V.3.11b |
 | **Empirical input** | quantity imported from measurement rather than derived inside the PU chain |
 | **Identification** | named interpretive or sector-linking assignment recorded explicitly as an identification rather than as a theorem |
 | **Open target** | named missing theorem, computation, or bridge closure needed to upgrade status |
@@ -6601,6 +6608,7 @@ The manuscript uses the following parameter-role classes.
 | **CoarseGrainingScale** | scale introduced by an effective or finite-resolution coarse-grained description |
 | **ReferenceConvention** | branch, prefactor, forward-evaluation, or counting convention retained for comparison |
 | **PhenomenologicalKernel** | fitted or model-selected response function, texture, profile, kernel, or interpolation law |
+| **SpectralMoment** | coefficient or matrix entry obtained as $\langle\sigma_B\rangle_{\omega_*}$ from an accepted final spectral calibration datum; not fitted after comparison |
 | **EmpiricalInput** | measured number or observational inversion used as an input rather than a derived output |
 
 A quantity may have more than one role only when its appearances are different. For example, $A_{\mathrm{eff}}^{(\mathrm{obs})}$ is an empirical inversion on a stated vacuum branch, while the Appendix U working $A_{\mathrm{eff}}$ is a forward-evaluation convention with determinant and zero-mode normalization uncertainty.
@@ -6618,9 +6626,14 @@ A quantity may have more than one role only when its appearances are different. 
 | $\eta'$ | BridgeNormalization | fixed once Definition H.0 and the Equation H.4b operating-point normalization are adopted |
 | $(L_0,A_G,m)$ | CoarseGrainingScale / PhenomenologicalKernel | $L_0$ is tied to the $g_0$ bridge scale; $A_G$ and $m$ remain phenomenological until the relaxation sector is derived or fitted |
 | flavor normalizations, CKM/PMNS phases, seesaw normalizations | PhenomenologicalKernel / ThresholdData | model or conditional layer unless a cited theorem proves the specific quantity |
+| final-calibrated coefficients $g_i,G,\Lambda,\mu^2,\lambda,Y_f,\kappa_\nu,\bar\theta$ | SpectralMoment | final calibrated theorem only after an accepted $\mathfrak S_*$ supplies $\Omega_*$, $u_*$, all constraint moments, and all operator symbols before comparison |
 | $(\alpha,\beta,C_{\mathrm{scale}},\Gamma_0)$ and similar environment-sensitive coefficients | CoarseGrainingScale / PhenomenologicalKernel | model- and environment-dependent scaling layer |
 
-*Proof of Corollary P.14.1b.* The first row follows from the minimal Appendix Z / attractor branch: Theorem 15 supplies $K_0=3$, Theorem 23 supplies the lower bound $d_0\ge 8$, Corollary Z.2 fixes the minimal-branch value $d_0=8$, Definition 15a fixes $\varepsilon_0=\ln2$, Theorem Z.1 supplies $a=2$, hence $b=d_0-a=6$, Theorem Z.5 supplies $M=24$, Theorem Z.13 supplies $k=12$, and Theorem Z.11 supplies $D=4$. The $N_{\min}$ row follows from Theorem R.3.4 (which classifies the anomaly-cancellation solutions $\sum F_g = 0$ and $\sum F_g^3 = 0$ admitting a physical CKM phase and identifies $\{a,-a,0\}$ with $N = 3$ as the minimal such solution) and Proposition R.3.5f (which records this minimality as the theorem-level content). The exact-realized $N_g$ row follows from Proposition R.3.5.1a, which removes response-null supernumerary family copies on the pre-flavor family-redundancy PPI branch before any separate flavor-potential package is appended. The two rows are separated because Theorem R.3.4 explicitly notes that $N \geq 4$ anomaly-free CP-capable solutions exist (for example $\{a,-a,b,-b\}$), so exact realization of $N_g = 3$ is not closed by anomaly cancellation and CP violation alone and requires the pre-flavor PPI realization theorem. The flag-lift threshold row follows from Theorem T.18, Proposition T.17a.3a, and Theorem T.69, together with the explicit remaining global spectral problem on $\widetilde X$. The matching/RG row follows from Theorem T.35 and Definition T.19a. The vacuum-prefactor row follows from Corollary U.15b, Corollary U.17a, and Proposition U.12.4a. The $\eta'$ row follows from Definition H.0, Equation H.4b, and Remark H.4. The dark-sector kernel row follows from Equation I.4 and Section I.13. The flavor-model row follows from Proposition R.3.5f and the cited Appendix T flavor constructions. The environment-sensitive row follows from Definition D.1 and Definition 20. Thus each listed family has a fixed role-class ledger, and threshold variables, bridge normalizations, scheme scales, coarse-graining scales, reference conventions, phenomenological kernels, and empirical inputs are not interchangeable. ∎
+*Proof of Corollary P.14.1b.* The first row follows from the minimal Appendix Z / attractor branch: Theorem 15 supplies $K_0=3$, Theorem 23 supplies the lower bound $d_0\ge 8$, Corollary Z.2 fixes the minimal-branch value $d_0=8$, Definition 15a fixes $\varepsilon_0=\ln2$, Theorem Z.1 supplies $a=2$, hence $b=d_0-a=6$, Theorem Z.5 supplies $M=24$, Theorem Z.13 supplies $k=12$, and Theorem Z.11 supplies $D=4$. The $N_{\min}$ row follows from Theorem R.3.4 (which classifies the anomaly-cancellation solutions $\sum F_g = 0$ and $\sum F_g^3 = 0$ admitting a physical CKM phase and identifies $\{a,-a,0\}$ with $N = 3$ as the minimal such solution) and Proposition R.3.5f (which records this minimality as the theorem-level content). The exact-realized $N_g$ row follows from Proposition R.3.5.1a, which removes response-null supernumerary family copies on the pre-flavor family-redundancy PPI branch before any separate flavor-potential package is appended. The two rows are separated because Theorem R.3.4 explicitly notes that $N \geq 4$ anomaly-free CP-capable solutions exist (for example $\{a,-a,b,-b\}$), so exact realization of $N_g = 3$ is not closed by anomaly cancellation and CP violation alone and requires the pre-flavor PPI realization theorem. The flag-lift threshold row follows from Theorem T.18, Proposition T.17a.3a, and Theorem T.69, together with the explicit remaining global spectral problem on $\widetilde X$. The matching/RG row follows from Theorem T.35 and Definition T.19a. The vacuum-prefactor row follows from Corollary U.15b, Corollary U.17a, and Proposition U.12.4a. The $\eta'$ row follows from Definition H.0, Equation H.4b, and Remark H.4. The dark-sector kernel row follows from Equation I.4 and Section I.13. The flavor-model row follows from Proposition R.3.5f and the cited Appendix T flavor constructions. The final-calibrated coefficient row follows from Definition V.3.11a, Principle V.3.11b, and Theorem V.3.11f: once $\mathfrak S_*$ is accepted, every response-active coefficient is a spectral moment of the unique $\omega_*$. The environment-sensitive row follows from Definition D.1 and Definition 20. Thus each listed family has a fixed role-class ledger, and exact thresholds, bridge normalizations, scheme scales, coarse-graining scales, reference conventions, phenomenological kernels, spectral moments, and empirical inputs are not interchangeable. ∎
+
+**Corollary P.14.1b.1 (No Modulus Promotion without Spectral Datum).** A continuous coefficient appearing in the effective action may be promoted from ThresholdData, BridgeNormalization, ReferenceConvention, PhenomenologicalKernel, or EmpiricalInput status to SpectralMoment status only if a finite spectral calibration datum $\mathfrak S_*$ is accepted before comparison.
+
+*Proof.* By Definition V.3.11a, the spectral datum must contain the finite atom set $\Omega_*$, invariant reference measure $u_*$, accepted constraint moments, and the fixed spectral symbol $\sigma_B$ of the operator whose coefficient is being promoted. By Theorem V.3.11c, these data determine a unique $\omega_*$. By Definition V.3.11e, the coefficient is then $\langle\sigma_B\rangle_{\omega_*}$. Without $\mathfrak S_*$, one of the inputs to this moment is absent, so the coefficient retains its previous local status under Convention P.14.1a. ∎
 
 **Convention P.14.1c (Paper-Wide T1/T2/T3 Uncertainty Protocol).** For any reported numerical quantity $Q$, every non-exact numerical dependency in its derivation or comparison is assigned to exactly one of the following uncertainty classes after exact theorem-level definitions are fixed.
 
@@ -7024,7 +7037,7 @@ The success of the minimum values provides strong evidence for PCE:
 
 | Observation | Implication |
 |:------------|:------------|
-| Minimum values satisfy all constraints | Unique integer solution to $d_0 = 2a^2 = 2^{K_0}$ |
+| Minimum values satisfy all constraints | Unique integer solution to $d_0 = 2a^2 = N_{\mathrm{vis}}^{\min}=2^{K_0}$ on the minimal Hilbert-carrier branch |
 | Multiple independent outputs match | Unified origin from $\varepsilon_0$, $K_0$ |
 | Precision spans 5+ significant figures | Not approximate or order-of-magnitude |
 | Same backbone inputs constrain all sectors | $\varepsilon_0, K_0$ generate the discrete backbone; sector-specific quantitative outputs additionally carry their stated branch, bridge-law, threshold, convention, model, or certificate inputs |
@@ -7043,7 +7056,7 @@ $$\boxed{
 &\textbf{PCE/PPI closure:} \quad \text{response-null surplus is quotiented or PCE-dominated} \\[4pt]
 &\textbf{Predictions:} \quad \alpha^{-1}, D, \Lambda, v, m_H, \sin^2\theta_W^{(0)}, \text{CKM}, \text{PMNS}, \eta_B, \ldots \\[4pt]
 &\textbf{Experimental tests:} \quad 18+ \text{ quantities; for the 12 with explicit pulls, } \chi^2/\text{d.o.f.} = 0.446;\ \text{the 17-output aggregate is conditional if } \sin^2\theta_W(M_Z) \text{ is included} \\[4pt]
-&\textbf{Conclusion:} \quad \text{the discrete backbone is theorem-level on its stated branch; downstream sectors retain their local bridge, certificate, or model status labels}
+&\textbf{Conclusion:} \quad \text{the discrete backbone is theorem-level on its stated branch; downstream sectors retain their local bridge, certificate, or model status labels unless promoted by an accepted final spectral calibration datum}
 \end{aligned}
 }$$
 
@@ -8016,7 +8029,7 @@ Before stating the population-parameter content, this subsection records the arc
 
 **Definition P.16a.0.2 (Emergent Layer of PU).** The *emergent layer* of the Predictive Universe framework consists of standard physical structures recovered from the primitive layer through the existing derivation chains, with each component inheriting its stated certificate status:
 
-1. *Quantum mechanics emerges from the primitive layer* through Section 8 and Appendix G. The complex Hilbert structure is selected by Theorem G.1.8 from real, complex, and quaternionic alternatives; Theorem 23 supplies the bound $d_0\ge 2^{K_0}=8$ and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch; Born weights are supplied by Proposition 7 and Theorem G.1.7 through the POP/PCE noncontextual frame-functional machinery.
+1. *Quantum mechanics emerges from the primitive layer* through Section 8 and Appendix G. The complex Hilbert structure is selected by Theorem G.1.8 from real, complex, and quaternionic alternatives; Theorem 15 supplies $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, Theorem 23 supplies the Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch; Born weights are supplied by Proposition 7 and Theorem G.1.7 through the POP/PCE noncontextual frame-functional machinery.
 2. *The Standard Model structural sector emerges from the primitive layer* through Appendix G and Appendix R. The inactive-sector module decomposition is selected by Theorem G.8.4b, and the gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ is selected by Corollary G.8.4c on that finite-response capacity branch; the impossibility of a single-MPU SM-like chiral sector is Theorem P.1; the generation count $N_g=3$ is established by Theorem R.3.4 and Proposition R.3.5.1a on the pre-flavor family-redundancy PPI branch. Later threshold, flavor, and baryogenesis numerics retain the status assigned by Convention P.14.1k.
 3. *General relativity emerges from the primitive layer* through Section 11, Section 12, and Appendix O. The regular continuum branch is supplied by the geometric-regularity and operational-continuum results; the Lorentzian metric signature is selected on the regular branch by Appendix O.7 under its stated hypotheses; the spacetime dimension $D=4$ is forced on the Bures tangent-cell channel contract by Theorem Z.10 and Theorem Z.11 through $K(D)=24$; and the local Einstein equation is derived as a Clausius relation on emergent horizons by Theorem 12.1, with its bridge status inherited from the gravity ledger.
 

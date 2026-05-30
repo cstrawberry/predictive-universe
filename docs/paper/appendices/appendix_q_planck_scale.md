@@ -1883,7 +1883,7 @@ $$\boxed{C_{\max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
 The residual-budget branch is the load-bearing assumption: alternative resource-partition rules (e.g., one in which the SPAP cost is paid by internal processing without subtraction from external boundary capacity) would yield different values of $C_{\max}^*$ and correspondingly different values of $\delta/L_P$ in §Q.2.4 and §Q.5.
 
 
-**Remark Q.10.1 (Bit-Budget Characterization).** Since $d_0 = 2^{K_0}$ on the minimal branch and $\varepsilon_0=\ln2$ at the PCE-Attractor, the capacity-cost ratio has the structural form
+**Remark Q.10.1 (Bit-Budget Characterization).** Since $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ and the minimal complex Hilbert carrier saturates $d_0=N_{\mathrm{vis}}^{\min}$ on the minimal branch, while $\varepsilon_0=\ln2$ at the PCE-Attractor, the capacity-cost ratio has the structural form
 $$
 \frac{C_{\max}^*}{\varepsilon} = \frac{\ln(d_0)-\varepsilon}{\varepsilon} = K_0 - 1.
 $$
@@ -2016,7 +2016,7 @@ $$
 
 **Remark Q.6.1: Decomposition of the Discretization Scale.** The unified discretization factor $\sqrt{d_0 \cdot \varepsilon}$ admits a transparent information-theoretic decomposition:
 
-- **Factor $d_0 = 8$:** Theorem 23 gives the lower bound $d_0 \ge 2^{K_0} = 8$, and the minimal PCE branch used in the Appendix Z backbone selects $d_0 = 8$ (Theorem Z.2). This encodes the logical structure required for self-referential prediction.
+- **Factor $d_0 = 8$:** Theorem 15 gives the finite operational-context floor $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$; Theorem 23 gives the Hilbert-carrier lower bound $d_0\ge N_{\mathrm{vis}}^{\min}$; and the minimal PCE branch used in the Appendix Z backbone selects $d_0 = 8$ (Theorem Z.2). This encodes the logical structure required for self-referential prediction.
 
 - **Factor $\varepsilon_0=\ln2$:** Theorem 31 gives the irreducible thermodynamic lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and the PCE-Attractor saturates that bound to $\varepsilon_0=\ln2$ (Definition 15a).
 
@@ -2024,11 +2024,11 @@ The discretization scale $\sqrt{d_0 \cdot \varepsilon} = \sqrt{8\ln 2} \approx 2
 
 **Remark Q.6.2: Complete Derivation Chain.** The full derivation from logical axioms to spacetime discretization proceeds through two parallel pathways originating from $K_0$:
 
-$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 \ge 2^{K_0} = 8 \xrightarrow{\text{Thm Z.2}} d_0 = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon}$$
+$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 15}} N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \xrightarrow{\text{Thm 23}} d_0 \ge N_{\mathrm{vis}}^{\min} \xrightarrow{\text{Thm Z.2}} d_0 = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon}$$
 
 The discretization scale emerges from two independent derivations constrained by internal consistency (P.14.3):
 
-1. **The Hilbert space dimension** satisfies $d_0 \ge 2^{K_0}=8$ by Theorem 23, with equality $d_0=8$ on the minimal PCE branch (Theorem Z.2).
+1. **The Hilbert space dimension** satisfies $d_0 \ge N_{\mathrm{vis}}^{\min}=8$ by Theorem 23, with equality $d_0=8$ on the minimal PCE branch (Theorem Z.2).
 
 2. **The entropy cost** satisfies $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ by Theorem 31, with equality $\varepsilon_0=\ln2$ on the attractor-saturating branch (Definition 15a).
 

@@ -90,9 +90,21 @@ is certificate-pending until $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$ fix the r
 
 By grounding physical law in the logic of self-referential prediction, the framework offers a principled reframing of several philosophical problems: the Hard Problem of Consciousness is addressed by taking awareness as a primitive starting point rather than an emergent byproduct; the Problem of Induction is addressed by showing that discoverable regularities are prerequisites for predictive systems to exist; the Unreasonable Effectiveness of Mathematics is addressed via the convergence of mathematical and physical optimization at PCE-optimal structures; and the Problem of Time is addressed by relating temporal order to the intrinsic sequentiality of the predictive cycle (see Appendix P for detailed analysis).
 
-Ultimately, the framework suggests that physical law is not a set of externally imposed rules but the resource-efficient embodiment of logical and predictive necessities selected by minimization of the PCE potential $V(x) = V_{op}(x) + V_{prop}(x) - V_{benefit}(x) + V_{penalty}(x)$ under SPAP and viability constraints—a direct consequence of the Principle of Physical Instantiation (Appendix P). Reality, in this view, can be modeled as the universe's optimal solution to the problem of its own self-prediction.
+Ultimately, the framework suggests that physical law is not a set of externally imposed rules but the resource-efficient embodiment of logical and predictive necessities selected by minimization of the PCE potential $V(x) = V_{op}(x) + V_{prop}(x) - V_{benefit}(x) + V_{penalty}(x)$ under SPAP and viability constraints, followed on final-calibrated branches by maximum-entropy spectral calibration over the accepted finite response spectrum. In compact form,
+$$
+\text{Physics}
+=
+\operatorname{Inv}(X_*)
++
+\operatorname{Moments}_{\omega_*}(\operatorname{Spec}X_*),
+\qquad
+\omega_*=
+\operatorname*{argmin}_{\omega\in\mathcal C_*}
+D_{\mathrm{KL}}(\omega\Vert u_*).
+$$
+Reality, in this view, can be modeled as the universe's optimal finite self-predictive structure together with its unique final spectral calibration state.
 
 At the meta-theoretic level clarified in Appendix P.14.9, this final claim is comparative rather than self-validating. PU offers itself as a candidate low-$K_{\mathcal E}$ compression of physical law on shared empirical domains: if a competitor matches or exceeds its predictive coverage with lower explicit structural cost, PU is superseded on that domain; if PU derives with lower input what competitors must postulate, its compression claim is strengthened. The coherence between PU's subject matter and the comparison criterion is a structural feature of the framework, not an exemption from empirical comparison or certificate closure.
 
-**Final branch-scope note.** The main text preserves the source-appendix branch boundaries: unconditional claims are restricted to the stated formal branch, while $D=4$, $k=12$, exact $N_g=3$, $\alpha^{-1}$, $\Lambda$, electroweak/flavor quantities, baryogenesis, CC statistical FTL influence, and the Einstein-equation derivation inherit their named bridge assumptions, calibration conventions, or validation-level inputs. This does not weaken the derivation graph; it makes explicit which links are theorem-level and which links are canonical branch choices specified by explicit branch hypotheses.
+**Final branch-scope note.** The main text preserves the source-appendix branch boundaries: unconditional claims are restricted to the stated formal branch, while $D=4$, $k=12$, exact $N_g=3$, $\alpha^{-1}$, $\Lambda$, electroweak/flavor quantities, baryogenesis, CC influence, and the Einstein-equation derivation inherit their named bridge assumptions, calibration conventions, certificates, validation-level inputs, or final spectral calibration records. The sealed local CPTP core is no-signaling; any nonlocal Bob-marginal anomaly is an external non-CPTP branch requiring its own finite-response certificate. Continuous coefficients become theorem-level only on branches carrying an accepted finite spectral calibration datum $\mathfrak S_*$, in which case they are fixed as moments of the unique $\omega_*$ of Principle V.3.11b. This does not weaken the derivation graph; it makes explicit which links are theorem-level, which links are canonical branch choices specified by explicit branch hypotheses, and which continuous quantities are final-calibrated spectral moments rather than adjustable parameters.
 

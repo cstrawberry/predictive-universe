@@ -84,11 +84,17 @@ Equivalently, in natural-log units (nats),
 $$
 \ln d_0 = (\ln 2)\,C_{cap}.
 $$
-This establishes that a system with a Hilbert space of $d_0$ dimensions has a state-space capacity of $C_{cap}$ bits (or $\ln d_0$ nats), i.e., the maximum number of mutually orthogonal, operationally distinguishable configurations that can be encoded in a single-cycle internal state. This capacity is a structural constraint used to translate logical distinguishability requirements into Hilbert-space dimension bounds. In particular, the Horizon Constant $K_0$ (Theorem 15) lower-bounds the required capacity for SPAP-encodable predictive cycles, so any MPU-admissible implementation must satisfy
+This establishes that a system with a Hilbert space of $d_0$ dimensions has a state-space capacity of $C_{cap}$ bits (or $\ln d_0$ nats), i.e., the maximum number of mutually orthogonal, operationally distinguishable configurations that can be encoded in a single-cycle internal state. This capacity is a structural constraint used to translate logical distinguishability requirements into Hilbert-space dimension bounds. In particular, Theorem 15 first fixes the finite operational-context floor
 $$
-C_{cap}=\log_2 d_0 \ge K_0 \quad \Leftrightarrow \quad d_0 \ge 2^{K_0}.
+N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
 $$
-Theorem 23 later yields $d_0 \ge 2^{K_0}=8$ for MPUs; at the PCE-Attractor, PCE selects the minimal saturating case $d_0=8$. The dynamical resource expenditure of prediction is tracked separately by $C_P$ and its operational proxy $\langle \hat{C}_v \rangle$ (Theorems 1–2), which need not be bounded by the single-state capacity.
+On a Hilbert carrier, representing these contexts as mutually perfectly distinguishable alternatives requires
+$$
+C_{cap}=\log_2 d_0 \ge \log_2 N_{\mathrm{vis}}^{\min}=K_0
+\quad \Leftrightarrow \quad
+ d_0 \ge N_{\mathrm{vis}}^{\min}=2^{K_0}.
+$$
+Theorem 23 later gives this Hilbert-rank bound for MPUs; at the PCE-Attractor, PCE selects the minimal saturating case $d_0=8$. The dynamical resource expenditure of prediction is tracked separately by $C_P$ and its operational proxy $\langle \hat{C}_v \rangle$ (Theorems 1–2), which need not be bounded by the single-state capacity.
 
 This completes the non-circular foundation for $C_P$ needed for the subsequent emergence derivations.
 

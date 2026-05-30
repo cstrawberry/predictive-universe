@@ -121,13 +121,13 @@
 
 *   **$\Gamma_0$ (Gamma-0):** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), appearing in the PCE potential. It maps the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in the Adaptation Driving Force $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Equation (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU system.
 
-*   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state $|\psi(t)\rangle$. Dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23). Emergence justified by PCE optimality (Theorem G.1.8).
+*   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state $|\psi(t)\rangle$. Theorem 15 first fixes the finite operational-context floor $N_{\mathrm{vis}}^{\min}=8$; on the complex Hilbert-carrier branch this becomes $d_0=\dim(\mathcal H_0)\ge8$, and the minimal MPU branch selects $d_0=8$ (Theorem 23; Theorem 8.4; Corollary 8.4a; Theorem G.1.8).
 
 *   **Interface Correction ($\delta\kappa$):** (Appendix Z, Section Z.17, Theorem Z.17) The first-order correction to the bulk normalization constant arising from discrete-continuous mismatch at the MPU interface: $\delta\kappa = -(a/d_0) \cdot (u^*/\sqrt{K_0}) \approx -0.01307$. Sign determined a priori from Legendre transform structure (Theorem Z.16); magnitude from active participation fraction and QFI embedding factor. Yields $\kappa_{\rm eff} = 1 + \delta\kappa \approx 0.9869$.
 
 *   **Instanton Complexity ($\kappa$):** (Appendix U, Theorem U.13; Theorem U.13b; Theorem U.16; Theorem U.8c) Dimensionless semiclassical action exponent controlling vacuum tunneling suppression in the cosmological-constant relation $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$. In Appendix U, the value $\kappa_{\mathrm{ref}}=141.5$ is the Appendix U five-mode reference exponent, while Theorem U.8c shows that the pure-coordinate dilatation tangent needed to realize that branch is a strict negative mode of the current Definition U.4 continuum action. Theorem U.13 further shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. After the corrected Definition U.6 normalization, Theorem U.13b gives the full discrete four-mode closure under the explicit false-vacuum spectral hypotheses stated there, so the corresponding four-mode branch value is $\kappa=142$ within that theorem. Corollary U.15b then distinguishes the observational inversion $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ on that reference branch from the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ used in the forward reference evaluation. Moonshine character coefficients such as $196884$ are not inputs to this exponent ledger. (Do not confuse this $\kappa$ with the gauge-field normalization factors $\kappa_{\mathrm{bulk}}, \kappa_{\mathrm{eff}}$ used in Appendix Z.)
 
-*   **Horizon Constant ($K_0$):** (Theorem 15) The fundamental minimum Predictive Physical Complexity ($C_P = 3$ bits) required for SPAP encodability under the operational conditions (O1)-(O3). The same three-bit register size also admits a basic predictive mode with accuracy strictly better than chance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. Represents the absolute floor for non-trivial predictive agency. Necessarily $C_{op} \ge K_0$.
+*   **Horizon Constant ($K_0$):** (Theorem 15) The fundamental minimum Predictive Physical Complexity ($C_P = 3$ bits) required for SPAP encodability under the operational conditions (O1)-(O3). The same three-bit register size also admits a basic predictive mode with accuracy strictly better than chance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. It fixes the minimal faithful visited-context count $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$. Represents the absolute floor for non-trivial predictive agency. Necessarily $C_{op} \ge K_0$.
 
 *   **Hypothesis 1 (MPU Reality Model):** (Section 7.1) Models physical reality, from the internal perspective, as fundamentally constituted by a network of interacting MPUs governed by POP/PCE and Dual Dynamics. The motivation is the Cogito-to-MPU bridge: MPUs are selected as the PPI/PCE-minimal physical representatives of the indubitable predictive process-root.
 
@@ -244,7 +244,19 @@ $$
 
 *   **Certificate-Complete:** A sector status indicating that the strict PPI/PCE certificate has all required finite entries and the overlap maps commute with the previously fixed dependency graph. Acyclic certificate-complete stacks have a unique global selected tuple by Theorem D.8.9c.
 
-*   **Core Discrete Backbone:** The theorem-level minimal finite-response chain $K_0=3$, $\varepsilon_0=\ln2$, $d_0=8$, $a=2$, $b=6$, $M=24$, $k=12$, and $D=4$ on the stated Appendix Z/PPI/PCE branch. Later numerical sectors may depend on additional certificates without changing this backbone.
+*   **Unique Spectral Calibration Principle (USCP):** (Appendix V.3.11) Final calibration rule for continuous coefficients. Given an accepted finite spectral calibration datum $\mathfrak S_*=(\Omega_*,u_*,\{m_a,c_a^*\},\{\sigma_B\})$, the calibrated state is the unique minimizer
+$$
+\omega_*=
+\operatorname*{argmin}_{\omega\in\mathcal C_*}
+D_{\mathrm{KL}}(\omega\Vert u_*),
+$$
+and every response-active coefficient is the spectral moment $\langle\sigma_B\rangle_{\omega_*}$. USCP does not alter the discrete backbone; it promotes a continuous coefficient to theorem-level only when the spectral atoms, constraints, and operator symbols are fixed before comparison.
+
+*   **Finite Spectral Calibration Datum:** (Definition V.3.11a) The finite record $\mathfrak S_*$ containing the response-active spectral atoms $\Omega_*$, the automorphism-invariant reference measure $u_*$, the accepted moment constraints $m_a,c_a^*$, and the fixed operator symbols $\sigma_B$ used to compute final calibrated coefficients.
+
+*   **SpectralMoment:** (Appendix P.14.1a; Appendix V.3.11) Parameter role for a coefficient or matrix entry obtained as $\langle\sigma_B\rangle_{\omega_*}$ from an accepted finite spectral calibration datum. A SpectralMoment is not a validation target, reference convention, phenomenological kernel, or empirical input.
+
+*   **Core Discrete Backbone:** The theorem-level minimal finite-response chain $K_0=3$, $N_{\mathrm{vis}}^{\min}=8$, $\varepsilon_0=\ln2$, $d_0=8$, $a=2$, $b=6$, $M=24$, $k=12$, and $D=4$ on the stated Appendix Z/PPI/PCE branch. Here $N_{\mathrm{vis}}^{\min}=8$ is the finite operational-context result, while $d_0=8$ is the minimal complex Hilbert-carrier saturation. Later numerical sectors may depend on additional certificates or an accepted finite spectral calibration datum without changing this backbone.
 
 *   **Ordered $(12,24)$ Bridge:** (Appendix Z.5) The componentwise ledger equivalence
     $$
@@ -605,13 +617,13 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **$T_{\mu\nu}^{(MPU)}$ (MPU Stress-Energy Tensor):** (Definition B.8, Equation B.15, Appendix B) Macroscopic, symmetric, covariantly conserved stress-energy tensor derived from coarse-grained average of the underlying microscopic operator $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Definition B.7), representing MPU activity and costs ($\hat{H}_v, \hat{R}, \hat{R}_I, \hat{V}_{vv'}$). Source term in the emergent Einstein Field Equations (EFE, Equation 76).
 
-*   **Theorem 23 (Minimal Hilbert Space Dimension):** (Section 7.2.2) The MPU Hilbert space dimension must satisfy $d_0 \ge 2^{K_0} = 8$. This follows from the requirement that the state space encode the $K_0 = 3$ bits of SPAP-compatible internal logic.
+*   **Theorem 23 (Minimal Hilbert Space Dimension):** (Section 7.2.2) The SPAP-compatible internal logic first requires $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ faithful finite operational contexts. On the complex Hilbert branch, this becomes the rank bound $d_0\ge8$, with the minimal MPU branch selecting $d_0=8$.
 
 *   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat{H}\rangle$ gives the baseline operational energy associated with sustaining the predictive cycle, and the spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min}>0$.
 
 *   **Theorem 31 (Structural Landauer Floor and Physical Overhead):** (Section 7.4.4, Appendix J) The irreversible SPAP component of the 'Evolve' interaction step has exact structural entropy cost $\varepsilon_0=\ln2$, derived from the binary SPAP quotient plus Landauer mapping. Every physical implementation has total cost $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$, where $\varepsilon_{\mathrm{diss}}\ge0$ is contingent dissipative overhead. The discrete structural backbone uses $\varepsilon_0$.
 
-*   **Parameter Role Classes:** (Appendix P.14.1a) Paper-wide labels for what a quantity does inside a derivation or comparison: ExactThreshold, DiscreteMultiplicity, ThresholdData, BridgeNormalization, SchemeScale, CoarseGrainingScale, ReferenceConvention, PhenomenologicalKernel, and EmpiricalInput. These are not theorem statuses; they prevent exact thresholds, bridge normalizations, fit kernels, and observational inputs from being treated as the same kind of object.
+*   **Parameter Role Classes:** (Appendix P.14.1a) Paper-wide labels for what a quantity does inside a derivation or comparison: ExactThreshold, DiscreteMultiplicity, ThresholdData, BridgeNormalization, SchemeScale, CoarseGrainingScale, ReferenceConvention, PhenomenologicalKernel, SpectralMoment, and EmpiricalInput. These are not theorem statuses; they prevent exact thresholds, bridge normalizations, spectral moments, fit kernels, and observational inputs from being treated as the same kind of object.
 
 *   **T1/T2/T3 Uncertainty Protocol:** (Appendix P.14.1c; Appendix T.25.5.3) Paper-wide decomposition of numerical uncertainty. T1 records internal truncation and approximation inside a fixed branch; T2 records matching, threshold, branch, bridge, regularization, and convention dependence; T3 records empirical extraction, observable mapping, target-tuple retention, phenomenological-kernel fitting, and discrete identification ambiguity.
 

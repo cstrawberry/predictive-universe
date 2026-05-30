@@ -71,6 +71,165 @@ The following constants are derived in the main text and Appendix Z:
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
 
+**Theorem T.2.1a (Minimal Electroweak Mass-Bridge Representation).** On the locked one-family chiral branch
+$$
+Q=(3,2)_{1/6},
+\qquad
+u^c=(\bar3,1)_{-2/3},
+\qquad
+d^c=(\bar3,1)_{1/3},
+$$
+$$
+L=(1,2)_{-1/2},
+\qquad
+e^c=(1,1)_1,
+$$
+suppose charged fermion masses must arise from local gauge-invariant operators using the smallest scalar representation, with no vectorlike mirror family and no gauge-null sterile singlet required at this stage. Then the unique scalar representation, up to conjugation convention, is
+$$
+H=(1,2)_{1/2}.
+$$
+It permits the minimal charged-fermion Yukawa bridges
+$$
+QHu^c,
+\qquad
+QH^\dagger d^c,
+\qquad
+LH^\dagger e^c,
+$$
+and a nonzero vacuum
+$$
+\langle H\rangle
+=
+\frac1{\sqrt2}
+\begin{pmatrix}
+0\\
+v
+\end{pmatrix}
+$$
+breaks
+$$
+SU(2)_L\times U(1)_Y\to U(1)_{\mathrm{em}},
+$$
+with unbroken generator
+$$
+Q_{\mathrm{em}}=T_3+Y.
+$$
+
+*Proof.* A bare left-Weyl mass term $\psi_i\psi_j$ must be a gauge singlet. The chiral package above forbids direct charged masses because
+$$
+Q u^c\supset(1,2)_{-1/2},
+\qquad
+Q d^c\supset(1,2)_{1/2},
+\qquad
+L e^c=(1,2)_{1/2},
+$$
+so each charged mass bridge leaves a weak doublet. A scalar singlet cannot remove this residual weak charge. Since $3\otimes\bar3$ already contains a color singlet and $Le^c$ is colorless, any nontrivial color charge on the scalar either fails the lepton bridge or adds response-active color structure beyond the minimal mass bridge. Thus the minimal scalar is colorless. In $SU(2)$ representation theory, $2\otimes R$ contains a singlet only for $R=2$, so the smallest scalar capable of bridging a weak doublet to a weak singlet is itself a weak doublet.
+
+For the up-type bridge, gauge invariance of $QHu^c$ requires
+$$
+Y(Q)+Y(H)+Y(u^c)=0.
+$$
+Substituting the locked hypercharges gives
+$$
+\frac16+Y(H)-\frac23=0,
+$$
+hence
+$$
+Y(H)=\frac12.
+$$
+Thus the minimal up-type scalar is $H=(1,2)_{1/2}$.
+
+The conjugate field has
+$$
+H^\dagger=(1,2)_{-1/2}.
+$$
+For the down-type bridge,
+$$
+Y(Q)+Y(H^\dagger)+Y(d^c)
+=
+\frac16-\frac12+\frac13
+=
+0,
+$$
+so $QH^\dagger d^c$ is gauge invariant. For the charged-lepton bridge,
+$$
+Y(L)+Y(H^\dagger)+Y(e^c)
+=
+-\frac12-\frac12+1
+=
+0,
+$$
+so $LH^\dagger e^c$ is gauge invariant. Hence one scalar doublet supplies all three charged mass bridges.
+
+The Higgs vacuum can be gauge-rotated to
+$$
+\langle H\rangle
+=
+\frac1{\sqrt2}
+\begin{pmatrix}
+0\\
+v
+\end{pmatrix}.
+$$
+The lower component has $T_3=-1/2$ and $Y=1/2$, so
+$$
+(T_3+Y)\langle H\rangle=0.
+$$
+Therefore the unbroken generator is $Q_{\mathrm{em}}=T_3+Y$, and the broken generators are the other three directions of $SU(2)_L\times U(1)_Y$. Thus
+$$
+SU(2)_L\times U(1)_Y\to U(1)_{\mathrm{em}}.
+$$
+A scalar of higher weak representation or different hypercharge either fails at least one bridge or adds response-active scalar structure beyond the minimal mass bridge. ∎
+
+**Corollary T.2.1b (Tree-Level Electroweak Mass Relations).** On the same branch, the leading scalar kinetic term
+$$
+(D_\mu H)^\dagger(D^\mu H)
+$$
+with
+$$
+D_\mu H
+=
+\left(
+\partial_\mu
++\frac{i g_2}{2}\sigma^a W_\mu^a
++\frac{i g_Y}{2}B_\mu
+\right)H
+$$
+gives
+$$
+m_W=\frac12 g_2v,
+\qquad
+m_Z=\frac12v\sqrt{g_2^2+g_Y^2},
+$$
+and leaves the photon massless. The weak mixing angle satisfies
+$$
+\sin\theta_W=\frac{g_Y}{\sqrt{g_2^2+g_Y^2}},
+\qquad
+\cos\theta_W=\frac{g_2}{\sqrt{g_2^2+g_Y^2}},
+$$
+and
+$$
+e=g_2\sin\theta_W=g_Y\cos\theta_W.
+$$
+
+*Proof.* Inserting the vacuum into $(D_\mu H)^\dagger(D^\mu H)$ gives the charged mass term for
+$$
+W_\mu^\pm=\frac1{\sqrt2}(W_\mu^1\mp iW_\mu^2)
+$$
+with $m_W=g_2v/2$. The neutral mass term is proportional to
+$$
+\frac{v^2}{8}(g_2W_\mu^3-g_YB_\mu)^2.
+$$
+Thus the massive neutral field is
+$$
+Z_\mu=\cos\theta_W W_\mu^3-\sin\theta_W B_\mu,
+$$
+with $m_Z=v\sqrt{g_2^2+g_Y^2}/2$, and the orthogonal field
+$$
+A_\mu=\sin\theta_W W_\mu^3+\cos\theta_W B_\mu
+$$
+is massless. The displayed angle and electric-charge identities are the unique orthogonal diagonalization of this $2\times2$ neutral mass matrix. ∎
+
 ### T.2.2 The Golay Code Structure
 
 **Definition T.1a** (Extended Binary Golay Code). The extended binary Golay code $\mathcal{G}_{24}$ is the binary linear code with parameters $[24,12,8]$, unique up to coordinate permutation [MacWilliams & Sloane 1977]:
@@ -3831,7 +3990,8 @@ All quantities trace to established theorems:
 |Quantity |Value |Source |Derivation |
 |:-----------------------------------|:--------------------|:----------------|:---------------------------------------------------------|
 |$K_0$ |$3$ |Theorem 15 |Horizon Constant (SPAP encodability) |
-|$d_0$ |$8$ |Theorem 23 |$2^{K_0}$ |
+|$N_{\mathrm{vis}}^{\min}$ |$8$ |Theorem 15 |$2^{K_0}$ |
+|$d_0$ |$8$ |Theorem 23; Theorem Z.2 |$d_0=N_{\mathrm{vis}}^{\min}$ on the minimal complex Hilbert branch |
 |$(a, b)$ |$(2, 6)$ |Theorem Z.1 |Landauer cost $\varepsilon_0=\ln2$ |
 |$(\kappa_1^*,\kappa_2^*,\kappa_3^*)$|$(0.695,0.729,1.140)$|Corollary T.34.2 |PCE optimum with normalization constraint |
 |$g_U^2$ |$\pi/6$ |Theorem T.39a |Holonomy per mode $2\pi/M$ |
@@ -4850,7 +5010,7 @@ $$
 $$
 This statement packages distinct structural gates whose proof roles are recorded separately in Appendix R; it is not a single-source compression theorem. Quantitative hierarchy derivations later in this appendix additionally use the threshold data, prefactors, and matching prescriptions introduced in those sections.*
 
-*Proof.* Theorem 15 fixes $K_0=3$. Theorem 23 gives the lower bound $d_0\ge 2^{K_0}=8$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch. Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and Definition 15a supplies the attractor saturation $\varepsilon_0=\ln2$. Theorem Z.1 fixes $a=2$ on that branch, and the complement has
+*Proof.* Theorem 15 fixes $K_0=3$ and $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$. Theorem 23 gives the Hilbert-carrier lower bound $d_0\ge N_{\mathrm{vis}}^{\min}$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch. Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and Definition 15a supplies the attractor saturation $\varepsilon_0=\ln2$. Theorem Z.1 fixes $a=2$ on that branch, and the complement has
 $$
 b=d_0-a=6.
 $$
@@ -5335,7 +5495,7 @@ The derivation chain from Sections T.1–T.21 establishes the complete set of fo
 
 **Recall from Theorem 15 (Horizon Constant).** The minimal complexity for self-referential prediction is $K_0 = 3$ bits.
 
-**Recall from Theorem 23 (MPU Dimension).** Theorem 23 gives $d_0 \ge 2^{K_0} = 8$; on the minimal PCE branch used throughout the Appendix Z backbone one has $d_0 = 8$ (Theorem Z.2).
+**Recall from Theorem 23 (MPU Dimension).** Theorem 15 gives $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, and Theorem 23 gives $d_0 \ge N_{\mathrm{vis}}^{\min}$ on the Hilbert-carrier branch; on the minimal PCE branch used throughout the Appendix Z backbone one has $d_0 = 8$ (Theorem Z.2).
 
 **Recall from Theorem Z.1 (Active Dimension).** On the attractor-saturating branch $\varepsilon_0=\ln2$, Theorem Z.1 fixes the active kernel dimension to $a = 2$.
 
@@ -5345,7 +5505,7 @@ The derivation chain from Sections T.1–T.21 establishes the complete set of fo
 
 The complete derivation chain:
 
-$$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 2^{K_0} = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
+$$K_0 = 3 \xrightarrow{\text{Thm 15}} N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \xrightarrow{\text{Thm 23/Z.2}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
 
 **Summary (Bures Variance).** *At the PU fixed point $\mathfrak{A}_{PU}$, the Predictive Ward identity fixes the quadratic kernel on the interface orbit Gr(2,8) to equal the Bures metric. Capacity saturation normalizes the mean-squared Bures radius to unity:*
 
@@ -5452,7 +5612,7 @@ $$\boxed{T_\ell = (d^2_{32}, d^2_{31}, d^2_{21})_\ell = (a, b, 2a) = (2, 6, 4)}$
 
 |Parameter |Value |Framework Constant|
 |:---------------|:------|:-----------------|
-|Block length |$n = 8$|$d_0 = 2^{K_0}$ |
+|Block length |$n = 8$|$N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ and $d_0=8$ on the minimal Hilbert-carrier branch |
 |Message bits |$k = 4$|$2a$ |
 |Minimum distance|$d = 4$|$2a$ |
 
@@ -6597,7 +6757,8 @@ $$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b)
 |Parameter |Value |Derivation |Reference |
 |:-------------------|:-----|:------------------------------------------|:----------------|
 |$K_0$ |3 |Self-reference minimum |Theorem 15 |
-|$d_0$ |8 |$2^{K_0}$ |Theorem 23 |
+|$N_{\mathrm{vis}}^{\min}$ |8 |$2^{K_0}$ |Theorem 15 |
+|$d_0$ |8 |$d_0=N_{\mathrm{vis}}^{\min}$ on the minimal Hilbert-carrier branch |Theorem 23; Theorem Z.2 |
 |$a$ |2 |Landauer partition (see Theorem Z.1) |Theorem Z.1 |
 |$b$ |6 |$d_0 - a$ |Definition |
 |$M$ |24 |$2ab$ |Theorem Z.5 |

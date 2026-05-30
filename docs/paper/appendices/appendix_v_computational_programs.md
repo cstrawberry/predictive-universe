@@ -8,7 +8,7 @@ This appendix provides computational programs for two constants within the Predi
 
 This appendix is intended to be mechanically reproducible from the displayed equations. An independent check should verify the following items without access to any unpublished derivations:
 
-1. **Input ledger.** Fixed PU inputs: $K_0=3$, $d_0=2^{K_0}=8$, $\varepsilon_0=\ln2$, $a=2$, $b=d_0-a=6$, $M=2a(d_0-a)=24$, and (for the semiclassical vacuum sector) $S_{\mathrm{inst}}=(C_{\max}/\varepsilon_0)\kappa=2\kappa$.
+1. **Input ledger.** Fixed PU inputs: $K_0=3$, $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, $d_0=8$ on the minimal complex Hilbert carrier, $\varepsilon_0=\ln2$, $a=2$, $b=d_0-a=6$, $M=2a(d_0-a)=24$, and (for the semiclassical vacuum sector) $S_{\mathrm{inst}}=(C_{\max}/\varepsilon_0)\kappa=2\kappa$.
 2. **$\Lambda$ forward evaluation + inversion check.** Using Equation (V.2) with the derived inputs $(\kappa,A_{\text{eff}})$ to compute the PU prediction for $\Lambda L_P^2$, and using Equations (V.4)–(V.5) together with Equation (V.3) to infer either $A_{\text{eff}}^{(\text{obs})}$ (holding $\kappa$ fixed) or an effective $\kappa$ (holding $A_{\text{eff}}$ fixed) from observational inputs $(H_0,\Omega_\Lambda,c,L_P)$.
 3. **$\alpha_{\mathrm{em}}$ forward program.** Using Equation (V.8) to compute $u^*$ from $(M,\lambda,d_0)$ and Equation (V.10) to compute $\alpha^{-1}$ from $(u^*,K_0)$ including the explicit interface corrections.
 4. **Uncertainty accounting.** Reported $1\sigma$ uncertainties separate (i) observational inputs, (ii) controlled truncation terms, and (iii) PU-to-physics mapping/systematic terms; when combined, they are combined in quadrature unless otherwise stated.
@@ -243,7 +243,7 @@ with the ratios used in the residual-shell prediction extracted from these count
 $$
 K_0=3\to d_0=8\to (a,b)=(2,6)\to k=12\to M=24\to D=4
 $$
-using only the cited PU branch gates: the horizon-error selection of $K_0$, the minimal carrier $d_0=2^{K_0}$, the active rank $a=2$, the Peirce decomposition of the rank-$2$ projector in $\mathbb C^8$, the predictive-recovery MacWilliams gate for $k=12$, and the kissing/mode-channel condition for $D=4$.
+using only the cited PU branch gates: the horizon-error selection of $K_0$, the operational-context floor $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, the minimal Hilbert carrier $d_0=8$, the active rank $a=2$, the Peirce decomposition of the rank-$2$ projector in $\mathbb C^8$, the predictive-recovery MacWilliams gate for $k=12$, and the kissing/mode-channel condition for $D=4$.
 
 **Pass condition.** Each arrow must be checked as a separate implication with its branch hypothesis stated. In particular, the Peirce step must verify
 $$
@@ -390,3 +390,308 @@ $$
 0.00009287822863,
 $$
 about $0.678$ ppm. By Corollary Z.27.11e.1, this offset is about $4422.8$ recorded measurement standard uncertainties and about $1.644$ times the canonical comparison-budget diagnostic of Remark Z.26d, so no same-branch theorem fixing $R_\alpha=0$ can land at the recorded comparison value. The residual-gated row remains certificate-pending until $R_\alpha$ is fixed by the forward-locked gate of Definition Z.27.11a, Definition Z.27.11g, or Definition Z.27.11j. This audit is closed by exact arithmetic against the recorded ledger value.
+
+### V.3.11 Unique Spectral Calibration Principle
+
+This subsection records the final calibration rule for continuous coefficients. It does not alter the discrete backbone. It applies only after the structural branch, response quotient, operator basis, and finite spectral symbols have been fixed before comparison.
+
+**Definition V.3.11a (Finite Spectral Calibration Datum).** A final spectral calibration datum for a sealed PU branch is a tuple
+$$
+\mathfrak S_*
+=
+(\Omega_*,u_*,\{m_a,c_a^*\}_{a\in A},\{\sigma_B\}_{B\in\mathcal I})
+$$
+with the following entries.
+
+1. $\Omega_*$ is a finite set of primitive response-active spectral atoms obtained from the accepted finite calibration operator on the branch after response-null degeneracies are quotiented.
+
+2. $u_*=(u_\alpha)_{\alpha\in\Omega_*}$ is the automorphism-invariant reference probability on $\Omega_*$:
+$$
+u_\alpha>0,
+\qquad
+\sum_{\alpha\in\Omega_*}u_\alpha=1,
+$$
+and
+$$
+u_\alpha=u_\beta
+$$
+whenever $\alpha$ and $\beta$ lie in the same response-preserving automorphism orbit.
+
+3. Each $m_a:\Omega_*\to\mathbb R$ is a fixed spectral moment function encoding an already accepted structural constraint, Ward identity, anomaly constraint, index constraint, orientation constraint, or vacuum-response condition. Its required value is $c_a^*$.
+
+4. Each $\sigma_B:\Omega_*\to\mathbb R$ is the fixed finite spectral symbol of a response-active invariant operator $I_B$ in the effective action. Matrix-valued quantities are represented entrywise by symbols $\sigma_{B,ij}$.
+
+5. No empirical comparison value, validation target, post-comparison residual, or fitted phenomenological kernel may enter $\Omega_*$, $u_*$, $m_a$, $c_a^*$, or $\sigma_B$ unless it is explicitly registered as an EmpiricalInput; such an entry prevents theorem-level final calibration for that sector.
+
+The admissible spectral calibration polytope is
+$$
+\mathcal C_*
+=
+\left\{
+\omega\in\Delta(\Omega_*):
+\sum_{\alpha\in\Omega_*}\omega_\alpha m_a(\alpha)=c_a^*
+\text{ for every }a\in A
+\right\},
+$$
+where
+$$
+\Delta(\Omega_*)=
+\left\{
+\omega_\alpha\ge0,\quad
+\sum_{\alpha\in\Omega_*}\omega_\alpha=1
+\right\}.
+$$
+
+A branch is final-calibration admissible exactly when $\mathcal C_*$ is nonempty and contains at least one full-support point on the response-active atoms.
+
+**Principle V.3.11b (Unique Spectral Calibration Principle).** On a final-calibration admissible branch, the calibrated spectral state is
+$$
+\omega_*
+=
+\operatorname*{argmin}_{\omega\in\mathcal C_*}
+D_{\mathrm{KL}}(\omega\Vert u_*),
+$$
+where
+$$
+D_{\mathrm{KL}}(\omega\Vert u_*)
+=
+\sum_{\alpha\in\Omega_*}
+\omega_\alpha
+\log\frac{\omega_\alpha}{u_\alpha}.
+$$
+Equivalently, $\omega_*$ is the maximum relative spectral-entropy state compatible with all accepted finite-response constraints:
+$$
+\omega_*
+=
+\operatorname*{argmax}_{\omega\in\mathcal C_*}
+\left[
+-\sum_{\alpha\in\Omega_*}
+\omega_\alpha
+\log\frac{\omega_\alpha}{u_\alpha}
+\right].
+$$
+
+**Theorem V.3.11c (Existence and Uniqueness of the Calibrated Spectral State).** If $\mathfrak S_*$ is final-calibration admissible, then $\omega_*$ exists and is unique.
+
+*Proof.* The simplex $\Delta(\Omega_*)$ is compact and convex because $\Omega_*$ is finite. The equations
+$$
+\sum_\alpha\omega_\alpha m_a(\alpha)=c_a^*
+$$
+are affine, so $\mathcal C_*$ is a closed convex subset of $\Delta(\Omega_*)$. By admissibility, $\mathcal C_*$ is nonempty. Therefore the continuous function $D_{\mathrm{KL}}(\omega\Vert u_*)$ attains a minimum on $\mathcal C_*$.
+
+For $u_\alpha>0$, the function
+$$
+\omega\mapsto
+\sum_\alpha
+\omega_\alpha\log\frac{\omega_\alpha}{u_\alpha}
+$$
+is strictly convex on the probability simplex. If $\omega\ne\omega'$ and $0<t<1$, then strict convexity of $x\log x$ gives
+$$
+D_{\mathrm{KL}}(t\omega+(1-t)\omega'\Vert u_*)
+<
+tD_{\mathrm{KL}}(\omega\Vert u_*)
++
+(1-t)D_{\mathrm{KL}}(\omega'\Vert u_*).
+$$
+A strictly convex function has at most one minimizer on a convex set. Thus the minimizer exists and is unique. ∎
+
+**Corollary V.3.11d (Exponential Form on Independent Moment Branches).** If the active moment constraints are independent after quotienting redundant constraints, then the calibrated state has the form
+$$
+\omega_\alpha^*
+=
+\frac{
+u_\alpha
+\exp\left(
+-\sum_{a\in A}\theta_a m_a(\alpha)
+\right)
+}{
+Z(\theta)
+},
+$$
+where
+$$
+Z(\theta)
+=
+\sum_{\alpha\in\Omega_*}
+u_\alpha
+\exp\left(
+-\sum_{a\in A}\theta_a m_a(\alpha)
+\right),
+$$
+and the multipliers are fixed by
+$$
+-\frac{\partial\log Z}{\partial\theta_a}
+=
+c_a^*.
+$$
+
+*Proof.* Minimize $D_{\mathrm{KL}}(\omega\Vert u_*)$ subject to the affine moment constraints and normalization. The Lagrangian is
+$$
+\mathcal L(\omega,\lambda,\theta)
+=
+\sum_\alpha\omega_\alpha\log\frac{\omega_\alpha}{u_\alpha}
++
+\lambda\left(\sum_\alpha\omega_\alpha-1\right)
++
+\sum_a\theta_a
+\left(
+\sum_\alpha\omega_\alpha m_a(\alpha)-c_a^*
+\right).
+$$
+Stationarity in every full-support coordinate gives
+$$
+\log\frac{\omega_\alpha}{u_\alpha}+1+\lambda+\sum_a\theta_a m_a(\alpha)=0.
+$$
+Solving and normalizing gives the displayed exponential form. Differentiating $\log Z$ gives the moment equations. The Hessian
+$$
+\frac{\partial^2\log Z}{\partial\theta_a\partial\theta_b}
+=
+\operatorname{Cov}_{\omega_*}(m_a,m_b)
+$$
+is positive definite on the quotient by redundant constraints, so the independent multipliers are unique. ∎
+
+**Definition V.3.11e (Spectral Coefficient Map).** For every response-active invariant operator $I_B$ in the accepted leading or higher-order effective action, define its calibrated coefficient by
+$$
+c_B
+=
+\langle\sigma_B\rangle_{\omega_*}
+=
+\sum_{\alpha\in\Omega_*}
+\omega_\alpha^*\sigma_B(\alpha).
+$$
+For matrix-valued coefficients,
+$$
+(C_B)_{ij}
+=
+\sum_{\alpha\in\Omega_*}
+\omega_\alpha^*\sigma_{B,ij}(\alpha).
+$$
+
+The calibrated action is
+$$
+S_{\mathrm{PU}}^{\mathrm{cal}}
+=
+\sum_{B\in\mathcal I}
+\langle\sigma_B\rangle_{\omega_*}I_B.
+$$
+
+In particular,
+$$
+\frac1{g_{3,*}^2}
+=
+\langle\sigma_3\rangle_{\omega_*},
+\qquad
+\frac1{g_{2,*}^2}
+=
+\langle\sigma_2\rangle_{\omega_*},
+\qquad
+\frac1{g_{Y,*}^2}
+=
+\langle\sigma_Y\rangle_{\omega_*},
+$$
+and
+$$
+\frac1{e_*^2}
+=
+\frac1{g_{2,*}^2}
++
+\frac1{g_{Y,*}^2}.
+$$
+Thus
+$$
+\alpha_*^{-1}
+=
+4\pi
+\left(
+\frac1{g_{2,*}^2}
++
+\frac1{g_{Y,*}^2}
+\right)
+$$
+at the calibration scale. Running to another scale is then determined by the accepted RG equations and the boundary values $g_{i,*}$.
+
+The Higgs-sector parameters are
+$$
+\mu_*^2=\langle\sigma_{\mu^2}\rangle_{\omega_*},
+\qquad
+\lambda_*=\langle\sigma_\lambda\rangle_{\omega_*},
+\qquad
+v_*^2=\frac{\mu_*^2}{\lambda_*}.
+$$
+The charged Yukawa matrices are
+$$
+(Y_{u,*})_{ij}
+=
+\langle\sigma_{Y_u,ij}\rangle_{\omega_*},
+\qquad
+(Y_{d,*})_{ij}
+=
+\langle\sigma_{Y_d,ij}\rangle_{\omega_*},
+\qquad
+(Y_{e,*})_{ij}
+=
+\langle\sigma_{Y_e,ij}\rangle_{\omega_*}.
+$$
+Then
+$$
+M_u=\frac{v_*}{\sqrt2}Y_{u,*},
+\qquad
+M_d=\frac{v_*}{\sqrt2}Y_{d,*},
+\qquad
+M_e=\frac{v_*}{\sqrt2}Y_{e,*}.
+$$
+The gravitational coefficients are fixed by
+$$
+\frac{c^3}{16\pi G_*}
+=
+\langle\sigma_R\rangle_{\omega_*},
+$$
+and
+$$
+\frac{c^3\Lambda_*}{8\pi G_*}
+=
+\langle\sigma_{\mathrm{vac}}\rangle_{\omega_*}.
+$$
+
+**Theorem V.3.11f (No Free Continuous Moduli after Final Spectral Calibration).** On a final-calibrated branch carrying $\mathfrak S_*$, every response-active coefficient multiplying an invariant operator in the accepted effective action is unique.
+
+*Proof.* Let $I_B$ be a response-active invariant operator. By Definition V.3.11a, its finite spectral symbol $\sigma_B$ is fixed before comparison. By Theorem V.3.11c, $\omega_*$ is unique. Therefore
+$$
+c_B=\sum_{\alpha\in\Omega_*}\omega_\alpha^*\sigma_B(\alpha)
+$$
+is unique.
+
+If $c_B$ could be changed while preserving the same final-calibrated branch, then at least one of the following must occur:
+
+1. $\omega_*$ changes, contradicting Theorem V.3.11c;
+2. $\sigma_B$ changes, meaning the finite spectral symbol of the operator has changed and hence the calibration datum is not the same branch;
+3. $I_B$ is response-null, in which case it is removed by PPI and is not a physical coefficient.
+
+All alternatives contradict the hypothesis that $I_B$ is a response-active invariant operator on the same final-calibrated branch. Hence no continuous coefficient remains free. ∎
+
+**Corollary V.3.11g (Status Boundary for Numerical Constants).** Before $\mathfrak S_*$ is supplied and accepted, quantities such as
+$$
+g_3,\quad g_2,\quad g_Y,\quad \alpha,\quad G,\quad \Lambda,\quad \mu^2,\quad \lambda,\quad Y_u,\quad Y_d,\quad Y_e,\quad \kappa_\nu,\quad V_{\mathrm{CKM}},\quad U_{\mathrm{PMNS}},\quad \bar\theta
+$$
+retain the local status of their sector certificates, branches, thresholds, or validation ledgers. After $\mathfrak S_*$ is supplied and accepted, these quantities become finite spectral moments of $\omega_*$, with no independent sector-by-sector fitting.
+
+*Proof.* Each listed quantity is either a coefficient of an invariant operator, a function of such coefficients, or a diagonalization invariant of a coefficient matrix. Definition V.3.11e fixes the coefficients as moments of $\omega_*$. Algebraic functions of fixed coefficients are fixed. Before $\mathfrak S_*$ is accepted, the moment map is not available, so the previous local status labels remain in force. ∎
+
+**Final calibrated-branch formula.** On a final-calibrated branch,
+$$
+\boxed{
+\text{Physics}
+=
+\operatorname{Inv}(X_*)
++
+\operatorname{Moments}_{\omega_*}(\operatorname{Spec}X_*),
+}
+$$
+where
+$$
+\boxed{
+\omega_*=
+\operatorname*{argmin}_{\omega\in\mathcal C_*}
+D_{\mathrm{KL}}(\omega\Vert u_*).
+}
+$$

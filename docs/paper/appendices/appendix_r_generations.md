@@ -549,7 +549,7 @@ $$
 K_0=\log_2(N_g+D+1).
 $$
 
-*Proof.* Theorem 15 gives $K_0=3$ and hence $2^{K_0}=8$. On the minimal Appendix Z branch, Theorem Z.2 gives $d_0=8$. Corollary R.3.5b gives $d_0-1=N_g+D$. Therefore $d_0=N_g+D+1=8=2^{K_0}$. Taking $\log_2$ of both sides gives the equivalent formula. ∎
+*Proof.* Theorem 15 gives $K_0=3$ and hence $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$. On the minimal Appendix Z Hilbert-carrier branch, Theorem Z.2 gives $d_0=N_{\mathrm{vis}}^{\min}=8$. Corollary R.3.5b gives $d_0-1=N_g+D$. Therefore $d_0=N_g+D+1=8=N_{\mathrm{vis}}^{\min}=2^{K_0}$. Taking $\log_2$ of both sides gives the equivalent formula. ∎
 
 **Corollary R.3.5d (Three Independently Derived Threes).** On the minimal branch,
 $$
@@ -570,7 +570,7 @@ is the Golay correction radius.
 | $3$ | $K_0=N_g=t_{\mathrm{Golay}}$ | Theorem 15; Theorem R.3.4; Proposition R.3.5.1a; Corollary R.3.5a |
 | $4$ | $D=4$ | Theorem Z.11 |
 | $7$ | $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D$ | Theorem R.1.1; Corollary R.3.5b |
-| $8$ | $d_0=8=2^{K_0}$ | Theorem 23; Theorem Z.2; Theorem 15 |
+| $8$ | $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ and $d_0=8$ on the minimal branch | Theorem 15; Theorem 23; Theorem Z.2 |
 | $12$ | $12=M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)$ | Theorem Z.5; Theorem Z.2.5b; Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13; Theorem U.7a; Theorem G.8.4f |
 | $24$ | $24=M=K(4)$ | Theorem Z.5; Theorem Z.11 |
 

@@ -226,7 +226,111 @@ where $S_{\mathrm{grav}}^{(\ge 4)}$ contains curvature invariants with four or m
 
 *Proof.* Decomposition (X.9b) is obtained by collecting in $S_{\mathrm{eff}}$ the terms that do and do not depend on the non-geometric fields $\Psi$. The separation is unique because the dependence on $\Psi$ is algebraic in the jet variables. For the pure-metric part, locality and general covariance imply that the leading scalar densities with at most two derivatives are $\sqrt{|g|}$ and $\sqrt{|g|}R$. Therefore the leading two-derivative sector has the form (X.9c), with the remaining higher-curvature terms absorbed into $S_{\mathrm{grav}}^{(\ge 4)}$. ∎
 
+**Corollary X.5a.2 (Leading SM+GR Operator Basis on the Locked Gauge-Matter Branch).** Add to Theorem X.5a the locked Lorentzian branch, the gauge algebra
+$$
+\mathfrak g_*=
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
+$$
+the one-family anomaly-free chiral package of Theorem G.8.5a, the three-family CP-active branch of Appendix R when flavor is retained, and the scalar mass bridge $H=(1,2)_{1/2}$ of Theorem T.2.1a. Then the leading local invariant action has the operator basis
+$$
+S_{\mathrm{eff}}^{(0)}
+=
+S_{\mathrm{EH}}
++
+S_{\mathrm{YM}}
++
+S_{\mathrm{Weyl}}
++
+S_H
++
+S_Y
++
+S_\nu
++
+S_{\mathrm{top}},
+$$
+where
+$$
+S_{\mathrm{EH}}
+=
+\frac{c^3}{16\pi G}
+\int
+(R-2\Lambda)\sqrt{-g}\,d^4x,
+$$
+$$
+S_{\mathrm{YM}}
+=
+-\int\sqrt{-g}\,d^4x
+\left[
+\frac1{4g_3^2}G_{\mu\nu}^AG^{A\mu\nu}
++
+\frac1{4g_2^2}W_{\mu\nu}^aW^{a\mu\nu}
++
+\frac1{4g_Y^2}B_{\mu\nu}B^{\mu\nu}
+\right],
+$$
+$$
+S_{\mathrm{Weyl}}
+=
+\sum_{\psi}
+\int
+i\psi^\dagger\bar\sigma^\mu D_\mu\psi
+\sqrt{-g}\,d^4x,
+$$
+$$
+S_H
+=
+\int
+\left[
+(D_\mu H)^\dagger(D^\mu H)
++
+\mu^2H^\dagger H
+-
+\lambda(H^\dagger H)^2
+\right]\sqrt{-g}\,d^4x,
+$$
+and
+$$
+S_Y
+=
+-\int
+\left[
+QY_uHu^c
++
+QY_dH^\dagger d^c
++
+LY_eH^\dagger e^c
++
+\mathrm{h.c.}
+\right]\sqrt{-g}\,d^4x.
+$$
+The neutrino effective operator, when the gauge-null sterile sector is not retained, is
+$$
+S_\nu
+=
+-\int
+\left[
+\frac12
+\frac{\kappa_\nu^{ij}}{\Lambda_\nu}
+(L_iH)(L_jH)
++
+\mathrm{h.c.}
+\right]\sqrt{-g}\,d^4x.
+$$
+The topological sector has the form
+$$
+S_{\mathrm{top}}
+=
+\frac{\theta_3}{32\pi^2}\int\operatorname{Tr}(G\wedge G)
++
+\frac{\theta_2}{32\pi^2}\int\operatorname{Tr}(W\wedge W)
++
+\frac{\theta_Y}{32\pi^2}\int F_Y\wedge F_Y
++
+\cdots .
+$$
 
+*Proof.* Theorem X.5a gives locality and covariance of the continuum action. Corollary X.5a.1 gives the Einstein-Hilbert plus cosmological leading metric sector. Gauge-frame redundancy forces the connection $A_\mu$ and curvature $F_{\mu\nu}=[D_\mu,D_\nu]$; the lowest local Lorentz scalar quadratic in curvature is $\operatorname{Tr}(F_{\mu\nu}F^{\mu\nu})$, giving the Yang-Mills terms for the three simple/abelian factors of $\mathfrak g_*$. The locked chiral matter fields are left-Weyl spinors, so local Lorentz invariance and gauge covariance force the first-order kinetic term $i\psi^\dagger\bar\sigma^\mu D_\mu\psi$. Theorem T.2.1a supplies the unique minimal scalar representation $H=(1,2)_{1/2}$, whose lowest local invariant kinetic and potential terms are $(D_\mu H)^\dagger(D^\mu H)$, $H^\dagger H$, and $(H^\dagger H)^2$. The same theorem supplies the three minimal charged Yukawa bridges. If no sterile singlet is retained, the lowest neutrino mass operator is the dimension-five Weinberg operator $(LH)(LH)/\Lambda_\nu$. The displayed topological terms are the allowed closed four-form densities for the retained gauge factors, with $F_Y=dB$ the abelian field-strength two-form; their coefficients are not fixed by symmetry alone and are routed to the spectral calibration or orientation certificate ledgers. Higher-derivative or higher-field operators are PCE-higher-cost corrections to this leading basis. ∎
 
 **Theorem X.5b (Landauer-CTP Noise Floor on a Local Equilibrium Update Channel).** Let $q(t)$ be a coarse update coordinate on a regular CTP branch, and suppose the quadratic Keldysh action is in a local equilibrium Onsager form with dissipative matrix
 $$

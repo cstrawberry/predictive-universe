@@ -27,7 +27,8 @@ The following constants are derived elsewhere in the framework:
 | $\varepsilon_0$ | $\ln 2$ | Structural SPAP/Landauer quotient | Theorem 31 |
 | $\varepsilon_{\mathrm{phys}}$ | $\ge\varepsilon_0$ | Physical implementation cost including overhead | Theorem 31 |
 | $K_0$ | 3 | Minimal self-referential bits | Theorem 15 |
-| $d_0$ | $2^{K_0} = 8$ | MPU Hilbert space dimension | Theorem 23 |
+| $N_{\mathrm{vis}}^{\min}$ | $2^{K_0} = 8$ | Minimal faithful visited-context count | Theorem 15 |
+| $d_0$ | $8$ | Minimal MPU Hilbert-carrier dimension after saturation | Theorem 23; Theorem Z.2 |
 | $a$ | minimal integer with $\ln a\ge\varepsilon_0$, hence $2$ | Active kernel dimension | Theorem Z.1 |
 | $b$ | $d_0 - a = 6$ | Inactive subspace dimension | Definition |
 | $M$ | $2ab = 24$ | Interface modes | Theorem Z.5 |

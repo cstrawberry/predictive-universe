@@ -119,7 +119,13 @@ More precisely:
    \phi_{t+1}=\mathrm{NOT}\big(p_{stored}\big)
    $$
 
-   that satisfies (O1)–(O3) requires at least $8$ distinct internal configurations. Hence the single-cycle capacity must satisfy $\log_2 d_0 \ge \log_2 8=3$ bits (equivalently $d_0\ge 8$).
+   that satisfies (O1)–(O3) requires at least $8$ distinct visited operational configurations. Equivalently,
+   $$
+   N_{\mathrm{vis}}^{\min}=8,
+   \qquad
+   K_0=\log_2 N_{\mathrm{vis}}^{\min}=3.
+   $$
+   On the Hilbert-carrier branch this operational count is represented by mutually perfectly distinguishable Hilbert alternatives, giving $\log_2 d_0\ge3$ and hence $d_0\ge8$.
 
 2. (**SPAP Encodability—Sufficiency**). There exists a three‑bit (eight‑state) architecture with state $(\phi, p_{stored}, c_{phase})$ and a two‑phase injective transition that preserves $(\phi,p_{stored})$ across the Commit Snapshot and implements the reflex update $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ without ambiguity.
 
@@ -149,9 +155,26 @@ $$
 ∎
 
 **Remark 5.2.2a (Robustness of $K_0 \ge 3$ under reformalization).**  
-The lower bound in (1) depends only on the need for an injective realization of the SPAP update across a phase boundary: at the Commit Snapshot the machine must distinguish the triple $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$. Any alternative encoding (e.g., relabeling states, using different internal variables, or changing the order of micro-operations) that still satisfies (O1)-(O3) must implement an injective map from these eight logical contexts to physical configurations. Consequently, any such realization requires at least $8$ distinguishable internal configurations, i.e. $\log_2 d_0\ge 3$ and thus $K_0 \ge 3$.
+The lower bound in (1) depends only on the need for an injective realization of the SPAP update across a phase boundary: at the Commit Snapshot the machine must distinguish the triple $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$. Any alternative encoding (e.g., relabeling states, using different internal variables, or changing the order of micro-operations) that still satisfies (O1)-(O3) must implement an injective map from these eight logical contexts to visited operational configurations. Consequently, any such realization requires at least $8$ distinguishable visited contexts, i.e.
+$$
+N_{\mathrm{vis}}^{\min}=8,
+\qquad
+K_0\ge\log_2 N_{\mathrm{vis}}^{\min}=3.
+$$
+On the Hilbert-carrier branch this context count translates to $\log_2 d_0\ge3$.
 
-Thus the required single-cycle distinguishability is at least $3$ bits: $\log_2 d_0\ge 3$ (equivalently $d_0\ge 8$).
+Thus the required single-cycle distinguishability is at least $3$ bits. Equivalently, the minimal faithful visited-context count is
+$$
+N_{\mathrm{vis}}^{\min}=2^3=8,
+\qquad
+K_0=\log_2 N_{\mathrm{vis}}^{\min}=3.
+$$
+On the Hilbert-carrier branch, Convention 1 then translates this operational context count into the rank bound
+$$
+\log_2 d_0\ge3,
+\qquad
+d_0\ge8.
+$$
 
 **Corollary 5.2.2b (Finite-State SPAP Counterexample Criterion).** Restated as a finite-audit falsification criterion, the surjectivity step of Theorem 15(1) gives: no faithful SPAP realization satisfying (O1)–(O3) can be carried by fewer than eight visited states. If a candidate realization has a visited state set $\mathcal S_{\mathrm{vis}}$ with
 $$
@@ -188,7 +211,13 @@ $$
 $$
 almost surely (ergodic theorem). This rule is equivalent to "flip on error": if $\hat X_{t+1}=X_t$ is wrong, then $X_{t+1}\ne X_t$ and the next prediction $\hat X_{t+2}=X_{t+1}$ is the flipped value. Implementation within the same three-bit register size is immediate: store the last observed outcome in a single bit (identified with $\phi$), copy it into the prediction register as needed during the predict/store phase, and after observing $X_{t+1}$ overwrite $\phi\leftarrow X_{t+1}$ to advance the stored hypothesis. ∎
 
-**Consequence.** The minimal single-cycle state-space capacity that (i) supports SPAP encodability and (ii) admits a predictive mode with super‑chance performance equals three bits. This provides a model‑independent lower bound on MPU internal distinguishability. This result, combined with Convention 1 ($C_{cap}=\log_2 d_0$), provides the direct link from the logical requirement of $8$ distinguishable states to the physical requirement $d_0\ge 8$; the PCE minimality criterion selects the saturating MPU choice $d_0=8$.
+**Consequence.** The minimal single-cycle operational context capacity that (i) supports SPAP encodability and (ii) admits a predictive mode with super‑chance performance equals three bits:
+$$
+K_0=3,
+\qquad
+N_{\mathrm{vis}}^{\min}=8.
+$$
+This provides a model-independent lower bound on MPU internal distinguishability. Theorem 15 itself proves the finite operational-context result $N_{\mathrm{vis}}^{\min}=8$. After the Hilbert-carrier gate is imposed, Convention 1 ($C_{cap}=\log_2 d_0$) translates this into the physical rank requirement $d_0\ge8$; the PCE minimality criterion selects the saturating MPU choice $d_0=8$.
 
 **5.2.3 Corollary 3 (Relation Between Thresholds $C_{op}\ge K_0$)**
 

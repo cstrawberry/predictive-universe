@@ -18,7 +18,7 @@ b) The inherent self-referential logical structure, corresponding to the Horizon
 
 Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
 
-1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state $|\psi(t)\rangle$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4; necessity $d_0 \ge 8$ from Theorem 23, with the minimal MPU case $C_{op}=K_0$ giving $d_0=8$) that encodes predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
+1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state $|\psi(t)\rangle$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4). Theorem 15 first fixes the finite operational-context floor $N_{\mathrm{vis}}^{\min}=8$ and $K_0=3$; on the Hilbert-carrier branch this becomes the rank bound $d_0\ge8$, and the minimal MPU case $C_{op}=K_0$ selects the saturating carrier $d_0=8$. The perspective index $s$ belongs to the Perspective Space $\Sigma$ (Definition 25) and represents the interaction context.
  2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by interaction, instantiating Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic and its Born-rule descent (Theorem 28a).
  3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
 
@@ -164,7 +164,7 @@ Under these conditions, any configuration with an active dimension $d > 8$ is de
 
 *Proof.* For any dimension $d > 8$, the change in the potential from adding the $d$-th dimension is $\Delta V(d) = \Delta V_{cost}(d) - \Delta V_{benefit}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{cost}(d) > 0$. By condition (1), the marginal benefit vanishes, $\Delta V_{benefit}(d)=0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
 
-It is crucial to interpret $d$ as the **active operational dimension**—the dimension of the subspace of the MPU's full Hilbert space that is actively coupled into the predictive loop. A physical device instantiating an MPU may possess a larger Hilbert space, but PCE will favor dynamics where any unused, superfluous sectors are energetically penalized and dynamically decoupled from the core cycle. This "freezing out" of inefficient degrees of freedom ensures that the effective operational dimension converges to the minimal, algebraically complete value of 8. This argument identifies $d^*=8$ as the minimal active operational dimension under the stated PCE hypotheses. It does not change Theorem 23, which remains the conditional lower-bound statement $d_0 \ge 2^{K_0}=8$.
+It is crucial to interpret $d$ as the **active operational dimension**—the dimension of the subspace of the MPU's full Hilbert space that is actively coupled into the predictive loop. A physical device instantiating an MPU may possess a larger Hilbert space, but PCE will favor dynamics where any unused, superfluous sectors are energetically penalized and dynamically decoupled from the core cycle. This "freezing out" of inefficient degrees of freedom ensures that the effective operational dimension converges to the minimal, algebraically complete value of 8. This argument identifies $d^*=8$ as the minimal active operational dimension under the stated PCE hypotheses. It does not change Theorem 23, which remains the conditional lower-bound statement that the finite context floor $N_{\mathrm{vis}}^{\min}$ is represented on the Hilbert branch by $d_0\ge N_{\mathrm{vis}}^{\min}=8$.
 
 ### **Logical Structure, Minimal Realization, and Predictive-Semantic Geometry of the MPU State Space**
 
@@ -473,15 +473,19 @@ We now detail the necessary mathematical structure for representing the state of
 
 **7.2.1 Theorem 23 (Minimal MPU Hilbert Space Dimension)**
 
-On the Hilbert branch, a $K_0$-bit structural finite-response capacity requires at least $2^{K_0}$ mutually perfectly distinguishable response classes. Therefore the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state $|\psi(t)\rangle$ must have dimension $d_0$ satisfying
+Theorem 15 first fixes the finite operational-context floor
 $$
-d_0 \;\ge\; 2^{K_0} \;=\; 8 \quad \text{(41)}
+N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
+$$
+On the Hilbert branch, these contexts require at least $N_{\mathrm{vis}}^{\min}$ mutually perfectly distinguishable response classes. Therefore the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state $|\psi(t)\rangle$ must have dimension $d_0$ satisfying
+$$
+d_0 \;\ge\; N_{\mathrm{vis}}^{\min} \;=\; 8 \quad \text{(41)}
 $$
 for $K_0=3$.
 
 *Proof.* A $K_0$-bit structural register has
 $$
-N=2^{K_0}
+N_{\mathrm{vis}}^{\min}=2^{K_0}
 $$
 mutually exclusive response classes. Perfect distinguishability of these classes in the Hilbert branch means that there exist states $\rho_1,\ldots,\rho_N$ and a finite measurement ledger with effects $E_1,\ldots,E_N$ satisfying
 $$
@@ -495,13 +499,13 @@ $$
 $$
 Hence $S_1,\ldots,S_N$ are nonzero mutually orthogonal subspaces of $\mathcal H_0$. Therefore
 $$
-d_0=\dim\mathcal H_0\ge N=2^{K_0}.
+d_0=\dim\mathcal H_0\ge N_{\mathrm{vis}}^{\min}=2^{K_0}.
 $$
 Substituting $K_0=3$ from Theorem 15 gives
 $$
-d_0\ge 2^3=8.
+d_0\ge N_{\mathrm{vis}}^{\min}=8.
 $$
-Under the PCE-stability hypotheses established in the preceding Minimal Predictive Algebra discussion, surplus distinguishable dimensions with no additional finite-response role are PCE-dominated by the minimal saturating representative. Thus the minimal saturating active operational dimension is $d_0=8$. ∎
+Under the PCE-stability hypotheses established in the preceding Minimal Predictive Algebra discussion, surplus distinguishable dimensions with no additional finite-response role are PCE-dominated by the minimal saturating representative. Thus the minimal saturating active operational Hilbert-carrier dimension is $d_0=8$. ∎
 
 **7.2.2 Proposition 4 (Emergence of Complex Hilbert Space $\mathcal{H}_0$)**
 
@@ -846,22 +850,48 @@ This strict contraction branch is compatible with, but logically separate from, 
 
 #### Stage 4: Landauer Pointer and Active Kernel Dimension
 
-The logical SPAP entropy $\varepsilon_0=\varepsilon_{SPAP}=\ln 2$ must be physically instantiated in the quantum substrate, and any realization satisfies $\varepsilon_{\mathrm{phys}}\ge \varepsilon_0$ (Theorem 31). The MPU Hilbert space decomposes as
+The logical SPAP entropy $\varepsilon_0=\varepsilon_{SPAP}=\ln 2$ must be physically instantiated in the quantum substrate, and any realization satisfies $\varepsilon_{\mathrm{phys}}\ge \varepsilon_0$ (Theorem 31). The MPU Hilbert space decomposes by the active verification record and its orthogonal complement:
 $$
-\mathcal{H}_0=\mathcal{H}_a\otimes\mathcal{H}_b
+\mathcal{H}_0=\mathcal{H}_a\oplus\mathcal{H}_b.
 $$
-where $\mathcal{H}_a$ is the active kernel, and $\mathcal{H}_b$ is a passive buffer. The entropy capacity of $\mathcal{H}_a$ is $\ln a$. To instantiate the irreducible structural per-cycle quotient cost $\varepsilon_0$ within the active kernel, admissibility requires
+Here $\mathcal{H}_a$ is the active kernel carrying the sharp match/mismatch verification record, and $\mathcal{H}_b$ is the inactive complement relative to that minimal verification act.
+
+The active kernel is not the rank of an arbitrary yes/no effect. A yes/no test is represented by an effect, and in the sharp repeatable case by a projector, together with its complement. The SPAP verification record itself has two internally sharp record states:
+$$
+E=0
+\qquad
+\text{and}
+\qquad
+E=1,
+$$
+where $E=A\oplus P$ records match versus mismatch of actuality and stored prediction. Both values must be possible in a faithful predictive cycle; otherwise the loop is hard-coded to succeed or fail and no nontrivial verification occurs.
+
+In the Hilbert carrier, two sharp record alternatives require two orthogonal rays. Therefore the active verification carrier satisfies
+$$
+a=\dim_{\mathbb C}\mathcal{H}_a\ge2.
+$$
+The entropy capacity of an $a$-dimensional active register is $\ln a$. To instantiate the irreducible structural per-cycle quotient cost $\varepsilon_0$ within the active kernel, admissibility also requires
 $$
 \ln a \ge \varepsilon_0.
 $$
-Since $a$ is an integer and $\varepsilon_0=\ln2$, the unique minimal admissible value is
+Since $\varepsilon_0=\ln2$ and $a$ is an integer, both the record-distinguishability requirement and the entropy-capacity requirement have the same unique minimal solution:
 $$
-a=2
+a=2.
 $$
-(Theorem Z.1). Extra implementation overhead $\varepsilon_{\mathrm{diss}}$ increases heat dissipation but does not require a larger active kernel unless it changes a finite protocol-response presheaf; response-null overhead is removed by PCE dominance.
+A one-dimensional active sector cannot represent both record values. Any $a>2$ adds active verification alternatives not required by the single SPAP match/mismatch bit; if they are response-null, PPI quotients them, and if they are response-active, PCE demotes them for the minimal MPU branch. Extra implementation overhead $\varepsilon_{\mathrm{diss}}$ increases heat dissipation but does not require a larger active kernel unless it changes a finite protocol-response presheaf; response-null overhead is removed by PCE dominance.
 
 **Imported result (Theorem Z.1, Landauer Pointer).** The dimension $a$ of the active kernel satisfies
-$$a = 2.$$
+$$
+a=2.
+$$
+With $d_0=8$ on the minimal Hilbert branch, the inactive complement has
+$$
+b=d_0-a=8-2=6,
+$$
+and the block decomposition is
+$$
+\mathcal{H}_0=\mathbb C^2\oplus\mathbb C^6.
+$$
 
 
 The PCE-Attractor density operator (Appendix Z, Section Z.2.5) takes the form:

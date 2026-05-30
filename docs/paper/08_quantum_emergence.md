@@ -275,6 +275,27 @@ Independently, connected scalar phase transport excludes the real branch because
 
 Therefore the only scalar branch satisfying compositional closure, local tomography, connected phase transport, and PCE minimality is $\mathbb C$. ∎
 
+**Corollary 8.4a (Rank-Eight Minimal Complex Carrier).** On the finite-response Hilbert branch, the minimal MPU carrier is
+$$
+\mathcal H_0\cong\mathbb C^8.
+$$
+
+*Proof.* Theorem 15 gives the operational role-readout floor
+$$
+N_{\mathrm{vis}}^{\min}=8.
+$$
+On any Hilbert carrier, a sharp finite context with $N$ perfectly distinguishable alternatives is represented by $N$ mutually orthogonal nonzero projectors. In a complex Hilbert space of dimension $d$, the maximum number of mutually orthogonal rank-one alternatives in a maximal sharp context is exactly $d$. Therefore the Hilbert rank obeys
+$$
+d_0\ge N_{\mathrm{vis}}^{\min}=8.
+$$
+Theorem 8.4 selects the complex scalar branch as the unique locally tomographic, compositional, connected-phase, PCE-minimal Hilbert branch. PCE then removes any surplus Hilbert rank above the faithful eight-context lower bound unless the extra rank changes a finite protocol-response presheaf. On the minimal MPU branch no additional response-active rank is admitted, so
+$$
+d_0=8,
+\qquad
+\mathcal H_0\cong\mathbb C^8.
+$$
+∎
+
 **Theorem 8.5 (Schrödinger Dynamics from PCE and Time-Translation Symmetry).**
 Let $\{\mathcal T_t\}_{t\in\mathbb R}$ denote the Internal Prediction dynamics on rays of $\mathcal H_0$. Assume:
 1. each $\mathcal T_t$ is reversible and preserves transition probabilities;

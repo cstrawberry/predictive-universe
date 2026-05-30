@@ -404,6 +404,7 @@
 *   Kriegman, S., Blackiston, D., Levin, M., & Bongard, J. (2020). A scalable pipeline for designing reconfigurable organisms. *Proceedings of the National Academy of Sciences*, *117*(4), 1853–1859.
 *   Kronecker, L. (1884). Näherungsweise ganzzahlige Auflösung linearer Gleichungen. *Monatsberichte der Königlich Preussischen Akademie der Wissenschaften zu Berlin*, 1179–1193, 1271–1299.
 *   Kubo, R. (1957). Statistical-mechanical theory of irreversible processes. I. General theory and simple applications to magnetic and conduction problems. *Journal of the Physical Society of Japan*, *12*(6), 570–586. DOI: 10.1143/JPSJ.12.570
+*   Kullback, S., & Leibler, R. A. (1951). On information and sufficiency. *The Annals of Mathematical Statistics*, *22*(1), 79–86. DOI: 10.1214/aoms/1177729694
 *   Kunen, K. (1980). *Set Theory: An Introduction to Independence Proofs*. Studies in Logic and the Foundations of Mathematics, Vol. 102. North-Holland.
 *   Kushner, H. J., & Yin, G. G. (2003). *Stochastic Approximation and Recursive Algorithms and Applications* (2nd ed.). Springer.
 *   Lan, K. K. G., & DeMets, D. L. (1983). Discrete sequential boundaries for clinical trials. *Biometrika*, *70*(3), 659–663. DOI: 10.1093/biomet/70.3.659. 

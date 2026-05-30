@@ -831,7 +831,8 @@ This numerical evaluation is validation-level because it depends on the Appendix
 | Parameter | Value | Source |
 |:----------|:------|:-------|
 | $K_0$ | 3 | Definition (Horizon Constant) |
-| $d_0 = 2^{K_0}$ | 8 | Theorem 23 |
+| $N_{\mathrm{vis}}^{\min}=2^{K_0}$ | 8 | Theorem 15 |
+| $d_0$ | 8 | Theorem 23; Theorem Z.2 |
 | $(a, b)$ | $(2, 6)$ | Definition 15a |
 | $M = 2ab$ | 24 | Theorem Z.5 |
 | $k=M/2$ | 12 | Golay code dimension on the predictive-recovery MacWilliams branch (Def Z.13b.0; Thm Z.13b.0a; Thm Z.13b) |
@@ -1524,7 +1525,7 @@ The complete logical chain from $K_0 = 3$ to $\eta_B$:
 
 $$\boxed{
 \begin{aligned}
-K_0 = 3 &\xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[4pt]
+K_0 = 3 &\xrightarrow{\text{Thm 15}} N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \xrightarrow{\text{Thm 23/Z.2}} d_0 = 8 \\[4pt]
 &\xrightarrow{\text{Thm Z.1}} a = 2, \quad b = d_0 - a = 6 \\[4pt]
 &\xrightarrow{\text{Thm Z.5}} M = 2ab = 24, \quad k = 12 \\[4pt]
 &\xrightarrow{\text{Thm T.5}} \kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 38.5 \\[4pt]

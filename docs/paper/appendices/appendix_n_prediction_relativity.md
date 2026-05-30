@@ -1648,7 +1648,7 @@ Each arrow represents a necessary implication:
 | Step | Result | Origin |
 |:-----|:-------|:-------|
 | 1 | $K_0 = 3$ | Horizon Constant from SPAP encodability (Theorem 15) |
-| 2 | $d_0 = 8$ | MPU Hilbert space dimension: $d_0 = 2^{K_0}$ (Theorem 23) |
+| 2 | $N_{\mathrm{vis}}^{\min}=8$, $d_0 = 8$ | Finite operational-context floor and minimal Hilbert-carrier saturation: $N_{\mathrm{vis}}^{\min}=2^{K_0}$ and $d_0=N_{\mathrm{vis}}^{\min}$ on the minimal complex branch (Theorem 15; Theorem 23) |
 | 3 | $\varepsilon_0 = \ln 2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ | Structural SPAP cost and physical implementation bound (Theorem 31, Appendix J) |
 | 4 | $\tau_{min} = \sqrt{8\varepsilon_0} \cdot t_P$ | Temporal discretization from PCE (Theorem Q.6.1) |
 | 5 | $C_{\max} = 2\varepsilon_0$ | PCE-optimal structural channel capacity (Equation E.15) |

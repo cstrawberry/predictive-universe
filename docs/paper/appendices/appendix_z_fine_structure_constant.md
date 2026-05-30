@@ -326,7 +326,7 @@ $$d_0 = 8 = 2a^2.$$
 
 *Proof.*
 
-**Step 1 (Lower bound).** Theorem 15 establishes that the self-referential prediction/update cycle requires at least $2^{K_0} = 8$ operationally distinguishable internal configurations. Theorem 23 restates this as $d_0 \geq 8$.
+**Step 1 (Lower bound).** Theorem 15 establishes that the self-referential prediction/update cycle requires at least $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ operationally distinguishable visited contexts. Theorem 23 translates this into the Hilbert-carrier bound $d_0 \geq N_{\mathrm{vis}}^{\min}=8$.
 
 **Step 2 (Saturating realization).** The sufficiency part of Theorem 15 exhibits an explicit realization of the full SPAP subdynamics with three binary registers: the present active symbol $\phi \in \{0,1\}$, the stored predictive symbol $p \in \{0,1\}$, and the control/phase bit $c \in \{0,1\}$. On the PCE-saturating branch with $a = 2$ (Theorem Z.1), the supporting Hilbert space is
 $$
@@ -368,11 +368,15 @@ $$
 d_0 = 8.
 $$
 
-*Proof.* The binary/discrete encoding constraint restricts admissible Hilbert-space capacities to powers of two, so $d_0 = 2^n$ for some integer $n$. Theorem 15 fixes $K_0 = 3$, and Theorem 23 then gives the exact lower bound
+*Proof.* Theorem 15 fixes the finite operational-context floor
 $$
-d_0 \ge 2^{K_0} = 8.
+N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
 $$
-Therefore every admissible minimal branch has $d_0 \in \{8,16,32,\dots\}$.
+On the Hilbert-carrier branch, representing these contexts as mutually perfectly distinguishable alternatives gives the exact lower bound
+$$
+d_0 \ge N_{\mathrm{vis}}^{\min}=8.
+$$
+On the binary/discrete minimal carrier branch, admissible no-surplus Hilbert capacities above this floor occur at $d_0\in\{8,16,32,\dots\}$.
 
 PCE minimality excludes every strictly larger power of two. Once the SPAP-compatible lower bound $d_0 \ge 8$ is met, any additional dormant basis directions increase storage, control, and maintenance overhead without reducing the SPAP lower bound or creating any new theorem-level operational necessity at the minimal branch. Hence the saturating admissible value is
 $$
@@ -1307,13 +1311,13 @@ selects $D=4$ and hence forces $M_{\mathrm{int}}=24$. If $M_{\mathrm{int}}\ne24$
 
 *Proof.* Theorem Z.11 gives the exact condition $M_{\mathrm{int}}=K(D)$. For $D\le3$, the standard kissing-number values used in Theorem Z.11 give $K(D)\le K(3)=12$. For $D=4$, $K(4)=24$. For $D\ge5$, the same theorem uses $K(5)\ge40$ and monotonicity of the admissible kissing-number lower bound to give $K(D)\ge40$. Hence no dimension other than $D=4$ can have $13\le K(D)\le39$, and the only value in that interval realized by $D=4$ is $K(4)=24$. ∎
 
-**Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent mode-channel solution only for $K_0 = 3$. With $a=2$ fixed (Theorem Z.1) and $d_0=2^{K_0}$ on the minimal branch, the mode count is
+**Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to N_{\mathrm{vis}}^{\min}\to d_0 \to a \to M \to D$ produces a consistent mode-channel solution only for $K_0 = 3$. With $a=2$ fixed (Theorem Z.1), $N_{\mathrm{vis}}^{\min}=2^{K_0}$ from Theorem 15, and $d_0=N_{\mathrm{vis}}^{\min}$ on the minimal Hilbert-carrier branch, the mode count is
 $$
 M(K_0)=2a(d_0-a)=4(2^{K_0}-2).
 $$
 
-| $K_0$ | $d_0 = 2^{K_0}$ | $a = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
-|:-----:|:---------------:|:-------------------:|:-------------:|:---------:|:------------|
+| $K_0$ | $N_{\mathrm{vis}}^{\min}=2^{K_0}$ | minimal $d_0$ | $a = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
+|:-----:|:----------------------------------:|:-------------:|:-------------------:|:-------------:|:---------:|:------------|
 | 1 | 2 | 2 | 0 | 0 | No: degenerate ($b=0$) |
 | 2 | 4 | 2 | 2 | 8 | No: $K(2)=6<8<12=K(3)$ |
 | **3** | **8** | **2** | **6** | **24** | **Yes: $K(4)=24$** |
@@ -2401,7 +2405,8 @@ Thus the theorem uses the self-dual-rate gate to obtain $k=M/2$; it does not inf
 |:---------|:-----:|:-------|:-----------|
 | $\varepsilon$ | $\ln 2$ on the attractor branch | Theorem 31; Definition 15a | SPAP cycle 2-to-1 merge + Landauer, with attractor saturation |
 | $a$ | 2 | Theorem Z.1 | Admissibility $\ln a \ge \varepsilon$ + PPI-optimality |
-| $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 | Lower bound $d_0 \ge 2^{K_0}$ plus minimal 3-qubit Appendix Z branch |
+| $N_{\mathrm{vis}}^{\min}$ | 8 | Theorem 15 | Finite operational-context floor $2^{K_0}$ |
+| $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 | Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$ plus minimal Appendix Z saturation |
 | $b = d_0 - a$ | 6 | Definition | Inactive complement |
 | $M = 2ab$ | 24 | Theorem Z.5 | QFI-active interface generators |
 | $k = M/2$ | 12 | Def Z.13b.0; Thm Z.13b.0a; Thm Z.13b | Predictive-recovery self-dual-rate gate, followed by fixed-rate distance optimization |
@@ -3631,7 +3636,7 @@ $$\alpha^{-1} = \frac{4\pi}{2^{1/8}-1} - \frac{4\pi \cdot (1/4)}{\sqrt{3}} = \fr
 | Step | Principle | Result | Reference |
 |------|-----------|--------|-----------|
 | 1 | Self-referential logic (SPAP) | $K_0 = 3$ bits | Theorem 15 |
-| 2 | Quantum realization | $d_0 \ge 2^{K_0} = 8$; minimal PCE branch gives $d_0 = 8$ | Theorem 23; Theorem Z.2 |
+| 2 | Quantum realization | $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$; Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$; minimal PCE branch gives $d_0 = 8$ | Theorem 15; Theorem 23; Theorem Z.2 |
 | 3 | Landauer irreversibility | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$; attractor saturation gives $\varepsilon_0=\ln2$ | Theorem 31; Definition 15a |
 | 4 | Physical instantiation (PPI) | $a = 2$ | Theorem Z.1 |
 | 5 | Landauer-SPAP structure | $d_0 = 2a^2$ on the minimal branch | Theorem Z.2 |
@@ -5264,7 +5269,7 @@ $$\boxed{
 \begin{array}{c}
 K_0 = 3 \text{ (Theorem 15)} \\[4pt]
 \Downarrow \\[4pt]
-d_0 \ge 2^{K_0} = 8 \text{ (Theorem 23)} \\[4pt]
+N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \text{ (Theorem 15)},\qquad d_0\ge N_{\mathrm{vis}}^{\min} \text{ (Theorem 23)} \\[4pt]
 \Downarrow \\[4pt]
 d_0 = 8 \text{ on the minimal PCE branch (Theorem Z.2)} \\[4pt]
 \Downarrow \\[4pt]
@@ -5309,7 +5314,8 @@ n_{\text{pol}} = D - 2 = 2 \text{ after selecting } D=4 \\[4pt]
 | Quantity | Value | Derived From | Status |
 |:---------|:------|:-------------|:-------|
 | $K_0$ | 3 | SPAP self-reference | Theorem 15 |
-| $d_0$ | $8$ on the minimal branch | $d_0 \ge 2^{K_0}$ plus PCE minimality | Theorem 23; Theorem Z.2 |
+| $N_{\mathrm{vis}}^{\min}$ | $8$ | $2^{K_0}$ finite operational contexts | Theorem 15 |
+| $d_0$ | $8$ on the minimal branch | $d_0\ge N_{\mathrm{vis}}^{\min}$ plus PCE minimality | Theorem 23; Theorem Z.2 |
 | $\varepsilon_0$ | $\ln 2$ | Exact structural SPAP/Landauer quotient | Theorem 31 |
 | $\varepsilon_{\mathrm{phys}}$ | $\ge\varepsilon_0$ | Implementation overhead $\varepsilon_{\mathrm{diss}}\ge0$ | Theorem 31 |
 | $(a, b)$ | $(2, 6)$ | PCE minimization on the minimal branch | Theorem Z.1; Theorem Z.2 |
