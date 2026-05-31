@@ -118,7 +118,7 @@ recovering Einstein causality.
 
 **F.3 Continuum Limit and Emergent AQFT Net**
 
-The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. This analysis relies critically on the assumption that such a stable continuum limit exists, as formalized in Theorem F.0.
+The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. The general sufficient-condition route is Theorem F.0. The Mosco-Bochner route closes the bridge when the finite certificate $\mathfrak B_{\mathrm{AQFT}}$ of Definition F.0c is accepted. The strict projective single-clock route closes the same bridge when the finite record $\mathfrak P_{\mathrm{AQFT}}$ of Definition F.0e is accepted; in that branch, local generator convergence is exact on the retained core rather than an additional open bridge condition.
 
 **Theorem F.0 (Conditional Convergence to a Stable, Local AQFT Net).** Assume the discrete MPU dynamics on the operational-continuum branch satisfy the following sufficient conditions:
 
@@ -302,7 +302,41 @@ strongly on the retained finite-energy local core, where $L$ is the generator of
 
 For closed Markovian forms, Mosco convergence is equivalent to strong convergence of the associated contraction semigroups on the common $L^2$ realization after applying the interpolation maps fixed by the certificate. This gives (F.0d.1) on the retained local cores. Item (5) is exactly Definition F.0a on every bounded diamond, so Theorem F.0b supplies Condition 3 of Theorem F.0. Item (4) supplies the algebraic inductive-limit compatibility required in Conditions 1 and 2 of Theorem F.0. Item (6) identifies the limiting Lieb-Robinson cone with the emergent geometric causal cone, so spacelike-separated limiting algebras commute. Item (7) supplies the positive-energy condition in the reversible subbranch. Theorem F.0 then gives isotony, additivity, covariance for the represented emergent isometry subgroup, the time-slice property under the stated core-generation assumption, and Haag-Kastler locality. ∎
 
-*   **Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
+**Definition F.0e (Projective Single-Clock AQFT Certificate).** A projective single-clock AQFT certificate for a selected operational-continuum branch is a finite record
+$$
+\mathfrak P_{\mathrm{AQFT}}
+=
+(\mathfrak Z_{\mathrm{cont}},\{\mathfrak A_n(O)\},\{j_n^m\},\{\mathfrak C_O\},\{\mathcal L_{n,O}^*\},\{\omega_n\},r_0,\tau,\chi_{\mathrm{slice}},\mathfrak S_+)
+\tag{F.0e.1}
+$$
+with the following entries.
+
+1. $\mathfrak Z_{\mathrm{cont}}$ is an accepted zero-defect continuum-gluing record in the sense of Corollary 43.5a.
+2. For every bounded diamond $O$, $\mathfrak A_n(O)$ is a finite-dimensional local $C^*$-algebra and $j_n^m:\mathfrak A_n(O)\to\mathfrak A_m(O)$ are isometric $*$-monomorphisms for $m\ge n$ which agree on overlaps.
+3. $\mathfrak C_O\subset\bigcup_n\mathfrak A_n(O)$ is a common local algebraic core whose image is norm dense in the inductive-limit algebra of $O$.
+4. The microscopic update is strict finite-range and single-clock on the retained branch: after one tick $\tau$, support expands by at most graph radius $r_0$, and the same $r_0,\tau$ normalize the Lorentzian causal cone of Corollary F.1a.
+5. The local generators are projectively compatible on the core:
+$$
+j_n^m(\mathcal L_{n,O}^*A)
+=
+\mathcal L_{m,O}^*(j_n^mA)
+\qquad
+(A\in\mathfrak C_O, m\ge n).
+\tag{F.0e.2}
+$$
+6. The states are compatible, $\omega_m(j_n^mA)=\omega_n(A)$ on $\mathfrak C_O$, and locally normal in the inductive limit.
+7. The time-slice indicator $\chi_{\mathrm{slice}}=1$ records that the evolved slice core is norm dense in every relatively compact globally hyperbolic diamond.
+8. The positive-energy spectral ledger $\mathfrak S_+$ fixes the lower-energy convention for the limiting reversible generator.
+
+**Theorem F.0f (Projective Single-Clock Certificate Closes the AQFT Bridge).** If a selected branch carries an accepted $\mathfrak P_{\mathrm{AQFT}}$, then Theorem F.0 holds on that branch. The limiting net is a Haag-Kastler local AQFT net on the smooth operational envelope of Theorem 43.5, and the local generator convergence certificate $\mathfrak C_{\mathrm{gen}}$ is supplied by the restriction of $\mathfrak P_{\mathrm{AQFT}}$ to each bounded diamond.
+
+*Proof.* Item 1 gives the operational-continuum envelope by Corollary 43.5a and Theorem 43.5. Items 2 and 3 give the compatible inductive system and common local algebraic core required in Theorem F.0. Item 4 gives uniform locality, a uniform strict support cone, and the lightcone normalization of Corollary F.1a. Item 5 makes the generator-convergence difference in (F.0.1) identically zero on the core for every $m\ge n$, so Definition F.0a is satisfied with zero core-convergence defect. Item 6 gives state convergence. Item 7 gives the time-slice core-generation hypothesis. Item 8 gives the positive-energy input in the reversible subbranch. Therefore all hypotheses of Theorem F.0 are satisfied, and the resulting inductive-limit net has isotony, additivity, covariance for the represented emergent isometry subgroup, locality, the time-slice property, and the stated limiting dynamics. ∎
+
+**Corollary F.0g (AQFT Ledger Closure on the Projective Branch).** On a branch carrying both $\mathfrak Z_{\mathrm{cont}}$ and $\mathfrak P_{\mathrm{AQFT}}$, the operational-continuum and AQFT rows of Convention P.14.1k are closed. Outside the projective single-clock branch, the Mosco-Bochner certificate $\mathfrak B_{\mathrm{AQFT}}$ or the local generator convergence certificate $\mathfrak C_{\mathrm{gen}}$ remains the required bridge record.
+
+*Proof.* Corollary 43.5a discharges the continuum competitor condition. Theorem F.0f supplies Theorem F.0 and Definition F.0a on each bounded diamond. The closure criterion of Convention P.14.1k then applies to both rows. If $\mathfrak P_{\mathrm{AQFT}}$ is absent, Theorem F.0f supplies no data, so the older Mosco-Bochner or generator-convergence routes remain exactly the needed records. ∎
+
+*   **Definition F.3 (Emergent AQFT Net and Properties).** On a branch satisfying Theorem F.0, Theorem F.0d, or Theorem F.0f, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
 **F.4 Physical States and Dynamics**
 
@@ -437,7 +471,7 @@ AQFT provides a robust mathematical framework for analyzing the properties of th
 *   A clear formulation of the framework's stance on locality, allowing for hypothesized state-mediated statistical influence (Equation F.4, Postulate 3) on the Bob-marginal-preserving branch, while distinguishing the stronger branch-(iii) marginal anomaly analyzed in Section 10 on the regular finite-window branch (Definition 10.2a).
 *   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC endpoint bound (Theorem 39), the finite-window zero-error gate (Theorem 39a), and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic or zero-error signaling (Theorem 42).
 
-Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms remains a major open bridge. Beyond the regularity-necessity layer of Appendix C and the compactness inputs of Appendix D, the present manuscript does not yet supply: (i) a theorem deriving the weighted-shell/local-isotropy input at the one-shell level, or an equivalent replacement strong enough for the scalar-curvature bridge; (ii) a uniform discrete curvature-dimension / Bochner estimate, or equivalent radius-2 curvature-matrix control, that transfers the rescaled family into the synthetic-curvature class used in Section 11.4; (iii) Mosco convergence of the rescaled Dirichlet forms, or another theorem identifying the limit Cheeger energy as quadratic on the selected branch; (iv) the Euclidean rigidity input needed to identify the measured limit locally with $\mathbb{R}^4$ on that branch, such as a quantitative Reifenberg theorem or the precise non-collapsed volume-rigidity statement in the model-volume regime actually used; or (v) a controlled coarse-graining theorem on local algebras that either retains the coherent Hamiltonian limit region-wise or proves its suppression/cancellation. Under the natural extensive scaling of local Hamiltonian densities, the coherent contribution on a fixed physical region is generically $O(1)$ rather than $o(1)$, so the Duhamel-smallness reduction requires an added theorem of suppression, cancellation, or retained Hamiltonian convergence. Rigorously deriving the emergent dynamics generator $\mathcal{L}^*$ and validating these remaining bridge hypotheses of Theorem F.0 are therefore key future theoretical tasks for the PU framework.
+The full AQFT bridge is status-split. On the strict projective single-clock branch, Definition F.0e and Theorem F.0f supply the local generator convergence, lightcone identification, state convergence, and time-slice records as a finite certificate. On the Mosco-Bochner branch, Definition F.0c and Theorem F.0d supply the corresponding Dirichlet-form and generator-convergence data. Outside those branch-discharge records, the remaining items are exactly the still-open bridge tasks: weighted-shell/local-isotropy transfer strong enough for scalar curvature, uniform discrete curvature-dimension or radius-2 Bochner control, Mosco convergence or an equivalent quadratic-Cheeger theorem, Euclidean rigidity on the selected measured limit, and a controlled coarse-graining theorem retaining the coherent Hamiltonian limit region-wise. Thus the AQFT row is closed on $\mathfrak P_{\mathrm{AQFT}}$ or $\mathfrak B_{\mathrm{AQFT}}$ and remains certificate-pending otherwise.
 
 
 ## F.9 Spin-Statistics Connection and CPT Theorem

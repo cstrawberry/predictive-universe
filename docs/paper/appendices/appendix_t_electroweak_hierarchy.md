@@ -8594,7 +8594,7 @@ where $\mathfrak C_{\mathrm{RHG}}$ is the certificate of Definition T.78.6, $\De
 
 *Proof.* Theorem T.78.7 makes the threshold output a deterministic image of the finite RHG certificate. The map uses, in order, the RHG block matrices, projected involutions, structural triple, retained eigenvalues, finite zeta sums, tail bounds, and matching map. Omit any one of these entries. Then there exist distinct admissible completions of the missing finite datum that still satisfy the already-stated abstract requirements but yield different retained spectra or different finite parts. The Dynkin-index map and matching map are deterministic after the finite parts are fixed, so different finite parts produce different threshold vectors. By Theorem P.14.1f, the prior branch without the missing finite datum cannot determine a unique electroweak threshold output. ∎
 
-**Remark T.78.13 (Definite Answer to the RHG-Certificate Question).** The concrete RHG certificate demanded by the finite program is not contained in the present manuscript. Therefore the definite pre-certificate status is
+**Remark T.78.13 (Definite Answer to the RHG-Certificate Question).** The concrete RHG certificate demanded by the finite program is the finite record listed in Definition T.78.10. Until that record is supplied, the present manuscript proves the non-identifiability of the threshold tuple from the prior branch alone. Therefore the definite pre-certificate status is
 $$
 \Delta^{\mathrm{RHG}}
 \quad\text{is not a derived theorem-level threshold tuple.}
@@ -8756,6 +8756,16 @@ It remains only to prove the joint spectral consistency condition. Since both RH
 **Corollary T.79.8c (No Independent RHG-Flavor Refit).** Once $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, changing RHG block matrices, heat/zeta tail bounds, stationary flavor cells, Hessian determinants, holonomy paths, neutrino branch data, RG convention, or residual intervals after comparison defines a new joint branch and cannot confirm the original one.
 
 *Proof.* Each listed object is an entry of $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak Z_{\mathrm{PU}}$, $\mathcal I_{\mathrm{mix}}$, or $\mathcal R_{\mathrm{joint}}$. The forward-lock condition $\chi_{\mathrm{joint}}$ forbids selecting any such entry from the validation targets. ∎
+
+**Corollary T.79.8d (Electroweak-Flavor Row Closure Criterion).** The electroweak threshold tuple and the flavor parameter vector are theorem-level numerical rows exactly on branches carrying one of the following finite records fixed before comparison:
+
+1. an accepted forward-locked RHG record $\mathfrak R_{\mathrm{RHG}}$ of Definition T.78.10 together with an accepted flavor certificate $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4;
+2. an accepted torus-threshold record $\mathfrak C_{\mathrm{tor}}$ satisfying the same threshold-vector slots as Definition T.78.10 together with $\mathfrak C_{\mathrm{fl}}$;
+3. an accepted joint RHG-flavor spectral certificate $\mathfrak J_{\mathrm{RHG-fl}}$ of Definition T.79.8a.
+
+On any of these branches, $\Delta_{\mathrm{EW}}$, the absolute Yukawa normalization, mass ratios, CKM/PMNS angles, phases, and residual intervals are deterministic images of the accepted record. Gauge algebra, $N_g=3$, and $\kappa_{\mathrm{EW}}=38.5$ remain structural theorem rows but do not by themselves determine the numerical threshold/flavor vector.
+
+*Proof.* Theorem T.78.7 and Theorem T.78.11 prove determinacy and non-contamination for a completed RHG threshold record, and Definition T.78.10 lists the finite threshold-vector slots. The torus route is equivalent only if it supplies those same slots with the same branch normalizations. Theorem T.79.6 proves determinacy from an accepted flavor certificate, while Definition T.79.8a and Theorem T.79.8b replace the separate threshold and flavor records by one joint spectral certificate. Corollary T.79.8c forbids changing shared spectral or RHG entries after comparison. Therefore the numerical electroweak/flavor vector is closed exactly on the accepted finite-record branches listed above. The structural gauge and generation rows fix the admissible representation skeleton but contain no entries for the threshold finite parts, stationary flavor cells, Hessian determinants, holonomy phases, RG convention, or residual intervals; by Theorem P.14.1f they cannot determine the numerical vector without the certificate. ∎
 
 **Theorem T.79a (Nuclear Extension Determinacy Boundary).** The Appendix-T electroweak/flavor parameter vector $\Pi_T$ does not by itself determine stable isotope patterns, nuclear magic numbers, or spin-dependent nuclear transition anomalies. Those quantities become determinate only after PU supplies a finite self-adjoint nuclear aggregate Hamiltonian
 $$

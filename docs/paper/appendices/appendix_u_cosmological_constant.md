@@ -2855,6 +2855,36 @@ A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04
 $$
 on the four-mode branch. This keeps the phenomenological comparison explicit while preserving the theorem-level conclusion that only the four-mode branch is presently closed.
 
+**Definition U.73e (Four-Mode Fredholm Prefactor Closure Record).** A four-mode Fredholm prefactor closure record is a finite tuple
+$$
+\mathfrak F_U^{(4)}
+=
+(H_4,\Pi_0^{(4)},\mathcal J_4,\mathcal D_4,\mathcal T_4,\mathcal N_4,\mathfrak B_{\mathrm{BL}},\mathfrak I_U^{(4)},\chi_U^{(4)})
+\tag{U.73e.1}
+$$
+with the following entries.
+
+1. $H_4$ is the certified finite Hessian on the four-mode false-vacuum branch of Theorem U.13b, with exactly four translation zero modes and no fifth null direction.
+2. $\Pi_0^{(4)}$ is the projection onto the four zero modes and $1-\Pi_0^{(4)}$ is the positive complement used in the determinant ratio.
+3. $\mathcal J_4$ is the zero-mode Jacobian and gauge-volume quotient fixed by the branch normalization.
+4. $\mathcal D_4$ is the relative determinant ratio on the positive complement, including regulator, contour, finite part, and normalization convention.
+5. $\mathcal T_4$ is the heat-kernel or zeta-tail certificate bounding the discarded modes.
+6. $\mathcal N_4$ is the conversion of $\mathcal J_4\mathcal D_4$ into $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ in the convention of Corollary U.15b.
+7. $\mathfrak B_{\mathrm{BL}}$ is the Bismut-Lebeau transfer datum if the determinant is evaluated by a transfer from a covering model; otherwise this slot records the identity transfer.
+8. $\mathfrak I_U^{(4)}$ is the final interval audit for $A_{\mathrm{eff}}^{\mathrm{Fred},4}$.
+9. $\chi_U^{(4)}=1$ records that all entries are fixed before comparison with any cosmological value.
+
+**Theorem U.73f (Four-Mode Fredholm Numerical Closure).** If $\mathfrak F_U^{(4)}$ is accepted, then the four-mode cosmological-constant row is theorem-level numerical with
+$$
+\Lambda_4L_P^2
+=
+8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284},
+\tag{U.73f.1}
+$$
+up to the interval $\mathfrak I_U^{(4)}$. The exponent remains $\kappa=142$ from Theorem U.13b, and no five-mode prefactor can be substituted into (U.73f.1) without changing the branch.
+
+*Proof.* Theorem U.13b fixes the four-mode exponent by giving exactly four zero modes on the false-vacuum spectral branch. Definition U.73e removes those four zero modes by $\Pi_0^{(4)}$, computes the determinant on the positive complement by $\mathcal D_4$, fixes the zero-mode volume by $\mathcal J_4$, and bounds all omitted spectral tails by $\mathcal T_4$. Thus $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ is a finite function of the accepted record, with residual interval $\mathfrak I_U^{(4)}$. Multiplying this prefactor by the already closed exponential factor $e^{-2\kappa}=e^{-284}$ and the fixed $8\pi$ convention gives (U.73f.1). Since the five-mode reference branch has a different zero-mode projection and is blocked as a theorem-level vacuum closure by Theorem U.73a, exchanging its prefactor for the four-mode prefactor changes the branch rather than refining the same theorem. ∎
+
 ## U.27 Conclusion
 
 This appendix derives the cosmological constant reference scale and the primordial observables from the Golay-Steiner structure at $M = 24$, but with different logical status in the two sectors.

@@ -39,7 +39,7 @@ The framework’s predictions, derived from the discrete MPU invariants at the P
 | $A_s$ | $2.08 \times 10^{-9}$ (same conditions) | $(2.10 \pm 0.03) \times 10^{-9}$ | $0.7\sigma$ |
 | $A_s r$ | $A_Qe^{-22}/(4\pi^2)$; leading $A_Q=1$ gives $7.07\times10^{-12}$ | tensor measurement pending | product-lock target |
 | $g_0$ (m/s$^2$) | Bridge-law lock $c^2\sqrt{\Lambda}/8=(1.18 \pm 0.02)\times 10^{-10}$ | $\sim (1.2 \pm 0.2)\times 10^{-10}$ | consistent at current precision |
-| $\eta_B$ | validation run $(6.2 \pm 0.5)\times10^{-10}$; theorem-level only after $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ | $(6.12 \pm 0.04)\times10^{-10}$ | model/threshold branch consistent |
+| $\eta_B$ | validation run $(6.2 \pm 0.5)\times10^{-10}$; theorem-level only after $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or $\mathfrak C_B^{\mathrm{APSK}}$ | $(6.12 \pm 0.04)\times10^{-10}$ | model/threshold branch consistent |
 | $\tau_*/T$ | $0.176$ | $0.176 \pm 0.001$ | matches |
 | $\bar\theta$ | $0$ on the σ-symmetric positive-orientation Appendix K branch | $<10^{-10}$ | branch-consistent |
 | $N_g$ | $3$ (exactly) | $3$ | $\checkmark$ |
@@ -86,7 +86,7 @@ and requires the residual gate of Definition Z.27.11a before comparison. The res
 $$
 \Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}
 $$
-is certificate-pending until $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$ fix the relative Quillen-Fredholm prefactor and residual interval. The inversion forms remain numerical consistency checks and do not replace the missing determinant certificate.
+is certificate-pending until $\mathfrak F_U^{(4)}$ and $\mathfrak I_U^{(4)}$ fix the relative Quillen-Fredholm prefactor and residual interval. The inversion forms remain numerical consistency checks and do not replace the missing determinant certificate.
 
 By grounding physical law in the logic of self-referential prediction, the framework offers a principled reframing of several philosophical problems: the Hard Problem of Consciousness is addressed by taking awareness as a primitive starting point rather than an emergent byproduct; the Problem of Induction is addressed by showing that discoverable regularities are prerequisites for predictive systems to exist; the Unreasonable Effectiveness of Mathematics is addressed via the convergence of mathematical and physical optimization at PCE-optimal structures; and the Problem of Time is addressed by relating temporal order to the intrinsic sequentiality of the predictive cycle (see Appendix P for detailed analysis).
 

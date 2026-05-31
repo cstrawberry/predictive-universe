@@ -121,7 +121,7 @@ A crucial ingredient is the relationship between the entropy associated with a c
 
 **12.2.1 Theorem 49 (Horizon-Entropy Area Law)**
 
-**Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), the density-certificate branch of Theorem E.3, and the PCE residual-budget saturation branch of Proposition E.2a**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal H$ is proportional to the horizon's cross-sectional area $\mathcal A$. The per-channel reliable classical information budget is bounded structurally by the completed reset-support deficit
+**On the Necessary Emergence of Geometric Regularity branch of Theorem 43, the density-certificate branch of Theorem E.3, and the PCE residual-budget saturation branch of Proposition E.2a**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal H$ is proportional to the horizon's cross-sectional area $\mathcal A$. The per-channel reliable classical information budget is bounded structurally by the completed reset-support deficit
 $$
 C_{\max}\le\ln d_0-\ln2
 $$
@@ -362,7 +362,7 @@ $$
 $$
 because the only additional Lovelock density, the Gauss-Bonnet term, is topological in four dimensions and contributes no local field equations. Hence no independent second-order covariant rank-2 tensor beyond $G_{\mu\nu}$ and $g_{\mu\nu}$ is available under the stated hypotheses. Appendix E fixes the horizon entropy density to the Bekenstein-Hawking value $1/(4G)$, which calibrates the normalization of the Einstein-Hilbert term and therefore sets $c_1=1$ in the units used in Equation (76). Writing $c_0=\Lambda$ gives the stated tensor. Any higher-curvature correction would either violate the hypothesis of at most second derivatives or modify the Wald entropy density away from the Appendix E coefficient. Therefore the only tensor consistent with all stated hypotheses is $G_{\mu\nu}+\Lambda g_{\mu\nu}$. QED
 
-This subsection gives an independent action-level closure of the preceding thermodynamic derivation. It should not be read as replacing the MPU/channel-capacity derivation of the entropy density; rather, it shows that once the area-law density has been fixed by the MPU channel count, the corresponding local metric equation is the Einstein equation. PCE supplies the entropy-density and channel-capacity input; Lovelock/Jacobson/Wald-style locality, diffeomorphism invariance, second-order field equations, and Wald-density matching supply the metric-action uniqueness gate. PCE alone is not used as a substitute for the local metric-action hypotheses.
+This subsection gives an action-level closure of the preceding thermodynamic derivation on the accepted local metric-action branch. It should not be read as replacing the MPU/channel-capacity derivation of the entropy density; rather, it shows that once the area-law density has been fixed by the MPU channel count and the finite KMS-descent/Clausius gate has supplied local equilibrium, the corresponding local metric equation is the Einstein equation. PCE supplies the entropy-density and channel-capacity input; Lovelock/Jacobson/Wald-style locality, diffeomorphism invariance, second-order field equations, and Wald-density matching supply the metric-action uniqueness gate. PCE alone is not used as a substitute for the local metric-action hypotheses.
 
 **Theorem 12.1a (Wald-Normalized Einstein–Hilbert Action Uniqueness).** Work on the derived $D=4$ Lorentzian branch (Corollary 46a). Let the local gravitational action be
 $$
@@ -394,6 +394,8 @@ $$
 using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}=4\pi a_1\,A$. Matching to the PU area law $A/(4G)$ gives $4\pi a_1=1/(4G)$, hence $a_1=1/(16\pi G)$. The cosmological term contributes no Wald area density; writing $a_0=-2a_1\Lambda$ yields the stated action. Thus PU fixes the thermodynamic entropy-density side of the argument through finite channel capacity, while the metric-action uniqueness side is the standard local Lovelock/Wald gate. Restoring SI units by the conventional factor $c^3$ gives the SI form. Varying the sum $S_{\mathrm{grav}}+S_{\mathrm{matter}}$ with respect to $g^{\mu\nu}$, using (67e), yields (76a). ∎
 
 **Corollary 12.1b (Certificate-Complete Emergent Metric Branch).** On any regular operational-continuum branch satisfying the finite KMS-descent certificate of Definition F.10.12a, the route to (76a) is a certificate-complete emergent metric/channel-capacity thermodynamics derivation. No independent microscopic gravitational Hilbert sector is introduced.
+
+*Proof.* Definition F.10.12a fixes, on every element of a refining finite cover, the local modular generator, finite-temperature/KMS state, channel min-cut entropy, overlap cocycle, Clausius defect, stress-energy flux, and certified error bounds. Theorem F.10.12c proves that vanishing certificate defect gives a compatible KMS sheaf, vanishing Connes cocycle obstruction, and zero local Clausius mismatch in the continuum limit. The local-horizon bridge of Theorem 48a then supplies the local Rindler horizon used in Theorem 12.1. Corollary E.8.4g supplies the channel-capacity area law, and Appendix B supplies the conserved stress-energy tensor. Therefore every premise used in Theorem 12.1 is supplied by a finite operational certificate and its limiting regular branch. The construction is entirely through metric response, finite channel capacity, KMS thermodynamics, and stress-energy conservation, so no additional microscopic gravitational state space is added. ∎
 
 **Definition 12.1d (Nondegenerate Finite-Response Gravitational Channel Ensemble).** On a refining sequence of finite operational covers $\{\mathcal U_n\}_{n\ge1}$ carrying an accepted finite KMS-descent certificate $\{\mathfrak C^{\mathrm{KMS}}_n\}$ in the sense of Definition F.10.12a, the nondegenerate finite-response gravitational channel ensemble is the finite tuple
 $$
@@ -1269,3 +1271,44 @@ $$
 Thus the recovery functional supplies a unifying certificate gate for the gravity branch: Einstein gravity is the zero-curvature recoverability limit, while positive retained curvature is an explicit finite non-equilibrium correction and not an independent ad hoc dark fluid.
 
 *Proof.* Monotonicity of relative entropy under the channel $\Phi_D$ gives (76aa). The finite functional (76ab) is an admissible PCE scalarization only on the branch where the diamond channels, reference states, area calibration, and regularity cost are fixed before comparison. Corollary 12.5.3i identifies the local QNEC slack with the second finite-difference curvature of the local relative-entropy recoverability ledger $\mathcal R_\lambda$. Hence (76ac) implies zero QNEC slack on every retained null patch. Corollary 12.5.3g identifies zero QNEC slack with local Clausius saturation, and Theorem 12.5.3h then gives the reversible Einstein branch. If the slack is nonzero and a conserved tensor with null projections (76ad) is supplied, Theorem 12.5.3h gives exactly the sign convention (76ae), which is the same equation written as (76af). ∎
+
+**Definition 12.5.3k (Finite Einstein-Branch Closure Record).** A finite Einstein-branch closure record is a tuple
+$$
+\mathfrak C_{\mathrm{EH}}
+=
+(\mathfrak Z_{\mathrm{cont}},\mathfrak P_{\mathrm{AQFT}},\mathfrak C^{\mathrm{KMS}},\mathfrak A_{\partial},\mathfrak T_{\mathrm{MPU}},\mathfrak Q_{\mathrm{null}},\mathfrak L_{2},\mathfrak O_{\mathrm{EH}},\chi_{\mathrm{EH}})
+\tag{76ag}
+$$
+with the following entries.
+
+1. $\mathfrak Z_{\mathrm{cont}}$ is an accepted operational-continuum gluing certificate of Corollary 43.5a.
+2. $\mathfrak P_{\mathrm{AQFT}}$ is an accepted projective single-clock AQFT certificate of Definition F.0e, or the pair $(\mathfrak B_{\mathrm{AQFT}},\mathfrak C_{\mathrm{gen}})$ is accepted on the same cover.
+3. $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent certificate of Definition F.10.12a with vanishing Connes-cocycle and Clausius defects on the retained local Rindler cover.
+4. $\mathfrak A_{\partial}$ is the Appendix E channel-area density record fixing $\eta$ and the local entropy variation $\delta S=\eta\delta A$.
+5. $\mathfrak T_{\mathrm{MPU}}$ is the Appendix B stress-energy flux record fixing $T_{\mu\nu}^{(\mathrm{MPU})}$ and its conservation law on the same retained diamond cover.
+6. $\mathfrak Q_{\mathrm{null}}$ is either the zero-slack ledger
+$$
+\mathcal Q(k)=0
+\quad\text{for every retained null generator }k,
+\tag{76ah}
+$$
+or a conserved retained slack tensor $T_{\mu\nu}^{(\mathrm{rec})}$ satisfying (76ad).
+7. $\mathfrak L_2$ is the local second-order metric-action uniqueness gate: on the retained $D=4$ smooth envelope, the only divergence-free symmetric tensor arising from a local second-order diffeomorphism-covariant metric response and vanishing in flat vacuum is $G_{\mu\nu}+\Lambda g_{\mu\nu}$ up to the scalar constants fixed by $\mathfrak A_{\partial}$ and $\mathfrak T_{\mathrm{MPU}}$.
+8. $\mathfrak O_{\mathrm{EH}}$ is the overlap audit proving that the continuum, AQFT, KMS, area, stress, and null-slack records use the same branch maps.
+9. $\chi_{\mathrm{EH}}=1$ records that all entries are fixed before any gravitational or cosmological comparison target is consulted.
+
+**Theorem 12.5.3k.1 (Finite Einstein-Branch Closure).** If $\mathfrak C_{\mathrm{EH}}$ is accepted and $\mathfrak Q_{\mathrm{null}}$ is the zero-slack ledger, then the retained emergent metric satisfies
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}^{(\mathrm{MPU})}.
+\tag{76ai}
+$$
+If $\mathfrak Q_{\mathrm{null}}$ supplies a conserved retained slack tensor $T_{\mu\nu}^{(\mathrm{rec})}$, then the retained equation is
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+8\pi G\left(T_{\mu\nu}^{(\mathrm{MPU})}-T_{\mu\nu}^{(\mathrm{rec})}\right).
+\tag{76aj}
+$$
+No independent microscopic graviton Hilbert sector is an input to either closure. Linearized graviton-like modes, when present, are response-active fluctuations of the emergent metric branch described by Theorem 12.1c and Theorem 12.1e.
+
+*Proof.* Corollary 43.5a supplies the operational-continuum envelope, and Definition F.0e with Theorem F.0f, or the Mosco-Bochner route of Definition F.0c and Theorem F.0d, supplies the local AQFT net and generator convergence. Definition F.10.12a and Theorem F.10.12c supply the compatible KMS sheaf, vanishing Connes-cocycle obstruction, and vanishing local Clausius mismatch. Appendix E fixes the entropy-area variation and Appendix B fixes the conserved stress-energy flux. Theorem 12.1 derives the local equation from the Clausius relation and the Raychaudhuri identity. Theorem 12.5.3h identifies zero predictive QNEC slack with the reversible Einstein branch and nonzero conserved slack with the explicit response term. The gate $\mathfrak L_2$ excludes any additional local second-order divergence-free metric tensor on the retained $D=4$ branch. The overlap audit ensures that all terms are projections of the same finite branch. Thus (76ai) and (76aj) follow from the accepted finite record. Since every input is a finite response, area, KMS, stress, or overlap datum, a microscopic graviton Hilbert sector is neither used nor required. ∎

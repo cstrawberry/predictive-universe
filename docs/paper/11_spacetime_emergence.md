@@ -1,6 +1,6 @@
 # 11 Emergence of Spacetime Geometry (Operational Continuum Branch)
 
-This section details the emergence of effective spacetime geometry from the underlying discrete MPU network. The continuum layer is not an additional ontology: the real world does not have to become an actual continuum. It only has to generate continuum behavior as a finite-resolution effective closure. Theorem 43 supplies the regularity-necessity theorem, Theorem 43.5 packages the operational-continuum branch on the $M=24$, $D=4$ shell under its stated hypotheses, and Appendix F supplies the algebraic AQFT bridge under its controlled generator-convergence hypotheses, with Definition F.0c and Theorem F.0d giving the Mosco-Bochner certificate route from finite Dirichlet forms to the stable local AQFT envelope. The emergence process is presented in stages: obtaining the operational continuum compression of the discrete propagation-cost metric, identifying the metric tensor, and deriving a finite operational causal speed from MPU interactions and importing Lorentzian signature from the Appendix O hyperbolic-principal-symbol branch. The interpretation of curvature as predictive holonomy is also discussed.
+This section details the emergence of effective spacetime geometry from the underlying discrete MPU network. The continuum layer is not an additional ontology: the real world does not have to become an actual continuum. It only has to generate continuum behavior as a finite-resolution effective closure. Theorem 43 supplies the regularity-necessity theorem, Theorem 43.5 packages the operational-continuum branch on the $M=24$, $D=4$ shell under its stated hypotheses, and Corollary 43.5a supplies the zero-defect $D_4$ gluing certificate $\mathfrak Z_{\mathrm{cont}}$ that discharges the global-core competitor condition on the strict gluing branch. Appendix F supplies the algebraic AQFT bridge under controlled generator-convergence hypotheses, with Definition F.0c and Theorem F.0d giving the Mosco-Bochner certificate route and Definition F.0e with Theorem F.0f giving the projective single-clock route from finite local algebras to the stable local AQFT envelope. The emergence process is presented in stages: obtaining the operational continuum compression of the discrete propagation-cost metric, identifying the metric tensor, and deriving a finite operational causal speed from MPU interactions and importing Lorentzian signature from the Appendix O hyperbolic-principal-symbol branch. The interpretation of curvature as predictive holonomy is also discussed.
 
 **11.1 The MPU Network as Pre-Geometric Structure**
 
@@ -81,6 +81,26 @@ so the first-shell odd moments vanish, the second moment is positive and isotrop
 Theorem D.6e inserts the finite continuum-control defects $\mathfrak B_n,\mathfrak C_n,\mathfrak R_n,\mathfrak H_n$ into the microscopic PCE potential with positive coefficients. Since a competitor sequence with $\mathfrak d_n^*\to 0$ exists in the same global core-minimum class, and since Proposition D.6f shows that this is the sharp condition for defect removal within that class, global minimizers of $V_n^{\mathrm{cont}}$ satisfy $\mathfrak D_n\to0$ along the selected sequence. The detailed-balance low-noise concentration estimate follows from Theorem D.5 applied to $V_n^{\mathrm{cont}}$, giving the displayed exponential bound.
 
 Along the selected sequence, $\mathfrak B_n\to0$ is the asymptotic radius-2 $\mathrm{BE}(K,4)$ curvature transfer required by Theorem C.6c, and Theorem C.6e supplies noncollapse. Therefore every measured-GH limit is noncollapsed $\mathrm{RCD}^*(K,4)$ and has Euclidean $\mathbb R^4$ tangent cones at $\mu$-almost every point. The identities $\mathfrak C_n\to0$ and $\mathfrak R_n\to0$ give the finite-core and recovery-map compatibility required for the Mosco argument in Theorem D.6e; hence the rescaled propagation-cost forms converge to the quadratic Cheeger energy. Finally, $\mathfrak H_n\to0$ is the quantitative Euclidean-rigidity and harmonic-coordinate input of Theorem 44a, so the regular branch carries a $C^{1,\alpha}$ spatial metric. Corollary O.7b.1 adjoins the finite ND-RID update clock and yields the Lorentzian extension. Theorem K.10.3a excludes exact continuum ontology under finite-resource PPI, so the limit is an effective finite-resolution compression of the discrete MPU branch. ∎
+
+**Corollary 43.5a (Zero-Defect $D_4$ Gluing Certificate).** Let $\mathfrak Z_{\mathrm{cont}}$ be a finite record, for each refinement level $n$, consisting of:
+
+1. a finite cover by propagation-cost cells $\{U_i^{(n)}\}$ whose first shells are identified with the $D_4$ root shell $\Xi_{D_4}$ of Lemma C.6d;
+2. local interpolation charts $\psi_i^{(n)}:U_i^{(n)}\to\mathbb R^4$ whose first-shell second moments are scalar multiples of the identity and whose odd shell moments vanish;
+3. overlap maps $\theta_{ij}^{(n)}$ in the signed $D_4$ orthogonal frame group on nonempty overlaps;
+4. finite overlap equalities $\Omega_C^{(n)}$ on every directed overlap cycle, so the cocycle defect vanishes modulo the response-equivalence relation;
+5. certified bounds $\varepsilon_n\downarrow0$ such that the continuum-control defects of Theorem D.6e satisfy
+$$
+\mathfrak B_n+\mathfrak C_n+\mathfrak R_n+\mathfrak H_n\le\varepsilon_n
+$$
+for the glued candidate in the same global core-minimum class as the PCE-selected branch.
+
+If $\mathfrak Z_{\mathrm{cont}}$ is accepted, then the competitor condition $\mathfrak d_n^*\to0$ used in Theorem 43.5 is satisfied. Hence the operational-continuum manifold row of Convention P.14.1k is closed on the $\mathfrak Z_{\mathrm{cont}}$ branch.
+
+*Proof.* The four defect terms in Theorem D.6e are nonnegative by construction. The candidate supplied by $\mathfrak Z_{\mathrm{cont}}$ lies in the same global core-minimum class by item 5, so the core infimum satisfies
+$$
+0\le\mathfrak d_n^*\le\mathfrak B_n+\mathfrak C_n+\mathfrak R_n+\mathfrak H_n\le\varepsilon_n.
+$$
+Since $\varepsilon_n\to0$, one has $\mathfrak d_n^*\to0$. Items 1--4 supply exactly the shell isotropy, noncollapse, overlap compatibility, and vanishing cocycle data required by the Appendix C/D bridge package, so no extra continuum ontology is introduced. Theorem 43.5 therefore applies with its competitor hypothesis discharged by a finite record. ∎
 
 **11.4 Geometric Convergence to an Operational Continuum Manifold**
 

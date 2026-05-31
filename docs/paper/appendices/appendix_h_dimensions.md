@@ -87,7 +87,7 @@ $C_{\text{uni}}$ represents the unified complexity, a dimensionless measure of e
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
-The empirical acceleration scale therefore arises from the same structural sector as the cosmological-constant bridge, but with status separation. The five-mode Appendix U working-prefactor evaluation gives the reference value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. The Definition U.6 four-mode false-vacuum branch fixes only the exponent $\kappa=142$ under Theorem U.13b, so the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains prefactor-certificate-pending until $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$ are supplied.
+The empirical acceleration scale therefore arises from the same structural sector as the cosmological-constant bridge, but with status separation. The five-mode Appendix U working-prefactor evaluation gives the reference value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. The Definition U.6 four-mode false-vacuum branch fixes only the exponent $\kappa=142$ under Theorem U.13b, so the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains prefactor-certificate-pending until $\mathfrak F_U^{(4)}$ and $\mathfrak I_U^{(4)}$ are supplied.
 
 ### H.4.1 de Sitter temperature
 

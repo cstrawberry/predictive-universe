@@ -888,7 +888,7 @@ The complexity $\kappa_B = 19.48$ is derived from the stated PU counting chain $
 $$
 \boxed{\eta_B^{\mathrm{val}}=(6.2\pm0.5)\times10^{-10}}
 $$
-The theorem-level row is the finite transport image fixed by $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$.
+The theorem-level row is the finite transport image fixed by $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or the APS-Kubo certificate $\mathfrak C_B^{\mathrm{APSK}}$ of Definition Y.6.1c and Theorem Y.6.1d.
 
 ---
 
@@ -907,7 +907,7 @@ $$
 
 | Quantity | Validation run | Observation | Status |
 |:---------|:--------------:|:-----------:|:-------|
-| $\eta_B$ | $(6.2\pm0.5)\times10^{-10}$ | $(6.12\pm0.04)\times10^{-10}$ | model/threshold branch consistent; theorem-level only after $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ |
+| $\eta_B$ | $(6.2\pm0.5)\times10^{-10}$ | $(6.12\pm0.04)\times10^{-10}$ | model/threshold branch consistent; theorem-level only after $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or $\mathfrak C_B^{\mathrm{APSK}}$ |
 
 The validation-run value is consistent with observation within combined uncertainties. The stated uncertainty arises from external Standard Model and thermal inputs ($c_{sph}$, $f_{wash}$, $\alpha_W$); its Appendix T gauge-threshold component remains status-limited by Theorem T.78.5.
 
@@ -1406,7 +1406,7 @@ Consequently, within the Appendix Y channel, the flavor-topology sector and the 
 
 *Proof.* Immediate from Theorem Y.11.6. ∎
 
-**Remark Y.11.7a.0 (Anchor to the Global Ledger).** Definition Y.11.7a supplies the local strict PPI/PCE certificate of the baryon asymmetry row in Convention P.14.1k. Theorem Y.11.7b is the local determinacy theorem and Definition Y.11.7e refines the certificate to the finite transport-integral form. An accepted $\mathfrak C_B$ or accepted $\mathfrak C_B^{\mathrm{tr}}$ closes the row by Theorem D.8.9b.
+**Remark Y.11.7a.0 (Anchor to the Global Ledger).** Definition Y.11.7a supplies the local strict PPI/PCE certificate of the baryon asymmetry row in Convention P.14.1k. Theorem Y.11.7b is the local determinacy theorem and Definition Y.11.7e refines the certificate to the finite transport-integral form. Definition Y.6.1c and Theorem Y.6.1d supply the APS-Kubo transport route. An accepted $\mathfrak C_B$, accepted $\mathfrak C_B^{\mathrm{tr}}$, or accepted $\mathfrak C_B^{\mathrm{APSK}}$ closes the row by the corresponding finite transport certificate.
 
 **Definition Y.11.7a (Baryogenesis Transport Certificate).** A baryogenesis transport certificate is a finite record
 $$
@@ -1630,14 +1630,14 @@ $$
 (6.2\pm0.5)\times10^{-10}.
 $$
 
-This is consistent with the observed value $(6.12\pm0.04)\times10^{-10}$ within the branch/model uncertainty. Theorem-level numerical status requires an accepted $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ before comparison.
+This is the validation-run value of the canonical Appendix Y branch. Theorem-level numerical status requires an accepted $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or accepted APS-Kubo certificate $\mathfrak C_B^{\mathrm{APSK}}$ before comparison.
 
 The derivation reveals that:
 - **CP violation** is geometric (Berry holonomy on the flavor manifold), operating in a saturated regime where $\tanh(\mathcal{S}\sin\delta) \approx 1$
 - **Efficiency** is controlled by configuration space complexity $\kappa_B = 19.48$, derived from the electroweak structure
 - **Matter dominance** is a boundary condition on the initial predictive state, not a dynamical parameter
 
-The framework provides a structurally constrained explanation for why the universe contains matter, how much matter it contains, and why antimatter is absent at cosmological scales, with the efficiency and washout modeling detailed in Section Y.4.
+The framework provides a structurally constrained branch explanation for the sign and scale of the matter excess. The exact numerical row is the finite transport image of the accepted baryogenesis certificate, with the efficiency and washout modeling detailed in Section Y.4.
 
 ---
 

@@ -1790,7 +1790,7 @@ The Strong CP Problem is resolved through two independent geometric mechanisms:
 | $\arg(\det M_q)$ | 0 | $E_8$ root reality + positive-orientation determinant certificate | Corollary K.6.5 |
 | $\bar{\theta}$ | 0 | Combined | Theorem K.6.11 |
 | CKM phase $\delta$ | 66.7° | Berry holonomy (Type II) | Theorem K.6.18 |
-| $\eta_B$ | validation run $(6.2 \pm 0.5)\times10^{-10}$; theorem-level only after $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ | Baryogenesis | Theorem K.6.19; Definitions Y.11.7a and Y.11.7e |
+| $\eta_B$ | validation run $(6.2 \pm 0.5)\times10^{-10}$; theorem-level only after $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or $\mathfrak C_B^{\mathrm{APSK}}$ | Baryogenesis | Theorem K.6.19; Definitions Y.11.7a, Y.11.7e, and Y.6.1c; Theorem Y.6.1d |
 
 **Key Insights:**
 

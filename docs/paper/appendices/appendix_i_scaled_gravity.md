@@ -978,6 +978,34 @@ The branch is falsified if a forward-locked rotation-curve analysis requiring a 
 
 **Remark I.13c (No Capacity-Floor Derivation of $A_G$).** Equation E.9 has $G\propto\eta\delta^2/(\chi C_{\max})$ only after the remaining substrate parameters are fixed. It does not, by itself, imply $G_{\mathrm{large}}/G_0=d_0$. In particular, setting an effective $C_{\max}$ below the structural floor $\varepsilon_0=\ln2$ is not an admissible theorem-level derivation. The pair $(A_G,m)=(7,3)$ is therefore retained as a benchmark branch rather than a closed dark-sector theorem.
 
+**Definition I.13d (Covariant Dark-Susceptibility Certificate).** A covariant dark-susceptibility certificate is a finite record
+$$
+\mathfrak X_{\mathrm{DS}}
+=
+(\mathfrak H_g,\mathcal K_{\mathrm{DS}},\Theta_{\mathrm{DS}},\Pi_{\mathrm{wf}},\Pi_{\mathrm{cl}},\mathcal J_{\mathrm{DS}},g_\Lambda,\mathcal R_{\mathrm{DS}},\chi_{\mathrm{DS}})
+\tag{I.13d.1}
+$$
+with the following entries fixed before comparison.
+
+1. $\mathfrak H_g$ is the accepted Appendix H acceleration bridge record fixing $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the same vacuum branch used by the metric sector.
+2. $\mathcal K_{\mathrm{DS}}$ is a retarded covariant susceptibility kernel mapping the baryonic stress-energy and retained gravitational-potential invariants to a conserved response tensor $T_{\mu\nu}^{\mathrm{DS}}$.
+3. $\Theta_{\mathrm{DS}}=(L_0,A_G,m,K,q,A_{\mathrm{PM}})$ is the finite ansatz coordinate vector for the galaxy and cluster projections, with any unused coordinate marked response-null on the corresponding environment class.
+4. $\Pi_{\mathrm{wf}}$ is the weak-field projection proving that the quasistatic galaxy projection of $T_{\mu\nu}^{\mathrm{DS}}$ is equivalent to Equation I.4, with the displayed $(L_0,A_G,m)$.
+5. $\Pi_{\mathrm{cl}}$ is the cluster projection proving that the same susceptibility kernel yields Equation I.7, with the displayed $(K,q,A_{\mathrm{PM}})$ and with homogeneous-background response zero.
+6. $\mathcal J_{\mathrm{DS}}$ is the finite PCE susceptibility functional on the retained ansatz family, with a unique minimizer $\Theta_{\mathrm{DS}}^*$ and strict gap $g_{\mathrm{DS}}>0$ modulo response equivalence.
+7. $\mathcal R_{\mathrm{DS}}$ is a finite residual interval for weak-field, lensing, cluster, and cosmological projections, and $\chi_{\mathrm{DS}}$ records that no entry of $\Theta_{\mathrm{DS}}^*$ or $\mathcal R_{\mathrm{DS}}$ was selected using the validation data being predicted.
+
+The certificate is accepted only when
+$$
+\nabla_\mu\bigl(T^{\mu\nu}_{\mathrm b}+T^{\mu\nu}_{\mathrm{DS}}\bigr)=0,
+\tag{I.13d.2}
+$$
+the local high-acceleration projection satisfies $G(R)\to G_0$ with the solar-system residual bounded by $\mathcal R_{\mathrm{DS}}$, and the homogeneous early-universe projection has no response-active running-$G$ source.
+
+**Theorem I.13e (Dark-Kernel Determinacy from Covariant Susceptibility).** If $\mathfrak X_{\mathrm{DS}}$ is accepted, then the galaxy kernel, cluster predictive-matter kernel, and their shared acceleration scale are theorem-level deterministic outputs of the accepted susceptibility branch, up to the residual interval $\mathcal R_{\mathrm{DS}}$. If $\mathfrak X_{\mathrm{DS}}$ is absent, $(A_G,m)$, $L_0$, and $(K,q,A_{\mathrm{PM}})$ retain the benchmark, phenomenological, or bridge-normalization statuses stated above.
+
+*Proof.* Items 1--5 fix the maps from the retained covariant susceptibility to the weak-field galaxy law and the cluster source response. Item 6 gives a finite admissible ansatz family, a PCE functional, a unique minimizer, and a strict separation gap modulo response equivalence. Theorem D.8.9b therefore fixes $\Theta_{\mathrm{DS}}^*$ uniquely in the retained quotient. Equation (I.13d.2) gives covariant conservation of the total source, while the local and homogeneous-background conditions keep the solar-system and early-universe projections inside the certified residual interval. Hence the projected kernels are deterministic images of one finite certificate. Without the certificate, at least one of the susceptibility kernel, projection maps, minimizer, conservation check, or residual interval is not fixed, so Theorem P.14.1f blocks theorem-level promotion of the phenomenological parameters. ∎
+
 **I.14 Timescale Separation (Quasistatic Local-Relaxation Branch)**
 
 On the quasistatic local-relaxation branch, the adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $G(R)$ are assumed to reach local PCE equilibrium on timescales (Myr–Gyr in this branch) short compared with potential cosmological drift of the environment or fundamental parameters that might cause $(L_0, A_G, m)$ to evolve (Gyr–Hubble time). Under this branch assumption, $G(R)$ may be treated as quasi-static when analyzing galaxy dynamics, while allowing for a slow cosmic evolution of the universal parameters themselves. A first-principles derivation of the Myr–Gyr local equilibration scale from the Appendix D adaptation dynamics ($\eta_{\mathrm{adapt}}$ and the local-PL neighborhood structure of Theorem D.8) remains a separate closure lemma; the galaxy-scale phenomenology of Sections I.6-I.13 inherits this quasistatic branch label.
@@ -988,4 +1016,4 @@ The PU framework proposes a multi-scale solution to the phenomena attributed to 
 1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Equation I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
 2.  **At cluster scales**, where a running $G(R)$ is cosmologically constrained, the mass discrepancy is modeled by a **non‑local predictive‑matter response**. A linear, single‑scale kernel is sufficient for **stacked profiles**, while **high‑concentration outliers** (e.g., A1689) demand either a **mild nonlinearity $q>0$** or a **multi‑scale kernel**. All options remain **CMB‑safe** with $A_G\simeq 0$ and are quantitatively testable against lensing data.
 
-This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale only after the Appendix H bridge normalization is adopted, with the adopted representative giving the exact lock $g_\Lambda=c^2\sqrt{\Lambda}/8$; the galaxy response law is a phenomenological kernel with testable universal parameters; and the cluster response is a non-local source kernel whose conservation and lensing consequences are explicit model assumptions. The strongest common test is whether galaxy dynamics, baryonic surface-density thresholds, and cluster/lensing response can all be written with the same $g_\Lambda$ rather than with independent acceleration scales.
+This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale after the Appendix H bridge normalization is adopted, with the adopted representative giving the exact lock $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the corresponding vacuum branch. The galaxy and cluster response kernels are phenomenological until an accepted covariant dark-susceptibility certificate $\mathfrak X_{\mathrm{DS}}$ supplies the common kernel, projection maps, conservation check, strict PCE minimizer, and residual interval of Definition I.13d. With that record accepted, Theorem I.13e makes the galaxy law, cluster predictive-matter source, and shared acceleration scale deterministic outputs of one susceptibility branch. The strongest common test is whether galaxy dynamics, baryonic surface-density thresholds, and cluster/lensing response can all be written with the same $g_\Lambda$ rather than with independent acceleration scales.

@@ -3906,6 +3906,39 @@ or the heat/zeta equivalent fixed by $\Gamma$. No sector may alter $\mathfrak L_
 
 *Proof.* The sector values are restrictions of one resolvent trace functional of $\mathfrak L_{\mathrm{PU}}$ with one regulator, one contour or heat/zeta prescription, and one tail certificate. On an overlap subblock, Corollary X.9.6g.3 identifies the mixed finite differences as restrictions of the same finite function on the shared chamber. Hence the shared finite part is unique on the ledger. Altering one of the listed entries changes the finite record fixed by $\mathfrak h_{\mathrm{det}}$ and therefore changes the branch. ∎
 
+**Definition X.9.6g.7 (Cross-Sector Numerical Closure Record).** A cross-sector numerical closure record is a finite tuple
+$$
+\mathfrak N_{\mathrm{PU}}
+=
+(\mathfrak Z_{\mathrm{PU}},\mathfrak M_{\mathrm{det}},\mathfrak R_\alpha,\mathfrak F_U^{(4)},\mathfrak R_{\mathrm{EW}},\mathfrak C_{\mathrm{fl}},\mathfrak C_B^{\mathrm{tr}},\mathfrak X_{\mathrm{DS}},\mathfrak O_{\mathrm{PU}},\chi_{\mathrm{num}})
+\tag{X.9.6g.7}
+$$
+where:
+
+1. $\mathfrak Z_{\mathrm{PU}}$ is the master zeta-index ledger of Definition X.9.6g.
+2. $\mathfrak M_{\mathrm{det}}$ is the strict determinant-sector ledger of Definition X.9.6g.5.
+3. $\mathfrak R_\alpha$ is the accepted fine-structure residual gate, with the same Thomson-limit normalization as Appendix Z.
+4. $\mathfrak F_U^{(4)}$ is the four-mode Fredholm-prefactor record of Definition U.73e.
+5. $\mathfrak R_{\mathrm{EW}}$ is either an accepted forward-locked RHG record, an accepted torus-threshold record, or an accepted spectral-action transfer record satisfying Definition T.78.10.
+6. $\mathfrak C_{\mathrm{fl}}$ is an accepted flavor certificate, or $\mathfrak J_{\mathrm{RHG-fl}}$ replaces the pair $(\mathfrak R_{\mathrm{EW}},\mathfrak C_{\mathrm{fl}})$ by the accepted joint threshold-flavor certificate of Definition T.79.8a.
+7. $\mathfrak C_B^{\mathrm{tr}}$ is an accepted baryogenesis transport certificate, or the accepted APS-Kubo certificate $\mathfrak C_B^{\mathrm{APSK}}$ of Definition Y.6.1c and Theorem Y.6.1d supplies the equivalent finite transport output.
+8. $\mathfrak X_{\mathrm{DS}}$ is an accepted covariant dark-susceptibility certificate of Definition I.13d.
+9. $\mathfrak O_{\mathrm{PU}}$ is the overlap-commutativity audit proving that all shared projectors, finite parts, threshold maps, RG conventions, determinant ratios, and unit normalizations descend from the same parent branch.
+10. $\chi_{\mathrm{num}}=1$ records that all entries are fixed before any numerical comparison is consulted.
+
+The output vector of $\mathfrak N_{\mathrm{PU}}$ is
+$$
+\Pi_{\mathrm{num}}(\mathfrak N_{\mathrm{PU}})
+=
+(\alpha_{\mathrm{cert}}^{-1},\Lambda_4L_P^2,\Delta_{\mathrm{EW}},\Pi_T,\eta_B,\Theta_{\mathrm{dark}}),
+\tag{X.9.6g.8}
+$$
+where $\Theta_{\mathrm{dark}}$ denotes the galaxy and cluster response-kernel tuple produced by $\mathfrak X_{\mathrm{DS}}$.
+
+**Theorem X.9.6g.8 (Simultaneous Numerical Determinacy and No Retuning).** If $\mathfrak N_{\mathrm{PU}}$ is accepted, then every component of $\Pi_{\mathrm{num}}(\mathfrak N_{\mathrm{PU}})$ is a deterministic function of the accepted finite records, up to the certified residual interval attached to that component. If one component record is absent, only the corresponding component remains certificate-pending; accepted shared entries cannot be changed to improve another component without creating a different branch.
+
+*Proof.* Theorem X.9.6g.1 forces every determinant, finite part, eta phase, threshold finite part, or spectral-action coefficient used by a theorem-level numerical sector to be a projection of the master ledger $\mathfrak Z_{\mathrm{PU}}$. Definition X.9.6g.5 and Corollary X.9.6g.6 prohibit independent retuning of any shared determinant subblock. Definitions T.78.10, T.79.8a, U.73e, Y.11.7e, Y.6.1c, and I.13d make the electroweak, flavor, cosmological-constant prefactor, baryogenesis, APS-Kubo transport, and dark-response maps finite records. The overlap audit $\mathfrak O_{\mathrm{PU}}$ identifies common normalization and descent maps, so the product map (X.9.6g.8) is a single finite composition rather than a set of independent fits. If a component record is absent, Theorem P.14.1f gives non-identifiability for that component, while the already accepted records remain fixed by their own strict certificates. ∎
+
 **Definition X.9.6h (Canonical Doubled Dirac Factorization of the Master Operator).** Let $\mathfrak D_{\mathrm{PU}}$ be a closed predictive Dirichlet datum and let $\mathfrak L_{\mathrm{PU}}\ge0$ be its master predictive operator. Define
 $$
 \mathscr H_{\mathrm D}
