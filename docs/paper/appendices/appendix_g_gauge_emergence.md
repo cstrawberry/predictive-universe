@@ -1875,7 +1875,7 @@ $$
 With primitive Standard Model normalization $a=1/6$,
 $$
 y_q=\frac16,\quad
-y_{u^c}=-\frac23,\quad
+y_{u^c}=-\frac{2}{3},\quad
 y_{d^c}=\frac13,\quad
 y_\ell=-\frac12,\quad
 y_{e^c}=1,\quad
@@ -2630,7 +2630,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
        \qquad
        (y_q,y_H,y_{u^c},y_{d^c},y_\ell,y_{e^c})
        =
-       \left(\frac16,\frac12,-\frac23,\frac13,-\frac12,1\right).
+       \left(\frac16,\frac12,-\frac{2}{3},\frac13,-\frac12,1\right).
        \tag{G.8.1b.4}
        $$
        The global $SU(2)$ determinant holonomy is also trivial on this branch, since the number of left-handed $SU(2)$ doublets per family is $N_c+1=4$. A single sterile singlet may be appended only as $(1,1)_0$ on this branch: a nonzero abelian charge would either add uncancelled abelian determinant-line terms or require an additional response channel and compensating content not included in (G.8.1b.1).
@@ -3629,7 +3629,7 @@ This appendix has demonstrated how the Predictive Universe framework derives fun
 
 4. **Three Generations:** Appendix R derives the minimal admissible value $N_g = 3$ from anomaly cancellation together with the CP-violation requirement in the modeled family-charge sector, and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. The $D_4$ triality orbit and $E_8$/Leech construction supply compatible three-fold scaffolds rather than independent proofs (Appendix R, Theorem R.3.4; Proposition R.3.5.1a; Proposition R.4.2).
 
-5. **Fine-Structure Constant:** The Appendix Z U(1) sector gives the closed-form Thomson core $\alpha_{em,0}^{-1}=137.03609205522863\ldots$ and the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1), with no continuous fit parameter in the core expression.
+5. **Fine-Structure Constant:** The Appendix Z U(1) sector gives the closed-form Thomson core $\alpha_{em,0}^{-1}=137.03609205522863\ldots$ and the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1), with no continuous fit parameter in the core expression. The hypercharge-recoil operator-realization gate is conditional on the accepted finite Ward residual certificate of Definition Z.27.11k.12 and gives $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ only on that accepted branch.
 
 6. **Unified Probability Measures:** Quantum (Born), thermal (Boltzmann), and gravitational (Unruh-Hawking) probability distributions arise from a common mechanism—ND-RID equilibration to Gibbs fixed points under PCE optimization (Section G.1.9).
 

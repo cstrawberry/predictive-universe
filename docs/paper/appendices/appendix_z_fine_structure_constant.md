@@ -4764,6 +4764,476 @@ Only nonzero classes in $H^1_W(\alpha)$ can contribute to $R_\alpha$.
 
 *Proof.* By Theorem Z.27.11k.1, $\Phi_\alpha$ vanishes on $\operatorname{im}\delta_0$. Therefore exact response-coordinate or normalization changes are PPI/PCE-null for the Thomson row. ∎
 
+**Definition Z.27.11k.12 (Hypercharge-Recoil Operator-Realization Certificate).** A hypercharge-recoil operator-realization certificate for the Appendix Z Thomson branch is a proof-carrying finite residual-operator record
+$$
+\mathfrak O_{\alpha,YR\perp}
+=
+\left(
+\mathfrak S_{\alpha,YR\perp},
+B^0,B^1,B^2,
+D_0,D_1,
+\iota_3,\iota_5,\iota_7,
+Q,
+r_{\alpha,YR\perp},
+\Phi_{\alpha,YR\perp},
+\mathcal A_{\alpha,YR\perp},
+\chi_{\alpha,YR\perp}
+\right),
+\tag{Z.27.11k.12a}
+$$
+where
+$$
+\mathfrak S_{\alpha,YR\perp}
+=
+\left(
+W_5,P_C,P_W,Y,T_3,
+\Pi_{\mathrm{act/ref}},\Pi_{\perp},\omega^{(7)},
+G_{\ge7},A_{\ge7},\eta_7
+\right),
+$$
+and the structural source data are
+$$
+W_5=\mathbb C_C^3\oplus\mathbb C_W^2,
+\qquad
+P_C=\operatorname{diag}(1,1,1,0,0),
+\qquad
+P_W=\operatorname{diag}(0,0,0,1,1),
+$$
+$$
+Y=-\frac{1}{3}P_C+\frac{1}{2}P_W,
+\qquad
+T_3=\frac{1}{2}\operatorname{diag}(1,-1)\text{ on }\mathbb C_W^2,
+\tag{Z.27.11k.12b}
+$$
+and
+$$
+\Pi_{\mathrm{act/ref}}\in M_{K_0}(\mathbb C),
+\qquad
+\Pi_{\mathrm{act/ref}}^2=\Pi_{\mathrm{act/ref}}=\Pi_{\mathrm{act/ref}}^*,
+\qquad
+K_0=3,
+$$
+$$
+\operatorname{rank}(\Pi_{\mathrm{act/ref}})=a=2,
+\qquad
+\Pi_{\perp}=I_{K_0}-\Pi_{\mathrm{act/ref}},
+\qquad
+\operatorname{rank}(\Pi_{\perp})=1.
+\tag{Z.27.11k.12c}
+$$
+The ordered bases are
+$$
+B^0=(\lambda_{\parallel},\lambda_0,\lambda_1),
+$$
+$$
+B^1=(\omega_Y,\omega_5,\sigma_{\parallel},\sigma_{\perp},\nu_0,\nu_1,\theta),
+$$
+$$
+B^2=(\Theta),
+\tag{Z.27.11k.12d}
+$$
+with source interpretation
+$$
+\omega_Y=Y^2,
+\qquad
+\omega_5=\Pi_{\mathrm{act/ref}}\boxtimes Y^2,
+$$
+$$
+\sigma_{\parallel}=\Pi_{\mathrm{act/ref}}\boxtimes\omega^{(7)},
+\qquad
+\sigma_{\perp}=\Pi_{\perp}\boxtimes\omega^{(7)}.
+\tag{Z.27.11k.12e}
+$$
+The seventh-order contraction data and sign convention are
+$$
+G_{\ge7}=\begin{pmatrix}2/3&0\\0&1/3\end{pmatrix},
+\qquad
+A_{\ge7}=\begin{pmatrix}1&0\\0&0\end{pmatrix},
+\qquad
+\eta_7=-1.
+\tag{Z.27.11k.12f}
+$$
+Here $\boxtimes$ is the finite external-product pairing in the same post-core Ward residual operator package. Its domain, bilinearity, and displayed coordinate values are part of the audit ledger $\mathcal A_{\alpha,YR\perp}$; no independent multiplicative algebra is imported. The symbol $\omega^{(7)}$ denotes the seventh-order electromagnetic source symbol whose uniqueness, retention, and post-core status are part of the source-origin ledger below. The entries $\nu_0,\nu_1$ are response-normalization null shadows, and $\theta$ is the obstruction generator recorded by the same ledger.
+
+In these bases the operator-origin ledgers of $\mathcal A_{\alpha,YR\perp}$ must prove that the actual Ward maps of Definition Z.27.11k have coordinate matrices
+$$
+D_0=
+\begin{pmatrix}
+0&0&0\\
+0&0&0\\
+1&0&0\\
+0&0&0\\
+0&1&0\\
+0&0&1\\
+0&0&0
+\end{pmatrix},
+\qquad
+D_1=
+\begin{pmatrix}0&0&0&0&0&0&1\end{pmatrix}.
+\tag{Z.27.11k.12g}
+$$
+Equivalently,
+$$
+\delta_0\lambda_{\parallel}=\sigma_{\parallel},
+\qquad
+\delta_0\lambda_0=\nu_0,
+\qquad
+\delta_0\lambda_1=\nu_1,
+\qquad
+\delta_1\theta=\Theta,
+\tag{Z.27.11k.12h}
+$$
+and all other displayed basis vectors have zero image under the corresponding displayed map.
+
+The source embeddings are
+$$
+\iota_3(Y^2)=e_1,
+\qquad
+\iota_5(\Pi_{\mathrm{act/ref}}\boxtimes Y^2)=e_2,
+$$
+$$
+\iota_7(x_{\parallel},x_{\perp})=x_{\parallel}e_3+x_{\perp}e_4,
+\qquad
+\iota_7(1,0)=\sigma_{\parallel},
+\qquad
+\iota_7(0,1)=\sigma_{\perp}.
+\tag{Z.27.11k.12i}
+$$
+The quotient projection is
+$$
+Q=
+\begin{pmatrix}
+1&0&0&0&0&0&0\\
+0&1&0&0&0&0&0\\
+0&0&0&1&0&0&0
+\end{pmatrix},
+\tag{Z.27.11k.12j}
+$$
+and the residual source vector is
+$$
+r_{\alpha,YR\perp}=e_1+e_2+e_4.
+\tag{Z.27.11k.12k}
+$$
+The coordinate row of the accepted Thomson residual functional is
+$$
+\Phi_{\alpha,YR\perp}
+=
+\begin{pmatrix}
+-\frac{5}{3}c_1(u^*)^3&
+\frac{10}{9}c_1(u^*)^5&
+0&
+-\frac{1}{3}c_1(u^*)^7&
+0&0&0
+\end{pmatrix},
+\tag{Z.27.11k.12l}
+$$
+where
+$$
+u^*=2^{1/8}-1,
+\qquad
+c_1=\frac{\pi}{24\sqrt3}.
+\tag{Z.27.11k.12m}
+$$
+The symbol $u^*$ in (Z.27.11k.12m) is the same Appendix Z capacity-saturation value $u^*$.
+
+The audit ledger $\mathcal A_{\alpha,YR\perp}$ is accepted only if it proves the finite identities below inside the residual-operator package of Definition Z.27.11a, with the operator, domain, regularization rule, and error-bound data required by Definition Z.27.11j fixed before comparison, not merely inside a newly named coordinate vector space.
+
+1. **Source-origin equality.** The post-core electromagnetic residual source space not already included in the bulk Ward, interface, projected-response, democratic-curvature, separable-response, or exact $SU(2)$ sinc entries is exactly the span of the seven $B^1$ vectors in (Z.27.11k.12d). Thus (Z.27.11k.12d) is an equality of the branch residual source space, not a truncating subset.
+
+2. **Differential-origin equality.** The actual response-coordinate coboundary and Ward-obstruction maps of Definition Z.27.11k have the coordinate matrices $D_0,D_1$ in (Z.27.11k.12g).
+
+3. **Evaluation-origin equality.** The row (Z.27.11k.12l) is the coordinate form of the Thomson residual functional supplied by the exact residual-operator gate of Definition Z.27.11j. Its coefficients are obtained from the determinant-compatible hypercharge trace, the active-reference rank fraction, and the seventh-order passive-complement contraction recorded in (Z.27.11k.12f); they are not assigned by comparison with $\alpha_{\mathrm{obs}}$.
+
+4. **Residual-source equality.** After exact terms and already-counted classes are removed, the residual operator has coordinate vector (Z.27.11k.12k). In particular, the active/reference seventh-order source is exact because it is $\delta_0\lambda_{\parallel}$, and the retained seventh-order non-exact source is the passive complement $\sigma_{\perp}$.
+
+5. **Regularization and error-bound equality.** The finite operator realization is the complete finite residual operator on this branch under the same finite-part, normalization, and source-removal convention used in Definition Z.27.11a. No trace-class remainder, omitted finite source, or matrix-discretization error remains outside the displayed finite source space. If such a remainder remains, it must be carried as a separate interval under Definition Z.27.11g or a separate operator record under Definition Z.27.11j, and it cannot be absorbed into (Z.27.11k.20a).
+
+6. **Forward lock.** The source alphabet, contraction data, matrices, embeddings, quotient projection, source vector, evaluation row, and regularization/error record are entered in the evidence register before empirical comparison and contain no field selected by the recorded value of $\alpha_{\mathrm{obs}}$.
+
+The audit bit $\chi_{\alpha,YR\perp}$ records exactly these six acceptance clauses. If any one of them is absent, $\mathfrak O_{\alpha,YR\perp}$ is only a candidate matrix diagnostic and does not promote the Thomson row.
+
+**Algorithm Z.27.11k.13 (Hypercharge-Recoil Ledger Audit).** The proof-carrying ledger in Definition Z.27.11k.12 is the finite tuple
+$$
+\mathcal A_{\alpha,YR\perp}
+=
+(\mathcal A_0,\mathcal A_1,\mathcal A_2,\mathcal A_3,\mathcal A_4,\mathcal A_5,\mathcal A_6,\mathcal A_7,\mathcal A_8),
+\tag{Z.27.11k.13a}
+$$
+accepted by the following audit.
+
+1. $\mathcal A_0$ is the parent-branch witness: the exact Appendix Z core-removal convention is the one in Definition Z.27.11a and Theorem Z.26. It records that the bulk Ward term, interface term, democratic curvature term, separable response term, and exact $SU(2)$ sinc factor have already been removed from $C^1_{\mathrm{em}}$.
+
+2. $\mathcal A_1$ is the gauge-carrier witness: the connected finite-response interface functor is the $S(U(3)\times U(2))$ branch of Theorem G.8.4h.2, with determinant line $\Lambda^3\mathbb C_C^3\otimes\Lambda^2\mathbb C_W^2$ fixed. The chiral determinant-line descent and minimal-denominator hypercharge normalization are those of Theorem G.8.1b and Corollary G.8.2.
+
+3. $\mathcal A_2$ is the primitive-hypercharge witness: the retained abelian central generator on $W_5=\mathbb C_C^3\oplus\mathbb C_W^2$ is the determinant-compatible primitive block scalar
+$$
+Y=-\frac13P_C+\frac12P_W
+$$
+up to the harmless simultaneous sign convention, and response coefficients are quadratic in $Y$.
+
+4. $\mathcal A_3$ is the active-rank witness: the active/reference projector has rank $a=2$ inside $K_0=3$, with orthogonal complement of rank $1$. The witness must identify this projector with the same active-rank branch used in the Appendix Z minimal PCE attractor and may not choose a rank after comparison.
+
+5. $\mathcal A_4$ is the source-filtration witness. After the removals in $\mathcal A_0$, the accepted hypercharge-recoil residual filtration has associated graded source list
+$$
+\operatorname{gr}_3 C^1_{\mathrm{em}}=\operatorname{span}\{\omega_Y\},
+\qquad
+\operatorname{gr}_5 C^1_{\mathrm{em}}=\operatorname{span}\{\omega_5\},
+$$
+$$
+\operatorname{gr}_7 C^1_{\mathrm{em}}=\operatorname{span}\{\sigma_{\parallel},\sigma_{\perp}\},
+\qquad
+C^1_{\mathrm{null/obs}}=\operatorname{span}\{\nu_0,\nu_1,\theta\}.
+\tag{Z.27.11k.13b}
+$$
+The witness is rejected if it is only a degree cutoff. It must prove that every source outside (Z.27.11k.13b) is either already included in the core certificate, Ward-exact, response-null under PPI/PCE, an obstruction multiple of $\theta$, or a separate remainder entered under Definition Z.27.11g or Definition Z.27.11j.
+
+6. $\mathcal A_5$ is the Ward-map witness: in the bases (Z.27.11k.12d), the actual maps of Definition Z.27.11k are exactly $D_0,D_1$ in (Z.27.11k.12g). This includes the exactness identity $\sigma_{\parallel}=\delta_0\lambda_{\parallel}$ and the obstruction identity $\delta_1\theta=\Theta$.
+
+7. $\mathcal A_6$ is the evaluation witness. The evaluation row must be obtained from the fixed parent data by
+$$
+\Phi(\omega_Y)
+=
+-\frac{\operatorname{Tr}_{W_5}(Y^2)}{\operatorname{Tr}_{\mathbb C^2}(T_3^2)}c_1(u^*)^3,
+$$
+$$
+\Phi(\omega_5)
+=
+\frac{\operatorname{rank}(\Pi_{\mathrm{act/ref}})}{K_0}
+\frac{\operatorname{Tr}_{W_5}(Y^2)}{\operatorname{Tr}_{\mathbb C^2}(T_3^2)}c_1(u^*)^5,
+$$
+$$
+\Phi(\sigma_{\perp})
+=
+\eta_7\,e_{\perp}^TG_{\ge7}(I+(u^*)^2A_{\ge7})^{-1}e_{\perp}\,c_1(u^*)^7,
+\qquad
+e_{\perp}=(0,1)^T,
+\tag{Z.27.11k.13c}
+$$
+and must vanish on $\sigma_{\parallel},\nu_0,\nu_1,\theta$.
+
+8. $\mathcal A_7$ is the residual-class witness: after core removal and exact-source removal, the residual vector is $r_{\alpha,YR\perp}=e_1+e_2+e_4$. Equivalently,
+$$
+[r_{\alpha,YR\perp}]=[\omega_Y]+[\omega_5]+[\sigma_{\perp}]
+$$
+in $H^1_W(\alpha;YR\perp)$.
+
+9. $\mathcal A_8$ is the no-remainder and forward-lock witness: the finite regularization convention, source-removal convention, contraction data, source vector, evaluation row, and error-bound record are entered before empirical comparison. Any additional finite source, trace-class tail, discretization term, or changed contraction coefficient is either rejected or entered as a distinct branch with its own residual interval.
+
+**Lemma Z.27.11k.14 (Ledger Type Check and Parameter Closure).** If Algorithm Z.27.11k.13 accepts $\mathcal A_{\alpha,YR\perp}$, then the record of Definition Z.27.11k.12 is a well-typed exact residual-operator gate. Moreover the apparent replacements
+$$
+\Phi_q=
+\begin{pmatrix}
+-\frac53c_1(u^*)^3&\frac{10}{9}c_1(u^*)^5&0&q\,c_1(u^*)^7&0&0&0
+\end{pmatrix},
+\qquad
+r_t=e_1+e_2+te_4
+\tag{Z.27.11k.14a}
+$$
+are accepted by the same ledger if and only if
+$$
+q=-\frac13,
+\qquad
+t=1.
+\tag{Z.27.11k.14b}
+$$
+
+*Proof.* Items $\mathcal A_0$--$\mathcal A_5$ identify the domain, source filtration, and Ward maps of Definition Z.27.11k inside the same residual-operator package as Definition Z.27.11a and Definition Z.27.11j. Hence $D_1D_0=0$ is a typed identity of the actual branch maps, not only a coordinate calculation. Item $\mathcal A_6$ fixes the seventh-order coefficient by (Z.27.11k.13c). Since $e_{\perp}^TG_{\ge7}(I+(u^*)^2A_{\ge7})^{-1}e_{\perp}=1/3$ and $\eta_7=-1$, any row of the form $\Phi_q$ passes the evaluation witness only when $q=-1/3$. Item $\mathcal A_7$ fixes the residual class coefficient of $[\sigma_{\perp}]$ to be one, so $r_t$ passes the residual-class witness only when $t=1$. The no-remainder and forward-lock witness $\mathcal A_8$ prevents absorbing any failure into an unrecorded tail. ∎
+
+**Theorem Z.27.11k.15 (Ledger Rigidity of the Hypercharge-Recoil Branch).** Any two accepted hypercharge-recoil ledgers with the same parent Appendix Z core branch, the same determinant-compatible $S(U(3)\times U(2))$ gauge-carrier witness, and the same active-rank witness are cochain-isomorphic by the unique basis-preserving isomorphism that fixes
+$$
+\omega_Y,\omega_5,\sigma_{\parallel},\sigma_{\perp},\nu_0,\nu_1,\theta
+$$
+and preserves $D_0,D_1,Q,r_{\alpha,YR\perp}$ and $\Phi_{\alpha,YR\perp}$. Consequently the accepted branch has no continuous residual parameter, no free seventh-order coefficient, and no hidden source coefficient selected by the observed value of $\alpha$.
+
+*Proof.* The parent branch witnesses $\mathcal A_0$--$\mathcal A_3$ fix $W_5$, $Y$, $T_3$, $K_0$, $\Pi_{\mathrm{act/ref}}$, and $\Pi_{\perp}$ up to the harmless simultaneous sign of $Y$, which is removed by the quadratic response. The source-filtration witness $\mathcal A_4$ fixes the accepted ordered source alphabet after core removal, while $\mathcal A_5$ fixes the two Ward maps in that alphabet. Thus any accepted presentation has the same finite cochain complex up to the identity relabeling of the displayed sources. The evaluation witness $\mathcal A_6$ fixes the row entries by trace, rank, and contraction data; the residual-class witness $\mathcal A_7$ fixes the vector $e_1+e_2+e_4$; and $\mathcal A_8$ excludes unrecorded remainders. Therefore no accepted same-parent ledger can change a coefficient, add a source, or alter the residual value without failing the audit or becoming a new branch under Corollary Z.27.11i. ∎
+
+**Corollary Z.27.11k.16 (Extra-Source and Extra-Remainder Boundary).** A proposed source $\zeta$ outside (Z.27.11k.13b), a changed passive coefficient, or a nonzero unlisted remainder cannot be appended to the accepted hypercharge-recoil branch. It must be classified as one of the following: an already-included core term, a Ward-exact term, a PPI/PCE-null term, an obstruction term, a separately certified Definition Z.27.11g interval, a separately certified Definition Z.27.11j operator record, or a new branch.
+
+*Proof.* This is the disjunction required by $\mathcal A_4$ and $\mathcal A_8$. If $\zeta$ is already included, exact, null, or obstructed, it does not alter the accepted cohomology evaluation. If it is not one of these, it is an additional residual datum and must be carried by a separate certificate. Adding it without such a certificate violates Definition Z.27.11j and Theorem Z.27.11j.1; changing the branch after comparison violates Corollary Z.27.11d and Corollary Z.27.11i. ∎
+
+**Lemma Z.27.11k.17 (Primitive Hypercharge and Active-Recoil Factors).** On the determinant-compatible $S(U(3)\times U(2))$ branch used by Appendix G,
+$$
+\frac{\operatorname{Tr}_{W_5}(Y^2)}{\operatorname{Tr}_{\mathbb C^2}(T_3^2)}=\frac{5}{3},
+\qquad
+\frac{\operatorname{rank}(\Pi_{\mathrm{act/ref}})}{K_0}
+\frac{\operatorname{Tr}_{W_5}(Y^2)}{\operatorname{Tr}_{\mathbb C^2}(T_3^2)}=\frac{10}{9}.
+\tag{Z.27.11k.17a}
+$$
+
+*Proof.* The determinant-compatible central block-scalar abelian generator on $W_5=\mathbb C_C^3\oplus\mathbb C_W^2$ has the form $Z=y_CP_C+y_WP_W$ with
+$$
+3y_C+2y_W=0.
+$$
+In denominator-six primitive normalization, $m=6y_C$ and $n=6y_W$ are coprime integers satisfying $3m+2n=0$. Hence $(m,n)=(-2,3)$ or $(2,-3)$, so $Z=Y$ or $Z=-Y$. The current-current response is quadratic in the charge generator, so the sign is removed. Directly,
+$$
+\operatorname{Tr}_{W_5}(Y^2)
+=3\left(\frac{1}{3}\right)^2+2\left(\frac{1}{2}\right)^2
+=\frac{5}{6},
+$$
+while
+$$
+\operatorname{Tr}_{\mathbb C^2}(T_3^2)=\frac{1}{2}.
+$$
+The ratio is $(5/6)/(1/2)=5/3$. Since $\operatorname{rank}(\Pi_{\mathrm{act/ref}})=a=2$ and $K_0=3$, the active-reference fraction is $2/3$, and the product is $(2/3)(5/3)=10/9$. ∎
+
+**Lemma Z.27.11k.18 (Row-Reduction and Source Exhaustion of an Accepted Realization).** If $\mathfrak O_{\alpha,YR\perp}$ is accepted, then
+$$
+D_1D_0=0,
+\qquad
+H^1_W(\alpha;YR\perp)
+=
+\operatorname{span}\{[\omega_Y],[\omega_5],[\sigma_{\perp}]\},
+\tag{Z.27.11k.18a}
+$$
+and every closed residual source has the unique quotient decomposition
+$$
+z=z_1e_1+z_2e_2+z_4e_4+D_0(z_3,z_5,z_6)^T
+\tag{Z.27.11k.18b}
+$$
+for
+$$
+z=(z_1,z_2,z_3,z_4,z_5,z_6,0)^T\in\ker D_1.
+$$
+
+*Proof.* Direct multiplication gives $D_1D_0=0$. Since $D_1$ has its only pivot in the seventh column,
+$$
+\ker D_1=\operatorname{span}\{e_1,e_2,e_3,e_4,e_5,e_6\}.
+$$
+The image of $D_0$ is
+$$
+\operatorname{im}D_0=\operatorname{span}\{e_3,e_5,e_6\}.
+$$
+Therefore
+$$
+\ker D_1/\operatorname{im}D_0
+=
+\operatorname{span}\{[e_1],[e_2],[e_4]\}
+=
+\operatorname{span}\{[\omega_Y],[\omega_5],[\sigma_{\perp}]\}.
+$$
+For any closed vector $z=(z_1,z_2,z_3,z_4,z_5,z_6,0)^T$,
+$$
+D_0(z_3,z_5,z_6)^T=z_3e_3+z_5e_5+z_6e_6,
+$$
+which gives (Z.27.11k.18b). The accepted source-origin equality in Definition Z.27.11k.12 identifies this finite row reduction with exhaustion of the branch residual source space, rather than with exhaustion of a merely stipulated subspace. ∎
+
+**Lemma Z.27.11k.19 (Evaluation Descent and Passive-Complement Coefficient).** If $\mathfrak O_{\alpha,YR\perp}$ is accepted, then
+$$
+\Phi_{\alpha,YR\perp}D_0=0,
+\tag{Z.27.11k.19a}
+$$
+so $\Phi_{\alpha,YR\perp}$ descends to $H^1_W(\alpha;YR\perp)$. Moreover,
+$$
+\Phi_{\alpha,YR\perp}(\omega_Y)=-\frac{5}{3}c_1(u^*)^3,
+$$
+$$
+\Phi_{\alpha,YR\perp}(\omega_5)=\frac{10}{9}c_1(u^*)^5,
+$$
+and
+$$
+\Phi_{\alpha,YR\perp}(\sigma_{\perp})=-\frac{1}{3}c_1(u^*)^7.
+\tag{Z.27.11k.19b}
+$$
+
+*Proof.* The columns of $D_0$ are $e_3,e_5,e_6$, and the third, fifth, and sixth entries of the row (Z.27.11k.12l) are zero. Hence $\Phi_{\alpha,YR\perp}D_0=0$. The first two displayed values follow from Lemma Z.27.11k.17 and the evaluation-origin clause of Definition Z.27.11k.12. For the seventh-order passive complement, use the contraction data in (Z.27.11k.12f). With $e_{\perp}=(0,1)^T$,
+$$
+e_{\perp}^TG_{\ge7}(I+(u^*)^2A_{\ge7})^{-1}e_{\perp}
+=e_{\perp}^TG_{\ge7}e_{\perp}=\frac{1}{3}.
+$$
+Since $\eta_7=-1$, the passive-complement contribution is $-(1/3)c_1(u^*)^7$. ∎
+
+**Theorem Z.27.11k.20 (Exact Hypercharge-Recoil Closure on an Accepted Operator-Realized Branch).** If the operator-realization certificate $\mathfrak O_{\alpha,YR\perp}$ is accepted, then Definition Z.27.11j is satisfied and the Thomson residual is the fixed value
+$$
+R_{\alpha}^{YR\perp}
+=
+-\frac{5}{3}c_1(u^*)^3
++
+\frac{10}{9}c_1(u^*)^5
+-\frac{1}{3}c_1(u^*)^7.
+\tag{Z.27.11k.20a}
+$$
+Consequently
+$$
+\alpha^{-1}_{YR\perp}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt3}
++
+\frac{\pi u^*}{24\sqrt3}\operatorname{sinc}(u^*)
+-\frac{5}{3}c_1(u^*)^3
++
+\frac{10}{9}c_1(u^*)^5
+-
+\frac{1}{3}c_1(u^*)^7,
+\tag{Z.27.11k.20b}
+$$
+where $u^*=2^{1/8}-1$ and $c_1=\pi/(24\sqrt3)$. Numerically,
+$$
+R_{\alpha}^{YR\perp}
+=
+-0.00009287769839723537\ldots,
+\tag{Z.27.11k.20c}
+$$
+and
+$$
+\alpha^{-1}_{YR\perp}
+=
+137.03599917753023\ldots.
+\tag{Z.27.11k.20d}
+$$
+The comparison offset from the ledger value $137.035999177$ is
+$$
+\alpha^{-1}_{YR\perp}-137.035999177
+=5.3022969595\times10^{-10}.
+\tag{Z.27.11k.20e}
+$$
+
+*Proof.* By Definition Z.27.11k.12, an accepted $\mathfrak O_{\alpha,YR\perp}$ identifies the actual post-core residual operator domain, Ward differentials, residual source vector, Thomson evaluation functional, regularization rule, and zero additional error bound required by Definition Z.27.11j. Lemma Z.27.11k.18 gives the accepted cohomology basis and the source-exhaustion decomposition. Lemma Z.27.11k.19 shows that the evaluation row descends to cohomology and gives the three non-exact evaluations. Since Definition Z.27.11k.12 fixes
+$$
+[r_{\alpha,YR\perp}]=[\omega_Y]+[\omega_5]+[\sigma_{\perp}],
+$$
+Theorem Z.27.11k.1 gives
+$$
+R_\alpha
+=
+\Phi_{\alpha,YR\perp}(\omega_Y)
++
+\Phi_{\alpha,YR\perp}(\omega_5)
++
+\Phi_{\alpha,YR\perp}(\sigma_{\perp}),
+$$
+which is (Z.27.11k.20a). Adding the exact sinc-core value of Theorem Z.26 gives (Z.27.11k.20b). Direct evaluation at $u^*=2^{1/8}-1$ gives (Z.27.11k.20c) and (Z.27.11k.20d). The final subtraction is an after-the-fact comparison and is not an input to the certificate. ∎
+
+**Corollary Z.27.11k.21 (Forgetful Interval under Seventh-Order Source Downgrade).** If the source-origin and evaluation-origin clauses are accepted through degree five but the passive-complement source equality in (Z.27.11k.12k) is not accepted, while the seventh-order contraction scalar is only known to lie in the positive Ward-contraction interval $0\le\gamma_7\le1$, then the certified residual is the interval
+$$
+R_{\alpha}^{YR}
+=
+-\frac{5}{3}c_1(u^*)^3
++
+\frac{10}{9}c_1(u^*)^5
++[-c_1(u^*)^7,0].
+\tag{Z.27.11k.21a}
+$$
+Numerically,
+$$
+R_{\alpha}^{YR}
+=
+[-0.000092880205005933\ldots,-0.000092876445092886\ldots],
+\tag{Z.27.11k.21b}
+$$
+and
+$$
+\alpha^{-1}_{0}+R_{\alpha}^{YR}
+=
+[137.03599917502362\ldots,137.03599917878353\ldots].
+\tag{Z.27.11k.21c}
+$$
+
+*Proof.* The degree-three and degree-five terms are the first two terms in Theorem Z.27.11k.20. If the seventh-order source is not fixed to $e_{\perp}$ but its nonnegative contraction scalar satisfies $0\le\gamma_7\le1$, then the contribution $\eta_7\gamma_7 c_1(u^*)^7$ ranges over $[-c_1(u^*)^7,0]$ under the sign convention $\eta_7=-1$. Adding the exact sinc-core value gives the displayed interval. ∎
+
+**Remark Z.27.11k.22 (No Matrix Promotion without Operator Realization).** A finite row-reduction calculation on stipulated matrices proves only the quotient of those stipulated matrices. It closes the Thomson residual gate only when Definition Z.27.11k.12 is accepted as an operator-realization certificate satisfying Definition Z.27.11j and Algorithm Z.27.11b. Without the source-origin, differential-origin, evaluation-origin, residual-source, regularization/error-bound, and forward-lock ledgers, the same matrix remains a diagnostic candidate and the comparison row remains residual-gated.
+
 **Definition Z.27.11L (SPAP-Reflexive Sinc-Tail Audit Certificate).** On the canonical Appendix Z exact-sinc core branch, the SPAP-reflexive sinc-tail audit certificate is the record
 $$
 \mathfrak R_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}
@@ -5156,7 +5626,7 @@ This approach inverts the usual logic. Rather than starting with D-dimensional s
 | Prediction | Value | Source |
 |------------|-------|--------|
 | Spacetime dimension | D = 4 | Theorem Z.11 |
-| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1 |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; on an accepted hypercharge-recoil operator-realized branch, $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.12; Theorem Z.27.11k.20 |
 | Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
@@ -5245,6 +5715,7 @@ Relative = 0.677765 ppm
    - Multiplicative curvature response fixed by the canonical separable branch
    - Second-order curvature correction from Bures/Grassmannian geometry
    - Exact $SU(2)$ transport factor $\operatorname{sinc}(u^*)$
+   - Hypercharge-recoil operator-realization gate: on an accepted operator-realized finite Ward branch, the determinant-compatible hypercharge trace gives $5/3$, the active-recoil lift gives $10/9$, the passive-complement seventh-order source gives $-\frac{1}{3}c_1(u^*)^7$, and $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ (Definition Z.27.11k.12; Theorem Z.27.11k.20). If the passive-complement source is downgraded to the seventh-order positive-contraction bound, the branch gives $\alpha^{-1}_{0}+R_{\alpha}^{YR}\in[137.03599917502362\ldots,137.03599917878353\ldots]$ (Corollary Z.27.11k.21). Without the operator-realization ledgers these values remain diagnostic and do not close $R_\alpha$ (Remark Z.27.11k.22)
    - Closed-form structural reachability: $\alpha^{-1}_{0}$ is a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$, with no continuous fit anywhere in the chain (Theorem Z.26; Corollary Z.26a)
    - Arithmetic comparison: the closed form lies $9.2878\times10^{-5}$ from $137.035999177(21)$, about $0.678$ ppm
    - Certificate row: $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$, with $R_\alpha$ structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b) and not adjustable
