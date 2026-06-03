@@ -2833,7 +2833,7 @@ The following results have been derived with precise numerical predictions:
 
 | Result | Value | Source |
 |:-------|:------|:-------|
-| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; accepted hypercharge-recoil branch $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ | Appendix Z, Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.12; Theorem Z.27.11k.20 |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; accepted hypercharge-recoil branch $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ | Appendix Z, Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20 |
 | Electroweak scale | $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ | Appendix T, Theorem T.5 |
 | Weinberg angle | $\sin^2\theta_W^{(0)} = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |
