@@ -419,7 +419,7 @@ $$
 \mathcal{L}V(x) = -\nabla V(x)^T \eta(x) \nabla V(x) + \mathrm{tr}(D(x) \nabla^2 V(x))
 \quad \text{(D.9)}
 $$
-Using the bounds on $\eta(x)$ (A2) and $D(x)$ (A3), and noting that the Hessian $\nabla^2 V(x)$ is bounded on the compact set $\mathcal{K}$ (which follows from $V$ being $C^2$ as per Assumption A1), we get:
+Using the bounds on $\eta(x)$ (A2) and $D(x)$ (A3), and noting that the Hessian $\nabla^2 V(x)$ is bounded on the compact set $\mathcal{K}$ (which follows from the $C^2$ clause in assumption (A1) together with the compact confinement clause (A5) of §D.6.1), we get:
 $$
 \mathcal{L}V(x) \le -\eta_{min} \|\nabla V(x)\|^2 + \mathrm{tr}(D(x) \nabla^2 V(x))
 \le -\eta_{min} \|\nabla V(x)\|^2 + C_{noise}

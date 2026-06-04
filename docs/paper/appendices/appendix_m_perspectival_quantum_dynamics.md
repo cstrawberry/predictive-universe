@@ -980,7 +980,7 @@ $$
 D_1(S).
 $$
 
-Now choose $N=N^*(S)$ Fisher-orthogonal addressable registers from the available $n_S$ registers and construct $N$ diagonal challenges $S_{diag}^{(j)}$, $j=1,\ldots,N$, one per register. Let $E^{(N)}$ be the joint pattern encoding those diagonal challenges simultaneously, and write $\theta_S'$ for the self-model state after attempting to integrate $E^{(N)}$. The register family is Fisher-orthogonal by the theorem antecedent; in MPU-network product realizations this is supplied by the tensor-product/block-diagonal register construction of Theorem A.0.6 together with the finite $K_0$ SPAP core of Theorem 15. Therefore, by additivity of the Fisher metric on orthogonal parameter subspaces, for every $PP\in[0,\alpha_{SPAP})$,
+Now choose $N=N^*(S)$ Fisher-orthogonal addressable registers from the available $n_S$ registers and construct $N$ diagonal challenges $S_{\mathrm{diag}}^{(j)}$, $j=1,\ldots,N$, one per register. Lemma A.1.0 supplies the finite diagonal closure for each retained challenge, and the theorem antecedent supplies the independent-register branch. Let $E^{(N)}$ be the joint pattern encoding those diagonal challenges simultaneously, and write $\theta_S'$ for the self-model state after attempting to integrate $E^{(N)}$. The register family is Fisher-orthogonal by the theorem antecedent; in MPU-network product realizations this is supplied by the tensor-product/block-diagonal register construction of Theorem A.0.6 together with the finite $K_0$ SPAP core of Theorem 15. Therefore, by additivity of the Fisher metric on orthogonal parameter subspaces, for every $PP\in[0,\alpha_{SPAP})$,
 
 $$
 \left\|\Pi_S^{(PP)}(\theta_S')-\theta_S'\right\|_{\mathcal F_S}^2
@@ -1030,7 +1030,7 @@ $$
 \mu_S(E^{(N^*(S))})=\infty.
 $$
 
-Define $E^*:=E^{(N^*(S))}$. By Property R, each $S_{diag}^{(j)}$ is constructible within $\mathcal M$, and by PPI (Definition P.6.2), $E^*$ exists as a physically realizable pattern. $\square$
+Define $E^*:=E^{(N^*(S))}$. By Lemma A.1.0, each $S_{\mathrm{diag}}^{(j)}$ is constructible within $\mathcal M$ on the retained finite-program branch, and by PPI (Definition P.6.2), $E^*$ exists as a physically realizable pattern. $\square$
 
 **Remark M.10.5 (Terminological consistency with Definition 1).** The pattern $E^*$ with $\mu_S(E^*) = \infty$ is unprocessable by $S$ at finite cost (Theorem M.10.6 below). Since $S$ cannot process $E^*$, $E^*$ does not constitute *information for $S$* under Definition 1. The perspectival profile $\mathcal{P}_S(E^*)$ characterizes the boundary of the information regime — the point at which self-referential depth exceeds the system's processing capacity — rather than an instance of information.
 
@@ -1356,7 +1356,7 @@ The theorem is independent of $\tau$, because Definition M.10.3 assigns $\mu_S$ 
 | Theorem M.10.7 | Physicality | Thm M.10.3, PPI, Thm 31 |
 | Theorem M.10.8 | Predictability from above; finite-family screening; replay distinction | Thm M.10.5, M.10.3 |
 | Theorem M.10.9 | Irreducibility | Structural comparison |
-| Theorem M.10.10 | Entropic perspective transport | Compactness, strict convexity, Born descent |
+| Theorem M.10.10b | Entropic perspective transport | Compactness, strict convexity, Born descent |
 | Theorem M.10.10d | Predictive role-position equivalence and profile overclaim guard | Response-presheaf quotient, separating-profile branch |
 | Theorem M.10.11 | Perspectival simulation admissibility | Def M.10.3, Def P.16.1, Thm M.10.3, Thm M.10.6 |
 | Theorem M.6.10a.2 | Finite frame-change cost and covariance defect | Relative entropy, data processing, Pinsker bound |

@@ -1878,7 +1878,7 @@ $$S_\Sigma = \frac{k_B c^3 \mathcal{A}}{4G\hbar}$$
 
 ### E.9.3 Classification of Horizons
 
-**Theorem E.9.2 (Horizon Classification).** All causal prediction boundaries fall into three classes, each satisfying the universal area law:
+**Theorem E.9.2 (Horizon Classification).** On branches satisfying the hypotheses of Theorem E.9.1, the standard causal prediction boundaries fall into three classes, each satisfying the saturated-branch area-law entropy density at the retained resolution:
 
 | Horizon Type | Physical Context | Saturation Mechanism |
 |:-------------|:-----------------|:---------------------|
@@ -1898,7 +1898,7 @@ The Bekenstein-Hawking entropy [Bekenstein 1973; Hawking 1975]:
 
 $$S_{\text{BH}} = \frac{k_B c^3 \mathcal{A}}{4G\hbar}$$
 
-follows from the universal area law with horizon area $\mathcal{A} = 16\pi G^2 M^2/c^4$.
+is recovered on the saturated branch of Theorem E.9.1 with horizon area $\mathcal{A} = 16\pi G^2 M^2/c^4$.
 
 **Part B (Cosmological Horizons).** In de Sitter space with cosmological constant $\Lambda > 0$, the cosmological horizon radius is:
 
@@ -2491,7 +2491,7 @@ The Page curve exhibits:
 
 *(i) Supporting evidence:*
 - The spectral gap $\Delta_{\text{gap}} = -\tau^{-1}\ln f_{\text{RID}} > 0$ (Lemma E.6.1) ensures exponential mixing
-- PCE optimization selects for detailed balance (Theorem G.1.9.2), producing thermal equilibrium states
+- PCE optimization selects for detailed balance (Proposition G.1.9.2), producing thermal equilibrium states
 - The scrambling time $t_{\text{scramble}} \sim (S_{BH}/C_{\max}) \ln S_{BH}$ (Appendix K.3.2) matches the fast-scrambler bound [Sekino & Susskind 2008]
 
 *(ii) Required for first-principles derivation:*

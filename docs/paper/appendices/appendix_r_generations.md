@@ -1105,7 +1105,7 @@ This is the maximum possible for any binary linear code of length 24 with rate 1
 
 The Leech lattice $\Lambda_{24}$ can be constructed from the scaled direct sum $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ by adjoining glue vectors determined by the extended binary Golay code $\mathcal{G}_{24}$.
 
-*Proof.* (Standard result; Conway & Sloane 1999)
+*Proof.* This proof uses the even-lattice gluing theorem stated in Conway and Sloane (1999): if $L$ is an even lattice and $H\subset L^*/L$ is a maximal totally isotropic subgroup for the discriminant quadratic form, then the union of cosets over $H$ is an even unimodular overlattice of $L$, and every even unimodular overlattice arises in this way. The hypotheses are verified in Steps 1–6 below: $L_0=(\sqrt2E_8)^3$ is even, its discriminant form is identified with the binary coordinate form on $(\mathbb Z/2\mathbb Z)^{24}$, and the doubly-even self-dual Golay code supplies the maximal totally isotropic subgroup.
 
 **Step 1 (Base lattice).** Define the base lattice:
 

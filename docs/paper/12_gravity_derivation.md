@@ -354,7 +354,7 @@ $$
 $$
 (Equations (E.7)–(E.9)). Substituting this calibration and restoring SI units converts the natural-units result of Theorem 12.1 into Equation (76). Thus Section 12 uses the area law and the coefficient $G$ already obtained in Appendix E; it does not re-derive them from the Clausius argument alone. QED
 
-**Uniqueness Lemma 12.1 (Uniqueness of Einstein Tensor).**
+**Lemma 12.1 (Uniqueness of Einstein Tensor).**
 In four dimensions, the only generally covariant, symmetric, divergence-free rank-2 tensor field derivable from a Lagrangian containing at most second derivatives of $g_{\mu\nu}$, and consistent with the emergent Bekenstein-Hawking entropy density fixed by PU principles (Appendix E), is the Einstein tensor plus a cosmological term: $\mathcal E_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu} = R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}$.
 *Proof.* Lovelock's classification theorem [Lovelock 1971] states that in $D=4$ every local diffeomorphism-invariant metric action whose Euler-Lagrange equations are symmetric, divergence-free, and involve at most second derivatives yields field equations of the form
 $$
@@ -619,13 +619,13 @@ The derivation of Einstein's equations (Theorem 12.1) applies the Clausius relat
 
 | Scale | Equilibration Process | Physical Result | Reference |
 |:------|:----------------------|:----------------|:----------|
-| Microscopic (MPU) | KMS equilibrium under modular flow | Born rule probabilities | Theorem G.1.9.2 |
+| Microscopic (MPU) | KMS equilibrium under modular flow | Born rule probabilities | Proposition G.1.9.2 |
 | Macroscopic (Rindler) | Clausius relation on local horizons | Einstein field equations | Theorem 12.1 |
 | Cosmological (de Sitter) | Instanton tunneling with PCE selection | Cosmological constant | Appendix U |
 
 *Proof.*
 
-**Part A (Microscopic).** From Theorem G.1.9.2, PCE optimization drives ND-RID channels toward detailed balance. The KMS condition (Theorem G.1.9.5) characterizes equilibrium as Gibbs states $\rho^* = Z^{-1}e^{-K^*}$. For the modular Hamiltonian $K^* = -\ln\rho_{phys}$, the resulting probabilities are $p_i = \mathrm{tr}(\rho_{phys} P_i)$—the Born rule. This represents equilibration at the single-MPU scale.
+**Part A (Microscopic).** From Proposition G.1.9.2, PCE optimization drives ND-RID channels toward detailed balance. The KMS condition (Theorem G.1.9.5) characterizes equilibrium as Gibbs states $\rho^* = Z^{-1}e^{-K^*}$. For the modular Hamiltonian $K^* = -\ln\rho_{phys}$, the resulting probabilities are $p_i = \mathrm{tr}(\rho_{phys} P_i)$—the Born rule. This represents equilibration at the single-MPU scale.
 
 **Part B (Macroscopic).** From Theorem 12.1, applying the Clausius relation to local Rindler horizons with Unruh temperature $T = \kappa/(2\pi)$, area-law entropy $\delta S = \eta \delta\mathcal{A}$, and energy flux $\delta Q = \int T_{\mu\nu}^{(MPU)}\,\xi^\mu d\Sigma^\nu$, combined with the Raychaudhuri equation, yields:
 $$

@@ -3028,7 +3028,7 @@ This section has established:
 
 1. **Derived Reference State:** The PCE-Attractor state $\tau^* = (I_2/2) \oplus 0_6$ emerges from SPAP + Landauer + PCE, not by assumption (Section G.1.9.1).
 
-2. **PCE → Detailed Balance:** PCE optimization of the ND-RID channel enforces quantum detailed balance with respect to $\tau^*$ (Theorems G.1.9.2–G.1.9.3).
+2. **PCE → Detailed Balance:** PCE optimization of the ND-RID channel enforces quantum detailed balance with respect to $\tau^*$ (Proposition G.1.9.2 and Theorem G.1.9.3).
 
 3. **Gibbs Fixed Points:** The equilibrium states are Gibbs states $\rho^* = Z^{-1}e^{-K^*}$ characterized by the KMS condition (Theorems G.1.9.4–G.1.9.5).
 
@@ -3187,7 +3187,7 @@ This involution is the logical foundation of the entire framework. The SPAP upda
 
 **Lemma G.10.1a (Irreducibility of $\mathbb{Z}_2$).** The $\mathbb{Z}_2$ structure of the SPAP involution cannot be reduced to the trivial group.
 
-*Proof.* Suppose the SPAP update could be implemented with $\iota = \text{id}$. Then $\phi_{t+1} = \hat{\phi}_t$, and the system would achieve perfect self-prediction, contradicting Theorem 10 (Deterministic SPAP). The diagonalization argument (Appendix A.1, Theorem A.1.1) establishes that any predictor $P_f$ applied to the diagonal system $S_{diag}$ with rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$ yields a contradiction: $\hat{\phi} = \text{NOT}(\hat{\phi})$. Therefore, the non-trivial involution $\iota \neq \text{id}$ is logically necessary for any system possessing Property R (Definition 10). ∎
+*Proof.* The SPAP diagonal update requires a fixed-point-free response map on the retained binary prediction value. On $\{0,1\}$, the identity map has fixed points $0$ and $1$, so replacing the SPAP involution by $\iota=\text{id}$ gives $\phi_{t+1}=\hat\phi_t$ and no diagonal contradiction. The diagonalization argument (Appendix A.1, Lemma A.1.0 and Theorem A.1.1) instead uses the non-trivial Boolean involution with rule $\phi_{t+1}=\text{NOT}(\hat{\phi}_{P_f})$, which yields $\hat{\phi}=\text{NOT}(\hat{\phi})$ under exactness. Since NOT is the unique fixed-point-free involution on a two-element set, the non-trivial involution $\iota\ne\text{id}$ is logically necessary for the retained SPAP diagonal construction in any system possessing Property R (Definition 10). ∎
 
 ### G.10.1.2 Connection to Landauer Cost
 

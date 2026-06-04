@@ -463,7 +463,7 @@ $$
 - Upper block: $s = \mathbf{1}_{12}$
 - Lower block: $Ps = \mathbf{1}_{12}$
 
-By Lemma T.1, $P\mathbf{1}_{12} = (11, 7, 7, \ldots, 7)^T \neq \mathbf{1}_{12}$. Therefore no $s$ maps to $\mathbf{1}_{24}$.
+By Lemma T.1b, $P\mathbf{1}_{12} = (11, 7, 7, \ldots, 7)^T \neq \mathbf{1}_{12}$. Therefore no $s$ maps to $\mathbf{1}_{24}$.
 
 **Step 2** (Positivity inheritance). Since $\ker(A_{oct}) = \text{span}(\mathbf{1}_{24})$ and $\mathbf{1}_{24} \notin \text{im}(T)$, the restriction of $A_{oct}$ to $\text{im}(T)$ is positive definite. Therefore $L_{info} \succ 0$. ∎
 

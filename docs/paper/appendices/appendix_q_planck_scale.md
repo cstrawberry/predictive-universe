@@ -1620,7 +1620,7 @@ exhibits exact cancellation because the three conversion factors form a closed l
 
 **Step 3 (Jacobson construction).** Universal Bekenstein-Hawking entropy density, combined with the Clausius relation $\delta Q = T \, \delta S$ at temperature $T = \kappa/(2\pi)$ for all local Rindler horizons, implies the Einstein equations (Theorem 12.1, following Jacobson 1995).
 
-**Step 4 (Uniqueness).** By Lovelock's theorem, in four dimensions the Einstein tensor (plus cosmological constant) is the unique divergence-free symmetric tensor constructible from the metric and its first two derivatives. The Bekenstein-Hawking entropy density selects this tensor over higher-curvature alternatives (Uniqueness Lemma 12.1). $\square$
+**Step 4 (Uniqueness).** By Lovelock's theorem, in four dimensions the Einstein tensor (plus cosmological constant) is the unique divergence-free symmetric tensor constructible from the metric and its first two derivatives. The Bekenstein-Hawking entropy density selects this tensor over higher-curvature alternatives (Lemma 12.1). $\square$
 
 ---
 

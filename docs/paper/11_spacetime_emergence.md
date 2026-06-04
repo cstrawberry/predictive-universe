@@ -181,7 +181,7 @@ Concretely, the PU dynamics and objective are expressed in terms of relational/p
 
 As a result, the effective description must be expressible in a diffeomorphism-covariant form. Appendix X makes this concrete by identifying the gravitational sector of the effective action as a scalar-density integral over the emergent manifold (Equation X.7), and Section 12 then uses the standard locality and second-order consistency constraints (Lovelock uniqueness [Lovelock 1971]) to isolate the Einstein–Hilbert structure as the correct leading-order covariant dynamics at the MPU scale (Theorem 50).
 
-**11.5.3 Theorem 45a (Relabeling–Covariance Closure)**
+**11.5.3 Relabeling–Covariance Closure**
 
 Let $M_{\mathrm{reg}}$ be the regular set of Theorem 45 with emergent metric $g_{\mu\nu}$, and let $\Psi$ denote the full collection of continuum fields obtained as $\Gamma$-limits of the coarse-grained PU dynamics.
 
