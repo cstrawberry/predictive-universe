@@ -1914,6 +1914,104 @@ None of these cases licenses retrocausal signaling: all admissible histories obe
 
 *Proof.* One-step Markov dynamics has no retained environment memory across interventions, so its Choi operator factorizes into the product/link product of adjacent one-step channels. Conversely, such a factorization makes every conditional future independent of the earlier past given the present intervention slot. Failure of this factorization is precisely memory. A process that is not a convex mixture of fixed-order combs is indefinite-order in the operational resource sense, but positivity and (M.6.14a.2) still enforce causal marginal consistency. ∎
 
+**Corollary M.6.14d (Post-Selection and Weak-Probe Conditioning Without Future Ontology).** Let $\Upsilon_{n:0}$ be a finite ND-RID process tensor of Definition M.6.14a. Fix an intervention slot $j$. Let
+$$
+A_{<j}=A_{j-1}\otimes\cdots\otimes A_0,
+\qquad
+B_{>j}=B_n\otimes\cdots\otimes B_{j+1}
+$$
+be finite tensor blocks of Choi elements for retained CP instrument outcomes, ordered as in (M.6.14a.3), and let $\mathcal W=\{W_r\}_{r\in R}$ be a finite probe instrument at slot $j$. The future block $B_{>j}$ may be a coarse-grained post-selection event, obtained by summing a finite set of future outcome blocks. If
+$$
+Z(B_{>j},A_{<j})
+=
+\sum_{r\in R}
+\operatorname{Tr}\left[
+\Upsilon_{n:0}
+\left(B_{>j}\otimes W_r\otimes A_{<j}\right)^T
+\right]
+>0,
+\tag{M.6.14d.1}
+$$
+then the post-selected probe statistics are the ordinary conditional probabilities
+$$
+p(r\mid B_{>j},A_{<j})
+=
+\frac{
+\operatorname{Tr}\left[
+\Upsilon_{n:0}
+\left(B_{>j}\otimes W_r\otimes A_{<j}\right)^T
+\right]
+}{
+\sum_{r'\in R}
+\operatorname{Tr}\left[
+\Upsilon_{n:0}
+\left(B_{>j}\otimes W_{r'}\otimes A_{<j}\right)^T
+\right]
+}.
+\tag{M.6.14d.2}
+$$
+The future block is therefore a conditioning event in the retained protocol history, not an ontologically active input to earlier dynamics. If $\{B_{>j}^{(b)}\}_{b\in\mathcal B}$ is a complete future instrument block on slots $j+1,\ldots,n$ and its outcomes are unread, the comb constraints (M.6.14a.2) give
+$$
+\sum_{b\in\mathcal B}
+\operatorname{Tr}\left[
+\Upsilon_{n:0}
+\left(B_{>j}^{(b)}\otimes W_r\otimes A_{<j}\right)^T
+\right]
+=
+\operatorname{Tr}\left[
+\Upsilon_{j:0}
+\left(W_r\otimes A_{<j}\right)^T
+\right],
+\tag{M.6.14d.3}
+$$
+where $\Upsilon_{j:0}$ is the reduced process tensor obtained by the recursive trace constraints. Hence no unread or freely chosen future measurement can change the unconditioned earlier marginal.
+
+Let $\mathsf J_j$ denote the Choi operator of the identity/no-intervention channel at slot $j$, and assume the baseline post-selection weight is positive:
+$$
+\operatorname{Tr}\left[
+\Upsilon_{n:0}
+\left(B_{>j}\otimes\mathsf J_j\otimes A_{<j}\right)^T
+\right]
+>0.
+$$
+For a weak-probe family of CP instrument elements
+$$
+W_r^{(\lambda)}=q_r\mathsf J_j+\lambda K_r+O(\lambda^2)
+$$
+in finite-dimensional Choi trace norm, with $q_r\ge0$, $\sum_r q_r=1$, $\sum_r K_r=0$, $W_r^{(\lambda)}\ge0$ for sufficiently small $\lambda$ on the branch considered, and a centered pointer $x_r$ satisfying $\sum_r q_r x_r=0$, Equation (M.6.14d.2) gives
+$$
+\mathbb E_{\lambda}[x\mid B_{>j},A_{<j}]
+=
+\lambda
+\frac{
+\sum_r x_r\operatorname{Tr}\left[
+\Upsilon_{n:0}
+\left(B_{>j}\otimes K_r\otimes A_{<j}\right)^T
+\right]
+}{
+\operatorname{Tr}\left[
+\Upsilon_{n:0}
+\left(B_{>j}\otimes\mathsf J_j\otimes A_{<j}\right)^T
+\right]
+}
++O(\lambda^2).
+\tag{M.6.14d.4}
+$$
+Thus weak values are first-order conditional response coefficients of the same finite causal process tensor. In the sharp projective one-slot specialization with preselected state $\rho_i$, unitary bridges $U_{j:i}$ and $U_{f:j}$, intermediate Lüders projectors $\{P_r\}$, and final effect $E_f$, (M.6.14d.2) reduces to
+$$
+p(r\mid i,f)
+=
+\frac{
+\operatorname{Tr}\left(E_f U_{f:j}P_r U_{j:i}\rho_i U_{j:i}^{\dagger}P_r U_{f:j}^{\dagger}\right)
+}{
+\sum_{r'}\operatorname{Tr}\left(E_f U_{f:j}P_{r'} U_{j:i}\rho_i U_{j:i}^{\dagger}P_{r'} U_{f:j}^{\dagger}\right)
+},
+\tag{M.6.14d.5}
+$$
+the usual pre/post-selected conditional rule in density-operator notation.
+
+*Proof.* Theorem M.6.14b supplies a probability measure on every finite retained instrument sequence by (M.6.14a.3). Conditioning that probability measure on the positive-probability event $B_{>j}$ gives (M.6.14d.2); positivity of $\Upsilon_{n:0}$ and complete positivity of the instruments make all terms nonnegative, and the denominator normalizes the finite distribution. Substituting the unitary channels and the Lüders instrument $X\mapsto P_rXP_r$ into (M.6.14d.2) gives (M.6.14d.5). Substituting the finite-norm expansion of $W_r^{(\lambda)}$ into (M.6.14d.2), expanding around the positive baseline denominator, and using $\sum_rK_r=0$ to keep the total probe channel fixed to first order and $\sum_rq_rx_r=0$ to remove the zeroth-order pointer mean, gives the quotient expansion (M.6.14d.4). Finally, if the future block is not post-selected but summed over as a complete instrument, repeated application of the partial-trace identities (M.6.14a.2) removes the future slots and gives (M.6.14d.3). A nontrivial weak probe is therefore still a CP intervention in a finite protocol: if it changes no process-tensor functional, PPI identifies it as response-null by Theorem M.6.14b; if it changes one, its retained pointer record is subject to the Blackwell-PCE record compression of Theorem M.6.11b and, when actualized as an 'Evolve' record, to the usual finite actualization cost. ∎
+
 ## M.7 Conclusion
 
 This appendix has provided a rigorous mathematical framework for the Perspectival State and Dual Dynamics central to the PU framework's quantum mechanics.
@@ -1931,4 +2029,4 @@ This appendix has provided a rigorous mathematical framework for the Perspectiva
 
 **Cost Functional (M.6.10).** The perspectival profile $\mathcal{P}_S(E) = (\Delta Q_S, \mu_S, \sigma_S)$ provides the informational-thermodynamic cost functional on $\Sigma$ that the geometric formalism (M.2–M.5) did not supply. The SPAP proximity $\mu_S(E)$ measures the required self-predictive performance for integrating a pattern, while $\sigma_S(E)$ tracks how much of the update lies in the self-model subspace. Patterns with $\mu_S(E) > 1/\alpha_{SPAP}$ incur the content-dependent lower bound of Theorem M.10.3; purely external patterns remain at the baseline value $\mu_S(E)=1/\alpha_{SPAP}$ with vanishing reflexive cost (Corollary M.10.3.1). A more complex system can evaluate a less complex system's perspectival response externally at sender-side SPAP-flat cost (Theorem M.10.5), pre-screen finite families of candidate patterns from above (Theorem M.10.8), yet cannot obtain thermodynamic leverage by exact replay of the target's reflexive integration, because faithful replay must reproduce the target-side reflexive expenditure up to nonnegative overhead. Shannon information is recovered as the special case in which the update is purely external, and the perspectival profile remains irreducible to all existing information-theoretic quantities (Theorem M.10.9).
 
-**Synthesis.** The perspectival formalism achieves mathematical precision for the 'Evolve' process, resolves foundational paradoxes by explicit perspective tracking, and generates empirical predictions through the CC mechanism. The resolution generalizes realism rather than retreating from it: the MPU network remains unified and objective, while descriptions exhibit the perspective-relativity that SPAP and thermodynamic irreversibility demand.
+**Synthesis.** The perspectival formalism achieves mathematical precision for the 'Evolve' process, resolves foundational paradoxes by explicit perspective tracking, represents memory, causal-order, post-selection, and weak-probe histories through finite ND-RID process tensors (Definition M.6.14a; Theorem M.6.14b; Corollaries M.6.14c–M.6.14d), and generates empirical predictions through the CC mechanism. The resolution generalizes realism rather than retreating from it: the MPU network remains unified and objective, while descriptions exhibit the perspective-relativity, finite-record conditioning, and thermodynamic irreversibility demanded by SPAP together with the finite update-cost bounds.

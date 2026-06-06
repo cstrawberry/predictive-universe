@@ -155,7 +155,7 @@ Exponentiating and rearranging gives (O.3a.3). ∎
 
 **Remark O.3a.2 (Scope of the Single-Cycle Bound).** Equation (O.3a.3) is a conditional pathwise consequence of (O.3a.1)-(O.3a.2). Without the pathwise lower bound (O.3a.2), Appendix J still supplies the nonzero cycle entropy budget and the macroscopic theorem O.3 supplies the multi-cycle suppression result, but an individual stochastic microscopic trajectory need not obey a separate universal lower bound on $\sigma(c)$.
 
-**Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice and quantum-eraser protocols, a later experimental setting changes which verification channel becomes operationally relevant for the recorded event. It does not reverse the P-V-U order of the actualized MPU cycle. Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
+**Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice, quantum-eraser, and pre/post-selected weak-probe protocols, a later recorded event changes which conditional subensemble or verification channel becomes operationally relevant for the retained record. It does not reverse the P-V-U order of the actualized MPU cycle and does not alter unconditioned earlier marginals (Corollary M.6.14d). Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
 
 **Corollary O.3a.4 (Forward-Locked Orientation Ledger).**
 Let $\mathcal E$ be a finite class of coarse-grained update events equipped with an involution $e\mapsto e^\dagger$ and an orientation character

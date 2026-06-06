@@ -47,6 +47,7 @@
 *   Bekenstein, J. D. (1981). Universal upper bound on the entropy-to-energy ratio for bounded systems. *Physical Review D*, *23*(2), 287–298. DOI: 10.1103/PhysRevD.23.287
 *   Belinfante, F. J. (1939). On the spin angular momentum of mesons. *Physica*, *6*(9–10), 887–898. DOI: 10.1016/S0031-8914(39)80090-X
 *   Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. *Physics Physique Физика*, *1*(3), 195–200.
+*   Bell, J. S. (1977). Free variables and local causality. *Epistemological Letters*, *15*, 79–84. Reprinted in *Dialectica*, *39*, 103–106 (1985), and in *Speakable and Unspeakable in Quantum Mechanics*, 2nd ed., Cambridge University Press, 2004.
 *   Bell, J. S., & Jackiw, R. (1969). A PCAC puzzle: $\pi^0 \to \gamma\gamma$ in the σ-model. *Il Nuovo Cimento A*, *60*(1), 47–61. DOI: 10.1007/BF02823296
 *   Benedetti, F., Mayberg, H. S., Wager, T. D., Stohler, C. S., & Zubieta, J.-K. (2005). Neurobiological mechanisms of the placebo effect. *Journal of Neuroscience*, *25*(45), 10390–10402. DOI: 10.1523/JNEUROSCI.3458-05.2005
 *   Bem, D. J., & Honorton, C. (1994). Does psi exist? Replicable evidence for an anomalous process of information transfer. *Psychological Bulletin*, *115*(1), 4–18. DOI: 10.1037/0033-2909.115.1.4

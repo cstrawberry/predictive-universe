@@ -613,7 +613,7 @@ For entangled states and local measurement settings that violate a Bell inequali
 $$
 P(a,b\mid x,y)=\operatorname{tr}\!\big((E_a^x\otimes F_b^y)\rho_{AB}\big).
 $$
-If the chosen state $\rho_{AB}$ and settings $(x,y)$ violate a Bell inequality, then the correlations are not reproducible by a local hidden-variable model. However, Bob's marginal distribution is
+If the chosen state $\rho_{AB}$ and settings $(x,y)$ violate a Bell inequality, then the correlations are not reproducible by any local hidden-variable model satisfying Bell-local factorization together with measurement independence, $\rho(\lambda\mid x,y)=\rho(\lambda)$. This is the formal Bell conclusion; it does not by itself decide which assumption a nonstandard completion rejects. However, Bob's marginal distribution is
 $$
 P(b\mid y)=\sum_a P(a,b\mid x,y)
 =\operatorname{tr}\!\big((I\otimes F_b^y)\rho_{AB}\big),
