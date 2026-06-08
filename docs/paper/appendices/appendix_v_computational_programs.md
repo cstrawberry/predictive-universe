@@ -52,11 +52,11 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 ### V.1.2 Observational Inputs
 
-* **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) [Planck Collaboration 2020a]:**
+- **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) [Planck Collaboration 2020a]:**
   $H_0=67.4\pm0.5~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_{\Lambda}=0.6889\pm0.0056$.
-* **Planck length (CODATA 2022) [NIST 2024]:**
+- **Planck length (CODATA 2022) [NIST 2024]:**
   $L_P=1.616255(18)\times 10^{-35}~\mathrm{m}$.
-* **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
+- **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
 
 ### V.1.3 Calculation of $\Lambda L_P^2$
 
@@ -83,11 +83,12 @@ The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relativ
 ### V.1.4 Consistency Check via Inversion
 
 Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16, five-mode reference-counting convention) and the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b, prefactor convention), Equation (V.2) gives the corresponding five-mode reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so this agreement with the observed value (V.5) is branch-dependent rather than theorem-level vacuum closure. On the Definition U.6 four-mode branch, Theorem U.13b fixes the exponent $\kappa=142$ under the stated spectral hypotheses, so the forward expression is
+
 $$
 \Lambda_4 L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}.
 $$
+
 Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference evaluation; a theorem-level four-mode forward interval requires the Fredholm prefactor certificate, with the relative Quillen-Fredholm reformulation of Theorem U.15i.2, and an interval audit.
-$$
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):
 
@@ -137,18 +138,20 @@ This section provides the direct computational program for the fine-structure co
 
 ### V.2.1 Foundational Inputs (Derived from PU First Principles)
 
-*   **MPU Hilbert Space Dimension:** $d_0 \ge 8$ (from $K_0=3$ bits, Theorem 23); the PCE-minimal active-operational branch used in Appendix Z selects the saturating case $d_0 = 8$ (Chapter 7; Theorem Z.2).
-*   **Irreducible Cost:** $\varepsilon_0=\ln2$ nats (from SPAP cycle, Theorem 31).
+- **MPU Hilbert Space Dimension:** $d_0 \ge 8$ (from $K_0=3$ bits, Theorem 23); the PCE-minimal active-operational branch used in Appendix Z selects the saturating case $d_0 = 8$ (Chapter 7; Theorem Z.2).
+- **Irreducible Cost:** $\varepsilon_0=\ln2$ nats (from SPAP cycle, Theorem 31).
 
 ### V.2.2 Derived Spectral Parameters for the PCE-Attractor
 
 As derived in Appendix Z (Theorem Z.5) from the subspace structure induced by the Landauer Pointer mechanism, the QFI spectrum at the PCE-Attractor is flat and uniquely determined:
-*   **Number of Information Modes:** $M = 2ab = 2 \cdot 2 \cdot (8-2) = 24$.
-*   **Per-Mode Sensitivity:** $\lambda = 2/a = 2/2 = 1$ (here $\lambda$ denotes the QFI eigenvalue of the interface modes; it is unrelated to the resource-scarcity parameter of Definition 20).
+
+- **Number of Information Modes:** $M = 2ab = 2 \cdot 2 \cdot (8-2) = 24$.
+- **Per-Mode Sensitivity:** $\lambda = 2/a = 2/2 = 1$ (here $\lambda$ denotes the QFI eigenvalue of the interface modes; it is unrelated to the resource-scarcity parameter of Definition 20).
 
 ### V.2.3 Capacity Saturation Condition
 
 At the PCE-Attractor, the system operates at its maximum information capacity (Theorem Z.6). The predictive information gain equals the operational alphabet capacity:
+
 $$
 \mathcal{I}(u^*) = M \ln(1 + \lambda u^*) = \ln d_0
 \tag{V.8}
@@ -157,13 +160,17 @@ $$
 ### V.2.4 Calculation of the Bare Coupling $u^*$
 
 Substitute the derived spectral parameters ($M=24, \lambda=1$) and the foundational alphabet size ($d_0=8$ on the Appendix Z branch) into the capacity saturation condition (V.8):
+
 $$
 24 \ln(1 + 1 \cdot u^*) = \ln 8
 $$
+
 Solving for the bare coupling parameter $u^*$:
+
 $$
 1 + u^* = 8^{1/24}
 $$
+
 $$
 \boxed{u^* = 8^{1/24} - 1 \approx 0.0905077327}
 \tag{V.9}
@@ -172,9 +179,11 @@ $$
 ### V.2.5 From $u^*$ to the Thomson-Limit $\alpha$
 
 The Predictive Ward Identity (Theorem Z.14), together with QFI geometric rigidity ($\lambda_i=1$, Theorem Z.5) and capacity saturation (Theorem Z.7), fixes the bulk normalization constant $\kappa^*_{\mathrm{bulk}}=1$ by obstructing the field-rescaling freedom present in standard $U(1)$ gauge theory. The physical Thomson-limit coupling includes the discrete-to-continuous interface dressing (Section Z.17) and the curvature-controlled correction of Theorems Z.24–Z.26. Define
+
 $$
 \Delta^{(2)} := \frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{u^{*2}}{6}\right).
 $$
+
 With $u^* = 8^{1/24}-1 = 2^{1/8}-1$ and $K_0 = 3$:
 
 $$
@@ -191,10 +200,13 @@ $$
 }
 \tag{V.10}
 $$
+
 The certificate-complete Thomson row is
+
 $$
 \alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
 $$
+
 Equation (V.10) is the exact sinc-core arithmetic of the Appendix Z derivation. Relative to $\alpha^{-1}_{\mathrm{exp}}=137.035999177$, the core value differs by $0.00009287822863\ldots$, about $0.678$ ppm. The displayed Section Z.27.9 budget is a branch comparison budget; theorem-level interval status requires $R_\alpha$ to be fixed before comparison by the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1.
 
 ## V.3 Finite Independent Audit Ladder
@@ -204,11 +216,13 @@ This section separates short-run reproducibility audits from certificate-level b
 ### V.3.1 Charged-Lepton Log-Ratio Audit
 
 **Target.** Recompute the charged-lepton hierarchy log-ratios from the Appendix T Bures/Van Vleck formulae without using charged-lepton masses as fitting inputs. The audit checks whether the stated branch formulae reproduce
+
 $$
 \ln(m_\tau/m_\mu),
 \qquad
 \ln(m_\mu/m_e)
 $$
+
 from the effective dimensions, Bures curvature data, and packet-normalization conventions already fixed in Appendix T.
 
 **Pass condition.** The computation must reproduce the Appendix T log-ratio values from the stated branch data alone, with an error budget separated into truncation, branch-normalization, and external mass-comparison uncertainty.
@@ -220,6 +234,7 @@ from the effective dimensions, Bures curvature data, and packet-normalization co
 **Target.** Enumerate the octads of the extended binary Golay code $\mathcal G_{24}$ and verify the residual-shell incidence statistics used by the Appendix Z/R experimental ledger. The calculation is finite: generate the $759$ octads of the Steiner system $S(5,8,24)$ and count the number of octads containing a fixed subset of size $r$ for $r=0,1,2,3,4,5$.
 
 **Pass condition.** The incidence counts must equal the Steiner-system values
+
 $$
 759,
 \quad
@@ -233,6 +248,7 @@ $$
 \quad
 1,
 $$
+
 with the ratios used in the residual-shell prediction extracted from these counts rather than assumed.
 
 **Fail condition.** If the enumerated code is not equivalent to $\mathcal G_{24}$, if the octad count is not $759$, or if the incidence counts differ from the displayed Steiner values, the corresponding residual-shell prediction is rejected on that branch.
@@ -240,12 +256,15 @@ with the ratios used in the residual-shell prediction extracted from these count
 ### V.3.3 Backbone Integer-Ledger Audit
 
 **Target.** Verify the finite symbolic chain
+
 $$
 K_0=3\to d_0=8\to (a,b)=(2,6)\to k=12\to M=24\to D=4
 $$
+
 using only the cited PU branch gates: the horizon-error selection of $K_0$, the operational-context floor $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, the minimal Hilbert carrier $d_0=8$, the active rank $a=2$, the Peirce decomposition of the rank-$2$ projector in $\mathbb C^8$, the predictive-recovery MacWilliams gate for $k=12$, and the kissing/mode-channel condition for $D=4$.
 
 **Pass condition.** Each arrow must be checked as a separate implication with its branch hypothesis stated. In particular, the Peirce step must verify
+
 $$
 \dim_\mathbb C pE=2,
 \qquad
@@ -261,16 +280,20 @@ $$
 ### V.3.4 Primordial $\mathbb{CP}^{11}$ Determinant Audit
 
 **Target.** Evaluate the determinant prefactor defined by the primordial determinant certificate of Appendix U, using the fixed spectrum
+
 $$
 \lambda_\ell=4\ell(\ell+11)+m_Q^2
 $$
+
 and the stated multiplicities for nonconstant modes on $\mathbb{CP}^{11}$.
 
 **Pass condition.** The audit must output a definite value of
+
 $$
 A_Q^{\mathrm{det}}
 =\mathcal J_Q\exp[\tfrac12\zeta_Q'(0)]
 $$
+
 with the finite-part convention, zero-mode quotient, and measure factor fixed before comparison with $A_s$, $r$, or $A_s r$.
 
 **Fail condition.** If $m_Q^2$, $\mathcal J_Q$, or the finite-part convention is not fixed, the audit may verify the formal zeta expression but cannot promote the leading branch $A_Q=1$ to theorem-level determinant closure.
@@ -278,9 +301,11 @@ with the finite-part convention, zero-mode quotient, and measure factor fixed be
 ### V.3.5 McKay/Bures-Weight No-Go Audit
 
 **Target.** Test whether a McKay quiver or Dynkin-mark computation alone can force the Bures-weight constraint
+
 $$
 21\kappa_1+55\kappa_2-48\kappa_3=0
 $$
+
 that is equivalent to the lepton-to-quark tilt normalization $c_\ell/c_d=8/3$ in Appendix T.
 
 **Pass condition for the no-go.** For every candidate finite McKay diagram compatible with the lifted Golay/parity action, the discrete McKay data must leave at least one continuous positive normalization degree of freedom in the weights $\chi_i$, so that the displayed linear relation is not forced by McKay data alone.
@@ -294,10 +319,13 @@ that is equivalent to the lepton-to-quark tilt normalization $c_\ell/c_d=8/3$ in
 This audit records the finite status of the RHG flag-lift spectral gate of Definition T.78.6 and Algorithm T.78.6a. It is forward-only: the validation tuple $(15.14,20.94,18.41)$ is not used to choose a block ledger, finite part, metric normalization, structural triple, or tail constant.
 
 For
+
 $$
 \widetilde X=SU(8)/S(U(2)\times U(1)\times U(2)\times U(3)),
 $$
+
 one has
+
 $$
 \dim_{\mathbb R}\widetilde X
 =
@@ -306,13 +334,17 @@ $$
 \qquad
 \dim_{\mathbb C}\widetilde X=23.
 $$
+
 The Clifford generator count used by the RHG construction is
+
 $$
 \rho(24)=8,
 $$
+
 so the real Clifford block has eight anticommuting generators. The finite Peter-Weyl audit may verify the generator algebra, the flag-manifold dimension, the $C_2\le100$ dominant-weight enumeration, and the analytic $P=24$ tail integral.
 
 These checks do not by themselves verify Algorithm T.78.6a. The present text still lacks the explicit RHG block matrices
+
 $$
 \mathcal K_b,
 \qquad
@@ -320,23 +352,31 @@ $$
 \qquad
 J_b^{\mathrm{RHG}},
 $$
+
 the numerical metric normalization $\beta_{\mathrm{RHG}}$, the exact homogeneous connection certificate, the spectrahedral minimizer
+
 $$
 x_{\mathrm{RHG}}=(\mu_0,m_{\mathcal J},\eta),
 $$
+
 and the heat-kernel/zeta finite parts and tail constants required to certify intervals for $F_s^{\mathrm{RHG}}$.
 
 Consequently no certified interval triplet
+
 $$
 (\Delta_1,\Delta_2,\Delta_3)^{\mathrm{RHG}}
 $$
+
 is obtained. The validation tuple remains a comparison target only.
 
 If the validation tuple is inverted only for diagnostic comparison,
+
 $$
 \Delta^{\mathrm{val}}=(15.14,20.94,18.41)
 $$
+
 under the fixed threshold map
+
 $$
 \Delta=TF,
 \qquad
@@ -347,7 +387,9 @@ T=
 1&0&0
 \end{pmatrix}
 $$
+
 gives
+
 $$
 F_C=18.41,
 \qquad
@@ -355,6 +397,7 @@ F_W=20.94,
 \qquad
 F_Y=-8.9775.
 $$
+
 This diagnostic inversion is not a derivation and may not be used to select any entry of $\mathfrak C_{\mathrm{RHG}}$.
 
 ### V.3.7 Audit Conclusion
@@ -366,34 +409,43 @@ Three additional closed auxiliary audits are recorded as Sections V.3.8–V.3.10
 ### V.3.8 SPAP Role-Readout Audit
 
 For any candidate SPAP realization with $N<8$ visited states, every joint role-readout map
+
 $$
 r:\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
 $$
+
 has $|r(\mathcal S_{\mathrm{vis}})|\le N<8$, hence cannot be surjective. Therefore a claimed $N<8$ SPAP realization can be rejected before transition-table details are considered, by Corollary 5.2.2b. This audit is closed by exact finite cardinality.
 
 ### V.3.9 Page-Purity-Before-Entropy Audit
 
 The $2\times2$ stabilizer witness of Corollary K.3.1a has
+
 $$
 \mathbb E\operatorname{tr}(\rho_E^2)=\frac45
 $$
+
 matching the Haar Page-purity value, but
+
 $$
 \mathbb E S(\rho_E)=\frac25\ln2\ne\frac13=S_{\mathrm{Page}}(2,2).
 $$
+
 Thus any audit promoting a second-moment or purity certificate to a von Neumann Page-entropy certificate without Definition K.3d.4c fails the branch discipline. This audit is closed by exact arithmetic on a finite ensemble.
 
 ### V.3.10 Same-Branch Zero-Residual Obstruction Audit
 
 The exact sinc-core value differs from the CODATA-2022 Thomson comparison value by
+
 $$
 0.00009287822863,
 $$
+
 about $0.678$ ppm. By Corollary Z.27.11e.1, this offset is about $4422.8$ recorded measurement standard uncertainties and about $1.644$ times the canonical comparison-budget diagnostic of Remark Z.26d, so no same-branch theorem fixing $R_\alpha=0$ can land at the recorded comparison value. The residual-gated row remains certificate-pending until $R_\alpha$ is fixed by the forward-locked gate of Definition Z.27.11a, Definition Z.27.11g, or Definition Z.27.11j. This audit is closed by exact arithmetic against the recorded ledger value.
 
 ### V.3.11 Unique Spectral Calibration Principle
 
 This subsection records the final calibration rule for continuous coefficients. It does not alter the discrete backbone:
+
 $$
 K_0=3,
 \qquad
@@ -413,80 +465,102 @@ k=12,
 \qquad
 D=4.
 $$
+
 It applies only after the structural branch, response quotient, invariant operator basis, unit conventions, RG or threshold route, and finite spectral symbols have been fixed before comparison.
 
 **Definition V.3.11a (Finite Spectral Calibration Datum).** A final spectral calibration datum for a sealed PU branch is a tuple
+
 $$
 \mathfrak S_*
 =
 (\mathcal A_*,\Omega_*,u_*,\{m_a,c_a^*\}_{a\in A},\{\sigma_B\}_{B\in\mathcal I_*})
 $$
+
 with the following entries.
 
 1. $\mathcal A_*$ is the finite-dimensional commutative self-adjoint calibration algebra generated by all response-active calibration observables retained by the sealed branch after response-null distinctions have been quotiented. It is represented on a finite calibration carrier $\mathcal H_{\mathrm{cal}}$ and decomposes as
-$$
-\mathcal A_*
-=
-\bigoplus_{\alpha\in\Omega_*}\mathbb R P_\alpha,
-$$
-where the $P_\alpha$ are pairwise orthogonal primitive central projections with
-$$
-P_\alpha P_\beta=\delta_{\alpha\beta}P_\alpha,
-\qquad
-\sum_{\alpha\in\Omega_*}P_\alpha=I_{\mathrm{cal}}.
-$$
-The finite set
-$$
-\Omega_*=
-\operatorname{Atom}(\mathcal A_*)
-$$
-is the set of primitive response-active spectral atoms. If two primitive labels induce the same finite protocol-response functional, they are response-null relative to each other and must be identified before $\Omega_*$ is accepted.
+
+   $$
+   \mathcal A_*
+   =
+   \bigoplus_{\alpha\in\Omega_*}\mathbb R P_\alpha,
+   $$
+
+   where the $P_\alpha$ are pairwise orthogonal primitive central projections with
+
+   $$
+   P_\alpha P_\beta=\delta_{\alpha\beta}P_\alpha,
+   \qquad
+   \sum_{\alpha\in\Omega_*}P_\alpha=I_{\mathrm{cal}}.
+   $$
+
+   The finite set
+
+   $$
+   \Omega_*=
+   \operatorname{Atom}(\mathcal A_*)
+   $$
+
+   is the set of primitive response-active spectral atoms. If two primitive labels induce the same finite protocol-response functional, they are response-null relative to each other and must be identified before $\Omega_*$ is accepted.
 
 2. $u_*=(u_\alpha)_{\alpha\in\Omega_*}$ is the normalized trace state of the calibration carrier restricted to the atom algebra:
-$$
-u_\alpha
-=
-\frac{\operatorname{Tr}P_\alpha}{\operatorname{Tr}I_{\mathrm{cal}}}.
-$$
-Thus
-$$
-u_\alpha>0,
-\qquad
-\sum_{\alpha\in\Omega_*}u_\alpha=1.
-$$
-Equivalently, if $r_\alpha=\operatorname{Tr}P_\alpha$, then
-$$
-u_\alpha
-=
-\frac{r_\alpha}{\sum_{\beta\in\Omega_*}r_\beta}.
-$$
-Because accepted response-preserving automorphisms of the sealed branch are represented trace-preservingly and carry primitive projections to primitive projections of the same rank, $u_\alpha=u_\beta$ whenever $\alpha$ and $\beta$ lie in the same response-preserving automorphism orbit. If the branch has no accepted multiplicity data beyond primitive atoms, this reduces to $u_\alpha=1/|\Omega_*|$.
+
+   $$
+   u_\alpha
+   =
+   \frac{\operatorname{Tr}P_\alpha}{\operatorname{Tr}I_{\mathrm{cal}}}.
+   $$
+
+   Thus
+
+   $$
+   u_\alpha>0,
+   \qquad
+   \sum_{\alpha\in\Omega_*}u_\alpha=1.
+   $$
+
+   Equivalently, if $r_\alpha=\operatorname{Tr}P_\alpha$, then
+
+   $$
+   u_\alpha
+   =
+   \frac{r_\alpha}{\sum_{\beta\in\Omega_*}r_\beta}.
+   $$
+
+   Because accepted response-preserving automorphisms of the sealed branch are represented trace-preservingly and carry primitive projections to primitive projections of the same rank, $u_\alpha=u_\beta$ whenever $\alpha$ and $\beta$ lie in the same response-preserving automorphism orbit. If the branch has no accepted multiplicity data beyond primitive atoms, this reduces to $u_\alpha=1/|\Omega_*|$.
 
 3. Each $m_a:\Omega_*\to\mathbb R$ is a fixed spectral moment function encoding an already accepted structural constraint, Ward identity, anomaly constraint, index constraint, orientation constraint, finite threshold condition, or vacuum-response condition. Its required value $c_a^*$ is fixed by that accepted branch datum before comparison.
 
 4. $\mathcal I_*$ is the accepted response-active invariant operator basis of the effective action at the calibration scale. Each $\sigma_B:\Omega_*\to\mathbb R$ is the finite spectral symbol of the coefficient of $I_B\in\mathcal I_*$. Matrix-valued coefficients are represented entrywise by symbols $\sigma_{B,ij}$.
 
 5. A symbol $\sigma_B$ is admissible only if it is obtained from the finite response carrier before comparison. Concretely, if $\widehat O_B$ is the finite response operator representing the coefficient of $I_B$ and $\widehat O_B\in\mathcal A_*$, then
-$$
-\sigma_B(\alpha)
-=
-\frac{\operatorname{Tr}(P_\alpha\widehat O_B)}{\operatorname{Tr}P_\alpha}.
-$$
-If $\widehat O_B$ lies in a larger finite response algebra, the branch must supply a trace-preserving response-preserving conditional expectation
-$$
-E_*:\widehat{\mathcal A}_{\mathrm{resp}}\to\mathcal A_*
-$$
-and then
-$$
-\sigma_B(\alpha)
-=
-\frac{\operatorname{Tr}(P_\alpha E_*(\widehat O_B))}{\operatorname{Tr}P_\alpha}.
-$$
-If neither construction is certified, the coefficient of $I_B$ is not final-calibrated.
+
+   $$
+   \sigma_B(\alpha)
+   =
+   \frac{\operatorname{Tr}(P_\alpha\widehat O_B)}{\operatorname{Tr}P_\alpha}.
+   $$
+
+   If $\widehat O_B$ lies in a larger finite response algebra, the branch must supply a trace-preserving response-preserving conditional expectation
+
+   $$
+   E_*:\widehat{\mathcal A}_{\mathrm{resp}}\to\mathcal A_*
+   $$
+
+   and then
+
+   $$
+   \sigma_B(\alpha)
+   =
+   \frac{\operatorname{Tr}(P_\alpha E_*(\widehat O_B))}{\operatorname{Tr}P_\alpha}.
+   $$
+
+   If neither construction is certified, the coefficient of $I_B$ is not final-calibrated.
 
 6. No empirical comparison value, validation target, post-comparison residual, or fitted phenomenological kernel may enter $\mathcal A_*$, $\Omega_*$, $u_*$, $m_a$, $c_a^*$, $\sigma_B$, $s_B$, or $\mathcal R^*_{\mu\leftarrow\mu_*}$ unless it is explicitly registered as an EmpiricalInput. Such an entry prevents theorem-level final calibration for every sector depending on it.
 
 The admissible spectral calibration polytope is
+
 $$
 \mathcal C_*
 =
@@ -496,7 +570,9 @@ $$
 \text{ for every }a\in A
 \right\},
 $$
+
 where
+
 $$
 \Delta(\Omega_*)
 =
@@ -506,7 +582,9 @@ $$
 \sum_{\alpha\in\Omega_*}\omega_\alpha=1
 \right\}.
 $$
+
 A branch is final-calibration admissible exactly when $\mathcal C_*$ is nonempty and contains at least one full-support point on the response-active atoms:
+
 $$
 \exists\omega\in\mathcal C_*
 \quad\text{such that}\quad
@@ -515,13 +593,16 @@ $$
 $$
 
 **Principle V.3.11b (Unique Spectral Calibration Principle).** On a final-calibration admissible branch, the calibrated spectral state is
+
 $$
 \omega_*
 =
 \operatorname*{argmin}_{\omega\in\mathcal C_*}
 D_{\mathrm{KL}}(\omega\Vert u_*),
 $$
+
 where
+
 $$
 D_{\mathrm{KL}}(\omega\Vert u_*)
 =
@@ -531,7 +612,9 @@ D_{\mathrm{KL}}(\omega\Vert u_*)
 \qquad
 0\log0:=0.
 $$
+
 Equivalently, $\omega_*$ is the maximum relative spectral-entropy state compatible with all accepted finite-response constraints:
+
 $$
 \omega_*
 =
@@ -546,17 +629,22 @@ $$
 **Theorem V.3.11c (Existence and Uniqueness of the Calibrated Spectral State).** If $\mathfrak S_*$ is final-calibration admissible, then $\omega_*$ exists, is unique, and has full support on $\Omega_*$.
 
 *Proof.* The simplex $\Delta(\Omega_*)$ is compact and convex because $\Omega_*$ is finite. The equations
+
 $$
 \sum_{\alpha\in\Omega_*}\omega_\alpha m_a(\alpha)=c_a^*
 $$
+
 are affine, so $\mathcal C_*$ is a closed convex subset of $\Delta(\Omega_*)$. By admissibility, $\mathcal C_*$ is nonempty. Since every $u_\alpha$ is positive and $0\log0:=0$, $D_{\mathrm{KL}}(\omega\Vert u_*)$ is continuous on $\Delta(\Omega_*)$. Hence it attains a minimum on $\mathcal C_*$.
 
 For $u_\alpha>0$, the scalar function $x\mapsto x\log(x/u_\alpha)$ is strictly convex on $[0,\infty)$. Therefore the sum
+
 $$
 \omega\mapsto
 D_{\mathrm{KL}}(\omega\Vert u_*)
 $$
+
 is strictly convex on $\Delta(\Omega_*)$: if $\omega\ne\omega'$ and $0<t<1$, at least one coordinate differs and strict convexity in that coordinate gives
+
 $$
 D_{\mathrm{KL}}(t\omega+(1-t)\omega'\Vert u_*)
 <
@@ -564,26 +652,34 @@ tD_{\mathrm{KL}}(\omega\Vert u_*)
 +
 (1-t)D_{\mathrm{KL}}(\omega'\Vert u_*).
 $$
+
 A strictly convex function has at most one minimizer on a convex set. Thus the minimizer exists and is unique.
 
 It remains to show full support. Let $\eta\in\mathcal C_*$ have $\eta_\alpha>0$ for all $\alpha$, which exists by final-calibration admissibility. Suppose the unique minimizer $\omega_*$ has a nonempty zero set $Z=\{\alpha:\omega_{*,\alpha}=0\}$. For $0<t<1$, define
+
 $$
 \omega(t)=(1-t)\omega_*+t\eta.
 $$
+
 By convexity of $\mathcal C_*$, $\omega(t)\in\mathcal C_*$. The contribution to
+
 $$
 D_{\mathrm{KL}}(\omega(t)\Vert u_*)-D_{\mathrm{KL}}(\omega_*\Vert u_*)
 $$
+
 from coordinates outside $Z$ is $O(t)$, while the coordinates in $Z$ contribute
+
 $$
 \sum_{\alpha\in Z}t\eta_\alpha
 \log\frac{t\eta_\alpha}{u_\alpha}
 =
 t\log t\sum_{\alpha\in Z}\eta_\alpha+O(t).
 $$
+
 Since $\sum_{\alpha\in Z}\eta_\alpha>0$ and $t\log t/t\to-\infty$, this difference is negative for all sufficiently small $t>0$. That contradicts minimality of $\omega_*$. Hence $\omega_{*,\alpha}>0$ for every $\alpha\in\Omega_*$. ∎
 
 **Corollary V.3.11d (Exponential Form on Independent Moment Branches).** If the active moment functions are independent after quotienting redundant affine constraints, then the calibrated state has the form
+
 $$
 \omega_\alpha^*
 =
@@ -596,7 +692,9 @@ u_\alpha
 Z(\theta)
 },
 $$
+
 where
+
 $$
 Z(\theta)
 =
@@ -606,15 +704,19 @@ u_\alpha
 -\sum_{a\in A}\theta_a m_a(\alpha)
 \right),
 $$
+
 and the multipliers are fixed by
+
 $$
 -\frac{\partial\log Z}{\partial\theta_a}
 =
 c_a^*.
 $$
+
 After redundant constraints are removed, the multiplier vector $\theta$ is unique.
 
 *Proof.* By Theorem V.3.11c, the minimizer is in the relative interior of the probability simplex. The equality-constrained Lagrangian is
+
 $$
 \mathcal L(\omega,\lambda,\theta)
 =
@@ -627,26 +729,34 @@ $$
 \sum_\alpha\omega_\alpha m_a(\alpha)-c_a^*
 \right).
 $$
+
 Stationarity in every coordinate gives
+
 $$
 \log\frac{\omega_\alpha}{u_\alpha}+1+\lambda+
 \sum_a\theta_a m_a(\alpha)=0.
 $$
+
 Solving and absorbing $e^{-1-\lambda}$ into the normalizing factor gives the displayed exponential form. Differentiating $Z$ gives
+
 $$
 -\frac{\partial\log Z}{\partial\theta_a}
 =
 \sum_{\alpha\in\Omega_*}\omega_\alpha^*m_a(\alpha),
 $$
+
 so the moment equations are exactly the accepted constraints.
 
 For uniqueness of the independent multipliers, the Hessian is
+
 $$
 \frac{\partial^2\log Z}{\partial\theta_a\partial\theta_b}
 =
 \operatorname{Cov}_{\omega_*}(m_a,m_b).
 $$
+
 For any vector $z=(z_a)$,
+
 $$
 \sum_{a,b}z_a
 \operatorname{Cov}_{\omega_*}(m_a,m_b)
@@ -654,9 +764,11 @@ z_b
 =
 \operatorname{Var}_{\omega_*}\left(\sum_a z_a m_a\right).
 $$
+
 Because $\omega_*$ has full support, this variance vanishes only when $\sum_a z_a m_a$ is constant on all atoms. After quotienting redundant affine constraints, that implies $z=0$. Hence the Hessian is positive definite on the retained multiplier space, and $\theta$ is unique there. ∎
 
 **Definition V.3.11e (Spectral Coefficient Map).** For every response-active invariant operator $I_B$ in the accepted leading or higher-order effective action, its calibrated coefficient at the calibration scale is
+
 $$
 c_B(\mu_*)
 =
@@ -665,9 +777,11 @@ s_B\langle\sigma_B\rangle_{\omega_*}
 s_B\sum_{\alpha\in\Omega_*}
 \omega_\alpha^*\sigma_B(\alpha),
 $$
+
 where $s_B$ is the branch-fixed unit or normalization bridge for the coefficient of $I_B$. In dimensionless normalization conventions, $s_B=1$. If $s_B$ is not accepted before comparison, the dimensionless moment may be fixed but the physical coefficient is not final-calibrated.
 
 For matrix-valued coefficients,
+
 $$
 (C_B)_{ij}(\mu_*)
 =
@@ -675,23 +789,29 @@ s_B
 \sum_{\alpha\in\Omega_*}
 \omega_\alpha^*\sigma_{B,ij}(\alpha).
 $$
+
 The calibrated action at $\mu_*$ is
+
 $$
 S_{\mathrm{PU}}^{\mathrm{cal}}(\mu_*)
 =
 \sum_{B\in\mathcal I_*}
 c_B(\mu_*)I_B.
 $$
+
 Running to a comparison scale is determined by the branch-accepted map
+
 $$
 \mathcal R^*_{\mu\leftarrow\mu_*}:
 \{c_B(\mu_*)\}_{B\in\mathcal I_*}
 \longmapsto
 \{c_B(\mu)\}_{B\in\mathcal I_*},
 $$
+
 which must also be fixed before comparison.
 
 In the normalized gauge-kinetic convention $s_3=s_2=s_Y=1$,
+
 $$
 \frac1{g_{3,*}^2}
 =
@@ -705,7 +825,9 @@ $$
 =
 \langle\sigma_Y\rangle_{\omega_*}.
 $$
+
 With the Standard Model hypercharge normalization used by the accepted effective-action branch,
+
 $$
 \frac1{e_*^2}
 =
@@ -713,7 +835,9 @@ $$
 +
 \frac1{g_{Y,*}^2},
 $$
+
 and therefore
+
 $$
 \alpha_*^{-1}
 =
@@ -724,15 +848,19 @@ $$
 \langle\sigma_Y\rangle_{\omega_*}
 \right).
 $$
+
 The Appendix Z residual gate can be promoted by USCP only if a symbol $\sigma_{R_\alpha}$ is included in $\mathfrak S_*$ before comparison, in which case
+
 $$
 R_\alpha
 =
 \langle\sigma_{R_\alpha}\rangle_{\omega_*}.
 $$
+
 Without such a symbol, the residual keeps its certificate-pending status.
 
 For the Higgs convention $V(H)=-\mu^2H^\dagger H+\lambda(H^\dagger H)^2$,
+
 $$
 \mu_*^2=s_{\mu^2}\langle\sigma_{\mu^2}\rangle_{\omega_*},
 \qquad
@@ -740,9 +868,11 @@ $$
 \qquad
 v_*^2=\frac{\mu_*^2}{\lambda_*},
 $$
+
 when the accepted branch has $\mu_*^2>0$ and $\lambda_*>0$.
 
 The charged Yukawa matrices are
+
 $$
 (Y_{u,*})_{ij}
 =
@@ -756,7 +886,9 @@ s_Y^{(d)}\langle\sigma_{Y_d,ij}\rangle_{\omega_*},
 =
 s_Y^{(e)}\langle\sigma_{Y_e,ij}\rangle_{\omega_*}.
 $$
+
 Then
+
 $$
 M_u=\frac{v_*}{\sqrt2}Y_{u,*},
 \qquad
@@ -764,15 +896,19 @@ M_d=\frac{v_*}{\sqrt2}Y_{d,*},
 \qquad
 M_e=\frac{v_*}{\sqrt2}Y_{e,*}.
 $$
+
 If the neutrino operator is retained,
+
 $$
 (\kappa_{\nu,*})_{ij}
 =
 s_\nu\langle\sigma_{\kappa_\nu,ij}\rangle_{\omega_*}.
 $$
+
 CKM and PMNS data are not independent coefficients in this ledger. They are algebraic invariants obtained by diagonalizing the calibrated charged and neutral flavor matrices. If an exact degeneracy occurs, basis rotations inside the degenerate subspace are response-null; only quotient-invariant mixing data are response-active.
 
 For the gravitational convention
+
 $$
 S_{\mathrm{grav}}
 =
@@ -780,7 +916,9 @@ S_{\mathrm{grav}}
 -
 \frac{c^3\Lambda_*}{8\pi G_*}\int\sqrt{-g}\,d^4x,
 $$
+
 write
+
 $$
 c_R
 =
@@ -790,13 +928,17 @@ c_0
 =
 -\frac{c^3\Lambda_*}{8\pi G_*}.
 $$
+
 USCP fixes
+
 $$
 c_R=s_R\langle\sigma_R\rangle_{\omega_*},
 \qquad
 c_0=s_0\langle\sigma_0\rangle_{\omega_*},
 $$
+
 so, whenever $c_R\ne0$,
+
 $$
 G_*
 =
@@ -808,26 +950,32 @@ G_*
 $$
 
 For a periodic topological angle, the response-active datum is circular. If the branch supplies a real representative $\theta\in(-\pi,\pi]$, then
+
 $$
 \theta_*=s_\theta\langle\sigma_\theta\rangle_{\omega_*}
 \quad\text{mod }2\pi.
 $$
+
 Without such a representative, the circular symbol must include the accepted angle-unit convention before comparison. Define
+
 $$
 z_\theta
 =
 \sum_{\alpha\in\Omega_*}\omega_\alpha^*e^{i s_\theta\sigma_\theta(\alpha)}.
 $$
+
 If $z_\theta\ne0$, then $e^{i\theta_*}=z_\theta/|z_\theta|$ and $\theta_*=\arg z_\theta$. If $z_\theta=0$, no unique response-active angle is final-calibrated.
 
 **Theorem V.3.11f (No Free Continuous Moduli after Final Spectral Calibration).** On a final-calibrated branch carrying $\mathfrak S_*$, every response-active coefficient multiplying an invariant operator in the accepted effective action is unique.
 
 *Proof.* Let $I_B\in\mathcal I_*$ be response-active. By Definition V.3.11a, its finite spectral symbol $\sigma_B$ is fixed before comparison. By Theorem V.3.11c, $\omega_*$ is unique. By Definition V.3.11e, the branch-fixed unit bridge $s_B$, if required, is fixed before comparison. Hence
+
 $$
 c_B(\mu_*)
 =
 s_B\sum_{\alpha\in\Omega_*}\omega_\alpha^*\sigma_B(\alpha)
 $$
+
 is unique. If the accepted map $\mathcal R^*_{\mu\leftarrow\mu_*}$ is part of the comparison route, then $c_B(\mu)$ is also unique.
 
 If $c_B$ could be changed while preserving the same final-calibrated branch, then at least one of the following must occur:
@@ -841,6 +989,7 @@ If $c_B$ could be changed while preserving the same final-calibrated branch, the
 All alternatives contradict the hypothesis that $I_B$ is a response-active invariant operator on the same final-calibrated branch. Hence no continuous coefficient remains free on that branch. ∎
 
 **Corollary V.3.11g (Status Boundary for Numerical Constants).** Before $\mathfrak S_*$ is supplied and accepted, quantities such as
+
 $$
 g_3,
 \quad
@@ -872,11 +1021,13 @@ U_{\mathrm{PMNS}},
 \quad
 \bar\theta
 $$
+
 retain the local status of their sector certificates, branches, thresholds, validation ledgers, reference conventions, or model layers. After $\mathfrak S_*$ is supplied and accepted, the response-active coefficients among them are branch-scaled finite spectral moments of $\omega_*$, and algebraic observables built from those coefficients are fixed by the same datum. No sector-by-sector fit remains.
 
 *Proof.* Each listed basic coefficient is either the coefficient of an invariant operator or an entry of a coefficient matrix in the accepted effective action. Definition V.3.11e fixes every such response-active coefficient as a branch-scaled spectral moment of $\omega_*$. Quantities such as $\alpha$, $G$, $\Lambda$, masses, CKM data, PMNS data, and topological phases are algebraic or circular functions of those coefficients together with accepted branch conventions and RG maps. Algebraic and circular functions of fixed inputs are fixed, except for basis rotations inside exact degeneracies; those rotations are response-null by Definition V.3.11e and do not define additional physical moduli. Before $\mathfrak S_*$ is accepted, at least one required input in Definition V.3.11a or Definition V.3.11e is absent, so the previous local status labels remain in force. ∎
 
 **Final calibrated-branch formula.** On a final-calibrated branch,
+
 $$
 \boxed{
 \text{Physics}
@@ -886,7 +1037,9 @@ $$
 \operatorname{Moments}_{\omega_*}(\operatorname{Spec}X_*),
 }
 $$
+
 where $X_*$ denotes the accepted finite response datum whose atom algebra is $\mathcal A_*$, so $\operatorname{Spec}X_*$ means $\operatorname{Atom}(\mathcal A_*)=\Omega_*$ together with the accepted symbols $\{\sigma_B\}_{B\in\mathcal I_*}$. Also,
+
 $$
 \boxed{
 \omega_*
