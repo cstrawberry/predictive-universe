@@ -2213,7 +2213,7 @@ where $\mathbf{t}$ is the $S_3$-trivial direction and ${\mathbf{u}, \mathbf{w}}$
 
 ### T.20.6 Solved: Generation Projectors ✓
 
-**Theorem T.31** (Generation projector construction in the fixed $S_3\times \mathbb{Z}_2$ basis). Relative to the tensor-product structure of Theorem T.8 and the bases of Definition T.24, the left-chiral space admits the orthogonal rank-2 decomposition
+**Theorem T.31** (Generation projector construction in the fixed $S_3\times \mathbb{Z}_2$ basis). Relative to the tensor-product structure of Theorem T.8 and the bases of Definition T.24a, the left-chiral space admits the orthogonal rank-2 decomposition
 $$
 \mathbb{R}^6 = \text{Ran}(P_1) \oplus \text{Ran}(P_2) \oplus \text{Ran}(P_3),
 $$
@@ -2243,7 +2243,7 @@ $$
 \text{Ran}(P_1)=\text{span}\{\mathbf u\otimes\mathbf e,\mathbf w\otimes\mathbf e\},\qquad
 \text{Ran}(P_2)=\text{span}\{\mathbf u\otimes\mathbf a,\mathbf w\otimes\mathbf a\}
 $$
-are the even- and odd-parity copies of the standard $S_3$ representation determined by the fixed $\\mathbb Z_2$ basis $(\mathbf e,\mathbf a)$. ∎
+are the even- and odd-parity copies of the standard $S_3$ representation determined by the fixed $\mathbb{Z}_2$ basis $(\mathbf e,\mathbf a)$. ∎
 
 **Corollary T.31.1** (Explicit Rational Form). The top-generation projector is:
 $$
@@ -2251,7 +2251,7 @@ P_3 = \frac{1}{6}\left(\mathbf{1}_6 \mathbf{1}_6^T + \mathbf{s}\mathbf{s}^T\righ
 $$
 where $\mathbf{1}_6 = (1,1,1,1,1,1)^T$ and $\mathbf{s} = (1,-1,1,-1,1,-1)^T$.
 
-**Corollary T.31.2** ($S_3$ invariance and parity splitting). The projector $P_3$ is the canonical rank-2 $S_3$-invariant plane containing the democratic direction. In the fixed parity basis of Definition T.24, $P_1$ and $P_2$ are the even- and odd-parity copies of the standard $S_3$ representation.
+**Corollary T.31.2** ($S_3$ invariance and parity splitting). The projector $P_3$ is the canonical rank-2 $S_3$-invariant plane containing the democratic direction. In the fixed parity basis of Definition T.24a, $P_1$ and $P_2$ are the even- and odd-parity copies of the standard $S_3$ representation.
 
 -----
 
@@ -2285,7 +2285,7 @@ $$
 y_i(\mu_G) = \frac{y_i^{\mathrm{PU}}(\mathfrak{A}_{PU})}{\sqrt{Z_{L_i} Z_{R_i} Z_H}}.
 $$
 
-**Remark T.32.1: Discrete-Action Verification.** The result $y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = 1$ admits an independent derivation via the Yukawa source term. Adding to the discrete action (Definition T.12):
+**Remark T.32.1: Discrete-Action Verification.** The result $y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = 1$ admits an independent derivation via the Yukawa source term. Adding to the discrete action (Definition T.12a):
 $$
 \mathcal{L}_Y = -Y_0 \langle \mathbf{h}, \Pi_L s \rangle
 $$
@@ -3296,7 +3296,7 @@ $$
 \sigma_B^2 = \frac{1}{M} = \frac{1}{24}
 $$
 
-**Step 3** (Direct calculation). Applying Lemma T.42.1:
+**Step 3** (Direct calculation). Applying Lemma T.42.1a:
 $$
 \beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\,\sigma_B^2 = \frac{2}{12} \times \frac{1}{24} = \frac{1}{6} \times \frac{1}{24} = \frac{1}{144}
 $$
@@ -3479,7 +3479,7 @@ $$
 
 *Proof.* The formula combines:
 
-- Lemma T.42.1 (Van Vleck expansion with universal $1/12$ factor)
+- Lemma T.42.1a (Van Vleck expansion with universal $1/12$ factor)
 - Theorem T.42.2 ($\beta_{\mathrm{geom}} = (K_{\mathrm{eff}}/12)\sigma_B^2 = 1/C$)
 - Theorem T.42.5 ($D_{\mathrm{eff}}$ in each regime)
 - Theorem T.42.2a (path additivity for $\tau/e$)
@@ -3543,7 +3543,7 @@ $$
 
 **Stage 4: Effective dimension (from Golay structure)**
 $$
-\mathcal{G}_{24}[24,12,8] \xrightarrow{\text{Def T.1}} (t, d_{\min}, k) = (3, 8, 12) \xrightarrow{\text{Thm T.42.5}} D_{\mathrm{eff}}(d^2)
+\mathcal{G}_{24}[24,12,8] \xrightarrow{\text{Def T.1a}} (t, d_{\min}, k) = (3, 8, 12) \xrightarrow{\text{Thm T.42.5}} D_{\mathrm{eff}}(d^2)
 $$
 
 **Remark T.42.7.1: Meaning of “Zero Continuously Adjustable Parameters Within PU Framework”.** *The statement “zero continuously adjustable parameters” must be understood in context:*
@@ -4002,9 +4002,9 @@ All quantities trace to established theorems:
 |$1/12$ |Universal |Van Vleck–Morette|World-function expansion coefficient |
 |$\beta_{\mathrm{geom}}$ |$1/144$ |Theorem T.42.2 |$(K_{\mathrm{eff}}/12)\sigma_B^2 = 1/C$ |
 |$C$ |$144$ |Theorem Z.13a |$bM = 6 \times 24$ (vacuum capacity) |
-|$t$ |$3$ |Definition T.1 |$\lfloor(d_{\min}-1)/2\rfloor$ (Golay correction capacity)|
-|$d_{\min}$ |$8$ |Definition T.1 |Golay minimum distance |
-|$k$ |$12$ |Definition T.1 |Golay code dimension |
+|$t$ |$3$ |Definition T.1a |$\lfloor(d_{\min}-1)/2\rfloor$ (Golay correction capacity)|
+|$d_{\min}$ |$8$ |Definition T.1a |Golay minimum distance |
+|$k$ |$12$ |Definition T.1a |Golay code dimension |
 |$d^2_{\mathrm{th}}$ |$4$ |Lemma T.42.4 |$d_{\min}/2$ (Hamming-chordal correspondence) |
 |$D_{\mathrm{eff}}(d^2 = 2)$ |$3/8$ |Theorem T.42.5a |$t/d_{\min}$ (sub-threshold) |
 |$D_{\mathrm{eff}}(d^2 = 4)$ |$13/6$ |Theorem T.42.5b |$(k+1)/b$ (threshold) |
@@ -4337,7 +4337,7 @@ The perturbative tunneling formula predicts $\vert V_{us}\vert_{\mathrm{pert}}$ 
 
 *Proof.*
 
-**Step 1 (Constraint incompatibility).** From Lemma T.44, the up-sector enforces orthogonal generation alignment (90°) while the down-sector enforces hexagonal alignment (120°). These constraints are incompatible—no single vacuum orientation satisfies both.
+**Step 1 (Constraint incompatibility).** From Lemma T.44a, the up-sector enforces orthogonal generation alignment (90°) while the down-sector enforces hexagonal alignment (120°). These constraints are incompatible—no single vacuum orientation satisfies both.
 
 **Step 2 (PCE energy functional).** Each sector f contributes an elastic energy cost when the vacuum deviates from its preferred lattice angle:
 $$V_f(\theta) = \frac{\kappa_f}{2}(\theta - \theta_f)^2$$
@@ -4422,7 +4422,7 @@ $$|V_{us}| = \mathcal{P} \times \sin(\theta_{\mathrm{tilt},u}) \times f_{\mathrm
 
 *Proof.*
 
-**Step 1 (Lattice angles from $E_8$ distances).** From Lemma T.44:
+**Step 1 (Lattice angles from $E_8$ distances).** From Lemma T.44a:
 $$\theta_u = \arccos\left(\frac{4-d^2_{21,u}}{4}\right) = \arccos\left(\frac{4-4}{4}\right) = \arccos(0) = 90°$$
 $$\theta_d = \arccos\left(\frac{4-d^2_{21,d}}{4}\right) = \arccos\left(\frac{4-6}{4}\right) = \arccos\left(-\frac{1}{2}\right) = 120°$$
 
@@ -4870,7 +4870,7 @@ The distinction between tunneling and frustration regimes reflects the structure
 - **Generation 3** occupies a localized position (heavy mass, λ₃ = αd² ≫ 1) serving as a reference anchor
 - **Generations 1, 2** occupy a delocalized valley (light masses) where vacuum geometry dominates
 
-The valley-sharing criterion 𝒱_ij (Theorem T.45.2) determines which mechanism controls mixing:
+The valley-sharing criterion 𝒱_ij (Proposition T.45.2) determines which mechanism controls mixing:
 
 - 𝒱_ij > 1: Wavefunction overlap through a barrier (tunneling)
 - 𝒱_ij ≤ 1: Geometric alignment in a shared valley (frustration)
@@ -5745,7 +5745,7 @@ $$
 $$
 so the angle is $60^\circ$. No two nonzero $A_2$ roots are orthogonal: distinct non-opposite roots have normalized inner products $\pm1/2$, while opposite roots have normalized inner product $-1$. Therefore the $90^\circ$ case required for the $D_4$ distance $d^2=4$ is not present in the Takagi-Weyl $A_2$ plane.
 
-For $E_8$ roots with $|r|^2=2$, the angle-distance relation from Theorem T.24.4 is
+For $E_8$ roots with $|r|^2=2$, the angle-distance relation from Lemma T.24.4 is
 $$
 \cos\theta=\frac{4-d^2}{4}.
 $$
@@ -5912,7 +5912,7 @@ $$V_{\text{align}}(T_\nu, T_\ell) = \sum_{i<j} \kappa_{ij} \sin^2\left(\frac{\th
 
 *where $\theta^{(f)}_{ij} = \arccos[(4-d^2_{ij,f})/4]$ and stiffness weights satisfy $\kappa_{23} > \kappa_{12} > \kappa_{13}$ from the mass hierarchy.*
 
-**Proposition T.24.9** (Preferred neutrino triad within the alignment-cost model). *Within the alignment-cost model defined in Definition T.24.9, and for the weight ordering $\kappa_{23}>\kappa_{12}>\kappa_{13}>0$ used below, the triad*
+**Proposition T.24.9** (Preferred neutrino triad within the alignment-cost model). *Within the alignment-cost model defined in Definition T.24.9a, and for the weight ordering $\kappa_{23}>\kappa_{12}>\kappa_{13}>0$ used below, the triad*
 $$
 T_\nu = (d^2_{32}, d^2_{31}, d^2_{21}) = (2,6,6)
 $$
@@ -6675,7 +6675,7 @@ $$\text{Hamming } [8,4,4] \xrightarrow{\text{Thm T.24.3}} T_\ell = (a, b, 2a) = 
 $$\text{A}_2 \text{ constraint} \xrightarrow{\text{Thm T.24.5}} T_\nu = (a, b, b) = (2,6,6) \text{ (A}_2\text{ for Majorana)}$$
 
 **Stage 3: Mass Hierarchy**
-$$\xrightarrow{\text{Thm T.24.12}} \alpha_\nu = \frac{\sqrt{3}}{2} \xrightarrow{\text{Thm T.24.9}} T_\nu = (2,6,6) \text{ unique} \xrightarrow{\text{Thm T.24.11}} \text{Normal Hierarchy}$$
+$$\xrightarrow{\text{Thm T.24.12}} \alpha_\nu = \frac{\sqrt{3}}{2} \xrightarrow{\text{Prop T.24.9}} T_\nu = (2,6,6) \text{ unique} \xrightarrow{\text{Thm T.24.11}} \text{Normal Hierarchy}$$
 
 **Stage 4: Absolute Scale**
 $$\xrightarrow{\text{Thm T.24.13}} \kappa_R = \alpha \cdot d^2_{31} = 9 \xrightarrow{} M_R = 1.5 \times 10^{15} \text{ GeV} \xrightarrow{\text{Thm T.24.14}} m_3 = 49 \text{ meV}$$
@@ -6811,7 +6811,7 @@ $$r_1 = (-1, -1, 0, 0, 0, 0, 0, 0) \quad \Rightarrow \quad d^2_{31} = 8, \quad d
 
 ### T.25.3.3 Lattice Geometry
 
-**Summary of Lemma T.44** ($E_8$ Lattice Angles). The angle $\theta$ between $E_8$ roots with squared distance $d^2$ satisfies:
+**Summary of Lemma T.44a** ($E_8$ Lattice Angles). The angle $\theta$ between $E_8$ roots with squared distance $d^2$ satisfies:
 
 $$\cos\theta = \frac{4 - d^2}{4}$$
 
@@ -7322,7 +7322,7 @@ The leading PU Yukawa exponent admits a controlled curvature/Van-Vleck expansion
 
 $$\ln\left(\frac{m_j}{m_i}\right) = \alpha_{IR} d^2_{ij} + \alpha_2(d_{ij}) d^4_{ij} + \mathcal{O}(d^6)$$
 
-where $\alpha_2(d_{ij})$ is computed from the same Bures-geometry inputs used elsewhere in Appendix T. The full derivation appears in Section T.21.8: the Van Vleck–Morette determinant (Lemma T.42.1) combined with the effective curvature $K_{\text{eff}} = 2$ (Theorem Z.24) yields the geometric coefficient $\beta_{\text{geom}} = 1/144$ (Theorem T.42.2).
+where $\alpha_2(d_{ij})$ is computed from the same Bures-geometry inputs used elsewhere in Appendix T. The full derivation appears in Section T.21.8: the Van Vleck–Morette determinant (Lemma T.42.1a) combined with the effective curvature $K_{\text{eff}} = 2$ (Theorem Z.24) yields the geometric coefficient $\beta_{\text{geom}} = 1/144$ (Theorem T.42.2).
 
 For the charged-lepton triad, the two-regime structure (sub-threshold for $d^2 = 2$, threshold for $d^2 = 4$) gives effective dimensions $D_{\text{eff}} = 3/8$ and $D_{\text{eff}} = 13/6$ respectively (Theorem T.42.5), producing:
 

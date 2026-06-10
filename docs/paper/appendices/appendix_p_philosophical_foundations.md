@@ -43,23 +43,19 @@ Within PU, the epistemic status of the core commitments is stratified:
 
 A compact statement of the bridge and forcing chain is:
 
-$$
-\begin{aligned}
-&\text{(1) Cogito: } \exists\, \mathcal{C} \text{ such that } \mathcal{C} \text{ is conscious awareness/process (Foundational Certainty P.2.1),} \\
-&\text{(2) Operational distillation: } \mathcal{C} \text{ is modeled by state distinction, anticipation, verification, and update,} \\
-&\text{(3) Predictive loop: } \mathcal{C} \rightsquigarrow (P_{int}\to V\to D_{cyc}) \text{ and } \pi : \mathcal{H}_t \to \mathcal{O}_{t+1} \text{ (Definition 4; Definition P.3.1),} \\
-&\text{(4) Finite physicalization: PPI admits only finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c),} \\
-&\text{(5) No-surplus selection: PCE selects least-cost representatives among operationally equivalent predictive implementations (Definition 15),} \\
-&\text{(6) Self-reference floor: the SPAP-compatible loop satisfying O1--O3 has } K_0=3 \text{ bits (Theorem 15),} \\
-&\text{(7) Minimal Hilbert carrier: } N_{\mathrm{vis}}^{\min}=2^{K_0}=8,\ d_0\ge N_{\mathrm{vis}}^{\min}, \text{ and the minimal branch takes } d_0=8 \text{ (Theorem 15; Theorem 23; Theorem Z.2),} \\
-&\text{(8) MPU: the resulting no-surplus finite physical representative has } C_P=C_{op} \text{ and is the MPU (Definition 23),} \\
-&\text{(9) SPAP+Landauer: the SPAP cycle requires a }2\to 1 \text{ state merge, hence } \varepsilon_0=\varepsilon_{SPAP}=\ln2 \text{ (Theorem 31; Appendix J),} \\
-&\text{(10) Physical implementation cost: } \varepsilon_{\mathrm{phys}}:=\Delta S_{\mathrm{phys}}/k_B=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0 \text{ (Theorem 31),} \\
-&\text{(11) PPI/PCE active-kernel selection: minimal } a \in \mathbb{N} \text{ with } \ln a \ge \varepsilon_0 \ \text{gives } a = 2 \text{ (Def. P.6.2; Def. 15; Thm Z.1),} \\
-&\text{(12) QFI interface: } M = 2ab = 2 \times 2 \times (d_0 - a) = 2 \times 2 \times 6 = 24 \text{ (Theorem Z.5),} \\
-&\text{(13) Mode-channel correspondence: } K(D) = M = 24 \Rightarrow D = 4 \text{ (Theorem Z.11).}
-\end{aligned}
-$$
+1. **Cogito:** there exists $\mathcal{C}$ such that $\mathcal{C}$ is conscious awareness/process (Foundational Certainty P.2.1).
+2. **Operational distillation:** $\mathcal{C}$ is modeled by state distinction, anticipation, verification, and update.
+3. **Predictive loop:** $\mathcal{C} \rightsquigarrow (P_{int}\to V\to D_{cyc})$ and $\pi : \mathcal{H}_t \to \mathcal{O}_{t+1}$ (Definition 4; Definition P.3.1).
+4. **Finite physicalization:** PPI admits only finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c).
+5. **No-surplus selection:** PCE selects least-cost representatives among operationally equivalent predictive implementations (Definition 15).
+6. **Self-reference floor:** the SPAP-compatible loop satisfying O1--O3 has $K_0=3$ bits (Theorem 15).
+7. **Minimal Hilbert carrier:** $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, $d_0\ge N_{\mathrm{vis}}^{\min}$, and the minimal branch takes $d_0=8$ (Theorem 15; Theorem 23; Theorem Z.2).
+8. **MPU:** the resulting no-surplus finite physical representative has $C_P=C_{op}$ and is the MPU (Definition 23).
+9. **SPAP+Landauer:** the SPAP cycle requires a $2\to 1$ state merge, hence $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ (Theorem 31; Appendix J).
+10. **Physical implementation cost:** $\varepsilon_{\mathrm{phys}}:=\Delta S_{\mathrm{phys}}/k_B=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$ (Theorem 31).
+11. **PPI/PCE active-kernel selection:** minimal $a \in \mathbb{N}$ with $\ln a \ge \varepsilon_0$ gives $a=2$ (Definition P.6.2; Definition 15; Theorem Z.1).
+12. **QFI interface:** $M=2ab=2\times 2\times(d_0-a)=2\times2\times6=24$ (Theorem Z.5).
+13. **Mode-channel correspondence:** $K(D)=M=24\Rightarrow D=4$ (Theorem Z.11).
 
 In this sense, the immutable foundation is the process-root certified by the Cogito, while the MPU is the PPI/PCE-minimal physical representative of that process under the framework's finite-response rules. The Cogito alone does not assert MPUs; it fixes the non-arbitrary root that every later physicalization must preserve. The simulation framing (Section P.5) is used as a naturalistic modeling language for an informational process ontology, not as an ontological claim about an external programmer.
 
@@ -8028,7 +8024,7 @@ Before stating the population-parameter content, this subsection records the arc
 **Definition P.16a.0.1 (Primitive Layer of PU).** The *primitive layer* of the Predictive Universe framework consists of the following four elements, each carried with the status supplied by its cited source:
 
 1. *Prediction under finite-resource constraint.* The framework operates on predictive activity executed by finite-resource finite-time systems, with information having the operational form of Definition 1, predictive cycling having the form of Definition 4, finite-resource costs governed by Definition 3 and Definition 15, and physical instantiation governed by Definition P.6.2.
-2. *SPAP as objective logical constraint.* In any uniform retained Property-R model class satisfying the finite diagonal-closure conditions of Lemma A.1.0, no single deterministic or probabilistic predictor can guarantee perfect self-prediction uniformly across all constructible self-predicting systems, by the diagonal arguments of Theorems 10–11. This impossibility is structural at that scope: it follows from the form of self-reference in predictive systems with retained finite-program representation, simulation, predicate evaluation, memory, Boolean post-processing, and self-coding closure.
+2. *SPAP as objective logical constraint.* In any uniform retained Property-R model class satisfying the finite diagonal-closure conditions of §A.0.2 (Theorem A.0.1; Corollary A.0.1), no single deterministic or probabilistic predictor can guarantee perfect self-prediction uniformly across all constructible self-predicting systems, by the diagonal arguments of Theorems 10–11. This impossibility is structural at that scope: it follows from the form of self-reference in predictive systems with retained finite-program representation, simulation, predicate evaluation, memory, Boolean post-processing, and self-coding closure.
 3. *Finite-resource cost-minimization under the modeling stance of Section P.5.3.* Under the methodological model of Section P.5.3 and Definition P.5.2, viable finite-resource configurations are evaluated by compression efficiency. PCE (Definition 15, Section 6.1.2) and its potential $V$ (Definition D.1) give the operational expression of this selection discipline. The structured-novelty requirements are supplied by Definition P.2.5.1.
 4. *MPU population parameter $N$ for structured novelty.* The MPU is the minimal predictive unit on the current minimal branch fixed by the SPAP register, the $d_0=8$ carrier, the active-inactive split, and the recurrent ledger. The population parameter $N$, together with topology, channel-capacity data, and retained-response data, is a population-level input that can affect which structured configurations are instantiated. By Theorem P.1, a single-MPU substrate cannot instantiate an SM-like chiral gauge sector; by Thesis P.2.5.1a, structured novelty is naturally realized by plurality. The framework therefore uses MPU populations whenever structured novelty or SM-like chirality is at issue.
 

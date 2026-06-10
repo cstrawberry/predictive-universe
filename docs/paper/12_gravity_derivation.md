@@ -292,7 +292,7 @@ Then $X_{\mu\nu}k^\mu k^\nu=0$ for every null $k^\mu$.
 $$
 X_{\mu\nu}k^\mu k^\nu=0 \quad \text{for all null }k^\mu
 $$
-must be of the form $X_{\mu\nu}=\Phi g_{\mu\nu}$ for some scalar $\Phi$. To prove this, choose local inertial coordinates at $p$ so that $g_{\mu\nu}=\eta_{\mu\nu}=\mathrm{diag}(-1,1,1,1)$. Every future null vector can be written as $k^\mu=(1,n^i)$ with $|n|=1$, and the condition becomes
+must be proportional to the metric; write $X_{\mu\nu}=-\Phi g_{\mu\nu}$ for the scalar $\Phi$ used below. To prove this, choose local inertial coordinates at $p$ so that $g_{\mu\nu}=\eta_{\mu\nu}=\mathrm{diag}(-1,1,1,1)$. Every future null vector can be written as $k^\mu=(1,n^i)$ with $|n|=1$, and the condition becomes
 $$
 X_{00}+2X_{0i}n^i+X_{ij}n^i n^j=0
 \qquad\text{for all unit }n.
@@ -303,7 +303,7 @@ X_{00}+X_{ij}n^i n^j=0 \quad \text{for all unit }n
 $$
 forces $X_{ij}=-X_{00}\delta_{ij}$, because a quadratic form on the sphere that is constant in $n$ must be a scalar multiple of $\delta_{ij}$. Hence
 $$
-X_{\mu\nu}=\Phi\,\eta_{\mu\nu}=\Phi\,g_{\mu\nu}
+X_{\mu\nu}=-\Phi\,\eta_{\mu\nu}=-\Phi\,g_{\mu\nu}
 $$
 at $p$, and since $p$ was arbitrary the identity holds tensorially on $M$.
 

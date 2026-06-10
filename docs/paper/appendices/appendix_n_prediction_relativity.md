@@ -764,7 +764,7 @@ $$
 \mathcal{I}_{rel}(S) = N_{\partial} \times C_{\max}.
 $$
 
-The saturated-boundary branch is justified for causal/holographic boundaries by the holographic saturation attractor of Appendix E (Theorem E.8.3 and the boundary-encoding PCE minimum of Theorem E.8.3.2). For generic system-environment boundaries, saturation is a branch assumption of this proposition. Unlike standard thermal equilibrium, which maximizes entropy subject to energy constraints alone [Jaynes 1957], PCE equilibrium maximizes mutual information subject to channel capacity constraints through the global optimization mechanism established in Theorem Q.6.1; this establishes the direction of the saturation pressure but does not force exact saturation for every boundary geometry. ∎
+The saturated-boundary branch is justified for causal/holographic boundaries by the holographic saturation attractor of Appendix E (Theorem E.8.3.4 and the boundary-encoding PCE minimum of Theorem E.8.3.2). For generic system-environment boundaries, saturation is a branch assumption of this proposition. Unlike standard thermal equilibrium, which maximizes entropy subject to energy constraints alone [Jaynes 1957], PCE equilibrium maximizes mutual information subject to channel capacity constraints through the global optimization mechanism established in Theorem Q.6.1; this establishes the direction of the saturation pressure but does not force exact saturation for every boundary geometry. ∎
 
 
 ### N.11.2 Open-System Thermodynamics and the KMS Condition

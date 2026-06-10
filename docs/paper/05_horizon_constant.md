@@ -161,7 +161,6 @@ N_{\mathrm{vis}}^{\min}=8,
 \qquad
 K_0\ge\log_2 N_{\mathrm{vis}}^{\min}=3.
 $$
-On the Hilbert-carrier branch this context count translates to $\log_2 d_0\ge3$.
 
 Thus the required single-cycle distinguishability is at least $3$ bits. Equivalently, the minimal faithful visited-context count is
 $$

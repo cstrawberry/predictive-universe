@@ -829,8 +829,8 @@ $$\mathcal{C}_{\mathrm{QFI}}[\rho_0] = \frac{1}{24} \times 24 \times 1 = 1$$
 since each interface generator has $F_Q[\rho_0; G_\mu] = 1$ (Theorem Z.5, Step 5).
 
 **Properties:**
-- $\mathcal{K}[\rho] \geq 0$ (non-negative, since QFI $\geq 0$)
-- $\mathcal{K}[\rho] = 0$ iff $[\rho, G_\mu] = 0$ for all $\mu$
+- $\mathcal{C}_{\mathrm{QFI}}[\rho] \geq 0$ (non-negative, since QFI $\geq 0$)
+- $\mathcal{C}_{\mathrm{QFI}}[\rho] = 0$ iff $[\rho, G_\mu] = 0$ for all $\mu$
 - Continuous in $\rho$ for full-rank states
 
 ---
@@ -1316,8 +1316,8 @@ $$
 M(K_0)=2a(d_0-a)=4(2^{K_0}-2).
 $$
 
-| $K_0$ | $N_{\mathrm{vis}}^{\min}=2^{K_0}$ | minimal $d_0$ | $a = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
-|:-----:|:----------------------------------:|:-------------:|:-------------------:|:-------------:|:---------:|:------------|
+| $K_0$ | $N_{\mathrm{vis}}^{\min}=2^{K_0}=d_0$ | $a = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
+|:-----:|:----------------------------------:|:-------------------:|:-------------:|:---------:|:------------|
 | 1 | 2 | 2 | 0 | 0 | No: degenerate ($b=0$) |
 | 2 | 4 | 2 | 2 | 8 | No: $K(2)=6<8<12=K(3)$ |
 | **3** | **8** | **2** | **6** | **24** | **Yes: $K(4)=24$** |
@@ -3589,7 +3589,7 @@ For $K_0=3$ this gives $G_{\mathrm{unit}}=G_{\mathrm{disc}}/6$, in agreement wit
 ### Z.17.6 Effective Normalization
 
 **Corollary Z.7 (Effective Normalization Constant).**
-$$\kappa_{\mathrm{eff}} = 1 - \frac{a}{d_0} \cdot \frac{u^*}{\sqrt{K_0}} = 1 - \frac{u^*}{4\sqrt{K_0}} \approx 0.98693354$$
+$$\kappa_{\mathrm{eff}} = 1 - \frac{a}{d_0} \cdot \frac{u^*}{\sqrt{K_0}} = 1 - \frac{u^*}{4\sqrt{K_0}} \approx 0.98693633$$
 
 ---
 
@@ -3724,16 +3724,19 @@ Both scenarios increase the PCE potential V(x). The unique zero of the mode-chan
 ## Z.22 Numerical Evaluation
 
 **Bulk Term:**
-$$\frac{4\pi}{2^{1/8}-1} = \frac{12.566370614359172}{0.09050773266525765} = 138.84306425727917$$
+$$\frac{4\pi}{2^{1/8}-1} = \frac{12.566370614359172}{0.09050773266525765} = 138.84306063478382$$
 
 **Interface Term:**
 $$\frac{\pi}{\sqrt{3}} = \frac{3.141592653589793}{1.7320508075688772} = 1.8137993642342178$$
 
 **First-order:**
-$$\alpha^{-1}_{\mathrm{PU}}{}^{(1)} = 138.84306425727917 - 1.8137993642342178 = 137.02926489304495$$
+$$\alpha^{-1}_{\mathrm{PU}}{}^{(1)} = 138.84306063478382 - 1.8137993642342178 = 137.02926127054960$$
 
-**Second-order (Section Z.27):**
-$$\alpha^{-1}_{\mathrm{PU}}{}^{(2)} = 137.02926489304495 + 0.00683196 ≈ 137.03609685$$
+**Second-order (Section Z.27.6):**
+$$\alpha^{-1}_{\mathrm{PU}}{}^{(2)} = 137.02926127054960 + 0.00684011949860520 \approx 137.03610139004820$$
+
+**Exact sinc-core refinement (Sections Z.27.7-Z.27.8):**
+$$\alpha^{-1}_{0} = 137.02926127054960 + 0.00683078467902942 \approx 137.03609205522863$$
 
 Rounding to significant figures: α⁻¹_PU ≈ 137.036.
 
@@ -4086,7 +4089,7 @@ $$K_{\mathrm{eff}} = \frac{4}{2} = 2.$$
 
 This algebraic simplification is a reformulation of the democratic visible-space model above; it is not an independent derivation without that model assumption.
 
-**Lemma Z.24a.0 (Column Covariance of the Curvature Contraction).** Let $\mathcal{V} := \operatorname{span}_{\mathbb{C}}\{E_{jm} : j \in A,\, 1 \le m \le d_0\}$ with the weighted Hilbert-Schmidt form $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$. the curvature contraction $C: \mathcal{V} \to \mathcal{V}$ entering the gauge-coupling correction of Theorem Z.24 is required to be equivariant under the full column-extended symmetry group $U(A) \times U(d_0)$, not merely under the Grassmannian stabilizer $H = S(U(A) \times U(B))$.
+**Lemma Z.24a.0 (Column Covariance of the Curvature Contraction).** Let $\mathcal{V} := \operatorname{span}_{\mathbb{C}}\{E_{jm} : j \in A,\, 1 \le m \le d_0\}$ with the weighted Hilbert-Schmidt form $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$. The curvature contraction $C: \mathcal{V} \to \mathcal{V}$ entering the gauge-coupling correction of Theorem Z.24 is required to be equivariant under the full column-extended symmetry group $U(A) \times U(d_0)$, not merely under the Grassmannian stabilizer $H = S(U(A) \times U(B))$.
 
 *Proof.* The Kähler-Einstein metric $g_{KE}$ on $\mathrm{Gr}(a, d_0) = U(d_0)/(U(a) \times U(b))$ is $U(d_0)$-invariant by homogeneity (Kobayashi-Nomizu 1969, Vol. II). By Lemma Z.12, the Bures metric satisfies $g_B = \frac{1}{4} g_{KE}$, so $g_B$ inherits $U(d_0)$-invariance. The Riemann curvature tensor is built from the metric by canonical coordinate-independent differential-geometric operations (Levi-Civita connection, covariant differentiation), all of which commute with isometries. Hence the Bures curvature tensor on $\mathrm{Gr}(a, d_0)$ is $U(d_0)$-equivariant as a tensor on tangent spaces.
 
@@ -4188,7 +4191,7 @@ $$\Delta^{(2+3)} \;=\; \Delta^{(2)} \times \frac{\sin u^*}{u^*}
 \;=\; \Delta^{(2)} \left(1 - \frac{u^{*2}}{6} + O(u^{*4})\right)$$
 
 With $u^* = 2^{1/8} - 1 \approx 0.0905077$:
-$$\frac{\sin(0.0905077)}{0.0905077} = 0.998634,\qquad 1 - \frac{(0.0905077)^2}{6} = 0.998635$$
+$$\frac{\sin(0.0905077)}{0.0905077} = 0.9986353,\qquad 1 - \frac{(0.0905077)^2}{6} = 0.9986347$$
 consistent to better than $10^{-6}$. ∎
 
 ### Z.27.8 The Complete Formula
@@ -4378,7 +4381,7 @@ as the canonical branch comparison budget used before the residual-operator gate
 **Geodesic-Chord Expansion Verification.** The third-order factor $(1 - u^{*2}/6)$ arises from the standard Taylor expansion of the sinc function on SU(2):
 $$\text{sinc}(u) = \frac{\sin u}{u} = \sum_{n=0}^{\infty} \frac{(-1)^n u^{2n}}{(2n+1)!} = 1 - \frac{u^2}{6} + \frac{u^4}{120} - \cdots$$
 
-At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximation $1 - u^{*2}/6 = 0.998635$; truncation error $< 10^{-6}$. The fourth-order term would contribute $u^{*4}/120 \approx 5.6 \times 10^{-7}$, which is negligible compared to other theoretical uncertainties and confirms that truncating at $O(u^2)$ is justified.
+At $u^* \approx 0.0905077$: Exact value $\sin(u^*)/u^* = 0.9986353$; $O(u^2)$ approximation $1 - u^{*2}/6 = 0.9986347$; truncation error $< 10^{-6}$. The fourth-order term would contribute $u^{*4}/120 \approx 5.6 \times 10^{-7}$, which is negligible compared to other theoretical uncertainties and confirms that truncating at $O(u^2)$ is justified.
 
 ### Z.27.10 Fine-Structure Derivation Chain Summary
 
@@ -4389,7 +4392,7 @@ At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximatio
 3. The bulk Predictive-Ward unit-normalization branch (Theorem Z.14), giving $\kappa^*_{\text{bulk}} = 1$;
 4. The interface-response ordering branch (Theorem Z.16), giving the sign $\delta\kappa < 0$;
 5. The canonical first-order interface-derivative normalization branch (Theorem Z.17);
-6. The column-covariance branch (Theorem Z.24a) for the Bures-to-gauge identification;
+6. The column-covariance branch (Lemma Z.24a) for the Bures-to-gauge identification;
 7. The visible-space democratic curvature projection (Theorem Z.24, Lemma Z.24a);
 8. The canonical separable second-order curvature-response branch (Theorem Z.25);
 9. The SU(2) sinc geodesic-chord branch (Lemma Z.13).

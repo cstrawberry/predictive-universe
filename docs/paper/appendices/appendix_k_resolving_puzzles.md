@@ -54,7 +54,7 @@ The hierarchy among couplings at a common fundamental scale arises from the info
 $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 252 \text{ GeV}$$
 **(Theorem T.5 / Corollary T.29.1)**. The PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$ from the PCE isotropy conditions **(Theorem T.14)**, while the Higgs-mass prediction near $125$ GeV is conditional on the Standard Model metastability-boundary matching used in **Theorem T.28**. These results require no continuous fitting inside the stated Appendix T setup, but the Higgs and threshold sectors rely on the explicit matching assumptions recorded there.
 - Signal-parity decomposition of M = 24 modes into k = 12 signal and k = 12 parity subspaces via the Extended Binary Golay Code (Proposition T.1c)
-- Electroweak coset $\mathcal{M}_{EW} = (SU(2)_L \times U(1)_Y)/U(1)_{em} \cong S^3$ with dimension 3 (Definition T.6)
+- Electroweak coset $\mathcal{M}_{EW} = (SU(2)_L \times U(1)_Y)/U(1)_{em} \cong S^3$ with dimension 3 (Definition T.6a)
 - Discrete action $S_{EW} = N_0 + \dim(G/H) - m/2 = 38.5$ from alignment constraints and zero-mode subtraction (Theorem T.4)
 - PCE isotropy at the attractor requiring equal gauge kinetic stiffness across all directions (Theorems T.13-T.16)
 - Metastability analysis via renormalization group evolution from boundary conditions at matching scale $\mu_G = M_R = M_{Pl}e^{-9}$ (Sections T.16-T.21)
