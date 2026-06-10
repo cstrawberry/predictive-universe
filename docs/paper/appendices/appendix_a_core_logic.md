@@ -738,6 +738,18 @@ $$
 $$
 Set $f:=\phi_\beta$. Then $f$ satisfies Equation (A.4.1), so the LITE function exists. Since $\Psi$ is total, $f(n)=\Psi(\beta,n)$ is defined for every $n$, proving totality. Because $f=\phi_\beta$, it is computable. If Con(PA) holds, the first two branches are mutually exclusive, but that consistency assumption is not needed for the three conclusions stated here. ∎
 
+**Corollary A.4.1b (Self-Referential PU Verifier Fixed Points).** Let $\mathsf V(e,n)$ be any total computable verifier transformer whose first input is a finite code for a verifier presentation and whose second input is a finite protocol input. Then there exists an index $\beta$ such that
+$$
+\phi_\beta(n)=\mathsf V(\beta,n)
+\qquad\text{for every }n.
+\tag{A.4.1b}
+$$
+If $\mathsf V$ encodes an admissible PU finite-response verifier transformer, the resulting $\phi_\beta$ is a self-referential verifier presentation for that transformer.
+
+This is an existence theorem for fixed-point presentations. It does not prove minimality of the verifier, does not remove the machine-dependent constants in ordinary Kolmogorov or Levin complexity, does not identify $c_{\min}$ with $K_0$, does not replace the hierarchy defining $C_P$, and does not replace the Appendix D or Theorem 2 alignment conditions for $\hat C_v$.
+
+*Proof.* Apply Theorem A.4.1a to the total computable operator $\mathsf V$. The fixed-point index $\beta$ gives (A.4.1b). The remaining statements are scope restrictions: the recursion theorem supplies self-reference of a presentation, not an optimality theorem, an invariance theorem, or a physical branch certificate. ∎
+
 ### A.4.3 LITE's Instantiation of Property R Capabilities
 
 The LITE function $f$, constructed entirely within PA, explicitly demonstrates the core capabilities required by Property R (Definition 10):

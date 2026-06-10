@@ -961,6 +961,24 @@ Then $\rho$ and $\rho'$ are operationally identical for all exterior observables
 
 *Proof.* Theorem E.8.2 supplies the nested boundary-channel reconstruction family on the stated branch. Therefore every retained exterior observable is represented by a finite boundary protocol or by a finite composition of such protocols over the nested cuts. If (E.8.1a.1) holds, all such protocols have identical response statistics on $\rho$ and $\rho'$. By the operational Yoneda reconstruction of Theorem P.6.1b.3, identical response presheaves define the same finite-response object for the retained exterior sector. Corollary P.6.1b.8 removes any additional interior label that changes no finite response and lowers no cost. If an interior label changes a finite response, then some retained protocol separates it, contradicting (E.8.1a.1), unless it belongs to a different finite branch with an explicit degeneracy certificate. ∎
 
+**Theorem E.8.1g (Predictive Screen Representability).** Fix a region $R$ and a finite budget $B$. Let $\operatorname{Ext}_{R,B}$ be the exterior-response functor assigning to every retained exterior protocol its finite response distribution. A predictive screen for $R$ is a finite boundary response object $\Sigma_R$ with response presheaf $R_{\Sigma_R}$ and boundary update channel $\Lambda_{\partial R}$ such that
+$$
+\operatorname{Ext}_{R,B}
+=
+\Lambda_{\partial R}\circ R_{\Sigma_R}
+\tag{E.8.1g.1}
+$$
+as finite response functors. It is PCE-minimal when no proper response quotient of $\Sigma_R$ has the same exterior-response functor.
+
+If the retained boundary algebra or boundary channel is included in the finite budget and satisfies the exact predictive Markov condition
+$$
+I(R:\operatorname{ext}\mid\partial R)=0
+\tag{E.8.1g.2}
+$$
+or the corresponding classical conditional-independence condition, then a PCE-minimal predictive screen exists and is unique up to PPI equivalence. Every retained exterior observable factors through $\Sigma_R$. Two interiors with naturally isomorphic predictive screens are indistinguishable by all retained exterior protocols. If the same screen also satisfies the local KMS and min-cut entropy hypotheses used in Theorem 12.1, its screen entropy supplies the boundary entropy input to the existing Clausius equation-of-state derivation; it does not introduce an independent gravitational Hilbert sector.
+
+*Proof.* The exact Markov condition is precisely boundary sufficiency: in the quantum finite faithful case, Petz recovery reconstructs the relevant retained interior/exterior correlations from the boundary algebra; in the classical case, conditional independence gives the corresponding sufficient statistic. Finite response quotients have PCE-minimal sufficient representatives by the Blackwell/PCE compression rule of Appendix M.6.11 and the boundary sufficiency statement above. Operational Yoneda then gives uniqueness up to PPI equivalence, because two screens with the same exterior-response functor represent the same finite exterior protocol data. Factorization of exterior observables follows from Theorem P.6.1b.8c. The KMS/min-cut statement is only an invocation of the existing hypotheses of Theorem 12.1 and Appendix F.10.12. ∎
+
 **Remark E.8.1a.1 (Status Relative to AdS/CFT).** Corollary E.8.1a is a finite-response holography statement, not a claim of conformal duality or AdS boundary dynamics. It establishes operational reconstruction in the PU quotient wherever the nested ND-RID boundary-channel hypotheses hold. The stronger Page-curve entropy statement remains branch-gated until the horizon code supplies a trace-coupled entropy-continuity promotion certificate in the sense of Definition K.3d.4c. Definition K.3d.4a and Theorem K.3d.4b provide the finite Golay-expander route for supplying moment-design control on a horizon syndrome branch; by itself that route gives moment/purity control unless the trace-coupled promotion is also certified.
 
 **Definition E.8.1b (Petz-Sufficient Boundary Compression).** Let $\mathcal C_A$ be a finite retained bulk code family for a region $A$, let
@@ -1106,6 +1124,43 @@ $$
 Together with monotonicity under $\Phi$, this forces equality and hence (E.8.1f.2).
 
 Conversely, assume (E.8.1f.2). On a finite faithful algebra, equality in the data-processing inequality for relative entropy is the Petz sufficiency condition: the adjoint modular relation implied by equality is represented by the recovery channel (E.8.1f.3), and this channel recovers both the tested state and the reference state. This gives (E.8.1f.4). The final statement is a direct restatement of (E.8.1e.1): the only quantity measured by $\Delta_\Phi^\sigma$ is the relative-entropy distinguishability removed by $\Phi$ and not restored by the exact Petz inverse. ∎
+
+**Theorem E.8.1h (Budget Pushforward-Pullback and Recoverability Equality).** Let $B_1$ be a finer finite predictive budget than $B_2$, and let
+$$
+C_{21}:K_{B_1}(S)\longrightarrow K_{B_2}(S)
+\tag{E.8.1h.1}
+$$
+be the finite-response coarse-graining map. Pullback of affine observables is
+$$
+C_{21}^{\sharp}:\operatorname{Aff}(K_{B_2}(S))\longrightarrow\operatorname{Aff}(K_{B_1}(S)),
+\qquad
+C_{21}^{\sharp}O:=O\circ C_{21}.
+\tag{E.8.1h.2}
+$$
+Then for every retained affine observable $O$ and every $q\in K_{B_1}(S)$,
+$$
+O(C_{21}q)
+=
+(C_{21}^{\sharp}O)(q).
+\tag{E.8.1h.3}
+$$
+Consequently, every distinguishability functional in the ledger that is known to obey data processing under the corresponding stochastic or CPTP coarse-graining is monotone under loss of budget resolution.
+
+For a tested family $\mathcal T\subseteq K_{B_1}(S)$, equality in the relevant monotonicity law is theorem-level exactly when there exists a retained recovery or refinement channel
+$$
+R_{12}:K_{B_2}(S)\longrightarrow K_{B_1}(S)
+\tag{E.8.1h.4}
+$$
+such that
+$$
+R_{12}C_{21}q\sim_{\mathrm{PPI}}q
+\qquad
+\text{for all }q\in\mathcal T.
+\tag{E.8.1h.5}
+$$
+In the classical branch this is Blackwell sufficiency. In the finite faithful quantum branch, for the relative-entropy ledger, it is Petz recoverability as in Theorem E.8.1f. In the PCE ledger, (E.8.1h.5) is exactly the finite statement that no retained predictive information was lost by the budget reduction on the tested family.
+
+*Proof.* Equation (E.8.1h.3) is the definition of pullback along the finite affine coarse-graining map. Data-processing monotonicity is inherited only by those ledger functionals whose stochastic or CPTP monotonicity has already been established, such as total variation under stochastic maps and relative entropy under CPTP maps. If a recovery map satisfying (E.8.1h.5) exists, applying the monotonicity law to $C_{21}$ and then to $R_{12}$ gives equality on the tested PPI classes. Conversely, equality is promoted to a theorem-level no-loss statement only when the appropriate finite sufficiency theorem supplies such a recovery map; this is Blackwell sufficiency in the classical decision branch and Petz sufficiency for the finite faithful quantum relative-entropy branch. ∎
 
 **Corollary E.8.2 (Resolution Limit).** On the Appendix Q packing and reset-support saturation branch, bulk reconstruction has resolution limit of order $L_P$. Finer structure is not retained as independent finite-response content because:
 - channel spacing is $\delta=\sqrt{8\ln2}\,L_P$;

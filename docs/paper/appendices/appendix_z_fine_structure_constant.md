@@ -3017,6 +3017,64 @@ By the uniqueness theorem for the extended binary Golay code, this code is $\mat
 
 **Remark Z.13.5.4a: Finite Specification.** This 144-bit matrix is not a model chosen from alternatives. It is the unique structure that self-referential prediction must take when optimally protected against error. Every property can be computationally verified.
 
+**Theorem Z.13c.1 (Golay Weight-Moment Reference Record).** Let $u_{\mathcal G}$ be the uniform probability measure on the $4096=2^{12}$ codewords of the extended binary Golay code $\mathcal G_{24}$ of Theorem Z.13c, and let
+$$
+W(c)=|c|
+$$
+be the Hamming weight. Then the weight pushforward of $u_{\mathcal G}$ is
+$$
+\mathbb P_{\mathcal G}(W=0,8,12,16,24)
+=
+\frac{1}{4096}(1,759,2576,759,1),
+$$
+with zero probability on all other weights. Its central moments about $12$ are
+$$
+\mathbb E_{\mathcal G}[(W-12)^j]
+=
+(1,0,6,0,105,0,2976,0,234240)
+$$
+for $j=0,1,\ldots,8$.
+
+Let $B\sim\operatorname{Bin}(24,\tfrac12)$. Since $\mathcal G_{24}$ is self-dual and has dual distance $d^\perp=8$, the Pless power-moment identities give
+$$
+\mathbb E_{\mathcal G}[(W-12)^j]
+=
+\mathbb E[(B-12)^j],
+\qquad
+0\le j\le7.
+$$
+The first central-moment deviation occurs at order $8$:
+$$
+\mathbb E_{\mathcal G}[(W-12)^8]
+-
+\mathbb E[(B-12)^8]
+=
+\frac{239085}{2}.
+$$
+
+The uniform codeword measure is therefore Gaussian/binomial through the seventh central moment and carries its first discriminant-level correction at the Golay distance order $d_0=d_{\min}=8$.
+
+*Proof.* The weight enumerator in Theorem Z.13c is
+$$
+W_{\mathcal G}(x,y)
+=
+x^{24}+759x^{16}y^8+2576x^{12}y^{12}+759x^8y^{16}+y^{24}.
+$$
+Dividing the displayed coefficients by $|\mathcal G_{24}|=4096$ gives the weight pushforward. Direct summation gives
+$$
+\frac1{4096}
+\left[
+(-12)^j+759(-4)^j+2576\cdot0^j+759(4)^j+12^j
+\right]
+$$
+for $j\ge1$, with the value $1$ at $j=0$, yielding the displayed moments. The Pless power-moment identities for a binary linear code state that, up to order $d^\perp-1$, the codeword weight moments agree with the ambient Bernoulli half-cube moments. Here the code is self-dual with $d^\perp=8$, so the equality holds through order $7$. For $j=8$, the Golay moment is $234240$, while
+$$
+\mathbb E[(B-12)^8]=\frac{229395}{2},
+$$
+and the difference is $239085/2$. ∎
+
+**Remark Z.13c.2 (Invariant-Measure Scope).** The coordinate automorphism group $M_{24}$ preserves weight shells and is transitive on the octads, dodecads, and their complements, but $M_{24}$-invariance alone does not force the same probability on different weight shells. Uniformity on all $4096$ codewords is forced only on a branch whose calibration carrier treats codewords as equal-rank primitive atoms, or whose accepted response-preserving automorphism group contains the regular translation action of the additive code $\mathcal G_{24}$. Thus the record above is a valid reference-measure gate, not a consequence of coordinate $M_{24}$-invariance by itself.
+
 ---
 
 #### Z.13.5.4 Golay-Leech-Partition Unity
@@ -4553,6 +4611,168 @@ $$
 
 *Proof.* Substituting $R_\alpha=0$ into the certificate row gives $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}$. Direct subtraction of the recorded comparison value gives (Z.27.11e.1). The same-branch additive structure of $\mathfrak C_\alpha$ requires that any residual-free theorem land at the closed-form core value; (Z.27.11e.1) records the offset of that core value from the comparison value, and (Z.27.11e.2) records the centered residual required to absorb it. Since Corollary Z.27.11d and Algorithm Z.27.11b require $R_\alpha$ to be fixed before comparison, no residual-free same-branch theorem is admissible at the comparison value, while a separately certified nonzero $R_\alpha$ remains certificate-pending. ∎
 
+**Definition Z.27.11e.3 (Canonical Composition Audit Record).** On the exact sinc-core branch define
+$$
+A(u)=-\frac{u}{4\sqrt3},
+\qquad
+B(u)=\frac{u^2}{96\sqrt3}\operatorname{sinc}(u),
+\qquad
+\operatorname{sinc}(u)=\frac{\sin u}{u}.
+$$
+Thus
+$$
+\alpha^{-1}_{0}=\frac{4\pi}{u^*}(1+A(u^*)+B(u^*)).
+$$
+A canonical composition audit record is the finite arithmetic record
+$$
+\mathfrak A_{\alpha}^{\times}
+=
+\left(
+ u^*,
+ A,
+ B,
+ \alpha^{-1}_{0},
+ \alpha^{-1}_{\mathrm{exp}},
+ \sigma_{\alpha^{-1}},
+ \mathcal C_{\mathrm{can}},
+ \mathcal W_{\mathrm{fish}}
+\right),
+$$
+where
+$$
+\mathcal C_{\mathrm{can}}
+=
+\{1+x+y,(1+x)(1+y),\exp(x+y)\}
+$$
+is the canonical additive/multiplicative/exponential audit set, and $\mathcal W_{\mathrm{fish}}$ is the anti-postselection witness family recorded in Remark Z.27.11e.6. The record is a diagnostic residual audit. It is not a residual-operator gate, not an all-orders residual certificate, and not a replacement for Definition Z.27.11j.
+
+**Proposition Z.27.11e.4 (Canonical Composition Audit and Cross-Response Forward Lock).** At
+$$
+u^*=2^{1/8}-1
+$$
+with $K_0=3$, the residual-free core and centered residual are
+$$
+\alpha^{-1}_{0}=137.0360920552286269313\ldots,
+$$
+$$
+R_\alpha^{\mathrm{cent}}
+=
+137.035999177-\alpha^{-1}_{0}
+=
+-0.0000928782286269313\ldots.
+\tag{Z.27.11e.4a}
+$$
+With the recorded comparison uncertainty $\sigma_{\alpha^{-1}}=0.000000021$, the one-standard-uncertainty centered residual window is
+$$
+R_\alpha\in
+[-0.0000928992286269\ldots,
+ -0.0000928572286269\ldots].
+\tag{Z.27.11e.4b}
+$$
+The canonical composition audits evaluate as follows:
+
+| completion $\Phi(A,B)$ | value of $\frac{4\pi}{u^*}\Phi(A(u^*),B(u^*))$ | status |
+|---|---:|---|
+| $1+A+B$ | $137.0360920552286269\ldots$ | exact sinc-core value; misses the recorded comparison by $4422.8\sigma$ |
+| $(1+A)(1+B)$ | $137.0360028201393729\ldots$ | admissible diagnostic; misses the recorded comparison by $173.5\sigma$ |
+| $\exp(A+B)$ | $137.0477995785730762\ldots$ | inadmissible as a same-slot completion because the $A^2/2$ term shifts the already certified second-order slot |
+
+The multiplicative diagnostic differs from the additive core by the fixed cross-response
+$$
+\Delta_{\times}
+:=
+\frac{4\pi}{u^*}A(u^*)B(u^*)
+=
+-\frac{\pi (u^*)^2\operatorname{sinc}(u^*)}{288}
+=
+-0.0000892350892540067\ldots.
+\tag{Z.27.11e.4c}
+$$
+It accounts for
+$$
+\frac{\Delta_{\times}}{R_\alpha^{\mathrm{cent}}}
+=0.960775098461899\ldots
+$$
+of the centered residual. The remaining difference after the multiplicative cross-response is
+$$
+R_\alpha^{\mathrm{cent}}-\Delta_{\times}
+=
+-0.00000364313937292464\ldots,
+\tag{Z.27.11e.4d}
+$$
+which is $173.5$ recorded comparison standard uncertainties, or $26.59$ ppb of $\alpha^{-1}$.
+
+*Proof.* The identities follow by substituting $u^*=2^{1/8}-1$ into the exact sinc-core formula and the definitions of $A$ and $B$. The multiplicative law expands as $(1+A)(1+B)=1+A+B+AB$, giving (Z.27.11e.4c). The exponential law has expansion $1+A+B+A^2/2+O(u^3)$; since $A^2$ contributes at the same displayed kernel order as the certified curvature slot, it is not an admissible same-slot completion of Theorem Z.26 unless a separate residual-operator gate reopens that slot. The numerical values are direct evaluations of these fixed expressions and use no measured value except in the after-the-fact comparison differences. ∎
+
+**Corollary Z.27.11e.5 (Cross-Response Localization of the Centered Residual).** Any future residual certificate on the same exact sinc-core branch that uses a leading completion expansion
+$$
+\frac{4\pi}{u^*}\left(1+A+B+c_{11}AB+c_{30}A^3+\text{higher certified terms}\right)
+$$
+must satisfy, at the displayed leading noncore orders,
+$$
+c_{11}\Delta_{\times}+c_{30}\Delta_{A^3}
+=R_\alpha^{\mathrm{cent}}-\text{higher certified terms},
+\tag{Z.27.11e.5a}
+$$
+where
+$$
+\Delta_{A^3}:=
+\frac{4\pi}{u^*}A(u^*)^3
+=-0.000309541853489088\ldots.
+\tag{Z.27.11e.5b}
+$$
+In particular:
+
+1. If the cross-response is certified to vanish and the other named residual channels are bounded separately, the curvature-relative coefficient attached to $\frac{4\pi}{u^*}B(u^*)u^{*2}$ must be
+$$
+c_3=-1.6598619\ldots \pm 0.0003753\ldots.
+$$
+2. If the cross-response is certified to equal the multiplicative value $c_{11}=1$ and the remaining leading correction is written as a curvature-relative coefficient, then
+$$
+c_3'=-0.0651079\ldots \pm 0.0003753\ldots.
+$$
+3. If the remaining leading correction is written in the $A^3$ slot after fixing $c_{11}=1$, then
+$$
+c_{30}=0.011769456\ldots \pm 0.000067842\ldots.
+$$
+
+These numbers are forward locks for candidate operator realizations. They do not close $R_\alpha$ unless the corresponding operator, domain, regularization rule, and tail bounds satisfy Definition Z.27.11j or Definition Z.27.11g.
+
+*Proof.* Equation (Z.27.11e.5a) is the coefficient comparison obtained after subtracting the exact core. The quoted coefficient uncertainties are the recorded $\sigma_{\alpha^{-1}}$ divided by $\frac{4\pi}{u^*}B(u^*)u^{*2}$ for $c_3,c_3'$ and by $|\Delta_{A^3}|$ for $c_{30}$. ∎
+
+**Remark Z.27.11e.6 (Anti-Fishing Witness and Finite Candidate Ladder).** The simple expression
+$$
+-\frac{\pi (u^*)^2}{160\sqrt3}
+=-0.0000928625560467264\ldots
+$$
+lies only $0.75\sigma$ from $R_\alpha^{\mathrm{cent}}$. The integer $160$ is not fixed by the Appendix Z residual operator gate, by the Ward cohomology complex, or by the accepted hypercharge-recoil source-exhaustion branch. This witness is therefore recorded as an anti-postselection guardrail: proximity to the comparison value is not evidence unless the expression is derived from a pre-comparison branch record satisfying Algorithm Z.27.11b.
+
+A bounded diagnostic scan of the multiplicative cross-response enhancement family
+$$
+\alpha^{-1}(g)
+=
+\alpha^{-1}_{0}+\Delta_{\times}\left(1+\frac{g(u^*)}{24}\right)
+\tag{Z.27.11e.6a}
+$$
+gives the finite reference values
+
+| diagnostic weight $g(u^*)$ | value | resulting $\alpha^{-1}(g)$ | comparison offset |
+|---|---:|---:|---:|
+| $1$ | $1$ | $137.035999102010654\ldots$ | $-3.57\sigma$ |
+| $\cos(2u^*)$ | $0.9836613872\ldots$ | $137.035999162759719\ldots$ | $-0.68\sigma$ |
+| $47/48$ | $0.9791666667\ldots$ | $137.035999179471669\ldots$ | $+0.12\sigma$ |
+| $\cos(2u^*)\cos(u^*)$ | $0.9796352320\ldots$ | $137.035999177729483\ldots$ | $+0.035\sigma$ |
+| accepted hypercharge-recoil equivalent value | $0.9796888216\ldots$ | $137.035999177530230\ldots$ | $+0.025\sigma$ |
+
+The last row is only the value of $g$ obtained by rewriting the accepted hypercharge-recoil branch value of Theorem Z.27.11k.20 in the diagnostic form (Z.27.11e.6a):
+$$
+g_{YR\perp}
+=
+24\left(\frac{R_{\alpha}^{YR\perp}}{\Delta_{\times}}-1\right)
+=0.9796888216\ldots.
+$$
+The table is not a mechanism-selection theorem. The weights $47/48$, $\cos(2u^*)$, and $\cos(2u^*)\cos(u^*)$ are diagnostic shadows unless supplied by a finite residual-operator record. The accepted branch remains the operator-realized hypercharge-recoil branch of Definition Z.27.11k.12 and Theorem Z.27.11k.20, not any post-comparison selection from this table.
+
 **Corollary Z.27.11f (No Normalization Retuning under PPI/PCE).** Let $\mathfrak C_\alpha$ and $\mathfrak C'_\alpha$ be two Thomson normalization certificates with naturally isomorphic finite protocol-response presheaves. If $\mathfrak C'_\alpha$ differs from $\mathfrak C_\alpha$ only by extra normalization labels, finite counterterms, or projection conventions that do not change any finite response presheaf and do not shrink the certified residual interval, then $\mathfrak C'_\alpha$ is PCE-dominated by $\mathfrak C_\alpha$ and cannot be retained as a distinct physical normalization branch.
 
 *Proof.* Natural isomorphism of response presheaves identifies the two certificates in the PPI quotient by Theorem P.6.1b.3. If the added labels do not change a finite response and do not reduce $R_\alpha$, then they add description length or constraint bookkeeping without lowering regret or violation cost in the PPI contract. Corollary P.6.1a.4 removes the larger contract inside the same predictive fiber. Equivalently, in the PCE resource preorder of Definition D.1b, the leaner certificate is no more costly in every component and strictly cheaper in description/penalty cost, so Theorem D.1d eliminates the surplus branch. ∎
@@ -5618,6 +5838,37 @@ This interval certifies only the finite Taylor replacement tail of the exact sin
 
 **Remark Z.27.11L.3 (Status of the Sinc-Tail Audit).** Because the core expression of Definition Z.27.11a already uses the exact $SU(2)$ sinc factor, the sinc-tail audit is a forward-locked analytic consistency check on the third-order Taylor truncation of that factor, not a residual-entry tightening. It rules out hidden error from replacing the exact sinc factor by its finite Taylor truncation on this diagnostic branch. It does not close the Corollary Z.27.11e.1 same-branch obstruction, does not prove $R_\alpha=0$, and does not by itself supply the electromagnetic or Ward-cohomology residual operator required by Definition Z.27.11j.
 
+**Definition Z.27.11M (Symmetric-Space Transport Exhaustion Certificate).** A symmetric-space transport exhaustion certificate for the Thomson residual row is a finite record
+$$
+\mathfrak T_\alpha^{\mathrm{sym}}
+=
+(\mathcal K_{\mathrm{Gr}},\mu_{\mathrm{Gr}},\Pi_{\mathrm{core}},\Pi_{\mathrm{new}},B_{\mathrm{tail}},\Phi_{\mathrm{sym}},\chi_{\mathrm{sym}})
+\tag{Z.27.11M.1}
+$$
+with the following data fixed before comparison with any measured value of $\alpha$:
+
+1. $\mathcal K_{\mathrm{Gr}}$ is the exact finite or trace-class transport kernel on the same $\mathrm{Gr}(2,8)$ interface branch used by Theorem Z.24, Definition Z.27.11a, and the exact $SU(2)$ sinc-core normalization.
+2. $\mu_{\mathrm{Gr}}$ is the invariant normalization measure and marked-interface frame, including the $M=24$ branch data used by the core calculation.
+3. $\Pi_{\mathrm{core}}$ removes all terms already present in $\alpha^{-1}_0$, including the exact sinc factor, the $4\pi/u^*$ term, the $-\pi/\sqrt{K_0}$ term, and the accepted second-order curvature contribution.
+4. $\Pi_{\mathrm{new}}$ projects the remaining kernel contribution to an operator-realized residual component permitted by Definition Z.27.11j, without reusing any residual source already assigned to the Ward, recoil, interface, or electromagnetic ledgers.
+5. $B_{\mathrm{tail}}$ is a rigorous finite tail interval for the uncomputed spectral or spherical-function tail.
+6. $\Phi_{\mathrm{sym}}$ evaluates the projected kernel contribution in the same Thomson units as $R_\alpha$.
+7. $\chi_{\mathrm{sym}}=1$ records forward-locking: no coefficient, truncation point, normalization, projector, or tail interval is chosen using $\alpha_{\mathrm{obs}}$ or a post-comparison residual fit.
+
+The candidate symmetric-space residual component is
+$$
+R_\alpha^{\mathrm{sym}}
+=
+\Phi_{\mathrm{sym}}(\Pi_{\mathrm{new}}\mathcal K_{\mathrm{Gr}})
+\quad\text{with uncertainty interval}\quad
+R_\alpha^{\mathrm{sym}}+B_{\mathrm{tail}}.
+\tag{Z.27.11M.2}
+$$
+
+**Theorem Z.27.11M.1 (Closure Supplied by an Accepted Transport Exhaustion Certificate).** If $\mathfrak T_\alpha^{\mathrm{sym}}$ is accepted by the strict-certificate registry and its projected residual component is assigned to an open entry of Definition Z.27.11j, then $R_\alpha^{\mathrm{sym}}+B_{\mathrm{tail}}$ may be inserted into the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_0+R_\alpha$ exactly for that assigned residual component. Without such an accepted record, the symmetric-space summation remains a diagnostic scale check and does not close Corollary Z.27.11e.1, prove $R_\alpha=0$, or alter the exact sinc-core branch.
+
+*Proof.* Definition Z.27.11a separates the exact core value from residual entries, and Definition Z.27.11j requires an operator-realized residual symbol, source-exhaustion ledger, and forward-locked evaluation. Conditions (1)–(4) remove all already counted core and sinc contributions and assign only a new residual operator component. Conditions (5)–(7) provide quantitative control and forward-locking. Therefore an accepted $\mathfrak T_\alpha^{\mathrm{sym}}$ supplies only the certified residual component named in (Z.27.11M.2). If any condition fails, the construction is not an accepted residual entry and the same-branch obstruction of Corollary Z.27.11e.1 remains in force. ∎
+
 ---
 
 # PART VI: EXPERIMENTAL PREDICTIONS (Sections Z.28-Z.32)
@@ -5898,7 +6149,7 @@ This approach inverts the usual logic. Rather than starting with D-dimensional s
 | Prediction | Value | Source |
 |------------|-------|--------|
 | Spacetime dimension | D = 4 | Theorem Z.11 |
-| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; on an accepted hypercharge-recoil operator-realized branch, $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20 |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; canonical composition audit cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ supplies a diagnostic $96.08\%$ of the centered residual but does not close the operator gate; on an accepted hypercharge-recoil operator-realized branch, $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ | Theorem Z.26; Definition Z.27.11a; Corollary Z.27.11e.1; Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20 |
 | Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
@@ -5987,6 +6238,7 @@ Relative = 0.677765 ppm
    - Multiplicative curvature response fixed by the canonical separable branch
    - Second-order curvature correction from Bures/Grassmannian geometry
    - Exact $SU(2)$ transport factor $\operatorname{sinc}(u^*)$
+   - Canonical composition audit: the multiplicative cross-response of the certified interface and curvature entries is the fixed diagnostic term $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288=-0.0000892350892540067\ldots$, accounting for $96.08\%$ of the centered residual while leaving a $26.59$ ppb remainder. The audit supplies forward locks and anti-postselection witnesses only; it does not close $R_\alpha$ without Definition Z.27.11j or Definition Z.27.11g (Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6).
    - Hypercharge-recoil operator-realization gate: on an accepted operator-realized finite Ward branch with the accepted source-exhaustion contract, the determinant-compatible hypercharge trace gives $5/3$, the active-recoil lift gives $10/9$, the passive-complement seventh-order source gives $-\frac{1}{3}c_1(u^*)^7$, and $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ (Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20). If the passive-complement source is downgraded to the seventh-order positive-contraction bound, the branch gives $\alpha^{-1}_{0}+R_{\alpha}^{YR}\in[137.03599917502362\ldots,137.03599917878353\ldots]$ (Corollary Z.27.11k.21). Without the source-exhaustion and operator-realization ledgers these values remain diagnostic and do not close $R_\alpha$ (Remark Z.27.11k.22)
    - Closed-form structural reachability: $\alpha^{-1}_{0}$ is a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$, with no continuous fit anywhere in the chain (Theorem Z.26; Corollary Z.26a)
    - Arithmetic comparison: the closed form lies $9.2878\times10^{-5}$ from $137.035999177(21)$, about $0.678$ ppm

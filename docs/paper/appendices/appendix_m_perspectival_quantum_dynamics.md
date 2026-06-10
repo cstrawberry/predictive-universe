@@ -2012,6 +2012,26 @@ the usual pre/post-selected conditional rule in density-operator notation.
 
 *Proof.* Theorem M.6.14b supplies a probability measure on every finite retained instrument sequence by (M.6.14a.3). Conditioning that probability measure on the positive-probability event $B_{>j}$ gives (M.6.14d.2); positivity of $\Upsilon_{n:0}$ and complete positivity of the instruments make all terms nonnegative, and the denominator normalizes the finite distribution. Substituting the unitary channels and the Lüders instrument $X\mapsto P_rXP_r$ into (M.6.14d.2) gives (M.6.14d.5). Substituting the finite-norm expansion of $W_r^{(\lambda)}$ into (M.6.14d.2), expanding around the positive baseline denominator, and using $\sum_rK_r=0$ to keep the total probe channel fixed to first order and $\sum_rq_rx_r=0$ to remove the zeroth-order pointer mean, gives the quotient expansion (M.6.14d.4). Finally, if the future block is not post-selected but summed over as a complete instrument, repeated application of the partial-trace identities (M.6.14a.2) removes the future slots and gives (M.6.14d.3). A nontrivial weak probe is therefore still a CP intervention in a finite protocol: if it changes no process-tensor functional, PPI identifies it as response-null by Theorem M.6.14b; if it changes one, its retained pointer record is subject to the Blackwell-PCE record compression of Theorem M.6.11b and, when actualized as an 'Evolve' record, to the usual finite actualization cost. ∎
 
+**Theorem M.6.14e (PPI-Minimal Stinespring Dilation for Finite Updates).** Let $R_X$ and $R_Y$ be finite quantum response presheaves whose finite operator systems have $C^*$-envelopes $\mathcal A_X$ and $\mathcal A_Y$ modulo their response-null ideals. A PPI-admissible update
+$$
+T:R_X\longrightarrow R_Y
+\tag{M.6.14e.1}
+$$
+is a response-natural affine update whose Heisenberg dual is normalization-preserving and completely positive on every retained finite matrix-ancilla extension. Then $T$ is represented, modulo the response-null ideals, by a finite completely positive instrument
+$$
+\mathcal I_r:\mathcal A_Y\longrightarrow\mathcal A_X,
+\qquad
+\sum_r\mathcal I_r(I)=I,
+\tag{M.6.14e.2}
+$$
+or equivalently by the dual trace-nonincreasing Schrödinger maps whose sum is trace-preserving.
+
+Among all Stinespring dilations of the retained instrument, PCE selects the minimal dilation. The minimal dilation is unique up to the standard unitary or isometric equivalence on the environment, and its environment dimension is the Choi rank of the retained channel; for an instrument it is the Choi rank of the block-diagonal channel including the classical outcome register. Any larger dilation is PPI-equivalent unless the added degrees of freedom change a retained finite process-tensor functional. For multi-time histories, the same statement holds with causal combs: the PCE-minimal dilation is the minimal comb realizing the retained multilinear functional of Theorem M.6.14b.
+
+*Proof.* Finite response presheaves on the quantum branch generate finite-dimensional operator systems. Complete positivity on all retained finite matrix extensions is precisely the finite operator-system condition for a CP map after passing to the $C^*$-envelope and quotienting the null ideal. The Choi representation then gives the finite instrument (M.6.14e.2), with normalization corresponding to preservation of total probability.
+
+The finite Stinespring theorem supplies a dilation for each CP map, and the minimal Stinespring construction is unique up to unitary or isometric equivalence on the generated environment. In finite dimension the minimal environment is the rank of the Choi matrix, with the outcome register included for instruments. Extra dilation factors that do not change any retained instrument probability or process-tensor functional are response-null by Theorem M.6.14b and are removed by PCE. ∎
+
 ## M.7 Conclusion
 
 This appendix has provided a rigorous mathematical framework for the Perspectival State and Dual Dynamics central to the PU framework's quantum mechanics.

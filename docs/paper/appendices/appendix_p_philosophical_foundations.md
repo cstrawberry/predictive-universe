@@ -2022,6 +2022,34 @@ and every proposed physical distinction outside this quotient is either response
 
 *Proof.* The fully faithful embedding is Theorem P.6.1b.3. Corollary P.6.1b.4 identifies physical content with nontrivial response presheaves. Theorem P.6.1b.8a supplies the structural bridge-collapse hypotheses after finite operational closure, except for the explicit nondegenerate-minimum condition. Corollary P.6.1b.8 removes response-null surplus. Hence a retained distinction must be represented by a response-presheaf invariant. If two distinct quotient points remain at identical finite cost, Theorem P.6.1b.8a classifies the case as finite branch degeneracy rather than theorem-level uniqueness. These alternatives exhaust the finite-response quotient. ∎
 
+**Theorem P.6.1b.8c (Affine Response-Observable Duality).** Fix a finite protocol budget $B$ and a sector $S$. Let $\mathsf P_B$ be the retained finite protocol family and let
+$$
+K_B(S)
+=
+\overline{\operatorname{conv}}\{R_B(q):q\in Q_B(S)\}
+\subseteq
+\prod_{P\in\mathsf P_B}\Delta(\Omega_P)
+\tag{P.6.1b.9}
+$$
+be the finite response body after the PPI quotient. A retained real observable at budget $B$ is exactly a continuous affine functional
+$$
+O:K_B(S)\longrightarrow\mathbb R
+\tag{P.6.1b.10}
+$$
+that is invariant under response-null identifications. Equivalently, it is a natural affine functional on the finite response presheaf, or a finite affine combination of retained protocol outcome-coordinate evaluations satisfying the naturality equalities of the protocol category.
+
+On a finite quantum branch with finite $C^*$-envelope $\mathcal A_B$ and null ideal $\mathcal N_B$, positive normalized observables $0\le O\le 1$ are represented by effects $0\le E\le I$ in $\mathcal A_B/\mathcal N_B$, modulo equality on the retained state space. If the retained finite states separate $\mathcal A_B/\mathcal N_B$, this representation is exact: effects are precisely the positive normalized affine observables, and bounded real observables are precisely self-adjoint elements, equivalently real linear combinations or differences of effects. If $S$ has an accepted strict certificate with selected quotient representative $q_S^*$, then every retained observable has the unique certified branch value
+$$
+O_{\mathrm{phys}}
+=
+O(R_B(q_S^*)).
+\tag{P.6.1b.11}
+$$
+
+*Proof.* The map $q\mapsto R_B(q)$ lands in a finite product of probability simplexes. Affine outcome-coordinate evaluations span the affine dual of this product. The naturality constraints for restriction, relabeling, conditioning, and protocol composition are finite affine equalities, so natural affine observables are exactly affine functionals on the equalizer cut out by those constraints. Quotienting by PPI removes precisely the response-null kernel of all retained protocol-coordinate evaluations, hence such functionals descend exactly to $K_B(S)$.
+
+On the quantum branch, the finite $C^*$-envelope represents the same finite operator system modulo the null ideal. Restriction of an effect gives a positive normalized affine observable on the retained state space. Conversely, finite-dimensional order-unit duality represents positive normalized affine observables by effects after quotienting operators that agree on all retained states; when the retained states separate the quotient algebra, this representative is unique. Arbitrary bounded real affine observables are then represented by self-adjoint elements, or by real differences of effects. The final claim is Theorem D.8.9b applied to the selected quotient class: an affine function on the response body has one value at one selected quotient point. ∎
+
 ### P.6.1c Primitive-Equivalence Normal Form
 
 **Definition P.6.1c.1 (Finite Self-Verifying Operational Presentation).** A finite self-verifying operational presentation is a tuple

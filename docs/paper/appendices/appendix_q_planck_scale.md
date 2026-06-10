@@ -1352,6 +1352,32 @@ $$\tau = \frac{\hbar \ln 2}{E} < \tau_U \quad \text{when} \quad E > Q_{\min}(a)$
 
 The relation $\dot{N}_U = a/(2\pi c)$ applies specifically to thermodynamically optimal (Landauer-saturating) operation with the Unruh bath as heat sink. It is an efficiency-calibrated rate, not an absolute computational speed limit.
 
+**Definition Q.0.10d.1 (Margolus-Levitin Saturation Certificate).** A Margolus-Levitin saturation certificate for a finite-response branch is a finite record
+$$
+\mathfrak Q_{\mathrm{ML}}
+=
+(H,\rho,\mathcal C_\perp,E,\dot C_\perp,\mathcal O_\perp,\chi_{\mathrm{ML}})
+\tag{Q.0.10d.1}
+$$
+where:
+
+1. $H$ is the branch Hamiltonian with the ground energy subtracted and with the retained spectral domain fixed.
+2. $\rho$ is the finite-response state or state family on which the rate is evaluated.
+3. $E=\operatorname{Tr}(\rho H)$ is fixed before comparison.
+4. $\mathcal C_\perp$ is a counted orthogonalization-event coordinate in the retained protocol units; it is not the static predictive complexity $C_P$.
+5. $\dot C_\perp$ is the corresponding event rate.
+6. $\mathcal O_\perp$ proves that the counted events are realized by orthogonalizing two-level geodesic components using the energy recorded in $E$, with no response-relevant idle sector included in the numerator.
+7. $\chi_{\mathrm{ML}}=1$ records that the state, Hamiltonian, event coordinate, energy normalization, and comparison window were fixed before any rate comparison.
+
+**Theorem Q.0.10d.2 (Conditional Margolus-Levitin Rate Equality).** On every finite-response branch satisfying the hypotheses of the Margolus-Levitin bound, the counted orthogonalization rate obeys
+$$
+\dot C_\perp\le \frac{2E}{\pi\hbar}.
+\tag{Q.0.10d.2}
+$$
+Equality may be asserted only on a branch carrying an accepted certificate $\mathfrak Q_{\mathrm{ML}}$ whose entry $\mathcal O_\perp$ proves saturation for the counted events. PCE no-surplus selection alone does not imply equality in (Q.0.10d.2), does not imply autonomous positive complexity drift from $E>0$, and does not identify the Action-Entropy Identity with any Complexity=Action dictionary without an additional finite-response reconstruction map.
+
+*Proof.* The Margolus-Levitin quantum speed limit gives the minimum time $\tau\ge\pi\hbar/(2E)$ for an orthogonalizing event at mean energy $E$ above the ground state, hence the counted event rate is at most $2E/(\pi\hbar)$. Equality requires the known equality conditions of the speed-limit problem to hold for the retained branch; these are exactly what $\mathcal O_\perp$ and $\chi_{\mathrm{ML}}$ record. PCE quotienting removes response-null surplus labels, but it is not a proof that all available energy is arranged in saturating orthogonalizing geodesics. ∎
+
 ---
 
 #### Q.0.9.4 The Cancellation Structure
@@ -1818,6 +1844,100 @@ $$
 \alpha_L=\frac{\ln2}{2\pi}.
 $$
 By Lemma Q.0.7b, $\alpha_L$ is irrational. Proposition Q.0.7n applies to this finite irrational-rotation orbit and says that the adjacent circular gaps in $[0,1)$ have at most three lengths. Multiplication by $2\pi$ preserves the number of distinct gap lengths, proving the claim for $\mathcal P_{N_{\max}}$. The final sentence is Proposition Q.0.19 translated to measured thermal frequency phases. $\square$
+
+**Proposition Q.0.20b.1 (Certified Landauer Phase-Grid Ledger).** On the horizon closed-loop transfer branch of Definition Q.0.7u, set
+$$
+\alpha_L:=\frac{\ln2}{2\pi},
+\qquad
+x_N:=[N\ln2]_{2\pi}=2\pi\{N\alpha_L\}.
+$$
+The following finite ledger is fixed before any comparison with a horizon-transfer dataset.
+
+1. **Grid ratio.**
+$$
+\alpha_L=0.11031780007632579669822821605899884549134487436482\ldots .
+$$
+Lemma Q.0.7b makes $\alpha_L$ transcendental and therefore irrational. Hence $N\mapsto x_N$ is injective on $\mathbb Z_{\ge1}$: if $x_N=x_M$ with $N\ne M$, then $(N-M)\ln2\in2\pi\mathbb Z$, contradicting irrationality of $\alpha_L$.
+
+2. **Continued-fraction prefix.** Precision-doubling at 400 and 800 decimal digits gives the same first 40 partial quotients; the prefix used in the ledger is
+$$
+\alpha_L=[0;9,15,2,4,1,1,1,1,2,2,3,1,1,1,1,3,4,1,1,1,1,24,1,2,1,\ldots].
+$$
+In particular $\sum_{i=1}^{10}a_i=38$.
+
+3. **Convergents and near-recurrences.** For the convergents $p_k/q_k$ of $\alpha_L$, the following entries are the best-approximation ladder used by Corollary Q.0.19b. Beyond the trivial $N=1$ entry, the listed denominators give the successive record-small phase defects over the displayed range.
+
+| $k$ | $p_k$ | $q_k$ | $|\alpha_L-p_k/q_k|$ | $q_k\|q_k\alpha_L\|$ | $|q_k\ln2-2\pi p_k|$ rad |
+|---|---:|---:|---:|---:|---:|
+| 1 | 1 | 9 | $7.93\times10^{-4}$ | $0.0643$ | $4.486\times10^{-2}$ |
+| 2 | 15 | 136 | $2.37\times10^{-5}$ | $0.438$ | $2.024\times10^{-2}$ |
+| 3 | 31 | 281 | $2.48\times10^{-6}$ | $0.196$ | $4.387\times10^{-3}$ |
+| 4 | 139 | 1260 | $3.40\times10^{-7}$ | $0.539$ | $2.690\times10^{-3}$ |
+| 5 | 170 | 1541 | $1.75\times10^{-7}$ | $0.416$ | $1.697\times10^{-3}$ |
+| 6 | 309 | 2801 | $5.64\times10^{-8}$ | $0.443$ | $9.928\times10^{-4}$ |
+| 7 | 479 | 4342 | $2.58\times10^{-8}$ | $0.487$ | $7.041\times10^{-4}$ |
+| 8 | 788 | 7143 | $6.43\times10^{-9}$ | $0.328$ | $2.887\times10^{-4}$ |
+| 9 | 2055 | 18628 | $1.08\times10^{-9}$ | $0.376$ | $1.268\times10^{-4}$ |
+| 10 | 4898 | 44399 | $1.26\times10^{-10}$ | $0.248$ | $3.512\times10^{-5}$ |
+| 11 | 16749 | 151825 | $2.25\times10^{-11}$ | $0.518$ | $2.144\times10^{-5}$ |
+| 12 | 21647 | 196224 | $1.11\times10^{-11}$ | $0.427$ | $1.368\times10^{-5}$ |
+| 13 | 38396 | 348049 | $3.55\times10^{-12}$ | $0.430$ | $7.759\times10^{-6}$ |
+| 14 | 60043 | 544273 | $1.73\times10^{-12}$ | $0.513$ | $5.919\times10^{-6}$ |
+| 15 | 98439 | 892322 | $3.28\times10^{-13}$ | $0.261$ | $1.840\times10^{-6}$ |
+
+The finite table is not an asserted irrationality-measure theorem; it is the certified finite arithmetic record used by the branch.
+
+4. **Window-counting bound.** Let $D_N^*$ be the star discrepancy of $\{\{j\alpha_L\}:1\le j\le N\}$. The standard continued-fraction discrepancy bound gives, for $q_k\le N<q_{k+1}$,
+$$
+N D_N^*\le C_0+\sum_{i=1}^{k+1}a_i,
+\qquad C_0\le3.
+$$
+Therefore every $N\in[q_9,q_{10})=[18628,44399)$ satisfies
+$$
+D_N^*\le\frac{41}{N}.
+$$
+For any phase window of width $w$ radians, the count among the first $N$ grid points differs from $Nw/(2\pi)$ by at most $2ND_N^*$. Verified instances are
+$$
+D_{137}^*=0.0129410421831,
+\qquad
+D_{1000}^*=0.00294366579284,
+\qquad
+D_{18628}^*=5.36815450825\times10^{-5}.
+$$
+
+5. **Two-gap and three-gap rows.** At $N=q_k$, direct cyclic sorting gives exactly two gaps:
+$$
+\ell_1=\|q_{k-1}\alpha_L\|,
+\qquad
+\ell_2=\|q_{k-1}\alpha_L\|+\|q_k\alpha_L\|,
+$$
+as fractions of the circle, with multiplicities $q_k-q_{k-1}$ and $q_{k-1}$.
+
+| $k$ | $q_k$ | gap lengths as fractions of the circle | multiplicities |
+|---|---:|---:|---:|
+| 2 | 136 | $0.0071397993$, $0.0103606097$ | $(127,9)$ |
+| 9 | 18628 | $4.59451952\times10^{-5}$, $6.61233982\times10^{-5}$ | $(11485,7143)$ |
+| 10 | 44399 | $2.01782031\times10^{-5}$, $2.57669921\times10^{-5}$ | $(25771,18628)$ |
+
+For generic finite budgets the three-distance theorem gives at most three gaps; the following rows are direct finite checks, with the largest equal to the sum of the two smaller gaps whenever three gaps occur.
+
+| $N$ | distinct gaps | lengths as fractions of the circle with multiplicities |
+|---:|---:|---|
+| 9 | 2 | $0.1103178\times8$, $0.1174576\times1$ |
+| 24 | 3 | $0.00713980\times15$, $0.09603820\times5$, $0.10317800\times4$ |
+| 137 | 3 | $0.00322081\times1$, $0.00713980\times128$, $0.01036061\times8$ |
+| 1000 | 3 | $0.00069818\times719$, $0.00112627\times21$, $0.00182445\times260$ |
+| 4111 | 3 | $0.00015801\times1310$, $0.00027008\times2570$, $0.00042810\times231$ |
+
+The insertion order of the grid is the Sturmian word
+$$
+s_N=\lfloor(N+1)\alpha_L\rfloor-\lfloor N\alpha_L\rfloor\in\{0,1\},
+$$
+so the Beatty/convergent/three-gap ledger is completely determined by the finite continued-fraction record above.
+
+*Proof.* Items 1 and 2 are the specialization of Lemma Q.0.7b and the standard continued-fraction algorithm to $\alpha_L=\ln2/(2\pi)$. Item 3 is the continued-fraction best-approximation table translated to phase defects by multiplication by $2\pi$. Item 4 is the classical continued-fraction discrepancy estimate applied with $\sum_{i=1}^{10}a_i=38$ and $C_0\le3$; the factor $2$ in the window-counting sentence is the passage from anchored star discrepancy to arbitrary arcs. Item 5 is the three-distance theorem and the convergent-denominator two-gap specialization, with the displayed rows obtained by direct cyclic sorting of $\{j\alpha_L\}$ using precision certified far beyond the displayed digits. No amplitude, width, greybody factor, or nonresonant envelope enters any entry of this ledger. $\square$
+
+**Remark Q.0.20b.2 (Status Split for the Horizon Transfer Branch).** Proposition Q.0.20b.1 closes only the phase-grid sector of the Definition Q.0.7u branch. It fixes the theorem-level positions, recurrence hierarchy, finite gap statistics, and window-counting bounds of the Landauer grid. It does not derive the transfer map itself from retained horizon channel data, and it does not fix amplitudes, widths, greybody factors, nonresonant envelopes, or a finite-resolution peak-identification tolerance. Those remain branch/model-level entries until supplied by their own finite certificates under Theorem P.14.1f and Definition P.14.1m.
 
 **Corollary Q.0.20c (Landauer Horizon Spectroscopy Null Conditions).** *Within an independently validated Definition Q.0.7u transfer branch, the following observations falsify the Landauer phase-grid component of that branch:*
 

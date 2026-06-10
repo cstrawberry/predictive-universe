@@ -2124,6 +2124,49 @@ $$
 $$
 Therefore $q_S^*$ remains the unique minimizer. ∎
 
+**Theorem D.8.9e (Strict-Gap Empirical Certificate Stability).** Let $S$ be a sector with strict PPI/PCE certificate $\mathfrak C_S$ and selected class $q_S^*$ in the sense of Definition D.8.9a. Let $\mathsf P_S$ be its finite retained protocol family and set
+$$
+d_S(q,q')
+:=
+\max_{P\in\mathsf P_S}
+\operatorname{TV}\bigl(R_P(q),R_P(q')\bigr).
+\tag{D.8.9e.1}
+$$
+Assume that the certificate score is $L_S$-Lipschitz for this response distance,
+$$
+|V_S(q)-V_S(q')|
+\le
+L_S d_S(q,q')
+\tag{D.8.9e.2}
+$$
+on the tested quotient family, and that an empirical score $\widehat V_S$ induced by empirical protocol frequencies satisfies
+$$
+\sup_{q\in\bar Q_S}|\widehat V_S(q)-V_S(q)|
+\le
+L_S\varepsilon.
+\tag{D.8.9e.3}
+$$
+If
+$$
+2L_S\varepsilon<g_S,
+\tag{D.8.9e.4}
+$$
+then $q_S^*$ remains the unique selected class for the empirical certificate score $\widehat V_S$.
+
+A sufficient finite-sample condition for (D.8.9e.3) is the following. If every retained protocol has at most $m$ outcomes and $N$ independent runs are taken for each $P\in\mathsf P_S$, then the conservative bound
+$$
+N
+\ge
+\frac{m^2}{2\varepsilon^2}
+\log\frac{2|\mathsf P_S|m}{\delta}
+\tag{D.8.9e.5}
+$$
+implies uniform total-variation accuracy at scale $\varepsilon$ with probability at least $1-\delta$, whenever the empirical score is calibrated so that this uniform response error implies (D.8.9e.3). Conversely, if the observed response profile lies outside the $g_S/(2L_S)$ response tube of the asserted selected response after all declared calibration and sampling tolerances are included, the empirical realization no longer satisfies this strict certificate and the sector status is downgraded to failed or certificate-pending according to the ledger convention of Corollary D.8.9d.
+
+*Proof.* The first claim is Theorem D.8.9b applied to the perturbation $\Delta V=\widehat V_S-V_S$, since (D.8.9e.3) gives $\lVert\Delta V\rVert_\infty\le L_S\varepsilon$ and (D.8.9e.4) is exactly the strict-gap stability condition $2\lVert\Delta V\rVert_\infty<g_S$.
+
+For the sampling statement, Hoeffding's inequality bounds each empirical outcome-coordinate error, and a union bound over at most $|\mathsf P_S|m$ retained coordinates gives simultaneous coordinate control with probability at least $1-\delta$. The displayed value of $N$ is conservative enough to imply the required total-variation control for every retained protocol. The final statement is the contrapositive ledger reading: once the asserted empirical response is outside the certified tolerance tube, the finite record no longer instantiates the accepted strict certificate. ∎
+
 **Theorem D.8.9c (Acyclic Gluing of Strict Certificates).** Let $S_1,\ldots,S_N$ be sectors ordered by an acyclic dependency graph. Suppose each $S_j$ has a strict certificate
 $$
 \mathfrak C_{S_j}=(Q_{S_j},\sim_{S_j},\mathcal R_{S_j},V_{S_j},q_{S_j}^*,g_{S_j},\Pi_{S_j})
@@ -2165,6 +2208,21 @@ $$
 retains exactly the status assigned by Proposition T.59, Corollary T.59a, Proposition R.3.5e, and Theorem R.3.5e.3: it is closed on the stated branch, with the current source-role non-collapse still in force.
 
 *Proof.* Theorem D.8.9b states that $q_S^*$ is the unique minimizer in $\bar Q_S$. Since $\mathcal O$ is a function on $\bar Q_S$, evaluating it at $q_S^*$ gives a unique value. The second statement is the same observation applied to derivation chains whose maps have both been proved to factor through $q_S^*$. The final paragraph is a status-preservation clause: Theorem R.3.5e.3 records non-collapse of the present source roles, while Proposition T.59 and Corollary T.59a record the closed minimal-branch tuple. ∎
+
+**Theorem D.8.9f (Branch-Degeneracy Observable Stratification).** Let $\bar Q_S$ be a compact finite-response quotient and let $V_S:\bar Q_S\to\mathbb R\cup\{+\infty\}$ be lower semicontinuous. Then the minimizer set
+$$
+M_S
+:=
+\operatorname*{argmin}_{q\in\bar Q_S}V_S(q)
+\tag{D.8.9f.1}
+$$
+is compact and nonempty whenever $V_S$ is finite somewhere.
+
+A retained observable $O:\bar Q_S\to\mathcal Y$ has theorem-level value on the non-strict sector exactly when $O$ is constant on $M_S$. If $O$ separates two points of $M_S$, then the value of $O$ is certificate-pending until a further strict certificate, calibration datum, empirical protocol, or ledger-accepted branch condition reduces the minimizer set.
+
+If, in addition, $M_S$ is a polytope in the retained affine response coordinates, and the admissible tie-breaking perturbations are affine protocol-cost functionals restricted to $M_S$, then sufficiently small lexicographic admissible perturbations select exposed faces of $M_S$. A sufficient route to this hypothesis is that $K_B(S)$ is a finite response polytope and $V_S$ is affine on the face decomposition containing its minimum set, so that $M_S$ is itself a face, or a finite union refined into polytopal minimizer faces. Under this $M_S$-polytope hypothesis the unresolved branch decomposes into a finite stratification by operationally distinguishable exposed minimizer faces.
+
+*Proof.* A lower semicontinuous function on a compact space attains its minimum on a compact sublevel set, giving compactness and nonemptiness of $M_S$. Constancy of $O$ on $M_S$ is precisely independence from the unresolved minimizer choice; if $O$ takes two different values on $M_S$, the finite record has not selected which value is physical. For the final claim, the added hypotheses make the unresolved minimizer set a finite polytope, or a finite polytopal union refined into minimizer faces. An affine tie-breaking perturbation restricted to the polytope $M_S$ is minimized on an exposed face of $M_S$. A finite polytope has finitely many faces, so these exposed operational minimizer faces give the stated finite stratification. ∎
 
 
 ## D.9 Conclusion

@@ -397,6 +397,43 @@ using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}
 
 *Proof.* Definition F.10.12a fixes, on every element of a refining finite cover, the local modular generator, finite-temperature/KMS state, channel min-cut entropy, overlap cocycle, Clausius defect, stress-energy flux, and certified error bounds. Theorem F.10.12c proves that vanishing certificate defect gives a compatible KMS sheaf, vanishing Connes cocycle obstruction, and zero local Clausius mismatch in the continuum limit. The local-horizon bridge of Theorem 48a then supplies the local Rindler horizon used in Theorem 12.1. Corollary E.8.4g supplies the channel-capacity area law, and Appendix B supplies the conserved stress-energy tensor. Therefore every premise used in Theorem 12.1 is supplied by a finite operational certificate and its limiting regular branch. The construction is entirely through metric response, finite channel capacity, KMS thermodynamics, and stress-energy conservation, so no additional microscopic gravitational state space is added. ∎
 
+**Theorem 12.1g (Clausius-Defect Tensor Tomography).** Let $p$ be a point in a regular emergent-continuum branch and let $\mathcal N_B(p)$ be the finite retained set of null directions at budget $B$. Suppose the finite KMS/Clausius certificate assigns a retained defect
+$$
+\chi_p(k)
+:=
+\delta Q_p(k)-T_p\delta S_p(k)
+\tag{12.1g.1}
+$$
+for $k\in\mathcal N_B(p)$, and suppose $\chi_p$ is homogeneous quadratic in $k$ within the declared finite tolerance. If $\mathcal N_B(p)$ separates trace-free symmetric quadratic forms, then there is a unique trace-free symmetric tensor representative $C^0_{\mu\nu}(p)$ such that
+$$
+\chi_p(k)
+=
+C^0_{\mu\nu}(p)k^\mu k^\nu
+\tag{12.1g.2}
+$$
+for every retained null direction $k\in\mathcal N_B(p)$.
+
+In the continuum closure, values on all null directions determine the corresponding symmetric tensor only modulo pure trace, because $g_{\mu\nu}k^\mu k^\nu=0$ for null $k$. With stress conservation and the Bianchi identity, this trace freedom is absorbed into the local cosmological or integration term. In natural units, the retained equation-of-state branch therefore has the form
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+8\pi G\,T_{\mu\nu}+C_{\mu\nu},
+\tag{12.1g.3}
+$$
+with the usual replacement $8\pi G\mapsto 8\pi G/c^4$ in SI units, where $C_{\mu\nu}$ is the chosen symmetric representative of the retained Clausius-defect class. The accepted reversible PU gravity branch is the special case
+$$
+C_{\mu\nu}=0.
+\tag{12.1g.4}
+$$
+If the finite certificate bounds $|\chi_p(k)|\le\eta$ on all retained null directions and the separating null-frame system has condition constant $\kappa_B$, then
+$$
+\lVert C^0(p)\rVert_B^*\le \kappa_B\eta
+\tag{12.1g.5}
+$$
+in the corresponding dual trace-free tensor norm.
+
+*Proof.* The null-cone lemma used in the proof of Theorem 12.1 states that a symmetric tensor whose contraction with every null vector vanishes is proportional to the metric. Therefore null contractions determine only the trace-free part of a symmetric tensor. On a finite budget, the same conclusion holds for the retained directions exactly when they separate trace-free quadratic forms; finite-dimensional linear algebra then gives existence and uniqueness of the trace-free representative and the norm bound with condition constant $\kappa_B$. In the continuum closure the remaining pure-trace ambiguity is invisible on null contractions and is absorbed into the cosmological/integration term once the Bianchi identity and stress conservation are imposed. Setting the retained defect to zero recovers the reversible branch of Theorem 12.1. ∎
+
 **Definition 12.1d (Nondegenerate Finite-Response Gravitational Channel Ensemble).** On a refining sequence of finite operational covers $\{\mathcal U_n\}_{n\ge1}$ carrying an accepted finite KMS-descent certificate $\{\mathfrak C^{\mathrm{KMS}}_n\}$ in the sense of Definition F.10.12a, the nondegenerate finite-response gravitational channel ensemble is the finite tuple
 $$
 \mathfrak G_n
@@ -602,8 +639,6 @@ where $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent certificate
 No independent microscopic gravitational Hilbert sector is required for this closure.
 
 *Proof.* The effective Lorentzian metric and Einstein equation are supplied by Theorem 12.1 and Corollary 12.1b on the accepted finite KMS-descent branch. The linearized metric response is supplied by Theorem 12.1c. The metric covariance is supplied by Theorem 12.1e. The retained-horizon no-deletion layer is supplied by Theorem E.9.5e after the retained horizon channel is accepted. The overlap audit $\mathfrak O_{\mathrm{grav}}$ ensures that these records use the same parent data and commute on shared entries. Thus the gravitational sector closes as a finite-response emergent sector by Theorem D.8.9c and Theorem P.14.1k.1. A fundamental graviton Hilbert sector is not an entry of $\mathfrak C_{\mathrm{EG}}$. By Corollary P.6.1b.8, any additional carrier with exactly the same retained finite responses is response-null surplus; any additional carrier changing retained responses is a different branch and must pass its own strict certificate by Convention P.14.1l. ∎
-
-*Proof.* Definition F.10.12a fixes, on every element of a refining finite cover, the local modular generator, finite-temperature/KMS state, channel min-cut entropy, overlap cocycle, Clausius defect, stress-energy flux, and certified error bounds. Theorem F.10.12c proves that vanishing certificate defect gives a compatible KMS sheaf, vanishing Connes cocycle obstruction, and zero local Clausius mismatch in the continuum limit. The local-horizon bridge of Theorem 48a then supplies the local Rindler horizon used in Theorem 12.1. Corollary E.8.4g supplies the channel-capacity area law, and Appendix B supplies the conserved stress-energy tensor. Therefore every premise used in Theorem 12.1 is supplied by a finite operational certificate and its limiting regular branch. The construction is entirely through metric response, finite channel capacity, KMS thermodynamics, and stress-energy conservation, so no additional microscopic gravitational state space is added. ∎
 
 ## 12.4 Interpretation: Gravity as Predictive Thermodynamics
 

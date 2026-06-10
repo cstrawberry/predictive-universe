@@ -1026,6 +1026,42 @@ retain the local status of their sector certificates, branches, thresholds, vali
 
 *Proof.* Each listed basic coefficient is either the coefficient of an invariant operator or an entry of a coefficient matrix in the accepted effective action. Definition V.3.11e fixes every such response-active coefficient as a branch-scaled spectral moment of $\omega_*$. Quantities such as $\alpha$, $G$, $\Lambda$, masses, CKM data, PMNS data, and topological phases are algebraic or circular functions of those coefficients together with accepted branch conventions and RG maps. Algebraic and circular functions of fixed inputs are fixed, except for basis rotations inside exact degeneracies; those rotations are response-null by Definition V.3.11e and do not define additional physical moduli. Before $\mathfrak S_*$ is accepted, at least one required input in Definition V.3.11a or Definition V.3.11e is absent, so the previous local status labels remain in force. ∎
 
+**Corollary V.3.11h (Golay-Uniform Reference State Gate).** Suppose a final spectral calibration datum $\mathfrak S_*$ is on the predictive-recovery MacWilliams Golay branch and its atom algebra is the codeword carrier
+$$
+\Omega_*=\mathcal G_{24}.
+$$
+If the accepted response-preserving automorphism group of the carrier contains the regular translation action of the additive code $\mathcal G_{24}$, or equivalently if the primitive codeword atoms have equal trace rank in Definition V.3.11a, then
+$$
+u_\alpha=\frac1{4096}
+\qquad
+(\alpha\in\mathcal G_{24}).
+$$
+The weight pushforward and the first eight central moment entries of this reference state are exactly the record of Theorem Z.13c.1:
+$$
+\mathbb P_{u_*}(W=0,8,12,16,24)
+=
+\frac{1}{4096}(1,759,2576,759,1),
+$$
+and
+$$
+\mathbb E_{u_*}[(W-12)^j]
+=
+\mathbb E_{\operatorname{Bin}(24,1/2)}[(B-12)^j]
+\quad(0\le j\le7),
+$$
+with first deviation
+$$
+\mathbb E_{u_*}[(W-12)^8]
+-
+\mathbb E_{\operatorname{Bin}(24,1/2)}[(B-12)^8]
+=
+\frac{239085}{2}.
+$$
+
+This gate fixes the automorphism-invariant reference measure and its codeweight moment record on the stated carrier. It does not by itself supply the remaining entries required for final calibration: the response-active operator symbols $\sigma_B$, unit bridges $s_B$, RG/threshold route $\mathcal R^*_{\mu\leftarrow\mu_*}$, and any sector-specific residual symbols still have to be accepted before comparison.
+
+*Proof.* If the additive code acts by regular translations on the atom set, any invariant probability measure is constant on a single transitive orbit. If equal trace ranks are supplied instead, Definition V.3.11a gives $u_\alpha=\operatorname{Tr}P_\alpha/\operatorname{Tr}I_{\mathrm{cal}}=1/4096$. The weight pushforward and moment identities are then precisely Theorem Z.13c.1. The final sentence follows from the list of required entries in Definition V.3.11a and the coefficient map of Definition V.3.11e. ∎
+
 **Final calibrated-branch formula.** On a final-calibrated branch,
 
 $$

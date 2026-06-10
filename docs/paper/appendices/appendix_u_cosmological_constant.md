@@ -631,6 +631,60 @@ Thus the signed sampled operator realizes the translation-sector angular eigenva
 
 *Proof.* Exact matrix multiplication with the weight choice of Proposition U.13a gives $L_W x^{(\mu)}=3x^{(\mu)}$ for each $\mu$. The characteristic polynomial from Proposition U.13a shows that the eigenvalue $3$ has multiplicity $4$, so these four coordinate functions span the full eigenspace. ∎
 
+**Remark U.13a.1a (Exact Rational Verification Contract for $L_W$).** Proposition U.13a is reproducible without floating point. Construct the 24 vertices in the unit-Hurwitz realization of Definition Z.8 and Section U.6.1, build $W$ from the inner-product classes, and compute $L_W=2(\mathrm{diag}(W\mathbf 1)-W)$ over $\mathbb Q$. The inner-product multiplicities are
+$$
+N(1)=24,
+\quad
+N(1/2)=192,
+\quad
+N(0)=144,
+\quad
+N(-1/2)=192,
+\quad
+N(-1)=24,
+$$
+the row sum of $W$ is $21/4$, and the exact characteristic polynomial is
+$$
+\chi_{L_W}(x)=x(x-3)^4(x-8)^9(x-15)^8(x-24)^2.
+$$
+The coordinate functions satisfy $L_Wx^{(\mu)}=3x^{(\mu)}$ by exact matrix multiplication. The same rational enumeration gives the design-moment checks
+$$
+\mathbb E[x_1]=0,
+\quad
+\mathbb E[x_1^2]=\frac14,
+\quad
+\mathbb E[x_1^3]=0,
+\quad
+\mathbb E[x_1^4]=\frac18,
+\quad
+\mathbb E[x_1^2x_2^2]=\frac1{24},
+\quad
+\mathbb E[x_1^5]=0,
+\quad
+\mathbb E[x_1^3x_2^2]=0.
+$$
+The normalized $D_4$ root realization $(\pm1,\pm1,0,0)/\sqrt2$ is orthogonally equivalent to the unit-Hurwitz realization, but Appendix U keeps the unit-Hurwitz coordinate convention.
+
+**Lemma U.13a.1b (Design-Exactness of the Low-Harmonic Sector).** Because the 24-cell vertex measure is a spherical 5-design by Theorem U.30, the discrete vertex average integrates every polynomial of degree $\le5$ on $S^3$ exactly. Consequently, for spherical harmonic levels $m,n$ with $m+n\le5$, all Gram and overlap integrals computed in the sampled inner product equal their continuum values. In particular, the restriction map from continuum harmonics of levels $n\le2$ to functions on $V_{24}$ is an isometry onto its image after the common normalization, and the level multiplicities $1,4,9$ for $n=0,1,2$ are preserved without aliasing.
+
+*Proof.* A product of harmonics of levels $m$ and $n$ is a polynomial of degree at most $m+n$. Theorem U.30 integrates every polynomial of degree $\le5$ exactly, so all Gram entries in the stated range agree with the continuum Gram entries. For $n\le2$, the relevant products have degree $\le4$, hence the sampled Gram matrix is the continuum nondegenerate Gram matrix on $\mathcal H_0\oplus\mathcal H_1\oplus\mathcal H_2$. Therefore restriction is injective and isometric onto its image, with dimensions $1,4,9$. ∎
+
+**Proposition U.13a.1c (Continuum Angular Grid Identification for the Sampled Channels).** The sampled angular values of Proposition U.13a are continuum $S^3$ Laplacian eigenvalue values:
+$$
+\{0,3,8,15,24\}=\{n(n+2):n=0,1,2,3,4\}.
+$$
+The sampled multiplicities are
+$$
+(1,4,9,8,2),
+$$
+whereas the continuum multiplicities for $n=0,1,2,3,4$ are
+$$
+(1,4,9,16,25).
+$$
+Thus levels $0,1,2$ are represented with their full continuum multiplicities, while the sampled entries at $15$ and $24$ are aliased finite subspaces carrying the same eigenvalue values but not the full continuum multiplicities.
+
+*Proof.* The continuum scalar Laplacian spectrum on $S^3$ is $\lambda_n=n(n+2)$ with multiplicity $(n+1)^2$. Proposition U.13a supplies the exact sampled characteristic polynomial, so the sampled values and multiplicities are exactly $0^1,3^4,8^9,15^8,24^2$. Lemma U.13a.1b explains the full multiplicity agreement through level $2$. For levels $3$ and $4$, the equality asserted here is only equality of the eigenvalue values in the sampled finite angular list; no claim is made that the sampled subspaces exhaust the continuum eigenspaces. Consequently, Theorem U.13b has no angular eigenvalue displacement in its retained sampled channels, while all remaining closure load stays in the radial spectral data and Fredholm prefactor certificates. ∎
+
 **Lemma U.13a.2 (Explicit $s$-Wave Spectral Input).** Work in $D=4$. Assume $V_{\mathrm{eff}}\in C^3(\mathbb R)$ satisfies
 $$
 V_{\mathrm{eff}}(0)=V_{\mathrm{eff}}'(0)=0,
@@ -778,7 +832,7 @@ where
 $$
 \|Y\|_{24}^2:=\frac1{24}\sum_{i=1}^{24}Y_i^2.
 $$
-Thus the full discrete Hessian is the orthogonal direct sum of the radial operators $\mathcal L_\lambda$ attached to the sampled eigenvalues $\lambda\in\{0,3,8,15,24\}$.
+Thus the full discrete Hessian is the orthogonal direct sum of the radial operators $\mathcal L_\lambda$ attached to the sampled eigenvalues $\lambda\in\{0,3,8,15,24\}$. By Proposition U.13a.1c these values are the continuum $S^3$ angular eigenvalue values $n(n+2)$ for $n=0,1,2,3,4$; only the sampled multiplicities in the $n=3,4$ values are aliased, and no additional continuum multiplicity is imported into the finite Hessian.
 
 For $\lambda=3$, Lemma U.13a.3 gives
 $$
@@ -1028,6 +1082,37 @@ Under the current Definition U.4 continuum action and the false-vacuum hypothese
 *Proof.* By Definition U.15d condition (1), $\mathcal H_{\mathrm{bounce}}$ is self-adjoint Fredholm with compact resolvent on the PCE-admissible fluctuation space after gauge quotienting; its spectrum is therefore discrete with finite-dimensional kernel and finite-rank negative spectral subspace. Any vector $s_D$ in that space lies either in the kernel or in its orthogonal complement, exhausting the Hilbert-space decomposition. If $s_D\in\ker\mathcal H_{\mathrm{bounce}}$, it is represented in $\Pi_0$ and contributes a collective-coordinate factor to $\mathcal J_{\mathrm{coll}}$ rather than to a determinant ratio (item 1). If $s_D$ has a nonzero component in $\ker\mathcal H_{\mathrm{bounce}}^\perp$, then the spectral part of $\mathcal H_{\mathrm{bounce}}$ on that complement is nonzero and either positive or negative; its contribution is captured by $\det{}''_\zeta\mathcal H_{\mathrm{bounce}}$ and, on the negative spectral subspace, by $\Pi_-$ and $\mathcal A_{\mathrm{neg}}$ (item 2). If conditions (1)–(4) of Definition U.15d fail — orientation undefined, anomaly class nonvanishing, finite-part convention not fixed, or quotient Hessian not Fredholm — formula (U.15d.3) is not a scalar branch output and the branch is rejected (item 3).
 
 Theorem U.8c proves that the pure-coordinate dilatation tangent is a strict negative eigenvector of the current Definition U.4 continuum Hessian, hence $s_D\notin\ker\mathcal H_{\mathrm{bounce}}$. Theorem U.13b supplies the corresponding full-discrete four-mode false-vacuum closure under its stated spectral hypotheses with no fifth null direction; thus item 1 is excluded on the current theorem-level branch, and the certificate routes every contribution of $s_D$ through $\Pi_-$, $\mathcal A_{\mathrm{neg}}$, and $\det{}''_\zeta\mathcal H_{\mathrm{bounce}}$ as in item 2. ∎
+
+**Definition U.15e.1 (Dilatation Negative-Mode Audit Entry).** On a four-mode Appendix U false-vacuum branch carrying $\mathfrak F_U$, a dilatation negative-mode audit entry is a finite record
+$$
+\mathfrak D_U^-=(\lambda_D,\nu_D,\mathcal N_D,\rho_D,\chi_D)
+\tag{U.15e.1}
+$$
+fixed on the same PCE-admissible fluctuation Hilbert space, quotient, orientation, and finite-part convention as Definition U.15d, with the following entries:
+
+1. $\Pi_-s_D$ is nonzero and spans a one-dimensional invariant retained dilatation channel for $\mathcal H_{\mathrm{bounce}}$; on that channel $\mathcal H_{\mathrm{bounce}}=\lambda_D I$ with $\lambda_D<0$.
+2. $\nu_D=1$ records simplicity of this retained negative channel. If the retained dilatation projection is not simple, the audit entry is not accepted.
+3. $\mathcal N_D$ records the branch normalization of $s_D$ and the comparison normalization used for the one-dimensional negative-mode determinant.
+4. $\rho_D$ is the positive magnitude factor contributed by this one-dimensional channel to $|\mathcal A_{\mathrm{neg}}|\,|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|^{-1/2}$ after the decay phase has been separated into $\mathcal A_{\mathrm{neg}}$.
+5. $\chi_D=1$ records that $\lambda_D$, $\mathcal N_D$, and $\rho_D$ were computed without using $\Lambda_{\mathrm{obs}}$, $A_{\mathrm{eff}}^{(\mathrm{obs})}$, $A_{\mathrm{eff}}^{(\mathrm{obs},4)}$, or a transferred electroweak prefactor.
+
+If the same normalization isolates only this one-dimensional factor and compares it to a reference negative eigenvalue $\lambda_{\mathrm{ref}}<0$, then
+$$
+\frac{\rho_D(\lambda_D)}{\rho_D(\lambda_{\mathrm{ref}})}
+=
+\left(\frac{|\lambda_{\mathrm{ref}}|}{|\lambda_D|}\right)^{1/2}.
+\tag{U.15e.2}
+$$
+Consequently, a requested one-dimensional magnitude ratio $e$ is equivalent to
+$$
+|\lambda_D|=|\lambda_{\mathrm{ref}}|e^{-2}.
+\tag{U.15e.3}
+$$
+Under the dimensionless comparison normalization $|\lambda_{\mathrm{ref}}|=2$, the diagnostic target is $|\lambda_D|=2e^{-2}$.
+
+**Theorem U.15e.2 (Soft-Dilatation Diagnostic is Certificate-Bound).** The audit entry $\mathfrak D_U^-$ can modify the four-mode vacuum prefactor only as one explicitly evaluated factor inside (U.15d.3). It cannot convert the strict negative dilatation direction into a fifth zero mode, cannot change $\kappa=142$ on the Theorem U.13b branch, and cannot close the numerical $\Lambda$ row unless the remaining entries of Definition U.15d or Definition U.15m are accepted on the same branch.
+
+*Proof.* Equation (U.15e.2) is the one-dimensional determinant identity for a nonzero spectral entry in the negative subspace after the decay phase prescription has been separated into $\mathcal A_{\mathrm{neg}}$. Theorem U.8c and Theorem U.13b exclude $s_D$ from the zero-mode projection $\Pi_0$ on the current branch, so no collective-coordinate Jacobian may be added for it. Therefore the soft-dilatation calculation, if performed, supplies only one factor in the Fredholm product (U.15d.3). All determinant, Jacobian, ghost, finite-volume, measure, finite-part, Hessian, and orientation entries required by Corollary U.15f and Theorem U.15m.1 remain necessary. ∎
 
 **Corollary U.15f (No Prefactor Promotion without a Fredholm Audit).** The observational inversions $A_{\mathrm{eff}}^{(\mathrm{obs})}$ and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}$ remain observational inversions, and the Appendix U working value $A_{\mathrm{eff}}=0.923\pm0.011$ remains a forward-evaluation convention (Corollary U.15b, Proposition U.15c), unless an accepted certificate $\mathfrak F_U$ supplies a forward $A_{\mathrm{eff}}^{\mathrm{Fred}}$ via (U.15d.3) with all of $\mathcal J_{\mathrm{coll}}$, $|\mathcal A_{\mathrm{neg}}|$, $\mathcal A_{\mathrm{ghost}}$, $\mathcal A_{\mathrm{fv}}$, $\mathcal A_{\mathrm{meas}}$, $\det{}'_\zeta\mathcal H_{\mathrm{false}}$, and $|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|$ evaluated on the same vacuum branch and finite-part convention. The certificate machinery defines what would constitute a theorem-level forward prefactor; performing the audit is a separate calculation whose result may agree with, refute, or replace the working value.
 

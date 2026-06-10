@@ -2632,7 +2632,7 @@ $$
 $$
 on overlaps. Applying the existing local thermodynamic equation-of-state theorem then gives the stationary metric balance of Theorem F.10.4 and Theorem 12.1. No independent gravitational Hilbert sector is introduced;
 
-5. the Cech class $[u]$ is the modular representative of the X.9.5b finite obstruction class on the regular AQFT thermodynamic branch in the following sense: vanishing of $[u]$ implies vanishing of the local Rindler/KMS contribution to the X.9.5b connecting homomorphism, and conversely, a nonzero finite-cost local Rindler/KMS gluing failure at the level of Theorem X.9.5b lifts to a nonzero $[u]$. A constructive map from modular cocycles to the X.9.5b finite Cech complex on general regular branches is left as an open structural question.
+5. the Cech class $[u]$ is the modular representative of the X.9.5b finite obstruction class on the regular AQFT thermodynamic branch in the following sense: vanishing of $[u]$ implies vanishing of the local Rindler/KMS contribution to the X.9.5b connecting homomorphism, and conversely, a nonzero finite-cost local Rindler/KMS gluing failure at the level of Theorem X.9.5b lifts to a nonzero $[u]$. The certificate-complete finite-generator pushforward is supplied by Theorem F.10.11c; outside those finite faithful projection hypotheses, the fully general constructive map from modular cocycles to the X.9.5b finite Cech complex remains an open structural question.
 
 *Proof.* The Connes Radon-Nikodym derivative satisfies the chain rule for faithful normal states:
 $$
@@ -2679,6 +2679,48 @@ $$
 If the Cech class vanishes, $\Theta_{ij}$ is a coboundary at the level of expectations and the Clausius form is path-independent on the cover; if it does not vanish, no global thermodynamic gluing exists without an obstruction term. Theorem F.10.4 together with Theorem 12.1 identifies the vanishing local-horizon Clausius obstruction with the emergent metric equation-of-state branch.
 
 For item 5, on the local Rindler/KMS thermodynamic branch the local-cover Clausius mismatch is exactly the finite-cost gluing failure represented in the X.9.5b finite Cech complex, so vanishing of $[u]$ implies vanishing of that contribution. Conversely, a nonzero finite-cost local Rindler/KMS contribution to the X.9.5b connecting homomorphism produces a nonvanishing $\delta\langle\Theta_{ij}\rangle$ on at least one overlap, which lifts to a nonzero $[u]$. The certificate-complete constructive form of this equivalence is Definition F.10.12a and Theorem F.10.12c. ∎
+
+**Theorem F.10.11c (Finite Modular-to-PU Obstruction Pushforward).** Let $\{U_i\}$ be a finite KMS-descent cover satisfying the finite faithful hypotheses of Definition F.10.12a. On each overlap let $\mathfrak A_{ij}^{(B)}$ be the retained finite overlap algebra, and let $\rho_i|_{ij}$ and $\rho_j|_{ij}$ be faithful density matrices on it with modular Hamiltonians
+$$
+K_i^{(ij)}=-\log(\rho_i|_{ij}),
+\qquad
+K_j^{(ij)}=-\log(\rho_j|_{ij}).
+\tag{F.10.11c.1}
+$$
+Define the retained infinitesimal modular mismatch
+$$
+\Theta_{ij}
+:=
+K_j^{(ij)}-K_i^{(ij)}
+\tag{F.10.11c.2}
+$$
+modulo scalar shifts and response-null inner relabelings, and let
+$$
+\Phi_{ij}:=\Pi_B(\Theta_{ij})\in\mathcal F_\varepsilon(U_{ij})
+\tag{F.10.11c.3}
+$$
+be its projection to the finite predictive correction sheaf of Theorem X.9.5b. If the budget projection $\Pi_B$ commutes with restrictions to triple overlaps, then
+$$
+\Phi:Z^1_{\mathrm{mod}}(\{U_i\})\longrightarrow Z^1(\{U_i\},\mathcal F_\varepsilon),
+\qquad
+[u_{ij}(t)]\longmapsto [\Phi_{ij}]
+\tag{F.10.11c.4}
+$$
+is a natural pushforward from retained modular cocycles to the PU finite obstruction complex.
+
+It has the following properties.
+
+1. If the modular cocycle is a coboundary, then $[\Phi]=0$ in $H^1(\mathcal F_\varepsilon)$.
+
+2. If $[\Phi]\ne0$, the finite KMS patches cannot be glued as a zero-defect thermodynamic branch without adding a retained predictive correction or defect-filling datum.
+
+3. If the finite protocol cover separates self-adjoint overlap mismatches modulo response-null inner relabeling and all retained density spectra are bounded away from zero, then $[\Phi]=0$ implies modular gluing up to response-null inner relabeling.
+
+4. The retained local Clausius mismatch of Theorem F.10.11b is the pairing of the infinitesimal variation with $[\Phi]$; hence zero image class is exactly zero retained local KMS/Clausius obstruction on this finite-generator branch.
+
+*Proof.* The Connes cocycle chain rule gives the Cech 1-cocycle relation on triple overlaps after all states are restricted to the same finite algebra. In finite dimension, differentiating the cocycle at $t=0$ gives the self-adjoint logarithmic mismatch $K_j^{(ij)}-K_i^{(ij)}$ up to the scalar and inner-response-null freedoms that do not change retained protocol expectations. Because $\Pi_B$ commutes with restrictions, applying $\Pi_B$ preserves the Cech cocycle equation, so $\delta\Phi=0$.
+
+A modular coboundary has the form of local redefinition of the modular Hamiltonians, $K_i\mapsto K_i+h_i$, so its projected mismatch is a Cech coboundary in $\mathcal F_\varepsilon$. Conversely, under protocol separation and faithful spectral bounds, a zero projected class supplies local finite redefinitions that remove all retained overlap mismatches modulo response-null inner relabeling. Finally, Theorem F.10.11b identifies $\delta\langle K_j-K_i\rangle$ with the overlap difference of the Clausius one-form, so the finite obstruction class is exactly the retained KMS/Clausius gluing defect. ∎
 
 ### F.10.12 Finite KMS-Descent Certificate for Emergent Metric Thermodynamics
 

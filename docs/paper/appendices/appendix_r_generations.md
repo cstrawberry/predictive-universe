@@ -1324,9 +1324,20 @@ For length 24 and dimension 12, coding bounds imply $d\le 8$ (Theorem R.4.4), an
 
 **Corollary R.4.2b (Error Correction Implies Geometric Stability).** The Golay code's information-theoretic optimality (maximum error correction for length 24, rate 1/2) entails the Leech lattice's geometric optimality (unique rootless even unimodular lattice in 24 dimensions): under the gluing correspondence, PCE optimization of error correction yields PCE optimization of packing geometry.
 
-*Proof.* By Proposition R.4.2a, rootlessness requires $d \ge 8$. By Theorem R.4.4, any $[24,12,d]$ code satisfies $d \le 8$, and the unique code attaining $d=8$ is the extended binary Golay code $\mathcal{G}{24}$. By Theorem Z.13, PCE selects this optimal code on the $M=24$ interface. Therefore:
+*Proof.* By Proposition R.4.2a, rootlessness requires $d \ge 8$. By Theorem R.4.4, any $[24,12,d]$ code satisfies $d \le 8$, and the unique code attaining $d=8$ is the extended binary Golay code $\mathcal{G}_{24}$. By Theorem Z.13, PCE selects this optimal code on the $M=24$ interface. Therefore:
 $$\text{PCE-optimal error correction} \Rightarrow d = 8 \Rightarrow \text{rootlessness} \Rightarrow \Lambda_{24}\ (\text{hence optimal 24D packing})$$
 Each implication is a theorem; their composition is logical necessity. ∎
+
+**Corollary R.4.2b.1 (Conditional Universal-Optimality Support for Fixed-Dimension Lattice Subledgers).** Let a PU lattice subledger already be fixed to a Euclidean dimension $n\in\{8,24\}$ and to an admissible periodic-configuration class $\mathcal A_n$ with the density, covolume, and regularization conventions required by the corresponding universal-optimality theorem. Suppose the descended PCE pair cost on that subledger has the form
+$$
+V_f(X)=\sum_{x,y\in X}^{'} f(|x-y|^2)
+\tag{R.4.2b.1}
+$$
+where $f$ is completely monotone on squared distance after the branch regularization, and suppose the accepted finite-response ledger proves that no non-pairwise, anomaly, quotient, calibration, or capacity term remains outside this cost. Then the $n=8$ subledger is minimized by the $E_8$ lattice and the $n=24$ subledger is minimized by the Leech lattice $\Lambda_{24}$ among the admissible configurations.
+
+This support is fixed-dimension support only. It does not derive $d_0=8$, $M=24$, $D=4$, $K_0=3$, or the three-generation count, and it does not promote the $D_4$/24-cell leg to universal optimality. The $D_4$ and 24-cell statements remain the kissing-number, triality, and design-optimality statements already used elsewhere in the manuscript.
+
+*Proof.* Under the stated hypotheses, the PCE cost is exactly an admissible completely monotone pair energy in a dimension where universal optimality is a theorem. Therefore $E_8$ in dimension $8$ and $\Lambda_{24}$ in dimension $24$ minimize the entire accepted pair-energy family, independently of the particular $f$. The conclusion is conditional on the dimension and admissible cost form already being fixed; the universal-optimality theorem is not a selector of those dimensions and supplies no theorem-level parent invariant for source roles outside the fixed-dimensional lattice subledgers. ∎
 
 ---
 
