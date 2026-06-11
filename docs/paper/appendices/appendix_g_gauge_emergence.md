@@ -1437,7 +1437,7 @@ This tensor-product image is therefore not excluded by an arbitrary-subgroup cla
 $$
 \mathcal B=C\oplus W\oplus Y
 $$
-or the determinant interface contract used in Definition G.8.4h.1. Thus the PU result is block-frame/interface-category uniqueness, not uniqueness among all compact connected subgroups of $U(6)$.
+or the determinant interface contract used in Definition G.8.4h.1. Adding a ledger operator whose eigenspaces are already $C$, $W$, and $Y$ is a way of restating the block-frame admissibility condition, not a proof that all compact connected subgroups of $U(6)$ are conjugate to the reducible block-frame action. Thus the PU result is block-frame/interface-category uniqueness, not uniqueness among all compact connected subgroups of $U(6)$.
 
 Equivalently, PU does not assume or derive a full-centralizer maximality rule
 $$

@@ -531,7 +531,7 @@ Thus, the spatial geometry emerges as the effective continuum limit of the PU ne
 
 ### O.7.2 Hyperbolic Signature Closure and Operational Speed
 
-The PU framework supplies three independent structural inputs — the positive-definite spatial $\Gamma$-limit $A(x)$ of O.7.1, a time orientation from Theorem 31 and Appendix J, and a nondegenerate causal cone from Proposition F.1 and Theorem 46. On the three-spatial-dimensional branch fixed by Theorem Z.11, these three inputs force the Lorentzian signature and the operational speed normalization simultaneously.
+The Appendix O signature closure is a four-input branch theorem: the positive-definite spatial $\Gamma$-limit $A(x)$ of O.7.1, a time orientation from Theorem 31 and Appendix J, a second-order continuum principal symbol, and a nondegenerate characteristic cone which, by branch hypothesis, coincides with the finite operational causal frontier supplied by Proposition F.1 and Theorem 46. On the three-spatial-dimensional branch fixed by Theorem Z.11, these four inputs force the Lorentzian signature and the operational speed normalization simultaneously.
 
 **Hypothesis O.7.2.1 (Positive-definite spatial $\Gamma$-limit).** The spatial $\Gamma$-limit of §O.7.1 yields a symmetric positive-definite matrix field $A^{ij}(x)$ on the regular set $M_{\mathrm{reg}}$ of Theorem 45.
 
@@ -571,7 +571,7 @@ $$
 \;\Longrightarrow\;
 \mathrm{LorentzianSignature}\ (-,+,+,+),
 $$
-with the four antecedents supplied by Theorem 31 plus §O.4 (entropy-selected time), §O.7.1 (positive-definite spatial $\Gamma$-limit), Hypothesis O.7.2.3 (second-order continuum closure), and Theorem 46 plus Theorem P.8.4 (nondegenerate operational causal cone). The signature conclusion is conditional theorem-level on this branch; entropy-time selection alone does not force the Lorentzian signature without the other three structural inputs.
+with the four antecedents supplied by Theorem 31 plus §O.4 (entropy-selected time), §O.7.1 (positive-definite spatial $\Gamma$-limit), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose finite operational frontier component is supplied by Theorem 46 plus Theorem P.8.4 while nondegeneracy and cone-coincidence remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; entropy-time selection alone does not force the Lorentzian signature without the other three structural inputs.
 
 *Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in\mathbb R^3\setminus\{0\}$. The spatial cotangent space at $x$ is three-dimensional by Theorem Z.11, so the orthogonal complement $\{k : b^i k_i=0\}\subset\mathbb R^3$ is a two-dimensional subspace and contains infinitely many nonzero $k$. For any nonzero $k$ in this subspace, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
 $$
