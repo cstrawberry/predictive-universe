@@ -415,15 +415,23 @@ of Theorem 39.
 $$
 N_{\mathrm{pre}}=r_{\max}L/c,
 $$
-gives the mutual-information budget. Fano's inequality for an equiprobable binary context gives
+gives the mutual-information budget. For any decoder with estimate $\widehat C=\widehat C(Y_B^{N_{\mathrm{pre}}})$ and error probability $P_e=\mathbb P[\widehat C\ne C]$, the binary Fano inequality gives
 $$
-P_e\ge 1-\frac{I(C;Y_B^{N_{\mathrm{pre}}})}{\ln2},
+H(C|Y_B^{N_{\mathrm{pre}}})
+\le
+H(C|\widehat C)
+\le
+h_2(P_e).
 $$
-equivalently a necessary condition
+Since $C$ is equiprobable, $I(C;Y_B^{N_{\mathrm{pre}}})=\ln2-H(C|Y_B^{N_{\mathrm{pre}}})$. Hence any decoder with $P_e\le\alpha_{\mathrm{err}}<1/2$ must satisfy
 $$
-I(C;Y_B^{N_{\mathrm{pre}}})\ge \ln2-h_2(\alpha_{\mathrm{err}})
+I(C;Y_B^{N_{\mathrm{pre}}})
+\ge
+\ln2-h_2(\alpha_{\mathrm{err}}).
 $$
-for error at most $\alpha_{\mathrm{err}}$. Since independent or conditionally independent trials have total mutual information bounded by the sum of per-trial informations, this gives the displayed necessary budget condition. The sharper high-confidence resolution of a small Bernoulli marginal shift is controlled by the necessary Bhattacharyya gate and sufficient Hoeffding gate recorded in Lemma 10.1, with $\delta\le\kappa\,\mathrm{CC}(S_A)$. The deterministic endpoint gate is Theorem 39. ∎
+Since independent or conditionally independent trials have total mutual information bounded by the sum of per-trial informations, this gives the displayed necessary budget condition. The sharper high-confidence resolution of a small Bernoulli marginal shift is controlled by the necessary Bhattacharyya gate and sufficient Hoeffding gate recorded in Lemma 10.1, with $\delta\le\kappa\,\mathrm{CC}(S_A)$. The deterministic endpoint gate is Theorem 39. ∎
+
+**Scope note.** The finite-window budget above is a Fano and sampling gate for the CC branch. It is not an information-causality axiom for arbitrary no-signaling boxes and does not derive the Tsirelson bound by itself. The quantum CHSH/Tsirelson boundary, when invoked, must be supplied by the Hilbert/Born operator structure of Section 8, while branch-(iii) CC claims remain governed by Theorems 39a-42 and their protocol certificates.
 
 **10.3.2 Quantum Communication Protocol (QCP)**
 

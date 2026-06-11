@@ -1697,7 +1697,7 @@ For a first-order local Rindler perturbation, Theorem 48a gives the modular firs
 $$
 \delta S=\frac{\delta Q}{T_U}+O(\lambda^2).
 $$
-Substituting $S=S_{\mathrm{cut}}+o(\mathcal A)$ from (E.8.4.6) and restricting to the same first-order horizon slice gives (E.8.4.7). No step adds a fundamental metric Hilbert space or a gravitational path integral; the proof uses only finite channel capacities, their min-cut continuum limit, and the local thermodynamic metric representation. ∎
+Substituting $S=S_{\mathrm{cut}}+o(\mathcal A)$ from (E.8.4.6) and restricting to the same first-order horizon slice gives (E.8.4.7). No step adds a fundamental metric Hilbert space or a gravitational path integral; the proof uses only finite channel capacities, their min-cut continuum limit, and the local thermodynamic metric representation. The min-cut equality controls transmissible predictive nats and the horizon entropy coefficient. It is not a variational program over metrics and does not supply KKT stationarity for Einstein's equation; the metric field equation remains supplied in Section 12 by the local thermodynamic and metric-action gates. ∎
 
 **Definition E.8.4h (Recovery Length and Recovery Metric).** Let $\mathcal B$ be a finite set of operational reconstruction regions in a finite predictive channel network. For $A,B\in\mathcal B$, define the directed one-step recovery cut
 $$

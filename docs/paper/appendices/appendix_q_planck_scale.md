@@ -525,6 +525,8 @@ then $Z_n$ is invariant under $U(1)^n$.
 
 Thus exact effective continuous phase redundancy is the finite-resolution closure of discrete irreversible SPAP/Landauer phase updates. The substrate-level operation count remains integer-valued; the continuous gauge group is the operational closure seen by continuous finite-resolution response functionals.
 
+This closure statement is a topological finite-resolution closure of response functionals. It does not by itself construct a nontrivial groupoid $2$-cocycle, a central extension, an integral curvature class, or a charge lattice; any use of such data downstream must enter through a separate finite branch certificate.
+
 *Proof.* Fix $z\in U(1)$ and $y\in Y$. By Corollary Q.0.7d′, $G_L$ is dense in $U(1)$, so there exists a sequence $g_m\in G_L$ with
 $$
 g_m\to z.
