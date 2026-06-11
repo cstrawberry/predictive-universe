@@ -2796,6 +2796,194 @@ on each cell in the partition. Additivity of the Appendix B flux functional and 
 
 *Proof.* Theorem F.10.12c derives the metric equation from finite protocol algebras, KMS states, channel entropy, and stress-energy flux. Any added microscopic gravitational state space that changes no local algebra, no modular generator, no entropy min-cut, no stress-energy flux, and no finite protocol response represents the same object in the protocol-response presheaf. The PPI no-response-surplus principle quotients such a state space out. If the added state space changes a finite response, it is not part of the same branch and must be tested as a different protocol-response theory. ∎
 
+**Definition F.10.12e (Finite Modular-Clausius Hodge Datum).** Let $\mathfrak C^{\mathrm{KMS}}_n$ be a finite KMS-descent certificate in the sense of Definition F.10.12a. The associated finite modular-Clausius Hodge datum is the real finite Hilbert complex
+$$
+C^0_{\mathrm{MC},n}
+\xrightarrow{D^0_n}
+C^1_{\mathrm{MC},n}
+\xrightarrow{D^1_n}
+C^2_{\mathrm{MC},n}
+\tag{F.10.12e.1}
+$$
+constructed as follows.
+
+1. $C^0_{\mathrm{MC},n}$ is the direct sum over $U_i\in\mathcal U_n$ of retained self-adjoint local modular recalibrations on $\mathcal A_i$, quotiented by scalar shifts and response-null inner relabelings.
+
+2. $C^1_{\mathrm{MC},n}$ is the direct sum of retained overlap modular mismatches and local Clausius one-form defects,
+$$
+C^1_{\mathrm{MC},n}
+=
+\left(\bigoplus_{i<j}\mathcal M_{ij}^{\mathrm{sa}}\right)
+\oplus
+\left(\bigoplus_i\mathcal L_i\right),
+\tag{F.10.12e.2}
+$$
+where $\mathcal M_{ij}^{\mathrm{sa}}$ is the finite response quotient of self-adjoint overlap generators on $U_i\cap U_j$, and $\mathcal L_i$ is the finite-dimensional real space spanned by retained local Rindler/boost heat-entropy variations on $U_i$.
+
+3. $C^2_{\mathrm{MC},n}$ is the direct sum of retained triple-overlap modular defects and retained overlap differences of Clausius one-forms. The map $D^1_n$ records exactly these two compatibility failures. On the modular part it is the projected Cech differential
+$$
+(D^1_n\Theta)_{ijk}
+=
+\Theta_{jk}|_{ijk}-\Theta_{ik}|_{ijk}+\Theta_{ij}|_{ijk},
+\tag{F.10.12e.3}
+$$
+after the response projection of Theorem F.10.11c. On the Clausius part it is the difference of the local one-forms after transporting them through the same finite overlap map. The map $D^0_n$ is the corresponding local recalibration coboundary. The Connes chain rule and additivity of the Appendix B flux and Appendix E min-cut entropy give
+$$
+D^1_nD^0_n=0.
+\tag{F.10.12e.4}
+$$
+
+4. The inner product on the modular summands is the finite Bogoliubov-Kubo-Mori form of the faithful local density matrix,
+$$
+\langle X,Y\rangle_{\rho}^{\mathrm{BKM}}
+=
+\int_0^1\operatorname{Tr}(\rho^s X\rho^{1-s}Y)\,ds
+-
+\operatorname{Tr}(\rho X)\operatorname{Tr}(\rho Y),
+\tag{F.10.12e.5}
+$$
+restricted to the scalar-quotient retained subspace. The inner product on the Clausius summands is the finite QFI/BKM response pairing induced by the same faithful state and the retained heat-entropy variations. The total inner product is the weighted direct sum over cells and overlaps with the certificate weights.
+
+5. The finite modular-Clausius obstruction current of the certificate is
+$$
+\mathfrak o_n
+=
+(\Theta_n,\chi_n)\in C^1_{\mathrm{MC},n},
+\tag{F.10.12e.6}
+$$
+where
+$$
+\Theta_{ij}
+=
+\Pi_{\mathrm{ret}}\bigl(K_j^{ij}-K_i^{ij}+r_{ij}\bigr)
+\tag{F.10.12e.7}
+$$
+is the retained self-adjoint logarithmic modular mismatch on $U_i\cap U_j$. Here $K_i^{ij}$ and $K_j^{ij}$ are the restricted finite modular Hamiltonians, $r_{ij}$ is the response-projected Connes cocycle generator, and $\Pi_{\mathrm{ret}}$ is the retained finite-response projection. Equivalently, when the corrected overlap cocycle has a differentiable retained unitary representative $v_{ij}(t)$, $\Theta_{ij}=-i\left.d v_{ij}(t)/dt\right|_{t=0}$ in the retained quotient, and
+$$
+\chi_i
+=
+\delta Q_i-T_i\delta S_i
+\tag{F.10.12e.8}
+$$
+is the local retained Clausius one-form defect.
+
+Let $(D^0_n)^*$ and $(D^1_n)^*$ denote the Hilbert adjoints, and set
+$$
+\Delta_{\mathrm{MC},n}
+=
+D^0_n(D^0_n)^*+(D^1_n)^*D^1_n
+\tag{F.10.12e.9}
+$$
+on $C^1_{\mathrm{MC},n}$.
+
+**Theorem F.10.12f (Modular Hodge Descent of the KMS/Clausius Obstruction).** For every finite modular-Clausius Hodge datum of Definition F.10.12e, the obstruction current has a unique orthogonal decomposition
+$$
+\mathfrak o_n
+=
+D^0_n\phi_n+(D^1_n)^*\psi_n+h_n,
+\tag{F.10.12f.1}
+$$
+with
+$$
+D^0_n\phi_n\in\operatorname{im}D^0_n,
+\qquad
+(D^1_n)^*\psi_n\in\operatorname{im}(D^1_n)^*,
+\qquad
+h_n\in\ker\Delta_{\mathrm{MC},n}.
+$$
+Moreover,
+$$
+\ker\Delta_{\mathrm{MC},n}
+=
+\ker (D^0_n)^*\cap\ker D^1_n
+\tag{F.10.12f.2}
+$$
+and is naturally isomorphic to
+$$
+H^1_{\mathrm{MC}}(\mathcal U_n)
+=
+\ker D^1_n/\operatorname{im}D^0_n.
+\tag{F.10.12f.3}
+$$
+If $D^1_n\mathfrak o_n=0$, the retained cohomological KMS/Clausius obstruction class of the certificate is exactly the class of $h_n$. If $D^1_n\mathfrak o_n\ne0$, then $D^1_n\mathfrak o_n$ is an unresolved compatibility defect rather than a same-branch cohomology class. Consequently:
+
+1. exact components $D^0_n\phi_n$ are local modular-clock or quotient recalibrations and do not define a retained same-branch obstruction;
+2. coexact components $(D^1_n)^*\psi_n$ are orthogonal finite relaxation currents; under the zero-defect same-branch stationarity gate
+$$
+D^1_n\mathfrak o_n=0,
+\qquad
+(D^0_n)^*\mathfrak o_n=0,
+\tag{F.10.12f.4}
+$$
+they vanish from the retained obstruction;
+3. the reversible local-horizon Einstein branch is exactly the branch with
+$$
+\lim_{n\to\infty}
+\left(
+\lVert D^1_n\mathfrak o_n\rVert+
+\lVert (D^0_n)^*\mathfrak o_n\rVert+
+\lVert h_n\rVert
+\right)=0.
+\tag{F.10.12f.5}
+$$
+Equivalently, after the zero-defect stationarity gate (F.10.12f.4) is imposed, the reversible branch is the harmonic-zero branch $\lVert h_n\rVert\to0$.
+On that branch the limiting local Clausius relation is
+$$
+\delta Q=T\delta S.
+\tag{F.10.12f.6}
+$$
+If the limit harmonic component is nonzero but has finite retained null projections, those projections are precisely the Clausius-defect data entering the tensor tomography of Theorem 12.1g.
+
+*Proof.* Because every summand in Definition F.10.12e is finite-dimensional and the local states are faithful, the BKM form (F.10.12e.5) is positive semidefinite with kernel exactly the scalar directions. Those directions have already been quotiented in $C^0_{\mathrm{MC},n}$ and $\mathcal M_{ij}^{\mathrm{sa}}$, and response-null inner relabelings have also been quotiented. Hence the displayed direct-sum pairing is a positive inner product on each $C^k_{\mathrm{MC},n}$.
+
+Equation (F.10.12e.4) makes (F.10.12e.1) a cochain complex. Finite-dimensional Hilbert-space linear algebra gives
+$$
+(\operatorname{im}D^0_n)^\perp=\ker (D^0_n)^*,
+\qquad
+(\operatorname{im}(D^1_n)^*)^\perp=\ker D^1_n,
+$$
+and
+$$
+\operatorname{im}D^0_n\perp\operatorname{im}(D^1_n)^*
+$$
+because
+$$
+\langle D^0_na,(D^1_n)^*b\rangle
+=
+\langle D^1_nD^0_na,b\rangle
+=0.
+$$
+Therefore
+$$
+C^1_{\mathrm{MC},n}
+=
+\operatorname{im}D^0_n
+\oplus
+\operatorname{im}(D^1_n)^*
+\oplus
+\bigl(\operatorname{im}D^0_n\oplus\operatorname{im}(D^1_n)^*\bigr)^\perp,
+$$
+which gives the unique decomposition (F.10.12f.1). The final orthogonal complement is $\ker (D^0_n)^*\cap\ker D^1_n$. For any $x\in C^1_{\mathrm{MC},n}$,
+$$
+\langle x,\Delta_{\mathrm{MC},n}x\rangle
+=
+\lVert (D^0_n)^*x\rVert^2+\lVert D^1_nx\rVert^2,
+$$
+so $\Delta_{\mathrm{MC},n}x=0$ if and only if both terms vanish. This proves (F.10.12f.2). Every class in $\ker D^1_n/\operatorname{im}D^0_n$ has a unique representative orthogonal to $\operatorname{im}D^0_n$, and that representative lies in $\ker (D^0_n)^*\cap\ker D^1_n$; hence (F.10.12f.3).
+
+The interpretation follows from the definitions. Elements of $\operatorname{im}D^0_n$ are exactly local modular-clock changes and finite quotient corrections, so they are the response-null recalibrations already identified by Definition F.10.12a and Theorem F.10.11c. Elements of $\operatorname{im}(D^1_n)^*$ are orthogonal gradients of the finite compatibility defects. For a closed current $\mathfrak o_n\in\ker D^1_n$, projection to $H^1_{\mathrm{MC}}(\mathcal U_n)$ is therefore represented by $h_n$. If $D^1_n\mathfrak o_n\ne0$, the displayed nonzero image is a remaining descent defect and must be discharged before the same-branch obstruction can be treated cohomologically.
+
+The quadratic certificate penalty
+$$
+V_{\mathrm{MC},n}(x)
+=
+\lVert D^1_nx\rVert^2+\lVert (D^0_n)^*x\rVert^2
+\tag{F.10.12f.7}
+$$
+is nonnegative and vanishes exactly on $\ker\Delta_{\mathrm{MC},n}$. Thus a same-branch zero-defect PCE minimizer satisfies (F.10.12f.4), and, after closedness is imposed, the only quotient-invariant obstruction that can remain is the harmonic representative $h_n$.
+
+If the full defect norm in (F.10.12f.5) tends to zero, then the retained modular mismatch and local Clausius one-form defect vanish in the finite response quotient along the refining sequence. The modular part gives vanishing Connes obstruction by Theorem F.10.11c. The Clausius part gives $\delta Q_i-T_i\delta S_i\to0$ on every refined cell; additivity of the Appendix B flux and Appendix E min-cut entropy gives the limiting local relation (F.10.12f.6), exactly as in Theorem F.10.12c. If the stationarity defects vanish but $h_n$ has a nonzero finite limit, its Clausius component is a retained homogeneous quadratic null-direction defect, and Theorem 12.1g is precisely the finite tensor reconstruction of that retained defect. ∎
+
 
 
 

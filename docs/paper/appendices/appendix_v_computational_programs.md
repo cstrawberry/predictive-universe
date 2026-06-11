@@ -1062,6 +1062,77 @@ This gate fixes the automorphism-invariant reference measure and its codeweight 
 
 *Proof.* If the additive code acts by regular translations on the atom set, any invariant probability measure is constant on a single transitive orbit. If equal trace ranks are supplied instead, Definition V.3.11a gives $u_\alpha=\operatorname{Tr}P_\alpha/\operatorname{Tr}I_{\mathrm{cal}}=1/4096$. The weight pushforward and moment identities are then precisely Theorem Z.13c.1. The final sentence follows from the list of required entries in Definition V.3.11a and the coefficient map of Definition V.3.11e. ∎
 
+**Theorem V.3.11i (Golay Association-Scheme Calibration Carrier).** On a final-calibration branch whose finite response carrier is the marked predictive-recovery Golay carrier, let
+$$
+\mathcal H_{\mathrm{cal}}
+=
+\mathbb C[\mathcal G_{24}\times F]
+\tag{V.3.11i.1}
+$$
+where $F$ is the finite flag set fixed by the accepted branch markings, including the active/passive split, the $3+2+1$ block frame, and any accepted orientation or hypercharge sign convention. Let $\Gamma_{\mathrm{PU}}$ be the finite group of response-preserving automorphisms of this marked carrier. Define
+$$
+\mathcal E_{\mathrm{PU}}
+=
+\operatorname{End}_{\Gamma_{\mathrm{PU}}}(\mathcal H_{\mathrm{cal}})
+=
+\{A\in\operatorname{End}(\mathcal H_{\mathrm{cal}}):AU_\gamma=U_\gamma A\ \text{for all }\gamma\in\Gamma_{\mathrm{PU}}\}
+\tag{V.3.11i.2}
+$$
+and
+$$
+\mathcal A_{\mathrm{Gol}}
+=Z(\mathcal E_{\mathrm{PU}})_{\mathrm{sa}}.
+\tag{V.3.11i.3}
+$$
+Then $\mathcal A_{\mathrm{Gol}}$ is a finite-dimensional commutative self-adjoint algebra with primitive central projections $\{P_\alpha\}_{\alpha\in\Omega_{\mathrm{Gol}}}$. On this branch the algebraic carrier of the final spectral calibration datum is forced to be
+$$
+\mathcal A_* = \mathcal A_{\mathrm{Gol}},
+\qquad
+\Omega_* = \Omega_{\mathrm{Gol}},
+\qquad
+u_\alpha=\frac{\operatorname{Tr}P_\alpha}{\operatorname{Tr}I_{\mathrm{cal}}}.
+\tag{V.3.11i.4}
+$$
+For every response-active coefficient operator $\widehat O_B$ on the same finite carrier, the admissible symbol is the central conditional expectation symbol
+$$
+\sigma_B(\alpha)
+=
+\frac{\operatorname{Tr}\bigl(P_\alpha E_ZE_\Gamma(\widehat O_B)\bigr)}{\operatorname{Tr}P_\alpha},
+\tag{V.3.11i.5}
+$$
+where
+$$
+E_\Gamma(\widehat O)
+=
+\frac1{|\Gamma_{\mathrm{PU}}|}\sum_{\gamma\in\Gamma_{\mathrm{PU}}}U_\gamma\widehat O U_\gamma^{-1}
+\tag{V.3.11i.6}
+$$
+is the trace-preserving group-twirl projection onto $\mathcal E_{\mathrm{PU}}$, and $E_Z:\mathcal E_{\mathrm{PU}}\to Z(\mathcal E_{\mathrm{PU}})$ is the trace-preserving central conditional expectation. Thus the Golay branch does not allow a freely chosen calibration atom algebra: only the response-natural central algebra of the marked Golay commutant may serve as $\mathcal A_*$. The moment constraints, coefficient symbols, unit bridges, RG/threshold route, and residual symbols still have to satisfy Definition V.3.11a before final calibration.
+
+*Proof.* The marked carrier is finite, so $\mathcal H_{\mathrm{cal}}$ is finite-dimensional and $\Gamma_{\mathrm{PU}}$ acts by a finite unitary representation. The commutant $\mathcal E_{\mathrm{PU}}$ in (V.3.11i.2) is therefore a finite-dimensional $*$-algebra. Its center is a finite-dimensional commutative $*$-algebra, and the self-adjoint part decomposes uniquely as
+$$
+Z(\mathcal E_{\mathrm{PU}})_{\mathrm{sa}}
+=
+\bigoplus_{\alpha\in\Omega_{\mathrm{Gol}}}\mathbb R P_\alpha
+$$
+for pairwise orthogonal primitive central projections $P_\alpha$ summing to $I_{\mathrm{cal}}$.
+
+A response-natural calibration observable must be invariant under every response-preserving automorphism of the marked carrier; otherwise two automorphism-equivalent finite protocols would assign different calibration values. Hence it must lie in $\mathcal E_{\mathrm{PU}}$ after averaging by the unique trace-preserving group twirl (V.3.11i.6). Scalar coefficient data cannot depend on noncentral matrix coordinates inside an irreducible multiplicity block, because those coordinates are changed by basis choices that leave every central protocol-response stratum fixed. Therefore the scalar calibration algebra is the center of the commutant, namely (V.3.11i.3).
+
+The finite-dimensional Wedderburn decomposition gives
+$$
+\mathcal E_{\mathrm{PU}}
+\cong
+\bigoplus_\alpha M_{m_\alpha}(\mathbb C)\otimes I_{r_\alpha}
+$$
+inside each central block. The map
+$$
+E_Z\left(\bigoplus_\alpha A_\alpha\otimes I_{r_\alpha}\right)
+=
+\bigoplus_\alpha \frac{\operatorname{tr}(A_\alpha)}{m_\alpha}I_{m_\alpha}\otimes I_{r_\alpha}
+$$
+is the unique trace-preserving conditional expectation from $\mathcal E_{\mathrm{PU}}$ to its center. Composing it with $E_\Gamma$ gives a trace-preserving response-preserving conditional expectation from all finite response operators to $\mathcal A_{\mathrm{Gol}}$. Formula (V.3.11i.5) is then exactly the symbol rule of Definition V.3.11a. The normalized trace state in (V.3.11i.4) is Definition V.3.11a applied to these primitive central projections. The final sentence follows because Definition V.3.11a requires moment values, symbols, units, routes, and residual entries in addition to the atom algebra. ∎
+
 **Final calibrated-branch formula.** On a final-calibrated branch,
 
 $$

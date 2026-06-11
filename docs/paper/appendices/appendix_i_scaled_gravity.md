@@ -1006,6 +1006,68 @@ the local high-acceleration projection satisfies $G(R)\to G_0$ with the solar-sy
 
 *Proof.* Items 1--5 fix the maps from the retained covariant susceptibility to the weak-field galaxy law and the cluster source response. Item 6 gives a finite admissible ansatz family, a PCE functional, a unique minimizer, and a strict separation gap modulo response equivalence. Theorem D.8.9b therefore fixes $\Theta_{\mathrm{DS}}^*$ uniquely in the retained quotient. Equation (I.13d.2) gives covariant conservation of the total source, while the local and homogeneous-background conditions keep the solar-system and early-universe projections inside the certified residual interval. Hence the projected kernels are deterministic images of one finite certificate. Without the certificate, at least one of the susceptibility kernel, projection maps, minimizer, conservation check, or residual interval is not fixed, so Theorem P.14.1f blocks theorem-level promotion of the phenomenological parameters. ∎
 
+**Theorem I.13f (Harmonic Recoverability Realization of the Dark-Susceptibility Kernel).** Let $\mathcal D_B$ be a finite causal-diamond complex on a regular emergent metric branch. For every oriented retained inclusion edge $e:D_-\to D_+$, let
+$$
+\Phi_e:\mathcal A(D_+)\to\mathcal A(B_e)
+$$
+be the accepted boundary/compression channel to the boundary syndrome of that inclusion, and let $\rho_{D_+}$ and $\omega_{D_+}$ be the retained state and faithful local PCE/KMS reference state on $D_+$. Define the finite edge recoverability slack
+$$
+J_{\mathrm{rec}}(e)
+=
+D(\rho_{D_+}\Vert\omega_{D_+})
+-
+D(\Phi_e\rho_{D_+}\Vert\Phi_e\omega_{D_+})
+\ge0,
+\tag{I.13f.1}
+$$
+projected to the retained response quotient and antisymmetrized by the orientation convention $J_{\mathrm{rec}}(\bar e)=-J_{\mathrm{rec}}(e)$. Thus $J_{\mathrm{rec}}\in C^1(\mathcal D_B)$ is a retained edge current; it is not assumed to be the coboundary of a globally defined vertex potential.
+
+Equip the finite cochain complex of $\mathcal D_B$ with the BKM/QFI inner products of the accepted local states and write the predictive Hodge decomposition of Theorem X.8l.2 as
+$$
+J_{\mathrm{rec}}
+=d_0\phi+\delta_1\psi+h,
+\qquad
+h\in\ker\Delta_1.
+\tag{I.13f.2}
+$$
+If the dark-susceptibility certificate $\mathfrak X_{\mathrm{DS}}$ supplies the harmonic realization entries
+$$
+\mathcal K_{\mathrm{DS}}
+=
+\Pi_{\mathrm{harm}}\Lambda_\partial^{-1}\Pi_{\mathrm{harm}},
+\qquad
+8\pi G\,T^{\mathrm{DS}}_{\mu\nu}k^\mu k^\nu
+=
+\mathcal Q_h(k),
+\tag{I.13f.3}
+$$
+where $\Lambda_\partial$ is the accepted Schur boundary response operator of Theorem X.8k.2, $\Pi_{\mathrm{harm}}$ is the orthogonal projection onto $\ker\Delta_1$, and $\mathcal Q_h(k)$ is the retained null projection of the harmonic recoverability slack in the same source units as Theorem 12.1g, then the dark-response tensor in Definition I.13d is uniquely the harmonic recoverability tensor reconstructed by Theorem 12.1g. The metric equation on this branch is
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+8\pi G\bigl(T^{\mathrm{MPU}}_{\mu\nu}+T^{\mathrm{DS}}_{\mu\nu}\bigr),
+\tag{I.13f.4}
+$$
+with the usual $8\pi G\mapsto 8\pi G/c^4$ replacement in SI units. If $h=0$, then $T^{\mathrm{DS}}_{\mu\nu}=0$ and the ordinary reversible PU Einstein branch is recovered. The acceleration scale in the weak-field projection is still the Appendix H branch value
+$$
+g_\Lambda=\frac{c^2\sqrt\Lambda}{8};
+\tag{I.13f.5}
+$$
+Theorem I.13f supplies the kernel source, not a second acceleration-scale fit.
+
+*Proof.* Monotonicity of relative entropy under each channel $\Phi_e$ gives the nonnegativity in (I.13f.1). Since $\mathcal D_B$ is finite and the local states are faithful, the BKM/QFI pairings give positive finite inner products on the retained quotient cochains. Theorem X.8l.2 therefore applies and gives the unique decomposition (I.13f.2), with $h$ the unique harmonic representative of the cohomology class of the closed part of $J_{\mathrm{rec}}$.
+
+A same-branch stationary dark residue must be invariant under local recalibrations and must have no unresolved local source or circulation after the finite conservation check in Definition I.13d. In cochain terms this is
+$$
+d_1J_{\mathrm{rec}}=0,
+\qquad
+\delta_0J_{\mathrm{rec}}=0.
+\tag{I.13f.6}
+$$
+Substituting (I.13f.2), the exact part $d_0\phi$ is orthogonal to harmonic cochains and lies in $\operatorname{im}d_0$; if it also satisfies (I.13f.6), then it is harmonic and exact, hence zero by the orthogonal Hodge decomposition. The coexact part $\delta_1\psi$ is orthogonal to harmonic cochains and lies in $\operatorname{im}\delta_1$; if it also satisfies (I.13f.6), then it is harmonic and coexact, hence zero. Thus the only stationary quotient-invariant recoverability residue is $h$. If a proposed recoverability current is merely $\Delta_{\mathrm{rec}}(D_+)-\Delta_{\mathrm{rec}}(D_-)$ for one globally defined vertex potential, then it is exact and its harmonic part is zero; a nonzero dark-response branch therefore requires the retained edge slack data in (I.13f.1), not only a global vertex-potential difference.
+
+The accepted Schur operator $\Lambda_\partial$ maps boundary data to retained boundary response by Theorem X.8k.2. On the certificate branch, (I.13f.3) first projects the baryonic boundary source to the harmonic recoverability subspace, applies the inverse Schur response on that retained subspace, and projects back to the same harmonic subspace. This composition is finite and unique once $\Lambda_\partial$ and the Hodge datum are accepted. The null projections $\mathcal Q_h(k)$ are homogeneous quadratic response functions of the retained harmonic generator in the source normalization of Theorem 12.1g. Theorem 12.1g therefore reconstructs a unique trace-free tensor representative, with the trace part fixed by the conservation equation (I.13d.2) and the cosmological ledger. Equation (I.13f.4) is the corresponding source form of the retained Clausius/recoverability defect. If $h=0$, every null projection vanishes, so Theorem 12.1g gives no dark-response tensor beyond the cosmological trace ledger. Equation (I.13f.5) is Corollary I.3a and is not modified by the harmonic projection. ∎
+
 **I.14 Timescale Separation (Quasistatic Local-Relaxation Branch)**
 
 On the quasistatic local-relaxation branch, the adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $G(R)$ are assumed to reach local PCE equilibrium on timescales (Myr–Gyr in this branch) short compared with potential cosmological drift of the environment or fundamental parameters that might cause $(L_0, A_G, m)$ to evolve (Gyr–Hubble time). Under this branch assumption, $G(R)$ may be treated as quasi-static when analyzing galaxy dynamics, while allowing for a slow cosmic evolution of the universal parameters themselves. A first-principles derivation of the Myr–Gyr local equilibration scale from the Appendix D adaptation dynamics ($\eta_{\mathrm{adapt}}$ and the local-PL neighborhood structure of Theorem D.8) remains a separate closure lemma; the galaxy-scale phenomenology of Sections I.6-I.13 inherits this quasistatic branch label.
@@ -1016,4 +1078,4 @@ The PU framework proposes a multi-scale solution to the phenomena attributed to 
 1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Equation I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
 2.  **At cluster scales**, where a running $G(R)$ is cosmologically constrained, the mass discrepancy is modeled by a **non‑local predictive‑matter response**. A linear, single‑scale kernel is sufficient for **stacked profiles**, while **high‑concentration outliers** (e.g., A1689) demand either a **mild nonlinearity $q>0$** or a **multi‑scale kernel**. All options remain **CMB‑safe** with $A_G\simeq 0$ and are quantitatively testable against lensing data.
 
-This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale after the Appendix H bridge normalization is adopted, with the adopted representative giving the exact lock $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the corresponding vacuum branch. The galaxy and cluster response kernels are phenomenological until an accepted covariant dark-susceptibility certificate $\mathfrak X_{\mathrm{DS}}$ supplies the common kernel, projection maps, conservation check, strict PCE minimizer, and residual interval of Definition I.13d. With that record accepted, Theorem I.13e makes the galaxy law, cluster predictive-matter source, and shared acceleration scale deterministic outputs of one susceptibility branch. The strongest common test is whether galaxy dynamics, baryonic surface-density thresholds, and cluster/lensing response can all be written with the same $g_\Lambda$ rather than with independent acceleration scales.
+This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale after the Appendix H bridge normalization is adopted, with the adopted representative giving the exact lock $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the corresponding vacuum branch. The galaxy and cluster response kernels are phenomenological until an accepted covariant dark-susceptibility certificate $\mathfrak X_{\mathrm{DS}}$ supplies the common kernel, projection maps, conservation check, strict PCE minimizer, and residual interval of Definition I.13d. With that record accepted, Theorem I.13e makes the galaxy law, cluster predictive-matter source, and shared acceleration scale deterministic outputs of one susceptibility branch. When the certificate uses the harmonic recoverability realization of Theorem I.13f, the retained dark-response source is exactly the harmonic part of the finite edge recoverability current and vanishes on the harmonic-zero reversible Einstein branch. The strongest common test is whether galaxy dynamics, baryonic surface-density thresholds, and cluster/lensing response can all be written with the same $g_\Lambda$ rather than with independent acceleration scales.

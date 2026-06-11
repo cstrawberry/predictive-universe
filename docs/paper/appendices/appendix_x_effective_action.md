@@ -231,7 +231,7 @@ $$
 \mathfrak g_*=
 \mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
 $$
-the one-family anomaly-free chiral package of Theorem G.8.5a, the three-family CP-active branch of Appendix R when flavor is retained, and the scalar mass bridge $H=(1,2)_{1/2}$ of Theorem T.2.1a. Then the leading local invariant action has the operator basis
+the one-family anomaly-free chiral package of Theorem G.8.5a and its finite Hilbert-basis form Corollary G.8.5a.1, the three-family CP-active branch of Appendix R when flavor is retained, and the scalar mass bridge $H=(1,2)_{1/2}$ of Theorem T.2.1a. Then the leading local invariant action has the operator basis
 $$
 S_{\mathrm{eff}}^{(0)}
 =
