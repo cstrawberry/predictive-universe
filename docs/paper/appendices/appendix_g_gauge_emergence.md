@@ -2277,6 +2277,14 @@ On the residual-syndrome branch of Appendix Z, this stabilizer/vacuum interpreta
 
 **Remark G.8.4g.2: Functional and Carrier-Level Readings.** Within PU, gauge redundancy can be interpreted as the operational redundancy of an error-correcting vacuum organization. Gauge transformations identify descriptions with the same physical content, just as parity constraints identify codewords belonging to the protected code structure. The carrier-level statement is exact by Theorem G.8.4g: both sides are Lagrangian structures on the same 24-mode interface after the marked frame is fixed. The functional statement is more limited: the Lie bracket of $\mathfrak g_{\mathrm{SM}}$ is not binary code addition, and individual gauge transformations are not individual Golay codewords.
 
+**Corollary G.8.4g.3 (Mathieu Compatibility Does Not Replace Capacity Selection).** On the marked Golay-Leech branch, $M_{24}$ acts as the permutation automorphism group of the marked Golay carrier and preserves the carrier-level code structure used in Theorem G.8.4g. This action does not by itself determine a canonical ordered decomposition
+$$
+\mathcal B\cong\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1
+$$
+of the inactive fiber, nor does it determine hypercharge assignments or a chiral matter package. The Standard Model gauge algebra remains selected by the finite-response capacity and determinant-compatible block-frame analysis of Theorem G.8.4b and Corollary G.8.4c; matter-package selection remains governed by the anomaly-bordism strict-gap gate of Theorem G.8.4c.0e.
+
+*Proof.* The group $M_{24}$ preserves the marked $24$-coordinate Golay carrier. A permutation action on that carrier is not the same datum as an ordered complex block decomposition of the inactive fiber $\mathcal B\cong\mathbb C^6$. The ordered $3+2+1$ split is supplied in Appendix G by the finite-response partition enumeration and the generator-capacity saturation calculation, which leave one abelian response direction after the $8+3$ nonabelian generators. Hypercharge and chiral matter require the separate anomaly and Yukawa-compatibility data recorded in Theorem G.8.4c.0e. Hence Mathieu symmetry is a compatibility and carrier-stabilizer datum, not a replacement selector for the gauge algebra or matter spectrum. ∎
+
 ### G.8.4h Predictive Interface Tensor Category and Global-Symmetry Exclusion
 
 **Definition G.8.4h.1 (Predictive Interface Tensor Category).** Let the PCE-selected inactive-sector decomposition of Theorem G.8.4b be written

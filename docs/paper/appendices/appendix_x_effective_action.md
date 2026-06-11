@@ -491,6 +491,52 @@ $$
 
 *Proof.* The listed sectors are finite projections or finite compressions of the same CTP influence ledger. By Theorem X.5c.2, finite compression preserves (X.9j) and its low-frequency limit (X.9k). If $v^*\mathcal Dv>0$, then (X.9k) gives $v^*N(0)v=2\beta^{-1}v^*\mathcal Dv>0$. Thus a branch cannot retain dissipation in a local-equilibrium CTP sector while setting its KMS noise partner to zero. ∎
 
+**Theorem X.5c.4 (KMS Suppression of Off-Diagonal History Coherences).** On a finite quadratic local-equilibrium CTP branch satisfying Definition X.5c.1, suppose the retained history-pair influence factor for two coarse histories $q_1,q_2:[0,\tau]\to\mathbb R^n$ has the Gaussian Keldysh form
+$$
+\mathcal I[q_1,q_2]
+=
+\exp\left(
+-\frac12\int_0^\tau (q_1-q_2)^T N (q_1-q_2)\,dt
++i\mathcal A[q_1,q_2]
+\right),
+\tag{X.9m.1}
+$$
+with $N\succeq0$ the noise kernel of Theorem X.5c.2. If, on a retained transverse coherence subspace $E_\perp$, the noise satisfies $N|_{E_\perp}\succeq\nu I$ with $\nu>0$, and if
+$$
+q_1(t)-q_2(t)\in E_\perp,
+\qquad
+\int_0^\tau \lVert q_1(t)-q_2(t)\rVert^2dt\ge L^2,
+\tag{X.9m.2}
+$$
+then
+$$
+|\mathcal I[q_1,q_2]|
+\le
+\exp\left(-\frac12\nu L^2\right).
+\tag{X.9m.3}
+$$
+In the low-frequency Onsager regime, any retained direction with $v^*\mathcal Dv>0$ has such a positive KMS noise coefficient by (X.9m), so repeated coarse updates suppress off-diagonal history coherences exponentially in the accumulated noise length.
+
+*Proof.* Taking the absolute value of (X.9m.1) removes the phase $\mathcal A$ and leaves
+$$
+|\mathcal I[q_1,q_2]|
+=
+\exp\left(
+-\frac12\int_0^\tau (q_1-q_2)^T N (q_1-q_2)\,dt
+\right).
+$$
+On $E_\perp$, the operator inequality $N\succeq\nu I$ gives
+$$
+(q_1-q_2)^T N(q_1-q_2)
+\ge
+\nu\lVert q_1-q_2\rVert^2.
+$$
+Integrating and using (X.9m.2) gives (X.9m.3). The final sentence is Corollary X.5c.3 applied to each retained dissipative direction. ∎
+
+**Corollary X.5c.5 (Classical Saddle Gate from KMS Decoherence).** On a branch satisfying Theorem X.5c.4, suppose the accumulated KMS noise length diverges for every non-diagonal retained history pair while diagonal histories remain in the regular Lorentzian action branch satisfying the hypotheses of Theorem 12.3b. Then the retained low-noise classical histories are exactly the stationary metric-geodesic histories of Theorem 12.3b. The crossover scale of a concrete model is the finite inequality obtained from (X.9m.3) for the chosen tolerance, noise spectrum, and observation time; it is not fixed by an independent universal formula unless those entries are supplied by a separate branch certificate.
+
+*Proof.* Theorem X.5c.4 sends every non-diagonal retained history-pair amplitude to zero when its accumulated noise length diverges. The remaining diagonal histories are weighted by the real effective action on the regular Lorentzian branch. Under the hypotheses of Theorem 12.3b, stationarity of that action is equivalent to the metric geodesic equation. Therefore the retained classical saddle histories are the geodesic histories and no additional Heisenberg-cut postulate is used. ∎
+
 ## X.6 Rate‑Level PCE Potential vs. Effective Potential
 
 For homogeneous deformations $u=g_e^2$, define the **effective potential**

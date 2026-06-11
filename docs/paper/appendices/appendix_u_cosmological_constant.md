@@ -1257,6 +1257,21 @@ which gives (U.15f.5). ∎
 
 *Proof.* Each listed item is an entry of $\mathfrak I_U^{(4)}$. The forward-lock condition $\chi_U$ forbids choosing it from $\Lambda_{\mathrm{obs}}$. A post-comparison change changes the finite record and therefore changes the branch. ∎
 
+**Corollary U.15f.3a (Bare Grassmannian Volume is Not a Vacuum Prefactor Certificate).** Let
+$$
+X=\mathrm{Gr}_{\mathbb C}(12,24).
+$$
+Then
+$$
+\dim_{\mathbb C}X=12(24-12)=144,
+\qquad
+\dim_{\mathbb R}X=288.
+\tag{U.15f.6}
+$$
+Consequently any homogeneous Fubini-Study symplectic volume contribution for $X$ is a degree-$144$ volume term, up to the chosen metric normalization. A bare scalar assignment of the form $A_{\mathrm{eff}}^{(4)}=\operatorname{Vol}(X)^{-1}$ cannot instantiate the Fredholm prefactor formula (U.15d.3) unless the same branch also supplies the collective-coordinate Jacobian, negative-mode phase and magnitude, ghost factor, finite-volume/extensivity factor, measure normalization, false-vacuum determinant, and bounce determinant required by Definition U.15d. Therefore an inverse Grassmannian volume by itself is not an admissible PU prefactor certificate for $A_{\mathrm{eff}}^{\mathrm{Fred},4}$.
+
+*Proof.* The dimension formula for a complex Grassmannian is $k(n-k)$, giving (U.15f.6). Symplectic volume is obtained by integrating the top exterior power of the Kähler form, so the power degree is the complex dimension $144$ in any fixed homogeneous normalization. Independently of the normalization scale, Definition U.15d and equation (U.15d.3) define the vacuum prefactor as a product of the determinant, ghost, measure, finite-volume, negative-mode, and collective-coordinate factors on one branch. A single inverse volume supplies at most one factor and leaves the rest of the certificate undefined. Corollary U.15f then blocks promotion of such a scalar to the accepted four-mode prefactor. ∎
+
 **Definition U.15g (Bismut-Lebeau Determinant-Transfer Datum).** A Bismut-Lebeau determinant-transfer datum is a finite record
 $$
 \mathfrak B_{\mathrm{BL}}

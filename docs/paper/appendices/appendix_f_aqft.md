@@ -2722,6 +2722,30 @@ It has the following properties.
 
 A modular coboundary has the form of local redefinition of the modular Hamiltonians, $K_i\mapsto K_i+h_i$, so its projected mismatch is a Cech coboundary in $\mathcal F_\varepsilon$. Conversely, under protocol separation and faithful spectral bounds, a zero projected class supplies local finite redefinitions that remove all retained overlap mismatches modulo response-null inner relabeling. Finally, Theorem F.10.11b identifies $\delta\langle K_j-K_i\rangle$ with the overlap difference of the Clausius one-form, so the finite obstruction class is exactly the retained KMS/Clausius gluing defect. ∎
 
+**Theorem F.10.11d (Golay-Correctability Gate for Modular Cocycle Trivialization).** Work in the finite-dimensional overlap branch of Theorem F.10.11c, with each retained overlap algebra marked by a Golay-Pauli carrier. Let $\mathrm{wt}(X)$ denote the minimum marked carrier support of a self-adjoint representative $X$ modulo scalar shifts and response-null inner relabelings. Suppose the branch supplies finite recovery maps
+$$
+\mathcal R_{ij}:\{X:\mathrm{wt}(X)\le3\}\to\mathfrak A_{ij}^{(B)}
+$$
+commuting with restriction to triple overlaps and satisfying
+$$
+\Pi_B\bigl(\mathcal R_{ij}(X)\bigr)=0
+\tag{F.10.11d.1}
+$$
+for every correctable overlap mismatch $X$ with $\mathrm{wt}(X)\le3$. If every infinitesimal modular mismatch $\Theta_{ij}$ of (F.10.11c.2) lies in this correctable class after scalar and response-null quotienting, then the projected PU obstruction class vanishes:
+$$
+[\Phi]=0\in H^1(\mathcal F_\varepsilon).
+\tag{F.10.11d.2}
+$$
+Under the separation and faithful spectral hypotheses of Theorem F.10.11c(3), the Connes cocycle then glues up to response-null inner relabeling. Conversely, the Golay minimum-distance statement $d=8$ alone does not imply $[u]=0$ or $[\Phi]=0$ for arbitrary modular Hamiltonian mismatches; it supplies only the correction radius $3$ and the lower bound on nonzero stabilizer supports.
+
+*Proof.* Since the extended Golay code has distance $8$, its correction radius is $\lfloor(8-1)/2\rfloor=3$. The hypothesis is not merely the distance bound; it includes the recovery maps and the response projection condition (F.10.11d.1). For each retained overlap mismatch, replacing $\Theta_{ij}$ by its accepted recovered representative gives
+$$
+\Phi_{ij}=\Pi_B(\mathcal R_{ij}(\Theta_{ij}))=0.
+$$
+The restriction-commutation hypothesis makes this assignment compatible on triple overlaps, so the resulting Cech $1$-cocycle is the zero cocycle and (F.10.11d.2) follows. The final gluing statement is exactly item 3 of Theorem F.10.11c applied to $[\Phi]=0$.
+
+For the converse, the code distance is a statement about supports of nonzero Golay codewords and stabilizer shells. A modular mismatch is a self-adjoint logarithmic difference $K_j^{(ij)}-K_i^{(ij)}$ in the overlap algebra. Unless the branch supplies a recovery map sending that mismatch to the response-null quotient, the projection $\Pi_B(\Theta_{ij})$ may be nonzero and may represent a nontrivial class in the finite obstruction sheaf. Thus distance $8$ is a gate for correctability, not by itself a proof of modular cocycle triviality. ∎
+
 ### F.10.12 Finite KMS-Descent Certificate for Emergent Metric Thermodynamics
 
 **Definition F.10.12a (Finite KMS-Descent Certificate).** Let $\{\mathcal U_n\}_{n\ge1}$ be a refining sequence of finite operational covers of a regular branch of the MPU continuum limit. A finite KMS-descent certificate on $\mathcal U_n$ is a record

@@ -730,6 +730,24 @@ v = A_{EW}\, v_0,
 $$
 with $A_{EW}$ specified by the determinant-model branch of Theorem T.29.
 
+**Corollary T.6b (Planck-Normalization Non-Exchangeability).** The exponent $\kappa_{EW}=38.5$ in Theorem T.6 is calibrated to the unreduced Planck mass $M_{Pl}$ used throughout Appendix T. Since
+$$
+M_{Pl}=\sqrt{8\pi}\,\bar M_{Pl},
+\tag{T.6b.1}
+$$
+replacing $M_{Pl}$ by the reduced Planck mass $\bar M_{Pl}$ while keeping $A_{EW}$ and $\kappa_{EW}$ fixed changes the branch by the factor $(8\pi)^{-1/2}$:
+$$
+\bar M_{Pl}e^{-38.5}
+=
+\frac{M_{Pl}e^{-38.5}}{\sqrt{8\pi}}
+\approx
+46.3\ \mathrm{GeV}.
+\tag{T.6b.2}
+$$
+Thus the electroweak branch cannot exchange $M_{Pl}$ for $\bar M_{Pl}$ without either adding the compensating factor $\sqrt{8\pi}$ to the prefactor ledger or changing the exponent ledger.
+
+*Proof.* Equation (T.6b.1) is the defining relation between the reduced and unreduced Planck masses. Substituting it into $e^{-\kappa_{EW}}M_{Pl}$ gives $e^{-\kappa_{EW}}\sqrt{8\pi}\,\bar M_{Pl}$. Holding the exponent and determinant prefactor fixed while replacing $M_{Pl}$ by $\bar M_{Pl}$ therefore rescales the predicted vacuum expectation value by $(8\pi)^{-1/2}$. This is a different normalization branch, not the branch of Theorem T.6. ∎
+
 ### T.7.2 Prefactor Determination
 
 **Proposition T.4** (Prefactor Consistency). The determinant model of Theorem T.29 gives the central value $A_{EW}=1.08407\ldots$ from the SU(2) link factor, the rank-one Schur-complement factor, and the homogeneous-space Jacobian factor. With the separate model allowance recorded in Theorem T.29, the working value is
@@ -3965,6 +3983,52 @@ $$
 *The $m_\tau$ row is a self-consistency check: $y_\tau(\mu_G)$ was extracted from $m_\tau^{\rm obs}$ in Step 3. The $m_\mu$ and $m_e$ rows test the parameter-free $E_8$ log-ratio predictions (Theorem T.42.6) once the overall scale is fixed.*
 
 **Interpretation.** The ratio agreements above are genuine tests of the $E_8$ log-ratio predictions. The absolute normalization remains open at leading order: using $y_\tau^{(0)}(\mu_G)\approx 0.00472$ instead of the self-consistent value gives $m_\tau^{(0)}\approx 0.94\ \text{GeV}$ (Remark T.45.1), i.e. a factor $\approx 1.9$ below observation.
+
+**Definition T.45.1b (Absolute Lepton-Normalization Correction Ledger).** An absolute lepton-normalization correction ledger is a finite record
+$$
+\mathfrak N_\ell
+=
+(\Delta_{\mathrm{thr}},\Delta_{\mathrm{VVM}}^{\mathrm{abs}},\Delta_{\mathrm{aniso}},I_\ell,\chi_\ell)
+\tag{T.45.1b.1}
+$$
+fixed at the matching scale $\mu_G$, where:
+
+1. $\Delta_{\mathrm{thr}}$ is the finite threshold-matching factor for the tau Yukawa normalization on the same SM running convention used in Lemma T.45.1a.
+2. $\Delta_{\mathrm{VVM}}^{\mathrm{abs}}$ is the absolute-normalization Van Vleck-Morette determinant factor computed from a specified Bures heat-kernel or Jacobi-field determinant on the same $\mathrm{Gr}(2,8)$ branch as Theorem T.42.6, including the geodesic endpoints, determinant convention, and retained effective dimension.
+3. $\Delta_{\mathrm{aniso}}$ is the finite PCE-anisotropy factor relating the isotropic normalization $1/(72\sqrt{12})$ to the retained lepton-sector block.
+4. $I_\ell=[L_\ell^-,L_\ell^+]$ is a certified residual interval for omitted higher-order matching and curvature terms in logarithmic units.
+5. $\chi_\ell=1$ records that no entry of the ledger is selected using $m_\tau$, $m_\mu$, or $m_e$.
+
+Write
+$$
+\Delta_\ell
+:=
+\Delta_{\mathrm{thr}}\Delta_{\mathrm{VVM}}^{\mathrm{abs}}\Delta_{\mathrm{aniso}}.
+\tag{T.45.1b.2}
+$$
+A scalar Van Vleck-Morette multiplier is admissible in the absolute mass anchor only as the entry $\Delta_{\mathrm{VVM}}^{\mathrm{abs}}$ of such a ledger; the geodesic angle, retained dimension, and full determinant convention are part of the datum.
+
+**Theorem T.45.1c (Absolute Mass Anchor Determinacy from a Normalization Ledger).** If $\mathfrak N_\ell$ is accepted, then the forward absolute charged-lepton anchor is
+$$
+y_{\tau,\mathrm{abs}}(\mu_G)
+=
+\mathcal N_{\rm PU}c_\ell\Delta_\ell,
+\qquad
+\mathcal N_{\rm PU}=\frac{1}{72\sqrt{12}},
+\tag{T.45.1c.1}
+$$
+and the corresponding forward interval is
+$$
+\log m_\tau^{\mathrm{abs}}
+\in
+\log\left(\frac{v_{\rm PU}}{\sqrt2}\eta_\tau\mathcal N_{\rm PU}c_\ell\Delta_\ell\right)
++
+[L_\ell^-,L_\ell^+].
+\tag{T.45.1c.2}
+$$
+The muon and electron absolute intervals are obtained by subtracting the ratio exponents of Theorem T.42.6 from the same tau interval. If $\mathfrak N_\ell$ is absent, the displayed leading-order value $m_\tau^{(0)}\approx0.94\ \mathrm{GeV}$ remains only the flat-isotropic anchor, while the charged-lepton ratios remain governed by Theorem T.42.6.
+
+*Proof.* Once $\mathfrak N_\ell$ is accepted, every multiplicative correction to the absolute Yukawa normalization is fixed before comparison. Multiplying the flat-isotropic source $\mathcal N_{\rm PU}c_\ell$ by the ledger product (T.45.1b.2) gives (T.45.1c.1). The physical tau mass is obtained from the standard matching relation $m_\tau=(v_{\rm PU}/\sqrt2)\eta_\tau y_{\tau,\mathrm{abs}}(\mu_G)$; taking logarithms and adding the certified residual interval gives (T.45.1c.2). The ratio formulas of Theorem T.42.6 are independent of the common absolute prefactor, so $\log m_\mu=\log m_\tau-\log(m_\tau/m_\mu)$ and $\log m_e=\log m_\tau-\log(m_\tau/m_e)$ use the same interval. Without the ledger, at least one of the threshold, Van Vleck-Morette, anisotropy, residual, or forward-lock entries is undefined, so no scalar normalization correction is determined by the theorem stack. ∎
 
 **Error budget (parametric / scheme):**
 

@@ -1880,11 +1880,63 @@ $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = \frac{38.5}{2} 
 
 The CP-odd baryogenesis insertion is a $\mathbb{Z}_2$ half-step whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the associated large-deviation exponent halves, giving $\kappa_{CP}=\kappa_{EW}/2$ (part (e) of Lemma Y.8.1). The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
 
-**Open Problem (Gravitational Response).** The covariant form of variable gravitational coupling consistent with $\nabla^\mu T_{\mu\nu} = 0$ is constrained to:
+**Theorem R.8.2a (Covariant Quadratic-Curvature Response Kernel).** Let the regular metric branch carry the local quadratic-curvature truncation
+$$
+\Gamma_{\mathrm{grav}}[g]
+=
+\frac{1}{16\pi}
+\int d^4x\sqrt{-g}
+\left(\frac{R}{G_N}+\beta R^2\right)
+$$
+with matter defined by the PPI stress-energy variation and with no independent non-conserved gravitational source. The metric equation is
+$$
+\left(\frac1{G_N}+2\beta R\right)R_{\mu\nu}
+-\frac12\left(\frac{R}{G_N}+\beta R^2\right)g_{\mu\nu}
+-2\beta(\nabla_\mu\nabla_\nu-g_{\mu\nu}\Box)R
+=
+8\pi T_{\mu\nu}.
+\tag{R.8.2a.1}
+$$
+It is covariantly conserved by diffeomorphism invariance. Its trace is
+$$
+-\frac{R}{G_N}+6\beta\Box R=8\pi T,
+\qquad
+T=-\rho+3p.
+\tag{R.8.2a.2}
+$$
+Equivalently, on the scalar trace channel,
+$$
+R
+=
+-8\pi G_N(1-6\beta G_N\Box)^{-1}T.
+\tag{R.8.2a.3}
+$$
+Thus the quadratic-curvature branch determines a covariant response operator
+$$
+G_{\mathrm{eff}}(\Box)
+=
+G_N(1-6\beta G_N\Box)^{-1},
+\qquad
+G_{\mathrm{eff}}(\Box)^{-1}
+=
+G_N^{-1}-6\beta\Box,
+\tag{R.8.2a.4}
+$$
+rather than an algebraic local law whose first correction is proportional to $T$. In the strict slowly varying limit $\Box T=0$ the linear trace-channel coupling is $G_N$; any algebraic coefficient multiplying $T$ in $G_{\mathrm{eff}}(\rho,p)^{-1}$ requires a separate non-linear response-kernel certificate beyond the local $R^2$ trace truncation.
 
-$$\frac{1}{G_{eff}(\rho, p)} = \frac{1}{G_N} + c_1(-\rho + 3p) + O(T^2)$$
-
-where $c_1$ is determined by the response kernel $\delta^2\Gamma/\delta g_{\mu\nu}\delta g_{\rho\sigma}$, requiring explicit derivation from the PCE effective action on the attractor orbit.
+*Proof.* Varying $f(R)=R/G_N+\beta R^2$ gives the metric $f(R)$ equation
+$$
+f'(R)R_{\mu\nu}-\frac12f(R)g_{\mu\nu}-(\nabla_\mu\nabla_\nu-g_{\mu\nu}\Box)f'(R)=8\pi T_{\mu\nu}.
+$$
+Since $f'(R)=G_N^{-1}+2\beta R$, this is (R.8.2a.1). The left side is the Euler-Lagrange tensor of a diffeomorphism-invariant metric action; the Noether identity gives its covariant divergence zero, so the matter equation is compatible with $\nabla^\mu T_{\mu\nu}=0$. Taking the trace in four dimensions gives
+$$
+\left(G_N^{-1}+2\beta R\right)R
+-2\left(G_N^{-1}R+\beta R^2\right)
++6\beta\Box R
+=
+8\pi T,
+$$
+and the $R^2$ terms cancel, yielding (R.8.2a.2). Rearranging gives $(1-6\beta G_N\Box)R=-8\pi G_NT$, hence (R.8.2a.3) and (R.8.2a.4) wherever the retained scalar response operator is invertible on the chosen branch domain. Setting $\Box T=0$ gives $R=-8\pi G_NT$ at linear trace level. ∎
 
 ### R.8.3 Epistemological Status
 

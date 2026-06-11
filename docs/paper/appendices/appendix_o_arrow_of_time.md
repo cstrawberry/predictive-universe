@@ -630,6 +630,14 @@ In the uniform-weight branch these bounds coincide and recover $c=\delta/\tau_{\
 
 (d) $\pi_1(SO^+(1,3))=\mathbb Z/2$, and the unique connected double cover is $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. The spin lift of the frame bundle exists iff the second Stiefel–Whitney class vanishes; when it does, the spin lift is unique up to bundle isomorphism, and the Lorentzian factor of the principal bundle of Theorem 48 is $\mathrm{Spin}(1,3)$. ∎
 
+**Corollary O.7b.2 (No Riemannian Replacement of the Causal Cone).** Under Hypotheses O.7.2.1–O.7.2.4, a positive-definite four-dimensional principal symbol cannot represent the operational causal frontier of Theorem 46. If $H^{\mu\nu}$ is positive-definite, then
+$$
+H^{\mu\nu}\xi_\mu\xi_\nu>0
+$$
+for every nonzero covector $\xi$, so the characteristic set $H^{\mu\nu}\xi_\mu\xi_\nu=0$ is empty away from the zero covector and contains no nondegenerate two-sheet causal cone. Therefore a Riemannian symbol can enter the PU stack only as a Euclidean auxiliary description satisfying a separate reconstruction gate, such as the reflection-positivity gate of Appendix F; it cannot be the physical causal principal symbol of the regular branch.
+
+*Proof.* The first claim is the definition of positive-definiteness applied to the quadratic symbol. A nondegenerate operational causal frontier requires nonzero characteristic covectors separating future and past propagation directions. A positive-definite symbol has no such nonzero null covectors, so it cannot satisfy Hypothesis O.7.2.4. Theorems O.7a and O.7b then leave only the Lorentzian signature branch under the stated hypotheses. ∎
+
 Premise (A5) of §12 is therefore a theorem of the emergent-spacetime branch rather than an external assumption.
 
 

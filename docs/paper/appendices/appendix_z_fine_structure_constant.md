@@ -2028,6 +2028,7 @@ P^{\rm PU}_{\Lambda\bar{\Lambda}}
 \eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}\,
 \Omega
 }
+\tag{Z.8k}
 $$
 
 where:

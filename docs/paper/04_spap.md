@@ -311,7 +311,11 @@ Consider a system engaging in recursive self-modeling, where the model $M_n$ at 
 $$
 C(M_n)\ge C(M_{n-1})+k.
 $$
-Iterating yields $C(M_n)\ge C(M_0)+nk=c_0+nk$, which is (12). Hence $C(M_n)=\Omega(n)$. ∎
+Iterating yields
+$$
+C(M_n)\ge C(M_0)+nk=c_0+nk,\qquad c_0:=C(M_0). \tag{12}
+$$
+Hence $C(M_n)=\Omega(n)$. ∎
 
 **4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{SPAP}$)**
 
@@ -323,11 +327,11 @@ Let $C_{\text{uni}}(\delta_{SPAP})$ denote the minimum effective verification/up
 
 Then the universal statistical lower bound of Appendix B.3 (Theorem B.2) yields
 $$
-C_{\text{uni}}(\delta_{SPAP}) = \Omega\left( \frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2} \right). \tag{14}
+C_{\text{uni}}(\delta_{SPAP}) = \Omega\left( \frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2} \right). \tag{13}
 $$
 More generally, enforcing a uniform failure-probability budget over a horizon of $\mathcal{T}$ verification/update steps via $\beta=1/\mathcal{T}$ yields
 $$
-\mathcal{C}_{stat}(\delta_{SPAP}) = \Omega\left( \frac{\log \mathcal{T}}{\delta_{SPAP}^2} \right). \tag{13}
+\mathcal{C}_{stat}(\delta_{SPAP}) = \Omega\left( \frac{\log \mathcal{T}}{\delta_{SPAP}^2} \right). \tag{14}
 $$
 
 If, for the chosen operational realization, the complexity notion $C_{pred}(\alpha)$ lower-bounds the effective verification/update operations required by the task, i.e.
@@ -336,7 +340,7 @@ C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP}),
 $$
 then the same asymptotic lower bound transfers to $C_{pred}(\alpha)$.
 
-*Proof:* Appendix B.3 (Theorem B.2) proves the lower bound for the effective verification/update complexity needed to calibrate SPAP-limited performance to additive accuracy $\delta_{SPAP}$. Substituting $\beta=1/\mathcal{T}$ gives the horizon-budget form (13), and substituting $\beta=\delta_{SPAP}$ gives the self-calibrated form (14). The final sentence is the immediate consequence of the explicitly stated comparison hypothesis $C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP})$. ∎
+*Proof:* Appendix B.3 (Theorem B.2) proves the lower bound for the effective verification/update complexity needed to calibrate SPAP-limited performance to additive accuracy $\delta_{SPAP}$. Substituting $\beta=1/\mathcal{T}$ gives the horizon-budget form (14), and substituting $\beta=\delta_{SPAP}$ gives the self-calibrated form (13). The final sentence is the immediate consequence of the explicitly stated comparison hypothesis $C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP})$. ∎
 
 **Corollary 14.1 (Finite-Budget Bound on Reflexive Depth).** Let $B_C(T)$ be the total operational complexity budget available to a predictive system over horizon $T$. If each additional self-modeling level incurs minimum overhead $k>0$ as in Theorem 13, and if $B_C(T)\ge c_0$, then any sustainable recursion depth $n(T)$ satisfies
 $$

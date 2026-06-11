@@ -1036,6 +1036,20 @@ No third zero-error/reach primitive exists within this binary one-bit $(\Delta,\
 
 Under this reading, standard no-signaling theorems are recovered as the statement that zero-error deterministic format is unavailable on the spacelike branch. Bell-type correlations belong to the spacelike non-zero-error side only as joint or conditional correlations revealed after classical comparison; by themselves they do not instantiate branch-(iii) Bob-marginal signaling. Cosmological-scale coordination outside a deterministic lightcone can therefore use only an established joint-state/common-cause structure of the shared-past kind, or the prepared-state regular statistical branch, never a zero-error spacelike message channel, recovering Corollary 14.2.6.1c as the large-separation projection of the same format split.
 
+**Corollary 14.2.6.1e (Rate-Latency Products Require a Cost Ledger).** Let $I(C_A:Y_B^n)$ be mutual information measured in nats, and let $\Delta\tau$ be a signaling latency. The product $I(C_A:Y_B^n)\Delta\tau$ is not an action and is not the invariant quantity controlled by Theorem 14.2.6.1. Therefore a bound of the form
+$$
+I(C_A:Y_B^n)\Delta\tau
+\ge
+\frac{\hbar}{2}\,\mathrm{CC}(S_A)
+\tag{14.2.6.1e.1}
+$$
+does not follow in the finite-window signaling branch unless the branch first supplies an accepted energy or action conversion ledger mapping transmitted information to a physical cost functional. The finite-window signaling result in this section is the dimensionless corner exclusion
+$$
+\Delta(\Phi)\Pi(\Phi)<1.
+$$
+
+*Proof.* Mutual information in nats and $\mathrm{CC}$ are dimensionless, while $\hbar$ carries units of action and $\Delta\tau$ carries units of time. Thus (14.2.6.1e.1) is not invariant under a change of physical units unless an additional energy scale or information-to-action map is part of the branch data. Moreover, an upper bound on accessible information together with a lower bound on transition time does not imply a lower bound on their product. Theorem 14.2.6.1 avoids both issues by using the normalized decoder determinism $\Delta$ and the binary reach indicator $\Pi$, both dimensionless, and by proving only the excluded zero-error spacelike corner. ∎
+
 ### 14.2.7 Resolution of the Strong CP Problem
 
 The Strong CP problem—why the QCD vacuum angle $\bar{\theta}<10^{-10}$ despite no apparent symmetry requiring it—is addressed on the Appendix K strong-CP branch, whose topological-cost, $\sigma$-symmetric, and orientation-preserving real-Yukawa assumptions remain part of the stated branch data.
