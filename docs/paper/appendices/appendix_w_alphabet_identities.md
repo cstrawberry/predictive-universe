@@ -295,7 +295,11 @@ This equals the Golay code dimension $k = 12$ (Theorem Z.13).
 **Proposition W.3a.2 (Flat Spectrum).** At the PCE-Attractor (Definition 15a), the QFI spectrum is flat:
 $$\lambda_i = \lambda_0 = 1 \quad \forall i \in \{1, \ldots, M\}$$
 
-*Proof.* This is Theorem Z.5 (Steps 5–6). The isotropy group $H = S(U(a) \times U(b))$ acts transitively on the 24-dimensional interface. By Schur's lemma, the $H$-invariant QFI metric is proportional to the identity. ∎
+*Proof.* This is Theorem Z.5 (Steps 5–6) after the direct SLD-QFI calculation. For $\rho_0=I_a/a\oplus0_b$, every Hilbert-Schmidt normalized active-inactive Hermitian interface generator has
+$$
+F_Q[\rho_0,G]=\frac{2}{a}.
+$$
+At the PCE-Attractor $a=2$, so each real interface basis direction has QFI eigenvalue $1$. This establishes flatness without requiring transitivity of $S(U(a)\times U(b))$ on the full interface unit sphere. ∎
 
 ### W.3a.3 Uniform Per-Generator Capacity
 

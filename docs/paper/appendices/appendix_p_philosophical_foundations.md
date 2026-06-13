@@ -53,9 +53,9 @@ A compact statement of the bridge and forcing chain is:
 8. **MPU:** the resulting no-surplus finite physical representative has $C_P=C_{op}$ and is the MPU (Definition 23).
 9. **SPAP+Landauer:** the SPAP cycle requires a $2\to 1$ state merge, hence $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ (Theorem 31; Appendix J).
 10. **Physical implementation cost:** $\varepsilon_{\mathrm{phys}}:=\Delta S_{\mathrm{phys}}/k_B=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$ (Theorem 31).
-11. **PPI/PCE active-kernel selection:** minimal $a \in \mathbb{N}$ with $\ln a \ge \varepsilon_0$ gives $a=2$ (Definition P.6.2; Definition 15; Theorem Z.1).
-12. **QFI interface:** $M=2ab=2\times 2\times(d_0-a)=2\times2\times6=24$ (Theorem Z.5).
-13. **Mode-channel correspondence:** $K(D)=M=24\Rightarrow D=4$ (Theorem Z.11).
+11. **PPI/PCE active-kernel selection:** the sharp retained match/mismatch verification record gives $a\ge2$, entropy-capacity gives $\ln a \ge \varepsilon_0$, and PPI/PCE no-surplus selection gives $a=2$ (Definition P.6.2; Definition 15; Theorem Z.1).
+12. **QFI interface:** $M=2ab=2\times 2\times(d_0-a)=2\times2\times6=24$ with direct SLD-QFI flatness on the active-inactive sector (Theorem Z.5).
+13. **Channel-complete mode-channel correspondence:** inside the Bures tangent-cell contract, $M=K(D)=24\Rightarrow D=4$ (Definition Z.9a; Theorems Z.10-Z.11).
 
 In this sense, the immutable foundation is the process-root certified by the Cogito, while the MPU is the PPI/PCE-minimal physical representative of that process under the framework's finite-response rules. The Cogito alone does not assert MPUs; it fixes the non-arbitrary root that every later physicalization must preserve. The simulation framing (Section P.5) is used as a naturalistic modeling language for an informational process ontology, not as an ontological claim about an external programmer.
 
@@ -2445,16 +2445,16 @@ Wigner asked why the language of mathematics is appropriate for physics. The fra
 
 The transcendental structure of the framework is exhibited by a single logical chain from the certainty of the Cogito to the observable universe:
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{PCE}} \varepsilon_0=\ln2 \to a = 2 \to M = 24 \to D = 4$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{PCE}} \varepsilon_0=\ln2 \xrightarrow{\text{active record + capacity}} a = 2 \to M = 24 \xrightarrow{\text{channel-complete}} D = 4$$
 
 Each arrow represents a necessary implication:
 
 1. **Cogito $\to$ Prediction:** Conscious awareness is fundamentally predictive (Section P.2).
 2. **Prediction $\to$ SPAP:** Self-referential prediction encounters logical limits (Theorem 10).
 3. **SPAP $\to$ $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$:** The irreversible merge in the SPAP cycle incurs a strict thermodynamic floor under physical instantiation (Theorem 31, Appendix J). PCE then selects saturation at the PCE-Attractor, yielding $\varepsilon_0=\ln2$ as the minimal consistent value.
-4. **$\varepsilon \to a = 2$:** PPI requires this abstract cost to be physically instantiated as a 2-dimensional active kernel (Appendix Z, Theorem Z.1).
-5. **$a \to M = 24$:** The QFI structure on the $(a, b) = (2, 6)$ partition yields $M = 2ab = 24$ information modes (Appendix Z, Theorem Z.5).
-6. **$M \to D = 4$:** Mode-channel correspondence requires $K(D) = M = 24$, uniquely selecting $D = 4$ (Appendix Z, Theorem Z.11).
+4. **$\varepsilon \to a = 2$:** PPI requires this abstract cost to be physically instantiated on a sharp retained match/mismatch active kernel, while entropy-capacity and no-surplus selection fix the 2-dimensional active kernel (Appendix Z, Theorem Z.1).
+5. **$a \to M = 24$:** The QFI structure on the $(a, b) = (2, 6)$ partition yields $M = 2ab = 24$ information modes with direct SLD-QFI flatness (Appendix Z, Theorem Z.5).
+6. **$M \to D = 4$:** The channel-complete Bures tangent-cell contract requires zero mismatch $K(D) = M = 24$, uniquely selecting $D = 4$ (Appendix Z, Definition Z.9a; Theorems Z.10-Z.11).
 7. **$D = 4 \to$ Physics:** Four-dimensional spacetime with the observed gauge structure and coupling constants emerges (Appendices G, Z).
 
 This chain realizes Wheeler's "It from Bit" conjecture (1989) in precise form, with an essential refinement: the physical universe ("It") emerges from information-theoretic constraints ("Bit"), but specifically as "It from Error-Corrected Bit." The 24 modes naturally partition into 12 information-carrying and 12 redundancy modes forming the optimal Golay code $[24, 12, 8]$ (Appendix Z, Theorem Z.13). This built-in error correction explains why physical structures exhibit remarkable stability despite quantum uncertainty and thermal noise—reliability is not imposed on physics but emerges from the information-theoretic substrate.
@@ -2599,7 +2599,7 @@ This claim has precise mathematical content. The emergence is "strong" in the fo
 
 The derivation chain from foundational axioms to the backbone spacetime structure proceeds as follows (cf. Section P.7.2; Appendix Z):
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{PCE}} \varepsilon_0=\ln2 \to a = 2 \to M = 24 \to D = 4$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{PCE}} \varepsilon_0=\ln2 \xrightarrow{\text{active record + capacity}} a = 2 \to M = 24 \xrightarrow{\text{channel-complete}} D = 4$$
 
 Each arrow represents a necessary implication:
 
@@ -2615,9 +2615,9 @@ $$
 
 The bound is exact and saturated by optimal erasure protocols (Theorem 31).
 
-**Stage 4: Physical Instantiation (Theorem Z.1).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the irreversible SPAP merge/reset to be realized by a finite physical register. Since $S(\rho)\le \ln a$ on an $a$-dimensional register, a full reset can reduce entropy by at most $\ln a$, so admissibility requires $\ln a\ge \varepsilon$. PPI-optimality then selects the minimal admissible integer $a$; for $\varepsilon_0=\ln2$ this yields $a=2$.
+**Stage 4: Physical Instantiation (Theorem Z.1).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the irreversible SPAP merge/reset to be realized by a finite physical register. The retained active verification kernel must carry the two sharp SPAP comparison alternatives, match and mismatch, so $a\ge2$. Since $S(\rho)\le \ln a$ on an $a$-dimensional register, a full reset can reduce entropy by at most $\ln a$, so entropy-capacity also requires $\ln a\ge \varepsilon$. PPI/PCE no-surplus selection then selects the minimal admissible integer $a$; for $\varepsilon_0=\ln2$ this yields $a=2$.
 
-This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost.
+This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost and the sharp verification record.
 
 **Stage 5: Interface Mode Count (Theorem Z.5).** The MPU Hilbert space dimension $d_0 = 8$ (Theorem 23) partitions as $d_0 = a + b = 2 + 6$. The Quantum Fisher Information (QFI) structure on this partition yields:
 
@@ -2739,7 +2739,7 @@ Four dimensions is the unique PCE optimum given $M=24$.
 This observation has deeper implications. The specific values $d_0=8$ and $\varepsilon_0=\ln2$ that yield $M=24$ are precisely those for which an exact solution exists. As analyzed in **Remark Z.6**, this is not coincidental: if foundational constants yielded $M_{\text{int}}=8$ (from $d_0=4$), no integer dimension satisfies $K(D)=8$ because $K(2)=6<8<12=K(3)$; similarly, $M_{\text{int}}=96$ (from $d_0=16$) finds no match because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012]. The framework does not merely accommodate $D=4$—it predicts it as the unique solution to mode-channel matching given self-consistent foundational constants.
 
 Universes with geometrically frustrated mode counts may be logically conceivable but physically unrealizable, as they cannot achieve the stable PCE equilibrium required for spacetime emergence. The derivation chain:
-$$\varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{M = 2ab} M = 24 \xrightarrow{K(D) = M} D = 4$$
+$$\varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1: active record + capacity}} a = 2 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{channel-complete }K(D) = M} D = 4$$
 represents a self-consistent fixed point of the framework's constraints, not a selection from alternatives.
 
 ---
@@ -4780,9 +4780,9 @@ This distinction resolves historical confusions where scientists have sought phy
 | Causal set theory | Defined by volume scaling | Input parameter, not derived |
 | Loop quantum gravity | Encoded in spin networks | Assumed, not selected |
 | String/M-theory | D = 10 or 11 | Compactification not unique |
-| PU framework | Derived: K(D) = M = 24 | Uniquely determined by PCE |
+| PU framework | Derived: $K(D)=M=24$ inside the channel-complete Bures tangent-cell contract | Uniquely determined by PCE zero-mismatch selection |
 
-The PU framework differs by deriving D = 4 from pre-geometric information structure. Given logical necessity ($d_0 = 8$) and thermodynamic necessity ($\varepsilon_0=\ln2$), dimensional selection follows from mode-channel matching without adjustable parameters. The approach inverts the usual logic: rather than assuming D-dimensional spacetime and deriving consequences, the framework starts with information structure and derives that D = 4 emerges as the unique thermodynamically stable configuration.
+The PU framework differs by deriving D = 4 from pre-geometric information structure on a named branch. Given the minimal Hilbert-carrier branch ($d_0 = 8$), the active-verification/entropy branch ($a=2$ from match/mismatch plus $\varepsilon_0=\ln2$), and the channel-complete Bures tangent-cell contract, dimensional selection follows from zero-mismatch mode-channel matching without adjustable parameters. The approach inverts the usual logic: rather than assuming D-dimensional spacetime and deriving consequences, the framework starts with information structure and derives that D = 4 is the unique zero-mismatch channel-complete configuration.
 
 ## P.10 The Boundaries of Meaningful Inquiry
 
@@ -5175,11 +5175,12 @@ $$a = 2$$
 **Step 2 (Shannon entropy identity).** The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space is exactly:
 $$S(\rho_{\text{uniform}}) = \ln a \text{ nats}$$
 
-**Step 3 (PPI + PCE correspondence).** PPI requires the cost $\varepsilon$ to be instantiated. PCE (Definition 15) requires minimal resource usage. The unique value satisfying both:
-- $\ln a \geq \varepsilon_{SPAP}$ (sufficient to instantiate the cost—PPI)
-- $\ln a$ minimal (no excess capacity—PCE)
+**Step 3 (PPI + PCE correspondence).** PPI requires the cost $\varepsilon$ to be instantiated on the retained active verification kernel. The unique minimal-branch value satisfying all three active-kernel gates is:
+- $a\ge2$ for the sharp match/mismatch SPAP verification record,
+- $\ln a \geq \varepsilon_{SPAP}$ for entropy-capacity admissibility,
+- no excess active alternatives under PPI/PCE no-surplus selection.
 
-is $a = 2$ for $\varepsilon_{SPAP}=\ln 2$. $\square$
+Thus $a = 2$ for $\varepsilon_{SPAP}=\ln 2$. $\square$
 
 **Epistemic Status:** Framework-derived from PPI (Definition P.6.2) and PCE (Definition 15).
 
@@ -6223,7 +6224,7 @@ $$\boxed{
 
 The Monster group derivation extends the fundamental chain established in Section P.7 of Appendix P:
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{PCE}} \varepsilon_0=\ln2 \to a = 2 \to M = 24 \to D = 4$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{PCE}} \varepsilon_0=\ln2 \xrightarrow{\text{active record + capacity}} a = 2 \to M = 24 \xrightarrow{\text{channel-complete}} D = 4$$
 
 This appendix continues the chain beyond spacetime emergence to the symmetry structure of the vacuum:
 
@@ -6591,12 +6592,12 @@ The Principle of Compression Efficiency (Definition 15) proposes that adaptive s
 | $\varepsilon_{\mathrm{phys}}$ | $\ge\varepsilon_0$ | Overhead retained only if response-relevant or cost-reducing |
 | $K_0$ | $=3$ | Exact minimal SPAP register; larger registers are surplus unless response-relevant |
 | $d_0$ | $\ge8$ | Minimal branch selects $d_0=8$ |
-| $a$ | minimal integer with $\ln a\ge\varepsilon_0$ | gives $a=2$ |
+| $a$ | sharp match/mismatch record plus minimal integer with $\ln a\ge\varepsilon_0$ | gives $a=2$ |
 
 **Internal Consistency Constraint.** The minimum values are not merely convenient but are uniquely forced by the framework's internal structure. Three independent relations must hold simultaneously:
 - $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ (Theorem 15, from the finite operational role-readout)
 - $d_0\ge N_{\mathrm{vis}}^{\min}$, with minimal Hilbert-carrier saturation $d_0=N_{\mathrm{vis}}^{\min}=8$ on the no-surplus complex branch (Theorem 23; Theorem Z.2)
-- $d_0 = 2a^2$ and $a = 2$ on the Appendix Z minimal structural branch (Theorem Z.2; Theorem Z.1, from the structural admissibility condition $\ln a\ge\varepsilon_0=\ln2$ plus minimal integer/PCE no-surplus selection)
+- $d_0 = 2a^2$ and $a = 2$ on the Appendix Z minimal structural branch (Theorem Z.2; Theorem Z.1, from the sharp match/mismatch active-verification record, the structural admissibility condition $\ln a\ge\varepsilon_0=\ln2$, and minimal integer/PCE no-surplus selection)
 
 Combining the minimal-branch equalities gives $N_{\mathrm{vis}}^{\min}=2^{K_0}=2a^2$ with $a=2$, hence $K_0=3$ and $d_0=8$. The structural floor $\varepsilon_0=\ln2$ is the exact SPAP quotient that makes $a=2$ the minimal admissible active kernel. Alternative values such as a nonminimal branch with $a=3$ would give $d_0=18$, which violates the same minimal Hilbert-carrier saturation $d_0=N_{\mathrm{vis}}^{\min}=2^{K_0}$ inside the same minimal backbone. Thus the minimum is not arbitrary but is the unique value satisfying the stated structural constraints.
 
@@ -6618,9 +6619,9 @@ M=24,
 \qquad
 D=4
 $$
-are not selected by an unconstrained PPI preference. Each value is the unique value satisfying its local admissibility and no-surplus gate: $K_0=3$ is the minimal SPAP register count, $\varepsilon_0=\ln2$ is the irreducible binary merge cost, $d_0=8$ is the minimal state alphabet compatible with $K_0$, $a=2$ is the minimal integer with $\ln a\ge\varepsilon_0$, $b=d_0-a=6$, $M=2ab=24$, and $D=4$ is the isolated solution of $K(D)=24$ in the Bures tangent-cell mode-channel theorem.
+are not selected by an unconstrained PPI preference. Each value is the unique value satisfying its local admissibility and no-surplus gate: $K_0=3$ is the minimal SPAP register count, $\varepsilon_0=\ln2$ is the irreducible binary merge cost, $d_0=8$ is the minimal state alphabet compatible with $K_0$, $a=2$ is the minimal active kernel carrying both the sharp match/mismatch record and the entropy-capacity gate $\ln a\ge\varepsilon_0$, $b=d_0-a=6$, $M=2ab=24$, and $D=4$ is the isolated zero-mismatch solution of $K(D)=24$ inside the channel-complete Bures tangent-cell contract.
 
-*Proof.* The cited equalities are chained in the order displayed. At each step, a smaller value violates the stated logical, entropy-capacity, or channel-count admissibility inequality, while a larger retained value either changes the finite protocol-response presheaf and becomes a different branch or leaves the presheaf unchanged and is removed as response-null surplus by the PPI/PCE quotient. The final step uses Theorem Z.11, which gives $K(D)=M=24$; the Euclidean kissing-number values and bounds used there isolate $D=4$. ∎
+*Proof.* The cited equalities are chained in the order displayed. At each step, a smaller value violates the stated logical, active-verification, entropy-capacity, or channel-count admissibility inequality, while a larger retained value either changes the finite protocol-response presheaf and becomes a different branch or leaves the presheaf unchanged and is removed as response-null surplus by the PPI/PCE quotient. The final step uses Definition Z.9a and Theorem Z.11, which give the channel-complete condition $K(D)=M=24$; the Euclidean kissing-number values and bounds used there isolate $D=4$. ∎
 
 **Convention P.14.1a (Manuscript-Wide Status Classes and Parameter Roles).** Every major PU claim has a primary status label and every numerical or symbolic quantity used in a reported output has a parameter-role label. The status label records what kind of claim is being made. The parameter-role label records what the quantity does inside the derivation or comparison. When a short table cell cannot display the full record, it may use a combined label such as **conditional theorem / model layer**; the full dependency statement in the cited section controls the claim.
 
@@ -6763,10 +6764,10 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a Landauer o
 | Physical implementation cost | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ | Theorem-level bound | Overhead-free, dissipative, finite-time, or reservoir-imperfect implementations | Landauer maps the structural quotient to a physical lower bound | $\varepsilon_{\mathrm{diss}}$ is not a structural backbone constant unless response-relevant | Heat and power accounting branch |
 | Horizon register | $K_0=3$ | Theorem on SPAP core | $K_0<3$, $K_0>3$ | $K_0<3$ cannot encode state, stored prediction, and verification/update phase; $K_0>3$ adds registers | Extra registers are removed unless they change a finite response presheaf | Closed for minimal SPAP core |
 | MPU Hilbert dimension | $d_0\ge8$, $d_0=8$ on minimal branch | Theorem plus minimal branch theorem | $d_0<8$, $d_0>8$ | $d_0<8$ cannot faithfully represent the SPAP register; $d_0>8$ is non-minimal unless response-relevant | Surplus dimensions with no response change are PCE-dominated | Closed on minimal branch |
-| Active kernel | $a=2$ | Theorem on structural branch | $a=1$, $a>2$ | $\ln a\ge\varepsilon_0=\ln2$ excludes $a=1$; integer minimality selects $a=2$ | Larger active kernels are surplus unless they lower a certified PCE cost or change response | Closed on structural branch |
+| Active kernel | $a=2$ | Theorem on structural branch | $a=1$, $a>2$ | $a=1$ cannot carry the two sharp retained match/mismatch alternatives and also violates $\ln a\ge\varepsilon_0=\ln2$; integer minimality selects $a=2$ | Larger active kernels are surplus unless they lower a certified PCE cost or change response | Closed on structural branch |
 | Inactive reservoir | $b=6$ | Derived on $d_0=8,a=2$ branch | Other inactive dimensions | $b=d_0-a$ after $d_0=8$ and $a=2$ | None inside the fixed minimal branch | Closed on minimal branch |
 | Interface modes | $M=2ab=24$ | QFI tangent theorem on branch | $ab$, $4ab$, $2ab\pm g$ | Complex off-diagonal $a\times b$ interface blocks contribute two real QFI directions per complex coordinate; pure gauge directions are not counted as physical interface modes | Gauge directions and stabilizer rotations are quotiented by the Bures/QFI physical tangent ledger | Closed where the QFI interface contract is accepted |
-| Dimension selection | $D=4$ | Branch theorem | $D=1,2,3,5,\ldots$ | Mode-channel bridge requires $M=K(D)$; $K(4)=24$ and nearby admissible kissing numbers do not match $M=24$ | Non-matching continuum labels are not physical branches of the same finite response ledger | Conditional on operational-continuum and mode-channel bridge |
+| Dimension selection | $D=4$ | Branch theorem | $D=1,2,3,5,\ldots$ | The channel-complete Bures tangent-cell contract requires zero mismatch $M=K(D)$; $K(4)=24$ and nearby admissible kissing numbers do not match $M=24$ | Non-matching continuum labels are not physical branches of the same finite response ledger | Conditional on operational-continuum and channel-complete mode-channel bridge |
 | Lorentzian signature | $(1,3)$ | Branch theorem | Euclidean four-space, multi-time branches, Galilean branch | Appendix O signature package plus Corollary 46a derive the Lorentzian causal branch under the stated hyperbolic-frontier hypotheses | Non-hyperbolic or preferred-frame labels are excluded on the accepted causal-continuum branch | Conditional on Appendix O hypotheses |
 | Complex Hilbert scalar | $\mathbb C$ | Theorem on MPU Hilbert branch | $\mathbb R$, $\mathbb H$ | Local tomography, connected phase transport, compositional closure, and PCE removal of surplus phase redundancy select $\mathbb C$ | Extra quaternionic phase generators are surplus if response-null; if active, they define a different gauge branch | Closed on MPU Hilbert branch |
 | Born weights | $\omega(P)=\operatorname{tr}(\rho P)$ | Theorem on MPU Hilbert branch | Contextual ledgers, non-additive weights | PCE/PPI quotient enforcement removes response-null context labels; Gleason-Busch fixes the trace form | Context labels with no response difference are PPI-gauge | Closed on non-contextual finite-effect branch |
@@ -7003,7 +7004,7 @@ The fine-structure constant follows from Theorem Z.26:
 
 $$\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right)$$
 
-The spacetime dimension follows from the mode-channel correspondence (Theorem Z.11):
+The spacetime dimension follows from the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorem Z.11):
 
 $$K(D) = M = 24 \implies D = 4$$
 

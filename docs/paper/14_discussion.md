@@ -1146,7 +1146,7 @@ $$
 $$
 This derivation follows the chain:
 $$
-\text{SPAP} \xrightarrow{K_0=3} d_0 = 8 \xrightarrow{\varepsilon_0=\ln2} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{K(D)=24} D = 4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}} \xrightarrow{\Lambda} g_0=\frac{c^2\sqrt{\Lambda}}{8}.
+\text{SPAP} \xrightarrow{K_0=3} d_0 = 8 \xrightarrow{\text{match/mismatch}+\varepsilon_0} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{\text{channel-complete }M=K(D)} D = 4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}} \xrightarrow{\Lambda} g_0=\frac{c^2\sqrt{\Lambda}}{8}.
 $$
 Once Definition H.0 is fixed, the result has no additional continuous fitting inside that bridge-law branch and connects microscopic quantum geometry directly to galactic dynamics without invoking dark matter particles. The branch is experimentally sharper than an order-of-magnitude $cH_0$ relation: on a constant-$\Lambda$ branch, $g_0$ is redshift-independent even though $H(z)$ changes.
 
@@ -1732,14 +1732,14 @@ Both activities converge on the same objects because they solve the same problem
 
 ### 14.5.4 Information Density and Dimensional Selection
 
-Shannon's channel capacity theorem establishes that sphere packing density determines maximum information transmission rate. The mode-channel correspondence (Theorem Z.10) makes this physical:
+Shannon's channel capacity theorem establishes that sphere packing density determines maximum information transmission rate. The channel-complete mode-channel correspondence (Definition Z.9a; Theorem Z.10) makes this physical on its named branch:
 $$M_{\text{int}} = M_{\text{phys}} = K(D)$$
 
-The kissing number $K(D)$—the maximal number of equal non-overlapping spheres that can touch a central equal sphere in $D$ Euclidean dimensions—sets the number of independent local interface channels in the Euclideanized tangent space used by the mode–channel correspondence.
+The kissing number $K(D)$—the maximal number of equal non-overlapping spheres that can touch a central equal sphere in $D$ Euclidean dimensions—sets the number of independent completed first-shell interface channels in the Euclideanized tangent space used by the channel-complete mode-channel correspondence.
 
-**Implication:** Within the Appendix Z mode-channel correspondence model, spacetime dimension is determined by information density optimization. At $M = 24$ modes, the unique solution is $K(4) = 24$, yielding $D = 4$ (interpreted as $3+1$ macroscopic dimensions in Section 11).
+**Implication:** Within the Appendix Z channel-complete mode-channel correspondence model, spacetime dimension is determined by zero-mismatch information-density optimization. At $M = 24$ modes, the isolated solution is $K(4) = 24$, yielding $D = 4$ (interpreted as $3+1$ macroscopic dimensions in Section 11).
 
-This provides an information-theoretic answer to “why 3+1 dimensions?” within that model: because $K(4) = 24$ and no other dimension satisfies $K(D) = 2ab$ with $a = 2$, $b = 6$, $d_0 = 8$. The question becomes: why does PCE at $\varepsilon_0=\ln2$ produce exactly 24 interface modes? Given the Appendix Z mode-channel identification, $D = 4$ follows by arithmetic.
+This provides an information-theoretic answer to “why 3+1 dimensions?” within that model: because $K(4) = 24$ and no other checked positive-integer tangent dimension satisfies $K(D) = 2ab$ with $a = 2$, $b = 6$, $d_0 = 8$. The question becomes: why does PCE at $\varepsilon_0=\ln2$ produce exactly 24 interface modes? Given the Appendix Z channel-complete mode-channel identification, $D = 4$ follows by arithmetic.
 
 Similarly, the number of fermion generations $N_g = 3$ is fixed in the framework by one derivation together with three supporting consistency checks (Appendix R):
 
@@ -1778,7 +1778,7 @@ Each property follows from PCE optimization given $d_0 = 8$ and $\varepsilon_0=\
 The framework operates through six critical bridging mechanisms that convert abstract logical and information-theoretic requirements into concrete physical structures:
 
 **1. PPI Bridge: $\varepsilon_0=\ln2 \to a = 2$**
-The Principle of Physical Instantiation (Definition P.6.2) requires the abstract Landauer cost $\varepsilon_0=\ln2$ to be instantiated on a physical subsystem. Admissibility requires $\ln a \ge \varepsilon_0$; PPI-optimality selects the minimal admissible $a \in \mathbb{N}$, yielding $a = 2$.
+The Principle of Physical Instantiation (Definition P.6.2) requires the abstract Landauer cost $\varepsilon_0=\ln2$ to be instantiated on the retained active verification kernel. The active kernel must carry the sharp SPAP match/mismatch record, so $a\ge2$ on the Hilbert-carrier branch. Entropy-capacity independently requires $\ln a \ge \varepsilon_0$. PPI/PCE no-surplus selection then removes $a>2$ from the minimal branch, yielding $a = 2$.
 
 **2. Golay-Leech Bridge: $d = 8 \to$ Vacuum Stability**
 The error correction distance $d_{\min} = 8$ of the Golay code $[24,12,8]$ produces, via Conway-Sloane gluing construction, the rootless Leech lattice $\Lambda_{24}$ (Proposition R.4.2a; Theorem Z.8c). Rootlessness—absence of vectors at squared norm 2—creates a gap between vacuum and excitations, ensuring topological stability.

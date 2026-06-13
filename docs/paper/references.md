@@ -40,6 +40,7 @@
 *   Baldwin, T. (1996). There might be nothing. *Analysis*, *56*, 231–238.
 *   Bargmann, V. (1964). Note on Wigner's theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188
 *   Barnes, E. W. (1901). The theory of the double gamma function. *Philosophical Transactions of the Royal Society of London. Series A*, *196*, 265–387. DOI: 10.1098/rsta.1901.0006
+*   Barontini, G. (2026). Testing the problem of time with cold atoms. *Physical Review Research*, *8*, L022047. DOI: 10.1103/1h9j-df4k. arXiv:2509.07745
 *   Barthel, T., & Kliesch, M. (2012). Quasilocality and Efficient Simulation of Markovian Quantum Dynamics. *Physical Review Letters*, *108*(23), 230504. DOI: 10.1103/PhysRevLett.108.230504
 *   Bassham, L., Rukhin, A., Soto, J., Nechvatal, J., Smid, M., Leigh, S., Levenson, M., Vangel, M., Heckert, N., & Banks, D. (2010). *A Statistical Test Suite for Random and Pseudorandom Number Generators for Cryptographic Applications*. NIST Special Publication 800-22 Revision 1a. National Institute of Standards and Technology. DOI: 10.6028/NIST.SP.800-22r1a
 *   Baumgartner, B., & Narnhofer, H. (2008). Analysis of quantum semigroups with GKS–Lindblad generators: II. General. *Journal of Physics A: Mathematical and Theoretical*, *41*(39), Article 395303. DOI: 10.1088/1751-8113/41/39/395303
@@ -737,6 +738,7 @@
 *   Buchholz, D., & Wichmann, E. H. (1986). Causal independence and the energy-level density of states in local quantum field theory. *Communications in Mathematical Physics*, *106*, 321–344. DOI: 10.1007/BF01210929
 *   Chiribella, G., D'Ariano, G. M., Perinotti, P., & Valiron, B. (2013). Quantum computations without definite causal structure. *Physical Review A*, *88*, 022318. DOI: 10.1103/PhysRevA.88.022318
 *   Connes, A. (1973). Une classification des facteurs de type III. *Annales scientifiques de l'École Normale Supérieure*, *6*(2), 133–252.
+*   Connes, A., & Rovelli, C. (1994). Von Neumann algebra automorphisms and time-thermodynamics relation in generally covariant quantum theories. *Classical and Quantum Gravity*, *11*, 2899–2917. DOI: 10.1088/0264-9381/11/12/007
 *   Costello, K., & Gwilliam, O. (2017). *Factorization Algebras in Quantum Field Theory, Volume 1*. Cambridge University Press.
 *   Costello, K., & Gwilliam, O. (2021). *Factorization Algebras in Quantum Field Theory, Volume 2*. Cambridge University Press.
 *   Erbar, M., & Maas, J. (2012). Ricci curvature of finite Markov chains via convexity of the entropy. *Archive for Rational Mechanics and Analysis*, *206*, 997–1038. DOI: 10.1007/s00205-012-0554-z

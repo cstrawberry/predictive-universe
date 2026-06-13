@@ -64,7 +64,7 @@ It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixe
 
 1. **Internal modes $\to$ operational channels.** Identification: $M=2ab$ counts the real tangent directions of the attractor orbit (Theorem Z.6.3a) and is interpreted as the number of locally distinguishable interaction channels. Assumptions: local homogeneity/isotropy at the attractor and a locally Euclidean tangent cone for channel packing.
 
-2. **Operational channels $\to$ dimension.** Identification: channel packing in a locally Euclidean $D$-dimensional tangent space has maximal channel number $K(D)$ (kissing number), hence equilibrium requires $M=K(D)$ (Theorem Z.11). Alternatives: dimensions with $K(D)\neq M$ either waste internal modes or lack sufficient channels; both raise the PCE potential. Robustness: $K(1)=2$, $K(2)=6$, $K(3)=12$, $K(4)=24$, and standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012]. Since any kissing configuration in $\mathbb R^D$ embeds isometrically in $\mathbb R^{D+1}$, $K(D)$ is monotone nondecreasing, so every $D\ge5$ has $K(D)\ge40>24$. Hence $D=4$ is the unique positive integer solution of $K(D)=24$.
+2. **Operational channels $\to$ dimension.** Identification: only inside the channel-complete Bures tangent-cell contract of Definition Z.9a, the completed equal-radius first-shell channel count in a locally Euclidean $D$-dimensional tangent space is $K(D)$ and zero mismatch requires $M=K(D)$ (Theorems Z.10-Z.11). Alternatives: dimensions with $K(D)\neq M$ either waste internal modes or lack completed-shell channels; both raise the PCE mismatch ledger. Robustness: $K(1)=2$, $K(2)=6$, $K(3)=12$, $K(4)=24$, and standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012]. Since any kissing configuration in $\mathbb R^D$ embeds isometrically in $\mathbb R^{D+1}$, $K(D)$ is monotone nondecreasing, so every $D\ge5$ has $K(D)\ge40>24$. Hence $D=4$ is the unique positive integer solution of $K(D)=24$ on the channel-complete tangent-cell branch.
 
 3. **Coupling identification.** The coefficient $u^*$ is fixed by capacity saturation of the internal QFI spectrum (Theorem Z.7) with the flat Bures/QFI eigenvalues $\lambda_i=1$ at the attractor (Theorem Z.5); the physical electromagnetic coupling is $\alpha_{\mathrm{em}}=u^*/(4\pi\kappa_{\mathrm{eff}})$ after the interface correction (Theorem Z.26).
 
@@ -128,34 +128,45 @@ The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ 
 
 ### Z.2.3 Physical Instantiation of the Irreducible Cost
 
-**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** The SPAP cycle necessarily implements a 2-to-1 logical merge (Lemma Z.2), so any physical implementation satisfies the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J). At the PCE-Attractor (Definition 15a), PCE selects the saturating implementation $\varepsilon_0=\ln2$. The Principle of Physical Instantiation (PPI) then fixes the active kernel dimension uniquely:
-$$a = 2$$
+**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** The SPAP cycle necessarily implements a 2-to-1 logical merge (Lemma Z.2), so any physical implementation satisfies the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J). The active verification kernel carries the sharp retained match/mismatch record of the SPAP comparison. At the PCE-Attractor (Definition 15a), PCE selects the minimal saturating implementation, and the active kernel dimension is fixed uniquely:
+$$
+a = 2
+$$
 
 *Proof.*
 
-**Step 1 (Irreducible entropy cost).** By Landauer's principle, a logically irreversible operation erasing one bit of information requires entropy production of at least ln 2 nats. The SPAP cycle (Theorem 10) necessarily performs a 2-to-1 state merge (Lemma Z.2), so the per-cycle thermodynamic cost satisfies
-$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2.$$
-At the PCE-Attractor, PCE selects the minimal saturating realization, hence $\varepsilon_0=\ln2$.
+**Step 1 (Irreducible entropy cost).** By Landauer's principle, a logically irreversible operation erasing one bit of information requires entropy production of at least $\ln2$ nats. The SPAP cycle (Theorem 10) necessarily performs a 2-to-1 state merge (Lemma Z.2), so the per-cycle thermodynamic cost satisfies
+$$
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2.
+$$
+At the PCE-Attractor, PCE selects the minimal saturating structural realization, hence the structural quotient used by the discrete branch is $\varepsilon_0=\ln2$.
 
-**Step 2 (PPI Requirement — Axiom).** The Principle of Physical Instantiation (Appendix P, Definition P.6.2) requires that the abstract logical cost ε be realized by an actual physical subsystem, and that among physically admissible realizations the realized one is resource-minimal (PPI-optimality).
+**Step 2 (Active verification record).** The active kernel is the Hilbert carrier of the retained SPAP verification record, not an arbitrary yes/no effect. A faithful comparison has two possible sharp retained values, match and mismatch. On the Hilbert-carrier branch, two sharp retained alternatives require two orthogonal rays. Hence
+$$
+a\ge2.
+$$
 
-Applied here: the abstract logical cost ε must be realized by a physical subsystem capable of registering that entropy.
+**Step 3 (Entropy-capacity admissibility).** For an $a$-dimensional physical subsystem, the von Neumann entropy satisfies
+$$
+S(\rho)\le \ln a,
+$$
+with equality only for the maximally mixed state. To instantiate the structural SPAP quotient inside the active verification kernel, PPI admissibility requires
+$$
+\ln a\ge\varepsilon_0=\ln2.
+$$
+This also gives $a\ge2$ for integer Hilbert dimension $a$.
 
-**Step 3 (Entropy Capacity Bound).** For an $a$-dimensional physical subsystem, the von Neumann entropy satisfies the capacity inequality
-$$S(\rho)\le \ln a,$$
-with equality only for the maximally mixed state.
-
-**Step 4 (Admissibility + PPI-optimality).** To instantiate the cost ε within the active kernel, admissibility requires $\ln a \ge \varepsilon$. Since $a$ is a Hilbert-space dimension ($a\in\mathbb{N}$), PPI-optimality selects the minimal admissible $a$. With $\varepsilon_0=\ln2$, the unique minimal solution is $a=2$.
-
-**Step 5 (Uniqueness).** If $a<2$ then $\ln a < \ln 2 = \varepsilon$ and the subsystem cannot register ε. If $a>2$ then $a$ is not resource-minimal within the admissible class. Therefore the unique PPI-optimal solution is $a=2$. ∎
+**Step 4 (PPI/PCE minimality and uniqueness).** The candidate $a=1$ is excluded twice: it cannot carry both sharp match/mismatch record values, and it has $\ln a=0<\ln2$. The candidate $a=2$ realizes both verification alternatives and saturates the entropy-capacity bound. Any $a>2$ adds active verification alternatives not required by the single retained SPAP match/mismatch bit. If the extra alternatives change no finite protocol-response presheaf, Corollary P.6.1b.8 quotients them out; if they are response-active, they define a non-minimal branch with larger active support and are not selected on the minimal MPU branch. Therefore the unique active-kernel dimension on the PCE-Attractor minimal branch is $a=2$. ∎
 
 **Remark: Axiomatic Status.** This derivation uses exactly:
 - SPAP (Theorem 10): requires a 2-to-1 merge.
-- Landauer's principle (Physics): implies ε ≥ ln 2 (saturated to ε0 = ln 2 at the PCE-Attractor).
-- PPI (Definition P.6.2): requires physical instantiation of ε and selects a resource-minimal admissible realization.
+- Landauer's principle (Physics): implies $\varepsilon_{\mathrm{phys}}\ge\ln2$ with structural floor $\varepsilon_0=\ln2$ on the PCE-Attractor.
+- The active verification record: requires two sharp retained alternatives and hence $a\ge2$ on the Hilbert-carrier branch.
+- PPI (Definition P.6.2): requires finite physical instantiation of the structural entropy quotient by the retained active kernel.
 - Entropy capacity bound: gives $S(\rho)\le \ln a$.
+- PCE no-surplus selection: removes response-null active alternatives and rejects larger active support on the minimal branch.
 
-Thus the result $a = 2$ is a theorem, not a free parameter.
+Thus the result $a = 2$ is a theorem-level minimal-branch conclusion, not a free parameter.
 
 ### Z.2.4 The PPI → 24 Derivation Chain
 
@@ -169,7 +180,7 @@ $$\boxed{\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\
 | 2 | $\varepsilon_0=\ln2$ on the attractor branch | PCE-attractor saturation | Definition 15a |
 | 3 | $d_0 \ge 8$ | Capacity-dimension link for $K_0=3$ | Theorem 23 |
 | 4 | $d_0 = 8$ on the minimal PCE branch | SPAP tensor realization + PCE exclusion of larger active support | Theorem Z.2 |
-| 5 | $a = 2$ | Admissibility $\ln a \ge \varepsilon$ + PPI-optimality | Theorem Z.1 |
+| 5 | $a = 2$ | Sharp match/mismatch record $a\ge2$ + admissibility $\ln a \ge \varepsilon_0$ + PPI/PCE no-surplus optimality | Theorem Z.1 |
 | 6 | $b = d_0 - a = 6$ | Arithmetic on the minimal branch | Theorem Z.1; Theorem Z.2 |
 | 7 | $M = 2ab = 24$ | QFI mode count on the interface | Theorem Z.5 |
 
@@ -804,7 +815,7 @@ $$\frac{(p_j - p_k)^2}{p_j + p_k} = \frac{(1/a)^2}{1/a} = \frac{1}{a}$$
 $$F_Q[\rho_0, G] = 2 \times \frac{1}{a} \times 1 = \frac{2}{a} = 1$$
 (using a = 2). Each interface generator has QFI eigenvalue λ = 1.
 
-**Step 6: Isotropy and Flatness.** The isotropy group $H = S(U(a) \times U(b))$ acts transitively on the interface directions AB ⊕ BA, which form an irreducible H-module. By Schur's lemma, any H-invariant quadratic form on this space is proportional to the identity. The QFI (equivalently, the Bures metric) is H-invariant by construction (Petz 1996, Dittmann 1999). Therefore, the QFI metric restricted to the 24-dimensional interface subspace is $g_{QFI} = \lambda \cdot I_{24}$ with $\lambda = 1$ from the calibration above. ∎
+**Step 6: Isotropy and Flatness.** The flatness needed here follows directly from the SLD-QFI formula above, not from transitivity on the full interface unit sphere. For an arbitrary Hilbert-Schmidt normalized interface generator $G\in AB\oplus BA$, the only nonzero SLD-QFI contributions are the active-inactive matrix entries, and Step 3 gives the same coefficient $1/a$ for each such entry. Hence Step 5 gives $F_Q[\rho_0,G]=2/a$ for every normalized interface generator. With $a=2$, every real interface basis direction has QFI eigenvalue $\lambda=1$, and in the normalized real interface basis the restricted QFI metric is $g_{QFI}=I_{24}$. ∎
 
 ### Z.7.3 Factor Structure of M = 24
 
@@ -1112,17 +1123,21 @@ $$\angle(\hat{n}_\alpha, \hat{n}_\beta) \geq 2\theta_{\rm cap}(\epsilon_{\rm dis
 
 This maps the problem of counting distinguishable channels to the classical problem of spherical codes: finding the maximum number of points on S^{D-1} with minimum angular separation. ∎
 
-**Theorem Z.7a (Exact Kissing Number Correspondence).** At the PCE attractor, three independently derived conditions hold: (i) channels are operationally distinguishable with non-overlapping angular supports (Definition Z.6; Corollary Z.4); (ii) at thermodynamic equilibrium the entropy-maximizing channel configuration has equal angular caps (Theorem Z.9); (iii) PCE benefit maximization saturates the packing at tangency (Theorem Z.11, Step 1). Under these conditions the minimum center-to-center angular separation is:
+**Theorem Z.7a (Exact Kissing Number Correspondence).** At the PCE attractor, assume the channel-complete tangent-cell conditions used by Theorem Z.10: (i) channels are operationally distinguishable with non-overlapping angular supports (Definition Z.6; Corollary Z.4); (ii) at thermodynamic equilibrium the entropy-maximizing retained first shell has equal angular caps for fixed channel count (Theorem Z.9); (iii) PCE no-surplus selection removes non-saturated first-shell gaps whenever an equal-radius cell can be inserted without violating the finite error budget or the locked internal-mode supply. Under these conditions the tangent-cell minimum center-to-center angular separation is:
 
-$$\theta_{\min}=\frac{\pi}{3},$$
+$$
+\theta_{\min}=\frac{\pi}{3},
+$$
 
-and the channel-counting problem is equivalent to the kissing-number problem in $\mathbb{R}^D$:
+and the completed first-shell channel-counting problem is equivalent to the kissing-number problem in $\mathbb{R}^D$:
 
-$$M_{\mathrm{phys}} = K(D).$$
+$$
+M_{\mathrm{phys}} = K(D).
+$$
 
 *Proof.*
 
-**Step 1 (PCE-derived tangent saturation).** Condition (i) follows from the ND-RID channel structure: $\epsilon_\text{dist}$-distinguishability requires non-overlapping angular supports (Corollary Z.4). Condition (ii) follows from PCE equal-cap entropy maximization: among $N$ non-overlapping channels with fixed total solid angle, strict concavity of the Shannon entropy forces all caps to be equal (Theorem Z.9). Condition (iii) follows from PCE: an unused geometric slot with an available internal mode strictly decreases $V_\text{tot}$, contradicting minimality (Theorem Z.11, Step 1). Equal non-overlapping caps at tangent saturation define exactly the standard kissing configuration: $N$ unit channel balls tangent to a central unit channel ball in $\mathbb{R}^D$. This is a channel-cell statement; identifying channel balls with distinct neighboring MPUs requires a separate population graph realization.
+**Step 1 (PCE-derived tangent saturation).** Condition (i) follows from the ND-RID channel structure: $\epsilon_{\mathrm{dist}}$-distinguishability requires non-overlapping angular supports (Corollary Z.4). Condition (ii) follows from equal-cap entropy maximization for fixed channel count: among $N$ non-overlapping channels with fixed total solid angle, strict concavity of Shannon entropy forces equal cap weights. Condition (iii) is the local no-surplus clause: a gap that can accept an equal-radius cell while an internal mode is available leaves predictive benefit unused at the same response budget, while a geometrically available completed-shell cell with no internal mode is charged by the mismatch ledger of Lemma Z.5. Therefore the zero-mismatch channel-complete equilibrium is tangent-saturated. Equal non-overlapping caps at tangent saturation define the standard kissing configuration: $N$ unit channel balls tangent to a central unit channel ball in $\mathbb{R}^D$. This is a channel-cell statement; identifying channel balls with distinct neighboring MPUs requires a separate population graph realization.
 
 **Step 2 (Angular separation at tangency).** Let $x,y$ be centers of two channel balls in the tangent-cell packing. Both lie on the radius-2 sphere about the central channel ball, so $|x|=|y|=2$. If $\theta$ is the angle between $x$ and $y$, then the chord length satisfies
 $$
@@ -1130,7 +1145,7 @@ $$
 $$
 Non-overlap requires $|x-y|\ge 2$, hence $\sin(\theta/2)\ge 1/2$ and therefore $\theta\ge \pi/3$. At tangency $|x-y|=2$, so $\theta_{\min}=\pi/3$.
 
-**Step 3 (Kissing number equality).** The largest $N$ for which unit balls can be tangent to a central unit ball in $\mathbb R^D$ is, by definition, the kissing number $K(D)$. Thus the maximal number of distinguishable channels in the tangent regime is $M_{\mathrm{phys}}=K(D)$. ∎
+**Step 3 (Kissing number equality).** The largest $N$ for which unit balls can be tangent to a central unit ball in $\mathbb R^D$ is, by definition, the kissing number $K(D)$. Thus the maximal completed first-shell distinguishable channel count in the tangent regime is $M_{\mathrm{phys}}=K(D)$. ∎
 
 **Remark Z.4: Information-Geometry Descent.** This theorem establishes the finite-response descent from quantum information geometry to classical discrete geometry. The metric side is fixed by PCE selection of the Bures/SLD member of the Petz family (Corollary X.8a.2c); the packing side is fixed by non-overlap, equal-radius minimal Landauer channels, and tangent saturation. The information-theoretic constraint ($\epsilon_{\rm dist}$-distinguishability) therefore translates into a geometric constraint (minimum angular separation) once $\theta_{\rm cap}(\epsilon_{\rm dist})$ is fixed by the propagation model $T$.
 
@@ -1144,17 +1159,18 @@ In the context of the MPU network with emergent geometric regularity (Theorem 43
 
 **Definition Z.7 (Kissing Number).** The kissing number K(D) is the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in D-dimensional Euclidean space.
 
-The kissing numbers for low dimensions are established results from discrete geometry:
+The exact values and current best bounds for the low dimensions used below are:
 
-| D | K(D) | Optimal Configuration | Root-System Realization |
+| D | Exact value or bound for $K(D)$ | Status | Root-System Realization |
 |---|------|----------------------|-------------------------|
-| 1 | 2 | Linear | $A_1$ |
-| 2 | 6 | Hexagonal | $A_2$ |
-| 3 | 12 | FCC/HCP | $A_3 \cong D_3$ |
-| 4 | 24 | $D_4$ (24-cell) | $D_4$ |
-| 5 | 40 | — | — |
-| 6 | 72 | — | — |
-| 8 | 240 | $E_8$ | $E_8$ |
+| 1 | 2 | Exact | $A_1$ |
+| 2 | 6 | Exact | $A_2$ |
+| 3 | 12 | Exact | $A_3 \cong D_3$ |
+| 4 | 24 | Exact; 24-cell | $D_4$ |
+| 5 | $40\le K(5)\le44$ | Open; lower bound already excludes $M=24$ | — |
+| 6 | $72\le K(6)\le77$ | Open; lower bound already excludes $M=24$ | — |
+| 7 | $126\le K(7)\le134$ | Open; lower bound already excludes $M=24$ | — |
+| 8 | 240 | Exact | $E_8$ |
 
 **Definition Z.8 (24-Cell Vertices).** Fix the standard 24-point configuration on $S^3$ given by the unit Hurwitz integers. In Cartesian coordinates, these consist of:
 - **Type I (8 vectors):** Permutations of $(\pm 1, 0, 0, 0)$
@@ -1176,24 +1192,35 @@ where $A(D,\theta)$ is the maximal size of a spherical code on $S^{D-1}$ with mi
 
 ### Z.10.3 Equilibrium Saturation
 
-**Theorem Z.9 (Equilibrium Saturation).** At thermodynamic equilibrium, the channel configuration maximizes entropy subject to the distinguishability constraint and the fixed total solid-angle budget. The unique entropy-maximizing configuration has equal angular caps at the tangent limit:
-$$M_{\mathrm{phys}}(\rho_{\mathrm{eq}}) = K(D)$$
-
-*Proof.* Consider $N$ distinguishable channels with angular supports $\{\Omega_i\}$ satisfying the non-overlapping constraint $\sum_{i=1}^N \Omega_i \le \Omega_{\mathrm{total}} = |S^{D-1}|$. The Shannon entropy of the channel distribution is
-$$S = -\sum_{i=1}^N p_i \ln p_i, \quad p_i = \frac{\Omega_i}{\Omega_{\mathrm{total}}}.$$
-
-For fixed $N$ and total solid angle, entropy is maximized when all $\Omega_i$ are equal (by strict concavity of $-x \ln x$). This follows from the method of Lagrange multipliers: maximizing $S$ subject to $\sum_i p_i = 1$ yields $p_i = 1/N$ for all $i$.
-
-The maximum $N$ subject to the non-overlapping constraint occurs when caps are tangent—touching but not overlapping. This defines the kissing configuration.
-
-At PCE equal-cap equilibrium, the system naturally evolves toward maximum entropy configurations subject to physical constraints. The PCE potential $V(x)$ drives the system to minimize free energy, which at fixed temperature is equivalent to maximizing entropy. At the tangent limit for unit neighbors on the radius-$2$ shell, the center-to-center angular separation threshold is
-$$
-\theta_K=\frac{\pi}{3},
-$$
-independent of $D$ (Theorem Z.7a). In this tangent regime the channel-packing problem is exactly the kissing-number problem: $N$ unit spheres tangent to a central unit sphere in $\mathbb R^D$ correspond to $N$ disjoint channel supports whose boundaries touch. Therefore the maximal feasible $N$ equals the kissing number $K(D)$, and the entropy-maximizing equilibrium saturates this bound:
+**Theorem Z.9 (Equilibrium Saturation).** At thermodynamic equilibrium inside the channel-complete tangent-cell branch, the retained first-shell channel distribution maximizes entropy subject to the distinguishability constraint and the fixed total solid-angle budget. For fixed channel count this selects equal angular-cap weights. Under the positive-marginal/no-surplus condition, the completed first-shell channel count saturates the equal-radius tangent packing bound:
 $$
 M_{\mathrm{phys}}(\rho_{\mathrm{eq}})=K(D).
 $$
+The uniqueness claim is a uniqueness of the maximal finite-response channel count; geometric packing representatives may be non-unique up to protocol-invisible symmetries.
+
+*Proof.* Consider $N$ distinguishable channels with angular supports $\{\Omega_i\}$ satisfying the non-overlapping constraint $\sum_{i=1}^N \Omega_i \le |S^{D-1}|$. In the fixed-count entropy subproblem, fix the retained shell budget
+$$
+\Omega_R:=\sum_{i=1}^N\Omega_i>0,
+$$
+and define the normalized channel weights
+$$
+S = -\sum_{i=1}^N p_i \ln p_i,
+\qquad
+p_i = \frac{\Omega_i}{\Omega_R},
+\qquad
+\sum_{i=1}^N p_i=1.
+$$
+For fixed $N$ and fixed retained solid angle $\Omega_R$, strict concavity of $-x\ln x$ gives the maximum at equal weights $p_i=1/N$. This establishes equal-cap weighting for a fixed completed count, not uniqueness of the geometric representative.
+
+The positive-marginal/no-surplus clause now selects the completed count. If the equal-radius first shell is not tangent-saturated and an additional cell can be inserted without violating the finite distinguishability budget or the locked internal-mode supply, the added response channel lowers predictive regret. If the geometry supplies a completed-shell channel without an internal carrier, Lemma Z.5 charges the mismatch. Hence the zero-mismatch channel-complete equilibrium saturates the equal-radius tangent packing. At the tangent limit for unit neighbors on the radius-$2$ shell, Theorem Z.7a gives the angular threshold
+$$
+\theta_K=\frac{\pi}{3}.
+$$
+Thus the completed first-shell channel-packing problem is the kissing-number problem in $\mathbb R^D$, and the maximal finite-response channel count is
+$$
+M_{\mathrm{phys}}(\rho_{\mathrm{eq}})=K(D).
+$$
+∎
 
 ### Z.10.4 Mode-Channel Mismatch Cost
 
@@ -1238,7 +1265,18 @@ and the unique minimum occurs at $M_{\mathrm{int}} = K(D)$. ∎
 
 ### Z.10.5 PCE Mode-Channel Correspondence
 
-**Theorem Z.10 (PPI-Forced Bures Tangent-Cell Mode-Channel Correspondence).** In the finite-response channel representation induced by the PCE-selected QFI/Bures tangent metric at the PCE attractor (Corollary X.8a.2c), every retained minimal Landauer channel is represented by an equal-radius distinguishability cell in the local tangent space. PPI and PCE force the cells to be non-overlapping and tangent-saturated. Consequently the physical channel count is the kissing number of the effective tangent dimension:
+**Definition Z.9a (Channel-Complete Bures Tangent-Cell Contract).** A finite-response branch carries the channel-complete Bures tangent-cell contract when the following entries are fixed before dimension selection:
+
+1. the local response geometry is the PCE-selected normalized Bures/SLD tangent metric of Corollary X.8a.2c;
+2. each retained minimal Landauer channel is represented by one equal-radius QFI/Bures distinguishability cell after the common $\varepsilon_0=\ln2$ normalization;
+3. distinct completed first-shell channels have disjoint interiors up to the finite error budget of the protocol;
+4. response-null anisotropies are quotiented, while response-visible anisotropies define separate branches;
+5. the completed first-shell channel presheaf is tangent-saturated at equilibrium under the positive-marginal/no-surplus condition of Theorem Z.9;
+6. the mode-channel mismatch ledger of Lemma Z.5 is part of the branch certificate, with zero mismatch exactly when $M_{\mathrm{int}}=M_{\mathrm{phys}}$.
+
+This is a channel-cell contract. It does not by itself assert a microscopic population graph or one neighboring MPU per kissing cell.
+
+**Theorem Z.10 (PPI-Forced Bures Tangent-Cell Mode-Channel Correspondence).** On a branch carrying the channel-complete Bures tangent-cell contract of Definition Z.9a, every retained minimal Landauer channel is represented by an equal-radius distinguishability cell in the local tangent space. PPI and PCE force the cells to be non-overlapping and tangent-saturated. Consequently the physical channel count is the kissing number of the effective tangent dimension:
 $$
 M_{\mathrm{phys}}=K(D),
 $$
@@ -1253,12 +1291,14 @@ $$
 ds_{\rm Bures}^2=
 \frac{1}{4} F_{ij}(\rho_0)d\theta^i d\theta^j.
 $$
-Thus the leading finite-resolution distinguishability of a channel is a metric ball in the QFI tangent norm. A minimal irreversible SPAP verification event costs $\varepsilon_0=\ln2$ on the attractor branch, so all minimal channels have the same finite distinguishability radius after QFI normalization. By isotropy of the attractor, no direction in a fixed tangent shell may carry a different radius without adding a protocol-visible anisotropy; by Corollary P.6.1b.8 such anisotropy is removed unless it lowers regret. At the homogeneous attractor it does not, so the retained cells have equal radius.
+Thus the leading finite-resolution distinguishability of a channel is a metric ball in the QFI tangent norm. Definition Z.9a fixes the common $\varepsilon_0=\ln2$ normalization for retained minimal Landauer channels, so all completed-shell cells have equal Bures radius unless a response-visible anisotropy is explicitly moved to a different branch. Response-null anisotropy is quotiented by Corollary P.6.1b.8.
 
-Distinct physical channels must be distinguishable by some finite protocol. If two channel cells overlap beyond the finite error budget, the separating protocol cannot assign their responses uniquely, increasing $L_{\mathrm{regret}}$. Hence admissible retained cells have disjoint interiors. If two non-overlapping cells leave a tangent gap while an unused internal mode is available, inserting the corresponding equal-radius cell gives an additional distinguishable response channel without violating the capacity or isotropy constraints. In the positive-marginal PCE regime this lowers predictive regret, so a non-saturated packing cannot minimize the PPI cost. Therefore PCE selects a tangent-saturated equal-radius packing.
+Distinct physical channels must be distinguishable by some finite protocol. If two channel cells overlap beyond the finite error budget, the separating protocol cannot assign their responses uniquely, increasing $L_{\mathrm{regret}}$. Hence admissible retained cells have disjoint interiors. Definition Z.9a and Theorem Z.9 supply the positive-marginal/no-surplus saturation clause: if a gap can accept another equal-radius cell while an internal mode is available, the additional response channel lowers predictive regret; if the geometry supplies a completed-shell cell without an internal mode, Lemma Z.5 charges mismatch. Therefore the zero-mismatch channel-complete equilibrium is tangent-saturated.
 
-After rescaling the common cell radius to one, a tangent-saturated packing of equal cells around the central cell is exactly the kissing configuration in $\mathbb R^D$: the centers of the retained cells are the centers of unit balls tangent to a central unit ball, with pairwise non-overlap. By definition, the maximal number of such cells is $K(D)$. Hence the physical channel count is $M_{\mathrm{phys}}=K(D)$.
-
+After rescaling the common cell radius to one, a tangent-saturated packing of equal cells around the central cell is exactly the kissing configuration in $\mathbb R^D$: the centers of the retained cells are the centers of unit balls tangent to a central unit ball, with pairwise non-overlap. By definition, the maximal completed first-shell channel count is $K(D)$. Hence
+$$
+M_{\mathrm{phys}}=K(D).
+$$
 The internal count is fixed independently by Theorem Z.5:
 $$
 M_{\mathrm{int}}=2ab=24.
@@ -1271,13 +1311,13 @@ V_{\mathrm{mc}}=0
 \Longleftrightarrow
 M_{\mathrm{int}}=M_{\mathrm{phys}}=K(D).
 $$
-This proves the mode-channel correspondence and the uniqueness of the zero of the mismatch sector inside the admissible finite-response channel class. ∎
+This proves the mode-channel correspondence and the uniqueness of the zero of the mismatch sector inside the channel-complete finite-response class. ∎
 
 ---
 
 ## Z.11 Dimensional Selection
 
-**Theorem Z.11 (Dimensional Selection in the Bures Tangent-Cell Channel Contract).** In the finite-response Bures tangent-cell channel contract of Theorem Z.10, every PCE-optimal equilibrium satisfies $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$. Then at the attractor,
+**Theorem Z.11 (Dimensional Selection in the Bures Tangent-Cell Channel Contract).** In the channel-complete Bures tangent-cell contract of Definition Z.9a and Theorem Z.10, every PCE-optimal equilibrium satisfies $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$. Then at the attractor,
 $$
 M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D) = 24,
 $$
@@ -1325,7 +1365,7 @@ $$
 | 5 | 32 | 2 | 30 | 120 | No: $K(6)\le77<120<126\le K(7)$ |
 | 6 | 64 | 2 | 62 | 248 | No: $K(8)=240<248<306\le K(9)$ |
 
-Within the rigorously checked range $K_0\in\{1,\ldots,6\}$, only $K_0=3$ produces $M=K(D)$ for some integer $D$, namely $D=4$. The exclusions use the standard bounds
+Within the rigorously checked range $K_0\in\{1,\ldots,6\}$, only $K_0=3$ produces $M=K(D)$ for some integer $D$ inside the channel-complete Bures tangent-cell contract, namely $D=4$. The exclusions use the standard bounds
 $$
 K(5)\le44<56<72\le K(6),\qquad
 K(6)\le77<120<126\le K(7),\qquad
@@ -1333,7 +1373,7 @@ K(8)=240<248<306\le K(9),
 $$
 with $K(5)\le44$ from [Mittelmann & Vallentin 2010], $72\le K(6)$, $126\le K(7)$, $K(8)=240$, and $306\le K(9)$ from [Boyvalenkov et al. 2012], and the sharpened upper bound $K(6)\le77$ from [de Laat et al. 2024]. For larger $K_0$, the load-bearing exclusion in the framework comes from the SPAP lower bound $K_0\ge3$ together with the minimal-branch selection $d_0=8$ (Theorem 15 and Theorem Z.2), rather than from a complete kissing-number classification.
 
-**Corollary Z.11.1 (Geometric Necessity).** *The physical universe occupies the sole rigorously checked point where the SPAP-selected minimal branch aligns with geometric packing constraints: within $K_0 \in \{1,\ldots,6\}$, only $K_0 = 3$ yields $K(D)=M$, namely $K(4)=24$. For larger $K_0$, the framework excludes them by the SPAP lower bound together with the minimal-branch selection, rather than by exact kissing-number identities alone.*
+**Corollary Z.11.1 (Geometric Necessity).** *The physical universe occupies the sole rigorously checked point where the SPAP-selected minimal branch aligns with channel-complete geometric packing constraints: within $K_0 \in \{1,\ldots,6\}$, only $K_0 = 3$ yields $K(D)=M$, namely $K(4)=24$. For larger $K_0$, the framework excludes them by the SPAP lower bound together with the minimal-branch selection, rather than by exact kissing-number identities alone.*
 
 **Corollary Z.11.2 (Low-Dimensional Root-System Staircase).** On the minimal Appendix Z branch,
 $$
@@ -1436,7 +1476,7 @@ The same value simultaneously satisfies the following cross-domain constraint le
 |------------|-----------|--------|
 | C1 (Algebraic) | $M = 2ab = 2\cdot2\cdot6=24$ with $a+b=d_0=8$ and $a=2$ | ✓ |
 | C2 (Capacity) | $M\ln(1+u)=\ln d_0$ gives $u^*=2^{1/8}-1$ | ✓ |
-| C3 (Geometric) | $M=K(D)$ has the unique positive-integer solution $D=4$ in the Bures tangent-cell channel contract | ✓ |
+| C3 (Geometric) | $M=K(D)$ has the unique positive-integer solution $D=4$ in the channel-complete Bures tangent-cell contract | ✓ |
 | C4 (Coding) | The predictive-recovery MacWilliams self-dual-rate gate forces $k=12$, and the fixed-rate distance-optimal binary interface code is $\mathcal G_{24}=[24,12,8]$ | ✓ |
 | C5 (Rootless lattice) | The unique rootless even unimodular lattice in rank $24$ is $\Lambda_{24}$ | ✓ |
 | C6 (Unimodular rank) | $24\equiv0\pmod 8$, as required for positive-definite even unimodular lattices | ✓ |
@@ -1464,7 +1504,7 @@ $$
 u^*=2^{1/8}-1.
 $$
 
-For C3, Theorem Z.11 proves that in the Bures tangent-cell channel contract, PCE mode-channel matching requires
+For C3, Definition Z.9a and Theorem Z.11 prove that in the channel-complete Bures tangent-cell contract, PCE zero-mismatch mode-channel matching requires
 $$
 M=K(D).
 $$
@@ -1535,7 +1575,7 @@ up to finite operational equivalence. Any remaining multiplicity is either respo
 $$
 d_0=8,\qquad a=2,\qquad b=6,\qquad M=2ab=24
 $$
-on the minimal Appendix Z branch. Its coding row fixes $k=12$ and the predictive-recovery code $\mathcal G_{24}$ once the MacWilliams gate is active. Its geometric row fixes $D=4$ through exact mode-channel matching $M=K(D)$ in the Bures tangent-cell channel contract. Proposition Z.12.1a fixes rank $24$ as the unique even-unimodular self-counting rank in $\{8,16,24\}$. Theorem Z.8c then selects the unique rootless rank-$24$ even unimodular lattice, namely $\Lambda_{24}$.
+on the minimal Appendix Z branch. Its coding row fixes $k=12$ and the predictive-recovery code $\mathcal G_{24}$ once the MacWilliams gate is active. Its geometric row fixes $D=4$ through exact zero-mismatch mode-channel matching $M=K(D)$ in the channel-complete Bures tangent-cell contract. Proposition Z.12.1a fixes rank $24$ as the unique even-unimodular self-counting rank in $\{8,16,24\}$. Theorem Z.8c then selects the unique rootless rank-$24$ even unimodular lattice, namely $\Lambda_{24}$.
 
 Let $B,B'\in\mathfrak B$ be two branch representatives satisfying these same constraints. If their finite protocol-response presheaves are naturally isomorphic, Theorem P.6.1b.3 identifies them in the operational quotient, and Corollary P.6.1b.8 removes any extra labels, moduli, or normalization decorations that change no finite response and lower no cost. If their response presheaves are not naturally isomorphic, then some finite protocol separates them. Since both representatives have the same tuple (Z.12.1b.1), the separated difference is not a continuous structural modulus of $d_0,a,b,M,k,D,\mathcal G_{24}$, or $\Lambda_{24}$; it is a finite residual branch datum. By Theorem P.6.1b.7 such a datum can be retained only as a certified finite branch degeneracy rather than as an unconstrained landscape parameter. These alternatives exhaust the finite-response quotient. ∎
 
@@ -1586,13 +1626,13 @@ This resolves Wigner's puzzle (Appendix P, Section P.7.1). Mathematicians explor
 
 ### Z.12.3 Physical Emergence from Interface Mode Structure
 
-The $M = 24$ QFI interface modes (Theorem Z.5) are generators in the internal MPU Hilbert space $\mathcal{H}_0 = \mathbb{C}^8$. Through the mode-channel correspondence (Theorem Z.10) and dimensional selection (Theorem Z.11), these internal modes constrain the emergent spacetime dimension $D = 4$. This section establishes consistency relations between the internal mode count and physical degrees of freedom in $D = 4$ spacetime.
+The $M = 24$ QFI interface modes (Theorem Z.5) are generators in the internal MPU Hilbert space $\mathcal{H}_0 = \mathbb{C}^8$. Through the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorem Z.10) and dimensional selection (Theorem Z.11), these internal modes constrain the emergent spacetime dimension $D = 4$. This section establishes consistency relations between the internal mode count and physical degrees of freedom in $D = 4$ spacetime.
 
 #### Z.12.3.1 The Mode-Emergence Logical Chain
 
 **Definition Z.10a (Mode-Emergence Correspondence).** The mode-emergence correspondence is the logical chain:
 
-$$\boxed{M_{\mathrm{int}} = 24 \xrightarrow{\text{Thm Z.10}} K(D) = M_{\mathrm{int}} \xrightarrow{\text{Thm Z.11}} D = 4 \xrightarrow{\text{Standard theory}} \text{Physical structure}}$$
+$$\boxed{M_{\mathrm{int}} = 24 \xrightarrow{\text{Def Z.9a; Thm Z.10}} K(D) = M_{\mathrm{int}} \xrightarrow{\text{Thm Z.11}} D = 4 \xrightarrow{\text{Standard theory}} \text{Physical structure}}$$
 
 **Interpretive Principle:** The internal mode count $M_{\mathrm{int}}$ does not directly "become" physical degrees of freedom. Rather:
 1. $M_{\mathrm{int}} = 24$ is fixed by the Landauer partition (Theorem Z.1) and QFI structure (Theorem Z.5)
@@ -2405,7 +2445,7 @@ Thus the theorem uses the self-dual-rate gate to obtain $k=M/2$; it does not inf
 | Quantity | Value | Source | Derivation |
 |:---------|:-----:|:-------|:-----------|
 | $\varepsilon$ | $\ln 2$ on the attractor branch | Theorem 31; Definition 15a | SPAP cycle 2-to-1 merge + Landauer, with attractor saturation |
-| $a$ | 2 | Theorem Z.1 | Admissibility $\ln a \ge \varepsilon$ + PPI-optimality |
+| $a$ | 2 | Theorem Z.1 | Sharp match/mismatch record $a\ge2$ + admissibility $\ln a \ge \varepsilon$ + PPI/PCE no-surplus selection |
 | $N_{\mathrm{vis}}^{\min}$ | 8 | Theorem 15 | Finite operational-context floor $2^{K_0}$ |
 | $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 | Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$ plus minimal Appendix Z saturation |
 | $b = d_0 - a$ | 6 | Definition | Inactive complement |
@@ -3757,7 +3797,7 @@ The mode count M = 24 determines both fundamental constants:
 $$u^* = d_0^{1/M} - 1 = 8^{1/24} - 1 = 2^{1/8} - 1 \implies \alpha^{-1}_{(2)} ≈ 137.036$$
 
 2. **Spacetime Dimension:** 
-$$K(D) = M = 24 \implies D = 4$$
+$$K(D) = M = 24 \implies D = 4 \quad\text{inside the channel-complete Bures tangent-cell contract}$$
 
 This is not coincidence but structural unity: the same information-theoretic substrate determines both the strength of electromagnetic interactions and the dimensionality of the arena in which they occur.
 
@@ -3806,7 +3846,7 @@ Any mismatch represents either:
 - **Wasted computation** (dark modes): Resources spent on calculations that cannot influence neighbors
 - **Underutilized structure** (empty channels): Geometric complexity without corresponding information capacity
 
-Both scenarios increase the PCE potential V(x). The unique zero of the mode-channel mismatch cost V_mc occurs when K(D) = M_int = 24, implying D = 4.
+Both scenarios increase the PCE potential V(x). Inside the channel-complete Bures tangent-cell contract, the unique zero of the mode-channel mismatch cost V_mc occurs when K(D) = M_int = 24, implying D = 4.
 
 ---
 
@@ -4478,7 +4518,7 @@ At $u^* \approx 0.0905077$: Exact value $\sin(u^*)/u^* = 0.9986353$; $O(u^2)$ ap
 
 **Branch ledger for the Thomson-limit core value $\alpha^{-1}_{0}=137.03609205522863\ldots$.** The formula displayed below is exact arithmetic on the canonical Appendix Z normalization branch package, before adding the residual entry $R_\alpha$. The package comprises:
 
-1. The Bures tangent-cell channel contract (Theorems Z.7a, Z.10, Z.11), giving $D=4$ and $M=K(D)=24$;
+1. The channel-complete Bures tangent-cell channel contract (Definition Z.9a; Theorems Z.7a, Z.10, Z.11), giving $D=4$ and $M=K(D)=24$;
 2. The predictive-recovery MacWilliams Golay branch (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b), giving $k=12$ and the $\mathcal{G}_{24}$ error-correction structure;
 3. The bulk Predictive-Ward unit-normalization branch (Theorem Z.14), giving $\kappa^*_{\text{bulk}} = 1$;
 4. The interface-response ordering branch (Theorem Z.16), giving the sign $\delta\kappa < 0$;
@@ -6169,9 +6209,9 @@ Several alternative approaches to dimensional emergence have been proposed:
 | Causal set theory | Defines but does not derive D |
 | Loop quantum gravity | Assumes D=4 |
 | String theory | D=10/11, compactification not uniquely determined |
-| **This framework** | **Derives $D=4$ from $M=24$ from the mode-channel correspondence, with $d_0=8$ on the minimal branch and $\varepsilon_0=\ln2$ on the attractor branch** |
+| **This framework** | **Derives $D=4$ from $M=24$ inside the channel-complete Bures tangent-cell mode-channel contract, with $d_0=8$ on the minimal branch, $a=2$ from the active-verification/entropy gates, and $\varepsilon_0=\ln2$ on the attractor branch** |
 
-The framework differs by deriving rather than assuming the dimensional parameter. Given only logical necessity (d_0 = 8) and thermodynamic necessity (ε0 = ln 2), dimensional selection follows from mode-channel matching: K(D) = 2ab = 24 ⟹ D = 4.
+The framework differs by deriving rather than assuming the dimensional parameter. Given the minimal Hilbert-carrier branch ($d_0 = 8$), the active-verification/entropy branch ($a=2$ from match/mismatch plus $\varepsilon_0=\ln2$), and the channel-complete Bures tangent-cell contract, dimensional selection follows from zero-mismatch mode-channel matching: $K(D)=2ab=24\Rightarrow D=4$.
 
 This approach inverts the usual logic. Rather than starting with D-dimensional spacetime and deriving physical consequences, we start with pre-geometric information structure (the MPU) and derive that D=4 emerges as the unique thermodynamically stable configuration.
 
@@ -6260,10 +6300,10 @@ Relative = 0.677765 ppm
 ## From M = 24 to Two Fundamental Constants
 
 1. **Spacetime Dimension D = 4**
-   - K(D) = M = 24 has unique solution D = 4
-   - Derived via mode-channel correspondence
+   - Inside the channel-complete Bures tangent-cell contract, $K(D)=M=24$ has the unique positive-integer solution $D=4$ on the checked Euclidean branch
+   - Derived via zero-mismatch mode-channel correspondence
    - Cross-checked by the eight-entry constraint ledger of Theorem Z.12 and the Niemeier fixed-point test of Proposition Z.12.1a
-   - Global uniqueness proven via Hessian positive-definiteness
+   - Branch uniqueness is the zero-mismatch point of Theorem Z.10 together with the mismatch ledger of Lemma Z.5
 
 2. **Fine-Structure Constant Core $\alpha^{-1}_{0}=137.03609205522863\ldots$**
    - $u^* = 8^{1/24} - 1 = 2^{1/8}-1$ from capacity saturation
@@ -6285,7 +6325,7 @@ Every quantity in the final formulas traces back to:
 - $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ from ND-RID irreversibility (Theorem 31), with $\varepsilon_0=\ln2$ at PCE-Attractor saturation (Definition 15a)
 - $\pi$ (geometric necessity)
 
-No continuous parameters are tuned at any stage. The Thomson-limit $\alpha^{-1}$ formula follows from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14; Theorem Z.25). The dimensional selection $D=4$ follows from the mode-channel correspondence (Theorems Z.10–Z.11).
+No continuous parameters are tuned at any stage. The Thomson-limit $\alpha^{-1}$ formula follows from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14; Theorem Z.25). The dimensional selection $D=4$ follows from the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorems Z.10–Z.11).
 
 ---
 

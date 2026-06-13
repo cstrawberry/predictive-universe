@@ -2808,16 +2808,16 @@ $$
 \tag{G.1.9.1}
 $$
 
-The structural floor $\varepsilon_0=\ln2$ is exact. The physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is saturated only on the overhead-free quasi-static implementation branch [Bennett 1982]. This cost split is fixed by Theorem 31, while the PCE-Attractor uses the structural value $\varepsilon_0=\ln2$ for the discrete backbone (Definition 15a). It appears both as a thermodynamic constraint in the MPU internal cycle and as a structural constraint on the dimension of the active kernel (forcing $a=2$ on that branch). It thus ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
+The structural floor $\varepsilon_0=\ln2$ is exact. The physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is saturated only on the overhead-free quasi-static implementation branch [Bennett 1982]. This cost split is fixed by Theorem 31, while the PCE-Attractor uses the structural value $\varepsilon_0=\ln2$ for the discrete backbone (Definition 15a). It appears both as a thermodynamic constraint in the MPU internal cycle and as one of the two active-kernel constraints: the retained match/mismatch verification record gives $a\ge2$, and the entropy-capacity gate gives $\ln a\ge\varepsilon_0$; together with no-surplus selection they fix $a=2$ on that branch. This ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
 
-**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon_0$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible $a$ on the attractor-saturating branch (Theorem Z.1):
+**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The active subsystem is the retained verification kernel for the SPAP comparison and must carry two sharp alternatives, match and mismatch, so $a\ge2$ on the Hilbert-carrier branch. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Entropy-capacity also requires $\ln a \ge \varepsilon_0$; since $a \in \mathbb{N}$, PPI/PCE no-surplus selection fixes the minimal admissible $a$ on the attractor-saturating branch (Theorem Z.1):
 
 $$
 a = 2
 \tag{G.1.9.2}
 $$
 
-This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost.
+This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost and the retained match/mismatch verification record.
 
 **Stage 3: The PCE-Attractor State.** With $d_0 = 8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $a = 2$, the inactive subspace has dimension $b = d_0 - a = 6$. The PCE-Attractor (Definition 15a) is the unique equilibrium state maximally mixed on the active subspace and zero on the inactive complement:
 
@@ -3092,9 +3092,9 @@ These conversions realize the entropy domain correspondences of Thesis P.6.1 (Se
 
 1. **Logical → Thermodynamic:** Landauer's principle (Theorem 31) establishes $Q_{min} = k_B T \varepsilon = k_B T \ln 2$ [Landauer 1961].
 
-2. **Thermodynamic → Information:** PPI-optimality (Theorem Z.1) selects the minimal $a \in \mathbb{N}$ satisfying $\ln a \ge \varepsilon$, yielding $a = 2$.
+2. **Thermodynamic → Information:** Theorem Z.1 fixes the active kernel by two independent minimal-branch gates: the sharp match/mismatch verification record gives $a\ge2$, and entropy capacity gives $\ln a \ge \varepsilon$; PPI/PCE no-surplus selection yields $a = 2$.
 
-3. **Information → Geometric:** The QFI mode count is $M = 2ab = 2 \cdot 2 \cdot 6 = 24$ (Theorem Z.5), which matches the kissing number $K(4) = 24$ [Conway & Sloane 1999], determining spacetime dimension $D = 4$ (Theorem Z.11). QED
+3. **Information → Geometric:** The QFI mode count is $M = 2ab = 2 \cdot 2 \cdot 6 = 24$ (Theorem Z.5). Inside the channel-complete Bures tangent-cell contract, zero mismatch requires $M=K(D)$, and the isolated equality $K(4)=24$ determines spacetime dimension $D = 4$ (Definition Z.9a; Theorems Z.10-Z.11). QED
 
 ### G.1.9.9 Summary
 
@@ -3206,11 +3206,11 @@ $$a = D - 2$$
 
 where $a = 2$ is the Landauer active dimension (Theorem Z.1) and $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
 
-*Proof.* From Theorem Z.1, PPI-optimality on the attractor-saturating branch $\varepsilon_0=\ln2$ selects active dimension $a = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$ from the mode-channel correspondence. Therefore $D - 2 = 4 - 2 = 2 = a$.
+*Proof.* From Theorem Z.1, the attractor-saturating branch $\varepsilon_0=\ln2$ together with the retained match/mismatch record and PPI/PCE no-surplus selection fixes the active dimension $a = 2$. From Theorem Z.11, the channel-complete Bures tangent-cell contract gives the zero-mismatch condition $M = K(D)$; with $M = 24$, the isolated kissing-number equality $K(4)=24$ selects $D = 4$. Therefore $D - 2 = 4 - 2 = 2 = a$.
 
 This equality holds specifically at the PCE-optimal point. Checking alternatives:
 
-| $\varepsilon$ | $a$ | $b = 8 - a$ | $M = 2ab$ | $D$ from $K(D) = M$ | $a = D-2$? |
+| $\varepsilon$ | $a$ | $b = 8 - a$ | $M = 2ab$ | $D$ from channel-complete $K(D) = M$ | $a = D-2$? |
 |:-------------:|:---:|:-----------:|:---------:|:-------------------:|:----------:|
 | $\ln 2$ | 2 | 6 | 24 | 4 | ✓ |
 | $\ln 3$ | 3 | 5 | 30 | — | ✗ |
@@ -3466,7 +3466,7 @@ The precise connection is through the projective realization of the logical invo
 
 1. The SPAP logical involution (Definition G.10.1) determines the two-branch merge structure (Lemma Z.2).
 2. This merge structure determines $\varepsilon_0=\ln2$ via the Landauer/SPAP entropy theorem (Theorem 31).
-3. PPI-optimality selects the minimal active subsystem dimension $a=2$ (Theorem Z.1).
+3. The retained match/mismatch record gives $a\ge2$, entropy-capacity gives $\ln a\ge\varepsilon_0$, and PPI/PCE no-surplus selection fixes the minimal active subsystem dimension $a=2$ (Theorem Z.1).
 4. On $\mathcal H_a\cong\mathbb C^2$, the SPAP involution is a nontrivial projective unitary involution. Its determinant-one lift is $U_\iota=i\sigma_x\in SU(2)$ with $U_\iota^2=-I$ (Theorem G.10.2).
 5. PPI/PCE quotienting of global phase gives the ray symmetry $PU(2)\cong SO(3)$, while the minimal amplitude lift is $SU(2)$ (Theorem G.10.3).
 6. The lift $SU(2)\to SO(3)$ has kernel $\{I,-I\}\cong\mathbb Z_2$ (Theorem G.10.4).
@@ -3699,7 +3699,7 @@ This appendix has demonstrated how the Predictive Universe framework derives fun
 
 2. **Gauge Structure:** U(1) electromagnetism arises as the minimal PCE-optimal mechanism for maintaining predictive coherence across local phase freedom (Section G.7). The full Standard Model gauge group $SU(3) \times SU(2) \times U(1)$ emerges from the thermodynamically optimal $\mathbb{C}^2 \oplus \mathbb{C}^6$ partition of the MPU Hilbert space (Section G.8).
 
-3. **Spacetime Dimension:** $D = 4$ is uniquely selected from the mode-channel correspondence (Appendix Z) $M = K(D)$, where the 24 QFI interface modes match the kissing number $K(4) = 24$ (Theorems Z.10–Z.11).
+3. **Spacetime Dimension:** $D = 4$ is uniquely selected inside the channel-complete Bures tangent-cell mode-channel contract (Appendix Z): the 24 QFI interface modes are matched to the completed tangent-cell channel count $K(D)$, and the isolated equality $K(4) = 24$ gives the zero-mismatch solution (Definition Z.9a; Theorems Z.10–Z.11).
 
 4. **Three Generations:** Appendix R derives the minimal admissible value $N_g = 3$ from anomaly cancellation together with the CP-violation requirement in the modeled family-charge sector, and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. The $D_4$ triality orbit and $E_8$/Leech construction supply compatible three-fold scaffolds rather than independent proofs (Appendix R, Theorem R.3.4; Proposition R.3.5.1a; Proposition R.4.2).
 

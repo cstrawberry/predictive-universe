@@ -5074,7 +5074,7 @@ $$
 $$
 This statement packages distinct structural gates whose proof roles are recorded separately in Appendix R; it is not a single-source compression theorem. Quantitative hierarchy derivations later in this appendix additionally use the threshold data, prefactors, and matching prescriptions introduced in those sections.*
 
-*Proof.* Theorem 15 fixes $K_0=3$ and $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$. Theorem 23 gives the Hilbert-carrier lower bound $d_0\ge N_{\mathrm{vis}}^{\min}$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch. Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and Definition 15a supplies the attractor saturation $\varepsilon_0=\ln2$. Theorem Z.1 fixes $a=2$ on that branch, and the complement has
+*Proof.* Theorem 15 fixes $K_0=3$ and $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$. Theorem 23 gives the Hilbert-carrier lower bound $d_0\ge N_{\mathrm{vis}}^{\min}$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch. Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and Definition 15a supplies the attractor saturation $\varepsilon_0=\ln2$. Theorem Z.1 fixes $a=2$ on that branch from the retained match/mismatch record, entropy-capacity, and PPI/PCE no-surplus gates, and the complement has
 $$
 b=d_0-a=6.
 $$
@@ -5086,7 +5086,7 @@ On the predictive-recovery MacWilliams branch (Definition Z.13b.0; Theorem Z.13b
 $$
 k=M/2=12.
 $$
-The Bures tangent-cell mode-channel contract of Theorem Z.11 gives
+The channel-complete Bures tangent-cell mode-channel contract of Definition Z.9a and Theorem Z.11 gives
 $$
 K(D)=M=24,
 $$

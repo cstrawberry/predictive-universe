@@ -84,6 +84,8 @@ where $\mathcal P$ is the list of predicted observables, $\mathcal C$ is the acc
 
 **Theorem 13.0e (No Validation Contamination).** A prediction listed in $\mathfrak R_{\mathrm{pred}}$ may be counted as forward PU evidence only if its branch or certificate was fixed before the validation data used to test it. If any branch entry, residual interval, normalization, or certificate component is selected after seeing the validation data, the entry remains a post-selection consistency check rather than forward evidence.
 
+*Proof.* By Definition 13.0d, every forward-evidence entry is a pair consisting of a finite derivation certificate and a finite validation protocol. If the derivation certificate is fixed first, the validation data test an already determined interval or falsifier. If a certificate component is selected after the validation data are known, then the data participate in defining the interval being tested. Such a test is logically circular as forward evidence because the tested set is no longer independent of the observations. Therefore it can only be recorded as a post-selection consistency check. ∎
+
 **Definition 13.0f (Prediction Status Class).** Every numerical claim in this paper carries one of the following four prediction statuses, and the status is recorded together with the predicted value.
 
 1. **Derived-retrodictive.** The numerical value is derived from a closed PU branch but the corresponding measurement was already published before the derivation was completed. The claim counts as mathematical compression evidence in the sense of Convention P.14.1d but does not count as forward empirical evidence.
@@ -102,11 +104,26 @@ where $\mathcal P$ is the list of predicted observables, $\mathcal C$ is the acc
 
 *Proof.* Status under Definition 13.0f depends on three independent records: closure of the strict PPI/PCE certificate, the time order of certificate acceptance relative to the measurement target, and the satisfaction of the evidence rule. The certificate closure controls statuses 1 versus 2. The time order controls status 3. The evidence rule controls status 4. Each row inherits its status as the deterministic image of these three records by Definition 13.0f and Theorem 13.0g. ∎
 
-*Proof.* By Definition 13.0d, every forward-evidence entry is a pair consisting of a finite derivation certificate and a finite validation protocol. If the derivation certificate is fixed first, the validation data test an already determined interval or falsifier. If a certificate component is selected after the validation data are known, then the data participate in defining the interval being tested. Such a test is logically circular as forward evidence because the tested set is no longer independent of the observations. Therefore it can only be recorded as a post-selection consistency check. ∎
-
 **Corollary 13.0f (Certificate Failure Rule).** If an observable fails the interval or falsifier associated with its accepted certificate in $\mathfrak R_{\mathrm{pred}}$, the corresponding branch is demoted or rejected. The interval may not be widened by replacing the certificate after comparison.
 
 *Proof.* The interval and falsifier are entries of the fixed register. Replacing the certificate changes the register entry and therefore changes the branch under test. It cannot rescue the failed branch as the same prediction. ∎
+
+**Definition 13.0i (Discriminating Multi-Lock Witness).** A discriminating multi-lock witness is a forward-locked prediction-register entry
+$$
+\mathfrak W_{\mathrm{ML}}
+=
+(X_{\mathrm{value}},X_{\mathrm{shape}},X_{\mathrm{null}},X_{\mathrm{unit}},
+\mathcal A_{\mathrm{art}},
+\chi_{\mathrm{ind}})
+\tag{13.0i.1}
+$$
+where $X_{\mathrm{value}}$ is the predicted value or finite-combinatorial pattern, $X_{\mathrm{shape}}$ is a signed, scaling, incidence, phase-grid, or spectrum-shape prediction not reducible to one scalar fit, $X_{\mathrm{null}}$ is the preregistered null-control or label-swap pattern, $X_{\mathrm{unit}}$ is the common PU unit bridge consumed by the prediction, $\mathcal A_{\mathrm{art}}$ is the artifact-control ledger implementing Definition 13.0a, and $\chi_{\mathrm{ind}}$ records that the value, shape, null, unit, and artifact entries are fixed independently of the validation data and of one another except through the named PU derivation branch. A witness is support-class only if the value, shape, null-control, unit-bridge, and artifact-control entries all satisfy their registered intervals or qualitative falsifiers under the same unmodified certificate.
+
+**Theorem 13.0j (No Ad-Hoc Rescue for Multi-Lock Witnesses).** If a registered multi-lock witness of Definition 13.0i fails any of $X_{\mathrm{value}}$, $X_{\mathrm{shape}}$, $X_{\mathrm{null}}$, $X_{\mathrm{unit}}$, or $\mathcal A_{\mathrm{art}}$ under its locked evidence protocol, the same witness cannot be rescued by changing a normalization, unit bridge, null-control class, residual interval, or artifact model after unblinding. Such a change defines a new branch or a new protocol entry.
+
+*Proof.* Each listed component is part of the forward-locked record $\mathfrak W_{\mathrm{ML}}$. Changing any component after outcome inspection changes the tested object. Theorem 13.0e forbids counting such a changed object as forward evidence for the original prediction, and Corollary 13.0f prevents widening the failed interval or replacing the falsifier while retaining the same branch identity. ∎
+
+**Corollary 13.0k (Landauer-Ledger Constellation Standard).** When distinct protocols consume the same structural source constant $\varepsilon_0=\ln2$ through independent finite-response maps, their joint evidential value is recorded as a Landauer-ledger constellation only if each row separately satisfies Definition 13.0i and the common source $\varepsilon_0$ is inherited from Theorem 31 rather than refit per platform. Examples of such rows include metered actualization thresholds, retained entropic clock-flow, conditional horizon phase grids, and finite record-current TUR tests. Failure of one branch-level row falsifies the named row or bridge; failure of a theorem-level row under a closed certificate falsifies the corresponding theorem stack.
 
 **13.1 Prediction 1: Potential Born-Rule Deviations**
 
@@ -947,7 +964,7 @@ M=24=K(D) \xrightarrow{\text{Appendix Z Bures tangent-cell channel branch}} D=4.
 $$
 Accordingly, the Golay code, the Leech-lattice gluing construction, and the spacetime-dimension selection share a common 24-mode compatibility backbone. The cited results do not by themselves show that each later object uniquely determines every subsequent entry in the chain.
 
-*Proof.* On the predictive-recovery MacWilliams branch, Definition Z.13b.0 and Theorem Z.13b.0a fix $k=12$, after which Theorem Z.13b identifies the binary linear code at interface mode count $M=24$ with the extended Golay code $\mathcal G_{24}$. Lemma R.4.5 states that $\mathcal G_{24}$ supplies the gluing data in the standard construction of the Leech lattice from $\sqrt2 E_8^3$. Independently, Theorem Z.11 proves that the mode-channel condition $M=K(D)$ with $M=24$ selects $D=4$. These three cited results share the same numerical backbone $M=24$, which is the precise common structure established here. ∎
+*Proof.* On the predictive-recovery MacWilliams branch, Definition Z.13b.0 and Theorem Z.13b.0a fix $k=12$, after which Theorem Z.13b identifies the binary linear code at interface mode count $M=24$ with the extended Golay code $\mathcal G_{24}$. Lemma R.4.5 states that $\mathcal G_{24}$ supplies the gluing data in the standard construction of the Leech lattice from $\sqrt2 E_8^3$. Independently, Theorem Z.11 proves that the channel-complete mode-channel condition $M=K(D)$ with $M=24$ selects $D=4$. These three cited results share the same numerical backbone $M=24$, which is the precise common structure established here. ∎
 
 ### 13.9.6 Classical vs. Quantum Golay Codes
 
@@ -1224,7 +1241,7 @@ The predictions fall into three epistemic categories that must be distinguished 
 
 **Prediction:** Emergent spacetime has exactly $D = 4$ macroscopic dimensions.
 
-**Derivation Summary:** The mode-channel correspondence (Theorem Z.10) requires $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$ at thermodynamic equilibrium, where $K(D)$ is the kissing number in $D$ dimensions. With $M_{\mathrm{int}} = 2ab = 24$ (Theorem Z.5), the equation $K(D) = 24$ has unique solution $D = 4$ (Theorem Z.11). On the minimal Appendix Z branch this is equivalently the chain
+**Derivation Summary:** Inside the channel-complete Bures tangent-cell contract (Definition Z.9a; Theorem Z.10), zero mismatch requires $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$ at thermodynamic equilibrium, where $K(D)$ is the kissing number in the effective tangent dimension. With $M_{\mathrm{int}} = 2ab = 24$ (Theorem Z.5), the equation $K(D) = 24$ has the isolated positive-integer solution $D = 4$ on the checked Euclidean branch (Theorem Z.11). On the minimal Appendix Z branch this is equivalently the chain
 $$
 M=24=K(4),
 $$
@@ -1373,6 +1390,32 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 
 **Experimental row for metered events.** If a protocol claims a $\ln 2$ actualization timing threshold, the protocol must identify the binary interface register, the no-early-firing margin, the overwrite bound, and the process-tensor no-signaling audit. Otherwise the observation tests the broader $\mathfrak C_{\mathrm{act}}$ branch and not the sharper metered branch.
 
+**Experimental row for retained entropic clock-flow.** If a protocol claims the Appendix O entropic-clock branch, it must identify the retained sector $R$, the finite event alphabet $\mathcal E_R$, the retained entropy-increment estimator $\sigma_R^{\mathrm{ECF}}$, the cumulative entropy ledger $\Sigma_R^{\mathrm{ECF}}$, the locked guarantee-level subset $\mathcal G_R$ when a SPAP-unit count is claimed, the complement or reservoir controls, the null-exchange windows, the external laboratory clock used only for data parameterization, and the Blackwell-PCE record-current estimator when the TUR subtest is invoked. The primary endpoint is fixed before comparison:
+$$
+\Delta\mathcal T_R
+=
+\frac{\Delta\Sigma_R^{\mathrm{ECF}}}{\ln2}.
+\tag{13.10.6a}
+$$
+The mandatory null endpoint is
+$$
+\Delta\Sigma_R^{\mathrm{ECF}}=0
+\Rightarrow
+\Delta\mathcal T_R=0
+\tag{13.10.6b}
+$$
+for the retained entropic-clock coordinate, unless an independently registered non-entropic clock record is present in the retained presheaf. When the clock is read as a stationary current, the registered quotient must also satisfy
+$$
+\frac{\operatorname{Var}(\widehat{\Delta\mathcal T_R})}
+{\langle\widehat{\Delta\mathcal T_R}\rangle^2}
+\Sigma_T
+\ge2.
+\tag{13.10.6c}
+$$
+A positive result must show the clock-flow slope, the stall/null condition, and the current-precision inequality under the same fixed $\ln2$ unit bridge. Cold-atom bright/dark-sector entropic-time experiments such as Barontini [2026] are recorded as external analogue tests of internal entropy-clock ordering, not as forward PU evidence for the $\ln2$ unit bridge unless the PU unit, retained entropy-increment estimator, null windows, guarantee-level subset when used, and witness locks were registered before comparison. A result is classified as failure if the apparent clock advances during null-exchange windows, if the effect follows laboratory timing rather than retained entropy flow after label swaps, if the retained entropy-increment estimator or guarantee-level subset is chosen after unblinding, or if the clock-current TUR is violated after the finite record quotient and entropy ledger have been fixed.
+
+**Experimental row for Landauer-ledger constellations.** A cross-protocol claim that PU is supported by repeated appearances of $\ln2$ must satisfy Corollary 13.0k: the same structural $\varepsilon_0=\ln2$ must be inherited from Theorem 31 and consumed through independent finite-response maps. Separate fitted $\ln2$-like constants in different platforms do not count as a constellation.
+
 **Table 13.1: Falsifiable Predictions and Current Status**
 
 | Prediction | Framework Value | Experimental Value | Derivation | Status |
@@ -1383,7 +1426,9 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Gauge algebra / connected-cover notation on the finite-response block-frame positive-marginal capacity branch | $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak u(1)$; connected cover $SU(3) \times SU(2) \times U(1)$ | Standard Model gauge algebra; global form fixed by determinant interface | Theorem G.8.4b; Corollary G.8.4c | ◐ finite-response block-frame branch theorem |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
 | Chronometric curvature phase/dephasing | $\hbar|\dot\Theta|/|\Delta E|=|\Delta\Phi|/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/|\Delta E|=|\Delta\Phi|/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
+| Retained entropic clock-flow | On accepted $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, $\Delta\mathcal T_R=\Delta\Sigma_R^{\mathrm{ECF}}/\ln2$; zero retained entropy/update flow gives $\Delta\mathcal T_R=0$; record-current estimates obey $\operatorname{Var}(\widehat{\Delta\mathcal T_R})\Sigma_T/\langle\widehat{\Delta\mathcal T_R}\rangle^2\ge2$ | Barontini-type cold-atom bright/dark-sector analogue clocks, reservoir-swap quantum simulators, photonic/ion-trap retained-record clocks, and stochastic record-current tests with null-exchange windows | Definition O.3f; Theorem O.3f; Corollary O.3g; Barontini [2026] as analogue only | ◐ certificate-gated finite-record theorem; ○ protocol-specific tests pending |
 | Actualization threshold under engineered leakage | On branches with accepted $\mathfrak C_{\mathrm{act}}$, commit onset occurs when the retained link ledger reaches the certified $C_{\max}$; on the residual-budget minimal branch $C_{\max}^*=2\ln2$ nats per link-cycle and $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ | controlled-leakage interferometry with a locked ledger-to-laboratory bridge required | Definition E.2a.4; Proposition E.2a.5; Definition E.2a.6; Corollary M.6.14b.1 | ◐ certificate-gated branch prediction; ○ untested |
+| Landauer-ledger constellation | The same $\varepsilon_0=\ln2$ must appear through independent locked maps: metered actualization, retained entropic clock-flow, conditional horizon phase grid $x\equiv N\ln2\pmod{2\pi}$, and finite record-current TUR; no platform-specific refitting of the unit is allowed | multi-platform finite-register, horizon-analogue, and stochastic-current protocols entered as Definition 13.0i witnesses | Theorem 31; Definition 13.0i; Corollary 13.0k; Definition O.3f; Proposition Q.0.19; Theorem D.8.7f; Corollary D.8.7g | ◐ multi-lock evidence standard; ○ protocol constellation pending |
 | Cone-saturation residual floor | With accepted $\mathfrak C_{\mathrm{cone}}$, retained sector front-speed splitting in vacuum is represented by a pre-locked misalignment functional satisfying $\xi_{\mathrm{cone}}\le\xi_{\mathrm{res}}$; no universal no-birefringence theorem is asserted without that certificate | multi-messenger timing, polarization, and in-vacuo dispersion tests constrain the future certificate | Definition O.7.2.5; Corollary 46a; Theorem F.0 Condition 4 | ◐ certificate-gated structural test; ○ existing bounds constrain certificate choices |
 | Predictive GSL / null-slack tomography | With accepted $\mathfrak C_{\mathrm{PGSL}}$, retained generalized entropy satisfies $\Delta S_{\mathrm{out}}+\Delta\mathcal A/(4G)\ge0$ on covered horizon cuts; with accepted $\mathfrak C_{\mathrm{NC}}$, the QNEC/null-slack ledger is nonnegative and zero slack selects the reversible Einstein branch | local horizon analogues, modular-flow tomography, and Clausius-defect null-tomography protocols constrain the finite cut records | Definition 12.5.3l; Theorem 12.5.3m; Definition 12.5.3n; Proposition 12.5.3o; Theorem 12.1g | ◐ certificate-gated branch prediction; ○ protocol-specific tests pending |
 | Self/world predictive complementarity | With accepted $\mathfrak C_{\mathrm{SW}}$, external task capacity obeys $C_{\mathrm{world}}\le B_C-C_{\mathrm{sh}}-c_{\mathrm{SPAP}}\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$ for certified SPAP-near self-model tasks | AI metacognition/world-task scaling, cognitive-load, and neuroscience bandwidth protocols with a locked task split | Definition 14.1d; Proposition 14.1e; Remark 14.1f | ◐ certificate-gated allocation test; ○ protocol-specific tests pending |

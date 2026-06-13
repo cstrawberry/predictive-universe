@@ -156,9 +156,9 @@ $$
 $$
 given by $a \otimes b \otimes c \mapsto abc$. The domain algebra, $M_2(\mathbb{C})^{\otimes 3}$, is isomorphic to the algebra of all $8 \times 8$ complex matrices, $M_8(\mathbb{C})$, which is a simple C*-algebra. A fundamental theorem of C*-algebras states that any nonzero \*-homomorphism from a simple C*-algebra is injective. Since each subalgebra is assumed to act nontrivially, the map $\Phi$ is nonzero and therefore injective.
 
-This implies that $\mathfrak{A}$ contains a subalgebra isomorphic to $M_8(\mathbb{C})$. By the structure theory of C*-algebras, any nonzero representation of $M_8(\mathbb{C})$ is a direct sum of its unique 8-dimensional irreducible representation. Consequently, any faithful representation of $\mathfrak{A}$ must act on a Hilbert space $\mathcal{H}$ of dimension at least 8. Any dimension $d_0 < 8$ is informationally insufficient to non-destructively manage the three required independent quantum binary degrees of freedom. This establishes $d_0 = 8$ as a strict algebraic lower bound. ∎
+This implies that $\mathfrak{A}$ contains a subalgebra isomorphic to $M_8(\mathbb{C})$. By the structure theory of C*-algebras, any nonzero representation of $M_8(\mathbb{C})$ is a direct sum of its unique 8-dimensional irreducible representation. Consequently, any faithful representation of $\mathfrak{A}$ must act on a Hilbert space $\mathcal{H}$ of dimension at least 8. Any dimension $d_0 < 8$ is informationally insufficient to non-destructively manage the three required independent quantum binary degrees of freedom. This establishes the strict algebraic lower bound $d_0\ge8$. Equality is not part of the lower-bound lemma. ∎
 
-This establishes $d_0 \ge 8$ as a strict lower bound. The Principle of Compression Efficiency can select the saturating case only after the active-operational-dimension hypotheses stated below are imposed.
+The Principle of Compression Efficiency selects the saturating case $d_0=8$ only after the active-operational-dimension hypotheses stated below are imposed.
 
 **Theorem (PCE Stability of $d_0 = 8$ from Algebraic Completeness).**
 Let the PCE potential for an MPU with an active operational dimension $d$ be $V(d) = V_{cost}(d) - V_{benefit}(d)$, subject to the algebraic lower bound $d \ge 8$. The stability of the minimal dimension $d^*=8$ is a necessary consequence of PCE optimization under the following physically-motivated conditions:
@@ -727,7 +727,7 @@ $$
 $$
 Then $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}$, proving (45a). ∎
 
-The strict positivity and universality of the structural floor $\varepsilon_0$ and the physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ are of profound consequence. Beyond underpinning the Reflexivity Constraint (Theorem 33) and limiting ND-RID channel capacity (Appendix E), it serves as the fundamental thermodynamic ratchet that physically enforces the emergent arrow of time, ensuring the directionality of macroscopic evolution (Appendix O, Theorem O.3). The full derivation of $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is provided in **Appendix J**.
+The strict positivity and universality of the structural floor $\varepsilon_0$ and the physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ are of profound consequence. Beyond underpinning the Reflexivity Constraint (Theorem 33), limiting ND-RID channel capacity (Appendix E), and supplying the physical bound for irreversible MPU interactions, it serves as the fundamental thermodynamic ratchet that physically enforces the emergent arrow of time, ensuring the directionality of macroscopic evolution (Appendix O, Theorem O.3). Appendix O also records the chronometric projection on retained-sector branches: once $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$ fixes the retained event alphabet, retained entropy-increment estimator, and guarantee-level subset when used, cumulative retained entropy production in units of $\ln2$ defines the dimensionless entropic clock count $\mathcal T_R=\Sigma_R^{\mathrm{ECF}}/\ln2$ (Definition O.3f). This adds no new primitive constant; it is the same SPAP merge cost read as a retained clock-flow unit. The full derivation of $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is provided in **Appendix J**.
 
 **7.4.5 Theorem 32 (Fundamental Info-Thermo Bound for 'Evolve')**
 
@@ -1034,11 +1034,11 @@ The quantity $\varepsilon_0=\ln2$ plays two roles that are unified on the attrac
 | Role | Manifestation |
 |:-----|:--------------|
 | **Thermodynamic cost** | Minimum entropy production per SPAP cycle is bounded below by $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and saturates at the PCE-Attractor |
-| **Structure generator** | At $\varepsilon_0=\ln2$, minimal admissibility and PPI-optimality force $a = 2$, initiating the Golay chain (Theorem Z.1) |
+| **Structure generator** | At $\varepsilon_0=\ln2$, the sharp retained match/mismatch active-verification record gives $a\ge2$, entropy-capacity gives $\ln a\ge\varepsilon_0$, and PPI/PCE no-surplus selection fixes $a = 2$, initiating the Golay chain (Theorem Z.1) |
 
 These are not independent facts but two aspects of the same branch-specific constraint:
 
-$$\varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm 31}} \text{thermodynamic cost} \quad \text{AND} \quad \varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{} M = 24 \xrightarrow{} [24,12,8]$$
+$$\varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm 31}} \text{thermodynamic cost} \quad \text{AND} \quad \varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm Z.1: active record + capacity}} a = 2 \xrightarrow{} M = 24 \xrightarrow{} [24,12,8]$$
 
 The structural SPAP entropy ($\varepsilon_0$) and the error-correction structure protecting that processing (Golay code) are mutually determining: the cost fixes the structure, and the structure realizes the cost.
 

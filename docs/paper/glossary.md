@@ -59,6 +59,12 @@ $$
 
 *   **Criticality-Tuning Certificate:** (Appendix P, Definition P.8.9a.12.0c; Proposition P.8.9a.12.0d) Certificate $\mathfrak C_{\mathrm{crit}}$ recording a domain state family, predictive-performance observable, control coordinate, susceptibility, critical manifold, distance-to-criticality functional, finite-size-scaling record, and universality-class data. It is required before PU can claim marginal predictability, self-organized criticality, or critical exponents for a domain.
 
+*   **Entropic Clock-Flow Certificate:** (Appendix O, Definition O.3f; Theorem O.3f; Corollary O.3g) Certificate $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$ fixing a retained sector, finite event alphabet, retained entropy-increment estimator, guarantee-level subset when used, null controls, and optional cycle-time calibration. It defines the dimensionless retained clock count
+$$
+\mathcal T_R=\Sigma_R^{\mathrm{ECF}}/\ln2,
+$$
+predicts entropic-clock stall when retained entropy/update flow vanishes, and gives the clock-current TUR when the clock is read through a finite Blackwell-PCE record current.
+
 *   **Golay-QEC Bootstrap Record:** (Appendix A, Definition A.0.1q.1; Theorem A.0.2a; Appendix Z, Proposition Z.13b.7) Finite record $\mathfrak C_{\mathrm{GQEC}}$ using the predictive-recovery Golay branch and punctured CSS $[[23,1,7]]$ witness to discharge the QEC compatibility certificate only when physical syndrome, recovery, threshold, and protected-gate ledgers are also accepted.
 
 *   **Predictive Complementarity Allocation Ledger:** (Section 4.5.2, Definition 14.1d; Proposition 14.1e) Certificate $\mathfrak C_{\mathrm{SW}}$ splitting a finite predictor's horizon budget into self-model, world-model, and shared costs. It yields the SPAP-near tradeoff $C_{\mathrm{world}}\le B_C-C_{\mathrm{sh}}-c_{\mathrm{SPAP}}\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$ for covered tasks.
@@ -318,7 +324,7 @@ $$
 
 *   **$\kappa_r$:** (Theorem 33) The positive constant ($\kappa_r > 0$) appearing in the Reflexivity Constraint, quantifying the fundamental trade-off between information gain $\Delta I$ and minimum state disturbance $\Delta S_{min}/k_B$. Arises from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$.
 
-*   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ ($E_8$). In the mode-channel correspondence (Appendix Z), $M_{\rm int} = K(D)$; Theorem Z.11 then selects $D = 4$ since $K(4) = M = 24$ from the mode-channel correspondence. This equality is a channel-cell equality; interpreting it as a graph-degree count of distinct neighboring MPUs requires a separate population graph realization.
+*   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ ($E_8$). Inside the channel-complete Bures tangent-cell mode-channel contract (Definition Z.9a; Theorem Z.10), zero mismatch requires $M_{\rm int}=M_{\rm phys}=K(D)$; Theorem Z.11 then selects $D = 4$ since $K(4) = M = 24$ on the minimal branch. This equality is a channel-cell equality; interpreting it as a graph-degree count of distinct neighboring MPUs requires a separate population graph realization.
 
 *   **Kleiber Scaling (PU conditional biological branch):** (Theorem P.8.9a.12.7) A terminal-invariant, space-filling, area-preserving transport network with mass proportional to network volume gives $B\asymp M^{D/(D+1)}$, hence $B\asymp M^{3/4}$ when $D_{\mathrm{space}}=3$.
 
@@ -333,7 +339,7 @@ $$
 *   **Landauer-Noether Closure Principle:** (Appendix Q, Theorem Q.0.7d2; Corollary Q.0.7d3) The structural SPAP quantum $\varepsilon_0=\ln2$ generates the dense subgroup $G_L=\{e^{iN\ln2}:N\in\mathbb Z\}\subset U(1)$, upgrading discrete SPAP/Landauer phase invariance of continuous finite-resolution response functionals to full effective $U(1)$ invariance and the corresponding Noether current.
 *   **Landauer Phase-Grid Ledger:** (Definition Q.0.7u; Proposition Q.0.20b.1) Conditional horizon closed-loop transfer-branch record for the phase positions $x_N=[N\ln2]_{2\pi}$ in $x=\hbar\omega/(k_BT_H)$. The ledger fixes transcendence/aperiodicity, the continued-fraction prefix of $\ln2/(2\pi)$, convergent near-recurrences, finite discrepancy bounds, and two-/three-gap statistics; it does not fix amplitudes, widths, greybody factors, or the transfer-map derivation.
 
-*   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the structural cost $\varepsilon_0 = \ln 2$ of the SPAP cycle. Dimension determined by admissibility ($\ln a \ge \varepsilon_0$) together with PPI-optimality: $a = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
+*   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the structural cost $\varepsilon_0 = \ln 2$ of the SPAP cycle while carrying the sharp retained match/mismatch verification record. Its dimension is fixed by $a\ge2$, the admissibility gate $\ln a \ge \varepsilon_0$, and PPI/PCE no-surplus selection: $a = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
 
 *   **Law of Prediction:** (Theorem 19, Equation 22) The functional relationship between invested complexity $C$, target complexity $\hat{C}_{target}$, and achievable Predictive Performance $PP$ within the viable range $(\alpha, \beta)$: $PP(C, \hat{C}_{target}) = \beta - (\beta-\alpha) \exp[-\kappa_{\mathrm{eff}} (C-C_{op})/\hat{C}_{target}]$.
 
@@ -365,7 +371,7 @@ $$
 
 *   **Minimal Family-Charge Selection:** (Appendix R, Definition R.8.5a; Theorem R.8.5b; Remark R.8.5c; Corollary R.8.5d) PCE minimal-selection audit in the integer $U(1)_F$ family-charge class. The unique minimal-cost orbit satisfying linear anomaly cancellation, cubic anomaly cancellation, non-triviality, CP-active distinctness, and PCE cost monotonicity is $\{a,-a,0\}$, giving $N_g=3$. The statement is not an exhaustive classification of all larger anomaly-free charge multisets; those are PCE-demoted or different response-active branches.
 
-*   **Mode-Channel Correspondence:** (Appendix Z, Theorem Z.10) The finite-response Bures tangent-cell channel contract requiring internal QFI modes to match operationally retained channel cells: $M_{\rm int}=M_{\rm phys}$. PPI and PCE force equal-radius, non-overlapping, tangent-saturated distinguishability cells, so $M_{\rm phys}=K(D)$. Combined with $M_{\rm int}=2ab=24$, Theorem Z.11 selects $D=4$ at the PCE-optimal equilibrium.
+*   **Mode-Channel Correspondence:** (Appendix Z, Definition Z.9a; Theorem Z.10) The channel-complete finite-response Bures tangent-cell contract requiring internal QFI modes to match operationally retained completed first-shell channel cells: $M_{\rm int}=M_{\rm phys}$. PPI and PCE force equal-radius, non-overlapping, tangent-saturated distinguishability cells, so $M_{\rm phys}=K(D)$. Combined with $M_{\rm int}=2ab=24$, Theorem Z.11 selects $D=4$ at the PCE-optimal zero-mismatch equilibrium.
 
 *   **Model-Indexed LITE:** (Appendix A.5.6a) A bounded proof search through a predictor-indexed admissibility relation. In the labeled version,
     $$

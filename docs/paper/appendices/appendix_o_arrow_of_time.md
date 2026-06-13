@@ -193,7 +193,7 @@ $$
 $$
 Under the pathwise guarantee-level bound this ratio is at most $e^{-\varepsilon_0}\le1/2$, proving (O.3a.4.4). No CP-odd or baryon-number source is produced by this statement; it only supplies the finite orientation ledger used by such branches. ∎
 
-**Definition O.3a.2 (Modular Thermal-Time Ledger).** On a finite faithful local branch, let $(\mathfrak A_O,\omega_O)$ be the local algebra-state pair for a retained region $O$, with modular Hamiltonian
+**Definition O.3a.2 (Modular Thermal-Time Ledger).** The external thermal-time precedent is the Connes-Rovelli thermal-time hypothesis [Connes & Rovelli 1994]. On a finite faithful local branch, let $(\mathfrak A_O,\omega_O)$ be the local algebra-state pair for a retained region $O$, with modular Hamiltonian
 $$
 K_O:=-\log\rho_O
 \tag{O.3a.2.1}
@@ -400,6 +400,80 @@ If $\dim\mathcal A_{\mathrm{ret}}^{(q)}(t_0)$ is minimal in the certified filtra
 *Proof.* Each accepted record appends a verified finite response after the SPAP update cycle and pays the entropy floor of Theorem 31. The forward-lock and no-deletion/retention entries prevent erasure from the retained algebra in the certified window, giving the inclusion maps. Entropy on a finite retained algebra is bounded by the logarithm of its dimension. The ancestry clause is a PPI statement: exclusion applies to the retained conditioning class exactly when a finite protocol distinguishes ancestry-bearing records from record-shaped states without such ancestry. ∎
 
 **Remark O.3e (Non-Redundancy with the Arrow Theorem).** Theorems O.3, O.3a, and O.3b derive directionality and fluctuation suppression. Proposition O.3d does not rederive that arrow. It supplies the separate retained-algebra reading of low-boundary and conditioning claims, and is therefore used only where the text discusses the Past Hypothesis or record-selection ambiguity.
+
+**Definition O.3f (Retained Entropic Clock-Flow Certificate).** Fix a retained sector $R$ and observer level $q$ carrying $\mathfrak C_{\mathrm{ret}}^{(q)}$. A retained entropic clock-flow certificate is a finite record
+$$
+\mathfrak C_{\mathrm{ECF}}^{(R,q)}
+=
+(\mathfrak C_{\mathrm{ret}}^{(q)},\mathcal E_R,\sigma_R^{\mathrm{ECF}},\mathcal G_R,
+\varepsilon_0,
+\mathcal N_R,
+\tau_R^{\mathrm{cyc}},
+\chi_{\mathrm{ECF}})
+\tag{O.3f.1}
+$$
+where $\mathcal E_R$ is the finite retained event alphabet, $\sigma_R^{\mathrm{ECF}}:\mathcal E_R\to[0,\infty)$ is the branch-fixed retained entropy-production increment, $\mathcal G_R\subseteq\mathcal E_R$ is the locked guarantee-level retained-update subset, $\varepsilon_0=\ln2$ is the SPAP structural entropy unit of Theorem 31, $\mathcal N_R$ is the null-exchange and label-swap control ledger, $\tau_R^{\mathrm{cyc}}$ is either a fixed physical cycle-time calibration or the symbol $\bot$ when only dimensionless clock count is claimed, and $\chi_{\mathrm{ECF}}$ records that the event alphabet, retained entropy-increment estimator, guarantee-level subset, null controls, and calibration were fixed before the clock-flow comparison.
+
+For $e\in\mathcal G_R$, the certificate records that $e$ is the retained projection of a nontrivial guarantee-level SPAP update cycle to which Theorem O.3a applies, so that the imported retained increment satisfies
+$$
+\sigma_R^{\mathrm{ECF}}(e)\ge\varepsilon_0=\ln2.
+\tag{O.3f.2}
+$$
+No such lower bound is claimed for events outside $\mathcal G_R$ unless they are separately certified.
+
+For a retained event history $e_1,\ldots,e_n$ define
+$$
+\Sigma_R^{\mathrm{ECF}}(n)=
+\sum_{j=1}^n\sigma_R^{\mathrm{ECF}}(e_j),
+\qquad
+\mathcal T_R(n)=
+\frac{\Sigma_R^{\mathrm{ECF}}(n)}{\varepsilon_0}
+=
+\frac{\Sigma_R^{\mathrm{ECF}}(n)}{\ln2}.
+\tag{O.3f.3}
+$$
+$\mathcal T_R$ is the dimensionless retained entropic clock count. If $\tau_R^{\mathrm{cyc}}\ne\bot$, the calibrated physical representative is
+$$
+t_R^{\mathrm{ECF}}(n)=
+\tau_R^{\mathrm{cyc}}\mathcal T_R(n).
+\tag{O.3f.4}
+$$
+When $e_j\in\mathcal G_R$, (O.3f.2) implies that the event advances $\mathcal T_R$ by at least one unit.
+
+**Theorem O.3f (Retained Clock-Flow and Stall Law).** On any branch carrying $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, the retained entropic clock $\mathcal T_R$ is monotone. For any retained interval $I=[m,n]$,
+$$
+\Delta\mathcal T_R(I)
+=
+\frac{1}{\ln2}
+\sum_{j=m+1}^n\sigma_R^{\mathrm{ECF}}(e_j).
+\tag{O.3f.5}
+$$
+Therefore:
+
+1. if the retained entropy/update flow vanishes on $I$, then $\Delta\mathcal T_R(I)=0$;
+2. if $I$ contains $N_I$ events from the locked guarantee-level subset $\mathcal G_R$, then $\Delta\mathcal T_R(I)\ge N_I$;
+3. if no independently registered non-entropic clock record is present in the retained presheaf, event-order refinements inside a zero-flow interval do not change the $\mathcal T_R$ coordinate and are response-null for the entropic-clock subtest of the $\mathfrak C_{\mathrm{ECF}}$ protocol.
+
+*Proof.* The certificate requires $\sigma_R^{\mathrm{ECF}}(e_j)\ge0$ for each retained event, so $\Sigma_R^{\mathrm{ECF}}$ and $\mathcal T_R=\Sigma_R^{\mathrm{ECF}}/\ln2$ are monotone. Summing the certified increments across $I$ gives (O.3f.5). If every increment on $I$ is zero, the sum is zero. If $N_I$ interval events lie in $\mathcal G_R$, (O.3f.2) supplies $\sigma_R^{\mathrm{ECF}}(e_j)\ge\varepsilon_0=\ln2$ for each such event, and all other increments are nonnegative, so the normalized sum is at least $N_I$. The last clause is the PPI quotient clause for the entropic-clock coordinate: without a retained record that distinguishes two internal refinements, the refinements are not separate clock events for this protocol. ∎
+
+**Corollary O.3g (Clock-Current TUR).** If $\mathcal T_R$ is estimated by a stationary finite Blackwell-PCE record current $J_T$ with $\langle J_T\rangle\ne0$ on a branch satisfying the predictive thermodynamic uncertainty relation of Theorem D.8.7f, and if
+$$
+\widehat{\Delta\mathcal T_R}=\gamma_T J_T,
+\qquad \gamma_T>0,
+\tag{O.3g.1}
+$$
+then
+$$
+\frac{\operatorname{Var}(\widehat{\Delta\mathcal T_R})}
+{\langle\widehat{\Delta\mathcal T_R}\rangle^2}
+\Sigma_T
+\ge2.
+\tag{O.3g.2}
+$$
+
+*Proof.* Multiplication of the current by the positive calibration $\gamma_T$ multiplies both the mean and standard deviation by $\gamma_T$, so the relative variance is unchanged. Substitution into Theorem D.8.7f gives (O.3g.2). ∎
+
+**Remark O.3h (Closed-System and Two-Sector Reading).** In a closed total branch $R\cup\bar R$, the retained clock-flow law is a subsystem statement, not a violation of global closure. The total branch may conserve its accepted fine-grained invariant while a retained sector obtains an arrow and an internal clock from entropy/update exchange with its complement. When the exchange ledger is null, $\mathcal T_R$ stalls unless another retained clock certificate has been independently fixed. Thus two-sector analogue clocks test the PU chronometric projection only when the retained sector, complement controls, retained entropy-increment estimator, guarantee-level subset when used, and null windows are locked before comparison. Cold-atom bright/dark-sector entropic-time experiments such as Barontini [2026] are external analogue precedents for this two-sector operational architecture; they are not forward PU evidence for the $\ln2$ unit bridge unless the PU unit, retained entropy-increment estimator, null windows, guarantee-level subset when used, and witness locks are fixed before comparison.
 
 ### O.5.1 The Perspectival Arrow: Complexity-Relative Temporal Asymmetry
 

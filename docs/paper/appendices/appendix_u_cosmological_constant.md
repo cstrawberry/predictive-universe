@@ -29,7 +29,7 @@ The following constants are derived elsewhere in the framework:
 | $K_0$ | 3 | Minimal self-referential bits | Theorem 15 |
 | $N_{\mathrm{vis}}^{\min}$ | $2^{K_0} = 8$ | Minimal faithful visited-context count | Theorem 15 |
 | $d_0$ | $8$ | Minimal MPU Hilbert-carrier dimension after saturation | Theorem 23; Theorem Z.2 |
-| $a$ | minimal integer with $\ln a\ge\varepsilon_0$, hence $2$ | Active kernel dimension | Theorem Z.1 |
+| $a$ | sharp match/mismatch active record plus minimal integer with $\ln a\ge\varepsilon_0$, hence $2$ | Active kernel dimension | Theorem Z.1 |
 | $b$ | $d_0 - a = 6$ | Inactive subspace dimension | Definition |
 | $M$ | $2ab = 24$ | Interface modes | Theorem Z.5 |
 | $D$ | 4 | Emergent spacetime dimension | Theorem Z.11 |
@@ -308,13 +308,13 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 *Proof.*
 
-**Step 1 (Interface mode count).** From Theorem Z.5, the QFI-active interface modes number $M = 2ab = 24$, where $a = 2$ (Theorem Z.1) and $b = d_0 - a = 6$.
+**Step 1 (Interface mode count).** From Theorem Z.5, the QFI-active interface modes number $M = 2ab = 24$, where $a = 2$ (Theorem Z.1, from the sharp match/mismatch record plus entropy-capacity/no-surplus gate) and $b = d_0 - a = 6$.
 
-**Step 2 (Equilibrium saturation).** At PCE equal-cap equilibrium, Theorem Z.9 establishes that the channel configuration maximizes entropy subject to distinguishability constraints, yielding $M_{\text{phys}} = K(D)$.
+**Step 2 (Equilibrium saturation).** Inside the channel-complete Bures tangent-cell contract of Definition Z.9a, Theorem Z.9 establishes that the completed first-shell channel count saturates the equal-radius tangent packing bound, yielding $M_{\text{phys}} = K(D)$.
 
-**Step 3 (Mode-channel correspondence).** Theorem Z.10 requires $M_{\text{int}} = M_{\text{phys}}$ at PCE-optimal equilibrium. This matching is the unique global minimum of the PCE potential (Lemma Z.5).
+**Step 3 (Mode-channel correspondence).** Theorem Z.10 requires $M_{\text{int}} = M_{\text{phys}}$ at PCE-optimal zero-mismatch equilibrium. This matching is the unique zero of the finite-response mismatch ledger (Lemma Z.5).
 
-**Step 4 (Dimensional selection).** Theorem Z.11 establishes that $K(D) = 24$ uniquely selects $D = 4$, since $K(4) = 24$ is the only integer solution.
+**Step 4 (Dimensional selection).** Theorem Z.11 establishes that $K(D) = 24$ uniquely selects $D = 4$ inside the contract, since $K(4) = 24$ is the isolated positive-integer solution on the checked Euclidean tangent-cell branch.
 
 **Step 5 (Geometric realization).** By Definition Z.8, fix the standard 24-point configuration on $S^3$ given by the unit Hurwitz integers. This configuration realizes the optimal kissing count $K(4)=24$ and provides a concrete 24-point geometric model for the mode-channel correspondence.
 
@@ -1674,9 +1674,9 @@ For general emergent dimension $D'$:
 - Translational branch count: $m_{\mathrm{trans}} = D'$; for $D=4$ the corrected full discrete closure is Theorem U.13b under the explicit false-vacuum spectral hypotheses stated there, while other dimensions would require the corresponding discrete spectral proof
 - A further dilatation mode would require an additional exact-scale-family hypothesis of the type isolated in Theorem U.9
 - Deficit: $\delta = m/2$
-- Requires $M = K(D')$ (mode-channel correspondence, Theorem Z.10) and existence of appropriate spherical design
+- Requires the channel-complete Bures tangent-cell condition $M = K(D')$ (Definition Z.9a; Theorem Z.10) and existence of appropriate spherical design
 
-For $D = 4$ (Theorem Z.11): the 24-cell realizes the optimal kissing configuration $K(4)=24$ and furnishes the spherical 5-design exactness used in Appendix U. This locks the mode-channel correspondence at the level of cardinality, dimension, and quadrature input. Theorem U.8c shows that this design-exactness does not by itself create a fifth pure-coordinate dilatation zero mode in the current continuum action.
+For $D = 4$ (Theorem Z.11): the 24-cell realizes the optimal kissing configuration $K(4)=24$ and furnishes the spherical 5-design exactness used in Appendix U. This locks the channel-complete mode-channel correspondence at the level of cardinality, dimension, and quadrature input. Theorem U.8c shows that this design-exactness does not by itself create a fifth pure-coordinate dilatation zero mode in the current continuum action.
 
 ---
 
