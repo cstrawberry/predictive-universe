@@ -536,6 +536,38 @@ $$
 
 *Proof.* Items (1), (2), (4) follow from Theorems B.8b, B.8c, B.8d. Item (3) follows from Theorem B.8b(b) directly and, independently, from Corollary 45a.1 applied to the scalar-density matter action of Theorem 45a. The two routes agree because they refer to the same underlying tensor identified by (1) and (2). ∎
 
+**Definition B.8e (Predictive-Engine Rate Certificate $\mathfrak C_{\mathrm{eng}}$).** A predictive-engine rate certificate on a regular branch is a finite record
+$$
+\mathfrak C_{\mathrm{eng}}
+=
+(\Phi_F,\;T_{\mathrm{eff}},\;N_{\mathrm{str}},\;C_{\mathrm{ret}}^{\mathrm{nat}},\;\mathcal W_{\mathrm{free}},\;\mathcal O_{\mathrm{oh}},\;\mathcal R_{\mathrm{src}},\;\text{coarse-graining window},\;\text{forward lock})
+$$
+where $\Phi_F$ is the available free-energy flux into the retained predictive engine, $T_{\mathrm{eff}}>0$ is the effective temperature of the verified heat bath or local equilibrium ledger, $N_{\mathrm{str}}(t)$ counts new irreducible retained structural quanta, $C_{\mathrm{ret}}^{\mathrm{nat}}(t)=\varepsilon_0N_{\mathrm{str}}(t)$ is the associated retained structural content in nats when that normalization is used, $\mathcal W_{\mathrm{free}}$ records the free-energy bookkeeping, $\mathcal O_{\mathrm{oh}}\ge0$ records overhead and failed-verification losses, and $\mathcal R_{\mathrm{src}}$ records any Source-Principle relocation of the payment ledger.
+
+**Proposition B.8f (Predictive Engine Bound).** On a branch carrying $\mathfrak C_{\mathrm{eng}}$, autonomous retained-structure growth satisfies
+$$
+\frac{dN_{\mathrm{str}}}{dt}
+\le
+\frac{\Phi_F}{k_BT_{\mathrm{eff}}\varepsilon_0},
+\qquad
+\varepsilon_0=\ln2.
+$$
+Equivalently, when $C_{\mathrm{ret}}^{\mathrm{nat}}=\varepsilon_0N_{\mathrm{str}}$,
+$$
+\frac{dC_{\mathrm{ret}}^{\mathrm{nat}}}{dt}
+\le
+\frac{\Phi_F}{k_BT_{\mathrm{eff}}}.
+$$
+With Source-Principle relocation, the same inequality is applied to the target-side retained growth while the sender-side payment and overhead are added through $\mathcal R_{\mathrm{src}}$. Equality is asserted only on a separate overhead-free, Landauer-saturating branch where $\mathcal O_{\mathrm{oh}}=0$ and the bath/flux ledger is reversible at the stated coarse-graining.
+
+*Proof.* Each new irreducible retained structural quantum is a verified finite response and therefore pays at least $k_BT_{\mathrm{eff}}\varepsilon_0$ of free energy under the Landauer/SPAP floor of Theorem 31 in the recorded bath. In a time interval $dt$, the available free energy is at most $\Phi_Fdt$, and overhead only reduces the portion available for new retained structure. Dividing by $dt$ gives the first inequality. Multiplying by $\varepsilon_0$ gives the equivalent content-rate form. The Source-Principle clause changes which ledger pays, not the minimum payment per retained target-side quantum. ∎
+
+**Remark B.8f.1 (Capacity Cost of a Metered Event).** Under $\mathfrak C_{\mathrm{meter}}$ a binary retained event carries the Landauer floor $k_BT_{\mathrm{eff}}\ln2$ for the recorded bit, plus any SPAP, verification, recovery, or overwrite overhead already present in the capacity ledger. This is a lower bound on the certified register write, not a claim that the full physical episode costs exactly one bit.
+
+**Corollary B.8g (Complexity Backreaction Bound).** If $\mathfrak C_{\mathrm{eng}}$ is supplemented by an FRW or Buchert averaging certificate fixing the homogeneity scale, stress coefficient, and averaging window, then the complexity-growth contribution to $T_{\mu\nu}^{(\mathrm{MPU})}$ is bounded by the time integral of Proposition B.8f through the corresponding term in Definition B.8. This gives a finite backreaction estimate. It proves negligible contamination of the Appendix U $\Lambda$ branch only when the resulting bound is below the accepted residual budget fixed before comparison.
+
+*Proof.* The stress tensor of Definition B.8 is the variational source of the retained cost action by Theorem B.8c and Corollary B.8d.1. The averaging certificate converts the local rate bound into the recorded cosmological source term. Comparison with the accepted residual budget is an ordinary strict-certificate comparison; without it the result is a bound, not a negligibility theorem. ∎
+
 **Corollary B.8d.2 (Vacuum Normalization and $\Lambda$-Absorption).** The continuum Belinfante tensor is defined up to an additive metric-proportional constant absorbed into the cosmological constant. Under the shift $T'_{\mu\nu}:=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu}$ for constant $\sigma$, the Einstein equation (76a) is equivalent to its form with $T'_{\mu\nu}$ and $\Lambda':=\Lambda-(8\pi G/c^4)\sigma$. The PCE-Attractor vacuum normalization $T_{\mu\nu}^{(\mathrm{MPU})}|_{\mathrm{vac}}=0$ (Theorem B.6(a)) fixes $\sigma$ uniquely, placing the vacuum contribution into $\Lambda$ (whose value is determined by Appendix U).
 
 *Proof.* Substitute $T'_{\mu\nu}=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu}$ into (76a) and collect the metric-proportional terms on the geometric side. Theorem B.6(a) fixes the vacuum contribution to zero in the PU convention, so $\sigma$ is determined. ∎

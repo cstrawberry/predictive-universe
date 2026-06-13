@@ -7,6 +7,7 @@
 *   Aharonov, Y., Bergmann, P. G., & Lebowitz, J. L. (1964). Time Symmetry in the Quantum Process of Measurement. *Physical Review*, *134*(6B), B1410–B1416. DOI: 10.1103/PhysRev.134.B1410
 *   Aharonov, Y., & Zubairy, M. S. (2005). Time and the quantum: erasing the past and impacting the future. *Science*, *307*(5711), 875–879. DOI: 10.1126/science.1107787
 *   Aharonov, Y., & Vaidman, L. (2008). The Two-State Vector Formalism: An Updated Review. In J. G. Muga, R. Sala Mayato, & I. L. Egusquiza (Eds.), *Time in Quantum Mechanics* (Lecture Notes in Physics, Vol. 734, pp. 399–447). Springer. DOI: 10.1007/978-3-540-73473-4_13
+*   Aliferis, P., Gottesman, D., & Preskill, J. (2006). Quantum accuracy threshold for concatenated distance-3 codes. *Quantum Information & Computation*, *6*(2), 97–165. arXiv:quant-ph/0504218.
 *   Albert, D. (2000). *Time and Chance*. Harvard University Press.
 *   Albert, D. (2012). On the Origin of Everything. Review of L. Krauss, *A Universe from Nothing*. *New York Times*
 *   ALEPH, DELPHI, L3, OPAL, and SLD Collaborations (Schael, S., *et al.*) (2006). Precision electroweak measurements on the Z resonance. *Physics Reports*, *427*(5–6), 257–454. DOI: 10.1016/j.physrep.2005.12.006
@@ -217,6 +218,7 @@
 *   Dutta, P., & Horn, P. M. (1981). Low-frequency fluctuations in solids: 1/f noise. *Reviews of Modern Physics*, *53*(3), 497–516. DOI: 10.1103/RevModPhys.53.497
 *   Durant, F., Morokuma, J., Fields, C., Williams, K., Adams, D. S., & Levin, M. (2017). Long-term, stochastic editing of regenerative anatomy via targeting endogenous bioelectric gradients. *Biophysical Journal*, *112*(10), 2231–2243.
 *   Durant, F., Bischof, J., Fields, C., Morokuma, J., LaPalme, J., Hoi, A., & Levin, M. (2019). The Role of Early Bioelectric Signals in the Regeneration of Planarian Anterior/Posterior Polarity. *Biophysical Journal*, *116*(5), 948–961. DOI: 10.1016/j.bpj.2019.01.029
+*   Eastin, B., & Knill, E. (2009). Restrictions on transversal encoded quantum gate sets. *Physical Review Letters*, *102*, 110502. DOI: 10.1103/PhysRevLett.102.110502.
 *   Einstein, A. (1905a). Zur Elektrodynamik bewegter Körper. *Annalen der Physik*, *322*(10), 891–921. DOI: 10.1002/andp.19053221004
 *   Einstein, A. (1905b). Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig? *Annalen der Physik*, *323*(13), 639–641. DOI: 10.1002/andp.19053231314
 *   Ellerman, D. (2015). Why delayed choice experiments do not imply retrocausality. *Quantum Studies: Mathematics and Foundations*, *2*(2), 183–199. DOI: 10.1007/s40509-014-0026-2

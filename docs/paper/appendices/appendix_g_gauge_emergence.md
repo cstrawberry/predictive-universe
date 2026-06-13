@@ -236,13 +236,29 @@ Item 4 follows from the definitions. Theorem G.1.7 assigns weights to sharp even
 
 **G.1.8 Hilbert-Space Uniqueness under POP + PCE**
 
-The existence of a well-behaved cost functional satisfying the premises of Theorem G.1.3 not only leads to the Born rule but also provides a justification for the emergence of the Hilbert space structure itself as the unique optimal framework for predictive processing under POP/PCE.
+The existence of a well-behaved cost functional satisfying the premises of Theorem G.1.3 leads to the Born rule after the carrier/effect structure is fixed. The carrier itself is a separate finite-response gate: PPI response equivalence and PCE no-surplus selection exclude some alternatives, but they do not by themselves prove cone self-duality, homogeneous reversible steering, or the full Jordan-to-complex-Hilbert reduction.
 
-**Theorem G.1.8 (Complex Hilbert-Space Uniqueness under POP/PCE).** Under POP/PCE, the predictive state space carries a Hilbert-space representation. Among the real, complex, and quaternionic Hilbert-space branches, the complex branch is uniquely selected by compositional closure, local tomography, connected phase transport, and PCE removal of surplus phase redundancy.
+**Definition G.1.8a (Sharp Homogeneous Carrier Certificate $\mathfrak C_{\mathrm{car}}$).** A carrier-reconstruction certificate is a finite record
+$$
+\mathfrak C_{\mathrm{car}}
+=
+(\Omega_+,E_+,\langle\cdot,\cdot\rangle_{\mathrm{PP}},\mathcal G_{\mathrm{rev}},\mathcal T_{\mathrm{loc}},\mathcal P_{U(1)},\mathcal J_{\mathrm{excl}},\text{forward lock})
+$$
+where $\Omega_+$ is the retained state cone after the PPI quotient, $E_+$ is the retained effect cone, $\langle\cdot,\cdot\rangle_{\mathrm{PP}}$ is the predictive-performance pairing, and the following entries are certified before comparison:
 
-*Proof.* The reconstruction results established in Sections G.1.1–G.1.7 and the standard GNS/Wigner analysis provide a Hilbert-space representation of predictive states and symmetries. The remaining scalar alternatives are $\mathbb R$, $\mathbb C$, and $\mathbb H$.
+1. **Sharp self-duality.** The map from a retained sharp state to its response-maximal verification effect extends to an order isomorphism $\Omega_+\simeq E_+$ under $\langle\cdot,\cdot\rangle_{\mathrm{PP}}$.
+2. **Homogeneous reversible viability.** The reversible, cost-bounded steering group $\mathcal G_{\mathrm{rev}}$ acts transitively on the interior of $\Omega_+$.
+3. **Compositional tomography.** $\mathcal T_{\mathrm{loc}}$ records local tomography for nontrivial composites in the retained protocol family.
+4. **Connected phase transport.** $\mathcal P_{U(1)}$ records the minimal connected abelian phase transport used by the gauge sector.
+5. **Jordan exclusion.** $\mathcal J_{\mathrm{excl}}$ records finite response failures or surplus-cost gaps excluding non-complex Euclidean-Jordan branches not removed by items 3 and 4, including spin-factor and exceptional branches when they are otherwise admissible.
 
-For a finite $n$-dimensional Hilbert space, the real parameter counts of normalized density data are
+Without $\mathfrak C_{\mathrm{car}}$, PU retains the weaker theorem-level conclusion of Corollary G.1.10: SPAP excludes simplex state spaces, while the full Hilbert-carrier claim remains branch/certificate-level.
+
+**Theorem G.1.8 (Complex Hilbert-Space Uniqueness on the Carrier-Certified Branch).** On a retained finite-response branch carrying $\mathfrak C_{\mathrm{car}}$, the predictive state cone is the cone of squares of a finite-dimensional Euclidean Jordan algebra. If the same certificate includes the local-tomography, connected-phase, and Jordan-exclusion records of Definition G.1.8a, the retained carrier is operationally equivalent to the complex Hilbert branch. Among the real, complex, and quaternionic Hilbert-space branches, the complex branch is uniquely selected by compositional closure, local tomography, connected phase transport, and PCE removal of surplus phase redundancy.
+
+*Proof.* The sharp self-duality and homogeneous reversible-viability entries of $\mathfrak C_{\mathrm{car}}$ give a finite-dimensional homogeneous self-dual ordered cone. By the Koecher–Vinberg reconstruction theorem, such a cone is the cone of squares of a Euclidean Jordan algebra. The certificate therefore supplies the missing carrier step rather than deriving it from PPI/PCE alone.
+
+The remaining scalar Hilbert alternatives are $\mathbb R$, $\mathbb C$, and $\mathbb H$. For a finite $n$-dimensional Hilbert space, the real parameter counts of normalized density data are
 $$
 N_{\mathbb R}(n)=\frac{n(n+1)}2-1,\qquad
 N_{\mathbb C}(n)=n^2-1,\qquad
@@ -278,43 +294,24 @@ so again
 $$
 (m-1)(n-1)=0.
 $$
-Thus the real and quaternionic tomography identities hold only for trivial composites with $m=1$ or $n=1$, and fail for every nontrivial composite with $m,n\ge2$. Hence genuine real and quaternionic state-space branches fail local tomography under compositional closure.
+Thus the real and quaternionic tomography identities hold only for trivial composites with $m=1$ or $n=1$, and fail for every nontrivial composite with $m,n\ge2$.
 
-The phase-redundancy condition gives the same selection independently. The real branch has only the disconnected scalar phase group $\{\pm1\}$ and cannot supply the connected phase transport used in Sections G.2-G.7. The quaternionic branch has scalar phase group $Sp(1)\cong SU(2)$, a three-dimensional nonabelian redundancy. If the extra quaternionic generators change finite protocol responses, they introduce additional gauge content beyond the minimal MPU branch. If they do not change finite protocol responses, Corollary P.6.1b.8 removes them as response-null surplus. The complex branch supplies exactly $U(1)$, the minimal connected abelian scalar phase group compatible with the active kernel.
+The phase-redundancy condition gives the same selection independently. The real branch has only the disconnected scalar phase group $\{\pm1\}$ and cannot supply the connected phase transport used in Sections G.2-G.7. The quaternionic branch has scalar phase group $Sp(1)\cong SU(2)$, a three-dimensional nonabelian redundancy. If the extra quaternionic generators change finite protocol responses, they introduce additional gauge content beyond the minimal MPU branch. If they do not change finite protocol responses, Corollary P.6.1b.8 removes them as response-null surplus. Spin-factor, exceptional, or other Euclidean-Jordan branches are excluded only by the explicit $\mathcal J_{\mathrm{excl}}$ record; they are not eliminated by the field-counting calculation alone. The complex branch supplies exactly $U(1)$, the minimal connected abelian scalar phase group compatible with the active kernel. ∎
 
-Therefore the complex Hilbert-space branch is the unique POP/PCE-stable Hilbert branch. ∎
+**Corollary G.1.9 (Status Split for Alternative Predictive Algebras).**
+Alternative predictive algebras divide into three status classes. Simplex theories are excluded by Corollary G.1.10. Real and quaternionic Hilbert branches are excluded on the carrier-certified branch by Theorem G.1.8. General Jordan, $L^p$, or other GPT-style alternatives are not rejected by prose-level PCE instability alone; they remain admissible only if they supply a finite carrier certificate matching Definition G.1.8a, or else they carry a positive response-changing or response-null-surplus penalty.
 
-**Corollary G.1.9 (PCE Instability of Alternative Predictive Algebras).**
-Any proposed alternative algebraic structure for prediction (e.g., classical probability on phase space, real or quaternionic Hilbert spaces, Jordan algebras, $L^p$ spaces with $p \neq 2$) would be unstable under PCE optimization compared to the complex Hilbert space structure.
-*Proof.* Let $\mathfrak{A}$ denote a proposed predictive algebra (states, sharp outcomes, and composition rules) used by an MPU. For $\mathfrak{A}$ to be PCE-stable, the POP/PCE accounting of outcome branches must admit a nonnegative, normalized, finitely additive, non-contextual frame functional $f(P)$ on sharp outcomes (Definition G.1.1), because any contextual dependence introduces avoidable bookkeeping and is penalized by the PCE potential $V(x)$ (Lemma G.1.1b and Appendix D, Definition D.1). Under these premises and $\dim(\mathcal{H}_0)\ge 3$ (Theorem 23), Theorem G.1.7 enforces the trace-form rule for probabilities,
-$$
-f(P)=\operatorname{Tr}(\rho_{phys}P),
-\qquad
-p(P)=\operatorname{Tr}(\rho_{phys}P),
-$$
-for all projectors $P$ in the operational theory.
+*Proof.* Let $\mathfrak A$ denote a proposed predictive algebra (states, sharp outcomes, and composition rules) used by an MPU. If $\mathfrak A$ is a simplex theory, Corollary G.1.10 excludes it because SPAP requires complementary observables. If $\mathfrak A$ is a real or quaternionic Hilbert branch and the retained sector carries $\mathfrak C_{\mathrm{car}}$, the local-tomography and connected-phase entries of Theorem G.1.8 exclude it on every nontrivial composite branch.
 
-Now take any alternative proposal $\mathfrak{A}_{alt}$:
-
-- If $\mathfrak{A}_{alt}$ supports such a globally non-contextual additive frame functional and also supports efficient composition/local tomography as required by POP, then Theorem G.1.8 applies: the operational theory admits a Hilbert representation and is, up to isomorphism of finite protocol responses and composition, the complex Hilbert-space theory. In this case there is no genuinely distinct alternative—PCE-stable realizations of $\mathfrak{A}_{alt}$ reproduce complex Hilbert behavior.
-
-- If $\mathfrak{A}_{alt}$ fails to supply this structure naturally, then an MPU using it must either (i) accept reduced predictive performance $PP$ (lowering $V_{benefit}$), or (ii) impose extra constraints/hidden degrees/contextual correction rules to recover PU consistency. Case (ii) contributes a strictly positive excess cost, which appears as an effective structural penalty in the PCE potential:
+For a genuinely different non-simplex algebra, two cases remain. If it supplies the sharp self-duality, homogeneous reversible steering, compositional tomography, phase-transport, and Jordan-exclusion records of Definition G.1.8a, then it is not an uncategorized alternative: it enters through the carrier certificate and must reproduce the retained complex-Hilbert responses or display a certified finite-response difference. If it does not supply those records, then the missing structure is either response-changing, lowering predictive performance, or response-null, in which case Corollary P.6.1b.8 removes the surplus representative. A response-changing repair contributes a positive excess structural penalty
 $$
 V(x)_{alt}=V(x)_{complex_H}+V_{penalty,struc},
+\qquad
+V_{penalty,struc}>0,
 $$
-with $V_{penalty,struc}>0$ whenever $\mathfrak{A}_{alt}$ is genuinely inequivalent. Under the PCE adaptation dynamics (Appendix D, Equation D.8), higher-potential configurations are dynamically disfavored; and in the low-noise detailed-balance stationary regimes covered by Theorem D.5, stationary mass concentrates near the lower-potential sector, so inequivalent alternatives with $V_{penalty,struc}>0$ are outcompeted by implementations of the complex Hilbert-space structure.
+for the covered protocol family. Under the PCE adaptation dynamics (Appendix D, Equation D.8), such higher-potential configurations are dynamically disfavored in the low-noise detailed-balance stationary regimes covered by Theorem D.5.
 
-The examples listed fall into this dichotomy:
-
-1. **Classical phase space:** Classical probability is a simplex theory and is excluded already by Corollary G.1.10 (complementarity from SPAP). Any attempt to emulate complementarity requires extra hidden structure or contextuality, which increases $V_{penalty,struc}$.
-
-2. **Real Hilbert spaces:** Although some quantum features persist, the local phase/gauge mechanism derived in Section G.2 (and summarized in Section G.7) is not naturally available without complexification (or an equivalent doubling/constraint construction), adding operational cost without improving $PP$.
-
-3. **Quaternionic Hilbert spaces:** The non-commutative scalar field enlarges symmetry and state-parameter counts and complicates composition; absent demonstrable net benefit that lowers $V(x)$, PCE selects the complex subtheory and the unused extra structure contributes only positive $V_{penalty,struc}$.
-
-4. **Jordan algebras and $L^p$ spaces with $p\neq 2$:** These frameworks do not, in general, provide a natural globally non-contextual additive frame functional compatible with the trace-form assignment demanded by Theorem G.1.7 across all physically realizable decompositions; enforcing that consistency again amounts to added constraints and hence added penalty.
-
-Therefore the complex Hilbert-space structure is uniquely stable under PCE. QED
+Thus the complex Hilbert carrier is theorem-level only on the carrier-certified branch; outside that branch, non-simplex alternatives remain certificate-pending rather than silently eliminated. ∎
 
 **Corollary G.1.10 (Non-Simplex State Space from SPAP).**
 The self-referential structure of SPAP (Theorem 10, Theorem 11) logically excludes simplex state spaces, independent of efficiency considerations.
@@ -1031,6 +1028,12 @@ n_G^{(\mathrm{geom})} = ab = 12
 $$
 
 *Proof.* A maximal $\omega$-isotropic subspace is obtained by selecting exactly one generator from each symplectic 2-plane (either $X_{\alpha\beta}$ or $Y_{\alpha\beta}$, but not both), giving $\dim(L_{\max}) = 12$. Any subspace of dimension $> 12$ must contain at least one complete 2-plane, which has $\omega(X_{\alpha\beta}, Y_{\alpha\beta}) = 1 \neq 0$, violating isotropy. ∎
+
+Under $\mathfrak C_{\mathrm{Cas}}$ the homogeneous spectral contribution has the recorded finite-part form
+$$
+\Delta_{\mathrm{hom}}(\mu_G)=\operatorname{FP}_{\mathrm{MS2}_{\mu_G}}\sum_{s,n}(-1)^{F_s}m_{s,n}\log\frac{\lambda_{s,n}+q_s}{\mu_G^2}+R_{\mathrm{tail}},
+$$
+where $m_{s,n}$, $q_s$, and $R_{\mathrm{tail}}$ are part of the same pre-registered record. The formula is a certificate format, not an inserted numerical prediction until the tables and tail bound are supplied.
 
 **Corollary G.8.2f (Consistency with Channel Capacity).** The geometric bound $n_G^{(\mathrm{geom})} = 12$ refines the channel capacity range $n_{\max} \approx 7.5$–$20$ (Equation G.8.0) by providing a sharp upper constraint from symplectic geometry. The Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim = 8 + 3 + 1 = 12$ saturates the geometric bound.
 
@@ -2757,6 +2760,8 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
        Witten's global $SU(2)$ anomaly is the residual $\mathbb Z_2$ determinant holonomy. The number of left-handed $SU(2)$ doublets in one family is three color copies of $q$ plus one $\ell$, namely $4$, so the mod-two holonomy is trivial. Finally, a single non-abelian singlet with nonzero hypercharge contributes to the abelian gravitational and cubic anomaly equations while changing no required Yukawa map. With no additional compensating content or response channel in the branch, determinant descent forces the singlet charge to zero; if a separate channel is supplied, it is a different branch. ∎
        
        Quantitative constraints on electroweak coupling ratios at the PCE-attractor—including a branch-specific prediction for $\sin^2\theta_W(\mu^*)$ under the cap-active alignment (Assumption W.3.A)—are derived in Appendix W (Theorem W.11; Eqs. W.3.1–W.3.3).
+
+**Homogeneous Casimir spectral certificate.** Electroweak or homogeneous spectral entries are promoted only under the finite certificate $\mathfrak C_{\mathrm{Cas}}$. The certificate fixes the homogeneous space and metric, the isotropy bundles and sector operators, the branching tables and multiplicities up to cutoff, the Casimir shifts, the parity or Golay marking used to label sectors, the $\mathrm{MS2}_{\mu_G}$ finite-part convention, the residual tail estimate, and a forward-lock stating that these choices are fixed before comparison with measured masses or couplings.
 
     *   **PCE Corollary – Singlet Neutrality.** Assigning non‑zero hypercharge to a pure non‑abelian singlet increases PCE cost without predictive gain; the minimum sets the hypercharge of any potential sterile right-handed neutrino to zero.
     *   **Three Generations (Unique Minimizer).** Appendix R shows that, in the modeled family-charge sector, the smallest nontrivial anomaly-consistent family structure compatible with CP violation is $N=3$ with offsets $\{a,-a,0\}$ (Theorem R.3.4), and Proposition R.3.5.1a realizes this count exactly on the pre-flavor family-redundancy PPI branch. Proposition R.4.2 adds that the $D_4$ triality orbit, $E_8$/Leech scaffold, and $M=24=8\times 3$ structure are compatible with this count, but they do not provide an independent derivation.

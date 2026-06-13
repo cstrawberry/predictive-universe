@@ -665,6 +665,12 @@ $$
 $$
 The normalized $D_4$ root realization $(\pm1,\pm1,0,0)/\sqrt2$ is orthogonally equivalent to the unit-Hurwitz realization, but Appendix U keeps the unit-Hurwitz coordinate convention.
 
+**D4 continuum-witness audit.** The D4 or 24-cell shell data may be used as a continuum witness only through the finite record $\mathfrak W_{D_4}$. The record contains the shell-moment comparison
+$$
+\left|\frac{1}{|S_r|}\sum_{v\in S_r}v_{i_1}\cdots v_{i_k}-\int_{S^3}\theta_{i_1}\cdots\theta_{i_k}\,d\theta\right|\le \epsilon_k(r),\qquad k\le 4,
+$$
+with the normalization used by the discrete operator, the radius-two Bochner or curvature-transfer check, a noncollapse bound, and compatibility with the recovery/Mosco limit used by the continuum theorem. Shell isotropy alone is not promoted to full continuum convergence.
+
 **Lemma U.13a.1b (Design-Exactness of the Low-Harmonic Sector).** Because the 24-cell vertex measure is a spherical 5-design by Theorem U.30, the discrete vertex average integrates every polynomial of degree $\le5$ on $S^3$ exactly. Consequently, for spherical harmonic levels $m,n$ with $m+n\le5$, all Gram and overlap integrals computed in the sampled inner product equal their continuum values. In particular, the restriction map from continuum harmonics of levels $n\le2$ to functions on $V_{24}$ is an isometry onto its image after the common normalization, and the level multiplicities $1,4,9$ for $n=0,1,2$ are preserved without aliasing.
 
 *Proof.* A product of harmonics of levels $m$ and $n$ is a polynomial of degree at most $m+n$. Theorem U.30 integrates every polynomial of degree $\le5$ exactly, so all Gram entries in the stated range agree with the continuum Gram entries. For $n\le2$, the relevant products have degree $\le4$, hence the sampled Gram matrix is the continuum nondegenerate Gram matrix on $\mathcal H_0\oplus\mathcal H_1\oplus\mathcal H_2$. Therefore restriction is injective and isometric onto its image, with dimensions $1,4,9$. ∎
@@ -1817,6 +1823,14 @@ $$Q^2 = \frac{1}{2} e^{-2\kappa_Q} \cdot A_Q$$
 where $A_Q$ is the one-loop prefactor from Gaussian fluctuations.
 
 *Remark.* The factor $1/2$ arises from the reality projection (Lemma U.23). The identification of observable perturbations with real projections follows from the requirement that physical curvature perturbations be real-valued scalar fields.
+
+**Curvature-transfer limit for the $D_4$ branch.** On a covered refinement sequence the $D_4$ witness supplies a defect function $\epsilon_{D_4}(r)$ such that every curvature or Bochner identity imported into the continuum proof is used only modulo that defect:
+$$
+\|\mathcal B_{D_4,r}f-\mathcal B_{\mathrm{cont}}f\|_{L^2(U)}\le \epsilon_{D_4}(r)\|f\|_{H^2(U)},
+\qquad
+\epsilon_{D_4}(r)\to0.
+$$
+If the limit or noncollapse condition is not part of the finite record, the $D_4$ construction remains a candidate discretization rather than a discharged continuum witness.
 
 ### U.17.3 One-Loop Prefactor
 

@@ -743,6 +743,8 @@ $$
 $$
 is defined on the branch region used for compression flow;
 
+**Relative Gelfand-Yaglom prefactor certificate.** In four retained dimensions the determinant prefactor is used only through $\mathfrak GY_U^{(4)}$. The record supplies the paired operators $(L_U,L_0)$, boundary conditions, subtraction or relative heat-kernel convention, anomaly-cancellation check, zero-mode and negative-mode bookkeeping, radial ODE normalization, angular-design comparison, measure normalization, and a residual tail estimate. The object certified is the relative quantity, not an absolute scheme-free determinant.
+
 5. the rescaled iterates converge on retained observables:
 $$
 \lim_{n\to\infty}
@@ -1688,6 +1690,56 @@ $$
 JX_F=\nabla_gF.
 $$
 Multiplying by $-J$ and using $J^2=-1$ yields $X_F=-J\nabla_gF$. ∎
+
+**Definition X.8g.4 (Becoming-Flow Compression Datum).** A becoming-flow compression datum on a retained regular branch is a finite record
+$$
+\mathfrak C_{\Omega}
+=
+(\mathcal Z,\mathcal G,\mathsf J_{\Omega},\mathsf E_{\Omega},\Phi_{\Omega},\mathcal K_{\Omega},\Pi_{\Omega},\mathfrak o_{\Omega})
+$$
+with the following entries.
+
+1. $\mathcal Z$ is a finite retained state bundle whose chart projections include the accepted branch variables: the projective Hilbert ray sector $\mathbb P(\mathbb C^{d_0})$ when the Hilbert-carrier branch is used, the perspective sector $\Sigma$, the retained PCE/adaptation coordinates, and any boundary-geometry variables already accepted in the continuum/gravity branch. On the minimal Hilbert branch $d_0=8$, the ray factor is $\mathbb{CP}^7$.
+2. $\mathcal G$ is a positive retained response metric whose sector projections agree with the accepted Fisher/QFI/Fubini-Study/Bures or natural-gradient metrics on the corresponding branch, after quotienting response-null directions.
+3. $\mathsf J_{\Omega}$ is a skew-adjoint reversible-response operator. It restricts to the complex structure $J$ of Theorem X.8g.2 on the reversible Hilbert response subbundle, is zero on purely dissipative/adaptive blocks unless a branch certificate supplies a reversible coupling there, and is recorded block-by-block in $\mathfrak o_{\Omega}$.
+4. $\mathsf E_{\Omega}$ is a self-adjoint positive semidefinite verification/adaptation mobility operator. It is supported only on dissipative, verification, coarse-graining, or slow-adaptation blocks supplied by the branch record; it is not a tunable continuum collapse parameter.
+5. $\Phi_{\Omega}$ is the retained PCE generator in the units of the flow. When the local generator is first written as a nat-rate $\Phi_{\mathrm{nat}}$, the mechanical generator is $\Phi_{\Omega}=\hbar\Phi_{\mathrm{nat}}$ on branches where Theorem Q.0.1 and Corollary Q.0.1 supply the action-entropy bridge. Thus $\hbar$ is consumed as the existing unit bridge, not rederived here.
+6. $\mathcal K_{\Omega}$ is the finite list of active feasibility constraints, written as equalities $g_i(\mathcal Z)=0$ and inequalities $h_a(\mathcal Z)\le0$. Capacity constraints use $h_a=\mathcal C_a-C_a^{\max}$.
+7. $\Pi_{\Omega}$ is the finite projection ledger from $\mathcal Z$ to the ray, response, PCE, boundary, KKT, and measurement sectors claimed by the branch.
+8. $\mathfrak o_{\Omega}$ is the overlap audit proving that all sector projections use the same retained response presheaves, unit bridges, and branch hypotheses already registered in the strict-certificate ledger.
+
+On an accepted $\mathfrak C_{\Omega}$ branch, the compressed flow is
+$$
+\hbar\frac{D\mathcal Z}{Dt}
+=
+-\Pi_{T_{\mathcal K}}
+\left[(\mathsf J_{\Omega}+\mathsf E_{\Omega})\operatorname{grad}_{\mathcal G}\Phi_{\Omega}[\mathcal Z]\right],
+\tag{X.8g.4a}
+$$
+where $D/Dt$ is the branch connection on $\mathcal Z$ and $\Pi_{T_{\mathcal K}}$ is projection to the active feasible tangent cone. At a differentiable constrained stationary point, the KKT reading is exactly the Theorem X.8f.2 stationarity condition
+$$
+d\Phi_{\Omega}+
+\sum_i\lambda_i\,dg_i+
+\sum_a\zeta_a\,d(\mathcal C_a-C_a^{\max})=0,
+\qquad
+\zeta_a\ge0,
+\qquad
+\zeta_a(\mathcal C_a-C_a^{\max})=0.
+\tag{X.8g.4b}
+$$
+The multiplier sign convention and shadow-price interpretation are inherited from Theorem X.8f.2.
+
+**Proposition X.8g.5 (Projection Guardrail for the Becoming Flow).** Suppose $\mathfrak C_{\Omega}$ is accepted. Then Equation (X.8g.4a) has the following sector readings, and no stronger reading.
+
+1. On the ray sector, if $\Phi_{\Omega}|_{\mathrm{ray}}=\langle H\rangle$, $\mathsf E_{\Omega}=0$ on that sector, and the branch carries the Section 8 Hilbert/Stone data, (X.8g.4a) reduces to the projective Schrödinger/Kähler-Hamiltonian flow by Corollary X.8g.3.
+2. On a purely dissipative or slow-adaptation sector, if $\mathsf J_{\Omega}=0$ and $\mathsf E_{\Omega}$ is the accepted mobility, (X.8g.4a) reduces to the corresponding natural-gradient PCE/adaptation flow. The discrete entropy floor $\varepsilon_0=\ln2$ enters only for verified Evolve/merge events supplied by Theorem 31 and the relevant branch timing record; smooth damping alone does not assert a new collapse law.
+3. At stationary active faces, (X.8g.4b) gives the Noether/Ward/shadow-price statement of Theorem X.8f.2. It identifies only those active coupling or capacity entries whose constraints already belong to $\mathcal K_{\Omega}$ and whose unit bridges are present in $\mathfrak o_{\Omega}$.
+4. On a local-horizon boundary sector, the KKT reading supplies the variational form used by the gravity branch only when the full Section 12 package is already present: Lorentzian/cone input, local KMS/Clausius input, area-density calibration, and the Appendix B stress-energy source. Equation (X.8g.4a) is not an independent derivation of Theorem 50 without that package.
+5. The Born-rule probabilities remain the Section 8 Hilbert/Born operator-structure theorem chain. The becoming-flow datum may use the same response metric and projection ledger, but it does not replace Gleason-Busch or promote non-Hilbert branches.
+
+*Proof.* Item 1 is Corollary X.8g.3 applied to the Hilbert ray projection with generator $\langle H\rangle$ and no dissipative mobility on that block. Item 2 is the definition of natural-gradient descent after restricting the flow to a block with zero reversible operator; the entropy floor is a separate discrete-event theorem and therefore enters only through the event branch. Item 3 is Equation (X.8g.4b), which is Theorem X.8f.2 with $h_a=\mathcal C_a-C_a^{\max}$. Item 4 follows because Theorem 50 uses the Section 12 gravity-bridge hypotheses as inputs; a projected stationarity equation can supply the variational slot only after those inputs exist. Item 5 is a dependency audit: the Born rule is derived by the Section 8 operator-measure route, while $\mathfrak C_{\Omega}$ records a compatible flow on the already accepted branch. ∎
+
+**Remark X.8g.6 (Status of the Equation of Becoming).** On a branch carrying $\mathfrak C_{\Omega}$, Equation (X.8g.4a) may be called the Equation of Becoming. Its status is compression/certificate-level: one retained flow datum recovers already accepted sector dynamics by projection. It does not promote the Hilbert-carrier gate, second-order continuum closure, cone coincidence, spin lift, local KMS/Clausius bridge, coupling-normalization certificates, spectral calibration records, scrambling certificates, or empirical protocol packages. A failed projection falsifies the accepted $\mathfrak C_{\Omega}$ branch or the offending sector record, not the theorem-level PU backbone. The Landauer phase grid $g_L=e^{i\ln2}$ and related Appendix Q signatures can be read as fingerprints of this compression only on branches where the corresponding Action-Entropy and phase-generator records are already accepted.
 
 ### X.8h Predictive S-Matrix Positivity Cone
 

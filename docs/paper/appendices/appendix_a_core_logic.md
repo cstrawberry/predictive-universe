@@ -169,11 +169,59 @@ The dynamics are governed by the **Prediction Optimization Problem (POP, Axiom 1
 **Definition A.0.1 (Effective Operational Property R)**
 Effective Operational Property R is the capability of the MPU network, resulting dynamically from POP/PCE optimization, to execute the specific classes of representational, simulation/reasoning, and predicate evaluation tasks required for SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4) diagonalization arguments with error probability per logical step $p_{\text{err}}^*$, where $p_{\text{err}}^*$ is the unique minimizer of the PCE-derived error-related potential $V_{\text{tot}}(p_{\text{err}}) = V_{\text{rel}}(p_{\text{err}}) + V_{\text{err}}(p_{\text{err}})$. This ensures that for computations of finite logical depth $T$, the probability of successful execution is sufficiently high for the logical proofs to apply.
 
+**Definition A.0.1q (QEC Compatibility Certificate $\mathfrak C_{\mathrm{QEC}}$).** A QEC compatibility certificate is a finite forward-locked record
+$$
+\mathfrak C_{\mathrm{QEC}}
+=
+(\mathcal N_{\mathrm{phys}},\;\mathcal C_{\mathrm{code}},\;\mathcal I_{\mathrm{FT}},\;p_{\mathrm{err},0},\;p_{\mathrm{th}},\;\Delta V_{\mathrm{QEC}},\;\text{locality window},\;\text{forward lock})
+$$
+where $\mathcal N_{\mathrm{phys}}$ is the retained physical noise model on the MPU links in the protected window, $\mathcal C_{\mathrm{code}}$ is an implementable finite code family, $\mathcal I_{\mathrm{FT}}$ is the fault-tolerant instrument/overhead ledger for the required gates and syndrome processing, and
+$$
+0<p_{\mathrm{err},0}<p_{\mathrm{th}}
+$$
+is certified for that noise model and code family. The PCE-selection entry $\Delta V_{\mathrm{QEC}}<0$ records that the predictive-performance gain from correction dominates the coding, syndrome, and recovery overhead on the protected computation window. The Appendix Z/Golay structure may serve as a code witness only when the finite syndrome maps, recovery maps, and threshold comparison are included in $\mathfrak C_{\mathrm{QEC}}$. Finite ND-RID range supports the locality entry on strict finite-range branches, but arbitrary correlated or adversarial noise is not covered without its own noise-model record.
+
+**Definition A.0.1q.1 (Golay-QEC Bootstrap Record $\mathfrak C_{\mathrm{GQEC}}$).** A Golay-QEC bootstrap record is a finite forward-locked record
+$$
+\mathfrak C_{\mathrm{GQEC}}
+=
+(\mathfrak G_{24},\mathfrak P_{23},\mathcal N_{\mathrm{loc}},\mathcal S_{\mathrm{syn}},\mathcal R_{\mathrm{rec}},\mathcal I_{\mathrm{FT}},p_{\mathrm{err},0},p_{\mathrm{th}},\Delta V_{\mathrm{GQEC}},\mathfrak O_{\mathrm{GQEC}},\text{forward lock})
+\tag{A.0.1q.1}
+$$
+where $\mathfrak G_{24}$ is the accepted predictive-recovery MacWilliams Golay branch of Theorem Z.13b, $\mathfrak P_{23}$ is a retained puncture and CSS witness of Proposition Z.13b.7, $\mathcal N_{\mathrm{loc}}$ is the protected-window local noise model on the bounded-degree MPU network, $\mathcal S_{\mathrm{syn}}$ and $\mathcal R_{\mathrm{rec}}$ are implementable finite syndrome-extraction and recovery maps, $\mathcal I_{\mathrm{FT}}$ is the protected gate and overhead ledger, and
+$$
+0<p_{\mathrm{err},0}<p_{\mathrm{th}}
+\tag{A.0.1q.2}
+$$
+is certified for that physical noise model, code family, and recovery implementation. The overlap audit $\mathfrak O_{\mathrm{GQEC}}$ proves that the Golay interface code, MPU gate inventory, recovery instruments, threshold theorem import, and SPAP/RUD protected computation window are projections of the same retained branch. The record may discharge $\mathfrak C_{\mathrm{QEC}}$ only on the protected windows it covers.
+
+**Theorem A.0.2a (Golay Bootstrap Discharges the QEC Certificate on Covered Branches).** If $\mathfrak C_{\mathrm{GQEC}}$ is accepted, then it supplies an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ for the protected network family and computation windows covered by the record. The resulting closure has fixed-point status:
+$$
+K_0=3,
+\quad d_0=8,
+\quad M=24
+\Longrightarrow
+\mathcal G_{24}
+\Longrightarrow
+[[23,1,7]]\ \text{CSS witness}
+\Longrightarrow
+\mathfrak C_{\mathrm{QEC}}
+\Longrightarrow
+\text{Effective Operational Property R on covered windows}.
+\tag{A.0.2a.1}
+$$
+This is not a primitive-axiom derivation of QEC compatibility and does not assert a universal numerical threshold. It says that, once the downstream Golay branch and the finite physical recovery/threshold records are accepted, the former QEC assumption is discharged for those windows by an internally generated code witness plus the recorded physical implementation data.
+
+*Proof.* Proposition Z.13b.7 supplies a dual-containing Golay CSS code witness. The local-noise, syndrome, recovery, gate, overhead, threshold, and PCE-benefit entries of $\mathfrak C_{\mathrm{GQEC}}$ are exactly the entries required by Definition A.0.1q. Mapping them into the slots of $\mathfrak C_{\mathrm{QEC}}$ gives the certificate. The fixed-point display records dependency order: the Golay witness is derived downstream of the finite MPU/Golay branch, while the reliability claim is promoted only after the physical recovery and threshold records are added. ∎
+
+**Corollary A.0.2b (Transversal-Gate Guardrail).** On any finite stabilizer-code realization used by $\mathfrak C_{\mathrm{GQEC}}$, transversal Clifford operations or other product-form encoded gates do not constitute a universal fault-tolerant gate set by themselves. A universal protected computation ledger must therefore include a non-transversal, injected, distilled, adaptive, or otherwise certified completion inside $\mathcal I_{\mathrm{FT}}$. The corresponding positive non-transversal overhead is consistent with the strict floor $p_{\mathrm{err}}^*>0$ of Theorem A.0.3 rather than a contradiction of it.
+
+*Proof.* A finite-distance quantum code cannot obtain a universal encoded gate set from transversal/product gates alone under the Eastin-Knill obstruction. Therefore the protected gate ledger must record the additional resource that completes the gate set. Theorem A.0.3 already states that the PCE optimum is not zero-error at zero overhead, so the required overhead is an expected finite-cost entry rather than a new postulate. ∎
+
 **Theorem A.0.2 (PCE Dynamically Enforces Effective Property R)**
-Under the framework's core axioms (POP, PCE, ND-RID dynamics), the refresh-branch implementation condition of Lemma A.0.1, and the **Assumption of QEC Compatibility** (the baseline ND-RID noise is sufficiently local, suitable quantum error correction codes are implementable within the MPU network, and the baseline error satisfies $0<p_{\mathrm{err},0}<p_{\mathrm{th}}$), the PCE optimization dynamics drive the scalar error-rate parameter to an optimal value where:
+Under the framework's core axioms (POP, PCE, ND-RID dynamics), the refresh-branch implementation condition of Lemma A.0.1, an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (Definition A.0.1q), supplied directly or through an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ (Definition A.0.1q.1; Theorem A.0.2a), and Dominant Cost Convexity, the PCE optimization dynamics drive the scalar error-rate parameter to an optimal value where:
 1.  The optimal error rate per logical operation $p_{\mathrm{err}}^*>0$ exists; it is unique under Dominant Cost Convexity and satisfies robustness conditions ($p_{\mathrm{err}}^*<1/2$ for sufficiently large protected computation windows) required for noise-robust SPAP (Theorems A.1.2, A.1.4) and RUD (Theorems A.2.3, A.2.4).
 2.  The MPU network effectively possesses Operational Property R for the finite representational, simulation/reasoning, predicate-evaluation, logical-memory, finite-composition, Boolean post-processing, and bounded diagonal-wrapper tasks whose working-memory, QEC-overhead, and circuit-execution resources are supplied by the network family.
-
 **Proof Structure.** The derivation proceeds through four stages:
 
 **Stage 1: Baseline Error is Strictly Positive**
@@ -366,13 +414,11 @@ p_{\text{err}}^* \approx \frac{\lambda r_p(T_{\text{eff}})\, \gamma_p A^{\gamma_
 $$
 Thus, up to the slowly varying logarithmic factor, $p_{\text{err}}^* = \Theta((\ln T)^{\gamma_p-1}/T)$ as $T\to\infty$, and hence $p_{\text{err}}^* < 1/2$ for sufficiently large $T$. □
 
-**Conclusion of Theorem A.0.2:** Under QEC Compatibility and Dominant Cost Convexity assumptions, PCE optimization necessarily drives the scalar error-rate parameter to the unique optimal value $p_{\text{err}}^* > 0$ (strictly positive due to Theorem A.0.3) yet satisfying robustness conditions ($p_{\text{err}}^* < 1/2$ for sufficient $T$). While uniqueness of the full network equilibrium in high-dimensional configuration space is not established here, Appendix D provides the corresponding dynamical picture: ergodic stationary averaging for the full stochastic adaptation dynamics, and in low-noise detailed-balance regimes stationary concentration near the low-potential sector containing the optimal error-rate neighborhood. This is sufficient for reliable execution of SPAP and RUD logical arguments, constituting Effective Operational Property R. □
-
 **Epistemic Status:** The derivation relies on:
-1.  **QEC Compatibility:** Strong assumption about underlying MPU physics. Requires: (a) sufficiently local noise, (b) implementable QEC codes, (c) baseline error below fault-tolerance threshold. While plausible given the framework's optimization dynamics favoring structures enabling reliable computation, this represents a substantive physical postulate requiring empirical verification.
+1.  **QEC Compatibility Certificate $\mathfrak C_{\mathrm{QEC}}$ or Golay-QEC Bootstrap Record $\mathfrak C_{\mathrm{GQEC}}$:** The former QEC-compatibility assumption is a finite certificate gate. It must record the retained noise model, locality window, implementable code and recovery instruments, threshold inequality, and PCE benefit gap before the SPAP/RUD reliability claim is promoted. The Golay witness of Proposition Z.13b.7 supplies the code-theoretic part only when embedded in the physical syndrome/recovery/threshold record of Definition A.0.1q.1. It is not supplied by the existence of finite ND-RID links or by the abstract Golay code alone.
 2.  **Dominant Cost Convexity:** Reasonable given Definition 3's superlinear resource costs for high reliability, but requires explicit verification for specific cost functions.
 
-These assumptions are not derivable from more primitive framework axioms but represent physically motivated hypotheses about the substrate enabling predictive optimization. Alternative substrates violating these conditions would fail to support the logical arguments underlying SPAP and RUD.
+Alternative substrates or branches that fail the direct QEC certificate, the Golay-QEC bootstrap record, or Dominant Cost Convexity do not support the protected-computation version of Property R used by the noise-robust SPAP and RUD arguments.
 
 ### A.0.5 Network Composition and Full Property R
 
@@ -385,7 +431,7 @@ For a network of $n$ MPUs with individual Hilbert spaces $\mathcal{H}_0 \cong \m
 
 This exponential growth provides resources for representing complex computations. A system of $n$ MPUs can represent $8^n$ distinguishable configurations, enabling encoding of arbitrarily large Gödel numbers, storage of intermediate results, and execution of deep circuits.
 
-**Assumptions for Theorem A.0.6:** The following assumes QEC Compatibility as introduced in Theorem A.0.2 (sufficiently local baseline ND-RID noise, implementable quantum error correction codes within the MPU network, baseline error $p_{\text{err},0}$ below fault-tolerance threshold $p_{\text{th}}$), a universal gate set implementable via ND-RID channels (ensuring any unitary can be approximated via Solovay-Kitaev decomposition), and fault-tolerance threshold conditions enabling arbitrarily low logical error rates with polynomial overhead.
+**Assumptions for Theorem A.0.6:** The following assumes either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ for the protected network family (Definition A.0.1q) or an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that discharges the same certificate entries (Definition A.0.1q.1; Theorem A.0.2a). It also assumes a universal protected gate ledger implementable via ND-RID channels and fault-tolerance threshold conditions for the recorded noise model and code family. The direct certificate or bootstrap record must supply the locality window, implementable syndrome/recovery instruments, baseline error $p_{\text{err},0}$, threshold $p_{\text{th}}$, and code-overhead ledger used in the theorem statement.
 
 **Theorem A.0.6 (Conditional Network Universality with Explicit Overhead Scope)**
 A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions and with sufficient additional resources for working memory, error-correction overhead, and circuit execution, can realize full Property R. More precisely:
@@ -394,8 +440,8 @@ A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying r
     n \geq \left\lceil \frac{L_{TM}}{3} \right\rceil = O(k \cdot m \cdot \log(k \cdot m))
     $$
     MPUs (each providing 3 bits via $K_0$) provides the lower bound required to encode the machine description. This bound covers description storage only.
-2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2006] and QEC Compatibility, the network can implement arbitrary quantum unitaries to arbitrary precision with polynomial overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine once the required overhead resources are available.
-3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ under QEC Compatibility) ensures logical error rates can be suppressed to arbitrarily small values with polynomial overhead, enabling reliable execution of arbitrarily deep circuits for evaluating computable predicates when the corresponding working-memory and code-overhead requirements are met.
+2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2006] and the accepted $\mathfrak C_{\mathrm{QEC}}$ for the retained noise model and code family, or an accepted $\mathfrak C_{\mathrm{GQEC}}$ discharging it on the protected window, the network can implement the protected finite gate approximations required by the target computation with the certified overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine once the required working-memory, code-overhead, and execution resources are available.
+3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ inside $\mathfrak C_{\mathrm{QEC}}$, or inside $\mathfrak C_{\mathrm{GQEC}}$ when it discharges that certificate) ensures logical error rates can be suppressed to the certified target values with the recorded overhead, enabling reliable execution of the finite-depth predicate-evaluation circuits used in the noise-robust SPAP/RUD windows.
 
 *Proof.* Representation capacity follows from exponential state space growth. The Gödel encoding of a $k$-state, $m$-symbol Turing machine transition table requires specifying for each of $k \cdot m$ pairs (state, symbol) the write symbol, move direction, and next state, requiring $O(k \cdot m \cdot \log(k \cdot m))$ bits total. With each MPU contributing 3 bits ($K_0$), the network requires $n = O(k \cdot m \cdot \log(k \cdot m))$ MPUs as a lower bound for machine-description storage. Simulation capability follows from the Solovay-Kitaev theorem guaranteeing any unitary approximation with polynomial gate overhead, combined with classical-to-quantum simulation. Evaluation reliability follows from the fault-tolerance threshold theorem enabling arbitrarily low logical error rates below physical threshold. Full operational universality therefore holds only when the additional working-memory, QEC, and circuit-execution resources assumed in the theorem statement are also provided. □
 
@@ -434,7 +480,7 @@ This refined definition makes explicit the network-level realization of computat
 **Foundation II (Physical Instantiation, §A.0.3-A.0.5):**
 *   **Source:** MPU framework under POP/PCE dynamics with ND-RID interactions
 *   **Derivation:** Individual MPU minimal capacity ($K_0 = 3$ bits) → POP/PCE optimization driving reliable computation → Network composition achieving universality → Operational Property R
-*   **Status:** Physical realization under QEC Compatibility and Dominant Cost Convexity assumptions
+*   **Status:** Physical realization under an accepted $\mathfrak C_{\mathrm{QEC}}$ or a covered $\mathfrak C_{\mathrm{GQEC}}$ discharge route, together with Dominant Cost Convexity
 *   **Significance:** Demonstrates how logical necessity manifests in finite resource systems
 
 **Complementarity:** The foundations answer different questions:
@@ -451,7 +497,7 @@ With Property R established through both logical necessity and physical realizat
 
 **Physical Applicability:** Theorem A.0.2 and network universality (Theorem A.0.6) guarantee that physical MPU networks converge to configurations where SPAP and RUD theorems apply operationally. Abstract logical limits manifest as physical constraints on prediction and computation in thermodynamically optimized systems.
 
-**Falsifiability:** The physical instantiation makes testable predictions. If fundamental substrate is intrinsically non-QEC-compatible (noise fundamentally non-local, or baseline error rates irreducibly above threshold for all accessible configurations), this would falsify the PU framework's claim that physical law emerges from predictive optimization. The framework requires that Nature's substrate supports error-correctable quantum computation.
+**Falsifiability:** The physical instantiation makes testable predictions. If the fundamental substrate is intrinsically non-QEC-compatible, meaning that its retained noise is fundamentally nonlocal for every protected branch, or its baseline error rates remain irreducibly above threshold for every accessible direct certificate $\mathfrak C_{\mathrm{QEC}}$ and every Golay-bootstrap certificate $\mathfrak C_{\mathrm{GQEC}}$, this would falsify the PU framework's claim that physical law emerges from predictive optimization in SPAP/RUD-capable networks. On the Golay-bootstrap subbranch, additional falsifiers are failure of the retained Golay syndrome statistics, failure of the finite syndrome/recovery maps to implement the recorded $[[23,1,7]]$ witness, or failure of the protected-window threshold inequality after the branch records are forward-locked. The framework requires that Nature's substrate supports at least one finite, below-threshold, operationally implementable protected-computation branch.
 
 ### A.0.7 Transition to Formal Proofs
 

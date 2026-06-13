@@ -561,6 +561,42 @@ Equality holds, under irreducibility, exactly at $\mu_t=\pi$.
 
 This is the detailed-balance entropy monotone underlying the low-noise concentration part of Theorem D.5. It is relative entropy to the stationary PCE law, not raw entropy and not the reset entropy ledger.
 
+**Definition D.6.5c (Predictive Free-Energy Envelope Certificate $\mathfrak C_{\mathrm{Pred2}}$).** On a retained PCE branch define the predictive free energy by
+$$
+F_{\mathrm{pred}}(x):=-V(x)
+$$
+after the additive normalization of $V$ has been fixed. A predictive-envelope certificate is a finite record
+$$
+\mathfrak C_{\mathrm{Pred2}}
+=
+(F_{\mathrm{pred}},\mathcal L_t,\mathcal X_{\mathrm{viab}},\mathcal S_{\mathrm{sel}},\mathcal I_{\mathrm{inh}},\mathcal A_{\mathrm{arch}},\mathcal H_{\mathrm{DB}},\text{coarse-graining window},\text{forward lock}),
+$$
+where $\mathcal L_t$ is the finite lineage or learning-trajectory ensemble under comparison, $\mathcal X_{\mathrm{viab}}$ is the retained viability set $PP\in(\alpha,\beta)$, $\mathcal S_{\mathrm{sel}}$ is the selection/removal rule for sub-viable branches, $\mathcal I_{\mathrm{inh}}$ records inheritance or model-copy maps, $\mathcal A_{\mathrm{arch}}$ records whether the reported envelope is an archive/running supremum or an instantaneous survivor supremum, and $\mathcal H_{\mathrm{DB}}$ records the detailed-balance or Lyapunov hypotheses used for monotonicity. The running viable envelope is
+$$
+\widehat F_{\max}(t)
+:=
+\sup\{F_{\mathrm{pred}}(x_\ell(s)):
+0\le s\le t,
+\ell\in\mathcal L_s,
+ x_\ell(s)\in\mathcal X_{\mathrm{viab}}
+\}.
+$$
+The instantaneous survivor envelope $F_{\max}(t)$ is obtained by restricting the supremum to $s=t$.
+
+**Proposition D.6.5d (Second-Law-of-Prediction Status).** On a branch carrying $\mathfrak C_{\mathrm{Pred2}}$, the following are the theorem-level monotonicity statements and no stronger ones.
+
+1. Wherever Lemma D.5 or Theorem D.5 gives $\frac{d}{dt}\mathbb E[V(x_t)]\le0$ on the recorded window, the same window satisfies
+$$
+\frac{d}{dt}\mathbb E[F_{\mathrm{pred}}(x_t)]\ge0.
+$$
+On a finite detailed-balance reduction in which $H_{\mathrm{PCE}}=D(\mu_t\Vert\pi)$ is the retained free-cost coordinate, Theorem D.6.5a gives monotone decrease of that coordinate and hence monotone increase of its negative.
+2. The running viable envelope $\widehat F_{\max}(t)$ is nondecreasing by its definition. The instantaneous survivor envelope $F_{\max}(t)$ is nondecreasing only when $\mathcal I_{\mathrm{inh}}$ and $\mathcal A_{\mathrm{arch}}$ certify that the previously best viable retained structure is inherited, archived, or otherwise not removed from the reported survivor class.
+3. Equality means stationarity or no new certified envelope increase on the recorded branch. The proposition does not say that every lineage improves, does not identify $F_{\mathrm{pred}}$ with raw thermodynamic entropy, and does not prove open-ended non-saturation without a separate unbounded-opportunity or noncompact-task certificate.
+
+*Proof.* Item 1 is the identity $F_{\mathrm{pred}}=-V$ applied to the Lyapunov drift inequality, together with Theorem D.6.5a on the finite detailed-balance coordinate. Item 2 follows from the supremum over the larger time interval $[0,t]$ for the running envelope; the instantaneous version requires the explicit no-loss or archive entry because stochastic extinction or removal of the current best lineage can otherwise lower the instantaneous maximum. Item 3 is the status audit: monotonicity of an expectation or of a running supremum is weaker than monotonic improvement of every trajectory and does not by itself supply a domain mechanism for endless novelty. ∎
+
+**Remark D.6.5e (Evolution, Learning, and Cosmic Structure as Projections).** When $\mathfrak C_{\mathrm{Pred2}}$ is instantiated by a biological lineage ensemble, a learning system, or a cosmological structure-formation ledger, Proposition D.6.5d permits the common phrase “second law of prediction” for the covered envelope. The branch input is the finite certificate that the same $F_{\mathrm{pred}}$ ledger, viability cut, inheritance/archive rule, and coarse-graining window are being compared. Without that record, the statement remains an analogy to PCE descent rather than a law-level conclusion.
+
 **Theorem D.6.5b (Regular Morse-Smale Basin Decomposition of Deterministic PCE Flow).** On a deterministic regular Morse-Smale PCE branch, let $\mathcal X$ be a compact retained smooth configuration manifold or compact retained chart, let $V_{\mathrm{PCE}}\in C^2(\mathcal X)$ be Morse or Morse-Bott, and let
 $$
 \dot x=-\nabla V_{\mathrm{PCE}}(x)

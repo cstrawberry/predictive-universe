@@ -353,6 +353,107 @@ Two structurally distinct finite-transfer routes are now available, and downstre
 
 When a downstream argument needs a quantitative residual-budget number, it lives on the reset-support branch. When it needs strict trace-distance contraction or fixed-point uniqueness, it lives on the refresh/minorization branch. Results derivable from either branch are labeled at point of use.
 
+**Definition E.2a.4 (Retained Link Ledger and Actualization Threshold).** Fix a retained ND-RID link $\ell$ after its last completed 'Evolve' commit. Define the retained link ledger
+$$
+I_\ell(t):=\sup_{0\le s\le t} I_{\mathrm{ext}}(s),
+$$
+where $I_{\mathrm{ext}}(s)$ is the supremum, over retained finite boundary protocols in the PPI quotient (Definition P.6.2), of reliable extractable correlation in nats across $\ell$ from the local process window at $s$. The running supremum makes $I_\ell$ nondecreasing and treats unitarily unwound correlations as already exposed capacity demands. Let $C_{\max}$ denote the certified per-cycle reliable capacity threshold for the selected route: the quantitative reset-support capacity of Proposition E.2a when the residual-budget number is used, or the branch-specific strict capacity record supplied with Theorem E.2 when the refresh/minorization route is used. A mere upper bound is not itself a threshold unless the capacity-route record fixes the operational value used in the comparison. Define the first capacity-saturation time
+$$
+\tau_s:=\inf\{t>0:I_\ell(t)\ge C_{\max}\}.
+$$
+If this set is empty in the operational window, no capacity-threshold commit is certified in that window.
+
+**Proposition E.2a.5 (Capacity-Threshold Commit Gate).** Suppose $\tau_s$ is finite, $I_\ell$ is $C^1$ on $[0,\tau_s]$, $I_\ell(0)=0$, $\dot I_\ell(t)>0$ on $(0,\tau_s]$, $\dot I_\ell(t)$ is nondecreasing up to $\tau_s$, and the armed link carries maintenance rent $\Phi_\ell>0$ per unit time. For the renewal-cycle cost per verified nat
+$$
+c(\tau)=\frac{\varepsilon_0+\Phi_\ell\tau}{\min\{I_\ell(\tau),C_{\max}\}},
+\qquad
+\varepsilon_0>0,
+$$
+the unique deterministic minimizer over positive commit times is $\tau=\tau_s$. Thus, on the stated branch, the PCE-selected commit rule is: commit at first certified capacity saturation. Under stationary flux $I_\ell(\tau)=\dot I\,\tau$, the rate is
+$$
+\Gamma_{\mathrm{Evolve}}=\frac{\dot I}{C_{\max}},
+$$
+and on the residual-budget minimal branch $C_{\max}^*=2\ln2$ this becomes $\Gamma_{\mathrm{Evolve}}=\dot I/(2\ln2)$.
+
+*Proof.* By continuity, the definition of $\tau_s$ gives $I_\ell(\tau_s)=C_{\max}$. For $\tau>\tau_s$, the verified payload is fixed at $C_{\max}$ while $\varepsilon_0+\Phi_\ell\tau$ is strictly increasing, so $c$ strictly increases. For $0<\tau\le\tau_s$, nondecreasing $\dot I_\ell$ makes $I_\ell$ convex with $I_\ell(0)=0$, hence $I_\ell(\tau)\le\tau\dot I_\ell(\tau)$. Differentiating on this interval gives
+$$
+c'(\tau)
+=
+\frac{\Phi_\ell I_\ell(\tau)-(\varepsilon_0+\Phi_\ell\tau)\dot I_\ell(\tau)}
+{I_\ell(\tau)^2}
+\le
+-\frac{\varepsilon_0\dot I_\ell(\tau)}{I_\ell(\tau)^2}
+<0.
+$$
+Therefore $c$ strictly decreases up to $\tau_s$ and strictly increases after $\tau_s$. For any randomized adapted stopping rule with finite expectations and $\mathbb E[\min\{I_\ell(\tau),C_{\max}\}]>0$, the pointwise inequality
+$$
+\varepsilon_0+\Phi_\ell\tau
+\ge
+c(\tau_s)\min\{I_\ell(\tau),C_{\max}\}
+$$
+implies, after taking expectations,
+$$
+\frac{\mathbb E[\varepsilon_0+\Phi_\ell\tau]}
+{\mathbb E[\min\{I_\ell(\tau),C_{\max}\}]}
+\ge c(\tau_s),
+$$
+with equality only when the stopping rule is supported on deterministic minimizers. Since the minimizer is unique, equality forces $\tau=\tau_s$ almost surely. ∎
+
+**Gate E.2a.G1 (Decaying-Flux Landauer-Dominance Record).** If $\dot I_\ell$ decreases on the commit window, Proposition E.2a.5 remains available only when the finite record certifies
+$$
+\Phi_\ell\bigl(I_\ell(\tau)-\tau\dot I_\ell(\tau)\bigr)
+\le
+\varepsilon_0\dot I_\ell(\tau)
+\qquad
+(0<\tau\le\tau_s).
+$$
+This is exactly the derivative sign condition $c'(\tau)\le0$ before saturation. If it is not certified, timing remains a branch arming predicate rather than a theorem-level threshold.
+
+**Definition E.2a.6 (Actualization-Threshold Certificate $\mathfrak C_{\mathrm{act}}$).** An actualization-threshold certificate is a finite record
+$$
+\mathfrak C_{\mathrm{act}}
+=
+(\text{capacity-route record},\;\text{flux-shape record or Gate E.2a.G1 record},\;\text{local process-tensor control record},\;\text{ledger-to-laboratory bridge},\;\text{forward lock};\;[\mathfrak Q_{\mathrm{ML}}\ \text{optional for absolute clock rates}]),
+$$
+with all entries fixed before comparison. When a chronometric reduction is asserted, the certificate also includes the reduction record identifying $\dot I_{ij}=C_{\max}\Gamma_{\mathrm{ch}}^{(ij)}$ with the saturated chronometric branch of Theorem 47c. A branch carrying $\mathfrak C_{\mathrm{act}}$ may read the “significant interaction” clause of Definition 27 as the capacity-saturation predicate of Definition E.2a.4. Without this certificate, Definition 27 keeps its explicit branch interaction predicate.
+
+**Corollary E.2a.7 (Threshold/Gravity Cross-Lock on the Calibration Branch).** On the Appendix E/Q calibration branch using the same certified $C_{\max}$ in the threshold ledger and in Equation (E.9),
+$$
+G\,C_{\max}=\frac{\eta\delta^2c^3}{4\hbar\chi}.
+$$
+On the residual-budget, throughput-saturated, ideal-packing branch with $C_{\max}^*=2\ln2$, $\chi^*=1$, and $\eta^*=1$, this is the same calibration that yields Equation (Q.18). A mismatch between the measured threshold ledger and the gravitational calibration falsifies that combined branch rather than introducing a tunable parameter.
+
+*Proof.* Rearranging Equation (E.9) gives the displayed identity. The specialization is exactly the substitution recorded in Appendix Q, §Q.2. ∎
+
+**Definition E.2a.8 (Metered Actualization Certificate $\mathfrak C_{\mathrm{meter}}(R)$).** A metered actualization certificate for an interface register $R$ is a refinement of $\mathfrak C_{\mathrm{act}}$ with finite record
+$$
+\mathfrak C_{\mathrm{meter}}(R)
+=
+(R,\mathcal A_R,\Delta C_R,I_{\mathrm{acq}}^R,C_{\max}^{(R)},\epsilon_{\mathrm{meter}},\text{monotone acquisition interval},\text{overwrite bound},\text{no-early-firing audit},\text{process-tensor no-signaling audit},\text{forward lock}).
+$$
+Here $\mathcal A_R$ is the retained register alphabet, $I_{\mathrm{acq}}^R(t)$ is the certified acquired retained information in nats, $C_{\max}^{(R)}$ is the fixed register threshold, and $\epsilon_{\mathrm{meter}}$ is the pre-locked timing residual. For a certified binary one-register interface,
+$$
+C_{\max}^{(R)}=\ln2,
+\qquad
+\Delta C_R\ge \ln2-\epsilon_{\mathrm{meter}}
+$$
+is the metered subledger threshold. This does not replace the link-cycle threshold $C_{\max}$ of Definition E.2a.4 unless the certificate identifies the retained link with that one-register interface.
+
+**Corollary E.2a.9 (Stationary Metered Event Rate).** On a branch carrying $\mathfrak C_{\mathrm{meter}}(R)$ with stationary acquisition flux
+$$
+I_{\mathrm{acq}}^R(t)=\dot I_{\mathrm{acq}}^R t
+$$
+and with no overwrite before commit, the certified metered event rate is
+$$
+\Gamma_{\mathrm{Evolve}}^{(R)}=\frac{\dot I_{\mathrm{acq}}^R}{C_{\max}^{(R)}}.
+$$
+For the binary one-register subledger this becomes $\Gamma_{\mathrm{Evolve}}^{(R)}=\dot I_{\mathrm{acq}}^R/\ln2$ up to the recorded residual. The residual-budget link branch remains $\dot I/C_{\max}$ and gives $\dot I/(2\ln2)$ only on the residual-budget minimal branch of Proposition E.2a.5.
+
+*Proof.* The first metered commit occurs at the first time when the monotone acquisition ledger reaches $C_{\max}^{(R)}$ within the residual tolerance. Under stationary flux this time is $C_{\max}^{(R)}/\dot I_{\mathrm{acq}}^R$, and the reciprocal is the displayed rate. The final sentence is the distinction between the register subledger and the link-cycle ledger of Definition E.2a.4. ∎
+
+**Remark E.2a.10 (Metered Subledger Guardrail).** A $\ln2$ threshold is a certified binary-register write threshold, not the universal per-link ND-RID threshold. The physical cost of the recorded write is bounded below by the Landauer/SPAP floor, and any verification, syndrome, overwrite, or recovery overhead remains in the branch ledger.
+
+
 
 **Corollary E.2 (Maximum Entropy per ND–RID Channel).** The maximum thermodynamic entropy $S_{channel}^{max}$ (in units of $k_B$), associated with the information degrees of freedom reliably transmitted by a single ND–RID channel across a boundary, is bounded by the channel capacity:
 $$
@@ -980,6 +1081,8 @@ or the corresponding classical conditional-independence condition, then a PCE-mi
 *Proof.* The exact Markov condition is precisely boundary sufficiency: in the quantum finite faithful case, Petz recovery reconstructs the relevant retained interior/exterior correlations from the boundary algebra; in the classical case, conditional independence gives the corresponding sufficient statistic. Finite response quotients have PCE-minimal sufficient representatives by the Blackwell/PCE compression rule of Appendix M.6.11 and the boundary sufficiency statement above. Operational Yoneda then gives uniqueness up to PPI equivalence, because two screens with the same exterior-response functor represent the same finite exterior protocol data. Factorization of exterior observables follows from Theorem P.6.1b.8c. The KMS/min-cut statement is only an invocation of the existing hypotheses of Theorem 12.1 and Appendix F.10.12. ∎
 
 **Remark E.8.1a.1 (Status Relative to AdS/CFT).** Corollary E.8.1a is a finite-response holography statement, not a claim of conformal duality or AdS boundary dynamics. It establishes operational reconstruction in the PU quotient wherever the nested ND-RID boundary-channel hypotheses hold. The stronger Page-curve entropy statement remains branch-gated until the horizon code supplies a trace-coupled entropy-continuity promotion certificate in the sense of Definition K.3d.4c. Definition K.3d.4a and Theorem K.3d.4b provide the finite Golay-expander route for supplying moment-design control on a horizon syndrome branch; by itself that route gives moment/purity control unless the trace-coupled promotion is also certified.
+
+The relative determinant route is kept separate from entropy monotonicity. A Page-curve, P-GSL, or area-law certificate can constrain allowed signs and flows, but it does not by itself supply the four-dimensional determinant-class, zero-mode, or anomaly data required by $\mathfrak GY_U^{(4)}$.
 
 **Definition E.8.1b (Petz-Sufficient Boundary Compression).** Let $\mathcal C_A$ be a finite retained bulk code family for a region $A$, let
 $$
@@ -2508,13 +2611,12 @@ T_t
 \qquad
 0\le\varepsilon_t\le1-\frac1{d_E(t)}.
 $$
-This certificate is the additional horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c. It may be attached to an accepted horizon moment-operator design certificate $\mathfrak C_{\mathrm{Hdesign}}$ (Definition K.3d.4) or to the Golay-expander certificate of Definition K.3d.4a, but the bare moment certificate alone supplies only moment/purity control. When the trace-coupled promotion is accepted, the certified error is denoted $\varepsilon_{\mathrm{Page}}$. Supporting framework elements include:
+This certificate is the additional horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c. It may be attached to an accepted horizon moment-operator design certificate $\mathfrak C_{\mathrm{Hdesign}}$ (Definition K.3d.4), to the Golay-expander certificate of Definition K.3d.4a, or to an accepted scrambling-saturation certificate $\mathfrak C_{\mathrm{scr}}$ (Definition F.10.4b.6a) that includes the required design and trace-continuity entries. The bare moment certificate alone supplies only moment/purity control, and capacity saturation alone does not supply fast scrambling. When the trace-coupled promotion is accepted, the certified error is denoted $\varepsilon_{\mathrm{Page}}$. Supporting framework elements include:
 
-- PCE optimization drives systems toward configurations that maximize predictive efficiency, which generically produces chaotic dynamics with rapid information spreading [Brandão et al. 2016]
-- Scrambling dynamics generically approach random unitary behavior [Hayden & Preskill 2007]
-- The thermalization timescale $t_{\mathrm{scramble}}\sim\beta\ln S_{BH}$ [Sekino & Susskind 2008] is short compared to the evaporation timescale
-- The spectral gap $\Delta_{\mathrm{gap}}>0$ (Lemma E.6.1) ensures exponential approach to equilibrium
-
+- The modular chaos bound of Theorem F.10.4b.5 controls the maximum OTOC growth rate on KMS/OTOC branches
+- An accepted $\mathfrak C_{\mathrm{scr}}$ supplies the separate expander, frame-potential, or approximate-design record needed for fast scrambling
+- The thermalization timescale $t_{\mathrm{scramble}}\sim\beta\ln S_{BH}$ is theorem-level only when the mixing/saturation record supplies the logarithmic estimate
+- The spectral gap $\Delta_{\mathrm{gap}}>0$ (Lemma E.6.1) supports exponential approach to equilibrium, but it is not by itself a Page-curve trace-distance certificate
 Under the trace-coupled coupling certificate, Theorem K.3 (Appendix K) gives, via Audenaert's sharp Fannes inequality,
 $$
 \left|\mathbb E\,S(\rho_E^{\mathrm{PU}}(t))-S_{\mathrm{Page}}(d_E(t),d_L(t))\right|
@@ -2542,19 +2644,19 @@ The Page curve exhibits:
 
 **Step 5 (Final state).** At complete evaporation ($\mathcal{A}_H \to 0$), unitarity (Theorem E.9.5) guarantees that the final radiation state $\rho_{\text{rad}}^{\text{final}}$ is pure if the initial state was pure: $S(\rho_{\text{rad}}^{\text{final}}) = S(\rho_{\text{initial}}) = 0$. All information is encoded in the radiation correlations. ∎
 
-**Remark E.9.5.1: Status of horizon entropy-continuity certificate.** The trace-coupled coupling certificate of Step 4 is an additional entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ (Definition K.3d.4c). It may be attached to an accepted moment-operator or Golay-expander design certificate (Definitions K.3d.4 and K.3d.4a), but it is not supplied by moment control alone. On a branch carrying the relative-entropy contraction trace-coupling certificate of Definition K.3d.4d, Theorem K.3d.4e converts the certified relative-entropy contraction estimate into the required trace-distance error. Without that additional contraction certificate, Landauer entropy accounting and moment control remain supporting evidence rather than a first-principles derivation of the von Neumann Page-curve trace coupling. The supporting framework elements below are status-preserved:
+**Remark E.9.5.1: Status of horizon entropy-continuity and scrambling certificates.** The trace-coupled coupling certificate of Step 4 is an additional entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ (Definition K.3d.4c). It may be attached to an accepted moment-operator, Golay-expander, or scrambling-saturation certificate (Definitions K.3d.4, K.3d.4a, and F.10.4b.6a), but no one of these supplies the others unless the relevant finite records are explicitly included. On a branch carrying the relative-entropy contraction trace-coupling certificate of Definition K.3d.4d, Theorem K.3d.4e converts the certified relative-entropy contraction estimate into the required trace-distance error. Without that additional contraction or trace-coupling certificate, Landauer entropy accounting, OTOC growth, spectral gaps, and moment control remain supporting evidence rather than a first-principles derivation of the von Neumann Page-curve trace coupling. The supporting framework elements below are status-preserved:
 
 *(i) Supporting evidence:*
 - The spectral gap $\Delta_{\text{gap}} = -\tau^{-1}\ln f_{\text{RID}} > 0$ (Lemma E.6.1) ensures exponential mixing
 - PCE optimization selects for detailed balance (Proposition G.1.9.2), producing thermal equilibrium states
-- The scrambling time $t_{\text{scramble}} \sim (S_{BH}/C_{\max}) \ln S_{BH}$ (Appendix K.3.2) matches the fast-scrambler bound [Sekino & Susskind 2008]
+- The modular chaos bound limits $\lambda_L$, and $\mathfrak C_{\mathrm{scr}}$ is the separate finite record required to promote a horizon branch to fast scrambling
 
-*(ii) Required for first-principles derivation:*
-- Spectral characterization of PCE-optimal Hamiltonians (chaotic level statistics)
-- Frame potential calculation for PCE dynamics
-- Verification of eigenstate thermalization hypothesis (ETH) compliance
+*(ii) Required for first-principles Page-curve derivation:*
+- A trace-distance or relative-entropy continuity certificate for the radiation state
+- A frame-potential, approximate-design, or expander-mixing calculation for the retained horizon channel
+- Verification that the entropy comparison uses the same retained algebra and capacity valuation as the horizon-area ledger
 
-*(iii) Independence of core result:* The central claim—information conservation via unitarity (Steps 1–3)—is independent of the trace-coupled entropy-continuity promotion certificate and follows directly from Theorem E.9.5. The von Neumann Page curve (Step 4) provides additional structure only under that stated certificate; bare moment-design control gives the Page-purity branch.
+*(iii) Independence of core result:* The central claim—information conservation via unitarity (Steps 1–3)—is independent of the trace-coupled entropy-continuity promotion certificate and follows directly from Theorem E.9.5. The von Neumann Page curve (Step 4) provides additional structure only under that stated certificate; bare moment-design control gives the Page-purity branch, and bare scrambling control gives disturbance-spreading rather than entropy continuity.
 
 **Corollary E.9.5.2a (Information-Paradox Status Split).** The black-hole information result in Corollary E.9.5.2 has two status layers:
 

@@ -18,7 +18,7 @@ A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses **
 
 Property R establishes a sufficient level of computational sophistication for the kind of self-referential reasoning that leads to the SPAP paradoxes. Property R emerges through **two complementary foundations** rigorously established in **Appendix A.0**: (I) **Logical Necessity** (§A.0.2), which demonstrates that Property R follows from the predict-verify architecture once the Logical-Structural Assumptions of Appendix A are made explicit; and (II) **Physical Instantiation** (§A.0.3-A.0.5), which demonstrates how this abstract capacity manifests in finite resource systems through POP/PCE optimization dynamics.
 
-The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle together with the stated Logical-Structural Assumptions, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks, each with minimal capacity $K_0 = 3$ bits, achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This derivation is conditional upon the **Assumption of QEC Compatibility** (§A.0.4). For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use the following finite subcapacity of Property R: representation of coded systems and predictors, simulation of the nominated predictor on coded inputs, predicate evaluation of the retained binary or threshold outcome, finite Boolean post-processing, logical memory, and uniform finite-program composition. Appendix A.0.2 derives this subcapacity from composition closure, logical memory, and uniform specification; Theorem A.0.1 and Corollary A.0.1 give the finite circuit/program realization; the proofs of Theorems A.1.1 and A.1.3 supply the deterministic and probabilistic diagonal constructions used in Theorems 10–11. This finite diagonal-closure subcapacity is weaker than total internal reflexive self-closure, which is excluded by Appendix A.6.
+The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle together with the stated Logical-Structural Assumptions, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks, each with minimal capacity $K_0 = 3$ bits, achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This physical realization is conditional upon either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (§A.0.4; Definition A.0.1q) or, on the predictive-recovery Golay branch, an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that supplies the same certificate entries for the protected windows (Definition A.0.1q.1; Theorem A.0.2a). For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use the following finite subcapacity of Property R: representation of coded systems and predictors, simulation of the nominated predictor on coded inputs, predicate evaluation of the retained binary or threshold outcome, finite Boolean post-processing, logical memory, and uniform finite-program composition. Appendix A.0.2 derives this subcapacity from composition closure, logical memory, and uniform specification; Theorem A.0.1 and Corollary A.0.1 give the finite circuit/program realization; the proofs of Theorems A.1.1 and A.1.3 supply the deterministic and probabilistic diagonal constructions used in Theorems 10–11. This finite diagonal-closure subcapacity is weaker than total internal reflexive self-closure, which is excluded by Appendix A.6.
 
 **4.1.3 Proposition 2 (Sufficient Conditions for Property R)**
 
@@ -362,6 +362,49 @@ by Theorem 14. Therefore no finite-budget system can sustain unbounded reflexive
 
 *Proof.* Increasing sustainable depth raises the lower bound $c_0+nk$ from Theorem 13. By PPI, physically instantiated nontrivial updates carry SPAP/Landauer cost, so the increased operational complexity entails increased physical implementation budget. ∎
 
+
+
+**Definition 14.1d (Self/World Allocation Ledger $\mathfrak C_{\mathrm{SW}}$).** Let $S$ be a finite Property-R predictor over an operational horizon $T$ with total retained implementation budget $B_C(T)$. A self/world allocation ledger is a finite forward-locked record
+$$
+\mathfrak C_{\mathrm{SW}}
+=
+(\mathcal T_{\mathrm{self}},\mathcal T_{\mathrm{world}},\mathcal T_{\mathrm{sh}},C_{\mathrm{self}},C_{\mathrm{world}},C_{\mathrm{sh}},B_C(T),\delta_{\mathrm{self}},\text{additivity audit},\text{forward lock}),
+$$
+where $\mathcal T_{\mathrm{self}}$ is the retained task family that updates or verifies the self-model component of $S$, $\mathcal T_{\mathrm{world}}$ is the retained external-target task family, and $\mathcal T_{\mathrm{sh}}$ records operations that are genuinely shared after the PPI quotient. The additivity audit certifies, with no double counting,
+$$
+C_{\mathrm{self}}+C_{\mathrm{world}}+C_{\mathrm{sh}}
+\le B_C(T).
+$$
+The parameter
+$$
+\delta_{\mathrm{self}}:=\alpha_{SPAP}-PP_{\mathrm{self}}
+$$
+is the certified distance of the self-model task family from the SPAP boundary. The ledger is task- and horizon-relative: it does not assert that every bit of self-modeling competes with every external task, and it does not identify shared representation cost with a separate resource unless the additivity audit does so.
+
+**Proposition 14.1e (Predictive Complementarity as a Budget Frontier).** Suppose $\mathfrak C_{\mathrm{SW}}$ is accepted and $\mathcal T_{\mathrm{self}}$ contains an SPAP-limited self-model verification/update task to gap $\delta_{\mathrm{self}}\in(0,\delta_0]$. Then there is a branch constant $c_{\mathrm{SPAP}}>0$ from the Theorem 14 lower-bound comparison such that
+$$
+C_{\mathrm{world}}
+\le
+B_C(T)-C_{\mathrm{sh}}
+-c_{\mathrm{SPAP}}\frac{\log(1/\delta_{\mathrm{self}})}{\delta_{\mathrm{self}}^2}.
+\tag{14.1e}
+$$
+If the right-hand side is negative, the claimed simultaneous self-gap and world-task family cannot be certified within the horizon budget. This is the self/world projection of SPAP: it is a finite-resource allocation frontier, not a Robertson uncertainty relation and not a theorem that all architectures lie on the frontier.
+
+*Proof.* Theorem 14 gives the lower bound
+$$
+C_{\mathrm{self}}
+\ge
+c_{\mathrm{SPAP}}\frac{\log(1/\delta_{\mathrm{self}})}{\delta_{\mathrm{self}}^2}
+$$
+for the covered SPAP-limited self-model task family, after the constants and comparison norm are fixed by the ledger. The additivity audit gives
+$$
+C_{\mathrm{world}}
+\le B_C(T)-C_{\mathrm{sh}}-C_{\mathrm{self}}.
+$$
+Substitution yields (14.1e). The final status statement follows because equality and architectural saturation require a separate PCE optimality or strict-gap certificate for the allocation problem. ∎
+
+**Remark 14.1f (Status of the Consciousness-Curve Reading).** Proposition 14.1e licenses a Pareto-frontier reading only after the task split, shared-cost quotient, horizon budget, and SPAP-gap measurement are fixed. It therefore supports empirical tradeoff tests in artificial or biological predictive architectures, but it does not prove a universal scalar consciousness curve without the allocation ledger $\mathfrak C_{\mathrm{SW}}$ and a domain bridge from the measured variables to $C_{\mathrm{self}}$ and $C_{\mathrm{world}}$.
 
 **Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**
 

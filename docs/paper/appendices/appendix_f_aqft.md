@@ -161,7 +161,7 @@ The transition from the discrete MPU network to continuum physics is formalized 
 
    A uniform lower bound on finite-volume excitation energies is not, by itself, Condition 3. Such a gap can be used only as part of a local convergence certificate when it also supplies quasi-local spectral-flow or coarse-graining maps compatible with $j_n^m$, uniform Lieb-Robinson constants, a common local algebraic core, and a Trotter-Kato or Mosco convergence estimate implying (F.0.1). The structural SPAP/Landauer floor $\varepsilon_0=\ln2$ is dimensionless entropy cost unless a branch also fixes the physical clock, energy units, and generator normalization; it is therefore not automatically a Hamiltonian or Lindbladian spectral gap.
 
-4. **Lightcone identification.** On the strict finite-range single-clock ND-RID branch, Corollary F.1a identifies the limiting support cone with the geometric causal cone when the same update radius, edge scale, and clock are used. Outside that strict branch, the limiting Lieb-Robinson cone is required to coincide with the geometric causal cone.
+4. **Lightcone identification.** On the strict finite-range single-clock ND-RID branch, Corollary F.1a identifies the limiting support cone with the geometric causal cone when the same update radius, edge scale, and clock are used. Outside that strict branch, the limiting Lieb-Robinson cone is required to coincide with the geometric causal cone either as an explicit bridge hypothesis or as the output of an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) for the retained sectors entering the AQFT net.
 
 5. **State convergence.** The microscopic states $\omega_n$ are locally normal and compatible with the embeddings:
    $$
@@ -475,6 +475,12 @@ The full AQFT bridge is status-split. On the strict projective single-clock bran
 
 
 ## F.9 Spin-Statistics Connection and CPT Theorem
+
+**CPT and spin-statistics status under the reflection certificate.** The CPT/spin-statistics branch is promoted only on the intersection of the Borchers/reflection certificate, the existing modular-cocycle gate, the cone certificate, and the finite sector-separation record for the charged fields under comparison. In symbols the promoted branch is
+$$
+\mathfrak C_{\mathrm{CPT/SS}}=\mathfrak C_{\mathrm{Borch}}\wedge \mathfrak C_{\mathrm{cone}}\wedge \mathfrak C_{\mathrm{mod}}\wedge \mathfrak C_{\mathrm{sect}}.
+$$
+Here $\mathfrak C_{\mathrm{mod}}$ abbreviates the finite modular-cocycle/KMS descent record on the same cover, and $\mathfrak C_{\mathrm{sect}}$ abbreviates the finite sector-separation record for the charged fields whose statistics sign is being compared. The branch supplies a reflected antiunitary comparison and a statistics-sign comparison for the covered sectors. It is not a derivation from thermodynamic arrow data alone, and failure of any factor leaves the CPT/spin-statistics line certificate-pending rather than contradicted.
 
 Conditional on Theorem F.0 and on the additional Wightman/Jost realization hypotheses stated below, the preceding sections furnish an emergent AQFT setting on the continuum manifold $(M, g_{\mu\nu})$ with isotony, covariance, and Einstein causality in the sense used in Appendix F. The stress-energy tensor of Definition F.4 is covariantly conserved on-shell, and the positive-energy input is supplied by Theorem 29 together with the additional representation-theoretic assumptions stated below. These are the prerequisites for the standard spin-statistics and CPT theorems. The results of this section are therefore formulated conditionally on those AQFT/Wightman hypotheses, with the spin-statistics connection admitting an additional PCE-based interpretation.
 
@@ -1387,6 +1393,31 @@ $$
 $$
 The local Rindler specialization uses $\beta=\beta_U=2\pi/\kappa$ from Corollary F.10.4b.3, giving the corresponding boost-temperature scrambling ceiling. ∎
 
+**Definition F.10.4b.6a (Scrambling-Saturation Certificate $\mathfrak C_{\mathrm{scr}}$).** A scrambling-saturation certificate is a finite record
+$$
+\mathfrak C_{\mathrm{scr}}
+=
+(\mathfrak C_{\mathrm{KMS/OTOC}},\;\mathcal G_{\mathrm{mix}},\;\Delta_{\mathrm{mix}},\;\mathcal F_{\mathrm{design}},\;N_{\mathrm{eff}},\;r_{\mathrm{scr}},\;\mathfrak C_{\mathrm{TV}}\ \text{if entropy continuity is claimed},\;\text{forward lock})
+$$
+where $\mathfrak C_{\mathrm{KMS/OTOC}}$ supplies the analyticity and boundedness hypotheses of Theorem F.10.4b.5, $\mathcal G_{\mathrm{mix}}$ is the retained boundary channel or interaction graph, $\Delta_{\mathrm{mix}}$ is a certified expander/spectral-gap or frame-potential contraction datum, $\mathcal F_{\mathrm{design}}$ records the approximate-design quality when a Page or Haar comparison is used, $N_{\mathrm{eff}}$ is the finite effective number of retained boundary degrees of freedom, and $r_{\mathrm{scr}}\in[0,1)$ is a pre-locked dimensionless saturation residual. Capacity saturation alone is not a scrambling-saturation certificate.
+
+**Proposition F.10.4b.7a (Fast Scrambling Requires $\mathfrak C_{\mathrm{scr}}$).** The chaos bound
+$$
+\lambda_L\le\frac{2\pi}{\beta\hbar}
+$$
+is supplied by Theorem F.10.4b.5 on every branch satisfying its KMS/OTOC hypotheses. A fast-scrambling conclusion is theorem-level only on branches carrying $\mathfrak C_{\mathrm{scr}}$. On a saturation subbranch whose mixing record certifies
+$$
+\lambda_L\ge \frac{2\pi}{\beta\hbar}(1-r_{\mathrm{scr}}),
+$$
+the retained scrambling time obeys the certified logarithmic estimate
+$$
+t_*\le
+\frac{\beta\hbar}{2\pi}(1+O(r_{\mathrm{scr}}))\ln N_{\mathrm{eff}}
+$$
+within the recorded finite-size window. If $N_{\mathrm{eff}}$ is identified with a horizon capacity or area variable, that identification must be supplied by the corresponding horizon-capacity certificate. If a von Neumann Page-curve statement is claimed, $\mathfrak C_{\mathrm{scr}}$ must also include the trace-distance or relative-entropy continuity certificate used in Appendix K.
+
+*Proof.* The upper bound is Theorem F.10.4b.5. Saturation is a lower-bound and mixing claim, not a consequence of the upper bound or of capacity alone. The expander/frame-potential entry supplies the growth and design estimates needed to spread a local perturbation over $N_{\mathrm{eff}}$ retained degrees of freedom in logarithmic time. The residual term is fixed before comparison. Entropy-continuity statements require the additional trace-distance or relative-entropy certificate because OTOC growth by itself controls disturbance spreading, not the von Neumann entropy distance to the Haar/Page branch. ∎
+
 ### F.10.4c Reflection-Positivity Gate for Lorentzian Reconstruction
 
 **Definition F.10.4c.1 (Finite PU Reflection Positivity).** Let $\mathfrak A_E$ be a finite Euclidean predictive history algebra with an antilinear reflection involution $\Theta$ and positive-time subalgebra $\mathfrak A_+$. A normalized Euclidean functional $\Omega_E:\mathfrak A_E\to\mathbb C$ is reflection positive when
@@ -2208,6 +2239,8 @@ $$
 and the PCE/KMS state $\omega$.
 
 *Proof.* The hypotheses are exactly the hypotheses of the Borchers-Wiesbrock half-sided modular inclusion theorem on the regular AQFT branch: an inclusion of von Neumann algebras with a common cyclic separating vector/state and a half-sided modular invariance condition. The theorem gives a strongly continuous unitary one-parameter group or semigroup $U(s)$ with positive generator such that $U(s)$ implements the inclusion-preserving translation/dilation associated with the nested algebras. The sign of the half-sided condition $t\ge0$ selects the future-directed semigroup. Since the algebras are causal-diamond algebras in the emergent Haag-Kastler net of Theorem F.10.2, this semigroup is the local causal flow between the corresponding diamonds. Therefore local time orientation is reconstructed from modular inclusion and the equilibrium state, not postulated independently. ∎
+
+**Definition F.10.7d (Finite Borchers/Reflection Certificate $\mathfrak C_{\mathrm{Borch}}(W)$).** A wedge or half-space modular record may be used as a spacetime-reflection input only after the finite certificate $\mathfrak C_{\mathrm{Borch}}(W)$ has been supplied for the retained wedge $W$. The certificate consists of: a cyclic-and-separating retained state vector or faithful normal state; a half-sided modular inclusion or equivalent modular-covariance record; positivity of the generator implementing the retained translation semigroup; a reflected extension $j_W$ on the overlap algebra; Haag-duality or the stated substitute on the tested overlap; and a comparison between the reflected order and the operational cone already certified by $\mathfrak C_{\mathrm{cone}}$. Its numerical part is an error budget $\epsilon_{\mathrm{Borch}}(W)$ in the modular graph norm. Below that tolerance the modular conjugation can be read as a finite wedge-reflection implementation; without it, the modular data remain algebraic covariance data and do not by themselves certify CPT, spin-statistics, or Lorentzian reflection.
 
 **Corollary F.10.7c (Compatibility with Modular Prediction Time).** The single-algebra modular prediction time of a local KMS state and the causal flow reconstructed from a half-sided modular inclusion agree on overlaps where both are defined.
 

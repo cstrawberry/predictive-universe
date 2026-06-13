@@ -631,6 +631,31 @@ Rearranging gives the result. $\square$
 
 **Physical Interpretation.** This is a fundamental result: the irrationality of the Landauer angle implies that *any nontrivial topological winding necessarily requires entropy production above the Landauer minimum*. Topology has an irreducible thermodynamic cost.
 
+
+**Definition Q.0.7g.1 (Reflexive-Charge Ledger $\mathfrak C_{\mathrm{ref}}$).** For a closed retained predictive loop $\gamma$ satisfying the single-valued amplitude condition of Theorem Q.0.4, define its reflexive charge by
+$$
+q_{\mathrm{ref}}(\gamma):=k(\gamma)\in\mathbb Z,
+$$
+where $k$ is the holonomy index in
+$$
+\Theta(\gamma)=N[\gamma]\ln2+\Delta[\gamma]=2\pi k.
+$$
+A reflexive-charge ledger is a finite record
+$$
+\mathfrak C_{\mathrm{ref}}
+=
+(\Gamma_{\mathrm{loop}},q_{\mathrm{ref}},N,\Delta,\text{single-valuedness domain},\text{deformation class},\text{resolution window},\text{forward lock}),
+$$
+where $\Gamma_{\mathrm{loop}}$ lists the closed loops under comparison and the deformation class records which variations keep the loop inside the same retained configuration domain.
+
+**Proposition Q.0.7g.2 (Reflexive-Charge Conservation on Fixed Loop Domains).** On a branch carrying $\mathfrak C_{\mathrm{ref}}$, $q_{\mathrm{ref}}$ is invariant under continuous deformations of $\gamma$ inside the recorded loop domain that preserve the single-valuedness condition and do not cross an actualization, singularity, boundary-change, or response-sector change. Changes of $q_{\mathrm{ref}}$ are therefore discrete branch changes in the retained ledger. The entropy-holonomy equation
+$$
+N[\gamma]\ln2+\Delta[\gamma]=2\pi q_{\mathrm{ref}}(\gamma)
+$$
+records the thermodynamic price of realizing the loop sector, and Corollary Q.0.7g gives the strict overhead condition for nonzero exact sectors. This is a sector-conservation statement, not a universal local Noether-current law for entropy production unless an additional local continuity equation for the chosen loop family is supplied.
+
+*Proof.* The integer $k$ is the homotopy/holonomy index fixed by Theorem Q.0.4. Continuous deformations that remain inside the same single-valuedness domain cannot change an integer-valued continuous invariant, so $q_{\mathrm{ref}}$ is constant on the recorded deformation class. If the loop crosses a domain boundary, actualization cut, singularity, or response-sector change, the hypotheses defining the invariant have changed and the ledger records a discrete transition to a new sector. The entropy equation is Definition Q.0.7e together with Proposition Q.0.7f. Corollary Q.0.7g supplies the positive-overhead statement for $q_{\mathrm{ref}}\ne0$. ∎
+
 ---
 
 ### Q.0.7.7 Sector-Minimal Overhead

@@ -1,6 +1,14 @@
 # 12 Emergence of Gravitational Dynamics from Predictive Thermodynamics
 
+With $\mathfrak GY_U^{(4)}$ the branch prefactor is recorded as
+$$
+\log\frac{Z_U}{Z_0}=-\frac12\operatorname{LDet}_{\mathrm{rel}}(L_U,L_0)+\log J_U+\delta_{\mathrm{zero}}+\delta_{\mathrm{tail}},
+$$
+using the same subtraction and measure conventions as the gravitational effective-action ledger. Without the certificate this expression is only a formal determinant mnemonic and cannot fix the numerical $\Lambda$ prefactor.
+
 This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose operational-continuum branch and regular-branch properties were established conditionally in Section 11 on the $M=24$, $D=4$ shell branch. The derivation follows the thermodynamic approach pioneered by Jacobson [Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions. Specifically, the information limits of Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) give rise to the **Horizon Entropy Area Law (Theorem 49)** on the Appendix E geometric-regularity, channel-density, and calibration branches. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the **MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$)**, constructed in **Appendix B**, we obtain the Einstein-equation branch of the framework.
+
+**Signature gate for the Einstein branch.** The Clausius/null-surface derivation is evaluated only after the local null directions belong to a sector satisfying $\mathfrak C_{\mathrm{sig}}$. This keeps the zero-slack Einstein closure from inheriting an unverified Lorentzian signature. If the signature certificate is absent, the gravitational ledger may still report the thermodynamic variation and the conserved slack tensor, but the result remains a pre-Lorentzian or signature-pending branch.
 
 The branch character of this section is summarized by the antecedent display
 $$
@@ -10,24 +18,24 @@ $$
 \,\land\,
 \mathrm{AreaLaw}
 \,\land\,
-\mathrm{Clausius}
+\mathrm{Clausius/Saturation}
 \,\land\,
 \mathrm{StressEnergy}
 \;\Longrightarrow\;
 R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
 =\frac{8\pi G}{c^4}\,T_{\mu\nu}^{(MPU)},
 $$
-with the five antecedents supplied by (T1)–(T3) below together with the Appendix B stress-energy construction; the Einstein-equation conclusion is conditional theorem-level on this branch and is not unconditional. This is an emergent finite-response thermodynamic closure, not a microscopic graviton Hilbert-space construction. A microscopic gravitational carrier may be introduced only as a non-null finite protocol-response sector; otherwise it is response-null surplus and is removed by the PPI/PCE quotient. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
+with the antecedents supplied by (T1)–(T5) below together with the Appendix B stress-energy construction. The Predictive Generalized Second Law certificate of §12.5.4 supplies the monotone-data-processing part of the local-horizon entropy ledger. The local Clausius equality, zero-defect, and Einstein-equation conclusion are theorem-level only when the null-convexity/saturation entries of §12.5.4 and the finite Einstein-branch closure record of Definition 12.5.3k are accepted on the same retained null cover. This is an emergent finite-response thermodynamic closure, not a microscopic graviton Hilbert-space construction. A microscopic gravitational carrier may be introduced only as a non-null finite protocol-response sector; otherwise it is response-null surplus and is removed by the PPI/PCE quotient. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
 
 The macroscopic emergent metric/channel-capacity dynamics derive from the following branch-theorem and certificate inputs on the operational-continuum branch:
 
-*   (T1) **Local Thermodynamic Equilibrium at Causal Horizons:** Theorem 48a.0 derives local LTE from the local KMS/Clausius theorem stack on the Appendix F/G operational-continuum branch. Theorem 48a gives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation $\delta S=\delta Q/T_U+O(\lambda^2)$. The finite channel min-cut realization of local horizon entropy is supplied by Corollary E.8.4g, with the finite KMS-descent certificate of Definition F.10.12a available when that certificate is accepted. On the accepted finite modular-Clausius Hodge datum, Theorem F.10.12f identifies the closed retained KMS/Clausius obstruction with its harmonic representative; after the zero-defect stationarity gate, the reversible Einstein branch is the harmonic-zero branch.
+*   (T1) **Local Thermodynamic Equilibrium at Causal Horizons:** Theorem 48a.0 derives local LTE from the local KMS/Clausius theorem stack on the Appendix F/G operational-continuum branch. Theorem 48a gives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation $\delta S=\delta Q/T_U+O(\lambda^2)$. The finite channel min-cut realization of local horizon entropy is supplied by Corollary E.8.4g, with the finite KMS-descent certificate of Definition F.10.12a available when that certificate is accepted. On a branch additionally carrying the Predictive Generalized Second Law certificate $\mathfrak C_{\mathrm{PGSL}}$ (Definition 12.5.3l), the exterior generalized entropy is monotone along the retained horizon-cut family. On a branch carrying the null-convexity certificate $\mathfrak C_{\mathrm{NC}}$ (Definition 12.5.3n), the second-variation sign needed for the predictive null-energy/QNEC step is supplied as finite response data. On the accepted finite modular-Clausius Hodge datum, Theorem F.10.12f identifies the closed retained KMS/Clausius obstruction with its harmonic representative; after the zero-defect stationarity gate, or the zero-curvature subcase of Proposition 12.5.3o, the reversible Einstein branch is the harmonic-zero branch.
 *   (T2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the Appendix E area-law branch. The modular/KMS input is theorem-level via Theorems F.10.1–F.10.4 and is certificate-complete on the branch of Theorem F.10.12c.
 *   (T3) **Geometric Regularity and operational-continuum closure:** Theorem 43.5 packages the MPU network on the $M=24$, $D=4$ operational-continuum branch. Theorem 43 supplies the regularity-necessity layer; Lemma C.6d, Theorem C.6e, Theorem D.6e, Theorem C.6c, and Theorem 44a supply the $D_4$ shell isotropy, noncollapse, Mosco–Cheeger closure, RCD bridge, and regular-branch manifold structure on the vanishing-defect branch.
 *   (T4) **Conserved Energy-Momentum Source:** Corollary 45a.1 derives covariant conservation $\nabla_\mu T^{(MPU){\mu\nu}}=0$ from diffeomorphism invariance of the matter action and the matter equations of motion (Appendix B).
-*   (T5) **Local Lorentz Invariance and Universality:** Corollary 46a derives local Lorentz invariance with structure group $SO^+(1,3)$ from Theorem 46 together with the full Appendix O signature package used by Theorems O.7a, O.7b, and Corollary O.7b.1. Corollary 46e derives metric universality from common PCE-minimal boundary sufficiency: retained species sharing the same Markov boundary syndrome reconstruct the same causal-diamond poset, capacity valuation, and Lorentzian metric. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
+*   (T5) **Local Lorentz Invariance and Universality:** Corollary 46a derives local Lorentz invariance with structure group $SO^+(1,3)$ from Theorem 46 together with the full Appendix O signature package used by Theorems O.7a, O.7b, and Corollary O.7b.1, with the cone-coincidence entry supplied either by Hypothesis O.7.2.4 or by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) for the retained sectors under discussion. Corollary 46e derives metric universality from common PCE-minimal boundary sufficiency: retained species sharing the same Markov boundary syndrome reconstruct the same causal-diamond poset, capacity valuation, and Lorentzian metric. The Clausius step below uses one local horizon cone only for stress-energy sectors covered by these inputs; sectors not covered by the Lorentzian/cone-coincidence package remain outside the theorem-level Einstein-branch derivation. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
 
-From these branch-theorem and certificate inputs, applying the Clausius relation $\delta Q=T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q>0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields the Einstein-equation branch (**Theorem 50**). On the finite KMS-descent branch the same route is certificate-complete in the sense of Corollary 12.1b. The metric-fluctuation sector is closed on the same branch, conditional on the smooth-envelope record, the nondegenerate Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, and the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$ of Definition 12.1d, by Theorems 12.1c and 12.1e together with Definition 12.1d.4: the linearized emergent metric response and its finite covariance $\Sigma_n$ are deterministic projections of the finite KMS-descent certificate, with no independent microscopic graviton Hilbert sector required by Corollary 12.1e.1.
+From these branch-theorem and certificate inputs, applying the Clausius relation $\delta Q=T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q>0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields the Einstein-equation branch (**Theorem 50**). The Predictive Generalized Second Law of Theorem 12.5.3m supplies the monotone exterior entropy ledger; it does not by itself replace the local second-variation or zero-slack entries. On the finite KMS-descent branch the same route is certificate-complete in the sense of Corollary 12.1b when the null-convexity/saturation records of §12.5.4 and the finite Einstein-branch closure record $\mathfrak C_{\mathrm{EH}}$ are accepted on the same cover. The metric-fluctuation sector is closed on the same branch, conditional on the smooth-envelope record, the nondegenerate Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, and the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$ of Definition 12.1d, by Theorems 12.1c and 12.1e together with Definition 12.1d.4: the linearized emergent metric response and its finite covariance $\Sigma_n$ are deterministic projections of the finite KMS-descent certificate, with no independent microscopic graviton Hilbert sector required by Corollary 12.1e.1.
 
 **12.1 Local Thermodynamic Equilibrium, Derived Local KMS Equilibrium, and Horizon Properties**
 
@@ -927,9 +935,9 @@ The affine term $a_0+a_1n$ has zero second finite difference. Multiplying by $2\
 
 *Proof.* Theorem 12.5.3a.2 derives the finite second-difference identity from the ledger data alone. The only continuum step is the regular localized-cell limit already required for the null-cut branch. The affine ambiguity drops out before the limit is taken. ∎
 
-**Theorem 12.5.3b (Predictive Null Energy Inequality).** This is a conditional null-cut theorem, not a consequence of relative-entropy monotonicity alone. Assume the null-cut branch satisfies:
+**Theorem 12.5.3b (Predictive Null Energy Inequality).** This is a conditional null-cut theorem, not a consequence of relative-entropy monotonicity alone. Data processing gives the first-difference monotonicity used in Theorem 12.5.3m; the local second-variation sign is a stronger null-convexity input. Assume the null-cut branch satisfies:
 
-1. finite-resolution data processing gives local null convexity,
+1. either the null-convexity certificate $\mathfrak C_{\mathrm{NC}}$ of Definition 12.5.3n is accepted on the retained cut family, or the branch supplies the same finite-response inequality directly,
 $$
 \frac{d^2}{d\lambda^2}S_{\mathrm{rel}}(\lambda)\ge0;
 \tag{76g}
@@ -1068,11 +1076,11 @@ $$
 \langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho(y)
 \,dA_y.
 $$
-Separating the remaining smooth off-diagonal part of the shape kernel gives (76m). Relative-entropy convexity under null-cut inclusion gives
+Separating the remaining smooth off-diagonal part of the shape kernel gives (76m). The accepted null-convexity or shape-positivity entry of the null-cut branch gives
 $$
 \mathcal N_\rho[f]\ge0
 $$
-for every admissible $f$, so this term is precisely the nonnegative predictive slack already used in Theorem 12.5.3b.
+for every admissible $f$. Thus this term is precisely the nonnegative predictive slack already used in Theorem 12.5.3b. Relative-entropy data-processing monotonicity alone supplies the first-difference P-GSL of Theorem 12.5.3m, not this shape-second-variation sign.
 
 For a shrinking transverse cell, $f_{\mathrm{cell}}$ is constant on the cell and zero outside it. Dividing (76m) by $A_{\mathrm{cell}}$ and taking the regular localized-cell limit removes the off-diagonal contribution by hypothesis and evaluates the continuous diagonal integrand at $y_0$. Rearranging gives (76n). The Clausius-saturated case is the equality branch of Theorem F.10.4 and Theorem 12.1, so the relative-entropy slack term is zero there. ∎
 
@@ -1347,3 +1355,128 @@ $$
 No independent microscopic graviton Hilbert sector is an input to either closure. Linearized graviton-like modes, when present, are response-active fluctuations of the emergent metric branch described by Theorem 12.1c and Theorem 12.1e.
 
 *Proof.* Corollary 43.5a supplies the operational-continuum envelope, and Definition F.0e with Theorem F.0f, or the Mosco-Bochner route of Definition F.0c and Theorem F.0d, supplies the local AQFT net and generator convergence. Definition F.10.12a and Theorem F.10.12c supply the compatible KMS sheaf, vanishing Connes-cocycle obstruction, and vanishing local Clausius mismatch. Appendix E fixes the entropy-area variation and Appendix B fixes the conserved stress-energy flux. Theorem 12.1 derives the local equation from the Clausius relation and the Raychaudhuri identity. Theorem 12.5.3h identifies zero predictive QNEC slack with the reversible Einstein branch and nonzero conserved slack with the explicit response term. The gate $\mathfrak L_2$ excludes any additional local second-order divergence-free metric tensor on the retained $D=4$ branch. The overlap audit ensures that all terms are projections of the same finite branch. Thus (76ai) and (76aj) follow from the accepted finite record. Since every input is a finite response, area, KMS, stress, or overlap datum, a microscopic graviton Hilbert sector is neither used nor required. ∎
+
+### 12.5.4 Predictive Generalized Second Law and Null-Saturation Closure
+
+**Definition 12.5.3l (Predictive Generalized-Second-Law Certificate $\mathfrak C_{\mathrm{PGSL}}$).** A Predictive Generalized-Second-Law certificate on a retained horizon-cut family $\{\mathcal A_\lambda\}$ is a finite record
+$$
+\mathfrak C_{\mathrm{PGSL}}
+=
+(\mathcal A_\lambda,\rho_\lambda,\omega_\lambda,\Phi_{\lambda_2\lambda_1},K_\lambda,\eta_\partial,\mathfrak A_\partial,\mathfrak C^{\mathrm{KMS}},\mathfrak O_{\mathrm{PGSL}},\text{forward lock})
+\tag{76ak}
+$$
+with the following entries fixed before comparison.
+
+1. $\mathcal A_\lambda$ is a nested retained exterior algebra for a future-directed causal-horizon cut family, with $\lambda_2>\lambda_1$ interpreted in the direction of exterior restriction/evolution used by the record.
+2. $\rho_\lambda$ is the retained exterior state and $\omega_\lambda$ is the compatible attractor/KMS reference state on $\mathcal A_\lambda$.
+3. $\Phi_{\lambda_2\lambda_1}:\mathcal A_{\lambda_1}\to\mathcal A_{\lambda_2}$ is the Heisenberg adjoint, or equivalently the Schrödinger channel on states, of the finite algebra restriction plus exterior ND-RID evolution between cuts. The channel is CPTP on the retained finite algebra and fixes the reference family: $\Phi_{\lambda_2\lambda_1}(\omega_{\lambda_1})=\omega_{\lambda_2}$.
+4. $K_\lambda=-\log\omega_\lambda$ is the finite modular Hamiltonian in the retained algebra, with the affine modular ambiguity fixed by the null-boost ledger of Definition 12.5.3a.1 when a local second-variation statement is used.
+5. $\eta_\partial$ and $\mathfrak A_\partial$ are the Appendix E horizon density and area-calibration records identifying the channel min-cut entropy with the retained area density on the same boundary family.
+6. $\mathfrak C^{\mathrm{KMS}}$ is the finite KMS-descent record identifying the reference state and modular flow on the same cover.
+7. $\mathfrak O_{\mathrm{PGSL}}$ is the overlap audit proving that the cut algebras, KMS reference, area density, stress-energy branch, and null-boost ledger use the same retained response presheaves and branch maps.
+
+Define the retained generalized entropy, up to the fixed additive constant $S_0$, by
+$$
+S_{\mathrm{gen}}(\lambda)
+:=
+S_0-D(\rho_\lambda\Vert\omega_\lambda)
+=
+S(\rho_\lambda)-\langle K_\lambda\rangle_{\rho_\lambda}+S_0
+=
+S_{\mathrm{out}}(\lambda)+\eta_\partial\mathcal A(\lambda),
+\tag{76al}
+$$
+where the last equality is asserted only on the area-calibrated branch recorded in $\mathfrak A_\partial$. On the Bekenstein-Hawking calibration branch, $\eta_\partial=1/(4G)$ in units $\hbar=c=k_B=1$.
+
+**Theorem 12.5.3m (Predictive Generalized Second Law).** On a retained horizon-cut family carrying $\mathfrak C_{\mathrm{PGSL}}$, the generalized entropy is nondecreasing:
+$$
+S_{\mathrm{gen}}(\lambda_2)-S_{\mathrm{gen}}(\lambda_1)
+=
+D(\rho_{\lambda_1}\Vert\omega_{\lambda_1})
+-
+D(\rho_{\lambda_2}\Vert\omega_{\lambda_2})
+\ge0
+\qquad (\lambda_2>\lambda_1).
+\tag{76am}
+$$
+Thus the finite PU horizon GSL is data-processing monotonicity of relative entropy on the retained cut channel. It is a first-difference theorem. It does not by itself prove the local null-convexity inequality (76g), the zero-slack condition, or the Einstein equation.
+
+*Proof.* By Definition 12.5.3l, the map from the earlier exterior cut to the later exterior cut is a CPTP channel on the retained finite algebra and sends the reference state to the reference state. Uhlmann monotonicity gives
+$$
+D(\rho_{\lambda_2}\Vert\omega_{\lambda_2})
+=
+D(\Phi_{\lambda_2\lambda_1}(\rho_{\lambda_1})\Vert\Phi_{\lambda_2\lambda_1}(\omega_{\lambda_1}))
+\le
+D(\rho_{\lambda_1}\Vert\omega_{\lambda_1}).
+$$
+Using the definition (76al) gives (76am). The final sentence is a status statement: monotonicity is a first-difference inequality, while (76g) is a second-variation statement and zero slack is a saturation statement. ∎
+
+**Definition 12.5.3n (Null-Convexity/Saturation Certificate $\mathfrak C_{\mathrm{NC}}$).** A null-convexity/saturation certificate for a retained local-horizon family is a finite record
+$$
+\mathfrak C_{\mathrm{NC}}
+=
+(\mathfrak C_{\mathrm{PGSL}},\mathcal L_{\mathrm{cut}},\mathcal D_{\mathrm{GNS}},H^{\mathrm{KM}}_\lambda,r_\lambda,\mathcal R_2,\mathcal Z_{\mathrm{slack}},\mathfrak O_{\mathrm{NC}},\text{forward lock})
+\tag{76an}
+$$
+where $\mathcal L_{\mathrm{cut}}$ is the retained one-sided cut-translation generator, $\mathcal D_{\mathrm{GNS}}$ records detailed balance/self-adjointness in the GNS inner product for the reference state, $H^{\mathrm{KM}}_\lambda$ is the Kubo-Mori Hessian on the retained tangent quotient, $r_\lambda$ is the finite residual in the second-variation expansion, $\mathcal R_2$ is the regularity record justifying the retained second derivative, and $\mathcal Z_{\mathrm{slack}}$ is either a zero-slack ledger or a positive conserved-slack tensor ledger. The certificate asserts, for the covered null deformation and tangent vector $\dot x_\lambda$,
+$$
+\frac{d^2}{d\lambda^2}D(\rho_\lambda\Vert\omega_\lambda)
+=
+\langle \dot x_\lambda,H^{\mathrm{KM}}_\lambda\dot x_\lambda\rangle_{\mathrm{GNS}}
++r_\lambda,
+\qquad
+H^{\mathrm{KM}}_\lambda\ge0,
+\qquad
+r_\lambda\ge0.
+\tag{76ao}
+$$
+Detailed balance, a positive semigroup generator, or the GSL certificate alone is not enough unless the finite second-variation representation (76ao), the sign of the residual, and the overlap audit are recorded. A zero-slack conclusion additionally requires $\mathcal Z_{\mathrm{slack}}$ to record that the quadratic form and residual vanish on every retained null generator, not merely that they are nonnegative.
+
+**Proposition 12.5.3o (Null-Convexity Discharge and Sign-Definite Gravity Correction).** If $\mathfrak C_{\mathrm{NC}}$ is accepted on the retained local-horizon family, then the null-convexity hypothesis (76g) of Theorem 12.5.3b is discharged on that family. Consequently the predictive QNEC slack of Theorem 12.5.3f satisfies
+$$
+\mathcal Q(k)
+=
+2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle-\Delta S_{\mathrm{pred}}''(\lambda)
+=
+\frac{d^2}{d\lambda^2}D(\rho_\lambda\Vert\omega_\lambda)
+\ge0.
+\tag{76ap}
+$$
+If $\mathcal Z_{\mathrm{slack}}$ is the zero-slack ledger, then Corollary 12.5.3g and Theorem 12.5.3h give the reversible Einstein branch. If instead $\mathcal Z_{\mathrm{slack}}$ supplies a conserved retained tensor $T_{\mu\nu}^{(\mathrm{rec})}$ with
+$$
+8\pi G\,T_{\mu\nu}^{(\mathrm{rec})}k^\mu k^\nu
+=
+\mathcal Q(k)
+\ge0
+\tag{76aq}
+$$
+for all covered null generators, then the retained metric equation is the sign-definite non-equilibrium response equation (76aj). The sign statement is only a null-projection statement unless the null-direction tomography condition of Theorem 12.1g supplies the full tensor.
+
+*Proof.* Equation (76ao) gives (76g) directly. The identity between the second derivative of the relative-entropy ledger and the predictive QNEC slack is Theorem 12.5.3f, so (76ap) follows. Zero slack invokes Corollary 12.5.3g and Theorem 12.5.3h. The nonzero case is exactly the conserved-slack alternative of Definition 12.5.3k and Theorem 12.5.3k.1, with the null-projection sign inherited from (76ap). ∎
+
+**Corollary 12.5.3p (Finite Area and Light-Sheet Bounds from P-GSL).** On a branch carrying $\mathfrak C_{\mathrm{PGSL}}$, every covered pair of future horizon cuts satisfies
+$$
+\Delta S_{\mathrm{out}}+\frac{\Delta\mathcal A_{\mathrm{GSL}}}{4G}
+\ge0,
+\qquad
+\Delta\mathcal A_{\mathrm{GSL}}
+:=
+\mathcal A_{\mathrm{GSL}}(\lambda_2)-\mathcal A_{\mathrm{GSL}}(\lambda_1),
+\tag{76ar}
+$$
+when the Bekenstein-Hawking calibration and the horizon-cut orientation are the accepted area-density records. If the retained matter crossing a classical light-sheet is represented in the same certificate by an entropy decrease of the exterior algebra and the GSL-oriented area term is
+$$
+\Delta\mathcal A_{\mathrm{GSL}}
+=
+\mathcal A(\lambda_1)-\mathcal A(\lambda_2)>0
+$$
+for the raw contracting cross-sectional area $\mathcal A(\lambda_2)<\mathcal A(\lambda_1)$, then
+$$
+S_{\mathrm{cross}}
+\le
+\frac{\mathcal A(\lambda_1)-\mathcal A(\lambda_2)}{4G}.
+\tag{76as}
+$$
+This is a finite retained light-sheet bound, not an unconditional global Bousso theorem outside the cut family, orientation convention, and overlap audit certified by $\mathfrak C_{\mathrm{PGSL}}$.
+
+*Proof.* Equation (76ar) is (76am) rewritten using the area-density entry of (76al) and the GSL-oriented area variable. On the certified classical light-sheet segment, the entropy that crosses the sheet is the decrease of the retained exterior entropy, so $S_{\mathrm{cross}}=-\Delta S_{\mathrm{out}}$. The orientation entry gives $\Delta\mathcal A_{\mathrm{GSL}}=\mathcal A(\lambda_1)-\mathcal A(\lambda_2)>0$. Substituting these two identities into (76ar) gives (76as). The scope is exactly the scope of the certificate. ∎

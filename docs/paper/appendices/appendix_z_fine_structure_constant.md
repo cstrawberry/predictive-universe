@@ -2915,6 +2915,38 @@ Thus the weight-$\le3$ cosets and the $1771$ sextet cosets exhaust all syndromes
 
 Finally, $M_{24}=\operatorname{Aut}(\mathcal G_{24})$ preserves syndromes, octads, and the relation of lying in a common sextet. Since $M_{24}$ is $5$-transitive on the $24$ points, it is transitive on tetrads. Sending one tetrad to another sends its unique syndrome fiber to the other tetrad's unique syndrome fiber, so the induced action on the $1771$ sextets is transitive. ∎
 
+**Definition Z.13b.6 (Punctured Golay CSS Witness).** Let $\mathcal G_{24}\subset\mathbb F_2^{24}$ be the retained extended binary Golay code on the predictive-recovery MacWilliams branch. For a point $j\in\{1,\ldots,24\}$ fixed by a retained puncture record, define
+$$
+P_j(\mathcal G_{24})
+:=
+\{(c_i)_{i\ne j}:c\in\mathcal G_{24}\}
+\subset\mathbb F_2^{23}
+\tag{Z.13b.6.1}
+$$
+and
+$$
+S_j(\mathcal G_{24})
+:=
+\{(c_i)_{i\ne j}:c\in\mathcal G_{24},\ c_j=0\}
+\subset\mathbb F_2^{23}.
+\tag{Z.13b.6.2}
+$$
+The puncture is canonical only when the retained interface record marks the point $j$ before comparison, for example by a PPI-visible interface coordinate. Without such a record, the $24$ choices are equivalent under $M_{24}$ and no distinguished coordinate is asserted.
+
+**Proposition Z.13b.7 (Golay CSS Code Witness).** For every retained puncture point $j$, $P_j(\mathcal G_{24})$ is a binary $[23,12,7]$ perfect Golay code, $S_j(\mathcal G_{24})$ is its dual $[23,11,8]$ code, and
+$$
+S_j(\mathcal G_{24})=P_j(\mathcal G_{24})^\perp\subset P_j(\mathcal G_{24}).
+\tag{Z.13b.7.1}
+$$
+Therefore the CSS construction with $C_X=C_Z=P_j(\mathcal G_{24})$ yields a quantum stabilizer code
+$$
+[[23,1,7]].
+\tag{Z.13b.7.2}
+$$
+This proposition is a code witness for a QEC compatibility certificate. It does not by itself supply the physical noise model, syndrome-extraction instruments, recovery maps, threshold inequality, or protected gate ledger required by Definition A.0.1q.
+
+*Proof.* The extended Golay code is self-dual, doubly even, has length $24$, dimension $12$, and minimum distance $8$ on the branch of Theorem Z.13b. Puncturing any coordinate gives the perfect binary Golay code with parameters $[23,12,7]$. Shortening at that coordinate gives a $[23,11,8]$ code. For a self-dual code, puncturing one coordinate and shortening the dual coordinate are dual operations, so $S_j(\mathcal G_{24})=P_j(\mathcal G_{24})^\perp$. Since every word of $\mathcal G_{24}$ has even weight and the shortened words have $c_j=0$, the shortened projection lies inside the punctured code, giving dual containment. The CSS dimension is $k=12+12-23=1$, and the distance is $7$ for the perfect Golay CSS witness. ∎
+
 #### Z.13.5.3 Structural Correspondence: Constraint Equations and Quantum Correlations
 
 The syndrome-partition correspondence connects binary algebraic structure to continuous quantum mechanical structure through a constraint topology isomorphism.

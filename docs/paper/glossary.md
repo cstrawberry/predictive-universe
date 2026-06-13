@@ -1,5 +1,12 @@
 # Glossary of Key Terms
 
+*   $\mathfrak C_{\mathrm{Borch}}$: finite Borchers/reflection certificate for wedge-reflection, CPT, and spin-statistics use.
+*   $\mathfrak C_{\mathrm{sig}}$: predictive well-posedness signature certificate selecting a one-time Lorentzian branch in covered second-order sectors.
+*   $\mathfrak W_{D_4}$: $D_4$ continuum-witness audit containing shell moments, curvature-transfer, noncollapse, and recovery-limit data.
+*   $\mathfrak C_{\mathrm{Cas}}$: homogeneous Casimir spectral certificate for pre-registered electroweak or gauge-sector finite-part computations.
+*   $\mathfrak GY_U^{(4)}$: relative four-dimensional Gelfand-Yaglom determinant certificate for branch prefactors.
+*   $\mathfrak C_{\mathrm{meter}}$: metered actualization certificate for a retained interface register and its $\ln2$ timing subledger.
+
 *   **24-Cell:** (Appendix Z, Definition Z.8; Appendix U, Theorem U.30; Proposition U.13a) The standard 24-point configuration on $S^3$ given by the unit Hurwitz integers, realizing the optimal kissing configuration $K(4)=24$ in 4 dimensions and spanning $\mathbb{R}^4$. This is the standard coordinate realization conventionally called the 24-cell vertex set; Theorem U.30 verifies its spherical 5-design exactness. Equivalent, after normalization and orthogonal identification, to the minimal vectors of the $D_4$ root lattice. The sampled angular operator of Proposition U.13a has exact spectrum $0,3^4,8^9,15^8,24^2$; Proposition U.13a.1c identifies these values with the continuum $S^3$ angular eigenvalue values while keeping the $n=3,4$ multiplicity aliasing explicit.
 
 *   **A2 Neutrino Cosmology Closure:** (Appendix T, Corollary T.24.16a) Anchored Majorana branch on which $m_3/m_2=e^{\sqrt3}$ and $m_3/m_1=e^{3\sqrt3}$ lock oscillation data, cosmological mass sum, and direct beta endpoint mass:
@@ -45,6 +52,24 @@ $$
 *   **AQFT (Algebraic Quantum Field Theory):** (Appendix F) Framework describing emergent continuum QFT from MPU networks via nets of local algebras $\mathfrak{A}(\mathcal{O})$.
 
 *   **Area Law (Horizon Entropy):** (Theorem 49, Appendix E) On the geometric-regularity, density-certificate, and PCE residual-budget saturation branches, equilibrium horizon entropy scales linearly with area: $S_{max} = k_B \mathcal{A} / (4 L_P^2)$, with the coefficient fixed by the calibrated ND-RID channel density and saturated per-channel information budget.
+
+*   **Becoming-Flow Compression Datum:** (Appendix X, Definition X.8g.4; Proposition X.8g.5; Remark X.8g.6) Certificate-gated finite record $\mathfrak C_{\Omega}$ packaging a retained state bundle, response metric, reversible operator, dissipative mobility, PCE generator, constraint list, and projection ledger into one branch flow. It compresses accepted reversible, dissipative, KKT, and boundary-variation sector equations when their original branch certificates are already present; it is not an independent law that promotes open gates.
+
+*   **Borchers Reflection Certificate:** (Appendix F, Definition F.10.7d) Certificate $\mathfrak C_{\mathrm{Borch}}$ recording half-sided modular covariance, positivity, reflected extension, Haag-duality overlap, and cone-comparison data so that modular conjugation implements wedge reflection on a covered AQFT wedge family.
+
+*   **Criticality-Tuning Certificate:** (Appendix P, Definition P.8.9a.12.0c; Proposition P.8.9a.12.0d) Certificate $\mathfrak C_{\mathrm{crit}}$ recording a domain state family, predictive-performance observable, control coordinate, susceptibility, critical manifold, distance-to-criticality functional, finite-size-scaling record, and universality-class data. It is required before PU can claim marginal predictability, self-organized criticality, or critical exponents for a domain.
+
+*   **Golay-QEC Bootstrap Record:** (Appendix A, Definition A.0.1q.1; Theorem A.0.2a; Appendix Z, Proposition Z.13b.7) Finite record $\mathfrak C_{\mathrm{GQEC}}$ using the predictive-recovery Golay branch and punctured CSS $[[23,1,7]]$ witness to discharge the QEC compatibility certificate only when physical syndrome, recovery, threshold, and protected-gate ledgers are also accepted.
+
+*   **Predictive Complementarity Allocation Ledger:** (Section 4.5.2, Definition 14.1d; Proposition 14.1e) Certificate $\mathfrak C_{\mathrm{SW}}$ splitting a finite predictor's horizon budget into self-model, world-model, and shared costs. It yields the SPAP-near tradeoff $C_{\mathrm{world}}\le B_C-C_{\mathrm{sh}}-c_{\mathrm{SPAP}}\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$ for covered tasks.
+
+*   **Predictive Free-Energy Envelope Certificate:** (Appendix D, Definition D.6.5c; Proposition D.6.5d) Certificate $\mathfrak C_{\mathrm{Pred2}}$ under which $F_{\mathrm{pred}}=-V$ and a recorded viable running envelope provide the branch-level “second law of prediction” reading. It applies to the certified expectation or envelope, not to every lineage.
+
+*   **Predictive Generalized Second Law Certificate:** (Section 12.5.4, Definition 12.5.3l; Theorem 12.5.3m) Finite retained horizon-cut record $\mathfrak C_{\mathrm{PGSL}}$ under which generalized entropy is monotone by relative-entropy data processing. It supplies first-difference monotonicity; null convexity and Einstein-branch saturation require the separate $\mathfrak C_{\mathrm{NC}}$ record.
+
+*   **Predictive-Equivalence Ledger:** (Appendix M, Definition M.6.6a; Proposition M.6.6b) Certificate $\mathfrak C_{\mathrm{PEq}}$ recording when perspective-relative actuality, temporal access, action/entropy, finite-frontier, and curvature/source readings are projections of the same retained predictive-update cost ledger through already accepted unit bridges.
+
+*   **Reflexive-Charge Ledger:** (Appendix Q, Definition Q.0.7g.1; Proposition Q.0.7g.2) Finite loop-sector record $\mathfrak C_{\mathrm{ref}}$ with integer charge $q_{\mathrm{ref}}=k$ satisfying $N\ln2+\Delta=2\pi k$ on closed retained predictive loops. The charge is invariant under continuous deformations inside the recorded loop domain.
 
 *   **Assumption 1 (Context-Dependence):** (Section 9.1.2) ND-RID transition probabilities depend on local MPU aggregate state. Basis for CC hypothesis.
 

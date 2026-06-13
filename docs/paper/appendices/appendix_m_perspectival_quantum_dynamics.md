@@ -561,6 +561,19 @@ $$
 
 These branches are *parallel consequences* of SPAP, not sequential implications. Branch I proceeds through the structural thermodynamic cost $\varepsilon_0=\ln2$ and physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ to constrain how faithfully information can be preserved; Branch II proceeds through the computational complexity of the SPAP cycle to constrain how fast information can propagate. Both originate in the logical structure of self-referential prediction.
 
+
+**Definition M.6.6a (Predictive-Equivalence Ledger $\mathfrak C_{\mathrm{PEq}}$).** A predictive-equivalence ledger for a finite observer or observer-pair comparison is a forward-locked record
+$$
+\mathfrak C_{\mathrm{PEq}}
+=
+(S_A,S_B,C_{\mathrm{agg}}^A,C_{\mathrm{agg}}^B,\Sigma_A,\Sigma_B,\mathcal R_{\mathrm{time}},\mathcal R_{\mathrm{act}},\mathcal R_{\hbar},\mathcal R_c,\mathcal R_G,\Pi_{\mathrm{proj}},\text{overlap audit},\text{forward lock}),
+$$
+where $C_{\mathrm{agg}}^A,C_{\mathrm{agg}}^B$ are the retained aggregate-complexity records, $\Sigma_A,\Sigma_B$ are the perspective-state domains, $\mathcal R_{\mathrm{time}}$ records the temporal-access or temporal-grain comparison, $\mathcal R_{\mathrm{act}}$ records the actuality/definiteness comparison, $\mathcal R_{\hbar}$ records the action-entropy unit bridge of Appendix Q, $\mathcal R_c$ records the finite-frontier branch, $\mathcal R_G$ records the capacity/area or stress-energy bridge when curvature is claimed, and $\Pi_{\mathrm{proj}}$ states which sector projection is being read. The ledger does not assert a Lorentz-group action on perspective space; it records shared cost data and their accepted projections.
+
+**Proposition M.6.6b (Predictive Equivalence as a Projection Principle).** On a branch carrying $\mathfrak C_{\mathrm{PEq}}$, perspective-relative actuality, complexity-graded temporal access, action/energy phase, finite propagation, and curvature/source readings are admissible as projections of one retained predictive-update cost ledger only to the extent recorded by $\Pi_{\mathrm{proj}}$. In particular, $\hbar$ is consumed as the action-entropy exchange rate of Theorem Q.0.1 and Corollary Q.0.1, $c$ is consumed as the finite-frontier normalization of Theorem 46 and its branch refinements, and any gravitational reading consumes the Section 12 capacity/area/stress-energy bridge. The proposition therefore unifies the bookkeeping of the accepted projections; it does not make physical definiteness arbitrary, allow observers to choose laws by changing complexity, or replace the separate Hilbert, cone, KMS/Clausius, and gravity certificates.
+
+*Proof.* Each listed projection is already branch-defined elsewhere: perspective-relative actuality is the content of Lemma M.6.2 and Theorem M.6.2; temporal access is Corollary O.4.3; the action-entropy bridge is Appendix Q; finite propagation is Theorem 46; and the curvature/source reading is the Section 12 gravity branch. The ledger asserts that the same finite predictive-update cost record and unit bridges are being used before projecting to these sectors. Thus the conclusion is a consistency and compression statement over accepted records, not a new derivation of any missing sector gate. ∎
+
 ---
 
 ### Step-by-Step Justification
@@ -1894,6 +1907,8 @@ M_n\otimes\cdots\otimes M_0
 \tag{M.6.14a.3}
 $$
 
+**Process-tensor compatibility for reflected modular records.** Whenever $\mathfrak C_{\mathrm{Borch}}$ is invoked inside a perspectival branch, the reflection map is compared only against interventions contained in the already retained local past. The process-tensor record must show that replacing a branch by its reflected modular representative preserves the deterministic-control/no-signaling condition used elsewhere in this appendix. This prevents the reflected extension from being used as a hidden future-input channel.
+
 **Theorem M.6.14b (ND-RID Histories are Exactly Causal Process Tensors).** Every finite ND-RID history built from an initial state, retained CPTP update kernels, conditional instruments, and finite environment memory defines a unique process tensor satisfying Definition M.6.14a. Conversely, every positive operator satisfying (M.6.14a.2) defines a causally valid finite operational history on the retained instruments. Two histories are PPI-equivalent for the retained protocol family if and only if their process tensors give the same multilinear functional (M.6.14a.3) on that family.
 
 *Proof.* Compose the initial state, the finite ND-RID update channels, and the retained memory systems into the multilinear map that sends a sequence of intervention CP maps to the final probability. Applying the Choi-Jamiolkowski isomorphism to every input-output slot gives a unique operator $\Upsilon_{n:0}$. Complete positivity of each update and instrument implies positivity of the Choi operator. Trace preservation of the future update after summing over an intervention gives exactly the recursive partial-trace constraints (M.6.14a.2). This proves that every finite ND-RID history gives a process tensor.
@@ -1901,6 +1916,13 @@ $$
 Conversely, given a positive operator satisfying (M.6.14a.2), Equation (M.6.14a.3) defines nonnegative probabilities for CP instruments. The trace constraints ensure that summing over a complete instrument at any step removes that intervention without changing the earlier marginal, which is exactly the no-future-to-past signaling condition for a causal history. Therefore the operator defines a valid finite operational process.
 
 If two histories give the same process tensor on the retained instrument span, then (M.6.14a.3) gives the same probabilities for every retained finite protocol, so PPI identifies them. If they differ on some retained instrument sequence, the corresponding protocol distinguishes them and they are not PPI-equivalent. ∎
+
+**Corollary M.6.14b.1 (Local Threshold Arming as a Process-Tensor Control).** Let $A_j$ be a finite classical arming or stopping register at step $j$ whose value is a deterministic function of the retained local reduced process tensor, local ledger variables, and prior local records. Adjoining $A_j$ as a classical control system yields another causal process tensor satisfying Definition M.6.14a. If the post-arming outcome kernel is unchanged, the Born weights of Theorem 28a are unchanged. On the local CPTP branch of Postulate 3(i), such local arming preserves remote unconditional marginals by the same trace-preservation/no-signaling argument; Theorems 39 and 39a remain deterministic-endpoint and zero-error finite-window gates, not the source of this marginal-preservation claim.
+
+*Proof.* A deterministic finite control register is a classical CP instrument whose outcome is fixed by previously available local records. Composing that instrument with the retained process tensor preserves positivity and the partial-trace causality constraints (M.6.14a.2). Since the control is measurable with respect to the local past, summing over the controlled local instrument gives the same remote marginal on the local CPTP branch, while conditioning on an actualized local record only changes the locally selected branch. ∎
+
+**Remark M.6.14b.2 (No-Signaling Condition for Metered Actualization).** A metered trigger is evaluated only from records available in the branch's local past. The process tensor must remain invariant under changes to future choices once the retained meter record is fixed. This keeps a meter certificate from becoming a retrocausal trigger rule.
+
 
 **Corollary M.6.14c (Markov, Memory, and Indefinite-Order Gates).** On the finite process-tensor branch:
 
