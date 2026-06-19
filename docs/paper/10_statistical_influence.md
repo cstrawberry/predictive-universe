@@ -1,4 +1,4 @@
-# 10 Causality, Locality, and Statistical Influence
+# 10. Causality, Locality, and Statistical Influence
 
 The introduction of the Consciousness Complexity (CC) hypothesis (Section 9), particularly its proposed mechanism involving influence on quantum probabilities (Hypothesis 3) potentially mediated by non-local entanglement (Proposition 10), necessitates a careful examination of its compatibility with fundamental principles of causality and locality. This section defines the framework's operational stance on causality, derives a strict upper bound on deterministic CC endpoint forcing, introduces the resulting hypothesis regarding permissible statistical faster-than-light (FTL) influence, and analyzes why this statistical branch need not become a deterministic paradox channel. The analysis uses finite-window zero-error capacity, sample-complexity bounds, information-rate bounds, and the conditional emergent Algebraic Quantum Field Theory (AQFT) structure detailed in Appendix F.
 

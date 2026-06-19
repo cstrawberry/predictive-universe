@@ -1,6 +1,6 @@
-# 8 Emergence of Quantum Mechanical Formalism
+# 8. Emergence of Quantum Mechanical Formalism
 
-**Formal closure boundary.** The results in this section are effective-formalism results: they derive the quantum-mechanical Hilbert-space/Born-rule/GKSL structures from the stated MPU, PCE, refinement, and PPI quotient conditions. They do not remove the separate finite-response instantiation certificates used later to identify particular information-geometric structures with Standard Model fields or measured constants. When such a later certificate is absent or incomplete, the later sector keeps its branch, model, convention, validation, or open-target status without weakening the Hilbert/Born/GKSL closure proved here.
+**Formal closure boundary.** The results in this section are effective-formalism results on the MPU Hilbert branch. The SPAP-to-Born route has three separate layers: response-null context labels quotient away by PPI/PCE; finite-response payoff refinement gives additivity on the quotient; and the Born selector theorem fixes the only normalized positive additive quotient measure to the trace form. These results do not remove the separate finite-response instantiation certificates used later to identify particular information-geometric structures with Standard Model fields or measured constants. When such a later certificate is absent or incomplete, the later sector keeps its branch, model, convention, validation, or open-target status without weakening the Hilbert/Born/GKSL closure proved here.
 
 This section demonstrates that the standard mathematical formalism of Quantum Mechanics (QM) provides a consistent effective description for the dynamics and state representation of Minimal Predictive Units (MPUs), as defined and constrained by the principles established in the preceding sections of the Predictive Universe (PU) framework. The core QM features—complex Hilbert spaces, superposition, the Born rule, uncertainty relations, entanglement, and Schrödinger evolution—are shown to emerge from the operational requirements of the MPU's adaptive predictive cycle (Definition 4), particularly the Dual Dynamics (Section 7.3.3) acting on the Perspectival State (Definition 24), under the fundamental limitations imposed by self-reference (SPAP, Theorem 10, Theorem 11) and reflexive interaction (ND-RID, Definition 6; Reflexivity Constraint, Theorem 33).
 
@@ -103,7 +103,7 @@ $$
 $$
 The vector $\psi_\omega$ is cyclic because classes of the form $\pi_\omega(a)\psi_\omega=[a]$ span the dense subspace $\mathfrak A/\mathcal N_\omega\subset\mathcal H_\omega$. ∎
 
-**Theorem 8.2 (PCE Quotient Enforcement of Non-Contextuality at the PCE-Attractor).**
+**Theorem 8.2 (Idle-Context Quotient for Predictive Weights at the PCE-Attractor).**
 Let $\mathsf P_{\mathrm{PU}}$ be the finite-resolution protocol category of Appendix P.6.1b. For an effect $E$ appearing in a context $\Pi$, let $\mathcal R_{E,\Pi}$ be its operational response presheaf. A predictive weight assignment is a function
 $$
 \omega:E,\Pi\mapsto\omega(E\mid\Pi)
@@ -116,11 +116,11 @@ $$
 \qquad
 \lambda>0,
 $$
-where $\mathcal R$ is the response-presheaf risk and $\mathcal C_{\mathrm{ctx}}$ is the description cost of retaining context labels not distinguished by response presheaves. Then every PPI-admissible global minimizer of $\mathcal J$ descends to a non-contextual assignment
+where $\mathcal R$ is the response-presheaf risk and $\mathcal C_{\mathrm{ctx}}$ is the description cost of retaining context labels not distinguished by response presheaves. Then every PPI-admissible global minimizer of $\mathcal J$ descends to a non-contextual quotient assignment
 $$
 \omega(E\mid\Pi)=\omega([E]),
 $$
-where $[E]$ is the operational response class of $E$. Consequently, at the PCE-Attractor the predictive weights form a basis-independent frame function finitely additive on every orthogonal decomposition of the identity.
+where $[E]$ is the operational response class of $E$. This proves only the idle-label quotient step; additivity and Born uniqueness are separate claims below.
 
 *Proof.* Define an equivalence relation on admissible effect-context pairs by
 $$
@@ -146,56 +146,105 @@ $$
 $$
 with strict inequality whenever $\omega$ retained at least one unused context label. If strict, then $\mathcal J[\bar\omega]<\mathcal J[\omega]$, so $\omega$ cannot be a global minimizer. If equality, $\omega$ and $\bar\omega$ are the same PPI quotient object.
 
-Thus every PPI-admissible global minimizer is represented by the quotient assignment $\bar\omega([E])$, which depends only on the effect's operational response class and not on the context in which it appears. For orthogonal decompositions, payoff-refinement consistency gives finite additivity: if $P,Q$ are orthogonal, the coarse payoff event $P+Q$ and the refined mutually exclusive payoff events $P,Q$ represent the same response-complete decision problem, so
-$$
-\omega(P+Q)=\omega(P)+\omega(Q).
-$$
-Normalization and positivity follow from the probability-ledger interpretation. Hence the minimizer is a non-contextual finitely additive frame function. ∎
+Thus every PPI-admissible global minimizer is represented by the quotient assignment $\bar\omega([E])$, which depends only on the effect's operational response class and not on the context in which it appears. ∎
 
-**Theorem 8.3 (Gleason–Busch Representation).**
-Assume the predictive measure $\omega$ selected at the PCE-attractor is a normalized, positive, non-contextual frame function on the projection lattice of $\mathcal H_\omega$. Then:
-1. if $\dim \mathcal H_\omega \ge 3$, there exists a unique density operator $\rho$ on $\mathcal H_\omega$ such that
+**Lemma 8.2a (Finite-Response Additivity on the Quotient).**
+Work on the quotient event ledger supplied by Theorem 8.2. Assume finite-response payoff-refinement consistency: whenever a retained event $E$ is represented either coarsely or by a finite orthogonal refinement
 $$
-\omega(P)=\operatorname{tr}(\rho P)
-$$
-for every orthogonal projection $P$;
-2. if $\dim \mathcal H_\omega = 2$ and $\omega$ extends to a normalized additive measure on POVM effects, then there exists a unique density operator $\rho$ such that
-$$
-\omega(E)=\operatorname{tr}(\rho E)
-$$
-for every effect $E$.
-
-*Proof.* In dimension $\dim\mathcal H_\omega\ge 3$, the hypotheses say exactly that $\omega$ is a nonnegative normalized frame function on projections: for every orthogonal resolution of the identity $I=\sum_i P_i$,
-$$
-\sum_i \omega(P_i)=\omega(I)=1,
+E=\sum_{j=1}^n F_j,
 \qquad
-\omega(P_i)\ge 0.
+F_iF_j=0\quad(i\ne j),
 $$
-Gleason's theorem [Gleason 1957] therefore applies and yields a unique positive trace-class operator $\rho$ such that
+and both descriptions induce the same response-complete payoff problem, the POP value assigned to the payoff problem is invariant under the coarse/refined choice. Then every admissible predictive probability ledger on the quotient is finitely additive:
+$$
+\omega(E)=\sum_{j=1}^n\omega(F_j).
+$$
+In particular, for every complete orthogonal resolution $I=\sum_i P_i$,
+$$
+\sum_i\omega(P_i)=1,
+\qquad
+0\le\omega(P_i)\le1.
+$$
+
+*Proof.* Let $u$ be a payoff that assigns unit reward to occurrence of the coarse event $E$ and zero reward outside $E$. The same finite-response decision problem can be described coarsely by $E$ or finely by the mutually exclusive alternatives $F_1,\ldots,F_n$. Response-completeness says no admissible protocol can distinguish the two descriptions except by the response-null refinement label; Theorem 8.2 removes that label. POP/PCE payoff-refinement consistency therefore requires the expected payoff to agree in the two descriptions. The coarse ledger gives $\omega(E)$, while the refined ledger gives $\sum_j\omega(F_j)$. Hence $\omega(E)=\sum_j\omega(F_j)$. Taking $E=I$ gives normalization on complete resolutions, and positivity is part of the probability-ledger status. On the finite-dimensional MPU branch used below, this finite additivity condition is the complete additivity input needed for the Born selector. If an infinite-dimensional protocol envelope is used, the same statement is read with the directed-refinement continuity needed to pass from finite to countable additivity. ∎
+
+**Theorem 8.3 (Born Selector Theorem on the Quotient Hilbert Ledger).**
+Let $\mathcal H_\omega$ be the complex Hilbert carrier selected on the branch under consideration, and let $\omega$ be a normalized, positive, non-contextual, finitely additive predictive ledger on the quotient projection lattice supplied by Theorem 8.2 and Lemma 8.2a. On the finite-dimensional MPU branch this is sufficient; on an infinite-dimensional protocol envelope, assume the corresponding directed-refinement-continuous/countably additive extension.
+
+1. If $\dim\mathcal H_\omega\ge3$, there exists a unique density operator $\rho$ on $\mathcal H_\omega$ such that
 $$
 \omega(P)=\operatorname{tr}(\rho P)
 $$
-for every projection $P$. Evaluating at $P=I$ gives
-$$
-1=\omega(I)=\operatorname{tr}(\rho),
-$$
-so $\rho$ is a density operator.
-
-In dimension $2$, the projection-only version of Gleason's theorem does not apply. Under the additional assumption that $\omega$ extends to a normalized additive measure on all POVM effects, Busch's extension theorem [Busch 2003] applies and yields a unique density operator $\rho$ satisfying
+for every orthogonal projection $P$.
+2. If $\dim\mathcal H_\omega=2$ and $\omega$ extends to a normalized additive ledger on POVM effects, then there exists a unique density operator $\rho$ such that
 $$
 \omega(E)=\operatorname{tr}(\rho E)
 $$
 for every effect $E$.
+3. For a pure predictive ray $[\psi]$ with the calibration $\omega(P_\psi)=1$, where $P_\psi=|\psi\rangle\langle\psi|$, the density operator is forced to be $\rho=P_\psi$. Hence every rank-one outcome $P_i=|i\rangle_s\langle i|_s$ has the unique weight
+$$
+\omega(P_i)=\operatorname{tr}(P_\psi P_i)=|\langle i|\psi\rangle_s|^2.
+$$
 
-It remains to check uniqueness. If two density operators $\rho$ and $\sigma$ satisfy the same formulas on all rank-one projections $P_{\psi}=|\psi\rangle\langle\psi|$, then
+*Proof.* In finite dimension $\dim\mathcal H_\omega\ge3$, Theorem 8.2 removes idle context labels and Lemma 8.2a gives a normalized nonnegative frame function on projections: for every orthogonal resolution of the identity $I=\sum_i P_i$,
 $$
-\langle \psi,(\rho-\sigma)\psi\rangle
-=
-\operatorname{tr}\big((\rho-\sigma)P_\psi\big)
-=
-0
+\sum_i\omega(P_i)=\omega(I)=1,
+\qquad
+\omega(P_i)\ge0.
 $$
-for every unit vector $|\psi\rangle$. The polarization identity then implies all matrix elements of $\rho-\sigma$ vanish, hence $\rho=\sigma$. The same argument applies in the effect-algebra case because rank-one effects separate trace-class operators. ∎
+Gleason's theorem [Gleason 1957] therefore applies and yields a positive trace-class operator $\rho$ such that
+$$
+\omega(P)=\operatorname{tr}(\rho P)
+$$
+for every projection $P$. Evaluating at $P=I$ gives $\operatorname{tr}\rho=1$, so $\rho$ is a density operator.
+
+In dimension $2$, projection-valued frame functions alone do not exclude all dispersion-free assignments. Under the stated POVM-level additivity hypothesis, Busch's extension theorem applies and yields the same trace representation on effects [Busch 2003]. Effective two-dimensional PU sectors also inherit the trace rule by conditional descent from the global MPU ledger when they are embedded in the $d_0\ge8$ branch, as in Lemma G.1.6a.
+
+The density operator is unique. If $\rho$ and $\sigma$ agree on all rank-one projectors, then for every unit vector $|\phi\rangle$,
+$$
+\langle\phi,(\rho-\sigma)\phi\rangle
+=
+\operatorname{tr}\big((\rho-\sigma)|\phi\rangle\langle\phi|\big)
+=0.
+$$
+The polarization identity gives every matrix element of $\rho-\sigma$, hence $\rho=\sigma$.
+
+For a pure predictive ray, the sharp ray-identification event $P_\psi$ is certain by the calibration $\omega(P_\psi)=1$. The trace representation gives
+$$
+1=\omega(P_\psi)=\operatorname{tr}(\rho P_\psi),
+\qquad
+0=\omega(I-P_\psi)=\operatorname{tr}(\rho(I-P_\psi)).
+$$
+Since $\rho\ge0$ and $I-P_\psi\ge0$, the second equality forces the support of $\rho$ to lie in $\operatorname{Ran}(P_\psi)$. With $\operatorname{tr}\rho=1$, this implies $\rho=P_\psi$. Therefore
+$$
+\omega(P_i)
+=
+\operatorname{tr}(P_\psi P_i)
+=
+\operatorname{tr}(|\psi\rangle\langle\psi|i\rangle_s\langle i|_s)
+=|\langle i|\psi\rangle_s|^2.
+$$
+This is the squared-amplitude Born weight.
+
+No alternative normalized additive quotient measure remains. Gleason/Busch already excludes any non-trace-form assignment. For the common power-family alternative
+$$
+p_i^{(\gamma)}=\frac{|c_i|^\gamma}{\sum_j |c_j|^\gamma},
+$$
+finite-response refinement consistency kills every $\gamma\ne2$ directly. In a three-dimensional context take
+$$
+|\psi\rangle=\frac{1}{\sqrt2}|e_1\rangle+\frac12|e_2\rangle+\frac12|e_3\rangle,
+\qquad
+B=\operatorname{span}\{e_2,e_3\}.
+$$
+The coarse context $\{P_{e_1},P_B\}$ gives $p^{(\gamma)}(B)=1/2$ by symmetry. The refined context $\{P_{e_1},P_{e_2},P_{e_3}\}$ gives
+$$
+p^{(\gamma)}(P_{e_2})+p^{(\gamma)}(P_{e_3})
+=
+\frac{2(1/2)^\gamma}{(1/\sqrt2)^\gamma+2(1/2)^\gamma}
+=
+\frac{2}{2^{\gamma/2}+2}.
+$$
+Additivity requires $2/(2^{\gamma/2}+2)=1/2$, hence $2^{\gamma/2}=2$ and $\gamma=2$. Thus even this explicit family preserves the quotient refinement ledger only at the Born exponent. ∎
 
 **Theorem 8.4 (Complex Hilbert-Space Uniqueness under Local Tomography and Minimal Phase Redundancy).**
 Let the predictive state space be a complete finite-dimensional inner-product space over $\mathbb D\in\{\mathbb R,\mathbb C,\mathbb H\}$. Assume:
@@ -372,19 +421,19 @@ Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\ra
 
 **Proposition 7 (Emergence of the Born Rule)**
 
-By Theorem 8.2, Theorem 8.6, and Appendix G.1, the PCE-optimal predictive weights form a normalized, positive, non-contextual, additive functional on complete resolutions of the identity and are continuous under directed refinements. Under these conditions, and given that the minimal Appendix Z branch satisfies $d_0 = 8 \geq 3$ (Theorem Z.2; Theorem 23 gives the lower bound), the probability $P(i | S(t), s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely fixed to the Born rule:
+By Theorem 8.2, Lemma 8.2a, Theorem 8.3, and Appendix G.1, the PCE-optimal predictive weights first descend to the response quotient, then satisfy finite additivity under payoff refinement, and are finally selected uniquely by the Born selector theorem. Given that the minimal Appendix Z branch satisfies $d_0=8\ge3$ (Theorem Z.2; Theorem 23 gives the lower bound), the probability $P(i|S(t),s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely fixed to the Born rule:
 $$
-\sum_i |i\rangle_s \langle i|_s = I \quad \text{(49)}
+\sum_i |i\rangle_s\langle i|_s=I \quad \text{(49)}
 $$
 $$
-P(i | S(t), s) = |\langle i | S(t) \rangle_s|^2 \quad \text{(50)}.
+P(i|S(t),s)=|\langle i|S(t)\rangle_s|^2 \quad \text{(50)}.
 $$
 
-*Proof.* Because $d_0=8\ge 3$, Theorem 8.3 applies to the normalized, positive, non-contextual predictive weights. Hence there exists a unique density operator $\rho$ such that
+*Proof.* Because $d_0=8\ge3$, Theorem 8.3 applies to the normalized, positive, non-contextual, finitely additive quotient ledger. Hence there exists a unique density operator $\rho$ such that
 $$
 \omega(P)=\operatorname{tr}(\rho P)
 $$
-for every projection $P$ on $\mathcal H_0$. For a pure predictive state $S(t)=|\psi\rangle$, take
+for every projection $P$ on $\mathcal H_0$. For a pure predictive state $S(t)=|\psi\rangle$, the ray-calibration clause of Theorem 8.3 forces
 $$
 \rho=|\psi\rangle\langle\psi|.
 $$
@@ -399,51 +448,25 @@ P(i|S(t),s)=\omega(P_i)=\operatorname{tr}(\rho P_i)
 =\langle\psi|i\rangle_s\langle i|\psi\rangle_s
 =|\langle i|\psi\rangle_s|^2.
 $$
-This is Equation (50). Uniqueness follows from the uniqueness clause in Theorem 8.3. ∎
+This is Equation (50). Theorem 8.3 also excludes non-Born additive alternatives on the quotient ledger. ∎
 
-**Theorem 8.6 (PU probability from PCE non‑contextual additivity).**
-PCE motivates the non‑contextual additivity constraints; under these conditions, Gleason/Busch fix the quadratic (Born) form.
+**Theorem 8.6 (SPAP-to-Born Reconstruction Status and No-Alternative Selector).**
+The SPAP-to-Born route consists of three claims with distinct burdens:
 
-Assume:
-(N0) **Normalization and positivity:** $\omega(\mathbf 1)=1$ and $0\le \omega(E)\le 1$ for every effect $E$.
-(NC) **Context symmetry:** the predictive weight assigned to an effect $E$ depends only on $E$ (and not on which resolution $\{E_i\}$ it appears in).
-(i) For any orthogonal family $\{E_i\}$ of effects with $\sum_i E_i=\mathbf 1$, the predictive weights satisfy additivity $\omega(\sum_i E_i)=\sum_i \omega(E_i)$.
-(ii) Invariance under predictive refinements (PCE): if $E=\sum_j F_j$ is a refinement, $\omega(E)=\sum_j \omega(F_j)$, and $\omega$ is continuous under directed refinements.
-Then for $\dim\mathcal H_\omega\ge3$, there exists a density operator $\rho$ such that [Gleason 1957; Busch 2003]
+1. **Idle-context quotient:** response-null context labels quotient away by Theorem 8.2.
+2. **Finite-response additivity:** payoff-refinement consistency makes the quotient ledger finitely additive by Lemma 8.2a.
+3. **Born selector:** on the complex Hilbert branch with $d_0\ge8$, Theorem 8.3 uniquely fixes the normalized positive additive quotient ledger to
+$$
+\omega(E)=\operatorname{tr}(\rho E),
+$$
+and for a pure ray $S(t)=|\psi\rangle$ fixes outcome weights to
+$$
+P(i|S(t),s)=|\langle i|\psi\rangle_s|^2.
+$$
 
-$$
-\omega(E)=\operatorname{tr}(\rho E) \quad \text{for all effects }E.
-$$
+Thus SPAP alone does not prove all of quantum mechanics. SPAP supplies the deterministic-closure obstruction and the need for a finite predictive ledger; PPI/PCE supply the quotient and additivity layer; Gleason/Busch supply the uniqueness selector on the Hilbert carrier. Under these stated branch assumptions, the squared-amplitude Born measure is not one member of a family: every normalized positive additive quotient measure is the trace-form measure, and the pure-ray trace form is exactly squared amplitude.
 
-For qubits ($\dim\mathcal H_\omega=2$), the same holds provided additivity is imposed for all POVM refinements (a Busch-strength assumption [Busch 2003]) together with (N0).
-
-*Proof.* Restrict first to orthogonal projections. By (NC), the value assigned to a projection depends only on the projection itself. By (N0) and (i), for every orthogonal decomposition of the identity $\mathbf 1=\sum_i P_i$ one has
-$$
-\sum_i \omega(P_i)=\omega(\mathbf 1)=1,
-\qquad
-0\le \omega(P_i)\le 1,
-$$
-so the restriction $P\mapsto \omega(P)$ is a normalized nonnegative frame function on the projection lattice.
-
-For $\dim\mathcal H_\omega\ge3$, Gleason's theorem [Gleason 1957] applies to this normalized frame function and yields a unique positive trace-class operator $\rho$ with $\operatorname{tr}\rho=1$ such that
-$$
-\omega(P)=\operatorname{tr}(\rho P)
-$$
-for every projection $P$.
-
-Now consider arbitrary effects. Hypotheses (N0) and (ii) imply that whenever a POVM satisfies $\mathbf 1=\sum_i E_i$, one has
-$$
-\sum_i \omega(E_i)=\omega(\mathbf 1)=1,
-$$
-and the positivity clause in (N0) gives $0\le \omega(E_i)\le 1$ for each $i$. Thus $\omega$ is a normalized positive generalized probability measure on the effect algebra, with refinement invariance providing the required consistency under coarse-graining. Busch's extension [Busch 2003] therefore applies and gives
-$$
-\omega(E)=\operatorname{tr}(\rho E)
-$$
-for every effect $E$.
-
-In the qubit case $\dim\mathcal H_\omega=2$, the projection-only form of Gleason is insufficient, but Busch's theorem still applies once POVM-level additivity is assumed together with (N0). Hence the same trace representation holds in dimension two under the stated Busch-strength hypothesis. ∎
-
-This theorem formalizes the argument of Appendix G.1. The non-contextuality and additivity premises follow from Lemma G.1.1b together with Theorem 8.2, which selects basis-independent (non-contextual) minimizers at the PCE-Attractor; thus (i)–(ii) hold for the effective description relevant to PU dynamics. The Born rule probability assignment $P(i | S(t), s) = \mathrm{tr}(|\psi\rangle\langle\psi| \cdot |i\rangle_s\langle i|_s) = |\langle i | \psi \rangle_s|^2$ (Equation 50) therefore emerges as the unique measure reflecting the optimal allocation of predictive resources determined by the framework's foundational optimization principles.
+*Proof.* Claim 1 is Theorem 8.2. Claim 2 is Lemma 8.2a. Claim 3 is Theorem 8.3. The final statement follows because Theorem 8.3 proves uniqueness of the density operator representing any admissible quotient ledger and also proves that the common normalized power alternatives $p_i^{(\gamma)}\propto |c_i|^\gamma$ violate coarse/refined additivity unless $\gamma=2$. ∎
 
 
 **8.4 Derivation of Uncertainty Relations**

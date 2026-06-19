@@ -1,4 +1,4 @@
-# 5 Complexity Thresholds: Operational Threshold and Horizon Constant
+# 5. Complexity Thresholds: Operational Threshold and Horizon Constant
 
 Having established the logical limits on prediction (SPAP, Theorem 10; Theorem 11) and the notion of **Predictive Physical Complexity** $C_P$ (Equation 1), this section formalizes two distinct complexity thresholds within the PU framework. The **Operational Threshold** $C_{op}$ (Definition 13) is the minimum $C_P$ required for the *full adaptive predictive loop* (Definition 4) to achieve functional viability (prediction better than chance). The **Horizon Constant** $K_0$ (Theorem 15) is the fixed, minimal complexity required to instantiate the *core logic* of the self‑referential paradox (SPAP) that is necessarily embedded, as a sub‑dynamic, within the operational loop. We prove the relationship $C_{op}\ge K_0$ (Corollary 3) and discuss the distinct physical roles of these thresholds.
 

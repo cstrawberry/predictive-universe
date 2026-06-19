@@ -1,4 +1,4 @@
-# 14 Discussion
+# 14. Discussion
 
 This section provides a synthesis and interpretation of the Predictive Universe (PU) framework presented in this paper. We summarize the core elements, explore its philosophical implications, compare it to existing approaches, acknowledge its limitations, and suggest directions for future research.
 

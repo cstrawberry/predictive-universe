@@ -4319,7 +4319,7 @@ $$|V_{cb}|_{\mathrm{exp}} = 0.0405 \pm 0.0010$$
 
 |Quantity|Theory|Experiment |Deviation|
 |:-------|:----:|:-------------:|:-------:|
-|$\vert V_{cb}\vert$ |0.0407|0.0405 ± 0.0010|+0.2σ |
+|$\lvert V_{cb}\rvert$ | $0.0407$ | $0.0405 \pm 0.0010$ | $+0.2\sigma$ |
 
 ∎
 
@@ -4374,7 +4374,7 @@ $$|V_{ub}|_{\mathrm{exp}} = (3.82 \pm 0.24) \times 10^{-3}$$
 
 |Quantity|Theory |Experiment |Deviation|
 |:-------|:-----:|:---------------:|:-------:|
-|$\vert V_{ub}\vert$ |0.00392|0.00382 ± 0.00024|+0.4σ |
+|$\lvert V_{ub}\rvert$ | $0.00392$ | $0.00382 \pm 0.00024$ | $+0.4\sigma$ |
 
 **Corollary T.48.1** (Topological Origin of Interference Sign). *The destructive (minus) sign in the interference formula arises because:*
 
@@ -4513,13 +4513,13 @@ $$|V_{us}|_{\mathrm{exp}} = 0.2243 \pm 0.0008$$
 
 |Quantity|Theory|Experiment |Deviation|
 |:-------|:----:|:-------------:|:-------:|
-|$\vert V_{us}\vert$ |0.2261|0.2243 ± 0.0008|+2.3σ |
+|$\lvert V_{us}\rvert$ | $0.2261$ | $0.2243 \pm 0.0008$ | $+2.3\sigma$ |
 
 ∎
 
 **Remark T.52.1: Sensitivity to Stiffness Ratio.** *The predicted $\vert V_{us}\vert$ depends on the stiffness ratio $\kappa_d/\kappa_u$. For $c_d/c_u$ in the range [1.00, 1.02] from Theorem T.38:*
 
-| $c_d/c_u$ | $\kappa_d/\kappa_u$ | $\theta_{\text{vac}}$ | $\theta_{\text{frustration}}$ | $\vert V_{us}\vert$ |
+| $c_d/c_u$ | $\kappa_d/\kappa_u$ | $\theta_{\text{vac}}$ | $\theta_{\text{frustration}}$ | $\lvert V_{us}\rvert$ |
 |:---------:|:-------------------:|:---------------------:|:-----------------------------:|:----------:|
 | 1.00 | 1.00 | 105.00° | 15.00° | 0.2241 |
 | 1.01 | 1.02 | 105.15° | 15.15° | 0.2261 |
@@ -4545,7 +4545,7 @@ $$|V_{ud}|_{\mathrm{exp}} = 0.97373 \pm 0.00031$$
 
 |Quantity|Theory|Experiment|Deviation|
 |:-------|:----:|:--------:|:-------:|
-| $\vert V_{ud}\vert$ |0.9741 |
+| $\lvert V_{ud}\rvert$ | $0.9741$ | $0.97373 \pm 0.00031$ | $+0.00037$ ($1.2\sigma$) |
 
 ∎
 
@@ -7282,7 +7282,7 @@ $$|V_{us}|_{\text{pred}} = \frac{\sqrt{3}}{2} \times \sin(15.15°) \times 0.9989
 
 The predicted $\vert V_{us}\vert$ depends on the stiffness ratio $\kappa_d/\kappa_u$. For $c_d/c_u$ in the range [1.00, 1.02] from Theorem T.38:
 
-| $c_d/c_u$ | $\kappa_d/\kappa_u$ | $\theta_{\text{vac}}$ | $\theta_{\text{frustration}}$ | $\vert V_{us}\vert$ |
+| $c_d/c_u$ | $\kappa_d/\kappa_u$ | $\theta_{\text{vac}}$ | $\theta_{\text{frustration}}$ | $\lvert V_{us}\rvert$ |ert$ |
 |:---------:|:-------------------:|:---------------------:|:-----------------------------:|:----------:|
 | 1.00 | 1.00 | 105.00° | 15.00° | 0.2241 |
 | 1.01 | 1.02 | 105.15° | 15.15° | 0.2261 |

@@ -511,7 +511,7 @@ The perspectival resolution of Wigner's Friend extends a conceptual program init
 | Events have frame-dependent time ordering | Outcomes have perspective-dependent actuality |
 | Lorentz group connects frames | $G_{\text{persp}}$ kernel connects perspectives |
 | One Minkowski spacetime | One MPU network |
-| Spacetime interval $ds^2$ invariant | Amplitude $|\psi(t)\rangle$ and Born probabilities invariant |
+| Spacetime interval $ds^2$ invariant | Amplitude $\lvert\psi(t)\rangle$ and Born probabilities invariant |
 | Light postulate + relativity principle | POP + PCE + SPAP |
 
 **Structural Correspondence M.6.4 (Relativistic Parallel).** The logical structure of perspectival quantum mechanics stands to the measurement problem as special relativity stands to pre-relativistic simultaneity. In both cases:
@@ -1353,7 +1353,7 @@ The theorem is independent of $\tau$, because Definition M.10.3 assigns $\mu_S$ 
 | Depends on content? | No | Parametrically | No | No | No | Yes (Thm M.10.2) |
 | Cost structure | Flat ($k_BT\ln 2$/bit) | None intrinsic | None intrinsic | Flat (per qubit) | Computational | Content-dependent, divergent (Thm M.10.3) |
 | Measurability | Symmetric | Symmetric | Sym. uncomputable | Symmetric | Symmetric | Asymmetric: downward only (Thm M.10.5) |
-| Can diverge? | No ($\leq \ln|\mathcal{X}|$) | No (regular models) | No (up to constant) | No ($\leq \ln d$) | No (bounded by system size) | Yes, to $\infty$ (Thm M.10.4) |
+| Can diverge? | No ($\leq \ln\lvert\mathcal{X}\rvert$) | No (regular models) | No (up to constant) | No ($\leq \ln d$) | No (bounded by system size) | Yes, to $\infty$ (Thm M.10.4) |
 | Physical source | Landauer's principle | Cramer-Rao theory | Computability theory | Quantum mechanics | Causal integration | SPAP + PPI (Thms 10, 31) |
 
 **Summary of Results (§M.6.10).**

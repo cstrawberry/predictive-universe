@@ -1,4 +1,4 @@
-# 11 Emergence of Spacetime Geometry (Operational Continuum Branch)
+# 11. Emergence of Spacetime Geometry (Operational Continuum Branch)
 
 **Placement of D4 data in the spacetime ledger.** The D4 witness does not replace the Lorentzian cone or second-order certificates. It may feed the continuum-recovery side of the spacetime ledger, while $\mathfrak C_{\mathrm{cone}}$, $\mathfrak C_2$, and $\mathfrak C_{\mathrm{sig}}$ still determine the operational cone, second-order closure, and signature branch.
 

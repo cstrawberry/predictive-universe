@@ -123,7 +123,7 @@
 *   Caves, C. M., Fuchs, C. A., Manne, K. K., & Renes, J. M. (2004). Gleason-type derivations of the quantum probability rule for generalized measurements. *Foundations of Physics*, *34*(2), 193–209. DOI: 10.1023/B\:FOOP.0000019581.00318.a5 
 *   Cesa-Bianchi, N., & Lugosi, G. (2006). *Prediction, Learning, and Games*. Cambridge University Press.
 *   Chalmers, D. J. (1995). Facing up to the problem of consciousness. *Journal of Consciousness Studies*, *2*(3), 200–219.
-*   Chamseddine, A. H., & Connes, A. (1997). The spectral action principle. *Communications in Mathematical Physics*, *186*, 731–750. DOI: 10.1007/s002200050126
+*   Chamseddine, A. H., & Connes, A. (1997). The spectral action principle. *Communications in Mathematical Physics*, *186*, 731–750. DOI: 10.1007/s002200050126. arXiv:hep-th/9606001.
 *   Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. Oxford University Press.
 *   Cheeger, J., & Ebin, D. G. (1975). *Comparison Theorems in Riemannian Geometry*. North-Holland.
 *   Cheeger, J. (1999). Differentiability of Lipschitz functions on metric measure spaces. *Geometric & Functional Analysis*, *9*(3), 428–517. DOI: 10.1007/s000390050094
@@ -268,9 +268,10 @@
 *   Gelfond, A. O. (1934). Sur le septième problème de Hilbert. *Izvestiya Akademii Nauk SSSR*, *7*, 623–630.
 *   Gell-Mann, M. (1994). *The Quark and the Jaguar: Adventures in the Simple and the Complex*. W. H. Freeman.
 *   Georgi, H. (1999). *Lie Algebras in Particle Physics: From Isospin to Unified Theories* (2nd ed.). Westview Press.
-*   Georgi, H., & Glashow, S. L. (1974). Unity of all elementary-particle forces. *Physical Review Letters*, *32*(8), 438–441.
+*   Georgi, H., & Glashow, S. L. (1974). Unity of all elementary-particle forces. *Physical Review Letters*, *32*(8), 438–441. DOI: 10.1103/PhysRevLett.32.438.
 *   Gibbons, G. W., & Hawking, S. W. (1977). Cosmological event horizons, thermodynamics, and particle creation. *Physical Review D*, *15*(10), 2738–2751. DOI: 10.1103/PhysRevD.15.2738
 *   Gibrat, R. (1931). *Les inégalités économiques*. Librairie du Recueil Sirey.
+*   Ghirardi, G. C., Rimini, A., & Weber, T. (1986). Unified dynamics for microscopic and macroscopic systems. *Physical Review D*, *34*(2). DOI: 10.1103/PhysRevD.34.470.
 *   Gildener, E., & Weinberg, S. (1976). Symmetry breaking and scalar bosons. *Physical Review D*, *13*(12), 3333–3341. DOI: 10.1103/PhysRevD.13.3333 
 *   Gelfand, S. B., & Mitter, S. K. (1991). Recursive stochastic algorithms for global optimization in $\mathbb{R}^d$. *SIAM Journal on Control and Optimization*, *29*(5), 999–1018. DOI: 10.1137/0329055
 *   Gleason, A. M. (1957). Measures on the closed subspaces of a Hilbert space. *Journal of Mathematics and Mechanics*, *6*(4), 885–893. DOI: 10.1512/iumj.1957.6.56050
@@ -283,7 +284,7 @@
 *   Goodman, R., & Wallach, N. R. (2009). *Symmetry, Representations, and Invariants*. Springer.
 *   Gorini, V., Kossakowski, A., & Sudarshan, E. C. G. (1976). Completely positive dynamical semigroups of N-level systems. *Journal of Mathematical Physics*, *17*(5), 821–825. DOI: 10.1063/1.522979 
 *   Gottesman, D. (1998). A Theory of Fault-Tolerant Quantum Computation. *Physical Review A*, *57*(1), 127–137. DOI: 10.1103/PhysRevA.57.127
-*   Graham, P. W., Irastorza, I. G., Lamoreaux, S. K., Lindner, A., & van Bibber, K. A. (2015). Experimental searches for the axion and axion-like particles. *Annual Review of Nuclear and Particle Science*, *65*, 485–514. DOI: 10.1146/annurev-nucl-102014-022120
+*   Graham, P. W., Irastorza, I. G., Lamoreaux, S. K., Lindner, A., & van Bibber, K. A. (2015). Experimental searches for the axion and axion-like particles. *Annual Review of Nuclear and Particle Science*, *65*, 485–514. DOI: 10.1146/annurev-nucl-102014-022120. arXiv:1602.00039.
 *   Gray, A., & Vanhecke, L. (1979). Riemannian geometry as determined by the volumes of small geodesic balls. *Acta Mathematica*, *142*, 157–198. DOI: 10.1007/BF02395060
 *   Griesmer, J. H. (1960). A bound for error-correcting codes. *IBM Journal of Research and Development*, *4*(5), 532–542. DOI: 10.1147/rd.45.0532
 *   Griess, R. L. (1982). The friendly giant. *Inventiones Mathematicae*, *69*, 1–102.
@@ -299,7 +300,7 @@
 *   Hall, B. C. (2015). *Lie Groups, Lie Algebras, and Representations* (2nd ed.). Springer. DOI: 10.1007/978-3-319-13467-3
 *   Hameroff, S. (1998). Quantum computation in brain microtubules? The Penrose-Hameroff 'Orch OR' model of consciousness. *Philosophical Transactions of the Royal Society A*, *356*(1743), 1869–1896.
 *   Hameroff, S. (2012). How quantum brain biology can rescue conscious free will. *Frontiers in Integrative Neuroscience*, *6*, 93.
-*   Hameroff, S., & Penrose, R. (2014). Consciousness in the universe: A review of the 'Orch OR' theory. *Physics of Life Reviews*, *11*(1), 39–78.
+*   Hameroff, S., & Penrose, R. (2014). Consciousness in the universe: A review of the 'Orch OR' theory. *Physics of Life Reviews*, *11*(1), 39–78. DOI: 10.1016/j.plrev.2013.08.002.
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
 *   Hamming, R. W. (1950). Error detecting and error correcting codes. *Bell System Technical Journal*, *29*(2), 147–160. DOI: 10.1002/j.1538-7305.1950.tb00463.x
 *   Halsey, T. C., Jensen, M. H., Kadanoff, L. P., Procaccia, I., & Shraiman, B. I. (1986). Fractal measures and their singularities: The characterization of strange sets. *Physical Review A*, *33*(2), 1141–1151. DOI: 10.1103/PhysRevA.33.1141
@@ -422,7 +423,7 @@
 *   Landau, L. D., & Lifshitz, E. M. (1975). *The Classical Theory of Fields* (4th ed.). Pergamon Press.
 *   Landauer, R. (1961). Irreversibility and heat generation in the computing process. *IBM Journal of Research and Development*, *5*(3), 183–191. DOI: 10.1147/rd.53.0183
 *   Landon, L. B., Karasinski, J. A., Morissette, L. G., McTigue, K. R., Parisi, M. E., Wu, S.-C., & Panontin, T. L. (2025). *Assessment of the State of Communication Delay Research in Preparation for Missions Beyond Low Earth Orbit*. NASA/TM–20250003885.
-*   Langacker, P. (1981). Grand unified theories and proton decay. *Physics Reports*, *72*(4), 185–385.
+*   Langacker, P. (1981). Grand unified theories and proton decay. *Physics Reports*, *72*(4), 185–385. DOI: 10.1016/0370-1573(81)90059-4.
 *   Langacker, P. (2010). *The Standard Model and Beyond*. CRC Press.
 *   LaSalle, J. P. (1960). Some extensions of Liapunov’s second method. *IRE Transactions on Circuit Theory*, *7*(4), 520–527. DOI: 10.1109/TCT.1960.1086720
 *   Le Cam, L., & Yang, G. L. (2000). *Asymptotics in Statistics: Some Basic Concepts* (2nd ed.). Springer. DOI: 10.1007/978-1-4612-1166-2
@@ -455,7 +456,7 @@
 *   Litim, D. F. (2001). Optimized renormalization group flows. *Physical Review D*, *64*, 105007. DOI: 10.1103/PhysRevD.64.105007
 *   Lloyd, S. (1997). Capacity of the noisy quantum channel. *Physical Review A*, *55*(3), 1613.
 *   Lloyd, S. (2000). Ultimate physical limits to computation. *Nature*, *406*(6799), 1047–1054.
-*   Loll, R. (2019). Quantum Gravity from Causal Dynamical Triangulations: A Review. *Classical and Quantum Gravity*, *37*(1), 013002. DOI: 10.1088/1361-6382/ab579e
+*   Loll, R. (2020). Quantum gravity from causal dynamical triangulations: A review. *Classical and Quantum Gravity*, *37*(1), 013002. DOI: 10.1088/1361-6382/ab57c7. arXiv:1905.08669.
 *   Lott, J., & Villani, C. (2009). Ricci curvature for metric-measure spaces via optimal transport. *Annals of Mathematics*, *169*(3), 903–991. DOI: 10.4007/annals.2009.169.903
 *   Lovelock, D. (1971). The Einstein tensor and its generalizations. *Journal of Mathematical Physics*, *12*(3), 498–501. DOI: 10.1063/1.1665613
 *   Lüders, G. (1954). On the equivalence of invariance under time reversal and under particle-antiparticle conjugation for relativistic field theories. *Danske Videnskabernes Selskab, Mat.-Fys. Medd.*, *28*(5), 1–17.
@@ -467,7 +468,7 @@
 *   Machacek, M. E., & Vaughn, M. T. (1984). Two-loop renormalization group equations. Nucl. Phys. B 236, 221.
 *   MAGIC Collaboration (Albert, J., et al.) (2008). Probing quantum gravity using photons from a flare of the active galactic nucleus Markarian 501 observed by the MAGIC telescope. *Physics Letters B*, *668*(4), 253–257. DOI: 10.1016/j.physletb.2008.08.053
 *   Maki, Z., Nakagawa, M., & Sakata, S. (1962). Remarks on the unified model of elementary particles. *Progress of Theoretical Physics*, *28*, 870–880.
-*   Maldacena, J. (1999). The large-N limit of superconformal field theories and supergravity. *International Journal of Theoretical Physics*, *38*(4), 1113–1133.
+*   Maldacena, J. (1999). The large-N limit of superconformal field theories and supergravity. *International Journal of Theoretical Physics*, *38*(4), 1113–1133. DOI: 10.1023/A:1026654312961. arXiv:hep-th/9711200.
 *   Maldacena, J. (2003). Non-Gaussian features of primordial fluctuations in single field inflationary models. *Journal of High Energy Physics*, *2003*(05), 013.
 *   Manasse, F. K., & Misner, C. W. (1963). Fermi normal coordinates and some basic concepts in differential geometry. *Journal of Mathematical Physics*, *4*, 735–745.
 *   Mandelbrot, B. (1953). An informational theory of the statistical structure of language. In W. Jackson (Ed.), *Communication Theory*, pp. 486–502. Butterworths.
@@ -490,6 +491,7 @@
 *   Milnor, J. W., & Stasheff, J. D. (1974). *Characteristic Classes*. Princeton University Press.
 *   Minty, G. J. (1962). Monotone (nonlinear) operators in Hilbert space. *Duke Mathematical Journal*, *29*(3), 341–346. DOI: 10.1215/S0012-7094-62-02933-2 
 *   Misner, C. W., Thorne, K. S., & Wheeler, J. A. (1973). *Gravitation*. W. H. Freeman.
+*   Mohr, P. J., Newell, D. B., Taylor, B. N., & Tiesinga, E. (2025). CODATA recommended values of the fundamental physical constants: 2022. *Reviews of Modern Physics*, *97*(2), 025002. DOI: 10.1103/RevModPhys.97.025002.
 *   Mosco, U. (1969). Convergence of convex sets and of solutions of variational inequalities. *Advances in Mathematics*, *3*(4), 510–585.
 *   Mittelmann, H. D., & Vallentin, F. (2010). High-accuracy semidefinite programming bounds for kissing numbers. *Experimental Mathematics*, *19*(2), 175–179. DOI: 10.1080/10586458.2010.10129070. arXiv:0902.1105.
 *   Mordell, L. J. (1938). The definite quadratic forms in eight variables with determinant unity. *Journal de Mathématiques Pures et Appliquées*, *17*, 41–46.
@@ -533,8 +535,10 @@
 *   Paris, M. G. A., & Řeháček, J. (Eds.). (2004). *Quantum State Estimation* (Lecture Notes in Physics, Vol. 649). Springer.
 *   Particle Data Group (Workman, R. L., *et al.*) (2022). Review of Particle Physics. *Progress of Theoretical and Experimental Physics*, *2022*(8), 083C01. DOI: 10.1093/ptep/ptac097
 *   Particle Data Group (Navas, S., *et al.*) (2024). Review of Particle Physics. *Physical Review D*, *110*, 030001. DOI: 10.1103/PhysRevD.110.030001.
+*   Particle Data Group. (2026). *Review of Particle Physics 2026 and pdgLive*. Lawrence Berkeley National Laboratory. URL: https://pdg.lbl.gov/.
 *   Pavliotis, G. A. (2014). *Stochastic Processes and Applications: Diffusion Processes, the Fokker-Planck and Langevin Equations*. Springer. DOI: 10.1007/978-1-4939-1323-7
 *   Peccei, R. D., & Quinn, H. R. (1977). CP conservation in the presence of pseudoparticles. *Physical Review Letters*, *38*(25), 1440–1443. DOI: 10.1103/PhysRevLett.38.1440
+*   Peccei, R. D., & Quinn, H. R. (1977). Constraints imposed by CP conservation in the presence of instantons. *Physical Review D*, *16*(6), 1791–1797. DOI: 10.1103/PhysRevD.16.1791.
 *   Penrose, R. (1969). Gravitational collapse: the role of general relativity. *Rivista del Nuovo Cimento*, *1*, 252–276.
 *   Penrose, R. (1989). *The Emperor's New Mind: Concerning Computers, Minds, and the Laws of Physics*. Oxford University Press.
 *   Penrose, R. (1994). *Shadows of the Mind: A Search for the Missing Science of Consciousness*. Oxford University Press.
@@ -594,7 +598,7 @@
 *   Rowe, W. (1975). *The Cosmological Argument*. Princeton: Princeton University Press.
 *   Ruskai, M. B. (1994). Beyond strong subadditivity? Improved bounds on the contraction of generalized relative entropy. *Reviews in Mathematical Physics*, *6*(5a), 1147–1161.
 *   Russell, B. (1903). *The Principles of Mathematics*. Cambridge University Press.
-*   Ryu, S., & Takayanagi, T. (2006). Holographic derivation of entanglement entropy from the anti–de Sitter space/conformal field theory correspondence. *Physical Review Letters*, *96*(18), 181602.
+*   Ryu, S., & Takayanagi, T. (2006). Holographic derivation of entanglement entropy from the anti–de Sitter space/conformal field theory correspondence. *Physical Review Letters*, *96*(18), 181602. DOI: 10.1103/PhysRevLett.96.181602.
 *   Sagawa, T., & Ueda, M. (2009). Minimal Energy Cost for Thermodynamic Information Processing: Measurement and Information Erasure. *Physical Review Letters*, *102*(25), 250602. DOI: 10.1103/PhysRevLett.102.250602
 *   Sagawa, T., & Ueda, M. (2010). Generalized Jarzynski Equality Under Nonequilibrium Feedback Control. *Physical Review Letters*, *104*(9), 090602. DOI: 10.1103/PhysRevLett.104.090602
 *   Sahu, S., Ghosh, S., Hirata, K., Fujita, D., & Bandyopadhyay, A. (2013). Multi-level memory-switching properties of a single brain microtubule. *Applied Physics Letters*, *102*(12), 123701.
@@ -636,7 +640,7 @@
 *   Spinoza, B. (1677). *Ethica, Ordine Geometrico Demonstrata*. Posthumous publication. (English translation: *Ethics*, E. Curley, Trans., in *The Collected Works of Spinoza*, Vol. 1, Princeton University Press, 1985.)
 *   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
 *   STAR Collaboration. (2026). Measuring spin correlation between quarks during QCD confinement. *Nature*, *650*, 65–71. DOI: 10.1038/s41586-025-09920-0
-*   Starobinsky, A. A. (1980). A new type of isotropic cosmological models without singularity. *Physics Letters B*, *91*, 99–102.
+*   Starobinsky, A. A. (1980). A new type of isotropic cosmological models without singularity. *Physics Letters B*, *91*(1), 99–102. DOI: 10.1016/0370-2693(80)90670-X.
 *   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
 *   Steinhaus, H. (1957). Problem. *Colloquium Mathematicum*, *5*, 116.
 *   Stinespring, W. F. (1955). Positive functions on C*-algebras. *Proceedings of the American Mathematical Society*, *6*(2), 211–216. DOI: 10.1090/S0002-9939-1955-0069403-4
@@ -646,7 +650,7 @@
 *   Strawson, G. (2006). Realistic monism: why physicalism entails panpsychism. *Journal of Consciousness Studies*, *13*(10–11), 3–31.
 *   Streater, R. F., & Wightman, A. S. (1964). *PCT, Spin and Statistics, and All That*. W. A. Benjamin.
 *   Sturm, K.-T. (2006). On the geometry of metric measure spaces. I and II. *Acta Mathematica*, *196*(1), 65–131 and 133–177. DOIs: 10.1007/s11511-006-0002-8 and 10.1007/s11511-006-0003-7
-*   Super-Kamiokande Collaboration. (2020). Search for proton decay via $p \to e^+\pi^0$ and $p \to \mu^+\pi^0$ with an enlarged fiducial volume in Super-Kamiokande I-IV. *Physical Review D*, *102*(11), 112011. DOI: 10.1103/PhysRevD.102.112011
+*   Super-Kamiokande Collaboration. (2020). Search for proton decay via $p \to e^+\pi^0$ and $p \to \mu^+\pi^0$ with an enlarged fiducial volume in Super-Kamiokande I-IV. *Physical Review D*, *102*(11), 112011. DOI: 10.1103/PhysRevD.102.112011. arXiv:2010.16098.
 *   Susskind, L. (1995). The world as a hologram. *Journal of Mathematical Physics*, *36*(11), 6377–6396. DOI: 10.1063/1.531249
 *   Świerczkowski, S. (1958). On successive settings of an arc on the circumference of a circle. *Fundamenta Mathematicae*, *46*, 187–189.
 *   Synge, J. L. (1960). *Relativity: The General Theory*. North-Holland.
@@ -738,7 +742,7 @@
 *   Buchholz, D., & Wichmann, E. H. (1986). Causal independence and the energy-level density of states in local quantum field theory. *Communications in Mathematical Physics*, *106*, 321–344. DOI: 10.1007/BF01210929
 *   Chiribella, G., D'Ariano, G. M., Perinotti, P., & Valiron, B. (2013). Quantum computations without definite causal structure. *Physical Review A*, *88*, 022318. DOI: 10.1103/PhysRevA.88.022318
 *   Connes, A. (1973). Une classification des facteurs de type III. *Annales scientifiques de l'École Normale Supérieure*, *6*(2), 133–252.
-*   Connes, A., & Rovelli, C. (1994). Von Neumann algebra automorphisms and time-thermodynamics relation in generally covariant quantum theories. *Classical and Quantum Gravity*, *11*, 2899–2917. DOI: 10.1088/0264-9381/11/12/007
+*   Connes, A., & Rovelli, C. (1994). Von Neumann algebra automorphisms and time-thermodynamics relation in generally covariant quantum theories. *Classical and Quantum Gravity*, *11*, 2899–2918. DOI: 10.1088/0264-9381/11/12/007
 *   Costello, K., & Gwilliam, O. (2017). *Factorization Algebras in Quantum Field Theory, Volume 1*. Cambridge University Press.
 *   Costello, K., & Gwilliam, O. (2021). *Factorization Algebras in Quantum Field Theory, Volume 2*. Cambridge University Press.
 *   Erbar, M., & Maas, J. (2012). Ricci curvature of finite Markov chains via convexity of the entropy. *Archive for Rational Mechanics and Analysis*, *206*, 997–1038. DOI: 10.1007/s00205-012-0554-z
@@ -785,3 +789,4 @@
 *   Yonekura, K. (2019). On the cobordism classification of symmetry protected topological phases. *Communications in Mathematical Physics*, *368*, 1121–1173. DOI: 10.1007/s00220-019-03439-y
 *   Yudkowsky, E., & Herreshoff, M. (2013). Tiling Agents for Self-Modifying AI, and the Löbian Obstacle. Machine Intelligence Research Institute draft.
 *   Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. *Reviews of Modern Physics*, *75*(3), 715–775. DOI: 10.1103/RevModPhys.75.715
+

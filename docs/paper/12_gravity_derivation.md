@@ -1,4 +1,4 @@
-# 12 Emergence of Gravitational Dynamics from Predictive Thermodynamics
+# 12. Emergence of Gravitational Dynamics from Predictive Thermodynamics
 
 With $\mathfrak GY_U^{(4)}$ the branch prefactor is recorded as
 $$
@@ -682,7 +682,7 @@ The coefficient $\eta$ appearing in $\delta S = \eta\,\delta\mathcal{A}$ is rela
 $$
 G=\frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}}.
 $$
-Here $C_{\max}$ is supplied quantitatively by the completed reset-support branch of Proposition E.2a, with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget branch; refresh/minorization branches additionally give the strict inequality $C_{\max}<\ln d_0$ by Lemma E.1 and Theorem E.2. The Born rule is not derived from this capacity bound. It descends separately from the predictive observable algebra, PPI/PCE response-null quotienting, non-contextual additivity, and the Gleason-Busch representation. The common origin is SPAP finite-response closure: simultaneous ledgers yield the Born/noncommutative probability structure, while sequential update ledgers yield entropy and finite boundary capacity.
+Here $C_{\max}$ is supplied quantitatively by the completed reset-support branch of Proposition E.2a, with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget branch; refresh/minorization branches additionally give the strict inequality $C_{\max}<\ln d_0$ by Lemma E.1 and Theorem E.2. The Born rule is not derived from this capacity bound. It descends separately from the predictive observable algebra, PPI/PCE response-null quotienting, finite-response additivity, and the Gleason-Busch Born selector. The common origin is SPAP finite-response closure: simultaneous ledgers yield the Born/noncommutative probability structure, while sequential update ledgers yield entropy and finite boundary capacity.
 
 Einstein's Field Equations (Equation 76) represent the equation of state ensuring local thermodynamic consistency between the emergent spacetime geometry and the underlying MPU network's predictive activity. The factor $1/4$ enters through the standard normalization relating horizon entropy density to the coupling in the Einstein equation; PU's nontrivial content is the operational evaluation of the entropy density from channel counting (Appendix E). PCE optimization of the vacuum state yields $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln2$, predicting the MPU-to-Planck scale ratio $\delta/L_P=\sqrt{8\ln2}$ on the Appendix Q packing branch. The curvature of spacetime reflects the geometric adjustments needed to satisfy the Clausius relation on all local causal horizons, given the Horizon Entropy Area Law (Theorem 49), which arises from the completed reset-support capacity budget and density-certificate channel count. The distribution of predictive activity ($T_{\mu\nu}^{(MPU)}$)—which itself quantifies the coarse-grained density and flux of the resource costs optimized by the predictive network—dictates local information capacity of boundaries, and geometry ($g_{\mu\nu},R_{\mu\nu}$) adapts via EFE to maintain local thermodynamic equilibrium.
 
@@ -782,6 +782,14 @@ In coordinates this is exactly the geodesic equation displayed above. ∎
 **Corollary 12.3.1 (Universality of $G$ at a coarse-graining scale).** At a fixed coarse-graining scale $\mu$, the area-law coefficient $1/(4G(\mu))$ appearing in the Clausius derivation of EFE and in the Newtonian limit from geodesic motion is the same $G(\mu)$, enforcing universal gravitational coupling at that scale. Slow scale-dependence $G(\mu)$ is discussed in Appendix I and §12.5.
 
 *Proof.* Both the field equation and the test-body limit are derived from the same metric action at fixed scale $\mu$. Therefore the coupling multiplying the geometric sector in the Clausius normalization and the coupling read off from the weak-field limit of the same action are identical by construction. ∎
+
+**Corollary 12.3.2 (Metric Universality as the Geometric Equivalence Gate).** Under the hypotheses of Theorem 12.3 and Corollary 46e, every free sharply localized test body whose retained coupling is only through $g_{\mu\nu}$ has a worldline independent of its species-intrinsic coefficient $m$. Any proposed species-dependent metric or nonmetric force term that changes a finite response violates the hypotheses and is a separate finite-response branch; if it changes no finite response, it is PPI-null.
+
+*Proof.* Theorem 12.3 gives $\nabla_\mu T^{\mu\nu}=0$ and hence $u^\mu\nabla_\mu u^\nu=0$ for a pressureless localized body coupled through the boundary-sufficient metric selected by Corollary 46e. This equation is independent of any species-intrinsic coefficient multiplying the test-body stress tensor, so every probe satisfying the same metric-only hypotheses has the same geodesic law. The equivalent free-action derivation recorded in Theorems 12.3a–12.3b expresses the same cancellation at the worldline-functional level: in
+$$
+S_{\mathrm{free}}=-mc^2\int d\tau,
+$$
+the overall factor $m$ cancels from the Euler–Lagrange equations. A species-dependent metric or extra nonmetric term that changes the resulting protocol response is outside the same-branch assumptions; a term that does not change any retained response is removed by the PPI quotient. ∎
 
 **12.5.1 Uniqueness of the Free Worldline Functional**
 

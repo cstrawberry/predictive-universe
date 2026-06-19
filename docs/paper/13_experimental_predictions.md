@@ -1,4 +1,4 @@
-# 13 Experimental Predictions and Protocols
+# 13. Experimental Predictions and Protocols
 
 The Predictive Universe framework, particularly the Consciousness Complexity (CC) hypothesis (Section 9) proposing a mechanism by which complex MPU aggregates can influence quantum outcomes, leads to specific, potentially falsifiable predictions that deviate from standard quantum mechanics. Because the predicted deviations can be small and are susceptible to experimental and statistical artifacts, the protocols in this section are formulated with strict methodological constraints: pre-specified hypotheses and analysis pipelines, blinding wherever feasible, rigorous environmental and device controls, and correction for multiple comparisons across outcomes, times, and experimental settings. The aim is not merely to detect an anomaly, but to isolate a reproducible, device-independent shift consistent with the bounded modification structure of Definition 33 and Theorem 36 while ruling out classical confounds (drift, selection effects, hidden feedback, and post-selection). Protocol 1a adds a report-induced expectation variant of the QRNG test: a true or false report is treated as a provenance-marked input to the participant's physical context, and the measured question is whether the resulting expectation context correlates with later quantum outcomes. This section details these predictions and outlines experimental protocols designed for their investigation, emphasizing near-term feasibility while acknowledging the significant challenges involved in distinguishing a genuine CC effect from systematic error.
 
@@ -855,7 +855,7 @@ By Lemma Q.0.7b, $\alpha_L$ is transcendental and hence irrational.
 
 **Low-defect phase hierarchy.** Corollary Q.0.19b gives the first continued-fraction low-defect phase pairs:
 
-| Rank | $(k,N)$ | $|\alpha_L-k/N|$ | $\delta_N=|N\ln2-2\pi k|$ |
+| Rank | $(k,N)$ | $\lvert\alpha_L-k/N\rvert$ | $\delta_N=\lvert N\ln2-2\pi k\rvert$ |
 |:----:|:--------|:----------------:|:-------------------------:|
 | 1 | $(1,9)$ | $7.93\times10^{-4}$ | $0.0449$ |
 | 2 | $(15,136)$ | $2.37\times10^{-5}$ | $0.0202$ |
@@ -1296,7 +1296,7 @@ $$
 
 **Current Status:**
 $$
-\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(NIST 2024)}
+\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(Mohr et al. 2025; NIST 2024)}
 $$
 The exact sinc-core value satisfies
 $$
@@ -1404,7 +1404,7 @@ $$
 \Delta\mathcal T_R=0
 \tag{13.10.6b}
 $$
-for the retained entropic-clock coordinate, unless an independently registered non-entropic clock record is present in the retained presheaf. When the clock is read as a stationary current, the registered quotient must also satisfy
+for the retained entropic-clock coordinate, unless an independently registered non-entropic clock record is present in the retained presheaf. When the clock is read as a stationary current with nonzero registered current mean, the registered quotient must also satisfy
 $$
 \frac{\operatorname{Var}(\widehat{\Delta\mathcal T_R})}
 {\langle\widehat{\Delta\mathcal T_R}\rangle^2}
@@ -1425,8 +1425,8 @@ A positive result must show the clock-flow slope, the stall/null condition, and 
 | Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Theorem R.3.4 + LEP $Z$ width | indirect |
 | Gauge algebra / connected-cover notation on the finite-response block-frame positive-marginal capacity branch | $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak u(1)$; connected cover $SU(3) \times SU(2) \times U(1)$ | Standard Model gauge algebra; global form fixed by determinant interface | Theorem G.8.4b; Corollary G.8.4c | ◐ finite-response block-frame branch theorem |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
-| Chronometric curvature phase/dephasing | $\hbar|\dot\Theta|/|\Delta E|=|\Delta\Phi|/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/|\Delta E|=|\Delta\Phi|/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
-| Retained entropic clock-flow | On accepted $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, $\Delta\mathcal T_R=\Delta\Sigma_R^{\mathrm{ECF}}/\ln2$; zero retained entropy/update flow gives $\Delta\mathcal T_R=0$; record-current estimates obey $\operatorname{Var}(\widehat{\Delta\mathcal T_R})\Sigma_T/\langle\widehat{\Delta\mathcal T_R}\rangle^2\ge2$ | Barontini-type cold-atom bright/dark-sector analogue clocks, reservoir-swap quantum simulators, photonic/ion-trap retained-record clocks, and stochastic record-current tests with null-exchange windows | Definition O.3f; Theorem O.3f; Corollary O.3g; Barontini [2026] as analogue only | ◐ certificate-gated finite-record theorem; ○ protocol-specific tests pending |
+| Chronometric curvature phase/dephasing | $\hbar\lvert\dot\Theta\rvert/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
+| Retained entropic clock-flow | On accepted $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, $\Delta\mathcal T_R=\Delta\Sigma_R^{\mathrm{ECF}}/\ln2$; zero retained entropy/update flow gives $\Delta\mathcal T_R=0$; record-current estimates with nonzero registered mean obey $\operatorname{Var}(\widehat{\Delta\mathcal T_R})\Sigma_T/\langle\widehat{\Delta\mathcal T_R}\rangle^2\ge2$ | Barontini-type cold-atom bright/dark-sector analogue clocks, reservoir-swap quantum simulators, photonic/ion-trap retained-record clocks, and stochastic record-current tests with null-exchange windows | Definition O.3f; Theorem O.3f; Corollary O.3g; Barontini [2026] as analogue only | ◐ certificate-gated finite-record theorem; ○ protocol-specific tests pending |
 | Actualization threshold under engineered leakage | On branches with accepted $\mathfrak C_{\mathrm{act}}$, commit onset occurs when the retained link ledger reaches the certified $C_{\max}$; on the residual-budget minimal branch $C_{\max}^*=2\ln2$ nats per link-cycle and $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ | controlled-leakage interferometry with a locked ledger-to-laboratory bridge required | Definition E.2a.4; Proposition E.2a.5; Definition E.2a.6; Corollary M.6.14b.1 | ◐ certificate-gated branch prediction; ○ untested |
 | Landauer-ledger constellation | The same $\varepsilon_0=\ln2$ must appear through independent locked maps: metered actualization, retained entropic clock-flow, conditional horizon phase grid $x\equiv N\ln2\pmod{2\pi}$, and finite record-current TUR; no platform-specific refitting of the unit is allowed | multi-platform finite-register, horizon-analogue, and stochastic-current protocols entered as Definition 13.0i witnesses | Theorem 31; Definition 13.0i; Corollary 13.0k; Definition O.3f; Proposition Q.0.19; Theorem D.8.7f; Corollary D.8.7g | ◐ multi-lock evidence standard; ○ protocol constellation pending |
 | Cone-saturation residual floor | With accepted $\mathfrak C_{\mathrm{cone}}$, retained sector front-speed splitting in vacuum is represented by a pre-locked misalignment functional satisfying $\xi_{\mathrm{cone}}\le\xi_{\mathrm{res}}$; no universal no-birefringence theorem is asserted without that certificate | multi-messenger timing, polarization, and in-vacuo dispersion tests constrain the future certificate | Definition O.7.2.5; Corollary 46a; Theorem F.0 Condition 4 | ◐ certificate-gated structural test; ○ existing bounds constrain certificate choices |
@@ -1444,11 +1444,11 @@ A positive result must show the clock-flow slope, the stall/null condition, and 
 | Primordial complexity product | $A_s r=A_Qe^{-22}/(4\pi^2)$; leading $A_Q=1$ gives $7.07\times10^{-12}$ | tensor measurement pending | Corollary U.65a; Section 13.10.6 | ◐ branch prediction; ○ untested |
 | A2 neutrino cosmology closure | $\Sigma_\nu=58.2\,\mathrm{meV}$, $m_\beta=8.85\,\mathrm{meV}$ | future cosmology/beta endpoint tests | Cor T.24.16a | ◐ neutrino branch; ○ untested |
 | Proper-acceleration entropy drag | $\mathcal Q_a=q_{\mathrm{act}}$ | dedicated acceleration calorimetry required | Cor N.12b | ◐ proper-acceleration branch; ○ untested |
-| Predictive record-current TUR | $\operatorname{Var}(J_T)\Sigma_T/\langle J_T\rangle^2\ge2$ on every Blackwell-PCE classical record quotient | stochastic record-current and entropy-production tests | Thm D.8.7f; Cor D.8.7g | ✓ finite record theorem; ○ protocol-specific tests |
+| Predictive record-current TUR | $\operatorname{Var}(J_T)\Sigma_T/\langle J_T\rangle^2\ge2$ on every Blackwell-PCE classical record quotient with $\langle J_T\rangle\ne0$ | stochastic record-current and entropy-production tests | Thm D.8.7f; Cor D.8.7g | ✓ finite record theorem; ○ protocol-specific tests |
 | Scalar-channel hyperon spin filter | short-range $\Lambda\bar\Lambda$ nonzero; long-range, same-sign, spin-zero controls vanish | collider correlation tests | Cor Z.8k.1a | ◐ scalar-channel branch |
 
 
-All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. The Thomson $\alpha^{-1}$ row is residual-gated rather than residual-free: Corollary Z.27.11e.1 obstructs a same-branch $R_\alpha=0$ theorem at the recorded CODATA comparison value, so the row is theorem-level only with a forward-locked nonzero residual gate. For the predictive record-current TUR row, the relevant falsifier is a closed finite record quotient with measured stationary current, variance, and entropy production satisfying
+All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. The Thomson $\alpha^{-1}$ row is residual-gated rather than residual-free: Corollary Z.27.11e.1 obstructs a same-branch $R_\alpha=0$ theorem at the recorded CODATA comparison value, so the row is theorem-level only with a forward-locked nonzero residual gate. For the predictive record-current TUR row, the relevant falsifier is a closed finite record quotient with measured stationary current satisfying $\langle J_T\rangle\ne0$, variance, and entropy production satisfying
 $$
 \frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\Sigma_T<2
 $$

@@ -218,6 +218,8 @@ $$
 \sqrt{\frac{v}{A_{EW}M_{Pl}}}.
 $$
 
+*   **Equivalence–Constitutive Separation Law:** (Appendix N, Theorem N.11a; Section 12, Corollary 12.3.2; Appendix G, Corollary G.4b.2) Retained response channels are equivalence-principle-bearing exactly when their source/response ratio descends to a common quotient ledger on the tested probe class. Metric-universal gravity is the canonical case; gauge, material, preparation, and constitutive responses are sector-selective unless their labels are PPI-null or restricted to a constant-ratio subprobe class.
+
 *   **Emergent Metric Fluctuation Theorem:** (Section 12, Definition 12.1d; Theorem 12.1c; Definition 12.1d.4; Theorem 12.1e; Corollary 12.1e.1; Corollary 12.1e.2; Definition 12.1f; Theorem 12.1f.1) Closure of the metric-fluctuation row of the Global Strict-Certificate Ledger on every branch carrying an accepted nondegenerate finite-response gravitational channel ensemble. Linearized emergent metric response and its finite covariance $\Sigma_n$ are deterministic projections of the finite KMS-descent certificate, smooth-envelope record, positive Hessian, reconstruction derivative, and PCE fluctuation scale. No independent microscopic graviton Hilbert sector is added.
 
 *   **$\varepsilon_0$ (Structural State Change Cost):** (Definition 28, Theorem 31, Appendix J) The exact irreducible structural dimensionless entropy cost of the SPAP cycle's binary logical quotient, $\varepsilon_0=\ln2$.
@@ -692,7 +694,7 @@ where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of refl
 
 *   **Theorem 23 (Minimal Hilbert Space Dimension):** (Section 7.2.2) The SPAP-compatible internal logic first requires $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ faithful finite operational contexts. On the complex Hilbert branch, this becomes the rank bound $d_0\ge8$, with the minimal MPU branch selecting $d_0=8$.
 
-*   **Theorem 28a (Origin of Quantum Randomness):** (Section 7.3.4) Derives that the stochasticity of the 'Evolve' process originates from Logical Indeterminacy through non-simplex state-space closure, PCE/PPI quotient non-contextuality, and Born-rule descent on the MPU Hilbert branch.
+*   **Theorem 28a (Origin of Quantum Randomness):** (Section 7.3.4) Derives that the stochasticity of the 'Evolve' process originates from Logical Indeterminacy through non-simplex state-space closure, PCE/PPI quotient non-contextuality, finite-response additivity, and Born-selector descent on the MPU Hilbert branch.
 
 *   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat{H}\rangle$ gives the baseline operational energy associated with sustaining the predictive cycle, and the spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min}>0$.
 

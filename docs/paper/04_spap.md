@@ -1,4 +1,4 @@
-# 4 Self-Reference, Computation, and Fundamental Limits
+# 4. Self-Reference, Computation, and Fundamental Limits
 
 Having established the core dynamics of prediction and the necessity of operating within performance bounds, we now investigate the profound consequences of self-reference within predictive systems. When a system attempts to predict its own future state or the outcomes of its own processes, fundamental logical limitations arise. This section introduces the computational requirements for such self-reference, formally proves the Self-Referential Paradox of Accurate Prediction (SPAP), demonstrates Reflexive Undecidability, introduces Logical Indeterminacy, and explores the implications for complexity dynamics within the PU framework.
 
@@ -298,7 +298,7 @@ In addition to Logical Indeterminacy, prediction error can also stem from more c
 1.  **Stochasticity:** Potential intrinsic randomness in the underlying dynamics of the system or its environment, or specifically within the probabilistic transition rules ($V_{prob}, T_{prob}$) of Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6).
 2.  **Epistemic Uncertainty:** Limitations arising from the predictor's perspective, such as incomplete information about the system's state or parameters, inadequacies of the internal model used (e.g., model complexity $C(M_t)$ being less than the target complexity $\hat{C}_{target}(t)$), or constraints imposed by finite computational resources (time, memory, energy).
 
-The PU framework derives (Theorem 28a) that the apparent randomness observed in fundamental physical processes (e.g., quantum measurement outcomes) originates from this Logical Indeterminacy after PCE/PPI quotienting, non-simplex state-space closure, and Born-rule descent.
+The PU framework derives (Theorem 28a) that the apparent randomness observed in fundamental physical processes (e.g., quantum measurement outcomes) originates from this Logical Indeterminacy after non-simplex state-space closure, PCE/PPI response quotienting, finite-response additivity, and the Born-selector descent on the MPU Hilbert branch.
 
 **4.5 Complexity Dynamics Near Predictive Limits**
 

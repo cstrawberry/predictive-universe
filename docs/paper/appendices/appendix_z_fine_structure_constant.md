@@ -1053,7 +1053,7 @@ with the specific hierarchy $8 > 4 > 2 \geq 0$. This explains the observed glueb
 
 **Verification:**
 
-| State | $J$ | $P$ | $C$ | $\Delta_J$ | $\Delta_P$ | $\Delta_C$ | $|v|^2$ (Pred) | $|v|^2$ (Emp) |
+| State | $J$ | $P$ | $C$ | $\Delta_J$ | $\Delta_P$ | $\Delta_C$ | $\lvert v\rvert^2$ (Pred) | $\lvert v\rvert^2$ (Emp) |
 |:------|:---:|:---:|:---:|:----------:|:----------:|:----------:|:--------------:|:-------------:|
 | $0^{++}$ | 0 | + | + | 0 | 0 | 0 | 4 | 4 ✓ |
 | $2^{++}$ | 2 | + | + | 2 | 0 | 0 | 6 | 6 ✓ |
@@ -3877,7 +3877,7 @@ Rounding to significant figures: α⁻¹_PU ≈ 137.036.
 
 ### Z.23.1 Experimental Value
 
-The CODATA 2022 recommended value for the fine-structure constant at the Thomson limit (q² → 0) (NIST 2024):
+The CODATA 2022 recommended value for the fine-structure constant at the Thomson limit (q² → 0) [Mohr et al. 2025; NIST 2024]:
 $\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$
 
 ### Z.23.2 Agreement Analysis
@@ -4638,7 +4638,7 @@ Therefore a theorem-level Thomson interval requires an independently certified r
 
 *Proof.* Substitute $u^*=2^{1/8}-1$ and $K_0=3$ into (Z.27.11a), set $R_\alpha=0$, and evaluate the resulting expression. The terms are fixed analytic functions of previously derived constants, so the displayed number is unique. Definition Z.27.11a, however, includes $R_\alpha$ as the residual interval for finite-order, threshold, and projection tails not already included in the sinc factor. If $R_\alpha$ is absent, the record $\mathfrak C_\alpha$ is incomplete by Algorithm Z.27.11b. If $R_\alpha$ is chosen after comparison, Corollary Z.27.11d forbids promotion. Hence theorem-level interval status requires a pre-comparison certified $R_\alpha$. ∎
 
-**Corollary Z.27.11e.1 (Same-Branch Zero-Residual Theorem Obstruction).** Let the CODATA-2022 Thomson inverse fine-structure comparison value recorded in the Appendix Z ledger be
+**Corollary Z.27.11e.1 (Same-Branch Zero-Residual Theorem Obstruction).** Let the CODATA-2022 Thomson inverse fine-structure comparison value recorded in the Appendix Z ledger [Mohr et al. 2025; NIST 2024] be
 $$
 \alpha^{-1}_{\mathrm{exp}}=137.035999177,
 \qquad
@@ -6390,7 +6390,7 @@ n_{\text{pol}} = D - 2 = 2 \text{ after selecting } D=4 \\[4pt]
 | $M$ | 24 | QFI mode count | Theorem Z.5 |
 | $\mathcal{G}_{24}$ | $[24,12,8]$ | Error correction optimality | Theorem Z.13 |
 | $\Lambda_{24}$ | Leech | Golay gluing | Proposition R.4.2a |
-| $|v|^2_{\min}$ | 4 | Rootlessness | Theorem Z.8c |
+| $\lvert v\rvert^2_{\min}$ | 4 | Rootlessness | Theorem Z.8c |
 | $n_G$ | 12 | Lagrangian bound | Theorem G.8.2e |
 | $D$ | 4 | $K(D)=24$ | Theorem Z.11 |
 | $\Delta_{\text{gap}}$ | $2\mu_0$ | Energy-norm relation on the canonical Leech norm-information calibration branch | Corollary Z.8g.1 |

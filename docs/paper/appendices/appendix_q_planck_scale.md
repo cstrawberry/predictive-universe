@@ -1894,7 +1894,7 @@ In particular $\sum_{i=1}^{10}a_i=38$.
 
 3. **Convergents and near-recurrences.** For the convergents $p_k/q_k$ of $\alpha_L$, the following entries are the best-approximation ladder used by Corollary Q.0.19b. Beyond the trivial $N=1$ entry, the listed denominators give the successive record-small phase defects over the displayed range.
 
-| $k$ | $p_k$ | $q_k$ | $|\alpha_L-p_k/q_k|$ | $q_k\|q_k\alpha_L\|$ | $|q_k\ln2-2\pi p_k|$ rad |
+| $k$ | $p_k$ | $q_k$ | $\lvert\alpha_L-p_k/q_k\rvert$ | $q_k\lVert q_k\alpha_L\rVert$ | $\lvert q_k\ln2-2\pi p_k\rvert$ rad |
 |---|---:|---:|---:|---:|---:|
 | 1 | 1 | 9 | $7.93\times10^{-4}$ | $0.0643$ | $4.486\times10^{-2}$ |
 | 2 | 15 | 136 | $2.37\times10^{-5}$ | $0.438$ | $2.024\times10^{-2}$ |

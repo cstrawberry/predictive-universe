@@ -1,4 +1,4 @@
-# 3 The Dynamics of Prediction and Interaction
+# 3. The Dynamics of Prediction and Interaction
 
 Building upon the foundational principles of prediction, optimization, and resource constraints established in Section 2, this section delves into the core dynamical processes governing predictive systems within the PU framework. We formally define the operational cycle—the Fundamental Predictive Loop—that systems employ to address the Prediction Optimization Problem (POP). We then introduce Reflexive Interaction Dynamics (RID) as the formal structure characterizing the crucial interaction and update phases of this loop. We highlight the inherent properties of RID that impose fundamental constraints on predictive systems. Finally, we derive the necessity of operating within specific performance bounds, defining the "Space of Becoming".
 

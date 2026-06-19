@@ -8,7 +8,7 @@ The analysis takes place on the emergent Lorentzian manifold $(M,g_{\mu\nu})$ wh
 
 **G.1 Born Weights from Cost Optimisation**
 
-The probabilistic structure of quantum mechanics, encapsulated by the Born rule, is derived here as a necessary consequence of efficient resource allocation (PCE) applied to the representation and processing of predictive information within the emergent Hilbert space structure of the MPU network.
+The probabilistic structure of quantum mechanics, encapsulated by the Born rule, is reconstructed here through three separate steps: PPI/PCE removes response-null context labels, finite-response payoff refinement gives additivity on the quotient ledger, and the Gleason-Busch selector fixes the unique trace-form measure on the emergent Hilbert space structure of the MPU network.
 
 **G.1.1 Predictive Partitions and Cost Frame Functions**
 
@@ -51,17 +51,20 @@ The cost frame function $f(P)$ defined on projectors $P$ on the MPU Hilbert spac
 
 These match the conditions required by Gleason's theorem for projectors on a Hilbert space of dimension $\ge 3$.
 
-**Theorem G.1.3 (Quadratic Form from Cost Function).**
-Let $\mathcal{H}$ be a complex Hilbert space with $\dim(\mathcal{H}) \ge 3$. Any non-contextual finitely additive frame function $f$ on orthogonal projectors with $f(\mathbf{1})=1$ must be of the form:
+**Theorem G.1.3 (Born Selector for Cost Frame Functions).**
+Let $\mathcal H$ be a complex Hilbert space with $\dim(\mathcal H)\ge3$. Any normalized, nonnegative, non-contextual, finitely additive frame function $f$ on orthogonal projectors must be of the form
 $$
 f(P)=\mathrm{tr}(\rho P)
 \quad \text{(G.1.3)}
 $$
-for a unique positive semi-definite trace-class operator $\rho$ with $\mathrm{tr}(\rho)=1$.
+for a unique positive semi-definite trace-class operator $\rho$ with $\mathrm{tr}(\rho)=1$. If the predictive state is a pure ray $[\psi]$ with $f(P_\psi)=1$, then $\rho=P_\psi=|\psi\rangle\langle\psi|$ and for every rank-one outcome $P_i=|\psi_i\rangle\langle\psi_i|$,
+$$
+f(P_i)=|\langle\psi_i|\psi\rangle|^2.
+$$
 
-*Proof.* This is Gleason's Theorem [Gleason 1957]. Normalization $f(\mathbf{1})=1$ forces $\mathrm{tr}(\rho)=1$. For the POVM extension, see [Busch 2003]. ∎
+*Proof.* Gleason's theorem gives the trace representation and the unique positive trace-one operator [Gleason 1957]. Uniqueness follows because rank-one projectors separate trace-class operators: if $\operatorname{tr}((\rho-\sigma)|\phi\rangle\langle\phi|)=0$ for every unit vector $|\phi\rangle$, then $\langle\phi,(\rho-\sigma)\phi\rangle=0$ for all $\phi$, and polarization gives $\rho=\sigma$. If $f(P_\psi)=1$, then $f(I-P_\psi)=0$; positivity forces the support of $\rho$ to lie inside $\operatorname{Ran}(P_\psi)$, and $\operatorname{tr}\rho=1$ gives $\rho=P_\psi$. For POVM effects and the two-dimensional extension, see Busch and Caves-Fuchs-Manne-Renes [Busch 2003; Caves et al. 2004]. ∎
 
-The operator $\rho$ is therefore the density operator representing the MPU's predictive state; the trace rule fixes all projective-event weights $f(P)$.
+The operator $\rho$ is therefore the density operator representing the MPU's predictive state; the trace rule fixes all projective-event weights $f(P)$, and the pure-ray case fixes the squared-amplitude measure uniquely.
 
 **G.1.4 Emergence of the Born Weights**
 
@@ -136,11 +139,11 @@ The framework also has two compatible descriptions of effective qubit measuremen
 
 **G.1.6 Physical Interpretation**
 
-The derivation shows that the Born rule is not an ad-hoc postulate but emerges as the unique, self-consistent way to assign predictive weights (probabilities) that align with the optimal resource allocation determined by the fundamental PCE optimization principle operating within the Hilbert space structure. The quadratic dependence on amplitudes ($|\langle i|\psi\rangle|^2$) arises naturally from the trace functional applied to projectors, reflecting the underlying structure of the PCE potential landscape. The density operator $\rho_{phys}$ serves simultaneously as the descriptor of the physical state and the generator of the POP/PCE-selected probability weight.
+The derivation shows that the Born rule is not an ad-hoc postulate. It is the unique probability ledger left after three independent filters are imposed on the Hilbert branch: response-null context labels are quotient labels, payoff-refinement consistency gives finite additivity, and Theorem G.1.3 selects the trace-form frame function. The quadratic dependence on amplitudes ($|\langle i|\psi\rangle|^2$) is not inserted as a separate rule; it is the pure-ray specialization of $f(P)=\operatorname{tr}(\rho P)$. SPAP supplies the deterministic self-prediction obstruction that makes a finite predictive ledger necessary, while PPI/PCE and the Hilbert carrier assumptions supply the selector conditions.
 
 **G.1.7 Summary Theorem**
 
-**Theorem G.1.7 (Born Rule from Cost Optimisation).** In the PU framework, POP assigns to each sharp event projector $P$ a predictive weight $f(P)$ that is normalized, non-negative, additive under orthogonal refinement, and non-contextual (Definition G.1.1; Lemmas G.1.1ba–G.1.1b). By Gleason's theorem (Theorem G.1.3), $f$ must take the trace form $f(P)=\mathrm{Tr}(\rho_{phys}P)$. Therefore the realized outcome probabilities of "Evolve" are given by the Born rule (G.1.4).
+**Theorem G.1.7 (Born Rule from Quotient Additivity and the Born Selector).** In the PU framework, POP assigns to each sharp event projector $P$ a predictive weight $f(P)$ that is normalized, non-negative, additive under orthogonal refinement, and non-contextual on the PPI/PCE quotient (Definition G.1.1; Lemma G.1.1b; Lemma G.1.1ba; Section 8, Theorem 8.2 and Lemma 8.2a). By the Born selector theorem (Theorem G.1.3; Section 8, Theorem 8.3), $f$ must take the unique trace form $f(P)=\mathrm{Tr}(\rho_{phys}P)$. Therefore the realized outcome probabilities of "Evolve" are given by the Born rule (G.1.4), with the pure-state rank-one case $p_i=|\langle\psi_i|\psi\rangle|^2$.
 
 ### G.1.7a Contextual Holonomy as PCE Magic Cost
 
@@ -682,6 +685,18 @@ $$
 R(\Omega)\otimes 1+1\otimes F(A^{\mathrm{int}}).
 $$
 Thus the curvature factorization and commutation of the two sectors follow directly from the product-connection construction. ∎
+
+**Corollary G.4b.2 (Internal Connections Are Sector-Selective Response Channels).** Internal gauge connections are not equivalence-principle-bearing on the full retained matter class unless an additional branch certificate makes the relevant charge/response ratio universal. In a $U(1)$ line sector the retained response to a fixed connection contains the factor $q$ through
+$$
+D_\mu=\partial_\mu+\Omega_\mu+iqA_\mu,
+$$
+and the Wilson response contains
+$$
+W_q(\gamma)=\exp\left(iq\oint_\gamma A\right).
+$$
+For a nonabelian internal bundle, the corresponding retained label is the representation of $P_{\mathrm{int}}$ and the associated character of internal holonomy. Distinct retained charges or representations are therefore distinct finite response ledgers, not a universal metric ledger.
+
+*Proof.* Corollary G.4b.1 factors predictive holonomy into spin/geometric and internal parts. The internal part acts on the internal bundle factor and is weighted by the sector charge or representation. If two charges or representations give the same Wilson and local transport responses on all retained protocols, the difference is response-null and is removed by PPI. If they give different Wilson or local transport responses, the label is retained and the response ratio of Definition N.11.0a depends on sector data. By Theorem N.11a this is a sector-selective channel rather than a full-probe equivalence-principle channel. ∎
 
 **G.5 Field Dynamics from PCE**
 

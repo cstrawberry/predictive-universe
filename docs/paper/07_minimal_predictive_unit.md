@@ -1,4 +1,4 @@
-# 7 The Minimal Predictive Unit (MPU) Framework
+# 7. The Minimal Predictive Unit (MPU) Framework
 
 Having established the foundational principles governing adaptive prediction, complexity, self-reference, and dynamics, we now introduce the core MPU model. The role of MPUs is fixed by the Cogito-to-PPI/PCE bridge developed in the Introduction and Appendix P: the framework first isolates the indubitable process-root, models its minimal operational content as prediction, and then asks for the least nontrivial finite physical carrier of that predictive loop. This section defines those carriers—Minimal Predictive Units (MPUs)—details their state representation involving perspectival information and Hilbert spaces, outlines their dual dynamics governed by prediction and interaction, postulates the origin of quantum randomness from inherent logical limits, and derives the crucial thermodynamic constraints governing their operation.
 
@@ -19,8 +19,8 @@ b) The inherent self-referential logical structure, corresponding to the Horizon
 Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
 
 1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state $|\psi(t)\rangle$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4). Theorem 15 first fixes the finite operational-context floor $N_{\mathrm{vis}}^{\min}=8$ and $K_0=3$; on the Hilbert-carrier branch this becomes the rank bound $d_0\ge8$, and the minimal MPU case $C_{op}=K_0$ selects the saturating carrier $d_0=8$. The perspective index $s$ belongs to the Perspective Space $\Sigma$ (Definition 25) and represents the interaction context.
- 2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by the branch interaction predicate. On a branch carrying an accepted actualization-threshold certificate $\mathfrak C_{\mathrm{act}}$ (Definition E.2a.6), this predicate is the capacity-saturation condition that the retained link ledger reaches $C_{\max}$ within the operational window. The stochastic Interaction instantiates Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic and its Born-rule descent (Theorem 28a).
- 3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
+2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by the branch interaction predicate. On a branch carrying an accepted actualization-threshold certificate $\mathfrak C_{\mathrm{act}}$ (Definition E.2a.6), this predicate is the capacity-saturation condition that the retained link ledger reaches $C_{\max}$ within the operational window. The stochastic Interaction instantiates Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic and its Born-rule descent (Theorem 28a).
+3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
 
 **Metered actualization certificate.** The actualization certificate may be sharpened by an accepted metered actualization subcertificate $\mathfrak C_{\mathrm{meter}}(R)$ (Definition E.2a.8) for an interface register $R$. The certificate specifies the register alphabet, the capacity increment assigned to the retained record, a monotone acquisition interval, an overwrite bound, a no-early-firing comparison against PCE/PPI, and the process-tensor no-signaling record for the interventions used to read the meter. For a certified binary one-register interface the timing threshold is
 $$
@@ -136,7 +136,7 @@ The specific form of this algebra is dictated by architectural principles derive
 The Principle of Compression Efficiency (PCE) selects for the most resource-efficient and robust implementation of the predictive cycle. This leads to the following derived architectural principles for a *minimal* unit:
 
 1.  **Internalization and Autonomy:** PCE favors an autonomous, closed-loop architecture where the control logic for the predictive cycle is internalized. This minimizes external dependencies and communication costs ($V_{prop}$), enhancing robustness and efficiency.
-**2. Functional Separation and the Emergence of a Quantum Nature:** The three core roles of the cycle—representing a space of potential outcomes, storing a definite prediction, and controlling the recursive phase—are functionally distinct. To prevent logical errors and destructive overwrites (as required by conditions O1-O3 in Theorem 15), these roles must be represented by distinct, simultaneously readable registers at the critical **Commit Snapshot** of the cycle. The Principle of Compression Efficiency (PCE) dictates the most resource-efficient way to instantiate this structure:
+2. Functional Separation and the Emergence of a Quantum Nature:** The three core roles of the cycle—representing a space of potential outcomes, storing a definite prediction, and controlling the recursive phase—are functionally distinct. To prevent logical errors and destructive overwrites (as required by conditions O1-O3 in Theorem 15), these roles must be represented by distinct, simultaneously readable registers at the critical **Commit Snapshot** of the cycle. The Principle of Compression Efficiency (PCE) dictates the most resource-efficient way to instantiate this structure:
 
   *   **Linearity and Vector Spaces:** To efficiently manage the relationships between potentialities, the system's states are best represented by vectors, and its reversible dynamics by linear transformations.
   *   **Commutativity:** For the three registers to be simultaneously and non-destructively readable, the observables corresponding to their states must be represented by commuting mathematical objects.
@@ -525,7 +525,7 @@ and the inner product is induced by
 $$
 \langle[A],[B]\rangle=\omega(A^*B).
 $$
-Operational outcome probabilities are therefore represented by the induced frame functional; under non-contextual additivity (Appendix G.1.1, Lemma G.1.1b; Appendix G.1.3) this reduces to the Born form. Completeness follows from Hilbert-space completion in the GNS construction. Finally, by Theorem 23 the minimal SPAP-capable architecture requires $d_0\ge 8$, with PCE selecting the minimal active operational dimension $d_0=8$. ∘
+Operational outcome probabilities are therefore represented by the induced frame functional; under PPI/PCE quotient non-contextuality, finite-response additivity, and the Born selector (Theorem 8.2; Lemma 8.2a; Theorem 8.3; Appendix G.1.3) this reduces to the Born form. Completeness follows from Hilbert-space completion in the GNS construction. Finally, by Theorem 23 the minimal SPAP-capable architecture requires $d_0\ge 8$, with PCE selecting the minimal active operational dimension $d_0=8$. ∘
 
 **7.2.3 Definition 24 (Def 24): Perspectival State $S_{(s)}(t)$**
  The complete state of an MPU at time $t$ is the perspectival state $S_{(s)}(t) = (S(t), s)$, whose formal mathematical structure is detailed in Appendix M (Section M.2). It comprises:
@@ -652,15 +652,15 @@ $$
 \text{Complementarity}
 \xrightarrow{\text{Cor G.1.10}}
 \text{non-simplex state space}
-\xrightarrow{\text{Thm 8.2, Thm 8.3, Thm G.1.7, Thm G.1.11b}}
+\xrightarrow{\text{Thm 8.2, Lem 8.2a, Thm 8.3, Thm G.1.7, Thm G.1.11b}}
 \text{Born-rule probabilities}.
 $$
 
-*Proof.* Theorems 10–11 prove SPAP. Definition 12 names the resulting in-principle unpredictability Logical Indeterminacy. Corollary 1 and Proposition 8 derive complementary observable pairs from the same SPAP obstruction. Corollary G.1.10 proves that no SPAP-implementing system has a simplex state space, so a classical probability simplex cannot represent the retained predictive state space. Theorem 8.2 removes response-null context labels by PCE/PPI quotienting and forces non-contextual predictive weights. Theorem 8.3 then applies the Gleason-Busch representation to obtain
+*Proof.* Theorems 10–11 prove SPAP. Definition 12 names the resulting in-principle unpredictability Logical Indeterminacy. Corollary 1 and Proposition 8 derive complementary observable pairs from the same SPAP obstruction. Corollary G.1.10 proves that no SPAP-implementing system has a simplex state space, so a classical probability simplex cannot represent the retained predictive state space. Theorem 8.2 removes response-null context labels by PCE/PPI quotienting. Lemma 8.2a supplies finite-response additivity on the quotient ledger. Theorem 8.3 then applies the Gleason-Busch Born selector to obtain
 $$
 \omega(P)=\operatorname{tr}(\rho P)
 $$
-for effects $P$. Theorem G.1.7 gives the same Born trace form from the cost-optimized frame functional, and Theorem G.1.11b gives the perspective-descent representation of the same probabilities. Hence quantum randomness is the unique probabilistic descent of Logical Indeterminacy under PCE/PPI closure on the MPU Hilbert branch. ∎
+for effects $P$, with pure-ray outcome weights $|\langle i|\psi\rangle|^2$. Theorem G.1.7 gives the same Born trace form from the cost-optimized frame functional, and Theorem G.1.11b gives the perspective-descent representation of the same probabilities. Hence quantum randomness is the unique probabilistic descent of Logical Indeterminacy under PCE/PPI closure, finite-response additivity, and the Hilbert-branch Born selector. ∎
 
 **7.4 Thermodynamic Grounding of the 'Evolve' Process**
 

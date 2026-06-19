@@ -54,7 +54,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 - **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) [Planck Collaboration 2020a]:**
   $H_0=67.4\pm0.5~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_{\Lambda}=0.6889\pm0.0056$.
-- **Planck length (CODATA 2022) [NIST 2024]:**
+- **Planck length (CODATA 2022) [Mohr et al. 2025; NIST 2024]:**
   $L_P=1.616255(18)\times 10^{-35}~\mathrm{m}$.
 - **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
 
@@ -434,7 +434,7 @@ Thus any audit promoting a second-moment or purity certificate to a von Neumann 
 
 ### V.3.10 Same-Branch Zero-Residual Obstruction Audit
 
-The exact sinc-core value differs from the CODATA-2022 Thomson comparison value by
+The exact sinc-core value differs from the CODATA-2022 Thomson comparison value [Mohr et al. 2025; NIST 2024] by
 
 $$
 0.00009287822863,

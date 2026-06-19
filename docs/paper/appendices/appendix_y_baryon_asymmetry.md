@@ -1583,8 +1583,8 @@ CP violation beyond the CKM mechanism would manifest in electric dipole moments 
 
 | System | Bound | SM Prediction |
 |:-------|:------|:--------------|
-| Electron | $|d_e| < 1.1 \times 10^{-29}$ e·cm | $\sim 10^{-38}$ e·cm |
-| Neutron | $|d_n| < 1.8 \times 10^{-26}$ e·cm | $\sim 10^{-31}$ e·cm |
+| Electron | $\lvert d_e\rvert < 1.1 \times 10^{-29}$ e·cm | $\sim 10^{-38}$ e·cm |
+| Neutron | $\lvert d_n\rvert < 1.8 \times 10^{-26}$ e·cm | $\sim 10^{-31}$ e·cm |
 
 **Prediction:** EDMs at or below SM predictions. The PU CP violation is encoded in $\delta$ (CKM mechanism), not in new CP-odd operators.
 

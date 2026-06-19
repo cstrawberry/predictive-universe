@@ -164,7 +164,7 @@ Several factors single out $E_8$ as the natural geometric structure for the 8-di
 
 7. **Root-Kissing Correspondence:** The $E$-series exceptional lattices exhibit a remarkable algebraic-geometric correspondence: for $n \in \{6, 7, 8\}$, the root count $|\Phi(E_n)|$ equals the kissing number achieved by the corresponding lattice:
 
-| $n$ | Root count $|\Phi(E_n)|$ | Kissing number | Optimality status |
+| $n$ | Root count $\lvert\Phi(E_n)\rvert$ | Kissing number | Optimality status |
 |-----|--------------------------|----------------|-------------------|
 | 6   | 72                       | 72             | Best known; optimality unproven |
 | 7   | 126                      | 126            | Best known; optimality unproven |

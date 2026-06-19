@@ -144,7 +144,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 
 We restate the theorem (Equation N.5) for convenience before proceeding with the proof.
 
-> **Theorem N.UCT (Unified Cost of Transgression).**
+> **Restatement N.UCT (Unified Cost of Transgression for Proof Use).**
 > For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a worldline parameterized by proper time $\tau$ with proper acceleration $a(\tau)$, achieves predictive performance $PP(\tau)$, and undergoes predictive acceleration $A_{pred}(\tau)$, in a background thermal bath at temperature $T_{bath}$ over a proper-time duration $\tau_f$, the total work $W_{\text{tot}}$ is bounded by:
 > $$
 > W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int_0^{\tau_f} R\left( C_{req}(\tau), T_{eff}(\tau) \right) d\tau
@@ -1225,9 +1225,9 @@ D:=D_{tr}(\rho,\sigma).
 $$
 The density-operator domain includes pure states, mixed states, coherent superpositions, and reduced states of entangled systems, so the same bound applies to all such internal preparations. If all sectors share the same value $f$, the DPI contraction budget is universal and cannot distinguish matter composition or internal quantum preparation. The final statement is exactly the converse direction of Theorem N.11 restricted to the non-compensation branch. ∎
 
-### N.11.5a.2 The DPI-Equivalence Principle Correspondence
+### N.11.5a.2 Retained-Ledger Equivalence and Refresh-Branch DPI
 
-The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of the retained ND-RID coupling ledger: the same finite-transfer, entropy-flow, and stress-energy maps apply to all simple matter sectors at the same coarse-graining scale. Strict contractivity $f_{RID}<1$ is a refresh/minorization subbranch of this ledger, not the sole source of gravitational universality.
+The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of the retained ND-RID coupling ledger: the same finite-transfer, entropy-flow, and stress-energy maps apply to all simple matter sectors at the same coarse-graining scale. Strict contractivity $f_{RID}<1$ is a refresh/minorization subbranch of this ledger, not the sole source of gravitational universality. The same statement gives a sharper separation principle: equivalence-principle behavior belongs to response channels whose source and response descend to one common retained ledger on the chosen probe class; response channels with retained charge, representation, material, preparation, or constitutive labels are sector-selective unless those labels are PPI-null or restricted to a constant-ratio subprobe class.
 
 **Definition N.11.0 (Retained ND-RID Coupling Ledger).** For a simple matter sector $\mathcal S$ at fixed coarse-graining scale, the retained ND-RID coupling ledger is the finite list of branch-defined data
 $$
@@ -1242,6 +1242,70 @@ consisting of:
 4. the refresh-branch contraction datum $f_{RID}(\mathcal S)$ when present, which is undefined off refresh/minorization subbranches.
 
 The ledger is universal across sectors when each entry is sector-independent at the same coarse-graining scale.
+
+**Definition N.11.0a (Retained Response Ledger and Equivalence Ratio).** Fix a retained effective response channel $\mathcal R$ on a fixed branch and coarse-graining scale $\mu$, and let $\mathfrak P_{\mathcal R}$ be the probe class on which that channel is being tested. For each retained probe $P\in\mathfrak P_{\mathcal R}$, let $I_{\mathcal R}(P)>0$ be the kinematic or state-update response coefficient and let $Q_{\mathcal R}(P)$ be the coefficient multiplying the channel source, gradient, curvature, holonomy, or constitutive drive in the first nonzero retained finite response. The equivalence ratio of the channel is
+$$
+\Xi_{\mathcal R}(P)
+:=
+\frac{Q_{\mathcal R}(P)}{I_{\mathcal R}(P)}.
+$$
+The channel is equivalence-principle-bearing on $\mathfrak P_{\mathcal R}$ when $\Xi_{\mathcal R}(P)$ is constant on $\mathfrak P_{\mathcal R}$ after the PPI quotient. It is constitutive/sector-selective when $\Xi_{\mathcal R}$ depends on a retained matter, representation, preparation, material, or constitutive label whose variation changes a finite protocol response.
+
+**Definition N.11.0b (Metric-Universal Ledger).** A response channel $\mathcal R$ is metric-universal on $\mathfrak P_{\mathcal R}$ when all three conditions hold at the same coarse-graining scale:
+1. every retained probe in $\mathfrak P_{\mathcal R}$ reconstructs the same operational metric $g_{\mu\nu}$ in the sense of Corollary 46e;
+2. there is a single scalar retained ledger $L(P)$ and fixed branch normalizations $\alpha_{\mathcal R},\beta_{\mathcal R}$, independent of $P$, such that
+$$
+Q_{\mathcal R}(P)=\alpha_{\mathcal R}L(P),
+\qquad
+I_{\mathcal R}(P)=\beta_{\mathcal R}L(P);
+$$
+3. any proposed species-dependent metric, source coefficient, or response coefficient is either PPI-null or belongs to a separate finite-response branch with its own certificate.
+
+For the simple gravitational branch, $L(P)$ is the saturated-boundary relational-information mass ledger of Theorem N.5, with $Q_{\mathcal R}=m_G$, $I_{\mathcal R}=m_I$, and $\alpha_{\mathcal R}=\beta_{\mathcal R}$ by Theorem N.7.
+
+**Theorem N.11a (Equivalence–Constitutive Separation Law).** Fix a retained response channel $\mathcal R$ at a fixed coarse-graining scale, and assume all compared probes are evaluated inside the same branch and PPI quotient.
+
+(a) If $\mathcal R$ is metric-universal on $\mathfrak P_{\mathcal R}$, then $\mathcal R$ is equivalence-principle-bearing on $\mathfrak P_{\mathcal R}$.
+
+(b) If a retained sector, representation, preparation, material, or constitutive label changes $\Xi_{\mathcal R}$ on the non-compensation branch, then $\mathcal R$ is not equivalence-principle-bearing on the full probe class. It may be equivalence-principle-bearing only on a restricted subprobe class where $\Xi_{\mathcal R}$ is constant.
+
+(c) Conversely, on the non-compensation branch, if $\mathcal R$ is equivalence-principle-bearing on $\mathfrak P_{\mathcal R}$, then every retained source/response variation is either a common branch normalization, PPI-null, or restricted to a constant-ratio subprobe class. Hence equivalence-principle behavior is the signature of a common source/response quotient ledger, not of emergence by itself.
+
+*Proof.*
+
+**Step 1 (Finite-response quotient).** By Definition N.11.0a, the first nonzero retained response of a probe $P$ to the same external channel drive $X_{\mathcal R}$ has the quotient form
+$$
+I_{\mathcal R}(P)\,A_{\mathcal R}(P)
+=
+Q_{\mathcal R}(P)\,X_{\mathcal R},
+\qquad
+A_{\mathcal R}(P)=\Xi_{\mathcal R}(P)X_{\mathcal R},
+$$
+where $A_{\mathcal R}$ denotes the measured response coordinate: acceleration for a force-like test, phase/holonomy shift for an internal connection test, or the corresponding finite protocol-response coordinate for a constitutive channel. Equality of responses for all probes under the same drive is therefore equivalent to constancy of $\Xi_{\mathcal R}$ on the retained probe class.
+
+**Step 2 (Metric-universal channels).** If $\mathcal R$ is metric-universal, Definition N.11.0b gives
+$$
+\Xi_{\mathcal R}(P)
+=
+\frac{\alpha_{\mathcal R}L(P)}{\beta_{\mathcal R}L(P)}
+=
+\frac{\alpha_{\mathcal R}}{\beta_{\mathcal R}},
+$$
+which is independent of $P$. Thus the response is universal on $\mathfrak P_{\mathcal R}$. For gravity on the simple saturated branch, Theorem N.7 gives $\alpha_{\mathcal R}=\beta_{\mathcal R}$, so $\Xi_{\mathcal R}=1$ and $m_I=m_G$.
+
+**Step 3 (Retained constitutive or sector labels).** Suppose a retained label $z(P)$ changes $\Xi_{\mathcal R}$. Then there exist probes $P_1,P_2$ in the same branch with
+$$
+\Xi_{\mathcal R}(P_1)\ne\Xi_{\mathcal R}(P_2).
+$$
+For any drive $X_{\mathcal R}$ not in the response-null set, Step 1 gives different finite responses. The label is therefore not PPI-null. On the non-compensation branch no other retained source or response term cancels this difference, so the channel fails the equivalence-principle criterion on the full probe class. If one restricts to a subprobe class on which $\Xi_{\mathcal R}$ is constant, the same algebra gives a restricted equivalence principle for that subprobe class only.
+
+**Step 4 (Converse).** Assume $\mathcal R$ is equivalence-principle-bearing on $\mathfrak P_{\mathcal R}$ and work on the non-compensation branch. Step 1 forces $\Xi_{\mathcal R}$ to be constant after the PPI quotient. Any retained variation that changes $Q_{\mathcal R}/I_{\mathcal R}$ would contradict that constancy by Step 3. Therefore every retained variation is either a common normalization multiplying both source and response, PPI-null, or confined to a restricted constant-ratio class. This is exactly descent to a common source/response quotient ledger on the tested probe class. ∎
+
+**Corollary N.11a.1 (Gravity/Gauge/Constitutive Classification).** On the simple gravitational branch, gravity is the metric-universal case: Corollary 46e supplies the common metric, Theorem N.7 supplies $m_I=m_G$, and Theorem 12.3 supplies geodesic motion from the same metric action. Gauge channels are sector-selective: the covariant derivative contains a charge or representation label, $D_\mu=\partial_\mu+\Omega_\mu+iqA_\mu$, and Appendix G does not supply a theorem forcing $q/I_{\mathcal R}$ to be universal across all retained sectors. Material or constitutive emergent channels are likewise sector-selective whenever their finite responses retain density, stiffness, viscosity, sound-speed, preparation, or other constitutive data. Such channels can be fully emergent and PCE-selected without being equivalence-principle-bearing on the full probe class.
+
+*Proof.* The gravitational statements are Theorem N.7, Corollary 46e, and Theorem 12.3 applied to Definition N.11.0b. The gauge statement follows from Definition G.4.1 and Corollary G.4b.1: changing $q$ or the internal representation changes Wilson phases or connection responses unless the change is response-null. The constitutive statement is Step 3 of Theorem N.11a with the retained label $z$ taken to be the material or preparation datum. ∎
+
+**Remark N.11a.2 (Emergence Is Not the Equivalence Criterion).** The binary enforced by PU is not emergent versus irreducible. The enforced binary is metric-universal/common-ledger versus sector-selective/constitutive-ledger. A hydrodynamic or material medium can be emergent while carrying retained constitutive parameters; it is then not equivalence-principle-bearing on the full probe class. If a restricted excitation family reconstructs a common effective metric, the equivalence principle holds only inside that excitation family and only at the coarse-graining scale where the effective metric and constant equivalence ratio are certified.
 
 **Theorem N.11 (Equivalence Principle from Universal ND-RID Coupling; Sufficient Direction Unconditional, Converse on the Non-Compensation Branch).** Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be two simple systems (with $C_{agg}\le C_{op}$, Definition 30) composed of different matter types.
 
@@ -1279,51 +1343,120 @@ Therefore the entropy flow rate $d\mathcal S/d\tau$ depends only on the relation
 Therefore, on the non-compensation branch, EP holds if and only if the retained ND-RID coupling ledger is universal. ∎
 
 
-**Corollary N.11.1 (EP Violations as Non-Universal Coupling-Ledger Deviations).** Any measured violation of the equivalence principle,
+**Corollary N.11.1 (EP Violations as First-Principles Coupling-Ledger Deviations).** Use the standard Eötvös convention of Theorem N.8.2,
 $$
-\eta=\frac{(m_G/m_I)_1-(m_G/m_I)_2}{(m_G/m_I)_1+(m_G/m_I)_2}\ne0,
-$$
-implies a sector-dependent departure from the universal retained ND-RID coupling ledger on the non-compensation branch. Let $\lambda^a$ denote the finite list of retained coupling ledgers entering the simple-system mass-information map, including reset-support capacity data, entropy-flow normalizations, stress-energy coefficients, and refresh-branch contraction factors when present. Then, to leading order,
-$$
-\eta
+\eta_{AB}:=
+2\frac{\lvert a_A-a_B\rvert}{a_A+a_B}
 =
-\sum_a \chi_{\mathrm{EP},a}\frac{\Delta\lambda^a}{\lambda^a}
+\left\lvert
+\frac{m_G(A)}{m_I(A)}
+-
+\frac{m_G(B)}{m_I(B)}
+\right\rvert
++O(\delta_A^2+\delta_B^2),
+$$
+where $\delta_S:=m_G(S)/m_I(S)-1$ is evaluated on the same finite-response branch and after the PPI quotient.
+
+On the minimal residual-budget saturation subbranch of the saturated-boundary simple-system branch, define the first-principles baseline
+$$
+C_{\max}^*=\ln d_0-\ln2=2\ln2,
+\qquad
+\Sigma_*:=\frac{\varepsilon_0}{C_{\max}^*}=\frac12,
+\qquad
+m_0(S):=\frac{\hbar\mathcal I_{rel}(S)}{2c^2\tau_{\min}}.
+$$
+Here $d_0=8$ and $\varepsilon_0=\ln2$ on the minimal MPU branch. Let
+$$
+\lambda_C(S):=\frac{C_{\max}(S)}{C_{\max}^*},
+\qquad
+\lambda_\Sigma(S):=\frac{\Sigma(S)}{\Sigma_*},
+\qquad
+\Theta_T(S):=\frac{m_G(S)}{m_0(S)}
+$$
+be the reset-support capacity coordinate, entropy-flow normalization coordinate, and normalized stress-source coordinate. On the saturated entropy-flow branch these are not independent: Corollary N.4.1 gives $\Sigma(S)=\varepsilon_0/C_{\max}(S)$, hence
+$$
+\lambda_\Sigma(S)=\lambda_C(S)^{-1}.
+$$
+Therefore a first-order ledger expansion must choose either $\lambda_C$ or $\lambda_\Sigma$ as the independent inertia-side coordinate, but not both.
+
+On the source-uncompensated branch the explicit mass maps are
+$$
+m_I(S)=m_0(S)\lambda_\Sigma(S)=m_0(S)\lambda_C(S)^{-1},
+\qquad
+m_G(S)=m_0(S)\Theta_T(S),
+$$
+so
+$$
+\frac{m_G(S)}{m_I(S)}
+=
+\frac{\Theta_T(S)}{\lambda_\Sigma(S)}
+=
+\Theta_T(S)\lambda_C(S).
+$$
+For two compared probes $A,B$, set $\Delta_{AB}\ln X:=\ln X(A)-\ln X(B)$. Then
+$$
+\delta_{\mathrm{EP},AB}
+:=
+\Delta_{AB}\ln\frac{m_G}{m_I}
+=
+\Delta_{AB}\ln\Theta_T
 +
-O(\|\Delta\lambda\|^2),
+\Delta_{AB}\ln C_{\max}
+=
+\Delta_{AB}\ln\Theta_T
+-
+\Delta_{AB}\ln\Sigma,
+$$
+and hence
+$$
+\eta_{AB}
+=
+\left\lvert
+\Delta_{AB}\ln\Theta_T
++
+\Delta_{AB}\ln C_{\max}
+\right\rvert
++O(\|\Delta\lambda\|^2)
+=
+\left\lvert
+\Delta_{AB}\ln\Theta_T
+-
+\Delta_{AB}\ln\Sigma
+\right\rvert
++O(\|\Delta\lambda\|^2).
 \tag{N.35}
 $$
-where $\chi_{\mathrm{EP},a}$ are response coefficients determined by the branch-specific map from retained coupling data to $m_I/m_G$. On a subbranch where the only varying retained datum is $f_{RID}$, this reduces to
-$$
-\eta
-=
-\chi_{\mathrm{EP},f}\frac{\Delta f_{RID}}{f_{RID}}
-+
-O\!\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2.
-$$
+Since $\Delta\ln X=\Delta X/X+O((\Delta X/X)^2)$, the first-principles signed linear coefficients are:
 
-*Proof.* By Theorem N.11, on the non-compensation branch the ratio $m_I/m_G$ is a smooth function of the retained coupling ledger $\lambda=(\lambda^a)$ and of $\mathcal I_{rel}$. At fixed $\mathcal I_{rel}$, Taylor expansion around the universal point gives
+| Independent retained coordinate | Branch meaning | $\chi_{\mathrm{EP},a}$ |
+|:---|:---|:---:|
+| Common multiplicative ledger $\lambda_{\mathrm{com}}$ | multiplies $m_I$ and $m_G$ identically | $0$ |
+| Reset-support capacity $C_{\max}$ | inertia-side entropy-flow variation with stress source uncompensated | $+1$ |
+| Entropy-flow normalization $\Sigma$ | independent inertia-side normalization with stress source uncompensated | $-1$ |
+| Stress-source coefficient $\Theta_T$ | normalized gravitational source variation with inertia uncompensated | $+1$ |
+| Refresh factor $f_{RID}$ | branch with a certified map $C_{\max}=C_{\max}(f_{RID})$ | $d\ln C_{\max}/d\ln f_{RID}$ |
+
+On the flagged-capacity saturation subbranch where the refresh certificate supplies
 $$
-\frac{m_I}{m_G}(\lambda+\Delta\lambda)
-=
-\frac{m_I}{m_G}(\lambda)
-+
-\sum_a
-\frac{\partial(m_I/m_G)}{\partial\lambda^a}\Delta\lambda^a
-+
-O(\|\Delta\lambda\|^2).
+C_{\max}(f_{RID})=f_{RID}\ln d_0,
 $$
-Substituting the two matter-sector expansions into the definition of $\eta$ gives (N.35) after absorbing the dimensionless logarithmic derivatives into the coefficients $\chi_{\mathrm{EP},a}$. The one-parameter $f_{RID}$ expression is the special case in which all $\Delta\lambda^a$ vanish except the refresh-branch contraction datum. ∎
+the refresh coefficient is fixed:
+$$
+\chi_{\mathrm{EP},f}=1.
+$$
+Matching this subbranch to the minimal saturated value $C_{\max}^*=2\ln2$ with $d_0=8$ gives
+$$
+f_*=\frac{C_{\max}^*}{\ln d_0}=\frac{2}{3},
+\qquad
+p_*:=1-f_*=\frac{1}{3}.
+$$
+Without the saturation certificate $C_{\max}=f_{RID}\ln d_0$, the first-principles result remains
+$$
+\chi_{\mathrm{EP},f}=\frac{d\ln C_{\max}}{d\ln f_{RID}},
+$$
+and $f_*$ is branch data rather than a universal MPU number.
 
-**Dominant-coefficient table.** The retained coupling ledger of Definition N.11.0 has four entries, and the leading $\chi_{\mathrm{EP},a}$ on each named subbranch is:
-
-| Subbranch | Dominant variation | Leading coefficient |
-|:---|:---|:---|
-| Refresh-branch only ($f_{RID}$ varies, others sector-uniform) | $\Delta f_{RID}/f_{RID}$ | $\chi_{\mathrm{EP},f}$ |
-| Reset-support capacity sector-dependent | $\Delta C_{\max}/C_{\max}$ | $\chi_{\mathrm{EP},C}$ |
-| Entropy-flow normalization sector-dependent | $\Delta\Sigma/\Sigma$ | $\chi_{\mathrm{EP},\Sigma}$ |
-| Stress-energy source coefficient sector-dependent | $\Delta T^{(\mathrm{src})}/T^{(\mathrm{src})}$ | $\chi_{\mathrm{EP},T}$ |
-
-Off the refresh subbranch, $\chi_{\mathrm{EP},f}$ is undefined and drops from the sum. The relative magnitudes of the remaining $\chi_{\mathrm{EP},a}$ are calibration-branch outputs; an experimental EP bound at level $\eta_{\mathrm{exp}}$ constrains the dominant linear combination on whichever subbranch is operative.
+*Proof.* The saturated entropy-flow equation gives $d\mathcal S/d\tau=(\varepsilon_0/C_{\max}\tau_{\min})\mathcal I_{rel}$, while Theorem N.5 fixes the baseline mass $m_0(S)=\hbar\mathcal I_{rel}(S)/(2c^2\tau_{\min})$ at $C_{\max}^*=2\ln2$. This yields $m_I=m_0\lambda_\Sigma=m_0\lambda_C^{-1}$. The normalized stress-source coordinate is defined by $m_G=m_0\Theta_T$. Dividing the two mass maps gives $m_G/m_I=\Theta_T\lambda_C=\Theta_T/\lambda_\Sigma$. Expanding its logarithm about the metric-universal point $\Theta_T=\lambda_\Sigma=\lambda_C=1$ gives the displayed coefficients. A common multiplicative ledger cancels because it multiplies numerator and denominator of $m_G/m_I$ in the same way. The refresh coefficient follows by the chain rule, $d\ln(m_G/m_I)/d\ln f_{RID}=(d\ln(m_G/m_I)/d\ln C_{\max})(d\ln C_{\max}/d\ln f_{RID})$, and the first factor equals $1$ on the capacity coordinate. On the flagged-capacity saturation subbranch $C_{\max}=f_{RID}\ln d_0$, this derivative is $1$, and the minimal value gives $f_*=2/3$. ∎
 
 
 ### N.11.5a.3 Information-Theoretic Interpretation
@@ -1345,10 +1478,14 @@ The correspondence operates as follows:
 $$
 |\eta|<\eta_{\mathrm{exp}},
 $$
-then Equation (N.35) gives
+then Equation (N.35) gives, using one independent inertia-side coordinate at a time,
 $$
 \left|
-\sum_a\chi_{\mathrm{EP},a}\frac{\Delta\lambda^a}{\lambda^a}
+\Delta\ln\Theta_T+\Delta\ln C_{\max}
+\right|
+=
+\left|
+\Delta\ln\Theta_T-\Delta\ln\Sigma
 \right|
 <
 \eta_{\mathrm{exp}}
@@ -1356,19 +1493,23 @@ $$
 O(\|\Delta\lambda\|^2).
 \tag{N.36}
 $$
-On a one-parameter refresh subbranch where only $f_{RID}$ varies and $|\chi_{\mathrm{EP},f}|$ is fixed by the branch certificate, this becomes
+On a one-parameter refresh subbranch with certified $C_{\max}=C_{\max}(f_{RID})$, this becomes
 $$
 \left|\frac{\Delta f_{RID}}{f_{RID}}\right|
 <
 \frac{\eta_{\mathrm{exp}}}{|\chi_{\mathrm{EP},f}|}
 +
-O(\eta_{\mathrm{exp}}^2).
+O(\eta_{\mathrm{exp}}^2),
+\qquad
+\chi_{\mathrm{EP},f}=\frac{d\ln C_{\max}}{d\ln f_{RID}}.
 $$
+On the flagged-capacity saturation branch $C_{\max}=f_{RID}\ln d_0$, this reduces to $|\Delta f_{RID}/f_{RID}|<\eta_{\mathrm{exp}}+O(\eta_{\mathrm{exp}}^2)$.
+
 For complex systems ($C_{agg}>C_{op}$), Theorem N.8 predicts $\delta_C\sim10^{-40}$ on its model branch, which is consistent with current bounds but lies far below present experimental sensitivity.
 
 ### N.11.5a.4 Connection to Horizon Thermodynamics
 
-The DPI-EP correspondence connects to the unified modular structure established in Appendix G (Theorem G.1.9.5).
+The retained-ledger equivalence formulation connects to the unified modular structure established in Appendix G (Theorem G.1.9.5), with DPI supplying the refresh-branch expression.
 
 **Proposition N.6 (Horizons as Finite-Response Capacity Boundaries).** A causal horizon $\mathcal H$ is characterized information-theoretically as a boundary where the total retained boundary channel budget saturates. At saturation,
 $$

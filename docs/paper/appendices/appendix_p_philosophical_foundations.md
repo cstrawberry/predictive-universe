@@ -1582,7 +1582,7 @@ Subsequent interpretations manage the gap without filling it:
 
 *Relational Quantum Mechanics.* Quantum states are relative to the observing system; there are no absolute states [Rovelli 1996]. Any physical system can serve as an observer. This is the closest in spirit to the PU framework, but Rovelli does not specify what physical structure a system must possess to serve as a reference — the definition of "observer" remains implicit.
 
-*Objective Collapse.* New dynamical laws (e.g., GRW spontaneous localization [Ghirardi, Rimini & Weber 1986]) produce definite outcomes without observers. The collapse parameters (rate and localization scale) are chosen to match experiment but are not derived from any deeper principle.
+*Objective Collapse.* New dynamical laws (e.g., GRW spontaneous localization [Ghirardi, Rimini & Weber 1986]) produce definite outcomes without observers. The collapse parameters (rate and localization scale) are phenomenological and empirically constrained, but are not derived from any deeper principle.
 
 In every case, the word "observer" functions as either a primitive, a placeholder, or an unnecessary concept. No interpretation provides a formal specification of the minimal physical structure required for observation to occur. The problem is not that physicists have failed to answer the question. The problem is that the existing frameworks lack the formal resources to pose it.
 
@@ -7032,7 +7032,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
-| $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $137.035999177(21)$ | NIST 2024; CODATA 2022; Appendix Z | residual-gated comparison |
+| $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $137.035999177(21)$ | Mohr et al. 2025; NIST 2024; Appendix Z | residual-gated comparison |
 | $D$ | $4$ | $4$ | — | exact on the Bures tangent-cell branch |
 | $\Lambda L_P^2$ | five-mode reference $(2.88\pm0.03)\times10^{-122}$; four-mode exponent row $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ | $(2.86599\pm0.04849)\times10^{-122}$ | Planck Collaboration 2020a; NIST 2024; Appendix V | prefactor certificate-pending |
 | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Equation Q.18 | Structural prediction |
