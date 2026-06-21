@@ -535,67 +535,105 @@ The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon
 
 **Definition Y.6.1a (APS-Eta Baryon Transport Certificate).** An APS-eta baryon transport certificate is a finite record
 $$
-\mathfrak A_\eta=\left(W_{\mathrm{EW}},A_{SU(2)\times U(1)},\Gamma_{\mathrm{fl}},\mathcal L_{\mathrm{Berry}},D_W,\eta_{\partial W},h_{\partial W},\mathfrak o_{\mathrm{KMS}},I_{CP},I_{tr}\right)
+\mathfrak A_\eta
+=
+\left(
+W_{\mathrm{EW}},
+A_{\mathrm{EW}},
+\mathfrak R_{\mathrm{EW}},
+\mathfrak C_{\mathrm{fl}}^{\circ},
+\Gamma_{\mathrm{fl}},
+\mathcal L_{\mathrm{Berry}},
+D_W,
+\Delta N_{CS},
+\eta_{\partial W},
+h_{\partial W},
+\mathfrak o_{\mathrm{KMS}},
+B_{\mathrm{ret}},
+\mathcal N_{\mathrm{APS}},
+I_{CP},
+I_{tr},
+\mathfrak h_\eta
+\right)
 \tag{Y.6.1a.1}
 $$
 where:
 
-1. $W_{\mathrm{EW}}$ is a compact oriented four-dimensional Euclidean electroweak interpolation manifold with APS boundary $\partial W_{\mathrm{EW}}=\Sigma_i\cup\Sigma_f$, connecting the initial and final electroweak Cauchy configurations used in Theorem Y.4;
+1. $W_{\mathrm{EW}}$ is a compact oriented four-dimensional Euclidean electroweak interpolation cobordism with APS boundary $\partial W_{\mathrm{EW}}=\Sigma_i\cup\Sigma_f$.
 
-2. $A_{SU(2)\times U(1)}$ is the electroweak connection on $W_{\mathrm{EW}}$ extending the boundary configurations on $\Sigma_i\cup\Sigma_f$;
+2. $A_{\mathrm{EW}}$ is the determinant-compatible electroweak connection on the same global gauge form and hypercharge lattice used by the accepted electroweak threshold record.
 
-3. $\Gamma_{\mathrm{fl}}:W_{\mathrm{EW}}\to\mathrm{Gr}(2,8)$ is a smooth branch map pulling the flavor Berry line bundle $\mathcal L_{\mathrm{Berry}}$ from the generation manifold to the cobordism, with restriction $\Gamma_{\mathrm{fl}}|_{\Sigma_f}\circ(\Gamma_{\mathrm{fl}}|_{\Sigma_i})^{-1}$ tracing the flavor loop $\gamma$ of Theorem T.56;
+3. $\mathfrak R_{\mathrm{EW}}$ is an accepted electroweak threshold certificate of Definition T.78.10, or an accepted equivalent spectral-action/torus threshold certificate with the same normalization and forward lock. It fixes the finite sector projections, Dynkin-index map, gauge normalization, and threshold finite parts entering the baryogenesis calculation.
 
-4. $D_W$ is the chiral SM Dirac operator on $W_{\mathrm{EW}}$ twisted by $A_{SU(2)\times U(1)}$ and by $\Gamma_{\mathrm{fl}}^*\mathcal L_{\mathrm{Berry}}$, with Atiyah–Patodi–Singer boundary conditions on $\partial W_{\mathrm{EW}}=\Sigma_i\cup\Sigma_f$ rendering the boundary problem Fredholm;
+4. $\mathfrak C_{\mathrm{fl}}^{\circ}$ is either the accepted flavor/CP certificate $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4, the accepted joint threshold-flavor certificate $\mathfrak J_{\mathrm{RHG-fl}}$, or an explicitly registered flavor-independent CP certificate $\mathfrak C_{CP}^{0}$ proving a nonzero CP-odd source without using masses, mixings, or phases as targets. In the absence of $\mathfrak C_{CP}^{0}$ the Appendix Y numerical baryogenesis route is downstream of the accepted threshold and flavor rows.
 
-5. $\eta_{\partial W}=\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})$ is the oriented boundary eta-invariant difference, and $h_{\partial W}=\dim\ker D_{\Sigma_f}-\dim\ker D_{\Sigma_i}$ is the corresponding oriented APS boundary-kernel correction; on branches with no boundary zero modes, $h_{\partial W}=0$;
+5. $\Gamma_{\mathrm{fl}}:W_{\mathrm{EW}}\to\mathrm{Gr}(2,8)$ is the retained flavor-generation branch map pulled from $\mathfrak C_{\mathrm{fl}}^{\circ}$, and $\mathcal L_{\mathrm{Berry}}$ is its determinant-line Berry line with orientation already fixed by the flavor certificate.
 
-6. $\mathfrak o_{\mathrm{KMS}}\in\{+1,-1\}$ is the chosen PCE/KMS time orientation of the determinant line of $D_W$, fixed by the Appendix O thermodynamic ratchet;
+6. $D_W$ is the chiral retained Dirac operator on $W_{\mathrm{EW}}$, twisted by $A_{\mathrm{EW}}$ and by $\Gamma_{\mathrm{fl}}^*\mathcal L_{\mathrm{Berry}}$, with APS boundary conditions. Its determinant line, boundary zero-mode convention, and finite-part convention are part of the same certificate and are not selected from $\eta_B$.
 
-7. the Berry-to-topological-density matching index is
+7. $\Delta N_{CS}\in\mathbb Z$ is the oriented Chern-Simons change of the sphaleron interpolation in the gauge normalization fixed by $\mathfrak R_{\mathrm{EW}}$.
+
+8. $\eta_{\partial W}=\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})$ and $h_{\partial W}=\dim\ker D_{\Sigma_f}-\dim\ker D_{\Sigma_i}$ are the oriented APS boundary eta and kernel corrections, computed with the same finite-part convention as $D_W$.
+
+9. $\mathfrak o_{\mathrm{KMS}}\in\{+1,-1\}$ is the PCE/KMS time orientation of the determinant line.
+
+10. $B_{\mathrm{ret}}$ is the finite baryon-number generator on the retained chiral matter quotient. It is a diagonal finite operator on the accepted matter package and includes the response-null quotient, global gauge form, and anomaly-bordism orientation used by the electroweak and flavor certificates.
+
+11. $\mathcal N_{\mathrm{APS}}=(\mathcal N_{CP},\mathcal N_B,\mathcal D_{\mathrm{Dyn}})$ is the coefficient-normalization ledger: $\mathcal D_{\mathrm{Dyn}}$ maps the finite sector projections to Dynkin indices, $\mathcal N_{CP}$ normalizes the CP-odd topological-density coefficient, and $\mathcal N_B$ normalizes the baryon-number spectral-flow coefficient.
+
+12. The Berry-to-topological-density matching index is
 $$
-I_{CP}=\frac{1}{\Delta N_{CS}}\!\int_{W_{\mathrm{EW}}}\!\hat A(R)\operatorname{ch}\!\left(\Gamma_{\mathrm{fl}}^*F_{\mathcal L_{\mathrm{Berry}}}\right)\!\big|_{[4]}\!-\!\frac{\eta_{\partial W}+h_{\partial W}}{2\Delta N_{CS}},
+I_{CP}
+=
+\mathcal N_{CP}
+\left[
+\frac{1}{\Delta N_{CS}}
+\left(
+\int_{W_{\mathrm{EW}}}
+\hat A(R)\operatorname{ch}\left(F_{\mathrm{EW}}\oplus\Gamma_{\mathrm{fl}}^*F_{\mathcal L_{\mathrm{Berry}}}\right)\big|_{[4]}
+-
+\frac{\eta_{\partial W}+h_{\partial W}}2
+\right)
+\right].
 \tag{Y.6.1a.2}
 $$
-where $[4]$ denotes the $4$-form component on $W_{\mathrm{EW}}$, normalized by the topological Chern-Simons charge $\Delta N_{CS}$ of the interpolation;
 
-8. the baryon-number transport index is
+13. The baryon-number transport index is
 $$
-I_{tr}=\frac{\operatorname{SF}(D_W)_B}{N_g\Delta N_{CS}},
+I_{tr}
+=
+\mathcal N_B
+\frac{\operatorname{SF}_{B_{\mathrm{ret}}}(D_W)}{N_g\Delta N_{CS}},
 \tag{Y.6.1a.3}
 $$
-where $\operatorname{SF}(D_W)_B$ is the baryon-number weighted spectral flow of the family of spatial Dirac operators along the cobordism, normalized by the standard $N_g\Delta N_{CS}$ denominator of Theorem Y.4.
+where $\operatorname{SF}_{B_{\mathrm{ret}}}(D_W)$ is the $B_{\mathrm{ret}}$-weighted spectral flow of the spatial APS family.
 
-The certificate is accepted only when (1)–(6) hold, the APS index theorem applies to (7), and the spectral flow in (8) is well-defined. The two index outputs $I_{CP}$ and $I_{tr}$ are dimensionless branch numbers determined by the certificate data and fixed before comparison with the observed $\eta_B$. The transport index $I_{tr}$ is rational when the spectral-flow numerator and $N_g\Delta N_{CS}$ denominator are integral; the APS-eta contribution to $I_{CP}$ is a real spectral invariant unless the accepted branch supplies an additional rationality theorem for the eta difference.
+14. $\mathfrak h_\eta$ is the source-exhaustion and forward-lock entry. It records that the CP-odd source, baryon generator, Dynkin-index map, determinant orientation, eta finite part, and normalization factors were fixed before comparison with $\eta_B$ and that no source is counted again in the electroweak threshold, flavor, sphaleron, washout, or photon-normalization records.
 
-**Theorem Y.6.1b (APS-Eta Transport Gate).** On a baryogenesis branch carrying an accepted APS-eta certificate $\mathfrak A_\eta$ of Definition Y.6.1a, the EFT matching coefficient of Theorem Y.6.1 and the transport coefficient of Proposition Y.9.1 are determined by the index outputs:
+The certificate is accepted exactly when all entries above are finite, the APS boundary problem is Fredholm, the anomaly/bordism signs agree with the determinant-line orientation, and $\mathfrak h_\eta$ proves overlap compatibility with $\mathfrak R_{\mathrm{EW}}$ and $\mathfrak C_{\mathrm{fl}}^{\circ}$.
+
+**Theorem Y.6.1b (APS-Eta Transport Gate).** On a baryogenesis branch carrying an accepted APS-eta certificate $\mathfrak A_\eta$ of Definition Y.6.1a, the CP matching coefficient and the baryon transport coefficient are
 $$
-\chi_{CP}=I_{CP},\qquad\chi_{tr}=I_{tr}.
+\chi_{CP}=I_{CP},
+\qquad
+\chi_{tr}=I_{tr}.
 \tag{Y.6.1b.1}
 $$
-The canonical unit-response Appendix Y branch is theorem-level exactly when
+The canonical unit-response branch is theorem-level exactly when
 $$
-I_{CP}=1,\qquad I_{tr}=1,\qquad\mathfrak o_{\mathrm{KMS}}\cdot\operatorname{or}(W_{\mathrm{EW}})\cdot\operatorname{or}(\mathcal L_{\mathrm{Berry}})=+1.
+I_{CP}=1,
+\qquad
+I_{tr}=1,
+\qquad
+\mathfrak o_{\mathrm{KMS}}
+\operatorname{or}(W_{\mathrm{EW}})
+\operatorname{or}(\mathcal L_{\mathrm{Berry}})
+=+1.
 \tag{Y.6.1b.2}
 $$
-If the accepted certificate yields different index outputs, those values replace the unit branch coefficients in the master formula of Theorem Y.9.
+If the accepted certificate gives different values, those values replace the unit coefficients in the baryogenesis transport equation. If no accepted $\mathfrak A_\eta$ exists, the Berry-to-density coefficient, the determinant-line sign, and the baryon-number spectral-flow normalization are irreducible baryogenesis branch data.
 
-*Proof.* By Definition Y.6.1a (1)–(4), $D_W$ is a Fredholm chiral Dirac operator with APS boundary conditions on the compact oriented four-dimensional interpolation manifold $W_{\mathrm{EW}}$, twisted by both the electroweak gauge connection and the pulled-back flavor Berry bundle $\Gamma_{\mathrm{fl}}^*\mathcal L_{\mathrm{Berry}}$. The Atiyah–Patodi–Singer index theorem then expresses the bulk-plus-boundary index
-$$
-\operatorname{Ind}_{\mathrm{APS}}(D_W)=\int_{W_{\mathrm{EW}}}\hat A(R)\operatorname{ch}(F)\big|_{[4]}-\frac{\eta_{\partial W}+h_{\partial W}}{2}
-$$
-with the standard oriented boundary-kernel correction $h_{\partial W}$ included when it is nonzero. Restricting to the flavor-Berry component of the Chern character — which by standard anomaly descent descends to the four-dimensional EFT operator $W^a_{\mu\nu}\tilde W^{a\mu\nu}$ via standard Stora–Zumino descent — gives the Berry-twisted contribution to the topological-density coefficient. Normalizing this contribution by the gauge topological charge $\Delta N_{CS}$ of the cobordism yields (Y.6.1a.2). By the inflow construction, the EFT matching coefficient $\chi_{CP}$ in Theorem Y.6.1 equals this normalized index, hence $\chi_{CP}=I_{CP}$.
-
-The baryon-number anomaly of Theorem Y.4,
-$$
-\partial_\mu J^\mu_{B+L}
-=
-\frac{N_g g^2}{16\pi^2}
-W^a_{\mu\nu}\tilde W^{a\mu\nu},
-$$
-equivalently $\Delta(B+L)=2N_g\Delta N_{CS}$ under the branch normalization of $N_{CS}$, expresses the integrated $B+L$ change as $2N_g\Delta N_{CS}$ on the cobordism. By the APS-spectral flow correspondence (Atiyah–Patodi–Singer Part III), the chiral spectral flow of the family $\{D_{\Sigma_t}\}_{t\in[0,1]}$ of spatial Dirac operators along $W_{\mathrm{EW}}$ equals $\operatorname{Ind}_{\mathrm{APS}}(D_W)$. The baryon-number-weighted projection of this spectral flow, divided by $N_g\Delta N_{CS}$, gives (Y.6.1a.3). The transport coefficient $\chi_{tr}$ multiplying the sphaleron product structure in Proposition Y.9.1 records exactly this normalized spectral flow on the canonical branch, hence $\chi_{tr}=I_{tr}$.
-
-The sign of the determinant-line contribution to the baryon yield is the product of three orientation signs: the cobordism orientation $\operatorname{or}(W_{\mathrm{EW}})$, the Berry-line orientation $\operatorname{or}(\mathcal L_{\mathrm{Berry}})$, and the KMS time orientation $\mathfrak o_{\mathrm{KMS}}$. The canonical unit branch of Theorem Y.10 (matter dominance, $\eta_B>0$) requires this orientation product to be $+1$ together with $I_{CP}=I_{tr}=1$; condition (Y.6.1b.2) makes that requirement explicit. If the accepted certificate produces different rational outputs $I_{CP}$, $I_{tr}$, the same APS calculation supplies replacement coefficients via (Y.6.1b.1), and the orientation product determines the sign of $\eta_B$ via Theorem Y.10. ∎
+*Proof.* Items 1--8 of Definition Y.6.1a give a Fredholm APS boundary problem for the retained chiral Dirac operator on the electroweak cobordism. The APS index theorem gives the bulk Chern-character term minus the eta/kernel boundary correction. Projecting this index through the Berry determinant line and dividing by the accepted Chern-Simons charge gives (Y.6.1a.2), so the CP-odd topological-density coefficient is $I_{CP}$. The baryon-number anomaly is the same spectral-flow statement evaluated with the finite generator $B_{\mathrm{ret}}$ and normalized by the accepted $N_g\Delta N_{CS}$ denominator, giving (Y.6.1a.3). The determinant-line contribution to the sign is the product of the cobordism, Berry-line, and KMS orientations, proving (Y.6.1b.2). Since every normalization and orientation is an entry of the accepted finite record, changing any one after comparison changes the branch rather than retuning the same source. ∎
 
 **Definition Y.6.1c (APS-Kubo Baryon Transport Certificate).** An APS-Kubo baryon transport certificate is a finite record
 $$
@@ -603,135 +641,115 @@ $$
 =
 \left(
 \mathfrak A_\eta,
+\mathfrak R_{\mathrm{EW}},
+\mathfrak C_{\mathrm{fl}}^{\circ},
+B_{\mathrm{ret}},
 \theta_{\mathrm{PU}},
-\Gamma_{\mathrm{CS}},
+\dot\theta_{\mathrm{PU}},
+\Gamma_{CS},
 \Gamma_{\mathrm{wash}},
 W_{\mathrm{PU}},
 s,
 \mathcal N_\gamma,
-t_i,
-t_f,
+\mathcal N_B,
+[t_i,t_f],
+Y_B(t_i),
 \mathcal Q_B,
+\mathcal R_B^{\mathrm{APSK}},
 \chi_{\mathrm{APSK}}
 \right)
 \tag{Y.6.1c.1}
 $$
 where:
 
-1. $\mathfrak A_\eta$ is an accepted APS-eta certificate of Definition Y.6.1a;
+1. $\mathfrak A_\eta$ is an accepted APS-eta certificate of Definition Y.6.1a, and its threshold and CP entries agree with the displayed $\mathfrak R_{\mathrm{EW}}$ and $\mathfrak C_{\mathrm{fl}}^{\circ}$.
 
-2. $\theta_{\mathrm{PU}}(t)$ is a continuous lift of the determinant-line CP phase
+2. $B_{\mathrm{ret}}$ is the finite baryon-number generator of Definition Y.6.1a and fixes the baryon functional used in the transport equation.
+
+3. $\theta_{\mathrm{PU}}(t)$ is a continuous determinant-line CP phase lift on the retained transport window,
 $$
 \theta_{\mathrm{PU}}(t)
 =
 \frac12\eta(D_{\partial X,t})
 +
 \int_{\gamma_t}\mathcal A_{\mathrm{Berry}}
-\quad
-\mathrm{mod}\ 2\pi,
+\quad \mathrm{mod}\ 2\pi,
 \tag{Y.6.1c.2}
 $$
-where $\gamma_t$ is the retained flavor-generation path and $\mathcal A_{\mathrm{Berry}}$ is the Berry connection. For a closed retained loop, the second term may equivalently be written as $\int_{\Sigma_t^{(2)}}\mathcal F_{\mathrm{Berry}}$ over a bounding retained two-chain $\Sigma_t^{(2)}$.
+and $\dot\theta_{\mathrm{PU}}$ is the derivative in the accepted clock convention. Both are fixed by $\mathfrak C_{\mathrm{fl}}^{\circ}$ or by the accepted flavor-independent CP substitute.
 
-3. $\Gamma_{\mathrm{CS}}(t)$ is the finite Kubo Chern-Simons diffusion coefficient
+4. $\Gamma_{CS}(t)$ is the finite Kubo Chern-Simons diffusion ledger. It consists of finite volume/time windows $(V_j,\tau_j)$, estimator values,
 $$
-\Gamma_{\mathrm{CS}}(t)
+\Gamma_{CS,j}(t)
 =
-\lim_{V\tau\to\infty}
-\frac{
+\frac{1}{V_j\tau_j}
 \left\langle
-\left(
-N_{\mathrm{CS}}(t+\tau)-N_{\mathrm{CS}}(t)
-\right)^2
-\right\rangle
-}{V\tau},
+\left(N_{CS}(t+\tau_j)-N_{CS}(t)\right)^2
+\right\rangle_j,
 \tag{Y.6.1c.3}
 $$
-with the finite-volume, time-window, and continuum-window limits fixed by the branch;
+and a certified tail interval whose limit is the accepted $\Gamma_{CS}(t)$. The branch may not replace the window, estimator, or tail bound after dependent threshold or flavor rows are fixed.
 
-4. $\Gamma_{\mathrm{wash}}(t)\ge0$ is the accepted washout rate, locally integrable on $[t_i,t_f]$;
+5. $\Gamma_{\mathrm{wash}}(t)\ge0$ is the washout/freeze-out profile on $[t_i,t_f]$.
 
-5. $W_{\mathrm{PU}}(t)$ is the finite susceptibility and chemical-potential conversion kernel from the CP phase source to baryon number;
+6. $W_{\mathrm{PU}}(t)$ is the CP Kubo pairing from the determinant-line phase source to the finite baryon-number generator. It includes the susceptibility, chemical-potential conversion, and sphaleron-generator normalization not already contained in $\Gamma_{CS}$.
 
-6. $s(t)>0$ is the entropy density normalization and $\mathcal N_\gamma(t_f):=s(t_f)/n_\gamma(t_f)$ is the photon-normalization factor converting baryon-to-entropy output to baryon-to-photon output;
+7. $s(t)>0$ is the entropy density convention, $\mathcal N_\gamma(t_f)=s(t_f)/n_\gamma(t_f)$ is the photon-normalization factor, and $\mathcal N_B$ is the coefficient normalization inherited from $\mathcal N_{\mathrm{APS}}$.
 
-7. $[t_i,t_f]$ is the transport window;
+8. $[t_i,t_f]$ is the transport window and $Y_B(t_i)$ is the initial baryon-to-entropy vector or scalar fixed by the branch.
 
-8. the baryon transport equation on the retained branch is
+9. The retained transport equation is
 $$
-\frac{d n_B}{dt}
+\frac{dY_B}{dt}
 +
-\Gamma_{\mathrm{wash}}(t)n_B
+\Gamma_{\mathrm{wash}}(t)Y_B(t)
 =
-W_{\mathrm{PU}}(t)\dot\theta_{\mathrm{PU}}(t)\Gamma_{\mathrm{CS}}(t),
+\mathcal N_B
+\frac{W_{\mathrm{PU}}(t)\dot\theta_{\mathrm{PU}}(t)\Gamma_{CS}(t)}{s(t)},
 \qquad
-n_B(t_i)=0;
+Y_B(t_i)\ \text{fixed}.
 \tag{Y.6.1c.4}
 $$
 
-9. $\mathcal Q_B$ is the quadrature and tail ledger for the integral in Theorem Y.6.1d;
+10. $\mathcal Q_B$ is the quadrature and tail ledger for the time or temperature integral, including endpoint, interpolation, and Kubo-tail errors.
 
-10. $\chi_{\mathrm{APSK}}$ records that all entries were fixed before comparison with $\eta_B^{\mathrm{obs}}$.
+11. $\mathcal R_B^{\mathrm{APSK}}$ is the propagated residual interval for all finite approximations and certified tails.
 
-**Theorem Y.6.1d (APS-Kubo Transport Lock).** On a branch carrying an accepted $\mathfrak C_B^{\mathrm{APSK}}$, the baryon-to-photon ratio is fixed by the single response integral
+12. $\chi_{\mathrm{APSK}}$ records source exhaustion, no target-fitting, and no double counting with electroweak threshold, flavor, sphaleron, washout, photon-normalization, or future residual rows.
+
+**Theorem Y.6.1d (APS-Kubo Transport Lock).** On a branch carrying an accepted $\mathfrak C_B^{\mathrm{APSK}}$, the baryon-to-photon ratio is the certified interval
 $$
-\eta_B(t_f)
-:=
-\frac{n_B(t_f)}{n_\gamma(t_f)}
-=
-\mathcal N_\gamma(t_f)\frac1{s(t_f)}
+\eta_B
+\in
+\mathcal N_\gamma(t_f)
+\left[
+Y_B(t_i)e^{-\int_{t_i}^{t_f}\Gamma_{\mathrm{wash}}(u)\,du}
++
 \int_{t_i}^{t_f}
-W_{\mathrm{PU}}(t)
-\dot\theta_{\mathrm{PU}}(t)
-\Gamma_{\mathrm{CS}}(t)
-\exp\left[
--\int_t^{t_f}\Gamma_{\mathrm{wash}}(u)\,du
-\right]dt.
+\mathcal N_B
+\frac{W_{\mathrm{PU}}(t)\dot\theta_{\mathrm{PU}}(t)\Gamma_{CS}(t)}{s(t)}
+\exp\left[-\int_t^{t_f}\Gamma_{\mathrm{wash}}(u)\,du\right]dt
+\right]
++
+\mathcal R_B^{\mathrm{APSK}}.
 \tag{Y.6.1d.1}
 $$
-If the branch uses temperature as the monotone clock with
+If the branch uses temperature as a monotone clock with
 $$
 dt=-\frac{dT}{H(T)T},
 \tag{Y.6.1d.2}
 $$
-then the same result is
+then the source term in (Y.6.1d.1) is equivalently
 $$
-\eta_B
-=
-\mathcal N_\gamma(t_f)
 \int_{T_f}^{T_i}
-\frac{
-W_{\mathrm{PU}}(T)\dot\theta_{\mathrm{PU}}(T)\Gamma_{\mathrm{CS}}(T)
-}{
-s(T_f)H(T)T
-}
-\exp\left[
--\int_{T_f}^{T}
-\frac{\Gamma_{\mathrm{wash}}(T')}{H(T')T'}\,dT'
-\right]dT.
+\mathcal N_B
+\frac{W_{\mathrm{PU}}(T)\dot\theta_{\mathrm{PU}}(T)\Gamma_{CS}(T)}{s(T)H(T)T}
+\exp\left[-\int_{T_f}^{T}\frac{\Gamma_{\mathrm{wash}}(T')}{H(T')T'}\,dT'\right]dT.
 \tag{Y.6.1d.3}
 $$
-Thus the CP source, anomaly index, sphaleron diffusion, washout, entropy normalization, and photon normalization are one finite transport record rather than independent adjustable factors.
+Thus the CP source, APS index, sphaleron diffusion, transport coefficient, washout, entropy density, photon normalization, and residual interval are one finite record. A scalar product formula is theorem-level only when it is derived as the evaluated reduction of (Y.6.1d.1) with the same $\mathcal Q_B$ and $\mathcal R_B^{\mathrm{APSK}}$.
 
-*Proof.* Equation (Y.6.1c.4) is a first-order linear inhomogeneous transport equation. Multiplying by the integrating factor
-$$
-I(t)=\exp\left(\int_{t_i}^{t}\Gamma_{\mathrm{wash}}(u)\,du\right)
-$$
-gives
-$$
-\frac{d}{dt}\left[I(t)n_B(t)\right]
-=
-I(t)W_{\mathrm{PU}}(t)\dot\theta_{\mathrm{PU}}(t)\Gamma_{\mathrm{CS}}(t).
-$$
-Integrating from $t_i$ to $t_f$ and using $n_B(t_i)=0$ gives
-$$
-n_B(t_f)
-=
-\int_{t_i}^{t_f}
-W_{\mathrm{PU}}(t)\dot\theta_{\mathrm{PU}}(t)\Gamma_{\mathrm{CS}}(t)
-\exp\left[-\int_t^{t_f}\Gamma_{\mathrm{wash}}(u)\,du\right]dt.
-$$
-Dividing by $s(t_f)$ and multiplying by the fixed photon-normalization factor $\mathcal N_\gamma(t_f)=s(t_f)/n_\gamma(t_f)$ proves (Y.6.1d.1). If $T$ is a monotone radiation-era clock satisfying (Y.6.1d.2), the change of variables reverses the integration limits and gives (Y.6.1d.3). Since every factor in the integrand and the photon normalization are part of the accepted finite certificate, the resulting number and its quadrature interval are fixed before comparison. ∎
+*Proof.* Equation (Y.6.1c.4) is a finite first-order linear transport equation with fixed coefficients on the accepted window. Multiplication by the integrating factor $\exp(\int_{t_i}^t\Gamma_{\mathrm{wash}})$ gives (Y.6.1d.1) after integration and multiplication by the fixed photon-normalization factor. The temperature form is the change of variables (Y.6.1d.2). The quadrature ledger and Kubo-tail certificate propagate exactly into $\mathcal R_B^{\mathrm{APSK}}$. Since $\mathfrak A_\eta$, $\mathfrak R_{\mathrm{EW}}$, and $\mathfrak C_{\mathrm{fl}}^{\circ}$ are entries of the same certificate, the output is downstream of the accepted threshold and CP/flavor records unless the explicit substitute $\mathfrak C_{CP}^{0}$ has already discharged flavor independence. ∎
 
 **Corollary Y.6.1e (Product-Formula Reduction of the APS-Kubo Ledger).** If the APS-Kubo certificate has a factorized transport window on which
 $$
@@ -1413,36 +1431,92 @@ $$
 \mathfrak C_B
 =
 \left(
-\mathfrak R_{\mathrm{RHG}},
-\mathfrak C_{\mathrm{fl}},
+\mathfrak R_{\mathrm{EW}},
+\mathfrak C_{\mathrm{fl}}^{\circ},
+\mathcal G_B,
 \mathcal S_{\mathrm{sph}},
-\mathcal W_{\mathrm{wash}},
+\mathcal A_{\mathrm{APS}},
 \mathcal P_{CP},
+\mathcal K_{CP},
+\mathcal W_{\mathrm{wash}},
 \mathcal T_B,
+\mathcal N_\gamma,
+\mathcal N_{\mathrm{coeff}},
+\mathcal R_B,
+\mathfrak O_B,
 \chi_B
 \right)
+\tag{Y.11.7a.1}
 $$
 fixed before comparison with $\eta_B$, where:
 
-1. $\mathfrak R_{\mathrm{RHG}}$ is the accepted electroweak threshold record of Definition T.78.10.
-2. $\mathfrak C_{\mathrm{fl}}$ is the accepted flavor completion certificate of Definition T.79.4, or an explicitly stated branch substitute with the same forward-lock condition.
-3. $\mathcal S_{\mathrm{sph}}$ is the finite sphaleron or anomaly-transport coefficient.
-4. $\mathcal W_{\mathrm{wash}}$ is the finite washout and freeze-out integral with certified tail bounds.
-5. $\mathcal P_{CP}$ is the relative determinant-line CP phase profile used in the transport equation.
-6. $\mathcal T_B$ is the total uncertainty interval from threshold, transport, washout, and CP-profile residuals.
-7. $\chi_B$ records that no entry is chosen from the observed baryon asymmetry.
+1. $\mathfrak R_{\mathrm{EW}}$ is an accepted electroweak threshold record: an accepted $\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, accepted spectral-action threshold record, or accepted equivalent satisfying Definition T.78.10.
 
-**Theorem Y.11.7b (Certified Baryogenesis Determinacy).** If $\mathfrak C_B$ is accepted, then the Appendix Y value of $\eta_B$ is uniquely determined up to the certified interval $\mathcal T_B$. If no accepted $\mathfrak C_B$ exists, the numerical baryogenesis value remains model-layer.
+2. $\mathfrak C_{\mathrm{fl}}^{\circ}$ is an accepted $\mathfrak C_{\mathrm{fl}}$, accepted $\mathfrak J_{\mathrm{RHG-fl}}$, or accepted flavor-independent CP certificate $\mathfrak C_{CP}^{0}$. Without $\mathfrak C_{CP}^{0}$ the source remains downstream of the flavor/CP row.
 
-*Proof.* Appendix Y expresses $\eta_B$ as a deterministic function of electroweak threshold data, the three-generation CP-active flavor branch, sphaleron/anomaly conversion, washout, and transport factors. Definition Y.11.7a fixes each of these inputs as a finite record before comparison with $\eta_B$. The accepted RHG and flavor certificates determine the threshold and CP-sector entries; $\mathcal S_{\mathrm{sph}}$, $\mathcal W_{\mathrm{wash}}$, and $\mathcal P_{CP}$ determine the transport channel; and $\mathcal T_B$ bounds the residual uncertainty. Thus $\eta_B$ is the deterministic image of a finite accepted record up to $\mathcal T_B$. Without such a record, at least one transport input remains branch-supplied, so the numerical output is model-layer. ∎
+3. $\mathcal G_B$ is the finite baryon-number generator on the retained matter quotient, including global gauge form, hypercharge normalization, anomaly-bordism orientation, and response-null quotient.
 
-**Corollary Y.11.7c (No Baryogenesis Back-Fitting).** Changing the sphaleron coefficient, washout integral, CP profile, threshold input, or uncertainty interval after comparison with $\eta_B$ defines a new transport branch and cannot confirm the original Appendix Y numerical branch.
+4. $\mathcal S_{\mathrm{sph}}$ is the sphaleron generator and Chern-Simons transition ledger, including the Dynkin-index map and the finite convention for $\Delta N_{CS}$.
+
+5. $\mathcal A_{\mathrm{APS}}$ is either the accepted APS-eta record $\mathfrak A_\eta$ of Definition Y.6.1a or the statement that the chosen baryogenesis branch does not use an APS source.
+
+6. $\mathcal P_{CP}$ is the determinant-line CP phase profile, with phase origin, orientation, derivative convention, and finite interpolation record.
+
+7. $\mathcal K_{CP}$ is the CP Kubo pairing that maps $\mathcal P_{CP}$ and $\mathcal G_B$ to a baryon-number source.
+
+8. $\mathcal W_{\mathrm{wash}}$ is the washout and freeze-out profile, including the finite transport window and tail bound.
+
+9. $\mathcal T_B$ is the finite transport map from source profile to final baryon-to-entropy output.
+
+10. $\mathcal N_\gamma$ is the photon normalization and $\mathcal N_{\mathrm{coeff}}$ is the coefficient-normalization ledger for entropy, sphaleron, anomaly, and Dynkin-index conventions.
+
+11. $\mathcal R_B$ is the certified residual interval for threshold, CP, Kubo, washout, quadrature, and normalization errors.
+
+12. $\mathfrak O_B$ is the no-double-counting audit proving that no contribution is simultaneously assigned to the electroweak threshold row, flavor row, APS source, sphaleron generator, washout map, photon normalization, or any future residual entry.
+
+13. $\chi_B$ records that no entry is chosen from the observed baryon asymmetry or from a downstream validation tuple.
+
+The certificate is accepted exactly when every response-active contribution to $\eta_B$ is assigned to one named source in (Y.11.7a.1), every overlap map in $\mathfrak O_B$ commutes, and the only residual uncertainty is the interval $\mathcal R_B$.
+
+**Theorem Y.11.7b (Certified Baryogenesis Determinacy and Branch Classification).** If $\mathfrak C_B$ is accepted, then the Appendix Y baryon asymmetry is the deterministic interval
+$$
+\eta_B
+\in
+\mathcal N_\gamma\,\mathcal T_B
+\left(
+\mathcal K_{CP}(\mathcal P_{CP},\mathcal G_B,\mathcal S_{\mathrm{sph}})
+\right)
++
+\mathcal R_B.
+\tag{Y.11.7b.1}
+$$
+If no accepted $\mathfrak C_B$ exists, the surviving admissible baryogenesis branches are classified by the finite labels
+$$
+\left(
+\mathfrak R_{\mathrm{EW}},
+\mathfrak C_{\mathrm{fl}}^{\circ},
+\mathcal G_B,
+\mathcal S_{\mathrm{sph}},
+\mathcal A_{\mathrm{APS}},
+\mathcal P_{CP},
+\mathcal K_{CP},
+\mathcal W_{\mathrm{wash}},
+\mathcal N_\gamma,
+\mathcal N_{\mathrm{coeff}}
+\right),
+\tag{Y.11.7b.2}
+$$
+and the numerical value of $\eta_B$ is model-layer for every branch whose label is not fully certified.
+
+*Proof.* Definition Y.11.7a fixes the threshold, CP/flavor, anomaly, sphaleron, transport, washout, photon, and coefficient-normalization entries before comparison. Therefore the finite composition in (Y.11.7b.1) is single-valued up to the certified interval $\mathcal R_B$. The overlap audit prevents assigning the same source twice or moving a source between ledgers after the fact. If any entry in (Y.11.7a.1) is absent, changing that entry while preserving all already accepted rows gives a distinct admissible finite transport branch with a different possible $\eta_B$, so Theorem P.14.1f gives non-identifiability and the classification labels (Y.11.7b.2) are irreducible branch data. ∎
+
+**Corollary Y.11.7c (No Baryogenesis Back-Fitting).** Changing the sphaleron coefficient, washout integral, CP profile, threshold input, photon normalization, coefficient normalization, no-double-counting audit, or uncertainty interval after comparison with $\eta_B$ defines a new transport branch and cannot confirm the original Appendix Y numerical branch.
 
 *Proof.* Each listed item is part of $\mathfrak C_B$. The forward-lock condition $\chi_B$ forbids choosing it from the target value. ∎
 
-**Corollary Y.11.7d (Baryogenesis Numerical Dependence on RHG and Flavor Certificates).** The Appendix Y baryogenesis number is theorem-level only if the RHG threshold record, flavor or CP-sector certificate, sphaleron coefficient, washout integral, CP profile, and uncertainty interval are all fixed in an accepted $\mathfrak C_B$. The existence of $N_g=3$ and nonzero CP capacity is not by itself a numerical baryogenesis prediction.
+**Corollary Y.11.7d (Baryogenesis Numerical Dependence on Threshold and CP Certificates).** The Appendix Y baryogenesis number is theorem-level only if the electroweak threshold record, flavor/CP certificate or accepted flavor-independent CP substitute, sphaleron generator, APS/Kubo source, washout integral, photon normalization, coefficient normalization, no-double-counting audit, and uncertainty interval are all fixed in an accepted $\mathfrak C_B$. The existence of $N_g=3$ and nonzero CP capacity is not by itself a numerical baryogenesis prediction.
 
-*Proof.* Theorem Y.11.7b states that $\eta_B$ is the deterministic image of $\mathfrak C_B$. The inputs of $\mathfrak C_B$ include $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$ or a branch substitute, $\mathcal S_{\mathrm{sph}}$, $\mathcal W_{\mathrm{wash}}$, $\mathcal P_{CP}$, and $\mathcal T_B$. Exact $N_g=3$ and the existence of CP-active structure determine only qualitative admissibility of the transport channel. Varying the washout integral or CP profile within admissible finite records changes the numerical asymmetry. Theorem P.14.1f therefore blocks theorem-level numerical promotion without the accepted transport certificate. ∎
+*Proof.* Theorem Y.11.7b states that $\eta_B$ is the deterministic image of $\mathfrak C_B$. Exact $N_g=3$ and the existence of CP-active structure determine qualitative admissibility of the channel, while the magnitude requires the finite records listed in Definition Y.11.7a. ∎
 
 **Definition Y.11.7e (Finite Baryogenesis Transport Integral Certificate).** A finite baryogenesis transport integral certificate is a refinement of $\mathfrak C_B$:
 $$
@@ -1451,10 +1525,14 @@ $$
 \left(
 \mathfrak C_B,
 [t_i,t_f],
+\mathcal H_B,
+Y_B(t_i),
 \mathcal L_B(t),
 S_{CP}(t),
 W_B(t),
+\mathcal U_B,
 \mathcal Q_B,
+\mathcal N_\gamma,
 \mathcal R_B^{\mathrm{tr}},
 \chi_B^{\mathrm{tr}}
 \right)
@@ -1462,19 +1540,27 @@ W_B(t),
 $$
 where:
 
-1. $[t_i,t_f]$ is the certified electroweak transport window.
+1. $\mathcal H_B$ is the finite retained baryon-transport state space and quotient by response-null baryon labels.
 
-2. $\mathcal L_B(t)$ is the finite baryon-number transport generator on the retained CP-active state vector.
+2. $[t_i,t_f]$ is the certified electroweak transport window.
 
-3. $S_{CP}(t)$ is the determinant-line CP source profile.
+3. $Y_B(t_i)$ is the fixed initial baryon vector or scalar.
 
-4. $W_B(t)$ is the washout/freeze-out profile.
+4. $\mathcal L_B(t)$ is the finite baryon-number transport generator on $\mathcal H_B$; it includes the reversible transport part and any linear washout/freeze-out part not represented separately by $W_B(t)$.
 
-5. $\mathcal Q_B$ is the quadrature and tail-bound ledger for all time integrals.
+5. $S_{CP}(t)$ is the determinant-line CP source profile produced by $\mathcal K_{CP}$.
 
-6. $\mathcal R_B^{\mathrm{tr}}$ is the propagated residual interval.
+6. $W_B(t)$ is the nonnegative scalar washout/freeze-out survival profile when the branch uses a scalar survival factor; if washout is already contained in $\mathcal L_B(t)$, then $W_B(t)=0$ and this entry is marked response-null.
 
-7. $\chi_B^{\mathrm{tr}}$ records that no entry is selected using the observed baryon asymmetry.
+7. $\mathcal U_B(t_2,t_1)$ is the time-ordered propagator generated by $\mathcal L_B(t)$.
+
+8. $\mathcal Q_B$ is the quadrature and tail-bound ledger for all time integrals and finite Kubo sums.
+
+9. $\mathcal N_\gamma$ is the photon-normalization convention inherited from $\mathfrak C_B$.
+
+10. $\mathcal R_B^{\mathrm{tr}}$ is the propagated residual interval.
+
+11. $\chi_B^{\mathrm{tr}}$ records that no transport entry is selected using the observed baryon asymmetry.
 
 The transport solution is
 $$
@@ -1485,11 +1571,11 @@ Y_B(t_f)
 \int_{t_i}^{t_f}
 \mathcal U_B(t_f,t)
 S_{CP}(t)
-e^{-W_B(t)}
-\,dt,
+\exp\left[-\int_t^{t_f}W_B(u)\,du\right]
+\,dt.
 \tag{Y.11.7e.1}
 $$
-where
+The propagator is
 $$
 \mathcal U_B(t_2,t_1)
 =
@@ -1500,16 +1586,18 @@ $$
 \tag{Y.11.7e.2}
 $$
 
-**Theorem Y.11.7f (Certified Baryogenesis Transport Determinacy).** If $\mathfrak C_B^{\mathrm{tr}}$ is accepted, then the baryon asymmetry
+**Theorem Y.11.7f (Certified Baryogenesis Transport Determinacy).** If $\mathfrak C_B^{\mathrm{tr}}$ is accepted, then the baryon asymmetry satisfies
 $$
 \eta_B
-=
-\mathcal N_\gamma\,Y_B(t_f)
+\in
+\mathcal N_\gamma\,\nu_B\!\bigl(Y_B(t_f)\bigr)
++
+\mathcal R_B^{\mathrm{tr}},
 \tag{Y.11.7f.1}
 $$
-is uniquely determined up to the residual interval $\mathcal R_B^{\mathrm{tr}}$, where $\mathcal N_\gamma$ is the fixed photon-normalization convention of the branch.
+where $\nu_B$ is the finite baryon-number readout functional fixed by $\mathcal G_B$. The interval in (Y.11.7f.1) is the only theorem-level numerical output of the transport branch.
 
-*Proof.* The finite generator $\mathcal L_B(t)$, CP source $S_{CP}(t)$, washout profile $W_B(t)$, initial condition, and time window are all fixed entries of $\mathfrak C_B^{\mathrm{tr}}$. The linear finite-dimensional nonautonomous transport equation has a unique time-ordered evolution operator $\mathcal U_B(t_2,t_1)$. Therefore (Y.11.7e.1) gives one value of $Y_B(t_f)$ before residuals. The quadrature ledger $\mathcal Q_B$ supplies the finite integration approximation and certified tail/error bounds, collected in $\mathcal R_B^{\mathrm{tr}}$. Multiplication by the fixed branch normalization $\mathcal N_\gamma$ preserves uniqueness. Thus $\eta_B$ is the deterministic image of the accepted finite record up to $\mathcal R_B^{\mathrm{tr}}$. ∎
+*Proof.* The finite state space, initial condition, generator, CP source, washout profile, photon normalization, and readout functional are fixed entries of $\mathfrak C_B^{\mathrm{tr}}$. Finite-dimensional nonautonomous linear transport therefore has the unique time-ordered solution (Y.11.7e.1). The quadrature and Kubo-tail ledger supplies the residual interval $\mathcal R_B^{\mathrm{tr}}$. Applying the fixed readout and photon normalization gives (Y.11.7f.1). ∎
 
 **Corollary Y.11.7g (No Transport-Factor Replacement).** The product form
 $$
@@ -1518,6 +1606,45 @@ $$
 is theorem-level only if it is the evaluated reduction of an accepted $\mathfrak C_B^{\mathrm{tr}}$ or an accepted certificate explicitly proving equivalence to that transport integral. Otherwise it remains the Appendix Y transport-branch value.
 
 *Proof.* Theorem Y.11.7f defines theorem-level transport closure through the finite generator, CP source, washout profile, quadrature ledger, and residual interval. A scalar product not derived from those entries does not instantiate the transport equation. If a factor is replaced after comparison, $\chi_B^{\mathrm{tr}}$ fails and the replacement is a new branch. ∎
+
+**Theorem Y.11.7h (Baryogenesis Certificate Classification and Current Status).** The theorem-level baryogenesis row is accepted exactly on one finite record
+$$
+\mathfrak C_B,
+\qquad
+\mathfrak C_B^{\mathrm{tr}},
+\qquad
+\mathfrak C_B^{\mathrm{APSK}},
+\tag{Y.11.7h.1}
+$$
+or on an equivalent completed spectral tuple proving equality to one of these records. Such a record must fix, before comparison, the electroweak threshold record, flavor/CP record or explicitly registered flavor-independent CP substitute, sphaleron generator, APS eta/index data when used, CP Kubo pairing, finite baryon-number generator, transport window, CP source, washout/freeze-out profile, quadrature and tail ledger, photon normalization, coefficient normalization, residual interval, overlap audit, and forward-lock entry.
+
+On an accepted finite-transport branch the certified interval is
+$$
+\eta_B
+\in
+\mathcal N_\gamma
+\left[
+\nu_B\!\left(
+\mathcal U_B(t_f,t_i)Y_B(t_i)
++
+\int_{t_i}^{t_f}
+\mathcal U_B(t_f,t)S_{CP}(t)e^{-W_B(t)}\,dt
+\right)
+\right]
++
+\mathcal R_B^{\mathrm{tr}},
+\tag{Y.11.7h.2}
+$$
+with $\nu_B$ the branch-fixed baryon-number readout. On an accepted APS-Kubo branch the certified interval is the interval of Theorem Y.6.1d after the same photon-normalization and overlap audit. A product formula is theorem-level only when Corollary Y.6.1e or Corollary Y.11.7g proves that it is the evaluated reduction of one of these finite intervals.
+
+If no record in (Y.11.7h.1) is accepted, Appendix Y supplies the validation-run value
+$$
+\eta_B^{\mathrm{val}}=(6.2\pm0.5)\times10^{-10}
+\tag{Y.11.7h.3}
+$$
+but not a theorem-level certified interval. The irreducible branch coordinates are precisely the missing entries among threshold input, CP/flavor source, sphaleron normalization, APS/Kubo coefficient, finite transport generator, washout and freeze-out profile, photon normalization, quadrature/tail ledger, residual interval, and no-double-counting audit.
+
+*Proof.* Definitions Y.6.1c, Y.11.7a, and Y.11.7e are the only Appendix Y finite baryogenesis routes. When one is accepted, the finite nonautonomous transport equation or APS-Kubo integral is single-valued up to its stated residual interval. If a listed entry is absent, two admissible completions can agree on all accepted upstream data while differing in the absent CP, transport, washout, photon, or residual datum, and hence in $\eta_B$. Theorem P.14.1f blocks theorem-level promotion in that case. The overlap audit prevents double counting with electroweak thresholds, flavor determinants, hypercharge, APS boundary terms, sphaleron negative modes, thermal finite parts, primordial determinants, vacuum determinant entries, or final spectral calibration symbols. ∎
 
 ## Y.11 Baryogenesis Derivation Chain Summary
 
@@ -1533,12 +1660,12 @@ K_0 = 3 &\xrightarrow{\text{Thm 15}} N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \xrightar
 &\xrightarrow{\text{Thm R.3.4}} N_g = 3 \\[4pt]
 &\xrightarrow{\text{Thm Y.8}} \kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = 19.48 \\[4pt]
 &\xrightarrow{\text{Thm T.56}} \delta = 66.7° \implies \sin\delta = 0.918 \\[4pt]
-&\xrightarrow{\text{Thm Y.9}} \eta_B = \mathcal{C}_{eff} \cdot \tanh(\mathcal{S}\sin\delta) \cdot f_{wash} \cdot e^{-\kappa_B} \\[4pt]
-&= 0.282 \times 0.9997 \times 0.63 \times 3.47 \times 10^{-9} = 6.2 \times 10^{-10}
+&\xrightarrow{\text{Thm Y.9}} \eta_B = \mathcal{C}_{eff} \cdot \tanh(\chi_{CP}\mathcal{S}\sin\delta) \cdot f_{wash} \cdot e^{-\kappa_B} \\[4pt]
+&= 0.282 \times 0.9997 \times 0.63 \times 3.47 \times 10^{-9} = 6.2 \times 10^{-10}\quad\text{on the canonical validation branch}
 \end{aligned}
 }$$
 
-**Continuous fit-parameter count: Zero after fixing the Appendix T/R/Z/Y branch data.** Every quantity in the final result traces back to the foundational constant $K_0=3$, to independently measured/calculated Standard Model quantities, or to the explicit branch labels of the canonical Appendix Y baryogenesis branch (the SM-gauge branch from Appendix G; the realized $N_g=3$ on the pre-flavor family-redundancy PPI branch of Appendix R; the $\kappa_{EW}$ branch package of Appendix T; the residual-budget and predictive-recovery MacWilliams Golay branches of Appendices E/Q/Z; the unit Berry-topological response branch $\chi_{CP}=1$ or an APS-eta index output $\chi_{CP}=I_{CP}$ via Theorem Y.6.1b; the unit sphaleron-transport branch $\chi_{tr}=1$ or an APS-eta index output $\chi_{tr}=I_{tr}$ via Theorem Y.6.1b; the unit boundary orientation of Theorem Y.10 or the determinant-line orientation product of Theorem Y.6.1b condition (Y.6.1b.2)). This is not the same as saying that every branch input is an unconditional theorem-level result.
+**Continuous fit-parameter count: Zero after fixing the Appendix T/R/Z/Y branch data and the finite branch tuple of Theorem Y.11.7h.** Every quantity in the displayed validation result traces back to the foundational constant $K_0=3$, to independently measured/calculated Standard Model quantities, or to the explicit branch labels of the canonical Appendix Y baryogenesis branch. A theorem-level numerical row additionally requires an accepted $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or $\mathfrak C_B^{\mathrm{APSK}}$ fixing the electroweak threshold record, flavor/CP record or accepted flavor-independent CP substitute, sphaleron generator, APS/Kubo source, washout and freeze-out profile, photon normalization, quadrature ledger, residual interval, overlap audit, and forward-lock entry. Before those finite entries are accepted, the displayed product is a validation-run branch value with zero retuning inside the branch, not an unconditional PU prediction.
 
 
 ---

@@ -2703,26 +2703,31 @@ $$
 \mathfrak S_{\mathrm{hor},n}
 =
 (\mathfrak H_n^{\mathrm{ret}},\mathcal C_n,s_n,\epsilon_n)
+\tag{E.9.5f.1}
 $$
 where $\mathcal C_n\subseteq\mathcal A_n^{\mathrm{coarse}}$ is the coarse exterior record retained by the protocol, $s_n:\mathcal C_n\to\mathcal A_n^{\mathrm{ret}}$ is a finite section on the image of $\pi_{\mathrm{hor},n}\circ U_n$, and $\epsilon_n\ge0$ is the certified recovery error in the retained response norm. It is accepted when
 $$
 \left\|s_n(\pi_{\mathrm{hor},n}(U_n(A)))-U_n(A)\right\|_{\mathrm{ret}}
 \le
 \epsilon_n
-\tag{E.9.5f.1}
+\tag{E.9.5f.2}
 $$
-for every retained generator $A$ in the finite protocol algebra, with $\epsilon_n$ fixed before comparison. Exact deterministic exterior recovery is the special case $\epsilon_n=0$.
+for every retained generator $A$ in the finite protocol algebra, with $\epsilon_n$ fixed before comparison. Exact deterministic exterior recovery is the special case $\epsilon_n=0$; a refining deterministic recovery theorem uses a sequence with $\epsilon_n\to0$.
 
 **Theorem E.9.5f.1 (Exterior Recovery Only under Sufficiency).** If $\mathfrak S_{\mathrm{hor},n}$ is accepted, then the map $\mathcal R_n=s_n$ recovers the retained horizon update from the coarse exterior record with certified error $\epsilon_n$:
 $$
 \left\|\mathcal R_n(\pi_{\mathrm{hor},n}(U_n(A)))-U_n(A)\right\|_{\mathrm{ret}}
 \le
 \epsilon_n.
-\tag{E.9.5f.2}
+\tag{E.9.5f.3}
 $$
 Without such a sufficiency certificate, Theorem E.9.5e proves no fundamental deletion in the retained algebra but does not assert deterministic recovery from the exterior coarse algebra alone.
 
-*Proof.* The first statement is (E.9.5f.1) with $\mathcal R_n=s_n$. The second statement follows because $\pi_{\mathrm{hor},n}$ need not be injective on $\mathcal A_n^{\mathrm{ret}}$; distinct retained states can have the same exterior coarse image while differing by an element of $\ker_{\mathrm{hid}}\pi_{\mathrm{hor},n}$. A deterministic recovery map from $\mathcal A_n^{\mathrm{coarse}}$ alone is theorem-certified exactly when the finite section data in Definition E.9.5f are supplied on the image of $\pi_{\mathrm{hor},n}\circ U_n$, up to the certified error. ∎
+*Proof.* The recovery estimate is exactly (E.9.5f.2) with $\mathcal R_n=s_n$. If the certificate is absent, $\pi_{\mathrm{hor},n}$ may identify distinct retained updates that differ by an element of $\ker_{\mathrm{hid}}\pi_{\mathrm{hor},n}$. The injectivity of $U_n$ on the retained algebra prevents deletion before projection but does not construct a section of the exterior projection. ∎
+
+**Corollary E.9.5f.2 (Recovery/Page Separation).** The exterior recovery certificate $\mathfrak S_{\mathrm{hor},n}$ and the Page/design scrambling certificates are distinct promotion gates. $\mathfrak S_{\mathrm{hor},n}$ supplies deterministic recovery in retained response norm. A Page-curve or Page-purity statement requires the separate moment-design, frame-potential, or trace-continuity certificate of Appendix K. Neither gate follows from retained-algebra conservation alone.
+
+*Proof.* Theorem E.9.5e uses only retained injectivity. Definition E.9.5f adds a finite section of the exterior projection. Appendix K adds design or trace-continuity estimates comparing reduced radiation states to a Page reference. These are different finite maps and have different error norms, so Theorem P.14.1f blocks promotion from one gate to the other without an explicit overlap certificate. ∎
 
 **Corollary E.9.5e.1 (Status of the Horizon Sector).** On every branch carrying an accepted finite KMS-descent certificate of Definition F.10.12a and injective retained update $U_n$, the horizon structural-conservation row of Convention P.14.1k is closed by Theorem E.9.5e. The exterior recovery row is certificate-complete only after an accepted exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ is supplied. The von Neumann Page-curve estimate remains on the trace-coupled entropy-continuity branch of Corollary E.9.5.2a and Definition K.3d.4c; without that promotion, a moment-design certificate supplies only the Page-purity row.
 

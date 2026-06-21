@@ -4593,7 +4593,7 @@ fixed before comparison with measured $\alpha$, where:
 $$
 \operatorname{sinc}(u^*)=\frac{\sin u^*}{u^*}.
 $$
-7. $R_\alpha$ is a certified residual interval for all finite-order truncation, threshold, and projection tails not already included in the sinc factor.
+7. $R_\alpha$ is a certified residual entry, possibly a degenerate interval, for all finite Ward, threshold, recoil, projection, and operator-realized post-core sources not already included in the bulk Ward term, interface term, electromagnetic projection, democratic-curvature response, separable-curvature response, or exact $SU(2)$ sinc factor. A nondegenerate interval is allowed only when supplied by an accepted Definition Z.27.11g bound or by an accepted Definition Z.27.11j operator record; an exact value is recorded as $[R_\alpha,R_\alpha]$.
 8. $\chi_\alpha$ records that no entry is chosen using $\alpha_{\mathrm{obs}}$.
 
 The certified Thomson value is
@@ -5066,10 +5066,9 @@ $$
 =
 \left(
 \mathfrak S_{\alpha,YR\perp},
-B^0,B^1,B^2,
-D_0,D_1,
-\iota_3,\iota_5,\iota_7,
-Q,
+C^\bullet_W,
+\delta_0,
+\delta_1,
 r_{\alpha,YR\perp},
 \Phi_{\alpha,YR\perp},
 \mathcal A_{\alpha,YR\perp},
@@ -5079,6 +5078,17 @@ r_{\alpha,YR\perp},
 $$
 where
 $$
+C^\bullet_W
+=
+\left(
+C^0_W\xrightarrow{\delta_0}C^1_W\xrightarrow{\delta_1}C^2_W,
+B^0,B^1,B^2,
+\iota_3,\iota_5,\iota_7,Q,D_0,D_1
+\right)
+\tag{Z.27.11k.12a.1}
+$$
+is the finite electromagnetic Ward residual complex together with its displayed bases, source embeddings, quotient projection, and coordinate matrices. The structural carrier is
+$$
 \mathfrak S_{\alpha,YR\perp}
 =
 \left(
@@ -5087,7 +5097,7 @@ W_5,P_C,P_W,Y,T_3,
 G_{\ge7},A_{\ge7},\eta_7
 \right),
 $$
-and the structural source data are
+with
 $$
 W_5=\mathbb C_C^3\oplus\mathbb C_W^2,
 \qquad
@@ -5098,10 +5108,10 @@ $$
 $$
 Y=-\frac{1}{3}P_C+\frac{1}{2}P_W,
 \qquad
-T_3=\frac{1}{2}\operatorname{diag}(1,-1)\text{ on }\mathbb C_W^2,
+T_3=\frac{1}{2}\operatorname{diag}(1,-1)\text{ on }\mathbb C_W^2.
 \tag{Z.27.11k.12b}
 $$
-and
+The active-reference and passive-complement projectors satisfy
 $$
 \Pi_{\mathrm{act/ref}}\in M_{K_0}(\mathbb C),
 \qquad
@@ -5117,7 +5127,15 @@ $$
 \operatorname{rank}(\Pi_{\perp})=1.
 \tag{Z.27.11k.12c}
 $$
-The ordered bases are
+The complex is
+$$
+C^0_W=\operatorname{span}(B^0),
+\qquad
+C^1_W=\operatorname{span}(B^1),
+\qquad
+C^2_W=\operatorname{span}(B^2),
+$$
+with ordered bases
 $$
 B^0=(\lambda_{\parallel},\lambda_0,\lambda_1),
 $$
@@ -5128,7 +5146,7 @@ $$
 B^2=(\Theta),
 \tag{Z.27.11k.12d}
 $$
-with source interpretation
+and source interpretation
 $$
 \omega_Y=Y^2,
 \qquad
@@ -5151,7 +5169,7 @@ A_{\ge7}=\begin{pmatrix}1&0\\0&0\end{pmatrix},
 $$
 Here $\boxtimes$ is the finite external-product pairing in the same post-core Ward residual operator package. Its domain, bilinearity, and displayed coordinate values are part of the audit ledger $\mathcal A_{\alpha,YR\perp}$; no independent multiplicative algebra is imported. The symbol $\omega^{(7)}$ denotes the seventh-order electromagnetic source symbol whose uniqueness, retention, and post-core status are part of the source-origin ledger below. The entries $\nu_0,\nu_1$ are response-normalization null shadows, and $\theta$ is the obstruction generator recorded by the same ledger.
 
-In these bases the operator-origin ledgers of $\mathcal A_{\alpha,YR\perp}$ must prove that the actual Ward maps of Definition Z.27.11k have coordinate matrices
+The actual Ward maps $\delta_0,\delta_1$ have coordinate matrices
 $$
 D_0=
 \begin{pmatrix}
@@ -5179,8 +5197,15 @@ $$
 \delta_1\theta=\Theta,
 \tag{Z.27.11k.12h}
 $$
-and all other displayed basis vectors have zero image under the corresponding displayed map.
-
+and all other displayed basis vectors have zero image under the corresponding displayed map. Therefore
+$$
+H^1_W(\alpha;YR\perp)
+=
+\ker\delta_1/\operatorname{im}\delta_0
+=
+\operatorname{span}\{[\omega_Y],[\omega_5],[\sigma_{\perp}]\}.
+\tag{Z.27.11k.12h.1}
+$$
 The source embeddings are
 $$
 \iota_3(Y^2)=e_1,
@@ -5234,19 +5259,53 @@ The symbol $u^*$ in (Z.27.11k.12m) is the same Appendix Z capacity-saturation va
 
 The audit ledger $\mathcal A_{\alpha,YR\perp}$ is accepted only if it proves the finite identities below inside the residual-operator package of Definition Z.27.11a, with the operator, domain, regularization rule, and error-bound data required by Definition Z.27.11j fixed before comparison, not merely inside a newly named coordinate vector space.
 
-1. **Source-origin equality.** The post-core electromagnetic residual source space not already included in the bulk Ward, interface, projected-response, democratic-curvature, separable-response, or exact $SU(2)$ sinc entries is exactly the span of the seven $B^1$ vectors in (Z.27.11k.12d). Thus (Z.27.11k.12d) is an equality of the branch residual source space, not a truncating subset.
+1. **Source-origin equality.** The post-core electromagnetic residual source space not already included in the bulk Ward, interface, electromagnetic-projection, democratic-curvature, separable-curvature, or exact $SU(2)$ sinc entries is exactly $C^1_W=\operatorname{span}(B^1)$. Thus (Z.27.11k.12d) is an equality of the branch residual source space, not a truncating subset.
 
-2. **Differential-origin equality.** The actual response-coordinate coboundary and Ward-obstruction maps of Definition Z.27.11k have the coordinate matrices $D_0,D_1$ in (Z.27.11k.12g).
+2. **Differential-origin equality.** The actual response-coordinate coboundary and Ward-obstruction maps of Definition Z.27.11k are the displayed maps $\delta_0,\delta_1$, with coordinate matrices $D_0,D_1$ in (Z.27.11k.12g).
 
-3. **Evaluation-origin equality.** The row (Z.27.11k.12l) is the coordinate form of the Thomson residual functional supplied by the exact residual-operator gate of Definition Z.27.11j. Its coefficients are obtained from the determinant-compatible hypercharge trace, the active-reference rank fraction, and the seventh-order passive-complement contraction recorded in (Z.27.11k.12f); they are not assigned by comparison with $\alpha_{\mathrm{obs}}$.
+3. **Evaluation-origin equality.** The row (Z.27.11k.12l) is the coordinate form of the Thomson residual functional supplied by the exact residual-operator gate of Definition Z.27.11j. Its coefficients are obtained from the determinant-compatible hypercharge trace, the active-reference rank fraction, and the seventh-order passive-complement contraction recorded in (Z.27.11k.12b)--(Z.27.11k.12f); they are not assigned by comparison with $\alpha_{\mathrm{obs}}$.
 
-4. **Residual-source equality.** After exact terms and already-counted classes are removed, the residual operator has coordinate vector (Z.27.11k.12k). In particular, the active/reference seventh-order source is exact because it is $\delta_0\lambda_{\parallel}$, and the retained seventh-order non-exact source is the passive complement $\sigma_{\perp}$.
+4. **Passive-complement equality.** The seventh-order non-exact source retained after exact active/reference removal is $\sigma_{\perp}=\Pi_{\perp}\boxtimes\omega^{(7)}$. The active/reference seventh-order source is exact because $\sigma_{\parallel}=\delta_0\lambda_{\parallel}$, and the passive coefficient is the trace-normalized positive contraction on the ordered seventh-order source plane $(\sigma_{\parallel},\sigma_{\perp})$:
+$$
+E_{\perp}=\begin{pmatrix}0&0\\0&1\end{pmatrix},
+\qquad
+\gamma_{\perp}=\operatorname{Tr}(G_{\ge7}E_{\perp})=\frac{1}{3}.
+\tag{Z.27.11k.12n}
+$$
 
-5. **Regularization and error-bound equality.** The finite operator realization is the complete finite residual operator on this branch under the same finite-part, normalization, and source-removal convention used in Definition Z.27.11a. No trace-class remainder, omitted finite source, or matrix-discretization error remains outside the displayed finite source space. If such a remainder remains, it must be carried as a separate interval under Definition Z.27.11g or a separate operator record under Definition Z.27.11j, and it cannot be absorbed into (Z.27.11k.20a).
+5. **Regularization and error-bound equality.** The finite operator realization is the complete finite residual operator on this branch under the same finite-part, normalization, and source-removal convention used in Definition Z.27.11a. No trace-class remainder, omitted finite source, matrix-discretization error, bulk/interface/em-projection/curvature remainder, or sinc-tail remainder remains outside the displayed finite source space. If such a remainder remains, it must be carried as a separate interval under Definition Z.27.11g or a separate operator record under Definition Z.27.11j, and it cannot be absorbed into (Z.27.11k.20a).
 
-6. **Forward lock.** The source alphabet, contraction data, matrices, embeddings, quotient projection, source vector, evaluation row, and regularization/error record are entered in the evidence register before empirical comparison and contain no field selected by the recorded value of $\alpha_{\mathrm{obs}}$.
+6. **Source-exhaustion equality.** The finite source filtration terminates at the seven displayed $B^1$ vectors: $\omega_Y,\omega_5,\sigma_{\parallel},\sigma_{\perp},\nu_0,\nu_1,\theta$. The exact classes are $\sigma_{\parallel},\nu_0,\nu_1$, the obstructed class is $\theta$, and the only retained non-exact classes are $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$. Any later residual entry in Definition Z.27.11g, Definition Z.27.11j, Definition Z.27.11L, or Definition Z.27.11M must be a separate direct-sum residual source with its own overlap audit, not a second evaluation of these three classes.
 
-The audit bit $\chi_{\alpha,YR\perp}$ records exactly these six acceptance clauses. If any one of them is absent, $\mathfrak O_{\alpha,YR\perp}$ is only a candidate matrix diagnostic and does not promote the Thomson row.
+7. **Determinant-compatible hypercharge equality.** The hypercharge operator is the primitive determinant-compatible block scalar on $S(U(3)\times U(2))$:
+$$
+\operatorname{Tr}(Y)=3\left(-\frac{1}{3}\right)+2\left(\frac{1}{2}\right)=0,
+\qquad
+\operatorname{Tr}(Y^2)=\frac{5}{6},
+\qquad
+\operatorname{Tr}(T_3^2)=\frac{1}{2},
+$$
+so the degree-three hypercharge evaluation factor is
+$$
+\frac{\operatorname{Tr}(Y^2)}{\operatorname{Tr}(T_3^2)}=\frac{5}{3}.
+\tag{Z.27.11k.12o}
+$$
+This fixes the $-5c_1(u^*)^3/3$ entry in $\Phi_{\alpha,YR\perp}$ without an external abelian scale choice.
+
+8. **Active-recoil lift equality.** The rank-$2$ active-reference lift and determinant-compatible hypercharge trace give the degree-five factor
+$$
+\frac{\operatorname{rank}(\Pi_{\mathrm{act/ref}})}{K_0}\cdot\frac{\operatorname{Tr}(Y^2)}{\operatorname{Tr}(T_3^2)}
+=
+\frac{2}{3}\cdot\frac{5}{3}
+=
+\frac{10}{9},
+\tag{Z.27.11k.12p}
+$$
+while the active/reference seventh-order lift is exact and hence killed in cohomology. The passive-complement contribution is the non-exact lift in item 4 with sign $\eta_7=-1$.
+
+9. **Forward lock.** The source alphabet, contraction data, matrices, embeddings, quotient projection, source vector, evaluation row, regularization/error record, determinant-compatible hypercharge record, active-recoil lift, passive-complement lift, and source-exhaustion record are entered in the evidence register before empirical comparison and contain no field selected by the recorded value of $\alpha_{\mathrm{obs}}$.
+
+The audit bit $\chi_{\alpha,YR\perp}$ records exactly these nine acceptance clauses. If any one of them is absent, $\mathfrak O_{\alpha,YR\perp}$ is only a candidate matrix diagnostic and does not promote the Thomson row.
 
 **Algorithm Z.27.11k.13 (Hypercharge-Recoil Ledger Audit).** The proof-carrying ledger in Definition Z.27.11k.12 is the finite tuple
 $$
@@ -5754,7 +5813,13 @@ $$
 \tag{Z.27.11k.20e}
 $$
 
-*Proof.* By Theorem Z.27.11k.16b and Corollary Z.27.11k.16c, the source alphabet, Ward differentials, seventh-order contraction data, and retained residual class of Definition Z.27.11k.12 are the unique PPI/PCE-selected post-core hypercharge-recoil record on the accepted strict source-exhaustion branch. Therefore an accepted $\mathfrak O_{\alpha,YR\perp}$ identifies the actual post-core residual operator domain, Ward differentials, residual source vector, Thomson evaluation functional, regularization rule, and zero additional error bound required by Definition Z.27.11j. Lemma Z.27.11k.18 gives the accepted cohomology basis and the source-exhaustion decomposition. Lemma Z.27.11k.19 shows that the evaluation row descends to cohomology and gives the three non-exact evaluations. Since Definition Z.27.11k.12 fixes
+*Proof.* By Theorem Z.27.11k.16b and Corollary Z.27.11k.16c, the source alphabet, Ward differentials, seventh-order contraction data, and retained residual class of Definition Z.27.11k.12 are the unique PPI/PCE-selected post-core hypercharge-recoil record on the accepted strict source-exhaustion branch. Therefore an accepted $\mathfrak O_{\alpha,YR\perp}$ identifies the actual post-core residual operator domain $C^\bullet_W$, Ward differentials $\delta_0,\delta_1$, residual source vector, Thomson evaluation functional, determinant-compatible hypercharge normalization, active-recoil lift, passive-complement lift, regularization rule, and zero additional error bound required by Definition Z.27.11j. Lemma Z.27.11k.18 gives
+$$
+H^1_W(\alpha;YR\perp)
+=
+\operatorname{span}\{[\omega_Y],[\omega_5],[\sigma_{\perp}]\}
+$$
+after the exact images $[\sigma_{\parallel}]=[\nu_0]=[\nu_1]=0$ and the obstruction generator $\theta$ are removed. Lemma Z.27.11k.19 shows that the evaluation row descends to cohomology and gives the three non-exact evaluations. Since Definition Z.27.11k.12 fixes
 $$
 [r_{\alpha,YR\perp}]=[\omega_Y]+[\omega_5]+[\sigma_{\perp}],
 $$
@@ -5768,9 +5833,9 @@ R_\alpha
 +
 \Phi_{\alpha,YR\perp}(\sigma_{\perp}),
 $$
-which is (Z.27.11k.20a). Adding the exact sinc-core value of Theorem Z.26 gives (Z.27.11k.20b). Direct evaluation at $u^*=2^{1/8}-1$ gives (Z.27.11k.20c) and (Z.27.11k.20d). The final subtraction is an after-the-fact comparison and is not an input to the certificate. ∎
+which is (Z.27.11k.20a). The source-origin, source-exhaustion, and regularization/error clauses of Definition Z.27.11k.12 remove double counting with the bulk Ward term, interface term, electromagnetic projection, curvature response, sinc transport, and later residual records: these entries have already been removed before $C^1_W$ is formed, and any future residual source must be registered in a disjoint direct-sum component. Adding the exact sinc-core value of Theorem Z.26 gives (Z.27.11k.20b). Direct evaluation at $u^*=2^{1/8}-1$ gives (Z.27.11k.20c) and (Z.27.11k.20d). The final subtraction is an after-the-fact comparison and is not an input to the certificate. ∎
 
-**Corollary Z.27.11k.21 (Forgetful Interval under Seventh-Order Source Downgrade).** If the source-origin and evaluation-origin clauses are accepted through degree five but the passive-complement source equality in (Z.27.11k.12k) is not accepted, while the seventh-order contraction scalar is only known to lie in the positive Ward-contraction interval $0\le\gamma_7\le1$, then the certified residual is the interval
+**Corollary Z.27.11k.21 (Forgetful Interval under Seventh-Order Source Downgrade).** If the source-origin and evaluation-origin clauses are accepted through degree five but the passive-complement source equality in (Z.27.11k.12k) is not accepted, while the seventh-order source is retained only through the positive Ward-contraction structure of $G_{\ge7}$, then the certified residual is the interval
 $$
 R_{\alpha}^{YR}
 =
@@ -5795,9 +5860,89 @@ $$
 \tag{Z.27.11k.21c}
 $$
 
-*Proof.* The degree-three and degree-five terms are the first two terms in Theorem Z.27.11k.20. If the seventh-order source is not fixed to $e_{\perp}$ but its nonnegative contraction scalar satisfies $0\le\gamma_7\le1$, then the contribution $\eta_7\gamma_7 c_1(u^*)^7$ ranges over $[-c_1(u^*)^7,0]$ under the sign convention $\eta_7=-1$. Adding the exact sinc-core value gives the displayed interval. ∎
+*Proof.* The degree-three and degree-five terms are the first two terms in Theorem Z.27.11k.20 and remain fixed by the accepted determinant-compatible hypercharge and active-recoil clauses. For the downgraded seventh-order source, the audit retains the positive semidefinite contraction matrix
+$$
+G_{\ge7}=\operatorname{diag}\left(\frac{2}{3},\frac{1}{3}\right),
+\qquad
+\operatorname{Tr}(G_{\ge7})=1.
+$$
+A downgraded seventh-order source is represented before the passive-complement equality is imposed by a positive contraction $P$ on the two-dimensional seventh-order source plane with $0\le P\le I$. Hence
+$$
+0\le\gamma_7:=\operatorname{Tr}(G_{\ge7}P)\le\operatorname{Tr}(G_{\ge7})=1.
+\tag{Z.27.11k.21d}
+$$
+Conversely the endpoints are admissible in the downgraded record: $P=0$ gives $\gamma_7=0$, and $P=I$ gives $\gamma_7=1$. Thus the seventh-order contribution $\eta_7\gamma_7 c_1(u^*)^7$ ranges over $[-c_1(u^*)^7,0]$ under the sign convention $\eta_7=-1$. Adding the exact sinc-core value of Theorem Z.26 gives the displayed interval. ∎
 
-**Remark Z.27.11k.22 (No Matrix Promotion without Operator Realization).** A finite row-reduction calculation on stipulated matrices proves only the quotient of those stipulated matrices. It closes the Thomson residual gate only when Definition Z.27.11k.12 is accepted as an operator-realization certificate satisfying Definition Z.27.11j and Algorithm Z.27.11b. Without the source-origin, differential-origin, evaluation-origin, residual-source, regularization/error-bound, and forward-lock ledgers, the same matrix remains a diagnostic candidate and the comparison row remains residual-gated.
+**Corollary Z.27.11k.21.1 (Registry-Entered Hypercharge-Recoil Closure of the Thomson Row).** On the accepted operator-realized branch of Definition Z.27.11k.12, the strict-certificate registry of Definition P.14.1m contains the Thomson residual vertex
+$$
+S_{\alpha,YR\perp}
+=
+\left(
+\alpha^{-1}_{\mathrm{cert}},
+\mathfrak O_{\alpha,YR\perp},
+\mathfrak C_{\alpha,YR\perp}
+\right)
+$$
+where
+$$
+\mathfrak C_{\alpha,YR\perp}
+:=
+\mathfrak C_{\alpha}\left[R_\alpha:=R_{\alpha}^{YR\perp},\ \chi_\alpha:=\chi_{\alpha,YR\perp}\right].
+$$
+Its registry fields are
+$$
+\sigma(S_{\alpha,YR\perp})=\textsf{closed},
+\qquad
+\rho(S_{\alpha,YR\perp})=(R_{\alpha}^{YR\perp}),
+\qquad
+\theta(S_{\alpha,YR\perp})=\varnothing,
+$$
+$$
+\delta(S_{\alpha,YR\perp})=\delta_{\alpha,YR\perp}^{\mathrm{cmp}},
+\qquad
+\zeta(S_{\alpha,YR\perp})=\varnothing,
+\tag{Z.27.11k.21.1a}
+$$
+where $\delta_{\alpha,YR\perp}^{\mathrm{cmp}}=0$ for comparison with already published targets and $\delta_{\alpha,YR\perp}^{\mathrm{cmp}}=1$ for a Definition 13.0d entry made before a fresh empirical comparison. The residual value and no-validation-import bit are independent of this empirical-history field. The residual-control record is
+
+$$
+\beta(R_{\alpha}^{YR\perp})
+=
+\left(
+\textsf{bound},
+\left[
+-\frac{5}{3}c_1(u^*)^3+\frac{10}{9}c_1(u^*)^5-\frac{1}{3}c_1(u^*)^7,
+-\frac{5}{3}c_1(u^*)^3+\frac{10}{9}c_1(u^*)^5-\frac{1}{3}c_1(u^*)^7
+\right],
+\chi_{\alpha,YR\perp}
+\right).
+\tag{Z.27.11k.21.1b}
+$$
+The registry-entered residual decomposition is
+$$
+R_{\alpha}^{YR\perp}
+=
+\underbrace{-\frac{5}{3}c_1(u^*)^3}_{[\omega_Y]}
++
+\underbrace{\frac{10}{9}c_1(u^*)^5}_{[\omega_5]}
++
+\underbrace{-\frac{1}{3}c_1(u^*)^7}_{[\sigma_{\perp}]},
+\tag{Z.27.11k.21.1c}
+$$
+where $[\omega_Y]$ is the determinant-compatible hypercharge source, $[\omega_5]$ is the active-recoil lift, and $[\sigma_{\perp}]$ is the seventh-order passive complement. The classes $[\sigma_{\parallel}]$, $[\nu_0]$, and $[\nu_1]$ are exact and evaluate to zero; $\theta$ is obstructed; and no other post-core electromagnetic Ward source exists on this branch by the source-exhaustion clause of Definition Z.27.11k.12. Therefore
+$$
+\alpha^{-1}_{\mathrm{cert}}
+=
+\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}
+=
+137.03599917753023\ldots.
+\tag{Z.27.11k.21.1d}
+$$
+The overlap audit $\gamma$ records that the bulk Ward term, interface term, electromagnetic projection, democratic-curvature response, separable-curvature response, and exact $SU(2)$ sinc transport are parent/core removals already used in Theorem Z.26 and Definition Z.27.11a, not elements of $C^1_W$ in (Z.27.11k.12d). The SPAP-reflexive sinc-tail record of Definition Z.27.11L is only an internal audit of the already included sinc factor. Any future Definition Z.27.11g, Definition Z.27.11j, or Definition Z.27.11M residual entry must be registered as a disjoint residual component with its own overlap map; it cannot re-use $[\omega_Y]$, $[\omega_5]$, or $[\sigma_{\perp}]$.
+
+*Proof.* Theorem P.14.1f allows closure of a finite non-identifiability row by an accepted pre-comparison certificate. Definition Z.27.11k.12 supplies that certificate: it fixes the source-origin, differential-origin, evaluation-origin, passive-complement, regularization/error-bound, source-exhaustion, determinant-compatible hypercharge, active-recoil lift, and forward-lock entries of the operator record. Theorem Z.27.11k.20 evaluates the resulting cohomology class and gives the exact residual value. The entries (Z.27.11k.21.1a)--(Z.27.11k.21.1b) are finite, acyclic, use a $\textsf{bound}$ rather than a $\textsf{budget}$ residual record, have empty unresolved closure gates, and have empty $\zeta$ because this is a strict-certificate row rather than a final spectral-calibration row. Definition P.14.1m and Theorem P.14.1m.2 therefore encode the row as an accepted strict-certificate registry entry. The no-double-counting statement is exactly the overlap-commutativity and residual-control check required by Definition P.14.1m and by the source-removal clauses of Definition Z.27.11k.12. ∎
+
+**Remark Z.27.11k.22 (No Matrix Promotion without Operator Realization).** A finite row-reduction calculation on stipulated matrices proves only the quotient of those stipulated matrices. It closes the Thomson residual gate only when Definition Z.27.11k.12 is accepted as an operator-realization certificate satisfying Definition Z.27.11j and Algorithm Z.27.11b. Without the source-origin, differential-origin, evaluation-origin, passive-complement, regularization/error-bound, source-exhaustion, determinant-compatible hypercharge, active-recoil lift, and forward-lock ledgers, the same matrix remains a diagnostic candidate and the comparison row remains residual-gated. With those ledgers accepted, Corollary Z.27.11k.21.1 is the registry-entered exact residual closure.
 
 **Definition Z.27.11L (SPAP-Reflexive Sinc-Tail Audit Certificate).** On the canonical Appendix Z exact-sinc core branch, the SPAP-reflexive sinc-tail audit certificate is the record
 $$
@@ -6222,7 +6367,7 @@ This approach inverts the usual logic. Rather than starting with D-dimensional s
 | Prediction | Value | Source |
 |------------|-------|--------|
 | Spacetime dimension | D = 4 | Theorem Z.11 |
-| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; canonical composition audit cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ supplies a diagnostic $96.08\%$ of the centered residual but does not close the operator gate; on an accepted hypercharge-recoil operator-realized branch, $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ | Theorem Z.26; Definition Z.27.11a; Corollary Z.27.11e.1; Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20 |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; registry-entered hypercharge-recoil closure $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$; downgraded passive-complement branch $[137.03599917502362\ldots,137.03599917878353\ldots]$; canonical composition audit cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ remains a diagnostic and is not a second residual contribution | Theorem Z.26; Definition Z.27.11a; Corollary Z.27.11e.1; Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 |
 | Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
@@ -6312,11 +6457,11 @@ Relative = 0.677765 ppm
    - Second-order curvature correction from Bures/Grassmannian geometry
    - Exact $SU(2)$ transport factor $\operatorname{sinc}(u^*)$
    - Canonical composition audit: the multiplicative cross-response of the certified interface and curvature entries is the fixed diagnostic term $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288=-0.0000892350892540067\ldots$, accounting for $96.08\%$ of the centered residual while leaving a $26.59$ ppb remainder. The audit supplies forward locks and anti-postselection witnesses only; it does not close $R_\alpha$ without Definition Z.27.11j or Definition Z.27.11g (Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6).
-   - Hypercharge-recoil operator-realization gate: on an accepted operator-realized finite Ward branch with the accepted source-exhaustion contract, the determinant-compatible hypercharge trace gives $5/3$, the active-recoil lift gives $10/9$, the passive-complement seventh-order source gives $-\frac{1}{3}c_1(u^*)^7$, and $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ (Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20). If the passive-complement source is downgraded to the seventh-order positive-contraction bound, the branch gives $\alpha^{-1}_{0}+R_{\alpha}^{YR}\in[137.03599917502362\ldots,137.03599917878353\ldots]$ (Corollary Z.27.11k.21). Without the source-exhaustion and operator-realization ledgers these values remain diagnostic and do not close $R_\alpha$ (Remark Z.27.11k.22)
    - Closed-form structural reachability: $\alpha^{-1}_{0}$ is a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$, with no continuous fit anywhere in the chain (Theorem Z.26; Corollary Z.26a)
-   - Arithmetic comparison: the closed form lies $9.2878\times10^{-5}$ from $137.035999177(21)$, about $0.678$ ppm
-   - Certificate row: $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$, with $R_\alpha$ structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b) and not adjustable
-   - Falsifier: a measurement outside the certified residual interval, once $R_\alpha$ is fixed, refutes the Appendix Z normalization branch (Corollary Z.26c); separately, Corollary Z.27.11e.1 obstructs any same-branch theorem fixing $R_\alpha=0$ at the recorded CODATA comparison value
+   - Hypercharge-recoil operator-realization closure: on the accepted operator-realized finite Ward branch with the accepted source-exhaustion contract, the determinant-compatible hypercharge trace gives $5/3$, the active-recoil lift gives $10/9$, the passive-complement seventh-order source gives $-\frac{1}{3}c_1(u^*)^7$, and the registry-entered residual is $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ (Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21.1)
+   - Certificate row: $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ on the accepted branch; if the passive-complement source is downgraded to the seventh-order positive-contraction bound, $\alpha^{-1}_{0}+R_{\alpha}^{YR}\in[137.03599917502362\ldots,137.03599917878353\ldots]$ (Corollary Z.27.11k.21)
+   - Source accounting: $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$ are the only retained non-exact post-core Ward sources; the exact, obstructed, bulk, interface, electromagnetic-projection, curvature, sinc-transport, and future residual entries are excluded from double counting by Definition Z.27.11k.12 and Corollary Z.27.11k.21.1
+   - Falsifier: a measurement outside the certified residual interval for the accepted branch refutes the Appendix Z normalization branch (Corollary Z.26c); separately, Corollary Z.27.11e.1 obstructs any same-branch theorem fixing $R_\alpha=0$ at the recorded CODATA comparison value
 
 ## Zero Continuously Adjustable Parameters Throughout
 

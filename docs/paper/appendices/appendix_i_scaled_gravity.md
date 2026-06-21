@@ -978,33 +978,76 @@ The branch is falsified if a forward-locked rotation-curve analysis requiring a 
 
 **Remark I.13c (No Capacity-Floor Derivation of $A_G$).** Equation E.9 has $G\propto\eta\delta^2/(\chi C_{\max})$ only after the remaining substrate parameters are fixed. It does not, by itself, imply $G_{\mathrm{large}}/G_0=d_0$. In particular, setting an effective $C_{\max}$ below the structural floor $\varepsilon_0=\ln2$ is not an admissible theorem-level derivation. The pair $(A_G,m)=(7,3)$ is therefore retained as a benchmark branch rather than a closed dark-sector theorem.
 
-**Definition I.13d (Covariant Dark-Susceptibility Certificate).** A covariant dark-susceptibility certificate is a finite record
+**Definition I.13d (Covariant Dark-Susceptibility and Effective-Action Certificate).** A covariant dark-susceptibility certificate is a finite record
 $$
 \mathfrak X_{\mathrm{DS}}
 =
-(\mathfrak H_g,\mathcal K_{\mathrm{DS}},\Theta_{\mathrm{DS}},\Pi_{\mathrm{wf}},\Pi_{\mathrm{cl}},\mathcal J_{\mathrm{DS}},g_\Lambda,\mathcal R_{\mathrm{DS}},\chi_{\mathrm{DS}})
+\left(
+\mathfrak H_g,
+\Gamma_{\mathrm{DS}},
+\mathcal K_{\mathrm{DS}},
+T_{\mu\nu}^{\mathrm{DS}},
+\Theta_{\mathrm{DS}},
+\Pi_{\mathrm{wf}},
+\Pi_{\mathrm{lens}},
+\Pi_{\mathrm{cl}},
+\Pi_{\mathrm{loc}},
+\Pi_{\mathrm{CMB}},
+\Pi_{\mathrm{hom}},
+\mathfrak B_D,
+\mathcal J_{\mathrm{DS}},
+\mathcal R_{\mathrm{DS}},
+\chi_{\mathrm{DS}}
+\right)
 \tag{I.13d.1}
 $$
 with the following entries fixed before comparison.
 
-1. $\mathfrak H_g$ is the accepted Appendix H acceleration bridge record fixing $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the same vacuum branch used by the metric sector.
-2. $\mathcal K_{\mathrm{DS}}$ is a retarded covariant susceptibility kernel mapping the baryonic stress-energy and retained gravitational-potential invariants to a conserved response tensor $T_{\mu\nu}^{\mathrm{DS}}$.
-3. $\Theta_{\mathrm{DS}}=(L_0,A_G,m,K,q,A_{\mathrm{PM}})$ is the finite ansatz coordinate vector for the galaxy and cluster projections, with any unused coordinate marked response-null on the corresponding environment class.
-4. $\Pi_{\mathrm{wf}}$ is the weak-field projection proving that the quasistatic galaxy projection of $T_{\mu\nu}^{\mathrm{DS}}$ is equivalent to Equation I.4, with the displayed $(L_0,A_G,m)$.
-5. $\Pi_{\mathrm{cl}}$ is the cluster projection proving that the same susceptibility kernel yields Equation I.7, with the displayed $(K,q,A_{\mathrm{PM}})$ and with homogeneous-background response zero.
-6. $\mathcal J_{\mathrm{DS}}$ is the finite PCE susceptibility functional on the retained ansatz family, with a unique minimizer $\Theta_{\mathrm{DS}}^*$ and strict gap $g_{\mathrm{DS}}>0$ modulo response equivalence.
-7. $\mathcal R_{\mathrm{DS}}$ is a finite residual interval for weak-field, lensing, cluster, and cosmological projections, and $\chi_{\mathrm{DS}}$ records that no entry of $\Theta_{\mathrm{DS}}^*$ or $\mathcal R_{\mathrm{DS}}$ was selected using the validation data being predicted.
+1. $\mathfrak H_g$ is the accepted Appendix H acceleration bridge record fixing $g_\Lambda=c^2\sqrt\Lambda/8$ on the same vacuum branch used by the metric sector.
 
-The certificate is accepted only when
+2. $\Gamma_{\mathrm{DS}}[g,T_b;\Theta_{\mathrm{DS}}]$ is either a generally covariant finite effective action or a causal nonlocal susceptibility functional with a finite Ward identity. In the action case,
 $$
-\nabla_\mu\bigl(T^{\mu\nu}_{\mathrm b}+T^{\mu\nu}_{\mathrm{DS}}\bigr)=0,
+T_{\mu\nu}^{\mathrm{DS}}
+=-\frac{2}{\sqrt{-g}}\frac{\delta\Gamma_{\mathrm{DS}}}{\delta g^{\mu\nu}}.
 \tag{I.13d.2}
 $$
-the local high-acceleration projection satisfies $G(R)\to G_0$ with the solar-system residual bounded by $\mathcal R_{\mathrm{DS}}$, and the homogeneous early-universe projection has no response-active running-$G$ source.
+In the susceptibility case, $\mathcal K_{\mathrm{DS}}$ must supply the retarded kernel and the finite conservation proof replacing (I.13d.2).
 
-**Theorem I.13e (Dark-Kernel Determinacy from Covariant Susceptibility).** If $\mathfrak X_{\mathrm{DS}}$ is accepted, then the galaxy kernel, cluster predictive-matter kernel, and their shared acceleration scale are theorem-level deterministic outputs of the accepted susceptibility branch, up to the residual interval $\mathcal R_{\mathrm{DS}}$. If $\mathfrak X_{\mathrm{DS}}$ is absent, $(A_G,m)$, $L_0$, and $(K,q,A_{\mathrm{PM}})$ retain the benchmark, phenomenological, or bridge-normalization statuses stated above.
+3. $T_{\mu\nu}^{\mathrm{DS}}$ is the conserved response tensor, including anisotropic stress. The accepted record must prove
+$$
+\nabla_\mu\left(T_b^{\mu\nu}+T_{\mathrm{DS}}^{\mu\nu}\right)=0.
+\tag{I.13d.3}
+$$
 
-*Proof.* Items 1--5 fix the maps from the retained covariant susceptibility to the weak-field galaxy law and the cluster source response. Item 6 gives a finite admissible ansatz family, a PCE functional, a unique minimizer, and a strict separation gap modulo response equivalence. Theorem D.8.9b therefore fixes $\Theta_{\mathrm{DS}}^*$ uniquely in the retained quotient. Equation (I.13d.2) gives covariant conservation of the total source, while the local and homogeneous-background conditions keep the solar-system and early-universe projections inside the certified residual interval. Hence the projected kernels are deterministic images of one finite certificate. Without the certificate, at least one of the susceptibility kernel, projection maps, minimizer, conservation check, or residual interval is not fixed, so Theorem P.14.1f blocks theorem-level promotion of the phenomenological parameters. ∎
+4. $\Theta_{\mathrm{DS}}=(L_0,A_G,m,K,q,A_{\mathrm{PM}},\Theta_{\mathrm{hom}})$ is the finite ansatz coordinate vector. $\Theta_{\mathrm{hom}}$ is either strict $\Lambda$ behavior, a finite-parameter law for $w(z)$, a density-dependent relaxation law, or a homogeneous-sparsity law.
+
+5. $\Pi_{\mathrm{wf}}$ proves that the quasistatic galaxy projection of $T_{\mu\nu}^{\mathrm{DS}}$ is equivalent to Equation I.4 with the displayed $(L_0,A_G,m)$.
+
+6. $\Pi_{\mathrm{lens}}$ proves the lensing projection, including the relation between potential response, anisotropic stress, and light deflection.
+
+7. $\Pi_{\mathrm{cl}}$ proves the cluster and merger projections, including Equation I.7 or its accepted replacement with the displayed $(K,q,A_{\mathrm{PM}})$ and the stated merger/offset limits.
+
+8. $\Pi_{\mathrm{loc}}$ proves the local-gravity limit and supplies the solar-system residual interval.
+
+9. $\Pi_{\mathrm{CMB}}$ proves the CMB-era safety condition for the same kernel.
+
+10. $\Pi_{\mathrm{hom}}$ proves the homogeneous late-time law, including conserved stress-energy, the density evolution equation, and the residual interval for $w(z)$ or strict $w=-1$ behavior.
+
+11. $\mathfrak B_D$ is the RCD-Buchert-Cheeger and elliptic scale-bridge ledger. It contains the domain datum of Definition I.3e, the first Neumann spectral gap, predictive-stress variance, source-energy rate density, and finite defect budgets.
+
+12. $\mathcal J_{\mathrm{DS}}$ is the finite PCE susceptibility functional on the retained ansatz family, with a unique minimizer $\Theta_{\mathrm{DS}}^*$ and strict gap $g_{\mathrm{DS}}>0$ modulo response equivalence.
+
+13. $\mathcal R_{\mathrm{DS}}$ is a finite residual interval for weak-field, lensing, cluster, merger, local-gravity, CMB-era, homogeneous, and backreaction projections.
+
+14. $\chi_{\mathrm{DS}}$ records that no entry of $\Theta_{\mathrm{DS}}^*$, $\Gamma_{\mathrm{DS}}$, $\mathcal K_{\mathrm{DS}}$, projection maps, or $\mathcal R_{\mathrm{DS}}$ was selected using the validation data being predicted.
+
+The certificate is accepted only when (I.13d.3) holds, the local high-acceleration projection satisfies $G(R)\to G_0$ with the solar-system residual bounded by $\mathcal R_{\mathrm{DS}}$, the CMB projection is inside its certified residual interval, and the homogeneous projection is either strict $\Lambda$ or the recorded finite-parameter conserved law.
+
+**Theorem I.13e (Dark-Kernel Determinacy from Covariant Susceptibility).** If $\mathfrak X_{\mathrm{DS}}$ is accepted, then the galaxy response kernel, cluster/lensing response, conserved stress-energy tensor, anisotropic-stress projection, merger and cluster limits, local-gravity limit, CMB-era behavior, homogeneous late-time law, RCD-Buchert-Cheeger backreaction bound, elliptic scale bridge, predictive-stress variance, source-energy rate density, and finite defect budgets are deterministic outputs of the accepted susceptibility/effective-action branch, up to $\mathcal R_{\mathrm{DS}}$.
+
+If $\mathfrak X_{\mathrm{DS}}$ is absent, the acceleration scale $g_\Lambda=c^2\sqrt\Lambda/8$ remains closed by Appendix H, but $(L_0,A_G,m)$, $(K,q,A_{\mathrm{PM}})$, the lensing/anisotropic-stress map, the homogeneous law $\Theta_{\mathrm{hom}}$, and the backreaction constants in $\mathfrak B_D$ remain phenomenological or branch-classification data.
+
+*Proof.* Items 2 and 3 supply a generally covariant action or retarded susceptibility with a conserved stress tensor. Items 5--10 are the finite projection maps to galaxy dynamics, lensing, clusters, local tests, CMB-era behavior, and homogeneous late-time evolution. Item 11 supplies the RCD-Buchert-Cheeger and elliptic scale bridge, while item 12 gives a finite admissible ansatz family with a strict PCE gap modulo response equivalence. Theorem D.8.9b fixes $\Theta_{\mathrm{DS}}^*$ uniquely in the retained quotient, and the projection maps then produce the stated kernels and stress-energy components with residuals $\mathcal R_{\mathrm{DS}}$. Without the certificate, at least one of the covariant source, kernel, projection maps, minimizer, conservation proof, or residual ledger is not fixed; Theorem P.14.1f therefore blocks theorem-level promotion beyond the acceleration bridge. ∎
 
 **Theorem I.13f (Harmonic Recoverability Realization of the Dark-Susceptibility Kernel).** Let $\mathcal D_B$ be a finite causal-diamond complex on a regular emergent metric branch. For every oriented retained inclusion edge $e:D_-\to D_+$, let
 $$

@@ -1536,7 +1536,7 @@ Although $\mathfrak{su}(3)$ contains embedded $\mathfrak{su}(2)$ subalgebras, th
 
 The downstream paragraphs at the end of Appendix G.10 (the causal-chain paragraph extending SPAP $\mathbb Z_2$ through the active-rank/weak-block identification) and in Section Z.14a (the weak-block caveat) cross-reference this theorem and should be read as the same local frame statement under different headings, not as independent transport claims.
 
-**Theorem G.8.4c.0e (Bordism-Anomaly Spectrum Closure Gate).** Let $\mathcal G_{\mathrm{pred}}$ be the determinant-compatible finite-response gauge object selected on the $3+2+1$ block-frame branch of Theorem G.8.4b and Corollary G.8.4c. Let $\mathcal M$ be a finite or compact admissible family of chiral matter/defect packages with fixed response maps and fixed defect-inflow channels. Suppose the branch supplies an additive finite anomaly-bordism character
+**Theorem G.8.4c.0e (Bordism-Anomaly Spectrum Closure Gate).** Let $\mathcal G_{\mathrm{pred}}$ be the determinant-compatible finite-response gauge object selected on the $3+2+1$ block-frame branch of Theorem G.8.4b and Corollary G.8.4c. Let $\mathcal M$ be the finite retained candidate class of chiral, vectorlike, sterile, boundary, interface, and defect-completed matter packages with fixed response maps, fixed defect-inflow channels, and fixed Higgs-response slots. Suppose the branch supplies an additive finite anomaly-bordism character
 $$
 \mathfrak A_{\mathrm{tot}}(M)
 =
@@ -1545,7 +1545,7 @@ $$
 \operatorname{Hom}(\Omega^{\mathrm{Spin}}_5(B\mathcal G_{\mathrm{pred}}),\mathbb R/\mathbb Z)
 \tag{G.8.4c.0e.1}
 $$
-or its finite retained anomaly-group image. A package is anomaly-admissible exactly when
+or its finite retained anomaly-group image, including torsion, global $SU(2)$, mixed gravitational, determinant-line, boundary, interface, and defect-inflow terms. A package is anomaly-admissible exactly when
 $$
 [\mathfrak A_{\mathrm{tot}}(M)]=0.
 \tag{G.8.4c.0e.2}
@@ -1557,14 +1557,173 @@ $$
 \{M\in\mathcal M:[\mathfrak A_{\mathrm{tot}}(M)]=0\}/\sim_{\mathrm{resp}}
 \tag{G.8.4c.0e.3}
 $$
-be the response quotient of admissible packages, read as a finite quotient when $\mathcal M$ is finite and as the induced compact quotient on compact branches. If $\mathcal K$ is nonempty and the description-cost functional $\mathcal C_{\mathrm{desc}}$ is lower semicontinuous on $\mathcal K$, then a PCE-minimal anomaly-closed matter package exists. If, moreover, the selected class $M_*$ has a strict gap
+be the response quotient, where $\sim_{\mathrm{resp}}$ removes vectorlike response-null pairs, sterile response-null singlets, pure boundary relabelings, and defect presentations with the same finite response. If $\mathcal K$ is nonempty, the PCE cost $\mathcal C_{\mathrm{desc}}$ is finite on $\mathcal K$, and a selected class $M_*$ has a strict gap
 $$
 \mathcal C_{\mathrm{desc}}(M)-\mathcal C_{\mathrm{desc}}(M_*)\ge\Delta_{\mathrm{matter}}>0
 \tag{G.8.4c.0e.4}
 $$
-for every response-distinct $M\ne M_*$, then $M_*$ is unique up to response-null conjugation and defect-gauge equivalence. In particular, if the one-generation Standard Model chiral package satisfies (G.8.4c.0e.2) and the strict-gap condition (G.8.4c.0e.4) against every admissible exotic package, then it is the selected matter package on that branch. Without the anomaly-bordism record and strict PCE gap, Corollary G.8.4c selects the gauge algebra only; it does not by itself select the full matter spectrum.
+for every response-distinct $M\ne M_*$, then $M_*$ is unique up to response-null conjugation and defect-gauge equivalence. If the one-generation Standard Model chiral package satisfies (G.8.4c.0e.2) and (G.8.4c.0e.4) against every admissible exotic, vectorlike, sterile, boundary, interface, and defect-completed package, then it is the selected matter package on that branch. Without the finite anomaly-bordism record and strict PCE gap, Corollary G.8.4c selects the gauge algebra only and not the full matter spectrum, charge lattice, Higgs branch, or electroweak-breaking operator.
 
-*Proof.* Additivity of the anomaly character makes defect filling equivalent to vanishing of the total additive class (G.8.4c.0e.2). Packages whose finite protocol responses are naturally isomorphic are identified by the response quotient, so only $\mathcal K$ carries physical matter-package distinctions. On a finite response quotient, existence of a minimum is immediate; on a compact response quotient it follows from lower semicontinuity. The strict gap (G.8.4c.0e.4) excludes any second response-distinct minimizer, giving uniqueness up to the quotient equivalences. The final statement is the specialization of this selection criterion to the Standard Model one-generation package. If the required anomaly class or gap is absent, the minimization problem is not a closed finite certificate, so the spectrum claim cannot be promoted beyond branch or target status. ∎
+**Definition G.8.4c.0f (Matter, Charge, and Electroweak-Breaking Certificate).** A matter/EWSB completion certificate is a finite record
+$$
+\mathfrak C_{\mathrm{matEW}}
+=
+\left(
+\Lambda_Y,
+\mathcal G_{\mathrm{glob}},
+\mathcal A_{\mathrm{loc}},
+\mathcal A_{\mathrm{glob}},
+\mathcal M,
+\mathcal Q_{\mathrm{resp}},
+\Delta_{\mathrm{PCE}},
+H_{\mathrm{EW}},
+\mathcal V_{\mathrm{EW}},
+\mathcal Q_{G/H},
+\mathcal M_{\mathrm{mass}},
+\mathcal R_{\mathrm{matEW}},
+\chi_{\mathrm{matEW}}
+\right)
+\tag{G.8.4c.0f.1}
+$$
+where:
+
+1. $\Lambda_Y$ is the determinant-compatible primitive hypercharge lattice, including the simultaneous sign convention and primitive charge unit $a=1/6$.
+2. $\mathcal G_{\mathrm{glob}}$ is the global gauge form compatible with the determinant line, the primitive hypercharge lattice, and the quotient of response-null central phases.
+3. $\mathcal A_{\mathrm{loc}}$ and $\mathcal A_{\mathrm{glob}}$ are the local and global anomaly characters, including perturbative cubic, mixed, gravitational, torsion, Witten, boundary, interface, and defect-inflow terms.
+4. $\mathcal M$ is the finite candidate class of chiral, vectorlike, sterile, boundary, interface, and defect-filled packages considered on the branch.
+5. $\mathcal Q_{\mathrm{resp}}$ is the response-equivalence quotient.
+6. $\Delta_{\mathrm{PCE}}$ is either a strict positive PCE gap selecting one response-active class or a finite degeneracy ledger listing all PCE-tied surviving classes.
+7. $H_{\mathrm{EW}}$ is the Higgs representation and determinant-character record.
+8. $\mathcal V_{\mathrm{EW}}$ is the electroweak vacuum branch, including the vacuum orbit, stability condition, Goldstone count, and custodial or noncustodial response labels.
+9. $\mathcal Q_{G/H}$ is the Goldstone/gauge quotient used to remove gauge-equivalent vacuum directions.
+10. $\mathcal M_{\mathrm{mass}}$ is the mass-generation map from the vacuum branch to gauge-boson and fermion mass terms, including the Yukawa-normalization dependency on the flavor certificate of Definition T.79.4.
+11. $\mathcal R_{\mathrm{matEW}}$ is the finite residual ledger passed downstream to threshold, flavor, baryogenesis, and primordial determinant rows.
+12. $\chi_{\mathrm{matEW}}=1$ records that no package, charge normalization, Higgs branch, vacuum branch, or mass map is chosen from low-energy validation data.
+
+**Theorem G.8.4c.0g (Matter/EWSB Classification at Fixed Gauge Algebra and Generation Count).** At fixed gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ and fixed generation count $N_g=3$, the Standard Model response-active matter package and electroweak-breaking branch are unique exactly on branches carrying an accepted $\mathfrak C_{\mathrm{matEW}}$ with a strict positive gap $\Delta_{\mathrm{PCE}}>0$ for the Standard Model class. If the strict gap is not certified, the theorem-level output is the bounded catalog
+$$
+\mathcal K_{\mathrm{surv}}
+=
+\{M\in\mathcal M:[\mathfrak A_{\mathrm{tot}}(M)]=0\}/\sim_{\mathrm{resp}}
+\tag{G.8.4c.0g.1}
+$$
+together with its charge-lattice, global-form, Higgs-branch, defect-inflow, and downstream-threshold ledger. In particular, gauge algebra plus $N_g=3$ fixes the skeleton but not the response-active chiral matter package, charge normalization, Higgs vacuum branch, electroweak-breaking operator, or threshold consequences.
+
+*Proof.* Theorem G.8.4b and Corollary G.8.4c determine the finite-response block-frame gauge algebra. The generation-count results determine the number of family copies. Neither datum contains the anomaly character, finite candidate list, response quotient, PCE gap, hypercharge lattice, global gauge form, Higgs vacuum branch, Goldstone quotient, or mass-generation map. Definition G.8.4c.0f lists exactly those missing finite entries. If the accepted certificate contains a strict gap, all other response-distinct admissible packages have larger PCE cost and are excluded. If not, the response quotient (G.8.4c.0g.1) is the maximal theorem-level classification permitted by the finite data. ∎
+
+**Corollary G.8.4c.0h (Charge Quantization Status).** The primitive hypercharge vector
+$$
+(y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c},y_H)=\frac16(1,-4,2,-3,6,3)
+\tag{G.8.4c.0h.1}
+$$
+is theorem-level charge normalization only on branches where $\Lambda_Y$ and $\mathcal G_{\mathrm{glob}}$ are entries of an accepted $\mathfrak C_{\mathrm{matEW}}$ or of the determinant-line hypercharge theorem cited by that certificate. Otherwise hypercharge normalization remains branch data, and all threshold and flavor finite parts depending on Dynkin indices inherit that branch status.
+
+**Definition G.8.4c.0i (Relaxed Gauge-Matter-Generation Catalog Record).** A relaxed gauge/matter/generation catalog record is a finite record
+$$
+\mathfrak C_{\mathrm{GMR}}
+=
+\left(
+\mathcal L_{\mathrm{mod}},
+\mathcal S_{\mathrm{sat}},
+\mathcal A_{\mathrm{prem}},
+\mathcal Y_{\mathrm{det}},
+\mathcal G_{\mathrm{glob}},
+\mathcal G_{\mathrm{Golay}},
+\mathcal L_{\mathrm{alt}},
+\mathcal M_{\mathrm{cand}},
+\mathcal N_{\mathrm{fam}},
+\mathsf{Def}_{\mathrm{cand}},
+\sim_{\mathrm{resp}},
+\mathcal C_{\mathrm{desc}},
+\Delta_{\mathrm{GMR}},
+\Pi_{\mathrm{thr}},
+\Pi_{\mathrm{fl}},
+\Pi_B,
+\chi_{\mathrm{GMR}}
+\right)
+\tag{G.8.4c.0i.1}
+$$
+where:
+
+1. $\mathcal L_{\mathrm{mod}}$ records whether the finite-response syndrome locality and direct-sum inactive-module normal form of Lemma G.8.4a.1 is imposed, weakened, or replaced by a tensor-product, nonlocal, boundary, or interface module.
+
+2. $\mathcal S_{\mathrm{sat}}$ records whether the positive-marginal capacity-saturation premise of Theorem G.8.4b is imposed. If it is not imposed, underfilled block-frame partitions remain candidate gauge branches rather than being silently discarded.
+
+3. $\mathcal A_{\mathrm{prem}}$ records which transformations are predictive-frame redundancies and therefore subject to the local and global anomaly-descent gates of Theorem X.8d and Theorem X.8d.3, and which transformations are physical global update channels.
+
+4. $\mathcal Y_{\mathrm{det}}$ records the determinant-compatible abelian lattice, the hypercharge normalization, the simultaneous sign convention, and the charge-quantization certificate. If this entry is absent, charge normalization remains branch data.
+
+5. $\mathcal G_{\mathrm{glob}}$ records the global gauge form, including center quotient, spin or $\mathrm{Spin}^c$ lift, torsion character, and determinant-line orientation.
+
+6. $\mathcal G_{\mathrm{Golay}}$ records nonhomogeneous Golay, residual-symmetry, marked-octad, or stabilizer data when those data are used as finite stabilizers rather than as connected gauge selectors.
+
+7. $\mathcal L_{\mathrm{alt}}$ is the finite list of alternative lifts, tensor-product embeddings, vectorlike extensions, sterile sectors, boundary sectors, interface sectors, and defect-fusion completions admitted for comparison.
+
+8. $\mathcal M_{\mathrm{cand}}$ is the finite or compact candidate class of chiral, vectorlike, sterile, exotic, boundary, interface, and defect-completed matter packages, with their local anomaly polynomial, torsion anomaly character, defect-inflow term, Dynkin-index map, and response maps.
+
+9. $\mathcal N_{\mathrm{fam}}$ is the finite candidate class of generation-count and family-charge branches. It records whether the $U(1)_F$ family label is a predictive-frame redundancy, a physical global update channel, a response-null label, or a later flavor-potential datum.
+
+10. $\mathsf{Def}_{\mathrm{cand}}$ is the finite defect-fusion category or candidate subcategory used to cancel boundary or interface anomaly classes.
+
+11. $\sim_{\mathrm{resp}}$ is the response equivalence quotient on gauge, matter, generation, sterile, vectorlike, and defect labels.
+
+12. $\mathcal C_{\mathrm{desc}}$ is the PCE description-cost functional on the response quotient, and $\Delta_{\mathrm{GMR}}$ is either a strict positive gap for a selected branch or a finite degeneracy interval.
+
+13. $\Pi_{\mathrm{thr}}$, $\Pi_{\mathrm{fl}}$, and $\Pi_B$ are the downstream maps to electroweak thresholds, flavor, and baryogenesis. They include changes to Dynkin indices, threshold finite parts, Yukawa/flavor operator content, neutrino sectors, CKM/PMNS structure, and CP sources.
+
+14. $\chi_{\mathrm{GMR}}$ is the forward-lock entry: the catalog, anomaly ledger, hypercharge lattice, global gauge form, defect-inflow choices, PCE gap, and downstream maps are fixed before comparison with threshold, flavor, neutrino, baryogenesis, or matter-spectrum data.
+
+**Theorem G.8.4c.0j (Finite Classification under Relaxed Gauge, Matter, and Generation Premises).** On any branch carrying an accepted catalog record $\mathfrak C_{\mathrm{GMR}}$, the surviving response-active gauge/matter/generation branches are exactly the following finite classes, modulo $\sim_{\mathrm{resp}}$.
+
+1. **Gauge-branch failure classes.** If the finite syndrome locality or direct-sum inactive-module normal form is not imposed, Theorem G.8.4b does not apply. Tensor-product embeddings such as a nonlocal $\mathbb C^2\otimes\mathbb C^3$ action, arbitrary compact connected subgroups of $U(6)$, nonhomogeneous Golay stabilizers, and boundary/interface lifts are then separate gauge branches. They survive only if $\mathcal L_{\mathrm{alt}}$ supplies finite response maps, anomaly descent, a global gauge form, and a PCE ledger. They are not counterexamples to Corollary G.8.4c, because Corollary G.8.4c is internal to the block-frame branch.
+
+2. **Capacity-overrun exclusions.** Inside the block-frame family and under the sharp capacity bound $n_G\le12$, the partitions
+$$
+6,
+\quad
+5+1,
+\quad
+4+2,
+\quad
+4+1+1,
+\quad
+3+3
+\tag{G.8.4c.0j.1}
+$$
+are excluded before matter selection, because their nonabelian generator counts are $35,24,18,15,16$, respectively. If the capacity bound itself is relaxed, the gauge-algebra branch has failed rather than the matter or generation branch.
+
+3. **Standard block-frame skeleton.** If Lemma G.8.4a.1, positive-marginal capacity saturation, determinant-compatible abelian descent, and response-null phase quotienting are imposed, the unique gauge skeleton is
+$$
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)
+\tag{G.8.4c.0j.2}
+$$
+with the determinant-compatible interface group recorded by $\mathcal G_{\mathrm{glob}}$. This is the closed gauge-algebra branch of Theorem G.8.4b and Corollary G.8.4c.
+
+4. **Underfilled block-frame branches.** If the positive-marginal saturation premise is relaxed while the block-frame family and $n_G\le12$ remain, the surviving underfilled gauge skeletons are exactly
+
+| inactive partition | retained connected algebra before matter selection | generator count |
+|:--|:--|:--:|
+| $3+1+1+1$ | $\mathfrak{su}(3)\oplus\mathfrak u(1)^3$ | $11$ |
+| $2+2+2$ | $\mathfrak{su}(2)^3\oplus\mathfrak u(1)^2$ | $11$ |
+| $2+2+1+1$ | $\mathfrak{su}(2)^2\oplus\mathfrak u(1)^3$ | $9$ |
+| $2+1+1+1+1$ | $\mathfrak{su}(2)\oplus\mathfrak u(1)^4$ | $7$ |
+| $1+1+1+1+1+1$ | $\mathfrak u(1)^5$ | $5$ |
+
+These branches have different threshold and matter ledgers and do not inherit the Standard Model downstream rows.
+
+5. **Matter-spectrum classes at fixed Standard Model skeleton.** At fixed skeleton (G.8.4c.0j.2), the one-family Standard Model chiral package is unique only if the determinant-compatible hypercharge lattice, global gauge form, anomaly-bordism character, Witten $SU(2)$ torsion audit, defect-inflow ledger, one-Higgs Yukawa map, and strict PCE gap of Theorem G.8.4c.0e are supplied. Without that record, the surviving matter classes are: anomaly-free exotic chiral packages in $\mathcal M_{\mathrm{cand}}$; vectorlike pairs, which are anomaly-null but PCE-surplus unless response-active threshold or flavor data are appended; sterile $(1,1)_0$ sectors, which are gauge-response-null unless retained by a neutrino, Majorana, or seesaw operator; and boundary/interface/defect-completed packages whose inflow cancels the total anomaly and whose defect action is response-active.
+
+6. **Charge and global-form classes.** If $\mathcal Y_{\mathrm{det}}$ and $\mathcal G_{\mathrm{glob}}$ are absent, the connected algebra fixes only a real abelian generator direction. Hypercharge normalization, charge quantization, center quotient, torsion anomaly class, and determinant-line orientation remain branch data. A later threshold, fine-structure, or flavor row may use only a lattice and global form transported through an accepted overlap map.
+
+7. **Generation-count classes.** The exact $N_g=3$ row survives precisely on the pre-flavor family-redundancy PPI branch of Theorem R.3.4, Proposition R.3.5.1a, and Theorem R.8.5b. If $U(1)_F$ is not a predictive-frame redundancy, the family anomaly equations are not descent constraints and the generation-count branch fails. If the CP-active requirement is removed, $N=1$ and $N=2$ branches may survive structurally but have no physical CKM phase. If the PCE minimal-selection rule is relaxed, larger anomaly-free multisets such as $\{a,-a,b,-b\}$ are separate response-active branches when their flavor or threshold maps are retained, and response-null family copies are quotiented.
+
+8. **Later-sector failure classes.** Failure of a flavor texture, neutrino, CKM/PMNS, threshold, or baryogenesis certificate is not failure of the gauge-algebra branch or of the $N_g=3$ structural branch. It is a downstream certificate failure. The maps $\Pi_{\mathrm{thr}}$, $\Pi_{\mathrm{fl}}$, and $\Pi_B$ record the changed Dynkin indices, thresholds, Yukawa operators, CP sources, neutrino operators, and washout consequences of every surviving response-active branch.
+
+Therefore the Standard Model gauge algebra and $N_g=3$ are unique only under their stated minimal premises. When those premises are relaxed, the bounded catalog is the finite response quotient of the eight classes above, with anomaly ledgers and downstream consequences supplied by $\mathfrak C_{\mathrm{GMR}}$.
+
+*Proof.* The partition analysis in Theorem G.8.4b is exhaustive inside the finite direct-sum block-frame family. Items 2--4 are exactly that finite table, separated by whether the capacity and positive-marginal saturation premises are retained. If the module-locality premise is dropped, Lemma G.8.4a.1 no longer supplies the table, so any alternative lift is a different branch requiring its own finite response maps and anomaly ledger, proving item 1. The determinant-compatible abelian and global-form data are not fixed by a real connected algebra alone, giving item 6.
+
+For matter packages, Theorem X.8d and Theorem X.8d.3 require vanishing of every local and torsion anomaly for transformations declared as redundancies, while Definition X.9.5e allows response-active defect fillings only when their descent obstruction is filled. Theorem G.8.4c.0e gives uniqueness exactly when the anomaly-zero class has a strict PCE gap. If the gap is absent, vectorlike, sterile, exotic, or defect-completed packages that pass the anomaly and response tests remain distinct branches, proving item 5. The generation alternatives are the cases separated in Theorem R.3.4, Proposition R.3.5.1a, Theorem R.8.5b, and Corollary R.8.5d, proving item 7. Finally, thresholds, flavor, neutrino, and baryogenesis depend on additional certificates; changing them while preserving the structural skeleton changes only the downstream branch, proving item 8. Since every candidate list in $\mathfrak C_{\mathrm{GMR}}$ is finite or compact with a finite response quotient and finite downstream maps, the catalog is bounded. ∎
 
 **Corollary G.8.4c.1 (Exclusion of Simple Unification Groups).**
 *Grand unified theories based on simple gauge groups are excluded by the capacity bound:*
@@ -3718,7 +3877,7 @@ This appendix has demonstrated how the Predictive Universe framework derives fun
 
 4. **Three Generations:** Appendix R derives the minimal admissible value $N_g = 3$ from anomaly cancellation together with the CP-violation requirement in the modeled family-charge sector, and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. The $D_4$ triality orbit and $E_8$/Leech construction supply compatible three-fold scaffolds rather than independent proofs (Appendix R, Theorem R.3.4; Proposition R.3.5.1a; Proposition R.4.2).
 
-5. **Fine-Structure Constant:** The Appendix Z U(1) sector gives the closed-form Thomson core $\alpha_{em,0}^{-1}=137.03609205522863\ldots$ and the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1), with no continuous fit parameter in the core expression. The hypercharge-recoil operator-realization gate is conditional on the accepted finite Ward source-exhaustion and residual certificate of Definition Z.27.11k.16a, Theorem Z.27.11k.16b, Corollary Z.27.11k.16c, and Definition Z.27.11k.12, and gives $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ only on that accepted branch.
+5. **Fine-Structure Constant:** The Appendix Z U(1) sector gives the closed-form Thomson core $\alpha_{em,0}^{-1}=137.03609205522863\ldots$ and the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1), with no continuous fit parameter in the core expression. The accepted hypercharge-recoil operator-realization certificate of Definition Z.27.11k.12 assigns the residual classes $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$ and closes the branch with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ (Theorem Z.27.11k.20; Corollary Z.27.11k.21.1). If the passive-complement source is downgraded, Corollary Z.27.11k.21 gives the certified interval $[137.03599917502362\ldots,137.03599917878353\ldots]$; other residual routes remain separate branch records.
 
 6. **Unified Probability Measures:** Quantum (Born), thermal (Boltzmann), and gravitational (Unruh-Hawking) probability distributions arise from a common mechanism—ND-RID equilibration to Gibbs fixed points under PCE optimization (Section G.1.9).
 

@@ -2034,9 +2034,30 @@ $$
 
 has sum $0$, cube-sum $0$, five distinct nonzero charges, and no vectorlike pair. Such larger anomaly-free multisets are PCE-demoted by (P5) unless additional response-relevant flavor data are appended as a different branch.
 
-**Corollary R.8.5d (Scope of the $U(1)_F$ Selection).** Theorem R.8.5b is internal to the integer $U(1)_F$ family-charge class. Non-Abelian family symmetries, flavor-potential branches, and response-active extra generations are different candidate classes with their own anomaly, embedding, and PCE ledgers.
+**Corollary R.8.5d (Scope of the $U(1)_F$ Selection).** Theorem R.8.5b is internal to the integer $U(1)_F$ family-charge class. Non-Abelian family symmetries, flavor-potential branches, response-active extra generations, sterile-neutrino sectors, and defect-completed family labels are different candidate classes with their own anomaly, embedding, threshold, flavor, and PCE ledgers.
 
-*Proof.* Definition R.8.5a fixes the candidate object as an integer charge multiset for a $U(1)_F$ family symmetry. Non-Abelian representations and later flavor-potential data are not such multisets; they therefore belong to different ledgers. ∎
+*Proof.* Definition R.8.5a fixes the candidate object as an integer charge multiset for a $U(1)_F$ family symmetry. Non-Abelian representations and later flavor-potential data are not such multisets; they therefore belong to different ledgers. Sterile sectors and defect completions may be gauge-null or anomaly-inflow data while still changing neutrino, threshold, or flavor response maps, so they also require separate ledgers. ∎
+
+**Theorem R.8.5e (Generation-Branch Catalog under Premise Relaxation).** The current generation-count theorem has the following finite premise-sensitive status.
+
+1. If $U(1)_F$ is treated as a predictive-frame redundancy, the uniform family-charge class of Definition R.8.5a is imposed, CP-active mixing is required, and the PCE monotone minimal-selection rule is retained, then Theorem R.8.5b selects the unique response-active orbit
+$$
+\{a,-a,0\}
+\tag{R.8.5e.1}
+$$
+and $N_g=3$.
+
+2. If $U(1)_F$ is treated as a physical global update channel rather than a redundancy, the anomaly equations in Theorem R.3.4 are no longer quotient-descent constraints. The generation count is then not fixed by the current $U(1)_F$ theorem and must be entered as a separate branch with its own anomaly/current ledger.
+
+3. If CP-active mixing is not required by the downstream flavor or baryogenesis branch, $N=1$ and $N=2$ family multisets are not excluded by the family-anomaly equations alone. They survive only as branches with no physical CKM phase and with baryogenesis/flavor consequences recorded separately.
+
+4. If the PCE minimal-selection rule is relaxed, larger anomaly-free charge multisets such as $\{a,-a,b,-b\}$ or finite sums of opposite pairs survive as response-active branches exactly when their threshold, flavor, neutrino, or CP maps are retained. Pure duplicate labels with no retained response are removed by the PPI/PCE response quotient.
+
+5. Non-Abelian family symmetries, sterile-neutrino sectors, Majorana/seesaw branches, boundary/interface completions, and defect-fusion family labels are outside the integer $U(1)_F$ catalog. They are admissible only through their own finite anomaly-bordism, determinant-orientation, flavor, and threshold ledgers.
+
+Thus failure of a later flavor texture, neutrino row, CKM/PMNS profile, or baryogenesis certificate does not refute the structural $N_g=3$ branch; it identifies a downstream branch failure. Conversely, failure of the $U(1)_F$ redundancy, CP-active, or PCE minimal premises demotes the generation count to the bounded catalog above.
+
+*Proof.* Item 1 is Theorem R.8.5b. Item 2 is Theorem X.8d applied to the distinction between redundancies and physical update channels. Item 3 follows from the proof of Theorem R.3.4: $N=1$ cannot realize a nonzero charge under $\sum F_g=0$, and $N=2$ has no physical CKM phase, but the anomaly equations alone do not exclude it when CP is not demanded. Item 4 follows from Remark R.8.5c and the response quotient: larger anomaly-free multisets are not minimal but can become response-active if extra maps are retained, while response-null copies are removed. Item 5 is Corollary R.8.5d. ∎
 
 ## R.9 Summary
 

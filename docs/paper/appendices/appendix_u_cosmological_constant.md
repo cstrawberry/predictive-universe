@@ -2389,15 +2389,69 @@ $$\Delta\phi_{\max} = \sqrt{12} \, \bar{M}_{Pl} \cdot \frac{\pi}{2} = \sqrt{3}\p
 
 ### U.22.1 Gravitational Sector
 
-**Assumption U.48 (Local Equilibrium Truncation).** At the PCE-Attractor (Definition 15a), the emergent gravitational effective action (Proposition W.20) truncates to:
+**Assumption U.48 (Local Equilibrium Truncation).** At the PCE-Attractor (Definition 15a), the emergent gravitational effective action (Proposition W.20) is restricted on the retained scalar branch to the finite curvature ledger
 
-$$S_{\text{grav}} = \int d^4x \sqrt{-g} \left[ \frac{\bar{M}_{Pl}^2}{2}(R - 2\Lambda) + c_1 R^2 \right]$$
+$$
+S_{\text{grav}}
+=
+\int d^4x\sqrt{-g}
+\left[
+\frac{\bar M_{Pl}^2}{2}(R-2\Lambda)+c_1R^2+c_2R_{\mu\nu}R^{\mu\nu}+c_W C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma}
+\right],
+\tag{U.48.1}
+$$
 
-with $c_2 = 0$ (the $R_{\mu\nu}R^{\mu\nu}$ coefficient is assumed suppressed at the attractor).
+with the Starobinsky subbranch defined by
 
-*Justification.* By Theorem W.19, Einstein dynamics emerge under local thermodynamic equilibrium near causal horizons. By Proposition W.20, deviations from equilibrium induce curvature-squared corrections with coefficients controlled by entropy deficit and non-equilibrium terms. In four dimensions, the independent quadratic invariants are $R^2$, $R_{\mu\nu}R^{\mu\nu}$, and the Gauss-Bonnet combination $R^2 - 4R_{\mu\nu}R^{\mu\nu} + R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ (topological). We assume that at the PCE-Attractor during inflation, viscous (shear) contributions are suppressed, setting $c_2 = 0$ to leading order. The $R^2$ term is assumed to persist. This truncation to the Starobinsky form is motivated by the attractor structure but not rigorously derived; alternative truncations including Weyl-squared terms would modify predictions.
+$$
+c_2=0,
+\qquad
+c_W=0,
+\qquad
+c_1>0.
+\tag{U.48.2}
+$$
 
-*Remark.* The $c_2 = 0$ condition may also be understood from the Gauss-Bonnet identity in 4D: the combination $R^2 - 4R_{\mu\nu}R^{\mu\nu} + R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ is topological. After suppressing the $R_{\mu\nu}R^{\mu\nu}$ contribution in the local-equilibrium truncation and restricting to the scalar-sector ansatz in Assumption U.48, the remaining curvature-squared term retained here is $R^2$.
+The symbols $c_2=0$ and $c_W=0$ are not theorem-level consequences of local equilibrium alone. They are branch entries unless discharged by the finite truncation ledger below.
+
+**Definition U.48a (Local-Equilibrium Truncation Ledger).** A local-equilibrium truncation ledger for the primordial scalar branch is a finite record
+$$
+\mathfrak L_{\mathrm{LE}}
+=
+\left(
+\mathcal E_{\mathrm{loc}},
+\Pi_{\mathrm{sc}},
+\mathcal K_2,
+\mathcal K_W,
+\mathcal B_{GB},
+I_{c_2},
+I_{c_W},
+I_{c_1},
+\chi_{\mathrm{LE}}
+\right),
+\tag{U.48a.1}
+$$
+where:
+
+1. $\mathcal E_{\mathrm{loc}}$ is the finite local-equilibrium effective-action calculation descending from the same PCE state used for the primordial branch.
+2. $\Pi_{\mathrm{sc}}$ is the scalar-sector projection used before comparison with $n_s$, $r$, $A_s$, $n_t$, running, or non-Gaussianity.
+3. $\mathcal K_2$ and $\mathcal K_W$ are the finite response kernels multiplying $R_{\mu\nu}R^{\mu\nu}$ and $C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma}$ after applying $\Pi_{\mathrm{sc}}$.
+4. $\mathcal B_{GB}$ is the Gauss-Bonnet bookkeeping map, recording which curvature-squared combination is topological and which retained scalar-sector combinations remain dynamical.
+5. $I_{c_2}$, $I_{c_W}$, and $I_{c_1}$ are certified finite intervals for the three retained curvature coefficients in the chosen normalization.
+6. $\chi_{\mathrm{LE}}=1$ records that no endpoint or truncation choice is selected from the observed scalar spectral data.
+
+**Theorem U.48b (Status of $c_2=0$ on the Current Primordial Branch).** The Starobinsky truncation is theorem-level exactly on branches with an accepted $\mathfrak L_{\mathrm{LE}}$ satisfying
+$$
+I_{c_2}=\{0\},
+\qquad
+I_{c_W}=\{0\},
+\qquad
+0\notin I_{c_1}.
+\tag{U.48b.1}
+$$
+Absent such a ledger, $c_2=0$ and $c_W=0$ are irreducible truncation-branch data. The Gauss-Bonnet identity alone cannot set $c_2$ to zero because it removes only one topological linear combination of curvature-squared terms and does not eliminate the independent scalar-sector response kernel recorded by $\mathcal K_2$.
+
+*Proof.* In four dimensions the Gauss-Bonnet density changes the basis of curvature-squared invariants but leaves two non-topological quadratic curvature directions. The record $\mathfrak L_{\mathrm{LE}}$ is exactly the finite projection and coefficient ledger needed to show that the retained scalar branch has no $R_{\mu\nu}R^{\mu\nu}$ or Weyl-squared response. If (U.48b.1) holds, the action reduces to the Starobinsky branch with fixed $c_1$. If either zero interval is absent, a different scalar/tensor quadratic-curvature branch remains admissible and changes the downstream slow-roll and trans-horizon map. ∎
 
 
 **Corollary U.49 (Starobinsky Form).** The gravitational action takes the Starobinsky form:
@@ -2419,11 +2473,44 @@ We identify the canonically normalized Einstein-frame scalar $\chi$ with the can
 ### U.22.3 Mass Scale Identification
 
 
-**Identification U.51 (Scalaron Mass from PPI).** The Principle of Physical Instantiation (Definition P.6.2) requires that the abstract complexity scale $Q$ manifest as a physical mass scale. We identify:
+**Identification U.51 (Scalaron Mass from PPI).** The Principle of Physical Instantiation (Definition P.6.2) requires a branch map from the primordial finite determinant scale to the scalaron mass. The linear scalaron branch is
 
-$$\frac{m_s}{\bar{M}_{Pl}} = Q$$
+$$
+\frac{m_s}{\bar M_{Pl}}=Q.
+\tag{U.51.1}
+$$
 
-*Justification.* The PPI asserts that information-theoretic quantities must have physical instantiations. The primordial complexity parameter $\kappa_Q = 11$ (Identification U.20) yields $Q = e^{-11}/\sqrt{2}$ (Theorem U.27). The scalaron mass $m_s$ is the characteristic mass scale in the Starobinsky sector. This identification is motivated by dimensional analysis and the requirement that $Q$ control primordial perturbations, but is not uniquely determined by PPI alone. Alternative identifications such as $m_s/\bar{M}_{Pl} = f(Q)$ for some $O(1)$ function $f$ would shift predictions accordingly. The linear identification $m_s = Q \cdot \bar{M}_{Pl}$ is the simplest choice consistent with the exponential suppression structure. By Theorem P.14.1f and Corollary P.14.1g, this identification cannot be promoted to theorem-level by status relabeling or prose alone; theorem-level promotion would require a finite spectral or variational certificate fixing the linear map before comparison with inflationary observables.
+This is a branch identification unless fixed by the scalaron-mass map record below.
+
+**Definition U.51a (Scalaron-Mass Map Record).** A scalaron-mass map record is a finite tuple
+$$
+\mathfrak M_s
+=
+\left(
+\mathfrak D_Q,
+\mathcal O_s,
+\Phi_s,
+\mathcal N_s,
+I_s,
+\chi_s
+\right),
+\tag{U.51a.1}
+$$
+where $\mathfrak D_Q$ is the accepted primordial determinant certificate of Definition U.26b, $\mathcal O_s$ is the finite scalaron fluctuation operator on the same branch, $\Phi_s$ is the branch-fixed dimensional map from the determinant amplitude to $m_s/\bar M_{Pl}$, $\mathcal N_s$ fixes the Planck-mass and Einstein-frame normalizations, $I_s$ is the certified interval for $m_s/\bar M_{Pl}$, and $\chi_s=1$ records that $\Phi_s$ and $I_s$ are fixed before comparison with $A_s$, $n_s$, $r$, or the scalar amplitude.
+
+The linear identification (U.51.1) is theorem-level exactly when an accepted $\mathfrak M_s$ has
+$$
+\Phi_s(Q)=Q,
+\qquad
+I_s=I_Q,
+\tag{U.51a.2}
+$$
+where $I_Q$ is the determinant-certified interval for $Q$ propagated from $\mathfrak D_Q$. Otherwise the scalaron mass is irreducible branch data of the form
+$$
+\frac{m_s}{\bar M_{Pl}}=f_s(Q),
+\tag{U.51a.3}
+$$
+with $f_s$ fixed by the branch record before trans-horizon observables are evaluated.
 
 **Corollary U.52 (Scalaron Mass Value).**
 
@@ -2455,13 +2542,42 @@ $$\Delta N_e \approx \Delta \ln k$$
 
 *Proof.* During slow-roll inflation, $k = aH$ where $a$ is the scale factor and $H$ is approximately constant. Thus $\ln k \approx \ln a + \text{const} = N_e + \text{const}$. $\square$
 
-**Assumption U.56 (E-Fold Registration Cost).** Each e-fold registers one independent scalar perturbation mode across the constraint budget. Given Assumption U.41, the total number of registrable e-folds is:
+**Assumption U.56 (E-Fold Registration Cost).** The leading registration branch assigns one independent scalar horizon-exit registration to each e-fold, giving
 
-$$N_e^{(\text{info})} = N_{\text{budget}} = 60$$
+$$
+N_e^{(\mathrm{info})}=N_{\mathrm{budget}}=60.
+\tag{U.56.1}
+$$
 
-This is a model-layer registration rule rather than a theorem of the discrete backbone. By Convention P.14.1h, changing this rule defines a different cosmological registration branch and propagates to the inflationary prediction ledger.
+This is a branch rule unless it is supplied by the finite e-fold ledger below.
 
-*Justification.* The constraint budget $N_{\text{budget}} = 60$ (Assumption U.41) counts independent scalar (binary) registrations available in the primordial sector. We assume that one independent constraint is consumed per e-fold to register distinct horizon-exit conditions, so $N_e^{(\text{info})} \leq N_{\text{budget}}$ and at capacity saturation $N_e^{(\text{info})} = N_{\text{budget}} = 60$. The ratio $C^*_{\max}/\varepsilon_0 = 2$ fixes the structural information content per registration at the PCE optimum but does not increase the number of independent constraints available for mode counting. If the true constraint count differs from 60, $N_e^{(\text{info})}$ scales proportionally.
+**Definition U.56a (E-Fold Registration Ledger).** An e-fold registration ledger is a finite record
+$$
+\mathfrak E_N
+=
+\left(
+\mathcal M_{\mathrm{HM}},
+\rho_N,
+\mathcal Q_{\mathrm{tr}},
+\phi_0,
+\phi_{\mathrm{end}},
+I_N,
+\chi_N
+\right),
+\tag{U.56a.1}
+$$
+where $\mathcal M_{\mathrm{HM}}$ is the harmonic-moment matrix of Definition U.41a, $\rho_N$ is the fixed rule converting independent harmonic-moment registrations to e-folds, $\mathcal Q_{\mathrm{tr}}$ is the trans-horizon quotient and pivot-registration convention, $\phi_0$ and $\phi_{\mathrm{end}}$ are the finite initial-field and end-of-inflation branch entries, $I_N$ is the certified interval for $N_e$, and $\chi_N=1$ records that none of these entries is selected from the observed values of $n_s$, $r$, $A_s$, $n_t$, running, or local non-Gaussianity.
+
+The rule (U.56.1) is theorem-level exactly when an accepted ledger satisfies
+$$
+\operatorname{rank}\mathcal M_{\mathrm{HM}}=60,
+\qquad
+\rho_N(j)=j,
+\qquad
+I_N=\{60\}
+\tag{U.56a.2}
+$$
+before the fiducial field value and trans-horizon quotient are used. Otherwise $N_e$ is branch data and the observables of Theorems U.62-U.68 are functions of the interval $I_N$ rather than closed scalar predictions.
 
 ### U.23.2 Geometric Bound
 
@@ -2730,23 +2846,84 @@ The predictions are compared against Planck 2018 results (Planck Collaboration 2
 
 ### U.25.2 Falsification Criteria
 
-**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48, U.56; Identifications U.20, U.44a, U.51; the predictive-recovery MacWilliams Golay branch (used in Identification U.20 via Definition U.18); the residual-budget branch (used in Proposition U.14 via Lemma U.54); and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by any statistically significant measurement lying outside the Appendix U $3\sigma$ theory windows:
-
-1. **Tensor ratio**: $r \notin [0.00271,\,0.00409]$ at $>3\sigma$ (prediction: $r = 0.0034 \pm 0.00023$)
-2. **Spectral index**: $n_s \notin [0.9630,\,0.9696]$ at $>3\sigma$ (prediction: $n_s = 0.9663 \pm 0.0011$)
-3. **Local non-Gaussianity**: $f_{NL}^{\text{local}} \notin [0.0125,\,0.0155]$ at $>3\sigma$ (prediction: $0.0140 \pm 0.0005$)
-4. **Running**: $dn_s/d\ln k \notin [-(6.9\times10^{-4}),\,-(4.5\times10^{-4})]$ at $>3\sigma$ (prediction: $-(5.7 \pm 0.4)\times10^{-4}$)
-5. **Primordial product lock**: after applying the stated $A_Q$ branch window, the measured product $A_s r$ lies outside
+**Theorem U.69 (Conditional Falsification Conditions).** Conditional on an accepted primordial branch certificate $\mathfrak P_{\mathrm{prim}}$ of Definition U.69a below, the primordial-sector predictions are falsified by any statistically significant measurement lying outside the certified branch intervals for
 $$
-A_s r
+Q,
+\quad
+A_s,
+\quad
+n_s,
+\quad
+r,
+\quad
+n_t,
+\quad
+\frac{dn_s}{d\ln k},
+\quad
+f_{NL}^{\mathrm{local}}.
+\tag{U.69.1}
+$$
+On the special leading branch with $A_Q=1$, $N_e=59.4$, linear scalaron map $m_s/\bar M_{Pl}=Q$, Starobinsky truncation, $\phi_0=\phi_{\max}$, and the trans-horizon quotient used in Corollary U.65a, the diagnostic central values remain
+$$
+r=0.0034,
+\qquad
+n_s=0.9663,
+\qquad
+\frac{dn_s}{d\ln k}=-5.7\times10^{-4},
+\qquad
+f_{NL}^{\mathrm{local}}=0.0140,
+\tag{U.69.2}
+$$
+and
+$$
+A_s r=\frac{A_Qe^{-22}}{4\pi^2}.
+\tag{U.69.3}
+$$
+These numbers are comparison data for that branch only; they are not transferable to another determinant, scalaron-map, truncation, e-fold, initial-field, or trans-horizon branch.
+
+**Definition U.69a (Primordial Branch Certificate).** A primordial branch certificate is a finite record
+$$
+\mathfrak P_{\mathrm{prim}}
 =
-\frac{A_Qe^{-22}}{4\pi^2}.
+\left(
+\mathfrak D_Q,
+\mathfrak H_{24},
+\mathfrak K_{\mathrm{HR}},
+\mathfrak M_s,
+\mathfrak L_{\mathrm{LE}},
+\mathfrak E_N,
+\phi_0,
+\mathcal Q_{\mathrm{tr}},
+\mathcal R_{\mathrm{prim}},
+\chi_{\mathrm{prim}}
+\right),
+\tag{U.69a.1}
 $$
-On the leading $A_Q=1$ branch, the central value is $7.0658\times10^{-12}$.
+where:
 
-If $N_e$ differs from 59.4, replace the central values using $n_s \simeq 1 - 2/N_e$, $r \simeq 12/N_e^2$, $dn_s/d\ln k \simeq -2/N_e^2$, $f_{NL}^{\text{local}} \simeq 5/(6N_e)$, and $n_t \simeq -3/(2N_e^2)$, and propagate the corresponding theory windows. The product-lock identity $A_s r=A_Qe^{-22}/(4\pi^2)$ is unchanged by this replacement because $N_e$ cancels between $A_s$ and $r$.
+1. $\mathfrak D_Q$ is the $\mathbb{CP}^{11}$ determinant certificate of Definition U.26b, including the retained fluctuation operator, mass term, zeta finite-part convention, measure quotient, real-projection treatment, tail interval, and finite-part scale.
+2. $\mathfrak H_{24}$ is the 24-cell harmonic-moment rank certificate of Definition U.41a with the rank value used for the constraint budget.
+3. $\mathfrak K_{\mathrm{HR}}$ is the Hopf-Rayleigh kinetic datum of Definition U.44b, including the scalar geodesic normalization and the no-rescaling condition of Theorem U.44c.
+4. $\mathfrak M_s$ is the scalaron-mass map record of Definition U.51a.
+5. $\mathfrak L_{\mathrm{LE}}$ is the local-equilibrium truncation ledger of Definition U.48a, including the status of $c_2=0$ and $c_W=0$.
+6. $\mathfrak E_N$ is the e-fold registration ledger of Definition U.56a.
+7. $\phi_0$ is the initial-field branch entry and $\mathcal Q_{\mathrm{tr}}$ is the trans-horizon quotient, pivot, and matching convention.
+8. $\mathcal R_{\mathrm{prim}}$ is the certified interval vector for $Q$, $A_s$, $n_s$, $r$, $n_t$, running, and $f_{NL}^{\mathrm{local}}$ after propagating determinant, kinetic, scalaron-map, truncation, registration, initial-field, and trans-horizon uncertainties.
+9. $\chi_{\mathrm{prim}}=1$ records that every entry is fixed before comparison with cosmological data.
 
-These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
+**Theorem U.69b (Finite Classification of Current Primordial Branch Content).** In the present Appendix U record, the admissible primordial outputs are classified by the finite branch coordinates
+$$
+(\mu_Q,m_Q^2,\mathcal J_Q,\operatorname{rank}\mathcal M_{\mathrm{HM}},\lambda^2,\Phi_s,I_{c_2},I_{c_W},\rho_N,\phi_0,\mathcal Q_{\mathrm{tr}}).
+\tag{U.69b.1}
+$$
+The determinant prefactor, scalaron-mass map, local-equilibrium truncation, e-fold registration, initial field, and trans-horizon quotient are not all instantiated as accepted forward-locked finite records in the current file. Therefore the theorem-level registry value for the full primordial interval vector is
+$$
+\mathcal R_{\mathrm{prim}}=\varnothing_{\mathrm{cert}}
+\tag{U.69b.2}
+$$
+until an accepted $\mathfrak P_{\mathrm{prim}}$ is entered. The displayed values in (U.69.2) remain the leading-branch comparison tuple and may be tested, but they are not closed PU outputs independent of the branch coordinates (U.69b.1).
+
+*Proof.* Definition U.26b supplies the determinant certificate schema but does not by itself force a unique $m_Q^2$, $\mathcal J_Q$, or finite part. Definition U.41a can close the constraint budget only when the rank certificate is accepted. Definition U.44b closes the kinetic normalization only on the Hopf-Rayleigh branch. Definition U.51a shows that $m_s/\bar M_{Pl}=Q$ is a scalaron-map branch, and Definition U.48a shows that $c_2=0$ and $c_W=0$ are truncation entries. Definition U.56a isolates the e-fold registration rule, initial field, and trans-horizon quotient. These entries change the functions that compute $Q$, $A_s$, $n_s$, $r$, $n_t$, running, and local non-Gaussianity. Theorem P.14.1f forbids promoting the numerical tuple by relabeling after comparison. Thus the finite classification is exactly (U.69b.1), and the certified closed interval vector is empty until the record (U.69a.1) is accepted. ∎
 
 
 ---
@@ -2969,35 +3146,101 @@ A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04
 $$
 on the four-mode branch. This keeps the phenomenological comparison explicit while preserving the theorem-level conclusion that only the four-mode branch is presently closed.
 
-**Definition U.73e (Four-Mode Fredholm Prefactor Closure Record).** A four-mode Fredholm prefactor closure record is a finite tuple
+**Definition U.73e (Four-Mode Fredholm Prefactor Closure Record).** A four-mode Fredholm prefactor closure record is the finite tuple
 $$
 \mathfrak F_U^{(4)}
 =
-(H_4,\Pi_0^{(4)},\mathcal J_4,\mathcal D_4,\mathcal T_4,\mathcal N_4,\mathfrak B_{\mathrm{BL}},\mathfrak I_U^{(4)},\chi_U^{(4)})
+\left(
+H_4,
+H_{\mathrm{false}},
+H_{\mathrm{bounce}},
+\Pi_0^{(4)},
+\Pi_-,
+J_4,
+\mathcal D_4,
+A_{\mathrm{neg}},
+A_{\mathrm{ghost}},
+A_{\mathrm{meas}},
+\mu_U,
+\mathcal T_4,
+\chi_U
+\right)
 \tag{U.73e.1}
 $$
-with the following entries.
+with all entries fixed on the same $\kappa=142$ false-vacuum branch of Theorem U.13b.
 
-1. $H_4$ is the certified finite Hessian on the four-mode false-vacuum branch of Theorem U.13b, with exactly four translation zero modes and no fifth null direction.
-2. $\Pi_0^{(4)}$ is the projection onto the four zero modes and $1-\Pi_0^{(4)}$ is the positive complement used in the determinant ratio.
-3. $\mathcal J_4$ is the zero-mode Jacobian and gauge-volume quotient fixed by the branch normalization.
-4. $\mathcal D_4$ is the relative determinant ratio on the positive complement, including regulator, contour, finite part, and normalization convention.
-5. $\mathcal T_4$ is the heat-kernel or zeta-tail certificate bounding the discarded modes.
-6. $\mathcal N_4$ is the conversion of $\mathcal J_4\mathcal D_4$ into $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ in the convention of Corollary U.15b.
-7. $\mathfrak B_{\mathrm{BL}}$ is the Bismut-Lebeau transfer datum if the determinant is evaluated by a transfer from a covering model; otherwise this slot records the identity transfer.
-8. $\mathfrak I_U^{(4)}$ is the final interval audit for $A_{\mathrm{eff}}^{\mathrm{Fred},4}$.
-9. $\chi_U^{(4)}=1$ records that all entries are fixed before comparison with any cosmological value.
+1. $H_4$ is the certified finite Hessian matrix of the sampled four-mode branch. Its kernel is exactly the four-dimensional translation span and contains no dilatation vector.
+2. $H_{\mathrm{false}}$ and $H_{\mathrm{bounce}}$ are the false-vacuum and bounce Fredholm Hessians on the same quotient Hilbert space $\mathcal H_U^{(4)}$ after gauge quotienting and boundary-condition matching.
+3. $\Pi_0^{(4)}$ is the projection onto the four translation zero modes, and $\Pi_-$ is the finite-rank projection onto all negative directions, including the pure-coordinate dilatation direction when it survives the continuum-to-finite transfer as a negative mode.
+4. The determinant line
+$$
+\operatorname{Det}_U^{(4)}
+=
+\det\ker H_{\mathrm{bounce}}\otimes\det(\operatorname{coker}H_{\mathrm{bounce}})^*
+\tag{U.73e.2}
+$$
+is oriented before evaluating determinants, and its predictive anomaly class is zero or is filled by an accepted finite defect-filling datum of Definition X.9.5e.
+5. $J_4$ is the collective-coordinate Jacobian for the four translations together with the finite-volume/extensivity quotient, written internally as
+$$
+J_4=J_{\mathrm{coll},4}A_{\mathrm{fv},4}.
+\tag{U.73e.3}
+$$
+6. $\mathcal D_4$ is the same-convention zeta/Fredholm determinant finite part
+$$
+\mathcal D_4
+=
+\left(
+\frac{\det{}'_{\zeta,\mu_U}H_{\mathrm{false}}}{|\det{}''_{\zeta,\mu_U}H_{\mathrm{bounce}}|}
+\right)^{1/2},
+\tag{U.73e.4}
+$$
+where $\det'$ removes the false-vacuum collective null directions and $\det''$ removes both $\Pi_0^{(4)}$ and $\Pi_-$. If determinant transfer is used, $\mathcal D_4$ contains the Bismut-Lebeau datum $\mathfrak B_{\mathrm{BL}}$ of Definition U.15g and the transfer error interval.
+7. $A_{\mathrm{neg}}$ is the negative-mode magnitude after the false-vacuum decay phase prescription has been separated from the static magnitude prefactor.
+8. $A_{\mathrm{ghost}}$ is the ghost and gauge-volume factor on the same quotient Hilbert space.
+9. $A_{\mathrm{meas}}$ is the measure-normalization factor, including the finite normalization of the fluctuation coordinates and the determinant-line orientation convention.
+10. $\mu_U$ is the single zeta finite-part scale and finite-part prescription used for both $H_{\mathrm{false}}$ and $H_{\mathrm{bounce}}$.
+11. $\mathcal T_4$ is the spectral-tail certificate, consisting of a cutoff $N$, a computable finite partial product, and an interval bounding the omitted heat/zeta tail in the same finite-part convention.
+12. $\chi_U=1$ records that no entry of $\mathfrak F_U^{(4)}$ is chosen by comparison with $\Lambda L_P^2$, the five-mode working prefactor, or an observational inversion.
 
-**Theorem U.73f (Four-Mode Fredholm Numerical Closure).** If $\mathfrak F_U^{(4)}$ is accepted, then the four-mode cosmological-constant row is theorem-level numerical with
+The certified four-mode prefactor interval is
+$$
+A_{\mathrm{eff}}^{\mathrm{Fred},4}
+\in
+J_4A_{\mathrm{neg}}A_{\mathrm{ghost}}A_{\mathrm{meas}}\mathcal D_4\cdot\mathcal T_4.
+\tag{U.73e.5}
+$$
+Here interval multiplication is understood in the ordered positive interval sense after the negative-mode phase has been removed from the magnitude.
+
+**Theorem U.73f (Four-Mode Fredholm Branch Classification and Forward Formula).** The four-mode exponent is closed as
+$$
+\kappa=142
+\tag{U.73f.1}
+$$
+under the false-vacuum spectral hypotheses of Theorem U.13b. The numerical prefactor row is closed exactly on branches carrying an accepted $\mathfrak F_U^{(4)}$. On such a branch,
 $$
 \Lambda_4L_P^2
 =
-8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284},
-\tag{U.73f.1}
+8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}
+\tag{U.73f.2}
 $$
-up to the interval $\mathfrak I_U^{(4)}$. The exponent remains $\kappa=142$ from Theorem U.13b, and no five-mode prefactor can be substituted into (U.73f.1) without changing the branch.
+and equivalently
+$$
+\Lambda_4L_P^2
+\in
+\left(1.1497594801473928\times10^{-122}\right)
+\,I_A,
+\tag{U.73f.3}
+$$
+where $I_A$ is the accepted interval for $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ from (U.73e.5). In the current file no accepted tuple supplies all entries of Definition U.73e; therefore the registry value for the four-mode forward prefactor is
+$$
+A_{\mathrm{eff}}^{\mathrm{Fred},4}=\varnothing_{\mathrm{cert}},
+\qquad
+\Lambda_4L_P^2=\varnothing_{\mathrm{cert}}
+\tag{U.73f.4}
+$$
+with the closed exponential coefficient (U.73f.3) retained for any future accepted branch. The five-mode working prefactor is reference-convention data and cannot be substituted into (U.73f.2).
 
-*Proof.* Theorem U.13b fixes the four-mode exponent by giving exactly four zero modes on the false-vacuum spectral branch. Definition U.73e removes those four zero modes by $\Pi_0^{(4)}$, computes the determinant on the positive complement by $\mathcal D_4$, fixes the zero-mode volume by $\mathcal J_4$, and bounds all omitted spectral tails by $\mathcal T_4$. Thus $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ is a finite function of the accepted record, with residual interval $\mathfrak I_U^{(4)}$. Multiplying this prefactor by the already closed exponential factor $e^{-2\kappa}=e^{-284}$ and the fixed $8\pi$ convention gives (U.73f.1). Since the five-mode reference branch has a different zero-mode projection and is blocked as a theorem-level vacuum closure by Theorem U.73a, exchanging its prefactor for the four-mode prefactor changes the branch rather than refining the same theorem. ∎
+*Proof.* Theorem U.13b fixes exactly four translation zero modes and excludes an additional null mode under its stated false-vacuum spectral hypotheses; Theorem U.8c prevents transfer of the pure-coordinate dilatation tangent to a zero-mode slot. Definition U.73e lists every factor entering the Fredholm magnitude on the four-mode quotient Hilbert space: false-vacuum Hessian, bounce Hessian, zero-mode projection, negative-mode audit, determinant-line orientation, collective-coordinate and finite-volume Jacobian, ghost factor, measure normalization, common zeta finite part, optional Bismut-Lebeau transfer, and spectral tail. Formula (U.73e.5) is exactly the Callan-Coleman/Fredholm determinant magnitude with the negative phase separated. Multiplying by $8\pi e^{-284}$ gives (U.73f.2), and direct evaluation gives $8\pi e^{-284}=1.1497594801473928\times10^{-122}$. Because the current manuscript supplies schemas and branch audits but not all numerical determinant, ghost, Jacobian, measure, and tail entries on the same four-mode branch, (U.73f.4) is the certified status. Reusing the five-mode prefactor would change $\Pi_0$, $J_4$, and the determinant complement, hence would be a different branch rather than a four-mode evaluation. ∎
 
 ## U.27 Conclusion
 
@@ -3007,7 +3250,7 @@ This appendix derives the cosmological constant reference scale and the primordi
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}.
 $$
-With the working value $A_{\mathrm{eff}}=0.923\pm0.011$, the five-mode reference convention gives $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. This is not an unconditional false-vacuum closure because Theorem U.8c obstructs the pure-coordinate five-mode tangent in the current Definition U.4 action. Under the Definition U.6 four-mode false-vacuum branch, Theorem U.13b fixes $\kappa=142$ and the forward expression is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$. Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference check; theorem-level four-mode numerical status requires the Fredholm prefactor certificate and interval audit of Definition U.15m and Theorem U.15m.1. The 24-cell coordinate-sum orthogonality audit of Remark U.73b.1 is consistent with the four-mode branch but does not replace the false-vacuum spectral hypotheses used in Theorem U.13b. Inverting the observed value gives $A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016$ on the five-mode reference convention and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04$ on the four-mode exponent branch.
+With the working value $A_{\mathrm{eff}}=0.923\pm0.011$, the five-mode reference convention gives $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. This is reference-convention data because Theorem U.8c obstructs the pure-coordinate five-mode tangent in the current Definition U.4 action. Under the Definition U.6 four-mode false-vacuum branch, Theorem U.13b fixes $\kappa=142$ and the forward expression is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$. The exact closed multiplier is $8\pi e^{-284}=1.1497594801473928\times10^{-122}$, so an accepted interval $I_A$ for $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ gives the interval $(1.1497594801473928\times10^{-122})I_A$. Substituting the five-mode working prefactor is only a same-number reference check and has no theorem-level four-mode status. Theorem U.73f records the current forward value as $\varnothing_{\mathrm{cert}}$ until all entries of $\mathfrak F_U^{(4)}$ are accepted on the same four-mode branch. Inverting the observed value gives $A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016$ on the five-mode reference convention and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04$ on the four-mode exponent branch; both are observational inversions rather than Fredholm evaluations.
 
 **Primordial Sector.** Conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48, the complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
 

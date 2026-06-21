@@ -36,11 +36,11 @@ The appendix uses a three-level dictionary to separate the PU fixed point from p
   $$
   D^{\mathrm{PCE}}_{\widetilde X}\longmapsto F=(F_C,F_W,F_Y)\longmapsto \Delta=TF,
   $$
-  with $T$ the Dynkin-index matrix of Remark T.17a.3 and with tails certified by Corollary T.69.1. Remark T.17a.4 and Proposition T.17a.5 remain the local no-go showing that a sector-independent affine local truncation cannot replace the global sector-resolving block sum. Theorem T.78.2 isolates the missing spectral branch data, and Theorem T.78.5 closes the current-framework status negatively: the canonical ledger does not supply a PU-internal branch package determining a theorem-level numerical tuple. Equivalently,
+  with $T$ the Dynkin-index matrix of Remark T.17a.3 and with tails certified by Corollary T.69.1. Remark T.17a.4 and Proposition T.17a.5 remain the local no-go showing that a sector-independent affine local truncation cannot replace the global sector-resolving block sum. Theorem T.78.2 isolates the missing spectral branch data, Theorem T.78.5 closes the current-framework flag-lift status negatively, and Theorem T.78.14 classifies the present RHG, torsion, spectral-action, and equivalent spectral-source class as negatively closed for theorem-level electroweak threshold and Higgs finite-part intervals. Equivalently,
   $$
   Z_i = 1+\frac{\Delta_i}{24},
   $$
-  so that $g_i(\mu_G)=g_U/\sqrt{Z_i}$.
+  so that $g_i(\mu_G)=g_U/\sqrt{Z_i}$ on any future accepted threshold branch; in the current PU-internal ledger the certificate interval for $\Delta_i$ and $Z_i$ is $\varnothing_{\mathrm{cert}}$.
 - $\mu_\lambda$: the metastability crossing scale defined by $\lambda(\mu_\lambda)=0$ in the SM effective theory; $\mu_\lambda$ is an output of RG evolution from boundary conditions at $\mu_G$.
 
 -----
@@ -67,7 +67,7 @@ The following constants are derived in the main text and Appendix Z:
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|Branch optimum on the imposed $c_\ell/c_d = 8/3$ normalization branch |Corollary T.34.2 (with imposed Corollary T.34.1) |
 |$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
 |$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger, and Theorem T.78.5 proves that no PU-internal branch package supplies them from the current framework |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 / Theorem T.78.5 |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple); current theorem-level certificate interval $\varnothing_{\mathrm{cert}}$ |Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger, Theorem T.78.5 proves that no PU-internal branch package supplies them from the current framework, and Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent spectral-source class supplies no certified $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, or gauge/Higgs finite-part intervals |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 / Theorem T.78.5 / Theorem T.78.14 |
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
 
@@ -1122,7 +1122,7 @@ Z_i=1+\frac{\Delta_i}{24}.
 $$
 No free sector constants appear in these equations. The inverse $F=T^{-1}\Delta$ exists algebraically, but using it before the forward determinant calculation would replace the spectral computation by validation data, which Convention T.17a.0 forbids. ∎
 
-**Corollary T.17a.0b (Spectral-Action Transfer as a Completed Threshold Tuple).** An accepted PU spectral-action transfer ledger $\mathfrak S_{\mathrm{SA}}(P)$ of Definition X.9.6h.4 supplies a completed flag-lift threshold tuple in the sense of Convention T.17a.0 exactly when its sector projections and heat coefficients determine
+**Corollary T.17a.0b (Spectral-Action Transfer as a Completed Threshold Tuple).** An accepted PU spectral-action transfer ledger $\mathfrak S_{\mathrm{SA}}(P)$ of Definition X.9.6h.4 supplies a completed flag-lift threshold tuple in the sense of Convention T.17a.0 exactly when its first-order Dirac certificate, cutoff function, projection list, heat coefficients, finite-part prescription, finite-part scale, subtraction order, tail certificate, Dynkin-index map, scheme/overlap ledger, and normalization map determine
 $$
 \left(
 D^{\mathrm{PCE}}_{\widetilde X},
@@ -1132,26 +1132,23 @@ D^{\mathrm{PCE}}_{\widetilde X},
 m_{\mathcal J},
 \eta,
 \{\tau_{s,\pm,a}\},
+\{F_s^{\mathrm{SA}}\}_{s\in\{C,W,Y\}},
 \{\varepsilon_s(L)\}
 \right)
 \tag{T.17a.0b.1}
 $$
 before validation comparison. In that case the electroweak threshold vector is fixed by
 $$
-F_s=
-\mathcal N_{\mathrm{SA},s}
-\left(
-\{f_k\},
-\{a_{j,s}\},
-\mathcal T_{\mathrm{SA},s}
-\right),
+F_s=F_s^{\mathrm{SA}},
 \qquad
-\Delta=TF.
+\Delta=TF,
+\qquad
+Z_i=1+\frac{\Delta_i}{24}.
 \tag{T.17a.0b.2}
 $$
-Thus spectral action is a positive closure route for the global flag-lift spectral gate only when it supplies the same finite data isolated by Theorem T.78.
+Thus spectral action is a positive closure route for the global flag-lift spectral gate only when it supplies the same finite data isolated by Theorem T.78 and the gauge/Higgs finite-part ledger of Theorem X.9.6h.5.
 
-*Proof.* Theorem X.9.6h.5 makes each claimed threshold finite part a deterministic function of the spectral-action heat coefficients, cutoff moments, normalization map, and tail certificate. Convention T.17a.0 requires exactly a forward-fixed sector operator, finite-part prescription, Golay/parity sector data, and tail record. If $\mathfrak S_{\mathrm{SA}}(P)$ supplies the tuple (T.17a.0b.1), then the sector finite parts $F_s$ are fixed before validation comparison and Theorem T.17a.0a gives $\Delta=TF$. Conversely, if any entry of (T.17a.0b.1) is absent, Theorem T.78.2 identifies a missing branch datum, so the spectral-action ledger has not completed the threshold tuple. ∎
+*Proof.* Theorem X.9.6h.5 makes each claimed threshold finite part and Higgs finite part a deterministic interval-valued function of the spectral-action Dirac certificate, cutoff moments, sector projections, heat coefficients, finite-part prescription, normalization map, and tail certificate. Convention T.17a.0 requires exactly a forward-fixed sector operator, finite-part prescription, Golay/parity sector data, and tail record. If $\mathfrak S_{\mathrm{SA}}(P)$ supplies the tuple (T.17a.0b.1), then the sector finite parts $F_s$ are fixed before validation comparison and Theorem T.17a.0a gives $\Delta=TF$ and $Z_i=1+\Delta_i/24$. Conversely, if any entry of (T.17a.0b.1) is absent, Theorem T.78.2 identifies a missing branch datum, so the spectral-action ledger has not completed the threshold tuple. ∎
 
 A finite truncation establishes a stated tolerance only when
 $$
@@ -2036,13 +2033,13 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 
 - "Derived" — derived within the adopted Appendix T branches (predictive-recovery MacWilliams Golay rate-$\tfrac12$, weak-left projection, row-pair, Bures-gauge holonomy normalization or the Kostant-Souriau prequantization gate, Toeplitz-Kraus Yukawa probability-overlap, $E_8$ triad selection, generation-internal tensor factorization, Takagi-Weyl Majorana $A_2$, triplet-projection exponent, PMNS Berry-loop, and the controlling branch package of Theorem T.79), not necessarily unconditional theorem-level output from the foundational PU axioms alone.
 
-- "Validation" — validation-run output produced by the displayed validation tuple $\Delta^{\mathrm{val}}$ in conjunction with SM running. Such entries remain validation targets rather than derived predictions under the canonical minimal ledger. Theorem T.78.5 closes the current-framework flag-lift gate negatively; only a separately appended spectral branch extension fixed before validation comparison and evaluated by Theorem T.78 can supply a positive theorem-level tuple.
+- "Validation" — validation-run output produced by the displayed validation tuple $\Delta^{\mathrm{val}}$ in conjunction with SM running. Such entries remain validation targets rather than derived predictions under the canonical minimal ledger. Theorem T.78.5 closes the current-framework flag-lift gate negatively, and Theorem T.78.14 closes the current RHG, torsion, spectral-action, and equivalent electroweak source class negatively for theorem-level $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite-part intervals. Only a separately appended spectral branch extension fixed before validation comparison and evaluated by Theorem T.78, Definition T.78.10, and the relevant source theorem can supply a positive theorem-level tuple.
 
 - "Conditional" or "Branch optimum" — the entry depends on an explicitly imposed normalization or branch input (e.g., $c_\ell/c_d = 8/3$ from Corollary T.34.1).
 
 - "Imposed" or "Constraint" — the entry is supplied as a branch input rather than derived (e.g., the lepton-to-quark tilt normalization).
 
-Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, and Theorem T.79 are the controlling branch-ledger sections for the entire Appendix T quantitative ledger; entries in summary tables that omit branch labels or use unqualified "Derived" are governed by this convention.
+Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, Theorem T.78.14, and Theorem T.79 are the controlling branch-ledger sections for the entire Appendix T quantitative ledger; entries in summary tables that omit branch labels or use unqualified "Derived" are governed by this convention.
 
 ### T.19.1 Derived Quantities
 
@@ -2052,34 +2049,34 @@ Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, and Theorem T.79 are the contr
 |$A_{EW}$ |One-loop determinant model |1.084 |— |Model layer |
 |$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
-|$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ |(matching-scale input) |Conditional on completed spectral input |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ validation tuple reproducing the previous matching outputs if obtained forward; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$, so the tuple must be compared against the global sector-resolving $\mathrm{MS2}_{\mu_G}$ block functional rather than inserted as input; Theorem T.78.5 proves that the current canonical ledger supplies no PU-internal positive branch package |— |Validation target; current-framework gate closed negatively |
-|$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |Conditional on the lifted spectral thresholds and $\delta_i$ |$0.2312$ |Conditional|
+|$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ on a completed branch; current PU-internal threshold interval $\varnothing_{\mathrm{cert}}$ |(matching-scale input) |Conditional on completed spectral input; current source class negatively closed by Theorem T.78.14 |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ validation tuple reproducing the previous matching outputs if obtained forward; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$, so the tuple must be compared against the global sector-resolving $\mathrm{MS2}_{\mu_G}$ block functional rather than inserted as input; Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent source class supplies no certified interval for $\Delta_i$ or $Z_i$ |— |Validation target; current-framework electroweak source class closed negatively |
+|$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |Conditional on the lifted spectral thresholds and $\delta_i$; validation runs remain comparison-only |$0.2312$ |Conditional|
 |$5/3$ factor |Canonical hypercharge normalization |$5/3$ |$5/3$ |Derived |
 |$\lambda_{\text{block}}$ |6 SU(2) blocks |$-1/36$ |— |Exact |
 |$\lambda_{\text{elastic}}$ |Projector algebra |$+1/36$ |— |Exact |
-|$\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU})$|Zero-slack |$0$ |(fixed-point input) |Exact |
-|$m_H$ |$\sqrt{2\lambda} \cdot v$ |$125$ GeV |$125.25$ GeV|<1% |
-|$g_i(\mu_G)$ |PCE isotropy + matching |$g_U/\sqrt{Z_i}$ |(at $\mu_G$)|Boundary |
+|$\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU})$|Zero-slack fixed-point boundary, not a spectral-action Higgs finite part |$0$ |(fixed-point input) |Exact |
+|$\mu_H^2,\lambda_H$ from spectral action |accepted $\mathfrak S_{\mathrm{SA}}(P)$ with Dirac certificate, cutoff, projections, heat coefficients, finite-part scale, tail, and normalization map |current PU-internal interval $\varnothing_{\mathrm{cert}}$ |— |No accepted current spectral-action source by Theorem T.78.14 |
+|$m_H$ |metastability-boundary/RG matching using the stated Appendix T inputs; not a spectral-action finite-part interval |$125$ GeV validation/conditional value |$125.25$ GeV|Conditional comparison |
+|$g_i(\mu_G)$ |PCE isotropy + matching |$g_U/\sqrt{Z_i}$ on a completed branch; current PU-internal threshold interval $\varnothing_{\mathrm{cert}}$ |(at $\mu_G$)|Boundary/conditional |
 |$y_t^{\mathrm{PU}}(\mathfrak{A}_{PU})$ |$S_3$-democratic Higgs |1 |(PU units) |Exact |
 |$c_\ell/c_d$ |Normalization constraint |$8/3$ |— |Constraint|
 |$\mathcal{R}$ values |$E_8$ triads |${4/3, 3/2, 2, 3, 4}$ |(discrete) |Derived |
-
 **Uncertainty budget for electroweak and transferred-prefactor outputs.** Each prediction is reported with the paper-wide T1/T2/T3 decomposition of Convention P.14.1c and Section T.25.5.3. T1 records internal truncation/control, T2 records matching/threshold/branch/bridge/convention dependence, and T3 records empirical or model-mapping dependence. Rows for which a category is absent at the current working order are marked $0$ or negligible; a combined entry is used only when the manuscript has not yet supplied the pipeline needed to split the components.
 
 |Quantity |Central (PU) |$\sigma_{T1}$ |$\sigma_{T2}$ |$\sigma_{T3}$ |$1\sigma$ theory |Dominant category and term |What shrinks it |
 |---------------------|----------------:|----------------:|----------------:|----------------:|----------------:|---------------------------|-------------------------------------------------------------------------------------------------------------|
 |$A_{EW}$ |$1.084$ |$0.005$ model allowance |$0$ |$0$ |$0.005$ |determinant-model curvature / Schur / Jacobian allowance; not a proved remainder bound |derive the determinant construction with explicit remainder bounds or replace it by a theorem-level prefactor |
-|$v$ |$252\ \text{GeV}$|$1.2\ \text{GeV}$|$5\ \text{GeV}$ |$0$ |$5\ \text{GeV}$ |T2 matching and threshold dependence at $\mu_G$ |full 2-loop matching and threshold accounting at $\mu_G$ |
-|$\sin^2\theta_W(M_Z)$|$0.2312$ |negligible ($O(M^{-1})$ anisotropy) |$0.0015$ |$0$ |$0.0015$ |T2 lifted thresholds, matching, and RG propagation |compute explicit PU threshold spectrum ($\delta_i$) + 2-loop matching/RG + $O(M^{-1})$ anisotropy corrections|
-|$m_H$ |$125\ \text{GeV}$|negligible |$2.5\ \text{GeV}$ (T2+T3 combined) |included in T2 column |$2.5\ \text{GeV}$|T2 threshold matching combined with T3 pole-mass / observable conversion at the present working order (Theorem T.28) |explicit pole-mass conversion and higher-loop thresholds, which also resolve the combined T2+T3 entry into separate components |
+|$v$ |$252\ \text{GeV}$|$1.2\ \text{GeV}$|$5\ \text{GeV}$ |$0$ |$5\ \text{GeV}$ |T2 matching and threshold dependence at $\mu_G$ |full 2-loop matching and threshold accounting at $\mu_G$ on an accepted threshold branch |
+|$\sin^2\theta_W(M_Z)$|$0.2312$ validation-run value |negligible ($O(M^{-1})$ anisotropy) |$0.0015$ validation/threshold scale; current certificate interval $\varnothing_{\mathrm{cert}}$ |$0$ |$0.0015$ diagnostic only |T2 lifted thresholds, matching, and RG propagation; current source class negatively closed by Theorem T.78.14 |accepted $\Delta_i$ and $Z_i$ intervals from $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, or an equivalent spectral tuple |
+|$m_H$ |$125\ \text{GeV}$ conditional matching value |negligible |$2.5\ \text{GeV}$ (T2+T3 combined) |included in T2 column |$2.5\ \text{GeV}$|T2 threshold matching combined with T3 pole-mass / observable conversion at the present working order (Theorem T.28); no current spectral-action $\mu_H^2$ or $\lambda_H$ interval |explicit pole-mass conversion, higher-loop thresholds, and accepted spectral-action Higgs finite-part ledger if a spectral-action claim is made |
 |$A_{\text{eff}}$ |$0.923$ |$0.004$ |$0.010$ |$0$ at fixed forward-evaluation convention |$0.011$ |T2 bounce-determinant / zero-mode / finite-volume prefactor convention |compute ghost/zero-mode normalization under a fixed vacuum convention and derive the prefactor internally |
 
 The $1\sigma$ theory column is the diagonal quadrature sum
 $$
 \sqrt{\sigma_{T1}^2+\sigma_{T2}^2+\sigma_{T3}^2}
 $$
-at the stated working order. The $A_{EW}$ entry is a determinant-model allowance, not a controlled theorem-level remainder estimate. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from that allowance via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $m_H$, the $2.5\ \text{GeV}$ entry is combined because separating threshold matching from pole-mass / observable conversion requires the explicit internal pole/threshold pipeline referenced in Theorem T.28; until that pipeline is completed, the combined entry is reported in the T2 column and the T3 column is marked as included in that column to avoid double-counting. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
+at the stated working order. The $A_{EW}$ entry is a determinant-model allowance, not a controlled theorem-level remainder estimate. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from that allowance via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $\sin^2\theta_W(M_Z)$, the displayed $0.0015$ remains a validation/threshold diagnostic unless an accepted threshold source supplies $\Delta_i$ and $Z_i$ before comparison; by Theorem T.78.14 the current RHG, torsion, spectral-action, and equivalent source class supplies no such interval. For $m_H$, the $2.5\ \text{GeV}$ entry is combined because separating threshold matching from pole-mass / observable conversion requires the explicit internal pole/threshold pipeline referenced in Theorem T.28; an independent spectral-action claim for $\mu_H^2$ or $\lambda_H$ additionally requires Definition X.9.6h.4. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
 
 ### T.19.2 Derivation Chain
 
@@ -2109,7 +2106,7 @@ $$
 
 **Closed result**: Leading-order residual threshold effects are isotropic (Theorem T.17), giving only a common additive shift in $\alpha_i^{-1}(\mu_G)$ and leaving the gauge-factor separations controlled by the principal lifted spectral thresholds $\Delta_i$ (equivalently the matching factors $Z_i$) of Corollary T.13.1. Subleading anisotropic splittings are $O(M^{-1})$-suppressed (Corollary T.17.1).
 
-**Unclosed numerical gate**: The numerical threshold tuple is not promoted by this isotropy result. The principal lifted spectral thresholds remain governed by the finite spectral certificate and the negative closure result of Theorem T.78.5. Therefore this subsection closes the isotropic residual subproblem but not the theorem-level electroweak threshold tuple.
+**Unclosed numerical gate**: The numerical threshold tuple is not promoted by this isotropy result. The principal lifted spectral thresholds remain governed by the finite spectral certificate and the negative closure result of Theorem T.78.5. By Theorem T.78.14, the current PU-internal RHG, torsion, spectral-action, and equivalent spectral-source class supplies no certified interval for $\Delta_i$, $Z_i=1+\Delta_i/24$, $\mu_H^2$, $\lambda_H$, or any gauge/Higgs finite part. Therefore this subsection closes the isotropic residual subproblem and the current source-class classification, but not a positive theorem-level electroweak threshold tuple.
 
 ### T.20.3 Solved: Beta Function Vanishing ✓
 
@@ -8345,62 +8342,81 @@ $$
 =
 \left(
 \mathcal B_L,
+\mathcal P_{\mathrm{RHG}},
 \mathcal D_{\mathrm{RHG}},
 \mathcal E_{\mathrm{RHG}},
 \mathcal H_{\mathrm{RHG}},
+\mathcal L_{\mathrm{det},\mathrm{RHG}},
 \mathcal T_{\mathrm{RHG}},
 \mathcal F_{\mathrm{RHG}},
+\mathcal I_{\mathrm{Dyn}},
+\mathcal S_{\mathrm{scheme}},
+\mathcal M_{\mathrm{RHG}},
 \chi_{\mathrm{stat}}
 \right)
 \tag{T.78.6.1}
 $$
 with the following entries, all fixed before validation comparison.
 
-1. **Finite block ledger.** $\mathcal B_L$ is a finite list of retained Peter-Weyl/residual labels
+1. **Finite block and source-origin ledger.** $\mathcal B_L$ is a finite list of retained Peter-Weyl/residual labels
 $$
-b=(\Lambda,s,a),
+b=(\Lambda,s,a,o_b),
 \qquad
 s\in\{C,W,Y\},
 $$
-with cutoff $L$, omitted spectral threshold $\nu_L$, sector multiplicities, and exact dimensions $\dim V_\Lambda$.
+with cutoff $L$, omitted spectral threshold $\nu_L$, sector multiplicities, exact dimensions $\dim V_\Lambda$, and a source-origin tag $o_b$ for each retained block. The source-origin tag records whether the block descends from the homogeneous flag lift, RHG Clifford transport, Golay-Leech syndrome projection, or a declared restriction of the master zeta-index ledger. A block with unknown origin is not admissible.
 
-2. **RHG block data.** $\mathcal D_{\mathrm{RHG}}$ gives, for every $b\in\mathcal B_L$, exact finite matrices
+2. **Finite sector projections, parity, and grading data.** $\mathcal P_{\mathrm{RHG}}$ gives, on every retained block, mutually compatible finite projections
 $$
-A_{\alpha,b},
+P_{s,b},
 \qquad
 \Pi_{\mathrm{syn},b},
-\qquad
-J_{0,b},
 \qquad
 \Pi_{r,b},
 \qquad
 r\in\{C,W,Y\},
 $$
-satisfying Definition Z.3a. It also gives
+together with the transported initial parity $J_{0,b}$, the grading $\Gamma_b$, and all sector-sector overlap projectors. These data satisfy
+$$
+P_{s,b}^2=P_{s,b}=P_{s,b}^*,
+\qquad
+\Gamma_b^2=I,
+\qquad
+J_{0,b}^*=J_{0,b},
+\qquad
+J_{0,b}^2=I,
+\tag{T.78.6.2}
+$$
+and the declared commutation or anticommutation relations with the sector projections. The hypercharge sector projection uses the same determinant-compatible $5/3$ normalization as the running-coupling ledger.
+
+3. **Finite matrices and differential-origin ledger.** $\mathcal D_{\mathrm{RHG}}$ gives, for every $b\in\mathcal B_L$, exact finite matrices
+$$
+A_{\alpha,b},
+\qquad
+\alpha=1,\ldots,6,
+$$
+obtained from the RHG generators $E_\alpha=i\gamma_\alpha$ on the same block representation. It also gives
 $$
 \mathcal K_b
 =
 \sum_{\alpha=1}^{6}
-[A_{\alpha,b},\Pi_{\mathrm{syn},b}]^*
-[A_{\alpha,b},\Pi_{\mathrm{syn},b}]
+[A_{\alpha,b},\Pi_{\mathrm{syn},b}]^*[A_{\alpha,b},\Pi_{\mathrm{syn},b}]
 +
 \sum_{\alpha=1}^{6}
-[A_{\alpha,b},J_{0,b}]^*
-[A_{\alpha,b},J_{0,b}]
+[A_{\alpha,b},J_{0,b}]^*[A_{\alpha,b},J_{0,b}]
 +
 \sum_r\sum_{\alpha=1}^{6}
-[A_{\alpha,b},\Pi_{r,b}]^*
-[A_{\alpha,b},\Pi_{r,b}],
-\tag{T.78.6.2}
+[A_{\alpha,b},\Pi_{r,b}]^*[A_{\alpha,b},\Pi_{r,b}],
+\tag{T.78.6.3}
 $$
-the spectral projection
+the RHG lowest-energy projection
 $$
 \Pi_b^{\mathrm{RHG}}
 =
 \mathbf 1_{\{\lambda_{\min}(\mathcal K_b)\}}(\mathcal K_b),
-\tag{T.78.6.3}
+\tag{T.78.6.4}
 $$
-and the parity residual matrix
+and the residual parity involution
 $$
 J_b^{\mathrm{RHG}}
 =
@@ -8408,11 +8424,11 @@ J_b^{\mathrm{RHG}}
 \left(
 \Pi_b^{\mathrm{RHG}}J_{0,b}\Pi_b^{\mathrm{RHG}}
 \right).
-\tag{T.78.6.4}
+\tag{T.78.6.5}
 $$
-Here $\operatorname{sgn}_0$ is a fixed finite spectral-sign convention on the compressed block. The certificate is admissible only when this convention returns a self-adjoint involution on $\Pi_b^{\mathrm{RHG}}\mathcal H_b$, either because the compressed operator has no zero eigenvalue or because a branch-fixed $\pm1$ assignment on the zero eigenspace is included before validation comparison.
+Here $\operatorname{sgn}_0$ is a branch-fixed finite spectral-sign convention on the compressed block. It must return a self-adjoint involution on $\Pi_b^{\mathrm{RHG}}\mathcal H_b$, either because the compressed operator has no zero eigenvalue or because a branch-fixed $\pm1$ assignment on the zero eigenspace is included before validation comparison.
 
-3. **Geometric normalization data.** $\mathcal E_{\mathrm{RHG}}$ gives the canonical homogeneous metric $g_0$ on
+4. **Geometric normalization and operator-origin data.** $\mathcal E_{\mathrm{RHG}}$ gives the canonical homogeneous metric $g_0$ on
 $$
 \widetilde X=SU(8)/S(U(2)\times U(1)\times U(2)\times U(3)),
 $$
@@ -8420,32 +8436,29 @@ the six RHG Killing fields $E_\alpha^\#$, the exact volume $\operatorname{Vol}_{
 $$
 \beta_{\mathrm{RHG}}^{-1}
 =
-\frac{1}{6\,\operatorname{Vol}_{g_0}(\widetilde X)}
+\frac{1}{6\operatorname{Vol}_{g_0}(\widetilde X)}
 \sum_{\alpha=1}^{6}
 \int_{\widetilde X}
 \lVert E_\alpha^\#\rVert_{g_0}^2
 \,d\operatorname{vol}_{g_0},
-\tag{T.78.6.5}
+\tag{T.78.6.6}
 $$
-and the canonical homogeneous connection
-$$
-\nabla_{\mathrm{RHG}}^{\widetilde G}
-$$
-induced by the reductive decomposition
+and the canonical homogeneous connection $\nabla_{\mathrm{RHG}}^{\widetilde G}$ induced by the reductive decomposition
 $$
 \mathfrak{su}(8)=\mathfrak h\oplus\mathfrak m.
 $$
+These entries are the differential-origin ledger for the RHG block operator.
 
-4. **Structural triple certificate.** $\mathcal H_{\mathrm{RHG}}$ gives the spectrahedral admissible set
+5. **Structural triple certificate.** $\mathcal H_{\mathrm{RHG}}$ gives the spectrahedral admissible set
 $$
 \mathcal A_{\mathrm{RHG}}
 =
 \left\{
-x=(\mu,m,\eta):
-B_b^{\mathrm{RHG}}(x)\ge(\ln2)I
-\text{ for every retained and tail-certified block }b
+ x=(\mu,m,\eta):
+ B_b^{\mathrm{RHG}}(x)\ge(\ln2)I
+ \text{ for every retained and tail-certified block }b
 \right\},
-\tag{T.78.6.6}
+\tag{T.78.6.7}
 $$
 where
 $$
@@ -8459,34 +8472,50 @@ C_2^{SU(8)}(\Lambda)-C_2^H(\tau_{s,a})
 (\lambda_s+\mu)I
 +
 (m+\eta\lambda_s)J_b^{\mathrm{RHG}}.
-\tag{T.78.6.7}
+\tag{T.78.6.8}
 $$
 It also gives the exact unique minimizer
 $$
 x_{\mathrm{RHG}}
-=
-(\mu_0^{\mathrm{RHG}},m_{\mathcal J}^{\mathrm{RHG}},\eta^{\mathrm{RHG}})
+=(\mu_0^{\mathrm{RHG}},m_{\mathcal J}^{\mathrm{RHG}},\eta^{\mathrm{RHG}})
 =
 \operatorname*{argmin}_{x\in\mathcal A_{\mathrm{RHG}}}
 (\mu^2+m^2+\eta^2).
-\tag{T.78.6.8}
+\tag{T.78.6.9}
 $$
+The active-constraint list and tangent-quotient Hessian certificate are part of $\mathcal H_{\mathrm{RHG}}$.
 
-5. **Tail certificate.** $\mathcal T_{\mathrm{RHG}}$ gives, for every sector $s$, constants
+6. **Determinant-line construction.** $\mathcal L_{\mathrm{det},\mathrm{RHG}}$ gives, for each sector $s$, the finite determinant line
 $$
-A_s,\quad C_{s,P},\quad P>23,\quad \nu_L
+\operatorname{Det}_{s,L}^{\mathrm{RHG}}
+=
+\bigotimes_{b=(\Lambda,s,a,o_b)}
+\det{}'
+\left(
+B_b^{\mathrm{RHG}}(x_{\mathrm{RHG}})|_{\Pi_b^{\mathrm{RHG}}\mathcal H_b}
+\right)^{\dim V_\Lambda},
+\tag{T.78.6.10}
+$$
+the zero-mode exclusion rule, determinant-line orientation, and comparison isomorphism to the running-coupling determinant convention. The prime is interpreted by the same zero-mode rule used in the zeta finite part. The determinant-line convention is not editable after any dependent row is fixed.
+
+7. **Tail certificate.** $\mathcal T_{\mathrm{RHG}}$ gives, for every sector $s$, constants
+$$
+A_s,
+\qquad C_{s,P},
+\qquad P>23,
+\qquad \nu_L,
 $$
 such that
 $$
 N_s^{\mathrm{RHG}}(\nu)\le A_s(1+\nu)^{23},
-\tag{T.78.6.9}
+\tag{T.78.6.11}
 $$
 and
 $$
 |R_{s,P}^{\mathrm{RHG}}(\nu)|
 \le
 C_{s,P}(1+\nu)^{-P}\log(2+\nu)
-\tag{T.78.6.10}
+\tag{T.78.6.12}
 $$
 for all $\nu\ge\nu_L$. The certified tail error is
 $$
@@ -8495,32 +8524,14 @@ $$
 A_sC_{s,P}
 \int_{\nu_L}^{\infty}
 (1+\nu)^{22-P}\log(2+\nu)\,d\nu.
-\tag{T.78.6.11}
-$$
-
-6. **Forward finite-part output.** $\mathcal F_{\mathrm{RHG}}$ gives certified intervals
-$$
-F_s^{\mathrm{RHG}}
-\in
-[F_s^-,F_s^+],
-\qquad
-s\in\{C,W,Y\},
-\tag{T.78.6.12}
-$$
-computed from the canonical finite part
-$$
-F_s^{\mathrm{RHG}}
-=
--\left(\zeta_s^{\mathrm{RHG}}\right)'(0)
--
-\zeta_s^{\mathrm{RHG}}(0)\log\mu_G^2,
 \tag{T.78.6.13}
 $$
-where
+
+8. **Finite heat/zeta sums and finite-part prescription.** $\mathcal F_{\mathrm{RHG}}$ gives the retained finite zeta sum
 $$
-\zeta_s^{\mathrm{RHG}}(q)
+\zeta_{s,L}^{\mathrm{RHG}}(q)
 =
-\sum_{b=(\Lambda,s,a)}
+\sum_{b=(\Lambda,s,a,o_b)}
 (\dim V_\Lambda)
 \operatorname{Tr}_{\Pi_b^{\mathrm{RHG}}\mathcal H_b}
 \left(
@@ -8528,49 +8539,102 @@ B_b^{\mathrm{RHG}}(x_{\mathrm{RHG}})^{-q}
 \right),
 \tag{T.78.6.14}
 $$
-with continuation and finite part fixed by Convention T.69a. It also gives
+its accepted meromorphic continuation, the finite-part scale $\mu_G$, and the sector finite part
 $$
-\Delta^{\mathrm{RHG}}=T F^{\mathrm{RHG}},
-\qquad
-Z_i^{\mathrm{RHG}}=1+\frac{\Delta_i^{\mathrm{RHG}}}{24},
+F_s^{\mathrm{RHG}}
+=
+-\left(\zeta_s^{\mathrm{RHG}}\right)'(0)
+-
+\zeta_s^{\mathrm{RHG}}(0)\log\mu_G^2,
 \tag{T.78.6.15}
 $$
-as certified intervals.
+with the tail interval from $\mathcal T_{\mathrm{RHG}}$ added. Equivalently, it records certified intervals
+$$
+F_s^{\mathrm{RHG}}
+\in
+[F_s^-,F_s^+],
+\qquad
+s\in\{C,W,Y\}.
+\tag{T.78.6.16}
+$$
 
-7. **Status ledger.** $\chi_{\mathrm{stat}}$ records that every entry of $\mathfrak C_{\mathrm{RHG}}$ is fixed before validation comparison and records whether it is theorem-derived, convention-fixed, or branch-certified. Any validation-selected entry invalidates the certificate.
+9. **Determinant-compatible Dynkin-index map.** $\mathcal I_{\mathrm{Dyn}}$ gives the fixed rational matrix $T=(T_{is})$ that maps sector finite parts to threshold shifts,
+$$
+\Delta_i^{\mathrm{RHG}}
+=
+\sum_{s\in\{C,W,Y\}}T_{is}F_s^{\mathrm{RHG}},
+\qquad i=1,2,3,
+\tag{T.78.6.17}
+$$
+and proves that the hypercharge row uses the same $5/3$ normalization and determinant-line convention as the electromagnetic projection and running-coupling ledgers.
+
+10. **Scheme ledger.** $\mathcal S_{\mathrm{scheme}}$ records the finite-part scheme, subtraction order, zero-mode prescription, finite-part scale, heat/zeta continuation convention, RG convention, and the map from $\mu_G$ to the matching scale. Retuning any one of these entries after comparison creates a new branch.
+
+11. **Matching map and evaluation-origin ledger.** $\mathcal M_{\mathrm{RHG}}$ gives the forward evaluation map
+$$
+\mathcal M_{\mathrm{RHG}}:
+(\mathcal F_{\mathrm{RHG}},\mathcal I_{\mathrm{Dyn}},\mathcal S_{\mathrm{scheme}})
+\longmapsto
+(\Delta^{\mathrm{RHG}},Z^{\mathrm{RHG}},g_i(\mu_G)),
+\tag{T.78.6.18}
+$$
+with
+$$
+Z_i^{\mathrm{RHG}}=1+
+\frac{\Delta_i^{\mathrm{RHG}}}{24},
+\qquad
+g_i(\mu_G)=\frac{g_U}{\sqrt{Z_i^{\mathrm{RHG}}}}.
+\tag{T.78.6.19}
+$$
+The evaluation-origin ledger records the exact finite sums, continuation calls, and interval arithmetic that produced the displayed intervals.
+
+12. **Status, overlap, and forward-lock ledger.** $\chi_{\mathrm{stat}}$ records that every entry of $\mathfrak C_{\mathrm{RHG}}$ is theorem-derived, convention-fixed, or branch-certified before validation comparison. It also records the overlap audit against bulk, interface, electromagnetic projection, curvature, sinc-transport, torsion, spectral-action, flavor, baryogenesis, primordial determinant, vacuum-prefactor, and future symmetry-residual ledgers. Any validation-selected entry, post-comparison finite-part convention, altered projector, altered tail bound, altered grading, altered determinant-line convention, altered Dynkin-index normalization, altered matching map, or unassigned overlap contribution invalidates the certificate.
 
 **Algorithm T.78.6a (RHG Certificate Verification).** Given a finite record $\mathfrak C_{\mathrm{RHG}}$, verify the certificate by the following finite checks.
 
-1. Check that every $A_{\alpha,b}$ is the derived $SU(8)$ representation of the RHG generator $E_\alpha=i\gamma_\alpha$ on the block $b$, and that the matrices $\Pi_{\mathrm{syn},b}$, $J_{0,b}$, and $\Pi_{r,b}$ are the transported marked Golay/syndrome/sector data.
+1. Check that the finite block list $\mathcal B_L$ contains exact labels, sector labels, multiplicities, dimensions, cutoff $L$, omitted threshold $\nu_L$, and source-origin tags for every retained block.
 
-2. Recompute $\mathcal K_b$ from (T.78.6.2), verify positivity, compute its lowest spectral projection, and check (T.78.6.3).
+2. Check that every $A_{\alpha,b}$ is the derived $SU(8)$ representation of the RHG generator $E_\alpha=i\gamma_\alpha$ on the same block $b$, and that the matrices $\Pi_{\mathrm{syn},b}$, $J_{0,b}$, $\Gamma_b$, $P_{s,b}$, and $\Pi_{r,b}$ are the transported marked Golay/syndrome/grading/sector data declared in $\mathcal P_{\mathrm{RHG}}$.
 
-3. Recompute $J_b^{\mathrm{RHG}}$ from (T.78.6.4), including the branch-fixed zero-eigenspace convention if needed, and verify
+3. Recompute $\mathcal K_b$ from (T.78.6.3), verify positivity, compute its lowest spectral projection, and check (T.78.6.4).
+
+4. Recompute $J_b^{\mathrm{RHG}}$ from (T.78.6.5), including the branch-fixed zero-eigenspace convention if needed, and verify
 $$
 (J_b^{\mathrm{RHG}})^*=J_b^{\mathrm{RHG}},
 \qquad
 (J_b^{\mathrm{RHG}})^2=I.
-\tag{T.78.6.16}
+\tag{T.78.6.20}
+$$
+Verify the declared commutation or anticommutation rules with $P_{s,b}$ and $\Gamma_b$.
+
+5. Verify the metric normalization (T.78.6.6), the six Killing fields, the volume entry, and the homogeneous connection definition from the reductive splitting.
+
+6. Verify that $\mathcal A_{\mathrm{RHG}}$ is the spectrahedron (T.78.6.7), that $x_{\mathrm{RHG}}$ satisfies the Karush-Kuhn-Tucker conditions for minimizing $\mu^2+m^2+\eta^2$ over $\mathcal A_{\mathrm{RHG}}$, and that the active-constraint Hessian is positive on the tangent quotient.
+
+7. Recompute every retained finite eigenvalue of $B_b^{\mathrm{RHG}}(x_{\mathrm{RHG}})$ and verify the retained heat/zeta block sums.
+
+8. Verify the determinant-line construction (T.78.6.10), the zero-mode convention, and the determinant-line comparison isomorphism to the running-coupling ledger.
+
+9. Verify the Weyl bound (T.78.6.11), the heat-kernel remainder bound (T.78.6.12), and the tail integral (T.78.6.13). Propagate the interval arithmetic through each $F_s^{\mathrm{RHG}}$.
+
+10. Recompute the finite-part value (T.78.6.15) from the declared continuation and finite-part scale. Reject the certificate if the subtraction order, zero-mode rule, or finite-part scale differs from $\mathcal S_{\mathrm{scheme}}$.
+
+11. Verify the determinant-compatible Dynkin-index map $\mathcal I_{\mathrm{Dyn}}$, including the hypercharge normalization, and recompute
+$$
+\Delta^{\mathrm{RHG}}=T F^{\mathrm{RHG}}.
+\tag{T.78.6.21}
 $$
 
-4. Verify the metric normalization (T.78.6.5) and the homogeneous connection definition from the reductive splitting.
-
-5. Verify that $\mathcal A_{\mathrm{RHG}}$ is the spectrahedron (T.78.6.6), that $x_{\mathrm{RHG}}$ satisfies the Karush-Kuhn-Tucker conditions for minimizing $\mu^2+m^2+\eta^2$ over $\mathcal A_{\mathrm{RHG}}$, and that the active-constraint Hessian is positive on the tangent quotient.
-
-6. Recompute the retained finite eigenvalues of every $B_b^{\mathrm{RHG}}(x_{\mathrm{RHG}})$ and the retained block finite sums.
-
-7. Verify the Weyl bound (T.78.6.9), the heat-kernel remainder bound (T.78.6.10), and the tail integral (T.78.6.11).
-
-8. Recompute the certified intervals for $F$, then propagate them through the fixed linear map
+12. Propagate the threshold intervals through
 $$
-\Delta=TF
+Z_i^{\mathrm{RHG}}=1+
+\frac{\Delta_i^{\mathrm{RHG}}}{24}
 $$
-and through
-$$
-Z_i=1+\frac{\Delta_i}{24}.
-$$
+and through the matching map $g_i(\mu_G)=g_U/\sqrt{Z_i^{\mathrm{RHG}}}$.
 
-9. Reject the certificate if any entry is marked validation-selected or if any verification check fails.
+13. Verify the overlap audit: no term assigned to bulk, interface, electromagnetic projection, curvature, sinc-transport, torsion, spectral-action, flavor, baryogenesis, primordial determinant, vacuum-prefactor, or future symmetry-residual ledgers may be counted again in $F_s^{\mathrm{RHG}}$ or $\Delta_i^{\mathrm{RHG}}$.
+
+14. Reject the certificate if any entry is marked validation-selected, if any finite-part convention, projector, tail bound, grading, determinant-line convention, Dynkin-index normalization, or matching map was selected after comparison, or if any verification check fails.
 
 **Lemma T.78.6b (Finite Verification and Uniqueness).** Algorithm T.78.6a terminates on every finite record $\mathfrak C_{\mathrm{RHG}}$. If it accepts, the accepted values of
 $$
@@ -8644,21 +8708,33 @@ $$
 \left(
 \mathfrak C_{\mathrm{RHG}},
 \Delta_{\mathrm{RHG}},
+Z_{\mathrm{RHG}},
+\mathcal I_{\mathrm{RHG}},
+\mathcal H_{\mathrm{RHG}},
 \mathcal M_{\mathrm{RHG}},
 \mathcal B_{\mathrm{tail}},
 \mathcal S_{\mathrm{scheme}},
+\mathfrak Z_{\mathrm{RHG}},
 \chi_{\mathrm{RHG}}
 \right)
+\tag{T.78.10.1}
 $$
-where $\mathfrak C_{\mathrm{RHG}}$ is the certificate of Definition T.78.6, $\Delta_{\mathrm{RHG}}$ is the resulting threshold vector, $\mathcal M_{\mathrm{RHG}}$ is the matching map from $\widetilde X$ to the running-coupling ledger, $\mathcal B_{\mathrm{tail}}$ is the finite heat/zeta tail bound, $\mathcal S_{\mathrm{scheme}}$ is the renormalization and scheme ledger, and $\chi_{\mathrm{RHG}}$ records that no component was selected using $v$, $m_H$, $\alpha(M_Z)$, Yukawa values, CKM data, PMNS data, baryogenesis data, or the validation tuple $(15.14,20.94,18.41)$.
+where $\mathfrak C_{\mathrm{RHG}}$ is the certificate of Definition T.78.6, $\Delta_{\mathrm{RHG}}$ is the resulting threshold vector, $Z_{\mathrm{RHG}}$ is the componentwise wavefunction vector
+$$
+Z_i^{\mathrm{RHG}}=1+\frac{\Delta_i^{\mathrm{RHG}}}{24},
+\tag{T.78.10.2}
+$$
+$\mathcal I_{\mathrm{RHG}}$ is the certified interval ledger for the finite parts, threshold entries, and $Z_i$ entries, $\mathcal H_{\mathrm{RHG}}$ is either $\varnothing$ or an accepted spectral-action Higgs ledger $\mathfrak S_{\mathrm{SA}}(P)$ in the sense of Definition X.9.6h.4, $\mathcal M_{\mathrm{RHG}}$ is the matching map from $\widetilde X$ to the running-coupling ledger, $\mathcal B_{\mathrm{tail}}$ is the finite heat/zeta tail bound, $\mathcal S_{\mathrm{scheme}}$ is the renormalization and scheme ledger, $\mathfrak Z_{\mathrm{RHG}}$ is the master zeta-index ledger label through which any shared flavor, baryogenesis, primordial determinant, or vacuum-prefactor source descends, and $\chi_{\mathrm{RHG}}$ records that no component was selected using $v$, $m_H$, $\alpha(M_Z)$, $\sin^2\theta_W(M_Z)$, Yukawa values, CKM data, PMNS data, baryogenesis data, the validation tuple $(15.14,20.94,18.41)$, or any row already fixed downstream.
 
-**Theorem T.78.11 (RHG Electroweak Certificate Non-Contamination).** If $\mathfrak R_{\mathrm{RHG}}$ is accepted before validation comparison, then the electroweak threshold vector $\Delta_{\mathrm{RHG}}$ and matching map $\mathcal M_{\mathrm{RHG}}$ have theorem-level determinacy within their certified interval on the RHG branch. Conversely, if any entry is chosen using validation observables listed in $\chi_{\mathrm{RHG}}$, the record is not an RHG derivation and the corresponding electroweak result remains validation-level.
+If $\mathcal H_{\mathrm{RHG}}=\varnothing$, the record claims no values for $\mu_H^2$, $\lambda_H$, $Z_H$, or spectral-action Higgs finite parts. If $\mathcal H_{\mathrm{RHG}}\ne\varnothing$, those Higgs entries are exactly the intervals supplied by $\mathfrak S_{\mathrm{SA}}(P)$ and may not be retuned inside the RHG threshold record.
 
-*Proof.* Theorem T.78.7 proves that a completed RHG certificate determines the global flag-lift spectral gate. Definition T.78.10 adds the threshold vector, matching map, tail bound, and scheme ledger as finite entries, all fixed before validation comparison. Therefore the electroweak threshold output is the deterministic image of a finite accepted record and has exactly the interval certified by $\mathcal B_{\mathrm{tail}}$. If an entry is chosen using a validation observable, then two records agreeing on the pre-validation structural data but differing only by the validation-dependent choice yield different outputs after seeing the target; this violates the forward-lock condition $\chi_{\mathrm{RHG}}$. Such a record is not a derivation from the PU branch but a validation fit. ∎
+**Theorem T.78.11 (RHG Electroweak Certificate Non-Contamination).** If $\mathfrak R_{\mathrm{RHG}}$ is accepted before validation comparison, then the electroweak threshold vector $\Delta_{\mathrm{RHG}}$, the wavefunction vector $Z_{\mathrm{RHG}}$, the interval ledger $\mathcal I_{\mathrm{RHG}}$, and the matching map $\mathcal M_{\mathrm{RHG}}$ have theorem-level determinacy within their certified intervals on the RHG branch. Conversely, if any entry is chosen using validation observables listed in $\chi_{\mathrm{RHG}}$, or if any finite-part convention, projector, grading, tail bound, matching map, master-ledger label, or normalization is changed after a dependent row is fixed, the record is not an RHG derivation and the corresponding electroweak result remains validation-level or belongs to a distinct branch.
 
-**Theorem T.78.12 (RHG Finite-Data Necessity).** The RHG electroweak threshold sector is theorem-level numerical only if the accepted record $\mathfrak R_{\mathrm{RHG}}$ supplies the actual finite matrices, block projections, structural triple, finite spectral sums, scheme ledger, and heat/zeta tail bounds required by Definition T.78.10. If those entries are not present, the sector is not numerically determined by the prior PU branch.
+*Proof.* Theorem T.78.7 proves that a completed RHG certificate determines the global flag-lift spectral gate. Definition T.78.10 adds the threshold vector, $Z_i$ vector, interval ledger, matching map, tail bound, scheme ledger, master-ledger label, and optional Higgs ledger as finite entries, all fixed before validation comparison. Therefore the electroweak threshold output is the deterministic image of a finite accepted record and has exactly the interval certified by $\mathcal I_{\mathrm{RHG}}$ and $\mathcal B_{\mathrm{tail}}$. If an entry is chosen using a validation observable, then two records agreeing on the pre-validation structural data but differing only by the validation-dependent choice yield different outputs after seeing the target; this violates the forward-lock condition $\chi_{\mathrm{RHG}}$. If a finite-part convention, projector, grading, tail bound, matching map, master-ledger label, or normalization is changed after a dependent row is fixed, Theorem X.9.6g.4 identifies the altered object as a different branch. Such a record is not a derivation from the original PU branch but a validation fit or a new branch. ∎
 
-*Proof.* Theorem T.78.7 makes the threshold output a deterministic image of the finite RHG certificate. The map uses, in order, the RHG block matrices, projected involutions, structural triple, retained eigenvalues, finite zeta sums, tail bounds, and matching map. Omit any one of these entries. Then there exist distinct admissible completions of the missing finite datum that still satisfy the already-stated abstract requirements but yield different retained spectra or different finite parts. The Dynkin-index map and matching map are deterministic after the finite parts are fixed, so different finite parts produce different threshold vectors. By Theorem P.14.1f, the prior branch without the missing finite datum cannot determine a unique electroweak threshold output. ∎
+**Theorem T.78.12 (RHG Finite-Data Necessity).** The RHG electroweak threshold sector is theorem-level numerical only if the accepted record $\mathfrak R_{\mathrm{RHG}}$ supplies the actual finite matrices, finite block projections, parity and grading data, determinant-line construction, structural triple, retained finite spectral sums, Dynkin-index map, finite-part prescription, scheme ledger, matching map, master zeta-index label, and heat/zeta tail bounds required by Definition T.78.10. Higgs-sector coefficients $\mu_H^2$, $\lambda_H$, $Z_H$, and spectral-action Higgs finite parts are theorem-level numerical only if the same record contains an accepted $\mathfrak S_{\mathrm{SA}}(P)$ in the sense of Definition X.9.6h.4. If those entries are not present, the sector is not numerically determined by the prior PU branch.
+
+*Proof.* Theorem T.78.7 makes the threshold output a deterministic image of the finite RHG certificate. The map uses, in order, the RHG block matrices, projected involutions, parity and grading data, determinant line, structural triple, retained eigenvalues, finite zeta sums, tail bounds, Dynkin-index map, and matching map. Omit any one of these entries. Then there exist distinct admissible completions of the missing finite datum that still satisfy the already-stated abstract requirements but yield different retained spectra or different finite parts. The Dynkin-index map and matching map are deterministic after the finite parts are fixed, so different finite parts produce different threshold vectors. The equality $Z_i=1+\Delta_i/24$ transfers the same non-uniqueness to the $Z_i$ slots. The Higgs coefficients require the additional spectral-action data listed in Definition X.9.6h.4 and Theorem X.9.6h.5; without that ledger, $\mu_H^2$, $\lambda_H$, $Z_H$, and Higgs finite parts have no accepted finite operator source. By Theorem P.14.1f, the prior branch without the missing finite datum cannot determine a unique electroweak threshold or Higgs-sector output. ∎
 
 **Remark T.78.13 (Definite Answer to the RHG-Certificate Question).** The concrete RHG certificate demanded by the finite program is the finite record listed in Definition T.78.10. Until that record is supplied, the present manuscript proves the non-identifiability of the threshold tuple from the prior branch alone. Therefore the definite pre-certificate status is
 $$
@@ -8669,6 +8745,62 @@ $$
 The validation tuple $(15.14,20.94,18.41)$ remains a validation target available only for post-comparison after an independently fixed certificate has passed Algorithm T.78.6a and Definition T.78.10. A future branch may be integrated only by supplying the Peter-Weyl branching ledger, RHG block matrices, compatibility projectors, spectrahedron minimizer, heat-kernel finite parts, scheme ledger, and Corollary T.69.1 tail intervals before comparison with that tuple.
 
 An octad, Steiner, Mathieu, or Golay character formula may be used as a construction of the sector/parity block data only if it supplies the exact sector characters, Dynkin-index map, multiplicities, finite matrices or homogeneous $H$-types, canonical $\mathrm{MS2}_{\mu_G}$ finite parts, and tail intervals required by Theorem T.78 or Definition T.78.6. A raw octad sum, a post-comparison numerical match, or an identity involving the numbers $759$, $196560$, or the Steiner incidence constants is not a threshold certificate. If the accepted interval misses the validation tuple, the branch is rejected rather than retuned.
+
+**Theorem T.78.14 (Finite No-Go Classification for PU-Internal Electroweak Gauge-Higgs Source Records).** Let $\mathscr E_{\mathrm{EW}}^{\mathrm{cur}}$ be the class of electroweak threshold and Higgs finite-part source records that use only the current PU-internal ledger data already fixed before Definition T.78.10, together with the schema-level acceptance formats of Definition T.78.6, Definition T.78.5a, Definition X.9.6g, Definition X.9.6h.4, and Definition P.14.1m. Then no element of $\mathscr E_{\mathrm{EW}}^{\mathrm{cur}}$ is an accepted record of any of the following types:
+$$
+\mathfrak R_{\mathrm{RHG}},
+\qquad
+\mathfrak C_{\mathrm{tor}},
+\qquad
+\mathfrak S_{\mathrm{SA}}(P),
+\qquad
+\mathfrak S_{\mathrm{EW}}^{\mathrm{equiv}}.
+\tag{T.78.14.1}
+$$
+Here $\mathfrak S_{\mathrm{EW}}^{\mathrm{equiv}}$ denotes any equivalent completed spectral tuple intended to supply the same threshold or Higgs finite-part entries.
+
+Equivalently, in the current PU-internal registry,
+$$
+\operatorname{Acc}_{\mathrm{cur}}(\mathfrak R_{\mathrm{RHG}})
+=
+\operatorname{Acc}_{\mathrm{cur}}(\mathfrak C_{\mathrm{tor}})
+=
+\operatorname{Acc}_{\mathrm{cur}}(\mathfrak S_{\mathrm{SA}}(P))
+=
+\operatorname{Acc}_{\mathrm{cur}}(\mathfrak S_{\mathrm{EW}}^{\mathrm{equiv}})
+=
+\varnothing.
+\tag{T.78.14.2}
+$$
+Thus the current PU-internal ledger contains no certified interval for
+$$
+\Delta_i,
+\qquad
+Z_i=1+\frac{\Delta_i}{24},
+\qquad
+\mu_H^2,
+\qquad
+\lambda_H,
+\qquad
+\text{or any claimed gauge/Higgs finite part arising from an electroweak spectral source.}
+\tag{T.78.14.3}
+$$
+The corresponding registry value is $\varnothing_{\mathrm{cert}}$, meaning that no accepted certificate interval exists in the present PU-internal branch. This is a negative closure of the current source class, not a numerical interval.
+
+The classification exhausts the source alternatives as follows.
+
+1. The RHG route is not accepted without the finite sector projections, parity and grading data, determinant-line construction, finite block matrices, structural triple, finite heat/zeta sums, finite-part prescription, Dynkin-index map, scheme ledger, matching map, tail constants, master zeta-index label, and forward-lock entries required by Definition T.78.10 and Theorem T.78.12.
+
+2. The torsion route is not accepted without the explicit finite torsion elements, determinant-line orientation, anomaly-compatible hypercharge projection, torsion norm or zeta finite-part prescription, Dynkin-index descent, scheme ledger, matching map, tail constants, and forward-lock entries required by Definition T.78.5a and Theorem T.78.5b.
+
+3. The spectral-action route is not accepted without the first-order Dirac certificate, cutoff function, projection list, parity and grading data, heat coefficients, subtraction order, finite-part scale, tail bound, and normalization map producing certified intervals for $g_i^{-2}$, $Z_H$, $\mu_H^2$, $\lambda_H$, finite threshold parts, $\Delta_i$, and $Z_i$ required by Definition X.9.6h.4 and Theorem X.9.6h.5.
+
+4. Any equivalent spectral tuple is not accepted unless it contains a named finite operator source, the same determinant-compatible hypercharge and Dynkin-index maps, the same finite-part and tail certificates, the same matching map, and a registry entry satisfying Definition P.14.1m.
+
+No validation value, raw octad sum, Steiner incidence count, Golay identity, target-shift normalization, or post-comparison finite-part choice supplies any missing entry in (1)--(4). If a future source is appended, it is a new branch with its own registry entry and cannot modify any row already fixed through another finite-part convention, projector, tail bound, grading, normalization, or master zeta-index ledger. If the same source is cited by flavor, baryogenesis, primordial determinants, or vacuum prefactors, every projection and finite part must descend from one accepted master zeta-index ledger; otherwise Theorem X.9.6g.4 and Definition P.14.1m reject the shared claim. Therefore no double counting occurs between the current bulk threshold schema, interface matching, electromagnetic projection, curvature or determinant sectors, spectral-action Higgs terms, flavor, baryogenesis, primordial determinant, vacuum-prefactor, or future symmetry-residual entries.
+
+*Proof.* Theorem T.78.12 proves finite-data necessity for the RHG threshold route. Theorem T.78.5b proves that the torsion route is positive only after the finite torsion certificate supplies the determinant, finite-part, index, scheme, matching, and tail data listed there. Theorem X.9.6h.5 proves that the spectral-action route is positive only after an accepted spectral-action ledger supplies the Dirac certificate, cutoff, projections, heat coefficients, finite-part prescription, tail, normalization map, and interval ledger. Definition P.14.1m and Algorithm P.14.1m.0 allow a non-closed numerical sector to be promoted only by an accepted finite certificate, an all-completions equivalence theorem, or a no-go theorem excluding the candidate class. The current PU-internal ledger contains the acceptance schemas but not the finite matrices, torsion data, Dirac certificate, heat coefficients, finite-part scale, tail constants, normalization intervals, or master-ledger descent maps needed by any positive source. By Theorem P.14.1f, omitting any such finite datum permits distinct admissible completions with different finite parts, so no unique theorem-level value is determined. This proves (T.78.14.1)--(T.78.14.3). The no-retuning and no-double-counting clauses follow from Theorem X.9.6g.4, Definition P.14.1m, and the forward-lock clauses in Definition T.78.10 and Definition X.9.6h.4. ∎
+
 **Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with the two-loop SM RG system, suppose:
 1. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
 2. the flavor-geometric residual data $(\mathcal T_{E_8},\mathcal V)$ are fixed on the selected branch;
@@ -8742,23 +8874,24 @@ $$
 \mathcal R_{\mathrm{fl}},
 \chi_{\mathrm{fl}}
 \right)
+\tag{T.79.4.1}
 $$
-fixed before comparison with charged-lepton, quark, neutrino, CKM, or PMNS data, where:
+fixed before comparison with charged-lepton, quark, neutrino, CKM, PMNS, strong-CP, or baryogenesis data, where:
 
-1. $\mathcal X_{\mathrm{fl}}$ is the retained finite flavor cell, generation placement, and residual symmetry ledger.
-2. $\mathcal A_{\mathrm{fl}}$ is the specified finite PCE rate action whose stationary points are used for the flavor amplitudes.
-3. $\mathcal H_{\mathrm{fl}}$ is the finite Hessian/Van Vleck package for the retained stationary points, computed as the second variation of $\mathcal A_{\mathrm{fl}}$ on the same Bures/Kähler-Einstein flavor metric and finite measure used for normalization. A Ricci identity for the homogeneous metric fixes metric scale only; it does not replace the action Hessian.
-4. $\mathcal V_{\mathrm{fl}}$ is the Berry/holonomy package for relative determinant-line phases, including the determinant-line connection, loop representatives, surface choices where used, orientation convention, and, whenever a real Yukawa determinant orientation is claimed, either the nonzero-path data of Theorem K.6.9 or the ordered heat-kernel chamber data of Corollary K.6.9a.1.
-5. $\mathcal B_{\mathrm{fl}}$ is the finite threshold and running bridge from an accepted electroweak spectral record to the flavor scale.
-6. $\mathcal N_{\mathrm{fl}}$ is the absolute Yukawa normalization and measure convention, including the Quillen norm, Van Vleck-Morette determinant, finite measure normalization, RG scheme, and pole/running conversion convention whenever an absolute mass is claimed.
-7. $\mathcal R_{\mathrm{fl}}$ is a rigorous residual and truncation interval for all listed flavor observables.
-8. $\chi_{\mathrm{fl}}$ records that no component was selected using the observed flavor data being predicted.
+1. $\mathcal X_{\mathrm{fl}}$ is the retained finite flavor cell, generation-vacuum locations, residual symmetry ledger, positive-orientation real-Yukawa determinant branch, Majorana/seesaw branch, and sterile-response status.
+2. $\mathcal A_{\mathrm{fl}}$ is the specified finite PCE-compatible flavor action, including all stationary actions and the rule assigning those stationary actions to charged-lepton, quark, Dirac-neutrino, and Majorana entries.
+3. $\mathcal H_{\mathrm{fl}}$ is the finite Hessian, Van Vleck, and Quillen determinant package for the retained stationary points, computed as the second variation of $\mathcal A_{\mathrm{fl}}$ on the same Bures/Kähler-Einstein flavor metric and finite measure used for normalization. A Ricci identity for the homogeneous metric fixes metric scale only; it does not replace the action Hessian.
+4. $\mathcal V_{\mathrm{fl}}$ is the Berry/holonomy package for relative determinant-line phases, including determinant-line connection, loop representatives, surface choices where used, CKM and PMNS phase profiles, strong-CP determinant orientation, and, whenever a real Yukawa determinant orientation is claimed, either the nonzero-path data of Theorem K.6.9 or the ordered heat-kernel chamber data of Corollary K.6.9a.1.
+5. $\mathcal B_{\mathrm{fl}}$ is the finite threshold bridge from an accepted electroweak spectral record to the flavor scale, including the common-scale convention, top-normalization branch, $M_R=\mu_G$ branch or its replacement, decoupling map, and compatibility with any shared master zeta-index ledger.
+6. $\mathcal N_{\mathrm{fl}}$ is the absolute Yukawa normalization and measure convention, including the Quillen norm, Van Vleck-Morette determinant, finite measure normalization, RG scheme, loop order, pole/running conversion convention, Majorana phases, seesaw normalization, and the convention for reporting charged-fermion and quark masses.
+7. $\mathcal R_{\mathrm{fl}}$ is a rigorous residual and truncation interval for every listed flavor observable: charged-fermion masses, quark masses, neutrino masses, CKM entries and phase, PMNS entries and phases, determinant orientation, and $\bar\theta$.
+8. $\chi_{\mathrm{fl}}$ records that no component, normalization, holonomy loop, Majorana phase, $M_R$ value, top normalization, threshold bridge, or residual interval was selected using the observed flavor data being predicted.
 
-**Algorithm T.79.5 (Acceptance Test for the Flavor Completion Certificate).** The certificate $\mathfrak C_{\mathrm{fl}}$ is accepted if and only if each stationary point and each holonomy path is generated by the finite branch data already fixed in Appendices G, R, and T; the PCE action $\mathcal A_{\mathrm{fl}}$ is specified before comparison; the Hessian and Van Vleck determinants are computed with the same Bures/Kähler-Einstein metric, finite measure, and Quillen convention as $\mathcal N_{\mathrm{fl}}$; the Berry holonomies are computed from the listed determinant-line connection and loops; every determinant-orientation claim is certified either by the nonzero-path condition of Theorem K.6.9 or by the ordered heat-kernel chamber condition of Corollary K.6.9a.1; the threshold inputs are taken only from an accepted $\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, or another completed spectral tuple satisfying Theorem T.78; the absolute normalization includes its RG and pole/running conventions before comparison; the residual interval $\mathcal R_{\mathrm{fl}}$ is bounded before empirical comparison; and $\chi_{\mathrm{fl}}$ is satisfied.
+**Algorithm T.79.5 (Acceptance Test for the Flavor Completion Certificate).** The certificate $\mathfrak C_{\mathrm{fl}}$ is accepted if and only if each generation-vacuum location, stationary point, stationary action, and holonomy path is generated by the finite branch data already fixed in Appendices G, R, and T; the PCE-compatible action $\mathcal A_{\mathrm{fl}}$ is specified before comparison; the Hessian, Van Vleck, and Quillen determinants are computed with the same Bures/Kähler-Einstein metric, finite measure, and normalization convention as $\mathcal N_{\mathrm{fl}}$; the Berry holonomies and CP profiles are computed from the listed determinant-line connection and loops; every determinant-orientation and strong-CP claim is certified either by the nonzero-path condition of Theorem K.6.9 or by the ordered heat-kernel chamber condition of Corollary K.6.9a.1; the threshold inputs are taken only from an accepted $\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, accepted $\mathfrak S_{\mathrm{SA}}(P)$ where Higgs finite parts are claimed, accepted joint $\mathfrak J_{\mathrm{RHG-fl}}$, or another completed spectral tuple satisfying Theorem T.78; the top normalization, $M_R=\mu_G$ or its replacement, Majorana phases, seesaw branch, RG system, decoupling convention, and pole/running map are fixed before comparison; the residual interval $\mathcal R_{\mathrm{fl}}$ is bounded before empirical comparison; and $\chi_{\mathrm{fl}}$ is satisfied. If any one of these entries is inferred from masses, mixings, phases, or $\bar\theta$, the certificate is rejected.
 
-**Theorem T.79.6 (Certified Flavor Determinacy).** If $\mathfrak C_{\mathrm{fl}}$ is accepted, then the charged-lepton, quark, neutrino, CKM, and PMNS outputs assigned to that certificate are uniquely determined up to the certified interval $\mathcal R_{\mathrm{fl}}$. If no accepted $\mathfrak C_{\mathrm{fl}}$ exists, those outputs remain model-layer or validation-layer statements.
+**Theorem T.79.6 (Certified Flavor Determinacy).** If $\mathfrak C_{\mathrm{fl}}$ is accepted, then the charged-lepton, quark, neutrino, CKM, PMNS, determinant-orientation, and $\bar\theta$ outputs assigned to that certificate are uniquely determined up to the certified interval $\mathcal R_{\mathrm{fl}}$. If no accepted $\mathfrak C_{\mathrm{fl}}$ exists, those outputs remain model-layer, validation-layer, or branch-classification statements.
 
-*Proof.* The flavor observables in Appendix T are functions of finite generation placement, the specified PCE rate action, stationary-point actions, Hessian and Van Vleck determinants, Quillen normalization, Berry/holonomy phases, accepted electroweak threshold maps, RG running, pole/running conversion, and absolute normalization. Definition T.79.4 fixes each of these entries as a finite record and Algorithm T.79.5 requires the record to be fixed before empirical comparison. Therefore each listed observable is the image of one finite tuple under deterministic algebraic, spectral, and RG operations, with uncertainty only from the finite residual interval $\mathcal R_{\mathrm{fl}}$. If the certificate is absent, at least one required finite entry is unspecified; then the corresponding output is not determined by the branch and must remain model-layer or validation-layer. ∎
+*Proof.* The flavor observables in Appendix T are functions of finite generation placement, the specified PCE-compatible flavor action, stationary-point actions, Hessian and Van Vleck determinants, Quillen normalization, determinant-line orientation, Berry/holonomy phases, accepted electroweak threshold maps, RG running, pole/running conversion, Majorana/seesaw data, strong-CP determinant orientation, and absolute normalization. Definition T.79.4 fixes each of these entries as a finite record and Algorithm T.79.5 requires the record to be fixed before empirical comparison. Therefore each listed observable is the image of one finite tuple under deterministic algebraic, spectral, determinant-line, and RG operations, with uncertainty only from the finite residual interval $\mathcal R_{\mathrm{fl}}$. If the certificate is absent, at least one required finite entry is unspecified; then the corresponding output is not determined by the branch and must remain model-layer, validation-layer, or branch-classification data. ∎
 
 **Corollary T.79.7 (No Flavor Back-Fitting).** A flavor output may be promoted by Appendix T only through an accepted $\mathfrak C_{\mathrm{fl}}$. Changing generation placement, normalization, holonomy path, threshold input, or residual width after comparison defines a different flavor branch and cannot confirm the original one.
 
@@ -8809,11 +8942,14 @@ $$
 =
 \bigl(
 \sin^2\theta_W(M_Z),g_i(\mu_G),v,m_H,
+\Delta_i,Z_i,
 Y_u,Y_d,Y_e,m_{\nu_a},
-V_{\mathrm{CKM}},U_{\mathrm{PMNS}}
+V_{\mathrm{CKM}},U_{\mathrm{PMNS}},
+\mathfrak o_{\det},\bar\theta
 \bigr)
+\tag{T.79.8b.1}
 $$
-is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. Moreover, any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the mixed-derivative identities in $\mathcal I_{\mathrm{mix}}$; failure of one such identity rejects the joint certificate.
+is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. If the joint record uses an accepted spectral-action branch, the same vector also includes the accepted Higgs finite parts $(\mu_H^2,\lambda_H)$ in the normalization of that branch. Moreover, any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the mixed-derivative identities in $\mathcal I_{\mathrm{mix}}$; failure of one such identity rejects the joint certificate.
 
 *Proof.* Theorem T.78.11 makes $\Delta_{\mathrm{RHG}}$ and $\mathcal M_{\mathrm{RHG}}$ deterministic outputs of the accepted RHG record. Theorem T.79.6 makes charged-lepton, quark, neutrino, CKM, and PMNS outputs deterministic outputs of the accepted flavor certificate. The deterministic matching functor of Theorem T.79.2 then maps these inputs to $\Pi_T$ with no further continuous ambiguity once RG, decoupling, and pole conventions are fixed.
 
@@ -8827,11 +8963,26 @@ It remains only to prove the joint spectral consistency condition. Since both RH
 
 1. an accepted forward-locked RHG record $\mathfrak R_{\mathrm{RHG}}$ of Definition T.78.10 together with an accepted flavor certificate $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4;
 2. an accepted torus-threshold record $\mathfrak C_{\mathrm{tor}}$ satisfying the same threshold-vector slots as Definition T.78.10 together with $\mathfrak C_{\mathrm{fl}}$;
-3. an accepted joint RHG-flavor spectral certificate $\mathfrak J_{\mathrm{RHG-fl}}$ of Definition T.79.8a.
+3. an accepted spectral-action record $\mathfrak S_{\mathrm{SA}}(P)$ satisfying the threshold and Higgs finite-part slots of the Appendix T and X.9.6h gates together with $\mathfrak C_{\mathrm{fl}}$;
+4. an accepted joint RHG-flavor spectral certificate $\mathfrak J_{\mathrm{RHG-fl}}$ of Definition T.79.8a.
 
-On any of these branches, $\Delta_{\mathrm{EW}}$, the absolute Yukawa normalization, mass ratios, CKM/PMNS angles, phases, and residual intervals are deterministic images of the accepted record. Gauge algebra, $N_g=3$, and $\kappa_{\mathrm{EW}}=38.5$ remain structural theorem rows but do not by themselves determine the numerical threshold/flavor vector.
+On any of these branches, $\Delta_{\mathrm{EW}}$, $Z_i=1+\Delta_i/24$, Higgs finite parts when claimed, absolute Yukawa normalization, charged-fermion masses, quark masses, neutrino masses, CKM and PMNS profiles, determinant orientation, $\bar\theta$, and residual intervals are deterministic images of the accepted record. Gauge algebra, $N_g=3$, $\kappa_{\mathrm{EW}}=38.5$, and the SM matter/EWSB skeleton remain structural theorem rows but do not by themselves determine the numerical threshold/flavor vector.
 
-*Proof.* Theorem T.78.7 and Theorem T.78.11 prove determinacy and non-contamination for a completed RHG threshold record, and Definition T.78.10 lists the finite threshold-vector slots. The torus route is equivalent only if it supplies those same slots with the same branch normalizations. Theorem T.79.6 proves determinacy from an accepted flavor certificate, while Definition T.79.8a and Theorem T.79.8b replace the separate threshold and flavor records by one joint spectral certificate. Corollary T.79.8c forbids changing shared spectral or RHG entries after comparison. Therefore the numerical electroweak/flavor vector is closed exactly on the accepted finite-record branches listed above. The structural gauge and generation rows fix the admissible representation skeleton but contain no entries for the threshold finite parts, stationary flavor cells, Hessian determinants, holonomy phases, RG convention, or residual intervals; by Theorem P.14.1f they cannot determine the numerical vector without the certificate. ∎
+*Proof.* Theorem T.78.7 and Theorem T.78.11 prove determinacy and non-contamination for a completed RHG threshold record, and Definition T.78.10 lists the finite threshold-vector slots. The torus and spectral-action routes are equivalent only if they supply those same slots with the same branch normalizations and, for spectral-action Higgs claims, the additional Dirac, heat-coefficient, subtraction, finite-part, tail, and normalization data. Theorem T.79.6 proves determinacy from an accepted flavor certificate, while Definition T.79.8a and Theorem T.79.8b replace the separate threshold and flavor records by one joint spectral certificate. Corollary T.79.8c forbids changing shared spectral or RHG entries after comparison. Therefore the numerical electroweak/flavor vector is closed exactly on the accepted finite-record branches listed above. The structural gauge and generation rows fix the admissible representation skeleton but contain no entries for threshold finite parts, stationary flavor cells, Hessian determinants, holonomy phases, Majorana phases, top normalization, seesaw scale, RG convention, pole/running map, strong-CP determinant orientation, or residual intervals; by Theorem P.14.1f they cannot determine the numerical vector without the certificate. ∎
+
+**Theorem T.79.8e (Finite Flavor-Sector Classification Without an Accepted Certificate).** If neither $\mathfrak C_{\mathrm{fl}}$ nor $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, the certified interval vector for charged-fermion masses, quark masses, neutrino rows, CKM, PMNS, determinant orientation, and $\bar\theta$ is
+$$
+\mathcal R_{\mathrm{fl}}=\varnothing_{\mathrm{cert}}.
+\tag{T.79.8e.1}
+$$
+The theorem-level content is the finite classification by the branch coordinates
+$$
+(\mathcal X_{\mathrm{fl}},\mathcal A_{\mathrm{fl}},\mathcal H_{\mathrm{fl}},\mathcal V_{\mathrm{fl}},\mathcal B_{\mathrm{fl}},\mathcal N_{\mathrm{fl}}),
+\tag{T.79.8e.2}
+$$
+with the expanded meanings in Definition T.79.4. Changing top normalization, $M_R$, Majorana phases, determinant orientation, finite-part convention, holonomy loop, threshold bridge, RG convention, or residual width after any dependent row is fixed creates a new flavor branch and cannot validate the original one.
+
+*Proof.* Each observable listed in (T.79.8e.1) depends on at least one entry of (T.79.8e.2). The structural gauge algebra and generation count do not specify the PCE flavor action, stationary actions, Hessians, Van Vleck or Quillen determinants, Berry loops, absolute normalization, threshold bridge, Majorana/seesaw data, RG scheme, pole convention, or strong-CP orientation. Therefore no finite function from the closed structural skeleton to the numerical flavor vector exists in the current record. The forward-lock condition in Definition T.79.4 and Algorithm T.79.5 forbids selecting missing entries from the target masses, mixings, or phases. ∎
 
 **Theorem T.79a (Nuclear Extension Determinacy Boundary).** The Appendix-T electroweak/flavor parameter vector $\Pi_T$ does not by itself determine stable isotope patterns, nuclear magic numbers, or spin-dependent nuclear transition anomalies. Those quantities become determinate only after PU supplies a finite self-adjoint nuclear aggregate Hamiltonian
 $$
@@ -8907,6 +9058,34 @@ $$
 
 3. isotope stability, shell gaps, and spin-dependent transition rates are determined by the same finite spectral data and matrix elements specified in Theorem T.79a.
 
-*Proof.* Theorem X.8k.6 proves that the finite boundary impedance map is exactly the Schur spectral representative of the corresponding finite self-adjoint aggregate operator for all colorless boundary protocols. Therefore fixing $\Lambda_A^{\mathrm{PU}}(E)$ is equivalent, for those protocols, to fixing the spectral response of $H_A^{\mathrm{PU}}(Z,N)$ up to PPI-equivalent interior representatives. Theorem X.8k.6b supplies the same object by selecting the PCE-minimal self-adjoint aggregate completion among all admissible Hamiltonians with the accepted boundary impedance record. Equation (T.79a.1) is (X.8k.9) applied to the nuclear aggregate sector, and (T.79a.2) is (X.8k.11). Once the spin-current and decay operators are also fixed on the same finite retained Hilbert space, the spectral theorem gives the stability, shell-gap, and transition-rate quantities listed in Theorem T.79a. ∎
+*Proof.* Theorem X.8k.6 proves that the finite boundary impedance map is exactly the Schur spectral representative of the corresponding finite self-adjoint aggregate operator for all colorless boundary protocols. Therefore fixing $\Lambda_A^{\mathrm{PU}}(E)$ is equivalent, for those protocols, to fixing the spectral response of $H_A^{\mathrm{PU}}(Z,N)$ up to PPI-equivalent interior representatives. Theorem X.8k.6b supplies the same object by selecting the PCE-minimal self-adjoint aggregate completion among all admissible Hamiltonians with the accepted boundary impedance record, spin-current ledger, transition ledger, decay ledger, exterior-channel map, covariance ledger, and overlap map to Appendix T. Equation (T.79a.1) is (X.8k.18) applied to the nuclear aggregate sector, and (T.79a.2) is (X.8k.19). Once the spin-current, transition, decay, and exterior-channel operators are fixed on the same finite retained Hilbert space, the spectral theorem gives the stability, shell-gap, spin-dependent, transition-rate, decay-channel, and resonance quantities listed in Theorem T.79a. ∎
 
------
+**Theorem T.79a.2 (Elementary/Nuclear Separation and Nuclear Completion Criterion).** Let $\Pi_T$ be an accepted Appendix T elementary parameter vector on a fixed electroweak/flavor branch. The nuclear observable vector
+$$
+\mathcal O_A^{\mathrm{nuc}}
+=
+\left(
+\operatorname{spec}H_A,
+\Delta_{\mathrm{shell}},
+\mathcal M_A^{\mathrm{spin}},
+\mathcal M_A^{\mathrm{tr}},
+\Gamma_A^{\mathrm{dec}},
+\mathcal R_A^{\mathrm{open}}
+\right)
+\tag{T.79a.3}
+$$
+is theorem-level exactly when every proton-neutron sector and every daughter or exterior channel appearing in the claimed isotope, shell, spin, transition, or decay row carries an accepted finite nuclear aggregate operator package $\mathfrak B_A^{\mathrm{nuc}}$ of Definition X.8k.6a, transported from $\Pi_T$ by $\Pi_{A\leftarrow T}$ and forward-locked before comparison. Without that package, the following entries are irreducibly nuclear effective-action or boundary-response data rather than elementary Standard Model inputs:
+
+1. retained many-body measure and Hilbert-space truncation;
+2. finite two-body, three-body, exchange, contact, spin-orbit, and finite-size operators;
+3. colorless boundary impedance record $\Lambda_A^{\mathrm{PU}}(E)$;
+4. exterior open-channel impedance $\Lambda_{A,\mathrm{out}}(E)$;
+5. spin-current operators;
+6. transition operators;
+7. decay operators;
+8. resonance sheet, width, and tail prescription;
+9. nuclear uncertainty and covariance ledger.
+
+Consequently, Appendix T elementary closure fixes the elementary currents, charges, masses, mixings, and coupling normalizations that may enter $\Pi_{A\leftarrow T}$, but it does not by itself close isotope stability, magic-number gaps, spin-dependent anomalies, transition rates, or nuclear decay rows.
+
+*Proof.* The vector $\Pi_T$ contains elementary masses, gauge couplings, electroweak currents, Yukawa data, mixing matrices, and their branch conventions. It contains no finite self-adjoint many-body operator on $\mathcal H_A^{\mathrm{ret}}$, no colorless boundary impedance map, and no transition or decay operator ledger. If $\mathfrak B_A^{\mathrm{nuc}}$ is accepted, Theorem X.8k.6b makes every component of (T.79a.3) a finite spectral or matrix-element image of the accepted package, with residuals propagated through $\mathcal U_A$. Conversely, if any response-active entry in the displayed list is absent, Theorem X.8k.6c supplies two admissible finite completions agreeing on $\Pi_T$ but differing in a nuclear spectrum, matrix element, decay channel, or resonance map. Theorem P.14.1f then forbids theorem-level promotion of the nuclear row from elementary data alone. ∎

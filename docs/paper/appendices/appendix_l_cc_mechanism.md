@@ -1218,7 +1218,7 @@ The electromagnetic-to-gravitational coupling ratio emerges from the framework's
 
 $$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.81a} $$
 
-Including the discrete-to-continuous interface correction and exact $SU(2)$ transport, Appendix Z gives the Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$ (Theorem Z.26). The certificate-complete comparison row is $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ and requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1. The electromagnetic fine structure constant in standard form is:
+Including the discrete-to-continuous interface correction and exact $SU(2)$ transport, Appendix Z gives the Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$ (Theorem Z.26). The certificate-complete comparison row is $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; on the accepted hypercharge-recoil finite Ward branch, Definition Z.27.11k.12 and Theorem Z.27.11k.20 fix $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=137.03599917753023\ldots$, with the registry entry supplied by Corollary Z.27.11k.21.1. The electromagnetic fine structure constant in standard form is:
 
 $$ \alpha_{\text{em}} = \frac{e^2}{4\pi\varepsilon_0\hbar c} \tag{L.81b} $$
 

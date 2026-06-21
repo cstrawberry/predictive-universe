@@ -336,6 +336,21 @@ $$
 
 *Proof.* Corollary 43.5a discharges the continuum competitor condition. Theorem F.0f supplies Theorem F.0 and Definition F.0a on each bounded diamond. The closure criterion of Convention P.14.1k then applies to both rows. If $\mathfrak P_{\mathrm{AQFT}}$ is absent, Theorem F.0f supplies no data, so the older Mosco-Bochner or generator-convergence routes remain exactly the needed records. ∎
 
+**Definition F.0h (Complete Local-QFT/Metric Branch Package).** A complete local-QFT/metric branch package is a finite record
+$$
+\mathfrak C_{\mathrm{loc\mbox{-}grav}}
+=
+(\mathfrak Z_{\mathrm{cont}},\mathfrak D_{\mathrm{gen}},\mathfrak C_{\mathrm{KMS}},\mathfrak H_{\mathrm{Had}},\mathfrak N_{\mathrm{split}},\mathfrak W_{\mathrm{wedge}},\mathfrak J_{\mathrm{Jost}},\mathfrak F_{\mathrm{field}},\mathfrak C_{\mathrm{GSL}},\mathfrak C_{\mathrm{NC}},\mathfrak C_{\mathrm{EH}},\mathfrak G_n,\mathfrak O_{\mathrm{loc}},\chi_{\mathrm{loc}})
+\tag{F.0h.1}
+$$
+with the following entries fixed on each bounded-diamond family before any continuum or metric comparison: an accepted zero-defect operational-continuum, projective single-clock, Mosco-Bochner, or explicit local generator convergence record; finite generators, common cores, embeddings, locality bounds, and defect bounds; finite KMS descent with $\delta_n\to0$; Hadamard-PCE finite-cost admissibility; split/nuclearity or a weaker finite phase-space compactness certificate sufficient for the claimed local net; faithful wedge states; boost/modular convergence; spectrum condition; modular covariance; finite Reeh-Schlieder replacement; Jost analyticity and Wightman reconstruction domain; local field realization; local-horizon thermodynamics and finite retained GSL; null-convexity or accepted second-variation substitute with zero retained modular/QNEC slack on reversible Einstein branches; the metric-action certificate; the nondegenerate finite-response gravitational-channel ensemble with smooth-envelope record, positive Hessian, linearization radius, and metric covariance; the overlap audit with the stress-energy, area-law, orientation, scrambling, Theorem 48a, and registry entries; and $\chi_{\mathrm{loc}}=1$.
+
+**Theorem F.0i (Local-QFT/Einstein Closure or Minimal No-Hidden-Physics List).** If $\mathfrak C_{\mathrm{loc\mbox{-}grav}}$ is accepted, then the branch derives a stable local AQFT net, Wightman realization, emergent Einstein equation, local horizon thermodynamics, metric response, and metric covariance from finite records, with residuals only in the intervals named by the tuple.
+
+If $\mathfrak C_{\mathrm{loc\mbox{-}grav}}$ is absent, the minimal finite no-hidden-physics hypothesis list is exactly the missing entries of Definition F.0h. In particular, the structural theorems do not by themselves supply all of: local generator convergence outside accepted projective or Mosco-Bochner discharge branches, finite KMS descent with $\delta_n\to0$, Hadamard-PCE finite-cost admissibility, split/nuclearity or weaker phase-space compactness, faithful wedge states, boost/modular convergence, spectrum condition, Jost analyticity, local field realization, finite retained GSL, null-convexity or second-variation substitute, zero modular/QNEC slack on a reversible Einstein branch, nondegenerate gravitational response ensemble, smooth envelope, positive Hessian, linearization radius, and metric covariance.
+
+*Proof.* Theorem F.0 gives the stable local-net conclusion from locality, Lieb-Robinson, tightness, state convergence, and compatibility hypotheses. Definitions F.0a, F.0c, and F.0e give finite discharge routes for generator and operational-continuum data. Definition F.10.12a and Theorem F.10.12c give the KMS descent and emergent-metric closure only when their finite records are accepted. The Wightman realization additionally requires wedge, spectrum, Jost, locality, and local field domain data. The Einstein and thermodynamic conclusions require entropy, null-variation, metric-action, and gravitational-channel data. With the overlap audit, the component theorems compose. If any response-active entry is absent, admissible completions can preserve the prior structural branch but differ in local-net, Wightman, thermodynamic, or metric response, so Theorem P.14.1f prevents the stronger claim. ∎
+
 *   **Definition F.3 (Emergent AQFT Net and Properties).** On a branch satisfying Theorem F.0, Theorem F.0d, or Theorem F.0f, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
 **F.4 Physical States and Dynamics**
@@ -2787,12 +2802,14 @@ $$
 =
 \left(
 \mathcal U_n,
-\{\mathcal A_i,\omega_i,\sigma_i^{t},K_i,T_i,S_i,\Theta_i\}_{i\in I_n},
+\{\mathcal A_i,\omega_i,\sigma_i^{t},K_i,T_i,S_i,\Theta_i,\mathfrak H_i^{\mathrm{Had}},\mathfrak N_i^{\mathrm{split}},\mathfrak W_i\}_{i\in I_n},
 \{u_{ij}\}_{i,j},
 \{q_{ij}\}_{i,j},
-\{\mathcal E_i,\mathcal E_{ij},\mathcal E_{ijk}\},
-\delta_n
+\{\mathcal E_i,\mathcal E_{ij},\mathcal E_{ijk},\mathcal E_i^{\mathrm{Had}},\mathcal E_i^{\mathrm{split}},\mathcal E_i^{\mathrm{Wig}}\},
+\delta_n,
+\chi_{\mathrm{KMS}}
 \right)
+\tag{F.10.12a.1}
 $$
 such that:
 
@@ -2800,54 +2817,60 @@ such that:
 2. $\sigma_i^t$ is the modular flow of $(\mathcal A_i,\omega_i)$ and $K_i$ is its finite modular generator, so $\omega_i$ is KMS at inverse temperature $T_i^{-1}$ for $\sigma_i^t$.
 3. $S_i$ is the finite channel min-cut entropy of $U_i$ and agrees with the Appendix E area-law entropy density up to the local certified defect $\mathcal E_i$.
 4. $\Theta_i$ is the finite stress-energy flux functional obtained from the Appendix B MPU flux construction restricted to $U_i$.
-5. $u_{ij}$ is the Connes Radon-Nikodym cocycle implementing the change from $(\mathcal A_i,\omega_i)$ to $(\mathcal A_j,\omega_j)$ on $U_i\cap U_j$.
-6. $q_{ij}$ is the finite quotient correction by response-null degrees of freedom on $U_i\cap U_j$.
-7. On triple overlaps, the corrected cocycle obeys
+5. $\mathfrak H_i^{\mathrm{Had}}$ is the Hadamard-PCE finite-cost admissibility record for the local state; its defect is $\mathcal E_i^{\mathrm{Had}}$.
+6. $\mathfrak N_i^{\mathrm{split}}$ is either a split/nuclearity certificate or a strictly weaker replacement sufficient for the local net property claimed by the branch; its defect is $\mathcal E_i^{\mathrm{split}}$.
+7. $\mathfrak W_i$ records faithful wedge states, finite boost/modular convergence, the spectrum condition on the retained generator, Jost analyticity on the claimed tube domain, and the local field-realization map when a Wightman realization is claimed; its defect is $\mathcal E_i^{\mathrm{Wig}}$.
+8. $u_{ij}$ is the Connes Radon-Nikodym cocycle implementing the change from $(\mathcal A_i,\omega_i)$ to $(\mathcal A_j,\omega_j)$ on $U_i\cap U_j$.
+9. $q_{ij}$ is the finite quotient correction by response-null degrees of freedom on $U_i\cap U_j$.
+10. On triple overlaps, the corrected cocycle obeys
 $$
 u_{ij}u_{jk}u_{ki}=1+\mathcal E_{ijk}
+\tag{F.10.12a.2}
 $$
-in finite protocol norm.
-8. On each $U_i$, the finite Clausius defect satisfies
+in finite protocol norm after applying the response-null quotient; the quotient-correction representatives are absorbed into the displayed corrected cocycles.
+11. On each $U_i$, the finite Clausius defect satisfies
 $$
-\left|\delta Q_i - T_i\,\delta S_i\right|
+|\delta Q_i-T_i\delta S_i|
 \le
 \mathcal E_i,
 \qquad
 \delta Q_i=\Theta_i(\chi_i),
+\tag{F.10.12a.3}
 $$
 where $\chi_i$ is the local Rindler/boost generator selected by the finite clock normalization.
-9. The total defect
+12. The total defect
 $$
 \delta_n
 =
 \max\left\{
-\sup_i \mathcal E_i,\,
-\sup_{i,j}\mathcal E_{ij},\,
-\sup_{i,j,k}\mathcal E_{ijk}
+\sup_i\mathcal E_i,
+\sup_{i,j}\mathcal E_{ij},
+\sup_{i,j,k}\mathcal E_{ijk},
+\sup_i\mathcal E_i^{\mathrm{Had}},
+\sup_i\mathcal E_i^{\mathrm{split}},
+\sup_i\mathcal E_i^{\mathrm{Wig}}
 \right\}
+\tag{F.10.12a.4}
 $$
 satisfies $\delta_n\to0$ along the refining sequence.
+13. $\chi_{\mathrm{KMS}}$ records that the states, modular generators, split/Hadamard/Wightman slots, fluxes, area terms, quotient maps, and defect bounds are fixed before macroscopic metric, Wightman, or thermodynamic comparison.
 
-**Algorithm F.10.12b (Acceptance Test for the KMS-Descent Certificate).** A record $\mathfrak C^{\mathrm{KMS}}_n$ is accepted if and only if every entry in Definition F.10.12a is fixed before using macroscopic metric data, each local algebra map is a restriction or inclusion map from the same protocol-response presheaf, the modular generators agree with the finite-PCE states by direct finite spectral calculation, the Cech defect and Clausius defect bounds are certified in the stated finite protocol norm, and the sequence $\delta_n$ is bounded by a monotone numerical tail with limit zero.
+**Algorithm F.10.12b (Acceptance Test for the KMS-Descent Certificate).** A record $\mathfrak C^{\mathrm{KMS}}_n$ is accepted if and only if every entry in Definition F.10.12a is fixed before using macroscopic metric data, each local algebra map is a restriction or inclusion map from the same protocol-response presheaf, the modular generators agree with the finite-PCE states by direct finite spectral calculation, the Cech, Clausius, Hadamard, split/nuclearity, and Wightman defects are certified in the stated finite protocol norm, and the sequence $\delta_n$ is bounded by a monotone numerical tail with limit zero. If the branch does not claim a Wightman realization, the $\mathfrak W_i$ slots are marked unclaimed and do not enter the output; they cannot be silently inferred from KMS descent alone.
 
 **Theorem F.10.12c (KMS-Descent Closure of the Emergent Metric Branch).** If a refining regular operational-continuum branch admits an accepted sequence of finite KMS-descent certificates $\{\mathfrak C^{\mathrm{KMS}}_n\}$ with $\delta_n\to0$, then:
 
 1. the local KMS states glue to a compatible regular AQFT state on the limiting net;
 2. the Connes cocycle obstruction class of Theorem F.10.11b vanishes;
-3. the local Clausius relation holds in the limit:
+3. the local Clausius relation holds in the limit,
 $$
-\delta Q = T\,\delta S;
+\delta Q=T\,\delta S;
+\tag{F.10.12c.1}
 $$
 4. the Appendix E channel-capacity area law and Appendix B stress-energy construction supply the hypotheses of Theorem 12.1;
-5. the resulting metric dynamics are the emergent metric/channel-capacity thermodynamics branch of Equation (76a).
+5. the resulting metric dynamics are the emergent metric/channel-capacity thermodynamics branch of Equation (76a);
+6. a Wightman field realization, spectrum condition, Jost analyticity, and faithful wedge-state modular convergence are obtained only for those sectors whose $\mathfrak W_i$ slots are accepted with $\mathcal E_i^{\mathrm{Wig}}\to0$.
 
-*Proof.* The finite covers form an inverse system under refinement. By item 2 of Algorithm F.10.12b, all local restriction maps come from one protocol-response presheaf, so the local finite algebras and states form a compatible projective diagram up to the certified defects. The triple-overlap condition in Definition F.10.12a gives a finite Cech 2-cocycle with norm bounded by $\delta_n$. Since $\delta_n\to0$, its image in the limiting Cech cohomology class is zero. Therefore the corrected Connes cocycles define a trivial obstruction class, proving item 2. Triviality of the obstruction gives compatible modular clocks and hence a glued regular state on the limiting AQFT net, proving item 1.
-
-The local Clausius defect on every cover element is bounded by $\mathcal E_i\le\delta_n$. For any compactly supported finite protocol observable, choose $n$ large enough that its support is refined by $\mathcal U_n$. The finite defect bound gives
-$$
-\left|\delta Q_i-T_i\delta S_i\right|\le\delta_n
-$$
-on each cell in the partition. Additivity of the Appendix B flux functional and of the Appendix E min-cut entropy over disjoint finite protocol cells gives a total defect bounded by the sum of finitely many cell defects; after normalizing by the fixed finite partition volume and refining, the bound tends to zero. Hence the limiting local relation is $\delta Q=T\,\delta S$, proving item 3. Items 4 and 5 follow by substituting this certified local thermodynamic relation, the channel-capacity area law of Appendix E, and the conserved stress-energy tensor of Appendix B into Theorem 12.1. ∎
+*Proof.* The finite covers form an inverse system under refinement. By the acceptance test, all restriction maps come from one protocol-response presheaf, so the local finite algebras and states form a compatible projective diagram up to certified defects. The triple-overlap condition (F.10.12a.2) gives a finite Cech cocycle with norm bounded by $\delta_n$; since $\delta_n\to0$, the limiting obstruction class vanishes. This proves items 1 and 2. The local Clausius defect (F.10.12a.3) is bounded by $\delta_n$ on every cell; additivity over finite partitions and refinement gives (F.10.12c.1). Items 4 and 5 follow by substituting the certified local thermodynamic relation, the channel-capacity area law, and the conserved stress-energy flux into Theorem 12.1. Item 6 is exactly the additional content of the $\mathfrak W_i$ slots; without those finite records KMS descent supplies modular thermodynamics but not a Wightman realization. ∎
 
 **Corollary F.10.12d (No Fundamental-Metric Overcount).** On the branch of Theorem F.10.12c, the metric is the response tensor of the regular operational-continuum limit and the field equation is the equation of state of the certified channel-capacity thermodynamics. Adding an independent microscopic gravitational state space with no finite protocol response is response-null and is removed by the PPI quotient.
 

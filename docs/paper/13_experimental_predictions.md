@@ -12,13 +12,13 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - Emergent metric predictions use the operational-continuum, channel-capacity, stress-energy, and finite KMS-descent branch of Appendix F.10.12 and Corollary 12.1b when that certificate is invoked.
 - Cosmological-sector theorem-level exponent claims use the Appendix U four-mode false-vacuum branch $\kappa=142$ under Theorem U.13b. A theorem-level numerical $\Lambda$ value additionally requires the false-vacuum relative Quillen-Fredholm prefactor certificate of Definition U.15d, Theorem U.15e, and Theorem U.15i.2, the no-promotion gate of Corollary U.15f, and, when determinant transfer is used, the Bismut-Lebeau transfer ledger of Definition U.15g through Corollary U.15j. The five-mode $\kappa_{\mathrm{ref}}=141.5$ branch remains a reference convention blocked as theorem-level by Theorem U.8c in the Definition U.4 continuum action.
 - Fine-structure predictions use the Appendix Z Thomson normalization certificate of Definition Z.27.11a when a certificate-complete Thomson interval is claimed.
-- Electroweak matching uses the forward-locked RHG record of Definition T.78.10 and Theorem T.78.11 when a certificate-complete threshold value is claimed.
+- Electroweak matching uses an accepted forward-locked RHG record of Definition T.78.10 and Theorem T.78.11, an accepted torsion record of Definition T.78.5a and Theorem T.78.5b, an accepted spectral-action ledger of Definition X.9.6h.4 and Theorem X.9.6h.5, or an equivalent completed spectral tuple when a certificate-complete threshold or spectral-action Higgs finite-part value is claimed; Theorem T.78.14 gives the current PU-internal negative closure, so the present certificate interval for $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite parts is $\varnothing_{\mathrm{cert}}$.
 - Flavor and baryogenesis numerics use the flavor certificate of Definition T.79.4 and the baryogenesis transport certificate of Definition Y.11.7a when theorem-level numerical closure is claimed.
 - Uncertainty budgets follow the paper-wide canonical T1 (truncation), T2 (threshold/vacuum), T3 (scheme/mapping) decomposition of Appendix T.25.5.3, with certificate-specific residual intervals fixed before comparison.
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
 - Report-induced expectation protocols treat reports as provenance-marked context inputs. A false report may change the participant's physically instantiated expectation state, but it does not certify the reported outcome as true, does not rewrite a past measurement record, and can only be tested against target quantum outcomes generated after the expectation context has been formed under locked measurement settings. Human-subject deception requires prior consent procedures, ethics approval, and debriefing.
 
-**Experimental handling of homogeneous spectral predictions.** A claimed electroweak spectral number is admissible only if its $\mathfrak C_{\mathrm{Cas}}$ package is frozen before data comparison. The experimental row must list the finite-part convention, cutoff/tail bound, sector labels, and whether the value is a prediction, a fit, or a posterior consistency check.
+**Experimental handling of homogeneous spectral predictions.** A claimed electroweak spectral number is admissible only if its threshold, torsion, RHG, spectral-action, or equivalent completed spectral package is frozen before data comparison. The experimental row must list the finite-part convention, cutoff/tail bound, sector labels, projection ledger, grading, normalization map, master zeta-index label, and whether the value is a prediction, a fit, a no-entry certificate $\varnothing_{\mathrm{cert}}$, or a posterior consistency check.
 
 **13.0a Operational Evidence Standard for CC and Statistical-Influence Tests**
 
@@ -687,7 +687,7 @@ about $0.678$ ppm. The comparison row is
 $$
 \alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
 $$
-The residual $R_\alpha$ is structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b); it is not adjustable and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. The displayed $\pm0.000060$ budget in the Appendix Z ledger is a canonical branch comparison budget; it is not a replacement for $R_\alpha$. The row is falsifiable as stated by Corollary Z.26c: once an accepted gate fixes $R_\alpha$, a measured value outside the certified residual interval refutes the Appendix Z normalization branch. Separately, by Corollary Z.27.11e.1, no same-branch theorem fixing $R_\alpha=0$ can land at the recorded comparison value, so the row is residual-gated rather than residual-free. On an accepted hypercharge-recoil operator-realized finite Ward branch, Definition Z.27.11k.16a, Theorem Z.27.11k.16b, Corollary Z.27.11k.16c, Definition Z.27.11k.12, and Theorem Z.27.11k.20 fix $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$, giving $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$; if the seventh-order passive-complement source is downgraded to the positive-contraction bound, Corollary Z.27.11k.21 gives $[137.03599917502362\ldots,137.03599917878353\ldots]$. Without the source-exhaustion and operator-realization ledgers these values remain diagnostic. Standard QED running from an accepted Thomson certificate is a downstream consistency ledger and does not close the residual.
+The residual $R_\alpha$ is structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b); it is not adjustable and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. The displayed $\pm0.000060$ budget in the Appendix Z ledger is a canonical branch comparison budget; it is not a replacement for $R_\alpha$. On the accepted hypercharge-recoil operator-realized finite Ward branch, Definition Z.27.11k.12 supplies the full operator-realization certificate and Theorem Z.27.11k.20 fixes $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$, giving $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$; Corollary Z.27.11k.21.1 enters this as the strict-certificate registry residual. The three non-exact contributions are assigned to $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$, while exact, obstructed, already-counted, and future residual sources are excluded by the source-exhaustion and overlap audit. If the seventh-order passive-complement source is downgraded to the positive-contraction bound, Corollary Z.27.11k.21 gives $[137.03599917502362\ldots,137.03599917878353\ldots]$. Corollary Z.27.11e.1 still excludes a same-branch theorem with $R_\alpha=0$. Standard QED running from an accepted Thomson certificate is a downstream consistency ledger and does not close or modify the residual gate.
 
 **13.8.2 The Multi-Scale Gravity / Dark Sector Window**
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. On the acceleration-lock branch the relevant threshold is fixed before galaxy fitting:
@@ -1202,7 +1202,7 @@ The Golay alignment prediction connects to other PU predictions through the unif
 
 | Prediction | Source | Connection to $M = 24$ |
 |------------|--------|------------------------|
-| Fine-structure constant core $\alpha^{-1}_{0}=137.03609205522863\ldots$ and certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | Section 13.8.1, Appendix Z | Capacity saturation, Appendix Z interface/curvature/sinc core, and residual gate |
+| Fine-structure constant core $\alpha^{-1}_{0}=137.03609205522863\ldots$ and registry-entered hypercharge-recoil certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ | Section 13.8.1, Appendix Z | Capacity saturation, Appendix Z interface/curvature/sinc core, and finite Ward hypercharge-recoil residual certificate |
 | Spacetime dimensionality $D = 4$ | Appendix Z, Theorem Z.11 (see also Appendix H, Theorem H.4) | Kissing number $K(4) = 24$ |
 | Vacuum stability | Appendix R, Proposition R.4.2a; Appendix Z, Theorem Z.8c and Proposition Z.13a | Golay $d = 8$ forces rootlessness, and rootlessness yields vacuum isolation |
 | Gauge group structure | Appendix W | $\dim[\mathfrak{g}_{\text{SM}}] = 12 = k$ |
@@ -1260,53 +1260,81 @@ and Corollary Z.11.3 makes the resulting falsifier explicit.
 
 ### 13.10.2 Fine-Structure Constant
 
-**Prediction:** At the Thomson limit (zero momentum transfer), the canonical Appendix Z branch gives
+**Prediction:** At the Thomson limit (zero momentum transfer), the canonical Appendix Z branch gives the exact sinc core
 $$
-\alpha^{-1}_{0}=137.03609205522863\ldots,
-\qquad
-\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha
+\alpha^{-1}_{0}=137.03609205522863\ldots
 $$
-through the third-order formula of Theorem Z.26. A certificate-complete Thomson interval is obtained only from an accepted Thomson normalization certificate $\mathfrak C_\alpha$ in the sense of Definition Z.27.11a.
-
-**Derivation Summary:** Within the Appendix Z derivation, Theorem Z.26 combines bulk, interface, and curvature contributions:
+and the certificate row
 $$
-\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right)
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
 $$
-where $u^*=2^{1/8}-1$ (Theorem Z.7) and $K_0=3$ (Theorem 15), evaluated on the canonical Appendix Z bulk-Ward, interface-derivative, response-sign, visible-space curvature, and separable-curvature branches. The certificate form replaces the third-order transport factor by the exact $SU(2)$ sinc factor and adds the forward-locked residual interval:
+On the accepted hypercharge-recoil finite Ward branch, the registry-entered residual is
+$$
+R_{\alpha}^{YR\perp}
+=
+-\frac{5}{3}c_1(u^*)^3
++
+\frac{10}{9}c_1(u^*)^5
+-\frac{1}{3}c_1(u^*)^7
+=-0.00009287769839723537\ldots,
+$$
+with $u^*=2^{1/8}-1$ and $c_1=\pi/(24\sqrt3)$. Thus
 $$
 \alpha^{-1}_{\mathrm{cert}}
+=
+\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}
+=137.03599917753023\ldots.
+$$
+
+**Derivation Summary:** Theorem Z.26 combines the bulk Ward term, interface derivative, democratic-curvature response, separable-curvature response, and exact $SU(2)$ sinc transport:
+$$
+\alpha^{-1}_{0}
 =
 \frac{4\pi}{u^*}
 -
 \frac{\pi}{\sqrt{K_0}}
 +
-\frac{\pi u^*}{24\sqrt{K_0}}
-\operatorname{sinc}(u^*)
-+
-R_\alpha.
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*).
+$$
+Definition Z.27.11k.12 then realizes the finite post-core residual complex. Its retained cohomology basis is
+$$
+[\omega_Y],\qquad [\omega_5],\qquad [\sigma_{\perp}],
+$$
+with contributions
+$$
+[\omega_Y]:-\frac{5}{3}c_1(u^*)^3,
+\qquad
+[\omega_5]:\frac{10}{9}c_1(u^*)^5,
+\qquad
+[\sigma_{\perp}]:-\frac{1}{3}c_1(u^*)^7.
+$$
+The determinant-compatible hypercharge trace supplies $5/3$, the active-recoil lift supplies $10/9$, and the passive-complement contraction supplies $1/3$ with sign $\eta_7=-1$. The exact classes $[\sigma_{\parallel}]$, $[\nu_0]$, and $[\nu_1]$ evaluate to zero, $\theta$ is obstructed, and the source-exhaustion ledger proves that no other post-core electromagnetic Ward source remains. Theorem Z.27.11k.20 evaluates the branch and Corollary Z.27.11k.21.1 enters the degenerate residual interval in the strict-certificate registry. If the seventh-order passive complement is downgraded to the positive-contraction record rather than fixed, Corollary Z.27.11k.21 gives
+$$
+\alpha^{-1}_{0}+R_{\alpha}^{YR}
+\in
+[137.03599917502362\ldots,137.03599917878353\ldots].
 $$
 
 **Falsification Conditions:**
-- Precision measurements yielding $\alpha^{-1}$ outside the accepted branch interval in the forward-locked prediction register of Definition 13.0d
+- A fresh precision measurement, after the accepted branch record is entered into the forward prediction register of Definition 13.0d, lying outside the certified branch value or certified downgrade interval
 - Energy dependence of $\alpha$ inconsistent with standard QED running from the accepted Thomson-limit value
-- Spatial or temporal variation of $\alpha$ at levels exceeding $10^{-6}$ per Gyr
-- Post-comparison widening of $R_\alpha$, which demotes the branch by Corollary Z.27.11d rather than confirming it
+- Spatial or temporal variation of $\alpha$ at levels exceeding the separately registered comparison model
+- Post-comparison modification of $R_\alpha$, the Ward source alphabet, the contraction data, the evaluation row, or the overlap audit, which defines a new branch rather than confirming this one
 
-**Residual interpretation.** The interval $\pm0.000060$ on the canonical branch is the displayed comparison budget attached to the provisional certificate record. It is not an adjustable tolerance and cannot be widened after comparison without defining a new branch by Corollary Z.27.11i. The residual entry $R_\alpha$ is structurally bounded by the named bulk, interface, electromagnetic, curvature, and sinc-transport entries of $\mathfrak C_\alpha$; it is not a free parameter and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. A theorem-level Thomson comparison interval requires $R_\alpha$ to be fixed before comparison by Definition Z.27.11j, by the all-orders residual certificate of Definition Z.27.11g, or by a same-branch theorem proving $R_\alpha=0$. The SPAP-reflexive sinc-tail audit of Definition Z.27.11L is an internal consistency check on the third-order Taylor truncation of the already included sinc factor; it is not by itself a closure of the full residual gate.
+**Residual interpretation.** The interval $\pm0.000060$ on the canonical branch is a displayed comparison-budget diagnostic. It is not an adjustable tolerance and cannot be widened after comparison without defining a new branch by Corollary Z.27.11i. The residual entry on the accepted branch is the exact cohomology evaluation in (Z.27.11k.20a). The source-removal clauses of Definition Z.27.11k.12 prove no double counting with the bulk Ward, interface, electromagnetic-projection, curvature, sinc-transport, or future residual ledgers: those entries are either already in $\alpha^{-1}_{0}$, exact in $C^\bullet_W$, obstructed, or require a separate direct-sum residual record. The SPAP-reflexive sinc-tail audit of Definition Z.27.11L is an internal consistency check on the Taylor truncation of the already included sinc factor; it is not a second closure of $R_\alpha$.
 
 **Current Status:**
 $$
-\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(Mohr et al. 2025; NIST 2024)}
+\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(Mohr et al. 2025; NIST 2024)}.
 $$
-The exact sinc-core value satisfies
+The accepted branch value satisfies
 $$
-\alpha^{-1}_{0}-\alpha^{-1}_{\mathrm{exp}}
-=
-0.00009287822863\ldots,
+\alpha^{-1}_{YR\perp}-137.035999177
+=5.3022969595\times10^{-10}.
 $$
-about $0.678$ ppm. The closed-form core value from the discrete PU branch is a deterministic single-valued elementary function of the derived integers $K_0=3$, $d_0=8$, $M=24$, $D=4$ with no continuous fitting parameter in the displayed chain. This is a live precision test of the Appendix Z normalization package: theorem-level comparison status requires an accepted $\mathfrak C_\alpha$ together with an accepted residual gate fixing every entry of Definition Z.27.11a before comparison; by Corollary Z.27.11e.1 the gate must fix a nonzero $R_\alpha$, since a same-branch $R_\alpha=0$ theorem is obstructed at the recorded comparison value. A measured value outside the certified residual interval refutes the Appendix Z normalization branch by Corollary Z.26c.
+This comparison is certificate-retrodictive for already published values unless the same registry entry is made before a fresh measurement. The residual-free same-branch theorem is separately obstructed by Corollary Z.27.11e.1, because the exact sinc-core value alone differs from the recorded comparison value by $0.00009287822863\ldots$, about $0.678$ ppm. A measured value outside the certified residual interval for the accepted branch refutes the Appendix Z normalization branch by Corollary Z.26c.
 
-**Consistency Check:** Standard QED running from the accepted Thomson-limit branch value yields $\alpha^{-1}(M_Z)$ in the electroweak comparison ledger; the branch must use the same forward-locked normalization and residual interval when entered into Definition 13.0d.
+**Consistency Check:** Standard QED running from the accepted Thomson-limit branch value yields $\alpha^{-1}(M_Z)$ in the electroweak comparison ledger; the branch must use the same locked normalization, residual value, and overlap audit when entered into Definition 13.0d.
 
 ---
 
@@ -1421,7 +1449,7 @@ A positive result must show the clock-flow slope, the stall/null condition, and 
 | Prediction | Framework Value | Experimental Value | Derivation | Status |
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
-| Fine-structure constant $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; accepted operator-realized hypercharge-recoil branch gives $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ | $137.035999177(21)$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21 | ◐ closed-form core; point closure only on accepted operator-realized branch |
+| Fine-structure constant $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ and registry-entered branch $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$; passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ | $137.035999177(21)$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 | ✓ closed strict-certificate branch; current published comparison certificate-retrodictive |
 | Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Theorem R.3.4 + LEP $Z$ width | indirect |
 | Gauge algebra / connected-cover notation on the finite-response block-frame positive-marginal capacity branch | $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak u(1)$; connected cover $SU(3) \times SU(2) \times U(1)$ | Standard Model gauge algebra; global form fixed by determinant interface | Theorem G.8.4b; Corollary G.8.4c | ◐ finite-response block-frame branch theorem |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
@@ -1448,7 +1476,7 @@ A positive result must show the clock-flow slope, the stall/null condition, and 
 | Scalar-channel hyperon spin filter | short-range $\Lambda\bar\Lambda$ nonzero; long-range, same-sign, spin-zero controls vanish | collider correlation tests | Cor Z.8k.1a | ◐ scalar-channel branch |
 
 
-All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. The Thomson $\alpha^{-1}$ row is residual-gated rather than residual-free: Corollary Z.27.11e.1 obstructs a same-branch $R_\alpha=0$ theorem at the recorded CODATA comparison value, so the row is theorem-level only with a forward-locked nonzero residual gate. For the predictive record-current TUR row, the relevant falsifier is a closed finite record quotient with measured stationary current satisfying $\langle J_T\rangle\ne0$, variance, and entropy production satisfying
+All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. The Thomson $\alpha^{-1}$ row is not residual-free: Corollary Z.27.11e.1 obstructs a same-branch $R_\alpha=0$ theorem at the recorded CODATA comparison value. It is closed on the accepted registry-entered hypercharge-recoil branch by Corollary Z.27.11k.21.1; off that branch, or after downgrading the passive complement, the corresponding residual-gated or interval status is retained. For the predictive record-current TUR row, the relevant falsifier is a closed finite record quotient with measured stationary current satisfying $\langle J_T\rangle\ne0$, variance, and entropy production satisfying
 $$
 \frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\Sigma_T<2
 $$
@@ -1460,7 +1488,7 @@ after the Blackwell-PCE record channel and entropy-production ledger have been f
 
 | Prediction | Dominant Uncertainty Source | Estimated Magnitude |
 |:-----------|:---------------------------|:--------------------|
-| $\alpha^{-1}$ | exact sinc-core arithmetic plus branch comparison budget before residual closure; on an accepted operator-realized hypercharge-recoil branch the residual is fixed by the finite Ward operator gate | before residual closure: $\pm0.000060$ diagnostic budget; accepted operator-realized branch: $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ or downgraded interval width $3.759913047\times10^{-9}$ |
+| $\alpha^{-1}$ | exact sinc-core arithmetic plus registry-entered finite Ward hypercharge-recoil residual; no residual contribution is shared with the bulk, interface, electromagnetic-projection, curvature, sinc-transport, or future residual ledgers | accepted branch: degenerate residual interval $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=137.03599917753023\ldots$; passive-complement downgrade interval width $3.759913047\times10^{-9}$; $\pm0.000060$ remains only a diagnostic budget |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
 | $N_{\mathrm{gen}}$ | Minimal admissible count exact in the anomaly+CP class; exact realized count fixed on the pre-flavor family-redundancy PPI branch; $D_4$ triality and $E_8$/Leech provide compatibility checks | branch-discrete |
 | $D$ | Exact in the Appendix Z Bures tangent-cell mode-channel contract | branch-discrete |

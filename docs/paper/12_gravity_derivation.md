@@ -628,25 +628,56 @@ Applying this positive linear pushforward to the Cramér-Rao lower bound gives (
 
 *Proof.* Theorem 12.1c derives $\delta g_n$ from $D\Gamma_n(q_{\mathrm{grav},n}^*)$ on $\mathcal T_{\mathrm{grav},n}$. Theorem 12.1e derives $\Sigma_n$ from the same derivative, the positive Hessian, and the finite fluctuation scale. If the entries of Definition 12.1d are accepted, every ingredient is fixed by a finite record before comparison; Theorem D.8.9b gives local closure. If any entry is missing, Theorem P.14.1f gives non-identifiability, so the row remains certificate-pending. ∎
 
-**Definition 12.1f (Emergent Gravitational Completion Record).** An emergent gravitational completion record is a finite record
+**Definition 12.1f (Emergent Einstein/AQFT Completion Record).** An emergent Einstein/AQFT completion record is a finite record
 $$
-\mathfrak C_{\mathrm{EG}}
+\mathfrak C_{\mathrm{EH}}
 =
-(\mathfrak C^{\mathrm{KMS}},\mathfrak G,\mathfrak H^{\mathrm{ret}},\mathfrak O_{\mathrm{grav}})
+\left(
+\mathfrak Z_{\mathrm{cont}},
+\mathfrak C_{\mathrm{gen}},
+\mathfrak C_{\mathrm{AQFT}},
+\mathfrak C^{\mathrm{KMS}},
+\mathfrak C_{\mathrm{Had}},
+\mathfrak C_{\mathrm{split}},
+\mathfrak C_{\mathrm{Wig}},
+\mathfrak C_{\mathrm{PGSL}},
+\mathfrak C_{\mathrm{NC}},
+\mathfrak G,
+\mathfrak H^{\mathrm{ret}},
+\mathfrak O_{\mathrm{grav}},
+\chi_{\mathrm{EH}}
+\right)
+\tag{12.1f.1}
 $$
-where $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent certificate, $\mathfrak G$ is the nondegenerate finite-response gravitational channel ensemble of Definition 12.1d, $\mathfrak H^{\mathrm{ret}}$ is the retained finite-response horizon channel of Definition E.9.5d, and $\mathfrak O_{\mathrm{grav}}$ is the overlap audit with the AQFT, area-law, stress-energy, and horizon rows of Convention P.14.1k.
+where:
 
-**Theorem 12.1f.1 (Emergent Gravitational Completion Criterion).** If $\mathfrak C_{\mathrm{EG}}$ is accepted and its overlap audit commutes in the sense of Definition P.14.1k.0, then the gravitational sector is complete as an emergent finite-response theory at the level of:
+1. $\mathfrak Z_{\mathrm{cont}}$ is the accepted operational-continuum and zero-defect gluing certificate.
+2. $\mathfrak C_{\mathrm{gen}}$ is the local generator convergence record on bounded diamonds, unless the branch has already supplied the accepted projective single-clock certificate $\mathfrak P_{\mathrm{AQFT}}$ or Mosco-Bochner certificate $\mathfrak B_{\mathrm{AQFT}}$ discharging that slot.
+3. $\mathfrak C_{\mathrm{AQFT}}$ is the stable local-net certificate: it supplies uniform locality, compatible embeddings, cone identification or cone-saturation, time-slice core generation, covariance, and state convergence.
+4. $\mathfrak C^{\mathrm{KMS}}$ is the accepted finite KMS-descent sequence of Definition F.10.12a with $\delta_n\to0$.
+5. $\mathfrak C_{\mathrm{Had}}$ is the Hadamard-PCE finite-cost record for the retained local states.
+6. $\mathfrak C_{\mathrm{split}}$ is the split/nuclearity certificate or the accepted strictly weaker replacement sufficient for the claimed local net.
+7. $\mathfrak C_{\mathrm{Wig}}$ records faithful wedge states, boost/modular convergence, spectrum condition, Jost analyticity, and local field realization when a Wightman realization is claimed.
+8. $\mathfrak C_{\mathrm{PGSL}}$ is the finite retained local-horizon thermodynamics and predictive GSL certificate of Definition 12.5.3l.
+9. $\mathfrak C_{\mathrm{NC}}$ is the null-convexity/saturation certificate of Definition 12.5.3n. A reversible Einstein branch requires its zero-slack ledger, not merely nonnegative slack.
+10. $\mathfrak G$ is the nondegenerate finite-response gravitational channel ensemble of Definition 12.1d. It includes the smooth-envelope record, positive Hessian on the retained tangent quotient, reconstruction derivative, linearization radius, fluctuation scale, and metric covariance.
+11. $\mathfrak H^{\mathrm{ret}}$ is the retained finite-response horizon channel of Definition E.9.5d.
+12. $\mathfrak O_{\mathrm{grav}}$ is the overlap audit with the AQFT, area-law, stress-energy, horizon, null-slack, and final-calibration rows of Convention P.14.1k.
+13. $\chi_{\mathrm{EH}}$ records that no macroscopic metric, gravitational wave, thermodynamic, or empirical validation target is used to choose a finite entry.
 
-1. the effective Lorentzian metric branch,
-2. the Einstein equation as the finite-response thermodynamic equation of state,
-3. the linearized metric response,
-4. the metric fluctuation covariance,
-5. the retained-horizon no-deletion structural layer.
+**Theorem 12.1f.1 (Emergent Einstein/AQFT Completion Criterion).** If $\mathfrak C_{\mathrm{EH}}$ is accepted and $\mathfrak O_{\mathrm{grav}}$ commutes in the sense of Definition P.14.1k.0, then the gravitational sector is complete as an emergent finite-response branch at the level of:
 
-No independent microscopic gravitational Hilbert sector is required for this closure.
+1. a stable local AQFT net on the accepted operational-continuum branch;
+2. a compatible KMS/modular thermodynamic state;
+3. a Wightman realization, spectrum condition, and Jost analyticity exactly on the sectors covered by $\mathfrak C_{\mathrm{Wig}}$;
+4. the local Clausius relation and finite retained GSL;
+5. the emergent Einstein equation as the finite-response thermodynamic equation of state;
+6. the linearized metric response, metric fluctuation covariance, and metric covariance under accepted branch symmetries;
+7. the reversible Einstein branch exactly when $\mathfrak C_{\mathrm{NC}}$ contains the zero-slack ledger.
 
-*Proof.* The effective Lorentzian metric and Einstein equation are supplied by Theorem 12.1 and Corollary 12.1b on the accepted finite KMS-descent branch. The linearized metric response is supplied by Theorem 12.1c. The metric covariance is supplied by Theorem 12.1e. The retained-horizon no-deletion layer is supplied by Theorem E.9.5e after the retained horizon channel is accepted. The overlap audit $\mathfrak O_{\mathrm{grav}}$ ensures that these records use the same parent data and commute on shared entries. Thus the gravitational sector closes as a finite-response emergent sector by Theorem D.8.9c and Theorem P.14.1k.1. A fundamental graviton Hilbert sector is not an entry of $\mathfrak C_{\mathrm{EG}}$. By Corollary P.6.1b.8, any additional carrier with exactly the same retained finite responses is response-null surplus; any additional carrier changing retained responses is a different branch and must pass its own strict certificate by Convention P.14.1l. ∎
+If any slot of $\mathfrak C_{\mathrm{EH}}$ is absent, the missing slots form the minimal finite no-hidden-physics hypothesis list for the corresponding claim; the accepted subclaims remain valid but are not promoted to the absent output.
+
+*Proof.* The operational-continuum, generator-convergence, and AQFT slots invoke Theorem F.0 or its projective/Mosco discharge branches and give the stable local net. The KMS slot invokes Theorem F.10.12c and supplies modular thermodynamics and the Clausius relation. The Hadamard, split/nuclearity, and Wightman slots supply exactly the field-realization regularity listed in item 3. The area-law, stress-flux, and KMS entries give Theorem 12.1 and Corollary 12.1b; $\mathfrak G$ gives Theorems 12.1c and 12.1e; $\mathfrak C_{\mathrm{PGSL}}$ gives Theorem 12.5.3m; and $\mathfrak C_{\mathrm{NC}}$ gives Proposition 12.5.3o, with zero slack required for the reversible Einstein saturation. The overlap audit ensures that all slots use the same response quotient, units, metric reconstruction, and horizon orientation. If a slot is missing, Theorem P.14.1f permits distinct finite completions agreeing on the accepted slots but differing on the absent output, so the listed missing entries are precisely the irreducible branch hypotheses for that claim. ∎
 
 ## 12.4 Interpretation: Gravity as Predictive Thermodynamics
 

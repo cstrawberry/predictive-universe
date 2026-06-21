@@ -414,9 +414,9 @@ g_0
 =
 \frac{c^2\sqrt{\Lambda}}8.
 $$
-The coefficient has no free fit parameter once the upstream PU structural data and the QFI bridge-law class are fixed.
+The coefficient has no free fit parameter once the upstream PU structural data and the QFI bridge-law class are fixed. This corollary fixes only the acceleration scale. It does not determine a galaxy response kernel, a cluster/lensing kernel, anisotropic stress, homogeneous late-time law, or backreaction constants; those require the separate covariant dark-susceptibility/effective-action certificate of Definition I.13d.
 
-*Proof.* Substitute the unique value of $\eta'$ from Theorem H.4.2.8b into $g_0=\eta'c^2\sqrt{\Lambda/3}$. Since $\sqrt{\Lambda/3}/\sqrt3=\sqrt\Lambda/3$, the coefficient is $(3/8)(1/3)=1/8$. ∎
+*Proof.* Substitute the unique value of $\eta'$ from Theorem H.4.2.8b into $g_0=\eta'c^2\sqrt{\Lambda/3}$. Since $\sqrt{\Lambda/3}/\sqrt3=\sqrt\Lambda/3$, the coefficient is $(3/8)(1/3)=1/8$. The remaining response kernels require a conserved stress tensor or susceptibility map and are not arguments of the scalar bridge-law normalization. ∎
 
 ### H.4.3 Numerical Prediction
 

@@ -1743,41 +1743,75 @@ At $M = m_P$, this gives $N_{\mathrm{MPU}}^{\mathrm{eff}}(m_P) = 2\pi/\ln 2$ and
 
 #### Q.0.9.8.9 Conditional Landauer Horizon Spectroscopy for Horizon Closed Loops
 
-**Definition Q.0.7u (Horizon Closed-Loop Transfer Branch).** A horizon scattering mode lies on the **horizon closed-loop transfer branch** when the following additional bridge assumptions hold:
-
-1. one near-horizon round trip of the mode is represented by a closed loop to which the Action–Entropy Identity and Holonomy Quantization clauses of Theorems Q.0.1 and Q.0.4 apply;
-2. the dynamical round-trip phase is the dimensionless thermal phase
+**Definition Q.0.7u (Horizon Closed-Loop Transfer Record).** A horizon scattering mode lies on the horizon closed-loop transfer branch exactly when the branch supplies an accepted finite record
 $$
-x := \frac{\hbar\omega}{k_B T_H} = \omega\tau_H,
+\mathfrak T_{\mathrm{hor}}
+=
+\left(
+\mathfrak H_n^{\mathrm{ret}},
+\mathcal S_\omega,
+\mathcal M_{\mathrm{scat}},
+T_H,
+\tau_H,
+\Theta_{\mathrm{dyn}},
+\Theta_{\mathrm{MPU}},
+\mathcal D_{\mathrm{loop}},
+\mathcal P_{\mathrm{peak}},
+\varepsilon_{\mathrm{peak}},
+\chi_{\mathrm{T}}
+\right)
+\tag{Q.0.7u.1}
+$$
+with the following entries:
+
+1. $\mathfrak H_n^{\mathrm{ret}}$ is the retained finite-response horizon channel of Definition E.9.5d.
+2. $\mathcal S_\omega$ is the finite horizon scattering data and mode domain on which the transfer map is claimed.
+3. $\mathcal M_{\mathrm{scat}}$ is the retained scattering map from near-horizon loop data to the reduced thermal phase coordinate.
+4. $T_H$ is the Hawking temperature in the accepted metric branch, and the normalized thermal coordinate is derived as
+$$
+x=\frac{\hbar\omega}{k_BT_H}.
+\tag{Q.0.7u.2}
+$$
+5. $\tau_H$ is the near-horizon loop time certified by the scattering record and satisfies
+$$
+x=\omega\tau_H,
 \qquad
-\tau_H=\frac{2\pi c}{\kappa};
+\tau_H=\frac{2\pi c}{\kappa}
+\tag{Q.0.7u.3}
 $$
-3. on the PCE-Attractor branch, the MPU-cycle contribution to the same closed-loop phase is $N\ln 2$ modulo $2\pi$, with $N\in\mathbb Z_{\ge1}$;
-4. resonant enhancement in the greybody response occurs at phase-matching points of the two descriptions.
+when the branch uses the standard Rindler-Hawking normalization.
+6. $\Theta_{\mathrm{dyn}}=x\ \mathrm{mod}\ 2\pi$ is the dynamical loop phase.
+7. $\Theta_{\mathrm{MPU}}=N\ln2\ \mathrm{mod}\ 2\pi$ is the MPU-cycle phase contribution for an integer $N\ge1$, derived from the same closed loop and the saturated SPAP cost.
+8. $\mathcal D_{\mathrm{loop}}$ is the transfer-map domain, including boundary conditions, single-valuedness convention, and finite resolution.
+9. $\mathcal P_{\mathrm{peak}}$ is the peak-identification protocol and $\varepsilon_{\mathrm{peak}}$ is the certified phase tolerance. These entries concern phase positions only; amplitudes, widths, greybody factors, and nonresonant envelopes are separate scattering observables.
+10. $\chi_T$ records that the loop map, tolerance, and mode domain are fixed before spectral comparison.
 
-This definition is a horizon-transfer branch condition. It is not a consequence of Theorems Q.0.1 and Q.0.4 alone.
+Without an accepted $\mathfrak T_{\mathrm{hor}}$, the retained horizon algebra and Page/scrambling certificates do not imply the closed-loop transfer map.
 
-**Lemma Q.0.7v (Thermal Phase Identity).** *For any horizon with Hawking temperature $k_B T_H=\hbar\kappa/(2\pi c)$ and Rindler–Landauer cycle time $\tau_H=2\pi c/\kappa$,*
+**Lemma Q.0.7v (Thermal Phase Identity).** For any horizon with Hawking temperature $k_B T_H=\hbar\kappa/(2\pi c)$ and Rindler-Landauer cycle time $\tau_H=2\pi c/\kappa$,
 $$
 \frac{\hbar\omega}{k_B T_H}=\omega\tau_H.
 $$
 
-*Proof.* Multiplying $k_B T_H=\hbar\kappa/(2\pi c)$ by $\tau_H=2\pi c/\kappa$ gives $k_B T_H\,\tau_H=\hbar$. Dividing $\hbar\omega$ by $k_B T_H$ gives $\omega\tau_H$. $\square$
+*Proof.* Multiplying $k_B T_H=\hbar\kappa/(2\pi c)$ by $\tau_H=2\pi c/\kappa$ gives $k_B T_H\tau_H=\hbar$. Dividing $\hbar\omega$ by $k_B T_H$ gives $\omega\tau_H$. $\square$
 
-**Proposition Q.0.19 (Conditional Landauer Phase-Grid Signature).** *On the horizon closed-loop transfer branch of Definition Q.0.7u, resonant phase-matching points in the thermal variable $x=\hbar\omega/(k_B T_H)$ obey*
+**Proposition Q.0.19 (Conditional Landauer Phase-Grid Signature).** On an accepted horizon closed-loop transfer record $\mathfrak T_{\mathrm{hor}}$, resonant phase-matching points in the thermal variable $x=\hbar\omega/(k_BT_H)$ obey
 $$
-x \equiv N\ln 2 \pmod{2\pi},
-\qquad N\in\mathbb Z_{\ge1}.
+x\equiv N\ln2\pmod{2\pi},
+\qquad
+N\in\mathbb Z_{\ge1},
+\tag{Q.0.19.1}
 $$
-*Equivalently, after rescaling $x\mapsto x/(2\pi)$, the resonance grid is the irrational rotation orbit*
+within the certified phase tolerance $\varepsilon_{\mathrm{peak}}$. Equivalently, after rescaling $x\mapsto x/(2\pi)$, the phase-position grid is the irrational rotation orbit
 $$
-\{N\alpha_L \bmod 1:N\in\mathbb Z_{\ge1}\},
+\{N\alpha_L\bmod1:N\in\mathbb Z_{\ge1}\},
 \qquad
 \alpha_L=\frac{\ln2}{2\pi}.
+\tag{Q.0.19.2}
 $$
-*The orbit is dense and equidistributed in $[0,1)$, and every finite truncation partitions the circle into at most three distinct gap lengths.*
+The orbit is dense and equidistributed in $[0,1)$, and every finite truncation partitions the circle into at most three distinct gap lengths. This proposition fixes only phase-grid positions; it does not fix amplitudes, widths, greybody factors, or nonresonant envelopes.
 
-*Proof.* Definition Q.0.7u equates the dynamical closed-loop phase $x$ with the MPU-cycle phase $N\ln2$ modulo the single-valuedness period $2\pi$. Dividing by $2\pi$ gives the rotation by $\alpha_L$ on $\mathbb R/\mathbb Z$. Lemma Q.0.7b gives transcendence, hence irrationality, of $\alpha_L$. Irrational rotations are dense and equidistributed by Weyl equidistribution. The finite-truncation gap statement is Proposition Q.0.7n applied to the same orbit. $\square$
+*Proof.* Definition Q.0.7u supplies the equality of the dynamical loop phase $x$ and the MPU-cycle phase $N\ln2$ modulo $2\pi$ on the certified transfer domain, up to the tolerance $\varepsilon_{\mathrm{peak}}$. Dividing by $2\pi$ gives the rotation by $\alpha_L$ on $\mathbb R/\mathbb Z$. Lemma Q.0.7b gives transcendence, hence irrationality, of $\alpha_L$. Irrational rotations are dense and equidistributed by Weyl equidistribution. The finite-truncation gap statement is Proposition Q.0.7n applied to the same orbit. $\square$
 
 **Corollary Q.0.19a (Beatty Staircase of Positive-Overhead Sectors).** *For each holonomy sector $k\ge1$, the largest SPAP-minimum cycle count not overshooting the sector closure phase $2\pi k$ is*
 $$
@@ -1804,9 +1838,9 @@ $$
 
 *Proof.* This is Corollary Q.0.7l translated from $|N\alpha_L-k|$ to $|N\ln2-2\pi k|$ by multiplication by $2\pi$. $\square$
 
-**Proposition Q.0.20 (Parameter-Free Phase Scales on the Transfer Branch).** *On the horizon closed-loop transfer branch, the phase-grid scales $(2\pi,\ln2)$ are fixed by the $U(1)$ closure period and the saturated SPAP cost. Therefore the grid in the dimensionless variable $x=\hbar\omega/(k_B T_H)$ is independent of horizon mass, charge, spin, and matter content at the level of phase positions. The response amplitudes, widths, and nonresonant envelope may still depend on the detailed greybody barrier and on the field species.*
+**Proposition Q.0.20 (Parameter-Free Phase Scales on the Transfer Branch).** On an accepted horizon closed-loop transfer record $\mathfrak T_{\mathrm{hor}}$, the phase-grid scales $(2\pi,\ln2)$ are fixed by the $U(1)$ closure period and the saturated SPAP cost. Therefore the grid in the dimensionless variable $x=\hbar\omega/(k_BT_H)$ is independent of horizon mass, charge, spin, and matter content at the level of phase positions, up to the certified phase tolerance $\varepsilon_{\mathrm{peak}}$. The response amplitudes, widths, greybody factors, peak heights, and nonresonant envelope remain separate scattering outputs of $\mathcal M_{\mathrm{scat}}$ and are not fixed by the phase grid.
 
-*Proof.* The period $2\pi$ is the single-valuedness period of the phase. The step $\ln2$ is the saturated SPAP cost. Neither depends on horizon parameters. The final sentence follows because Definition Q.0.7u fixes only the phase-matching grid, not the full scattering amplitude. $\square$
+*Proof.* The period $2\pi$ is the single-valuedness period of the phase. The step $\ln2$ is the saturated SPAP cost recorded by $\Theta_{\mathrm{MPU}}$ in Definition Q.0.7u. Neither depends on horizon parameters. The final sentence follows because $\mathfrak T_{\mathrm{hor}}$ fixes the phase-matching grid and tolerance only; scattering amplitudes and greybody data are distinct entries of the horizon scattering map. $\square$
 
 **Corollary Q.0.20a (Temperature-Normalized Cross-Horizon Collapse).** *Let $H_1$ and $H_2$ be two horizons satisfying the same closed-loop transfer branch of Definition Q.0.7u, with Hawking temperatures $T_{H,1}$ and $T_{H,2}$. Define the reduced thermal phase map*
 $$
@@ -1964,8 +1998,15 @@ so the Beatty/convergent/three-gap ledger is completely determined by the finite
 
 *Proof.* Items 1 and 2 are the specialization of Lemma Q.0.7b and the standard continued-fraction algorithm to $\alpha_L=\ln2/(2\pi)$. Item 3 is the continued-fraction best-approximation table translated to phase defects by multiplication by $2\pi$. Item 4 is the classical continued-fraction discrepancy estimate applied with $\sum_{i=1}^{10}a_i=38$ and $C_0\le3$; the factor $2$ in the window-counting sentence is the passage from anchored star discrepancy to arbitrary arcs. Item 5 is the three-distance theorem and the convergent-denominator two-gap specialization, with the displayed rows obtained by direct cyclic sorting of $\{j\alpha_L\}$ using precision certified far beyond the displayed digits. No amplitude, width, greybody factor, or nonresonant envelope enters any entry of this ledger. $\square$
 
-**Remark Q.0.20b.2 (Status Split for the Horizon Transfer Branch).** Proposition Q.0.20b.1 closes only the phase-grid sector of the Definition Q.0.7u branch. It fixes the theorem-level positions, recurrence hierarchy, finite gap statistics, and window-counting bounds of the Landauer grid. It does not derive the transfer map itself from retained horizon channel data, and it does not fix amplitudes, widths, greybody factors, nonresonant envelopes, or a finite-resolution peak-identification tolerance. Those remain branch/model-level entries until supplied by their own finite certificates under Theorem P.14.1f and Definition P.14.1m.
+**Remark Q.0.20b.2 (Status Split for the Horizon Transfer Branch).** Proposition Q.0.20b.1 closes only the phase-grid arithmetic after an accepted transfer record $\mathfrak T_{\mathrm{hor}}$ is present. It fixes the positions, recurrence hierarchy, finite gap statistics, and window-counting bounds of the Landauer grid. It does not by itself derive the transfer map from retained horizon channel data, and it does not fix amplitudes, widths, greybody factors, nonresonant envelopes, or peak-identification tolerances.
 
+**Theorem Q.0.20b.3 (Transfer-Map Separation Theorem).** The retained horizon channel $\mathfrak H_n^{\mathrm{ret}}$, deterministic exterior recovery certificate $\mathfrak S_{\mathrm{hor},n}$, and Page/design scrambling certificates prove retained conservation, exterior recovery, or Page-type entropy statements according to their own norms. They do not imply
+$$
+x\equiv N\ln2\pmod{2\pi}
+$$
+unless an accepted horizon transfer record $\mathfrak T_{\mathrm{hor}}$ supplies the scattering map, loop time, MPU-cycle phase, domain, and phase tolerance of Definition Q.0.7u. Thus the closed-loop transfer map is a separate branch hypothesis until derived from finite horizon scattering data.
+
+*Proof.* The records $\mathfrak H_n^{\mathrm{ret}}$, $\mathfrak S_{\mathrm{hor},n}$, and the Appendix K design certificates are maps between retained algebras, exterior coarse records, moment operators, and trace/entropy norms. None of their entries contains a near-horizon scattering phase map, a loop-time identification, or a peak-position tolerance. Two finite horizon branches can therefore agree on retained conservation, recovery, and Page data while differing on scattering phase positions. By Theorem P.14.1f, the phase transfer law is non-identifiable from those records alone. Definition Q.0.7u lists the additional finite entries that make the phase-grid branch theorem-level. ∎
 **Corollary Q.0.20c (Landauer Horizon Spectroscopy Null Conditions).** *Within an independently validated Definition Q.0.7u transfer branch, the following observations falsify the Landauer phase-grid component of that branch:*
 
 1. *a statistically resolved resonance phase set whose reduced positions cannot be matched to*
