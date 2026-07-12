@@ -8,7 +8,7 @@ Physical reality, from the internal perspective, is modeled as fundamentally con
 *   The Dual Dynamics of internal prediction (unitary evolution) and 'Evolve' interaction (stochastic ND-RID) (Section 7.3.3).
 *   Optimization via the Prediction Optimization Problem (Axiom 1) and the Principle of Compression Efficiency (Definition 15).
 *   Constraints arising from self-reference limits (SPAP, Theorem 10, Theorem 11) and reflexive interaction dynamics (RID, Definition 6).
-*   A fundamental irreversibility cost split $(\varepsilon_0,\varepsilon_{\mathrm{phys}})$ sets entropy and governs spacetime coupling, with structural floor $\varepsilon_0=\ln2$ and physical implementation cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31; Appendix E; Appendix O; Section 7.5).
+*   A fundamental irreversibility cost split $(\varepsilon_0,\varepsilon_{\mathrm{phys}})$ sets entropy and governs spacetime coupling, with structural floor $\varepsilon_0=\ln2$ and physical implementation cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31; Appendix E; Appendix O; Section 7.5).
 
 **7.1.1 Definition 23 (Def 23): Minimal Predictive Unit (MPU)**
 
@@ -16,13 +16,13 @@ A **Minimal Predictive Unit (MPU)** is defined as the fundamental constituent of
 a) The integrated functional capabilities ($b_m, b_p, b_v, D_{cyc}$) necessary for the adaptive Fundamental Predictive Loop (Definition 4, Definition 5).
 b) The inherent self-referential logical structure, corresponding to the Horizon Constant $K_0 \equiv B_3$ (Theorem 15), which is logically indispensable for the reflexive verification ($V$) and update ($D_{cyc}$) phases of the loop.
 
-Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
+Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
 
 1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state $|\psi(t)\rangle$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4). Theorem 15 first fixes the finite operational-context floor $N_{\mathrm{vis}}^{\min}=8$ and $K_0=3$; on the Hilbert-carrier branch this becomes the rank bound $d_0\ge8$, and the minimal MPU case $C_{op}=K_0$ selects the saturating carrier $d_0=8$. The perspective index $s$ belongs to the Perspective Space $\Sigma$ (Definition 25) and represents the interaction context.
 2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by the branch interaction predicate. On a branch carrying an accepted actualization-threshold certificate $\mathfrak C_{\mathrm{act}}$ (Definition E.2a.6), this predicate is the capacity-saturation condition that the retained link ledger reaches $C_{\max}$ within the operational window. The stochastic Interaction instantiates Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic and its Born-rule descent (Theorem 28a).
 3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
 
-**Metered actualization certificate.** The actualization certificate may be sharpened by an accepted metered actualization subcertificate $\mathfrak C_{\mathrm{meter}}(R)$ (Definition E.2a.8) for an interface register $R$. The certificate specifies the register alphabet, the capacity increment assigned to the retained record, a monotone acquisition interval, an overwrite bound, a no-early-firing comparison against PCE/PPI, and the process-tensor no-signaling record for the interventions used to read the meter. For a certified binary one-register interface the timing threshold is
+**Metered actualization certificate.** The actualization certificate may be sharpened by an accepted metered actualization subcertificate $\mathfrak C_{\mathrm{meter}}(R)$ (Definition E.2a.8) for an interface register $R$. The certificate specifies the register alphabet, the capacity increment assigned to the retained record, a monotone acquisition interval, an overwrite bound, a no-early-firing comparison against PCE/PPI, and the process-tensor no-future-to-past causality record for the interventions used to read the meter. For a certified binary one-register interface the timing threshold is
 $$
 \Delta C_R\ge \ln 2-\epsilon_{\mathrm{meter}},
 $$
@@ -80,16 +80,16 @@ The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive up
     $$
     and any physical implementation satisfies
     $$
-    \varepsilon_{\mathrm{phys}}=\Delta S_{\mathrm{phys}}/k_B\ge\varepsilon_0.
+    \varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R).
     $$
-    Equality in the physical cost holds only on the overhead-free Landauer-saturating implementation branch (Theorem 31).
+    Equality with $H_q(P\mid R)$ holds only on the overhead-free Landauer-saturating implementation branch; equality with $\ln2$ also requires conditional uniformity (Theorem 31).
 
 **4. Complexity Accounting**
 
 *   **Horizon Constant $K_0$:** 3 bits (three binary registers).
 *   **Operational Complexity $C_{op}$:** $C_{op} = K_0 = 3$ bits (by construction, using minimal registers to realize SPAP logic).
 *   **Minimum Cycle Time $\tau_{min}$:** Determined by the internal Hamiltonian (Theorem 29), with $\tau_{min} > 0$.
-*   **Irreducible Entropy Cost:** $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (nats) when reset is effected.
+*   **Irreducible Entropy Cost:** $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (nats) when reset is effected.
 
 **5. Solving the Prediction Optimization Problem (POP)**
 
@@ -639,7 +639,7 @@ $$
 As formalized in Appendix M (Equation M.2), the 'Evolve' process comprises two conceptually distinct but intertwined components:
 1.  **Probabilistic Amplitude Actualization:** The state amplitude $S(t)=|\psi(t)\rangle$ actualizes to one of the possible outcome states $|i\rangle_s$ corresponding to the interaction perspective $s$. This occurs with probability given by the Born rule (Proposition 7, Equation 50): $P(i|S(t), s) = |\langle i | S(t) \rangle_s|^2$. The resulting state is $|\psi(t+\Delta t)\rangle = |i\rangle_s$ (normalized).
 2.  **Stochastic Perspective Shift:** Simultaneously or immediately following actualization, the perspective index $s$ transitions stochastically to a new perspective $s'$ according to a Conditional Perspective Transition Kernel $G_{persp}(s' | s, i, N, \Delta t)$ defined on the Perspective Space $\Sigma$ (Definition 25, elaborated in Appendix M, Section M.3.3). This shift reflects the system registering the specific interaction context $N(t)$ and the outcome $i$.
-The post-interaction state is the specific realized perspectival state $(|i\rangle_s, s')$. 'Evolve' is the fundamentally stochastic (Theorem 27, Theorem 28; Theorem 28a), resource-consuming (due to $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, Theorem 31) step where predictive information is verified and updated, driving the adaptation cycle.
+The post-interaction state is the specific realized perspectival state $(|i\rangle_s, s')$. 'Evolve' is the fundamentally stochastic (Theorem 27, Theorem 28; Theorem 28a), resource-consuming (due to $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$, Theorem 31) step where predictive information is verified and updated, driving the adaptation cycle.
 
 **7.3.4 Theorem 28a (Origin of Quantum Randomness from Logical Indeterminacy).**
 
@@ -664,112 +664,85 @@ for effects $P$, with pure-ray outcome weights $|\langle i|\psi\rangle|^2$. Theo
 
 **7.4 Thermodynamic Grounding of the 'Evolve' Process**
 
-The 'Evolve' process (Definition 27), representing interaction and actualization, must adhere to fundamental physical laws, particularly thermodynamics. This section establishes the thermodynamic consequences of the logically necessary steps involved in 'Evolve', demonstrating its inherent irreversibility and deriving fundamental constraints. The irreversible cost regime ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$) is activated for all complexities $C_P \ge K_0$ (threshold for minimal SPAP logic, necessary for the full cycle at $C_{op} \ge K_0$).
+The 'Evolve' process (Definition 27), representing interaction and actualization, must adhere to fundamental physical laws, particularly thermodynamics. This section establishes the thermodynamic consequences of the logically necessary steps involved in 'Evolve', demonstrating its inherent irreversibility and deriving fundamental constraints. The irreversible cost regime ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) is activated for all complexities $C_P \ge K_0$ (threshold for minimal SPAP logic, necessary for the full cycle at $C_{op} \ge K_0$).
 
 **7.4.1 Theorem 30 (Logically Mandated Physical State Change)**
 
 Within the Predictive Universe framework, the acquisition and resolution of non-trivial self-referential information ($\Delta I_{SPAP/DSRO} > 0$) during the MPU's 'Evolve' interaction cycle (Definition 27) logically mandates a corresponding physical transition $s(x) \to s(x')$ between distinct configurations of the MPU state. This transition is required to avoid logical contradiction inherent in self-reference (SPAP, Theorem 10, Theorem 11; DSRO, Definition 11) when new information invalidates or resolves the prior predictive state. This state change must occur within the finite physical time interval $\tau$ associated with the MPU cycle ($\tau \ge \tau_{min} > 0$, Theorem 29).
 *Proof:* The MPU cycle at $C_{op} \ge K_0$ involves self-referential verification (V) and update (D_cyc), requiring processing information about its own state relative to outcomes, engaging SPAP/DSRO logic. Acquiring non-trivial self-referential information ($\Delta I > 0$) is necessary for adaptation under POP. The structure of SPAP/DSRO requires the logical state $x$ to change based on $\Delta I$ to resolve the self-reference (e.g., $\text{NOT}(\hat{\phi})$ or update based on proof search). Maintaining the original $x$ leads to contradiction. Distinct logical states $x, x'$ correspond to distinct physical states $s(x), s(x')$ within the MPU. This logical necessity, combined with distinct physical instantiation and the finite cycle time $\tau$, mandates a physical transition $s(x) \to s(x')$ whenever relevant $\Delta I > 0$ is resolved during 'Evolve'. QED
 
-**7.4.2 Proposition 5 (Physical Necessity of Erasure)**
+**7.4.2 Proposition 5 (Structural Binary Register and Reset Alternative)**
 
-Any MPU cycle (Definition 4) operating under finite time $\tau_{cyc}$, bounded complexity $K_0$, and requiring a logically irreversible update to resolve non-trivial self-referential information $\Delta I > 0$ (mandating state change per Theorem 30), must necessarily involve a physical sub-process equivalent to the erasure of logically discarded information within $\tau_{cyc}$. This erasure cannot be implemented via a purely unitary process under these constraints and fundamentally carries an entropy cost of at least $\ln 2$ nats.
-*Proof:* The logically irreversible update means the map from pre-resolution to post-resolution state is not injective; information is lost. Landauer's principle links logical irreversibility to physical erasure and minimal entropy cost. While theoretically reversible computation avoids erasure by storing garbage bits, this requires unbounded memory (violating bounded $K_0$) or infinite time (violating finite $\tau_{cyc}$). Therefore, the necessary irreversible update within the bounded, finite-time MPU cycle must involve dissipative erasure. The structure of self-referential updates (e.g., SPAP rule) enforces a minimal logical state merging (Appendix J, Sections J.2–J.3), guaranteeing this erasure corresponds to at least 1 bit ($\ln 2$ nats) of entropy intrinsically tied to resolving the self-reference. QED
+A declared reusable SPAP implementation may use a binary prediction record $P$. At cycle closure it either preserves injectivity by retaining the displaced label in side information $R$, or physically resets or overwrites $P$. Finite memory alone does not establish one reset per cycle, reachability of both values of $P$ conditional on $R$, or an unbiased pre-reset law. The structural alphabet value is
+$$
+\varepsilon_0:=\ln2;
+$$
+it is not an ensemble-independent lower bound on average heat. ∎
 
-**7.4.3 Definition 28 (Def 28): Structural State Change Cost $\varepsilon_0$ and Physical Overhead**
+**7.4.3 Definition 28 (Structural and Registered Reset Ledgers)**
 
-The parameter $\varepsilon_0$ represents the irreducible structural dimensionless entropy loss ($S/k_B$, in nats, or natural units of information) associated with the necessary logical state merging inherent in the SPAP update cycle (Proposition 5, Theorem 30) required for the 'Evolve' interaction cycle (Definition 27) when non-trivial self-referential information ($\Delta I > 0$) is involved. Theorem J.1 proves that the SPAP merge is exactly a binary logical quotient at the structural level, hence
+Let $P\in\{0,1\}$ be a classical pre-reset record, let $R$ contain every classical record retained and unchanged through the reset, and let $q(P,R)$ be their actual joint law. On a branch with a degenerate register Hamiltonian, a bath at temperature $T$, cyclic control, and an isothermal reset returning the register and controller to their initial Hamiltonians, define
 $$
-\boxed{\varepsilon_0=\ln2.}
+\varepsilon_0:=\ln2,
+\qquad
+\varepsilon_{\mathrm{reset}}:=\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT},
+\qquad
+\varepsilon_{\mathrm{diss}}:=\varepsilon_{\mathrm{reset}}-H_q(P\mid R).
 $$
-A concrete physical implementation may dissipate more because of finite-time control, imperfect reservoirs, or non-ideal reset protocols. Its total cost is therefore
+Conditional Landauer gives $\varepsilon_{\mathrm{diss}}\ge0$. If no physical reset is registered, $\varepsilon_{\mathrm{reset}}$ is not assigned merely from the alphabet size.
+
+**7.4.4 Theorem 31 (Conditional Physical Reset Bound)**
+
+Under Definition 28,
 $$
-\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}},
+\varepsilon_{\mathrm{reset}}
+=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
+\ge H_q(P\mid R),
 \qquad
 \varepsilon_{\mathrm{diss}}\ge0.
+\tag{45}
 $$
-In legacy downstream formulas, any unindexed $\varepsilon$ is routed by context: structural constants, residual channel budgets, active-kernel dimensions, phase generators, Planck-scale ratios, and certificate-core counting formulas use $\varepsilon_0$; physical heat, power, and entropy-production inequalities use $\varepsilon_{\mathrm{phys}}$. New formulas should use the indexed symbols $\varepsilon_0$, $\varepsilon_{\mathrm{phys}}$, and $\varepsilon_{\mathrm{diss}}$. Implementation overhead $\varepsilon_{\mathrm{diss}}$ enters heat and power accounting, but it does not alter the discrete SPAP register count, the active-kernel dimension, or the QFI mode count unless it changes a finite protocol-response presheaf.
+Because $P$ is binary, $0\le H_q(P\mid R)\le\ln2$. If $H_q(P\mid R)=\ln2$, then $\varepsilon_{\mathrm{reset}}\ge\ln2$, with equality exactly when $\varepsilon_{\mathrm{diss}}=0$. The numerical equality $\varepsilon_{\mathrm{reset}}=\ln2$ alone does not imply either maximal conditional entropy or thermodynamic saturation. ∎
 
-**7.4.4 Theorem 31 (Structural Landauer Floor and Physical Overhead)**
+**7.4.5 Theorem 32 (Registered Reset Bound for `Evolve`)**
 
-The irreversible SPAP component of the 'Evolve' interaction step (Definition 27) has exact structural entropy cost
+An `Evolve` implementation satisfying Definition 28 obeys
 $$
-\boxed{\varepsilon_0=\ln2.}
-\quad \text{(45)}
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}\ge H_q(P\mid R).
+\tag{46}
 $$
-Every physical implementation satisfies
-$$
-\boxed{
-\varepsilon_{\mathrm{phys}}
-=
-\frac{\Delta S_{\mathrm{phys}}}{k_B}
-=
-\varepsilon_0+\varepsilon_{\mathrm{diss}}
-\ge
-\ln2,
-\qquad
-\varepsilon_{\mathrm{diss}}\ge0.
-}
-\quad \text{(45a)}
-$$
+Normalization of the quantum instrument determines outcome probabilities and poststates, not heat. Information-acquisition or feedback terms may be added only under a separately stated thermodynamic theorem and a no-double-counting certificate. ∎
 
-*Proof.* Lemma J.1 shows that a finite-memory SPAP cycle reusing its prediction ancilla implements a logically irreversible quotient map whose erased register has exactly two admissible values. Let $A=\{0,1\}_p$ be that erased prediction register. The quotient map identifies the two fibers over the same post-reset ready state, so the Shannon entropy removed from the accessible SPAP ledger for the uniform admissible ensemble on $A$ is
-$$
-H(A)= -2\left(\frac12\ln\frac12\right)=\ln2.
-$$
-No smaller structural quotient can implement the SPAP diagonal update, because the update must distinguish both possible stored predictions before reset; no larger irreducible quotient is forced, because the explicit three-register construction of Theorem 15 implements the SPAP cycle with exactly one erased binary prediction register. Therefore the irreducible structural cost is exactly $\varepsilon_0=\ln2$.
+**7.4.6 Theorem 33 (Conditional Reflexivity Trade-Off)**
 
-Landauer's principle maps the logical entropy removed from an accessible finite-memory register to a lower bound on environment entropy production, so every physical implementation has $\Delta S_{\mathrm{phys}}/k_B\ge\ln2$. Any excess over $\ln2$ is implementation overhead. Define
+If a registered branch satisfies $\Delta I\ge\Delta I_{\min}>0$ and $H_q(P\mid R)\ge h_{\min}>0$, then
 $$
-\varepsilon_{\mathrm{diss}}
-:=
-\frac{\Delta S_{\mathrm{phys}}}{k_B}-\ln2\ge0.
+\Delta I\,\varepsilon_{\mathrm{reset}}
+\ge\Delta I_{\min}h_{\min}
+=:\kappa_r>0.
+\tag{48}
 $$
-Then $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}$, proving (45a). ∎
-
-The strict positivity and universality of the structural floor $\varepsilon_0$ and the physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ are of profound consequence. Beyond underpinning the Reflexivity Constraint (Theorem 33), limiting ND-RID channel capacity (Appendix E), and supplying the physical bound for irreversible MPU interactions, it serves as the fundamental thermodynamic ratchet that physically enforces the emergent arrow of time, ensuring the directionality of macroscopic evolution (Appendix O, Theorem O.3). Appendix O also records the chronometric projection on retained-sector branches: once $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$ fixes the retained event alphabet, retained entropy-increment estimator, and guarantee-level subset when used, cumulative retained entropy production in units of $\ln2$ defines the dimensionless entropic clock count $\mathcal T_R=\Sigma_R^{\mathrm{ECF}}/\ln2$ (Definition O.3f). This adds no new primitive constant; it is the same SPAP merge cost read as a retained clock-flow unit. The full derivation of $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is provided in **Appendix J**.
-
-**7.4.5 Theorem 32 (Fundamental Info-Thermo Bound for 'Evolve')**
-
-Any physical MPU reflexive interaction ('Evolve' process, Definition 27) associated with outcome $o$, mapping initial state $\rho$ to final state $\rho'_o = \mathcal{E}_{N,o}(\rho) / P(o|\rho, N)$, and yielding self-information gain $I(\rho; \mathcal{E}_{N}, o) > 0$ (nats), necessarily incurs a total physical dimensionless entropy production $\Delta S_{\mathrm{phys}}(o)/k_B$ (system + environment) bounded below by:
-$$
-\frac{\Delta S_{\mathrm{phys}}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon_0 \cdot \Theta(I(\rho; \mathcal{E}_{N}, o)) \quad \text{(46)}
-$$
-where $D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)]$ is the quantum relative entropy (nats) representing the minimal feedback cost, $\varepsilon_0=\ln2$ is the irreducible structural SPAP cost (Theorem 31), and $\Theta(I)$ is the Heaviside step function. If $\operatorname{supp}\rho'_o \nsubseteq \operatorname{supp}\mathcal{E}_{N}(\rho)$, the relative-entropy term is understood as $+\infty$. When non-trivial self-referential information is gained ($I > 0$), the minimum necessary dimensionless entropy production is explicitly bounded by:
-$$
-\frac{\Delta S_{\mathrm{phys}}(o)}{k_B} \ge I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon_0 \quad \text{(47)}
-$$
-*Proof.* Appendix E, Theorem E.1, is precisely the ND-RID measurement-feedback inequality for the 'Evolve' instrument of Definition 27. Theorem 31 supplies the structural SPAP term $\varepsilon_0=\ln2$, while any physical implementation overhead is nonnegative and only strengthens the physical entropy-production bound. Substituting these two inputs gives Equation (46). If $I>0$, then $\Theta(I)=1$, and Equation (47) follows immediately. If the support inclusion fails, then $D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] = +\infty$, so both inequalities remain valid in the extended-real sense. QED
-
-**7.4.6 Theorem 33 (The Reflexivity Constraint $\kappa_r > 0$)**
-
-Any non-trivial 'Evolve' interaction within an MPU yielding a minimum relevant information gain $\Delta I \ge \Delta I_{min} > 0$ (nats) is constrained by a fundamental trade-off between the information gained and the minimum necessary state disturbance (quantified by the dimensionless physical entropy production $\Delta S_{\mathrm{phys}}/k_B$ accompanying the interaction):
-$$
-\Delta I \cdot (\Delta S_{\mathrm{phys}}/k_B) \geq \kappa_r > 0 \quad \text{(48)}
-$$
-where the **Reflexivity Constant** $\kappa_r$ is guaranteed to be strictly positive ($\kappa_r > 0$) due to $\Delta I_{min} > 0$ and the structural cost $\varepsilon_0=\ln2>0$ with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31), assuming a non-negative minimal feedback cost $D_{KL, min} \ge 0$.
-*Proof:* From Theorem 32, **Equation (47) (which applies when $I>0$)**, we have the bound $\frac{\Delta S_{\mathrm{phys}}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon_0$. For any interaction yielding at least $\Delta I_{min}$ information and having a minimal feedback cost of $D_{KL, min}$, this implies $\Delta S_{\mathrm{phys}}(o)/k_B \ge \Delta I + D_{KL, min} + \varepsilon_0$. Multiplying by $\Delta I$ yields $\Delta I \cdot (\Delta S_{\mathrm{phys}}(o)/k_B) \ge h(\Delta I)$, where $h(\Delta I) = \Delta I (\Delta I + D_{KL, min} + \varepsilon_0)$. The function $h(\Delta I)$ increases for $\Delta I>0$ since $\varepsilon_0>0, D_{KL,min}\ge 0$. Its minimum value for $\Delta I \ge \Delta I_{min}$ occurs at $\Delta I_{min}$, defining $\kappa_r = h(\Delta I_{min}) = \Delta I_{min} (\Delta I_{min} + D_{KL, min} + \varepsilon_0)$. Since $\Delta I_{min}>0$ and $\varepsilon_0 > 0$, $\kappa_r$ is strictly positive. (See **Appendix E.2** and derivation from Theorem 32). QED
+Without a registered reset and a positive distribution-sensitive entropy bound, no universal positive $\kappa_r$ follows. ∎
 
 **7.4.7 Baseline Operational Costs vs. Interaction Costs**
 
-Distinguish:
--   **Baseline operational resources:** The internal unitary prediction dynamics (Definition 26) governed by $\hat{H}$ require baseline energy to sustain computation and coherence but do not, by themselves, mandate a Landauer cost.
--   **Interaction-specific irreversible costs:** Whenever the ‘Evolve’ process performs a logically irreversible update resolving $\Delta I > 0$, the structural entropy quantum $\varepsilon_0=\ln2$ is incurred and the physical implementation cost satisfies $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31), with additional information/feedback contributions per Theorem 32.
-
-Let $n_{erase}$ be the average number of irreversibly erased bits per cycle ($n_{erase} \ge 0$; typically $n_{erase} \ge 1$ during significant ‘Evolve’ events), and let $\tau_{cycle} \approx \tau_{min}$ be the characteristic cycle time. The minimal average power attributable to logical erasures is bounded by
+Baseline resources sustain the internal predictive dynamics but do not by themselves imply a reset cost. For a cycle containing registered resets $(P_j,R_j,q_j)$, $j=1,\ldots,n_{\mathrm{reset}}$, the reset contribution obeys
 $$
-P_{erase} \;\ge\; \frac{n_{erase}\, k_B T \varepsilon_0}{\tau_{cycle}}=\frac{n_{erase}\, k_B T \ln 2}{\tau_{cycle}},
+P_{\mathrm{reset}}
+\ge
+\frac{k_BT}{\tau_{\mathrm{cycle}}}
+\sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j).
 $$
-while the baseline power associated with maintaining the predictive unitary dynamics is encoded in $\langle\hat{H}\rangle$ via Theorem 29 and depends on the specific physical realization. The total power is the sum of baseline and interaction-specific contributions and determines the MPU’s effective stress-energy budget (Appendix B).
+The specialization $P_{\mathrm{reset}}\ge n_{\mathrm{reset}}k_BT\ln2/\tau_{\mathrm{cycle}}$ requires every reset record to be conditionally unbiased. Baseline and reset powers may be added only when their ledgers are disjoint.
 
 
 ## 7.5 The Entropy Unification Principle
 
 ### 7.5.1 The Central Result
 
-The SPAP update imposes an exact structural logical entropy $\varepsilon_0=\varepsilon_{SPAP}=\ln 2$ (Lemma J.1; Theorem 31), and any physical realization incurs an effective thermodynamic cost $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge \varepsilon_0$. The irreducible structural cost $\varepsilon_0$, not contingent dissipative overhead, is the foundational quantity from which the discrete entropic backbone of the framework derives. This section establishes that Shannon entropy, von Neumann entropy, thermodynamic entropy, and Bekenstein-Hawking entropy are derivationally connected expressions of a single underlying structure, linked through an unbroken chain of theorems.
+The SPAP update imposes an exact structural logical entropy $\varepsilon_0=\varepsilon_{SPAP}=\ln 2$ (Lemma J.1; Theorem 31), and a registered physical reset incurs $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$; a positive uniform floor requires an independent ensemble bound. The irreducible structural cost $\varepsilon_0$, not contingent dissipative overhead, is the foundational quantity from which the discrete entropic backbone of the framework derives. This section establishes that Shannon entropy, von Neumann entropy, thermodynamic entropy, and Bekenstein-Hawking entropy are derivationally connected expressions of a single underlying structure, linked through an unbroken chain of theorems.
 
-**Theorem 7.5.1 (Entropy Unification).** *At the structural SPAP/Landauer floor $\varepsilon_0=\ln2$, with implementation overhead separated as $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}$, the Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ is derivationally connected to the SPAP entropy through the chain:*
+**Theorem 7.5.1 (Entropy Unification).** *At the structural SPAP/Landauer floor $\varepsilon_0=\ln2$, with implementation overhead separated as $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$, the Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ is derivationally connected to the SPAP entropy through the chain:*
 
 $$
 \boxed{
@@ -785,40 +758,27 @@ The remainder of this section constructs and verifies this chain.
 
 ### 7.5.2 The Derivation Chain
 
-#### Stage 1: SPAP Entropy ($\varepsilon_{SPAP} = \ln 2$)
+#### Stage 1: Structural Binary Register ($\varepsilon_0=\ln2$)
 
-The Self-Referential Paradox of Accurate Prediction (Theorems 10–11) establishes that any finite-memory system engaged in self-referential prediction must implement a logically irreversible operation. The SPAP update cycle operates on a state space with two components: a prediction register $\phi \in \{0,1\}$ and an input register $p \in \{0,1\}$. The update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ maps four input configurations to two output configurations:
+On the declared minimal architecture, the verification/reset-support alphabet has two labels, so its structural log-cardinality is
+$$
+\varepsilon_0=\ln2.
+$$
+SPAP alone does not prove that all four logical pairs are reachable or that a binary record is physically erased. Definition J.1 and Lemma J.1 state the additional reachable-domain and fixed-ready-state hypotheses.
 
-$$\{(\phi=0, p=0), (\phi=0, p=1), (\phi=1, p=0), (\phi=1, p=1)\} \to \{(\phi'=0), (\phi'=1)\}$$
+#### Stage 2: Conditional Physical Reset Ledger
 
-This 4-to-2 mapping constitutes a 2-to-1 state merge (Lemma J.1, Appendix J). The system can no longer distinguish which of two prior states led to the current state. The logical SPAP entropy per update is:
-
-$$\varepsilon_{SPAP}=\ln 2.$$
-Any physical realization satisfies $\varepsilon_{\mathrm{phys}}\ge \varepsilon_0=\varepsilon_{SPAP}$ by Theorem 31.
-
-This quantity emerges from the structure of self-referential prediction: counting distinguishable states under finite-memory cyclic operation. It is the irreducible cost of a single binary decision in self-referential processing—the "atom" of entropy.
-
-#### Stage 2: Thermodynamic Entropy (The Landauer Equivalence)
-
-Landauer's principle (1961) establishes the fundamental equivalence between logical and thermodynamic entropy:
-
-> Any physical process that maps $N$ distinguishable input states to $M < N$ distinguishable output states must increase the entropy of the environment by at least $k_B \ln(N/M)$, with equality achievable in the quasi-static limit.
-
-This is not merely a constraint on physical implementations; it fixes the unit conversion between logical state reduction and thermodynamic entropy production. The underlying counting structure is the same, while the physical entropy is obtained by multiplying the dimensionless information cost by Boltzmann's constant $k_B$.
-
-For the SPAP 2-to-1 merge:
-
-$$\Delta S_{env} \geq k_B \ln 2$$
-
-The minimum heat dissipation is $Q_{min} = k_B T \ln 2$ per cycle.
-
-**The role of PPI:** The Principle of Physical Instantiation (Definition P.6.2) guarantees that every logical operation within the framework has a physical implementation. Therefore, Landauer's principle applies universally within PU: every SPAP state reduction has a thermodynamic realization. This universality extends the principle from a statement about specific physical implementations to a framework-wide bridge between logical and thermodynamic entropy accounting.
-
-**Connection:** $S_{\mathrm{thermo}}/k_B=\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Landauer equivalence, universal via PPI)
+For an actual classical reset with joint law $q(P,R)$ and all retained side information included in $R$, Theorem J.1 gives
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+=H_q(P\mid R)+\varepsilon_{\mathrm{diss}},
+\qquad \varepsilon_{\mathrm{diss}}\ge0.
+$$
+The bath heat reaches $k_BT\ln2$ only for a conditionally uniform binary record at zero excess dissipation. The total entropy production is $k_B\varepsilon_{\mathrm{diss}}$, not the bath entropy export. PPI does not replace the implementation and ensemble hypotheses of Landauer's theorem.
 
 #### Stage 3: Information-Theoretic Entropy (Reset Support → Capacity Deficit)
 
-The thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ has immediate information-theoretic consequences at the completed-cycle level. The key structural point is that the SPAP cycle resets a binary register to a fixed ready state, so one binary support factor is removed from the completed output ledger.
+The fixed-support capacity statement is independent of the physical heat ledger. The key structural point is that the SPAP cycle resets a binary register to a fixed ready state, so one binary support factor is removed from the completed output ledger.
 
 On the minimal saturating branch singled out in Theorem 23, the MPU state space has dimension $d_0 = 8$, corresponding to $K_0 = 3$ bits of complexity (Theorem 15). This yields $\ln d_0 = \ln 8 = 3\ln 2$ nats of maximum ideal support capacity per MPU before the completed reset is imposed.
 
@@ -852,11 +812,11 @@ C(\mathcal{E}_N)\le (1-p)\ln d_0 < \ln d_0.
 $$
 This strict contraction branch is compatible with, but logically separate from, the reset-support bound.
 
-**Connection:** $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Prop E.2a}} C_{\max}\le \ln d_0-\ln2$, with the additional refresh branch $\mathcal E_N=(1-p)\Psi+pT_\sigma \xrightarrow{\text{Lemma E.1}} f_{RID}<1 \xrightarrow{\text{Thm E.2}} C_{\max}<\ln d_0$.
+**Connection:** $\text{completed binary reset-support certificate}\xrightarrow{\text{Prop E.2a}} C_{\max}\le \ln d_0-\ln2$, with the additional refresh branch $\mathcal E_N=(1-p)\Psi+pT_\sigma \xrightarrow{\text{Lemma E.1}} f_{RID}<1 \xrightarrow{\text{Thm E.2}} C_{\max}<\ln d_0$.
 
 #### Stage 4: Landauer Pointer and Active Kernel Dimension
 
-The logical SPAP entropy $\varepsilon_0=\varepsilon_{SPAP}=\ln 2$ must be physically instantiated in the quantum substrate, and any realization satisfies $\varepsilon_{\mathrm{phys}}\ge \varepsilon_0$ (Theorem 31). The MPU Hilbert space decomposes by the active verification record and its orthogonal complement:
+The minimal verification architecture carries a two-label structural record. Its Hilbert realization is a separate representation statement; its registered reset heat remains distribution-sensitive under Theorem J.1. The MPU Hilbert space decomposes by the active verification record and its orthogonal complement:
 $$
 \mathcal{H}_0=\mathcal{H}_a\oplus\mathcal{H}_b.
 $$
@@ -919,13 +879,17 @@ $$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarro
 
 On the predictive-recovery MacWilliams Golay branch (Definition Z.13b.0 and Theorem Z.13b.0a), the endpoint is the extended binary Golay code with parameters $[n,k,d]=[24,12,8]$. The coding-theory uniqueness is theorem-level once the dual-asymmetry gate fixes $k=12$; it is not an unconditional consequence of $M=24$ alone.
 
-**Remark (Error Correction Interpretation).** The unified entropy admits an equivalent description as *error correction overhead*. On this branch the Golay code rate $R = k/n = 12/24 = 1/2$ means half of all interface modes are dedicated to protecting the other half against errors. The parity modes (the $n - k = 12$ redundancy bits) represent entropy in the following sense: they encode information about the signal modes that would be needed to reconstruct them after corruption.
+**Remark (Conditional Error-Correction Interpretation).** On the predictive-recovery MacWilliams branch, the $[24,12,8]$ Golay code is a classical redundancy ledger with rate $1/2$. The twelve parity coordinates support reconstruction only after a classical encoder, error model, syndrome map, and decoder have been specified.
+
+This code rate is not another expression for the SPAP entropy $\varepsilon_0=\ln2$, and it does not show that half of all physical interface modes protect the other half. Entropy capacity, redundancy, and thermodynamic export are distinct quantities. A physical identification requires a response-active encoding/channel/recovery certificate and a non-double-counted resource ledger.
+
+
 
 This interpretation complements the channel capacity view:
 - **Channel capacity view**: Entropy measures the information that can be reliably transmitted
 - **Error correction view**: Entropy measures the redundancy required for reliable transmission
 
-Both trace to the same source: the structural SPAP logical entropy $\varepsilon_0=\varepsilon_{SPAP}=\ln2$, with physical irreversibility satisfying $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ and saturating only on the overhead-free implementation branch.
+Both trace to the same source: the structural SPAP logical entropy $\varepsilon_0=\varepsilon_{SPAP}=\ln2$, with physical irreversibility satisfying $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ and saturating only on the overhead-free implementation branch.
 
 #### Stage 5: Gravitational Entropy (Channel Counting → Area Law)
 
@@ -978,7 +942,7 @@ $$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}} \quad \text{(Equation E.9)}
 | Step | Source | Statement | Role |
 |:-----|:-------|:----------|:-----|
 | 1 | Thm 10–11 | SPAP requires logically irreversible state merge | Establishes SPAP entropy |
-| 2 | Lemma J.1 | The merge costs $\varepsilon_{SPAP} = \ln 2$ nats | Quantifies SPAP entropy |
+| 2 | Lemma J.1 | The merge displaces one binary structural label, with log-cardinality $\varepsilon_0=\ln2$ | Quantifies structural register size, not ensemble-independent heat |
 | 3 | Landauer | Logical irreversibility ≡ thermodynamic entropy | The equivalence (physical content) |
 | — | PPI (Def P.6.2) | All logical operations are physically instantiated | Guarantees universality |
 | 4 | Prop E.2a | Binary completed reset gives $C_{\max}\le\ln d_0-\ln2$ | Structural support capacity deficit |
@@ -990,7 +954,7 @@ $$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}} \quad \text{(Equation E.9)}
 
 *Proof.* The detailed derivations are provided in Appendix E (Sections E.2–E.6) and Appendix J. The logical structure is:
 
-$$\text{SPAP} \xrightarrow{\text{Thm 10, 11}} \text{irreversibility} \xrightarrow{\text{Lem J.1}} \varepsilon_0=\varepsilon_{SPAP}=\ln2 \xrightarrow{\text{Landauer}} S_{\mathrm{thermo}}/k_B=\varepsilon_{\mathrm{phys}}\ge\varepsilon_0 \xrightarrow{\text{Prop E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{Thm E.3, E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\text{SPAP} \xrightarrow{\text{Thm 10, 11}} \text{irreversibility} \xrightarrow{\text{Lem J.1}} \varepsilon_0=\varepsilon_{SPAP}=\ln2 \xrightarrow{\text{Landauer}} S_{\mathrm{thermo}}/k_B=\text{completed binary reset-support certificate}\xrightarrow{\text{Prop E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{Thm E.3, E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 ∎
 
@@ -1033,19 +997,23 @@ The quantity $\varepsilon_0=\ln2$ plays two roles that are unified on the attrac
 
 | Role | Manifestation |
 |:-----|:--------------|
-| **Thermodynamic cost** | Minimum entropy production per SPAP cycle is bounded below by $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and saturates at the PCE-Attractor |
+| **Thermodynamic cost** | Minimum entropy production per SPAP cycle is bounded below by $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31) while physical saturation occurs only on the overhead-free Landauer implementation branch |
 | **Structure generator** | At $\varepsilon_0=\ln2$, the sharp retained match/mismatch active-verification record gives $a\ge2$, entropy-capacity gives $\ln a\ge\varepsilon_0$, and PPI/PCE no-surplus selection fixes $a = 2$, initiating the Golay chain (Theorem Z.1) |
 
 These are not independent facts but two aspects of the same branch-specific constraint:
 
 $$\varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm 31}} \text{thermodynamic cost} \quad \text{AND} \quad \varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm Z.1: active record + capacity}} a = 2 \xrightarrow{} M = 24 \xrightarrow{} [24,12,8]$$
 
-The structural SPAP entropy ($\varepsilon_0$) and the error-correction structure protecting that processing (Golay code) are mutually determining: the cost fixes the structure, and the structure realizes the cost.
+The structural SPAP coordinate $\varepsilon_0$ and the Golay code ledger meet in the same discrete branch-selection chain, but neither determines the other without the intervening active-record, capacity, predictive-recovery, and code-class gates. The classical code does not protect physical processing unless an encoding, error channel, syndrome map, and decoder are registered.
 
-**Corollary (Entropy Increase from Correction Failure).** The per-cycle cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) represents the *minimum* entropy production. Additional entropy increase occurs when errors exceed the correction capacity of the Golay structure. The code corrects up to $\lfloor(d-1)/2\rfloor = 3$ errors per block. When error accumulation exceeds this threshold, information is irretrievably lost, contributing entropy beyond the Landauer minimum.
+**Corollary (Conditional Decoder-Failure Entropy).** On such a registered classical binary channel, the $[24,12,8]$ code uniquely corrects error patterns of Hamming weight at most $3$. Patterns outside that radius may create residual uncertainty, but their occurrence and entropy contribution are channel-dependent. This conditional contribution is distinct from the per-cycle physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ and is not a universal second mechanism operating on every MPU cycle.
+
+
+
+**Corollary (Entropy Increase from Correction Failure).** The per-cycle cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31) represents the *minimum* entropy production. Additional entropy increase occurs when errors exceed the correction capacity of the Golay structure. The code corrects up to $\lfloor(d-1)/2\rfloor = 3$ errors per block. When error accumulation exceeds this threshold, information is irretrievably lost, contributing entropy beyond the Landauer minimum.
 
 This provides a two-mechanism picture of entropy increase:
-1. **Microscopic**: The structural floor $\varepsilon_0$ and physical cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ from logically irreversible state merging
+1. **Microscopic**: The structural floor $\varepsilon_0$ and physical cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ from logically irreversible state merging
 2. **Mesoscopic**: Correction failure when errors exceed the Golay threshold
 
 Both mechanisms operate continuously; neither alone accounts for all entropy production.

@@ -147,6 +147,45 @@ $$
 
 The area‑law coefficient $1/(4G)$ is fixed microscopically by Appendix E, while scale dependence $G(k)$ is discussed in Appendix I and Section 12.5; in $D>4$ the same Clausius/Wald logic selects the Lovelock class.
 
+**Definition X.4a (Constant Vacuum-Shift Response Quotient).** On a fixed-scale Einstein branch, decompose the matter expectation as
+$$
+T^{\mathrm{full}}_{\mu\nu}=T^{\mathrm{resp}}_{\mu\nu}-\rho_{\mathrm{vac}}g_{\mu\nu},
+\qquad
+\Lambda_{\mathrm{eff}}=\Lambda_{\mathrm{bare}}+8\pi G\rho_{\mathrm{vac}}.
+\tag{X.4a.1}
+$$
+The constant-shift equivalence relation is
+$$
+(\Lambda_{\mathrm{bare}},\rho_{\mathrm{vac}})
+\sim
+(\Lambda_{\mathrm{bare}}-8\pi Gc,\rho_{\mathrm{vac}}+c),
+\qquad c\in\mathbb R.
+\tag{X.4a.2}
+$$
+
+**Theorem X.4b (Local Thermodynamic Invariance under Constant Vacuum Shifts).** On each retained finite modular algebra or trace-class regulator, suppose the constant shift $c$ changes the modular generator only by $\alpha(c)\mathbf1$ for a real dimensionless scalar $\alpha(c)$; this is the explicit identity-response hypothesis for treating that shift as locally response-null. Then the normalized modular state and every local null-horizon Clausius flux are invariant under the quotient (X.4a.2). Consequently the local equation-of-state derivation depends only on the $\Lambda_{\mathrm{eff}}$ equivalence class, not separate values of $\Lambda_{\mathrm{bare}}$ and $\rho_{\mathrm{vac}}$, and does not determine its remaining numerical representative.
+
+*Proof.* Under the stated identity-response hypothesis, a constant modular shift obeys
+$$
+\frac{e^{-(K+\alpha(c)\mathbf1)}}{\operatorname{tr}e^{-(K+\alpha(c)\mathbf1)}}
+=
+\frac{e^{-K}}{\operatorname{tr}e^{-K}},
+\tag{X.4b.1}
+$$
+so normalized state responses are unchanged. For every null generator $k^\mu$, the constant vacuum term has zero heat flux because $g_{\mu\nu}k^\mu k^\nu=0$. The field equation becomes
+$$
+G_{\mu\nu}+\Lambda_{\mathrm{eff}}g_{\mu\nu}
+=8\pi G T^{\mathrm{resp}}_{\mu\nu},
+\tag{X.4b.2}
+$$
+which is invariant under (X.4a.2). Therefore no local normalized modular or null-flux protocol separates the two representatives. ∎
+
+**Corollary X.4c (Scope of Vacuum Decoupling).** Theorem X.4b removes only a spacetime-constant identity contribution. Curvature counterterms, state-dependent response, spacetime-varying condensates, phase-transition latent heat, and boundary/topological data remain response-active and require their own certificates. A continuum type-III AQFT statement is licensed only after the existing KMS/AQFT descent certificate carries the finite or trace-class identity-response result to the continuum. The theorem does not select the global value of $\Lambda_{\mathrm{eff}}$; Appendix U or another global branch may address that separate datum.
+
+**Relation to Corollary B.8d.2.** Corollary B.8d.2 already proves that additive metric-proportional vacuum normalization is absorbed into $\Lambda$ and records how the PCE-attractor convention can fix a representative. Definition X.4a and Theorem X.4b identify the corresponding local operational quotient and its modular/null-flux scope; Theorem F.10.12g adds the quantitative finite-cover descent.
+
+
+
 
 
 ## X.5 Open‑System Structure for ND‑RID: Schwinger–Keldysh $\Gamma_{\rm CTP}$
@@ -3246,7 +3285,7 @@ Appendix X (Section X.7) already provides a pipeline for connecting PU quantitie
 
 ### X.9.5 Predictive Obstruction Complex
 
-**Definition X.9.5a (Finite PU Obstruction Complex).** Let $\mathcal U=\{U_i\}_{i\in I}$ be a finite operational cover of a regular PU branch, where each $U_i$ denotes a local predictive chart, perspective chart, gauge frame, boundary patch, or effective-action chart. Let $\mathcal F_\varepsilon$ be an abelian sheaf of finite-cost predictive correction functionals: for each $U$, $\mathcal F_\varepsilon(U)$ is the abelian group of signed local correction functionals with finite implementation cost, equipped with the filtration that records irreversible update increments satisfying the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ for admissible positive updates. Define
+**Definition X.9.5a (Finite PU Obstruction Complex).** Let $\mathcal U=\{U_i\}_{i\in I}$ be a finite operational cover of a regular PU branch, where each $U_i$ denotes a local predictive chart, perspective chart, gauge frame, boundary patch, or effective-action chart. Let $\mathcal F_\varepsilon$ be an abelian sheaf of finite-cost predictive correction functionals: for each $U$, $\mathcal F_\varepsilon(U)$ is the abelian group of signed local correction functionals with finite implementation cost, equipped with the filtration that records irreversible update increments satisfying the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ for admissible positive updates. Define
 $$
 C^n_{\mathrm{PU}}(\mathcal U,\mathcal F_\varepsilon)
 =
@@ -3451,6 +3490,25 @@ For rectangular loops with $|\partial C|=o(\mathsf A_{\min}(C))$, the exponent i
 **Corollary X.9.5d.5 (Leech-Golay Input to the Center-Ledger Gap).** On the predictive-recovery Golay-Leech branch, Theorem Z.8c supplies a positive rootless norm gap. If the branch calibration identifies one unit of nontrivial electric center flux with the minimal rootless displacement shell and fixes the tube-channel tension by Proposition Z.8d, then the surface-cost parameter in Definition X.9.5d.3 is positive. Therefore Theorem X.9.5d.4 promotes the flux-tube confinement branch to a center-ledger area-law theorem on that calibrated branch.
 
 *Proof.* Theorem Z.8c gives $|v|_{\min}^2=4$ and no root vectors with $|v|^2=2$. Thus a nontrivial center-flux sheet has a strictly positive local norm cost on the calibrated branch. Proposition Z.8d fixes the corresponding tube-channel tension normalization. Hence $\sigma_0>0$, so Theorem X.9.5d.4 applies. ∎
+
+**Definition X.9.5d.6 (Asymptotic Color-Record Certificate).** An asymptotic color-record certificate fixes a color-frame distinguishability $D_{\mathrm{col}}(L)$, a screening length $\ell_{\mathrm{scr}}>0$, and a nonnegative residual $\mathcal R_{\mathrm{conf}}(L)$ satisfying
+$$
+D_{\mathrm{col}}(L)
+\le
+D_{\mathrm{col}}(0)e^{-L/\ell_{\mathrm{scr}}}
++\mathcal R_{\mathrm{conf}}(L),
+\qquad
+\lim_{L\to\infty}\mathcal R_{\mathrm{conf}}(L)=0.
+\tag{X.9.5d.6.1}
+$$
+The record covers retained infrared comparisons with $L/\ell_{\mathrm{scr}}\to\infty$.
+
+**Proposition X.9.5d.7 (Operational Asymptotic Color Confinement).** On an accepted certificate,
+$$
+\lim_{L\to\infty}D_{\mathrm{col}}(L)=0,
+\tag{X.9.5d.7.1}
+$$
+so asymptotic color-frame labels are PPI-null only in the registered infrared quotient. No finite-$L$ exact nullity follows, and an area law by itself does not supply the residual-decay entry.
 
 **Definition X.9.5e (Finite Defect-Filling Datum).** A finite defect-filling datum for a nonzero response obstruction class is a tuple
 $$

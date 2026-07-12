@@ -78,7 +78,7 @@ $$
 \tag{S.10}
 $$
 
-Higher available energy density raises the operational cap, while causal consistency still enforces $\text{CC} < \alpha_{CC,max}$ (Theorem 39).
+Higher available energy density raises the operational cap, while the bounded-bias branch additionally imposes $\text{CC}<\alpha_{CC,max}$ (Theorem 39), while exact causal compliance requires Theorem 39c.
 
 **Theorem S.1 (Local CPTP CC Branch: No-Signaling and Gravitational Bound).**
 
@@ -240,9 +240,9 @@ $$
 - **High resource cost** ($k_c \gg k_b K_{eff}$): $\text{CC}^* \propto k_b/k_c$, limited primarily by direct resource constraints
 - **Balanced regime**: Both effects comparable, yielding intermediate optimal CC
 
-## S.5 Schwarzschild Interpretation of the CC Causality Bound
+## S.5 Schwarzschild Interpretation of the CC Endpoint-Bias Bound
 
-The causality constraint $\text{CC} < 0.5$ (Theorem 39) admits a gravitational interpretation that complements the information-theoretic derivation. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The total energy associated with maintaining this context over timescale $\tau_c$ is:
+The endpoint-bias constraint $\text{CC}<0.5$ (Theorem 39) is weaker than exact causality and admits a separate gravitational interpretation; causal compliance still requires Theorem 39c. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The total energy associated with maintaining this context over timescale $\tau_c$ is:
 $$
 E_{context} = P_{context} \tau_c
 \tag{S.28}
@@ -272,7 +272,7 @@ where $R_S = (3V_S/4\pi)^{1/3}$ is the characteristic radius of the aggregate. A
 1. **Information-theoretic constraint** (Theorem 39): Prevents deterministic FTL signaling by ensuring $|\Delta P| < 0.5$
 2. **Gravitational collapse limit**: Prevents black hole formation by ensuring $r_s < R_S$ remains satisfiable
 
-Operational causality (Theorem 39) fixes the universal ceiling $\alpha_{CC,\max}<0.5$. Independently, for any finite system the gravitational constraints impose additional system-dependent ceilings strictly below $\alpha$ because $P_{context}(\text{CC})$ diverges as $\text{CC}\to\alpha$. To state the perturbative requirements explicitly, consider the weak-field validity condition:
+The endpoint-bias theorem (Theorem 39) fixes the universal bounded-branch ceiling $\alpha_{CC,\max}<0.5$; operational causality separately requires exact pre-lightcone context independence by Theorem 39c. Independently, for any finite system the gravitational constraints impose additional system-dependent ceilings strictly below $\alpha$ because $P_{context}(\text{CC})$ diverges as $\text{CC}\to\alpha$. To state the perturbative requirements explicitly, consider the weak-field validity condition:
 $$
 \frac{\Phi_{context}}{c^2} = \frac{G M_{context}}{c^2 R_S} \ll 1
 \tag{S.32}
@@ -288,7 +288,7 @@ Together with collapse avoidance $r_s<R_S$ (Equation S.31), these conditions enf
 
 **Theorem S.2 (Unified Bounded-Bias and Gravity Ceiling).**
 
-On the bounded-bias CC branch of Theorem 39, operational causality at the deterministic endpoint level is enforced by
+On the bounded-bias CC branch of Theorem 39, operational causality at the deterministic endpoOn the bounded-bias CC branch of Theorem 39, deterministic endpoint forcing is excluded by
 $$
 \alpha_{CC,\max}<0.5.
 $$
@@ -306,7 +306,7 @@ $$
 $$
 with $\alpha_{CC,\max}<0.5$ on the bounded-bias branch.
 
-*Proof.* Theorem 39 proves that $\alpha_{CC,\max}<0.5$ is a sufficient branch gate excluding deterministic endpoint forcing for arbitrary binary coarse-grainings. It is the endpoint-causality gate for the bounded-bias CC branch.
+*Proof.* Theorem 39 proves that $\alpha_{CC,\max}<0.5$ is a sufficient branch gate excluding deterministic endpoint forcing for arbitrary binary coarse-grainings. It is the endpoint-forcing gate for the bounded-bias CC branch.
 
 For the gravitational-collapse ceiling, use Equations S.30–S.31:
 $$
@@ -365,7 +365,7 @@ Combining the independent endpoint, collapse, and weak-field requirements gives 
 **Corollary S.2.1 (No arbitrary CC enhancement on the bounded-bias branch).**
 
 On the bounded-bias CC branch, no finite system can increase operational CC without encountering at least one of the following gates:
-- the endpoint-causality gate $\alpha_{CC,\max}<0.5$ from Theorem 39;
+- the endpoint-forcing gate $\alpha_{CC,\max}<0.5$ from Theorem 39;
 - the collapse-avoidance ceiling $\mathrm{CC}<\mathrm{CC}_{BH}$;
 - the weak-field perturbative ceiling $\mathrm{CC}\le\mathrm{CC}_{WF}$.
 
@@ -512,6 +512,25 @@ Substituting establishes the third inequality. $\square$
 - **Pure EM prediction** (Appendix L): Non-local effects scale with radiated field strength $\propto P_{EM}$
 - **Gravitational contribution** (this section): Non-local effects scale with total energy density $\propto P_{context}^2$
 - **Test protocol:** Vary the ratio of radiated power to total power while maintaining constant CC capability; gravitational mechanism predicts correlation with total energy budget, EM mechanism predicts correlation with radiated power.
+
+**Definition S.6.1a (Causally Implemented Metric-Phase Entanglement Certificate).** Fix the input $|+\rangle_A|+\rangle_B$, diagonal phase intervals, a causal mediator implementation, an ideal controlled-phase output $\sigma_\Phi$, and an actual output $\rho_{\mathrm{out}}$ satisfying
+$$
+\|\rho_{\mathrm{out}}-\sigma_\Phi\|_1\le\epsilon_N.
+\tag{S.6.1a.1}
+$$
+For $I_\Phi=I_{00}+I_{11}-I_{01}-I_{10}$ require
+$$
+\frac12\inf_{\Phi\in I_\Phi}|\sin(\Phi/2)|-\epsilon_N>0.
+\tag{S.6.1a.2}
+$$
+
+**Proposition S.6.1b (Robust Controlled-Phase Entanglement Witness).** The actual output has positive negativity. On the ideal branch,
+$$
+\mathcal N(\sigma_\Phi)=\frac12|\sin(\Phi/2)|.
+\tag{S.6.1b.1}
+$$
+
+*Proof.* The ideal two-qubit concurrence is $|\sin(\Phi/2)|$ and pure-state negativity is half of it. Partial-transpose trace norm is Lipschitz under the recorded trace-distance convention, so $|\mathcal N(\rho_{\mathrm{out}})-\mathcal N(\sigma_\Phi)|\le\epsilon_N$; (S.6.1a.2) gives positivity. ∎
 
 ## S.7 Detailed Gravitational Decoherence Mechanism
 
@@ -883,7 +902,7 @@ To distinguish electromagnetic from gravitational CC mechanisms, the following d
 
 Several framework elements require both appendices for complete understanding:
 
-**1. CC causality bound ($\alpha_{CC,\max} < 0.5$)**
+**1. CC deterministic endpoint-forcing bound ($\alpha_{CC,\max} < 0.5$)**
 - Information-theoretic derivation: Theorem 39 (Section 10)
 - Gravitational interpretation: Section S.5 (this appendix)
 - Both perspectives necessary; neither sufficient alone
@@ -920,7 +939,7 @@ This appendix has established the gravitational self-limitation mechanism for Co
 
 **Key results:**
 
-1. **Power cost scaling** (S.1): $P_{context} = A[\text{CC}/(\alpha - \text{CC})]^2$, diverging as CC approaches causality bound
+1. **Power cost scaling** (S.1): $P_{context} = A[\text{CC}/(\alpha - \text{CC})]^2$, diverging as CC approaches deterministic endpoint-forcing bound
 
 2. **Stress-energy contribution** (S.2): Context state contributes $\Delta T_{\mu\nu}^{(CC)}$ to total MPU stress-energy, properly accounting for all energy flows
 
@@ -943,4 +962,6 @@ This appendix has established the gravitational self-limitation mechanism for Co
 - Causality is preserved
 
 This self-limiting mechanism, operating alongside the electromagnetic dominance established in Appendix L, ensures CC remains a bounded, physically consistent capability that enhances predictive performance without violating fundamental constraints. The framework's unity—from awareness as fundamental (Appendix P) through MPU dynamics (Section 7) to spacetime emergence (Sections 11-12) to CC capability (Section 9) and finally to this gravitational feedback—demonstrates the deep consistency of deriving physical law from predictive optimization under thermodynamic limits.
+
+**Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.
 

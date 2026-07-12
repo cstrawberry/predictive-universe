@@ -399,7 +399,7 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
 *   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The $C^2$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p > 1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
 *   **(A2) Mobility Bounds:** The mobility matrix $\eta(x)$ is symmetric positive definite, bounded, and Lipschitz on $\mathcal{X}_{adm}$: there exist constants $0<\eta_{\min}\le \eta_{\max}<\infty$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$,
-$\eta_{\min}\|v\|^2 \le v^T\eta(x)v \le \eta_{\max}\|v\|^2$, and $\|\eta(x)-\eta(y)\|\le L_\eta\|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $\eta$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
+$\eta_{\min}\|v\|^2 \le v^T\eta(x)v \le \eta_{\max}\|v\|^2$, and $\|\eta(x)-\eta(y)\|\le L_\eta\|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $\eta$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
 *   **(A3) Diffusion Matrix Bounds:** The diffusion matrix $D(x)$ is bounded and uniformly elliptic. Specifically, there exist constants $0<d_{\min}\le d_{\max}<\infty$ such that for all $x$ and all vectors $v$, $d_{\min}\|v\|^2 \le v^T D(x) v \le d_{\max}\|v\|^2$. *Physical Justification:* In PU, diffusion models aggregate microscopic stochasticity of ND-RID routing and environmental forcing. Uniform bounds correspond to finite-temperature noise with bounded per-step fluctuations set by finite update rates and capacity constraints (e.g., bounded degree $\Delta_{max}$ and minimal cycle time $\tau_{min}$), preventing arbitrarily large instantaneous kicks while ensuring ergodic exploration of admissible configurations.
 *   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
 *   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
@@ -672,22 +672,11 @@ Because $S$ is maximal, it is also an $\varepsilon$-net, so the same bound contr
 
 So every bounded-action sequence has a pointed measured Gromov-Hausdorff convergent subsequence. This is exactly equicoercivity. ∎
 
-**Theorem D.6 (Gamma-limit of discrete predictive action).**
-Let $\{(\mathcal G_h,\mu_h)\}_{h\downarrow0}$ be a family of weighted graphs (or triangulations) with mesh $h\to0$, equipped with a discrete curvature proxy and an MPU (matter) term. Let $\mathcal F_h=\mathcal F_h^{EH}+\mathcal F_h^{MPU}$ denote the corresponding discrete predictive action. Suppose:
-
-(i) **Equicoercivity:** holds by Lemma D.6a.
-
-(ii) **Locality & consistency:** Along any convergent sequence $(\mathcal G_h,\mu_h)\to(M,g)$ in that topology, the discrete curvature term converges to the Einstein-Hilbert term with scalar curvature $R_g$ (e.g., via Regge convergence or via the Ollivier-to-continuum estimator of Remark C.3.3a), and the MPU term converges in $L^1_{\mathrm{loc}}$ to $\int_M \mathcal L_{MPU}(g,\phi)\sqrt{-g}\,d^4x$.
-
-(iii) **Area-law scaling:** The horizon normalization is fixed by the thermodynamic area law (Appendix E), yielding the emergent $G$ below.
-
-Then $\mathcal F_h \ \xrightarrow{\Gamma} \ \mathcal F$ in $L^1_{\mathrm{loc}}$, where
-
+**Theorem D.6 (Conditional Gamma-Convergence Fundamental Theorem).** Let the varying-space realization be metrizable, let $\mathcal F_h$ and $\mathcal F$ be proper extended-real functionals, and assume $\inf_h\inf\mathcal F_h> -\infty$. Assume the sequential Gamma-liminf and recovery inequalities and equicoercivity, and assume $\mathcal F(x_0)<\infty$ for at least one $x_0$. Then
 $$
-\mathcal F[g,\phi]=\frac{c^3}{16\pi G}\int_M R_g\,\sqrt{-g}\,d^4x \ +\ \int_M \mathcal L_{MPU}(g,\phi)\,\sqrt{-g}\,d^4x,
+\mathcal F_h\xrightarrow{\Gamma}\mathcal F,\qquad\lim_{h\downarrow0}\inf\mathcal F_h=\min\mathcal F.
 $$
-
-and minimizers of $\mathcal F_h$ converge (up to subsequences) to minimizers of $\mathcal F$ (the Einstein-Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the pointed Gromov-Hausdorff sense (Section 11). This is an action-level $\Gamma$-limit statement: it identifies the limit variational functional but does not by itself imply Mosco convergence of the rescaled random-walk Dirichlet forms, quadraticity of the limit Cheeger energy, or the Euclidean-rigidity conclusions used later on the infinitesimally Hilbertian branch of Section 11.4.
+Every sequence satisfying $\mathcal F_h(x_h)-\inf\mathcal F_h\to0$ has convergent subsequences, and every cluster point minimizes $\mathcal F$. Identification of $\mathcal F$ with a displayed continuum action requires separate liminf and recovery proofs; an unconstrained Lorentzian Einstein--Hilbert expression is not generally coercive or bounded below. ∎
 
 **D.6bis Cell-Averaged Closure of the Variational Limit**
 
@@ -740,7 +729,7 @@ with $\Lambda$ reappearing as an integration constant in §12.
 
 *Proof.* Corollary D.6c.1 provides the generic limit. Theorem 12.1a fixes $\alpha,\beta$ uniquely under diffeomorphism invariance, second-order EOM, and Wald consistency. The minimizer statement is inherited from equicoercivity (Lemma D.6a) and $\Gamma$-convergence. ∎
 
-**Theorem D.6e (Mosco–Cheeger Closure of the Spatial Sector).** Let $(X_n,d_n,\mu_n)$ be the rescaled MPU network metric-measure spaces on the geometric branch, and let the rescaled propagation-cost Dirichlet forms be
+**Theorem D.6e (Conditional Mosco–Cheeger Closure of the Spatial Sector).** Let $(X_n,d_n,\mu_n)$ be the rescaled MPU network metric-measure spaces on the geometric branch, and let the rescaled propagation-cost Dirichlet forms be
 $$
 \mathcal E_n(f)
 =
@@ -843,7 +832,7 @@ $$
 \inf_{\mathcal C\in\mathcal M_n}\mathfrak D_n(\mathcal C).
 \tag{D.6e.6}
 $$
-Assume the $D_4$ branch of Theorem C.6e supplies a competitor sequence in $\mathcal M_n$ with $\mathfrak d_n^*\to0$. Then every global minimizer $\mathcal C_n^*$ of $V_n^{\mathrm{cont}}$ satisfies
+Assume an independent continuum-bridge certificate supplies a competitor sequence in $\mathcal M_n$ with $\mathfrak d_n^*\to0$; Theorem C.6e supplies only the fixed-trace shell-isotropy and shell-tensor rank statement. Then every global minimizer $\mathcal C_n^*$ of $V_n^{\mathrm{cont}}$ satisfies
 $$
 \mathfrak D_n(\mathcal C_n^*)
 \le
@@ -860,13 +849,15 @@ $$
 C_{n,\varepsilon}e^{-c_{n,\varepsilon}/\theta}.
 \tag{D.6e.8}
 $$
-For every selected minimizing sequence with $\mathfrak D_n\to0$, after passage to a subsequence, $\mathcal E_n$ Mosco-converges to a strongly local regular Dirichlet form
+Assume, relative to the declared measured-Gromov--Hausdorff identifications, that weak convergence $f_n\rightharpoonup f$ implies
 $$
-\mathcal E_\infty(f)
-=
-\int_X |\nabla f|_h^2\,d\mu
+\mathcal E_\infty(f)\le\liminf_{n\to\infty}\mathcal E_n(f_n),
 $$
-on the measured-GH limit $(X,d,\mu)$, and this form is the Cheeger energy of $(X,d,\mu)$.
+and that every $f$ admits $f_n\to f$ strongly with
+$$
+\limsup_{n\to\infty}\mathcal E_n(f_n)\le\mathcal E_\infty(f).
+$$
+Assume also that $\mathcal E_\infty$ is the closed quadratic strongly local regular Cheeger energy. Then $\mathcal E_n$ Mosco-converges to $\mathcal E_\infty$ relative to those identifications. The defect condition $\mathfrak D_n\to0$ alone implies neither Mosco inequality nor the candidate-form identification.
 
 *Proof.* Each defect in (D.6e.1)–(D.6e.4) is nonnegative and finite on the normalized finite-resolution cores. Let $\mathcal Y_n\in\mathcal M_n$ be a competitor with $\mathfrak D_n(\mathcal Y_n)$ arbitrarily close to $\mathfrak d_n^*$. Since $\mathcal C_n^*$ minimizes $V_n^{\mathrm{cont}}$ and $V_n(\mathcal C_n^*)\ge V_n(\mathcal Y_n)=\min V_n$,
 $$
@@ -889,22 +880,7 @@ $$
 $$
 is separated from the global minimizer set of $V_n^{\mathrm{cont}}$ by a positive potential gap $c_{n,\varepsilon}$. The same Laplace estimate used in Theorem D.5 gives (D.6e.8).
 
-Now take a selected minimizing sequence with $\mathfrak D_n\to0$. Theorem C.6 supplies uniform local doubling and local $(1,2)$-Poincaré control on the selected bounded-geometry branch, while Theorem C.6e supplies asymptotic $D_4$ shell isotropy, fixed-radius four-dimensional noncollapse, and uniform locality. The convergence $\mathfrak C_n\to0$ gives a dense finite Lipschitz core for the action-level spatial sector. The convergence $\mathfrak R_n\to0$ gives both interpolation consistency and recovery sequences on that core.
-
-For the Mosco liminf inequality, let $f_n\to f$ in $L^2$ along the measured-GH realization. The discrete carré-du-champ measures are tight by uniform locality and the doubling/Poincaré bounds. Lower semicontinuity of convex quadratic forms gives
-$$
-\mathcal E_\infty(f)\le\liminf_{n\to\infty}\mathcal E_n(f_n).
-$$
-For the Mosco limsup inequality, take $f$ in the dense Lipschitz core and set $f_n=E_nf$. Since $\mathfrak R_n\to0$,
-$$
-I_nf_n\to f
-\quad\text{in }L^2,
-\qquad
-\mathcal E_n(f_n)\to\mathcal E_\infty^{\mathrm{cand}}(f).
-$$
-Density of the core and the Markov property extend the recovery statement to the full form domain. Hence $\mathcal E_n$ Mosco-converges to $\mathcal E_\infty=\mathcal E_\infty^{\mathrm{cand}}$.
-
-The odd $D_4$ shell moments vanish and the second moments converge to a positive definite quadratic tensor by Theorem C.6e. Therefore the limit form has no first-order drift term and its second-order part is represented by a measurable cotangent metric $h$. Strong locality follows from uniform locality, because all macroscopic jump contributions vanish in the limit. Regularity follows from the dense Lipschitz core and the regularity of the discrete Markov forms. On a doubling PI space, the quadratic strongly local relaxation of the slope energy is the Cheeger energy; hence $\mathcal E_\infty$ is the Cheeger energy of $(X,d,\mu)$. ∎
+The defect estimates select a candidate branch but do not prove the two Mosco inequalities. Under the additional liminf and recovery hypotheses above, Mosco convergence follows by definition; the separately assumed candidate-form identification gives the strongly local regular Cheeger-energy conclusion. ∎
 
 **Proposition D.6f (Sharp Global-Core Competitor Condition).** In Theorem D.6e, the weakest condition that can force asymptotic defect removal while selection remains inside the global core-minimum class is
 $$
@@ -1419,7 +1395,7 @@ Solving this linear differential inequality yields (D.16). The asymptotic noise 
 
 **Rapid Equilibration:** The rate constant $\underline{\lambda}$ is the local "stiffness" of the complexity potential well near the optimum. DSC (Theorem 22) ensures this is strictly positive and typically $\mathcal{O}(1)$ in natural units, yielding convergence timescales $\tau_{conv} \sim 1/(\underline{\lambda}\,\eta_{adapt})$ that are rapid compared to environmental evolution timescales.
 
-**Noise Floor:** The residual fluctuations $\sigma_{eff}$ arise from the underlying ND-RID irreversibility ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31). The noise floor is typically small:
+**Noise Floor:** The residual fluctuations $\sigma_{eff}$ arise from the underlying ND-RID irreversibility ($\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$, Theorem 31). The noise floor is typically small:
 
 $$
 \frac{\sigma_{eff}^2}{\underline{\lambda}\,\eta_{adapt}} \ll C^\star
@@ -2042,13 +2018,21 @@ $$
 $$
 Dividing by $\langle J_T\rangle^2$ proves (D.8.7.9), and rearranging proves (D.8.7.10). Since every reported PU record current is, by construction, a current on the selected commutative record quotient, the same inequality applies to the listed record-current channels. ∎
 
-**Corollary D.8.7g (Quantum Protocols Report TUR-Bounded Classical Records).** Let a noncommutative finite protocol be read out through the Blackwell-PCE selected record channel
+**Corollary D.8.7g (TUR Gate for a Classical Readout).** Let a noncommutative finite protocol be read out through a channel
 $$
 \mathcal M:\mathfrak A\to C(X).
 $$
-Any operationally reported current is the classical current $J_T$ on $X$ and therefore obeys (D.8.7.9). Coherent pre-readout dynamics may change the induced rates $k(x,y)$ and the entropy production $\Sigma_T$, but it cannot license a reported classical current that violates the bound computed from its own stationary record statistics.
+The reported current obeys (D.8.7.9) only when the induced output record independently satisfies Definition D.8.7e: it is a finite irreducible stationary continuous-time Markov jump process and the observable is the registered antisymmetric jump current. Commutativity of $C(X)$ alone implies neither Markovianity nor stationarity.
 
-*Proof.* The output of $\mathcal M$ is the commutative sufficient record algebra selected by Theorem M.6.11b. Hence the reported current is a function of the classical jump record on $X$. Applying Theorem D.8.7f to that induced finite Markov quotient gives (D.8.7.9). Any coherent dynamics before $\mathcal M$ only changes the effective classical transition statistics seen by the record channel; once those statistics and their entropy production are fixed, the Markov current bound applies. ∎
+*Proof.* The independent Definition D.8.7e entry supplies exactly the hypotheses of Theorem D.8.7f; apply that theorem. Without the entry, no TUR conclusion follows. ∎
+
+**Conditional reciprocity identity.** If $\Psi\in C^2$ on an open coordinate domain and $L_{ab}:=\partial_a\partial_b\Psi$, then $L_{ab}=L_{ba}$. A physical response matrix inherits this symmetry only after a bridge identifies it with that Hessian while fixing constraints, contact terms, frame, and time-reversal parity. In time-reversal-odd backgrounds the relevant relation may be Onsager-Casimir rather than simple symmetry.
+
+**Conditional reciprocity identity.** Let $\Psi(\lambda_1,\ldots,\lambda_n)$ be one scalar value function on an open coordinate domain, with $\Psi\in C^2$, and define the response matrix $L_{ab}:=\partial_a\partial_b\Psi$. Then
+$$
+L_{ab}=L_{ba}
+$$
+by equality of mixed partial derivatives. A physical response matrix inherits this symmetry only after an accepted bridge identifies its entries with this Hessian in fixed coordinates and controls constraints, contact terms, frame choices, and time-reversal parity. In magnetic or other time-reversal-odd backgrounds the relevant relation may instead be Onsager--Casimir reciprocity. Detailed balance does not eliminate every antisymmetric response, and this identity does not make unrelated constants KKT multipliers of one optimization problem.
 
 ### D.8.8 Tropical Predictive Action
 
@@ -2214,6 +2198,60 @@ $$
 modulo response equivalence.
 
 *Proof.* Induct on $j$. For $j=1$, Theorem D.8.9b gives a unique selected quotient class $q_{S_1}^*$. Assume $q_{S_1}^*,\ldots,q_{S_{j-1}}^*$ are uniquely fixed. The certificate for $S_j$ is evaluated at these fixed parent data; its overlap equations are satisfied by hypothesis, and Theorem D.8.9b gives a unique selected quotient class $q_{S_j}^*$. The dependency graph is acyclic, so no later sector can alter an earlier parent value; later sectors may only fail an overlap equation, in which case the product branch is inadmissible, or satisfy it, in which case the already selected value remains fixed. After $N$ steps the tuple is unique. ∎
+
+**Theorem D.8.9c.1 (Affine Cycle-Consistency Audit for Selected Sector Overlaps).** Let $G=(V,E)$ be a connected finite comparison graph with $|V|\ge2$, and let $y\in\mathcal H^E$ be the overlap record obtained after the sector representatives have already been selected by the existing acyclic certificate stack and transported into one finite-dimensional real inner-product space $\mathcal H$. Assume the overlap transports are flat and gauge-trivialized. The audit asks whether there are common-chart vertex coordinates $q_i$ such that an oriented edge $e:i\to j$ obeys
+$$
+q_j-q_i=y_e.
+\tag{D.8.9c.1.1}
+$$
+Let
+$$
+D:\mathcal H^V\to\mathcal H^E,
+\qquad
+(Dq)_e=q_j-q_i,
+\qquad
+\Delta=D^*D.
+\tag{D.8.9c.1.2}
+$$
+Then:
+
+1. a global glued tuple exists if and only if
+$$
+y\in\operatorname{im}D
+\quad\Longleftrightarrow\quad
+P_{\ker D^*}y=0
+\quad\Longleftrightarrow\quad
+\sum_{e\in\gamma}\operatorname{sgn}_\gamma(e)y_e=0
+\tag{D.8.9c.1.3}
+$$
+for every cycle $\gamma$; checking a cycle basis is sufficient;
+2. solutions are unique up to one global translation in $\mathcal H$; this translation must be response-null or fixed by an accepted root datum, and a root or mean-zero gauge then makes the audit solution unique;
+3. every noisy overlap record has the orthogonal decomposition
+$$
+y=y_{ex}+h,
+\qquad
+y_{ex}=D\Delta^+D^*y,
+\qquad
+h=(I-D\Delta^+D^*)y\in\ker D^*,
+\tag{D.8.9c.1.4}
+$$
+and $\|h\|$ is exactly the least attainable overlap residual;
+4. the mean-zero least-squares correction $q_*=\Delta^+D^*y$ obeys
+$$
+\|q_*\|
+\le
+\frac{\|y_{ex}\|}{\sqrt{\lambda_{gap}(\Delta)}},
+\tag{D.8.9c.1.5}
+$$
+where $\lambda_{gap}(\Delta):=\min(\operatorname{spec}\Delta\setminus\{0\})$, equivalently the scalar graph-Laplacian $\lambda_2$.
+
+*Proof.* The finite graph Hodge decomposition gives
+$$
+\mathcal H^E=\operatorname{im}D\oplus\ker D^*.
+$$
+Exactness is therefore equivalent to vanishing harmonic/cycle projection, which is equivalent to zero signed sum on a cycle basis. Connectedness gives $\ker D$ as the constant vertex fields, proving uniqueness modulo global translation. Orthogonal projection onto $\operatorname{im}D$ gives (D.8.9c.1.4) and its least-squares interpretation. On the orthogonal complement of the constant vertex fields, $\Delta\succeq\lambda_{gap}(\Delta)I$; singular-value inversion gives (D.8.9c.1.5). ∎
+
+**Remark D.8.9c.2 (Scope: Audit, Not Cyclic Selection).** Theorem D.8.9c.1 audits compatibility only after local representatives have been selected. It does not remove the acyclicity requirement on PU's parent-dependency graph and does not prove a fixed point for cyclic parent-dependent certificate selection. Non-flat or nonabelian overlap maps require twisted cohomology or ordered holonomy; applying the ordinary incidence formulas there is not licensed.
 
 **Corollary D.8.9d (Global Strict-Certificate Closure Criterion).** A PU branch is globally closed at theorem level by the strict-certificate route when every live sector in its dependency graph has a strict PPI/PCE certificate with theorem-level entries and all overlap maps commute. If a sector lacks one finite entry required by this route, then by Convention P.14.1a and Corollary P.14.1g the branch keeps the weakest unresolved status of that entry until an equivalent theorem-level record is supplied.
 

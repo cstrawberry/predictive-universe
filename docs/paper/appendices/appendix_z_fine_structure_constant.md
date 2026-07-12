@@ -46,7 +46,7 @@ $$
 }
 $$
 
-where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $\operatorname{sinc}(u)=\sin(u)/u$. The second-order correction is derived analytically in Section Z.27 from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). The exact $SU(2)$ transport factor is the sinc factor. Its third-order truncation is
+where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $\operatorname{sinc}(u)=\sin(u)/u$. The second-order correction is derived analytically in Section Z.27 from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the normalized Chern-flux branch over the generator of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). The exact $SU(2)$ transport factor is the sinc factor. Its third-order truncation is
 $$
 \operatorname{sinc}(u^*)=1-\frac{u^{*2}}{6}+O(u^{*4}),
 $$
@@ -82,19 +82,13 @@ External path (Section G.8.2): inverse-square orbital stability (Bertrand), anom
 
 ### Z.1.5 The Grassmannian as Geometric Arena
 
-The complex Grassmannian $\text{Gr}(2,8)$ serves as the geometric arena from which Standard Model parameters emerge. This manifold is the orbit of the PCE-Attractor state $\rho_0 = \frac{1}{2}I_2 \oplus 0_6$ under unitary conjugation (Theorem Z.6.3a):
-
-$$\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong U(8)/[U(2) \times U(6)] \cong \text{Gr}(2,8)$$
-
-| Application | Grassmannian Role | Reference |
-|:------------|:------------------|:----------|
-| PCE-Attractor orbit | Equilibrium manifold $\mathcal{O}_{\rho_0} \cong \mathrm{Gr}(2,8)$ | Definition 15a, Theorem Z.6.3a |
-| Fine structure constant | Bures metric curvature determines $\alpha$ | Theorem Z.26 |
-| Mass hierarchies | Geodesic distances in $E_8$ embedding give $Y_{ij}$ | Theorem T.39 |
-| CKM/PMNS mixing | Berry holonomy around flavor loops | Theorems T.53–T.56 |
-| Generation structure | Topological sectors from $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ | Theorem R.3.4 |
-| CP violation | Holonomy phases from sector mismatch | Theorem T.56 |
-| Strong CP solution | σ-invariance plus positive-orientation real-Yukawa branch on the real locus | Thm K.6.6, Thm K.6.9, Thm K.6.9a, Cor K.6.9a.1, Cor K.6.5, Thm K.6.11 |
+The orbit of the rank-two reference state is the mathematical homogeneous space
+$$
+\mathcal O_{\rho_0}
+\cong U(8)/[U(2)\times U(6)]
+\cong \operatorname{Gr}(2,8).
+$$
+This orbit fixes a candidate carrier and its dimensions. It does not, by itself, select a physical Hamiltonian, an $E_8$ embedding, flavor labels, response functions, or Standard Model parameters.
 
 **Proposition Z.1.5 (Grassmannian Parameter Emergence).** *The Standard Model parameters emerge from geometric structures on $\text{Gr}(2,8)$ and its associated lattice embeddings:*
 - *Geodesic distances on $\text{Gr}(2,8)$ with $E_8$ metric → mass ratios*
@@ -119,7 +113,9 @@ The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ 
 
 ### Z.2.1 Foundational Constants Recap
 - **Hilbert space dimension:** Theorem 23 gives $d_0 \ge 8$ for $K_0 = 3$; on the minimal PCE branch selected in Theorem Z.2 one has $d_0 = 8$.
-- **Irreducible ND-RID cost:** $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ nats (Theorem 31, proved in Appendix J as Theorem J.1); at the PCE-Attractor (Definition 15a) the bound is saturated, so $\varepsilon_0=\ln2$ on that branch.
+- **Irreducible ND-RID cost:** $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ nats (Theorem 31, proved in Appendix J as Theorem J.1); at the PCE-Attractor Definition 15a uses the structural reference $\varepsilon_0=\ln2$; physical saturation $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)$ requires a separately registered overhead-free Landauer implementation.
+
+
 - **Horizon constant:** $K_0 = 3$ bits (Theorem 15)
 
 ### Z.2.2 The Principle of Physical Instantiation (PPI)
@@ -128,7 +124,9 @@ The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ 
 
 ### Z.2.3 Physical Instantiation of the Irreducible Cost
 
-**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** The SPAP cycle necessarily implements a 2-to-1 logical merge (Lemma Z.2), so any physical implementation satisfies the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J). The active verification kernel carries the sharp retained match/mismatch record of the SPAP comparison. At the PCE-Attractor (Definition 15a), PCE selects the minimal saturating implementation, and the active kernel dimension is fixed uniquely:
+On the PCE-reference minimal branch, the sharp record, entropy-capacity gate, and no-surplus criterion fix the active-kernel dimension; no physical Landauer equality is assumed:
+
+
 $$
 a = 2
 $$
@@ -137,9 +135,11 @@ $$
 
 **Step 1 (Irreducible entropy cost).** By Landauer's principle, a logically irreversible operation erasing one bit of information requires entropy production of at least $\ln2$ nats. The SPAP cycle (Theorem 10) necessarily performs a 2-to-1 state merge (Lemma Z.2), so the per-cycle thermodynamic cost satisfies
 $$
-\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2.
+\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}.
 $$
-At the PCE-Attractor, PCE selects the minimal saturating structural realization, hence the structural quotient used by the discrete branch is $\varepsilon_0=\ln2$.
+At The structural quotient is exactly $\varepsilon_0=\ln2$. PCE uses this reference in the discrete no-surplus comparison; it does not prove $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)$.
+
+
 
 **Step 2 (Active verification record).** The active kernel is the Hilbert carrier of the retained SPAP verification record, not an arbitrary yes/no effect. A faithful comparison has two possible sharp retained values, match and mismatch. On the Hilbert-carrier branch, two sharp retained alternatives require two orthogonal rays. Hence
 $$
@@ -160,7 +160,9 @@ This also gives $a\ge2$ for integer Hilbert dimension $a$.
 
 **Remark: Axiomatic Status.** This derivation uses exactly:
 - SPAP (Theorem 10): requires a 2-to-1 merge.
-- Landauer's principle (Physics): implies $\varepsilon_{\mathrm{phys}}\ge\ln2$ with structural floor $\varepsilon_0=\ln2$ on the PCE-Attractor.
+- Landauer's principle (Physics): implies $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$; equality requires the overhead-free implementation branch and is not selected by PCE alone.
+
+
 - The active verification record: requires two sharp retained alternatives and hence $a\ge2$ on the Hilbert-carrier branch.
 - PPI (Definition P.6.2): requires finite physical instantiation of the structural entropy quotient by the retained active kernel.
 - Entropy capacity bound: gives $S(\rho)\le \ln a$.
@@ -172,12 +174,14 @@ Thus the result $a = 2$ is a theorem-level minimal-branch conclusion, not a free
 
 The complete chain to $M = 24$ with no continuous fit parameters is:
 
-$$\boxed{\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow[\text{Thm Z.2}]{d_0 = 8 \text{ on the minimal PCE branch}} M = 2ab = 24}$$
+$$\boxed{\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0) \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow[\text{Thm Z.2}]{d_0 = 8 \text{ on the minimal PCE branch}} M = 2ab = 24}$$
 
 | Step | Result | Justification | Status |
 |------|--------|---------------|--------|
-| 1 | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ | SPAP logical merge + Landauer principle | Theorem 31 |
-| 2 | $\varepsilon_0=\ln2$ on the attractor branch | PCE-attractor saturation | Definition 15a |
+| 1 | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ | SPAP logical merge + Landauer principle | Theorem 31 |
+| 2 | Structural reference $\varepsilon_0=\ln2$ | SPAP merge quotient; physical equality requires overhead-free implementation | Theorem 31; Definition 15a |
+
+
 | 3 | $d_0 \ge 8$ | Capacity-dimension link for $K_0=3$ | Theorem 23 |
 | 4 | $d_0 = 8$ on the minimal PCE branch | SPAP tensor realization + PCE exclusion of larger active support | Theorem Z.2 |
 | 5 | $a = 2$ | Sharp match/mismatch record $a\ge2$ + admissibility $\ln a \ge \varepsilon_0$ + PPI/PCE no-surplus optimality | Theorem Z.1 |
@@ -194,7 +198,9 @@ $$\rho_0 = \frac{1}{a} I_a \oplus 0_b = \frac{1}{2} I_2 \oplus 0_6$$
 
 This state has active-subspace entropy
 $$S(\rho_0|_A)=\ln a=\ln 2.$$
-At the PCE-Attractor the dissipation bound is saturated, $\varepsilon_0=\ln2$, so the entropy capacity of the active kernel matches the logically required cost with no excess:
+At the PCE reference, the active-state entropy equals the structural quotient $\varepsilon_0=\ln2$. This is a state-counting identity, not the physical equality $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)$:
+
+
 $$\ln a = \varepsilon.$$
 
 The same state simultaneously maximizes QFI along the interface directions $AB \oplus BA$. This is the unique state achieving maximal predictive capacity under minimal entropy cost.
@@ -315,20 +321,15 @@ The SPAP update rule is φ_{t+1} = NOT(p_t), where p_t is the prediction stored 
 
 ### Z.3.2 The Irreversible Merge Structure
 
-**Lemma Z.2 (SPAP Merge Requirement).** Any finite-memory implementation of the SPAP cycle requires a logically irreversible state merge with compression factor at least 2.
+**Lemma Z.2 (Conditional Merge in the Declared Binary-Ancilla Architecture).** Assume all four pairs $(\phi,p)\in\{0,1\}^2$ are reachable immediately before reset and the accessible completed-cycle output fixes $p=p_{\mathrm{ready}}$. Then the accessible cycle map is noninjective and at least one output has two or more preimages. SPAP alone does not establish the full-support or fixed-ready-state hypotheses.
 
-*Proof.* Consider the logical state L_t = (φ_t, p_t) relevant to the SPAP update within cycle t. The cycle comprises:
-1. **Predict:** Compute prediction φ̂_t and store in register p.
-2. **Update:** Set φ_{t+1} = NOT(φ̂_t).
-3. **Reset:** Prepare ancilla p for the next cycle by setting p_{t+1} = p_ready.
+*Proof.* The stated domain has four elements and the fixed-ready-state codomain has two. The pigeonhole principle gives a fiber of size at least two. If the full reachable set is smaller, or an injective extension retains the displaced label, this conclusion need not follow. ∎
 
-The input space for the cycle map G_cycle: L_t ↦ L_{t+1} is {0,1} × {0,1}, containing 4 distinct logical states. The output space is {0,1} × {p_ready}, containing only 2 distinct logical states. Since |input| = 4 > 2 = |output|, the map G_cycle is at least 2-to-1. This constitutes a logically irreversible merge with compression factor 4/2 = 2. ∎
-
-**Lemma Z.3 (Landauer Cost of SPAP Merge).** The SPAP merge has minimum dimensionless entropy cost $\ln 2$, hence any implementation satisfies $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$.
-
-*Proof.* By Landauer's principle (Section J.3), the minimum entropy increase in the environment required to implement a logically irreversible operation mapping $N$ input states to $M$ output states is $\Delta S_{\mathrm{env}}^{(\min)} = k_B \ln(N/M)$. For the SPAP merge (Lemma Z.2), $N = 4$ and $M = 2$, so the minimum dimensionless cost is
-$$\varepsilon_{\min} := \frac{\Delta S_{\mathrm{env}}^{(\min)}}{k_B} = \ln\left(\frac{4}{2}\right) = \ln 2.$$
-Therefore any physical implementation satisfies $\varepsilon \ge \varepsilon_{\min} = \ln 2$. This depends only on the logical structure of the merge, not on the total system dimension $d_0$. ∎
+**Lemma Z.3 (Conditional Landauer Cost of the Declared Reset).** Under Lemma Z.2, let $P$ be the reset record, $R$ all retained classical side information, and $q(P,R)$ their actual pre-reset law. On the registered isothermal-reset branch,
+$$
+\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R).
+$$
+If $H_q(P\mid R)=\ln2$, then $\varepsilon_{\mathrm{reset}}\ge\ln2$; equality additionally requires zero excess dissipation. The structural alphabet value $\varepsilon_0=\ln2$ does not by itself impose this physical lower bound. ∎
 
 ### Z.3.3 The Structural Constraint
 
@@ -824,7 +825,9 @@ $$M = 2 \times a \times b = 2 \times 2 \times 6 = 24$$
 
 Each factor has independent origin:
 - Factor 2: Complex structure (Hermitian = symmetric + antisymmetric)
-- Factor $a = 2$: Active subspace dimension (from PCE-Attractor saturation $\varepsilon_0=\ln2$, Theorem Z.1)
+- Factor $a=2$: active subspace dimension from the sharp binary record, structural $\varepsilon_0=\ln2$ capacity gate, and no-surplus selection (Theorem Z.1)
+
+
 - Factor $b = 6$: Inactive subspace dimension (from $d_0 - a = 8 - 2$)
 
 ### Z.7.4 QFI Complexity Functional
@@ -969,38 +972,57 @@ $$
 $$
 On the cap-active branch the unconstrained minimizer lies beyond the admissible capacity boundary. Since $\phi$ is strictly convex by Lemma W.1, its derivative at the lower boundary point $u^*$ is negative, hence $\zeta_{\mathrm{cap}}>0$. The final electromagnetic coupling relation is Equation (X.6) with the Appendix Z effective normalization $\kappa_{\mathrm{eff}}$. ∎
 
-### Z.8.3 The Fundamental Mass Scale
+### Z.8.3 Algebraic Mass Normalization and Conditional Physical Scale
 
-**Definition Z.8f (Fundamental Mass Scale on the canonical Leech norm-information calibration branch).** The mass scale connecting Planck physics to the interface structure is:
+**Definition Z.8f (Algebraic Mass Normalization and Conditional Leech Mass Scale).** Define $\mu_0^{alg}:=m_P/(2\sqrt{8\varepsilon_0})$. It becomes the physical mass per unit relational information only on $\mathfrak B_{mass}$; canonical Leech calibration then gives $m(v)=\mu_0^{alg}|v|$:
 
-$$\mu_0 := \frac{m_P}{2\sqrt{8\varepsilon_0}} \quad (\varepsilon_0=\ln2\ \text{at the PCE-Attractor}) \quad = \frac{m_P}{2\sqrt{8\ln 2}} \approx 0.212 \cdot m_P$$
 
-*Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon_0})$. For vacuum configurations in the Leech lattice, the canonical Leech norm-information calibration identifies the relational information content with the lattice norm:
+
+$$\mu_0^{alg}:=\frac{m_P}{2\sqrt{8\varepsilon_0}}=\frac{m_P}{2\sqrt{8\ln2}}\approx0.212m_P,$$
+with $\varepsilon_0=\ln2$ the structural reference.
+
+
+
+*Conditional derivation.* On $\mathfrak B_{mass}$, Theorem N.5 assigns a system with relational information content $\mathcal I_{rel}$ the inertial mass
+
+
 $$\mathcal{I}_{\mathrm{rel}}(v) = |v| \quad \text{in Planck units (canonical calibration branch)}.$$
 
-More generally, a universal calibration $\mathcal{I}_{\mathrm{rel}}(v) = \gamma \cdot |v|$ with dimensionless $\gamma > 0$ would rescale absolute masses by a factor $\gamma$ while preserving all dimensionless mass ratios and lattice-norm ordering. The canonical branch $\gamma = 1$ used throughout this appendix fixes the absolute mass scale; ratio predictions are independent of $\gamma$. The coefficient $\mu_0$ sets the mass per unit norm on the canonical branch.
-
-**Theorem Z.8g (Energy-Norm Relation on the canonical Leech norm-information branch).** On the canonical Leech norm-information calibration branch of Definition Z.8f, a gauge field configuration corresponding to lattice point $v \in \Lambda_{24}$ satisfies:
-
-$$m^2(v) = \mu_0^2 \cdot |v|^2.$$
-
-*Proof.* By the canonical calibration of Definition Z.8f, Leech lattice excitations satisfy $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The Mass-Information Equivalence (Theorem N.5) then gives:
-
-$$m(v) = \frac{\mathcal{I}_{\mathrm{rel}}(v)}{2\sqrt{8\varepsilon_0}} \cdot m_P = \mu_0 \cdot |v|.$$
-
-Squaring yields $m^2(v) = \mu_0^2 |v|^2$ on the canonical branch. On a generalized calibration $\mathcal{I}_{\mathrm{rel}}(v) = \gamma |v|$, the same derivation gives $m^2(v) = \gamma^2 \mu_0^2 |v|^2$, uniformly rescaling all absolute masses by $\gamma^2$ while preserving all squared-norm ratios. ∎
+More generally, on saturated activity with boundary utilization $q$, a universal calibration $\mathcal I_{rel}(v)=\gamma|v|$ gives $m(v)=(\gamma/q)\mu_0^{alg}|v|$. Dimensionless ratios and norm ordering are independent of a common $\gamma/q$. The canonical absolute coefficient requires $\mathfrak B_{mass}$, $q=1$, and $\gamma=1$; no absolute coefficient is fixed on unsaturated activity.
 
 
 
-**Remark Z.8g.3 (Branch Dependence of the Norm-Information Calibration).** The absolute mass scale $\mu_0 \approx 0.212\,m_P$ and the mass gap value $\Delta_{\mathrm{gap}} = 2\mu_0$ (Corollary Z.8g.1) depend on the canonical Leech norm-information calibration $\gamma = 1$ introduced in Definition Z.8f. The named supporting theorems (Theorem N.5 for mass-information equivalence, Theorem Z.8c for Leech rootlessness, Proposition R.4.2a for the Golay-gluing construction) supply the information-to-mass bridge and the lattice geometry but do not uniquely force the identification $\mathcal{I}_{\mathrm{rel}}(v) = |v|$. Dimensionless mass ratios — including the glueball spectrum ratios of Theorem Z.8h and the shell-$J^{PC}$ correspondence — are independent of $\gamma$ under universal calibration. Absolute mass predictions, including the mass gap, the minimum excitation scale $\mu_0$, and the glueball mass scale relative to $m_P$, scale linearly with $\gamma$.
+**Theorem Z.8g (Conditional Energy--Norm Relation on $\mathfrak B_{mass}$).** On $\mathfrak B_{mass}$ and a universal Leech calibration $\mathcal I_{rel}(v)=\gamma|v|$, a retained excitation labeled by $v\in\Lambda_{24}$ satisfies $m(v)=\gamma\mu_0^{alg}|v|$; on the canonical $\gamma=1$ branch:
 
-**Corollary Z.8g.1 (Mass Gap Value).** At the PCE-Attractor, the mass gap is:
 
-$$\Delta_{\mathrm{gap}} = \mu_0 \sqrt{|v|^2_{\min}} = \mu_0 \sqrt{4} = 2\mu_0$$
+
+$$m^2(v)=(\mu_0^{alg})^2|v|^2.$$
+
+*Proof.* On $\mathfrak B_{mass}$, Theorem N.5 supplies the physical coefficient. Combining it with $\mathcal I_{rel}(v)=|v|$ on the canonical calibration gives:
+
+
+
+$$m(v) = \frac{\mathcal{I}_{\mathrm{rel}}(v)}{2\sqrt{8\varepsilon_0}} \cdot m_P =\mu_0^{alg}|v|.$$
+
+Squaring gives $m^2(v)=\gamma^2(\mu_0^{alg})^2|v|^2$ on $\mathfrak B_{mass}$. With saturated activity but utilization $q<1$, replace $\gamma$ by $\gamma/q$. Unsaturated activity supplies no fixed absolute coefficient. ∎
+
+
+
+
+
+**Remark Z.8g.3 (Complete Branch Dependence of the Absolute Mass Map).** Leech rootlessness fixes the norm gap and $\gamma$ fixes norm-to-information calibration, while $\mathfrak B_{mass}$ fixes the information-to-mass coefficient. On saturated activity with utilization $q$, absolute masses and gaps scale as $\gamma/q$; on unsaturated activity no absolute coefficient is asserted. Dimensionless shell ratios remain independent of a universal common factor.
+
+
+
+**Corollary Z.8g.1 (Conditional Physical Mass Gap).** On $\mathfrak B_{mass}$ with canonical $\gamma=1$, the Leech norm gap gives the physical mass gap:
+
+$$\Delta_{gap}=\mu_0^{alg}\sqrt{|v|_{min}^2}=2\mu_0^{alg}.$$
 
 The factor of 2 arises from the Leech lattice's minimum squared norm $|v|^2_{\min} = 4$ (Theorem Z.8c).
 
-**Remark Z.8g.2: Physical Interpretation.** The mass scale $\mu_0$ represents the minimum energy cost of creating a distinguishable excitation above the vacuum. Its value is set by the Leech lattice geometry and the Landauer partition.
+**Remark Z.8g.2: Scope of the Gap.** Leech geometry alone fixes the dimensionless norm gap $|v|_{min}=2$. It becomes the physical energy gap $2\mu_0^{alg}c^2$ only on $\mathfrak B_{mass}$ with $\gamma=1$; Landauer and rootlessness alone do not fix that absolute energy.
+
+
 
 ### Z.8.4 Shell-$J^{PC}$ Correspondence
 
@@ -1064,7 +1086,7 @@ The four listed shell assignments match the displayed discrete-cost rule. This i
 
 **Remark Z.8h.2: Derivation Chain.** The shell formula connects to framework axioms via:
 
-$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{a^2} \text{Base shell} = 4, \quad \Delta_P(-) = 4$$
+$$\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0) \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{a^2} \text{Base shell} = 4, \quad \Delta_P(-) = 4$$
 
 $$\text{Golay } [24,12,8] \xrightarrow{d = 8} \Delta_C(-) = 8$$
 
@@ -1448,7 +1470,7 @@ and $D=4$ is the unique positive integer satisfying $K(D)=24$. Consequently, any
 
 **Remark Z.5: Robustness.** The discrete nature of kissing numbers means D = 4 remains the unique solution for any M_int ∈ [13, 39].
 
-**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded $M_{\mathrm{int}}=8$, no integer dimension exactly saturates this value, since $K(2)=6<8<12=K(3)$. The system would exhibit geometric frustration. Similarly, $M_{\mathrm{int}}=96$ cannot be matched, because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012], so no integer dimension $D$ satisfies $K(D)=96$. This demonstrates that $D=4$ emerges not despite but because of the specific values $d_0=8$ and the saturating PCE-Attractor cost $\varepsilon_0=\ln2$.
+**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded $M_{\mathrm{int}}=8$, no integer dimension exactly saturates this value, since $K(2)=6<8<12=K(3)$. The system would exhibit geometric frustration. Similarly, $M_{\mathrm{int}}=96$ cannot be matched, because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012], so no integer dimension $D$ satisfies $K(D)=96$. This demonstrates that $D=4$ emerges not despite but because of the specific values $d_0=8$ and the structural PCE-reference coordinate $\varepsilon_0=\ln2$; no physical Landauer equality is needed.
 
 **Corollary Z.5b (Generalization to Arbitrary MPU Structure).** For any hypothetical MPU with parameters $(d_0,a,b)$ where $a+b=d_0$, the emergent dimension would satisfy $K(D)=2ab$. This generalization demonstrates that $D=4$ is tied to the specific values $d_0=8$ and $\varepsilon_0=\ln2$. Different fundamental constants would yield different dimensions or geometric frustration:
 - If $d_0=4$ and $a=2$, then $M_{\mathrm{int}}=8$, but $K(2)=6<8<12=K(3)$, so no exact solution exists
@@ -1458,9 +1480,9 @@ The framework does not simply accommodate $D=4$; it predicts it as the unique so
 
 ---
 
-## Z.12 Over-Determination of M = 24
+## Z.12 Dependency-Separated Compatibility of $M=24$
 
-### Z.12.1 Eight-Fold Over-Determination
+### Z.12.1 Eight-Record Compatibility Ledger
 
 **Theorem Z.12 (Cross-Domain Over-Determination of $M=24$ on the Minimal Branch).** On the minimal Appendix Z branch
 $$
@@ -1583,7 +1605,13 @@ Let $B,B'\in\mathfrak B$ be two branch representatives satisfying these same con
 
 *Proof.* A continuous landscape parameter $\lambda$ inside the canonical minimal branch either leaves every finite response presheaf invariant or changes at least one finite response. In the first case $\lambda$ is removed by Corollary P.6.1b.8. In the second case it separates branch representatives and is not part of the common canonical tuple (Z.12.1b.1). Theorem P.6.1b.7 then treats it as a distinct finite-response branch only if its response, cost, and degeneracy data are explicitly certified. Hence no unconstrained continuous structural landscape remains on the minimal branch. ∎
 
-### Z.12.2 Multi-Layered Factorization
+### Z.12.2 Factorization Compatibility Ledger
+
+**Remark Z.12.2a (No Uniqueness from Integer Factorizations).** The identities
+$$
+24=8\cdot3=4\cdot6=2\cdot12=2^3\cdot3
+$$
+are elementary arithmetic. PU may compare their factors with independently registered branch values, but the factorizations do not select those values, prove a physical map, or make $24$ unique among integers. Any uniqueness statement requires a defined comparison class and an exhaustive criterion; checking a few neighboring integers is insufficient.
 
 **Proposition Z.2 (Structural Richness of 24).** The number 24 has unique factorization structure where each decomposition corresponds to distinct physical or mathematical structures:
 
@@ -1746,6 +1774,31 @@ remains a ledger remainder unless a separate residual-sector certificate is supp
 
 **Remark Z.9b: Status of the Residual.** The residual $R = 6$ is defined by arithmetic closure: $R := M - \dim[\mathfrak{so}(3,1)] - \dim[\mathfrak{g}_{\mathrm{SM}}] = 24 - 6 - 12 = 6$. This equals the inactive dimension $b = 6$ (Corollary Z.6a), which may reflect deeper structure. Possible interpretations include gravitational polarizations (a symmetric rank-2 tensor in $D = 4$ has $10 - 4 = 6$ physical degrees of freedom) or internal flavor structure. The significance of $R = b$ remains an open question.
 
+**Definition Z.9c (Residual Metric-Response Certificate).** Let $V_{24}$ be real and 24-dimensional. Fix injections $\iota_L:\mathbb R^6\hookrightarrow V_{24}$ and $\iota_G:\mathbb R^{12}\hookrightarrow V_{24}$ with
+$$
+\operatorname{im}\iota_L\cap\operatorname{im}\iota_G=\{0\},
+\qquad
+Q_R:=V_{24}/(\operatorname{im}\iota_L\oplus\operatorname{im}\iota_G).
+\tag{Z.9c.1}
+$$
+The record proves that the injections are physical response maps, fixes a linear map $L_n:=\overline{D\mathcal R}_n:Q_R\to\mathcal T_{\mathrm{grav},n}$, and fixes a positive-semidefinite covariance $C_n$ on $Q_R$ with
+$$
+\Sigma_n=L_nC_nL_n^*.
+\tag{Z.9c.2}
+$$
+
+**Proposition Z.9d (Residual Metric-Response Rank Bound).** On this record,
+$$
+\dim Q_R=6,
+\qquad
+\operatorname{rank}\Sigma_n
+\le\operatorname{rank}L_n\le6.
+\tag{Z.9d.1}
+$$
+Surjectivity is needed to bound the whole target dimension by six, and an isomorphism is needed for equality. A $\mathbf5\oplus\mathbf1$ split requires a separate $SO(3)$-equivariant identification.
+
+*Proof.* The trivial-intersection condition gives a direct sum of dimension 18. Rank inequalities follow from the pushforward factorization. ∎
+
 #### Z.12.3.5 Compatibility with Generational Structure
 
 **Proposition Z.6 (Generational Compatibility).** The physical correspondence (Proposition Z.14a) is compatible with the generational decomposition $24 = 8 \times 3$ from Appendix R.
@@ -1787,7 +1840,11 @@ Each generation contains $2 + 4 + 2 = 8 = d_0$ modes. ✓
 | $bM = k^2$ | $6 \times 24 = 144$ | $12^2 = 144$ | Identity (requires $a = 2$) |
 | $M = 3 \times d_0$ | $2ab = 24$ | $3 \times 8 = 24$ | Coincidence |
 
-**Remark Z.9f: Cross-Sector Rigidity Status.** The equalities $\dim[\mathfrak{so}(3,1)] = b = 6$ and $\dim[\mathfrak{g}_{\mathrm{SM}}] = k = 12$ arise from independent derivation chains within the framework. After Theorem Z.12 and Corollary Z.12.1b, these equalities are not used as independent proofs of Lorentz or gauge dynamics. They are cross-sector rigidity checks on the same canonical finite-response tuple
+**Remark Z.9f: Numerical Coincidences.**
+
+Under Theorem Z.12, these equalities are not used as independent proofs of Lorentz or gauge dynamics.
+
+
 $$
 (d_0,a,b,M,k,D)=(8,2,6,24,12,4).
 $$
@@ -1807,7 +1864,9 @@ A sector that changes one of these values must either leave the finite response 
 
 **Prediction Z.8 (Grand Unification Structure).** If grand unification occurs, the 12 gauge modes should exhibit enhanced symmetry. Candidate groups consistent with $\dim[\mathfrak{g}] = 12$ include $SU(3) \times SU(2) \times U(1)$ itself.
 
-**Prediction Z.9 (Vacuum Stability).** The identification of physical law with error-correction logic predicts vacuum stability against small perturbations—the Golay code corrects up to 3 errors. Sufficiently large perturbations could trigger instability.
+**Prediction Z.9 (Geometric Norm-Isolation Falsifier).** On the registered Golay-to-Leech branch, the native lattice-label spectrum has no norm-$2$ shell and begins at $|v|^2=4$. Observation of a native norm-$2$ label falsifies that branch. This statement does not imply dynamical vacuum stability or automatic correction of physical perturbations; those require a registered Hamiltonian and error-channel/decoder certificate, and a mass or energy reading additionally requires $\mathfrak B_{mass}$.
+
+
 
 ## Z.13 Error-Correction Structure
 
@@ -1870,7 +1929,13 @@ $$V_{\text{error}}(\chi) = \frac{k_2(1-\chi)^2}{C_{\max}}$$
 
 with $k_2 > 0$ a cost coefficient and $C_{\max}$ the channel capacity (Theorem E.2).
 
-### Z.13.3 Physical Implications
+### Z.13.3 Classical Code Consequences and Physical Error-Channel Gate
+
+For the registered binary $[24,12,8]$ code, the classical minimum-distance theorem licenses exactly these statements: up to seven binary symbol errors are detectable, and up to three are uniquely correctable by an accepted decoder. The count is maximal within the stated binary linear $[24,12]$ class.
+
+It does not follow that the MPU network, a quantum state, or a physical vacuum implements that decoder. Such a reading requires an explicit encoding of physical response records into code coordinates, a noise channel, syndrome extraction, and a recovery map. Rootlessness of the glued lattice separately supplies geometric norm isolation and does not replace those dynamical data.
+
+
 
 The error correction structure solves the "unreasonable stability" problem:
 
@@ -1888,27 +1953,16 @@ The error correction structure solves the "unreasonable stability" problem:
 - Golay: Information vs. redundancy
 - Complex: Real vs. imaginary components
 
-### Z.13.4 Rootlessness and Vacuum Stability
+### Z.13.4 Rootlessness and Geometric Norm Isolation
 
-**Proposition Z.13a (Physical Interpretation of Rootlessness).** The Leech lattice's rootlessness corresponds to vacuum isolation in the emergent theory.
+**Proposition Z.13a (Rootlessness Gives Geometric Norm Isolation).** On the retained Leech-label branch, the origin is isolated in the QFI lattice metric:
+$$
+\min_{v\in\Lambda_{24}\setminus\{0\}}|v|^2=4.
+\tag{Z.13a.1}
+$$
+Thus there is no native norm-$2$ displacement direction and every nonzero lattice label lies at QFI distance at least $2$ from the origin.
 
-*Interpretation.*
-
-**Step 1 (Lattice points as configurations).** In the 24-dimensional mode space $\mathbb{R}^{24}$, lattice points represent discrete predictive configurations—the allowed states of the PCE-optimized system. The origin represents the vacuum (PCE-Attractor ground state).
-
-**Step 2 (Roots as near-degeneracies).** Vectors of squared norm 2 (roots) would represent configurations separated from the vacuum by *minimal* action—nearly-degenerate states that small perturbations could access. A lattice with 720 roots (like $E_8 \oplus E_8 \oplus E_8$) has 720 directions in which the vacuum is marginally stable.
-
-**Step 3 (Rootlessness as isolation).** The Leech lattice has *no* roots. The nearest lattice points to the origin have squared norm 4, not 2. This means:
-- The vacuum is *isolated*: no nearby degenerate configurations exist
-- A *gap* separates the vacuum from all excitations
-- Small perturbations cannot reach alternative configurations
-
-**Step 4 (Stability consequence).** This gap protects the vacuum against:
-- Thermal fluctuations (energy $< 4$ in natural units cannot excite the system)
-- Quantum tunneling (action barrier proportional to norm gap)
-- Spontaneous symmetry breaking (no flat directions in configuration space)
-
-**Physical significance:** The "unreasonable stability" of the physical vacuum—its persistence despite quantum uncertainty and thermal noise—is not mysterious but follows from the information-geometric structure. PCE optimization selects the Golay code (Theorem Z.13), which produces the Leech lattice via gluing (Proposition R.4.2a), which has a gap. The vacuum is stable *because* it is error-correction optimal.
+*Proof.* This is exactly the rootlessness and minimum-norm statement of Theorem Z.8c. ∎
 
 **Remark Z.8a: Mass Gap Connection.** The geometric gap (minimum squared norm 4 vs. 2) suggests a qualitative correspondence to mass gaps in emergent field theory. The absence of roots corresponds to the absence of near-degenerate vacuum configurations. This provides a possible information-theoretic perspective on confinement and mass generation, though the quantitative relationship between lattice norm and physical mass scale remains to be established.
 **Theorem Z.8c (Unique Rootless Even Unimodular Lattice in Dimension 24).** Among even unimodular lattices $\Lambda\subset\mathbb R^{24}$ (with norm taken in the ambient QFI metric), exactly one is rootless (contains no nonzero vectors with $|v|^2=2$): the Leech lattice $\Lambda_{24}$. Equivalently, an even unimodular lattice in dimension 24 has $|v|_{\min}^2=4$ if and only if it is $\Lambda_{24}$; otherwise $|v|_{\min}^2=2$.
@@ -1939,27 +1993,35 @@ with string tension $\sigma > 0$. Rootlessness alone supplies the lattice norm g
 
 *Physical argument on the flux-tube branch.* Consider quark-antiquark separation $R$. Two flux configurations compete:
 
-1. **Spread configuration:** Chromoelectric flux distributes over area $\sim R^2$. Each unit of flux corresponds to a lattice displacement with minimum energy cost $|v|^2_{\min} = 4$. Spreading requires occupying $O(R^2)$ lattice sites, giving super-linear energy growth.
+1. **Spread configuration:** Chromoelectric flux distributes over area $\sim R^2$. Each occupied site carries the dimensionless lattice-norm penalty $|v|_{min}^2=4$; an energy cost requires the conditional energy--norm map.
 
-2. **Tube configuration:** Flux concentrates in a tube of cross-section $\sim \delta^2$ (MPU scale, Equation Q.18). The tube contains $\sim R/\delta$ lattice sites along its length, each contributing energy $\sim \mu_0 |v|_{\min}$. Total energy:
+ Spreading requires occupying $O(R^2)$ lattice sites, giving super-linear energy growth.
+
+2. **Tube configuration:** Flux concentrates in a tube of cross-section $\sim \delta^2$ (MPU scale, Equation Q.18). The tube contains $\sim R/\delta$ lattice sites along its length, each contributing energy $\sim\gamma\mu_0^{alg}|v|_{min}/q$ only on the saturated-activity $\mathfrak B_{mass}$ calibration branch. Total energy:
 
 $$E_{\text{tube}}(R) = \sigma R + \text{const}$$
 
-where the string tension is $\sigma = 2\mu_0/\delta$ (Definition Z.8f).
+On the flux-tube branch intersected with saturated activity and the N.5 action--entropy mass branch, $\sigma=2\gamma\mu_0^{alg}/(q\delta)$; the displayed canonical value $2\mu_0^{alg}/\delta$ additionally requires $q=\gamma=1$. Rootlessness alone supplies no absolute string tension.
 
-The tube configuration has lower energy for large $R$ because the Leech lattice's rootlessness makes spreading especially costly—there are no "cheap" directions with $|v|^2 = 2$.
+On the stipulated flux-tube branch, the registered surface-energy functional makes the tube configuration lower in energy for large $R$; rootlessness contributes only the absence of native norm-$2$ lattice labels.
+
+
 
 For a rectangular $R \times T$ Wilson loop:
 
 $$\langle W(C) \rangle \sim e^{-V(R)T} = e^{-\sigma RT} = e^{-\sigma \cdot \text{Area}(C)}$$
 
-This area law signifies confinement. In contrast, a rooted lattice admits massless propagation along root directions, yielding perimeter-law decay (Coulombic behavior). ∎
+This area law signifies confinement. A rooted lattice alone implies neither massless propagation nor perimeter-law decay. Those conclusions hold only on a separately registered Coulombic dynamical branch with the corresponding gapless propagator and Wilson-loop certificate. ∎
+
+
 
 **Remark Z.8d.0 (Higher-Form Ledger Status of the Flux-Tube Branch).** The higher-form predictive ledger of Definition X.9.5d.1 supplies the line-operator language for diagnosing this branch. Proposition Z.8d supplies the rootless flux-energy and tube-tension calibration; Theorem X.9.5d.4 supplies the finite center-ledger area-law criterion once the electric center class is unbroken and the positive surface gap is fixed.
 
 **Corollary Z.8d.1 (Unique Confining Vacuum Selection on the Combined Predictive-Recovery Golay and Center-Ledger Confinement Branches).** On the combined predictive-recovery MacWilliams Golay branch (Theorem Z.13b), the rootless flux-tube calibration branch (Proposition Z.8d), and the unbroken electric center-ledger branch of Theorem X.9.5d.4, among the 24 Niemeier lattices, PCE optimization uniquely selects the confining vacuum.
 
-*Proof.* On the predictive-recovery MacWilliams branch, Theorem Z.13b.0a fixes $k=12$ and PCE distance optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13b). The gluing construction from $\mathcal{G}_{24}$ produces an even unimodular 24-dimensional lattice with $|v|_{\min}^2=4$ (hence rootless) (Appendix R, Proposition R.4.2a and Lemma R.4.5). By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. Proposition Z.8d supplies the positive tube-channel calibration, and Theorem X.9.5d.4 converts the unbroken center ledger with positive surface gap into the Wilson-loop area law. Hence the selected vacuum is confining on the combined branch. ∎
+*Proof.* On the predictive-recovery MacWilliams branch, Theorem Z.13b.0a fixes $k=12$ and PCE distance optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13b). On a separately registered finite-quadratic-module gluing datum satisfying Lemma R.4.5 and Equation (R.4.2a.1), the embedded $\mathcal G_{24}$ copy produces an even unimodular rank-$24$ lattice with $|v|_{min}^2=4$. Without that datum, the predictive-recovery code branch does not supply rootlessness or a lattice.
+
+ By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. Proposition Z.8d supplies the positive tube-channel calibration, and Theorem X.9.5d.4 converts the unbroken center ledger with positive surface gap into the Wilson-loop area law. Hence the selected vacuum is confining on the combined branch. ∎
 
 **Definition Z.8d.2 (Regular LSM Datum).** A regular LSM datum on a finite PU branch consists of:
 
@@ -2444,7 +2506,9 @@ Thus the theorem uses the self-dual-rate gate to obtain $k=M/2$; it does not inf
 
 | Quantity | Value | Source | Derivation |
 |:---------|:-----:|:-------|:-----------|
-| $\varepsilon$ | $\ln 2$ on the attractor branch | Theorem 31; Definition 15a | SPAP cycle 2-to-1 merge + Landauer, with attractor saturation |
+| $\varepsilon_0$ | $\ln2$ structurally | Theorem 31; Definition 15a | SPAP merge floor; physical equality only on the overhead-free branch |
+
+
 | $a$ | 2 | Theorem Z.1 | Sharp match/mismatch record $a\ge2$ + admissibility $\ln a \ge \varepsilon$ + PPI/PCE no-surplus selection |
 | $N_{\mathrm{vis}}^{\min}$ | 8 | Theorem 15 | Finite operational-context floor $2^{K_0}$ |
 | $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 | Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$ plus minimal Appendix Z saturation |
@@ -2557,6 +2621,33 @@ Theorem Z.13b.0a gives $k=n/2=12$. Thus the rate-$\tfrac12$ condition is selecte
 **Step 5 (Distance Maximization at Fixed Self-Dual Rate).** With $k=12$ fixed by Theorem Z.13b.0a, PCE minimizes $V_{\text{error}}(d)$ by maximizing minimum distance $d$. Among binary linear $[24,12]$ codes, the maximum is $d=8$ [Assmus & Mattson 1969], uniquely achieved by the extended Golay code.
 
 **Step 6 (Uniqueness on the Predictive-Recovery Branch).** The extended Golay code is unique up to equivalence at parameters $[24,12,8]$. PCE isotropy precludes preference among equivalent representations. The combined uniqueness is therefore: on the predictive-recovery MacWilliams branch with $n=24$, self-dual rate $k=12$ from Theorem Z.13b.0a, and the maximum-distance criterion at fixed rate, the extended Golay code $[24,12,8]$ is selected up to equivalence. ∎
+
+**Definition Z.13b.P0 (Typed Type-II Parent-Code Certificate).** A Type-II parent-code certificate is a forward-locked finite record
+$$
+\mathfrak C_{\mathrm{TypeII}}
+=
+(P,\langle\cdot,\cdot\rangle,w,
+\beta_{P\to\mathcal H_0},\mathfrak M_{P\to G},
+\mathfrak M_{\mathrm{down}},\mathcal R_{\mathrm{TypeII}})
+\tag{Z.13b.P0.1}
+$$
+where:
+
+1. $P\subset\mathbb F_2^8$ is explicitly listed and certified self-dual, with every codeword weight divisible by four and minimum nonzero weight four.
+2. $\beta_{P\to\mathcal H_0}$ is a bijection from the eight parent coordinate positions to a fixed orthonormal carrier basis of the retained MPU space $\mathcal H_0$. It is accepted only when the coordinate labels are faithful and response-complete under the stated PPI protocols.
+3. $\mathfrak M_{P\to G}$ is an explicit finite Turyn/MOG-type construction, including its coordinate maps, which is verified to output the extended Golay code $[24,12,8]$ rather than merely naming that construction.
+4. $\mathfrak M_{\mathrm{down}}$ records which already accepted downstream objects use the carrier map or the Golay output, and $\mathcal R_{\mathrm{TypeII}}$ audits overlap with Theorem Z.13b.
+
+**Proposition Z.13b.P1 (Typed Parent-Code Compatibility Route).** On an accepted $\mathfrak C_{\mathrm{TypeII}}$, the parent code is equivalent to the extended Hamming code $[8,4,4]$. The carrier bijection then supplies $d_0=8$ and $K_0=\log_2d_0=3$ on the same response-complete branch, while the explicit construction $\mathfrak M_{P\to G}$ supplies the certified Golay ledger $[24,12,8]$. If a separate active/inactive record gives
+$$
+a+b=8,
+\qquad
+2ab=24,
+\tag{Z.13b.P1.1}
+$$
+then it fixes only the unordered pair $\{a,b\}=\{2,6\}$ until the active-label orientation is independently recorded. Without $\beta_{P\to\mathcal H_0}$, the code statement is compatibility data and does not rederive $d_0$, $K_0$, $M$, or a generation count.
+
+*Proof.* The unique Type-II binary self-dual code of minimal positive length eight is the extended Hamming code up to equivalence. The carrier and Golay conclusions are outputs of the two typed maps in the certificate. Finally, substituting $b=8-a$ into $2ab=24$ gives $a^2-8a+12=0$, hence $a\in\{2,6\}$ and the unordered pair shown. ∎
 
 **Corollary Z.13b.1 (Golay Shell Enumerator and Octad Incidence).** On the predictive-recovery MacWilliams Golay branch of Theorem Z.13b, let
 $$
@@ -3032,7 +3123,9 @@ The correspondence is structural: incidence patterns are identical, though coeff
 
 #### Z.13.5.4 The Explicit Generator Matrix
 
-The derivation chain from $\varepsilon_0=\ln2$ through PCE optimization yields a single, explicit binary matrix—144 bits that completely specify the error-correction structure.
+The derivation The displayed matrix is one basis-dependent systematic representative of the extended binary Golay equivalence class. Its $144$ entries specify that representative, not $144$ invariant physical bits or a PCE-derived unique basis.
+
+
 
 **Theorem Z.13c (Golay Generator Matrix).** The extended binary Golay code $\mathcal{G}_{24}$ has systematic generator matrix $G = [I_{12} \mid P]$ where $P$ is:
 
@@ -3088,7 +3181,9 @@ $$
 $$
 By the uniqueness theorem for the extended binary Golay code, this code is $\mathcal G_{24}$. ∎
 
-**Remark Z.13.5.4a: Finite Specification.** This 144-bit matrix is not a model chosen from alternatives. It is the unique structure that self-referential prediction must take when optimally protected against error. Every property can be computationally verified.
+**Remark Z.13.5.4a: Representative Specification.** The displayed bits permit finite verification of this generator matrix. Row operations and coordinate permutations give other representatives of the same code; neither the basis nor a physical encoder follows from PCE alone.
+
+
 
 **Theorem Z.13c.1 (Golay Weight-Moment Reference Record).** Let $u_{\mathcal G}$ be the uniform probability measure on the $4096=2^{12}$ codewords of the extended binary Golay code $\mathcal G_{24}$ of Theorem Z.13c, and let
 $$
@@ -3150,7 +3245,7 @@ and the difference is $239085/2$. ∎
 
 ---
 
-#### Z.13.5.4 Golay-Leech-Partition Unity
+#### Z.13.5.4b Arithmetic Cross-Ledger at 144
 
 **Theorem Z.13d (Structural Unity).** The three structures—Golay code, Leech lattice, and $(a, b)$ partition—are unified through the $bM = k^2$ identity:
 
@@ -3354,7 +3449,7 @@ $$\left| \langle u_i, P_i \rangle \right| > 0.9$$
 
 ---
 
-#### Z.13.5.7 Summary: The 144-Structure as Derived Necessity
+#### Z.13.5.7 Summary: Arithmetic Identity and Certificate Boundary
 
 **Theorem Z.13f (Synthesis).** The structural identity $k^2 = bM = 144$, combined with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ satisfying $\kappa_{\mathrm{ref}} < k^2$, encapsulates a chain of structural necessities:
 
@@ -3362,7 +3457,7 @@ $$\boxed{\text{Landauer cost } (\varepsilon_0=\ln2) \xrightarrow{\text{Thm Z.1}}
 
 | Step | Input | Output | Mechanism | Reference |
 |:----:|:------|:-------|:----------|:----------|
-| 1 | SPAP cycle | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ | 2-to-1 merge + Landauer | Theorem 31 |
+| 1 | SPAP cycle | $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ | 2-to-1 merge + Landauer | Theorem 31 |
 | 2 | Optimal erasure | $\varepsilon_0=\ln2$ | Bound saturation | Theorem 31 |
 | 3 | PPI + Shannon | $a = 2$ | Physical instantiation | Theorem Z.1 |
 | 4 | Partition | $b = 6$ | $d_0 - a = 8 - 2$ | Definition |
@@ -3422,7 +3517,8 @@ $$\kappa^*_{\mathrm{bulk}} = 1.$$
 *Proof.*
 
 **Step 1 (Normalization redundancy in ordinary $U(1)$).** The Maxwell action may be written
-$$S_{\mathrm{Maxwell}}=-\frac{1}{4\kappa}\int F_{\mu\nu}F^{\mu\nu}\,d^4x.$$
+$$S_{\mathrm{Maxwell}}=-\frac{\kappa}{4}\int F_{\mu\nu}F^{\mu\nu}\,d^4x.$$
+Here $\kappa$ is the stiffness convention used in Appendix Z; it is the inverse of Appendix G's $\kappa_F$, so $\kappa=1/\kappa_F$.
 In standard gauge theory, a constant rescaling of the gauge field may be absorbed into a compensating rescaling of the gauge coupling in the interaction term. When the coupling is treated as a free parameter, only the ratio $u/\kappa$ is physical, so $\kappa$ can be fixed by convention.
 
 **Step 2 (QFI normalization is fixed by geometry).** At the attractor state $\rho_0=\frac{1}{a}I_a\oplus 0_b$ with $a=2$, the interface-mode SLD-QFI eigenvalue is fixed by the Bures/SLD metric (Theorem Z.5, Step 5):
@@ -3768,7 +3864,7 @@ $$\alpha^{-1} = \frac{4\pi}{2^{1/8}-1} - \frac{4\pi \cdot (1/4)}{\sqrt{3}} = \fr
 |------|-----------|--------|-----------|
 | 1 | Self-referential logic (SPAP) | $K_0 = 3$ bits | Theorem 15 |
 | 2 | Quantum realization | $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$; Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$; minimal PCE branch gives $d_0 = 8$ | Theorem 15; Theorem 23; Theorem Z.2 |
-| 3 | Landauer irreversibility | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$; attractor saturation gives $\varepsilon_0=\ln2$ | Theorem 31; Definition 15a |
+| 3 | Landauer irreversibility | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$; Definition 15a records the structural reference, while physical equality requires the overhead-free branch | Theorem 31; Definition 15a |
 | 4 | Physical instantiation (PPI) | $a = 2$ | Theorem Z.1 |
 | 5 | Landauer-SPAP structure | $d_0 = 2a^2$ on the minimal branch | Theorem Z.2 |
 | 6 | Subspace decomposition | $b = d_0 - a = 6$ | Theorem Z.1; Theorem Z.2 |
@@ -3801,13 +3897,13 @@ $$K(D) = M = 24 \implies D = 4 \quad\text{inside the channel-complete Bures tang
 
 This is not coincidence but structural unity: the same information-theoretic substrate determines both the strength of electromagnetic interactions and the dimensionality of the arena in which they occur.
 
-The 24-mode structure is fixed on the minimal branch and then overdetermined by the eight-entry cross-domain constraint ledger of Theorem Z.12, with the Niemeier self-counting fixed point of Proposition Z.12.1a providing an additional rank-$24$ consistency check. This transforms apparent fine-tuning into branch rigidity:
-- Algebraic structure (from d_0 = 8, a = 2)
-- Information capacity (saturation equation)
-- Geometric packing (kissing number)
-- Error correction (Golay code)
-- Rank-24 even-unimodular structure and Leech rootlessness
-- Modular form theory (weight 12)
+The minimal discrete branch fixes $M=24$ directly from $M=2ab$. The capacity coordinate and $D=4$ follow only after their respective capacity and completed mode--channel equations are accepted. The Golay code, lattice classification, modular weight, and Niemeier count are separately gated compatibility records. In particular, Leech rootlessness is an independent admissibility condition and is not produced by $M=24$.
+
+Theorem Z.12 therefore supplies a dependency-separated audit, not eightfold overdetermination or a general resolution of fine-tuning.
+
+---
+
+
 
 ---
 
@@ -3938,7 +4034,13 @@ $$\lambda = \frac{1}{16\sigma_B^2} = \frac{3}{2}$$
 This determines the universal hierarchy coefficient $\alpha = 3/2$ of Theorem T.39.
 ---
 
-## Z.24 Error Correction and Stability
+## Z.24 Classical Code Ledger and Physical-Channel Gate
+
+### Z.24.1 The 12+12 Classical Structure
+
+On the predictive-recovery branch, the extended binary Golay code is the unique binary linear $[24,12,8]$ code up to equivalence. It detects up to seven binary symbol errors and uniquely corrects up to three in its declared classical channel model. These coding facts do not imply quantum-state, vacuum, or dynamical stability. Such claims require a physical encoder, noise channel, syndrome instrument, recovery map, and stability norm fixed before testing.
+
+
 
 ### Z.24.1 The 12+12 Structure
 
@@ -4150,108 +4252,35 @@ $$\sum_{\alpha < \beta} K(e_\alpha, e_\beta) = \frac{S_B}{2} = 384$$
 
 The orbit $Gr(2,8)$ is embedded in the full state space $\mathcal{D}(\mathbb{C}^8)$. The gauge coupling probes not only the intrinsic geometry but also how the orbit bends in the ambient space.
 
-**Theorem Z.24 (Extrinsic Correction Factor from Symmetric-Space Geometry).** Let
+**Theorem Z.24 (Conditional Visible-Response Curvature Factor).** At the attractor,
 $$
-\mathcal V:=\operatorname{span}_{\mathbb{C}}\{E_{jm}: j\in A,\, 1\le m\le d_0\}
+T_{[A]}\mathrm{Gr}(a,d_0)\cong\operatorname{Hom}(A,B)
 $$
-be the visible operator space with the Hilbert-Schmidt structure induced by $\rho_0=\frac{1}{a}I_a\oplus 0_b$. The curvature contraction entering the gauge-coupling correction is isotropic over $\mathcal V$ as a consequence of the symmetric-space structure of $\mathrm{Gr}(a, d_0)$ (Lemma Z.24a below). The effective curvature is
+as a complex module of the stabilizer $U(A)\times U(B)$. The Kähler--Einstein/Bures metric makes the Ricci contraction isotropic on this tangent module. It does not determine how that tangent curvature is projected into a separate electromagnetic response functional. Introduce the dimensionless response coefficient $L_{\mathrm{vis}}$ by
 $$
-K_{\mathrm{eff}}=K_{\mathrm{avg}}^{\mathrm{Bures}}\times \frac{M-1}{ad_0}.
+K_{\mathrm{eff}}:=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L_{\mathrm{vis}}.
 $$
+The numerical value $K_{\mathrm{eff}}=2$ follows on the declared democratic visible-response branch
+$$
+L_{\mathrm{vis}}=\frac1{ad_0},
+$$
+because $(M-1)(32/23)/(2\cdot8)=2$. The value $1/(ad_0)$ is a branch input, not a consequence of Schur's lemma. ∎
 
-*Proof.*
+**Corollary Z.11 (Effective Curvature in the Democratic Visible-Response Model).** If $L_{\mathrm{vis}}=1/(ad_0)$, then $K_{\mathrm{eff}}=2$ for $(a,d_0,M)=(2,8,24)$. Without that response assumption, symmetric-space geometry fixes the tangent Ricci tensor but not the electromagnetic projection coefficient. ∎
 
-**Step 1 (Visible operator space and weighted inner product).** For
-$$
-\rho_0=\frac{1}{a}I_a\oplus 0_b,
-$$
-the sesquilinear form
-$$
-\langle X,Y\rangle_{\rho_0}:=\operatorname{tr}(X^\dagger \rho_0 Y)
-$$
-restricts on $\mathcal V$ to
-$$
-\langle X,Y\rangle_{\rho_0}
-=\frac{1}{a}\sum_{j\in A}\sum_{m=1}^{d_0}\overline{X_{jm}}Y_{jm}.
-$$
-Hence $\langle\cdot,\cdot\rangle_{\rho_0}$ is positive definite on $\mathcal V$, and
-$$
-\dim_{\mathbb C}(\mathcal V)=ad_0.
-$$
+**Lemma Z.24a.0 (Actual Isotropy Module).** The stabilizer acts irreducibly on the tangent module $\operatorname{Hom}(A,B)$, so invariant Hermitian forms there are scalar. The column-extended space $\operatorname{span}\{E_{jm}:j\in A,1\le m\le d_0\}$ contains active--active and active--inactive summands and is not an irreducible tangent module under the stabilizer. Homogeneity of the Grassmannian does not furnish an independent $U(A)\times U(d_0)$ action fixing the chosen active plane. ∎
 
-**Step 2 (Isotropy from symmetric-space structure).** The Grassmannian $\mathrm{Gr}(a, d_0)$ is a Riemannian symmetric space with isotropy group $H = S(U(a) \times U(b))$ (Theorem Z.5, Step 6). The $\rho_0$-weighted inner product on $\mathcal V$ is
-$$
-\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y) = \frac{1}{a}\sum_{j \in A}\sum_{m=1}^{d_0}\overline{X_{jm}}Y_{jm},
-$$
-which assigns equal norm $1/a$ to every basis element $E_{jm} \in \mathcal{V}$, regardless of whether $m \in A$ or $m \in B$. This metric has $U(a) \times U(d_0)$ symmetry. Under this symmetry, $\mathcal{V} \cong \mathbb{C}^a \otimes \mathbb{C}^{d_0}$ is irreducible, so by Schur's lemma any covariant quadratic contraction on $\mathcal{V}$ is proportional to the identity (Lemma Z.24a). Therefore the effective squared projection onto any normalized visible direction is
-$$
-\frac{1}{\dim_{\mathbb{C}}(\mathcal{V})}=\frac{1}{ad_0}.
-$$
+**Lemma Z.24a (Scope of Isotropy).** Schur's lemma therefore justifies isotropy of the intrinsic tangent Ricci contraction, but it cannot derive $L_{\mathrm{vis}}=1/(ad_0)$. Any use of that coefficient is conditional on the democratic visible-response model of Theorem Z.24. ∎
 
-**Step 3 (Intrinsic curvature contraction).** On the tangent space $\mathfrak m=T_{AB}\oplus T_{BA}$ of real dimension $M$, Theorem Z.23 gives the isotropy-invariant average sectional curvature $K_{\mathrm{avg}}^{\mathrm{Bures}}$. Hence the Ricci contraction in any unit tangent direction is
-$$
-\operatorname{Ric}(e,e)=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}.
-$$
-
-**Step 4 (Effective curvature).** Multiplying the intrinsic Ricci contraction by the symmetric-space projection factor from Step 2 gives
-$$
-K_{\mathrm{eff}}=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}\cdot \frac{1}{ad_0}
-=K_{\mathrm{avg}}^{\mathrm{Bures}}\times \frac{M-1}{ad_0}.
-$$
-For $a=2$, $d_0=8$, $M=24$, and $K_{\mathrm{avg}}^{\mathrm{Bures}}=32/23$, this yields
-$$
-K_{\mathrm{eff}}=\frac{32}{23}\cdot \frac{23}{16}=2.
-$$
-∎
-
-**Corollary Z.11 (Effective Curvature in the Democratic Visible-Space Model).** Under the hypotheses of Theorem Z.24,
-$$
-K_{\mathrm{eff}} = \frac{32}{23} \times \frac{23}{16} = 2
-$$
-
-**Intuitive Explanation.** The exact value $K_{\mathrm{eff}} = 2$ admits a simple closed form. The $(M-1) = 23$ factors cancel between the Ricci contraction (numerator) and the sectional averaging (denominator), leaving
-$$K_{\mathrm{eff}} = \frac{S_B}{M \cdot ad_0}.$$
-
-Using $S_B = 4S_{KE} = 4 \times 2ab \times d_0 = 8abd_0$ and $M = 2ab$, one obtains
-$$K_{\mathrm{eff}} = \frac{8abd_0}{2ab \cdot ad_0} = \frac{4}{a}.$$
-
-With $a = 2$ fixed by Theorem Z.1, this gives
-$$K_{\mathrm{eff}} = \frac{4}{2} = 2.$$
-
-This algebraic simplification is a reformulation of the democratic visible-space model above; it is not an independent derivation without that model assumption.
-
-**Lemma Z.24a.0 (Column Covariance of the Curvature Contraction).** Let $\mathcal{V} := \operatorname{span}_{\mathbb{C}}\{E_{jm} : j \in A,\, 1 \le m \le d_0\}$ with the weighted Hilbert-Schmidt form $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$. The curvature contraction $C: \mathcal{V} \to \mathcal{V}$ entering the gauge-coupling correction of Theorem Z.24 is required to be equivariant under the full column-extended symmetry group $U(A) \times U(d_0)$, not merely under the Grassmannian stabilizer $H = S(U(A) \times U(B))$.
-
-*Proof.* The Kähler-Einstein metric $g_{KE}$ on $\mathrm{Gr}(a, d_0) = U(d_0)/(U(a) \times U(b))$ is $U(d_0)$-invariant by homogeneity (Kobayashi-Nomizu 1969, Vol. II). By Lemma Z.12, the Bures metric satisfies $g_B = \frac{1}{4} g_{KE}$, so $g_B$ inherits $U(d_0)$-invariance. The Riemann curvature tensor is built from the metric by canonical coordinate-independent differential-geometric operations (Levi-Civita connection, covariant differentiation), all of which commute with isometries. Hence the Bures curvature tensor on $\mathrm{Gr}(a, d_0)$ is $U(d_0)$-equivariant as a tensor on tangent spaces.
-
-Under the identification $\mathcal{V} \cong A \otimes (\mathbb{C}^{d_0})^*$, the natural left action of $U(A)$ on the row index and right action of $U(d_0)$ on the column index commute with the projection from ambient Hilbert-Schmidt operators onto $\mathcal{V}$ (the projection is defined by restricting the row index to $A$, which is $U(d_0)$-invariant on the column slot). Therefore the curvature contraction $C$, obtained by tracing the tangent-space curvature tensor through this $U(A) \times U(d_0)$-intertwining projection, inherits $U(A) \times U(d_0)$-equivariance. ∎
-
-**Lemma Z.24a (Derived Isotropy of the Visible-Space Projection).** At the PCE-Attractor, the $\rho_0$-weighted Hilbert-Schmidt metric on $\mathcal{V}$ forces the curvature contraction entering the gauge-coupling correction to be isotropic over $\mathcal{V}$. No independent distributional hypothesis is required.
-
-*Proof.* The inner product $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$ on $\mathcal{V}$ evaluates to $(1/a)\sum_{j \in A}\sum_m \overline{X_{jm}}Y_{jm}$. Since $\rho_0 = (1/a)I_A \oplus 0_B$ has a constant eigenvalue $1/a$ on the active block $A$, this inner product weights every basis element $E_{jm}$ ($j \in A$, $1 \le m \le d_0$) identically: $\|E_{jm}\|^2_{\rho_0} = 1/a$ for all $m$. The column index $m$ therefore carries the full $U(d_0)$ symmetry of the standard Hilbert-Schmidt metric, not merely the $U(b)$ symmetry of $\rho_0$'s inactive block. Under $U(a) \times U(d_0)$, the space $\mathcal{V} \cong \mathbb{C}^a \otimes \mathbb{C}^{d_0}$ is irreducible (standard representation theory; the tensor product of the defining representation of $U(a)$ with the dual defining representation of $U(d_0)$ is irreducible as a representation of the product group).
-
-By Lemma Z.24a.0, the curvature contraction $C: \mathcal{V} \to \mathcal{V}$ is $U(A) \times U(d_0)$-equivariant. Schur's lemma applied to an irreducible module of a product group therefore forces
-$$
-C = c \cdot I_{\mathcal{V}}
-$$
-for some scalar $c \in \mathbb{R}$. Hence the effective squared projection onto any normalized visible direction is the uniform value
-$$
-\frac{1}{\dim_{\mathbb{C}} \mathcal{V}} = \frac{1}{ad_0}.
-$$
-
-Equivalently, $K_{\mathrm{eff}} = S_B / (M \cdot ad_0) = 4/a$ is a geometric invariant of $\mathrm{Gr}(a, d_0)$ that requires no distributional input. ∎
-
-**Remark Z.24a.1 (Necessity and Branch Dependence of Column Extension).** The stabilizer $H = S(U(A) \times U(B))$ of $\rho_0$ is strictly smaller than $U(A) \times U(d_0)$. Under $H$ alone, $\mathcal{V}$ decomposes as
-$$
-\mathcal{V} \cong \mathbb{C} I_A \oplus \mathfrak{sl}(A) \oplus \operatorname{Hom}(B, A),
-$$
-three pairwise non-isomorphic irreducible $H$-modules, so Schur would permit a three-parameter family of $H$-equivariant Hermitian forms. The scalar conclusion $C = c \cdot I_{\mathcal{V}}$ therefore depends essentially on the column-extended $U(d_0)$ equivariance established in Lemma Z.24a.0, which itself derives from the homogeneity of the Kähler-Einstein metric on $\mathrm{Gr}(a, d_0)$. This is why $K_{\mathrm{eff}} = 4/a$ is a geometric invariant rather than a distributional assumption: the extension from $H$ to $U(A) \times U(d_0)$ is the branch condition that must be supplied by the column-extended curvature-contraction construction. Once that construction is fixed, $K_{\mathrm{eff}} = 4/a$ follows as a geometric invariant rather than a distributional assumption.
+**Remark Z.24a.1 (Response Status).** The curvature calculation and the response projection are separate ledgers. A future operator-realized electromagnetic certificate may compute $L_{\mathrm{vis}}$; until then $K_{\mathrm{eff}}=2$ is a conditional model value.
 
 ### Z.27.6 Minimal Holonomy and Second-Order Correction Formula
 
-**Lemma Z.14 (Minimal Holonomy of the Attractor Grassmannian).** The homotopy group $\pi_2(\mathrm{Gr}(a, d_0))$ is isomorphic to $\mathbb{Z}$, generated by the standard $\mathbb{CP}^1$ embedding. The holonomy of the Bures connection around this generator is $2\pi$, and this is the minimal nonzero holonomy among all closed 2-cycles. PCE (Definition 15) selects this generator for the curvature normalization.
-
-*Proof.* The Grassmannian $\mathrm{Gr}(a, d_0) = U(d_0)/(U(a) \times U(b))$ is a simply connected compact Kähler manifold. By the long exact sequence of the fibration $U(a) \times U(b) \to U(d_0) \to \mathrm{Gr}(a, d_0)$ and the connectivity of the fiber, $\pi_2(\mathrm{Gr}(a, d_0)) \cong \mathbb{Z}$ [Milnor-Stasheff 1974, §14; Griffiths-Harris 1978, Ch. 1.5]. The generator is the Schubert cycle $\sigma_1$, realized by the embedding $\iota: \mathbb{CP}^1 \hookrightarrow \mathrm{Gr}(a, d_0)$ that maps $[z_0:z_1] \mapsto \mathrm{span}\{z_0 e_1 + z_1 e_2, e_3, \ldots, e_a\}$. The integral of the Kähler form over this generator is $\int_{\sigma_1} \omega = 2\pi$, which is a topological invariant. Any other 2-cycle $\gamma$ satisfies $[\gamma] = n[\sigma_1]$ for some $n \in \mathbb{Z}$, giving $\oint_\gamma \omega = 2\pi n$. Since the curvature correction is proportional to the holonomy factor, and larger $|n|$ incurs a strictly larger geometric cost, PCE minimization (Definition 15) selects $n = 1$. ∎
+**Lemma Z.14 (Conditional Normalized Chern-Flux Branch).** The group $\pi_2(\mathrm{Gr}(a,d_0))\cong\mathbb Z$ is generated by the standard Schubert $\mathbb{CP}^1$. Topology alone does not define a holonomy around a two-cycle. If a separately chosen Hermitian line bundle and connection have curvature $F$ normalized by
+$$
+\frac1{2\pi}\int_{\mathbb{CP}^1}F=1,
+$$
+then the generator carries flux $2\pi$ and class $n$ carries flux $2\pi n$. Selecting $n=1$ and identifying this flux with the scalar $\Omega_{\min}$ in Theorem Z.25 are additional branch choices. The Bures metric normalization by itself does not supply this line-bundle normalization. ∎
 
 **Theorem Z.25 (Complete Second-Order Correction on the Canonical Separable Curvature-Response Branch).** Assume the canonical separable second-order response normalization for the $U(1)$ interface matching functional, namely
 $$
@@ -4298,36 +4327,20 @@ $$
 
 ### Z.27.7 Third-Order Refinement
 
-**Lemma Z.13 (Leading Third-Order Correction from SU(2) Geometry).** The third-order correction contributes a multiplicative factor:
-
-$$\Delta^{(2+3)} = \Delta^{(2)} \left(1 - \frac{(u^*)^2}{6}\right)$$
-
-*Proof.*
-
-
-**Step 1 (Single-Block SU(2) Action).** Each interface mode connects one active state $|j\rangle$ ($j \in A$) to one inactive state $|k\rangle$ ($k \in B$) via $S_{jk} = |j\rangle\langle k| + |k\rangle\langle j|$,
-$$U_{jk}(u) = e^{-iu S_{jk}} = \cos u\, \Pi_{jk} - i\sin u\, S_{jk} + (I - \Pi_{jk})$$
-where $\Pi_{jk}$ is the projector onto $\mathrm{span}\{|j\rangle, |k\rangle\}$.
-
-**Step 2 (Transition amplitude).** The block transition amplitude is
-$$\langle k|U_{jk}(u)|j\rangle = -\,i \sin u$$
-hence for small $u$ one has $\sin u = u - u^3/6 + O(u^5)$.
-
-**Step 3 (Linear-response origin of $\Delta^{(2)}$).** The second-order correction found in Section Z.27.6 is linear in the small parameter $u^*$ (cf. $\Delta^{(2)} \propto u^*$). At the block level, this linear dependence arises from the linear response in the transition amplitude generated by $S_{jk}$. Therefore, passing from the infinitesimal approximation to the finite-$u$ result amounts to the substitution
-$$u \;\longrightarrow\; \sin u$$
-in the block contribution. Summing uniformly over blocks (permutation symmetry) preserves a universal multiplicative factor.
-
-**Step 4 (Universal factor).** Consequently,
-$$\Delta^{(2+3)} \;=\; \Delta^{(2)} \times \frac{\sin u^*}{u^*}
-\;=\; \Delta^{(2)} \left(1 - \frac{u^{*2}}{6} + O(u^{*4})\right)$$
-
-With $u^* = 2^{1/8} - 1 \approx 0.0905077$:
-$$\frac{\sin(0.0905077)}{0.0905077} = 0.9986353,\qquad 1 - \frac{(0.0905077)^2}{6} = 0.9986347$$
-consistent to better than $10^{-6}$. ∎
+**Lemma Z.13 (Conditional SU(2) Transport Ansatz).** For the two-state generator $S_{jk}$,
+$$
+\langle k|e^{-iuS_{jk}}|j\rangle=-i\sin u.
+$$
+This identity does not by itself prove that the independently defined curvature-response scalar is obtained by the replacement $u\mapsto\sin u$. On the additional transport ansatz that makes exactly that replacement, the multiplicative factor is
+$$
+\operatorname{sinc}(u)=\frac{\sin u}{u}
+=1-\frac{u^2}{6}+O(u^4).
+$$
+Thus every downstream sinc-core value is conditional on this registered response ansatz. ∎
 
 ### Z.27.8 The Complete Formula
 
-**Theorem Z.26 (Fine-Structure Constant: Exact Sinc-Core Formula on the Predictive-Recovery MacWilliams Branch).** On the combined branch carrying the active-projector ledger ($M=24$), the predictive-recovery MacWilliams self-dual-rate gate of Definition Z.13b.0 and Theorem Z.13b.0a (which fixes $k=M/2=12$ as the input to the bulk Ward identity), and the Bures tangent-cell mode-channel contract of Theorem Z.11, and combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.24a), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the exact $SU(2)$ geodesic-chord transport factor (Lemma Z.13), the Thomson-limit certificate core is
+**Theorem Z.26 (Conditional Sinc-Core Evaluation on the Predictive-Recovery MacWilliams Branch).** On the combined branch carrying the active-projector ledger ($M=24$), the predictive-recovery MacWilliams self-dual-rate gate of Definition Z.13b.0 and Theorem Z.13b.0a (which fixes $k=M/2=12$ as the input to the bulk Ward identity), and the Bures tangent-cell mode-channel contract of Theorem Z.11, and combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.24a), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the conditional $SU(2)$ transport ansatz (Lemma Z.13), the Thomson-limit certificate core is
 $$
 \alpha^{-1}_{0}
 =
@@ -4368,11 +4381,11 @@ $$
 | bulk | $4\pi/u^*$ | fixed by capacity saturation and the Predictive-Ward branch |
 | interface | $-\pi/\sqrt{K_0}$ | fixed by the discrete-to-continuous interface correction |
 | curvature | $\pi u^*/(24\sqrt{K_0})$ | fixed by the $\mathrm{Gr}(2,8)$ curvature and minimal holonomy branch |
-| transport | $\operatorname{sinc}(u^*)$ | exact $SU(2)$ chord-to-geodesic factor |
+| transport | $\operatorname{sinc}(u^*)$ | registered response ansatz of Lemma Z.13 |
 | core total | $\alpha^{-1}_{0}$ | closed-form Appendix Z core value |
 | comparison row | $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | residual-gated by Definition Z.27.11a |
 
-*Proof.* Theorems Z.7 and Z.14 fix $u^*$ and the bulk normalization in QFI-natural units. Theorem Z.17 fixes the first interface correction, and Theorem Z.24 with Lemma Z.24a fixes the curvature coefficient on the canonical column-covariance and visible-space curvature branch. Lemma Z.14 and Theorem Z.25 fix the minimal holonomy normalization and separable curvature-response scalar. Lemma Z.13 identifies the exact $SU(2)$ transport multiplier as $\operatorname{sinc}(u^*)$. Substituting these fixed entries gives the displayed expression. Since $\operatorname{sinc}(u)=1-u^2/6+O(u^4)$, the stated third-order formula follows by Taylor expansion. Substitution of $u^*=2^{1/8}-1$ and $K_0=3$ gives the displayed numerical value. ∎
+*Proof.* Theorems Z.7 and Z.14 fix $u^*$ and the bulk normalization in QFI-natural units. Theorem Z.17 fixes the first interface correction, and Theorem Z.24 with Lemma Z.24a fixes the curvature coefficient on the canonical column-covariance and visible-space curvature branch. Lemma Z.14 and Theorem Z.25 fix the minimal holonomy normalization and separable curvature-response scalar. Lemma Z.13 records the additional response ansatz whose multiplier is $\operatorname{sinc}(u^*)$. Substituting these fixed entries gives the displayed expression. Since $\operatorname{sinc}(u)=1-u^2/6+O(u^4)$, the stated third-order formula follows by Taylor expansion. Substitution of $u^*=2^{1/8}-1$ and $K_0=3$ gives the displayed numerical value. ∎
 
 **Corollary Z.26a (Closed-Form Reachability and No Continuous Fit).** On the Appendix Z core branch, $\alpha^{-1}_{0}$ is a deterministic closed-form expression in the derived structural entries $K_0=3$, $d_0=8$, $M=24$, $D=4$, the induced capacity-saturation value $u^*=2^{1/8}-1$, and the fixed elementary constants and functions $\pi$, $\sqrt{\cdot}$, and $\sin$. No continuous fitting parameter occurs in the core chain. The arithmetic comparison to $\alpha^{-1}_{\mathrm{exp}}=137.035999177(21)$ is
 $$
@@ -4382,7 +4395,7 @@ $$
 $$
 or about $0.678$ ppm.
 
-*Proof.* The symbols entering $\alpha^{-1}_{0}$ are fixed by the theorems cited in Theorem Z.26 and by the capacity-saturation equation $24\ln(1+u^*)=\ln8$. After those entries are fixed, the map
+*Proof.* Once the response, normalized-flux, and transport branch inputs in Theorem Z.26 are fixed, the symbols entering $\alpha^{-1}_{0}$ are fixed and by the capacity-saturation equation $24\ln(1+u^*)=\ln8$. After those entries are fixed, the map
 $$
 (K_0,u^*)\mapsto
 \frac{4\pi}{u^*}
@@ -4818,7 +4831,7 @@ $$
 -\frac{\pi (u^*)^2}{160\sqrt3}
 =-0.0000928625560467264\ldots
 $$
-lies only $0.75\sigma$ from $R_\alpha^{\mathrm{cent}}$. The integer $160$ is not fixed by the Appendix Z residual operator gate, by the Ward cohomology complex, or by the accepted hypercharge-recoil source-exhaustion branch. This witness is therefore recorded as an anti-postselection guardrail: proximity to the comparison value is not evidence unless the expression is derived from a pre-comparison branch record satisfying Algorithm Z.27.11b.
+lies only $0.75\sigma$ from $R_\alpha^{\mathrm{cent}}$. The integer $160$ is not fixed by the Appendix Z residual operator gate, by the Ward cohomology complex, or by the candidate hypercharge-recoil (operator realization open) candidate-source-menu branch. This witness is therefore recorded as an anti-postselection guardrail: proximity to the comparison value is not evidence unless the expression is derived from a pre-comparison branch record satisfying Algorithm Z.27.11b.
 
 A bounded diagnostic scan of the multiplicative cross-response enhancement family
 $$
@@ -4835,16 +4848,16 @@ gives the finite reference values
 | $\cos(2u^*)$ | $0.9836613872\ldots$ | $137.035999162759719\ldots$ | $-0.68\sigma$ |
 | $47/48$ | $0.9791666667\ldots$ | $137.035999179471669\ldots$ | $+0.12\sigma$ |
 | $\cos(2u^*)\cos(u^*)$ | $0.9796352320\ldots$ | $137.035999177729483\ldots$ | $+0.035\sigma$ |
-| accepted hypercharge-recoil equivalent value | $0.9796888216\ldots$ | $137.035999177530230\ldots$ | $+0.025\sigma$ |
+| candidate hypercharge-recoil (operator realization open) equivalent value | $0.9796888216\ldots$ | $137.035999177530230\ldots$ | $+0.025\sigma$ |
 
-The last row is only the value of $g$ obtained by rewriting the accepted hypercharge-recoil branch value of Theorem Z.27.11k.20 in the diagnostic form (Z.27.11e.6a):
+The last row is only the value of $g$ obtained by rewriting the candidate hypercharge-recoil (operator realization open) branch value of Theorem Z.27.11k.20 in the diagnostic form (Z.27.11e.6a):
 $$
 g_{YR\perp}
 =
 24\left(\frac{R_{\alpha}^{YR\perp}}{\Delta_{\times}}-1\right)
 =0.9796888216\ldots.
 $$
-The table is not a mechanism-selection theorem. The weights $47/48$, $\cos(2u^*)$, and $\cos(2u^*)\cos(u^*)$ are diagnostic shadows unless supplied by a finite residual-operator record. The accepted branch remains the operator-realized hypercharge-recoil branch of Definition Z.27.11k.12 and Theorem Z.27.11k.20, not any post-comparison selection from this table.
+The table is not a mechanism-selection theorem. The weights $47/48$, $\cos(2u^*)$, and $\cos(2u^*)\cos(u^*)$ are diagnostic shadows unless supplied by a finite residual-operator record. The candidate branch remains the candidate hypercharge-recoil branch with operator realization open of Definition Z.27.11k.12 and Theorem Z.27.11k.20, not any post-comparison selection from this table.
 
 **Corollary Z.27.11f (No Normalization Retuning under PPI/PCE).** Let $\mathfrak C_\alpha$ and $\mathfrak C'_\alpha$ be two Thomson normalization certificates with naturally isomorphic finite protocol-response presheaves. If $\mathfrak C'_\alpha$ differs from $\mathfrak C_\alpha$ only by extra normalization labels, finite counterterms, or projection conventions that do not change any finite response presheaf and do not shrink the certified residual interval, then $\mathfrak C'_\alpha$ is PCE-dominated by $\mathfrak C_\alpha$ and cannot be retained as a distinct physical normalization branch.
 
@@ -5060,7 +5073,9 @@ Only nonzero classes in $H^1_W(\alpha)$ can contribute to $R_\alpha$.
 
 *Proof.* By Theorem Z.27.11k.1, $\Phi_\alpha$ vanishes on $\operatorname{im}\delta_0$. Therefore exact response-coordinate or normalization changes are PPI/PCE-null for the Thomson row. ∎
 
-**Definition Z.27.11k.12 (Hypercharge-Recoil Operator-Realization Certificate).** A hypercharge-recoil operator-realization certificate for the Appendix Z Thomson branch is a proof-carrying finite residual-operator record
+**Convention Z.27.11k.11a (Candidate Status).** Until an independent operator-realization certificate is accepted, the hypercharge-recoil complex below is a candidate schema and its numerical evaluation is denoted $\alpha^{-1}_{\mathrm{cand}}$. It does not satisfy the general operator-realized residual gate merely by coordinate arithmetic.
+
+**Definition Z.27.11k.12 (Candidate Hypercharge-Recoil Operator-Realization Schema).** A hypercharge-recoil operator-realization certificate for the Appendix Z Thomson branch is a proof-carrying finite residual-operator record
 $$
 \mathfrak O_{\alpha,YR\perp}
 =
@@ -5235,7 +5250,7 @@ $$
 r_{\alpha,YR\perp}=e_1+e_2+e_4.
 \tag{Z.27.11k.12k}
 $$
-The coordinate row of the accepted Thomson residual functional is
+The coordinate row of the candidate Thomson residual functional is
 $$
 \Phi_{\alpha,YR\perp}
 =
@@ -5257,7 +5272,7 @@ c_1=\frac{\pi}{24\sqrt3}.
 $$
 The symbol $u^*$ in (Z.27.11k.12m) is the same Appendix Z capacity-saturation value $u^*$.
 
-The audit ledger $\mathcal A_{\alpha,YR\perp}$ is accepted only if it proves the finite identities below inside the residual-operator package of Definition Z.27.11a, with the operator, domain, regularization rule, and error-bound data required by Definition Z.27.11j fixed before comparison, not merely inside a newly named coordinate vector space.
+The audit ledger $\mathcal A_{\alpha,YR\perp}$ is candidate only if it proves the finite identities below inside the residual-operator package of Definition Z.27.11a, with the operator, domain, regularization rule, and error-bound data required by Definition Z.27.11j fixed before comparison, not merely inside a newly named coordinate vector space.
 
 1. **Source-origin equality.** The post-core electromagnetic residual source space not already included in the bulk Ward, interface, electromagnetic-projection, democratic-curvature, separable-curvature, or exact $SU(2)$ sinc entries is exactly $C^1_W=\operatorname{span}(B^1)$. Thus (Z.27.11k.12d) is an equality of the branch residual source space, not a truncating subset.
 
@@ -5303,18 +5318,18 @@ $$
 $$
 while the active/reference seventh-order lift is exact and hence killed in cohomology. The passive-complement contribution is the non-exact lift in item 4 with sign $\eta_7=-1$.
 
-9. **Forward lock.** The source alphabet, contraction data, matrices, embeddings, quotient projection, source vector, evaluation row, regularization/error record, determinant-compatible hypercharge record, active-recoil lift, passive-complement lift, and source-exhaustion record are entered in the evidence register before empirical comparison and contain no field selected by the recorded value of $\alpha_{\mathrm{obs}}$.
+9. **Forward lock.** The source alphabet, contraction data, matrices, embeddings, quotient projection, source vector, evaluation row, regularization/error record, determinant-compatible hypercharge record, active-recoil lift, passive-complement lift, and candidate-source-menu record are entered in the evidence register before empirical comparison and contain no field selected by the recorded value of $\alpha_{\mathrm{obs}}$.
 
 The audit bit $\chi_{\alpha,YR\perp}$ records exactly these nine acceptance clauses. If any one of them is absent, $\mathfrak O_{\alpha,YR\perp}$ is only a candidate matrix diagnostic and does not promote the Thomson row.
 
-**Algorithm Z.27.11k.13 (Hypercharge-Recoil Ledger Audit).** The proof-carrying ledger in Definition Z.27.11k.12 is the finite tuple
+**Algorithm Z.27.11k.13 (Candidate Hypercharge-Recoil Ledger Audit).** The proof-carrying ledger in Definition Z.27.11k.12 is the finite tuple
 $$
 \mathcal A_{\alpha,YR\perp}
 =
 (\mathcal A_0,\mathcal A_1,\mathcal A_2,\mathcal A_3,\mathcal A_4,\mathcal A_5,\mathcal A_6,\mathcal A_7,\mathcal A_8),
 \tag{Z.27.11k.13a}
 $$
-accepted by the following audit.
+candidate by the following audit.
 
 1. $\mathcal A_0$ is the parent-branch witness: the exact Appendix Z core-removal convention is the one in Definition Z.27.11a and Theorem Z.26. It records that the bulk Ward term, interface term, democratic curvature term, separable response term, and exact $SU(2)$ sinc factor have already been removed from $C^1_{\mathrm{em}}$.
 
@@ -5328,7 +5343,7 @@ up to the harmless simultaneous sign convention, and response coefficients are q
 
 4. $\mathcal A_3$ is the active-rank witness: the active/reference projector has rank $a=2$ inside $K_0=3$, with orthogonal complement of rank $1$. The witness must identify this projector with the same active-rank branch used in the Appendix Z minimal PCE attractor and may not choose a rank after comparison.
 
-5. $\mathcal A_4$ is the source-filtration witness. After the removals in $\mathcal A_0$, the accepted hypercharge-recoil residual filtration has associated graded source list
+5. $\mathcal A_4$ is the source-filtration witness. After the removals in $\mathcal A_0$, the candidate hypercharge-recoil (operator realization open) residual filtration has associated graded source list
 $$
 \operatorname{gr}_3 C^1_{\mathrm{em}}=\operatorname{span}\{\omega_Y\},
 \qquad
@@ -5374,7 +5389,7 @@ in $H^1_W(\alpha;YR\perp)$.
 
 9. $\mathcal A_8$ is the no-remainder and forward-lock witness: the finite regularization convention, source-removal convention, contraction data, source vector, evaluation row, and error-bound record are entered before empirical comparison. Any additional finite source, trace-class tail, discretization term, or changed contraction coefficient is either rejected or entered as a distinct branch with its own residual interval.
 
-**Lemma Z.27.11k.14 (Ledger Type Check and Parameter Closure).** If Algorithm Z.27.11k.13 accepts $\mathcal A_{\alpha,YR\perp}$, then the record of Definition Z.27.11k.12 is a well-typed exact residual-operator gate. Moreover the apparent replacements
+**Lemma Z.27.11k.14 (Internal Candidate-Ledger Type Check).** If Algorithm Z.27.11k.13 accepts $\mathcal A_{\alpha,YR\perp}$, then the record of Definition Z.27.11k.12 is a well-typed exact residual-operator gate. Moreover the apparent replacements
 $$
 \Phi_q=
 \begin{pmatrix}
@@ -5384,7 +5399,7 @@ $$
 r_t=e_1+e_2+te_4
 \tag{Z.27.11k.14a}
 $$
-are accepted by the same ledger if and only if
+are candidate by the same ledger if and only if
 $$
 q=-\frac13,
 \qquad
@@ -5394,19 +5409,21 @@ $$
 
 *Proof.* Items $\mathcal A_0$--$\mathcal A_5$ identify the domain, source filtration, and Ward maps of Definition Z.27.11k inside the same residual-operator package as Definition Z.27.11a and Definition Z.27.11j. Hence $D_1D_0=0$ is a typed identity of the actual branch maps, not only a coordinate calculation. Item $\mathcal A_6$ fixes the seventh-order coefficient by (Z.27.11k.13c). Since $e_{\perp}^TG_{\ge7}(I+(u^*)^2A_{\ge7})^{-1}e_{\perp}=1/3$ and $\eta_7=-1$, any row of the form $\Phi_q$ passes the evaluation witness only when $q=-1/3$. Item $\mathcal A_7$ fixes the residual class coefficient of $[\sigma_{\perp}]$ to be one, so $r_t$ passes the residual-class witness only when $t=1$. The no-remainder and forward-lock witness $\mathcal A_8$ prevents absorbing any failure into an unrecorded tail. ∎
 
-**Theorem Z.27.11k.15 (Ledger Rigidity of the Hypercharge-Recoil Branch).** Any two accepted hypercharge-recoil ledgers with the same parent Appendix Z core branch, the same determinant-compatible $S(U(3)\times U(2))$ gauge-carrier witness, and the same active-rank witness are cochain-isomorphic by the unique basis-preserving isomorphism that fixes
+**Theorem Z.27.11k.15 (Internal Rigidity within the Candidate Source Menu).** Any two candidate hypercharge-recoil (operator realization open) ledgers with the same parent Appendix Z core branch, the same determinant-compatible $S(U(3)\times U(2))$ gauge-carrier witness, and the same active-rank witness are cochain-isomorphic by the unique basis-preserving isomorphism that fixes
 $$
 \omega_Y,\omega_5,\sigma_{\parallel},\sigma_{\perp},\nu_0,\nu_1,\theta
 $$
-and preserves $D_0,D_1,Q,r_{\alpha,YR\perp}$ and $\Phi_{\alpha,YR\perp}$. Consequently the accepted branch has no continuous residual parameter, no free seventh-order coefficient, and no hidden source coefficient selected by the observed value of $\alpha$.
+and preserves $D_0,D_1,Q,r_{\alpha,YR\perp}$ and $\Phi_{\alpha,YR\perp}$. Consequently the candidate branch has no continuous residual parameter, no free seventh-order coefficient, and no hidden source coefficient selected by the observed value of $\alpha$.
 
-*Proof.* The parent branch witnesses $\mathcal A_0$--$\mathcal A_3$ fix $W_5$, $Y$, $T_3$, $K_0$, $\Pi_{\mathrm{act/ref}}$, and $\Pi_{\perp}$ up to the harmless simultaneous sign of $Y$, which is removed by the quadratic response. The source-filtration witness $\mathcal A_4$ fixes the accepted ordered source alphabet after core removal, while $\mathcal A_5$ fixes the two Ward maps in that alphabet. Thus any accepted presentation has the same finite cochain complex up to the identity relabeling of the displayed sources. The evaluation witness $\mathcal A_6$ fixes the row entries by trace, rank, and contraction data; the residual-class witness $\mathcal A_7$ fixes the vector $e_1+e_2+e_4$; and $\mathcal A_8$ excludes unrecorded remainders. Therefore no accepted same-parent ledger can change a coefficient, add a source, or alter the residual value without failing the audit or becoming a new branch under Corollary Z.27.11i. ∎
+*Proof.* The parent branch fixes the finite candidate data only. It proves internal uniqueness relative to the stipulated source menu, not existence of a physical operator realization or exhaustion of sources outside that menu. ∎
 
-**Corollary Z.27.11k.16 (Extra-Source and Extra-Remainder Boundary).** A proposed source $\zeta$ outside (Z.27.11k.13b), a changed passive coefficient, or a nonzero unlisted remainder cannot be appended to the accepted hypercharge-recoil branch. It must be classified as one of the following: an already-included core term, a Ward-exact term, a PPI/PCE-null term, an obstruction term, a separately certified Definition Z.27.11g interval, a separately certified Definition Z.27.11j operator record, or a new branch.
+**Corollary Z.27.11k.16 (Boundary of the Stipulated Candidate Menu).** A proposed source $\zeta$ outside (Z.27.11k.13b), a changed passive coefficient, or a nonzero unlisted remainder cannot be appended to the candidate hypercharge-recoil (operator realization open) branch. It must be classified as one of the following: an already-included core term, a Ward-exact term, a PPI/PCE-null term, an obstruction term, a separately certified Definition Z.27.11g interval, a separately certified Definition Z.27.11j operator record, or a new branch.
 
-*Proof.* This is the disjunction required by $\mathcal A_4$ and $\mathcal A_8$. If $\zeta$ is already included, exact, null, or obstructed, it does not alter the accepted cohomology evaluation. If it is not one of these, it is an additional residual datum and must be carried by a separate certificate. Adding it without such a certificate violates Definition Z.27.11j and Theorem Z.27.11j.1; changing the branch after comparison violates Corollary Z.27.11d and Corollary Z.27.11i. ∎
+*Proof.* This is the disjunction required by $\mathcal A_4$ and $\mathcal A_8$. If $\zeta$ is already included, exact, null, or obstructed, it does not alter the candidate cohomology evaluation. If it is not one of these, it is an additional residual datum and must be carried by a separate certificate. Adding it without such a certificate violates Definition Z.27.11j and Theorem Z.27.11j.1; changing the branch after comparison violates Corollary Z.27.11d and Corollary Z.27.11i. ∎
 
-**Definition Z.27.11k.16a (Post-Core Hypercharge-Recoil Source-Exhaustion Contract).** On the Appendix Z Thomson branch after the exact core removals of Definition Z.27.11a and Theorem Z.26, the post-core hypercharge-recoil source-exhaustion contract is the strict finite PPI/PCE sector
+**Convention Z.27.11k.16a.0 (Candidate-Only Operator Status).** Throughout the source-complex chain below, “accepted,” “exact,” “forced,” “unique,” and “source-exhaustive” are conditional predicates inside a hypothetical certificate. The current PU record supplies no operator realization of the displayed Ward complex. Consequently this chain defines a candidate evaluation map and conditional implications only; it does not establish present theorem-level closure or a comparison-ready residual interval.
+
+**Definition Z.27.11k.16a (Candidate Post-Core Hypercharge-Recoil Source Menu).** On the Appendix Z Thomson branch after the exact core removals of Definition Z.27.11a and Theorem Z.26, the post-core hypercharge-recoil source-exhaustion contract is the strict finite PPI/PCE sector
 $$
 S_{\alpha,YR\perp}^{\mathrm{src}}
 $$
@@ -5429,7 +5446,7 @@ T_3=\frac{1}{2}\operatorname{diag}(1,-1)\text{ on }\mathbb C_W^2,
 $$
 and the already removed Appendix Z core entries: bulk Ward normalization, first-order interface response, projected electromagnetic response, democratic curvature response, separable curvature response, and exact $SU(2)$ sinc/geodesic-chord transport.
 
-A candidate post-core hypercharge-recoil record is admissible only if it satisfies the following seven source-selection rules.
+A candidate post-core hypercharge-recoil (operator realization open) record is admissible only if it satisfies the following seven source-selection rules.
 
 1. **Core disjointness.** No candidate source may duplicate a term already present in the exact sinc-core certificate of Theorem Z.26 or in the already removed entries of Definition Z.27.11a.
 
@@ -5533,7 +5550,7 @@ g_{\alpha,YR\perp}^{\mathrm{src}}=1,
 $$
 because every non-equivalent admissible candidate in the quotient either deletes or response-changes one selected retained response class, adds one response-null surplus generator or arrow, or violates one Ward-typing condition.
 
-**Theorem Z.27.11k.16b (Post-Core Hypercharge-Recoil Source Exhaustion).** On the Appendix Z Thomson branch carrying the accepted strict source-exhaustion contract of Definition Z.27.11k.16a, the post-core hypercharge-recoil residual source space is exactly
+**Theorem Z.27.11k.16b (Internal Cohomology of the Candidate Source Menu).** On the Appendix Z Thomson branch carrying the accepted strict source-exhaustion contract of Definition Z.27.11k.16a, the post-core hypercharge-recoil residual source space is exactly
 $$
 C^1_{\mathrm{em}}(\alpha;YR\perp)
 =
@@ -5593,7 +5610,7 @@ A_{\ge7}=
 \eta_7=-1.
 \tag{Z.27.11k.16b.4}
 $$
-Consequently the source-filtration clause $\mathcal A_4$, Ward-map clause $\mathcal A_5$, residual-class clause $\mathcal A_7$, and seventh-order contraction component of the evaluation clause $\mathcal A_6$ in Algorithm Z.27.11k.13 are supplied by the source-exhaustion contract.
+Consequently the source-filtration clause $\mathcal A_4$, Ward-map clause $\mathcal A_5$, residual-class clause $\mathcal A_7$, and seventh-order contraction component of the evaluation clause $\mathcal A_6$ in Algorithm Z.27.11k.13 are supplied by the candidate-source-menu contract.
 
 *Proof.* By Definition Z.27.11k.16a, admissible post-core sources must be disjoint from the exact core of Theorem Z.26 and must change a retained finite-response presheaf unless they are response-null shadows needed for Ward descent. Gauge and determinant compatibility make the abelian central source one-dimensional: any determinant-compatible block scalar on $W_5=\mathbb C_C^3\oplus\mathbb C_W^2$ is proportional to $Y$, and the Thomson current response is even in $Y$. Hence the primitive degree-three visible source is uniquely $Y^2$, giving $\omega_Y$.
 
@@ -5647,7 +5664,7 @@ $$
 $$
 which gives the matrices in (Z.27.11k.16b.3). The non-exact primitive slots are $\omega_Y$, $\omega_5$, and $\sigma_{\perp}$, so the retained residual vector is $e_1+e_2+e_4$.
 
-It remains to check exhaustion within the stated branch. Let $\zeta$ be any admissible post-core hypercharge-recoil source outside the seven displayed generators. By the odd post-core filtration rule, $\zeta$ is either already part of the exact core, a higher odd source requiring a separate Definition Z.27.11g or Definition Z.27.11j record, a response-null surplus source, a Ward-exact source, an obstruction multiple of $\theta$, or a source changing no retained finite-response presheaf. The first case violates core disjointness; the second is not part of this finite operator-realization branch; the third and sixth violate PCE no-surplus; the fourth lies in $\operatorname{im}\delta_0$ and is not a retained non-exact class; and the fifth lies outside $\ker\delta_1$. Therefore no additional admissible source can be appended to (Z.27.11k.16b.1) without either changing branch or violating Definition Z.27.11k.16a.
+It remains to check exhaustion within the stated branch. Let $\zeta$ be any admissible post-core hypercharge-recoil (operator realization open) source outside the seven displayed generators. By the odd post-core filtration rule, $\zeta$ is either already part of the exact core, a higher odd source requiring a separate Definition Z.27.11g or Definition Z.27.11j record, a response-null surplus source, a Ward-exact source, an obstruction multiple of $\theta$, or a source changing no retained finite-response presheaf. The first case violates core disjointness; the second is not part of this finite operator-realization branch; the third and sixth violate PCE no-surplus; the fourth lies in $\operatorname{im}\delta_0$ and is not a retained non-exact class; and the fifth lies outside $\ker\delta_1$. Therefore no additional admissible source can be appended to (Z.27.11k.16b.1) without either changing branch or violating Definition Z.27.11k.16a.
 
 Finally, active/passive orthogonality diagonalizes the seventh-order contraction form in the ordered basis $(\sigma_{\parallel},\sigma_{\perp})$. The trace-normalized entries fixed by Definition Z.27.11k.16a are
 $$
@@ -5665,15 +5682,15 @@ A_{\ge7}=\operatorname{diag}(1,0).
 $$
 The same odd-filtration sign convention fixes $\eta_7=-1$. This proves (Z.27.11k.16b.4), and the stated Algorithm Z.27.11k.13 clauses follow. ∎
 
-**Corollary Z.27.11k.16c (Strict Forcing of the Accepted Hypercharge-Recoil Ledger).** On the same accepted source-exhaustion branch, the operator-realization certificate $\mathfrak O_{\alpha,YR\perp}$ of Definition Z.27.11k.12 is not a freely stipulated matrix record. Its source alphabet, Ward differentials, seventh-order contraction data, and residual class
+**Corollary Z.27.11k.16c (No Operator Forcing from Candidate Selection).** On the same accepted source-exhaustion branch, the operator-realization certificate $\mathfrak O_{\alpha,YR\perp}$ of Definition Z.27.11k.12 is not a freely stipulated matrix record. Its source alphabet, Ward differentials, seventh-order contraction data, and residual class
 $$
 [r_{\alpha,YR\perp}]
 =
 [\omega_Y]+[\omega_5]+[\sigma_{\perp}]
 $$
-are the unique PPI/PCE-selected post-core hypercharge-recoil record modulo response equivalence.
+are the unique PPI/PCE-selected post-core hypercharge-recoil (operator realization open) record modulo response equivalence.
 
-*Proof.* Definition Z.27.11k.16a supplies the finite candidate family, response quotient, descended lower-semicontinuous integer-valued cost, selected representative, strict gap, and overlap maps required by Definition D.8.9a. Since the branch assumes those entries are accepted, Theorem D.8.9b selects $q_{\alpha,YR\perp}^{\mathrm{src},*}$ uniquely modulo response equivalence. Theorem Z.27.11k.16b identifies this selected representative with the seven-source Ward complex, retained residual class, and contraction data of Definition Z.27.11k.12. Hence the accepted hypercharge-recoil ledger is forced on this strict source-exhaustion branch. ∎
+*Proof.* Definition Z.27.11k.16a supplies a finite candidate family and an internal selection rule. Those data do not construct the post-core Thomson operator. Therefore the selected row is diagnostic unless the independent operator-realization certificate is supplied. ∎
 
 **Lemma Z.27.11k.17 (Primitive Hypercharge and Active-Recoil Factors).** On the determinant-compatible $S(U(3)\times U(2))$ branch used by Appendix G,
 $$
@@ -5700,7 +5717,7 @@ $$
 $$
 The ratio is $(5/6)/(1/2)=5/3$. Since $\operatorname{rank}(\Pi_{\mathrm{act/ref}})=a=2$ and $K_0=3$, the active-reference fraction is $2/3$, and the product is $(2/3)(5/3)=10/9$. ∎
 
-**Lemma Z.27.11k.18 (Row-Reduction and Source Exhaustion of an Accepted Realization).** If $\mathfrak O_{\alpha,YR\perp}$ is accepted, then
+**Lemma Z.27.11k.18 (Candidate-Matrix Row Reduction).** If $\mathfrak O_{\alpha,YR\perp}$ is accepted, then
 $$
 D_1D_0=0,
 \qquad
@@ -5739,9 +5756,9 @@ For any closed vector $z=(z_1,z_2,z_3,z_4,z_5,z_6,0)^T$,
 $$
 D_0(z_3,z_5,z_6)^T=z_3e_3+z_5e_5+z_6e_6,
 $$
-which gives (Z.27.11k.18b). Theorem Z.27.11k.16b and Corollary Z.27.11k.16c identify this finite row reduction with exhaustion of the branch residual source space on the accepted source-exhaustion branch, rather than with exhaustion of a merely stipulated subspace. ∎
+which gives (Z.27.11k.18b). Theorem Z.27.11k.16b and Corollary Z.27.11k.16c identify this finite row reduction with exhaustion of the branch residual source space on the open candidate-source-menu branch, rather than with exhaustion of a merely stipulated subspace. ∎
 
-**Lemma Z.27.11k.19 (Evaluation Descent and Passive-Complement Coefficient).** If $\mathfrak O_{\alpha,YR\perp}$ is accepted, then
+**Lemma Z.27.11k.19 (Candidate Evaluation and Passive-Complement Coefficient).** If $\mathfrak O_{\alpha,YR\perp}$ is accepted, then
 $$
 \Phi_{\alpha,YR\perp}D_0=0,
 \tag{Z.27.11k.19a}
@@ -5766,7 +5783,7 @@ e_{\perp}^TG_{\ge7}(I+(u^*)^2A_{\ge7})^{-1}e_{\perp}
 $$
 Since $\eta_7=-1$, the passive-complement contribution is $-(1/3)c_1(u^*)^7$. ∎
 
-**Theorem Z.27.11k.20 (Exact Hypercharge-Recoil Closure on an Accepted Operator-Realized Branch).** If the operator-realization certificate $\mathfrak O_{\alpha,YR\perp}$ is accepted, then Definition Z.27.11j is satisfied and the Thomson residual is the fixed value
+**Theorem Z.27.11k.20 (Conditional Evaluation of the Candidate Hypercharge-Recoil Complex).** If the operator-realization certificate $\mathfrak O_{\alpha,YR\perp}$ is accepted, then Definition Z.27.11j is satisfied and the Thomson residual is the fixed value
 $$
 R_{\alpha}^{YR\perp}
 =
@@ -5813,7 +5830,7 @@ $$
 \tag{Z.27.11k.20e}
 $$
 
-*Proof.* By Theorem Z.27.11k.16b and Corollary Z.27.11k.16c, the source alphabet, Ward differentials, seventh-order contraction data, and retained residual class of Definition Z.27.11k.12 are the unique PPI/PCE-selected post-core hypercharge-recoil record on the accepted strict source-exhaustion branch. Therefore an accepted $\mathfrak O_{\alpha,YR\perp}$ identifies the actual post-core residual operator domain $C^\bullet_W$, Ward differentials $\delta_0,\delta_1$, residual source vector, Thomson evaluation functional, determinant-compatible hypercharge normalization, active-recoil lift, passive-complement lift, regularization rule, and zero additional error bound required by Definition Z.27.11j. Lemma Z.27.11k.18 gives
+*Proof.* By Theorem Z.27.11k.16b and Corollary Z.27.11k.16c, the source alphabet, Ward differentials, seventh-order contraction data, and retained residual class of Definition Z.27.11k.12 are the unique PPI/PCE-selected post-core candidate record on the stipulated finite source-menu branch, with hypercharge-recoil operator realization still open. Therefore, only if an independent realization certificate $\mathfrak O_{\alpha,YR\perp}$ is supplied, the candidate complex identifies the post-core residual operator domain $C^\bullet_W$, Ward differentials $\delta_0,\delta_1$, residual source vector, Thomson evaluation functional, determinant-compatible hypercharge normalization, active-recoil lift, passive-complement lift, regularization rule, and zero additional error bound required by Definition Z.27.11j. Lemma Z.27.11k.18 gives
 $$
 H^1_W(\alpha;YR\perp)
 =
@@ -5833,9 +5850,9 @@ R_\alpha
 +
 \Phi_{\alpha,YR\perp}(\sigma_{\perp}),
 $$
-which is (Z.27.11k.20a). The source-origin, source-exhaustion, and regularization/error clauses of Definition Z.27.11k.12 remove double counting with the bulk Ward term, interface term, electromagnetic projection, curvature response, sinc transport, and later residual records: these entries have already been removed before $C^1_W$ is formed, and any future residual source must be registered in a disjoint direct-sum component. Adding the exact sinc-core value of Theorem Z.26 gives (Z.27.11k.20b). Direct evaluation at $u^*=2^{1/8}-1$ gives (Z.27.11k.20c) and (Z.27.11k.20d). The final subtraction is an after-the-fact comparison and is not an input to the certificate. ∎
+which is (Z.27.11k.20a). The source-origin, candidate-source-menu, and regularization/error clauses of Definition Z.27.11k.12 remove double counting with the bulk Ward term, interface term, electromagnetic projection, curvature response, sinc transport, and later residual records: these entries have already been removed before $C^1_W$ is formed, and any future residual source must be registered in a disjoint direct-sum component. Adding the exact sinc-core value of Theorem Z.26 gives (Z.27.11k.20b). Direct evaluation at $u^*=2^{1/8}-1$ gives (Z.27.11k.20c) and (Z.27.11k.20d). The final subtraction is an after-the-fact comparison and is not an input to the certificate. ∎
 
-**Corollary Z.27.11k.21 (Forgetful Interval under Seventh-Order Source Downgrade).** If the source-origin and evaluation-origin clauses are accepted through degree five but the passive-complement source equality in (Z.27.11k.12k) is not accepted, while the seventh-order source is retained only through the positive Ward-contraction structure of $G_{\ge7}$, then the certified residual is the interval
+**Corollary Z.27.11k.21 (Diagnostic Passive-Complement Interval in the Candidate Complex).** If the source-origin and evaluation-origin clauses are accepted through degree five but the passive-complement source equality in (Z.27.11k.12k) is not accepted, while the seventh-order source is retained only through the positive Ward-contraction structure of $G_{\ge7}$, then the certified residual is the interval
 $$
 R_{\alpha}^{YR}
 =
@@ -5860,7 +5877,7 @@ $$
 \tag{Z.27.11k.21c}
 $$
 
-*Proof.* The degree-three and degree-five terms are the first two terms in Theorem Z.27.11k.20 and remain fixed by the accepted determinant-compatible hypercharge and active-recoil clauses. For the downgraded seventh-order source, the audit retains the positive semidefinite contraction matrix
+*Proof.* The degree-three and degree-five terms are the first two terms in Theorem Z.27.11k.20 and remain fixed by the candidate determinant-compatible hypercharge and active-recoil clauses. For the downgraded seventh-order source, the audit retains the positive semidefinite contraction matrix
 $$
 G_{\ge7}=\operatorname{diag}\left(\frac{2}{3},\frac{1}{3}\right),
 \qquad
@@ -5873,76 +5890,9 @@ $$
 $$
 Conversely the endpoints are admissible in the downgraded record: $P=0$ gives $\gamma_7=0$, and $P=I$ gives $\gamma_7=1$. Thus the seventh-order contribution $\eta_7\gamma_7 c_1(u^*)^7$ ranges over $[-c_1(u^*)^7,0]$ under the sign convention $\eta_7=-1$. Adding the exact sinc-core value of Theorem Z.26 gives the displayed interval. ∎
 
-**Corollary Z.27.11k.21.1 (Registry-Entered Hypercharge-Recoil Closure of the Thomson Row).** On the accepted operator-realized branch of Definition Z.27.11k.12, the strict-certificate registry of Definition P.14.1m contains the Thomson residual vertex
-$$
-S_{\alpha,YR\perp}
-=
-\left(
-\alpha^{-1}_{\mathrm{cert}},
-\mathfrak O_{\alpha,YR\perp},
-\mathfrak C_{\alpha,YR\perp}
-\right)
-$$
-where
-$$
-\mathfrak C_{\alpha,YR\perp}
-:=
-\mathfrak C_{\alpha}\left[R_\alpha:=R_{\alpha}^{YR\perp},\ \chi_\alpha:=\chi_{\alpha,YR\perp}\right].
-$$
-Its registry fields are
-$$
-\sigma(S_{\alpha,YR\perp})=\textsf{closed},
-\qquad
-\rho(S_{\alpha,YR\perp})=(R_{\alpha}^{YR\perp}),
-\qquad
-\theta(S_{\alpha,YR\perp})=\varnothing,
-$$
-$$
-\delta(S_{\alpha,YR\perp})=\delta_{\alpha,YR\perp}^{\mathrm{cmp}},
-\qquad
-\zeta(S_{\alpha,YR\perp})=\varnothing,
-\tag{Z.27.11k.21.1a}
-$$
-where $\delta_{\alpha,YR\perp}^{\mathrm{cmp}}=0$ for comparison with already published targets and $\delta_{\alpha,YR\perp}^{\mathrm{cmp}}=1$ for a Definition 13.0d entry made before a fresh empirical comparison. The residual value and no-validation-import bit are independent of this empirical-history field. The residual-control record is
+**Corollary Z.27.11k.21.1 (Conditional Hypercharge-Recoil Candidate).** If an independently constructed post-core Thomson operator realizes every source, differential, evaluation, exhaustion, regularization, and no-remainder clause of Definition Z.27.11k.12, its candidate residual is the value computed in Theorem Z.27.11k.20. The stipulated finite complex does not prove that realization. Strict-certificate status remains open and the numerical value remains diagnostic. ∎
 
-$$
-\beta(R_{\alpha}^{YR\perp})
-=
-\left(
-\textsf{bound},
-\left[
--\frac{5}{3}c_1(u^*)^3+\frac{10}{9}c_1(u^*)^5-\frac{1}{3}c_1(u^*)^7,
--\frac{5}{3}c_1(u^*)^3+\frac{10}{9}c_1(u^*)^5-\frac{1}{3}c_1(u^*)^7
-\right],
-\chi_{\alpha,YR\perp}
-\right).
-\tag{Z.27.11k.21.1b}
-$$
-The registry-entered residual decomposition is
-$$
-R_{\alpha}^{YR\perp}
-=
-\underbrace{-\frac{5}{3}c_1(u^*)^3}_{[\omega_Y]}
-+
-\underbrace{\frac{10}{9}c_1(u^*)^5}_{[\omega_5]}
-+
-\underbrace{-\frac{1}{3}c_1(u^*)^7}_{[\sigma_{\perp}]},
-\tag{Z.27.11k.21.1c}
-$$
-where $[\omega_Y]$ is the determinant-compatible hypercharge source, $[\omega_5]$ is the active-recoil lift, and $[\sigma_{\perp}]$ is the seventh-order passive complement. The classes $[\sigma_{\parallel}]$, $[\nu_0]$, and $[\nu_1]$ are exact and evaluate to zero; $\theta$ is obstructed; and no other post-core electromagnetic Ward source exists on this branch by the source-exhaustion clause of Definition Z.27.11k.12. Therefore
-$$
-\alpha^{-1}_{\mathrm{cert}}
-=
-\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}
-=
-137.03599917753023\ldots.
-\tag{Z.27.11k.21.1d}
-$$
-The overlap audit $\gamma$ records that the bulk Ward term, interface term, electromagnetic projection, democratic-curvature response, separable-curvature response, and exact $SU(2)$ sinc transport are parent/core removals already used in Theorem Z.26 and Definition Z.27.11a, not elements of $C^1_W$ in (Z.27.11k.12d). The SPAP-reflexive sinc-tail record of Definition Z.27.11L is only an internal audit of the already included sinc factor. Any future Definition Z.27.11g, Definition Z.27.11j, or Definition Z.27.11M residual entry must be registered as a disjoint residual component with its own overlap map; it cannot re-use $[\omega_Y]$, $[\omega_5]$, or $[\sigma_{\perp}]$.
-
-*Proof.* Theorem P.14.1f allows closure of a finite non-identifiability row by an accepted pre-comparison certificate. Definition Z.27.11k.12 supplies that certificate: it fixes the source-origin, differential-origin, evaluation-origin, passive-complement, regularization/error-bound, source-exhaustion, determinant-compatible hypercharge, active-recoil lift, and forward-lock entries of the operator record. Theorem Z.27.11k.20 evaluates the resulting cohomology class and gives the exact residual value. The entries (Z.27.11k.21.1a)--(Z.27.11k.21.1b) are finite, acyclic, use a $\textsf{bound}$ rather than a $\textsf{budget}$ residual record, have empty unresolved closure gates, and have empty $\zeta$ because this is a strict-certificate row rather than a final spectral-calibration row. Definition P.14.1m and Theorem P.14.1m.2 therefore encode the row as an accepted strict-certificate registry entry. The no-double-counting statement is exactly the overlap-commutativity and residual-control check required by Definition P.14.1m and by the source-removal clauses of Definition Z.27.11k.12. ∎
-
-**Remark Z.27.11k.22 (No Matrix Promotion without Operator Realization).** A finite row-reduction calculation on stipulated matrices proves only the quotient of those stipulated matrices. It closes the Thomson residual gate only when Definition Z.27.11k.12 is accepted as an operator-realization certificate satisfying Definition Z.27.11j and Algorithm Z.27.11b. Without the source-origin, differential-origin, evaluation-origin, passive-complement, regularization/error-bound, source-exhaustion, determinant-compatible hypercharge, active-recoil lift, and forward-lock ledgers, the same matrix remains a diagnostic candidate and the comparison row remains residual-gated. With those ledgers accepted, Corollary Z.27.11k.21.1 is the registry-entered exact residual closure.
+**Remark Z.27.11k.22 (Status Boundary).** No matrix reduction is promoted to exact physical closure until the independent operator-realization certificate is supplied.
 
 **Definition Z.27.11L (SPAP-Reflexive Sinc-Tail Audit Certificate).** On the canonical Appendix Z exact-sinc core branch, the SPAP-reflexive sinc-tail audit certificate is the record
 $$
@@ -6253,19 +6203,19 @@ a single uniform zero mode and a $23$-fold degenerate nonzero sector. A split no
 
 ### Z.32.2 Theoretical Prediction
 
-If spacetime emerges through MCC-type local channel crystallization, the Hopkins–Stillinger–Torquato result suggests that $\varphi$ should appear as a natural crossover constant for that emergence. (Hopkins et al. 2010) 
+On the branch where MCC-type local channel crystallization is independently certified to follow OSC$\to$DLP sphere-packing/spherical-code relaxation, the Hopkins–Stillinger–Torquato result identifies $\varphi$ as a candidate crossover radius for that relaxation. (Hopkins et al. 2010) This is a branch-conditional statement: $\varphi$ is not a primitive lattice-proportion axiom and is not used in the derivation of $D=4$, $M=24$, or $\alpha_{\mathrm{em}}$.
 
 The reasoning:
 
-1. **Spacetime from channel optimization.** The framework asserts that emergent spacetime geometry arises from optimizing predictive channels (Theorem Z.11).
+1. **Spacetime from channel optimization.** On the operational-continuum branch, emergent spacetime geometry is recovered from finite channel and propagation-cost constraints (Theorem Z.11; Section 11).
 
 2. **Channel geometry as packing.** The mode–channel correspondence maps distinguishable channels onto directions on $S^{D-1}$, turning channel optimization into a constrained sphere-packing / spherical-code problem (Corollary Z.4).
 
-3. **Relaxation path.** During thermalization, the system explores configurations where the effective neighbor-shell radius $R$ evolves from near-contact ($R \approx 1$) outwards.
+3. **Relaxation path.** During thermalization, the system explores configurations where the normalized effective neighbor-shell radius $R$ evolves from near-contact ($R \approx 1$) outwards.
 
-4. **Golden-ratio boundary.** The Hopkins–Stillinger–Torquato theorem identifies $\varphi$ as the exact radius up to which optimal spherical codes automatically realize densest local packings, in the sense that every optimal spherical code with $1 \le R \le \varphi$ is also a solution to the corresponding DLP problem (Hopkins et al. 2010). If MCC dynamics indeed follow this OSC$\to$DLP optimization pathway, one expects a qualitative change in behavior as $R(t)$ crosses $R = \varphi$.
+4. **Golden-ratio guarantee interval.** The Hopkins–Stillinger–Torquato theorem proves that every optimal spherical-code solution with $1\le R\le\varphi$ is also a solution of the corresponding densest-local-packing problem. Its radial-translation lemma is sharp at $\varphi$, but this does not by itself prove that OSC and DLP optima differ at any specified radius above $\varphi$ or that a dynamical transition occurs. On an independently certified OSC$\to$DLP MCC branch, $R=\varphi$ is therefore a preregistered candidate marker, not a theorem-forced crossover.
 
-Thus, within the framework, $\varphi$ plays the role of a *natural crossover scale* between two regimes of local channel organization.
+Thus $\varphi$ is a branch-conditional candidate marker for an OSC/DLP decorrelation test, not a derived universal transition scale.
 
 ---
 
@@ -6286,7 +6236,7 @@ $$
 \frac{\left|\pi^2/16 - 1/\varphi\right|}{1/\varphi} \approx 0.19\%.
 $$
 
-This numerical proximity is not used as a proof of anything, but it is **suggestive**: if MCC channel crystallization in $D=4$ sits near the OSC–DLP crossover regime controlled by $\varphi$, then it is natural for the optimal local packing density to lie close to $1/\varphi$. The Hopkins–Stillinger–Torquato theorem provides a concrete mathematical mechanism by which the golden ratio can enter such local packing/coordination questions (Hopkins et al. 2010). 
+This numerical proximity is a branch-motivation check only. It supplies no proof that $D_4$ packing is controlled by $\varphi$ and no inference to a universal lattice proportion. If MCC channel crystallization in $D=4$ is independently certified to sit near the OSC–DLP crossover regime, then the proximity to $1/\varphi$ becomes a consistency diagnostic for that branch. The Hopkins–Stillinger–Torquato theorem supplies the mathematical reason $\varphi$ can enter local packing/coordination questions without being assumed as a structural axiom. (Hopkins et al. 2010) 
 
 ---
 
@@ -6319,26 +6269,21 @@ beyond which local packing irregularities are washed out and the effective conti
 
 **Prediction Z.5 (Golden-Ratio Crossover in Channel Crystallization).**
 
-**Statement.** If MCC channel relaxation follows a sphere-packing–type optimization, then during thermodynamic evolution from a non-equilibrium state with $M > K(D)$ to equilibrium with $M = K(D)$, there should be an observable crossover when the effective neighbor-shell radius $R(t)$ passes through $R \approx \varphi$.
+**Statement.** On a branch that independently certifies OSC$\to$DLP relaxation and fixes a dimensionless neighbor-shell radius $R$ before comparison, $R=\varphi$ is a candidate boundary, not a theorem-forced dynamical transition. A crossover estimate $\widehat R_c$ counts as near $\varphi$ only under a preregistered tolerance $\Delta_R>0$ satisfying $|\widehat R_c-\varphi|\le\Delta_R$.
 
-**Observable signatures:**
+**Observable tests:**
 
-* **Regime change.** A qualitative shift in relaxation dynamics at $R(t) \approx \varphi$, e.g., a change in the scaling of defect annihilation or coordination-number fluctuations.
+* **Regime-change test.** Measure whether a pre-specified relaxation statistic changes near $R=\varphi$ relative to null radii and normalization controls.
 
-* **Correlation crossover.** A transition in the correlation
+* **Correlation test.** Evaluate
   $$
-  C(t) = \mathrm{corr}\big(Q_{\text{code}}(t), Q_{\text{pack}}(t)\big),
+  C_{\mathrm{OSC/DLP}}(t)=\operatorname{corr}\big(Q_{\mathrm{code}}(t),Q_{\mathrm{pack}}(t)\big)
   $$
-  where $Q_{\text{code}}$ measures “coding optimality” (how close local neighbor sets are to optimal spherical codes) and $Q_{\text{pack}}$ measures “packing optimality” (how close they are to DLP configurations). Below the crossover, OSC and DLP should track each other closely (high $C$); above it, they can decouple.
+  only on preregistered windows for which both sample variances are positive. A zero-variance window is non-identifying and receives no correlation value. The theorem does not require the correlation to change at $R=\varphi$.
 
-* **Universality.** The crossover value $R \approx \varphi$ should be largely independent of microscopic details and (within the model class) of the ambient dimension $D$, mirroring the dimension-independent nature of the Hopkins–Stillinger–Torquato OSC$\to$DLP inclusion result (Hopkins et al. 2010).
+* **Branch-stability test.** If a crossover is observed, test whether its estimated location remains stable only under perturbations that preserve the normalized radius and the certified OSC$\to$DLP branch. The sphere-packing theorem alone supplies no universality claim for the dynamics.
 
-**Status.** This is a theoretical prediction that uses a rigorous mathematical result about OSC$\to$DLP inclusion for $1 \le R \le \varphi$ (Hopkins et al. 2010) and applies it to the framework’s MCC emergence mechanism. It is *not* assumed by the core derivation of $D=4$ or $\alpha$; rather, it is a downstream, falsifiable consequence:
-
-* If experiments or quantum simulators designed to emulate MCC-style channel crystallization do show a clear dynamical crossover near $R \approx \varphi$, this would support the proposed connection between OSC/DLP optimization and emergent spacetime channels.
-* If no such crossover appears, or the relevant scale is clearly incompatible with $\varphi$, then the MCC-to–sphere-packing link (or at least this specific interpretation) would need to be revised.
-
-In this sense, $\varphi$ is **predicted** to play a role in channel crystallization if—and only if—the dynamics genuinely align with the Hopkins–Stillinger–Torquato OSC$\to$DLP regime. The framework itself does not bake in $\varphi$ as an axiom; it highlights $\varphi$ as the natural candidate crossover constant arising from independently established sphere-packing mathematics.
+**Status.** This is a branch-conditional experimental hypothesis, not a consequence of the sphere-packing theorem alone. It is not used in the derivations of $D=4$, $M=24$, or $\alpha_{\mathrm{em}}$. Positive results would support the added dynamical interpretation; negative results would reject that interpretation without changing the mathematical OSC$\to$DLP inclusion theorem.
 
 
 
@@ -6367,7 +6312,7 @@ This approach inverts the usual logic. Rather than starting with D-dimensional s
 | Prediction | Value | Source |
 |------------|-------|--------|
 | Spacetime dimension | D = 4 | Theorem Z.11 |
-| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; registry-entered hypercharge-recoil closure $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$; downgraded passive-complement branch $[137.03599917502362\ldots,137.03599917878353\ldots]$; canonical composition audit cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ remains a diagnostic and is not a second residual contribution | Theorem Z.26; Definition Z.27.11a; Corollary Z.27.11e.1; Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; diagnostic-only hypercharge-recoil (operator realization open) closure $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$; downgraded passive-complement branch $[137.03599917502362\ldots,137.03599917878353\ldots]$; canonical composition audit cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ remains a diagnostic and is not a second residual contribution | Theorem Z.26; Definition Z.27.11a; Corollary Z.27.11e.1; Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 |
 | Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
@@ -6375,7 +6320,7 @@ This approach inverts the usual logic. Rather than starting with D-dimensional s
 | Hot-state mode excess | M_hot > 24 | Prediction Z.1 |
 | Coordination scaling | N_coord = K(D_eff) | Prediction Z.2 |
 | Dimensional frustration | D≠4 unstable | Prediction Z.3 |
-| Golden ratio crossover | R ≈ φ | Prediction Z.5 |
+| Golden ratio crossover | $R\approx\varphi$ on the OSC$\to$DLP MCC branch | Prediction Z.5 |
 
 **Computational Verification:**
 ```python
@@ -6447,7 +6392,9 @@ Relative = 0.677765 ppm
 1. **Spacetime Dimension D = 4**
    - Inside the channel-complete Bures tangent-cell contract, $K(D)=M=24$ has the unique positive-integer solution $D=4$ on the checked Euclidean branch
    - Derived via zero-mismatch mode-channel correspondence
-   - Cross-checked by the eight-entry constraint ledger of Theorem Z.12 and the Niemeier fixed-point test of Proposition Z.12.1a
+   - Audited by the dependency-separated compatibility ledger of Theorem Z.12; any Niemeier count is a separate classification fact
+
+
    - Branch uniqueness is the zero-mismatch point of Theorem Z.10 together with the mismatch ledger of Lemma Z.5
 
 2. **Fine-Structure Constant Core $\alpha^{-1}_{0}=137.03609205522863\ldots$**
@@ -6459,7 +6406,7 @@ Relative = 0.677765 ppm
    - Canonical composition audit: the multiplicative cross-response of the certified interface and curvature entries is the fixed diagnostic term $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288=-0.0000892350892540067\ldots$, accounting for $96.08\%$ of the centered residual while leaving a $26.59$ ppb remainder. The audit supplies forward locks and anti-postselection witnesses only; it does not close $R_\alpha$ without Definition Z.27.11j or Definition Z.27.11g (Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6).
    - Closed-form structural reachability: $\alpha^{-1}_{0}$ is a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$, with no continuous fit anywhere in the chain (Theorem Z.26; Corollary Z.26a)
    - Hypercharge-recoil operator-realization closure: on the accepted operator-realized finite Ward branch with the accepted source-exhaustion contract, the determinant-compatible hypercharge trace gives $5/3$, the active-recoil lift gives $10/9$, the passive-complement seventh-order source gives $-\frac{1}{3}c_1(u^*)^7$, and the registry-entered residual is $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ (Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21.1)
-   - Certificate row: $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ on the accepted branch; if the passive-complement source is downgraded to the seventh-order positive-contraction bound, $\alpha^{-1}_{0}+R_{\alpha}^{YR}\in[137.03599917502362\ldots,137.03599917878353\ldots]$ (Corollary Z.27.11k.21)
+   - Certificate row: $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ on the candidate branch; if the passive-complement source is downgraded to the seventh-order positive-contraction bound, $\alpha^{-1}_{0}+R_{\alpha}^{YR}\in[137.03599917502362\ldots,137.03599917878353\ldots]$ (Corollary Z.27.11k.21)
    - Source accounting: $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$ are the only retained non-exact post-core Ward sources; the exact, obstructed, bulk, interface, electromagnetic-projection, curvature, sinc-transport, and future residual entries are excluded from double counting by Definition Z.27.11k.12 and Corollary Z.27.11k.21.1
    - Falsifier: a measurement outside the certified residual interval for the accepted branch refutes the Appendix Z normalization branch (Corollary Z.26c); separately, Corollary Z.27.11e.1 obstructs any same-branch theorem fixing $R_\alpha=0$ at the recorded CODATA comparison value
 
@@ -6467,16 +6414,34 @@ Relative = 0.677765 ppm
 
 Every quantity in the final formulas traces back to:
 - $d_0 \ge 8$ from SPAP encodability (Theorem 23), with $d_0 = 8$ on the minimal PCE branch (Theorem Z.2)
-- $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ from ND-RID irreversibility (Theorem 31), with $\varepsilon_0=\ln2$ at PCE-Attractor saturation (Definition 15a)
+- $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ from ND-RID irreversibility (Theorem 31), with structural reference $\varepsilon_0=\ln2$ (Definition 15a) and physical equality only on the overhead-free implementation branch
 - $\pi$ (geometric necessity)
 
-No continuous parameters are tuned at any stage. The Thomson-limit $\alpha^{-1}$ formula follows from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14; Theorem Z.25). The dimensional selection $D=4$ follows from the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorems Z.10–Z.11).
+No continuous parameters are tuned at any stage. The Thomson-limit $\alpha^{-1}$ formula follows from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the conditional normalized Chern-flux branch (Lemma Z.14; Theorem Z.25). The dimensional selection $D=4$ follows from the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorems Z.10–Z.11).
 
 ---
 
 ## Z.35 Complete Derivation Chain
 
-The following chain of implications connects framework axioms to physical observables:
+The closing ledger contains parallel conditional chains rather than one automatic cascade:
+
+1. on the minimal sharp-record and complex-carrier branch, $(K_0,d_0,a,b,M)=(3,8,2,6,24)$;
+2. on the predictive-recovery MacWilliams branch, $M=24$ selects the classical code $\mathcal G_{24}=[24,12,8]$;
+3. only on a registered discriminant-form/coset-minimum gluing datum satisfying (R.4.2a.1), the embedded code copy transfers to $\Lambda_{24}$ with $|v|_{min}^2=4$;
+4. independently, the channel-complete $M=K(D)$ branch selects $D=4$;
+5. an absolute mass value requires $\mathfrak B_{mass}$ and its normalization, and no code or norm theorem supplies that bridge.
+
+| Quantity | Status source |
+|:---------|:--------------|
+| $K_0,d_0,a,b,M$ | Minimal finite-response branch theorems |
+| $\mathcal G_{24}$ | Predictive-recovery code branch |
+| $\Lambda_{24}$ and $|v|_{min}^2=4$ | Lemma R.4.5 plus the registered datum; (R.4.2a.1) for Hamming-to-norm transfer |
+| $D=4$ | Independent channel-complete mode--channel branch |
+| $\Delta_{mass}=2\mu_0^{alg}$ | Conditional $\mathfrak B_{mass}$ branch with the stated activity and normalization gates |
+
+Shared integers provide cross-checks, not missing physical maps. None of the gluing, dimension, gauge, or mass outputs may be substituted for another.
+
+
 
 $$\boxed{
 \begin{array}{c}
@@ -6486,7 +6451,7 @@ N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \text{ (Theorem 15)},\qquad d_0\ge N_{\mathrm{
 \Downarrow \\[4pt]
 d_0 = 8 \text{ on the minimal PCE branch (Theorem Z.2)} \\[4pt]
 \Downarrow \\[4pt]
-\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \text{ (Theorem 31)} \\[4pt]
+\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0) \text{ (Theorem 31)} \\[4pt]
 \Downarrow \\[4pt]
 \varepsilon_0=\ln2 \text{ at the attractor (Definition 15a)} \\[4pt]
 \Downarrow \\[4pt]
@@ -6530,7 +6495,7 @@ n_{\text{pol}} = D - 2 = 2 \text{ after selecting } D=4 \\[4pt]
 | $N_{\mathrm{vis}}^{\min}$ | $8$ | $2^{K_0}$ finite operational contexts | Theorem 15 |
 | $d_0$ | $8$ on the minimal branch | $d_0\ge N_{\mathrm{vis}}^{\min}$ plus PCE minimality | Theorem 23; Theorem Z.2 |
 | $\varepsilon_0$ | $\ln 2$ | Exact structural SPAP/Landauer quotient | Theorem 31 |
-| $\varepsilon_{\mathrm{phys}}$ | $\ge\varepsilon_0$ | Implementation overhead $\varepsilon_{\mathrm{diss}}\ge0$ | Theorem 31 |
+| $\varepsilon_{\mathrm{phys}}$ | $\ge H_q(P\mid R)$ on a registered reset branch | $\varepsilon_{\mathrm{diss}}\ge0$; no ensemble-independent positive floor | Theorem 31 |
 | $(a, b)$ | $(2, 6)$ | PCE minimization on the minimal branch | Theorem Z.1; Theorem Z.2 |
 | $M$ | 24 | QFI mode count | Theorem Z.5 |
 | $\mathcal{G}_{24}$ | $[24,12,8]$ | Error correction optimality | Theorem Z.13 |
@@ -6582,7 +6547,17 @@ Therefore the presently derived abelian and CP phase sector is holonomy-controll
 
 *Proof.* Item 1 is the Appendix Z derivation of Theorems Z.24-Z.26 together with Lemma Z.14. Item 2 is Theorems T.53-T.56. Item 3 is Theorem Y.6.1 together with the imported phase $\delta$ from Appendix T. Item 4 is Proposition K.6.4. ∎
 
-**Theorem Z.35c (Minimal-Branch Propagation of the Golay-Leech Structure).** Once the minimal branch fixes $M=24$, the same code-lattice structure propagates through multiple sectors in a theorem-level way:
+**Theorem Z.35c (Conditional Propagation of the Registered Code--Lattice Structure).** Once the minimal branch fixes $M=24$:
+
+1. the predictive-recovery branch selects the extended binary Golay code $[24,12,8]$;
+2. the cited capacity and Grassmannian ledgers share the count $12$ on their named branches;
+3. only on a registered discriminant-form/coset-minimum datum satisfying Equation (R.4.2a.1) does $d=8$ transfer to rootlessness of the resulting lattice;
+4. conditional on an even unimodular rootless rank-$24$ lattice, classification identifies $\Lambda_{24}$;
+5. the scaled $(\sqrt2E_8)^3$ scaffold is compatible with, but does not derive, the three-generation theorem.
+
+The common backbone therefore propagates code and dimensionless norm information only on the explicit bridge. It does not establish a physical decoder, vacuum stability, spacetime dimension, or energy gap. ∎
+
+
 
 1. PCE selects the extended binary Golay code $[24,12,8]$;
 2. the number $12$ simultaneously equals

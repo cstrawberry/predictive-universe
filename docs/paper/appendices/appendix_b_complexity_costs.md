@@ -117,80 +117,42 @@ C_{\text{uni}}\bigl(\delta_{\rm SPAP}\bigr) := \inf_{S\ \delta_{\rm SPAP}\text{-
 $$
 This functional captures the fundamental effective computational resources demanded by high-accuracy self-calibration within the PU framework.
 
-**Theorem B.2 (Log-Enhanced Quadratic Complexity Divergence Near $\alpha_{SPAP}$ = Theorem 14)**
-
-As $\delta_{\rm SPAP} \to 0^+$, the unified complexity satisfies the lower bound:
+**Theorem B.2 (Conditional Log-Enhanced Quadratic Lower Bound).** For every $0<\delta\le1/8$ and every $\delta$-accurate admissible strategy $S$, assume certificate $\mathfrak C_{B.2}$ maps $S$, under either Bernoulli law $p_\pm=1/2\pm2\delta$, to a test based on $N(S,\delta)$ independent observations whose two errors are at most $\beta(\delta)\le\delta$, and proves
 $$
-C_{\text{uni}}\bigl(\delta_{\rm SPAP}\bigr) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{\delta_{\rm SPAP}^2}\right). \tag{B.5}
+\operatorname{Cost}(S;\delta)\ge c_sN(S,\delta)
 $$
-where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a dimensionless measure of effective computational resources.
-
-*Proof:* Fix $0<\delta_{\rm SPAP}\le 1/4$ and abbreviate $\delta:=\delta_{\rm SPAP}$. (The restriction $\delta\le 1/4$ is a mild technical condition ensuring $1-4\delta^2\ge 1/2$, which yields clean constants below; for $\delta>1/4$ the bound (B.5) is trivially satisfied by any strategy requiring at least one operation.) Consider the following estimation subtask, which is a special case of SPAP-limited performance calibration: an algorithm observes $N$ samples $X_1,\dots,X_N\in\{0,1\}$ with $X_i\sim\mathrm{Bern}(p)$ and must output an estimate $\hat p$ such that
+with fixed $c_s>0$. Then every such $S$ satisfies
 $$
-\Pr(|\hat p-p|\le \delta)\ \ge\ 1-\beta
+N(S,\delta)\ge\frac{3}{128\delta^2}\ln\!\left(\frac1{4\beta(\delta)}\right),
 $$
-for all $p$ in $\{1/2-\delta,\ 1/2+\delta\}$, where $\beta\in(0,1/2)$ is a target failure probability. Any $\delta$-accurate SPAP strategy must be able to solve this subtask when restricted to this two-point family of bounded SPAP-limited success indicators (since calibrating a SPAP-limited success rate to additive accuracy $\delta$ entails at least distinguishing two hypotheses separated by $2\delta$), so a lower bound on $N$ yields a lower bound on $C_{\text{uni}}(\delta)$ via (B.4).
-
-Define the decision rule $\varphi:=\mathbf{1}\{\hat p>1/2\}$. Under $p_+=1/2+\delta$ one has $\Pr_{p_+}(\varphi=1)\ge 1-\beta$, and under $p_-=1/2-\delta$ one has $\Pr_{p_-}(\varphi=1)\le \beta$. Let $P_+$ and $P_-$ denote the laws of $(X_1,\dots,X_N)$ under $p_+$ and $p_-$, respectively. By the data-processing inequality applied to the measurable map $(X_1,\dots,X_N)\mapsto\varphi$, the KL divergence satisfies
+and taking the infimum over $S$ gives
 $$
-D(P_+\|P_-)\ \ge\ D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta)).
-$$
-For $\beta\in(0,1/4]$,
-$$
-D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta))
-=(1-2\beta)\log\!\left(\frac{1-\beta}{\beta}\right).
-$$
-Since $\beta\le 1/4$, one has $1-2\beta\ge 1/2$ and
-$$
-\frac{1-\beta}{\beta}\ge \frac{3}{4\beta}.
-$$
-Hence
-$$
-D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta))
-\ge \frac{1}{2}\log\!\left(\frac{3}{4\beta}\right).
+C_{\mathrm{uni}}(\delta)=\Omega\!\left(\frac{\log(1/\delta)}{\delta^2}\right).\tag{B.5}
 $$
 
-On the other hand, $P_\pm$ are product measures, so
+*Proof.* Thresholding an estimate with additive error at most $\delta$ at $1/2$ gives a test with both errors at most $\beta$. Bretagnolle--Huber gives
 $$
-D(P_+\|P_-)=N\cdot D(\mathrm{Bern}(p_+)\|\mathrm{Bern}(p_-))
-= N\cdot 2\delta\log\!\left(\frac{1+2\delta}{1-2\delta}\right).
+N D\!\left(\operatorname{Bern}(p_-)\middle\|\operatorname{Bern}(p_+)\right)\ge\ln\!\left(\frac1{4\beta}\right).
 $$
-Using $\log\!\left(\frac{1+x}{1-x}\right)\le \frac{2x}{1-x^2}$ for $|x|<1$ with $x=2\delta\le 1/2$, we obtain
+For $x=4\delta\le1/2$,
 $$
-D(\mathrm{Bern}(p_+)\|\mathrm{Bern}(p_-))
-=2\delta\log\!\left(\frac{1+2\delta}{1-2\delta}\right)
-\le \frac{8\delta^2}{1-4\delta^2}
-\le 16\delta^2.
+D\!\left(\operatorname{Bern}(p_-)\middle\|\operatorname{Bern}(p_+)\right)=4\delta\ln\!\left(\frac{1+x}{1-x}\right)\le\frac{128}{3}\delta^2.
 $$
-Combining these bounds yields
-$$
-16N\delta^2\ \ge\ \frac{1}{2}\log\!\left(\frac{3}{4\beta}\right)
-\quad\Rightarrow\quad
-N\ \ge\ \frac{1}{32\delta^2}\log\!\left(\frac{3}{4\beta}\right).
-$$
-Taking the natural self-calibrated confidence choice $\beta=\delta$ (which lies in $(0,1/4]$ under the standing assumption $\delta\le 1/4$) gives
-$$
-N=\Omega\!\left(\frac{\log(1/\delta)}{\delta^2}\right).
-$$
-Likewise, for a horizon budget $\beta=1/\mathcal{T}$ with $\mathcal{T}\ge 4$, one obtains
-$$
-N=\Omega\!\left(\frac{\log \mathcal{T}}{\delta^2}\right).
-$$
-Finally, each sample acquisition and each internal update is counted as an elementary operation in $\mathrm{Cost}(\cdot;\delta)$, hence $C_{\text{uni}}(\delta)\ge N$, proving (B.5). ∎
+Combining the inequalities proves the sample bound. The per-strategy cost premise and the infimum in Definition B.2 prove Equation (B.5). Without the uniform reduction, confidence schedule, and cost ledger, no universal SPAP rate follows. ∎
 
-This log-enhanced quadratic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents a fundamental information-processing lower bound within the PU framework. It gives the minimum effective verification/update resources required to sustain performance $\alpha=\alpha_{SPAP}-\delta_{\rm SPAP}$. If the operational complexity notion $C_{pred}(\alpha)$ is taken to lower-bound those effective verification/update resources, then Theorem 14 inherits the same asymptotic lower bound for $C_{pred}(\alpha)$.
-
-**Corollary B.2.1 (Pattern-Specific Cost Inheritance).** Let $S$ be a predictive system with Effective Operational Property R (Definition A.0.1) and self-model $\mathcal{M}_S$ (Appendix M, §M.6.10, Definition M.10.1). Let $E$ be a pattern whose integration requires $S$'s self-predictive performance on the affected self-model component to reach level $PP_S^{(E)}$, placing it within $\delta_S(E) = \alpha_{SPAP} - PP_S^{(E)} > 0$ of the SPAP boundary (Appendix M, §M.6.10, Definition M.10.3). Then the minimum computational cost for $S$ to integrate $E$ into its self-model satisfies:
+**Corollary B.2.1 (Conditional Pattern-Specific Cost Inheritance).** Let $\mathcal S_E$ be the admissible strategies integrating pattern $E$ at margin $\delta_S(E)>0$. Assume a certificate maps every $S\in\mathcal S_E$ to a $\delta_S(E)$-accurate strategy in Definition B.2, preserves the two hard Bernoulli laws and their confidence requirement, and proves
 $$
-C_{\text{integrate}}(S, E) \geq C_{\text{uni}}(\delta_S(E))
+\operatorname{Cost}_{\mathrm{integrate}}(S,E)
+\ge \operatorname{Cost}_{B.2}(\mathcal R_E(S);\delta_S(E)).
+$$
+Then
+$$
+C_{\mathrm{integrate}}(S,E)
+\ge C_{\mathrm{uni}}(\delta_S(E))
+=\Omega\!\left(\frac{\log(1/\delta_S(E))}{\delta_S(E)^2}\right).
 \tag{B.5a}
 $$
-
-*Proof.* Integration of $E$ requires $S$ to update its self-model from $\theta_S$ to $\theta_S' = \theta_S + \delta\theta_S(E)$ such that the self-consistency condition (Appendix M, Equation M.18) is satisfied at performance level $PP_S^{(E)}$. This entails that $S$'s self-predictive performance on the self-model component affected by $E$ must reach at least $PP_S^{(E)}$, which lies within $\delta_S(E) = \alpha_{SPAP} - PP_S^{(E)}$ of the SPAP boundary.
-
-The restriction of $S$'s predictive task to this self-referential subtask — predicting the component of its own state affected by $\delta\theta_S(E)$ while knowing that its state depends on its prediction — is an instance of self-prediction within a model class possessing Property R, to which Theorem B.2 applies. Specifically, the subtask embeds the binary estimation problem of Theorem B.2's proof as follows: the self-model parameter $\theta_j$ affected by $E$ is either correctly calibrated ($|\hat{\theta}_j - \theta_j| \leq \delta_S(E)$) or not, yielding a binary hypothesis $H_\pm$ separated by $2\delta_S(E)$ in the Fisher metric. Any strategy that integrates $E$ to the required performance level must distinguish these hypotheses with failure probability at most $\delta_S(E)$ (the self-calibrated confidence choice, Definition B.2). By the sample-complexity lower bound of Theorem B.2, this requires at least $C_{\text{uni}}(\delta_S(E))$ elementary physical operations.
-
-Since integration of $E$ requires achieving this performance level on the self-referential subtask, we obtain $C_{\text{integrate}}(S, E) \geq C_{\text{uni}}(\delta_S(E))$. $\square$
+Without this uniform reduction certificate, self-reference or self-model engagement alone does not establish (B.5a). ∎
 
 ## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 
@@ -212,25 +174,16 @@ The constants $V_{\mathrm{MPU}}$ (effective MPU volume) and $\tau_0$ (characteri
 
 **Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$)**
 
-The interaction operator between two adjacent MPUs $v$ and $v'$ ($v \sim v'$) represents the energetic coupling and the energetic bookkeeping of irreversible ND-RID processes that enforce self-consistency and dissipation. We decompose it as:
+Let $r_{int}(t)$ be the realized completed reset-support update rate on this edge. The ND-RID per-update constraint gives the activity-conditioned ledger
 $$
-\hat{V}_{vv'} = \hat{V}_{pot}^{(vv')} + \hat{V}_{dissip-contrib}^{(vv')}. \tag{B.7}
+\dot S_{tot}(t)\ge k_B\epsilon\,r_{int}(t),
+\qquad
+0\le r_{int}(t)\le\frac{1}{\tau_{int}}.
+\tag{B.10}
 $$
-where:
-1.  **$\hat{V}_{pot}^{(vv')}$:** Represents "potential-like" energy from predictive coupling, such as alignment or consistency forces (e.g. analogous to spin coupling). This term is conservative and contributes to the Hamiltonian interaction energy.
-2.  **$\hat{V}_{dissip-contrib}^{(vv')}$:** Represents the local energetic contribution associated with implementing irreversible ND-RID updates. The ND-RID mechanism (Definition 20, Theorem 31) produces entropy and is well-described at the level of the reduced two-MPU state $\rho_{vv'}$ by a CPTP semigroup; hence one may write an effective Lindblad master equation
-$$
-\frac{d}{dt}\rho_{vv'}(t) = -\frac{i}{\hbar}[\hat{H}_{vv'}, \rho_{vv'}(t)] + \mathcal{L}_D(\rho_{vv'}(t)), \tag{B.8}
-$$
-where $\hat{H}_{vv'} = \hat{H}_v + \hat{H}_{v'} + \hat{V}_{pot}^{(vv')}$ is the reduced unitary part and $\mathcal{L}_D$ is of the form [Gorini–Kossakowski–Sudarshan 1976; Lindblad 1976]
-$$
-\mathcal{L}_D(\rho) = \sum_k \left( \hat{L}_k \rho \hat{L}_k^\dagger - \frac{1}{2}\{\hat{L}_k^\dagger \hat{L}_k, \rho\} \right). \tag{B.9}
-$$
-The entropy production rate $\dot{S}_{tot}$ associated with this reduced dissipative evolution is bounded below by the ND-RID constraint (Theorem 31):
-$$
-\dot{S}_{tot} \ge \frac{\epsilon}{\tau_{int}}. \tag{B.10}
-$$
-The GKSL form (B.8) is a reduced description: by unitary dilation (e.g. [Stinespring 1955]) there exists an auxiliary Hilbert space $\mathcal H_{E(vv')}$ and a self-adjoint Hamiltonian on $\mathcal H_v\otimes\mathcal H_{v'}\otimes\mathcal H_{E(vv')}$ whose unitary evolution reproduces (B.8) after tracing out $E(vv')$. Accordingly, $\hat{V}_{dissip-contrib}^{(vv')}$ is taken to be the self-adjoint local edge term (supported on the tensor factor $\mathcal{H}_v \otimes \mathcal{H}_{v'} \otimes \mathcal{H}_{E(vv')}$) that encodes the system–auxiliary coupling and auxiliary energy required to realize $\mathcal{L}_D$; its expectation accounts for the heat/work channel whose entropy production obeys (B.10). With this choice, the microscopic conservation construction in Definition B.5 is applied to the global closed Hamiltonian (with auxiliaries included), while the apparent dissipation arises only after tracing out $E(vv')$.
+The value $k_B\epsilon/\tau_{int}$ is obtained only on a registered sustained one-update-per-$\tau_{int}$ branch; the interaction duration alone supplies no positive rate floor.
+
+
 
 ## B.5 Microscopic Flow Operators and Conservation Laws
 

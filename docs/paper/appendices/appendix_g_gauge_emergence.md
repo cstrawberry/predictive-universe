@@ -407,6 +407,67 @@ Thus it descends. ∎
 
 *Proof.* A noncontextual frame functional assigns the same value to a projector independently of the measurement context in which it appears. Perspective descent says that the value assigned to the same sharp event is unchanged under admissible chart transition. When the admissible chart transitions cover the measurement-frame changes, both conditions identify local representatives of one global section of the probability presheaf. Theorem G.1.11b then supplies the trace-form representative. ∎
 
+**Theorem G.1.11d (Minimal Purification Gauge and Bures Descent).** Let $\mathcal H$ be finite-dimensional and let
+$$
+\mathcal D_r(\mathcal H)
+=
+\{\rho\succeq0:\operatorname{tr}\rho=1,\ \operatorname{rank}\rho=r\}.
+$$
+Define the minimal amplitude space
+$$
+\mathcal P_r(\mathcal H)
+=
+\{w:\mathbb C^r\to\mathcal H:\operatorname{rank}w=r,\ \operatorname{tr}(ww^\dagger)=1\},
+\qquad
+\pi(w)=ww^\dagger.
+\tag{G.1.11d.1}
+$$
+Then:
+
+1. $\pi:\mathcal P_r(\mathcal H)\to\mathcal D_r(\mathcal H)$ is a principal $U(r)$ bundle under the free right action $w\mapsto wU$. In particular,
+$$
+ww^\dagger=w'w'^\dagger
+\quad\Longleftrightarrow\quad
+w'=wU
+\text{ for a unique }U\in U(r).
+\tag{G.1.11d.2}
+$$
+2. Every purification of $\rho\in\mathcal D_r(\mathcal H)$ has ancillary Schmidt rank at least $r$. The amplitudes in $\pi^{-1}(\rho)$ are exactly the purifications with minimal ancillary dimension, up to the $U(r)$ action.
+3. With the real Hilbert--Schmidt metric $\langle X,Y\rangle_{\mathrm{HS}}=\operatorname{Re}\operatorname{tr}(X^\dagger Y)$, the vertical tangent vectors are $w\xi$ with $\xi^\dagger=-\xi$. The unique minimum-norm lift of a base tangent $\dot\rho$ is horizontal and satisfies
+$$
+w^\dagger\dot w=\dot w^\dagger w,
+\qquad
+\dot\rho=\dot w w^\dagger+w\dot w^\dagger.
+\tag{G.1.11d.3}
+$$
+The quotient metric is the Bures metric, with the convention
+$$
+g_{\mathrm B,\rho}(\dot\rho,\dot\rho)
+=
+\min_{\dot w:\,D\pi_w(\dot w)=\dot\rho}
+\operatorname{tr}(\dot w^\dagger\dot w)
+=
+\frac12\sum_{i,j:\lambda_i+\lambda_j>0}
+\frac{|\dot\rho_{ij}|^2}{\lambda_i+\lambda_j},
+\tag{G.1.11d.4}
+$$
+where $\rho=\sum_i\lambda_i|i\rangle\!\langle i|$.
+4. If a PCE ancillary cost $C_{\mathrm{anc}}(m)$ is strictly increasing in ancillary dimension $m$, then every $m>r$ purification that has only system-effect responses is response-null surplus. The PPI quotient followed by PCE therefore selects the rank-$r$ bundle (G.1.11d.1).
+
+*Proof.* For $w\in\pi^{-1}(\rho)$, polar decomposition gives $w=\sqrt\rho\,V_w$, where $V_w:\mathbb C^r\to\operatorname{supp}\rho$ is unitary onto the support. If $w'$ has the same image density, then $w'=\sqrt\rho\,V_{w'}=w(V_w^\dagger V_{w'})$, proving (G.1.11d.2), freeness, and transitivity on each fiber. Properness follows from compactness of $U(r)$, so the fixed-rank stratum carries the stated principal bundle.
+
+The reduced density of a bipartite pure state has rank equal to its Schmidt rank. Hence an ancilla purifying rank-$r$ $\rho$ has dimension at least $r$, and equality is represented by an amplitude $w$ after choosing an ancillary basis.
+
+The tangent to $wU(r)$ is $w\xi$ with $\xi$ anti-Hermitian. Orthogonality of $\dot w$ to every $w\xi$ is equivalent to $w^\dagger\dot w$ being Hermitian, which is (G.1.11d.3). Subtracting the vertical projection from any lift preserves $D\pi_w(\dot w)$ and strictly decreases its norm unless the lift is horizontal. In an eigenbasis of $\rho$, solving the resulting Sylvester equation gives (G.1.11d.4). Finally, every system effect $E$ has expectation $\operatorname{tr}(Eww^\dagger)$, so ancillary directions beyond Schmidt support change no accepted system response. PPI identifies them and strict PCE cost removes them. ∎
+
+**Corollary G.1.11d.1 (Gauge-Scope Boundary).** The group $U(r)$ in Theorem G.1.11d is purification gauge: it acts inside one system-state fiber. It is not an internal particle gauge group, spacetime gauge group, or new carrier unless an independent finite protocol makes its ancillary reference response-active. Uhlmann holonomy is likewise PPI-null for system-only protocols and becomes observable only relative to an accepted coherent reference that survives the response quotient.
+
+**Corollary G.1.11d.2 (Rank-Stratum Boundary).** Equations (G.1.11d.1)--(G.1.11d.4) hold on each fixed-rank stratum. Rank-changing paths meet a stratified boundary; they are treated by support restriction or a continuous limiting prescription and are not licensed as one smooth principal bundle through the rank change.
+
+**Relation to Corollary X.8a.2c.** Corollary X.8a.2c supplies the prior PCE selection of the Bures/SLD metric. Theorem G.1.11d does not duplicate that selector: it proves the minimal-purification principal bundle, its horizontal realization of the selected metric, and the response-null status of surplus ancillary dimensions.
+
+**Quantum-reconstruction certificate boundary.** A reconstruction assembly must keep its hypotheses typed separately. A finite-dimensional homogeneous self-dual cone yields a Euclidean Jordan algebra only after homogeneity and self-duality are accepted. Selecting complex matrix quantum theory additionally requires a composition rule, local tomography, and explicit exclusion of the real, quaternionic, spin-factor, and exceptional alternatives. The Born rule requires the effect or projection hypotheses of the applicable Gleason--Busch result. Wigner implementation requires preservation of transition probabilities, not merely a continuous transitive action. The value $d_0=8$, logical indeterminacy, and SPAP do not by themselves discharge these entries. Consequently the existing Hilbert/Born branch may consume an accepted reconstruction certificate, but the certificate assumptions must not be relabeled as consequences of $d_0=8$ alone.
+
 **G.2 Local Phase Freedom and Emergence of Gauge Structure**
 
 Having established the necessity of a complex Hilbert space $\mathcal{H}$ and the Born rule from PCE principles, we now derive the origin of gauge symmetries.
@@ -710,7 +771,7 @@ $$
 This $F_{\mu\nu}$ is automatically gauge invariant under the transformation Equation (G.4.2):
 $F'_{\mu\nu} = \partial_{\mu}A'_{\nu} - \partial_{\nu}A'_{\mu} = \partial_{\mu}(A_{\nu} - \partial_{\nu}\theta) - \partial_{\nu}(A_{\mu} - \partial_{\mu}\theta)$
 $F'_{\mu\nu} = (\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}) - (\partial_{\mu}\partial_{\nu}\theta - \partial_{\nu}\partial_{\mu}\theta) = F_{\mu\nu}$ (since partial derivatives commute).
-The unique quadratic Lorentz invariant constructed from $F_{\mu\nu}$ is $F_{\mu\nu}F^{\mu\nu}$. The contribution to the PCE potential density associated with field strength is positive in the Euclidean cost functional and quadratic at leading order in the local derivative expansion. On the regular effective-action branch, Theorem X.8c identifies the coefficient of this active field-strength coherence constraint with its PCE shadow price. Writing that stiffness price as $\lambda_F>0$ and using the interaction-strength convention $\kappa_F:=\lambda_F^{-1}$ gives
+The unique parity-even quadratic Lorentz scalar constructed from $F_{\mu\nu}$ is $F_{\mu\nu}F^{\mu\nu}$, up to the independent topological density $F_{\mu\nu}\widetilde F^{\mu\nu}$. The contribution to the PCE potential density associated with field strength is positive in the Euclidean cost functional and quadratic at leading order in the local derivative expansion. On the regular effective-action branch, Theorem X.8c identifies the coefficient of this active field-strength coherence constraint with its PCE shadow price. Writing that stiffness price as $\lambda_F>0$ and using the interaction-strength convention $\kappa_F:=\lambda_F^{-1}$ gives
 $$
 \mathcal{V}_{field}
 =
@@ -723,7 +784,7 @@ $$
 S_{\text{field}}[A] = \int d^{D}x\,\sqrt{-g}\;\left(-\frac{1}{4\kappa_F} F_{\mu\nu}(x)F^{\mu\nu}(x)\right)
 \quad \text{(G.5.2)}
 $$
-(using D=4 for spacetime dimension). By rescaling the field $A_\mu \to \sqrt{\kappa_F} A_\mu$ and absorbing the coupling $\sqrt{\kappa_F}$ into the definition of the charge $q$ (such that the product $qA_\mu$ remains invariant, e.g., if original $q \to q/\sqrt{\kappa_F}$ and original $A_\mu \to \sqrt{\kappa_F} A_\mu$, then $qA_\mu \to (q/\sqrt{\kappa_F}) (\sqrt{\kappa_F} A_\mu) = q A_\mu$; effectively this redefines the charge $q$ to incorporate $\kappa_F$), we obtain the standard dimensionless form for the Maxwell action:
+(using D=4 for spacetime dimension). Define $A_{\mu,\mathrm{can}}:=A_\mu/\sqrt{\kappa_F}$ and $q_{\mathrm{can}}:=q\sqrt{\kappa_F}$. Then $qA_\mu=q_{\mathrm{can}}A_{\mu,\mathrm{can}}$ and the kinetic term becomes the standard dimensionless form for the Maxwell action:
  $$
 S_{\text{field}}[A] = \int d^{4}x\,\sqrt{-g}\;\left(-\frac{1}{4} F_{\mu\nu}(x)F^{\mu\nu}(x)\right)
 \quad \text{(G.5.3)}
@@ -768,9 +829,9 @@ The inner sum is a Riemann sum for $\int_\Omega F_{\mu\nu}F^{\mu\nu}\,d^Dx$, com
 $$
 f\bigl(H_{\square_{\mu\nu}}(c)\bigr) \;=\; \kappa_f\,\delta^4\,F_{\mu\nu}(c)^2 + o(\delta^4),
 $$
-with $\kappa_f=\tfrac12\,q^2\,f''(1)>0$. Every smooth gauge-invariant local loop penalty satisfying the stated conditions therefore flows to the same Maxwell action up to an overall positive scale.
+with $\kappa_f=\tfrac12q^2\widetilde f''(0)>0$, where $\widetilde f(\phi):=f(e^{i\phi})$. Every smooth gauge-invariant local loop penalty satisfying the stated conditions therefore flows to the same Maxwell action up to an overall positive scale.
 
-*Proof.* Write $f(e^{i\phi})=\kappa_f\phi^2/q^2+o(\phi^2)$ by Taylor expansion around $\phi=0$, with $\kappa_f=\tfrac{q^2}{2}\,f''(1)>0$ by the strict-minimum hypothesis. Substituting the plaquette expansion $\phi=q\delta^2 F_{\mu\nu}(c)+O(\delta^4)$ yields the claim. ∎
+*Proof.* Write $f(e^{i\phi})=\kappa_f\phi^2/q^2+o(\phi^2)$ by Taylor expansion around $\phi=0$, with $\kappa_f=\tfrac{q^2}{2}\widetilde f''(0)>0$ by the strict-minimum hypothesis. Substituting the plaquette expansion $\phi=q\delta^2 F_{\mu\nu}(c)+O(\delta^4)$ yields the claim. ∎
 
 The Wilson action ($1-\cos\phi$), the Villain action (Gaussian in $\phi$), and the Manton action (squared geodesic distance on $U(1)$) all satisfy the hypotheses of Corollary G.5a.1 and therefore share the same Maxwell continuum limit. The framework does not depend on the microscopic link penalty, only on its leading quadratic behavior near the coherent configuration.
 
@@ -989,7 +1050,7 @@ The MPU network’s ability to support a complex gauge structure is fundamentall
     \tag{G.8.0}
     $$
 
-    Using plausible estimates from the PU framework ($C_{\max} \approx 1.5-2.0$ nats, derived from $f_{RID}<1$ which follows from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$; $\alpha_{load} \approx 0.1-0.2$ nats, related to achieving sufficient signal‑to‑noise for coherence), we get a target range for the maximum viable total gauge group dimension:
+    Using plausible estimates from the PU framework ($C_{\max} \approx 1.5-2.0$ nats, derived from $f_{RID}<1$ which follows from $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$; $\alpha_{load} \approx 0.1-0.2$ nats, related to achieving sufficient signal‑to‑noise for coherence), we get a target range for the maximum viable total gauge group dimension:
 
     $$
     n_{\max} \approx \frac{1.5 \text{ to } 2.0}{0.1 \text{ to } 0.2} = 7.5 \text{ to } 20
@@ -1036,13 +1097,13 @@ $$
 
 **Definition G.8.2d ($\omega$-Isotropic Subspace).** A subspace $L \subseteq T_{\rho_0}$ is $\omega$-isotropic if $\omega(v, w) = 0$ for all $v, w \in L$. A maximal $\omega$-isotropic subspace (Lagrangian) has $\dim(L) = \dim(T_{\rho_0})/2 = 12$.
 
-**Theorem G.8.2e (Geometric Bound on Jointly Estimable Generators).** The maximum number of gauge generators supporting joint optimal parameter estimation equals the Lagrangian dimension:
-
+**Theorem G.8.2e (Geometric Bound on Isotropic Generator Families).** In the $24$-dimensional symplectic space $(T_{\rho_0},\omega)$, every $\omega$-isotropic subspace $L$ satisfies
 $$
-n_G^{(\mathrm{geom})} = ab = 12
+\dim L\le12.
 $$
+The bound is attained by the span of one vector from each of the twelve canonical symplectic pairs, so the maximal isotropic dimension is $12$.
 
-*Proof.* A maximal $\omega$-isotropic subspace is obtained by selecting exactly one generator from each symplectic 2-plane (either $X_{\alpha\beta}$ or $Y_{\alpha\beta}$, but not both), giving $\dim(L_{\max}) = 12$. Any subspace of dimension $> 12$ must contain at least one complete 2-plane, which has $\omega(X_{\alpha\beta}, Y_{\alpha\beta}) = 1 \neq 0$, violating isotropy. ∎
+*Proof.* Nondegeneracy gives $\dim L+\dim L^\omega=24$. Isotropy is exactly the inclusion $L\subseteq L^\omega$, hence $2\dim L\le24$. The displayed twelve-vector span is isotropic and attains equality. ∎
 
 Under $\mathfrak C_{\mathrm{Cas}}$ the homogeneous spectral contribution has the recorded finite-part form
 $$
@@ -1050,9 +1111,9 @@ $$
 $$
 where $m_{s,n}$, $q_s$, and $R_{\mathrm{tail}}$ are part of the same pre-registered record. The formula is a certificate format, not an inserted numerical prediction until the tables and tail bound are supplied.
 
-**Corollary G.8.2f (Consistency with Channel Capacity).** The geometric bound $n_G^{(\mathrm{geom})} = 12$ refines the channel capacity range $n_{\max} \approx 7.5$–$20$ (Equation G.8.0) by providing a sharp upper constraint from symplectic geometry. The Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim = 8 + 3 + 1 = 12$ saturates the geometric bound.
+**Corollary G.8.2f (Consistency with Channel Capacity).** The geometric isotropic bound $n_G^{(\mathrm{geom})}\le12$ is independent of the heuristic channel-capacity range $n_{\max} \approx 7.5$–$20$ (Equation G.8.0) by providing a sharp upper constraint from symplectic geometry. The Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim = 8 + 3 + 1 = 12$ saturates the geometric bound.
 
-**Remark G.8.2g: Connection to Golay Structure.** The Lagrangian dimension $ab=12$ equals the Golay code dimension $k=12$ on the predictive-recovery MacWilliams branch (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b). The equality $M=24$ supplies the block length; the self-dual-rate gate supplies the further conclusion $k=M/2=12$. This correspondence reflects structural unity: both the symplectic geometry (joint estimability) and the error-correction structure (optimal redundancy after the rate gate) select the same 12-dimensional subspace of the 24-dimensional interface. Gauge generators failing joint estimability incur additional PCE costs from incompatibility-induced measurement trade-offs, manifesting as increased operational cost $V_{\mathrm{op}}$ due to the necessity of sequential rather than simultaneous optimal estimation.
+**Remark G.8.2g (Numerical Symplectic--Golay Correspondence).** The Lagrangian tangent-rank bound gives $12$, while the independently certified predictive-recovery Golay branch has code dimension $k=12$. Equality of dimensions does not identify the two subspaces, provide a gauge-response injection, or establish a common physical carrier. Any such identification requires a separate intertwining certificate.
 
 #### G.8.2.3 Anomaly Cancellation as a PCE Imperative (D‑Sensitive)
 
@@ -1165,8 +1226,10 @@ A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. This bound equals the complex dimension of the attractor orbit: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$, providing a geometric interpretation of the gauge dimension constraint. Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals both the Golay code dimension $k = 12$ (Theorem Z.13) and the complex dimension of the attractor orbit $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ (Theorem Z.6.3a). The triple coincidence—channel capacity bound, code dimension, and orbit dimension—provides strong evidence for the structural uniqueness of the gauge sector. The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
     
     The bound $n_G \leq 12$ traces to two foundational parameters through the derivation chain:
-    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow[\text{at attractor}]{\text{Def. 15a, Thm Z.1}} a = 2 \xrightarrow[\text{minimal branch}]{\text{Thm Z.2}} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
-    where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic on the Appendix Z branch (Theorem Z.2; Theorem 23 gives the lower bound) and $\varepsilon_0=\ln2$ is the attractor-saturating SPAP entropy cost (Definition 15a; Theorem 31 gives the lower bound).
+    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch} \xrightarrow[\text{at attractor}]{\text{Def. 15a, Thm Z.1}} a = 2 \xrightarrow[\text{minimal branch}]{\text{Thm Z.2}} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
+    where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic on the Appendix Z branch (Theorem Z.2; Theorem 23 gives the lower bound) and $\varepsilon_0=\ln2$ is the structural PCE-reference cost; Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, with equality only on the overhead-free implementation branch.
+
+
 
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
@@ -2168,7 +2231,7 @@ whose greatest common divisor is $1$. Requiring $e^c$ to generate the unit charg
 
 Obstruction (1) blocks the original Bures-norm-based Definition T.17a. Obstruction (2) blocks the effective-action replacement on bare $\mathrm{Gr}(2,8)$. Obstruction (3) proves that no construction — from the PU axioms or otherwise — can produce the required gauge-sector splitting as subbundles of the bare quotient bundle $Q$. Finding (4) demonstrates that the lifted spectral structure possesses the correct Dynkin index anatomy to accommodate the target threshold tuple, with all charges determined by the embedding rather than by free parameters.
 
-The minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$ resolves all three obstructions and supplies the structural prediction (4) simultaneously: on $\widetilde X$, the pulled-back bundle $\pi^*Q$ tautologically splits as $(1,2,3)$, the operator $D^{\mathrm{PCE}}_{\widetilde X}$ is $G_{\mathrm{SM}}$-equivariant but not $U(8)$-equivariant, the spectral threshold shifts $\Delta_i$ are gauge-factor-dependent by construction, and the Dynkin index matrix that governs the decomposition is invertible with all entries determined by the representation theory of the $SU(5)$ embedding. Proposition T.17a.3a identifies the canonical base-to-lift map for the local threshold contribution. Convention T.69a fixes the $\mathrm{MS2}_{\mu_G}$ finite part, Theorem T.69 isolates the global spectral remainder, Corollary T.69.1 supplies finite-block tail certification, and Theorem T.70 gives the sector/parity spectrum. Any completed flag-lift spectral problem then determines a definite threshold triplet and the minimal residual ledger by Theorem T.78. Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$ and therefore cannot replace the global sector-resolving block functional used for the Appendix T validation comparison.
+The minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$ resolves all three obstructions and supplies the structural prediction (4) simultaneously: on $\widetilde X$, the pulled-back bundle $\pi^*Q$ tautologically splits as $(1,2,3)$, the operator $D^{\mathrm{PCE}}_{\widetilde X}$ is $G_{\mathrm{SM}}$-equivariant but not $U(8)$-equivariant, the spectral threshold shifts $\Delta_i$ are gauge-factor-dependent by construction, and the Dynkin index matrix that governs the decomposition is invertible with all entries determined by the representation theory of the $SU(5)$ embedding. Proposition T.17a.3a gives only a conditional base-to-lift pullback identity for the local threshold contribution. Convention T.69a fixes the $\mathrm{MS2}_{\mu_G}$ finite part, Theorem T.69 isolates the global spectral remainder, Corollary T.69.1 supplies finite-block tail certification, and Theorem T.70 gives the sector/parity spectrum. Any completed flag-lift spectral problem then determines a definite threshold triplet and the minimal residual ledger by Theorem T.78. Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$ and therefore cannot replace the global sector-resolving block functional used for the Appendix T validation comparison.
 
 **Theorem G.8.4f (12-Fold Structural Correspondence).** *The number 12 appears as a structural constant across multiple framework domains:*
 
@@ -2444,9 +2507,17 @@ R_P(\overline L_X)=\mathcal G_{24}.
 $$
 The Standard Model algebra selected by Theorem G.8.4b has dimension $12$ and saturates this carrier dimension, while the Golay code is the unique balanced $[24,12,8]$ code on the same marked 24-mode carrier. ∎
 
-**Remark G.8.4g.1: Clarification on CSS Quantum Codes.** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The duality in Theorem G.8.4g concerns the classical binary Lagrangian carrier and the real jointly estimable gauge carrier, not CSS quantum-code logical parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ Lagrangian partition and the 12-dimensional gauge-capacity carrier.
+**Remark G.8.4g.1: Clarification on CSS Quantum Codes.**
 
-**Remark G.8.4g.1a: Vacuum Stabilizer Interpretation.** The $[[24, 0, 8]]$ CSS construction yields a unique stabilizer state $|\Omega_{\text{Golay}}\rangle$, the uniform superposition over all 4096 Golay codewords:
+The self-dual CSS construction defines a $[[24,0]]$ stabilizer state with zero logical qubits; the additional label $8$ may be used only under an explicitly stated minimum-stabilizer-weight state convention, not as a protected logical-code distance,
+
+
+
+**Remark G.8.4g.1a: Mathematical Golay CSS State and Physical Boundary.** The self-dual CSS construction has $k_{quantum}=0$ and therefore specifies a unique stabilizer state rather than a logical code space. The code's classical minimum weight and the state's stabilizer weights are mathematical invariants, but they do not establish a protected physical vacuum, a hardware-noise floor, or a residual syndrome spectrum.
+
+A physical-vacuum claim requires a registered Hamiltonian or dynamics together with an encoder, channel, measurement, recovery operation, and response map. Mathieu invariance of the marked state is a symmetry fact and does not supply those data.
+
+
 $$|\Omega_{\text{Golay}}\rangle = \frac{1}{64} \sum_{c \in \mathcal{G}_{24}} |c\rangle$$
 This state is stabilized by 24 independent generators: 12 X-type generators $S_i^X = X^{g_i}$ (where $g_i$ is the $i$-th row of a generator matrix) and 12 Z-type generators $S_j^Z = Z^{h_j}$ (where $h_j$ is the $j$-th row of a parity-check matrix). The "12 + 12" structure thus manifests as stabilizer generators rather than signal versus parity qubits. The Golay minimum distance 8 implies that the smallest-weight non-identity stabilizer elements have weight 8; equivalently, any Pauli error of weight less than 8 produces a nontrivial syndrome under stabilizer measurement. The state is invariant under the Mathieu group $M_{24} = \text{Aut}(\mathcal{G}_{24})$, with $|M_{24}| = 244,823,040$.
 
@@ -2961,9 +3032,13 @@ where $P_{\mathrm{cost}}(u) \approx A_{\mathrm{PCE}} u^{\gamma_{\mathrm{eff}}}$ 
 As rigorously established in Appendix X, this rate-level potential and its minimization are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{\mathrm{em}}(\mu^*) = u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs to this calculation—specifically the QFI spectrum $\{\lambda_i\}$—are operational functionals of the baseline PCE-optimal MPU cycle. Appendix Z demonstrates that at the PCE-Attractor these spectral inputs are uniquely determined by the framework's foundational constants, leading to a complete calculation of $\alpha_{\mathrm{em}}$ from the Appendix Z derivation chain.
 
 
-## G.1.9 Unified Origin of Probability Measures from ND-RID Equilibration
+## G.1.9 Modular Representation and Certified Physical Equilibrium
 
-The Born rule derivation (Sections G.1.1–G.1.4) established that PCE-enforced non-contextuality, combined with additivity over orthogonal projectors, uniquely determines quantum probability via Gleason's theorem. This section demonstrates that the same ND-RID dynamics, operating under PCE optimization, provide a unified mechanism for the emergence of probability measures across quantum, thermal, and gravitational contexts. The unification arises not from formal analogy but from the common dynamical process of equilibration to Gibbs fixed points, with the constraint geometry determining the specific modular Hamiltonian.
+The Born rule derivation The Born rule remains the independent result of Sections G.1.1--G.1.4 and Theorem G.1.7. Section G.1.9 supplies a common modular constraint-geometry representation for faithful probability states; it does not derive all probability measures from PCE-driven equilibration to Gibbs fixed points.
+
+A modular representation $\rho\propto e^{-K_\rho}$ is available for every faithful state. Its promotion to physical thermal or horizon equilibrium requires the separate QDB/physical-time or complete-passivity certificate of Theorems G.1.9.3 and G.1.9.3c, together with the relevant constraint bridge. This is a structural unification of representations and certified equilibrium branches, not one universal dynamical origin for Born probabilities.
+
+ This section demonstrates that the same ND-RID dynamics, operating under PCE optimization, provide a unified mechanism for the emergence of probability measures across quantum, thermal, and gravitational contexts. The unification arises not from formal analogy but from the common dynamical process of equilibration to Gibbs fixed points, with the constraint geometry determining the specific modular Hamiltonian.
 
 This probability unification is the dynamical complement to the entropy unification established in Appendix P (Thesis P.6.1, Section P.6.5). Where Section P.6.5 establishes that all entropies—SPAP, Shannon, thermodynamic, von Neumann, and Bekenstein-Hawking—are manifestations of a single foundational structure, this section establishes that all probability measures arise from a single dynamical mechanism. The two unifications are related through the Gibbs structure: entropy characterizes the equilibrium state, while probability describes how systems reach that state.
 
@@ -2978,11 +3053,11 @@ $$
 **Stage 1: Irreducible Entropy Cost.** The Self-Referential Paradox of Accurate Prediction (Theorems 10–11) requires a logically irreversible 2-to-1 state merge in each predictive cycle (Lemma Z.2). By Landauer's principle [Landauer 1961], this merge has an irreducible thermodynamic cost (Theorem 31, Appendix J):
 
 $$
-\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \text{ nats}
+\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0) \text{ nats}
 \tag{G.1.9.1}
 $$
 
-The structural floor $\varepsilon_0=\ln2$ is exact. The physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is saturated only on the overhead-free quasi-static implementation branch [Bennett 1982]. This cost split is fixed by Theorem 31, while the PCE-Attractor uses the structural value $\varepsilon_0=\ln2$ for the discrete backbone (Definition 15a). It appears both as a thermodynamic constraint in the MPU internal cycle and as one of the two active-kernel constraints: the retained match/mismatch verification record gives $a\ge2$, and the entropy-capacity gate gives $\ln a\ge\varepsilon_0$; together with no-surplus selection they fix $a=2$ on that branch. This ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
+The structural floor $\varepsilon_0=\ln2$ is exact. The physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ is saturated only on the overhead-free quasi-static implementation branch [Bennett 1982]. This cost split is fixed by Theorem 31, while the PCE-Attractor uses the structural value $\varepsilon_0=\ln2$ for the discrete backbone (Definition 15a). It appears both as a thermodynamic constraint in the MPU internal cycle and as one of the two active-kernel constraints: the retained match/mismatch verification record gives $a\ge2$, and the entropy-capacity gate gives $\ln a\ge\varepsilon_0$; together with no-surplus selection they fix $a=2$ on that branch. This ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
 
 **Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The active subsystem is the retained verification kernel for the SPAP comparison and must carry two sharp alternatives, match and mismatch, so $a\ge2$ on the Hilbert-carrier branch. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Entropy-capacity also requires $\ln a \ge \varepsilon_0$; since $a \in \mathbb{N}$, PPI/PCE no-surplus selection fixes the minimal admissible $a$ on the attractor-saturating branch (Theorem Z.1):
 
@@ -2993,7 +3068,9 @@ $$
 
 This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost and the retained match/mismatch verification record.
 
-**Stage 3: The PCE-Attractor State.** With $d_0 = 8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $a = 2$, the inactive subspace has dimension $b = d_0 - a = 6$. The PCE-Attractor (Definition 15a) is the unique equilibrium state maximally mixed on the active subspace and zero on the inactive complement:
+**Stage 3: The PCE-Attractor State.** With $d_0 = 8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $a = 2$, the inactive subspace has dimension $b = d_0 - a = 6$. The PCE-Attractor (Definition 15a) is the selected PCE reference configuration, maximally mixed on the active subspace and zero on the inactive complement; physical Gibbs equilibrium requires the independent selector below:
+
+
 
 $$
 \tau^* = \rho_0 = \frac{I_2}{2} \oplus 0_6
@@ -3011,112 +3088,150 @@ At the PCE-Attractor, quantum entropy and SPAP entropy coincide exactly for the 
 
 ### G.1.9.2 ND-RID Channel Structure and Fixed Points
 
-The average 'Evolve' channel $\mathcal{E}_N$ is modeled as a convex combination (Appendix E, Lemma E.1):
-
+**Definition G.1.9.1a (Active-Support Refresh Branch).** Let $\mathcal H_a\cong\mathbb C^2$ be the registered active support. On this optional branch the averaged active-support 'Evolve' channel is
 $$
-\mathcal{E}_N = (1-p)\Psi + p \cdot T_\sigma, \quad 0 < p \leq 1
+\mathcal E_{N,a}=(1-p)\Psi_a+pT_{\sigma_a},
+\qquad
+T_{\sigma_a}(\rho)=\operatorname{tr}(\rho)\sigma_a,
 \tag{G.1.9.5}
 $$
+where $\Psi_a$ is CPTP on $\mathcal B(\mathcal H_a)$, $p\in(0,1]$ is a separately registered refresh weight, and $\sigma_a\succ0$ on $\mathcal H_a$. The conditional reset ledger $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ does not imply this decomposition or $p>0$; those are model data of the refresh branch. No full-space primitivity claim is made for $\mathcal H_a\oplus\mathcal H_b$.
 
-where $\Psi$ is an arbitrary CPTP map representing the reversible/update phase and $T_\sigma(\rho) = \mathrm{tr}(\rho)\sigma$ is the full-rank reset channel to state $\sigma \succ 0$. 
-
-**Lemma G.1.9.1 (Nonzero Refresh Weight).** In the PU coarse-grained ND-RID description, the averaged 'Evolve' channel includes a nonzero input-independent refresh component (Equation (G.1.9.5)), i.e. it admits a decomposition
+**Theorem G.1.9.1 (Active-Support Contractivity and Conditional Primitivity of ND-RID).** On the branch of Definition G.1.9.1a, for all active-support states $\rho_1,\rho_2$,
 $$
-\mathcal{E}_N = (1-p)\Psi + p\,T_\sigma
-\quad\text{with}\quad
-p\in(0,1].
+D_{tr}\!\bigl(\mathcal E_{N,a}(\rho_1),\mathcal E_{N,a}(\rho_2)\bigr)
+\le(1-p)D_{tr}(\rho_1,\rho_2),
+\qquad
+f_{RID}\le1-p<1.
 \tag{G.1.9.6}
 $$
-The irreducible cost $\varepsilon_0=\ln2$ (Theorem 31) is the thermodynamic signature of logically irreversible refresh/reset in the SPAP cycle, but $\varepsilon$ alone does not determine a universal quantitative lower bound on $p$ without additional microscopic assumptions about how entropy production is partitioned between $\Psi$ and the refresh component.
+The channel is strictly positive on $\mathcal H_a$ and therefore has a unique faithful active-support fixed point $\rho_{\infty,a}$.
 
-*Proof.* Equation (G.1.9.5) defines $p$ as the weight of the input-independent refresh component in a convex decomposition of the averaged channel. Theorem 31 establishes that each cycle incurs a strictly positive irreducible entropy cost, which must be physically instantiated (Stage 2) and is operationally associated with refresh/reset in the SPAP update. At the level of the averaged channel model, this corresponds to $p>0$.
+*Proof.* For $\Delta=\rho_1-\rho_2$, $\operatorname{tr}\Delta=0$ and $T_{\sigma_a}(\Delta)=0$. Hence
+$$
+\mathcal E_{N,a}(\Delta)=(1-p)\Psi_a(\Delta).
+$$
+Trace-distance contractivity of $\Psi_a$ proves (G.1.9.6). Moreover,
+$$
+\mathcal E_{N,a}(\rho)=(1-p)\Psi_a(\rho)+p\sigma_a\succ0
+$$
+for every active-support state $\rho$, so finite-dimensional strict positivity gives primitivity and a unique faithful fixed point on $\mathcal H_a$. ∎
 
-However, $\varepsilon$ constrains only the total irreversible entropy production per cycle, not uniquely the decomposition weights: if $\Psi$ itself contributes irreversible entropy production, then the refresh weight $p$ can be smaller while the total cost remains $\varepsilon$. Therefore no universal numeric lower bound on $p$ follows from $\varepsilon$ alone at this abstraction level. QED
-
-**Theorem G.1.9.1 (Contractivity and Conditional Primitivity of ND-RID).** Let $\mathcal{E}_N$ be as in Equation (G.1.9.5), with $p\in(0,1]$. Then for all states $\rho_1,\rho_2$,
+**Remark G.1.9.1a (Attractor Compatibility Is a Separate Gate).** Primitivity fixes convergence to $\rho_{\infty,a}$, not its identity. It yields the PCE reference state $\tau_a^*=I_2/2$ only when the independent stationarity certificate
 $$
-D_{tr}\\!\bigl(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2)\bigr)
-\le (1-p)\,D_{tr}(\rho_1,\rho_2),
-\qquad
-f_{RID}\le 1-p<1.
+\mathcal E_{N,a}(\tau_a^*)=\tau_a^*
+\tag{G.1.9.6a}
 $$
-If additionally $\sigma\succ 0$ (full rank), then $\mathcal{E}_N$ is strictly positive and hence primitive (unique full-rank fixed point) [Sanz et al. 2010].
-
-*Proof.* Let $\Delta:=\rho_1-\rho_2$ so $\mathrm{Tr}(\Delta)=0$. Since $T_\sigma(\Delta)=\mathrm{Tr}(\Delta)\sigma=0$, Equation (G.1.9.5) implies
-$$
-\mathcal{E}_N(\Delta)=(1-p)\Psi(\Delta).
-$$
-For any CPTP map $\Psi$, trace distance is contractive, hence $\|\Psi(\Delta)\|_1\le \|\Delta\|_1$. Therefore
-$$
-D_{tr}\\!\bigl(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2)\bigr)
-=\tfrac12\|\mathcal{E}_N(\Delta)\|_1
-=(1-p)\tfrac12\|\Psi(\Delta)\|_1
-\le (1-p)\tfrac12\|\Delta\|_1
-=(1-p)\,D_{tr}(\rho_1,\rho_2),
-$$
-which gives the stated strict contraction.
-
-If $\sigma\succ0$ and $p>0$, then for any state $\rho$,
-$$
-\mathcal{E}_N(\rho)=(1-p)\Psi(\rho)+p\sigma\succ0,
-$$
-so $\mathcal{E}_N$ is strictly positive. Strict positivity implies primitivity and uniqueness of a full-rank fixed point [Sanz et al. 2010]. QED
-
-*Remark: Primitivity vs. PCE-Attractor.* The primitivity argument establishes *contractivity*—that states converge exponentially. The *destination* of this convergence is determined by PCE optimization (Definition 15), which selects the PCE-Attractor $\tau^*$ as the equilibrium configuration. While a primitive channel on the full $d_0$-dimensional space has a unique full-rank fixed point, the PCE-Attractor $\tau^* = (I_2/2) \oplus 0_6$ represents the PCE-optimal state within the orbit of equilibrium configurations, with dynamics effectively restricted to the active subspace by the thermodynamic decoupling of inactive modes (Appendix Z, Section Z.6.2).
+is registered. Extending $\tau_a^*$ by zero on $\mathcal H_b$ gives $\tau^*=(I_2/2)\oplus0_6$, which is rank deficient on the full carrier and is not the fixed point of a primitive full-space channel. PCE selection alone establishes neither this channel compatibility nor physical Gibbs/KMS equilibrium.
 
 ### G.1.9.3 PCE Optimization and Detailed Balance
 
 The connection between PCE optimization and the thermal structure of the fixed point requires analysis of entropy production.
 
-**Definition G.1.9.2a (Entropy Production Decomposition).** For a quantum dynamical semigroup generator $\mathcal{L}$ with faithful stationary state $\sigma$ (i.e., $\mathcal{L}^*(\sigma) = 0$ with $\sigma \succ 0$), the entropy production for the induced CPTP map $\Phi_t = e^{t\mathcal{L}}$ acting on state $\rho$ decomposes as [Spohn 1978]:
-
+**Definition G.1.9.2a (Spohn Entropy-Production Ledger).** Let $\mathcal L_*$ generate a finite-dimensional CPTP semigroup $\Phi_t=e^{t\mathcal L_*}$ with faithful stationary state $\sigma$. For every state $\rho$, define the integrated production by
 $$
-\Delta S_{tot}[\rho; \Phi_t] = -\Delta D(\rho \| \sigma) + \sigma_{irr}[\rho; \Phi_t]
-\tag{G.1.9.7}
+\Sigma_\sigma[\rho;t]
+:=D(\rho\Vert\sigma)-D(\Phi_t(\rho)\Vert\sigma)\ge0.
+\tag{G.1.9.7b}
 $$
-
-where:
-- $D(\rho \| \sigma) = \mathrm{tr}(\rho \ln \rho - \rho \ln \sigma)$ is the Umegaki relative entropy
-- $\Delta D = D(\Phi_t(\rho) \| \sigma) - D(\rho \| \sigma) \leq 0$ represents contraction toward the stationary state
-- $\sigma_{irr} \geq 0$ is the irreversible entropy production
-
-This decomposition is fundamental to the entropy unification program: the total entropy production $\Delta S_{tot}$ is the thermodynamic entropy (measurable as heat divided by temperature), while the relative entropy $D_{KL}$ is the information-theoretic entropy. The Spohn decomposition makes explicit that these are components of a single quantity.
-
-**Proposition G.1.9.2 (PCE preference for detailed-balance channels).** Suppose the ND-RID admissible class contains two channels with the same stationary state and the same predictive utility, and suppose the POP/PCE cost functional is monotone in the irreversible entropy production term $\sigma_{irr}$. Then PCE prefers the channel with smaller $\sigma_{irr}$; in particular, if a channel with $\sigma_{irr}=0$ is admissible, it is preferred over all channels with the same utility and larger irreversible entropy production.
-
-*Proof.* Under the stated monotonicity hypothesis, two channels with identical predictive utility and stationary state are ordered entirely by their contribution to the irreversible cost term. Therefore the channel with smaller $\sigma_{irr}$ has lower POP/PCE cost. If an admissible channel with $\sigma_{irr}=0$ exists, it minimizes this contribution among that comparison class. QED
-
-**Theorem G.1.9.3 (Detailed Balance Characterization).** For a quantum dynamical semigroup with faithful stationary state $\sigma$, write the GKLS generator in its canonical Hamiltonian–dissipative decomposition
+The inequality follows from data processing and $\Phi_t(\sigma)=\sigma$. If $\Phi_s(\rho)\succ0$ for every $s$ in the retained interval, define
 $$
-\mathcal{L}=\mathcal{L}_H+\mathcal{L}_D,
+\dot\Sigma_\sigma(\Phi_s(\rho))
+:=-\operatorname{tr}\!\left[\mathcal L_*(\Phi_s(\rho))
+\bigl(\log\Phi_s(\rho)-\log\sigma\bigr)\right]\ge0,
+\tag{G.1.9.7a}
+$$
+and then
+$$
+\Sigma_\sigma[\rho;t]
+=\int_0^t\dot\Sigma_\sigma(\Phi_s(\rho))\,ds.
+$$
+For a rank-deficient trajectory, (G.1.9.7b) remains the theorem-level definition; a pointwise rate formula is used only after a stated faithful regularization or an extended right-derivative convention is supplied. On a separately registered thermal weak-coupling branch this becomes the entropy balance $\dot\Sigma=dS/dt-\beta\dot Q$. Detailed balance does not set the production to zero for every nonequilibrium state; relaxation toward $\sigma$ can have positive production.
+
+**Proposition G.1.9.2 (Conditional PCE Preference for Lower Production).** Suppose two admissible ND-RID semigroups have the same stationary state and predictive utility, and the POP/PCE functional is strictly increasing in a fixed registered integrated-production functional. Then PCE prefers the member with smaller registered production.
+
+*Proof.* Under the hypotheses, the compared utility and stationary-state terms agree, so strict monotonicity in the remaining production term orders the two candidates. This comparison does not prove that a detailed-balance generator is admissible, unique, or selected; each of those claims needs its own finite certificate. ∎
+
+**Theorem G.1.9.3 (Detailed-Balance Reversibility and Relaxation Production).** Let $\mathcal L_*$ be a finite-dimensional Schrödinger-picture GKLS generator with faithful stationary state $\sigma$ and decomposition
+$$
+\mathcal L_* = \mathcal L_{*,H}+\mathcal L_{*,D},
 \qquad
-\mathcal{L}_H(\rho):=-i[H,\rho],
+\mathcal L_{*,H}(\rho)=-i[H,\rho],
+\qquad
+[H,\sigma]=0.
 $$
-where $H=H^\dagger$ commutes with $\sigma$ (so $\mathcal{L}_H$ preserves $\sigma$ without entropy production) and $\mathcal{L}_D$ is the purely dissipative (Lindblad) part. Then $\sigma_{irr}[\rho; e^{t\mathcal{L}}] = 0$ for all states $\rho$ and all $t>0$ if and only if the dissipative part satisfies quantum detailed balance with respect to $\sigma$:
+Let $\mathcal L=\mathcal L_*^\dagger$ be the unital Heisenberg-picture generator and $\mathcal L_D=\mathcal L_{*,D}^\dagger$ its dissipative part. On the registered $\sigma$-GNS convention, quantum detailed balance is
 $$
-\mathcal{L}_D=\mathcal{L}_D^{\dagger_\sigma},
-\qquad\text{equivalently}\qquad
-\langle A,\mathcal{L}_D(B)\rangle_\sigma=\langle \mathcal{L}_D(A),B\rangle_\sigma
+\langle A,\mathcal L_D(B)\rangle_\sigma
+=
+\langle\mathcal L_D(A),B\rangle_\sigma,
+\qquad
+\langle A,B\rangle_\sigma:=\operatorname{tr}(\sigma A^\dagger B).
 \tag{G.1.9.8}
 $$
-for all observables $A,B$, where $\langle A,B\rangle_\sigma:=\mathrm{tr}(A^\dagger B\,\sigma)$ and $\mathcal{L}_D^{\dagger_\sigma}$ is the adjoint of the dissipative part with respect to this inner product [Spohn 1978; Fagnola & Umanità 2007].
+This is an equilibrium-reversibility condition for the Heisenberg semigroup. It does not imply vanishing production for every initial state. Instead, the integrated production of Definition G.1.9.2a is nonnegative, it vanishes at $\sigma$, and its pointwise rate is nonnegative whenever that rate is defined under the faithful-state or regularized convention.
 
-*Proof.* The semigroup acts on the finite-dimensional operator algebra of the MPU active sector and the stationary state $\sigma$ is faithful by hypothesis, so the detailed-balance characterization theorems of Spohn [1978] and Fagnola & Umanità [2007] apply. The Hamiltonian part $\mathcal{L}_H$ is $\sigma$-skew-adjoint ($\mathcal{L}_H^{\dagger_\sigma}=-\mathcal{L}_H$) and generates unitary evolution that preserves relative entropy; it therefore contributes zero irreversible entropy production regardless of the detailed-balance condition. The irreversible entropy production is governed entirely by the dissipative part $\mathcal{L}_D$. For such semigroups, vanishing irreversible entropy production for all initial states and times is equivalent to the dissipative part being self-adjoint with respect to the $\sigma$-weighted inner product, i.e. $\mathcal{L}_D=\mathcal{L}_D^{\dagger_\sigma}$. This is exactly the stated detailed-balance condition. ∎
+*Proof.* Equation (G.1.9.8) is the self-adjointness characterization of the registered GNS detailed-balance convention for the Heisenberg generator. The condition $[H,\sigma]=0$ makes the Heisenberg Hamiltonian part $i[H,\cdot]$ GNS-skew-adjoint. Stationarity and CPTP data processing give the integrated-production statements, while $\Phi_t(\sigma)=\sigma$ gives zero production at $\sigma$. A reversible classical Markov chain started away from stationarity already shows that detailed balance does not make relaxation production vanish for every state. ∎
 
 **Corollary G.1.9.3a (PCE-Optimal ND-RID Satisfies Detailed Balance).** The PCE-optimal ND-RID channel $\mathcal{E}_N^*$ satisfies quantum detailed balance with respect to the PCE-Attractor state $\tau^*$.
 
+**Definition G.1.9.3b (Complete Passivity on the Physical-Hamiltonian Branch).** Let $H$ be a finite physical Hamiltonian with nontrivial simple spectrum, registered independently of $\rho$ by the physical-time evolution and battery/work convention. The physical certificate also records that the admitted cyclic controls are operationally complete for the unitary class quantified below; with a restricted control set, passivity is only relative to that set. A faithful state $\rho$ is passive when
+$$
+\operatorname{tr}(H\,U\rho U^\dagger)
+\ge
+\operatorname{tr}(H\rho)
+\tag{G.1.9.3b.1}
+$$
+for every cyclic unitary $U$. It is completely passive when $\rho^{\otimes n}$ is passive for
+$$
+H^{(n)}=\sum_{j=1}^n
+I^{\otimes(j-1)}\otimes H\otimes I^{\otimes(n-j)}
+\tag{G.1.9.3b.2}
+$$
+for every $n\ge1$.
+
+**Theorem G.1.9.3c (Complete Passivity Selects the Physical Gibbs/KMS State).** On the branch of Definition G.1.9.3b,
+$$
+\rho\text{ is completely passive}
+\quad\Longleftrightarrow\quad
+\rho=Z^{-1}e^{-\beta H}
+\text{ for some }\beta\ge0.
+\tag{G.1.9.3c.1}
+$$
+Equivalently, its modular Hamiltonian is affine in the physical generator,
+$$
+K_\rho=-\log\rho=\beta H+(\log Z)I.
+\tag{G.1.9.3c.2}
+$$
+Thus KMS thermality with respect to physical time is not obtained merely by naming $-\log\rho$ a Hamiltonian; it is selected by the absence of hidden cyclic work at every copy number.
+
+*Proof.* One-copy passivity forces $[\rho,H]=0$ and orders the populations oppositely to the energies. Write $H|i\rangle=E_i|i\rangle$ and $\rho|i\rangle=p_i|i\rangle$. The finite-dimensional complete-passivity theorem [Pusz & Woronowicz 1978; Lenard 1978] gives the forward implication; its finite-copy inversion step can be seen directly as follows. If the nonnegative transition slopes $\log(p_i/p_j)/(E_j-E_i)$ are not all equal, choose two with slopes $\beta_1<\beta_2$. Density of the rationals supplies positive integers $m,n$ for which the corresponding tensor-product energy difference and log-population difference have opposite signs. The two product eigenstates are then population-inverted, and their swap extracts work, contradicting complete passivity. Hence $\log p_i=-\beta E_i-\log Z$ with $\beta\ge0$. Conversely, for $\rho_\beta=Z^{-1}e^{-\beta H}$ and any unitary $U$,
+$$
+D(U\rho_\beta U^\dagger\Vert\rho_\beta)
+=\beta\bigl(\operatorname{tr}(HU\rho_\beta U^\dagger)-\operatorname{tr}(H\rho_\beta)\bigr)\ge0,
+$$
+because unitary conjugation preserves entropy. The same identity holds for every tensor power, proving complete passivity. ∎
+
+**Corollary G.1.9.3d (Passivity Scope and Falsification Boundary).** One-copy passivity is insufficient: it orders populations but need not impose one common inverse temperature. One finite work-extraction protocol falsifies complete passivity, but finitely many null protocols cannot certify the all-$n$, all-$U$ quantifier without the registered controllability/completeness theorem. Nonfaithful states supported entirely in a ground-energy eigenspace form the zero-temperature boundary case; degeneracies require the corresponding block version and are not covered by the simple-spectrum statement above. The special state $I_2/2$ realizes $\beta=0$ for every registered two-level $H$ but does not identify $H$.
+
 ### G.1.9.4 The Gibbs Structure of PCE-Optimal Fixed Points
 
-**Definition G.1.9.4a (Modular Hamiltonian).** For any faithful density operator $\rho$ on a finite-dimensional Hilbert space $\mathcal{H}$, the modular Hamiltonian $K_\rho$ is the unique self-adjoint operator satisfying [Haag 1996]:
+**Definition G.1.9.4a (Modular Hamiltonian).** For a faithful finite-dimensional state $\rho$, the Gibbs representative is defined only modulo additive scalars: $K\sim K+cI$ because normalization removes $cI$. The gauge-fixed representative $K_\rho^{(0)}=-\log\rho$ is unique under the convention $Z=\operatorname{tr}(e^{-K_\rho^{(0)}})=1$; an arbitrary representative satisfies:
+
+
 
 $$
 \rho = \frac{e^{-K_\rho}}{Z}, \quad Z = \mathrm{tr}(e^{-K_\rho})
 \tag{G.1.9.9}
 $$
 
-Explicitly, if $\rho = \sum_i p_i |i\rangle\langle i|$ with $p_i > 0$, then $K_\rho = -\sum_i (\ln p_i)|i\rangle\langle i|$.
+Explicitly, if $\rho=\sum_i p_i|i\rangle\langle i|$ with $p_i>0$, then $K_\rho^{(0)}=-\sum_i(\ln p_i)|i\rangle\langle i|$; every other representative is $K_\rho^{(0)}+cI$.
 
-The modular Hamiltonian provides the bridge between probability and entropy: for a Gibbs state $\rho = Z^{-1}e^{-K}$, the von Neumann entropy is $S(\rho) = \langle K \rangle + \ln Z$, directly connecting the probability distribution (encoded in $\rho$) to the entropy (encoded in $S$).
+
+
+The modular Hamiltonian provides a representation bridge between probability and entropy: for $\rho=Z^{-1}e^{-K}$, $S(\rho)=\langle K\rangle+\ln Z$. This identity is invariant under $K\mapsto K+cI$ and holds for every faithful state. Its interpretation as physical Gibbs/KMS equilibrium requires the complete-passivity selector of Theorem G.1.9.3c or an equivalent physical-time certificate.
+
+
 
 **Theorem G.1.9.4 (Gibbs Structure of PCE-Attractor).** The PCE-Attractor state $\tau^*$ (Equation G.1.9.3) has the Gibbs form when restricted to its support. On the active subspace $\mathcal{A} = \text{supp}(\tau^*)$, the modular Hamiltonian is:
 
@@ -3135,18 +3250,22 @@ $$
 
 Normalizing: $Z^* = \mathrm{tr}(e^{-K^*}) = \mathrm{tr}(I_2/2) = 1$, yielding $\tau^*|_{\mathcal{A}} = I_2/2$. On the inactive subspace $\mathcal{B}$, $K^*|_{\mathcal{B}} = +\infty$ ensures $e^{-K^*|_{\mathcal{B}}} = 0$. QED
 
-**Theorem G.1.9.5 (KMS Characterization of PCE-Optimal States).** States satisfying detailed balance with respect to a quantum dynamical semigroup are characterized by the Kubo-Martin-Schwinger (KMS) condition [Kubo 1957; Martin & Schwinger 1959]. Restricted to the active subspace $\mathcal{A} = \text{supp}(\tau^*)$, where $\tau^*|_{\mathcal{A}}$ is faithful, the PCE-Attractor state satisfies the KMS condition at inverse temperature $\beta = 1$ with respect to the modular flow $\sigma_t(A) = e^{iK^*|_{\mathcal{A}} t} A e^{-iK^*|_{\mathcal{A}} t}$:
-
+**Theorem G.1.9.5 (Modular KMS Identity and Physical-Time Boundary).** Let $\rho$ be faithful on a finite-dimensional algebra and let $K_\rho=-\log\rho$ up to an additive scalar. Then $\rho$ is a KMS state at modular inverse temperature $1$ for
 $$
-\omega^*(A \sigma_t(B)) = \omega^*(\sigma_{t+i}(B) A)
+\sigma_t^\rho(A)=e^{-iK_\rho t}Ae^{iK_\rho t}=\rho^{it}A\rho^{-it},
+$$
+namely
+$$
+\omega_\rho(A\sigma_{t-i}^\rho(B))
+=
+\omega_\rho(\sigma_t^\rho(B)A).
 \tag{G.1.9.11}
 $$
+This is the same modular-parameter convention as Definition F.10.4b.1. For a physical Gibbs state $\rho\propto e^{-\beta H}$ and Appendix F's convention $\alpha_\tau(A)=e^{-i\tau H}Ae^{i\tau H}$, one has $\sigma_t^\rho=\alpha_{\beta t}$ and the analytic boundary is $t-i$.
 
-where $\omega^*(\cdot) = \mathrm{tr}(\tau^*|_{\mathcal{A}} \cdot)$ is the state functional on $\mathcal{B}(\mathcal{A})$.
+This is a representation identity for every faithful state; it neither follows from PCE selection nor identifies the modular parameter with physical time. A physical Gibbs/KMS interpretation relative to a registered Hamiltonian $H$ requires $K_\rho=\beta H+(\log Z)I$, as selected by Theorem G.1.9.3c or an equivalent independent certificate. For $\tau^*|_{\mathcal A}=I_2/2$, the modular flow is trivial and corresponds to $\beta=0$ for any registered two-level $H$; it does not determine $H$.
 
-*Proof.* The KMS condition at $\beta = 1$ characterizes Gibbs states $\rho = Z^{-1}e^{-K}$ with respect to their modular automorphism [Haag 1996]. On the active subspace $\mathcal{A}$, where $\tau^*|_{\mathcal{A}} = I_2/2$ is faithful (full-rank on $\mathcal{A}$), the standard Tomita-Takesaki theory applies. Since $\tau^*|_{\mathcal{A}} = Z^{-1}e^{-K^*|_{\mathcal{A}}}$ is a Gibbs state by Theorem G.1.9.4, it satisfies KMS with respect to $\sigma_t$ generated by $K^*|_{\mathcal{A}}$. The inverse temperature $\beta = 1$ is a convention inherent in the definition of the modular Hamiltonian. QED
-
-The KMS condition characterizes the thermal equilibrium states whose entropy is unified across domains (Section P.6.5). The KMS states are precisely those for which the distinction between "thermodynamic equilibrium" and "information-theoretic equilibrium" dissolves—they are equilibrium states in both senses simultaneously.
+*Proof.* In finite dimension the identity follows by substituting $\rho\propto e^{-K_\rho}$ and using cyclicity of trace after analytic continuation by $-i$. The physical-time boundary is exactly Equation (G.1.9.3c.2). ∎
 
 ### G.1.9.5 Constraint Geometry and the Modular Hamiltonian
 
@@ -3234,7 +3353,7 @@ This identifies the gravitational constant $G$ as an emergent quantity determine
 The result $\eta_{ent} = 1/(4G)$ connects directly to the gravitational entropy in the unified entropy framework (Section P.6.5). The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ arises from the channel capacity of ND-RID interactions crossing the horizon (Theorems E.3 and E.5). This is not an analogy but an identity: horizon entropy counts the Shannon entropy of channel capacity across the boundary, measured in Planck units. The derivation chain from SPAP to horizon entropy (Section P.6.5.2) makes this explicit:
 
 $$
-\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
+\text{completed binary reset-support certificate}\xrightarrow{\text{E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
 $$
 
 ### G.1.9.7 The Unified Mechanism
@@ -3245,7 +3364,9 @@ $$
 $$
 with the modular Hamiltonian $K$ determined by the relevant constraint geometry.
 
-*Proof.* Sections G.1.1–G.1.8 identify measurement probabilities with expectation values computed from density operators. Theorems G.1.9.4 and G.1.9.5 show that the PCE-attractor state and its support-restricted equilibrium description are of Gibbs/KMS form. Theorem G.1.9.6 then records how additional physical constraints modify the modular Hamiltonian additively while preserving the same Gibbs-form template. Therefore the probability structures considered in these sections share a common Gibbs-form representation, with differences encoded in the constraint term entering $K$. QED
+*Proof.* Sections G.1.1–G.1.8 identify measurement probabilities with expectation values computed from density operators. Theorems G.1.9.4 and G.1.9.5 give the PCE-attractor's modular representation and modular KMS identity; they do not establish physical equilibrium without Theorem G.1.9.3c.
+
+ Theorem G.1.9.6 then records how additional physical constraints modify the modular Hamiltonian additively while preserving the same Gibbs-form template. Therefore the probability structures considered in these sections share a common Gibbs-form representation, with differences encoded in the constraint term entering $K$. QED
 
 ### G.1.9.8 The Conversion Factor: $\varepsilon_0=\ln2$
 
@@ -3276,19 +3397,27 @@ This section has established:
 
 1. **Derived Reference State:** The PCE-Attractor state $\tau^* = (I_2/2) \oplus 0_6$ emerges from SPAP + Landauer + PCE, not by assumption (Section G.1.9.1).
 
-2. **PCE → Detailed Balance:** PCE optimization of the ND-RID channel enforces quantum detailed balance with respect to $\tau^*$ (Proposition G.1.9.2 and Theorem G.1.9.3).
+2. **Detailed-Balance Gate:** PCE conditionally prefers lower registered production by Proposition G.1.9.2, but detailed balance requires the separate reversibility certificate of Theorem G.1.9.3 and physical Gibbs identification requires Theorem G.1.9.3c.
 
-3. **Gibbs Fixed Points:** The equilibrium states are Gibbs states $\rho^* = Z^{-1}e^{-K^*}$ characterized by the KMS condition (Theorems G.1.9.4–G.1.9.5).
 
-4. **Unified Modular Structure:** Constraint geometry determines the modular Hamiltonian $K^*$, yielding Born (quantum), Boltzmann (thermal), and Unruh-Hawking (gravitational) distributions from the same mechanism (Theorem G.1.9.6).
+
+3. **Modular Representation and Physical Selector:** Theorem G.1.9.4 gives the attractor's modular representation, while Theorems G.1.9.3c and G.1.9.5 require an independent physical-time selector before it is called a physical Gibbs/KMS state.
+
+
+
+4. **Certified Modular Structure:** Constraint geometry organizes modular representatives. Born probabilities remain independently derived; Boltzmann and horizon thermal readings require their physical-equilibrium and boost/temperature certificates.
+
+
 
 5. **Foundation for Gravity:** The modular Hamiltonian framework connects to the entanglement first law, providing the thermodynamic foundation for deriving Einstein's equations (Section G.1.9.6).
 
-Together with the entropy unification of Section P.6.5, this establishes that the entire statistical structure of physics—both equilibrium properties (entropy) and approach to equilibrium (probability)—emerges from the same foundational elements: SPAP, Landauer, and PCE. The two unifications are summarized in the following correspondence:
+Together with the entropy ledger of Section P.6.5, this gives a shared modular bookkeeping language. It does not establish one PCE dynamical origin for all probability laws or all physical equilibrium states.
+
+ The two unifications are summarized in the following correspondence:
 
 | Entropy Unification (P.6.5) | Probability Unification (G.1.9) |
 |-----------------------------|--------------------------------|
-| SPAP entropy $\varepsilon_0=\ln2$ | Irreducible cycle cost |
+| SPAP structural entropy $\varepsilon_0=\ln2$ | Binary register log-cardinality; physical reset cost is ensemble-dependent |
 | Shannon entropy $H$ | State distinguishability |
 | Thermodynamic entropy $dS = \delta Q/T$ | Boltzmann distribution |
 | von Neumann entropy $S(\rho)$ | Born rule |
@@ -3298,11 +3427,15 @@ The complete derivation chain from foundational principles to physical probabili
 
 $$
 \boxed{
-\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* \xrightarrow{\text{PCE}} \text{Detailed Balance} \xrightarrow{\mathcal{C}} \rho^*_{\mathcal{C}} = Z^{-1}e^{-K^*(\mathcal{C})}
+\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* \xrightarrow{\text{QDB/complete-passivity certificate}} \text{physical equilibrium} \xrightarrow{\mathcal C} \rho^*_{\mathcal C}=Z^{-1}e^{-K^*(\mathcal C)}
+
+
 }
 $$
 
-The apparent diversity of probability measures in physics—quantum, thermal, gravitational—reflects not different foundations but different constraint geometries $\mathcal{C}$ within a unified framework of ND-RID equilibration to Gibbs fixed points.
+The probability measures share a modular constraint-geometry representation; promotion of a modular representation to a physical Gibbs fixed point requires the separate equilibrium selector recorded above.
+
+
 
 ### G.1.9.10 Topological Origin of the Factor $2\pi$
 
@@ -3323,7 +3456,7 @@ This follows from single-valuedness of the amplitude $e^{i\mathcal{S}/\hbar}$. F
 
 **Corollary G.1.9.10b (SPAP-Topological Ratio).** *The ratio $2\pi/\varepsilon = 2\pi/\ln 2 \approx 9.065$ determines the number of minimum-cost SPAP cycles per quantum of orbital action.*
 
-*Proof.* From the Action-Entropy Identity (Corollary Q.0.1), action in units of $\hbar$ equals total SPAP entropy: $\mathcal{S}/\hbar = \sum_i \varepsilon_i$. At the SPAP minimum, each cycle contributes $\varepsilon_0=\ln2$ nats (Theorem 31). For one Bohr-Sommerfeld quantum $\mathcal{S} = h = 2\pi\hbar$:
+*Proof.* From the Action-Entropy Identity (Corollary Q.0.1), action in units of $\hbar$ equals total SPAP entropy: $\mathcal S=\kappa_A\sum_i\varepsilon_i$ on a calibrated branch. At the SPAP minimum, each cycle contributes $\varepsilon_0=\ln2$ nats (Theorem 31). For one Bohr-Sommerfeld quantum $\mathcal{S} = h = 2\pi\hbar$:
 $$N_{\text{cycles}} = \frac{2\pi\hbar/\hbar}{\ln 2} = \frac{2\pi}{\ln 2} \approx 9.065$$
 QED
 
@@ -3336,15 +3469,19 @@ QED
 
 Neither is derivable from the other. The measure-theoretic entropy $\varepsilon$ counts distinguishable states; the topological factor $2\pi$ enforces consistency under cyclic evolution. Their ratio $2\pi/\ln 2$ characterizes the computational depth of one action quantum.
 
-**Remark G.1.9.10d: Connection to Modular Flow.** The KMS condition (Theorem G.1.9.5) characterizes equilibrium states with respect to modular flow $\sigma_t(A) = e^{iK^* t} A e^{-iK^* t}$ at inverse temperature $\beta = 1$. On the active subspace, $K^*|_{\mathcal{A}} = (\ln 2)\cdot I_2$ (Theorem G.1.9.4), so the modular Hamiltonian eigenvalue is $\ln 2$. The ratio $2\pi/\ln 2 \approx 9.065$ appearing in Corollary G.1.9.10b characterizes the action-entropy conversion: one topological quantum of phase ($2\pi$) corresponds to $2\pi/\ln 2$ units of SPAP entropy.
+**Remark G.1.9.10d: Connection to Modular Flow.** Theorem G.1.9.5 gives a modular KMS identity at parameter value $1$ for every faithful state; identifying that parameter with physical inverse temperature requires the independent physical-time equilibrium selector.
 
-**Remark G.1.9.10e: Derived Mass-Time Identity.** On the attractor-saturating branch, Definition Z.8f and Theorem Q.6.1 give
+
+
+**Remark G.1.9.10e: Algebraic Normalization-Time Identity.** With $\mu_0^{alg}:=m_P/(2\sqrt{8\varepsilon_0})$ and $\tau_{min}=\sqrt{8\varepsilon_0}t_P$, the algebraic coefficients obey
+
+
 $$
-\mu_0 c^2 \tau_{min} = \frac{\hbar}{2}.
+\mu_0^{alg}c^2\tau_{min}=\frac{\hbar}{2}.
 $$
 Indeed,
 $$
-\mu_0 c^2 \tau_{min}
+\mu_0^{alg}c^2\tau_{min}
 =
 \frac{m_P}{2\sqrt{8\ln 2}}\,c^2 \cdot \sqrt{8\ln 2}\,t_P
 =
@@ -3352,7 +3489,7 @@ $$
 =
 \frac{\hbar}{2}.
 $$
-This is an exact algebraic identity between the derived mass scale and the derived minimum cycle time. It does not by itself establish Margolus-Levitin saturation or a self-generated Unruh bath for the MPU.
+This is an exact algebraic identity between an algebraic mass-dimension normalization and the minimum cycle-time coefficient; it becomes a physical mass relation only on $\mathfrak B_{mass}$. It does not by itself establish Margolus-Levitin saturation or a self-generated Unruh bath for the MPU.
 
 ### G.8.7 Mode-Polarization Correspondence
 
@@ -3708,17 +3845,21 @@ which is the inactive complex rank used by the gauge-capacity ledger.
 
 ### G.10.6.1 Mass from Active Kernel Processing
 
-**Theorem G.10.6 (Fundamental Fermion Mass from Active Kernel Processing).** Fundamental fermionic fields carrying non-zero rest mass necessarily transform as spinors under the emergent Lorentz group.
+**Theorem G.10.6 (Conditional Active-Kernel Spinor--Mass Correspondence).** On $\mathfrak B_{mass}$, suppose a fundamental field's nonzero rest-mass ledger is carried by relational information maintained through direct processing on the active kernel $\mathcal H_a\cong\mathbb C^2$, and suppose the registered Lorentz bridge of Theorem G.10.5 applies. Then that field transforms in a spinor representation. The theorem does not infer the existence or mass of a fermion from $\mathfrak B_{mass}$ alone.
+
+
 
 *Proof.*
 
-**Step 1 (Mass from relational information).** By Theorem N.5 (Mass-Information Equivalence, Appendix N), rest mass for fundamental matter is determined by relational information content:
+**Step 1 (Conditional mass ledger).** On $\mathfrak B_{mass}$, Theorem N.5 assigns the registered rest-mass coefficient from relational information:
+
+
 $$
 m = \frac{\mathcal{I}_{\text{rel}}}{2\sqrt{8\varepsilon_0}} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{\text{rel}} \cdot m_P \tag{G.10.12}
 $$
 where $\varepsilon_0=\ln2$ (Theorem 31), $m_P = \sqrt{\hbar c/G}$ is the Planck mass, and $\mathcal{I}_{\text{rel}}$ quantifies the system's predictive correlations with the network.
 
-**Step 2 (Relational information requires active kernel processing).** The relational information $\mathcal{I}_{\text{rel}}$ for fundamental matter fields is maintained through the SPAP cycle, which necessarily involves processing on the active kernel $\mathcal{H}_a \cong \mathbb{C}^2$. The irreversible entropy cost $\varepsilon_0=\ln2$ per cycle (Theorem 31, Appendix J) is incurred on this 2-dimensional subsystem. By Corollary N.4.1 (Appendix N), the entropy flow rate maintaining $\mathcal{I}_{\text{rel}}$ is:
+**Step 2 (Relational information requires active kernel processing).** The relational information $\mathcal{I}_{\text{rel}}$ for fundamental matter fields is maintained through the SPAP cycle, which necessarily involves processing on the active kernel $\mathcal{H}_a \cong \mathbb{C}^2$. The structural binary ledger assigns $\varepsilon_0=\ln2$ per registered unit; a physical entropy-flow formula additionally requires the completed-reset ensemble and its $H_q(P\mid R)$ values. On $\mathfrak B_{mass}$, including its completed-reset and accepted action--entropy gates, the entropy-flow ledger is:
 $$
 \frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{\text{rel}}}{2\tau_{\text{min}}} \tag{G.10.13}
 $$
@@ -3728,7 +3869,9 @@ where $\tau_{\text{min}} = \sqrt{8\varepsilon_0} \cdot t_P$ is the temporal disc
 
 **Step 4 (Conclusion for fundamental fermions).** Fundamental fermionic matter fields—those whose mass arises from direct participation in the SPAP-processed relational information—necessarily transform as spinors. ∎
 
-**Remark G.10.3: Scope of Theorem G.10.6.** This theorem applies to *fundamental fermions* whose mass originates from the relational information mechanism of Theorem N.5. It does not apply to:
+**Remark G.10.3: Scope of Theorem G.10.6.** This theorem applies only on $\mathfrak B_{mass}$ to fundamental fields whose registered mass originates from relational information and whose carrier provenance is direct active-kernel processing.
+
+
 - **Composite particles** (e.g., protons, neutrons) whose mass arises predominantly from QCD binding energy
 - **Scalar bosons** (e.g., the Higgs) whose mass arises from the scalar potential
 - **Gauge bosons** which acquire mass through symmetry breaking mechanisms
@@ -3860,10 +4003,14 @@ $$
 } \tag{G.10.16}
 $$
 
-**Corollary G.10.8.1 (Unified Origin of Fermionic Matter).** The existence of massive fermionic matter is not a contingent feature of our universe but a direct consequence of self-referential predictive logic operating under finite resource constraints. The $\mathbb{Z}_2$ structure of SPAP, when physically instantiated via PPI and optimized under PCE, generates both the spinor representation (determining transformation properties) and the mass-information correspondence (determining dynamical properties for fundamental fermions).
+**Corollary G.10.8.1 (Conditional Spinor--Mass Compatibility).** On the intersection of the registered spinor/Lorentz branch, the direct active-kernel provenance hypothesis, and $\mathfrak B_{mass}$, the spinor transformation law and relational mass ledger are compatible parts of one branch package. SPAP and PCE alone do not prove the existence of massive fermions or the absolute mass coefficient.
 
 
-**Note:** The spinor derivation (Section G.10) depends on Theorem N.5 from Appendix N for the mass-information correspondence. The logical chain from SPAP to spinors (Sections G.10.1–G.10.5) is self-contained within this appendix.
+
+
+**Note:** Sections G.10.1–G.10.5 provide the spinor branch independently of N.5. The absolute mass assignment enters only through $\mathfrak B_{mass}$ and is not a consequence of the spinor derivation.
+
+
 
 ## G.11 Conclusion
 
@@ -3877,9 +4024,11 @@ This appendix has demonstrated how the Predictive Universe framework derives fun
 
 4. **Three Generations:** Appendix R derives the minimal admissible value $N_g = 3$ from anomaly cancellation together with the CP-violation requirement in the modeled family-charge sector, and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. The $D_4$ triality orbit and $E_8$/Leech construction supply compatible three-fold scaffolds rather than independent proofs (Appendix R, Theorem R.3.4; Proposition R.3.5.1a; Proposition R.4.2).
 
-5. **Fine-Structure Constant:** The Appendix Z U(1) sector gives the closed-form Thomson core $\alpha_{em,0}^{-1}=137.03609205522863\ldots$ and the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1), with no continuous fit parameter in the core expression. The accepted hypercharge-recoil operator-realization certificate of Definition Z.27.11k.12 assigns the residual classes $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$ and closes the branch with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ (Theorem Z.27.11k.20; Corollary Z.27.11k.21.1). If the passive-complement source is downgraded, Corollary Z.27.11k.21 gives the certified interval $[137.03599917502362\ldots,137.03599917878353\ldots]$; other residual routes remain separate branch records.
+5. **Fine-Structure Constant:** The Appendix Z U(1) sector gives the closed-form Thomson core $\alpha_{em,0}^{-1}=137.03609205522863\ldots$ and the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1), with no continuous fit parameter in the core expression. The candidate hypercharge-recoil (operator realization open) operator-realization certificate of Definition Z.27.11k.12 assigns the residual classes $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$ and closes the branch with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$ (Theorem Z.27.11k.20; Corollary Z.27.11k.21.1). If the passive-complement source is downgraded, Corollary Z.27.11k.21 gives the certified interval $[137.03599917502362\ldots,137.03599917878353\ldots]$; other residual routes remain separate branch records.
 
-6. **Unified Probability Measures:** Quantum (Born), thermal (Boltzmann), and gravitational (Unruh-Hawking) probability distributions arise from a common mechanism—ND-RID equilibration to Gibbs fixed points under PCE optimization (Section G.1.9).
+6. **Unified Probability Measures:** Modular representations organize quantum, thermal, and horizon probability records, while their interpretation as physical Gibbs/KMS equilibrium requires the independent detailed-balance or complete-passivity certificate of Section G.1.9.
+
+
 
 These results ground the quantum measurement framework, gauge interactions, spacetime dimensionality, and fundamental constants in the unified logic and resource economics of prediction. Quantitative predictions are further constrained by the alphabet identities of Appendix W.
 

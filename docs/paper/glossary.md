@@ -7,18 +7,30 @@
 *   $\mathfrak GY_U^{(4)}$: relative four-dimensional Gelfand-Yaglom determinant certificate for branch prefactors.
 *   $\mathfrak C_{\mathrm{meter}}$: metered actualization certificate for a retained interface register and its $\ln2$ timing subledger.
 
+*   **Bianchi Law--Source Equivalence:** (Theorem I.4a) At fixed coarse-graining scale, a spacetime-dependent effective coupling plus correction tensor can be rewritten exactly as a constant coupling plus a conserved effective source; only protocols that separately identify the factors distinguish the descriptions.
+*   **Flavor Complement Defect:** (Theorem T.79.9) The positive matrix $\mathbf1-C^\dagger C$ measuring the response-active component of one three-family carrier outside the other; it vanishes exactly on the common-range unitary branch.
+*   **Minimal Purification Gauge:** (Theorem G.1.11d) The free $U(r)$ fiber of rank-$r$ amplitudes $w$ with $ww^\dagger=\rho$; it is a response redundancy for system-only protocols, not an independent particle or spacetime gauge group.
+*   **Nine-Horizon Tensor Tomography:** (Corollary 12.1g.a) A minimal explicit set of nine null contractions reconstructing a trace-free symmetric four-tensor, supplemented by a tenth-direction exact sum rule.
+*   **Prediction Codimension:** (Theorem 13.0m) The number $m-r$ of locally independent empirical relations supplied by an $m$-observable prediction map whose Jacobian has rank $r$.
+*   **PCE Metric-Response Cost:** (Theorem 12.1e.a) The least Hessian-weighted microscopic cost of a retained metric response, equal to the pseudoinverse quadratic form dual to its emergent covariance.
+*   **Shannon Causality:** (Theorem 39c) Exact independence of every pre-lightcone transcript from every independently selectable spacelike context; equivalent to zero mutual information for all priors and zero Shannon capacity.
+*   **Static-Holonomy KMS Obstruction:** (Theorem Y.6.1i) Exact stationarity keeps every time-independent retained baryon expectation constant; its value requires a separate symmetry/boundary certificate, and secular generation requires a response-active drive, inflow, preparation, or freeze-out entry.
+*   **Vacuum-Shift Response Quotient:** (Definition X.4a; Theorem X.4b) The equivalence class trading constant vacuum stress against the bare cosmological term. Null flux and $\Lambda_{\mathrm{eff}}$ are invariant; normalized modular invariance additionally requires the finite/trace-class identity-response hypothesis.
+*   **Whitened Normal Projector:** (Definition 13.0l) The projector $\Pi_\perp=\mathbf1-AA^+$ onto covariance-whitened empirical directions normal to a prediction manifold.
+
 *   **24-Cell:** (Appendix Z, Definition Z.8; Appendix U, Theorem U.30; Proposition U.13a) The standard 24-point configuration on $S^3$ given by the unit Hurwitz integers, realizing the optimal kissing configuration $K(4)=24$ in 4 dimensions and spanning $\mathbb{R}^4$. This is the standard coordinate realization conventionally called the 24-cell vertex set; Theorem U.30 verifies its spherical 5-design exactness. Equivalent, after normalization and orthogonal identification, to the minimal vectors of the $D_4$ root lattice. The sampled angular operator of Proposition U.13a has exact spectrum $0,3^4,8^9,15^8,24^2$; Proposition U.13a.1c identifies these values with the continuum $S^3$ angular eigenvalue values while keeping the $n=3,4$ multiplicity aliasing explicit.
 
-*   **A2 Neutrino Cosmology Closure:** (Appendix T, Corollary T.24.16a) Anchored Majorana branch on which $m_3/m_2=e^{\sqrt3}$ and $m_3/m_1=e^{3\sqrt3}$ lock oscillation data, cosmological mass sum, and direct beta endpoint mass:
-$$
-\Sigma_\nu=58.2\,\mathrm{meV},
-\qquad
-m_\beta=8.85\,\mathrm{meV}.
-$$
+*   **Conditional $A_2$ Absolute-Scale Projection:** (Appendix T, Corollary T.24.16a) On the internally normalized branch,
+    $$
+    \Sigma_\nu=30.519194\,\mathrm{meV},
+    \qquad
+    m_\beta=4.63978\,\mathrm{meV}.
+    $$
+    The branch does not match the cited absolute mass-squared splittings and is not an oscillation-data closure.
 
 *   **$A_c$ (Homogeneous Relaxation Amplitude):** (Postulate K.9.2) The asymptotic enhancement amplitude of the background non-vacuum coupling, defined so that $\Upsilon_G\to 1+A_c$ on the de Sitter branch.
 
-*   **Action-Entropy Identity:** (Appendix Q, Theorem Q.0.1; Corollary Q.0.1) The identification $\mathcal{S}/\hbar=\sum_i\varepsilon_i$, meaning physical action counts cumulative SPAP entropy production in nats. Planck's constant $\hbar$ is the exchange rate between mechanical action and information-theoretic entropy.
+*   **Calibrated Action--Entropy Relation:** (Appendix Q, Theorem Q.0.1; Corollary Q.0.1) The continuum action is fixed relative to an independent action-per-nat scale $\kappa_A$. The branch $\kappa_A=\hbar$ is a calibration condition.
 
 *   **Active Inadmissible Self-Information:** (Appendix A.5.6a) Information whose proof or truth-label may exist externally but cannot be admitted by a predictor as active self-targeted evidence at the targeted cycle without destabilizing the prediction condition. The diagonal object $E_{B,t}$ is inaccessible to $B$ at $t$, accessible to an external predictor, and accessible to $B$ after historical record formation. At the proof-access layer, the correct labeled proof exists in $\mathcal F$, but register-coherent active admissibility forces $\operatorname{LITE}^{\mathrm{act}}_B(t,e_{B,t},N)=\bot$ for every $N$.
 
@@ -47,11 +59,11 @@ $$
 
 *   **APS-Eta Baryon Transport Certificate:** (Appendix Y, Definition Y.6.1a; Theorem Y.6.1b) Certificate machinery specifying a four-dimensional Euclidean electroweak interpolation manifold $W_{\mathrm{EW}}$ with APS boundary, a chiral SM Dirac operator $D_W$ twisted by the electroweak connection and the pulled-back flavor Berry bundle, producing two normalized index outputs $I_{CP}$ and $I_{tr}$ that determine $\chi_{CP}$ and $\chi_{tr}$ in Theorem Y.6.1 and Proposition Y.9.1. The canonical unit branch is theorem-level when $I_{CP}=I_{tr}=1$ and the determinant-line orientation product equals $+1$.
 
-*   **APS-Kubo Baryon Transport Certificate:** (Appendix Y, Definition Y.6.1c; Theorem Y.6.1d; Corollary Y.6.1e) Certificate machinery combining the APS eta CP phase, Berry holonomy, Kubo Chern-Simons diffusion coefficient, washout rate, susceptibility kernel, entropy/photon normalization, and quadrature ledger into one finite baryogenesis response integral. Reduction to the Theorem Y.9 product form requires an additional factorized-window datum (Corollary Y.6.1e); without it, the certificate locks the integral form (Y.6.1d.1) directly.
+*   **APS-Kubo Baryon Transport Certificate:** (Appendix Y, Definition Y.6.1c; Theorem Y.6.1d; Corollary Y.6.1e; Definition Y.6.1f; Theorem Y.6.1g; Corollary Y.6.1h) A finite record combining the APS phase, Berry holonomy, Kubo Chern-Simons diffusion, washout, susceptibility, entropy/photon normalization, and quadrature data. The source identity is $\dot\theta_{\mathrm{PU}}=\dot\Theta_\eta+\int_{S^1}\Gamma^*\mathcal F_{\mathrm{Berry}}$; weighting occurs only after insertion into the transport integral. Exact reduction to Theorem Y.9 requires both the whole-output equality (Y.6.1e.1) and $\mathcal R_B^{\mathrm{APSK}}=\{0\}$; otherwise the theorem-level output is the interval (Y.6.1d.1).
 
 *   **AQFT (Algebraic Quantum Field Theory):** (Appendix F) Framework describing emergent continuum QFT from MPU networks via nets of local algebras $\mathfrak{A}(\mathcal{O})$.
 
-*   **Area Law (Horizon Entropy):** (Theorem 49, Appendix E) On the geometric-regularity, density-certificate, and PCE residual-budget saturation branches, equilibrium horizon entropy scales linearly with area: $S_{max} = k_B \mathcal{A} / (4 L_P^2)$, with the coefficient fixed by the calibrated ND-RID channel density and saturated per-channel information budget.
+*   **Area Law (Horizon Entropy):** (Theorem 49, Appendix E; Corollary E.8.4g; Theorem E.8.4m) On the geometric-regularity, density-certificate, and PCE residual-budget saturation branches, $S_{max}=k_B\mathcal A/(4L_P^2)$. The additional capacity-tight PCE-no-surplus sufficient-min-cut branch satisfying (E.8.4.21) identifies that same entropy with the least sufficient predictive update-current; it is not an extra prerequisite for the earlier area-law result.
 
 *   **Becoming-Flow Compression Datum:** (Appendix X, Definition X.8g.4; Proposition X.8g.5; Remark X.8g.6) Certificate-gated finite record $\mathfrak C_{\Omega}$ packaging a retained state bundle, response metric, reversible operator, dissipative mobility, PCE generator, constraint list, and projection ledger into one branch flow. It compresses accepted reversible, dissipative, KKT, and boundary-variation sector equations when their original branch certificates are already present; it is not an independent law that promotes open gates.
 
@@ -65,6 +77,8 @@ $$
 $$
 predicts entropic-clock stall when retained entropy/update flow vanishes, and gives the clock-current TUR when the clock is read through a finite Blackwell-PCE record current.
 
+*   **Entropy Retention Ledger $S_{\mathrm{ret}}$:** For a fixed finite retained protocol partition with distribution $p=(p_i)_i$, $S_{\mathrm{ret}}(p)=-k_B\sum_i p_i\ln p_i$ with $0\ln0=0$. This is a state-counting and cost ledger; retained structure additionally requires finite-response relevance and PCE admissibility.
+
 *   **Golay-QEC Bootstrap Record:** (Appendix A, Definition A.0.1q.1; Theorem A.0.2a; Appendix Z, Proposition Z.13b.7) Finite record $\mathfrak C_{\mathrm{GQEC}}$ using the predictive-recovery Golay branch and punctured CSS $[[23,1,7]]$ witness to discharge the QEC compatibility certificate only when physical syndrome, recovery, threshold, and protected-gate ledgers are also accepted.
 
 *   **Predictive Complementarity Allocation Ledger:** (Section 4.5.2, Definition 14.1d; Proposition 14.1e) Certificate $\mathfrak C_{\mathrm{SW}}$ splitting a finite predictor's horizon budget into self-model, world-model, and shared costs. It yields the SPAP-near tradeoff $C_{\mathrm{world}}\le B_C-C_{\mathrm{sh}}-c_{\mathrm{SPAP}}\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$ for covered tasks.
@@ -72,6 +86,10 @@ predicts entropic-clock stall when retained entropy/update flow vanishes, and gi
 *   **Predictive Free-Energy Envelope Certificate:** (Appendix D, Definition D.6.5c; Proposition D.6.5d) Certificate $\mathfrak C_{\mathrm{Pred2}}$ under which $F_{\mathrm{pred}}=-V$ and a recorded viable running envelope provide the branch-level “second law of prediction” reading. It applies to the certified expectation or envelope, not to every lineage.
 
 *   **Predictive Generalized Second Law Certificate:** (Section 12.5.4, Definition 12.5.3l; Theorem 12.5.3m) Finite retained horizon-cut record $\mathfrak C_{\mathrm{PGSL}}$ under which generalized entropy is monotone by relative-entropy data processing. It supplies first-difference monotonicity; null convexity and Einstein-branch saturation require the separate $\mathfrak C_{\mathrm{NC}}$ record.
+
+*   **Predictive Update-Current Entropy:** (Appendix E, Definition E.8.4k; Theorem E.8.4l) The finite current $\mathcal S_{\mathrm{upd}}(\Gamma;\gamma)=\sum_j I(M_j;Y_{\Gamma,j}\mid\mathcal F_j)$. It is nonnegative, nonincreasing under deterministic post-processing, and capacity-bounded. At one slice it equals $H(M_0\mid\mathcal F_0)$ exactly when $H(M_0\mid Y_{\Gamma,0},\mathcal F_0)=0$; stationarity is not required for this identity.
+
+*   **Predictive Update-Current Entropy:** (Appendix E, Definition E.8.4k; Theorem E.8.4l) Conditional mutual-information current $\mathcal S_{\mathrm{upd}}(\Gamma;\gamma)=\sum_j I(M_j;Y_{\Gamma,j}\mid\mathcal F_j)$ through a retained predictive cut along a finite update path. It is nonnegative, monotone under deterministic coarse-graining, bounded by channel capacities, and equals ordinary retained state entropy only on a lossless sufficient stationary one-slice branch.
 
 *   **Predictive-Equivalence Ledger:** (Appendix M, Definition M.6.6a; Proposition M.6.6b) Certificate $\mathfrak C_{\mathrm{PEq}}$ recording when perspective-relative actuality, temporal access, action/entropy, finite-frontier, and curvature/source readings are projections of the same retained predictive-update cost ledger through already accepted unit bridges.
 
@@ -95,6 +113,10 @@ predicts entropic-clock stall when retained entropy/update flow vanishes, and gi
 
 *   **Blackwell-PCE Classicality:** (Appendix M.6.11) Classical records arise as PCE-minimal sufficient statistics of finite measurement channels. The selected output algebra is commutative because it is a quotient record algebra, not because a separate classical ontology is added.
 
+*   **Optional Certificate-Gated Extension Record:** A finite branch record whose acceptance conditions are exactly those in its local definition. A quantitative record fixes every type, unit or normalization map, residual or tail interval, overlap/forward-lock entry, and falsifier required by its claimed comparison. Acceptance changes only the covered branch and does not promote an external comparison or open protocol. Primary records: Definitions 12.5.3o.1, O.7.2.3c, O.7.2.5a, K.3d.1a, U.16b, U.27a, U.48c, Z.13b.P0, Z.9c, N.8.1a, S.6.1a, I.5c, M.6.5a, T.17a.0c, T.17a.0e, X.9.5d.6, U.15i.3, A.6.7, 12.5.5a, 14.1g, 35b, 13.9.12a, and 13.9.12b; Corollary Y.6.1b.3.
+
+*   **Optional Certificate-Gated Extension Record:** A forward-locked finite record that makes an optional PU route mathematically evaluable without promoting its premises. Each record fixes its types, normalization, residuals, overlap audit, and falsifier before comparison. Benchmark source rules, phenomenological shapes, external comparisons, and open-problem protocols remain at their declared status; acceptance of one record changes only the branch it explicitly covers.
+
 *   **Block-Frame Stabilizer Code:** (Corollary G.8.4c.0a.1) The finite-response code whose syndrome is the PCE-selected inactive-sector block decomposition $\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1$. Its capacity-saturating determinant-compatible retained stabilizer algebra is $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$.
 
 *   **Bordism-Anomaly Spectrum Closure Gate:** (Theorem G.8.4c.0e) The selected gauge algebra is not enough to close the matter spectrum. A chiral matter/defect package is selected only when its total finite anomaly-bordism class vanishes after accepted defect inflow and the response quotient carries a strict PCE minimizer.
@@ -109,27 +131,63 @@ predicts entropic-clock stall when retained entropy/update flow vanishes, and gi
 
 *   **$C_{op}$ (Operational Threshold):** (Definition 13) Minimum $C_P$ for a predictive function to exceed baseline chance accuracy by $\epsilon_{acc}$ (Equation 15); satisfies $C_{op} \ge K_0$ (Corollary 3). Minimal complexity for the adaptive Fundamental Predictive Loop.
 
+*   **Cavitation-Boundary Temporal-Wave Certificate:** (Appendix L, Definition L.8.2b; Theorem L.8.2c) Finite record containing the cycle-rate perturbation, coherent-charge dipole transfer, positive line or positive-measure spectral support, Maxwell radiation-zone branch, and nonnegative channel-power ledger. It licenses only the resulting conditional electromagnetic component and derives neither the transfer function nor detector-band overlap from acceleration alone.
+
 *   **$C_{PPC}(PP_{target})$:** (Definition 18) Minimum $C_P$ required to achieve target average predictive performance $PP_{target}$.
 
 *   **$C_s$ (Effective Complexity Scale):** (Definition 19a, Equation 22a) The e-fold complexity scale of the Law of Prediction, $C_s=\hat{C}_{target}/\kappa_{\mathrm{eff}}$. At equilibrium, $C_s=\Gamma_0(\beta-PP^*)/[\lambda R'(C^*)+R_I'(C^*)]$ (Proposition 19a).
 
-*   **$\hat{C}_{target}(t)$:** (Definition 21) System’s internal, dynamic estimate of environmental complexity or predictive difficulty, guiding complexity adaptation $C(t)$.
+
+*   **Finite Hierarchy Stabilization and Common Realizer:** (Theorem 2.4.1a) A bounded nested hierarchy of integer prefix-program minima stabilizes after finitely many strict increases, and one minimum-length program realizes every refinement simultaneously. The theorem proves existence, not a computable stabilization index.
+
+*   **Score-Order-Invariant Predictive Homeostasis:** (Theorems 21a and 22a; Theorem 6.9a) Sign-corrected target-scale feedback whose local stability is fixed by a Hurwitz determinant and whose robust viability band is fixed by Nagumo inward-pointing inequalities. The construction is invariant under strictly monotone recalibration of the predictive-risk score.
+
+*   **Causal Order-Fraction Record:** (Definition 46e.1; Theorem 46e.1) Comparable-pair statistic for a uniformly sampled flat Alexandrov interval; its $D=4$ mean is exactly $1/10$ before curvature and detector-bias residuals.
+
+*   **Finite Metric-Response Conditioning Certificate:** (Definition 46h; Theorem 46i) A fixed-order-stratum chart, response Jacobian, smallest-singular-value floor, derivative-Lipschitz bound, and metric-chart Lipschitz bound that convert finite response error into a local emergent-metric error bound. No universal rigidity claim survives when the conditioning floor closes.
+
+*   **Complete Passivity:** (Definition G.1.9.3b; Theorem G.1.9.3c) Absence of cyclic work extraction from every tensor power. On the faithful simple-spectrum branch it is equivalent to a Gibbs state of the physical Hamiltonian.
+
+*   **$\mathfrak B_{mass}$ (Conditional Mass Branch):** (Theorem N.5) Intersection of the saturated-boundary, saturated-activity completed-reset, and accepted action--entropy gates. The absolute mass-per-information coefficient is asserted only on this branch; physical heat equality additionally needs an overhead-free Landauer implementation and a physical-equilibrium certificate.
+
+*   **$\mu_0^{alg}$ (Algebraic Mass Normalization):** (Definition Z.8f) The coefficient $m_P/(2\sqrt{8\varepsilon_0})$. It becomes a physical mass-per-information coefficient only on $\mathfrak B_{mass}$ and a physical mass per Leech norm only after the norm--information calibration is registered.
+
+*   **Latency--Capacity--Dissipation Ledger:** (Definition 35a; Theorem 35b) Vector edge datum separating causal delay, reliable throughput, and update entropy cost; the delay-constrained capacity function is their joint Pareto observable.
+
+*   **Temporal Operator-Schmidt Memory Bound:** (Theorem M.6.14c.1) A process-tensor cut of operator-Schmidt rank $R$ requires a complete cross-cut memory of Hilbert dimension at least $\lceil\sqrt R\rceil$.
+
+*   **Temporal Determinant and Rank-Revival Witness:** (Theorem M.6.14c.2) For positive-divisible affine one-time dynamics, the absolute determinant cannot increase and affine rank cannot revive. Either event rejects that divisible one-time explanation, without by itself identifying a unique microscopic memory model.
+
+*   **Affine Selected-Overlap Cycle Audit:** (Theorem D.8.9c.1) Post-selection graph-Hodge test for an already-selected tuple of affine overlap records. Vanishing cycle sums are equivalent to integrability; the cycle-space projection is the irreducible inconsistency residual. This does not replace the acyclic parent-dependency registry.
+
+*   **Pythagorean and Nested Spectral Calibration:** (Theorem V.3.11c.1) Affine KL information projections obey an exact Pythagorean identity, and nested calibration families telescope without double counting. The identity applies only to the registered affine moment families and full-support reference used by the theorem.
+
+*   **Spectral Calibration Condition Number:** (Theorem V.3.11c.2) Inverse covariance floor $1/\gamma$ controlling the sensitivity of calibration multipliers and coefficient moments to registered constraint errors.
+
+*   **Reset-Support Zeno Work Bound:** (Theorem J.4b) Minimum cyclic work needed to reach a registered survival probability when every interrogation closes a nontrivial record and the short-time departure has a positive quadratic lower bound.
+
+
+*   **$\hat{C}_{target}(t)$:** (Definition 21; Theorem 21a) Internal task-scale coordinate. Equation (38) is sign-corrected homeostatic control; interpreting the coordinate as an external-difficulty estimate requires a separate innovation record.
+
+
 
 *   **$\hat{C}_v$ (Operational Complexity Proxy):** (Theorem 1, Definition B.1, Equation B.1) Hermitian operator (identified with quantum circuit complexity) on MPU Hilbert space $\mathcal{H}_v$, with spectrum $\lambda(d)=K_0+\Delta C(d)$. Dynamically aligned with $C_P$ at equilibrium (Theorem 2).
 
 *   **Calibration Holonomy:** (Definition X.9.6i.3; Theorem X.9.6i.4) A sector constant is calibration-internal only when it is a registered holonomy or curvature-residual projection of one finite protocol-atlas calibration connection with fixed normalization before validation comparison. Flat calibration locks constants through the same record; nonzero calibration curvature appears only as an explicit residual class.
 
-*   **Canonical Alpha Comparison-Budget Scales:** (Appendix Z, Remark Z.26d; Corollary Z.26d.1) Arithmetic audit of the canonical Appendix Z comparison-budget scales $c_1u^{*3}$ and $c_1u^{*5}$ with $c_1=\pi/(24\sqrt{K_0})$. At $u^*=2^{1/8}-1$ and $K_0=3$, their sum is $B_{\mathrm{budget}}^{\mathrm{can}}=5.649085604\times10^{-5}$. This number is a budget diagnostic, not the accepted residual interval for $R_\alpha$; the accepted hypercharge-recoil branch uses the degenerate residual bound $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ from Corollary Z.27.11k.21.1.
+*   **Canonical Alpha Comparison-Budget Scales:** (Appendix Z, Remark Z.26d; Corollary Z.26d.1) Arithmetic audit of the canonical Appendix Z comparison-budget scales $c_1u^{*3}$ and $c_1u^{*5}$ with $c_1=\pi/(24\sqrt{K_0})$. At $u^*=2^{1/8}-1$ and $K_0=3$, their sum is $B_{\mathrm{budget}}^{\mathrm{can}}=5.649085604\times10^{-5}$. This number is a budget diagnostic, not a certified residual interval for $R_\alpha$; the candidate hypercharge-recoil (operator realization open) branch uses the degenerate residual bound $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ from Corollary Z.27.11k.21.1.
 
 *   **Canonical Composition Audit for the Thomson Residual:** (Appendix Z, Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6) Finite arithmetic audit of the canonical additive, multiplicative, and exponential completions of the certified interface and curvature entries. The multiplicative cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ accounts for $96.08\%$ of the centered residual and leaves a $26.59$ ppb diagnostic remainder, but the audit is non-closing unless a residual operator or all-orders certificate supplies the missing datum before comparison.
 
 *   **Causal-Order Resource:** (Corollary 14.1c) A finite higher-order process property measured by robustness distance to the convex set of causally separable processes. It may be nonzero without retrocausal signaling and is not a closed-timelike-curve channel.
 
-*   **Causal Structure:** (Definition P.8.1) The constraint that event $A$ can causally influence event $B$ if and only if $A$'s predictive information can propagate to $B$ through ND-RID channels with correctable error accumulation. Emergent from the finite propagation speed $c$ (Theorem P.8.4 / Theorem 46) and error-correction range of the Golay code structure.
+*   **Causal Structure:** (Definition P.8.1; Definition 35a; Theorems 39c, 46) Intervention-response reachability constrained by certified edge latency and exact pre-lightcone context independence. Classical error correction is not part of the definition; a decoder enters only on a separately registered communication branch.
 
-*   **Causality (Postulate 2):** (Section 10.1.1; Theorems 39a--39b) Defined operationally as the finite gate excluding controllable deterministic or zero-error faster-than-light (FTL) signaling: no decoder achieves zero error simultaneously across all preregistered Alice contexts in a finite pre-lightcone window. This does not exclude strictly noisy statistical influence with nonzero finite-error information, provided the regular common-support, no-loop, and current/precision certificates remain satisfied.
 
-*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the linear Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule through the Fisher-Rao distance gate of Definition 33 and the probability-shift bounds of Theorem 36. On the bounded-bias branch, its deterministic endpoint strength satisfies $\mathrm{CC}(S)\le\alpha_{\mathrm{CC,max}}<0.5$ (Theorem 39), while statistical-FTL consistency uses the finite-window zero-error gate of Theorem 39a on the regular branch (Definition 10.2a).
+
+*   **Causality (Postulate 2):** (Section 10.1.1; Theorem 39c) Exact independence of every pre-lightcone transcript law from every independently selectable spacelike context. Common support and nonzero decoder error are weaker coding properties. This does not exclude strictly noisy statistical influence with nonzero finite-error information, provided the regular common-support, no-loop, and current/precision certificates remain satisfied.
+
+*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the linear Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule through the Fisher-Rao distance gate of Definition 33 and the probability-shift bounds of Theorem 36. On the bounded-bias branch, its deterministic endpoint strength satisfies $\mathrm{CC}(S)\le\alpha_{\mathrm{CC,max}}<0.5$ (Theorem 39), while Theorem 39a supplies only a finite-window zero-error gate and Theorem 39c requires exact marginal invariance for causal compliance.
 
 *   **CC Evidence Triage:** (Definition 13.0a) The preregistered classification of CC/statistical-influence experiments into support, null, or failure using fixed endpoints, artifact bounds, sign tests, stopping rules, and independent replication.
 
@@ -139,13 +197,15 @@ predicts entropic-clock stall when retained entropy/update flow vanishes, and gi
 
 *   **Chronometric Curvature-Dephasing Principle:** (Section 11.7.2, Theorem 47c; Appendix S, Theorem S.7.3a) Internal energy splittings act as clocks for proper-time mismatch. The coherent phase-rate invariant is $\mathcal D_{ij}^{\phi}=\hbar|\dot\Theta_{ij}|/|\Delta E_{ij}|=|\Delta\Phi|/c^2$. On the saturated chronometric ND-RID dephasing branch, $\mathcal D_{ij}^{\Gamma}=\hbar\Gamma_{\mathrm{ch}}^{(ij)}/|\Delta E_{ij}|=|\Delta\Phi|/c^2$.
 
-*   **Code-Maintenance Viability Inequality:** (Remark Q.0.1c.1) A finite MPU aggregate maintaining an internal predictive code persists only if $R_{\mathrm{in}}\ge\varepsilon_0N_{\mathrm{MPU}}\nu_{\mathrm{cycle}}+R_{\mathrm{loss}}$ with rates measured in nats per unit time (or bits per unit time with $\varepsilon_0=1$). This is a necessary Landauer-floor condition for code-maintaining persistence, not a biological classification theorem.
+*   **Conditional Reset-Power Viability Inequality:** (Remark Q.0.1c.1) For a registered reset ensemble, $\dot{\mathcal L}_{\mathrm{reset}}\ge\nu\,\overline{H_q(P\mid R)}$. The value $\nu\ln2$ requires a conditionally unbiased binary reset record; the structural value $\varepsilon_0=\ln2$ alone fixes no physical power. (Remark Q.0.1c.1) On the additional conditionally uniform binary-reset branch, a finite MPU aggregate maintaining an internal predictive code persists only if $R_{\mathrm{in}}\ge\varepsilon_0N_{\mathrm{MPU}}\nu_{\mathrm{cycle}}+R_{\mathrm{loss}}$ with rates measured in nats per unit time (or bits per unit time with $\varepsilon_0=1$). This is a necessary Landauer-floor condition for code-maintaining persistence, not a biological classification theorem.
 
 *   **Cogito-to-MPU Bridge:** (Introduction; Appendix P.1–P.3; Definition 23) The epistemic-to-physical chain by which the Cogito certifies an indubitable awareness/process $\mathcal{C}$, operational analysis models $\mathcal{C}$ as the Fundamental Predictive Loop, PPI restricts admissible physicalization to finite implementations, and PCE selects the no-surplus representative. The MPU is the resulting minimal nontrivial physical representative of the predictive process, not a direct Cogito-level certainty.
 
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
 
 *   **Complexity Hierarchy:** (Section 2.4.1) Iterative refinement sequence $\{C_{P,n}\}$ used to define $C_P$ self-consistently without presupposing derived physical laws.
+
+*   **Computational-Thermodynamic Asymmetry Profile:** (Definition O.5.2a; Theorem O.5.2e) Tagged bookkeeping object separating SPAP diagonal obstruction, witness generation, average-case function inversion, protocol-specific erasure cost, and path-measure asymmetry. No cross-coordinate inference is valid without a uniform, distribution-preserving, success-preserving, non-circular bridge theorem.
 
 *   **Compression-Trajectory Schema for the Registry Snapshot:** (Appendix P, Convention P.14.1k; Convention P.14.1l; Definition P.14.1m; Algorithm P.14.1m.0; Remark P.14.1m.5) Methodological reading of the strict-certificate registry in terms of compression steps, a well-founded compression measure, finite-snapshot termination, and the current candidate menu $\mathfrak L_{\mathrm{PU}}$, $\mathfrak Z_{\mathrm{PU}}$, the marked-arena package, a future parent invariant, or plural termination. No new strict certificate, operator, bridge condition, or status assignment is introduced.
 
@@ -185,6 +245,8 @@ $$
 *   **Curriculum Reconstruction Problem:** (Appendix P, Definition P.16d.13.1; Theorem P.16d.13.2) Finite PCE problem of choosing an instructional sequence that minimizes reconstruction discrepancy, processing cost, and ambiguity overhead for a target response structure.
 
 *   **$d_{\mathcal{N}}$:** (Definition 35) Network propagation cost metric based on minimum cumulative ND-RID cost along paths (shortest path distance in cost space) (Equation 64).
+
+*   **$E_{\mathcal N}$:** (Section 11.2.1) For a fixed finite MPU graph with $2\le|\mathcal V|<\infty$, the dimensionless propagation-efficiency observable is $E_{\mathcal N}=[|\mathcal V|(|\mathcal V|-1)]^{-1}\sum_{u\ne v}\delta/d_{\mathcal N}(u,v)$, with disconnected-pair summands set to zero. It is an average reciprocal propagation-cost distance after edge costs, scale, and branch status are fixed, not the harmonic mean itself and not a law equating distinct physical networks.
 
 *   **Deep Rationality:** (Definition P.16.5, Proposition P.16.1) A trajectory of a Property-R aggregate's self-model that is (i) PCE-optimal on the system's full operational budget (Theorem L.6) yet (ii) cannot be reconstructed as PCE-optimal by the deliberative subprocess $\mathcal{D}_S$ (Definition P.16.4) within the verbal-rational standard available to that subprocess. Existence of such trajectories follows from PCE acting on total cost (Definition 15) while the deliberative subprocess has bounded introspective access (Proposition 15). First-person reports of deep-rational acts as compulsion, possession, fate, or "something coming over me" are consistent with cost-gradient direction whose structural origin lies below $\mathcal{D}_S$'s introspective access (Corollary P.16.2).
 
@@ -226,9 +288,9 @@ $$
 
 *   **$\varepsilon_{\mathrm{diss}}$ (Dissipative Overhead):** Implementation-dependent excess dissipation above the structural floor; affects heat and power accounting but not the discrete structural chain unless it changes a finite protocol-response presheaf.
 
-*   **$\varepsilon_{\mathrm{phys}}$ (Physical State Change Cost):** (Definition 28, Theorem 31, Appendix J) The total physical entropy production per irreversible 'Evolve' step in a concrete implementation, $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$, where $\varepsilon_{\mathrm{diss}}\ge0$ is dissipative overhead.
+*   **$\varepsilon_{\mathrm{phys}}$ (Registered Reset-Heat Cost):** (Definition 28, Theorem 31, Appendix J) On the cyclic degenerate-register branch, $\varepsilon_{\mathrm{phys}}:=\langle Q_{\mathrm{bath}}\rangle/(k_BT)=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$. The total entropy production of the idealized memory-plus-bath cycle is $k_B\varepsilon_{\mathrm{diss}}$; it is not the reset heat itself.
 
-*   **'Evolve' Process:** (Definition 27, Appendix M) The stochastic interaction and update phase of the MPU cycle, implementing ND-RID. Involves probabilistic amplitude actualization (Born rule) and a stochastic perspective shift. Fundamentally irreversible through the structural entropy quantum $\varepsilon_0=\ln2$, with physical implementation cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
+*   **'Evolve' Process:** (Definition 27, Appendix M) The stochastic interaction and update phase of the MPU cycle, implementing ND-RID. Involves probabilistic amplitude actualization (Born rule) and a stochastic perspective shift. Fundamentally irreversible through the structural entropy quantum $\varepsilon_0=\ln2$, with physical implementation cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$.
 
 *   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. In general $0\le f_{RID}\le1$. On refresh/minorization branches with a nonzero input-independent full-state refresh component, Lemma E.1 gives $f_{RID}<1$. The structural irreversibility quantum $\varepsilon_0=\ln2$ independently gives the reset-support capacity deficit of Proposition E.2a.
 
@@ -276,9 +338,13 @@ $$
 
 *   **Global Strict-Certificate Ledger:** (Appendix P, Convention P.14.1k; Theorem P.14.1k.1; Corollary P.14.1k.2) Sector-by-sector audit table assigning, to every major PU output, its selected representative, its local strict PPI/PCE certificate or theorem source, and its closure status (closed, certificate-pending, or open). Theorem P.14.1k.1 forces a unique global tuple modulo response equivalence under acceptance of the certificate-pending rows; Corollary P.14.1k.2 localizes the remaining open closure to the unaccepted entries.
 
-*   **Golay Bridge:** (Appendix R, Section R.4.2.1, Theorem R.4.9) The coding/lattice correspondence at $M = 24$. The extended binary Golay code $\mathcal{G}_{24}$ simultaneously: (1) achieves the maximum minimum distance ($d = 8$) among rate-1/2 binary linear codes of length 24, and (2) provides the glue vectors completing $\sqrt{2}E_8^3$ into the unique rootless even unimodular lattice $\Lambda_{24}$. This identifies the same binary linear code in both the error-correction and Leech-gluing constructions.
+*   **Conditional Golay Bridge:** (Appendix R, Lemma R.4.5; Proposition R.4.2a; Theorem R.4.9) The code-to-lattice transfer requires a registered finite-quadratic-module isometry, maximal isotropic subgroup, glue representatives, and coset-minimum ledger. Hamming distance transfers to rootlessness only when Equation (R.4.2a.1) is certified.
 
-*   **Golay Code ($\mathcal G_{24}$):** (Appendix Z, Theorem Z.13; Appendix R, Theorem R.4.4) The extended binary Golay code with parameters $[24,12,8]$: block length 24, dimension 12, minimum Hamming distance 8. The predictive-recovery MacWilliams self-dual-rate gate fixes the $12+12$ interface split, and PCE distance optimization then selects the unique optimal binary linear code at these parameters. It detects up to 7 errors and corrects up to 3 errors. Its weight-8 codewords support the Steiner system $S(5,8,24)$ (Assmus & Mattson 1969). The CSS construction from this self-dual code yields a $[[24,0,8]]$ stabilizer state with 12 X-type and 12 Z-type generators, representing the PCE-Attractor vacuum (Remark G.8.4g.1a).
+
+
+*   **Classical Golay Ledger ($\mathcal G_{24}$):** (Appendix Z, Theorem Z.13; Appendix R, Theorem R.4.4) This binary subspace has length $24$, dimension $12$, and least nonzero Hamming weight $8$. Standard distance rules permit seven-symbol detection and guarantee correction through weight $3$. No physical or quantum protection follows until an encoder, channel, syndrome instrument, and recovery map are registered. A maximal CSS state from the self-dual code has no logical-qubit distance claim and is not thereby a physical vacuum.
+
+
 
 *   **Golay Noise Spectroscopy:** (Appendix Z, Corollary Z.13b.1, Definition Z.13b.2, Theorem Z.13b.3, Corollary Z.13b.5; Section 13.9, Protocol 4.4) Conditional residual-noise branch on which irreducible correlated 24-mode residual syndromes decompose into Golay shells after ordinary device-local noise is separated. The leading octad statistic satisfies $\mathcal R_8=1+968\eta_8$, the octad incidence sequence is $253:77:21:5:1$, and controlled weight-4 decoder-boundary probes decompose into $1771$ six-tetrad sextets.
 
@@ -324,13 +390,15 @@ $$
 
 *   **$\kappa_{\mathrm{eff}}$:** (Theorem 19, Remark 4) Dimensionless efficiency parameter governing the relationship between complexity and performance in the Law of Prediction (Equation 22). Related to equilibrium cost/benefit ratios (Equation 32).
 
-*   **$\kappa_r$:** (Theorem 33) The positive constant ($\kappa_r > 0$) appearing in the Reflexivity Constraint, quantifying the fundamental trade-off between information gain $\Delta I$ and minimum state disturbance $\Delta S_{min}/k_B$. Arises from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$.
+*   **$\kappa_r$:** (Theorem 33) The positive constant ($\kappa_r > 0$) appearing in the Reflexivity Constraint, quantifying the fundamental trade-off between information gain $\Delta I$ and minimum state disturbance $\Delta S_{min}/k_B$. Arises from $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$.
 
 *   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ ($E_8$). Inside the channel-complete Bures tangent-cell mode-channel contract (Definition Z.9a; Theorem Z.10), zero mismatch requires $M_{\rm int}=M_{\rm phys}=K(D)$; Theorem Z.11 then selects $D = 4$ since $K(4) = M = 24$ on the minimal branch. This equality is a channel-cell equality; interpreting it as a graph-degree count of distinct neighboring MPUs requires a separate population graph realization.
 
 *   **Kleiber Scaling (PU conditional biological branch):** (Theorem P.8.9a.12.7) A terminal-invariant, space-filling, area-preserving transport network with mass proportional to network volume gives $B\asymp M^{D/(D+1)}$, hence $B\asymp M^{3/4}$ when $D_{\mathrm{space}}=3$.
 
-*   **KMS (Kubo-Martin-Schwinger) Condition:** (Appendix G.1.9) The thermal equilibrium condition for quantum states at inverse temperature $\beta$, requiring $\langle A B(i\hbar\beta) \rangle = \langle B A \rangle$ for observables $A, B$. In the PU framework, the KMS condition characterizes the PCE-equilibrium thermal states and connects to the modular Hamiltonian structure in the entropy unification (Corollary G.1.9).
+*   **KMS (Kubo-Martin-Schwinger) Condition:** (Theorem G.1.9.5) Every faithful state obeys a modular KMS identity relative to its own modular flow. Physical thermal/KMS status relative to registered time requires the independent QDB/physical-time or complete-passivity certificate of Theorems G.1.9.3 and G.1.9.3c; PCE alone does not supply it.
+
+
 
 *   **Knowledge Interface Area Law:** (Appendix P, Definition P.16d.20.1; Theorem P.16d.20.2) Finite-capacity upper bound on cross-boundary knowledge growth. In one update step, transferable distinguishable response information across a cut is bounded by $\operatorname{Cap}_B(\partial A)$.
 
@@ -361,19 +429,23 @@ $$
 
 *   **Marked Golay-Leech Interface Frame:** (Definition G.8.4f.3) The systematic Golay coordinate frame, signal/parity split, octad trio, and canonical half-swap $J_0=(1\,13)(2\,14)\cdots(12\,24)$ used to define a marked threshold branch. Proposition G.8.4f.5 shows that this marking is additional branch data rather than an unmarked uniqueness consequence.
 
-*   **Mass Hierarchy Invariant ($\mathcal{R}$):** (Appendix R, Definition R.5.1) The parameter-free ratio $\mathcal{R} := \ln(m_3/m_1)/\ln(m_3/m_2) = d^2_{31}/d^2_{32}$ relating fermion mass ratios to $E_8$ root distances in path-additive Dirac-type sectors. Independent of width parameter $\xi$, Hessian constants $\alpha_1, \alpha_2$, and overall normalization. Restricted to discrete values $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ by $E_8$ geometry. Charged lepton sector shows $\mathcal{R}_\ell^{\rm obs} \approx 2.889$, consistent with $\mathcal{R} = 3$ to 3.8%. In the Majorana neutrino sector, the invariant is read in the anchored form $\mathcal R_\nu=\Delta_1/\Delta_2=3$ (Theorem T.24.11), not as a fully pairwise three-edge law.
+*   **Mass Hierarchy Invariant ($\mathcal R$):** (Appendix R, Definition R.5.1) Once a path-additive distance triad is registered, $\mathcal R=\ln(m_3/m_1)/\ln(m_3/m_2)=d_{31}^2/d_{32}^2$ cancels any common leading coefficient. This algebraic cancellation does not derive the physical distance assignment, fourth-order coefficient, or remainder. The charged-lepton and neutrino values therefore retain their Appendix T model and anchoring conditions.
+
+
 
 *   **Master Branch-Exclusion Ledger:** (Appendix P, Convention P.14.1h) Single dependency table recording, for every major PU output, its claimed value, local status, principal alternatives, exclusion or quotient mechanism, response-null or PCE-dominated surplus, and residual open status. Makes theorem-level, branch-level, certificate-level, model-level, and open-bridge claims visible in one ledger, with the alternative-by-alternative exclusion mechanism cited by theorem.
 
 *   **Matched Dark-Sector Discriminator:** (Definitions I.12a.1-I.12a.2) A likelihood-equivalent residual comparison between PU scaled gravity and NFW dark-matter fits using the same covariance, nuisance parameters, baryonic preprocessing, and masking conventions.
 
-*   **Measurement:** (Definition 30, Theorem 31) The process of actualizing quantum possibilities through MPU dynamics. Requires the structural entropy quantum $\varepsilon_0=\ln2$ and physical implementation cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ per measurement cycle.
+*   **Measurement:** (Definition 30, Theorem 31) The process of actualizing quantum possibilities through MPU dynamics. Requires the structural entropy quantum $\varepsilon_0=\ln2$ and physical implementation cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ per measurement cycle.
 
 *   **Meta-Theoretic Comparative Adequacy:** (Appendix P, P.14.9; Section 14.6.8; Section 15) Separation of object-level finite-record claims from meta-level methodology. The comparison criterion is predictive yield per structural description cost $K_{\mathcal E}(\mathcal T)$ on a shared empirical domain. The criterion is not a certificate gate and cannot repair failed predictions or missing finite records.
 
 *   **Minimal Family-Charge Selection:** (Appendix R, Definition R.8.5a; Theorem R.8.5b; Remark R.8.5c; Corollary R.8.5d) PCE minimal-selection audit in the integer $U(1)_F$ family-charge class. The unique minimal-cost orbit satisfying linear anomaly cancellation, cubic anomaly cancellation, non-triviality, CP-active distinctness, and PCE cost monotonicity is $\{a,-a,0\}$, giving $N_g=3$. The statement is not an exhaustive classification of all larger anomaly-free charge multisets; those are PCE-demoted or different response-active branches.
 
-*   **Mode-Channel Correspondence:** (Appendix Z, Definition Z.9a; Theorem Z.10) The channel-complete finite-response Bures tangent-cell contract requiring internal QFI modes to match operationally retained completed first-shell channel cells: $M_{\rm int}=M_{\rm phys}$. PPI and PCE force equal-radius, non-overlapping, tangent-saturated distinguishability cells, so $M_{\rm phys}=K(D)$. Combined with $M_{\rm int}=2ab=24$, Theorem Z.11 selects $D=4$ at the PCE-optimal zero-mismatch equilibrium.
+*   **Mode--Channel Correspondence:** (Definition Z.9a; Theorems Z.10--Z.11) Conditional matching between the finite QFI interface count and a completed local channel count. On the registered tangent-cell branch, $M=24=K(D)$ selects $D=4$. Golay coding and Leech gluing are separate branches and are not premises or consequences of this equation.
+
+
 
 *   **Model-Indexed LITE:** (Appendix A.5.6a) A bounded proof search through a predictor-indexed admissibility relation. In the labeled version,
     $$
@@ -407,7 +479,7 @@ $$
 
 *   **Multiplicative PCE Noise Hypothesis:** (Hypothesis P.8.9a.11.4) The conditional population-level assumption that near-equilibrium complexity excess follows $d\nu=(-k\nu+m)dt+\sigma\nu dW$ above an operational floor. It yields the Pareto tail in Theorem P.8.9a.11.5 but is not derived from POP/PCE alone.
 
-*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, the completed reset-support capacity deficit of Proposition E.2a, and $f_{RID}<1$ on refresh/minorization branches satisfying Lemma E.1.
+*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, the completed reset-support capacity deficit of Proposition E.2a, and $f_{RID}<1$ on refresh/minorization branches satisfying Lemma E.1.
 
 *   **ND-RID Process Tensor:** (Appendix M, Definition M.6.14a; Theorem M.6.14b; Corollaries M.6.14c–M.6.14d) Finite multi-time Choi object representing measurement histories, memory, causal-order resources, post-selection, and weak-probe protocols under ND-RID. Positivity and comb trace constraints enforce no future-to-past signaling: future records can condition retrodictive descriptions, but cannot alter unconditioned earlier marginals.
 
@@ -417,7 +489,9 @@ $$
 
 *   **Observer Calibration Kernel:** (Appendix P, Definition P.16d.8.1; Theorem P.16d.8.2) Finite stochastic natural transformation between predictive systems' response presheaves. Reproducibility is the existence of a common calibrated response class.
 
-*   **Off-Branch Entropy-Flow Residual Decomposition:** (Appendix N, Corollary N.4.2; Remark N.4.2.1) Branch ledger decomposition of $\mathcal R_N=\dot\varepsilon_{\mathrm{pred}}-\mathcal I_{rel}/(2\tau_{min})$ into utilization deficit $\Delta_q=\mathcal I_{rel}(1/q-1)/(2\tau_{min})$, KMS entropy-rate defect $\sigma_{\mathrm{KMS}}\ge0$, and implementation-overhead entropy-rate defect $\sigma_{\mathrm{oh}}\ge0$. Equality holds only on the saturated KMS overhead-free branch.
+*   **Off-Branch Entropy-Flow Residual Decomposition:** (Appendix N, Corollary N.4.2; Remark N.4.2.1) On the saturated-activity completed-reset branch only, $\mathcal R_N$ decomposes into registered boundary-utilization, physical-equilibrium excess-production, and implementation-overhead terms. Unsaturated activity is a separate signed coordinate and carries no unconditional $\mathcal R_N\ge0$ conclusion; equality requires the joint saturated-activity/boundary, physically certified equilibrium, overhead-free branch.
+
+
 
 *   **Ontology Audit Gate:** (Appendix P, Definition P.16d.17.1; Theorem P.16d.17.2) No-surplus test for proposed entities, branch labels, hidden variables, continuum refinements, or interpretations. A proposal is retained only by response change, retained-map change, cost reduction, certificate role, or finite branch-degeneracy record.
 
@@ -467,7 +541,9 @@ $$
 
 *   **PCE Anomaly Matching:** (Appendix X.8d.5–X.8d.8) RG/PCE-flow constraint for retained global response symmetries: their anomaly class must be preserved under compression, after including Goldstone, topological, boundary, interface, and defect sectors. It is distinct from anomaly cancellation for redundancies.
 
-*   **PCE-Attractor:** (Definition 15a, Appendix Z Section Z.6.3) The canonically selected global-minimum equilibrium configuration characterized by maximal efficiency and symmetry. It is the state where predictive and physical descriptions coincide, determining the attractor coupling $u^*$ and supplying the background for the U(1) fine-structure calculation. Key properties include: (i) density operator $\rho_0 = \frac{I_a}{a} \oplus 0_b$ maximally mixed on the active subspace; (ii) a flat QFI spectrum for the $U(1)$ sector; and (iii) capacity saturation $\mathcal{I}(u^*) = \ln d_0$. The equality $\kappa^*_{\mathrm{bulk}} = 1$ is a downstream U(1)-sector consequence derived in Theorem Z.14 rather than part of Definition 15a itself. Its unitary orbit is the complex Grassmannian $\text{Gr}(2,8)$ with isotropy group $U(2) \times U(6)$.  
+*   **PCE-Attractor:** (Definition 15a, Appendix Z Section Z.6.3) The canonically selected PCE reference configuration characterized by maximal efficiency and symmetry. It determines the attractor coupling $u^*$ and supplies the reference background for the U(1) fine-structure calculation; stationarity and physical Gibbs/KMS equilibrium require independent channel, physical-time, and complete-passivity or detailed-balance certificates.
+
+
 
 *   **PCE-Attractor Orbit:** (Theorem Z.6.3a) The orbit of the PCE-Attractor state $\rho_0 = \frac{1}{a}I_a \oplus 0_b$ under unitary conjugation is $\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(2,8)$, a compact Hermitian symmetric space of complex dimension $ab = 12$ and real dimension $2ab = 24 = M$. This identification provides an independent geometric derivation of the interface mode count.
 
@@ -513,9 +589,9 @@ It vanishes on SPAP-flat patterns and is unbounded above on the independent-regi
 
 *   **Postulate 1 (Minimal Awareness):** (Section 7.1.2) Interpretive postulate linking the operational $C_{op}$ cycle of an MPU to the most basic form of awareness.
 
-*   **Postulate 2 (Causality Definition):** (Section 10.1.1) Operational definition of causality preservation requiring the impossibility of deterministic or zero-error FTL signaling in a finite pre-lightcone window across any preregistered Alice context set.
+*   **Postulate 2 (Causality Definition):** (Section 10.1.1; Theorem 39c) Operational causality requires exact independence of every pre-lightcone transcript from every independently selectable spacelike context. Zero-error incapacity is a weaker coding property, not the causality definition.
 
-*   **Postulate 3 (Statistical FTL Influence):** (Section 10.3.1; Theorem 39b) Branch contract asserting that the CC mechanism acting on entangled systems may allow statistical influence across space-like separations, including a distinct nonlocal/state-mediated branch on which Bob's marginal may shift under late randomization. It is not a theorem-level consequence of the core substrate unless the corresponding protocol and empirical certificates close. Compatibility with Postulate 2 is claimed through the endpoint bound (Theorem 39), finite-window zero-error gate on the regular branch (Theorem 39a, Definition 10.2a), predictive-current no-loop gate when current language is asserted (Theorem 39b), and ND-RID information limits.
+*   **Postulate 3 (Statistical FTL Influence):** (Section 10.3.1; Theorem 39b) Branch contract asserting that the CC mechanism acting on entangled systems may allow statistical influence across space-like separations, including a distinct nonlocal/state-mediated branch on which Bob's marginal may shift under late randomization. It is not a theorem-level consequence of the core substrate unless the corresponding protocol and empirical certificates close. The endpoint, zero-error, current, and ND-RID bounds control reliability and cost; by Theorem 39c a freely selectable late-randomized marginal shift is outside Postulate 2.
 
 *   **Power-Law Learning Curve:** (Corollary 19.1, Equation 22f) The exact image of the Law of Prediction under logarithmic complexity accumulation $C-C_{op}=\eta_{\ell}\ln(N/N_0)$: the performance gap obeys $\beta-PP(N)=(\beta-\alpha)(N/N_0)^{-s}$ with $s=\kappa_{\mathrm{eff}}\eta_{\ell}/\hat C_{\mathrm{target}}$.
 
@@ -604,11 +680,23 @@ where $22=\dim_{\mathbb R}(\mathbb{CP}^{11})$.
 
 *   **PU One-Particle Sector Label:** (Definition F.5b.1; Proposition F.5b.2) On a regular AQFT/DHR branch, a retained one-particle sector is labeled by $(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi)$ on the multiplicity-free retained branch, with enriched labels $(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi,\iota_{\mathrm{mult}})$ when multiplicities arise. Here $\mathcal O_p$ is a positive-energy Poincaré orbit, $\lambda_{\mathrm{Wig}}$ is the Wigner little-group label, $\rho_{\mathrm{int}}$ is a simple object of the retained DHR category, $\chi$ is Weyl chirality data, and $\iota_{\mathrm{mult}}$ is the retained-multiplicity index. Antiparticles use DHR conjugate objects. CPT closure requires the modular or Wightman/Jost gate, not a three-label shortcut. Continuous-spin Wigner reps are excluded by branch retention rather than by representation theory.
 
+*   **PU One-Way-Function Bridge Certificate $\mathfrak C_{\mathrm{OWF}}$:** (Definition O.5.2f; Theorem O.5.2g; Corollary O.5.2g.1; Theorem O.5.3c; Remark O.5.3i) Finite proof-carrying record for one fixed uniform polynomial-time function family, the locked uniform input ensemble, any-preimage success predicate, full uniform-$\mathsf{PPT}$ negligible-inversion quantifiers, computational-to-PU simulation bridge, proof-system soundness warrant, and non-circular dependency ledger. Unconditional acceptance implies $\mathsf{P}\ne\mathsf{NP}$ through this route. The scoped relativization barrier excludes only routes whose premises are oracle-stable and whose steps are separately certified oracle-natural; current value: $\varnothing_{\mathrm{cert}}$.
+
+*   **Oracle-Natural Bridge:** (Definition O.5.3a; Theorem O.5.3c) An admissible bridge carrying the additional proof that its encoders, decoders, solver transformation, distribution transport, overhead, and success-loss bounds commute with adjoining every common oracle. Admissibility alone does not imply oracle-naturality.
+
+*   **Direct Separation Certificate $\mathfrak C_{\mathrm{sep}}$:** (Definition O.5.3e; Proposition O.5.3e.1) Sufficient proof-carrying format for a direct $\mathsf{P}\ne\mathsf{NP}$ route: a checked proof in a named theory, an accepted standard-model soundness warrant for the used fragment, and no unresolved dependency. Current value: $\varnothing_{\mathrm{cert}}$.
+
+*   **Physical Hardness Conditional Branch:** (Definition O.5.3h; Theorem O.5.3h.1) Marked branch on which $[\mathrm{PHP}]_{f_{\mathrm{PHP}}}$ and a quantitative PPT-to-PU simulation certificate imply that $f_{\mathrm{PHP}}$ is one-way and hence $\mathsf{P}\ne\mathsf{NP}$. The postulate and any unproved simulation certificate remain explicit ledger assumptions; the branch is not an unconditional theorem. Current simulation-certificate value: $\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}=\varnothing_{\mathrm{cert}}$.
+
+*   **Weak $\mathsf{AC}^0$ Inversion Obstruction:** (Proposition O.5.3g; Corollary O.5.3g.1) Prefix-difference bijection whose exact inverse exposes parity in its final coordinate. The displayed reduction bounds full-vector inversion success by $1/2$ plus the parity-correlation term; this does not by itself discharge negligible inversion or its negation.
+
 *   **PU Spectral-Action Transfer Ledger:** (Appendix X, Definition X.9.6h.4; Theorem X.9.6h.5; Appendix T, Corollary T.17a.0b; Theorem T.78.14) Certificate machinery making gauge kinetic coefficients, Higgs kinetic, $\mu_H^2$, $\lambda_H$, and electroweak threshold finite parts deterministic heat-coefficient projections of a certified first-order PU Dirac operator only after the cutoff, projections, parity/grading data, heat coefficients, finite-part scale, subtraction order, tail bounds, normalization map, and interval ledger are accepted before comparison; otherwise the current spectral-action Higgs and threshold entries are $\varnothing_{\mathrm{cert}}$.
 
 *   **$Q$ (Predictive Quality):** (Section 2.1) General measure of the goodness or utility of a system's predictions relative to its POP goals (e.g., reduced uncertainty, increased accuracy, enhanced operational success). Related to Predictive Performance PP.
 
-*   **QFI Mode Count ($M$):** (Appendix Z, Theorem Z.5, Proposition Z.1) The number of independent information-sensitivity modes in the PCE-Attractor state: $M = 2ab = 2 \times 2 \times 6 = 24$, with per-mode sensitivity $\lambda = 1$. Arises from off-diagonal QFI contributions connecting active ($a = 2$) and inactive ($b = 6$) subspaces. Fixed on the minimal branch and cross-checked by the eight-entry constraint ledger of Theorem Z.12 plus the Niemeier self-counting fixed point of Proposition Z.12.1a. Geometrically, $M = \dim_{\mathbb{R}}(\text{Gr}(2,8))$ equals the real dimension of the PCE-Attractor orbit, providing independent confirmation via differential geometry. It is an internal interface-mode count, not by itself a theorem-level graph degree asserting twenty-four distinct neighboring MPUs.
+*   **QFI Mode Count ($M$):** (Appendix Z, Theorem Z.5, Proposition Z.1) The number of independent information-sensitivity modes in the PCE-Attractor state: $M = 2ab = 2 \times 2 \times 6 = 24$, with per-mode sensitivity $\lambda = 1$. Arises from off-diagonal QFI contributions connecting active ($a = 2$) and inactive ($b = 6$) subspaces. Fixed on the minimal branch and audited by the dependency-separated compatibility ledger of Theorem Z.12; Niemeier classification is a separate record.
+
+ Geometrically, $M = \dim_{\mathbb{R}}(\text{Gr}(2,8))$ equals the real dimension of the PCE-Attractor orbit, providing independent confirmation via differential geometry. It is an internal interface-mode count, not by itself a theorem-level graph degree asserting twenty-four distinct neighboring MPUs.
 
 *   **QFI (Quantum Fisher Information):** (Appendix Z, Section Z.5) A fundamental measure of the information content of a quantum state about an unknown parameter, quantifying the maximum achievable precision in parameter estimation. For a state $\rho(\theta)$ parameterized by $\theta$, the QFI $F(\theta)$ bounds estimation precision via the quantum Cramér-Rao bound: $\text{Var}(\hat{\theta}) \ge 1/(nF)$. In the PU framework, the QFI spectrum determines the MPU's information-sensitivity modes.
 
@@ -622,11 +710,11 @@ where $22=\dim_{\mathbb R}(\mathbb{CP}^{11})$.
 
 *   **Reflexive Burden Spectrum:** (Appendix P, Definition P.16d.11.1; Theorem P.16d.11.2) Retained energy, latency, noise, entropy, and complexity differences between matched self-referential and non-self-referential tasks. It lower-bounds self-model burden when a matching certificate isolates the additional self-context channel.
 
-*   **Reflexive Exhaust Ledger:** (Theorem J.4a; Proposition U.2b) The finite entropy-action accounting term $\mathcal X_{\mathrm{ref}}=\sum_e\varepsilon_{\mathrm{phys}}(e)=N_{\mathrm{ref}}\ln2+\mathcal X_{\mathrm{diss}}$ for completed nontrivial SPAP/Evolve updates. In the vacuum sector it can enter only as a finite action factor inside an accepted Appendix U certificate.
+*   **Reflexive Exhaust Ledger:** (Theorem J.4a; Proposition U.2b) The finite entropy-action accounting term $\mathcal X_{\mathrm{ref}}=\sum_e[H(P_e\mid R_e)+\varepsilon_{\mathrm{diss}}(e)]$ for completed nontrivial SPAP/Evolve updates. In the vacuum sector it can enter only as a finite action factor inside an accepted Appendix U certificate.
 
 *   **Reflexive Opacity:** (Appendix P, Definition P.16d.6.1; Theorem P.16d.6.2) The finite-cost limit on complete transparency of a Property-R self-modeling system. Nonzero self-context information measured in nats obeys $\Delta I(\Delta S_{\min}/k_B)\ge\kappa_r$ on the reflexivity-constraint branch.
 
-*   **Reflexivity Constraint:** (Theorem 33, Equation 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Arises from $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
+*   **Reflexivity Constraint:** (Theorem 33, Equation 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Requires the theorem's registered information-disturbance branch; it does not follow from the structural value $\varepsilon_0=\ln2$ alone.
 
 *   **Register-Coherent Active Admissibility:** (Appendix A.5.6a, Definition A.5.6a.7) A proof-admissibility predicate satisfying
     $$
@@ -674,7 +762,7 @@ where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of refl
 
 *   **Spectrum-Broadcast PPI Objectivity:** (Appendix M.6.11d–M.6.11f) Multi-fragment objectivity criterion: a PCE-minimal record becomes public when disjoint environmental fragments independently recover the same classical statistic and are conditionally independent, equivalently when the compressed state has spectrum-broadcast form.
 
-*   **Statistical FTL Influence:** (Postulate 3, Section 10.3) Hypothesized effect where CC modulation by Alice can statistically influence the marginal probabilities of outcomes for Bob's measurements on an entangled system at a space-like separated location. It may have positive finite-error statistical information, but on the regular finite-window branch (Definition 10.2a) it lacks deterministic or zero-error FTL capacity (Theorems 39a and 42).
+*   **Statistical FTL Influence:** (Postulate 3, Section 10.3) Hypothesized dependence of Bob's pre-lightcone marginal on Alice's independently selectable spacelike context. Theorems 39a and 42 can exclude finite-window zero-error decoding, but Theorem 39c shows that any nonzero dependence has positive Shannon capacity and lies outside the sealed causal branch. It may have positive finite-error statistical information, but on the regular finite-window branch (Definition 10.2a) it lacks deterministic or zero-error FTL capacity (Theorems 39a and 42).
 
 *   **Strict-Certificate Registry:** (Appendix P, Definition P.14.1m; Algorithm P.14.1m.0; Theorems P.14.1m.1 and P.14.1m.2; Corollary P.14.1m.3; Remarks P.14.1m.4 and P.14.1m.5) Machine-checkable finite-record realization of the Global Strict-Certificate Ledger. The schema $\mathfrak G_{\mathrm{PU}}=(\mathcal V,\mathcal E,\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$ records vertices, dependency edges, status labels, residual lists, residual-control records, closure gates, overlap audits, forward-lock indicators, and spectral-calibration/master-zeta records. Vertices cover theorem, certificate, branch, model, external-input, finite-part, tail, bridge, descent, overlap, output, uncertainty, covariance, and master-zeta entries. The acceptance suite rejects hidden residuals, status mixing, noncommuting overlaps, inadmissible row promotions, budget-as-bound substitutions, duplicate uncertainty categories, silent bridge assumptions, spectral-source sharing without master projection, and finite-part/projector/tail/normalization changes after a dependent sector is fixed. The compression-trajectory reading of Remark P.14.1m.5 is methodological and preserves every registry status assignment.
 
@@ -698,11 +786,13 @@ where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of refl
 
 *   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat{H}\rangle$ gives the baseline operational energy associated with sustaining the predictive cycle, and the spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min}>0$.
 
-*   **Theorem 31 (Structural Landauer Floor and Physical Overhead):** (Section 7.4.4, Appendix J) The irreversible SPAP component of the 'Evolve' interaction step has exact structural entropy cost $\varepsilon_0=\ln2$, derived from the binary SPAP quotient plus Landauer mapping. Every physical implementation has total cost $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$, where $\varepsilon_{\mathrm{diss}}\ge0$ is contingent dissipative overhead. The discrete structural backbone uses $\varepsilon_0$.
+*   **Theorem 31 (Structural Alphabet and Conditional Reset Ledger):** (Section 7.4.4, Appendix J) The declared minimal reset-support alphabet has $\varepsilon_0=\ln2$. A registered classical reset instead obeys $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}$ with $\varepsilon_{\mathrm{diss}}\ge0$ and all retained unchanged side information included in $R$. No universal positive physical floor follows from alphabet size alone.
 
 *   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting that geometric regularity is necessary for the low-potential sector selected by POP/PCE, with every global minimum geometrically regular. Justified by necessity arguments (Appendix C) and the variational/ergodic analysis of Appendix D. Foundational for emergence of smooth spacetime, while the later manifold, AQFT, and gravity steps use additional explicit bridge hypotheses.
 
-*   **Theorem 48a.0 (Local Thermodynamic Equilibrium at Causal Horizons):** (Section 12.1.2) Derives local thermodynamic equilibrium for MPU networks near local causal horizons on the Appendix F/G operational-continuum branch. Theorem 48a sharpens this input by deriving the local Rindler KMS condition and first-order Clausius relation.
+*   **Theorem 48a.0 (Certificate-Conditioned Local Thermodynamic Equilibrium at Causal Horizons):** (Section 12.1.2) Establishes local horizon equilibrium only on a branch carrying the independent physical-equilibrium and modular-boost certificates used by Theorem 48a.
+
+
 
 *   **Thermodynamic Dressing:** (Appendix P.6.1) A tuple
     $$
@@ -714,7 +804,7 @@ where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of refl
 
 *   **Toeplitz-Kraus Yukawa Transition Branch:** (Appendix T, Definition T.41.4a; Theorem T.41.4b; Corollary T.41.4c) Yukawa-magnitude branch on which the Yukawa interaction is represented by the positive PPI-admissible measurement superoperator $\mathcal Y_j(\rho)=P_j\rho P_j$ on rank-one generation projectors. The probability-overlap magnitude $Y_{ij}^{\mathrm{mag}}\propto|\langle\psi_i|\psi_j\rangle|^2=\operatorname{Tr}(P_iP_j)$ is forced by positivity; complex CKM/PMNS phases are carried separately by the flavor Berry connection (Theorem T.56). Replaces the previous probability-overlap branch input throughout the flavor sector.
 
-*   **$u^*$ (Bare Coupling):** (Appendix Z, Theorem Z.7) The information-theoretic interaction strength at the PCE-Attractor, determined by capacity saturation: $u^*=d_0^{1/M}-1=8^{1/24}-1=2^{1/8}-1\approx 0.09051$. Related to the fine-structure constant through the Predictive Ward Identity (Theorem Z.14, with Thomson-Ward spectral-weight closure via Definition Z.14d and Theorem Z.14e) and Theorems Z.24-Z.26, yielding the closed-form Thomson core $\alpha^{-1}_{0}=137.03609205522863\ldots$ and the accepted registry-entered certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ (Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21.1).
+*   **$u^*$ (Bare Coupling):** (Appendix Z, Theorem Z.7) The information-theoretic interaction strength at the PCE-Attractor, determined by capacity saturation: $u^*=d_0^{1/M}-1=8^{1/24}-1=2^{1/8}-1\approx 0.09051$. Related to the fine-structure constant through the Predictive Ward Identity (Theorem Z.14, with Thomson-Ward spectral-weight closure via Definition Z.14d and Theorem Z.14e) and Theorems Z.24-Z.26, yielding the closed-form Thomson core $\alpha^{-1}_{0}=137.03609205522863\ldots$ and the candidate diagnostic-only certificate row $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ (Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21.1).
 
 *   **UCT (Unified Cost of Transgression):** (Appendix N) The thermodynamic/operational cost functional that quantifies the resource penalty for attempts to surpass the Prediction Coherence Boundary; unifies predictive and relativistic limits.
 
@@ -742,7 +832,7 @@ $$
 
 *   **Validation Target:** A measured or externally inferred value used only to test a fixed branch after the operator, normalization, finite-record, and status ledgers have been fixed. It is not an input to a theorem-level derivation and cannot promote a row by agreement alone.
 
-*   **Ward-Cohomology Residual Gate:** (Appendix Z, Definition Z.27.11k; Theorem Z.27.11k.1; Corollary Z.27.11k.2) Certificate machinery treating $R_\alpha$ as the evaluation of a finite electromagnetic Ward cohomology class. Ward-exact residuals are PPI/PCE-null and cannot shift $\alpha^{-1}$; if $H^1_W(\alpha)=0$, then $R_\alpha=0$. On the accepted hypercharge-recoil branch, $H^1_W(\alpha;YR\perp)$ has basis $[\omega_Y]$, $[\omega_5]$, $[\sigma_{\perp}]$, giving $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and no additional post-core source.
+*   **Ward-Cohomology Residual Gate:** (Appendix Z, Definition Z.27.11k; Theorem Z.27.11k.1; Corollary Z.27.11k.2) Certificate machinery treating $R_\alpha$ as the evaluation of a finite electromagnetic Ward cohomology class. Ward-exact residuals are PPI/PCE-null and cannot shift $\alpha^{-1}$; if $H^1_W(\alpha)=0$, then $R_\alpha=0$. On the candidate hypercharge-recoil (operator realization open) branch, $H^1_W(\alpha;YR\perp)$ has basis $[\omega_Y]$, $[\omega_5]$, $[\sigma_{\perp}]$, giving $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and no additional post-core source.
 
 *   **WAY-PCE Measurement Bound:** (Appendix M.6.13) Conservation-law measurement constraint: a charge-covariant finite branch cannot exactly measure a charge-asymmetric observable without reference asymmetry or finite measurement error. The Blackwell-PCE record can report only what this constrained channel can acquire.
 

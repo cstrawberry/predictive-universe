@@ -30,8 +30,8 @@ with the antecedents supplied by (T1)–(T5) below together with the Appendix B 
 The macroscopic emergent metric/channel-capacity dynamics derive from the following branch-theorem and certificate inputs on the operational-continuum branch:
 
 *   (T1) **Local Thermodynamic Equilibrium at Causal Horizons:** Theorem 48a.0 derives local LTE from the local KMS/Clausius theorem stack on the Appendix F/G operational-continuum branch. Theorem 48a gives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation $\delta S=\delta Q/T_U+O(\lambda^2)$. The finite channel min-cut realization of local horizon entropy is supplied by Corollary E.8.4g, with the finite KMS-descent certificate of Definition F.10.12a available when that certificate is accepted. On a branch additionally carrying the Predictive Generalized Second Law certificate $\mathfrak C_{\mathrm{PGSL}}$ (Definition 12.5.3l), the exterior generalized entropy is monotone along the retained horizon-cut family. On a branch carrying the null-convexity certificate $\mathfrak C_{\mathrm{NC}}$ (Definition 12.5.3n), the second-variation sign needed for the predictive null-energy/QNEC step is supplied as finite response data. On the accepted finite modular-Clausius Hodge datum, Theorem F.10.12f identifies the closed retained KMS/Clausius obstruction with its harmonic representative; after the zero-defect stationarity gate, or the zero-curvature subcase of Proposition 12.5.3o, the reversible Einstein branch is the harmonic-zero branch.
-*   (T2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the Appendix E area-law branch. The modular/KMS input is theorem-level via Theorems F.10.1–F.10.4 and is certificate-complete on the branch of Theorem F.10.12c.
-*   (T3) **Geometric Regularity and operational-continuum closure:** Theorem 43.5 packages the MPU network on the $M=24$, $D=4$ operational-continuum branch. Theorem 43 supplies the regularity-necessity layer; Lemma C.6d, Theorem C.6e, Theorem D.6e, Theorem C.6c, and Theorem 44a supply the $D_4$ shell isotropy, noncollapse, Mosco–Cheeger closure, RCD bridge, and regular-branch manifold structure on the vanishing-defect branch.
+*   (T2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the Appendix E area-law branch. Corollary E.8.4g supplies the local finite min-cut entropy, while Theorem E.8.4m identifies the same entropy as the least sufficient predictive update-current entropy on the capacity-tight PCE-no-surplus horizon branch. The modular/KMS input is theorem-level via Theorems F.10.1–F.10.4 and is certificate-complete on the branch of Theorem F.10.12c.
+*   (T3) **Geometric Regularity and operational-continuum closure:** Theorem 43.5 is a conditional package for the $M=24$, $D=4$ operational-continuum branch. Lemma C.6d and Theorem C.6e provide fixed-trace $D_4$ shell-tensor isotropy only. Geometric noncollapse, interpolation/recovery, compactness, curvature transfer, and the generator-core/$\Gamma_2$ passage are independent certificate entries; with them, Theorems D.6e, C.6c, and 44a give the stated Mosco--Cheeger, $\mathrm{RCD}^*(K,4)$, and regular-manifold conclusions. Strict noncollapse additionally requires $\mu=\mathcal H^4$.
 *   (T4) **Conserved Energy-Momentum Source:** Corollary 45a.1 derives covariant conservation $\nabla_\mu T^{(MPU){\mu\nu}}=0$ from diffeomorphism invariance of the matter action and the matter equations of motion (Appendix B).
 *   (T5) **Local Lorentz Invariance and Universality:** Corollary 46a derives local Lorentz invariance with structure group $SO^+(1,3)$ from Theorem 46 together with the full Appendix O signature package used by Theorems O.7a, O.7b, and Corollary O.7b.1, with the cone-coincidence entry supplied either by Hypothesis O.7.2.4 or by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) for the retained sectors under discussion. Corollary 46e derives metric universality from common PCE-minimal boundary sufficiency: retained species sharing the same Markov boundary syndrome reconstruct the same causal-diamond poset, capacity valuation, and Lorentzian metric. The Clausius step below uses one local horizon cone only for stress-energy sectors covered by these inputs; sectors not covered by the Lorentzian/cone-coincidence package remain outside the theorem-level Einstein-branch derivation. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
 
@@ -50,21 +50,19 @@ At any arbitrary point $p$ in the emergent spacetime manifold $(M, g_{\mu\nu})$,
 
 These local horizons provide the setting for applying thermodynamic reasoning to the underlying MPU network information exchange.
 
-**12.1.2 Theorem 48a.0 (Local Thermodynamic Equilibrium at Causal Horizons).**
+**12.1.2 Theorem 48a.0 (Certificate-Conditioned Local Thermodynamic Equilibrium at Causal Horizons).**
 
-On the Appendix F/G operational-continuum branch, the emergent macroscopic description of the MPU network within $(M,g_{\mu\nu})$ admits local thermodynamic equilibrium states with respect to transformations generated by the approximate Killing vector $\xi^\mu$ near any local causal horizon $\mathcal H$. Consequently, the temperature $T$ and heat flow $\delta Q$ used in the local horizon derivation are well-defined to first order on the local Rindler wedge.
+On the Appendix F/G operational-continuum branch, assume each retained local horizon reference state carries either the registered quantum-detailed-balance reversibility certificate of Theorem G.1.9.3 together with a physical-time Gibbs identification, or the complete-passivity certificate of Theorem G.1.9.3c, and assume the Appendix F modular boost bridge. Then the local reference state is KMS with respect to the approximate boost flow and the first-order temperature $T$ and heat flow $\delta Q$ used below are well-defined.
 
-*Proof.* Theorem 48a derives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation
-$$
-\delta S=\frac{\delta Q}{T_U}+O(\lambda^2)
-$$
-from four prior inputs on the same operational-continuum branch: PCE-optimal detailed balance with respect to the local stationary state (Corollary G.1.9.3a), Gibbs/KMS characterization of equilibrium (Theorems G.1.9.4–G.1.9.5), modular-Hamiltonian/boost identification on the local Rindler wedge (Theorem G.1.9.6), and the entanglement first law (Theorem G.1.9.7). The KMS condition is exactly the local equilibrium condition for the horizon observer, and the first-order Clausius relation is exactly the thermodynamic relation required to define $T$ and $\delta Q$ in the subsequent derivation. If an additional non-LTE label leaves all finite protocol-response presheaves unchanged, it is response-null surplus and is eliminated by PCE dominance (Theorem D.1d). If it changes the finite response presheaf, it is a different non-equilibrium branch and cannot be used inside the local-equilibrium Einstein-equation derivation. Hence LTE at local causal horizons is derived on this branch. ∎
+*Proof.* The equilibrium certificate supplies physical KMS status rather than the tautological modular representation alone. The Appendix F/G boost identification fixes the local modular generator as $2\pi K_{boost}/\kappa$, and the entanglement first law gives $\delta S=\delta Q/T_U+O(\lambda^2)$. These are precisely the local-equilibrium inputs used in Theorem 48a. Without the independent equilibrium certificate, local horizon LTE is a branch assumption and is not derived from PCE alone. ∎
 
 **Theorem 48a (Derived Local KMS Equilibrium at Causal Horizons).**
 
 Assume the continuum/AQFT bridge of Appendix F together with the equilibration chain established in Appendix G. In particular, assume:
 
-- the PCE-optimal ND-RID dynamics satisfies detailed balance with respect to the local stationary state (Corollary G.1.9.3a),
+- the local dynamics carries the independent detailed-balance/physical-time or complete-passivity certificate required by Theorem 48a.0 (Theorems G.1.9.3 and G.1.9.3c),
+
+
 - equilibrium states are Gibbs/KMS states generated by their modular Hamiltonian (Theorems G.1.9.4 and G.1.9.5),
 - for a local Rindler wedge the modular Hamiltonian is proportional to the boost generator,
 $$
@@ -88,7 +86,9 @@ $$
 T_U=\frac{\kappa}{2\pi}.
 $$
 
-*Proof.* Corollary G.1.9.3a and Theorems G.1.9.4-G.1.9.5 identify the local equilibrium state as Gibbs/KMS. In a local Rindler wedge, Theorem G.1.9.6 identifies the modular Hamiltonian with the boost generator scaled by $2\pi/\kappa$, giving the Unruh-temperature relation. Theorem G.1.9.7 then yields
+*Proof.* The equilibrium certificate assumed in Theorem 48a.0 and Theorems G.1.9.4-G.1.9.5 identify the local reference state as physical Gibbs/KMS rather than merely modularly representable.
+
+
 $$
 \delta S=\delta\langle K_{\mathrm{mod}}\rangle=\frac{\delta Q}{T_U}
 $$
@@ -121,7 +121,7 @@ T = \frac{\kappa}{2\pi} \quad \text{(69)}
 $$
 
 
-Within PU, this temperature reflects the effective thermal noise spectrum encountered by MPUs near the horizon, ultimately related to the structural information limits ($\varepsilon_0, f_{RID}$) of the underlying ND-RID processes, with physical overhead recorded separately by $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}$.
+Within PU, this temperature reflects the effective thermal noise spectrum encountered by MPUs near the horizon, ultimately related to the structural information limits ($\varepsilon_0, f_{RID}$) of the underlying ND-RID processes, with physical overhead recorded separately by $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$.
 
 **12.2 The Horizon Entropy Area Law**
 
@@ -139,7 +139,7 @@ C_{\max}^*=2\ln2.
 $$
 The boundary-channel density is supplied by Theorem E.3:
 $$
-N_{eff\_links}
+N_{\mathrm{eff\,links}}
 =
 \frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A).
 $$
@@ -150,25 +150,24 @@ S_{boundary}(\mathcal A)=\frac{\mathcal A}{4G}+o(\mathcal A)
 \quad \text{(70)}
 $$
 
-For an infinitesimal local-horizon patch in the Jacobson limit, the $o(\mathcal A)$ term is subleading under refinement and the first variation is governed by the area density:
+Let $S_h(\mathcal A)=\mathcal A/(4G)+r_h(\mathcal A)$. For every compact refinement interval $K$, assume
 $$
-\delta S=\frac1{4G}\delta\mathcal A.
+\sup_{\mathcal A\in K}|r_h'(\mathcal A)|\longrightarrow0.
 $$
-The Clausius-relation derivation of the Einstein equation (Theorem 12.1) uses only this first variation through the entropy density $1/(4G)$, so the $o(\mathcal A)$ correction in Equation (70) is invisible in the local thermodynamic derivation and does not modify any downstream result.
-
-An infinitesimal change $\delta \mathcal{A}$ in area corresponds to:
-
+Then
 $$
-\delta S = \frac{1}{4 G} \delta \mathcal{A} \quad \text{(71)}
+\delta S_h=\left[\frac1{4G}+r_h'(\mathcal A)\right]\delta\mathcal A\longrightarrow\frac1{4G}\delta\mathcal A
+\quad\text{uniformly on }K.\tag{71}
 $$
+The Clausius derivation uses this conditional first-variation limit. The value estimate $r_h=o(\mathcal A)$ alone does not control the first variation.
 
 *Proof.* Under geometric regularity alone, Lemma E.5.1 gives the theorem-level upper bound on boundary-crossing links. On the density-certificate branch of Theorem E.3, the effective independent channel count has the asymptotic form
 $$
-N_{\mathrm{eff\_links}}
+N_{\mathrm{eff\,links}}
 =
-\sigma_{\mathrm{eff\_link}}\mathcal A+o(\mathcal A),
+\sigma_{\mathrm{eff\,link}}\mathcal A+o(\mathcal A),
 \qquad
-\sigma_{\mathrm{eff\_link}}=\frac{\chi}{\eta\delta^2}.
+\sigma_{\mathrm{eff\,link}}=\frac{\chi}{\eta\delta^2}.
 $$
 Each such channel carries at most
 $$
@@ -178,7 +177,7 @@ $$
 $$
 S_{boundary}(\mathcal A)
 =
-N_{\mathrm{eff\_links}}\,S^{\max}_{\mathrm{channel}}
+N_{\mathrm{eff\,links}}\,S^{\max}_{\mathrm{channel}}
 =
 k_B\left(\frac{\chi C_{\max}}{\eta\delta^2}\right)\mathcal A+o(\mathcal A),
 $$
@@ -208,17 +207,7 @@ In natural units $c=\hbar=k_B=1$, this is Equation (70):
 $$
 S_{boundary}(\mathcal A)=\frac{\mathcal A}{4G}+o(\mathcal A).
 $$
-The local-horizon derivation uses the entropy density in the refinement limit. Since the density certificate gives
-$$
-\frac{S_{boundary}(\mathcal A)}{\mathcal A}
-\to
-\frac1{4G},
-$$
-the first variation on an infinitesimal local-horizon patch is
-$$
-\delta S=\frac1{4G}\delta\mathcal A,
-$$
-which is Equation (71). ∎
+For the refinement family $S_h(\mathcal A)=\mathcal A/(4G)+r_h(\mathcal A)$, the uniform derivative hypothesis in the theorem statement gives Equation (71). Convergence of $S_h(\mathcal A)/\mathcal A$ alone would not prove this first-variation limit. ∎
 
 **12.3 Thermodynamic Derivation of Einstein's Field Equations**
 
@@ -442,6 +431,50 @@ in the corresponding dual trace-free tensor norm.
 
 *Proof.* The null-cone lemma used in the proof of Theorem 12.1 states that a symmetric tensor whose contraction with every null vector vanishes is proportional to the metric. Therefore null contractions determine only the trace-free part of a symmetric tensor. On a finite budget, the same conclusion holds for the retained directions exactly when they separate trace-free quadratic forms; finite-dimensional linear algebra then gives existence and uniqueness of the trace-free representative and the norm bound with condition constant $\kappa_B$. In the continuum closure the remaining pure-trace ambiguity is invisible on null contractions and is absorbed into the cosmological/integration term once the Bianchi identity and stress conservation are imposed. Setting the retained defect to zero recovers the reversible branch of Theorem 12.1. ∎
 
+**Corollary 12.1g.a (Minimal Nine-Horizon Tensor Tomography and Tenth-Direction Sum Rule).** Work at one event in a local orthonormal frame of signature $(-,+,+,+)$. For a trace-free symmetric tensor $C_{\mu\nu}$ and $k(n)=(1,n)$ with $n\in S^2$, define $q(n)=C_{\mu\nu}k^\mu(n)k^\nu(n)$. Take
+$$
+\begin{aligned}
+&n_1=(1,0,0),\quad n_2=(-1,0,0),\quad
+n_3=(0,1,0),\quad n_4=(0,-1,0),\\
+&n_5=(0,0,1),\quad n_6=(0,0,-1),\\
+&n_7=\frac{(1,1,1)}{\sqrt3},\quad
+n_8=\frac{(1,1,-1)}{\sqrt3},\quad
+n_9=\frac{(1,-1,1)}{\sqrt3}.
+\end{aligned}
+\tag{12.1g.a.1}
+$$
+Then the nine scalars $q_a=q(n_a)$ determine $C_{\mu\nu}$ uniquely. Nine is minimal among scalar null-contraction designs.
+
+More explicitly, write
+$$
+u=(C_{00},C_{01},C_{02},C_{03},C_{11},C_{22},C_{12},C_{13},C_{23})^T,
+\qquad C_{33}=C_{00}-C_{11}-C_{22}.
+$$
+For $n=(x,y,z)$ the tomography row is
+$$
+A(n)=\bigl(1+z^2,2x,2y,2z,x^2-z^2,y^2-z^2,2xy,2xz,2yz\bigr),
+\tag{12.1g.a.2}
+$$
+so $q=Au$ and the directions (12.1g.a.1) give
+$$
+\det A=\frac{8192}{27}\ne0.
+\tag{12.1g.a.3}
+$$
+For the additional direction $n_{10}=(-1,1,1)/\sqrt3$, every trace-free symmetric tensor obeys the exact no-fit identity
+$$
+q_{10}
+=
+\frac{2+\sqrt3}{3}(q_1+q_3+q_5)
++
+\frac{2-\sqrt3}{3}(q_2+q_4+q_6)
+-q_7-q_8-q_9.
+\tag{12.1g.a.4}
+$$
+
+*Proof.* The trace-free symmetric tensors in four dimensions form a nine-dimensional vector space. Equation (12.1g.a.2) follows by substituting $C_{33}=C_{00}-C_{11}-C_{22}$ into $C_{\mu\nu}k^\mu k^\nu$. Direct exact elimination on the nine rows gives (12.1g.a.3), so the map is injective and reconstructs $u=A^{-1}q$. No design with fewer than nine scalar contractions can be injective on a nine-dimensional vector space. Expressing $A(n_{10})$ in the row span of $A(n_1),\ldots,A(n_9)$ gives (12.1g.a.4). ∎
+
+**Operational use.** The nine directions are a minimal reconstruction certificate for the trace-free Clausius defect of Theorem 12.1g; the tenth is an overdetermined falsifier. The pure-trace term remains null-invisible and descends to the cosmological integration term exactly as in Theorem 12.1g. The determinant is frame-coordinate dependent, while injectivity and minimality concern the specified $k^0=1$-normalized null-vector design. Under independent rescaling $k_a\mapsto s_ak_a$, each datum scales as $q_a\mapsto s_a^2q_a$, and the tenth-direction coefficients must be rescaled accordingly.
+
 **Definition 12.1d (Nondegenerate Finite-Response Gravitational Channel Ensemble).** On a refining sequence of finite operational covers $\{\mathcal U_n\}_{n\ge1}$ carrying an accepted finite KMS-descent certificate $\{\mathfrak C^{\mathrm{KMS}}_n\}$ in the sense of Definition F.10.12a, the nondegenerate finite-response gravitational channel ensemble is the finite tuple
 $$
 \mathfrak G_n
@@ -628,6 +661,46 @@ Applying this positive linear pushforward to the Cramér-Rao lower bound gives (
 
 *Proof.* Theorem 12.1c derives $\delta g_n$ from $D\Gamma_n(q_{\mathrm{grav},n}^*)$ on $\mathcal T_{\mathrm{grav},n}$. Theorem 12.1e derives $\Sigma_n$ from the same derivative, the positive Hessian, and the finite fluctuation scale. If the entries of Definition 12.1d are accepted, every ingredient is fixed by a finite record before comparison; Theorem D.8.9b gives local closure. If any entry is missing, Theorem P.14.1f gives non-identifiability, so the row remains certificate-pending. ∎
 
+**Theorem 12.1e.a (PCE Contraction Stability of Emergent Metric Responses).** Fix the finite ensemble $\mathfrak G_n$ of Definition 12.1d. Let
+$$
+V_n=\mathcal T_{\mathrm{grav},n},
+\qquad
+H_n=H_{\mathrm{grav},n}\succ0,
+\qquad
+A_n=D\Gamma_n(q^*_{\mathrm{grav},n}),
+$$
+and equip $V_n$ and $\operatorname{ran}A_n$ with the certificate-fixed positive-definite finite-dimensional Hilbert inner products used by the retained tangent and tensor-test ledgers. Every adjoint, Moore--Penrose inverse, operator norm, and eigenvalue below is taken with respect to these inner products. For $h\in\operatorname{ran}A_n$, define the least microscopic PCE cost producing $h$ by
+$$
+I_n(h)=\frac12\min_{v\in V_n:\,A_nv=h}\langle v,H_nv\rangle.
+\tag{12.1e.a.1}
+$$
+Then strict convexity makes the minimizer unique, and it is
+$$
+v_h=H_n^{-1}A_n^*(A_nH_n^{-1}A_n^*)^+h.
+\tag{12.1e.a.2}
+$$
+Moreover,
+$$
+I_n(h)
+=\frac12\langle h,(A_nH_n^{-1}A_n^*)^+h\rangle
+=\frac{\tau_{\mathrm{PCE},n}}2\langle h,\Sigma_n^+h\rangle,
+\tag{12.1e.a.3}
+$$
+and, for $A_n\ne0$,
+$$
+I_n(h)
+\ge
+\frac{\lambda_{\min}(H_n)}{2\lVert A_n\rVert^2}\lVert h\rVert^2.
+\tag{12.1e.a.4}
+$$
+Thus every nonzero retained metric perturbation has strictly positive PCE cost, while every $h\notin\operatorname{ran}A_n$ is unattainable in the certified linearized branch rather than a zero-cost fluctuation.
+
+*Proof.* Put $z=H_n^{1/2}v$ and $B=A_nH_n^{-1/2}$. Equation (12.1e.a.1) becomes the minimum Euclidean-norm problem $Bz=h$. Its unique minimum-norm solution is $z=B^+h$, which yields (12.1e.a.2) and the first equality in (12.1e.a.3). Definition 12.1d.4 gives $\Sigma_n=\tau_{\mathrm{PCE},n}A_nH_n^{-1}A_n^*$; on its range, $\Sigma_n^+=\tau_{\mathrm{PCE},n}^{-1}(A_nH_n^{-1}A_n^*)^+$, proving the second equality. Finally, every feasible $v$ obeys $\lVert h\rVert\le\lVert A_n\rVert\lVert v\rVert$ and $\langle v,H_nv\rangle\ge\lambda_{\min}(H_n)\lVert v\rVert^2$, which gives (12.1e.a.4). ∎
+
+**Corollary 12.1e.a.1 (No Fundamental Carrier Introduced by the Linearized Contraction).** Equation (12.1e.a.3) is a contraction principle: both the metric covariance and its dual fluctuation cost are deterministic images of the retained PCE Hessian and reconstruction derivative. It introduces neither a graviton field nor a metric path integral. Beyond the certified linearization radius, the theorem supplies no Gaussian or quadratic claim; the nonlinear PCE functional must be evaluated directly.
+
+**External AQFT comparison.** Dorau and Much study coherent scalar-field excitations on bifurcate Killing horizons in algebraic quantum field theory. In their setting, modular relative entropy equals the corresponding horizon energy flux. Their semiclassical Einstein equation with the standard $8\pi$ normalization follows only after adjoining the entropy--area identification $S_{\mathrm{rel}}=\delta A/4$. This provides a standard-AQFT comparison for the relative-entropy/flux step used here. It neither derives the PU channel-capacity area law nor supplies any missing entry of $\mathfrak C_{\mathrm{EH}}$, and it is not load-bearing for the present derivation.
+
 **Definition 12.1f (Emergent Einstein/AQFT Completion Record).** An emergent Einstein/AQFT completion record is a finite record
 $$
 \mathfrak C_{\mathrm{EH}}
@@ -683,23 +756,29 @@ If any slot of $\mathfrak C_{\mathrm{EH}}$ is absent, the missing slots form the
 
 Within the Predictive Universe framework, gravity emerges as a macroscopic thermodynamic phenomenon.
 
-### 12.4.1 Thermodynamic Structure Across Scales
+### 12.4.1 Statistical and Thermodynamic Structures Across Scales
 
 *In this subsection, natural units $\hbar = c = k_B = 1$ are used in Parts A and B; SI units are restored in Part C and the table.*
 
-The derivation of Einstein's equations (Theorem 12.1) applies the Clausius relation $\delta Q = T\,\delta S$ to local Rindler horizons. This thermodynamic structure connects to analogous equilibration processes at other scales.
+The derivation of Einstein's equations (Theorem 12.1) applies the Clausius relation $\delta Q = T\,\delta S$ to local Rindler horizons. The horizon thermodynamic branch can be compared with statistical or thermodynamic structures at other scales, but no common equilibration mechanism is inferred without the relevant physical selectors.
 
-**Theorem 12.2 (Scale-Dependent Thermodynamic Equilibration).** *Thermodynamic equilibration under ND-RID dynamics yields characteristic structures at different scales:*
+**Theorem 12.2 (Scale-Dependent Statistical and Thermodynamic Structures).** *On the independently certified branches listed in the table, PU supplies the following scale-dependent structures; the microscopic row is a modular representation and not by itself thermodynamic equilibration:*
+
+
 
 | Scale | Equilibration Process | Physical Result | Reference |
 |:------|:----------------------|:----------------|:----------|
-| Microscopic (MPU) | KMS equilibrium under modular flow | Born rule probabilities | Proposition G.1.9.2 |
+| Microscopic (MPU) | Modular KMS representation; physical equilibrium only with an independent selector | Born probabilities remain fixed by Theorem G.1.7 | Theorem G.1.7; Theorems G.1.9.3c and G.1.9.5 |
+
+
 | Macroscopic (Rindler) | Clausius relation on local horizons | Einstein field equations | Theorem 12.1 |
 | Cosmological (de Sitter) | Instanton tunneling with PCE selection | Cosmological constant | Appendix U |
 
 *Proof.*
 
-**Part A (Microscopic).** From Proposition G.1.9.2, PCE optimization drives ND-RID channels toward detailed balance. The KMS condition (Theorem G.1.9.5) characterizes equilibrium as Gibbs states $\rho^* = Z^{-1}e^{-K^*}$. For the modular Hamiltonian $K^* = -\ln\rho_{phys}$, the resulting probabilities are $p_i = \mathrm{tr}(\rho_{phys} P_i)$—the Born rule. This represents equilibration at the single-MPU scale.
+**Part A (Microscopic).** Proposition G.1.9.2 does not force detailed balance. Theorem G.1.9.5 supplies the modular KMS identity for a faithful state, while Theorem G.1.9.3c is the independent physical-time equilibrium selector. The Born probabilities $p_i=\operatorname{tr}(\rho_{phys}P_i)$ come from Theorem G.1.7 and are not derived by rewriting $K=-\log\rho_{phys}$.
+
+
 
 **Part B (Macroscopic).** From Theorem 12.1, applying the Clausius relation to local Rindler horizons with Unruh temperature $T = \kappa/(2\pi)$, area-law entropy $\delta S = \eta \delta\mathcal{A}$, and energy flux $\delta Q = \int T_{\mu\nu}^{(MPU)}\,\xi^\mu d\Sigma^\nu$, combined with the Raychaudhuri equation, yields:
 $$
@@ -1493,6 +1572,60 @@ for all covered null generators, then the retained metric equation is the sign-d
 
 *Proof.* Equation (76ao) gives (76g) directly. The identity between the second derivative of the relative-entropy ledger and the predictive QNEC slack is Theorem 12.5.3f, so (76ap) follows. Zero slack invokes Corollary 12.5.3g and Theorem 12.5.3h. The nonzero case is exactly the conserved-slack alternative of Definition 12.5.3k and Theorem 12.5.3k.1, with the null-projection sign inherited from (76ap). ∎
 
+**Definition 12.5.3o.1 (Fisher-Curvature Null-Convexity Discharge Record).** A Fisher-curvature discharge record for a retained local-horizon family is a finite forward-locked record
+$$
+\mathfrak C_{\mathrm{FNC}}
+=
+(\rho_\lambda,\omega_\lambda,D_\lambda,F_\lambda^{\mathrm{BKM}},
+\mathcal D_{\mathrm{rec}}(\lambda),r_\lambda^{\mathrm F},
+\mathcal R_2,\mathfrak O_{\mathrm{FNC}})
+\tag{76aq.1}
+$$
+with the following entries on every covered deformation:
+
+1. $\rho_\lambda$ and the faithful reference state $\omega_\lambda$ lie in the same retained finite algebra, and
+   $$
+   D_\lambda:=D(\rho_\lambda\Vert\omega_\lambda)
+   $$
+   is twice differentiable, as certified by $\mathcal R_2$.
+2. The normalization of $F_\lambda^{\mathrm{BKM}}$ is fixed by the record and the symmetric second difference obeys
+   $$
+   D_{\lambda+h}-2D_\lambda+D_{\lambda-h}
+   =
+   \left(
+   \frac14F_\lambda^{\mathrm{BKM}}
+   +\mathcal D_{\mathrm{rec}}(\lambda)
+   +r_\lambda^{\mathrm F}
+   \right)h^2+o(h^2).
+   \tag{76aq.2}
+   $$
+3. The accepted sign ledger records
+   $$
+   F_\lambda^{\mathrm{BKM}}\ge0,
+   \qquad
+   \mathcal D_{\mathrm{rec}}(\lambda)\ge0,
+   \qquad
+   r_\lambda^{\mathrm F}\ge0.
+   \tag{76aq.3}
+   $$
+4. $\mathfrak O_{\mathrm{FNC}}$ proves that the deformation, reference state, cut orientation, overlap convention, and tangent quotient are the same ones used in Definition 12.5.3n.
+
+A record that controls only a lower second Dini derivative is a Dini-convexity diagnostic and does not discharge Definition 12.5.3n without the twice-differentiability entry above.
+
+**Proposition 12.5.3o.2 (Fisher-Curvature Discharge of Null Convexity).** If $\mathfrak C_{\mathrm{FNC}}$ is accepted, then
+$$
+D_\lambda''
+=
+\frac14F_\lambda^{\mathrm{BKM}}
++\mathcal D_{\mathrm{rec}}(\lambda)
++r_\lambda^{\mathrm F}
+\ge0.
+\tag{76aq.4}
+$$
+Together with the overlap entry, this supplies the second-variation sign component of $\mathfrak C_{\mathrm{NC}}$ on the covered generators. It supplies the reversible Einstein branch only when the independent zero-slack ledger of Definition 12.5.3n is also accepted; otherwise it supplies only the sign-definite non-equilibrium correction branch of Proposition 12.5.3o.
+
+*Proof.* Divide (76aq.2) by $h^2$ and use the twice-differentiability record to take $h\to0$. Equation (76aq.3) gives the sign. The final status distinction is exactly the zero-slack/nonzero-slack split in Definition 12.5.3n and Proposition 12.5.3o. ∎
+
 **Corollary 12.5.3p (Finite Area and Light-Sheet Bounds from P-GSL).** On a branch carrying $\mathfrak C_{\mathrm{PGSL}}$, every covered pair of future horizon cuts satisfies
 $$
 \Delta S_{\mathrm{out}}+\frac{\Delta\mathcal A_{\mathrm{GSL}}}{4G}
@@ -1518,4 +1651,22 @@ S_{\mathrm{cross}}
 $$
 This is a finite retained light-sheet bound, not an unconditional global Bousso theorem outside the cut family, orientation convention, and overlap audit certified by $\mathfrak C_{\mathrm{PGSL}}$.
 
-*Proof.* Equation (76ar) is (76am) rewritten using the area-density entry of (76al) and the GSL-oriented area variable. On the certified classical light-sheet segment, the entropy that crosses the sheet is the decrease of the retained exterior entropy, so $S_{\mathrm{cross}}=-\Delta S_{\mathrm{out}}$. The orientation entry gives $\Delta\mathcal A_{\mathrm{GSL}}=\mathcal A(\lambda_1)-\mathcal A(\lambda_2)>0$. Substituting these two identities into (76ar) gives (76as). The scope is exactly the scope of the certificate. ∎
+**Definition 12.5.5a (Typed Non-Equilibrium Gravity Ledger).** A finite ledger fixes tensor/scalar retarded responses, contact terms, hydrodynamic frame and order, null normalization, focusing-to-throughput map, and typed intervals for transport, relaxation, ringdown, and curvature response. It also certifies serial cycle use, a minimum cycle duration $\tau_{\min}>0$, and
+$$
+\tau_{\mathrm{relax}}=\tau_{\mathrm{cyc}}+r_{\mathrm{ring}},
+\qquad |r_{\mathrm{ring}}|\le\epsilon_{\mathrm{ring}},
+\tag{12.5.5a.1}
+$$
+with $\epsilon_{\mathrm{ring}}$ in time units.
+
+**Proposition 12.5.5b (Certificate-Relative Relaxation Bound).** If each serialized cycle carries at most $C_{\max}^*>0$ nats and the response requires $\Delta I>0$, then
+$$
+\tau_{\mathrm{relax}}
+\ge\tau_{\min}
+\left\lceil\frac{\Delta I}{C_{\max}^*}\right\rceil
+-\epsilon_{\mathrm{ring}}.
+\tag{12.5.5b.1}
+$$
+No saturated-core existence or smooth dynamics follows from finite capacity alone.
+
+*Proof.* Serialization requires at least $\lceil\Delta I/C_{\max}^*\rceil$ cycles. Multiply by the minimum duration and apply the residual bound. ∎

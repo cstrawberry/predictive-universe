@@ -17,7 +17,7 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Predictive Physical Complexity | $C_{P}, K_{0}, C_{\text{agg}}, \hat{C}_{\text{target}}, \hat{C}_{v}$             | $[\text{Complexity}]$                                | structural / resource capacity                       |
 | Probability / Performance     | $PP, Q, \alpha, \beta, \alpha_{\text{SPAP}}, \alpha_{\text{CC,max}}, \mathrm{CC}$ | $1$                                                  | dimensionless                                        |
 | Information / Capacity        | $\Delta I, C_{\max}(f_{\text{RID}})$                                             | $1$                                                  | dimensionless (nats)                                 |
-| Irreducible entropy (dimless) | $\varepsilon=\Delta S_{\min}/k_{B}$ ($\ge\ln2$)                                     | $1$                                                  | dimensionless (nats per cycle)                       |
+| Structural/reset entropy | $\varepsilon_0=\ln2$; $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on a registered reset branch | $1$ | structural log-cardinality versus ensemble-dependent physical nats |
 | Reflexivity constant          | $\kappa_{r}$                                                                     | $1$                                                  | dimensionless                                        |
 | Physical cost rate            | $R(C), P_{\min}$                                                                 | $[E][T]^{-1}$                                        | power                                                |
 | Info-cost rate                | $R_I(C), r_{I}$                                                                | $[E][T]^{-1}$                                        | power                                                |
@@ -58,7 +58,9 @@ Using the dimensional assignments in Table H.1, we verify the dimensional homoge
 *   **Adaptation Dynamics (Equations (24), (30), (38))**
     *   Equation (24) defining $\Psi$: $\Psi$ has dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. $\Gamma_{0}$ has $[E][T]^{-1}$, $\partial PP/\partial C$ has $[\text{Complexity}]^{-1}$ (PP dimensionless, $C$ has $[\text{Complexity}]$). $\lambda$ is dimensionless, $R'$ and $R_I'$ have dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. The equation $\Psi = \Gamma_0 (\partial PP/\partial C) - (\lambda R' + R_I')$ is dimensionally consistent.
     *   Equation (30) for $\dot C$: $dC/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\eta_{\text{adapt}}$ has $[\text{Complexity}]^2 [E]^{-1}$, $\Psi$ has $[E][T]^{-1}[\text{Complexity}]^{-1}$. The product $\eta_{\text{adapt}}\Psi$ has dimensions $[\text{Complexity}]^2 [E]^{-1} \times [E][T]^{-1}[\text{Complexity}]^{-1} = [\text{Complexity}][T]^{-1}$. Equation (30) is dimensionally consistent.
-    *   Equation (38) for $\dot{\hat C}_{\text{target}}$: $d\hat C_{\text{target}}/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\mu_{\text{target}}$ has $[T]^{-1}$. $\hat C_{\text{target}}$ has $[\text{Complexity}]$. $(PP_{op}-PP)$ is dimensionless. The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP_{op} - PP)$ is dimensionally consistent: $[\text{Complexity}][T]^{-1} = [T]^{-1} \times [\text{Complexity}] \times 1$.
+    *   Equation (38) for $\dot{\hat C}_{\text{target}}$: $d\hat C_{\text{target}}/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\mu_{\text{target}}$ has $[T]^{-1}$. $\hat C_{\text{target}}$ has $[\text{Complexity}]$. $(PP-PP_{op})$ is dimensionless. The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP - PP_{op})$ is dimensionally consistent
+
+ The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP_{op} - PP)$ is dimensionally consistent: $[\text{Complexity}][T]^{-1} = [T]^{-1} \times [\text{Complexity}] \times 1$.
 
 *   **Law of Prediction (Equations (22)–(23))**
     *   Equation (22): $PP$ dimensionless. $\beta, \alpha$ dimensionless. $\kappa_{\text{eff}}$ dimensionless. $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $(C-C_{op})/\hat C_{\text{target}}$ is dimensionless. Exponent argument is dimensionless. Equation is dimensionally consistent.
@@ -220,7 +222,7 @@ $$
 by the additivity of QFI for tensor product states. ∎
 
 **Application (conditional i.i.d. repetition model):**
-- One irreversible comparison event costs at least $\varepsilon$, with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, nats (Landauer principle [Landauer 1961], Theorem 31)
+- One irreversible comparison event costs at least $\varepsilon$, with $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, nats (Landauer principle [Landauer 1961], Theorem 31)
 - At the PCE-optimal operating point, the per-cycle information budget is $C_{\mathrm{max}}^* = 2\varepsilon$ (Appendix Q, Equation Q.10)
 - If the comparison events contributing to this budget are modeled as independent identically prepared Landauer-costed comparison channels, then at most $N := C_{\mathrm{max}}^*/\varepsilon = 2$ such events can be supported per cycle; the bridge-law normalization adopts this maximal i.i.d. count
 

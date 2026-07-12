@@ -1,8 +1,10 @@
 # 11. Emergence of Spacetime Geometry (Operational Continuum Branch)
 
+The topological-bandwidth result below is a conditional band-limited completion on an accepted $\mathfrak C_{\mathrm{TB}}^\Omega$. Its completed diamond basis may be infinite in the effective representation, while each physical protocol uses only finite retained subrecords.
+
 **Placement of D4 data in the spacetime ledger.** The D4 witness does not replace the Lorentzian cone or second-order certificates. It may feed the continuum-recovery side of the spacetime ledger, while $\mathfrak C_{\mathrm{cone}}$, $\mathfrak C_2$, and $\mathfrak C_{\mathrm{sig}}$ still determine the operational cone, second-order closure, and signature branch.
 
-This section details the emergence of effective spacetime geometry from the underlying discrete MPU network. The continuum layer is not an additional ontology: the real world does not have to become an actual continuum. It only has to generate continuum behavior as a finite-resolution effective closure. Theorem 43 supplies the regularity-necessity theorem, Theorem 43.5 packages the operational-continuum branch on the $M=24$, $D=4$ shell under its stated hypotheses, and Corollary 43.5a supplies the zero-defect $D_4$ gluing certificate $\mathfrak Z_{\mathrm{cont}}$ that discharges the global-core competitor condition on the strict gluing branch. Appendix F supplies the algebraic AQFT bridge under controlled generator-convergence hypotheses, with Definition F.0c and Theorem F.0d giving the Mosco-Bochner certificate route and Definition F.0e with Theorem F.0f giving the projective single-clock route from finite local algebras to the stable local AQFT envelope. The emergence process is presented in stages: obtaining the operational continuum compression of the discrete propagation-cost metric, identifying the metric tensor, and deriving a finite operational causal speed from MPU interactions and importing Lorentzian signature from the Appendix O hyperbolic-principal-symbol branch. The interpretation of curvature as predictive holonomy is also discussed.
+This section details the emergence of effective spacetime geometry from the underlying discrete MPU network. The continuum layer is not an additional ontology: the real world does not have to become an actual continuum. It only has to generate continuum behavior as a finite-resolution effective closure. Theorem 43 supplies the regularity-necessity theorem, Theorem 43.5 packages the operational-continuum branch on the $M=24$, $D=4$ shell under its stated hypotheses, and Corollary 43.5a supplies the zero-defect $D_4$ gluing certificate $\mathfrak Z_{\mathrm{cont}}$ that discharges the global-core competitor condition on the strict gluing branch. Appendix F supplies the algebraic AQFT bridge under controlled generator-convergence hypotheses, with Definition F.0c and Theorem F.0d giving the Mosco-Bochner certificate route and Definition F.0e with Theorem F.0f giving the projective single-clock route from finite local algebras to the stable local AQFT envelope. The emergence process is presented in stages: obtaining the operational continuum compression of the discrete propagation-cost metric, identifying the metric tensor, and deriving a finite operational causal speed from MPU interactions and importing Lorentzian signature from the Appendix O hyperbolic-principal-symbol branch. Definition 46f and Theorem 46g then package the topological-bandwidth closure of this branch: operational inclusion gives topology and causal order, predictive capacity gives metric scale, and the finite Paley-Wiener sector gives retained field reconstruction below the accepted operational bandwidth. The interpretation of curvature as predictive holonomy is also discussed.
 
 **Definition 46a.1 (Predictive Well-Posedness Signature Certificate $\mathfrak C_{\mathrm{sig}}$).** The finite-frontier and cone constructions determine a causal order only up to the supplied operational certificate. To read a covered second-order sector as genuinely Lorentzian, add the certificate $\mathfrak C_{\mathrm{sig}}(U)$. It records the principal symbol of the retained second-order operator on $U$, one-time Cauchy well-posedness, exclusion of elliptic and ultrahyperbolic alternatives by the PPI/PCE comparison, exclusion of higher-derivative or Ostrogradsky branches from the retained sector, and agreement of the resulting characteristic cone with $\mathfrak C_{\mathrm{cone}}$ up to the stated tolerance. With $\mathfrak C_{\mathrm{sig}}$, the metric signature is a certified branch datum. Without it, finite propagation remains a causal-order result rather than a proof of Lorentzian signature.
 
@@ -12,17 +14,17 @@ The foundational substrate, according to Hypothesis 1, is a dynamic network $\ma
 
 **11.2 Metric Distance from ND-RID Propagation Costs**
 
-The fundamental interaction process, ND-RID ('Evolve', Definition 27), is thermodynamically irreversible ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31) and information-limited by the completed reset-support deficit of Proposition E.2a. On refresh/minorization branches it is additionally strictly contractive ($f_{RID} < 1$, Lemma E.1). Propagating information incurs costs related to these limitations.
+The fundamental interaction process, ND-RID ('Evolve', Definition 27), is thermodynamically irreversible ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) and information-limited by the completed reset-support deficit of Proposition E.2a. On refresh/minorization branches it is additionally strictly contractive ($f_{RID} < 1$, Lemma E.1). Propagating information incurs costs related to these limitations.
 
 **11.2.1 Definition 35 (Def 35): Propagation Cost Metric $d_{\mathcal{N}}$**
 
 We define a metric distance $d_{\mathcal{N}}(u,v)$ between any two MPUs $u, v \in \mathcal{V}$ based on the minimum cumulative cost of propagating retained predictive information along paths in the network $\mathcal{N}$. The dimensionless cost $w_{xy}$ of traversing edge $(x,y)$ incorporates the completed-update entropy cost
 $$
-\Delta S_{\mathrm{phys}}^{(xy)}\ge k_B\varepsilon_{\mathrm{phys}}\ge k_B\varepsilon_0
+\frac{\langle Q_{\mathrm{bath}}^{(xy)}\rangle}{T_{xy}}\ge k_B H_{q_{xy}}(P\mid R)\quad\text{on a registered reset edge}
 $$
 and the finite transfer budget of the edge. On the completed reset-support branch, the per-link information budget is bounded by Proposition E.2a. On refresh/minorization branches, the same edge may also carry a strict trace-distance contraction factor $f_{RID}^{(xy)}<1$ from Lemma E.1.
 
-A branch-uniform positive cost representative is
+After independently imposing positive edge weights, a branch-specific cost representative is
 $$
 w_{xy}
 =
@@ -36,7 +38,77 @@ where $c_S,c_C>0$, $c_f\ge0$, $C_{xy}\le\ln d_0$ is the retained per-link transf
 $$
 d_{\mathcal{N}}(u,v) = \min_{\gamma: u \to v} \sum_{(x,y) \in \gamma} \delta w_{xy} \qquad \text{(64)}
 $$
-where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Assume the undirected network underlying $\mathcal{E}$ is connected on the viability domain; otherwise set $d_{\mathcal{N}}(u,v)=\infty$ when no path exists and restrict attention to a connected component. With symmetric positive edge weights $w_{xy}=w_{yx}>0$, the shortest‑path construction defines a valid metric on that component. If the primitive edge attribute encodes throughput rather than cost, replace it by a positive cost weight (e.g. $c_{xy}:=1/w_{xy}$) before applying (64).
+where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Assume the undirected network underlying $\mathcal{E}$ is connected on the viability domain; otherwise set $d_{\mathcal{N}}(u,v)=\infty$ when no path exists and restrict attention to a connected component. With symmetric positive edge weights $w_{xy}=w_{yx}>0$, the shortest‑path construction defines a valid metric on that component. A throughput attribute does not determine a propagation cost by reciprocal conversion. Latency, capacity, and dissipation are separately registered edge coordinates under Definition 35a and Theorem 35b below.
+
+
+
+**Definition 35a (Latency--Capacity--Dissipation Edge Ledger).** A retained directed MPU edge $e$ carries the vector datum
+$$
+(\ell_e,u_e,\varepsilon_e),
+\qquad
+\ell_e>0,
+\quad
+u_e\ge0,
+\quad
+\varepsilon_e\ge0,
+\tag{64a}
+$$
+where $\ell_e$ is a certified minimum intervention-to-retained-response signaling delay including registered node processing, $u_e$ is a composable reliable-rate upper bound measured in completed retained-update symbols per unit time in one fixed alphabet, and $\varepsilon_e$ is a registered dimensionless lower bound on entropy exported per completed retained update on that edge. For the entropy coordinate, the certificate must partition physical reset resources into nonoverlapping edge ledgers, or allocate every shared reset cost to exactly one edge; otherwise only the corresponding non-double-counted aggregate bound is admissible. A realized $f_e$ uses the same alphabet and has units of completed updates per unit time; write $\dot\Sigma_{flow}:=k_B^{-1}dS_{env}/dt$. For vertices $s,t$, define
+$$
+L_{st}
+=\min_{P:s\leadsto t}\sum_{e\in P}\ell_e,
+\qquad
+U_{st}
+=\min_{\mathcal C:s|t}\sum_{e\in\partial^+\mathcal C}u_e.
+\tag{64b}
+$$
+Set $L_{st}=+\infty$ when $t$ is unreachable from $s$. With $\mathcal P_{st}(L)$ the directed $s$--$t$ paths whose summed delay is at most $L$, the delay-constrained routing bound is
+$$
+\mathcal U_{st}(L)
+=
+\max_{x_P\ge0}
+\left\{
+\sum_{P\in\mathcal P_{st}(L)}x_P:
+\sum_{P\ni e}x_P\le u_e\ \text{for every }e
+\right\}.
+\tag{64c}
+$$
+
+**Theorem 35b (Latency--Capacity Non-Equivalence and Pareto Unification).** On a finite causal edge ledger:
+
+1. no intervention at $s$ affects a retained observable at $t$ before $L_{st}$;
+2. every reliable asymptotic rate obeys the cut-set bound $R_{s\to t}\le U_{st}$; equality to maximum flow holds only on the registered independent classical memoryless routing branch when each $u_e$ is an achievable edge capacity and flow conservation and pipelining are available;
+3. neither $L_{st}$ nor $U_{st}$ determines the other. There are finite ledgers in which changing $u_e$ while holding $\ell_e$ fixed changes throughput without changing the causal frontier, and finite ledgers in which changing $\ell_e$ while holding $u_e$ fixed changes the frontier without changing the cut capacity;
+4. $\mathcal U_{st}(L)$ is nondecreasing,
+$$
+\inf\{L:\mathcal U_{st}(L)>0\}=L_{st}
+\tag{64d}
+$$
+when every edge on a minimum-latency path has positive capacity, and
+$$
+\lim_{L\to\infty}\mathcal U_{st}(L)=U_{st}
+\tag{64e}
+$$
+on the max-flow/min-cut routing branch;
+5. for any realized edge flow $f_e\ge0$ on the certified non-double-counting entropy ledger, the entropy production satisfies
+$$
+\dot\Sigma_{flow}\ge\sum_e\varepsilon_e f_e.
+\tag{64f}
+$$
+
+*Proof.* Causal composition along the event DAG requires the sum of edge latencies on every used path, proving item 1. Data processing across any directed cut bounds the end-to-end rate by the sum of registered edge bounds, proving item 2; classical max-flow/min-cut supplies equality only on its stated routing branch. One-edge examples with the same latency and different capacities, or the same capacity and different latencies, prove item 3. The feasible path set grows with $L$, proving monotonicity. Its first nonzero value occurs at a positive-capacity minimum-latency path, and removal of the delay constraint yields the ordinary maximum-flow problem, proving item 4. On the registered partition, each physical reset contribution appears once, so summing the edgewise per-update floors against the realized rates proves item 5. ∎
+
+**Corollary 35b.1 (Causal-Speed and Area-Capacity Scope).** The emergent causal speed is calibrated from the latency/length branch, whereas the horizon entropy density and $G$ are calibrated from the cut-capacity/area branch. They are projections of one edge ledger but no theorem identifies either from the other without an additional response-active constitutive relation.
+
+For finite diagnostic comparisons on a fixed connected MPU population graph with $2\le |\mathcal V|<\infty$, the corresponding dimensionless propagation-efficiency observable is
+$$
+E_{\mathcal N}
+=
+\frac{1}{|\mathcal V|(|\mathcal V|-1)}
+\sum_{\substack{u,v\in\mathcal V\\u\ne v}}
+\frac{\delta}{d_{\mathcal N}(u,v)}.
+$$
+For disconnected finite graphs, the summand is taken as $0$ whenever $d_{\mathcal N}(u,v)=\infty$. This is the average reciprocal propagation-cost distance induced by (64); it is not the harmonic mean itself and it is not a new dynamical law. It is admissible only after the edge-cost representative, microscopic scale $\delta$, and branch status of the finite graph have been fixed.
 
 **11.3 Geometric Regularity: A Necessary Condition for Viability**
 
@@ -60,7 +132,7 @@ Assume the regularity-penalty hypotheses established in Appendix C and the varia
 
 *Proof.* Appendix C provides the necessity estimates: anomalous dimension destroys viability/coherence (Theorem C.2), large curvature fluctuations raise operational cost and destabilize local dynamics (Theorem C.4), and Theorem C.6 packages these requirements as local doubling/Poincaré control. Appendix D incorporates these penalties into the optimization dynamics: Lemma D.3 quantifies the geometric penalty, Theorem D.2 shows that irregular configurations incur a strict increase in the core potential, and Theorem D.3 concludes that every global minimizer of $V$ is geometrically regular. Under the additional low-noise detailed-balance hypotheses (A1)–(A6) of Appendix D, Theorem D.5 yields the invariant-measure concentration statement. Combining these results proves the theorem. ∎
 
-**Theorem 43.5 (Operational Continuum Branch Package).** On the minimal $M=24$, $D=4$ mode-channel branch, let the microscopic adaptation dynamics use the continuum-control PCE potential $V_n^{\mathrm{cont}}$ of Theorem D.6e. Assume the $D_4$ branch of Theorem C.6e supplies a competitor sequence with $\mathfrak d_n^*\to 0$ in the global core-minimum class. Then the low-noise detailed-balance adaptation dynamics concentrate on the asymptotically defect-free operational-continuum branch, and every selected subsequential limit with $\mathfrak D_n\to0$ satisfies:
+**Theorem 43.5 (Operational Continuum Branch Package).** On the minimal $M=24$, $D=4$ mode-channel branch, let the microscopic adaptation dynamics use the continuum-control PCE potential $V_n^{\mathrm{cont}}$ of Theorem D.6e. Assume an independent continuum-bridge certificate supplies a competitor sequence with $\mathfrak d_n^*\to0$ in the global core-minimum class. Separately assume the D.6e weak-liminf, strong-recovery, and Cheeger-identification hypotheses; the C.6c generator-core/$\Gamma_2$, domain-closure, ambient, and Sobolev-to-Lipschitz hypotheses; fixed-radius geometric noncollapse and interpolation; and $\mu=\mathcal H^4$ whenever strict noncollapse is claimed. Then the low-noise detailed-balance adaptation dynamics concentrate on the asymptotically defect-free operational-continuum branch, and every selected subsequential limit with $\mathfrak D_n\to0$ satisfies:
 
 1. the rescaled MPU network spaces are precompact in pointed measured Gromov-Hausdorff topology;
 2. the limit is noncollapsed $\mathrm{RCD}^*(K,4)$;
@@ -80,11 +152,11 @@ in the detailed-balance low-noise regime of Theorem D.5, where $\mathfrak d_n^*$
 $$
 \Xi_{D_4}=\{\pm e_i\pm e_j:1\le i<j\le4\},
 $$
-so the first-shell odd moments vanish, the second moment is positive and isotropic, and rank collapse is excluded. Theorem C.6e supplies fixed-radius four-dimensional noncollapse, shell isotropy, and the canonical interpolation data on this branch.
+so the first-shell odd moments vanish, the second moment is positive and isotropic, and rank collapse is excluded. Theorem C.6e supplies shell isotropy and excludes rank collapse of the fixed-trace shell tensor. Fixed-radius geometric noncollapse and interpolation are independent entries of the continuum-bridge certificate.
 
 Theorem D.6e inserts the finite continuum-control defects $\mathfrak B_n,\mathfrak C_n,\mathfrak R_n,\mathfrak H_n$ into the microscopic PCE potential with positive coefficients. Since a competitor sequence with $\mathfrak d_n^*\to 0$ exists in the same global core-minimum class, and since Proposition D.6f shows that this is the sharp condition for defect removal within that class, global minimizers of $V_n^{\mathrm{cont}}$ satisfy $\mathfrak D_n\to0$ along the selected sequence. The detailed-balance low-noise concentration estimate follows from Theorem D.5 applied to $V_n^{\mathrm{cont}}$, giving the displayed exponential bound.
 
-Along the selected sequence, $\mathfrak B_n\to0$ is the asymptotic radius-2 $\mathrm{BE}(K,4)$ curvature transfer required by Theorem C.6c, and Theorem C.6e supplies noncollapse. Therefore every measured-GH limit is noncollapsed $\mathrm{RCD}^*(K,4)$ and has Euclidean $\mathbb R^4$ tangent cones at $\mu$-almost every point. The identities $\mathfrak C_n\to0$ and $\mathfrak R_n\to0$ give the finite-core and recovery-map compatibility required for the Mosco argument in Theorem D.6e; hence the rescaled propagation-cost forms converge to the quadratic Cheeger energy. Finally, $\mathfrak H_n\to0$ is the quantitative Euclidean-rigidity and harmonic-coordinate input of Theorem 44a, so the regular branch carries a $C^{1,\alpha}$ spatial metric. Corollary O.7b.1 adjoins the finite ND-RID update clock and yields the Lorentzian extension. Theorem K.10.3a excludes exact continuum ontology under finite-resource PPI, so the limit is an effective finite-resolution compression of the discrete MPU branch. ∎
+Along the selected sequence, $\mathfrak B_n\to0$ is the asymptotic radius-2 $\mathrm{BE}(K,4)$ curvature transfer required by Theorem C.6c, while geometric noncollapse is an independent volume-certificate input. Under the separately assumed C.6c generator-core/$\Gamma_2$ passage and $\mu=\mathcal H^4$ normalization, C.6c gives strict noncollapse; under the separately assumed D.6e liminf, recovery, and Cheeger-identification hypotheses, D.6e gives Mosco convergence. Vanishing defects alone give neither conclusion. Therefore every measured-GH limit is noncollapsed $\mathrm{RCD}^*(K,4)$ and has Euclidean $\mathbb R^4$ tangent cones at $\mu$-almost every point. The identities $\mathfrak C_n\to0$ and $\mathfrak R_n\to0$ give the finite-core and recovery-map compatibility required for the Mosco argument in Theorem D.6e; hence the rescaled propagation-cost forms converge to the quadratic Cheeger energy. Finally, $\mathfrak H_n\to0$ is the quantitative Euclidean-rigidity and harmonic-coordinate input of Theorem 44a, so the regular branch carries a $C^{1,\alpha}$ spatial metric. Corollary O.7b.1 adjoins the finite ND-RID update clock and yields the Lorentzian extension. Theorem K.10.3a excludes exact continuum ontology under finite-resource PPI, so the limit is an effective finite-resolution compression of the discrete MPU branch. ∎
 
 **Corollary 43.5a (Zero-Defect $D_4$ Gluing Certificate).** Let $\mathfrak Z_{\mathrm{cont}}$ be a finite record, for each refinement level $n$, consisting of:
 
@@ -108,7 +180,7 @@ Since $\varepsilon_n\to0$, one has $\mathfrak d_n^*\to0$. Items 1--4 supply exac
 
 **11.4 Geometric Convergence to an Operational Continuum Manifold**
 
-Assuming Theorem 43, the operational-continuum branch is packaged in Theorem 43.5. Appendix C supplies the first-shell $D_4$ isotropy and noncollapse closure; Appendix D supplies the finite-defect microscopic selection mechanism and the Mosco–Cheeger closure; and Theorem 44a supplies the regular-branch manifold upgrade when the rigidity defect vanishes along the selected sequence. The resulting continuum description is an effective finite-resolution compression of the MPU network, not an assertion that the physical substrate becomes an exact real-number continuum.
+Assuming Theorem 43, the operational-continuum branch is packaged in Theorem 43.5. Appendix C supplies first-shell $D_4$ isotropy; the independent continuum certificate supplies geometric noncollapse; Appendix D supplies the finite-defect microscopic selection mechanism and the Mosco–Cheeger closure; and Theorem 44a supplies the regular-branch manifold upgrade when the rigidity defect vanishes along the selected sequence. The resulting continuum description is an effective finite-resolution compression of the MPU network, not an assertion that the physical substrate becomes an exact real-number continuum.
 
 **11.4.1 Theorem 44 (Gromov-Hausdorff Limit)**
 
@@ -124,7 +196,7 @@ $$
 $$
 Moreover, $(M,d_\infty,\mu_\infty)$ is a doubling PI space, the limit Cheeger energy is quadratic, and hence the limit is infinitesimally Hilbertian. Under assumption (4), there exists a Borel regular set $M_{reg}\subseteq M$ with $\mu_\infty(M\setminus M_{reg})=0$ such that for every $p\in M_{reg}$ the tangent cones are Euclidean $\mathbb{R}^D$; on the PU branch selected by Theorem Z.11, this means $\mathbb{R}^4$. The Euclidean tangent is unique $\mu_\infty$-a.e.
 
-*Proof:* Theorem 43.5 supplies the selected sequence with $\mathfrak D_n\to 0$ from microscopic adaptation dynamics. Theorem C.6e supplies first-shell isotropy and fixed-radius noncollapse. Theorem D.6e gives the finite-core, recovery, and Mosco–Cheeger closure once the corresponding defects vanish. Theorem C.6c gives the stable noncollapsed $\mathrm{RCD}^*(K,4)$ limit because $\mathfrak B_n\to 0$ supplies the required uniform curvature-transfer input. Theorem 44a gives the regular-branch Euclidean-rigidity conclusion when $\mathfrak H_n\to0$. Therefore the family is precompact, the limit Cheeger energy is quadratic, the limit is infinitesimally Hilbertian, and the full-measure regular set has Euclidean $\mathbb R^4$ tangents on the PU branch selected by Theorem Z.11, with the stronger $C^{1,\alpha}$ regularity available on the Theorem 44a subbranch. ∎
+*Proof:* Theorem 43.5 supplies the selected sequence with $\mathfrak D_n\to 0$ from microscopic adaptation dynamics. Theorem C.6e supplies first-shell tensor isotropy only. Fixed-radius geometric noncollapse, D.6e liminf/recovery/Cheeger identification, and the C.6c generator-core/$\Gamma_2$ passage are separate hypotheses; defect convergence records a selected branch but proves none of them. Theorem D.6e gives the finite-core, recovery, and Mosco–Cheeger closure once the corresponding defects vanish. Theorem C.6c gives the stable noncollapsed $\mathrm{RCD}^*(K,4)$ limit because $\mathfrak B_n\to 0$ supplies the required uniform curvature-transfer input. Theorem 44a gives the regular-branch Euclidean-rigidity conclusion when $\mathfrak H_n\to0$. Therefore the family is precompact, the limit Cheeger energy is quadratic, the limit is infinitesimally Hilbertian, and the full-measure regular set has Euclidean $\mathbb R^4$ tangents on the PU branch selected by Theorem Z.11, with the stronger $C^{1,\alpha}$ regularity available on the Theorem 44a subbranch. ∎
 
 **11.5 Emergence of the Metric Tensor (Conditional on Thm 43, Thm 44)**
 
@@ -482,6 +554,134 @@ and the common capacity normalization fixes $g_s=g$ almost everywhere on the reg
 *Proof.* By Theorem F.10.6b, condition (46e.1) is equivalent to exact recovery of every exterior $s$-sector response from the same boundary datum $B_D$. By Corollary F.10.6c, any additional species label at the boundary that changes no exterior response is PCE-degenerate and removed from the quotient. Hence the inclusion test on $s$-sector protocols can differ from the full operational inclusion test only if some retained exterior response distinguishes the two assignments. Condition 2 excludes such an undetected difference: a response-distinct assignment is visible to at least one retained species or to the common boundary syndrome, while a response-indistinct assignment is the same PPI object. Therefore $\subseteq_s=\subseteq$ for every retained species.
 
 Equation (46e.2) gives equality of the species capacity valuation with the common predictive capacity valuation. Theorem 46b applied to the identity bijection of the common diamond poset then fixes the conformal metric reconstructed by each species, and the shared valuation fixes the conformal scale. Thus every retained species sees the same metric tensor on the regular branch. If a proposed $g_s$ differs while preserving all finite responses, it is precisely a response-null relabeling in the protocol-response presheaf. If it changes a finite response, it violates the same-branch hypotheses and is a separate branch. ∎
+
+**Definition 46e.1 (Finite Causal Order-Fraction Record).** Let $D\ge2$ be an integer and $N\ge2$. Let $X_1,\ldots,X_N$ be iid points sampled uniformly with respect to volume measure in one flat $D$-dimensional Alexandrov interval, equivalently an operational Poisson-sampling protocol conditioned on $N$. This is a sampling model for a retained response record, not a new causal-set ontology. Define
+$$
+U_N
+=
+\binom N2^{-1}
+\sum_{i<j}
+\mathbf1\{X_i\prec X_j\ \text{or}\ X_j\prec X_i\}.
+\tag{46e.1.1}
+$$
+
+**Theorem 46e.1 (Four-Dimensional Causal Order-Fraction Lock).** For the record of Definition 46e.1,
+$$
+\mathbb E[U_N]
+=r_D
+:=
+\frac{\Gamma(D+1)\Gamma(D/2)}{2\Gamma(3D/2)}.
+\tag{46e.1.2}
+$$
+On the PU $D=4$ branch,
+$$
+r_4=\frac{\Gamma(5)\Gamma(2)}{2\Gamma(6)}=\frac1{10}.
+\tag{46e.1.3}
+$$
+Moreover,
+$$
+\Pr\!\left(|U_N-r_4|\ge\epsilon\right)
+\le
+2\exp\!\left(-\frac{N\epsilon^2}{2}\right).
+\tag{46e.1.4}
+$$
+
+*Proof.* For an interval $I(p,q)$ of volume $V_I$, the comparable-pair probability is
+$$
+\frac{2}{V_I^2}\int_{I(p,q)}V\bigl(I(x,q)\bigr)\,d^Dx.
+$$
+Scale invariance and evaluation of this standard Myrheim--Meyer integral in light-cone coordinates give (46e.1.2) [Abajian & Carlip 2018], and (46e.1.3) is exact arithmetic. Replacing one sampled point changes at most $N-1$ pair indicators, so it changes $U_N$ by at most $2/N$. McDiarmid's bounded-difference inequality therefore gives (46e.1.4). ∎
+
+**Corollary 46e.1a (Independent Dimension Cross-Certificate).** The order-fraction record uses only causal comparability. It is independent of the Appendix Z kissing-number derivation and of volume-growth fitting. A flat-diamond $D=4$ certificate must therefore satisfy (46e.1.3) within the registered sampling error. Curvature, nonuniform sampling, detector-order error, and curved-background finite-size or detector-window effects must be fixed as a preregistered bias interval; the exact $1/10$ value is not asserted outside the flat uniform branch.
+
+**Definition 46f (Topological-Bandwidth Completion Certificate).** Fix $0<\Omega<\infty$ on a regular Lorentzian branch satisfying Theorem 43.5, Corollary 46a, and Definition 46b. Define
+$$
+\mathsf{TB}_\Omega=
+(\mathcal D_{\mathrm{op}},\subseteq,V_{\mathrm{cap}},
+L_{\mathrm{PU}},PW_\Omega,\mathcal C_\Omega,\mathcal A_\Omega),
+$$
+where
+$$
+PW_\Omega:=\operatorname{Ran}\mathbf1_{[0,\Omega]}(L_{\mathrm{PU}}),
+\qquad
+\mathcal A_\Omega f=(\langle f,\phi_i\rangle)_{i=1}^N.
+$$
+The completed causal-diamond basis $\mathcal D_{\mathrm{op}}$ belongs to the effective regular-continuum representation and need not be finite as a set. Every physical comparison is restricted to a declared finite diamond subfamily, finite local algebras, and the finite cover $\mathcal C_\Omega$. Thus $\mathsf{TB}_\Omega$ is assembled from finite-response subrecords; it is not an exactly instantiated continuum object.
+
+An accepted certificate $\mathfrak C_{\mathrm{TB}}^\Omega$ contains, on one forward-locked branch:
+
+1. a continuum record discharging Theorem 43.5;
+2. the connectedness, time orientation, distinguishing, global-hyperbolicity, inclusion-faithfulness, and common capacity-density hypotheses of Theorem 46b;
+3. compatible cone, second-order, and signature records;
+4. a complete AQFT bridge for Theorem F.0 on the retained diamonds—$\mathfrak C_{\mathrm{gen}}$ is sufficient only together with every other F.0 compatibility hypothesis;
+5. an injective sampling map $\mathcal A_\Omega:PW_\Omega\to\mathbb C^N$; and
+6. a PPI quotient identifying representatives only when all declared diamond, capacity, and finite-band responses agree.
+
+**Theorem 46g (Conditional Topological-Bandwidth Completion).** On an accepted $\mathfrak C_{\mathrm{TB}}^\Omega$:
+
+1. within the branch class of Theorem 46b, the completed ordered diamond basis determines topology and causal order up to that theorem's equivalence; a finite protocol sees only its retained subposet;
+2. the common capacity valuation fixes the conformal scale almost everywhere on the regular set; and
+3. every $f\in PW_\Omega$ is reconstructed from the finite samples by
+   $$
+   f=\sum_{i=1}^N\langle f,\phi_i\rangle
+   S_\Omega^{-1}P_\Omega\phi_i,
+   \qquad
+   P_\Omega=\mathbf1_{[0,\Omega]}(L_{\mathrm{PU}}).
+   $$
+
+This proves representation of the declared band; it neither reconstructs an exact continuum from an arbitrary finite subposet nor excludes modes used by a different protocol with a larger accepted bandwidth.
+
+*Proof.* Item 1 is Theorem 46b applied to completed operational-diamond bases; no prime-filter representation is asserted for an arbitrary finite subposet. The same theorem gives a conformal pullback $F^*g'=\Omega_c^2g$. For diamonds shrinking regularly to $p$,
+$$
+\frac{\operatorname{Vol}_{\Omega_c^2g}(D_\epsilon(p))}
+{\operatorname{Vol}_{g}(D_\epsilon(p))}
+\longrightarrow \Omega_c(p)^4.
+$$
+Capacity preservation with the common normalization makes the limit equal to $1$, so positivity gives $\Omega_c=1$ almost everywhere. Finally, injectivity of $\mathcal A_\Omega$ invokes Theorem F.10.4a.4.3 and yields the displayed frame reconstruction. Theorems K.10.3a and K.10.4 exclude an independently physical exact subresolution carrier; exclusion above $\Omega$ is limited to the response problem declared by this certificate. ∎
+
+**Definition 46h (Finite Metric-Response Conditioning Certificate).** Fix one causal-order/inclusion stratum; the discrete inclusion record selects this stratum and is not differentiated. On a compact regular branch, let $\theta\in U\subset\mathbb R^p$ parameterize a declared finite-dimensional local metric envelope $g(\theta)$. Let
+$$
+\mathcal R:U\to\mathbb R^m
+\tag{46h.1}
+$$
+collect only the continuously differentiable causal-diamond capacity, proper-time, volume, and finite-band response coordinates used by that envelope. At $\theta_*$ the certificate records
+$$
+\sigma_*
+:=\sigma_{min}(D\mathcal R(\theta_*))>0,
+\tag{46h.2}
+$$
+a radius $r_*>0$ with the closed ball $\overline B(\theta_*,r_*)\subset U$, a derivative-Lipschitz constant $L_*$ on that ball, and a metric-chart Lipschitz constant $M_*$ in the registered tensor norm. When $L_*=0$, set $\sigma_*/L_*=+\infty$.
+
+**Theorem 46i (Finite-Error Rigidity of Causal-Diamond Metric Reconstruction).** Under Definition 46h, every $h$ satisfying
+$$
+\|h\|\le\min\{r_*,\sigma_*/L_*\}
+\tag{46i.1}
+$$
+obeys
+$$
+\|\mathcal R(\theta_*+h)-\mathcal R(\theta_*)\|
+\ge\frac{\sigma_*}{2}\|h\|.
+\tag{46i.2}
+$$
+Hence a same-branch candidate $\theta=\theta_*+h$ in this radius whose retained response vector differs from the reference response $\mathcal R(\theta_*)$ by at most $\epsilon$ satisfies
+$$
+\|\theta-\theta_*\|\le\frac{2\epsilon}{\sigma_*},
+\qquad
+\|g(\theta)-g(\theta_*)\|
+\le\frac{2M_*\epsilon}{\sigma_*}.
+\tag{46i.3}
+$$
+
+*Proof.* Taylor's theorem with a Lipschitz derivative gives
+$$
+\mathcal R(\theta_*+h)-\mathcal R(\theta_*)
+=D\mathcal R(\theta_*)h+r(h),
+\qquad
+\|r(h)\|\le\frac{L_*}{2}\|h\|^2.
+$$
+The smallest-singular-value bound gives $\|D\mathcal R(\theta_*)h\|\ge\sigma_*\|h\|$. Under (46i.1), subtraction of the remainder yields (46i.2). The first inequality in (46i.3) follows by inversion of (46i.2), and the second follows from the registered Lipschitz bound for $g$. ∎
+
+**Remark 46i.1 (No Universal Stability Without Conditioning).** Exact Theorem 46b does not imply a branch-independent finite-error constant. If $\sigma_*=0$, if the response quotient changes rank, or if the candidate leaves the certified radius, arbitrarily small response errors may coexist with large coordinate or conformal changes. Such cases require a different branch chart or remain non-identifiable.
 
 **11.7 Spacetime Curvature as Predictive Holonomy (Conditional on Thm 43, Thm 45)**
 

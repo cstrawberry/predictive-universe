@@ -187,7 +187,7 @@ satisfies the standard entropy-dissipation identity
 $$
 \frac{d}{dt}H(\mu_t|\pi_k) = -\int_\Sigma \|\nabla_\Sigma \ln f_t\|_{g_{\rm FS}}^2\,d\mu_t \le 0,
 $$
-so the entropy exported to the environment over an evolve step of duration $\Delta t$ is at least $H(\mu_0|\pi_k)-H(\mu_{\Delta t}|\pi_k)\ge 0$. Hence the perspective-update contribution can only increase the total irreversibility of the full 'Evolve' step; it does not require any entropy cost smaller than the irreducible floor $\varepsilon$ satisfying $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), with equality in the saturating MPU model. Quantitative decay-rate bounds compatible with (M.5c) follow from the same Bakry–Émery curvature condition via standard functional inequalities [Bakry et al. 2014], but no such rate bound is required for the present construction.
+so the entropy exported to the environment over an evolve step of duration $\Delta t$ is at least $H(\mu_0|\pi_k)-H(\mu_{\Delta t}|\pi_k)\ge 0$. Hence the perspective-update contribution can only increase the total irreversibility of the full 'Evolve' step; it does not require any entropy cost smaller than the irreducible floor $\varepsilon$ satisfying $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31), with equality in the saturating MPU model. Quantitative decay-rate bounds compatible with (M.5c) follow from the same Bakry–Émery curvature condition via standard functional inequalities [Bakry et al. 2014], but no such rate bound is required for the present construction.
 
 ## M.4 The Measurement Process Formalized
 
@@ -484,7 +484,7 @@ The PU resolution bears surface similarity to Rovelli's Relational Quantum Mecha
 | Aspect | Relational QM | PU Framework |
 |--------|---------------|--------------|
 | **Ontological status** | Interpretive stance; standard QM reinterpreted | Derived structure; perspectives are physical degrees of freedom |
-| **Grounding** | Taken as interpretive starting point | Derived from SPAP (Theorems 10–11) and thermodynamic necessity ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31) |
+| **Grounding** | Taken as interpretive starting point | Derived from SPAP (Theorems 10–11) and thermodynamic necessity ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) |
 | **Why relational?** | "Because that's what QM implies" | Because self-referential prediction is inherently perspectival (Corollary 1, Section 4.2.4) |
 | **Mathematical structure** | No explicit perspective space formalism | Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ with Riemannian structure (Definition 25, Theorem 25) |
 | **Dynamics** | No quantitative mechanism for perspective change | Explicit drift-diffusion realization of $G_{\text{persp}}$ on $\Sigma$ (Equations M.5a–b) |
@@ -506,7 +506,7 @@ The perspectival resolution of Wigner's Friend extends a conceptual program init
 |--------------------|--------------|
 | Simultaneity of distant events | Definiteness of measurement outcomes |
 | "What measurements determine distant simultaneity?" | "What interactions determine outcome actuality?" |
-| Finite signal speed $c$ | SPAP + thermodynamic irreversibility ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$) |
+| Finite signal speed $c$ | SPAP + thermodynamic irreversibility ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) |
 | Simultaneity relative to reference frame | Actuality relative to perspective |
 | Events have frame-dependent time ordering | Outcomes have perspective-dependent actuality |
 | Lorentz group connects frames | $G_{\text{persp}}$ kernel connects perspectives |
@@ -518,7 +518,7 @@ The perspectival resolution of Wigner's Friend extends a conceptual program init
 
 (i) An apparently absolute quantity (simultaneity / outcome definiteness) is revealed to be relative to a reference context (frame / perspective).
 
-(ii) The relativity is *forced* by a fundamental limitation (finite $c$ / SPAP + $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$), not merely postulated.
+(ii) The relativity is *forced* by a fundamental limitation (finite $c$ / SPAP + $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$), not merely postulated.
 
 (iii) The underlying reality remains unified (one spacetime / one MPU network); only descriptions are relativized.
 
@@ -539,12 +539,28 @@ The derivational parallel is precise: just as the finite and invariant speed $c$
 
 **Remark M.6.5: Scope of the Correspondence.** The correspondence is structural and conceptual rather than mathematical in detail. Lorentz transformations form a continuous Lie group acting on Minkowski spacetime; the perspective dynamics governed by $G_{\text{persp}}$ are stochastic transitions on a distinct manifold $\Sigma$. The parallel illuminates the *type* of conceptual move—relativizing an apparently absolute concept—rather than claiming isomorphism of the mathematical structures.
 
+**Definition M.6.5a (Covariant Perspectival-Actualization Certificate).** A covariant actualization certificate fixes a common invariant operator core $\mathcal D$, a PPI quotient map $\mathfrak q_{\mathrm{PPI}}$ into a normed response space, a Lorentz representation $\rho_{\mathrm{Spin}}$, a perspective generator $G_{\mathrm{persp}}$, and tolerances $\epsilon_{\mathrm{cov}}(\Lambda)$. It certifies
+$$
+\left\|
+\mathfrak q_{\mathrm{PPI}}
+\left(
+G_{\mathrm{persp}}\rho_{\mathrm{Spin}}(\Lambda)
+-\rho_{\mathrm{Spin}}(\Lambda)G_{\mathrm{persp}}
+\right)\psi
+\right\|
+\le\epsilon_{\mathrm{cov}}(\Lambda)\|\psi\|
+\tag{M.6.5a.1}
+$$
+for $\psi\in\mathcal D$. A metered rate statement additionally requires the stationary/metering record of Definition E.2a.8 and Corollary E.2a.9. Order-independence of conditioned process functionals is a separate certificate entry and is not inferred merely from commutativity of spacelike observable algebras.
+
+**Theorem M.6.5b (Certificate-Relative Covariant Statistics).** On an accepted certificate, perspective-transition statistics intertwine the recorded Lorentz action up to $\epsilon_{\mathrm{cov}}$ in the PPI quotient. If the metering record is also accepted, the rate $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ is a scalar on that record. Spacelike order-independence is obtained only for the process functionals explicitly covered by its independent entry.
+
 **Remark M.6.6 (Unified Origin of Both Relativizations).** The parallel between special relativity and perspectival quantum mechanics (Structural Correspondence M.6.4) is deeper than structural analogy: the finite invariant speed $c$ that forces frame-relative simultaneity is *itself* a consequence of the same SPAP + thermodynamic irreversibility that forces perspective-relative actuality.
 
 **The Derivation Structure.** From Appendix E (Sections E.2–E.4) and Appendix E.10, the connection proceeds through two branches sharing a common thermodynamic origin in the SPAP entropy cost:
 
 $$
-\boxed{\text{SPAP} \;\xrightarrow{\text{Theorem 31}}\; \varepsilon_0=\ln 2,\quad \varepsilon_{\mathrm{phys}}\ge\varepsilon_0}
+\boxed{\text{SPAP} \;\xrightarrow{\text{Theorem 31}}\; \varepsilon_0=\ln 2,\quad \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)}
 $$
 
 From this common source, two independent branches emerge:
@@ -559,7 +575,7 @@ $$
 \text{SPAP structure} \;\xrightarrow{\text{Theorem 29}}\; \tau_{min} > 0 \;\xrightarrow[\text{Definition 35}]{\delta > 0}\; v_{max} = \frac{\delta}{\tau_{min}} \;\xrightarrow{\text{Theorem 46}}\; c
 $$
 
-These branches are *parallel consequences* of SPAP, not sequential implications. Branch I proceeds through the structural thermodynamic cost $\varepsilon_0=\ln2$ and physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ to constrain how faithfully information can be preserved; Branch II proceeds through the computational complexity of the SPAP cycle to constrain how fast information can propagate. Both originate in the logical structure of self-referential prediction.
+These branches are *parallel consequences* of SPAP, not sequential implications. Branch I proceeds through the structural thermodynamic cost $\varepsilon_0=\ln2$ and physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ to constrain how faithfully information can be preserved; Branch II proceeds through the computational complexity of the SPAP cycle to constrain how fast information can propagate. Both originate in the logical structure of self-referential prediction.
 
 
 **Definition M.6.6a (Predictive-Equivalence Ledger $\mathfrak C_{\mathrm{PEq}}$).** A predictive-equivalence ledger for a finite observer or observer-pair comparison is a forward-locked record
@@ -578,7 +594,7 @@ where $C_{\mathrm{agg}}^A,C_{\mathrm{agg}}^B$ are the retained aggregate-complex
 
 ### Step-by-Step Justification
 
-**1. Theorem 31 (Appendix J): Structural Entropy Cost $\varepsilon_0=\ln2$ and Physical Bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$**
+**1. Theorem 31 (Appendix J): Structural Entropy Cost $\varepsilon_0=\ln2$ and Physical Bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$**
 
 The structural entropy cost $\varepsilon_0=\ln 2$ arises from the logically necessary 2-to-1 state merge in the SPAP update cycle. The SPAP cycle maps four input configurations $\{(\phi, p)\} = \{(0,0), (0,1), (1,0), (1,1)\}$ to two output configurations $\{(\phi', p_{ready})\} = \{(0, p_{ready}), (1, p_{ready})\}$.
 
@@ -586,7 +602,7 @@ The structural entropy cost $\varepsilon_0=\ln 2$ arises from the logically nece
 $$
 \varepsilon_0=\ln(4/2)=\ln2
 $$
-nats. Physical implementations satisfy $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$, with equality only for ideal overhead-free implementation.
+nats. Registered implementations satisfy $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$. Equality with $\ln2$ additionally requires a conditionally uniform binary record and zero excess dissipation.
 
 **2. Lemma E.1 (Branch I): Strict Contractivity of the ND-RID Channel**
 
@@ -699,7 +715,7 @@ This ratio equality follows from the definition of Planck units in terms of the 
 
 Locality is not a primitive axiom but emerges from:
 
-1. **Finite structural entropy cost per link:** $\varepsilon_0=\ln 2$, with physical implementations satisfying $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31)
+1. **Finite structural entropy cost per link:** $\varepsilon_0=\ln 2$, with physical implementations satisfying $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31)
 2. **Finite minimum cycle time:** $\tau_{min} > 0$ (Theorem 29)
 3. **PCE optimization minimizing total entropy production** (Definition 15)
 
@@ -713,7 +729,7 @@ The comparison table in Structural Correspondence M.6.4 should be read hierarchi
 
 | Special Relativity | PU Framework | Relationship |
 |:-------------------|:-------------|:-------------|
-| Finite signal speed $c$ | SPAP + $\varepsilon_0=\ln2$ + $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ + $\tau_{min} > 0$ | **Derived from** (Branch II) |
+| Finite signal speed $c$ | SPAP + $\varepsilon_0=\ln2$ + $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ + $\tau_{min} > 0$ | **Derived from** (Branch II) |
 | Frame-relative simultaneity | Perspective-relative actuality | Both forced by constraints above |
 | Lorentz invariance | Perspective consistency | Emerge from causal structure |
 
@@ -789,11 +805,11 @@ where $\text{CC}(S) = \|L_S\|_{\text{op}}$ is the operational norm of the probab
 - The statement "consciousness affects quantum outcomes" would be vague without the kernel $G_{\text{persp}}$ providing the dynamical framework.
 - The interaction context $N$ would have no formal home in the theory.
 - The distinction between modulating $N$ (which CC does) versus modulating the Born rule directly (which would violate the framework's foundations) would be unclear.
-- The consistency with causality constraints (Postulate 2, Theorem 39) could not be rigorously established.
+- The endpoint and finite-window zero-error reliability constraints of Theorems 39 and 39a could not be rigorously established; Postulate 2 separately requires Theorem 39c.
 
 The perspectival formalism makes CC mathematically coherent by identifying the precise entry point for conscious influence: the interaction context $N$ that parameterizes the 'Evolve' dynamics, rather than the quantum state itself.
 
-**Consistency with Wigner's Friend Resolution.** A potential concern arises: if CC modulates the interaction context $N$, could sufficiently strong CC disrupt the consistency mechanism (Lemma M.6.1) that ensures perspectives correlate upon interaction? The causality bound (Theorem 39) controls the size of the allowed probability modification:
+**Consistency with Wigner's Friend Resolution.** A potential concern arises: if CC modulates the interaction context $N$, could sufficiently strong CC disrupt the consistency mechanism (Lemma M.6.1) that ensures perspectives correlate upon interaction? The deterministic endpoint-forcing bound (Theorem 39) controls the size of the allowed probability modification:
 
 $$
 \alpha_{CC,max} = \sup_S \text{CC}(S) < 0.5 \tag{M.16}
@@ -811,7 +827,7 @@ by Definition 30 and Theorem 36. On the stricter Fisher-budget subbranch of Theo
 $$
 |\Delta P(i)|\le4\sin(\mathrm{CC}(S)/4).
 $$
-- **Statistical FTL Influence (Postulate 3, Section 10).** Because $\text{context}_S$ can involve non-local entanglement, and the CC mechanism acts on local 'Evolve' events, context changes in one part of an entangled aggregate can have statistical consequences on 'Evolve' outcomes in spacelike-separated regions—while respecting operational causality (Theorem 42, Appendix F).
+- **Statistical FTL Influence (Postulate 3, Section 10).** Because $\text{context}_S$ can involve non-local entanglement, and the CC mechanism acts on local 'Evolve' events, context changes in one part of an entangled aggregate can have statistical consequences on 'Evolve' outcomes in spacelike-separated regions—but a late-randomized Bob-marginal consequence would violate operational causality by Theorem 39c; only marginal-invariant or shared-past consequences retain the Appendix F causal branch.
 - **Consciousness-Correlated Anomalies (Section 13).** The experimental protocols in Section 13 target detection of CC effects through quantum random number generators, pre-registered intention experiments, and neurophysiological correlates.
 
 **Physical Implementation.** The physical realization of the mapping $\mathcal{M}$ is analyzed in Appendix L. The dominant channel is electromagnetic: coherent charge oscillations within the aggregate generate classical fields that modulate local MPU interaction parameters (Theorem L.2). This electromagnetic channel dominates gravitational effects by a factor $\mathcal{R} \sim 10^{36}$ (Proposition L.5). However, gravitational self-limitation (Appendix S) provides an upper bound on achievable CC, as the stress-energy associated with generating high-CC contexts can disrupt the quantum coherence required for the effect.
@@ -937,11 +953,11 @@ C_{\text{process}}(S, E) \geq \Omega\left(\log \mu_S(E) \cdot \mu_S(E)^2\right) 
 \tag{M.23}
 $$
 
-*Proof.* By Definition M.10.3 (Equation M.19), $\mu_S(E) = 1/\delta_S(E)$, so $\delta_S(E) = 1/\mu_S(E)$. By Corollary B.2.1 (Equation B.5a), the computational cost of integration satisfies $C_{\text{integrate}}(S,E) \geq C_{\text{uni}}(\delta_S(E))$. By Theorem B.2 (Equation B.5), $C_{\text{uni}}(\delta) = \Omega(\log(1/\delta)/\delta^2)$. Substituting $\delta = 1/\mu_S(E)$:
+*Proof.* Assume the pattern-specific reduction certificate of Corollary B.2.1. By Definition M.10.3 (Equation M.19), $\mu_S(E) = 1/\delta_S(E)$, so $\delta_S(E) = 1/\mu_S(E)$. Under that certificate, Corollary B.2.1 (Equation B.5a) gives the computational cost of integration satisfies $C_{\text{integrate}}(S,E) \geq C_{\text{uni}}(\delta_S(E))$. By Theorem B.2 (Equation B.5), $C_{\text{uni}}(\delta) = \Omega(\log(1/\delta)/\delta^2)$. Substituting $\delta = 1/\mu_S(E)$:
 $$
 C_{\text{integrate}}(S,E) \geq \Omega\left(\frac{\log \mu_S(E)}{(1/\mu_S(E))^2}\right) = \Omega\left(\log \mu_S(E) \cdot \mu_S(E)^2\right)
 $$
-The total processing cost $C_{\text{process}}(S,E) \geq C_{\text{integrate}}(S,E)$, since integration is a necessary component. By PPI (Definition P.6.2), computational cost manifests as physical resource expenditure. The Landauer chain (Theorem 31 $\to$ Lemma E.1 $\to$ Theorem E.2) converts the computational cost to thermodynamic cost bounded below by $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per irreversible operation. $\square$
+The total processing cost $C_{\text{process}}(S,E) \geq C_{\text{integrate}}(S,E)$, since integration is a necessary component. By PPI (Definition P.6.2), computational cost manifests as physical resource expenditure. The Landauer chain (Theorem 31 $\to$ Lemma E.1 $\to$ Theorem E.2) converts the computational cost to thermodynamic cost bounded below by $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per irreversible operation. $\square$
 
 **Remark M.10.4 (Cost decomposition).** The total processing cost admits a decomposition $C_{\text{process}}(S,E) = C_{\text{ext}}(S,E) + C_{\text{refl}}(S,E)$, where $C_{\text{ext}}$ is the cost of updating the external model $\Delta M_S^{(\text{ext})}(E)$ and $C_{\text{refl}}$ is the cost of the self-referential integration. The SPAP divergence of Theorem M.10.3 applies to $C_{\text{refl}}$; $C_{\text{ext}}$ is bounded and SPAP-flat. The total cost inherits the divergence because $C_{\text{process}} \geq C_{\text{refl}}$.
 
@@ -1097,7 +1113,7 @@ where $n_{\text{ops}}(S,E) \geq \Omega(\log \mu_S(E) \cdot \mu_S(E)^2)$ (Theorem
 
 The physicality of perspectival profiles rests on a derivation chain with no gaps:
 $$
-\mu_S(E) > 1/\alpha_{SPAP} \xrightarrow{\text{Def M.10.3}} \delta_S(E) < \alpha_{SPAP} \xrightarrow{\text{Cor B.2.1 + Thm B.2}} C_{\text{refl}} = \Omega\!\left(\log \mu_S \cdot \mu_S^2\right) \xrightarrow{\text{Thm 31 + PPI}} \Delta S \geq k_B \varepsilon_{\mathrm{phys}} \cdot n_{\text{ops}}\ge k_B\varepsilon_0\cdot n_{\text{ops}} \xrightarrow{\text{Landauer}} Q = T \Delta S
+\mu_S(E) > 1/\alpha_{SPAP} \xrightarrow{\text{Def M.10.3}} \delta_S(E) < \alpha_{SPAP} \xrightarrow{\text{Cor B.2.1 + Thm B.2}} C_{\text{refl}} = \Omega\!\left(\log \mu_S \cdot \mu_S^2\right) \xrightarrow{\text{Thm 31 + PPI}} Q_{\mathrm{bath}} \ge k_BT\sum_j H_{q_j}(P_j\mid R_j)\quad\text{for registered resets}
 $$
 Each arrow is a theorem, definition, or lemma. The chain converts SPAP proximity into heat.
 
@@ -1893,27 +1909,34 @@ I_{k^{\mathrm{in}}}\otimes\Upsilon_{k-1:0}
 (k=1,\ldots,n),
 \tag{M.6.14a.2}
 $$
-with the final normalization fixed by the initial state. For instruments with Choi operators $M_0,\ldots,M_n$, the history probability is
+with the explicit base normalization $\operatorname{Tr}_{0^{\mathrm{out}}}\Upsilon_{0:0}=I_{0^{\mathrm{in}}}$. Together with (M.6.14a.2), this excludes nonunit scalar multiples and fixes a deterministic comb. 
+
+For a sequential tester outcome $\omega$, let $T_\omega\succeq0$ be the dual-comb Choi element obtained by linking the retained CP instrument outcomes to an explicitly normalized initial preparation, memory wiring, and terminal effect. All slotwise transposes dictated by the fixed Choi convention are included in $T_\omega$; it is not an arbitrary tensor product of CPTP Choi matrices. A family $\{T_\omega\}$ is complete exactly when $T_\Omega:=\sum_\omega T_\omega$ belongs to the normalized deterministic dual-tester cone,
 $$
-p(M_n,\ldots,M_0)
-=
-\operatorname{Tr}
-\left[
-\Upsilon_{n:0}
-\left(
-M_n\otimes\cdots\otimes M_0
-\right)^T
-\right].
+\operatorname{Tr}(\Upsilon T_\Omega)=1
+\quad
+\text{for every deterministic comb $\Upsilon$ satisfying Definition M.6.14a}.
+$$
+The generalized Born rule is then
+$$
+p(\omega)=\operatorname{Tr}(\Upsilon T_\omega),
+\qquad
+p(\omega)\ge0,
+\qquad
+\sum_\omega p(\omega)=1.
 \tag{M.6.14a.3}
 $$
+This dual normalization is the missing boundary datum that prevents the raw channel--channel Choi contraction from being misread as a probability.
 
-**Process-tensor compatibility for reflected modular records.** Whenever $\mathfrak C_{\mathrm{Borch}}$ is invoked inside a perspectival branch, the reflection map is compared only against interventions contained in the already retained local past. The process-tensor record must show that replacing a branch by its reflected modular representative preserves the deterministic-control/no-signaling condition used elsewhere in this appendix. This prevents the reflected extension from being used as a hidden future-input channel.
 
-**Theorem M.6.14b (ND-RID Histories are Exactly Causal Process Tensors).** Every finite ND-RID history built from an initial state, retained CPTP update kernels, conditional instruments, and finite environment memory defines a unique process tensor satisfying Definition M.6.14a. Conversely, every positive operator satisfying (M.6.14a.2) defines a causally valid finite operational history on the retained instruments. Two histories are PPI-equivalent for the retained protocol family if and only if their process tensors give the same multilinear functional (M.6.14a.3) on that family.
+
+**Process-tensor compatibility for reflected modular records.** Whenever $\mathfrak C_{\mathrm{Borch}}$ is invoked inside a perspectival branch, the reflection map is compared only against interventions contained in the already retained local past. The process-tensor record must show that replacing a branch by its reflected modular representative preserves the deterministic-control/no-future-to-past condition used elsewhere in this appendix. This prevents the reflected extension from being used as a hidden future-input channel.
+
+**Theorem M.6.14b (ND-RID Histories are Exactly Normalized Fixed-Order Process Tensors).** Every finite ND-RID history built from an initial state, retained CPTP update kernels, conditional instruments, and finite environment memory defines a unique process tensor satisfying Definition M.6.14a. Conversely, every positive operator satisfying the recursive trace identities and base normalization of Definition M.6.14a, together with the normalized dual-tester pairing of (M.6.14a.3), defines a normalized fixed-order operational history on the retained instruments. Two histories are PPI-equivalent for the retained protocol family if and only if their process tensors give the same multilinear functional (M.6.14a.3) on that family.
 
 *Proof.* Compose the initial state, the finite ND-RID update channels, and the retained memory systems into the multilinear map that sends a sequence of intervention CP maps to the final probability. Applying the Choi-Jamiolkowski isomorphism to every input-output slot gives a unique operator $\Upsilon_{n:0}$. Complete positivity of each update and instrument implies positivity of the Choi operator. Trace preservation of the future update after summing over an intervention gives exactly the recursive partial-trace constraints (M.6.14a.2). This proves that every finite ND-RID history gives a process tensor.
 
-Conversely, given a positive operator satisfying (M.6.14a.2), Equation (M.6.14a.3) defines nonnegative probabilities for CP instruments. The trace constraints ensure that summing over a complete instrument at any step removes that intervention without changing the earlier marginal, which is exactly the no-future-to-past signaling condition for a causal history. Therefore the operator defines a valid finite operational process.
+Conversely, positivity makes every positive tester outcome nonnegative. The recursive and base constraints place $\Upsilon$ in the deterministic-comb cone, while normalization of the dual tester makes its complete outcome sum equal to one. The comb trace identities preserve every earlier marginal when a later tester stage is summed out. The normalized dual tester supplies the terminal unit probability. Together they yield a valid fixed-order process with no future-to-past control. Therefore the operator defines a valid finite operational process.
 
 If two histories give the same process tensor on the retained instrument span, then (M.6.14a.3) gives the same probabilities for every retained finite protocol, so PPI identifies them. If they differ on some retained instrument sequence, the corresponding protocol distinguishes them and they are not PPI-equivalent. ∎
 
@@ -1921,118 +1944,140 @@ If two histories give the same process tensor on the retained instrument span, t
 
 *Proof.* A deterministic finite control register is a classical CP instrument whose outcome is fixed by previously available local records. Composing that instrument with the retained process tensor preserves positivity and the partial-trace causality constraints (M.6.14a.2). Since the control is measurable with respect to the local past, summing over the controlled local instrument gives the same remote marginal on the local CPTP branch, while conditioning on an actualized local record only changes the locally selected branch. ∎
 
-**Remark M.6.14b.2 (No-Signaling Condition for Metered Actualization).** A metered trigger is evaluated only from records available in the branch's local past. The process tensor must remain invariant under changes to future choices once the retained meter record is fixed. This keeps a meter certificate from becoming a retrocausal trigger rule.
+**Remark M.6.14b.2 (No-Future-to-Past Condition for Metered Actualization).** A metered trigger is evaluated only from records available in the branch's local past. The process tensor must remain invariant under changes to future choices once the retained meter record is fixed. This keeps a meter certificate from becoming a retrocausal trigger rule.
 
 
 **Corollary M.6.14c (Markov, Memory, and Indefinite-Order Gates).** On the finite process-tensor branch:
 
 1. Markovian multi-time dynamics is the tensor-factorization condition for $\Upsilon_{n:0}$ into one-step conditional channels;
 
-2. finite memory is exactly the failure of this factorization while preserving the causality constraints (M.6.14a.2);
+2. failure of this factorization witnesses non-Markovian temporal correlations. A finite-memory realization additionally requires a finite ancillary-memory dilation certificate, while all fixed-order comb constraints remain satisfied;
 
-3. a proposed indefinite-causal-order resource is admissible only as a process tensor that fails decomposition into a convex mixture of fixed-order combs while still satisfying (M.6.14a.2).
+3. coherent or classical control of internal operations within Definition M.6.14a remains a fixed external-order comb. A genuinely indefinite-order resource is outside this definition and requires a separately normalized process-matrix or higher-order-map branch with its own probability and no-loop certificate.
 
-None of these cases licenses retrocausal signaling: all admissible histories obey the same partial-trace causality constraints.
+Items 1--2 remain normalized fixed-order histories and obey the same partial-trace comb constraints. Item 3 is a scope boundary, not an existence claim for an indefinite-order PU sector.
 
-*Proof.* One-step Markov dynamics has no retained environment memory across interventions, so its Choi operator factorizes into the product/link product of adjacent one-step channels. Conversely, such a factorization makes every conditional future independent of the earlier past given the present intervention slot. Failure of this factorization is precisely memory. A process that is not a convex mixture of fixed-order combs is indefinite-order in the operational resource sense, but positivity and (M.6.14a.2) still enforce causal marginal consistency. ∎
+*Proof.* One-step Markov dynamics has no retained environment memory across interventions, so its Choi operator factorizes into the product/link product of adjacent one-step channels. Conversely, such a factorization makes every conditional future independent of the earlier past given the present intervention slot. Failure of factorization is precisely non-Markovianity; finite memory further requires a finite dilation. Because (M.6.14a.2) fixes an external order, no failure of convex decomposition inside this class proves indefinite causal order. Such a claim requires the distinct generalized normalization stated in item 3. A process that is not a convex mixture of fixed-order combs is indefinite-order in the operational resource sense, but positivity and (M.6.14a.2) still enforce causal marginal consistency. ∎
 
-**Corollary M.6.14d (Post-Selection and Weak-Probe Conditioning Without Future Ontology).** Let $\Upsilon_{n:0}$ be a finite ND-RID process tensor of Definition M.6.14a. Fix an intervention slot $j$. Let
+**Theorem M.6.14c.1 (Temporal Operator-Schmidt Memory Bound).** Let $\Upsilon_{n:0}$ be a finite normalized process tensor and cut its Choi slots into a temporal past $P$ and future $F$. Let
 $$
-A_{<j}=A_{j-1}\otimes\cdots\otimes A_0,
+R_j
+=
+\operatorname{OSR}_{P|F}(\Upsilon_{n:0})
+\tag{M.6.14c.1.1}
+$$
+be the minimum number of product operators in a decomposition across cut $j$. If every carrier of influence across that cut, including the through-going system when it crosses the cut, classical shared variables, and pre-correlated ancillas, is contained in one complete memory system $M_j$ of Hilbert dimension $d_{M_j}$, then
+$$
+R_j\le d_{M_j}^2,
 \qquad
-B_{>j}=B_n\otimes\cdots\otimes B_{j+1}
+d_{M_j}\ge\left\lceil\sqrt{R_j}\right\rceil.
+\tag{M.6.14c.1.2}
 $$
-be finite tensor blocks of Choi elements for retained CP instrument outcomes, ordered as in (M.6.14a.3), and let $\mathcal W=\{W_r\}_{r\in R}$ be a finite probe instrument at slot $j$. The future block $B_{>j}$ may be a coarse-grained post-selection event, obtained by summing a finite set of future outcome blocks. If
+Defining $d_M:=\max_j d_{M_j}$, every exact realization obeys
+$$
+d_M\ge
+\max_j\left\lceil\sqrt{R_j}\right\rceil.
+\tag{M.6.14c.1.3}
+$$
+
+*Proof.* All dependence crossing cut $j$ factors through $\mathcal B(M_j)$. Expanding that carrier in an operator basis $\{E_a\}_{a=1}^{d_{M_j}^2}$ writes the Choi operator as $\sum_aX_a^P\otimes Y_a^F$, so its operator-Schmidt rank is at most $d_{M_j}^2$. Rearrangement gives the lower bounds. ∎
+
+**Remark M.6.14c.1a (Lower-Bound Scope).** Equation (M.6.14c.1.2) is not an achievability equality. Positivity, comb normalization, and classical nonnegative-factorization constraints may require larger memory. Omitting the through-going system, a classical seed, or a pre-correlated environment from $M_j$ invalidates the premise rather than evading the bound.
+
+**Theorem M.6.14c.2 (Affine-Channel Determinant and Rank-Revival Witness).** Represent a finite-dimensional trace-preserving channel on the real affine space of density operators as
+$$
+x\longmapsto A_tx+b_t
+\tag{M.6.14c.2.1}
+$$
+on traceless Hermitian coordinates reconstructed in one time-independent calibrated affine chart. Suppose $\Lambda_t=V_{t,s}\Lambda_s$ for $t\ge s$, where every $V_{t,s}$ is positive and trace preserving. Then
+$$
+|\det A_t|\le|\det A_s|,
+\qquad
+\operatorname{rank}A_t\le\operatorname{rank}A_s.
+\tag{M.6.14c.2.2}
+$$
+Consequently an increase of $|\det A_t|$, revival after a rank loss, or a negative determinant reached continuously from $A_0=I$ witnesses failure of positive divisibility and therefore of CP divisibility, provided the change exceeds the registered tomography interval. Time-dependent coordinate changes are not admissible witnesses. On an absolutely continuous invertible branch with $A_0=I$ and bounded integrable traceless-coordinate generator $L_t$ defined by $\dot A_t=L_tA_t$,
+$$
+\det A_t
+=
+\exp\!\left(\int_0^t\operatorname{tr}_{\mathbb R}L_s\,ds\right)>0.
+\tag{M.6.14c.2.3}
+$$
+None of the converse statements holds: nonnegative monotone determinant does not certify Markovianity, and determinant zero is inconclusive without the invertible-generator premise.
+
+*Proof.* Positivity and trace preservation contract trace distance on Hermitian differences, so every eigenvalue of the induced traceless-space propagator has modulus at most one and $|\det A_{t,s}|\le1$. From $A_t=A_{t,s}A_s$, determinant multiplicativity and rank monotonicity prove (M.6.14c.2.2). A continuous determinant starting at $1$ cannot become negative without passing through zero; divisibility then forbids the required rank revival. Equation (M.6.14c.2.3) is Liouville's determinant formula for the fundamental solution of $\dot A_t=L_tA_t$. ∎
+
+**Corollary M.6.14d (Post-Selection and Weak-Probe Conditioning Without Future Ontology).**
+
+
+Let $\Upsilon_{n:0}$ be a deterministic comb of Definition M.6.14a and fix slot $j$. Let
+$$
+\mathfrak T[B_{>j},W_r,A_{<j}]
+$$
+denote the positive dual-tester element obtained by the normalized multilinear link map that joins the retained past outcome block $A_{<j}$, the probe outcome $W_r$, and the future event $B_{>j}$ to the fixed initial preparation, memory wiring, and terminal effect. The map $\mathfrak T$ is linear in every slot, includes the Choi transposes fixed in Definition M.6.14a, and is required to send every complete sequence of instruments to a normalized dual tester. It is not the raw tensor product of arbitrary Choi matrices.
+
+If
 $$
 Z(B_{>j},A_{<j})
 =
 \sum_{r\in R}
-\operatorname{Tr}\left[
-\Upsilon_{n:0}
-\left(B_{>j}\otimes W_r\otimes A_{<j}\right)^T
+\operatorname{Tr}\!\left[
+\Upsilon_{n:0}\,\mathfrak T[B_{>j},W_r,A_{<j}]
 \right]
 >0,
 \tag{M.6.14d.1}
 $$
-then the post-selected probe statistics are the ordinary conditional probabilities
+then post-selection is ordinary conditioning:
 $$
 p(r\mid B_{>j},A_{<j})
 =
 \frac{
-\operatorname{Tr}\left[
-\Upsilon_{n:0}
-\left(B_{>j}\otimes W_r\otimes A_{<j}\right)^T
-\right]
+\operatorname{Tr}[\Upsilon_{n:0}\mathfrak T[B_{>j},W_r,A_{<j}]]
 }{
-\sum_{r'\in R}
-\operatorname{Tr}\left[
-\Upsilon_{n:0}
-\left(B_{>j}\otimes W_{r'}\otimes A_{<j}\right)^T
-\right]
+\sum_{r'\in R}\operatorname{Tr}[\Upsilon_{n:0}\mathfrak T[B_{>j},W_{r'},A_{<j}]]
 }.
 \tag{M.6.14d.2}
 $$
-The future block is therefore a conditioning event in the retained protocol history, not an ontologically active input to earlier dynamics. If $\{B_{>j}^{(b)}\}_{b\in\mathcal B}$ is a complete future instrument block on slots $j+1,\ldots,n$ and its outcomes are unread, the comb constraints (M.6.14a.2) give
+If $\{B_{>j}^{(b)}\}_{b\in\mathcal B}$ is complete and unread, dual-tester compatibility with the comb recursion gives
 $$
 \sum_{b\in\mathcal B}
-\operatorname{Tr}\left[
-\Upsilon_{n:0}
-\left(B_{>j}^{(b)}\otimes W_r\otimes A_{<j}\right)^T
-\right]
+\operatorname{Tr}[\Upsilon_{n:0}\mathfrak T[B_{>j}^{(b)},W_r,A_{<j}]]
 =
-\operatorname{Tr}\left[
-\Upsilon_{j:0}
-\left(W_r\otimes A_{<j}\right)^T
-\right],
+\operatorname{Tr}[\Upsilon_{j:0}\mathfrak T_j[W_r,A_{<j}]],
 \tag{M.6.14d.3}
 $$
-where $\Upsilon_{j:0}$ is the reduced process tensor obtained by the recursive trace constraints. Hence no unread or freely chosen future measurement can change the unconditioned earlier marginal.
+where $\mathfrak T_j$ is the reduced normalized tester induced by the same link map. Hence a future choice cannot change an unread earlier marginal.
 
-Let $\mathsf J_j$ denote the Choi operator of the identity/no-intervention channel at slot $j$, and assume the baseline post-selection weight is positive:
+Let $\mathsf J_j$ be the identity intervention and suppose
 $$
-\operatorname{Tr}\left[
-\Upsilon_{n:0}
-\left(B_{>j}\otimes\mathsf J_j\otimes A_{<j}\right)^T
-\right]
->0.
+\operatorname{Tr}[\Upsilon_{n:0}\mathfrak T[B_{>j},\mathsf J_j,A_{<j}]]>0.
 $$
-For a weak-probe family of CP instrument elements
+For $W_r^{(\lambda)}=q_r\mathsf J_j+\lambda K_r+O(\lambda^2)$ with $q_r\ge0$, $\sum_rq_r=1$, $\sum_rK_r=0$, positive instrument elements for small $\lambda$, and a centered pointer $\sum_rq_rx_r=0$, multilinearity gives
 $$
-W_r^{(\lambda)}=q_r\mathsf J_j+\lambda K_r+O(\lambda^2)
-$$
-in finite-dimensional Choi trace norm, with $q_r\ge0$, $\sum_r q_r=1$, $\sum_r K_r=0$, $W_r^{(\lambda)}\ge0$ for sufficiently small $\lambda$ on the branch considered, and a centered pointer $x_r$ satisfying $\sum_r q_r x_r=0$, Equation (M.6.14d.2) gives
-$$
-\mathbb E_{\lambda}[x\mid B_{>j},A_{<j}]
+\mathbb E_\lambda[x\mid B_{>j},A_{<j}]
 =
 \lambda
 \frac{
-\sum_r x_r\operatorname{Tr}\left[
-\Upsilon_{n:0}
-\left(B_{>j}\otimes K_r\otimes A_{<j}\right)^T
-\right]
+\sum_r x_r\operatorname{Tr}[\Upsilon_{n:0}\mathfrak T[B_{>j},K_r,A_{<j}]]
 }{
-\operatorname{Tr}\left[
-\Upsilon_{n:0}
-\left(B_{>j}\otimes\mathsf J_j\otimes A_{<j}\right)^T
-\right]
+\operatorname{Tr}[\Upsilon_{n:0}\mathfrak T[B_{>j},\mathsf J_j,A_{<j}]]
 }
 +O(\lambda^2).
 \tag{M.6.14d.4}
 $$
-Thus weak values are first-order conditional response coefficients of the same finite causal process tensor. In the sharp projective one-slot specialization with preselected state $\rho_i$, unitary bridges $U_{j:i}$ and $U_{f:j}$, intermediate Lüders projectors $\{P_r\}$, and final effect $E_f$, (M.6.14d.2) reduces to
+In the one-slot Lüders specialization with preselection $\rho_i$, bridges $U_{j:i},U_{f:j}$, projectors $P_r$, and final effect $E_f$, the tester contraction reduces to
 $$
 p(r\mid i,f)
 =
 \frac{
-\operatorname{Tr}\left(E_f U_{f:j}P_r U_{j:i}\rho_i U_{j:i}^{\dagger}P_r U_{f:j}^{\dagger}\right)
+\operatorname{Tr}(E_fU_{f:j}P_rU_{j:i}\rho_iU_{j:i}^\dagger P_rU_{f:j}^\dagger)
 }{
-\sum_{r'}\operatorname{Tr}\left(E_f U_{f:j}P_{r'} U_{j:i}\rho_i U_{j:i}^{\dagger}P_{r'} U_{f:j}^{\dagger}\right)
-},
+\sum_{r'}\operatorname{Tr}(E_fU_{f:j}P_{r'}U_{j:i}\rho_iU_{j:i}^\dagger P_{r'}U_{f:j}^\dagger)
+}.
 \tag{M.6.14d.5}
 $$
-the usual pre/post-selected conditional rule in density-operator notation.
 
-*Proof.* Theorem M.6.14b supplies a probability measure on every finite retained instrument sequence by (M.6.14a.3). Conditioning that probability measure on the positive-probability event $B_{>j}$ gives (M.6.14d.2); positivity of $\Upsilon_{n:0}$ and complete positivity of the instruments make all terms nonnegative, and the denominator normalizes the finite distribution. Substituting the unitary channels and the Lüders instrument $X\mapsto P_rXP_r$ into (M.6.14d.2) gives (M.6.14d.5). Substituting the finite-norm expansion of $W_r^{(\lambda)}$ into (M.6.14d.2), expanding around the positive baseline denominator, and using $\sum_rK_r=0$ to keep the total probe channel fixed to first order and $\sum_rq_rx_r=0$ to remove the zeroth-order pointer mean, gives the quotient expansion (M.6.14d.4). Finally, if the future block is not post-selected but summed over as a complete instrument, repeated application of the partial-trace identities (M.6.14a.2) removes the future slots and gives (M.6.14d.3). A nontrivial weak probe is therefore still a CP intervention in a finite protocol: if it changes no process-tensor functional, PPI identifies it as response-null by Theorem M.6.14b; if it changes one, its retained pointer record is subject to the Blackwell-PCE record compression of Theorem M.6.11b and, when actualized as an 'Evolve' record, to the usual finite actualization cost. ∎
+*Proof.* Positivity of $\Upsilon$ and of every tester element gives nonnegative joint weights. Completeness of the dual tester gives unit total weight, so conditioning on the positive event $B_{>j}$ proves (M.6.14d.2). Summing an unread complete future block and applying the compatible comb/dual-comb recursion gives (M.6.14d.3). Linearity of $\mathfrak T$, $\sum_rK_r=0$, and pointer centering give the first-order quotient (M.6.14d.4). Substitution of the normalized preparation, Lüders maps, unitary links, and terminal effect gives (M.6.14d.5). No future outcome is inserted as an earlier dynamical input; it labels only the conditioned tester event. ∎
 
 **Theorem M.6.14e (PPI-Minimal Stinespring Dilation for Finite Updates).** Let $R_X$ and $R_Y$ be finite quantum response presheaves whose finite operator systems have $C^*$-envelopes $\mathcal A_X$ and $\mathcal A_Y$ modulo their response-null ideals. A PPI-admissible update
 $$
@@ -2065,10 +2110,12 @@ This appendix has provided a rigorous mathematical framework for the Perspectiva
 - **Summary of Theorem M.6.1:** Outcome $k$ is actual relative to Friend's perspective $s'_F$ while remaining indefinite relative to Wigner's $s_W$—no contradiction arises because actuality is perspective-indexed.
 - **Summary of Lemma M.6.1:** Upon interaction, the joint kernel $G_{\text{persp}}^{(WF)}$ drives perspectives toward consistent configurations with contractivity-guaranteed convergence.
 - **Summary of Lemma M.6.2 & Theorem M.6.2:** Cross-perspective reasoning requires either prior interaction or restriction to perspective-invariant quantities; the FR contradiction traces to violating this constraint.
-- **Structural Correspondence M.6.4:** Just as finite $c$ forces frame-relative simultaneity, SPAP + thermodynamic irreversibility ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$) forces perspective-relative actuality—extending the relativistic program to quantum mechanics.
+- **Structural Correspondence M.6.4:** Just as finite $c$ forces frame-relative simultaneity, SPAP + thermodynamic irreversibility ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) forces perspective-relative actuality—extending the relativistic program to quantum mechanics.
 
-**Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The causality bound $\alpha_{CC,max} < 0.5$ (Theorem 39) controls the size of those deviations; preservation of the consistency mechanism of Lemma M.6.1 requires, in addition, that the CC-modulated readout kernel remain within the strong-readout and contractive class assumed there.
+**Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The deterministic endpoint-forcing bound $\alpha_{CC,max} < 0.5$ (Theorem 39) controls the size of those deviations; preservation of the consistency mechanism of Lemma M.6.1 requires, in addition, that the CC-modulated readout kernel remain within the strong-readout and contractive class assumed there.
 
 **Cost Functional (M.6.10).** The perspectival profile $\mathcal{P}_S(E) = (\Delta Q_S, \mu_S, \sigma_S)$ provides the informational-thermodynamic cost functional on $\Sigma$ that the geometric formalism (M.2–M.5) did not supply. The SPAP proximity $\mu_S(E)$ measures the required self-predictive performance for integrating a pattern, while $\sigma_S(E)$ tracks how much of the update lies in the self-model subspace. Patterns with $\mu_S(E) > 1/\alpha_{SPAP}$ incur the content-dependent lower bound of Theorem M.10.3; purely external patterns remain at the baseline value $\mu_S(E)=1/\alpha_{SPAP}$ with vanishing reflexive cost (Corollary M.10.3.1). A more complex system can evaluate a less complex system's perspectival response externally at sender-side SPAP-flat cost (Theorem M.10.5), pre-screen finite families of candidate patterns from above (Theorem M.10.8), yet cannot obtain thermodynamic leverage by exact replay of the target's reflexive integration, because faithful replay must reproduce the target-side reflexive expenditure up to nonnegative overhead. Shannon information is recovered as the special case in which the update is purely external, and the perspectival profile remains irreducible to all existing information-theoretic quantities (Theorem M.10.9).
 
 **Synthesis.** The perspectival formalism achieves mathematical precision for the 'Evolve' process, resolves foundational paradoxes by explicit perspective tracking, represents memory, causal-order, post-selection, and weak-probe histories through finite ND-RID process tensors (Definition M.6.14a; Theorem M.6.14b; Corollaries M.6.14c–M.6.14d), and generates empirical predictions through the CC mechanism. The resolution generalizes realism rather than retreating from it: the MPU network remains unified and objective, while descriptions exhibit the perspective-relativity, finite-record conditioning, and thermodynamic irreversibility demanded by SPAP together with the finite update-cost bounds.
+
+**Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.

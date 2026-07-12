@@ -2,6 +2,10 @@
 
 ## R.0 Introduction
 
+This appendix separates generation topology, $D_4$ triality, binary coding, and lattice gluing. The anomaly+CP route carries the family-count result. Triality and the factorization $24=3\cdot8$ are compatibility records. The Golay code is selected only on the predictive-recovery branch, and a Leech lattice follows only from the registered discriminant-form/coset-minimum datum of Lemma R.4.5. None of these finite structures alone supplies masses, vacuum dynamics, or spacetime.
+
+
+
 This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector and the hierarchical pattern of fermion masses emerge from the topology and geometry of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space $\Sigma_8$ is the complete flag manifold, rigorously defined in **Section 7.2.7** (Theorem 26, formalized in Appendix M.2),
 
 $$
@@ -15,7 +19,7 @@ naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the mi
 $$
 H_0 \cong H_{\mathrm{active}} \oplus H_{\mathrm{inert}} \cong \mathbb{C}^2 \oplus \mathbb{C}^6
 $$
-driven by the Landauer bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, saturated at the PCE-Attractor as $\varepsilon_0=\ln2$, per predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which fixes the active kernel dimension to $a = 2$ on the attractor-saturating branch. The partition determines both:
+using the conditional registered-reset bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ together with the separate structural reference $\varepsilon_0=\ln2$; no physical saturation is inferred from the attractor label alone. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which fixes the active kernel dimension to $a = 2$ on the attractor-saturating branch. The partition determines both:
 1. The **gauge structure:** $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ in the conditional sense of Theorem G.8.4b
 2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
 
@@ -160,7 +164,9 @@ Several factors single out $E_8$ as the natural geometric structure for the 8-di
 
 5. **Self-Duality:** $E_8$ is self-dual, meaning $E_8^* = E_8$. This symmetry simplifies the geometric structure, eliminates arbitrary orientation choices, and ensures that the dual lattice (relevant for Fourier transforms in quantum mechanics) coincides with the original. Self-duality is a natural PCE attractor as it minimizes representational redundancy.
 
-6. **Leech Lattice Connection:** The 24-dimensional Leech lattice $\Lambda_{24}$, which achieves the optimal sphere packing density in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$; by contrast, the direct sum $E_8 \oplus E_8 \oplus E_8$ is a distinct Niemeier lattice (minimum norm 2). This provides an independent pathway to the three-fold structure (Section R.4.2) and connects to the interface mode count $M = 24$ from **Appendix Z (Theorem Z.5)**.
+6. **Leech Lattice Connection:** The 24-dimensional Leech lattice $\Lambda_{24}$, which achieves the optimal sphere packing density in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$; by contrast, the direct sum $E_8 \oplus E_8 \oplus E_8$ is a distinct Niemeier lattice (minimum norm 2). This provides A registered occurrence of this sublattice is compatible with the three-block rank count in Section R.4.2. It neither supplies the required Leech gluing datum nor derives a physical three-family map from $M=24$.
+
+
 
 7. **Root-Kissing Correspondence:** The $E$-series exceptional lattices exhibit a remarkable algebraic-geometric correspondence: for $n \in \{6, 7, 8\}$, the root count $|\Phi(E_n)|$ equals the kissing number achieved by the corresponding lattice:
 
@@ -259,7 +265,9 @@ $$
 \mathcal{R} = \frac{d^2(v_3, v_1)}{d^2(v_3, v_2)} = \frac{6}{4} = \frac{3}{2}.
 $$
 
-As derived independently in Section T.24.3 (Theorem T.24.3), the charged lepton triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (a, b, 2a) = (2, 6, 4)$ is uniquely determined by the error-correcting structure of $E_8$: the $D_4$ sublattice associated with Dirac bilinear structure fixes $d^2_{21} = 2a = 4$, while the active and inactive subspace dimensions fix $d^2_{32} = a = 2$ and $d^2_{31} = b = 6$. This yields the hierarchy ratio $\mathcal{R}_\ell = b/a = 3$, which is a structural prediction from the framework constants rather than a selection from observation. The experimentally measured value $\mathcal{R}_\ell^{\mathrm{obs}} \approx 2.889$ deviates from the discrete prediction by 3.8%, with the residual accounted for by the fourth-order curvature correction (Theorem T.42.6).
+On the Appendix T hierarchy-model branch, the charged-lepton triad $(d^2_{32},d^2_{31},d^2_{21})=(2,6,4)$ is a forward-locked distance assignment. Neither $D_4$, active/inactive dimension counts, Golay data, nor Leech gluing uniquely fixes those physical pair labels. The algebraic ratio of the assigned distances is $\mathcal R_\ell=3$; comparison with $\mathcal R_\ell^{obs}\approx2.889$ and the fourth-order adjustment are conditional model tests under Theorems T.42.2, T.42.5, and T.42.6.
+
+
 
 ## R.3 Gauge–Topology Correspondence
 
@@ -598,7 +606,7 @@ $$
 $$
 Here $\mathcal C_{\mathrm{cap}}$ is the capacity-saturation chain using Theorem 31, Theorem Z.1, and Theorem Z.2; $\mathcal C_{\mathrm{tan}}$ is the Peirce-Grassmannian tangent chain using Theorem Z.2.5b; and $\mathcal C_{\mathrm{kis}}$ is the mode-channel/kissing-number chain using Theorem Z.11 and Corollary Z.11.1. The remaining $3$ and $7$ rows of Proposition R.3.5e remain governed by the family-anomaly and topology ledgers cited in that proposition.
 
-*Proof.* The first chain follows from the Landauer-SPAP lower bound and PCE-attractor saturation $\varepsilon_0=\ln2$, the sharp match/mismatch active-verification record $a\ge2$, the integer capacity condition $\ln a\ge\varepsilon_0$, and PPI/PCE no-surplus selection giving $a=2$; the minimal SPAP tensor realization then gives $d_0=8=2a^2$. The second chain follows from the rank-$a$ projector on $\mathbb C^{d_0}$: $b=d_0-a=6$, $k=\dim_\mathbb C\operatorname{Hom}(pE,(1-p)E)=ab=12$, and $M=2k=24$. Here $k$ is the complex tangent half-mode count; on the predictive-recovery MacWilliams branch, Definition Z.13b.0 and Theorem Z.13b.0a identify the interface-code dimension with the same value $M/2=12$. The third chain is the channel-complete Bures tangent-cell condition $M=K(D)$, whose accepted minimal solution is $K(4)=24$ on the checked branch of Corollary Z.11.1. The $3$ and $7$ rows are not part of this subledger decomposition because their cited proofs use Theorem 15, Theorem R.3.4, Proposition R.3.5.1a, Corollary R.3.5a, Theorem R.1.1, and Corollary R.3.5b. ∎
+*Proof.* The first chain follows from the Landauer-SPAP lower bound and the structural reference $\varepsilon_0=\ln2$, the sharp match/mismatch active-verification record $a\ge2$, the integer capacity condition $\ln a\ge\varepsilon_0$, and PPI/PCE no-surplus selection giving $a=2$; the minimal SPAP tensor realization then gives $d_0=8=2a^2$. The second chain follows from the rank-$a$ projector on $\mathbb C^{d_0}$: $b=d_0-a=6$, $k=\dim_\mathbb C\operatorname{Hom}(pE,(1-p)E)=ab=12$, and $M=2k=24$. Here $k$ is the complex tangent half-mode count; on the predictive-recovery MacWilliams branch, Definition Z.13b.0 and Theorem Z.13b.0a identify the interface-code dimension with the same value $M/2=12$. The third chain is the channel-complete Bures tangent-cell condition $M=K(D)$, whose accepted minimal solution is $K(4)=24$ on the checked branch of Corollary Z.11.1. The $3$ and $7$ rows are not part of this subledger decomposition because their cited proofs use Theorem 15, Theorem R.3.4, Proposition R.3.5.1a, Corollary R.3.5a, Theorem R.1.1, and Corollary R.3.5b. ∎
 
 **Theorem R.3.5e.3 (Non-Collapse of the Source Roles in the Present Dependency Graph).** Let $G$ be the finite directed proof-role graph of the recurrent minimal-branch ledger as currently cited in Appendices R and Z. Its source roles are the four chains
 $$
@@ -677,7 +685,9 @@ $$
 $$
 closes as a current-graph non-collapse decomposition of the source roles, with downstream coherence given by $(J_{\mathrm{top}}, J_{\mathrm{Cl}}, J_{\mathrm{ar}})$.
 
-*Proof.* Proposition R.3.5e and Proposition R.3.5e.2 give the exact ledger values for the recurrent integer rows. The invariant $I_3$ follows from Theorem 15, Theorem R.3.4, Proposition R.3.5.1a, and Corollary R.3.5a. The invariant $I_{\mathrm{cap}}$ follows from the Landauer-SPAP lower bound, attractor saturation $\varepsilon_0=\ln2$, the retained match/mismatch active-record gate, entropy-capacity, PPI/PCE no-surplus selection giving $a=2$, Theorem 23, and the minimal branch selection $d_0=8$ in Theorem Z.2. The invariant $I_{\mathrm{tan}}$ follows from the rank-$a$ projector tangent calculation
+*Proof.* Proposition R.3.5e and Proposition R.3.5e.2 give the exact ledger values for the recurrent integer rows. The invariant $I_3$ follows from Theorem 15, Theorem R.3.4, Proposition R.3.5.1a, and Corollary R.3.5a. The invariant $I_{\mathrm{cap}}$ follows from the Landauer--SPAP lower bound, structural reference $\varepsilon_0=\ln2$, the retained match/mismatch active-record gate
+
+ The invariant $I_{\mathrm{tan}}$ follows from the rank-$a$ projector tangent calculation
 $$
 T_p\mathrm{Gr}(a,d_0)\cong\operatorname{Hom}(pE,(1-p)E),
 $$
@@ -897,33 +907,7 @@ This section compares the theorem-level generation-count derivation with the str
 
 This topological mechanism derives the minimal admissible three-generation ledger from first principles within the stated anomaly and CP-violation assumptions; Proposition R.3.5 records the MDL-surrogate selection statement, and Proposition R.3.5.1a records exact realization on the pre-flavor family-redundancy PPI branch. The compatibility checks in Section R.4.2 are deliberately downstream of this theorem boundary.
 
-### R.4.2 Structural Compatibility: $D_4$ Triality and $E_8$/Leech Lattice Structure
-
-**The 24-Dimensional Leech Lattice:**
-
-The Leech lattice $\Lambda_{24}$ achieves the optimal sphere packing density in 24 dimensions (Leech 1967; Cohn, Kumar, Miller, Radchenko & Viazovska 2017). Its rigidity and optimality properties make it a natural structure for PCE-driven systems.
-
-**Connection to M = 24:**
-
-The number 24 also appears as the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition: $M = 2ab = 2(2)(6) = 24$. This shared count links three mathematical structures:
-
-1. **Information-theoretic:** $M = 24$ QFI modes at the PCE-Attractor (Appendix Z)
-2. **Geometric:** $\Lambda_{24}$ optimal packing in 24D (Cohn-Kumar-Miller-Radchenko-Viazovska)
-3. **Algebraic:** Extended binary Golay code of length 24 (dimension 12) (Conway & Sloane 1999; **Appendix Z, Theorem Z.13**)
-
-**$E_8$ Triple Structure in 24 Dimensions:**
-
-The connection between the Leech lattice and $E_8$ is more subtle than a direct product. The key observations are:
-
-1. **Scaled $E_8$ Sublattice:** The Leech lattice $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (scaling by $\sqrt{2}$ ensures minimum norm 4, matching Leech's rootless property). This sublattice has index $2^{12} = 4096$ in $\Lambda_{24}$.
-
-2. **Niemeier vs. Leech:** The direct sum $E_8 \oplus E_8 \oplus E_8$ (without scaling) is a different even unimodular 24D lattice—a Niemeier lattice with $240+240+240 = 720$ roots (minimum norm 2). This is NOT isometric to the Leech lattice, which is rootless (minimum norm 4).
-
-3. **Gluing Construction:** The Leech lattice can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code.
-
-**Physical Interpretation:** The appearance of three scaled $E_8$ factors in the Leech construction supplies a geometric three-fold scaffold compatible with the generation structure selected topologically. It is supporting structure rather than an independent derivation of $N_g=3$.
-
-**Note:** Throughout this appendix, when we refer to "$E_8$ root distances" for generation vacua, we work in the unscaled $E_8$ root system with minimum norm 2. The connection to Leech involves the scaled version $\sqrt{2}E_8$, but the discrete distance ratios remain unchanged under uniform scaling.
+### R.4.2 Structural Compatibility
 
 **Remark R.4.1: Modular Forms and the Number 24.**
 The appearance of $M = 24$ in the interface mode count (**Appendix Z**) and the Leech lattice dimension is not coincidental. The number 24 has a unique status in mathematics due to modular forms: the Dedekind eta function $\eta(\tau)^{24} = \Delta(\tau)$ achieves weight 12, the natural weight for modular forms determined by the first Chern class of the canonical bundle over modular curves. This connects:
@@ -1001,7 +985,11 @@ the real dimension of $T_{\rho_0}\mathrm{Gr}(2,8)$, not an 8-dimensional Hilbert
 
 Thus the topological, triality, geometric, and information-theoretic structures are compatible with one another, while the proof of the generation count remains the anomaly+CP derivation together with the pre-flavor PPI realization theorem. ∎
 
-### R.4.2.1 The Golay Bridge: From Error Correction to Optimal Geometry
+### R.4.2.1 The Conditional Golay Bridge
+
+The coding and lattice classification statements below are independent until a finite-quadratic-module marking, maximal isotropic subgroup, glue representatives, and coset-minimum ledger are supplied. The section records the conditional bridge and does not infer it from the shared integer $24$.
+
+
 
 The preceding discussion noted that the Leech lattice "can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code." This section proves that this construction follows necessarily from PCE optimization. The key insight is that the Golay code appears independently in two optimization contexts:
 
@@ -1088,7 +1076,9 @@ The extended binary Golay code attains this bound exactly, achieving $d = 8$.
 
 **Step 4 (Uniqueness at the bound).** The extended binary Golay code is the unique binary linear code achieving parameters $[24, 12, 8]$ (Pless 1968). No other code matches this performance.
 
-**Step 5 (PCE selection).** PCE isotropy requires invariance under mode permutations (no preferred mode ordering). Among codes achieving the distance bound, the Golay code is unique up to equivalence. Therefore, PCE optimization uniquely selects the Golay $[24, 12, 8]$ structure. ∎
+**Step 5 (PCE selection).** PCE coordinate-label neutrality requires the selection rule to be invariant under relabeling of candidate coordinates; it does not require the selected code to be fixed by all of $S_{24}$. The extended Golay code is unique up to permutation equivalence, while its actual permutation automorphism group is $M_{24}$. Thus the fixed $(n,k,d)$ comparison selects its equivalence class, not an $S_{24}$-invariant code.
+
+ Among codes achieving the distance bound, the Golay code is unique up to equivalence. Therefore, PCE optimization uniquely selects the Golay $[24, 12, 8]$ structure. ∎
 
 **Remark: Error Correction Properties.** The minimum distance $d = 8$ implies the Golay code can:
 
@@ -1101,54 +1091,33 @@ This is the maximum possible for any binary linear code of length 24 with rate 1
 
 #### R.4.2.1.3 Leech Lattice Construction via Golay Gluing
 
-**Lemma R.4.5 (Leech Lattice Construction via Golay Gluing).**
-
-The Leech lattice $\Lambda_{24}$ can be constructed from the scaled direct sum $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ by adjoining glue vectors determined by the extended binary Golay code $\mathcal{G}_{24}$.
-
-*Proof.* This proof uses the even-lattice gluing theorem stated in Conway and Sloane (1999): if $L$ is an even lattice and $H\subset L^*/L$ is a maximal totally isotropic subgroup for the discriminant quadratic form, then the union of cosets over $H$ is an even unimodular overlattice of $L$, and every even unimodular overlattice arises in this way. The hypotheses are verified in Steps 1–6 below: $L_0=(\sqrt2E_8)^3$ is even, its discriminant form is identified with the binary coordinate form on $(\mathbb Z/2\mathbb Z)^{24}$, and the doubly-even self-dual Golay code supplies the maximal totally isotropic subgroup.
-
-**Step 1 (Base lattice).** Define the base lattice:
-
+**Lemma R.4.5 (Conditional Leech Identification from a Registered Discriminant-Form Gluing Datum).** Let
 $$
-L_0 = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8 \subset \mathbb{R}^{24}
+L_0=(\sqrt2E_8)^3,
+\qquad
+A_{L_0}=L_0^*/L_0,
 $$
+with discriminant quadratic form $q_{L_0}$. A registered Golay gluing datum consists of:
 
-The scaling by $\sqrt{2}$ ensures that the minimum squared norm is $(\sqrt{2})^2 \cdot 2 = 4$, since $E_8$ has minimum squared norm 2. This matches the Leech lattice's rootless property (no vectors of squared norm 2).
-
-**Step 2 (Coordinate partition).** Partition the 24 coordinates into three octads:
-
+1. an explicit isometry of finite quadratic modules
 $$
-\mathcal{O}_1 = \{1, \ldots, 8\}, \quad \mathcal{O}_2 = \{9, \ldots, 16\}, \quad \mathcal{O}_3 = \{17, \ldots, 24\}
+\phi:(A_{L_0},q_{L_0})\longrightarrow(B,q_B),
 $$
-
-corresponding to the three $E_8$ factors.
-
-**Step 3 (Golay code structure).** The extended binary Golay code $\mathcal{G}_{24}$ has:
-
-- $|\mathcal{G}_{24}| = 2^{12} = 4096$ codewords
-- Each codeword has weight divisible by 4: weights $\in \{0, 8, 12, 16, 24\}$
-- The code is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$
-- Minimum weight 8
-
-**Step 4 (Gluing construction).** Let $A_{L_0}:=L_0^*/L_0$ be the discriminant group of $L_0$. There is an identification $A_{L_0}\cong (\mathbb{Z}/2\mathbb{Z})^{24}$ compatible with the decomposition into three $\sqrt{2}E_8$ factors, and $A_{L_0}$ carries the discriminant quadratic form induced by $q([x])=|x|^2\bmod 2\mathbb{Z}$. The Golay code $\mathcal{G}_{24}\subset \mathbb{F}_2^{24}$ is realized as a maximal totally isotropic subgroup of $A_{L_0}$ for this quadratic form. For each $c\in\mathcal{G}_{24}$ choose a representative $g_c\in L_0^*$ of the corresponding class in $A_{L_0}$.
-
-**Step 5 (Leech lattice as union).** The Leech lattice is:
-
+not merely a vector-space identification with $\mathbb F_2^{24}$;
+2. a specified embedded copy $C\subset B$ of the extended binary Golay code such that $H:=\phi^{-1}(C)$ is maximal totally isotropic;
+3. a certified coset-minimum ledger
 $$
-\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (g_c + L_0)
+m(h):=\min\{|x|^2:x\in L_0^*,\ [x]=h\},
 $$
+with the zero class evaluated on nonzero vectors, proving $\min_{h\in H}m(h)=4$.
 
-This is a disjoint union of $|\mathcal{G}_{24}| = 2^{12} = 4096$ cosets of $L_0$.
+Then
+$$
+L_H:=\bigcup_{h\in H}(g_h+L_0)
+$$
+is even, unimodular, and rootless of rank $24$, and hence is isometric to the Leech lattice $\Lambda_{24}$.
 
-**Step 6 (Property verification).**
-
-*Even and unimodular:* In the gluing description, $\Lambda_{24}$ is an overlattice of $L_0$ determined by the maximal totally isotropic glue subgroup $\mathcal{G}_{24}\subset A_{L_0}$. Since $\mathcal{G}_{24}$ is doubly-even and self-dual, the resulting overlattice is even and unimodular (standard gluing theory for even lattices).
-
-*Minimum norm 4 (rootless):* $L_0=(\sqrt{2}E_8)^3$ has minimum squared norm $4$. A norm-$2$ vector in an overlattice would have to arise from a nontrivial glue coset, and in this $24$-mode binary gluing correspondence such a vector would be produced by a weight-$4$ glue word. Since the extended Golay code has minimum weight $8$, no glue coset introduces vectors of squared norm $2$, and therefore every nonzero vector in $\Lambda_{24}$ satisfies $|v|^2\ge 4$.
-
-*Index:* $[\Lambda_{24}:L_0]=|\mathcal{G}_{24}|=2^{12}=4096$. ∎
-
----
+*Proof.* The even-lattice gluing theorem [Conway & Sloane 1999] sends the maximal totally isotropic subgroup $H$ to an even overlattice. Since $|H|=2^{12}$ and $\det L_0=2^{24}$, the overlattice is unimodular. The coset-minimum certificate gives minimum nonzero squared norm $4$, so the lattice is rootless. Niemeier classification [Niemeier 1973] then identifies it with $\Lambda_{24}$. An abstract isomorphism $A_{L_0}\cong\mathbb F_2^{24}$ without $\phi$, $q_B$, and the coset-minimum ledger is insufficient for this conclusion. ∎
 
 #### R.4.2.1.4 Leech Lattice from PCE Constraints
 
@@ -1160,7 +1129,9 @@ Assume the admissible 24-dimensional vacuum lattice is required to be:
 2. unimodular, and
 3. rootless, i.e. to have no vectors of squared norm $2$,
 
-with the rootless condition supplied by the QFI-isotropy argument of Appendix Z (Theorem Z.8c). Then the unique compatible lattice is the Leech lattice $\Lambda_{24}$.
+with rootlessness independently included in the admissibility ledger. QFI isotropy fixes an inner product but does not exclude norm-$2$ vectors. Under these stated criteria, the unique compatible lattice is the Leech lattice $\Lambda_{24}$.
+
+
 
 *Proof.*
 
@@ -1180,35 +1151,13 @@ Therefore the admissibility criteria select the Leech lattice uniquely. ∎
 
 **Proposition R.4.7 (Compatibility of $E_8$ Triple Structure with M = 24).**
 
-The Leech lattice contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$. This three-fold structure is compatible with the factorization $24 = 3 \times d_0$ where $d_0 = 8$.
-
-*Proof.*
-
-**Step 1 (Sublattice existence).** By Lemma R.4.5, the construction of $\Lambda_{24}$ uses $L_0 = \sqrt{2}E_8^3$ as the base lattice. Therefore $L_0 \subset \Lambda_{24}$.
-
-**Step 2 (Index).** $[\Lambda_{24} : L_0] = 2^{12} = 4096$, confirming $L_0$ is a proper sublattice.
-
-**Step 3 (Factorization compatibility).** The dimension factorizes as:
-
+On a registered gluing datum satisfying Lemma R.4.5, the resulting overlattice $L_H\cong\Lambda_{24}$ contains its declared base lattice
 $$
-24 = 3 \times 8 = 3 \times d_0
+L_0=(\sqrt2E_8)^3
 $$
+with index $[L_H:L_0]=2^{12}$. Its three rank-$8$ summands are dimensionally compatible with $24=3d_0$ on the $d_0=8$ branch.
 
-Each factor of 8 corresponds to one $E_8$ component, matching the MPU Hilbert space dimension $d_0 = 8$ (Theorem 23). This factorization also appears in the multi-layered structure (cf. Appendix Z, Proposition Z.2):
-
-- $24 = 8 \times 3$: $(d_0) \times (N_{\text{generations}})$
-- $24 = 4 \times 6$: $(D) \times (b)$
-- $24 = 2 \times 12$: $(a) \times (\text{modular weight})$
-
-**Step 4 (Octad structure consistency).** Fix the coordinate decomposition $\mathbb{R}^{24} \cong \mathbb{R}^8 \oplus \mathbb{R}^8 \oplus \mathbb{R}^8$ used in Lemma R.4.5 (Step 2), i.e., a partition of the 24 coordinates into three octads corresponding to the three $\sqrt{2}E_8$ factors. With this convention, the Golay-code/glue-group description is written in an octad-adapted basis.
-
-The trio structure ensures compatibility between:
-
-- Code structure: three octads of length 8
-- Sublattice structure: three copies of $\sqrt{2}E_8$
-- Framework derivation: $M = 24 = 3 \times d_0$ ∎
-
----
+*Proof.* Containment is part of the overlattice construction $L_0\subset L_H$, and the registered maximal isotropic subgroup has order $2^{12}$, giving the stated index. Rank additivity gives $24=3\cdot8$. These facts establish compatibility only. They do not show that the three blocks are Golay octads, identify them with generations, or construct the required discriminant-form marking; each stronger interpretation needs its own registered map. ∎
 
 #### R.4.2.1.6 Automorphism Group Structure
 
@@ -1244,32 +1193,32 @@ The appearance of $M_{24} = \text{Aut}(\mathcal{G}_{24})$ reflects the Golay cod
 
 ---
 
-#### R.4.2.1.7 The Golay Bridge Theorem
+#### R.4.2.1.7 The Conditional Golay Bridge
 
-**Theorem R.4.9 (The Golay Bridge).**
+**Theorem R.4.9 (The Conditional Golay Bridge).**
 
-The extended binary Golay code $\mathcal{G}_{24}$ is the unique binary linear code (up to code equivalence) that both
+Two statements are distinct:
 
-1. achieves the maximum minimum distance ($d = 8$) among rate-1/2 binary linear codes of length 24, and
-2. supplies the gluing data completing $\sqrt{2}E_8^3$ into the rootless even unimodular lattice $\Lambda_{24}$.
+1. the extended binary Golay code is, up to permutation equivalence, the unique binary linear $[24,12,8]$ code and attains the maximal distance in the binary linear $[24,12]$ class;
+2. on a separately registered finite-quadratic-module gluing datum satisfying Lemma R.4.5 and Equation (R.4.2a.1), the embedded Golay copy indexes an even unimodular rootless overlattice $L_H\cong\Lambda_{24}$.
 
-This establishes a precise bridge between the coding-theoretic and lattice-theoretic 24-dimensional constructions.
+Thus the code class and the Leech construction form a valid bridge only through the explicit marking and coset-minimum certificate. The code parameters do not determine $\phi$, $q_B$, the glue representatives, or the ledger $m(h)$, and the theorem does not assert uniqueness of those markings.
 
-*Proof.*
-
-**Step 1 (Information-theoretic optimality).** By Theorem R.4.4, the unique PCE-optimal binary linear code at interface mode count $M=24$ is the Golay code $[24,12,8]$.
-
-**Step 2 (Geometric construction).** By Lemma R.4.5, the Leech lattice is obtained by gluing $\sqrt{2}E_8^3$ with cosets indexed by $\mathcal{G}_{24}$.
-
-**Step 3 (Compatibility of structural constraints).** The properties required in the gluing construction—self-duality, divisibility, and minimum weight 8—are precisely the coding-theoretic properties singled out in Step 1.
-
-**Step 4 (Uniqueness within the binary linear class).** Suppose a binary linear code $\mathcal{C}$ distinct from $\mathcal{G}_{24}$ served as gluing data for a rootless even unimodular lattice obtained from $\sqrt{2}E_8^3$. Then $\mathcal{C}$ would have to be self-dual of length 24 and have minimum weight at least 8. By the uniqueness theorem for the binary linear $[24,12,8]$ code, this forces $\mathcal{C}$ to be equivalent to $\mathcal{G}_{24}$. Therefore the same code appears in both constructions. ∎
-
----
+*Proof.* The first statement is the binary-code classification used in Theorem R.4.4. The second is exactly the implication of Lemma R.4.5 together with (R.4.2a.1). Neither implication supplies the hypotheses of the other. ∎
 
 #### R.4.2.1.8 Dual Optimality Summary
 
-**Remark R.4.2: The Golay Bridge: Dual Optimality.**
+**Remark R.4.2: Conditional Code--Lattice Cross-Ledger.**
+
+| Domain | Closed statement | Additional bridge datum |
+|--------|------------------|--------------------------|
+| Binary coding | The extended Golay code is the unique $[24,12,8]$ binary linear code up to equivalence | None for the coding theorem |
+| Rank-$24$ lattices | The Leech lattice is the unique even unimodular rootless rank-$24$ lattice | None after evenness, unimodularity, rank, and rootlessness are assumed |
+| Code-to-lattice transfer | The embedded code labels the Leech overlattice | The finite-quadratic-module isometry, maximal isotropic subgroup, glue representatives, and coset-minimum ledger of Lemma R.4.5; Equation (R.4.2a.1) for a Hamming-to-norm equivalence |
+
+Common length/rank $24$ and separate extremality do not make the coding and lattice objectives identical. Their intersection is a certified correspondence only on the registered bridge datum; it is not forced by PCE coordinate neutrality or by the integer $24$ alone.
+
+
 
 | Domain | Optimization Problem | Result | Role of $\mathcal{G}_{24}$ | Reference |
 |--------|---------------------|--------|---------------------------|-----------|
@@ -1310,17 +1259,37 @@ $$
 \text{Golay code} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{local}} \text{24-cell} \xrightarrow{\text{network}} \text{4D spacetime}
 $$
 
-The Golay code's distance criterion is exactly the lattice-stability criterion under the binary gluing correspondence: minimum code distance $d=8$ is equivalent to absence of norm-2 vectors in the glued lattice (Proposition R.4.2a). Hence PCE selection for optimal error correction on the $M=24$ interface simultaneously enforces geometric stability (minimum norm $4$) of the corresponding vacuum lattice, without an additional dynamical assumption.
+The code, lattice, and spacetime-dimension records share the integer $24$ but obey different implication chains. The predictive-recovery branch selects the code. A registered datum of Lemma R.4.5 may then construct $\Lambda_{24}$. Independently, the channel-complete mode-channel branch uses $M=K(D)=24$ to select $D=4$ and may use the $24$-cell as its local kissing configuration. Neither $\Lambda_{24}$ nor Golay gluing is a premise of the kissing-number implication.
 
-### R.4.2.3 Golay Distance and Lattice Stability
+Consequently the licensed diagram is
+$$
+M=24\longrightarrow
+\begin{cases}
+\mathcal G_{24},&\text{predictive-recovery code branch},\\
+\Lambda_{24},&\text{only with the registered gluing datum},\\
+D=4,&\text{independent channel-complete }M=K(D)\text{ branch}.
+\end{cases}
+$$
+Code distance transfers to minimum lattice norm only when Equation (R.4.2a.1) is part of the marked construction. No code-to-spacetime, code-to-dynamics, or physical-vacuum-stability implication follows from the shared count.
 
-**Proposition R.4.2a (Golay Distance and Rootlessness).** The Golay code's minimum distance $d = 8$ is *necessary and sufficient* for the gluing construction to produce a rootless lattice.
+ Hence PCE selection for optimal error correction on the $M=24$ interface simultaneously enforces geometric stability (minimum norm $4$) of the corresponding vacuum lattice, without an additional dynamical assumption.
 
-*Proof.* Let $L_0=(\sqrt{2}E_8)^3$ and let $A_{L_0}:=L_0^*/L_0$ be its discriminant group equipped with the induced discriminant quadratic form. A unimodular overlattice $L\supset L_0$ corresponds to a maximal totally isotropic subgroup $G\subset A_{L_0}$, and $L$ is even if and only if $G$ is totally isotropic (standard gluing theory for even lattices). Under the natural identification $A_{L_0}\cong \mathbb{F}_2^{24}$, such maximal totally isotropic subgroups correspond to doubly-even self-dual binary codes of length 24.
+### R.4.2.3 Code Distance and the Registered Gluing Datum
 
-A norm-$2$ vector (“root”) in an overlattice must arise from a nontrivial glue coset; in the $24$-mode binary gluing correspondence this occurs when the glue code contains a low-weight word, and in particular a weight-$4$ word produces a squared-norm-$2$ vector. Therefore the overlattice is rootless (minimum squared norm $4$) if and only if the glue code has minimum weight at least $8$, i.e. minimum distance $d\ge 8$.
+**Proposition R.4.2a (Code Distance Does Not Replace the Gluing Certificate).** Binary Hamming distance is not invariant under an arbitrary vector-space identification
+$$
+A_{L_0}\cong\mathbb F_2^{24}
+$$
+and therefore does not by itself determine minimum norms of glue cosets. On the registered datum of Lemma R.4.5, rootlessness follows from the finite coset-minimum ledger $m(h)\ge4$. If a particular marked construction additionally proves
+$$
+\min_{h\in\phi^{-1}(C)}m(h)\ge4
+\quad\Longleftrightarrow\quad
+d(C)\ge8,
+\tag{R.4.2a.1}
+$$
+then, and only then, code distance $8$ is equivalent to rootlessness within that marked construction.
 
-For length 24 and dimension 12, coding bounds imply $d\le 8$ (Theorem R.4.4), and the unique code attaining $d=8$ is the extended binary Golay code $\mathcal{G}_{24}$. Hence $d=8$ is necessary and sufficient for the (even unimodular) gluing of $L_0$ to yield a rootless lattice, and this glued lattice is the Leech lattice $\Lambda_{24}$. ∎
+*Proof.* The left side depends on the discriminant quadratic form, its marking, and minimum norms in the marked cosets; the right side depends on the chosen binary coordinate Hamming metric. Equation (R.4.2a.1) is precisely the missing compatibility theorem. Lemma R.4.5 proves the lattice conclusion once that finite compatibility ledger is supplied. ∎
 
 **Corollary R.4.2b (Error Correction Implies Geometric Stability).** The Golay code's information-theoretic optimality (maximum error correction for length 24, rate 1/2) entails the Leech lattice's geometric optimality (unique rootless even unimodular lattice in 24 dimensions): under the gluing correspondence, PCE optimization of error correction yields PCE optimization of packing geometry.
 
@@ -1341,7 +1310,17 @@ This support is fixed-dimension support only. It does not derive $d_0=8$, $M=24$
 
 ---
 
-**Proposition R.4.2c (Golay-Leech Propagation Across Gauge, Vacuum, and Generation Sectors).** Once the minimal branch fixes $M=24$, the same code-lattice structure propagates through multiple sectors in a theorem-level way:
+**Proposition R.4.2c (Golay--Leech Propagation Across Gauge, Lattice, and Generation Sectors).** Once the minimal branch fixes $M=24$, the registered code--lattice backbone has the following conditional propagation:
+
+1. the predictive-recovery branch selects the extended binary Golay code $[24,12,8]$;
+2. the retained count satisfies $M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)=12$ on the cited branch;
+3. on a registered discriminant-form/coset-minimum datum satisfying (R.4.2a.1), $d=8$ is equivalent to rootlessness of the resulting $24$-dimensional lattice;
+4. the unique even unimodular rootless lattice in dimension $24$ is $\Lambda_{24}$;
+5. the scaled $\sqrt2E_8^3$ scaffold is compatible with, but does not derive, the three-generation theorem.
+
+Thus the common backbone propagates code distance and dimensionless norm isolation. It does not by itself establish physical vacuum stability, a decoder for physical noise, or an energy gap. ∎
+
+
 
 1. PCE selects the extended binary Golay code $[24,12,8]$.
 2. The number $12$ simultaneously equals
@@ -1356,42 +1335,15 @@ Therefore a single code-lattice backbone propagates from interface optimization 
 
 *Proof.* Item 1 is Theorem Z.13. Item 2 is Theorem G.8.4f together with Theorem U.7a. Item 3 is Proposition R.4.2a. Item 4 is Theorem R.4.10. Item 5 is Proposition R.4.2, which explicitly preserves the logical boundary that the topological route, not the lattice scaffold, derives $N_g=3$. Composing these statements yields the claimed propagation chain. ∎
 
-### R.4.2.4 Niemeier Classification and Unique Selection
+### R.4.2.4 Niemeier Classification and Conditional Selection
 
-**Theorem R.4.10 (Unique Selection Among Even Unimodular Lattices).** Among all even unimodular lattices in dimension 24, exactly one is rootless. PCE selects this unique lattice.
+**Theorem R.4.10 (Unique Rootless Niemeier Lattice; Conditional PCE Selection).** Among the even unimodular lattices in dimension $24$, exactly one is rootless: the Leech lattice $\Lambda_{24}$. Therefore any already-registered PCE branch whose admissibility conditions independently require an even unimodular rootless rank-$24$ lattice selects $\Lambda_{24}$ uniquely. PCE alone does not supply the rootlessness condition or physical-vacuum stability.
 
-*Proof.*
+*Proof.* Niemeier's classification gives exactly $24$ even unimodular rank-$24$ lattices. Twenty-three have nonempty root systems and one has none. The rootless member is $\Lambda_{24}$. The conditional selection follows by restricting the admissible class to the rootless branch. ∎
 
-**Step 1 (Niemeier classification).** By Niemeier's theorem [Niemeier 1973], there exist exactly 24 even unimodular lattices in dimension 24, up to isometry. These are called the *Niemeier lattices*.
+**Remark R.4.2a: Nested Uniqueness.** Three finite statements meet at the number $24$: the registered mode-channel branch selects $D=4$ from $K(D)=24$; Niemeier classification contains $24$ even unimodular rank-$24$ lattices; and exactly one of them is rootless. Their conjunction identifies one rootless lattice label, not a unique physical vacuum without a dynamical realization certificate.
 
-**Step 2 (Root system characterization).** Each Niemeier lattice is characterized by its root system—the set of vectors of squared norm 2. The 24 Niemeier lattices have root systems:
 
-| Root System | Number of Roots | Example |
-|:------------|:---------------:|:--------|
-| $\emptyset$ (none) | 0 | Leech lattice $\Lambda_{24}$ |
-| $A_1^{24}$ | 48 | — |
-| $A_2^{12}$ | 72 | — |
-| $D_4^6$ | 144 | — |
-| $E_8^3$ | 720 | $E_8 \oplus E_8 \oplus E_8$ |
-| ... | ... | (19 others) |
-
-**Step 3 (Uniqueness of rootlessness).** Exactly one Niemeier lattice has empty root system: the Leech lattice $\Lambda_{24}$. The remaining 23 all contain roots.
-
-**Step 4 (PCE selection criterion).** By Proposition Z.13a (Section Z.13.4), rootlessness corresponds to vacuum stability—the absence of near-degenerate configurations. PCE optimization requires:
-- Minimum descriptive complexity (satisfied by all 24 lattices equally)
-- Maximum predictive stability (satisfied *only* by the rootless lattice)
-
-The Leech lattice is the unique PCE optimum among Niemeier lattices.
-
-**Step 5 (The "24-24" observation).** The dimension selected by mode-channel matching ($M = 24$ from $K(D) = 24$) equals the number of candidate lattices from which PCE selects the unique stable vacuum. This constitutes a notable observation regarding $M = 24$:
-
-| Observation | Statement | Status |
-|:-----------|:----------|:------:|
-| O9 (Niemeier) | In dimension 24, there are 24 even unimodular lattices, exactly one of which is rootless | ✓ |
-
-This is a dimension-24 coincidence: the number of Niemeier lattices equals the dimension $M=24$ selected by the mode-channel matching, and exactly one of these lattices is rootless (the Leech lattice). ∎
-
-**Remark R.4.2a: Nested Uniqueness.** The selection process exhibits nested uniqueness:
 1. Among all dimensions $D$, only $D$ with $K(D) = 24$ works → unique $D = 4$
 2. Among all dimensions $M$, only $M = 24$ has exactly 24 even unimodular lattices
 3. Among those 24 lattices, only 1 (Leech) is rootless → unique vacuum
@@ -1432,7 +1384,13 @@ This factorization does not independently derive $N_{\text{gen}} = 3$; rather, i
 
 ---
 
-### R.4.2.7 Connection to Spacetime Emergence
+### R.4.2.7 Independent Mode-Channel Cross-Check
+
+On the channel-complete branch, $M=24=K(D)$ selects $D=4$, and the $24$-cell realizes a local four-dimensional kissing configuration. This route depends on the mode-channel certificate, not on the Golay code or Leech lattice. The predictive-recovery, registered gluing, and mode-channel records may coexist, but they do not form an unconditional causal chain.
+
+The correlation and stability protocols in Sections Z.29--Z.31 therefore test their own declared branches. A Golay correlation pattern would support the predictive-recovery encoding record; it would not by itself confirm the gluing datum, a physical decoder, dimensional reduction, or emergent spacetime.
+
+
 
 The Golay-Leech structure connects to emergent spacetime through the mode-channel correspondence:
 
@@ -1729,7 +1687,11 @@ This is a sharp, falsifiable prediction of the diagonal-alignment Gaussian model
 
 ## R.6 Phenomenological Comparison with Observed Fermion Masses
 
-### R.6.0 Framework Evolution: From Qualitative to Quantitative
+### R.6.0 Framework Evolution: Theorem--Model Boundary
+
+The generation-number theorem and the flavor-response models are separate layers. $E_8$ supplies admissible discrete geometry, while physical label selection, continuous response coefficients, scale maps, and remainders remain model or certificate data. The flavor layer is not presently a zero-continuous-parameter prediction engine.
+
+
 
 Before evaluating experimental agreement, we clarify how this appendix advances beyond earlier treatments of generation structure:
 
@@ -1745,7 +1707,11 @@ Before evaluating experimental agreement, we clarify how this appendix advances 
 
 **Key Advancement:** The addition of $E_8$ geometry transforms generation structure from a "why three?" explanation to a "what mass ratios?" prediction engine with no continuously adjustable parameters on the $E_8$-root-vacuum and diagonal-alignment Gaussian branch. The discrete nature of root distances in $E_8$ provides falsifiable predictions distinct from phenomenological fits within that branch.
 
-### R.6.1 Observational Data and Theoretical Predictions
+### R.6.1 Observational Data and Conditional Model Comparisons
+
+The discrete distance-ratio set is a mathematical candidate set. Assigning one element to charged leptons or quarks is a model-selection step, and the fourth-order flavor equations retain the open coefficient, effective-dimension, scheme, and remainder entries of Appendix T. Numerical proximity after retrospective selection is calibration evidence, not a first-principles or zero-parameter prediction.
+
+
 
 This section evaluates the framework's predictions against experimental data from the Particle Data Group (Navas et al. 2024). We compute the mass ratio invariant $\mathcal{R}$ for each fermion sector and compare with the discrete values predicted by $E_8$ root geometry.
 
@@ -1824,7 +1790,11 @@ The hierarchy $\theta_{13} \ll \theta_{23} \ll \theta_{12}$ arises naturally fro
 
 The same mechanism explains why lepton mixing (PMNS) is large while quark mixing (CKM) is small: if lepton generation vacua have smaller separations $d^2_{\ell} < d^2_q$ or different Hessian ratios $\kappa_\ell < \kappa_q$, then lepton mixing angles can be $O(1)$ even with the same geometric structure.
 
-### R.6.3 Summary of Phenomenological Predictions
+### R.6.3 Status of Phenomenological Comparisons
+
+The generation-number theorem is distinct from the later flavor-texture models. Mass ratios and mixing observables become forward predictions only after their discrete labels, continuous coefficients, response maps, scheme, and error intervals are fixed independently of the comparison data.
+
+
 
 | Sector | Predicted $\mathcal{R}$ | Observed $\mathcal{R}$ | Agreement |
 |--------|------------------------|------------------------|-----------|
@@ -1851,7 +1821,15 @@ The observed value $J_{CP} \approx 3 \times 10^{-5}$ is consistent with small mi
 
 ## R.8 Discussion and Limitations
 
-### R.8.1 What the Framework Explains
+### R.8.1 What the Framework Establishes and What It Models
+
+The anomaly/CP argument establishes the minimal admissible three-generation pattern within its declared family-charge class, and Proposition R.3.5.1a supplies the exact pre-flavor PPI realization on its stated branch. The $D_4$, $E_8$, and Leech records are compatibility structures, not additional independent derivations of the generation count.
+
+The flavor layer is conditional. Root distances provide candidate discrete diagnostics only after physical labels are selected. Exponential hierarchy, CKM/PMNS separation, CP phases, and the coefficient $\alpha=3/2$ require the particular overlap, potential, Schur, holonomy, scale, and remainder certificates stated in Appendix T. They are mechanisms or calibrated model outputs, not first-principles consequences of the generation theorem or of the Grassmannian orbit alone.
+
+The model-independent statement about CP is limited: within the ordinary three-family mixing formalism, a nonzero Jarlskog invariant requires at least three generations. Its magnitude and phase are not fixed by that necessity result.
+
+
 
 The framework provides first-principles explanations for:
 
@@ -1874,11 +1852,11 @@ The framework does not yet fully determine:
 
 Item 3 is resolved within that Berry-holonomy model. Items 1-2 require explicit construction of the PCE potential $V_{PCE}$ on the attractor orbit.
 
-**Baryogenesis Complexity (Resolved in Appendix Y).** The baryon asymmetry $\eta_B \approx 6 \times 10^{-10}$ is derived from the anomaly-holonomy coupling mechanism where Berry holonomy on $\text{Gr}(2,8)$ generates an effective $\theta$-angle for electroweak sphalerons. The baryogenesis complexity is:
+**Baryogenesis Complexity (Conditional Appendix Y Reduction).** Holonomy supplies CP-odd data; a net yield additionally requires the driven transport, freeze-out, and residual certificates of Theorems Y.6.1i--Y.6.1k. The baryon asymmetry $\eta_B \approx 6 \times 10^{-10}$ is derived from the anomaly-holonomy coupling mechanism where Berry holonomy on $\text{Gr}(2,8)$ provides an effective CP-odd $\theta$ datum whose production effect is conditional on certified driven transport for electroweak sphalerons. The baryogenesis complexity is:
 
 $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = \frac{38.5}{2} + \frac{\ln 2}{3} = 19.25 + 0.2310\dots = 19.4810\dots$$
 
-The CP-odd baryogenesis insertion is a $\mathbb{Z}_2$ half-step whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the associated large-deviation exponent halves, giving $\kappa_{CP}=\kappa_{EW}/2$ (part (e) of Lemma Y.8.1). The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
+On the Appendix R/Y branch, additive PCE accounting assigns the CP half-step the exponent $\kappa_{CP}=\kappa_{EW}/2$, and the CP response remains an output of an accepted non-equilibrium transport certificate. These are a branch weight and a bounded CP response, respectively. A numerical $\eta_B$ follows only from an accepted Appendix Y source, transport, freeze-out, washout, normalization, and uncertainty certificate; neither static quantity generates the yield by itself. Since PCE costs add under sequential composition, the associated large-deviation exponent halves, giving $\kappa_{CP}=\kappa_{EW}/2$ (part (e) of Lemma Y.8.1). The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
 
 **Theorem R.8.2a (Covariant Quadratic-Curvature Response Kernel).** Let the regular metric branch carry the local quadratic-curvature truncation
 $$
@@ -1946,7 +1924,7 @@ This derivation occupies a middle ground between pure mathematics and phenomenol
 - Derives the **minimality** of three generations from topology, anomaly cancellation, and the CP-violation requirement in the modeled family-charge class
 - Provides **mechanism** for mass hierarchy via $E_8$ root distances
 - Achieves **unification** of horizontal (gauge) and vertical (generation) SM structure
-- Makes **discrete predictions** ($\mathcal{R}$ values) with phenomenological support
+- Supplies **discrete candidate diagnostics** only after a root triad is selected; retrospective proximity is not independent support
 - Supplies **compatibility checks:** the $D_4$ triality orbit, $E_8$/Leech scaffold, and QFI mode structures are nontrivially consistent with the topological count $N=3$
 
 **Limitations:**
@@ -1964,7 +1942,7 @@ The three-generation structure has cosmological implications via the Sakharov co
 2. **C and CP violation:** Requires $N \geq 3$ (Jarlskog invariant)
 3. **Departure from equilibrium:** Provided by early universe dynamics
 
-The SM CKM CP violation, enabled by three generations, provides a mechanism for the observed baryon asymmetry $\eta_B \approx 6\times 10^{-10}$. In the PU framework, the Berry holonomy $\delta = 66.7°$ on $\text{Gr}(2,8)$ couples to electroweak sphalerons via the mixed flavor-gauge anomaly, generating a saturated CP asymmetry that resolves the standard EWBG deficit (Appendix Y). The **structural necessity** of $N \geq 3$ for any CP violation remains crucial.
+The SM CKM CP violation, enabled by three generations, provides a mechanism for the observed baryon asymmetry $\eta_B \approx 6\times 10^{-10}$. In the PU framework, the Berry holonomy $\delta = 66.7°$ on $\text{Gr}(2,8)$ couples to electroweak sphalerons via the mixed flavor-gauge anomaly, supplying a saturated CP response weight that contributes to, but does not by itself resolve the standard EWBG deficit (Appendix Y). The **structural necessity** of $N \geq 3$ for any CP violation remains crucial.
 
 This provides an independent, cosmological motivation for the three-generation structure beyond the information-theoretic arguments of this appendix. The convergence of:
 - Topological necessity (anomaly cancellation)
@@ -2067,7 +2045,11 @@ Thus failure of a later flavor texture, neutrino row, CKM/PMNS profile, or baryo
 *   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
 *   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1), Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch, and Theorem R.8.5b records the PCE minimal-selection audit without claiming an exhaustive classification of all larger anomaly-free charge multisets. Section R.4.2 records the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the factorization $M = 24 = 8 \times 3$ as structural compatibility checks rather than independent derivations.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
-*   **Mass Hierarchy:** On the $E_8$-root-vacuum and diagonal-alignment Gaussian branch (R.5.2–R.5.4), $E_8$ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters once the discrete root triad is selected. Whether the PCE potential's three vacua lie exactly at an $E_8$ root triad is a separate selection question not fully closed by this theorem stack.
-*   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the $E_8$ geometric mechanism.
+*   **Mass Hierarchy:** A registered distance triad supplies a leading algebraic ratio $\mathcal R=d_{31}^2/d_{32}^2$. Physical root labels, continuous hierarchy coefficients, effective dimensions, and remainder intervals remain Appendix T model data, so the current flavor comparison is not a zero-continuous-parameter theorem.
+
+
+*   **Flavor-Comparison Status:** The charged-lepton value was compared retrospectively with the selected leading ratio. It is calibration evidence only; a prediction requires a preregistered triad, response map, scale scheme, and remainder interval evaluated on held-out data.
+
+
 *   **Masses and Mixings:** A PCE-compatible potential on the Perspective Space creates distinct vacuum states for each generation. Yukawa couplings arise from the overlap of Gaussian wavepackets centered at these vacua, naturally producing hierarchical masses and small CKM mixing angles controlled by the geodesic distances between the vacua. The same mechanism allows for large PMNS mixing if the leptonic vacua have smaller separations or different Hessian ratios.
 *   **Unified Origin:** The generation structure shares a common origin with gauge structure—both arise from the topology and symmetries of the fundamental MPU state space as optimized by PCE.

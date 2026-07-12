@@ -135,13 +135,13 @@ $$ \phi_j = \phi_{\text{rad}} \quad \text{(constant for all } j\text{)} \tag{L.8
 
 This establishes phase coherence. The radiated power for coherent oscillation is:
 
-$$ P_{\text{rad}} = \frac{N_{\text{osc}}^2 d_{\text{dip}}^2 \omega^4}{12\pi\varepsilon_0 c^3} \tag{L.9} $$
+$$ P_{\text{rad}} = \frac{N_{\text{osc}}^2 d_{\text{dip}}^2 \omega^4}{12\pi\epsilon_{\mathrm{vac}} c^3} \tag{L.9} $$
 
 The $N_{\text{osc}}^2$ scaling reflects constructive interference from phase lock.
 
 Stress-Energy Derivation: The electromagnetic field energy density is:
 
-$$ u_{\text{EM}}(x,t) = \frac{\varepsilon_0}{2}|\vec{E}_{\text{rad}}(x,t)|^2 + \frac{1}{2\mu_0}|\vec{B}_{\text{rad}}(x,t)|^2 \tag{L.10} $$
+$$ u_{\text{EM}}(x,t) = \frac{\epsilon_{\mathrm{vac}}}{2}|\vec{E}_{\text{rad}}(x,t)|^2 + \frac{1}{2\mu_0}|\vec{B}_{\text{rad}}(x,t)|^2 \tag{L.10} $$
 
 From Appendix G (Equation G.5.3), restoring SI units yields the Maxwell action in curved spacetime:
 
@@ -169,7 +169,7 @@ The field $\vec{E}_{\text{rad}}(t)$ couples to target MPU via dipole interaction
 
 $$ H_{\text{int}}(t) = -\vec{d}_{\text{TLS}} \cdot \vec{E}_{\text{rad}}(t) \tag{L.13} $$
 
-In the off-resonant regime $|\Delta| \gg \Gamma$ where $\Delta = \omega_{\text{TLS}} - \omega_{\text{rad}}$ is detuning and $\Gamma$ is natural linewidth, second-order time-dependent perturbation theory yields the AC Stark shift:
+In the off-resonant regime $|\Delta|\gg\max(\Omega_R,\Gamma)$ where $\Delta = \omega_{\text{TLS}} - \omega_{\text{rad}}$ is detuning and $\Gamma$ is natural linewidth, second-order time-dependent perturbation theory yields the AC Stark shift:
 
 $$ \delta_{\text{Stark}}(t) = \frac{\Omega_R^2(t)}{4\Delta(t)}, \qquad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}} \cdot \vec{\epsilon}_{\text{rad}}|\,E_0(t)}{\hbar} \tag{L.14} $$
 
@@ -181,7 +181,7 @@ The AC Stark shift magnitude scales as:
 
 $$ \delta_{\text{Stark}} \propto \frac{1}{|\omega_{\text{TLS}} - \omega_{\text{rad}}|} \tag{L.15} $$
 
-Target selectivity arises from this resonance condition. Maximum effect occurs when aggregate oscillation frequency $\omega_{\text{rad}}$ matches target transition frequency $\omega_{\text{TLS}}$. Off-resonance suppression by factor $\sim \omega_{\text{TLS}}/|\Delta|$ provides spectral addressing—the ability to selectively influence specific quantum systems based on their transition frequencies.
+Target selectivity arises from this resonance condition. Within the perturbative domain, decreasing $|\Delta|$ increases the shift, but the formula cannot be continued to resonance. Off-resonant detuning and polarization dependence provide spectral addressing—the ability to selectively influence specific quantum systems based on their transition frequencies.
 ## **L.3 Gravitational Time Dilation from Aggregate Energy**
 
 ### **Theorem L.3 (Gravitational Time Dilation from Instantaneous Aggregate Stress-Energy)**
@@ -256,70 +256,7 @@ $$ \mathcal{R}(P_{\text{agg}}, V_S, r, \Delta, \tau_c) = \frac{\delta/\omega_{\t
 
 ### **Representative Case (Engineered Coherent-Charge Implementation).**
 
-This analysis examines one specific implementation of the mapping $\mathcal{M}$ (Theorem L.1) using coherent charge oscillations—a configuration readily achievable in engineered systems with precise control over phase relationships and field generation. The framework does not require all aggregates to use this implementation; Theorem L.1 establishes existence of a PCE-optimal mapping but does not uniquely specify its physical realization.
-
-To establish concrete numerical benchmarks for this engineered implementation:
-
-Total power: $P_{\text{agg}} = 20$ W
-
-Aggregate volume: $V_S = 1.4 \times 10^{-3}$ m³
-
-Context maintenance interval: $\tau_c = 0.1$ s
-
-Equation of state: $w = 0$ (non-relativistic matter)
-
-Distance to target: $r = 0.5$ m
-
-Target spatial extent: $L_q = 10^{-9}$ m (atomic scale)
-
-Target transition frequency: $\omega_{\text{TLS}}/(2\pi) = 10$ GHz
-
-Target dipole moment: $d_{\text{TLS}} = 1.6 \times 10^{-28}$ C·m (atomic dipole)
-
-Generated field amplitude: $E_0 = 10^3$ V/m (achievable in engineered near-field systems)
-
-Detuning: $\Delta/(2\pi) = 10$ GHz
-
-### **Numerical Results for Engineered Implementation:**
-
-Electromagnetic (AC Stark):
-
-$$ \Omega_R = \frac{d_{\text{TLS}} E_0}{\hbar} = \frac{(1.6 \times 10^{-28})(10^3)}{1.055 \times 10^{-34}} \approx 1.52 \times 10^9 \text{ rad/s} \tag{L.26} $$
-
-$$ \delta = \frac{\Omega_R^2}{4\Delta} = \frac{(1.52 \times 10^9)^2}{4(2\pi)(10^{10})} \approx 9.2 \times 10^6 \text{ rad/s} \tag{L.27} $$
-
-$$ \frac{\delta}{\omega_{\text{TLS}}} \approx \frac{9.2 \times 10^6}{2\pi \times 10^{10}} \approx 1.5 \times 10^{-4} \tag{L.28} $$
-
-Gravitational (time dilation):
-
-$$ M_{\text{eff}} = \frac{P_{\text{agg}}\tau_c}{c^2} = \frac{(20)(0.1)}{9 \times 10^{16}} \approx 2.22 \times 10^{-17} \text{ kg} \tag{L.29} $$
-
-$$ g(r) = \frac{G M_{\text{eff}}}{r^2} = \frac{(6.67 \times 10^{-11})(2.22 \times 10^{-17})}{(0.5)^2} \approx 5.92 \times 10^{-27} \text{ m/s}^2 \tag{L.30} $$
-
-$$ \Delta\Phi = g(r)L_q = (5.92 \times 10^{-27})(10^{-9}) \approx 5.92 \times 10^{-36} \text{ m}^2/\text{s}^2 \tag{L.31} $$
-
-$$ \Delta\tau_d = \frac{\Delta\Phi}{c^2}\tau_c = \frac{5.92 \times 10^{-36}}{9 \times 10^{16}}(0.1) \approx 6.6 \times 10^{-54} \text{ s} \tag{L.32} $$
-
-$$ \frac{\Delta\phi_{\text{grav}}}{2\pi} = \frac{\omega_{\text{TLS}}}{2\pi}\Delta\tau_d = (10^{10})(6.6 \times 10^{-54}) \approx 6.6 \times 10^{-44} \tag{L.33} $$
-
-### **Dominance Ratio for Engineered Implementation:**
-
-$$ \mathcal{R} = \frac{1.5 \times 10^{-4}}{6.6 \times 10^{-44}} \approx 2.3 \times 10^{39} \tag{L.34} $$ 
-
-Proof. Direct numerical substitution using SI constants: $G = 6.67 \times 10^{-11}$ m³ kg⁻¹ s⁻², $c = 3 \times 10^8$ m/s, $\hbar = 1.055 \times 10^{-34}$ J·s. ∎
-
-**Sensitivity Analysis:** Table L.1 shows the robustness of this dominance ratio to parameter variations:
-
-**Table L.1: Sensitivity of EM/Gravity Coupling Hierarchy**
-
-| Parameter | Symbol | Baseline | Conservative Range | $\mathcal{R}$ Impact |
-|-----------|--------|----------|-------------------|---------------------|
-| Coupling ratio | $\alpha_{\text{em}}/\alpha_{\text{grav}}$ | $10^{42}$ | $10^{41}$–$10^{43}$ | $\times 0.1$ – $10$ |
-| Charge fraction | $f_{\text{charge}}$ | $0.1$ | $0.01$–$0.5$ | $\times 0.1$ – $5$ |
-| Geometric efficiency | $\eta_{\text{geo}}$ | $0.1$ | $0.01$–$1$ | $\times 0.1$ – $10$ |
-| **Combined** | — | **$10^{36}$** | **$10^{33}$–$10^{39}$** | **$10^{-3}$ – $10^{3}$** |
-
-Even with conservative parameter estimates accounting for all uncertainties, electromagnetic coupling dominates gravitational coupling by at least $\sim 10^{33}$ across the full parameter space, with typical values remaining near the baseline $\sim 10^{36}$. This robust hierarchy—spanning at least 33 orders of magnitude even under pessimistic assumptions—confirms electromagnetic dominance as the primary CC influence channel.
+The stated data do not define a valid numerical implementation. A quantitative comparison requires a measured differential dynamic polarizability or an allowed-transition model, a positive drive frequency, $|\Delta|\gg\max(\Omega_R,\Gamma)$, a retention-time/field-energy solution, and a common uncertainty ledger for electromagnetic and gravitational responses. Therefore no numerical dominance ratio is reported here.
 
 ### **Proposition L.5 (Electromagnetic Dominance on the Analyzed Parameter Range)**
 
@@ -354,7 +291,7 @@ Under constraint set $\mathcal{B}$, PCE optimization (Definition 15) selects con
 $$\mathcal{F}_{\text{bio}}[\{\phi_j\}] = \alpha_1 C_{\text{internal}} - \alpha_2 P_{\text{rad}} - \alpha_3 P_{\text{metabolic}}$$
 
 For $N$ oscillators with dipole moments $d_j$ and phases $\phi_j$, the radiated power is:
-$$P_{\text{rad}} = \frac{\omega^4}{12\pi\varepsilon_0 c^3}\left|\sum_{j=1}^N d_j e^{i\phi_j}\right|^2$$
+$$P_{\text{rad}} = \frac{\omega^4}{12\pi\epsilon_{\mathrm{vac}} c^3}\left|\sum_{j=1}^N d_j e^{i\phi_j}\right|^2$$
 
 The PCE-optimal configuration achieves **sub-radiant destructive interference**:
 $$\sum_{j=1}^N d_j e^{i\phi_j} \approx 0 \quad \text{(near-perfect cancellation in far-field)}$$
@@ -395,7 +332,7 @@ Cryptochrome proteins containing entangled radical pairs (as in avian magnetorec
 
 **Proposition L.4.4 (Near-Field Enhancement in Sub-Radiant Cavities)**
 A sub-radiant ensemble with trapped power $P_{\text{trap}}$ in volume $V_{\text{cav}}$ generates enhanced near-fields:
-$$E_{\text{near}}(r) = \sqrt{\frac{Q \cdot P_{\text{trap}}}{\varepsilon_0 c V_{\text{cav}}}} \cdot \mathcal{G}(r/\lambda)$$
+$$E_{\text{near}}(r) = \sqrt{\frac{Q \cdot P_{\text{trap}}}{\epsilon_{\mathrm{vac}} c V_{\text{cav}}}} \cdot \mathcal{G}(r/\lambda)$$
 
 where $Q$ is the cavity quality factor and $\mathcal{G}(x) \approx (2\pi x)^{-3}$ for $x \ll 1$ (reactive near-field), with practical enhancement limited to $\mathcal{G}(x)\lesssim 10^3$–$10^4$ by loss and finite mode volume. 
 
@@ -454,7 +391,7 @@ Both frameworks predict:
 
 PU additionally predicts:
 - Measurable metabolic signature (Theorem L.6)
-- Causality bound $\text{CC} < 0.5$ (Theorem 39)
+- Endpoint-bias bound $\text{CC} < 0.5$ (Theorem 39); exact causality uses Theorem 39c
 - Gravitational self-limitation (Appendix S)
 
 ### **L.4.1.6 Critical Amplification for Non-Local Influence**
@@ -593,7 +530,7 @@ where the information density is:
 
 $$ \Sigma_I = \sigma_{\text{link}} C_{\text{max}} = \frac{\chi}{\eta\delta^2} C_{\text{max}} \tag{L.48} $$
 
-with channel surface density $\sigma_{\text{link}} = \chi/(\eta\delta^2)$ (Theorem E.3), MPU spacing $\delta$, geometric factor $\eta$, correlation factor $\chi$, and Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) channel capacity $C_{\text{max}}$ limited by irreversibility $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31).
+with channel surface density $\sigma_{\text{link}} = \chi/(\eta\delta^2)$ (Theorem E.3), MPU spacing $\delta$, geometric factor $\eta$, correlation factor $\chi$, and Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) channel capacity $C_{\text{max}}$ limited by irreversibility $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31).
 
 For local causal horizon with null generator $k^\mu$ (affinely parameterized with $\lambda$) and surface gravity $\kappa$, the energy flux through a surface element is:
 
@@ -758,7 +695,7 @@ On the coherent-charge carrier branch, the radiation-zone field configuration sa
 $$
 u_{\text{EM}}
 =
-\frac{\varepsilon_0}{2}|\vec{E}_{\text{rad}}|^2
+\frac{\epsilon_{\mathrm{vac}}}{2}|\vec{E}_{\text{rad}}|^2
 +
 \frac{1}{2\mu_0}|\vec{B}_{\text{rad}}|^2
 \propto
@@ -834,6 +771,57 @@ High-frequency temporal waves couple to microscopic charge distributions through
 Low-frequency temporal waves couple to macroscopic energy density through horizon boundary information capacity. Coupling strength is set by $G$ from $\Sigma_I = c^3/(4G\hbar)$ (Appendix E, Equation E.9), determined by ND-RID channel limits.
 
 The hierarchy arises because electromagnetic coupling involves local phase relationships (high information bandwidth), while gravitational coupling involves global boundary entropy (low information bandwidth).
+
+### **Corollary L.8.2 (Conditional Cavitation-Boundary Radiation Criterion)**
+
+A cavitation preparation yields a retained electromagnetic component only when Definition L.8.2b independently supplies a nonzero coherent-charge dipole and a Maxwell radiation-zone record. Acceleration alone determines neither a source nor a detector response. In Appendix L, vacuum permittivity is $\epsilon_{\mathrm{vac}}$; $\varepsilon_0=\ln2$ remains the SPAP constant.
+
+### **Lemma L.8.2a (Preparation Independence of the Carrier Calculation)**
+
+Once the perturbation, coherent-charge transfer, carrier hypotheses, and radiation branch are fixed, the far-zone output depends on those data rather than on the preparation label.
+
+*Proof.* The carrier equations consume the registered source data and do not derive them from the preparation mechanism. ∎
+
+### **Definition L.8.2b (Cavitation-Boundary Temporal-Wave Certificate)**
+
+Fix a finite collapse interval, boundary $\Sigma(t)$, Fourier convention, retained band $\mathcal B_{\mathrm{ret}}$, positive spectral measure $\mu_{\mathrm{spec}}$, and
+$$
+\mathbf p_\omega=
+\int_{\Sigma_*}\boldsymbol\chi_\Sigma(\sigma,\omega)
+\widetilde{\delta\nu}_\Sigma(\sigma,\omega)\,dA.
+\tag{L.8.2b.1}
+$$
+An accepted $\mathfrak C_{\mathrm{cav}}$ certifies localization, small amplitude, the Theorem L.8 and G.3 carrier hypotheses, a Maxwell radiation branch, a non-overlapping nonnegative power ledger, and either a positive-weight line with $\mathbf p_\omega\ne0$ or
+$$
+0<\int_{\mathcal B_{\mathrm{ret}}}
+\omega^4|\mathbf p_\omega|^2\,d\mu_{\mathrm{spec}}(\omega)<\infty.
+\tag{L.8.2b.2}
+$$
+The record also fixes spectral normalization and residuals. Detectability claims require an additional detector transfer, noise, threshold, and decision record.
+
+### **Theorem L.8.2c (Dipole Radiation on the Certified Branch)**
+
+For $\mathbf p(t)=\operatorname{Re}(\mathbf p_\omega e^{-i\omega t})$,
+$$
+\langle u_{\mathrm{EM}}\rangle
+=\frac{\omega^4}{32\pi^2\epsilon_{\mathrm{vac}}c^4r^2}
+\left|\widehat{\mathbf r}\times
+(\widehat{\mathbf r}\times\mathbf p_\omega)\right|^2+O(r^{-3}),
+\tag{L.8.2c.1}
+$$
+$$
+\langle P_{\mathrm{EM}}(\omega)\rangle
+=\frac{\omega^4|\mathbf p_\omega|^2}
+{12\pi\epsilon_{\mathrm{vac}}c^3}.
+\tag{L.8.2c.2}
+$$
+The continuum formula uses the certified measure. Positive finite support and the channel ledger imply $0<P_{\mathrm{EM}}\le P_{\mathrm{agg}}$. In-band support proves a nonzero in-band component, not detectability by itself.
+
+*Proof.* The harmonic electric-dipole solution gives the first identity; angular integration uses $\int_{S^2}|\widehat{\mathbf r}\times(\widehat{\mathbf r}\times\mathbf p)|^2d\Omega=8\pi|\mathbf p|^2/3$. The certificate supplies finiteness and the power inequality. ∎
+
+### **Remark L.8.2d (Scope)**
+
+No transfer function, numerical spectrum, pulse duration, or detector sensitivity follows from acceleration, near-field phase, or thermodynamic cost alone.
 
 ## **L.8 Experimental Protocols and Testable Predictions**
 
@@ -991,7 +979,7 @@ Alternative (Classical Field Theories): Smooth scaling with system size/power
 
 Measurement: Quantify influence capability vs. aggregate complexity proxy (when operational definition established); expect step function not smooth curve
 
-Observable 2: Absolute Causality Bound
+Observable 2: Absolute Deterministic Endpoint-Forcing Bound
 
 PU Prediction: Hard limit $|\Delta P| < 0.5$ for all systems (Theorem 39)
 
@@ -1039,7 +1027,7 @@ Any physical implementation of the consciousness complexity (CC) influence mecha
 
 (ii) Stress-Energy Sourcing (Theorem L.7): All energy expenditure associated with CC influence must enter $T_{\mu\nu}^{(\text{MPU})}$ and contribute to the gravitational field through Einstein's equations (Theorem 50), maintaining thermodynamic consistency on causal horizons via the Clausius relation $\delta Q = T\delta S$.
 
-(iii) Causality Constraint (Theorem 39): The implementation must satisfy $\text{CC}(S) < 0.5$ to prevent deterministic FTL signaling (Postulate 2), ensuring operational causality.
+(iii) Causality Constraint (Theorem 39): The implementation must satisfy $\text{CC}(S) < 0.5$ to prevent deterministic FTL signaling (Postulate 2), ensurin(iii) Endpoint/Zero-Error Reliability Constraint (Theorems 39 and 39a): The implementation must satisfy $\text{CC}(S) < 0.5$ to exclude deterministic endpoint forcing and must satisfy the regular-branch hypotheses for finite-window zero-error exclusion. These are reliability conditions, not Postulate 2; exact causal compliance additionally requires Theorem 39c.
 
 (iv) POP/PCE Optimization (Lemma L.1, Theorem L.1): The context-to-control mapping $\mathcal{M}: \text{context}_S \to$ control parameters must be:
 
@@ -1067,7 +1055,7 @@ Proof of Necessity.
 
 (ii) Stress-Energy Sourcing: Suppose CC influence occurs without contributing to $T_{\mu\nu}^{(\text{MPU})}$. Then energy $E_{\text{CC}}$ is expended but does not source gravity. This violates the equivalence principle emergent from horizon thermodynamics (Section 12) and creates an independent "thought energy" not coupled to geometry, contradicting the unified thermodynamic derivation (Theorem L.7). Therefore all energy must enter $T_{\mu\nu}^{(\text{MPU})}$.
 
-(iii) Causality Constraint: From Theorem 39, deterministic FTL signaling requires $\text{CC} \ge 0.5$ to reliably force quantum outcomes. Postulate 2 prohibits such signaling to prevent paradoxes. Therefore $\text{CC} < 0.5$ is necessary.
+(iii) Causality Constraint: From Theorem 39, deterministic FTL signaling requires $\text{CC} \ge 0.5$ to reliably force quantum outcomes. Postulate 2 prohibits such signaling to prevent paradoxes. Therefore $\text{(iii) Endpoint/Zero-Error Reliability Constraint: Theorem 39 makes $\text{CC}<0.5$ sufficient to exclude deterministic endpoint forcing on the bounded-bias branch, and Theorem 39a excludes regular-branch finite-window zero-error decoding. These statements do not imply Postulate 2; exact pre-lightcone context independence is imposed by Theorem 39c.
 
 (iv) POP/PCE Optimization: The mapping $\mathcal{M}$ implements resource allocation from aggregate complexity to control generation. If $\mathcal{M}$ is not Lipschitz, small context variations cause unbounded control fluctuations, creating divergent variance in the PCE potential $V(x)$ (Appendix D, Equation D.9), invalidating the assumptions needed for the ergodic stationary regime described by Theorem D.5. If $\mathcal{M}$ is unbounded, infinite resources would be required, violating physical realizability. If $\mathcal{M}$ is unstable under feedback, the system cannot maintain coherent $\text{context}_S$, precluding sustained CC. If $\mathcal{M}$ violates the cost-benefit constraint (Equation L.3), PCE dynamics select against it. Therefore all four properties are necessary.
 
@@ -1206,7 +1194,7 @@ The electromagnetic and gravitational mechanisms satisfy all internal consistenc
 
 (e) Temporal Wave Consistency: Electromagnetic (high-frequency) and gravitational (low-frequency) channels emerge as distinct frequency regimes of unified temporal wave modulation $\delta\tau(x,t)$ (Theorem L.8), consistent with thermodynamic derivation (Theorem L.7).
 
-(f) Causality Preservation: Both mechanisms respect CC bound $\text{CC} < 0.5$ (Theorem 39), preventing deterministic FTL signaling while allowing statistical influence (Postulate 3, Section 10).
+(f) Endpoint and Zero-Error Reliability: Both mechanisms respect CC bound $\text{CC} < 0.5$ (Theorem 39), preventing deterministic FTL signaling while allowing statistical influence (Postulate 3, Section 10).
 
 (g) Spatiotemporal Bounds: Influence regions satisfy finite extent (Propositions L.9.3-L.9.5), with energy-range-time trade-offs emerging from resource constraints.
 
@@ -1218,9 +1206,9 @@ The electromagnetic-to-gravitational coupling ratio emerges from the framework's
 
 $$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.81a} $$
 
-Including the discrete-to-continuous interface correction and exact $SU(2)$ transport, Appendix Z gives the Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$ (Theorem Z.26). The certificate-complete comparison row is $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; on the accepted hypercharge-recoil finite Ward branch, Definition Z.27.11k.12 and Theorem Z.27.11k.20 fix $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=137.03599917753023\ldots$, with the registry entry supplied by Corollary Z.27.11k.21.1. The electromagnetic fine structure constant in standard form is:
+Including the discrete-to-continuous interface correction and exact $SU(2)$ transport, Appendix Z gives the Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$ (Theorem Z.26). The operator-realization-open comparison row is $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; on the candidate hypercharge-recoil (operator realization open) finite Ward branch, Definition Z.27.11k.12 and Theorem Z.27.11k.20 fix $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=137.03599917753023\ldots$, with the registry entry supplied by Corollary Z.27.11k.21.1. The electromagnetic fine structure constant in standard form is:
 
-$$ \alpha_{\text{em}} = \frac{e^2}{4\pi\varepsilon_0\hbar c} \tag{L.81b} $$
+$$ \alpha_{\text{em}} = \frac{e^2}{4\pi\epsilon_{\mathrm{vac}}\hbar c} \tag{L.81b} $$
 
 From Appendix E (Equation E.9), the gravitational constant is:
 
@@ -1258,7 +1246,7 @@ The interaction occurs during the 'Evolve' process over duration $\tau_{\text{in
 
 $$ H_{\text{int}}(t) = -\vec{d}_{\text{TLS}} \cdot \vec{E}_{\text{rad}}(t) \approx \hbar\,\delta_{\text{Stark}}(t)\,\sigma_z \tag{L.86} $$
 
-where the off-resonant AC Stark shift is:
+where, for $|\Delta|\gg\max(\Omega_R,\Gamma)$, the single-level off-resonant AC Stark shift is:
 
 $$ \delta_{\text{Stark}}(t) \simeq \frac{\Omega_R^2(t)}{4\Delta(t)}, \quad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}}\cdot\vec{\epsilon}_{\text{rad}}(t)|\,E_0(t)}{\hbar}, \quad \Delta(t)=\omega_{\text{TLS}}-\omega_{\text{rad}}(t) \tag{L.87} $$
 
@@ -1266,7 +1254,7 @@ The operator $\sigma_z = |e\rangle\langle e| - |g\rangle\langle g|$ projects ont
 
 ## **L.11.2 Open System Dynamics and Rate Modulation**
 
-The 'Evolve' process for the target MPU is described by a master equation for its density matrix $\rho$ (consistent with Equation B.8, Appendix B.4):
+The 'Evolve' process for the target MPU is described by a master equation for its density matrix $\rho$ (the Lindblad equation below):
 
 $$ \dot{\rho} = -\frac{i}{\hbar}[H_{\text{TLS}} + H_{\text{int}}(t),\rho] + \sum_k \gamma_k^{(0)}\mathcal{L}_k[\rho] \tag{L.88} $$
 
@@ -1274,7 +1262,7 @@ where $H_{\text{TLS}}$ is the MPU's intrinsic TLS Hamiltonian (part of $\hat{H}$
 
 Defining a dimensionless control field magnitude:
 
-$$ \Phi_S(t)=\frac{E_0(t)}{E_{\text{max}}}, \quad |\Phi_S(t)|\le1 \tag{L.89} $$
+$$ \Phi_S(t)=\frac{E_0(t)^2}{E_{\text{max}}^2}, \quad 0\le\Phi_S(t)\le1 \tag{L.89} $$
 
 where $E_{\text{max}}$ is the maximum field amplitude achievable by $S$. The effective rates can be modeled as:
 
@@ -1290,161 +1278,19 @@ $$ P_{\text{obs}}(i)=\mathrm{tr}\!\big(E_i\,e^{\tau_{\text{int}} L_S}(\rho)\big)
 
 with $\tau_{\text{int}}$ the interaction duration (so $\tau_{\text{int}}L_S$ is dimensionless) and the context dependence of $L_S$ chosen so that $|\Delta P(i)|\le \mathrm{CC}(S)$.
 
-## **L.11.3 Parameter Estimation and Feasibility**
+## **L.11.3 Parameter and Feasibility Status**
 
-### **Aggregate Control and Field Generation:**
+Equations (L.87)--(L.90) give conditional scaling only. A quantitative implementation requires a real differential dynamic polarizability or a valid allowed-transition matrix element, a positive drive frequency, a detuning and linewidth satisfying the perturbative inequality, a field solution consistent with geometry and boundary conditions, and a measured rate susceptibility. None is supplied here, so no field threshold, probability bias, dominance ratio, or detection time is claimed.
 
-Assume an MPU aggregate $S$ can orchestrate $N_{\text{osc}} \sim 10^{12}$ microscopic effective dipoles to generate a coherent local field. If $E_{\text{max}} \sim 2 \times 10^3$ V/m is achievable near the aggregate (via collective effects or engineered structures).
+## **L.11.4 Worked-Example Status**
 
-### **Target MPU Coupling:**
+The former numerical example is not a valid implementation calculation. It modeled the $^{171}\mathrm{Yb}^+$ hyperfine clock transition with a direct electric-dipole matrix element, chose a red detuning larger than the transition frequency so that the stated drive frequency was negative, treated power density as stored energy density, and converted an assumed susceptibility directly into a probability bias. The perturbative Stark formula also cannot be optimized at resonance.
 
-A target MPU with $d_{\text{TLS}} \sim e \cdot (1 \text{ nm}) \approx 1.6 \times 10^{-28}$ C·m and $\omega_{\text{TLS}}/(2\pi) \sim 10$ GHz.
+A valid example must instead use a measured differential dynamic polarizability through allowed optical states, a positive drive frequency, $|\Delta|\gg\max(\Omega_R,\Gamma)$, a retention time when converting power to stored energy, and a specified open-system likelihood. No detection-time claim follows from the present data.
 
-AC Stark shift and susceptibility:
+### **L.11.4a Error-Budget Status**
 
-Let $\gamma_0$ be the baseline ND-RID jump rate over interaction window $\tau_{\text{int}}$. For small Stark modulation,
-
-$$ |\Delta P|\sim \Delta\gamma\,\tau_{\text{int}} = \gamma_0\tau_{\text{int}}\left(\frac{\Delta\gamma}{\gamma_0}\right) $$
-
-so the bias scales linearly with the fractional rate shift and with the baseline interaction probability over $\tau_{\text{int}}$.
-
-With $E_{\text{max}}=2\times10^{3}$ V/m and $d_{\text{TLS}}\approx1.6\times10^{-28}$ C·m, the Rabi frequency is $\Omega_R=d_{\text{TLS}}E_{\text{max}}/\hbar\approx 3.0\times10^{9}$ rad/s. For detuning $\Delta=2\pi\times10$ GHz the off-resonant AC Stark shift is $\delta_{\text{Stark}}\simeq \Omega_R^2/(4\Delta)\approx 3.7\times10^{7}$ rad/s, giving a fractional level shift $\delta_{\text{Stark}}/\omega_{\text{TLS}}\approx 6\times10^{-4}$. For $\Delta=2\pi\times1$ GHz this rises to $\sim 6\times10^{-3}$. Achieving a 5% fractional shift at $\Delta=2\pi\times10$ GHz requires $E\sim 1.85\times10^{4}$ V/m, while $E = 3.6\times10^{4}$ V/m would yield approximately 19% shift (or engineered enhancement/reduced detuning). Within the small-shift regime, modulation of decoherence/transition rates via Equation L.90 may yield detectable probability biases with higher fields, reduced detuning, or cavity/plasmonic enhancements consistent with resource bounds.
-
-## **L.11.4 Worked Example: Complete Calculation for Engineered System**
-
-To make predictions concrete, we present a complete worked calculation for a specific engineered implementation.
-
-### **System Specification:**
-
-Target: Array of 1,000 parallel $^{171}$Yb$^+$ ions (modern trap array)
-
-$\omega_{\text{TLS}}/(2\pi) = 12.642812$ GHz
-
-$d_{\text{TLS}} \approx 1.2 \times 10^{-28}$ C·m
-
-Aggregate: High-power coherent transmitter at $r = 0.5$ m
-
-$N_{\text{osc}} \approx 10^{18}$ synchronized dipoles (approx. 1 μmol of active medium)
-
-Power budget: $P_{\text{agg}} = 2.0$ MW (Industrial power supply)
-
-Radiated Power: $P_{\text{rad}} = 1.0$ MW (50% efficiency optimized by PCE)
-
-Detuning: $\Delta/(2\pi) = 20$ GHz (Increased to maintain perturbative regime)
-
-Operating frequency: $\omega_{\text{rad}} = \omega_{\text{TLS}} - \Delta$
-
-### **Step 1: Radiated Field Amplitude**
-
-From Equation L.9, with $P_{\text{rad}} = 1.0 \times 10^6$ W:
-
-$$ E_0 = \sqrt{\frac{P_{\text{rad}}}{4\pi\varepsilon_0 c r^2}} = \sqrt{\frac{10^6}{4\pi \times 8.85\times10^{-12} \times 3\times10^8 \times 0.25}} \approx 1.10 \times 10^4 \text{ V/m} $$
-
-### **Step 2: AC Stark Shift**
-
-Rabi frequency (Equation L.27):
-
-$$ \Omega_R = \frac{d_{\text{TLS}} E_0}{\hbar} = \frac{(1.2\times10^{-28})(1.1\times10^4)}{1.055\times10^{-34}} \approx 1.25 \times 10^{10} \text{ rad/s} $$
-
-Check Regime Validity: $\Omega_R$ $(1.25\times10^{10})$ < $\Delta$ $(1.26\times10^{11})$.
-
-The ratio $\Omega_R/\Delta \approx 0.1$, ensuring the perturbative formula is valid (10% limit).
-
-AC Stark shift (Equation L.28):
-
-$$ \delta = \frac{\Omega_R^2}{4\Delta} = \frac{(1.25\times10^{10})^2}{4 \times (2\pi \times 20\times10^9)} \approx 3.1 \times 10^8 \text{ rad/s} $$
-
-Fractional shift (Equation L.29):
-
-$$ \frac{\delta}{\omega_{\text{TLS}}} \approx \frac{3.1\times10^8}{2\pi \times 12.64\times10^9} \approx 3.9 \times 10^{-3} \quad (0.39%) $$
-
-### **Step 3: Gravitational Effect (for comparison)**
-
-Energy density ($V_S = 1$ m³):
-
-$$ u_{\text{agg}} = \frac{2\times10^6}{1} = 2\times10^6 \text{ J/m}^3 $$
-
-$$ \rho_{\text{eff}} \approx 2.2 \times 10^{-11} \text{ kg/m}^3 $$
-
-Gravitational phase shift:
-
-Gravitational phase shift (with $\tau_c = 1$ s, $L_q = 10^{-9}$ m, $r = 0.5$ m):
-
-$$ \Delta\tau_d = \frac{\Delta\Phi}{c^2}\tau_c = \frac{4\pi G \rho_{\text{eff}} r L_q}{3c^2}\tau_c \approx 3.4 \times 10^{-47} \text{ s} $$
-
-$$ \Delta\phi_{\text{grav}} = \frac{\omega_{\text{TLS}}}{2\pi}\Delta\tau_d \approx 4.4 \times 10^{-37} \text{ cycles} $$
-
-### **Step 4: Dominance Ratio**
-
-$$ \mathcal{R} \approx \frac{3.9\times10^{-3}}{4.4\times10^{-37}} \sim 9 \times 10^{33} $$
-
-### **Step 5: Probability Bias Estimate**
-
-With high field, we assume a strong coupling susceptibility $\chi_k \approx 0.5$:
-
-$$ |\Delta P| \approx \chi_k \frac{\delta}{\omega_{\text{TLS}}} \approx 0.5 \times 3.9\times10^{-3} \approx 1.9 \times 10^{-3} $$
-
-### **Step 6: Statistical Requirements & Detection Time**
-
-For 5σ detection of $|\Delta P| \approx 0.002$:
-
-$$ N_{\text{trials}} \gtrsim 25 \times \left(\frac{1}{0.002}\right)^2 \approx 6.25 \times 10^6 $$
-
-### **Measurement Setup:**
-
-1,000 parallel ions
-
-1 kHz repetition rate ($10^6$ samples/sec total)
-
-$$ T_{\text{detect}} = \frac{6.25 \times 10^6 \text{ trials}}{10^6 \text{ trials/s}} \approx 6.3 \text{ seconds} $$
-
-### **Step 7: Energy Conservation**
-
-$$ E_{\text{in}} = 2.0 \text{ MJ} \quad (\text{over 1s}) $$
-
-$$ E_{\text{out}} = 1.0 \text{ MJ (Rad)} + 1.0 \text{ MJ (Heat)} $$
-
-Closure is exact.
-
-Conclusion:
-
-This complete calculation demonstrates:
-
-EM effect ($\delta/\omega \sim 4\times10^{-3}$) produces measurable probability bias
-
-Gravitational effect ($\Delta\phi_{\text{grav}} \sim 4\times10^{-37}$) remains negligible
-
-Dominance ratio $\mathcal{R} \sim 10^{34}$ confirms theoretical predictions
-
-Energy conservation is exactly maintained
-
-Detection achievable in 6.3 seconds with modern trap arrays
-
-All predictions are quantitative and falsifiable
-
-## **L.11.5 Error Budget Analysis**
-
-For the worked example (L.11.4), the dominant error sources are:
-
-Field calibration: $\Delta E_0/E_0 \sim 1%$ → $\Delta(\delta/\omega) \sim 2%$
-
-Detuning uncertainty: $\Delta\Delta/(2\pi) \sim 1$ MHz → $\Delta(\delta/\omega) \sim 0.05%$
-
-Ion number: $\Delta N/N \sim 3%$ (counting statistics)
-
-Temperature drift: contributes to $T_2$ via $\Delta\gamma_{\text{thermal}} \sim 10^{-4}$ s⁻¹
-
-Combined uncertainty via quadrature sum:
-$$ \sigma_{\text{total}}(|\Delta P|) = \sqrt{(\sigma_{\text{field}}\cdot\partial|\Delta P|/\partial E_0)^2 + (\sigma_{\Delta}\cdot\partial|\Delta P|/\partial\Delta)^2 + \sigma_{\text{stat}}^2} $$
-
-With $\sigma_{\text{field}}/E_0 \sim 0.01$, $\sigma_{\Delta}/(2\pi) \sim 1$ MHz, $\sigma_{\text{stat}} \sim 3\times10^{-5}$ for $N = 10^6$ trials:
-$$ \sigma_{\text{total}}(|\Delta P|) \approx \sqrt{(4\times10^{-5})^2 + (2\times10^{-6})^2 + (3\times10^{-5})^2} \sim 5 \times 10^{-5} $$
-
-Illustrative signal-to-noise ratio: $\mathrm{SNR} = |\Delta P|/\sigma_{\text{total}} = 1.9\times10^{-3}/(5\times10^{-5}) \approx 38$ (for the stated noise model and $N=10^6$ trials)
-
-Under the stated scaling and noise assumptions, the estimated effect is well above the expected noise floor, suggesting detectability with appropriate error mitigation and experimental controls.
-
-The Engineered System enables these deviations to manifest on practical timescales, while maintaining the validity of the perturbative regime. The estimates indicate that, under the stated scaling and noise assumptions, high-complexity MPU aggregates could produce detectable deviations in quantum outcome frequencies; whether a given experiment achieves statistical significance depends on trial count, noise floors, and control of systematic effects.
+Because the implementation and likelihood are open, no numerical error budget or detection time is registered. The section retains only the conditional scaling formulas (L.87)--(L.90).
 
 ## **L.11.5 Relationship to Appendix S: Gravitational Self-Limitation**
 
@@ -1482,7 +1328,7 @@ This dual analysis demonstrates framework robustness. CC is simultaneously:
 - **Thermodynamically rigorous** (this appendix)
 - **Self-limiting via gravitational feedback** (Appendix S, Sections S.3-S.4)
 - **Self-limiting via decoherence** (Appendix S, Section S.7)
-- **Causality-bounded** ($\alpha_{CC,max} < 0.5$, Theorem 39, interpreted gravitationally in Section S.5)
+- **Endpoint-bias-bounded** ($\alpha_{CC,max} < 0.5$, Theorem 39, interpreted gravitationally in Section S.5); causal compliance separately requires Theorem 39c
 
 No "runaway" or "unbounded" CC effects are possible; multiple independent mechanisms enforce physical constraints.
 
@@ -1505,7 +1351,7 @@ $$
 
 **Numerical example** (human-scale aggregate): For $\tau_c \sim 0.1$ s, $P_{\text{context}} \sim 20$ W (component of typical metabolic $P_{\text{agg}} \sim 100$ W), $V_S \sim 10^{-3}$ m³, $w_c = 1/3$, $r \sim 0.1$ m, $L_q \sim 10^{-9}$ m (nanoscale target), the coefficient $K \approx 6.9 \times 10^{-53}$ s/W yields $\Delta\tau_d \approx 1.4 \times 10^{-51}$ s.
 
-Appendix S shows that when $\Delta\tau_d$ becomes comparable to the inverse energy scale of the target quantum system ($\sim \hbar/\Delta E$), appreciable dephasing occurs (Section S.7), suppressing CC efficacy. For systems attempting very high CC (approaching the 0.5 causality bound), this self-limitation prevents:
+Appendix S shows that when $\Delta\tau_d$ becomes comparable to the inverse energy scale of the target quantum system ($\sim \hbar/\Delta E$), appreciable dephasing occurs (Section S.7), suppressing CC efficacy. For systems attempting very high CC (approaching the 0.5 deterministic endpoint-forcing bound), this self-limitation prevents:
 
 - Metabolically unsustainable power requirements (power diverges as $\text{CC} \to \alpha$, Equation S.5)
 - Gravitational back-reaction disrupting target coherence (Section S.3)
@@ -1522,7 +1368,7 @@ Appendix S shows that when $\Delta\tau_d$ becomes comparable to the inverse ener
 
 **Section S.4:** PCE-optimal equilibrium CC* balancing utility against cost plus self-limitation
 
-**Section S.5:** Dual interpretation of causality bound: information-theoretic (Theorem 39) and gravitational collapse (Schwarzschild limit)
+**Section S.5:** Dual interpretation of deterministic endpoint-forcing bound: information-theoretic (Theorem 39) and gravitational collapse (Schwarzschild limit)
 
 **Section S.6:** Entanglement-mediated non-local influence respecting no-signaling while allowing statistical correlations
 
@@ -1557,7 +1403,7 @@ This reframing has five consequences beyond those already established in Appendi
 
 The AC Stark coupling parameters — transition frequency $\omega_{\text{TLS}}$, dipole moment $\vec{d}_{\text{TLS}}$, rate susceptibility $\chi_k$, and instantaneous state $\rho_T$ — are fixed properties of the target MPU $T$ but are **unknown** to aggregate $S$ in the absence of prior interaction. From the perspective of $S$, before any causal contact, these quantities are distributed according to some prior $\pi(\theta_T)$ over the space $\Theta_T$ of possible target configurations $\theta_T := (\omega_{\text{TLS}}, \vec{d}_{\text{TLS}}, \chi_k, \rho_T)$.
 
-The aggregate acquires knowledge about $\theta_T$ exclusively through ND-RID interactions (Definition 6, Definition 27) within its causal past. Each such interaction costs $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per information-resolving step (Theorem 31) and transfers at most $C_{\max}(f_{RID}) < \ln d_0$ nats (Theorem E.2), with the PCE-optimal sharpening $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon$ (Appendix E, Eq. E.15). The context state $\text{context}_S(t)$ (Definition L.1) encodes, through PCE optimization (Definition 15), the minimal sufficient statistic extracted from this interaction history for the purpose of influencing $T$'s 'Evolve' parameters. This is the PU relational definition of information (Definition 1): a pattern constitutes information for $S$ if and only if $S$ can process it to achieve $\mathbb{E}[\Delta Q] > 0$ — here, to improve the achievable bias $|\Delta P|$ on target $T$.
+The aggregate acquires knowledge about $\theta_T$ exclusively through ND-RID interactions (Definition 6, Definition 27) within its causal past. Each such interaction costs $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per information-resolving step (Theorem 31) and transfers at most $C_{\max}(f_{RID}) < \ln d_0$ nats (Theorem E.2), with the PCE-optimal sharpening $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon$ (Appendix E, Eq. E.15). The context state $\text{context}_S(t)$ (Definition L.1) encodes, through PCE optimization (Definition 15), the minimal sufficient statistic extracted from this interaction history for the purpose of influencing $T$'s 'Evolve' parameters. This is the PU relational definition of information (Definition 1): a pattern constitutes information for $S$ if and only if $S$ can process it to achieve $\mathbb{E}[\Delta Q] > 0$ — here, to improve the achievable bias $|\Delta P|$ on target $T$.
 
 #### **L.12.2.2 The Causal Interaction Ensemble**
 
@@ -1577,7 +1423,9 @@ $$
 
 The first inequality is a data-processing bound, since $\text{context}_S$ and $\theta_T$ are obtained from the physical subsystems $S$ and $T$ by (possibly coarse-graining) channels; the second follows because $T$ is a subsystem of the environment $E$ of $S$, so $I(S:T) \leq I(S:E) = \mathcal{I}_{\text{rel}}(S)$ (Definition N.6). The quantity lies in $[0, \mathcal{I}_{\max}]$ where $\mathcal{I}_{\max} \leq K \cdot C_{\max}$ for any causal history containing at most $K$ ND-RID interactions (Theorem E.2). In particular, $\mathcal{I}(S \to T,t) > 0$ if and only if $\text{context}_S(t)$ and $\theta_T$ are not independent under $\mathcal{P}_{\text{causal}}$.
 
-*Connection to target mass:* Since $S$ is part of the environment of $T$, we also have $I(S:T)_t \leq \mathcal{I}_{\text{rel}}(T)_t$. Combined with Theorem N.5 (mass–information relation $m_T = \mathcal{I}_{\text{rel}}(T)/(2\sqrt{8\varepsilon_0}) \cdot m_P$), this provides a mass-dependent upper scale on the relational information that can, in principle, be shared with a target, while the actual causal information $\mathcal{I}(S \to T,t)$ remains limited by causal history and channel capacity. Heavier targets have higher relational information content and therefore require more causal interaction history to model accurately — their quantum structure is informationally denser relative to the predictive substrate.
+*Conditional connection to target mass:* The inequality $I(S:T)_t\le\mathcal I_{rel}(T)_t$ is branch independent. Only when all compared targets share $\mathfrak B_{mass}$ and one universal mass-per-information coefficient may Theorem N.5 rewrite that upper scale in terms of $m_T$. Off that branch, no monotone heavier-target conclusion follows; actual causal information remains limited by causal history and channel capacity.
+
+
 
 **Lemma L.12.1 (Zero Causal Information Without Contact).** When $S$ and $T$ have had no causal contact up to time $t$ (i.e., $\mathcal{H}_{ST}(t)$ is empty), $\mathcal{I}(S \to T,t) = 0$.
 
@@ -1585,7 +1433,7 @@ The first inequality is a data-processing bound, since $\text{context}_S$ and $\
 
 #### **L.12.2.3 Temporal Ordering of Causal Information: The Arrow of Time Constraint**
 
-A critical constraint from Appendix O (Theorem O.3): causal information can only flow in the direction of the arrow of time. The thermodynamic ratchet — $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ entropy production per non-trivial ND-RID cycle, yielding macroscopic reversal probability $\leq e^{-N\varepsilon}\le 2^{-N}$ (Theorem O.3) — ensures that information acquisition is strictly forward-directed. Formally, any interaction event $N_k$ contributing to $\mathcal{H}_{ST}(t)$ must satisfy $N_k \in \text{past}(t)$. Future interaction events are inaccessible to the context state at time $t$.
+A critical constraint from Appendix O (Theorem O.3): causal information can only flow in the direction of the arrow of time. On the branch carrying Theorem O.3's common path measures and $\sigma_k\ge h_{\min}>0$, the bound $P_R/P_F\le e^{-Nh_{\min}}$ supports forward-directed acquisition; the factor $2^{-N}$ requires $h_{\min}\ge\ln2$ and does not follow from reset heat. Formally, any interaction event $N_k$ contributing to $\mathcal{H}_{ST}(t)$ must satisfy $N_k \in \text{past}(t)$. Future interaction events are inaccessible to the context state at time $t$.
 
 **Corollary L.12.2 (Past-Directed Causal Information; Monotonicity on the Lossless-Retention Branch).** For each time $t$, the causal information content $\mathcal{I}(S \to T,t)$ is determined solely by the $S$–$T$ causal history $\mathcal{H}_{ST}(t)$ up to time $t$ (i.e., by ND-RID events in the causal past of $S$), and cannot depend on future events occurring after $t$. On the lossless-retention branch — under which $\text{context}_S(t+\Delta t)$ functions as a refinement of, rather than a lossy compression of, $\text{context}_S(t)$ as a sufficient statistic for $\theta_T$ — $\mathcal{I}(S \to T,t)$ is monotonically non-decreasing in $t$. In general, the cumulative accessible information from $\mathcal{H}_{ST}(t)$ is non-decreasing, while the retained mutual information $I(\text{context}_S(t); \theta_T)$ may decrease under PCE-driven compression, forgetting, or finite-memory overwrites.
 
@@ -1748,7 +1596,7 @@ Boundary conditions: at $\mathcal{I}(S \to T) = \mathcal{I}_{\max}$, the posteri
 
 **Step 1 (PCE drives maximal influence).** PCE minimizes $V_{\mathcal{I}}$ (Corollary L.12.5), which requires maximizing utility $U_{\text{bias}}(I_0)$. Since $U_{\text{bias}}$ scales with $|\Delta P| \leq \text{CC}(S) \cdot \eta_{\text{res}}(S,T)$ (Equation L.106), PCE drives $S$ to maximize $\eta_{\text{res}}(S,T)$ for any target $T$ it aims to influence.
 
-**Step 2 (Maximizing influence requires causal information).** By Proposition L.12.1 and Corollary L.12.4, achieving any target-conditioned resonance advantage beyond an information-free baseline requires $\mathcal{I}(S \to T) > 0$. By Definition L.12.1, $\mathcal{I}(S \to T) > 0$ requires a non-empty interaction history $\mathcal{H}_{ST}$ — at least one ND-RID interaction transferring information about $\theta_T$ to $\text{context}_S$, at cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and with information-disturbance constraint $\kappa_r > 0$ (Theorem 33).
+**Step 2 (Maximizing influence requires causal information).** By Proposition L.12.1 and Corollary L.12.4, achieving any target-conditioned resonance advantage beyond an information-free baseline requires $\mathcal{I}(S \to T) > 0$. By Definition L.12.1, $\mathcal{I}(S \to T) > 0$ requires a non-empty interaction history $\mathcal{H}_{ST}$ — at least one ND-RID interaction transferring information about $\theta_T$ to $\text{context}_S$, at cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31) and with information-disturbance constraint $\kappa_r > 0$ (Theorem 33).
 
 **Step 3: Three Independent Mechanisms Confining Causal History Within the Lightcone.**
 
@@ -1756,7 +1604,7 @@ Boundary conditions: at $\mathcal{I}(S \to T) = \mathcal{I}_{\max}$, the posteri
 
 *(3b) Thermodynamic Cost of Range Extension (Theorem E.10.1):* PCE optimization prohibits maintaining correlations across distance $R$ at entropy cost $S_{\text{total}}(R) = R\ln 2/\delta$ (Theorem E.10.1). For targets outside the causal history region, the cost of establishing and maintaining $\mathcal{I}(S \to T) > 0$ grows linearly with separation while utility $U_{\text{bias}}$ remains bounded. PCE therefore selects $I_0^* = 0$ for all causally disconnected targets, reinforcing the lightcone restriction thermodynamically.
 
-*(3c) Arrow of Time (Theorem O.3, Corollary L.12.2):* The thermodynamic ratchet ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per cycle, Theorem 31; macroscopic reversal probability $\leq 2^{-N}$, Theorem O.3) ensures that causal information can only be acquired from the **temporal past**. Future interactions cannot contribute to $\mathcal{I}(S \to T,t)$ (Corollary L.12.2). This rules out any retrocausal pathway that might otherwise provide a future-directed route to causal information acquisition circumventing mechanisms (3a) and (3b).
+*(3c) Arrow of Time (Theorem O.3, Corollary L.12.2):* The pathwise branch of Theorem O.3 ($P_R/P_F\le e^{-Nh_{\min}}$, with $2^{-N}$ only if $h_{\min}\ge\ln2$) ensures that causal information can only be acquired from the **temporal past**. Future interactions cannot contribute to $\mathcal{I}(S \to T,t)$ (Corollary L.12.2). This rules out any retrocausal pathway that might otherwise provide a future-directed route to causal information acquisition circumventing mechanisms (3a) and (3b).
 
 The three mechanisms (3a)–(3c) operate from distinct physical principles — ND-RID propagation structure, thermodynamic range cost, and thermodynamic temporal ratchet — and are logically independent. Their conjunction provides a triply-enforced confinement of the causal history $\mathcal{H}_{ST}$ within the past lightcone.
 
@@ -1773,7 +1621,7 @@ The results of this section permit a unified restatement of the CC influence mec
 |Level |Description |Key Quantity |Source |
 |:------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|:--------------------------------|
 |**Temporal-ontological** |Awareness modulates its own predictive substrate $\tau(x_T,t)$ via temporal engineering; EM channel is high-frequency, gravitational is low-frequency component of same temporal wave |$\delta\tau_{\text{CC}}(x_T, t)$; $\lambda_{\text{drift}}^{\text{eff}}$|Def. P.10.1; Def. O.1; Rem O.4; Cor. L.12.3|
-|**Information-theoretic**|CC influence bounded by mutual information $\mathcal{I}(S \to T)$ between context state and target configuration; acquired through causal ND-RID history at cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per ND-RID step|$\mathcal{I}(S \to T)$; $\mathcal{I}_{\text{rel}}$ |Def. L.12.1; Def. N.6; Thm L.12.2|
+|**Information-theoretic**|CC influence bounded by mutual information $\mathcal{I}(S \to T)$ between context state and target configuration; acquired through causal ND-RID history at cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per ND-RID step|$\mathcal{I}(S \to T)$; $\mathcal{I}_{\text{rel}}$ |Def. L.12.1; Def. N.6; Thm L.12.2|
 |**Operational** |Context state maps via PCE-optimal $\mathcal{M}$ to signal $N(t)$; resonance factor $\eta_{\text{res}}$ quantifies coupling efficiency; $\lambda_{\text{drift}}$ sets perspective drift strength |$\eta_{\text{res}}(S,T)$; $\lambda_{\text{drift}}^{\text{eff}}$ |Prop. L.12.1; Cor. L.12.3 |
 |**Field-theoretic** |Coherent EM field couples to target TLS via dipole interaction; AC Stark shift modulates Lindblad rates $\gamma_k$ |$\Omega_R$, $\Delta$, $\chi_k$ |L.11; Eq. L.100 |
 
@@ -1809,7 +1657,7 @@ where $\eta_{\text{ent}} \in [0,1]$ satisfies $\mathcal{I}_{\text{ent}}(S, \omeg
 
 *Proof.* For the two contexts, define $\Delta\omega := \omega_{C_{A,1}} - \omega_{C_{A,2}}$. Then $|\omega_{C_{A,1}}(A \otimes B) - \omega_{C_{A,2}}(A \otimes B)| = |\operatorname{tr}(\Delta\omega \cdot A \otimes B)| \leq |\Delta\omega|_1 \cdot |A| \cdot |B|$. The CC bound limits the magnitude of context-dependent bias injected by $S_A$ (Theorem 39). The fraction of that bias that can appear in a chosen joint correlator depends on correlation strength of the shared resource and basis alignment; we denote this dimensionless efficiency by $\eta_{\text{ent}}(S_A, AB) \in [0,1]$. Hence $|\Delta\omega|_1 \leq \text{CC}(S_A) \cdot \eta_{\text{ent}}(S_A, AB)$, giving Equation L.110. When $\mathcal{I}_{\text{ent}} = 0$, the context modulation is uncorrelated with $\mathcal{B}_{AB}$; averaging over the prior gives zero net aligned bias, hence $\eta_{\text{ent}} = 0$. ∎
 
-**Theorem L.12.8 (Entanglement Bias Requires Shared Past).** Non-trivial entanglement-correlation bias on the local-CPTP branch requires that $S$ participated in preparing, measuring, or contextually conditioning the correlations of $\omega_{AB}$ through ND-RID interactions within the shared causal past of $\mathcal{O}_A$ and $\mathcal{O}_B$. No causal paradox arises: when the continuum AQFT limit of Appendix F applies, operator locality (Corollary F.1) is preserved, and causality (Postulate 2, Theorem 39) is maintained.
+**Theorem L.12.8 (Entanglement Bias Requires Shared Past).** Non-trivial entanglement-correlation bias on the local-CPTP branch requires that $S$ participated in preparing, measuring, or contextually conditioning the correlations of $\omega_{AB}$ through ND-RID interactions within the shared causal past of $\mathcal{O}_A$ and $\mathcal{O}_B$. No causal paradox arises: when the continuum AQFT limit of Appendix F applies, operator locality (Corollary F.1) is preserved, and exact Bob-marginal invariance maintains Postulate 2 by Lemma 10.2 and Theorem 39c.
 
 *Proof.* $\eta_{\text{ent}} > 0$ requires $\mathcal{I}_{\text{ent}}(S, \omega_{AB}) > 0$, which requires a non-empty causal history between $S$ and $\theta_{AB}$. The entangled state $\omega_{AB}$ was itself established through ND-RID interactions in the common causal past of $\mathcal{O}_A$ and $\mathcal{O}_B$ (by Lemma L.12.1 generalized to multipartite systems). The same three-mechanism locality enforcement of Theorem L.12 applies: ND-RID propagation speed (3a), thermodynamic range cost (3b), and arrow of time (3c) together confine the preparation history to the shared past lightcone. ∎
 
@@ -1852,7 +1700,9 @@ for every $B$, which is exactly (L.111). Hence a Bob-side marginal anomaly canno
 
 The AC Stark mechanism is the physical implementation of a principle already implicit in the framework's foundational axioms: to bias a system's quantum dynamics, organized awareness must first have modeled that system's quantum structure through prior physical engagement. The key results are:
 
-- **Summary of Definition L.12.1 and Equations L.92–L.93:** Causal information $\mathcal{I}(S \to T,t)$ is defined as mutual information under $\mathcal{P}_{\text{causal}}$, satisfying the inequality chain $\mathcal{I}(S \to T) \leq I(S:T) \leq \mathcal{I}_{\text{rel}}(S)$ by data processing and subadditivity respectively. The mass connection from Theorem N.5 grounds the epistemic cost of influence in the target's inertial properties.
+- **Summary of Definition L.12.1 and Equations L.92–L.93:** Causal information $\mathcal{I}(S \to T,t)$ is defined as mutual information under $\mathcal{P}_{\text{causal}}$, satisfying the inequality chain $\mathcal{I}(S \to T) \leq I(S:T) \leq \mathcal{I}_{\text{rel}}(S)$ by data processing and subadditivity respectively. On a common $\mathfrak B_{mass}$ branch only, Theorem N.5 converts the relational-information upper scale into a target-mass upper scale; the information inequality itself is branch independent.
+
+
 - **Summary of Corollary L.12.2:** The arrow of time (Appendix O, Theorem O.3) makes $\mathcal{I}(S \to T,t)$ strictly past-directed and monotonically non-decreasing: only prior interactions contribute.
 - **Section L.12.3 (Temporal Engineering):** CC influence is temporal engineering (Definition P.10.1) — modulation of $\tau(x_T, t)$ via temporal waves (Appendix O, Remark O.4). The AC Stark mechanism is the high-frequency component; the gravitational channel is the low-frequency component. Causal information governs modulation precision (Equation L.95) and perspective drift strength (Corollary L.12.3). Acceleration degrades causal information acquisition rate (Equation L.99, Appendix N, Theorem N.UCT).
 - **Summary of Proposition L.12.1 and Equations L.101–L.102:** Resonance factor $\eta_{\text{res}}$ improves under refinement of causal information, proved via the coarse-graining/policy-set inclusion argument. Corollary L.12.4 establishes that any target-conditioned advantage beyond an information-free baseline requires $\mathcal{I}(S \to T) > 0$.
@@ -1863,9 +1713,9 @@ The AC Stark mechanism is the physical implementation of a principle already imp
 
 **Remark L.12.6 (Global Entangled Accounting).** The section has been written from the aggregate's vantage — what it must acquire, model, and do — but this framing risks a misreading: that the aggregate acts on the universe from outside, with the probability shift as the universe's reaction. Neither is correct within the PU framework, and the distinction matters.
 
-The global state $\omega$ is universally entangled (Appendix F, Equation F.4; Definition L.12.2). The aggregate $S$ is not external to the system it influences — it is a subsystem of the same global entangled state $\omega$ that contains $T$ (Definition 29). When $S$ refines its context state through ND-RID interactions, acquiring $\mathcal{I}(S \to T)$ at thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per step (Theorem 31), it physically reconfigures a subsystem of $\omega$. Because $S$ and $T$ are already connected through the entanglement structure of $\omega$, this reconfiguration is not followed by an influence propagating to $T$ — the reconfiguration of $S$'s internal degrees of freedom and the shift in $T$'s 'Evolve' probabilities are the same event, expressed at two levels of the same global state. No separate signal is transmitted; no arbiter adjudicates. The probability shift $|\Delta P|$ is not the universe reacting to the model update: it **is** the model update, as read out through the entanglement-enforced consistency of $\omega$.
+The global state $\omega$ is universally entangled (Appendix F, Equation F.4; Definition L.12.2). The aggregate $S$ is not external to the system it influences — it is a subsystem of the same global entangled state $\omega$ that contains $T$ (Definition 29). When $S$ refines its context state through ND-RID interactions, acquiring $\mathcal{I}(S \to T)$ at thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per step (Theorem 31), it physically reconfigures a subsystem of $\omega$. Because $S$ and $T$ are already connected through the entanglement structure of $\omega$, this reconfiguration is not followed by an influence propagating to $T$ — the reconfiguration of $S$'s internal degrees of freedom and the shift in $T$'s 'Evolve' probabilities are the same event, expressed at two levels of the same global state. No separate signal is transmitted; no arbiter adjudicates. The probability shift $|\Delta P|$ is not the universe reacting to the model update: it **is** the model update, as read out through the entanglement-enforced consistency of $\omega$.
 
-The universe has a budget, a global entangled state, and a consistency requirement. What distinguishes the aggregate as modeler from the target as influenced is not an ontological asymmetry in $\omega$ but a perspectival one: the relational definition of information (Definition 1) and the perspective transition kernel (Appendix M, Equation M.2) together fix which subsystem's PCE optimization is doing the selecting, and from which vantage the probability shift is read out. The thermodynamic budget — exact, unavoidable, global — is the only accounting mechanism. Every ND-RID interaction that refines the internal model is a ledger entry at cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31). The bias $|\Delta P| \leq \text{CC}(S) \cdot \eta_{\text{res}}(S,T)$ (Equation L.106) is what the ledger reads when consistency is restored. The aggregate updates its internal model of reality; because it is part of reality and connected to it through $\omega$, that update **is** an update to reality — and the probability shift is the form that update takes at the target's location.
+The universe has a budget, a global entangled state, and a consistency requirement. What distinguishes the aggregate as modeler from the target as influenced is not an ontological asymmetry in $\omega$ but a perspectival one: the relational definition of information (Definition 1) and the perspective transition kernel (Appendix M, Equation M.2) together fix which subsystem's PCE optimization is doing the selecting, and from which vantage the probability shift is read out. The thermodynamic budget — exact, unavoidable, global — is the only accounting mechanism. Every ND-RID interaction that refines the internal model is a ledger entry at cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31). The bias $|\Delta P| \leq \text{CC}(S) \cdot \eta_{\text{res}}(S,T)$ (Equation L.106) is what the ledger reads when consistency is restored. The aggregate updates its internal model of reality; because it is part of reality and connected to it through $\omega$, that update **is** an update to reality — and the probability shift is the form that update takes at the target's location.
 
 The locality of CC influence is not an add-on constraint but a triply-enforced organic consequence of the same optimization imperative — the drive to build accurate, resource-efficient predictive models — that generates Consciousness Complexity in the first place. Awareness can only effectively bias what it has modeled; it can only model what it has interacted with; and interaction is constrained by propagation speed, thermodynamic range cost, and the unidirectional arrow of time. In the PU framework, the physics of resonance, the epistemics of prediction, and the thermodynamics of temporal flow are manifestations of the same underlying structure.
 
@@ -1891,7 +1741,7 @@ This appendix establishes the energy accounting, physical mechanisms, and thermo
 
 (8) Coupling Hierarchy (Theorem L.11): Ratio $\alpha_{\text{em}}/\alpha_{\text{grav}} \sim 10^{43}$ emerges from information-theoretic structure: gauge coherence optimization yields $\alpha_{\text{em}} \sim 10^{-2}$ (Appendix Z), horizon information density yields $\alpha_{\text{grav}} \sim 10^{-45}$ (Appendix E).
 
-(9) Universal Requirements (Theorem L.9): Implementation-independent constraints including threshold behavior, energy conservation, stress-energy sourcing, causality bounds, and POP/PCE optimization.
+(9) Universal Requirements (Theorem L.9): Implementation-independent constraints including threshold behavior, energy conservation, stress-energy sourcing, deterministic endpoint-forcing bounds, and POP/PCE optimization.
 
 (10) Spatiotemporal Bounds (Propositions L.9.3-L.9.5): Influence regions have finite spatial extent $R_{\text{eff}} \sim \sqrt{P_{\text{agg}}/(\epsilon_{\text{detect}} k_{\text{impl}})}$, temporal extent $\tau_c \sim 1/\Gamma_{\text{context}}$, with energy-range-time trade-offs.
 
@@ -1944,3 +1794,5 @@ The electromagnetic-gravitational coupling hierarchy ($\sim 10^{36}$ to $10^{43}
 The connection to biological observations (Section L.4.1) remains hypothetical but provides testable framework for Dr. Levin's empirical findings of scale-free cognition and bioelectric pattern formation. Whether biology implements CC through the proposed mechanisms is an open empirical question with clear experimental pathways.
 
 The coherent-charge AC Stark mechanism (detailed in L.11) provides one experimentally accessible manifestation optimized for engineered systems. The framework permits diverse physical realizations while maintaining universal thermodynamic constraints, establishing that high-complexity MPU aggregates can influence quantum outcomes through physically grounded, thermodynamically consistent mechanisms rooted in the primacy of awareness itself.
+
+**Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.

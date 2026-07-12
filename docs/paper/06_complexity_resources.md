@@ -48,13 +48,13 @@ where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of 
 $$
 G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}(f_{RID})}
 $$
-The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At the PCE-Attractor (Definition 15a), admissibility requires $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), and response-null dissipative overhead is PCE-dominated. For the minimal MPU with $d_0=8$ (Theorem 23), the residual-budget branch uses the structural floor in Equation E.15, giving $C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2$, which determines $G$ in terms of the microscopic MPU parameters. ∎
+The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At the PCE-Attractor (Definition 15a), admissibility requires $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31), and response-null dissipative overhead is PCE-dominated. For the minimal MPU with $d_0=8$ (Theorem 23), the residual-budget branch uses the structural floor in Equation E.15, giving $C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2$, which determines $G$ in terms of the microscopic MPU parameters. ∎
 
 **Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by finite predictive-transfer capacity: the structural reset-support deficit $C_{\max}\le\ln d_0-\ln r$ on completed SPAP reset cycles (specializing to $\ln d_0-\ln2$ for the binary reset) and, on refresh/minorization branches, the strict contractive bound $C_{\max}<\ln d_0$.*
 
 **Remark 6.0.1: Origin of the Constraint.** The structural capacity deficit traces to the irreversibility of self-referential prediction:
 $$
-\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Prop E.2a}} C_{\max}\le \ln d_0-\ln2.
+\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \text{completed binary reset-support certificate}\xrightarrow{\text{Prop E.2a}} C_{\max}\le \ln d_0-\ln2.
 $$
 On the refresh/minorization branch this is accompanied by the stricter channel-dynamical route
 $$
@@ -78,7 +78,9 @@ The adaptation of predictive systems is governed by an optimization principle th
 
 **6.1.1 Definition 14 (Def 14): Optimal Complexity Allocation Criteria**
 
-Given the relationship between Predictive Physical Complexity ($C \equiv C_P$, assumed operationally tracked by $\langle \hat{C}_v \rangle$ per Theorem 2) and achievable Predictive Performance $PP(C, \hat{C}_{target})$ (derived later in Theorem 19), the Optimal Complexity Allocation $C^*$ represents the level of complexity that maximizes the net benefit under resource constraints. For a given estimated environmental complexity $\hat{C}_{target}$ (Definition 21) and effective resource scarcity $\lambda$ (Definition 20), $C^*$ satisfies the following criteria at equilibrium:
+Given the relationship between Predictive Physical Complexity ($C \equiv C_P$, assumed operationally tracked by $\langle \hat{C}_v \rangle$ per Theorem 2) and achievable Predictive Performance $PP(C, \hat{C}_{target})$ (derived later in Theorem 19), the Optimal Complexity Allocation $C^*$ represents the level of complexity that maximizes the net benefit under resource constraints. For a given registered internal task-scale coordinate $\hat{C}_{target}$ (Definition 21) and effective resource scarcity $\lambda$ (Definition 20)
+
+
 1.  **Marginal Benefit Equals Marginal Cost:** The marginal improvement in performance, converted to an equivalent power benefit rate via factor $\Gamma_0$ (Definition 20), equals the marginal increase in the total weighted resource cost rate:
     $$
     \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda R'(C^*) + R_I'(C^*) \quad \text{(18)}
@@ -144,7 +146,7 @@ Because the feasible set $\{\mu:\ C_P(\mu)\le C\}$ is nested in $C$, $PP_{\max}(
 
 **6.2.4 Physical Nature of Complexity Transformations (Thermodynamic Irreversibility)**
 
-The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31), any logically irreversible operation that must be physically instantiated and cyclically reset incurs irreducible entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
+The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), any logically irreversible operation that must be physically instantiated and cyclically reset incurs irreducible entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
@@ -384,17 +386,18 @@ The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **
 
 1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23 and Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates that $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
     $$
-    \Gamma_0 \gtrsim P_{min}=R(C_{op}) \gtrsim \frac{n_{irr}\,k_B T\,\varepsilon_{\mathrm{phys}}}{\tau_{\text{min}}}
-\ge \frac{n_{irr}\,k_B T\,\varepsilon_0}{\tau_{\text{min}}}
-\ge \frac{k_B T \ln 2}{\tau_{\text{min}}} \quad \text{(27)}
+    \Gamma_0 \gtrsim P_{\min}=R(C_{op}) \gtrsim
+\frac{k_BT}{\tau_{\min}}
+\sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j)
+\quad\text{(27)}
     $$
-    where $n_{irr}\ge 1$ is the number of logically irreversible merges that must be reset per minimal cycle and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ is the irreducible dimensionless entropy cost per such merge (Theorem 31). If the cycle rate satisfies $\nu \approx 1/\tau_{\text{min}}$, Equation (27) is equivalently
+    where the sum includes each registered reset once and each $R_j$ contains all retained unchanged side information (Theorem 31). A positive universal floor requires a separate bound $H_{q_j}(P_j\mid R_j)\ge h_{\min}>0$. If the cycle rate satisfies $\nu \approx 1/\tau_{\text{min}}$, Equation (27) is equivalently
     $$
-    \Gamma_0 \gtrsim n_{irr}\,k_B T\,\varepsilon_{\mathrm{phys}}\,\nu.
+    \Gamma_0 \gtrsim k_BT\nu\sum_j H_{q_j}(P_j\mid R_j).
     $$
-2.  **Upper Bound (from $\varepsilon$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction, provides an upper bound. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon_{\mathrm{phys}}\ge k_B T\varepsilon_0$. For thermodynamically consistent energy valuation:
+2.  **Upper Bound (from $\varepsilon$):** A registered reset supplies the heat lower bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ (Theorem 31); it does not by itself provide an upper bound on the phenomenological conversion factor $\Gamma_0$. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), may be compared with an independently registered energy budget. Such a comparison is a calibration condition, not a consequence of Landauer:
      $$
-    \Gamma_0 \lesssim \frac{k_B T \varepsilon_{\mathrm{phys}} \nu}{\Delta PP_{max}} =: \Gamma_{0,crit} \quad \text{(28)}
+    \Gamma_0 \lesssim \frac{P_{\mathrm{avail}}}{\Delta PP_{\max}} =: \Gamma_{0,\mathrm{crit}} \quad \text{(28)}
     $$
 3.  **Equilibrium Calibration Identity:** At a stable equilibrium configuration characterized by complexity $C^*$ and performance $PP^*$, the Adaptation Driving Force vanishes: $\Psi(C^*, PP^*) = 0$ (Equation 18). This provides a calibration identity relating the constant $\Gamma_0$ to the equilibrium properties of the system:
     $$
@@ -437,13 +440,15 @@ $$
 $$
 Thus $\kappa_{\mathrm{eff}}$ encodes the ratio of marginal resource costs (weighted physical cost gradient $\lambda R' + R_I'$) to the power-equivalent value of the remaining performance gap $(\beta-PP^{*})$, scaled by the target complexity $\hat{C}_{\text{target}}$. Higher costs or a lower constant energy valuation $\Gamma_0$ reduce the effective efficiency $\kappa_{\mathrm{eff}}$.
 
-**6.5 Stability, Response, and Target Estimation**
+**6.5 Stability, Response, and Target-Scale Control**
 
-We analyze the properties of the adaptation dynamics, including stability and the crucial estimation of environmental complexity.
+We analyze stability and sensitivity with respect to the registered task-scale coordinate. Estimation of external environmental difficulty is a separate identification problem.
+
+
 
 **6.5.1 Theorem 21 (Adaptation Response)**
 
-The sensitivity of the optimal complexity $C^*(t)$ (where $\Psi(C^*) = 0$) to small changes in the estimated environmental complexity $\hat{C}_{target}(t)$ is given by the implicit function theorem:
+The sensitivity of the optimal complexity $C^*(t)$ (where $\Psi(C^*) = 0$) to small changes in the registered task-scale coordinate $\hat{C}_{target}(t)$ is given by the implicit function theorem:
 
 $$\frac{dC^*(t)}{d\hat{C}_{target}(t)} = -\frac{\partial \Psi / \partial \hat{C}_{target}}{\partial \Psi / \partial C}\bigg|_{C=C^*(t)} \quad \text{(33)}$$
 
@@ -477,7 +482,9 @@ Thus:
 
 $$\frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \left( \frac{\partial PP}{\partial C} \right) \frac{1}{\hat{C}_{target}} \left( \frac{\kappa_{\mathrm{eff}} (C-C_{op})}{\hat{C}_{target}} - 1 \right) \quad \text{(37)}$$
 
-*   **Result:** The sensitivity $dC^*/d\hat{C}_{target}$ is given by $-(\partial \Psi / \partial \hat{C}_{target}) / (\partial \Psi / \partial C)$. If $\partial \Psi / \partial C < 0$ (stability) and the relative complexity $(C-C_{op})/\hat{C}_{target}$ is sufficiently large ($> 1/\kappa_{\mathrm{eff}}$), then $\partial \Psi / \partial \hat{C}_{target} > 0$. In this regime where the relative complexity is sufficiently high, $dC^*/d\hat{C}_{target} > 0$, indicating that an increase in perceived environmental difficulty $\hat{C}_{target}$ leads to a corresponding increase in the optimal allocated complexity $C^*$. QED
+*   **Result:** The sensitivity $dC^*/d\hat{C}_{target}$ is given by $-(\partial \Psi / \partial \hat{C}_{target}) / (\partial \Psi / \partial C)$. If $\partial \Psi / \partial C < 0$ (stability) and the relative complexity $(C-C_{op})/\hat{C}_{target}$ is sufficiently large ($> 1/\kappa_{\mathrm{eff}}$), then $\partial \Psi / \partial \hat{C}_{target} > 0$. In this regime where the relative complexity is sufficiently high, $dC^*/d\hat{C}_{target} > 0$, indicating that an increase in the registered task scale $\hat{C}_{target}$ leads to a corresponding increase in the optimal allocated complexity $C^*$. Identifying that change with external difficulty requires the innovation record specified in Definition 21.
+
+ QED
 
 **6.5.2 Theorem 22 (Existence, uniqueness, and exponential stability of the PCE optimum)**
 
@@ -537,16 +544,77 @@ The statement for coordinate projections follows by the continuous mapping theor
 
 **6.5.3 Definition 21 (Def 21): Dynamics of $\hat{C}_{target}(t)$**
 
-The system must dynamically estimate the environmental complexity or predictive difficulty $\hat{C}_{target}(t)$, which scales performance (Theorem 19) and influences adaptation (Definition 20). We propose an adaptive model based on performance feedback:
+The variable $\hat C_{target}(t)>0$ is the internal task-scale coordinate entering the Law of Prediction. On the homeostatic branch it is a response-active task-selection/control coordinate, and the certificate must include an intervention map showing that changing it changes retained measured performance according to $p(C,T)$. If it is only an estimator or label, Equation (38) regulates an internal score and is not a physical homeostasis law. When the response-active record exists for a registered target performance $PP_{op}\in(\alpha,\beta)$, its feedback law is
 $$
-\frac{d\hat{C}_{target}}{dt} = \mu_{target} \cdot \hat{C}_{target}(t) \cdot \left( PP_{op} - PP(C(t), \hat{C}_{target}(t)) \right) \quad \text{(38)}
+\frac{d\hat C_{target}}{dt}
+=
+\mu_{target}\hat C_{target}(t)
+\left(PP(C(t),\hat C_{target}(t))-PP_{op}\right),
+\qquad
+\mu_{target}>0.
+\tag{38}
 $$
-where:
-*   $\mu_{target} \ge 0$ is the learning rate parameter (units $[T]^{-1}$).
-*   $PP_{op} \in (\alpha, \beta)$ is the system's target operational performance level.
-*   $PP(C(t), \hat{C}_{target}(t))$ is the currently achieved performance (Equation 22).
+This sign is fixed by Equation (22). For $C>C_{op}$,
+$$
+\frac{\partial PP}{\partial C}>0,
+\qquad
+\frac{\partial PP}{\partial\hat C_{target}}<0.
+\tag{38a}
+$$
+Thus performance below target makes $\hat C_{target}$ decrease and raises the modeled performance, while performance above target makes it increase and lowers the modeled performance. If $\hat C_{target}$ is instead claimed to estimate an external environmental complexity, Equation (38) is not an unbiased estimator by itself; that stronger reading requires a separate innovation or observation model comparing predictions with external records.
 
-*Interpretation:* This equation implements negative feedback. If current performance $PP$ is below the target $PP_{op}$, the term $(PP_{op} - PP)$ is positive, causing $\hat{C}_{target}$ to increase (system estimates environment is harder). If $PP$ exceeds $PP_{op}$, $\hat{C}_{target}$ decreases. At equilibrium, $PP = PP_{op}$, and $d\hat{C}_{target}/dt = 0$. These dynamics allow the system to adjust its internal representation of task difficulty in conjunction with adapting its own complexity $C(t)$ via Equation (30), facilitating robust operation under varying conditions. Functionally, $\hat{C}_{target}(t)$ serves as the MPU's internal, running estimate of the effective algorithmic complexity of the local environmental dynamics it is trying to predict. Its value is not derived from direct analysis of the environment but is adapted purely through performance feedback, consistent with the MPU's bounded epistemic access.
+**Theorem 21a (Feedback Sign and Joint Fixed-Point Stability).** Write $T=\hat C_{target}$ and $p(C,T)=PP(C,T)$, and assume the response-active branch of Definition 21. For Equation (22),
+$$
+p_C
+=\frac{\kappa_{eff}}{T}(\beta-p)>0,
+\qquad
+p_T
+=-\frac{\kappa_{eff}(C-C_{op})}{T^2}(\beta-p)<0
+\tag{38b}
+$$
+whenever $C>C_{op}$. For each fixed $C>C_{op}$, the unique positive target-scale equilibrium satisfying $p(C,T_*)=PP_{op}$ is
+$$
+T_*
+=
+\frac{\kappa_{eff}(C-C_{op})}
+{\log\!\left((\beta-\alpha)/(\beta-PP_{op})\right)},
+\tag{38c}
+$$
+and Equation (38) is locally exponentially stable there. The opposite sign $\dot T=\mu T(PP_{op}-p)$ is locally unstable whenever $p_T<0$.
+
+For the coupled system
+$$
+\dot C=\eta_{adapt}\Psi(C,T),
+\qquad
+\dot T=\mu_{target}T(p(C,T)-PP_{op}),
+\tag{38d}
+$$
+assume $p$ and $\Psi$ are $C^1$ near an interior equilibrium $(C_*,T_*)$ with $\Psi(C_*,T_*)=0$ and $p(C_*,T_*)=PP_{op}$. Its Jacobian is
+$$
+J_*
+=
+\begin{pmatrix}
+\eta_{adapt}\Psi_C & \eta_{adapt}\Psi_T\\
+\mu_{target}T_*p_C & \mu_{target}T_*p_T
+\end{pmatrix}_{(C_*,T_*)}.
+\tag{38e}
+$$
+The equilibrium is locally exponentially stable if and only if
+$$
+\operatorname{tr}J_*
+=\eta_{adapt}\Psi_C+\mu_{target}T_*p_T<0,
+\tag{38f}
+$$
+and
+$$
+\det J_*
+=\eta_{adapt}\mu_{target}T_*
+(\Psi_Cp_T-\Psi_Tp_C)>0.
+\tag{38g}
+$$
+On the DSC branch $\Psi_C<0$, so (38b) makes (38f) automatic; Equation (38g) is the additional joint-stability gate that scalar Theorem 22 does not supply.
+
+*Proof.* Direct differentiation of Equation (22) gives (38b), and solving $p=PP_{op}$ gives (38c). Linearizing the corrected scalar law yields coefficient $\mu_{target}T_*p_T<0$; the reversed law yields $-\mu_{target}T_*p_T>0$. Equation (38e) is the derivative of (38d). A real $2\times2$ matrix is Hurwitz exactly when its trace is negative and its determinant is positive, proving (38f)--(38g). ∎
 
 **6.6 Viability Enforcement**
 
@@ -554,27 +622,70 @@ The adaptation dynamics modeled so far (Equation 30, Equation 38) optimize perfo
 
 **6.6.1 Definition 22 (Def 22): Viability Enforcement Mechanism**
 
-The complexity adaptation dynamics (Equation 30) are modified to ensure operation within $(\alpha, \beta)$ by incorporating rate modulation and corrective forces that become active near or beyond the viability boundaries:
+Let $z=(C,T)$, $p(z)=PP(C,T)$, and $[x]_+=\max\{x,0\}$. The controlled complexity dynamics are
 $$
-\frac{dC}{dt} = \eta_{adapt} \cdot \Psi(t) \cdot V_{mod}(PP(t)) + F_{corr}(PP(t)) \quad \text{(39)}
+\dot C
+=
+\eta_{adapt}\Psi(C,T)V_{mod}(p)+F_{corr}(p),
+\tag{39}
 $$
-where $PP(t) = PP(C(t), \hat{C}_{target}(t))$ is the instantaneous performance (Equation 22). The components are:
-1.  **Rate Modulation $V_{mod}(PP)$:** A smooth function $V_{mod}: (0, 1] \to [0, 1]$ that scales the adaptation rate. $V_{mod}(PP) \approx 1$ deep within the viable range $(\alpha, \beta)$, but $V_{mod}(PP) \to 0$ as $PP$ approaches the boundaries $\alpha^+$ or $\beta^-$, and $V_{mod}(PP) = 0$ outside $[\alpha, \beta]$. This prevents the standard adaptation driver $\Psi$ from pushing the system out of bounds or causing instability near the edges. Define
+where
 $$
-V_{mod}(PP)=\sin^2\\!\Bigl(\pi\,\frac{PP-\alpha}{\beta-\alpha}\Bigr),
+V_{mod}(p)
+=
+\begin{cases}
+\sin^2\!\left(\pi\dfrac{p-\alpha}{\beta-\alpha}\right),&\alpha\le p\le\beta,\\
+0,&\text{otherwise},
+\end{cases}
+\tag{39a}
 $$
-so that $V_{mod}(\alpha)=V_{mod}(\beta)=0$ and $V_{mod}((\alpha+\beta)/2)=1$. For $PP \notin [\alpha, \beta]$, set $V_{mod}(PP)=0$.
-2.  **Corrective Force $F_{corr}(PP)$:** A strong restoring force active only *outside* the interval $[\alpha, \beta]$, designed to rapidly push the complexity $C$ back towards the viable range. $F_{corr} > 0$ (increasing C) if $PP < \alpha$, $F_{corr} < 0$ (decreasing C) if $PP > \beta$, and $F_{corr} = 0$ if $\alpha \le PP \le \beta$. Define
-    $$
-    F_{corr}(PP)=-\lambda \left( H(PP-(\beta-\delta)) - H((\alpha+\delta)-PP) \right) \quad \text{(40)}
-    $$
-    where $H$ is the Heaviside step function, $\delta>0$ is a small margin, and $\lambda>0$ is a restoring coefficient.
+and a continuous buffer controller is
+$$
+F_{corr}(p)
+=
+k_\alpha[\alpha+\delta-p]_+
+-k_\beta[p-(\beta-\delta)]_+,
+\qquad
+k_\alpha,k_\beta,\delta>0.
+\tag{40}
+$$
+The gains do not establish viability merely by being positive. They are accepted only when the full coupled vector field, including Equation (38) and the registered disturbance set, satisfies Theorem 22a.
 
-*Function:* This combined dynamics (Equation 39) ensures that complexity adaptation primarily follows the optimization gradient $\Psi$ (scaled by $V_{mod}$) within the viable range $(\alpha, \beta)$, while strong corrective forces $F_{corr}$ prevent sustained operation outside these critical bounds, upholding Axiom 3.
+**Theorem 22a (Robust Predictive-Viability Kernel).** Let
+$$
+K_{viab}
+=
+\{z:\alpha\le p(z)\le\beta\}
+\tag{40a}
+$$
+intersected with any registered compact bounds on $C$ and $T$. Assume this intersection is closed and uniformly prox-regular, and that the active constraint gradients satisfy a constraint qualification so its contingent tangent cone is exactly the intersection of the active face half-spaces. Let $F(z)$ be the locally Lipschitz controlled drift and let the disturbance multifunction $\mathcal D(z)$ have nonempty compact convex values and be locally Lipschitz in Hausdorff distance, so $\dot z\in F(z)+\mathcal D(z)$ has the standard strong-solution property. Assume $\nabla p\ne0$ on the two performance faces. Then $K_{viab}$ is robustly forward invariant for every inclusion trajectory if and only if
+$$
+\inf_{d\in\mathcal D(z)}\nabla p(z)\cdot(F(z)+d)\ge0
+\quad\text{when }p(z)=\alpha,
+\tag{40b}
+$$
+and
+$$
+\sup_{d\in\mathcal D(z)}\nabla p(z)\cdot(F(z)+d)\le0
+\quad\text{when }p(z)=\beta,
+\tag{40c}
+$$
+together with the analogous all-velocity inward conditions on every active $C$ or $T$ bound.
+
+If the two performance faces and every active $C,T$ face have registered strict inward margins, the conclusion survives every additional perturbation $e$ whose outward normal component on each face is smaller than that face's margin. In particular, if the performance-face margin is $m_p>0$, it is enough there that
+$$
+|\nabla p\cdot e|<m_p.
+\tag{40d}
+$$
+If the same uniform performance margin $m_p$ holds throughout the corresponding exterior buffer regions inside an invariant $C,T$ domain, every trajectory in that domain enters $K_{viab}$. From $p_0<\alpha$ the entry time is at most $(\alpha-p_0)/m_p$, and from $p_0>\beta$ it is at most $(p_0-\beta)/m_p$. Boundary inequalities alone prove invariance, not finite-time capture.
+
+*Proof.* The tangent cone of the sublevel face $p\le\beta$ is characterized by $\nabla p\cdot v\le0$, and that of the superlevel face $p\ge\alpha$ by $\nabla p\cdot v\ge0$. Conditions (40b)--(40c) place every allowed velocity in the appropriate tangent cone. Under the stated differential-inclusion regularity, the strong Nagumo theorem makes this tangent-cone condition necessary and sufficient for strong invariance. The margin statement follows by adding the outward normal component of $e$ on each face. In an exterior buffer, the uniform bound gives $\dot p\ge m_p$ below $\alpha$ or $\dot p\le-m_p$ above $\beta$; integration gives the entry-time bounds. ∎
 
 **6.7 Model-Form Robustness**
 
-The optimization and stability results in this section depend only on the stated boundary conditions and regularity/convexity hypotheses (Definitions 19–22). When an explicit closed form is required, it is fixed either by the composition constraint underlying Theorem 19 or by the admissibility requirements built into the dynamical definition (Definition 22). Any substitution must preserve the stated monotonicity/convexity and boundary conditions; under those conditions, existence/uniqueness of the target-tracking dynamics (Theorem 22) and viability enforcement remain valid.
+The optimization and stability results in this section depend only on the stated boundary conditions and regularity/convexity hypotheses (Definitions 19–22). When an explicit closed form is required, it is fixed either by the composition constraint underlying Theorem 19 or by the admissibility requirements built into the dynamical definition (Definition 22). Any substitution must preserve the stated monotonicity/convexity and boundary conditions; under those conditions, scalar fixed-target convergence remains governed by Theorem 22; joint target-scale stability additionally requires Theorem 21a, and robust viability additionally requires Theorem 22a.
+
+
 
 **6.8 Functional Interpretation: Adaptation as Implicit Error Management**
 
@@ -583,15 +694,45 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Desired State:** Operation near the target performance $PP_{op}$ within the viable range $(\alpha, \beta)$.
 *   **Disturbances:** Changes in the environment (actual predictive difficulty), internal noise, resource fluctuations.
 *   **Performance Measurement:** $PP(t)$ acts as the system's measurement of its current operational state relative to the desired state $PP_{op}$.
-*   **Error Signal:** The deviation $(PP_{op} - PP)$ serves as an error signal.
-*   **Control Actions:** Adjusting $\hat{C}_{target}$ (Equation 38) adapts the internal representation of the environment. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
-*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$), enabling sustained viable prediction.
+*   **Feedback Signal:** The signed deviation $(PP-PP_{op})$ is the signal used by Equation (38); reversing its sign requires reversing the controller convention as well.
+
+
+*   **Control Actions:** Adjusting $\hat{C}_{target}$ by Equation (38) supplies homeostatic task-scale control; interpreting it as an estimator of external difficulty requires a separate innovation record. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
+*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and the registered task-scale coordinate $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$), enabling sustained viable prediction.
 
 **6.9 Self-Consistent Determination of Viability Bounds $\alpha$ and $\beta$**
 
 In the PU framework, $\alpha$ and $\beta$ are derived thresholds tied to the structure of SPAP, ND-RID, and thermodynamic bounds. Key constraints include:
 
-*   **Lower Bound $\alpha$:** $\alpha$ is constrained by the minimal information content of a predictive act. Specifically, SPAP/erasure implies a necessary overhead of at least one bit of irreducible uncertainty, with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), suggesting $\alpha \ge 0.5$ (for binary tasks) or a more general bound $\alpha > 0$.
+*   **Lower Bound $\alpha$:** Let $R_{base}$ be the registered chance or reference risk for the task and let $\phi$ be the strictly decreasing calibration from risk to predictive performance. Then $\alpha_{task}=\phi(R_{base})$. Its numerical value is task- and score-dependent; the Landauer floor constrains physical update cost and attainable risk but does not by itself imply $\alpha=1/2$.
+
+
+
+**Theorem 6.9a (Scoring-Rule-Invariant Viability Band).** Let $R$ be task risk, $R_{base}$ the fixed reference risk, and $R_B<R_{base}$ the best risk attainable under the registered physical budget. For every strictly decreasing calibration $\phi$ define
+$$
+PP=\phi(R),
+\qquad
+\alpha_{task}=\phi(R_{base}),
+\qquad
+\beta_B=\phi(R_B).
+\tag{40e}
+$$
+Then
+$$
+\alpha_{task}<PP<\beta_B
+\quad\Longleftrightarrow\quad
+R_B<R<R_{base}.
+\tag{40f}
+$$
+Hence viability membership is invariant under every order-preserving change of score coordinate, including positive affine rescalings of a proper score followed by a decreasing performance calibration. For the paper's representative $PP=1/(1+k_{PP}R)$,
+$$
+\alpha_{task}=\frac{1}{1+k_{PP}R_{base}},
+\qquad
+\beta_B=\frac{1}{1+k_{PP}R_B}.
+\tag{40g}
+$$
+
+*Proof.* Strict monotonicity of $\phi$ reverses the two risk inequalities and is injective, proving (40f). Equation (40g) is direct substitution. The physical budget may constrain $R_B$, but no dimensionless chance score follows from the entropy cost $\varepsilon_0$ without a task and calibration map. ∎
 
 *   **The Upper Bound $\beta$:** This is the threshold of adaptability, where the marginal cost of further predictive improvement becomes prohibitive under PCE. Its value is set by a dynamic stability condition: the system must be able to afford the resource cost of achieving the next increment of performance without entering a regime of runaway costs or instability. This constrains the relationship between the marginal cost functions ($R'$, $R_I'$) and the performance gap $(\beta - PP)$ at the limit of high complexity. Deriving $\beta$ requires a full, self-consistent solution of the PCE optimization problem at its upper boundary, likely yielding a value for $\beta$ that is a complex function of the framework's core cost and efficiency parameters ($r_p$, $\gamma_p$, $r_I$, $\kappa_{eff}$, $\lambda$, $\Gamma_0$).
 

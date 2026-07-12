@@ -42,9 +42,9 @@ A concrete baseline arises from Landauer‑type considerations for logically irr
 
 More generally, if the loop executes $n_{\mathrm{irr}}\ge 1$ logically irreversible merges per cycle at temperature $T$ with cycle time $\tau_{cyc}$, the Landauer-limited baseline is
 $$
-P_{min}\gtrsim n_{\mathrm{irr}}\,k_B T\,\varepsilon_{\mathrm{phys}}/\tau_{cyc}\ge n_{\mathrm{irr}}\,k_B T\,\varepsilon_0/\tau_{cyc},
+P_{\mathrm{reset}}\ge \frac{k_BT}{\tau_{cyc}}\sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j),
 $$
-where $\varepsilon_0=\ln2$ is the structural per-merge entropy quantum and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is the physical implementation cost (Theorem 31); the numerical estimate above corresponds to $n_{\mathrm{irr}}=1$, $\varepsilon_{\mathrm{phys}}=\varepsilon_0=\ln 2$, $T\approx 300$ K, and $\tau_{cyc}\approx 10^{-9}$ s. If available power falls below the relevant $P_{min}$ for the operating $(T,\tau_{cyc},n_{\mathrm{irr}})$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Appendix D, Section D.3, work-cost gap mechanism, and Theorem 31).
+where $\varepsilon_0=\ln2$ is the structural binary log-cardinality and the sum uses the actual conditional entropies of registered resets (Theorem 31); the numerical estimate above is the special conditionally uniform, overhead-free case $n_{\mathrm{reset}}=1$, $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)=\ln2$, $T\approx 300$ K, and $\tau_{cyc}\approx 10^{-9}$ s. If available power falls below the relevant $P_{min}$ for the operating $(T,\tau_{cyc},n_{\mathrm{irr}})$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Appendix D, Section D.3, work-cost gap mechanism, and Theorem 31).
 
 
 **5.2 Minimal Complexity for Self-Reference and Prediction ($K_0$)**
@@ -236,7 +236,7 @@ $$
 Minimal Predictive Units (MPUs) operating at or above $C_{op}$ inherit SPAP and Reflexive Undecidability (RUD) constraints through the following chain:
 
 1. **Embedded structure.** By design, every MPU at operational capacity possesses at least the $K_0\equiv B_3$ three-bit Boolean core (the 8-state architecture $(\phi,p_{stored},c_{phase})$ in Theorem 15) required for self‑referential processing.
-2. **Noise and Stochasticity:** SPAP/RUD arguments rely on reliable execution of the sub‑dynamics in the presence of ND‑RID stochasticity and finite-temperature noise; the loop's irreducible merge cost satisfies $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), and the completed reset step imposes the structural one-bit reset-support capacity deficit of Proposition E.2a. On refresh/minorization branches the averaged interaction channel is additionally strictly contractive ($f_{RID}<1$, Lemma E.1), so the operational loop must supply the required computational regularity.
+2. **Noise and Stochasticity:** SPAP/RUD arguments rely on reliable execution of the sub‑dynamics in the presence of ND‑RID stochasticity and finite-temperature noise; the loop's irreducible merge cost satisfies $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31), and the completed reset step imposes the structural one-bit reset-support capacity deficit of Proposition E.2a. On refresh/minorization branches the averaged interaction channel is additionally strictly contractive ($f_{RID}<1$, Lemma E.1), so the operational loop must supply the required computational regularity.
 3. **POP/PCE optimization.** POP/PCE dynamics favor MPU networks that function as reliable computational substrates (Appendix A.0), increasing the practical salience of SPAP/RUD limitations.
 4. **Conclusion.** SPAP/RUD constraints thus apply fundamentally to MPUs through their internal $K_0$ structure and the effective computation enabled by network optimization.
 

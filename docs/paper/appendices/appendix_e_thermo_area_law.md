@@ -5,7 +5,7 @@
 This Appendix provides a rigorous derivation of the fundamental information-theoretic and thermodynamic limits imposed by the Non-Deterministic Reflexive Interaction Dynamics (ND–RID, Definition 6, Definition A.2.2) governing the MPU 'Evolve' process (Definition 27). These limits are consequences of the PU framework's core principles (POP/PCE, SPAP, interaction constraints), underpinned by quantum thermodynamics and information theory. We quantify the inherent thermodynamic irreversibility and bounds on information capacity associated with ND–RID interactions across causal boundaries, culminating in the derivation of the Horizon Entropy Area Law (Theorem 49), foundational for the thermodynamic derivation of Einstein's Field Equations (Section 12).
 
 The derivation proceeds logically:
-1.  Establish ND–RID irreversibility by lower-bounding minimal entropy production, linking it to the structural state-change quantum $\varepsilon_0=\ln2$ and the physical implementation bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31, derived in Appendix J). (Section E.2: Theorem E.1, Corollary E.1)
+1.  Establish ND–RID irreversibility by lower-bounding minimal entropy production, linking it to the structural state-change quantum $\varepsilon_0=\ln2$ and the physical implementation bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31, derived in Appendix J). (Section E.2: Theorem E.1, Corollary E.1)
 2.  Establish the structural reset-support capacity deficit caused by the completed SPAP reset: resetting an $r$-dimensional register inside the $d_0$-dimensional MPU Hilbert space bounds the completed-cycle capacity by $C(\mathcal{E}_N)\le\ln d_0-\ln r$, hence by $\ln d_0-\ln2$ for the binary SPAP reset. (Section E.4: Proposition E.2a)
 3.  Establish strict trace-distance contractivity ($f_{\mathrm{RID}} < 1$) and the corresponding strict capacity bound ($C(\mathcal{E}_N)<\ln d_0$) on the separate refresh/minorization branch where the averaged channel contains a nonzero input-independent full-state refresh component. (Section E.3: Lemma E.1; Section E.4: Theorem E.2)
 4.  Establish the geometric scaling of effective independent boundary information channels, conditional on emergent geometric regularity (Theorem 43), incorporating correlation effects. (Section E.5: Theorem E.3)
@@ -14,33 +14,23 @@ The derivation proceeds logically:
 
 Natural units where $\hbar=c=k_B=1$ are used for core derivations, restored where appropriate. Dimensionless quantities like entropy, capacity, $\varepsilon_0$, and $\varepsilon_{\mathrm{phys}}$ are in nats.
 
-**Convention E.0 (Structural $\varepsilon_0$ in Channel-Capacity Formulas).** Unless explicitly indexed otherwise, every bare $\varepsilon$ appearing in the structural channel-capacity and area-law formulas of this appendix denotes the structural SPAP/Landauer quantum $\varepsilon_0=\ln2$ of Theorem 31. Physical implementation overhead is recorded separately by
-$$
-\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}},
-\qquad
-\varepsilon_{\mathrm{diss}}\ge0.
-$$
-Implementation overhead changes heat and power accounting but does not alter the structural residual channel budget $C_{\max}\le\ln d_0-\varepsilon_0$ unless it changes a finite protocol-response presheaf. Proposition E.2a supplies the completed-reset support proof of this structural budget.
+**Convention E.0 (Structural and Registered Reset Ledgers).** The value $\varepsilon_0=\ln2$ is the log-cardinality of a binary reset-support alphabet. Physical reset heat is distribution-sensitive and is recorded separately through $q(P,R)$. Neither ledger implies the refresh-mixture hypothesis of Lemma E.1.
 
 **E.2 Irreversibility and Thermodynamic Costs of Reflexive MPU Interactions**
 
-The 'Evolve' process (Definition 27) instantiates Non-Deterministic Reflexive Interaction Dynamics (ND–RID, Definition A.2.2), represented formally by a normalized quantum instrument $\mathcal{I}_N = \{\mathcal{E}_{N,o}\}_{o \in O}$, where $\mathcal{E}_{N,o}$ are completely positive (CP) maps satisfying $\sum_o \mathcal{E}_{N,o}^\dagger(\mathbb{I}) = \mathbb{I}$. The probability of outcome $o$ given initial state $\rho$ is $P(o|\rho, N) = \mathrm{tr}[\mathcal{E}_{N,o}(\rho)]$, and the post-outcome state is $\rho'_o = \mathcal{E}_{N,o}(\rho) / P(o|\rho, N)$. The average channel is the trace-preserving (TP) CP map $\mathcal{E}_N(\rho) = \sum_o \mathcal{E}_{N,o}(\rho)$.
+Let $\mathcal I_N=\{\mathcal E_{N,o}\}_{o\in O}$ be a normalized quantum instrument and let $\mathcal E_N=\sum_o\mathcal E_{N,o}$ be its average CPTP channel. Instrument normalization fixes probabilities and poststates; it does not determine a thermodynamic implementation.
 
-**Theorem E.1 (Minimal Entropy Production Bound for ND–RID Step).** The minimal necessary total entropy production $\Delta S_{tot}(o)$ (system + environment, in units of $k_B$) for the pathway of an 'Evolve'/ND–RID interaction yielding outcome $o$ and state $\rho'_o$ from initial state $\rho$, associated with an information gain $I(\rho; \mathcal{E}_{N}, o) > 0$ (nats), satisfies the lower bound:
+**Theorem E.1 (Conditional Physical Reset Ledger).** Let $P$ be a classical pre-reset record, let $R$ contain every classical record retained and unchanged through the reset, and let $q(P,R)$ be their actual joint law. Assume a degenerate register Hamiltonian, an isothermal bath at temperature $T$, cyclic control, and return of the register and controller to their initial Hamiltonians. Then
 $$
-\frac{\Delta S_{tot}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon_0 \cdot \Theta(I(\rho; \mathcal{E}_{N}, o))
+\varepsilon_{\mathrm{reset}}
+:=\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+=H_q(P\mid R)+\varepsilon_{\mathrm{diss}},
+\qquad\varepsilon_{\mathrm{diss}}\ge0.
 \tag{E.1}
 $$
-where $I$ is the quantum mutual information gain, $D_{KL}$ is the quantum relative entropy representing feedback cost, $\varepsilon_0=\ln2$ is the structural SPAP/Landauer entropy quantum from the SPAP update cycle logic (Theorem 31, derived in Appendix J, Theorem J.1), and $\Theta(I)$ is the Heaviside step function. Physical implementation overhead may add the nonnegative term $\varepsilon_{\mathrm{diss}}\Theta(I)$ but does not change the structural lower-bound ledger. If $\operatorname{supp}\rho'_o \nsubseteq \operatorname{supp}\mathcal{E}_{N}(\rho)$, the relative-entropy term is understood as $+\infty$.
+The memory entropy change is $-k_BH_q(P\mid R)$, the bath entropy export is $k_B\varepsilon_{\mathrm{reset}}$, and the total entropy production of this reset implementation is $k_B\varepsilon_{\mathrm{diss}}$. An additive measurement or feedback term requires a separate theorem and a no-double-counting ledger. ∎
 
-*Proof:* Because $\sum_o \mathcal{E}_{N,o}^\dagger(\mathbb{I}) = \mathbb{I}$, the family $\{\mathcal{E}_{N,o}\}_{o\in O}$ is a normalized quantum instrument and $\mathcal{E}_{N}=\sum_o \mathcal{E}_{N,o}$ is CPTP. For a fixed outcome $o$, the finite-dimensional quantum measurement-feedback second law of Sagawa and Ueda (2010), reviewed in Parrondo, Horowitz and Sagawa (2015), gives
-$$
-\frac{\Delta S_{tot}(o)}{k_B} \ge I(\rho;\mathcal{E}_N,o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)],
-$$
-provided the feedback state is supported on $\operatorname{supp}\mathcal{E}_{N}(\rho)$; if the support inclusion fails, the relative entropy is $+\infty$ and the bound is immediate. The present ND-RID step also includes the SPAP cycle-closure update. By Theorem J.1, every finite-memory realization of that update contains the exact structural quotient cost $\varepsilon_0=\ln2$ whenever non-trivial self-referential information is processed. This contribution is activated exactly on the $I>0$ branch and therefore contributes $\varepsilon_0 \Theta(I)$. Any physical overhead is nonnegative and can only strengthen the physical entropy-production bound. Adding the structural SPAP term to the measurement-feedback lower bound yields Equation (E.1). QED
-
-**Corollary E.1 (Fundamental Irreversibility of ND–RID 'Evolve').** The average 'Evolve' channel $\mathcal{E}_N = \sum_o \mathcal{E}_{N,o}$ is thermodynamically irreversible whenever it facilitates non-trivial information gain $I > 0$ related to self-referential processing.
-*Proof.* If $I>0$ for some pathway involving self-referential update logic, then from Equation (E.1), the structural contribution gives $\Delta S_{tot}(o)/k_B \ge I + \varepsilon_0 > 0$ with $\varepsilon_0=\ln2$, and any physical overhead is nonnegative. Averaging over outcomes $o$ yields a positive mean entropy production for the process, precluding thermodynamic reversibility. A process is thermodynamically reversible if and only if the total entropy production is zero. QED
+**Corollary E.1 (Conditional Thermodynamic Irreversibility).** Under Theorem E.1, the reset is thermodynamically irreversible exactly when $\varepsilon_{\mathrm{diss}}>0$. Positive bath heat may occur even at reversible Landauer saturation because the memory entropy decreases. Conversely, information gain or nonunitarity of $\mathcal E_N$ alone supplies no positive entropy-production bound without a registered implementation ledger. ∎
 
 **E.3 Strict Contractivity of the Average 'Evolve' Channel**
 
@@ -413,7 +403,7 @@ This is exactly the derivative sign condition $c'(\tau)\le0$ before saturation. 
 $$
 \mathfrak C_{\mathrm{act}}
 =
-(\text{capacity-route record},\;\text{flux-shape record or Gate E.2a.G1 record},\;\text{local process-tensor control record},\;\text{ledger-to-laboratory bridge},\;\text{forward lock};\;[\mathfrak Q_{\mathrm{ML}}\ \text{optional for absolute clock rates}]),
+(\text{capacity-route record},\;\text{flux-shape record or Gate E.2a.G1 record},\;\text{local process-tensor causal-control record},\;\text{ledger-to-laboratory bridge},\;\text{forward lock};\;[\mathfrak Q_{\mathrm{ML}}\ \text{optional for absolute clock rates}]),
 $$
 with all entries fixed before comparison. When a chronometric reduction is asserted, the certificate also includes the reduction record identifying $\dot I_{ij}=C_{\max}\Gamma_{\mathrm{ch}}^{(ij)}$ with the saturated chronometric branch of Theorem 47c. A branch carrying $\mathfrak C_{\mathrm{act}}$ may read the “significant interaction” clause of Definition 27 as the capacity-saturation predicate of Definition E.2a.4. Without this certificate, Definition 27 keeps its explicit branch interaction predicate.
 
@@ -429,7 +419,7 @@ On the residual-budget, throughput-saturated, ideal-packing branch with $C_{\max
 $$
 \mathfrak C_{\mathrm{meter}}(R)
 =
-(R,\mathcal A_R,\Delta C_R,I_{\mathrm{acq}}^R,C_{\max}^{(R)},\epsilon_{\mathrm{meter}},\text{monotone acquisition interval},\text{overwrite bound},\text{no-early-firing audit},\text{process-tensor no-signaling audit},\text{forward lock}).
+(R,\mathcal A_R,\Delta C_R,I_{\mathrm{acq}}^R,C_{\max}^{(R)},\epsilon_{\mathrm{meter}},\text{monotone acquisition interval},\text{overwrite bound},\text{no-early-firing audit},\text{process-tensor no-future-to-past causality audit},\text{forward lock}).
 $$
 Here $\mathcal A_R$ is the retained register alphabet, $I_{\mathrm{acq}}^R(t)$ is the certified acquired retained information in nats, $C_{\max}^{(R)}$ is the fixed register threshold, and $\epsilon_{\mathrm{meter}}$ is the pre-locked timing residual. For a certified binary one-register interface,
 $$
@@ -487,7 +477,7 @@ N_{\partial A}\le c_+\frac{\mathcal A}{\delta^2}
 $$
 under geometric regularity, bounded degree, finite edge range, and quasi-uniform upper density. The density-certificate branch adds the macroscopic transversality datum that the geometric boundary-link count has an asymptotic density
 $$
-N_{geom\_links}
+N_{\mathrm{geom\,links}}
 =
 \frac{\mathcal A}{\eta\delta^2}+o(\mathcal A),
 \qquad
@@ -495,24 +485,24 @@ N_{geom\_links}
 $$
 The independence factor $\chi$ is defined by the finite-response quotient of correlated boundary links:
 $$
-N_{eff\_links}=\chi N_{geom\_links}+o(\mathcal A),
+N_{\mathrm{eff\,links}}=\chi N_{\mathrm{geom\,links}}+o(\mathcal A),
 \qquad
 0<\chi\le1.
 $$
 Substituting the density certificate gives
 $$
-N_{eff\_links}
+N_{\mathrm{eff\,links}}
 =
 \frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A)
 =
-\sigma_{eff\_link}\mathcal A+o(\mathcal A).
+\sigma_{\mathrm{eff\,link}}\mathcal A+o(\mathcal A).
 $$
 The $o(\mathcal A)$ term is negligible in the macroscopic limit $\mathcal A\gg\delta^2$. ∎
 
 
 ### E.5.1 Geometric Bounds on Boundary-Crossing Link Count (Upper bound unconditional; lower bound requires an extra hypothesis)
 
-Theorem E.3 uses the scaling $N_{eff\_links}=\Theta(\mathcal{A}/\delta^2)$. The following lemma isolates a deterministic geometric upper bound behind that scaling in a form that is fully rigorous under the stated regularity hypotheses.
+Theorem E.3 uses the scaling $N_{\mathrm{eff\,links}}=\Theta(\mathcal{A}/\delta^2)$. The following lemma isolates a deterministic geometric upper bound behind that scaling in a form that is fully rigorous under the stated regularity hypotheses.
 
 Let $\Sigma$ be a spatial slice with induced Riemannian metric $g$ and let $A\subset\Sigma$ be a region with smooth boundary surface $\mathcal{H}:=\partial A$ of area $\mathcal{A}=\mathrm{Area}(\mathcal{H})$. Let $\delta$ be the mean microscopic MPU spacing, and let $z_{\max}$ be the maximal network degree. Assume there exists an embedding $\iota:\mathcal{V}\to\Sigma$ such that every edge $\{u,v\}\in\mathcal{E}$ connects vertices whose embedded distance is bounded by a fixed multiple of $\delta$:
 $$
@@ -549,7 +539,7 @@ $$
 with $c_+=z_{\max}CC'm$. $\square$
 
 **Additional Hypothesis E.5.1-LB (When a matching lower bound holds).**
-A two-sided estimate $N_{\partial A}\ge c_-\,\mathcal{A}/\delta^2$ requires an additional structural hypothesis on the embedded interaction graph (e.g., a unit-disk/nearest-neighbor type rule guaranteeing a uniformly positive fraction of edges transverse to any smooth cut at scale $\delta$). In Appendix E we absorb such orientation/transversality information into the $\eta=O(1)$ factor in $\sigma_{geom\_link}=1/(\eta\delta^2)$.
+A two-sided estimate $N_{\partial A}\ge c_-\,\mathcal{A}/\delta^2$ requires an additional structural hypothesis on the embedded interaction graph (e.g., a unit-disk/nearest-neighbor type rule guaranteeing a uniformly positive fraction of edges transverse to any smooth cut at scale $\delta$). In Appendix E we absorb such orientation/transversality information into the $\eta=O(1)$ factor in $\sigma_{\mathrm{geom\,link}}=1/(\eta\delta^2)$.
 
 **Remark E.5.1a (Connection to $\eta$ and $\chi$).**
 Lemma E.5.1 supplies the deterministic geometric upper bound behind the scaling used in Theorem E.3. The packing/orientation factor $\eta$ encodes the transversality details of the interaction graph relative to the surface, while the correlation factor $\chi$ encodes the reduction from geometric links to independent ND–RID information channels.
@@ -748,7 +738,7 @@ D_{KL}[\rho'_o||\mathcal E_N(\rho)]
 +
 \varepsilon,
 \qquad
-\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2.
+\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0).
 $$
 Since the branch is nontrivial, $I(\rho;\mathcal E_N,o)>0$ for at least one realized outcome class, and since $p>0$ the refresh component responsible for strict contractivity is active. Thus the irreversible SPAP/Landauer term is present on the branch. ∎
 
@@ -760,7 +750,7 @@ From Theorem E.3 and Corollary E.2, the operational entropy density is
 $$
 \frac{S_{max}}{\mathcal{A}}
 =
-k_B\,\sigma_{eff\_link}\,C_{max}(f_{RID})
+k_B\,\sigma_{\mathrm{eff\,link}}\,C_{max}(f_{RID})
 =
 k_B\left(\frac{\chi\,C_{max}(f_{RID})}{\eta\,\delta^2}\right).
 $$
@@ -833,7 +823,11 @@ This is the Bekenstein-Hawking formula with the explicit coefficient $1/4$. This
 
 The derivation of the Area Law (Theorem E.6 / main text, Theorem 49) and the emergent gravitational constant $G$ (Equation E.9) is based on the effective surface density of independent information channels ($\sigma_{eff_link}$) and the capacity per channel ($C_{\max}$). An alternative, complementary perspective on the origin of the $1/4$ coefficient in the Bekenstein-Hawking formula can be obtained by considering the fundamental entropy unit associated with the MPU's self-referential processing.
 
-As established in Appendix J (Theorem J.1, proving main text Theorem 31), each 'Evolve' interaction cycle (main text, Definition 27) involving non-trivial self-referential information processing (the SPAP update cycle) incurs a minimal irreducible dimensionless entropy cost $\varepsilon_0=\ln2$ nats. Let this fundamental quantum of entropy generation be denoted $\Delta S_{\text{SPAP}} = \ln 2$.
+A reusable binary SPAP register has structural log-cardinality $\varepsilon_0=\ln2$ nats. This is not, by itself, generated physical entropy. If a physical branch resets a record $P$ with retained side information $R$, conditional Landauer gives
+$$
+\frac{\Delta S_{\mathrm{env}}}{k_B}\ge H_q(P\mid R).
+$$
+A positive $\ln2$ floor therefore requires the separately stated condition $H_q(P\mid R)\ge\ln2$. The notation $\Delta S_{\mathrm{SPAP}}$ is reserved for an explicitly registered physical reset cost and is not identified with $\varepsilon_0$ without that reset ledger.
 
 $$
 \Delta S_{\text{SPAP}} = \ln 2
@@ -952,7 +946,7 @@ By Theorem E.3 and Corollary E.2, the total reliable boundary information budget
 $$
 C_{\mathrm{total}}\le N_{\mathrm{channels}}\,C_{max}(f_{RID}),
 \qquad
-N_{\mathrm{channels}}=\sigma_{eff\_link}\,|\partial A|.
+N_{\mathrm{channels}}=\sigma_{\mathrm{eff\,link}}\,|\partial A|.
 $$
 A sufficient condition for choosing an encodable code space is
 $$
@@ -1282,7 +1276,7 @@ The progression from bounds to attractor completes the logical arc of the thermo
 
 | Item | Result | Status |
 |------|--------|--------|
-| Theorem 31 | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (irreversibility) | Bound |
+| Theorem 31 | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (irreversibility) | Bound |
 | Proposition E.2a | $C_{\max}\le\ln d_0-\ln2$ on completed binary reset branch | Quantitative capacity bound |
 | Theorem E.2 | $C_{\max}<\ln d_0$ on refresh/minorization branch | Strict capacity bound |
 | Theorem E.6 / Theorem 49 | $S\le\mathcal A/4G$ on density-certificate/calibration branch | Bound |
@@ -1308,7 +1302,7 @@ $$
 \gamma_{ret}=\frac{\varepsilon}{\delta C_{\max}}.
 \tag{E.8.3a}
 $$
-Here $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ is the minimum entropy cost per completed ND-RID/SPAP interaction (Theorem 31), $\delta$ is the mean MPU spacing, and $C_{\max}$ is the retained per-channel information budget. Quantitatively, $C_{\max}$ is bounded by Proposition E.2a on the reset-support branch and equals $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget saturation branch.
+Here $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ is the minimum entropy cost per completed ND-RID/SPAP interaction (Theorem 31), $\delta$ is the mean MPU spacing, and $C_{\max}$ is the retained per-channel information budget. Quantitatively, $C_{\max}$ is bounded by Proposition E.2a on the reset-support branch and equals $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget saturation branch.
 
 *Proof.*
 
@@ -1318,9 +1312,9 @@ V_{prop}^{(u,v)} = \langle \Phi(w_{uv}) \rangle_{\rho(x)}
 $$
 where $\Phi(w_{uv})$ scales with the information rate required for coherence, penalized by finite channel capacity. The link weight $w_{uv}$ is related to ND-RID fidelity $f_{RID}$ and cost $\varepsilon$ (Definition 35).
 
-**Step 2 (Minimum Link Cost).** Each ND-RID interaction across a link incurs the irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J). For information retrieval requiring one bit of mutual information, the minimum thermodynamic cost per link is:
+**Step 2 (Minimum Link Cost).** Each ND-RID interaction across a link incurs the irreducible entropy cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31, Appendix J). For information retrieval requiring one bit of mutual information, the minimum thermodynamic cost per link is:
 $$
-\Phi_{min} = \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \text{ nats}
+\Phi_{min} = \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch} \text{ nats}
 \tag{E.8.3b}
 $$
 This follows from Landauer's principle: erasing one bit of information, or more generally any logically irreversible operation on one bit, requires minimum entropy production $\ln 2$ [Landauer 1961].
@@ -1360,7 +1354,7 @@ For a region $\mathcal{R}$ with characteristic linear dimension $L$ (so $\mathca
 
 **Step 1 (Retrieval Cost Structure).** Consider an external observer (or subsystem at the boundary) that must access information stored in the bulk. Accessing information at average depth $\bar{r} \sim L$ from the boundary requires propagating queries and responses across $\sim L/\delta$ MPU links.
 
-**Step 2 (Path-Length Cost from Completed Updates).** The excess-cost result does not require full-state trace-distance contraction. Each completed ND-RID/SPAP link used for retrieval has entropy cost at least $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ and retained information budget at most $C_{\max}$. By Lemma E.8.3.1, retrieving one nat of accessible information from depth $r$ costs at least
+**Step 2 (Path-Length Cost from Completed Updates).** The excess-cost result does not require full-state trace-distance contraction. Each completed ND-RID/SPAP link used for retrieval has entropy cost at least $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ and retained information budget at most $C_{\max}$. By Lemma E.8.3.1, retrieving one nat of accessible information from depth $r$ costs at least
 $$
 \gamma_{ret}r
 =
@@ -1449,7 +1443,7 @@ $$
 \Phi_{idle} = \kappa_{maint} \cdot \varepsilon
 \tag{E.8.3n}
 $$
-where $\kappa_{maint} > 0$ is a maintenance coefficient of order unity determined by the ratio of maintenance period to MPU cycle time $\tau_{min}$ (Theorem 29), and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$.
+where $\kappa_{maint} > 0$ is a maintenance coefficient of order unity determined by the ratio of maintenance period to MPU cycle time $\tau_{min}$ (Theorem 29), and $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$.
 
 *Proof.*
 
@@ -1460,7 +1454,7 @@ where $\kappa_{maint} > 0$ is a maintenance coefficient of order unity determine
 - Periodic refresh cycles to counteract decoherence
 - Structural maintenance of the network topology
 
-**Step 3 (Thermodynamic Cost of Coherence).** Maintaining coherence in a thermal environment requires active refresh and error-suppression operations. Any refresh cycle that discards entropy into the environment is logically irreversible at the effective level and therefore carries a strictly positive entropy cost per cycle, bounded below by $\ln 2$ per irreversibly discarded bit [Landauer 1961]. In the PU parametrization, this baseline cost per maintenance cycle is absorbed into $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), giving:
+**Step 3 (Thermodynamic Cost of Coherence).** Maintaining coherence in a thermal environment requires active refresh and error-suppression operations. Any refresh cycle that discards entropy into the environment is logically irreversible at the effective level and therefore carries a strictly positive entropy cost per cycle, bounded below by $\ln 2$ per irreversibly discarded bit [Landauer 1961]. In the PU parametrization, this baseline cost per maintenance cycle is absorbed into $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31), giving:
 $$
 \Phi_{idle} = \kappa_{maint} \cdot \varepsilon, \quad \kappa_{maint} \equiv \frac{\tau_{maint}}{\tau_{cycle}}
 $$
@@ -1878,6 +1872,221 @@ is the recovery barrier separating the operational interior from exterior bounda
 
 *Proof.* The first statement follows by applying Theorem E.8.4i to chains of sufficiently small reconstruction regions and using the local expansion (E.8.4.11). The second statement is exactly Corollary E.8.4g, now read through Definition E.8.4h: the local horizon entropy is the minimum recovery cut required to reconstruct across the causal boundary. Thus the metric description is the continuum representation of finite recovery cost and channel-capacity thermodynamics. ∎
 
+**Definition E.8.4k (Predictive Update-Current Entropy).** Let $\mathcal N=(V,E)$ be a finite predictive channel network with edge capacities $C_e$ as in Definition E.8.4a. Let
+$$
+\gamma=(t_0,t_1,\ldots,t_n)
+$$
+be a finite retained update path. At step $j$, let $M_j$, $\mathcal F_j$, and $(Y_{e,j})_{e\in E}$ be finite retained random variables: $M_j$ is the retained interior predictive distinction before the update, $\mathcal F_j$ is the retained history available before the channel use, and $Y_{e,j}$ is the finite response variable carried by edge $e$. For a cut $\Gamma\subset E$, write
+$$
+Y_{\Gamma,j}=(Y_{e,j})_{e\in\Gamma}
+$$
+and define the conditional update-current through $\Gamma$ at step $j$ by
+$$
+\mathsf J_{\Gamma,j}
+:=
+I(M_j;Y_{\Gamma,j}\mid\mathcal F_j).
+\tag{E.8.4.12}
+$$
+The predictive update-current entropy of $\gamma$ through $\Gamma$ is
+$$
+\mathcal S_{\mathrm{upd}}(\Gamma;\gamma)
+:=
+\sum_{j=0}^{n-1}\mathsf J_{\Gamma,j}.
+\tag{E.8.4.13}
+$$
+For a one-slice horizon update, write $\mathcal S_{\mathrm{upd}}(\Gamma)$ for $n=1$.
+
+**Theorem E.8.4l (Update-Current Entropy Bound and Descent).** For every finite retained update path of Definition E.8.4k:
+
+1. $\mathcal S_{\mathrm{upd}}(\Gamma;\gamma)\ge0$.
+2. If each edge variable satisfies the retained capacity condition
+$$
+H(Y_{e,j}\mid\mathcal F_j)\le C_e
+\quad\text{for all }e,j,
+\tag{E.8.4.14}
+$$
+then
+$$
+\mathsf J_{\Gamma,j}
+\le
+\sum_{e\in\Gamma}C_e,
+\qquad
+\mathcal S_{\mathrm{upd}}(\Gamma;\gamma)
+\le
+\sum_{j=0}^{n-1}\sum_{e\in\Gamma}C_e.
+\tag{E.8.4.15}
+$$
+3. If $\phi_{e,j}$ is any deterministic coarse-graining of $Y_{e,j}$ and $\phi_\Gamma(Y_{\Gamma,j})=(\phi_{e,j}(Y_{e,j}))_{e\in\Gamma}$, then
+$$
+I(M_j;\phi_\Gamma(Y_{\Gamma,j})\mid\mathcal F_j)
+\le
+I(M_j;Y_{\Gamma,j}\mid\mathcal F_j).
+\tag{E.8.4.16}
+$$
+4. If $Z_j$ is any exterior readout whose retained dependence on $M_j$ factors through the cut variables,
+$$
+M_j\longrightarrow Y_{\Gamma,j}\longrightarrow Z_j
+\quad\text{conditionally on }\mathcal F_j,
+\tag{E.8.4.17}
+$$
+then
+$$
+I(M_j;Z_j\mid\mathcal F_j)
+\le
+\mathsf J_{\Gamma,j}.
+\tag{E.8.4.18}
+$$
+5. In the stationary one-slice case, if $Y_{\Gamma,0}$ is a lossless sufficient retained state coordinate for $M_0$ over $\mathcal F_0$, meaning $H(M_0\mid Y_{\Gamma,0},\mathcal F_0)=0$, then
+$$
+\mathcal S_{\mathrm{upd}}(\Gamma)
+=
+I(M_0;Y_{\Gamma,0}\mid\mathcal F_0)
+=
+H(M_0\mid\mathcal F_0).
+\tag{E.8.4.19}
+$$
+Thus predictive entropy is a functional of retained update current. Ordinary retained state entropy is recovered only on the lossless sufficient one-slice branch.
+
+*Proof.* Conditional mutual information is nonnegative, proving (1). For (2),
+$$
+I(M_j;Y_{\Gamma,j}\mid\mathcal F_j)
+\le
+H(Y_{\Gamma,j}\mid\mathcal F_j)
+\le
+\sum_{e\in\Gamma}H(Y_{e,j}\mid\mathcal F_j)
+\le
+\sum_{e\in\Gamma}C_e,
+$$
+where the first inequality is the entropy upper bound on mutual information, the second is subadditivity of conditional entropy, and the third is (E.8.4.14). Summing over $j$ gives the path bound in (E.8.4.15). For (3), deterministic post-processing gives the conditional Markov chain
+$$
+M_j\longrightarrow Y_{\Gamma,j}\longrightarrow \phi_\Gamma(Y_{\Gamma,j})
+\quad\text{given }\mathcal F_j,
+$$
+so conditional data processing gives (E.8.4.16). For (4), the assumed conditional Markov chain (E.8.4.17) gives (E.8.4.18) by the same conditional data-processing inequality. For (5),
+$$
+I(M_0;Y_{\Gamma,0}\mid\mathcal F_0)
+=
+H(M_0\mid\mathcal F_0)-H(M_0\mid Y_{\Gamma,0},\mathcal F_0)
+=
+H(M_0\mid\mathcal F_0),
+$$
+using lossless sufficiency. ∎
+
+**Theorem E.8.4m (Horizon No-Surplus Theorem).** Let $B$ be a sufficiently small causal diamond on the regular operational-continuum branch. Let $\mathfrak G_B$ be the finite family of predictive cuts separating the retained operational interior of $B$ from exterior boundary data, and let $\mathfrak G_B^{\mathrm{suf}}\subseteq\mathfrak G_B$ be the nonempty subfamily of cuts through which every retained exterior task readout factors in the sense of (E.8.4.17). Let $\mathscr Z_B$ be the finite retained exterior task-readout family. Use the one-slice notation $\mathcal S_{\mathrm{upd}}(\Gamma)$ of Definition E.8.4k. On the local horizon-saturation branch of Corollary E.8.4g, write
+$$
+S_{\mathcal H}(B):=S_{\mathrm{cut}}(B)
+=
+\min_{\Gamma\in\mathfrak G_B}\sum_{e\in\Gamma}C_e.
+$$
+Define the task grain
+$$
+\mathcal I_B
+:=
+\sup_{Z\in\mathscr Z_B} I(M;Z\mid\mathcal F).
+\tag{E.8.4.20}
+$$
+Suppose the local horizon-saturation record supplies a capacity-tight sufficient min-cut $\Gamma_B^*\in\mathfrak G_B^{\mathrm{suf}}$ such that
+$$
+\Gamma_B^*\in\arg\min_{\Gamma\in\mathfrak G_B}\sum_{e\in\Gamma}C_e,
+\qquad
+\mathcal S_{\mathrm{upd}}(\Gamma_B^*)
+=
+\sum_{e\in\Gamma_B^*}C_e
+=
+\mathcal I_B.
+\tag{E.8.4.21}
+$$
+Suppose further that the retained horizon branch is PCE-no-surplus: it represents the horizon by a least-update-current sufficient cut and quotients every retained channel whose removal leaves all readouts in $\mathscr Z_B$ unchanged. This condition supplies the no-redundancy interpretation of the minimizing sufficient cut; the equalities below follow from sufficiency, (E.8.4.21), and Corollary E.8.4g. Then the local horizon entropy is the least sufficient predictive update-current entropy and equals the finite min-cut entropy:
+$$
+S_{\mathcal H}(B)
+=
+\min_{\Gamma\in\mathfrak G_B^{\mathrm{suf}}}\mathcal S_{\mathrm{upd}}(\Gamma)
+=
+\mathcal I_B
+=
+\min_{\Gamma\in\mathfrak G_B}\sum_{e\in\Gamma}C_e.
+\tag{E.8.4.22}
+$$
+On the uniform local horizon branch of Corollary E.8.4g this gives
+$$
+S_{\mathcal H}(B)
+=
+C_{\max}^{*}\sigma_{\mathrm{eff}}\mathcal A(\partial B)
++
+o(\mathcal A)
+=
+\frac{\mathcal A(\partial B)}{4G}
++
+o(\mathcal A).
+\tag{E.8.4.23}
+$$
+
+*Proof.* Fix $\Gamma\in\mathfrak G_B^{\mathrm{suf}}$. For every $Z\in\mathscr Z_B$, sufficiency gives the conditional Markov chain
+$$
+M\longrightarrow Y_\Gamma\longrightarrow Z
+\quad\text{given }\mathcal F.
+$$
+By Theorem E.8.4l,
+$$
+I(M;Z\mid\mathcal F)
+\le
+\mathcal S_{\mathrm{upd}}(\Gamma).
+$$
+Taking the supremum over $Z\in\mathscr Z_B$ gives
+$$
+\mathcal I_B\le \mathcal S_{\mathrm{upd}}(\Gamma)
+$$
+for every sufficient cut, hence
+$$
+\mathcal I_B
+\le
+\min_{\Gamma\in\mathfrak G_B^{\mathrm{suf}}}\mathcal S_{\mathrm{upd}}(\Gamma).
+$$
+The capacity-tight sufficient min-cut $\Gamma_B^*$ satisfies
+$$
+\min_{\Gamma\in\mathfrak G_B^{\mathrm{suf}}}\mathcal S_{\mathrm{upd}}(\Gamma)
+\le
+\mathcal S_{\mathrm{upd}}(\Gamma_B^*)
+=
+\mathcal I_B,
+$$
+so the first equality in (E.8.4.22) follows. The same hypothesis gives
+$$
+\min_{\Gamma\in\mathfrak G_B}\sum_{e\in\Gamma}C_e
+=
+\sum_{e\in\Gamma_B^*}C_e
+=
+\mathcal I_B,
+$$
+which proves the finite min-cut equality. Corollary E.8.4g gives
+$$
+S_{\mathcal H}(B)=S_{\mathrm{cut}}(B)
+=
+\min_{\Gamma\in\mathfrak G_B}\sum_{e\in\Gamma}C_e.
+$$
+Combining this identity with the two minima proved above gives (E.8.4.22). The PCE-no-surplus clause records that the minimizing sufficient current is represented without response-null retained channels. Corollary E.8.4g evaluates the final min-cut on the uniform regular branch as
+$$
+C_{\max}^{*}\sigma_{\mathrm{eff}}\mathcal A(\partial B)+o(\mathcal A),
+$$
+and the Appendix E calibration identifies $C_{\max}^{*}\sigma_{\mathrm{eff}}=1/(4G)$ in natural units. This proves (E.8.4.23). ∎
+
+**Remark E.8.4m.1 (Scope of the No-Surplus Result).** Theorem E.8.4m upgrades the entropy input of the local horizon branch from a static boundary count to a finite update-current statement on the capacity-tight sufficient min-cut branch. It does not replace the Section 12 Clausius/KMS/Raychaudhuri and metric-action gates. It supplies the entropy ledger that those gates use when deriving the reversible Einstein branch.
+
+**Spatial-record factorization guardrail.** The absence of a total internal self-model does not imply that a complete exterior record exists. A boundary-rate claim for a bounded region $\Omega$ requires a separate finite record proving that every retained exterior readout factors through declared boundary variables $Y_{\partial\Omega,j}$, that each channel has capacity $C_e$, and that the channel-use rate $\nu_e$ is fixed. Under those assumptions only,
+$$
+\dot I_{\mathrm{out}}(\Omega)
+\le
+\sum_{e\in\partial\Omega}\nu_e C_e.
+$$
+A covariant light-sheet statement additionally requires the relevant geometric, focusing, caustic, overlap, and matter hypotheses. Off-equilibrium applicability requires an explicit entropy-production and time-dependent channel ledger; it does not follow from spatial SPAP alone.
+
+**Spatial-record factorization guardrail.** A boundary-rate statement for a bounded region $\Omega$ requires an independent finite record proving that all retained exterior readouts factor through declared boundary variables, with channel capacities $C_e$ and use rates $\nu_e$. Only then,
+$$
+\dot I_{\mathrm{out}}(\Omega)
+\le\sum_{e\in\partial\Omega}\nu_eC_e.
+$$
+A light-sheet version additionally needs its geometric, focusing, caustic, overlap, and matter hypotheses. Spatial SPAP alone supplies none of these entries.
+
 ### E.8.5 PU Entropy-Cone Constraints
 
 **Definition E.8.5a (Predictive Cut Entropy Vector).** Let $\mathcal N=(V,E)$ be a finite undirected predictive channel network with nonnegative edge capacities $C_e$. Let boundary regions be labeled by a finite set $\mathcal B$. For each $A\subseteq\mathcal B$, define the cut entropy
@@ -1984,11 +2193,23 @@ Combining the three displayed inequalities gives (E.8.5.3). ∎
 
 Any ND-RID channel crossing $\Sigma$ counts as a boundary link. Capacity saturation (Definition E.9.2) is a *derived property* of these channels under PCE dynamics (Theorem E.8.3.4), not a definitional prerequisite.
 
-**Definition E.9.2 (Channel Saturation).** A channel is *saturated* when it transmits at the maximum reliable rate. From Equation E.15, the PCE-optimal channel capacity on the minimal/saturating branch is:
+**Definition E.9.2 (Channel Saturation).** A channel is saturated only when a registered achievable reliable rate reaches its independently certified capacity. On the completed-reset minimal branch, Proposition E.2a supplies the structural budget
+$$
+C_{\max}(f_{\mathrm{RID}})
+\le
+\ln d_0-\varepsilon_0
+=
+\ln8-\ln2
+=
+2\ln2.
+$$
+Here $d_0=8$ is the minimal carrier value and $\varepsilon_0=\ln2$ is the structural reset-support deficit. Equality in the reliable rate, and physical equality $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)$, require separate capacity-saturation and overhead-free implementation certificates; PCE does not force either equality.
+
+
 
 $$C_{\max}(f_{\text{RID}}) = \ln(d_0) - \varepsilon = \ln(8) - \ln(2) = 2\ln 2 \approx 1.386 \text{ nats}$$
 
-where $d_0 = 8$ is the minimal-branch MPU Hilbert space dimension (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $\varepsilon_0=\ln2$ is the attractor-saturating SPAP entropy cost (Definition 15a; Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$).
+where $d_0 = 8$ is the minimal-branch MPU Hilbert space dimension (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $\varepsilon_0=\ln2$ is the attractor-saturating SPAP entropy cost (Definition 15a; Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$).
 
 ### E.9.2 The Universal Area Law
 
@@ -2010,7 +2231,7 @@ where $\sigma_{\text{eff}} = \chi/(\eta\delta^2)$ is the effective channel densi
 
 $$S_{\text{channel}} = C_{\max}(f_{\text{RID}}) = 2\ln 2 \text{ nats}$$
 
-This identification—treating the channel's maximal information budget as an entropy budget—underlies the Bekenstein-Hawking formula and is operationally grounded in the equivalence between information erasure and heat dissipation established by the SPAP cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31).
+This identification—treating the channel's maximal information budget as an entropy budget—underlies the Bekenstein-Hawking formula and is operationally grounded in the equivalence between information erasure and heat dissipation established by the SPAP cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31).
 
 **Step 3 (Total entropy).** The boundary entropy is:
 
@@ -2181,7 +2402,7 @@ This section derives global unitarity from the causal and thermodynamic structur
 
 - **Recall from Theorem 29:** The spectral structure of the internal Hamiltonian determines a characteristic minimal processing timescale $\tau_{min}>0$, establishing finite processing speed.
 
-- **Recall from Theorem 31:** The minimum dimensionless entropy production per SPAP cycle satisfies $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ nats, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1). On the PCE-Attractor this bound is saturated to $\varepsilon_0=\ln2$ (Definition 15a).
+- **Recall from Theorem 31:** The dimensionless bath heat of a registered reset satisfies $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1). The PCE reference uses structural $\varepsilon_0=\ln2$; physical equality is restricted to the overhead-free Landauer implementation branch.
 
 - **Summary of Lemma E.1 (Strict Contractivity):** If the average Evolve channel contains a nonzero input-independent refresh component, $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, then it is strictly contractive in trace distance with factor $f_{\text{RID}}=1-p<1$. If $\sigma\succ0$, the channel is strictly positive and hence primitive (unique full-rank fixed point). No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone.
 
@@ -2202,7 +2423,7 @@ Throughout this section:
 - $I(A:B)_\rho = S(\rho_A) + S(\rho_B) - S(\rho_{AB})$ denotes quantum mutual information
 - $d_0 = 8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$)
 - $\delta$ is the fundamental MPU spacing (Definition 35)
-- $\varepsilon_0=\ln2$ on the attractor branch (Definition 15a; Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$)
+- $\varepsilon_0=\ln2$ on the attractor branch (Definition 15a; Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$)
 
 ### E.9.5.3 Information Capacity of Cauchy Surfaces
 
@@ -2550,7 +2771,7 @@ The same SPAP structure that generates the reduced-channel capacity bound also s
 *Proof.* The derivation chains are verified by tracing the logical dependencies:
 
 **Branch I:**
-1. SPAP (Theorem 10) gives the irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J).
+1. SPAP (Theorem 10) gives the irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31, Appendix J).
 2. The completed binary reset branch gives the support-dimension capacity deficit
    $$
    C_{\max}\le\ln d_0-\ln2
@@ -2648,7 +2869,9 @@ The Page curve exhibits:
 
 *(i) Supporting evidence:*
 - The spectral gap $\Delta_{\text{gap}} = -\tau^{-1}\ln f_{\text{RID}} > 0$ (Lemma E.6.1) ensures exponential mixing
-- PCE optimization selects for detailed balance (Proposition G.1.9.2), producing thermal equilibrium states
+- a separately registered detailed-balance/physical-time or complete-passivity certificate selects the physical equilibrium branch; Proposition G.1.9.2 alone supplies only a conditional lower-production preference
+
+
 - The modular chaos bound limits $\lambda_L$, and $\mathfrak C_{\mathrm{scr}}$ is the separate finite record required to promote a horizon branch to fast scrambling
 
 *(ii) Required for first-principles Page-curve derivation:*
@@ -2775,7 +2998,7 @@ The correlation term decays exponentially with rate $-2\ln f > 0$. This violates
 
 **Step 5 (Unitarity as necessary condition for POP satisfiability).** The Prediction Optimization Problem (POP, Axiom 1) asserts that predictive systems exist and can achieve sustained better-than-random performance: $\bar{\alpha} > \alpha_{\text{rand}}$, where $\alpha_{\text{rand}}$ is random-guess performance. By Steps 3–4, such performance is achievable only if regularities persist, which requires global information conservation. Therefore, global unitarity is a *necessary condition* for POP to be satisfiable.
 
-**Step 6 (Self-consistency).** The framework exhibits self-consistency: SPAP (derived from POP via Theorems 10–11) generates $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, which—through the closed-system constraint (Hypothesis 1) and the joint unitarity of ND-RID operations (Lemma E.9.5.3)—implies global unitarity (Theorem E.9.5), which is necessary for POP to be satisfiable (Step 5). The axiom generates the conditions for its own validity. ∎
+**Step 6 (Self-consistency).** The framework exhibits self-consistency: SPAP (derived from POP via Theorems 10–11) generates $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, which—through the closed-system constraint (Hypothesis 1) and the joint unitarity of ND-RID operations (Lemma E.9.5.3)—implies global unitarity (Theorem E.9.5), which is necessary for POP to be satisfiable (Step 5). The axiom generates the conditions for its own validity. ∎
 
 ---
 
@@ -2799,7 +3022,7 @@ Since $S(\rho_{AB}') = S(\rho_{AB}) = S(\rho_A) + S(\rho_B)$ (unitary evolution 
 
 $$I(A:B)_{\rho'} = S(\rho_A') + S(\rho_B') - S(\rho_{AB}') = S(\rho_A') + S(\rho_B') - S(\rho_A) - S(\rho_B)$$
 
-The apparent "information loss" in subsystem $A$—quantified by the entropy increase $\Delta S_A = S(\rho_A') - S(\rho_A) \geq 0$—is precisely compensated by correlations with $B$. The entropy production $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J) measures the minimum correlation generation required by the SPAP update cycle.
+The apparent "information loss" in subsystem $A$—quantified by the entropy increase $\Delta S_A = S(\rho_A') - S(\rho_A) \geq 0$—is precisely compensated by correlations with $B$. The entropy production $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31, Appendix J) measures the minimum correlation generation required by the SPAP update cycle.
 
 For the joint system: $S(U_{AB}\rho_{AB}U_{AB}^\dagger) = S(\rho_{AB})$. No information is destroyed globally.
 
@@ -2815,7 +3038,7 @@ For reference, we collect the key numerical values appearing in this section:
 |:---------|:-------|:------|:-------|
 | MPU Hilbert space dimension | $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 |
 | Structural entropy cost | $\varepsilon_0$ | $\ln 2 \approx 0.693$ nats | Theorem 31 (Appendix J) |
-| Physical implementation cost | $\varepsilon_{\mathrm{phys}}$ | $\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$ | Theorem 31 (Appendix J) |
+| Physical implementation cost | $\varepsilon_{\mathrm{phys}}$ | $H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ on a registered reset branch | Theorem 31 (Appendix J) |
 | Maximum structural channel capacity | $C_{\max}$ | $\ln d_0 - \varepsilon_0 = 2\ln 2 \approx 1.386$ nats | Eq. E.15 (Appendix E) |
 | Contractivity factor bound | $f_{\text{RID}}$ | $\le 1-p$ for some $p\in(0,1]$ (refresh weight) | Lemma E.1 |
 | MPU spacing / Planck length | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Appendix Q, Eq. Q.18 |
@@ -2830,17 +3053,17 @@ The key insight is that while reduced ND-RID channels may be strictly contractiv
 
 - *Global level:* The von Neumann entropy of the total closed-system state is conserved under $U_{\text{total}}$. If $\rho_{\text{total}}(0)$ is pure, it remains pure throughout evolution.
 
-- *Subsystem level:* Every physical observer occupies a subsystem perspective, accessing only reduced states via partial trace. The entropy production $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) quantifies information flowing into correlations invisible from that perspective—information relocated, not destroyed.
+- *Subsystem level:* Every physical observer occupies a subsystem perspective, accessing only reduced states via partial trace. The entropy production $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31) quantifies information flowing into correlations invisible from that perspective—information relocated, not destroyed.
 
 The arrow of time (Appendix O, Theorem O.3) emerges not from fundamental non-unitarity but from the universality of the perspectival restriction: every predictor is necessarily embedded in what it predicts (SPAP self-other partition, Appendix P.12), ensuring that the thermodynamic ratchet operates for all observers. This reconciliation exemplifies the entropy unification thesis (Thesis P.6.1): apparent irreversibility and fundamental reversibility coexist because "irreversibility" is always relative to a subsystem boundary.
 
-**Remark E.9.5.4: Derivational Priority.** The framework achieves what might initially seem paradoxical: deriving both unitarity (information conservation) and the second law (entropy increase) from the same source ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$). The resolution is that these describe the same physics from different vantage points—global versus perspectival—unified by the structure of self-referential prediction.
+**Remark E.9.5.4: Derivational Priority.** The framework achieves what might initially seem paradoxical: deriving both unitarity (information conservation) and the second law (entropy increase) from the same source ($\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$). The resolution is that these describe the same physics from different vantage points—global versus perspectival—unified by the structure of self-referential prediction.
 
 The parallel derivation structure:
 
 $$
 \text{SPAP}
-\xrightarrow[\text{Thm 31}]{\varepsilon_0=\ln2,\ \varepsilon_{\mathrm{phys}}\ge\varepsilon_0}
+\xrightarrow[\text{Thm 31}]{\varepsilon_0=\ln2,\ \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)}
 \begin{cases}
 \text{Branch I:} & C_{\max}\le\ln d_0-\ln2 \to S_{BH}=\mathcal A/(4G) \\
 \text{Branch I-ref:} & f_{RID}<1\to C_{\max}<\ln d_0 \\
@@ -2864,7 +3087,7 @@ $$
 $$
 Without the automorphism certificate, a closed dissipative CPTP map would not be forced to be unitary. With the certificate, Lemma E.9.5.3 converts the finite-dimensional algebraic automorphism statement into unitary dynamics.
 
-The assumption admits a natural extension to systems with external observation (Appendix P.5). An observation channel satisfying Definition P.5.3 permits external information extraction while preserving internal closure: internal systems gain no information from the channel ($\Delta I_{int} = 0$) and internal states are not modified by external reading. From the internal perspective, such a system satisfies Assumption E.9.5.1, and Theorem E.9.5 applies to its internal dynamics. The external observer incurs the thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ in their own context (Theorem 33), consistent with the Reflexivity Constraint.
+The assumption admits a natural extension to systems with external observation (Appendix P.5). An observation channel satisfying Definition P.5.3 permits external information extraction while preserving internal closure: internal systems gain no information from the channel ($\Delta I_{int} = 0$) and internal states are not modified by external reading. From the internal perspective, such a system satisfies Assumption E.9.5.1, and Theorem E.9.5 applies to its internal dynamics. The external observer incurs the thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ in their own context (Theorem 33), consistent with the Reflexivity Constraint.
 
 ---
 
@@ -2951,18 +3174,32 @@ $$
 
 Thus, in the serialized nearest-neighbor regime with the stated scale identification, the emergent invariant speed is identified with the maximum causal propagation velocity of the MPU network. ∎
 
-*Remark: Relation to Standard Lieb-Robinson Bounds.* The standard Lieb-Robinson theorem [Lieb & Robinson 1972] establishes finite propagation speed in quantum lattice systems through analytic bounds on commutator growth, requiring local bounded Hamiltonians and finite interaction range. The present derivation reaches the same conclusion—finite maximum velocity—through thermodynamic arguments: the entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per link and finite processing time $\tau_{\min}$ per cycle together bound $v_{\max}$. The two approaches are complementary; the thermodynamic derivation clarifies *why* the velocity is bounded (information processing has irreducible cost), while the standard proof provides rigorous analytic bounds.
+*Remark: Relation to Standard Lieb-Robinson Bounds.* The standard Lieb-Robinson theorem [Lieb & Robinson 1972] establishes finite propagation speed in quantum lattice systems through analytic bounds on commutator growth, requiring local bounded Hamiltonians and finite interaction range. The present derivation reaches the same conclusion—finite maximum velocity—through thermodynamic arguments: the entropy cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ per link and finite processing time $\tau_{\min}$ per cycle together bound $v_{\max}$. The two approaches are complementary; the thermodynamic derivation clarifies *why* the velocity is bounded (information processing has irreducible cost), while the standard proof provides rigorous analytic bounds.
 
-**Corollary E.10.1 (Entropy Production Rate Bound).** The rate of entropy production for information propagation is bounded below:
+**Corollary E.10.1 (Activity-Conditioned Propagation Dissipation).** Let $r_{upd}$ be the realized rate of completed reset-support updates on one retained channel. Then
+$$
+\frac{dS_{env}}{dt}
+\ge
+r_{upd}\,k_B\varepsilon_{phys}
+\ge
+r_{upd}\,k_B\ln2.
+\tag{E.10.3}
+$$
+In a serialized uniform path with link length $\delta$ and signal speed $v=r_{upd}\delta$,
+$$
+\frac{1}{k_B}\frac{dS_{env}}{dt}
+\ge
+\frac{\varepsilon_{phys}}{\delta}v
+\ge
+\frac{\ln2}{\delta}v.
+\tag{E.10.4}
+$$
+The minimum cycle time gives $r_{upd}\le1/\tau_{min}$ and therefore an update-rate ceiling, not an activity-independent lower bound on entropy production per unit time. At the saturated serialized speed $v=\delta/\tau_{min}$, Equation (E.10.4) reduces to $dS_{env}/dt\ge k_B\ln2/\tau_{min}$.
 
-$$\frac{dS}{dt} \geq \frac{\varepsilon}{\tau_{\min}} \geq \frac{\ln 2}{\tau_{\min}}$$
-
-per active channel. Faster propagation would require violating either the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ or the minimum-tick bound $\tau_{\min}>0$.
-
-*Proof.* Each link traversal produces entropy $\geq \varepsilon$ with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ by Theorem 31, and requires time $\geq \tau_{\min}$ by Theorem 29. The minimum rate follows by division. ∎
+*Proof.* Each completed registered reset-support update exports at least $k_B\varepsilon_{phys}$; multiplication by the realized update rate gives (E.10.3). The serialized identity $r_{upd}=v/\delta$ gives (E.10.4). Because a traversal may take longer than $\tau_{min}$ or the channel may be idle, $\tau_{min}$ alone supplies no positive rate floor. ∎
 
 **Corollary E.10.2 (Thermodynamic Origin of Locality in the Serialized ND-RID Regime).** In the serialized nearest-neighbor propagation regime of Theorem E.10.2, locality is not a primitive axiom but emerges from:
-1. Finite entropy cost per link: $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31)
+1. Finite entropy cost per link: $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31)
 2. Finite minimum cycle time: $\tau_{\min} > 0$ (Theorem 29)
 3. PCE optimization minimizing total entropy production (Definition 15)
 
@@ -2982,9 +3219,11 @@ Under the scale identification of Theorem E.10.2, this upper bound is $c$. ∎
 
 | Result | Statement | Origin |
 |:-------|:----------|:-------|
-| Theorem E.10.1 | Long-range correlations incur linear entropy cost $S(R) \geq R\ln 2/\delta$ | PCE + Landauer |
+| Theorem E.10.1 | Linear long-range cost holds only under its registered reset-operation and benefit certificates | Conditional PCE ledger |
 | Theorem E.10.2 | $v_{\max} = \delta/\tau_{\min} = c$ | Finite cycle time + spacing |
-| Corollary E.10.1 | $dS/dt \geq \ln 2/\tau_{\min}$ per channel | Entropy bound + time bound |
+| Corollary E.10.1 | $dS_{\mathrm{env}}/dt\ge r_{\mathrm{upd}}k_B\bar h$ for the registered reset ensemble | Conditional Landauer ledger + realized rate |
+
+
 | Corollary E.10.2 | Locality emerges from thermodynamics | PCE optimization |
 
 The causal structure of spacetime—the light cone—is not imposed but derived from the entropy costs of information propagation in the MPU network. The speed of light $c$ emerges as the ratio of the fundamental length scale $\delta$ to the fundamental time scale $\tau_{\min}$, both determined by PCE optimization of predictive processing.
@@ -2994,7 +3233,7 @@ The causal structure of spacetime—the light cone—is not imposed but derived 
 
 ## E.11 Conclusion
 
-This appendix provided a theoretical derivation of the Horizon Entropy Area Law (Theorem 49 / Theorem E.6) from PU principles, extended by bulk reconstruction (Section E.8), general horizon classification (Section E.9), and thermodynamic derivation of Lieb-Robinson velocity (Section E.10). The core derivation proceeds in two complementary stages:
+This appendix provided a theoretical derivation of the Horizon Entropy Area Law (Theorem 49 / Theorem E.6) from PU principles, extended by bulk reconstruction (Section E.8), predictive update-current entropy and the capacity-tight Horizon No-Surplus Theorem (Theorems E.8.4l–E.8.4m), general horizon classification (Section E.9), and thermodynamic derivation of Lieb-Robinson velocity (Section E.10). The core derivation proceeds in two complementary stages:
 
 **Stage 1 (Boundary Correlations and Operational Area Law, Sections E.6.1–E.6.3):** The MPU network's ND-RID dynamics satisfy locality, a finite Lieb-Robinson velocity, a spectral gap, and exponential clustering (Lemma E.6.1). A rigorous distribution-free boundary law holds for total correlations measured by mutual information in any finite-range Gibbs state (Theorem E.4a). A von Neumann entanglement-entropy area law is proven in the 1D gapped setting (Hastings); in higher dimensions an entanglement area-scaling inequality is treated as a semiclassical ansatz (Theorem E.4').
 

@@ -84,72 +84,32 @@ The stochastic adaptation dynamics of the MPU network, governed by minimizing th
 
 The coherent causal rhythm that emerges from the synchronized MPU network is not symmetric; it possesses an intrinsic and irreversible direction.
 
-**Theorem O.3 (Arrow of Time in the Low-Noise Detailed-Balance Regime).**
-The emergent coherent time is directional in any regime where the predictive update cycles admit forward and reverse path measures satisfying the standard entropy-production relation. More precisely, suppose a coherent macroscopic "forward step" consists of $N$ nontrivial update cycles, each with entropy production $\Sigma_{\text{pred}}^{(k)} \ge \varepsilon$ as in Appendix J, and suppose the induced forward and reversed macro-history measures $P_F,P_R$ obey
+**Theorem O.3 (Conditional Pathwise Arrow Bound).** Suppose a coherent macroscopic step consists of $N$ update cycles with forward and reversed path measures on the same event algebra and additive stochastic entropy production
 $$
-\Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)}=\log\!\frac{P_F}{P_R}.
+\Sigma_{\mathrm{tot}}=\log\frac{P_F}{P_R}=\sum_{k=1}^N\sigma_k.
 $$
-Then
+If a preregistered pathwise certificate gives $\sigma_k\ge h_{\min}>0$ for every cycle in the selected class, then
 $$
-\frac{P_R}{P_F}\le e^{-N\varepsilon}\le 2^{-N},
+\frac{P_R}{P_F}\le e^{-Nh_{\min}}.
 $$
-so coherent macroscopic reversals are exponentially suppressed.
+The specialization $P_R/P_F\le2^{-N}$ requires the additional guarantee $h_{\min}\ge\ln2$. Conditional Landauer for a reset record supplies a lower bound on bath heat; it does not by itself supply this pathwise lower bound on stochastic total entropy production. ∎
 
-*Proof.*
-
-**1. Logical direction of predictive updating**
-
-The Fundamental Predictive Loop (Definition 4) has the ordered stages Internal Prediction ($P_{int}$), Verification ($V$), and Update ($D_{cyc}$). This defines an oriented update sequence: prediction must be formed before verification, and verification must precede model revision. This establishes the direction of the elementary predictive cycle.
-
-**2. Entropy production along a macroscopic forward step**
-
-By Appendix J, Theorem J.1, every nontrivial predictive update cycle dissipates at least $\varepsilon$ nats, with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$. For a macro-history built from $N$ such cycles,
-$$
-\Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)} \ge N\varepsilon.
-$$
-
-**3. Suppression of the reversed history**
-
-Assume now that the coarse-grained stochastic dynamics lie in the low-noise detailed-balance regime in which the forward and reversed path measures are both defined and satisfy the standard fluctuation-relation identity
-$$
-\Sigma_{\text{tot}}=\log\!\frac{P_F}{P_R}.
-$$
-Exponentiating and rearranging gives
-$$
-\frac{P_R}{P_F}=e^{-\Sigma_{\text{tot}}}\le e^{-N\varepsilon}\le e^{-N\ln 2}=2^{-N}.
-$$
-Equivalently,
-$$
-P_R \le e^{-N\varepsilon} P_F \le 2^{-N} P_F.
-$$
-
-Thus, in this regime, the time-reversed macro-history is exponentially less probable than the forward history, and the predictive update direction is physically stabilized by irreversible entropy production. ∎
-
-**Theorem O.3a (Conditional Single-Cycle Irreversibility Bound).** Let $c$ be one nontrivial MPU 'Evolve' cycle in which a predictive state is verified and then updated. Let $c^\dagger$ denote the formally reversed cycle with the same operational boundary data. Suppose the forward and reversed single-cycle path weights $P_F(c)$ and $P_R(c^\dagger)$ are defined on the same coarse-grained event algebra and satisfy the path entropy-production identity
+**Theorem O.3a (Conditional Single-Cycle Irreversibility Bound).** Let $c$ and $c^\dagger$ have forward and reversed weights on the same event algebra and suppose
 $$
 \sigma(c)=\log\frac{P_F(c)}{P_R(c^\dagger)}.
 \tag{O.3a.1}
 $$
-If this coarse-grained cycle lies in the guarantee-level update class whose realized entropy production obeys the pathwise lower bound
+If an independent guarantee-level certificate gives the pathwise bound
 $$
-\sigma(c)\ge\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2,
+\sigma(c)\ge h_{\min}>0,
 \tag{O.3a.2}
 $$
 then
 $$
-\frac{P_R(c^\dagger)}{P_F(c)}
-\le
-e^{-\varepsilon_0}
-\le
-\frac12.
+\frac{P_R(c^\dagger)}{P_F(c)}\le e^{-h_{\min}}.
 \tag{O.3a.3}
 $$
-
-*Proof.* A nontrivial 'Evolve' cycle contains the ordered sequence prediction, verification, and update (Definition 4; Definition 27). Appendix J and Theorem 31 supply the guarantee-level entropy budget $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ for nontrivial finite-memory update cycles. The present theorem applies to the coarse-grained path class in which that budget is realized as the pathwise entropy-production bound (O.3a.2). Substituting $\sigma(c)\ge\varepsilon$ into the single-path identity (O.3a.1) gives
-$$
-\log\frac{P_F(c)}{P_R(c^\dagger)}\ge\varepsilon.
-$$
-Exponentiating and rearranging gives (O.3a.3). ∎
+In particular, a factor $1/2$ requires $h_{\min}\ge\ln2$. The reset-heat identity of Appendix J cannot replace assumption (O.3a.2). ∎
 
 **Corollary O.3a.1 (No Ensemble Requirement Under a Pathwise Cycle Bound).** When the guarantee-level update bound is imposed pathwise at the coarse-grained cycle level, the arrow of time applies to each processable actualization cycle in that class. Ensembles are then required only to estimate frequencies of outcomes, not to define the directionality of such a single update.
 
@@ -477,13 +437,13 @@ $$
 
 ### O.5.1 The Perspectival Arrow: Complexity-Relative Temporal Asymmetry
 
-Theorem O.3 characterizes the arrow of time as a property of the physical medium: the ratio $P_R/P_F \le e^{-N\varepsilon}$ is a statement about forward and reversed path measures. The observer hierarchy of §P.5.8.3 shows that this global asymmetry acquires additional internal structure once some systems possess Effective Operational Property R and an operational self-model. The relevant mechanism is the conjunction of measurement asymmetry (Theorem M.10.5) with the SPAP-dependent integration cost of self-referential patterns (Definition M.10.3; Theorem M.10.3). A more complex system can externally model the self-referential burden of a less complex one, but it cannot thereby impose an exact temporal reversal on the less complex system from within that system's own perspective.
+Theorem O.3 gives $P_R/P_F\le e^{-Nh_{\min}}$ only on the branch carrying common forward/reverse path measures and the pathwise certificate $\sigma_k\ge h_{\min}>0$. The observer hierarchy of §P.5.8.3 shows that this global asymmetry acquires additional internal structure once some systems possess Effective Operational Property R and an operational self-model. The relevant mechanism is the conjunction of measurement asymmetry (Theorem M.10.5) with the SPAP-dependent integration cost of self-referential patterns (Definition M.10.3; Theorem M.10.3). A more complex system can externally model the self-referential burden of a less complex one, but it cannot thereby impose an exact temporal reversal on the less complex system from within that system's own perspective.
 
 **Theorem O.4 (Perspectival Irreversibility).** Let $A$ and $B$ be predictive systems with Effective Operational Property R and $C_{agg}(A) > C_{agg}(B) > C_{op}$. Let $B$ undergo an 'Evolve' cycle (Definition 27) with entropy production $\Sigma_B \ge \varepsilon$, carrying $B$ from a pre-transition state $x_B$ to a post-transition state $x_B'$. Let $E_{rev}$ be a communicated pattern whose intended function is to restore, within $B$, the pre-transition self-model configuration associated with $x_B$. Then:
 
 (i) *External modeling.* System $A$ can represent a candidate description of $B$'s prior self-state as an external object and evaluate the induced SPAP proximity $\mu_B(E_{rev})$ at sender-side SPAP-flat cost by externally modeling $\mathcal{M}_B$ (clause (i) of Theorem M.10.5).
 
-(ii) *Internal cost of attempted restoration.* For $B$, integrating $E_{rev}$ engages the self-model: $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$. This need not by itself force $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$: shallow self-model corrections can remain at the baseline value (Remark M.10.3). But whenever the restoration demand is deep enough that the self-consistency condition of Equation (M.18) is not already satisfied at $PP=0$, one has $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. If $E_{rev}$ remains processable, so that $\delta_B(E_{rev}) > 0$, then
+(ii) *Internal cost of attempted restoration.* For $B$, integrating $E_{rev}$ engages the self-model: $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$. This need not by itself force $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$: shallow self-model corrections can remain at the baseline value (Remark M.10.3). But whenever the restoration demand is deep enough that the self-consistency condition of Equation (M.18) is not already satisfied at $PP=0$, one has $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. If $E_{rev}$ remains processable, $\delta_B(E_{rev})>0$, and the pattern-specific reduction certificate of Corollary B.2.1 is accepted, then
 $$
 C_{\text{process}}(B,E_{rev}) \;\ge\; C_{\text{integrate}}(B,E_{rev}) \;\ge\; C_{\text{uni}}(\delta_B(E_{rev})),
 \qquad
@@ -495,15 +455,15 @@ C_{\text{process}}(B,E_{rev}) \ge \Omega\!\bigl(\log \mu_B(E_{rev}) \cdot \mu_B(
 $$
 (Theorem M.10.3). In the exact-restoration idealization, the task reaches the full-self-model obstruction class exemplified by Remark M.10.7(5), i.e. the $\mu_B=\infty$ boundary whose existence and unprocessability are guaranteed by Theorems M.10.4 and M.10.6.
 
-(iii) *Ratchet reinforcement.* Whenever $B$ actually processes $E_{rev}$, that processing is itself another 'Evolve' cycle. Hence it produces entropy $\Sigma_B^{(\text{proc})} \ge \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and constitutes a further forward update in $B$'s own history rather than an inversion of that history.
+(iii) *Ratchet reinforcement.* Whenever $B$ actually processes $E_{rev}$, that processing is itself another 'Evolve' cycle. If it lies in the pathwise class of Theorem O.3a, it produces stochastic entropy $\Sigma_B^{(\text{proc})}\ge h_{\min}>0$; a registered reset separately obeys the heat ledger of Theorem 31 and constitutes a further forward update in $B$'s own history rather than an inversion of that history.
 
 *Proof.*
 
 (i) Clause (i) of Theorem M.10.5 states that a more complex system $A$ can externally model $B$'s self-model $\mathcal{M}_B$, compute the decomposition of Equation (M.17) relative to $B$, evaluate the associated self-consistency condition of Definition M.10.3, and thereby determine $\mu_B(E)$ for any candidate pattern $E$. Because this computation concerns $B$'s self-model rather than $A$'s own, it has sender-side $\sigma_A = 0$ and is SPAP-flat as a function of $\mu_B(E)$. Applying this to the candidate restoration message $E_{rev}$ yields (i).
 
-(ii) By construction, $E_{rev}$ is not merely external information about the environment; it is information directed at $B$'s own prior self-state. The self-model $\mathcal{M}_B$ represents $B$'s own states, predictions, accuracy, and dynamics (Definition M.10.1), so any message whose intended role is to restore a prior self-model configuration induces a nonzero self-model update, hence $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$ and $\sigma_B(E_{rev}) > 0$ by Definition M.10.2. However, Remark M.10.3 must be respected: $\sigma_B(E_{rev}) > 0$ alone does **not** imply $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. Shallow self-model perturbations can remain at the baseline value $\mu_B = 1/\alpha_{SPAP}$. The divergent regime begins only when the restoration demand is deep enough that the self-consistency condition of Equation (M.18) is not already satisfied at $PP=0$. In that case $PP_B^{(E_{rev})} > 0$, so $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. For processable such messages, Corollary B.2.1 and Theorem B.2 give the lower bound through $C_{\text{uni}}(\delta_B(E_{rev}))$, and Theorem M.10.3 gives the equivalent $\Omega(\log \mu \cdot \mu^2)$ form. In the exact-restoration idealization, the task reaches the same full-self-model obstruction class exemplified by the pattern "Here is your complete self-model, including this statement" in Remark M.10.7(5), namely the $\mu_B=\infty$ boundary whose existence and unprocessability are guaranteed by Theorems M.10.4 and M.10.6.
+(ii) By construction, $E_{rev}$ is not merely external information about the environment; it is information directed at $B$'s own prior self-state. The self-model $\mathcal{M}_B$ represents $B$'s own states, predictions, accuracy, and dynamics (Definition M.10.1), so any message whose intended role is to restore a prior self-model configuration induces a nonzero self-model update, hence $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$ and $\sigma_B(E_{rev}) > 0$ by Definition M.10.2. However, Remark M.10.3 must be respected: $\sigma_B(E_{rev}) > 0$ alone does **not** imply $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. Shallow self-model perturbations can remain at the baseline value $\mu_B = 1/\alpha_{SPAP}$. The divergent regime begins only when the restoration demand is deep enough that the self-consistency condition of Equation (M.18) is not already satisfied at $PP=0$. In that case $PP_B^{(E_{rev})} > 0$, so $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. For processable such messages carrying that reduction certificate, Corollary B.2.1 and Theorem B.2 give the lower bound through $C_{\text{uni}}(\delta_B(E_{rev}))$, and Theorem M.10.3 gives the equivalent $\Omega(\log \mu \cdot \mu^2)$ form. In the exact-restoration idealization, the task reaches the same full-self-model obstruction class exemplified by the pattern "Here is your complete self-model, including this statement" in Remark M.10.7(5), namely the $\mu_B=\infty$ boundary whose existence and unprocessability are guaranteed by Theorems M.10.4 and M.10.6.
 
-(iii) If $B$ actually integrates $E_{rev}$, that integration is a physical instance of the predict-verify-update loop, i.e. an 'Evolve' cycle (Definition 27). By Theorem 31, every such cycle incurs entropy production at least $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$. The communicated restoration therefore reaches $B$ only by generating a further irreversible update within $B$. It cannot constitute an exact reversal of $B$'s own arrow from within $B$'s perspective. ∎
+(iii) If $B$ actually integrates $E_{rev}$, that integration is a physical instance of the predict-verify-update loop, i.e. an 'Evolve' cycle (Definition 27). For a registered reset, Theorem 31 bounds bath heat by $H_q(P\mid R)$; for a directional probability statement, the independent pathwise certificate of Theorem O.3a is required. The communicated restoration therefore reaches $B$ only by generating a further irreversible update within $B$. It cannot constitute an exact reversal of $B$'s own arrow from within $B$'s perspective. ∎
 
 **Corollary O.4.1 (No Externally Imposed Exact Reversal).** Even a more complex external agent cannot impose an exact reversal of the arrow of time for a less complex agent $B$ by communicating a specification of $B$'s own prior state. Any such specification that $B$ can process is itself integrated through a further forward update, and the exact-restoration idealization sits at the unprocessable boundary.
 
@@ -511,7 +471,7 @@ $$
 
 This result is consistent with global unitarity (Theorem E.9.5). The total closed-system state remains pure under $U_{\text{total}}$. What Theorem O.4 adds is that each observer occupies a subsystem perspective, accessing only reduced states as in Remark E.9.5.3; within that perspectival restriction, exact temporal self-restoration is unavailable from inside the subsystem boundary. Irreversibility is therefore not a violation of global information conservation, but the subsystem-level manifestation of the entropy unification thesis.
 
-**Remark O.4.2 (Locus of Irreversibility).** The standard account of the arrow of time locates irreversibility in information loss: entropy increases, information scrambles across inaccessible degrees of freedom, and practical recovery becomes impossible. Theorem O.4 reveals a deeper mechanism. Grant the most favorable scenario: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ reconstructs the complete prior state of $B$ and communicates it to $B$. By clause (i) of Theorem O.4, representing and evaluating such a candidate restoration description is sender-side SPAP-flat for $A$. But the communicated pattern $E_{rev}$ targets $B$'s own self-model at a depth that, for exact restoration, reaches the $\mu_B = \infty$ boundary (clause (ii) of Theorem O.4). Even if $B$ processes a sub-exact approximation, that processing is itself an 'Evolve' cycle producing $\Sigma_B^{(\text{proc})} \ge \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (clause (iii) of Theorem O.4), advancing $B$'s history rather than inverting it. The arrow does not depend on whether the information has been lost. It persists because the act of integrating self-referential content is itself irreversible.
+**Remark O.4.2 (Locus of Irreversibility).** The standard account of the arrow of time locates irreversibility in information loss: entropy increases, information scrambles across inaccessible degrees of freedom, and practical recovery becomes impossible. Theorem O.4 reveals a deeper mechanism. Grant the most favorable scenario: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ reconstructs the complete prior state of $B$ and communicates it to $B$. By clause (i) of Theorem O.4, representing and evaluating such a candidate restoration description is sender-side SPAP-flat for $A$. But the communicated pattern $E_{rev}$ targets $B$'s own self-model at a depth that, for exact restoration, reaches the $\mu_B = \infty$ boundary (clause (ii) of Theorem O.4). Even if $B$ processes a sub-exact approximation, that processing is itself an 'Evolve' cycle producing $\Sigma_B^{(\text{proc})} \ge \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (clause (iii) of Theorem O.4), advancing $B$'s history rather than inverting it. The arrow does not depend on whether the information has been lost. It persists because the act of integrating self-referential content is itself irreversible.
 
 **Remark O.4.3 (Hierarchy Opacity and In-Universe Reconstruction Limits; cf. Theorem M.10.5).** The measurement asymmetry (Theorem M.10.5) induces a strict hierarchy of temporal access. Every level of the observer hierarchy (§P.5.8.3) can look downward: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ can treat $B$'s self-model $\mathcal{M}_B$ as a modeling target with $\sigma_A = 0$, represent a candidate restoration description of $B$'s prior self-state, and evaluate the associated burden of communication at sender-side SPAP-flat cost (clause (i) of Theorem O.4; clause (i) of Theorem M.10.5). But every level is opaque to itself: no universal procedure within $A$ correctly computes $\mu_A(E)$ for all patterns $E$ with $\sigma_A(E) > 0$ (clause (ii) of Theorem M.10.5), and exact restoration of $A$'s own prior self-model is unavailable from within $A$'s own perspective (clause (iii) of Corollary O.4.3; Theorems M.10.4 and M.10.6).
 
@@ -531,7 +491,7 @@ This partition is determined by what the information is about, not by how it arr
 
 **Proposition O.4.2 (Complexity-Graded Arrow).** The structure of temporal irreversibility exhibited by a predictive system $S$ is graded by $S$'s position in the observer hierarchy (§P.5.8.3):
 
-(a) *Level 0 (MPU).* All information is external to the minimal observer in the reflexive sense relevant here. The processing cost is SPAP-flat: $\sigma_S = 0$ and $\mu_S(E) = 1/\alpha_{SPAP}$ for all patterns (Level 0 of §P.5.8.3). The arrow is therefore the bare thermodynamic ratchet: $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per cycle.
+(a) *Level 0 (MPU).* All information is external to the minimal observer in the reflexive sense relevant here. The processing cost is SPAP-flat: $\sigma_S = 0$ and $\mu_S(E) = 1/\alpha_{SPAP}$ for all patterns (Level 0 of §P.5.8.3). The arrow is therefore the bare thermodynamic ratchet: $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ per cycle.
 
 (b) *Level 1 (Simple Aggregate).* Aggregates that have not achieved Effective Operational Property R lack an operational self-model (Remark M.10.1; §P.5.8.3). Their cost structure remains SPAP-flat and Shannon-level: aggregation alone does not introduce a self-referential processing burden.
 
@@ -569,6 +529,555 @@ then that prefix cannot be processed by $S$ at finite cost. Hence no PPI-admissi
 Complete self-model records and exact temporal self-restoration records are sufficient examples of such obstruction. Complete totality specifications are independently blocked as internally guaranteed totality records by Theorem P.3.5.9; they fall under the present receiver-side SPAP-processing obstruction only for the component whose integration would force the receiver to a prohibited self-model update. Smaller patterns are already blocked whenever they contain enough perspectival information to force $S$ to the SPAP boundary.
 
 *Proof.* Apply Theorem M.10.11 to $\mathcal H^{-}$ and $\mathcal H^{+}$. Temporal orientation does not enter $\mu_S(E)$; only the receiver-relative self-model update does. Exact temporal self-restoration is the special case handled by Theorem O.4. Complete self-model records are the boundary case illustrated in Remark M.10.7(5) and formalized by Theorem M.10.6. Theorem P.3.5.9 supplies the separate totality-specification obstruction; the present corollary uses that obstruction only when the totality record would be integrated by $S$ as a prohibited self-model update. ∎
+
+### O.5.2 Typed Computational-Thermodynamic Asymmetry and the P-versus-NP Boundary
+
+Thermodynamic irreversibility, witness-generation difficulty, average-case inversion hardness, path-measure asymmetry, and SPAP diagonal obstruction all distinguish a forward task from a reverse or predictive task. That common verbal pattern does not make the quantities interchangeable. This section places them in one typed bookkeeping space, states the bridge conditions required to move between types, and isolates a sufficient certificate under which the proposed one-way-function route would imply $\mathsf{P}\ne\mathsf{NP}$. No claim in this section treats gravity as a fundamental computational field: gravity remains the emergent thermodynamic/equation-of-state structure developed elsewhere in PU.
+
+**Definition O.5.2a (Typed Computational-Thermodynamic Asymmetry Profile).** A typed asymmetry profile is the five-coordinate product
+$$
+\mathsf{Asym}_{\mathrm{PU}}
+=
+\left(
+\mathsf{Asym}_{\mathrm{diag}},
+\mathsf{Asym}_{\mathrm{wit}},
+\mathsf{Asym}_{\mathrm{inv}},
+\mathsf{Asym}_{\mathrm{erase}},
+\mathsf{Asym}_{\mathrm{path}}
+\right),
+\tag{O.5.2.1}
+$$
+where each coordinate is either a record of its declared type or the distinguished value $\bot$ when that coordinate has not been instantiated. The coordinate types are as follows.
+
+1. $\mathsf{Asym}_{\mathrm{diag}}$ records a predictor class and a predictor-responsive construction, including the SPAP quantifier pattern: for each predictor in the declared class, a system may be constructed whose response depends on that predictor and defeats its exact universal prediction.
+2. $\mathsf{Asym}_{\mathrm{wit}}$ records a polynomially balanced, polynomial-time decidable relation $\mathcal R_{\mathrm{wit}}(x,w)$, its decision language, and the resources required to output some valid witness rather than merely verify a supplied witness.
+3. $\mathsf{Asym}_{\mathrm{inv}}$ records a single fixed public function family, its locked input ensemble, an inverter class, and the average success probability for returning any valid preimage.
+4. $\mathsf{Asym}_{\mathrm{erase}}$ records a specified physical reset protocol: the register distribution, accessible side information, Hamiltonian or logical-state energetics, bath temperature $T_{\mathrm{bath}}$, controller and ancilla closure conditions, and heat or work convention.
+5. $\mathsf{Asym}_{\mathrm{path}}$ records a specified forward path law and reverse path law, including their coarse-graining, time-reversal map, and log-likelihood ratio.
+
+The set of individual one-coordinate records is the disjoint union of the five tagged strata; a complete profile lies in their typed product. Neither construction has a default scalar projection, equality, or order that identifies records from different strata.
+
+An inter-coordinate bridge from a source coordinate to a target coordinate is *admissible* only when it supplies all of the following:
+
+(i) one uniform encoder and decoder; (ii) polynomial input-length distortion and polynomial simulation overhead; (iii) preservation of totality and of the relevant success predicate; (iv) exact or quantitatively bounded transport of the declared input distribution; (v) a construction converting every target solver into a source solver with an explicit success-loss bound; (vi) a target family fixed independently of the solver to which the reduction is later applied; and (vii) a dependency ledger showing that the bridge does not assume the conclusion, a one-way function, or an equivalent hardness hypothesis. A common word such as *irreversible*, equality of two untyped symbols $\Omega$, or an analogy between two large spaces is not an admissible bridge.
+
+For the witness coordinate, let
+$$
+\mathcal R_{\mathrm{wit}}(x,w)
+\iff
+V(x,w)=1,
+\qquad
+\mathcal R_{\mathrm{wit}}(x,w)\Longrightarrow |w|\le q(|x|),
+\tag{O.5.2.2}
+$$
+where $V$ runs in polynomial time and $q$ is a polynomial. The associated language and search set are
+$$
+L_{\mathcal R}:=\{x:\exists w\,\mathcal R_{\mathrm{wit}}(x,w)\},
+\qquad
+F_{\mathcal R}(x):=\{w:\mathcal R_{\mathrm{wit}}(x,w)\}.
+$$
+The bound $|w|\le q(|x|)$ bounds the number of possible encodings by less than $2^{q(|x|)+1}$; it is not a lower bound on the time required to find a valid witness.
+
+**Lemma O.5.2b (Counting-Entropy-Complexity Separation).** Let a finite classical register $W$ have law $p$ and support size $\Omega_W$. Its Shannon entropy in nats satisfies
+$$
+H_{\mathrm{Sh}}(W)
+:=-\sum_w p(w)\ln p(w)
+\le \ln\Omega_W,
+\tag{O.5.2.3}
+$$
+with equality exactly when $p$ is uniform on its support. Consider the explicit symmetric-memory branch on which: the logical macrostates are local-equilibrium states with equal mean energy, equal internal entropy, and equal free energy; the memory Hamiltonian is restored at the endpoint; the declared joint state includes every correlation involving $W$; the bath begins thermal and acts as an ideal reservoir at temperature $T_{\mathrm{bath}}>0$; every auxiliary non-bath degree of freedom other than the target register $W$ is restored to its initial joint state, except for an ideal work source whose entropy and correlations remain unchanged and whose declared energy change is pure work; and no other declared or undeclared entropy, information, or nonequilibrium sink is available. Taking $Q_{\mathrm{env}}$ as signed heat, positive when delivered to the environment, if no side information about $W$ is retained, resetting $W$ to a fixed logical state obeys
+$$
+Q_{\mathrm{env}}
+\ge k_B T_{\mathrm{bath}}H_{\mathrm{Sh}}(W).
+\tag{O.5.2.4}
+$$
+If a classical side-information register $C$ is available as branchwise control, is preserved catalytically, and is returned with its full state and every pre-existing correlation with retained reference systems restored, while acquiring no new correlation with any bath, controller, work source, or other non-$C$ degree of freedom, the corresponding ideal conditional bound is $Q_{\mathrm{env}}\ge k_BT_{\mathrm{bath}}H_{\mathrm{Sh}}(W\mid C)$. Here preservation means preservation of the full declared side-information resource, not merely its marginal distribution. Neither bound is a computational running-time lower bound. If a nonideal battery or any other entropy-bearing resource is admitted, the bath-only inequality need not hold; that resource must be included in the complete entropy and nonequilibrium-free-energy balance. Under the corresponding standard assumptions of an initially thermal, uncorrelated bath and isothermal work accounting, the appropriate replacement outside the symmetric-memory branch is
+$$
+W_{\mathrm{in}}
+\ge
+F_{T_{\mathrm{bath}}}(\rho_{\mathrm{final}},H_{\mathrm{final}})
+-F_{T_{\mathrm{bath}}}(\rho_{\mathrm{initial}},H_{\mathrm{initial}}),
+$$
+for the complete declared process, with signed $W_{\mathrm{in}}$ taken positive when work is supplied and $F_T(\rho,H):=\operatorname{Tr}(\rho H)-k_BT S_{\mathrm{vN}}(\rho)$ for dimensionless von Neumann entropy in nats. Correlated or nonthermal reservoirs require a more general resource ledger; neither case is governed by (O.5.2.4) alone.
+
+*Proof.* Let $u$ be the uniform distribution on the support of $W$. Nonnegativity of relative entropy gives
+$$
+D_{\mathrm{KL}}(p\Vert u)
+=\sum_w p(w)\ln\frac{p(w)}{1/\Omega_W}
+=\ln\Omega_W-H_{\mathrm{Sh}}(W)
+\ge0,
+$$
+with equality exactly for $p=u$. This proves (O.5.2.3). Under the stated symmetric-memory, cyclic, isothermal reset conditions, the decrease of logical entropy must be exported to the environment; the ordinary and side-information forms of Landauer's bound give (O.5.2.4) and its conditional version [Landauer 1961; Bennett 1973; Sagawa & Ueda 2009].
+
+To separate counting from computation explicitly, fix any polynomial $q$ and define
+$$
+\mathcal R_0(x,w)\iff w=0^{q(|x|)}.
+$$
+There are $2^{q(|x|)}$ binary strings of the displayed length, but a generator outputs the unique witness $0^{q(|x|)}$ in $O(q(|x|))$ time. If a physical implementation first stores a uniformly random string of that length and then resets it under the symmetric-memory Landauer conditions above, the reset bound is $q(|x|)k_BT_{\mathrm{bath}}\ln2$, which is linear in the number of stored bits, not exponential in the number of candidate strings. Therefore exponential cardinality, logarithmic entropy, reset heat, and search time are distinct quantities. Conditioning a mathematical distribution on a successful witness is also not, by itself, a physical reset. ∎
+
+**Proposition O.5.2c (Forecast Information and Algorithm-Conditional Dissipation).** Let $Z_h$ be a finite-valued future variable with alphabet $\mathcal Z_h$ of size $M_h\ge2$, let $C_h$ be finite classical side information, and let a finite classical prediction register $Y_h$ have alphabet $\mathcal Y_h$ of size $d_h$. Suppose a decoder $g_h:\mathcal Y_h\times\operatorname{supp}(C_h)\to\mathcal Z_h$ forms $\widehat Z_h=g_h(Y_h,C_h)$ with error probability $\epsilon_h=\Pr[\widehat Z_h\ne Z_h]$. Write
+$$
+h_2(\epsilon):=-\epsilon\ln\epsilon-(1-\epsilon)\ln(1-\epsilon)
+$$
+for $0<\epsilon<1$, with the continuous-extension convention $h_2(0)=h_2(1)=0$, and
+$$
+I_{\mathrm{req}}(h)
+:=
+\left[
+H_{\mathrm{Sh}}(Z_h\mid C_h)
+-h_2(\epsilon_h)
+-\epsilon_h\ln(M_h-1)
+\right]_+.
+$$
+Then
+$$
+\ln d_h
+\ge H_{\mathrm{Sh}}(Y_h\mid C_h)
+\ge I(Z_h;Y_h\mid C_h)
+\ge I_{\mathrm{req}}(h).
+\tag{O.5.2.5}
+$$
+If $Y_h$ is then reset under the symmetric conditional Landauer hypotheses of Lemma O.5.2b, with $C_h$ as the complete accessible retained side-information resource and with that resource catalytically restored, the declared reset heat obeys
+$$
+Q_{\mathrm{env}}^{(h)}
+\ge k_BT_{\mathrm{bath}}H_{\mathrm{Sh}}(Y_h\mid C_h)
+\ge k_BT_{\mathrm{bath}}I_{\mathrm{req}}(h).
+\tag{O.5.2.6}
+$$
+For a sequence of declared reset events $j=1,\ldots,L(n)$, let $W_j$ be the register actually erased and let $C_j$ contain all side information accessible at that reset. If the individual protocols satisfy the same cyclic assumptions, then the heat attributable to those resets satisfies
+$$
+Q_{\mathrm{reset}}(n)
+\ge
+k_B\sum_{j=1}^{L(n)}T_jH_{\mathrm{Sh}}(W_j\mid C_j).
+\tag{O.5.2.7}
+$$
+Consequently, if $T_j\ge T_{\min}>0$ and $H_{\mathrm{Sh}}(W_j\mid C_j)\ge h_{\min}^{\mathrm{erase}}>0$ for every declared reset, with $T_{\min}$ and $h_{\min}^{\mathrm{erase}}$ independent of $n$, then $Q_{\mathrm{reset}}(n)\ge k_BT_{\min}h_{\min}^{\mathrm{erase}}L(n)$. This uniform per-reset-floor route yields an exponential lower bound if an independent theorem proves exponentially many such resets. Candidate cardinality alone supplies no such theorem; other routes to exponential heat, such as separately established growth of temperature, erased entropy, or another energetic term, are outside this bound.
+
+*Proof.* Since $Y_h$ has at most $d_h$ values, $H_{\mathrm{Sh}}(Y_h\mid C_h)\le\ln d_h$. Also $H_{\mathrm{Sh}}(Y_h\mid C_h)\ge I(Z_h;Y_h\mid C_h)$. Conditional data processing for $\widehat Z_h=g_h(Y_h,C_h)$ and conditional Fano inequality give
+$$
+I(Z_h;Y_h\mid C_h)
+\ge I(Z_h;\widehat Z_h\mid C_h)
+\ge H_{\mathrm{Sh}}(Z_h\mid C_h)-h_2(\epsilon_h)-\epsilon_h\ln(M_h-1).
+$$
+Mutual information is nonnegative, proving (O.5.2.5) [Cover & Thomas 2006]. Conditional Landauer erasure then gives (O.5.2.6), and summing only the explicitly declared reset contributions gives (O.5.2.7).
+
+The side-information clause is essential. If an additional correlated register $D_h$ is available during reset, the physical entropy term is $H_{\mathrm{Sh}}(Y_h\mid C_h,D_h)$, and (O.5.2.6) must be rederived with the enlarged conditioning and full resource-restoration conditions. In particular, if the realized $Z_h$ later becomes available and $Y_h$ is a deterministic function of $(Z_h,C_h)$, reversible uncomputation can make the conditional reset entropy vanish. For a perfect forecast with $M_h=2^N$ and $Z_h$ uniform conditional on every supported value $C_h=c$, equivalently $H_{\mathrm{Sh}}(Z_h\mid C_h)=N\ln2$, (O.5.2.5) requires $N\ln2$ nats of record capacity and the stated reset branch costs at least $Nk_BT_{\mathrm{bath}}\ln2$: the dependence on $N$ is linear. For nonsymmetric memories or noncyclic protocols, the complete nonequilibrium free-energy inequality stated in Lemma O.5.2b replaces the simple heat formula. ∎
+
+**Proposition O.5.2d (The P/NP Decision-Search Stratum).** For polynomially balanced, polynomial-time decidable witness relations, the following are equivalent:
+$$
+\mathsf{P}=\mathsf{NP}
+\quad\Longleftrightarrow\quad
+\forall(\mathcal R_{\mathrm{wit}},V,q)\;\exists G_{\mathcal R}\in\mathsf{FP}\;\forall x:
+\quad
+G_{\mathcal R}(x)
+\in
+\begin{cases}
+F_{\mathcal R}(x),&F_{\mathcal R}(x)\ne\varnothing,\\
+\{\bot\},&F_{\mathcal R}(x)=\varnothing,
+\end{cases}
+\tag{O.5.2.8}
+$$
+where the relation, its fixed verifier $V$, and its polynomial balance bound $q$ are fixed before the corresponding generator $G_{\mathcal R}$ is selected. Thus the decision-versus-witness-generation question is a well-defined stratum of $\mathsf{Asym}_{\mathrm{PU}}$, but its membership in the typed space supplies no separation theorem.
+
+*Proof.* Assume $\mathsf{P}=\mathsf{NP}$. The language $L_{\mathcal R}$ is in $\mathsf{NP}$, hence decidable in polynomial time. On a yes-instance, maintain a prefix $u$ known to extend to a valid witness. If $\mathcal R_{\mathrm{wit}}(x,u)$ holds, output $u$. Otherwise query the prefix-extension language
+$$
+L_{\mathcal R}^{\mathrm{ext}}
+:=
+\{\langle x,u\rangle:\exists z,\ |uz|\le q(|x|)\text{ and }\mathcal R_{\mathrm{wit}}(x,uz)\}.
+$$
+This language is in $\mathsf{NP}$ because $z$ has polynomial length and $V$ verifies the completion. Query first with $u0$. If the answer is yes append $0$; otherwise append $1$, which must preserve the invariant. If no shorter prefix already satisfies the relation, then after at most $q(|x|)$ bit appends one has $|u|=q(|x|)$; output $u$, which satisfies $\mathcal R_{\mathrm{wit}}(x,u)$ by the invariant. On a no-instance return $\bot$. For the fixed relation this is a uniform polynomial-time generator $G_{\mathcal R}$.
+
+Conversely, apply the assumed generator to the standard polynomially balanced satisfiability relation. It returns a satisfying assignment exactly on satisfiable formulas and $\bot$ otherwise, deciding SAT in polynomial time. Since SAT is $\mathsf{NP}$-complete, $\mathsf{P}=\mathsf{NP}$ [Cook 1971; Karp 1972]. ∎
+
+**Theorem O.5.2e (No Separation by Untyped Asymmetry).** SPAP diagonal obstruction, a positive SPAP reset cost, a thermodynamic arrow, and large physical or computational possibility spaces do not by themselves furnish or discharge the certificate $\mathfrak C_{\mathrm{OWF}}$ of Definition O.5.2f. No inference from these facts to one-wayness or $\mathsf{P}\ne\mathsf{NP}$ is licensed merely by placing them in $\mathsf{Asym}_{\mathrm{PU}}$ or identifying their untyped cardinalities. Moreover, any route using only the current common-oracle-relativizing SPAP construction is blocked as a $\mathsf{P}$-versus-$\mathsf{NP}$ separation proof. This theorem is a certificate-insufficiency and proof-route statement; it does not exclude a future explicit nonrelativizing bridge or a different separation method.
+
+*Proof.* Four independent checks leave the proposed certificate undischarged.
+
+First, the success predicates differ. A many-to-one map can erase distinctions and still be trivial to invert in the cryptographic sense. For example, $f_n^{\mathrm{const}}(x)=0^n$ has a maximally collapsed output, but the inverter that always outputs $0^n$ returns a valid preimage with probability one. The involution $f_n^{\mathrm{not}}(x)=\neg x$ and the identity $f_n^{\mathrm{id}}(x)=x$ are also exactly invertible in linear time. Conversely, an implementation of the identity may dissipate arbitrarily much energy through a wasteful controller. These counterexamples show that logical merging or physical dissipation, taken as untyped properties, cannot be relabeled as computational inversion hardness.
+
+Second, the quantifiers differ. The relevant SPAP form is
+$$
+\forall\mathcal P\;\exists S_{\mathcal P}
+\quad
+\text{such that the predictor-responsive system $S_{\mathcal P}$ defeats $\mathcal P$},
+$$
+whereas standard one-wayness has the form
+$$
+\exists f\;\forall\mathcal I\in\mathsf{PPT}\;\forall c\in\mathbb N_{>0}\;
+\exists N_{\mathcal I,c}\;\forall n\ge N_{\mathcal I,c}:
+\operatorname{Adv}^{\mathrm{inv}}_{f,\mathcal I}(n)<n^{-c}.
+\tag{O.5.2.9}
+$$
+The SPAP target may depend on the predictor; the function $f$ must be one fixed public family chosen before the inverter. Exchanging $\forall\mathcal P\exists S_{\mathcal P}$ for $\exists f\forall\mathcal I$ is not a valid quantifier inference. SPAP also concerns a responsive diagonal interaction, while one-way inversion is a static input-output task under a locked average-case distribution.
+
+Third, a physical phase-space volume is measure- and coarse-graining-dependent and generally carries units, while a finite witness count is a dimensionless encoding cardinality. Even after a normalization turns both into numbers, an equality of cardinalities gives no uniform reduction, no success-preservation theorem, and no running-time lower bound. Definition O.5.2a therefore forbids identifying physical phase-space volume with computational candidate count unless a complete admissible bridge is supplied.
+
+Fourth, the current SPAP diagonal proof route is common-oracle relativizing. For any oracle $\mathcal O$ and any oracle predictor $\mathcal P^{\mathcal O}$, the responsive construction may query $\mathcal P^{\mathcal O}$ on its own proposed response and return the complementary bit; exact correctness would require a bit to equal its complement. Giving the same oracle to both sides therefore leaves the diagonal contradiction intact. Now choose a Baker-Gill-Solovay oracle $\mathcal O_{\mathrm{BGS}}$ for which $\mathsf{P}^{\mathcal O_{\mathrm{BGS}}}=\mathsf{NP}^{\mathcal O_{\mathrm{BGS}}}$ [Baker, Gill & Solovay 1975]. The common-oracle SPAP obstruction still holds. By contrast, the prefix construction of Theorem O.5.2g also relativizes for every length-indexed family $f_n:\{0,1\}^n\to\{0,1\}^{m(n)}$ with polynomially bounded $m(n)$, unary index $1^n$ supplied to the inverter, and one uniform evaluator in $\mathsf{FP}^{\mathcal O_{\mathrm{BGS}}}$. Its prefix-extension language lies in $\mathsf{NP}^{\mathcal O_{\mathrm{BGS}}}=\mathsf{P}^{\mathcal O_{\mathrm{BGS}}}$, so a uniform polynomial-time oracle inverter recovers a preimage for every output in the image. Thus no such indexed family is one-way against uniform $\mathsf{PPT}^{\mathcal O_{\mathrm{BGS}}}$ inverters. A common-oracle-relativizing derivation from the current SPAP fact to one-wayness or to $\mathsf{P}\ne\mathsf{NP}$ would therefore fail relative to $\mathcal O_{\mathrm{BGS}}$. This is a barrier for the stated route, not a claim that every future nonrelativizing PU bridge is impossible.
+
+The counterexamples, quantifier mismatch, missing reduction data, and oracle construction prove the stated certificate insufficiency and relativization barrier. ∎
+
+**Definition O.5.2f (PU One-Way-Function Bridge Certificate).** For the one-way-function route studied here, a PU one-way-function bridge certificate $\mathfrak C_{\mathrm{OWF}}$ is a finite proof-carrying record containing all of the following data. This certificate deliberately selects a length-preserving, setup-free sufficient subclass; it does not assert that every standard formulation of a one-way function must be length-preserving or lack auxiliary setup structure [Goldreich 2001].
+
+1. The code of one deterministic uniform total evaluator $F$ defining a fixed length-preserving family $f_n:\{0,1\}^n\to\{0,1\}^n$ by $f_n(x)=F(1^n,x)$, together with a checked polynomial running-time bound. No instance-specific table, nonuniform advice, hidden trapdoor, or inaccessible physical constant is permitted.
+2. The locked input ensemble $x\leftarrow U_n$, the uniform distribution on $\{0,1\}^n$. The output law is the pushforward $f_n(U_n)$, not the uniform law on the image of $f_n$.
+3. The declared adversary class of uniform classical probabilistic polynomial-time inverters $\mathsf{PPT}$. For each fixed inverter $\mathcal I$, let the polynomial $\ell_{\mathcal I}(n)$ bound its random-coin use on security parameter $n$, padding unused coins if necessary. The any-preimage success functional is
+$$
+\operatorname{Adv}^{\mathrm{inv}}_{f,\mathcal I}(n)
+:=
+\Pr_{\substack{x\leftarrow U_n\\r\leftarrow U_{\ell_{\mathcal I}(n)}}}
+\left[
+\begin{array}{c}
+x'=\mathcal I(1^n,f_n(x);r)\in\{0,1\}^n,\\
+f_n(x')=f_n(x)
+\end{array}
+\right].
+\tag{O.5.2.10}
+$$
+4. A named formal theory $\mathsf T_{\mathrm{cert}}$, a deterministic proof checker, a finite proof object for the full quantified statement (O.5.2.9), and an accepted metatheoretic soundness and standard-model interpretation warrant for the fragment used. Without that soundness warrant, acceptance establishes only derivability in $\mathsf T_{\mathrm{cert}}$, not the complexity statement. The proof must treat each fixed uniform inverter on one asymptotic tail. A pointwise quantity $\sup_{\mathcal I}\operatorname{Adv}^{\mathrm{inv}}_{f,\mathcal I}(n)$, with a different hard-coded uniform machine allowed at each $n$, is not an admissible substitute.
+5. Polynomial encoders and decoders between computational strings and the declared PU state or protocol records. To transfer a PU physical hardness theorem to standard one-wayness, the certificate must map every uniform $\mathsf{PPT}$ inverter to a permitted PU realization with polynomial overhead and quantitatively controlled success loss. If equivalence between the physical and computational inverter classes is claimed, it must also map every covered PU inverter back to a uniform $\mathsf{PPT}$ inverter under the same controls. Reversible, parallel, and randomized implementations must be covered; if the forward physical dynamics uses a random seed, that seed must be made part of the deterministic function input or the primitive must be labeled differently.
+6. A dependency ledger showing that the proof does not assume $\mathsf{P}\ne\mathsf{NP}$, an existing one-way function, average-case inversion hardness, or a renamed assumption with the same formal content. A record that uses any unresolved hardness hypothesis must be marked conditional on that hypothesis and does not count as unconditionally discharged for Theorem O.5.2g.
+
+The certificate concerns uniform classical adversaries. It does not by itself claim security against nonuniform circuit families or quantum polynomial-time inverters. Collisions are allowed: inversion succeeds on any $x'$ of the locked input length with the same image.
+
+**Theorem O.5.2g (Conditional One-Way Separation).** If $\mathfrak C_{\mathrm{OWF}}$ is accepted on an unconditional branch, with all clauses of Definition O.5.2f discharged and no unresolved hardness hypothesis in its dependency ledger, then the certified family is a standard one-way function and
+$$
+\mathsf{P}\ne\mathsf{NP}.
+$$
+
+*Proof.* The first conclusion follows from clauses 1–4 together with the accepted soundness and standard-model interpretation warrant. For the separation, suppose for contradiction that $\mathsf{P}=\mathsf{NP}$. Define the prefix-extension language
+$$
+L_{\mathrm{pref}}
+:=
+\left\{
+\langle1^n,y,u\rangle:
+|u|\le n
+\text{ and }
+\exists v\in\{0,1\}^{n-|u|}\;F(1^n,uv)=y
+\right\}.
+$$
+This language is in $\mathsf{NP}$: the completion $v$ has length at most $n$, and the certified evaluator $F$ checks it in polynomial time. Under $\mathsf{P}=\mathsf{NP}$, let $D_{\mathrm{pref}}$ be a uniform deterministic polynomial-time decider for $L_{\mathrm{pref}}$.
+
+Construct an inverter $\mathcal I_D$ on $(1^n,y)$. Let $\epsilon_{\mathrm{word}}$ denote the empty word. The inverter first queries $D_{\mathrm{pref}}(1^n,y,\epsilon_{\mathrm{word}})$. If the answer is no, it returns $\bot$. Otherwise initialize $u:=\epsilon_{\mathrm{word}}$. For $i=1,\ldots,n$, query whether $\langle1^n,y,u0\rangle\in L_{\mathrm{pref}}$. If yes replace $u$ by $u0$; if no replace $u$ by $u1$. The invariant is that the current prefix extends to a preimage of $y$. When the $0$ branch fails, the invariant guarantees that the $1$ branch succeeds. After exactly $n$ iterations, $u\in\{0,1\}^n$ and $f_n(u)=y$.
+
+The algorithm makes $n+1$ polynomial-time queries on polynomial-length inputs, so $\mathcal I_D$ is a uniform deterministic polynomial-time inverter and hence belongs to $\mathsf{PPT}$. For every $y$ in the image of $f_n$, it returns some valid preimage; injectivity is not required. In particular, for $x\leftarrow U_n$,
+$$
+\operatorname{Adv}^{\mathrm{inv}}_{f,\mathcal I_D}(n)=1
+$$
+for every $n$. This contradicts (O.5.2.9), already for $c=1$. Therefore $\mathsf{P}\ne\mathsf{NP}$. ∎
+
+**Corollary O.5.2g.1 (PU Separation Gate).** Theorems 10–11, Theorem J.1, Theorem O.3, and Theorem M.10.5 do not by themselves discharge $\mathfrak C_{\mathrm{OWF}}$. A PU proof through the one-way-function route of Theorem O.5.2g is unconditional only on a branch where one fixed family and the complete certificate of Definition O.5.2f have been unconditionally discharged, with neither unresolved nor circular hardness assumptions. For this route, there is presently no accepted certificate record:
+$$
+\boxed{\mathfrak C_{\mathrm{OWF}}=\varnothing_{\mathrm{cert}}\quad\text{(certificate pending)}.}
+$$
+
+Even after a valid $\mathsf{P}\ne\mathsf{NP}$ proof, one obtains a worst-case superpolynomial separation for some $\mathsf{NP}$ problems, not an automatic $2^{\Omega(n)}$ time lower bound, average-case hardness for a chosen forecasting distribution, or exponential physical energy cost. Those stronger conclusions require separate hypotheses such as an exponential-time assumption and a protocol-specific thermodynamic reduction.
+
+*Proof.* The cited PU results establish, respectively, predictor-responsive diagonal obstruction, a conditional physical cost for a specified finite-memory reset, path-measure temporal asymmetry, and receiver-relative modeling limitations. By Theorem O.5.2e none supplies the fixed-family average-case quantifiers or success-preserving bridge required by Definition O.5.2f. The unconditional implication proved in Theorem O.5.2g applies once its full certificate antecedent is independently discharged. A certificate recorded under an unresolved hypothesis yields only the correspondingly conditional implication. Other logically possible routes to $\mathsf{P}\ne\mathsf{NP}$ are outside this certificate theorem. ∎
+
+**Remark O.5.2h (Universe-as-Computation Boundary).** PU may use a common typed ledger to compare time's arrow, physical reset cost, witness generation, inversion, and self-reference. It may not identify them. The statement that the universe “computes itself” is an interpretive description of sequential physical evolution, not a theorem that the universe searches an exponentially large list, “knows” or fails to know its future, runs at a complexity-theoretic maximum speed, or derives time from $\mathsf{P}\ne\mathsf{NP}$. The defensible implication is the narrower conditional theorem: an independently certified $\mathfrak C_{\mathrm{OWF}}$ yields $\mathsf{P}\ne\mathsf{NP}$.
+
+### O.5.3 Scoped Relativization Barrier, Certificate Status, and Restricted Inversion Theorems
+
+Section O.5.2 proves that an unconditionally certified standard one-way function would imply $\mathsf{P}\ne\mathsf{NP}$, while SPAP, candidate counting, and physical reset cost do not supply that certificate by identification alone. This section adds four limited results: a relativization barrier for derivations whose premises are oracle-stable and whose computational steps are separately proved oracle-natural; a certificate-submission audit that preserves conditionality and incompleteness; two unconditional restricted inversion obstructions; and a quantitatively stated conditional physical-hardness branch. It does not assert that every admissible bridge relativizes, classify every conceivable PU derivation, discharge a standard one-way-function certificate, or resolve $\mathsf{P}$ versus $\mathsf{NP}$.
+
+**Definition O.5.3a (Common-Oracle Reading and Oracle-Natural Bridge).** Let $\mathcal O\subseteq\{0,1\}^*$ be an oracle. The *common-oracle reading* of a computational statement replaces every declared machine, predictor, verifier, evaluator, solver, and inverter by its $\mathcal O$-oracle version and gives the same oracle to every interacting side. A statement is *oracle-stable* when its common-oracle reading is true for every $\mathcal O$.
+
+Let $\mathcal B$ be an admissible bridge in the sense of Definition O.5.2a from a source task to a target task. The bridge is *oracle-natural* only if it additionally contains fixed oracle-machine encoders, decoders, and solver transformations, together with polynomials and success-loss functions independent of $\mathcal O$, such that for every common oracle:
+
+1. the oracle encoders and decoders implement the declared instance and output maps with the same polynomial length distortion;
+2. every target oracle solver is transformed into a source oracle solver with the declared polynomial overhead;
+3. the success predicates and the locked input-distribution transport commute with the encoding; and
+4. the same quantitative success and distribution-loss bounds hold after oracle augmentation.
+
+Equivalently, the solver-reduction and distribution-transport diagrams commute after adjoining every common oracle. A derivation is *oracle-natural* when the same finite inference schema derives the common-oracle conclusion from the common-oracle premises for every $\mathcal O$; every nonlogical computational transformation used by that schema must carry its own oracle-naturality proof. Oracle-naturality is additional proof data. It does not follow merely from uniformity, polynomial overhead, or the seven admissibility clauses of Definition O.5.2a.
+
+**Lemma O.5.3b (Registered Oracle-Stable Inputs).** The following schemas are oracle-stable on their stated readings.
+
+(a) The deterministic and probabilistic SPAP diagonal statements are oracle-stable provided the common-oracle model class retains the represent/simulate/predicate-evaluate closure used by their diagonal constructions.
+
+(b) Lemma O.5.2b and Proposition O.5.2c are unchanged by the common-oracle reading when their physical protocols, distributions, side information, and thermodynamic antecedents are held fixed, because their conclusions contain no oracle-dependent computational class.
+
+(c) The decision-search equivalence relativizes:
+$$
+\mathsf{P}^{\mathcal O}=\mathsf{NP}^{\mathcal O}
+\quad\Longleftrightarrow\quad
+\text{every polynomially balanced $\mathsf{P}^{\mathcal O}$-decidable relation has an $\mathsf{FP}^{\mathcal O}$ total witness selector.}
+$$
+
+No unlisted PU statement is declared oracle-stable, and no bridge is declared oracle-natural, merely because it belongs to the PU scaffold.
+
+*Proof.* For (a), give the nominated predictor and the responsive diagonal construction the same oracle. The construction still queries the predictor and applies the same fixed-point-free Boolean complement, so exact correctness still requires a bit to equal its complement. The probabilistic threshold construction is unchanged for the same reason. The conclusion is conditional on retention of the declared representation and oracle-simulation closure; oracle access does not establish that closure by itself.
+
+For (b), the common-oracle operation has no machine class to replace in the locked entropy, reset, and forecast-information statements, so their readings are identical to the original conditional statements.
+
+For (c), if the verifier is in $\mathsf{FP}^{\mathcal O}$, the prefix-extension language is in $\mathsf{NP}^{\mathcal O}$. Under $\mathsf{P}^{\mathcal O}=\mathsf{NP}^{\mathcal O}$, the same prefix search gives an $\mathsf{FP}^{\mathcal O}$ selector. Conversely, let $L$ be any language in $\mathsf{NP}^{\mathcal O}$ and apply the assumed selector to its polynomially balanced $\mathsf{P}^{\mathcal O}$-decidable verifier relation. The selector returns $\bot$ exactly off $L$ and a valid witness exactly on $L$, so $L\in\mathsf{P}^{\mathcal O}$. Hence $\mathsf{NP}^{\mathcal O}\subseteq\mathsf{P}^{\mathcal O}$, proving equality. ∎
+
+**Theorem O.5.3c (Scoped Relativization Barrier).** Let $\Gamma$ be a set of oracle-stable premises. Let $D$ be an oracle-natural derivation from $\Gamma$, with every nonlogical computational bridge separately certified oracle-natural. Then $D$ cannot establish either of the following by that route:
+
+(i) the common-oracle standard one-wayness assertion for a length-indexed family with polynomially bounded output length and one uniform oracle evaluator; or
+
+(ii) the conclusion $\mathsf{P}\ne\mathsf{NP}$.
+
+*Proof.* Choose a Baker-Gill-Solovay oracle $\mathcal O_{\mathrm{BGS}}$ satisfying
+$$
+\mathsf{P}^{\mathcal O_{\mathrm{BGS}}}
+=
+\mathsf{NP}^{\mathcal O_{\mathrm{BGS}}}
+$$
+[Baker, Gill & Solovay 1975]. Consider any family
+$$
+f_n^{\mathcal O_{\mathrm{BGS}}}:\{0,1\}^n\longrightarrow\{0,1\}^{m(n)}
+$$
+with polynomially bounded $m$, unary index $1^n$ supplied to the inverter, and one uniform evaluator in $\mathsf{FP}^{\mathcal O_{\mathrm{BGS}}}$. Its prefix-extension language is
+$$
+L_{\mathrm{pref}}^{\mathcal O_{\mathrm{BGS}}}
+:=
+\left\{
+\langle1^n,y,u\rangle:
+|u|\le n
+\text{ and }
+\exists v\in\{0,1\}^{n-|u|}\;
+f_n^{\mathcal O_{\mathrm{BGS}}}(uv)=y
+\right\}.
+\tag{O.5.3.1}
+$$
+This language lies in $\mathsf{NP}^{\mathcal O_{\mathrm{BGS}}}=\mathsf{P}^{\mathcal O_{\mathrm{BGS}}}$. The prefix-search construction of Theorem O.5.2g therefore gives a uniform deterministic polynomial-time oracle inverter that returns a preimage for every image point. No such family is one-way against uniform $\mathsf{PPT}^{\mathcal O_{\mathrm{BGS}}}$ inverters.
+
+Every premise in $\Gamma$ remains true at $\mathcal O_{\mathrm{BGS}}$, and oracle-naturality transports every step of $D$ to the common-oracle reading. A derived one-wayness conclusion would therefore hold at $\mathcal O_{\mathrm{BGS}}$, contradicting the perfect prefix inverter. Likewise, a derived separation would give $\mathsf{P}^{\mathcal O_{\mathrm{BGS}}}\ne\mathsf{NP}^{\mathcal O_{\mathrm{BGS}}}$, contradicting the choice of oracle. ∎
+
+**Corollary O.5.3c.1 (Current Registered Route Only).** Any submitted derivation using only premises registered by Lemma O.5.3b and steps carrying the oracle-naturality record of Definition O.5.3a cannot discharge $\mathfrak C_{\mathrm{OWF}}$ or a direct $\mathsf{P}\ne\mathsf{NP}$ certificate. This corollary does not apply to a bridge lacking an oracle-naturality proof, a genuinely nonrelativizing argument, or a different future proof method.
+
+*Proof.* Such a submitted derivation satisfies every hypothesis of Theorem O.5.3c. The scope exclusions are the negations of those hypotheses and therefore are not classified by the theorem. ∎
+
+**Definition O.5.3d (Certificate-Submission Audit).** A submitted separation record is audited along the following non-exclusive dimensions.
+
+1. A malformed inference, failed checker or soundness warrant, or missing required certificate field is not registered as a certificate.
+2. A record containing an unresolved hypothesis $H$ is retained only on the branch conditional on $H$.
+3. A record satisfying the hypotheses of Theorem O.5.3c is blocked from discharge by the scoped relativization barrier.
+4. A proposed nonrelativizing step whose claimed lower bound has not been proved remains certificate-pending.
+5. A certificate is discharged only when its finite proof object, named proof checker, standard-model soundness warrant, bridge obligations, and dependency ledger are all accepted with no unresolved assumption.
+
+These are audit outcomes for submitted records, not an exhaustive classification of every informal or future idea. Write $\operatorname{Acc}_{\mathrm{cert}}(R)=1$ exactly when the submitted record $R$ passes item 5 in the named registry; merely naming or storing $R$ does not make this proposition true. Until an accepted proof object exists, the framework registry continues to use $\varnothing_{\mathrm{cert}}$ rather than introducing a positive theorem token.
+
+**Definition O.5.3e (Direct Separation Certificate).** A direct separation certificate $\mathfrak C_{\mathrm{sep}}$ is a finite checked proof of $\mathsf{P}\ne\mathsf{NP}$ in a named formal theory $\mathsf T_{\mathrm{cert}}$, together with the accepted standard-model soundness warrant for the used fragment and a dependency ledger containing no unresolved assumption. It is a sufficient certificate format for a direct mathematical route that does not pass through one-wayness. This definition does not assert that every conceivable physical argument already has this form.
+
+**Proposition O.5.3e.1 (Proof-Object Composition).** Suppose an accepted record contains a checked $\mathsf T_{\mathrm{cert}}$-derivation of $\mathsf{P}\ne\mathsf{NP}$ from finitely many premises $A_1,\ldots,A_r$ and, in the same interpreted theory, a checked proof of every $A_i$. Substitution of the premise proofs yields a checked $\mathsf T_{\mathrm{cert}}$-proof of $\mathsf{P}\ne\mathsf{NP}$ with no remaining premise $A_i$.
+
+*Proof.* Replace each use of a premise rule introducing $A_i$ by the accepted finite derivation of $A_i$. Finiteness of the proof objects makes the substitution finite, and closure of the proof checker under composition verifies the resulting derivation. The conclusion is unchanged and has no undischarged $A_i$. ∎
+
+**Corollary O.5.3e.2 (Marked Physical Hypotheses).** Let $\mathsf K$ be a named formal base theory supporting the deduction theorem, let $A$ be the declared formal translation of a physical hypothesis, and let $H$ denote the arithmetic sentence $\mathsf{P}\ne\mathsf{NP}$. If
+$$
+\mathsf K\cup\{A\}\vdash H,
+$$
+then
+$$
+\mathsf K\vdash A\rightarrow H.
+$$
+Without a proof $\mathsf K\vdash A$, the record is conditional on $A$ and does not establish $\mathsf K\vdash H$. If a proof of $A$ is later supplied in $\mathsf K$, modus ponens discharges the condition. No claim that $A$ is “at least as strong as” $H$ follows without a separate interpretation or conservativity theorem.
+
+*Proof.* The first implication is the deduction theorem. The remaining statements follow from the presence or absence of a proof of $A$ and ordinary modus ponens. ∎
+
+**Proposition O.5.3f (Fixed-Exponent Deterministic All-Image Inversion Obstruction).** For every fixed $k\in\mathbb N$ there exists a length-preserving family $f^{(k)}=(f_n^{(k)})_{n\ge2}$ with one uniform polynomial-time evaluator such that every deterministic machine running in time $O(n^k)$ fails, at infinitely many input lengths, to return a valid preimage for at least one image point.
+
+*Proof.* Fix $k$ and a universal multitape Turing machine whose binary program strings are interpreted under a total coding convention, with invalid strings assigned to one fixed dummy machine. Enumerate all binary program strings in length-lexicographic order and let $M_i$ be the machine represented by the $i$-th string. Every deterministic Turing machine has at least one index, the code of $M_i$ has length $O(\log i)$, and the index-to-code map is computable in time polynomial in $\log i$. Fix a universal simulator with running time bounded by a fixed polynomial in the simulated time, input length, and program length; for example, the standard multitape simulation bound $O(t\log t+\operatorname{poly}(|\langle M_i\rangle|+|w|))$ is sufficient. Define
+$$
+i_k(n):=\operatorname{ord}_2(n)+1,
+$$
+where $\operatorname{ord}_2(n)$ is the exponent of $2$ in $n$. Every machine index occurs at infinitely many lengths, and $i_k(n)\le1+\log_2 n$, so the selected program has length $O(\log\log n)$ and is recovered in time polynomial in $\log n$. On input $(1^n,x)$ with $x\in\{0,1\}^n$, the evaluator $F_k$ computes $i=i_k(n)$ and universally simulates $M_i(1^n,0^n)$ for $n^{k+1}$ simulated steps. If the simulation halts with an $n$-bit output, call it $z_n^{(k)}$; otherwise set $z_n^{(k)}:=1^n$. Define
+$$
+f_n^{(k)}(x)
+:=
+\begin{cases}
+1^n,&x=z_n^{(k)},\\
+0^n,&x\ne z_n^{(k)}.
+\end{cases}
+\tag{O.5.3.2}
+$$
+For fixed $k$, the declared simulation bound is polynomial in $n^{k+1}+n+|\langle M_i\rangle|$; index decoding is polynomial in $\log n$. Hence $F_k$ is one uniform polynomial-time evaluator. For $n\ge2$ there exists $x\ne z_n^{(k)}$, hence $0^n$ is always in the image.
+
+Let $M=M_i$ run in at most $c n^k$ steps for all sufficiently large $n$. If it fails to return an $n$-bit candidate, it already fails inversion. Otherwise choose $n_0$ so that $c n^k\le n^{k+1}$ for $n\ge n_0$. At every sufficiently large length satisfying $i_k(n)=i$, the bounded simulation captures the actual output
+$$
+z_n^{(k)}=M(1^n,0^n).
+$$
+But $f_n^{(k)}(z_n^{(k)})=1^n$, so this candidate is not a preimage of the image point $0^n$. There are infinitely many such lengths. ∎
+
+**Remark O.5.3f.1 (Exact Scope of the Residue).** Proposition O.5.3f has the quantifier form
+$$
+\forall k\;\exists f^{(k)}\;\forall M\in\operatorname{DTIME}(n^k)\;\exists^\infty n:
+\quad
+M(1^n,0^n)\notin\bigl(f_n^{(k)}\bigr)^{-1}(\{0^n\})
+$$
+with an adversarial image point. Standard one-wayness instead fixes one family before every polynomial-time randomized inverter and requires negligible average-case inversion success on the locked ensemble. Three independent upgrades are absent: one family for every polynomial exponent, deterministic-to-randomized security, and infinitely-often worst-case failure to negligible average-case success. The proposition is therefore a restricted diagonal obstruction, not a cryptographic one-way function and not progress on clause 4 of $\mathfrak C_{\mathrm{OWF}}$.
+
+**Proposition O.5.3g (Weak $\mathsf{AC}^0$ Inversion Obstruction).** Define the prefix-difference bijection $g_n^{\oplus}:\{0,1\}^n\to\{0,1\}^n$ by
+$$
+g_n^{\oplus}(x)_1:=x_1,
+\qquad
+g_n^{\oplus}(x)_i:=x_{i-1}\oplus x_i
+\quad(2\le i\le n).
+\tag{O.5.3.3}
+$$
+Then:
+
+(a) $g_n^{\oplus}$ is a bijection and
+$$
+(g_n^{\oplus})^{-1}(y)_i=y_1\oplus\cdots\oplus y_i;
+$$
+
+(b) no nonuniform polynomial-size constant-depth $\mathsf{AC}^0$ circuit family exactly inverts $g_n^{\oplus}$ on every input for all sufficiently large $n$; and
+
+(c) let
+$$
+\delta_{d,s}^{\oplus}(n)
+:=
+\sup_{C\in\mathsf{AC}^0[d,s]}
+\left|
+\Pr_{y\leftarrow U_n}[C(y)=\operatorname{PARITY}_n(y)]-\frac12
+\right|.
+\tag{O.5.3.4}
+$$
+For every depth-$d$, size-$s(n)$, $n$-output circuit family $C_n$,
+$$
+\Pr_{y\leftarrow U_n}
+\left[g_n^{\oplus}(C_n(y))=y\right]
+\le
+\frac12+\delta_{d,s(n)}^{\oplus}(n).
+\tag{O.5.3.5}
+$$
+Håstad's parity-correlation theorem makes $\delta_{d,s(n)}^{\oplus}(n)$ negligible for fixed $d$ and polynomial $s(n)$ [Håstad 1986; Håstad 2014]. Randomized nonuniform circuits satisfy the same bound after fixing, at each length, a coin string attaining at least their average success.
+
+*Proof.* Telescoping gives
+$$
+y_1\oplus\cdots\oplus y_i
+=
+x_1\oplus(x_1\oplus x_2)\oplus\cdots\oplus(x_{i-1}\oplus x_i)
+=x_i,
+$$
+proving (a). If a circuit exactly inverted every $y$, its final output bit would compute $y_1\oplus\cdots\oplus y_n$, contradicting the $\mathsf{AC}^0$ parity lower bound [Furst, Saxe & Sipser 1984; Håstad 1986]. This proves (b). For (c), successful inversion of the full vector implies that the final output bit equals $\operatorname{PARITY}_n(y)$. The agreement probability of that output circuit is bounded by the definition of $\delta_{d,s}^{\oplus}$. If a randomized nonuniform circuit has success $p_n$ over inputs and coins, averaging supplies one fixed coin string with input success at least $p_n$, so the deterministic bound applies. ∎
+
+**Corollary O.5.3g.1 (No Strong-One-Way Certificate from the Displayed Bound).** Equation (O.5.3.5) has upper bound $1/2+\operatorname{negl}(n)$ at fixed depth and polynomial size, not a negligible upper bound on inversion success. Therefore the displayed last-bit reduction does not by itself discharge the strong negligible-inversion clause of $\mathfrak C_{\mathrm{OWF}}$, even after replacing its adversary class by $\mathsf{AC}^0$. It also does not prove the opposite claim that full-vector inversion has non-negligible success. Any amplification claim requires a separately defined amplified family and a proved reduction preserving the declared circuit depth, size, input law, and any-preimage predicate.
+
+*Proof.* A function bounded above by $1/2+\operatorname{negl}(n)$ need not be negligible. The bound is also only an upper bound and supplies no non-negligible lower bound. Hence neither strong one-wayness nor its negation follows from (O.5.3.5). ∎
+
+**Definition O.5.3h (Physical Hardness Postulate and PPT-to-PU Simulation Certificate).** Fix one deterministic uniform length-preserving family
+$$
+f_{\mathrm{PHP},n}:\{0,1\}^n\to\{0,1\}^n
+$$
+with a checked polynomial-time evaluator, $X_n\leftarrow U_n$, and challenge $Y_n=f_{\mathrm{PHP},n}(X_n)$. For every $n$, declare physical input and output state spaces $\mathcal Z_n^{\mathrm{PHP}}$ and $\mathcal W_n^{\mathrm{PHP}}$, together with uniform maps
+$$
+\operatorname{Enc}^{\mathrm{PHP}}_n:
+\{1^n\}\times\{0,1\}^n\to\mathcal Z_n^{\mathrm{PHP}},
+\qquad
+\operatorname{Dec}^{\mathrm{PHP}}_n:
+\mathcal W_n^{\mathrm{PHP}}\to\{0,1\}^n\cup\{\bot\}.
+$$
+The encoder prepares the physical representation of the security parameter and challenge; the decoder returns either one candidate preimage or the failure symbol $\bot$. For each permitted uniform PU protocol family $\Pi$ with declared physical-randomness law $R_{\Pi,n}$, require the typed action
+$$
+\Pi_n:
+\mathcal Z_n^{\mathrm{PHP}}\times\operatorname{supp}(R_{\Pi,n})
+\to\mathcal W_n^{\mathrm{PHP}}.
+$$
+These section-local maps are not the sampling map $E_n$ or any other encoder or decoder already used elsewhere in PU. A uniform realization map assigns each protocol family and security parameter a physically realizable implementing microstate
+$$
+\operatorname{Real}_{\mathrm{PU}}(\Pi,n)=\mu_{\Pi,n}\in\mathcal S_{\mathrm{phys}}.
+$$
+The microstate includes the encoder, decoder, randomness source, error correction, repetitions, controller, workspace, and every other implementation component. Predictive Physical Complexity is applied only to that microstate, as $C_P(\mu_{\Pi,n})$, in accordance with Equation (1); it is not applied directly to the abstract protocol.
+
+For such a protocol family $\Pi$, define
+$$
+\operatorname{Adv}^{\mathrm{PU}}_{f_{\mathrm{PHP}},\Pi}(n)
+:=
+\Pr_{\substack{X_n\leftarrow U_n\\\omega\leftarrow R_{\Pi,n}}}
+\left[
+\begin{array}{c}
+x'=\operatorname{Dec}^{\mathrm{PHP}}_n\!\left(
+\Pi_n\!\left(\operatorname{Enc}^{\mathrm{PHP}}_n(1^n,f_{\mathrm{PHP},n}(X_n)),\omega\right)
+\right)\in\{0,1\}^n,\\
+f_{\mathrm{PHP},n}(x')=f_{\mathrm{PHP},n}(X_n)
+\end{array}
+\right].
+$$
+
+A PPT-to-PU simulation certificate $\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}$ proves that for every fixed uniform $\mathsf{PPT}$ inverter $\mathcal I$ there are a uniform compiled PU protocol family $\Pi_{\mathcal I}$, polynomials $p_{\mathcal I}$ and $q_{\mathcal I}\ge1$, and a negligible function $\nu_{\mathcal I}$ such that, for all sufficiently large $n$,
+$$
+C_P(\mu_{\Pi_{\mathcal I},n})\le p_{\mathcal I}(n),
+\qquad
+\operatorname{Adv}^{\mathrm{PU}}_{f_{\mathrm{PHP}},\Pi_{\mathcal I}}(n)
+\ge
+\frac{\operatorname{Adv}^{\mathrm{inv}}_{f_{\mathrm{PHP}},\mathcal I}(n)}{q_{\mathcal I}(n)}
+-\nu_{\mathcal I}(n).
+\tag{O.5.3.6}
+$$
+The physical input is the encoding of $(1^n,Y_n)$; physical randomness has the same law as the inverter's coins or a declared negligible total-variation discrepancy absorbed into $\nu_{\mathcal I}$; and decoding uses the standard any-preimage predicate. The compiler may depend on the fixed inverter's code and polynomial clock, but not on the sampled challenge, a hidden trapdoor, nonuniform advice, or length-specific tables. The security parameter and every encoding and resource overhead change by at most a polynomial.
+
+Let $\mathsf{PU}_{\mathrm{poly}}$ be the uniform permitted protocol families $\Pi$ for which $C_P(\mu_{\Pi,n})\le p_\Pi(n)$ eventually for some fixed polynomial $p_\Pi$. The marked Physical Hardness Postulate is
+$$
+[\mathrm{PHP}]_{f_{\mathrm{PHP}}}:
+\quad
+\forall\Pi\in\mathsf{PU}_{\mathrm{poly}}\;
+\forall c\in\mathbb N_{>0}\;
+\exists N_{\Pi,c}\;
+\forall n\ge N_{\Pi,c}:
+\operatorname{Adv}^{\mathrm{PU}}_{f_{\mathrm{PHP}},\Pi}(n)<n^{-c}.
+\tag{O.5.3.7}
+$$
+The postulate is an unresolved physical hardness hypothesis unless it receives an independent accepted proof object. The simulation certificate has its own independent status; if it is assumed rather than proved, both entries remain in the dependency ledger.
+
+**Theorem O.5.3h.1 (Conditional Physical-Hardness Implication).** In the extended theory containing $[\mathrm{PHP}]_{f_{\mathrm{PHP}}}$ and an accepted $\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}$,
+$$
+[\mathrm{PHP}]_{f_{\mathrm{PHP}}}
+\wedge
+\bigl[\operatorname{Acc}_{\mathrm{cert}}(\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}})=1\bigr]
+\quad\Longrightarrow\quad
+f_{\mathrm{PHP}}\text{ is a standard one-way function}
+\quad\Longrightarrow\quad
+\mathsf{P}\ne\mathsf{NP}.
+$$
+The conclusion is conditional on every unresolved antecedent shown in the ledger.
+
+*Proof.* Suppose a fixed uniform $\mathsf{PPT}$ inverter $\mathcal I$ has non-negligible inversion success. Then there is a polynomial $r_{\mathcal I}$ and infinitely many $n$ such that
+$$
+\operatorname{Adv}^{\mathrm{inv}}_{f_{\mathrm{PHP}},\mathcal I}(n)
+\ge\frac1{r_{\mathcal I}(n)}.
+$$
+Equation (O.5.3.6) gives, on all sufficiently large lengths in this infinite set,
+$$
+\operatorname{Adv}^{\mathrm{PU}}_{f_{\mathrm{PHP}},\Pi_{\mathcal I}}(n)
+\ge
+\frac1{q_{\mathcal I}(n)r_{\mathcal I}(n)}-\nu_{\mathcal I}(n)
+\ge
+\frac1{2q_{\mathcal I}(n)r_{\mathcal I}(n)},
+$$
+because $\nu_{\mathcal I}$ is negligible. The compiled realization satisfies $C_P(\mu_{\Pi_{\mathcal I},n})\le p_{\mathcal I}(n)$ and has inverse-polynomial success at infinitely many lengths, contradicting (O.5.3.7). Thus every uniform $\mathsf{PPT}$ inverter has negligible success and $f_{\mathrm{PHP}}$ is one-way. The prefix-search proof of Theorem O.5.2g supplies the mathematical implication from one-way-function existence to $\mathsf{P}\ne\mathsf{NP}$. Here that proof is used under the displayed hypotheses; the unconditional certificate antecedent of Theorem O.5.2g is not asserted. ∎
+
+**Corollary O.5.3h.2 (Formal Counterexamples and Finite-$n$ Tests).** On a branch with an accepted simulation certificate:
+
+1. a uniform PU protocol family carrying proofs that $C_P(\mu_{\Pi,n})$ is polynomially bounded and that its asymptotic inversion success is non-negligible refutes $[\mathrm{PHP}]_{f_{\mathrm{PHP}}}$;
+2. a uniform $\mathsf{PPT}$ inverter with non-negligible success, together with the verified simulation guarantee, yields such a PHP counterexample; and
+3. a polynomial-time SAT decider yields a perfect polynomial-time inverter by prefix search and therefore yields the same contradiction through the simulation certificate.
+
+An abstract inverter or SAT algorithm is a mathematical counterexample, not by itself an empirical falsifier. A finite laboratory run tests only separately registered finite-$n$ performance bounds; it does not establish or refute the asymptotic postulate without a uniform scalable protocol and its complexity and success certificates.
+
+*Proof.* Clause 1 is the negation of the eventual-negligibility statement (O.5.3.7). Clause 2 follows from (O.5.3.6). For clause 3, a polynomial-time SAT decider implies $\mathsf{P}=\mathsf{NP}$ and the prefix construction returns a preimage for every image point; Equation (O.5.3.6) transports that success to the registered physical protocol. The finite-$n$ statement follows because finitely many samples cannot decide universal asymptotic quantifiers. ∎
+
+**Remark O.5.3i (Exact Status).** The theorem-level conclusions of this section are precisely scoped:
+
+1. oracle-natural derivations from registered oracle-stable premises cannot discharge standard one-wayness or $\mathsf{P}\ne\mathsf{NP}$;
+2. Proposition O.5.3f gives a deterministic fixed-exponent, infinitely-often, all-image obstruction, not average-case one-wayness;
+3. Proposition O.5.3g gives a weak $\mathsf{AC}^0$ inversion bound whose displayed reduction does not discharge negligible inversion; and
+4. $[\mathrm{PHP}]_{f_{\mathrm{PHP}}}$ plus the quantified PPT-to-PU simulation certificate implies $\mathsf{P}\ne\mathsf{NP}$ only conditionally.
+
+No accepted unconditional OWF or direct-separation proof object is supplied. The registry therefore remains
+$$
+\boxed{
+\mathfrak C_{\mathrm{OWF}}=\varnothing_{\mathrm{cert}},
+\qquad
+\mathfrak C_{\mathrm{sep}}=\varnothing_{\mathrm{cert}},
+\qquad
+\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}=\varnothing_{\mathrm{cert}}.
+}
+$$
+Nonrelativizing routes not covered by Theorem O.5.3c remain unclassified, not ruled out. Other proof barriers apply only after their separate hypotheses and their applicability to a proposed proof method are established; they are not promoted here to properties of a candidate function. The open mathematical problem is unchanged.
 
 ## O.6 Temporal Dynamics as the Substrate for Consciousness Complexity and Gravity
 
@@ -665,6 +1174,26 @@ where $\mathcal K_{\mathrm{CG}}$ is the coarse-grained CP influence kernel, $\ma
 
 *Proof.* On the recorded Markov diffusion branch, positivity of the diagonal probability kernel and the Kramers-Moyal hypotheses invoke the Pawula alternative: a positivity-preserving finite truncation is of order at most two unless the full infinite series is retained. The GKSL/Fokker-Planck record supplies the corresponding complete-positivity constraint for the quantum sector. The no-jump and no-nonlocal entries remove retained Lévy, jump, fractional, or pseudodifferential alternatives. Finally, $\mathcal R_\delta$ shows that any remaining all-orders terms carry no retained finite response at the operational resolution. Nondegeneracy then leaves the second-order principal symbol displayed in Hypothesis O.7.2.3 for propagating covered sectors. ∎
 
+**Definition O.7.2.3c (Mixing Gaussian-Scaling Audit).** Augment an accepted second-order certificate by a centered stationary increment process, diffusive rescaling, the moment and strong-mixing summability required by named CLT/Berry-Esseen results, and constants $c_2>0$, $C_m<\infty$ satisfying
+$$
+a_2(v,v)\ge c_2\delta^2|v|^2,
+\qquad \|a_m\|\le C_m\delta^m\quad(m\ge3).
+\tag{O.7.2.3c.1}
+$$
+
+**Proposition O.7.2.3d (Gaussian Rescaled-Diagonal Limit).** For
+$$
+0<|k|\le L_{\mathrm{obs}}^{-1},
+$$
+the record gives
+$$
+\frac{|a_m[k^{\otimes m}]|}{a_2[k,k]}
+\le\frac{C_m}{c_2}
+\left(\frac{\delta}{L_{\mathrm{obs}}}\right)^{m-2}.
+\tag{O.7.2.3d.1}
+$$
+The registered mixing theorem controls standardized cumulants and residuals. This is an asymptotic diagonal Gaussian statement, not a Lorentzian-signature or exact finite-cycle theorem.
+
 **Hypothesis O.7.2.4 (Nondegenerate causal cone).** The operational causal cone of Proposition F.1 and Theorem 46 is nondegenerate at every point of $M_{\mathrm{reg}}$ and coincides with the characteristic cone of $p_x$: for every nonzero spatial covector $k_i$, the polynomial
 $$
 \omega \;\longmapsto\; p_x(\omega,k) \;=\; a(x)\,\omega^2 + 2b^i(x)\,\omega\,k_i + A^{ij}(x)\,k_i\,k_j
@@ -683,7 +1212,23 @@ $$
 $$
 where, for timing tests, $\xi_{\mathrm{cone}}$ is the retained supremum of normalized sector-front speed splittings in the certified vacuum window. An accepted $\mathfrak C_{\mathrm{cone}}$ supplies the cone-coincidence entry of Hypothesis O.7.2.4 only for the retained sectors and resolution covered by the record. It does not discharge Hypothesis O.7.2.3, does not cover response-null labels, and does not promote uncovered sectors to the Lorentzian branch.
 
-**Remark O.7.2.6 (Finite Speed versus Cone Saturation).** Theorem 46 supplies the finite operational frontier for serialized ND-RID substrate propagation. It does not by itself prove that every retained continuum sector saturates that frontier or that all sector characteristic cones coincide. Sector-cone saturation is a branch theorem only when it is directly derived for the sector or supplied by an accepted $\mathfrak C_{\mathrm{cone}}$.
+**Definition O.7.2.5a (Desynchronization Cone-Rigidity Certificate).** For a finite sector graph, one forward-locked record fixes $c_A>0$, $\bar c_{AB}=(c_A+c_B)/2$, tolerances $\xi_{AB}\ge0$, and a single protocol family, resolution, and quotient map
+$$
+q_{\mathrm{resp}}:V_{\mathrm{sec}}\to\mathfrak Q_{\mathrm{front}}.
+$$
+Every edge obeys
+$$
+\left|\frac{c_A-c_B}{\bar c_{AB}}\right|\le\xi_{AB},
+\qquad q_{\mathrm{resp}}(A)=q_{\mathrm{resp}}(B).
+\tag{O.7.2.5a.1}
+$$
+Any nonadjacent numerical tolerance requires a separate path-accumulation ledger.
+
+**Proposition O.7.2.5b (Connected Response Class).** A connected component maps to one element of $\mathfrak Q_{\mathrm{front}}$. Connectivity alone gives no uniform numerical tolerance between nonadjacent speeds.
+
+*Proof.* Equality in a common quotient is transitive along a finite path; numerical edge errors may accumulate. ∎
+
+**Remark O.7.2.6 (Finite Speed versus Cone Saturation).** Theorem 46 supplies the finite operational frontier for serialized ND-RID substrate propagation. It does not by itself prove that every retained continuum sector saturates that frontier or that all sector characteristic cones coincide. Sector-cone saturation is a branch theorem only when it is directly derived for the sector or supplied by an accepted $\mathfrak C_{\mathrm{cone}}$. An accepted $\mathfrak C_{\mathrm{desync}}^{\mathrm{cone}}$ supplies only the edgewise finite-response quotient statement of Proposition O.7.2.5b unless its path and sector-coverage entries also discharge the full cone-saturation record.
 
 **Theorem O.7a (Hyperbolic Signature Closure).** Under Hypotheses O.7.2.1–O.7.2.4 and the three-spatial-dimensional hypothesis of Theorem Z.11, for every $x\in M_{\mathrm{reg}}$:
 
@@ -781,7 +1326,7 @@ Premise (A5) of §12 is therefore theorem-level only on the emergent-spacetime b
 
 The familiar properties of time—its coherence over vast scales and its unwavering forward direction—are not postulated in the Predictive Universe framework but are derived as necessary emergent features of the collective predictive process.
 *   **Temporal Coherence** emerges as a dynamically stable state, enforced by the Principle of Compression Efficiency, which penalizes the predictive errors and resource costs inherent in desynchronization. The MPU network self-organizes into a synchronized coherent causal medium to optimize its collective predictive function.
-*   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle. Under the pathwise guarantee-level coarse graining of Theorem O.3a, a single nontrivial 'Evolve' cycle satisfies $P_R/P_F\le e^{-\varepsilon_0}\le 1/2$ before ensemble averaging is invoked.
+*   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle. Under the pathwise guarantee-level coarse graining of Theorem O.3a, a cycle satisfies $P_R/P_F\le e^{-h_{\min}}$; the factor $1/2$ requires the separate certificate $h_{\min}\ge\ln2$.
 *   **The Perspectival Arrow** reveals that temporal irreversibility possesses internal structure graded by observer complexity (Theorem O.4; Proposition O.4.2). Even a more complex external agent cannot impose an exact reversal of another agent's arrow by communicating a specification of that agent's prior self-state: any such message that is processable is integrated through a further forward update, and the exact-restoration idealization is unprocessable (Corollary O.4.1). The depth of the arrow — the cost of temporal self-restoration — is relative to the observer's position in the complexity hierarchy, paralleling the relativization of simultaneity in Structural Correspondence M.6.4 (Corollary O.4.3). The irreversibility resides in the processing of self-referential content, not in the loss of information (Remark O.4.2): global unitarity preserves all information (Theorem E.9.5), yet no observer can use that conserved information for self-reversal, because integrating a specification of one's own prior self-model is itself another irreversible forward step. A more complex in-universe agent may externally model a less complex one at sender-side SPAP-flat cost, but every modeler remains subject to its own self-referential limits, and the decisive obstruction to exact reversal remains at the receiver (Remark O.4.3). Even highly accurate sub-exact reconstruction that targets deep self-model parameters already enters the divergent cost regime (Remark O.4.4). Communicated information partitions into externally targeted content with $\sigma_B(E) = 0$ and self-referential content with $\sigma_B(E) > 0$; the former is SPAP-flat, while the latter ranges from baseline cost in shallow cases to SPAP-divergent cost for deep self-model demands (Remark O.4.5; Remark M.10.3).
 
 Crucially, this emergent temporal structure is not a passive background. Its dynamic properties provide the physical substrate for the framework's most profound emergent phenomena. The controlled modulation of this medium's coherence provides a channel for Consciousness Complexity to exert its influence, with the energy cost of this modulation being properly accounted for within the standard stress-energy tensor. Meanwhile, uncontrolled, large-scale disturbances in the medium, sourced by bulk fluctuations in $T_{\mu\nu}$, propagate as temporal waves that are physically identical to the gravitational waves of General Relativity. This unifies the emergence of time, the mechanism of CC, and the nature of gravity within a single, coherent, and dynamic picture.

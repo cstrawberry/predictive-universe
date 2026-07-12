@@ -76,7 +76,7 @@ Combining (C.4)–(C.6) yields a complete $L_1$ control with explicit normalizat
 **Lemma C.3.3 (Rigorous $L_1$ stability for the complexity-weighted kernel).**
 Let $P$ be given by (C.2) and write $\mu_v := P^{(0)}_{v\bullet}$, extended by zero to all of $\mathcal{V}$ (i.e., $\mu_v(x) := P^{(0)}_{vx}$ for $x \sim v$ and $\mu_v(x) := 0$ otherwise, so that $\mu_v$ is a probability measure on $\mathcal{V}$ supported on the neighbors of $v$). Assume:
 
-1. (**Operating-range monotonicity**) $I'(c) \ge 0$ for $c \in [C_{op}, C_{max\_phys}]$, and define
+1. (**Operating-range monotonicity**) $I'(c) \ge 0$ for $c \in [C_{op}, C_{\max,\mathrm{phys}}]$, and define
 $$
 B := \sup_w I'(C_P(w)) < \infty.
 $$
@@ -327,11 +327,17 @@ The extensive-budget branch gives $V_{\max}(L)\le CL^D$. Since $\beta>1$, the ra
 
 We now demonstrate that large variations in local geometry, quantified by curvature fluctuations (violating Definition C.2 if no positive lower bound $\kappa_R > 0$ exists or if variance is large), lead to violations of local viability (R1) and resource efficiency (R3).
 
-**Theorem C.3 (Predictive Load Volatility on the Curvature-Load Coupling Branch).** Assume the curvature-load coupling branch: there exists a monotone physical coupling between discrete Ricci-curvature irregularity and the local effective environmental complexity scale, so that large spatial fluctuations Var$(\kappa_{\mathcal{N}})$ or regions without a uniform positive lower bound $\kappa_R > 0$ correspond to volatility in the local actual environmental complexity $\hat{C}_{\text{actual}}(v)$. Under this branch, regions $R_{fluct} \subset \mathcal{V}$ exhibiting large curvature fluctuations induce high spatial volatility in the local target complexity $\hat{C}_{target}(v)$ (Definition 21) that each MPU $v \in R_{fluct}$ must track to maintain its target Predictive Performance $PP(v) \approx PP_{op}$ within the viable range $(\alpha, \beta)$.
+Under this branch, regions $R_{fluct} \subset \mathcal V$ exhibiting large curvature fluctuations have high volatility in the external load $\hat C_{actual}(v)$. High volatility of the internal coordinate $\hat C_{target}(v)$ follows only on a branch carrying an external innovation certificate that identifies $\hat C_{target}$ with $\hat C_{actual}$ within registered error; Equation (38) alone supplies no such identification.
 
-*Proof:* The curvature-load coupling branch supplies the physical premise that discrete Ricci curvature controls not only geometric transport rates (Wasserstein contractivity) but also the complexity of the local predictive task through its effect on information propagation pathways. Under this coupling: positive curvature ($\kappa_R > 0$) implies pathways converge locally, simplifying the task of integrating information from neighbors and predicting local dynamics (lower actual complexity $\hat{C}_{\text{actual}}$). Negative or highly fluctuating curvature implies pathways diverge unpredictably, making local prediction harder due to rapid information dispersion or unstable focusing (higher or more volatile $\hat{C}_{\text{actual}}$). On this branch, large spatial variations in curvature Var$(\kappa_{\mathcal{N}})$ or the absence of a uniform positive lower bound correspond to large spatial variations or volatility in the local predictive environment's complexity, Var$(\hat{C}_{\text{actual}}(v))$. The MPU's internal estimate $\hat{C}_{target}(v)$ is dynamically adjusted (Equation 38) to track this actual local complexity, so high Var$(\hat{C}_{\text{actual}}(v))$ necessitates high Var$(\hat{C}_{target}(v))$ for MPUs operating in the fluctuating region. The curvature-to-load coupling itself is a physical input supplied by this branch, not a mathematical deduction from the synthetic Ricci definition alone; a branch-independent derivation of the coupling strength is a separate derivation requirement. QED
 
-**Theorem C.4 (Operational Cost and Stability Penalty for Curvature Fluctuations).** MPU networks $\mathcal{N}_{unbounded}$ exhibiting large curvature fluctuations (or lacking a uniform positive lower bound), which induce high spatial variance Var$(\hat{C}_{target}(v))$ (Theorem C.3), incur significant penalties violating resource efficiency (RE) and/or local viability (LV):
+
+*Proof:* The curvature-load coupling branch supplies the physical premise that discrete Ricci curvature controls not only geometric transport rates (Wasserstein contractivity) but also the complexity of the local predictive task through its effect on information propagation pathways. Under this coupling: positive curvature ($\kappa_R > 0$) implies pathways converge locally, simplifying the task of integrating information from neighbors and predicting local dynamics (lower actual complexity $\hat{C}_{\text{actual}}$). Negative or highly fluctuating curvature implies pathways diverge unpredictably, making local prediction harder due to rapid information dispersion or unstable focusing (higher or more volatile $\hat{C}_{\text{actual}}$). On this branch, large spatial variations in curvature Var$(\kappa_{\mathcal{N}})$ or the absence of a uniform positive lower bound correspond to large spatial variations or volatility in the local predictive environment's complexity, Var$(\hat{C}_{\text{actual}}(v))$. Equation (38) homeostatically regulates $\hat C_{target}(v)$ but does not by itself prove tracking of $\hat C_{actual}(v)$. On a branch carrying an external innovation certificate that identifies those scales within error, high Var$(\hat C_{actual}(v))$ transfers to the certified target-scale variance; without that certificate this tracking step remains a branch hypothesis.
+
+ The curvature-to-load coupling itself is a physical input supplied by this branch, not a mathematical deduction from the synthetic Ricci definition alone; a branch-independent derivation of the coupling strength is a separate derivation requirement. QED
+
+On the curvature-load branch together with the external innovation certificate required by Theorem C.3, MPU networks $\mathcal N_{unbounded}$ whose curvature fluctuations induce high certified spatial variance Var$(\hat C_{target}(v))$ incur the following conditional resource-efficiency (RE) and local-viability (LV) penalties:
+
+
 
 * **(i) Excess Operational Cost (RE Violation):** High Var$(\hat{C}_{target}(v))$ forces the adapted MPU complexities $C_v = \langle \hat{C}_v \rangle$ to also exhibit high spatial variance Var$(C_v)$, as $C_v$ must track $\hat{C}_{target}(v)$ via the adaptation dynamics (Equation 30, driven by $\Psi$ which depends on $\hat{C}_{target}$). Let $f(C_v) = \langle \lambda \hat{R}(C_v) + \hat{R}_I(C_v) \rangle_{\rho^{(v)}}$ represent the local expected operational cost rate associated with complexity $C_v$. The physical cost function $R(C)$ is strictly convex ($\gamma_p>1$), while $R_I(C)$ is concave (Definition 3). For the total cost $f(C)$ to be convex ($f''(C) > 0$), we require $\lambda R''(C) > |R_I''(C)|$. This condition is satisfied if the **Dominance of Stabilizing Costs (DSC)** condition (introduced in the statement of Theorem 22, Section 6.5.2) holds, ensuring $f''(C) \ge f''_{min} > 0$. In addition, since $f$ is increasing, any locally forced increase in $C$ (needed to match local targets under curvature fluctuations) raises $V_{op}$ pointwise; combined with convexity this yields the quantitative variance penalty $\Delta V_{op}\ge \frac{N}{2}f''_{min}\,\text{Var}(C_v)$ (Equation C.15). This convexity reflects that fundamental costs increase super-linearly with complexity. The total operational cost across the network is $V_{op} = \sum_{v=1}^N f(C_v)$. By Jensen's inequality for convex functions, $\frac{1}{N}\sum f(C_v) \ge f(\frac{1}{N}\sum C_v)$, or $V_{op} \ge N f(\bar{C})$, where $\bar{C}$ is the average complexity. A second-order Taylor expansion around $\bar{C}$ clarifies the variance penalty: $f(C_v) \approx f(\bar{C}) + f'(\bar{C})(C_v-\bar{C}) + \frac{1}{2}f''(\bar{C})(C_v-\bar{C})^2$. Summing over $v$: $V_{op} \approx N f(\bar{C}) + 0 + \frac{1}{2}f''(\bar{C}) \sum (C_v-\bar{C})^2 = N f(\bar{C}) + \frac{N}{2}f''(\bar{C})\text{Var}(C_v)$. The excess cost compared to a uniform configuration where all $C_v = \bar{C}$ is:
 $$
@@ -467,9 +473,7 @@ Finally, Definition C.2 provides a discrete curvature bound, but the present App
 
 Without all four, Theorem 44 remains genuinely conditional.
 
-**Theorem C.6c (Noncollapsed RCD${}^*(K,4)$ Bridge).** Assume the hypotheses of Theorem D.6e on a selected sequence with $\mathfrak D_n\to0$. In particular, $\mathfrak B_n\to0$ gives the asymptotic discrete Bakry–Émery condition $\mathrm{BE}(K-o(1),4)$ on the radius-2 core, and $\mathfrak C_n\to0$ transfers this estimate from the finite core to the graph form domain. Assume also *noncollapse*: there exist $v_-,v_+>0$ and $r_0>0$ such that $v_-\,r^4\le\mu_n(B_r(x))\le v_+\,r^4$ for $0<r\le r_0$ uniformly on the selected branch. Then every measured-GH subsequential limit is a noncollapsed $\mathrm{RCD}^*(K,4)$ space $(X,d,\mu)$, and the Mosco-limit quadratic form from Theorem D.6e is exactly its canonical Cheeger energy. In particular, tangent cones are Euclidean $\mathbb R^4$ at $\mu$-a.e. point.
-
-*Proof.* The doubling/Poincaré regime yields measured-GH precompactness. The Mosco limit from Theorem D.6e supplies a strongly local regular Dirichlet form on the limit space. The vanishing Bakry–Émery defect gives the curvature-dimension inequality on the dense radius-2 core up to $o(1)$ error, and the vanishing core defect extends it to the graph form domain. Stability of the $\mathrm{BE}(K,4)$ condition under the joint measured-GH/Mosco passage then gives the synthetic $\mathrm{RCD}^*(K,4)$ condition in the limit. Noncollapse fixes the metric-measure dimension at $4$, preventing dimension drop and placing the limit on the noncollapsed branch. Standard noncollapsed RCD regularity then yields Euclidean tangent cones almost everywhere. ∎
+**Theorem C.6c (Conditional Noncollapsed $\mathrm{RCD}^*(K,4)$ Bridge).** Let $(X_n,d_n,\mu_n,x_n)$ converge in pointed measured-Gromov--Hausdorff topology to $(X,d,\mu,x)$. Assume the spaces are complete separable length metric-measure spaces with full-support locally finite measures; their Cheeger energies are quadratic; the global generator-domain Bakry--Émery inequalities $\mathrm{BE}(K_n,4)$ hold with $K_n\to K$; the Sobolev-to-Lipschitz and integrability hypotheses required for the $\mathrm{BE}$--$\mathrm{RCD}$ equivalence hold; and the Cheeger energies Mosco-converge under the declared varying-space identifications. Then $(X,d,\mu)$ is $\mathrm{RCD}^*(K,4)$. If, after fixed normalization, $\mu=\mathcal H^4$, then the limit is noncollapsed. A radius-2 polynomial-core estimate, local Ahlfors bounds, or vanishing finite defects alone proves none of these global hypotheses. ∎
 
 **Lemma C.6d (The $D_4$ Shell Moment Closure).** Let
 $$
@@ -493,51 +497,23 @@ $$
 $$
 so the diagonal average is $12/24=1/2$. For $i\ne j$, only the pair $(i,j)$ contributes to $\sum_\xi \xi^i\xi^j$, and the four sign choices give products $1,-1,-1,1$, whose sum is zero. Hence the off-diagonal averages vanish. ∎
 
-**Theorem C.6e (PCE Shell Isotropy and Noncollapse Closure).** Work on the minimal $M=24$, $D=4$ mode-channel branch of Theorem Z.11, and assume the first-shell channel realization is chart-compatible with the $D_4$ shell of Lemma C.6d up to $o(\delta_n)$ distortion on the rescaled family. Let the local first-shell QFI tensor at $x$ be
+**Theorem C.6e (Local PCE Shell-Isotropy Closure).** Assume the feasible shell tensors are positive semidefinite, contain $(C_\Sigma/4)I_4$, and satisfy $\operatorname{tr}Q=C_\Sigma>0$. Define
 $$
-Q_n(x):=\sum_{a=1}^{24}p_{a,n}(x)\,\xi_{a,n}(x)\xi_{a,n}(x)^T,
-\qquad p_{a,n}(x)\ge0,
+V_{\mathrm{shell}}(Q)=
+\begin{cases}
+-\log\det Q,&Q>0,\\
++\infty,&Q\text{ singular}.
+\end{cases}
 $$
-with fixed local channel budget
-$$
-\operatorname{tr}Q_n(x)=C_\Sigma+o(1),\qquad C_\Sigma>0.
-$$
-Assume the shell contribution to local PCE distinguishability is represented, up to positive affine rescaling, by
-$$
-V_{\mathrm{shell}}(Q)=-\log\det Q
-$$
-on positive definite $Q$, and by $V_{\mathrm{shell}}(Q)=+\infty$ on singular $Q$. Then every PCE-minimizing feasible shell sequence satisfies
-$$
-Q_n(x)\to \frac{C_\Sigma}{4}I_4
-$$
-locally uniformly on the selected branch. In particular:
+Then the unique minimizer is $Q_*=(C_\Sigma/4)I_4$, and every minimizing sequence converges to $Q_*$. Thus rank collapse of this fixed-trace shell tensor is excluded.
 
-1. the weighted-shell/local-isotropy input of Theorem 44 is supplied;
-2. rank collapse is impossible in the PCE-minimum sector;
-3. fixed-radius noncollapse holds after rescaling:
-$$
-v_-r^4\le\mu_n(B_r(x))\le v_+r^4
-$$
-for $0<r\le r_0$ with constants independent of $n$ on bounded regular charts;
-4. the shell-isotropy, uniform-locality, fixed-radius noncollapse, and canonical interpolation/recovery inputs used in Theorem D.6e are supplied on the $D_4$ operational-continuum branch. The curvature-transfer, dense-core, and rigidity controls are the separate continuum-control defects defined in Theorem D.6e.
+*Proof.* For the eigenvalues $\lambda_i$, AM--GM gives $\prod_i\lambda_i\le(C_\Sigma/4)^4$, with equality exactly when all four eigenvalues equal $C_\Sigma/4$. Compactness of the fixed-trace positive-semidefinite set and uniqueness give convergence. ∎
 
-*Proof.* The QFI tensor $Q$ is the local Fisher information matrix for infinitesimal displacement parameters in the first-shell chart. For a locally unbiased estimator, the Cramér-Rao ellipsoid has volume proportional to $(\det Q)^{-1/2}$. Maximizing predictive distinguishability per fixed channel budget is therefore equivalent to minimizing $-\log\det Q$ at fixed $\operatorname{tr}Q=C_\Sigma$. Singular $Q$ leaves at least one displacement direction with zero QFI, giving infinite estimator volume and hence infinite local predictive-resolution cost. Thus $V_{\mathrm{shell}}(Q)=+\infty$ on $\det Q=0$.
-
-Let $\lambda_1,\dots,\lambda_4$ be the eigenvalues of any positive definite admissible $Q$. Since $\sum_i\lambda_i=\operatorname{tr}Q=C_\Sigma$, the arithmetic-geometric mean inequality gives
-$$
-\det Q=\prod_{i=1}^4\lambda_i\le \left(\frac{C_\Sigma}{4}\right)^4,
-$$
-with equality if and only if
-$$
-\lambda_1=\lambda_2=\lambda_3=\lambda_4=\frac{C_\Sigma}{4}.
-$$
-Therefore $-\log\det Q$ is minimized uniquely at $Q=(C_\Sigma/4)I_4$. Any rank-collapsing sequence has some $\lambda_i\to0$, hence $\det Q\to0$ and $V_{\mathrm{shell}}\to+\infty$, so it cannot lie in the PCE-minimum sector.
-
-Lemma C.6d shows that the equal-capacity $D_4$ shell realizes an isotropic tensor, and the preceding determinant argument shows that every minimizing shell tensor converges to the same isotropic tensor. Since the $D_4$ roots span a rank-four lattice and the chart distortion is $o(\delta_n)$, the graph metric on bounded regular charts is bi-Lipschitz, with constants independent of $n$, to a bounded-degree refinement of the rank-four $D_4$ lattice. Rank-four lattice volume growth gives two-sided bounds $v_-r^4\le\mu_n(B_r(x))\le v_+r^4$ for fixed rescaled radii. The same finite first-shell realization gives uniform locality. Sampling a Lipschitz function on vertices and extending it by the canonical $D_4$ cell interpolation gives recovery maps; conversely, lower semicontinuity follows from the convex quadratic form and the uniform ellipticity $Q_n\to(C_\Sigma/4)I_4$. Hence the shell-isotropy, locality, and interpolation/recovery hypotheses used in Theorem D.6e are supplied on this branch, subject to the finite-core condition stated separately in Theorem D.6e. ∎
+This local tensor result does not prove a global bi-Lipschitz atlas, fixed-radius geometric noncollapse, a global quasi-isometry, or interpolation and recovery maps; those are independent continuum-bridge hypotheses.
 
 ## C.7 Conclusion and status boundary
 
-This appendix establishes the regularity-necessity theorem and the first-shell closure used by the operational-continuum branch. Sections C.1–C.6 show that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages these penalties as conditional coarse-grained doubling and local $(1,2)$-Poincaré bounds under its stated hypotheses. Theorem C.6c supplies the noncollapsed $\mathrm{RCD}^*(K,4)$ bridge once the uniform $\mathrm{BE}(K,4)$ curvature transfer and noncollapse hold, while Lemma C.6d and Theorem C.6e supply the $D_4$ shell isotropy, PCE noncollapse, and canonical shell data used by the finite-defect Mosco–Cheeger closure of Theorem D.6e.
+This appendix separates local shell isotropy from global continuum closure. Theorem C.6e controls only the fixed-trace shell tensor; geometric noncollapse, measured-Gromov--Hausdorff compactness, Mosco convergence, and Cheeger-energy identification remain independent hypotheses.
 
 Appendix C does not by itself construct the full AQFT net or the local-horizon KMS/Clausius bridge. Those are supplied separately by Theorem F.0 and Theorem 48a. The operational-continuum branch proves a finite-resolution manifold compression after the microscopic continuum-control defects of Theorem D.6e are included in the adaptation potential and selected by Theorem 43.5; the exact real-number continuum remains an effective completion, not an additional physical substrate.
 

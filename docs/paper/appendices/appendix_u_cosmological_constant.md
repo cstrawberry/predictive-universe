@@ -25,7 +25,7 @@ The following constants are derived elsewhere in the framework:
 | Symbol | Value | Definition | Source |
 |--------|-------|------------|--------|
 | $\varepsilon_0$ | $\ln 2$ | Structural SPAP/Landauer quotient | Theorem 31 |
-| $\varepsilon_{\mathrm{phys}}$ | $\ge\varepsilon_0$ | Physical implementation cost including overhead | Theorem 31 |
+| $\varepsilon_{\mathrm{phys}}$ | $\ge H_q(P\mid R)$ on a registered reset branch | Physical reset cost including overhead; positive floor needs an ensemble bound | Theorem 31 |
 | $K_0$ | 3 | Minimal self-referential bits | Theorem 15 |
 | $N_{\mathrm{vis}}^{\min}$ | $2^{K_0} = 8$ | Minimal faithful visited-context count | Theorem 15 |
 | $d_0$ | $8$ | Minimal MPU Hilbert-carrier dimension after saturation | Theorem 23; Theorem Z.2 |
@@ -1381,6 +1381,20 @@ Thus the cosmological prefactor is a relative Quillen-Fredholm norm multiplied o
 
 *Proof.* This is a reformulation of (U.15d.3) in canonical determinant-line language. Definition U.15d fixes the two zeta determinants with one common finite-part convention $\mu_U$, fixes the omitted zero and negative spectral subspaces by $\Pi_0$ and $\Pi_-$, and fixes the orientation of the determinant line. Therefore the determinant ratio in (U.15d.3) is precisely the Quillen norm of the relative determinant section (U.15i.2.1), giving (U.15i.2.2). Substituting (U.15i.2.2) into (U.15d.3) gives (U.15i.2.3). Since every remaining multiplicative factor in (U.15d.3) appears explicitly in (U.15i.2.3), adding any further determinant, Jacobian, ghost, finite-volume, or measure factor changes the finite record and hence defines a different branch. ∎
 
+**Definition U.15i.3 (Common Relative Quillen Convention Ledger).** For every listed sector $s$, the ledger fixes an oriented relative determinant section $s_{\mathrm{rel},s}$, omitted-mode rule, finite-part scheme and scale, unit map, transport $T_s$ into one comparison convention, and the sector factors $\mathcal J_s$, $\mathcal A_{\mathrm{neg},s}$, $\mathcal A_{\mathrm{ghost},s}$, $\mathcal A_{\mathrm{fv},s}$, and $\mathcal A_{\mathrm{meas},s}$.
+
+**Proposition U.15i.4 (Sector Restriction of One Convention Ledger).** On an accepted ledger,
+$$
+A_s=
+\mathcal J_s|\mathcal A_{\mathrm{neg},s}|
+\mathcal A_{\mathrm{ghost},s}
+\mathcal A_{\mathrm{fv},s}
+\mathcal A_{\mathrm{meas},s}
+\|T_s(s_{\mathrm{rel},s})\|_Q.
+\tag{U.15i.4.1}
+$$
+This proves convention compatibility, not equality of prefactors across sectors. A sector missing any typed factor or transport map lies outside the result.
+
 **Corollary U.15j (Determinant-Transfer Branch-Decision Ledger).** Let
 $$
 \Xi_{\perp}:=A_{\perp}e^{\mathcal B_{\mathrm{BL}}}
@@ -1540,7 +1554,7 @@ where:
 
 This theorem records the Appendix U reference exponent only within the stated leading-order counting convention; it does not assert that the five-mode count has already been established as an unconditional property of the continuum Hessian.
 
-**Theorem U.16a (Exact Complexity Dichotomy with a Zero-Mode Indicator).** Assume the Morse–Bott hypotheses hold with critical-manifold dimension $m=4+\nu$, $\nu\in\{0,1\}$, where $\nu=1$ only if the exact-scale-family hypothesis of Theorem U.9 holds. Then the instanton complexity is
+**Theorem U.16a (Exact Complexity Dichotomy with a Zero-Mode Indicator).** Assume the Morse-Bott hypotheses hold with $m=4+\nu$, $\nu\in\{0,1\}$. The value $\nu=1$ is licensed only by the exact-scale-family hypothesis of Theorem U.9 or by an accepted Definition U.16b certificate establishing one additional exact compact-orbit kernel direction. Then the instanton complexity is
 $$
 \kappa \;=\; \frac{N_{\mathbb R}-(4+\nu)}{2} \;=\; 142 - \frac{\nu}{2}, \qquad N_{\mathbb R}=288.
 $$
@@ -1551,6 +1565,24 @@ $$
 The current reference value $\kappa_{\mathrm{ref}}=141.5$ of Theorem U.16 is therefore exact on the $\nu=1$ branch and a leading-order reference-counting convention on the $\nu=0$ branch.
 
 *Proof.* Apply the Morse–Bott deficit formula $\kappa=(N_{\mathbb R}-m)/2$ with $N_{\mathbb R}=288$ and $m=4+\nu$. For $\nu=0$, $\kappa=(288-4)/2=142$ and $2\kappa=284$. For $\nu=1$, $\kappa=(288-5)/2=141.5$ and $2\kappa=283$. ∎ Theorem U.8c strengthens this status statement: within the current Definition U.4 continuum action class, the pure-coordinate dilatation tangent is a strict negative mode rather than a zero mode.
+
+**Definition U.16b (Alternative Compact Fifth-Mode Certificate).** A forward-locked Morse-Bott record fixes an action branch, critical point $\phi^*$, Hessian $\mathcal H_U$, four translational tangents, a fifth tangent $\eta_5$, kernel and negative-mode projectors, collective-coordinate measure, and overlap audit. It requires:
+
+1. a local critical-manifold model $\mathbb R^4\times\mathcal O_5$, where only the one-parameter orbit $\mathcal O_5$ is compact;
+2. the exact identity
+   $$
+   \ker\mathcal H_U=
+   \operatorname{span}\{\eta_{\mathrm{trans},1},\ldots,
+   \eta_{\mathrm{trans},4},\eta_5\};
+   \tag{U.16b.1}
+   $$
+3. $\Pi_0$ equal to the projector onto that span, with $\eta_5$ nonzero, non-gauge, and non-null in the PPI quotient;
+4. Fredholm nondegeneracy on the normal quotient after the recorded negative mode is handled; and
+5. separate translation-volume and compact-orbit measures with no double counting.
+
+**Proposition U.16c (Alternative Fifth-Mode Status).** An accepted certificate gives $m=5$, hence $\nu=1$, $\kappa=141.5$, and $e^{-2\kappa}=e^{-283}$ on that action branch. It does not convert the negative dilatation direction of Theorem U.8c into a zero mode or alter the current-action-class obstruction.
+
+*Proof.* The exact kernel has dimension five and Theorem U.16a supplies the arithmetic. The action-branch and overlap entries enforce the scope statement. ∎
 
 **Corollary U.17 (Reference Cosmological Constant Scale).** With this reference exponent, the vacuum weight is parameterized as
 
@@ -1966,6 +1998,37 @@ On a determinant-certified branch, replace $A_Q$ by $A_Q^{\mathrm{det}}$ from Th
 *Verification.* 
 - $e^{-11} = 1.6702 \times 10^{-5}$
 - $e^{-11}/\sqrt{2} = 1.6702 \times 10^{-5} / 1.4142 = 1.181 \times 10^{-5}$ $\checkmark$
+
+**Definition U.27a (Thermal-Handoff Certificate).** A forward-locked record fixes intervals for $c_m>0$, $N_{\mathrm{dec}}>0$, $g_*>0$, branching fractions, efficiencies, and residuals, together with the maps
+$$
+m_\varphi=c_m\bar M_{\mathrm{Pl}}e^{-\kappa_Q},
+\qquad
+\Gamma_\varphi=
+\frac{N_{\mathrm{dec}}}{48\pi}
+\frac{m_\varphi^3}{\bar M_{\mathrm{Pl}}^2},
+\tag{U.27a.1}
+$$
+$$
+T_{\mathrm{reh}}=
+\left(\frac{90}{\pi^2g_*}\right)^{1/4}
+\sqrt{\Gamma_\varphi\bar M_{\mathrm{Pl}}}.
+\tag{U.27a.2}
+$$
+The output intervals for $m_\varphi$, $\Gamma_\varphi$, $T_{\mathrm{reh}}$, and $T_{\max}$ are interval images of the inputs; they are not independent inputs. Separate entries bound direct, preheating, nonthermal, and off-shell production.
+
+**Proposition U.27b (Residual-Aware Reheating Output).** On the zero-residual representative,
+$$
+T_{\mathrm{reh}}
+=c_R\bar M_{\mathrm{Pl}}e^{-3\kappa_Q/2},
+\quad
+c_R=c_m^{3/2}
+\sqrt{\frac{N_{\mathrm{dec}}}{48\pi}}
+\left(\frac{90}{\pi^2g_*}\right)^{1/4}.
+\tag{U.27b.1}
+$$
+For interval inputs, use the full interval image of (U.27a.1)--(U.27a.2).
+
+**Corollary U.27c (Heavy-Sector Handoff Gate).** Thermal exclusion of a mass $M_R$ requires $T_{\mathrm{reh}}\le T_{\max}<M_R$ and certified absence of all recorded nonthermal routes. A no-double-counting conclusion additionally needs the Appendix Y source-exhaustion audit.
 
 ---
 
@@ -2453,6 +2516,16 @@ Absent such a ledger, $c_2=0$ and $c_W=0$ are irreducible truncation-branch data
 
 *Proof.* In four dimensions the Gauss-Bonnet density changes the basis of curvature-squared invariants but leaves two non-topological quadratic curvature directions. The record $\mathfrak L_{\mathrm{LE}}$ is exactly the finite projection and coefficient ledger needed to show that the retained scalar branch has no $R_{\mu\nu}R^{\mu\nu}$ or Weyl-squared response. If (U.48b.1) holds, the action reduces to the Starobinsky branch with fixed $c_1$. If either zero interval is absent, a different scalar/tensor quadratic-curvature branch remains admissible and changes the downstream slow-roll and trans-horizon map. ∎
 
+
+**Definition U.48c (Finite Equal-Capability Entropy-Minimum Certificate).** Fix a finite exhaustive candidate family $\mathcal X$, an equal-capability relation, a typed entropy $S_{\mathrm{cosmo}}$, and $x_*\in\mathcal X$. The record certifies
+$$
+S_{\mathrm{cosmo}}(x)-S_{\mathrm{cosmo}}(x_*)\ge\Delta_*>0
+\quad(x\ne x_*)
+\tag{U.48c.1}
+$$
+inside the declared capability class. Cost and entropy remain separate ledgers absent an explicit bridge.
+
+**Proposition U.48d (Certificate-Relative Entropy Minimum).** The record makes $x_*$ the unique entropy minimizer in its finite registered class. It proves no physical exit, reachability, or transition dynamics. A dynamical exit theorem additionally requires a precursor state, exhaustive reachable-exit relation, transition law, and independent selection rule.
 
 **Corollary U.49 (Starobinsky Form).** The gravitational action takes the Starobinsky form:
 

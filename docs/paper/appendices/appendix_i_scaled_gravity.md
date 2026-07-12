@@ -22,7 +22,9 @@ The emergence of gravity in the PU framework is a multi-step process (Sections 1
 
 **I.3 Complexity Saturation in Prediction**
 
-The MPU network's adaptation is driven by balancing predictive gain against resource cost according to the Principle of Compression Efficiency (PCE, Definition 15). The effective aggregate complexity $\bar C_{\mathrm{agg}}(R)$ in a region of scale $R$ adapts to match the perceived predictive difficulty $\hat C_{\mathrm{target}}(R)$ for that region (Equation 38), achieving a Predictive Performance $PP(C,\hat C_{target})$ determined by the Law of Prediction (Equation 22). The optimal complexity $C^*$ for a given $\hat C_{\mathrm{target}}$ is determined by the condition where the marginal predictive benefit equals the marginal resource cost (Definition 14, Equation 18):
+The MPU network's adaptation is driven by balancing predictive gain against resource cost according to the Principle of Compression Efficiency (PCE, Definition 15). The effective aggregate complexity $\bar C_{\mathrm{agg}}(R)$ in a region of scale $R$ adapts under PCE for a registered task-scale coordinate $\hat C_{\mathrm{target}}(R)$, achieving Predictive Performance $PP(C,\hat C_{target})$ under Equation (22). Equation (38) regulates that internal scale; matching it to external environmental difficulty requires a separate innovation certificate.
+
+ The optimal complexity $C^*$ for a given $\hat C_{\mathrm{target}}$ is determined by the condition where the marginal predictive benefit equals the marginal resource cost (Definition 14, Equation 18):
 $$
 \Gamma_0\,\frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda\,R'(\bar C_{\mathrm{agg}}^*)
      + R'_I(\bar C_{\mathrm{agg}}^*).
@@ -31,15 +33,19 @@ $$
 As complexity $\bar C_{\mathrm{agg}}$ increases, the marginal predictive gain $\partial PP/\partial C$ decreases (diminishing returns, $\partial^2 PP/\partial C^2 < 0$), while the marginal resource costs ($R', R_I'$) generally increase or remain non-negative ($R'' \ge 0$, $R_I'' \propto -1/C^2 < 0$ for $C>K_0$, but total marginal cost typically non-decreasing). This creates a balance point.
 
 **Proposition I.2 (Finite Saturation of Aggregate Complexity).**
-Given the diminishing returns in predictive performance from increasing complexity ($\partial^2 PP/\partial C^2 < 0$) and the positive, non-decreasing marginal costs ($R' \ge 0, R_I' > 0$ for $C>K_0$), PCE excludes runaway complexity investment in Equation (I.2): the optimal aggregate complexity $\bar C_{\mathrm{agg,sat}}$ is finite. Whether the optimum is attained at the lower admissible boundary $C = K_0$ or at an interior point depends on the environment and the perceived predictive difficulty $\hat C_{\mathrm{target}}$.
+Given the diminishing returns in predictive performance from increasing complexity ($\partial^2 PP/\partial C^2 < 0$) and the positive, non-decreasing marginal costs ($R' \ge 0, R_I' > 0$ for $C>K_0$), PCE excludes runaway complexity investment in Equation (I.2): the optimal aggregate complexity $\bar C_{\mathrm{agg,sat}}$ is finite. Whether the optimum is attained at the lower admissible boundary $C = K_0$ or at an interior point depends on the registered branch data and task-scale coordinate $\hat C_{\mathrm{target}}$; an environmental reading additionally requires the innovation certificate of Definition 21.
 
 *Proof:* The marginal benefit term $\Gamma_0 (\partial PP/\partial C)$ decreases from a finite value towards zero as $C \to \infty$ (Equation 25), while the marginal cost term $\lambda R' + R_I'$ remains bounded below by a positive constant for $C > K_0$ (Definition 3). For sufficiently large $C$, marginal cost strictly exceeds marginal benefit, so PCE disfavors arbitrarily large complexity and $\bar C_{\mathrm{agg,sat}}$ is finite. An interior solution $C^* > K_0$ to the marginal-balance equation (I.2) exists when the marginal predictive benefit initially exceeds the marginal cost at $C = K_0$, $\Gamma_0 (\partial PP/\partial C)|_{C=K_0} > \lambda R'(K_0) + R_I'(K_0)$, and the relevant functions are continuous; otherwise the optimum lies at the boundary $\bar C_{\mathrm{agg,sat}} = K_0$. ∎
 
 **I.4 Predictive-Information Saturation in Sparse Regimes**
 
-The perceived predictive difficulty $\hat C_{\mathrm{target}}$ (Definition 21) for an MPU aggregate in a given environment reflects the complexity of patterns that can be exploited for prediction.
+The coordinate $\hat C_{\mathrm{target}}$ is the internal task scale of Definition 21. It represents the complexity of externally exploitable patterns only on a branch with an innovation certificate that compares the coordinate with external records.
 
-*   **Hypothesis I.1:** In low-density, sparse regions of the MPU network (e.g., the voids of large-scale structure, galactic outskirts), the available density of predictive information is lower and less complex than in high-density regions (e.g., galactic cores). This results in a lower effective target complexity $\hat C_{\mathrm{target}}(R)$ for a predictive system operating at scale $R$.
+
+
+*   **Hypothesis I.1:** On a branch carrying an external innovation certificate for Definition 21, low-density sparse regions have a lower externally measured exploitable-pattern scale than high-density regions, and the certificate identifies this difference with a lower effective $\hat C_{\mathrm{target}}(R)$ within its registered error. Without that certificate, sparsity alone does not determine the internal target coordinate.
+
+
 *   **Corollary I.2:** Under Hypothesis I.1 and the Law of Prediction (Equation 22), achieving high predictive performance $PP$ requires allocating complexity $C(PP, \hat C_{\mathrm{target}})$ proportional to $\hat C_{\mathrm{target}}$ (Equation 23). Equation (I.2) determines the optimal saturation complexity $\bar C_{\mathrm{agg,sat}}(\hat C_{\mathrm{target}})$. A lower $\hat C_{\mathrm{target}}$ in sparse environments implies that the PCE optimization balancing benefit and cost will lead to a lower saturation threshold $\bar C_{\mathrm{agg,sat}}$ compared to dense regions. The system saturates its complexity investment sooner because there are fewer exploitable predictive patterns to justify higher costs.
 
 **I.5 Parameter-Relaxation Mechanism due to Early Saturation**
@@ -47,7 +53,7 @@ The perceived predictive difficulty $\hat C_{\mathrm{target}}$ (Definition 21) f
 When the MPU network in sparse regions saturates at a lower complexity level $\bar C_{\mathrm{agg,sat}}$ (Corollary I.2), the selection pressure on the microscopic MPU parameters governing network structure and interaction efficiency is altered. Specifically, PCE (Definition 15) drives configurations that minimize costs. If the density of predictive information does not warrant maintaining high complexity, the pressure to maintain the high-fidelity, densely packed configurations optimal for high complexity is reduced. This drives a "relaxation" of the effective microscopic MPU parameters:
 
 *   **Effective Microscopic Spacing $\delta(R)$ increases:** Maintaining a tight packing (small $\delta$) is costly (e.g., propagation costs $\propto 1/\delta^2$ or $\ln \delta$ type terms). If the predictive benefit from close spacing is low, PCE favors larger effective spacing, reducing propagation cost.
-*   **Effective Channel Capacity $C_{\max}(R)$ decreases:** High channel capacity requires maintaining high-fidelity evolution, i.e. a small refresh weight $p$ in the decomposition $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ (equivalently $f_{RID}=1-p$ close to $1$, Lemma E.1). In sparse environments where additional fidelity yields little predictive benefit, PCE can favor allowing a larger refresh component (and thus smaller $C_{\max}$), while remaining consistent with the irreducible per-cycle entropy floor $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31).
+*   **Effective Channel Capacity $C_{\max}(R)$ decreases:** High channel capacity requires maintaining high-fidelity evolution, i.e. a small refresh weight $p$ in the decomposition $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ (equivalently $f_{RID}=1-p$ close to $1$, Lemma E.1). In sparse environments where additional fidelity yields little predictive benefit, PCE can favor allowing a larger refresh component (and thus smaller $C_{\max}$), while remaining consistent with the irreducible per-cycle entropy floor $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31).
 
 These parameter variations, $\delta(R)$ increasing and $C_{\max}(R)$ decreasing in sparse, large-scale regions ($R \gg L_0$), combine to raise the factor $\eta\delta^2/C_{\max}$ in Equation (I.1).
 
@@ -446,6 +452,56 @@ $$
 $$
 rather than by fitting a separate acceleration scale.
 
+**Theorem I.4a (Fixed-Scale Bianchi Integrability and Law--Source Equivalence).** At one fixed coarse-graining scale $\mu$, suppose $\Lambda$ is constant on the retained patch and an emergent metric satisfies
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=8\pi G_{\mathrm{eff}}(x;\mu)T_{\mu\nu}+X_{\mu\nu},
+\qquad
+\nabla^\mu T_{\mu\nu}=0.
+\tag{I.4a.1}
+$$
+Then the Bianchi identity forces
+$$
+T^{\mu}{}_{\nu}\nabla_\mu G_{\mathrm{eff}}
+=-\frac1{8\pi}\nabla^\mu X_{\mu\nu}.
+\tag{I.4a.2}
+$$
+For any positive constant $G_0$, define
+$$
+T^{\mathrm{DS}}_{\mu\nu}
+=
+\left(\frac{G_{\mathrm{eff}}}{G_0}-1\right)T_{\mu\nu}
++\frac{X_{\mu\nu}}{8\pi G_0}.
+\tag{I.4a.3}
+$$
+Equations (I.4a.1)--(I.4a.2) are then equivalent to
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=8\pi G_0\bigl(T_{\mu\nu}+T^{\mathrm{DS}}_{\mu\nu}\bigr),
+\qquad
+\nabla^\mu\bigl(T_{\mu\nu}+T^{\mathrm{DS}}_{\mu\nu}\bigr)=0.
+\tag{I.4a.4}
+$$
+
+*Proof.* Taking $\nabla^\mu$ of (I.4a.1), using $\nabla^\mu G_{\mu\nu}=0$, metric compatibility, constant $\Lambda$ at fixed scale, and matter conservation gives (I.4a.2). Substitution of (I.4a.3) gives the first equation in (I.4a.4), and its divergence vanishes by (I.4a.2). The algebra reverses, proving equivalence. ∎
+
+**Corollary I.4a.1 (Universality Rigidity).** If $X_{\mu\nu}=0$ and the actual tensor $T^\mu{}_\nu(x)$ is nonsingular, then $\nabla_\mu G_{\mathrm{eff}}=0$ at $x$. More generally, the same conclusion follows when one universal gradient $dG_{\mathrm{eff}}|_x$ is required to satisfy (I.4a.2) for every co-realized or independently testable conserved source configuration in a pointwise-separating family
+$$
+\bigcap_{T\in\mathfrak T_x}
+\ker\bigl(\alpha_\mu\mapsto T^{\mu}{}_{\nu}\alpha_\mu\bigr)
+=\{0\},
+\tag{I.4a.5}
+$$
+Thus a freely varying universal coupling is incompatible with those conserved sources unless a compensating $X_{\mu\nu}$ is present.
+
+*Proof.* With $X_{\mu\nu}=0$, equation (I.4a.2) places $dG_{\mathrm{eff}}|_x$ in the kernel of the actual stress tensor. Nonsingularity makes that kernel zero. Under the family hypothesis, the same universal gradient lies in every displayed kernel, whose intersection is zero by (I.4a.5). ∎
+
+**Corollary I.4a.2 (PPI Law--Source Identifiability Boundary).** A protocol that observes only the metric response and the total right-hand side of (I.4a.4) cannot distinguish a varying-law representation from its constant-law effective-source representation; they are PPI-equivalent on that protocol family. The descriptions separate only if a finite protocol independently identifies $G_{\mathrm{eff}}$, $T_{\mu\nu}$, or $X_{\mu\nu}$. Scale dependence $G(\mu)$ across distinct fixed-scale effective theories is not a spacetime gradient and is not restricted by (I.4a.2).
+
+*Proof.* Theorem I.4a gives identical field equations and identical conserved total sources for the two representations. They therefore induce the same responses on the stated protocol family and are identified by PPI. An independently identified factor enlarges the response family and can separate the representations. ∎
+
+**I.6--I.7 Bianchi status rule.** A radial profile $G(r)$ is a spacetime-dependent coupling, not merely an RG label $G(\mu)$. Its standalone variable-law reading is licensed only with a covariant correction tensor $X_{\mu\nu}$ satisfying (I.4a.2) and an independent protocol that identifies the factors. Without that certificate, Equation I.6 is read in the constant-$G_0$ effective-source representation (I.4a.3), and the law/source alternatives in I.7 are PPI-equivalent descriptions of the same total response.
+
 **I.7 A Multi-Scale Solution from Global PCE Optimization**
 
 The PU framework provides two distinct mechanisms to augment gravity: adapting local network parameters to modify the emergent law ($G$), or collectively reconfiguring the substrate to modify the emergent source ($T_{\mu\nu}$). The choice of mechanism is not arbitrary but is determined by a global PCE optimization that balances local resource costs against global consistency costs.
@@ -666,6 +722,24 @@ $$
 \int_\Omega\rho_b\eta\,d^3x.
 $$
 Integrating by parts and using arbitrary $\eta$ gives (I.5b.1). ∎
+
+**Definition I.5c (Certified RAR Shape Record).** On a fixed quasistatic disk regime, let $g_0>0$, $y=g_{\mathrm{bar}}/g_0$, and
+$$
+f_{\mathrm{res}}(y):=\frac{g_{\mathrm{bar}}(y)}{g_{\mathrm{obs}}(y)}
+=1-e^{-\sqrt y}+R(y),
+\qquad R(y)\in I_R(y),
+\tag{I.5c.1}
+$$
+with $0<f_{\mathrm{res}}\le1$. On the PU acceleration-lock branch $g_0=g_\Lambda=c^2\sqrt\Lambda/8$; otherwise $g_0$ is preregistered phenomenological data. No Bures derivation of the exponential kernel is claimed.
+
+**Proposition I.5d (RAR Limits).** One has $g_{\mathrm{obs}}=g_{\mathrm{bar}}/f_{\mathrm{res}}$. When $R=0$,
+$$
+g_{\mathrm{obs}}\sim\sqrt{g_{\mathrm{bar}}g_0}\quad(y\downarrow0),
+\qquad
+\frac{g_{\mathrm{obs}}}{g_{\mathrm{bar}}}\to1\quad(y\to\infty).
+\tag{I.5d.1}
+$$
+Nonzero residuals give only the propagated interval.
 
 **Theorem I.6 (Well-posed generalized Poisson law).** Let $\Omega\subset\mathbb R^3$ be a bounded Lipschitz domain and consider the local energy functional
 $$

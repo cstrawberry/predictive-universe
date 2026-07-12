@@ -51,7 +51,7 @@ Having established the foundational role of prediction and optimization, we now 
 To define Predictive Physical Complexity ($C_P$) without presupposing the physical laws we aim to derive, we employ a non-circular hierarchical approach. Each level incorporates only previously established or framework-independent constraints. The definition conceptually proceeds through levels:
 *   **Level 0 ($C_{P,0}$):** Quantifies minimal *algorithmic* complexity (e.g., Kolmogorov complexity relative to a fixed Universal Turing Machine $U$ within model class $\mathcal{M}$) to specify an abstract process $P \in \mathcal{M}$ transforming a reference microstate $\mu_{ref}$ to a target microstate $\mu$ that enables prediction significantly better ($\epsilon_{acc} > 0$) than random chance, using only finite abstract computational resources. This level relies only on computability theory [Li & Vitányi 1997].
 *   **Level 1 ($C_{P,1}$):** Refines $C_{P,0}$ by restricting allowed processes $P$ to those compatible with a minimal, framework-independent set of base physical constraints $\mathcal{L}_{phys}^{(base)}$. These constraints are treated as properties of the physical *substrate* upon which any computation must be instantiated. They include fundamental conservation laws (e.g., of energy) and the **statistical nature of thermodynamics**. This means the substrate is governed by statistical mechanics, such that processes which would systematically violate the statistical Second Law (e.g., a perpetual motion machine of the second kind) are not physically realizable programs. 
-*   **Level n ($C_{P,n}$, $n \ge 2$):** Further refines $C_{P,n-1}$ by incorporating additional physical constraints (such as the thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ derived in **Theorem 31** and the reflexivity constraint $\kappa_r > 0$ from **Theorem 33**, which are established later in the framework) that are themselves derived independently using only constraints from levels $n-1$ and below applied to the analysis of MPU dynamics.
+*   **Level n ($C_{P,n}$, $n \ge 2$):** Further refines $C_{P,n-1}$ by incorporating additional physical constraints (such as the thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ derived in **Theorem 31** and the reflexivity constraint $\kappa_r > 0$ from **Theorem 33**, which are established later in the framework) that are themselves derived independently using only constraints from levels $n-1$ and below applied to the analysis of MPU dynamics.
 
 Here $\mu$ denotes a microstate. Each refinement level $n$ specifies an admissible program set $\mathcal{M}_n(\mu)\subseteq\mathcal{M}$ consisting of programs $P$ that (i) transform a reference microstate $\mu_{ref}$ into $\mu$ and (ii) obey the constraint set up to level $n$. Define
 $$
@@ -75,6 +75,55 @@ Remark: Level 0 uses algorithmic complexity $K(P)$ as a non-circular bookkeeping
 **Boundedness:** Fix a physically realizable microstate $\mu$ (Definition 17). By definition, there exists at least one admissible construction program $P_{\mathrm{phys}}$ that realizes $\mu$ while obeying the full physical constraint set $\mathcal{L}_{phys}$ used in the hierarchy. Let $B_{\mu}:=K(P_{\mathrm{phys}})$ denote the Level 0 description complexity of such a witness program (within the fixed model class $\mathcal{M}$). Since $P_{\mathrm{phys}}$ satisfies all constraints, it is admissible at every finite refinement level $n$, hence $C_{P,n}(\mu)\le B_{\mu}$ for all $n$. Thus $\{C_{P,n}(\mu)\}$ is bounded above by the finite constant $B_{\mu}$.
 
 **Convergence:** By the monotone bounded sequence theorem, the limit $C_P(\mu) := \lim_{n\to\infty} C_{P,n}(\mu)$ exists and is finite. QED
+
+**Theorem 2.4.1a (Finite Stabilization and Common Realizer of the Complexity Hierarchy).** Fix a finite program alphabet and an integer-valued prefix-program length $K(P)$. Let
+$$
+\mathcal M_{n+1}(\mu)\subseteq\mathcal M_n(\mu),
+\qquad
+C_{P,n}(\mu)=\min_{P\in\mathcal M_n(\mu)}K(P).
+\tag{2.4.1a.1}
+$$
+Suppose there is a full-constraint witness
+$$
+P_{\mathrm{phys}}\in\bigcap_{n\ge0}\mathcal M_n(\mu),
+\qquad
+K(P_{\mathrm{phys}})=B_\mu<\infty.
+\tag{2.4.1a.2}
+$$
+Then:
+
+1. $C_{P,n}(\mu)$ has at most $B_\mu-C_{P,0}(\mu)$ strict increases. Hence there are $n_*$ and an integer $C_\infty$ such that
+$$
+C_{P,n}(\mu)=C_\infty
+\quad\text{for every }n\ge n_*.
+\tag{2.4.1a.3}
+$$
+2. There is one finite program $P_\infty$ satisfying every refinement simultaneously and attaining that value:
+$$
+P_\infty\in\bigcap_{n\ge0}\mathcal M_n(\mu),
+\qquad
+K(P_\infty)=C_\infty.
+\tag{2.4.1a.4}
+$$
+Consequently,
+$$
+C_P(\mu)
+=C_\infty
+=\min_{P\in\cap_n\mathcal M_n(\mu)}K(P).
+\tag{2.4.1a.5}
+$$
+
+*Proof.* Lemma 1 gives monotonicity and (2.4.1a.2) gives $C_{P,n}\le B_\mu$. A nondecreasing integer sequence in the finite set $\{C_{P,0},\ldots,B_\mu\}$ can increase only finitely often, proving (2.4.1a.3).
+
+For $n\ge n_*$ define
+$$
+A_n
+:=
+\{P\in\mathcal M_n(\mu):K(P)=C_\infty\}.
+$$
+Every $A_n$ is nonempty, $A_{n+1}\subseteq A_n$, and all $A_n$ lie in the finite set of program strings of length $C_\infty$ over the fixed finite alphabet. A descending sequence of nonempty subsets of a finite set stabilizes, so $\cap_{n\ge n_*}A_n\ne\varnothing$. Any $P_\infty$ in this intersection belongs to all earlier $\mathcal M_n$ as well because the hierarchy is nested. This proves (2.4.1a.4), and (2.4.1a.5) follows from minimality at every stabilized level. ∎
+
+**Corollary 2.4.1a.1 (No Effective Stabilization-Time Claim).** Theorem 2.4.1a proves existence of a finite stabilization index but supplies no computable bound on $n_*$. Such a bound would require effective access to the constraint hierarchy and to the relevant program-length minima, which the definition of $C_P$ does not assume.
 
 **Convention for Information Capacity in Quantum Systems:** For quantum systems, such as the Minimal Predictive Units (MPUs) hypothesized to be fundamental constituents of reality (Definition 23), the maximum information capacity required to specify their distinguishable states is determined by the dimensionality $d_0$ of the MPU's Hilbert space $\mathcal{H}_0$ (Proposition 4). We adopt the standard quantum information convention for this capacity $C_{cap}$ (measured in bits):
 $$
@@ -102,9 +151,9 @@ This completes the non-circular foundation for $C_P$ needed for the subsequent e
 
 *   **The Assumption:** We assume only that the physical substrate is governed by statistical mechanics. This is a passive *constraint* on physical realizability, reflecting a statistical tendency towards higher entropy in macroscopic systems. It does not, by itself, provide a universal, microscopic, forward-driving engine for time.
 
-*   **The Derivation:** The framework later derives the **dynamical Arrow of Time** from the logic of prediction itself. The self-referential nature of the MPU's predictive cycle, when physically instantiated, is shown to necessitate a minimal, irreversible, per-operation thermodynamic cost ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31). This ubiquitous $\varepsilon$-cost acts as a microscopic *ratchet*.
+*   **The Derivation:** The framework later derives the **dynamical Arrow of Time** from the logic of prediction itself. The self-referential nature of the MPU's predictive cycle, when physically instantiated, is shown to necessitate a minimal, irreversible, per-operation thermodynamic cost ($\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$, Theorem 31). This ubiquitous $\varepsilon$-cost acts as a microscopic *ratchet*.
 
-Statistical-mechanics input enters only as a background constraint on physically realizable processes at Level 1; the directional arrow of time is derived later from the SPAP-mandated irreversible update cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ acting as a microscopic thermodynamic ratchet (Appendix O).
+Statistical-mechanics input enters only as a background constraint on physically realizable processes at Level 1; the directional arrow of time is derived later from the SPAP-mandated irreversible update cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ acting as a microscopic thermodynamic ratchet (Appendix O).
 
 **2.4.2 The Operational Complexity Proxy Operator ($\hat{C}_v$)**
 
@@ -165,7 +214,7 @@ for every MPU $v$, which is Equation (3). ∎
 
 **2.4.4 Physical Resource Costs: Functions ($R, R_I$) and Operators ($\hat{R}, \hat{R}_I$)**
 
-The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31)). These costs constrain the POP, as they limit feasible model complexity and predictive performance. To make the dynamics tractable without restricting generality beyond what is used in later theorems, we assume only that $R(C_P)$ is nonnegative, strictly increasing, and convex (DSC), and that $R_I(C_P)$ is nonnegative, increasing, and satisfies $R_I(K_0)=0$; when explicit closed forms are required, we use the representative functional forms below. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
+The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31)). These costs constrain the POP, as they limit feasible model complexity and predictive performance. To make the dynamics tractable without restricting generality beyond what is used in later theorems, we assume only that $R(C_P)$ is nonnegative, strictly increasing, and convex (DSC), and that $R_I(C_P)$ is nonnegative, increasing, and satisfies $R_I(K_0)=0$; when explicit closed forms are required, we use the representative functional forms below. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
 
 **Definition 3 (Resource–Cost Functions).**
 - **Definition 3a (Physical operational cost $R(C; T_{\text{eff}})$).** The rate of physical resource consumption required to maintain structures and run processes of complexity $C$ at effective temperature $T_{\text{eff}}$.
@@ -301,7 +350,7 @@ $$
 
 | Category | Operational identification as a functional of $\mathfrak{P}$ | Primary PU locus |
 |:---------|:-------------------------------------------------------------|:-----------------|
-| Time | The directed ordering of predictive cycles required for verification/update (Theorem 4), sharpened to a thermodynamic arrow by ND‑RID irreversibility and per‑cycle cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$; minimal tick set by $\tau_{min}>0$. | Theorem 4; Definition 27; Theorem 29; Theorem 31; Appendix O |
+| Time | The directed ordering of predictive cycles required for verification/update (Theorem 4), sharpened to a thermodynamic arrow by ND‑RID irreversibility and per‑cycle cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$; minimal tick set by $\tau_{min}>0$. | Theorem 4; Definition 27; Theorem 29; Theorem 31; Appendix O |
 | Space | Metric structure induced by coherence/propagation costs on $\mathcal{N}$: $d_{\mathcal{N}}$ from propagation costs (Definition 35) whose PCE‑selected regularity yields a continuum manifold with metric tensor $g_{\mu\nu}$. | Definition 35; Theorem 43–45 |
 | Spacetime unity | Finite $\tau_{\min}$ and bounded propagation costs imply an invariant maximum causal speed $c$ (Theorem 46). With the emergent dimension fixed to $D=4$ inside the channel-complete Bures tangent-cell mode-channel contract (Definition Z.9a; Theorem Z.11; Appendix P, P.8.11), Theorem 46 then yields a Lorentzian signature for the continuum effective metric. | Theorem 46; Definition Z.9a; Theorem Z.11; Appendix P (P.8.11) |
 | Energy | Resource-cost rate required to maintain predictive organization: $R(C)$ and $R_I(C)$ (Definition 3) lift to cost operators (Theorem 3), with an operational Hamiltonian/energy scale set by the minimum cycle time $\tau_{\min}$ (Theorem 29). Coarse-graining yields $T_{\mu\nu}^{(MPU)}$. | Definition 3; Theorem 3; Theorem 29; Appendix B (Definition B.8) |
@@ -315,15 +364,19 @@ This map provides operational constructions from $(\mathcal{N},\mathcal{E}_N,V)$
 
 Because the categories are projections of one structure, canonical inter‑category relations appear as internal identities rather than independent empirical "bridges":
 
-1. **Mass–energy equivalence.** Rest energy is the proper-time action-rate assigned to maintained relational/predictive information. PU recovers $E=mc^2$ [Einstein 1905b] as a consequence of identifying mass with the relational information content whose saturated maintenance action-rate is $E=\hbar\mathcal I_{\mathrm{rel}}/(2\tau_{\min})$; see Corollary N.5.1 and Remark N.5.1a in Appendix N.
+1. **Mass–energy equivalence.** On $\mathfrak B_{mass}$, rest energy is the proper-time action-rate assigned to the maintained relational-information ledger; outside that branch PU does not derive the absolute coefficient.
 
-2. **Lorentzian spacetime with invariant $c$.** The same physical instantiation constraints that enforce $\tau_{\min}>0$ (Theorem 29) and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) bound causal influence propagation and yield an invariant maximum speed $c$. With the emergent dimension fixed to $D=4$ inside the channel-complete Bures tangent-cell mode-channel contract (Definition Z.9a; Theorem Z.11), Theorem 46 then yields the Lorentzian signature.
+
+
+2. **Lorentzian spacetime with invariant $c$.** The same physical instantiation constraints that enforce $\tau_{\min}>0$ (Theorem 29) and $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\text{ on a registered reset branch}$ (Theorem 31) bound causal influence propagation and yield an invariant maximum speed $c$. With the emergent dimension fixed to $D=4$ inside the channel-complete Bures tangent-cell mode-channel contract (Definition Z.9a; Theorem Z.11), Theorem 46 then yields the Lorentzian signature.
 
 3. **Forces from connections/gradients.** In the continuum effective description, interactions are encoded in the connections required for predictive coherence: the internal connection $A_\mu$ (Appendix G) and the geometric/spin connection (Theorem 48) together form the transport structure whose curvature yields physical interaction content (Theorem 47). In the classical limit, inertial response and Newton's second law are recovered from the same entropy/action accounting (Theorem N.6), tying "force" to the cost of relational reconfiguration.
 
 4. **Charge conservation.** With minimal coupling fixed by predictive-coherence cost, varying the total action yields $\nabla_\mu F^{\mu\nu}=J^\nu$ (Eq. G.6.3), where $J^\nu$ is the conserved Noether current of the gauge symmetry; thus $\nabla_\nu J^\nu=0$ follows directly from the gauge-invariant structure required by coherence management (Appendix G).
 
-5. **Equivalence principle and response separation.** For simple systems (those not in the high-complexity correction regime), inertial and gravitational mass coincide because both are projections of the same scalar predictive update cost: inertial mass is resistance to relational reconfiguration, while gravitational mass is the same cost entered into $T_{\mu\nu}^{(MPU)}$ as a curvature source. Thus $m_I=m_G$ (Theorem N.7; Theorem N.8.2), with the sourcing of curvature mediated by $T_{\mu\nu}^{(MPU)}$ (Definition B.8) through the emergent Einstein equations (Theorem 50). The equivalence principle is therefore not the signature of emergence by itself; it is the signature of a universal source/response ledger on a common metric branch. Emergent sector-selective channels, including gauge connections and material or constitutive media, may be fully PCE-derived while still lacking a universal equivalence principle because their finite responses retain charge, representation, preparation, or constitutive labels (Appendix G, Corollary G.4b.2; Appendix N, Theorem N.11a). Where PU allows controlled departures, it does so by specifying the correction mechanism and regime (Appendix N, Theorem N.8; Section 9).
+5. **Equivalence principle and response separation.** On the common source/response $\mathfrak B_{mass}$ branch, simple systems have coincident inertial and gravitational coefficients because both are projections of the same scalar predictive update cost; simplicity alone does not imply this:
+
+
 
 ### 2.6.3 Compressed Ontology Statement
 
@@ -337,7 +390,7 @@ $$
 \{\pi_{\mathfrak{C}}(\mathfrak{P})\}_{\mathfrak{C}}
 }
 $$
-with $\mathcal{E}_N$ constrained by $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and $V$ given by the branch-indexed PCE potential family whose core resource-preorder form is Definition D.1 and whose cross-sector grammar is Definition D.1f and Theorem D.1g. The plurality of physical categories reflects the plurality of stable operational questions one can ask of $\mathfrak{P}$, not a plurality of independent ontological primitives.
+with $\mathcal{E}_N$ constrained by $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31) and $V$ given by the branch-indexed PCE potential family whose core resource-preorder form is Definition D.1 and whose cross-sector grammar is Definition D.1f and Theorem D.1g. The plurality of physical categories reflects the plurality of stable operational questions one can ask of $\mathfrak{P}$, not a plurality of independent ontological primitives.
 
 
 

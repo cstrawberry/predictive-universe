@@ -139,7 +139,7 @@ This section provides the direct computational program for the fine-structure co
 ### V.2.1 Foundational Inputs (Derived from PU First Principles)
 
 - **MPU Hilbert Space Dimension:** $d_0 \ge 8$ (from $K_0=3$ bits, Theorem 23); the PCE-minimal active-operational branch used in Appendix Z selects the saturating case $d_0 = 8$ (Chapter 7; Theorem Z.2).
-- **Irreducible Cost:** $\varepsilon_0=\ln2$ nats (from SPAP cycle, Theorem 31).
+- **Structural Binary Reference:** $\varepsilon_0=\ln2$ nats (from SPAP cycle, Theorem 31).
 
 ### V.2.2 Derived Spectral Parameters for the PCE-Attractor
 
@@ -623,6 +623,81 @@ $$
 t\log t\sum_{\alpha\in Z}\nu_{*,\alpha}^{\mathrm{fs}}+O(t),
 $$
 which is negative for all sufficiently small $t>0$. This contradicts minimality. Hence $\omega_{*,\alpha}>0$ for every $\alpha\in\Omega_*$. ∎
+
+**Theorem V.3.11c.1 (Pythagorean and Nested Spectral Calibration).** Let $\mathcal C$ be an affine moment family satisfying Definition V.3.11a, let $\nu$ have full support, and let
+$$
+\omega_{\mathcal C}
+=\operatorname*{argmin}_{\omega\in\mathcal C}
+D_{KL}(\omega\Vert\nu)
+\tag{V.3.11c.1.1}
+$$
+have full support. Then every $\omega\in\mathcal C$ obeys the exact Pythagorean identity
+$$
+D_{KL}(\omega\Vert\nu)
+=
+D_{KL}(\omega\Vert\omega_{\mathcal C})
++D_{KL}(\omega_{\mathcal C}\Vert\nu).
+\tag{V.3.11c.1.2}
+$$
+If $\mathcal C_2\subseteq\mathcal C_1$ are nested admissible affine families and the projections onto both families exist with full support, direct calibration of $\nu$ onto $\mathcal C_2$ equals sequential calibration through $\mathcal C_1$:
+$$
+\Pi_{\mathcal C_2}^{KL}(\nu)
+=
+\Pi_{\mathcal C_2}^{KL}
+\bigl(\Pi_{\mathcal C_1}^{KL}(\nu)\bigr).
+\tag{V.3.11c.1.3}
+$$
+The KL increments telescope, so a constraint inherited through a nested calibration is not counted again as an independent fit contribution.
+
+*Proof.* The KKT equation for the affine family makes
+$$
+\log\frac{\omega_{\mathcal C,\alpha}}{\nu_\alpha}
+$$
+an affine combination of the normalized moment constraints. Expanding the difference between the two sides of (V.3.11c.1.2), the remaining term is its expectation under $\omega-\omega_{\mathcal C}$ and vanishes because both states have the same constrained moments and normalization. For $\omega\in\mathcal C_2\subseteq\mathcal C_1$, the first projection contributes the constant $D_{KL}(\omega_{\mathcal C_1}\Vert\nu)$; minimizing the remaining term over $\mathcal C_2$ proves (V.3.11c.1.3). ∎
+
+**Theorem V.3.11c.2 (Perturbation Rigidity of Spectral Moments).** On an independent exponential-family chart, let $\theta$ be the multiplier vector and $c(\theta)$ the retained moment vector. Suppose every state on the line segment between two accepted calibrations has covariance Hessian
+$$
+\operatorname{Cov}_{\omega_\theta}(m)
+\succeq\gamma I,
+\qquad
+\gamma>0.
+\tag{V.3.11c.2.1}
+$$
+Then
+$$
+\|\theta'-\theta\|
+\le
+\frac{\|c'-c\|}{\gamma}.
+\tag{V.3.11c.2.2}
+$$
+For every calibrated coefficient symbol $\sigma_B$, if
+$$
+K_B
+:=
+\sup_{\vartheta\in[\theta,\theta']}
+\left\|
+\operatorname{Cov}_{\omega_\vartheta}(\sigma_B,m)
+\right\|<\infty,
+\tag{V.3.11c.2.3}
+$$
+then
+$$
+\left|
+s_B\langle\sigma_B\rangle_{\omega_{\theta'}}
+-s_B\langle\sigma_B\rangle_{\omega_\theta}
+\right|
+\le
+\frac{|s_B|K_B}{\gamma}\|c'-c\|.
+\tag{V.3.11c.2.4}
+$$
+
+*Proof.* The Jacobian of the moment map is minus the covariance matrix. Integrating along the segment and using (V.3.11c.2.1) gives
+$$
+\|c'-c\|\ge\gamma\|\theta'-\theta\|,
+$$
+proving (V.3.11c.2.2). Differentiating $\langle\sigma_B\rangle$ gives the cross-covariance with the moment vector. Integration, (V.3.11c.2.3), and (V.3.11c.2.2) give (V.3.11c.2.4). ∎
+
+**Corollary V.3.11c.3 (Calibration Condition-Number Gate).** A final-calibrated numerical interval must propagate the registered moment uncertainty through (V.3.11c.2.4). If the covariance floor $\gamma$ approaches zero, the inverse moment problem is ill-conditioned and the coefficient remains certificate-pending unless a different identifiable chart supplies a positive floor. The no-double-counting conclusion concerns KL increments under exact nesting on one fixed atom set and reference measure; it does not assert statistical independence or erase correlated physical or certificate uncertainties.
 
 **Corollary V.3.11d (Exponential Form on Independent Moment Branches).** If the active moment functions are independent after applying $\mathcal Q_{\mathrm{ind}}$, then the calibrated state has the form
 $$

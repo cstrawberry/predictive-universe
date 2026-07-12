@@ -319,28 +319,15 @@ Hence $C(M_n)=\Omega(n)$. ∎
 
 **4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{SPAP}$)**
 
-For self-referential predictive systems subject to SPAP (operating within a model class $\mathcal{M}$ possessing Property R, Definition 10), let $\alpha_{SPAP} < 1$ be the theoretical maximum achievable average predictive performance (PP) for those aspects limited by SPAP (Theorem 10, Theorem 11). Define the performance gap
+Let $\delta_{\mathrm{SPAP}}:=\alpha_{\mathrm{SPAP}}-\alpha\in(0,1/8]$. Assume a certificate $\mathfrak C_{B.2}$ proves that every admissible strategy in the declared task class contains the Bernoulli hard subfamily of Theorem B.2, preserves independent observations and the sample-cost ledger, and meets the error/confidence requirements uniformly under either Bernoulli law. Then
 $$
-\delta_{SPAP}:=\alpha_{SPAP}-\alpha \in (0,1).
+C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})=\Omega\!\left(\frac{\log(1/\delta_{\mathrm{SPAP}})}{\delta_{\mathrm{SPAP}}^2}\right).\tag{13}
 $$
-Let $C_{\text{uni}}(\delta_{SPAP})$ denote the minimum effective verification/update complexity required to maintain performance within $\delta_{SPAP}$ of the SPAP boundary on these SPAP-limited aspects.
-
-Then the universal statistical lower bound of Appendix B.3 (Theorem B.2) yields
+With a preregistered horizon confidence budget $\beta=1/\mathcal T$, the same certificate gives
 $$
-C_{\text{uni}}(\delta_{SPAP}) = \Omega\left( \frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2} \right). \tag{13}
+\mathcal C_{\mathrm{stat}}(\delta_{\mathrm{SPAP}},\mathcal T)=\Omega\!\left(\frac{\log\mathcal T}{\delta_{\mathrm{SPAP}}^2}\right).\tag{14}
 $$
-More generally, enforcing a uniform failure-probability budget over a horizon of $\mathcal{T}$ verification/update steps via $\beta=1/\mathcal{T}$ yields
-$$
-\mathcal{C}_{stat}(\delta_{SPAP}) = \Omega\left( \frac{\log \mathcal{T}}{\delta_{SPAP}^2} \right). \tag{14}
-$$
-
-If, for the chosen operational realization, the complexity notion $C_{pred}(\alpha)$ lower-bounds the effective verification/update operations required by the task, i.e.
-$$
-C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP}),
-$$
-then the same asymptotic lower bound transfers to $C_{pred}(\alpha)$.
-
-*Proof:* Appendix B.3 (Theorem B.2) proves the lower bound for the effective verification/update complexity needed to calibrate SPAP-limited performance to additive accuracy $\delta_{SPAP}$. Substituting $\beta=1/\mathcal{T}$ gives the horizon-budget form (14), and substituting $\beta=\delta_{SPAP}$ gives the self-calibrated form (13). The final sentence is the immediate consequence of the explicitly stated comparison hypothesis $C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP})$. ∎
+A guarantee for one selected instance does not imply either minimax lower bound. ∎
 
 **Corollary 14.1 (Finite-Budget Bound on Reflexive Depth).** Let $B_C(T)$ be the total operational complexity budget available to a predictive system over horizon $T$. If each additional self-modeling level incurs minimum overhead $k>0$ as in Theorem 13, and if $B_C(T)\ge c_0$, then any sustainable recursion depth $n(T)$ satisfies
 $$
@@ -405,6 +392,27 @@ $$
 Substitution yields (14.1e). The final status statement follows because equality and architectural saturation require a separate PCE optimality or strict-gap certificate for the allocation problem. ∎
 
 **Remark 14.1f (Status of the Consciousness-Curve Reading).** Proposition 14.1e licenses a Pareto-frontier reading only after the task split, shared-cost quotient, horizon budget, and SPAP-gap measurement are fixed. It therefore supports empirical tradeoff tests in artificial or biological predictive architectures, but it does not prove a universal scalar consciousness curve without the allocation ledger $\mathfrak C_{\mathrm{SW}}$ and a domain bridge from the measured variables to $C_{\mathrm{self}}$ and $C_{\mathrm{world}}$.
+
+**Definition 14.1g (Certified Self/World Budget Boundary).** Let
+$$
+f(\delta):=\frac{\log(1/\delta)}{\delta^2},
+\qquad 0<\delta<1.
+$$
+A budget-boundary record supplies constants $c_s,c_w>0$, a shared-cost term $C_{\mathrm{sh}}$, a total budget $B_C$, and explicit bridges placing both tasks under the stated lower bounds $C_s\ge c_sf(\delta_s)$ and $C_w\ge c_wf(\delta_w)$.
+
+**Proposition 14.1h (Frontier without a Spurious Optimizer).** On the saturated zero-residual branch,
+$$
+c_sf(\delta_s)+c_wf(\delta_w)+C_{\mathrm{sh}}=B_C.
+\tag{14.1h.1}
+$$
+Moreover
+$$
+f'(\delta)=-\frac{1+2\log(1/\delta)}{\delta^3}<0,
+\qquad
+f''(\delta)=\frac{5+6\log(1/\delta)}{\delta^4}>0.
+\tag{14.1h.2}
+$$
+For fixed $\delta_s$, (14.1h.1) has at most one admissible $\delta_w$. The budget equation alone selects no unique pair and yields no marginal-balance equation; a unique optimum requires a separately declared objective and its full KKT hypotheses.
 
 **Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**
 

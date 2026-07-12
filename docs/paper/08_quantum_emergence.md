@@ -246,6 +246,53 @@ p^{(\gamma)}(P_{e_2})+p^{(\gamma)}(P_{e_3})
 $$
 Additivity requires $2/(2^{\gamma/2}+2)=1/2$, hence $2^{\gamma/2}=2$ and $\gamma=2$. Thus even this explicit family preserves the quotient refinement ledger only at the Born exponent. ∎
 
+**Definition 8.3a (Preparation Equivalence and Spectator Stability).** For finite-dimensional complex Hilbert spaces $\mathcal H_A$ and $\mathcal H_B$, an operational update $F:\mathcal D(\mathcal H_A)\to\mathcal D(\mathcal H_B)$ respects preparation equivalence when
+$$
+F\!\left(\sum_i p_i\rho_i\right)=\sum_i p_iF(\rho_i)
+\tag{8.3a.1}
+$$
+for every finite probability distribution $(p_i)$ and states $(\rho_i)$. Equation (8.3a.1) determines the positive-cone extension $\Phi(0)=0$ and $\Phi(A)=\operatorname{tr}(A)F(A/\operatorname{tr}A)$ for $A\succeq0$, $A\ne0$. The update is spectator-stable when the induced extension satisfies
+$$
+(\Phi\otimes\operatorname{id}_R)(X)\succeq0
+\tag{8.3a.2}
+$$
+for every finite spectator $R$ and every $X\succeq0$ on $\mathcal H_A\otimes\mathcal H_R$.
+
+**Theorem 8.3b (Operational Mixtures and Spectator Stability Force CPTP Dynamics).** Every preparation-equivalent, spectator-stable normalized update $F$ has a unique completely positive trace-preserving linear extension
+$$
+\Phi:\mathcal B(\mathcal H_A)\to\mathcal B(\mathcal H_B),
+\qquad
+\Phi(\rho)=F(\rho),
+\tag{8.3b.1}
+$$
+and therefore admits a Kraus representation
+$$
+\Phi(X)=\sum_a K_aXK_a^\dagger,
+\qquad
+\sum_aK_a^\dagger K_a=\mathbf1_A.
+\tag{8.3b.2}
+$$
+Conversely, every map of the form (8.3b.2) satisfies Definition 8.3a.
+
+*Proof.* Define $\Phi(0)=0$ and, for $A\succeq0$ with $\operatorname{tr}A>0$,
+$$
+\Phi(A)=\operatorname{tr}(A)F\!\left(\frac{A}{\operatorname{tr}A}\right).
+$$
+Equation (8.3a.1), applied with weights proportional to traces, makes this definition additive and nonnegative-homogeneous on the positive cone. The positive cone generates the Hermitian operators, so group completion gives a unique real-linear positive map on Hermitian operators; complex linearity then gives a unique map on $\mathcal B(\mathcal H_A)$. Because $F$ maps normalized states to normalized states, $\Phi$ is trace preserving. Spectator stability says exactly that $\Phi$ is completely positive. Equivalently it is enough to take $\dim\mathcal H_R=\dim\mathcal H_A$: the Choi operator
+$$
+J(\Phi)=(\Phi\otimes\operatorname{id})(|\Omega\rangle\!\langle\Omega|)
+$$
+is positive. A spectral decomposition of $J(\Phi)$ reshaped into operators $K_a$ yields (8.3b.2), and trace preservation gives the completeness relation. The converse follows directly from convex linearity and positivity of $\Phi\otimes\operatorname{id}_R$. ∎
+
+**Corollary 8.3c (Reversible and Forbidden Update Boundaries).** If $\Phi$ in Theorem 8.3b has a two-sided CPTP inverse on the full output state space, then the input and output matrix algebras are completely order-isomorphic and
+$$
+\Phi(\rho)=U\rho U^\dagger
+\tag{8.3c.1}
+$$
+for a unitary $U$. Thus reset-free reversible internal prediction is unitary, while irreversible Evolve updates may be general CPTP maps. A nonlinear rule on density matrices must either retain the preparation label and become PPI-contextual or violate (8.3a.1). Transposition, and hence a bare antiunitary state update, is positive but is not spectator-stable for dimension at least two because applying it to one half of a maximally entangled state produces an operator with a negative eigenvalue.
+
+**Relation to Theorem M.6.14e.** Appendix M treats response-natural affine completely positive instruments and their minimal dilations. Theorem 8.3b supplies the logically earlier core bridge: preparation equivalence constructs the linear extension, and idle-spectator positivity forces complete positivity.
+
 **Theorem 8.4 (Complex Hilbert-Space Uniqueness under Local Tomography and Minimal Phase Redundancy).**
 Let the predictive state space be a complete finite-dimensional inner-product space over $\mathbb D\in\{\mathbb R,\mathbb C,\mathbb H\}$. Assume:
 
@@ -543,7 +590,7 @@ Quantum measurement of an observable $\hat{A}$ on a system $S$ (composed of MPUs
 1.  **Probabilistic Amplitude Actualization:** The pre-measurement state $S(t)=|\psi\rangle$ actualizes to an eigenstate $|k\rangle$ of $\hat{A}$ with probability $P(k) = |\langle k | \psi \rangle|^2$ (Born rule, Equation 50).
 2.  **Stochastic Perspective Shift:** Concurrently, the perspective index shifts stochastically $s \to s'_{meas(k)}$ according to the transition kernel $G(s' | s, k, N_{app})$ appropriate for the interaction and outcome $k$.
 
-The post-measurement state is the specific, realized perspectival state $(|k\rangle, s'_{meas(k)})$, representing the definite outcome relative to the post-interaction perspective. The thermodynamic irreversibility of 'Evolve' ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31) accounts for measurement irreversibility.
+The post-measurement state is the specific, realized perspectival state $(|k\rangle, s'_{meas(k)})$, representing the definite outcome relative to the post-interaction perspective. The thermodynamic irreversibility of 'Evolve' ($\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$, Theorem 31) accounts for measurement irreversibility.
 
 *Proof.* Let the pre-measurement state be $(|\psi\rangle,s_{initial})$. By Theorem 24, the apparatus-selected measurement context is an ordered orthonormal basis $B=\{|k\rangle_{s_{meas}}\}$ for $\mathcal H_0$. Definition 27 and Appendix M.4 decompose the interaction into amplitude actualization and conditional perspective update. For measurement interaction $N_{app}$, the joint transition density has the form
 $$
@@ -561,7 +608,7 @@ P(\text{outcome }k)
 =
 P_{Born}(k\mid |\psi\rangle,s_{meas}).
 $$
-Thus the statistics are exactly the Born statistics in the apparatus basis. Conditioned on outcome $k$, the post-interaction state has amplitude $|k\rangle_{s_{meas}}$ and final perspective distributed according to the conditional kernel $G_{persp}(\cdot \mid s_{initial},k,N_{app},\Delta t)$, which is concentrated near the outcome perspective in the ideal-measurement limit described in Appendix M.4. The irreversibility claim follows from Theorem 31, which gives the strictly positive entropy cost of each nontrivial 'Evolve' event. Hence measurement is a special case of the universal 'Evolve' mechanism rather than an additional collapse postulate. ∎
+Thus the statistics are exactly the Born statistics in the apparatus basis. Conditioned on outcome $k$, the post-interaction state has amplitude $|k\rangle_{s_{meas}}$ and final perspective distributed according to the conditional kernel $G_{persp}(\cdot \mid s_{initial},k,N_{app},\Delta t)$, which is concentrated near the outcome perspective in the ideal-measurement limit described in Appendix M.4. For a registered measurement reset, Theorem 31 gives the conditional reset-heat ledger; strict positivity needs $H_q(P\mid R)\ge h_{\min}>0$, and a pathwise arrow additionally needs Theorem O.3a's entropy-production certificate. Hence measurement is a special case of the universal 'Evolve' mechanism rather than an additional collapse postulate. ∎
 
 **8.5.2 Example 8.1 (Qubit Measurement Illustration)**
 

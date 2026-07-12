@@ -16,17 +16,17 @@ The framework's core insight—that physical law emerges from the operational re
 
 **Reduced Planck constant $\hbar$:** Acts as the fundamental quantum of action. Within PU, it is rigorously identified as the exchange rate between information-theoretic (nats) and mechanical (J·s) descriptions of physical processes through the Action-Entropy Identity (Appendix Q, Theorem Q.0.1):
 $$\boxed{\frac{\mathcal{S}}{\hbar} = \sum_{\text{cycles}} \varepsilon_i}$$
-Physical action counts SPAP entropy production. The constant $\hbar$ scales the generator of unitary evolution (Equation 43), relates energy/frequency to information, and is associated with the fundamental scales of energy (from $\hat{H}_v$, Theorem 29) and time ($\tau_{min}$, Theorem 29) intrinsic to the MPU cycle. Its value is determined by the self-consistent scale of minimal actions in the PCE optimization, with the existence of this exchange rate proven necessary by the Principle of Physical Instantiation (Appendix Q, Theorem Q.0.2).
+Physical action counts SPAP entropy production. The constant $\hbar$ scales the generator of unitary evolution (Equation 43), relates energy/frequency to information, and is associated with the fundamental scales of energy (from $\hat{H}_v$, Theorem 29) and time ($\tau_{min}$, Theorem 29) intrinsic to the MPU cycle. Its value is determined by the self-consistent scale of minimal actions in the PCE optimization, with the existence of this exchange rate proven necessary by the Principle of Physical Instantiation (Appendix Q, Proposition Q.0.2).
 
 **Boltzmann constant $k_B$:** Functions as the conversion factor between dimensionless information/entropy measures (nats) and thermodynamic entropy (energy/temperature). Its value is inherent in the fundamental thermodynamic interpretation of the MPU dynamics (Section 12) and the link between information costs ($\varepsilon$) and energy dissipation ($k_B T \varepsilon$). Together with $\hbar$ and $c$, these constants form a complete set of exchange rates connecting the operational domains of the framework (Section P.6.5.5).
 
 **Gravitational constant $G$:** Rigorously derived from the thermodynamic properties of the MPU network at causal boundaries (Section 12). As established in Appendix E (Theorem E.6), 
 $$G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$$
-**(Equation E.9)**. Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{\max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship **(Equation E.7)** is:
+**(Equation E.9)**. Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{\max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{\mathrm{eff\,link}} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship **(Equation E.7)** is:
 $$\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$$
 This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. Appendix Q provides the complete calculation (with zero continuously adjustable parameters) of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{\max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
 
-**Electromagnetic coupling $\alpha$:** Appendix Z gives the Thomson-limit sinc-core value and the registry-entered hypercharge-recoil certificate row on the accepted finite Ward branch. The complete core derivation establishes:
+**Electromagnetic coupling $\alpha$:** Appendix Z gives the Thomson-limit sinc-core value and the diagnostic-only hypercharge-recoil (operator realization open) certificate row on the candidate finite Ward branch. The complete core derivation establishes:
 $$\boxed{D = 4}$$
 
 $$
@@ -61,7 +61,15 @@ $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 252 \text{ GeV}$$
 
 The unified derivation connects these three observables through the same underlying Golay code structure that determines the cosmological constant (Appendix U).
 
-**Fermion Masses and Yukawa Couplings:** The specific values arise from geometric overlaps of generation vacua on the MPU's internal Perspective Space $\Sigma_8 = U(8)/U(1)^8$, as rigorously derived in Appendix R. The generation count itself is derived by the anomaly+CP route with exact pre-flavor PPI realization, while the structural sector supplies the $D_4$ triality compatibility check, the geometric mass-hierarchy mechanism, and a compatible Leech/$E_8$ three-fold scaffold:
+**Fermion Masses and Yukawa Couplings: Conditional Certificate Ledger.** The three-generation count has its own anomaly/CP and pre-flavor PPI hypotheses. It does not select physical flavor roots or determine masses and mixings.
+
+1. $E_8$ supplies admissible discrete distances, but a physical generation-to-root assignment is separate model data.
+2. Converting a selected distance record into a Yukawa or mass ratio requires a registered response function, continuous coefficients, effective dimensions, common-scale scheme, normalization, and nonzero remainder interval.
+3. CKM, PMNS, and CP quantities additionally require forward-locked overlap or holonomy maps, phase conventions, threshold transport, covariance, and held-out validation data.
+
+Equation R.17 is therefore only a leading algebraic diagnostic under a common-coefficient ansatz. The numerical flavor comparisons in Appendices R and T are retrospective or calibrated model evaluations unless every upstream entry is locked before comparison; proximity to observed values is not an independent derivation.
+
+
 
 1. **Topological:** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1), the family-charge anomaly constraints, and the CP-violation requirement, this yields the minimal admissible three-generation pattern with family charges $\{a,-a,0\}$ (Theorem R.3.4), with exact realization on the pre-flavor family-redundancy PPI branch (Proposition R.3.5.1a).
 
@@ -74,7 +82,7 @@ $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \
 Appendix T (Section T.25) establishes status-labeled hierarchy comparisons with no additional continuous fitting after the stated geometric assignments, threshold data, common-scale reductions, and sector normalizations are fixed:
 - $m_\tau^{(0)} \approx 0.94$ GeV at leading order; factor $\approx 1.9$ normalization gap open pending two-loop threshold and Van Vleck–Morette corrections (Remark T.45.1; Lemma T.45.1a). Anchored to $m_\tau^{\rm obs} = 1776.86$ MeV (Particle Data Group (2024)), the $E_8$ log-ratio predictions give $m_\mu = 105.78$ MeV (observed: 105.66 MeV, deviation: $+0.12\%$) and $m_e = 0.5121$ MeV (observed: 0.5110 MeV, deviation: $+0.22\%$)
 - $\ln(m_\tau/m_\mu) = 2.8212$ (observed: 2.8224, deviation: $\approx 0.04\%$)
-- Cabibbo angle $|V_{us}| = 0.2261$ from frustration-induced tunneling between quark sector vacua (observed: $0.2243 \pm 0.0008$, deviation: +0.8%)
+- Cabibbo angle $|V_{us}|=0.2261$ from frustration-induced tunneling between quark-sector vacua (PDG-2024 global-fit comparison: $0.22501\pm0.00068$; deviation: $+0.5\%$)
 - Lepton-quark bridge $c_\ell/c_d = 8/3$ from gauge normalization constraints (Theorem T.44)
 
 The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log ratio ($|\Delta\ln|=0.0012$), with zero adjustable parameters, representing the single most precise test of the geometric hierarchy mechanism.
@@ -95,7 +103,9 @@ The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log 
 | $\Lambda$ | Appendix U Golay-Steiner reference exponent | Five-mode reference branch / four-mode corrected branch (Theorems U.8c, U.13b) |
 | $g_s, g_w, \alpha_s(M_Z), \sin^2\theta_W(M_Z)$ | Lifted spectral threshold tuple (Theorems T.16, T.18, T.78.2, T.78.5) | Validation-level in the canonical minimal ledger; positive theorem-level status requires an appended forward block-sum spectral package |
 | $N_g = 3$ | Anomaly+CP minimal admissible $N_{\min}=3$; exact $N_g=3$ on the pre-flavor family-redundancy PPI branch; $D_4$ triality and Leech/$E_8$ are compatibility checks (Theorem R.3.4; Proposition R.3.5.1a; Proposition R.4.2) | Theorem-level minimal admissible / branch-level exact realization |
-| Fermion mass ratios | $E_8$ geometric overlaps (Appendix R, T.41-T.45) | Theorem-level discrete predictions; absolute scales calibrated through Appendix T sector prefactors |
+| Fermion mass ratios | Conditional $E_8$ overlap models (Appendices R and T) | Candidate diagnostics; root labels, coefficients, scale maps, and remainders require independent forward certificates |
+
+
 
 If the fundamental rules and parameters of the MPU model and POP/PCE optimization are simple, the complex pattern of observed fundamental constants arises as the unique stable minimum of the high-dimensional PCE potential landscape. Fine-tuning in observed constants is reinterpreted as thermodynamic or informational optimality.
 
@@ -456,6 +466,32 @@ $$
 S_{\mathrm{gen}}^{\mathrm{PU}}(R;I)<S_{\mathrm{gen}}^{\mathrm{PU}}(R;\varnothing).
 $$
 Substituting Definition K.3b gives (K.3d.1). ∎
+
+**Definition K.3d.1a (Horizon Graph-Functional Page Certificate).** For a radiation record $R_t$, set $\mathcal I_t:=\mathcal I_{R_t}$ from Theorem K.3c and
+$$
+F_t(I)=C_{\partial I}+S_{\mathrm{pred}}(R_t\cup I)-S_{\mathrm{pred}}(I).
+$$
+An accepted record fixes $C_G(t,I)$ and $\epsilon_{\mathrm{MC}}\ge0$ with
+$$
+\sup_{I\in\mathcal I_t}|F_t(I)-C_G(t,I)|\le\epsilon_{\mathrm{MC}},
+\tag{K.3d.1a.1}
+$$
+together with graph, capacity, candidate-to-cut, and trace-continuity data.
+
+**Theorem K.3d.1b (Uniform Minimum Stability).** The record gives
+$$
+\left|S_{\mathrm{rec}}(R_t)-\min_{I\in\mathcal I_t}C_G(t,I)\right|
+\le\epsilon_{\mathrm{MC}}.
+\tag{K.3d.1b.1}
+$$
+A two-candidate form additionally requires
+$$
+C_G(t,I)\ge\min\{C_G(t,\varnothing),C_G(t,I_{\mathcal H})\}
+\quad(I\notin\{\varnothing,I_{\mathcal H}\}).
+\tag{K.3d.1b.2}
+$$
+
+*Proof.* Use Theorem K.3c and $|\min F-\min C_G|\le\sup|F-C_G|$. Condition (K.3d.1b.2) is exactly the exhaustive two-candidate gate. ∎
 
 **Definition K.3d.4 (Horizon Moment-Operator and Frame-Potential $k$-Design Certificate).** A horizon $k$-design certificate is a finite record
 $$
@@ -905,11 +941,11 @@ By Theorem K.3e, $\|\Pi_XF_\Lambda\psi\|^2\le |X||P|/\Lambda$. Substitution give
 
 **Puzzle:** Why does time have a preferred direction, with entropy increasing toward the future? Within standard statistical mechanics, the entropy conjecture — that the universe's coarse-grained entropy evolves as a time-symmetric, time-translation invariant Markov process [Wolpert, Rovelli & Scharnhorst 2025] — does not by itself select a temporal direction. As those authors prove rigorously, any such selection requires conditioning on boundary data at a chosen time, and neither the Boltzmann brain hypothesis (conditioning on the present) nor the Past Hypothesis (conditioning on the Big Bang) is privileged by the formalism. The second law's justification is circular within this framework: establishing the reliability of experimental records requires the second law, which in turn rests on those records [Wolpert, Rovelli & Scharnhorst 2025; Wolpert & Kipper 2024; Rovelli 2022].
 
-**PU Resolution:** The thermodynamic arrow of time emerges directly from the irreversibility of the SPAP cycle. As rigorously established in Appendix O (Section O.4) and Appendix J, each predictive operation incurs the irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ nats (Theorem 31). This fundamental irreversibility arises from the 2-to-1 state merge required by self-referential prediction (Lemma Z.2) and cannot be eliminated without violating logical consistency of the predict-verify-update cycle.
+**PU Resolution:** The thermodynamic arrow of time emerges directly from the irreversibility of the SPAP cycle. As rigorously established in Appendix O (Section O.4) and Appendix J, each predictive operation incurs the irreducible entropy cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ nats (Theorem 31). This fundamental irreversibility arises from the 2-to-1 state merge required by self-referential prediction (Lemma Z.2) and cannot be eliminated without violating logical consistency of the predict-verify-update cycle.
 
 The framework establishes (Appendix O, Theorem O.2):
 $$\frac{dS_{total}}{dt} = \sum_{\text{MPUs}} \frac{\varepsilon_i}{\tau_i} \geq 0$$
-with equality only for static (non-predictive) configurations. The arrow of time is not imposed but derived: the forward direction is defined by increasing total SPAP entropy, which is necessary for the network to maintain predictive coherence. This provides a microscopic foundation for the Second Law of Thermodynamics. The PU derivation chain does not exhibit the circularity identified by Wolpert, Rovelli & Scharnhorst [2025] — that the second law is needed to trust the data from which the second law is inferred. The qualitative arrow follows unconditionally from the per-cycle entropy cost: SPAP $\to$ Lemma Z.2 $\to$ Theorem 31 ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$) $\to$ Theorem P.8.2 (time is necessarily directional). The quantitative suppression of reversed trajectories, $P_R/P_F \leq e^{-N\varepsilon}$ (Theorem O.3), holds in the low-noise detailed-balance regime. Both results proceed from the logical structure of prediction, not from conditioning on cosmological boundary data. The direction of memory follows from the same source: memory records verified outcomes, and the ordering of verification after prediction is fixed by the SPAP cycle (Theorem P.12.2, Step 2), not by an independent thermodynamic assumption.
+with equality only for static (non-predictive) configurations. The arrow of time is not imposed but derived: the forward direction is defined by increasing total SPAP entropy, which is necessary for the network to maintain predictive coherence. This provides a microscopic foundation for the Second Law of Thermodynamics. The PU derivation chain does not exhibit the circularity identified by Wolpert, Rovelli & Scharnhorst [2025] — that the second law is needed to trust the data from which the second law is inferred. The qualitative arrow follows unconditionally from the per-cycle entropy cost: SPAP $\to$ Lemma Z.2 $\to$ Theorem 31 ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) $\to$ Theorem P.8.2 (time is necessarily directional). The quantitative suppression of reversed trajectories, $P_R/P_F \leq e^{-N\varepsilon}$ (Theorem O.3), holds in the low-noise detailed-balance regime. Both results proceed from the logical structure of prediction, not from conditioning on cosmological boundary data. The direction of memory follows from the same source: memory records verified outcomes, and the ordering of verification after prediction is fixed by the SPAP cycle (Theorem P.12.2, Step 2), not by an independent thermodynamic assumption.
 
 **Cosmological Implications:** The low-entropy Big Bang corresponds to a state with minimal SPAP accumulation — the network begins in a high-information-potential configuration and irreversibly evolves toward thermodynamic equilibrium through cumulative prediction cycles. The "Past Hypothesis" [Albert 2000; Davies 1977; Reichenbach 1956] — that the early universe had low entropy — is reinterpreted as the initial condition of maximum predictive capacity. Unlike the standard formulation, which must posit this condition as a brute cosmological fact [Carroll 2020], the PU framework offers a dynamical account: PCE optimization of the nascent MPU network favors an initial configuration of maximal predictive capacity, providing a candidate mechanism for selecting the low-entropy boundary condition.
 
@@ -919,7 +955,7 @@ with equality only for static (non-predictive) configurations. The arrow of time
 - **Psychological**: Memory formation costs $\varepsilon$ per bit (Appendix J)
 - **Cosmological**: Expansion driven by relaxation of predictive tension
 
-**Perspectival Structure of the Arrow:** The arrow of time is not uniform across systems but graded by self-referential depth (Proposition O.4.2). Level 0 systems (MPUs) exhibit the bare thermodynamic ratchet: $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per cycle. Level 1 simple aggregates remain SPAP-flat and Shannon-level. A self-modeling system (Level 2 and above) experiences a ratchet with additional internal structure: patterns targeting its self-model $\mathcal{M}_S$ at sufficient depth incur the SPAP-divergent cost of Theorem M.10.3, with exact self-restoration sitting at the unprocessable $\mu_S = \infty$ boundary (Theorems M.10.4 and M.10.6). Partial or shallow self-model corrections may remain at baseline cost (Remark M.10.3), but the processing cost grows without bound as the self-referential depth of the restoration demand increases (Corollary B.2.1). The second law is therefore not merely a statement about ensembles but a perspectival necessity: fundamental for every observer, compatible with global information conservation (Theorem E.9.5), and impossible to circumvent from within the observer's own perspective even when aided by a more complex external agent (Corollary O.4.1; Corollary O.4.3). The depth of irreversibility — the cost of temporal self-restoration — depends on the observer's position in the complexity hierarchy. The same event-history is externally accessible to a more complex observer and internally sealed to the system that lived it (Corollary O.4.3).
+**Perspectival Structure of the Arrow:** The arrow of time is not uniform across systems but graded by self-referential depth (Proposition O.4.2). Level 0 systems (MPUs) exhibit the bare thermodynamic ratchet: $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per cycle. Level 1 simple aggregates remain SPAP-flat and Shannon-level. A self-modeling system (Level 2 and above) experiences a ratchet with additional internal structure: patterns targeting its self-model $\mathcal{M}_S$ at sufficient depth incur the SPAP-divergent cost of Theorem M.10.3, with exact self-restoration sitting at the unprocessable $\mu_S = \infty$ boundary (Theorems M.10.4 and M.10.6). Partial or shallow self-model corrections may remain at baseline cost (Remark M.10.3), but the processing cost grows without bound as the self-referential depth of the restoration demand increases (Corollary B.2.1). The second law is therefore not merely a statement about ensembles but a perspectival necessity: fundamental for every observer, compatible with global information conservation (Theorem E.9.5), and impossible to circumvent from within the observer's own perspective even when aided by a more complex external agent (Corollary O.4.1; Corollary O.4.3). The depth of irreversibility — the cost of temporal self-restoration — depends on the observer's position in the complexity hierarchy. The same event-history is externally accessible to a more complex observer and internally sealed to the system that lived it (Corollary O.4.3).
 
 This resolution is rigorous and complete, with the arrow of time emerging as a theorem rather than an axiom. In the terminology of Wolpert, Rovelli & Scharnhorst [2025], the PU framework sidesteps the need to choose a "nailed set" of conditioning times for the entropy process: the arrow operates at every MPU cycle via the $\varepsilon$-ratchet, so no boundary conditioning is required and the Boltzmann brain hypothesis — along with variants such as their instructive "1000CE hypothesis" — does not arise as a competing account of temporal direction. Further development includes simulating MPU network dynamics incorporating the $\varepsilon$-cost to demonstrate robust emergence of a global arrow of time and exploring whether this mechanism can explain the universe's initial low effective entropy state from a PCE perspective.
 
@@ -936,10 +972,10 @@ where $I$ is the mutual information between interior state and classical measure
 
 **Theorem K.5.1 (ND-RID Throughput Bound).**
 Conditional on geometric regularity (Theorem 43):
-$$L(S) \leq \frac{N_{eff\_links}(S) \cdot C_{\max}}{\tau_{min}} = \frac{\sigma_{eff\_link} \, A(S) \cdot C_{\max}}{\tau_{min}} + o(A)$$
-with $C_{\max} < \ln d_0$ (Theorem E.2) and $\sigma_{eff\_link} = \chi/(\eta\delta^2)$ (Theorem E.3).
+$$L(S) \leq \frac{N_{\mathrm{eff\,links}}(S) \cdot C_{\max}}{\tau_{min}} = \frac{\sigma_{\mathrm{eff\,link}} \, A(S) \cdot C_{\max}}{\tau_{min}} + o(A)$$
+with $C_{\max} < \ln d_0$ (Theorem E.2) and $\sigma_{\mathrm{eff\,link}} = \chi/(\eta\delta^2)$ (Theorem E.3).
 
-*Proof.* Each of $N_{eff\_links}(S)$ independent channels has capacity at most $C_{\max}$ per use. Each channel operates at most once per $\tau_{min}$. The bound follows from Theorems E.2 and E.3.
+*Proof.* Each of $N_{\mathrm{eff\,links}}(S)$ independent channels has capacity at most $C_{\max}$ per use. Each channel operates at most once per $\tau_{min}$. The bound follows from Theorems E.2 and E.3.
 
 **Lemma K.5.2 (Curvature-Sensitivity Bound).**
 For CPTP transport $\mathcal{E}_\gamma$ on the refresh/minorization branch with ND-RID contraction factor $f_{RID} < 1$ over $n(\gamma)$ cycles:
@@ -963,7 +999,7 @@ In the manifold regime (Theorem 43), curvature blow-up visible to exterior obser
 
 **Corollary K.5.5 (Boundary Entropy).**
 At capacity saturation, the boundary entropy is:
-$$S_{BH}(S) = N_{eff\_links}(S) \cdot C_{\max} = \frac{c^3}{4G\hbar} A(S) + o(A)$$
+$$S_{BH}(S) = N_{\mathrm{eff\,links}}(S) \cdot C_{\max} = \frac{c^3}{4G\hbar} A(S) + o(A)$$
 using the identification $G = \eta\delta^2 c^3/(4\hbar\chi C_{\max})$ from Equation E.9.
 
 **Physical Interpretation:** The framework replaces geometric cosmic censorship with information-theoretic censorship: one cannot extract infinite information about a would-be singularity through finite area. The "singularity" manifests as either (i) a computation-induced information horizon where throughput saturates, or (ii) a breakdown of the continuum approximation where discrete MPU structure becomes dominant. Both outcomes preserve exterior predictability.
@@ -1632,7 +1668,7 @@ where:
 - $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in $E_8$ root space
 - $f_{\text{sinc}} = \text{sinc}(1/\sqrt{3}) = 0.9454$ is the coherent averaging factor over the generation wavepacket (Theorem T.55)
 
-The experimental value $\delta_{\text{exp}} = 65.7° \pm 1.5°$ (Particle Data Group 2024) agrees within $+0.7\sigma$. ∎
+The PDG-2024 global-fit value $\delta_{\mathrm{CKM}}=65.72^\circ\pm1.49^\circ$ gives pull $+0.7\sigma$ for the displayed prediction. ∎
 
 **Table K.6.2: Strong vs Weak CP**
 
@@ -1642,7 +1678,7 @@ The experimental value $\delta_{\text{exp}} = 65.7° \pm 1.5°$ (Particle Data G
 | $\arg\det M_q$ | I | Real $E_8$ determinant class plus positive-orientation certificate | $=0$ on the certified orientation branch |
 | $\delta_{\text{CKM}}$ | II | Relative flavor holonomy | $=66.7°$ |
 | $\delta_{\text{PMNS}}$ | II | Relative neutrino-sector holonomy | Appendix T branch value |
-| Baryogenesis CP source | II | Relative holonomy projected through APS update index | Appendix Y branch value |
+| Baryogenesis CP-odd datum | II | Relative holonomy weighted by a driven APS-Kubo update | Appendix Y branch value; Theorems Y.6.1i--Y.6.1k |
 
 **Theorem K.6.18a (Relative Determinant-Line CP Ledger).** Let $D_{\mathrm{PU}}$ be the finite chiral update operator on a retained CP branch, and let
 $$
@@ -1686,7 +1722,7 @@ $$
 $$
 so the CKM and PMNS CP phases are retained exactly when the corresponding relative holonomy acts nontrivially on generation-changing protocols.
 
-3. The baryogenesis CP source is the projection of the same relative holonomy through the anomaly-update index:
+3. The baryogenesis CP-odd weight is the projection of the same relative holonomy through the anomaly-update index; the production source remains the driven or boundary term of Theorem Y.6.1i:
 $$
 \Delta(B+L)
 =
@@ -1704,19 +1740,21 @@ Thus absolute CP phase is exact and removed, while relative CP holonomy is physi
 
 For a relative flavor loop, the endpoints are compared inside the same real vacuum class, but the path may enclose Berry curvature on the generation bundle. The determinant-line connection restricted to the retained flavor bundle is the Berry connection used in Theorem K.6.18 and Appendix T. Hence its relative holonomy is (K.6.18a.4). Because PPI identifies only protocol-invisible phases, a relative holonomy survives exactly when it changes a generation-changing response presheaf.
 
-For baryogenesis, Theorem Y.4.3b identifies the anomaly-mediated update with the APS index of the chiral predictive update operator, including the APS boundary phase contribution on the boundary Dirac operator. Corollary Y.10.2 identifies the CP phase entering the baryogenesis source with predictive orientation holonomy. Substituting the relative determinant-line phase into the Appendix Y CP factor gives (K.6.18a.5). Therefore the Type I/Type II split is the exact/non-exact split of the determinant-line CP ledger. ∎
+For baryogenesis, Theorem Y.4.3b identifies the anomaly-mediated update with the APS index of the chiral predictive update operator, including the APS boundary phase contribution on the boundary Dirac operator. Corollary Y.10.2 identifies the CP phase weighting the certified baryogenesis transport response with predictive orientation holonomy. Substituting the relative determinant-line phase into the Appendix Y CP factor gives (K.6.18a.5). Therefore the Type I/Type II split is the exact/non-exact split of the determinant-line CP ledger. ∎
 
 ### K.6.12 Connection to Baryogenesis
 
-The preservation of Type II CP violation is essential for baryogenesis via the Sakharov conditions.
+
+
+The retained Type II CP datum is one input to baryogenesis, not a complete source.
 
 **Proposition K.6.6 (Sakharov Conditions Satisfied).** The framework satisfies all three Sakharov conditions for baryogenesis (Sakharov 1967):
 
 1. **Baryon number violation:** Electroweak sphalerons (Appendix Y, Section Y.4)
 2. **C and CP violation:** Berry holonomy $\delta = 66.7°$ (Theorem K.6.18)
-3. **Departure from equilibrium:** SPAP irreversibility $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31)
+3. **Departure from equilibrium:** SPAP irreversibility $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31)
 
-**Theorem K.6.19 (Baryon Asymmetry).** The cosmological baryon asymmetry is:
+**Theorem K.6.19 (Baryon Asymmetry on the Certified Driven Reduction).** The product value below is licensed only when the Appendix Y source, freeze-out, transport, and residual entries satisfy Theorems Y.6.1i--Y.6.1k. The cosmological baryon asymmetry is:
 $$\eta_B = (6.2 \pm 0.5) \times 10^{-10}$$
 
 *Proof.* Appendix Y provides the master formula (Theorem Y.9, Equation (Y.12)):
@@ -1763,7 +1801,7 @@ modulo small SM contributions from the CKM phase at the level $|d_n|\sim10^{-31}
 
 | Observable | PU Prediction | Measured Value | Status |
 |:-----------|:--------------|:---------------|:-------|
-| CKM phase δ | 66.7° | 65.7° ± 1.5° | ✓ (+0.7σ) |
+| CKM phase $\delta_{\mathrm{CKM}}$ | $66.7^\circ$ | $65.72^\circ\pm1.49^\circ$ | ✓ ($+0.7\sigma$) |
 | Jarlskog invariant | $3.22 \times 10^{-5}$ | $(3.12^{+0.13}_{-0.12}) \times 10^{-5}$ | ✓ (+0.8σ) |
 | Baryon asymmetry | $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | ✓ (+0.2σ) |
 | Neutron EDM | $0$ on the Appendix K strong-CP branch | $<1.8 \times 10^{-26}$ e·cm | branch-consistent |
@@ -1854,7 +1892,13 @@ The same geometric structure that generates the three-generation hierarchy (Appe
 ---
 
 
-## K.7 Hierarchy Problem and Naturalness
+## K.7 Hierarchy Problem and Naturalness: Conditional Status
+
+The relation $v=A_{EW}e^{-\kappa_{EW}}M_{Pl}$ is a determinant-model ansatz on its declared branch. A combinatorial label for $\kappa_{EW}$ does not protect a dimensionful scale from radiative or threshold corrections. Technical naturalness requires a renormalized effective action, symmetry or nonrenormalization mechanism, beta functions, matching thresholds, counterterm scheme, and determinant-remainder bounds.
+
+Therefore PU does not presently provide a complete hierarchy-problem solution. Numerical proximity after inserting the determinant-model inputs is a validation datum, not a derivation. Gaussian and higher corrections have no universal $O(1)$ bound without the missing fluctuation-spectrum and renormalization certificate.
+
+
 
 **Puzzle:** The electroweak scale $v \approx 246$ GeV is 17 orders of magnitude smaller than the Planck scale $M_{Pl} \approx 10^{19}$ GeV. In quantum field theory, radiative corrections should drive the Higgs mass to $M_{Pl}$ unless parameters are fine-tuned to extraordinary precision ($\sim 10^{-34}$). Similarly, the baryon asymmetry $\eta_B \sim 10^{-10}$ appears to require fine-tuning. Why are these hierarchies stable?
 
@@ -2198,11 +2242,11 @@ where $R,R_I$ are the resource cost functions (Definition 3).
 
 *Proof.* By Definition K.10.1, for $\epsilon=1$ there exists an MPU-admissible finite-resource protocol $\mathcal{P}_1$ producing an estimate within additive error $1$ of $\langle\mathcal{O}\rangle$. If $\langle\mathcal{O}\rangle$ were infinite, no finite real-valued estimate could satisfy an additive-error bound, contradicting the definition. Hence $\langle\mathcal{O}\rangle$ is finite. ∎
 
-**Definition K.10.3 (MPU Momentum Cutoff).** The MPU network defines an intrinsic momentum scale:
+**Definition K.10.3 (MPU Wavenumber, Momentum, and Energy Scales).** Define
 $$
-\Lambda_{\text{MPU}} := \frac{\hbar}{\delta} = \frac{m_P c}{\sqrt{8\ln 2}} \approx 0.424\, m_P c,
+k_{\mathrm{MPU}}:=\delta^{-1},\qquad p_{\mathrm{MPU}}:=\hbar k_{\mathrm{MPU}},\qquad E_{\mathrm{MPU}}:=cp_{\mathrm{MPU}}.
 $$
-where $\delta = \sqrt{8\ln 2}\, L_P \approx 2.355\, L_P$ is the PCE-optimal MPU spacing (Appendix Q, Equation Q.18) and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. In natural units ($\hbar = c = 1$), the corresponding wavenumber is $k_{\text{MPU}} = 1/\delta = 1/(\sqrt{8\ln 2} \cdot L_P) \approx 0.424/L_P$, which sets the scale at which the continuum approximation breaks down. This is an invariant operational cutoff scale, not by itself a Lorentz-violating photon-dispersion scale; any such dispersion law requires the separate non-attractor branch data described in Appendix Q, Prediction Q.6.2.
+For ordinary wavelength $\lambda=2\pi/k$, the condition $k>k_{\mathrm{MPU}}$ is equivalent to $\lambda<2\pi\delta$. For reduced wavelength $\bar\lambda:=1/k$, it is equivalent to $\bar\lambda<\delta$. These are intrinsic comparison scales; treating them as a hard dynamical cutoff requires a separately certified lattice/dispersion realization.
 
 **Theorem K.10.3a (Operational Anti-Continuum Principle).** Let $\mathfrak C$ be a mathematical structure whose exact physical interpretation would require uniformly refinable distinctions at all resolutions $\nu>0$ on a fixed bounded operational domain. Let $N_{\mathfrak C}(\nu)$ be the minimum number of mutually distinguishable alternatives required to specify those distinctions to resolution $\nu$. If
 $$
@@ -2242,20 +2286,19 @@ $$
 $$
 Then $N_{\mathfrak C}(\nu)>\exp(B(\mathcal P))$, contradicting the finite distinguishability bound. The same conclusion follows from Landauer accounting: selecting or erasing one alternative among $N_{\mathfrak C}(\nu)$ alternatives costs at least $\ln N_{\mathfrak C}(\nu)$ nats, which cannot be absorbed by a fixed finite-resource instantiation as $\nu\to0$. Therefore exact continuum structure is not PU-admissible as physical ontology; only finite-resolution approximants or closures carry operational content. ∎
 
-**Theorem K.10.4 (Intrinsic UV Finiteness).** Let $\mathcal{A}_{phys}(\mu)$ denote any operational scattering observable whose preparation and readout are defined at a characteristic external scale $\mu$ (i.e., all operational coarse-graining lengths satisfy $\ell\sim 1/\mu \gg \delta$). Then:
+**Theorem K.10.4 (Conditional Effective-Cutoff Interpretation).** Let $\mathcal A_{\mathrm{phys}}(\mu)$ be an operational observable at external scale $\mu$. Then its operational value is finite by Definition K.10.1 and Lemma K.10.2.
 
-(i) $\mathcal{A}_{phys}(\mu)$ is finite.
+The spacing $\delta$ defines comparison scales
+$$
+k_{\mathrm{MPU}}=\delta^{-1},
+\qquad
+p_{\mathrm{MPU}}=\hbar\delta^{-1},
+\qquad
+E_{\mathrm{MPU}}=c\hbar\delta^{-1}.
+$$
+A continuum representation may be treated as hard-cut off at these scales only if a separate ultraviolet certificate supplies a microscopic lattice or bandlimit, a dispersion relation, a regulator, and a matching theorem proving that the regulated effective action reproduces the registered observables within its residual interval. On that branch, angular wavenumbers $k>k_{\mathrm{MPU}}$ correspond to reduced wavelengths $\bar\lambda<\delta$ and momenta $p>p_{\mathrm{MPU}}$.
 
-(ii) Any continuum QFT representation used to compute $\mathcal{A}_{phys}(\mu)$ must be interpreted as an effective description valid only above the intrinsic MPU spacing $\delta$ (Appendix Q, Eq. Q.18), and therefore may be taken to be regulated at the intrinsic cutoff $\Lambda_{MPU}:=\hbar/\delta$ (Definition K.10.3). Degrees of freedom with wavelengths $\lambda<\delta$ (equivalently momenta $k>\Lambda_{MPU}$) are not independently operational in PU and can influence $\mu$-scale observables only through the parameters of the regulated effective action at $\Lambda_{MPU}$.
-
-(iii) Consequently, ultraviolet divergences arising from the formal $\Lambda\to\infty$ limit of continuum integrals are extrapolation artifacts: they arise from extending the continuum description into the non-operational regime $\lambda<\delta$ and have no operational meaning.
-
-*Proof.*
-(i) By Definition K.10.1, $\mathcal{A}_{phys}(\mu)$ is an operational observable; by Lemma K.10.2 its operational value is finite.
-
-(ii) In PU the fundamental degrees of freedom are MPU-network degrees of freedom with characteristic spacing $\delta$ (Definition 35; Appendix Q, Eq. Q.18). Operational protocols act by finite MPU-admissible interaction/update steps (Definition 27) across finite-capacity channels (Theorem E.2). Any purported "mode" with $\lambda<\delta$ would require independent operational distinguishability of sub-MPU structure, which is not available to MPU-admissible protocols. Therefore changes confined to $\lambda<\delta$ cannot be represented as independently measurable degrees of freedom and can affect operational predictions only via their induced change in the effective dynamics of the MPU-resolved degrees of freedom. In a continuum representation this is exactly the statement that the effect of $k>\Lambda_{MPU}$ is encoded in the parameters of the effective action defined at $\Lambda_{MPU}$.
-
-(iii) UV divergences in continuum QFT arise from integrating over arbitrarily large momenta, i.e., from assuming operational meaning for $\lambda\to 0$. Since PU enforces a non-operational regime below $\delta$, those divergent contributions are outside the domain of the effective description and cannot correspond to any operational observable. ∎
+Spacing and finite operational capacity alone do not eliminate continuum ultraviolet divergences or prove that every high-momentum contribution is an artifact. Without the ultraviolet certificate, the continuum theory still requires its ordinary renormalization and effective-field-theory ledger. ∎
 
 **Definition K.10.4a (Hadamard-Subtracted UV PCE Cost).** Let $U$ be a relatively compact normal neighborhood in the regular AQFT branch of Theorem F.10.2. Let $\omega_2$ be the two-point distribution of a quasifree local state on $U$, and let $H_U$ be the local Hadamard parametrix with the same antisymmetric commutator singularity. Define the Hadamard-subtracted remainder
 $$
@@ -2604,11 +2647,11 @@ Thus the theorem-level PU content is:
 
 This is an operational finite-substrate result, not a metaphysical simulation postulate.
 
-**Corollary K.10.6 (Divergent Complexity Cost).** Achieving predictive accuracy $\alpha$ approaching the SPAP limit requires complexity $C_{\text{uni}}(\delta_{\text{SPAP}})$ satisfying (Theorem 14, Appendix B Equation B.5):
+**Corollary K.10.6 (Certificate-Gated Divergent Complexity Cost).** On a declared task class carrying certificate $\mathfrak C_{B.2}$, achieving predictive accuracy $\alpha$ approaching the SPAP limit requires complexity $C_{\text{uni}}(\delta_{\text{SPAP}})$ satisfying (Theorem 14, Appendix B Equation B.5):
 $$
 C_{\text{uni}}(\delta_{\text{SPAP}}) = \Omega\left(\log\left(\frac{1}{\delta_{\text{SPAP}}}\right) \cdot \frac{1}{\delta_{\text{SPAP}}^2}\right)
 $$
-where $\delta_{\text{SPAP}} = \alpha_{\text{SPAP}} - \alpha$ is the error margin. As $\delta_{\text{SPAP}} \to 0$ (perfect resolution), $C_{\text{uni}} \to \infty$. Finite systems cannot achieve vanishing error margins in self-referential prediction tasks. Extrapolations that require infinite precision therefore have no operational content in PU.
+where $\delta_{\text{SPAP}} = \alpha_{\text{SPAP}} - \alpha$ is the error margin. As $\delta_{\text{SPAP}} \to 0$ (perfect resolution), $C_{\text{uni}} \to \infty$. Under that certificate, finite systems cannot achieve vanishing error margins in the declared self-referential prediction task class. Extrapolations that require infinite precision therefore have no operational content in PU.
 
 **Theorem K.10.7 (FRG Coarse-Graining as Operational Compression).** The functional renormalization group flow (Appendix X, Equation X.4)
 $$
@@ -2719,7 +2762,11 @@ $$
 
 *Proof.* By Theorem K.10.4, modes with $k > \Lambda_{\text{MPU}}$ are operationally inaccessible. Parameters defined in terms of such modes have no measurable consequences. The renormalization procedure extracts the finite, operationally meaningful content by integrating out inaccessible modes and absorbing their effects into redefined parameters at accessible scales. ∎
 
-**Remark K.10.15 (Distinction from Wilsonian Effective Field Theory).** A natural objection is that Wilsonian EFT already embodies the principle that sub-cutoff physics is irrelevant to low-energy observables, rendering the PU treatment redundant. This objection conflates three distinct claims. First, in the Wilsonian framework the lattice (or cutoff) is an auxiliary regularization device introduced to make calculations well-defined, with the continuum limit $a \to 0$ taken as the physically fundamental description; in PU, the lattice at spacing $\delta = \sqrt{8\ln 2} \cdot L_P$ (Appendix Q, Eq. Q.18) *is* the physical substrate, and the continuum is the approximation — the priority of lattice and continuum is reversed. Second, Wilsonian EFT provides no *principled reason* why sub-cutoff physics should be irrelevant; it is an empirical observation elevated to methodology. In PU, the irrelevance is derived: modes with $k > \Lambda_{\text{MPU}}$ are operationally inaccessible because resolving them requires channel capacity exceeding the bound $C_{\max} < \ln d_0$ (Theorem E.2) and predictive complexity exceeding $C_{\text{uni}}(\delta_{\text{SPAP}})$ (Theorem 14, Corollary K.10.6), which incurs divergent resource costs. Third, the PU framework derives the mass gap through three independent routes (thermodynamic contractivity from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, geometric rootlessness of the Leech lattice $\Lambda_{24}$, and the Action-Entropy Identity of Corollary Q.0.1) without invoking the continuum limit as a bridge between coupling regimes. These derivations are unavailable within standard Wilsonian EFT, which requires asymptotic freedom to connect strong and weak coupling.
+**Remark K.10.15 (Distinction from Wilsonian Effective Field Theory).**
+
+Third, PU records distinct conditional objects: a refresh-branch mixing gap, a Leech norm gap, and an action-per-update floor. None alone is a Yang--Mills particle mass gap. Converting the norm gap to an absolute physical gap requires the confinement/spectral bridge, $\mathfrak B_{mass}$, and norm--information calibration; this claim is separate from the Wilsonian continuum question.
+
+
 
 **Connection to Horizon Thermodynamics.** The results of Appendix Q (Section Q.0.9, Theorems Q.0.10–Q.0.17) complete this unified picture. The Rindler-Landauer cycle time $\tau_U = 2\pi c/a$ (Theorem Q.0.10) establishes that horizons process information at finite rate:
 $$
@@ -2862,9 +2909,15 @@ because every element of $\mathcal S_{k_2}$ is the coarse-grained image of an el
 
 *Proof.* Theorem K.10.18b proves monotonicity along the RG channel. If the endpoint normalization identifies $C_{\mathrm{pred}}$ with the standard fixed-point central datum, then the same monotone function interpolates between those fixed-point values. ∎
 
-**Corollary K.10.18d (RG Irreversibility as Predictive Irreversibility).** A coarse-graining step can preserve $C_{\mathrm{pred}}$ only when it is sufficient for the branch family: for every pair $\rho,\sigma\in\mathcal S_{k_1}$ attaining the supremum, equality in data processing must hold.
+**Corollary K.10.18d (Equality Conditions for Predictive RG Monotonicity).** If both suprema are attained and $C_{\mathrm{pred}}(k_2)=C_{\mathrm{pred}}(k_1)$, then at least one fine-scale maximizing pair maps to a coarse-scale maximizing pair and has zero data-processing loss. Petz sufficiency for the entire branch family is sufficient, but not necessary, for equality. Without attainment, equality yields a maximizing sequence whose data-processing loss tends to zero.
 
-*Proof.* Equality in (K.10.24) requires equality in the data-processing inequality for the relevant maximizing pairs. The equality condition for relative entropy monotonicity is precisely recoverability by a Petz recovery channel on the involved states. Thus no predictive distinguishability is lost only when the coarse-grained description is sufficient for those distinctions. ∎
+*Proof.* Choose a fine-scale pair attaining $C_{\mathrm{pred}}(k_1)$. Equality of the suprema is possible only if some maximizing pair loses no relative entropy and its image attains the coarse supremum; equality in relative-entropy data processing is equivalent to Petz recovery for that pair. If maxima are not attained, apply the same inequality to a maximizing sequence. ∎
+
+**Common-monotone comparison protocol.** Identifying PCE descent, geometric flow, generalized entropy, and RG flow with one scalar monotone requires maps from one state space, equality or stated monotone reparameterization of the functionals, compatible flow orientation, and residual control. Convergence of the scalar alone proves neither state convergence, a unique fixed point, nor a finite EFT operator basis.
+
+**Common-monotone comparison protocol.** A claim that PCE descent, geometric flow, generalized entropy, and RG flow are representations of one scalar monotone must provide: maps from a common state space into each sector; equality or a stated monotone reparameterization of the four functionals on the image; control of every additional cost term; compatible flow parameters and orientations; and residual bounds. Without these entries, data processing proves only (K.10.24).
+
+Monotone convergence of the number $C_{\mathrm{pred}}(k)$ does not imply convergence of the state, existence or uniqueness of an RG fixed point, or finiteness of the EFT operator set. Such conclusions require, respectively, a topology and precompact orbit, an invariance or LaSalle-type condition, uniqueness data, and a separate operator-basis/power-counting theorem. Finite operational distinguishability at fixed resolution gives a finite atlas of response cells, not generic renormalizability.
 
 ## K.11 Outlook and Future Directions
 
@@ -2872,15 +2925,17 @@ The Predictive Universe framework has successfully resolved several fundamental 
 
 ### K.11.1 Established Results
 
-The following results have been derived with precise numerical predictions:
+The following ledger mixes exact mathematical results with branch-qualified numerical model outputs; each row inherits the status of its cited source.
 
 | Result | Value | Source |
 |:-------|:------|:-------|
-| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; registry-entered hypercharge-recoil branch $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$; passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ | Appendix Z, Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; diagnostic-only hypercharge-recoil (operator realization open) branch $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$; passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ | Appendix Z, Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 |
 | Electroweak scale | $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ | Appendix T, Theorem T.5 |
 | Weinberg angle | $\sin^2\theta_W^{(0)} = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |
-| Fermion mass ratios | Lepton $\mathcal{R} = 3$ to 3.8% accuracy | Appendices R, T |
+| Fermion mass ratios | Retrospective leading-order lepton diagnostic | Appendices R and T; not an independent prediction until the flavor ledger is fixed before comparison |
+
+
 | Gravitational constant | $G$ from channel-capacity area-law normalization (Theorem E.6) on the gravity-bridge package of Theorem K.10.12; $\delta/L_P \approx 2.355$ on the Appendix Q packing branch | Appendices E, Q |
 | Cosmological constant | Appendix U reference evaluation $\Lambda L_P^2 = 8\pi A_{\text{eff}}e^{-283}\sim 10^{-122}$ under the stated counting and prefactor conventions | Appendix U |
 | Primordial observables | $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$, conditional on the Appendix U primordial identifications and assumptions | Appendix U |
@@ -2894,6 +2949,58 @@ The following results have been derived with precise numerical predictions:
 ### K.11.2 Active Development Areas
 
 The following areas have established conceptual frameworks with detailed calculations in progress:
+
+**Problem-of-time protocol.** An event count is a physical clock only after a constrained model supplies a phase-space clock $T$, monotonicity on the branch, and gauge-invariant relational observables $O(T)$. A discrete count does not remove the Hamiltonian constraint.
+
+**Cosmological-measure protocol.** State the sample space, event algebra, normalized measure or regulator, cutoff-removal rule, conditioning data, and observer-selection function, and prove regulator independence at the claimed resolution.
+
+**Cross-domain recurrence certificate.** Fix
+$$
+\mathfrak C_{\mathrm{cross}}=
+\bigl(X_i,X_*,F_i,\mathcal O_i,\mathcal O_*,J_i,J_*,R_i,\chi_{\mathrm{lock}}\bigr)_{i=1}^n.
+$$
+Transporting optimality requires the common optimum to lie in $F_i(X_i)$ and $J_i$ to be the pullback, or a declared strictly monotone reparameterization, of $J_*$ on that image. Injectivity on the retained response quotient is additionally required to transport uniqueness. Shared numbers or structures without these maps establish analogy only.
+
+**Problem-of-time protocol.** An event count may be proposed as a physical clock only after the constrained model supplies a phase-space function $T$, proves the required monotonicity on the chosen branch, and shows that the relational observables $O(T)$ are gauge invariant or satisfy the appropriate Dirac condition. A discrete count can itself be reparametrization invariant and does not remove the Hamiltonian constraint. SPAP excludes specified internal total self-models; it does not exclude the external mathematical state used to formulate a constrained theory.
+
+**Cosmological-measure protocol.** A single realized history does not by itself define probabilities for regions or observations within that history. A measure proposal must state its sample space, event algebra, normalized measure or regulator, cutoff-removal rule, conditioning data, and observer-selection function, and must prove regulator independence at the claimed resolution. Gleason--Busch probabilities on quantum effects do not supply those cosmological entries. Fluctuation-observer claims require an independently defined production and observation model.
+
+**Cross-domain recurrence certificate.** A common discrete structure appearing in several domains may be compared through a finite certificate
+$$
+\mathfrak C_{\mathrm{cross}}
+=
+\bigl(
+X_i,F_i,\mathcal O_i,\mathcal O_*,R_i,\chi_{\mathrm{lock}}
+\bigr)_{i=1}^n,
+$$
+where $X_i$ is the domain object, $F_i:X_i\to X_*$ is an explicit reduction to one common problem, $\mathcal O_i$ and $\mathcal O_*$ are declared response families, and $R_i$ bounds failure of response preservation. Uniqueness or optimality can be transported back to a domain only when the relevant $F_i$ is injective on the retained response quotient. Shared integers, codes, lattices, or optimization language without these maps establish analogy, not identity.
+
+**Optional research-program register.**
+
+| Topic | Retained form | Status |
+|---|---|---|
+| Source superposition | competing non-exhaustive channels | protocol |
+| Actualization calorimetry | certified reset-support heat floor | conditional identity |
+| Hubble comparison | locked galactic-to-FRW projection | certificate-gated diagnostic |
+| Coupling drift | common-coordinate response fit | certificate-gated diagnostic |
+| Horizon step | entropy/area/energy conversion | conditional identity |
+| Network emulator | response-faithful implementation test | protocol |
+| Exponent ledger | named-branch arithmetic | conditional identity |
+| Cosmic stabilizer | stabilizer-to-cosmology bridge record | hypothesis |
+| Spatial SPAP | boundary-factorization rate bound | conditional inequality |
+| Unified monotone | common-state-space comparison | protocol |
+| Reciprocity | Hessian symmetry with physical bridge | conditional identity |
+| Measurement independence | independent causal-statistical condition | guardrail |
+| Action--entropy | named-cycle exchange law | guardrail |
+| Problem of time | constrained-clock construction | open protocol |
+| Cosmological measure | explicit measure/regulator construction | open protocol |
+| Renormalizability | topology, invariance, and operator-basis gates | guardrail |
+| Cross-domain recurrence | response-preserving reduction certificate | protocol |
+| Verify--generate | instance/total-domain distinction | guardrail |
+| Quantum reconstruction | typed operational-axiom certificate | certificate boundary |
+| External AQFT comparison | non-load-bearing comparison | literature context |
+
+The register reports status only; it does not promote any row to theorem level.
 
 1. **Black hole information:** Perspectival Information Channel and reflexive extraction costs defined (Section K.3); detailed calculations of information recovery rates and scrambling times in progress.
 
@@ -2930,16 +3037,18 @@ The following areas have established conceptual frameworks with detailed calcula
 The framework makes precise, falsifiable predictions across multiple domains:
 
 **Fundamental Constants:**
-- Registry-entered Thomson branch $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$, with passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ if the seventh-order source is weakened
+- Registry-entered Thomson branch $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$, with passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ if the seventh-order source is weakened
 - $\sin^2\theta_W$ and $m_H$ consistency checks with RG evolution to high precision
 
 **Particle Physics:**
-- Fermion mass hierarchy invariants: $\mathcal{R}_\ell = 3$ to 3.8% accuracy (test with improved $\tau/\mu$ mass ratio)
+- - Fermion hierarchy model: preregister the root labels, continuous coefficients, scheme, and remainder interval, then test only held-out mass data
+
+
 - Three-generation structure from topological constraints (Appendix R)
 
 **Consciousness and Complexity:**
 - Consciousness Complexity scaling (Section 13): Neural activity $\sim N^{0.8}$ vs. $N^{0.6}$ for random networks
-- CC threshold behavior and causality bound $\alpha_{CC,max} < 0.5$
+- CC threshold behavior and endpoint-bias bound $\alpha_{CC,max} < 0.5$
 
 **Cosmology:**
 - Modified $f\sigma_8(z)$ from $G_{\text{eff}}$ evolution
