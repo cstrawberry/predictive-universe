@@ -12,11 +12,11 @@ The framework's core insight—that physical law emerges from the operational re
 
 **PU Resolution:** The framework organizes specific values of fundamental constants into branch-separated derivation chains, all rooted in the dynamically determined equilibrium state of the MPU network governed by minimizing the global PCE Potential $V(x)$ (Appendix D, Definition D.1) and satisfying derived constraints. Appendix X makes the coupling sector precise through Constraint-Coupling Duality: when a constant is the coefficient of an active physical admissibility constraint, its canonical coefficient is the relevant KKT shadow price after the branch normalization map; when the branch uses a rate coordinate, the observed coupling is the normalized active boundary coordinate together with the associated shadow price. These equilibrium parameters are shaped by the underlying MPU properties ($C_{op}, K_0, \varepsilon$, ND-RID dynamics, interaction costs $\Phi$) and environmental factors. The constants below carry the branch labels of their source appendices: some are theorem-level on the minimal PCE branch, others are canonical-branch predictions, calibration/exchange-rate definitions, or validation-level quantities conditional on the branch closures specified in their source appendices. The branch table at the end of this section consolidates these distinctions. In the per-quantity discussions, terminology such as "rigorously derived" refers to the within-branch dependence of each chain rather than an unconditional, branch-independent claim.
 
-**Invariant speed of light $c$:** Emerges from the finite minimum MPU processing time $\tau_{min} > 0$ (Theorem 29) and the effective microscopic length scale $\ell_0$ (Definition 35), with $c \approx \ell_0 / \tau_{min}$ (Theorem 46). These scales are set by the minimal operational requirements of the MPU cycle.
+**Invariant speed of light $c$:** Theorem 46 supplies a uniform operational causal-speed upper bound only on a branch with a separately registered positive edge-update time, a nonzero microscopic length scale, successive edge-by-edge serialization in the propagation-cost metric, and bounded edge weights. An attained invariant frontier requires an additional attainment record and the Corollary 46a/Appendix O Lorentzian package; the normalization $c=\ell_0/\tau_{\min}$ further requires the normalized uniform-weight one-link-saturation branch. Theorem 29 alone does not establish these additional hypotheses.
 
 **Reduced Planck constant $\hbar$:** Acts as the fundamental quantum of action. Within PU, it is rigorously identified as the exchange rate between information-theoretic (nats) and mechanical (J·s) descriptions of physical processes through the Action-Entropy Identity (Appendix Q, Theorem Q.0.1):
 $$\boxed{\frac{\mathcal{S}}{\hbar} = \sum_{\text{cycles}} \varepsilon_i}$$
-Physical action counts SPAP entropy production. The constant $\hbar$ scales the generator of unitary evolution (Equation 43), relates energy/frequency to information, and is associated with the fundamental scales of energy (from $\hat{H}_v$, Theorem 29) and time ($\tau_{min}$, Theorem 29) intrinsic to the MPU cycle. Its value is determined by the self-consistent scale of minimal actions in the PCE optimization, with the existence of this exchange rate proven necessary by the Principle of Physical Instantiation (Appendix Q, Proposition Q.0.2).
+The constant $\hbar$ scales the unitary generator and acts as the registered action-unit conversion on the Appendix Q branch. Theorem 29 identifies $\hat H_v$ and a task-dependent characteristic timescale; it does not supply a universal positive cycle duration. Any identification with reset entropy, a minimum action, or a physical cycle clock requires the separate Appendix Q and reset-implementation hypotheses.
 
 **Boltzmann constant $k_B$:** Functions as the conversion factor between dimensionless information/entropy measures (nats) and thermodynamic entropy (energy/temperature). Its value is inherent in the fundamental thermodynamic interpretation of the MPU dynamics (Section 12) and the link between information costs ($\varepsilon$) and energy dissipation ($k_B T \varepsilon$). Together with $\hbar$ and $c$, these constants form a complete set of exchange rates connecting the operational domains of the framework (Section P.6.5.5).
 
@@ -92,7 +92,7 @@ The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log 
 | Quantity | Derivation chain | Branch class |
 |---|---|---|
 | $K_0, d_0, M, D$ | Minimal PCE chain (Theorems 15, 23, Z.5, Z.10–Z.11) | Theorem-level on minimal branch |
-| $c$ | Minimal operational scales (Theorem 29, 46) | Theorem-level on minimal branch |
+| $c$ | Uniform speed upper bound from Theorem 46; equality requires registered clock, attainment, scale normalization, and Lorentzian branch | Conditional branch result |
 | $\hbar$ | Action-entropy exchange rate (Theorem Q.0.1) | Exchange-rate definition; existence is theorem-level on Q.0.2 branch |
 | $k_B$ | Thermodynamic conversion factor (Section 12) | Exchange-rate definition |
 | $\alpha^{-1} = 137.036$ | Appendix Z seven-stage chain | Canonical Z branch prediction (with the branch qualifiers) |
@@ -966,16 +966,18 @@ This resolution is rigorous and complete, with the arrow of time emerging as a t
 **PU Resolution:** The framework provides a rigorous information-theoretic exclusion of operationally meaningful naked singularities through throughput bounds and curvature-resolution limits.
 
 **Definition K.5.1 (Predictive Throughput).**
-For a closed surface $S$ with area $A(S)$, the predictive throughput requirement is:
-$$L(S) := \sup_{\mathcal{P}} \limsup_{n \to \infty} \frac{I(\rho_{\mathrm{int}}^{(\mathcal{P},n)}; \mathcal{R}_n^{(\mathcal{P})})}{n \, \tau_{min}}$$
-where $I$ is the mutual information between interior state and classical measurement record, and the supremum is over all MPU-admissible protocols $\mathcal{P}$.
+For a protocol $\mathcal P_n$ consisting of $n$ registered boundary rounds, let $M_n$ be a finite classical message encoded into admissible interior preparations, let $\mathcal R_n$ be the exterior classical record, and let $T_n$ be the actual elapsed physical time. On the registered round-clock branch, $T_n\ge n\tau_{\min}$ with $\tau_{\min}>0$. Define
+$$
+L(S):=\sup_{\{\mathcal P_n\}}\limsup_{n\to\infty}\frac{I(M_n;\mathcal R_n)}{T_n},
+$$
+where the supremum is over admissible message ensembles and protocols satisfying that clock certificate. This message-rate definition does not become trivial merely because a fixed interior Hilbert space has finite dimension.
 
-**Theorem K.5.1 (ND-RID Throughput Bound).**
-Conditional on geometric regularity (Theorem 43):
-$$L(S) \leq \frac{N_{\mathrm{eff\,links}}(S) \cdot C_{\max}}{\tau_{min}} = \frac{\sigma_{\mathrm{eff\,link}} \, A(S) \cdot C_{\max}}{\tau_{min}} + o(A)$$
-with $C_{\max} < \ln d_0$ (Theorem E.2) and $\sigma_{\mathrm{eff\,link}} = \chi/(\eta\delta^2)$ (Theorem E.3).
+**Theorem K.5.1 (Conditional ND-RID Throughput Bound).**
+Assume geometric regularity, the boundary-density certificate of Theorem E.3, and the throughput hypotheses of Theorem 14.2.4.1: every effective crossing link is a memoryless refresh-branch channel $\mathcal E_N=(1-p)\Psi+pT_\sigma$ with $p>0$; the aggregate boundary capacity is at most the sum of the registered link capacities; no bypass channel is present; and each link is used at most once per registered round of duration at least $\tau_{\min}>0$. Then
+$$L(S) \leq \frac{N_{\mathrm{eff\,links}}(S)C_{\max}}{\tau_{\min}} = \frac{\sigma_{\mathrm{eff\,link}}A(S)C_{\max}}{\tau_{\min}} + o(A),$$
+where $C_{\max}:=C(\mathcal E_N)<\ln d_0$ by Theorem E.2 and $\sigma_{\mathrm{eff\,link}}=\chi/(\eta\delta^2)$ by Theorem E.3.
 
-*Proof.* Each of $N_{\mathrm{eff\,links}}(S)$ independent channels has capacity at most $C_{\max}$ per use. Each channel operates at most once per $\tau_{min}$. The bound follows from Theorems E.2 and E.3.
+*Proof.* The aggregate-capacity hypothesis bounds one boundary round by $N_{\mathrm{eff\,links}}(S)C_{\max}$ nats. The registered clock gives at most one round per $\tau_{\min}$, and the density certificate gives the area form. ∎
 
 **Lemma K.5.2 (Curvature-Sensitivity Bound).**
 For CPTP transport $\mathcal{E}_\gamma$ on the refresh/minorization branch with ND-RID contraction factor $f_{RID} < 1$ over $n(\gamma)$ cycles:
@@ -2274,7 +2276,7 @@ The emergent manifold, metric, and AQFT net are therefore representatives of a f
 
 *Proof.* MPU-equivalence at resolution $\delta$ is defined by equality of all admissible predictive distributions up to the readout tolerance. The displayed total-variation bound is exactly that equivalence criterion for the observable algebra $\mathcal O_{\le\delta}$. Quotienting finite descriptions by this operational equivalence produces classes. Any continuum structure assigned to the class is determined only by the shared predictions of its representatives, not by sub-$\delta$ distinctions. Hence the continuum is a universality class of finite closures. ∎
 
-*Proof.* Fix any finite-resource MPU instantiation or protocol $\mathcal P$ on a bounded operational domain. It uses finitely many update cycles and finitely many finite-dimensional channels. Since each update requires at least $\tau_{\min}>0$ (Theorem 29), the number of update layers in any finite duration is finite. Since each channel has finite capacity $C_{\max}<\ln d_0$ (Theorem E.2), the total distinguishability budget of $\mathcal P$ is bounded by some finite number
+*Proof.* Fix any finite-resource MPU instantiation or protocol $\mathcal P$ on a bounded operational domain. By the finite-resource hypothesis itself, it uses finitely many update cycles and finitely many finite-dimensional channels; no universal lower update duration is needed for this step. Since each channel has finite capacity $C_{\max}<\ln d_0$ (Theorem E.2), the total distinguishability budget of $\mathcal P$ is bounded by some finite number
 $$
 B(\mathcal P)<\infty.
 $$

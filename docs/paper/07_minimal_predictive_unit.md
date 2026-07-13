@@ -88,7 +88,7 @@ The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive up
 
 *   **Horizon Constant $K_0$:** 3 bits (three binary registers).
 *   **Operational Complexity $C_{op}$:** $C_{op} = K_0 = 3$ bits (by construction, using minimal registers to realize SPAP logic).
-*   **Minimum Cycle Time $\tau_{min}$:** Determined by the internal Hamiltonian (Theorem 29), with $\tau_{min} > 0$.
+*   **Characteristic Internal Timescale $\tau_{\mathrm{char}}$:** Determined after a positive Hamiltonian energy scale and an operational task are registered (Theorem 29; Corollary 29.1 for orthogonalization). A positive lower duration $\tau_{\min}$ for every update, edge traversal, or channel use is separate branch data.
 *   **Irreducible Entropy Cost:** $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (nats) when reset is effected.
 
 **5. Solving the Prediction Optimization Problem (POP)**
@@ -614,7 +614,7 @@ where $\hbar$ is the action-unit normalization identified in Appendix Q, $|\psi(
 
 Within the framework, $\hat{H}$ admits the following physical interpretation:
 1.  **Baseline Energy Cost:** The expectation $\langle\hat{H}\rangle$ corresponds to the minimal baseline operational energy associated with sustaining the $C_{op}$ predictive cycle, i.e., the baseline physical resource cost $R(C_{op})$ (Definition 3).
-2.  **Minimum Timescale:** The spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min} > 0$ for completing a unitary prediction subcycle $U_0(t) = e^{-i\hat{H} t/\hbar}$.
+2.  **Characteristic Timescale:** After a positive excitation scale and a specified operational task are registered, the spectral structure of $\hat H$ determines a characteristic timescale. Corollary 29.1 supplies a positive lower bound for orthogonalization when the mean excitation is positive. Neither finite dimension nor bounded spectrum supplies a state-independent positive duration for every merely distinguishable transition, ND-RID update, edge traversal, or channel use.
 
 These identifications connect the abstract generator of unitary evolution to the physical resource requirements of the predictive loop.
 
@@ -628,7 +628,7 @@ t_\perp \ge \frac{\pi\hbar}{2\langle \hat H - E_0\rangle}.
 $$
 Within PU, this is the ordinary unitary-branch orthogonalization limit, compatible with the more primitive irreversible-cycle action bound $\Delta\mathcal S_i\ge \hbar\ln 2$.
 
-*Proof.* On the Hilbert/Born branch, Theorem 8.7 supplies the strongly continuous unitary implementation of the internal prediction dynamics, and Theorem 29 identifies its generator $\hat H$ as the operational energy generator with a nonzero minimum processing timescale. Applying the standard Margolus–Levitin orthogonalization bound to that unitary branch yields the stated inequality. ∎
+*Proof.* On the Hilbert/Born branch, Theorem 8.7 supplies the strongly continuous unitary implementation of the internal prediction dynamics, and Theorem 29 identifies its generator $\hat H$ as the operational energy generator. For the orthogonalization task stated here, the standard Margolus–Levitin theorem gives the displayed bound whenever $\langle\hat H-E_0\rangle>0$. This conclusion is task-specific and does not imply a universal minimum duration for arbitrary updates. ∎
 
 **7.3.3.3 Definition 27 (Def 27): Interaction and Perspectival Actualization ('Evolve'/ND-RID)**
 
@@ -668,7 +668,7 @@ The 'Evolve' process (Definition 27), representing interaction and actualization
 
 **7.4.1 Theorem 30 (Logically Mandated Physical State Change)**
 
-Within the Predictive Universe framework, the acquisition and resolution of non-trivial self-referential information ($\Delta I_{SPAP/DSRO} > 0$) during the MPU's 'Evolve' interaction cycle (Definition 27) logically mandates a corresponding physical transition $s(x) \to s(x')$ between distinct configurations of the MPU state. This transition is required to avoid logical contradiction inherent in self-reference (SPAP, Theorem 10, Theorem 11; DSRO, Definition 11) when new information invalidates or resolves the prior predictive state. This state change must occur within the finite physical time interval $\tau$ associated with the MPU cycle ($\tau \ge \tau_{min} > 0$, Theorem 29).
+Within the Predictive Universe framework, the acquisition and resolution of non-trivial self-referential information ($\Delta I_{SPAP/DSRO} > 0$) during the MPU's 'Evolve' interaction cycle (Definition 27) logically mandates a corresponding physical transition $s(x) \to s(x')$ between distinct configurations of the MPU state. This transition is required to avoid logical contradiction inherent in self-reference (SPAP, Theorem 10, Theorem 11; DSRO, Definition 11) when new information invalidates or resolves the prior predictive state. The logical argument mandates a transition but supplies no universal positive duration. On a branch with a registered cycle clock one may additionally assume $\tau\ge\tau_{\min}>0$; Theorem 29 alone does not establish that inequality for the stochastic 'Evolve' update.
 *Proof:* The MPU cycle at $C_{op} \ge K_0$ involves self-referential verification (V) and update (D_cyc), requiring processing information about its own state relative to outcomes, engaging SPAP/DSRO logic. Acquiring non-trivial self-referential information ($\Delta I > 0$) is necessary for adaptation under POP. The structure of SPAP/DSRO requires the logical state $x$ to change based on $\Delta I$ to resolve the self-reference (e.g., $\text{NOT}(\hat{\phi})$ or update based on proof search). Maintaining the original $x$ leads to contradiction. Distinct logical states $x, x'$ correspond to distinct physical states $s(x), s(x')$ within the MPU. This logical necessity, combined with distinct physical instantiation and the finite cycle time $\tau$, mandates a physical transition $s(x) \to s(x')$ whenever relevant $\Delta I > 0$ is resolved during 'Evolve'. QED
 
 **7.4.2 Proposition 5 (Structural Binary Register and Reset Alternative)**

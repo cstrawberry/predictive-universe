@@ -245,10 +245,11 @@ as in Theorem C.1(b). Then:
 
 1. On refresh/minorization branches with per-step trace-distance contraction $0\le f_{RID}<1$, bare-path coherence along worst-case paths falls below any fixed threshold $MP_{min}>0$ at a finite scale.
 
-2. Independently of strict contraction, finite processing time gives a super-linear worst-case latency
+2. Independently of strict contraction, on a branch with a separately registered duration of at least $\tau_{\min}>0$ for every completed path update, the worst-case latency is super-linear:
 $$
 \tau_{\max}(L)\ge \tau_{\min}\,c_{\max}'L^\gamma/\delta_{eff}.
 $$
+Without that clock hypothesis, the chemical-distance estimate alone supplies no physical latency bound.
 
 3. If the global-coherence branch requires macroscopic synchronization or refresh over a window growing at most linearly in $L$, or if the resource-efficiency branch requires average/effective communication cost to remain extensive in volume, then such a super-linear family violates GC or RE for sufficiently large $L$.
 
@@ -307,7 +308,7 @@ D_0\exp\!\left(
 -\frac{c_{\max}'|\ln f_{RID}|}{\delta_{eff}}L^\gamma
 \right).
 $$
-For any $MP_{min}>0$, solving $D(N_{steps})=MP_{min}$ gives the finite critical scale already recorded in (C.14). The latency statement is independent of contraction: every completed update requires at least $\tau_{\min}$, so
+For any $MP_{min}>0$, solving $D(N_{steps})=MP_{min}$ gives the finite critical scale already recorded in (C.14). The latency statement is independent of contraction but conditional on item 2's registered clock: every completed path update then requires at least $\tau_{\min}$, so
 $$
 \tau_{\max}(L)
 \ge

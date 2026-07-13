@@ -484,7 +484,7 @@ The PU resolution bears surface similarity to Rovelli's Relational Quantum Mecha
 | Aspect | Relational QM | PU Framework |
 |--------|---------------|--------------|
 | **Ontological status** | Interpretive stance; standard QM reinterpreted | Derived structure; perspectives are physical degrees of freedom |
-| **Grounding** | Taken as interpretive starting point | Derived from SPAP (Theorems 10–11) and thermodynamic necessity ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) |
+| **Grounding** | Taken as interpretive starting point | Conditional on SPAP together with the retained Hilbert/Born, update, and perspective records; a registered physical reset is a separate branch with $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ |
 | **Why relational?** | "Because that's what QM implies" | Because self-referential prediction is inherently perspectival (Corollary 1, Section 4.2.4) |
 | **Mathematical structure** | No explicit perspective space formalism | Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ with Riemannian structure (Definition 25, Theorem 25) |
 | **Dynamics** | No quantitative mechanism for perspective change | Explicit drift-diffusion realization of $G_{\text{persp}}$ on $\Sigma$ (Equations M.5a–b) |
@@ -518,7 +518,7 @@ The perspectival resolution of Wigner's Friend extends a conceptual program init
 
 (i) An apparently absolute quantity (simultaneity / outcome definiteness) is revealed to be relative to a reference context (frame / perspective).
 
-(ii) The relativity is *forced* by a fundamental limitation (finite $c$ / SPAP + $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$), not merely postulated.
+(ii) Each relativization is branch-relative. Frame-relative simultaneity uses an accepted Lorentzian characteristic-cone branch; perspective-relative actuality uses the retained SPAP, Hilbert/Born, update, and perspective records. A registered reset, a full-state refresh channel, and a Lorentzian cone are independent additional gates.
 
 (iii) The underlying reality remains unified (one spacetime / one MPU network); only descriptions are relativized.
 
@@ -531,7 +531,9 @@ $$
 \text{Reference frame} &\longleftrightarrow \text{Perspective } s \in \Sigma \\
 \text{Lorentz transformation} &\longleftrightarrow \text{Perspective transition kernel } G_{\text{persp}} \\
 \text{Spacetime interval } ds^2 &\longleftrightarrow \text{Born probability } |\langle k|\psi\rangle|^2 \\
-\text{Light cone structure} &\longleftrightarrow \text{Causal constraints from finite } c \text{ (Theorem 46)}
+\text{Lorentzian characteristic cone on the accepted Appendix O branch}
+&\longleftrightarrow
+\text{perspective-update consistency on the retained quantum branch}
 \end{aligned}
 $$
 
@@ -555,27 +557,13 @@ for $\psi\in\mathcal D$. A metered rate statement additionally requires the stat
 
 **Theorem M.6.5b (Certificate-Relative Covariant Statistics).** On an accepted certificate, perspective-transition statistics intertwine the recorded Lorentz action up to $\epsilon_{\mathrm{cov}}$ in the PPI quotient. If the metering record is also accepted, the rate $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ is a scalar on that record. Spacelike order-independence is obtained only for the process functionals explicitly covered by its independent entry.
 
-**Remark M.6.6 (Unified Origin of Both Relativizations).** The parallel between special relativity and perspectival quantum mechanics (Structural Correspondence M.6.4) is deeper than structural analogy: the finite invariant speed $c$ that forces frame-relative simultaneity is *itself* a consequence of the same SPAP + thermodynamic irreversibility that forces perspective-relative actuality.
-
-**The Derivation Structure.** From Appendix E (Sections E.2–E.4) and Appendix E.10, the connection proceeds through two branches sharing a common thermodynamic origin in the SPAP entropy cost:
-
+**Remark M.6.6 (Branch-Indexed Structural Relation Between the Two Relativizations).** Structural Correspondence M.6.4 compares two accepted branch outputs; it does not derive them from one premise. The registered binary architecture supplies the alphabet-count identity $\varepsilon_0=\ln2$ and, when a physical reset is declared, the ledger
 $$
-\boxed{\text{SPAP} \;\xrightarrow{\text{Theorem 31}}\; \varepsilon_0=\ln 2,\quad \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)}
+\varepsilon_{\mathrm{reset}}
+=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
+\ge H_q(P\mid R).
 $$
-
-From this common source, two independent branches emerge:
-
-**Branch I (Information Capacity):**
-$$
-\varepsilon_0=\ln 2 \;\xrightarrow{\text{Lemma E.1}}\; p>0 \;\xrightarrow{\text{Lemma E.1}}\; f_{RID}=1-p<1 \;\xrightarrow{\text{Theorem E.2}}\; C_{\max} < \ln d_0
-$$
-
-**Branch II (Propagation Velocity):**
-$$
-\text{SPAP structure} \;\xrightarrow{\text{Theorem 29}}\; \tau_{min} > 0 \;\xrightarrow[\text{Definition 35}]{\delta > 0}\; v_{max} = \frac{\delta}{\tau_{min}} \;\xrightarrow{\text{Theorem 46}}\; c
-$$
-
-These branches are *parallel consequences* of SPAP, not sequential implications. Branch I proceeds through the structural thermodynamic cost $\varepsilon_0=\ln2$ and physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ to constrain how faithfully information can be preserved; Branch II proceeds through the computational complexity of the SPAP cycle to constrain how fast information can propagate. Both originate in the logical structure of self-referential prediction.
+SPAP alone fixes neither the reset architecture nor the joint law $q(P,R)$. The perspective-actuality branch additionally requires the retained Hilbert/Born, update, and perspective records. The propagation branch separately requires nonzero spacing, a registered positive edge-update time, successive edge-by-edge serialized propagation in the propagation-cost metric, and bounded edge weights. Lorentzian kinematics further requires the complete Appendix O positive-spatial, entropy-time, second-order, and cone-coincidence package. Full-state refresh/minorization is another separate branch. No arrow in this ledger may be used in reverse or imported across branches without its stated certificate.
 
 
 **Definition M.6.6a (Predictive-Equivalence Ledger $\mathfrak C_{\mathrm{PEq}}$).** A predictive-equivalence ledger for a finite observer or observer-pair comparison is a forward-locked record
@@ -586,7 +574,7 @@ $$
 $$
 where $C_{\mathrm{agg}}^A,C_{\mathrm{agg}}^B$ are the retained aggregate-complexity records, $\Sigma_A,\Sigma_B$ are the perspective-state domains, $\mathcal R_{\mathrm{time}}$ records the temporal-access or temporal-grain comparison, $\mathcal R_{\mathrm{act}}$ records the actuality/definiteness comparison, $\mathcal R_{\hbar}$ records the action-entropy unit bridge of Appendix Q, $\mathcal R_c$ records the finite-frontier branch, $\mathcal R_G$ records the capacity/area or stress-energy bridge when curvature is claimed, and $\Pi_{\mathrm{proj}}$ states which sector projection is being read. The ledger does not assert a Lorentz-group action on perspective space; it records shared cost data and their accepted projections.
 
-**Proposition M.6.6b (Predictive Equivalence as a Projection Principle).** On a branch carrying $\mathfrak C_{\mathrm{PEq}}$, perspective-relative actuality, complexity-graded temporal access, action/energy phase, finite propagation, and curvature/source readings are admissible as projections of one retained predictive-update cost ledger only to the extent recorded by $\Pi_{\mathrm{proj}}$. In particular, $\hbar$ is consumed as the action-entropy exchange rate of Theorem Q.0.1 and Corollary Q.0.1, $c$ is consumed as the finite-frontier normalization of Theorem 46 and its branch refinements, and any gravitational reading consumes the Section 12 capacity/area/stress-energy bridge. The proposition therefore unifies the bookkeeping of the accepted projections; it does not make physical definiteness arbitrary, allow observers to choose laws by changing complexity, or replace the separate Hilbert, cone, KMS/Clausius, and gravity certificates.
+**Proposition M.6.6b (Predictive Equivalence as a Projection Principle).** On a branch carrying $\mathfrak C_{\mathrm{PEq}}$, perspective-relative actuality, complexity-graded temporal access, action/energy phase, finite propagation, and curvature/source readings are admissible as projections of one retained predictive-update cost ledger only to the extent recorded by $\Pi_{\mathrm{proj}}$. In particular, $\hbar$ is consumed as the action-entropy exchange rate of Theorem Q.0.1 and Corollary Q.0.1, $c$ is consumed as a separately attained and normalized frontier, while Theorem 46 supplies only its uniform speed upper bound, and any gravitational reading consumes the Section 12 capacity/area/stress-energy bridge. The proposition therefore unifies the bookkeeping of the accepted projections; it does not make physical definiteness arbitrary, allow observers to choose laws by changing complexity, or replace the separate Hilbert, cone, KMS/Clausius, and gravity certificates.
 
 *Proof.* Each listed projection is already branch-defined elsewhere: perspective-relative actuality is the content of Lemma M.6.2 and Theorem M.6.2; temporal access is Corollary O.4.3; the action-entropy bridge is Appendix Q; finite propagation is Theorem 46; and the curvature/source reading is the Section 12 gravity branch. The ledger asserts that the same finite predictive-update cost record and unit bridges are being used before projecting to these sectors. Thus the conclusion is a consistency and compression statement over accepted records, not a new derivation of any missing sector gate. ∎
 
@@ -594,44 +582,30 @@ where $C_{\mathrm{agg}}^A,C_{\mathrm{agg}}^B$ are the retained aggregate-complex
 
 ### Step-by-Step Justification
 
-**1. Theorem 31 (Appendix J): Structural Entropy Cost $\varepsilon_0=\ln2$ and Physical Bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$**
-
-The structural entropy cost $\varepsilon_0=\ln 2$ arises from the logically necessary 2-to-1 state merge in the SPAP update cycle. The SPAP cycle maps four input configurations $\{(\phi, p)\} = \{(0,0), (0,1), (1,0), (1,1)\}$ to two output configurations $\{(\phi', p_{ready})\} = \{(0, p_{ready}), (1, p_{ready})\}$.
-
-*Landauer Conditions.* The SPAP cycle structure ensures the conditions for Landauer's principle [Landauer 1961] are satisfied: (i) the prediction register *must* reset to $p_{ready}$ before each new cycle can commence—this is not optional but logically required for the cycle to close; (ii) the system cannot retain side information about which of the merged input states led to the current output, because the reset erases precisely this information; (iii) the input distribution is effectively uniform over the merged states from the system's perspective post-reset. Under these conditions, the structural quotient is exact:
+**1. Conditional Binary-Reset Ledger.** On the registered conditionally uniform binary-reset architecture, the alphabet-count identity is $\varepsilon_0=\ln2$. A physical implementation instead obeys
 $$
-\varepsilon_0=\ln(4/2)=\ln2
+\varepsilon_{\mathrm{reset}}
+=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
+\ge H_q(P\mid R),
 $$
-nats. Registered implementations satisfy $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$. Equality with $\ln2$ additionally requires a conditionally uniform binary record and zero excess dissipation.
+with equality to $\ln2$ only when the binary record is conditionally uniform and the excess dissipation vanishes. SPAP alone supplies neither this architecture nor the probability law $q(P,R)$.
 
-**2. Lemma E.1 (Branch I): Strict Contractivity of the ND-RID Channel**
-
-The entropy cost $\varepsilon > 0$ implies that the averaged ND-RID 'Evolve' channel $\mathcal{E}_N$ is strictly contractive in trace distance.
-
-*Kraus Representation.* The 'Evolve' interaction (Definition 27) comprises a reversible reflexive update $U_{rev}$ and a logically irreversible ancilla reset. The explicit Kraus operators acting on $\mathcal{H}_0 = \mathcal{H}_{MP} \otimes \mathcal{H}_I$ are (Section 7.3.3.3):
-
-$$E_0 = U_{rev} \otimes |0\rangle\langle 0|_I, \qquad E_1 = U_{rev} \otimes |0\rangle\langle 1|_I$$
-
-Completeness follows by direct calculation:
-$$E_0^\dagger E_0 + E_1^\dagger E_1 = (U_{rev}^\dagger U_{rev}) \otimes (|0\rangle\langle 0| + |1\rangle\langle 1|) = I_{MP} \otimes I_I$$
-
-ensuring CPTP structure. The ancilla's reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset channel $T_\sigma(\rho) = \mathrm{tr}(\rho)\sigma$ with $\sigma = |0\rangle\langle 0|$.
-
-*Channel Decomposition.* The averaged ND-RID 'Evolve' channel contains a nonzero input-independent refresh component (Lemma E.1), and can be written as
+**2. Lemma E.1 (Independent Full-State Refresh Branch).** Reset of an ancillary register does not imply strict contraction of arbitrary full system states. On the separately declared branch
 $$
-\mathcal{E}_N = (1-p)\Psi + p\,T_\sigma,\qquad p\in(0,1],
-$$
-where $\Psi$ is CPTP and $T_\sigma(\rho)=\mathrm{Tr}(\rho)\sigma$ is an input-independent refresh to a fixed state $\sigma$. For traceless $\Delta$ we have $T_\sigma(\Delta)=0$, hence $\mathcal{E}_N(\Delta)=(1-p)\Psi(\Delta)$ and Lemma E.1 gives the uniform trace-distance contraction
-$$
-D_{tr}(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2))\le (1-p)\,D_{tr}(\rho_1,\rho_2),
+\mathcal E_N=(1-p)\Psi+pT_\sigma,
 \qquad
-f_{RID}=1-p<1.
+p\in(0,1],
 $$
-If additionally $\sigma\succ0$, then $\mathcal{E}_N(\rho)=(1-p)\Psi(\rho)+p\sigma\succ0$ for all states $\rho$, so $\mathcal{E}_N$ is strictly positive and hence primitive [Sanz et al. 2010]. No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone without additional microscopic assumptions about how entropy production is partitioned between $\Psi$ and the refresh component.
+where $\Psi$ is CPTP and $T_\sigma(\rho)=\operatorname{Tr}(\rho)\sigma$ refreshes the full retained state, every traceless $\Delta$ satisfies $T_\sigma(\Delta)=0$. Trace-norm contractivity of $\Psi$ therefore gives
+$$
+D_{\mathrm{tr}}(\mathcal E_N(\rho_1),\mathcal E_N(\rho_2))
+\le(1-p)D_{\mathrm{tr}}(\rho_1,\rho_2).
+$$
+If $\sigma\succ0$, the same declared decomposition makes $\mathcal E_N$ strictly positive and hence primitive. The reset-entropy bound alone supplies no $p>0$ and no full-state refresh decomposition.
 
 **3. Theorem E.2 (Branch I): Channel Capacity Bound**
 
-Strict contractivity bounds the classical channel capacity: $C_{\max}(\mathcal{E}_N) < \ln d_0$.
+The separately declared full-state refresh decomposition bounds the classical channel capacity: $C_{\max}(\mathcal{E}_N) < \ln d_0$.
 
 *Flagged (Erasure-Mixture) Capacity Bound.* Using the decomposition $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, define the flagged channel
 $$
@@ -655,29 +629,16 @@ C(\widetilde{\mathcal{E}}_N)\le (1-p)\ln d_0<\ln d_0,
 $$
 hence $C(\mathcal{E}_N)<\ln d_0$, as claimed in Theorem E.2.
 
-**4. Theorem 29 (Branch II): Minimum MPU Cycle Time τ_min > 0**
-
-The minimum MPU cycle time $\tau_{min} > 0$ arises from the finite complexity of the predictive update cycle combined with fundamental quantum speed limits.
-
-*Margolus-Levitin Bound.* For any quantum system with Hamiltonian $\hat{H}$ evolving from initial state $|\psi_0\rangle$ to an orthogonal state $|\psi_\perp\rangle$, the minimum time required is bounded by [Margolus & Levitin 1998]:
-
-$$\tau_{ML} \geq \frac{\pi\hbar}{2\langle E \rangle}$$
-
-where $\langle E \rangle = \langle\psi_0|\hat{H}|\psi_0\rangle - E_{ground}$ is the mean energy above the ground state.
-
-*Application to MPU Dynamics.* The MPU's internal Hamiltonian $\hat{H}_v$ (Definition 26, Equation 43) is a bounded, self-adjoint operator on the finite-dimensional Hilbert space $\mathcal{H}_{d_0}$ with $d_0 = 8$ (Theorem 23). The spectral structure of $\hat{H}_v$ determines a characteristic minimal processing timescale. For bounded $\hat{H}_v$ on finite-dimensional $\mathcal{H}_{d_0}$ with spectral width $\Delta_H := E_{max} - E_{ground}$:
-
-$$\langle E \rangle \leq \Delta_H < \infty$$
-
-The Fundamental Predictive Loop (Definition 4) requires transitioning between distinguishable states during the Predict → Verify → Update sequence. By the Margolus-Levitin bound:
-
-$$\tau_{min} \geq \frac{\pi\hbar}{2\Delta_H} > 0$$
-
-*Action-Entropy Derivation.* An independent derivation follows from the Action-Entropy Identity (Theorem Q.0.1). Each non-trivial predictive cycle has minimum action $\mathcal{S}_{min} = \hbar \cdot \varepsilon_{min} = \hbar \ln 2$. For action $\mathcal{S} = E \cdot \tau$ with finite spectral width $\Delta_H$:
-
-$$\tau_{min} = \frac{\mathcal{S}_{min}}{\Delta_H} = \frac{\hbar \ln 2}{\Delta_H} > 0$$
-
-Both derivations yield lower bounds ensuring $\tau_{min} > 0$ as a mathematical consequence of quantum mechanics applied to finite-dimensional systems with bounded Hamiltonians.
+**4. Theorem 29 (Branch II): Registered Operational Timescale.** Theorem 29 identifies the internal operational generator and its characteristic timescale; it does not by itself prove a universal positive minimum duration for every distinguishable transition. For an orthogonalization generated by a Hamiltonian with mean excitation $E>0$ and spectral width $\Delta_H$, the Margolus–Levitin bound gives
+$$
+t\ge\frac{\pi\hbar}{2E}
+\ge\frac{\pi\hbar}{2\Delta_H}
+$$
+when $E\le\Delta_H$. A merely distinguishable, arbitrarily nearby target has no state-independent positive duration bound. The value $d_0=8$ belongs to the separate Appendix Z branch. The identity
+$$
+\tau_{\min}=\frac{\hbar\ln2}{\Delta_H}
+$$
+requires a declared action–entropy bridge and saturation record and is not a consequence of finite dimension alone.
 
 **5. Theorem E.10.2 (Branch II): Maximum Propagation Velocity**
 
@@ -711,15 +672,15 @@ This ratio equality follows from the definition of Planck units in terms of the 
 
 ---
 
-### Thermodynamic Origin of Locality
+### Conditional Serialized Origin of the Finite Propagation-Speed Bound
 
-Locality is not a primitive axiom but emerges from:
-
-1. **Finite structural entropy cost per link:** $\varepsilon_0=\ln 2$, with physical implementations satisfying $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31)
-2. **Finite minimum cycle time:** $\tau_{min} > 0$ (Theorem 29)
-3. **PCE optimization minimizing total entropy production** (Definition 15)
-
-Superluminal propagation would require either $\varepsilon < \ln 2$ (violating Theorem 31) or $\tau < \tau_{min}$ (violating the Margolus-Levitin bound). Both are forbidden by the logical and quantum-mechanical structure of self-referential prediction established in Appendix J.
+A uniform finite propagation-speed upper bound on the retained network follows on the branch with nonzero link scale $\delta$, a positive registered time $\tau_{\min}$ per serialized edge update, successive edge-by-edge propagation in the propagation-cost metric, and uniformly bounded edge weights. For a path of $n$ edges,
+$$
+t\ge n\tau_{\min},
+\qquad
+d_{\mathcal N}\le n\delta w_{\max},
+$$
+hence $d_{\mathcal N}/t\le\delta w_{\max}/\tau_{\min}$. A reset ledger or PCE optimization alone does not prove locality, serialization, bounded weights, or cone saturation.
 
 ---
 
@@ -733,7 +694,7 @@ The comparison table in Structural Correspondence M.6.4 should be read hierarchi
 | Frame-relative simultaneity | Perspective-relative actuality | Both forced by constraints above |
 | Lorentz invariance | Perspective consistency | Emerge from causal structure |
 
-Einstein's 1905 analysis [Einstein 1905a] revealed that simultaneity, previously considered absolute, is operationally defined relative to reference frames—a consequence of the finite and invariant speed $c$. The PU framework extends this program: actuality of measurement outcomes, previously considered absolute (or at least observer-independent), is operationally defined relative to perspectives—a consequence of SPAP combined with thermodynamic irreversibility.
+Einstein's 1905 analysis [Einstein 1905a] revealed that simultaneity, previously considered absolute, is operationally defined relative to reference frames—a consequence of the finite and invariant speed $c$. The PU framework extends this program: actuality of measurement outcomes, previously considered absolute (or at least observer-independent), is operationally defined relative to perspectives—a consequence, on the retained quantum branch, of SPAP together with the Hilbert/Born, update, and perspective records; thermodynamic irreversibility is a separate physical-reset condition.
 
 ---
 

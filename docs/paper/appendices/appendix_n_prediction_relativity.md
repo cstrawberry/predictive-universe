@@ -758,11 +758,11 @@ The modular KMS identity of Theorem G.1.9.5 is a representation statement and do
 
 
 
-**Theorem N.4 (Activity-Conditioned Steady-State Exchange Bound).** For every registered active boundary channel with completed-cycle rate $r_e$, the minimum duration gives
+**Theorem N.4 (Activity-Conditioned Steady-State Exchange Bound).** Assume a registered active boundary channel whose physical-time certificate states that every completed exchange cycle has duration at least $\tau_{\min}>0$. If $r_e$ is its completed-cycle rate, then
 $$
-0\le r_e\le\frac1{\tau_{min}}.
+0\le r_e\le\frac1{\tau_{\min}}.
 $$
-Equality holds only on a separately registered saturated-activity branch; relational information, modular KMS status, and detailed balance alone prove neither positive activity nor saturation.
+Equality holds only on a separately registered saturated-activity branch; relational information, modular KMS status, detailed balance, and Theorem 29 alone prove neither the duration premise, positive activity, nor saturation.
 
 *Proof.*
 
@@ -771,18 +771,18 @@ $$
 \sigma_t^{\rho_a}(A)=\rho_a^{it}A\rho_a^{-it}.
 \tag{N.22}
 $$
-This is a representation identity. It does not establish physical exchange, activity, or a clock-rate identification. The rank-deficient full-carrier PCE reference is treated by restriction to its faithful support; no $+\infty$ full-space modular Hamiltonian is used as a finite physical generator.
+This representation identity establishes no physical exchange, activity, or clock-rate identification.
 
-**Step 2 (Physical-realization gate).** Identifying modular flow with the physical `Evolve` process requires a response-active physical-time bridge. Every completed registered cycle has duration at least
+**Step 2 (Physical-realization gate).** Identifying modular flow with the physical `Evolve` process requires a response-active physical-time bridge. On the joint Eq. Q.18 and saturated Proposition Q.6.1 calibration branch, the registered value
 $$
-\tau_{min}=\sqrt{8\ln2}\,t_P,
+\tau_{\min}=\sqrt{8\ln2}\,t_P
 \tag{N.23}
 $$
-but a duration lower bound does not establish that a cycle occurs. Each boundary channel uses the PCE-attractor only as a selected reference configuration; stationarity and physical equilibrium require their own channel and physical-time certificates.
+is used only when that bridge and its duration certificate are accepted. A duration lower bound does not establish that a cycle occurs.
 
-**Step 3 (Certificate-conditioned steady-state exchange).** On a branch carrying the separate quantum-detailed-balance certificate of Theorem G.1.9.3, the stationary dynamics is reversible and has no net stationary currents, although transitions may continue. Detailed balance does not set Spohn production to zero during arbitrary relaxation, and PCE alone does not supply the certificate. On a separately registered noisy active branch, if uncancelled channel noise would decay a retained correlation target, stationarity of that target requires compensating correlation-building flow. The per-cycle structural cost proves neither noise nor positive activity.
+**Step 3 (Certificate-conditioned steady-state exchange).** Quantum detailed balance supplies reversibility on its stated branch but neither positive activity nor the clock certificate. The per-cycle structural cost likewise proves neither noise nor activity.
 
-**Step 4 (Rate ceiling and saturation).** On the explicitly saturated-activity branch, each of the $N_{\partial}$ boundary channels completes one registered exchange cycle per $\tau_{min}$, so $r_e=1/\tau_{min}$. Off that branch, the minimum duration supplies only $r_e\le1/\tau_{min}$. Physical overhead may increase heat production but cannot raise the certified rate ceiling. ∎
+**Step 4 (Rate ceiling and saturation).** If $N(T)$ cycles complete in elapsed time $T$, the duration certificate gives $N(T)\tau_{\min}\le T$, hence $r_e=\limsup_{T\to\infty}N(T)/T\le1/\tau_{\min}$. Equality requires the separately registered saturated-activity branch. ∎
 
 **Remark N.4.1: Open vs. Closed Systems.** On a registered active open-system branch, the exchange ledger is compatible with the second law because the environment is included in the total entropy accounting. Theorem N.4 also permits $r_e=0$; it asserts no continuous processing, entropy exchange, or steady-state maintenance outside the active branch.
 
@@ -920,7 +920,7 @@ m = \frac{\hbar \cdot \mathcal{I}_{rel}}{2c^2 \cdot \tau_{min}}
 \tag{N.30}
 $$
 
-**Step 5 (Substituting discretization scale).** From Theorem Q.6.1:
+**Step 5 (Substituting the conditional discretization scale).** On the joint Eq. Q.18 and saturated Proposition Q.6.1 calibration branch:
 
 $$
 \tau_{min} = \sqrt{8\varepsilon_0} \cdot t_P = \sqrt{8\varepsilon_0} \cdot \frac{\hbar}{m_P c^2}
@@ -950,7 +950,9 @@ where $\mathcal{I}_{rel}$ is measured in nats and $m_P \approx 2.18 \times 10^{-
 **Corollary N.5.1 (Rest Energy as Information Maintenance on $\mathfrak B_{mass}$).** The rest energy $E = mc^2$ is the proper-time action-rate, equivalently the energy, assigned on $\mathfrak B_{mass}$:
 
 $$
-E = mc^2 = \frac{\hbar \cdot \mathcal{I}_{rel}}{2\tau_{min}} = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot E_P
+E = mc^2 = \frac{\hbar \cdot \mathcal{I}_{rel}}{2\tau_{min}}
+= \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}}\,E_P,
+\qquad\text{on the joint Eq. Q.18, saturated Proposition Q.6.1, and }\mathfrak B_{\mathrm{mass}}\text{ branch.}
 \tag{N.32}
 $$
 
@@ -1846,7 +1848,7 @@ Steps 1--5 list the registered structural chain; Steps 6--9 are branch-condition
 | 1 | $K_0 = 3$ | Horizon Constant from SPAP encodability (Theorem 15) |
 | 2 | $N_{\mathrm{vis}}^{\min}=8$, $d_0 = 8$ | Finite operational-context floor and minimal Hilbert-carrier saturation: $N_{\mathrm{vis}}^{\min}=2^{K_0}$ and $d_0=N_{\mathrm{vis}}^{\min}$ on the minimal complex branch (Theorem 15; Theorem 23) |
 | 3 | $\varepsilon_0 = \ln 2$, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ | Structural SPAP cost and physical implementation bound (Theorem 31, Appendix J) |
-| 4 | $\tau_{min} = \sqrt{8\varepsilon_0} \cdot t_P$ | Temporal discretization from PCE (Theorem Q.6.1) |
+| 4 | $\tau_{\min}=\sqrt{8\varepsilon_0}\,t_P$ | Conditional calibration on the joint Eq. Q.18 and saturated Proposition Q.6.1 branch |
 | 5 | $C_{\max} = 2\varepsilon_0$ | PCE-optimal structural channel capacity (Equation E.15) |
 | 6 | Modular KMS representation; physical equilibrium only with an independent selector | Theorems G.1.9.3c and G.1.9.5; no activity rate follows |
 

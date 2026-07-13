@@ -1242,7 +1242,7 @@ This section provides detailed implementation of the AC Stark mechanism introduc
 
 The MPU aggregate $S$, via the POP/PCE-optimized mapping $\mathcal{M}(\text{context}_S(t))$ (Theorem L.1), drives coherent oscillations of internal degrees of freedom (collective electronic or ionic modes, or synchronized MPU transitions). These coherent oscillations involve effective charge displacements or currents, leading to the generation of classical electromagnetic radiation $\vec{E}_{\text{rad}}(t)$. The specific characteristics of this radiation (frequency $\omega_{\text{rad}}$, amplitude $E_0(t)$, phase $\phi_{\text{rad}}(t)$, polarization $\vec{\epsilon}_{\text{rad}}(t)$) are determined by $\mathcal{M}(\text{context}_S(t))$.
 
-The interaction occurs during the 'Evolve' process over duration $\tau_{\text{int}} \gtrsim \tau_{\text{min}}$ (Theorem 29). The interaction Hamiltonian describing the coupling is (in a suitable interaction picture):
+On the separately registered interaction-clock branch used here, the 'Evolve' process has duration $\tau_{\mathrm{int}}\ge\tau_{\min}>0$. Theorem 29 identifies the internal unitary generator but does not establish this stochastic-interaction duration bound. The interaction Hamiltonian describing the coupling is, in a suitable interaction picture:
 
 $$ H_{\text{int}}(t) = -\vec{d}_{\text{TLS}} \cdot \vec{E}_{\text{rad}}(t) \approx \hbar\,\delta_{\text{Stark}}(t)\,\sigma_z \tag{L.86} $$
 

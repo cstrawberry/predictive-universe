@@ -343,7 +343,7 @@ $$
 R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}
 \quad \text{(76)}
 $$
-where $R_{\mu\nu}$ is the Ricci curvature tensor, $R$ is the Ricci scalar, $g_{\mu\nu}$ is the metric tensor, $\Lambda$ is the cosmological constant, $G$ is the emergent gravitational constant (Equation E.9), $c$ is the invariant speed (Theorem 46), and $T_{\mu\nu}^{(MPU)}$ is the stress-energy tensor derived from the underlying MPU network activity (Appendix B).
+where $R_{\mu\nu}$ is the Ricci curvature tensor, $R$ is the Ricci scalar, $g_{\mu\nu}$ is the metric tensor, $\Lambda$ is the cosmological constant, $G$ is the emergent gravitational constant (Equation E.9), $c$ is the invariant characteristic speed on the accepted Corollary 46a/Appendix O Lorentzian branch, and $T_{\mu\nu}^{(MPU)}$ is the stress-energy tensor derived from the underlying MPU network activity (Appendix B). Theorem 46 supplies only the corresponding uniform operational speed upper bound; frontier attainment and Lorentzian identification are separate branch inputs.
 
 *Proof:* Theorem 12.1 proves the Einstein equation in natural units under the Clausius relation, the area law $\delta S=\eta\,\delta\mathcal A$, and stress-energy conservation. Appendix E identifies the entropy density by
 $$

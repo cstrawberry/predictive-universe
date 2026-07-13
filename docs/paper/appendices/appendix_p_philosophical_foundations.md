@@ -777,7 +777,7 @@ Internal simulation is constrained in PU by resource, logical, and thermodynamic
 
 2. **Logical limits (SPAP).** Even unlimited resources cannot yield perfect self‑prediction (Theorems 10–11).
 
-3. **Thermodynamic and dynamical limits.** 'Evolve' carries irreducible entropy cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31), internal reflexivity carries irreducible cost $\kappa_r>0$ (Theorem 33), and interaction channels have finite-transfer capacity bounds: the completed reset-support bound of Proposition E.2a and, on refresh/minorization branches, the strict bound below the ideal $\ln d_0$ (Theorem E.2). Aggregates are additionally bounded by a minimum cycle time $\tau_{\min}>0$ (Theorem 29).
+3. **Thermodynamic and dynamical limits.** Registered resets obey their conditional entropy ledger, reflexivity carries its stated cost, and interaction channels obey the completed-reset or refresh/minorization capacity bounds on their respective branches. Theorem 29 supplies an internal characteristic timescale; a positive lower duration for aggregate updates is an additional clock-certificate hypothesis.
 
 These constraints limit what any biological aggregate can achieve through internal modeling alone—and guarantee that externalization cannot "defeat" SPAP, only reallocate resources and information flow.
 
@@ -2671,7 +2671,7 @@ Spacetime emerges as a unity. The same foundational structure that produces spat
 | Verification ($V$) | Comparison with actual outcomes |
 | Update ($D_{\text{cyc}}$) | Incorporation of feedback |
 | Cycle ordering: $P_{\text{int}} \to V \to D_{\text{cyc}}$ | Temporal direction |
-| Finite cycle time $\tau_{\min}$ (Theorem 29) | Temporal granularity |
+| Registered positive cycle duration $\tau_{\min}$; Theorem 29 supplies only a characteristic internal timescale | Temporal granularity on the clock-certified branch |
 | Network synchronization (Theorem O.2) | Global temporal coherence |
 | Error correction range | Causal horizons |
 | Network topology | Spatial relationships |
@@ -2766,23 +2766,21 @@ represents a self-consistent fixed point of the framework's constraints, not a s
 
 ## P.8.6 The Emergence of Causality
 
-**Theorem P.8.4 (Light Cones from Finite Propagation Speed).** The causal structure of emergent spacetime arises from two finite quantities:
+**Theorem P.8.4 (Conditional Network Propagation-Speed Bound).** Assume a retained propagation branch with:
 
-1. The minimum MPU processing time $\tau_{\min} > 0$ (Theorem 29)
-2. The finite MPU spacing $\delta$ and bounded propagation costs $w_{\min} \leq w_{xy} \leq w_{\max}$ (Definition 35)
+1. a separately registered per-edge duration $\Delta t_{xy}\ge\tau_{\min}>0$;
+2. successive edge-by-edge serialization in the propagation-cost metric; and
+3. edge lengths $d_{\mathcal N}(x,y)=\delta w_{xy}$ with $0<w_{xy}\le w_{\max}<\infty$.
 
-The maximum causal speed is bounded:
-
+Then every edge traversal and every serialized path obeys the uniform upper bound
 $$
-c \leq \frac{\delta \cdot w_{\max}}{\tau_{\min}}
+v\le\frac{\delta w_{\max}}{\tau_{\min}}.
 $$
+Theorem 29 supplies a characteristic internal Hamiltonian timescale but does not establish premise 1 for every ND-RID traversal. The displayed inequality need not be attained. An attained operational frontier is separate branch data, and its promotion to a Lorentzian characteristic cone requires Hypotheses O.7.2.1–O.7.2.4 together with the three-spatial-dimensional branch of Theorem Z.11.
 
-In the continuum limit, this finite invariant speed $c$ defines an operational causal frontier on the emergent manifold. The promotion of this operational frontier to a Lorentzian principal symbol — and thus to an indefinite metric $g_{\mu\nu}$ with null cones in the strict geometric sense — requires the additional hypotheses O.7.2.1-O.7.2.4 of Appendix O (positive-definite spatial block, entropy-selected time coordinate, second-order continuum principal symbol, nondegenerate hyperbolic cone condition). Under those hypotheses together with the three-spatial-dimensional branch fixed by Theorem Z.11, the Lorentzian signature conclusion is supplied by Theorems O.7a-O.7b; see Theorem P.8.5 below and Corollary 46a in the main text.
+*Proof.* For a serialized path of $n$ edges, the hypotheses give $t\ge n\tau_{\min}$ and $d_{\mathcal N}\le n\delta w_{\max}$. Division yields the stated bound. Nothing in the inequalities proves attainment, position-independence, or cone coincidence; those are the separately named branch inputs. ∎
 
-
-*Proof.* The minimum time to traverse any network edge is $\Delta t_{xy} \geq \tau_{\min}$. The effective speed along an edge is $v_{xy} = d_{\mathcal{N}}(x,y)/\Delta t_{xy} = \delta w_{xy}/\Delta t_{xy}$. The supremum over all edges gives the maximum propagation speed, establishing the stated upper bound. The finite invariant maximum speed defines an operational causal frontier. This is the finite-frontier component used by Hypothesis O.7.2.4; the nondegenerate characteristic-cone and cone-coincidence clauses remain explicit Appendix O branch hypotheses. The geometric promotion of the operational frontier to null cones of a Lorentzian metric with signature $(-,+,+,+)$ is the content of Theorem P.8.5 below, under the full hypothesis package of Appendix O. ∎
-
-**Corollary P.8.4 (Speed of Light as Network Parameter).** The speed of light $c$ is not a fundamental constant imposed on the theory but emerges from the ratio of microscopic network parameters: the characteristic interaction length $\delta$ and the minimum processing time $\tau_{\min}$. It reflects the intrinsic time scale of the predictive cycle.
+**Corollary P.8.4 (Conditional Speed Normalization).** If the preceding bound is attained by a retained one-link process and the normalized uniform-weight branch has $w_{xy}=1$, then the attained frontier is $c=\delta/\tau_{\min}$. Without attainment, $\delta/\tau_{\min}$ is only an upper bound; Lorentzian interpretation still requires the Appendix O package.
 
 ---
 
@@ -2798,7 +2796,7 @@ $$
 $$
 with $A(x)$ symmetric and positive definite. This determines a Riemannian metric on spatial slices and supplies the positive spatial block of Hypothesis O.7.2.1.
 
-**(ii) Temporal sector (Hypotheses O.7.2.2-O.7.2.4).** Irreversibility (Theorem 31) together with Appendix O §O.4 supplies the entropy-selected time coordinate (Hypothesis O.7.2.2). Locality of ND-RID together with Proposition F.1 yields a finite propagation cone in the discrete theory; the second-order continuum principal symbol (Hypothesis O.7.2.3) is assumed on this branch and is the load-bearing structural input. Theorem 46 and Theorem P.8.4 supply the finite operational causal frontier; Hypothesis O.7.2.4 adds the branch requirement that this frontier is a nondegenerate characteristic cone of the principal symbol. Under the four-hypothesis package, Appendix O Theorem O.7a yields Lorentzian signature $(-,+,+,+)$ for the characteristic quadratic form
+**(ii) Temporal sector (Hypotheses O.7.2.2-O.7.2.4).** Irreversibility (Theorem 31) together with Appendix O §O.4 supplies the entropy-selected time coordinate (Hypothesis O.7.2.2). Locality of ND-RID together with Proposition F.1 yields a finite propagation cone in the discrete theory; the second-order continuum principal symbol (Hypothesis O.7.2.3) is assumed on this branch and is the load-bearing structural input. Theorem 46 supplies a uniform operational causal-speed upper bound, while Theorem P.8.4 supports the spatial sector. Hypothesis O.7.2.4 separately assumes an attained nondegenerate operational frontier and its coincidence with a characteristic cone of the principal symbol. Under the four-hypothesis package, Appendix O Theorem O.7a yields Lorentzian signature $(-,+,+,+)$ for the characteristic quadratic form
 $$
 g^{\mu\nu}\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^\top A(x)\,\xi,
 $$

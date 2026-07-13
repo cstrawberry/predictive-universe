@@ -384,17 +384,13 @@ $$
 
 The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **system-level constant** of the PCE potential, constrained by thermodynamic limits inherent in the MPU framework.
 
-1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23 and Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates that $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
+1.  **Conditional lower comparison from registered reset power.** The minimal baseline power $P_{\min}=R(C_{op})$ sets a comparison scale for energy valuation. On a branch with completed-cycle rate $\nu$, with each listed reset executed once per completed cycle and with the registered Landauer conditions of Theorem 31, the reset contribution satisfies
     $$
-    \Gamma_0 \gtrsim P_{\min}=R(C_{op}) \gtrsim
-\frac{k_BT}{\tau_{\min}}
-\sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j)
-\quad\text{(27)}
+    P_{\mathrm{reset}}\ge k_BT\nu
+    \sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j).
+    \quad\text{(27)}
     $$
-    where the sum includes each registered reset once and each $R_j$ contains all retained unchanged side information (Theorem 31). A positive universal floor requires a separate bound $H_{q_j}(P_j\mid R_j)\ge h_{\min}>0$. If the cycle rate satisfies $\nu \approx 1/\tau_{\text{min}}$, Equation (27) is equivalently
-    $$
-    \Gamma_0 \gtrsim k_BT\nu\sum_j H_{q_j}(P_j\mid R_j).
-    $$
+    If the model additionally identifies $P_{\min}\ge P_{\mathrm{reset}}$, then the threshold for $\Psi>0$ may be calibrated by $\Gamma_0\gtrsim P_{\min}\ge P_{\mathrm{reset}}$. Each $R_j$ contains all retained unchanged side information. A positive universal floor requires separate bounds on both $\nu$ and $H_{q_j}(P_j\mid R_j)$. The specialization $\nu=1/\tau_{\min}$ requires a separately registered saturated cycle clock; it is not supplied by Theorem 29 alone.
 2.  **Upper Bound (from $\varepsilon$):** A registered reset supplies the heat lower bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ (Theorem 31); it does not by itself provide an upper bound on the phenomenological conversion factor $\Gamma_0$. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), may be compared with an independently registered energy budget. Such a comparison is a calibration condition, not a consequence of Landauer:
      $$
     \Gamma_0 \lesssim \frac{P_{\mathrm{avail}}}{\Delta PP_{\max}} =: \Gamma_{0,\mathrm{crit}} \quad \text{(28)}

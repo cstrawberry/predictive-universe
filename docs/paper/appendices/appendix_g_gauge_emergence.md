@@ -3310,7 +3310,7 @@ $$
 
 on the active subspace, recovering the Boltzmann distribution. Here the constraint $K^*_{constraint} = \beta H$ is non-trivial: it reflects the physical restriction of energy conservation and introduces the temperature $T = 1/(k_B \beta)$ as a derived quantity.
 
-**Part C (Horizon Crossing):** For Rindler horizons in the emergent spacetime (Theorem 46), the Bisognano-Wichmann theorem [Bisognano & Wichmann 1975, 1976] establishes that the modular Hamiltonian is proportional to the boost generator:
+**Part C (Horizon Crossing):** For Rindler horizons on the accepted Lorentzian branch (Corollary 46a and Appendix O), the Bisognano-Wichmann theorem [Bisognano & Wichmann 1975, 1976] establishes that the modular Hamiltonian is proportional to the boost generator:
 
 $$
 K^*_{horizon} = \frac{2\pi}{\kappa} K_{boost}
@@ -3473,7 +3473,7 @@ Neither is derivable from the other. The measure-theoretic entropy $\varepsilon$
 
 
 
-**Remark G.1.9.10e: Algebraic Normalization-Time Identity.** With $\mu_0^{alg}:=m_P/(2\sqrt{8\varepsilon_0})$ and $\tau_{min}=\sqrt{8\varepsilon_0}t_P$, the algebraic coefficients obey
+**Remark G.1.9.10e: Algebraic Normalization-Time Identity.** On the joint Eq. Q.18 and saturated Proposition Q.6.1 calibration branch, with $\mu_0^{alg}:=m_P/(2\sqrt{8\varepsilon_0})$ and $\tau_{\min}=\sqrt{8\varepsilon_0}\,t_P$, the algebraic coefficients obey
 
 
 $$
@@ -3863,7 +3863,7 @@ where $\varepsilon_0=\ln2$ (Theorem 31), $m_P = \sqrt{\hbar c/G}$ is the Planck 
 $$
 \frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{\text{rel}}}{2\tau_{\text{min}}} \tag{G.10.13}
 $$
-where $\tau_{\text{min}} = \sqrt{8\varepsilon_0} \cdot t_P$ is the temporal discretization scale (Theorem Q.6.1).
+where $\tau_{\min}=\sqrt{8\varepsilon_0}\,t_P$ is the temporal calibration on the joint Eq. Q.18 and saturated Proposition Q.6.1 branch.
 
 **Step 3 (Active kernel fields transform under SU(2)).** Fields encoding information on the active kernel $\mathcal{H}_a$ transform under the symmetry group SU(2) $\subset$ Spin(1,3) (Theorems G.10.3, G.10.5). By Corollary G.10.4.1, such fields are spinors.
 

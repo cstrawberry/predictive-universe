@@ -784,7 +784,7 @@ where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of refl
 
 *   **Theorem 28a (Origin of Quantum Randomness):** (Section 7.3.4) Derives that the stochasticity of the 'Evolve' process originates from Logical Indeterminacy through non-simplex state-space closure, PCE/PPI quotient non-contextuality, finite-response additivity, and Born-selector descent on the MPU Hilbert branch.
 
-*   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat{H}\rangle$ gives the baseline operational energy associated with sustaining the predictive cycle, and the spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min}>0$.
+*   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat H\rangle$ gives the baseline operational-energy interpretation, and the spectrum gives a characteristic timescale after a positive energy scale and task are fixed. Corollary 29.1 gives an orthogonalization bound; no universal positive duration for arbitrary updates follows.
 
 *   **Theorem 31 (Structural Alphabet and Conditional Reset Ledger):** (Section 7.4.4, Appendix J) The declared minimal reset-support alphabet has $\varepsilon_0=\ln2$. A registered classical reset instead obeys $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}$ with $\varepsilon_{\mathrm{diss}}\ge0$ and all retained unchanged side information included in $R$. No universal positive physical floor follows from alphabet size alone.
 

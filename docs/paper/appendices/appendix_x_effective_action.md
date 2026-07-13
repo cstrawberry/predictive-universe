@@ -3073,7 +3073,7 @@ A **predictive description** $\mathcal{D}$ at MPU resolution $(d_0, \varepsilon,
 3. $\delta > 0$ is the MPU coarse-graining scale (mean microscopic MPU spacing) held fixed when comparing descriptions at a given MPU resolution (Definition 35; Appendix E),
 4. $\mathcal{P}$ is a measurement/inference protocol specifying how observables $O \in \mathcal{O}$ yield outcome distributions over a measurable outcome space $\Omega_O$.
 
-*Remark: Resolution Identification.* The coarse-graining scale $\delta$ serves dual roles: (i) the mean microscopic MPU spacing defining the physical resolution of the description (Definition 35), and (ii) the outcome binning resolution for operational measurements via $G_\delta$. We adopt the operational identification that the finest admissible readout binning is set by the MPU spacing, consistent with the minimum cycle time $\tau_{min}$ (Theorem 29).
+*Remark: Resolution Identification.* The coarse-graining scale $\delta$ is used both as mean microscopic spacing and as the adopted finest readout binning. This is a branch identification, not a consequence of Theorem 29. Any relation to a positive cycle duration requires a separately registered operational clock and scale map.
 
 
 **Definition X.9.1 (MPU-Equivalent Descriptions).**

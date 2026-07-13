@@ -421,7 +421,7 @@ Both results derive from the same foundational asymmetry: the irreversible, dire
 
 (ii) *Thermodynamic layer*: every processing attempt produces irreversible entropy $\Sigma \ge \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per cycle (Theorem 31), advancing the system's arrow and, in the fluctuation-relation regime of Theorem O.3, exponentially suppressing reversed trajectories.
 
-(iii) *Geometric layer*: in the PCE-optimal regime, the finite propagation speed $c = \delta/\tau_{min}$ (Theorem 46), itself emergent from SPAP via the minimum cycle time $\tau_{min} > 0$ (Theorem 29) and MPU spacing $\delta > 0$ (Definition 35), provides spatial separation as a causal buffer (Appendix M, §M.6.6, Branch II).
+(iii) *Geometric layer*: Theorem 46 supplies a uniform propagation-speed upper bound on the branch with a separately registered positive edge-update time, nonzero spacing, successive edge-by-edge serialization in the propagation-cost metric, and bounded edge weights. A separately attained normalized uniform-weight one-link frontier may then satisfy $c=\delta/\tau_{\min}$ and provide spatial separation as a causal buffer; Corollary 46a and Appendix O are additionally required for its Lorentzian interpretation. Neither SPAP nor Theorem 29 alone establishes these branch hypotheses (Appendix M, §M.6.6, Branch II).
 
 (iv) *Channel layer*: the CC bound $\text{CC} < 0.5$ (Theorem 39; Theorem S.2) keeps statistical influence below the deterministic threshold, with information rate quadratically suppressed (Theorem 41); consequently the noisy, rate-limited CC channel cannot realize paradox-inducing causal loops (Theorem 42).
 
@@ -511,37 +511,31 @@ This dissolution of classical singularities exemplifies a broader pattern: pheno
 
 ## 14.2.4.1 Predictive Throughput Bounds and Operational Weak Cosmic Censorship
 
-Appendix E makes a sharp operational statement: irreversibility enforces the completed reset-support capacity deficit (Proposition E.2a), while refresh/minorization branches additionally have strict contractivity (Lemma E.1) and strict capacity bound (Theorem E.2). The number of effective channels crossing a closed surface has an area density on the density-certificate branch (Theorem E.3). Together with the minimum processing timescale $\tau_{min}$ (Theorem 29), this yields a bound on the rate at which predictive information about an interior region can be transmitted to the exterior.
+Appendix E makes a sharp operational statement: irreversibility enforces the completed reset-support capacity deficit (Proposition E.2a), while refresh/minorization branches additionally have strict contractivity (Lemma E.1) and strict capacity bound (Theorem E.2). The number of effective channels crossing a closed surface has an area density on the density-certificate branch (Theorem E.3). A rate bound additionally requires a registered single-clock protocol branch on which every channel use has duration at least $\tau_{\min}>0$; Theorem 29 alone does not supply that channel-use premise.
 
 **Definition 14.2.4.1 (Predictive Throughput Requirement).**
 Let $S$ be a closed two-surface with area $A(S)$ in the emergent manifold regime (conditional on Theorem 43). Let $\mathcal{H}_{\mathrm{int}}$ denote the Hilbert space of MPU degrees of freedom in the interior region bounded by $S$, and let $\rho_{\mathrm{int}}(S) \in \mathcal{S}(\mathcal{H}_{\mathrm{int}})$ denote the interior reduced state.
 
-For an exterior observer system with access to MPU-admissible measurement channels crossing $S$, define the **predictive throughput requirement** $L(S)$ (in nats per unit time) as:
-
+For a protocol $\mathcal P_n$ consisting of $n$ registered boundary rounds, let $M_n$ be a finite classical message encoded into admissible interior preparations, let $\mathcal R_n$ be the exterior classical record, and let $T_n$ be the actual elapsed physical time. Define the **predictive throughput requirement** in nats per unit time by
 $$
-L(S) := \sup_{\mathcal{P}} \limsup_{n \to \infty} \frac{I(\rho_{\mathrm{int}}^{(\mathcal{P},n)}; \mathcal{R}_n^{(\mathcal{P})})}{n \, \tau_{min}},
+L(S):=\sup_{\{\mathcal P_n\}}\limsup_{n\to\infty}\frac{I(M_n;\mathcal R_n)}{T_n}.
 $$
 where:
-- $\mathcal{P}$ ranges over all measurement/communication protocols using the boundary channels,
-- $\mathcal{R}_n^{(\mathcal{P})}$ denotes the classical measurement record obtained after $n$ cycles of protocol $\mathcal{P}$,
-- $\rho_{\mathrm{int}}^{(\mathcal{P},n)}$ denotes the interior marginal of the joint cq-state induced by protocol $\mathcal{P}$ after $n$ cycles,
-- $I(\rho_{\mathrm{int}}^{(\mathcal{P},n)}; \mathcal{R}_n^{(\mathcal{P})})$ is the mutual information between the interior system and the classical record in this joint cq-state. Concretely, if $\rho_{\mathrm{int},\mathcal{R}_n}^{(\mathcal{P})}$ denotes the joint state on $\mathcal{H}_{\mathrm{int}} \otimes \mathcal{H}_{\mathcal{R}_n}$ with $\mathcal{H}_{\mathcal{R}_n}$ a classical register storing the record in an orthonormal pointer basis, then
-$$
-I(\rho_{\mathrm{int}}^{(\mathcal{P},n)}; \mathcal{R}_n^{(\mathcal{P})}) := S(\rho_{\mathrm{int}}^{(\mathcal{P},n)}) + H(\mathcal{R}_n^{(\mathcal{P})}) - S(\rho_{\mathrm{int},\mathcal{R}_n}^{(\mathcal{P})}),
-$$
-which reduces to the Holevo information for a cq-state [Holevo 1973],
-- $\tau_{min} > 0$ is the minimum MPU processing timescale (Theorem 29).
+- the supremum ranges over admissible message ensembles, encoders, boundary-channel protocols, and exterior decoders;
+- $M_n$ and $\mathcal R_n$ are classical registers, so $I(M_n;\mathcal R_n)$ is their Shannon mutual information, equivalently the Holevo information of the induced cq experiment;
+- on the registered round-clock branch used below, $T_n\ge n\tau_{\min}$ for a separately certified $\tau_{\min}>0$;
+- the refresh-channel, aggregate-capacity, no-bypass, and boundary-density premises are not part of the definition and must be supplied by the theorem branch.
 
-The supremum is taken because $L(S)$ quantifies the maximum mutual-information rate about the interior degrees of freedom in $\mathcal{H}_{\mathrm{int}}$ (equivalently, about the induced interior marginals $\rho_{\mathrm{int}}^{(\mathcal{P},n)}$) that can be extracted across $S$ by MPU-admissible protocols.
+Thus $L(S)$ is an asymptotic classical message-transmission rate across $S$. Using a growing message register avoids the trivial zero-rate limit that would result from dividing the bounded mutual information of one fixed finite-dimensional interior system by an unbounded elapsed time.
 
 
-**Theorem 14.2.4.1 (ND-RID Throughput Bound).**
-Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), the predictive throughput is bounded by:
+**Theorem 14.2.4.1 (Conditional ND-RID Throughput Bound).**
+Assume geometric regularity (Theorem 43) and the boundary-density certificate of Theorem E.3. Assume additionally that: (i) every effective link crossing $S$ is a memoryless refresh-branch channel $\mathcal E_N=(1-p)\Psi+pT_\sigma$ with $p>0$; (ii) the registered boundary code class obeys $C(\mathcal E_N^{\otimes N_{\mathrm{eff\,links}}(S)})\le N_{\mathrm{eff\,links}}(S)C_{\max}$, so cross-link coding supplies no unregistered capacity surplus; (iii) there is no interior-to-exterior bypass channel; and (iv) each link is used at most once in every registered protocol round of duration at least $\tau_{\min}>0$. Then the predictive throughput is bounded by:
 $$
 L(S) \leq \frac{N_{\mathrm{eff\,links}}(S) \cdot C_{\max}}{\tau_{min}}
 = \frac{\sigma_{\mathrm{eff\,link}} \, A(S) \cdot C_{\max}}{\tau_{min}} + o(A),
 $$
-with $C_{\max} < \ln d_0$ bounded by Theorem E.2 and
+where $C_{\max}:=C(\mathcal E_N)<\ln d_0$ by Theorem E.2 and
 $$
 N_{\mathrm{eff\,links}}(S) = \sigma_{\mathrm{eff\,link}} \, A(S) + o(A),
 \qquad
@@ -549,40 +543,32 @@ N_{\mathrm{eff\,links}}(S) = \sigma_{\mathrm{eff\,link}} \, A(S) + o(A),
 \quad\text{(Theorem E.3)}.
 $$
 
-*Proof.* Each of the $N_{\mathrm{eff\,links}}(S)$ independent channels crossing $S$ has classical capacity at most $C_{\max}$ nats per use (Theorem E.2). Each channel can be used at most once per $\tau_{min}$ (Theorem 29). The total information rate across the boundary is therefore bounded by $N_{\mathrm{eff\,links}}(S) \cdot C_{\max} / \tau_{min}$. By Theorem E.3, $N_{\mathrm{eff\,links}}(S)$ scales linearly with area. ∎
+*Proof.* By hypotheses (i)–(iii), the regularized classical capacity of one complete boundary round is at most $N_{\mathrm{eff\,links}}(S)C_{\max}$ nats. Hypothesis (iv) permits at most one such round per $\tau_{\min}$, hence $L(S)\le N_{\mathrm{eff\,links}}(S)C_{\max}/\tau_{\min}$. The density certificate gives $N_{\mathrm{eff\,links}}(S)=\sigma_{\mathrm{eff\,link}}A(S)+o(A)$, which yields the second expression. Theorem 29 alone is not used as a universal boundary-channel clock. ∎
 
-**Boundary entropy and $S=A/4G$ from predictive throughput.**
-For any protocol $\mathcal{P}$ and any horizon $T=n\tau_{min}$, Definition 14.2.4.1 gives
+**Boundary round capacity and conditional area-law identification.**
+Under hypotheses (i)–(iii) of Theorem 14.2.4.1, every $n$-round protocol satisfies the direct coding bound
 $$
-I(\rho_{\mathrm{int}}^{(\mathcal{P},n)};\mathcal{R}_n^{(\mathcal{P})})
-\le n\tau_{min}\,L(S).
+I(M_n;\mathcal R_n)
+\le n\,N_{\mathrm{eff\,links}}(S)C_{\max}.
 $$
-Combining with Theorem 14.2.4.1 yields
+This finite-$n$ inequality follows from the registered aggregate-capacity hypothesis, not from reversing the asymptotic definition of $L(S)$. Define the one-round boundary capacity budget
 $$
-I(\rho_{\mathrm{int}}^{(\mathcal{P},n)};\mathcal{R}_n^{(\mathcal{P})})
-\le n\,N_{eff_links}(S)\,C_{\max}.
+C_{\partial}(S):=N_{\mathrm{eff\,links}}(S)C_{\max}.
 $$
-In particular, the maximal mutual information exportable across $S$ per minimum cycle is bounded by
+The boundary-density certificate gives
 $$
-I_{\max}(S;\tau_{min}) \le N_{eff_links}(S)\,C_{\max}.
+C_{\partial}(S)
+=\frac{\chi C_{\max}}{\eta\delta^2}A(S)+o(A).
 $$
-Appendix E identifies the entropy of a capacity-saturating causal prediction boundary with precisely this maximal specifiable interior information (Appendix E, Theorem E.9.4). Defining
+Only on the separate capacity-saturating horizon-identification branch of Appendix E, Theorem E.9.4 may this operational budget be identified with $S_{BH}(S)$. On that branch, and after the independent calibration
 $$
-S_{BH}(S) := N_{eff_links}(S)\,C_{\max},
+G:=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}},
 $$
-and using $N_{eff_links}(S)=\sigma_{eff_link}A(S)+o(A)$ with $\sigma_{eff_link}=\chi/(\eta\delta^2)$, one obtains the area law
+one obtains
 $$
-S_{BH}(S)=\frac{\chi C_{\max}}{\eta\delta^2}\,A(S)+o(A).
+S_{BH}(S)=\frac{c^3}{4G\hbar}A(S)+o(A),
 $$
-With the PU identification of Newton's constant (Appendix E, Equation E.9),
-$$
-G := \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}},
-$$
-this becomes
-$$
-S_{BH}(S)=\frac{c^3}{4G\hbar}\,A(S)+o(A),
-$$
-i.e. $S=A/(4G)$ in units $\hbar=c=1$.
+or $S=A/(4G)$ in units $\hbar=c=1$. Throughput alone proves neither saturation nor this entropy identification.
 
 **Theorem 14.2.4.2 (Operational Weak Cosmic Censorship).**
 In the manifold regime (Theorem 43), curvature blow-up visible to exterior observers is operationally excluded: either a capacity-saturating boundary forms or the manifold approximation fails, in the sense that the curvature-controlled normal-coordinate expansion ceases to be valid on MPU-resolvable neighborhoods (Lemma 14.2.4.2b).
@@ -968,7 +954,7 @@ The first row is a continuous Robertson-style inequality on real-valued spreads;
 - *Spacelike finite-window format* ($\Pi=1$, $0\le\Delta<1$): the Bob-marginal-preserving AQFT/local-CPTP branch has $\Delta=0$, while the regular branch-(iii) statistical channel may have positive finite-error information but retains nonzero finite-window decoding error. At a regular operating point its per-trial information rate is $I=O(\mathrm{CC}^2)$ (Theorem 41) and direct detection obeys $N=O(\mathrm{CC}^{-2})$ scaling when the effect size is proportional to $\mathrm{CC}$ (Theorem 40).
 - *Forbidden corner* ($\Pi=1$, $\Delta=1$): excluded by Theorem 14.2.6.1.
 
-*Proof.* The local/timelike region has $\Pi=0$, so the product bound is automatically satisfied and ordinary $c$-bounded signaling is governed by Theorem 46. The spacelike finite-window region has $\Pi=1$, and Theorem 14.2.6.1 gives $\Delta<1$; its branch-specific rate and sample bounds are Theorems 40–41. The remaining corner is exactly the contradiction case in Theorem 14.2.6.1, Step 2. ∎
+*Proof.* The local/timelike region has $\Pi=0$, so the product bound is automatically satisfied. Theorem 46 supplies a uniform operational causal-speed upper bound; any attained $c$-frontier used to classify the local/timelike region is a separate accepted branch input. The spacelike finite-window region has $\Pi=1$, and Theorem 14.2.6.1 gives $\Delta<1$; its branch-specific rate and sample bounds are Theorems 40–41. The remaining corner is exactly the contradiction case in Theorem 14.2.6.1, Step 2. ∎
 
 **Corollary 14.2.6.1b (Layered Causality Reformulation).** The four-layer causality protection of Remark 14.2 can be expressed as route-by-route exclusion of the forbidden $(\Delta,\Pi)=(1,1)$ corner.
 
@@ -1818,7 +1804,7 @@ The framework operates through six critical bridging mechanisms that convert abs
 The Principle of Physical Instantiation (Definition P.6.2) requires the abstract Landauer cost $\varepsilon_0=\ln2$ to be instantiated on the retained active verification kernel. The active kernel must carry the sharp SPAP match/mismatch record, so $a\ge2$ on the Hilbert-carrier branch. Entropy-capacity independently requires $\ln a \ge \varepsilon_0$. PPI/PCE no-surplus selection then removes $a>2$ from the minimal branch, yielding $a = 2$.
 
 **2. Golay-Leech Bridge: $d = 8 \to$ Vacuum Stability**
-The error correction distance $d_{\min} = 8$ of the Golay code $[24,12,8]$ produces, via Conway-Sloane gluing construction, the rootless Leech lattice $\Lambda_{24}$ (Proposition R.4.2a; Theorem Z.8c). Rootlessness—absence of vectors at squared norm 2—creates a gap between vacuum and excitations, ensuring topological stability.
+On the registered gluing datum of Lemma R.4.5 and Equation (R.4.2a.1), the Golay distance $d_{\min}=8$ transfers to the rootless Leech lattice $\Lambda_{24}$ with $|v|_{\min}^2=4$ (Proposition R.4.2a; Theorem Z.8c). This is a dimensionless norm gap. Physical-vacuum stability requires a separate dynamical certificate, and an absolute mass gap additionally requires $\mathfrak B_{\mathrm{mass}}$ and the norm--information calibration of Theorem Z.8g.
 
 **3. Geometric Frustration Bridge: D₄/A₂ $\to$ CKM Mixing**
 The D₄ lattice constraint (generation 1) and A₂ lattice constraint (generation 2) exhibit geometric mismatch in the shared vacuum valley (Theorem T.49). The root-weight duality projection factor $\mathcal{P} = \sqrt{3}/2 = \cos(30°)$ converts this frustration into the Cabibbo angle: $|V_{us}| = \mathcal{P} \cdot \theta_{\text{valley}} \cdot f_{\text{corr}} \approx 0.225$ (Theorem T.52).
@@ -2020,50 +2006,92 @@ Thus PCE-minimization need not commute with window restriction.
 
 The manuscript currently has no theorem excluding this finite pattern. M.3.3 fixes the structural decomposition, normalization, and ideal-limit clauses of $G_{\mathrm{persp}}$, together with the explicit drift-diffusion realization of M.5a-M.5b; it does not establish a projective family of finite-window minimizer kernels. Therefore the standard Kolmogorov extension theorem cannot be invoked to derive the Environmental SPAP support claim. A global support-exclusion theorem requires an additional commutation theorem for PCE-minimization under window restriction or an alternative global construction that does not pass through window-local minimizers. ∎
 
-**Definition 14.5.8e (Hard-Core Perspective Gibbs Datum).** Let $\Sigma$ be the retained perspective configuration manifold and let $\Sigma_{\mathrm{SPAP}}\subset\Sigma$ be the SPAP-admissible submanifold for the embedded Property-R predictor class. A hard-core perspective Gibbs datum is a finite-window family
+**Definition 14.5.8e (Hard-Core Perspective Gibbs Datum).** Let $\mathcal W$ be the directed family of finite operational windows. For $W\subseteq W'$, write $\rho_{W'W}:\Sigma_{W'}\to\Sigma_W$. A hard-core perspective Gibbs datum is
 $$
-(\Sigma_W,V_W,\beta_W,\lambda_W,\rho_{W'W})_{W\in\mathcal W}
+\left(
+(\Sigma_W,\mathcal B_W,V_W,\beta_W,\lambda_W,\mathcal E_W)_{W\in\mathcal W},
+(\rho_{W'W})_{W\subseteq W'}
+\right)
 \tag{14.5.8e.1}
 $$
-with:
+with the following properties.
 
-1. finite-window base measures $\lambda_W$ on $\Sigma_W$;
-
-2. inverse temperatures $\beta_W\to\infty$ along the operational refinement net;
-
-3. Gibbs kernels
+1. Each $(\Sigma_W,\mathcal B_W)$ is a Polish response quotient, each $\lambda_W$ is a Borel probability measure, and every $\rho_{W'W}$ is a continuous surjection with
 $$
-dG_W(x)=Z_W^{-1}e^{-\beta_WV_W(x)}d\lambda_W(x);
+\rho_{WW}=\operatorname{id}_{\Sigma_W},
+\qquad
+\rho_{W''W}=\rho_{W'W}\circ\rho_{W''W'}.
+$$
+The directed set has an increasing countable cofinal chain. Let
+$$
+\Sigma=\varprojlim_W\Sigma_W
+$$
+with projections $\pi_W$. Retained open cylinders form a shrinkable basis: if $x\in U$ and $U$ is open, there is a retained open cylinder $C$ with $x\in C$ and $\overline C\subseteq U$. If $C=\pi_{W_0}^{-1}(B_C)$, define its realization for $W\supseteq W_0$ by
+$$
+C_W:=\rho_{WW_0}^{-1}(B_C).
+$$
+The same convention defines $A_W$ for every retained Borel cylinder $A$. Let $\Sigma_{\mathrm{SPAP}}\subseteq\Sigma$ be nonempty and closed, with nonempty Borel images
+$$
+\Sigma_{\mathrm{SPAP},W}:=\pi_W(\Sigma_{\mathrm{SPAP}}).
+$$
+
+2. $\beta_W>0$ and $\beta_W\to\infty$ along refinement.
+
+3. Each $V_W:\Sigma_W\to\mathbb R\cup\{+\infty\}$ is Borel measurable,
+$$
+m_W:=\inf_{\Sigma_{\mathrm{SPAP},W}}V_W\in\mathbb R,
+\qquad
+0<Z_W:=\int e^{-\beta_WV_W}\,d\lambda_W<\infty,
+$$
+and
+$$
+dG_W=Z_W^{-1}e^{-\beta_WV_W}\,d\lambda_W.
 \tag{14.5.8e.2}
 $$
 
-4. hard-core divergence away from the admissible set:
+4. For every retained open cylinder $C$ with $\overline C\subseteq\Sigma\setminus\Sigma_{\mathrm{SPAP}}$,
 $$
-V_W(x)\to+\infty
-$$
-uniformly on every compact subset of $\Sigma_W\setminus\Sigma_{\mathrm{SPAP},W}$;
-
-5. $\Gamma$-convergence of $V_W$ to a finite lower semicontinuous functional $V_\infty$ on $\Sigma_{\mathrm{SPAP}}$;
-
-6. zero limiting boundary capacity of $\partial\Sigma_{\mathrm{SPAP}}$ for the Dirichlet form generated by the finite-resource perspective kernels;
-
-7. DLR consistency of the finite-window conditional specifications:
-$$
-G_{W'}(\,\cdot\mid W)=G_W
+R_W(C):=\inf_{x\in C_W}(V_W(x)-m_W)\longrightarrow+\infty,
 \qquad
-(W\subseteq W')
+\inf\varnothing:=+\infty.
+$$
+
+5. The pulled-back normalized potentials $(V_W-m_W)\circ\pi_W$ $\Gamma$-converge in the inverse-limit topology to a proper lower semicontinuous $V_\infty$ that is finite on $\Sigma_{\mathrm{SPAP}}$.
+
+6. Each $\mathcal E_W$ is a declared closed Dirichlet form on $L^2(\Sigma_W,G_W)$. With
+$$
+\operatorname{Cap}_W(B):=
+\inf\left\{\mathcal E_W(f,f)+\lVert f\rVert_{L^2(G_W)}^2:
+f\in\mathcal D(\mathcal E_W),\ f\ge1\ G_W\text{-a.e. on an open neighborhood of }B\right\},
+$$
+the boundary condition is
+$$
+\inf_{U\supseteq\partial\Sigma_{\mathrm{SPAP}}}
+\limsup_W\operatorname{Cap}_W(U_W)=0,
+$$
+where $U$ ranges over retained open-cylinder neighborhoods.
+
+7. The Gibbs laws are projectively consistent:
+$$
+(\rho_{W'W})_\#G_{W'}=G_W.
 \tag{14.5.8e.3}
 $$
-on retained operational cylinders;
+This may be supplied directly or by an exact finite-temperature PCE-elimination certificate satisfying Definition D.1h and Theorem D.1i for $A_W=\beta_WV_W$.
 
-8. equicoercivity/tightness and partition-function convergence strong enough that the cylinder restrictions of $G_W$ form a total-variation Cauchy family on every retained operational cylinder;
-
-9. admissible-support noncollapse: for every nonempty retained operational cylinder $U$ with $U\cap\Sigma_{\mathrm{SPAP}}\ne\varnothing$, the limiting cylinder weights satisfy
+8. For every retained Borel cylinder $A$, there are $W_A$ and $C_A<\infty$ such that
 $$
-\liminf_W G_W(U)>0.
+Z_W^{-1}e^{-\beta_Wm_W}
+\lambda_W(A_W\setminus\Sigma_{\mathrm{SPAP},W})\le C_A
+\qquad(W\supseteq W_A).
+\tag{14.5.8e.3a}
+$$
+
+9. For every nonempty retained open cylinder $U$ meeting $\Sigma_{\mathrm{SPAP}}$,
+$$
+\liminf_WG_W(U_W)>0.
 \tag{14.5.8e.4}
 $$
-This clause excludes zero-temperature concentration onto a proper subset of $\Sigma_{\mathrm{SPAP}}$; without it, a nonconstant finite $V_\infty$ could collapse the limit to its minimizers rather than to all of $\Sigma_{\mathrm{SPAP}}$.
+This noncollapse condition prevents a nonconstant finite $V_\infty$ from restricting the limiting support to only its minimizers.
 
 **Theorem 14.5.8f (Hard-Core Environmental SPAP Support).** If the perspective kernel family carries a hard-core perspective Gibbs datum, then the finite-window Gibbs kernels converge in total variation on every retained operational cylinder to a global kernel $G_{\mathrm{SPAP}}$, and
 $$

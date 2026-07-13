@@ -1443,7 +1443,7 @@ $$
 \Phi_{idle} = \kappa_{maint} \cdot \varepsilon
 \tag{E.8.3n}
 $$
-where $\kappa_{maint} > 0$ is a maintenance coefficient of order unity determined by the ratio of maintenance period to MPU cycle time $\tau_{min}$ (Theorem 29), and $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$.
+where $\kappa_{maint}>0$ is a model coefficient determined by the ratio of the maintenance period to a separately registered operational clock, and $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ only on a registered reset branch. Theorem 29 supplies an internal characteristic timescale but does not fix this maintenance clock.
 
 *Proof.*
 
@@ -2400,7 +2400,7 @@ This section derives global unitarity from the causal and thermodynamic structur
 
 - **Recall from Theorem 23:** The MPU Hilbert space dimension satisfies $d_0 \ge 8$ for $K_0=3$; the minimal branch used in the Appendix Z backbone has $d_0 = 8$ (Theorem Z.2).
 
-- **Recall from Theorem 29:** The spectral structure of the internal Hamiltonian determines a characteristic minimal processing timescale $\tau_{min}>0$, establishing finite processing speed.
+- **Recall from Theorem 29 and Corollary 29.1:** The internal Hamiltonian supplies a characteristic timescale and a task-specific orthogonalization bound. A positive lower duration for each ND-RID traversal is separately registered in the branch hypothesis of Theorem E.10.2; it is not a consequence of Theorem 29 alone.
 
 - **Recall from Theorem 31:** The dimensionless bath heat of a registered reset satisfies $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1). The PCE reference uses structural $\varepsilon_0=\ln2$; physical equality is restricted to the overhead-free Landauer implementation branch.
 
@@ -2408,7 +2408,7 @@ This section derives global unitarity from the causal and thermodynamic structur
 
 - **Summary of Theorem E.2 (Capacity Bound):** The classical information capacity satisfies $C_{\max} \equiv C(\mathcal{E}_N) < \ln d_0$.
 
-- **Theorem E.10.2 (Velocity Bound):** Information propagation velocity is bounded by $v_{\max} = \delta/\tau_{\min} = c$.
+- **Theorem E.10.2 (Velocity Bound):** On its registered serialized edge-clock branch, $v_{\mathrm{ser}}\le\delta/\tau_{\min}$; equality and identification with $c$ require the separate one-link-attainment and scale-identification hypotheses.
 
 ### E.9.5.2 Notation
 
@@ -2457,7 +2457,7 @@ For the derivation of global unitarity (Theorem E.9.5), this internal closure is
 
 These definitions constitute the complete dynamical specification of the framework. Any hypothetical mechanism $\mathcal{M}$ for information transfer that is not reducible to compositions of internal evolution and ND-RID interactions would, by definition, lie outside the framework's ontology.
 
-**Step 3 (Interaction locality from ND-RID structure).** By Definition A.2.2, ND-RID interactions act on specific subsystems $(A, B)$ with probabilistic outcome functions $V_{\text{prob}}: X \times Y \to \Delta(O)$ and state transformations $T_{\text{prob}}: X \times Y \times O \to \Delta(X)$. For the MPU 'Evolve' process (Definition 27), these functions act on the joint state space of interacting MPU pairs. By Theorem E.10.2, information propagation velocity is bounded by $v_{\max} = \delta/\tau_{\min} = c$. This bound arises because each link traversal requires execution of the ND-RID update cycle, which cannot complete in time less than $\tau_{\min}$ (Theorem 29). Consequently, information transfer between non-adjacent MPUs must proceed through intermediate links via sequential ND-RID operations.
+**Step 3 (Interaction locality from ND-RID structure).** By Definition A.2.2, ND-RID interactions act on specific subsystems $(A, B)$ with probabilistic outcome functions $V_{\text{prob}}: X \times Y \to \Delta(O)$ and state transformations $T_{\text{prob}}: X \times Y \times O \to \Delta(X)$. For the MPU 'Evolve' process (Definition 27), these functions act on the joint state space of interacting MPU pairs. On the separately registered serialized edge-clock branch of Theorem E.10.2, information propagation satisfies $v_{\mathrm{ser}}\le\delta/\tau_{\min}$. Equality with an attained $c$ requires that theorem's additional one-link-attainment and scale-identification hypotheses. Theorem 29 alone does not give the per-edge duration bound. Consequently, sequential transfer between non-adjacent MPUs is a conclusion only on the declared nearest-neighbor serialization branch.
 
 **Step 4 (Channel decomposition at boundaries).** Consider any two spacelike-separated regions $A$ and $B$ on a Cauchy surface $\Sigma$. Let $\bar{A} = \Sigma \setminus A$ denote the complement of $A$. The Hilbert space factorizes as $\mathcal{H}_{\Sigma} = \mathcal{H}_{A} \otimes \mathcal{H}_{\bar{A}}$. Any causal curve connecting $A$ to $B \subseteq \bar{A}$ must pass through the boundary $\partial A$. By Theorem E.3, this boundary hosts $N_{\text{channels}} = \sigma_{\text{eff}} \cdot |\partial A|$ effective independent ND-RID channels, where:
 
@@ -3092,150 +3092,128 @@ The assumption admits a natural extension to systems with external observation (
 ---
 
 
-## E.10 Lieb-Robinson Velocity from PCE Entropy Costs
+## E.10 Conditional Serialized Propagation and Reset-Cost Bounds
 
-The finite Lieb-Robinson velocity bounding information propagation emerges directly from PCE optimization of correlation maintenance costs.
+This section separates two independent ledgers: a conditional thermodynamic cost for physically registered resets and a kinematic speed bound for separately registered serialized finite-range propagation. Neither ledger alone proves a Lieb--Robinson commutator estimate.
 
-### E.10.1 Entropy Cost of Correlation Extension
+### E.10.1 Conditional Reset Cost of Correlation Extension
 
-**Definition E.10.1 (Correlation Extension Cost).** The PCE cost of extending a correlation from distance $r$ to $r + \delta r$ in the MPU network is:
-
-$$\Delta V_{\text{corr}}(r \to r + \delta r) = \varepsilon_{\text{link}} \cdot n_{\text{links}}(r, \delta r) + V_{\text{prop}}(r, \delta r)$$
-
-where $\varepsilon_{\text{link}} \geq \ln 2$ is the per-link entropy cost (Theorem 31) and $n_{\text{links}}$ counts required intermediate links.
-
-**Lemma E.10.1 (Linear Scaling of Link Count).** In the geometrically regular network (Theorem 43), extending correlations by distance $\delta r$ requires:
-
-$$n_{\text{links}}(r,\delta r)=\left\lceil\frac{\delta r}{\delta}\right\rceil$$
-
-where $\delta$ is the MPU spacing.
-
-*Proof.* Geometric regularity (Definition C.3) implies locally Euclidean structure at scales $\gg \delta$. The minimum path between points separated by $\delta r$ traverses $\lceil \delta r / \delta \rceil$ links. The $O(1)$ correction accounts for discrete lattice effects. ∎
-
-**Theorem E.10.1 (Locality from Entropy Cost).** PCE optimization implies that maintaining long-range correlations is thermodynamically prohibitive, producing effective locality.
-
-*Proof.*
-
-**Step 1 (Cumulative cost).** The total entropy cost of maintaining a correlation across distance $R$ is obtained by summing over the $\lceil R/\delta \rceil$ links traversed. In the continuum approximation valid for $R \gg \delta$:
-
-$$S_{\text{total}}(R) = \int_0^R \frac{\varepsilon_{\text{link}}}{\delta} \, dr = \frac{\varepsilon_{\text{link}} \cdot R}{\delta}$$
-
-With $\varepsilon_{\text{link}} = \ln 2$ (Theorem 31):
-
-$$S_{\text{total}}(R) = \frac{R \ln 2}{\delta}$$
-
-**Step 2 (Thermodynamic cost).** By Landauer's principle [Landauer 1961], this entropy production requires minimum energy dissipation:
-
-$$E_{\text{dissipated}}(R) \geq k_B T \cdot S_{\text{total}}(R) = \frac{k_B T \ln 2 \cdot R}{\delta}$$
-
-with equality achieved at the Landauer limit of optimal erasure.
-
-**Step 3 (PCE penalty).** The PCE potential (Definition D.1) includes propagation costs proportional to thermodynamic dissipation. Since $E_{\text{dissipated}} \geq \text{const} \times R$, the PCE cost grows at least linearly with distance:
-
-$$V_{\text{prop}}(R) \geq \alpha \cdot R$$
-
-for some $\alpha > 0$. Long-range correlations incur linearly growing PCE cost. PCE optimization (Definition 15) therefore favors local correlations, as non-local correlations have higher Signal Cost without proportionate increase in Meaning Potential. ∎
-
-### E.10.2 Thermodynamic Derivation of the Light Cone
-
-**Summary of Theorem E.10.2 (Maximum Serialized Propagation Velocity from PCE).** Under the additional hypotheses that (i) propagation between non-adjacent MPUs is implemented by serialized nearest-neighbor ND-RID traversals, and (ii) the continuum no-preferred-frame identification fixes
+**Definition E.10.1 (Registered Correlation-Extension Cost).** Let a retained path use $n$ channels. For every channel use $j$ that physically resets a memory register $P_j$ while retaining side information $R_j$, record
 $$
-\frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P},
+\varepsilon_{\mathrm{reset},j}
+\ge H_{q_j}(P_j\mid R_j).
 $$
-the maximum serialized propagation velocity is
+The registered reset contribution and total PCE comparison are
 $$
-v_{\text{max}} = \frac{\delta}{\tau_{\min}} = c.
+S_{\mathrm{reset}}:=\sum_{j=1}^{n}\varepsilon_{\mathrm{reset},j},
+\qquad
+\Delta V_{\mathrm{corr}}:=V_{\mathrm{prop}}+\gamma S_{\mathrm{reset}},
 $$
+where $\gamma\ge0$ is a declared conversion coefficient. Theorem 31 supplies this inequality only for the registered reset operation. A per-use floor of $\ln2$ requires a conditionally uniform binary register with no retained predictive side information; it is not a consequence of SPAP alone.
 
-Here $\tau_{\min}$ is the minimum MPU cycle time (Theorem 29), $\delta$ is the MPU spacing, and $c$ is the emergent invariant speed appearing in Theorem 46.
+**Lemma E.10.1 (Metric Link-Count Bound).** If every edge in a serialized path has propagation-metric length at most $\delta$, then a path spanning distance $R$ uses
+$$
+n\ge\left\lceil\frac{R}{\delta}\right\rceil
+$$
+edges. Equality requires a separately exhibited geodesic path whose edges attain the length bound.
 
-*Proof.*
+*Proof.* The triangle inequality gives $R\le\sum_{j=1}^{n}\ell_j\le n\delta$. Taking ceilings proves the bound; neither geometric regularity nor a continuum approximation proves equality. ∎
 
-**Step 1 (Minimum time per effective link).** Each ND-RID interaction requires minimum time $\tau_{\min}$ (Theorem 29). This bound arises from the finite complexity of the predictive update cycle and cannot be circumvented without violating the logical structure of the Fundamental Predictive Loop (Definition 4).
+**Theorem E.10.1 (Conditional Linear Reset-Cost Comparison).** Assume the metric hypotheses of Lemma E.10.1, one registered reset per traversed edge, constants $h_{\min}>0$ and $\gamma>0$ with
+$$
+H_{q_j}(P_j\mid R_j)\ge h_{\min}
+$$
+for every use, and no unrecorded negative term in the declared PCE comparison. Then
+$$
+S_{\mathrm{reset}}\ge h_{\min}\left\lceil\frac{R}{\delta}\right\rceil,
+\qquad
+\Delta V_{\mathrm{corr}}-V_{\mathrm{prop}}
+\ge\gamma h_{\min}\left\lceil\frac{R}{\delta}\right\rceil.
+$$
+This is a conditional cost lower bound. It does not establish kinematic locality, exponential clustering, or a Lieb--Robinson commutator bound; those require their standard independent locality and interaction hypotheses.
 
-**Step 2 (Serialized traversal bound).** Under hypothesis (i), information propagating across distance $R$ must traverse $R/\delta$ effective links in sequence, each requiring time $\geq \tau_{\min}$. Hence
-$$
-t_{\min}(R) = \frac{R}{\delta}\,\tau_{\min}.
-$$
+*Proof.* Sum the registered conditional-entropy inequalities over the at least $\lceil R/\delta\rceil$ traversed edges and multiply by $\gamma$. ∎
 
-**Step 3 (Serialized velocity bound).** The corresponding maximum serialized propagation velocity is therefore
-$$
-v_{\max}^{(\mathrm{ser})} = \frac{R}{t_{\min}(R)} = \frac{\delta}{\tau_{\min}}.
-$$
+### E.10.2 Serialized Propagation-Speed Bound and Conditional Attainment
 
-**Step 4 (Identification with $c$).** Under hypothesis (ii),
+**Summary of Theorem E.10.2 (Serialized Propagation-Speed Bound and Conditional Attainment).** Assume that (i) propagation between non-adjacent MPUs is implemented by serialized nearest-neighbor ND-RID traversals, (ii) each traversed edge has length at most $\delta$ in the retained propagation metric, and (iii) each edge traversal takes at least a separately registered time $\tau_{\min}>0$. Then every serialized propagation path satisfies
 $$
-\frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P},
+v_{\mathrm{ser}}\le \frac{\delta}{\tau_{\min}}.
 $$
-and since $c=L_P/t_P$ by definition of the Planck units, one obtains
+If, in addition, a retained one-link propagation process attains length $\delta$ in time $\tau_{\min}$ and the continuum scale identification fixes
 $$
-v_{\max}^{(\mathrm{ser})} = \frac{\delta}{\tau_{\min}} = \frac{L_P}{t_P} = c.
+\frac{\delta}{L_P}=\frac{\tau_{\min}}{t_P},
 $$
+then the supremum is attained and
+$$
+v_{\max}^{(\mathrm{ser})}=\frac{\delta}{\tau_{\min}}=\frac{L_P}{t_P}=c.
+$$
+Theorem 29 identifies an internal operational generator and characteristic timescale; it does not by itself establish hypothesis (iii) for every distinguishable transition or the one-link attainment hypothesis.
 
-Thus, in the serialized nearest-neighbor regime with the stated scale identification, the emergent invariant speed is identified with the maximum causal propagation velocity of the MPU network. ∎
-
-*Remark: Relation to Standard Lieb-Robinson Bounds.* The standard Lieb-Robinson theorem [Lieb & Robinson 1972] establishes finite propagation speed in quantum lattice systems through analytic bounds on commutator growth, requiring local bounded Hamiltonians and finite interaction range. The present derivation reaches the same conclusion—finite maximum velocity—through thermodynamic arguments: the entropy cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ per link and finite processing time $\tau_{\min}$ per cycle together bound $v_{\max}$. The two approaches are complementary; the thermodynamic derivation clarifies *why* the velocity is bounded (information processing has irreducible cost), while the standard proof provides rigorous analytic bounds.
-
-**Corollary E.10.1 (Activity-Conditioned Propagation Dissipation).** Let $r_{upd}$ be the realized rate of completed reset-support updates on one retained channel. Then
+*Proof.* A serialized path spanning metric distance $R$ requires at least $R/\delta$ successive edge traversals. Hypothesis (iii) therefore gives
 $$
-\frac{dS_{env}}{dt}
-\ge
-r_{upd}\,k_B\varepsilon_{phys}
-\ge
-r_{upd}\,k_B\ln2.
+t(R)\ge \frac{R}{\delta}\,\tau_{\min},
+$$
+and hence
+$$
+\frac{R}{t(R)}\le \frac{\delta}{\tau_{\min}}.
+$$
+This proves the upper bound. Equality requires an admissible propagation process attaining both the length and time bounds. Under the stated one-link-attainment and scale-identification hypotheses,
+$$
+v_{\max}^{(\mathrm{ser})}=\frac{\delta}{\tau_{\min}}=\frac{L_P}{t_P}=c.
+$$
+Without attainment, the argument proves only the displayed upper bound. ∎
+
+*Remark: Relation to Standard Lieb-Robinson Bounds.* A Lieb-Robinson estimate derives a finite commutator-growth velocity from locality, bounded interactions, and finite interaction range. The conditional argument above is a serialized path bound from separately declared metric and timing hypotheses. A reset-entropy ledger may motivate a physical implementation cost, but it neither establishes the traversal-time hypothesis nor proves attainment by itself.
+
+**Corollary E.10.1 (Activity-Conditioned Propagation Dissipation).** Let $r_{\mathrm{upd}}$ be the realized rate of completed registered reset-support updates, and let $\bar h$ be their mean conditional entropy $H_q(P\mid R)$ on the declared ensemble. Then
+$$
+\frac{dS_{\mathrm{env}}}{dt}
+\ge r_{\mathrm{upd}}k_B\bar h.
 \tag{E.10.3}
 $$
-In a serialized uniform path with link length $\delta$ and signal speed $v=r_{upd}\delta$,
+For a serialized uniform path with link length $\delta$ and $v=r_{\mathrm{upd}}\delta$,
 $$
-\frac{1}{k_B}\frac{dS_{env}}{dt}
-\ge
-\frac{\varepsilon_{phys}}{\delta}v
-\ge
-\frac{\ln2}{\delta}v.
+\frac{1}{k_B}\frac{dS_{\mathrm{env}}}{dt}
+\ge\frac{\bar h}{\delta}v.
 \tag{E.10.4}
 $$
-The minimum cycle time gives $r_{upd}\le1/\tau_{min}$ and therefore an update-rate ceiling, not an activity-independent lower bound on entropy production per unit time. At the saturated serialized speed $v=\delta/\tau_{min}$, Equation (E.10.4) reduces to $dS_{env}/dt\ge k_B\ln2/\tau_{min}$.
+The specialization $\bar h=\ln2$ requires a conditionally uniform binary reset with no retained side information. On the registered edge-clock branch of Theorem E.10.2, $r_{\mathrm{upd}}\le1/\tau_{\min}$; this is a rate ceiling, not a positive activity floor. At separately registered saturated activity, the right-hand side becomes $k_B\bar h/\tau_{\min}$.
 
-*Proof.* Each completed registered reset-support update exports at least $k_B\varepsilon_{phys}$; multiplication by the realized update rate gives (E.10.3). The serialized identity $r_{upd}=v/\delta$ gives (E.10.4). Because a traversal may take longer than $\tau_{min}$ or the channel may be idle, $\tau_{min}$ alone supplies no positive rate floor. ∎
+*Proof.* Apply Theorem 31 to each completed registered reset and average over the realized update ensemble. The path identity $v=r_{\mathrm{upd}}\delta$ gives (E.10.4). The clock premise supplies only the stated upper rate bound. ∎
 
-**Corollary E.10.2 (Thermodynamic Origin of Locality in the Serialized ND-RID Regime).** In the serialized nearest-neighbor propagation regime of Theorem E.10.2, locality is not a primitive axiom but emerges from:
-1. Finite entropy cost per link: $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31)
-2. Finite minimum cycle time: $\tau_{\min} > 0$ (Theorem 29)
-3. PCE optimization minimizing total entropy production (Definition 15)
+**Corollary E.10.2 (Conditional Locality Bound in the Serialized ND-RID Regime).** On the branch of Theorem E.10.2, locality and the speed bound use three independent inputs:
+1. a nearest-neighbor successive serialization rule;
+2. a separately registered positive edge-traversal duration $\tau_{\min}$ and link-length bound $\delta$;
+3. the retained propagation metric and its declared edge-weight bounds.
 
-Within this regime, superluminal serialized propagation would require either $\tau < \tau_{\min}$ (violating Theorem 29) or a breakdown of the scale identification used in Theorem E.10.2. Both are excluded by the assumptions of that theorem.
-
-*Proof.* Suppose a serialized ND-RID signal could propagate at speed
+A reset-entropy ledger and PCE optimization may constrain implementation cost, but they do not establish these kinematic inputs. For a path of $n$ edges, the branch assumptions give $t\ge n\tau_{\min}$ and distance at most $n\delta$, hence
 $$
-v > \frac{\delta}{\tau_{\min}}.
+v\le\frac{\delta}{\tau_{\min}}.
 $$
-Then traversing one effective link of length $\delta$ would require time $t < \tau_{\min}$, contradicting Theorem 29. Therefore serialized propagation satisfies
-$$
-v \le \frac{\delta}{\tau_{\min}}.
-$$
-Under the scale identification of Theorem E.10.2, this upper bound is $c$. ∎
+The scale identification converts this into the numerical upper bound $c$; equality requires the additional one-link-attainment hypothesis. ∎
 
 ### E.10.3 Summary
 
 | Result | Statement | Origin |
 |:-------|:----------|:-------|
 | Theorem E.10.1 | Linear long-range cost holds only under its registered reset-operation and benefit certificates | Conditional PCE ledger |
-| Theorem E.10.2 | $v_{\max} = \delta/\tau_{\min} = c$ | Finite cycle time + spacing |
+| Theorem E.10.2 | $v_{\mathrm{ser}}\le\delta/\tau_{\min}$; equality with $c$ only under one-link attainment and scale identification | Registered serialized edge clock + spacing; separate attainment |
 | Corollary E.10.1 | $dS_{\mathrm{env}}/dt\ge r_{\mathrm{upd}}k_B\bar h$ for the registered reset ensemble | Conditional Landauer ledger + realized rate |
 
 
-| Corollary E.10.2 | Locality emerges from thermodynamics | PCE optimization |
+| Corollary E.10.2 | Serialized locality gives a conditional speed upper bound | Registered serialization, edge clock, spacing, and metric bounds |
 
-The causal structure of spacetime—the light cone—is not imposed but derived from the entropy costs of information propagation in the MPU network. The speed of light $c$ emerges as the ratio of the fundamental length scale $\delta$ to the fundamental time scale $\tau_{\min}$, both determined by PCE optimization of predictive processing.
+The registered serialized branch yields a finite operational speed upper bound from its edge-length and edge-time data. An attained light-cone speed and the equality $c=\delta/\tau_{\min}$ require the separate one-link-attainment, scale-identification, and Corollary 46a/Appendix O Lorentzian hypotheses. They do not follow from entropy cost or PCE optimization alone.
 
 ---
 
 
 ## E.11 Conclusion
 
-This appendix provided a theoretical derivation of the Horizon Entropy Area Law (Theorem 49 / Theorem E.6) from PU principles, extended by bulk reconstruction (Section E.8), predictive update-current entropy and the capacity-tight Horizon No-Surplus Theorem (Theorems E.8.4l–E.8.4m), general horizon classification (Section E.9), and thermodynamic derivation of Lieb-Robinson velocity (Section E.10). The core derivation proceeds in two complementary stages:
+This appendix gives a conditional operational area-law construction, bulk and horizon refinements, and the two scoped results of Section E.10: registered reset operations can carry a linear implementation cost, while independent serialized edge-length and edge-time hypotheses give a propagation-speed upper bound. The area-law argument has two branch-qualified stages:
 
 **Stage 1 (Boundary Correlations and Operational Area Law, Sections E.6.1–E.6.3):** The MPU network's ND-RID dynamics satisfy locality, a finite Lieb-Robinson velocity, a spectral gap, and exponential clustering (Lemma E.6.1). A rigorous distribution-free boundary law holds for total correlations measured by mutual information in any finite-range Gibbs state (Theorem E.4a). A von Neumann entanglement-entropy area law is proven in the 1D gapped setting (Hastings); in higher dimensions an entanglement area-scaling inequality is treated as a semiclassical ansatz (Theorem E.4').
 
-**Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** ND-RID irreversibility implies strict contractivity ($f_{RID}<1$, Lemma E.1), which bounds the per-link capacity (Theorem E.2). Geometric regularity implies the number of effective independent channels crossing a smooth surface scales with its area (Theorem E.3, Lemma E.5.1). Combining these yields $S_{max}\propto\mathcal{A}$ and packages the proportionality constant into the standard normalization $S_{max}=k_B\mathcal{A}/(4G)$ (Theorem E.5). The resulting horizon-entropy decomposition has two levels: each MPU cell of area $\delta^2$ contains exactly $a = 2$ SPAP entropy sub-cells of area $\Delta\mathcal{A}_{cell} = 4G\ln 2$, and the corresponding per-cell structural capacity is $C_{\max}^{*} = a\varepsilon_0 = 2\ln 2$ (Corollaries E.6.1–E.6.2).
+**Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** A completed reset gives the support-loss capacity bound of Proposition E.2a. Strict contraction requires the independent full-state refresh/minorization decomposition of Lemma E.1, and Theorem E.2 supplies the strict capacity bound only on that branch. Together with the boundary-density certificate of Theorem E.3, these inputs yield the operational area-law coefficient on the stated branch. The standard $1/(4G)$ normalization and the residual-budget values remain branch calibrations.
 **Synthesis:** Equation (E.9) links the emergent coupling $G$ to microscopic MPU parameters. Identifying this $G$ with the experimentally measured Newton constant is a calibration step; after calibration, Equations E.14–E.16 constrain the allowed microscopic parameter combinations. Section 12 uses the proportionality $\delta S\propto\delta\mathcal{A}$ to derive the Einstein Field Equations via the Clausius relation.

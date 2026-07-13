@@ -499,7 +499,7 @@ $$
 $$
 Here $\mathfrak C_{\mathrm{mod}}$ abbreviates the finite modular-cocycle/KMS descent record on the same cover, and $\mathfrak C_{\mathrm{sect}}$ abbreviates the finite sector-separation record for the charged fields whose statistics sign is being compared. The branch supplies a reflected antiunitary comparison and a statistics-sign comparison for the covered sectors. It is not a derivation from thermodynamic arrow data alone, and failure of any factor leaves the CPT/spin-statistics line certificate-pending rather than contradicted.
 
-Conditional on Theorem F.0 and on the additional Wightman/Jost realization hypotheses stated below, the preceding sections furnish an emergent AQFT setting on the continuum manifold $(M, g_{\mu\nu})$ with isotony, covariance, and Einstein causality in the sense used in Appendix F. The stress-energy tensor of Definition F.4 is covariantly conserved on-shell, and the positive-energy input is supplied by Theorem 29 together with the additional representation-theoretic assumptions stated below. These are the prerequisites for the standard spin-statistics and CPT theorems. The results of this section are therefore formulated conditionally on those AQFT/Wightman hypotheses, with the spin-statistics connection admitting an additional PCE-based interpretation.
+Conditional on Theorem F.0 and on the additional Wightman/Jost realization hypotheses stated below, the preceding sections furnish an emergent AQFT setting on the continuum manifold $(M, g_{\mu\nu})$ with isotony, covariance, and Einstein causality in the sense used in Appendix F. The stress-energy tensor of Definition F.4 is covariantly conserved on-shell. The relativistic positive-energy input is the independent Wightman/AQFT joint spectrum condition for the translation representation. Definition F.0j and Theorem F.0k can transfer nonnegativity and a gap for one identified time-translation generator, but without translation covariance and forward-cone control they do not establish the relativistic spectrum condition. These are the prerequisites for the standard spin-statistics and CPT theorems. The results of this section are therefore formulated conditionally on those AQFT/Wightman hypotheses, with the spin-statistics connection admitting an additional PCE-based interpretation.
 
 ---
 
@@ -512,10 +512,10 @@ The spin-statistics theorem requires four ingredients, available in the PU frame
 |--------------|-----------|-----------|
 | **Lorentz Invariance** | Emergent from causal structure of MPU network | Theorem 46 |
 | **Microcausality** | Available in the continuum AQFT limit | Corollary F.1 |
-| **Positive Energy** | Bounded-below Hamiltonian $\hat{H}_v \geq 0$ | Theorem 29, Appendix B |
+| **Positive Energy** | Independent Wightman/AQFT joint spectrum condition for the translation representation; a one-generator gap-transfer result is supplementary and is not a substitute | Theorem F.2 hypothesis 3; Definition F.0j and Theorem F.0k only for the supplementary one-generator statement |
 | **Local Field Algebra** | Emergent net $\mathfrak{A}(\mathcal{O})$ under the continuum bridge | Theorem F.0, Definition F.2 |
 
-**Summary.** Conditional on the convergence hypotheses stated in Theorem F.0, the discrete MPU algebras converge to a Haag-Kastler net, and Corollary F.1 then yields spacelike commutativity in the continuum limit. Theorem 46 supplies the Lorentzian-signature and finite-speed input used by the continuum discussion. Theorem 29 supplies a bounded-below local Hamiltonian input. The passage from these ingredients to a positive-energy relativistic representation is used here only together with the additional AQFT/Wightman realization hypotheses stated below.
+**Summary.** Conditional on Theorem F.0, the discrete MPU algebras converge to a Haag-Kastler net and Corollary F.1 yields spacelike commutativity. Theorem 46 supplies only a uniform operational causal-speed upper bound; an attained frontier is a separate hypothesis, and Corollary 46a with Appendix O supplies Lorentzian signature only on its complete branch. Theorem 29 identifies an internal operational generator but does not establish the relativistic spectrum condition. The Wightman/AQFT joint spectrum condition remains independent. Definition F.0j and Theorem F.0k transfer a nonnegative gapped spectrum for one identified continuum time generator on their stated branch, but they do not supply translation covariance or place the joint energy-momentum spectrum in the closed forward cone.
 
 ---
 
@@ -1483,30 +1483,15 @@ Normalization, reflection symmetry, and transfer positivity are immediate. ∎
 
 *Proof.* The converse direction of Theorem F.10.4c.2 shows that every such Lorentzian reconstruction necessarily satisfies reflection positivity. Violation of (F.10.4c.1) contradicts that necessary condition. ∎
 
-**Corollary F.10.4c.4 (Källén-Lehmann Spectral Gate for PPI-Observable Two-Point Functions).** On a regular translation-invariant Lorentzian branch reconstructed by Theorem F.10.4c.2, let $O$ be a scalar PPI-observable local operator, meaning that $O$ is gauge-invariant or already descends to the PPI quotient. Then its two-point response admits a positive spectral representation
+**Corollary F.10.4c.4 (Källén--Lehmann Spectral Gate for PPI-Observable Two-Point Functions).** Assume, in addition to Theorem F.10.4c.2, a Poincaré-covariant scalar branch with an invariant vacuum $\Omega$, a strongly continuous unitary translation representation $U(a)=e^{iP\cdot a}$, and the independent joint spectrum condition $\operatorname{sp}(P)\subset\overline V_+$. Let $O$ be a scalar PPI-observable local operator. Then its two-point spectral measure is positive and supported on invariant masses $s=P^2\ge0$. For a spacelike subtraction point $p_0^2<0$ and an integer $N$ large enough for convergence, its time-ordered response has the subtracted representation
 $$
-G_O(p^2)
-=
-\int_0^\infty
-\frac{\rho_O(\mu^2)}{p^2-\mu^2+i0}
-\,d\mu^2,
-\qquad
-\rho_O(\mu^2)\ge0.
+G_O^F(p^2)=P_{N-1}(p^2)+(p^2-p_0^2)^N\int_0^\infty\frac{\rho_O(ds)}{(s-p_0^2)^N(p^2-s+i0)},
+\qquad \rho_O\ge0.
 \tag{F.10.4c.4.1}
 $$
-Atoms of $\rho_O$ are stable one-particle poles with positive residue. Absolutely continuous components are multi-particle continua. A proposed particle label that does not appear as a pole, threshold, or spectral component of a PPI-observable response is not an operational particle label on that branch.
+Here $P_{N-1}$ is a contact/subtraction polynomial; when no subtraction is needed take $N=0$ and $P_{-1}=0$. An isolated atom at $s=m^2$ gives a positive-residue pole and, on the accepted particle-sector branch, a stable one-particle contribution. Absence from one chosen $O$ is not an exclusion criterion; a label is PPI-null only after a completeness record shows that it changes no retained observable or protocol response.
 
-*Proof.* Theorem F.10.4c.2 supplies a Hilbert-space reconstruction with positive norm, positive Hamiltonian, and unitary time evolution. Translation invariance gives a joint spectral resolution of the energy-momentum operators. For the vacuum vector $\Omega$, insert this spectral resolution into
-$$
-\langle\Omega,O(x)O(0)\Omega\rangle.
-$$
-The resulting spectral measure is
-$$
-d\rho_O(P)
-=
-\lVert dE(P)O\Omega\rVert^2,
-$$
-which is positive because it is a Hilbert-space norm square. Lorentz covariance on the scalar branch reduces the support to invariant mass $\mu^2=P^2\ge0$, giving (F.10.4c.4.1). If a component is an atom at $\mu^2=m^2$, the two-point function has a pole with positive residue equal to the corresponding norm-square projection. Continuous spectral support gives thresholds and multi-particle continua. If a label does not change any PPI-observable spectral measure, Operational Yoneda/PPI equivalence identifies it as physically null. ∎
+*Proof.* The joint spectral theorem gives $d\rho_O(P)=\lVert dE(P)O\Omega\rVert^2\ge0$. The forward-cone condition gives $P^2\ge0$, and scalar Poincaré covariance decomposes this measure into positive mass-shell measures $\rho_O(ds)$. Temperedness gives a finite subtraction order and the displayed dispersion representation. The atom statement follows from the spectral projection at an isolated mass. ∎
 
 ### F.10.4d Minimal Gauge Split-Factorization
 

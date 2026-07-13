@@ -1141,7 +1141,7 @@ Thus, the spatial geometry emerges as the effective continuum limit of the PU ne
 
 ### O.7.2 Hyperbolic Signature Closure and Operational Speed
 
-The Appendix O signature closure is a four-input branch theorem: the positive-definite spatial $\Gamma$-limit $A(x)$ of O.7.1, a time orientation from Theorem 31 and Appendix J, a second-order continuum principal symbol, and a nondegenerate characteristic cone which coincides with the finite operational causal frontier supplied by Proposition F.1 and Theorem 46. The fourth input may be supplied directly as Hypothesis O.7.2.4 or, for the retained sector family covered by a finite record, by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5). On the three-spatial-dimensional branch fixed by Theorem Z.11, these four inputs force the Lorentzian signature and the operational speed normalization simultaneously.
+The Appendix O signature closure is a four-input branch theorem: the positive-definite spatial $\Gamma$-limit $A(x)$ of O.7.1, a time orientation from Theorem 31 and Appendix J, a second-order continuum principal symbol, and a separately accepted nondegenerate characteristic cone coinciding with an attained operational frontier. Proposition F.1 supplies its stated discrete propagation cone and Theorem 46 supplies a uniform operational causal-speed upper bound; neither establishes frontier attainment or continuum cone coincidence. The fourth input may be supplied directly as Hypothesis O.7.2.4 or, for the retained sector family covered by a finite record, by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) that explicitly includes attainment. On the three-spatial-dimensional branch fixed by Theorem Z.11, these four inputs force the Lorentzian signature and normalize the characteristic speed to the separately accepted frontier.
 
 **Remark O.7.2.0 (Second-Order Closure versus Signature Selection).** When the second-order and cone-coincidence inputs are supplied by finite certificates rather than by the direct hypotheses, the covered-sector signature reading is audited by the predictive well-posedness signature certificate $\mathfrak C_{\mathrm{sig}}$ of Definition 46a.1. The certificate excludes elliptic, ultrahyperbolic, constrained, higher-derivative, or nonlocal representatives that reproduce only a coarse finite-frontier behavior. Thus the finite-certificate implication used for covered sectors is
 $$
@@ -1194,23 +1194,25 @@ $$
 $$
 The registered mixing theorem controls standardized cumulants and residuals. This is an asymptotic diagonal Gaussian statement, not a Lorentzian-signature or exact finite-cycle theorem.
 
-**Hypothesis O.7.2.4 (Nondegenerate causal cone).** The operational causal cone of Proposition F.1 and Theorem 46 is nondegenerate at every point of $M_{\mathrm{reg}}$ and coincides with the characteristic cone of $p_x$: for every nonzero spatial covector $k_i$, the polynomial
+**Hypothesis O.7.2.4 (Nondegenerate causal cone).** Assume a separately established attained operational frontier whose speed obeys the uniform upper bound of Theorem 46 and whose discrete propagation compatibility is recorded by Proposition F.1. This frontier is nondegenerate at every point of $M_{\mathrm{reg}}$ and coincides with the characteristic cone of $p_x$: for every nonzero spatial covector $k_i$, the polynomial
 $$
 \omega \;\longmapsto\; p_x(\omega,k) \;=\; a(x)\,\omega^2 + 2b^i(x)\,\omega\,k_i + A^{ij}(x)\,k_i\,k_j
 $$
 has two distinct real roots in $\omega$.
 
-**Definition O.7.2.5 (Cone-Saturation Certificate $\mathfrak C_{\mathrm{cone}}$).** A cone-saturation certificate for a retained sector family is a finite record
+**Definition O.7.2.5 (Cone-Saturation Certificate $\mathfrak C_{\mathrm{cone}}$).** A cone-saturation certificate for a retained sector family is a finite proof record
 $$
 \mathfrak C_{\mathrm{cone}}
 =
-(\Sigma_{\mathrm{sec}},\;\mathcal V_{\mathrm{front}},\;u\text{-datum},\;\mathcal A_{\mathrm{attr}},\;(H_{\xi\xi},D_{\xi\xi}),\;\xi_{\mathrm{res}},\;\text{forward lock}),
+(\Sigma_{\mathrm{sec}},\mathcal V_{\mathrm{front}},\mathcal A_{\mathrm{front}},\mathcal N_{\mathrm{char}},\mathcal I_{\mathrm{cone}},u\text{-datum},\mathcal A_{\mathrm{attr}},(H_{\xi\xi},D_{\xi\xi}),\xi_{\mathrm{res}},\text{forward lock}).
 $$
-where $\Sigma_{\mathrm{sec}}$ lists the retained sectors and their second-order symbols satisfying Hypothesis O.7.2.3; $\mathcal V_{\mathrm{front}}$ certifies that the sector front speeds are carried by the same finite ND-RID boundary protocols to which Theorem 46 applies; the $u$-datum certifies the monotone utilization law used to compare a sector front speed with boundary throughput; $\mathcal A_{\mathrm{attr}}$ certifies attractor residence and the PCE potential contribution with positive one-sided shadow price against the covered cone misalignment coordinate; $(H_{\xi\xi},D_{\xi\xi})$ records the Hessian/noise data used for the residual floor; and $\xi_{\mathrm{res}}$ is fixed before comparison. The record also fixes a retained cone-misalignment functional $\xi_{\mathrm{cone}}(\Sigma_{\mathrm{sec}})$ and certifies
+Here $\Sigma_{\mathrm{sec}}$ lists the covered second-order symbols; $\mathcal V_{\mathrm{front}}$ identifies the common ND-RID protocol family and the positive speed function $c(x)$ subject to Theorem 46's upper bound; $\mathcal A_{\mathrm{front}}$ proves that this operational frontier is attained on the covered domain; $\mathcal N_{\mathrm{char}}$ proves that every covered symbol has two distinct real characteristic roots for every nonzero spatial covector; and $\mathcal I_{\mathrm{cone}}$ proves exact equality of each covered characteristic cone with that attained operational frontier. The remaining entries retain the utilization, attractor, Hessian/noise, residual, and forward-lock data.
+
+An accepted certificate that discharges Hypothesis O.7.2.4 must certify
 $$
-0\le \xi_{\mathrm{cone}}(\Sigma_{\mathrm{sec}})\le \xi_{\mathrm{res}},
+\xi_{\mathrm{res}}=\xi_{\mathrm{cone}}(\Sigma_{\mathrm{sec}})=0
 $$
-where, for timing tests, $\xi_{\mathrm{cone}}$ is the retained supremum of normalized sector-front speed splittings in the certified vacuum window. An accepted $\mathfrak C_{\mathrm{cone}}$ supplies the cone-coincidence entry of Hypothesis O.7.2.4 only for the retained sectors and resolution covered by the record. It does not discharge Hypothesis O.7.2.3, does not cover response-null labels, and does not promote uncovered sectors to the Lorentzian branch.
+and must contain accepted proof objects for $\mathcal A_{\mathrm{front}}$, $\mathcal N_{\mathrm{char}}$, and $\mathcal I_{\mathrm{cone}}$. A record proving only $0\le\xi_{\mathrm{cone}}\le\xi_{\mathrm{res}}$ with $\xi_{\mathrm{res}}>0$ is an approximate cone-audit record; it does not discharge attainment, nondegeneracy, or exact cone coincidence. The certificate covers only its listed sectors, domain, and resolution and does not discharge Hypothesis O.7.2.3.
 
 **Definition O.7.2.5a (Desynchronization Cone-Rigidity Certificate).** For a finite sector graph, one forward-locked record fixes $c_A>0$, $\bar c_{AB}=(c_A+c_B)/2$, tolerances $\xi_{AB}\ge0$, and a single protocol family, resolution, and quotient map
 $$
@@ -1228,7 +1230,7 @@ Any nonadjacent numerical tolerance requires a separate path-accumulation ledger
 
 *Proof.* Equality in a common quotient is transitive along a finite path; numerical edge errors may accumulate. ∎
 
-**Remark O.7.2.6 (Finite Speed versus Cone Saturation).** Theorem 46 supplies the finite operational frontier for serialized ND-RID substrate propagation. It does not by itself prove that every retained continuum sector saturates that frontier or that all sector characteristic cones coincide. Sector-cone saturation is a branch theorem only when it is directly derived for the sector or supplied by an accepted $\mathfrak C_{\mathrm{cone}}$. An accepted $\mathfrak C_{\mathrm{desync}}^{\mathrm{cone}}$ supplies only the edgewise finite-response quotient statement of Proposition O.7.2.5b unless its path and sector-coverage entries also discharge the full cone-saturation record.
+**Remark O.7.2.6 (Finite Speed versus Cone Saturation).** Theorem 46 supplies a uniform operational causal-speed upper bound for serialized ND-RID substrate propagation. It does not establish an attained frontier, prove that every retained continuum sector saturates a frontier, or show that all sector characteristic cones coincide. Frontier attainment and sector-cone saturation are branch statements only when directly derived or supplied by accepted records. An accepted $\mathfrak C_{\mathrm{desync}}^{\mathrm{cone}}$ supplies only the edgewise finite-response quotient statement of Proposition O.7.2.5b unless its path and sector-coverage entries also discharge the full frontier-attainment and cone-saturation record.
 
 **Theorem O.7a (Hyperbolic Signature Closure).** Under Hypotheses O.7.2.1–O.7.2.4 and the three-spatial-dimensional hypothesis of Theorem Z.11, for every $x\in M_{\mathrm{reg}}$:
 
@@ -1252,7 +1254,7 @@ $$
 \;\Longrightarrow\;
 \mathrm{LorentzianSignature}\ (-,+,+,+),
 $$
-with the four antecedents supplied by Theorem 31 plus §O.4 (entropy-selected time), §O.7.1 (positive-definite spatial $\Gamma$-limit), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose finite operational frontier component is supplied by Theorem 46 plus Theorem P.8.4 while nondegeneracy and cone-coincidence remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; entropy-time selection alone does not force the Lorentzian signature without the other three structural inputs.
+with the four antecedents supplied by Theorem 31 plus §O.4 (entropy-selected time), §O.7.1 (positive-definite spatial $\Gamma$-limit), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose operational-speed upper-bound input is supplied by Theorem 46 plus Theorem P.8.4, while its attained-frontier, nondegeneracy, and cone-coincidence inputs remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; entropy-time selection alone does not force the Lorentzian signature without the other three structural inputs.
 
 *Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in\mathbb R^3\setminus\{0\}$. The spatial cotangent space at $x$ is three-dimensional by Theorem Z.11, so the orthogonal complement $\{k : b^i k_i=0\}\subset\mathbb R^3$ is a two-dimensional subspace and contains infinitely many nonzero $k$. For any nonzero $k$ in this subspace, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
 $$
@@ -1281,17 +1283,17 @@ p_x(\xi) \;=\; -\alpha\bigl(\xi_0 - \alpha^{-1}b^i\xi_i\bigr)^2 + \bigl(A^{ij}+\
 $$
 Define $\xi_0':=\xi_0-\alpha^{-1}b^i\xi_i$ and $\xi_i':=\xi_i$. The spatial quadratic form $\widetilde A^{ij}:=A^{ij}+\alpha^{-1}b^ib^j$ is positive-definite as the sum of the positive-definite $A$ and a positive-semidefinite rank-one term. The shear is a triangular transformation with unit diagonal entries in the basis ordering $(\xi_1',\xi_2',\xi_3',\xi_0')$, hence orientation-preserving, and the entropy-selected future cone of Hypothesis O.7.2.2 maps to itself. Spatial orthonormalization $\widetilde A = O^\top D O$ with $D=\mathrm{diag}(\mu_1,\mu_2,\mu_3)$, $\mu_i>0$, followed by $\xi_i'\mapsto \sqrt{\mu_i}\,(O\xi')_i$, brings the spatial block to $\delta^{ij}$ without affecting $\xi_0'$. ∎
 
-**Theorem O.7b (Operational Speed Normalization).** Assume the hypotheses of Corollary O.7a.1 and the coincidence of the characteristic cone with the operational causal frontier (Hypothesis O.7.2.4). Let $c(x)$ denote the local frontier speed from Theorem 46. Then in entropy-orthogonal spatially orthonormal coordinates,
+**Theorem O.7b (Operational Speed Normalization).** Assume the hypotheses of Corollary O.7a.1, a nondegenerate characteristic cone satisfying Hypothesis O.7.2.4, and a separately established attained local operational frontier with speed $c(x)>0$. Then in entropy-orthogonal, spatially orthonormal coordinates,
 $$
-p_x(\xi) \;=\; -\frac{\xi_0^2}{c(x)^2} + \delta^{ij}\,\xi_i\xi_j.
+p_x(\xi)=-\frac{\xi_0^2}{c(x)^2}+\delta^{ij}\xi_i\xi_j.
 $$
-On the PCE-optimal uniform-weight branch of Theorem 46, the propagation weights are position-independent, so $c(x)\equiv c=\delta/\tau_{\min}$, with $\delta$ the MPU spacing (Appendix Q) and $\tau_{\min}$ the minimum MPU processing time (Theorem 29). On general regular branches, the same edge-weight bounds used in Theorem 46 give
+Theorem 46 supplies only
 $$
-\frac{\delta w_{\min}}{\tau_{\min}}\le c(x)\le \frac{\delta w_{\max}}{\tau_{\min}}.
+0<c(x)\le\frac{\delta w_{\max}}{\tau_{\min}}
 $$
-In the uniform-weight branch these bounds coincide and recover $c=\delta/\tau_{\min}$. ∎
+on such an attained-frontier branch; it supplies no uniform positive lower bound for $c(x)$. On the separately accepted normalized uniform-weight branch with an attained one-link frontier, $c(x)\equiv c=\delta/\tau_{\min}$.
 
-*Proof.* After Corollary O.7a.1, $p_x(\xi)=-\alpha(x)\xi_0^2+|\xi|^2$. The null condition $p_x(\xi)=0$ for fixed $|\xi|$ gives $\omega=\pm|k|/\sqrt{\alpha(x)}$; the characteristic (group) propagation speed is $v_{\mathrm{char}}(x)=\partial\omega/\partial|k|=1/\sqrt{\alpha(x)}$. By Hypothesis O.7.2.4, the characteristic cone coincides with the operational frontier, so $v_{\mathrm{char}}(x)=c(x)$, hence $\alpha(x)=1/c(x)^2$. The uniform-weight specialization is the last sentence of Theorem 46. On general regular branches, the same proof of Theorem 46 gives $\delta w_{\min}/\tau_{\min}\le c(x)\le \delta w_{\max}/\tau_{\min}$. ∎
+*Proof.* Corollary O.7a.1 gives $p_x(\xi)=-\alpha(x)\xi_0^2+|\xi|^2$ with $\alpha(x)>0$. Its null relation has characteristic speed $1/\sqrt{\alpha(x)}$. Cone coincidence with the separately established attained frontier therefore gives $\alpha(x)=1/c(x)^2$. Theorem 46 gives the displayed upper bound. The normalized equality uses the additional uniform-weight and one-link-attainment hypotheses. A lower edge weight together with a lower traversal-time bound does not imply a positive lower speed. ∎
 
 **Corollary O.7b.1 (Derived Local Lorentz Invariance).** As a consequence of Theorems O.7a and O.7b:
 
@@ -1301,7 +1303,7 @@ In the uniform-weight branch these bounds coincide and recover $c=\delta/\tau_{\
 
 (c) The orthonormal frame bundle of the emergent metric obtained by duality from $p_x$ has structure group $SO^+(1,3)$.
 
-(d) When the spin obstruction class $w_2(M_{\mathrm{reg}})\in H^2(M_{\mathrm{reg}};\mathbb Z/2)$ vanishes, the unique connected double cover of $SO^+(1,3)$ is $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$, and the Lorentzian factor $\mathrm{Spin}(1,3)$ of the principal bundle of Theorem 48 is structurally forced conditional on the spin condition.
+(d) When the spin obstruction class $w_2(M_{\mathrm{reg}})\in H^2(M_{\mathrm{reg}};\mathbb Z/2)$ vanishes, spin lifts exist and each has structure group equal to the unique connected double cover $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. The group factor is therefore fixed on the spin-admissible branch, but the global spin structure need not be unique.
 
 *Proof.* (a) Direct substitution of the rescaling yields the Minkowski form; $O(1,3)$ is the defining isometry group.
 
@@ -1309,9 +1311,9 @@ In the uniform-weight branch these bounds coincide and recover $c=\delta/\tau_{\
 
 (c) Standard differential geometry: the orthonormal frame bundle of an oriented time-oriented Lorentzian metric has structure group $SO^+(1,3)$.
 
-(d) $\pi_1(SO^+(1,3))=\mathbb Z/2$, and the unique connected double cover is $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. The spin lift of the frame bundle exists iff the second Stiefel–Whitney class vanishes; when it does, the spin lift is unique up to bundle isomorphism, and the Lorentzian factor of the principal bundle of Theorem 48 is $\mathrm{Spin}(1,3)$. ∎
+(d) $\pi_1(SO^+(1,3))=\mathbb Z/2$, and the unique connected double cover is $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. A spin lift of the frame bundle exists iff the second Stiefel–Whitney class vanishes. When lifts exist, their isomorphism classes form a torsor for $H^1(M_{\mathrm{reg}};\mathbb Z/2)$, so uniqueness holds only when this torsor is trivial. Every chosen lift has structure group $\mathrm{Spin}(1,3)$, which is the Lorentzian group factor used in Theorem 48. ∎
 
-**Corollary O.7b.2 (No Riemannian Replacement of the Causal Cone).** Under Hypotheses O.7.2.1–O.7.2.4, a positive-definite four-dimensional principal symbol cannot represent the operational causal frontier of Theorem 46. If $H^{\mu\nu}$ is positive-definite, then
+**Corollary O.7b.2 (No Riemannian Replacement of the Causal Cone).** Under Hypotheses O.7.2.1–O.7.2.4, a positive-definite four-dimensional principal symbol cannot represent the separately accepted nondegenerate characteristic cone and attained operational frontier. If $H^{\mu\nu}$ is positive-definite, then
 $$
 H^{\mu\nu}\xi_\mu\xi_\nu>0
 $$
