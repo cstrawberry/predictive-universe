@@ -4,15 +4,15 @@
 
 ### A.0.1 Overview: Two Complementary Foundations
 
-The **Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1.1, A.1.3)** and **Reflexive Undecidability (RUD, Theorems A.2.3, A.2.4)** require that predictive systems possess sufficient computational richness, formally captured by **Property R** (Definition 10). This appendix establishes Property R through two mutually supporting foundations:
+The **Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1.1, A.1.3)** and **Reflexive Undecidability (RUD, Theorems A.2.3, A.2.4)** apply to predictive systems possessing the computational subcapacities collected under **Property R** (Definition 10). This appendix gives two conditional routes:
 
-*   **Foundation I: Logical Necessity (§A.0.2)** — Property R follows necessarily from the predictive structure of consciousness itself. Any system capable of prediction and verification must possess computational capacity as a matter of logical structure, independent of physical implementation details.
-*   **Foundation II: Physical Instantiation (§A.0.3–A.0.5)** — The MPU framework, operating under POP/PCE dynamics with ND-RID interactions, necessarily implements Property R through:
-    1.  Individual MPUs possessing minimal structural capacity ($K_0 = 3$ bits, §A.0.3)
-    2.  Network dynamics converging to configurations supporting reliable computation (§A.0.4)
-    3.  Compositional emergence of full computational universality (§A.0.5)
+*   **Foundation I: Logical construction (§A.0.2)** — Composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic representing bounded computations yield Property R for the resulting uniform predictive model class.
+*   **Foundation II: Physical instantiation (§A.0.3–A.0.5)** — On a refresh-branch MPU implementation carrying an accepted QEC compatibility certificate or Golay-QEC bootstrap record, Dominant Cost Convexity, a universal protected gate ledger, and sufficient working-memory and execution resources:
+    1. individual MPUs supply the minimal registered carrier capacity;
+    2. the certified optimization branch selects a finite protected error rate;
+    3. network composition realizes the finite Property-R tasks covered by the certificate.
 
-These foundations are complementary, not redundant. The logical foundation establishes *why* computational capacity must exist; the physical foundation demonstrates *how* it manifests in resource-constrained systems. Together, they provide a complete, non-circular account ensuring the applicability of SPAP and RUD to physical predictive systems.
+Foundation I supplies the logical model-class route without using the later MPU construction. Foundation II is a conditional physical realization of that capacity. SPAP or RUD applies to a physical network only when the relevant coding, diagonal-closure, computability, and protected-execution hypotheses are all satisfied.
 
 #### Foundational Definitions Recap:
 
@@ -29,12 +29,16 @@ These foundations are complementary, not redundant. The logical foundation estab
 
 > **Methodological Note:** This section establishes computational capacity as a logical necessity arising from the structure of prediction itself, independent of physical implementation details. Physical realization under resource constraints is addressed subsequently in §A.0.3-A.0.5.
 
-The capacity for universal computation is not contingent on physical details but follows necessarily from the operational requirements of prediction and verification. This derivation, grounded in the **Predictionism** developed in Appendix P.3.4, establishes Property R as logically prior to any physical considerations.
+For a predictive model class satisfying composition closure, logical memory, uniform specification, and arbitrarily large finite memory and composition depth, the finite computational subcapacity of Property R follows without choosing a physical implementation. The construction below is logically prior to the MPU realization but conditional on those explicit structural hypotheses.
 
-**Proposition A.0.1 (Binary Verification Necessity)**
-The verification function $V(r)$, which assesses whether a prediction about state $r$ matches reality, is necessarily binary: the prediction either matches (1) or does not match (0). This structure is intrinsic to the verification operation, not a convention.
+**Proposition A.0.1 (Binary Necessity for Retained Verification Decisions)**
+The Cogito predicate has a determinate retained verification value, and every finite prediction protocol that enters a prediction-update loop through a declared acceptance set has a binary retained decision predicate. More precisely, let a finite protocol have response set $R$ and declared acceptance set $A\subseteq R$. Then
+$$
+V_A(r)=\mathbf1_A(r)\in\{0,1\}.
+$$
+The underlying protocol data may remain multi-valued.
 
-*Proof (foundational route).* Consider the foundational self-referential verification of the Cogito: "I exist as a thinking entity." Any attempt to verify this proposition as false is self-refuting—the act of verification itself constitutes thinking, thereby confirming existence. The verification outcome is necessarily determinate: either verified (1) or not verified (0). No intermediate state is logically coherent for this self-referential verification. The same binary structure applies universally: the verification of any prediction $P$ about state $r$ produces a binary outcome, since verification is comparison between anticipated and observed states, which necessarily yields match or mismatch. □
+*Proof.* For the foundational self-reference predicate, an attempted retained verdict that the thinking process does not occur is self-refuting: producing that verdict is itself an occurrence of the process. Thus the Cogito predicate is retained as verified, while its negation is rejected. For a general finite prediction protocol, each $r\in R$ satisfies exactly one of $r\in A$ and $r\notin A$. Hence the characteristic map $V_A=\mathbf1_A$ has codomain $\{0,1\}$. Scores, distances, likelihoods, and confidence reports may remain in a larger response alphabet; they become a retained verification decision precisely when the declared acceptance cut is applied. ∎
 
 **Remark A.0.1.1 (Finite-Protocol Acceptance-Cut Characterization).** The same binary structure has a direct finite-protocol form, which makes the role of multi-valued protocol data explicit. Let $R$ be the finite response set of a prediction protocol and let $A\subseteq R$ be the retained acceptance set determined by the protocol's stated tolerance, resolution, or success condition. The update predicate is the characteristic map
 $$
@@ -54,16 +58,13 @@ A=V^{-1}(\{1\}).
 $$
 Thus the binary structure of Proposition A.0.1 is not an added physical convention; it is the finite-response decision form required for a verification predicate to enter the prediction-update loop. The Cogito-route proof establishes the binary structure foundationally; the acceptance-cut characterization records the same structure as the finite-protocol decision map and makes explicit how multi-valued protocol data reduce to the binary update predicate. ∎
 
-**Proposition A.0.2 (Boolean Operations from Verification)**
-The binary verification structure necessarily generates complete Boolean operations:
-1.  **Negation (NOT):** The capacity to distinguish verification (1) from non-verification (0) directly implements logical negation: $V(\neg S(r)) = 1 - V(S(r))$.
-2.  **Conjunction (AND):** Sequential verification of multiple predictions requires all constituents to succeed: $V(S_1(r) \wedge S_2(r)) = \min(V(S_1(r)), V(S_2(r)))$.
-3.  **Disjunction (OR):** Alternative predictions implement disjunction: $V(S_1(r) \vee S_2(r)) = \max(V(S_1(r)), V(S_2(r)))$.
+**Proposition A.0.2 (Boolean Operations under Acceptance-Set Closure)**
+Let a finite protocol use binary predicates $V_A=\mathbf1_A$. Assume its retained protocol class is closed under complementary acceptance sets, finite intersections, and finite unions. Then
+1.  **Negation (NOT):** $V_{R\setminus A}(r)=1-V_A(r)$.
+2.  **Conjunction (AND):** $V_{A_1\cap A_2}(r)=\min(V_{A_1}(r),V_{A_2}(r))$.
+3.  **Disjunction (OR):** $V_{A_1\cup A_2}(r)=\max(V_{A_1}(r),V_{A_2}(r))$.
 
-*Proof.* These operations formalize the operational structure of prediction:
-*   **NOT:** The fundamental binary distinction in verification ("matches" vs. "does not match") directly implements negation. If $V(S(r)) = 1$ (prediction verified), then $V(\neg S(r)) = 0$ (negation not verified), and vice versa.
-*   **AND:** Compound predictions consisting of sub-predictions $S_1, S_2$ are verified only if both constituents are verified. If either fails ($V = 0$), the compound fails. This is captured by $\min(V_1, V_2) = 1$ iff both $V_1 = 1$ and $V_2 = 1$.
-*   **OR:** When entertaining alternative predictions, overall success requires at least one alternative be verified. The disjunction succeeds ($V = 1$) if $V(S_1) = 1$ or $V(S_2) = 1$ (or both), captured by $\max(V_1, V_2)$. □
+*Proof.* For $r\in R$, exactly one of $r\in A$ and $r\in R\setminus A$ holds, proving the first identity. Membership in $A_1\cap A_2$ holds exactly when both characteristic values are one, proving the second. Membership in $A_1\cup A_2$ holds exactly when at least one characteristic value is one, proving the third. The closure hypothesis ensures that all three acceptance sets are retained protocols. ∎
 
 **Logical Infrastructure of Prediction**
 
@@ -125,13 +126,16 @@ This proves the required computational richness directly: every bounded computat
 **Corollary A.0.1 (Property R from the Uniform Predictive Model Class)**
 Any uniform predictive model class satisfying the Logical-Structural Assumptions and allowing arbitrarily large finite memory and composition depth possesses Property R relative to any formal arithmetic $\mathcal F$ capable of coding finite bit strings, circuits, and bounded computations.
 
-*Proof.* By Theorem A.0.1, for every Turing machine $M$ and finite time bound $T$, the model class contains a uniformly specified Boolean circuit that simulates the first $T$ steps of $M$. A standard Gödel coding in $\mathcal F$ represents finite bit strings, circuit descriptions, machine descriptions, and bounded execution histories. Thus the model class can:
+*Proof.* Choose a finite description alphabet of size $b\ge2$. A word $a_0\cdots a_{\ell-1}$ with digits $0\le a_i<b$ can be encoded injectively by
+$$
+\operatorname{code}(a_0\cdots a_{\ell-1})
+=b^\ell+\sum_{i=0}^{\ell-1}a_i b^i.
+$$
+The leading power records the length, so decoding is effective. Iterating any primitive-recursive pairing map encodes finite tuples of words. Hence states, circuit descriptions, machine descriptions, predictions, and bounded execution histories have finite arithmetic codes, and the hypothesis on $\mathcal F$ makes these coding and decoding operations representable.
 
-1. represent states, model descriptions, predictions, and computation histories by finite codes;
-2. simulate or reason about any finite bounded computation by the circuit family of Theorem A.0.1;
-3. evaluate bounded predicates about outputs, failures, and prediction accuracy by composing the corresponding Boolean predicate circuit with the simulation circuit.
+By Theorem A.0.1, for every Turing machine $M$ and bound $T$, the model class contains a uniformly specified Boolean circuit simulating the first $T$ steps of $M$. A bounded history has finitely many configurations; checking its initial configuration, each transition-table relation, and its final output is therefore a finite conjunction of Boolean conditions. Functional completeness and finite composition produce a circuit for that conjunction. Composing it with the simulation circuit evaluates bounded predicates about outputs, failures, and prediction accuracy.
 
-For unbounded predicates, Property R requires the representability of the relevant partial computation and its finite proof/search stages, not completion of an undecidable infinite search. Therefore the uniform predictive model class has the representational, simulation, and predicate-evaluation machinery required by Definition 10. ∎
+For an unbounded partial computation, each finite search stage is represented by its time bound $T$ and the corresponding bounded circuit; no claim of terminating an undecidable infinite search is required. Thus all representation, bounded-simulation, and finite predicate-evaluation clauses of Definition 10 hold. ∎
 
 **Significance:** This derivation is independent of the Self-Referential Paradox of Accurate Prediction. Property R is established before SPAP is invoked, providing a non-circular foundation. The logical sequence is:
 
@@ -162,12 +166,20 @@ However, this minimal capacity is insufficient for full Property R. The ability 
 
 ### A.0.4 Emergence of Reliable Computation from POP/PCE Optimization
 
-While $K_0$ ensures intrinsic structural capacity, reliable execution of complex computational sequences required for SPAP and RUD, despite inherent noise of ND-RID interactions ($\varepsilon > 0$, $f_{\text{RID}} < 1$), emerges dynamically from optimization principles governing the MPU network.
+While $K_0$ supplies structural carrier capacity on its realization branch, reliable execution of the finite computations required for SPAP and RUD is a separate physical problem. The analysis below uses the refresh-branch premise that each relevant ND-RID implementation contains a nonzero input-independent refresh component, for which Lemma E.1 gives $f_{\mathrm{RID}}<1$, together with the protected-computation certificates stated below.
 
 The dynamics are governed by the **Prediction Optimization Problem (POP, Axiom 1)** and **Principle of Compression Efficiency (PCE, Definition 15)**, realized as stochastic gradient flow minimizing the PCE Potential $V(x)$ (Definition D.1, Appendix D). Effective prediction requires computation, often complex and self-referential. PCE mandates these computations be performed reliably and efficiently, minimizing contributions to $V(x)$ from operational costs ($V_{\text{op}}$), propagation costs ($V_{\text{prop}}$), and error-induced performance loss (reduced $V_{\text{benefit}}$).
 
 **Definition A.0.1 (Effective Operational Property R)**
-Effective Operational Property R is the capability of the MPU network, resulting dynamically from POP/PCE optimization, to execute the specific classes of representational, simulation/reasoning, and predicate evaluation tasks required for SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4) diagonalization arguments with error probability per logical step $p_{\text{err}}^*$, where $p_{\text{err}}^*$ is the unique minimizer of the PCE-derived error-related potential $V_{\text{tot}}(p_{\text{err}}) = V_{\text{rel}}(p_{\text{err}}) + V_{\text{err}}(p_{\text{err}})$. This ensures that for computations of finite logical depth $T$, the probability of successful execution is sufficiently high for the logical proofs to apply.
+Effective Operational Property R is the capability of an MPU network to execute the finite representation, simulation/reasoning, predicate-evaluation, logical-memory, Boolean-processing, and diagonal-wrapper tasks required by the declared SPAP or RUD protocol with its registered finite error bound. When this capability is physically realized through Theorem A.0.2, let $p_{\mathrm{err}}^*$ be a selected minimizer of
+$$
+V_{\mathrm{tot}}(p_{\mathrm{err}})
+=
+V_{\mathrm{rel}}(p_{\mathrm{err}})
++
+V_{\mathrm{err}}(p_{\mathrm{err}}).
+$$
+The minimizer is unique only under Dominant Cost Convexity. Operational applicability at logical depth $T$ additionally requires the QEC/bootstrap, working-memory, and execution records to certify the error tolerance of that finite protocol.
 
 **Definition A.0.1q (QEC Compatibility Certificate $\mathfrak C_{\mathrm{QEC}}$).** A QEC compatibility certificate is a finite forward-locked record
 $$
@@ -214,15 +226,24 @@ This is not a primitive-axiom derivation of QEC compatibility and does not asser
 
 *Proof.* Proposition Z.13b.7 supplies a dual-containing Golay CSS code witness. The local-noise, syndrome, recovery, gate, overhead, threshold, and PCE-benefit entries of $\mathfrak C_{\mathrm{GQEC}}$ are exactly the entries required by Definition A.0.1q. Mapping them into the slots of $\mathfrak C_{\mathrm{QEC}}$ gives the certificate. The fixed-point display records dependency order: the Golay witness is derived downstream of the finite MPU/Golay branch, while the reliability claim is promoted only after the physical recovery and threshold records are added. ∎
 
-**Corollary A.0.2b (Transversal-Gate Guardrail).** On any finite stabilizer-code realization used by $\mathfrak C_{\mathrm{GQEC}}$, transversal Clifford operations or other product-form encoded gates do not constitute a universal fault-tolerant gate set by themselves. A universal protected computation ledger must therefore include a non-transversal, injected, distilled, adaptive, or otherwise certified completion inside $\mathcal I_{\mathrm{FT}}$. The corresponding positive non-transversal overhead is consistent with the strict floor $p_{\mathrm{err}}^*>0$ of Theorem A.0.3 rather than a contradiction of it.
+**Corollary A.0.2b (Transversal-Gate Guardrail).** On any finite-dimensional quantum error-correcting code realization used by $\mathfrak C_{\mathrm{GQEC}}$ that corrects a nontrivial set of local errors, transversal product-form encoded gates do not constitute a universal logical gate set by themselves. A universal protected-computation ledger must include a non-transversal, injected, distilled, adaptive, or otherwise certified completion inside $\mathcal I_{\mathrm{FT}}$. The corresponding overhead is compatible with the strict optimizer floor $p_{\mathrm{err}}^*>0$ of Theorem A.0.5.
 
-*Proof.* A finite-distance quantum code cannot obtain a universal encoded gate set from transversal/product gates alone under the Eastin-Knill obstruction. Therefore the protected gate ledger must record the additional resource that completes the gate set. Theorem A.0.3 already states that the PCE optimum is not zero-error at zero overhead, so the required overhead is an expected finite-cost entry rather than a new postulate. ∎
+*Proof.* The Eastin–Knill theorem (Eastin & Knill 2009) applies because the registered code is finite-dimensional, encodes a nontrivial logical subsystem, corrects a nontrivial local-error set, and the gates under consideration act transversally as products across physical subsystems. The theorem excludes universality of that transversal logical-gate family. Therefore a ledger claiming universal protected computation must record a gate resource outside that family. Theorem A.0.5 places every admitted optimizer in $(0,p_{\mathrm{err},0}]$, so $p_{\mathrm{err}}^*>0$; recording a positive implementation overhead does not contradict that conclusion. ∎
 
-**Theorem A.0.2 (PCE Dynamically Enforces Effective Property R)**
-Under the framework's core axioms (POP, PCE, ND-RID dynamics), the refresh-branch implementation condition of Lemma A.0.1, an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (Definition A.0.1q), supplied directly or through an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ (Definition A.0.1q.1; Theorem A.0.2a), and Dominant Cost Convexity, the PCE optimization dynamics drive the scalar error-rate parameter to an optimal value where:
-1.  The optimal error rate per logical operation $p_{\mathrm{err}}^*>0$ exists; it is unique under Dominant Cost Convexity and satisfies robustness conditions ($p_{\mathrm{err}}^*<1/2$ for sufficiently large protected computation windows) required for noise-robust SPAP (Theorems A.1.2, A.1.4) and RUD (Theorems A.2.3, A.2.4).
-2.  The MPU network effectively possesses Operational Property R for the finite representational, simulation/reasoning, predicate-evaluation, logical-memory, finite-composition, Boolean post-processing, and bounded diagonal-wrapper tasks whose working-memory, QEC-overhead, and circuit-execution resources are supplied by the network family.
-**Proof Structure.** The derivation proceeds through four stages:
+**Theorem A.0.2 (Conditional Effective Property R at a Certified PCE Optimum)**
+Assume the refresh-branch implementation condition of Lemma A.0.1, an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ supplied directly or through an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$, the hypotheses of Theorem A.0.5, and Dominant Cost Convexity. Let $p_{\mathrm{err}}^*$ be a minimizer supplied by Theorem A.0.5. Assume further that a robustness certificate proves $p_{\mathrm{err}}^*<1/2$ on the declared protected-computation window and that the network supplies the working-memory, QEC-overhead, protected-gate, and circuit-execution resources required by Theorem A.0.6. Then:
+1.  $p_{\mathrm{err}}^*>0$ exists and is unique.
+2.  The network possesses Effective Operational Property R for the finite tasks covered by the certificates and resource ledger.
+3.  The noise-robust SPAP and RUD conclusions apply only on the windows satisfying their respective hypotheses.
+
+*Proof.* Theorem A.0.5 gives a minimizer in $(0,p_{\mathrm{err},0}]$; hence it is strictly positive. Dominant Cost Convexity makes $V_{\mathrm{tot}}$ strictly convex, so two distinct minimizers are impossible: if $p_1\ne p_2$ were minimizers, strict convexity would give
+$$
+V_{\mathrm{tot}}\!\left(\frac{p_1+p_2}{2}\right)
+<\frac{V_{\mathrm{tot}}(p_1)+V_{\mathrm{tot}}(p_2)}2,
+$$
+contradicting minimality. This proves item 1. The separate robustness certificate supplies $p_{\mathrm{err}}^*<1/2$ on the declared window. Under the accepted QEC certificate and the stated resource ledger, Theorem A.0.6 supplies representation, bounded simulation, predicate evaluation, logical memory, finite composition, and Boolean post-processing for the covered tasks, proving item 2. Applying Theorems A.1.2 and A.1.4, or Theorems A.2.3 and A.2.4, is legitimate only when their additional window hypotheses hold, which is item 3. ∎
+
+The component estimates supporting the hypotheses are recorded in the four stages below.
 
 **Stage 1: Baseline Error is Strictly Positive**
 ND-RID Implementation of Logical Gates: A logical gate $G_{\text{logic}}$ is realized by a sequence of elementary ND-RID channels. The ideal error-free implementation corresponds to unitary $\mathcal{U}_{\text{ideal}}$. The actual physical channel is the composition $\mathcal{E}_{\text{actual}} = \mathcal{E}_{N_k} \circ \cdots \circ \mathcal{E}_{N_1}$.
@@ -302,12 +323,36 @@ for every density operator $\rho$. Density operators affinely span the real vect
 **Stage 2: Cost of Achieving Reliability**
 Reducing error rate below baseline requires implementing error correction protocols, incurring complexity costs.
 
-**Proposition A.0.4 (Complexity Overhead Lower Bound):** Under QEC Compatibility, the complexity overhead $C_{\text{err}}$ required to suppress error rate from $p_{\text{err},0}$ to $p_{\text{err}}$ is bounded below logarithmically:
+**Proposition A.0.4 (Reliability-Cost Lower Bound on a Converse-Certified Branch).** In addition to QEC Compatibility, suppose the retained protected-computation branch carries a constant $A>0$ such that every admissible implementation of overhead $C$ has logical error bounded below by
 $$
-C_{\text{err}}(p_{\text{err}}) \geq A \ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}}\right) \quad \text{(A.0.3)}
+p_{\mathrm{impl}}(C)
+\ge
+p_{\mathrm{err},0}e^{-C/A}.
+\tag{A.0.3c}
 $$
-where $A = A(d) > 0$ depends on code structure and noise locality.
-*Justification.* Under the Assumption of QEC Compatibility ($p_{\text{err},0}<p_{\text{th}}$ with sufficiently local noise and implementable fault-tolerant constructions), standard fault-tolerant schemes suppress logical error exponentially in an effective distance/level parameter while the corresponding overhead grows at least linearly in that parameter, yielding a logarithmic dependence of required overhead on the target $p_{\text{err}}$. The following self-contained redundancy bound provides an explicit witness of the same functional form in a simplified setting; full quantum error correction achieves the same (often stronger) suppression under the assumed locality below threshold [Gottesman 1998; Fowler et al. 2012].
+Then every admissible implementation achieving $p_{\mathrm{impl}}(C)\le p_{\mathrm{err}}\le p_{\mathrm{err},0}$ satisfies
+$$
+C_{\mathrm{err}}(p_{\mathrm{err}})
+\ge
+A\ln\!\left(\frac{p_{\mathrm{err},0}}{p_{\mathrm{err}}}\right).
+\quad \text{(A.0.3)}
+$$
+
+*Proof.* Combining the converse certificate with the target guarantee gives
+$$
+p_{\mathrm{err},0}e^{-C/A}
+\le
+p_{\mathrm{impl}}(C)
+\le
+p_{\mathrm{err}}.
+$$
+Taking logarithms and rearranging yields
+$$
+C\ge A\ln\!\left(\frac{p_{\mathrm{err},0}}{p_{\mathrm{err}}}\right).
+$$
+Taking the infimum over all admissible implementations that achieve the target proves (A.0.3). ∎
+
+The lower-envelope certificate (A.0.3c) is an additional resource hypothesis; it does not follow from the threshold theorem or from the achievable majority-vote construction below. Lemma A.0.4a supplies an explicit logarithmic-overhead construction, while Proposition A.0.4 supplies the conditional lower bound used in the PCE divergence analysis.
 
 **Lemma A.0.4a (Logarithmic Redundancy for Majority-Vote Decoding).**
 Suppose a logical operation is implemented by $N$ statistically independent elementary attempts, each failing with probability $p_{\text{err},0} < \tfrac12$. Let the logical decoder output the majority result (assume $N$ odd). Then the logical failure probability
@@ -320,21 +365,27 @@ N \;\ge\; \frac{1}{2(\tfrac12-p_{\text{err},0})^{2}}\,\ln\!\frac{1}{p_{\text{err
 $$
 
 *Proof.* Let $X_i\in\{0,1\}$ indicate failure of attempt $i$, so $\mathbb E[X_i]=p_{\text{err},0}$ and $S_N=\sum_{i=1}^N X_i$ counts failures. Majority decoding fails iff $S_N\ge \frac{N+1}{2}$, which is the event $\{S_N\ge N/2\}$ because $S_N$ is integer-valued and $N$ is odd. Write $\mu=\mathbb E[S_N]=Np_{\text{err},0}$. Then
-\[
+$$
 \{S_N\ge N/2\}=\{S_N-\mu\ge N(\tfrac12-p_{\text{err},0})\}.
-\]
+$$
 Hoeffding's inequality for independent $X_i\in[0,1]$ gives, for $t>0$,
-\[
+$$
 \mathbb P(S_N-\mu\ge t)\le \exp\!\left(-\frac{2t^2}{N}\right) \quad\text{[Hoeffding 1963]}.
-\]
-Setting $t=N(\tfrac12-p_{\text{err},0})$ yields (A.0.3a). Solving $\exp(-2(\tfrac12-p_{\text{err},0})^{2}N)\le p_{\text{err}}$ gives (A.0.3b). □
+$$
+Setting $t=N(\tfrac12-p_{\text{err},0})$ yields (A.0.3a). Solving $\exp(-2(\tfrac12-p_{\text{err},0})^{2}N)\le p_{\text{err}}$ gives (A.0.3b). ∎
 
-**Remark A.0.4b (From Redundancy to Overhead).**
-If each attempt costs at least a constant resource $c_0$ (time, space, or energy), then the total overhead satisfies $C_{\text{err}}(p_{\text{err}})\ge c_0 N$. Combining with (A.0.3b) implies
-\[
-C_{\text{err}}(p_{\text{err}})\;\ge\; \frac{c_0}{2(\tfrac12-p_{\text{err},0})^{2}}\,\ln\!\frac{1}{p_{\text{err}}}.
-\]
-Since $\ln(1/p_{\text{err}})\ge \ln(p_{\text{err},0}/p_{\text{err}})$ for $p_{\text{err},0}\le 1$, this implies $C_{\text{err}}(p_{\text{err}})\ge A\ln(p_{\text{err},0}/p_{\text{err}})$ with $A=c_0/[2(\tfrac12-p_{\text{err},0})^{2}]$, recovering the functional form of (A.0.3). □
+**Remark A.0.4b (Achievable Redundancy Overhead).**
+Assume each majority-vote attempt costs at most $c_1$ units and choose the least odd integer $N$ satisfying (A.0.3b). Then this explicit construction has
+$$
+C_{\text{err}}^{\mathrm{maj}}(p_{\text{err}})
+\le
+c_1\left[
+\frac{1}{2(\tfrac12-p_{\text{err},0})^{2}}
+\ln\!\frac{1}{p_{\text{err}}}
++2
+\right].
+$$
+Thus majority voting exhibits an achievable $O(\!\ln(1/p_{\text{err}}))$ overhead. It supplies no lower bound for arbitrary codes or decoders; Proposition A.0.4 requires the separate lower-envelope certificate (A.0.3c).
 
 **Definition A.0.3 (Reliability Cost Contribution):** The cost of added complexity contributes to PCE potential via physical operational cost function $R(C)$ (Definition 3):
 $$
@@ -342,47 +393,99 @@ V_{\text{rel}}(p_{\text{err}}) := \lambda R(C_{\text{err}}(p_{\text{err}})) \app
 $$
 where $\gamma_p>1$ and $r_p(T_{\text{eff}})>0$ (Definition 3a), with $T_{\text{eff}}$ treated as fixed in this appendix.
 
-**Lemma A.0.2 (Divergence of Reliability Cost):** The marginal cost of improving reliability diverges as perfect reliability is approached:
+**Lemma A.0.2 (Divergence of Reliability Cost in the Exact Power-Law Model):** Assume
 $$
-V_{\text{rel}}'(p_{\text{err}}) = \lambda R'(C_{\text{err}}) \left( -\frac{A}{p_{\text{err}}} \right) < 0 \quad \text{(A.0.5)}
+C_{\text{err}}(p)=A\ln\!\left(\frac{p_{\text{err},0}}p\right),
+\qquad
+R(C)=r_p(T_{\mathrm{eff}})C^{\gamma_p},
+\qquad
+\gamma_p>1.
 $$
-with $\lim_{p_{\text{err}} \to 0} V_{\text{rel}}'(p_{\text{err}}) = -\infty$. □
+Then
+$$
+V_{\text{rel}}'(p)
+=
+-\lambda r_p(T_{\mathrm{eff}})\gamma_pA^{\gamma_p}
+\frac{[\ln(p_{\mathrm{err},0}/p)]^{\gamma_p-1}}p
+<0
+\tag{A.0.5}
+$$
+and $\lim_{p\to0^+}V_{\text{rel}}'(p)=-\infty$.
+
+*Proof.* Substitute the two assumed functions into $V_{\mathrm{rel}}=\lambda R(C_{\mathrm{err}})$ and apply the chain rule. Both $p^{-1}$ and the nonnegative logarithmic factor diverge as $p\to0^+$, giving the limit. ∎
 
 **Stage 3: Penalty for Allowing Errors**
 Errors degrade predictive performance, reducing benefit term $V_{\text{benefit}}$, equivalent to adding error penalty $V_{\text{err}}$.
 
-**Theorem A.0.4 (Performance Degradation):** For computation involving $T$ logical gate applications, if each gate has failure probability at most $p_{\text{err}}$, then the success probability satisfies $P_{\text{succ}}\ge 1-Tp_{\text{err}}$ without assuming independence (Lemma A.0.4c). If failures are independent, the exact success probability is:
+**Theorem A.0.4 (Performance Degradation):** For computation involving $T$ logical gate applications, if each gate has failure probability at most $p_{\text{err}}$, then
 $$
-P_{\text{succ}}(T, p_{\text{err}}) = (1 - p_{\text{err}})^T \approx \exp(-T p_{\text{err}}) \quad \text{(A.0.6)}
+P_{\text{succ}}\ge1-Tp_{\text{err}}
 $$
+without assuming independence. If the failures are independent, then
+$$
+P_{\text{succ}}
+=
+\prod_{t=1}^T\bigl(1-\mathbb P(F_t)\bigr)
+\ge
+(1-p_{\text{err}})^T.
+\tag{A.0.6}
+$$
+Equality in the final inequality holds when every $\mathbb P(F_t)=p_{\text{err}}$.
 
 **Lemma A.0.4c (Success Probability Lower Bound Without Independence).**
 Let $F_t$ be the event that the $t$-th logical gate fails, with $\mathbb P(F_t)\le p_{\text{err}}$ for each $t=1,\dots,T$. Then
 $$
-P_{\text{succ}} \;=\; 1-\mathbb P\!\Bigl(\bigcup_{t=1}^T F_t\Bigr)\;\ge\; 1-\sum_{t=1}^T \mathbb P(F_t)\;\ge\; 1-Tp_{\text{err}}. \qquad \text{(A.0.6a)}
+P_{\text{succ}}
+=
+1-\mathbb P\!\Bigl(\bigcup_{t=1}^T F_t\Bigr)
+\ge
+1-\sum_{t=1}^T\mathbb P(F_t)
+\ge
+1-Tp_{\text{err}}.
+\tag{A.0.6a}
 $$
-If failures are independent, then $P_{\text{succ}}=(1-p_{\text{err}})^T$, which satisfies the standard exponential upper bound
+If the failures are independent, then
 $$
-(1-p_{\text{err}})^T \;=\; \exp\!\bigl(T\ln(1-p_{\text{err}})\bigr)\;\le\;\exp(-Tp_{\text{err}}), \qquad \text{(A.0.6b)}
+P_{\text{succ}}
+=
+\prod_{t=1}^T\bigl(1-\mathbb P(F_t)\bigr)
+\ge
+(1-p_{\text{err}})^T.
+\tag{A.0.6b}
 $$
-since $\ln(1-p)\le -p$ for $p\in[0,1)$.
 
-*Proof.* The lower bound is the union bound. The exponential bound follows from $\ln(1-p)\le -p$. □
+*Proof.* The first bound is the union bound. Under independence, the complement events are independent, so their intersection probability is the displayed product. Each factor is at least $1-p_{\text{err}}$, proving the second bound. ∎
 
 **Definition A.0.4 (Effective Complexity):** Errors reduce effective complexity contributing to performance:
 $$
 C_{\text{eff}}(p_{\text{err}}) := C_{\text{alloc}} P_{\text{succ}}(T, p_{\text{err}}) = C_{\text{alloc}} (1 - p_{\text{err}})^T \quad \text{(A.0.7)}
 $$
 
-**Proposition A.0.5 (Error-Induced Benefit Loss):** The reduction in predictive performance due to errors creates effective penalty:
+**Proposition A.0.5 (Error-Induced Benefit Loss):** Let $T\ge1$, $\Gamma_0>0$, $C_{\mathrm{alloc}}>0$, and assume $PP$ is differentiable with $PP'(c)>0$ on $0<c\le C_{\mathrm{alloc}}$. Define
 $$
-V_{\text{err}}(p_{\text{err}}) := \Gamma_0 [PP(C_{\text{alloc}}) - PP(C_{\text{eff}}(p_{\text{err}}))] \quad \text{(A.0.8)}
+V_{\text{err}}(p_{\text{err}})
+:=\Gamma_0[PP(C_{\text{alloc}})-PP(C_{\text{eff}}(p_{\text{err}}))].
+\tag{A.0.8}
 $$
-The marginal penalty is:
+Then, for $p_{\text{err}}\in[0,1)$,
 $$
-V_{\text{err}}'(p_{\text{err}}) = \Gamma_0 T C_{\text{alloc}} PP'(C_{\text{eff}}) (1 - p_{\text{err}})^{T-1} > 0 \quad \text{(A.0.9)}
+V_{\text{err}}'(p_{\text{err}})
+=\Gamma_0TC_{\text{alloc}}PP'(C_{\text{eff}})(1-p_{\text{err}})^{T-1}>0.
+\tag{A.0.9}
 $$
-for $p_{\text{err}} \in [0,1)$. □
+
+*Proof.* Equation (A.0.7) gives
+$$
+C_{\text{eff}}'(p)
+=-TC_{\text{alloc}}(1-p)^{T-1}.
+$$
+The chain rule therefore yields
+$$
+V_{\text{err}}'(p)
+=-\Gamma_0PP'(C_{\text{eff}}(p))C_{\text{eff}}'(p)
+=\Gamma_0TC_{\text{alloc}}PP'(C_{\text{eff}}(p))(1-p)^{T-1}.
+$$
+Every factor in the last expression is positive for $0\le p<1$, proving the claim. ∎
 
 **Stage 4: Optimal Error Rate**
 PCE drives the system to minimize total error-related potential, balancing reliability costs and error penalties.
@@ -394,25 +497,67 @@ $$
 defined on $(0, p_{\text{err},0}]$.
 
 **Theorem A.0.5 (Existence of an Optimal Error Rate; Uniqueness under Dominant Cost Convexity)**
-There exists at least one value $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ minimizing $V_{\text{tot}}(p_{\text{err}})$. If, in addition, the **Assumption of Dominant Cost Convexity** holds, then this minimizer is unique.
-
-*Proof.*
-*   **Continuity:** Both $V_{\text{rel}}$ and $V_{\text{err}}$ are continuous on $(0, p_{\text{err},0}]$ and $C^1$ on any closed subinterval $[\epsilon, p_{\text{err},0}]$ with $\epsilon>0$, under standard assumptions for $R(C)$ and $PP(C)$.
-*   **Blow-up at $p_{\text{err}}\to 0^+$:** By Proposition A.0.4, $C_{\text{err}}(p_{\text{err}})=A\ln(p_{\text{err},0}/p_{\text{err}})\to\infty$ as $p_{\text{err}}\to 0^+$. By Definition 3a, $R(C)$ is unbounded as $C\to\infty$ (with $\gamma_p>1$), hence $V_{\text{rel}}(p_{\text{err}})=\lambda R(C_{\text{err}}(p_{\text{err}}))\to\infty$. Meanwhile $V_{\text{err}}(p_{\text{err}})\ge 0$ and remains bounded because $PP(C)$ is bounded on $[0, C_{\text{alloc}}]$ (Definition 7). Therefore $\lim_{p_{\text{err}}\to 0^+} V_{\text{tot}}(p_{\text{err}})=\infty$.
-*   **Existence:** Since $V_{\text{tot}}(p_{\text{err},0})$ is finite and $V_{\text{tot}}(p_{\text{err}})\to\infty$ as $p_{\text{err}}\to 0^+$, there exists $\epsilon>0$ such that $V_{\text{tot}}(p_{\text{err}})>V_{\text{tot}}(p_{\text{err},0})$ for all $p_{\text{err}}\in(0,\epsilon]$. Restricting to the compact interval $[\epsilon, p_{\text{err},0}]$, Weierstrass' theorem implies $V_{\text{tot}}$ attains a minimum at some $p_{\text{err}}^*\in[\epsilon,p_{\text{err},0}]\subset(0,p_{\text{err},0}]$. If $p_{\text{err}}^*<p_{\text{err},0}$, then by differentiability on $(0,p_{\text{err},0})$ it satisfies the first-order condition $V_{\text{tot}}'(p_{\text{err}}^*)=0$.
-*   **Uniqueness under Dominant Cost Convexity:** The second derivative is $V_{\text{tot}}''(p) = V_{\text{rel}}''(p) + V_{\text{err}}''(p)$. For $V_{\text{rel}}$:
-    $$
-    V_{\text{rel}}''(p) = \lambda [R''(C_{\text{err}}) (-A/p)^2 + R'(C_{\text{err}}) (A/p^2)] > 0
-    $$
-    provided $R'' \ge 0$ (convex costs, Definition 3) and $R' > 0$ for $C_{\text{err}} > 0$.
-    Under the **Assumption of Dominant Cost Convexity** (the convexity of $R(C)$ dominates any potential concavity from $PP(C)$), we have $V_{\text{tot}}''(p) > 0$ everywhere, ensuring strict convexity and thus uniqueness of the minimum. □
-
-**Corollary A.0.2 (Asymptotic Scaling of Optimal Error)**
-In the regime where $p_{\text{err}}^*$ is small and $T$ is large, using the convex cost model of Definition 3a ($\gamma_p>1$) and treating $PP'(C_{\text{eff}})$ as slowly varying on the scale of the optimal perturbation, the interior first-order condition yields the implicit asymptotic relation:
+Assume $p_{\mathrm{err},0}>0$, $A>0$, and $\lambda>0$. Assume the actual overhead function $C_{\mathrm{err}}:(0,p_{\mathrm{err},0}]\to[0,\infty)$ is finite and continuous and satisfies the converse bound
 $$
-p_{\text{err}}^* \approx \frac{\lambda r_p(T_{\text{eff}})\, \gamma_p A^{\gamma_p}}{\Gamma_0 T C_{\text{alloc}} PP'(C_{\text{alloc}})} \left[\ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}^*}\right)\right]^{\gamma_p-1} \quad \text{(A.0.11)}
+C_{\mathrm{err}}(p)
+\ge
+A\ln\!\left(\frac{p_{\mathrm{err},0}}p\right).
 $$
-Thus, up to the slowly varying logarithmic factor, $p_{\text{err}}^* = \Theta((\ln T)^{\gamma_p-1}/T)$ as $T\to\infty$, and hence $p_{\text{err}}^* < 1/2$ for sufficiently large $T$. □
+Assume $R:[0,\infty)\to[0,\infty)$ is continuous and coercive, $R(c)\to\infty$ as $c\to\infty$, and assume the performance contribution $V_{\mathrm{err}}$ is finite, bounded, and continuous on $(0,p_{\mathrm{err},0}]$. Then
+$$
+V_{\mathrm{tot}}(p)
+:=
+\lambda R(C_{\mathrm{err}}(p))+V_{\mathrm{err}}(p)
+$$
+has a minimizer $p_{\mathrm{err}}^*\in(0,p_{\mathrm{err},0}]$. If $V_{\mathrm{tot}}$ is strictly convex on this interval under Dominant Cost Convexity, the minimizer is unique. If it lies in the interior and $V_{\mathrm{tot}}$ is differentiable there, it satisfies $V_{\mathrm{tot}}'(p_{\mathrm{err}}^*)=0$.
+
+*Proof.* The converse bound has a right-hand side tending to infinity as $p\downarrow0$; therefore $C_{\mathrm{err}}(p)\to\infty$. Coercivity of $R$ then gives
+$$
+V_{\mathrm{rel}}(p)=\lambda R(C_{\mathrm{err}}(p))\longrightarrow\infty.
+$$
+Since $V_{\mathrm{err}}$ is bounded, $V_{\mathrm{tot}}(p)\to\infty$ as $p\downarrow0$. Continuity of $C_{\mathrm{err}}$, $R$, and $V_{\mathrm{err}}$ makes $V_{\mathrm{tot}}$ continuous.
+
+Choose $\epsilon\in(0,p_{\mathrm{err},0})$ so that
+$$
+V_{\mathrm{tot}}(p)>V_{\mathrm{tot}}(p_{\mathrm{err},0})
+\quad\text{for }0<p\le\epsilon.
+$$
+Continuity makes $V_{\mathrm{tot}}$ continuous on the compact interval $[\epsilon,p_{\mathrm{err},0}]$. The extreme-value theorem as stated by Berge (1963) applies because the domain is nonempty and compact and the function is real-valued and continuous; it supplies a minimizer on that interval. The displayed strict inequality excludes every point in $(0,\epsilon]$ from being a global minimizer, so this is a minimizer on $(0,p_{\mathrm{err},0}]$.
+
+If two distinct minimizers $p_1,p_2$ existed under strict convexity, then
+$$
+V_{\mathrm{tot}}\!\left(\frac{p_1+p_2}{2}\right)
+<\frac{V_{\mathrm{tot}}(p_1)+V_{\mathrm{tot}}(p_2)}2,
+$$
+contradicting minimality. Thus the minimizer is unique. At an interior differentiability point, Fermat's elementary difference-quotient argument gives $V_{\mathrm{tot}}'(p_{\mathrm{err}}^*)=0$. ∎
+
+**Corollary A.0.2 (Scaling of the Reduced Stationarity Model)**
+Let $a:=\gamma_p-1>0$ and let $K,p_0>0$. Suppose that, for all sufficiently large $T$, a reduced stationarity model has a solution $p_T\in(0,p_0)$ satisfying
+$$
+p_T=\frac KT\left[\ln\left(\frac{p_0}{p_T}\right)\right]^a,
+\qquad p_T\longrightarrow0.
+\tag{A.0.11}
+$$
+Then
+$$
+p_T\sim \frac K T(\ln T)^a,
+$$
+and consequently $p_T<1/2$ for all sufficiently large $T$.
+
+*Proof.* Put $L_T:=\ln(p_0/p_T)$. Taking logarithms of (A.0.11) gives
+$$
+L_T=\ln T+\ln\left(\frac{p_0}{K}\right)-a\ln L_T.
+\tag{A.0.11a}
+$$
+Because $p_T\to0$, one has $L_T\to\infty$. For large $T$, $L_T>1$, so (A.0.11a) yields
+$$
+L_T\le \ln T+\max\!\left\{\ln\left(\frac{p_0}{K}\right),0\right\}.
+$$
+Hence $\ln L_T=O(\ln\ln T)$. Dividing (A.0.11a) by $\ln T$ therefore gives $L_T/\ln T\to1$. Substitution in (A.0.11) yields
+$$
+\frac{p_T}{K(\ln T)^a/T}=\left(\frac{L_T}{\ln T}\right)^a\longrightarrow1.
+$$
+The right-hand side tends to zero because $(\ln T)^a/T\to0$, proving the final assertion. This corollary applies to the reduced equation (A.0.11); deriving that equation from the full $V_{\mathrm{tot}}'(p)=0$ condition requires a separate uniform approximation bound for $(1-p)^T$ and $PP'(C_{\mathrm{eff}}(p))$. ∎
 
 **Epistemic Status:** The derivation relies on:
 1.  **QEC Compatibility Certificate $\mathfrak C_{\mathrm{QEC}}$ or Golay-QEC Bootstrap Record $\mathfrak C_{\mathrm{GQEC}}$:** The former QEC-compatibility assumption is a finite certificate gate. It must record the retained noise model, locality window, implementable code and recovery instruments, threshold inequality, and PCE benefit gap before the SPAP/RUD reliability claim is promoted. The Golay witness of Proposition Z.13b.7 supplies the code-theoretic part only when embedded in the physical syndrome/recovery/threshold record of Definition A.0.1q.1. It is not supplied by the existence of finite ND-RID links or by the abstract Golay code alone.
@@ -427,7 +572,16 @@ Individual MPUs possess minimal self-referential capacity ($K_0 = 3$ bits, §A.0
 **Proposition A.0.6 (Compositional Enhancement)**
 For a network of $n$ MPUs with individual Hilbert spaces $\mathcal{H}_0 \cong \mathbb{C}^8$, the composite Hilbert space is $\mathcal{H}_{\text{composite}} = \mathcal{H}_0^{\otimes n} \cong \mathbb{C}^{8^n}$. The composite system's state space dimension grows exponentially: $\dim(\mathcal{H}_{\text{composite}}) = 8^n$.
 
-*Proof.* Standard tensor product structure in quantum mechanics. □
+*Proof.* Let $e_1,\ldots,e_8$ be an orthonormal basis of $\mathcal H_0$. The elementary tensors
+$$
+e_{i_1}\otimes\cdots\otimes e_{i_n},
+\qquad 1\le i_1,\ldots,i_n\le8,
+$$
+are orthonormal because their pairwise inner products are products of Kronecker deltas. By the definition of the Hilbert tensor product they span $\mathcal H_0^{\otimes n}$. There are $8^n$ such tensors, so they form an orthonormal basis and
+$$
+\dim(\mathcal H_0^{\otimes n})=8^n.
+$$
+Mapping this basis bijectively to the standard basis of $\mathbb C^{8^n}$ gives the asserted Hilbert-space isomorphism. ∎
 
 This exponential growth provides resources for representing complex computations. A system of $n$ MPUs can represent $8^n$ distinguishable configurations, enabling encoding of arbitrarily large Gödel numbers, storage of intermediate results, and execution of deep circuits.
 
@@ -435,15 +589,35 @@ This exponential growth provides resources for representing complex computations
 
 **Theorem A.0.6 (Conditional Network Universality with Explicit Overhead Scope)**
 A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions and with sufficient additional resources for working memory, error-correction overhead, and circuit execution, can realize full Property R. More precisely:
-1.  **Representation:** For any Turing machine with $k$ states and $m$ tape symbols, a standard Gödel encoding of the transition table requires $L_{TM} = O(k \cdot m \cdot \log(k \cdot m))$ bits. A network of
+1.  **Representation:** For a deterministic Turing machine with $k\ge2$ states and $m\ge2$ tape symbols, a direct uniform-length encoding of its $km$ transition entries uses
     $$
-    n \geq \left\lceil \frac{L_{TM}}{3} \right\rceil = O(k \cdot m \cdot \log(k \cdot m))
+    L_{TM}
+    =
+    km\bigl(\lceil\log_2k\rceil+\lceil\log_2m\rceil+1\bigr)
+    =
+    \Theta(km\log(km))
     $$
-    MPUs (each providing 3 bits via $K_0$) provides the lower bound required to encode the machine description. This bound covers description storage only.
+    bits, up to a constant-size format header. The number of 3-bit MPU carriers required by this encoding is
+    $$
+    n_{\mathrm{desc}}
+    =
+    \left\lceil\frac{L_{TM}}3\right\rceil
+    =
+    \Theta(km\log(km)).
+    $$
+    This count concerns description storage only; it is neither the total simulation resource nor a lower bound against all compressed descriptions.
 2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2006] and the accepted $\mathfrak C_{\mathrm{QEC}}$ for the retained noise model and code family, or an accepted $\mathfrak C_{\mathrm{GQEC}}$ discharging it on the protected window, the network can implement the protected finite gate approximations required by the target computation with the certified overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine once the required working-memory, code-overhead, and execution resources are available.
 3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ inside $\mathfrak C_{\mathrm{QEC}}$, or inside $\mathfrak C_{\mathrm{GQEC}}$ when it discharges that certificate) ensures logical error rates can be suppressed to the certified target values with the recorded overhead, enabling reliable execution of the finite-depth predicate-evaluation circuits used in the noise-robust SPAP/RUD windows.
 
-*Proof.* Representation capacity follows from exponential state space growth. The Gödel encoding of a $k$-state, $m$-symbol Turing machine transition table requires specifying for each of $k \cdot m$ pairs (state, symbol) the write symbol, move direction, and next state, requiring $O(k \cdot m \cdot \log(k \cdot m))$ bits total. With each MPU contributing 3 bits ($K_0$), the network requires $n = O(k \cdot m \cdot \log(k \cdot m))$ MPUs as a lower bound for machine-description storage. Simulation capability follows from the Solovay-Kitaev theorem guaranteeing any unitary approximation with polynomial gate overhead, combined with classical-to-quantum simulation. Evaluation reliability follows from the fault-tolerance threshold theorem enabling arbitrarily low logical error rates below physical threshold. Full operational universality therefore holds only when the additional working-memory, QEC, and circuit-execution resources assumed in the theorem statement are also provided. □
+*Proof.* Item 1 gives the direct transition-table length
+$$
+L_{TM}=km\bigl(\lceil\log_2k\rceil+\lceil\log_2m\rceil+1\bigr)
+$$
+and hence the description-carrier count $n_{\mathrm{desc}}=\lceil L_{TM}/3\rceil$. The theorem separately assumes sufficient working memory and execution resources, so this description count is not used as a bound on the total network size.
+
+For item 2, the accepted protected-gate ledger supplies a finite gate set $G\subset SU(d)$ that generates a dense subgroup, is closed under inverses, and is implementable on the protected code space. Let $U\in SU(d)$ be any target gate appearing in the finite simulation circuit and let $0<\epsilon<1$ be its recorded approximation tolerance. The Solovay–Kitaev theorem (Kitaev, 1997; Dawson and Nielsen, 2006) applies to $(G,U,\epsilon)$ and gives a word in $G$ whose operator-norm error is at most $\epsilon$, with polylogarithmic word length in $1/\epsilon$. Applying this construction to each gate of the finite reversible classical simulation circuit gives the protected finite gate approximation asserted in item 2. The working-memory hypothesis supplies the tape segment used during that finite computation.
+
+For item 3, the accepted certificate $\mathfrak C_{\mathrm{QEC}}$, or the accepted bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ discharging the same entries, records $p_{\mathrm{err},0}<p_{\mathrm{th}}$, an implementable syndrome/recovery instrument, and a logical-error suppression and overhead bound for the nominated finite circuit. Thus reliability is an explicit certificate consequence for that noise model, code family, and circuit window; no uncited threshold theorem is used to extend it to a different model. The representation, protected simulation, and reliable predicate-evaluation clauses are therefore established under exactly the theorem's declared resource and certificate hypotheses. ∎
 
 **Corollary A.0.3 (Resource Requirements for SPAP/RUD)**
 The SPAP diagonalization (Theorems A.1.1, A.1.3) requires:
@@ -495,13 +669,13 @@ With Property R established through both logical necessity and physical realizat
 *   **SPAP (Theorems A.1.1-A.1.4):** Property R enables construction of self-referential systems that predict their own state. Diagonalization proves perfect self-prediction is impossible, establishing Logical Indeterminacy (Definition 12) and fundamental limit $\alpha_{\text{SPAP}}$.
 *   **RUD (Theorems A.2.3-A.2.4):** Property R enables construction of algorithms interacting with reflexive systems. Diagonalization proves certain properties are undecidable, extending computational limits beyond halting problem to interactive contexts.
 
-**Physical Applicability:** Theorem A.0.2 and network universality (Theorem A.0.6) guarantee that physical MPU networks converge to configurations where SPAP and RUD theorems apply operationally. Abstract logical limits manifest as physical constraints on prediction and computation in thermodynamically optimized systems.
+**Physical Applicability:** On a branch carrying the optimizer, robustness, QEC, protected-gate, memory, and execution certificates of Theorems A.0.2 and A.0.6, a physical MPU network possesses Effective Operational Property R for the covered finite tasks and windows. SPAP additionally requires its diagonal-closure and nominated-predictor hypotheses, while RUD requires its computable RID and interaction-model hypotheses. The resulting conclusions constrain prediction and computation only on windows satisfying all of those conditions. These theorems do not establish dynamical convergence of an arbitrary MPU network to such a certified configuration.
 
 **Falsifiability:** The physical instantiation makes testable predictions. If the fundamental substrate is intrinsically non-QEC-compatible, meaning that its retained noise is fundamentally nonlocal for every protected branch, or its baseline error rates remain irreducibly above threshold for every accessible direct certificate $\mathfrak C_{\mathrm{QEC}}$ and every Golay-bootstrap certificate $\mathfrak C_{\mathrm{GQEC}}$, this would falsify the PU framework's claim that physical law emerges from predictive optimization in SPAP/RUD-capable networks. On the Golay-bootstrap subbranch, additional falsifiers are failure of the retained Golay syndrome statistics, failure of the finite syndrome/recovery maps to implement the recorded $[[23,1,7]]$ witness, or failure of the protected-window threshold inequality after the branch records are forward-locked. The framework requires that Nature's substrate supports at least one finite, below-threshold, operationally implementable protected-computation branch.
 
 ### A.0.7 Transition to Formal Proofs
 
-Having established that the MPU network dynamically converges to a configuration possessing Effective Operational Property R, we are now justified in applying the formal machinery of self-reference to physical predictive systems. The following sections (A.1 and A.2) formally derive the Self-Referential Paradox of Accurate Prediction (SPAP) and Reflexive Undecidability (RUD), which constitute the fundamental logical limits acting upon this physically instantiated computational substrate.
+For an MPU network satisfying the optimizer, robustness, QEC, protected-execution, diagonal-closure, and resource certificates stated in Theorems A.0.2 and A.0.6, the formal self-reference machinery applies to the covered physical tasks and windows. Sections A.1 and A.2 derive the Self-Referential Paradox of Accurate Prediction (SPAP) and Reflexive Undecidability (RUD) under their stated class and window hypotheses. The physical applicability is conditional on those certificates and does not assert network convergence.
 
 ### A.0.8 Conceptual Non-Redundancy of the Core Constraints
 
@@ -546,10 +720,17 @@ This is a logical contradiction (equivalent to $x = \neg x$). The contradiction 
 
 ### A.1.3 Theorem A.1.2 (Noise Robustness - Deterministic SPAP)
 
-Let the conditions of Theorem A.1.1 hold. Consider a system $S_{noisy}$ implementable within $\mathcal{M}$ that *attempts* to implement the rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ (where $\hat{\phi}_t$ is its internal prediction), but due to operational noise (inherent in ND-RID realization of computation), it succeeds with probability $1-p_{err}$ and fails (setting $\phi_{t+1} = \hat{\phi}_t$) with probability $p_{err}$ per cycle, where $0 \le p_{err} < 1/2$. Let $P_f$ be any external deterministic predictor outputting $\hat{\phi}_{P_f, t}$ for $\phi_{t+1}$. The probability that $P_f$ achieves perfect prediction ($\hat{\phi}_{P_f, t} = \phi_{t+1}$) for $k$ consecutive cycles tends to zero as $k \to \infty$.
+Let the conditions of Theorem A.1.1 hold and fix a deterministic predictor $P_f$. Construct $S_{noisy}^{P_f}$ so that in cycle $t$ it reads $P_f$'s prediction $\hat\phi_{P_f,t}$ and outputs $\operatorname{NOT}(\hat\phi_{P_f,t})$ with conditional probability $1-p_{err}$ and $\hat\phi_{P_f,t}$ with conditional probability $p_{err}$, where $0<p_{err}<1/2$. Assume the fresh-noise condition
 $$
-\lim_{k\to\infty} P(\text{P}_f \text{ is correct for cycles } t \dots t+k-1) = 0 \quad (\text{for } p_{err} < 1/2)
-\quad (\text{A.2})
+\mathbb P\!\left(
+\phi_{t+1}=\hat\phi_{P_f,t}\mid h_{t-1},\hat\phi_{P_f,t}
+\right)=p_{err}
+$$
+for every admissible history $h_{t-1}$. Then
+$$
+\mathbb P(P_f\text{ is correct for cycles }t,\ldots,t+k-1)
+\le p_{err}^{k}\longrightarrow0.
+\tag{A.2}
 $$
 
 *Proof:* Let $P(\text{correct}_t)$ be the probability that $P_f$'s prediction $\hat{\phi}_{P_f, t}$ matches the actual outcome $\phi_{t+1}$ in cycle $t$. The system $S_{noisy}$ generates an internal prediction $\hat{\phi}_t$. The actual outcome is $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ with probability $1-p_{err}$ and $\phi_{t+1} = \hat{\phi}_t$ with probability $p_{err}$.
@@ -633,28 +814,42 @@ which is exactly the required self-referential fixed-point equation. Since $\Psi
 
 **Definition A.2.2 (ND-RID = Definition 6 - Non-Deterministic).** A Non-Deterministic Reflexive Interaction Dynamic system is a tuple $S=(X,Y,O,V_{\text{prob}},T_{\text{prob}})$, where $X, Y, O$ are as above, $V_{\text{prob}}: X \times Y \to \Delta(O)$ is the probabilistic outcome function yielding a distribution over outcomes ($P(o | x, y) = (V_{\text{prob}}(x, y))(o)$), and $T_{\text{prob}}: X \times Y \times O \to \Delta(X)$ is the probabilistic state transformation function yielding a distribution over next states ($P(x' | x, y, o) = (T_{\text{prob}}(x, y, o))(x')$). The MPU 'Evolve' process (Definition 27) is an instance of ND-RID.
 
-### A.2.2 Lemma A.2.1 (Properties of RID = Lemma 2)
+### A.2.2 Lemma A.2.1 (Behaviors Permitted by RID = Lemma 2)
 
-RID systems (Definition A.2.1, A.2.2) inherently possess:
-1.  **Potential Irrecoverability of Prior State:** The state transformation function ($T$ or $T_{prob}$) may not be invertible with respect to the initial state $x$, meaning $x$ cannot always be uniquely determined from the post-interaction state $x'$ and the interaction details $(y, o)$.
-2.  **Information Context Shift:** The outcome $o_n$ generated by an interaction $y_n$ at step $n$ depends only on the state $x_n$. The resulting state $x_{n+1}$ then defines a new context for subsequent interactions and predictions. Information gained pertains specifically to the context ($x_n$) in which it was acquired.
-3.  **Predictive Instability Potential:** If the system dynamics ($T/T_{prob}$) are designed such that the state transformation actively counteracts or invalidates accurate predictions identified via the interaction $y$ and outcome $o$, achieving stable, accurate self-prediction can become logically or dynamically impossible.
+RID systems as defined in Definitions A.2.1 and A.2.2 permit, but do not universally exhibit:
+1.  **Irrecoverability of Prior State:** For specified $(y,o)$, the map $x\mapsto T(x,y,o)$ may be noninjective; the analogous stochastic kernels may also fail to identify the prior state.
+2.  **Information Context Shift:** The law of the next outcome is evaluated from the current state and current interaction, and the transition produces the state used at the following step.
+3.  **Predictive Instability:** An RID transition may be chosen to negate a prediction encoded in the interaction.
 
-*Proof:*
-1.  **Irrecoverability:** To be invertible, for every $(x', y, o)$, there must exist a unique $x$ such that $x' = T(x, y, o)$. This is not generally required by the definition of $T$. Many different $x$ states could potentially lead to the same $x'$ under the same interaction $(y,o)$.
-2.  **Context Shift:** Follows directly from the definitions $o_n = V(x_n, y_n)$ and $x_{n+1} = T(x_n, y_n, o_n)$ (or probabilistic versions). The dependence is sequential and context-dependent.
-3.  **Instability:** If $T$ includes logic similar to the SPAP construction (e.g., if $y$ represents a prediction about property $P$ of $x_{n+1}$, and $o$ verifies it, then $T$ modifies $x_{n+1}$ to negate property $P$), it creates a self-referential loop akin to Theorem A.1.1, inherently preventing stable accurate prediction of $P$. QED
+*Proof.* For item 1, take $X=\{0,1\}$ and singleton sets $Y=O=\{0\}$, with $V(x,0)=0$ and $T(x,0,0)=0$. Then
+$$
+T(0,0,0)=T(1,0,0),
+$$
+so the prior state cannot be recovered. Degenerate probability measures concentrated on these deterministic values give the same example for ND-RID.
+
+For item 2, a deterministic trajectory satisfies
+$$
+o_n=V(x_n,y_n),\qquad x_{n+1}=T(x_n,y_n,o_n),\qquad
+o_{n+1}=V(x_{n+1},y_{n+1}).
+$$
+Thus the next outcome depends on the context produced by the preceding transition. In the nondeterministic case the same assertion is the composition of the conditional kernels $V_{\mathrm{prob}}(\cdot\mid x_n,y_n)$ and $T_{\mathrm{prob}}(\cdot\mid x_n,y_n,o_n)$.
+
+For item 3, let $X=Y=\{0,1\}$, let an interaction $q\in Y$ encode a prediction of the next state, take $O=\{0\}$, and define
+$$
+V(x,q)=0,\qquad T(x,q,0)=1-q.
+$$
+For either prediction $q$, the realized next state is its negation. Hence the RID definitions admit counter-predictive instability. These examples prove possibility only; injective, context-independent, or stable RID models are also allowed by the definitions. ∎
 
 ### A.2.3 Reflexive Undecidability (RUD)
 
 Interaction with RID systems possessing Effective Operational Property R to determine certain properties can be computationally undecidable, meaning no algorithm interacting with the system can guarantee a correct answer in finite time for all systems in the class.
 
-**Theorem A.2.3 (Deterministic Reflexive Undecidability = Part of Theorem 12)**
+**Theorem A.2.3 (Deterministic Reflexive Undecidability for a Terminal-Bit Property = Part of Theorem 12)**
 
-Let $\mathcal{C}_{DRID}$ be a class of D-RID systems (Definition A.2.1) whose state transitions $T$ and outcome functions $V$ are computable and whose configurations can be represented and reliably manipulated within a framework possessing Effective Operational Property R (Definition A.0.1). There exist properties $P$ of systems $S \in \mathcal{C}_{DRID}$ such that no interactive algorithm $M_{decide}$ (e.g., an **Interactive Turing Machine, ITM**, assumed to always halt) can correctly decide $P(S)$ for all $S \in \mathcal{C}_{DRID}$ through a finite sequence of interactions.
+Let $\mathcal C_{DRID}$ be a computable D-RID class with Effective Operational Property R and assume it is closed under the recursion-theoretic diagonal construction below. Equip each constructed system with a designated terminal bit $b$. Let $P_{term}(S)$ mean that $b=1$ when a nominated total interactive decider halts. No total interactive algorithm can correctly decide $P_{term}(S)$ for every $S\in\mathcal C_{DRID}$ through a finite interaction sequence.
 
 *Proof (Diagonalization):*
-Assume, for contradiction, that a total ITM $M_{decide}$ exists that halts and correctly decides property $P$ for all $S \in \mathcal{C}_{DRID}$ via a finite interaction sequence $y_1, y_2, \dots, y_k$. By Effective Operational Property R, we can construct a specific D-RID system $S_{diag} \in \mathcal{C}_{DRID}$ within the framework. $S_{diag}$ is designed to simulate the interaction between $M_{decide}$ and itself. The state $x$ of $S_{diag}$ encodes the simulated interaction history.
+Assume that a total ITM $M_{decide}$ halts and correctly decides $P_{term}$ for every $S\in\mathcal C_{DRID}$. By the closure hypothesis and Kleene's Second Recursion Theorem (Kleene, 1952), construct $S_{diag}\in\mathcal C_{DRID}$ with access to its own code. Its state stores the interaction transcript and its designated terminal bit.
 $S_{diag}$'s internal logic for determining its outcome $o=V(x,y)$ and next state $x'=T(x,y,o)$ when interacted with by the *real* $M_{decide}$ (using interaction $y$) is as follows:
 1.  $S_{diag}$ uses its Property R capabilities to simulate $M_{decide}$ running on a representation of $S_{diag}$ itself ($\ulcorner S_{diag} \urcorner$), incorporating the current interaction $y$ into the simulated history.
 2.  $S_{diag}$ simulates $M_{decide}$ until it halts (which it must by assumption) and determines the output decision $d \in \{\text{Yes}, \text{No}\}$ regarding property $P(S_{diag})$.
@@ -667,12 +862,12 @@ Now, consider the *real* interaction between $M_{decide}$ and $S_{diag}$.
 *   Suppose $M_{decide}$ halts and outputs "No", claiming $P(S_{diag})$ is False. By the same logic, $S_{diag}$ simulated this and transitioned to a final state where $P$ is True. Thus, $M_{decide}$'s output is again incorrect.
 Since $M_{decide}$ must halt but produces an incorrect answer in either case, it contradicts the assumption that $M_{decide}$ correctly decides $P$ for all systems in $\mathcal{C}_{DRID}$. Therefore, no such total halting $M_{decide}$ can exist, and property $P$ is interactively undecidable for this class. QED
 
-**Theorem A.2.4 (Non-deterministic Reflexive Undecidability = Part of Theorem 12)**
+**Theorem A.2.4 (Uniformly Bounded Non-deterministic Reflexive Undecidability = Part of Theorem 12)**
 
-Let $\mathcal{C}_{NDRID}$ be a class of ND-RID systems (Definition A.2.2) whose transition probabilities $V_{\text{prob}}, T_{\text{prob}}$ are computable functions of the state and interaction, and which can be represented and reliably manipulated within a framework possessing Effective Operational Property R (Definition A.0.1). There exist properties $P$ (potentially statistical, e.g., concerning limiting probabilities or average behaviors) of systems $S \in \mathcal{C}_{NDRID}$ such that no interactive algorithm $M_{decide}'$ (e.g., a **probabilistic ITM**) can be guaranteed to halt and correctly decide $P(S)$ with arbitrarily high confidence (probability $1-\delta$ for any $\delta>0$) for all $S \in \mathcal{C}_{NDRID}$ within a finite interaction time.
+Let $\mathcal C_{NDRID}$ be closed under the diagonal construction below, and assume its finite-horizon transition kernels have finite branching and rational probabilities. Fix $T_{\max}<\infty$. For every probabilistic interactive algorithm $M_{decide}'$ that halts within at most $T_{\max}$ interactions on every system in the class, there is a computable statistical property $P$ and a system $S'_{diag}\in\mathcal C_{NDRID}$ on which the algorithm's probability of a correct decision is at most $1/2$. Hence no uniformly $T_{\max}$-bounded algorithm decides every such property with confidence $1-\delta$ for any $\delta<1/2$.
 
 *Proof (Diagonalization):*
-Fix any probabilistic ITM $M_{decide}'$ that (by assumption) halts within at most $T_{max}$ interactions and outputs a decision $d\in\{\text{Yes},\text{No}\}$ intended to decide a property $P(S)$ for all $S\in\mathcal{C}_{NDRID}$.
+Fix such an algorithm $M_{decide}'$. The uniform horizon and finite rational branching make every finite-transcript conditional probability used below a rational number obtained by a finite sum, so comparison with $1/2$ is decidable.
 
 Define a statistical property $P$ as follows. Fix a designated probe interaction $y_{\text{test}}$. After the interaction between $M_{decide}'$ and $S$ halts, consider the induced conditional outcome probability for the probe, $p_{\text{test}}:=\mathbb{P}(o=1 \mid y_{\text{test}}, x_{\text{final}})$. Let $P(S)$ be the statement $p_{\text{test}} > 1/2$.
 
@@ -745,18 +940,21 @@ $$
 $$
 
 *Proof.* Define the partial computable function
-\[
+$$
 g(a,n):=\Psi(φ_a(a),n).
-\]
-Because $(a,n)\mapsto φ_a(a)$ is partial computable (by universality of the numbering), $g$ is partial computable. By the $s$-$m$-$n$ theorem, there exists a total computable function $s:\mathbb{N}\to\mathbb{N}$ such that for all $a,n$,
-\[
+$$
+Universality of the accepted effective numbering makes $(a,n)\mapsto φ_a(a)$ partial computable, and composition with the partial computable $\Psi$ makes $g$ partial computable uniformly in $(a,n)$. The parameter theorem, also called the $s$-$m$-$n$ theorem (Kleene, 1952), therefore applies to this accepted numbering: there exists a total computable function $s:\mathbb N\to\mathbb N$ such that for all $a,n$,
+$$
 φ_{s(a)}(n)=g(a,n)=\Psi(φ_a(a),n).
-\]
-Let $\hat{s}$ be an index for $s$, i.e. $φ_{\hat{s}}=s$. Set $\beta:=s(\hat{s})=φ_{\hat{s}}(\hat{s})$. Then for all $n$,
-\[
-φ_\beta(n)=φ_{s(\hat{s})}(n)=\Psi(φ_{\hat{s}}(\hat{s}),n)=\Psi(\beta,n),
-\]
-as required. □
+$$
+Let $\hat s$ be an index for $s$, so $φ_{\hat s}=s$, and set $\beta:=s(\hat s)=φ_{\hat s}(\hat s)$. Then, for every $n$,
+$$
+φ_\beta(n)
+=φ_{s(\hat s)}(n)
+=\Psi(φ_{\hat s}(\hat s),n)
+=\Psi(\beta,n).
+$$
+Thus $\beta$ is the required self-referential index. ∎
 
 The LITE function $f: \mathbb{N} \to \mathbb{N}$ is defined as $f = φ_{\beta}$, where $\beta$ is the fixed point guaranteed by the Recursion Theorem for the operator $\Psi(\alpha, n)$ that implements the following logic:
 $$
@@ -821,7 +1019,7 @@ The LITE function's structure (Equation A.4.1) provides a concrete arithmetical 
 
 The LITE construction robustly demonstrates that standard Peano Arithmetic, a foundational system of mathematics, possesses sufficient richness to define total computable functions exhibiting dynamic, adaptive self-reference based on bounded internal "proof discovery." It formally shows that capabilities analogous to self-representation, bounded self-simulation/reasoning, and adaptive predicate evaluation—the core components of Property R—are not reliant on exotic computational models but can be realized within a well-understood arithmetical framework.
 
-While MPUs in the PU framework are physical entities operating under POP/PCE optimization, not abstract arithmetical functions, the LITE construction serves as a crucial existence proof for the *type* of computational logic involved. It significantly strengthens the plausibility of the PU hypothesis (e.g., as argued in Theorem A.0.2 (PCE Dynamically Enforces Effective Property R) of Appendix A.0) that MPUs, possessing at least $K_0$ complexity and driven by optimization, can effectively achieve Property R. The resource bounds in PU (e.g., finite complexity $C_P$, costs $R, R_I$) find a conceptual parallel in LITE's bounded proof search $g(n)$. LITE thus provides strong formal grounding for the computational prerequisites underlying key PU results like SPAP, Logical Indeterminacy, and the constraints arising from DSRO-like dynamics.
+MPUs are physical entities rather than abstract arithmetical functions. The LITE construction proves that a standard arithmetical framework can realize total computable functions with bounded adaptive self-reference. It therefore supplies an existence example for the logical form used in the later diagonal arguments. Physical realization by an MPU network is the separate conditional result of Theorem A.0.2 (Conditional Effective Property R at a Certified PCE Optimum), whose optimizer, robustness, QEC, protected-gate, memory, and execution certificates are not supplied by LITE. The PU resource quantities $C_P$, $R$, and $R_I$ may be compared with LITE's bounded proof-search function $g(n)$ only at this structural level.
 
 ## A.5 Complexity-Bounded Incompleteness: Predictor-Indexed Reachability Horizons in Peano Arithmetic
 
@@ -1001,15 +1199,13 @@ Definition A.5.3 uses the same arithmetical infrastructure as §A.4: Gödel codi
 **Lemma A.5.1 (Existence, Truth, and PA Proof-Object).**
 Let $S$ be a predictive system with Effective Operational Property R satisfying $n_S\ge N^*(S)$. Then $G_S$ exists as a closed PA formula, is true in the standard model $\mathbb N$, and has a finite PA proof-object.
 
-*Proof.* For each $j\le N^*(S)$, the diagonal component $S_{\mathrm{diag}}^{(j)}$ is constructible by the diagonal construction of Theorem A.1.1 applied to the corresponding retained self-model prediction register, together with the independent-register amplification construction of Theorem M.10.4. The register-capacity condition $n_S\ge N^*(S)$ supplies the Fisher-orthogonal addressable self-model registers required by Theorem M.10.4.
+*Proof.* For each $j\le N^*(S)$, Theorem A.1.1 constructs the diagonal component $S_{\mathrm{diag}}^{(j)}$, and Theorem M.10.4 supplies the independent-register amplification. The hypothesis $n_S\ge N^*(S)$ supplies the required addressable Fisher-orthogonal registers.
 
-The maps assembling the codes $e_j(S)$, canonical inputs $x_j(S)$, and trace formulas are computable by the primitive-recursive coding and substitution operations used in §A.4. Because each $S_{\mathrm{diag}}^{(j)}$ is a specified finite SPAP-cycle computation on a specified finite input, each has a finite standard trace $\tau_j(S)$ and output bit $y_j(S)$. Therefore each conjunct
-
+The coding, substitution, and bounded transition-checking operations of §A.4 are primitive recursive. A candidate trace has finite length, so $\mathrm{Trace}(e,x,\tau,y)$ is the finite conjunction asserting the initial configuration, each legal successor configuration, and the terminal output. It is therefore a primitive-recursive relation. Kleene's representability theorem (Kleene 1952) applies because PA represents primitive-recursive relations and all four arguments below are numerals. Each specified computation has a finite standard trace $\tau_j(S)$ with output $y_j(S)$; hence the true closed instance
 $$
 \mathrm{Trace}\left(\overline{e_j(S)},\overline{x_j(S)},\overline{\tau_j(S)},\overline{y_j(S)}\right)
 $$
-
-is a true closed finite-trace fact. By PA representability of primitive-recursive trace checking, each true closed trace instance has a finite PA verification proof. A finite conjunction of PA-provable trace instances is PA-provable. Hence $G_S$ is a closed PA formula, true in $\mathbb N$, with a finite PA proof-object. $\square$
+has a finite PA derivation. The index set $1\le j\le N^*(S)$ is finite, and repeated conjunction introduction combines those derivations into a PA derivation of $G_S$. Thus $G_S$ is closed, true in $\mathbb N$, and has a finite PA proof-object. ∎
 
 ### A.5.4 Above-Threshold Predictors, External-Model Safety, and the Lower Witness
 
@@ -1356,7 +1552,7 @@ $$
 \mu_S(G_S)=\infty,
 $$
 
-which becomes a physical processing divergence through Theorem M.10.3, Corollary B.2.1, Theorem B.2, and Theorem M.10.6.
+On a branch satisfying Theorems M.10.3 and M.10.6 and carrying the uniform reduction certificate of Corollary B.2.1, the predictor-indexed boundary inherits the physical processing lower bound of Theorem B.2. Without that reduction certificate, $\mu_S(G_S)=\infty$ is a self-model reachability statement and does not by itself imply the Bernoulli discrimination cost bound.
 
 **Remark A.5.4 (Why the Theorem Is Not Syntactic-Proof Triviality).**
 If a PA proof string for $G_S$ is handed to $S$, $S$ may be able to perform finite syntactic manipulations on the string as an uninterpreted external object. That does not contradict Theorem A.5.1. The theorem concerns the reachability of the proof-content: the act in which $S$ verifies the proof and integrates what it proves about $S$'s own diagonal self-model registers. The divergent term is the self-model integration cost, not the symbol-by-symbol proof-checking cost considered in isolation.
@@ -1491,7 +1687,20 @@ P_B(t,e_{B,t})\ne1.
 \tag{A.5.6a.3}
 $$
 
-*Proof.* Apply the diagonal fixed-point lemma to the formula $\neg\operatorname{Pred}_B(\bar t,x)$. This gives a sentence $E_{B,t}$ satisfying Equation A.5.6a.2. Interpreting the represented predicate in the standard model gives Equation A.5.6a.3. ∎
+*Proof.* The trace-certified predicate $\operatorname{Pred}_B(\bar t,x)$ is an arithmetic formula with the single free code variable $x$, and the arithmetic $\mathcal F$ represents the primitive-recursive coding and substitution operations of §A.4. The diagonal lemma of Gödel (1931) therefore applies to
+$$
+\varphi(x):=\neg\operatorname{Pred}_B(\bar t,x)
+$$
+and supplies a sentence $E_{B,t}$ with code $e_{B,t}$ such that
+$$
+\mathcal F\vdash E_{B,t}\leftrightarrow
+\neg\operatorname{Pred}_B(\bar t,\overline{e_{B,t}}),
+$$
+which is Equation A.5.6a.2. Trace certification makes $\operatorname{Pred}_B(\bar t,\bar e)$ true in $\mathbb N$ exactly when $P_B(t,e)=1$. Interpreting the displayed equivalence in $\mathbb N$ therefore gives
+$$
+\mathbb N\models E_{B,t}\Longleftrightarrow P_B(t,e_{B,t})\ne1,
+$$
+which is Equation A.5.6a.3. ∎
 
 **Theorem A.5.6a.3 (No Stable Self-Processing at the Targeted Time).** For the time-indexed diagonal object $E_{B,t}$,
 $$
@@ -1572,25 +1781,28 @@ By Equation A.5.6a.3 this is exactly the truth condition for $E_{B,t}$. Equation
 
 The regress terminates because $E_{B,t}$ refers to the old register $P_B(t,e_{B,t})$, not to the new register $P_B(t+1,e_{B,t})$. A new diagonal object $E_{B,t+1}$ can be constructed against the next active register, but that is a new object.
 
-**Lemma A.5.6a.5 (Chance-Null Registers Are Update-Null).** Let $M_t$ be the retained model of a predictor $S_t$, let $R_T$ be a finite verification register, and let $\mathcal U_S$ be the admissible update family. For an update $U\in\mathcal U_S$, define
+**Lemma A.5.6a.5 (Chance-Null Registers Are Update-Null under a No-Op Dominance Certificate).** Let $M_t$ be the retained model of a predictor $S_t$, let $R_T$ be a finite verification register, and let $\mathcal U_S$ be the admissible update family. For $U\in\mathcal U_S$, define
 $$
 \Delta Q_U(M_t,R_T)
 =
 Q(U(M_t,R_T))-Q(M_t).
 $$
+Assume that the no-op $U_0(M_t,R_T)=M_t$ is admissible and that a registered no-op dominance certificate establishes both:
+(i) every $U$ with $\mathbb E[\Delta Q_U\mid M_t]=0$ is predictively equivalent to $U_0$ or has strictly larger PCE potential; and
+(ii) every $U$ with $\mathbb E[\Delta Q_U\mid M_t]<0$ has strictly larger PCE potential than $U_0$.
 If
 $$
 \sup_{U\in\mathcal U_S}
 \mathbb E[\Delta Q_U(M_t,R_T)\mid M_t]\le0,
 \tag{A.5.6a.10}
 $$
-then the retained PCE update is the identity in the predictive quotient:
+then
 $$
 [\mathcal U_{\mathrm{PCE}}(M_t,R_T)]_Q=[M_t]_Q.
 \tag{A.5.6a.11}
 $$
 
-*Proof.* Equation A.5.6a.10 says that no admissible update driven by $R_T$ has positive expected predictive gain. The no-op update $U_0(M_t,R_T)=M_t$ is admissible and changes no retained predictive content. Any nontrivial retained transformation supplied by a chance-null register is either predictively neutral in the quotient or cost-dominated by the no-op. PCE therefore selects the no-change representative in $[\cdot]_Q$. ∎
+*Proof.* The admissible no-op has expected gain zero, so the supremum in (A.5.6a.10) equals zero. By clause (ii), no negative-gain update minimizes the PCE potential. By clause (i), every zero-gain minimizer is either in the no-op predictive equivalence class or is strictly cost-dominated. Hence every retained PCE minimizer lies in $[M_t]_Q$, proving (A.5.6a.11). ∎
 
 **Theorem A.5.6a.6 (Verification-Gated Reachability).** Let
 $$
@@ -1907,9 +2119,13 @@ When PCE minimizers exist in the relevant response-equivalence classes, the reta
 
 *Proof.* The first implication is Theorem A.6.2. The second follows because a closure that tried to be total on the trace-diagonal domain would contradict Theorem A.6.2, so admissible finite-cost closure must be partial or guarded. The third implication is Theorem A.6.4: every nontrivial verified prediction-update cycle induces a stable axiom-stabilizer. The final sentence is the PCE-minimality clause of Definition A.6.3. ∎
 
-**Theorem A.6.6 (Conservativity of the generative non-closure vocabulary).** Adding the vocabulary of generative non-closure, stable partial closure, and axiom-stabilizer is a definitional and status-conservative extension of the preceding PU formal apparatus. It changes no theorem, branch condition, numerical backbone value, or certificate status unless an explicit later theorem changes the underlying response domain, cost functional, PPI quotient, or branch certificate.
+**Theorem A.6.6 (Conservativity of the generative non-closure vocabulary).** Assume Definitions A.6.1–A.6.3 are explicit, nonrecursive definitions in the preceding PU language. Adding the vocabulary of generative non-closure, stable partial closure, and axiom-stabilizer is then a definitional and status-conservative extension of the preceding PU formal apparatus. It changes no theorem in the earlier language, branch condition, numerical backbone value, or certificate status unless a later theorem changes the underlying response domain, cost functional, PPI quotient, or branch certificate.
 
-*Proof.* Definitions A.6.1-A.6.3 introduce abbreviations for objects already present in §§A.0-A.5: represented finite trace domains, binary verification predicates, finite prediction-update cycles, response quotients, PCE cost comparison, and predictor reachability. Theorem A.6.2 is an immediate consequence of Theorem A.5.1. Theorem A.6.4 is an unpacking of the Fundamental Predictive Loop together with Remark A.0.1.1 and the Logical-Structural Assumptions of §A.0.2. Corollary A.6.5 combines those results. Therefore any proof that does not invoke the new vocabulary is unchanged, and any proof that does invoke it reduces to the earlier definitions and theorems just cited. No physical or numerical conclusion is promoted in status by this terminology alone. ∎
+*Proof.* Let $L$ be the preceding PU language and $L^+$ its expansion by the symbols introduced in Definitions A.6.1–A.6.3. Define a translation $\tau$ from $L^+$-formulas to $L$-formulas by replacing every new atomic expression by its explicit definiens and then commuting $\tau$ with Boolean connectives and quantifiers. Because the definitions are explicit and nonrecursive, this process terminates and $\tau(\phi)=\phi$ for every $L$-formula $\phi$.
+
+Consider an $L^+$-derivation and induct on its length. An old axiom translates to itself. A defining axiom translates to an identity between an $L$-formula and itself. If a line follows by modus ponens or generalization, its translation follows by the same inference rule from the translations of the preceding lines. Thus every $L^+$-theorem $\phi$ has an $L$-proof of $\tau(\phi)$. In particular, if $\phi$ belongs to $L$, then $\tau(\phi)=\phi$, so the expansion proves no new theorem in the earlier language.
+
+Branch conditions, numerical values, and certificate statuses are expressions in the earlier ledger unless a later theorem explicitly changes their defining data. Their translations are therefore identical to themselves, establishing status conservativity under the stated qualification. ∎
 
 **Cosmology typing guardrail.** Generative non-closure implies neither a vacuum instanton, positive cosmological constant, nor a low-entropy macrostate. Any bridge must independently fix a vacuum response map, reachability, exponent, prefactor interval, coarse-graining map, entropy residual, and forward lock before Appendix U is evaluated.
 
@@ -1922,3 +2138,9 @@ $$
 $$
 
 **Proposition A.6.8 (Finite-Class PCE-Minimal Stabilizer Uniqueness).** If the PU class stabilizes the declared response envelope and every competing class either fails stabilization or has cost lower bound strictly above the PU class's cost upper bound, then the PU class is the unique PCE-minimal stabilizing class inside $\mathfrak S_{\mathrm{stab}}$, up to response-equivalent representatives. The conclusion is relative to the declared exhaustive finite class and does not rule out unlisted mechanisms.
+
+*Proof.* Let $[S]$ be a response-equivalence class in $\mathfrak S_{\mathrm{stab}}$ distinct from the PU class. The exhaustive certificate contains exactly one of the two relevant verdicts. If $[S]$ fails stabilization, it is not an admissible stabilizing competitor. Otherwise its certified cost lower bound $L_S$ and the PU cost upper bound $U_{PU}$ satisfy
+$$
+L_S>U_{PU}.
+$$
+Every representative of $[S]$ has cost at least $L_S$, while the certificate supplies a PU representative of cost at most $U_{PU}$. Hence every stabilizing class distinct from the PU class has strictly greater cost. The PU class is therefore the unique minimal stabilizing response-equivalence class in the declared finite comparison set. Because the certificate is exhaustive only for $\mathfrak S_{\mathrm{stab}}$, no conclusion follows for mechanisms outside that set. ∎

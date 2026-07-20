@@ -101,7 +101,15 @@ $$
 I_{\mathrm{PU}}[\gamma].
 \tag{Q.0.1b.1}
 $$
-For every regular transition tube $\mathcal T_{A\to B}$ whose interior and closure have the same infimum,
+Let $\mathcal T_{A\to B}$ be a transition tube satisfying
+$$
+\inf_{\gamma\in\mathcal T_{A\to B}^{\circ}}I_{\mathrm{PU}}[\gamma]
+=
+\inf_{\gamma\in\overline{\mathcal T}_{A\to B}}I_{\mathrm{PU}}[\gamma]
+=
+\mathcal I_{A\to B}.
+$$
+Then
 $$
 \lim_{\eta\downarrow0}
 \eta\log
@@ -110,26 +118,15 @@ $$
 -\mathcal I_{A\to B}.
 \tag{Q.0.1b.2}
 $$
-Equivalently, the physical suppression exponent is
+On the accepted action-calibration branch,
 $$
 \frac{\mathcal S_{A\to B}^{\min}}{\kappa_A}
 =
 \mathcal I_{A\to B}.
 \tag{Q.0.1b.3}
 $$
-Thus vacuum decay bounces, sphaleron transitions, metastability escape paths, rare perspective transitions, and finite phase-transition nucleation paths are the same variational object whenever the corresponding branch has been reduced to a retained finite ND-RID/PCE large-deviation dynamics.
 
-*Proof.* Equation (Q.0.1a.1) is the large-deviation principle for the path family. Apply it to the transition tube $\mathcal T_{A\to B}$. The assumed regularity of the tube gives
-$$
-\inf_{\gamma\in\mathcal T_{A\to B}^\circ} I_{\mathrm{PU}}[\gamma]
-=
-\inf_{\gamma\in\overline{\mathcal T}_{A\to B}} I_{\mathrm{PU}}[\gamma]
-=
-\mathcal I_{A\to B}.
-$$
-The lower and upper bounds in (Q.0.1a.1) therefore coincide and give (Q.0.1b.2).
-
-The minimizing exponent (Q.0.1b.1) is the variational statement that the least-cost retained path dominates the rare event at exponential order. Equation (Q.0.1b.3) follows from the definition of the independent action scale $\kappa_A$ on this branch. The listed physical processes differ only in the retained coordinates, boundary conditions, and basins $A,B$; the variational calculation is the same. ∎
+*Proof.* Apply the path-space large-deviation lower bound to the tube interior and the upper bound to its closure. The three-way infimum hypothesis makes the two exponential bounds equal to $-\mathcal I_{A\to B}$, proving (Q.0.1b.2). Multiplication of the minimizing rate functional by the accepted action scale $\kappa_A$ proves (Q.0.1b.3). ∎
 
 **Corollary Q.0.1c (Instanton Ledger Consolidation).** Any branch exponent already expressed in PU as a stationary or minimizing action is an instance of Theorem Q.0.1b once its retained finite dynamics satisfies Definition Q.0.1a. In particular, the Coleman-type vacuum-decay exponent of Appendix U and the electroweak sphaleron/update exponent of Appendix Y are projections of the same action-entropy large-deviation ledger on their respective retained branches.
 
@@ -630,33 +627,78 @@ and taking floors yields a difference of either 9 or 10. For (3), count how ofte
 
 ### Q.0.7.9 Continued Fraction Spectrum
 
-**Theorem Q.0.7k (Continued-Fraction Spectrum of Exceptionally Low Overhead).** *Let:*
-$$\alpha_L = \frac{\ln 2}{2\pi} = [0; a_1, a_2, a_3, \ldots]$$
+**Theorem Q.0.7k (Continued-Fraction Spectrum of Exceptionally Low Overhead).** *Let*
+$$
+\alpha_L=\frac{\ln2}{2\pi}=[0;a_1,a_2,a_3,\ldots]
+$$
+*and let $p_n/q_n$ be its convergents. Then:*
 
-*be the continued fraction expansion, and let $p_n/q_n$ be its convergents. Then:*
+1. *(Best approximation.) For all integers $p,q$ with $1\le q\le q_n$,*
+$$
+\left|\alpha_L-\frac{p_n}{q_n}\right|
+\le
+\left|\alpha_L-\frac pq\right|.
+$$
+*Separately, the second-kind best-approximation property is*
+$$
+|q_n\alpha_L-p_n|
+\le |q\alpha_L-p|
+\qquad(1\le q<q_{n+1}).
+$$
 
-1. *(Best-approximation property) $p_n/q_n$ are best rational approximants: for all integers $p, q$ with $1 \leq q \leq q_n$:*
-$$\left|\alpha_L - \frac{p_n}{q_n}\right| \leq \left|\alpha_L - \frac{p}{q}\right|$$
-*Equivalently, $|q_n\alpha_L - p_n|$ is minimal among $1 \leq q \leq q_n$.*
+2. *(Universal error bound.)*
+$$
+\left|\alpha_L-\frac{p_n}{q_n}\right|<\frac1{q_nq_{n+1}}\le\frac1{q_n^2},
+$$
+*and therefore*
+$$
+|2\pi p_n-q_n\ln2|
+=2\pi q_n\left|\alpha_L-\frac{p_n}{q_n}\right|
+<\frac{2\pi}{q_{n+1}}
+\le\frac{2\pi}{q_n}.
+$$
 
-2. *(Universal error bound):*
-$$\left|\alpha_L - \frac{p_n}{q_n}\right| < \frac{1}{q_n^2}$$
-*hence the associated holonomy mismatch obeys:*
-$$|2\pi p_n - q_n \ln 2| = 2\pi q_n \left|\alpha_L - \frac{p_n}{q_n}\right| < \frac{2\pi}{q_n}$$
+3. *(Legendre converse.) If $\gcd(p,q)=1$ and*
+$$
+\left|\alpha_L-\frac pq\right|<\frac1{2q^2},
+$$
+*then $p/q$ is a convergent of $\alpha_L$.*
 
-3. *(Converse characterization) If $|\alpha_L - p/q| < 1/(2q^2)$ with $\gcd(p,q) = 1$, then $p/q$ is a convergent of $\alpha_L$.*
+*Proof.* Lemma Q.0.7b makes $\alpha_L$ irrational, so its infinite simple continued fraction and all convergents are defined. The best-approximation theorems of the first and second kind for simple continued fractions (Khinchin 1964; Hardy and Wright 1979) apply to any irrational real number and give the two inequalities in item 1 with the displayed denominator ranges.
 
-*Proof.* Standard continued-fraction theory [Hardy & Wright 1979; Khinchin 1964]: (1) and (3) are the defining extremal property of convergents; (2) follows from the classical inequality $|\alpha - p_n/q_n| < 1/q_n^2$ for convergents. $\square$
+Let $\alpha_{n+1}=[a_{n+1};a_{n+2},\ldots]$ be the complete quotient. The convergent recurrences and determinant identity give
+$$
+\alpha_L
+=\frac{p_n\alpha_{n+1}+p_{n-1}}
+{q_n\alpha_{n+1}+q_{n-1}},
+\qquad
+|p_nq_{n-1}-p_{n-1}q_n|=1.
+$$
+Hence
+$$
+\left|\alpha_L-\frac{p_n}{q_n}\right|
+=\frac1{q_n(q_n\alpha_{n+1}+q_{n-1})}.
+$$
+Since $\alpha_{n+1}>a_{n+1}$ and $q_{n+1}=a_{n+1}q_n+q_{n-1}$, the denominator is greater than $q_nq_{n+1}$, proving item 2. The holonomy inequalities follow by multiplying by $2\pi q_n$ and using $q_{n+1}\ge q_n$. Item 3 is Legendre's converse theorem (Legendre 1798; Hardy and Wright 1979); its hypotheses are exactly irrationality of $\alpha_L$, reduction of $p/q$, and the displayed strict error bound. $\square$
 
-**Corollary Q.0.7k′ (Legendre Criterion: When Small Overhead Forces a Convergent).** *If integers $k, N \geq 1$ satisfy:*
-$$\left|\alpha_L - \frac{k}{N}\right| < \frac{1}{2N^2}$$
+**Corollary Q.0.7k′ (Legendre Criterion: When Small Overhead Forces a Convergent).** *Let $k,N\ge1$, put $d=\gcd(k,N)$, and write $p=k/d$, $q=N/d$. If*
+$$
+\left|\alpha_L-\frac{k}{N}\right|<\frac1{2N^2},
+$$
+*equivalently if*
+$$
+|N\ln2-2\pi k|<\frac\pi N,
+$$
+*then the reduced fraction $p/q$ is a convergent of $\alpha_L$.*
 
-*equivalently:*
-$$|N\ln 2 - 2\pi k| < \frac{\pi}{N}$$
-
-*then $k/N$ is a convergent of $\alpha_L$.*
-
-*Proof.* This is exactly Legendre's theorem on continued fractions [Hardy & Wright 1979, Theorem 184]. $\square$
+*Proof.* Multiplication of the first inequality by $2\pi N>0$ gives the second inequality, and division reverses this calculation. Because $q=N/d\le N$,
+$$
+\left|\alpha_L-\frac pq\right|
+=\left|\alpha_L-\frac kN\right|
+<\frac1{2N^2}
+\le\frac1{2q^2}.
+$$
+The fraction $p/q$ is reduced by construction, and $\alpha_L$ is irrational by Lemma Q.0.7b. Legendre's continued-fraction theorem (Legendre 1798; Hardy and Wright 1979, Theorem 184) therefore implies that $p/q$ is a convergent of $\alpha_L$. $\square$
 
 **Theorem Q.0.7k.1 (Landauer Arithmetic Index for Low-Overhead Holonomy).** Define
 $$
@@ -837,17 +879,44 @@ $$\{e^{in\ln 2} : 0 \leq n < N_{\max}\} = \{e^{2\pi i n\alpha_L} : 0 \leq n < N_
 
 ### Q.0.7.13 Finite-Budget Interference Selection
 
-**Corollary Q.0.7o (Finite-Budget Interference Selection Rule).** *Let two SPAP-minimum paths have cycle difference $n := |N[\phi_1] - N[\phi_2]|$. The phase mismatch modulo $2\pi$ is:*
-$$\Delta\theta(n) := \inf_{k \in \mathbb{Z}} |(n\ln 2) - 2\pi k| = 2\pi \|n\alpha_L\|$$
+**Corollary Q.0.7o (Finite-Budget Phase-Mismatch Selection Rule).** *Let two SPAP-minimum paths have cycle difference $n:=|N[\phi_1]-N[\phi_2]|$ and define*
+$$
+\Delta\theta(n)
+:=\inf_{k\in\mathbb Z}|n\ln2-2\pi k|
+=2\pi\lVert n\alpha_L\rVert.
+$$
+*For $N_{\max}\ge1$, choose $j$ so that*
+$$
+q_j\le N_{\max}<q_{j+1}.
+$$
+*Then*
+$$
+\min_{1\le n\le N_{\max}}\Delta\theta(n)
+=\Delta\theta(q_j),
+\qquad
+\Delta\theta(q_j)<\frac{2\pi}{q_{j+1}}.
+$$
+*Moreover, if $k$ is a nearest integer to $n\alpha_L$, $\gcd(k,n)=1$, and $\Delta\theta(n)<\pi/n$, then $k/n$ is a convergent of $\alpha_L$. These are arithmetic statements about phase positions; they do not determine interference amplitudes.*
 
-*Then:*
-
-1. For a fixed cycle budget $1 \leq n \leq N_{\max}$, the smallest achievable mismatch is attained when $n$ is a convergent denominator $q_j \leq N_{\max}$ (including $q_0 = 1$ for the $0/1$ convergent), and satisfies:
-$$\Delta\theta(q_j) = 2\pi \|q_j \alpha_L\| < \frac{2\pi}{q_{j+1}}$$
-
-2. *Consequently, the near-constructive interference events under a finite $N_{\max}$ budget are dominated by differences $n$ in the convergent-denominator set $\{q_j\}$ (and their standard semiconvergent refinements), because these are precisely the indices that realize record-small $\|n\alpha_L\|$*
-
-*Proof.* This is the standard "best approximation" extremality of continued-fraction convergents translated into the rotation mismatch $\|n\alpha_L\|$. $\square$
+*Proof.* For every $1\le n<q_{j+1}$ and integer $k$, the second-kind best-approximation statement in Theorem Q.0.7k gives
+$$
+\lVert q_j\alpha_L\rVert
+=|q_j\alpha_L-p_j|
+\le|n\alpha_L-k|.
+$$
+Minimizing the right-hand side over $k\in\mathbb Z$ and multiplying by $2\pi$ proves the finite-budget minimum. The error estimate in Theorem Q.0.7k gives
+$$
+\Delta\theta(q_j)
+=2\pi q_j\left|\alpha_L-\frac{p_j}{q_j}\right|
+<\frac{2\pi}{q_{j+1}}.
+$$
+For the final assertion,
+$$
+\left|\alpha_L-\frac kn\right|
+=\frac{\Delta\theta(n)}{2\pi n}
+<\frac1{2n^2}.
+$$
+The fraction is reduced by hypothesis and $\alpha_L$ is irrational by Lemma Q.0.7b, so Legendre's theorem in Theorem Q.0.7k makes $k/n$ a convergent. No amplitude statement follows from these inequalities. $\square$
 
 ---
 
@@ -864,7 +933,7 @@ $$
 $$
 so coherence decays exponentially with the overhead variance.
 
-**Remark Q.0.7p.1: PCE Selection of Overhead Distribution.** The probability law $P(\Delta)$ is not arbitrary but is determined by the PCE dynamics (Appendix D). Near the PCE-Attractor (Definition 15a), overhead fluctuations are suppressed by the cost function $V_{op}$ (Definition D.1), leading to concentration of $P(\Delta)$ near zero. The decoherence mechanism thus becomes significant only away from the attractor, providing a natural explanation for the emergence of classical behavior in non-optimal configurations.
+**Remark Q.0.7p.1: Conditional PCE-Induced Overhead Distribution.** Let a specified PCE state process $X_t$ satisfy the hypotheses of the applicable Appendix D stationary-law theorem, and let the overhead be a measurable observable $\Delta=\Delta(X_t)$. The stationary law of $X_t$ then induces a pushforward law $P_\Delta$. Concentration of $P_\Delta$ near zero requires, in addition, that $\Delta$ vanish on the relevant minimizing set and that the Appendix D concentration estimate control excursions into states with $|\Delta|>\epsilon$. Without these hypotheses, PCE dynamics neither determines a unique overhead law nor implies concentration at zero.
 
 ---
 
@@ -1004,25 +1073,17 @@ Since exact satisfaction of both constraints is impossible for any nontrivial cl
 
 #### Q.0.8.3 Vacuum Excitation Structure from Leech Geometry
 
-The Leech A Leech shell ledger is available only on a branch that independently registers an even unimodular rootless rank-$24$ lattice, or supplies the full discriminant-form and coset-minimum datum of Lemma R.4.5. The predictive-recovery selection of $\mathcal G_{24}$ alone does not construct that lattice.
+The Leech shell ledger is available only on a branch that independently registers an even unimodular rootless rank-$24$ lattice, or supplies the full discriminant-form and coset-minimum datum of Lemma R.4.5. The predictive-recovery selection of $\mathcal G_{24}$ alone does not construct that lattice.
 
-**Proposition Q.0.5 (Shell Structure).** *Excitations above the PCE-Attractor vacuum correspond to Leech lattice vectors $v \in \Lambda_{24}$ with squared norm $|v|^2 \in \{0, 4, 6, 8, 10, 12, \ldots\}$. The minimum non-trivial excitation has $|v|^2_{\min} = 4$.*
+**Proposition Q.0.5 (Conditional Leech Shell Structure).** Assume a registered discriminant-form, marking, and coset-minimum certificate of Lemma R.4.5 constructs an even unimodular rootless rank-$24$ lattice. Then the lattice is the Leech lattice $\Lambda_{24}$, its nonzero minimum squared norm is $4$, and its first shell norms are $4,6,8,\ldots$.
 
-*Proof.* 
-
-**Step 1 (Leech lattice from rootless uniqueness).** By Theorem Z.8c, the unique rootless even unimodular lattice in 24 dimensions is the Leech lattice $\Lambda_{24}$. Corollary Z.8d.1 establishes that PCE uniquely selects the Leech lattice $\Lambda_{24}$ as the vacuum configuration among the 24 Niemeier lattices. The extended binary Golay code $\mathcal{G}_{24} = [24, 12, 8]$ is selected by PCE optimization (Theorem Z.13) as the unique optimal error-correcting code on $M = 24$ interface modes. The Leech lattice $\Lambda_{24}$ is constructed from $\mathcal{G}_{24}$ via the gluing construction [Conway & Sloane 1999]: the base lattice $L_0 = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ is extended by Golay-determined cosets,
-
-$$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (g_c + L_0)$$
-
-where $g_c$ are glue vectors determined by codeword $c$. This yields a disjoint union of $|\mathcal{G}_{24}| = 2^{12} = 4096$ cosets (Lemma R.4.5).
-
-**Step 2 (Rootlessness).** The Leech lattice is the unique even unimodular lattice in 24 dimensions with no vectors of squared norm 2 [Conway 1969]. This rootlessness follows from the minimum distance $d = 8$ of the Golay code: vectors in $L_0$ have minimum squared norm 4 (from the $\sqrt{2}$ scaling), and the Golay code's minimum weight 8 ensures that glue-shifted vectors also satisfy $|v|^2 \geq 4$ (Proposition R.4.2a).
-
-**Step 3 (Shell structure).** The theta series of the Leech lattice [Conway & Sloane 1999]:
-
-$$\Theta_{\Lambda_{24}}(q) = 1 + 196560 q^4 + 16773120 q^6 + 398034000 q^8 + \cdots$$
-
-confirms $|v|^2 \in \{0, 4, 6, 8, \ldots\}$ with the 196,560 minimal vectors at $|v|^2 = 4$. $\square$
+*Proof.* The registered certificate supplies evenness, unimodularity, rank $24$, and rootlessness. Niemeier's classification identifies the unique lattice with those properties as $\Lambda_{24}$. In the convention used here, its theta series is [Conway & Sloane 1999]
+$$
+\Theta_{\Lambda_{24}}(q)
+=
+1+196560q^4+16773120q^6+398034000q^8+\cdots.
+$$
+The first nonconstant term therefore occurs at squared norm $4$, and the displayed subsequent terms give shell norms $6$ and $8$. Golay parameters alone do not supply the registered gluing or coset-minimum certificate. ∎
 
 **Theorem Q.0.5a (Mass--Action Correspondence on the Canonical Norm--Information and $\mathfrak B_{mass}$ Branches).** On the canonical Leech norm--information calibration branch, where $\mathcal I_{rel}(v)=|v|$, and on the joint saturated-boundary/activity completed-reset and accepted action--entropy branch $\mathfrak B_{mass}$ of Appendix N, a vacuum excitation labeled by $v\in\Lambda_{24}$ satisfies
 $$
@@ -1038,9 +1099,7 @@ The coefficient $\mu_0^{alg}$ is an algebraic normalization and becomes a physic
 
 
 
-**Remark Q.0.5a.2: Phenomenological Status.** Leech geometry provides a discrete norm spectrum. On $\mathfrak B_{mass}$ with canonical calibration it induces the stated conditional mass spectrum; connecting that branch to observed particles requires:
-
-
+**Remark Q.0.5a.2: Phenomenological Status.** Leech geometry provides a discrete norm spectrum. On $\mathfrak B_{mass}$ with canonical calibration it induces the stated conditional mass spectrum. Connecting that branch to observed particles requires an independently specified identification between lattice excitations and particle states.
 
 **Corollary Q.0.5b (Numerical Cross-Check of Separate Record and Leech Branches).** On the structural record/capacity/no-surplus branch, $a=2$ and hence $a^2=4$. On a separately registered Leech gluing/rootlessness branch, $|v|_{min}^2=4$. Therefore
 $$
@@ -1050,13 +1109,20 @@ on the intersection of those branches.
 
 *Proof.* Each equality follows from its own branch theorem. Their common numerical value supplies no implication from the record dimension to the lattice, no gluing construction, and no energy identification. ∎
 
-**Corollary Q.0.5c (Conditional Discrete Mass Spectrum).** *On the full branch of Theorem Q.0.5a, the squared masses form the discrete set:*
+**Corollary Q.0.5c (Conditional Discrete Mass Spectrum).** On the full branch of Theorem Q.0.5a,
+$$
+m^2
+\in
+\{0,4,6,8,10,12,\ldots\}
+(\mu_0^{alg})^2.
+$$
+The first nonzero mass is $2\mu_0^{alg}$.
 
-
-
-$$m^2\in\{0,4,6,8,10,12,\ldots\}(\mu_0^{alg})^2$$
-
-*Here $\Delta_{gap}=2\mu_0^{alg}$ is physical only on $\mathfrak B_{mass}$ with canonical norm--information calibration; otherwise the theorem supplies only the dimensionless norm gap.*
+*Proof.* The registered Leech branch gives
+$$
+|v|^2\in\{0,4,6,8,10,12,\ldots\}.
+$$
+Theorem Q.0.5a gives $m^2(v)=(\mu_0^{alg})^2|v|^2$. Substitution proves the set, and the minimum nonzero norm $4$ gives $m_{\min}=2\mu_0^{alg}$. This is a physical gap only on $\mathfrak B_{mass}$ with the canonical norm-information calibration. ∎
 
 
 
@@ -1079,13 +1145,13 @@ Irrationality implies $N_1=N_2$. Approximate matches are governed by the continu
 
 #### Q.0.8.5 Observable Consequences
 
-**Theorem Q.0.7 (Conditions for Integer $N$).** *The cycle number $N$ is constrained to integer values under the following conditions:*
+**Theorem Q.0.7 (Integer Counts and Separate Discrete Labels).**
 
-1. **Fundamental processes:** Any process in the discrete MPU network has $N \in \mathbb{Z}$ by construction (Proposition Q.0.3).
+1. If $N$ is the number of elementary cycles in a finite discrete MPU process, then $N\in\mathbb Z_{\ge0}$ by definition.
+2. Winding and instanton numbers are integer topological labels. Equality or proportionality between such a label and $N$ requires a separately stated holonomy/count calibration.
+3. On a registered Leech branch, squared norms are discrete even integers beginning $4,6,8,\ldots$. They are not restricted to $4\mathbb Z$, and no Leech shell index is identified with $N$ without an additional bridge.
 
-2. **Topological sectors:** Processes classified by discrete topological invariants (winding numbers, instanton numbers) have cycle counts related to the invariant structure through the holonomy condition (Theorem Q.0.4).
-
-3. **Vacuum excitations at integer shells:** For Leech lattice excitations with $|v|^2 = 4n$ ($n \in \mathbb{Z}_{>0}$), the shell index $n$ is integral by lattice structure.
+*Proof.* Item 1 is the definition of a finite count. Item 2 follows from the integrality of the relevant homotopy or characteristic class, while the logical independence of two integer-valued quantities precludes identifying them without a map. Item 3 follows from Proposition Q.0.5's theta series, whose nonzero exponents include $6$. ∎
 
 **Proposition Q.0.8 (Conditional Structural Consequences).**
 
@@ -1135,7 +1201,11 @@ $$
 
 *Proof.* The two outputs are orthogonal exactly when the registered relative evolution orthogonalizes $|\psi\rangle$. The Margolus--Levitin inequality applied to $H_{\mathrm{rel}}(m)$ gives $T_{\mathcal P}\ge\pi\hbar/(2E_{\mathrm{rel}}(m))$. Substitution of (Q.0.8c.1) yields (Q.0.8c.2). ∎
 
-**Remark Q.0.8d (PCE-Attractor Mass Scale).** At the canonical PCE-Attractor protocol duration $T_{\mathcal{P}}^* = \delta/c = \sqrt{8\ln 2} \cdot L_P/c = \sqrt{8\ln 2} \cdot t_P$ (Eq. Q.18), Theorem Q.0.8c yields the lower bound $m_{\min}^* \ge \pi m_P/(2\sqrt{8\ln 2}) \approx 0.667 \, m_P$, providing a framework-internal minimum mass scale that depends only on the derived constants $\varepsilon_0=\ln2$ and $\delta = \sqrt{8\ln 2} \cdot L_P$, with no adjustable parameters. The conjecture that this value constitutes a universal mass gap for the framework requires the additional assumption that the PCE-Attractor canonical protocol is the physically realized protocol (Appendix Z).
+**Remark Q.0.8d (Conditional Protocol Mass Scale).** Equation Q.18 determines the spatial length $\delta=\sqrt{8\ln2}\,L_P$ on its residual-budget, throughput-saturated, ideal-packing branch; it does not determine a protocol duration. If the serialized-frontier calibration of Proposition Q.6.1 is also imposed so that $T_{\mathcal P}=\delta/c$, Theorem Q.0.8c gives
+$$
+m\ge \frac{\pi}{2\kappa_{\mathcal P}\sqrt{8\ln2}}\,m_P.
+$$
+The numerical value $m\ge0.667\,m_P$ follows on the additional response calibration $\kappa_{\mathcal P}=1$. A universal mass gap would further require a theorem that this calibrated discrimination protocol is physically realized and that every massive excitation is subject to its one-shot orthogonalization bound.
 
 ---
 
@@ -1263,43 +1333,48 @@ This corresponds to a cycle time of approximately 6 years ($1.92 \times 10^8$ s)
 
 #### Q.0.9.6 Connection to Horizon Information Bounds
 
-**Proposition Q.0.10h (Consistency with Bekenstein Bound).** *The bit rate $\dot{N}_U = a/(2\pi c)$ is consistent with the Bekenstein bound [Bekenstein 1981] on information in a region of size $R = c^2/a$ (the Rindler horizon distance).*
+**Proposition Q.0.10h (Consistency with the Bekenstein Inequality).** Assume the Bekenstein bound in nat units,
+$$
+I\le\frac{2\pi ER}{\hbar c},
+$$
+and insert the comparison scales
+$$
+E=k_BT_U\ln2,
+\qquad
+R=\frac{c^2}{a}.
+$$
+Then
+$$
+I
+\le
+\frac{2\pi(k_BT_U\ln2)(c^2/a)}{\hbar c}
+=
+\ln2.
+$$
 
-*Proof.* The Bekenstein bound states $I \leq 2\pi ER/(\hbar c)$ for a system of energy $E$ confined to region of size $R$. Take the relevant energy scale to be the Landauer-minimum erasure heat into the Unruh bath,
-
-$$E = Q_{min} = k_B T_U\ln 2,$$
-
-and take the horizon distance scale $R=c^2/a$. Then the Bekenstein bound $I\le 2\pi E R/(\hbar c)$ gives
-$$I_{\max} = \frac{2\pi (k_B T_U\ln 2)\,(c^2/a)}{\hbar c}
-= \ln 2,$$
-i.e., one bit (or $\ln 2$ nats) at the Landauer energy scale. The SPAP-minimum cycle dissipates $\ln 2$ nats per irreversible operation and therefore matches the bound’s scaling at the horizon energy scale. $\square$
+*Proof.* Substitute $T_U=\hbar a/(2\pi k_Bc)$; every dimensional factor cancels and leaves the stated upper bound. Equality requires independent saturation of the Bekenstein inequality and is not implied by the scale substitution. ∎
 
 ---
 
 #### Q.0.9.7 Summary
 
-The Rindler–Landauer cycle time $\tau_U = 2\pi c/a$ emerges from combining:
-- Horizon thermodynamics (Unruh temperature)
-- Information thermodynamics (Landauer bound)  
-- Quantum action (SPAP minimum)
+Under the full independent hypotheses of Theorem Q.0.10—uniform binary reset, exact Landauer saturation, cyclic energy balance, and the action-duration calibration with $\kappa_A=\hbar$—the conditional timescale is $\tau_U=2\pi c/a$.
 
-The complete cancellation of $\hbar$, $k_B$, and $\ln 2$ reveals that **at causal boundaries, the computational cost of irreversibility is purely geometric**—determined only by acceleration and the speed of light.
-
-This provides an information-theoretic interpretation of the Unruh effect: the vacuum thermal bath at temperature $T_U$ is precisely calibrated to support one irreversible bit operation per time $2\pi c/a$ at the thermodynamic optimum. The result is self-consistent with the Bekenstein bound (Proposition Q.0.10h), confirming that horizon thermodynamics and information theory share a common foundation in the framework's predictive structure.
+The cancellation of $\hbar$, $k_B$, and $\ln2$ is algebraic. It does not show that the Unruh response is generated by MPU reset dynamics, that a real protocol attains this duration, or that horizon thermodynamics and SPAP have a common microscopic origin. Proposition Q.0.10h is a consistency comparison on the same conditional branch.
 
 ---
 
-### Q.0.9.8 Connection to Emergent Gravity
+### Q.0.9.8 Conditional Comparison with Emergent Gravity
 
-The Rindler-Landauer cycle time $\tau_U = 2\pi c/a$ is not merely a result about computation near horizons—it reveals the common geometric origin of gravity, thermodynamics, and information processing. This section establishes the precise connections to the framework's derivation of Einstein's field equations (Section 12).
+The branch-conditional Rindler–Landauer timescale $\tau_U=2\pi c/a$ shares formal ingredients with the emergent-gravity ledger. This section compares those ingredients without asserting a common microscopic origin or logical derivation between the two constructions.
 
 ---
 
 #### Q.0.9.8.1 The Shared Structure
 
-**Proposition Q.0.11 (Common Origin of Horizon Physics).** *The three quantities entering the Jacobson derivation of Einstein's equations (Section 12, Theorem 12.1) are identical to the three ingredients of the Rindler-Landauer cycle time (Theorem Q.0.10):*
+**Proposition Q.0.11 (Shared-Ingredient Comparison for Horizon Physics).** *On their separately declared branch packages, the Jacobson and conditional Rindler–Landauer constructions use formally corresponding thermal and information-theoretic ingredients. This comparison does not identify their microscopic mechanisms or make either construction a derivation of the other:*
 
-| Jacobson Derivation | Rindler-Landauer Derivation | Common Origin |
+| Jacobson construction | Conditional Rindler–Landauer construction | Shared formal ingredient |
 |:--------------------|:----------------------------|:--------------|
 | Unruh temperature $T = \kappa/(2\pi)$ | Unruh temperature $T_U = \hbar a/(2\pi k_B c)$ | Horizon thermal character |
 | Area-law entropy $\delta S = \eta \, \delta\mathcal{A}$ | Landauer bound $Q = k_B T \ln 2$ | Information-thermodynamic equivalence |
@@ -1317,22 +1392,21 @@ The Rindler-Landauer derivation (Theorem Q.0.10) combines:
 2. Landauer bound: $Q_{\min} = k_B T \ln 2$
 3. SPAP action: $\kappa_A\ln2$ for one stipulated structural step on a calibrated branch
 
-Both derivations employ the same thermal structure (Unruh effect) and the same information-thermodynamic link (entropy cost of irreversible operations). The Jacobson derivation yields Einstein's equations; the Rindler-Landauer derivation yields $\tau_U = 2\pi c/a$. The shared ingredients ensure these results are not independent but manifestations of the same underlying structure. $\square$
+Both constructions import the Unruh response and use separately declared entropy/energy ledgers. The Jacobson result additionally requires its local Clausius, area-density, and metric-action hypotheses; the Rindler–Landauer equality additionally requires the saturation and action-duration hypotheses of Theorem Q.0.10. Shared formal ingredients do not establish a common microscopic origin or logical dependence. $\square$
 
 ---
 
 #### Q.0.9.8.2 Black Hole Computational Rate
 
-**Theorem Q.0.12 (Black Hole Bit Rate at the Thermodynamic Optimum).** *For a Schwarzschild black hole of mass $M$, the Landauer-saturating bit-erasure time at the horizon and the corresponding efficiency-calibrated bit rate are:*
-
+**Theorem Q.0.12 (Conditional Schwarzschild-Horizon Protocol Rate).** *Assume the complete hypotheses of Theorem Q.0.10: a conditionally uniform binary reset into the Unruh bath, exact Landauer heat saturation, cyclic energy balance, the independent action-duration equality, and the calibration $\kappa_A=\hbar$. Assume also that a real protocol realizes this duration and that its local proper-acceleration parameter is identified with the Schwarzschild surface gravity $a=\kappa=c^4/(4GM)$. Then:*
 
 $$\boxed{\tau_{BH} = \frac{8\pi GM}{c^3}, \qquad \dot{N}_{BH} = \frac{c^3}{8\pi GM}}$$
 
-*Proof.* The surface gravity of a Schwarzschild black hole is $\kappa = c^4/(4GM)$. Substituting into the Rindler-Landauer formula (Theorem Q.0.10) with the equivalence principle identification $a \to \kappa$:
+*Proof.* Theorem Q.0.10 gives $\tau=2\pi c/a$ under the stated protocol hypotheses. Substitution of $a=\kappa=c^4/(4GM)$ yields
 
-$$\tau_{BH} = \frac{2\pi c}{\kappa} = \frac{2\pi c \cdot 4GM}{c^4} = \frac{8\pi GM}{c^3}$$
+$$\tau_{BH} = \frac{2\pi c}{\kappa} = \frac{2\pi c \cdot 4GM}{c^4} = \frac{8\pi GM}{c^3}.$$
 
-The bit rate follows by inversion: $\dot{N}_{BH} = 1/\tau_{BH} = c^3/(8\pi GM)$. $\square$
+The realized protocol rate is its inverse, $\dot{N}_{BH}=c^3/(8\pi GM)$. $\square$
 
 **Corollary Q.0.12a (Mass-Rate Scaling).** *The black hole bit rate scales inversely with mass:*
 
@@ -1345,8 +1419,8 @@ $$\dot{N}_{BH} \propto M^{-1}$$
 | Black Hole Mass | $\tau_{BH}$ | $\dot{N}_{BH}$ |
 |:----------------|:------------|:---------------|
 | $M_\odot$ (solar) | $1.24 \times 10^{-4}$ s | $8.1 \times 10^{3}$ Hz |
-| $10^6 M_\odot$ (galactic center) | $0.124$ s | $8.1$ Hz |
-| $10^9 M_\odot$ (supermassive) | $124$ s | $8.1 \times 10^{-3}$ Hz |
+| $10^6 M_\odot$ (galactic center) | $1.24 \times 10^{2}$ s | $8.1 \times 10^{-3}$ Hz |
+| $10^9 M_\odot$ (supermassive) | $1.24 \times 10^{5}$ s | $8.1 \times 10^{-6}$ Hz |
 | $m_P$ (Planck mass) | $8\pi t_P$ | $(8\pi t_P)^{-1}$ |
 
 ---
@@ -1429,65 +1503,46 @@ which is Equation (E.9). $\square$
 
 ---
 
-#### Q.0.9.8.5 The Closed Derivation Loop
+#### Q.0.9.8.5 Joint Gravity--Computation Consistency Ledger
 
-**Theorem Q.0.15 (Gravity-Computation Closed Chain on the Gravity-Bridge Package).** *On the gravity-bridge package — comprising (a) horizon saturation, (b) the local Rindler/KMS modular branch of Appendix F, (c) the Clausius relation $\delta Q = T \, dS$ at local Rindler horizons, and (d) the MPU stress-energy source construction of Appendix B — the following statements form a mutually consistent closed chain:*
+**Theorem Q.0.15 (Joint Gravity--Computation Consistency Ledger).** Assume simultaneously: (a) the local Rindler/KMS and Clausius hypotheses of Theorem 12.1; (b) the horizon-saturation, density-certificate, and area-law calibration hypotheses of Theorems E.5--E.6; (c) the MPU stress-energy source construction of Appendix B; and (d) the complete protocol hypotheses of Theorem Q.0.10 with $\kappa_A=\hbar$, a real protocol realizing the conditional duration, and the local identification $a=\kappa$. Then the following statements hold on that joint branch:
 
-1. *Einstein's field equations hold (Theorem 12.1)*
-2. *Horizons satisfy the Bekenstein-Hawking area law (Theorem 49)*
-3. *The gravitational constant is $G = \eta\delta^2 c^3/(4\hbar\chi C_{\max})$ (Equation E.9), on the area-law calibration and residual-budget branches*
-4. *Horizon computational rate is $\dot{N} = \kappa/(2\pi c)$ (Theorem Q.0.12)*
+1. the Jacobson construction gives the Einstein equations (Theorem 12.1);
+2. the calibrated horizon entropy obeys the Bekenstein--Hawking area law (Theorems E.5--E.6);
+3. the calibration gives $G=\eta\delta^2c^3/(4\hbar\chi C_{\max})$ (Equation (E.9)); and
+4. the independently realized conditional protocol has rate $\dot N=\kappa/(2\pi c)$ (Theorem Q.0.10 and Corollary Q.0.10c).
 
-*Each implication step uses one or more components of the bridge package; the closed-chain framing replaces the unconditional equivalence framing. This parallels the Theorem K.10.12 unified-origin chain in Appendix K, where the same gravity-bridge package is required for the channel-capacity-to-Einstein-equations route.*
+These are compatible projections of the stated joint hypothesis package. No implication among items 1--4 is asserted after removing the hypotheses used to establish the target item.
 
+*Proof.* Items 1 and 2 follow from the local-Rindler, Clausius, horizon-saturation, density-certificate, and stress-energy hypotheses by Theorem 12.1 and Theorems E.5--E.6. Substitution of the calibrated entropy density into Definition (E.6c) gives item 3 algebraically. Under the independent reset, saturation, energy-balance, action-duration, real-protocol, and $a=\kappa$ hypotheses, Theorem Q.0.10 and Corollary Q.0.10c give item 4. Each conclusion therefore follows from the union of the hypotheses declared in the theorem, without using any conclusion to prove one of its own antecedents. $\square$
 
-*Proof.*
-
-$(1) \Rightarrow (2)$: The Einstein equations, combined with the Raychaudhuri equation and horizon thermodynamics, yield the area law (Theorem 12.1, following Jacobson 1995).
-
-$(2) \Rightarrow (3)$: The area law coefficient $1/(4G)$ is fixed by requiring Clausius consistency across all local Rindler horizons (Theorem E.5), yielding the expression for $G$ in terms of MPU parameters (Equation E.9).
-
-$(3) \Rightarrow (4)$: Given $G$, the surface gravity $\kappa = c^4/(4GM)$ and Rindler-Landauer formula yield $\dot{N} = \kappa/(2\pi c)$ (Theorem Q.0.12).
-
-$(4) \Rightarrow (1)$: The computational rate $\dot{N} = \kappa/(2\pi c)$, combined with the Bekenstein bound saturation (Proposition Q.0.10h), implies the entropy density $S/A = 1/(4L_P^2)$. This entropy density, via the Jacobson construction with the Clausius relation, yields the Einstein equations (Theorem 12.1). $\square$
-
-**Corollary Q.0.15a (Self-Consistency).** *The PU framework's derivation of gravity is self-consistent: the gravitational constant derived from MPU information theory (Equation E.9) produces horizon computational rates (Theorem Q.0.12) that saturate the Bekenstein bound (Proposition Q.0.10h), which in turn requires the Einstein equations (Theorem 12.1) that define the horizons.*
+**Corollary Q.0.15a (No Closed Implication Loop).** On the hypotheses of Theorem Q.0.15, the gravity, area-law, coupling-calibration, and computational-rate ledgers are mutually consistent. The computational-rate identity alone implies neither the horizon entropy density nor the Einstein equations. $\square$
 
 ---
 
 #### Q.0.9.8.6 The Geometric Nature of Gravity
 
-**Proposition Q.0.16 (Gravity as Geometric Computation).** *The cancellation of $\hbar$, $k_B$, and $\ln 2$ in the Rindler-Landauer formula demonstrates that at causal horizons, gravitational, thermodynamic, and information-theoretic descriptions reduce to pure geometry.*
+**Proposition Q.0.16 (Conditional Conversion-Factor Cancellation).** Assume the complete reset, saturation, energy-balance, action-duration, real-protocol, and calibration hypotheses of Theorem Q.0.10, including $\kappa_A=\hbar$ and $a>0$. Then the realized duration obeys
+$$
+\tau_U
+=\frac{\hbar\ln2}{k_BT_U\ln2}
+=\frac{\hbar\ln2}{k_B(\hbar a/(2\pi k_Bc))\ln2}
+=\frac{2\pi c}{a}.
+$$
+The cancellation is an algebraic consistency identity on this protocol branch. It does not imply that gravitational, thermodynamic, and information-theoretic theories are equivalent or that any output of Theorem Q.0.15 implies another.
 
-*Proof.* The three cancelled quantities serve as inter-domain conversion factors:
+*Proof.* Substitute $T_U=\hbar a/(2\pi k_Bc)$ into the conditional action-duration equality and cancel the nonzero factors $\hbar$, $k_B$, and $\ln2$. This gives the displayed duration. No field equation, entropy-density law, or converse implication occurs in the calculation. $\square$
 
-| Constant | Converts | Appears in |
-|:---------|:---------|:-----------|
-| $\hbar$ | Action $\leftrightarrow$ Phase/Entropy | Unruh temperature, SPAP action |
-| $k_B$ | Temperature $\leftrightarrow$ Energy | Unruh temperature, Landauer bound |
-| $\ln 2$ | Bits $\leftrightarrow$ Nats | Landauer bound, SPAP action |
-
-In the composition yielding $\tau_U$:
-- Unruh effect introduces $\hbar/(k_B c)$
-- Landauer bound introduces $k_B \ln 2$
-- SPAP action introduces $\hbar \ln 2$
-
-The product structure:
-
-$$\tau_U = \frac{\hbar \ln 2}{k_B T_U \ln 2} = \frac{\hbar \ln 2}{k_B \cdot (\hbar a/2\pi k_B c) \cdot \ln 2} = \frac{2\pi c}{a}$$
-
-exhibits exact cancellation because the three conversion factors form a closed loop in the space of physical quantities. At horizons—where gravity, thermodynamics, and information meet—the domain-specific descriptions collapse to geometry. $\square$
-
-**Theorem Q.0.17 (Gravity from Computational Self-Consistency on the Gravity-Bridge Package).** *Given the local Rindler/KMS, Clausius, horizon-saturation, and MPU stress-energy assumptions of Theorem 12.1 (the gravity-bridge package of Theorem Q.0.15), and within the four-dimensional Lovelock hypothesis class, the Einstein field equations are the unique second-order geometric equations consistent with the requirement that the Landauer-saturating computational rate at every local Rindler horizon saturates, but does not exceed, the Bekenstein bound. Computational-rate saturation alone does not entail the Einstein equations without the bridge package; this theorem is a uniqueness statement within the Jacobson chain rather than as an independent derivation.*
+**Theorem Q.0.17 (Conditional Gravity--Computation Uniqueness Ledger).** *Assume the complete joint hypothesis package of Theorem Q.0.15, including its local Rindler/KMS, Clausius, horizon-density, area-law calibration, MPU stress-energy, and realized protocol branches. Assume in addition the four-dimensional Lovelock hypothesis class and impose the stated Bekenstein-rate consistency condition at every local Rindler horizon. Then the Einstein field equations supplied by Theorem 12.1 are the unique second-order local metric equations within that class that satisfy the joint package. Computational-rate saturation alone entails neither the entropy density nor the Einstein equations.*
 
 
 *Proof.*
 
-**Step 1 (Saturation requirement).** By Proposition Q.0.10h, the Rindler-Landauer rate $\dot{N}_U = a/(2\pi c)$ exactly saturates the Bekenstein bound for a horizon-sized region at thermal energy $k_B T_U$. This saturation must hold for all local Rindler horizons to maintain consistency between computational and information-theoretic descriptions.
+**Step 1 (Conditional rate consistency).** Proposition Q.0.10h verifies equality with the Bekenstein rate only on its declared Rindler-sized, thermal-energy, saturated-protocol model. It does not imply that every local Rindler horizon realizes that protocol or saturates the bound.
 
-**Step 2 (Geometric constraint).** Saturation of the Bekenstein bound at all local horizons requires the entropy density to equal $1/(4L_P^2)$ universally. This is the Bekenstein-Hawking value.
+**Step 2 (Independent entropy-density bridge).** Assume the universal Bekenstein--Hawking entropy density $1/(4L_P^2)$ as part of the horizon-saturation and area-law calibration package. It is not derived from the conditional rate equality alone.
 
-**Step 3 (Jacobson construction).** Universal Bekenstein-Hawking entropy density, combined with the Clausius relation $\delta Q = T \, \delta S$ at temperature $T = \kappa/(2\pi)$ for all local Rindler horizons, implies the Einstein equations (Theorem 12.1, following Jacobson 1995).
+**Step 3 (Jacobson construction).** The independently supplied universal entropy density, together with the local Clausius relation, Unruh/KMS input, stress-energy flux identification, and the remaining hypotheses of Theorem 12.1, implies the Einstein equations on that branch (Jacobson 1995).
 
 **Step 4 (Uniqueness).** By Lovelock's theorem, in four dimensions the Einstein tensor (plus cosmological constant) is the unique divergence-free symmetric tensor constructible from the metric and its first two derivatives. The Bekenstein-Hawking entropy density selects this tensor over higher-curvature alternatives (Lemma 12.1). $\square$
 
@@ -1497,21 +1552,21 @@ exhibits exact cancellation because the three conversion factors form a closed l
 
 | Result | Statement | Significance |
 |:-------|:----------|:-------------|
-| Proposition Q.0.11 | Jacobson and Rindler-Landauer share identical ingredients | Common origin established |
-| Theorem Q.0.12 | $\tau_{BH} = 8\pi GM/c^3$ | Black hole computational timescale |
-| Theorem Q.0.13 | $N_{total} \sim S_{BH}$ | Horizon processes its entropy |
-| Theorem Q.0.14 | $G$ expressible via computational rate | Gravity-computation link |
-| Theorem Q.0.15 | EFE $\Leftrightarrow$ Area law $\Leftrightarrow$ $G$ formula $\Leftrightarrow$ Computational rate | Closed equivalence loop |
-| Proposition Q.0.16 | Constants cancel to pure geometry | Deep unity revealed |
-| Theorem Q.0.17 | EFE from computational bound saturation | Gravity as self-consistency |
+| Proposition Q.0.11 | Jacobson and conditional Rindler–Landauer constructions share formal ingredients on separate branch packages | Comparison only; no common microscopic origin derived |
+| Theorem Q.0.12 | $\tau_{BH} = 8\pi GM/c^3$ on its black-hole protocol branch | Conditional black-hole computational timescale |
+| Theorem Q.0.13 | $N_{total} \sim S_{BH}$ on its evaporation-model branch | Conditional entropy-rate proportionality |
+| Theorem Q.0.14 | $G$ is algebraically expressible through the calibrated horizon rate on its stated branch | Conditional gravity-computation relation |
+| Theorem Q.0.15 | EFE, the area law, the $G$ calibration, and the computational rate coexist on the joint gravity-computation package | Compatibility ledger; no reverse implication |
+| Proposition Q.0.16 | The declared conversion factors cancel to a geometric identity on the common calibration branch | Conditional consistency identity |
+| Theorem Q.0.17 | The Einstein equation is unique within the declared four-dimensional Lovelock class under the full gravity bridge | Computational saturation alone is insufficient |
 
-The Rindler-Landauer result $\tau_U = 2\pi c/a$ is not an isolated calculation but the computational face of the same structure that yields Einstein's equations. The cancellation of $\hbar$, $k_B$, and $\ln 2$ reveals that gravity, thermodynamics, and information theory are not three theories that happen to connect at horizons—they are three descriptions of a single geometric reality. The gravitational constant $G$, the Bekenstein-Hawking entropy, and the horizon computational rate are mutually determined by the requirement of self-consistency across all local causal boundaries.
+On the joint branch of Theorem Q.0.15, the Rindler-Landauer rate is compatible with the local-horizon thermodynamic derivation and the area-density calibration. The cancellation of $\hbar$, $k_B$, and $\ln 2$ is an identity under the declared conversion and protocol hypotheses. The gravitational constant, horizon entropy, and computational rate retain their respective bridge and calibration premises; none of the three quantities alone determines the other two or the Einstein equations.
 
 ---
 
 #### Q.0.9.8.8 Effective Horizon MPU Count
 
-**Theorem Q.0.18 (Effective Horizon MPU Count).** *For a Schwarzschild black hole of mass $M$, the horizon area measured in units of the PCE-optimal MPU area $\delta^2$ is*
+**Theorem Q.0.18 (Effective Horizon MPU Count on the Combined Spacing Branch).** *Assume a Schwarzschild black hole of mass $M$ and the residual-budget, throughput-saturated, ideal-packing branch on which Equation Q.18 gives $\delta^2=8\ln2\,L_P^2$. Then the horizon area measured in units of $\delta^2$ is*
 $$
 N_{\mathrm{MPU}}^{\mathrm{eff}}(M)
 :=
@@ -1536,7 +1591,7 @@ N_{\mathrm{MPU}}^{\mathrm{eff}}(M)
 $$
 $\square$
 
-**Corollary Q.0.18a (Entropy Decomposition at the PCE-Attractor).** *At the PCE-Attractor, the effective horizon MPU count and the per-channel capacity reproduce the Bekenstein-Hawking entropy:*
+**Corollary Q.0.18a (Conditional Horizon Entropy Decomposition).** *Assume the hypotheses of Theorem Q.0.18, the residual-capacity branch $C_{\max}^{*}=2\ln2$, and the dimensionless Bekenstein-Hawking normalization $S_{\mathrm{BH}}=\mathcal A_H/(4L_P^2)$. Then*
 $$
 N_{\mathrm{MPU}}^{\mathrm{eff}}(M)\,C_{\max}^{*}
 =
@@ -1728,7 +1783,7 @@ $$
 \qquad
 x_N:=[N\ln2]_{2\pi}=2\pi\{N\alpha_L\}.
 $$
-The following finite ledger is fixed before any comparison with a horizon-transfer dataset.
+Assume an accepted finite certificate $\mathfrak C_{\mathrm{grid}}$ accompanies the ledger. It contains rational outward enclosures for $\ln2$, $\pi$, and $\alpha_L$; an interval-certified continued-fraction quotient transcript; exact integer recurrences for every displayed $(p_k,q_k)$; rational enclosures proving every displayed rounded error and discrepancy; and, for each finite gap row, a permutation whose interval-separated residues are in cyclic order together with exact gap multiplicities. Acceptance means that every interval operation is outward rounded, every asserted floor is constant on its input interval, every recurrence is an exact integer identity, and every displayed decimal interval rounds uniquely to the printed digits. The following finite ledger is recorded before any comparison with a horizon-transfer dataset and is conditional on acceptance of $\mathfrak C_{\mathrm{grid}}$.
 
 1. **Grid ratio.**
 $$
@@ -1812,7 +1867,63 @@ s_N=\lfloor(N+1)\alpha_L\rfloor-\lfloor N\alpha_L\rfloor\in\{0,1\},
 $$
 so the Beatty/convergent/three-gap ledger is completely determined by the finite continued-fraction record above.
 
-*Proof.* Items 1 and 2 are the specialization of Lemma Q.0.7b and the standard continued-fraction algorithm to $\alpha_L=\ln2/(2\pi)$. Item 3 is the continued-fraction best-approximation table translated to phase defects by multiplication by $2\pi$. Item 4 is the classical continued-fraction discrepancy estimate applied with $\sum_{i=1}^{10}a_i=38$ and $C_0\le3$; the factor $2$ in the window-counting sentence is the passage from anchored star discrepancy to arbitrary arcs. Item 5 is the three-distance theorem and the convergent-denominator two-gap specialization, with the displayed rows obtained by direct cyclic sorting of $\{j\alpha_L\}$ using precision certified far beyond the displayed digits. No amplitude, width, greybody factor, or nonresonant envelope enters any entry of this ledger. $\square$
+*Proof.* The certificate enclosures for the two transcendental inputs can be checked using convergent series. The identity
+$$
+\ln2=2\sum_{m=0}^{\infty}\frac1{(2m+1)3^{2m+1}}
+$$
+has, after the terms $m=0,\ldots,M-1$, a positive remainder bounded by
+$$
+\frac{2}{2M+1}\frac{3^{-(2M+1)}}{1-3^{-2}}.
+$$
+Machin's identity
+$$
+\pi=16\arctan(1/5)-4\arctan(1/239)
+$$
+is verified by the tangent addition formula and the fact that both sides lie in $(3,4)$; each arctangent is enclosed by its alternating series, whose error is smaller than the first omitted term. Rational interval division then encloses $\alpha_L=\ln2/(2\pi)$ and verifies the printed prefix in item 1 by unique decimal rounding.
+
+For item 2, begin with the certified interval for $y_0=\alpha_L$. At stage $j$, the certificate verifies that $y_j$ lies strictly inside one unit interval $(a_j,a_j+1)$ and forms an outward enclosure for
+$$
+y_{j+1}=\frac1{y_j-a_j}.
+$$
+Induction therefore proves every recorded partial quotient. The exact recurrences
+$$
+p_j=a_jp_{j-1}+p_{j-2},
+\qquad
+q_j=a_jq_{j-1}+q_{j-2},
+$$
+with $(p_{-1},p_0)=(1,0)$ and $(q_{-1},q_0)=(0,1)$ prove all integer entries in item 3. The certificate evaluates
+$$
+e_j=\left|\alpha_L-\frac{p_j}{q_j}\right|,
+\qquad
+q_j\lVert q_j\alpha_L\rVert=q_j|q_j\alpha_L-p_j|,
+\qquad
+|q_j\ln2-2\pi p_j|=2\pi|q_j\alpha_L-p_j|
+$$
+by outward interval arithmetic. Each resulting interval lies inside the rounding cell of the printed entry. Theorem Q.0.7k proves the record-minimum interpretation.
+
+For item 4, the continued-fraction discrepancy theorem for an irrational rotation (Kuipers and Niederreiter 1974) applies because Lemma Q.0.7b proves irrationality and the exact recurrence verifies $q_k\le N<q_{k+1}$. It yields
+$$
+ND_N^*\le3+\sum_{i=1}^{k+1}a_i.
+$$
+The certified quotients give $\sum_{i=1}^{10}a_i=38$, hence $D_N^*\le41/N$ on the displayed range. If $0\le y_1\le\cdots\le y_N<1$ are the certified sorted residues, then
+$$
+D_N^*
+=\max_{1\le i\le N}
+\max\left\{\frac iN-y_i,\ y_i-\frac{i-1}{N}\right\}.
+$$
+The supplied permutations and interval comparisons prove the three displayed finite values by this formula. An arbitrary circular arc is a difference of at most two anchored intervals, so its counting error is at most $2ND_N^*$.
+
+For item 5, the three-gap theorem for irrational rotations (Sós 1958; Świerczkowski 1958) applies to $\alpha_L$. Its convergent-denominator specialization (Slater 1967) gives the two lengths
+$$
+\lVert q_{k-1}\alpha_L\rVert,
+\qquad
+\lVert q_{k-1}\alpha_L\rVert+\lVert q_k\alpha_L\rVert
+$$
+with multiplicities $q_k-q_{k-1}$ and $q_{k-1}$; these sum to $q_k$. For every other displayed row, the certificate permutation places the intervals for $\{j\alpha_L\}$ in strict cyclic order. Subtracting successive intervals, including the wraparound gap, proves the listed lengths, multiplicities, and their sum-to-one check. Finally, $0<\alpha_L<1$ implies
+$$
+\lfloor(N+1)\alpha_L\rfloor-\lfloor N\alpha_L\rfloor\in\{0,1\},
+$$
+which proves the Sturmian insertion formula. No statement about amplitudes, widths, greybody factors, or nonresonant envelopes enters the certificate. $\square$
 
 **Remark Q.0.20b.2 (Status Split for the Horizon Transfer Branch).** Proposition Q.0.20b.1 closes only the phase-grid arithmetic after an accepted transfer record $\mathfrak T_{\mathrm{hor}}$ is present. It fixes the positions, recurrence hierarchy, finite gap statistics, and window-counting bounds of the Landauer grid. It does not by itself derive the transfer map from retained horizon channel data, and it does not fix amplitudes, widths, greybody factors, nonresonant envelopes, or peak-identification tolerances.
 
@@ -1852,32 +1963,25 @@ The next point is $10\ln2\bmod2\pi\approx0.6483$. In sector $k=1$, the positive-
 
 ## Q.1 Foundational Relation and the Optimization Goal
 
-This appendix determines the relationship between the emergent Planck length $L_P$ and the microscopic MPU spatial spacing $\delta$ by enforcing consistency between the ND-RID thermodynamic derivation of $G$ (Appendix E) and the PCE equilibrium values of the boundary-channel parameters. The key identity is Equation (Q.3),
-
-The derivation begins with the relationship between the emergent gravitational constant $G$ and the microscopic network parameters, established in **Appendix E**, Equation (E.9):
+This appendix relates the emergent Planck length $L_P$ to the MPU spacing $\delta$ on the Appendix-E area-law branch and then evaluates the relation on a specified intersection of channel branches. Equation E.9 gives
 $$
-G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}}
+G=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}.
 \tag{Q.1}
 $$
-where $\eta$ is a geometric packing factor, $\chi$ is a dimensionless correlation factor ($0 < \chi \le 1$), and $C_{\max}$ is the ND-RID channel capacity. Using the definition of the squared Planck Length, $L_P^2 = G\hbar/c^3$, we eliminate $G$ to obtain a direct relationship between the fundamental MPU spacing and the emergent Planck scale:
+Using $L_P^2=G\hbar/c^3$ yields
 $$
-L_P^2 = \left( \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}} \right) \frac{\hbar}{c^3} = \frac{\eta \delta^2}{4 \chi C_{\max}}
+L_P^2=\frac{\eta\delta^2}{4\chi C_{\max}},
 \tag{Q.2}
 $$
-Rearranging this gives the target relation:
+and hence
 $$
-\frac{\delta^2}{L_P^2} = \frac{4 \chi C_{\max}}{\eta}
+\frac{\delta^2}{L_P^2}=\frac{4\chi C_{\max}}{\eta}.
 \tag{Q.3}
 $$
-so the task reduces to fixing $C_{\max}^*$, $\chi^*$, and $\eta^*$ at PCE equilibrium and substituting them into (Q.3).
 
-## Q.2 Rigorous Determination of PCE-Optimal Parameters
+## Q.2 Conditional Boundary-Parameter Assignments
 
-The scale ratio $\delta/L_P$ is determined by Equation (Q.3):
-
-$$\frac{\delta^2}{L_P^2} = \frac{4\chi C_{\max}}{\eta}$$
-
-derived from the area law (Equation E.9). The PCE-optimal values of each parameter follow from existing theorems:
+Equation Q.3 is evaluated below using three independent entries: the residual-budget capacity assignment, the throughput-saturated channel-independence selection with the other variables held constant, and the ideal-packing selection with the other variables held constant. Their simultaneous use defines the combined branch. The cited results do not establish a coupled global optimizer, its uniqueness, or its stability.
 
 ### Q.2.1 Channel Capacity: $C_{\max}^* = 2\ln 2$ on the Residual-Budget Branch
 
@@ -1895,27 +1999,23 @@ At $K_0 = 3$ this gives $C_{\max}^*/\varepsilon = 2$: of the $K_0=3$ bits per MP
 
 ### Q.2.2 Correlation Factor: $\chi^* = 1$
 
-**Lemma Q.2.2 (Channel Independence).** At PCE equilibrium, the independence factor saturates its upper bound:
+**Lemma Q.2.2 (Channel Independence on the Throughput-Saturated Branch).** Hold $(\delta,\eta,C_{\max})$ constant, assume the accepted objective is strictly increasing in the saturated ND-RID throughput, and assume $\chi=1$ is feasible. Then
 $$
-\boxed{\chi^* = 1.}
+\boxed{\chi^*=1.}
 \tag{Q.11}
 $$
 
-*Proof.* By definition (Appendix E, Theorem E.3), the effective independent boundary-link count satisfies
-$$
-N_{eff_links}=\chi \, N_{geom_links}, \qquad 0<\chi\le 1.
-$$
-For fixed geometry $(\delta,\eta)$ and fixed per-link capacity bound $C_{\max}$, the ND-RID boundary throughput bound in one cycle is proportional to $N_{eff_links}$ and hence is strictly increasing in $\chi$. Therefore any throughput-saturated PCE equilibrium must attain the maximal feasible value of $\chi$. Since $0<\chi\le 1$, the maximizer is $\chi^*=1$. $\square$
+*Proof.* The effective link count is $N_{\mathrm{eff}}=\chi N_{\mathrm{geom}}$ with $0<\chi\le1$. With the remaining variables constant, the throughput is strictly increasing in $\chi$, so its feasible maximum is attained at $\chi=1$. ∎
 
 ### Q.2.3 Packing Factor: $\eta^* = 1$
 
-**Lemma Q.2.3 (Isotropic Packing).** At PCE equilibrium, the geometric inefficiency factor saturates its lower bound:
+**Lemma Q.2.3 (Ideal Packing on the Throughput-Saturated Branch).** Hold $(\delta,\chi,C_{\max})$ constant, assume the accepted objective is strictly increasing in the saturated ND-RID throughput, and assume $\eta=1$ is feasible. Then
 $$
-\boxed{\eta^* = 1.}
+\boxed{\eta^*=1.}
 \tag{Q.12}
 $$
 
-*Proof.* By definition (Appendix E, Theorem E.3), $\sigma_{geom_link}=1/(\eta\delta^2)$ with $\eta\ge 1$, so at fixed $\delta$ the geometric link density is strictly decreasing in $\eta$ and the achievable ND-RID throughput bound in one cycle is strictly decreasing in $\eta$. Therefore any throughput-saturated PCE equilibrium must attain the minimal feasible value of $\eta$. Since $\eta\ge 1$, the minimizer is $\eta^*=1$. $\square$
+*Proof.* Since $\sigma_{\mathrm{geom}}=1/(\eta\delta^2)$ with $\eta\ge1$, the throughput is strictly decreasing in $\eta$ while the remaining variables are constant. Its feasible maximum is therefore attained at $\eta=1$. ∎
 
 ### Q.2.4 Final Result
 
@@ -1926,95 +2026,82 @@ $$
 
 ## Q.5 Final Result and Interpretation
 
-The global, coupled PCE optimization of the MPU network vacuum yields a unique, stable equilibrium characterized by:
+On the intersection of the residual-capacity, throughput-saturated, channel-independence, and ideal-packing branches, the registered values are:
 * $C_{\max}^* = 2\ln 2$
 * $\chi^* = 1$
 * $\eta^* = 1$
 * $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$
 
-Substituting the PCE-optimal values into the foundational relation (Q.3) yields:
+These coordinate values do not by themselves establish existence, uniqueness, or dynamical stability of a global coupled PCE equilibrium.
+
+Substituting the residual-capacity, throughput-saturated, and ideal-packing branch values into the foundational relation (Q.3) yields:
 
 $$\frac{\delta^2}{L_P^2} = \frac{4\chi^* C_{\max}^*}{\eta^*}$$
 
-With $\chi^* = 1$ and $\eta^* = 1$ (Sections Q.2.2–Q.2.3) and $C_{\max}^*$ from Equation (Q.10), this gives:
+With $\chi^*=1$, $\eta^*=1$, and $C_{\max}^*=2\ln2$ on those respective branches, this gives
 
-$$\boxed{\frac{\delta^2}{L_P^2} = 8\ln 2, \qquad \frac{\delta}{L_P} = \sqrt{8\ln 2} \approx 2.355} \tag{Q.18}$$
+$$\boxed{\frac{\delta^2}{L_P^2}=8\ln2,\qquad\frac{\delta}{L_P}=\sqrt{8\ln2}\approx2.355}.\tag{Q.18}$$
 
-This result demonstrates that the fundamental MPU spatial scale $\delta$ is fixed in Planck units by a universal dimensionless constant on the combined branch of capacity-residual partition, throughput-saturation, and ideal packing. The value $C_{\max}^*=2\ln2$ follows from the residual-budget branch of Appendix E (Equation E.14, §Q.2.1), and the geometric/channel factors $\chi^*=1$ and $\eta^*=1$ follow from the throughput-saturated and ideal-packing branches of Lemmas Q.2.2 and Q.2.3. The resulting ratio $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ is uniquely fixed on this combined branch; removing the residual-budget branch would multiply $C_{\max}^*$ by a coefficient $\lambda_C$ and rescale $\delta/L_P$ by $\sqrt{\lambda_C}$. The branch-independent ratio $\delta/L_P$ is outside the stated residual-budget, throughput-saturated, ideal-packing hypotheses.
-
-
-The value of this ratio emerges from the PCE equilibrium values using the framework's fundamental constants:
-$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{\frac{4 \cdot 1 \cdot 2\ln 2}{1}} = \sqrt{8\ln 2}$$
-where $C_{\max}^* = 2\ln 2$ (Equation Q.10), $\chi^* = 1$ (Lemma Q.2.2), and $\eta^* = 1$ (Lemma Q.2.3). The ability to derive an $O(1)$ constant linking these scales from a self-consistent global optimization, with no adjustable parameters, provides evidence for the internal coherence of the Predictive Universe framework.
-
-
-## Q.6 Lorentz-Invariant Discretization and the Temporal Scale
-
-The spatial discretization scale $\delta/L_P=\sqrt{8\ln2}$ is fixed on the residual-budget, throughput-saturated, ideal-packing branch of Equation Q.18. This section establishes the corresponding temporal discretization scale through consistency with emergent Lorentzian structure on the same branch.
-
-### Q.6.1 The Discretization Consistency Requirement (Conditional on Theorems 43, 46)
-
-**Proposition Q.6.1 (Lorentz-Invariant Discretization).** The emergent invariant speed $c$ (Theorem 46) relates the spatial discretization scale $\delta$ to the temporal discretization scale $\tau_{min}$ through:
-
-$$c = \frac{\delta}{\tau_{min}}$$
-
-Combined with the Planck unit identity $c = L_P/t_P$, this yields:
-
-$$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}}$$
-
-*Proof.*
-
-**Step 1 (Reference speed identification).** In the serialized nearest-neighbor propagation regime of Appendix E, and with the same no-preferred-frame scale identification used in Theorem E.10.2, the emergent causal speed satisfies
+Thus the combined branch determines the dimensionless spatial ratio by the algebraic substitution
 $$
-c = \frac{\delta}{\tau_{min}},
+\frac{\delta}{L_P}
+=\sqrt{\frac{4\chi^*C_{\max}^*}{\eta^*}}
+=\sqrt{\frac{4\cdot1\cdot2\ln2}{1}}
+=\sqrt{8\ln2}.
 $$
-with $\delta$ the microscopic spatial spacing (Definition 35) and $\tau_{min}$ the minimum cycle time (Theorem 29).
+If the residual-capacity coefficient is replaced by $C_{\max}=2\lambda_C\ln2$, the same relation gives $\delta/L_P=\sqrt{8\lambda_C\ln2}$. These identities establish conditional compatibility; they do not establish existence, uniqueness, or stability of a global PCE optimizer.
 
-**Step 2 (Planck Unit Relation).** The Planck length and Planck time are defined through:
 
-$$L_P = \sqrt{\frac{\hbar G}{c^3}}, \quad t_P = \sqrt{\frac{\hbar G}{c^5}}$$
+## Q.6 Conditional Serialized-Frontier Calibration of the Temporal Scale
 
-from which the identity $L_P/t_P = c$ follows by direct calculation:
+Equation Q.18 fixes the spatial ratio $\delta/L_P=\sqrt{8\ln2}$ only on its residual-budget, throughput-saturated, ideal-packing branch. A temporal ratio requires additional propagation and clock data.
 
-$$\frac{L_P}{t_P} = \sqrt{\frac{\hbar G/c^3}{\hbar G/c^5}} = \sqrt{c^2} = c$$
+### Q.6.1 Serialized-Frontier Calibration
 
-**Step 3 (Scale Identification).** The equality imported from Appendix E should therefore be read as a condition on the PCE-optimal continuum scaling of the serialized regime, not as a theorem independent of that hypothesis.
+**Proposition Q.6.1 (Conditional Serialized-Frontier Scale Calibration).** Assume:
 
-**Step 4 (Ratio Equality).** Under this identification,
+1. a separately registered positive lower edge-update duration $\tau_{\min}$;
+2. nonzero spacing $\delta$, edge-by-edge serialization, and bounded weights as in Theorem 46;
+3. normalized uniform weights and one-link frontier attainment, so the attained speed is independently identified as
+   $$
+   c=\frac{\delta}{\tau_{\min}};
+   $$
+4. the Planck definitions, which give $c=L_P/t_P$.
+
+Then
 $$
-\frac{\delta}{\tau_{min}} = \frac{L_P}{t_P}.
+\boxed{\frac{\delta}{L_P}=\frac{\tau_{\min}}{t_P}}.
 $$
 
-yields the stated result upon rearrangement:
+*Proof.* Under assumption 3 and the Planck identity,
+$$
+\frac{\delta}{\tau_{\min}}=c=\frac{L_P}{t_P}.
+$$
+Cross multiplication gives the displayed ratio. Theorem 29 does not supply assumption 1, Theorem 46 does not supply assumption 3, and Lorentzian promotion remains governed by Corollary 46a and Appendix O. ∎
 
-$$\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}$$
+### Q.6.2 Temporal Scale on the Calibrated Branch
 
-**Step 5 (Uniqueness).** Suppose the ratios were unequal: $\delta/L_P \neq \tau_{min}/t_P$. Define $c_{eff} := \delta/\tau_{min}$. Then $c_{eff} \neq c$, and the discretization would select a preferred frame—spatial and temporal resolutions would transform differently under boosts, violating Lorentz invariance (Theorem 46). Since Theorem 46 establishes Lorentz invariance as an emergent property of the PCE-optimal vacuum, equality of the ratios is the unique consistent solution. ∎
-
-### Q.6.2 The Temporal Discretization Scale
-
-**Theorem Q.6.1 (Minimum Temporal Interval).** The minimum temporal interval $\tau_{\min}$ implied by Lorentz-invariant discretization is:
+**Theorem Q.6.1 (Temporal Scale on the Serialized-Frontier Branch).** On the full branch of Proposition Q.6.1 and the spatial branch of Equation Q.18,
 $$
 \boxed{
-\tau_{\min} = \sqrt{8\ln 2}\,t_P \approx 2.355\,t_P.
+\tau_{\min}=\sqrt{8\ln2}\,t_P\approx2.355\,t_P.
 }
 $$
 
-*Proof.* Lorentz invariance requires:
-$$
-\frac{\tau_{\min}}{t_P} = \frac{\delta}{L_P}.
-$$
-Using (Q.18), $\delta/L_P=\sqrt{8\ln 2}$, gives $\tau_{\min}=t_P\sqrt{8\ln 2}$. $\square$
+*Proof.* Substitute $\delta/L_P=\sqrt{8\ln2}$ into the conditional ratio of Proposition Q.6.1. ∎
 
-
-**Corollary Q.6.1 (Unified Discretization Formula).** The full PU discretization relation is:
+**Corollary Q.6.1 (Conditional Unified Discretization Formula).** On the same joint branch,
 $$
 \boxed{
-\frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P} = \sqrt{8\ln 2} \approx 2.355.
+\frac{\delta}{L_P}
+=
+\frac{\tau_{\min}}{t_P}
+=
+\sqrt{8\ln2}\approx2.355.
 }
 $$
 
-*Proof.* Combine (Q.18) with the Lorentz-invariance condition $\tau_{\min}/t_P=\delta/L_P$. $\square$
+Off the serialized-frontier calibration branch, Equation Q.18 fixes only the spatial ratio and the temporal ratio remains unclosed.
 
 ### Q.6.3 Information-Theoretic Interpretation
 
@@ -2040,11 +2127,11 @@ The mutual consistency constraint relates the minimal-branch values $d_0 = 8$ an
 
 ### Q.6.4 Experimental Predictions
 
-**Prediction Q.6.1 (No Leading Lorentz-Violating MDR at the PCE Attractor).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of theories with fundamental discretization scales [Amelino-Camelia 2013, Mattingly 2005]. In the PU framework, the PCE-attractor discretization is Lorentz-invariant (Theorem 46 and Proposition Q.6.1). Therefore leading-order Lorentz-violating MDR terms written separately in powers of $E$ and $p$ are absent on the attractor branch:
+**Prediction Q.6.1 (No Leading Lorentz-Violating MDR at the PCE Attractor).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of theories with fundamental discretization scales [Amelino-Camelia 2013, Mattingly 2005]. On the joint branch consisting of the serialized-frontier calibration of Proposition Q.6.1, the full Corollary 46a/Appendix O Lorentzian-promotion package, and cone sharing by the retained propagation sector with no appended preferred-frame operator, leading-order Lorentz-violating MDR terms written separately in powers of $E$ and $p$ are absent:
 $$
 E^2-p^2c^2=m^2c^4+\text{Lorentz-invariant corrections}.
 $$
-The exact factor
+On that joint branch, the exact factor
 $$
 \frac{\delta}{L_P}=\frac{\tau_{\min}}{t_P}=\sqrt{8\ln 2}
 $$
@@ -2054,7 +2141,7 @@ $$
 $$
 but it is not, by itself, an effective Lorentz-violation energy scale $E_{\mathrm{QG}}$.
 
-*Derivation.* Proposition Q.6.1 imposes the equal-ratio condition $\delta/L_P=\tau_{\min}/t_P$ as the Lorentz-consistent scaling of the serialized MPU regime. A leading photon MDR of the form $\Delta v/c\propto(E/E_{\mathrm{QG}})^n$ would require a preferred-frame or non-attractor propagation branch specifying how the microscopic cutoff enters the continuum principal symbol. No such branch is part of Theorem 46 or Proposition Q.6.1. Hence the attractor branch gives a null prediction for leading Lorentz-violating MDR coefficients, while retaining the invariant UV cutoff $\Lambda_{\mathrm{MPU}}$. $\square$
+*Derivation.* Proposition Q.6.1 calibrates the spatial and temporal scales only after the independent attained-frontier premise is accepted; it does not establish Lorentzian kinematics. The full Corollary 46a/Appendix O package supplies the Lorentzian principal symbol, while cone sharing and the absence of an appended preferred-frame operator exclude a sector-specific leading LIV term. Under those combined hypotheses the displayed dispersion relation is Lorentz invariant. If a non-attractor preferred-frame term is appended, its coefficient is instead governed by Prediction Q.6.2. Thus the null prediction belongs to the stated joint branch, not to Theorem 46 or Proposition Q.6.1 alone. $\square$
 
 **Prediction Q.6.2 (Scale-Ledger Bound for Non-Attractor LIV Branches).** If an explicitly appended non-attractor propagation branch introduces a leading photon-speed correction
 $$
@@ -2077,21 +2164,32 @@ Published photon time-of-flight limits therefore constrain only appended LIV bra
 
 | Quantity | Symbol | Value | Origin |
 |:---------|:-------|:------|:-------|
-| Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln2}\approx2.355$ on the residual-budget, throughput-saturated, ideal-packing branch | Eq Q.18; Lem Q.2.2; Lem Q.2.3 |
-| Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Lorentz consistency (Prop. Q.6.1) |
-| Information budget | $C_{\max}^*$ | $2\ln 2$ | Capacity saturation (Q.10) |
-| Hilbert space dimension | $d_0$ | $8$ on the minimal branch | Theorem 23; Theorem Z.2 |
+| Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln2}\approx2.355$ on the residual-budget, throughput-saturated, ideal-packing branch | Eq. Q.18 together with Eq. Q.10 and Lemmas Q.2.2–Q.2.3 |
+| Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln2}\approx2.355$ only after the serialized-frontier calibration | Proposition Q.6.1 plus Eq. Q.18 |
+| Information budget | $C_{\max}^*$ | $2\ln2$ on the residual-capacity branch | Eq. Q.10 and its Appendix-E residual-budget premise |
+| Hilbert space dimension | $d_0$ | $8$ on the minimal Hilbert-carrier branch | Theorem 23; Theorem Z.2 |
 | Structural binary reference | $\varepsilon_0$ | $\ln2$ | Theorem 31; physical reset cost is ensemble-dependent |
-| Independence factor | $\chi^*$ | $1$ | Lemma Q.2.2 |
-| Geometric inefficiency | $\eta^*$ | $1$ | Lemma Q.2.3 |
+| Independence factor | $\chi^*$ | $1$ on the throughput-saturated channel-independence branch | Lemma Q.2.2 |
+| Geometric inefficiency | $\eta^*$ | $1$ on the ideal-packing branch | Lemma Q.2.3 |
 
-The complete derivation chain from the horizon constant to spacetime discretization:
-
-$$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{\max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{8\ln 2}}$$
+The conditional dependency chain is
+$$
+\boxed{
+\begin{array}{c}
+K_0=3\xrightarrow{\text{Hilbert-carrier branch}}d_0=8,\\
+\text{residual-capacity branch}\xrightarrow{\text{Eq. Q.10}}C_{\max}^*=2\ln2,\\
+\text{throughput saturation}\xrightarrow{\text{Lemma Q.2.2}}\chi^*=1,\\
+\text{ideal packing}\xrightarrow{\text{Lemma Q.2.3}}\eta^*=1
+\end{array}
+}
+\xrightarrow{\text{Q.3}}
+\frac{\delta}{L_P}=\sqrt{8\ln2}.
+$$
+The structural reference $\varepsilon_0=\ln2$ is compatible with the residual-capacity value but does not, by itself, imply that capacity assignment.
 
 ## Q.7 The Time-Quantum-to-Hubble Ratio
 
-The minimum cycle time $\tau_{\min}$ derived in Section Q.6 sets the microscopic temporal scale of the MPU network. The de Sitter horizon associated with the cosmological constant $\Lambda$ supplies a complementary cosmic temporal scale, the Hubble time $t_H$. Combining the two PU-derived dimensionless ratios — $\delta/L_P=\sqrt{8\ln 2}$ from the minimal Appendix Z branch (Section Q.6) and $\Lambda L_P^2$ from the Appendix U cosmological-constant sector — yields a single dimensionless time-quantum-to-Hubble ratio fixed by PU constants and $\Lambda$.
+On the serialized-frontier calibration branch of Section Q.6, the registered edge-update duration satisfies $\tau_{\min}=\sqrt{8\ln2}\,t_P$. Adjoining the de Sitter definition of $t_H$ then gives the following conditional time-scale ratio. Off that propagation/clock branch, Appendix Q fixes only the spatial ratio and no microscopic temporal scale follows.
 
 ### Q.7.1 The Hubble Time on the de Sitter Branch
 
@@ -2138,7 +2236,7 @@ $$
 
 ### Q.7.4 Status of the Identity
 
-**Remark Q.7.1 (Status of Theorem Q.7.1).** Theorem Q.7.1 is a direct algebraic consequence of two independently established framework results: the discretization ratio $\delta/L_P=\sqrt{8\ln 2}$ (Equation Q.18, valid on the residual-budget, throughput-saturated, ideal-packing branch) and the de Sitter Hubble time of Definition Q.7.1 fixed by the cosmological-constant sector (Appendix U). The identity contains no additional fitting parameter beyond the inputs $K_0=3$, $\varepsilon_0=\ln 2$, $d_0=8$, and $\Lambda L_P^2$. It is a closed-form consequence of those inputs, not an independent closure constraint on $\Lambda$. Its falsification status inherits from the upstream branches: Theorem Q.7.1 fails if either $\delta/L_P\neq\sqrt{8\ln 2}$ on the stated PCE-saturated branch or the de Sitter identification of $t_H$ on the cosmological branch is invalidated.
+**Remark Q.7.1 (Status of Theorem Q.7.1).** Theorem Q.7.1 is algebraic only after three independent branch packages are accepted: the spatial ratio of Equation Q.18, the serialized-frontier clock calibration of Proposition Q.6.1, and the de Sitter definition of $t_H$. It is not a consequence of $K_0$, $\varepsilon_0$, $d_0$, and $\Lambda L_P^2$ alone, and it does not independently close either the temporal or cosmological branch.
 
 **Remark Q.7.2 (Cosmological-Microscopic Bridge).** Theorem Q.7.1 packages the framework's smallest derived time scale (the MPU cycle time on the saturating branch) and the largest cosmological time scale (the de Sitter Hubble time) into a single dimensionless number determined by $K_0$, $\varepsilon_0$, and $\Lambda L_P^2$. This complements Equation Q.18 (which relates microscopic and Planck *length* scales by $K_0,\varepsilon_0$ alone) by extending the same construction to *temporal* scales once the cosmological-constant sector is adjoined.
 

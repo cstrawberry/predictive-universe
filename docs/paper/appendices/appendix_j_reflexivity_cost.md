@@ -40,7 +40,37 @@ $$
 $$
 Moreover $0\le H_q(P\mid R)\le\ln2$, with the upper endpoint exactly when $q(P=0\mid R)=q(P=1\mid R)=1/2$ almost surely. On that maximal-entropy branch, $\varepsilon_{\mathrm{reset}}\ge\ln2$, with equality exactly when $\varepsilon_{\mathrm{diss}}=0$. The equality $\varepsilon_{\mathrm{reset}}=\ln2$ by itself does not imply maximal conditional entropy or saturation.
 
-*Proof.* The first identity is alphabet counting. Conditional Landauer gives the second display. The binary conditional-entropy bound follows by averaging the pointwise binary entropy. Lemma J.1 supplies noninjectivity only under its reachable-domain and fixed-ready-state hypotheses. ∎
+*Proof.* The reset alphabet has two elements, so its structural log-cardinality is
+$$
+\varepsilon_0=\ln|\{0,1\}|=\ln2.
+$$
+For every value $r$ with $q(r)>0$, put $p_r=q(P=1\mid R=r)$. Then
+$$
+H_q(P\mid R)=\sum_rq(r)h(p_r),
+\qquad
+h(p):=-p\ln p-(1-p)\ln(1-p).
+$$
+On $(0,1)$,
+$$
+h''(p)=-\frac1p-\frac1{1-p}<0,
+$$
+and $h'(p)=\ln((1-p)/p)$ vanishes only at $p=1/2$. Together with $h(0)=h(1)=0$, this proves $0\le h(p)\le\ln2$, with equality at the upper endpoint exactly at $p=1/2$. Averaging proves
+$$
+0\le H_q(P\mid R)\le\ln2,
+$$
+and equality on the right holds exactly when $p_r=1/2$ for $q_R$-almost every $r$.
+
+The conditional Landauer principle for an isothermal cyclic reset with retained side information (Sagawa and Ueda 2009; Reeb and Wolf 2014) applies because the register Hamiltonian is degenerate, the controller and register Hamiltonians return to their initial values, and $R$ is retained and unchanged. It gives
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+\ge H_q(P\mid R).
+$$
+Define
+$$
+\varepsilon_{\mathrm{diss}}
+:=\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}-H_q(P\mid R)\ge0.
+$$
+This is (J.3). If $H_q(P\mid R)=\ln2$, then $\varepsilon_{\mathrm{reset}}\ge\ln2$, and equality holds exactly when $\varepsilon_{\mathrm{diss}}=0$. Conversely, the numerical equality $\varepsilon_{\mathrm{reset}}=\ln2$ alone permits any decomposition $H_q(P\mid R)+\varepsilon_{\mathrm{diss}}=\ln2$ and therefore implies neither maximal entropy nor reversibility. Lemma J.1 concerns only the separate cardinality condition for logical merging. ∎
 
 **J.4 Conditional Ancilla and Finite-Event Ledgers**
 
@@ -74,14 +104,14 @@ $$
 $$
 The structural label ledger for $N_{\mathrm{ref}}$ binary reset supports is $N_{\mathrm{ref}}\ln2$, but it equals neither term in (J.4a.2) unless the relevant maximal-entropy and saturation hypotheses are separately verified. For sequential resets, each $R_e$ includes all earlier records still available and unchanged; this prevents double counting. ∎
 
-**Theorem J.4b (Conditional Finite-Work Quantum-Zeno Obstruction).** Consider $N$ equal interrogation cycles over duration $T$, with $\tau=T/N\le\tau_0$. Assume that every all-survival cycle closes a registered reset in a cyclic degenerate register at common bath temperature $T_b>0$, and that, uniformly over surviving histories,
+**Theorem J.4b (Conditional Finite-Work Quantum-Zeno Obstruction).** Consider $N$ equal interrogation cycles over duration $T$, with $\tau=T/N\le\tau_0$. Assume that every surviving cycle closes a registered reset in a cyclic degenerate register at common bath temperature $T_b>0$ and that, uniformly over surviving histories,
 $$
 q_j(\tau\mid H_{j-1})\ge b\tau^2,
 \qquad
 H_{q_j}(P_j\mid R_j)\ge h_{\min}>0.
 \tag{J.4b.1}
 $$
-Then a survival requirement $P_N\ge1-\delta$, $0<\delta<1$, necessarily gives
+Assume also that work input is recorded as a nonnegative random variable and that the conditional mean work of each executed reset obeys conditional Landauer for its actual history. Then a survival requirement $P_N\ge1-\delta$, $0<\delta<1$, necessarily gives
 $$
 N\ge
 \max\!\left\{
@@ -90,20 +120,52 @@ N\ge
 \right\}.
 \tag{J.4b.2}
 $$
-On the all-survival branch the cyclic work input obeys
+The sum $W_N^{\mathrm{surv}}$ of the conditional mean reset-work inputs along the all-survival history obeys
 $$
 W_N^{\mathrm{surv}}
-\ge k_B T_b h_{\min}N
-\ge k_B T_b h_{\min}\frac{bT^2}{-\log(1-\delta)}.
+\ge k_BT_bh_{\min}N
+\ge k_BT_bh_{\min}\frac{bT^2}{-\log(1-\delta)}.
 \tag{J.4b.3}
 $$
 If the protocol stops at first departure, then
 $$
-\mathbb EW_N\ge(1-\delta)k_B T_b h_{\min}N.
+\mathbb EW_N\ge(1-\delta)k_BT_bh_{\min}N.
 \tag{J.4b.4}
 $$
 
-*Proof.* Conditional averaging gives a departure probability at least $bT^2/N^2$ at each surviving step, so $P_N\le\exp(-bT^2/N)$. Combining this necessary upper-bound compatibility with $P_N\ge1-\delta$ proves (J.4b.2). Conditional Landauer and cyclic energy balance give at least $k_B T_b h_{\min}$ work for every executed reset. Successful histories execute all $N$ cycles, proving (J.4b.3)--(J.4b.4). ∎
+*Proof.* Let $S_j$ be survival through cycle $j$. Along the unique all-survival history through cycle $j-1$,
+$$
+\mathbb P(S_j\mid S_{j-1})
+=1-q_j(\tau\mid H_{j-1})
+\le1-b\tau^2.
+$$
+The conditional-probability chain rule and $1-u\le e^{-u}$ give
+$$
+P_N=\mathbb P(S_N)
+=\prod_{j=1}^N\mathbb P(S_j\mid S_{j-1})
+\le(1-b\tau^2)^N
+\le e^{-Nb\tau^2}
+=e^{-bT^2/N}.
+$$
+Thus $1-\delta\le e^{-bT^2/N}$, so
+$$
+N\ge\frac{bT^2}{-\log(1-\delta)}.
+$$
+The condition $\tau=T/N\le\tau_0$ independently gives $N\ge T/\tau_0$; since $N$ is integral, taking ceilings proves (J.4b.2).
+
+For every executed reset and every surviving history, conditional Landauer gives conditional mean work at least
+$$
+k_BT_bH_{q_j}(P_j\mid R_j)\ge k_BT_bh_{\min}.
+$$
+The all-survival history contains $N$ such resets, so summing proves the first inequality in (J.4b.3); the second follows from (J.4b.2). If $K$ is the number of executed resets in the stopping protocol, nonnegativity and the tower property give
+$$
+\mathbb EW_N\ge k_BT_bh_{\min}\,\mathbb EK.
+$$
+On $S_N$, $K=N$, while $K\ge0$ elsewhere. Hence
+$$
+\mathbb EK\ge N\mathbb P(S_N)=NP_N\ge N(1-\delta),
+$$
+which proves (J.4b.4). ∎
 
 **Remark J.4b.1 (Scope Boundary).** The result assigns no cost to an unrecorded projection. It becomes void if $b=0$, if no registered reset is executed, or if no positive uniform conditional-entropy bound is certified.
 

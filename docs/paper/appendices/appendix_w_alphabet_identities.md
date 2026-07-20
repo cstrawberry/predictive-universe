@@ -36,8 +36,8 @@ This appendix derives general, robust identities and bounds relating emergent ga
 * **Cap constant:**
 
   $$
-  a_{\rm cap}:=d_0^{1/M},\quad D:=a_{\rm cap}(a_{\rm cap}-1),\quad 
-  K(d_0,M)=\frac{a_{\rm cap}-1}{4\pi}\Bigl(1+\frac{1}{D}\Bigr).
+  a_{\mathrm{cap}}:=d_0^{1/M},\quad D_{\mathrm{cap}}:=a_{\mathrm{cap}}(a_{\mathrm{cap}}-1),\quad
+  K_{\mathrm{alph}}(d_0,M)=\frac{a_{\mathrm{cap}}-1}{4\pi}\Bigl(1+\frac{1}{D_{\mathrm{cap}}}\Bigr).
   \tag{W.0.4}
   $$
 
@@ -53,14 +53,14 @@ $$
 g_1=\sqrt{\tfrac{5}{3}}\,g_Y\quad\text{(equivalently }g_Y=\sqrt{\tfrac{3}{5}}\,g_1\text{)}.
 $$
 
-**LAN/QFI–capacity rationale.** For a $C^1$ family of CPTP maps near $g=0$ with a stationary state $\rho_0$ that is full rank on its support, local asymptotic normality (LAN) reduces estimation to a Gaussian shift model; the SLD–QFI eigenvalues $\{\lambda_i\}$ parameterize orthogonal local signal‑to‑noise directions on the supported tangent space. The LAN capacity surrogate and its Jensen upper bound are
+**QFI–capacity surrogate.** Let the supported tangent model satisfy the SLD-existence hypotheses of Theorem W.18, and let $\{\lambda_i\}_{i=1}^{M}$ be the nonnegative eigenvalues of its chosen finite-dimensional SLD-QFI quadratic form. As an additional modeling assumption, define the rate term used in (W.0.1) by
 
 $$
 g_{\rm true}(u):=\sum_{i=1}^{M}\ln(1+\lambda_i u),\qquad
 g_J(u):=M\ln(1+xu),
 $$
 
-where $x=S_1/M$. The map $u\mapsto g_{\rm true}(u)$ is **concave** and monotone in $u$, and Jensen's inequality gives $g_{\rm true}(u)\le g_J(u)$ for all $u\ge0$, with equality iff $\lambda_i=x$ for all $i$. The function $\ln(1+\lambda u)$ is also **concave in $\lambda$** for fixed $u>0$ (Helstrom; Holevo; Petz; Paris–Řeháček). This appendix does not derive the existence of the Standard Model group, a task addressed in Appendix G.8. Instead, it assumes the SM group structure has emerged and proceeds to derive quantitative constraints on its coupling constants from the underlying MPU substrate’s information‑theoretic properties.
+where $x=S_1/M$. This logarithmic rate formula is not implied by $C^1$ regularity, SLD-QFI existence, or quantum local asymptotic normality; a LAN interpretation additionally requires a specified asymptotic statistical experiment and verification of its regularity and convergence hypotheses. The arguments below use the displayed rate formula as a stated surrogate. For that surrogate, $u\mapsto g_{\rm true}(u)$ is concave and nondecreasing, and Jensen's inequality gives $g_{\rm true}(u)\le g_J(u)$ for all $u\ge0$, with equality for $u>0$ iff $\lambda_i=x$ for every $i$. The function $\lambda\mapsto\ln(1+\lambda u)$ is concave for each prescribed $u\ge0$. This appendix assumes that the Standard Model group structure has emerged as described in Appendix G.8 and derives conditional constraints on its couplings from the surrogate and the standing assumptions.
 
 **Standing assumptions.** Throughout this appendix:
 
@@ -77,38 +77,45 @@ If instead $g_J(u_0)\le \ln d_0$, the optimum is **interior** $(u^*=u_0)$; the e
 
 Condition (W.0.5) is a branch inequality, not a consequence of the names Cramér-Rao, Holevo, Landauer, or spectral gap. A Cramér-Rao-Holevo derivation of (W.0.1) is accepted in this appendix only when it supplies, before comparison, the finite LAN/QFI eigenvalue list $\{\lambda_i\}$, the exact local Fisher quadratic cost $A_{\rm PCE}u^2$, the channel-capacity term $\Gamma_0\sum_i\ln(1+\lambda_i u)$, the convex domain $u\ge0$, and the active-cap inequality (W.0.5). Under those entries, Lemma W.1 gives strict convexity, Lemma W.2 gives the Jensen-cap boundary, and the constrained minimizer is theorem-level inside the stated branch. Without (W.0.5), the same potential has an interior branch and the cap-active downstream formulae do not apply.
 
-> **Notation box.** $u=g^2$; $\alpha=g^2/(4\pi)$; $S_1=\sum\lambda_i$; $S_2=\sum\lambda_i^2$; $x=S_1/M$; $\sigma^2=\frac{S_2}{M}-x^2$; $a_{\rm cap}=d_0^{1/M}$; $D=a_{\rm cap}(a_{\rm cap}-1)$; $K(d_0,M)=\frac{a_{\rm cap}-1}{4\pi}\bigl(1+\frac{1}{D}\bigr)$; $F_\lambda=\frac{M x^2}{S_2}=\frac{1}{1+\sigma^2/x^2}\in(0,1]$.
+> **Notation box.** $u=g^2$; $\alpha=g^2/(4\pi)$; $S_1=\sum\lambda_i$; $S_2=\sum\lambda_i^2$; $x=S_1/M$; $\sigma^2=\frac{S_2}{M}-x^2$; $a_{\mathrm{cap}}=d_0^{1/M}$; $D_{\mathrm{cap}}=a_{\mathrm{cap}}(a_{\mathrm{cap}}-1)$; $K_{\mathrm{alph}}(d_0,M)=\frac{a_{\mathrm{cap}}-1}{4\pi}\bigl(1+\frac{1}{D_{\mathrm{cap}}}\bigr)$; $F_\lambda=\frac{M x^2}{S_2}=\frac{1}{1+\sigma^2/x^2}\in(0,1]$.
 
 ---
 
 ## W.1 Capacity ordering and gap control
 
 **Lemma W.1 (Strict convexity; unique constrained minimizer).**
-With $\gamma_{\rm eff}=2$, the second derivative of the potential (W.0.1) is:
+Under the standing assumptions, $\phi$ is coercive and strictly convex on $[0,\infty)$. It therefore has a unique minimizer on $[0,\infty)$ and a unique minimizer under either the true-capacity or Jensen-capacity constraint.
 
+*Proof.* Twice differentiating (W.0.1) gives
 $$
-\phi''(u)=2A_{\rm PCE}+ \Gamma_0\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}.
+\phi''(u)=2A_{\rm PCE}+\Gamma_0\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0,
 $$
-Since $A_{\rm PCE}>0$ and the sum is non-negative, $\phi''(u) > 0$ for all $u\ge 0$. Hence $\phi$ is strictly convex on $[0,\infty)$ and has a unique constrained minimizer under either capacity constraint.
+because $A_{\rm PCE}>0$. Thus $\phi$ is strictly convex. If $\lambda_{\max}=\max_i\lambda_i$, then
+$$
+\phi(u)\ge A_{\rm PCE}u^2-\Gamma_0M\ln(1+\lambda_{\max}u)\longrightarrow+\infty
+$$
+as $u\to\infty$, so $\phi$ is coercive. Continuity and coercivity give existence of an unconstrained minimizer, and strict convexity gives uniqueness. Since $x>0$, both $g_{\rm true}$ and $g_J$ are continuous and strictly increasing on $[0,\infty)$: indeed, $g'_{\rm true}(u)=\sum_i\lambda_i/(1+\lambda_i u)>0$ and $g'_J(u)=Mx/(1+xu)>0$. Each feasible set $\{u\ge0:g(u)\le\ln d_0\}$ is therefore a nonempty closed interval containing $0$. The restriction of a strictly convex function to an interval has at most one minimizer, while continuity and compactness give existence. ∎
 
 **Lemma W.2 (Jensen‑cap boundary).**
 When the Jensen‑cap is active,
 
 $$
-u^\*_{\rm J}\;=\;\frac{M}{S_1}\bigl(a_{\rm cap}-1\bigr)\;=\;\frac{a_{\rm cap}-1}{x}.
+u_{\mathrm J}^*\;=\;\frac{M}{S_1}\bigl(a_{\mathrm{cap}}-1\bigr)\;=\;\frac{a_{\mathrm{cap}}-1}{x}.
 \tag{W.1.1}
 $$
 
 **Lemma W.3 (Gap monotonicity).**
 $\Delta_{\rm cap}(u):=g_J(u)-g_{\rm true}(u)$ satisfies $\Delta_{\rm cap}(u)\ge0$ and $\Delta'_{\rm cap}(u)\ge0$ for all $u\ge0$.
 
-*Proof.* Nonnegativity is Jensen's inequality applied to the concave function $\ln(1+\lambda u)$. Derivative:
-
+*Proof.* For prescribed $u\ge0$, $f_u(\lambda)=\ln(1+\lambda u)$ is concave because $f_u''(\lambda)=-u^2/(1+\lambda u)^2\le0$. Jensen's inequality therefore gives $\Delta_{\rm cap}(u)\ge0$. Differentiation gives
 $$
 \Delta'_{\rm cap}(u)=\frac{Mx}{1+xu}-\sum_i\frac{\lambda_i}{1+\lambda_i u}.
 $$
-
-Let $h(\lambda):=\lambda/(1+\lambda u)$. This function is concave in $\lambda$ (for $u>0$). By Jensen's inequality, the average value is less than or equal to the value at the average: $\frac{1}{M}\sum_i h(\lambda_i) \le h(\frac{1}{M}\sum_i \lambda_i) = h(x)$. Thus, $\sum_i h(\lambda_i) \le M h(x) = \frac{Mx}{1+xu}$. Therefore, $\Delta'_{\rm cap}(u) \ge 0$. $\square$
+At $u=0$, this derivative is $Mx-\sum_i\lambda_i=0$. For $u>0$, let $h_u(\lambda)=\lambda/(1+\lambda u)$. Since $h_u''(\lambda)=-2u/(1+\lambda u)^3<0$, Jensen's inequality gives
+$$
+\frac1M\sum_i h_u(\lambda_i)\le h_u(x)=\frac{x}{1+xu}.
+$$
+Substitution into the derivative proves $\Delta'_{\rm cap}(u)\ge0$ for $u>0$ and hence for all $u\ge0$. ∎
 
 **Lemma W.4 (Quadratic gap bound).**
 Assume $\lambda_i\ge0$ and let $\lambda_{\min}=\min_i\lambda_i$. Then for all $u\ge0$,
@@ -145,11 +152,11 @@ If some $\lambda_i=0$, the limit diverges accordingly, as expected from the asym
 Assume the upper capacity constraint is active for both problems. Then
 
 $$
-u^\*_{\rm T}\ \ge\ u^\*_{\rm J}.
+u_{\mathrm T}^*\ \ge\ u_{\mathrm J}^*.
 \tag{W.1.3}
 $$
 
-*Proof.* Since $g_{\rm true}(u)\le g_J(u)$, the feasible set $\{u:\ g_J(u)\le\ln d_0\}$ is contained in $\{u:\ g_{\rm true}(u)\le\ln d_0\}$. The maximum admissible $u$ under the true capacity is therefore $\ge$ the Jensen cap; the constrained convex minimum at the active upper boundary is attained at $u^\*_{\rm J}$ for the Jensen set and at some $u^\*_{\rm T}\ge u^\*_{\rm J}$ for the true set. $\square$
+*Proof.* Since $g_{\mathrm{true}}(u)\le g_J(u)$, the feasible set $\{u:\ g_J(u)\le\ln d_0\}$ is contained in $\{u:\ g_{\mathrm{true}}(u)\le\ln d_0\}$. The maximum admissible $u$ under the true capacity is therefore $\ge$ the Jensen cap; the constrained convex minimum at the active upper boundary is attained at $u_{\mathrm J}^*$ for the Jensen set and at some $u_{\mathrm T}^*\ge u_{\mathrm J}^*$ for the true set. $\square$
 
 ---
 
@@ -158,58 +165,58 @@ $$
 **Definition W.6 (Sector ratio).** For any sector $s$,
 
 $$
-r_s:=\Bigl(\frac{C_{\rm cap}}{C_{\rm cyc}}\Bigr)_s
-=\frac{S_1^{(s)}}{2\tilde A_{\rm PCE}^{(s)}+S_2^{(s)}}.
+r_s:=\Bigl(\frac{C_{\mathrm{cap}}}{C_{\mathrm{cyc}}}\Bigr)_s
+=\frac{S_1^{(s)}}{2\tilde A_{\mathrm{PCE}}^{(s)}+S_2^{(s)}}.
 \tag{W.2.1}
 $$
 
-**Definition W.7 (Alphabet constant).** For fixed $d_0$ and $M$,
+**Definition W.7 (Alphabet constant).** Given $d_0$ and $M$,
 
 $$
-a_{\rm cap}=d_0^{1/M},\quad D=a_{\rm cap}(a_{\rm cap}-1),\quad 
-K(d_0,M)=\frac{a_{\rm cap}-1}{4\pi}\Bigl(1+\frac{1}{D}\Bigr).
+a_{\mathrm{cap}}=d_0^{1/M},\quad D_{\mathrm{cap}}=a_{\mathrm{cap}}(a_{\mathrm{cap}}-1),\quad
+K_{\mathrm{alph}}(d_0,M)=\frac{a_{\mathrm{cap}}-1}{4\pi}\Bigl(1+\frac{1}{D_{\mathrm{cap}}}\Bigr).
 \tag{W.2.2}
 $$
 
-For $(d_0,M_e)=(8,7)$, where $d_0=8$ is the minimal-branch MPU alphabet size (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $M_e=7$ on the electromagnetic topological-mode branch — under which the electromagnetic alphabet sector's effective independent information mode count is identified with the seven independent generators of $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ (Appendix R, Section R.3): $a_{\rm cap}=8^{1/7}=1.34590019\dots$, $D=0.46554714\dots$,
+For $(d_0,M_e)=(8,7)$, where $d_0=8$ is the minimal-branch MPU alphabet size (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $M_e=7$ on the electromagnetic topological-mode branch — under which the electromagnetic alphabet sector's effective independent information mode count is identified with the seven independent generators of $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ (Appendix R, Section R.3): $a_{\mathrm{cap}}=8^{1/7}=1.34590019\dots$, $D_{\mathrm{cap}}=0.46554714\dots$,
 
 $$
-\boxed{K(8,7)=0.0866517 \quad \text{(on the electromagnetic topological-mode branch)}}.
+\boxed{K_{\mathrm{alph}}(8,7)=0.0866517 \quad \text{(on the electromagnetic topological-mode branch)}}.
 $$
 
-The Theorem W.10 product inequality holds for any specified $M_e$; the assignment $M_e = 7$ to the electromagnetic alphabet sector requires the topological-mode branch identification. The sensitivity table in §W.2 shows that adjacent values $K(8,6) = 0.0892$, $K(8,7) = 0.0867$, $K(8,8) = 0.0850$ differ by $\sim 2$–$3\%$, so the assignment of $M_e$ is load-bearing for this standalone alphabet identity. (W's identity is not the direct source of the framework's $\alpha^{-1}$ prediction; that derivation in Appendix Z uses $M = 24$ and a different alphabet structure.)
+The Theorem W.10 product inequality holds for any specified $M_e$; the assignment $M_e = 7$ to the electromagnetic alphabet sector requires the topological-mode branch identification. The sensitivity table in §W.2 shows that adjacent values $K_{\mathrm{alph}}(8,6) = 0.0892$, $K_{\mathrm{alph}}(8,7) = 0.0867$, $K_{\mathrm{alph}}(8,8) = 0.0850$ differ by $\sim 2$–$3\%$, so the assignment of $M_e$ is load-bearing for this standalone alphabet identity. (W's identity is not the direct source of the framework's $\alpha^{-1}$ prediction; that derivation in Appendix Z uses $M = 24$ and a different alphabet structure.)
 
 **Proposition W.8 (Cap–coherence curvature bound).**
-At the Jensen‑cap boundary $u=u^\*_{\rm J}$,
+At the Jensen‑cap boundary $u=u_{\mathrm J}^*$,
 
 $$
-2\tilde A_{\rm PCE}\ \le\ \frac{S_2}{D},
+2\tilde A_{\mathrm{PCE}}\ \le\ \frac{S_2}{D_{\mathrm{cap}}},
 \tag{W.2.3}
 $$
 
-with **strict inequality on the cap‑active branch**; equality requires simultaneously a **flat spectrum** $(\sigma^2=0)$ and $u_0=u^\*_{\rm J}$ (branch boundary).
+with **strict inequality on the cap‑active branch**; equality requires simultaneously a **flat spectrum** $(\sigma^2=0)$ and $u_0=u_{\mathrm J}^*$ (branch boundary).
 
-*Proof.* At $u^\*_{\rm J}$, the KKT conditions for minimizing $\phi(u)$ subject to $g_J(u)\le\ln d_0$ yield $\exists\,\eta\ge 0$ such that
-
-$$
-\phi'(u^\*_{\rm J})+\eta\,g_J'(u^\*_{\rm J})=0,\qquad g_J'(u)=\frac{Mx}{1+xu}>0.
-$$
-
-Hence $\phi'(u^\*_{\rm J})=-\eta\,g_J'(u^\*_{\rm J})\le 0$, with strict “$<0$” on the cap‑active branch ($\eta>0$). Using concavity of $h(\lambda)=\lambda/(1+\lambda u)$,
+*Proof.* At $u_{\mathrm J}^*$, the KKT conditions for minimizing $\phi(u)$ subject to $g_J(u)\le\ln d_0$ yield $\exists\,\eta\ge 0$ such that
 
 $$
-\sum_i\frac{\lambda_i}{1+\lambda_i u^\*_{\rm J}}\ \le\ M\,\frac{x}{1+xu^\*_{\rm J}} \;=\; M\,\frac{x}{a_{\rm cap}}.
+\phi'(u_{\mathrm J}^*)+\eta\,g_J'(u_{\mathrm J}^*)=0,\qquad g_J'(u)=\frac{Mx}{1+xu}>0.
+$$
+
+Hence $\phi'(u_{\mathrm J}^*)=-\eta\,g_J'(u_{\mathrm J}^*)\le 0$, with strict “$<0$” on the cap‑active branch ($\eta>0$). Using concavity of $h(\lambda)=\lambda/(1+\lambda u)$,
+
+$$
+\sum_i\frac{\lambda_i}{1+\lambda_i u_{\mathrm J}^*}\ \le\ M\,\frac{x}{1+xu_{\mathrm J}^*} \;=\; M\,\frac{x}{a_{\mathrm{cap}}}.
 $$
 
 Thus
 
 $$
-0\ \ge\ \phi'(u^\*_{\rm J})
-=2A_{\rm PCE}\,u^\*_{\rm J}-\Gamma_0\sum_i\frac{\lambda_i}{1+\lambda_i u^\*_{\rm J}}
-\ \ge\ 2A_{\rm PCE}\frac{a_{\rm cap}-1}{x}-\Gamma_0\,M\frac{x}{a_{\rm cap}}.
+0\ \ge\ \phi'(u_{\mathrm J}^*)
+=2A_{\mathrm{PCE}}\,u_{\mathrm J}^*-\Gamma_0\sum_i\frac{\lambda_i}{1+\lambda_i u_{\mathrm J}^*}
+\ \ge\ 2A_{\mathrm{PCE}}\frac{a_{\mathrm{cap}}-1}{x}-\Gamma_0\,M\frac{x}{a_{\mathrm{cap}}}.
 $$
 
-Rearranging gives $2\tilde A_{\rm PCE}\le (Mx^2)/D$. Since $S_2\ge Mx^2$ (Cauchy–Schwarz / RMS–AM), we obtain $2\tilde A_{\rm PCE}\le S_2/D$. Equality requires both Jensen tightness ($\lambda_i=x$) and $\eta=0$, i.e., $u_0=u^\*_{\rm J}$. $\square$
+Rearranging gives $2\tilde A_{\mathrm{PCE}}\le (Mx^2)/D_{\mathrm{cap}}$. Since $S_2\ge Mx^2$ (Cauchy–Schwarz / RMS–AM), we obtain $2\tilde A_{\mathrm{PCE}}\le S_2/D_{\mathrm{cap}}$. Equality requires both Jensen tightness ($\lambda_i=x$) and $\eta=0$, i.e., $u_0=u_{\mathrm J}^*$. $\square$
 
 **Definition W.9 (Spectral form factor).**
 
@@ -223,54 +230,54 @@ For a given sector $s$, write $F_{\lambda,s}:=\dfrac{M_s x_s^2}{S_2^{(s)}}$.
 **Theorem W.10 (Alphabet constant: upper bound and identity conditions at the Jensen‑cap–saturated optimum).**
 At the **Jensen‑cap–saturated** optimum,
 
-$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0,M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.2.5} $$
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\mathrm{cyc}}}{C_{\mathrm{cap}}}\Bigr)_{e}\ \le\ K_{\mathrm{alph}}(d_0,M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.2.5} $$
 
-with **strict inequality on the cap‑active branch**. **Equality** holds **iff** the spectrum is flat $(F_{\lambda,e}=1)$ **and** the unconstrained minimizer lies on the boundary $(u_0=u^\*_{\rm J})$, in which case
-
-
-$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ =\ K(d_0,M_e)\ }. \tag{W.2.6} $$
+with **strict inequality on the cap‑active branch**. **Equality** holds **iff** the spectrum is flat $(F_{\lambda,e}=1)$ **and** the unconstrained minimizer lies on the boundary $(u_0=u_{\mathrm J}^*)$, in which case
 
 
-*Proof.* From $u^\*_{\rm J}=(a_{\rm cap}-1)/x$,
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\mathrm{cyc}}}{C_{\mathrm{cap}}}\Bigr)_{e}\ =\ K_{\mathrm{alph}}(d_0,M_e)\ }. \tag{W.2.6} $$
 
-$$ \alpha_{\mathrm{em}}(\mathrm{MPU})\,\frac{C_{\rm cyc}}{C_{\rm cap}} =\frac{u^\*_{\rm J}}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{S_1} =\frac{a_{\rm cap}-1}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{M x^2}. $$
+
+*Proof.* From $u_{\mathrm J}^*=(a_{\mathrm{cap}}-1)/x$,
+
+$$ \alpha_{\mathrm{em}}(\mathrm{MPU})\,\frac{C_{\mathrm{cyc}}}{C_{\mathrm{cap}}} =\frac{u_{\mathrm J}^*}{4\pi}\cdot\frac{2\tilde A_{\mathrm{PCE}}+S_2}{S_1} =\frac{a_{\mathrm{cap}}-1}{4\pi}\cdot\frac{2\tilde A_{\mathrm{PCE}}+S_2}{M x^2}. $$
 
 Apply (W.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for the EM sector). Strictness and equality conditions follow from Proposition W.8 and $F_{\lambda,e}=1\iff \sigma^2=0$. $\square$
 
 **PCE motivation for the identity point.**
  *Relation to the PCE-Attractor.*
- The flat-spectrum part of the equality conditions ($F_{\lambda,e} = 1 \iff \sigma^2 = 0$) is supplied by the PCE-Attractor (Definition 15a) via the QFI flatness result of Theorem W.3a.3. The additional condition $u_0 = u^\*_{\rm J}$ — that the *unconstrained* minimizer of the rate-level PCE potential lies exactly on the Jensen cap boundary — is a separate branch-boundary condition not entailed by the PCE-Attractor in general. On the cap-active branch (Theorem W.5), the unconstrained minimizer satisfies $u^*_T \geq u^*_J$, with equality only on the boundary case; off the boundary, the PCE-Attractor sits at the *constrained* optimum on the cap, the inequality (W.2.5) is strict, and the product at the true optimum is $\geq$ its Jensen-cap value (Remark following Theorem W.10). The identity (W.2.6) is therefore an exact prediction at the flat-spectrum branch-boundary reference point, while the more robust attractor statement is the inequality (W.2.5).
+ Clause 3 of Definition 15a supplies the flat-spectrum attractor condition, and Proposition W.3a.2 evaluates it on the interface state. Theorem W.3a.3 transfers the flat metric to a generator basis only when that basis is orthonormal with respect to the inherited QFI metric. Clause 4 of Definition 15a places the constrained rate minimum on the declared upper capacity boundary; on the one-dimensional cap-active branch, the unconstrained minimizer lies above that boundary. Equality in (W.2.6) additionally requires the declared boundary to coincide with the Jensen surrogate boundary, so that $u_0=u_{\mathrm J}^*$. On a true-cap branch where that identification fails, Theorem W.5 gives only $u_{\mathrm T}^*\ge u_{\mathrm J}^*$ and the inequality (W.2.5) remains the applicable statement.
 
 **Sensitivity note (alphabet constant and variance).**
-For $d_0=8$, $K(8,M)$ decreases slowly with $M$:
-$K(8,5)=0.0935410,\ K(8,6)=0.0892318,\ K(8,7)=0.0866517,\ K(8,8)=0.0849844,\ K(8,9)=0.0838445,\ K(8,10)=0.0830309$.
+For $d_0=8$, $K_{\mathrm{alph}}(8,M)$ decreases slowly with $M$:
+$K_{\mathrm{alph}}(8,5)=0.0935410,\ K_{\mathrm{alph}}(8,6)=0.0892318,\ K_{\mathrm{alph}}(8,7)=0.0866517,\ K_{\mathrm{alph}}(8,8)=0.0849844,\ K_{\mathrm{alph}}(8,9)=0.0838445,\ K_{\mathrm{alph}}(8,10)=0.0830309$.
 Variance enters only through $F_\lambda$: the multiplicative penalty is $1/F_\lambda=1+\sigma^2/x^2$.
 
-**Remark.** By Theorem W.5 (active‑cap case), the true‑capacity optimum satisfies $u^\*_{\rm T}\ge u^\*_{\rm J}$; the product at the true optimum is therefore $\ge$ its Jensen‑cap value. The bound (W.2.5) is asserted at the Jensen‑cap–saturated optimum.
+**Remark.** By Theorem W.5 (active‑cap case), the true‑capacity optimum satisfies $u_{\mathrm T}^*\ge u_{\mathrm J}^*$; the product at the true optimum is therefore $\ge$ its Jensen‑cap value. The bound (W.2.5) is asserted at the Jensen‑cap–saturated optimum.
 
 ---
 
 ## W.3 Weak sector relation (Weinberg angle)
 
 **Assumption W.3.A (Alignment hypothesis).**
-At the $\mathrm{MPU}$ operational point, PCE sets both $U(1)_Y$ and $SU(2)$ sectors to be **simultaneously cap‑active and Jensen‑cap–saturated**. A sufficient rationale is **spectral similarity** (comparable $M_s$ and $x_s$ across sectors) so that both unconstrained optima exceed the common alphabet cap at $\mu^\*$. The assumption can fail if sector spectra differ markedly (e.g., large variance or $M_s$ mismatch) causing one sector to be interior while the other is cap‑active.
+At the $\mathrm{MPU}$ operational point, PCE sets both $U(1)_Y$ and $SU(2)$ sectors to be **simultaneously cap‑active and Jensen‑cap–saturated**. A sufficient rationale is **spectral similarity** (comparable $M_s$ and $x_s$ across sectors) so that both unconstrained optima exceed the common alphabet cap at $\mu^*$. The assumption can fail if sector spectra differ markedly (e.g., large variance or $M_s$ mismatch) causing one sector to be interior while the other is cap‑active.
 
 **Theorem W.11 (Weinberg angle from sector invariants; cap‑active branch).**
-Under Assumption W.3.A, let $u_s^\*$ denote the Jensen‑cap–saturated optimum for sector $s\in\{Y,2\}$. Then
+Under Assumption W.3.A, let $u_s^*$ denote the Jensen‑cap–saturated optimum for sector $s\in\{Y,2\}$. Then
 
-$$ \sin^2\theta_W(\mathrm{MPU})=\frac{u_Y^\*}{u_Y^\*+u_2^\*},\qquad \frac{u_2^\*}{u_Y^\*}= \frac{(d_0^{1/M_2}-1) / (S_1^{(2)}/M_2)}{(d_0^{1/M_Y}-1) / (S_1^{(Y)}/M_Y)}. \tag{W.3.1} $$
+$$ \sin^2\theta_W(\mathrm{MPU})=\frac{u_Y^*}{u_Y^*+u_2^*},\qquad \frac{u_2^*}{u_Y^*}= \frac{(d_0^{1/M_2}-1) / (S_1^{(2)}/M_2)}{(d_0^{1/M_Y}-1) / (S_1^{(Y)}/M_Y)}. \tag{W.3.1} $$
 
 *Proof.* $\sin^2\theta_W=g_Y^2/(g_Y^2+g_2^2)$ and $u=g^2$. Apply Lemma W.2 in each sector. $\square$
 
 **Normalization.** Equation (W.3.1) uses **SM (canonical) normalization** $g_Y$. For **GUT normalization**, $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$ (equivalently $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$).
 
 **Corollary W.12 (Symmetric sector reference).**
-If $M_Y=M_2=M$ and $x_Y=x_2=x_0$, then $u_2^\*/u_Y^\*=1$ and
+Under Assumption W.3.A, if $M_Y=M_2=M$ and $x_Y=x_2=x_0$, then the two Jensen-cap-saturated optima satisfy $u_2^*/u_Y^*=1$ and
 
 $$ \sin^2\theta_W(\mathrm{MPU})=\tfrac12. \tag{W.3.2} $$
 
 **Proposition W.13 (GUT‑normalized template).**
-If one further assumes an $SU(5)$‑style generator normalization at $\mu^\*$ with $g_1=g_2$ and $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$ (here $g_1$ is the **GUT‑normalized** $U(1)$ coupling), then
+If one further assumes an $SU(5)$‑style generator normalization at $\mu^*$ with $g_1=g_2$ and $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$ (here $g_1$ is the **GUT‑normalized** $U(1)$ coupling), then
 
 $$ \sin^2\theta_W(\mathrm{MPU})=\frac{3}{8}. \tag{W.3.3} $$
 
@@ -377,19 +384,19 @@ $$
 **Corollary W.16 (Product bound at Jensen‑cap; EM restatement of (W.2.5) at the Jensen‑cap–saturated optimum).**
 At the Jensen‑cap–saturated optimum,
 
-$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0, M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.5.1} $$
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\mathrm{cyc}}}{C_{\mathrm{cap}}}\Bigr)_{e}\ \le\ K_{\mathrm{alph}}(d_0, M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.5.1} $$
 
-with **strict inequality on the cap‑active branch**. **Equality** holds **iff** $u_0=u^\*_{\rm J}$ and $\sigma^2=0$. The identity (W.2.6) holds only under the specific conditions of a flat LAN spectrum and operation precisely at the branch boundary. The more general, robust prediction of this framework is the inequality (W.5.1). The identity represents an idealized, high‑symmetry point in the space of possible solutions.
+with **strict inequality on the cap‑active branch**. **Equality** holds **iff** $u_0=u_{\mathrm J}^*$ and $\sigma^2=0$. The identity (W.2.6) holds only under the specific conditions of a flat LAN spectrum and operation precisely at the branch boundary. The more general, robust prediction of this framework is the inequality (W.5.1). The identity represents an idealized, high‑symmetry point in the space of possible solutions.
 
 **Corollary W.17 (Lower bound on $r_e$ and variance effect).**
-With $r_e=\tfrac{S_1}{2\tilde A_{\rm PCE}+S_2}$ and (W.2.3),
+With $r_e=\tfrac{S_1}{2\tilde A_{\mathrm{PCE}}+S_2}$ and (W.2.3),
 
 $$
-r_e\ \ge\ \frac{S_1}{S_2(1+1/D)}\ =\ \frac{1}{x}\cdot \frac{1}{(1+\sigma^2/x^2)(1+1/D)}.
+r_e\ \ge\ \frac{S_1}{S_2(1+1/D_{\mathrm{cap}})}\ =\ \frac{1}{x}\cdot \frac{1}{(1+\sigma^2/x^2)(1+1/D_{\mathrm{cap}})}.
 \tag{W.5.2}
 $$
 
-Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W.5.1) via $1/F_\lambda=1+\sigma^2/x^2$.
+Holding $M$, $x$, $\tilde A_{\rm PCE}$, and $D$ constant, increasing spectral variance decreases $r_e$ and enlarges the upper bound (W.5.1) via $1/F_\lambda=1+\sigma^2/x^2$. No monotonicity claim is made when these quantities co-vary with the spectrum.
 
 ---
 
@@ -397,22 +404,22 @@ Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W.5.1
 
 **Inputs at $g=0$** for each sector $s\in\{e,Y,2\}$:
 
-0. **Probe specification:** a $C^1$ family of CPTP maps $E_g^{(s)}$ and a stationary state $\rho_0^{(s)}$ with $E^{(s)}_0(\rho_0^{(s)})=\rho_0^{(s)}$. Let $P_0^{(s)}$ be the support projector of $\rho_0^{(s)}$ and assume $\rho_0^{(s)}$ is full rank on $\mathrm{Ran}(P_0^{(s)})$. The SLD‑QFI is computed for the state family $\rho_g^{(s)}:=E_g^{(s)}(\rho_0^{(s)})$ at $g=0$, with the finiteness condition $P_0^{(s)}\,\dot\rho^{(s)}\,P_0^{(s)}=\dot\rho^{(s)}$ for $\dot\rho^{(s)}:=\left.\partial_g\rho_g^{(s)}\right|_{g=0}$.
+0. **Probe specification:** a $C^1$ family of CPTP maps $E_g^{(s)}$ and a stationary state $\rho_0^{(s)}$ with $E^{(s)}_0(\rho_0^{(s)})=\rho_0^{(s)}$. Let $P_0^{(s)}$ be the support projector of $\rho_0^{(s)}$ and assume $\rho_0^{(s)}$ is full rank on $\operatorname{Ran}(P_0^{(s)})$. The SLD‑QFI is computed for the state family $\rho_g^{(s)}:=E_g^{(s)}(\rho_0^{(s)})$ at $g=0$, with the finiteness condition $P_0^{(s)}\,\dot\rho^{(s)}\,P_0^{(s)}=\dot\rho^{(s)}$ for $\dot\rho^{(s)}:=\left.\partial_g\rho_g^{(s)}\right|_{g=0}$.
    *Alternative:* if a channel‑QFI convention is adopted, specify the input/state optimization rule and ancilla dimension; note that multi‑parameter QCRB attainability may require **SLD‑compatibility** (commutativity) for joint POVMs.
 1. **Spectral data:** $\{\lambda_i^{(s)}\}_{i=1}^{M_s}$ (SLD‑QFI eigenvalues at $g=0$); compute $M_s$, $S_1^{(s)}$, $S_2^{(s)}$, $x_s=S_1^{(s)}/M_s$, $\sigma_s^2$, $F_{\lambda,s}$.
 2. **Global constants:** $\Gamma_0$; alphabet size $d_0$.
 3. **Branch classification:** Solve the unconstrained stationarity
 
    $$
-   \phi'(u)=2A_{\rm PCE}\,u-\Gamma_0\sum_i \frac{\lambda_i^{(s)}}{1+\lambda_i^{(s)} u}=0.
+   \phi'(u)=2A_{\mathrm{PCE}}\,u-\Gamma_0\sum_i \frac{\lambda_i^{(s)}}{1+\lambda_i^{(s)} u}=0.
    $$
 
    Let $u_0\ge 0$ denote the solution.
-   – If $g_J(u_0)=M_s\ln(1+x_s u_0)< \ln d_0$: **interior** $(u_s^\*=u_0)$.
-   – If $g_J(u_0)= \ln d_0$: **branch boundary** $(u_s^\*=u_0=u^\*_{\rm J})$.
-   – If $g_J(u_0)> \ln d_0$: **cap‑active** $\bigl(u_s^\*=u^\*_{\rm J}=(a_{\rm cap}-1)\,M_s/S_1^{(s)}\bigr)$, with $a_{\rm cap}=d_0^{1/M_s}$.
-4. **Invariants:** $C_{\rm cap}^{(s)}=\Gamma_0\,S_1^{(s)}$,\quad $C_{\rm cyc}^{(s)}=\Gamma_0\,[\,2\tilde A_{\rm PCE}^{(s)}+S_2^{(s)}\,]$.
-5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^\*)=u_e^\*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^\*)\,(C_{\rm cyc}/C_{\rm cap})_{e}$ and compare to $K(d_0,M_e)/F_{\lambda,e}$; the identity (W.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W.3.1).
+   – If $g_J(u_0)=M_s\ln(1+x_s u_0)< \ln d_0$: **interior** $(u_s^*=u_0)$.
+   – If $g_J(u_0)= \ln d_0$: **branch boundary** $(u_s^*=u_0=u_{\mathrm J}^*)$.
+   – If $g_J(u_0)> \ln d_0$: **cap‑active** $\bigl(u_s^*=u_{\mathrm J}^*=(a_{\mathrm{cap}}-1)\,M_s/S_1^{(s)}\bigr)$, with $a_{\mathrm{cap}}=d_0^{1/M_s}$.
+4. **Invariants:** $C_{\mathrm{cap}}^{(s)}=\Gamma_0\,S_1^{(s)}$,\quad $C_{\mathrm{cyc}}^{(s)}=\Gamma_0\,[\,2\tilde A_{\mathrm{PCE}}^{(s)}+S_2^{(s)}\,]$.
+5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^*)=u_e^*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^*)\,(C_{\mathrm{cyc}}/C_{\mathrm{cap}})_{e}$ and compare to $K_{\mathrm{alph}}(d_0,M_e)/F_{\lambda,e}$; the identity (W.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W.3.1).
 6. **Weinberg angle:** evaluate (W.3.1); if using GUT normalization, use (W.3.3) with $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$.
 7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)}\}$, $\Gamma_0$, $d_0$, probe specification, and code.
 
@@ -451,29 +458,42 @@ $\square$
 
 ## W.8 Emergent GR: assumptions and controlled deviations
 
-**Theorem W.19 (Einstein dynamics under thermodynamic assumptions).**
-Assume: (i) a stable AQFT limit on a Lorentzian manifold; (ii) local thermodynamic equilibrium near local causal horizons, with the local KMS/Clausius bridge formalized by Theorem 48a under the Appendix F/G hypotheses; (iii) saturation of the horizon information bound inducing an area law; (iv) the Clausius relation $\delta Q=T\,{\rm d}S$ for local Rindler wedges. Then the macroscopic dynamics obey the Einstein field equations with constant $G$ set by the area-entropy proportionality.
+**Theorem W.19 (Einstein dynamics under the local-horizon hypotheses of Theorem 12.1).**
+Let $(M,g)$ be the Lorentzian branch of Section 11, and let $T_{\mu\nu}^{(MPU)}$ be symmetric and covariantly conserved. Assume that every point and every null vector admit the local Rindler construction used in Theorem 12.1; that the horizon entropy has the constant first-variation density $\delta S=\eta\,\delta\mathcal A+O(\lambda^2)$ with $\eta=1/(4G)$; that the heat flux is $\delta Q=\int T_{\mu\nu}^{(MPU)}\xi^\mu d\Sigma^\nu$; that the null congruence obeys the linearized Raychaudhuri equation with $\theta(0)=\sigma_{\mu\nu}(0)=0$; and that the local KMS/Clausius bridge of Theorem 48a supplies $T=\kappa/(2\pi)$ and $\delta Q=T\delta S+O(\lambda^2)$ for every such null generator. Then
+$$
+R_{\mu\nu}-\tfrac12Rg_{\mu\nu}+\Lambda g_{\mu\nu}
+=8\pi G\,T_{\mu\nu}^{(MPU)}
+$$
+in natural units, where $\Lambda$ is constant on each connected component.
 
-**Proposition W.20 (Leading corrections).**
-Deviations from (ii)–(iii) induce effective‑action corrections of the form
+*Proof.* The stated hypotheses are hypotheses (a)–(d) of Theorem 12.1 together with its conserved-stress hypothesis and its universal quantifier over null generators. Theorem 12.1 therefore gives the displayed equation. Its divergence, the contracted Bianchi identity, and $\nabla^\mu T_{\mu\nu}^{(MPU)}=0$ imply $\nabla_\nu\Lambda=0$, so $\Lambda$ is constant on each connected component. ∎
+
+**Proposition W.20 (Conditional local four-derivative action basis).**
+Assume that the gravitational response is described by a local, parity-even, diffeomorphism-invariant, metric-only effective action in four spacetime dimensions and admits a derivative expansion through four derivatives. Modulo boundary terms and the four-dimensional Euler density, its gravitational part can be written
 
 $$
-S_{\rm grav,eff}=\int d^4x \sqrt{-g}\,\Big[\tfrac{1}{16\pi G}(R-2\Lambda)+c_1 R^2+c_2 R_{\mu\nu}R^{\mu\nu}+\dots\Big],
+S_{\rm grav,eff}=\int d^4x \sqrt{-g}\,\Big[\tfrac{1}{16\pi G}(R-2\Lambda)+c_1 R^2+c_2 R_{\mu\nu}R^{\mu\nu}+O(\partial^6)\Big].
 \tag{W.8.1}
 $$
 
-with $c_{1,2}$ controlled by the degree of non‑saturation (entropy deficit) and non‑equilibrium (viscous terms) in the horizon thermodynamics.
+In natural units, $c_1$ and $c_2$ are dimensionless matching coefficients. Their dependence on entropy non-saturation or non-equilibrium data requires a separately specified microscopic matching map.
+
+*Proof.* At zero and two derivatives, the metric scalars are a constant and $R$. At four derivatives, integrations by parts reduce the parity-even metric scalars to $R^2$, $R_{\mu\nu}R^{\mu\nu}$, $R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$, and a boundary term proportional to $\Box R$. In four dimensions the Euler density
+$$
+E_4=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}-4R_{\mu\nu}R^{\mu\nu}+R^2
+$$
+has a topological integral up to boundary contributions, so $R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ can be eliminated from the local bulk basis. This yields (W.8.1). The basis classification alone supplies no values for $c_1$ and $c_2$. ∎
 
 ---
 
 ## W.9 Distinctive mathematical features
 
 **Features.**
-* (A) **Alphabet‑constant family** $K(d_0,M)$ with exact identity (W.2.6) in the flat‑spectrum branch‑boundary reference.
+* (A) **Alphabet‑constant family** $K_{\mathrm{alph}}(d_0,M)$ with exact identity (W.2.6) in the flat‑spectrum branch‑boundary reference.
 * (B) **Convexity and uniqueness** of the coupling‑setting principle (Lemma W.1).
 * (C) **Capacity‑aware bounds** that are explicit and saturable under stated conditions (Proposition W.8; Theorem W.10; Corollary W.16).
 * (D) **Hypercharge structure** compactly fixed by anomaly + Yukawa relations (Theorem W.14; Corollary W.15).
-* (E) **Deterministic pipeline** from axioms/invariants to numbers (W.6).
+* (E) **Deterministic pipeline** from the preregistered probe, QFI spectrum, global constants, and branch classification of W.6 to numerical outputs.
 * (F) **Transparent variance dependence** via $F_\lambda$ (W.2.4), quantifying robustness.
 * (G) **Predictive Power:** As shown in **Appendix Z**, this formalism, when combined with the framework's fundamental constants, yields the Thomson-limit fine-structure calculation through the displayed third-order formula of Theorems Z.24–Z.26. This fixes the low-energy boundary condition in the sense used there. The lifted threshold tuple of Appendix T belongs to the separate PU-to-SM matching problem at $\mu_G$ and later RG flow to $M_Z$, not the Thomson-limit formula itself. No continuously adjustable fit parameter enters the displayed Appendix Z Thomson-limit expression once its stated inputs are fixed.
 

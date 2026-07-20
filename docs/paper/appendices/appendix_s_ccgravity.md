@@ -1,6 +1,6 @@
 # Appendix S: Resource Cost, Stress-Energy, and the Gravitational Self-Limitation of CC
 
-The Predictive Universe framework predicts that any sustained context capable of biasing quantum outcome statistics (operational CC) carries a resource cost that manifests as stress-energy, producing a gravitational self-dephasing effect that limits its own efficacy. This appendix provides the quantitative analysis of this gravitational feedback mechanism, complementing the primary influence mechanisms (electromagnetic, biological) detailed in Appendix L. While electromagnetic coupling dominates practical CC influence by a factor of approximately $6\times10^{36}$ (Proposition L.5), the gravitational feedback analyzed here provides universal self-limitation and connects CC to fundamental spacetime structure.
+The Predictive Universe framework predicts that any sustained context capable of biasing quantum outcome statistics (operational CC) carries a resource cost that manifests as stress-energy, producing a gravitational self-dephasing effect that limits its own efficacy. This appendix provides the quantitative analysis of this gravitational feedback mechanism, complementing the primary influence mechanisms (electromagnetic, biological) detailed in Appendix L. On the analyzed parameter range of Proposition L.5, electromagnetic coupling dominates by a baseline factor of approximately $10^{36}$, with conservative range $10^{33}$–$10^{39}$; the gravitational feedback analyzed here provides universal self-limitation and connects CC to fundamental spacetime structure.
 
 ## S.1 Resource Cost of the Context State
 
@@ -16,51 +16,62 @@ C_{context} = C_{scale} \frac{\text{CC}}{\alpha_{CC,max} - \text{CC}}
 \tag{S.2}
 $$
 
-We adopt a quadratic operational cost function $R(C)$ expanded around the baseline $C_{op}$. PCE optimization drives the dynamics toward lower-potential configurations and, in low-noise detailed-balance stationary regimes (Theorem D.5), biases stationary mass toward the corresponding minima of the total potential $V(x)$, naturally positioning the system near cost minima where $R'(C_{op})$ vanishes or is absorbed into the baseline. The leading order expansion consistent with the convexity requirement (Definition 3) is:
+On the quadratic operational-cost branch, assume
 $$
-R(C) \approx R(C_{op}) + r_p (C - C_{op})^2, \quad \text{where } r_p = \tfrac{1}{2}R''(C_{op}) > 0
+R(C_{op}+x)-R(C_{op})=r_px^2,
+\qquad r_p>0,
+\qquad x\ge0.
 \tag{S.3}
 $$
+This is a constitutive branch assumption. Convexity alone would give only a local Taylor formula with a remainder.
 
-The additional power required to maintain the context is:
+Using $x=C_{context}=C_{scale}\mathrm{CC}/(\alpha_{CC,max}-\mathrm{CC})$, the additional maintenance power is
 $$
-P_{context} = R(C_{op} + C_{context}) - R(C_{op}) = r_p C_{context}^2 = r_p C_{scale}^2 \left[\frac{\text{CC}}{\alpha_{CC,max} - \text{CC}}\right]^2
+P_{context}
+=r_pC_{context}^2
+=r_pC_{scale}^2\left[\frac{\mathrm{CC}}{\alpha_{CC,max}-\mathrm{CC}}\right]^2.
 \tag{S.4}
 $$
-
-Defining the constant $A := r_p C_{scale}^2$ (dimensions of power), the power cost is:
+With $A:=r_pC_{scale}^2$,
 $$
-\boxed{P_{context}(\text{CC}) = A \left[\frac{\text{CC}}{\alpha_{CC,max} - \text{CC}}\right]^2}
+\boxed{P_{context}(\mathrm{CC})
+=A\left[\frac{\mathrm{CC}}{\alpha_{CC,max}-\mathrm{CC}}\right]^2.}
 \tag{S.5}
 $$
-
-**Physical interpretation:** The power cost scales quadratically with context complexity above threshold, reflecting the increasing resource requirements for maintaining more refined internal states capable of greater quantum outcome bias. As $\text{CC} \to \alpha_{CC,max}$, the power requirement diverges, enforcing a practical upper limit.
+On this global quadratic branch, $P_{context}$ diverges as $\mathrm{CC}\uparrow\alpha_{CC,max}$. If S.3 is retained only as a local Taylor expansion, S.4–S.5 are valid only for $C_{context}$ inside the certified Taylor neighborhood and no endpoint divergence follows from that expansion.
 
 **Connection to Appendix L:** This power $P_{context}$ is a component of the total aggregate power $P_{agg}$ analyzed in Appendix L (Theorem L.6). For systems implementing CC through electromagnetic field generation, $P_{context}$ contributes to both the radiated power $P_{EM}$ and internal operational costs $P_{other}$, with the complete energy accounting given by $P_{agg} = P_{EM} + P_{other}$ (Equation L.36).
 
 ## S.2 The CC-Context Stress-Energy Tensor $\Delta T_{\mu\nu}^{(CC)}$
 
-Assume the context state occupies volume $V_S$. We model its effective stress-energy contribution as a perfect fluid with equation-of-state parameter $w_c:=p_{context}/u_{context}\in[0,1]$. The radiation-like case $w_c=1/3$ (relativistic internal signaling) can be substituted where needed without changing any derivations. The instantaneous energy density sourcing gravity is, on the retained-energy branch (consistent with the Theorem L.3 of Appendix L, which distinguishes instantaneous source energy from cumulative work):
-
+Assume the context state occupies volume $V_S$. Model its effective stress-energy contribution as a perfect fluid with equation-of-state parameter $w_c:=p_{\mathrm{context}}/u_{\mathrm{context}}\in[0,1]$. On the retained-energy branch,
 $$
-u_{\mathrm{context}} = \frac{E_{\mathrm{grav}}^{\mathrm{inst}}}{V_S}, \qquad E_{\mathrm{grav}}^{\mathrm{inst}} = \eta_{\mathrm{ret}} P_{\mathrm{context}} \tau_c,
+E_{\mathrm{grav}}^{\mathrm{inst}}
+=
+\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c,
+\qquad
+0<\eta_{\mathrm{ret}}\le1,
 $$
-
-where $\eta_{\mathrm{ret}} \in (0, 1]$ is the retention fraction (idealized fully retained estimate uses $\eta_{\mathrm{ret}} = 1$). Cumulative work $P_{\mathrm{context}} \tau_c$ done over the coherence interval is not itself the gravitating source unless that energy remains localized in the source region; energy radiated, dissipated, or transported away does not continue to source the local gravitational potential. In dissipative steady state, $\eta_{\mathrm{ret}}$ must be computed from the actual instantaneous stress-energy distribution rather than from cumulative throughput.
+and therefore
 $$
-u_{context} = \frac{P_{context} \tau_c}{V_S}, \qquad p_{context} = w_c u_{context}
+u_{\mathrm{context}}
+=
+\frac{\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{V_S},
+\qquad
+p_{\mathrm{context}}=w_cu_{\mathrm{context}}.
 \tag{S.6}
 $$
+The ideal fully retained branch sets $\eta_{\mathrm{ret}}=1$. Cumulative work is not a local gravitational source unless the corresponding energy remains localized in the source region.
 
 In the rest frame of system $S$, the perfect-fluid stress-energy tensor (Landau & Lifshitz, 1975; Weinberg, 1972) is:
 $$
-\Delta T_{\mu\nu}^{(CC)} = \text{diag}(u_{context}, p_{context}, p_{context}, p_{context})
+\Delta T_{\mu\nu}^{(CC)} = \operatorname{diag}(u_{context}, p_{context}, p_{context}, p_{context})
 \tag{S.7}
 $$
 
 For the relativistic fluid case $w_c = 1/3$:
 $$
-\Delta T_{\mu\nu}^{(CC)} = u_{context} \cdot \text{diag}(1, 1/3, 1/3, 1/3)
+\Delta T_{\mu\nu}^{(CC)} = u_{context} \cdot \operatorname{diag}(1, 1/3, 1/3, 1/3)
 \tag{S.8}
 $$
 
@@ -90,50 +101,56 @@ $$
 \tag{S.11}
 $$
 
-Moreover, if the context stress-energy $\Delta T_{\mu\nu}^{(CC)}$ is perfect-fluid as in Equation S.8, the achievable bias obeys the self-limitation bound:
+Moreover, assume a weak-field geometric bound
 $$
-|\Delta P| \le \min\left\{\alpha, c_1 \frac{G u_{context} L^2}{c^4}\right\}
+\frac{|\Delta\Phi|}{c^2}
+\le
+C_{\mathrm{geom}}\frac{Gu_{\mathrm{context}}L^2}{c^4}
+$$
+and a calibrated local response channel $\mathcal D_{\Delta\Phi}$ satisfying
+$$
+\|\mathcal D_{\Delta\Phi}-\mathrm{id}\|_\diamond
+\le
+s_D\frac{|\Delta\Phi|}{c^2}
+$$
+throughout the stated operating regime. Then
+$$
+|\Delta P|
+\le
+\min\left\{
+\alpha,\,
+C_{\mathrm{geom}}s_D
+\frac{Gu_{\mathrm{context}}L^2}{c^4}
+\right\}.
 \tag{S.12}
 $$
 
-where $L$ is the characteristic spatial scale (e.g., $L \sim c\tau_c$) and $c_1$ is a dimensionless factor of order unity set by geometry and the phase-sensitivity of the relevant superposition degrees of freedom.
-
-*Proof.* For each $j$, define
+*Proof.* Trace preservation of the local channel implies
 $$
-p_j^{(\epsilon)} := \sum_i \text{tr}\!\left[(\Phi_A^{(\epsilon)} \otimes \text{id}_B)(\rho_{AB}) (E_i \otimes F_j)\right].
+\operatorname{tr}_A[(\Phi_A^{(\epsilon)}\otimes\mathrm{id}_B)(\rho_{AB})]
+=
+\rho_B,
 $$
-Using completeness $\sum_i E_i = I_A$, we have
+so Bob's marginal probabilities are unchanged, proving (S.11). For any POVM effect $0\le M\le I$,
 $$
-p_j^{(\epsilon)}=\text{tr}\!\left[(\Phi_A^{(\epsilon)} \otimes \text{id}_B)(\rho_{AB}) (I_A \otimes F_j)\right].
+|\Delta P|
+\le
+\|((\Phi_A^{(\epsilon)}-\mathcal E_A)\otimes\mathrm{id})(\rho_{AB})\|_1
+\le
+\|\Phi_A^{(\epsilon)}-\mathcal E_A\|_\diamond
+\le\alpha.
 $$
-Let $\Phi_A^{(\epsilon)\dagger}$ denote the Hilbert–Schmidt adjoint. Then
+The calibrated gravitational response gives independently
 $$
-p_j^{(\epsilon)}=\text{tr}\!\left[\rho_{AB}\big(\Phi_A^{(\epsilon)\dagger}(I_A)\otimes F_j\big)\right].
+|\Delta P|
+\le
+\|\mathcal D_{\Delta\Phi}-\mathrm{id}\|_\diamond
+\le
+s_D\frac{|\Delta\Phi|}{c^2}
+\le
+C_{\mathrm{geom}}s_D\frac{Gu_{\mathrm{context}}L^2}{c^4}.
 $$
-Trace preservation of $\Phi_A^{(\epsilon)}$ implies unitality of its adjoint, $\Phi_A^{(\epsilon)\dagger}(I_A)=I_A$, hence
-$$
-p_j^{(\epsilon)}=\text{tr}\!\left[\rho_{AB}(I_A\otimes F_j)\right]=\text{tr}\!\left[\rho_B F_j\right],
-$$
-which is Equation S.11.
-
-For the operational bound, let $M$ be any POVM element with $0\le M\le I$ on $AB$, and set $\Delta\rho_{AB}:=((\Phi_A^{(\epsilon)}-\mathcal E_A)\otimes \text{id}_B)(\rho_{AB})$. Then
-$$
-|\Delta P|=|\text{tr}(M\Delta\rho_{AB})|
-\le \|M\|_\infty\,\|\Delta\rho_{AB}\|_1
-\le \|\Phi_A^{(\epsilon)}-\mathcal E_A\|_{\diamond}\,\|\rho_{AB}\|_1
-\le \alpha,
-$$
-since $\|M\|_\infty\le 1$, $\|\rho_{AB}\|_1=1$, and the diamond norm is by definition the supremum over arbitrary ancilla extensions: $\|\Phi\|_{\diamond} := \sup_{\rho_{AB}} \|(\Phi \otimes \mathrm{id})(\rho_{AB})\|_1 / \|\rho_{AB}\|_1$. The induced trace norm $\|\Phi\|_{1 \to 1}$ would in general undercount this for entangled $\rho_{AB}$.
-
-Under the perfect-fluid model (Equation S.8), the Newtonian field of a uniform source implies a potential variation across a characteristic scale $L$ bounded by
-$$
-\frac{|\Delta\Phi|}{c^2}\le c_1\frac{G u_{context} L^2}{c^4}
-$$
-in the weak-field regime (with $c_1=\mathcal O(1)$ absorbing the geometry and the phase-sensitivity scale defining $\tau_c$). The induced proper-time spread over a coherence interval is $\Delta\tau/\tau_c = |\Delta\Phi|/c^2$, which yields a dephasing channel $\mathcal D$ on the relevant local superposition degrees of freedom with $\|\mathcal D-\text{id}\|_{1\to1}\le |\Delta\Phi|/c^2$. Therefore, for any measurement outcome,
-$$
-|\Delta P|\le \|\mathcal D-\text{id}\|_{1\to1}\le c_1\frac{G u_{context} L^2}{c^4}.
-$$
-Combining the two bounds gives Equation S.12. $\square$
+Taking the smaller of the two bounds proves (S.12). A microscopic phase or dephasing model is part of the response calibration encoded by $s_D$. ∎
 
 ## S.3 Gravitational Self-Disruption
 
@@ -161,79 +178,98 @@ $$
 \tag{S.16}
 $$
 
-Over the context coherence time $\tau_c$, this potential difference produces a differential proper time accumulation via gravitational time dilation (Pound & Rebka, 1960; Hafele & Keating, 1972):
+Over the context coherence time $\tau_c$, this potential difference produces the weak-field differential proper-time accumulation
 $$
-\Delta\tau_d = \frac{\Delta\Phi_{diff}}{c^2} \tau_c = \frac{4\pi G}{3c^4} (1 + 3w_c) \frac{P_{context} \tau_c}{V_S} r L_q \tau_c
+\Delta\tau_d
+=\frac{\Delta\Phi_{diff}}{c^2}\tau_c
+=\frac{4\pi G}{3c^4}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}P_{context}\tau_c}{V_S}
+rL_q\tau_c.
 \tag{S.17}
 $$
-
-Substituting Equation S.5:
+Thus
 $$
-\boxed{\Delta\tau_d = K P_{context}(\text{CC})}
+\boxed{\Delta\tau_d=K P_{context}(\mathrm{CC})}
 \tag{S.18}
 $$
-
-with the geometric factor:
+with
 $$
-K := \frac{4\pi G}{3c^4} (1 + 3w_c) \frac{r L_q \tau_c^2}{V_S}
+K:=\frac{4\pi G}{3c^4}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}rL_q\tau_c^2}{V_S},
 \tag{S.19}
 $$
-
-Define the effective dephasing coefficient:
+and
 $$
-K_{eff} := \frac{K}{\tau_c} = \frac{4\pi G}{3c^4} (1 + 3w_c) \frac{r L_q \tau_c}{V_S}
+K_{eff}:=\frac K{\tau_c}
+=\frac{4\pi G}{3c^4}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}rL_q\tau_c}{V_S}.
 \tag{S.20}
 $$
-
-**Physical interpretation:** The factor $K$ relates the context power directly to differential proper time accumulation. For $w_c = 1/3$, the numerical coefficient becomes $8\pi G/(3c^4)$. The geometric factors $r$, $L_q$, and $V_S$ reflect the spatial configuration, while $\tau_c^2$ arises from the time-averaged energy density combined with the coherence interval over which effects accumulate.
+The specialization $\eta_{\mathrm{ret}}=1$ is the fully retained estimate. For $w_c=1/3$, the prefactor is $8\pi G/(3c^4)$ times the displayed retention and geometry factors.
 
 ## S.4 PCE Optimization and Self-Limiting $\text{CC}^*$
 
-The gravitational time dilation $\Delta\tau_d$ acts as a dephasing mechanism (detailed in Section S.7 below). The effective, achievable bias is reduced from the ideal value:
+Assume a calibrated unresolved-phase or noise ensemble converts the gravitational proper-time spread into an effective attenuation and that its small-response law is linear:
 $$
-\text{CC}_{eff} = \text{CC} \left(1 - \frac{\Delta\tau_d}{\tau_c}\right) = \text{CC}(1 - K_{eff} P_{context})
+\text{CC}_{eff}
+=
+\text{CC}
+\left(
+1-\frac{\Delta\tau_d}{\tau_c}
+\right)
++O\!\left(
+\left(\frac{\Delta\tau_d}{\tau_c}\right)^2
+\right).
+$$
+Using $\Delta\tau_d/\tau_c=K_{\mathrm{eff}}P_{\mathrm{context}}$ gives
+$$
+\text{CC}_{eff}
+=
+\text{CC}(1-K_{\mathrm{eff}}P_{\mathrm{context}})
++O((K_{\mathrm{eff}}P_{\mathrm{context}})^2).
 \tag{S.21}
 $$
+This formula is a phenomenological response branch; a deterministic tracked phase alone is not a dephasing channel.
 
-The Principle of Compression Efficiency (PCE, Definition 15) drives the system to an equilibrium that maximizes a net-benefit functional, balancing the utility of the bias against its costs. We model this as:
+On a phenomenological utility branch, let $k_b,k_c,A,K_{eff}>0$, write $\alpha:=\alpha_{CC,max}$, and define
 $$
-B_{net}(\text{CC}) = k_b \text{CC}_{eff} - k_c P_{context} = k_b \text{CC} - (k_b K_{eff} \text{CC} + k_c) P_{context}
+B_{net}(\mathrm{CC})
+:=k_b\mathrm{CC}_{eff}-k_cP_{context}.
 \tag{S.22}
 $$
-
-with positive coefficients $k_b, k_c$ determined by the specific predictive task and system architecture. The coefficient $k_b$ quantifies the predictive utility per unit of effective CC, while $k_c$ represents the resource scarcity factor (related to $\lambda$ in the global PCE potential, Definition D.1).
-
-For $\text{CC} \ll \alpha_{CC,max}$, we approximate $P_{context}(\text{CC}) \approx (A/\alpha_{CC,max}^2)\text{CC}^2$ from Equation S.5. Substituting into Equation S.22:
+Assume $\mathrm{CC}\ll\alpha$ and $K_{eff}P_{context}\ll1$, so that $P_{context}=(A/\alpha^2)\mathrm{CC}^2$ and $\mathrm{CC}_{eff}=\mathrm{CC}(1-K_{eff}P_{context})$ are retained to the displayed order. Then
 $$
-B_{net}(\text{CC}) = k_b \text{CC} - \left(k_b K_{eff} \text{CC} + k_c\right) \frac{A}{\alpha^2} \text{CC}^2
+B_{net}(\mathrm{CC})
+=k_b\mathrm{CC}
+-\frac A{\alpha^2}\left(k_bK_{eff}\mathrm{CC}^3+k_c\mathrm{CC}^2\right).
 \tag{S.23}
 $$
-
-The stationarity condition $dB_{net}/d\text{CC} = 0$ becomes:
+The stationarity equation is
 $$
-k_b - \frac{A}{\alpha^2}\left[3k_b K_{eff} \text{CC}^2 + 2k_c \text{CC}\right] = 0
+k_b-\frac A{\alpha^2}\left(3k_bK_{eff}\mathrm{CC}^2+2k_c\mathrm{CC}\right)=0,
 \tag{S.24}
 $$
-
-Simplifying:
+equivalently
 $$
-k_b = \frac{A}{\alpha^2}\left[3k_b K_{eff} \text{CC} + 2k_c\right] \text{CC}
-\tag{S.25}
-$$
-
-Rearranging into standard quadratic form:
-$$
-\left(\frac{3A k_b K_{eff}}{\alpha^2}\right) (\text{CC}^*)^2 + \left(\frac{2A k_c}{\alpha^2}\right) \text{CC}^* - k_b = 0
+\frac{3Ak_bK_{eff}}{\alpha^2}(\mathrm{CC}^*)^2
++\frac{2Ak_c}{\alpha^2}\mathrm{CC}^*-k_b=0.
 \tag{S.26}
 $$
-
-The positive root gives the PCE-optimal bias:
+Its positive root is
 $$
-\boxed{\text{CC}^* = \frac{-k_c + \sqrt{k_c^2 + \frac{3K_{eff}\alpha^2 k_b^2}{A}}}{3k_b K_{eff}}}
+\boxed{
+\mathrm{CC}^*
+=\frac{-k_c+\sqrt{k_c^2+3K_{eff}\alpha^2k_b^2/A}}
+{3k_bK_{eff}}.
+}
 \tag{S.27}
 $$
-
-**Physical interpretation:** This demonstrates that any attempt to increase CC by raising the power $P_{context}$ ultimately triggers self-gravity-induced dephasing that reduces the effective bias $\text{CC}_{eff}$. The PCE optimum balances the benefit of the bias against both its direct resource cost ($k_c P_{context}$) and its indirect gravitational self-sabotage ($k_b K_{eff} \text{CC} P_{context}$). Systems are driven toward the corresponding low-potential neighborhood by the long-run stochastic adaptation dynamics described in Appendix D (Theorem D.5); in low-noise detailed-balance regimes the stationary measure concentrates near the associated PCE-optimal configurations.
+Moreover,
+$$
+B_{net}''(\mathrm{CC})
+=-\frac A{\alpha^2}(6k_bK_{eff}\mathrm{CC}+2k_c)<0
+$$
+for $\mathrm{CC}\ge0$, so this root is the unique maximizer of the truncated utility when it lies inside the two assumed validity regimes. A stochastic concentration claim additionally requires $-B_{net}$ to be a declared component of the Appendix-D potential and requires the low-noise detailed-balance hypotheses of Theorem D.5.
 
 **Limiting behavior:**
 - **Low resource cost** ($k_c \ll k_b K_{eff}$): $\text{CC}^* \propto \alpha/\sqrt{A K_{eff}}$, limited primarily by gravitational feedback
@@ -267,12 +303,12 @@ r_s < R_S
 \tag{S.31}
 $$
 
-where $R_S = (3V_S/4\pi)^{1/3}$ is the characteristic radius of the aggregate. As $\text{CC} \to \alpha$, the Schwarzschild radius diverges: $r_s \to \infty$. Therefore, the bound $\text{CC} < \alpha$ is simultaneously:
+where $R_S=(3V_S/4\pi)^{1/3}$ is the characteristic radius of the aggregate. On the global quadratic-cost branch, $r_s\to\infty$ as $\mathrm{CC}\uparrow\alpha$. Two distinct restrictions apply:
 
-1. **Information-theoretic constraint** (Theorem 39): Prevents deterministic FTL signaling by ensuring $|\Delta P| < 0.5$
-2. **Gravitational collapse limit**: Prevents black hole formation by ensuring $r_s < R_S$ remains satisfiable
+1. Theorem 39 supplies the bounded-bias endpoint $\alpha_{CC,max}<1/2$ on its operational branch; exact pre-lightcone causality separately requires Theorem 39c.
+2. The inequality $r_s<R_S$ supplies a system-dependent collapse ceiling determined by $A$, $V_S$, $\tau_c$, and $\eta_{\mathrm{ret}}$.
 
-The endpoint-bias theorem (Theorem 39) fixes the universal bounded-branch ceiling $\alpha_{CC,\max}<0.5$; operational causality separately requires exact pre-lightcone context independence by Theorem 39c. Independently, for any finite system the gravitational constraints impose additional system-dependent ceilings strictly below $\alpha$ because $P_{context}(\text{CC})$ diverges as $\text{CC}\to\alpha$. To state the perturbative requirements explicitly, consider the weak-field validity condition:
+Thus $\mathrm{CC}<\alpha$ does not by itself prevent collapse. The gravitational ceiling is the solution of S.31 for the declared source parameters and lies below $\alpha$ whenever those parameters are finite and positive. The weak-field calculation imposes the stronger perturbative requirement:
 $$
 \frac{\Phi_{context}}{c^2} = \frac{G M_{context}}{c^2 R_S} \ll 1
 \tag{S.32}
@@ -308,19 +344,28 @@ with $\alpha_{CC,\max}<0.5$ on the bounded-bias branch.
 
 *Proof.* Theorem 39 proves that $\alpha_{CC,\max}<0.5$ is a sufficient branch gate excluding deterministic endpoint forcing for arbitrary binary coarse-grainings. It is the endpoint-forcing gate for the bounded-bias CC branch.
 
-For the gravitational-collapse ceiling, use Equations S.30–S.31:
+For the gravitational-collapse ceiling, assume a spherically symmetric aggregate of areal radius $R_S$ and use Equations S.30–S.31:
 $$
-r_s=\frac{2G\tau_c}{c^2}P_{context}(\mathrm{CC})<R_S
+r_s
+=
+\frac{2G\eta_{\mathrm{ret}}\tau_c}{c^4}P_{context}(\mathrm{CC})
+<R_S
 \quad\Longleftrightarrow\quad
-P_{context}(\mathrm{CC})<\frac{c^2 R_S}{2G\tau_c}.
+P_{context}(\mathrm{CC})
+<
+\frac{c^4R_S}{2G\eta_{\mathrm{ret}}\tau_c}.
 $$
 Substituting Equation S.5 gives
 $$
-A\left[\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\right]^2<\frac{c^2 R_S}{2G\tau_c}.
+A\left[\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\right]^2
+<
+\frac{c^4R_S}{2G\eta_{\mathrm{ret}}\tau_c}.
 $$
 Let
 $$
-B:=\frac{c^2 R_S}{2G\tau_c A}>0.
+B
+:=
+\frac{c^4R_S}{2G\eta_{\mathrm{ret}}\tau_cA}>0.
 $$
 Since all quantities are nonnegative and $\mathrm{CC}<\alpha$ on the branch domain, the inequality is equivalent to
 $$
@@ -330,34 +375,37 @@ Solving gives
 $$
 \mathrm{CC}<\frac{\alpha\sqrt B}{1+\sqrt B}=:\mathrm{CC}_{BH}.
 $$
-Because $B$ is finite for a finite system with $A,\tau_c,R_S>0$,
+For finite positive $A,\tau_c,R_S,\eta_{\mathrm{ret}}$,
 $$
 \mathrm{CC}_{BH}<\alpha.
 $$
 
-For the perturbative weak-field ceiling, impose the conservative sufficient condition
+For the perturbative weak-field ceiling, fix a declared tolerance $0<\delta_{\mathrm{WF}}\ll1$ and impose
 $$
-K_{eff}P_{context}\le1.
+K_{\mathrm{eff}}P_{\mathrm{context}}\le\delta_{\mathrm{WF}}.
 $$
 Using Equation S.5,
 $$
-A\left[\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\right]^2\le\frac1{K_{eff}}.
+A\left[\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\right]^2
+\le
+\frac{\delta_{\mathrm{WF}}}{K_{\mathrm{eff}}}.
 $$
 Let
 $$
-W:=\frac{1}{A K_{eff}}>0.
+W
+:=
+\frac{\delta_{\mathrm{WF}}}{AK_{\mathrm{eff}}}>0.
 $$
 Then
 $$
 \frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\le\sqrt W,
 $$
-hence
+and hence
 $$
-\mathrm{CC}\le\frac{\alpha\sqrt W}{1+\sqrt W}=:\mathrm{CC}_{WF}.
-$$
-For finite positive $A$ and $K_{eff}$, $W$ is finite and therefore
-$$
-\mathrm{CC}_{WF}<\alpha.
+\mathrm{CC}
+\le
+\frac{\alpha\sqrt W}{1+\sqrt W}
+=:\mathrm{CC}_{\mathrm{WF}}<\alpha.
 $$
 
 Combining the independent endpoint, collapse, and weak-field requirements gives (S.34a). ∎
@@ -424,15 +472,21 @@ $$
 \tag{S.40}
 $$
 
-Substituting the gravitational potential from the context state (Equations S.13-S.16):
+Substituting the retained gravitational source from Equations S.13–S.16 gives
 $$
-\Phi_A \sim \frac{2\pi G}{3} (1 + 3w_c) \frac{P_{context} \tau_c}{V_S c^2} r^2
+\Phi_A
+\sim\frac{2\pi G}{3}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}P_{context}\tau_c}{V_Sc^2}r^2.
 \tag{S.41}
 $$
-
-Therefore:
+Therefore, on the weak-phase branch,
 $$
-|\Delta P(++)| \sim \left(\frac{\Delta E_A t}{\hbar c^2}\right)^2 \left[\frac{2\pi G}{3} (1 + 3w_c) \frac{r^2}{V_S c^2}\right]^2 (P_{context} \tau_c)^2 \propto P_{context}^2
+|\Delta P(++)|
+\sim\left(\frac{\Delta E_At}{\hbar c^2}\right)^2
+\left[\frac{2\pi G}{3}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}r^2}{V_Sc^2}\right]^2
+(P_{context}\tau_c)^2
+\propto\eta_{\mathrm{ret}}^2P_{context}^2.
 \tag{S.42}
 $$
 
@@ -445,21 +499,31 @@ $$
 5. The modification is detectable only after classical comparison of $A$ and $B$ measurement records, exactly as for any other entangled-state local-unitary effect — this is not Bob-marginal FTL influence.
 5. Joint statistics $P(ij)$ are modified, detectable only through comparison between Alice and Bob
 6. Effect is probabilistic, not deterministic: cannot force specific outcomes
-7. Detection requires many samples: $N \gtrsim 1/|\Delta P|^2 \sim 1/P_{context}^4$
+7. Detection requires a protocol-specific sample size whose leading small-CC scaling is proportional to $\mathrm{CC}^{-8}$ when the response coefficients are nonzero
 
-**Detection requirements:** From Theorem 40, detecting a bias of magnitude $|\Delta P|$ requires:
+**Detection requirements:** If Equation S.5 is written as
 $$
-N_{samples} \gtrsim \frac{1}{|\Delta P|^2} \sim \frac{1}{P_{context}^4}
+P_{context}=A\left(\frac{\text{CC}}{\alpha_{CC,\max}-\text{CC}}\right)^2,
+$$
+define its small-CC coefficient $a_P:=A/\alpha_{CC,\max}^2$. Then the two response laws are
+$$
+P_{context}=a_P\,\text{CC}^2+o(\text{CC}^2),
+\qquad
+|\Delta P|=B P_{context}^2+o(P_{context}^2)
+=C\,\text{CC}^4+o(\text{CC}^4),
+\qquad C:=B a_P^2.
 \tag{S.43}
 $$
-
-Since $P_{context} \sim \text{CC}^2$ (Equation S.5 for small CC), this becomes:
+Here $a_P$ has units of power and $B$ has units of inverse power squared, so $C$ is dimensionless. For independent Bernoulli trials with null probability $p_0$, a two-sided normal-approximation design with type-I error $\alpha$ and power $1-\beta$ requires at leading order
 $$
-N_{samples} \gtrsim \frac{1}{\text{CC}^8}
+N_{samples}
+\gtrsim
+\frac{(z_{1-\alpha/2}+z_{1-\beta})^2p_0(1-p_0)}{C^2\,\text{CC}^8}.
 \tag{S.44}
 $$
+Correlations, nuisance estimation, and post-selection replace $N_{samples}$ by the corresponding effective sample size.
 
-For $\text{CC} \sim 0.1$, this requires $N \sim 10^8$ joint measurements. Crucially, these measurements must be:
+For $\text{CC}=0.1$, the power-law factor is $\text{CC}^{-8}=10^8$. The absolute sample requirement also depends on $C$, the significance and power targets, the null variance, trial dependence, and post-selection efficiency. Crucially, these measurements must be:
 - Spacelike-separated (ensuring no subluminal communication during measurement)
 - Post-selected and compared (requiring classical communication afterward)
 - Statistically aggregated (individual outcomes remain random)
@@ -472,40 +536,37 @@ For $\text{CC} \sim 0.1$, this requires $N \sim 10^8$ joint measurements. Crucia
 
 Alternative mechanisms (e.g., electromagnetic, analyzed in Appendix L) can also create non-local correlations through entanglement, but require specific coupling structures (dipole moments, charge distributions). The gravitational channel provides a universal substrate for statistical influence that applies to any quantum system.
 
-**Theorem S.3 (Gravitational non-local influence bounds).**
-
-For an entangled bipartite system with Alice implementing CC capability $\text{CC}(S_A)$ through context state maintaining power $P_{context}$ over coherence time $\tau_c$, the modification to joint measurement statistics at Bob's location (spacelike-separated from Alice) satisfies:
-
+**Theorem S.3 (Conditional Gravitational Joint-Correlation Estimate).** Assume the uniform spherical perfect-fluid source model of S.3, the retained-energy law with $0<\eta_{\mathrm{ret}}\le1$, the global quadratic cost branch S.5, and a two-level subsystem $A$ with energy gap $\Delta E_A$. Assume that the gravitational interaction is represented by a local CPTP phase channel on $A$, that the chosen joint measurement has the response S.40, and that both the weak-field and weak-phase conditions hold. Define
 $$
-|\Delta P_{joint}| \lesssim \left(\frac{\Delta E_A \Phi_A t}{\hbar c^2}\right)^2 \lesssim \left(\frac{\Delta E_A t}{\hbar c^2}\right)^2 K_A^2 P_{context}^2 \lesssim \left(\frac{\Delta E_A t}{\hbar c^2}\right)^2 K_A^2 \left[\frac{\text{CC}(S_A)}{\alpha - \text{CC}(S_A)}\right]^4 A^2
+K_A:=\frac{2\pi G}{3}(1+3w_c)
+\frac{\eta_{\mathrm{ret}}\tau_cr_A^2}{V_Sc^2}.
+$$
+Then Bob's marginal is unchanged, while the selected joint probability obeys the leading-order relation
+$$
+|\Delta P(++)|
+=\frac18\left(\frac{\Delta E_At}{\hbar c^2}\right)^2
+K_A^2A^2
+\left[\frac{\mathrm{CC}(S_A)}{\alpha_{CC,max}-\mathrm{CC}(S_A)}\right]^4
++O(\delta\phi_A^4).
 \tag{S.45}
 $$
 
-where $K_A := \frac{2\pi G}{3} (1 + 3w_c)\frac{\tau_c r_A^2}{V_S c^2}$ is the geometric potential-to-power factor for Alice's system and $\Delta E_A$ is the energy splitting of the entangled states.
-
-*Proof.*
-
-**Step 1 (Gravitational phase to probability):** From Equation S.40, for small gravitational phase $\delta\phi_A \ll 1$:
+*Proof.* Equation S.41 and the definition of $K_A$ give $\Phi_A=K_AP_{context}$ to the retained weak-field order. Hence
 $$
-|\Delta P(++)| \approx \frac{\delta\phi_A^2}{8} = \frac{1}{8}\left(\frac{\Delta E_A \Phi_A t}{\hbar c^2}\right)^2
+\delta\phi_A
+=\frac{\Delta E_At}{\hbar c^2}K_AP_{context}.
 $$
-This establishes the first inequality with implicit coefficient $1/8$.
-
-**Step 2 (Potential to power):** From Equation S.41, the gravitational potential scales as:
+The assumed joint-measurement response S.40 gives
 $$
-\Phi_A \sim \frac{2\pi G}{3} (1 + 3w_c) \frac{P_{context} \tau_c}{V_S c^2} r_A^2 = K_A P_{context}
+|\Delta P(++)|=\frac18\delta\phi_A^2+O(\delta\phi_A^4).
 $$
-Substituting into the phase expression:
+Finally, S.5 gives
 $$
-\delta\phi_A = \frac{\Delta E_A t}{\hbar c^2} \Phi_A = \frac{\Delta E_A t}{\hbar c^2} K_A P_{context}
+P_{context}^2
+=A^2\left[\frac{\mathrm{CC}(S_A)}
+{\alpha_{CC,max}-\mathrm{CC}(S_A)}\right]^4.
 $$
-This establishes the second inequality.
-
-**Step 3 (Power to CC):** From Equation S.5, $P_{context} = A[\text{CC}/(\alpha - \text{CC})]^2$. For the scaling relation:
-$$
-P_{context}^2 = A^2 \left[\frac{\text{CC}(S_A)}{\alpha_{CC,max} - \text{CC}(S_A)}\right]^4
-$$
-Substituting establishes the third inequality. $\square$
+Substitution proves S.45. Trace preservation of the local channel gives the unchanged Bob marginal by Theorem S.1. ∎
 
 **Experimental implications:** This provides a concrete test distinguishing gravitational vs. purely electromagnetic CC mechanisms:
 
@@ -530,13 +591,65 @@ $$
 \tag{S.6.1b.1}
 $$
 
-*Proof.* The ideal two-qubit concurrence is $|\sin(\Phi/2)|$ and pure-state negativity is half of it. Partial-transpose trace norm is Lipschitz under the recorded trace-distance convention, so $|\mathcal N(\rho_{\mathrm{out}})-\mathcal N(\sigma_\Phi)|\le\epsilon_N$; (S.6.1a.2) gives positivity. ∎
+*Proof.* Local diagonal phases do not change entanglement, so the ideal output is locally equivalent to
+$$
+|\psi_\Phi\rangle
+=\frac12\bigl(|00\rangle+|01\rangle+|10\rangle+e^{i\Phi}|11\rangle\bigr).
+$$
+Its coefficient matrix is
+$$
+C_\Phi=\frac12
+\begin{pmatrix}
+1&1\\
+1&e^{i\Phi}
+\end{pmatrix},
+$$
+and therefore
+$$
+2|\det C_\Phi|
+=\frac12|e^{i\Phi}-1|
+=|\sin(\Phi/2)|.
+$$
+If $s_1,s_2$ are the Schmidt coefficients, the eigenvalues of the partial transpose of $|\psi_\Phi\rangle\langle\psi_\Phi|$ are
+$$
+s_1^2,\quad s_2^2,\quad s_1s_2,\quad -s_1s_2.
+$$
+Thus
+$$
+\mathcal N(\sigma_\Phi)
+=\frac{\lVert\sigma_\Phi^{T_B}\rVert_1-1}{2}
+=s_1s_2
+=|\det C_\Phi|
+=\frac12|\sin(\Phi/2)|,
+$$
+which proves (S.6.1b.1).
 
-## S.7 Detailed Gravitational Decoherence Mechanism
+For operators on $\mathbb C^2\otimes\mathbb C^2$, the induced trace-norm bound for partial transpose is
+$$
+\lVert X^{T_B}\rVert_1\le2\lVert X\rVert_1
+$$
+(Vidal and Werner 2002). Hence
+$$
+\begin{aligned}
+|\mathcal N(\rho_{\mathrm{out}})-\mathcal N(\sigma_\Phi)|
+&\le\frac12
+\lVert(\rho_{\mathrm{out}}-\sigma_\Phi)^{T_B}\rVert_1\\
+&\le\lVert\rho_{\mathrm{out}}-\sigma_\Phi\rVert_1
+\le\epsilon_N.
+\end{aligned}
+$$
+Because the certified phase satisfies $\Phi\in I_\Phi$,
+$$
+\mathcal N(\rho_{\mathrm{out}})
+\ge\frac12\inf_{\varphi\in I_\Phi}|\sin(\varphi/2)|-\epsilon_N>0
+$$
+by (S.6.1a.2). ∎
 
-The gravitational field produced by the context stress-energy induces time dilation gradients that decohere quantum superpositions (Zurek, 2003; Joos et al., 2003; Schlosshauer, 2007). This provides a distinct decoherence mechanism complementary to environmental interaction.
+## S.7 Conditional Gravitational Phase and Dephasing Mechanisms
 
-Section S.3 established that gravitational time dilation produces differential proper time accumulation $\Delta\tau_d = K P_{context}$. We now derive explicitly how this differential time accumulation causes decoherence, reducing the effective CC capability.
+A deterministic time-dilation gradient produces a coherent relative phase. Decay of off-diagonal density-matrix elements requires an additional phase-ensemble average, unresolved source fluctuation, source trace, or saturated chronometric ND-RID response law. These branches are distinguished below.
+
+Section S.3 establishes the conditional proper-time difference $\Delta\tau_d=KP_{context}$. The following subsections first derive the associated coherent phase and then state the additional hypotheses under which that phase produces dephasing and limits effective CC capability.
 
 ### S.7.1 Phase Decoherence from Time Dilation Gradients
 
@@ -664,23 +777,38 @@ $$
 $$
 Dividing by $\tau_c$ and applying the saturated chronometric branch identification $\Gamma_{\mathrm{ch}}^{(ij)}=|\Delta\phi_{ij}^{(grav)}|/\tau_c$ gives the first formula. For two transitions in the same geometry, the common factor $|\Delta\Phi|/c^2$ cancels, giving the ratio formula. ∎
 
-The effective coherence time is reduced from its baseline value $\tau_{coh}^0$ (determined by environmental decoherence sources) by the gravitational contribution selected by the branch:
+Assume the baseline and gravitational decoherence channels are independent Markovian channels with exponential coherence factors
 $$
-\frac{1}{\tau_{coh}^{eff}}
+e^{-t/\tau_{\mathrm{coh}}^0}
+\quad\text{and}\quad
+e^{-\Gamma_{\mathrm{grav}}^{(ij)}t}.
+$$
+Their product is exponential with
+$$
+\frac{1}{\tau_{\mathrm{coh}}^{\mathrm{eff}}}
 =
-\frac{1}{\tau_{coh}^0}
+\frac{1}{\tau_{\mathrm{coh}}^0}
 +
 \Gamma_{\mathrm{grav}}^{(ij)}.
 \tag{S.58}
 $$
 
-For $\Gamma_{\mathrm{grav}}^{(ij)}\tau_{coh}^0\ll1$,
+Equation (S.58) gives the exact expression
 $$
-\tau_{coh}^{eff}
-\approx
-\tau_{coh}^0\left(1-\Gamma_{\mathrm{grav}}^{(ij)}\tau_{coh}^0\right)
+\tau_{\mathrm{coh}}^{\mathrm{eff}}
 =
-\frac{\tau_{coh}^0}{1+\Gamma_{\mathrm{grav}}^{(ij)}\tau_{coh}^0}.
+\frac{\tau_{\mathrm{coh}}^0}
+{1+\Gamma_{\mathrm{grav}}^{(ij)}\tau_{\mathrm{coh}}^0}.
+$$
+For $\Gamma_{\mathrm{grav}}^{(ij)}\tau_{\mathrm{coh}}^0\ll1$,
+$$
+\tau_{\mathrm{coh}}^{\mathrm{eff}}
+=
+\tau_{\mathrm{coh}}^0
+\left(
+1-\Gamma_{\mathrm{grav}}^{(ij)}\tau_{\mathrm{coh}}^0
++O((\Gamma_{\mathrm{grav}}^{(ij)}\tau_{\mathrm{coh}}^0)^2)
+\right).
 \tag{S.59}
 $$
 
@@ -700,23 +828,32 @@ $$
 
 ### S.7.4 Net Effective CC Including Decoherence
 
-The achievable CC bias depends on maintaining quantum coherence over the interaction timescale. From Definition 30, the operational CC measures the maximum achievable probability modification. When coherence is reduced, the effective interaction time is limited:
+Define
 $$
-\tau_{eff} = \min(\tau_c, \tau_{coh}^{eff})
+\tau_{\mathrm{eff}}
+=
+\min(\tau_c,\tau_{\mathrm{coh}}^{\mathrm{eff}}).
 \tag{S.61}
 $$
-
-For context coherence time $\tau_c$ exceeding the gravitationally-limited quantum coherence time $\tau_{coh}^{eff}$, the net effective CC becomes:
+Assume the linear coherence-time response branch
 $$
-\text{CC}_{eff} = \text{CC}_{ideal} \cdot \frac{\tau_{coh}^{eff}}{\tau_c}
+\mathrm{CC}_{\mathrm{eff}}
+=
+\mathrm{CC}_{\mathrm{ideal}}
+\frac{\tau_{\mathrm{eff}}}{\tau_c}.
 \tag{S.62}
 $$
-
-where $\text{CC}_{ideal}$ is the CC capability assuming perfect quantum coherence. Substituting Equation S.59:
+When $\tau_{\mathrm{coh}}^{\mathrm{eff}}<\tau_c$, Equations (S.59)–(S.60) then give
 $$
-\boxed{\text{CC}_{eff} = \frac{\text{CC}_{ideal}}{1 + K_{\Gamma} P_{context}}}
+\boxed{
+\mathrm{CC}_{\mathrm{eff}}
+=
+\frac{\mathrm{CC}_{\mathrm{ideal}}}
+{1+K_\Gamma P_{\mathrm{context}}}
+}.
 \tag{S.63}
 $$
+The proportional response in (S.62) is an independent constitutive assumption, not a consequence of Definition 30.
 
 For small gravitational effect $K_{\Gamma} P_{context} \ll 1$:
 $$
@@ -724,25 +861,27 @@ $$
 \tag{S.64}
 $$
 
-This is the decoherence-based derivation of the effective CC suppression asserted in Equation S.21. Substituting $P_{context}(\text{CC})$ from Equation S.5:
+Equation S.64 is the small-$K_\Gamma P_{context}$ expansion of the independently specified coherence-response law S.63. On the global quadratic-cost branch,
 $$
-\text{CC}_{eff} = \text{CC}_{ideal} \left[1 - K_{\Gamma} A \left(\frac{\text{CC}_{ideal}}{\alpha - \text{CC}_{ideal}}\right)^2\right]
+\mathrm{CC}_{eff}
+=\mathrm{CC}_{ideal}\left[1-K_\Gamma A
+\left(\frac{\mathrm{CC}_{ideal}}
+{\alpha-\mathrm{CC}_{ideal}}\right)^2\right]
++O((K_\Gamma P_{context})^2).
 \tag{S.65}
 $$
 
-**Physical mechanism summary:**
+**Conditional mechanism ledger:**
 
-1. High-CC context requires power $P_{context} \sim \text{CC}^2$ (Equation S.5)
-2. Power creates energy density $u_{context} = P_{context}\tau_c/V_S$ (Equation S.6)
-3. Energy density sources gravitational field $\Phi \sim G u_{context} r$ (Equation S.15)
-4. Gravitational gradient across quantum system creates $\Delta\Phi \sim g_{CC} L_q$ (Equation S.16)
-5. Time dilation gradient produces differential phase evolution $\Delta\phi \sim \Delta E \Delta\Phi/(c^2 \hbar)$ (Equation S.54)
-6. A tracked phase gradient causes coherent chronometric phase rotation; on the saturated chronometric ND-RID branch it causes residual dephasing at rate $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$ (Equation S.57)
-7. Decoherence reduces effective coherence time $\tau_{coh}^{eff}$ (Equation S.59)
-8. Reduced coherence time limits effective CC capability (Equation S.63)
-9. PCE optimization balances utility against both direct cost and gravitational self-limitation (Section S.4)
+1. S.5 maps CC to power only on the global quadratic-cost branch.
+2. S.6 maps power to local source density through $u_{context}=\eta_{\mathrm{ret}}P_{context}\tau_c/V_S$.
+3. S.15–S.16 use the uniform perfect-fluid and weak-field branches to obtain a potential gradient.
+4. S.54 converts the proper-time difference into a coherent energy-gap-dependent phase.
+5. Dephasing follows only on an unresolved phase-noise, source-trace, or saturated chronometric ND-RID branch.
+6. S.63 additionally assumes that effective CC scales with the reduced coherence time.
+7. Section S.4 additionally assumes the phenomenological utility $B_{net}$.
 
-**Comparison with Section S.4:** The simplified model in Section S.4 (Equation S.21) assumed $\text{CC}_{eff} = \text{CC}(1 - K_{eff}P_{context})$, equivalent to $\text{CC}(1 - \Delta\tau_d/\tau_c)$. This section provides the detailed quantum-mechanical derivation showing how $\Delta\tau_d$ causes decoherence through energy-dependent phase accumulation, yielding the equivalent result with explicit identification of the relevant energy scale $\Delta E$.
+Equation S.21 and Equation S.64 have the same linear form only after the additional calibration $\mathrm{CC}_{ideal}=\mathrm{CC}$ and $K_\Gamma=K_{eff}$. Neither the deterministic phase calculation nor the coherence-response ansatz proves that calibration.
 
 ## S.8 Integration with Appendix L
 
@@ -759,15 +898,15 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
    - Universal temporal wave framework (Theorem L.8)
 
 2. **Electromagnetic dominance**
-   - Quantitative demonstration: $\mathcal{R} \sim 6 \times 10^{36}$ for external fields (Proposition L.5)
+   - Quantitative demonstration on the analyzed range: baseline $\mathcal{R}\sim10^{36}$ and conservative range $10^{33}$–$10^{39}$ (Proposition L.5)
    - Worked example with realistic parameters (Section L.11.4)
    - Detection achievable in ~6 seconds with modern ion trap arrays
 
-3. **Complete energy accounting**
-   - Energy conservation: $P_{agg} = P_{EM} + P_{other}$ (Equation L.36)
-   - Stress-energy decomposition: $T_{\mu\nu}^{(MPU)} = T_{\mu\nu}^{(baseline)} + \Delta T_{\mu\nu}^{(CC)} + T_{\mu\nu}^{(EM)}$ (Equation S.9)
-   - No double-counting; covariant conservation $\nabla^\mu T_{\mu\nu}^{(MPU)} = 0$ (Theorem B.5)
-   - Horizon thermodynamics consistency (Theorem L.7)
+3. **Conditional energy accounting**
+   - Channel decomposition: $P_{agg}=P_{EM}+P_{other}$ under the mutually exclusive ledger hypothesis of Equation L.36
+   - Stress-energy decomposition: $T_{\mu\nu}^{(MPU)}=T_{\mu\nu}^{(baseline)}+\Delta T_{\mu\nu}^{(CC)}+T_{\mu\nu}^{(EM)}$ on the common L/S source convention of Equation S.9
+   - Distributional covariant conservation $\nabla^\mu T_{\mu\nu}^{(MPU)}=0$ on the regular local-equilibrium branch of Theorem B.5; pointwise conservation on its smooth on-shell variational branch
+   - Horizon thermodynamics consistency on the hypotheses of Theorem L.7
 
 4. **Universal requirements**
    - Implementation-independent constraints (Theorem L.9)
@@ -796,29 +935,40 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
    - Physical viability limits (Corollary S.2.1)
    - Self-limitation prevents arbitrary CC enhancement
 
-### S.8.2 Unified Physical Picture
+### S.8.2 Conditional Branch Composition
 
-Both appendices describe manifestations of the same underlying process—the conversion of information structure (high-complexity predictive states) into physical influence (quantum outcome bias)—viewed through different channels and analyzed at different scales.
+Appendices L and S provide distinct conditional maps. They compose only when one physical implementation satisfies every premise in the chain.
 
-**Energy flow (forward direction - Appendix L focus):**
+**Source and channel ledger:**
 $$
-\text{Context state} \xrightarrow{\text{PCE-optimal mapping}} P_{agg} \to \begin{cases}
-P_{EM} & \to \text{EM fields} \to \text{AC Stark shifts} \to \Delta P \\
-P_{other} & \to \text{internal energy} \to \text{gravitational potential}
+\text{context state}
+\xrightarrow{\text{registered cost law}}P_{agg}
+\xrightarrow{\text{energy-partition certificate}}
+\begin{cases}
+P_{EM}\to\text{EM response},\\
+P_{other}\to\text{retained local source energy}
 \end{cases}
 $$
 
-**Feedback constraint (reverse direction - Appendix S focus):**
+**Gravitational-response ledger:**
 $$
-P_{context} \to u_{context} \to \Phi_{grav} \to \Delta\tau_d \to \{\Theta_{ij},\Gamma_{\mathrm{grav}}^{(ij)}\}_{\mathrm{branch}} \to \tau_{coh}^{eff} \downarrow \to \text{CC}_{eff} \downarrow
+P_{context}
+\xrightarrow{\eta_{\mathrm{ret}}}u_{context}
+\xrightarrow{\text{perfect-fluid, weak-field model}}\Phi_{grav}
+\to\Delta\tau_d
+\to\Theta_{ij}.
 $$
+A dephasing rate additionally requires an unresolved-noise, source-trace, or chronometric ND-RID branch; a decrease of $\mathrm{CC}_{eff}$ additionally requires the S.63 response law.
 
-**Complete cycle:**
+**Utility-selection ledger:**
 $$
-\text{CC}_{desired} \xrightarrow{\text{requires}} P_{context} \xrightarrow{\text{creates}} \Phi_{grav} \xrightarrow{\text{limits}} \text{CC}_{eff} \xrightarrow{\text{PCE opt}} \text{CC}^*
+\mathrm{CC}_{ideal}
+\xrightarrow{\text{S.5, S.63, and S.22 branch data}}
+B_{net}
+\xrightarrow{\text{interior validity and strict concavity}}
+\mathrm{CC}^*.
 $$
-
-The equilibrium operational CC emerges from balancing forward drive (utility of bias) against backward constraint (cost + self-limitation).
+The resulting maximizer belongs to this phenomenological composition and is not an unconditional PCE equilibrium.
 
 ### S.8.3 Channel Hierarchy and Frequency Decomposition
 
@@ -832,22 +982,22 @@ Different frequency regimes couple through different emergent channels:
 
 **High-frequency regime** ($\omega \gg 1/\tau_{medium}$):
 - Rapid phase modulation requires compensating gauge fields (Appendix G)
-- Manifests as electromagnetic radiation (Appendix L, Theorem L.2)
+- Manifests as electromagnetic radiation on the coherent-charge carrier branch (Appendix L, Theorem L.2)
 - Coupling strength: $\alpha_{em} \sim 10^{-2}$ (Appendix Z)
-- Dominates practical influence: $\mathcal{R} \sim 6\times10^{36}$ (Appendix L, Proposition L.5)
+- Dominates on the parameter range analyzed in Proposition L.5, with baseline $\mathcal{R}\sim10^{36}$ and range $10^{33}$–$10^{39}$
 
 
 **Low-frequency regime** ($\omega \ll 1/\tau_{medium}$):
 - Quasi-static energy density modification
 - Sources gravitational potential (this appendix, Section S.3)
-- Coupling strength: $\alpha_{grav} \sim 10^{-45}$ for electron mass (Appendix L, Equation L.85)
+- Coupling strength: $\alpha_{grav} \sim 10^{-45}$ for electron mass (Appendix L, Equation (L.84))
 - Provides universal energy accounting and feedback limit
 
 Both channels draw from the same power budget $P_{agg}$ and both contribute to the total stress-energy $T_{\mu\nu}^{(MPU)}$ (Theorem L.6). The hierarchy reflects the information-theoretic structure of the predictive substrate:
 - EM coupling: local phase coherence (high information bandwidth, $\sim \alpha_{em}$)
 - Gravitational coupling: global boundary entropy (low information bandwidth, $\sim \alpha_{grav}$)
 
-The ratio $\alpha_{em}/\alpha_{grav} \sim 10^{43}$ (Appendix L, Equation L.86) emerges from framework fundamentals:
+The ratio $\alpha_{em}/\alpha_{grav} \sim 10^{43}$ (Appendix L, Equation (L.85)) is the displayed coupling-ratio estimate:
 $$
 \frac{\alpha_{em}}{\alpha_{grav}} \sim \frac{\text{gauge coherence optimization (App G, Z)}}{\text{horizon information density (App E)}}
 \tag{S.67}
@@ -876,19 +1026,19 @@ Both programs are necessary for complete framework validation. Appendix L establ
 To distinguish electromagnetic from gravitational CC mechanisms, the following differential tests apply:
 
 **Test 1 (Power Partitioning):** Vary the ratio $P_{EM}/P_{agg}$ while maintaining constant $P_{context}$:
-- EM prediction: $|\Delta P| \propto P_{EM}$ (Theorem L.2, field amplitude scaling)
+- EM prediction on the constant-detuning, constant-target, constant-polarization, and constant-geometry AC-Stark branch: $|\Delta P|\propto E_0^2\propto P_{EM}$ (Theorem L.2 and Corollary L.2.1)
 - Gravitational prediction: $|\Delta P| \propto P_{context}^2$ (Equation S.42)
 - Protocol: Use variable-efficiency radiators; measure correlation of CC effect with radiated vs. total power
 
 **Test 2 (Distance Scaling):** Measure $|\Delta P(r)|$ at varying target distances:
-- EM far-field: $|\Delta P| \propto 1/r^2$ (Equation L.80)
+- EM far-field on the constant-detuning AC-Stark branch: $|\Delta P| \propto 1/r^2$ (Equation (L.79))
 - EM near-field: $|\Delta P| \propto 1/r^3$ (evanescent regime)
-- Gravitational: $|\Delta P| \propto 1/r^2$ but with coefficient $\sim 10^{-36}$ smaller (Proposition L.5)
+- Gravitational: $|\Delta P| \propto 1/r^2$ in the displayed model, with a baseline coefficient $\sim10^{-36}$ of the electromagnetic coefficient and analyzed inverse-ratio range $10^{-39}$–$10^{-33}$ (Proposition L.5)
 - Protocol: Logarithmic distance scan; fit scaling exponent and amplitude
 
 **Test 3 (Frequency Dependence):** Vary modulation frequency $\omega$ of context state:
 - EM prediction: Strong resonance at $\omega \approx \omega_{TLS}$ (AC Stark, Corollary L.2.1)
-- Gravitational prediction: Frequency-independent for $\omega \ll 1/\tau_{medium}$ (Theorem L.8)
+- Gravitational prediction: a quasi-static low-frequency response may be tested for $\omega\ll1/\tau_{medium}$; frequency independence is an additional response-model hypothesis, not a conclusion of Theorem L.8
 - Protocol: Sweep $\omega_{rad}$ through target resonance; measure $|\Delta P(\omega)|$
 
 **Test 4 (Shielding Response):** Apply selective shielding:
@@ -931,37 +1081,24 @@ Several framework elements require both appendices for complete understanding:
 
 ### S.8.6 Energy Accounting Consistency
 
-Energy accounting between this appendix and Appendix L is established by Theorem L.6: the total power $P_{agg}$ decomposes into mutually exclusive channels (Equation L.40), each contributing exactly once to $T_{\mu\nu}^{(MPU)}$ (Equation L.38). The context power $P_{context}$ analyzed here partitions between radiated (entering $T_{\mu\nu}^{(EM)}$, dominating practical influence) and non-radiated components (entering $T_{\mu\nu}^{(matter)}$, sourcing gravitational feedback). Covariant conservation $\nabla^\mu T_{\mu\nu}^{(MPU)} = 0$ (Theorem B.5) guarantees consistency.
+Assume the mutually exclusive channel ledger of Theorem L.6 and Equations (L.38) and (L.40). Then $P_{agg}$ is partitioned so that each registered channel contributes once to $T_{\mu\nu}^{(MPU)}$, and $P_{context}$ splits into radiated and non-radiated components according to that ledger. If the common source also lies on the regular local-equilibrium branch of Theorem B.5, it is covariantly conserved in distributions; on the smooth on-shell variational branch the conservation equation holds pointwise. Channel exclusivity comes from the L.6 ledger, while conservation comes from the separate B.5 hypotheses.
 
 ## S.9 Conclusion
 
-This appendix has established the gravitational self-limitation mechanism for Consciousness Complexity through rigorous derivation from framework fundamentals:
+This appendix develops a conditional gravitational-feedback model for operational CC.
 
-**Key results:**
+**Branch-qualified results:**
 
-1. **Power cost scaling** (S.1): $P_{context} = A[\text{CC}/(\alpha - \text{CC})]^2$, diverging as CC approaches deterministic endpoint-forcing bound
+1. **Power law:** S.5 follows on the global quadratic operational-cost branch. A local Taylor law does not imply endpoint divergence.
+2. **Source term:** The context contribution to stress-energy uses the retained instantaneous energy $\eta_{\mathrm{ret}}P_{context}\tau_c$ and a specified perfect-fluid closure.
+3. **Proper-time response:** $\Delta\tau_d=KP_{context}$ follows for the uniform spherical, weak-field geometry, with $K$ carrying $\eta_{\mathrm{ret}}$.
+4. **Utility maximizer:** S.27 is the unique interior maximizer of the truncated phenomenological utility when its small-CC and weak-response conditions hold. Appendix-D concentration requires an additional potential-identification and detailed-balance package.
+5. **Collapse ceiling:** $r_s<R_S$ gives a system-dependent ceiling distinct from the universal bounded-bias endpoint.
+6. **Entangled statistics:** A local gravitational phase channel can change selected joint correlations while preserving Bob's marginal. It does not realize a late-randomized Bob-marginal anomaly.
+7. **Phase and dephasing:** Deterministic time dilation gives coherent phase rotation. Dephasing requires unresolved noise, a source trace, or the saturated chronometric ND-RID response law.
+8. **Appendix-L composition:** Electromagnetic and gravitational maps compose only for an implementation satisfying both source, partition, response, and causal certificates.
 
-2. **Stress-energy contribution** (S.2): Context state contributes $\Delta T_{\mu\nu}^{(CC)}$ to total MPU stress-energy, properly accounting for all energy flows
-
-3. **Gravitational time dilation** (S.3): Power creates energy density sourcing gravitational field, producing differential proper time $\Delta\tau_d = K P_{context}$
-
-4. **PCE-optimal equilibrium** (S.4): Natural selection for CC configuration balancing utility against cost plus self-limitation, yielding optimal $\text{CC}^*$
-
-5. **Schwarzschild interpretation** (S.5): CC bound $\alpha < 0.5$ is simultaneously information-theoretic constraint and gravitational collapse limit
-
-6. **Entanglement non-local influence** (S.6): Local gravitational field affects distant joint correlations without violating no-signaling, providing concrete realization of branch (i) of Postulate 3 (joint-correlation modulation, Bob's marginal preserved by Equation S.37); realizing branch (iii) (Bob-marginal anomaly under late randomization) requires a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here.
-
-7. **Chronometric phase/decoherence mechanism** (S.7): Time-dilation gradients always cause energy-gap-scaled phase rotation; on unresolved phase-noise or saturated chronometric ND-RID branches they produce residual dephasing, with the saturated branch obeying $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$
-
-8. **Integration with L** (S.8): Gravitational feedback complements electromagnetic dominance; both essential for complete framework consistency
-
-**Physical picture:** High-CC contexts require power that necessarily creates gravitational fields. These fields feed back to disrupt the quantum coherence required for CC operation. PCE optimization drives systems to an equilibrium where:
-- CC is high enough to provide predictive utility
-- But not so high that gravitational self-disruption dominates
-- Resource costs remain sustainable
-- Causality is preserved
-
-This self-limiting mechanism, operating alongside the electromagnetic dominance established in Appendix L, ensures CC remains a bounded, physically consistent capability that enhances predictive performance without violating fundamental constraints. The framework's unity—from awareness as fundamental (Appendix P) through MPU dynamics (Section 7) to spacetime emergence (Sections 11-12) to CC capability (Section 9) and finally to this gravitational feedback—demonstrates the deep consistency of deriving physical law from predictive optimization under thermodynamic limits.
+Accordingly, gravitational self-limitation is an admissible mechanism on the combined cost, source, geometry, dephasing, and response branches. It is not an unconditional consequence of CC, PCE, or thermodynamic limits alone.
 
 **Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.
 

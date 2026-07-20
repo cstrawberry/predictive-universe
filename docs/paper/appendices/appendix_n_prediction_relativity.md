@@ -33,36 +33,49 @@ The PCE Potential incorporates costs that diverge as the system approaches funda
     \tag{N.3}
     $$
 
-## N.3 Unifying Mechanism: The Thermodynamic Cost of Prediction in Dynamic Environments
+## N.3 Conditional Response Models for Predictive Resource Costs
 
-The PU framework reveals a deep connection between the cost of prediction and the thermodynamic state of the predictive system's environment. This connection provides the mechanism for unifying the limits of prediction and motion.
+The UCT keeps endpoint kinetic work, SPAP complexity, proper-acceleration response, and internal implementation heating as distinct ledger entries. This section registers response models under which selected entries may be placed in one frame-consistent work functional. It does not identify their limiting operations or derive a common microscopic origin.
 
-### N.3.1 Physically-Grounded Temperature Dependence of Resource Costs
+### N.3.1 Registered Temperature-Response Branch for Resource Costs
 
-The physical operational cost function $R(C)$ (Definition 3) represents the power required to maintain and operate the physical structures implementing a predictive complexity $C$. As a physical cost rooted in thermodynamics (e.g., Landauer dissipation), it must depend on the effective temperature $T_{eff}$ of the environment in which the MPU operates. Maintaining stable, distinguishable information states against thermal fluctuations incurs a cost that increases with temperature. Thus, we generalize the cost function to $R(C, T_{eff})$. Physical consistency (e.g., generalized Landauer principle) requires that the cost increases with temperature, $\partial R / \partial T_{eff} > 0$. Furthermore, the marginal cost of maintaining complexity is also generally expected to increase with temperature, i.e., $\frac{\partial^2 R}{\partial C \partial T_{eff}} > 0$. This physically-motivated generalization is necessary for analyzing systems in non-isothermal or dynamic thermal environments.
+The physical operational cost function $R(C)$ (Definition 3) represents the power required to maintain and operate an implementation of predictive complexity $C$. On the temperature-response branch used below, evaluate this rate in the chosen local comoving frame, extend it to $R(C,T_{\mathrm{eff}})$, and assume over the admitted operating range that
+$$
+\frac{\partial R}{\partial T_{\mathrm{eff}}}\ge0,
+\qquad
+\frac{\partial^2R}{\partial C\,\partial T_{\mathrm{eff}}}\ge0.
+$$
+Strict inequalities may be imposed on ranges where the implementation certificate supports them. These monotonicities are branch hypotheses to be tested or supplied for the implementation; Landauer's bound alone does not prove them for every predictive system.
 
 ### N.3.2 Thermodynamic Costs of Physical Acceleration (Unruh Effect)
 
-An MPU is not a closed system. An MPU undergoing proper acceleration $a$ through the vacuum perceives its environment as a thermal bath at the Unruh temperature [Unruh 1976]:
+On the emergent-QFT branch, an idealized detector following a uniformly proper-accelerated trajectory in the Minkowski vacuum has a KMS response at the Unruh temperature [Unruh 1976]:
 $$
-T_U(a) = \frac{\hbar a}{2\pi c k_B}
+T_U(a) = \frac{\hbar a}{2\pi c k_B}.
 \tag{N.4}
 $$
-This Unruh radiation acts as a source of noise, fundamentally degrading the MPU's ability to make predictions. The total effective temperature experienced by the accelerating MPU is $T_{eff}(a) = T_{bath} + T_U(a)$, where $T_{bath}$ is the temperature of any pre-existing background bath.
+This is a detector-response statement. It does not by itself supply a literal ambient energy flux, a general thermal state for arbitrary trajectories, or a microscopic derivation from MPU reset dynamics. For the bookkeeping model used below, the additional assumptions that this response acts as an effective noise source and that temperatures may be combined as
+$$
+T_{\mathrm{eff}}(a):=T_{\mathrm{bath}}+T_U(a)
+$$
+define the declared additive-temperature branch. More general backgrounds and nonstationary trajectories require their detector response functions rather than this additive approximation.
 
 ### N.3.3 Internal Thermodynamic Costs from "Predictive Acceleration"
 
-A distinct but analogous set of thermodynamic constraints arises from the act of rapidly increasing a stationary MPU's predictive processing intensity. This "predictive acceleration"—be it a rapid increase in its operational Predictive Physical Complexity ($dC_P/dt > 0$) or a surge in its rate of predictive operations ($d\mathcal{N}_{ops}/dt > 0$)—has intrinsic thermal consequences.
+Internal implementation heating is distinct from the proper-acceleration/Unruh branch. Choose an operational throughput coordinate $A_{\mathrm{pred}}$ measured per unit proper time—for example a registered completed-reset rate or a separately defined complexity-update rate—and specify its implementation before comparing costs. Theorem 31 supplies the structural entropy statement $\varepsilon_0=\ln2$ and, on a registered reset branch, $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; conversion of that statement into heat requires the implementation's reset temperature, activity fraction, and dissipation ledger.
 
-The PU framework establishes that information processing, particularly the irreversible logical steps inherent in the SPAP cycle, incurs an exact structural cost and a physical lower bound (Theorem 31: $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$). An MPU "accelerating" its predictive capabilities performs more such operations per unit time, leading to an increased rate of internal heat generation, $dQ_{internal}/dt$.
-
-If this self-generated heat is not dissipated instantaneously to an external environment (i.e., finite thermal conductivity), the MPU's internal effective temperature, $T_{internal_eff}$, will rise above the ambient temperature. This internally generated thermal environment acts as a source of noise, directly impacting the MPU's own predictive machinery. Consistent with the temperature dependence of the physical cost function $R(C, T_{eff})$ (Section N.3.1), an increase in $T_{internal_eff}$ raises the marginal cost $\partial R / \partial C$. Consequently, to maintain a target predictive performance $PP_{op}$ or to achieve further increases in $C_P$ in the face of this self-induced noise, the MPU must allocate additional complexity, $C_{noise,internal}$. This represents another component of the total required complexity, $C_{req}$.
+Suppose that implementation supplies a generated-heat rate $\dot Q_{\mathrm{gen}}(A_{\mathrm{pred}})$, a cooling law $\dot Q_{\mathrm{diss}}(T)$, and a finite thermal response. If the resulting internal temperature affects the prediction channel according to the monotonicity hypothesis of Lemma N.4, the associated implementation-specific overhead may be recorded as $C_{\mathrm{noise,internal}}(A_{\mathrm{pred}})$ inside $C_{\mathrm{req}}$. No such overhead follows from SPAP or Landauer alone without this heat-balance bridge.
 
 ### N.3.4 Effective Limits on the Rate of Predictive Acceleration
 
-The self-generation of internal thermal noise due to "predictive acceleration" implies an effective limit on how rapidly an MPU can increase its predictive power. Any physical system possesses a maximum rate at which it can dissipate heat, $dQ_{dissipate, max}/dt$. A critical threshold is reached when the internal heat generation rate equals this maximum dissipation rate:
-$$ dQ_{internal}/dt |_{A_{pred,crit}} = dQ_{dissipate, max}/dt \tag{N.4a} $$
-Attempting to increase predictive acceleration beyond this critical rate, $A_{pred,crit}$, would lead to thermal runaway, escalating operational costs, and performance degradation. Thus, $A_{pred,crit}$ acts as an effective, system-dependent "speed limit" on the rate of increase of predictive capability. PCE would drive systems to operate at predictive accelerations $A_{pred} < A_{pred,crit}$, optimizing the trade-off between rapid adaptation and the costs of managing self-induced thermal noise.
+If a particular implementation has a finite maximum cooling rate and a monotone generated-heat law, define an implementation-dependent threshold, when it exists, by
+$$
+\left.\dot Q_{\mathrm{gen}}(A_{\mathrm{pred}})\right|_{A_{\mathrm{pred,crit}}}
+=
+\dot Q_{\mathrm{diss,max}}.
+\tag{N.4a}
+$$
+Operation above that threshold may produce thermal runaway in that model. The quantity $A_{\mathrm{pred,crit}}$ is neither a universal speed limit nor a consequence of the SPAP boundary; it depends on the registered processor and cooling mechanism. PCE can favor operation below it only after this implementation-specific term has been incorporated into the relevant PCE potential.
 
 ## N.4 The Unified Cost of Transgression (UCT)
 
@@ -90,95 +103,159 @@ Changes of invariant mass, internal energy, anisotropic exported momentum, or re
 > T_U(a)=\frac{\hbar a}{2\pi c k_B}.
 > $$
 >
-> In the Landauer-saturating limit for a logically irreversible refresh of $C$ bits of predictive state (Theorem 31), the Unruh-induced incremental energy dissipation per refresh is (Theorem N.3)
+> In the Landauer-saturating limit for a logically irreversible refresh of $C$ bits of predictive state (Theorem 31), the modeled acceleration-dependent incremental energy dissipation per refresh is (Theorem N.3)
 >
 > $$
-> E_{pred}(a,C)=k_B T_U(a)\,(\ln 2)\,C=\frac{\hbar\ln 2}{2\pi c}\,a\,C.
+> E_{\text{pred}}^{\mathrm{sat}}(a,C)
+> =k_B T_U(a)\,(\ln 2)\,C
+> =\frac{\hbar\ln 2}{2\pi c}\,a\,C.
 > $$
 >
-> If such refreshes occur on a cycle time $\tau_{cycle}$ (Definition 27), the corresponding Unruh-induced incremental predictive power is
+> If such refreshes occur on a proper cycle time $\tau_{cycle}$ (Definition 27), the corresponding Landauer-saturating comoving predictive power is
 >
 > $$
-> P_{pred}(a,C)=\frac{E_{pred}(a,C)}{\tau_{cycle}}=\frac{\lambda_{PM}}{\tau_{cycle}}\,a\,C,
+> P_{\text{pred}}^{\mathrm{sat,com}}(a,C)
+> =\frac{E_{\text{pred}}^{\mathrm{sat}}(a,C)}{\tau_{cycle}}
+> =\frac{\lambda_{PM}}{\tau_{cycle}}\,a\,C,
 > $$
 >
-> where $\lambda_{PM}=\hbar\ln 2/(2\pi c)$ (Definition N.4). Hence the Unruh-induced incremental predictive work over the segment is
+> where $\lambda_{PM}=\hbar\ln 2/(2\pi c)$ (Definition N.4). Under the isotropic-export hypotheses of Theorem N.UCT, the associated saturation-branch laboratory work is
 >
 > $$
-> W_{pred}=\int_0^{\tau_f} P_{pred}\,d\tau=\frac{\lambda_{PM}}{\tau_{cycle}}\,a\,\tau_f\,C.
+> W_{\text{pred}}^{\mathrm{sat,lab}}
+> =\int_0^{\tau_f}\gamma(\tau)P_{\text{pred}}^{\mathrm{sat,com}}\,d\tau
+> =\frac{\lambda_{PM}c}{\tau_{cycle}}\,C\sinh\eta.
 > $$
 >
 > The kinetic work is (Lemma N.3)
 >
 > $$
-> W_{kin}=m_0c^2(\gamma(v_f)-1)=m_0c^2(\cosh\eta-1).
+> W_{\text{kin}}^{\mathrm{lab}}
+> =m_0c^2(\gamma(v_f)-1)
+> =m_0c^2(\cosh\eta-1).
 > $$
 >
-> Their ratio on this segment is therefore
+> Their laboratory-frame ratio on this segment is therefore
 >
 > $$
-> \frac{W_{pred}}{W_{kin}}=\frac{\lambda_{PM}}{m_0c^2\,\tau_{cycle}}\;C\;\frac{\eta}{\cosh\eta-1},
+> \frac{W_{\text{pred}}^{\mathrm{sat,lab}}}{W_{\text{kin}}^{\mathrm{lab}}}
+> =\frac{\lambda_{PM}}{m_0c\,\tau_{cycle}}\;C\;\frac{\sinh\eta}{\cosh\eta-1}.
 > $$
 >
-> isolating the purely derived scaling that controls when Unruh-induced predictive work can compete with kinetic work. The full UCT bound (Equation N.5) adds background and internal contributions through $T_{eff}(\tau)$ and the full $C_{req}(\tau)$.
+> This is a special Landauer-saturating, isotropic-export example. The full UCT bound (Equation N.5) adds background and internal contributions through $T_{eff}(\tau)$ and $C_{req}(\tau)$ and retains the same Lorentz factor in the laboratory energy ledger.
 
 
 ## N.5 Proof of the UCT Theorem
 
 We restate the theorem (Equation N.5) for convenience before proceeding with the proof.
 
-> **Restatement N.UCT (Unified Cost of Transgression for Proof Use).**
-> For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a worldline parameterized by proper time $\tau$ with proper acceleration $a(\tau)$, achieves predictive performance $PP(\tau)$, and undergoes predictive acceleration $A_{pred}(\tau)$, in a background thermal bath at temperature $T_{bath}$ over a proper-time duration $\tau_f$, the total work $W_{\text{tot}}$ is bounded by:
+> **Restatement N.UCT (Frame-Consistent Form for Proof Use).**
+> Under the invariant-mass, equal-internal-energy, isotropic-comoving-export, disjoint-ledger, and no-recoverable-field-energy hypotheses stated in Theorem N.UCT, let
 > $$
-> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int_0^{\tau_f} R\left( C_{req}(\tau), T_{eff}(\tau) \right) d\tau
+> R_{\mathrm{com}}(\tau)
+> :=
+> R\!\left(C_{\mathrm{req}}(\tau),T_{\mathrm{eff}}(\tau)\right)
 > $$
-> where $v_f$ is the final velocity, $T_{eff}(t)$ is the total effective temperature including Unruh and internal heating effects, and $C_{req}(t)$ is the total required predictive complexity including SPAP, external noise, and internal noise components (as defined in N.4).
+> be predictive-loss energy per unit proper time in the instantaneous comoving frame. Then the laboratory work obeys
+> $$
+> W_{\mathrm{tot}}^{\mathrm{lab}}
+> \ge
+> m_0c^2(\gamma_f-1)
+> +
+> \int_0^{\tau_f}\gamma(\tau)R_{\mathrm{com}}(\tau)\,d\tau.
+> $$
+> Additional invariant-mass, internal-energy, anisotropic-momentum, or recoverable-field-energy changes require the explicit four-momentum terms listed in the theorem.
 
 ### N.5.1 Preparatory Lemmas
 
-**Lemma N.1 (Predictive Power Bound).** The minimum power required to sustain a predictive computation of complexity $C$ in a thermal environment at effective temperature $T_{eff}$ is given by the PU operational cost function $R(C, T_{eff})$.
+**Lemma N.1 (Comoving Predictive Power Bound).** In the instantaneous comoving frame, the exported predictive-loss power required by the declared operational-cost model obeys
 $$
-P_{pred} \ge R(C, T_{eff})
+P_{\mathrm{pred}}^{\mathrm{com}}(\tau)
+\ge
+R_{\mathrm{com}}(\tau)
+:=
+R\!\left(C_{\mathrm{req}}(\tau),T_{\mathrm{eff}}(\tau)\right).
 $$
-*Proof.* This is a direct application and necessary physical generalization of Definition 3 from the PU framework. The function $R(C)$ is the minimum power required to operate the physical structures of complexity $C$. This power cost is fundamentally thermodynamic in origin (e.g., related to Landauer's principle) and is therefore dependent on the effective temperature of the environment in which the computation takes place, as outlined in Section N.3.1.
+*Proof.* This is the temperature-dependent operational-cost assumption of Section N.3.1, evaluated in the instantaneous comoving frame. Transformation of the associated exported energy to another frame is a separate four-momentum step and is not contained in the definition of $R_{\mathrm{com}}$. ∎
 
-**Lemma N.2 (Conditional transfer of the SPAP divergence bound).** Let $\delta_{\text{SPAP}}=\alpha_{\text{SPAP}}-PP\in(0,\delta_0]$. If $\mathfrak C_{B.2}$ is accepted, Theorem 14 yields constants $c_{\text{SPAP}}>0$ and $\delta_0>0$ such that
-$$
-C_{\text{uni}}(PP) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta_{\text{SPAP}})}{\delta_{\text{SPAP}}^2}.
-$$
-If, for the operational predictive-complexity notion used in this appendix, one assumes the bridge hypothesis
+**Lemma N.2 (Conditional transfer of the SPAP divergence bound).** Let $\delta_{\text{SPAP}}=\alpha_{\text{SPAP}}-PP\in(0,\delta_0]$. If $\mathfrak C_{B.2}$ is accepted and
 $$
 C_{\text{SPAP}}(PP)\ge C_{\text{uni}}(PP),
 $$
-then the same lower bound holds with $C_{\text{SPAP}}$ in place of $C_{\text{uni}}$.
+then
+$$
+C_{\text{SPAP}}(PP)
+\ge
+c_{\text{SPAP}}
+\frac{\log(1/\delta_{\text{SPAP}})}
+{\delta_{\text{SPAP}}^2}.
+$$
 
-**Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$.
+*Proof.* Theorem 14 gives
+$$
+C_{\text{uni}}(PP)
+\ge
+c_{\text{SPAP}}
+\frac{\log(1/\delta_{\text{SPAP}})}
+{\delta_{\text{SPAP}}^2}.
+$$
+Combining this inequality with the bridge hypothesis by transitivity proves the claim. ∎
 
-**Lemma N.4 (Complexity Cost of Environmental Noise).** Fix a prediction task and let $PP(C,T_{\text{eff}})$ denote the maximal predictive performance achievable at operational complexity $C$ in an environment with effective temperature $T_{\text{eff}}$. Assume that increasing $T_{\text{eff}}$ corresponds to composing the baseline sensing/communication channels with additional thermal noise, so that for all $C$,
+**Lemma N.3 (Relativistic work).** For a point particle of rest mass $m_0$, the minimum work required to accelerate it from rest to speed $v_f<c$, with no dissipative losses, is
 $$
-T_2\ge T_1 \implies PP(C,T_2)\le PP(C,T_1).
+W_{\mathrm{kin}}(v_f)
+=
+m_0c^2(\gamma(v_f)-1).
 $$
-Fix a target performance level $PP_{\text{op}}\in(\alpha,\beta)$ and define the minimal complexity required to maintain it at temperature $T_{\text{eff}}$ by
-$$
-C^*(T_{\text{eff}}):=\inf\{C\ge C_{op}: PP(C,T_{\text{eff}})\ge PP_{\text{op}}\}.
-$$
-Then $C^*(T_{\text{eff}})$ is non-decreasing in $T_{\text{eff}}$. Consequently the noise-induced overhead
-$$
-C_{\text{noise}}(T_{\text{eff}}):=C^*(T_{\text{eff}})-C^*(T_{\text{base}})
-$$
-is well-defined and non-decreasing in $T_{\text{eff}}$, with strict increase on any interval where the monotonicity assumption is strict on the relevant range.
 
-*Proof.* Let $T_2\ge T_1$. If a complexity level $C$ achieves $PP_{\text{op}}$ at the noisier temperature $T_2$, then by monotonicity it also achieves $PP_{\text{op}}$ at the quieter temperature $T_1$. Hence the feasible set at $T_2$ is a subset of the feasible set at $T_1$, and taking infima gives $C^*(T_2)\ge C^*(T_1)$. The statement for $C_{\text{noise}}$ follows immediately. QED.
+*Proof.* The relativistic energy at speed $v$ is $E(v)=\gamma(v)m_0c^2$. The work–energy theorem gives
+$$
+W_{\mathrm{kin}}
+=
+E(v_f)-E(0)
+=
+\gamma(v_f)m_0c^2-m_0c^2,
+$$
+which is the stated expression. Any dissipation can only increase the required input work. ∎
+
+**Lemma N.4 (Complexity Cost of Environmental Noise).** Fix a prediction task and let $PP(C,T_{\text{eff}})$ denote the maximal predictive performance achievable at operational complexity $C$. Assume
+$$
+T_2\ge T_1
+\quad\Longrightarrow\quad
+PP(C,T_2)\le PP(C,T_1)
+$$
+for every admissible $C$. Fix $PP_{\text{op}}\in(\alpha,\beta)$ and a temperature domain $\mathcal T$ such that, for every $T\in\mathcal T$, the feasible set
+$$
+\mathcal F_T:=\{C\ge C_{op}:PP(C,T)\ge PP_{\text{op}}\}
+$$
+is nonempty and has finite infimum. Define $C^*(T):=\inf\mathcal F_T$. Then $C^*$ is non-decreasing on $\mathcal T$. For a chosen $T_{\text{base}}\in\mathcal T$,
+$$
+C_{\text{noise}}(T):=C^*(T)-C^*(T_{\text{base}})
+$$
+is finite and non-decreasing for $T\ge T_{\text{base}}$ in $\mathcal T$.
+
+*Proof.* If $T_2\ge T_1$ and $C\in\mathcal F_{T_2}$, monotonicity gives
+$$
+PP(C,T_1)\ge PP(C,T_2)\ge PP_{\text{op}},
+$$
+so $C\in\mathcal F_{T_1}$. Thus $\mathcal F_{T_2}\subseteq\mathcal F_{T_1}$, and taking finite infima gives $C^*(T_2)\ge C^*(T_1)$. Subtracting the same finite baseline value preserves the inequality. ∎
 
 ### N.5.2 Proof of the Inequality (N.5)
 
 *Proof of the Inequality (N.5).*
 
-1.  **Work Decomposition:** The total work $W_{\text{tot}}$ is the sum of the work done to accelerate the agent ($W_{\text{kin}}$) and the work done to perform predictive computation ($W_{\text{pred}}$).
+1.  **Registered Work Ledgers:** Under the theorem's hypotheses, endpoint kinetic work and isotropically exported predictive-loss work are disjoint contributions to the laboratory input ledger. Equation (N.5) is a lower bound on their sum; stored-energy changes, anisotropic momentum, recoverable field energy, or other work channels require their own explicit entries.
 
-2.  **Lower Bound on Predictive Work:** The predictive power cost at proper time $\tau$ is at least $P_{\text{pred}}(\tau)\ge R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau))$ (Lemma N.1). Over an infinitesimal proper-time interval $d\tau$, the required work is $dW_{\text{pred}} \ge R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau))\,d\tau$. Integrating gives:
+2.  **Lower Bound on Predictive Work:** The comoving predictive-loss rate at proper time $\tau$ is at least
     $$
-    W_{\text{pred}} \ge \int_0^{\tau_f} R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau))\,d\tau,
+    R_{\mathrm{com}}(\tau)
+    =R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau)).
+    $$
+    Under the theorem's isotropic-export hypothesis, an exported comoving energy increment $dE_{\mathrm{com}}=R_{\mathrm{com}}d\tau$ has four-momentum $(dE_{\mathrm{com}}/c,\mathbf0)$ and therefore laboratory energy $dE_{\mathrm{lab}}=\gamma(\tau)dE_{\mathrm{com}}$. Hence
+    $$
+    W_{\text{pred}}^{\mathrm{lab}}
+    \ge
+    \int_0^{\tau_f}\gamma(\tau)R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau))\,d\tau,
     $$
     where $C_{\text{req}}(\tau)=C_{\text{SPAP}}(PP(\tau))+C_{\text{noise,external}}(a(\tau))+C_{\text{noise,internal}}(A_{\text{pred}}(\tau))$ as in the theorem statement.
 
@@ -186,25 +263,26 @@ is well-defined and non-decreasing in $T_{\text{eff}}$, with strict increase on 
     $$
     C_{\text{SPAP}}(PP(\tau)) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}.
     $$
-    Since $R(C,T)$ is non-decreasing in $C$ (Definition 3), this yields the explicit lower bound
+    Since $R(C,T)$ is non-decreasing in $C$ (Definition 3), this yields
     $$
-    W_{\text{pred}} \ge \int_0^{\tau_f} R\\!\left(c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}+C_{\text{noise,external}}(a(\tau))+C_{\text{noise,internal}}(A_{\text{pred}}(\tau)),\,T_{\text{eff}}(\tau)\right)\,d\tau.
+    W_{\text{pred}}^{\mathrm{lab}} \ge \int_0^{\tau_f}\gamma(\tau) R\!\left(c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}+C_{\text{noise,external}}(a(\tau))+C_{\text{noise,internal}}(A_{\text{pred}}(\tau)),\,T_{\text{eff}}(\tau)\right)\,d\tau.
     $$
+    This transfer uses the bridge hypothesis of Lemma N.2; without it the lower bound remains a statement about $C_{\mathrm{uni}}$.
 
-4.  **Add Kinetic Work:** The kinetic work required to accelerate from rest to velocity $v_f$ is at least $W_{\text{kin}}\ge m_0c^2(\gamma(v_f)-1)$ (Lemma N.3). Summing $W_{\text{tot}}=W_{\text{kin}}+W_{\text{pred}}$ gives the stated bound (N.5). QED.
+4.  **Add Kinetic Work:** The laboratory kinetic work required to accelerate from rest to velocity $v_f$ is at least $W_{\text{kin}}^{\mathrm{lab}}\ge m_0c^2(\gamma_f-1)$ (Lemma N.3). The theorem's disjoint-ledger hypothesis permits addition, giving exactly (N.5). QED.
 
 ## N.6 Interpretation and Programme
 
-*   **A Unified Limit:** The UCT reveals that approaching the speed of light ($v \to c$) and approaching perfect self-prediction ($PP \to \alpha_{SPAP}$) are not independent transgressions. They are coupled through the physics of interaction with the environment. High acceleration, necessary for high velocities, creates a noisy thermal environment (Unruh effect) that makes high-fidelity prediction more costly. Similarly, high internal "predictive acceleration" can create self-induced thermal noise, also increasing costs. The universe imposes a unified thermodynamic cost on both "hardware" (motion) and "software" (prediction) transgressions. A fully comprehensive UCT accounts for both external (Unruh) and internal (self-dissipation) thermodynamic costs.
+*   **Two Costs in One Conditional Ledger:** Relativistic endpoint kinetic work and predictive-resource cost can be entered in the same work ledger, but velocity and proper acceleration are distinct variables. A body may coast inertially at high constant velocity with $a=0$ and therefore has no Unruh increment. On the detector-response, additive-temperature, and active-refresh branch, periods of nonzero proper acceleration can add a predictive-loss term; internal processing can add a separate self-heating term. The UCT combines these declared contributions without proving that the kinematic and SPAP limits have a common microscopic origin.
 
-*   **No Simple Algebraic Lock:** There is no simple algebraic equality linking $v$ and $PP$. Instead, there is a dynamic trade-off governed by an optimization problem. The optimal strategy for an MPU is not to maximize $v$ or $PP$ in isolation, but to find a trajectory that minimizes the total integrated work-cost. This involves balancing the need for speed against the need for predictive accuracy in a noisy, self-created environment. The UCT formalizes the concepts of **Temporal Horizon Contraction** and **Predictive Resolution Contraction** introduced in Remark 3. To minimize the integrated cost, a system must accept a lower predictive performance $PP$ (a contraction in resolution) to accommodate the higher noise cost of its trajectory, or it must follow a less aggressive trajectory (a contraction of the achievable spatio-temporal horizon) to preserve its predictive fidelity. This suggests that optimal trajectories for systems requiring high predictive fidelity would avoid sharp accelerations, favoring smoother paths to minimize the 'Unruh cost' on their predictive machinery. Future work will involve incorporating the UCT cost functional into the global PCE potential $V$ to explore how this trade-off shapes the emergent dynamics of MPU networks in cosmological or high-energy settings.
+*   **No Simple Algebraic Lock:** There is no algebraic equality linking $v$ and $PP$, and proper acceleration rather than velocity activates the modeled Unruh increment. Within a specified trajectory class, fixed boundary data, and an accepted response/refresh branch, the right-hand side of (N.5) or (N.18) may be used as a conditional objective or lower-bound surrogate. A finite budget can then produce a trade-off between trajectory work and predictive resources, but the UCT alone does not force every system to lower $PP$, adopt a smoother path, or contract its predictive horizon. **Temporal Horizon Contraction** and **Predictive Resolution Contraction** label possible outputs of that registered optimization model. Incorporating the complete functional into the global PCE potential $V$ remains future work.
 
-*   **Empirical Target:** The UCT predicts that the predictive accuracy of any system is fundamentally limited by its dynamic state (e.g., its acceleration and rate of learning). While the Unruh effect is extremely small for achievable laboratory accelerations, this principle could have consequences in extreme astrophysical environments (e.g., near black holes or neutron stars) or for the ultimate information processing limits of future technologies. The cost of internal predictive acceleration, however, may be a more readily observable constraint in complex biological and artificial systems.
+*   **Empirical Target:** On the registered detector-response, additive-temperature, active-refresh, and export branch, proper acceleration contributes a specified incremental refresh cost whose effect on predictive performance can be tested after baseline thermal and implementation costs are controlled. The UCT makes no universal claim about every accelerated system, and geodesic motion does not activate the proper-acceleration term without an additional orbital bridge. Laboratory, astrophysical, biological, or artificial-system tests must therefore certify the relevant response and refresh mechanism before interpreting a null or positive result as a UCT test.
 
 
 ## N.7 Ontological Interpretation of Prediction Relativity
 
-The preceding sections have derived the Unified Cost of Transgression (UCT) by applying the established physical concept of the Unruh effect to the thermodynamic cost functions of the Predictive Universe framework. This approach, which uses the language of the emergent physical world (particles, acceleration, spacetime), is essential for demonstrating the framework's consistency with and extension of known physics. However, the PU framework's "prediction-first" ontology offers a deeper, more fundamental interpretation of these phenomena, which we clarify here to ensure the argument's consistency with the framework's pre-geometric foundations.
+The preceding sections construct a conditional work ledger using the standard detector-response form of the Unruh effect as an input. The relational account below is a proposed interpretation of that emergent-spacetime ledger. It neither derives the Unruh response from pre-geometric MPU dynamics nor establishes that predictive updating and physical acceleration share a microscopic mechanism.
 
 ### N.7.1 Motion as an Emergent Interpretation of a Predictive Process
 
@@ -216,35 +294,27 @@ At the most fundamental level of the PU framework, there is no pre-existing spac
 
 * "Physical Acceleration" is therefore not a primary concept but the emergent description of a rapid, resource-intensive reconfiguration of the system's predictive relationships with the entire network. It is fundamentally an act of predictive work on a massive scale.
 
-### N.7.2 The Unruh Effect as the Thermodynamic Cost of Relational Updating
+### N.7.2 Relational Interpretation of the Unruh Effect: Open Microscopic Bridge
 
-This ontological reframing provides a deeper explanation for the Unruh effect itself. Instead of an effect perceived by an object moving through a passive vacuum, the Unruh effect is interpreted as the objective thermodynamic cost of this relational updating, a cost which manifests in the accelerating frame as a thermal bath.
+The UCT uses the standard emergent-spacetime Unruh response as an input: a detector with proper acceleration $a$ has temperature $T_U=\hbar a/(2\pi c k_B)$. PU may interpret acceleration as rapid relational updating, but the stronger claim that microscopic MPU update heat produces the Unruh bath is not derived here.
 
-The process is as follows:
+A future microscopic bridge would have to specify, before comparison, the MPU update generator, the accelerated detector observable, the state and scaling limit, the KMS response, and an energy ledger showing that the relevant exported heat is neither double-counted with detector work nor with the standard field response. Only such a construction could identify update dissipation with the Unruh spectrum.
 
-* A system undergoes what we perceive as physical acceleration. Fundamentally, this is a rapid and forced updating of its relational state within the MPU network.
-
-* This process involves a high rate of internal predictive operations and 'Evolve' events, each carrying an irreducible thermodynamic cost ($\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$, Theorem 31).
-
-* This intense predictive activity generates a significant amount of "processing heat" or "computational friction" within the system's local information-processing environment.
-
-* This self-generated thermal noise is precisely what is measured at the emergent level as the Unruh temperature $T_U$.
-
-Therefore, the Unruh effect is not something that happens to an accelerating object; it is the thermodynamic byproduct of the object performing the acceleration. The formula $T_U = \hbar a / (2\pi c k_B)$ emerges as the fundamental "equation of state" that links the rate of relational change ($a$) to its necessary thermodynamic cost ($T_U$). At the characteristic minimum-cycle scale $a_* := c/\tau_{min}$, the associated Euclidean thermal period is
+Accordingly, "processing heat" and the Unruh bath are presently analogous contributions to the UCT cost ledger, not proven identical mechanisms. If an independently defined serialized link-cycle time $\tau_{\mathrm{link}}$ is used to set $a_*:=c/\tau_{\mathrm{link}}$, substitution into the standard Unruh formula gives the formal identity
 $$
-\beta(a_*) = \frac{\hbar}{k_B T_U(a_*)} = 2\pi\tau_{min},
+\frac{\hbar}{k_B T_U(a_*)}=2\pi\tau_{\mathrm{link}}.
 $$
-so the same topological factor $2\pi$ reappears in the comparison between Unruh periodicity and the derived minimum MPU timescale. This is a formal scale identity. Deriving a genuine self-generated Unruh bath directly from the microscopic MPU dynamics and $\varepsilon$-cost dissipation rates remains a significant challenge for future theoretical work.
+This algebra does not derive $\tau_{\mathrm{link}}$, a universal minimum update time, or the Unruh effect from SPAP.
 
 ### N.7.3 Consistency of the Two Descriptive Layers
 
-The ontological interpretation presented here provides the fundamental "why" behind the operational "what." It explains why the laws of physics must include a phenomenon like the Unruh effect—because the act of changing one's predictive relationship with the cosmos is an inherently dissipative and thermodynamically costly process.
+The ontological interpretation presented here is a proposed reading of the operational model, not an explanation or derivation of why quantum field theory has the Unruh response. Its microscopic validity remains contingent on the bridge specified in Section N.7.2.
 
-In this unified view, the UCT theorem describes the trade-offs in the resource economy of predictive change. "Software" prediction (updating internal models) and "hardware" motion (updating relational states) are revealed to be two different facets of the same fundamental process, both governed by the same thermodynamic and informational constraints. 
+On this proposed relational reading, "software" prediction and "hardware" motion may contribute to one resource ledger while remaining physically distinct processes. Their identification as facets of one microscopic mechanism is a hypothesis requiring the bridge specified in Section N.7.2, not a conclusion of the UCT theorem.
 
 ## N.8 A High-Precision Test for Predictive Drag in Binary Pulsars
 
-The Unified Cost of Transgression (UCT) theorem predicts a universal, acceleration-dependent energy cost. While this effect is likely negligible in most terrestrial settings, it becomes a candidate for high-precision testing in extreme astrophysical environments. Binary pulsar systems, particularly those containing two neutron stars, provide the most precise gravitational laboratories known to science and are therefore the ideal systems in which to search for the subtle signature of the UCT's "predictive drag."
+The proper-acceleration active-refresh branch of the UCT supplies a conditional acceleration-dependent loss term. The centers of mass of an ideal gravitational binary follow geodesics and therefore do not possess the proper acceleration entering the standard Unruh formula. Binary-pulsar timing becomes a test of UCT only after the additional orbital-acceleration bridge of Definition N.12a is declared; its fitted factor $q_{\mathrm{act}}^{\mathrm{orb}}$ is not a prediction of the proper-acceleration theorem.
 
 #### N.8.1 The Perfect Laboratory: Why Binary Pulsars?
 
@@ -264,27 +334,35 @@ Binary pulsars are ideal for this test for several key reasons:
 
 **Standard Picture (GR):** According to GR, the binary system loses energy solely through the emission of gravitational waves (GWs). This energy loss, given by Einstein's quadrupole formula, causes the two stars to gradually spiral closer, decreasing their orbital period $P_b$. The rate of this orbital decay, $(dP_b/dt)_{GW}$, is precisely predicted.
 
-**PU Framework (GR + UCT):** The UCT introduces a new, independent channel for energy loss.
+**Conditional Orbital-Bridge Model (GR + UCT bridge):** The proper-acceleration UCT theorem adds no center-of-mass loss channel for ideal geodesic motion. The alternative timing model below adds a channel only by postulating the orbital-acceleration bridge of Definition N.12a.
 
-*   **The Physical Mechanism:** The neutron star is not merely a point mass but a complex MPU aggregate ($C_{agg} \gg C_{op}$). As it accelerates through its orbit, its constituent MPUs experience an Unruh temperature $T_U(a)$. According to the UCT, the system must continuously expend energy to maintain its predictive coherence against this Unruh-induced thermal noise. This expenditure acts as a continuous power drain, a "predictive drag," which removes energy from the orbital system. The precise emission channel for this dissipated energy (e.g., thermal photons, neutrinos, or a non-standard channel) is a subject for deeper theoretical work, but its effect on the orbit is modelable as a pure energy loss.
-*   **The Total Energy Loss:** The total energy loss rate of the system becomes the sum of the two effects:
-$$ \frac{dE}{dt}_{\text{Total}} = \frac{dE}{dt}_{\text{GR (GW)}} + P_{UCT}(t) $$
-    where $P_{UCT} > 0$ is the anomalous power loss due to predictive drag.
+*   **The Conditional Mechanism:** The bridge admits the timing-model orbital acceleration as an effective relational variable and fits $q_{\mathrm{act}}^{\mathrm{orb}}$. It is not a claim that ordinary orbital coordinate acceleration gives either neutron star a standard Unruh bath. Any exported energy must also be entered explicitly and without double counting in the orbital ledger.
+*   **The Model Energy Loss:** On that bridge the modeled loss rate is
+$$
+\frac{dE}{dt}_{\mathrm{model}}
+=
+\frac{dE}{dt}_{\mathrm{GR(GW)}}
++
+P_{UCT}^{\mathrm{orb}}(t),
+$$
+where $P_{UCT}^{\mathrm{orb}}\ge0$ is the empirical bridge term defined below, not an unconditional consequence of Theorem N.UCT.
 
 #### N.8.3 The Unique Observational Signature
 
 The key to detecting this effect lies in the fact that the two energy loss mechanisms have different functional dependencies on the orbital parameters.
 
 *   **The GR Signal:** The power radiated in GWs depends on the third time derivative of the system's quadrupole moment. For a binary orbit, this scales in a complex way with the stars' velocities and separation, but is characteristically strongest near periastron where both are maximized.
-*   **The UCT Signal:** In the Landauer-saturating limit for a logically irreversible refresh of predictive state (Theorem 31), the acceleration-dependent component of the UCT is fixed by the Unruh increment of the predictive power cost. The corresponding anomalous dissipation is:
+*   **The Conditional Bridge Signal:** On the proper-acceleration, active-refresh, and Landauer-saturating branch, the modeled comoving increment for a system $S$ is
     $$
-    P_{UCT}(t)=\frac{k_B T_U(a(t))\,(\ln 2)}{\tau_{cycle}}\,C_{eff}(t)=\frac{\lambda_{PM}}{\tau_{cycle}}\,a(t)\,C_{eff}(t),
+    P_{UCT}(S;a)
+    =
+    \frac{\lambda_{PM}}{\tau_{cycle}}\,a\,C_{eff}
+    =
+    q_{\mathrm{act}}(S)\frac{c}{2\pi}m_Sa.
     $$
-    where $T_U(a)=\hbar a/(2\pi c k_B)$ (Equation N.4), $\lambda_{PM}=\hbar\ln 2/(2\pi c)$ (Definition N.4), and $C_{eff}(t)$ is the effective number of refreshed predictive bits whose maintenance is driven by the acceleration-induced noise component of the environment (a component of $C_{req}$ in Equation N.5). The leading-order UCT signature is therefore linear in proper acceleration $a(t)$, with a single amplitude factor $\Xi(S):=C_{eff}/\tau_{cycle}$ for a given system $S$. Section N.8.6 rewrites this amplitude as $\Xi(S)=q_{\mathrm{act}}(S)c^2m_S/(\hbar\ln2)$, where $q_{\mathrm{act}}$ is the active-refresh fraction normalized to the saturated proper-acceleration branch. The binary-pulsar timing construction uses the separate orbital-acceleration bridge factor $q_{\mathrm{act}}^{\mathrm{orb}}$ of Definition N.12a. Both factors are distinct from the boundary-channel utilization factor $q$ in Proposition N.4 unless an additional bridge equates them.
+    This formula uses proper acceleration. For a geodesic binary it enters the timing model only after Definition N.12a replaces that input by its declared orbital variable and introduces the distinct fitted factor $q_{\mathrm{act}}^{\mathrm{orb}}$. The proper-acceleration factor $q_{\mathrm{act}}$, the orbital factor $q_{\mathrm{act}}^{\mathrm{orb}}$, and Proposition N.4's boundary utilization $q$ remain distinct unless an additional bridge equates them.
 
-In an elliptic orbit, the acceleration magnitude varies periodically. Therefore, the anomalous power loss $P_{UCT}(t)$ would also vary periodically, having its maximum value at periastron. This would lead to a subtle, non-Keplerian distortion of the orbit and a deviation in the observed orbital period derivative, $\dot{P}_b$, from the GR prediction.
-
-While both energy loss effects are strongest near periastron, their precise functional dependencies on the orbital phase are different. This means the UCT adds an energy loss term with a **unique temporal signature** over the course of a single orbit. It is this unique *shape* of the energy loss profile that allows it, in principle, to be distinguished from the GR prediction.
+For a fixed orbital-bridge factor, the candidate correction follows the phase dependence of the acceleration combination specified in Definition N.12a and can perturb $\dot P_b$. Its distinguishability from GR, tidal, magnetospheric, and timing-model nuisance terms is an identifiability question for the fitted model. No unique temporal signature follows from Theorem N.UCT alone.
 
 #### N.8.4 The Experimental Test: A Precision Timing Analysis
 
@@ -439,7 +517,55 @@ $$
 \langle |a_B|\rangle=Gm_A\langle r^{-2}\rangle_t.
 $$
 
-**Corollary N.12.2 (Conditional Observational Bound on $q_{\mathrm{act}}^{\mathrm{orb}}$).** *The Peters orbital-decay power for the same binary is*
+*Proof.* Parametrize the Kepler ellipse by the eccentric anomaly $E$. Then
+$$
+r=a_{\mathrm{orb}}(1-e\cos E),
+\qquad
+dt=\frac{1-e\cos E}{n}\,dE,
+\qquad
+T=\frac{2\pi}{n}.
+$$
+Consequently
+$$
+\langle r^{-2}\rangle_t
+=\frac1T\int_0^T\frac{dt}{r^2}
+=\frac{1}{2\pi a_{\mathrm{orb}}^2}
+\int_0^{2\pi}\frac{dE}{1-e\cos E}.
+$$
+With $u=\tan(E/2)$, splitting the integral at $E=\pi$ gives
+$$
+\int_0^{2\pi}\frac{dE}{1-e\cos E}
+=2\int_{-\infty}^{\infty}
+\frac{du}{(1-e)+(1+e)u^2}
+=\frac{2\pi}{\sqrt{1-e^2}}.
+$$
+This proves the displayed time average. Newtonian center-of-mass kinematics gives
+$$
+|a_A|=\frac{Gm_B}{r^2},
+\qquad
+|a_B|=\frac{Gm_A}{r^2}.
+$$
+Using $M_\odot=1.98847\times10^{30}\,\mathrm{kg}$, $G=6.67430\times10^{-11}\,\mathrm{m^3kg^{-1}s^{-2}}$, and $c=2.99792458\times10^8\,\mathrm{m\,s^{-1}}$ gives
+$$
+m_A=2.66057\times10^{30}\,\mathrm{kg},
+\qquad
+m_B=2.48360\times10^{30}\,\mathrm{kg},
+$$
+and
+$$
+\langle r^{-2}\rangle_t
+=1.29928\times10^{-18}\,\mathrm{m^{-2}}.
+$$
+Therefore
+$$
+\langle P_{UCT}^{\mathrm{orb,sat}}\rangle
+=\frac{c}{2\pi}
+\left(2Gm_Am_B\langle r^{-2}\rangle_t\right)
+=5.46809\times10^{40}\,\mathrm W,
+$$
+which rounds to the stated value. ∎
+
+**Corollary N.12.2 (Conditional Observational Bound on $q_{\mathrm{act}}^{\mathrm{orb}}$).** *Assume the leading-quadrupole, weak-field, adiabatic point-mass branch of the Peters (1964) orbital-decay formula for the same binary. Then*
 $$
 \langle P_{GW}\rangle
 =
@@ -455,7 +581,7 @@ $$
 $$
 \langle P_{GW}\rangle\approx2.36\times10^{25}\,\mathrm W.
 $$
-*On the orbital-acceleration bridge, both energy-loss channels enter the orbital-decay rate linearly at fixed binary parameters, so*
+*On the orbital-acceleration bridge, both energy-loss channels enter the orbital-decay rate linearly while the binary parameters are held constant, so*
 $$
 \frac{\delta\dot P_b}{\dot P_b^{GR}}
 \approx
@@ -473,13 +599,37 @@ q_{\mathrm{act}}^{\mathrm{orb}}(\mathrm{NS};a_{\mathrm{orb}})
 5.6\times10^{-20}.
 $$
 
-*Proof.* Substitute Corollary N.12.1 and the Peters expression into the bridge-level linear fractional-shift relation. $\square$
+*Proof.* The hypotheses stated in the corollary are exactly the point-mass, weak-field, adiabatic, leading-quadrupole hypotheses under which the Peters (1964) power formula applies. Substitution of $e=0.0878$ gives
+$$
+f(e)
+=\frac{1+(73/24)e^2+(37/96)e^4}{(1-e^2)^{7/2}}
+=1.05157065\ldots.
+$$
+Using the masses and constants evaluated in Corollary N.12.1 gives
+$$
+\langle P_{GW}\rangle
+=2.36060\times10^{25}\,\mathrm W.
+$$
+The ratio of the two powers is
+$$
+\frac{5.46809\times10^{40}}{2.36060\times10^{25}}
+=2.31640\times10^{15}.
+$$
+Clause 3 of Definition N.12a makes the two losses additive in the orbital-energy balance. With the binary parameters held constant in the linearized comparison, the fractional period-decay correction is the same power ratio multiplied by $q_{\mathrm{act}}^{\mathrm{orb}}$. Hence the observational bound implies
+$$
+q_{\mathrm{act}}^{\mathrm{orb}}
+<\frac{1.3\times10^{-4}}{2.31640\times10^{15}}
+=5.61215\times10^{-20},
+$$
+which rounds to $5.6\times10^{-20}$. ∎
 
 **Corollary N.12.3 (Conditional Exclusion of Saturated Orbital-Bridge Refresh).** *On the orbital-acceleration test bridge of Definition N.12a, the bound*
 $$
 q_{\mathrm{act}}^{\mathrm{orb}}(\mathrm{NS};a_{\mathrm{orb}})<5.6\times10^{-20}
 $$
 *is incompatible with the saturated orbital-bridge branch $q_{\mathrm{act}}^{\mathrm{orb}}=1$ for macroscopic, gravitationally bound, thermalized neutron-star matter. This conclusion does not by itself falsify the proper-acceleration UCT branch of Theorem N.12 or the boundary-channel saturation branch of Proposition N.4, because $q_{\mathrm{act}}^{\mathrm{orb}}$, $q_{\mathrm{act}}$, and the Proposition N.4 utilization factor $q$ are distinct branch parameters unless additional bridges equate them.*
+
+*Proof.* Since $5.6\times10^{-20}<1$, no real number can satisfy both $q_{\mathrm{act}}^{\mathrm{orb}}<5.6\times10^{-20}$ and $q_{\mathrm{act}}^{\mathrm{orb}}=1$. Definition N.12a declares $q_{\mathrm{act}}^{\mathrm{orb}}$ distinct from $q_{\mathrm{act}}$, and Proposition N.4 separately defines $q$. In the absence of an equality bridge, the contradiction concerns only the orbital-bridge parameter. ∎
 
 **Remark N.12.1 (Locked-In versus Actively Refreshed Information).** On the orbital-acceleration bridge, the bound implies that only an extremely small fraction of the relational information associated with a neutron star can be paying the bridge-level Landauer refresh cost per relevant cycle under orbital acceleration. Using the equivalent Theorem N.5 form
 $$
@@ -495,49 +645,78 @@ q_{\mathrm{act}}^{\mathrm{orb}}<\frac{10^{-5}}{2.316\times10^{15}}\approx4.3\tim
 $$
 *A detection within this window with the orbital-phase dependence of the acceleration profile would measure the orbital-bridge active-refresh factor rather than an unconstrained dimensional UCT amplitude.*
 
+*Proof.* On the preserved bridge, Corollary N.12.2 gives
+$$
+\left|\frac{\delta\dot P_b}{\dot P_b^{GR}}\right|
+\approx q_{\mathrm{act}}^{\mathrm{orb}}(2.316\times10^{15}).
+$$
+Imposing a fractional upper bound $10^{-5}$ and dividing by the positive coefficient gives
+$$
+q_{\mathrm{act}}^{\mathrm{orb}}
+<\frac{10^{-5}}{2.316\times10^{15}}
+=4.31779\times10^{-21},
+$$
+which rounds to $4.3\times10^{-21}$. The orbital-phase interpretation uses the assumed acceleration-profile bridge and therefore identifies this bridge parameter only. ∎
+
 ## N.9 The UCT as a Strategic Choice Between Intensive and Extensive Knowledge Acquisition
 
-The Unified Cost of Transgression (UCT) reveals a deep, physical coupling between the limits of motion and the limits of prediction. This coupling arises because the act of physical acceleration, which defines an agent's strategy for sampling the universe, directly impacts the thermodynamic environment in which prediction must occur. The UCT dictates a fundamental trade-off between two distinct strategies of knowledge acquisition, each with its own resource-cost profile governed by the Principle of Compression Efficiency (PCE).
+The UCT does not by itself dictate a knowledge-acquisition strategy or establish a common physical origin for the motion and prediction limits. It permits a conditional finite-budget optimization only after a trajectory class, prediction task, response model, active-refresh mechanism, and non-double-counted work ledger have been registered.
 
-1.  **The Rindler Horizon and the Cost of Sampling:** An observer undergoing constant proper acceleration $a$ is causally disconnected from a portion of the emergent spacetime, bounded by a Rindler horizon. This is not a subjective illusion; it is an objective, local thermal environment at temperature $T_U = \hbar a / (2\pi c k_B)$ that interacts with any physical system, including the MPU's predictive machinery. Acceleration is therefore a physical means to change one's sampling location within the universe, but it comes at the price of inducing local thermal noise.
+1.  **Rindler Response and Sampling:** An ideal detector on an eternally uniformly accelerated worldline has a Rindler horizon and a KMS response characterized by $T_U=\hbar a/(2\pi c k_B)$. This detector-response statement is not a universal ambient thermal bath interacting with every accelerated system. Only on the declared response and refresh branch may the modeled increment enter the predictor's cost ledger. Broad sampling may also include inertial coasting, for which proper acceleration and the Unruh increment vanish.
 
-2.  **The Prediction Coherence Boundary and the Cost of Modeling:** The SPAP limit, $\alpha_{SPAP}$, is a fixed, dimensionless constant of the PU framework, representing the fundamental logical boundary on the accuracy of any self-referential predictive model ($PP < \alpha_{SPAP} < 1$). It is a universal limit on predictive resolution. Approaching this boundary requires immense computational and thermodynamic resources, as quantified by the cost function $R(C, T_{eff})$ and the complexity divergence ($C_P \propto 1/(\alpha_{SPAP}-PP)^2$).
+2.  **The Prediction Coherence Boundary and the Cost of Modeling:** For task classes carrying the certificate $\mathfrak C_{B.2}$, Theorem 14 gives
+    $$
+    C_{\mathrm{uni}}(PP)
+    =
+    \Omega\!\left(
+    \frac{\log(1/\delta_{\mathrm{SPAP}})}
+    {\delta_{\mathrm{SPAP}}^2}
+    \right),
+    \qquad
+    \delta_{\mathrm{SPAP}}
+    :=
+    \alpha_{\mathrm{SPAP}}-PP.
+    $$
+    Transfer of this lower bound to the operational predictive complexity $C_P$ or $C_{\mathrm{SPAP}}$ requires the explicit domination bridge of Lemma N.2. No unconditional $C_P$ divergence follows merely by renaming $C_{\mathrm{uni}}$.
 
-The UCT establishes the link between these domains by forcing a predictive agent to allocate its total power budget ($P_{total}$) among three competing costs: the kinetic cost of motion ($P_{kin}(a)$), the core cost of its predictive task ($P_{task}(PP)$), and the cost of mitigating the noise induced by its own motion ($P_{noise}(a)$).
+For a specified proper-time interval, suppose the baseline task power, the saturation-branch acceleration-refresh increment, endpoint kinetic work, and all other entries are disjoint and transformed to the laboratory ledger according to Theorem N.UCT. If the available laboratory work is $B_{\mathrm{lab}}$, a necessary feasibility condition is
+$$
+m_0c^2(\gamma_f-1)
++
+\int_0^{\tau_f}\gamma(\tau)
+\left[
+P_{\mathrm{task}}^{\mathrm{com}}(PP(\tau))
++
+P_{\mathrm{pred}}^{\mathrm{sat,com}}(a(\tau),C(\tau))
+\right]d\tau
++
+W_{\mathrm{other}}^{\mathrm{lab}}
+\le B_{\mathrm{lab}},
+$$
+where
+$$
+P_{\mathrm{pred}}^{\mathrm{sat,com}}(a,C)
+=
+\frac{\lambda_{PM}aC}{\tau_{cycle}}.
+$$
+This is a conditional work-budget constraint, not the mixed-frame identity $P_{\mathrm{total}}=P_{\mathrm{kin}}(a)+P_{\mathrm{task}}+P_{\mathrm{noise}}$.
 
-$$P_{total} = P_{kin}(a) + P_{task}(PP) + P_{noise}(a)$$
+An intensive strategy may allocate more of this budget to task fidelity and less to endpoint or refresh work. An extensive strategy may allocate more to reaching additional sampling regions. Neither conclusion is forced: inertial coasting can provide spatial coverage without a continuous Unruh increment, and task performance need not fall unless the accepted finite budget and cost functions make the alternatives compete. PCE selects among such strategies only after the complete objective, trajectory constraints, and branch data have been supplied.
 
-This "strategic choice" is not necessarily a deliberative one. For simpler predictive systems, it is the emergent outcome of the PCE optimization dynamics, which would naturally drive the system towards a trajectory that represents the optimal balance of these costs for its specific Prediction Optimization Problem (POP). For a high-CC agent, this choice might become more explicit. This budget allocation thus forces a strategic choice between:
+## N.10 Conditional Unruh–Landauer Acceleration–Refresh Formula
 
-**Strategy 1: Intensive Knowledge Acquisition ("Deep Prediction")**
+The following equation isolates the Landauer-saturating acceleration-dependent refresh increment on the declared detector-response branch. It is not a universal equation unifying prediction and motion.
 
-*   **Goal:** To achieve the highest possible Predictive Performance ($PP$) about a local region of the universe. This involves creating an extremely high-resolution, high-fidelity model that pushes close to the fundamental $\alpha_{SPAP}$ limit.
-*   **Resource Allocation:** To maximize $PP$, the agent must maximize the power allocated to its core predictive task, $P_{task}(PP)$. Given a finite $P_{total}$, this necessitates minimizing both $P_{kin}$ and $P_{noise}$. This forces the agent into a **near-inertial trajectory (low $a$)**.
-*   **Knowledge Gained:** The agent acquires deep, precise, and highly reliable knowledge about its immediate surroundings. It excels at predicting complex, local interactions. Its knowledge is characterized by **high depth and low breadth**. It becomes a "master of its local domain," but at the cost of forgoing the acquisition of new data from distant regions.
+### N.10.1 Saturating Acceleration–Refresh Formula
 
-**Strategy 2: Extensive Knowledge Acquisition ("Broad Sampling")**
-
-*   **Goal:** To acquire a broad, diverse set of data from many different regions of the universe, which requires physical movement between those regions.
-*   **Resource Allocation:** A dynamic trajectory requires significant power allocation to the kinetic and noise-mitigation costs, $P_{kin}(a)$ and $P_{noise}(a)$. With a fixed $P_{total}$, this necessarily leaves less power available for the core predictive task, $P_{task}$. This forces the agent to operate at a **lower level of Predictive Performance ($PP$)**. Its predictive models are of lower resolution.
-*   **Knowledge Gained:** The agent gathers a vast quantity of data from a wide range of contexts. Its knowledge is characterized by **high breadth and low depth**. It sacrifices local predictive fidelity for global exploration and the potential discovery of new, large-scale patterns. It becomes a "journeyman of the cosmos," but at the cost of being unable to form a maximally precise model of any single location.
-
-
-Therefore, the UCT imposes a fundamental choice on the strategy of inquiry. A predictive agent cannot simultaneously maximize the depth and breadth of its knowledge. It must choose how to spend its finite energy budget: on the **computational resources** required for deep, intensive modeling in one place, or on the **kinetic resources** required for broad, extensive sampling of many places. An agent's trajectory through spacetime is not just a path of motion; it is a physical manifestation of its chosen knowledge-acquisition strategy, a choice constrained by the unified thermodynamics of prediction and acceleration.
-
-## N.10 The Elegant Core: A Unified Equation
-
-The preceding technical development can be distilled into a single equation that captures the essential physics of prediction-motion coupling.
-
-### N.10.1 The Prediction-Motion Equation
-
-**Theorem N.3 (Predictive Energy Cost Under Acceleration).** In the Landauer-saturating limit for a logically irreversible refresh of predictive state (Theorem 31), the minimum Unruh-induced incremental energy dissipation associated with refreshing $C$ bits of predictive state for an MPU undergoing proper acceleration $a$ is:
+**Theorem N.3 (Predictive Energy Cost Under Acceleration).** On the detector-response and additive-temperature branch of Section N.3.2, suppose a logically irreversible refresh of $C$ predictive bits is performed in the instantaneous comoving frame and saturates the Landauer bound for the modeled Unruh-temperature increment. Then
 
 $$
-\boxed{E_{\text{pred}}(a, C) = \frac{\hbar \ln 2}{2\pi c} \cdot a \cdot C}
+\boxed{E_{\text{pred}}^{\text{sat}}(a, C) = \frac{\hbar \ln 2}{2\pi c} \cdot a \cdot C}
 \tag{N.14}
 $$
 
-This contribution grows linearly with proper acceleration and refreshed predictive complexity, giving a motion-dependent lower bound on the dissipation required to preserve predictive state in an accelerated frame.
+This is a branch-conditional saturation value. A non-saturating implementation may dissipate more, and the theorem does not derive the Unruh detector response from microscopic MPU dynamics.
 
 *Proof.* By Landauer's principle [Landauer 1961], the minimum energy dissipated to erase one bit of information in an environment at temperature $T$ is $k_B T \ln 2$. A logically irreversible refresh of $C$ predictive bits therefore has Landauer-saturating dissipation
 
@@ -554,77 +733,100 @@ $$
 Isolating the acceleration-dependent (Unruh-induced) increment by setting $T=T_U(a)$ gives
 
 $$
-E_{\text{pred}}(a,C)=k_B T_U(a) (\ln 2)\,C
+E_{\text{pred}}^{\mathrm{sat}}(a,C)=k_B T_U(a) (\ln 2)\,C
 =\frac{\hbar \ln 2}{2\pi c}\,a\,C,
 $$
 
-which is the stated formula. \u220e
+which is the stated formula. ∎
 
-**Remark N.10.1: Structural Analogy to $E = mc^2$.**
-Just as Einstein's equation reveals mass-energy equivalence through $c^2$, Equation (N.14) reveals motion-cognition coupling through $c$. The speed of light appears in both the kinematic barrier ($v < c$) and the epistemic cost ($E_{\text{pred}} \propto 1/c$). This is not coincidental—it reflects the deep unity established by the UCT: reaching relativistic velocities requires acceleration, which thermodynamically degrades predictive capacity through the Unruh mechanism.
+**Remark N.10.1: Conditional Dimensional Analogy to $E=mc^2$.**
+Equation (N.14) contains $c^{-1}$ because the accepted Unruh-temperature formula contains $c^{-1}$. On the detector-response and Landauer-saturating active-refresh branch, this yields a motion–refresh coefficient involving $\hbar$, $\ln2$, and $c$. The resemblance to a relativistic energy relation is dimensional and branch-conditional: it does not establish mass–prediction equivalence, a second causal barrier, or a common microscopic origin for the SPAP and kinematic limits.
 
-### N.10.2 The Prediction-Motion Coupling Constant
+### N.10.2 The Prediction-Motion Coupling Coefficient
 
-**Definition N.4 (Prediction-Motion Coupling Constant).**
-The fundamental constant governing the coupling between motion and self-knowledge is:
+**Definition N.4 (Prediction-Motion Coupling Coefficient).**
+On the detector-response and Landauer-saturating active-refresh branch, define the acceleration–refresh coefficient
 
 $$
 \boxed{\lambda_{PM} \equiv \frac{\hbar \varepsilon_0}{2\pi c} = \frac{\hbar \ln 2}{2\pi c} \approx 3.88 \times 10^{-44} \text{ kg·m}}
 \tag{N.15}
 $$
 
-This single constant encodes the bridge between:
+This coefficient collects constants already consumed by that conditional bridge:
 
-- **Quantum mechanics** ($\hbar$): the fundamental action scale
-- **Information theory** ($\varepsilon_0 = \ln 2$): the irreducible structural cost of self-reference
-- **Relativity** ($c$): the invariant speed limiting both motion and signal propagation
+- **Quantum input** ($\hbar$): the imported quantum action scale;
+- **Structural information input** ($\varepsilon_0=\ln2$): the exact binary structural coefficient, which is not by itself a physical dissipation energy;
+- **Relativistic input** ($c$): the invariant-speed constant already present in the accepted Unruh formula.
 
-In terms of $\lambda_{PM}$, the predictive energy cost simplifies to:
+Their appearance in one coefficient establishes no independent causal or microscopic coupling law. On the stated saturation branch, Equation (N.14) can be written
 
 $$
-E_{\text{pred}} = \lambda_{PM} \cdot a \cdot C
+E_{\text{pred}}^{\text{sat}} = \lambda_{PM} \cdot a \cdot C.
 \tag{N.16}
 $$
 
 **Remark N.10.2: Dimensional Analysis.**
-The coupling constant $\lambda_{PM}$ has dimensions:
-$$[\lambda_{PM}] = \frac{[\text{Energy} \cdot \text{Time}]}{[\text{Length}/\text{Time}]} = \frac{[M L^2 T^{-1}]}{[L T^{-1}]} = [M L]$$
-
-Thus $\lambda_{PM}$ carries dimensions of mass times length. Verification: $[E_{\text{pred}}] = [ML] \cdot [LT^{-2}] \cdot [1] = [ML^2T^{-2}]$, correctly yielding energy for the product of acceleration and dimensionless complexity.
+The coefficient $\lambda_{PM}$ has dimensions
+$$
+[\lambda_{PM}]
+=
+\frac{[\text{Energy}\cdot\text{Time}]}{[\text{Length}/\text{Time}]}
+=
+[ML].
+$$
+Thus
+$$
+[E_{\text{pred}}^{\text{sat}}]
+=
+[ML]\,[LT^{-2}]
+=
+[ML^2T^{-2}],
+$$
+as required for the conditional saturation energy.
 
 **Remark N.10.3: Relation to Fundamental Scales.**
-The coupling constant can be expressed in terms of the Planck mass $m_P = \sqrt{\hbar c / G}$ and Planck length $L_P = \sqrt{\hbar G / c^3}$. From the identity $m_P L_P = \hbar/c$ (which follows from $m_P L_P = \sqrt{(\hbar c/G)(\hbar G/c^3)} = \sqrt{\hbar^2/c^2} = \hbar/c$), we obtain:
-
-$$\lambda_{PM} = \frac{\ln 2}{2\pi} \cdot \frac{\hbar}{c} = \frac{\ln 2}{2\pi} \cdot m_P L_P$$
-
-This reveals $\lambda_{PM}$ as a fraction $(\ln 2 / 2\pi) \approx 0.110$ of the quantum of action per unit velocity, $\hbar/c$, or equivalently, of the Planck mass-length product.
-
-### N.10.3 The Unification Statement
-
-The deepest content of Prediction Relativity can be expressed as a single identity:
+Using $m_P=\sqrt{\hbar c/G}$, $L_P=\sqrt{\hbar G/c^3}$, and the identity $m_PL_P=\hbar/c$ gives
 
 $$
-\boxed{c_{\gamma} = c_{\varepsilon}}
+\lambda_{PM}
+=
+\frac{\ln2}{2\pi}\frac{\hbar}{c}
+=
+\frac{\ln2}{2\pi}m_PL_P.
+$$
+
+This is an algebraic rewriting of the branch coefficient, not evidence for a new fundamental constant or an independently derived prediction–motion interaction.
+
+### N.10.3 Unruh–Landauer Saturation Calibration
+
+**Definition N.5 (Unruh–Landauer Saturation Coefficient).**
+Let $c_\gamma:=c$ denote the invariant speed already appearing in the Lorentz and Unruh formulas. On the Landauer-saturating branch of Theorem N.3, define
+$$
+E_{\mathrm{pred}}^{\mathrm{sat}}(a,C)
+:=
+\frac{\hbar\varepsilon_0}{2\pi c}\,aC
+$$
+and extract the denominator constant
+$$
+c_\varepsilon^{\mathrm{sat}}
+:=
+\frac{\hbar\varepsilon_0 aC}{2\pi E_{\mathrm{pred}}^{\mathrm{sat}}(a,C)}.
+$$
+Then
+$$
+\boxed{c_\gamma=c_\varepsilon^{\mathrm{sat}}=c.}
 \tag{N.17}
 $$
 
-*The invariant speed limiting motion is identical to the invariant speed limiting self-knowledge.*
+Equation (N.17) is a calibration identity on the Unruh–Landauer saturation branch. It follows because the standard Unruh temperature already contains the invariant speed $c$; it does not independently derive $c$, a second speed limit, or the Lorentz causal structure from SPAP. For a nonsaturating implementation with actual acceleration-dependent dissipation $E_{\mathrm{pred}}\ge E_{\mathrm{pred}}^{\mathrm{sat}}$, the same inferred ratio obeys
+$$
+\frac{\hbar\varepsilon_0 aC}{2\pi E_{\mathrm{pred}}}\le c,
+$$
+with equality only at saturation. Merely satisfying the additive UCT work bound does not force equality.
 
-**Definition N.5 (Epistemic Speed $c_\varepsilon$).**
-The epistemic speed $c_\varepsilon$ is defined operationally as the constant appearing in the denominator of the predictive energy cost:
+**Interpretation:** $c_\gamma$ is the kinematic invariant speed. The symbol $c_\varepsilon^{\mathrm{sat}}$ is a convenient readout of the same already-present constant from one conditional cost formula, not an independently established epistemic barrier.
 
-$$c_\varepsilon \equiv \frac{\hbar \varepsilon_0 \cdot a \cdot C}{2\pi E_{\text{pred}}}$$
-
-By Theorem N.3, this equals the speed of light $c$ for any acceleration-complexity-energy triple satisfying the UCT bound.
-
-**Interpretation:**
-
-- $c_{\gamma}$: The speed of light as kinematic barrier—no massive body can reach $v = c$, as the Lorentz factor $\gamma = (1 - v^2/c^2)^{-1/2}$ diverges
-- $c_{\varepsilon}$: The speed of light as epistemic barrier—acceleration at rate $a$ imposes predictive cost $\propto a/c_\varepsilon$ through the Unruh mechanism
-
-These are not two limits that happen to share a numerical value. They are **one limit**, experienced from different operational perspectives. The UCT theorem (Section N.4) proves this identity by deriving both divergences from a common thermodynamic substrate: acceleration couples to the vacuum through the Unruh effect, creating thermal noise that degrades predictive capacity at a rate set by $c$.
-
-**Proposition N.10.3a (No Margolus-Levitin/Gamma Product Bound from N.17).** Equation (N.17) identifies the invariant speed $c_\gamma$ appearing in the Lorentz factor with the operational constant $c_\varepsilon$ extracted from the Unruh-Landauer cost formula. It does not identify the limiting operation $v \to c$ with saturation of the Margolus-Levitin orthogonalization bound, and it does not imply any universal lower bound of the form
+**Proposition N.10.3a (No Margolus-Levitin/Gamma Product Bound from N.17).** Equation (N.17) records a coefficient comparison $c_\gamma=c_\varepsilon^{\mathrm{sat}}$ on the Landauer-saturating Unruh branch; it is not an independent operational measurement of a second invariant speed. It does not identify the limiting operation $v \to c$ with saturation of the Margolus-Levitin orthogonalization bound, and it does not imply any universal lower bound of the form
 $$
 \frac{E_{\mathrm{ML}}}{m c^2}\,\frac{1}{\gamma} \ge \text{constant independent of }m.
 $$
@@ -640,88 +842,104 @@ Equivalently, using $\hbar=m_Pc^2t_P$,
 $$
 \frac{E_{\mathrm{ML}}}{m c^2} \ge \frac{\pi}{2}\frac{m_P}{m}\frac{t_P}{\tau_0}.
 $$
-The factor $m_P/m$ is unavoidable when the speed-limit energy is normalized by $m c^2$, and no additional factor $1/\gamma$ suppresses the proper-time bound. Therefore the falsifiable content of Equation (N.17) remains the Unruh-Landauer coupling in Theorem N.3 and the UCT work law, not a new Margolus-Levitin/relativistic joint-saturation inequality.
+The factor $m_P/m$ is unavoidable when the speed-limit energy is normalized by $m c^2$, and no additional factor $1/\gamma$ suppresses the proper-time bound. Empirical content resides in the conditional Unruh–Landauer law and the frame-consistent UCT work ledger, not in the coefficient identity by itself. In particular, neither Equation (N.17) nor the Margolus–Levitin bound implies $c=\delta/\tau_{\min}$.
 
-*Proof.* Equation (N.17) is an identity between the constants $c_\gamma$ and $c_\varepsilon$ appearing in two already defined formulae. It contains no statement about the state-dependent Hamiltonian quantity $E_{\mathrm{ML}}$, no orthogonality condition, and no condition that the Lorentz limit $v\to c$ be reached. Corollary 29.1 supplies the only Margolus-Levitin input used inside PU, namely $E_{\mathrm{ML}}\tau_0\ge\pi\hbar/2$ in the system's proper internal time. Lorentz time dilation changes the coordinate duration of that internal cycle by $\tau_{\mathrm{lab}}=\gamma\tau_0$ and leaves the proper-time inequality unchanged. Rearranging the proper-time inequality and substituting $\hbar=m_Pc^2t_P$ gives the displayed PU-unit form. A bound with $(E_{\mathrm{ML}}/mc^2)/\gamma$ and a positive right-hand side independent of $m$ would be frame-dependent and would tend to zero under boosts of the same massive system, while the proper-time speed limit is invariant. Hence such a product bound is not derivable from Theorem N.3, Definition N.5, Equation (N.17), or Corollary 29.1. ∎
+*Proof.* Equation (N.17) follows by comparing the coefficient in the saturating Unruh–Landauer formula with the same $c$ already present in the imported Unruh temperature. It contains neither the spacing $\delta$ nor the cycle time $\tau_{\min}$. It contains no statement about the state-dependent Hamiltonian quantity $E_{\mathrm{ML}}$, no orthogonality condition, and no condition that the Lorentz limit $v\to c$ be reached. Corollary 29.1 supplies the only Margolus-Levitin input used inside PU, namely $E_{\mathrm{ML}}\tau_0\ge\pi\hbar/2$ in the system's proper internal time. Lorentz time dilation changes the coordinate duration of that internal cycle by $\tau_{\mathrm{lab}}=\gamma\tau_0$ and leaves the proper-time inequality unchanged. Rearranging the proper-time inequality and substituting $\hbar=m_Pc^2t_P$ gives the displayed PU-unit form. A bound with $(E_{\mathrm{ML}}/mc^2)/\gamma$ and a positive right-hand side independent of $m$ would be frame-dependent and would tend to zero under boosts of the same massive system, while the proper-time speed limit is invariant. Hence such a product bound is not derivable from Theorem N.3, Definition N.5, Equation (N.17), or Corollary 29.1. ∎
 
 ### N.10.4 Physical Consequences
 
-**Corollary N.3.1 (Optimal Trajectories for Predictive Systems).**
-For any system that must maintain predictive coherence (biological organisms, AI systems, measurement apparatus), the optimal trajectory minimizes total work:
-
+**Corollary N.3.1 (Conditional Laboratory Work Functional for Predictive Trajectories).**
+Under the hypotheses of Theorem N.UCT and on the Landauer-saturating refresh branch of Theorem N.3, define the comoving incremental predictive power
 $$
-W_{\text{tot}} = m_0c^2(\gamma-1) + \int_0^{\tau_f} P_{\text{pred}}(\tau) \, d\tau
-\tag{N.18}
-$$
-
-where:
-
-$$
-P_{\text{pred}}(\tau) = \frac{\lambda_{PM} \cdot a(\tau) \cdot C(\tau)}{\tau_{cycle}}
+P_{\text{pred}}^{\mathrm{sat,com}}(\tau)
+=
+\frac{\lambda_{PM}a(\tau)C(\tau)}{\tau_{cycle}(\tau)}.
 \tag{N.18a}
 $$
-
-Here $\tau_{cycle}$ is the characteristic predictive cycle time of the MPU (Definition 27), ensuring dimensional consistency: $[P_{\text{pred}}] = [ML][LT^{-2}][1]/[T] = [ML^2T^{-3}] = [\text{Power}]$.
-
-*Proof.* By Theorem N.3, the Unruh-induced incremental energy dissipation associated with refreshing $C$ predictive bits under proper acceleration $a$ is $E_{\text{pred}}=\lambda_{PM}aC$. If such refreshes occur on a cycle time $\tau_{\text{cycle}}$ (Definition 27), the corresponding Unruh-induced incremental predictive power is $P_{\text{pred}}=E_{\text{pred}}/\tau_{\text{cycle}}=\lambda_{PM}aC/\tau_{\text{cycle}}$. Substituting this $P_{\text{pred}}$ into the UCT work decomposition yields the stated simplified form. ∎
-
-This implies that intelligent systems should favor smooth trajectories over sharp accelerations, even when the latter would minimize travel time. The PCE potential (Section N.1) naturally drives systems toward such optimal paths.
-
-**Corollary N.3.2 (Predictive Capacity Reduction Under Acceleration).**
-A system with fixed total power budget $P_{\text{tot}}$ undergoing sustained acceleration $a$ experiences an effective reduction in available predictive capacity:
-
+Then the corresponding simplified laboratory work bound is
 $$
-\Delta C_{\text{available}} = -\frac{P_{\text{pred}}}{R'(C)}
+W_{\text{tot}}^{\mathrm{lab}}
+\ge
+m_0c^2(\gamma_f-1)
++
+\int_0^{\tau_f}\gamma(\tau)P_{\text{pred}}^{\mathrm{sat,com}}(\tau)\,d\tau.
+\tag{N.18}
+$$
+Here $\tau_{cycle}$ is a proper cycle time, and $[P_{\text{pred}}^{\mathrm{sat,com}}]=[ML^2T^{-3}]$. Additional background, internal-noise, nonsaturating, anisotropic-export, or stored-energy contributions remain in the full N.5 ledger. Within a specified trajectory class and boundary conditions, minimizing the right-hand-side functional defines the conditional optimal-trajectory problem.
+
+*Proof.* Theorem N.3 supplies the saturated comoving energy per refresh, and division by the proper cycle time gives (N.18a). The boost of an isotropic comoving energy increment contributes the factor $\gamma(\tau)$ proved in Section N.5. Adding the disjoint laboratory kinetic ledger gives (N.18). ∎
+
+Within a specified trajectory class, and only when the registered UCT response and refresh branch is active, minimizing (N.18) can favor smoother proper-acceleration profiles over sharper ones. Whether the full PCE potential selects such a path depends on the remaining background, internal-noise, stored-energy, and boundary-condition entries in the complete ledger.
+
+**Corollary N.3.2 (Conditional Comoving Predictive-Capacity Reduction Under Acceleration).**
+Assume the detector-response, additive-temperature, active-refresh, and Landauer-saturating branch of Theorem N.3. Let a fixed comoving non-kinetic operational power budget $P_{\mathrm{avail}}^{\mathrm{com}}$ sustain baseline complexity $C_0$ through
+$$
+R(C_0)=P_{\mathrm{avail}}^{\mathrm{com}},
+$$
+where $R:[0,C_0]\to[0,P_{\mathrm{avail}}^{\mathrm{com}}]$ is continuously differentiable, $R(0)=0$, and $R'(C)>0$ on $[0,C_0]$. At constant proper acceleration $a\ge0$ and fixed proper cycle time $\tau_{cycle}$, define $C_a$ by
+$$
+R(C_a)+\frac{\lambda_{PM}aC_a}{\tau_{cycle}}
+=P_{\mathrm{avail}}^{\mathrm{com}}.
 \tag{N.19}
 $$
+Then $C_a\le C_0$, and implicit differentiation gives
+$$
+\frac{dC_a}{da}
+=
+-\frac{\lambda_{PM}C_a/\tau_{cycle}}
+{R'(C_a)+\lambda_{PM}a/\tau_{cycle}}
+\le0.
+\tag{N.19a}
+$$
+Consequently, for small $a$,
+$$
+C_a-C_0
+=
+-\frac{P_{\mathrm{pred}}^{\mathrm{sat,com}}(a,C_0)}{R'(C_0)}
++o(a),
+\qquad
+P_{\mathrm{pred}}^{\mathrm{sat,com}}(a,C_0)
+=
+\frac{\lambda_{PM}aC_0}{\tau_{cycle}}.
+\tag{N.19b}
+$$
 
-where $R'(C) = \partial R / \partial C$ is the marginal operational cost (Definition 3) with units of power per bit.
-
-*Derivation.* From the power budget constraint $P_{\text{tot}} = P_{\text{kin}} + P_{\text{op}}$, the power available for predictive operations is $P_{\text{op}} = P_{\text{tot}} - P_{\text{kin}}$. Under acceleration, an additional power $P_{\text{pred}} = \lambda_{PM} \cdot a \cdot C / \tau_{cycle}$ must be allocated to counteract Unruh noise. By the definition of the marginal cost $R'(C)$, the complexity sustainable at fixed total power is reduced by:
-
-$$\Delta C = -\frac{\Delta P}{R'(C)} = -\frac{P_{\text{pred}}}{R'(C)}$$
-
-For systems operating near the Landauer limit where $R(C) \approx k_B T_{\text{internal}} \cdot (\varepsilon / \tau_{cycle}) \cdot C$, we have $R'(C) \approx k_B T_{\text{internal}} \cdot \varepsilon / \tau_{cycle}$, yielding the dimensionless form:
-
-$$\Delta C_{\text{available}} \approx -\frac{\lambda_{PM} \cdot a \cdot C}{k_B T_{\text{internal}} \cdot \varepsilon}$$
-
-This represents a cognitive analog of relativistic effects: fast-moving observers are fundamentally limited in their ability to model their own future states. Just as length contraction reduces spatial extent for moving observers, predictive capacity contraction reduces the epistemic horizon for accelerating predictors.
+*Proof.* Strict monotonicity makes the left side of (N.19) strictly increasing in $C_a$ and no smaller than $R(C_a)$, proving existence/uniqueness on the admitted range and $C_a\le C_0$. Differentiating (N.19) proves (N.19a), and the first-order expansion at $a=0$ gives (N.19b). The $o(a)$ remainder follows from the stated continuous differentiability; an $O(a^2)$ remainder would require stronger regularity. The budget is entirely comoving and non-kinetic; laboratory endpoint kinetic work and the factor $\gamma$ enter separately through (N.18). Thus the contraction is conditional on proper acceleration and the retained response/refresh bridge, not on velocity alone. ∎
 
 ### N.10.5 Conceptual Summary
 
-The Unified Cost of Transgression reveals that Einstein's $c$ and the SPAP limit $\alpha_{SPAP}$ are not independent barriers. They are unified through thermodynamics:
+The Unified Cost of Transgression places two distinct resource effects in one frame-consistent work ledger:
 
-|Domain |Barrier |Divergence |Mediator |
+|Domain |Limit |Resource statement |Status |
 |--------------|----------------------|-------------------------------------------------------------|---------------|
-|**Kinematics**|$v \to c$ |$\gamma \to \infty$ |$c$ |
-|**Prediction**|$PP \to \alpha_{SPAP}$|$C_P \to \Omega\left(\frac{\log(1/\delta)}{\delta^2}\right)$|$c$ (via Unruh)|
+|**Kinematics**|$v \to c$ |$m_0c^2(\gamma-1)\to\infty$ |standard relativistic input |
+|**Prediction**|$PP \to \alpha_{SPAP}$|$C_{\mathrm{uni}}\to\Omega\!\left(\log(1/\delta)/\delta^2\right)$ under $\mathfrak C_{B.2}$ |transfers to $C_P$ only with the bridge of Lemma N.2 |
+|**Acceleration coupling**|$a\ne0$ |Unruh–Landauer incremental cost on the registered saturation/activation branch |conditional bridge |
 
-where $\delta = \alpha_{SPAP} - PP$ is the gap to the Prediction Coherence Boundary.
+Here $\delta=\alpha_{SPAP}-PP$. The shared laboratory work functional does not make the two limiting operations identical. It says that, when the Unruh response and predictive-refresh bridge are active, acceleration adds a prediction-related cost to the already distinct kinetic and SPAP ledgers.
 
-The same constant $c$ that forbids superluminal motion also couples motion to the cost of self-knowledge. This is the core insight of Prediction Relativity: **the invariant speed $c$ does not impose limits on prediction—rather, the fundamental limits of self-referential prediction, operating through thermodynamic optimization in networks of MPUs, give rise to an emergent geometry whose causal structure is characterized by the invariant $c$.**
+Equation (N.17) recovers the same $c$ from the saturated Unruh–Landauer formula because that formula imports $c$ through the standard Unruh temperature. It is a consistency calibration, not a derivation of Lorentz causality from SPAP. Theorem 46 supplies only the independent uniform operational speed upper bound. An attained normalized frontier $c=\delta/\tau_{\min}$ requires the separate uniform-weight one-link-attainment branch, and its Lorentzian invariant-speed interpretation requires Corollary 46a and the full Appendix O package.
 
-The kinematic barrier $v < c$ is not an independent physical law but a downstream consequence of the deeper predictive constraints. What appears in the emergent description as "the speed of light limiting motion" is, at the foundational level, the geometric manifestation of SPAP limits and the irreducible cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ propagating through the PCE optimization dynamics. The UCT makes this unity explicit: the Unruh mechanism couples acceleration to predictive degradation precisely because both "motion" and "prediction" are aspects of the same underlying MPU dynamics from which spacetime itself emerges (Sections 11, 12; Appendix F).
-
-The prediction-motion coupling constant $\lambda_{PM}$ quantifies this unity. Its smallness ($\sim 10^{-44}$ kg·m) explains why the cognitive costs of ordinary accelerations are negligible in the emergent regime, while its non-zero value ensures that the unification is physical rather than merely formal. In extreme environments—near black holes, in the early universe, or at the fundamental scales where MPU dynamics dominate—this coupling becomes the essential constraint governing the joint optimization of motion and prediction, revealing the predictive substructure beneath the emergent spacetime description.
+The coefficient $\lambda_{PM}=\hbar\varepsilon_0/(2\pi c)$ is therefore a dimensional coefficient on a conditional bridge. Its small SI value alone does not establish an observable or microscopic MPU mechanism; an experiment also requires an activation fraction, refresh rate, detector response, background subtraction, and a non-double-counted energy ledger.
 
 ## N.11 Inertial Mass as Relational Information
 
-The preceding sections established that acceleration couples to predictive capacity through the Unruh mechanism (Section N.3), and that "motion" is fundamentally the reconfiguration of a system's predictive relationships with the MPU network (Section N.7). This section completes the unification program by deriving inertial mass itself from the information content of those relationships, resolving the ancient puzzle of why matter resists acceleration.
+Section N.3 supplied a conditional acceleration–refresh cost on its registered detector-response branch, while Section N.7 proposed—but did not derive—a relational interpretation of motion. The mass construction below is a separate conditional ledger governed by its own $\mathfrak B_{\mathrm{mass}}$ hypotheses. It does not follow from the UCT coefficient or establish a common microscopic origin for acceleration, prediction, and inertia.
 
 ### N.11.1 The Relational Ontology of "Being"
 
-In the PU framework, a system $S$ does not exist in isolation. Its identity—its distinction from vacuum fluctuations—consists entirely in the correlations it maintains with its environment $E$ across a boundary $\partial S$. These correlations constitute the system's relational information.
+In the PU framework, a system $S_{\mathrm{sys}}$ does not exist in isolation. Its identity—its distinction from vacuum fluctuations—consists entirely in the correlations it maintains with its environment $E_{\mathrm{env}}$ across a boundary $\partial S_{\mathrm{sys}}$. These correlations constitute the system's relational information.
 
-**Definition N.6 (Relational Information Content).** The relational information content $\mathcal{I}_{rel}(S)$ of a system $S$ is the quantum mutual information between $S$ and its environment $E$:
+**Definition N.6 (Relational Information Content).** The relational information content $\mathcal I_{\mathrm{rel}}(S_{\mathrm{sys}})$ of a system $S_{\mathrm{sys}}$ is the quantum mutual information between $S_{\mathrm{sys}}$ and its environment $E_{\mathrm{env}}$:
 
 $$
-\mathcal{I}_{rel}(S) := I(S:E) = S(\rho_S) + S(\rho_E) - S(\rho_{SE})
+\mathcal I_{\mathrm{rel}}(S_{\mathrm{sys}}) := I(S_{\mathrm{sys}}:E_{\mathrm{env}}) = S_{\mathrm{vN}}(\rho_{S_{\mathrm{sys}}}) + S_{\mathrm{vN}}(\rho_{E_{\mathrm{env}}}) - S_{\mathrm{vN}}(\rho_{S_{\mathrm{sys}}E_{\mathrm{env}}})
 \tag{N.20}
 $$
 
-measured in nats, where $S(\cdot)$ denotes von Neumann entropy [von Neumann 1932] and $\rho_{SE}$ is the joint state of system and environment.
+measured in nats, where $S_{\mathrm{vN}}(\rho):=-\operatorname{Tr}(\rho\ln\rho)$ is the von Neumann entropy [von Neumann 1932] and $\rho_{S_{\mathrm{sys}}E_{\mathrm{env}}}$ is the joint state of the system/environment pair.
 
-This definition connects directly to the interpretation of entanglement as predictive coupling (Proposition 10, Section 8.6): entangled states maximize mutual information $I(A:B)$ relative to individual entropies for given subsystem mixedness, with maximally entangled pure states achieving $I(A:B) = 2S(\rho_A)$. The quantum mutual information $I(S:E)$ quantifies the total information that $S$ and $E$ share about each other [Nielsen & Chuang 2010]—precisely the "predictive coupling" that enables each subsystem to anticipate the other's behavior. The relational information $\mathcal{I}_{rel}$ thus measures the total predictive coupling between $S$ and the rest of the network.
+This definition connects directly to the interpretation of entanglement as predictive coupling (Proposition 10, Section 8.6): entangled states maximize mutual information $I(A:B)$ relative to individual entropies for given subsystem mixedness, with maximally entangled pure states achieving $I(A:B) = 2S_{\mathrm{vN}}(\rho_A)$. The quantum mutual information $I(S_{\mathrm{sys}}:E_{\mathrm{env}})$ quantifies the total information that $S_{\mathrm{sys}}$ and $E_{\mathrm{env}}$ share about each other [Nielsen & Chuang 2010]—precisely the "predictive coupling" that enables each subsystem to anticipate the other's behavior. The relational information $\mathcal I_{\mathrm{rel}}$ thus measures the total predictive coupling between $S_{\mathrm{sys}}$ and the rest of the network.
 
 **Proposition N.4 (Boundary Channel Saturation on the saturated-boundary branch).** For a system whose system-environment boundary lies on the PCE saturated-boundary branch, the relational information saturates the total channel capacity:
 
@@ -749,7 +967,7 @@ $$
 \mathcal{I}_{rel}(S) = N_{\partial} \times C_{\max}.
 $$
 
-The saturated-boundary branch is justified for causal/holographic boundaries by the holographic saturation attractor of Appendix E (Theorem E.8.3.4 and the boundary-encoding PCE minimum of Theorem E.8.3.2). For generic system-environment boundaries, saturation is a branch assumption of this proposition. Unlike standard thermal equilibrium, which maximizes entropy subject to energy constraints alone [Jaynes 1957], PCE equilibrium maximizes mutual information subject to channel capacity constraints through the global optimization mechanism established in Theorem Q.6.1; this establishes the direction of the saturation pressure but does not force exact saturation for every boundary geometry. ∎
+The saturated-boundary branch is justified for causal/holographic boundaries by the holographic saturation attractor of Appendix E (Theorem E.8.3.4 and the boundary-encoding PCE minimum of Theorem E.8.3.2). For generic system-environment boundaries, saturation is a branch assumption of this proposition. The throughput-saturated and ideal-packing branches of Lemmas Q.2.2 and Q.2.3 provide compatible conditional saturation inputs, but Theorem Q.6.1 establishes only the temporal scale on a serialized-frontier branch and supplies no global mutual-information optimization theorem. Exact saturation for a generic boundary therefore remains an explicit hypothesis of this proposition. ∎
 
 
 ### N.11.2 Open-System Thermodynamics and the KMS Condition
@@ -793,26 +1011,26 @@ is used only when that bridge and its duration certificate are accepted. A durat
 
 
 $$
-\frac{d\mathcal{S}}{d\tau} = \frac{\varepsilon_0 \cdot N_{\partial}}{\tau_{min}} = \frac{\varepsilon_0 \cdot \mathcal{I}_{rel}}{C_{\max} \cdot \tau_{min}}
+\frac{d\mathcal{S}}{d\tau} = \frac{\varepsilon_0 \cdot N_{\partial}}{\tau_{\min}} = \frac{\varepsilon_0 \cdot \mathcal I_{\mathrm{rel}}}{C_{\max} \cdot \tau_{\min}}
 \tag{N.24}
 $$
 
-*Proof.* Each of $N_{\partial}$ channels exchanges information at rate $1/\tau_{min}$. Each exchange contributes $\varepsilon_0$ only to the declared structural ledger. Physical heat requires registered reset records and is bounded by their $H_q(P\mid R)$ values. On the saturated-boundary branch of Proposition N.4, $N_{\partial} = \mathcal{I}_{rel}/C_{\max}$. Substituting:
+*Proof.* Each of $N_{\partial}$ channels exchanges information at rate $1/\tau_{\min}$. Each exchange contributes $\varepsilon_0$ only to the declared structural ledger. Physical heat requires registered reset records and is bounded by their $H_q(P\mid R)$ values. On the saturated-boundary branch of Proposition N.4, $N_{\partial} = \mathcal I_{\mathrm{rel}}/C_{\max}$. Substituting:
 
 $$
-\frac{d\mathcal{S}}{d\tau} = N_{\partial} \times \frac{\varepsilon_0}{\tau_{min}} = \frac{\mathcal{I}_{rel}}{C_{\max}} \times \frac{\varepsilon_0}{\tau_{min}}.
+\frac{d\mathcal{S}}{d\tau} = N_{\partial} \times \frac{\varepsilon_0}{\tau_{\min}} = \frac{\mathcal I_{\mathrm{rel}}}{C_{\max}} \times \frac{\varepsilon_0}{\tau_{\min}}.
 $$
 
-At the PCE-optimal operating point, Equation E.15 gives $C_{max}=2\ln2$. On the joint saturated-boundary/activity completed-reset branch:
+At the PCE-optimal operating point, Equation E.15 gives $C_{\max}=2\ln2$. On the joint saturated-boundary/activity completed-reset branch:
 
 
 
 $$
-\frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{rel}}{2 \tau_{\text{min}}}.
+\frac{d\mathcal{S}}{d\tau} = \frac{\mathcal I_{\mathrm{rel}}}{2\tau_{\min}}.
 \tag{N.25}
 $$
 
-On a partial-utilization branch with utilization factor $q < 1$, the rate becomes $\mathcal{I}_{rel}/(2q\tau_{min})$, scaling the mass-information coefficient in Theorem N.5 by $1/q$. ∎
+On a partial-utilization branch with utilization factor $q < 1$, the rate becomes $\mathcal I_{\mathrm{rel}}/(2q\tau_{\min})$, scaling the mass-information coefficient in Theorem N.5 by $1/q$. ∎
 
 **Corollary N.4.2 (Off-Branch Entropy-Flow Residual Decomposition at Saturated Activity).** On the saturated-activity completed-reset branch, suppose SPAP/Landauer admissibility is preserved but one or more of saturated-boundary utilization, a physical-equilibrium certificate, or overhead-free Landauer-saturating implementation fails. Let $q\in(0,1]$ be the retained boundary-utilization factor, and let $\sigma_{\mathrm{KMS}}\ge0$ and $\sigma_{\mathrm{oh}}\ge0$ be separately registered entropy-rate defects. Define
 $$
@@ -880,14 +1098,14 @@ Here $\varepsilon_0=\ln2$, $\delta=\sqrt{8\ln2}\,L_P$, and $m_P=\sqrt{\hbar c/G}
 
 *Proof.*
 
-**Step 1 (Action-Entropy Identity).** By Corollary Q.0.1, physical action in units of $\hbar$ equals total SPAP entropy production:
+**Step 1 (Conditional action--entropy calibration).** Assume the independent calibration $\kappa_A=\hbar$ and a recovery sequence carrying the additive history ledger, as required by Corollary Q.0.1. On that branch,
 
 $$
-\frac{\mathcal{S}_{action}}{\hbar} = \sum_{\text{cycles}} \varepsilon_i
+\frac{\mathcal{S}_{action}}{\hbar} = \sum_{\text{cycles}} \varepsilon_i.
 \tag{N.27}
 $$
 
-This identity connects the mechanical description (action in J·s) to the information-theoretic description (entropy in nats). The identity follows from the Γ-convergence of the discrete predictive action to the continuum action (Theorem Q.0.1, Appendix D). The appearance of $\hbar$ as the conversion factor reflects its fundamental role in quantum mechanics, where action enters the path integral phase as $e^{iS/\hbar}$ [Feynman & Hibbs 1965]; the information-theoretic interpretation in nats is established by the Γ-convergence construction itself.
+Theorem Q.0.1 supplies Γ-convergence only after an action scale $\kappa_A>0$ is independently supplied; it does not derive $\kappa_A=\hbar$. Equation (N.27) is therefore a calibrated representation connecting the mechanical action ledger to the dimensionless additive history ledger, not a consequence of Γ-convergence alone.
 
 **Step 2 (Rest action magnitude).** A system at rest with mass $m$ has rest energy $E = mc^2$ [Einstein 1905b]. Over proper time $\tau$, the magnitude of the accumulated action is:
 
@@ -896,7 +1114,7 @@ $$
 \tag{N.28}
 $$
 
-The standard relativistic free-particle action carries a minus sign: $\mathcal{S} = -mc^2\int d\tau$. The Action-Entropy Identity (Corollary Q.0.1) relates action magnitude to entropy production; the Lorentzian signature emerges through the Γ-convergence structure (Appendix Q, Theorem Q.0.1), where temporal irreversibility ($\varepsilon > 0$) produces the metric signature $(-,+,+,+)$.
+The standard relativistic free-particle action carries a minus sign: $\mathcal{S} = -mc^2\int d\tau$. On its calibrated branch, Corollary Q.0.1 relates the action magnitude to the additive history ledger. Lorentzian signature is a separate conditional conclusion of Appendix O: Theorems O.7a–O.7b and Corollary O.7b.1 require a positive-definite spatial Γ-limit, an entropy-selected time orientation, a second-order continuum principal symbol, and a nondegenerate attained characteristic cone. Temporal irreversibility alone does not produce the signature $(-,+,+,+)$.
 
 **Step 3 (Entropy flow).** On the joint saturated-boundary/activity completed-reset branch of Corollary N.4.1, the entropy flowing to the environment over proper time $\tau$ is:
 
@@ -958,7 +1176,21 @@ $$
 
 where $E_P = m_P c^2 \approx 1.96 \times 10^9$ J is the Planck energy.
 
-*Proof.* Direct substitution of Theorem N.5 into $E = mc^2$. ∎
+*Proof.* Theorem N.5 gives
+$$
+m=\frac{\hbar\mathcal I_{rel}}{2c^2\tau_{min}}.
+$$
+Multiplication by $c^2$ yields
+$$
+E=mc^2=\frac{\hbar\mathcal I_{rel}}{2\tau_{min}}.
+$$
+Using $\tau_{min}=\sqrt{8\varepsilon_0}\,t_P$ and $E_P=\hbar/t_P=m_Pc^2$ gives
+$$
+E
+=\frac{\hbar\mathcal I_{rel}}{2\sqrt{8\varepsilon_0}\,t_P}
+=\frac{\mathcal I_{rel}}{2\sqrt{8\varepsilon_0}}E_P,
+$$
+which is Equation (N.32). ∎
 
 **Remark N.5.1a (Energy as Proper-Time Action Rate).** Equation (N.32) is dimensionally an energy statement, not an independent power law. Since $\hbar$ has units of action and $\tau_{min}$ has units of time,
 $$
@@ -1045,27 +1277,25 @@ P_{UCT}(a)=k_B T_U(a)\,\frac{d\mathcal{S}}{d\tau}
 =\frac{\hbar a}{2\pi c}\cdot\frac{\mathcal{I}_{rel}}{2\tau_{\text{min}}}.
 $$
 
-**Step 5 (Mass as the proportionality coefficient).** Using Theorem N.5 in the equivalent form
-
+**Step 5 (Conditional proportionality identity).** Using Theorem N.5 in the equivalent form
 $$
-m=\frac{\hbar}{2c^2\tau_{\text{min}}}\mathcal{I}_{rel},
+m=\frac{\hbar}{2c^2\tau_{\min}}\mathcal I_{rel},
 $$
-
-we obtain
-
+the saturated-refresh branch gives
 $$
-P_{UCT}(a)=\frac{c}{2\pi}\,m\,a.
+P_{UCT}(a)=\frac{c}{2\pi}ma.
 $$
-
-Thus $m$ is the coefficient that converts proper acceleration into a minimal additional predictive power overhead required for relational maintenance. **Clarification:** This linear-in-$a$ dependence arises from the Unruh temperature $T_U = \hbar a/(2\pi c k_B)$ (which is itself linear in $a$) coupling to the Landauer energy cost per nat of entropy. This is distinct from Unruh radiation power (which scales as $a^3$); here we compute the Landauer dissipation cost of maintaining $\mathcal{I}_{rel}$ nats of relational state against the Unruh thermal background \u2014 a first-order thermodynamic overhead, not a radiation reaction force.
-
-**Remark N.6.1 (Saturated-Refresh Status of Step 5).** The equality above is the saturated proper-acceleration active-refresh branch, in which all relational information contributing to the inertial mass pays the acceleration-induced Landauer refresh cost at the relevant cycle rate. Section N.8.6 introduces the normalized proper-acceleration active-refresh factor $q_{\mathrm{act}}$ and replaces the observable proper-acceleration prediction by
+This is an algebraic identity between the mass coefficient already accepted on $\mathfrak B_{mass}$ and the stipulated Landauer-Unruh refresh ledger. With an active-refresh fraction $q_{\mathrm{act}}$, it becomes
 $$
-P_{UCT}(a)=q_{\mathrm{act}}\,\frac{c}{2\pi}\,m\,a.
+P_{UCT}(a)=q_{\mathrm{act}}\frac{c}{2\pi}ma.
 $$
-The double-pulsar estimate of Corollary N.12.2 constrains instead the orbital-bridge factor $q_{\mathrm{act}}^{\mathrm{orb}}$ under Definition N.12a. It does not, by itself, constrain the proper-acceleration factor for geodesic center-of-mass motion, and it does not identify or falsify the boundary-channel utilization factor $q$ of Proposition N.4.
+The relation concerns a modeled dissipation cost, not Unruh radiation power or a force law.
 
-**Step 6 (Inertial parameter).** In the emergent mechanical description, the same $m$ is the coefficient of the free-particle action $S_{free}=-mc^2\int d\tau$ and therefore the inertial parameter governing response to applied forces. Since Theorem N.5 derives $m$ from $\mathcal{I}_{rel}$, inertial mass is fixed by the thermodynamic cost of updating and maintaining relational state. \u220e
+**Step 6 (Scope of the inertial interpretation).** On $\mathfrak B_{mass}$, $m$ is already the coefficient in
+$$
+S_{\mathrm{free}}=-mc^2\int d\tau.
+$$
+The calculation above shows that the same accepted coefficient appears in the saturated refresh-power identity. It supplies a relational thermodynamic interpretation of the inertial parameter, but no independent derivation that the thermodynamic coefficient equals the mechanical inertial coefficient. ∎
 
 **Remark N.11.1: Resolution of Mach's Principle.** Mach [1883] proposed that inertia arises from interaction with distant matter, but provided no mechanism. Theorem N.6 quantifies this intuition: a system's inertia is proportional to its relational information $\mathcal{I}_{rel}$, which encodes correlations with the entire network. The "distant stars" contribute insofar as they are correlated with the system. A hypothetical system with $\mathcal{I}_{rel} = 0$ would have zero mass—but such a system would possess no correlations with any environment and would be operationally indistinguishable from vacuum. The Machian principle is thus realized: mass is constitutively relational, not an intrinsic property.
 
@@ -1244,17 +1474,17 @@ The density-operator domain includes pure states, mixed states, coherent superpo
 
 The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of the retained ND-RID coupling ledger: the same finite-transfer, entropy-flow, and stress-energy maps apply to all simple matter sectors at the same coarse-graining scale. Strict contractivity $f_{RID}<1$ is a refresh/minorization subbranch of this ledger, not the sole source of gravitational universality. The same statement gives a sharper separation principle: equivalence-principle behavior belongs to response channels whose source and response descend to one common retained ledger on the chosen probe class; response channels with retained charge, representation, material, preparation, or constitutive labels are sector-selective unless those labels are PPI-null or restricted to a constant-ratio subprobe class.
 
-**Definition N.11.0 (Retained ND-RID Coupling Ledger).** For a simple matter sector $\mathcal S$ at fixed coarse-graining scale, the retained ND-RID coupling ledger is the finite list of branch-defined data
+**Definition N.11.0 (Retained ND-RID Coupling Ledger).** For a simple matter sector $\mathfrak S_{\mathrm{mat}}$ at a specified coarse-graining scale, the retained ND-RID coupling ledger is the finite list of branch-defined data
 $$
-\lambda(\mathcal S)
+\lambda(\mathfrak S_{\mathrm{mat}})
 =
-\bigl(C_{\max}(\mathcal S),\ \Sigma(\mathcal S),\ T_{\mu\nu}^{(\mathrm{src})}(\mathcal S),\ f_{RID}(\mathcal S)|_{\mathrm{ref}}\bigr)
+\bigl(C_{\max}(\mathfrak S_{\mathrm{mat}}),\ \Sigma(\mathfrak S_{\mathrm{mat}}),\ T_{\mu\nu}^{(\mathrm{src})}(\mathfrak S_{\mathrm{mat}}),\ f_{RID}(\mathfrak S_{\mathrm{mat}})|_{\mathrm{ref}}\bigr)
 $$
 consisting of:
-1. the reset-support per-link capacity datum $C_{\max}(\mathcal S)$ (Proposition E.2a);
-2. the entropy-flow normalization $\Sigma(\mathcal S)$ entering Theorem N.7 (the per-cycle entropy-production-to-relational-information map);
-3. the stress-energy source coefficients $T_{\mu\nu}^{(\mathrm{src})}(\mathcal S)$ entering the Appendix B stress-energy construction;
-4. the refresh-branch contraction datum $f_{RID}(\mathcal S)$ when present, which is undefined off refresh/minorization subbranches.
+1. the reset-support per-link capacity datum $C_{\max}(\mathfrak S_{\mathrm{mat}})$ (Proposition E.2a);
+2. the entropy-flow normalization $\Sigma(\mathfrak S_{\mathrm{mat}})$ entering Theorem N.7 (the per-cycle entropy-production-to-relational-information map);
+3. the stress-energy source coefficients $T_{\mu\nu}^{(\mathrm{src})}(\mathfrak S_{\mathrm{mat}})$ entering the Appendix B stress-energy construction;
+4. the refresh-branch contraction datum $f_{RID}(\mathfrak S_{\mathrm{mat}})$ when present, which is undefined off refresh/minorization subbranches.
 
 The ledger is universal across sectors when each entry is sector-independent at the same coarse-graining scale.
 
@@ -1320,11 +1550,13 @@ For any drive $X_{\mathcal R}$ not in the response-null set, Step 1 gives differ
 
 **Step 4 (Converse).** Assume $\mathcal R$ is equivalence-principle-bearing on $\mathfrak P_{\mathcal R}$ and work on the non-compensation branch. Step 1 forces $\Xi_{\mathcal R}$ to be constant after the PPI quotient. Any retained variation that changes $Q_{\mathcal R}/I_{\mathcal R}$ would contradict that constancy by Step 3. Therefore every retained variation is either a common normalization multiplying both source and response, PPI-null, or confined to a restricted constant-ratio class. This is exactly descent to a common source/response quotient ledger on the tested probe class. ∎
 
-**Corollary N.11a.1 (Gravity/Gauge/Constitutive Classification).** On the simple gravitational common-ledger $\mathfrak B_{mass}$ branch, gravity is the metric-universal case:
+**Corollary N.11a.1 (Gravity/Gauge/Constitutive Classification).** On the simple gravitational common-ledger $\mathfrak B_{mass}$ branch:
 
+1. gravity is metric-universal because the source-to-response ratio is common to all probes in the branch;
+2. gauge response is sector-selective because changing a non-null charge or representation changes the Wilson or connection response; and
+3. a constitutive response obeys an equivalence principle only on a restricted probe class on which its retained material or preparation label leaves the source-to-response ratio constant.
 
-
-*Proof.* The gravitational statements are Theorem N.7, Corollary 46e, and Theorem 12.3 applied to Definition N.11.0b. The gauge statement follows from Definition G.4.1 and Corollary G.4b.1: changing $q$ or the internal representation changes Wilson phases or connection responses unless the change is response-null. The constitutive statement is Step 3 of Theorem N.11a with the retained label $z$ taken to be the material or preparation datum. ∎
+*Proof.* The gravitational statement is Theorem N.7, Corollary 46e, and Theorem 12.3 applied to Definition N.11.0b. The gauge statement follows from Definition G.4.1 and Corollary G.4b.1. The constitutive statement is Step 3 of Theorem N.11a with $z$ equal to the material or preparation datum. ∎
 
 **Remark N.11a.2 (Emergence Is Not the Equivalence Criterion).** The binary enforced by PU is not emergent versus irreducible. The enforced binary is metric-universal/common-ledger versus sector-selective/constitutive-ledger. A hydrodynamic or material medium can be emergent while carrying retained constitutive parameters; it is then not equivalence-principle-bearing on the full probe class. If a restricted excitation family reconstructs a common effective metric, the equivalence principle holds only inside that excitation family and only at the coarse-graining scale where the effective metric and constant equivalence ratio are certified.
 
@@ -1532,7 +1764,7 @@ O(\eta_{\mathrm{exp}}^2),
 $$
 On the flagged-capacity saturation branch $C_{\max}=f_{RID}\ln d_0$, this reduces to $|\Delta f_{RID}/f_{RID}|<\eta_{\mathrm{exp}}+O(\eta_{\mathrm{exp}}^2)$.
 
-For complex systems ($C_{agg}>C_{op}$), Theorem N.8 predicts $\delta_C\sim10^{-40}$ on its model branch, which is consistent with current bounds but lies far below present experimental sensitivity.
+For complex systems satisfying $C_{\mathrm{agg}}>C_{\mathrm{op}}$ on the Theorem N.8 model branch, Equation (N.41) evaluates to $\delta_C\sim10^{-40}$ at the explicitly stipulated parameter point of Remark N.11.2a; this is not a parameter-independent prediction and lies far below present experimental sensitivity.
 
 ### N.11.5a.4 Connection to Horizon Thermodynamics
 
@@ -1559,34 +1791,51 @@ N_{\mathrm{eff\,links}}C_{\max}
 $$
 At a horizon, this boundary budget is maximized consistent with the geometric constraints, yielding the Bekenstein-Hawking entropy density in the local-horizon refinement limit. ∎
 
-**Corollary N.11.2 (Unified Origin of Gravitational Phenomena).** Both the equivalence principle and the horizon area law derive from the same finite-response ND-RID coupling structure.
+**Corollary N.11.2 (Common Input and Distinct Branches for the Equivalence Principle and Area Law).** The local equivalence-principle conclusion and the horizon area law both consume the finite-response ND-RID reset-support/capacity ledger, subject to distinct additional hypotheses:
 
-- **EP (local):** universal retained coupling ledger $\to$ universal matter-gravity coupling (Theorem N.11)
-- **Area law (global):** reset-support capacity budget + density-certificate channel count $\to$ entropy proportional to area (Theorem E.6)
-- **Refresh branch:** $f_{RID}<1$ supplies strict reduced-channel contraction where mixing or DPI-budget contraction is required
+- **EP (local):** the universal retained coupling ledger on the simple-system $\mathfrak B_{mass}$ branch gives universal matter-gravity coupling (Theorem N.11).
+- **Area law (global):** the reset-support capacity budget together with the density certificate and boundary-saturation branch gives entropy proportional to area (Theorem E.6).
+- **Refresh branch:** $f_{RID}<1$ supplies strict reduced-channel contraction only where the relevant mixing or data-processing budget requires it.
 
-The derivation chain is:
+The area-law chain is
 $$
-\text{completed binary reset-support certificate}\xrightarrow{\text{Prop E.2a}}
+\text{completed binary reset-support certificate}\xrightarrow{\text{Proposition E.2a}}
 C_{\max}\le\ln d_0-\ln2
-\xrightarrow{\text{Thm E.3/E.6}}
-\text{Area Law},
+\xrightarrow{\text{Theorems E.3 and E.6}}
+\text{area law}.
 $$
-with the equivalence-principle branch following from universality of the same retained ND-RID coupling ledger in the simple-system mass-information map.
+The equivalence-principle chain additionally requires universality of the retained source and response maps in Theorem N.11. The common input does not make either conclusion a consequence of the other.
+
+*Proof.* Proposition E.2a supplies the reset-support capacity bound. Theorems E.3 and E.6 combine that bound with the density and saturation hypotheses to obtain the area law. Separately, Theorem N.11 proves universal response only after the simple-system mass-information branch and the universal retained source/response ledger are assumed. Thus both chains contain the reset-support/capacity node, while their remaining antecedents differ. The strict-contraction statement is conditional on the $f_{RID}<1$ refresh branch by Theorem E.2. ∎
 
 
 ### N.11.6 Complexity-Dependent Equivalence Principle Violation
 
 For systems with high internal complexity ($C_{agg} > C_{op}$), the equivalence principle receives corrections.
 
-**Theorem N.8 (Complexity Correction to the Equivalence Principle on the CC-Gravitational Response Branch).** On the CC-gravitational response branch — comprising (a) the Appendix S gravitational-decoherence model with rate $\Gamma_{\mathrm{deco}} = (\Delta E/\hbar) K_{\mathrm{eff}} P_{context}$ at the system's boundary, (b) $\mathfrak B_{mass}$ (Theorem N.5) for the conditional inertial-mass coefficient, and (c) the retained-energy / instantaneous-stress-energy convention of Theorem L.3 for the gravitational source — a system with Consciousness Complexity CC (Definition 30) receives a model-level fractional deviation between inertial and gravitational mass:
+**Theorem N.8 (Complexity Correction to the Equivalence Principle on the CC-Gravitational Response Branch).** On the CC-gravitational response branch — comprising (a) the Appendix S gravitational-decoherence model with rate $\Gamma_{\mathrm{deco}} = (\Delta E/\hbar) K_{\mathrm{eff}} P_{context}$ at the system's boundary, (b) $\mathfrak B_{mass}$ (Theorem N.5) for the conditional inertial-mass coefficient, and (c) the retained-energy / instantaneous-stress-energy convention of Theorem L.3 for the gravitational source — assume that both induced mass corrections are small relative to the baseline inertial mass $m_I$. Then
 
 $$
-\frac{m_G - m_I}{m_I} = \delta_C \approx K_\Gamma \cdot P_{context}
+\frac{m_G^{(CC)}-m_I^{(CC)}}{m_I^{(CC)}}
+=
+\delta_C
+=
+\left[
+\frac{\eta_{\mathrm{ret}}\tau_c}{m_Ic^2}
+-
+\frac{\Delta E}{\hbar}K_{\mathrm{eff}}\tau_{\min}
+\right]P_{context}
++O(P_{context}^2).
 \tag{N.38}
 $$
 
-where $K_\Gamma$ is the gravitational decoherence coefficient (Appendix S, Equation S.60) and $P_{context}$ is the power associated with maintaining the CC context. The decomposition $\delta_C = \delta_G - \delta_I$ and the explicit form of $K_\Gamma$ require the single coupled stress-energy / entropy-flow response model of this branch; alternative bookkeeping (e.g., counting CC processing energy entirely within $m_I$ via Theorem N.5, or entirely within $m_G$ via the stress-energy contribution) yields different coefficient assignments.
+The coefficient $K_\Gamma$ of Appendix S, Equation S.60, is a separately defined decoherence-response coefficient. Identifying the coefficient in (N.38) with $K_\Gamma$ requires the additional calibration
+$$
+\frac{\eta_{\mathrm{ret}}\tau_c}{m_Ic^2}
+-
+\frac{\Delta E}{\hbar}K_{\mathrm{eff}}\tau_{\min}
+=K_\Gamma.
+$$
 
 
 *Proof.*
@@ -1620,28 +1869,86 @@ $$
 where $\tau_c$ is the context coherence time and $\eta_{\mathrm{ret}} \in (0,1]$ is the retention fraction (idealized fully retained estimate uses $\eta_{\mathrm{ret}} = 1$). In dissipative steady state, $\eta_{\mathrm{ret}}$ must be computed from the actual instantaneous stress-energy distribution rather than from cumulative throughput.
 
 
-**Step 5 (Net deviation).** The fractional difference is:
-
+**Step 5 (Net deviation).** Equations (N.39)–(N.40) and the retained-energy mass ledger give
 $$
-\delta_C = \delta_G - \delta_I = K_\Gamma P_{context}
+\delta_I
+=
+\frac{\Delta E}{\hbar}K_{\mathrm{eff}}\tau_{\min}P_{context},
+\qquad
+\delta_G
+=
+\frac{\eta_{\mathrm{ret}}\tau_c}{m_Ic^2}P_{context}.
+$$
+Consequently,
+$$
+\delta_C
+=
+\frac{\delta_G-\delta_I}{1+\delta_I}
+=
+\left[
+\frac{\eta_{\mathrm{ret}}\tau_c}{m_Ic^2}
+-
+\frac{\Delta E}{\hbar}K_{\mathrm{eff}}\tau_{\min}
+\right]P_{context}
++O(P_{context}^2).
 $$
 
-with:
-
+The separately defined Appendix S response coefficient is
 $$
-K_\Gamma = \frac{4\pi G}{3c^4}(1+3w_c)\frac{\Delta E \cdot r L_q \tau_c \tau_{coh}^0}{\hbar V_S}
+K_\Gamma = \frac{4\pi G}{3c^4}(1+3w_c)\frac{\Delta E \cdot r L_q \tau_c \tau_{coh}^0}{\hbar V_S}.
 \tag{N.41}
 $$
-
-For typical biological parameters ($P_{context} \sim 0.1$ W, $V_S \sim 10^{-3}$ m³, $\tau_c \sim 1$ s):
-
+At the illustrative parameter point of Remark N.11.2a, Equation (N.41) gives
 $$
-\delta_C \sim 10^{-40}
+K_\Gamma P_{context}=9.9908\times10^{-41}.
 $$
+This number is not an evaluation of $\delta_C$ unless the coefficient-identification condition stated after Equation (N.38) is also certified.
 
 ∎
 
 **Remark N.11.2: Distinguishing Prediction.** Standard physics predicts $\delta_C = 0$ exactly. Quantum-spacetime phenomenology commonly parameterizes potential new effects as Planck-suppressed corrections controlled by ratios such as $E/E_P$ (or $p/E_P$), without dependence on macroscopic computational activity [Amelino-Camelia 2013]. The PU prediction $\delta_C \propto P_{context}$ is distinctive: the deviation depends on the system's computational activity, not just its mass. This provides a qualitative signature even if the quantitative effect is unmeasurably small with current technology.
+
+**Remark N.11.2a (Explicit Illustrative Parameter Point for Equation (N.41)).** To make the order-of-magnitude statement in Theorem N.8 reproducible, stipulate the following model inputs:
+$$
+\Delta E=1\,\mathrm{eV},
+\quad
+r=5\,\mathrm{cm},
+\quad
+L_q=10\,\mathrm{nm},
+\quad
+\tau_c=1\,\mathrm{s},
+\quad
+\tau_{coh}^0=1.9\times10^{-5}\,\mathrm{s},
+$$
+$$
+V_S=10^{-3}\,\mathrm{m^3},
+\quad
+w_c=\frac13,
+\quad
+P_{context}=0.1\,\mathrm W.
+$$
+Using the CODATA 2022 values of $G$ and $\hbar$, the exact SI value of $c$, and the exact SI electronvolt conversion [Mohr et al. 2025; NIST 2024], Equation (N.41) gives
+$$
+K_\Gamma=9.9908\times10^{-40}\,\mathrm{W^{-1}},
+\qquad
+K_\Gamma P_{context}=9.9908\times10^{-41}.
+$$
+Equivalently,
+$$
+\begin{aligned}
+K_\Gamma P_{context}={}&(9.9908\times10^{-41})
+\left(\frac{\Delta E}{1\,\mathrm{eV}}\right)
+\left(\frac r{5\,\mathrm{cm}}\right)
+\left(\frac{L_q}{10\,\mathrm{nm}}\right)
+\left(\frac{\tau_c}{1\,\mathrm s}\right)\\
+&\times
+\left(\frac{\tau_{coh}^0}{1.9\times10^{-5}\,\mathrm s}\right)
+\left(\frac{10^{-3}\,\mathrm{m^3}}{V_S}\right)
+\left(\frac{1+3w_c}{2}\right)
+\left(\frac{P_{context}}{0.1\,\mathrm W}\right).
+\end{aligned}
+$$
+These values are stipulated illustrative inputs, not quantities derived by PU and not an empirical characterization of a biological system. The calculation validates only the numerical evaluation and dimensions of Equation (N.41). It is an evaluation of $\delta_C$ only if the additional coefficient-identification calibration stated after Equation (N.38) is certified.
 
 **Proposition N.8.1 (Conditional Self-Model Maintenance Energy Ledger).** Assume a certificate maps one maintenance cycle to $n_{\mathrm{reset}}$ sequential registered classical resets, proves
 $$
@@ -1661,9 +1968,30 @@ If, along a worldline, the exported reset heat is isotropic in the instantaneous
 $$
 W_{\mathrm{reset}}^{\mathrm{lab}}\ge\int_0^{\tau_f}\gamma(\tau)P_{\mathrm{reset}}(\tau)\,d\tau.\tag{N.45}
 $$
-Only $P_{\mathrm{ret}}$ enters a stress-energy source, and only through a separately certified coupling map. ∎
+Only $P_{\mathrm{ret}}$ enters a stress-energy source, and only through a separately certified coupling map.
 
-**Remark N.8.1 (Magnitude and Observability).** The self-model maintenance contribution to stress-energy (Equation N.44) is controlled by $\delta_{\text{maint}}$ and $\tau_{\text{cycle}}$, both of which are system-specific parameters not yet bounded from first principles within the framework. For current experimental sensitivity (MICROSCOPE: $\eta < 10^{-15}$ [Touboul et al. 2022]), the relevant question is whether the fractional stress-energy difference between self-referential and non-self-referential systems of equal $\mathcal{I}_{rel}$ exceeds the Eötvös bound. Determining this requires independent modeling of $\delta_{\text{maint}}$ for specific physical systems (e.g., biological neural networks vs. crystalline solids of equal mass), which constitutes an open problem.
+*Proof.* Conditional Landauer for reset $j$ gives
+$$
+Q_j\ge k_BT_{\mathrm{eff}}H_{q_j}(P_j\mid R_j)
+\ge k_BT_{\mathrm{eff}}h_{\min}.
+$$
+The additive heat hypothesis therefore gives, in one maintenance cycle,
+$$
+Q_{\mathrm{cycle}}
+=\sum_{j=1}^{n_{\mathrm{reset}}}Q_j
+\ge n_{\mathrm{reset}}k_BT_{\mathrm{eff}}h_{\min}
+\ge k_BT_{\mathrm{eff}}h_{\min}
+c_-C_{\mathrm{uni}}(\delta_{\mathrm{maint}}).
+$$
+Division by $\tau_{\mathrm{cycle}}>0$ proves the lower bound for $P_{\mathrm{reset}}$. The retained-power equality is the declared definition with $0\le\eta_{\mathrm{ret}}\le1$.
+
+For an isotropic comoving heat increment,
+$$
+dE_{\mathrm{com}}=P_{\mathrm{reset}}(\tau)\,d\tau
+$$
+has four-momentum $(dE_{\mathrm{com}}/c,\mathbf0)$. A Lorentz boost to the laboratory gives $dE_{\mathrm{lab}}=\gamma(\tau)dE_{\mathrm{com}}$. Integration over proper time gives (N.45). The stress-energy clause is conditional on the separately assumed coupling map and asserts no source term without it. ∎
+
+**Remark N.8.1 (Magnitude and Observability).** The self-model maintenance contribution to stress-energy (Equation N.44) is controlled by $\delta_{\text{maint}}$ and $\tau_{\text{cycle}}$, both of which are system-specific parameters not yet bounded from first principles within the framework. The final MICROSCOPE titanium--platinum result is $\eta(\mathrm{Ti},\mathrm{Pt})=(-1.5\pm2.3_{\mathrm{stat}}\pm1.5_{\mathrm{syst}})\times10^{-15}$ [Touboul et al. 2022]. Comparison with this result requires a model that maps the retained stress-energy contribution to a signed, composition-dependent Eötvös parameter and propagates the experimental statistical and systematic uncertainties. Determining that map and independently modeling $\delta_{\text{maint}}$ for specific physical systems (e.g., biological neural networks and crystalline solids of equal mass) constitute open problems.
 
 **Definition N.8.1a (Self-Model Maintenance Window Certificate).** Fix $0<\delta_{\mathrm{maint}}<1$, $c_->0$, $C_{\mathrm{avail}}>0$, $T_{\mathrm{eff}}>0$, and $\tau_{\mathrm{cycle}}>0$. The temperature $T_{\mathrm{eff}}$ is the bath temperature used in Equation N.44. The record certifies
 $$
@@ -1674,17 +2002,21 @@ C_{\mathrm{uni}}(\delta_{\mathrm{maint}})\le C_{\mathrm{avail}}.
 \tag{N.8.1a.1}
 $$
 
-**Proposition N.8.1b (Maintenance Accuracy and Power Floor).** The certificate implies
+**Proposition N.8.1b (Maintenance Accuracy and Conditional Power Floor).** The certificate of Definition N.8.1a implies
 $$
 \delta_{\mathrm{maint}}
 \ge
 \left[
 \frac{c_-}{2C_{\mathrm{avail}}}
 W\!\left(\frac{2C_{\mathrm{avail}}}{c_-}\right)
-\right]^{1/2},
+\right]^{1/2}.
 \tag{N.8.1b.1}
 $$
-and
+If the record additionally certifies $n_{\mathrm{reset}}\ge c_-C_{\mathrm{uni}}$, an additive sequential registered-reset ledger, and
+$$
+H_{q_j}(P_j\mid R_j)\ge\ln2
+$$
+for every registered reset, then
 $$
 P_{\mathrm{self}}
 \ge
@@ -1693,9 +2025,27 @@ c_-\frac{\log(1/\delta_{\mathrm{maint}})}
 {\delta_{\mathrm{maint}}^2}.
 \tag{N.8.1b.2}
 $$
-No Eötvös parameter or reflexivity multiplier follows without an independent stress-energy bridge.
 
-*Proof.* Set $u=\delta^{-2}$. The budget gives $u\log u\le2C_{\mathrm{avail}}/c_-$ and inversion by $W$ yields (N.8.1b.1). Equation N.44 and the certified cost floor give (N.8.1b.2). ∎
+*Proof.* Set
+$$
+A=\frac{2C_{\mathrm{avail}}}{c_-}>0,
+\qquad
+u=\delta_{\mathrm{maint}}^{-2}>1.
+$$
+The certificate gives $u\log u\le A$. The function $u\mapsto u\log u$ is strictly increasing on $[1,\infty)$. Solving $u\log u=A$ gives $\log u=W(A)$ and $u=e^{W(A)}=A/W(A)$. Therefore
+$$
+\delta_{\mathrm{maint}}^2=\frac1u\ge\frac{W(A)}A
+=\frac{c_-}{2C_{\mathrm{avail}}}W\!\left(\frac{2C_{\mathrm{avail}}}{c_-}\right).
+$$
+Positive square roots give (N.8.1b.1). Under the additional reset hypotheses, conditional Landauer and additivity give
+$$
+P_{\mathrm{self}}\tau_{\mathrm{cycle}}
+\ge
+k_BT_{\mathrm{eff}}n_{\mathrm{reset}}\ln2
+\ge
+k_BT_{\mathrm{eff}}c_-C_{\mathrm{uni}}\ln2,
+$$
+and the complexity lower bound proves (N.8.1b.2). ∎
 
 **Theorem N.8.2 (Equivalence–Complexity Lock).** On $\mathfrak B_{mass}$ of Theorem N.5
 
@@ -1774,64 +2124,85 @@ If $\delta_S=\zeta_{\mathrm{EP}}\chi_S$, Equation N.46 follows. When the bookkee
 
 ### N.11.7 Conditional Connection to Particle-Mass Hierarchies
 
-**Proposition N.5 (Mass Ratios from Information Ratios).** For two systems with relational information contents $\mathcal{I}_1$ and $\mathcal{I}_2$:
-
+**Proposition N.5 (Mass Ratios from Information Ratios).** On the saturated-boundary mass-information branch $\mathfrak B_{\mathrm{mass}}$ of Theorem N.5, let two systems have relational information contents $\mathcal I_1\ge0$ and $\mathcal I_2>0$. Then
 $$
-\frac{m_1}{m_2} = \frac{\mathcal{I}_1}{\mathcal{I}_2}
+\frac{m_1}{m_2}=\frac{\mathcal I_1}{\mathcal I_2}.
 \tag{N.42}
 $$
 
-*Proof.* Direct from Theorem N.5, since the prefactor $m_P/(2\sqrt{8\varepsilon_0})$ cancels in ratios. ∎
-
-**Theorem N.9 (Integration with $E_8$ Mass Hierarchy).** The charged lepton mass ratios derived in Appendix T arise from differences in relational information content determined by $E_8$ geodesic distances:
-
+*Proof.* Theorem N.5 gives, for $i=1,2$,
 $$
-\ln\left(\frac{m_j}{m_i}\right) = \ln\left(\frac{\mathcal{I}_j}{\mathcal{I}_i}\right) = \alpha_{IR} \cdot d^2_{ij}
-\tag{N.43}
+m_i=K\mathcal I_i,
+\qquad
+K:=\frac{m_P}{2\sqrt{8\varepsilon_0}}>0.
 $$
-
-where $d_{ij}$ is the Euclidean distance between generation roots in the $E_8$ root system (Appendix R, Section R.2) and $\alpha_{IR} = 1.418$ is the hierarchy coefficient (Theorem T.24.2.1).
-
-*Proof.* By Proposition N.5, mass ratios equal information ratios on the saturated-boundary mass-information branch. The $E_8$ geometric structure (Appendix R) determines how relational information distributes across generations. At the PCE-Attractor, the probability of occupying a generation vacuum $|g_i\rangle$ follows a Gaussian distribution on the Grassmannian Gr(2,8) with hierarchy coefficient $\alpha_{IR}$ (Theorem T.39):
-
+Since $\mathcal I_2>0$, one has $m_2=K\mathcal I_2>0$, and division is legitimate. Therefore
 $$
-P(g_i) \propto e^{-\alpha_{IR} \cdot d^2_{E_8}}
+\frac{m_1}{m_2}
+=\frac{K\mathcal I_1}{K\mathcal I_2}
+=\frac{\mathcal I_1}{\mathcal I_2}.
 $$
-
-where $d^2_{E_8}$ denotes squared Euclidean distances in the $E_8$ root lattice. On the probability-to-relational-information calibration branch — under which the relational information content of a generation vacuum is identified with its occupation probability up to a multiplicative constant —
-
-$$
-\mathcal{I}_i \propto P(g_i).
-$$
-
-Alternative calibrations (e.g., Shannon information content $\mathcal{I}_i \propto -\ln P(g_i)$, entropy contribution $\mathcal{I}_i \propto P_i \ln(1/P_i)$, or Fisher-metric-based assignments) would yield different mass-ratio formulas; this theorem expresses the Appendix T mass hierarchy in the language of the chosen calibration rather than independently deriving the hierarchy from the mass-information identity alone.
-
-
-The three generations form a triangle in $E_8$ root space (Appendix T, Theorem T.42.2a). The mass hierarchy arises through the Path Additivity Principle (Theorem T.42.2a): the physical mass ratio $\ln(m_j/m_i)$ is computed along the dominant Yukawa tunneling path connecting generations sequentially rather than directly. For the charged lepton triad with $E_8$ distances $(d^2_{\tau\mu}, d^2_{\mu e}, d^2_{\tau e}) = (2, 4, 6)$:
-
-$$
-\ln\left(\frac{m_\tau}{m_e}\right) = \ln\left(\frac{m_\tau}{m_\mu}\right) + \ln\left(\frac{m_\mu}{m_e}\right) = \alpha_{IR}(d^2_{\tau\mu} + d^2_{\mu e}) = \alpha_{IR} \cdot d^2_{\tau e}
-$$
-
-This path-mediated mechanism yields the hierarchy formula:
-
-$$
-\ln\left(\frac{m_j}{m_i}\right) = \alpha_{IR} \cdot d^2_{ij}
-$$
-
-where $d^2_{ij}$ is the squared $E_8$ distance between generation roots $r_i$ and $r_j$.
-
 ∎
 
-**Corollary N.9.1 (Lepton Mass Ratio Invariant).** The charged lepton mass ratio invariant:
-
+**Theorem N.9 (Ordered Charged-Lepton Hierarchy on the Appendix T Calibration Branch).** Assume the saturated-boundary mass-information branch of Proposition N.5 and the ordered adjacent-edge hierarchy assignments of Appendix T for the path $\tau\to\mu\to e$. Then
 $$
-\mathcal{R}_\ell = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} = \frac{d^2_{31}}{d^2_{32}} = \frac{6}{2} = 3
+\ln\left(\frac{m_\tau}{m_\mu}\right)
+=
+\ln\left(\frac{\mathcal I_\tau}{\mathcal I_\mu}\right)
+=
+\alpha_{IR}d_{\tau\mu}^2,
+\qquad
+\ln\left(\frac{m_\mu}{m_e}\right)
+=
+\ln\left(\frac{\mathcal I_\mu}{\mathcal I_e}\right)
+=
+\alpha_{IR}d_{\mu e}^2,
+\tag{N.43}
 $$
+and path additivity gives
+$$
+\ln\left(\frac{m_\tau}{m_e}\right)
+=
+\alpha_{IR}\left(d_{\tau\mu}^2+d_{\mu e}^2\right).
+$$
+For the stipulated triad $(d_{\tau\mu}^2,d_{\mu e}^2,d_{\tau e}^2)=(2,4,6)$, the last expression equals $\alpha_{IR}d_{\tau e}^2$. These are ordered hierarchy relations; no formula of the form $\ln(m_j/m_i)=\alpha_{IR}d_{ij}^2$ holds simultaneously for both orders of an arbitrary pair.
 
-reflects pure $E_8$ geometry, independent of the overall scale set by $\mathcal{I}_{rel}$.
+*Proof.* Proposition N.5 gives
+$$
+\ln\left(\frac{m_a}{m_b}\right)
+=
+\ln\left(\frac{\mathcal I_a}{\mathcal I_b}\right)
+$$
+on the saturated-boundary mass-information branch. Substituting the two ordered adjacent-edge assignments supplied by the Appendix T calibration branch proves (N.43). Multiplication of the adjacent ratios gives
+$$
+\frac{m_\tau}{m_e}
+=
+\frac{m_\tau}{m_\mu}\frac{m_\mu}{m_e};
+$$
+taking logarithms proves the additive formula. Finally, $2+4=6$ proves the displayed equality for the stipulated triad. ∎
 
-*Proof.* From Theorem N.9, the ratio depends only on squared $E_8$ distances between generation roots: $d^2_{32} = d^2_{\tau\mu} = 2$ and $d^2_{31} = d^2_{\tau e} = 6$ (Appendix T, Theorem T.24.3). Therefore $\mathcal{R}_\ell = 6/2 = 3$. The observed value $\mathcal{R}_\ell^{obs} = 2.889$ (Particle Data Group 2024) agrees with the prediction to 3.8% (Appendix T, Section T.25.4). ∎
+**Corollary N.9.1 (Conditional Ordered Lepton-Ratio Invariant).** Under the hypotheses of Theorem N.9 and its stipulated ordered triad,
+$$
+\mathcal R_\ell
+=
+\frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)}
+=
+\frac{d_{\tau\mu}^2+d_{\mu e}^2}{d_{\tau\mu}^2}
+=
+\frac{2+4}{2}
+=3.
+$$
+The hierarchy coefficient and the overall relational-information scale cancel, but the result remains conditional on the saturated mass-information branch and the ordered Appendix T calibration.
+
+*Proof.* Operative Theorem N.9 gives
+$$
+\ln(m_\tau/m_\mu)=\alpha_{IR}d_{\tau\mu}^2
+$$
+and
+$$
+\ln(m_\tau/m_e)=\alpha_{IR}(d_{\tau\mu}^2+d_{\mu e}^2).
+$$
+Because $\alpha_{IR}>0$, division is defined and cancels $\alpha_{IR}$. Substitution of $(d_{\tau\mu}^2,d_{\mu e}^2)=(2,4)$ gives $6/2=3$. The observed value $\mathcal R_\ell^{obs}=2.889$ differs from this conditional leading value by $(3-2.889)/3=0.037=3.7\%$. ∎
 
 ### N.11.8 The Complete Derivation Chain
 
@@ -1891,13 +2262,19 @@ $$
 m_0 = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P
 $$
 
-The UCT can be rewritten entirely in information-theoretic terms:
+The UCT can then be rewritten in the same laboratory-frame ledger as
 
 $$
-W_{tot} \geq \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot E_P \cdot (\gamma - 1) + \int_0^{\tau_f} R(C_{req}(\tau), T_{eff}(\tau))\, d\tau
+W_{\mathrm{tot}}^{\mathrm{lab}}
+\ge
+\frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}}
+\,E_P\,(\gamma_f-1)
++
+\int_0^{\tau_f}
+\gamma(\tau)R_{\mathrm{com}}(\tau)\,d\tau,
 $$
 
-Both terms represent information costs: the first is the relativistic cost of updating relational information; the second is the cost of maintaining predictive accuracy against noise.
+where $R_{\mathrm{com}}(\tau)=R(C_{\mathrm{req}}(\tau),T_{\mathrm{eff}}(\tau))$. The first term uses the conditional mass substitution, while the second is the laboratory energy of the comoving exported-loss ledger.
 
 ### N.11.10 Summary
 
@@ -1937,10 +2314,10 @@ $$
 | $E = mc^2$ | Empirical relation | Information maintenance (Cor N.5.1) |
 | Inertia | Unexplained resistance | Update resistance (Thm N.6) |
 | $m_I = m_G$ | Postulated equivalence | Both measure $\mathcal{I}_{rel}$ (Thm N.7) |
-| Mass ratios | Free parameters | $E_8$ geometry (Thm N.9) |
+| Ordered charged-lepton ratios | Free parameters | Appendix-T calibrated $E_8$ path relations on the branch of Thm N.9 |
 
 On $\mathfrak B_{mass}$, the mass, rest-energy, inertia, and common-ledger equivalence statements form one conditional relational-information package. Outside that branch, the network ontology and relational-information definition remain, but no absolute mass coefficient or equivalence equality follows from them alone.
 
-The universe is a network of predictive relationships. Mass is the measure of how much relationship a system contains. Rest energy is the cost of maintaining those relationships. Inertia is the resistance to changing them. The equivalence principle holds because both gravitational and inertial effects measure the same underlying quantity—relational information content.
+The framework models the universe as a network of predictive relationships. On $\mathfrak B_{mass}$, mass is proportional to registered relational information, rest energy is the associated proper-time action-rate, and inertia is interpreted as resistance to updating the registered correlations. On the common-ledger branch of Theorem N.7, inertial and gravitational mass coincide because both use that same conditional coefficient. None of these absolute identifications follows from relational information alone outside the stated branches.
 
 ---

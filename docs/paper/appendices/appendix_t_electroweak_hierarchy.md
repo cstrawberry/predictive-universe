@@ -8,7 +8,7 @@ The electroweak sector presents three fundamental puzzles:
 2. **The Weinberg Angle**: Why is $\sin^2\theta_W(M_Z) \approx 0.231$?
 3. **The Higgs Mass**: Why is $m_H \approx 125$ GeV (near the metastability boundary)?
 
-Within the Predictive Universe framework, the electroweak scale and zero-slack quartic boundary are derived from the fixed-point Golay-Steiner structure on the Grassmannian orbit, while the quantitative gauge-threshold hierarchy is formulated on the minimal flag lift
+Within the Predictive Universe framework, the electroweak exponent and the target-shift-dependent fixed-point quartic formula are derived from the Golay-Steiner/Grassmannian branch, while the numerical zero-slack value additionally requires the accepted moment-map datum of Definition T.22a. The quantitative gauge-threshold hierarchy is formulated on the minimal flag lift
 $$
 \pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to \mathrm{Gr}(2,8)
 $$
@@ -19,7 +19,8 @@ $$
 \begin{aligned}
 v &= A_{EW} \, e^{-\kappa_{EW}} \, M_{Pl}, \quad \kappa_{EW} = 38.5 \\[6pt]
 \sin^2\theta_W^{(0)} &= \frac{3}{8},\quad \sin^2\theta_W(\mu_G) = \frac{3 Z_2}{3 Z_2 + 5 Z_1} \quad \text{(Definition T.17; Definition T.17a)} \\[6pt]
-\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}) &= 0 \quad \text{(zero-slack boundary condition)}
+\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU};\gamma) &= \frac{\gamma^2-1}{36},\qquad
+\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU})=0\ \text{only on the accepted }\gamma=1\text{ branch}
 \end{aligned}
 }
 $$
@@ -57,7 +58,7 @@ The following constants are derived in the main text and Appendix Z:
 |:-----------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|
 |$K_0$ |3 bits |Horizon constant (SPAP logic) |Theorem 15 |
 |$d_0$ |8 on the minimal Appendix Z branch |MPU Hilbert space dimension: lower bound from Theorem 23, equality from Theorem Z.2 |Theorem 23; Theorem Z.2 |
-|$\varepsilon_0$ |$\ln2$ structurally |Irreducible floor from Theorem 31; physical equality only on the overhead-free implementation branch |Theorem 31; Definition 15a |
+|$\varepsilon_0$ |$\ln2$ structurally |Log-cardinality of the registered reachable binary verification quotient; no physical heat equality is asserted |Definition 28; Lemma J.1 |
 
 
 |$a$ |2 |Active kernel dimension on the attractor-saturating branch (Theorem Z.1) |Theorem Z.1 |
@@ -67,8 +68,8 @@ The following constants are derived in the main text and Appendix Z:
 |$D$ |4 |Emergent spacetime dimension |Theorem Z.11 |
 |$n_G$ |12 |Gauge algebra dimension |Corollary G.8.4c|
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|Branch optimum on the imposed $c_\ell/c_d = 8/3$ normalization branch |Corollary T.34.2 (with imposed Corollary T.34.1) |
-|$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
-|$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
+|$g_U^2$ |$2\pi/(M\chi_U)$; $\pi/6$ when $M=24$ and $\chi_U=1/2$ |Bures-gauge holonomy coefficient on the specified calibration branch |Theorem T.39a; Theorem T.39a.2 |
+|$\alpha_U^{-1}$ |$2M\chi_U$; $24$ when $M=24$ and $\chi_U=1/2$ |Inverse matching-scale gauge coefficient on the same calibration branch |Theorem T.39a; Theorem T.39a.2 |
 |$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple); current theorem-level certificate interval $\varnothing_{\mathrm{cert}}$ |Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger, Theorem T.78.5 proves that no PU-internal branch package supplies them from the current framework, and Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent spectral-source class supplies no certified $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, or gauge/Higgs finite-part intervals |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 / Theorem T.78.5 / Theorem T.78.14 |
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
@@ -402,7 +403,7 @@ $$
 
 **Definition T.7a** (Coset Coordinates). Let $\xi \in \mathbb{R}^3$ parametrize the three broken directions corresponding to the $W^\pm$ and $Z^0$ bosons.
 
-**Definition T.8a** (Residual Gauge Coordinate). Let $\psi \in \mathbb{R}$ parametrize the surviving $U(1)_{em}$ gauge angle.
+**Definition T.8a** (Residual Gauge Coordinate). Let $\psi \in \mathbb{R}/2\pi\mathbb{Z}$ parametrize the surviving $U(1)_{em}$ gauge angle.
 
 -----
 
@@ -412,7 +413,17 @@ $$
 
 **Definition T.9a** (Information-to-Full Embedding). The embedding map $T: \mathbb{R}^{12} \to \mathbb{R}^{24}$ encodes the Golay parity structure:
 $$
-T s = \begin{pmatrix} s \ P s \end{pmatrix} = \begin{pmatrix} I_{12} \ P \end{pmatrix} s
+Ts
+=
+\begin{pmatrix}
+s\\
+Ps
+\end{pmatrix}
+=
+\begin{pmatrix}
+I_{12}\\
+P
+\end{pmatrix}s.
 $$
 
 where $P$ is the Golay parity matrix (Definition T.2a).
@@ -448,26 +459,26 @@ Hence the spectrum is as stated. ∎
 
 **Definition T.11a** (Golay-Steiner Laplacian). The information-subspace Laplacian is the pullback of $A_{oct}$ via the embedding $T$:
 $$
-L_{info} = \frac{1}{24} T^T A_{oct} T = \frac{176}{24} T^T \left(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T\right) T
+L_{\mathrm{info}} = \frac{1}{24} T^T A_{oct} T = \frac{176}{24} T^T \left(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T\right) T
 $$
 
 This is a $12 \times 12$ matrix acting on information coordinates $s \in \mathbb{R}^{12}$.
 
-**Theorem T.1** (Strict Positivity of $L_{info}$). The Golay-Steiner Laplacian is strictly positive definite:
+**Theorem T.1** (Strict Positivity of $L_{\mathrm{info}}$). The Golay-Steiner Laplacian is strictly positive definite:
 $$
-L_{info} \succ 0
+L_{\mathrm{info}} \succ 0
 $$
 
 *Proof.*
 
-**Step 1** (Kernel exclusion). We show $\mathbf{1}_{24} \notin \text{im}(T)$. Suppose $\mathbf{1}_{24} = Ts$ for some $s \in \mathbb{R}^{12}$. Then:
+**Step 1** (Kernel exclusion). We show $\mathbf{1}_{24} \notin \operatorname{im}(T)$. Suppose $\mathbf{1}_{24} = Ts$ for some $s \in \mathbb{R}^{12}$. Then:
 
 - Upper block: $s = \mathbf{1}_{12}$
 - Lower block: $Ps = \mathbf{1}_{12}$
 
 By Lemma T.1b, $P\mathbf{1}_{12} = (11, 7, 7, \ldots, 7)^T \neq \mathbf{1}_{12}$. Therefore no $s$ maps to $\mathbf{1}_{24}$.
 
-**Step 2** (Positivity inheritance). Since $\ker(A_{oct}) = \text{span}(\mathbf{1}_{24})$ and $\mathbf{1}_{24} \notin \text{im}(T)$, the restriction of $A_{oct}$ to $\text{im}(T)$ is positive definite. Therefore $L_{info} \succ 0$. ∎
+**Step 2** (Positivity inheritance). Since $\ker(A_{oct}) = \operatorname{span}(\mathbf{1}_{24})$ and $\mathbf{1}_{24} \notin \operatorname{im}(T)$, the restriction of $A_{oct}$ to $\operatorname{im}(T)$ is positive definite. Therefore $L_{\mathrm{info}} \succ 0$. ∎
 
 ### T.4.4 The Complete Discrete Action
 
@@ -490,7 +501,7 @@ with:
 - $\psi \in \mathbb{R}$: U(1)$_{em}$ gauge angle
 - $R = I_6$: isotropic coupling matrix
 - $\mu > 0$: isotropic curvature for broken directions
-- $\varepsilon_0=\ln2$: structural binary log-cardinality (Theorem 31)
+- $\varepsilon_0=\ln2$: structural binary log-cardinality of the registered verification quotient (Definition 28; Lemma J.1)
 
 -----
 
@@ -829,14 +840,14 @@ $$
 
 **Theorem T.9** (Traceless Hypercharge). Let $Y$ be the diagonal hypercharge generator on $W_5$:
 $$
-Y = \text{diag}(y_c, y_c, y_c, y_w, y_w)
+Y = \operatorname{diag}(y_c, y_c, y_c, y_w, y_w)
 $$
 The tracelessness constraint enforces:
 $$
 3y_c + 2y_w = 0
 $$
 
-*Proof.* The $U(1)$ generator is taken as the diagonal element of the embedded $SU(5)$ acting on $W_5$, hence it must lie in $\mathfrak{su}(5)$ and therefore be traceless. Equivalently, $Y$ must be orthogonal to the identity operator in the Hilbert–Schmidt inner product on $\mathrm{End}(W_5)$, which is exactly $\mathrm{Tr}(Y)=0$, giving $3y_c+2y_w=0$. ∎
+*Proof.* The $U(1)$ generator is taken as the diagonal element of the embedded $SU(5)$ acting on $W_5$, hence it must lie in $\mathfrak{su}(5)$ and therefore be traceless. Equivalently, $Y$ must be orthogonal to the identity operator in the Hilbert–Schmidt inner product on $\operatorname{End}(W_5)$, which is exactly $\operatorname{Tr}(Y)=0$, giving $3y_c+2y_w=0$. ∎
 
 **Corollary T.9.1** (Hypercharge Ratio).
 $$
@@ -892,35 +903,44 @@ This is the conventional $\bar5=\bar3\oplus2$ hypercharge assignment. ∎
 
 **Definition T.15a** (Hilbert-Schmidt Norm). For diagonal generators on $W_5$:
 $$
-\langle A, B \rangle_{HS} = \mathrm{tr}(A^\dagger B)
+\langle A, B \rangle_{\mathrm{HS}} = \operatorname{Tr}(A^\dagger B)
 $$
 
-**Theorem T.11** (Hypercharge Norm). The HS norm of the hypercharge generator is:
+**Theorem T.11** (Hypercharge Norm). The Hilbert--Schmidt norm of the hypercharge generator is:
 $$
-|Y|_{HS}^2 = \mathrm{tr}(Y^2) = 3\left(\frac{1}{3}\right)^2 + 2\left(\frac{1}{2}\right)^2 = \frac{1}{3} + \frac{1}{2} = \frac{5}{6}
+\lVert Y\rVert_{\mathrm{HS}}^2 = \operatorname{Tr}(Y^2) = 3\left(\frac{1}{3}\right)^2 + 2\left(\frac{1}{2}\right)^2 = \frac{1}{3} + \frac{1}{2} = \frac{5}{6}
 $$
 
-*Proof.* Direct computation. ∎
+*Proof.* On the primitive-$(1/6)$-quantized traceless branch of Theorem T.10,
+$$
+Y=\operatorname{diag}\left(-\frac13,-\frac13,-\frac13,\frac12,\frac12\right).
+$$
+Because $Y$ is Hermitian,
+$$
+\|Y\|_{\mathrm{HS}}^2=\operatorname{Tr}(Y^2)
+=3\left(\frac19\right)+2\left(\frac14\right)=\frac56.
+$$
+∎
 
 ### T.11.3 Canonical Normalization and the 5/3 Factor
 
 **Definition T.16a** (SU(2) Generator Normalization). The $SU(2)_L$ generators $T_a = \sigma_a/2$ satisfy:
 $$
-\mathrm{tr}(T_a T_b) = \frac{1}{2}\delta_{ab}
+\operatorname{Tr}(T_a T_b) = \frac{1}{2}\delta_{ab}
 $$
 
 **Theorem T.12** (GUT Normalization Factor). Define canonically normalized hypercharge $\hat{Y}$ by:
 $$
-\mathrm{tr}(\hat{Y}^2) = \frac{1}{2} = \mathrm{tr}(T_a^2)
+\operatorname{Tr}(\hat{Y}^2) = \frac{1}{2} = \operatorname{Tr}(T_a^2)
 $$
 Then:
 $$
 \hat{Y} = \frac{Y}{\sqrt{5/3}}, \quad \boxed{c^2 = \frac{5}{3}}
 $$
 
-*Proof.* From $\mathrm{tr}(Y^2) = 5/6$, requiring $\mathrm{tr}(\hat{Y}^2) = 1/2$ gives $c^2 = (5/6)/(1/2) = 5/3$. ∎
+*Proof.* From $\operatorname{Tr}(Y^2) = 5/6$, requiring $\operatorname{Tr}(\hat{Y}^2) = 1/2$ gives $c^2 = (5/6)/(1/2) = 5/3$. ∎
 
-**Remark T.12.1: Origin of 5/3.** The factor 5/3, traditionally assumed from SU(5) grand unification, emerges here on the primitive-(1/6)-quantized, traceless, $(3 + 2)$ hypercharge branch — the three explicit hypotheses of Theorem T.10. Under those hypotheses, the SU(5) group embedding is not separately required: the same constraints (rational charges, tracelessness on the 5-plane, primitive $(1/6)$-quantization) suffice to fix $(y_c, y_w) = (-1/3, 1/2)$ and hence $\mathrm{tr}(Y^2) = 5/6$ giving $c^2 = 5/3$. The Hypercharge $5/3$ row in the summary tables (T.19.1, T.20) inherits this branch and is interpreted as derived on the primitive-(1/6)-quantized $(3+2)$ hypercharge branch rather than unconditionally.
+**Remark T.12.1: Origin of 5/3.** The factor 5/3, traditionally assumed from SU(5) grand unification, emerges here on the primitive-(1/6)-quantized, traceless, $(3 + 2)$ hypercharge branch — the three explicit hypotheses of Theorem T.10. Under those hypotheses, the SU(5) group embedding is not separately required: the same constraints (rational charges, tracelessness on the 5-plane, primitive $(1/6)$-quantization) suffice to fix $(y_c, y_w) = (-1/3, 1/2)$ and hence $\operatorname{Tr}(Y^2) = 5/6$ giving $c^2 = 5/3$. The Hypercharge $5/3$ row in the summary tables (T.19.1, T.20) inherits this branch and is interpreted as derived on the primitive-(1/6)-quantized $(3+2)$ hypercharge branch rather than unconditionally.
 
 -----
 
@@ -1198,7 +1218,35 @@ $$
 \widetilde E = \pi^*(S^\vee\otimes Q) \cong \pi^*\bigl(T^{1,0}\mathrm{Gr}(2,8)\bigr).
 $$
 
-*Proof.* For $\mathrm{Gr}(2,8)$ one has the standard holomorphic identification $T^{1,0}\mathrm{Gr}(2,8)\cong S^\vee\otimes Q$, since tangent directions at a $2$-plane are linear maps from the tautological subspace to the quotient. Pulling back along $\pi$ gives the stated isomorphism. ∎
+*Proof.* Fix a plane $V\in\mathrm{Gr}(2,8)$ and choose a complex complement $W$ with $\mathbb C^8=V\oplus W$. Every plane sufficiently close to $V$ is the graph
+$$
+\Gamma_A=\{v+A(v):v\in V\}
+$$
+of a unique $A\in\operatorname{Hom}_{\mathbb C}(V,W)$. The map $A\mapsto\Gamma_A$ is a holomorphic coordinate chart, so differentiation at $A=0$ gives
+$$
+T_V^{1,0}\mathrm{Gr}(2,8)
+\cong
+\operatorname{Hom}_{\mathbb C}(V,W).
+$$
+The quotient map $\mathbb C^8\to\mathbb C^8/V$ restricts to an isomorphism $W\cong\mathbb C^8/V$, yielding
+$$
+T_V^{1,0}\mathrm{Gr}(2,8)
+\cong
+\operatorname{Hom}_{\mathbb C}(V,\mathbb C^8/V).
+$$
+Changing the complement changes the graph coordinate by a holomorphic transition map whose derivative induces the same quotient-valued linear map. The identification is therefore independent of the chosen complement and varies holomorphically with $V$. Since the fibers of $S$ and $Q$ at $V$ are $V$ and $\mathbb C^8/V$, respectively,
+$$
+\operatorname{Hom}_{\mathbb C}(V,\mathbb C^8/V)
+=S_V^\vee\otimes Q_V.
+$$
+Thus $T^{1,0}\mathrm{Gr}(2,8)\cong S^\vee\otimes Q$ as holomorphic vector bundles. Applying the pullback functor along $\pi$ gives
+$$
+\pi^*T^{1,0}\mathrm{Gr}(2,8)
+\cong
+\pi^*(S^\vee\otimes Q)
+=\widetilde E.
+$$
+∎
 
 **Remark T.17a.3 (Open Commuting-Sector and Threshold-Matching Gate).** The displayed diagonal hypercharge operator does not act as a scalar on the stated coordinate blocks $C,W,Y$; in particular, the proposed blocks mix unequal eigenvalues and contain zero-eigenvalue coordinates. Therefore the scalar charges, the displayed Dynkin-index matrix, and the numerical threshold map do not follow from the current coordinate assignment. A valid sector branch must first supply orthogonal projectors $P_s$ with $\sum_sP_s=I$, $[P_s,\hat Y]=0$, and the declared commuting $SU(3)\times SU(2)\times U(1)$ module action; only then may the sector charges and Dynkin indices be computed from traces on $P_s\mathcal H$.
 
@@ -1506,12 +1554,32 @@ and does not affect the separations $\alpha_i^{-1}-\alpha_j^{-1}$ set by the $Z_
 
 *Proof.* PCE isotropy implies the QFI/Bures metric on the 24-mode interface is isotropic at leading order (Lemma Z.24a). Therefore any residual correction depending only on the leading isotropic mode count $M=24$ is independent of the gauge factor, giving a common shift $\delta_{\mathrm{avg}}$. In the minimal ledger, Definition T.19a contains no residual heavy threshold list, so $\delta_{\mathrm{avg}}=0$ by the empty-sum convention. Since $\delta_{\mathrm{avg}}$ enters additively in all three $\alpha_i^{-1}(\mu_G)$, all differences $\alpha_i^{-1}-\alpha_j^{-1}$ are unchanged. ∎
 
-**Corollary T.17.1** (Subleading Threshold Splittings on the Normalized Mode-Average Branch). On the normalized mode-average residual branch — under which (a) the residual heavy-threshold ledger is normalized as a per-mode average $\delta_i = (1/M) \sum_\alpha x_{\alpha,i}$ over the $M = 24$ interface modes, with $x_{\alpha, i}$ bounded mode-local contributions, and (b) the per-mode anisotropic differences $x_{\alpha, i} - x_{\alpha, j}$ are themselves $O(M^{-1})$ uniformly in $\alpha$ (or, equivalently, satisfy a CLT-type independence condition) — subleading anisotropies generate splittings:
+**Corollary T.17.1** (Subleading Threshold Splittings on the Uniform-Smallness Branch). Suppose
 $$
-\delta_i - \delta_j = O(M^{-1}).
+\delta_i=\frac1M\sum_{\alpha=1}^Mx_{\alpha,i}
+$$
+and, uniformly in $\alpha$,
+$$
+x_{\alpha,i}-x_{\alpha,j}=O(M^{-1}).
+$$
+Then
+$$
+\delta_i-\delta_j=O(M^{-1}).
 $$
 
-*Proof.* Theorem T.17 identifies the leading discretization contribution as $S_M$-invariant over the $M$ interface modes and therefore a common shift $\delta_{\mathrm{avg}}$. The splitting is $\delta_i - \delta_j = (1/M) \sum_\alpha (x_{\alpha,i} - x_{\alpha,j})$. Without an explicit smallness condition on the per-mode differences, this average can scale as $O(1)$ (correlated case), $O(M^{-1/2})$ (CLT-style independent case), or $O(M^{-1})$ (uniformly small per-mode case). On the normalized mode-average branch with assumption (b), the per-mode difference is $O(M^{-1})$, and averaging preserves this scaling, yielding $\delta_i - \delta_j = O(M^{-1})$. Without this branch, residual anisotropic splittings remain part of the T2 matching uncertainty budget rather than being assumed automatically negligible. ∎
+*Proof.* There is a constant $C$, independent of $M$ and $\alpha$, such that
+$$
+|x_{\alpha,i}-x_{\alpha,j}|\le\frac{C}{M}.
+$$
+Therefore
+$$
+|\delta_i-\delta_j|
+\le
+\frac1M\sum_{\alpha=1}^M\frac{C}{M}
+=
+\frac{C}{M}.
+$$
+Independent bounded mean-zero contributions would generally yield only $O_{\mathbb P}(M^{-1/2})$ and are not equivalent to this hypothesis. ∎
 
 **Theorem T.18** (Conditional Flag-Lift Matching from a Validation Threshold Tuple). The bare-Grassmannian orbit-average construction of the original gauge-matching definition is not used for the quantitative threshold sector. The local Bures block formula on $\mathrm{Gr}(2,8)$ provides representative-state coupling data, but the manuscript does not supply a completed global orbit integral on the bare Grassmannian that yields the required gauge-factor hierarchy. The quantitative gauge sector is therefore formulated on the lifted operator $D^{\mathrm{PCE}}_{\widetilde X}$ of Definition T.17a on
 $$
@@ -1601,20 +1669,56 @@ $$
 \mathrm{tr}(S^2) = \frac{1}{2}
 $$
 
-**Lemma T.3** (Bures Metric per Block). In the Bures/Fubini-Study metric:
+**Lemma T.3** (Bures Metric per Block). Let $S=\sigma_x/2$ and let $|\psi\rangle$ be a normalized pure state satisfying $\langle\psi|S|\psi\rangle=0$. Then
 $$
-g_B = \text{Var}(S) = \frac{1}{4}
-$$
-The quantum Fisher information is $F_Q = 4g_B = 1$.
-
-*Proof.* For a doublet eigenstate: $\text{Var}(S) = \langle S^2 \rangle - \langle S \rangle^2 = 1/4 - 0 = 1/4$. ∎
-
-**Lemma T.4** (Block Nonlinearity). The distortion energy per SU(2) block is:
-$$
-V_{\text{block}}(u) = 1 - \cos u = \frac{u^2}{2} - \frac{u^4}{24} + O(u^6)
+g_B=\operatorname{Var}_\psi(S)=\frac14,
+\qquad
+F_Q=4g_B=1.
 $$
 
-*Proof.* Geodesic-chord relation for SU(2). ∎
+*Proof.* Since $S^2=I/4$,
+$$
+\operatorname{Var}_\psi(S)
+=
+\langle S^2\rangle_\psi-\langle S\rangle_\psi^2
+=
+\frac14-0
+=
+\frac14.
+$$
+For a pure state undergoing the unitary family generated by $S$, the quantum Fisher information is $F_Q=4\operatorname{Var}_\psi(S)=1$. An eigenstate of $S$ has zero variance and is not covered by the hypothesis. ∎
+
+**Lemma T.4** (Cosine-Distortion Expansion). On the SU(2) block branch on which the distortion energy is defined by
+$$
+V_{\text{block}}(u):=1-\cos u,
+$$
+one has, as $u\to0$,
+$$
+V_{\text{block}}(u)=\frac{u^2}{2}-\frac{u^4}{24}+O(u^6).
+$$
+
+*Proof.* Taylor's formula at the origin gives
+$$
+\cos u
+=1-\frac{u^2}{2!}+\frac{u^4}{4!}+R_6(u),
+$$
+where the integral remainder is
+$$
+R_6(u)
+=-\frac1{5!}\int_0^u (u-t)^5\cos t\,dt.
+$$
+Therefore
+$$
+|R_6(u)|
+\le\frac1{5!}\int_0^{|u|}(|u|-t)^5dt
+=\frac{|u|^6}{6!},
+$$
+so $R_6(u)=O(u^6)$. Subtracting the Taylor formula from $1$ yields
+$$
+1-\cos u
+=\frac{u^2}{2}-\frac{u^4}{24}+O(u^6).
+$$
+∎
 
 ### T.14.2 Six Left-Chiral Links
 
@@ -1729,7 +1833,7 @@ where $\gamma > 0$ is a dimensionless target-shift normalization. The reduced en
 $$
 V[s; u] = \frac{1}{2} s^T s + \frac{1}{2} |\Pi_L s - x(u)|^2.
 $$
-The moment-map-normalized target-shift branch has $\gamma=1$; Theorem T.22b gives the gate under which this value is fixed by the Pauli-normalized SU(2) moment map rather than imposed.
+The moment-map-normalized target-shift branch has $\gamma=1$; Theorem T.22b gives the gate under which this value is fixed only after the even-displacement condition (T.22a.2) and the $L_{\mathrm{info}}$-norm datum (T.22a.3) are verified in the reservoir coordinates of Lemma T.5b. Remark T.22c shows that the raw linear-subtracted Pauli-coordinate remainder has a nonzero cubic term and quadratic-coefficient norm $1/4$; the even projection and normalized reservoir map are separate gates.
 
 *Proof.* The SU(2) rotation on each of six left-chiral links produces a coherent $O(u^2)$ shift in the reservoir, establishing the scaling order and the existence of a unit direction $v$. The magnitude coefficient $\gamma$ is the target-shift normalization of the SU(2)-coherent action on the reservoir coordinates. ∎
 
@@ -1738,9 +1842,16 @@ $$
 \operatorname{tr}(S_aS_b)=\frac12\delta_{ab}.
 \tag{T.22a.1}
 $$
-Let $\mu_{SU(2)}$ be the coherent-state moment map of the retained weak doublet, written in the $L_{\mathrm{info}}$-orthonormal reservoir coordinates of Lemma T.5b. The datum is accepted when the even reservoir displacement induced by the weak doublet curve $q(u)$ has the Taylor expansion
+Let $\mu_{SU(2)}$ be the coherent-state moment map of the retained weak doublet, written in the $L_{\mathrm{info}}$-orthonormal reservoir coordinates of Lemma T.5b. For a weak-doublet curve $q(u)$, define its even reservoir displacement by
 $$
-\mu_{SU(2)}(q(u))-\mu_{SU(2)}(q(0))-d\mu_{SU(2)}|_{q(0)}(\dot q(0))\,u
+\Delta\mu_{\mathrm{even}}(u)
+:=
+\frac12\left[\mu_{SU(2)}(q(u))+\mu_{SU(2)}(q(-u))\right]
+-\mu_{SU(2)}(q(0)).
+$$
+The datum is accepted when
+$$
+\Delta\mu_{\mathrm{even}}(u)
 =
 u^2v+O(u^4),
 \qquad |v|=1.
@@ -1777,7 +1888,33 @@ Taking the $L_{\mathrm{info}}$ norm of the coefficient of $u^2$ in both expressi
 $$
 1=\gamma.
 $$
-The Pauli trace normalization (T.22a.1) fixes the moment-map scale, so there is no remaining continuous target-shift rescaling on this branch. ∎
+The accepted $L_{\mathrm{info}}$-norm datum (T.22a.3), when verified in the same reservoir coordinates used by Theorem T.22, fixes the target-shift scale. The Pauli trace normalization (T.22a.1) alone does not verify that datum. ∎
+
+**Remark T.22c (Raw Moment-Map Normalization Audit).** For $q_0=(0,1)^T$, $S_a=\sigma_a/2$, and $q(u)=e^{iuS_1}q_0$,
+$$
+\mu_{SU(2)}(q(u))
+=
+\left(0,-\frac12\sin u,-\frac12\cos u\right).
+$$
+For comparison, the ordinary linear-subtracted remainder is
+$$
+\mu(q(u))-\mu(q_0)-d\mu|_{q_0}(\dot q(0))u
+=
+\left(
+0,
+\frac1{12}u^3+O(u^5),
+\frac14u^2+O(u^4)
+\right).
+$$
+Thus the raw linear-subtracted remainder has both a nonzero cubic coordinate and a quadratic coefficient of Euclidean norm $1/4$; it is not the even displacement defined in (T.22a.2). An injective coordinate embedding or rescaling alone cannot remove its cubic term. The even projection required by Definition T.22a is
+$$
+x_{\mathrm{even}}(u)
+:=
+\frac12\left(\mu(q(u))+\mu(q(-u))\right)-\mu(q_0)
+=
+\left(0,0,\frac14u^2+O(u^4)\right)
+$$
+and removes the odd term. In the raw Euclidean target coordinates its quadratic coefficient has norm $1/4$, so it does not by itself verify the unit $L_{\mathrm{info}}$-norm condition (T.22a.3). The unit branch $\gamma=1$ remains conditional on a response-preserving map into the $L_{\mathrm{info}}$-orthonormal reservoir coordinates that sends this coefficient to unit norm. Separately, Theorem T.24 proves the exact minimization identity $\min_sV[s;u]=|x(u)|^2/4$ for a declared target shift. This identity does not identify $u$ with the transverse variable $\xi$ of Definition T.12a and does not alter the positive $\mu I_3$ block or the zero-mode count of Theorems T.2–T.5.
 
 **Theorem T.23** (Optimal Signal Configuration). Under the target-shift normalization of Theorem T.22, the stationary $s(u)$ satisfies:
 $$
@@ -1799,15 +1936,15 @@ where we used $\Pi_L \Pi_L^T = I_6$. ∎
 
 **Theorem T.24** (Elastic Quartic). The minimized energy, in terms of the target-shift normalization $\gamma$ of Theorem T.22, is
 $$
-V_{min}(u) = \frac{\gamma^2}{4}u^4.
+V_{\min}(u) = \frac{\gamma^2}{4}u^4.
 $$
 In terms of the canonical Higgs field $h = \sqrt{6}\,u$,
 $$
-\lambda_{\text{elastic}}(\gamma) = +\frac{\gamma^2}{36}.
+\lambda_{\mathrm{elastic}}(\gamma) = +\frac{\gamma^2}{36}.
 $$
 On the canonical unit target-shift branch $\gamma = 1$,
 $$
-\boxed{V_{min}(u) = \frac{1}{4}u^4, \qquad \lambda_{\text{elastic}} = +\frac{1}{36}.}
+\boxed{V_{\min}(u) = \frac{1}{4}u^4, \qquad \lambda_{\mathrm{elastic}} = +\frac{1}{36}.}
 $$
 
 *Proof.*
@@ -1819,11 +1956,11 @@ $$
 
 **Step 2** (Energy evaluation).
 $$
-V_{min}(u) = \frac{1}{2}|s|^2 + \frac{1}{2}|\Pi_L s - x|^2 = \frac{1}{2}\left|\tfrac{\gamma}{2}\Pi_L^T u^2 v\right|^2 + \frac{1}{2}\left|-\tfrac{\gamma}{2}u^2 v\right|^2.
+V_{\min}(u) = \frac{1}{2}\lVert s\rVert^2 + \frac{1}{2}\lVert\Pi_L s - x\rVert^2 = \frac{1}{2}\left\lVert\tfrac{\gamma}{2}\Pi_L^T u^2 v\right\rVert^2 + \frac{1}{2}\left\lVert-\tfrac{\gamma}{2}u^2 v\right\rVert^2.
 $$
-Since $\Pi_L^T$ is an isometry, $|\Pi_L^T v|^2 = |v|^2 = 1$:
+Since $\Pi_L^T$ is an isometry, $\lVert\Pi_L^T v\rVert^2 = \lVert v\rVert^2 = 1$:
 $$
-V_{min}(u) = \frac{\gamma^2}{8}u^4 + \frac{\gamma^2}{8}u^4 = \frac{\gamma^2}{4}u^4.
+V_{\min}(u) = \frac{\gamma^2}{8}u^4 + \frac{\gamma^2}{8}u^4 = \frac{\gamma^2}{4}u^4.
 $$
 
 **Step 3** (Field redefinition). With $h = \sqrt{6}\,u$, we have $u^4 = h^4/36$:
@@ -1839,11 +1976,11 @@ On the canonical unit target-shift branch $\gamma = 1$, this gives $\lambda_{\te
 
 **Remark T.24.1: Sign.** The positive sign is necessary: minimization over $s$ lowers the mismatch energy, producing a positive contribution to the quartic.
 
-**Remark T.24.2: Role of the Target-Shift Branch Assumption.** The magnitude $\gamma^2/36$ is fixed by the canonical normalizations $L_{info} = I_{12}$, $\Pi_L\Pi_L^T = I_6$, $|v| = 1$, and the target-shift normalization $\gamma$. The specific value $\lambda_{\text{elastic}} = 1/36$ corresponds to the canonical unit target-shift branch $\gamma = 1$. On branches carrying the SU(2) moment-map target-shift datum of Definition T.22a, Theorem T.22b fixes $\gamma=1$ from the Pauli-normalized moment-map scale. Without that datum, $\gamma$ remains an explicit target-shift branch parameter.
+**Remark T.24.2: Role of the Target-Shift Branch Assumption.** The magnitude $\gamma^2/36$ is fixed by the canonical normalizations $L_{info}=I_{12}$, $\Pi_L\Pi_L^T=I_6$, $|v|=1$, and the target-shift normalization $\gamma$. The specific value $\lambda_{\mathrm{elastic}}=1/36$ corresponds to the canonical unit target-shift branch $\gamma=1$. On branches carrying the accepted SU(2) moment-map target-shift datum of Definition T.22a, Theorem T.22b fixes $\gamma=1$ only after the even-displacement condition (T.22a.2) and the $L_{\mathrm{info}}$-norm identity (T.22a.3) are independently verified. Remark T.22c shows that the raw linear-subtracted Pauli-coordinate remainder is not the even displacement of (T.22a.2) and does not verify the norm identity (T.22a.3); the even projection removes the cubic term, but normalization remains separate. Without the accepted datum, $\gamma$ remains an explicit target-shift branch parameter.
 
 -----
 
-## T.16 Zero-Slack and the Criticality Boundary
+## T.16 Branch-Conditional Zero-Slack and Criticality Inputs
 
 ### T.16.1 Total Quartic at the Fixed Point
 
@@ -1862,25 +1999,44 @@ holds on the moment-map-normalized target-shift branch $\gamma = 1$ fixed by The
 
 
 
-**Remark T.25.1 (Branch Dependence of the Zero-Slack Boundary).** The vanishing of the fixed-point quartic at the PCE attractor depends on the target-shift normalization $\gamma=1$ introduced in Theorem T.22. The named supporting theorems (T.18a link count, T.19 canonical Higgs field, T.20 block quartic, T.21 block coefficient, T.5b canonical basis, T.23 optimal signal configuration) fix every factor in the derivation except this leading target-shift magnitude, which is the SU(2)-coherent action of the six left-chiral links on the six-dimensional reservoir. On the moment-map branch defined by Definition T.22a, Theorem T.22b supplies the unit normalization and the zero-slack statement is theorem-level within that branch. Without that moment-map datum, downstream consequences of $\lambda_{\text{PU}}=0$ — including the Higgs metastability boundary used in Theorem T.28 and the resulting $m_H\approx125$ GeV prediction — remain theorem-level only on the canonical unit target-shift branch. A quantitative deviation $\gamma\neq1$ is not a deformation of the same theorem-level branch; it is a different target-shift datum with its own response ledger. If such a deviation is admitted, it shifts $\lambda_{\text{PU}}$ by $(\gamma^2-1)/36$, which propagates to the Higgs pole mass with sensitivity $\Delta m_H\sim(v^2/m_H)|\gamma^2-1|/36$.
+**Remark T.25.1 (Branch Dependence of the Zero-Slack Boundary).** The vanishing of the fixed-point quartic at the PCE attractor depends on the target-shift normalization $\gamma=1$ introduced in Theorem T.22. The named supporting theorems (T.18a link count, T.19 canonical Higgs field, T.20 block quartic, T.21 block coefficient, T.5b canonical basis, T.23 optimal signal configuration) fix every factor in the derivation except this leading target-shift magnitude, which is the SU(2)-coherent action of the six left-chiral links on the six-dimensional reservoir. On the moment-map branch defined by Definition T.22a, Theorem T.22b supplies the unit normalization and the zero-slack statement is theorem-level within that branch. Without that moment-map datum, $\lambda_{\mathrm{PU}}=0$ is unavailable. Even with it, the Higgs-pole comparison of Theorem T.28 requires a completed threshold record together with the full target-shift, PU-to-SM quartic-matching, marginality, RG, decoupling, and pole-conversion tuple; the unit target-shift branch is necessary but not sufficient for $m_H\approx125$ GeV. A deviation $\gamma\neq1$ shifts $\lambda_{\mathrm{PU}}$ by $(\gamma^2-1)/36$, but its effect on a pole mass is determined only after that separately supplied forward record is accepted.
 
 ### T.16.2 Beta Function Boundary Condition
 
-**Theorem T.26** (Criticality condition at the PU matching scale). Assume, in addition to Theorem T.25, that the PU matching trajectory is selected at the marginal boundary of the Standard Model effective flow, so that the quartic coupling not only satisfies
+**Definition T.25.2 (PU-to-SM Quartic Matching Record).** A quartic matching record $\mathfrak M_\lambda$ specifies a response-preserving map from the abstract PU fixed point $\mathfrak A_{PU}$ to a renormalized Standard Model quartic at a declared energy and scheme. It must fix the matching scale, field normalization, threshold terms, finite-part convention, and residual interval before comparison. In particular, Theorem T.25 by itself does not identify $\mathfrak A_{PU}$ with $\mu_G$ or $\mu_\lambda$ and does not imply either $\lambda(\mu_G)=0$ or $\lambda(\mu_\lambda)=0$.
+
+**Theorem T.26** (Conditional criticality relation at the PU matching scale). Assume:
+
+1. the accepted moment-map datum of Definition T.22a fixes $\gamma=1$;
+2. an accepted quartic matching record $\mathfrak M_\lambda$ maps $\lambda_{\mathrm{PU}}(\mathfrak A_{PU})=0$ to $\lambda(\mu_G)=0$ in the stated SM scheme; and
+3. the matching trajectory is independently selected on the one-loop marginal surface $\beta_\lambda^{(1)}(\mu_G)=0$.
+
+Then, with the GUT-normalized coupling $g_1=\sqrt{5/3}\,g'$, the couplings at $\mu_G$ satisfy
 $$
-\lambda(\mu_G)=0
-$$
-but lies on the one-loop critical surface
-$$
-\beta_\lambda^{(1)}(\mu_G)=0.
-$$
-Then the couplings at $\mu_G$ satisfy
-$$
-12y_t^4 - \frac{9}{4}g_2^4 - \frac{3}{2}g_2^2 g_1^2 - \frac{3}{4}g_1^4 = 0
+6y_t^4
+-
+\frac98g_2^4
+-
+\frac9{20}g_2^2g_1^2
+-
+\frac{27}{200}g_1^4
+=0
 $$
 in the convention $V=\lambda(H^\dagger H)^2$.
 
-*Proof.* Theorem T.25 gives the boundary value $\lambda(\mu_G)=0$. Imposing the additional marginal-trajectory condition $\beta_\lambda^{(1)}(\mu_G)=0$ and substituting $\lambda=0$ into the standard one-loop SM beta function yields exactly the displayed relation among the gauge and top-Yukawa couplings. QED
+*Proof.* At $\lambda=0$, the one-loop Standard Model beta function in this normalization is
+$$
+16\pi^2\beta_\lambda^{(1)}
+=
+-6y_t^4
++
+\frac98g_2^4
++
+\frac9{20}g_2^2g_1^2
++
+\frac{27}{200}g_1^4.
+$$
+The second hypothesis supplies $\lambda(\mu_G)=0$ and the third hypothesis supplies $\beta_\lambda^{(1)}(\mu_G)=0$. Setting the right side to zero and multiplying by $-1$ gives the displayed relation. ∎
 
 **Remark T.26.2: Numerical Consistency.** Since $g_U^2=\pi/6$, $g_U\approx 0.724$ (Theorem T.39a). For the validation tuple of Theorem T.18, equivalently $(Z_1,Z_2,Z_3)=(1+15.14/24,1+20.94/24,1+18.41/24)\approx(1.6308,1.8725,1.7671)$, the marginality condition gives $y_t(\mu_G)\approx 0.392$. RG amplification over $t=\ln(\mu_G/M_t)\approx 30$ yields $y_t(M_t)\approx 0.93$–$0.99$, consistent with $y_t^{\mathrm{obs}}(M_t)\approx 0.994\pm 0.005$. The same validation matching data and SM running yield Z-pole gauge couplings in the observed range (Theorem T.18; Theorem T.27b), with residual finite matching shifts encoded by $\delta_i$ and splittings subleading as in Corollary T.17.1. These are validation-run outputs until the forward lifted-threshold calculation derives the tuple.
 
@@ -1888,7 +2044,7 @@ in the convention $V=\lambda(H^\dagger H)^2$.
 
 -----
 
-## T.17 Higgs Mass Prediction
+## T.17 Conditional Higgs-Mass Comparison
 
 ### T.17.1 RG Evolution of the Quartic
 
@@ -1899,9 +2055,9 @@ $$
 
 ### T.17.2 Numerical Verification
 
-**Proposition T.5** ($\lambda = 0$ Crossing Scale). In the Standard Model effective theory, the quartic crosses zero at the metastability scale $\mu_\lambda$ defined by $\lambda(\mu_\lambda)=0$:
+**Proposition T.5** (Observed-Input SM Zero-Crossing Validation). For the displayed Standard Model validation trajectory initialized from the low-energy inputs $\lambda(M_Z)=0.129$ and the stated top/gauge data, define $\mu_\lambda$ by $\lambda(\mu_\lambda)=0$. At the working order used here,
 $$
-\mu_\lambda \approx 10^{10} \text{ GeV}
+\mu_\lambda \approx 10^{10} \text{ GeV}.
 $$
 
 *Verification.* Running from $M_Z$ with $\lambda(M_Z) = 0.129$, the top Yukawa contribution drives $\lambda$ toward zero:
@@ -1911,16 +2067,21 @@ $$
 - At $\mu = 10^{10}$ GeV: $\lambda \approx 0$ (crossing)
 - At $\mu = 10^{16}$ GeV: $\lambda \approx -0.02$
 
-Two-loop analysis places the instability scale at $\mu_\lambda \sim 10^{10}$–$10^{11}$ GeV (Degrassi et al. 2012). ∎
+Two-loop analysis places this observed-input instability scale at $\mu_\lambda \sim 10^{10}$–$10^{11}$ GeV (Degrassi et al. 2012). This validation trajectory does not supply the fixed-point-to-SM matching record $\mathfrak M_\lambda$ required by Theorem T.26 and does not identify $\mu_\lambda$ with $\mu_G$. ∎
 
 ### T.17.3 Metastability and Higgs Mass
 
-**Theorem T.28** (Conditional Higgs-mass prediction from the metastability boundary). Assume the Standard Model effective theory is valid between the electroweak scale and the matching scale $\mu_G$, and assume the criticality condition of Theorem T.26 places the quartic on the metastability boundary analyzed in the two-loop SM RG studies of Buttazzo et al. [2013]. Then the corresponding Higgs pole mass is approximately
+**Theorem T.28** (Conditional Higgs pole-mass map and current validation status). Fix a completed threshold ledger together with the forward-locked tuple
+$$
+(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}),
+$$
+containing the accepted target-shift datum, PU-to-SM quartic matching record, marginality condition, fixed-loop-order SM RG system, decoupling convention, and pole-mass conversion convention. If those inputs place the resulting SM trajectory on the metastability boundary analyzed in the two-loop studies of Buttazzo et al. [2013], then the corresponding Higgs pole mass is approximately
 $$
 m_H \approx 125 \text{ GeV}.
 $$
+The present manuscript does not supply an accepted $\mathfrak M_\lambda$ connecting $\mathfrak A_{PU}$ to either $\mu_G$ or the distinct SM crossing scale $\mu_\lambda$, and its current PU-internal threshold source class is negatively closed by Theorem T.78.14. Accordingly, $125$ GeV is currently an external-RG validation value for the named branch, not a theorem-level PU prediction.
 
-*Proof.* Under the stated assumptions, the boundary condition $\lambda(\mu_G)=0$ with $\mu_G$ near the seesaw/matching scale places the running quartic on the metastability trajectory of the Standard Model. The two-loop RG analysis of Buttazzo et al. maps that trajectory to a Higgs pole mass near $125$ GeV. Therefore, once the manuscript's matching scale is identified with that RG boundary, the Higgs mass prediction follows conditionally from the external RG result. QED
+*Proof.* Once the completed threshold ledger and every member of the displayed tuple are fixed, the external SM RG calculation and deterministic decoupling/pole maps send the selected metastability trajectory to one pole mass. Proposition T.5 records the SM crossing scale $\mu_\lambda\sim10^{10}$--$10^{11}$ GeV, whereas the adopted matching scale is $\mu_G\approx1.5\times10^{15}$ GeV. Definition T.25.2 forbids identifying either scale with the abstract fixed point without a matching record. The conditional map is therefore valid, while current PU-internal closure is absent. QED
 
 **Corollary T.28.1** (Experimental Agreement).
 $$
@@ -1997,9 +2158,13 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 
 ## T.19 Complete Electroweak Parameter Summary
 
-**Convention T.19.0 (Branch Ledger for Appendix T Summary Tables).** All branch entries in the Appendix T summary tables (T.19.1, T.20, T.24.26, T.25.8 and parallel rows) are interpreted relative to the controlling branch package of Theorem T.79: a fixed PU structural branch, the two-loop SM RG system, the completed flag-lift spectral data $\Delta$, the flavor-geometric residual data $(\mathcal{T}_{E_8}, \mathcal{V})$, and the CP-profile data $\mathcal{B}$. Branch labels in the tables have the following interpretations:
+**Convention T.19.0 (Branch Ledger for Appendix T Summary Tables).** All branch entries in the Appendix T summary tables (T.19.1, T.20, T.24.26, T.25.8 and parallel rows) are interpreted relative to the controlling branch package of Theorem T.79: a fixed PU structural branch, the completed flag-lift spectral data $\Delta$, the flavor-geometric residual data $(\mathcal{T}_{E_8},\mathcal V)$, the CP-profile data $\mathcal B$, and every conversion record consumed by the requested output. For a Higgs-pole row the required record is
+$$
+\mathfrak H_T:=(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}),
+$$
+fixed before comparison and used together with the completed threshold record. A zero-slack theory-space row uses only the applicable target-shift member and must not be conflated with this full pole-level record. Branch labels in the tables have the following interpretations:
 
-- "Exact" — exact arithmetic consequence once the structural branch and normalization conventions of the relevant section are fixed (e.g., $\sin^2\theta_W^{(0)} = 3/8$ on the primitive-(1/6)-quantized hypercharge branch; $\lambda_{\mathrm{elastic}} = +1/36$ on the elastic target-shift branch specified in the elastic target-shift branch).
+- "Exact" — exact arithmetic consequence once every stated branch datum is fixed (e.g., $\sin^2\theta_W^{(0)}=3/8$ on the primitive-$(1/6)$-quantized hypercharge branch; $\lambda_{\mathrm{elastic}}(\gamma)=\gamma^2/36$ for a declared target shift). The special value $\lambda_{\mathrm{elastic}}=1/36$ is exact only inside the accepted Definition T.22a unit branch. A summary convention propagates status; it does not supply a missing target-shift or fixed-point-to-SM matching datum.
 
 - "Derived" — derived within the adopted Appendix T branches (predictive-recovery MacWilliams Golay rate-$\tfrac12$, weak-left projection, row-pair, Bures-gauge holonomy normalization or the Kostant-Souriau prequantization gate, Toeplitz-Kraus Yukawa probability-overlap, $E_8$ triad selection, generation-internal tensor factorization, Takagi-Weyl Majorana $A_2$, triplet-projection exponent, PMNS Berry-loop, and the controlling branch package of Theorem T.79), not necessarily unconditional theorem-level output from the foundational PU axioms alone.
 
@@ -2011,9 +2176,9 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 
 Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, Theorem T.78.14, and Theorem T.79 are the controlling branch-ledger sections for the entire Appendix T quantitative ledger; entries in summary tables that omit branch labels or use unqualified "Derived" are governed by this convention.
 
-### T.19.1 Derived Quantities
+### T.19.1 Quantitative Outputs and Status
 
-|Parameter |PU Derivation |Predicted |Observed |Status |
+|Parameter |PU construction / dependency |Framework value or status |Observed |Status |
 |------------------------------------------|------------------------------------------------------------------------|---------------------------------|------------|----------|
 |$\kappa_{EW}$ |$bk/2 + 3 - 1/2$ |38.5 |— |Exact |
 |$A_{EW}$ |One-loop determinant model |1.084 |— |Model layer |
@@ -2023,54 +2188,58 @@ Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, Theorem T.78.14, and Theorem T
 |$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ validation tuple reproducing the previous matching outputs if obtained forward; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$, so the tuple must be compared against the global sector-resolving $\mathrm{MS2}_{\mu_G}$ block functional rather than inserted as input; Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent source class supplies no certified interval for $\Delta_i$ or $Z_i$ |— |Validation target; current-framework electroweak source class closed negatively |
 |$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |Conditional on the lifted spectral thresholds and $\delta_i$; validation runs remain comparison-only |$0.2312$ |Conditional|
 |$5/3$ factor |Canonical hypercharge normalization |$5/3$ |$5/3$ |Derived |
-|$\lambda_{\text{block}}$ |6 SU(2) blocks |$-1/36$ |— |Exact |
-|$\lambda_{\text{elastic}}$ |Projector algebra |$+1/36$ |— |Exact |
-|$\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU})$|Zero-slack fixed-point boundary, not a spectral-action Higgs finite part |$0$ |(fixed-point input) |Exact |
+|$\lambda_{\text{block}}$ |6 SU(2) blocks |$-1/36$ |— |Exact on the stated block branch |
+|$\lambda_{\text{elastic}}(\gamma)$ |Projector algebra plus target-shift datum |$+\gamma^2/36$; $+1/36$ only for accepted $\gamma=1$ |— |Branch exact; moment-map datum required for the unit value |
+|$\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU};\gamma)$|Abstract fixed-point quartic, not an SM running coupling or spectral-action Higgs finite part |$(\gamma^2-1)/36$; zero only for accepted $\gamma=1$ |(fixed-point branch value) |Branch exact; PU-to-SM matching remains open |
 |$\mu_H^2,\lambda_H$ from spectral action |accepted $\mathfrak S_{\mathrm{SA}}(P)$ with Dirac certificate, cutoff, projections, heat coefficients, finite-part scale, tail, and normalization map |current PU-internal interval $\varnothing_{\mathrm{cert}}$ |— |No accepted current spectral-action source by Theorem T.78.14 |
-|$m_H$ |metastability-boundary/RG matching using the stated Appendix T inputs; not a spectral-action finite-part interval |$125$ GeV validation/conditional value |$125.25$ GeV|Conditional comparison |
+|$m_H$ |external metastability-boundary comparison requiring a completed threshold record together with accepted $\mathfrak H_T$; not a spectral-action finite-part interval |$125$ GeV validation value; no accepted current $\mathfrak M_\lambda$ |$125.25$ GeV|Validation-level until the completed threshold record and every member of $\mathfrak H_T$ are fixed before comparison |
 |$g_i(\mu_G)$ |PCE isotropy + matching |$g_U/\sqrt{Z_i}$ on a completed branch; current PU-internal threshold interval $\varnothing_{\mathrm{cert}}$ |(at $\mu_G$)|Boundary/conditional |
 |$y_t^{\mathrm{PU}}(\mathfrak{A}_{PU})$ |$S_3$-democratic Higgs |1 |(PU units) |Exact |
 |$c_\ell/c_d$ |Normalization constraint |$8/3$ |— |Constraint|
 |$\mathcal{R}$ values |$E_8$ triads |${4/3, 3/2, 2, 3, 4}$ |(discrete) |Derived |
-**Uncertainty budget for electroweak and transferred-prefactor outputs.** Each prediction is reported with the paper-wide T1/T2/T3 decomposition of Convention P.14.1c and Section T.25.5.3. T1 records internal truncation/control, T2 records matching/threshold/branch/bridge/convention dependence, and T3 records empirical or model-mapping dependence. Rows for which a category is absent at the current working order are marked $0$ or negligible; a combined entry is used only when the manuscript has not yet supplied the pipeline needed to split the components.
+**Uncertainty budget for electroweak and transferred-prefactor outputs.** Each quantitative entry is reported with the paper-wide T1/T2/T3 decomposition of Convention P.14.1c and Section T.25.5.3. T1 records internal truncation/control, T2 records matching/threshold/branch/bridge/convention dependence, and T3 records empirical or model-mapping dependence. Rows for which a category is absent at the current working order are marked $0$ or negligible; a combined entry is used only when the manuscript has not yet supplied the pipeline needed to split the components.
 
 |Quantity |Central (PU) |$\sigma_{T1}$ |$\sigma_{T2}$ |$\sigma_{T3}$ |$1\sigma$ theory |Dominant category and term |What shrinks it |
 |---------------------|----------------:|----------------:|----------------:|----------------:|----------------:|---------------------------|-------------------------------------------------------------------------------------------------------------|
 |$A_{EW}$ |$1.084$ |$0.005$ model allowance |$0$ |$0$ |$0.005$ |determinant-model curvature / Schur / Jacobian allowance; not a proved remainder bound |derive the determinant construction with explicit remainder bounds or replace it by a theorem-level prefactor |
 |$v$ |$252\ \text{GeV}$|$1.2\ \text{GeV}$|$5\ \text{GeV}$ |$0$ |$5\ \text{GeV}$ |T2 matching and threshold dependence at $\mu_G$ |full 2-loop matching and threshold accounting at $\mu_G$ on an accepted threshold branch |
 |$\sin^2\theta_W(M_Z)$|$0.2312$ validation-run value |negligible ($O(M^{-1})$ anisotropy) |$0.0015$ validation/threshold scale; current certificate interval $\varnothing_{\mathrm{cert}}$ |$0$ |$0.0015$ diagnostic only |T2 lifted thresholds, matching, and RG propagation; current source class negatively closed by Theorem T.78.14 |accepted $\Delta_i$ and $Z_i$ intervals from $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, or an equivalent spectral tuple |
-|$m_H$ |$125\ \text{GeV}$ conditional matching value |negligible |$2.5\ \text{GeV}$ (T2+T3 combined) |included in T2 column |$2.5\ \text{GeV}$|T2 threshold matching combined with T3 pole-mass / observable conversion at the present working order (Theorem T.28); no current spectral-action $\mu_H^2$ or $\lambda_H$ interval |explicit pole-mass conversion, higher-loop thresholds, and accepted spectral-action Higgs finite-part ledger if a spectral-action claim is made |
+|$m_H$ |$125\ \text{GeV}$ conditional external-RG value |negligible |$2.5\ \text{GeV}$ (T2+T3 combined; diagnostic only while $\mathfrak M_\lambda$ is open) |included in T2 column |$2.5\ \text{GeV}$ conditional diagnostic |T2 completed-threshold, target-shift, PU-to-SM matching, marginality, RG, and decoupling inputs combined with T3 pole-mass conversion at the present working order (Theorem T.28); no current accepted $\mathfrak M_\lambda$ or spectral-action Higgs interval |a completed threshold record plus accepted $\mathfrak H_T$, higher-order residual control, and an accepted spectral-action Higgs finite-part ledger if such a claim is made |
 |$A_{\text{eff}}$ |$0.923$ |$0.004$ |$0.010$ |$0$ at fixed forward-evaluation convention |$0.011$ |T2 bounce-determinant / zero-mode / finite-volume prefactor convention |compute ghost/zero-mode normalization under a fixed vacuum convention and derive the prefactor internally |
 
 The $1\sigma$ theory column is the diagonal quadrature sum
 $$
 \sqrt{\sigma_{T1}^2+\sigma_{T2}^2+\sigma_{T3}^2}
 $$
-at the stated working order. The $A_{EW}$ entry is a determinant-model allowance, not a controlled theorem-level remainder estimate. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from that allowance via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $\sin^2\theta_W(M_Z)$, the displayed $0.0015$ remains a validation/threshold diagnostic unless an accepted threshold source supplies $\Delta_i$ and $Z_i$ before comparison; by Theorem T.78.14 the current RHG, torsion, spectral-action, and equivalent source class supplies no such interval. For $m_H$, the $2.5\ \text{GeV}$ entry is combined because separating threshold matching from pole-mass / observable conversion requires the explicit internal pole/threshold pipeline referenced in Theorem T.28; an independent spectral-action claim for $\mu_H^2$ or $\lambda_H$ additionally requires Definition X.9.6h.4. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
+at the stated working order. The $A_{EW}$ entry is a determinant-model allowance, not a controlled theorem-level remainder estimate. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from that allowance via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $\sin^2\theta_W(M_Z)$, the displayed $0.0015$ remains a validation/threshold diagnostic unless an accepted threshold source supplies $\Delta_i$ and $Z_i$ before comparison; by Theorem T.78.14 the current RHG, torsion, spectral-action, and equivalent source class supplies no such interval. For $m_H$, the $2.5\ \text{GeV}$ entry is a conditional diagnostic rather than a closed PU interval: the required forward pipeline consumes a completed threshold record together with $\mathfrak H_T=(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}})$ as recorded in Theorem T.28 and Theorem T.79.2. An independent spectral-action claim for $\mu_H^2$ or $\lambda_H$ additionally requires Definition X.9.6h.4 and does not replace any member of $\mathfrak H_T$ without an explicit matching map. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
 
-### T.19.2 Derivation Chain
+### T.19.2 Dependency-Separated Chain
 
 $$
 \boxed{
 \text{Golay } [24,12,8] \xrightarrow{b=6, k=12}
 \begin{cases}
-\kappa_{EW} = 38.5 \text{ (constraint counting)} \\[3pt]
-A_{EW} = 1.084 \text{ (determinant-model branch)} \\[3pt]
-v = A_{EW} e^{-\kappa_{EW}} M_{Pl} = 252 \text{ GeV} \\[3pt]
-\sin^2\theta_W^{(0)} = 3/8; \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (fixed point + matching)} \\[3pt]
-\lambda_{\text{block}} = -1/36; \lambda_{\text{elastic}}(\gamma) = +\gamma^2/36,\quad \gamma=1 \text{ on the canonical unit target-shift branch} \\[3pt]
-\lambda(\mu_\lambda) = 0 \to m_H \approx 125 \text{ GeV} \\[3pt]
+\kappa_{EW} = 38.5 \text{ (constraint-counting branch)} \\[3pt]
+A_{EW} = 1.084 \text{ (separate determinant-model branch)} \\[3pt]
+v = A_{EW} e^{-\kappa_{EW}} M_{Pl} = 252 \text{ GeV} \text{ (model-conditional)} \\[3pt]
+\sin^2\theta_W^{(0)} = 3/8;\quad \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (completed-threshold branch)} \\[3pt]
+\lambda_{\mathrm{PU}}(\mathfrak A_{PU};\gamma)=\lambda_{\mathrm{block}}+\lambda_{\mathrm{elastic}}(\gamma)=\tfrac{\gamma^2-1}{36} \\[3pt]
+\bigl[\text{completed threshold record and accepted }\mathfrak H_T\bigr]
+\longrightarrow \lambda_{\mathrm{SM}}(\mu_G)=0
+\longrightarrow m_H\approx125\ \mathrm{GeV}\quad\text{(conditional forward map)} \\[3pt]
 g_i(\mu_G)=g_U/\sqrt{Z_i} \text{ (matching)} \\[3pt]
 y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = |P_3 \mathbf{h}|_B = 1 \text{ (}S_3\text{-invariant projector)}
 \end{cases}
 }
 $$
 
+Separately, Proposition T.5 records the observed-input validation trajectory $\lambda_{\mathrm{SM}}(\mu_\lambda)=0$. That crossing neither identifies $\mu_\lambda$ with $\mu_G$ nor supplies the completed threshold record or any member of $\mathfrak H_T$, so it is not an arrow in the Golay derivation chain.
+
 ## T.20 Problems
 
-### T.20.1 Solved: Elastic Quartic Derivation ✓
+### T.20.1 Algebraically Closed: Elastic Quartic as a Function of $\gamma$; Unit Branch Conditional
 
-**Result**: $\lambda_{\text{elastic}} = +1/36$ derived explicitly in Section T.15 via minimization over $(s, r)$ at $O(u^4)$.
+**Result**: Section T.15 derives $\lambda_{\text{elastic}}(\gamma)=\gamma^2/36$ via minimization over $(s,r)$ at $O(u^4)$. The numerical value $+1/36$ follows only on a branch carrying the accepted moment-map target-shift datum that fixes $\gamma=1$.
 
 ### T.20.2 Closed Subproblem: Isotropic Residual Thresholds; Principal Lift Requires Certificate
 
@@ -2078,9 +2247,9 @@ $$
 
 **Unclosed numerical gate**: The numerical threshold tuple is not promoted by this isotropy result. The principal lifted spectral thresholds remain governed by the finite spectral certificate and the negative closure result of Theorem T.78.5. By Theorem T.78.14, the current PU-internal RHG, torsion, spectral-action, and equivalent spectral-source class supplies no certified interval for $\Delta_i$, $Z_i=1+\Delta_i/24$, $\mu_H^2$, $\lambda_H$, or any gauge/Higgs finite part. Therefore this subsection closes the isotropic residual subproblem and the current source-class classification, but not a positive theorem-level electroweak threshold tuple.
 
-### T.20.3 Solved: Beta Function Vanishing ✓
+### T.20.3 Conditional Branch: PU-to-SM Quartic Matching and Marginality
 
-**Result**: PCE zero-slack implies $\beta_\lambda(\mu_G) \approx 0$ via gauge-Yukawa cancellation at matching (Section T.16.2).
+**Status**: PCE zero slack fixes only $\lambda_{\mathrm{PU}}(\mathfrak A_{PU})=0$ on the accepted $\gamma=1$ branch. A value for the SM quartic at $\mu_G$ requires the separate matching record $\mathfrak M_\lambda$ of Definition T.25.2, and $\beta_\lambda(\mu_G)=0$ is an additional marginal-trajectory condition. Theorem T.26 derives the gauge-Yukawa relation only after both inputs are imposed.
 
 ### T.20.4 Model-Conditional: Electroweak Prefactor
 
@@ -2156,6 +2325,23 @@ $$
 A_{EW}'=(\cos u_0)^{-3}=1.06496178\ldots,
 $$
 which differs from $1.08406869\ldots$ by more than $0.005$. Therefore the prefactor value is not determined by the earlier theorem stack. Since no bound is proved for the omitted determinant, curvature, Schur-complement, or Jacobian terms, the $\pm0.005$ entry is a model allowance rather than a theorem-level error estimate. ∎
+
+**Remark T.29.3 (Requirements for a Zero-Point Refinement).** A zero-point refinement of the determinant model requires, before comparison:
+
+1. a specified dimensionless transverse spectrum $\{\omega_i(u)\}$ and regularization;
+2. a unit bridge converting $\frac{\ln2}{2}\sum_i\omega_i(u)$ into dimensionless link curvature;
+3. the reflection symmetry, if any, that removes sine Fourier coefficients;
+4. a forward evaluation of every retained Fourier coefficient with a remainder bound;
+5. a derivation of the map from that curvature to $A_{\mathrm{link}}$.
+
+Period $\pi$ alone gives the general expansion
+$$
+E_{zp}(u)
+=
+E_0+\sum_{k\ge1}
+\left(a_k\cos2ku+b_k\sin2ku\right)
+$$
+and does not force a common phase center. Lemma T.3, Equation (O.2), and the unit Predictive-Ward branch of Theorem Z.14 normalize their own coordinates and kernels but do not fix an independent coupling between $E_{zp}$ and $A_{\mathrm{link}}$. No current theorem evaluates a coefficient $\mu_{zp}=0.00710$ or derives the deformation $(\cos u_0+\mu_{zp}\cos2u_0)^{-3}$. Moreover, if $E_{zp}=E_0+A_1\cos2(u-u_*)$ with $A_1>0$, then $E_{zp}''(u_*)=-4A_1<0$. Accordingly, the registered determinant-model value remains Theorem T.29's $A_{EW}=1.08406869\ldots$ and Corollary T.29.1's $v\approx252\,\mathrm{GeV}$; no zero-point-refined numerical row is integrated.
 
 ### T.20.5 Solved: Left-Chiral Row-Pair Structure ✓
 
@@ -2540,13 +2726,13 @@ Verification: $8(1.140)+3(0.729)+0.695 = 9.12+2.19+0.70 = 12.01 \approx 12$ ✓;
 
 -----
 
-### T.20.10 Complete Fixed-Point and Matching Boundary Conditions
+### T.20.10 Branch-Qualified Fixed-Point and Matching Boundary Ledger
 
-**Theorem T.35** (Complete Electroweak Boundary). The PU fixed point $\mathfrak{A}_{PU}$ and the matching scale $\mu_G$ impose the following boundary conditions:
+**Theorem T.35** (Branch-Qualified Electroweak Boundary Ledger). The PU fixed point and the separately declared matching data define the following ledger only on the named branches:
 $$
 \boxed{
 \begin{aligned}
-\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}) &= 0 \quad \text{(zero-slack, Theorem T.25)}\\
+\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU};\gamma) &= (\gamma^2-1)/36 \quad \text{(zero only with the accepted }\gamma=1\text{ datum, Theorems T.22b and T.25)}\\
 \sin^2\theta_W^{(0)} &= 3/8 \quad \text{(PU-normalized Weinberg angle, Theorem T.14)}\\
 \sin^2\theta_W(\mu_G) &= \frac{3 Z_2}{3 Z_2 + 5 Z_1} \quad \text{(matching Weinberg angle, Theorem T.14)}\\
 g_i(\mu_G) &= \frac{g_U}{\sqrt{Z_i}} \quad (i=1,2,3)\quad \text{(gauge matching, Corollary T.13.1)}\\
@@ -2558,7 +2744,7 @@ g_U^2 &= \pi/6 \quad \text{(holonomy saturation, Theorem T.39a)}
 }
 $$
 
-These eight boundary conditions, together with the PU-to-SM matching map encoded by the lifted spectral threshold data $Z_i=1+\Delta_i/24$ (Definition T.17a) and two-loop SM RG evolution from $\mu_G$, determine the electroweak and Yukawa observables once the spectral thresholds are supplied by the lifted gauge-sector computation on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$.
+These branch-resolved boundary formulas determine downstream observables only after every affected sector input is supplied. Gauge observables require the lifted spectral threshold data $Z_i=1+\Delta_i/24$ (Definition T.17a). A Higgs pole-mass row requires the completed threshold record together with $\mathfrak H_T=(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}})$. Flavor observables retain their separate normalization and profile ledgers. Neither threshold data nor the abstract zero-slack value closes those additional Higgs gates.
 
 -----
 
@@ -2607,7 +2793,7 @@ $$
 
 **Remark T.38.1: PCE Determination.** Substituting the PCE-optimal weights from Corollary T.34.2 gives $c_d/c_u \approx 1.02$, consistent with the small right-handed hypercharge tilt assumed in the CKM construction (Section T.22).
 
-**Theorem T.39a** (Unified Coupling from Holonomy). The unified gauge coupling $g_U$ at the matching scale $\mu_G$ is determined by the Bures holonomy on $\mathrm{Gr}(2,8)$.
+**Theorem T.39a (Unified Coupling on the Bures-Gauge Calibration Branch).** Let $\chi_U>0$ be the specified calibration in $\oint_\gamma\mathcal A_B=\chi_Ug_U^2$. For $M$ democratically assigned mode loops with Bures holonomy $2\pi/M$, the coupling satisfies $g_U^2=2\pi/(M\chi_U)$. The numerical value $g_U^2=\pi/6$ additionally assumes $M=24$ and $\chi_U=1/2$.
 
 *Proof.* We derive $g_U$ from the intrinsic Bures geometry in four steps.
 
@@ -2636,7 +2822,7 @@ hence
 $$
 g_U^2 = \frac{2\pi}{M} \cdot 2 = \frac{4\pi}{M} = \frac{4\pi}{24} = \frac{\pi}{6}.
 $$
-The Kostant-Souriau Bures-gauge gate of Definition T.39a.1 and Theorem T.39a.2 supplies this normalization on the certified prequantum branch.
+Definition T.39a.1 and Theorem T.39a.2 propagate the specified calibration $\chi_U$ through the prequantum branch; they do not select $\chi_U=1/2$. The following numerical specialization is conditional on that additional calibration.
 The corresponding unified fine-structure constant is
 $$
 \alpha_U = \frac{g_U^2}{4\pi} = \frac{1}{24},
@@ -2679,47 +2865,39 @@ where $g_U$ is the PU-normalized unified gauge coefficient.
 
 The datum is accepted only when (T.39a.1) and (T.39a.3) are fixed before using any gauge-coupling validation data.
 
-**Theorem T.39a.2** (Kostant-Souriau Closure of the Bures-Gauge Holonomy Factor). On a branch carrying an accepted Kostant-Souriau Bures-gauge calibration datum,
+**Theorem T.39a.2** (Gauge Coupling from a Specified Bures-Gauge Calibration Factor). On a branch carrying an accepted Kostant-Souriau Bures-gauge calibration datum with a specified coefficient $\chi_U>0$,
 $$
-\chi_U=\frac12,
+g_U^2=\frac{2\pi}{M\chi_U},
 \qquad
+\alpha_U^{-1}=2M\chi_U.
+\tag{T.39a.5}
+$$
+On the additional calibration branch $\chi_U=1/2$, these formulas give
+$$
 g_U^2=\frac{4\pi}{M}=\frac{\pi}{6},
 \qquad
 \alpha_U^{-1}=M=24.
-\tag{T.39a.5}
 $$
 
-*Proof.* The prequantum connection fixes the primitive Bures period by (T.39a.2). The gauge kinetic pairing of a unit active generator is normalized by the trace form (T.39a.3). Therefore the scalar coefficient with which $g_U^2$ enters the Bures-gauge calibration is
+*Proof.* Equations (T.39a.2) and (T.39a.4) give
 $$
-\chi_U=\operatorname{tr}(T_a^2)=\frac12
+\frac{2\pi}{M}=\chi_Ug_U^2.
 $$
-for a unit generator. Substituting this into (T.39a.4) and using (T.39a.2) gives
-$$
-\frac{2\pi}{M}
-=
-\frac12 g_U^2,
-$$
-hence
-$$
-g_U^2=\frac{4\pi}{M}.
-$$
-For $M=24$, this is $g_U^2=\pi/6$. Finally,
+Division by $\chi_U>0$ yields $g_U^2=2\pi/(M\chi_U)$. Therefore
 $$
 \alpha_U^{-1}
 =
 \frac{4\pi}{g_U^2}
 =
-M
-=
-24.
+2M\chi_U.
 $$
-∎
+Substitution of $M=24$ and the additional calibration $\chi_U=1/2$ gives the final displayed values. The trace normalization $\operatorname{tr}(T_aT_b)=\delta_{ab}/2$ fixes the Lie-algebra basis but does not by itself fix $\chi_U$. ∎
 
 **Problem T.3** (CKM/PMNS). *Solved for CKM sector in Section T.22 and PMNS sector in Section T.24.* The CKM matrix elements emerge from two limiting regimes of a unified overlap formula on the generation manifold $\mathrm{Gr}(2,8)$:
 
 1. **Heavy-generation mixing** (3↔1, 3↔2): Gaussian overlap suppression $\exp(-\alpha d^2_{E_8})$ yields $|V_{cb}| = \sqrt{2/3} \cdot e^{-3} = 0.0407$ and $|V_{ub}| = 0.00392$ (Theorems T.46–T.48).
 1. **Light-generation mixing** (1↔2): Geometric frustration between $D_4$ (cubic, $\theta_u = 90°$) and $A_2$ (hexagonal, $\theta_d = 120°$) symmetries, with stiffness-weighted vacuum at $\theta_{\mathrm{vac}} = 105.15°$, yields the Cabibbo angle $|V_{us}| = (\sqrt{3}/2)\sin(15.15°) \times f_{\mathrm{curv}} = 0.2261$ (Theorems T.49–T.52).
-1. **CP violation**: Berry holonomy around the flavor loop gives $\delta = 66.7°$ (Theorems T.53–T.56).
+1. **CP violation**: On the minimal Berry-area branch, Berry holonomy around the flavor loop gives the base phase $\delta_{\mathrm{flat}}=70.53°$ (Theorems T.53–T.54). The symmetric average of Theorem T.55 changes visibility but not phase; the value $\delta=66.7°$ is conditional on the independent nonlinear response ansatz of Theorem T.56.
 
 # Section T.21: Derivation of the Universal Hierarchy Parameter
 
@@ -2894,9 +3072,9 @@ $$
 Y_{ij}=|Y_{ij}|\,e^{i\theta_{ij}^{\mathrm{Berry}}},\qquad|Y_{ij}|\propto\operatorname{Tr}(P_iP_j).
 \tag{T.41.4c.1}
 $$
-The magnitude is fixed by Theorem T.41.4b; the phase $\theta_{ij}^{\mathrm{Berry}}$ is the holonomy of the retained flavor Berry connection along the chosen generation path, as in Theorem T.56 and Appendix Y.
+The magnitude is determined by Theorem T.41.4b; the phase $\theta_{ij}^{\mathrm{Berry}}$ is the holonomy of the retained flavor Berry connection along the chosen generation path, as in Theorems T.53–T.54 and Appendix Y. The numerical value $66.7°$ requires the additional response ansatz of Theorem T.56.
 
-*Proof.* The probability overlap $\operatorname{Tr}(P_iP_j)$ is a gauge-invariant nonnegative real scalar, so it can determine only the magnitude $|Y_{ij}|$. A transported Yukawa section between $P_i$ and $P_j$ on the flavor bundle acquires an additional phase equal to the holonomy of the Berry connection along the generation path; this phase is gauge-invariant modulo $2\pi$ on closed loops by Lemma T.53.2 and is therefore the well-defined CKM/PMNS phase entering Theorem T.56 and the Appendix Y CP-odd response datum; baryon production additionally requires the driven gate of Theorem Y.6.1i. Combining the magnitude from Theorem T.41.4b with this Berry phase gives (T.41.4c.1). ∎
+*Proof.* The probability overlap $\operatorname{Tr}(P_iP_j)$ is a gauge-invariant nonnegative real scalar, so it can determine only the magnitude $|Y_{ij}|$. A transported Yukawa section between $P_i$ and $P_j$ on the flavor bundle acquires an additional phase equal to the holonomy of the Berry connection along the generation path; this phase is gauge-invariant modulo $2\pi$ on closed loops by Lemma T.53.2 and supplies the base CKM/PMNS phase of Theorems T.53–T.54 and the Appendix Y CP-odd response datum. The numerical CKM phase $66.7°$ additionally requires the response ansatz of Theorem T.56, and baryon production additionally requires the driven gate of Theorem Y.6.1i. Combining the magnitude from Theorem T.41.4b with the Berry phase gives (T.41.4c.1). ∎
 
 **Definition T.41.4d (Schur-Heat Realization of the Yukawa Magnitude Kernel).** On the retained flavor boundary branch, let the quadratic predictive operator split into visible flavor-boundary and internal blocks,
 $$
@@ -3009,7 +3187,7 @@ $$
 Y_{ij}\propto\left|\langle\psi_i\mid\psi_j\rangle\right|^2\propto\exp\!\left(-\frac{d_B^2}{2\,\sigma_B^2}\right).
 $$
 
-The amplitude-overlap magnitude would instead give $Y_{ij}\propto\exp(-d_B^2/(4\sigma_B^2))$, halving the exponent and yielding $\alpha_{\mathrm{amp}}=1/(32\sigma_B^2)=3/4$ rather than $\alpha_{\mathrm{prob}}=1/(16\sigma_B^2)=3/2$. Theorem T.41.4b rules out the amplitude-overlap replacement on the positive Toeplitz-Kraus transition branch by Definition T.41.4a; complex Berry phases remain in the separate holonomy factor of Corollary T.41.4c and enter the CKM/PMNS sector through Theorem T.56 rather than the Yukawa magnitude.
+The amplitude-overlap magnitude would give $Y_{ij}\propto\exp(-d_B^2/(4\sigma_B^2))$, halving the exponent and yielding $\alpha_{\mathrm{amp}}=1/(32\sigma_B^2)=3/4$ rather than $\alpha_{\mathrm{prob}}=1/(16\sigma_B^2)=3/2$. Theorem T.41.4b rules out the amplitude-overlap replacement on the positive Toeplitz-Kraus transition branch by Definition T.41.4a; complex Berry phases remain in the separate holonomy factor of Corollary T.41.4c. The CKM base holonomy is treated in Theorems T.53–T.54, its optional nonlinear response in Theorem T.56, and the PMNS construction in Theorems T.24.19–T.24.22.
 
 Combining with Lemma T.41.4 gives
 
@@ -3128,13 +3306,13 @@ $$
 
 **Table T.21.1** (Charged leptons: leading-order prediction vs observation).
 
-|Quantity |Prediction|Uncertainty|Observation|Deviation |
+|Quantity |Prediction|Conservative model allowance|Observation|Residual divided by allowance |
 |:-----------------:|:--------:|:---------:|:---------:|:----------:|
-|$\ln(m_\tau/m_\mu)$|$2.836$ |$\pm 0.06$ |$2.822$ |$+0.2\sigma$|
-|$\ln(m_\mu/m_e)$ |$5.672$ |$\pm 0.12$ |$5.332$ |$+2.8\sigma$|
-|$\ln(m_\tau/m_e)$ |$8.508$ |$\pm 0.18$ |$8.154$ |$+2.0\sigma$|
+|$\ln(m_\tau/m_\mu)$|$2.836$ |$\pm 0.06$ |$2.822$ |$+0.23$|
+|$\ln(m_\mu/m_e)$ |$5.672$ |$\pm 0.12$ |$5.332$ |$+2.83$|
+|$\ln(m_\tau/m_e)$ |$8.508$ |$\pm 0.18$ |$8.154$ |$+1.97$|
 
-*Note on uncertainties: The theoretical uncertainties $(\pm 0.06, \pm 0.12, \pm 0.18)$ are estimated as $\sim 2%$ of each prediction, reflecting the combined uncertainty from sinc truncation ($\sim 0.5%$), higher-order curvature terms ($\sim 1%$), and RG running effects ($\sim 0.5%$). Experimental mass uncertainties from Particle Data Group 2024 contribute $< 0.01%$ and are negligible.*
+*Note on allowances: The values $(\pm 0.06, \pm 0.12, \pm 0.18)$ are conservative linear allowances obtained from $0.5\%+1\%+0.5\%=2\%$, rounded at the displayed precision. They are not standard deviations and carry no probabilistic coverage statement. A statistical uncertainty requires probability models and a covariance matrix for the sinc truncation, higher-order curvature terms, and RG contribution. Experimental mass uncertainties from Particle Data Group 2024 contribute $<0.01\%$ and are negligible at this precision.*
 
 The $\tau/\mu$ splitting is reproduced at sub-percent level. The systematic deviations for $\mu/e$ and $\tau/e$ are reduced after adopting the conditional fourth-order coefficient and effective-dimension assignments of Section T.21.8; the agreement does not derive those inputs.
 
@@ -3202,14 +3380,14 @@ $$
 
 This accounts for the $5.5%$ reduction from $\alpha_{\mathrm{UV}} = 3/2$ to $\alpha_{\mathrm{IR}} = 1.418$, matching the empirical extraction $\alpha_{\mathrm{IR}}^{\mathrm{emp}} = 1.411$ within $0.5%$.
 
-The complete hierarchy formula including $\mathcal{O}(d^4)$ corrections is derived in Section T.21.8 **(Theorem T.42.6)**. The fourth-order coefficient $\beta_{\mathrm{geom}}$ arises from the Van Vleck–Morette determinant in the Gaussian overlap integral on Riemannian manifolds [DeWitt 1965], applied to the Grassmannian $\mathrm{Gr}(2,8)$ with Bures metric. The effective sectional curvature $K_{\mathrm{eff}} = 2$ (Theorem Z.24) and Bures variance $\sigma_B^2 = 1/24$ (Lemma T.41.2) combine with the universal Van Vleck coefficient $1/12$ to yield the curvature coefficient $\beta_{\mathrm{geom}} = 1/144 = 1/C$.
+The complete hierarchy formula including $\mathcal{O}(d^4)$ corrections is derived in Section T.21.8 **(Theorem T.42.6)**. The fourth-order coefficient $\beta_{\mathrm{geom}}$ arises from the Van Vleck–Morette determinant in the Gaussian overlap integral on Riemannian manifolds [DeWitt 1965], applied to the Grassmannian $\mathrm{Gr}(2,8)$ with Bures metric. On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, the effective curvature is $K_{\mathrm{eff}}=2$. Together with the Bures variance $\sigma_B^2=1/24$ (Lemma T.41.2) and the Van Vleck coefficient $1/12$, this gives the conditional curvature coefficient $\beta_{\mathrm{geom}}=1/144=1/C$.
 
 The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ encodes the tangent space structure at each geodesic separation, with two regimes determined by the Golay decoding geometry:
 
 - **Sub-threshold** ($d^2 < d^2_{\mathrm{th}} = 4$): Inside unique-decoding basin
 - **Threshold** ($d^2 = d^2_{\mathrm{th}} = 4$): On decoding boundary
 
-*Remark: Hamming-Chordal Correspondence.* The threshold $d^2_{\mathrm{th}} = d_{\min}/2$ arises from the Leech lattice construction (Lemma R.4.5): the $\sqrt{2}$ scaling of $E_8$ in the gluing $\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}}(\sqrt{2}E_8^3 + g_c)$ maps $E_8$ squared distances $d^2_{E_8} \in \{2, 4, 6, 8\}$ to Leech squared distances $\{4, 8, 12, 16\}$. The Hamming-chordal correspondence $h = 2d^2$ (Lemma T.42.4) maps the Golay minimum distance $d_{\min} = 8$ to $E_8$ squared distance $d^2 = 4$. Thus the decoding boundary in Hamming space ($h = d_{\min}$) corresponds exactly to the chordal threshold $d^2_{\mathrm{th}} = d_{\min}/2 = 4$ in $E_8$ geometry.
+*Remark: Conditional Hamming-Chordal Calibration.* The inclusion $\sqrt2E_8\hookrightarrow\Lambda_{24}$ scales Euclidean squared distances but does not canonically assign Golay supports to root pairs. On the marked calibration branch of Lemma T.42.4, the two registered charged-lepton pairs satisfy $h_{ij}=2d_{ij}^2$, so the pair with $d^2=4$ is assigned $h=8=d_{\min}$. This is a branch coordinate assignment. It is not a theorem that $d^2=4$ is a geometric decoding boundary; the Golay unique-decoding radius is $t=3$, and Hamming ties can occur at radius $4$.
 
 -----
 
@@ -3219,10 +3397,10 @@ The following section separates exact path additivity from model inputs. A norma
 
 
 
-The few-percent deviations in Table T.21.1 arise from the $\mathcal{O}(d^4)$ curvature correction on $\mathrm{Gr}(2,8)$. This section provides a complete derivation using:
+The few-percent deviations in Table T.21.1 arise from the $\mathcal{O}(d^4)$ curvature correction on $\mathrm{Gr}(2,8)$. This section provides a conditional derivation using:
 
 1. The Van Vleck–Morette determinant for Gaussian overlaps on curved manifolds [DeWitt 1965]
-1. The effective sectional curvature $K_{\mathrm{eff}} = 2$ imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a)
+1. The intrinsic Bures curvature of $\mathrm{Gr}(2,8)$ together with the democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$, which yields $K_{\mathrm{eff}}=2$ in Theorem Z.24 (Theorem Z.24; Lemma Z.24a)
 1. The Golay decoding partition structure [MacWilliams & Sloane 1977]
 1. The path-additivity principle for generation triangles
 
@@ -3230,41 +3408,52 @@ The few-percent deviations in Table T.21.1 arise from the $\mathcal{O}(d^4)$ cur
 
 ### T.21.8.2 Geometric Coefficient Status
 
-**Lemma T.42.1a** (Curvature Expansion of Gaussian Overlap). *On a Kähler manifold with sectional curvature $K_{\mathrm{sec}}$ in the holomorphic 2-plane, two isotropic Gaussian wavepackets of covariance $\sigma_B^2$ centered at points separated by squared geodesic distance $d^2$ have overlap integral satisfying:*
-
+**Lemma T.42.1a** (Conditional Packet-Overlap Expansion). Let $\mathcal I(d)$ be a specified normalized packet-overlap kernel. Assume that, for $0\le d<d_*$,
 $$
--\ln \mathcal{I}(d^2) = \alpha_{\mathrm{flat}}\,d^2 - \frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4 + \mathcal{O}(d^6).
-$$
-
-*The coefficient $1/12$ is the universal Van Vleck coefficient entering the first curvature correction to the off-diagonal kernel.*
-
-*Proof.* The generation manifold used later is $\mathrm{Gr}(2,8)$, a compact Hermitian symmetric space. In particular it is complete, analytic, has bounded curvature, and satisfies $\nabla R=0$. Therefore the standard short-distance off-diagonal asymptotic expansions of DeWitt (1965) for the Van Vleck–Morette determinant and of Gray–Vanhecke (1979) for geodesic Gaussian integrals apply in a normal-coordinate ball about the geodesic midpoint.
-
-Let $\mathcal I_0(d^2)=\exp(-\alpha_{\mathrm{flat}}\,d^2)$ denote the flat-space overlap of two equal isotropic Gaussians of covariance $\sigma_B^2$. The first curvature correction to the off-diagonal overlap kernel in a holomorphic 2-plane of sectional curvature $K_{\mathrm{sec}}$ has the form
-$$
-\mathcal I(d^2)
+\mathcal I(d)
 =
-\mathcal I_0(d^2)
+e^{-\alpha_{\mathrm{flat}}d^2}
 \left(
-1+\frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4+\mathcal O(d^6)
-\right).
+1+\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4+R_6(d)
+\right),
+\qquad
+|R_6(d)|\le C_6d^6,
 $$
-Taking negative logarithms and using $-\log(1+x)=-x+\mathcal O(x^2)$ gives
+and that the factor in parentheses is positive. Then
 $$
--\log \mathcal I(d^2)
+-\ln\mathcal I(d)
 =
--\log \mathcal I_0(d^2)
--\frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4+\mathcal O(d^6).
+\alpha_{\mathrm{flat}}d^2
+-
+\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4
++
+O(d^6)
 $$
-Since $-\log \mathcal I_0(d^2)=\alpha_{\mathrm{flat}}\,d^2$ and the square of the $d^4$ correction contributes only at order $d^8$, this yields
+as $d\to0$.
+
+*Proof.* Put
 $$
--\ln \mathcal I(d^2)
+x(d)=\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4+R_6(d).
+$$
+The assumptions give $x(d)=O(d^4)$. Taylor's theorem for $\log(1+x)$, on a sufficiently small interval where $1+x>0$, gives
+$$
+\log(1+x(d))=x(d)+O(x(d)^2)
 =
-\alpha_{\mathrm{flat}}\,d^2
--\frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4
-+\mathcal O(d^6).
+\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4+O(d^6),
 $$
-This is the claimed expansion. ∎
+because $R_6(d)=O(d^6)$ and $x(d)^2=O(d^8)$. Therefore
+$$
+-\log\mathcal I(d)
+=
+\alpha_{\mathrm{flat}}d^2-\log(1+x(d))
+=
+\alpha_{\mathrm{flat}}d^2
+-
+\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4
++
+O(d^6).
+$$
+The packet-specific expansion and a bound placing $d^2=2,4$ within its controlled regime must be supplied separately before numerical use. ∎
 
 **Remark T.42.1.1: Universality of 1/12.** *The coefficient $1/12$ is universal across all Riemannian manifolds and appears in:*
 
@@ -3274,23 +3463,27 @@ This is the claimed expansion. ∎
 
 *It does not depend on any framework-specific assumptions beyond the choice of metric.*
 
-### T.21.8.2 Effective Curvature and the Geometric Coefficient
+### T.21.8.2a Effective Curvature and the Geometric Coefficient
 
-**Theorem T.42.2** (Geometric Curvature Coefficient). *The fourth-order geometric correction coefficient is:*
+**Theorem T.42.2** (Conditional Geometric Curvature Coefficient). *Assume the normalized overlap model of Lemma T.42.1a and the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24. Then the fourth-order geometric correction coefficient is:*
 
 $$
 \boxed{\beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\,\sigma_B^2 = \frac{1}{C} = \frac{1}{bM} = \frac{1}{144}}
 $$
 
-*where $K_{\mathrm{eff}} = 2$ is the effective sectional curvature imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a), $\sigma_B^2 = 1/24$ is the Bures variance (Lemma T.41.2), and $C = bM = 144$ is the vacuum capacity (Theorem Z.13a).*
+*Here $K_{\mathrm{eff}}=2$ follows from Theorem Z.24 under the stated visible-response assumption, $\sigma_B^2=1/24$ is the Bures variance (Lemma T.41.2), and $C=bM=144$ is the vacuum capacity (Theorem Z.13a).*
 
 *Proof.*
 
-**Step 1** (Effective curvature from Theorem Z.24). From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a), the effective sectional curvature for interface modes is:
+**Step 1** (Effective curvature on the democratic visible-response branch). Theorem Z.24 defines
 $$
-K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \times \frac{M-1}{ad_0} = \frac{32}{23} \times \frac{23}{16} = 2
+K_{\mathrm{eff}}=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L_{\mathrm{vis}}.
 $$
-This value follows from the symmetric-space structure of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and is reused here because the same Gaussian overlap functional on $\mathrm{Gr}(2,8)$ is being evaluated.
+The symmetric-space geometry fixes $K_{\mathrm{avg}}^{\mathrm{Bures}}=32/23$, while the declared democratic response model supplies $L_{\mathrm{vis}}=1/(ad_0)=1/16$. Therefore
+$$
+K_{\mathrm{eff}}=23\times\frac{32}{23}\times\frac1{16}=2.
+$$
+By Lemma Z.24a, the response factor $L_{\mathrm{vis}}$ is an independent branch input and is not implied by Grassmannian isotropy.
 
 **Step 2** (Bures variance from Lemma T.41.2). Capacity saturation at the PCE-attractor yields:
 $$
@@ -3308,13 +3501,13 @@ $$
 $$
 demonstrates that the curvature correction is naturally scaled by the vacuum capacity—the same quantity governing the Golay code constraint structure. ∎
 
-**Remark T.42.2.1: Structural Unity.** *The identity $\beta_{\mathrm{geom}} = 1/C$ is not a numerical coincidence but reflects deep structural unity:*
+**Remark T.42.2.1: Conditional Coefficient Identity.** *On the democratic visible-response branch, the identity $\beta_{\mathrm{geom}}=1/C$ combines three inputs:*
 
-- *$K_{\mathrm{eff}} = 2 = 4/a$ depends only on the active dimension $a = 2$ (Theorem Z.24)*
-- *$\sigma_B^2 = 1/M$ is fixed by capacity saturation (Lemma T.41.2)*
-- *$C = bM$ is the vacuum capacity from Golay structure (Theorem Z.13a)*
+- *$K_{\mathrm{eff}}=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L_{\mathrm{vis}}=2$ when $L_{\mathrm{vis}}=1/(ad_0)$ (Theorem Z.24)*
+- *$\sigma_B^2=1/M$ is determined by capacity saturation (Lemma T.41.2)*
+- *$C=bM$ is the vacuum capacity from Golay structure (Theorem Z.13a)*
 
-*All three trace to the foundational constants $(K_0, d_0, a, b, M) = (3, 8, 2, 6, 24)$.*
+*The discrete constants are $(K_0,d_0,a,b,M)=(3,8,2,6,24)$; $L_{\mathrm{vis}}$ is a separate response-model input.*
 
 ### T.21.8.3 $E_8$ Generation Triangle and Path Additivity
 
@@ -3362,23 +3555,26 @@ The role of the $E_8$ triangle geometry is only to explain why the adjacent edge
 
 ### T.21.8.5 Model Assignment of Effective Dimension
 
-**Definition T.42.3a** (Golay-Chordal Threshold). *The Golay code $\mathcal{G}_{24}$ has minimum distance $d_{\min} = 8$. Under the Leech–Golay correspondence (Lemma T.42.4), the threshold chordal distance on $\mathrm{Gr}(2,8)$ is:*
-
+**Definition T.42.3a (Marked-Branch Chordal Coordinate).** On the marked Hamming-chordal calibration branch of Lemma T.42.4, define
 $$
-d^2_{\mathrm{th}} = \frac{d_{\min}}{2} = 4
+d_{\mathrm{th}}^2:=\frac{d_{\min}}2=4.
+$$
+This symbol records the pair assigned $h=d_{\min}$; it does not identify the Golay unique-decoding radius or derive a Grassmannian geometric threshold.
+
+**Lemma T.42.4** (Conditional Hamming-Chordal Calibration). Fix a marked Leech construction, a specified embedding $\sqrt2E_8\hookrightarrow\Lambda_{24}$, and a map from each generation pair to a binary representative in the associated Golay frame. Assume that the marked representatives satisfy
+$$
+h_{ij}=2d_{ij}^2
+$$
+for the two charged-lepton pairs used in the hierarchy calculation. Then
+$$
+(d_{\tau\mu}^2,d_{\mu e}^2)=(2,4)
+\quad\Longrightarrow\quad
+(h_{\tau\mu},h_{\mu e})=(4,8).
 $$
 
-**Lemma T.42.4** (Hamming-Chordal Correspondence). *Under the embedding $\sqrt{2}E_8 \hookrightarrow \Lambda_{24}$ [Conway & Sloane 1999], the $E_8$ squared distance $d^2$ maps to Golay Hamming distance $h$ via:*
+*Proof.* Substitute $d_{\tau\mu}^2=2$ and $d_{\mu e}^2=4$ into the assumed marked-pair calibration $h_{ij}=2d_{ij}^2$. This gives $h_{\tau\mu}=4$ and $h_{\mu e}=8$. The lattice inclusion alone supplies no Hamming-support map. ∎
 
-$$
-h = 2d^2
-$$
-
-*The charged-lepton distances $(d^2_{\tau\mu}, d^2_{\mu e}) = (2, 4)$ correspond to Hamming separations $(4, 8)$.*
-
-*Proof.* The Leech lattice $\Lambda_{24}$ contains $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ as a sublattice, scaled so that $E_8$ root vectors have squared norm $4$ in Leech coordinates. For two $E_8$ roots at squared distance $d^2$, the corresponding Leech vectors differ in $h = 2d^2$ coordinates of the 24-bit Golay frame. ∎
-
-### T.21.8.5 Two Geodesic Regimes and Effective Dimension
+### T.21.8.5a Two Geodesic Regimes and Effective Dimension
 
 The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ quantifies how many independent directions contribute to the quartic curvature correction.
 
@@ -3403,56 +3599,47 @@ $$
 D_{\mathrm{eff}} = \frac{t}{d_{\min}} = \frac{3}{8}
 $$
 
-*Proof.*
-
-**Step 1** (Hamming distance). Under the correspondence of Lemma T.42.4, $d^2 = 2$ maps to Hamming distance $h = 4 < d_{\min} = 8$.
-
-**Step 2** (Unique syndrome region). The Golay code has minimum distance $d_{\min} = 8$. For $h = 4 < d_{\min}$, the syndrome uniquely identifies the error coset—no codeword lies within Hamming distance $h$ of another codeword, ensuring unambiguous syndrome decoding even though $h > t$.
-
-**Step 3** (Tangent space decomposition). The $M = 24$ interface modes decompose under the Golay syndrome structure:
-
-- **Correctable directions** ($\dim = t = 3$): Error patterns of weight $\leq t$ with distinct syndromes
-- **Non-contributing directions** ($\dim = 24 - t = 21$): Directions that do not change the syndrome or lie outside the correction ball
-
-**Step 4** (QFI weighting and branch assignment). By the isotropy of the Bures metric (Theorem Z.5, Step 6), all interface modes have equal QFI weight $\lambda_i = 1$. Within the unique-decoding basin ($h < d_{\min}$), the $t$ correctable error directions carry independent curvature-sensitive syndrome labels, and the remaining $M-t$ directions are syndrome-degenerate within the decoding ball.
-
-On the Golay assignment branch introduced in the statement of this theorem, the effective dimension entering the Van Vleck curvature correction is assigned by the ratio of curvature-sensitive directions to the full syndrome-resolution scale:
+*Proof.* On the marked Hamming-chordal calibration branch of Lemma T.42.4, $d^2=2$ is assigned $h=4$. The extended Golay code has
 $$
-D_{\mathrm{eff}} = \frac{\dim(\text{curvature-sensitive tangent directions})}{\dim(\text{syndrome resolution scale})} = \frac{t}{d_{\min}} = \frac{3}{8}.
+d_{\min}=8,
+\qquad
+t=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor=3.
 $$
+Thus $h=4$ lies outside the guaranteed unique-decoding ball. No unique-syndrome-leader conclusion follows at this weight.
 
-The denominator $d_{\min} = 8$ is the full syndrome resolution scale (minimum distance of $\mathcal{G}_{24}=[24,12,8]$), while the numerator $t = 3$ is the Golay error-correction capacity that fixes the number of independent correctable directions [Conway & Sloane 1999]. The numerical identification of this ratio with the Van Vleck effective dimension is the branch rule; the Golay data $(t, d_{\min})$ are theorem-level inputs. ∎
+The Golay effective-dimension branch separately defines the model assignment
+$$
+D_{\mathrm{eff}}(2)
+:=
+\frac{t}{d_{\min}}
+=
+\frac38.
+$$
+The Golay parameters determine the numerical ratio, while its use as a Van Vleck effective dimension is an independent branch rule. ∎
 
 -----
 
 **Regime II: Threshold** ($d^2 = d^2_{\mathrm{th}}$, exemplified by $d^2 = 4$).
 
-**Theorem T.42.5b** (Threshold Effective Dimension). *For $d^2 = 4$, the geodesic lies on the decoding boundary where syndrome ambiguity first appears. The effective dimension is:*
-
+**Theorem T.42.5b** (Threshold-Branch Effective-Dimension Assignment). On the Golay effective-dimension branch, define
 $$
-D_{\mathrm{eff}} = \frac{k + 1}{b} = \frac{13}{6}
+D_{\mathrm{eff}}(4)
+:=
+\frac{k+1}{b}
+=
+\frac{13}{6},
 $$
+where $k=12$ and $b=6$.
 
-*Proof.*
-
-**Step 1** (Boundary identification). Under the correspondence of Lemma T.42.4, $d^2 = 4$ maps to $h = 8 = d_{\min}$. This is the decoding boundary—the locus where pairs of codewords become equidistant from the error pattern.
-
-**Step 2** (Linear map rank at threshold). The syndrome map $s: \mathbb{F}_2^{24} \to \mathbb{F}_2^{12}$ defined by $s(e) = He^T$ has rank $k = 12$, equal to the dimension of the parity-check matrix $H$. At the decoding boundary, the syndrome space is fully explored. Additionally, the radial direction (normal to the boundary) contributes one independent mode.
-
-**Step 3** (Independent directions). At the threshold boundary:
-
-- Tangential Jacobian rank: $k = 12$
-- Radial direction: $+1$
-- Total: $k + 1 = 13$ independent directions
-
-**Step 4** (PCE distribution over inactive modes and branch assignment). The $M = 24$ interface modes connect active ($a = 2$) to inactive ($b = 6$) subspaces (Theorem Z.1). At the decoding boundary, the syndrome map has full rank $k=12$ and the radial boundary mode adds $+1$, giving $k+1=13$ independent directions (Steps 2–3). By QFI isotropy at the attractor (Theorem Z.5, Step 5), no inactive direction is distinguished; therefore these $k+1$ threshold directions distribute uniformly across the $b$ inactive channels.
-
-On the Golay assignment branch, the effective per-channel dimension entering the Van Vleck curvature correction is assigned by:
+*Proof.* The marked Hamming-chordal calibration assigns $d^2=4$ the value $h=8=d_{\min}$. This identifies the code's minimum nonzero codeword separation, not the unique-decoding radius; the latter is $t=3$, with possible ties beginning at radius $4$. The effective-dimension value is therefore not a consequence of decoder-boundary geometry. It is the declared branch assignment
 $$
-D_{\mathrm{eff}} = \frac{k + 1}{b} = \frac{13}{6} \approx 2.167.
+\frac{k+1}{b}
+=
+\frac{12+1}{6}
+=
+\frac{13}{6}.
 $$
-
-The numerical identification of this ratio with the Van Vleck effective dimension at the decoding threshold is the branch rule; the Golay data $(k, b)$ are theorem-level inputs. ∎
+No tangent-rank conclusion follows from the binary syndrome-map rank without an additional geometric bridge. ∎
 
 
 
@@ -3462,99 +3649,86 @@ The numerical identification of this ratio with the Van Vleck effective dimensio
 
 ### T.21.8.6 Conditional Hierarchy Model
 
-**Theorem T.42.6** (Fourth-Order Corrected Mass Hierarchy). *The charged-lepton mass hierarchy including the $\mathcal{O}(d^4)$ curvature correction is:*
-
+**Theorem T.42.6 (Conditional Fourth-Order Charged-Lepton Model).** Assume the six branch entries of Theorem T.42.7, including a specified normalized packet kernel with expansion radius $d_*$ and certified logarithmic remainder $\mathcal R_6(d)$; assume $\sqrt2<d_*$ and $2<d_*$ for the two registered separations; and assume the marked pair assignments $d_{\tau\mu}^2=2$, $d_{\mu e}^2=4$. Then
 $$
-\boxed{\ln\!\left(\frac{m_j}{m_i}\right) = \alpha_{\mathrm{IR}}\,d^2_{ij} - \frac{\alpha_{\mathrm{IR}}}{C} \cdot D_{\mathrm{eff}}(d^2_{ij}) \cdot d^4_{ij} + \mathcal{O}(d^6)}
+\ln\!\left(\frac{m_j}{m_i}\right)
+=\alpha_{\mathrm{IR}}d_{ij}^2
+-\frac{\alpha_{\mathrm{IR}}}{C}
+D_{\mathrm{eff}}(d_{ij}^2)d_{ij}^4
++\mathcal R_6(d_{ij}),
+$$
+where $C=144$, $D_{\mathrm{eff}}(2)=3/8$, and $D_{\mathrm{eff}}(4)=13/6$ are the declared branch values. Path additivity gives
+$$
+\ln\!\left(\frac{m_\tau}{m_e}\right)
+=\ln\!\left(\frac{m_\tau}{m_\mu}\right)
++\ln\!\left(\frac{m_\mu}{m_e}\right).
 $$
 
-*applied to adjacent generation pairs $(\tau, \mu)$ and $(\mu, e)$. The $\tau/e$ ratio is computed via path additivity (Theorem T.42.2a):*
+*Proof.* The effective Lemma T.42.1a gives the logarithmic expansion inside $d<d_*$. Theorem T.42.2 supplies the registered quartic coefficient $1/C$ on its packet-normalization branch, and the effective T.42.5 results supply the two model assignments for $D_{\mathrm{eff}}$. The two radius hypotheses license evaluation at $d=\sqrt2$ and $d=2$. Substitution gives the adjacent-pair equations, and the logarithmic identity of Theorem T.42.2a gives the path sum. ∎
 
-$$
-\ln\!\left(\frac{m_\tau}{m_e}\right) = \ln\!\left(\frac{m_\tau}{m_\mu}\right) + \ln\!\left(\frac{m_\mu}{m_e}\right)
-$$
+**Zero-Remainder Central Truncation:**
 
-*where:*
-
-- *$\alpha_{\mathrm{IR}} = 1.418$ (Theorem T.24.2.1)*
-- *$C = bM = 144$ (Theorem Z.13a)*
-- *$D_{\mathrm{eff}}(d^2)$ is the effective geodesic dimension (Theorem T.42.5)*
-
-*Proof.* The formula combines:
-
-- Lemma T.42.1a (Van Vleck expansion with universal $1/12$ factor)
-- Theorem T.42.2 ($\beta_{\mathrm{geom}} = (K_{\mathrm{eff}}/12)\sigma_B^2 = 1/C$)
-- Theorem T.42.5 ($D_{\mathrm{eff}}$ in each regime)
-- Theorem T.42.2a (path additivity for $\tau/e$)
-
-The effective correction coefficient is $\beta_{\mathrm{eff}} = (\alpha_{\mathrm{IR}}/C) \cdot D_{\mathrm{eff}}$. ∎
-
-**Numerical Evaluation:**
-
-|Ratio |$d^2$|Regime |$D_{\mathrm{eff}}$|$d^4$|Correction|Prediction|
+|Ratio |$d^2$|Assigned regime |$D_{\mathrm{eff}}$|$d^4$|Quartic term|Central value with $\mathcal R_6=0$|
 |:--------:|:---:|:-----------:|:----------------:|:---:|:--------:|:--------:|
-|$\tau/\mu$|$2$ |Sub-threshold|$3/8$ |$4$ |$0.0148$ |$2.8212$ |
-|$\mu/e$ |$4$ |Threshold |$13/6$ |$16$ |$0.3414$ |$5.3306$ |
+|$\tau/\mu$|$2$ |Marked sub-threshold branch|$3/8$ |$4$ |$0.0148$ |$2.8212$ |
+|$\mu/e$ |$4$ |Marked threshold branch|$13/6$ |$16$ |$0.3414$ |$5.3306$ |
 |$\tau/e$ |— |Path sum |— |— |— |$8.1518$ |
 
-**Detailed Calculations:**
-
+Setting the uncalibrated remainder to zero gives
 $$
 \begin{aligned}
-\ln(m_\tau/m_\mu) &= 1.418 \times 2 - \frac{1.418}{144} \times \frac{3}{8} \times 4 = 2.836 - 0.0148 = 2.8212 \\[6pt]
-\ln(m_\mu/m_e) &= 1.418 \times 4 - \frac{1.418}{144} \times \frac{13}{6} \times 16 = 5.672 - 0.3414 = 5.3306 \\[6pt]
-\ln(m_\tau/m_e) &= 2.8212 + 5.3306 = 8.1518 \quad \text{(path sum)}
+\ln(m_\tau/m_\mu)_{\mathrm{central}}
+&=1.418\cdot2-\frac{1.418}{144}\frac38\cdot4=2.8212,\\
+\ln(m_\mu/m_e)_{\mathrm{central}}
+&=1.418\cdot4-\frac{1.418}{144}\frac{13}{6}\cdot16=5.3306,\\
+\ln(m_\tau/m_e)_{\mathrm{central}}
+&=2.8212+5.3306=8.1518.
 \end{aligned}
 $$
 
-**Comparison with Particle Data Group 2024 values** $(m_\tau, m_\mu, m_e) = (1776.86, 105.66, 0.5110)$ MeV:
+**Retrospective comparison with the quoted mass inputs:**
 
-|Quantity |Prediction|Observation|Deviation|
+|Quantity |Central truncation|Quoted value|Difference|
 |:-----------------:|:--------:|:---------:|:-------:|
-|$\ln(m_\tau/m_\mu)$|$2.8212$ |$2.8224$ |$-0.04%$ |
-|$\ln(m_\mu/m_e)$ |$5.3306$ |$5.3316$ |$-0.02%$ |
-|$\ln(m_\tau/m_e)$ |$8.1518$ |$8.1540$ |$-0.03%$ |
+|$\ln(m_\tau/m_\mu)$|$2.8212$ |$2.8224$ |$-0.04\%$ |
+|$\ln(m_\mu/m_e)$ |$5.3306$ |$5.3316$ |$-0.02\%$ |
+|$\ln(m_\tau/m_e)$ |$8.1518$ |$8.1540$ |$-0.03\%$ |
 
-All predictions agree with observation to better than $0.05%$, with path additivity automatically satisfied. ∎
+These are calibration residuals of the zero-remainder central truncation. Prediction intervals require a preregistered marked map, effective-dimension assignment, coefficient, and certified bounds for $\mathcal R_6(\sqrt2)$ and $\mathcal R_6(2)$. Path additivity is an exact logarithmic identity once the two adjacent values are supplied. ∎
 
 **Corollary T.42.6a** (Electron Mass from Tau Mass). *Given the tau mass $m_\tau = 1776.86$ MeV, the electron mass is:*
 
 $$
-m_e = m_\tau \times \exp\!\left(-8.1518\right) = 1776.86 \times 2.881 \times 10^{-4}\,\mathrm{MeV} = 0.5120\,\mathrm{MeV}
+m_e = m_\tau \times \exp\!\left(-8.1518\right) = 1776.86 \times 2.8821610 \times 10^{-4}\,\mathrm{MeV} = 0.5121197\,\mathrm{MeV}.
 $$
 
-*in agreement with the PDG value $m_e = 0.5110$ MeV within $0.2%$.*
+*Relative to the PDG value $m_e = 0.510998950$ MeV, the branch value is higher by $0.219\%$.*
 
 ### T.21.8.7 Parameter and Certificate Ledger
 
-**Theorem T.42.7** (Zero Continuously Adjustable Parameters Within PU Framework). *Given the foundational axioms of the Predictive Universe framework—specifically SPAP encodability (Theorem 15) and the Landauer thermodynamic cost $\varepsilon_0=\ln2$ (Theorem Z.1)—the hierarchy formula contains no additional continuously adjustable parameters. Every coefficient traces to the Horizon Constant $K_0 = 3$:*
+**Theorem T.42.7** (Conditional Hierarchy-Parameter Ledger). Once the following branch entries are specified before comparison,
 
-**Stage 1: Structural constants**
-$$
-K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 24
-$$
+1. the structural tuple $(K_0,d_0,a,b,M)=(3,8,2,6,24)$;
+2. the Bures metric and packet-width normalization;
+3. the hierarchy response coefficient $\alpha_{\mathrm{IR}}$;
+4. a normalized packet-overlap expansion with controlled remainder;
+5. a marked Hamming-chordal correspondence; and
+6. the effective-dimension assignments $D_{\mathrm{eff}}(2)=3/8$ and $D_{\mathrm{eff}}(4)=13/6$,
 
-**Stage 2: Hierarchy coefficients**
-$$
-M = 24 \xrightarrow{\text{Lem T.41.2}} \sigma_B^2 = \frac{1}{24} \xrightarrow{\text{Cor T.41.3}} \alpha_{\mathrm{UV}} = \frac{3}{2} \xrightarrow{\text{Thm T.24.2.1}} \alpha_{\mathrm{IR}} = 1.418
-$$
+the displayed charged-lepton logarithms are determined with no further continuous fit.
 
-**Stage 3: Curvature correction**
+*Proof.* Substitution of the registered entries into Theorem T.42.6 fixes each term in
 $$
-K_{\mathrm{eff}} = 2 \xrightarrow{\text{Thm Z.24}} \beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\sigma_B^2 = \frac{1}{144} = \frac{1}{C}
+\ln(m_j/m_i)
+=
+\alpha_{\mathrm{IR}}d_{ij}^2
+-
+\frac{\alpha_{\mathrm{IR}}}{144}
+D_{\mathrm{eff}}(d_{ij}^2)d_{ij}^4
++
+R_6(d_{ij}).
 $$
-
-**Stage 4: Effective dimension (from Golay structure)**
-$$
-\mathcal{G}_{24}[24,12,8] \xrightarrow{\text{Def T.1a}} (t, d_{\min}, k) = (3, 8, 12) \xrightarrow{\text{Thm T.42.5}} D_{\mathrm{eff}}(d^2)
-$$
-
-**Remark T.42.7.1: Meaning of “Zero Continuously Adjustable Parameters Within PU Framework”.** *The statement “zero continuously adjustable parameters” must be understood in context:*
-
-- *The PU framework itself rests on foundational axioms: SPAP encodability (which yields $K_0 = 3$), the Landauer thermodynamic cost ($\varepsilon_0=\ln2$), and standard Riemannian geometry on the state manifold.*
-- *Given these axioms, the charged-lepton mass hierarchy predictions follow deterministically with no additional fitting or adjustment.*
-- *This is analogous to how the Standard Model, given its gauge structure and particle content, makes parameter-free predictions for certain ratios—but the gauge structure itself is an input.*
-- *The PU framework's claim is that $(K_0, \varepsilon) = (3, \ln 2)$ are not arbitrary choices but follow from logical (SPAP) and thermodynamic (Landauer) necessity. The mass hierarchy predictions then test this claim against observation.*
+If the remainder certificate fixes $R_6$, no free coefficient remains in this formula. The theorem is conditional on the six entries and does not derive them solely from $K_0$ and $\varepsilon_0$. ∎
 
 ### T.21.8.8 Conditional Extension to the Quark Sector
 
@@ -3566,7 +3740,7 @@ $$
 
 *where $c_f$ is the sector prefactor (Theorem T.38) and $(d^2_{32,f}, d^2_{21,f})$ are the adjacent-generation $E_8$ distances for sector $f$.*
 
-**Remark T.42.8.1: QCD Corrections.** *Quark-sector predictions apply to short-distance Yukawa eigenvalues (or $\overline{\text{MS}}$ masses) at the matching scale $\mu_G$. A precision comparison to quoted masses requires SM RG evolution to $\mu_{\mathrm{EW}}$, QCD decoupling at heavy thresholds, and multi-loop running in a fixed scheme; the explicit protocol and T1/T2/T3 uncertainty decomposition are given in Section T.25.5.3. Same-scale hierarchy invariants provide a controlled intermediate diagnostic under common-scheme reduction (Section T.25.5.4), and the down-sector $A_2/D_4$ frustration correction is derived in Section T.25.6a with a matching uncertainty budget (Section T.25.6a.10).*
+**Remark T.42.8.1: QCD Corrections.** *Quark-sector predictions apply to short-distance Yukawa eigenvalues (or $\overline{\text{MS}}$ masses) at the matching scale $\mu_G$. A precision comparison to quoted masses requires SM RG evolution to $\mu_{\mathrm{EW}}$, QCD decoupling at heavy thresholds, and multi-loop running in a specified scheme; the explicit protocol and T1/T2/T3 uncertainty decomposition are given in Section T.25.5.3. Same-scale hierarchy invariants provide a controlled intermediate diagnostic under common-scheme reduction (Section T.25.5.4), and the down-sector $A_2/D_4$ frustration correction is derived in Section T.25.6a with a matching uncertainty budget (Section T.25.6a.11).*
 
 -----
 
@@ -3787,8 +3961,8 @@ $$
 3y_t^2 + \frac{5}{2}y_\tau^2 - \frac{9}{4}g_2^2 - \frac{9}{4}g_1^2
 \right],
 $$
-and we include the full two-loop contributions in the numerical integration below. Neglecting $y_b$ and lighter Yukawas (numerically irrelevant for $\eta_\tau$ at the stated precision), the PU boundary conditions at $\mu_G$ are fixed by
-$g_i^2(\mu_G)=g_U^2/Z_i$ with $g_U^2=\pi/6$ (Theorem T.39a), $Z_i=1+\Delta_i/24$ from the lifted spectral threshold data (Definition T.17a), together with $y_t(\mu_G)=0.392$ for the validation threshold tuple of Remark T.26.2 and $\lambda(\mu_G)=0$.
+and we include the full two-loop contributions in the numerical integration below. Neglecting $y_b$ and lighter Yukawas (numerically irrelevant for $\eta_\tau$ at the stated precision), the gauge part of the matching-scale boundary is
+$g_i^2(\mu_G)=g_U^2/Z_i$ with $g_U^2=\pi/6$ (Theorem T.39a) and $Z_i=1+\Delta_i/24$ from the lifted spectral threshold data (Definition T.17a). The displayed validation integration separately inserts $y_t(\mu_G)=0.392$ from the validation tuple of Remark T.26.2 and the external SM trajectory input $\lambda_{\mathrm{SM}}(\mu_G)=0$. Neither value is derived from the threshold triplet; a predictive Higgs boundary would require the matching and criticality records of Definition T.25.2 and Theorem T.26.
 
 **Step 2 (Two-loop integration with explicit electroweak matching).** The symmetric-phase SM RGEs are matched onto the low-energy effective description at an electroweak scale $\mu_{\rm EW}$ as a scheme choice: evolve with full SM RGEs for $\mu\in[\mu_G,\mu_{\rm EW}]$, and for $\mu<\mu_{\rm EW}$ decouple the top Yukawa by setting $y_t(\mu)=0$ in the beta functions while continuing to evolve $\{g_1^2,g_2^2,g_3^2,\lambda,y_\tau^2\}$ down to $\mu=m_\tau$.
 
@@ -4065,7 +4239,7 @@ Path additivity is exact once adjacent-edge values are supplied. It does not der
 - **Sub-threshold** ($d^2 < 4$): Inside unique-decoding basin; $D_{\mathrm{eff}} = t/d_{\min} = 3/8$.
 - **Threshold** ($d^2 = 4$): On decoding boundary; $D_{\mathrm{eff}} = (k+1)/b = 13/6$.
 
-Path additivity (Theorem T.42.2a) ensures $\ln(m_\tau/m_e) = \ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$ exactly. The curvature coefficient $\beta_{\mathrm{geom}} = K_{\mathrm{eff}}/(12)\sigma_B^2 = 1/C = 1/144$ follows from the Van Vleck expansion [Gray & Vanhecke 1979] with $K_{\mathrm{eff}} = 2$ (Theorem Z.24). All three charged-lepton mass ratios are reproduced to $< 0.05%$ with no additional free parameters beyond the PU framework axioms.
+Path additivity (Theorem T.42.2a) ensures $\ln(m_\tau/m_e) = \ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$ exactly. On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, the conditional value $K_{\mathrm{eff}}=2$ gives $\beta_{\mathrm{geom}}=K_{\mathrm{eff}}\sigma_B^2/12=1/144$ in the declared Van Vleck model. The displayed sub-$0.05\%$ comparisons are conditional on that response input, the registered hierarchy coefficient, the effective-dimension assignments, and controlled higher-order remainders; they are not zero-adjustable-parameter consequences of the PU axioms.
 
 -----
 
@@ -4084,12 +4258,12 @@ All quantities trace to established theorems:
 |$K_0$ |$3$ |Theorem 15 |Horizon Constant (SPAP encodability) |
 |$N_{\mathrm{vis}}^{\min}$ |$8$ |Theorem 15 |$2^{K_0}$ |
 |$d_0$ |$8$ |Theorem 23; Theorem Z.2 |$d_0=N_{\mathrm{vis}}^{\min}$ on the minimal complex Hilbert branch |
-|$(a, b)$ |$(2, 6)$ |Theorem Z.1 |Landauer cost $\varepsilon_0=\ln2$ |
+|$(a, b)$ |$(2, 6)$ |Theorem Z.1; Theorem Z.2 |Structural binary record, sharp match/mismatch admissibility, $d_0=8$, and PPI/PCE no-surplus selection |
 |$(\kappa_1^*,\kappa_2^*,\kappa_3^*)$|$(0.695,0.729,1.140)$|Corollary T.34.2 |PCE optimum with normalization constraint |
 |$g_U^2$ |$\pi/6$ |Theorem T.39a |Holonomy per mode $2\pi/M$ |
 |$\mathcal{N}_{PU}$ |$1/(72\sqrt{12})$ |Section T.21.11 |Democratic × capacity × isotropy |
 |$M$ |$24$ |Theorem Z.5 |$2ab$ (QFI-active modes) |
-|$K_{\mathrm{eff}}$ |$2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) |Theorem Z.24 |$K_{\mathrm{avg}}^{\mathrm{Bures}} \times (M-1)/(ad_0)$ from the symmetric-space geometry (Lemma Z.24a) |
+|$K_{\mathrm{eff}}$ |$2$ on the democratic visible-response branch |Theorem Z.24; Lemma Z.24a |$(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L_{\mathrm{vis}}$ with the independent input $L_{\mathrm{vis}}=1/(ad_0)$ |
 |$\sigma_B^2$ |$1/24$ |Lemma T.41.2 |Capacity saturation |
 |$1/12$ |Universal |Van Vleck–Morette|World-function expansion coefficient |
 |$\beta_{\mathrm{geom}}$ |$1/144$ |Theorem T.42.2 |$(K_{\mathrm{eff}}/12)\sigma_B^2 = 1/C$ |
@@ -4108,7 +4282,11 @@ K_0 = 3 \to d_0 = 8 \to (a,b) = (2,6) \to M = 24 \to \sigma_B^2 = \frac{1}{24} \
 $$
 
 $$
-K_{\mathrm{eff}} = 2 \xrightarrow{\text{Van Vleck}} \beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\sigma_B^2 = \frac{1}{144} = \frac{1}{C}
+L_{\mathrm{vis}}=\frac1{ad_0}
+\xrightarrow{\text{Thm Z.24}}
+K_{\mathrm{eff}}=2
+\xrightarrow{\text{Van Vleck; Thm T.42.2}}
+\beta_{\mathrm{geom}}=\frac{K_{\mathrm{eff}}}{12}\sigma_B^2=\frac1{144}=\frac1C
 $$
 
 $$
@@ -4143,7 +4321,7 @@ Path additivity (Theorem T.42.2a) guarantees this identity is satisfied exactly 
 
 ## T.22.1 Conditional CKM-Model Status
 
-The CKM construction is a geometric flavor model whose triads, packet widths, sector weights, holonomies, threshold maps, phases, and remainder intervals must be fixed before a forward comparison. Unitarity identities and arithmetic evaluation are exact after those inputs are supplied. The observed matrix is not completely derived while the flavor certificate of Section T.79 remains open.
+The CKM construction is a geometric flavor model whose triads, packet widths, sector weights, holonomies, threshold maps, phases, and remainder intervals must be specified before a forward comparison. Unitarity identities and arithmetic evaluation are exact after those inputs are supplied. The observed matrix is not completely derived while the flavor certificate of Theorem T.79 remains open.
 
 
 
@@ -4154,12 +4332,14 @@ The derivation proceeds through a unified framework with two limiting regimes:
 1. **Heavy-generation mixing** (3↔1, 3↔2): Gaussian overlap suppression on the generation manifold Gr(2,8)
 1. **Light-generation mixing** (1↔2): Geometric frustration between incompatible lattice symmetries
 
-All parameters trace to prior derivations:
+The model uses the following prior branch entries:
 
-- Hierarchy coefficient α = 3/2 from capacity saturation (Corollary T.41.3)
-- $E_8$ triad distances from Section T.21.9.1
-- Generation count $N_g = 3$ from Theorem R.3.4 and Proposition R.3.5.1a, with Proposition R.4.2 supplying triality/$E_8$/Leech compatibility
-- Sector stiffness ratio κ_d/κ_u = 1.02 from Theorem T.38
+- hierarchy coefficient $\alpha=3/2$ on the packet-width and Schur-normalization branch of Corollary T.41.3;
+- registered $E_8$ triad distances from Section T.21.9.1;
+- $N_g=3$ from the anomaly/CP minimality class of Theorem R.3.4 together with the additive-monotone selection branch of Proposition R.3.5.1a; and
+- sector stiffness ratio $\kappa_d/\kappa_u=1.02$ on the normalization branch of Theorem T.38.
+
+Proposition R.4.2 supplies triality/$E_8$/Leech compatibility, not an independent family-count derivation.
 
 -----
 
@@ -4293,16 +4473,13 @@ $$
 
 ### T.22.4.1 Mixing Amplitude Formula
 
-**Theorem T.46** (Heavy-Generation Mixing Amplitude). *For transitions involving generation 3, the CKM amplitude in the dominant sector f is:*
-
-$$|V_{3j}| = \sqrt{\frac{d^2_{3j,f}}{N_g}} \times \exp\left(-\alpha \cdot d^2_{\mathrm{ref}}\right)$$
-
-*where:*
-
-- *d²_{3j,f} is the $E_8$ distance in sector f ∈ {up, down}*
-- *d²_ref = min(d²_{3j,d}, d²_{3j,u}) is the least-suppressed channel*
-- *α = 3/2 (Corollary T.41.3)*
-- *$N_g = 3$ (Theorem R.3.4; Proposition R.3.5.1a)*
+**Theorem T.46 (Conditional Heavy-Generation Mixing Amplitude).** Assume the additive-monotone family-count branch of Proposition R.3.5.1a, the registered sector distances, the CKM geometric-prefactor convention $\sin^2\theta=d^2/N_g$, and the Gaussian-overlap response branch with coefficient $\alpha$. Then
+$$
+|V_{3j}|
+=\sqrt{\frac{d_{3j,f}^2}{N_g}}
+\exp(-\alpha d_{\mathrm{ref}}^2),
+$$
+where $d_{\mathrm{ref}}^2=\min(d_{3j,d}^2,d_{3j,u}^2)$. On the selected family branch $N_g=3$; on the Corollary-T.41.3 normalization branch $\alpha=3/2$.
 
 *Proof.*
 
@@ -4347,10 +4524,10 @@ $$|V_{cb}| = \sqrt{\frac{2}{3}} \times e^{-3} = 0.0407$$
 - d²_{32,u} = 4 (up-sector distance)
 - d²_ref = min(2, 4) = 2
 
-From established framework:
+On the branch hypotheses of Theorem T.46:
 
-- $N_g = 3$ (Theorem R.3.4; Proposition R.3.5.1a)
-- α = 3/2 (Corollary T.41.3)
+- $N_g=3$ follows from Theorem R.3.4 together with the additive-monotone selection branch of Proposition R.3.5.1a;
+- $\alpha=3/2$ is the Corollary-T.41.3 packet-width and Schur-normalization assignment.
 
 **Step 2 (Geometric prefactor).**
 $$\sqrt{\frac{d^2_{32,d}}{N_g}} = \sqrt{\frac{2}{3}} = 0.81650$$
@@ -4405,7 +4582,7 @@ $$V_{ub} = A_d + A_u e^{i(\phi_u - \phi_d)} = A_d + A_u e^{i(\pi - \delta)} = A_
 Taking the modulus squared:
 $$|V_{ub}|^2 = |A_d|^2 + |A_u|^2 - 2\mathrm{Re}[A_d^* A_u e^{-i\delta}] = |A_d|^2 + |A_u|^2 - 2|A_d||A_u|\cos\delta$$
 
-**Step 5 (Numerical evaluation).** With δ = 66.7° (Theorem T.56):
+**Step 5 (Numerical evaluation on the nonlinear phase-response branch).** With $\delta=66.7°$ under the independently registered ansatz of Theorem T.56:
 $$|A_d|^2 = (0.00286)^2 = 8.19 \times 10^{-6}$$
 $$|A_u|^2 = (0.00405)^2 = 1.64 \times 10^{-5}$$
 $$-2|A_d||A_u|\cos(66.7°) = -2(0.00286)(0.00405)(0.3955) = -9.15 \times 10^{-6}$$
@@ -4419,7 +4596,9 @@ $$|V_{ub}|_{\mathrm{PDG24}}=0.003732^{+0.000090}_{-0.000085}$$
 |:-------|:-----:|:---------------:|:-------:|
 |$\lvert V_{ub}\rvert$ | $0.00392$ | $0.003732^{+0.000090}_{-0.000085}$ | $+2.1\sigma$ |
 
-**Corollary T.48.1** (Interference Sign on the Declared Phase Branch). Once the independent hypothesis $\phi_u-\phi_d=\pi-\delta$ is fixed, $e^{i(\pi-\delta)}=-e^{-i\delta}$ and the cross term is $-2|A_d||A_u|\cos\delta$. The minus sign follows algebraically on that branch; the present construction does not derive the phase hypothesis from the Berry half-surface relation. ∎
+∎
+
+**Corollary T.48.1** (Interference Sign on the Declared Phase Branch). Once the independent hypothesis $\phi_u-\phi_d=\pi-\delta$ is declared, $e^{i(\pi-\delta)}=-e^{-i\delta}$ and the cross term is $-2|A_d||A_u|\cos\delta$. The minus sign follows algebraically on that branch; the present construction does not derive the phase hypothesis from the Berry half-surface relation. ∎
 
 -----
 
@@ -4553,7 +4732,7 @@ $$|V_{us}|_{\mathrm{PDG24}}=0.22501\pm0.00068$$
 
 ∎
 
-**Remark T.52.1: Sensitivity to Stiffness Ratio.** *The predicted $\vert V_{us}\vert$ depends on the stiffness ratio $\kappa_d/\kappa_u$. For $c_d/c_u$ in the range [1.00, 1.02] from Theorem T.38:*
+**Remark T.52.1: Sensitivity to Stiffness Ratio.** *The branch value $\vert V_{us}\vert$ depends on the independently registered stiffness ratio $\kappa_d/\kappa_u$. The following table scans $c_d/c_u$ over $[1.00,1.02]$ and uses $\kappa_d/\kappa_u=(c_d/c_u)^2$:*
 
 | $c_d/c_u$ | $\kappa_d/\kappa_u$ | $\theta_{\text{vac}}$ | $\theta_{\text{frustration}}$ | $\lvert V_{us}\rvert$ |
 |:---------:|:-------------------:|:---------------------:|:-----------------------------:|:----------:|
@@ -4561,7 +4740,7 @@ $$|V_{us}|_{\mathrm{PDG24}}=0.22501\pm0.00068$$
 | 1.01 | 1.02 | 105.15° | 15.15° | 0.2261 |
 | 1.02 | 1.04 | 105.29° | 15.29° | 0.2280 |
 
-*The isotropic value $c_d/c_u = 1.00$ yields $\vert V_{us}\vert = 0.2241$, within 0.1% of the PDG fit value. The central prediction $c_d/c_u \approx 1.01$ gives 0.2261 (0.8% deviation); the experimental value lies well within the stiffness-ratio sensitivity band.*
+*The isotropic scan point $c_d/c_u=1.00$ gives $\vert V_{us}\vert=0.2241$, which is $0.40\%$ below the quoted PDG fit value. The registered $\kappa_d/\kappa_u=1.02$ branch gives $0.2261$, which is $0.48\%$ above the quoted value, or $+1.6\sigma$ using the quoted $0.00068$ uncertainty. The PDG value lies within the displayed sensitivity band; the scan is not an independent determination of the stiffness input.*
 
 ### T.22.5.6 Derivation of $\vert V_{ud}\vert$
 
@@ -4773,7 +4952,7 @@ $$
 =
 \int_{\Sigma_\gamma}q_\Sigma dA_\Sigma.
 $$
-Substituting (T.54a.4) gives (T.54b.1). The Gauss-Bonnet identity (T.54a.3) is the certificate's independent check that the area is obtained from the induced curvature and geodesic corner data rather than from the Simon-style solid-angle branch. Equation (T.54b.2) is Theorem T.55 applied after the base phase has been fixed. ∎
+Substituting (T.54a.4) gives (T.54b.1). The Gauss-Bonnet identity (T.54a.3) is the certificate's independent check that the area is obtained from the induced curvature and geodesic corner data rather than from the Simon-style solid-angle branch. Equation (T.54b.2) is the independent nonlinear phase-response ansatz of Theorem T.56; Theorem T.55 changes visibility but leaves the base phase unchanged. ∎
 
 ### T.22.6.5 Generation Subspace Variance
 
@@ -4796,8 +4975,8 @@ $$T_{\rho_0}\mathrm{Gr}(2,8) \cong \mathcal{G}_{N_g} \otimes \mathcal{I}_{d_0}$$
 **Step 2 (Generation index).** The three fermion generations (g = 1, 2, 3) occupy distinct $E_8$ root positions. Inter-generation transitions correspond to motion between these root positions. The generation-changing subspace 𝒢 has dimension equal to the number of independent generation indices:
 $$\dim(\mathcal{G}) = N_g = 3$$
 
-**Step 3 (Internal index).** The remaining directions correspond to the d₀ = 8 dimensional MPU Hilbert space structure (Theorem 23). Each generation carries the full internal structure, giving:
-$$\dim(\mathcal{I}) = d_0 = 8$$
+**Step 3 (Internal index on the declared tensor-factor branch).** Theorem 23 gives the Hilbert-carrier bound $d_0\ge8$, and Theorem Z.2 gives the minimal saturating value $d_0=8$ on the minimal PCE branch. The additional generation--internal tensor-factor hypothesis of Lemma T.54.1 assigns this eight-dimensional factor to each generation, giving
+$$\dim(\mathcal{I}) = d_0 = 8.$$
 
 **Step 4 (Tensor product).** The total interface dimension factors as:
 $$24 = 3 \times 8 = N_g \times d_0$$
@@ -4808,7 +4987,7 @@ This matches the left-chiral tensor decomposition of Theorem T.30: ℝ⁶ ≅ �
 
 $$\sigma^2_{\mathcal{G}} = \frac{1}{N_g} = \frac{1}{3}.$$
 
-*A general parameterization $\sigma^2_{\mathcal{G}} = \chi_G/N_g$ with branch coefficient $\chi_G$ would rescale the sinc factor $f_{\mathrm{sinc}} = \mathrm{sinc}(\sqrt{\chi_G/N_g})$ used in Theorem T.55 and propagate through $\delta_{CKM}$ and the PMNS predictions of Theorems T.24.19–T.24.22.*
+*A general parameterization $\sigma^2_{\mathcal{G}}=\chi_G/N_g$ with branch coefficient $\chi_G$ would rescale the visibility factor $f_{\mathrm{sinc}}=\operatorname{sinc}(\sqrt{\chi_G/N_g})$ in Theorem T.55. A corresponding change of $\delta_{\mathrm{CKM}}$ or of the PMNS predictions requires an independently stated nonlinear phase-response prescription, such as the conditional ansatz of Theorem T.56.*
 
 *yielding angular width parameter:*
 
@@ -4863,9 +5042,9 @@ $$J = c_{12}s_{12}c_{23}s_{23}c_{13}^2 s_{13}\sin\delta$$
 
 where s_ij = sin θ_ij and c_ij = cos θ_ij in the standard parametrization.
 
-**Theorem T.57** (Jarlskog Invariant from Derived Parameters).
+**Theorem T.57** (Conditional Jarlskog Invariant from Branch Parameters).
 
-*Using derived values:*
+*Assume the CKM-magnitude branches supplying $s_{12}$, $s_{23}$, and $s_{13}$ and the independently registered nonlinear phase-response ansatz of Theorem T.56. Then:*
 
 - *$s_{12} = \vert V_{us}\vert = 0.2261$ → $c_{12} = \sqrt{1 - 0.2261^2} = 0.9741$*
 - *$s_{23} = \vert V_{cb}\vert = 0.0407$ → $c_{23} = \sqrt{1 - 0.0407^2} = 0.9992$*
@@ -4968,12 +5147,13 @@ The CKM hierarchy $\vert V_{us}\vert \gg \vert V_{cb}\vert \gg \vert V_{ub}\vert
 
 ### T.22.10.3 Why CP Violation Exists
 
-CP violation requires the up and down sectors to have different orientations in the generation manifold. This follows from their distinct $E_8$ triad assignments:
+CP violation requires the up and down sectors to have different orientations in the generation manifold. On the stated triad and minimal Berry-area branches:
 
-- Different $d^2_{32}$ values (2 vs 4) create orientation mismatch
-- The Berry phase around the flavor loop is non-zero: $\delta = 66.7°$
+- Different $d^2_{32}$ values (2 vs 4) create orientation mismatch.
+- The base Berry phase around the flavor loop is nonzero: $\delta_{\mathrm{flat}}=70.53°$ (Theorems T.53–T.54).
+- The numerical value $\delta=66.7°$ is conditional on the independent nonlinear phase-response ansatz of Theorem T.56.
 
-The Jarlskog invariant $J \propto \sin\delta \neq 0$ confirms physical CP violation.
+On either nonzero-phase branch, the Jarlskog invariant satisfies $J\propto\sin\delta\neq0$ when the remaining CKM factors are nonzero.
 
 ### T.22.10.4 Berry Phase Origin of CP Violation
 
@@ -4981,7 +5161,8 @@ The CP-violating phases of the Standard Model are organized in this framework by
 
 |Observable |Berry or branch mechanism |Predicted value|Reference |
 |:--------------------|:----------------------------------------------------|:--------------|:--------------|
-|CKM $\delta$ |Holonomy around $u_3 \to d_3 \to d_2 \to u_2 \to u_3$|$66.7°$ |Theorem T.56 |
+|CKM base phase $\delta_{\mathrm{flat}}$ |Holonomy around $u_3 \to d_3 \to d_2 \to u_2 \to u_3$ on the minimal Berry-area branch |$70.53°$ |Theorems T.53–T.54 |
+|CKM response phase $\delta$ |Independent nonlinear response ansatz applied to the base phase |$66.7°$ conditionally |Theorem T.56 |
 |PMNS $\delta_{CP}$ |Holonomy with D₄-A₂ sector mismatch |$232.5°$ |Theorem T.24.22|
 |Strong $\bar\theta$|σ-invariance plus PCE topological-cost selection and certified real-Yukawa positive orientation |$0$ on the Appendix K branch |Theorem K.6.6; Corollary K.6.5; Theorem K.6.11 |
 **Theorem T.57a (CP from Holonomy).** *CP-violating phases arise as Berry-Simon holonomy on the generation manifold* [Berry 1984; Simon 1983].
@@ -5025,11 +5206,11 @@ The same framework predicts large PMNS mixing angles because:
 - Neutrinos have triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (2, 6, 6)$ from A₂ hexagonal geometry on the Majorana A₂ generation-geometry branch (Theorem T.24.5)
 - The D₄–A₂ mismatch between charged lepton and neutrino sectors generates large PMNS mixing
 
-The complete derivation of PMNS parameters appears in Section T.24, achieving $\chi^2/\mathrm{dof} = 0.28$ for seven measured quantities.
+The complete conditional PMNS model calculation appears in Section T.24. Its displayed one-dimensional residuals do not define $\chi^2/\mathrm{dof}$ because no predeclared row set, joint likelihood, covariance matrix, theory-error model, fitted-parameter count, or profiling rule is supplied.
 
 -----
 
-## T.22.11 Statistical Significance
+## T.22.12 Statistical Significance
 
 **Proposition T.58 (Anti-Numerology Argument).** The PU framework's CKM-sector outputs are overdetermined by multiple constraints within the same discrete geometric construction, providing an internal consistency check against post-hoc numerological fitting.
 
@@ -5074,13 +5255,13 @@ This formula encompasses both the cosmological constant and the electroweak scal
 
 ### T.23.2 The Foundational Cascade
 
-All complexity parameters trace to the same logical foundation established in the main text:
+The backbone values are assembled from distinct structural gates:
 
 |Step|Quantity |Value |Origin |Reference |
 |:---|:----------------------------------|:-----------------------|:------------------------------------------------------------------|:---------------|
-|1 |$K_0$ |3 bits |Minimum self-referential complexity |Theorem 15 |
-|2 |$d_0$ |$8$ on the minimal Appendix Z branch |MPU Hilbert space dimension |Theorem 23; Theorem Z.2 |
-|3 |$\varepsilon$ |$\ln 2$ on the attractor branch |SPAP thermodynamic cost |Theorem 31; Definition 15a |
+|1 |$K_0$ |3 bits |Minimum visited-context capacity under the Theorem 15 hypotheses |Theorem 15 |
+|2 |$d_0$ |$8$ on the minimal Appendix Z branch |Hilbert distinguishability lower bound plus active-dimension saturation |Theorem 23; Theorem Z.2 |
+|3 |$\varepsilon_0$ |$\ln 2$ on the registered binary-record branch |Structural binary log-cardinality, independent of the Hilbert-carrier chain |Definition 28; Lemma J.1 |
 |4 |$a$ |$2$ |Active kernel dimension on the attractor-saturating branch |Theorem Z.1 |
 |5 |$b$ |$d_0 - a = 6$ |Inactive subspace dimension |Definition |
 |5a |$\dim_{\mathbb{C}}(\text{Gr}(2,8))$|$ab = 12$ |Attractor orbit complex dimension; equals Golay $k$ |Theorem Z.6.3a |
@@ -5091,17 +5272,23 @@ All complexity parameters trace to the same logical foundation established in th
 |9 |$\sigma_B^2$ |$1/M = 1/24$ |Bures variance from capacity saturation |Lemma T.41.2 |
 |10 |$\alpha$ |$1/(16\sigma_B^2) = 3/2$|Hierarchy coefficient |Corollary T.41.3|
 
-**Proposition T.59** (Closed Minimal-Branch Backbone Counting Chain). *On the minimal Appendix Z / attractor branch, with the predictive-recovery MacWilliams duality gate of Definition Z.13b.0 active, the backbone chain
+**Proposition T.59** (Forked Minimal-Branch Backbone Ledger). *Assume the minimal Appendix Z Hilbert and active-projector branches, the registered binary verification quotient, the predictive-recovery MacWilliams gate of Definition Z.13b.0, and the channel-complete Bures tangent-cell contract of Definition Z.9a. Then the forked dependency graph is
 $$
-K_0 \to d_0 \to \varepsilon_0 \to a \to b \to M \to k \to D
+\begin{gathered}
+K_0=3\Longrightarrow N_{\mathrm{vis}}^{\min}=8\Longrightarrow d_0\ge8\Longrightarrow d_0=8,\\
+\text{registered binary verification quotient}\Longrightarrow\varepsilon_0=\ln2,\\
+(d_0=8,\varepsilon_0,\text{ active-record/no-surplus gates})\Longrightarrow a=2\Longrightarrow b=6\Longrightarrow M=24,\\
+(M=24,\text{ MacWilliams gate})\Longrightarrow k=12,\\
+(M=24,\text{ Bures tangent-cell contract})\Longrightarrow D=4.
+\end{gathered}
 $$
-is fixed by the cited finite structural gates as
+Thus
 $$
-(K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4).
+(K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4)
 $$
-This statement packages distinct structural gates whose proof roles are recorded separately in Appendix R; it is not a single-source compression theorem. Quantitative hierarchy derivations later in this appendix additionally use the threshold data, prefactors, and matching prescriptions introduced in those sections.*
+on the conjunction of these branches. Quantitative hierarchy calculations require their additional threshold, determinant, response, and matching records.*
 
-*Proof.* Theorem 15 fixes $K_0=3$ and $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$. Theorem 23 gives the Hilbert-carrier lower bound $d_0\ge N_{\mathrm{vis}}^{\min}$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch. Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, and Definition 15a supplies the structural reference $\varepsilon_0=\ln2$; it does not assert $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)\quad\text{only on a saturating registered reset branch}$. Theorem Z.1 fixes $a=2$ on that branch from the retained match/mismatch record, entropy-capacity, and PPI/PCE no-surplus gates, and the complement has
+*Proof.* Theorem 15 gives $K_0=3$ and $N_{\mathrm{vis}}^{\min}=8$. Theorem 23 gives $d_0\ge8$, and Theorem Z.2 gives $d_0=8$ on the minimal carrier branch. Independently, Definition 28 and Lemma J.1 give the structural value $\varepsilon_0=\ln2$. Theorem Z.1 consumes the active-record, entropy-capacity, and no-surplus hypotheses and gives $a=2$; therefore the complement has
 $$
 b=d_0-a=6.
 $$
@@ -5124,21 +5311,36 @@ $$
 (K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4).
 $$
 
-*Proof.* Direct restatement of Proposition T.59. ∎
+*Proof.* Proposition T.59 establishes, in order,
+$$
+K_0=3,
+\quad d_0=8,
+\quad\varepsilon_0=\ln2,
+\quad(a,b)=(2,6),
+\quad M=24,
+\quad k=12,
+\quad D=4.
+$$
+Collecting these entries in the order declared by the corollary gives
+$$
+(K_0,d_0,\varepsilon_0,a,b,M,k,D)
+=(3,8,\ln2,2,6,24,12,4).
+$$
+∎
 
 -----
 
 ### T.23.3 The Complexity-Action Correspondence
 
-**Proposition T.60** (Complexity-Action Relation). *The instanton action $S_{\text{inst}}$ and complexity $\kappa$ are related by:*
+**Proposition T.60** (Complexity--Action Relation on the Residual-Budget Bridge). *Assume the residual-budget allocation $C_{\max}=\ln d_0-\varepsilon_0$ and the instanton action--complexity bridge $S_{\mathrm{inst}}=(C_{\max}/\varepsilon_0)\kappa$ of Proposition U.14. On the minimal branch $d_0=8$ and $\varepsilon_0=\ln2$, one has*
 
-$$S_{\text{inst}} = 2\kappa$$
+$$S_{\text{inst}} = 2\kappa.$$
 
-*Proof.* From Appendix Q, PCE optimization of the MPU budget yields the capacity ratio:
+*Proof.* The residual-budget identity gives
 
-$$\frac{C_{\max}}{\varepsilon} = \frac{\ln(d_0) - \varepsilon}{\varepsilon} = \frac{3\ln 2 - \ln 2}{\ln 2} = 2$$
+$$\frac{C_{\max}}{\varepsilon_0} = \frac{\ln(d_0) - \varepsilon_0}{\varepsilon_0} = \frac{3\ln 2 - \ln 2}{\ln 2} = 2.$$
 
-The instanton action scales with complexity as $S_{\text{inst}} = (C_{\max}/\varepsilon_0)\kappa$ (Appendix U, Section U.4). Substituting yields $S_{\text{inst}} = 2\kappa$. ∎
+Substitution into the independently assumed action--complexity bridge of Proposition U.14 gives $S_{\mathrm{inst}}=2\kappa$. ∎
 
 This correspondence connects the information-theoretic complexity parameter $\kappa$ to the Euclidean action governing tunneling amplitudes.
 
@@ -5163,13 +5365,13 @@ $$\mathcal{M}_\Lambda = \text{Gr}(k, M) = \text{Gr}(12, 24)$$
 
 $$\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
 
-where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from the Appendix U reference-counting convention summarized in Theorem U.15 and recorded in Theorem U.16. Theorem U.8c shows that the pure-coordinate dilatation tangent needed to realize that five-mode branch is obstructed in the current Definition U.4 continuum action.
+where Theorem U.3 proves the Grassmannian dimension $k^2=144$, Convention U.14a identifies that complex normal-direction count with the base exponent, and the deficit $(D+1)/2=5/2$ arises from the Appendix U reference-counting convention summarized in Theorem U.15 and recorded in Theorem U.16. Theorem U.8c shows that the pure-coordinate dilatation tangent needed to realize that five-mode branch is obstructed in the Definition U.4 continuum action.
 
 **Result.**
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} = (2.88 \pm 0.03)\times 10^{-122}$$
 
-on the Appendix U five-mode reference branch. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives the branch-dependent reference evaluation; the translational branch instead yields $(1.06 \pm 0.01)\times 10^{-122}$ at the same prefactor.
+on the Appendix U five-mode reference branch. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives the branch-dependent five-mode reference evaluation. On the Definition U.6 four-mode branch, Theorem U.13b fixes only the exponent $\kappa=142$ under its stated false-vacuum spectral hypotheses; the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains $\varnothing_{\mathrm{cert}}$ until the canonical record $\mathfrak F_U^{(4)}$ of Definition U.73e is accepted. Reusing the five-mode working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor diagnostic, not as a four-mode Fredholm evaluation.
 
 -----
 
@@ -5208,11 +5410,25 @@ with the prefactor $A_{EW} = 1.084 \pm 0.005$ obtained in Theorem T.29 within th
 
 ### T.23.6 The Fermi Constant: A Derived Quantity
 
-**Proposition T.61** (Fermi Constant Derivation). *The Fermi constant $G_F$ is not an independent parameter but follows from $v$:*
+**Proposition T.61** (Tree-Level Fermi Constant). *On the tree-level Standard-Model branch, at momentum transfer $|q^2|\ll M_W^2$ and before radiative matching corrections, the Fermi constant follows from the Higgs vacuum expectation value as*
 
-$$G_F = \frac{1}{\sqrt{2} v^2}$$
+$$G_F = \frac{1}{\sqrt{2} v^2}.$$
 
-*Proof.* Standard electroweak theory: $G_F = g^2/(4\sqrt{2}M_W^2) = 1/(\sqrt{2}v^2)$ where $M_W = gv/2$. ∎
+*Proof.* Tree-level charged-current matching [Weinberg 1996] applies because the assumed external momentum is small relative to $M_W$, so the $W$ propagator reduces to its leading local term. Matching that term to the Fermi interaction gives
+$$
+\frac{G_F}{\sqrt2}=\frac{g^2}{8M_W^2},
+$$
+or
+$$
+G_F=\frac{g^2}{4\sqrt2M_W^2}.
+$$
+On the same tree-level Higgs branch, $M_W=gv/2$, hence
+$$
+G_F
+=\frac{g^2}{4\sqrt2\,(g^2v^2/4)}
+=\frac1{\sqrt2v^2}.
+$$
+∎
 
 **Effective Complexity.** In terms of the suppression mechanism:
 
@@ -5253,13 +5469,7 @@ $$
 
 **Remark.** Although the Yukawa mechanism shares the foundational constants ($M = 24$, $\sigma_B^2 = 1/24$) with the instanton mechanism, the suppression arises from geodesic distances on $E_8$ rather than from configuration space dimensionality. This represents a complementary realization of the Golay-Steiner structure.
 
-**Summary of Proposition T.58** ($E_8$ Optimality). *The $E_8$ root system is uniquely selected by information-theoretic criteria:*
-
-1. *Packing optimality: $E_8$ achieves the densest sphere packing in 8 dimensions (Viazovska 2017)*
-2. *Secondary octonionic coherence: the same $d_0 = 8$ branch singled out by SPAP and PCE is the octonionic Radon-Hurwitz dimension, providing algebraic context for the $E_8$ construction rather than the proof of necessity*
-3. *Maximal symmetry: 240 roots provide uniform local neighborhoods consistent with PCE*
-
-*The triad assignments $(d^2_{31}, d^2_{32})$ in Theorem T.37 are the unique optimal assignments achieving 87-96% agreement with observed mass ratios.*
+**Nonformal $E_8$ branch summary.** The external sphere-packing theorem establishes the optimality of the $E_8$ lattice within eight-dimensional Euclidean packing, while Appendix R records the additional even-unimodular lattice hypotheses under which $E_8$ is the unique rank-eight lattice. Octonionic and 240-root observations provide algebraic context but do not prove information-theoretic selection. The fermion triads used in this appendix are registered model assignments; Proposition T.58 establishes only internal overdetermination of the shared CKM construction and does not prove $E_8$ optimality or unique triad selection.
 
 -----
 
@@ -5633,21 +5843,35 @@ The complete derivation chain:
 
 $$K_0 = 3 \xrightarrow{\text{Thm 15}} N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \xrightarrow{\text{Thm 23/Z.2}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
 
-**Summary (Bures Variance).** *At the PU fixed point $\mathfrak{A}_{PU}$, the Predictive Ward identity fixes the quadratic kernel on the interface orbit Gr(2,8) to equal the Bures metric. Capacity saturation normalizes the mean-squared Bures radius to unity:*
+**Summary (Bures Variance).** *Assume that the Bures-orthonormal tangent variable $\xi\in\mathbb R^{24}$ is centered, has isotropic covariance $\operatorname{Cov}(\xi)=\sigma_B^2I_{24}$, and is normalized by capacity saturation so that $\langle r_B^2\rangle:=\mathbb E\lVert\xi\rVert^2=1$. Then*
+$$
+\langle r_B^2\rangle
+=\operatorname{Tr}(\operatorname{Cov}\xi)
+=24\sigma_B^2
+=1,
+\qquad
+\sigma_B^2=\frac1{24}.
+$$
 
-$$\langle r_B^2 \rangle = \text{tr}(\text{Cov}\,\xi) = 24\sigma_B^2 = 1$$
+*Proof.* For any square-integrable random vector,
+$$
+\mathbb E\lVert\xi\rVert^2
+=\lVert\mathbb E\xi\rVert^2
++\operatorname{Tr}(\operatorname{Cov}\xi).
+$$
+Centeredness makes the first term zero, while isotropy gives $\operatorname{Tr}(\operatorname{Cov}\xi)=24\sigma_B^2$. The unit mean-squared-radius hypothesis therefore gives $24\sigma_B^2=1$, hence $\sigma_B^2=1/24$. ∎
 
-*yielding:*
+**Summary (Hierarchy Coefficient).** *On the numerical convention that defines $\alpha:=1/(16\sigma_B^2)$, the unit-radius isotropic branch has $\alpha=3/2$.*
 
-$$\sigma_B^2 = \frac{1}{M} = \frac{1}{24}$$
-
-*Proof.* The Predictive Ward identity identifies $\Gamma^{(2)} = g_B$ where $g_B$ is the Bures metric. In the Bures-orthonormal frame $\xi \in \mathbb{R}^{24}$, the quadratic action is $S_{\text{quad}} = \frac{1}{2}\xi^T\xi$. Capacity saturation at $\mathfrak{A}_{PU}$ imposes $\langle r_B^2 \rangle = 1$. Isotropy forces equal per-direction variance: $\langle r_B^2 \rangle = \sum_i \langle \xi_i^2 \rangle = 24\sigma_B^2 = 1$, hence $\sigma_B^2 = 1/24$.
-
-**Summary (Hierarchy Coefficient).** *The hierarchy coefficient is:*
-
-$$\alpha = \frac{1}{16\sigma_B^2} = \frac{24}{16} = \frac{3}{2}$$
-
-*Proof.* The Gaussian suppression between generation centers follows from probability overlap (Theorem T.41.5). For Bures-separated generations with $d^2$ in $E_8$ units, the numerical convention used later in this section takes the amplitude to scale as $e^{-\alpha d^2}$ with $\alpha=1/(16\sigma_B^2)$. Substituting $\sigma_B^2 = 1/24$ yields $\alpha = 24/16 = 3/2$.
+*Proof.* The preceding summary gives $\sigma_B^2=1/24$. Therefore
+$$
+\alpha
+=\frac1{16\sigma_B^2}
+=\frac1{16(1/24)}
+=\frac{24}{16}
+=\frac32.
+$$
+The factor $16$ is part of the stated Bures-to-$E_8$ convention; this calculation does not derive it from isotropy alone. ∎
 
 **Definition T.24.1** (Generation Manifold). The generation manifold is the Grassmannian:
 
@@ -5675,86 +5899,104 @@ $$
 $$
 Thus $1.418$ must be registered as an ansatz or calibration and is not derived by the displayed coherent average. ∎
 
-**Remark T.24.2.2: Structural Unity with CP Phase.** *This mechanism is structurally identical to the CP phase reduction (Theorems T.55–T.56):*
+**Remark T.24.2.2: Parallel Registered Sinc Prescriptions.** *The hierarchy-coefficient ansatz and the independent CKM phase-response ansatz use the same numerical sinc factor, but neither is the visibility statement proved by Theorem T.55:*
 
-|Observable |UV Value |Correction |IR Value |
+|Observable |UV Value |Registered prescription |IR Value |
 |:--------------------|:------------------------------|:-----------------------|:---------------------------|
-|CP Phase (CKM) |$\delta_{\text{flat}}=70.53°$|independent nonlinear response ansatz|$\delta=66.7°$ conditionally|
-|Hierarchy Coefficient|$\alpha_{\text{UV}} = 3/2$ |$\times f_{\text{sinc}}$|$\alpha_{\text{IR}} = 1.418$|
+|CP Phase (CKM) |$\delta_{\text{flat}}=70.53°$|independent nonlinear response ansatz of Theorem T.56|$\delta=66.7°$ conditionally|
+|Hierarchy Coefficient|$\alpha_{\text{UV}} = 3/2$ |independent coefficient ansatz of Theorem T.24.2.1|$\alpha_{\text{IR}} = 1.418$ conditionally|
 
-Neither multiplication is implied by symmetric phase averaging; both rows require their separately registered model prescriptions.
+Theorem T.55 supplies a sinc visibility factor while preserving phase; both numerical multiplications above require their separately registered model prescriptions.
 
 **Remark T.24.2.3: Connection to $\sqrt{2}$.** *The sinc-corrected value $\alpha_{\text{IR}} = 1.418$ is remarkably close to $\sqrt{2} = 1.414$. The approximate relation $\alpha_{\text{IR}} \approx \sqrt{a}$ (where $a = 2$ is the active dimension from Theorem Z.1) may reflect deeper structure connecting the Landauer cost to the effective hierarchy.*
 
 **Remark T.24.2.4: RG Running.** *The one-loop RG evolution contributes negligibly for leptons. The Yukawa self-term gives $\delta_{\text{RG}} \approx 7 \times 10^{-5}$, which is $< 0.01%$ of $\alpha_{\text{UV}}$ and absorbed within the theoretical uncertainty of the sinc derivation.*
 
-**Remark T.24.2.5: Neutrino Sector Uses UV Value.** *For the neutrino sector, the seesaw mechanism operates at the scale $M_R \sim 10^{15}$ GeV, far above the IR regime where coherent averaging effects become significant. The relevant hierarchy coefficient is therefore the UV value:*
+**Remark T.24.2.5: Neutrino-Sector UV Branch.** *For the neutrino sector, the seesaw model is evaluated at the scale $M_R\sim10^{15}$ GeV. On the separately registered triplet-projection exponent branch, the hierarchy coefficient is*
 
-$$\alpha_\nu = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{3/2}{\sqrt{3}} = \frac{\sqrt{3}}{2} \approx 0.866$$
+$$\alpha_\nu = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{3/2}{\sqrt{3}} = \frac{\sqrt{3}}{2} \approx 0.866.$$
 
-*The excellent agreement of neutrino predictions ($\chi^2/\text{dof} = 0.28$ for $\sin^2\theta$ observables) validates that $\alpha_{\text{UV}} = 3/2$ is the correct fundamental value at $\mathfrak{A}_{PU}$. For charged leptons at IR scales, coherent averaging yields $\alpha_{\text{IR}} = \alpha_{\text{UV}} \times f_{\text{sinc}} = 1.418$, matching $\alpha_{\text{IR}}^{\text{emp}} = 1.411$ within 0.5%.*
+*The PMNS rows are conditional comparisons of the complete registered model branch; they do not define $\chi^2/\mathrm{dof}$ and do not isolate $\alpha_{\mathrm{UV}}$ for statistical validation. In the charged-lepton model, $\alpha_{\mathrm{IR}}=\alpha_{\mathrm{UV}}f_{\mathrm{sinc}}=1.418$ is a registered ansatz or calibration, and it differs from $\alpha_{\mathrm{IR}}^{\mathrm{emp}}=1.411$ by approximately $0.5\%$.*
 
 -----
 
 ### T.24.3 Conditional Realizability of the Charged-Lepton Triad
 
-**Theorem T.24.3** (Charged Lepton Triad). *The charged lepton triad is uniquely determined by error correction:*
+**Theorem T.24.3** (Conditional Realizability of the Charged-Lepton Triad). *On the branch assigning the adjacent, hierarchy-span, and intermediate charged-lepton pairs the distances $a$, $b$, and $2a$, respectively, the triad*
 
 $$\boxed{T_\ell = (d^2_{32}, d^2_{31}, d^2_{21})_\ell = (a, b, 2a) = (2, 6, 4)}$$
 
-*Proof.*
+*is realizable by $E_8$ roots and is nondegenerate. The code parameters and role assignments stated in this branch do not by themselves establish uniqueness among $E_8$ root triads.*
 
-**Step 1** ($E_8$ from Hamming Code). The $E_8$ lattice arises from the extended binary Hamming code $\mathcal{H}_8 = [8, 4, 4]$:
+*Proof.* In the standard coordinate realization of the $E_8$ roots, every vector of the form $\pm e_i\pm e_j$ with $i\ne j$ is a root. Choose
+$$
+r_3=(1,1,0,0,0,0,0,0),
+\qquad
+r_2=(1,0,1,0,0,0,0,0),
+$$
+and
+$$
+r_1=(0,-1,0,1,0,0,0,0).
+$$
+Each vector has squared norm $2$. Their pairwise squared distances are
+$$
+\lVert r_3-r_2\rVert^2
+=\lVert(0,1,-1,0,0,0,0,0)\rVert^2
+=2,
+$$
+$$
+\lVert r_3-r_1\rVert^2
+=\lVert(1,2,0,-1,0,0,0,0)\rVert^2
+=1+4+1
+=6,
+$$
+and
+$$
+\lVert r_2-r_1\rVert^2
+=\lVert(1,1,1,-1,0,0,0,0)\rVert^2
+=4.
+$$
+Equivalently, the Gram matrix is
+$$
+G=
+\begin{pmatrix}
+2&1&-1\\
+1&2&0\\
+-1&0&2
+\end{pmatrix},
+\qquad
+\det G=4>0.
+$$
+Thus the displayed triad has the claimed $E_8$ realization and is nondegenerate. The calculation is an existence certificate; it contains no classification argument excluding other realizable triads. ∎
 
-|Parameter |Value |Framework Constant|
-|:---------------|:------|:-----------------|
-|Block length |$n = 8$|$N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ and $d_0=8$ on the minimal Hilbert-carrier branch |
-|Message bits |$k = 4$|$2a$ |
-|Minimum distance|$d = 4$|$2a$ |
+**Corollary T.24.3.1** (Conditional Hierarchy Ratio). *Assume the triad of Theorem T.24.3 and the anchored suppression law*
+$$
+\ln\!\frac{m_3}{m_i}=\alpha d_{3i}^2,
+\qquad
+i\in\{1,2\},
+\qquad
+\alpha>0.
+$$
+*Then*
+$$
+\mathcal R_\ell
+:=
+\frac{\ln(m_3/m_1)}{\ln(m_3/m_2)}
+=
+\frac{d_{31}^2}{d_{32}^2}
+=3.
+$$
 
-The code parameters $(n, k, d) = (d_0, 2a, 2a)$ directly encode the foundational constants.
-
-**Step 2** (D₄ Sublattice for Dirac Fermions). Dirac fermions (charged leptons) have:
-
-- Separate left and right chiralities $\psi_L, \psi_R$
-- Mass term $\bar{\psi}_L \psi_R$ connecting them
-- U(1) phase freedom
-
-The optimal error-correcting structure for this two-component system is the D₄ lattice, associated with the $[4, 2, 2]$ code:
-
-|Parameter |Value |Framework Constant|
-|:---------------|:------|:-----------------|
-|Block length |$n = 4$|$2a$ |
-|Message bits |$k = 2$|$a$ |
-|Minimum distance|$d = 2$|$a$ |
-
-The minimum squared distance in D₄ is $d^2_{\text{D}_4} = 2a = 4$. This is the 1↔2 sector distance for charged leptons.
-
-**Step 3** (D₄ Properties). The D₄ lattice is:
-
-- Even and integral with $\text{D}_4^* / \text{D}_4 \cong \mathbb{Z}_2 \times \mathbb{Z}_2$ (the quotient structure reflects discrete L ↔ R parity)
-- Has kissing number 24 = $M$ (maximal sphere packing in 4D, matches interface modes)
-- Embeds naturally in $E_8$ via $\text{D}_4 \oplus \text{D}_4 \subset \text{E}_8$
-
-**Step 4** (Full Triad from Geometric Hierarchy). The three generation pairs occupy distinct geometric roles:
-
-|Pair|Role |Structure |Distance |
-|:---|:-----------------------|:---------------------|:-------------|
-|3↔2 |Adjacent (heaviest pair)|Minimal $E_8$ |$d^2 = a = 2$ |
-|3↔1 |Maximal (hierarchy span)|Full inactive subspace|$d^2 = b = 6$ |
-|2↔1 |Intermediate |D₄ error correction |$d^2 = 2a = 4$|
-
-**Step 5** (Gram Matrix Verification). The inner products are $\langle r_3, r_2 \rangle = 1$, $\langle r_3, r_1 \rangle = -1$, $\langle r_2, r_1 \rangle = 0$. The Gram determinant:
-
-$$\det(G) = 8 + 2(1)(-1)(0) - 2(1^2 + 1^2 + 0^2) = 8 + 0 - 4 = 4 > 0 \quad \checkmark$$
-
-The triad $(2, 6, 4) = (a, b, 2a)$ forms a valid non-degenerate triangle in $E_8$.
-
-**Corollary T.24.3.1** (Hierarchy Ratio). *The charged lepton hierarchy ratio is:*
-
-$$\mathcal{R}_\ell = \frac{d^2_{31}}{d^2_{32}} = \frac{b}{a} = \frac{6}{2} = 3$$
-
-*This $\alpha$-independent ratio predicts $\ln(m_\tau/m_e)/\ln(m_\tau/m_\mu) = 3$. Experimentally, $\ln(1776.86/0.511)/\ln(1776.86/105.66) = 8.16/2.82 = 2.89$, matching the prediction within 3.8%.*
+*Proof.* The suppression law and $\alpha>0$ give
+$$
+\mathcal R_\ell
+=
+\frac{\alpha d_{31}^2}{\alpha d_{32}^2}
+=
+\frac{6}{2}
+=3.
+$$
+For the quoted masses, the observed ratio is approximately $2.889$, which is $3.7\%$ below the branch value $3$. ∎
 
 -----
 
@@ -5768,7 +6010,20 @@ $$\cos\theta_{ij} = \frac{\langle r_i, r_j \rangle}{|r_i| \cdot |r_j|} = \frac{\
 
 $$\cos\theta_{ij} = \frac{4 - d^2_{ij}}{4} = 1 - \frac{d^2_{ij}}{4}$$
 
-*Proof.* For $E_8$ roots, $d^2(r_i, r_j) = |r_i - r_j|^2 = |r_i|^2 + |r_j|^2 - 2\langle r_i, r_j \rangle = 4 - 2\langle r_i, r_j \rangle$. Solving: $\langle r_i, r_j \rangle = 2 - d^2/2$. Substituting into the angle formula: $\cos\theta = (2 - d^2/2)/2 = (4 - d^2)/4$.
+*Proof.* Since $\lVert r_i\rVert^2=\lVert r_j\rVert^2=2$,
+$$
+d_{ij}^2
+=\lVert r_i-r_j\rVert^2
+=4-2\langle r_i,r_j\rangle.
+$$
+Thus $\langle r_i,r_j\rangle=2-d_{ij}^2/2$. Because $\lVert r_i\rVert\lVert r_j\rVert=2$,
+$$
+\cos\theta_{ij}
+=\frac{\langle r_i,r_j\rangle}{2}
+=1-\frac{d_{ij}^2}{4}
+=\frac{4-d_{ij}^2}{4}.
+$$
+∎
 
 **Table T.24.1** (Charged Lepton Lattice Angles)
 
@@ -5853,30 +6108,30 @@ Thus $\theta=60^\circ$ gives $d^2=2$, while $\theta=120^\circ$ gives $d^2=6$. Th
 
 $$d^2_{21,\nu} \in \{2, 6\} \quad \text{(not } d^2 = 4 \text{)}$$
 
-*Proof.*
+*Proof.* The hypotheses of Theorem T.24.5 are exactly the Takagi--Weyl datum and the adjacent non-opposite primitive-root restriction of Theorem T.24.5b. That theorem gives
+$$
+d_{21,\nu}^2\in\{2,6\}
+$$
+and excludes $d_{21,\nu}^2=4$. Hence the retained displacement has the asserted $A_2$ angle geometry. ∎
 
-**Step 1** (Majorana Structure). Majorana neutrinos have:
+**Corollary T.24.5.1** (Conditional Neutrino-Triad Candidate). *On the branch of Theorem T.24.5, additionally choose the anchored assignments*
+$$
+d_{32,\nu}^2=a=2,
+\qquad
+d_{31,\nu}^2=b=6,
+\qquad
+d_{21,\nu}^2=b=6.
+$$
+*Then*
+$$
+\boxed{T_\nu=(a,b,b)=(2,6,6)}.
+$$
 
-- Single chirality (self-conjugate: $\nu = \nu^c$)
-- Mass term $\nu^T C \nu$ (symmetric bilinear)
-- SU(2) triplet structure: $\mathbf{2} \otimes_S \mathbf{2} = \mathbf{3}$
-
-**Step 2** (Takagi-Weyl Majorana geometry). The $SU(2)$ spin-1 (triplet) representation arising from $\mathbf{2} \otimes_S \mathbf{2} = \mathbf{3}$ has weights $\{-1, 0, +1\}$ on the one-dimensional Cartan weight line of $SU(2)$ (rank 1); these three weights are colinear and do not by themselves form a 2-dimensional triangular configuration at $120°$ angles. The two-dimensional Majorana generation geometry is instead fixed by the Takagi-Weyl datum of Definition T.24.5a: a complex symmetric Majorana mass matrix is diagonalized by Takagi factorization, and the traceless Takagi eigenvalue-difference plane carries the $A_2$ Weyl root system.
-
-**Step 3** (Forbidden D₄ on the Takagi-$A_2$ branch). By Theorem T.24.5b, the retained adjacent non-opposite Majorana $A_2$ Weyl displacements have $60^\circ$ and $120^\circ$ primitive root angles and no orthogonal root pair. Therefore the $D_4$ cubic structure (90° angles) used for charged leptons is replaced by $A_2$ hexagonal geometry, excluding $d^2_{21,\nu}=4$.
-
-**Step 4** (Allowed Values). From the A₂ angle formula:
-
-- $\theta = 60° \Rightarrow d^2 = 2$
-- $\theta = 120° \Rightarrow d^2 = 6$
-
-The value $d^2 = 4$ (90°) is excluded.
-
-**Corollary T.24.5.1** (Conditional Neutrino-Triad Candidate). On the same declared Takagi-Weyl branch, one retained candidate triad is:
-
-$$\boxed{T_\nu = (a, b, b) = (2, 6, 6)}$$
-
-*differing from the charged lepton triad $(a, b, 2a)$ only in the 1↔2 sector, where A₂ geometry replaces D₄.*
+*Proof.* Substitution of the three declared branch assignments gives
+$$
+(d_{32,\nu}^2,d_{31,\nu}^2,d_{21,\nu}^2)=(2,6,6).
+$$
+Theorem T.24.5 verifies that the last entry is allowed by the retained $A_2$ geometry; the first two entries and the choice of $6$ for the last entry are the branch assignments stated in this corollary. ∎
 
 **Table T.24.2** (Triad Comparison)
 
@@ -5906,11 +6161,28 @@ $$\det(G) = 8 + 2abc - 2(a^2 + b^2 + c^2)$$
 
 *Triads with $\det(G) < 0$ cannot be realized in $E_8$.*
 
-*Proof.* Direct expansion using Sarrus' rule:
-
-$$\det(G) = 2 \cdot 2 \cdot 2 + a \cdot c \cdot b + b \cdot a \cdot c - 2b^2 - 2c^2 - 2a^2 = 8 + 2abc - 2(a^2 + b^2 + c^2)$$
-
-A positive semi-definite matrix has non-negative determinant.
+*Proof.* The Gram matrix is
+$$
+G=
+\begin{pmatrix}
+2&a&b\\
+a&2&c\\
+b&c&2
+\end{pmatrix}.
+$$
+Expansion along the first row gives
+$$
+\det G
+=2(4-c^2)-a(2a-bc)+b(ac-2b)
+=8+2abc-2(a^2+b^2+c^2).
+$$
+If roots $r_3,r_2,r_1$ realize the triad, then for every $x\in\mathbb R^3$,
+$$
+x^TGx
+=\lVert x_1r_3+x_2r_2+x_3r_1\rVert^2
+\ge0.
+$$
+Thus $G$ is positive semidefinite, all its eigenvalues are nonnegative, and their product $\det G$ is nonnegative. Therefore $\det G<0$ precludes an $E_8$ realization. ∎
 
 **Constraint 3** (Large Atmospheric Mixing). Empirical constraint $\theta_{23} \geq 40°$ restricts the 2↔3 sector geometry.
 
@@ -5948,41 +6220,44 @@ A positive semi-definite matrix has non-negative determinant.
 |(6, 6, 6) |−1 |−1 |−1 |0 |1 |Degenerate|
 |(6, 8, 2) |−1 |−2 |1 |0 |4/3 |Degenerate|
 |(6, 8, 6) |−1 |−2 |−1 |−8 |4/3 |Infeasible|
+|(8, 8, 2) |−2 |−2 |1 |−2 |1 |Infeasible|
+|(8, 8, 6) |−2 |−2 |−1 |−18 |1 |Infeasible|
 
 **Classification:**
 
-- Feasible ($\det(G) > 0$): 12 triads
+- Feasible ($\det(G) > 0$): 9 triads
 - Degenerate ($\det(G) = 0$): 5 triads
-- Infeasible ($\det(G) < 0$): 4 triads
+- Infeasible ($\det(G) < 0$): 6 triads
+
+There are $4+3+2+1=10$ ordered pairs $(d_{32}^2,d_{31}^2)$ with $d_{31}^2\ge d_{32}^2$ and entries in $\{2,4,6,8\}$. Each pair permits the two declared values $d_{21}^2\in\{2,6\}$, hence the table contains all $20$ cases. Lemma T.24.4 supplies $(a,b,c)$ and Lemma T.24.6 supplies each determinant. Direct sign counting gives $9$ positive, $5$ zero, and $6$ negative determinants. ∎
 
 -----
 
 ### T.24.8 Atmospheric Mixing Filter
 
-**Lemma T.24.8** (Matched-Sector Maximal Mixing). *For the 2↔3 subproblem when $d^2_{32,\nu} = d^2_{32,\ell}$, the PMNS mixing angle approaches maximal at leading order.*
+**Lemma T.24.8** (Conditional Maximal Mixing in a Two-State Block). Let the relevant Hermitian $2\times2$ block, after removal of its trace, be
+$$
+M_{23}
+=
+\begin{pmatrix}
+\Delta/2 & B\\
+\overline B & -\Delta/2
+\end{pmatrix},
+\qquad
+B\ne0.
+$$
+If the matched-sector branch independently gives $\Delta=0$, then the mixing angle is maximal:
+$$
+\theta_{23}=45^\circ.
+$$
 
-*Proof.* The PMNS matrix is $U_{\text{PMNS}} = U_\ell^\dagger U_\nu$ where $U_\ell$ and $U_\nu$ diagonalize the charged lepton and neutrino mass matrices respectively. In the 2×2 subspace, the mixing angle satisfies:
+*Proof.* Rephase the two basis vectors so that $B>0$. Diagonalization gives
+$$
+\tan(2\theta_{23})=\frac{2B}{\Delta}.
+$$
+For $\Delta=0$ and $B\ne0$, one has $2\theta_{23}=\pi/2$ modulo the eigenvector-label convention, hence $\theta_{23}=\pi/4$. ∎
 
-$$\tan 2\theta_{23} \propto \frac{B}{\Delta}$$
-
-where $B$ is the off-diagonal amplitude and $\Delta$ is the diagonal contrast. Both amplitudes include the Gaussian suppression factor $e^{-\alpha d^2/2}$.
-
-For matched $E_8$ distances ($d^2_{32,\nu} = d^2_{32,\ell}$), both sectors experience identical suppression. In the ratio $B/\Delta$, this common factor cancels at leading order, leaving $\tan 2\theta_{23} \to \infty$, corresponding to $\theta_{23}^{(0)} = 45°$.
-
-Deviations arise from commutator corrections in sequential SU(3) rotations, which are $O(\sigma^2_{\mathcal{G}})$ where $\sigma^2_{\mathcal{G}} = 1/N_g = 1/3$.
-
-**Corollary T.24.8.1** (Atmospheric Mixing Constraint). *Applying Lemma T.24.8 with the charged lepton value $d^2_{32,\ell} = 2$:*
-
-|$d^2_{32,\nu}$|Matching |$\theta_{23}^{(0)}$|Constraint 4|
-|:-------------|:---------|:------------------|:-----------|
-|2 |Matched |45.0° |✓ |
-|4 |Mismatched|≈35° |✗ |
-|6 |Mismatched|≈30° |✗ |
-|8 |Mismatched|≈25° |✗ |
-
-*Only $d^2_{32,\nu} = 2$ satisfies $\theta_{23} \geq 40°$.*
-
-Surviving candidates: (2, 2, 2), (2, 4, 2), (2, 4, 6), (2, 6, 6).
+**Corollary T.24.8.1** (Scope of the Atmospheric Filter). Equality of the geometric suppressions $d^2_{32,\nu}=d^2_{32,\ell}$ yields maximal mixing only if a mass-matrix certificate also proves $\Delta=0$. Distances $d^2_{32,\nu}\in\{4,6,8\}$ do not determine numerical mixing angles without their corresponding diagonal and off-diagonal matrix entries. Therefore the listed triads cannot be filtered by the atmospheric angle from distance matching alone.
 
 -----
 
@@ -5994,17 +6269,35 @@ $$V_{\text{align}}(T_\nu, T_\ell) = \sum_{i<j} \kappa_{ij} \sin^2\left(\frac{\th
 
 *where $\theta^{(f)}_{ij} = \arccos[(4-d^2_{ij,f})/4]$ and stiffness weights satisfy $\kappa_{23} > \kappa_{12} > \kappa_{13}$ from the mass hierarchy.*
 
-**Proposition T.24.9** (Preferred neutrino triad within the alignment-cost model). *Within the alignment-cost model defined in Definition T.24.9a, and for the weight ordering $\kappa_{23}>\kappa_{12}>\kappa_{13}>0$ used below, the triad*
+**Proposition T.24.9** (Preferred neutrino triad within the alignment-cost model). Within Definition T.24.9a, let the charged-lepton triad be $T_\ell=(2,6,4)$ and let all stiffnesses be positive. Among the candidates
 $$
-T_\nu = (d^2_{32}, d^2_{31}, d^2_{21}) = (2,6,6)
+(2,2,2),\quad(2,4,2),\quad(2,4,6),\quad(2,6,6),
 $$
-*minimizes the weighted alignment cost among the listed admissible candidates.*
+the unique minimizer is
+$$
+T_\nu=(2,6,6).
+$$
 
-*Proof.* Evaluate the model cost
+*Proof.* The angle map gives
 $$
-C_{\mathrm{align}}(T_\nu)=\kappa_{23}|d^2_{32}-2|+\kappa_{31}|d^2_{31}-6|+\kappa_{12}|d^2_{21}-4|
+\theta(2)=60^\circ,\qquad
+\theta(4)=90^\circ,\qquad
+\theta(6)=120^\circ.
 $$
-on the admissible candidate list displayed in the section. For the candidate $(2,6,6)$, the dominant two terms vanish and the remaining mismatch is the smallest among the candidates when $\kappa_{23}>\kappa_{12}>\kappa_{13}$. Therefore this triad minimizes the stated model cost in that parameter regime. QED
+All four candidates match the $23$ angle. Their costs are
+$$
+\begin{aligned}
+V(2,2,2)
+&=\frac14\kappa_{31}+\sin^2(15^\circ)\kappa_{12},\\
+V(2,4,2)
+&=\sin^2(15^\circ)(\kappa_{31}+\kappa_{12}),\\
+V(2,4,6)
+&=\sin^2(15^\circ)(\kappa_{31}+\kappa_{12}),\\
+V(2,6,6)
+&=\sin^2(15^\circ)\kappa_{12}.
+\end{aligned}
+$$
+Since $\kappa_{31}>0$ and $\sin^2(15^\circ)>0$, the last value is strictly smaller than each of the first three. ∎
 
 -----
 
@@ -6037,7 +6330,11 @@ $$G = \begin{pmatrix}
 -1 & -1 & 2
 \end{pmatrix}$$
 
-**Eigenvalues:** ${1, 1, 4}$. All positive, confirming positive-definiteness.
+The characteristic polynomial is
+$$
+\det(\lambda I-G)=(\lambda-1)^2(\lambda-4),
+$$
+so the eigenvalues are $1,1,4$. They are all positive, hence $G$ is positive definite and the three roots form the asserted nondegenerate realization. ∎
 
 **Lemma T.24.10a (Obstruction to a Fully Pairwise Majorana Mass Law).** Assume there exists a single coefficient $\alpha_\nu>0$ such that the three oriented ratios
 $$
@@ -6167,56 +6464,31 @@ Exponentiating yields the stated ratios. ∎
 
 ### T.24.12 Neutrino Hierarchy Coefficient
 
-**Theorem T.24.12** (Majorana Reduction). *The neutrino sector hierarchy coefficient is:*
+**Theorem T.24.12** (Conditional Majorana Exponent Reduction). *Assume the triplet-projection exponent branch on which the RMS reduction of a three-component isotropic Majorana order parameter acts on the Gaussian exponent coefficient, rather than on the prefactor or the wavefunction width. Then the neutrino-sector hierarchy coefficient is*
 
-$$\alpha_\nu = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{1}{\sqrt{3}} \cdot \frac{3}{2} = \frac{\sqrt{3}}{2} \approx 0.866$$
+$$\alpha_\nu = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{1}{\sqrt{3}} \cdot \frac{3}{2} = \frac{\sqrt{3}}{2} \approx 0.866.$$
 
-*Proof.*
-
-**Step 1** (Weinberg Operator). The low-energy Majorana mass arises from the dimension-5 Weinberg operator:
-
-$$\mathcal{O}*5 = \frac{c_{\alpha\beta}}{\Lambda}(L_\alpha \cdot H)(L_\beta \cdot H) + \text{h.c.}$$
-
-where $L$ is the lepton doublet, $H$ is the Higgs doublet, and $c_{\alpha\beta}$ is symmetric.
-
-**Step 2** (SU(2) Fierz Identity). Using the Fierz identity for SU(2) doublets:
-
-$$(L^T \varepsilon H)(L^T \varepsilon H) = \frac{1}{2}(L^T \varepsilon \sigma^i L)(H^T \varepsilon \sigma^i H)$$
-
-where $\sigma^i$ ($i = 1,2,3$) are Pauli matrices.
-
-**Step 3** (Triplet Structure). Define the SU(2) triplet order parameters:
-
-$$X_i := L^T \varepsilon \sigma^i L, \quad Y_i := H^T \varepsilon \sigma^i H$$
-
-Before electroweak symmetry breaking, SU(2)$_L$ invariance requires isotropic covariance:
-$$\text{Cov}(X_i, X_j) = \sigma_X^2 \delta_{ij}$$
-
-**Step 4** (EWSB Projection). After EWSB, $\langle H \rangle = (0, v/\sqrt{2})^T$, and $Y_i$ aligns along a fixed direction $\hat{n} \in S^2 \subset \mathbb{R}^3$. The effective neutrino mass operator is:
-$$m_\nu \propto X \cdot \hat{n}$$
-
-**Step 5** (Norm Reduction). Projecting an isotropic triplet onto a single direction reduces the RMS norm by $\sqrt{3}$:
-
-$$|O_\nu|_B = \frac{|O_{\text{triplet}}|_B}{\sqrt{3}}$$
-
-**Derivation:** For an isotropic unit triplet $\hat{X}$ uniformly distributed on $S^2$:
-$$\langle (\hat{X} \cdot \hat{n})^2 \rangle = \frac{1}{3}$$
-
-Therefore $|\hat{X} \cdot \hat{n}|_{\text{RMS}} = 1/\sqrt{3}$.
-
-**Step 6** (Coefficient on the triplet-projection exponent branch). From Theorem T.41.5 on the probability-overlap branch, the Yukawa coupling scales as $Y \propto \exp(-d^2_B/(2\sigma^2_B))$, yielding $\alpha_{\mathrm{UV}} = 1/(16\sigma^2_B)$ via the Bures-to-$E_8$ conversion of Lemma T.41.4.
-
-On the triplet-projection exponent branch — under which the operator-norm reduction by $\sqrt{3}$ established in Step 5 acts on the Gaussian exponent coefficient $\alpha$ rather than on the prefactor or wavefunction width — the Majorana sector hierarchy coefficient is
+*Proof.* Let $X\in\mathbb R^3$ be the nonzero centered isotropic triplet on this branch, with $\operatorname{Cov}(X)=\sigma_X^2I_3$, $\sigma_X^2>0$, and let $\widehat n$ be a unit vector. Then
 $$
-\alpha_\nu = \frac{\alpha_{\mathrm{UV}}}{\sqrt{3}} = \frac{3/2}{\sqrt{3}} = \frac{\sqrt{3}}{2} = 0.8660.
+\mathbb E[(X\cdot\widehat n)^2]=\sigma_X^2,
+\qquad
+\mathbb E\|X\|^2=3\sigma_X^2.
 $$
-The RMS projection identity $\langle (\hat{X} \cdot \hat{n})^2 \rangle = 1/3$ established in Step 5 motivates the $\sqrt{3}$ factor, but in standard Gaussian overlap integrals an operator-norm rescaling typically modifies the prefactor (rescaling the amplitude) or the width $\sigma_B$ (rescaling the variance, giving $\alpha \to \alpha/3$ rather than $\alpha/\sqrt{3}$); the choice of where the $\sqrt{3}$ enters is the load-bearing branch identification. An effective-action derivation of the Weinberg-operator overlap kernel is required to rule out alternative attributions of the $\sqrt{3}$ factor; a $1/3$ exponent reduction or no exponent reduction would shift $\alpha_\nu$ to $\alpha_{\mathrm{UV}}/3 = 1/2$ or $\alpha_{\mathrm{UV}} = 3/2$ respectively, and the resulting $m_3/m_2$ would shift exponentially.
+The projected-to-full RMS ratio is therefore
+$$
+\sqrt{\frac{\mathbb E[(X\cdot\widehat n)^2]}{\mathbb E\|X\|^2}}=\frac1{\sqrt3}.
+$$
+The stated triplet-projection exponent hypothesis assigns this ratio to the Gaussian exponent coefficient. Consequently
+$$
+\alpha_\nu=\frac{\alpha_{\mathrm{UV}}}{\sqrt3}=\frac{\sqrt3}{2}=0.866025\ldots.
+$$
+The RMS calculation does not independently choose whether the reduction acts on an exponent, a width, or a prefactor; that choice is precisely the branch hypothesis. ∎
 
-**Remark T.24.12.1: UV Value Confirmation.** *The relation $\alpha_\nu = \sqrt{3}/2$ provides an internal consistency check:*
+**Remark T.24.12.1: UV-Branch Identity.** *On the triplet-projection exponent branch, the relation between the two coefficients is*
 
-$$\alpha_\nu = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{\sqrt{3}}{2} \quad \Longleftrightarrow \quad \alpha_{\text{UV}} = \frac{3}{2}$$
+$$\alpha_\nu = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{\sqrt{3}}{2} \quad \Longleftrightarrow \quad \alpha_{\text{UV}} = \frac{3}{2}.$$
 
-*The neutrino sector directly probes the UV value $\alpha_{\text{UV}} = 3/2$ because the seesaw mechanism operates at $M_R \sim 10^{15}$ GeV, far above the scale where coherent averaging effects become significant. The excellent agreement ($\chi^2/\text{dof} = 0.28$) with zero free parameters external to the foundational chain validates this derivation chain.*
+*This equivalence is an internal algebraic identity on the registered branch. The seesaw scale motivates evaluating the model with a UV coefficient, but the displayed comparisons do not define $\chi^2/\mathrm{dof}$ and do not validate the coefficient independently of the triplet-projection, triad, mixing-response, scale, and phase inputs.*
 
 -----
 
@@ -6245,29 +6517,79 @@ QED
 
 ### T.24.14 Absolute Mass Scale
 
-**Theorem T.24.14 (Heaviest Neutrino Mass under Matching and Majorana-Normalization Assumptions).** Let $y_{\nu3}(\mu_G)$ be the neutrino Yukawa coupling at the matching scale and let $R_\nu>0$ collect the declared RG and threshold evolution to the low-energy mass. Assume $\langle H\rangle=(0,v/\sqrt2)^T$, $v=252\,\mathrm{GeV}$, $M_R=M_{Pl}e^{-9}$ with $M_{Pl}=1.2209\times10^{19}\,\mathrm{GeV}$, and the displayed Majorana normalization $\sqrt{3/2}$. Then
+**Theorem T.24.14 (Heaviest Neutrino Mass under Matching and Majorana-Normalization Assumptions).** Let $y_{\nu3}(\mu_G)$ be the neutrino Yukawa coupling at the matching scale and let $R_\nu>0$ collect the declared RG and threshold evolution to the low-energy mass. Assume $\langle H\rangle=(0,v/\sqrt2)^T$, $v=252\,\mathrm{GeV}$, $M_R=M_{Pl}e^{-9}$ with $M_{Pl}=1.2209\times10^{19}\,\mathrm{GeV}$, the Majorana normalization $\sqrt{3/2}$, and the leading type-I seesaw matching prescription
 $$
-m_3=R_\nu\frac{y_{\nu3}(\mu_G)^2v^2}{2M_R}\sqrt{\frac32}.
+m_3:=R_\nu\frac{y_{\nu3}(\mu_G)^2v^2}{2M_R}\sqrt{\frac32}.
 $$
 On the explicit subbranch $R_\nu=1$ and $y_{\nu3}(\mu_G)=1$,
 $$
 m_3=25.809938\,\mathrm{meV}.
 $$
-Thus the displayed number is a matching subbranch, not an RG-independent absolute mass prediction. ∎
+Thus the displayed number is a matching-subbranch value, not an RG-independent absolute mass prediction.
+
+*Proof.* The assumed Majorana scale is
+$$
+M_R
+=(1.2209\times10^{19})e^{-9}\,\mathrm{GeV}
+=1.506710298\times10^{15}\,\mathrm{GeV}.
+$$
+Substitution of $R_\nu=y_{\nu3}(\mu_G)=1$ and $v=252\,\mathrm{GeV}$ into the matching prescription gives
+$$
+\begin{aligned}
+m_3
+&=
+\frac{252^2}{2(1.506710298\times10^{15})}
+\sqrt{\frac32}\,\mathrm{GeV}\\
+&=2.580993785\times10^{-11}\,\mathrm{GeV}.
+\end{aligned}
+$$
+Since $1\,\mathrm{GeV}=10^{12}\,\mathrm{meV}$,
+$$
+m_3=25.80993785\,\mathrm{meV},
+$$
+which rounds to the stated value. ∎
 
 ### T.24.15 Complete Mass Spectrum
 
-**Theorem T.24.15 (Neutrino Mass Spectrum).** With $m_3/m_2=e^{\sqrt3}$ and $m_3/m_1=e^{3\sqrt3}$,
+**Theorem T.24.15 (Neutrino Mass Spectrum).** Under Theorem T.24.14, assume
 $$
-\boxed{(m_1,m_2,m_3)=(0.142931,4.566325,25.809938)\,\mathrm{meV}}.
+\frac{m_3}{m_2}=e^{\sqrt3},
+\qquad
+\frac{m_3}{m_1}=e^{3\sqrt3}.
 $$
-Consequently,
+Then
+$$
+\boxed{(m_1,m_2,m_3)=(0.142931,4.566325,25.809938)\,\mathrm{meV}},
+$$
+and
 $$
 \Sigma_\nu=m_1+m_2+m_3
 =30.519194\,\mathrm{meV}
 =0.030519194\,\mathrm{eV}.
 $$
-These values inherit every assumption of Theorem T.24.14. ∎
+
+*Proof.* Solving the two assumed ratios for the lighter masses gives
+$$
+m_2=m_3e^{-\sqrt3},
+\qquad
+m_1=m_3e^{-3\sqrt3}.
+$$
+With $m_3=25.809937853\,\mathrm{meV}$ from Theorem T.24.14,
+$$
+m_2=25.809937853e^{-\sqrt3}\,\mathrm{meV}
+=4.566325340\,\mathrm{meV},
+$$
+$$
+m_1=25.809937853e^{-3\sqrt3}\,\mathrm{meV}
+=0.142931067\,\mathrm{meV}.
+$$
+Their sum is
+$$
+0.142931067+4.566325340+25.809937853
+=30.519194260\,\mathrm{meV}
+=0.030519194260\,\mathrm{eV}.
+$$
+Rounding gives the displayed spectrum and sum. ∎
 
 -----
 
@@ -6285,7 +6607,37 @@ and
 $$
 \frac{\Delta m^2_{31}}{\Delta m^2_{21}}=31.9781.
 $$
-The ratio is compatible with the cited ratio $32.6\pm0.7$, but both absolute splittings are far below the cited values $(7.53\pm0.18)\times10^{-5}\,\mathrm{eV}^2$ and $(2.453\pm0.033)\times10^{-3}\,\mathrm{eV}^2$. Agreement of the ratio alone does not close the absolute-scale branch. ∎
+The ratio is compatible with the cited ratio $32.6\pm0.7$, but both absolute splittings are far below the cited values $(7.53\pm0.18)\times10^{-5}\,\mathrm{eV}^2$ and $(2.453\pm0.033)\times10^{-3}\,\mathrm{eV}^2$. Agreement of the ratio alone does not close the absolute-scale branch.
+
+*Proof.* By definition and the normal ordering of Theorem T.24.15,
+$$
+\Delta m_{21}^2=m_2^2-m_1^2,
+\qquad
+\Delta m_{31}^2=m_3^2-m_1^2.
+$$
+Using the unrounded masses from that theorem gives
+$$
+m_2^2-m_1^2
+=20.83089782\,\mathrm{meV}^2,
+$$
+$$
+m_3^2-m_1^2
+=666.13246269\,\mathrm{meV}^2.
+$$
+Since $1\,\mathrm{meV}^2=10^{-6}\,\mathrm{eV}^2$,
+$$
+\Delta m_{21}^2
+=2.083089782\times10^{-5}\,\mathrm{eV}^2,
+\qquad
+\Delta m_{31}^2
+=6.661324627\times10^{-4}\,\mathrm{eV}^2.
+$$
+Finally,
+$$
+\frac{6.661324627\times10^{-4}}{2.083089782\times10^{-5}}
+=31.97809660.
+$$
+Rounding gives all three displayed values. ∎
 
 **Corollary T.24.16a (Conditional $A_2$ Absolute-Scale Projection).** On the internally normalized seesaw branch of Theorems T.24.14--T.24.16,
 $$
@@ -6323,18 +6675,83 @@ $$
 \qquad
 m_\beta^{\mathrm{osc}}=8.90360\,\mathrm{meV}.
 $$
-This second set is an empirical calibration, not a consequence of the internally normalized seesaw value. The two calibrations must not be combined, and neither constitutes an oscillation-data closure of the internal branch. ∎
+This second set is an empirical calibration, not a consequence of the internally normalized seesaw value. The two calibrations must not be combined, and neither constitutes an oscillation-data closure of the internal branch.
 
-**Proposition T.24.16.1** (Theoretical Uncertainty Budget). *The dominant sources of theoretical uncertainty are:*
+*Proof.* On the internally normalized branch, Theorem T.24.15 gives
+$$
+(m_1,m_2,m_3)
+=(0.142931067,4.566325340,25.809937853)\,\mathrm{meV}.
+$$
+Hence
+$$
+\Sigma_\nu
+=0.142931067+4.566325340+25.809937853
+=30.519194260\,\mathrm{meV}.
+$$
+For $\theta_{12}=33.7^\circ$ and $\theta_{13}=8.7^\circ$,
+$$
+(s_{12}^2,c_{12}^2,s_{13}^2,c_{13}^2)
+=(0.30785234,0.69214766,0.02287984,0.97712016).
+$$
+The three terms in $m_\beta^2$ are therefore
+$$
+c_{13}^2c_{12}^2m_1^2=0.01381656\,\mathrm{meV}^2,
+$$
+$$
+c_{13}^2s_{12}^2m_2^2=6.27226118\,\mathrm{meV}^2,
+$$
+$$
+s_{13}^2m_3^2=15.24146875\,\mathrm{meV}^2.
+$$
+Thus
+$$
+m_\beta=\sqrt{21.52754649}\,\mathrm{meV}
+=4.63977871\,\mathrm{meV},
+\qquad
+\frac{m_\beta}{\Sigma_\nu}=0.15202822.
+$$
 
-|Parameter |Input Uncertainty |Effect on $\Delta m^2_{21}$|Effect on $\theta_{12}$|
+On the oscillation-anchored branch, the common ratios give
+$$
+m_1=m_3e^{-3\sqrt3},
+\qquad
+m_2=m_3e^{-\sqrt3}.
+$$
+Consequently
+$$
+\Delta m_{31}^2
+=m_3^2-m_1^2
+=m_3^2(1-e^{-6\sqrt3}),
+$$
+so
+$$
+m_3
+=\sqrt{\frac{2.453\times10^{-3}}{1-e^{-6\sqrt3}}}\,\mathrm{eV}
+=49.52852945\,\mathrm{meV}.
+$$
+Multiplication by $e^{-\sqrt3}$ and $e^{-3\sqrt3}$ gives
+$$
+(m_1,m_2,m_3)
+=(0.274280612,8.762647178,49.528529454)\,\mathrm{meV}.
+$$
+Their sum is $58.565457244\,\mathrm{meV}$. Substitution of these masses into the same beta-decay formula gives
+$$
+m_\beta
+=\sqrt{0.05087881+23.09729301+56.12595832}\,\mathrm{meV}
+=8.90360209\,\mathrm{meV}.
+$$
+Rounding yields the two separately displayed sets. ∎
+
+**Proposition T.24.16.1** (Illustrative Parameter-Sensitivity Ledger). *Conditional on holding all unlisted modeling choices constant, the stated one-at-a-time parameter variations give:*
+
+|Parameter |Input Variation |Effect on $\Delta m^2_{21}$|Effect on $\theta_{12}$|
 |:----------------|:--------------------------------|:--------------------------|:----------------------|
 |$\alpha_\nu = \sqrt3/2$ inherited from $\alpha_{\text{UV}}=3/2$ |±2% (from $\delta_{\text{geom}}$)|±4% |±0.5° |
 |$d^2_{ij}$ |Exact (discrete $E_8$) |0 |0 |
 |$M_R$ |±5% (from $y_3$ running) |±10% |0 |
 |$f_{\text{sinc}}$|< 0.1% |< 0.2% |< 0.1° |
 
-*The discrete $E_8$ triad structure provides intrinsic protection: $d^2 \in \{2, 4, 6, 8\}$ cannot vary continuously. Combined theoretical uncertainty: $\Delta m^2_{21}$: ±11%, $\theta_{12}$: ±0.5°, $\theta_{13}$: ±0.3°.*
+*The discrete $E_8$ triad structure gives $d^2 \in \{2, 4, 6, 8\}$, so this entry does not vary continuously. The remaining entries are local one-at-a-time sensitivities; they do not by themselves define probability distributions or covariances. If the displayed symmetric variations are additionally interpreted as mutually independent centered $1\sigma$ Gaussian errors, quadrature gives $\sqrt{4^2+10^2+0.2^2}\%=10.77\%$ for $\Delta m^2_{21}$ and $\sqrt{0.5^2+0.1^2}^\circ=0.510^\circ$ for $\theta_{12}$. If they are deterministic ranges, the corresponding triangle-inequality bounds are $14.2\%$ and $0.6^\circ$. This ledger supplies no sensitivity calculation for $\theta_{13}$ and therefore no numerical uncertainty for that angle.*
 
 -----
 
@@ -6342,130 +6759,224 @@ This second set is an empirical calibration, not a consequence of the internally
 
 ### T.24.17 Generation Variance and Sinc Factor
 
-**Theorem T.24.17** (Generation Subspace Variance). *The variance per direction in the generation subspace is:*
+**Theorem T.24.17** (Conditional Generation-Subspace Variance). *Assume that the generation projection has $N_g=3$ mutually orthogonal directions, that its covariance is isotropic, and that its projected mean-squared radius is normalized to one. Then the variance per generation direction and the associated angular width are*
 
-$$\sigma^2_{\mathcal{G}} = \frac{1}{N_g} = \frac{1}{3}$$
+$$
+\sigma^2_{\mathcal G}=\frac1{N_g}=\frac13,
+\qquad
+u=\sqrt{\sigma^2_{\mathcal G}}=\frac1{\sqrt3}=0.5774\ldots.
+$$
 
-*Proof.* From Lemma T.41.2, the total interface variance is normalized: $M \cdot \sigma^2_B = 1$. By isotropy and tensor factorization, variance distributes equally among the $N_g = 3$ generation directions:
-$$\sigma^2_{\mathcal{G}} = \frac{1}{N_g} = \frac{1}{3}$$
+*Proof.* Isotropy makes the covariance on the generation subspace equal to $\sigma_{\mathcal G}^2I_{N_g}$. The normalized projected mean-squared radius is therefore
+$$
+1
+=\mathbb E\lVert X_{\mathcal G}\rVert^2
+=\operatorname{Tr}(\sigma_{\mathcal G}^2I_{N_g})
+=N_g\sigma_{\mathcal G}^2.
+$$
+Since $N_g=3$, division gives $\sigma_{\mathcal G}^2=1/3$, and taking the positive square root gives $u=1/\sqrt3$. ∎
 
-The angular width parameter is:
-$$u = \sqrt{\sigma^2_{\mathcal{G}}} = \frac{1}{\sqrt{N_g}} = \frac{1}{\sqrt{3}} = 0.5774$$
+**Theorem T.24.18** (Uniform-Packet Sinc Correction Factor). *Assume that the generation phase $\phi$ is uniformly distributed on $[-u,u]$, with $u=1/\sqrt3$ from Theorem T.24.17. Then coherent phase averaging gives*
 
-**Theorem T.24.18** (Sinc Correction Factor). *The generation wavefunction has finite angular extent, leading to coherent phase averaging:*
+$$
+f_{\text{sinc}}
+=\left|\mathbb E(e^{i\phi})\right|
+=\frac{\sin u}{u}
+=\frac{\sin(1/\sqrt3)}{1/\sqrt3}
+=0.9454\ldots.
+$$
 
-$$f_{\text{sinc}} = \frac{\sin(u)}{u} = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = \frac{0.5458}{0.5774} = 0.9454$$
-
-*Proof.* The observed mixing amplitude is the expectation over the extended wavepacket. For a phase uniformly distributed over angular extent $2u$:
-$$\langle e^{i\phi} \rangle = \frac{1}{2u}\int_{-u}^{u} e^{i\phi}\,d\phi = \frac{\sin u}{u}$$
+*Proof.* For $u>0$, the uniform density is $1/(2u)$, so
+$$
+\mathbb E(e^{i\phi})
+=\frac1{2u}\int_{-u}^{u}e^{i\phi}\,d\phi
+=\frac1{2u}\left[\frac{e^{i\phi}}i\right]_{-u}^{u}
+=\frac{e^{iu}-e^{-iu}}{2iu}
+=\frac{\sin u}{u}.
+$$
+For $u=0$, the phase is concentrated at zero and the expectation is $1$, equal to the continuous extension $\lim_{u\to0}\sin u/u$. Substitution of $u=1/\sqrt3$ gives the displayed value. ∎
 
 -----
 
 ### T.24.19 Atmospheric Angle θ₂₃
 
-**Theorem T.24.19** (Atmospheric Mixing on the PMNS Geometric-Factor Branch). *On the PMNS geometric-factor branch of Theorem T.24.20, together with the matched-sector baseline and curvature/tilt factors specified in the proof, the atmospheric mixing angle is:*
-
-$$\boxed{\theta_{23} = 47.4°}$$
+**Theorem T.24.19 (Conditional Atmospheric Mixing Model).** Assume the PMNS geometric-factor branch of Theorem T.24.20; a relevant Hermitian $2\times2$ mass block with $\Delta=0$ and $B\ne0$ as in Lemma T.24.8; the specified BCH generator convention; the bridge assignment $s_{13}^{\mathrm{eff}}=f_{\mathrm{sinc}}/N_g$; and the commutator-lift rule of Steps 4–5. Under these model inputs,
+$$
+\boxed{\theta_{23}=47.4^\circ}.
+$$
 
 *Proof.*
 
-**Step 1** (Matched-Sector Baseline). From Lemma T.24.8, the matched geometry $d^2_{32,\nu} = 2 = d^2_{32,\ell}$ gives maximal mixing at leading order:
-$$\theta_{23}^{(0)} = 45°$$
+**Step 1 (Mass-Block Baseline).** The hypotheses $\Delta=0$ and $B\ne0$ give
+$$
+\tan(2\theta_{23}^{(0)})=\frac{2|B|}{\Delta},
+\qquad
+\theta_{23}^{(0)}=45^\circ.
+$$
+The equality $d^2_{32,\nu}=d^2_{32,\ell}=2$ is compatible with this branch but does not imply $\Delta=0$ by itself.
 
-**Step 2** (SU(3) Commutator Structure). The PMNS matrix involves sequential rotations in generation space. Using the Baker-Campbell-Hausdorff formula for SU(3) generators $\lambda_a$:
+**Step 2** (Registered Bridge Amplitude). The bridge assignment assumed in the theorem gives
+$$
+s_{13}^{\mathrm{eff}}
+=
+\frac{f_{\mathrm{sinc}}}{N_g}
+=
+\frac{0.9453630557}{3}
+=0.3151210186.
+$$
 
-$$U_{12}U_{13} = \exp\left(i\theta_{12}\frac{\lambda_1}{2} + i\theta_{13}\frac{\lambda_4}{2} - \frac{\theta_{12}\theta_{13}}{8}[\lambda_1,\lambda_4] + O(\theta^3)\right)$$
+**Step 3** (Registered Commutator Lift). The declared mismatch magnitude is
+$$
+\Delta\theta_{12}
+=
+|90^\circ-120^\circ|
+=30^\circ.
+$$
+By the commutator-lift rule assumed in the theorem,
+$$
+\delta\theta_{23}
+=
+\frac14\Delta\theta_{12}s_{13}^{\mathrm{eff}}
+=
+\frac14(30^\circ)(0.3151210186)
+=2.36340764^\circ.
+$$
+The sign is the positive orientation selected by that rule; reversing the ordered generation loop would reverse it.
 
-**Step 3** (Commutator Evaluation). From SU(3) structure constants $f_{147} = 1/2$:
-$$[\lambda_1, \lambda_4] = 2if_{147}\lambda_7 = i\lambda_7$$
+**Step 4** (Final Result). Adding the mass-block baseline from Step 1 gives
+$$
+\theta_{23}
+=45^\circ+2.36340764^\circ
+=47.36340764^\circ
+\approx47.4^\circ.
+$$
+No truncated Baker-Campbell-Hausdorff series is used in this conditional arithmetic. ∎
 
-The $\lambda_7$ generator corresponds to 2↔3 rotation. The commutator contributes:
-$$\delta\theta_{23} = \frac{\theta_{12}\theta_{13}}{4}$$
-
-**Step 4** (Bridge Amplitude). The effective 1↔3 bridge amplitude:
-$$s_{13}^{\text{eff}} = \frac{f_{\text{sinc}}}{N_g} = \frac{0.9454}{3} = 0.3151$$
-
-**Step 5** (Commutator Lift). The D₄-A₂ mismatch is $\Delta\theta_{12} = |90° - 120°| = 30°$:
-$$\delta\theta_{23} = \frac{1}{4} \times \Delta\theta_{12} \times s_{13}^{\text{eff}} = \frac{1}{4} \times 30° \times 0.3151 = 2.36°$$
-
-**Step 6** (Final Result).
-$$\theta_{23} = 45° + 2.36° = 47.36° \approx 47.4°$$
-
-**Experimental Comparison** (Particle Data Group 2024, Normal Ordering):
+**Experimental Comparison** (Particle Data Group 2024 listing, Normal Ordering):
 
 |Quantity |Theory|Experiment |Pull |
 |:------------------|:-----|:------------|:-----|
-|$\theta_{23}$ |47.4° |47.6° ± 1.4° |−0.14σ|
-|$\sin^2\theta_{23}$|0.541 |0.546 ± 0.021|−0.23σ|
+|$\theta_{23}$ |47.4° |$48.33^{+0.87}_{-1.21}$° |$-0.77\sigma$|
+|$\sin^2\theta_{23}$|0.542 |$0.558^{+0.015}_{-0.021}$|$-0.77\sigma$|
+
+∎
 
 -----
 
-**Lemma T.24.19.1** (Majorana Overlap Enhancement). *The PMNS solar mixing amplitude receives an enhancement factor relative to the CKM Cabibbo amplitude due to Majorana structure:*
+**Lemma T.24.19.1 (Majorana overlap coefficient on the declared model branch).** Assume the overlap model rule
+$$
+\mathcal E_{\mathrm{Maj}}
+:=
+\sqrt{\frac{d_{21,\nu}^2d_{31,\nu}^2}{d_{21,\ell}^2d_{32,\nu}^2}}
+\frac{\dim(\mathbf3_S)}{\dim(\mathbf2)}.
+$$
+For the registered distances and dimensions,
+$$
+\mathcal E_{\mathrm{Maj}}
+=\sqrt{\frac{6\cdot6}{4\cdot2}}\frac32
+=\frac{9}{2\sqrt2}
+=3.18198\ldots.
+$$
 
-$$\mathcal{E}_{\text{Maj}} = \sqrt{\frac{d^2_{21,\nu} \cdot d^2_{31,\nu}}{d^2_{21,\ell} \cdot d^2_{32,\nu}}} \times \frac{\dim(\mathbf{3}_S)}{\dim(\mathbf{2})} = \sqrt{\frac{6 \times 6}{4 \times 2}} \times \frac{3}{2} = 3.18$$
-
-*where $\mathbf{3}_S$ is the symmetric SU(2) triplet and $\mathbf{2}$ is the fundamental doublet.*
-
-*Proof.* The Weinberg operator $(L \cdot H)(L \cdot H)/\Lambda$ transforms as $\mathbf{2} \otimes_S \mathbf{2} = \mathbf{3}$. The symmetric tensor product has three independent components versus two for the Dirac case. The overlap integral on the 1↔2 submanifold of Gr(2,8) scales with the product of $E_8$ distances. The ratio $3/2$ accounts for symmetric versus antisymmetric contraction. The remaining finite-size corrections ($f_{\text{curv}} \times f_{\text{tilt}} \times f_{\text{sinc-renorm}} = 1.157$) arise from Gaussian overlap on curved Gr(2,8) (Lemma T.51.1, Theorem T.55). ∎
+*Proof.* Substitute the declared distance squares and the dimension ratio. The curvature, tilt, and sinc-renormalization factors belong to Theorem T.24.20 and are not part of this coefficient. ∎
 
 ### T.24.20 Solar Angle θ₁₂
 
-**Theorem T.24.20** (Solar Mixing on the PMNS Geometric-Factor Branch). *On the PMNS geometric-factor branch — comprising the distance enhancement $f_{\mathrm{dist}} = \sqrt{d^2_{21,\nu}/d^2_{21,\ell}}$, the Schur complement $f_{\mathrm{Schur}} = \sqrt{d^2_{31,\nu}/d^2_{32,\nu}}$, the symmetric-bilinear factor $f_{\mathrm{sym}} = 2$, the curvature correction $f_{\mathrm{curv}}$, the tilt enhancement $f_{\mathrm{tilt}}$, and the sinc-renormalization factor $f_{\mathrm{sinc-renorm}} = 1/f_{\mathrm{sinc}}^2$ specified in the proof, in conjunction with the Majorana A₂ branch (Theorem T.24.5), the triplet-projection exponent branch (Theorem T.24.12), and the generation-internal tensor-factor branch (Lemma T.54.1) — the solar mixing angle is:*
-
-$$\boxed{\theta_{12} = 33.7°.}$$
-
-*This is a derivation within the adopted PMNS Berry-loop and geometric-factor model branch; Proposition T.24.28 records the full input inventory required for branch-conditional closure of the neutrino sector.*
-
-*Proof.*
-
-**Step 1** (Lattice Angle Mismatch). From $E_8$ geometry (Lemma T.24.4):
-
-- Charged leptons ($d^2_{21,\ell} = 4$): $\theta_\ell = \arccos(0) = 90°$ (D₄ cubic)
-- Neutrinos ($d^2_{21,\nu} = 6$): $\theta_\nu = \arccos(-1/2) = 120°$ (A₂ hexagonal)
-- Mismatch: $\Delta\theta_{21} = 30°$
-
-**Step 2** (Stiffness Ratio). The stiffness scales as $\kappa \propto \alpha^2$:
-$$\frac{\kappa_\nu}{\kappa_\ell} = \left(\frac{\alpha_\nu}{\alpha}\right)^2 = \left(\frac{1}{\sqrt{3}}\right)^2 = \frac{1}{3}$$
-
-**Step 3** (Vacuum Position). Minimizing the total PCE cost:
-$$\theta_{\text{vac}} = \frac{\kappa_\ell \theta_\ell + \kappa_\nu \theta_\nu}{\kappa_\ell + \kappa_\nu} = \frac{1 \cdot 90° + \frac{1}{3} \cdot 120°}{1 + \frac{1}{3}} = \frac{130°}{4/3} = 97.5°$$
-
-**Step 4** (Tilt Angle).
-$$\theta_{\text{tilt}} = \theta_{\text{vac}} - \theta_\ell = 97.5° - 90° = 7.5°$$
-
-**Step 5** (A₂ Root-Weight Projection). The A₂ root system has 60° between adjacent roots:
-$$\mathcal{P} = \cos(30°) = \frac{\sqrt{3}}{2} = 0.866$$
-
-**Step 6** (Base Amplitude).
-$$\sin\theta_{12}^{(\text{base})} = \mathcal{P} \cdot \sin(\theta_{\text{tilt}}) = 0.866 \times \sin(7.5°) = 0.866 \times 0.1305 = 0.113$$
-
-**Step 7** (Distance Enhancement).
-$$f_{\text{dist}} = \sqrt{\frac{d^2_{21,\nu}}{d^2_{21,\ell}}} = \sqrt{\frac{6}{4}} = \sqrt{1.5} = 1.225$$
-
-**Step 8** (Schur Complement). Adiabatic elimination of generation 3:
-$$f_{\text{Schur}} = \sqrt{\frac{d^2_{31,\nu}}{d^2_{32,\nu}}} = \sqrt{\frac{6}{2}} = \sqrt{3} = 1.732$$
-
-**Step 9** (Registered Symmetric-Bilinear Coefficient). In four dimensions the charge-conjugation matrix is antisymmetric, while Fermi statistics make the Majorana flavor mass matrix symmetric. These facts do not supply a universal amplitude enhancement of two. The numerical branch therefore treats
+**Theorem T.24.20** (Solar Mixing on the Conditional PMNS Geometric-Factor Branch). *Assume the Majorana $A_2$ branch of Theorem T.24.5, the triplet-projection exponent branch of Theorem T.24.12, and the unit-total-generation-variance branch of Theorem T.54.2. Assume further that*
 $$
-f_{\mathrm{sym}}=2
+(d_{21,\ell}^2,d_{21,\nu}^2,d_{31,\nu}^2,d_{32,\nu}^2)=(4,6,6,2),
 $$
-as an independent model coefficient. Without that coefficient and the remaining response factors, the solar angle is not derived.
+*that the angular response cost is*
+$$
+V(\theta)
+=
+\frac{\kappa_\ell}{2}(\theta-90^\circ)^2
++
+\frac{\kappa_\nu}{2}(\theta-120^\circ)^2,
+\qquad
+\frac{\kappa_\nu}{\kappa_\ell}=\frac13,
+$$
+*and that the PMNS response rule is*
+$$
+\sin\theta_{12}
+=
+\cos(30^\circ)\sin(\theta_{\mathrm{vac}}-90^\circ)
+f_{\mathrm{dist}}f_{\mathrm{Schur}}f_{\mathrm{sym}}
+f_{\mathrm{curv}}f_{\mathrm{tilt}}f_{\mathrm{sinc-renorm}},
+$$
+*with*
+$$
+f_{\mathrm{dist}}=\sqrt{\frac64},
+\qquad
+f_{\mathrm{Schur}}=\sqrt{\frac62},
+\qquad
+f_{\mathrm{sym}}=2,
+$$
+$$
+f_{\mathrm{curv}}
+=1-\frac{32/23}{6\cdot24}\frac19,
+\qquad
+f_{\mathrm{tilt}}
+=1+\frac7{8\cdot25},
+\qquad
+f_{\mathrm{sinc-renorm}}
+=\operatorname{sinc}(1/\sqrt3)^{-2}.
+$$
+*Then*
+$$
+\boxed{\theta_{12}=33.7^\circ}.
+$$
+*This is a conditional calculation within the declared PMNS response model; the response rule and its factors are model inputs.*
 
-**Step 10** (Raw Amplitude).
-$$\sin\theta_{12}^{(\text{raw})} = \sin\theta_{12}^{(\text{base})} \times f_{\text{dist}} \times f_{\text{Schur}} \times f_{\text{sym}} = 0.113 \times 1.225 \times 1.732 \times 2 = 0.480$$
-
-**Step 11** (Curvature Correction).
-$$f_{\text{curv}} = 1 - \frac{K_{\text{avg}}}{6M} \times \sigma^4_{\mathcal{G}} = 1 - \frac{32/23}{6 \times 24} \times \frac{1}{9} = 0.9989$$
-
-**Step 12** (Tilt Enhancement).
-$$f_{\text{tilt}} = 1 + \frac{d_0 - 1}{d_0(M+1)} = 1 + \frac{7}{8 \times 25} = 1.035$$
-
-**Step 13** (Sinc Renormalization).
-$$f_{\text{sinc-renorm}} = \frac{1}{f_{\text{sinc}}^2} = \frac{1}{0.9454^2} = 1.119$$
-
-**Step 14** (Final Amplitude).
-$$\sin\theta_{12} = 0.480 \times 0.9989 \times 1.035 \times 1.119 = 0.555$$
-$$\theta_{12} = \arcsin(0.555) = 33.7°$$
+*Proof.* Differentiating the assumed quadratic cost gives
+$$
+V'(\theta)
+=
+\kappa_\ell(\theta-90^\circ)
++
+\kappa_\nu(\theta-120^\circ).
+$$
+Because $V''(\theta)=\kappa_\ell+\kappa_\nu>0$, its unique minimizer is
+$$
+\theta_{\mathrm{vac}}
+=
+\frac{\kappa_\ell90^\circ+\kappa_\nu120^\circ}
+{\kappa_\ell+\kappa_\nu}
+=
+\frac{90^\circ+(1/3)120^\circ}{1+1/3}
+=97.5^\circ.
+$$
+Thus $\theta_{\mathrm{vac}}-90^\circ=7.5^\circ$ and
+$$
+\cos(30^\circ)\sin(7.5^\circ)
+=0.1130389983.
+$$
+The remaining factors evaluate to
+$$
+f_{\mathrm{dist}}=1.224744871,
+\qquad
+f_{\mathrm{Schur}}=1.732050808,
+\qquad
+f_{\mathrm{curv}}=0.998926463,
+$$
+$$
+f_{\mathrm{tilt}}=1.035,
+\qquad
+f_{\mathrm{sinc-renorm}}=1.118929561.
+$$
+Substitution into the assumed response rule gives
+$$
+\sin\theta_{12}
+=0.554806025.
+$$
+Therefore
+$$
+\theta_{12}
+=\arcsin(0.554806025)
+=33.69735528^\circ
+\approx33.7^\circ.
+$$
+∎
 
 **Experimental Comparison** (Particle Data Group 2024):
 
@@ -6474,55 +6985,34 @@ $$\theta_{12} = \arcsin(0.555) = 33.7°$$
 |$\theta_{12}$ |33.7° |33.6° ± 0.8° |+0.12σ|
 |$\sin^2\theta_{12}$|0.308 |0.307 ± 0.013|+0.08σ|
 
+∎
+
 -----
 
 ### T.24.21 Reactor Angle θ₁₃
 
-**Theorem T.24.21** (Reactor Mixing on the PMNS Geometric-Factor Branch). *On the PMNS geometric-factor branch of Theorem T.24.20, together with the Berry-curvature frustration factor specified in the proof, the reactor mixing angle is:*
-
-$$\boxed{\theta_{13} = 8.8°}$$
-
-*Proof.*
-
-**Step 1** (Matched-Sector Baseline). The 3↔1 sector has matched geometry $d^2_{31,\nu} = 6 = d^2_{31,\ell}$, giving $\theta_{13}^{(0)} = 0$ at leading order.
-
-**Step 2** (Geometric Jarlskog Factor). The reactor angle arises from Berry curvature integrated over the D₄-A₂ frustration region. On Gr(2,8), the curvature 2-form is $\mathcal{F} = \omega_{\text{KE}}$ (Lemma T.53.2). The frustration solid angle in Euclidean measure is:
+**Theorem T.24.21 (Reactor mixing on the registered capacity-sharing branch).** Assume the zero-baseline branch, the coefficient
 $$
-\Omega_{\text{frust}}^{(\text{E})} = \frac{\Delta\theta_{21}}{360^\circ} \times 4\pi = \frac{30^\circ}{360^\circ} \times 4\pi = \frac{\pi}{3}.
+J_{\mathrm{geom}}=\frac1{18\sqrt3},
+$$
+and the capacity-sharing rule
+$$
+\sin\theta_{13}=A\cos\theta_{13},
+\qquad
+A=\frac{8J_{\mathrm{geom}}\operatorname{sinc}(1/\sqrt3)}{\sqrt3\sin(67.4^\circ)\sin(94.8^\circ)}.
+$$
+Then
+$$
+\boxed{\theta_{13}=8.66^\circ\approx8.7^\circ}.
 $$
 
-To compare with the Bures-normalized flavor-loop model, introduce the additional modeling convention
+*Proof.* The registered inputs give $A=0.1522369451$. Since $0\le\theta_{13}<\pi/2$, division by $\cos\theta_{13}$ is valid and the branch equation becomes $\tan\theta_{13}=A$. Thus
 $$
-\Omega_{\text{frust}}^{(\text{B})} := \frac{\Omega_{\text{frust}}^{(\text{E})}}{\pi} = \frac{1}{3},
+\theta_{13}=\arctan(A)=8.65607149^\circ,
+\qquad
+\sin\theta_{13}=\frac{A}{\sqrt{1+A^2}}=0.1505029004.
 $$
-which fixes the angular unit used in the subsequent overlap estimate. This normalization is a model convention for the flavor-loop calculation; it is not a consequence of Lemma T.41.2.
-
-Including the D₄-A₂ mismatch ratio:
-
-$$J_{\text{geom}} = \frac{1}{6\sqrt{3}} \cdot \frac{\Delta\theta_{21}}{90°} = \frac{1}{6\sqrt{3}} \cdot \frac{30°}{90°} = \frac{1}{18\sqrt{3}} = 0.0321$$
-
-**Step 3** (Angular Factors). With $\theta_{12} = 33.7°$ and $\theta_{23} = 47.4°$:
-$$\sin(2\theta_{12}) = \sin(67.4°) = 0.9232$$
-$$\sin(2\theta_{23}) = \sin(94.8°) = 0.9966$$
-
-**Step 4** (Base Factor). From the Jarlskog relation:
-$$\text{Base} = \frac{8J_{\text{geom}}}{\sin(2\theta_{12})\sin(2\theta_{23})} = \frac{8 \times 0.0321}{0.9232 \times 0.9966} = \frac{0.257}{0.920} = 0.279$$
-
-**Step 5** (Capacity Sharing). The 1↔3 transition samples all generation channels. The Berry phase amplitude projects onto the mass eigenstate basis with factor $c_{13}$:
-$$f_{\text{capacity}} = \frac{f_{\text{sinc}} \cdot c_{13}}{\sqrt{N_g}}$$
-
-**Step 6** (Self-Consistent Solution). Setting $A = \text{Base} \times f_{\text{sinc}}/\sqrt{N_g} = 0.152$:
-$$\sin\theta_{13} = A \cdot \cos\theta_{13} \quad \Rightarrow \quad \sin\theta_{13} = \frac{A}{\sqrt{1 + A^2}} = 0.150$$
-$$\theta_{13} = \arcsin(0.150) = 8.65° \approx 8.7°$$
-
-**Experimental Comparison** (Particle Data Group 2024):
-
-|Quantity |Theory|Experiment |Pull |
-|:------------------|:-----|:--------------|:----|
-|$\theta_{13}$ |8.7° |8.54° ± 0.12° |+1.3σ|
-|$\sin^2\theta_{13}$|0.0226|0.0220 ± 0.0007|+0.9σ|
-
-**Remark T.24.21.1: Reactor Angle Test.** *The self-consistent solution $\theta_{13} = 8.7°$ arises from the projection of Berry phase amplitude onto the mass eigenstate basis. The +1.0σ agreement validates the capacity sharing mechanism. Future precision at JUNO and DUNE (projected $\sigma(\sin^2\theta_{13}) \sim 0.0003$) will sharpen this test.*
+The zero baseline, $J_{\mathrm{geom}}$, and the capacity-sharing equation are model inputs; distance matching does not derive them. ∎
 
 -----
 
@@ -6565,7 +7055,7 @@ $$J_{CP} = c_{12}s_{12}c_{23}s_{23}c^2_{13}s_{13}\sin\delta_{CP}$$
 |$s_{12} = \sin(33.7°)$ |0.555 |
 |$c_{23} = \cos(47.4°)$ |0.677 |
 |$s_{23} = \sin(47.4°)$ |0.736 |
-|$c_{13} = \cos(8.8°)$ |0.988 |
+|$c_{13} = \cos(8.7°)$ |0.988 |
 |$s_{13} = \sin(8.7°)$ |0.151 |
 |$\sin\delta_{CP} = \sin(232.5°)$|−0.793|
 
@@ -6580,6 +7070,8 @@ $$\boxed{J_{CP} = 0.03394 \times (-0.793) = -0.0269 \approx -0.027}$$
 |Quantity|Theory|Experiment |Pull |
 |:-------|:-----|:-------------|:-----|
 |$J_{CP}$|−0.027|−0.030 ± 0.010|+0.30σ|
+
+∎
 
 -----
 
@@ -6609,7 +7101,43 @@ Using the internally normalized masses, $\theta_{12}=33.7^\circ$, $\theta_{13}=8
 $$
 \boxed{m_{\beta\beta}=1.72041\,\mathrm{meV}}.
 $$
-This value is conditional on both the phase assignment and the internal absolute-scale branch. ∎
+This value is conditional on both the phase assignment and the internal absolute-scale branch.
+
+*Proof.* With the unrounded masses of Theorem T.24.15 and the stated angles, the magnitudes of the three summands are
+$$
+m_1c_{12}^2c_{13}^2=0.09666591\,\mathrm{meV},
+$$
+$$
+m_2s_{12}^2c_{13}^2=1.37359052\,\mathrm{meV},
+$$
+$$
+m_3s_{13}^2=0.59052714\,\mathrm{meV}.
+$$
+The first two phases vanish. The third phase is
+$$
+\alpha_{31}-2\delta
+=180^\circ-465^\circ
+=-285^\circ
+\equiv75^\circ\pmod{360^\circ}.
+$$
+Therefore the complex sum has real and imaginary parts
+$$
+\operatorname{Re}z
+=0.09666591+1.37359052+0.59052714\cos75^\circ
+=1.62309610\,\mathrm{meV},
+$$
+$$
+\operatorname{Im}z
+=0.59052714\sin75^\circ
+=0.57040541\,\mathrm{meV}.
+$$
+Taking the modulus gives
+$$
+m_{\beta\beta}
+=\sqrt{(1.62309610)^2+(0.57040541)^2}\,\mathrm{meV}
+=1.72040788\,\mathrm{meV},
+$$
+which rounds to the stated value. ∎
 
 -----
 
@@ -6619,27 +7147,27 @@ This value is conditional on both the phase assignment and the internal absolute
 
 **Table T.24.4**
 
-|Parameter |Theory |Experiment (Particle Data Group 2024) |Pull |Status |
+|Parameter |Model value |Comparison value |Diagnostic |Status |
 |:--------------------------------|:------------------------|:-------------------------------------|:-----|:---------|
-|Mass Hierarchy |Normal |Pending |— |Prediction|
-|$M_R$ (seesaw scale) |$1.5 \times 10^{15}$ GeV |$(10^{14}-10^{16})$ GeV |— |Derived |
-|$m_3$|25.809938 meV|—|—|Conditional|
-|$m_2$|4.566325 meV|—|—|Conditional|
-|$m_1$|0.142931 meV|—|—|Conditional|
-|$\Delta m^2_{21}$|$2.08309\times10^{-5}$ eV²|$(7.53\pm0.18)\times10^{-5}$ eV²|Not matched|✗|
-|$\Delta m^2_{31}$|$6.66132\times10^{-4}$ eV²|$(2.453\pm0.033)\times10^{-3}$ eV²|Not matched|✗|
-|$\Delta m^2_{31}/\Delta m^2_{21}$|31.9781|$32.6\pm0.7$|$-0.9\sigma$|Ratio only|
-|$\theta_{23}$ |47.4° |47.6° ± 1.4° |−0.14σ|✓ |
-|$\sin^2\theta_{23}$ |0.541 |0.546 ± 0.021 |−0.23σ|✓ |
-|$\theta_{12}$ |33.7° |33.6° ± 0.8° |+0.12σ|✓ |
-|$\sin^2\theta_{12}$ |0.308 |0.307 ± 0.013 |+0.08σ|✓ |
-|$\theta_{13}$ |8.7° |8.54° ± 0.12° |+1.3σ |✓ |
-|$\sin^2\theta_{13}$ |0.0226 |0.0220 ± 0.0007 |+0.9σ |✓ |
-|$\delta_{CP}$ |232.5° |230° ± 36° |+0.07σ|✓ |
-|$J_{CP}$ |−0.027 |−0.030 ± 0.010 |+0.30σ|✓ |
-|$\sum m_\nu$|0.030519194 eV|<0.12 eV|—|Conditional|
-|$m_\beta$|4.63978 meV|—|—|Conditional|
-|$m_{\beta\beta}$|1.72041 meV|<50 meV|—|Conditional|
+|Mass hierarchy |Normal |Pending |— |Conditional branch output; T.79 certificate open|
+|$M_R$ (seesaw scale) |$1.5\times10^{15}$ GeV |$(10^{14}-10^{16})$ GeV |Range comparison |Conditional scale calibration|
+|$m_3$|25.809938 meV|—|—|Conditional branch output|
+|$m_2$|4.566325 meV|—|—|Conditional branch output|
+|$m_1$|0.142931 meV|—|—|Conditional branch output|
+|$\Delta m^2_{21}$|$2.08309\times10^{-5}$ eV²|$(7.53\pm0.18)\times10^{-5}$ eV²|Not matched|Conditional branch output|
+|$\Delta m^2_{31}$|$6.66132\times10^{-4}$ eV²|$(2.453\pm0.033)\times10^{-3}$ eV²|Not matched|Conditional branch output|
+|$\Delta m^2_{31}/\Delta m^2_{21}$|31.9781|$32.6\pm0.7$|Diagonal residual only|Conditional ratio|
+|$\theta_{23}$ |47.4° |$48.33^{+0.87}_{-1.21}$° |Diagonal residual only|Conditional calibrated model|
+|$\sin^2\theta_{23}$ |0.542 |$0.558^{+0.015}_{-0.021}$ |Diagonal residual only|Conditional calibrated model|
+|$\theta_{12}$ |33.7° |33.6° ± 0.8° |Diagonal residual only|Conditional calibrated model|
+|$\sin^2\theta_{12}$ |0.308 |0.307 ± 0.013 |Diagonal residual only|Conditional calibrated model|
+|$\theta_{13}$ |8.7° |8.54° ± 0.12° |Diagonal residual only|Conditional calibrated model|
+|$\sin^2\theta_{13}$ |0.0226 |0.0220 ± 0.0007 |Diagonal residual only|Conditional calibrated model|
+|$\delta_{CP}$ |232.5° |230° ± 36° |Diagonal residual only|Conditional holonomy model|
+|$J_{CP}$ |−0.027 |−0.030 ± 0.010 |Diagonal residual only|Conditional mixing/phase model|
+|$\sum m_\nu$|0.030519194 eV|<0.12 eV|Bound comparison|Conditional branch output|
+|$m_\beta$|4.63978 meV|—|—|Conditional branch output|
+|$m_{\beta\beta}$|1.72041 meV|<50 meV|Bound comparison|Conditional Majorana-phase model|
 
 **Statistical Summary:** The displayed standardized residual sum is a diagonal, correlation-ignoring diagnostic. It is not an inferential $\chi^2$ statistic, and no degrees-of-freedom claim is made, unless a predeclared row set, joint likelihood, covariance matrix, theory-error model, fitted-parameter count, and profiling rule are supplied.
 
@@ -6651,32 +7179,35 @@ Root-system realizability, physical label selection, hierarchy coefficients, see
 
 
 
-The complete derivation traces to $K_0 = 3$ with no external parameters:
+The flavor calculation has the following conditional dependency ledger:
 
-**Stage 1: Foundational Constants**
-$$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Lem T.41.2}} \sigma^2_B = \frac{1}{24} \xrightarrow{\text{Cor T.41.3}} \alpha_{\text{UV}} = \frac{3}{2}$$
+**Structural branch:**
+$$
+K_0=3
+\to d_0=8
+\to(a,b)=(2,6)
+\to M=24.
+$$
+The equalities use the minimal Hilbert-carrier, active-kernel, and QFI-interface branches cited above.
 
-$$\xrightarrow{\text{Thm T.54.2}} u = \frac{1}{\sqrt{3}} \xrightarrow{\text{Thm T.24.2.1}} \alpha_{\text{IR}} = \alpha_{\text{UV}} \times f_{\text{sinc}} = 1.418$$
+**Response branch:** The assignments $\sigma_B^2=1/24$, $\alpha_{UV}=3/2$, $u=1/\sqrt3$, and $\alpha_{IR}=1.418$ additionally require the packet-width, Schur, angular-profile, and sinc-response models.
 
-**Stage 2: Triads from Error Correction**
-$$\text{Hamming } [8,4,4] \xrightarrow{\text{Thm T.24.3}} T_\ell = (a, b, 2a) = (2,6,4) \text{ (D}_4\text{ for Dirac)}$$
-$$\text{A}_2 \text{ constraint} \xrightarrow{\text{Thm T.24.5}} T_\nu = (a, b, b) = (2,6,6) \text{ (A}_2\text{ for Majorana)}$$
+**Label branch:**
+$$
+T_\ell=(2,6,4),
+\qquad
+T_\nu=(2,6,6)
+$$
+are registered Dirac and Majorana triads. Code and root geometry establish realizability or compatibility; physical label selection is independent branch data. Effective Proposition T.24.9 selects the neutrino triad only within its declared alignment-cost model.
 
-**Stage 3: Mass Hierarchy**
-$$\xrightarrow{\text{Thm T.24.12}} \alpha_\nu = \frac{\sqrt{3}}{2} \xrightarrow{\text{Prop T.24.9}} T_\nu = (2,6,6) \text{ unique} \xrightarrow{\text{Thm T.24.11}} \text{Normal Hierarchy}$$
+**Scale and spectrum branch:** The values $\kappa_R=9$, $M_R=1.5\times10^{15}\,\mathrm{GeV}$, the three neutrino masses, and their splittings require the seesaw normalization, matching-scale, mixing, phase, scheme, and remainder entries of the T.79 flavor certificate.
 
-**Stage 4: Absolute Scale**
-$$\xrightarrow{\text{Thm T.24.13}} \kappa_R = \alpha \cdot d^2_{31} = 9 \xrightarrow{} M_R = 1.5 \times 10^{15} \text{ GeV} \xrightarrow{\text{Thm T.24.14}} m_3 = 25.81 \text{ meV}$$
-
-**Stage 5: Full Spectrum**
-$$\xrightarrow{\text{Thm T.24.15}}(m_1,m_2,m_3)=(0.142931,4.566325,25.809938)\,\mathrm{meV}\xrightarrow{\text{Thm T.24.16}}\Delta m^2_{21}=2.08309\times10^{-5}\,\mathrm{eV}^2$$
-
-**Key Insight:** Both triads derive from the same constants $(a, b) = (2, 6)$:
-
-|Fermion Type |Triad |Formula |Origin |
+|Fermion type |Registered triad |Formula |Status |
 |:----------------------|:----------|:-----------|:-----------------------------------------------------------------------|
-|Charged leptons (Dirac)|$(2, 6, 4)$|$(a, b, 2a)$|D₄ error correction, [4,2,2] code |
-|Neutrinos (Majorana) |$(2, 6, 6)$|$(a, b, b)$ |A₂ hexagonal (derived from symmetric bilinear structure, Theorem T.24.5)|
+|Charged leptons (Dirac)|$(2,6,4)$|$(a,b,2a)$|Geometrically realizable model label; not selected by error correction alone|
+|Neutrinos (Majorana)|$(2,6,6)$|$(a,b,b)$|Conditional symmetric-bilinear and alignment-cost branch|
+
+No numerical flavor observable in this chain is a consequence of $K_0=3$ alone. Theorem-level numerical promotion requires closure of the corresponding T.79 certificate row before comparison with data.
 
 The Majorana structure introduces four geometric factors absent in the Dirac sector:
 
@@ -6761,7 +7292,7 @@ where $d^2_{E_8} \in \{2, 4, 6, 8\}$ are squared distances between $E_8$ roots r
 
 -----
 
-## T.25.2 Derived Parameters
+## T.25.2.1 Derived Parameters
 
 All parameters trace to $K_0 = 3$ through the established derivation chain:
 
@@ -6775,17 +7306,19 @@ $$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b)
 |$a$ |2 |Landauer partition (see Theorem Z.1) |Theorem Z.1 |
 |$b$ |6 |$d_0 - a$ |Definition |
 |$M$ |24 |$2ab$ |Theorem Z.5 |
-|$N_g$ |3 |Anomaly+CP minimality with pre-flavor PPI realization |Theorem R.3.4; Proposition R.3.5.1a|
+|$N_g$ |3 |Anomaly+CP minimality with additive-monotone family-count selection |Theorem R.3.4; Proposition R.3.5.1a|
 |$\sigma^2_B$ |$1/24$|Capacity saturation |Lemma T.41.2 |
 |$\alpha_{\text{UV}}$|$3/2$ |$1/(16\sigma^2_B)$ |Corollary T.41.3 |
 |$f_{\text{sinc}}$ |0.9454|$\sin(u)/u$, $u = 1/\sqrt{N_g}$ |Theorem T.24.2.1 |
 |$\alpha_{\text{IR}}$|1.418 |$\alpha_{\text{UV}} \times f_{\text{sinc}}$|Theorem T.24.2.1 |
 
-The sinc correction arises from coherent averaging over generation wavepackets of angular width $u = 1/\sqrt{N_g} = 1/\sqrt{3}$ (Theorem T.54.2):
+On the generation–internal tensor-factor and unit-total-generation-variance branches of Theorem T.54.2, the angular width is $u=1/\sqrt{N_g}=1/\sqrt3$. Uniform coherent averaging then gives the visibility factor of Theorem T.55,
 
-$$f_{\text{sinc}} = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = \frac{0.5458}{0.5774} = 0.9454$$
+$$f_{\text{sinc}} = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = \frac{0.5458}{0.5774} = 0.9454.$$
 
-$$\alpha_{\text{IR}} = \frac{3}{2} \times 0.9454 = 1.418$$
+The hierarchy-exponent relation is the independently registered ansatz of Theorem T.24.2.1:
+
+$$\alpha_{\text{IR}} := \frac{3}{2} \times 0.9454 = 1.418.$$
 
 -----
 
@@ -6805,7 +7338,7 @@ Lattice angles and distances are geometric inputs. Turning them into masses or m
 
 
 
-### T.25.3.1 Triad Assignments
+### T.25.3.4 Triad Assignments
 
 PCE selection (Section T.21.9) determines unique $E_8$ root triads for each fermion sector:
 
@@ -6817,7 +7350,7 @@ PCE selection (Section T.21.9) determines unique $E_8$ root triads for each ferm
 
 The indices denote generations: 3 (heaviest), 2 (middle), 1 (lightest).
 
-### T.25.3.2 Explicit Root Vectors
+### T.25.3.5 Explicit Root Vectors
 
 From Section T.21.9.1, the triads are realized by Type I $E_8$ roots $(\pm 1, \pm 1, 0, 0, 0, 0, 0, 0)$:
 
@@ -6836,7 +7369,7 @@ $$r_3 = (1, 1, 0, 0, 0, 0, 0, 0)$$
 $$r_2 = (-1, 1, 0, 0, 0, 0, 0, 0) \quad \Rightarrow \quad d^2_{32} = 4$$
 $$r_1 = (-1, -1, 0, 0, 0, 0, 0, 0) \quad \Rightarrow \quad d^2_{31} = 8, \quad d^2_{21} = 4$$
 
-### T.25.3.3 Lattice Geometry
+### T.25.3.6 Lattice Geometry
 
 **Summary of Lemma T.44a** ($E_8$ Lattice Angles). The angle $\theta$ between $E_8$ roots with squared distance $d^2$ satisfies:
 
@@ -6974,7 +7507,7 @@ The agreement at the 10–15% level for quarks, compared to 3.7% for leptons, is
 
 ### T.25.5.3 Common-Scale Protocol and Uncertainty Decomposition
 
-A precision test of the quark sector requires running all masses to a common $\overline{\text{MS}}$ scale $\mu_{\text{ref}}$ using a consistent protocol. This section uses the paper-wide T1/T2/T3 protocol of Convention P.14.1c; every other appendix reporting a T1/T2/T3 budget (Sections T.19.1, T.25.6a.10, the Appendix H.4.3.1 budget for $g_0$, Appendix U vacuum budgets, the Appendix Y baryogenesis budget, the Appendix Z fine-structure budget, and the map.md predictions and assumptions tables) uses the same three categories.
+A precision test of the quark sector requires running all masses to a common $\overline{\text{MS}}$ scale $\mu_{\text{ref}}$ using a consistent protocol. This section uses the paper-wide T1/T2/T3 protocol of Convention P.14.1c; every other appendix reporting a T1/T2/T3 budget (Sections T.19.1, T.25.6a.11, the Appendix H.4.3.1 budget for $g_0$, Appendix U vacuum budgets, the Appendix Y baryogenesis budget, the Appendix Z fine-structure budget, and the map.md predictions and assumptions tables) uses the same three categories.
 
 - **T1 (internal truncation/control):** includes PU truncation error, finite-order hierarchy terms beyond the stated order in $d^2$, slow-roll truncation in primordial quantities, Morse-Bott / determinant / heat-kernel / zeta truncation in prefactors, curvature/Jacobian truncation, finite spectral truncation, geometric approximations in evaluating geodesics or chord integrals, and higher-order backreaction on curvature corrections.
 - **T2 (matching/branch/bridge/convention):** includes PU-to-SM threshold matching at any matching scale used, loop-order and decoupling conventions, RG matching conventions, lifted-threshold branch dependence, vacuum/regularization dependence, bounce-determinant and zero-mode normalization in the Appendix U vacuum sector, frustration-strain regularization in the flavor sector, primordial vacuum/regularization dependence in the inflationary sector, thermal or sphaleron-decoupling threshold systematics, bridge-law normalizations such as Definition H.0, finite-volume/extensivity conventions, and coarse-graining conventions.
@@ -6999,7 +7532,7 @@ $$
 \pm \Delta^{(T2)}_{\mathcal{R}_f}
 \pm \Delta^{(T3)}_{\mathcal{R}_f},
 $$
-where T1 includes PU truncation and any geometric-approximation truncation used to evaluate geodesic inputs, T2 includes vacuum/regularization dependence when a frustration strain field is computed, and T3 includes scheme/mapping systematics from this protocol and any discrete identification ambiguity (triad assignment and generation labeling). For the down-sector frustration correction, the additional T1/T2/T3 terms are given in Section T.25.6a.10.
+where T1 includes PU truncation and any geometric-approximation truncation used to evaluate geodesic inputs, T2 includes vacuum/regularization dependence when a frustration strain field is computed, and T3 includes scheme/mapping systematics from this protocol and any discrete identification ambiguity (triad assignment and generation labeling). For the down-sector frustration correction, the additional T1/T2/T3 terms are given in Section T.25.6a.11.
 
 With this protocol, the quark-sector ratios in Section T.25.5.1 become a controlled test: the comparison is performed at a common scheme and scale, and deviations can be decomposed into explicit RG, threshold, vacuum, and mapping contributions rather than absorbed into a single informal “QCD effects” label.
 
@@ -7018,9 +7551,26 @@ This section reports a worked common-scale reduction to $\mu=M_Z$ in the SM $\ov
 
 **Same-scale hierarchy invariants at $\mu = M_Z$:**
 
-$$\mathcal{R}_u(M_Z) = \frac{\ln(m_t/m_u)}{\ln(m_t/m_c)} = \frac{11.77}{5.57} = 2.111 \pm 0.007$$
+$$
+\mathcal R_u(M_Z)
+=
+\frac{\ln(m_t/m_u)}{\ln(m_t/m_c)}
+=
+\frac{11.7673}{5.56871}
+=
+2.1131\pm0.0142,
+$$
 
-$$\mathcal{R}_d(M_Z) = \frac{\ln(m_b/m_d)}{\ln(m_b/m_s)} = \frac{6.94}{3.96} = 1.752 \pm 0.007$$
+$$
+\mathcal R_d(M_Z)
+=
+\frac{\ln(m_b/m_d)}{\ln(m_b/m_s)}
+=
+\frac{6.94360}{3.95520}
+=
+1.7556\pm0.0131,
+$$
+where the uncertainties use first-order propagation and treat the displayed mass errors as independent.
 
 This confirms that the residual discrepancy in $\mathcal{R}_d$ is not removed by eliminating scale mixing; any resolution must therefore be sector-specific and compatible with a common-scheme comparison.
 
@@ -7073,7 +7623,7 @@ A valid interval must include truncation, overlap-functional, vacuum-selection, 
 
 
 
-The down-quark sector is distinguished by its $1\leftrightarrow 2$ transition angle $\theta_{21,d}=120^\circ=2\pi/3$ (Section T.25.3.3), whereas the up-quark and charged-lepton sectors have $\theta_{21}=\pi/2$. This $A_2$ (hexagonal) mismatch induces a frustration strain on the generation manifold that modifies the relative suppression exponents along the $3\leftrightarrow 1$ and $3\leftrightarrow 2$ geodesic paths, and hence modifies the down-sector hierarchy invariant under same-scale comparison.
+The down-quark sector is distinguished by its $1\leftrightarrow 2$ transition angle $\theta_{21,d}=120^\circ=2\pi/3$ (Section T.25.3.6), whereas the up-quark and charged-lepton sectors have $\theta_{21}=\pi/2$. This $A_2$ (hexagonal) mismatch induces a frustration strain on the generation manifold that modifies the relative suppression exponents along the $3\leftrightarrow 1$ and $3\leftrightarrow 2$ geodesic paths, and hence modifies the down-sector hierarchy invariant under same-scale comparison.
 
 **Definition T.25.6a.1 (Frustration angle parameter).** For a fermion sector $f$, define
 $$
@@ -7105,7 +7655,7 @@ $$
 \qquad \vec v_{ij,f}:=r_{i,f}-r_{j,f}.
 $$
 
-**Lemma T.25.6a.4 (Explicit overlap calculation for down quarks).** Using the down-quark $E_8$ root vectors from Section T.25.3.2:
+**Lemma T.25.6a.4 (Explicit overlap calculation for down quarks).** Using the down-quark $E_8$ root vectors from Section T.25.3.5:
 $$
 r_3 = (1, 1, 0, 0, 0, 0, 0, 0), \quad r_2 = (1, 0, 1, 0, 0, 0, 0, 0), \quad r_1 = (-1, 1, 0, 0, 0, 0, 0, 0),
 $$
@@ -7199,7 +7749,7 @@ $$
 
 **Remark T.25.6a.9: Connection to Cabibbo mixing.** The same $A_2/D_4$ mismatch that shifts $\mathcal{R}_d$ also determines the Cabibbo angle via the vacuum position $\theta_{\text{vac}}=105.15^\circ$ (Section T.25.6.1). Both effects arise from a single geometric source: incompatibility between hexagonal (down) and cubic (up) lattice structures in the $1\leftrightarrow 2$ sector.
 
-#### T.25.6a.10 Uncertainty budget for the frustration correction (T1/T2/T3)
+#### T.25.6a.11 Uncertainty budget for the frustration correction (T1/T2/T3)
 
 Report the down-sector prediction in the form
 $$
@@ -7243,7 +7793,7 @@ The frustration angle is:
 
 $$\theta_{\text{frustration}} = \theta_{\text{vac}} - \theta_u = 15.15°$$
 
-### T.25.6.2 Cabibbo Angle Prediction
+### T.25.6.4 Cabibbo Angle Prediction
 
 **Summary (Cabibbo Mixing).** *The Cabibbo angle emerges from frustration-induced tunneling:*
 
@@ -7270,9 +7820,9 @@ $$|V_{us}|_{\text{pred}} = \frac{\sqrt{3}}{2} \times \sin(15.15°) \times 0.9989
 |:---------|:---------:|:-----------------------------------:|:---------:|
 | $\vert V_{us}\vert$ | 0.2261 | $0.22501\pm0.00068$ | 0.5% |
 
-### T.25.6.3 Sensitivity to Stiffness Ratio
+### T.25.6.5 Sensitivity to Stiffness Ratio
 
-The predicted $\vert V_{us}\vert$ depends on the stiffness ratio $\kappa_d/\kappa_u$. For $c_d/c_u$ in the range [1.00, 1.02] from Theorem T.38:
+The branch value $\vert V_{us}\vert$ depends on $\kappa_d/\kappa_u$. The following table is an input scan over $c_d/c_u\in[1.00,1.02]$ with $\kappa_d/\kappa_u=(c_d/c_u)^2$. Theorem T.38 gives $c_d/c_u\approx1.025$ and therefore $\kappa_d/\kappa_u\approx1.050$; it does not select the middle row.
 
 | $c_d/c_u$ | $\kappa_d/\kappa_u$ | $\theta_{\text{vac}}$ | $\theta_{\text{frustration}}$ | $\lvert V_{us}\rvert$ |
 |:---------:|:-------------------:|:---------------------:|:-----------------------------:|:----------:|
@@ -7280,7 +7830,7 @@ The predicted $\vert V_{us}\vert$ depends on the stiffness ratio $\kappa_d/\kapp
 | 1.01 | 1.02 | 105.15° | 15.15° | 0.2261 |
 | 1.02 | 1.04 | 105.29° | 15.29° | 0.2280 |
 
-The central value $c_d/c_u \approx 1.01$ yields excellent agreement with experiment.
+The independently registered $\kappa_d/\kappa_u=1.02$ row gives $\vert V_{us}\vert=0.2261$, $0.48\%$ above the quoted comparison value. This is a calibration-level branch comparison until the stiffness map is independently determined without using $\vert V_{us}\vert$.
 
 -----
 
@@ -7335,7 +7885,7 @@ The open inputs include root-label selection, continuous response coefficients, 
 
 
 
-### T.25.8.1 Precision Tests
+### T.25.8.3 Precision Tests
 
 |Test |Prediction|Observation |Deviation|Status |
 |:-----------------------|:--------:|:---------------:|:-------:|:----------------------------------:|
@@ -7347,11 +7897,11 @@ The open inputs include root-label selection, continuous response coefficients, 
 |Up quark $\mathcal{R}$ |2.11 |$2.111 \pm 0.007$|**0.0%** |✓ |
 |Down quark $\mathcal{R}$|1.758 |$1.752 \pm 0.007$|**0.3%** |✓ |
 
-The quark-sector entries are same-scale hierarchy invariants under a common-scheme reduction (Section T.25.5.4). The down-sector value includes the $A_2/D_4$ frustration correction (Section T.25.6a) with its matching uncertainty budget (Section T.25.6a.10).
+The quark-sector entries are same-scale hierarchy invariants under a common-scheme reduction (Section T.25.5.4). The down-sector value includes the $A_2/D_4$ frustration correction (Section T.25.6a) with its matching uncertainty budget (Section T.25.6a.11).
 
 The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log ratio ($|\Delta\ln|=0.0012$), with zero adjustable parameters, representing the single most precise test of the geometric hierarchy mechanism.
 
-### T.25.8.2 Parameter Count
+### T.25.8.4 Parameter Count
 
 |Sector |Free Parameters|Notes |
 |:------------|:-------------:|:------------------------|
@@ -7431,26 +7981,45 @@ $$\ln(m_\tau/m_\mu) = 2.8212, \quad \ln(m_\mu/m_e) = 5.3306, \quad \ln(m_\tau/m_
 
 ### T.26.1 Isotypic Decomposition of the Lifted Threshold Operator
 
-**Theorem T.67 (Flag-Lift Threshold Compression).** Let $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ be the minimal flag lift (Definition T.17a), $H:=U(1)\times U(2)\times U(3)$ the decomposition-preserving compact symmetry group, and $\mathcal H_{\mathrm{thr}}$ the Hilbert space on which the threshold operator acts. Let $\mathsf L:\mathcal H_{\mathrm{thr}}\to\mathcal H_{\mathrm{thr}}$ be a self-adjoint $H$-equivariant operator (e.g. the Bures-Laplacian or heat-kernel-derived threshold operator). Then:
+**Theorem T.67 (Flag-Lift Threshold Compression).** Let $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ be the minimal flag lift (Definition T.17a), let $H:=U(1)\times U(2)\times U(3)$ be the decomposition-preserving compact symmetry group, and let $U:H\to\mathcal U(\mathcal H_{\mathrm{thr}})$ be the unitary threshold-space representation. Let $\mathsf L$ be a densely defined self-adjoint operator whose spectral projections commute with every $U(h)$. Then:
 
-(a) $\mathcal H_{\mathrm{thr}}$ admits an $H$-isotypic decomposition
+(a) $\mathcal H_{\mathrm{thr}}$ admits the Hilbert isotypic decomposition
 $$
-\mathcal H_{\mathrm{thr}} \;\cong\; \bigoplus_{\lambda\in\widehat H} V_\lambda \otimes M_\lambda,
-$$
-with $V_\lambda$ irreducible $H$-modules and $M_\lambda$ multiplicity spaces.
-
-(b) On each isotypic block, $\mathsf L|_{V_\lambda\otimes M_\lambda}=I_{V_\lambda}\otimes B_\lambda$ for a unique Hermitian $B_\lambda\in\mathrm{End}(M_\lambda)$.
-
-(c) On the three SM gauge sectors $\lambda=1,2,3$ corresponding to $U(1),SU(2),SU(3)$, all threshold information entering gauge matching reduces to the Hermitian multiplicity operators $B_1,B_2,B_3$.
-
-(d) If matching depends only on sector-averaged thresholds, the lifted data collapse to the triplet
-$$
-\Delta_i \;:=\; \frac{1}{\dim M_i}\,\mathrm{Tr}(B_i),\qquad i=1,2,3.
+\mathcal H_{\mathrm{thr}}
+\cong
+\widehat\bigoplus_{\lambda\in\widehat H}V_\lambda\otimes M_\lambda.
 $$
 
-(e) Any isotropic singlet shift $\mathsf L\mapsto\mathsf L+\delta_{\mathrm{avg}}I$ adds the same constant to every $\Delta_i$, changing only the common coupling offset. ∎
+(b) On each isotypic block, $\mathsf L$ has the form
+$$
+\mathsf L|_{V_\lambda\otimes M_\lambda}
+=I_{V_\lambda}\otimes B_\lambda,
+$$
+where $B_\lambda$ is a unique self-adjoint operator on $M_\lambda$. If $M_\lambda$ is finite-dimensional, $B_\lambda$ is a Hermitian matrix.
 
-*Proof.* Compactness of $H$ gives complete reducibility and the isotypic decomposition. $H$-equivariance of $\mathsf L$ preserves isotypic blocks; Schur's lemma on the irreducible factor $V_\lambda$ forces the action on the block $V_\lambda\otimes M_\lambda$ to be $I_{V_\lambda}\otimes B_\lambda$. Self-adjointness of $\mathsf L$ gives Hermitian $B_\lambda$. Parts (c) and (d) specialize to the SM gauge sectors; (e) follows because the shift adds the same scalar to every $B_\lambda$. ∎
+(c) On the three retained Standard-Model gauge sectors, all threshold information entering gauge matching reduces to the corresponding multiplicity operators $B_1,B_2,B_3$.
+
+(d) If $0<\dim M_i<\infty$ and matching depends only on sector-averaged thresholds, the lifted data reduce to
+$$
+\Delta_i:=\frac1{\dim M_i}\operatorname{Tr}(B_i),
+\qquad i=1,2,3.
+$$
+
+(e) An isotropic shift $\mathsf L\mapsto\mathsf L+\delta_{\mathrm{avg}}I$ sends every finite-sector average to $\Delta_i+\delta_{\mathrm{avg}}$ and therefore changes only the common coupling offset.
+
+*Proof.* The compact-group decomposition theorem of Peter and Weyl (1927) applies because $H$ is compact and $U$ is unitary, giving the Hilbert direct sum in (a). Commutation of all spectral projections with $U(H)$ makes every isotypic summand reducing for $\mathsf L$. On $V_\lambda\otimes M_\lambda$, the commutant of the irreducible $H$-action on $V_\lambda$ is $I_{V_\lambda}\otimes\mathcal B(M_\lambda)$ by Schur's lemma [Fulton & Harris 1991]; its hypotheses hold because $V_\lambda$ is a finite-dimensional complex irreducible representation. Applying this statement to the resolvent $(\mathsf L-iI)^{-1}$ yields a unique bounded resolvent on $M_\lambda$, hence a unique self-adjoint block operator $B_\lambda$. In finite multiplicity it is a Hermitian matrix. This proves (a) and (b).
+
+Part (c) is the restriction of (b) to the three retained sector labels. Under the finite-dimensional hypothesis of (d), the normalized trace is defined and is the stated sector average. Finally,
+$$
+I_{V_i}\otimes B_i+\delta_{\mathrm{avg}}I_{V_i\otimes M_i}
+=I_{V_i}\otimes(B_i+\delta_{\mathrm{avg}}I_{M_i}),
+$$
+so
+$$
+\frac1{\dim M_i}\operatorname{Tr}(B_i+\delta_{\mathrm{avg}}I_{M_i})
+=\Delta_i+\delta_{\mathrm{avg}},
+$$
+which proves (e). ∎
 
 **Corollary T.67.1 (Pairwise-Coupling Rigidity at the Matching Scale).** With $g_i(\mu_G)=g_U/\sqrt{Z_i}$ and $Z_i=1+\Delta_i/24$ (Definition T.17a), the inverse couplings at $\mu_G$ satisfy $\alpha_i^{-1}(\mu_G)=\alpha_U^{-1}\,Z_i$, hence
 $$
@@ -7476,30 +8045,53 @@ D_{s,\pm} \;\cong\; \widehat\bigoplus_{\Lambda\in\widehat{SU(8)}} I_{V_\Lambda}\
 $$
 for unique Hermitian $B_{\Lambda,s,\pm}\in\mathrm{End}\bigl(\mathrm{Hom}_H(V_\Lambda,\tau_{s,\pm})\bigr)$. The spectrum of $D_{s,\pm}$ is the multiset union of the finite-dimensional spectra of $B_{\Lambda,s,\pm}$, each weighted by $\dim V_\Lambda$.
 
-*Proof.* Sections of $E_{s,\pm}$ identify with $H$-equivariant $V_{s,\pm}$-valued functions on $SU(8)$. Peter–Weyl gives $L^2(SU(8))\cong\bigoplus_\Lambda V_\Lambda\otimes V_\Lambda^*$; taking the $H$-equivariant part yields the induced-bundle decomposition. $SU(8)$-equivariance and Schur's lemma give the block structure. ∎
+*Proof.* Write $G=SU(8)$. A square-integrable section of $E_{s,\pm}=G\times_HV_{s,\pm}$ is represented by a measurable function $f:G\to V_{s,\pm}$ satisfying
+$$
+f(gh)=\tau_{s,\pm}(h)^{-1}f(g)
+$$
+for $h\in H$. The Peter--Weyl theorem (Peter and Weyl, 1927) applies because $G$ is compact and gives the Hilbert decomposition
+$$
+L^2(G)\cong\widehat\bigoplus_{\Lambda\in\widehat G}V_\Lambda\otimes V_\Lambda^*.
+$$
+Taking the $H$-equivariant part in the second factor gives
+$$
+L^2(G\times_HV_{s,\pm})
+\cong
+\widehat\bigoplus_{\Lambda\in\widehat G}
+V_\Lambda\otimes\operatorname{Hom}_H(V_\Lambda,V_{s,\pm}).
+$$
+Each multiplicity space is finite-dimensional because both representations in the Hom space are finite-dimensional.
 
-**Corollary T.68.1 (Exact Threshold Functionals Reduce to Block Sums).** Let $\{\nu_{\Lambda,s,\pm,a,j}\}$ be the eigenvalues of the sector/parity block $B_{\Lambda,s,\pm,a}$, counted with the internal block multiplicity index $j$. In the canonical $\mathrm{MS2}_{\mu_G}$ branch, every sector/parity contribution is the finite part
+The spectral projections of the self-adjoint $G$-equivariant operator $D_{s,\pm}$ commute with the left $G$-action, so every isotypic summand is reducing. Schur's lemma [Fulton & Harris 1991] applies to the complex irreducible $G$-module $V_\Lambda$ and forces the restricted operator to have the form
+$$
+I_{V_\Lambda}\otimes B_{\Lambda,s,\pm}.
+$$
+Self-adjointness of $D_{s,\pm}$ makes each finite multiplicity operator $B_{\Lambda,s,\pm}$ Hermitian. Diagonalizing that finite Hermitian matrix shows that every one of its eigenvalues occurs in the full block with multiplicity $\dim V_\Lambda$. Taking the multiset union over $\Lambda$ proves the spectral statement. ∎
+
+**Corollary T.68.1 (Threshold Functionals Reduce to Positive Block Sums).** Assume every sector/parity operator entering the canonical determinant is positive after a declared removal of its finite-dimensional zero-mode space. Let
+$$
+\nu_{\Lambda,s,\pm,a,j}>0
+$$
+be its nonzero block eigenvalues, counted with multiplicity. Then
 $$
 F_{s,\pm,a}
 =
 \left[
 \sum_{\Lambda\in\widehat{SU(8)}}
 (\dim V_\Lambda)
-\sum_j
+\sum_j'
 \log(\nu_{\Lambda,s,\pm,a,j}/\mu_G^2)
-\right]_{\mathrm{MS2}_{\mu_G}}.
+\right]_{\mathrm{MS2}_{\mu_G}},
 $$
-Equivalently, any noncanonical heat-kernel or Pauli-Villars branch gives the same block reduction after its kernels, coefficients, finite constants, and decay bounds have been fixed before validation comparison. Hence the three sector numbers
+where the prime omits the declared zero modes. Consequently
 $$
-F_s=\sum_{\pm,a}F_{s,\pm,a}
+F_s=\sum_{\pm,a}F_{s,\pm,a},
+\qquad
+\Delta=TF.
 $$
-are exact block finite parts, and the physical threshold triplet is
-$$
-\Delta=T\,F,
-$$
-where $T$ is the invertible Dynkin-index matrix of Remark T.17a.3.
+A branch containing negative spectrum requires a specified spectral cut and phase convention.
 
-*Proof.* Apply the spectral theorem to each finite-dimensional $B_{\Lambda,s,\pm}$ and sum over blocks with multiplicity $\dim V_\Lambda$. ∎
+*Proof.* Each $B_{\Lambda,s,\pm,a}$ is finite-dimensional and Hermitian. The finite-dimensional spectral theorem therefore supplies a unitary diagonalization with real eigenvalues. After the declared zero-mode removal, the positivity hypothesis leaves exactly the eigenvalues $\nu_{\Lambda,s,\pm,a,j}>0$, so every logarithm in the reduced determinant is real. The Peter--Weyl isotypic factor repeats each block spectrum $\dim V_\Lambda$ times. Linearity of the declared finite-part prescription yields $F_s=\sum_{\pm,a}F_{s,\pm,a}$, and the registered Dynkin-index map yields $\Delta=TF$. ∎
 
 ### T.26.3 Local–Global Decomposition of Sector Thresholds
 
@@ -7872,13 +8464,29 @@ F_s=d_s\log\left(\frac{a_s+Q_s}{a_s-Q_s}\right)
 $$
 can be used in Appendix T only after the paper explicitly replaces the canonical sector determinant by a parity-relative superdeterminant and independently proves that the resulting oriented $Q_s$ arise from admissible branch data fixed before comparison. Without those two additional steps, such a formula is a diagnostic ansatz rather than a completed flag-lift spectral computation in the sense of Theorem T.78.
 
-*Proof.* This is immediate from Theorem T.70.2 and Theorem T.78. ∎
+*Proof.* Theorem T.70.2 tests a scalar one-block parity closure against the canonical ordinary determinant. Its admissibility conditions require, first, an explicitly declared replacement by the parity-relative superdeterminant and, second, oriented sector data specified independently of the validation target. If either condition is absent, the one-block expression is not the canonical sector finite part. Theorem T.78 determines thresholds only from a completed flag-lift spectral tuple containing the operator, parity blocks, finite-part prescription, normalization map, and tail certificate. A scalar ratio formula lacking the two conditions of Theorem T.70.2 does not supply that tuple. Hence it remains a diagnostic ansatz until both conditions are proved and incorporated into a completed Theorem-T.78 record. ∎
 
 ## T.27 RG Rigidity and Yukawa Cancellation
 
-**Theorem T.71 (RG Rigidity of the Electroweak/Flavor Boundary Problem).** Assume the PU fixed-point boundary conditions of Theorem T.35 together with the threshold triplet $(\Delta_1,\Delta_2,\Delta_3)$, the $E_8$ triad assignment, and a fixed loop-order Standard Model RG system. Then the full electroweak/Yukawa observable vector at low energy is uniquely determined. Equivalently, two admissible lifted threshold operators inducing the same triplet produce the same electroweak/Yukawa predictions at the chosen RG order.
+**Theorem T.71 (RG Uniqueness Conditional on a Complete Boundary Record).** Fix a loop-order Standard Model RG system and a complete matching-scale input record in the sense of Theorem T.79.2. In particular, besides the threshold triplet $(\Delta_1,\Delta_2,\Delta_3)$ and flavor data, the record must contain every Higgs target-shift, PU-to-SM quartic matching, marginality, decoupling, RG-scheme, and pole-conversion datum used by the requested outputs. Assume that the resulting RG initial-value problem has a solution that remains in the smooth perturbative domain throughout the closed scale interval between the matching scale and every requested output scale. Then the low-energy observable vector is uniquely determined conditional on that record. The threshold triplet alone fixes only the gauge-matching coordinates and does not determine the Higgs or full Yukawa vector.
 
-*Proof.* Theorem T.35 packages the fixed-point data into a complete set of boundary conditions once the lifted threshold data are supplied. Theorem T.67 shows those spectral data reduce, at matching level, to $(\Delta_1,\Delta_2,\Delta_3)$. The initial conditions for the RG flow are therefore uniquely fixed. At any finite loop order the RG equations form an autonomous first-order ODE system $\mu\,dX/d\mu=\beta(X)$ with smooth right-hand side on the perturbative PU matching branch; standard ODE uniqueness gives a unique running trajectory and therefore unique low-energy observables. ∎
+*Proof.* The completed spectral threshold record fixes $(\Delta_1,\Delta_2,\Delta_3)$ and hence the gauge-matching entries. The other components of the complete record fix the Higgs, flavor, decoupling, and observable-conversion boundary data. Put $t=\log\mu$; the RG equations become
+$$
+\frac{dX}{dt}=\beta(X).
+$$
+Let $X$ and $Y$ be two solutions with the same matching-scale value. At any point of the smooth perturbative domain, continuity of $D\beta$ supplies a ball on which $\lVert D\beta\rVert\le L$. The mean-value formula then gives
+$$
+\lVert\beta(X)-\beta(Y)\rVert\le L\lVert X-Y\rVert
+$$
+while both trajectories remain in that ball. With $z(t)=\lVert X(t)-Y(t)\rVert$ and $t\ge t_0$ in such an interval,
+$$
+z(t)\le L\int_{t_0}^{t}z(s)\,ds.
+$$
+Writing $F(t)=\int_{t_0}^{t}z(s)\,ds$ gives $F(t_0)=0$ and $F'(t)\le LF(t)$. Hence
+$$
+\frac{d}{dt}\bigl(e^{-Lt}F(t)\bigr)\le0.
+$$
+Because $F\ge0$ and $F(t_0)=0$, one has $F=0$ and therefore $X=Y$ on that interval. The same argument with reversed integration handles $t\le t_0$. The coincidence set is closed by continuity and open by this local argument; connectedness of the assumed scale interval makes it the whole interval. Thus the RG trajectory is unique wherever the assumed solution exists. The supplied decoupling and pole-conversion maps are deterministic, so they produce one output vector. If an independent boundary datum is omitted, the corresponding input coordinate is undetermined and lies outside this uniqueness conclusion. ∎
 
 **Theorem T.72 (Sector-Normalization Cancellation).** Assume the Yukawa entries in a fixed fermion sector $f$ at the matching scale have the PU form
 $$
@@ -7912,7 +8520,23 @@ $$
 $$
 using $\alpha=3/2$ of Theorem T.41.5. Within such a branch, intrasector mass ratios are determined by the discrete $E_8$ distance data together with the orbit-reduced Van Vleck factor.
 
-*Proof.* Apply Theorem T.72 with $\ell=d^2$ and $\alpha=3/2$; substitute $D_a/D_b=F(d_a^2)/F(d_b^2)$ from Theorem T.73. The sign in the exponent follows directly from (T.72.1) under the substitution $\ell=d^2$. ∎
+*Proof.* Exponentiating Equation (T.72.1) gives
+$$
+\frac{y_b}{y_a}
+=\frac{D_b}{D_a}\exp[-\alpha(\ell_b-\ell_a)].
+$$
+Theorem T.73 gives
+$$
+\frac{D_b}{D_a}
+=\frac{F(d_b^2)}{F(d_a^2)}.
+$$
+Substituting $\ell_a=d_a^2$, $\ell_b=d_b^2$, and $\alpha=3/2$ yields
+$$
+\frac{y_b}{y_a}
+=\frac{F(d_b^2)}{F(d_a^2)}
+\exp\!\left[\frac32(d_a^2-d_b^2)\right],
+$$
+which is the claimed formula. ∎
 
 **Definition T.73.2** (Quillen-Van Vleck Flavor Normalization Certificate). A Quillen-Van Vleck flavor normalization certificate is a finite record
 $$
@@ -7963,12 +8587,25 @@ Without an accepted certificate, intrasector ratios remain governed by Theorem T
 
 ## T.28 Flavor CP: Berry Area and Packet Factorization
 
-**Theorem T.74 (Geometric Berry-Area for Flavor CP).** Let $\mathcal A$ be the Berry connection on the generation manifold $\mathrm{Gr}(2,8)$, and $\mathcal F=d\mathcal A=\omega_{KE}$ its curvature. Let $\gamma$ be a smooth closed flavor loop bounding a smooth oriented surface $\Sigma$. Then the Berry holonomy is gauge-invariant mod $2\pi$ and equals the oriented Kähler area:
+**Theorem T.74 (Geometric Berry-Area for Flavor CP).** Let $L\to\mathrm{Gr}(2,8)$ be a Hermitian line bundle with unitary Berry connection $\nabla$ and curvature $F_\nabla=i\omega_{KE}$. Let $\gamma=\partial\Sigma$ be a smooth closed loop bounding an oriented surface over which $L$ is trivialized. Then
 $$
-\delta_{\mathrm{Berry}}(\gamma) \;=\; \oint_\gamma \mathcal A \;=\; \int_\Sigma \omega_{KE} \pmod{2\pi}.
+\operatorname{Hol}_\nabla(\gamma)
+=
+\exp\left(i\int_\Sigma\omega_{KE}\right),
+$$
+or equivalently
+$$
+\delta_{\mathrm{Berry}}(\gamma)
+=
+\int_\Sigma\omega_{KE}
+\pmod{2\pi}.
 $$
 
-*Proof.* Under a Berry gauge transformation $\mathcal A\mapsto\mathcal A+d\chi$, the loop integral changes by $\oint_\gamma d\chi=0$ by the endpoint-matching condition, so it is gauge-invariant mod $2\pi$. Since $\gamma=\partial\Sigma$, Stokes' theorem gives $\oint_\gamma\mathcal A=\int_\Sigma d\mathcal A=\int_\Sigma\omega_{KE}$. ∎
+*Proof.* In the chosen trivialization write $\nabla=d+i\mathcal A$, so $d\mathcal A=\omega_{KE}$. Stokes' theorem gives
+$$
+\oint_\gamma\mathcal A=\int_\Sigma\omega_{KE}.
+$$
+Changing trivialization shifts the loop integral by an integer multiple of $2\pi$, leaving its exponential invariant. If two spanning surfaces are used, their difference is a closed surface, and integrality of the first Chern class shifts the curvature integral by $2\pi\mathbb Z$. ∎
 
 **Theorem T.75 (Coherent-Averaging Factorization).** Let $(x,y)$ be local mismatch coordinates on two independent coherence directions transverse to a minimal flavor loop, and assume the local Berry phase linearizes as
 $$
@@ -7996,30 +8633,56 @@ $$
 $$
 On the one-direction CKM reduction $\delta_{\mathrm{obs}}=\delta_{\mathrm{base}}\,\mathrm{sinc}(u)$; on the two-direction factorized branch $\delta_{\mathrm{obs}}=\delta_{\mathrm{base}}\,\mathrm{sinc}(u)\,\mathrm{sinc}(\sqrt2\,u)$ (Theorem T.75).
 
-*Proof.* Among probability densities on a compact interval with only normalization and symmetry constraints, the Shannon-entropy maximizer is the uniform density (standard MaxEnt; see Cover–Thomas §12). Its Fourier transform is the sinc function. Combining with Theorem T.75 gives the stated observed phases. ∎
+*Proof.* Let $\rho$ be any probability density on $[-1,1]$, set $d\mu=dx/2$, and write $q=2\rho$. Then $q\ge0$ and
+$$
+\int_{-1}^{1}q\,d\mu=1.
+$$
+For $x\ge0$, the convexity inequality
+$$
+x\log x-x+1\ge0
+$$
+holds, with equality exactly at $x=1$. Integrating it with $x=q$ gives
+$$
+D\!\left(\rho\middle\|\tfrac12\right)
+:=\int_{-1}^{1}\rho(x)\log\frac{\rho(x)}{1/2}\,dx
+=\int q\log q\,d\mu
+\ge0.
+$$
+If this integral is finite, the differential entropy satisfies
+$$
+h(\rho)
+:=-\int_{-1}^{1}\rho\log\rho\,dx
+=\log2-D\!\left(\rho\middle\|\tfrac12\right)
+\le\log2;
+$$
+if the relative entropy is infinite, then $h(\rho)=-\infty$ and the same bound holds. Equality occurs exactly when $q=1$ almost everywhere, i.e. when $\rho=1/2$ almost everywhere. This density is symmetric, so it is the unique maximizer under both constraints.
+
+For $u\ne0$, its characteristic function is
+$$
+\widehat\rho(u)
+=\frac12\int_{-1}^{1}e^{iux}\,dx
+=\frac{e^{iu}-e^{-iu}}{2iu}
+=\frac{\sin u}{u}.
+$$
+At $u=0$, normalization gives $\widehat\rho(0)=1$, equal to the continuous extension of $\sin u/u$. The one- and two-direction phase formulas follow by substituting this characteristic function into Theorem T.75. ∎
 
 **Corollary T.76.1 (Structural / Profile Split).** After Theorems T.74 and T.75, the CKM/PMNS CP sector splits into a structural part — Berry holonomy area on $\mathrm{Gr}(2,8)$ — and a profile part — the packet characteristic function $\widehat\rho$. On the PCE-MaxEnt branch of Theorem T.76, the profile part is forced to the sinc factors already used in Appendix T. ∎
 
 ## T.29 Relative Uniqueness of the Quantitative Parameter Sector
 
-**Theorem T.77 (Relative Uniqueness of the Quantitative SM Parameter Sector).** Fix a connected PU structural branch for which the quantitative gauge-threshold sector is formulated on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Theorem G.8.4e), and fix the two-loop SM RG system. Let $\Delta=(\Delta_1,\Delta_2,\Delta_3)$ be the principal lifted threshold triplet (Theorem T.67) and $\mathcal R_T=(\mathcal T_{E_8},\mathcal V,\mathcal B)$ the residual flavor-geometric data: the chosen $E_8$ generation triads $\mathcal T_{E_8}$, the complete Van Vleck/geodesic data $\mathcal V$ entering the Yukawa sector, and the Berry/coherent-profile data $\mathcal B$ in the CKM/PMNS phase constructions. Then the quantitative Appendix-T parameter vector
+**Theorem T.77 (Relative Uniqueness from the Complete Appendix-T Input Record).** Fix a connected PU structural branch on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ and a fixed-loop Standard Model RG system. Let $\mathfrak I_T$ be the complete Appendix-T input record of Theorem T.79.2, including $A_{EW}$ and its determinant-model convention when $v$ is requested, the completed threshold data, any heavy-threshold ledger, flavor/neutrino/profile data, the target-shift datum $\mathcal M_\gamma$, quartic matching record $\mathfrak M_\lambda$, criticality record $\mathcal C_{\mathrm{crit}}$, and the RG, decoupling, and pole-conversion records. Then
 $$
 \Pi_T \;:=\; \bigl(\sin^2\theta_W(M_Z),\,g_i(\mu_G),\,v,\,m_H,\,Y_u,\,Y_d,\,Y_e,\,m_{\nu_a},\,V_{\mathrm{CKM}},\,U_{\mathrm{PMNS}}\bigr)
 $$
-is uniquely determined by $(\Delta,\mathcal R_T)$. Equivalently, two admissible PU realizations on the same structural branch with $(\Delta,\mathcal R_T)=(\Delta',\mathcal R_T')$ produce the same $\Pi_T=\Pi_T'$.
+is uniquely determined by $\mathfrak I_T$. Equality of the threshold triplet and flavor-geometric data without equality of the independent Higgs and observable-conversion entries does not imply equality of $\Pi_T$.
 
-*Proof.* Theorem G.8.4e forces the quantitative threshold arena to $\widetilde X$. Corollary T.67.1 fixes the gauge-matching data from $\Delta$ alone (the isotropic residual of Theorem T.17 shifts only the common offset, not the physically relevant pairwise separations). Theorem T.71 (equivalently Theorem T.35) takes the eight PU fixed-point boundary conditions together with the two-loop RG flow and yields a unique running trajectory once $\Delta$ and $\mathcal T_{E_8}$ are fixed, hence unique electroweak/Higgs observables. Theorem T.36 reduces the 21 SM Yukawas to 7 fundamental quantities via $E_8$ geometry with $\alpha=3/2$ (Theorem T.41.5); Theorems T.72–T.73 fix ratios from $\mathcal T_{E_8}$ and $\mathcal V$, which in combination with the universal normalization $\mathcal N_{\mathrm{PU}}=1/(72\sqrt{12})$ and sector prefactors $c_f$ gives the complete Yukawa matrices. The mixing sector is fixed by Theorems T.74–T.76 once $\mathcal B$ is supplied. Combining the gauge-matching, RG, Yukawa, and mixing steps, every component of $\Pi_T$ is uniquely determined by $(\Delta,\mathcal R_T)$. ∎
+*Proof.* The completed threshold entries fix the gauge matching. The flavor, neutrino, and profile entries fix the Yukawa and mixing branches through Theorems T.72–T.76. The independent target-shift, quartic-matching, criticality, RG, decoupling, and pole entries fix the Higgs boundary and observable conversion. Theorem T.71 then supplies trajectory uniqueness for this complete boundary record. Therefore every component of $\Pi_T$ is a deterministic image of $\mathfrak I_T$, while no omitted gate is silently inferred from $\Delta$. ∎
 
-**Corollary T.77.1 (No Hidden Continuous Tuning).** On a fixed PU structural branch, every residual non-uniqueness in the quantitative Appendix-T sector is concentrated in $(\Delta,\mathcal R_T)$; no continuous tuning freedom remains inside the RG/matching/evolution machinery once those data are fixed. ∎
+**Corollary T.77.1 (No Hidden Tuning After Input Closure).** On a fixed structural and determinant-model branch, residual non-uniqueness is concentrated in the explicit entries of $\mathfrak I_T$; no additional continuous tuning remains inside the deterministic RG/matching/evolution maps after that complete record is fixed. ∎
 
-**Corollary T.77.2 (Absolute Uniqueness After Residual Closure).** If additionally PU forces:
-1. a completed flag-lift spectral computation of $(\Delta_1,\Delta_2,\Delta_3)$ on $\widetilde X$ (using Corollary T.69.1 and the block-sum expression of Corollary T.68.1);
-2. a unique determination of $(\mathcal T_{E_8},\mathcal V)$ on the selected flavor branch;
-3. a unique determination of $\mathcal B$ in the CKM/PMNS sector (for example by Theorem T.76 on the selected branch);
+**Corollary T.77.2 (Absolute Uniqueness After Complete Record Closure).** If PU uniquely fixes every entry of $\mathfrak I_T$ before comparison—including $A_{EW}$ and its determinant-model convention, threshold, heavy-threshold, flavor, neutrino, profile, target-shift, quartic-matching, criticality, RG, decoupling, and pole-conversion data—then $\Pi_T$ is absolutely unique on the fixed structural branch.
 
-then $\Pi_T$ is absolutely unique.
-
-*Proof.* Under (1)–(3), the residual data $(\Delta,\mathcal R_T)$ become unique. Theorem T.77 then yields uniqueness of $\Pi_T$. ∎
+*Proof.* The full input record is then unique, and Theorem T.77 maps it deterministically to one $\Pi_T$. ∎
 
 **Definition T.77.3 (Self-Similar Flavor Potential Branch Package).** A self-similar flavor potential branch package on the selected $E_8$ branch is a tuple
 $$
@@ -8070,11 +8733,11 @@ H_{f,a}:=\nabla^2V_*(x_{f,a})
 $$
 are positive definite on the retained flavor normal directions. These critical-set, Hessian, normalization, and sector-prefactor data are part of the package unless they are derived from earlier PU branch data in the sense of Convention P.14.1e.
 
-**Theorem T.77.4 (Self-Similar Flavor Branch Criterion).** A completed self-similar flavor potential branch package determines the residual flavor-geometric data
+**Theorem T.77.4 (Self-Similar Flavor Branch Criterion).** Assume a completed self-similar flavor potential branch package and choose a representative of its quotient contraction solution by the normalization
 $$
-(\mathcal T_{E_8},\mathcal V)
+\min_XV_*=0.
 $$
-appearing in Theorem T.77. In particular, on that branch the absolute Yukawa entries at $\mu_G$ are uniquely
+Then the package determines $(\mathcal T_{E_8},\mathcal V)$, and its absolute Yukawa entries are
 $$
 y_{f,a}(\mu_G)
 =
@@ -8085,17 +8748,25 @@ y_{f,a}(\mu_G)
 \alpha=\frac32.
 \tag{T.77.4.1}
 $$
-Therefore, if the threshold tuple $\Delta$ and the mixing/CP record $\mathcal B$ are also fixed, Theorem T.77 gives a unique quantitative Appendix-T parameter vector $\Pi_T$. If $\mathfrak F_{\mathrm{flav}}$ is supplied rather than derived, the resulting absolute normalization has branch-package status.
+If the threshold tuple $\Delta$, mixing/CP record $\mathcal B$, and scalar normalization $\mathcal N_{\mathrm{PU}}$ are specified, these data determine the corresponding parameter vector $\Pi_T$.
 
-*Proof.* Since $\mathcal R_{\mathrm{flav}}$ is a strict contraction on continuous potentials modulo constants, the Banach fixed-point theorem gives a unique fixed point $V_*$ modulo an additive constant. The additive constant is absorbed by the fixed normalization $\mathcal N_{\mathrm{PU}}$ and sector prefactors $c_f$, so it does not create a continuous residual flavor freedom on the completed branch.
-
-The retained generation points are the finite nondegenerate critical points $x_{f,a}$ supplied by the completed package. Nondegeneracy gives positive finite Hessians $H_{f,a}$ on the retained normal directions, hence unique Van Vleck/geodesic factors
+*Proof.* Let $\mathcal B=C(X)/\mathbb R$ be the stated Banach quotient, and suppose
 $$
-\mathcal V_{f,a}
-=
-\det(H_{f,a})^{-1/2}.
+\|\mathcal R_{\mathrm{flav}}[V]-\mathcal R_{\mathrm{flav}}[W]\|_{\mathcal B}
+\le q\|[V]-[W]\|_{\mathcal B},
+\qquad 0<q<1.
 $$
-Thus the package fixes both the selected generation locations $\mathcal T_{E_8}$ and the determinant data $\mathcal V$. Substitution into the Yukawa form used by Theorem T.72 gives (T.77.4.1). The final uniqueness claim is then Corollary T.77.2. The status claim follows from Convention P.14.1e. ∎
+For $[V_{n+1}]=\mathcal R_{\mathrm{flav}}[V_n]$,
+$$
+\|[V_m]-[V_n]\|_{\mathcal B}
+\le\frac{q^n}{1-q}\|[V_1]-[V_0]\|_{\mathcal B}
+\quad(m>n).
+$$
+Thus $(V_n)$ is Cauchy and converges to a fixed class $[V_*]$. If $[W_*]$ is another fixed class, the contraction inequality gives
+$$
+\|[V_*]-[W_*]\|_{\mathcal B}\le q\|[V_*]-[W_*]\|_{\mathcal B},
+$$
+so the classes coincide. Compactness of $X$ makes $\min_XV$ finite, and $\min_XV_*=0$ selects one representative. The remaining package hypotheses supply the finite nondegenerate critical points and positive Hessians; substitution into (T.77.4.1), together with the independent scalar normalization, determines the stated Yukawa vector. ∎
 
 ## T.30 Determinacy After Spectral Completion
 
@@ -8173,7 +8844,7 @@ where the sum is over the retained positive eigenvalues. For every nonempty reta
 
 **Corollary T.78.3 (Airtight Status of the Lifted Threshold Computation).** The global flag-lift threshold problem is structurally formulated and locally constrained, but it does not produce theorem-level numerical thresholds in the current canonical ledger. A positive theorem-level numerical closure would require an independently specified spectral branch package containing the missing data listed in Theorem T.78.2, followed by the forward block-sum computation and Corollary T.69.1 tail certificate. Without such an appended positive branch extension, no value of $(\Delta_i,Z_i)$ may be promoted from validation target to derived prediction, and no nonminimal $\delta_i$ may be introduced unless a separate heavy-threshold ledger is explicitly appended.
 
-*Proof.* Immediate from Theorem T.78.2, Definition T.19a, Proposition T.19c, and Corollary T.79.1. ∎
+*Proof.* Theorem T.78.2 identifies concrete entries absent from the current flag-lift data and proves that, without them, no completed tuple $\mathfrak S_{\widetilde X}$ is determined. Therefore Theorem T.78 cannot assign numerical $F$, $\Delta=TF$, or $Z_i=1+\Delta_i/24$ on the current record. Definition T.19a permits a residual $\delta_i$ only after the principal lifted threshold has been supplied, and Proposition T.19c forbids using that residual to replace or double-count an omitted principal contribution. Corollary T.79.1 propagates these missing inputs to every requested quantitative output. Consequently a positive numerical closure requires the independently specified spectral package and tail certificate stated in the corollary; absent that package, validation values cannot be promoted and the canonical minimal residual remains the empty value $\delta_i=0$. ∎
 
 **Remark T.78.3a (Homogeneous-Zeta Positive Route).** A future positive branch extension for the lifted threshold sector may use the homogeneous-sector zeta reduction certificate of Theorem X.9.6g.2a, but only if it supplies every missing datum in Theorem T.78.2: the metric normalization, homogeneous connection, structural parameters, sector/parity $H$-types or residual block matrices, zero-mode rule, finite-part convention, normalization map, and explicit tail certificate. Such a record would be an appended spectral branch extension evaluated by Theorem T.78. It does not change the negative current-framework statement of Theorem T.78.5, and it cannot promote the validation tuple $(15.14,20.94,18.41)$ unless the forward homogeneous calculation lands there before comparison.
 
@@ -8302,7 +8973,7 @@ has determinant $-8/15$, failure to determine $F$ propagates to failure to deter
 
 **Corollary T.78.5.1 (Pre-Certificate Disposition of the Flag-Lift Spectral Gate).** Before a completed spectral certificate is supplied, the current-framework flag-lift spectral gate closes negatively: no theorem-level numerical $(F,\Delta,Z)$ follows from the canonical ledger alone, and no validation tuple may be promoted to a derived threshold output. A positive branch requires a completed spectral tuple, forward block sums, heat/zeta finite parts, and Corollary T.69.1 tail constants fixed before validation comparison.
 
-*Proof.* Immediate from Theorem T.78.5, Theorem T.78, Corollary T.78.3, and Corollary T.79.1. ∎
+*Proof.* Theorem T.78 proves determinacy only after every component of a completed spectral tuple is specified. Theorem T.78.5 proves that no current-framework PU-internal package supplies the missing components, so the antecedent of Theorem T.78 is false on the current ledger. Corollary T.78.3 therefore keeps $(F,\Delta,Z)$ nonnumerical and forbids replacing the absent principal calculation by a residual or validation target. Corollary T.79.1 propagates that open gate to the quantitative Appendix-T outputs. A future package containing the stated block sums, finite parts, and tail constants would satisfy the missing antecedent; before such a package is accepted, no theorem-level numerical threshold follows. ∎
 
 **Definition T.78.5a (Equivariant Analytic-Torsion Spectral Certificate).** An equivariant analytic-torsion flag-lift certificate is a finite record
 $$
@@ -8830,50 +9501,60 @@ No validation value, raw octad sum, Steiner incidence count, Golay identity, tar
 
 *Proof.* Theorem T.78.12 proves finite-data necessity for the RHG threshold route. Theorem T.78.5b proves that the torsion route is positive only after the finite torsion certificate supplies the determinant, finite-part, index, scheme, matching, and tail data listed there. Theorem X.9.6h.5 proves that the spectral-action route is positive only after an accepted spectral-action ledger supplies the Dirac certificate, cutoff, projections, heat coefficients, finite-part prescription, tail, normalization map, and interval ledger. Definition P.14.1m and Algorithm P.14.1m.0 allow a non-closed numerical sector to be promoted only by an accepted finite certificate, an all-completions equivalence theorem, or a no-go theorem excluding the candidate class. The current PU-internal ledger contains the acceptance schemas but not the finite matrices, torsion data, Dirac certificate, heat coefficients, finite-part scale, tail constants, normalization intervals, or master-ledger descent maps needed by any positive source. By Theorem P.14.1f, omitting any such finite datum permits distinct admissible completions with different finite parts, so no unique theorem-level value is determined. This proves (T.78.14.1)--(T.78.14.3). The no-retuning and no-double-counting clauses follow from Theorem X.9.6g.4, Definition P.14.1m, and the forward-lock clauses in Definition T.78.10 and Definition X.9.6h.4. ∎
 
-**Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with the two-loop SM RG system, suppose:
-1. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
-2. the flavor-geometric residual data $(\mathcal T_{E_8},\mathcal V)$ are fixed on the selected branch;
-3. the CP-profile data $\mathcal B$ are fixed.
+**Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with a fixed-loop-order SM RG system, suppose:
+1. the determinant-model branch fixes $A_{EW}$ before comparison whenever $v$ or a quantity depending on $v$ is requested;
+2. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
+3. the flavor-geometric residual data $(\mathcal T_{E_8},\mathcal V)$ are fixed on the selected branch;
+4. the CP-profile data $\mathcal B$ are fixed;
+5. the accepted moment-map datum of Definition T.22a fixes $\gamma=1$ wherever the unit target-shift branch is used;
+6. an accepted quartic matching record $\mathfrak M_\lambda$ fixes the map from $\lambda_{\mathrm{PU}}(\mathfrak A_{PU})$ to a renormalized SM boundary at a declared scale and scheme; and
+7. every marginality, decoupling, and pole/observable conversion convention used in the Higgs row is fixed before comparison.
 Then the quantitative Appendix-T parameter vector
 $$
 \Pi_T \;=\; \bigl(\sin^2\theta_W(M_Z),\,g_i(\mu_G),\,v,\,m_H,\,Y_u,\,Y_d,\,Y_e,\,m_{\nu_a},\,V_{\mathrm{CKM}},\,U_{\mathrm{PMNS}}\bigr)
 $$
-is uniquely determined.
+is uniquely determined on that fully specified branch.
 
-*Proof.* Theorem T.78 fixes $\Delta$ once the spectral problem is completed. Theorem T.71 then fixes the gauge/RG sector, Theorems T.72–T.73 fix the Yukawa ratios on the chosen flavor branch once $(\mathcal T_{E_8},\mathcal V)$ are fixed, and Theorems T.74–T.76 fix the CP sector once $\mathcal B$ is fixed. Combining these steps determines every component of $\Pi_T$. ∎
+*Proof.* The fixed determinant-model input $A_{EW}$ determines $v=A_{EW}e^{-\kappa_{EW}}M_{Pl}$ on its stated branch. Theorem T.78 fixes $\Delta$ once the spectral problem is completed; Theorem T.71 then fixes the gauge/RG sector. Theorems T.72–T.73 fix the Yukawa ratios on the chosen flavor branch, and Theorems T.74–T.76 fix the CP sector. The moment-map datum fixes the elastic quartic, while $\mathfrak M_\lambda$ and the declared criticality/RG/pole conventions fix the Higgs boundary and its observable conversion. Combining these inputs determines every component of $\Pi_T$. Omitting item 1 leaves $v$ open; omitting items 5–7 leaves the Higgs component open. ∎
 
-**Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector).** On a fixed PU structural branch, the RG/matching/evolution machinery contains no further continuous ambiguity once the completed spectral input $\Delta$, the residual heavy-threshold ledger $\delta$ if nonminimal heavy data are appended, and the residual flavor-profile data $(\mathcal T_{E_8},\mathcal V,\mathcal B)$ are fixed. In the canonical minimal $\mathrm{MS2}_{\mu_G}$ ledger, $\delta_i=0$ and the gauge-threshold input is exactly the completed flag-lift spectral output of Theorem T.78. ∎
+**Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector).** On a fixed PU structural branch, the deterministic machinery contains no further continuous ambiguity only after $A_{EW}$ and its determinant-model convention when $v$ is requested, the completed spectral input $\Delta$, any residual heavy-threshold ledger $\delta$, the residual flavor-profile data $(\mathcal T_{E_8},\mathcal V,\mathcal B)$, the moment-map target-shift datum, the quartic matching record $\mathfrak M_\lambda$, and all criticality, decoupling, and pole/observable conventions used by the requested outputs are fixed. In the canonical minimal $\mathrm{MS2}_{\mu_G}$ ledger, $\delta_i=0$ and the gauge-threshold input is exactly the completed flag-lift spectral output of Theorem T.78; this closes neither the determinant-model $v$ row nor the independent Higgs or flavor gates. ∎
 
 **Theorem T.79.2 (Appendix-T Deterministic Matching Functor).** Fix an Appendix-T input record
 $$
 \mathfrak I_T
 =
-(\mathfrak S_{\widetilde X},\delta^{\mathrm{heavy}},\mathcal T_{E_8},\mathcal V,\mathcal N_\nu,\mathcal B,\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}),
+(A_{EW},\mathfrak S_{\widetilde X},\delta^{\mathrm{heavy}},\mathcal T_{E_8},\mathcal V,\mathcal N_\nu,\mathcal B,\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}),
 $$
-where $\mathfrak S_{\widetilde X}$ is a completed flag-lift spectral tuple in the sense of Theorem T.78, $\delta^{\mathrm{heavy}}$ is either the empty minimal residual ledger or an explicitly listed nonminimal heavy-threshold ledger, $(\mathcal T_{E_8},\mathcal V)$ are the selected flavor-geometric normalization and Van Vleck data, $\mathcal N_\nu$ is the neutrino/Majorana branch record of Proposition T.24.28, $\mathcal B$ is the selected CKM/PMNS CP-profile data, $\mathcal R_{\mathrm{RG}}$ is the fixed loop-order SM RG system with matching scale $\mu_G$, $\mathcal C_{\mathrm{dec}}$ is the fixed decoupling convention, and $\mathcal C_{\mathrm{pole}}$ is the fixed pole/observable conversion convention. Then there is a deterministic map
+where $A_{EW}$ is the forward-locked determinant-model prefactor of Theorem T.29.2 when $v$ or a $v$-dependent output is requested, $\mathfrak S_{\widetilde X}$ is a completed flag-lift spectral tuple in the sense of Theorem T.78, $\delta^{\mathrm{heavy}}$ is either the empty minimal residual ledger or an explicitly listed nonminimal heavy-threshold ledger, $(\mathcal T_{E_8},\mathcal V)$ are the selected flavor-geometric normalization and Van Vleck data, $\mathcal N_\nu$ is the neutrino/Majorana branch record of Proposition T.24.28, $\mathcal B$ is the selected CKM/PMNS CP-profile data, $\mathcal M_\gamma$ is the accepted target-shift datum of Definition T.22a when the unit branch is used, $\mathfrak M_\lambda$ is the quartic matching record of Definition T.25.2, $\mathcal C_{\mathrm{crit}}$ records any independently imposed marginal-trajectory condition, $\mathcal R_{\mathrm{RG}}$ is the fixed loop-order SM RG system with matching scale $\mu_G$, $\mathcal C_{\mathrm{dec}}$ is the fixed decoupling convention, and $\mathcal C_{\mathrm{pole}}$ is the fixed pole/observable conversion convention. Then there is a deterministic map
 $$
 \mathfrak F_T:\mathfrak I_T\longmapsto \Pi_T
 $$
 defined by the following ordered operations:
 
-1. evaluate the sector finite parts $F_s$ from $\mathfrak S_{\widetilde X}$ and set $\Delta=TF$ and $Z_i=1+\Delta_i/24$;
-2. append the residual ledger by setting $\delta_i=0$ on the canonical minimal ledger and otherwise adding only the explicitly listed heavy-threshold shifts;
-3. form the gauge and Higgs boundary data at $\mu_G$ from Theorems T.13-T.17, T.19, T.28, and T.35;
-4. form the charged-fermion and neutrino Yukawa boundary data from $(\mathcal T_{E_8},\mathcal V,\mathcal N_\nu)$;
-5. form the CKM and PMNS matrices from the fixed CP-profile record $\mathcal B$;
-6. evolve the boundary vector by the fixed RG system $\mathcal R_{\mathrm{RG}}$, apply $\mathcal C_{\mathrm{dec}}$, and convert to the requested pole or observable convention using $\mathcal C_{\mathrm{pole}}$.
+1. evaluate $v=A_{EW}e^{-\kappa_{EW}}M_{Pl}$ on the registered determinant-model branch when that output is requested;
+2. evaluate the sector finite parts $F_s$ from $\mathfrak S_{\widetilde X}$ and set $\Delta=TF$ and $Z_i=1+\Delta_i/24$;
+3. append the residual ledger by setting $\delta_i=0$ on the canonical minimal ledger and otherwise adding only the explicitly listed heavy-threshold shifts;
+4. form the gauge boundary data at $\mu_G$ from Theorems T.13--T.17 and T.35, and form a Higgs boundary only from the separately fixed tuple $(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}})$ together with Theorems T.25--T.28;
+5. form the charged-fermion and neutrino Yukawa boundary data from $(\mathcal T_{E_8},\mathcal V,\mathcal N_\nu)$;
+6. form the CKM and PMNS matrices from the fixed CP-profile record $\mathcal B$;
+7. evolve the boundary vector by the fixed RG system $\mathcal R_{\mathrm{RG}}$, apply $\mathcal C_{\mathrm{dec}}$, and convert to the requested pole or observable convention using $\mathcal C_{\mathrm{pole}}$.
 
-The map is functorial with respect to data-preserving isomorphisms of input records: an isomorphism of completed spectral tuples, flavor bases, and CP-profile representatives induces the corresponding basis relabeling of Yukawa and mixing matrices and leaves all basis-invariant components of $\Pi_T$ unchanged.
+The map is functorial only with respect to isomorphisms preserving every component of $\mathfrak I_T$. In particular, such an isomorphism preserves $A_{EW}$ and its determinant-model convention, the completed spectral and heavy-threshold records, and the full pole-level tuple $(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}})$. It may relabel equivalent flavor bases and CP-profile representatives, inducing the corresponding relabeling of Yukawa and mixing matrices, but it cannot manufacture or retune a scalar input and leaves every basis-invariant component of $\Pi_T$ unchanged.
 
-*Proof.* Step 1 is unique by Theorem T.78. Step 2 is unique by Definition T.19a and Proposition T.19c. Step 3 is unique because the gauge boundary values are algebraic functions of $(Z_i,\delta_i)$ and the fixed PU boundary conditions. Steps 4 and 5 are unique by Theorems T.72-T.76 after $(\mathcal T_{E_8},\mathcal V,\mathcal N_\nu,\mathcal B)$ are fixed. Step 6 is unique because a finite loop-order RG system is an autonomous first-order ODE with a smooth right-hand side on the perturbative PU branch, so standard ODE uniqueness gives one trajectory for the fixed initial vector; fixed decoupling and pole-conversion conventions are functions, so they preserve uniqueness. Data-preserving isomorphisms only rename bases or equivalent representatives before applying the same functions. Therefore $\mathfrak F_T$ is a well-defined deterministic functor and contains no further continuous ambiguity beyond the fixed input record. ∎
+*Proof.* In Step 1, the specified entries $A_{EW}$, $\kappa_{EW}$, and the Planck normalization determine one value of $v$. The completed spectral tuple determines one $F$, hence one $\Delta=TF$, by Theorem T.78. Definition T.19a and Proposition T.19c then determine the residual-threshold operation in Step 3. In Step 4, $(Z_i,\delta_i)$ determine the gauge boundary algebraically, while the explicitly supplied tuple $(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}})$ determines the Higgs boundary. Theorems T.72--T.76 make Steps 5 and 6 deterministic after the flavor, neutrino, and profile records are supplied.
 
-**Proposition T.79.3 (Flavor, Neutrino, Majorana, and Common-Scale Dependency Ledger).** The dependency record for the Appendix-T flavor and neutrino sector is the following finite ledger.
+For Step 7, the complete record includes the specified RG system and, on every requested output interval, the full-interval perturbative-solution hypothesis of Theorem T.71. That theorem gives a unique RG trajectory from the specified boundary vector. The maps $\mathcal C_{\mathrm{dec}}$ and $\mathcal C_{\mathrm{pole}}$ are supplied functions in the input record, so their composition with that trajectory is unique. Thus every ordered step is a function of the preceding supplied data, and their composition defines the deterministic map $\mathfrak F_T$. An isomorphism preserving every input commutes with each of these operations, which proves the stated functoriality and leaves no ambiguity beyond the complete input record. ∎
+
+**Proposition T.79.3 (Electroweak, Higgs, Flavor, Neutrino, Majorana, and Common-Scale Dependency Ledger).** The dependency record for the Appendix-T matching, Higgs, flavor, and neutrino sectors is the following finite ledger.
 
 | Input or convention | Role | Status at point of use | Uncertainty class carried forward | Affected outputs |
 |:--|:--|:--|:--|:--|
 | Completed $\Delta$ from $\mathfrak S_{\widetilde X}$ | ThresholdData | branch theorem after Theorem T.78 data are fixed; validation target if not fixed | T2 until spectral branch is completed | $g_i$, $\sin^2\theta_W$, RG boundary data |
 | Residual $\delta_i$ | ThresholdData / SchemeScale | exact empty ledger value $0$ in the canonical minimal $\mathrm{MS2}_{\mu_G}$ ledger; nonminimal only if an explicit heavy ledger is appended | T2 for nonminimal heavy thresholds | gauge matching and all RG-propagated observables |
-| $\mu_G$ and common-scale transport | SchemeScale | fixed matching convention on the adopted branch | T2 for matching convention; T3 for empirical extraction comparisons | Higgs, Yukawa, neutrino, and common-scale tables |
+| $\mu_G$ and common-scale transport | SchemeScale | fixed gauge-matching convention on the adopted branch; not an identification with $\mathfrak A_{PU}$ or $\mu_\lambda$ | T2 for matching convention; T3 for empirical extraction comparisons | gauge, Yukawa, neutrino, and common-scale tables |
+| $\mathcal M_\gamma$ | target-shift datum | branch-defining; unit value only after (T.22a.2)--(T.22a.3) are accepted | T2 | $\lambda_{\mathrm{elastic}}$, $\lambda_{\mathrm{PU}}$, and every downstream Higgs row |
+| $\mathfrak M_\lambda$ and $\mathcal C_{\mathrm{crit}}$ | PU-to-SM quartic matching and marginality data | currently no accepted matching record; marginality is an additional branch input | T2 | SM quartic boundary, top criticality relation, and $m_H$ |
+| $\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}$ | RG scheme, decoupling, and running-to-pole conversion | branch-defining and fixed before comparison; no accepted PU-internal pole record currently closes the Higgs row | T2, with T3 for experimental pole extraction | $m_H$ and every pole-level observable |
 | $A_{EW}$ | determinant-model prefactor | model layer by Theorem T.29.2 | model allowance at the stated working order | $v$, quantities using $v/M_{Pl}$, and transferred prefactor rows |
 | $(\mathcal T_{E_8},\mathcal V)$ | flavor-geometric ThresholdData / model profile | branch-fixed data for Theorems T.72-T.73 | T1 for geometric truncations; T2 for branch and normalization choices | charged-lepton and quark Yukawa ratios and normalizations |
 | top-sector normalization $y_t(\mu_G)=1$ | boundary normalization | branch boundary condition | T2 | absolute Yukawa scale and seesaw normalization |
@@ -8885,9 +9566,9 @@ The map is functorial with respect to data-preserving isomorphisms of input reco
 
 No empirical mass, mixing, or pole value is permitted to enter the derivation side of this ledger. Empirical quantities may appear only in the comparison columns governed by Convention P.14.1c.
 
-*Proof.* The first two rows follow from Theorem T.78, Definition T.19a, Proposition T.19c, and Corollary T.78.3. The matching-scale and common-scale rows follow from the stated RG/matching conventions and from Section T.25.5.3, where common-scale data are used for comparison. The $A_{EW}$ row follows from Theorem T.29.2. The flavor-geometric rows follow from Theorems T.72-T.73 and Proposition R.3.5f: the generation-count statement is separate from the later texture and normalization data. The Majorana, seesaw, and anchored-reading rows follow from Theorems T.24.11-T.24.15 and Proposition T.24.28, which list the required neutrino-sector inputs. The CKM/PMNS row follows from Theorems T.74-T.76 and the Berry-loop assumptions explicitly stated there. The baryogenesis row follows from Appendix Y, where washout and thermal factors are model-layer inputs. Since each row is assigned to exactly one role and uncertainty class at its point of use, the ledger propagates by the meet rule of Convention P.14.1d and cannot use empirical comparison values as hidden derivation inputs. ∎
+*Proof.* The threshold rows follow from Theorem T.78, Definition T.19a, Proposition T.19c, and Corollary T.78.3. The target-shift row follows from Definition T.22a and Theorem T.22b; the quartic-matching and marginality row follows from Definition T.25.2 and Theorem T.26; and the RG, decoupling, and pole row is the explicit observable-conversion gate of Theorem T.79.2. The matching-scale and common-scale rows follow from the stated RG/matching conventions and Section T.25.5.3. The $A_{EW}$ row follows from Theorem T.29.2. The flavor-geometric rows follow from Theorems T.72–T.73 and Proposition R.3.5f; the Majorana, seesaw, and anchored-reading rows follow from Theorems T.24.11–T.24.15 and Proposition T.24.28. The CKM/PMNS row follows from Theorems T.74–T.76, and the baryogenesis row inherits the Appendix Y model inputs. Each role and uncertainty class is therefore explicit and propagates by the meet rule of Convention P.14.1d without importing empirical comparison values into the derivation side. ∎
 
-**Remark T.79.4.0 (Anchor to the Global Ledger).** Definition T.79.4 supplies the local strict PPI/PCE certificate of the flavor parameter row in Convention P.14.1k. Algorithm T.79.5 is the acceptance test, Theorem T.79.6 is the local determinacy theorem, Definition T.79.8a packages the joint RHG-flavor certificate, and Theorem T.79.8b is the joint determinacy theorem. An accepted $\mathfrak C_{\mathrm{fl}}$ or accepted $\mathfrak J_{\mathrm{RHG-fl}}$ closes the row by Theorem D.8.9b.
+**Remark T.79.4.0 (Anchor to the Global Ledger).** Definition T.79.4 supplies the local strict PPI/PCE certificate of the flavor parameter row in Convention P.14.1k. Algorithm T.79.5 is the acceptance test and Theorem T.79.6 the local determinacy theorem. Definition T.79.8a packages the joint RHG-flavor-Higgs certificate together with the forward-locked $A_{EW}$ scale input, and Theorem T.79.8b is its joint determinacy theorem. An accepted $\mathfrak C_{\mathrm{fl}}$ closes only the flavor row; $\mathfrak J_{\mathrm{RHG-fl}}$ closes each additional component only because its threshold, scale, and Higgs slots are explicit.
 
 **Definition T.79.4 (Flavor Completion Certificate).** A flavor completion certificate is a finite record
 $$
@@ -8930,18 +9611,24 @@ fixed before comparison with charged-lepton, quark, neutrino, CKM, PMNS, strong-
 
 *Proof.* The SM gauge algebra and $N_g=3$ determine the representation class and the number of family copies, but not the finite stationary-point actions, Hessian determinants, Berry holonomies, threshold map, absolute Yukawa normalization, or residual interval listed in Definition T.79.4. Varying any of these unspecified finite entries while preserving the gauge algebra and three-generation ledger changes at least one flavor mass or mixing output. Theorem P.14.1f therefore forbids theorem-level numerical promotion without the accepted flavor certificate. ∎
 
-**Definition T.79.8a (Joint RHG-Flavor Spectral Certificate).** A joint RHG-flavor spectral certificate is a finite record
+**Definition T.79.8a (Joint RHG-Flavor-Higgs Matching Certificate).** A joint RHG-flavor-Higgs matching certificate is a finite record
 $$
 \mathfrak J_{\mathrm{RHG-fl}}
 =
 \left(
 \mathfrak R_{\mathrm{RHG}},
 \mathfrak C_{\mathrm{fl}},
+A_{EW},
+\mathfrak H_T,
 \mathfrak Z_{\mathrm{PU}},
 \mathcal I_{\mathrm{mix}},
 \mathcal R_{\mathrm{joint}},
 \chi_{\mathrm{joint}}
-\right)
+\right),
+\qquad
+\mathfrak H_T
+:=
+(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}).
 \tag{T.79.8a}
 $$
 where:
@@ -8950,9 +9637,13 @@ where:
 
 2. $\mathfrak C_{\mathrm{fl}}$ is an accepted flavor completion certificate of Definition T.79.4.
 
-3. $\mathfrak Z_{\mathrm{PU}}$ is the master spectral ledger used for the RHG thresholds and the flavor stationary data.
+3. $A_{EW}$ is the forward-locked determinant-model prefactor of Theorem T.29.2 whenever $v$ or a $v$-dependent observable is included.
 
-4. $\mathcal I_{\mathrm{mix}}$ is the finite integrability ledger recording all mixed finite-part derivatives shared by RHG thresholds, Yukawa normalizations, CKM/PMNS holonomies, and neutrino-sector entries:
+4. $\mathfrak H_T$ is the independently accepted Higgs target-shift, PU-to-SM quartic-matching, marginality, RG, decoupling, and pole-conversion tuple. The threshold and flavor certificates do not supply it by implication.
+
+5. $\mathfrak Z_{\mathrm{PU}}$ is the master spectral ledger used for the RHG thresholds and flavor stationary data; it also records any claimed spectral-action Higgs finite parts, which remain distinct from $\mathfrak H_T$ unless an explicit matching map identifies them.
+
+6. $\mathcal I_{\mathrm{mix}}$ is the finite integrability ledger recording all mixed finite-part derivatives shared by RHG thresholds, Yukawa normalizations, CKM/PMNS holonomies, neutrino-sector entries, and any linked Higgs finite parts:
 $$
 \partial_{t_a}\partial_{t_b}\log\det_{\mathrm{PU}}
 =
@@ -8961,11 +9652,11 @@ $$
 $$
 on every common chamber used by the certificate.
 
-5. $\mathcal R_{\mathrm{joint}}$ is the joint residual interval after propagating RHG tail bounds, flavor Hessian/Van Vleck bounds, holonomy bounds, RG truncation bounds, and pole-conversion bounds.
+7. $\mathcal R_{\mathrm{joint}}$ is the joint residual interval after propagating the $A_{EW}$ model allowance, RHG tail bounds, flavor Hessian/Van Vleck bounds, holonomy bounds, Higgs matching, RG truncation, decoupling, and pole-conversion bounds.
 
-6. $\chi_{\mathrm{joint}}$ records that no component is selected using observed charged-lepton, quark, neutrino, CKM, PMNS, baryogenesis, or validation-threshold data.
+8. $\chi_{\mathrm{joint}}$ records that no component is selected using observed $v$, Higgs, charged-lepton, quark, neutrino, CKM, PMNS, baryogenesis, or validation-threshold data.
 
-**Theorem T.79.8b (Joint RHG-Flavor Spectral Determinacy).** If $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, then the complete electroweak/flavor observable vector
+**Theorem T.79.8b (Joint RHG-Flavor-Higgs Determinacy).** If $\mathfrak J_{\mathrm{RHG-fl}}$ of Definition T.79.8a is accepted, then the electroweak/flavor/Higgs observable vector
 $$
 \Pi_T
 =
@@ -8978,26 +9669,24 @@ V_{\mathrm{CKM}},U_{\mathrm{PMNS}},
 \bigr)
 \tag{T.79.8b.1}
 $$
-is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. If the joint record uses an accepted spectral-action branch, the same vector also includes the accepted Higgs finite parts $(\mu_H^2,\lambda_H)$ in the normalization of that branch. Moreover, any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the mixed-derivative identities in $\mathcal I_{\mathrm{mix}}$; failure of one such identity rejects the joint certificate.
+is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. The $v$ component is included only because the joint record explicitly contains forward-locked $A_{EW}$, and the $m_H$ component only because it contains $\mathfrak H_T$; neither is inferred from $\mathfrak R_{\mathrm{RHG}}$ or $\mathfrak C_{\mathrm{fl}}$. If an accepted spectral-action branch is also linked, its Higgs finite parts $(\mu_H^2,\lambda_H)$ are included only through the separately recorded spectral-action-to-$\mathfrak H_T$ matching map. Any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the identities in $\mathcal I_{\mathrm{mix}}$.
 
-*Proof.* Theorem T.78.11 makes $\Delta_{\mathrm{RHG}}$ and $\mathcal M_{\mathrm{RHG}}$ deterministic outputs of the accepted RHG record. Theorem T.79.6 makes charged-lepton, quark, neutrino, CKM, and PMNS outputs deterministic outputs of the accepted flavor certificate. The deterministic matching functor of Theorem T.79.2 then maps these inputs to $\Pi_T$ with no further continuous ambiguity once RG, decoupling, and pole conventions are fixed.
+*Proof.* Theorem T.78.11 fixes the RHG threshold outputs, Theorem T.79.6 fixes the flavor outputs, $A_{EW}$ fixes the determinant-model scale $v$, and $\mathfrak H_T$ fixes the independent Higgs boundary and observable-conversion gates. The deterministic functor of Theorem T.79.2 therefore maps the complete record to one $\Pi_T$. For the common-ledger condition, shared chamber dependence is represented by finite smooth determinant or zeta functions, whose mixed partial derivatives commute. Failure of (T.79.8a.1), of the spectral-action-to-$\mathfrak H_T$ matching map when invoked, or of any forward lock rejects the joint certificate. Otherwise the remaining uncertainty is exactly $\mathcal R_{\mathrm{joint}}$. ∎
 
-It remains only to prove the joint spectral consistency condition. Since both RHG and flavor entries are required by Definition T.79.8a to factor through the same master spectral ledger $\mathfrak Z_{\mathrm{PU}}$, any shared chamber dependence is represented by finite smooth determinant or zeta functions on that chamber. Finite smooth functions have commuting mixed partial derivatives. Therefore (T.79.8a.1) is necessary for a common spectral origin. If an entry violates it, the two sectors cannot be projections of the same ledger and the joint certificate is rejected. If all entries pass, the only remaining uncertainty is the finite propagated interval $\mathcal R_{\mathrm{joint}}$. ∎
+**Corollary T.79.8c (No Independent RHG-Flavor-Higgs Refit).** Once $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, changing $A_{EW}$, RHG block matrices, heat/zeta tail bounds, stationary flavor cells, Hessian determinants, holonomy paths, neutrino branch data, $\mathcal M_\gamma$, $\mathfrak M_\lambda$, marginality, RG/decoupling/pole conventions, or residual intervals after comparison defines a new joint branch and cannot confirm the original one.
 
-**Corollary T.79.8c (No Independent RHG-Flavor Refit).** Once $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, changing RHG block matrices, heat/zeta tail bounds, stationary flavor cells, Hessian determinants, holonomy paths, neutrino branch data, RG convention, or residual intervals after comparison defines a new joint branch and cannot confirm the original one.
+*Proof.* Each listed object is either the explicit $A_{EW}$ slot or an entry of $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak H_T$, $\mathfrak Z_{\mathrm{PU}}$, $\mathcal I_{\mathrm{mix}}$, or $\mathcal R_{\mathrm{joint}}$. The forward-lock condition $\chi_{\mathrm{joint}}$ forbids selecting any such entry from validation targets. ∎
 
-*Proof.* Each listed object is an entry of $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak Z_{\mathrm{PU}}$, $\mathcal I_{\mathrm{mix}}$, or $\mathcal R_{\mathrm{joint}}$. The forward-lock condition $\chi_{\mathrm{joint}}$ forbids selecting any such entry from the validation targets. ∎
+**Corollary T.79.8d (Electroweak-Flavor-Higgs Row Closure Criterion).** The electroweak threshold tuple and flavor parameter vector are theorem-level numerical rows exactly on branches carrying one of the following records fixed before comparison:
 
-**Corollary T.79.8d (Electroweak-Flavor Row Closure Criterion).** The electroweak threshold tuple and the flavor parameter vector are theorem-level numerical rows exactly on branches carrying one of the following finite records fixed before comparison:
+1. an accepted forward-locked RHG record $\mathfrak R_{\mathrm{RHG}}$ together with an accepted flavor certificate $\mathfrak C_{\mathrm{fl}}$;
+2. an accepted torus-threshold record $\mathfrak C_{\mathrm{tor}}$ satisfying the same threshold slots together with $\mathfrak C_{\mathrm{fl}}$;
+3. an accepted spectral-action record $\mathfrak S_{\mathrm{SA}}(P)$ satisfying the threshold slots together with $\mathfrak C_{\mathrm{fl}}$;
+4. an accepted joint certificate $\mathfrak J_{\mathrm{RHG-fl}}$ of Definition T.79.8a.
 
-1. an accepted forward-locked RHG record $\mathfrak R_{\mathrm{RHG}}$ of Definition T.78.10 together with an accepted flavor certificate $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4;
-2. an accepted torus-threshold record $\mathfrak C_{\mathrm{tor}}$ satisfying the same threshold-vector slots as Definition T.78.10 together with $\mathfrak C_{\mathrm{fl}}$;
-3. an accepted spectral-action record $\mathfrak S_{\mathrm{SA}}(P)$ satisfying the threshold and Higgs finite-part slots of the Appendix T and X.9.6h gates together with $\mathfrak C_{\mathrm{fl}}$;
-4. an accepted joint RHG-flavor spectral certificate $\mathfrak J_{\mathrm{RHG-fl}}$ of Definition T.79.8a.
+For items 1–3, a claimed $v$ row additionally requires forward-locked $A_{EW}$ on its determinant-model branch, and a claimed Higgs pole row requires the complete independently accepted tuple $\mathfrak H_T$ plus any spectral-action matching map invoked. Item 4 contains both $A_{EW}$ and $\mathfrak H_T$ by definition. Thus $\Delta_{\mathrm{EW}}$, $Z_i$, and flavor observables are deterministic images of their threshold/flavor records, $v$ only of its determinant-model record, and $m_H$ only after its separate matching, marginality, RG, decoupling, and pole gates are present. Gauge algebra, $N_g=3$, $\kappa_{\mathrm{EW}}=38.5$, and the SM matter/EWSB skeleton do not by themselves determine these numerical rows.
 
-On any of these branches, $\Delta_{\mathrm{EW}}$, $Z_i=1+\Delta_i/24$, Higgs finite parts when claimed, absolute Yukawa normalization, charged-fermion masses, quark masses, neutrino masses, CKM and PMNS profiles, determinant orientation, $\bar\theta$, and residual intervals are deterministic images of the accepted record. Gauge algebra, $N_g=3$, $\kappa_{\mathrm{EW}}=38.5$, and the SM matter/EWSB skeleton remain structural theorem rows but do not by themselves determine the numerical threshold/flavor vector.
-
-*Proof.* Theorem T.78.7 and Theorem T.78.11 prove determinacy and non-contamination for a completed RHG threshold record, and Definition T.78.10 lists the finite threshold-vector slots. The torus and spectral-action routes are equivalent only if they supply those same slots with the same branch normalizations and, for spectral-action Higgs claims, the additional Dirac, heat-coefficient, subtraction, finite-part, tail, and normalization data. Theorem T.79.6 proves determinacy from an accepted flavor certificate, while Definition T.79.8a and Theorem T.79.8b replace the separate threshold and flavor records by one joint spectral certificate. Corollary T.79.8c forbids changing shared spectral or RHG entries after comparison. Therefore the numerical electroweak/flavor vector is closed exactly on the accepted finite-record branches listed above. The structural gauge and generation rows fix the admissible representation skeleton but contain no entries for threshold finite parts, stationary flavor cells, Hessian determinants, holonomy phases, Majorana phases, top normalization, seesaw scale, RG convention, pole/running map, strong-CP determinant orientation, or residual intervals; by Theorem P.14.1f they cannot determine the numerical vector without the certificate. ∎
+*Proof.* Theorems T.78.7 and T.78.11 establish threshold determinacy, Theorem T.79.6 establishes flavor determinacy, Theorem T.29.2 supplies only the explicit determinant-model $A_{EW}$ branch for $v$, and Definition T.25.2, Theorem T.26, and Theorem T.79.2 identify the separate Higgs inputs. Definition T.79.8a includes all of these records in the joint certificate, Theorem T.79.8b proves determinacy, and Corollary T.79.8c enforces the forward lock. Therefore each claimed numerical component closes exactly when its own finite inputs are accepted before comparison. ∎
 
 **Theorem T.79.8e (Finite Flavor-Sector Classification Without an Accepted Certificate).** If neither $\mathfrak C_{\mathrm{fl}}$ nor $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, the certified interval vector for charged-fermion masses, quark masses, neutrino rows, CKM, PMNS, determinant orientation, and $\bar\theta$ is
 $$
@@ -9067,7 +9756,21 @@ $$
 $$
 where $J(C)=\operatorname{Im}(C_{11}C_{22}C_{12}^*C_{21}^*)$ up to the common row/column orientation convention. Thus the determinant vanishes exactly when $J(C)=0$ or either logarithmic spectrum is degenerate.
 
-*Proof.* The commutator has zero diagonal trace and off-diagonal entries proportional to up-sector differences. Expanding its $3\times3$ determinant and using unitarity reduces the imaginary rephasing-invariant product to $J(C)$; antisymmetry supplies the two Vandermonde products and the factor $2$. Taking absolute values removes the orientation convention. ∎
+*Proof.* The matrices $A_u$ and $A_d$ are Hermitian $3\times3$ matrices: $A_u$ is real diagonal and $A_d=C\operatorname{diag}(\ell_{d,1},\ell_{d,2},\ell_{d,3})C^\dagger$ is Hermitian because $C$ is unitary and the $\ell_{d,i}$ are real. The Jarlskog commutator-determinant identity [Jarlskog 1985] therefore applies and gives, for a specified common ordering of rows and columns,
+$$
+\det[A_u,A_d]
+=2iJ(C)
+\prod_{i<j}(\ell_{u,i}-\ell_{u,j})
+\prod_{i<j}(\ell_{d,i}-\ell_{d,j}).
+$$
+The cited identity requires precisely two Hermitian $3\times3$ matrices related to their eigenbases by a unitary matrix; those hypotheses are the definitions of $A_u$, $A_d$, and $C$ in the theorem. Reversing an eigenvalue ordering changes the signs of one Vandermonde product and the orientation convention for $J(C)$, but not the absolute value. Hence
+$$
+\left|\det[A_u,A_d]\right|
+=2|J(C)|
+\prod_{i<j}|\ell_{u,i}-\ell_{u,j}|
+\prod_{i<j}|\ell_{d,i}-\ell_{d,j}|.
+$$
+This product vanishes exactly when $J(C)=0$ or at least one pair of eigenvalues in either spectrum is equal. ∎
 
 Equations (T.79.11.1)--(T.79.11.2) are asserted only when all three Yukawa eigenvalues in each sector are strictly positive. At a zero eigenvalue, the finite $3\times3$ identity is undefined; one may prove the positive-regulator identity at $y_i=\epsilon>0$ and report any $\epsilon\downarrow0$ limit under a separate regulator and normalization certificate. Equation (T.79.11.2) is not asserted for a nonunitary contraction $C$; in that case the complement data of Theorem T.79.9 are response-active.
 

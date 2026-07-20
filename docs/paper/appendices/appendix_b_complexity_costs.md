@@ -6,7 +6,7 @@ This appendix provides the detailed construction and justification for key opera
 $\hbar$, $c$, and $k_B$ factors so that every operator’s physical
 dimension is transparent. Predictive Physical Complexity ($C_P$ and its proxy $\hat C_v$) carries its own base dimension $\mathrm{[Complexity]}$, e.g.\ $[\hat C_v]=\mathrm{[Complexity]}$. Information-theoretic quantities such as the entropy $\varepsilon$ or
 the channel capacity $C_{\max}$ are dimensionless, typically expressed
-in nats (natural-log base $e$). The physical relevance of all complexity-derived cost terms rests on the Dynamically Enforced Functional Correspondence (Theorem 2), rigorously proven in **Appendix D**, which equates operational cost with predictive cost in steady-state MPU optimisation.
+in nats (natural-log base $e$). The physical interpretation of complexity-derived cost terms is conditional on the functional-correspondence branch of Theorem 2. At a stable PCE equilibrium satisfying Dominance of Stabilizing Costs and faithful-cost identifiability/noncompensation, the operational proxy must align with the predictive complexity in the theorem's stated sense. Appendix D supplies the corresponding adaptation dynamics under its separate variational hypotheses; neither result asserts a universal equality of operational and predictive costs away from that branch.
 
 ## B.1 Operational Predictive Physical Complexity $\hat{C}_v$
 
@@ -55,7 +55,26 @@ $$
 $$
 Thus proxy-based minimization is theorem-preserving precisely on the gap-dominating branch $\Delta_P>2\varepsilon$. If this inequality is not certified, the proxy remains an operational tracker and not an exact selector.
 
-*Proof:* On the operational coarse-graining branch, $\hat{C}_v$ is by construction a Hermitian operator with orthogonal complete spectral projectors $\{\hat{P}_d\}$ and real non-negative eigenvalues $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$. Self-adjointness and positive semi-definiteness follow directly. The coarse-graining choice is the branch input; exact agreement with mathematical circuit-complexity level sets is not claimed and would generally fail because such level sets are not linear subspaces.
+*Proof.* Let
+$$
+\mathcal D(\hat C_v)
+:=\left\{\psi\in\mathcal H_v:
+\sum_{d=0}^{\infty}\lambda(d)^2\|\hat P_d\psi\|^2<\infty\right\}.
+$$
+Orthogonality and completeness of the projectors give
+$$
+\psi=\sum_d\hat P_d\psi,
+\qquad
+\|\psi\|^2=\sum_d\|\hat P_d\psi\|^2.
+$$
+On the displayed domain, $\hat C_v\psi=\sum_d\lambda(d)\hat P_d\psi$ is the real diagonal spectral operator. Its adjoint has the same diagonal coefficients and the same square-summability domain, so $\hat C_v^*=\hat C_v$. For every $\psi\in\mathcal D(\hat C_v)$,
+$$
+\langle\psi,\hat C_v\psi\rangle
+=\sum_d\lambda(d)\|\hat P_d\psi\|^2
+\ge K_0\sum_d\|\hat P_d\psi\|^2
+=K_0\|\psi\|^2\ge0.
+$$
+Thus $\hat C_v$ is self-adjoint and positive. The coarse-graining remains branch data and need not coincide with mathematical circuit-complexity level sets. ∎
 
 ## B.2 Physical Resource-Cost Operators $\hat{R}, \hat{R}_I$
 
@@ -107,13 +126,13 @@ Hence both operators are Hermitian and positive-semidefinite. ∎
 
 ## B.3 Fundamental Complexity Bound for SPAP Prediction
 
-**Definition B.2 (Unified Complexity Functional $C_{\text{uni}}$)**
+**Definition B.2 (Unified Complexity Functional $C_{\mathrm{uni}}$)**
 
-Consider the task of achieving average predictive performance $\alpha$ on SPAP-limited aspects, where $\alpha$ is within an error margin $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$ of the maximum limit $\alpha_{SPAP}$.
+Consider the task of achieving average predictive performance $\alpha$ on SPAP-limited aspects, where $\alpha$ is within an error margin $\delta_{\mathrm{SPAP}} = \alpha_{SPAP} - \alpha$ of the maximum limit $\alpha_{SPAP}$.
 
-A $\delta_{\rm SPAP}$-accurate SPAP strategy is any physically realizable procedure $S$ whose verification/calibration loop produces a predictor that achieves performance at least $\alpha_{SPAP}-\delta_{\rm SPAP}$ while the probability of violating this target is at most $\delta_{\rm SPAP}$. For such a strategy, define $\mathrm{Cost}(S;\delta_{\rm SPAP})$ to be its worst-case number of elementary physical operations, counting (i) each acquisition of an interaction outcome used for verification/calibration and (ii) each elementary internal update step used to process those outcomes and update the predictor. The unified complexity functional $C_{\text{uni}}$ is the minimal such cost over all $\delta_{\rm SPAP}$-accurate strategies:
+A $\delta_{\mathrm{SPAP}}$-accurate SPAP strategy is any physically realizable procedure $S$ whose verification/calibration loop produces a predictor that achieves performance at least $\alpha_{SPAP}-\delta_{\mathrm{SPAP}}$ while the probability of violating this target is at most $\delta_{\mathrm{SPAP}}$. For such a strategy, define $\mathrm{Cost}(S;\delta_{\mathrm{SPAP}})$ to be its worst-case number of elementary physical operations, counting (i) each acquisition of an interaction outcome used for verification/calibration and (ii) each elementary internal update step used to process those outcomes and update the predictor. The unified complexity functional $C_{\mathrm{uni}}$ is the minimal such cost over all $\delta_{\mathrm{SPAP}}$-accurate strategies:
 $$
-C_{\text{uni}}\bigl(\delta_{\rm SPAP}\bigr) := \inf_{S\ \delta_{\rm SPAP}\text{-accurate}} \mathrm{Cost}(S;\delta_{\rm SPAP}). \tag{B.4}
+C_{\mathrm{uni}}\bigl(\delta_{\mathrm{SPAP}}\bigr) := \inf_{S\ \delta_{\mathrm{SPAP}}\text{-accurate}} \mathrm{Cost}(S;\delta_{\mathrm{SPAP}}). \tag{B.4}
 $$
 This functional captures the fundamental effective computational resources demanded by high-accuracy self-calibration within the PU framework.
 
@@ -130,15 +149,46 @@ $$
 C_{\mathrm{uni}}(\delta)=\Omega\!\left(\frac{\log(1/\delta)}{\delta^2}\right).\tag{B.5}
 $$
 
-*Proof.* Thresholding an estimate with additive error at most $\delta$ at $1/2$ gives a test with both errors at most $\beta$. Bretagnolle--Huber gives
+*Proof.* Under $p_-=1/2-2\delta$, an estimate within $\delta$ of $p_-$ lies below $1/2$; under $p_+=1/2+2\delta$, an estimate within $\delta$ of $p_+$ lies above $1/2$. Thresholding at $1/2$ therefore gives a test whose type-I and type-II errors are each at most $\beta$.
+
+Let $P_-^N$ and $P_+^N$ be the laws of the $N$ independent observations. The Bretagnolle–Huber inequality (Bretagnolle & Huber 1979) applies to these two probability laws and gives, for every test with errors $a,b$,
 $$
-N D\!\left(\operatorname{Bern}(p_-)\middle\|\operatorname{Bern}(p_+)\right)\ge\ln\!\left(\frac1{4\beta}\right).
+a+b\ge\frac12\exp[-D(P_-^N\|P_+^N)].
 $$
-For $x=4\delta\le1/2$,
+Independence gives
 $$
-D\!\left(\operatorname{Bern}(p_-)\middle\|\operatorname{Bern}(p_+)\right)=4\delta\ln\!\left(\frac{1+x}{1-x}\right)\le\frac{128}{3}\delta^2.
+D(P_-^N\|P_+^N)=N D(\operatorname{Bern}(p_-)\|\operatorname{Bern}(p_+)).
 $$
-Combining the inequalities proves the sample bound. The per-strategy cost premise and the infimum in Definition B.2 prove Equation (B.5). Without the uniform reduction, confidence schedule, and cost ledger, no universal SPAP rate follows. ∎
+Since $a+b\le2\beta$, it follows that
+$$
+ND(\operatorname{Bern}(p_-)\|\operatorname{Bern}(p_+))
+\ge\ln\left(\frac1{4\beta}\right).
+\tag{B.5b}
+$$
+
+Put $x=4\delta\le1/2$. Direct substitution into the Bernoulli relative entropy gives
+$$
+D(\operatorname{Bern}(p_-)\|\operatorname{Bern}(p_+))
+=4\delta\ln\left(\frac{1+x}{1-x}\right).
+$$
+Moreover,
+$$
+\ln\left(\frac{1+x}{1-x}\right)
+=2\int_0^x\frac{dt}{1-t^2}
+\le\frac{2x}{1-x^2}
+\le\frac{8x}{3},
+$$
+because $0\le x\le1/2$. Therefore
+$$
+D(\operatorname{Bern}(p_-)\|\operatorname{Bern}(p_+))
+\le4\delta\frac{8(4\delta)}3
+=\frac{128}{3}\delta^2.
+$$
+Combining this with (B.5b) proves
+$$
+N\ge\frac{3}{128\delta^2}\ln\left(\frac1{4\beta}\right).
+$$
+Multiplication by $c_s$ and the infimum over the uniformly certified strategies give (B.5). ∎
 
 **Corollary B.2.1 (Conditional Pattern-Specific Cost Inheritance).** Let $\mathcal S_E$ be the admissible strategies integrating pattern $E$ at margin $\delta_S(E)>0$. Assume a certificate maps every $S\in\mathcal S_E$ to a $\delta_S(E)$-accurate strategy in Definition B.2, preserves the two hard Bernoulli laws and their confidence requirement, and proves
 $$
@@ -152,7 +202,14 @@ C_{\mathrm{integrate}}(S,E)
 =\Omega\!\left(\frac{\log(1/\delta_S(E))}{\delta_S(E)^2}\right).
 \tag{B.5a}
 $$
-Without this uniform reduction certificate, self-reference or self-model engagement alone does not establish (B.5a). ∎
+Without this uniform reduction certificate, self-reference or self-model engagement alone does not establish (B.5a).
+
+*Proof.* Let $S\in\mathcal S_E$. By hypothesis, $\mathcal R_E(S)$ is admissible in the strategy class of Definition B.2 at margin $\delta_S(E)$. Hence the definition of the infimum gives
+$$
+\operatorname{Cost}_{B.2}(\mathcal R_E(S);\delta_S(E))
+\ge C_{\mathrm{uni}}(\delta_S(E)).
+$$
+Combining this inequality with the certified cost preservation gives the first inequality in (B.5a). Theorem B.2 supplies the final asymptotic lower bound. Every step uses the uniform reduction certificate; absent that certificate, the comparison with the infimum class is unavailable. ∎
 
 ## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 
@@ -170,7 +227,15 @@ where:
 2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, derived from the power functions $R(C), R_I(C)$ in Definition 3). Since $\langle \hat{H}_v\rangle$ already accounts for the baseline operational energy associated with $R(C_{op})$, the term $\left(\hat{R}(C_v)-R(C_{op})\hat{\mathbb I}_v\right)\tau_0$ contributes only the excess operational energy (above baseline) over the timescale $\tau_0$, while $\hat{R}_I(C_v)\tau_0$ contributes the reflexive/irreversible overhead energy over $\tau_0$. Here $\hat{\mathbb I}_v$ is the identity on $\mathcal H_v$ and $R(C_{op})$ is a scalar (the power evaluated at the fixed baseline complexity $C_{op}$).
 3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_{\mathrm{MPU}}$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger, if auxiliary degrees implementing ND-RID are included explicitly as in Definition B.4).
 
-The constants $V_{\mathrm{MPU}}$ and $\tau_0$ are separately registered effective volume and operational-clock data for this dimensional conversion. Theorem 29 may motivate a characteristic internal timescale but does not identify $\tau_0$ with a universal minimum update duration. $\hat{\rho}_v$ is Hermitian by construction. Its expectation value $\langle \hat{\rho}_v \rangle=\operatorname{tr}(\rho_v\hat{\rho}_v)$ in the local MPU state $\rho_v$ represents the average local energy density associated with MPU $v$.
+The constants $V_{\mathrm{MPU}}$ and $\tau_0$ are separately registered effective volume and operational-clock data for this dimensional conversion. Theorem 29 may motivate a characteristic internal timescale but does not identify $\tau_0$ with a universal minimum update duration. Let $\mathcal N[v]$ contain $v$, all incident-edge endpoints, and every auxiliary degree of freedom in the support of $\hat\rho_v$. Then $\hat\rho_v$ is Hermitian on $\mathcal H_{\mathcal N[v]}$, and its expectation is
+$$
+\langle\hat\rho_v\rangle
+=
+\operatorname{tr}_{\mathcal H_{\mathcal N[v]}}\!\left(
+\rho_{\mathcal N[v]}\hat\rho_v
+\right),
+$$
+where $\rho_{\mathcal N[v]}$ is the reduced state on that support. This expectation represents the average local energy density assigned to MPU $v$.
 
 **Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$)**
 
@@ -213,15 +278,22 @@ $$
 \frac{d}{dt}\hat{\rho}_v + \sum_u \hat{J}_{v \to u} = 0. \tag{B.11}
 $$
 
-Under geometric regularity (Theorem 43), there exists a local chart in which neighbors of $v$ can be indexed as $v\pm e_j$ and a local discrete divergence operator $\nabla_j^{(v)}$ is well-defined. Choose local energy flux operators $\hat{q}_{v,j}$ consistent with the edge currents (e.g. $\hat{q}_{v,j}:=\hat{J}_{v\to v+e_j}$ in that chart). Then (B.11) can be written in the directional form:
+Assume a local chart with a registered discrete divergence and flux assignment for which (B.11) has the directional form
 $$
 \frac{d}{dt}\hat{\rho}_v + \sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0.
 $$
-Define the momentum density by $\hat{\pi}_{v,j} := \hat{q}_{v,j}/c^2$. On the momentum-flux closure branch — assuming that $\hat{H}_{\mathrm{total}}$ is approximately translation-invariant on the locally regular chart at the relevant coarse-graining scale — Noether's theorem for discrete translation symmetry supplies a local stress tensor $\hat{p}_{v,jk}$ satisfying the discrete conservation identity
+On the momentum-flux closure branch, assume in addition that: (i) the discrete translation Noether momentum density $\hat\pi_{v,j}^{\mathrm N}$ exists; (ii) the local relativistic bridge identifies
 $$
-\frac{d}{dt}\hat{\pi}_{v,j} + \sum_{k=1}^3 \nabla_k^{(v)}\hat{p}_{v,jk} = 0, \tag{B.12}
+\hat\pi_{v,j}^{\mathrm N}=\frac{\hat q_{v,j}}{c^2};
 $$
-fixed up to a standard stress-gauge freedom (addition of a discrete divergence-free tensor). These equations determine the admissible class of stress operators $\hat{p}_{v,jk}$ up to that gauge; a choice is then made consistent with the Hamiltonian and energy density in the locally regular chart. When approximate translation invariance fails at the chosen chart (for instance under pronounced geometric irregularity), the construction of this section does not apply and the closure branch must be stated explicitly elsewhere in the derivation.
+and (iii) the corresponding Noether stress $\hat p_{v,jk}$ satisfies
+$$
+\frac{d}{dt}\hat\pi_{v,j}^{\mathrm N}
++
+\sum_{k=1}^3\nabla_k^{(v)}\hat p_{v,jk}=0.
+\tag{B.12}
+$$
+Write $\hat\pi_{v,j}:=\hat\pi_{v,j}^{\mathrm N}$. The stress is defined up to addition of a discrete divergence-free tensor. If the chart, Noether current, relativistic bridge, or closure identity is absent, the canonical stress-tensor construction below does not apply.
 
 ## B.6 Canonical Microscopic Stress-Energy Tensor $\hat{T}^{\mu\nu}_{(can)}$
 
@@ -264,11 +336,19 @@ The canonical tensor is symmetrized using the Belinfante-Rosenfeld procedure to 
 
 **Theorem B.4 (Belinfante-Rosenfeld Symmetrization)**
 
-Let $\hat{S}^{\lambda\mu\nu}(v)$ be a spin current operator (antisymmetric in $\mu,\nu$) such that the local conservation of total angular momentum holds in the form
+Let $\hat{S}^{\lambda\mu\nu}(v)$ be a spin current operator antisymmetric in $\mu,\nu$. Assume that the registered discrete derivative satisfies the coordinate Leibniz identities
 $$
-\partial_\lambda^{(v)} \left( x^\mu \hat{T}^{\lambda\nu}_{(can)}(v) - x^\nu \hat{T}^{\lambda\mu}_{(can)}(v) - \hat{S}^{\lambda\mu\nu}(v) \right)=0,
+\partial_\lambda^{(v)}(x^\mu A^\lambda)
+=
+\delta_\lambda^{\mu}A^\lambda
++
+x^\mu\partial_\lambda^{(v)}A^\lambda
 $$
-together with local energy-momentum conservation (Theorem B.3, Eq B.13). Define the Belinfante-Rosenfeld improved tensor by
+on the retained fields and that mixed derivatives commute on the superpotential below. Assume also local energy-momentum conservation (Theorem B.3, Equation B.13) and local total-angular-momentum conservation
+$$
+\partial_\lambda^{(v)} \left( x^\mu \hat{T}^{\lambda\nu}_{(can)}(v) - x^\nu \hat{T}^{\lambda\mu}_{(can)}(v) - \hat{S}^{\lambda\mu\nu}(v) \right)=0.
+$$
+Define the Belinfante-Rosenfeld improved tensor by
 $$
 \hat{\Theta}^{\mu\nu}_{(MPU)}(v)
 = \hat{T}^{\mu\nu}_{(can)}(v)
@@ -346,16 +426,20 @@ Thus the expectation-value source, Belinfante continuum source, horizon heat-flu
 
 **Theorem B.5 (Macroscopic Covariant Conservation of $T_{\mu\nu}^{(MPU)}$)**
 
-On the regular branch, $T_{\mu\nu}^{(MPU)}(x)$ satisfies
+On the regular branch and under the local-equilibrium hypothesis of Theorem B.8b(c), $T_{\mu\nu}^{(MPU)}(x)$ satisfies
 $$
-\nabla^{\mu} T_{\mu\nu}^{\text{(MPU)}} = 0 \tag{B.16}
+\nabla^{\mu}T_{\mu\nu}^{\text{(MPU)}}=0
+\tag{B.16}
 $$
-where $\nabla^{\mu}$ is the covariant derivative compatible with the emergent metric $g_{\mu\nu}$. The conservation law follows both microscopically and variationally:
+in the distributional sense. On the smooth on-shell variational branch of Theorems F.1 and B.8c, the same equation holds pointwise.
 
-1. *Microscopic route.* Theorem B.8b(b) (Belinfante Continuum Limit and Conservation) establishes distributional divergence-freeness of the continuum limit $\mathbf T^{\mu\nu}$ from the discrete weak-conservation identity (B.20) via Definition B.8a and mesh-consistency.
-2. *Variational route.* Theorem F.1 (diffeomorphism invariance of the derived generally covariant effective action of Theorem X.5a, Appendix X) yields $\nabla^\mu T_{\mu\nu}=0$ on-shell through Noether's second theorem; the variational tensor coincides with the coarse-grained expectation-value tensor by Theorem B.8c (Variational Identification).
+*Proof.* Definition B.8a supplies the discrete weak-conservation identity and mesh-consistency assumptions. Theorem B.8b(b) passes those identities to the continuum measure $\mathbf T^{\mu\nu}$ and proves
+$$
+\int\nabla_\mu\psi_\nu\,d\mathbf T^{\mu\nu}=0
+$$
+for every compactly supported smooth test one-form $\psi$. Under local equilibrium, Theorem B.8b(c) writes $d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}dV_g$, so the last display is precisely $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in distributions.
 
-The two routes agree because both refer to the same object — Corollary B.8d.1 (Source-Term Identity) consolidates the four-way identity at the microscopic, variational, thermodynamic, and conservation levels.
+On the smooth variational branch, Theorem F.1 applies to the diffeomorphism-invariant on-shell action and gives covariant conservation of its metric-variation tensor. Theorem B.8c identifies that tensor with the continuum measure density, and Corollary B.8d.1 identifies it with the coarse-grained MPU source. Hence the microscopic and variational routes concern the same tensor. Distributional equality agrees with pointwise equality when the tensor is smooth. ∎
 
 ## B.9 Correspondence with Standard Forms
 
@@ -375,25 +459,38 @@ Two admissible coarse-grainings $(\mathbf T_h),(\widetilde{\mathbf T}_h)$ are *$
 
 **Theorem B.8b (Belinfante Continuum Limit and Conservation).** Let $(\mathbf T_h)_{h>0}$ be an admissible coarse-graining on the Lorentzian branch of Theorem 45 and Corollary 46a. Then:
 
-(a) There exist a subsequence $h_j\to 0$ and a symmetric tensor-valued Radon measure $\mathbf T^{\mu\nu}$ on $M_{\mathrm{reg}}$ such that $\mathbf T_{h_j}^{\mu\nu}\rightharpoonup \mathbf T^{\mu\nu}$ in weak-$*$ on compact subsets.
+(a) There exist a subsequence $h_j\to0$ and a symmetric tensor-valued Radon measure $\mathbf T^{\mu\nu}$ on $M_{\mathrm{reg}}$ such that $\mathbf T_{h_j}^{\mu\nu}\rightharpoonup\mathbf T^{\mu\nu}$ weak-$*$ on compact subsets.
 
 (b) $\mathbf T$ is distributionally divergence-free: $\int_{M_{\mathrm{reg}}}\nabla_\mu\psi_\nu\,d\mathbf T^{\mu\nu}=0$ for every $\psi\in C_c^\infty(T^*M_{\mathrm{reg}})$.
 
-(c) If $\mathbf T$ is absolutely continuous with respect to $dV_g$ (the local-equilibrium density condition supplied on the horizon branch by Theorem 48a.0), then there exists $T_{(\mathrm{MPU})}^{\mu\nu}\in L^1_{\mathrm{loc}}(M_{\mathrm{reg}})$ with $d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}\,dV_g$ and $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in the distributional sense. ∎
+(c) If $\mathbf T\ll dV_g$, then there exists $T_{(\mathrm{MPU})}^{\mu\nu}\in L^1_{\mathrm{loc}}(M_{\mathrm{reg}})$ with $d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}dV_g$ and $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in distributions.
 
-*Proof.* (a) Hypothesis (i) gives a uniform total-variation bound $|\mathbf T_h|(K)\le C_K<\infty$. By Banach–Alaoglu applied to $\mathcal M(K)$ as the dual of $C(K;T^{*2}M_{\mathrm{reg}})$, a weak-$*$ convergent subsequence on $K$ exists. A diagonal argument over an exhaustion of $M_{\mathrm{reg}}$ gives a globally defined weak-$*$ limit $\mathbf T$. Symmetry is preserved by weak-$*$ convergence.
+*Proof.* Choose a countable exhaustion $K_1\subset\operatorname{int}K_2\subset\cdots$ of the second-countable manifold $M_{\mathrm{reg}}$ by compact metrizable sets. In a finite coordinate cover of $K_m$, each tensor measure has finitely many scalar signed-measure components. Hypothesis (i) bounds the total variation of every component uniformly in $h$. The Banach–Alaoglu theorem in the form given by Reed and Simon (1980) applies to each bounded subset of $C(K_m)^*$. Because compact metrizability makes $C(K_m)$ separable, the weak-$*$ compact bounded set is metrizable and sequentially compact. Thus a subsequence converges weak-$*$ on $K_m$. Repeated extraction and the diagonal subsequence over $m$ give a tensor-valued Radon measure $\mathbf T$ on the whole manifold. Each $\mathbf T_h$ is symmetric, so testing the antisymmetric part against continuous compactly supported tensors shows that $\mathbf T$ is symmetric. This proves (a).
 
-(b) For $\psi\in C_c^\infty(T^*M_{\mathrm{reg}})$, (B.20) together with hypothesis (iii) gives
+Let $\psi\in C_c^\infty(T^*M_{\mathrm{reg}})$ and choose $m$ with $\operatorname{supp}\psi\subset K_m$. Hypotheses (ii) and (iii) give
 $$
-0 \;=\; \sum_{v\in V_h}\Theta_h^{\mu\nu}(v)\,\mu_h(v)\,(\nabla_\mu\psi_\nu)(x_v) \;+\; E_h,
+0=\int\nabla_\mu\psi_\nu\,d\mathbf T_h^{\mu\nu}+E_h,
+\qquad
+|E_h|\le |\mathbf T_h|(K_m)\,c_\psi h\le C_{K_m}c_\psi h.
 $$
-with $|E_h|\le C_K\cdot O(h)$. Passing to the convergent subsequence and taking $h_j\to 0$ yields $\int\nabla_\mu\psi_\nu\,d\mathbf T^{\mu\nu}=0$.
+The error tends to zero, and $\nabla\psi$ is continuous with compact support. Weak-$*$ convergence therefore gives
+$$
+\int\nabla_\mu\psi_\nu\,d\mathbf T^{\mu\nu}=0,
+$$
+proving (b).
 
-(c) Under absolute continuity, the Radon–Nikodym theorem supplies $T_{(\mathrm{MPU})}^{\mu\nu}=d\mathbf T^{\mu\nu}/dV_g\in L^1_{\mathrm{loc}}$. Integration by parts of (b) against compactly supported $\psi$, with vanishing boundary terms, gives $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$. ∎
+Under $\mathbf T\ll dV_g$, the Radon–Nikodym theorem as stated by Reed and Simon (1980), applied to each of the finitely many local tensor components, supplies a density $T_{(\mathrm{MPU})}^{\mu\nu}\in L^1_{\mathrm{loc}}$. Substitution of $d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}dV_g$ into the test-function identity in (b) is exactly the definition of $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in distributions. ∎
 
-**Corollary B.8b.1 (Independence of Admissible Coarse-Graining).** If $(\mathbf T_h)$ and $(\widetilde{\mathbf T}_h)$ are $\varepsilon$-equivalent admissible coarse-grainings, their continuum limits coincide: $\mathbf T^{\mu\nu}=\widetilde{\mathbf T}^{\mu\nu}$. When both admit pointwise representations under local equilibrium, $T_{(\mathrm{MPU})}^{\mu\nu}=\widetilde T_{(\mathrm{MPU})}^{\mu\nu}$ almost everywhere.
+**Corollary B.8b.1 (Paired-Subsequence Independence of Admissible Coarse-Graining).** If $(\mathbf T_h)$ and $(\widetilde{\mathbf T}_h)$ are $\varepsilon$-equivalent admissible coarse-grainings and $h_j\to0$ is a subsequence along which $\mathbf T_{h_j}\rightharpoonup\mathbf T$, then every further subsequence along which $\widetilde{\mathbf T}_{h_j}\rightharpoonup\widetilde{\mathbf T}$ satisfies $\widetilde{\mathbf T}=\mathbf T$. When both limits have local-equilibrium densities, those densities agree almost everywhere. If either full family has a unique weak-$*$ cluster point, both full families converge to that same limit.
 
-*Proof.* For any compactly supported $\phi\in C(K;T^{*2}M_{\mathrm{reg}})$, $\lvert\langle\mathbf T_h-\widetilde{\mathbf T}_h,\phi\rangle\rvert\le|\mathbf T_h-\widetilde{\mathbf T}_h|(K)\cdot\sup_K|\phi|=O(h)\cdot C_K\cdot\sup_K|\phi|$, so the limits agree on a dense set and therefore as measures. Radon–Nikodym uniqueness gives a.e. equality of densities. ∎
+*Proof.* For every compactly supported continuous tensor test field $\phi$,
+$$
+|\langle\mathbf T_{h_j}-\widetilde{\mathbf T}_{h_j},\phi\rangle|
+\le
+|\mathbf T_{h_j}-\widetilde{\mathbf T}_{h_j}|(K)\sup_K|\phi|
+\longrightarrow0.
+$$
+Passing to the paired limits gives $\langle\mathbf T-\widetilde{\mathbf T},\phi\rangle=0$ for all such $\phi$, hence equality as Radon measures. Radon–Nikodym uniqueness gives equality of densities. Uniqueness of a cluster point upgrades subsequential convergence to convergence of the family. ∎
 
 **Theorem B.8c (Variational Identification of the Continuum Source Tensor).** Let $S_{(\mathrm{MPU})}[g,\Phi]=\int_{M_{\mathrm{reg}}}\mathcal L_{(\mathrm{MPU})}(g,\Phi)\sqrt{|g|}\,d^4x$ be the continuum matter action obtained from Theorem D.6d. Assume: (H B.8c.1) $S_{(\mathrm{MPU})}$ is Gâteaux differentiable with respect to compactly supported smooth metric perturbations $\delta g_{\mu\nu}$; (H B.8c.2) the discrete first variations agree with the continuum first variation up to $O(h)$ remainders under the admissible coarse-graining of Definition B.8a. Then
 $$
@@ -454,7 +551,20 @@ $$
 $$
 ∎
 
-**Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$ (a consequence of the local-equilibrium branch of Theorem 48a.0). Let $\mathcal H_h$ be an admissible family of discrete face-unions approximating $\mathcal H$ with face fluxes $q_h(f)$ induced by the current operators of Definition B.5. Then:
+**Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth compact local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$. Let $\mathcal H_h$ be discrete face-unions approximating $\mathcal H$. Assume the flux-consistency certificate
+$$
+\left|
+\sum_{f\subset\mathcal H_h}q_h(f)
+-
+\sum_{f\subset\mathcal H_h}
+T_{\mu\nu}^{(\mathrm{MPU})}(x_f)
+\chi^\mu(x_f)n_f^\nu\Delta\Sigma_f
+\right|
+\le\epsilon_h,
+\qquad
+\epsilon_h\to0,
+$$
+and assume that the second sum is a convergent Riemann sum for the horizon integral. Then:
 
 (a) *Flux convergence.*
 $$
@@ -465,11 +575,31 @@ $$
 $$
 \delta Q_\mathcal H \;=\; \int_{\mathcal H} T_{\mu\nu}^{(\mathrm{MPU})}\,\chi^\mu\,d\Sigma^\nu \;=\; -\kappa\int_\mathcal H \lambda\,T_{\mu\nu}^{(\mathrm{MPU})}\,k^\mu k^\nu\,d\lambda\,dA,
 $$
-reproducing Equation (68). ∎
+reproducing Equation (68).
 
-*Proof.* (a) On the null surface with $d\Sigma^\nu=k^\nu\,d\lambda\,dA$, the integrand $T_{(\mathrm{MPU})}^{\mu\nu}\chi^\mu k^\nu$ is continuous by (H B.8d.1) and the smoothness of $\chi,k$. Admissibility of the horizon discretization makes the face-sum $\sum_f\Theta_h^{\mu\nu}(x_f)\chi^\mu(x_f)n^\nu(x_f)\Delta A_f$ a Riemann sum, with $O(h)$ error per face; the sum converges to the continuum integral.
+*Proof.* (a) Let
+$$
+R_h
+:=
+\sum_{f\subset\mathcal H_h}
+T_{\mu\nu}^{(\mathrm{MPU})}(x_f)
+\chi^\mu(x_f)n_f^\nu\Delta\Sigma_f.
+$$
+By the Riemann-sum hypothesis, $R_h\to\int_{\mathcal H}T_{\mu\nu}^{(\mathrm{MPU})}\chi^\mu d\Sigma^\nu$. By flux consistency,
+$$
+\left|\sum_fq_h(f)-R_h\right|\le\epsilon_h\to0.
+$$
+The triangle inequality proves part (a).
 
-(b) Substituting $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$ into (a) and discarding $O(\lambda^2)$ corrections yields (b). ∎
+(b) On the null surface, choose the stated orientation $d\Sigma^\nu=k^\nu d\lambda dA$. Substitution of $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$ gives
+$$
+\int_{\mathcal H}T_{\mu\nu}^{(\mathrm{MPU})}\chi^\mu d\Sigma^\nu
+=
+-\kappa\int_{\mathcal H}\lambda T_{\mu\nu}^{(\mathrm{MPU})}k^\mu k^\nu d\lambda dA
++
+O(\lambda^2)
+$$
+in the local expansion, proving part (b) to the stated order. ∎
 
 **Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$ under the admissibility and local-equilibrium hypotheses of Definition B.8a and (H B.8d.1), the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source of Theorem B.8c, written equivalently as
 $$
@@ -497,23 +627,31 @@ $$
 $$
 where $\Phi_F$ is the available free-energy flux into the retained predictive engine, $T_{\mathrm{eff}}>0$ is the effective temperature of the verified heat bath or local equilibrium ledger, $N_{\mathrm{str}}(t)$ counts new irreducible retained structural quanta, $C_{\mathrm{ret}}^{\mathrm{nat}}(t)=\varepsilon_0N_{\mathrm{str}}(t)$ is the associated retained structural content in nats when that normalization is used, $\mathcal W_{\mathrm{free}}$ records the free-energy bookkeeping, $\mathcal O_{\mathrm{oh}}\ge0$ records overhead and failed-verification losses, and $\mathcal R_{\mathrm{src}}$ records any Source-Principle relocation of the payment ledger.
 
-**Proposition B.8f (Predictive Engine Bound).** On a branch carrying $\mathfrak C_{\mathrm{eng}}$, autonomous retained-structure growth satisfies
+**Proposition B.8f (Conditional Predictive Engine Bound).** In addition to $\mathfrak C_{\mathrm{eng}}$, assume that every counted retained-structure event includes a registered reset with
+$$
+H_q(P\mid R)\ge h_{\min}>0
+$$
+in the recorded bath. Then autonomous retained-structure growth satisfies
 $$
 \frac{dN_{\mathrm{str}}}{dt}
 \le
-\frac{\Phi_F}{k_BT_{\mathrm{eff}}\varepsilon_0},
-\qquad
-\varepsilon_0=\ln2.
+\frac{\Phi_F}{k_BT_{\mathrm{eff}}h_{\min}}.
 $$
-Equivalently, when $C_{\mathrm{ret}}^{\mathrm{nat}}=\varepsilon_0N_{\mathrm{str}}$,
+When $C_{\mathrm{ret}}^{\mathrm{nat}}=\varepsilon_0N_{\mathrm{str}}$ with $\varepsilon_0=\ln2$ as the structural normalization,
 $$
 \frac{dC_{\mathrm{ret}}^{\mathrm{nat}}}{dt}
 \le
-\frac{\Phi_F}{k_BT_{\mathrm{eff}}}.
+\frac{\varepsilon_0\Phi_F}{k_BT_{\mathrm{eff}}h_{\min}}.
 $$
-With Source-Principle relocation, the same inequality is applied to the target-side retained growth while the sender-side payment and overhead are added through $\mathcal R_{\mathrm{src}}$. Equality is asserted only on a separate overhead-free, Landauer-saturating branch where $\mathcal O_{\mathrm{oh}}=0$ and the bath/flux ledger is reversible at the stated coarse-graining.
+With Source-Principle relocation, the same inequalities apply to target-side retained growth while sender-side payment and overhead are recorded through $\mathcal R_{\mathrm{src}}$. Equality requires an overhead-free Landauer-saturating branch and equality $H_q(P\mid R)=h_{\min}$ for every counted event.
 
-*Proof.* Each new irreducible retained structural quantum is a verified finite response and therefore pays at least $k_BT_{\mathrm{eff}}\varepsilon_0$ of free energy under the Landauer/SPAP floor of Theorem 31 in the recorded bath. In a time interval $dt$, the available free energy is at most $\Phi_Fdt$, and overhead only reduces the portion available for new retained structure. Dividing by $dt$ gives the first inequality. Multiplying by $\varepsilon_0$ gives the equivalent content-rate form. The Source-Principle clause changes which ledger pays, not the minimum payment per retained target-side quantum. ∎
+*Proof.* Theorem 31 and the entropy-floor hypothesis give a free-energy cost at least $k_BT_{\mathrm{eff}}h_{\min}$ per counted reset. During $dt$, at most $\Phi_Fdt$ is available, and nonnegative overhead can only reduce the available amount. Therefore
+$$
+k_BT_{\mathrm{eff}}h_{\min}\,dN_{\mathrm{str}}
+\le
+\Phi_Fdt.
+$$
+Division by $dt$ proves the first inequality, and multiplication by $\varepsilon_0$ proves the second. ∎
 
 **Remark B.8f.1 (Capacity Cost of a Metered Event).** Under $\mathfrak C_{\mathrm{meter}}$ a binary retained event carries the Landauer floor $k_BT_{\mathrm{eff}}\ln2$ for the recorded bit, plus any SPAP, verification, recovery, or overwrite overhead already present in the capacity ledger. This is a lower bound on the certified register write, not a claim that the full physical episode costs exactly one bit.
 
@@ -521,9 +659,27 @@ With Source-Principle relocation, the same inequality is applied to the target-s
 
 *Proof.* The stress tensor of Definition B.8 is the variational source of the retained cost action by Theorem B.8c and Corollary B.8d.1. The averaging certificate converts the local rate bound into the recorded cosmological source term. Comparison with the accepted residual budget is an ordinary strict-certificate comparison; without it the result is a bound, not a negligibility theorem. ∎
 
-**Corollary B.8d.2 (Vacuum Normalization and $\Lambda$-Absorption).** The continuum Belinfante tensor is defined up to an additive metric-proportional constant absorbed into the cosmological constant. Under the shift $T'_{\mu\nu}:=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu}$ for constant $\sigma$, the Einstein equation (76a) is equivalent to its form with $T'_{\mu\nu}$ and $\Lambda':=\Lambda-(8\pi G/c^4)\sigma$. The PCE-Attractor vacuum normalization $T_{\mu\nu}^{(\mathrm{MPU})}|_{\mathrm{vac}}=0$ (Theorem B.6(a)) fixes $\sigma$ uniquely, placing the vacuum contribution into $\Lambda$ (whose value is determined by Appendix U).
+**Corollary B.8d.2 (Vacuum Normalization and $\Lambda$-Absorption).** The continuum Belinfante tensor is defined up to an additive metric-proportional constant absorbed into the cosmological constant. Under
+$$
+T'_{\mu\nu}:=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu},
+$$
+the Einstein equation (76a) is equivalent to its form with $T'_{\mu\nu}$ and
+$$
+\Lambda':=\Lambda+\frac{8\pi G}{c^4}\sigma.
+$$
+The PCE-Attractor convention $T_{\mu\nu}^{(\mathrm{MPU})}|_{\mathrm{vac}}=0$ fixes the allocation of a metric-proportional vacuum term between $T_{\mu\nu}$ and $\Lambda$.
 
-*Proof.* Substitute $T'_{\mu\nu}=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu}$ into (76a) and collect the metric-proportional terms on the geometric side. Theorem B.6(a) fixes the vacuum contribution to zero in the PU convention, so $\sigma$ is determined. ∎
+*Proof.* Put $K=8\pi G/c^4$. Since $T_{\mu\nu}^{(\mathrm{MPU})}=T'_{\mu\nu}-\sigma g_{\mu\nu}$,
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+K(T'_{\mu\nu}-\sigma g_{\mu\nu})
+$$
+is equivalent to
+$$
+G_{\mu\nu}+(\Lambda+K\sigma)g_{\mu\nu}=KT'_{\mu\nu}.
+$$
+This is the stated transformation. ∎
 
 **Theorem B.6 (Correspondence with Standard Physical Forms)**
 

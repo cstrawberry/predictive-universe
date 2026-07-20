@@ -204,25 +204,66 @@ Item (4) is Theorem D.1e applied to the quotient of $\mathcal X_{\mathfrak B}$ b
 
 This section provides the rigorous justification for Theorem 2. We separate two statements: exact alignment as a necessary condition for true stable PCE equilibria, and quantitative operational tracking of that condition under the stochastic gradient dynamics.
 
-**Lemma D.1 (True PCE Optimality Requires Alignment on the Faithful-Cost-Identifiability Branch).**
-Let $V_{true}(x; \{C_P(v)\})$ denote the hypothetical "true" PCE potential, calculated identically to $V(x)$ but using the theoretical complexities $C_P(v)$ and their associated true physical costs $R(C_P(v))$, $R_I(C_P(v))$ in the operational cost term. On the faithful-cost-identifiability branch — under which persistent per-MPU proxy-cost mismatch cannot be exactly compensated by counter-adjustments in other MPUs or in non-complexity degrees of freedom at a true stable PCE equilibrium — a necessary condition for a configuration $x^*$ to be a stable minimum of $V_{true}$ under the true physical resource constraints is that the operational complexity proxies align with the theoretical complexities per MPU: $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$ for all $v$. Persistent per-MPU misalignment $\delta_v = C_P(v) - \langle \hat{C}_v \rangle \neq 0$ then implies the system is operating with incorrect internal cost estimates relative to actual physical expenditure, leading to suboptimal resource allocation and preventing stabilization at a true PCE optimum. Without the faithful-cost-identifiability branch, only an aggregate/compensated version of the alignment condition is implied by stationarity.
+**Lemma D.1 (Alignment from Faithful Force Identifiability).**
+Write $q_v(x):=\langle\hat C_v\rangle_x$. Let $F_v^{\mathrm{op}}(x)$ and $F_v^{\mathrm{phys}}(x)$ be, respectively, the operational and physical adaptation forces in the $q_v$ coordinate. Assume that the branch has the per-MPU force-identifiability property
+$$
+F_v^{\mathrm{phys}}(x)-F_v^{\mathrm{op}}(x)=0
+\quad\Longleftrightarrow\quad
+q_v(x)=C_P(v)
+$$
+for every $v$, with no cancellation between distinct MPU coordinates. If $x^*$ is a joint stable equilibrium of the two ledgers,
+$$
+F_v^{\mathrm{op}}(x^*)=F_v^{\mathrm{phys}}(x^*)=0
+\qquad\text{for every }v,
+$$
+then
+$$
+C_P(v)=\langle\hat C_v\rangle_{x^*}
+\qquad\text{for every }v.
+$$
+Without per-MPU force identifiability, stationarity yields only the aggregate relations encoded by the kernel of the force-mismatch map.
 
-*Proof.* The system's adaptation dynamics adjust variables (like $\langle \hat{C}_v \rangle$) based on gradients derived from the *operational* potential $V(x)$, which uses $R(\langle \hat{C}_v \rangle)$. However, the *actual* physical resources consumed are governed by the *true* complexities $C_P(v)$ and costs $R(C_P(v))$. If $\delta_v = C_P(v) - \langle \hat{C}_v \rangle \neq 0$, the operational cost estimate $R(\langle \hat{C}_v \rangle)$ deviates from the true cost $R(C_P(v))$. Minimizing $V(x)$ based on this potentially incorrect cost estimate will lead the system towards an operational minimum $x_{op}^*$ where the operational gradient vanishes, $\nabla_{op} V(x_{op}^*) = 0$. However, this operational minimum will generally *not* coincide with the true physical optimum $x_{true}^*$ where the gradient of the true potential $V_{true}$ vanishes, $\nabla_{true} V_{true}(x_{true}^*) = 0$. Coincidence of the operational and true gradients at $x^*$ requires the per-MPU cost-derivative mismatch to vanish locally. Strict monotonicity of $R$ gives $R(a) = R(b) \Rightarrow a = b$, which on the faithful-cost-identifiability branch (no compensation across MPUs or into other coordinates) gives $\delta_v = 0$ for all $v$. A configuration can only be a stable equilibrium under the full physics governed by PCE if it minimizes the true potential $V_{true}$. Therefore, any stable equilibrium $x^*$ on this branch must satisfy the per-MPU alignment condition $\delta_v = 0$. QED
+*Proof.* At a joint equilibrium,
+$$
+F_v^{\mathrm{phys}}(x^*)-F_v^{\mathrm{op}}(x^*)=0-0=0.
+$$
+The forward implication in the force-identifiability hypothesis gives $q_v(x^*)=C_P(v)$ for each $v$. Since $q_v(x^*)=\langle\hat C_v\rangle_{x^*}$ by definition, the asserted alignment follows. If the mismatch map has a nontrivial kernel across MPU coordinates, its vanishing determines only the corresponding aggregate quotient, so componentwise alignment does not follow. ∎
 
 *(Note on notation: In this Lemma, we used $\nabla_{op}$ and $\nabla_{true}$ to explicitly distinguish the operational system's calculation from the underlying physical optimum. In all subsequent sections of this appendix, we revert to the shorthand $\nabla V$ to denote the gradient of the operational potential $V(x)$ that drives the system dynamics according to Equation D.8.)*
 
 **Corollary D.1 (Alignment Condition at Stable Equilibria on the Faithful-Cost-Identifiability Branch).**
 On the faithful-cost-identifiability branch of Lemma D.1, any configuration $x^*$ that represents a stable equilibrium state (attractor) under the complete physical adaptation dynamics governed by the Principle of Compression Efficiency must satisfy the per-MPU alignment condition $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$ for all constituent MPUs $v$.
 
-**Theorem D.1 (Implicit Alignment Penalty in Operational Potential $V(x)$).**
-For the system's operational adaptation dynamics, governed by minimizing the operational potential $V(x)$ (Equation D.1), to converge to states satisfying the true PCE optimality condition (which requires alignment per Corollary D.1), the effective operational potential $V(x)$ must behave *as if* it contains an implicit penalty term that vanishes only at alignment. The structure of the true physical costs versus the operational costs induces gradients that are functionally equivalent to those arising from adding a penalty term quadratic in the misalignment $\delta_v = C_P(v) - \langle \hat{C}_v \rangle_x$ to the core potential:
+**Theorem D.1 (Quadratic Representation of Linear Alignment Feedback).**
+Let $q_v:=\langle\hat C_v\rangle_x$ and suppose the operational adaptation force contains the linear feedback
 $$
-V_{proxy}(x) = \frac{k_1}{2} \sum_{v} \delta_v^2 = \frac{k_1}{2} \sum_{v} \bigl(C_P(v) - \langle \hat{C}_v \rangle_x \bigr)^2
+F_v^{\mathrm{align}}(x)=k_1\bigl(C_P(v)-q_v\bigr),
+\qquad k_1>0,
+$$
+with the targets $C_P(v)$ independent of the proxy coordinates on the adaptation window. Then this feedback is the negative proxy-coordinate gradient of
+$$
+V_{\mathrm{proxy}}(x)
+=
+\frac{k_1}{2}
+\sum_v\bigl(C_P(v)-\langle\hat C_v\rangle_x\bigr)^2.
 \quad \text{(D.1a)}
 $$
-where $k_1 > 0$ is an effective coupling constant reflecting the sensitivity of costs to misalignment. Specifically, the operational dynamics optimizing $V(x)$ must generate gradients $\nabla V$ that include the effect of $-\nabla V_{proxy}$ to dynamically drive the system towards alignment ($\delta_v = 0$).
+Among differentiable scalar potentials on the proxy-coordinate domain, this representation is unique up to an additive function independent of all $q_v$.
 
-*Proof.* The system adjusts its operational variables, including $\langle \hat{C}_u \rangle$, based on the gradient $\nabla_{\langle C_u \rangle} V(x)$. This gradient is calculated using the operational costs $R(\langle \hat{C}_u \rangle)$. However, the *physical consequences* (energy dissipation, constraint satisfaction) depend on the true costs $R(C_P(u))$. For the system to dynamically converge to a state that is optimal with respect to the *true* physics (which requires $\delta_u=0$), the operational dynamics must effectively incorporate feedback about the discrepancy between operational cost assumptions and physical reality. This feedback must generate a restoring force within the operational gradient $\nabla_{\langle C_u \rangle} V(x)$ that pushes $\langle \hat{C}_u \rangle$ towards $C_P(u)$ whenever $\delta_u \neq 0$. The simplest form for such a restoring force is proportional to $-\delta_u = C_P(u) - \langle \hat{C}_u \rangle$. This force is functionally equivalent to the negative gradient of the quadratic penalty $V_{proxy}$ with respect to $\langle \hat{C}_u \rangle$: $-\frac{1}{k_1}\nabla_{\langle C_u \rangle} V_{proxy} = C_P(u) - \langle \hat{C}_u \rangle = -\delta_u$. Therefore, for the operational dynamics based on minimizing $V(x)$ to achieve consistency with the true underlying PCE objective (requiring $\delta_u = 0$), the effective structure of $V(x)$ and the physical feedback mechanisms influencing its gradient must be such that they generate the same dynamics as minimizing $V_{core} + V_{proxy}$. The $V_{proxy}$ term thus represents the necessary implicit structure within the optimization landscape shaped by $V(x)$ and physical feedback, required for self-consistent convergence to alignment. QED
+*Proof.* For each $v$,
+$$
+\frac{\partial V_{\mathrm{proxy}}}{\partial q_v}
+=
+k_1(q_v-C_P(v)).
+$$
+Therefore
+$$
+-\frac{\partial V_{\mathrm{proxy}}}{\partial q_v}
+=
+k_1(C_P(v)-q_v)
+=F_v^{\mathrm{align}}.
+$$
+If another differentiable potential $U$ has the same negative gradient in every proxy coordinate, then $\partial_{q_v}(U-V_{\mathrm{proxy}})=0$ for every $v$. Hence $U-V_{\mathrm{proxy}}$ is independent of the proxy coordinates, proving the stated uniqueness. ∎
 
 ### D.3.1 Physical Realization via Observable Work-Cost Gap Feedback
 
@@ -275,35 +316,63 @@ $$
 $$
 
 **Proposition D.1 (Stochastic Contraction of Misalignment).**
-Consider the stochastic adaptation dynamics for the configuration $x(t)$ given by Equation (D.8) below, with potential decomposed as $V(x)=V_{core}(x)+V_{proxy}(x)$ where $V_{proxy}$ is given by (D.1a). Assume, on the adaptation window under consideration, that the target complexities $C_P(v)$ are quasi-static (equivalently, that any residual target drift is negligible compared with the proxy relaxation rate). Let $\nabla_C$ denote the gradient with respect to the proxy complexity coordinates $(\langle \hat{C}_v\rangle)_v$, and let $D_{CC}(x)$ denote the restriction of the diffusion matrix $D(x)$ to these coordinates. Under the technical assumptions (A1)-(A6) specified in Section D.6.1, the expected rate of change of the mean-square misalignment $\mathcal{M}(x(t))$ satisfies:
-$$
-\frac{d}{dt}\mathbb{E}[\mathcal M(x(t))] \le -k_1\eta_{min}\,\mathbb{E}[\mathcal M(x(t))] + C_{\mathcal M}
-\quad \text{(D.5)}
-$$
-where one may take
-$$
-C_{\mathcal M}
-:= \frac{\eta_{max}^2}{2k_1\eta_{min}}\left(\sup_{x\in\mathcal K}\|\nabla_C V_{core}(x)\|^2\right) + \sup_{x\in\mathcal K}\operatorname{Tr}(D_{CC}(x)),
-$$
-and $\mathcal K$ is the compact invariant set from (A5).
-
-*Proof.* By Definition D.3, $\mathcal M = k_1^{-1}V_{proxy}$. Applying Ito's formula to $V_{proxy}(x(t))$ under (D.8) gives
+Consider (D.8) with $V=V_{\mathrm{core}}+V_{\mathrm{proxy}}$, with quasi-static targets $C_P(v)$ and $V_{\mathrm{proxy}}$ given by (D.1a). Let $\nabla_C$ denote the proxy-coordinate gradient and $D_{CC}$ the corresponding principal diffusion block. Assume (A1)--(A6) and assume that the proxy-coordinate subspace is invariant under the mobility matrix $\eta(x)$ for every $x\in\mathcal K$. Then
 $$
 \frac{d}{dt}\mathbb E[\mathcal M(x(t))]
-= \mathbb E\bigl[-k_1^{-1}(\nabla V_{proxy})^T\eta(\nabla V_{core}+\nabla V_{proxy}) + k_1^{-1}\operatorname{Tr}(D\nabla^2 V_{proxy})\bigr].
+\le
+-k_1\eta_{\min}\mathbb E[\mathcal M(x(t))]+C_{\mathcal M},
+\quad \text{(D.5)}
 $$
-Since $V_{proxy}(x)=\frac{k_1}{2}\sum_v(C_P(v)-\langle\hat C_v\rangle_x)^2$, its gradient is supported only on the proxy-complexity coordinates and satisfies $\nabla_C V_{proxy} = k_1(\langle\hat C\rangle-C_P)$, hence $\|\nabla_C V_{proxy}\|^2 = 2k_1^2\mathcal M$. Using the SPD bounds on $\eta$ (A2),
+where
 $$
--k_1^{-1}(\nabla V_{proxy})^T\eta(\nabla V_{proxy})
-\le -k_1^{-1}\eta_{min}\|\nabla_C V_{proxy}\|^2
-= -2k_1\eta_{min}\mathcal M.
+C_{\mathcal M}
+:=
+\frac{\eta_{\max}^2}{2k_1\eta_{\min}}
+\sup_{x\in\mathcal K}\|\nabla_CV_{\mathrm{core}}(x)\|^2
++
+\sup_{x\in\mathcal K}\operatorname{Tr}D_{CC}(x).
 $$
-For the cross term, Cauchy-Schwarz and Young's inequality give, for each $x$,
+
+*Proof.* Since $\mathcal M=k_1^{-1}V_{\mathrm{proxy}}$, Itô's formula gives
 $$
-k_1^{-1}\big|(\nabla V_{proxy})^T\eta\nabla V_{core}\big|
-\le \frac{\eta_{min}}{2k_1}\|\nabla_C V_{proxy}\|^2 + \frac{\eta_{max}^2}{2k_1\eta_{min}}\|\nabla_C V_{core}\|^2.
+\frac{d}{dt}\mathbb E\mathcal M
+=
+\mathbb E\left[
+-k_1^{-1}(\nabla V_{\mathrm{proxy}})^T\eta
+(\nabla V_{\mathrm{core}}+\nabla V_{\mathrm{proxy}})
++k_1^{-1}\operatorname{Tr}(D\nabla^2V_{\mathrm{proxy}})
+\right].
 $$
-Combining with $\|\nabla_C V_{proxy}\|^2=2k_1^2\mathcal M$ yields a net drift term at most $-k_1\eta_{min}\mathcal M + \frac{\eta_{max}^2}{2k_1\eta_{min}}\|\nabla_C V_{core}\|^2$. Finally, since $\nabla^2 V_{proxy}$ is constant on the proxy-complexity block, $\operatorname{Tr}(D\nabla^2 V_{proxy})=\operatorname{Tr}(D_{CC})$, which is bounded on $\mathcal K$ by (A3)-(A5). Taking expectations and using the definition of $C_{\mathcal M}$ gives (D.5). If the targets $C_P(v,t)$ drift slowly rather than remaining frozen, the same computation produces an additional bounded forcing term proportional to the target drift, which can be absorbed into $C_{\mathcal M}$. QED
+The proxy derivatives satisfy
+$$
+\nabla_CV_{\mathrm{proxy}}=k_1(\langle\hat C\rangle-C_P),
+\qquad
+\|\nabla_CV_{\mathrm{proxy}}\|^2=2k_1^2\mathcal M,
+\qquad
+\nabla_C^2V_{\mathrm{proxy}}=k_1I.
+$$
+The lower mobility bound yields
+$$
+-k_1^{-1}(\nabla V_{\mathrm{proxy}})^T\eta\nabla V_{\mathrm{proxy}}
+\le-2k_1\eta_{\min}\mathcal M.
+$$
+Mobility invariance of the proxy subspace and Young's inequality give
+$$
+k_1^{-1}|(\nabla V_{\mathrm{proxy}})^T\eta\nabla V_{\mathrm{core}}|
+\le
+\frac{\eta_{\min}}{2k_1}\|\nabla_CV_{\mathrm{proxy}}\|^2
++
+\frac{\eta_{\max}^2}{2k_1\eta_{\min}}\|\nabla_CV_{\mathrm{core}}\|^2.
+$$
+The first term on the right equals $k_1\eta_{\min}\mathcal M$. Finally,
+$$
+k_1^{-1}\operatorname{Tr}(D\nabla^2V_{\mathrm{proxy}})
+=
+k_1^{-1}\operatorname{Tr}(D_{CC}k_1I)
+=
+\operatorname{Tr}D_{CC}.
+$$
+Combining these estimates and taking the two suprema gives (D.5). ∎
 
 **Corollary D.2 (Convergence to Alignment Noise Floor).**
 Under the dynamics (Equation D.8), the quasi-static-target assumption of Proposition D.1, and assumptions (A1)-(A6), Gronwall's inequality applied to (D.5) gives:
@@ -317,10 +386,44 @@ $$
 $$
 If the effective noise driving misalignment (captured in $C_{\mathcal M}$) is sufficiently small relative to $k_1\eta_{min}$, then $\mathbb E[\mathcal M(x(t))]$ becomes small, implying $C_P(v)\approx\langle\hat C_v\rangle$ in mean-square. More generally, under the ergodic stationary regime of the stochastic dynamics (Theorem D.5), the long-run time-average of $\langle \hat{C}_v \rangle_{x(t)}$ converges to its expectation under the invariant measure. This is the quantitative tracking statement used in Theorem 2: exact alignment is the equilibrium condition of Corollary D.1, while the operational proxy approaches that condition up to the controlled noise floor (D.6).
 
-*Proof.* The bound is the explicit solution of the scalar differential inequality (D.5). QED
+*Proof.* Put
+$$
+y(t):=\mathbb E[\mathcal M(x(t))],
+\qquad
+a:=k_1\eta_{min}>0,
+\qquad
+C:=C_{\mathcal M}\ge0.
+$$
+Equation (D.5) is $y'(t)\le-ay(t)+C$. Multiplying by $e^{at}$ gives
+$$
+\frac d{dt}\bigl(e^{at}y(t)\bigr)
+=e^{at}(y'(t)+ay(t))
+\le Ce^{at}.
+$$
+Integration from $0$ to $t$ yields
+$$
+e^{at}y(t)-y(0)
+\le C\int_0^te^{as}\,ds
+=\frac Ca(e^{at}-1).
+$$
+After multiplication by $e^{-at}$,
+$$
+y(t)
+\le e^{-at}y(0)+\frac Ca(1-e^{-at}),
+$$
+which is the asserted bound. Since $e^{-at}\to0$,
+$$
+\limsup_{t\to\infty}y(t)\le\frac Ca
+=\frac{C_{\mathcal M}}{k_1\eta_{min}},
+$$
+proving (D.6). ∎
 
-**Remark D.1: Uniqueness and Optimality of Circuit Complexity Proxy.**
-The operational proxy $\hat{C}_v$ was identified with quantum circuit complexity (Definition B.1). Could another proxy $\hat{C}'_v = f(\hat{C}_v)$ (with $f$ non-affine) be used consistently? If such a proxy were used, the operational cost estimate $R(\hat{C}'_v)$ would generally differ from the true physical cost $R(C_P(v))$ even when $\langle \hat{C}_v \rangle = C_P(v)$. This persistent mismatch would induce a non-zero work-cost gap $\Delta W_v$ via Equation (D.3) (using the chain rule for $R(f(C_v))$). The physical feedback mechanism, acting to minimize $\Delta W_v$, would generate a gradient term effectively penalizing the use of $\hat{C}'_v$. The dynamics governed by minimizing the true physical dissipation (including the work-cost gap penalty) uniquely favor the proxy $\hat{C}_v$ (or an affine transformation thereof) for which the operational cost function $R(\langle \hat{C}_v \rangle)$ most accurately reflects the true physical cost $R(C_P(v))$ near equilibrium. This minimizes the residual work-cost gap, satisfying the PCE imperative for maximum efficiency. Thus, quantum circuit complexity (or equivalent measures) emerges as the dynamically selected, optimal operational proxy.
+**Remark D.1: Reparameterization Scope of the Operational Complexity Proxy.**
+The operational proxy $\hat C_v$ is identified with quantum circuit complexity by Definition B.1. The alignment results do not make that coordinate unique. Let $f$ be a strictly monotone bijection on the viable complexity interval, set $C'=f(C)$, and transform the cost law by
+$$
+R_f(C'):=R(f^{-1}(C')).
+$$
+Then $R_f(f(C))=R(C)$, so the physical cost, work-cost gap, and PCE ordering are unchanged after the corresponding coordinate transformation. A non-affine $f$ is penalized only if one applies the untransformed law $R$ to $f(C)$, which describes a different cost model. Thus Theorem 2 and Section D.3 identify a cost-relevant proxy up to response- and cost-preserving reparameterization. Selection of quantum circuit complexity among that equivalence class is the modeling choice of Definition B.1 unless an additional calibration or comparison theorem fixes the coordinate.
 
 ## D.4 Dynamical Emergence of Geometric Regularity
 
@@ -344,34 +447,76 @@ $$
 
 *Proof.* By Theorem C.2, anomalous path scaling increases the number of ND-RID hops across scale $L$, so under assumption (1) the propagation component contributes a term bounded below by $aL^\gamma-c_1$ for some $a>0$ and $c_1\ge 0$. By Theorem C.4 and the DSC convexity hypothesis, curvature fluctuations induce a variance penalty in the operational cost, giving a lower bound of the form $bL-c_2$ after coarse graining over a size-$L$ region, with $b>0$ and $c_2\ge 0$. Assumption (3) bounds the loss in $V_{\mathrm{benefit}}$ by an additive constant $c_3\ge 0$. Comparing with the regular configuration from assumption (2) and collecting constants $c=c_1+c_2+c_3$ yields (D.7). ∎
 
-**Theorem D.2 (Implicit Geometric Penalty in $V(x)$).**
-The structure of the core PCE potential $V_{core} = V_{op} + V_{prop} - V_{benefit}$ inherently penalizes geometric irregularity. Minimizing $V_{core}$ (and thus the full potential $V = V_{core} + V_{proxy}$) dynamically favors geometrically regular configurations. The effective operational potential $V(x)$ therefore behaves *as if* it includes an implicit penalty term $V_{geom}(x) = f_{geom}(\gamma(x)-1, \sigma_\kappa^2(x))$ that increases with irregularity.
+**Theorem D.2 (Global Geometric Comparison in $V(x)$).**
+Under the hypotheses of Lemma D.3, if an irregular configuration $x_{\mathrm{irreg}}$ and its comparison configuration $x_{\mathrm{reg}}$ have the same proxy-complexity coordinates and satisfy
+$$
+aL^\gamma+bL-c>0,
+$$
+then
+$$
+V(x_{\mathrm{irreg}})>V(x_{\mathrm{reg}}).
+$$
+This is a global comparison statement. A claim about the direction of $-\nabla V$ requires the additional local-regularization hypothesis used in Theorem D.4(iii).
 
-*Proof.* Lemma D.3 establishes that $V_{core}(x)$ is strictly higher for irregular configurations than for comparable regular ones. Therefore, along geometric perturbations that leave the proxy-complexity coordinates fixed, any reduction in irregularity lowers $V_{core}$ while leaving $V_{proxy}$ unchanged. Hence the negative gradient of the full potential $-\nabla V$ contains a geometric component that points away from irregular states toward states with lower irregularity (lower $\gamma$, lower $\sigma_\kappa^2$). The operational dynamics therefore behave exactly as if they included an effective geometric penalty $f_{geom}$ against irregularity. QED
+*Proof.* Lemma D.3 gives
+$$
+V_{\mathrm{core}}(x_{\mathrm{irreg}})-V_{\mathrm{core}}(x_{\mathrm{reg}})
+\ge aL^\gamma+bL-c>0.
+$$
+Equality of the proxy coordinates gives
+$$
+V_{\mathrm{proxy}}(x_{\mathrm{irreg}})=V_{\mathrm{proxy}}(x_{\mathrm{reg}}).
+$$
+Adding the two relations proves the strict inequality for $V$. No local gradient conclusion follows from this argument. ∎
 
 **Lemma D.4 (Regular Configurations as Global Minima Candidate Set for $V_{core}$).**
-The set of configurations $\mathcal{X}_{reg} \subset \mathcal{X}_{adm}$ that satisfy geometric regularity (Definition C.3, i.e., $\gamma=1$ and $\sigma_\kappa^2$ minimal/zero) contains the global minima of the core potential $V_{core}(x)$.
+Assume that every geometrically irregular $x\in\mathcal X_{adm}$ has a geometrically regular comparator $x_{reg}\in\mathcal X_{reg}$ with the same proxy-complexity coordinates and
+$$
+V_{core}(x_{reg})<V_{core}(x).
+$$
+Then every global minimizer of $V_{core}$, if one exists, belongs to $\mathcal X_{reg}$.
 
-*Proof.* Follows directly from Lemma D.3 (Equation D.7), which shows that any irregular configuration has a strictly higher $V_{core}$ value than a comparable regular configuration. Thus, the minima must lie within the set of regular configurations. QED
+*Proof.* Let $x_*$ be a global minimizer of $V_{core}$. If $x_*$ were irregular, the hypothesis would provide $x_{reg}\in\mathcal X_{reg}$ satisfying
+$$
+V_{core}(x_{reg})<V_{core}(x_*),
+$$
+contradicting the defining inequality $V_{core}(x_*)\le V_{core}(x)$ for every $x\in\mathcal X_{adm}$. Hence $x_*\in\mathcal X_{reg}$. ∎
 
-**Theorem D.3 (Global Minima of $V(x)$ are Regular, with Controlled Proxy Residual).**
-Every global minimum $x^*$ of the full PCE potential $V(x) = V_{core}(x) + V_{proxy}(x)$ is geometrically regular (Definition C.3). Let $\mathcal{E}_{*}^{\text{global}}$ denote the set of such global minima. Writing $\langle \hat C \rangle_{x^*}:=(\langle \hat C_v\rangle_{x^*})_v$ and $C_P:=(C_P(v))_v$, the proxy-complexity coordinates of any such minimum satisfy
+**Theorem D.3 (Regularity of Global Minima under Strict Comparison).**
+Assume that every geometrically irregular admissible configuration $x$ has a geometrically regular admissible comparator $\widetilde x$ with the same proxy-complexity coordinates and
 $$
-\nabla_C V_{core}(x^*) + k_1\bigl(\langle \hat C \rangle_{x^*} - C_P\bigr)=0,
+V_{\mathrm{core}}(\widetilde x)<V_{\mathrm{core}}(x).
 $$
-hence
+Then every global minimizer $x^*$ of $V=V_{\mathrm{core}}+V_{\mathrm{proxy}}$ is geometrically regular. If, in addition, $x^*$ is interior in the proxy-complexity coordinates, then
 $$
-\bigl\|\langle \hat C \rangle_{x^*} - C_P\bigr\| \le k_1^{-1}\bigl\|\nabla_C V_{core}(x^*)\bigr\|.
+\nabla_CV_{\mathrm{core}}(x^*)
++k_1\bigl(\langle\hat C\rangle_{x^*}-C_P\bigr)=0
 $$
-Thus the global minima are exactly regular and are close to alignment whenever the residual proxy-coordinate gradient of $V_{core}$ is small compared with $k_1$.
+and
+$$
+\bigl\|\langle\hat C\rangle_{x^*}-C_P\bigr\|
+\le
+k_1^{-1}\bigl\|\nabla_CV_{\mathrm{core}}(x^*)\bigr\|.
+$$
 
-*Proof.* Let $x^*$ be a global minimum of $V(x)$. If the induced network were geometrically irregular, Lemma D.3 would provide a comparable regular configuration $\tilde x$ with the same proxy-complexity coordinates and strictly smaller core potential: $V_{core}(\tilde x)<V_{core}(x^*)$. Since $V_{proxy}(\tilde x)=V_{proxy}(x^*)$ along such a geometric comparison, this would imply $V(\tilde x)<V(x^*)$, contradicting global minimality. Hence $x^*$ must be geometrically regular.
+*Proof.* If a global minimizer $x^*$ were irregular, the strict-comparison hypothesis would supply $\widetilde x$ with equal proxy coordinates. Hence
+$$
+V_{\mathrm{proxy}}(\widetilde x)=V_{\mathrm{proxy}}(x^*)
+$$
+and
+$$
+V(\widetilde x)-V(x^*)
+=
+V_{\mathrm{core}}(\widetilde x)-V_{\mathrm{core}}(x^*)<0,
+$$
+contradicting global minimality. Thus $x^*$ is regular.
 
-Because $x^*$ is a global minimum, $\nabla V(x^*)=0$. Restricting to the proxy-complexity coordinates gives
+At an interior minimizer, the proxy-coordinate first-order condition is $\nabla_CV(x^*)=0$. Since
 $$
-\nabla_C V_{core}(x^*) + \nabla_C V_{proxy}(x^*)=0.
+\nabla_CV_{\mathrm{proxy}}
+=k_1(\langle\hat C\rangle-C_P),
 $$
-Using $\nabla_C V_{proxy}=k_1(\langle \hat C \rangle-C_P)$ yields the displayed balance relation, and the norm bound follows immediately. QED
+the balance equation follows. Taking norms and dividing by $k_1>0$ gives the bound. ∎
 
 ## D.5 System Dynamics as Stochastic Gradient Flow on $V(x)$
 
@@ -392,7 +537,7 @@ This equation describes the configuration $x(t)$ evolving "downhill" on the pote
 
 ## D.6 Dynamical Convergence Proof
 
-We use stochastic Lyapunov methods, common in the analysis of stochastic approximation and optimization algorithms, to characterize the ergodic stationary regime of the dynamics (Equation D.8) and its low-noise detailed-balance localization near the regular global-minimum set $\mathcal{E}_{*}^{\text{global}}$.
+We use stochastic Lyapunov methods to characterize the ergodic stationary regime of the dynamics (Equation D.8) and its low-noise detailed-balance localization near the global-minimum set $\mathcal{E}_{*}^{\text{global}}$. This set is geometrically regular only on the strict-comparison branch of Theorem D.3.
 
 ### D.6.1 Assumptions for Convergence
 
@@ -400,10 +545,14 @@ We make standard technical assumptions required for the convergence theorems, ju
 *   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The $C^2$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p > 1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
 *   **(A2) Mobility Bounds:** The mobility matrix $\eta(x)$ is symmetric positive definite, bounded, and Lipschitz on $\mathcal{X}_{adm}$: there exist constants $0<\eta_{\min}\le \eta_{\max}<\infty$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$,
 $\eta_{\min}\|v\|^2 \le v^T\eta(x)v \le \eta_{\max}\|v\|^2$, and $\|\eta(x)-\eta(y)\|\le L_\eta\|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $\eta$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
-*   **(A3) Diffusion Matrix Bounds:** The diffusion matrix $D(x)$ is bounded and uniformly elliptic. Specifically, there exist constants $0<d_{\min}\le d_{\max}<\infty$ such that for all $x$ and all vectors $v$, $d_{\min}\|v\|^2 \le v^T D(x) v \le d_{\max}\|v\|^2$. *Physical Justification:* In PU, diffusion models aggregate microscopic stochasticity of ND-RID routing and environmental forcing. Uniform bounds correspond to finite-temperature noise with bounded per-step fluctuations set by finite update rates and capacity constraints (e.g., bounded degree $\Delta_{max}$ and minimal cycle time $\tau_{min}$), preventing arbitrarily large instantaneous kicks while ensuring ergodic exploration of admissible configurations.
-*   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
-*   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
-*   **(A6) Noise Irreducibility:** The stochastic forcing is irreducible on $\mathcal{X}_{adm}$: for any nonempty open set $U\subset\mathcal{X}_{adm}$ and any $t>0$, the transition probability satisfies $\mathbb{P}_x(X_t\in U)>0$. A sufficient condition is uniform non-degeneracy of the diffusion (already implied by (A3)): there exists $d_*>0$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$, $v^T D(x)v\ge d_*\|v\|^2$. *Physical Justification:* PU includes irreducible environmental/measurement noise and ND-RID stochasticity; without such forcing, some degrees of freedom could become trapped on invariant submanifolds, breaking uniqueness/ergodicity of the stationary regime and invalidating the low-noise localization statement of Theorem D.5.
+*   **(A3) Diffusion regularity and ellipticity:** The noise coefficient $\sigma(x)$ in $dx=b(x)dt+\sigma(x)dW_t$ is globally Lipschitz on the retained state space and satisfies $\sigma(x)\sigma(x)^T=2D(x)$. There are constants $0<d_{\min}\le d_{\max}<\infty$ such that
+$$
+d_{\min}\|v\|^2\le v^TD(x)v\le d_{\max}\|v\|^2
+$$
+for every tangent vector $v$.
+*   **(A4) Drift regularity:** The drift $b(x)=-\eta(x)\nabla V(x)$ is globally Lipschitz on the retained state space.
+*   **(A5) Compact state-space branch:** The retained state space $\mathcal K$ is a connected compact smooth manifold without boundary, and (D.8) is interpreted as its intrinsic diffusion in local charts. A branch with boundary requires a separately specified reflecting diffusion and its no-flux boundary condition.
+*   **(A6) Irreducibility:** For every nonempty open $U\subset\mathcal K$, every $t>0$, and every $x\in\mathcal K$, one has $\mathbb P_x(X_t\in U)>0$.
 
 ### D.6.2 Lyapunov Analysis
 
@@ -437,51 +586,99 @@ $$
 $$
 This set includes all local minima, maxima, and saddle points of the potential $V(x)$.
 
-**Theorem D.4 (Properties of Local Minimizers; Local Regularity on the Local-Regularization Branch).**
-Any configuration $x^*$ that is a local minimizer of $V(x)$ (and in particular any $x^*\in\mathcal E_{*}^{\text{global}}$) must satisfy:
-(i) **Proxy-Coordinate Balance:** writing $\langle \hat C \rangle_{x^*}:=(\langle \hat C_v\rangle_{x^*})_v$ and $C_P:=(C_P(v))_v$,
-$$
-\nabla_C V_{core}(x^*) + k_1\bigl(\langle \hat C \rangle_{x^*} - C_P\bigr)=0,
-$$
-hence
-$$
-\bigl\|\langle \hat C \rangle_{x^*} - C_P\bigr\| \le k_1^{-1}\bigl\|\nabla_C V_{core}(x^*)\bigr\|.
-$$
-In particular, per-MPU exact alignment follows whenever the residual proxy-coordinate gradient of $V_{core}$ vanishes and the faithful-cost-identifiability branch of Lemma D.1 is in force.
-(ii) **Geometric Regularity (for global minimizers, unconditionally).** Every $x^* \in \mathcal{E}_*^{\text{global}}$ exhibits geometric regularity (Definition C.3) by Theorem D.3.
-(iii) **Geometric Regularity (for local minimizers, on the local-regularization branch).** On the local-regularization branch — under which every irregular admissible configuration admits a geometric perturbation arbitrarily close to it, leaving the proxy-complexity coordinates fixed, that strictly lowers $V_{\text{core}}$ — every local minimizer $x^*$ of $V(x)$ additionally exhibits geometric regularity. Off this branch, Lemma D.3 and Theorem D.3 supply only the global-comparison statement in (ii), so a local minimizer of $V$ need not be regular in general.
+**Theorem D.4 (Conditional Properties of Local Minimizers).**
+Let $x^*$ be a local minimizer of $V=V_{\mathrm{core}}+V_{\mathrm{proxy}}$, and write $\langle\hat C\rangle_{x^*}:=(\langle\hat C_v\rangle_{x^*})_v$ and $C_P:=(C_P(v))_v$.
 
-*Proof.*
-**(i) Proxy-Coordinate Balance:** At a local minimizer, $\nabla V(x^*)=0$. Restricting to the proxy-complexity coordinates gives
+(i) If $x^*$ is interior in the proxy-complexity coordinates, then
 $$
-\nabla_C V_{core}(x^*) + \nabla_C V_{proxy}(x^*)=0.
+\nabla_CV_{\mathrm{core}}(x^*)
++k_1\bigl(\langle\hat C\rangle_{x^*}-C_P\bigr)=0
 $$
-Using $\nabla_C V_{proxy}=k_1(\langle \hat C \rangle-C_P)$ yields the displayed balance relation, and the norm bound follows immediately.
-**(ii) Regularity of global minimizers.** Every $x^* \in \mathcal{E}_*^{\text{global}}$ is regular by Theorem D.3, whose proof uses Lemma D.3 to produce a comparison regular configuration $x_{\text{reg}}$ with the same proxy-complexity coordinates and strictly smaller core potential. Global minimality gives the required contradiction if $x^*$ is irregular.
+and
+$$
+\bigl\|\langle\hat C\rangle_{x^*}-C_P\bigr\|
+\le
+k_1^{-1}\bigl\|\nabla_CV_{\mathrm{core}}(x^*)\bigr\|.
+$$
+At a proxy-coordinate boundary, the corresponding conclusion is the first-order variational inequality
+$$
+\Bigl[\nabla_CV_{\mathrm{core}}(x^*)
++k_1\bigl(\langle\hat C\rangle_{x^*}-C_P\bigr)\Bigr]\cdot h_C\ge0
+$$
+for every feasible one-sided proxy tangent $h_C$. Per-MPU exact alignment follows from the equality only when $\nabla_CV_{\mathrm{core}}(x^*)=0$ and the faithful-cost-identifiability branch of Lemma D.1 is in force.
 
-**(iii) Regularity of local minimizers on the local-regularization branch.** Decompose the configuration variables as $x=(x_{geom},x_{other},\langle\hat C\rangle)$, where $x_{geom}$ are the geometric/network-structure variables. On the local-regularization branch, suppose for contradiction that the induced network $\mathcal N^*$ is geometrically irregular. The branch hypothesis supplies a geometric perturbation $\tilde x=(\tilde x_{geom},x_{other}^*,\langle\hat C\rangle^*)$ arbitrarily close to $x^*$ for which $V_{core}(\tilde x)<V_{core}(x^*)$. Along such a perturbation the proxy-complexity coordinates are unchanged, so $V_{proxy}(\tilde x)=V_{proxy}(x^*)$. Hence $V(\tilde x)=V_{core}(\tilde x)+V_{proxy}(\tilde x)<V_{core}(x^*)+V_{proxy}(x^*)=V(x^*)$, contradicting that $x^*$ is a local minimizer. Therefore, on the local-regularization branch, $\mathcal N^*$ must be geometrically regular.
+(ii) Assume the strict-comparison hypothesis of Theorem D.3: every geometrically irregular admissible configuration has a geometrically regular admissible comparator with the same proxy coordinates and strictly smaller core potential. Then every global minimizer is geometrically regular.
 
-Off the local-regularization branch, Lemma D.3 supplies only a global comparison regular configuration (possibly far from $x^*$), not a local regularizing perturbation, so the argument does not force local-minimizer regularity. The ergodicity and low-noise concentration results of Theorem D.5 and the selection statements of §D.8–§D.9 rely on the global part (ii); the local-regularization refinement in (iii) is an additional branch refinement supplementing the main global story. QED
+(iii) Assume the local-regularization hypothesis that every irregular admissible configuration has arbitrarily close geometric perturbations with unchanged proxy coordinates and strictly smaller core potential. Then every local minimizer is geometrically regular.
+
+*Proof.* For (i), differentiability and local minimality give a nonnegative directional derivative in every feasible one-sided proxy direction. Since
+$$
+\nabla_CV
+=
+\nabla_CV_{\mathrm{core}}
++k_1(\langle\hat C\rangle-C_P),
+$$
+this is the displayed variational inequality. At an interior point both $h_C$ and $-h_C$ are feasible for every proxy direction, so the directional derivative vanishes in every direction and the equality follows. Taking norms gives the bound.
+
+For (ii), if a global minimizer $x^*$ were irregular, the strict-comparison hypothesis would supply a regular $\widetilde x$ with equal proxy coordinates. Thus $V_{\mathrm{proxy}}(\widetilde x)=V_{\mathrm{proxy}}(x^*)$ and $V_{\mathrm{core}}(\widetilde x)<V_{\mathrm{core}}(x^*)$, contradicting global minimality.
+
+For (iii), if a local minimizer $x^*$ were irregular, the local-regularization hypothesis would supply arbitrarily close $\widetilde x$ with equal proxy coordinates and lower core potential. The proxy term is unchanged, so $V(\widetilde x)<V(x^*)$, contradicting local minimality. ∎
 
 ### D.6.4 Noise-Driven Escape from Non-Global Minima
 
-**Lemma D.6 (Almost-Sure Exit from Any Bounded Neighborhood Under Non-Degenerate Noise).**
-Consider the stochastic PCE dynamics (Equation D.8). Let $\mathcal{D}\subset\mathcal{X}_{adm}$ be any bounded open set, and define the exit time
+**Lemma D.6 (Almost-Sure Exit from a Proper Relatively Compact Domain Under Non-Degenerate Noise).**
+Let $\mathcal K$ be the connected compact invariant state manifold from (A5), equipped with a finite full-support reference measure $m$. Assume the stochastic PCE dynamics have, for every $T>0$, a jointly continuous transition density $p_T(x,y)>0$ on $\mathcal K\times\mathcal K$ with respect to $m$. Let $\mathcal D$ be an open set such that
 $$
-\tau_{\mathcal{D}} := \inf\{t\ge 0 : x(t)\notin \mathcal{D}\}.
+\overline{\mathcal D}\subsetneq\mathcal K
 $$
-Under Assumptions (A3) (uniform ellipticity) and (A6) (noise irreducibility), we have
+and $\mathcal K\setminus\overline{\mathcal D}$ contains a nonempty open set. Define
 $$
-\mathbb{P}_x[\tau_{\mathcal{D}}<\infty]=1 \quad \text{for every }x\in\mathcal{D}. \qquad \text{(D.11a)}
+\tau_{\mathcal D}
+:=
+\inf\{t\ge0:X_t\notin\mathcal D\}.
 $$
-In particular, the process cannot remain trapped indefinitely inside any bounded neighborhood of a strict non-global local minimum.
+Then
+$$
+\mathbb P_x(\tau_{\mathcal D}<\infty)=1
+\qquad
+\text{for every }x\in\mathcal D.
+\qquad\text{(D.11a)}
+$$
 
-*Proof.* Under (A3)–(A4), the diffusion is strong Feller, and under (A6) it is topologically irreducible on $\mathcal{X}_{adm}$. Fix any $T>0$ and define $p_T(x):=\mathbb{P}_x[\tau_{\mathcal{D}}\le T]$. Irreducibility implies $p_T(x)>0$ for all $x\in\overline{\mathcal{D}}$; strong Feller implies $x\mapsto p_T(x)$ is continuous. Since $\overline{\mathcal{D}}$ is compact, $p_*:=\inf_{x\in\overline{\mathcal{D}}}p_T(x)>0$. The strong Markov property then gives $\mathbb{P}_x[\tau_{\mathcal{D}}>nT]\le (1-p_*)^n\to 0$, hence $\tau_{\mathcal{D}}<\infty$ almost surely. See, e.g., [Pavliotis 2014; Freidlin & Wentzell 2012] for rigorous statements of these elliptic diffusion properties. QED
+*Proof.* Choose a nonempty open set $O$ with $\overline O\subset\mathcal K\setminus\overline{\mathcal D}$ and choose $T>0$. Joint continuity and strict positivity on the compact set $\overline{\mathcal D}\times\overline O$ give
+$$
+q
+:=
+\inf_{x\in\overline{\mathcal D}}
+\int_Op_T(x,y)\,m(dy)
+>
+0.
+$$
+If $X_T\in O$, the path has exited $\mathcal D$ no later than $T$, so
+$$
+\inf_{x\in\overline{\mathcal D}}
+\mathbb P_x(\tau_{\mathcal D}\le T)
+\ge q.
+$$
+The strong Markov property at the times $T,2T,\ldots$ therefore gives inductively
+$$
+\mathbb P_x(\tau_{\mathcal D}>nT)
+\le
+(1-q)^n.
+$$
+The events $\{\tau_{\mathcal D}>nT\}$ decrease to $\{\tau_{\mathcal D}=\infty\}$, and continuity from above yields
+$$
+\mathbb P_x(\tau_{\mathcal D}=\infty)
+\le
+\lim_{n\to\infty}(1-q)^n
+=0.
+$$
+Thus $\tau_{\mathcal D}<\infty$ almost surely. ∎
 
 ### D.6.5 Global Ergodicity and Low-Noise Concentration
 
 **Theorem D.5 (Ergodic Long-Run Behavior; Low-Noise Concentration in Detailed-Balance Regimes).**
-Under Assumptions (A1)–(A6), the stochastic dynamics (D.8) define a strong Markov diffusion on the compact set $\mathcal{K}$ (A5). For strictly non-vanishing noise ($d_{\min}>0$ in (A3)), the process does **not** converge almost surely to a single equilibrium point; instead it admits a unique invariant probability measure $\pi$ and is ergodic. In particular, for any bounded measurable observable $f$,
+Under Assumptions (A1)–(A6), the stochastic dynamics (D.8) define a strong Markov diffusion on the compact state space $\mathcal K$ (A5). For strictly non-vanishing noise ($d_{\min}>0$ in (A3)), the process admits a unique invariant probability measure $\pi$ and is ergodic. If $\mathcal K$ contains at least two points, the process does **not** converge almost surely to a single equilibrium point. For any bounded measurable observable $f$,
 $$
 \frac{1}{T}\int_0^T f(x(t))\,dt \xrightarrow[T\to\infty]{a.s.} \int_{\mathcal{K}} f(x)\,\pi(dx). \qquad \text{(D.12)}
 $$
@@ -490,26 +687,56 @@ To identify when this stationary regime localizes near the PCE-optimal set, cons
 $$
 \pi_\theta(dx) \;=\; Z_\theta^{-1}\exp\!\left(-\frac{V(x)}{\theta}\right)\,dx, \qquad \text{(D.12a)}
 $$
-and therefore concentrates on the set of global minimizers
-$\mathcal{E}_{*}^{\text{global}}:=\arg\min_{x\in\mathcal{K}}V(x)$ as $\theta\downarrow 0$. Concretely, for any $\delta>0$ let
-$\Delta_\delta:=\inf\{V(x)-V_{\min}:\operatorname*{dist}(x,\mathcal{E}_{*}^{\text{global}})>\delta\}>0$.
-Then
+and therefore concentrates on the global-minimizer set
 $$
-\pi_\theta\bigl(\{x:\operatorname*{dist}(x,\mathcal{E}_{*}^{\text{global}})>\delta\}\bigr) \;\le\; C_\delta\,e^{-\Delta_\delta/\theta}, \qquad \text{(D.12b)}
+\mathcal E_*^{\mathrm{global}}:=\operatorname*{argmin}_{x\in\mathcal K}V(x)
 $$
-for all $\theta\in(0,\theta_0]$, where $\theta_0>0$ is any fixed reference temperature and $C_\delta<\infty$ is a constant depending on $\mathcal{K}$, $\delta$, and $\theta_0$ (absorbing polynomial-in-$1/\theta$ prefactors arising from the Laplace approximation to the partition function $Z_\theta$).
-
-Finally, by Theorem D.3, every configuration in $\mathcal{E}_{*}^{\text{global}}$ is geometrically regular and satisfies the proxy-coordinate balance relation stated there.
-
-*Proof.* By (A1)-(A4) the coefficients of (D.8) are globally Lipschitz on the compact set $\mathcal K$ from (A5), hence (D.8) admits a unique strong solution for all $t\ge 0$ with trajectories remaining in $\mathcal K$. Uniform ellipticity (A3) together with (A1)-(A4) implies the Markov semigroup is strong Feller on $\mathcal K$ (standard elliptic regularity; see, e.g., [Pavliotis 2014]), and (A6) gives topological irreducibility.
-
-Existence of an invariant measure follows from the Krylov–Bogolyubov averaging procedure. For any initial condition $x\in\mathcal K$, define the time-averaged measures
+as $\theta\downarrow0$. For $\delta>0$, let
 $$
-\mu_T := \frac{1}{T}\int_0^T \delta_x P_t\,dt.
+A_\delta:=\{x:\operatorname{dist}(x,\mathcal E_*^{\mathrm{global}})>\delta\},
+\qquad
+\Delta_\delta:=\inf_{x\in A_\delta}(V(x)-V_{\min}).
 $$
-Since $\mathcal K$ is compact, the family $\{\mu_T\}_{T>0}$ is tight and therefore has weak limit points. Any such weak limit $\pi$ is invariant.
+If $A_\delta$ is nonempty, then $\Delta_\delta>0$, and for every $\varepsilon\in(0,\Delta_\delta)$ there is $C_{\delta,\varepsilon}<\infty$ such that
+$$
+\pi_\theta(A_\delta)
+\le
+C_{\delta,\varepsilon}
+\exp\left(-\frac{\Delta_\delta-\varepsilon}{\theta}\right)
+\qquad(\theta>0).
+\tag{D.12b}
+$$
 
-Uniqueness of the invariant measure follows from strong Feller plus irreducibility (Doob-type theorem; see, e.g., [Pavliotis 2014]). Thus the invariant measure $\pi$ is unique and the diffusion is ergodic. In particular, the strong law of large numbers for ergodic diffusions yields (D.12) for every bounded measurable observable $f$ and every initial condition (again standard; see [Pavliotis 2014]).
+If the strict-comparison hypothesis of Theorem D.3 also holds, every configuration in $\mathcal E_*^{\mathrm{global}}$ is geometrically regular. A configuration in that set satisfies the proxy-coordinate balance relation of Theorem D.3 only when it is also interior in the proxy-complexity coordinates.
+
+*Proof.* Under (A3)--(A5), the drift and noise coefficients are globally Lipschitz in the retained intrinsic diffusion charts, and $\mathcal K$ is compact and has no boundary. The strong-existence and pathwise-uniqueness theorem for Itô equations (Itô 1951) therefore gives a unique solution up to its explosion time, while compactness excludes explosion. The solution consequently defines a conservative strong Markov semigroup $(P_t)_{t\ge0}$. Uniform ellipticity and Lipschitz coefficients satisfy the hypotheses of the strong-Feller theorem for uniformly elliptic diffusions (Stroock and Varadhan 1979), so $P_t$ maps bounded measurable functions to continuous functions for every $t>0$. Assumption (A6) is precisely topological irreducibility.
+
+For $x\in\mathcal K$, define
+$$
+\mu_T:=\frac1T\int_0^T\delta_xP_t\,dt.
+$$
+Compactness makes $\{\mu_T:T>0\}$ tight. Prokhorov's theorem (Prokhorov 1956) gives a sequence $T_j\to\infty$ and a probability measure $\pi$ with $\mu_{T_j}\Rightarrow\pi$. For $s>0$ and $g\in C(\mathcal K)$, the Feller property and the semigroup law give
+$$
+\begin{aligned}
+\mu_T(P_sg)-\mu_T(g)
+&=\frac1T\int_0^T(P_{t+s}g(x)-P_tg(x))\,dt\\
+&=\frac1T\left(\int_T^{T+s}P_ug(x)\,du-\int_0^sP_ug(x)\,du\right).
+\end{aligned}
+$$
+Its absolute value is at most $2s\lVert g\rVert_\infty/T$. Passing to $T_j\to\infty$ yields $\pi(P_sg)=\pi(g)$ for every $g\in C(\mathcal K)$, hence $\pi P_s=\pi$. This is the Krylov--Bogolyubov existence argument (Kryloff and Bogoliouboff 1937) with the invariance step displayed.
+
+Doob's uniqueness theorem (Doob 1948) applies because the semigroup is strong Feller and topologically irreducible; hence $\pi$ is the unique invariant probability measure. Uniform ellipticity on the connected compact manifold gives positive transition densities, so the process is $\pi$-irreducible and positive Harris recurrent. The positive-Harris ergodic theorem (Meyn and Tweedie 2009) therefore gives, for every initial state and every bounded measurable $f$,
+$$
+\frac1T\int_0^Tf(X_t)\,dt\longrightarrow\int_{\mathcal K}f\,d\pi
+\quad\text{almost surely},
+$$
+which is (D.12).
+
+If $\mathcal K$ contains at least two points, irreducibility gives $\operatorname{supp}\pi=\mathcal K$, so $\pi$ is not a point mass. Were $X_t\to X_\infty$ almost surely, Cesàro convergence would give
+$$
+\frac1T\int_0^Tf(X_t)\,dt\longrightarrow f(X_\infty)
+$$
+for every $f\in C(\mathcal K)$. Comparing with (D.12) on a countable point-separating dense subset of $C(\mathcal K)$ would imply $f(X_\infty)=\int f\,d\pi$ for all continuous $f$, which is possible only if $\pi=\delta_{X_\infty}$. This contradiction proves the nonconvergence clause on the nontrivial-state-space branch.
 
 For the low-noise concentration statement, consider the temperature-scaled family with $D_\theta=\theta D$. In regimes satisfying detailed balance with respect to Lebesgue measure (e.g., constant SPD mobility $\eta$ and $D_\theta=\theta\eta$), the stationary Fokker–Planck equation for a density $p_\theta$ on $\mathcal K$ is
 $$
@@ -517,15 +744,32 @@ $$
 $$
 Taking $p_\theta(x)=Z_\theta^{-1}e^{-V(x)/\theta}$ gives $\nabla p_\theta = -(p_\theta/\theta)\nabla V$, so the vector field inside the divergence vanishes identically, proving (D.12a).
 
-Finally, since $V$ is continuous and $\mathcal K$ is compact, the energy gap $\Delta_\delta>0$ defined in the theorem exists. Let $A_\delta:=\{x\in\mathcal K:\operatorname*{dist}(x,\mathcal E_{*}^{\text{global}})>\delta\}$ and $U_\delta:=\mathcal K\setminus A_\delta$.
-Then for $x\in A_\delta$, $V(x)\ge V_{\min}+\Delta_\delta$ where $V_{\min}:=\min_\mathcal K V$. Therefore
+Let $A_\delta$ and $\Delta_\delta$ be as in (D.12b), choose $\varepsilon\in(0,\Delta_\delta)$, and choose a minimizer $x_*$. Continuity of $V$ makes
+$$
+U_\varepsilon:=\{x\in\mathcal K:V(x)<V_{\min}+\varepsilon\}
+$$
+a nonempty open set, so $\operatorname{Vol}(U_\varepsilon)>0$. The numerator and denominator obey
+$$
+\int_{A_\delta}e^{-V/\theta}dx
+\le
+\operatorname{Vol}(\mathcal K)e^{-(V_{\min}+\Delta_\delta)/\theta}
+$$
+and
+$$
+\int_{\mathcal K}e^{-V/\theta}dx
+\ge
+\int_{U_\varepsilon}e^{-V/\theta}dx
+\ge
+\operatorname{Vol}(U_\varepsilon)e^{-(V_{\min}+\varepsilon)/\theta}.
+$$
+Division gives
 $$
 \pi_\theta(A_\delta)
-= \frac{\int_{A_\delta} e^{-V(x)/\theta}dx}{\int_\mathcal K e^{-V(x)/\theta}dx}
-\le \frac{e^{-(V_{\min}+\Delta_\delta)/\theta}\operatorname{Vol}(\mathcal K)}{e^{-V_{\min}/\theta}\operatorname{Vol}(U_\delta)}
-= C_\delta e^{-\Delta_\delta/\theta},
+\le
+\frac{\operatorname{Vol}(\mathcal K)}{\operatorname{Vol}(U_\varepsilon)}
+e^{-(\Delta_\delta-\varepsilon)/\theta},
 $$
-with $C_\delta:=\operatorname{Vol}(\mathcal K)/\operatorname{Vol}(U_\delta)<\infty$, yielding (D.12b). The final sentence follows from Theorem D.3. QED
+which is (D.12b) with $C_{\delta,\varepsilon}=\operatorname{Vol}(\mathcal K)/\operatorname{Vol}(U_\varepsilon)$. The final sentence follows from Theorem D.3 under its strict-comparison and interior hypotheses. ∎
 
 **Theorem D.6.5a (Finite Detailed-Balance PCE H-Theorem).** On a finite detailed-balance PCE branch, let $X$ be a finite state set and let $L$ be an irreducible continuous-time Markov generator acting on functions $f:X\to\mathbb R$ by
 $$
@@ -560,6 +804,43 @@ $$
 Equality holds, under irreducibility, exactly at $\mu_t=\pi$.
 
 This is the detailed-balance entropy monotone underlying the low-noise concentration part of Theorem D.5. It is relative entropy to the stationary PCE law, not raw entropy and not the reset entropy ledger.
+
+*Proof.* The forward equation and detailed balance give
+$$
+\begin{aligned}
+\pi(x)\dot\rho_t(x)
+&=
+\sum_y\bigl[\rho_t(y)\pi(y)K(y,x)-\rho_t(x)\pi(x)K(x,y)\bigr]\\
+&=
+\pi(x)\sum_yK(x,y)\bigl(\rho_t(y)-\rho_t(x)\bigr).
+\end{aligned}
+$$
+Thus
+$$
+\dot\rho_t(x)=\sum_yK(x,y)(\rho_t(y)-\rho_t(x)).
+$$
+Differentiating the relative entropy yields
+$$
+\frac d{dt}D(\mu_t\Vert\pi)
+=
+\sum_x\pi(x)(1+\log\rho_t(x))\dot\rho_t(x).
+$$
+The contribution of $1$ vanishes because $\sum_x\pi(x)\dot\rho_t(x)=d(\sum_x\mu_t(x))/dt=0$. Substitution of the preceding evolution equation gives
+$$
+\frac d{dt}D(\mu_t\Vert\pi)
+=
+\sum_{x,y}\pi(x)K(x,y)
+\log\rho_t(x)\bigl(\rho_t(y)-\rho_t(x)\bigr).
+$$
+Interchanging $x$ and $y$ in one copy of this sum and using $\pi(x)K(x,y)=\pi(y)K(y,x)$ gives
+$$
+\frac d{dt}D(\mu_t\Vert\pi)
+=
+-\frac12\sum_{x,y}\pi(x)K(x,y)
+(\rho_t(y)-\rho_t(x))
+(\log\rho_t(y)-\log\rho_t(x)).
+$$
+Because the logarithm is strictly increasing, every summand after the minus sign is nonnegative. Equality forces $\rho_t(x)=\rho_t(y)$ on every positive-rate edge. Irreducibility makes $\rho_t$ constant on $X$, and normalization then gives $\rho_t\equiv1$, equivalently $\mu_t=\pi$. Conversely, $\mu_t=\pi$ makes every summand zero. ∎
 
 **Definition D.6.5c (Predictive Free-Energy Envelope Certificate $\mathfrak C_{\mathrm{Pred2}}$).** On a retained PCE branch define the predictive free energy by
 $$
@@ -597,25 +878,106 @@ On a finite detailed-balance reduction in which $H_{\mathrm{PCE}}=D(\mu_t\Vert\p
 
 **Remark D.6.5e (Evolution, Learning, and Cosmic Structure as Projections).** When $\mathfrak C_{\mathrm{Pred2}}$ is instantiated by a biological lineage ensemble, a learning system, or a cosmological structure-formation ledger, Proposition D.6.5d permits the common phrase “second law of prediction” for the covered envelope. The branch input is the finite certificate that the same $F_{\mathrm{pred}}$ ledger, viability cut, inheritance/archive rule, and coarse-graining window are being compared. Without that record, the statement remains an analogy to PCE descent rather than a law-level conclusion.
 
-**Theorem D.6.5b (Regular Morse-Smale Basin Decomposition of Deterministic PCE Flow).** On a deterministic regular Morse-Smale PCE branch, let $\mathcal X$ be a compact retained smooth configuration manifold or compact retained chart, let $V_{\mathrm{PCE}}\in C^2(\mathcal X)$ be Morse or Morse-Bott, and let
+**Theorem D.6.5b (Regular Morse--Smale Basin Decomposition of Deterministic PCE Flow).** Let $\mathcal X$ be a compact smooth Riemannian manifold without boundary, let $V_{\mathrm{PCE}}\in C^2(\mathcal X)$ be Morse, and assume the negative-gradient flow
 $$
-\dot x=-\nabla V_{\mathrm{PCE}}(x)
+\dot x
+=
+-\nabla V_{\mathrm{PCE}}(x)
 $$
-have Morse-Smale stable and unstable manifolds. Then
+is Morse--Smale. Then
 $$
-\mathcal X=\bigsqcup_{c\in\mathrm{Crit}(V_{\mathrm{PCE}})}W^s(c),
+\mathcal X
+=
+\bigsqcup_{c\in\mathrm{Crit}(V_{\mathrm{PCE}})}W^s(c).
 $$
-and for any retained set of minima $A$,
+For every set $A$ of local minima,
 $$
-\mathcal B(A)=\{x:\omega(x)\subseteq A\}
+\mathcal B(A)
+:=
+\{x:\omega(x)\subseteq A\}
 =
 \bigsqcup_{a\in A}W^s(a).
 $$
-The basin $\mathcal B(A)$ is open, and its frontier lies in stable manifolds of non-retained critical points of positive Morse index. Sublevel-set topology changes only at critical values, by handle attachment with index equal to the Morse index.
+The basin $\mathcal B(A)$ is open, and
+$$
+\partial\mathcal B(A)
+\subseteq
+\bigsqcup_{\substack{c\in\mathrm{Crit}(V_{\mathrm{PCE}})\\
+\operatorname{ind}(c)>0}}
+W^s(c).
+$$
+If $[u,v]$ contains no critical value, the sublevel sets $\{V_{\mathrm{PCE}}\le u\}$ and $\{V_{\mathrm{PCE}}\le v\}$ are diffeomorphic. Crossing a critical value containing critical points of indices $\lambda_1,\ldots,\lambda_k$ changes the sublevel by attachment of the corresponding $\lambda_j$-handles.
 
-On compatible small-noise gradient-diffusion branches, transition quasipotentials are bounded below by the PCE communication-height barrier between basins, with the noise normalization fixed by the corresponding large-deviation branch.
+For the small-noise diffusion
+$$
+dX_t
+=
+-\nabla V_{\mathrm{PCE}}(X_t)\,dt
++
+\sqrt{2\theta}\,dW_t,
+$$
+the Freidlin--Wentzell action is
+$$
+I_T(\phi)
+=
+\frac14\int_0^T
+\left|\dot\phi+\nabla V_{\mathrm{PCE}}(\phi)\right|^2dt.
+$$
+If $a$ is a local minimum and $B$ is a target set outside its basin, define
+$$
+H(a,B)
+:=
+\inf_{\phi(0)=a,\ \phi(T)\in B}
+\max_{0\le t\le T}V_{\mathrm{PCE}}(\phi(t)).
+$$
+Then the quasipotential obeys
+$$
+\mathcal Q(a,B)
+\ge
+H(a,B)-V_{\mathrm{PCE}}(a).
+$$
 
-These statements require the regular Morse-Smale branch. The stochastic Theorem D.5 alone gives ergodicity and low-noise stationary concentration, not deterministic basin topology.
+For a Morse--Bott potential the analogous decomposition is indexed by connected critical submanifolds, $A$ must be a union of complete minimum components, and crossing a critical value attaches the disk bundle of the negative normal bundle rather than an individual handle.
+
+*Proof.* Compactness and absence of boundary make the gradient flow complete. Along every trajectory,
+$$
+\frac{d}{dt}V_{\mathrm{PCE}}(x(t))
+=
+-|\nabla V_{\mathrm{PCE}}(x(t))|^2
+\le0.
+$$
+Thus $V_{\mathrm{PCE}}(x(t))$ converges and every omega-limit point is critical: if $|\nabla V_{\mathrm{PCE}}|$ were bounded below on a neighborhood of an omega-limit point, each return to that neighborhood would decrease $V_{\mathrm{PCE}}$ by a uniform positive amount, contradicting convergence. A Morse function on a compact manifold has finitely many critical points, while an omega-limit set is connected; hence every trajectory converges to one critical point. This proves the disjoint stable-manifold decomposition and the formula for $\mathcal B(A)$.
+
+At a local minimum the Hessian is positive definite, so the minimum has an attracting neighborhood. If $x\in W^s(a)$, continuity of the time-$T$ flow map carries a neighborhood of $x$ into that attracting neighborhood for sufficiently large $T$. Hence every $W^s(a)$ for a minimum is open. If $x\in\partial\mathcal B(A)$ and $x\in W^s(c)$, then $c$ cannot be a minimum in $A$, because $x$ would be interior to $\mathcal B(A)$; it cannot be a minimum outside $A$, because $x$ would be interior to the complement. Therefore $c$ is nonminimal and $\operatorname{ind}(c)>0$, proving the frontier inclusion. The stable-manifold and transverse-intersection hypotheses are those of Smale's gradient-system theorem (Smale 1961, *Annals of Mathematics* 74, 199--206).
+
+The no-critical-value diffeomorphism theorem and the handle-attachment theorem apply because $\mathcal X$ is compact without boundary and $V_{\mathrm{PCE}}$ is Morse; these are the hypotheses of Milnor's Morse theory theorem (Milnor 1963, *Morse Theory*, Princeton University Press). The Morse--Bott lemma gives the stated negative-normal-bundle attachment for a critical submanifold.
+
+For every absolutely continuous path,
+$$
+\begin{aligned}
+I_T(\phi)
+&=
+\frac14\int_0^T
+|\dot\phi-\nabla V_{\mathrm{PCE}}(\phi)|^2dt
++
+\int_0^T
+\langle\dot\phi,\nabla V_{\mathrm{PCE}}(\phi)\rangle dt\\
+&=
+\frac14\int_0^T
+|\dot\phi-\nabla V_{\mathrm{PCE}}(\phi)|^2dt
++
+V_{\mathrm{PCE}}(\phi(T))-V_{\mathrm{PCE}}(a).
+\end{aligned}
+$$
+Applying the same identity up to the first time the path reaches its maximum potential gives
+$$
+I_T(\phi)
+\ge
+\max_tV_{\mathrm{PCE}}(\phi(t))-V_{\mathrm{PCE}}(a)
+\ge
+H(a,B)-V_{\mathrm{PCE}}(a).
+$$
+Taking the infimum over all admissible paths proves the quasipotential bound. ∎
 
 ## D.7 Formal Justification of Theorems 2 and 43
 
@@ -676,58 +1038,211 @@ So every bounded-action sequence has a pointed measured Gromov-Hausdorff converg
 $$
 \mathcal F_h\xrightarrow{\Gamma}\mathcal F,\qquad\lim_{h\downarrow0}\inf\mathcal F_h=\min\mathcal F.
 $$
-Every sequence satisfying $\mathcal F_h(x_h)-\inf\mathcal F_h\to0$ has convergent subsequences, and every cluster point minimizes $\mathcal F$. Identification of $\mathcal F$ with a displayed continuum action requires separate liminf and recovery proofs; an unconstrained Lorentzian Einstein--Hilbert expression is not generally coercive or bounded below. ∎
+Every sequence satisfying $\mathcal F_h(x_h)-\inf\mathcal F_h\to0$ has convergent subsequences, and every cluster point minimizes $\mathcal F$. Identification of $\mathcal F$ with a displayed continuum action requires separate liminf and recovery proofs; an unconstrained Lorentzian Einstein--Hilbert expression is not generally coercive or bounded below.
+
+*Proof.* Write $m_h:=\inf\mathcal F_h$. A recovery sequence $x_{0,h}\to x_0$ gives
+$$
+\limsup_{h\downarrow0}m_h
+\le
+\limsup_{h\downarrow0}\mathcal F_h(x_{0,h})
+\le
+\mathcal F(x_0)<\infty.
+$$
+Together with $\inf_hm_h> -\infty$, this bounds the energies of every sequence $x_h$ satisfying $\mathcal F_h(x_h)\le m_h+o(1)$. Equicoercivity therefore gives a convergent subsequence $x_{h_j}\to x$.
+
+Choose the indices $h_j$ so that $m_{h_j}\to\liminf_{h\downarrow0}m_h$ and choose $x_{h_j}$ with $\mathcal F_{h_j}(x_{h_j})\le m_{h_j}+1/j$. The liminf inequality yields
+$$
+\mathcal F(x)
+\le
+\liminf_{j\to\infty}\mathcal F_{h_j}(x_{h_j})
+=
+\liminf_{h\downarrow0}m_h.
+$$
+For every $y$ with $\mathcal F(y)<\infty$, a recovery sequence $y_h\to y$ gives
+$$
+\limsup_{h\downarrow0}m_h
+\le
+\limsup_{h\downarrow0}\mathcal F_h(y_h)
+\le
+\mathcal F(y).
+$$
+The two inequalities imply $\mathcal F(x)\le\mathcal F(y)$ for every admissible $y$; hence $x$ minimizes $\mathcal F$. They also give
+$$
+\min\mathcal F
+\le
+\liminf_{h\downarrow0}m_h
+\le
+\limsup_{h\downarrow0}m_h
+\le
+\min\mathcal F,
+$$
+where the last inequality uses a recovery sequence for $x$. Thus $m_h\to\min\mathcal F$.
+
+Finally, let $z_h$ be any approximate-minimizer sequence. Its energies are bounded, so equicoercivity gives a convergent subsequence $z_{h_j}\to z$. The liminf inequality and convergence of $m_h$ give
+$$
+\mathcal F(z)
+\le
+\liminf_{j\to\infty}\mathcal F_{h_j}(z_{h_j})
+=
+\min\mathcal F.
+$$
+Therefore every cluster point $z$ minimizes $\mathcal F$. ∎
 
 **D.6bis Cell-Averaged Closure of the Variational Limit**
 
-**Theorem D.6b (Cell-Averaged Curvature Closure).** Let $U\Subset M$ be a precompact chart domain of a limit branch, $(\mathcal G_h,d_h,\mu_h,g_h)\to(U,g)$ a bounded-action convergent sequence, and $\mathcal P_h(U)=\{C_v^{(h)}\}_{v\in V_h(U)}$ an admissible quasi-uniform cell decomposition with $\mu_h(v)=\int_{C_v^{(h)}} dV_g$. Let $R_h(v;g_h)$ be the discrete scalar-curvature proxy on $v$ (Remark C.3.3a) and
+**Theorem D.6b (Cell-Averaged Curvature Closure).** Let $U\Subset M$ be a precompact chart domain, equip the admissible metric realizations with the declared metrizable local topology, and assume $R_g\in L^1(U,dV_g)$ for every admissible limit metric $g$. Let
 $$
-\overline R_g^{(h)}(v) \;:=\; \frac{1}{\mu_h(v)}\int_{C_v^{(h)}} R_g\,dV_g
+\mathcal F^{\mathrm{curv}}_{h,U}[g_h]
+:=
+\alpha_h\sum_{v\in V_h(U)}\mu_h(v)R_h(v;g_h),
+\qquad
+\alpha_h\to\alpha\in\mathbb R.
 $$
-the cell average of the continuum scalar curvature. Assume: (i) cellwise consistency $\sum_{v}\mu_h(v)\,|R_h(v;g_h)-\overline R_g^{(h)}(v)|\to 0$ along every bounded-action convergent sequence; (ii) recovery discretization: for every admissible continuum $g$, a canonical discretization $I_h g$ satisfies the same estimate; (iii) coefficient convergence $\alpha_h\to\alpha\in\mathbb R$. Define
+Assume the following universal consistency condition: whenever $g_h\to g$ and
 $$
-\mathcal F^{\mathrm{curv}}_{h,U}[g_h] \;:=\; \alpha_h\sum_{v\in V_h(U)}\mu_h(v)\,R_h(v;g_h).
+\liminf_{h\downarrow0}\mathcal F^{\mathrm{curv}}_{h,U}[g_h]<\infty,
 $$
-Then $\mathcal F^{\mathrm{curv}}_{h,U}\xrightarrow{\Gamma}\mathcal F^{\mathrm{curv}}_U[g]=\alpha\int_U R_g\,dV_g$ in local $L^1$, and along every convergent $g_h\to g$, $\mathcal F^{\mathrm{curv}}_{h,U}[g_h]\to\alpha\int_U R_g\,dV_g$.
+there are compatible quasi-uniform cells $\{C_v^{(h)}\}$, covering $U$ up to a null set and satisfying $\mu_h(v)=\int_{C_v^{(h)}}dV_g$, for which
+$$
+\sum_v\mu_h(v)
+\left|
+R_h(v;g_h)
+-
+\frac{1}{\mu_h(v)}\int_{C_v^{(h)}}R_g\,dV_g
+\right|
+\longrightarrow0.
+$$
+Assume also that every admissible $g$ with finite $\mathcal F_U^{\mathrm{curv}}[g]:=\alpha\int_UR_g\,dV_g$ has a recovery discretization $I_hg\to g$ satisfying the same estimate. Then
+$$
+\mathcal F^{\mathrm{curv}}_{h,U}
+\xrightarrow{\Gamma}
+\mathcal F^{\mathrm{curv}}_U
+$$
+in the declared local topology. Moreover, the curvature actions converge along every convergent sequence covered by the universal consistency condition.
 
-*Proof.* Using $\sum_v\mu_h(v)\,\overline R_g^{(h)}(v)=\sum_v\int_{C_v^{(h)}}R_g\,dV_g=\int_U R_g\,dV_g$,
+*Proof.* For such a sequence define
 $$
-\bigl|\mathcal F^{\mathrm{curv}}_{h,U}[g_h] - \alpha_h\int_U R_g\,dV_g\bigr| \;\le\; |\alpha_h|\sum_v\mu_h(v)\,|R_h(v;g_h)-\overline R_g^{(h)}(v)|.
+\overline R_g^{(h)}(v)
+:=
+\frac{1}{\mu_h(v)}\int_{C_v^{(h)}}R_g\,dV_g.
 $$
-By (i) the right side tends to $0$, and (iii) gives $\alpha_h\to\alpha$, yielding the $\Gamma$-liminf and pointwise convergence. For the $\Gamma$-limsup, use the canonical recovery sequence $g_h=I_h g$ from (ii). ∎
+The cell partition gives $\sum_v\mu_h(v)\overline R_g^{(h)}(v)=\int_UR_g\,dV_g$, and hence
+$$
+\begin{aligned}
+\left|
+\mathcal F^{\mathrm{curv}}_{h,U}[g_h]
+-
+\alpha\int_UR_g\,dV_g
+\right|
+&\le
+|\alpha_h|
+\sum_v\mu_h(v)|R_h(v;g_h)-\overline R_g^{(h)}(v)|\\
+&\quad+
+|\alpha_h-\alpha|
+\left|\int_UR_g\,dV_g\right|.
+\end{aligned}
+$$
+Both terms tend to zero. This proves the liminf inequality whenever its left side is finite; when it is infinite the liminf inequality is automatic. Applying the same computation to $I_hg$ proves the recovery inequality. These are the two defining inequalities of Γ-convergence. ∎
 
-**Corollary D.6b.1 (Volume-Term Closure).** If the discrete sector also contains a cell-volume term $\mathcal V_{h,U}[g_h]:=\beta_h\sum_v\mu_h(v)$ with $\beta_h\to\beta$, then $\mathcal V_{h,U}\xrightarrow{\Gamma}\beta\int_U dV_g$. Combined with Theorem D.6b, the most general local gravitational limit obtained by this argument is $\alpha\int_U R_g\,dV_g+\beta\int_U dV_g$.
+**Corollary D.6b.1 (Volume-Term Closure).** Suppose compatible cells cover $U$ up to a null set, $\mu_h(v)=\int_{C_v^{(h)}}dV_g$, and $\beta_h\to\beta$. Then
+$$
+\mathcal V_{h,U}[g_h]
+:=
+\beta_h\sum_v\mu_h(v)
+\longrightarrow
+\beta\int_UdV_g
+$$
+along every admissible convergent sequence, and the associated liminf and recovery inequalities hold.
 
-*Proof.* Immediate from $\sum_v\mu_h(v)=\int_U dV_g$. ∎
+*Proof.* The cell identity gives $\sum_v\mu_h(v)=\int_UdV_g$; multiplication by $\beta_h\to\beta$ gives the conclusion. ∎
 
-**Theorem D.6c (Cell-Averaged Matter Closure).** Let $\phi_h\to\phi$ be a convergent sequence of coarse-grained matter fields, $\ell_h(v;g_h,\phi_h)$ the discrete MPU matter density at $v$, and $\overline{\mathcal L}^{(h)}_{\mathrm{MPU}}(v):=\mu_h(v)^{-1}\int_{C_v^{(h)}}\mathcal L_{\mathrm{MPU}}(g,\phi)\,dV_g$. Assume (i) cellwise consistency $\sum_v\mu_h(v)|\ell_h(v;g_h,\phi_h)-\overline{\mathcal L}^{(h)}_{\mathrm{MPU}}(v)|\to 0$ along every bounded-action convergent sequence; (ii) recovery discretization as in Theorem D.6b. Define $\mathcal F^{\mathrm{MPU}}_{h,U}[g_h,\phi_h]:=\sum_v\mu_h(v)\ell_h(v;g_h,\phi_h)$. Then
+**Theorem D.6c (Cell-Averaged Matter Closure).** Equip pairs $(g,\phi)$ with the declared metrizable local topology and assume $\mathcal L_{\mathrm{MPU}}(g,\phi)\in L^1(U,dV_g)$. Define
 $$
-\mathcal F^{\mathrm{MPU}}_{h,U} \;\xrightarrow{\Gamma}\; \int_U \mathcal L_{\mathrm{MPU}}(g,\phi)\,dV_g.
+\mathcal F^{\mathrm{MPU}}_{h,U}[g_h,\phi_h]
+:=
+\sum_v\mu_h(v)\ell_h(v;g_h,\phi_h).
+$$
+Assume that for every convergent sequence $(g_h,\phi_h)\to(g,\phi)$ with finite liminf matter action there are compatible cells for which
+$$
+\sum_v\mu_h(v)
+\left|
+\ell_h(v;g_h,\phi_h)
+-
+\frac{1}{\mu_h(v)}
+\int_{C_v^{(h)}}\mathcal L_{\mathrm{MPU}}(g,\phi)\,dV_g
+\right|
+\longrightarrow0,
+$$
+and assume a recovery discretization satisfying this estimate for every finite-energy pair $(g,\phi)$. Then
+$$
+\mathcal F^{\mathrm{MPU}}_{h,U}
+\xrightarrow{\Gamma}
+\int_U\mathcal L_{\mathrm{MPU}}(g,\phi)\,dV_g.
 $$
 
-*Proof.* Exactly as in Theorem D.6b. ∎
+*Proof.* Summing the cell averages gives the continuum integral. The triangle inequality proves convergence on every finite-liminf sequence covered by the hypothesis, while infinite-liminf sequences satisfy the liminf inequality automatically. The declared recovery discretization proves the limsup inequality. ∎
 
-**Corollary D.6c.1 (Predictive-Action Additive Closure).** Under Lemma D.6a and the hypotheses of Theorem D.6b, Corollary D.6b.1, and Theorem D.6c with a common canonical recovery discretization,
+**Corollary D.6c.1 (Predictive-Action Additive Closure).** Assume the hypotheses of Theorem D.6b, Corollary D.6b.1, and Theorem D.6c, assume their componentwise liminf inequalities hold on the same topology, assume they admit a common recovery discretization, and assume the summed functionals are equicoercive. Then
 $$
-\mathcal F_{h,U}:=\mathcal F^{\mathrm{curv}}_{h,U}+\mathcal V_{h,U}+\mathcal F^{\mathrm{MPU}}_{h,U} \;\xrightarrow{\Gamma}\; \alpha\int_U R_g\,dV_g + \beta\int_U dV_g + \int_U\mathcal L_{\mathrm{MPU}}\,dV_g,
+\mathcal F_{h,U}
+:=
+\mathcal F^{\mathrm{curv}}_{h,U}
++
+\mathcal V_{h,U}
++
+\mathcal F^{\mathrm{MPU}}_{h,U}
+\xrightarrow{\Gamma}
+\alpha\int_UR_g\,dV_g
++
+\beta\int_UdV_g
++
+\int_U\mathcal L_{\mathrm{MPU}}\,dV_g,
 $$
-and minimizer sequences admit $\Gamma$-convergent subsequences. ∎
+and every approximate-minimizer sequence has convergent subsequences whose cluster points minimize the limit functional.
 
-**Theorem D.6d (Closed Einstein–Hilbert + MPU $\Gamma$-Limit).** Combining Corollary D.6c.1 with the four-dimensional Wald/diffeomorphism normalization of Theorem 12.1a fixes
-$$
-\alpha \;=\; \frac{c^3}{16\pi G},\qquad \beta \;=\; -\frac{c^3\Lambda}{8\pi G},
-$$
-so the $\Gamma$-limit is
-$$
-\mathcal F[g,\phi] \;=\; \frac{c^3}{16\pi G}\int_M (R_g-2\Lambda)\sqrt{-g}\,d^4x + \int_M \mathcal L_{\mathrm{MPU}}(g,\phi)\sqrt{-g}\,d^4x,
-$$
-and minimizer sequences converge up to subsequences. In the vacuum-absorbed convention (Corollary B.8d.2), the constant term is absorbed geometrically and the same corollary reduces to
-$$
-\mathcal F[g,\phi] \;=\; \frac{c^3}{16\pi G}\int_M R_g\,\sqrt{-g}\,d^4x + \int_M\mathcal L_{\mathrm{MPU}}(g,\phi)\,\sqrt{-g}\,d^4x,
-$$
-with $\Lambda$ reappearing as an integration constant in §12.
+*Proof.* Adding the three componentwise liminf inequalities gives the liminf inequality for $\mathcal F_{h,U}$. Evaluating all three summands on the common recovery discretization gives the limsup inequality. Equicoercivity and Theorem D.6 give the assertion about approximate minimizers. ∎
 
-*Proof.* Corollary D.6c.1 provides the generic limit. Theorem 12.1a fixes $\alpha,\beta$ uniquely under diffeomorphism invariance, second-order EOM, and Wald consistency. The minimizer statement is inherited from equicoercivity (Lemma D.6a) and $\Gamma$-convergence. ∎
+**Theorem D.6d (Signature-Qualified Einstein--Hilbert + MPU $\Gamma$-Limit).** Assume Corollary D.6c.1 on an equicoercive positive-definite Riemannian branch. Assume also a signature bridge identifying its two gravitational coefficients with the four-dimensional Wald/diffeomorphism normalization of Theorem 12.1a. Then
+$$
+\alpha
+=
+\frac{c^3}{16\pi G},
+\qquad
+\beta
+=
+-\frac{c^3\Lambda}{8\pi G},
+$$
+and the Riemannian $\Gamma$-limit is
+$$
+\mathcal F_E[g,\phi]
+=
+\frac{c^3}{16\pi G}
+\int_M(R_g-2\Lambda)\,dV_g
++
+\int_M\mathcal L_{\mathrm{MPU}}(g,\phi)\,dV_g.
+$$
+Every approximate-minimizer sequence covered by the common equicoercivity hypothesis has subsequences converging to minimizers of $\mathcal F_E$.
+
+Under the same signature bridge, the coefficient correspondence gives the Lorentzian action
+$$
+\mathcal S_L[g,\phi]
+=
+\frac{c^3}{16\pi G}
+\int_M(R_g-2\Lambda)\sqrt{-g}\,d^4x
++
+\int_M\mathcal L_{\mathrm{MPU}}(g,\phi)\sqrt{-g}\,d^4x.
+$$
+This coefficient correspondence does not assert Lorentzian Γ-convergence or convergence of Lorentzian minimizers. In the vacuum-absorbed convention of Corollary B.8d.2, the constant term is absorbed geometrically and $\Lambda$ occurs as an integration constant in §12.
+
+*Proof.* Corollary D.6c.1 gives the Riemannian limit
+$$
+\alpha\int_MR_g\,dV_g
++
+\beta\int_MdV_g
++
+\int_M\mathcal L_{\mathrm{MPU}}\,dV_g.
+$$
+Substitution of the two coefficient identities yields $\mathcal F_E$. The common equicoercivity hypothesis and Theorem D.6 give the Riemannian minimizer conclusion. The signature bridge transfers the coefficients to $\mathcal S_L$, but no compactness or lower-bound inference is made for the Lorentzian functional. ∎
 
 **Theorem D.6e (Conditional Mosco–Cheeger Closure of the Spatial Sector).** Let $(X_n,d_n,\mu_n)$ be the rescaled MPU network metric-measure spaces on the geometric branch, and let the rescaled propagation-cost Dirichlet forms be
 $$
@@ -978,31 +1493,52 @@ A\epsilon+b_n.
 $$
 First let $n\to\infty$ and then $\epsilon\to0$. Hence $\mathfrak d_n^*\to0$. The final claim is Theorem D.6e applied to this conclusion. ∎
 
-**Proposition D.6f.2a (Protocol-Response Domination Criterion for the Global-Core Competitor).** Suppose that, on the selected microscopic branch, the core potential $V_n$ factors through the finite protocol-response presheaf of the $24$-channel shell in the sense that two configurations with naturally isomorphic finite responses have the same core value up to $o(1)$. Suppose further that for each $n$ there exists a $D_4$ shell approximant $Y_n$ with
+**Proposition D.6f.2a (Protocol-Response Domination Criterion for the Global-Core Competitor).** Let $d_{\mathrm{resp},n}$ be the declared distance between finite protocol-response presheaves. Suppose that the core potential $V_n$ factors through those responses up to $o(1)$. Assume in addition a defect-stable minimizer-selection certificate: there are nondecreasing moduli $\omega_n:[0,\infty)\to[0,\infty)$ such that
 $$
-\mathfrak D_n(Y_n)\to0
+\lim_{\varepsilon\downarrow0}\limsup_{n\to\infty}\omega_n(\varepsilon)=0,
 $$
-whose finite response presheaf is naturally isomorphic, up to $o(1)$ protocol error, to that of some global core minimizer in $\mathcal M_n$. Then
+and whenever an admissible configuration $Y$ satisfies
 $$
-\mathfrak d_n^*=
-\inf_{\mathcal C\in\mathcal M_n}\mathfrak D_n(\mathcal C)\to0.
+\inf_{Z\in\mathcal M_n}
+d_{\mathrm{resp},n}(Y,Z)
+\le
+\varepsilon,
+$$
+there exists $P_nY\in\mathcal M_n$ with
+$$
+\mathfrak D_n(P_nY)
+\le
+\mathfrak D_n(Y)+\omega_n(\varepsilon).
+$$
+Suppose there are $D_4$ shell approximants $Y_n$ and numbers $\varepsilon_n\downarrow0$ such that
+$$
+\mathfrak D_n(Y_n)\to0,
+\qquad
+\inf_{Z\in\mathcal M_n}
+d_{\mathrm{resp},n}(Y_n,Z)
+\le
+\varepsilon_n.
+$$
+Then
+$$
+\mathfrak d_n^*
+=
+\inf_{\mathcal C\in\mathcal M_n}
+\mathfrak D_n(\mathcal C)
+\longrightarrow0.
 $$
 
-*Proof.* Let $Z_n\in\mathcal M_n$ be a global core minimizer whose finite response presheaf is $o(1)$-isomorphic to that of $Y_n$. Since $V_n$ factors through the response presheaf up to $o(1)$, replacing $Z_n$ by the response-equivalent representative $Y_n$ changes the core value by $o(1)$. By compactness of the finite configuration space at resolution $n$, choose an exact minimizer $\widehat Y_n\in\mathcal M_n$ in the same limiting response class with
+*Proof.* Apply the selection certificate to $Y_n$ and choose $\widehat Y_n:=P_nY_n\in\mathcal M_n$. Then
 $$
-\mathfrak D_n(\widehat Y_n)
+0
 \le
-\mathfrak D_n(Y_n)+o(1).
-$$
-This replacement is legitimate because response-null microstructure is removed by Corollary P.6.1b.8 and therefore cannot distinguish two representatives inside the global core-minimum quotient. Hence
-$$
-0\le\mathfrak d_n^*
+\mathfrak d_n^*
 \le
 \mathfrak D_n(\widehat Y_n)
 \le
-\mathfrak D_n(Y_n)+o(1)\to0.
+\mathfrak D_n(Y_n)+\omega_n(\varepsilon_n).
 $$
-Therefore the sharp global-core competitor condition (D.6f.1) holds. ∎
+The first term on the right tends to zero by hypothesis. The modulus condition and $\varepsilon_n\downarrow0$ give $\omega_n(\varepsilon_n)\to0$ along the selected branch. Hence $\mathfrak d_n^*\to0$. ∎
 
 **Theorem D.6f.2b (Quantitative Defect Coercivity of the Continuum-Control Potential).** In the setting of Theorem D.6e, let
 $$
@@ -1087,67 +1623,67 @@ V_n^{\mathrm{cont}}(\mathcal C_n)-V_{n,\min}^{\mathrm{cont}}
 $$
 The two terms on the right tend to zero by hypothesis. Since $\lambda_{\min}>0$, (D.6f.12) follows. ∎
 
-**Theorem 44a (Regular-Branch Manifold Closure).** Assume the hypotheses of Theorem C.6c and let the selected sequence satisfy $\mathfrak H_n\to0$ in the sense of Theorem D.6e. Then the regular set $X_{\mathrm{reg}}\subset X$ is open, every point of $X_{\mathrm{reg}}$ has unique tangent cone $\mathbb R^4$, and $X_{\mathrm{reg}}$ carries a $C^{1,\alpha}$ Riemannian metric $h_{ij}$ with
+**Theorem 44a (Quantitatively Regular Branch Manifold Closure).** Assume the hypotheses of Theorem C.6c and the Mosco-liminf, recovery, and candidate-form identification hypotheses of Theorem D.6e. Let $X_{\mathrm{reg}}$ be the set of points $x\in X$ for which there are $r_x>0$, $C_x<\infty$, and $\alpha\in(0,1)$ such that every $y\in B_{r_x}(x)$ and every $r\in(0,r_x]$ admit compatible harmonic-coordinate charts along the approximating sequence with
 $$
-d\mu=\sqrt{\det h}\,d^4x,
+\limsup_{n\to\infty}
+\left[
+\frac{d_{GH}(B_r(y),B_r^{\mathbb R^4})}{r}
++
+\left|
+\frac{\mu_n(B_r(y))}{\omega_4r^4}-1
+\right|
++
+\mathrm{HarmEx}_n(y,r)
+\right]
+\le
+C_xr^\alpha.
+$$
+Assume in those charts that the metric coefficients are uniformly elliptic, uniformly bounded in $C^{1,\alpha}$ on compact subcharts, and converge together with the quadratic energy coefficients. Then $X_{\mathrm{reg}}$ is open, every point of $X_{\mathrm{reg}}$ has unique tangent cone $\mathbb R^4$, and $X_{\mathrm{reg}}$ carries a $C^{1,\alpha}$ Riemannian metric $h_{ij}$ satisfying
+$$
+d\mu
+=
+\sqrt{\det h}\,d^4x,
 \qquad
 \mathcal E_\infty(f)
 =
 \int_{X_{\mathrm{reg}}}
-h^{ij}\partial_i f\,\partial_j f\,\sqrt{\det h}\,d^4x.
+h^{ij}\partial_i f\,\partial_j f\,
+\sqrt{\det h}\,d^4x
 $$
-Combined with Corollary O.7b.1, the regular branch carries a $C^{1,\alpha}$ Lorentzian metric $g$ with entropy-orthogonal local form
+for every compactly supported Lipschitz function $f$ in a regular chart.
+
+The metric $h$ in this theorem is a four-dimensional Riemannian auxiliary metric. Corollary O.7b.1 supplies a four-dimensional Lorentzian principal symbol only on its independent causal branch. If that branch also supplies a compatible $3+1$ foliation, a lapse $a\in C^{1,\alpha}$ satisfying $a>0$, vanishing shift, and a three-dimensional induced metric $\gamma_{ab}\in C^{1,\alpha}$, then its local Lorentzian metric has the form
 $$
-g=-\alpha(x)^{-1}dt^2+h_{ij}dx^idx^j.
+g
+=
+-a(x)^{-1}dt^2
++
+\gamma_{ab}dx^adx^b,
+\qquad a,b\in\{1,2,3\}.
 $$
 
-*Proof.* Theorem C.6c gives a noncollapsed $\mathrm{RCD}^*(K,4)$ limit. Noncollapsed $\mathrm{RCD}$ regularity gives Euclidean tangent cones at $\mu$-almost every point. The condition $\mathfrak H_n\to0$ supplies asymptotic Reifenberg closeness, volume-cone closeness, and harmonic-coordinate excess control on the selected fixed-radius chart range. The standard $\varepsilon$-regularity implication for noncollapsed spaces converts these quantitative estimates into openness of the regular set and uniqueness of the tangent cone $\mathbb R^4$ at each point of that set. The harmonic-coordinate excess bound gives uniform $C^{1,\alpha}$ control of the coordinate metric coefficients, yielding the Riemannian metric $h_{ij}$. The energy representation is the local coordinate form of the Cheeger energy identified in Theorem D.6e. Corollary O.7b.1 then appends the finite ND-RID update clock as the entropy-orthogonal time direction, producing the stated Lorentzian metric. ∎
+*Proof.* The defining quantitative certificate holds uniformly throughout $B_{r_x}(x)$, so each such ball is contained in $X_{\mathrm{reg}}$; hence $X_{\mathrm{reg}}$ is open. Dividing the first estimate by the scale and sending $r\downarrow0$ shows that every rescaled ball converges to the Euclidean unit ball, independently of the chosen sequence of scales. Thus the tangent cone is uniquely $\mathbb R^4$.
+
+Uniform ellipticity and the local $C^{1,\alpha}$ bounds give, by Arzelà--Ascoli on nested compact subcharts, limiting coefficients $h_{ij}\in C^{1,\alpha}$. Compatibility of the harmonic charts makes these coefficients a Riemannian metric. The volume-ratio convergence and convergence of the chart measures identify the limit measure with $\sqrt{\det h}\,d^4x$. The Mosco liminf and recovery inequalities identify $\mathcal E_\infty$ with the candidate quadratic form, while convergence of its chart coefficients gives the displayed integral for compactly supported $f$. On the independent causal branch, the $3+1$ foliation has one time coordinate and three spatial coordinates. Positivity of $a$ and positive-definiteness of $\gamma$ therefore give signature $(-,+,+,+)$. ∎
 
 **Remark D.6.1 (PU motivation for hypotheses).**
-(i) Appendix C shows that configurations with anomalous volume growth (Definition C.1) or without a uniform positive discrete Ricci lower bound (Definition C.2-C.3) violate at least one of (LV)–(RE) at sufficiently large scale (Theorem C.5). In the low-noise detailed-balance subcase of Theorem D.5, the stationary measure therefore places exponentially dominant weight on the bounded-geometry low-potential sector, motivating the equicoercivity hypothesis needed for $\Gamma$-convergence [Gromov 1999].
+(i) Theorem C.5 proves non-viability only on a registered quantitative branch where a super-linear-distance coherence certificate, a non-amortized traffic and budget certificate, a strong-convexity variance-cost certificate, or an independent-failure certificate yields a strict GC, RE, or LV inequality. Failure of Definition C.1 or C.2 alone gives no such conclusion. In the low-noise detailed-balance subcase of Theorem D.5, any potential gap established by one of those certificates produces exponentially larger stationary weight for the lower-potential sector. Equicoercivity for $\Gamma$-convergence remains a separate hypothesis and is not implied by the qualitative geometric definitions [Gromov 1999].
 (ii) Remark C.3.3a supplies, conditional on the weighted-shell/local-isotropy bridge input or an equivalent replacement, an explicit local scalar curvature estimator built from Ollivier-Ricci curvature at mesh scale $h$, providing a concrete realization of the locality/consistency requirement for the Einstein-Hilbert term at the action level. It does not by itself furnish the Mosco/quadratic limit-energy or Euclidean-rigidity input used later in Section 11.4.
 (iii) Appendix E derives the thermodynamic area law and fixes the emergent gravitational constant $G$ (Theorem E.6), providing the normalization invoked in (iii).
 
-*Proof.* Write
-$$
-\mathcal F_h[g]=\mathcal F_h^{EH}[g]+\mathcal F_h^{MPU}[g].
-$$
-Hypothesis (i) is equicoercivity: for every $M<\infty$ the sublevel sets
-$$
-\{\,g:\ \mathcal F_h[g]\le M\,\}
-$$
-are precompact in the topology of Section 11. In particular, any sequence of (approximate) minimizers admits a convergent subsequence.
-
-For the $\Gamma$-liminf inequality, fix any sequence $g_h\to g$. By hypothesis (ii),
-$$
-\liminf_{h\to 0}\mathcal F_h^{EH}[g_h]\ge \mathcal F^{EH}[g],
-\qquad
-\liminf_{h\to 0}\mathcal F_h^{MPU}[g_h]\ge \mathcal F^{MPU}[g].
-$$
-Hence
-$$
-\liminf_{h\to 0}\mathcal F_h[g_h]\ge \mathcal F[g].
-$$
-
-For the recovery sequence (the $\Gamma$-limsup inequality), fix any admissible continuum metric $g$. Choose the refinement family implicit in (ii) and define $g_h$ as the canonical discretization/interpolation of $g$ on the mesh $h$, so that $g_h\to g$ in the topology of Section 11. Hypothesis (ii) then yields
-$$
-\limsup_{h\to 0}\mathcal F_h[g_h]\le \mathcal F[g].
-$$
-Therefore $\mathcal F_h$ $\Gamma$-converges to $\mathcal F$.
-
-By the fundamental theorem of $\Gamma$-convergence [Dal Maso 1993; Braides 2002], $\Gamma$-convergence together with equicoercivity implies convergence (up to subsequences) of minimizers of $\mathcal F_h$ to minimizers of $\mathcal F$, and convergence of minimum values. $\square$
+**Remark D.6.2 (Location of the Variational Hypotheses).** The variational conclusion uses three logically distinct entries. Theorems D.6b and D.6c supply the componentwise liminf inequalities on every relevant convergent sequence. Corollary D.6c.1 assumes a common recovery discretization and equicoercivity of the summed functional. Under those entries, adding the componentwise liminf inequalities and evaluating the sum on the common recovery discretization proves Γ-convergence; Theorem D.6 then proves convergence of minimum values and the cluster-point statement for approximate minimizers. The continuum-control defects of Theorem D.6e do not replace any of these entries.
 
 This appendix thus provides the variational and action-level part of the PU dynamical bridge. The Mosco/quadratic limit-energy step and branch-specific Euclidean-rigidity input are encoded in the continuum-control defects of Theorem D.6e and selected only on the vanishing-defect operational branch; the AQFT coarse-graining closure remains the separate Appendix F bridge.
 
-**Summary of Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
-The exact equilibrium statement of Theorem 2 is Corollary D.1: any true stable PCE equilibrium must satisfy $C_P(v)=\langle\hat C_v\rangle_{x^*}$ for all $v$. On the operational side, the work-cost gap feedback mechanism (Lemma D.2) and the stochastic contraction estimate of Proposition D.1 / Corollary D.2 show that the proxy-complexity coordinates are driven toward that equilibrium up to a controlled noise floor. The ergodic stationary regime of Theorem D.5 then identifies the long-run averages of the proxy variables with expectations under the invariant measure; in low-noise detailed-balance regimes, that invariant measure assigns exponentially dominant weight to neighborhoods of the lowest-potential regular set.
+**Summary of Theorem 2 (Conditional Dynamical Functional Correspondence):**
+The exact equilibrium statement of Theorem 2 is Corollary D.1 on its faithful-cost-identifiability branch. Lemma D.2, Proposition D.1, and Corollary D.2 give the registered work-cost feedback and its noise-floor estimate under their measurement, drift, and martingale hypotheses. Theorem D.5 identifies long-run averages with invariant-measure expectations under (A1)–(A6); its detailed-balance subbranch gives low-noise concentration near the global-minimum set. Calling that set regular additionally requires the strict-comparison hypothesis of Theorem D.3.
 
-*Proof Reference:* Corollary D.1 gives exact alignment at true stable equilibria. Lemma D.2, Proposition D.1, and Corollary D.2 provide the physical feedback mechanism and quantitative tracking bound. Theorem D.5 provides ergodic stationary averaging and, in its detailed-balance subcase, low-noise concentration near the low-potential regular set.
+*Proof Reference:* Corollary D.1 supplies exact alignment on its stated branch. Lemma D.2, Proposition D.1, and Corollary D.2 supply the conditional tracking chain. Theorem D.5 supplies ergodic averaging and detailed-balance concentration. Theorem D.3 supplies regularity only under strict comparison.
 
-**Summary of Theorem 43 (Dynamical Emergence of Geometric Regularity - Justified):**
-The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), admit an ergodic stationary regime under Assumptions (A1)-(A6) (Theorem D.5). By Theorem D.3, every global minimum of the full potential $V(x)$ is geometrically regular (Definition C.3). Hence, in low-noise detailed-balance regimes, the stationary measure concentrates on neighborhoods of geometrically regular configurations; more generally, regularity characterizes the lowest-potential sector selected by POP/PCE.
+**Summary of Theorem 43 (Geometric Regularity on the Strict-Comparison Branch):**
+Under (A1)–(A6), Equation (D.8) has the ergodic stationary regime of Theorem D.5. Under detailed balance, its low-noise invariant measures concentrate near the global-minimum set of $V$. If every irregular admissible configuration has a regular equal-proxy comparator with strictly smaller core potential, Theorem D.3 makes every such global minimizer geometrically regular. Without that comparison premise, Theorem D.5 still gives concentration near global minimizers but does not identify their geometry.
 
-*Proof Reference:* Lemma D.3 and Theorem D.2 identify irregularity as a positive contribution to the potential; Theorem D.3 proves that global minima are regular; Theorem D.5 provides ergodicity and, in its detailed-balance subcase, low-noise concentration near the regular low-potential sector.
+*Proof Reference:* Theorem D.5 gives ergodicity and conditional Gibbs concentration. The strict-comparison hypothesis followed by Theorem D.3 gives regularity of the minimizer set. ∎
 
 
 **D.8 Rigorous Convergence Analysis for Complexity Adaptation**
@@ -1201,17 +1737,23 @@ hence
 $$
 -\theta\ln\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C \ge m_C-\theta\ln\sigma_C(\Sigma_C).
 $$
-Conversely, for any $\varepsilon>0$, the set
+Conversely, for any $\varepsilon>0$, the strict sublevel set
 $$
-U_\varepsilon:=\{x\in\Sigma_C:V(x)\le m_C+\varepsilon\}
+U_\varepsilon
+:=
+\{x\in\Sigma_C:V(x)<m_C+\varepsilon\}
 $$
-is nonempty and relatively open in $\Sigma_C$; by full support, $\sigma_C(U_\varepsilon)>0$. Therefore
+is nonempty and relatively open in $\Sigma_C$. Full support therefore gives $\sigma_C(U_\varepsilon)>0$. Since $V(x)<m_C+\varepsilon$ on $U_\varepsilon$,
 $$
-\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C \ge e^{-(m_C+\varepsilon)/\theta}\sigma_C(U_\varepsilon),
+\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C
+\ge
+e^{-(m_C+\varepsilon)/\theta}\sigma_C(U_\varepsilon),
 $$
-so
+and hence
 $$
--\theta\ln\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C \le m_C+\varepsilon-\theta\ln\sigma_C(U_\varepsilon).
+-\theta\ln\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C
+\le
+m_C+\varepsilon-\theta\ln\sigma_C(U_\varepsilon).
 $$
 Letting $\theta\downarrow0$ and then $\varepsilon\downarrow0$ yields (D.13c). Statement (3) is immediate from the definition of the constrained minimizer in the local split $x=(C,y)$. ∎
 
@@ -1276,17 +1818,32 @@ $$
 $$
 Applying (D.13e) at $C=C^\star$ gives (D.13f). Substituting the second derivative of the Law of Prediction yields (D.13g). Under DSC (Theorem 22), $\Psi'(C^\star)<0$, so $\kappa_C>0$. ∎
 
-**Theorem D.7 (Uniqueness and Stability of Optimal Complexity).**
-Under the Dominance of Stabilizing Costs (DSC, Theorem 22), which ensures $\Psi'(C) < 0$ for all $C$ in the viable range, the effective potential $V_{eff}(C)$ is strictly convex. Consequently:
-
-1. There exists a unique global minimum $C^\star$ satisfying $\Psi(C^\star) = 0$.
-2. This minimum is globally stable: $\Psi(C) > 0$ for $C < C^\star$ and $\Psi(C) < 0$ for $C > C^\star$.
-
-*Proof.* The DSC condition (Theorem 22) ensures that the convexity of the physical cost $R(C)$ together with performance saturation (concave $PP(C)$) dominates any destabilizing concavity in the informational cost $R_I(C)$. From Equation (35) in Section 6.5.1:
+**Theorem D.7 (Existence, Uniqueness, and Stability of Optimal Complexity).**
+Let the viable complexity range be a compact interval $[C_-,C_+]$. Assume $\Psi\in C^1([C_-,C_+])$, DSC gives $\Psi'(C)<0$ throughout the interval, and
 $$
-\Psi'(C) = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) + \frac{r_I}{C^2 \ln 2}
+\Psi(C_-)>0,
+\qquad
+\Psi(C_+)<0.
 $$
-DSC requires this derivative to be negative. Since $\frac{\partial^2 PP}{\partial C^2} < 0$ (strict concavity), $R''(C) \ge 0$ (convexity), and the stabilizing cost terms dominate, we have $\Psi'(C) < 0$. Strict convexity of $V_{eff}$ follows from $V''_{eff}(C) = -\Psi'(C) > 0$. A strictly convex function on an interval has at most one critical point, which must be a global minimum. The gradient flow property of Equation (D.13) ensures trajectories flow toward this minimum from any initial condition. QED
+Then there is a unique $C^\star\in(C_-,C_+)$ such that $\Psi(C^\star)=0$. It is the unique global minimizer of $V_{\mathrm{eff}}$, and
+$$
+\Psi(C)>0\quad(C<C^\star),
+\qquad
+\Psi(C)<0\quad(C>C^\star).
+$$
+Every solution of $\dot C=\eta_{\mathrm{adapt}}\Psi(C)$ with $C(0)\in[C_-,C_+]$ and $\eta_{\mathrm{adapt}}>0$ remains in the interval and converges to $C^\star$.
+
+*Proof.* Continuity and the endpoint signs give at least one zero by the intermediate value theorem. Strict decrease of $\Psi$ makes the zero unique and gives the two sign statements. Since
+$$
+V_{\mathrm{eff}}''(C)=-\Psi'(C)>0,
+$$
+$V_{\mathrm{eff}}$ is strictly convex, so its unique critical point is its unique global minimizer on the interval. At $C_-$ the vector field points inward and at $C_+$ it points inward, so the interval is positively invariant. Along any nonstationary solution,
+$$
+\frac d{dt}V_{\mathrm{eff}}(C(t))
+=
+-\eta_{\mathrm{adapt}}\Psi(C(t))^2<0.
+$$
+Monotonicity of the scalar vector field makes a solution below $C^\star$ increase without crossing it and a solution above $C^\star$ decrease without crossing it. In either case the limit exists; continuity of $\Psi$ forces the limit to be its unique zero $C^\star$. ∎
 
 ### D.8.2 Polyak–Łojasiewicz Condition and Linear Convergence
 
@@ -1328,30 +1885,44 @@ Multiplying by $\underline{\lambda}$ yields $\frac{1}{2}|V'_{eff}(C)|^2 \ge \und
 ### D.8.3 Convergence Theorem with Explicit Rates
 
 **Theorem D.8 (Exponential Convergence of Complexity Adaptation).**
-Consider the complexity adaptation dynamics (D.13) with initial condition $C(0)$.
-
-**Part I (Deterministic Rate):** For the deterministic flow, the distance to optimum decays exponentially:
-
+Let $I=[C_-,C_+]$ be the invariant viable interval of Theorem D.7 and assume throughout $I$ that
 $$
-\big|C(t) - C^\star\big| \le e^{-\underline{\lambda}\,\eta_{adapt}\, t} \big|C(0) - C^\star\big|
+0<\underline\lambda
+\le
+V_{\mathrm{eff}}''(C)
+\le
+L_{\mathrm{eff}}<\infty.
+$$
+
+**Part I (Deterministic Rate).** Every deterministic solution of (D.13) with $C(0)\in I$ satisfies
+$$
+|C(t)-C^\star|
+\le
+e^{-\underline\lambda\eta_{\mathrm{adapt}}t}|C(0)-C^\star|.
 \tag{D.15}
 $$
 
-with rate constant $\underline{\lambda}>0$ defined in Lemma D.7.
-
-**Part II (Stochastic Rate with Noise Floor):** When the full stochastic dynamics (Equation D.8) are considered, the effective noise from ND-RID fluctuations induces a diffusion term in the complexity direction. Assume the complexity coordinate admits the effective one-dimensional Ito form
+**Part II (Stochastic Rate with Noise Floor).** Assume that the complexity coordinate is an Itô diffusion on $I$,
 $$
-dC_t = \eta_{adapt}\Psi(C_t)\,dt + \sqrt{2D_{CC}(x(t))}\,dB_t,
+dC_t
+=
+\eta_{\mathrm{adapt}}\Psi(C_t)dt
++
+\sqrt{2D_{CC}(x(t))}\,dB_t,
 $$
-where $B_t$ is a standard one-dimensional Wiener process and the projected diffusion coefficient satisfies $0\le D_{CC}(x)\le D_{CC}^{max}<\infty$ on the compact set $\mathcal K$ (A5). Let
+with boundary behavior making $I$ invariant and producing no boundary local-time term in Itô's formula for $V_{\mathrm{eff}}$ (for example, $D_{CC}=0$ at the endpoints with inward drift), and with
 $$
-L_{eff}:=\sup_{|C-C^\star|\le r} V''_{eff}(C)<\infty.
+0\le D_{CC}(x)\le D_{CC}^{\max}<\infty.
 $$
-Then the expected potential gap decays exponentially to a noise floor:
+Then
 $$
-\mathbb{E}\big[V_{eff}(C_t) - V_{eff}(C^\star)\big]
-\le e^{-2\underline{\lambda}\eta_{adapt}t}\big(V_{eff}(C_0) - V_{eff}(C^\star)\big)
-+ \frac{D_{CC}^{max}L_{eff}}{2\underline{\lambda}\eta_{adapt}}\Bigl(1-e^{-2\underline{\lambda}\eta_{adapt}t}\Bigr)
+\mathbb E\bigl[V_{\mathrm{eff}}(C_t)-V_{\mathrm{eff}}(C^\star)\bigr]
+\le
+e^{-2\underline\lambda\eta_{\mathrm{adapt}}t}
+\bigl(V_{\mathrm{eff}}(C_0)-V_{\mathrm{eff}}(C^\star)\bigr)
++
+\frac{D_{CC}^{\max}L_{\mathrm{eff}}}{2\underline\lambda\eta_{\mathrm{adapt}}}
+\left(1-e^{-2\underline\lambda\eta_{\mathrm{adapt}}t}\right).
 \tag{D.16}
 $$
 
@@ -1463,17 +2034,26 @@ h(\lambda):=a(\lambda)q(\lambda)
 $$
 has no resolved rate dependence on the band, i.e. $h(\lambda)=h_0+o(1)$ over the operationally observed inertial interval.
 
-**Theorem D.8a (Spectral Exponent from the PCE Relaxation Density).** Let $e(t)$ be a prediction-error observable whose active modes satisfy Lemma D.8a and Definition D.8b. Suppose that on an intermediate frequency window
+**Theorem D.8a (Spectral Exponent from the PCE Relaxation Density).** Let the centered observable be a superposition of stationary modes satisfying Lemma D.8a, and assume distinct modes have zero cross spectrum, equivalently
 $$
-\lambda_{\min}\ll \omega\ll \lambda_{\max}
+\mathbb E[y_\lambda(t+\tau)y_{\lambda'}(t)]=0
+\qquad(\lambda\ne\lambda',\ \tau\in\mathbb R).
+$$
+Consider a scaling regime in which
+$$
+\frac{\lambda_{\min}}{\omega}\to0,
+\qquad
+\frac{\lambda_{\max}}{\omega}\to\infty,
 \tag{D.22}
 $$
-the mode-weight product has the asymptotic form
+and suppose
 $$
-h(\lambda)=A_0\lambda^s(1+o(1)),
-\qquad -1<s<1,\quad A_0>0.
+h(\lambda)=A_0\lambda^s(1+r_\omega(\lambda)),
+\qquad
+-1<s<1,\quad A_0>0,
 \tag{D.23}
 $$
+where $r_\omega(\omega u)\to0$ pointwise and is dominated by an integrable multiple of $u^s/(1+u^2)$ after rescaling.
 Then
 $$
 S_e(\omega)
@@ -1531,7 +2111,17 @@ Substituting (D.28) yields (D.24), and (D.25) follows by comparison with $S_e(f)
 1. the band is inside the viable Space of Becoming, so no mode in the band is individually prohibited by Axiom 3;
 2. the coarse-grained predictive benefit of retaining an active mode is independent of $\log\lambda$ across the band;
 3. the resource cost of retaining an active mode is independent of $\log\lambda$ across the band after the fixed endpoints $\lambda_{\min},\lambda_{\max}$ are set by the fastest and slowest physically available update processes;
-4. the only remaining operational cost of a nonuniform profile is the description cost of specifying the rate-profile shape.
+4. among profiles with the same total active weight, the only profile-dependent term in the reduced PCE potential is
+$$
+V_{\mathrm{spec}}[\rho]
+=
+\chi D_{\mathrm{KL}}\!\left(\rho\middle\| |I|^{-1}\right)
+=
+\chi\int_I\rho(u)\log\frac{\rho(u)}{|I|^{-1}}\,du,
+\qquad
+\chi>0,
+$$
+where $u=\log\lambda$, $I=[\log\lambda_{\min},\log\lambda_{\max}]$, and $\rho$ is the normalized active profile.
 
 Then PCE selects a locally scale-neutral active profile $h(\lambda)=h_0$ on the band. Consequently the prediction-error spectrum satisfies
 $$
@@ -1613,7 +2203,7 @@ T^{\mathrm{pred}}_{\mu\nu}
 \tag{D.8.6.2}
 $$
 
-**Theorem D.8.6b (PCE-Ricci Flow on the Regular Metric Branch).** The negative $L^2(e^{-f}d\mathrm{vol}_g)$ natural-gradient flow of $\mathcal V_{\mathrm{geom}}$ with respect to the metric has the form
+**Theorem D.8.6b (Variational Sign of the PCE-Ricci Flow).** Twice the positive $L^2(e^{-f}d\mathrm{vol}_g)$ metric gradient of $\mathcal V_{\mathrm{geom}}$, subject to normalized weighted volume, is
 $$
 \partial_\tau g_{\mu\nu}
 =
@@ -1622,14 +2212,13 @@ $$
 +
 \nabla_\mu\nabla_\nu f
 -
-\frac{\lambda_{\mathrm{pred}}}{2}
-T^{\mathrm{pred}}_{\mu\nu}
+\frac{\lambda_{\mathrm{pred}}}{2}T^{\mathrm{pred}}_{\mu\nu}
 \right)
 +
-\chi(\tau)g_{\mu\nu},
+\chi(\tau)g_{\mu\nu}.
 \tag{D.8.6.3}
 $$
-where $\chi(\tau)$ is the scalar normalization term enforcing the fixed weighted-volume constraint. In the gauge $f=\mathrm{const}$ and after absorbing $\chi g_{\mu\nu}$ into the volume-normalized trace sector, the leading geometric term is Ricci flow with predictive stress forcing:
+Equivalently, (D.8.6.3) is negative-gradient flow for $-\mathcal V_{\mathrm{geom}}$. It is not negative-gradient flow for the functional with the sign displayed in (D.8.6.1). For constant $f$,
 $$
 \partial_\tau g_{\mu\nu}
 =
@@ -1641,44 +2230,27 @@ $$
 \tag{D.8.6.4}
 $$
 
-*Proof.* The first variation of Perelman's weighted functional
+*Proof.* Put $dm=e^{-f}d\mathrm{vol}_g$ and let $h_{\mu\nu}=\delta g_{\mu\nu}$ while varying $f$ so that $dm$ is preserved. Perelman's first-variation formula gives
 $$
-\mathcal F[g,f]=\int_M(R_g+|\nabla f|^2)e^{-f}d\mathrm{vol}_g
-$$
-under metric variations at fixed weighted measure is
-$$
-\delta\mathcal F
+\delta\int_M(R+|\nabla f|^2)dm
 =
 -\int_M
-\left(
-\operatorname{Ric}_{\mu\nu}+\nabla_\mu\nabla_\nu f
-\right)
-\delta g^{\mu\nu}
-e^{-f}d\mathrm{vol}_g
+(\operatorname{Ric}^{\mu\nu}+\nabla^\mu\nabla^\nu f)
+h_{\mu\nu}\,dm.
 $$
-up to the scalar constraint term enforcing $\int e^{-f}d\mathrm{vol}_g=1$. By Definition D.8.6a and (D.8.6.2),
+The stress-tensor convention (D.8.6.2), converted with $\delta g^{\mu\nu}=-h^{\mu\nu}$, gives
 $$
-\delta
-\int_M\mathcal U_{\mathrm{pred}}e^{-f}d\mathrm{vol}_g
+\delta\int_M\mathcal U_{\mathrm{pred}}\,dm
 =
--\frac12
-\int_M
-T^{\mathrm{pred}}_{\mu\nu}\delta g^{\mu\nu}
-e^{-f}d\mathrm{vol}_g
+\frac12\int_M T_{\mathrm{pred}}^{\mu\nu}h_{\mu\nu}\,dm
 $$
-again up to the same scalar normalization direction. Therefore the $L^2(e^{-f}d\mathrm{vol}_g)$ gradient with respect to $g^{\mu\nu}$ is
+modulo the scalar normalization direction. Hence the covariant-metric gradient is
 $$
--\left(
-\operatorname{Ric}_{\mu\nu}
-+
-\nabla_\mu\nabla_\nu f
--
-\frac{\lambda_{\mathrm{pred}}}{2}T^{\mathrm{pred}}_{\mu\nu}
-\right)
-+
-\frac12\chi g_{\mu\nu}.
+-\left(\operatorname{Ric}_{\mu\nu}+\nabla_\mu\nabla_\nu f\right)
++\frac{\lambda_{\mathrm{pred}}}{2}T^{\mathrm{pred}}_{\mu\nu}
++\frac{\chi}{2}g_{\mu\nu}.
 $$
-Taking the negative gradient flow and writing it for $g_{\mu\nu}$ gives (D.8.6.3), with the conventional factor $2$ fixed by Ricci-flow normalization. Setting $f$ constant removes the Hessian term and yields (D.8.6.4). ∎
+Multiplying this positive gradient by $2$ gives (D.8.6.3). Setting $f$ constant gives (D.8.6.4). ∎
 
 **Corollary D.8.6c (Einstein Branch as Stationary Predictive Metric Flow).** A regular metric branch is stationary modulo diffeomorphism and weighted-volume normalization if and only if
 $$
@@ -1861,11 +2433,57 @@ $$
 $$
 and (D.8.6.14) follows from (D.8.6.13). ∎
 
-**Corollary D.8.6f (Finite Entropic-Ricci Limit of PCE-Ricci Flow).** Let $(X_N,L_N,\pi_N)$ be finite detailed-balance PCE generators with entropic Ricci curvature bounded below by $\lambda_N\to\lambda$. Suppose their metric-measure realizations converge to a compact regular metric-measure branch $(M,g,e^{-f}d\mathrm{vol}_g)$, their Dirichlet forms Mosco-converge to the Cheeger energy of that branch, their entropic transport actions and entropies Γ-converge to the corresponding continuum $W_2$ action and weighted entropy, and their retained predictive energy densities converge to $\mathcal U_{\mathrm{pred}}$. Then the finite PCE gradient flows converge to the metric PCE-Ricci flow (D.8.6.3), and the stationary limit is exactly the balance equation (D.8.6.5).
+**Corollary D.8.6f (Finite Entropic-Ricci Limit of PCE Density Flow).** Let $(X_N,L_N,\pi_N)$ be finite detailed-balance PCE generators with entropic Ricci curvature bounded below by $\lambda_N\to\lambda$. Suppose their metric-measure realizations converge to a compact regular metric-measure branch $(M,g,m)$, where $m=e^{-f}d\mathrm{vol}_g$. Assume an energy-dissipation convergence certificate for the finite entropic transport flows: the energies
+$$
+\mathcal H_N(\rho_N)
+=
+D(\rho_N\pi_N\Vert\pi_N)
++
+\int \mathcal U_{\mathrm{pred},N}\rho_N\,d\pi_N
+$$
+Γ-converge to
+$$
+\mathcal H(\rho)
+=
+\int_M\rho\log\rho\,dm
++
+\int_M\mathcal U_{\mathrm{pred}}\rho\,dm,
+$$
+the initial energies converge, the metric derivatives satisfy the action liminf inequality, the descending slopes satisfy the slope liminf inequality, and the corresponding sublevels are compact. Assume in addition that $\mathcal H$ is proper and lower semicontinuous and that its descending slope is a strong upper gradient on the retained $W_2$ domain; geodesic $\Lambda$-convexity is a sufficient branch condition. Then every convergent subsequence of finite density gradient flows converges to the $W_2$ gradient flow of $\mathcal H$ on the prescribed metric-measure space $(M,g,m)$. Its stationary densities satisfy
+$$
+\log\rho+1+\mathcal U_{\mathrm{pred}}=\text{constant}
+$$
+on each connected component on which $\rho>0$.
 
-This is a finite Markov-chain stability statement. The metric branch appears only after the stated continuum limit, and gravity remains the thermodynamic/equation-of-state balance of Corollary D.8.6c.
+This conclusion concerns density evolution on $(M,g,m)$. It supplies no evolution equation for $g$ and no tensor equation of the form (D.8.6.5). A continuum limit yielding (D.8.6.3) requires an independent microscopic metric variable together with convergence of its metric action, energy, slopes, and dissipation.
 
-*Proof.* Mosco convergence of the Dirichlet forms gives convergence of the quadratic tangent norms. Γ-convergence of the transport actions gives lower semicontinuity of metric slopes and convergence of minimizing movement schemes for the entropy-gradient flows. Γ-convergence of the entropies and of the predictive energy terms identifies the limiting PCE functional with $\mathcal V_{\mathrm{geom}}$ in Definition D.8.6a. Therefore every limit curve of finite $\mathcal W_{L_N}$-gradient flows is the natural-gradient flow of $\mathcal V_{\mathrm{geom}}$. The first-variation computation in Theorem D.8.6b identifies that limiting natural-gradient equation with (D.8.6.3). Lower semicontinuity of $\lambda_N$-convexity gives the limiting entropic stability bound with modulus $\lambda$. Setting the limiting gradient to zero gives (D.8.6.5), which is Corollary D.8.6c. ∎
+*Proof.* Each finite flow satisfies the energy-dissipation inequality
+$$
+\mathcal H_N(\rho_N(T))
++
+\frac12\int_0^T
+\left(
+|\dot\rho_N|_N^2
++
+|\partial\mathcal H_N|_N^2(\rho_N)
+\right)dt
+\le
+\mathcal H_N(\rho_N(0)).
+$$
+Sublevel compactness gives a convergent subsequence. Apply the assumed Γ-liminf inequality to the endpoint energy and the two assumed liminf inequalities to the action and slope terms. Convergence of the initial energies yields
+$$
+\mathcal H(\rho(T))
++
+\frac12\int_0^T
+\left(
+|\dot\rho|_{W_2}^2
++
+|\partial\mathcal H|_{W_2}^2(\rho)
+\right)dt
+\le
+\mathcal H(\rho(0)),
+$$
+which, by the strong-upper-gradient hypothesis, characterizes the retained $W_2$ gradient flow of $\mathcal H$. At stationarity the first variation vanishes subject to $\int\rho\,dm=1$; hence $\log\rho+1+\mathcal U_{\mathrm{pred}}$ equals the Lagrange multiplier on every positive connected component. No step varies $g$, so no metric-flow or tensor-balance conclusion is available. ∎
 
 ### D.8.7 Thermodynamic Length Bound for Varying Effective Constants
 
@@ -1969,20 +2587,27 @@ Substitute this into Theorem D.8.7b and solve for the drift magnitude. ∎
 
 *Proof.* Set $\Sigma[\lambda]=0$ in (D.8.7.4). Then $d_G(\lambda_0,\lambda_1)=0$. Since $G$ is positive definite on identifiable directions, the endpoints differ only along non-identifiable quotient directions. ∎
 
-**Definition D.8.7e (Classical Predictive Record Current).** Let $X$ be the finite Blackwell-PCE record alphabet selected by Theorem M.6.11b for a steady ND-RID quotient. Let $k(x,y)$ be the continuous-time transition rate from $x$ to $y$, with stationary law $\pi$ satisfying
+**Definition D.8.7e (Classical Predictive Record Current).** Let $X$ be a finite record alphabet and let $(X_t)_{t\ge0}$ be an irreducible continuous-time Markov jump process with finite rates $k(x,y)$. Let its stationary law $\pi$ satisfy
 $$
-\sum_x\pi(x)k(x,y)=\pi(y)\sum_z k(y,z).
+\sum_x\pi(x)k(x,y)
+=
+\pi(y)\sum_zk(y,z),
 \tag{D.8.7.6}
 $$
-For an antisymmetric increment $d(x,y)=-d(y,x)$, define the integrated record current
+assume $X_0\sim\pi$, and assume dynamic reversibility,
+$$
+k(x,y)>0
+\quad\Longleftrightarrow\quad
+k(y,x)>0.
+$$
+For an antisymmetric increment $d(x,y)=-d(y,x)$, define
 $$
 J_T
 =
-\sum_{0<t\le T}
-d(X_{t^-},X_t).
+\sum_{0<t\le T}d(X_{t^-},X_t).
 \tag{D.8.7.7}
 $$
-The total steady entropy production over time $T$ is
+The total steady entropy production is
 $$
 \Sigma_T
 =
@@ -1992,31 +2617,31 @@ T\sum_{x<y}
 \frac{\pi(x)k(x,y)}{\pi(y)k(y,x)},
 \tag{D.8.7.8}
 $$
-with zero contribution from edges whose stationary forward and backward fluxes are both zero.
+where pairs with both rates zero contribute zero. Irreducibility makes $\pi(x)>0$ for every $x$, and dynamic reversibility makes every remaining logarithm finite.
 
-**Theorem D.8.7f (Predictive Thermodynamic Uncertainty Bound).** For every finite irreducible steady ND-RID record quotient of Definition D.8.7e with $\langle J_T\rangle\ne0$,
+**Theorem D.8.7f (Predictive Thermodynamic Uncertainty Bound).** Under Definition D.8.7e, for every $T>0$ and every current with $\langle J_T\rangle\ne0$,
 $$
 \frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\,\Sigma_T
 \ge
-2.
+2,
 \tag{D.8.7.9}
 $$
-Equivalently,
+or equivalently
 $$
 \Sigma_T
 \ge
 2\,\frac{\langle J_T\rangle^2}{\operatorname{Var}(J_T)}.
 \tag{D.8.7.10}
 $$
-Thus a stable predictive record current cannot be both highly precise and entropy-cheap. The bound applies to measurement records, update currents, anomaly-ledger currents, and memory-ledger currents after projection to the Blackwell-PCE commutative record algebra.
+The bound applies to a measurement, update, anomaly-ledger, or memory-ledger output only after that output independently satisfies Definition D.8.7e.
 
-*Proof.* By Theorem M.6.11b, the retained record algebra is commutative and PCE-minimal. Therefore the ND-RID quotient on that record algebra is a finite continuous-time Markov jump process with rates $k(x,y)$ and stationary law $\pi$. Irreducibility gives a unique stationary law and finite current moments. The steady entropy production is exactly (D.8.7.8), the standard stochastic-thermodynamic entropy production for the stationary Markov jump process. The finite-time thermodynamic uncertainty relation for stationary continuous-time Markov jump processes gives
+*Proof.* The hypotheses are precisely those of the finite-time thermodynamic uncertainty relation of Horowitz and Gingrich (2017, *Physical Review E* 96, 020103): a finite stationary continuous-time Markov jump process and an integrated antisymmetric jump current. Their theorem gives
 $$
 \operatorname{Var}(J_T)\,\Sigma_T
 \ge
 2\langle J_T\rangle^2.
 $$
-Dividing by $\langle J_T\rangle^2$ proves (D.8.7.9), and rearranging proves (D.8.7.10). Since every reported PU record current is, by construction, a current on the selected commutative record quotient, the same inequality applies to the listed record-current channels. ∎
+Because $\langle J_T\rangle\ne0$, division by its square gives (D.8.7.9). If $\operatorname{Var}(J_T)=0$, the displayed inequality forces $\langle J_T\rangle=0$ whenever $\Sigma_T<\infty$, so the nonzero-mean branch has positive variance and rearrangement gives (D.8.7.10). ∎
 
 **Corollary D.8.7g (TUR Gate for a Classical Readout).** Let a noncommutative finite protocol be read out through a channel
 $$
@@ -2303,14 +2928,14 @@ If, in addition, $M_S$ is a polytope in the retained affine response coordinates
 
 This appendix has provided a rigorous analysis grounded in the variational perspective of minimizing the PCE Potential $V(x)$ (Definition D.1), modeling the slow adaptation dynamics of the MPU network as a stochastic gradient flow (Equation D.8). We demonstrated through formal proofs and analysis of the potential structure and dynamics that:
 
-1.  **Alignment (Theorem 2)** is dynamically enforced in a two-level sense. Exact alignment $C_P(v)=\langle \hat{C}_v \rangle$ is the necessary condition for true stable PCE equilibria (Section D.3, Corollary D.1). On the operational side, the observable work-cost gap $\Delta W_v$ (Lemma D.2) and the stochastic contraction estimate (Proposition D.1, Corollary D.2) drive the proxy toward that equilibrium up to a controlled ND-RID noise floor. Quantum circuit complexity emerges as the uniquely stable operational proxy choice (Remark D.1).
+1.  **Alignment (Theorem 2)** has two conditional levels. On the faithful-cost-identifiability and efficiency-saturated branch, Corollary D.1 makes $C_P(v)=\langle\hat C_v\rangle$ necessary at a true stable PCE equilibrium. Under the quasi-static-target and stochastic regularity hypotheses of Proposition D.1, the registered work-cost feedback contracts mean-square misalignment toward the noise floor of Corollary D.2. This identifies the cost-relevant proxy only up to the response- and cost-preserving reparameterizations described in Remark D.1; Definition B.1 supplies the quantum-circuit-complexity coordinate.
 
-2.  **Geometric Regularity (Theorem 43)** emerges dynamically. Irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), so regular configurations are precisely the global minima of the geometrical sector of the PCE landscape and hence the global minima of the full potential are geometrically regular (Section D.4, Theorem D.3).
+2.  **Geometric Regularity (Theorem 43)** holds for full-potential global minimizers on the strict-comparison branch of Theorem D.3. The cost estimates of Lemma D.3 motivate regular configurations as candidates for the low-potential geometrical sector; they do not prove that every regular configuration is a minimizer. If every irregular configuration has a regular equal-proxy comparator with strictly lower core potential, no irregular configuration can minimize the full potential.
 
 3.  **Complexity Adaptation Convergence (Section D.8):** A rigorous analysis of the complexity adaptation dynamics (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, establishes exponential convergence to the unique POP-optimal complexity $C^{\star}$ with explicit rate $\underline{\lambda}\,\eta_{adapt}$ (Theorem D.8). Using strong monotonicity, Polyak-Łojasiewicz control, and Ito estimates, we quantify both the deterministic convergence rate (Equation D.15) and the stochastic noise floor (Equation D.16), providing a detailed mechanism for how complexity optimization occurs within the larger PCE landscape.
 
 4.  **Spectral Marginality and 1/f Noise (Section D.8.5):** Linearized stochastic PCE dynamics decompose into relaxation modes whose spectra are Lorentzian. When PCE operates on a marginal viability band with no privileged update scale, the active mode-weight profile is scale-neutral and the summed prediction-error spectrum becomes $S(f)\propto 1/f$ (Theorem D.8b). Deviations from exact pink scaling are controlled by the active rate-density exponent $s$ through $\beta_{\mathrm{spec}}=1-s$ (Theorem D.8a), and finite cutoffs are fixed by the slowest and fastest available update rates (Corollary D.8b.1).
 
-Section D.6.5 establishes ergodicity of the full stochastic dynamics under Assumptions (A1)-(A6), and in the detailed-balance low-noise subcase it yields Gibbs concentration near the regular low-potential sector of $V(x)$. The analysis throughout this appendix confirms that complexity alignment, geometric regularity, and scale-neutral critical spectra are not ad-hoc assumptions but dynamically selected outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network under the stated hypotheses. These results provide the precise support needed for the subsequent conditional derivations of emergent spacetime, gravity, and critical adaptive dynamics.
+Section D.6.5 establishes ergodicity of the full stochastic dynamics under Assumptions (A1)–(A6), and its detailed-balance low-noise subcase yields Gibbs concentration near the global-minimum sector of $V(x)$. That sector is geometrically regular only under the strict-comparison hypothesis of Theorem D.3. Exact alignment, local-minimizer regularity, pink spectra, and continuum closure likewise retain the faithful-cost, local-regularization, scale-neutral, and continuum-certificate hypotheses stated in their respective results. The subsequent spacetime and gravity arguments may consume only the branches on which those records are jointly satisfied.
 
 **Remark D.9.1 (Justification for PCE Cost Minimization).** Three arguments support the principle that realized physical configurations minimize the PCE potential $V(x) = V_{\mathrm{op}}(x) + V_{\mathrm{prop}}(x) - V_{\mathrm{benefit}}(x)$ rather than maximizing it, satisfying some other functional, or occupying a random point in the admissible region. First, *thermodynamic stability*: configurations that do not minimize cost relative to perturbations are unstable under the fluctuation-dissipation dynamics of Theorem D.5. Any configuration with avoidable cost is driven toward lower cost by the same irreversible processes that Theorem 31 mandates; the PCE attractor is the fixed point from which no further cost reduction is achievable. Second, *selection pressure*: predictive systems that waste resources on avoidable costs are outcompeted by those that do not, because wasted resources reduce predictive capacity available for adaptation (Axiom 1, POP); the PCE attractor is the endpoint of this selection process, analogous to the ground state in thermodynamics. Third, *uniqueness*: for generic Morse-type potentials on the finite-dimensional configuration space constrained by Theorem E.2 and Theorem K.10.4, local minima are isolated (the set of smooth functions with non-degenerate critical points is open and dense in the $C^2$ topology); PCE therefore predicts discrete, isolated attractor configurations, consistent with the observed discreteness of physical constants and particle spectra. These arguments do not constitute a proof that PCE is the uniquely correct selection principle; they establish that PCE is the natural selection principle within the framework's operational logic and that its predictions are falsifiable: if the realized configuration demonstrably fails to minimize cost over the admissible class, PCE is refuted.

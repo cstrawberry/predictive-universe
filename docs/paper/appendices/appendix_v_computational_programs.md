@@ -26,13 +26,13 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 ### V.1.1 Foundational PU Equations for $\Lambda$
 
-1. **Instanton action.** For the minimal vacuum fluctuation,
+1. **Instanton action on the equal-contribution branch.** Assume the Appendix U action-complexity map that assigns the same dimensionless action contribution $C_{\max}/\varepsilon_0$ to every unit of $\kappa$. Then
 
    $$
-   \boxed{S_{\mathrm{inst}}=\left(\frac{C_{\max}}{\varepsilon}\right)\kappa = 2\,\kappa} \tag{V.1}
+   \boxed{S_{\mathrm{inst}}=\left(\frac{C_{\max}}{\varepsilon_0}\right)\kappa = 2\,\kappa} \tag{V.1}
    $$
 
-   where $C_{\max}/\varepsilon_0=2$ on the residual-budget branch of Appendix E (Equation E.14) and Appendix Q (§Q.2.1, Equation Q.10). The residual-budget branch is the load-bearing assumption inherited by every $\Lambda L_P^2 \sim e^{-2\kappa}$ value computed in this section.
+   on the residual-budget branch, where Appendix E, Equation E.14 and Appendix Q, Equation Q.10 give $C_{\max}/\varepsilon_0=2$. The cited equations determine the ratio; the equal-contribution action map is a separate branch hypothesis. Here $\varepsilon_0=\ln2$ is the structural binary reference and is not a claim that every physical reset has cost $\ln2$. Every value proportional to $e^{-2\kappa}$ in this section is conditional on both the residual-budget ratio and the action-complexity map.
 
 2. **Vacuum energy density.** The dimensionless combination $\Lambda L_P^2$ is
 
@@ -52,8 +52,9 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 ### V.1.2 Observational Inputs
 
-- **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) [Planck Collaboration 2020a]:**
+- **Cosmological hybrid diagonal-input convention (Planck 2018, base-$\Lambda$CDM) [Planck Collaboration 2020a]:**
   $H_0=67.4\pm0.5~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_{\Lambda}=0.6889\pm0.0056$.
+  The $H_0$ pair is the rounded Planck TT,TE,EE+lowE+lensing marginal, while the $\Omega_\Lambda$ pair is from the corresponding Planck+BAO column. They are deliberately combined only as a declared diagonal sensitivity convention and are not presented as a draw from one joint Planck posterior.
 - **Planck length (CODATA 2022) [Mohr et al. 2025; NIST 2024]:**
   $L_P=1.616255(18)\times 10^{-35}~\mathrm{m}$.
 - **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
@@ -78,7 +79,7 @@ $$
 \boxed{\Lambda L_P^2 \;=\; (2.86599 \pm 0.04849)\times 10^{-122}} \tag{V.5}
 $$
 
-The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relative uncertainty in $L_P$ is negligible at this precision.
+The quoted uncertainty uses diagonal propagation of the declared hybrid $H_0$ and $\Omega_{\Lambda}$ marginal inputs; it is not a covariance-aware joint-posterior credible interval. The relative uncertainty in $L_P$ is negligible at this precision.
 
 ### V.1.4 Consistency Check via Inversion
 
@@ -88,7 +89,7 @@ $$
 \Lambda_4 L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}.
 $$
 
-Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference evaluation; a theorem-level four-mode forward interval requires the Fredholm prefactor certificate, with the relative Quillen-Fredholm reformulation of Theorem U.15i.2, and an interval audit.
+Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference evaluation. A theorem-level four-mode forward interval requires an accepted canonical closure record $\mathfrak F_U^{(4)}$ of Definition U.73e. The earlier Definition U.15d Fredholm certificate together with the Definition U.15f.1 interval audit is not automatically equivalent to the canonical record; it discharges the canonical gate only through an accepted embedding that additionally supplies $H_4$, $\mathcal T_4$, and every remaining field of Definition U.73e on the same four-mode branch.
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):
 
@@ -132,25 +133,26 @@ Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\
 
 ---
 
-## V.2 Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor on the Canonical Appendix Z Branch
+## V.2 Certificate-Conditional Derivation of $\alpha_{\mathrm{em}}$ on the Appendix Z Branch
 
-This section provides the direct computational program for the fine-structure constant as recorded in **Appendix Z**. The calculation introduces no continuous fit parameters once the discrete Appendix Z assumptions, branch normalizations, and matching conventions are fixed; it is not an unconditional derivation of those branch normalizations themselves. The relevant Appendix Z branches inherited here include the bulk Predictive-Ward unit-normalization branch (Theorem Z.14, $\kappa^*_{\mathrm{bulk}} = 1$, with Thomson-Ward spectral-weight closure when Definition Z.14d is supplied via Theorem Z.14e), the canonical first-order interface-derivative normalization branch (Theorem Z.17), the canonical separable second-order curvature-response branch (Theorem Z.25), and the column-covariance branch (Lemma Z.24a) for the Bures-to-gauge identification.
+This section derives the Appendix Z fine-structure value conditionally on its registered branch and matching data. The inherited package includes the PCE-attractor conditions of Definition 15a, the minimal Hilbert-carrier and rank-two active-projector branches, the unit Predictive-Ward normalization of Theorem Z.14, the unit-interface-response specialization $c_{\mathrm{int}}=1$ of Theorem Z.17, the separable curvature-response branch of Theorem Z.25, and the column-covariance branch of Lemma Z.24a. Once these antecedent certificates are supplied, the displayed spectral and coupling values are deductive consequences of the cited theorems. No coefficient is adjusted to comparison data within this declared package.
 
-### V.2.1 Foundational Inputs (Derived from PU First Principles)
+### V.2.1 Structural and Branch Inputs
 
-- **MPU Hilbert Space Dimension:** $d_0 \ge 8$ (from $K_0=3$ bits, Theorem 23); the PCE-minimal active-operational branch used in Appendix Z selects the saturating case $d_0 = 8$ (Chapter 7; Theorem Z.2).
-- **Structural Binary Reference:** $\varepsilon_0=\ln2$ nats (from SPAP cycle, Theorem 31).
+- **MPU Hilbert Space Dimension:** Theorem 23 gives $d_0\ge8$ from Hilbert distinguishability; Theorem Z.2 gives $d_0=8$ only on the active-dimension-saturation branch.
+- **Structural Binary Reference:** $\varepsilon_0=\ln2$ nats is the log-cardinality of the registered binary verification quotient (Definition 28; Lemma J.1).
+- **Attractor Conditions:** Definition 15a requires attainment, a singleton quotient minimizer, flat U(1) SLD-QFI, and the declared capacity-boundary condition.
 
-### V.2.2 Derived Spectral Parameters for the PCE-Attractor
+### V.2.2 Derived Interface Spectrum on the Registered Branch
 
-As derived in Appendix Z (Theorem Z.5) from the subspace structure induced by the Landauer Pointer mechanism, the QFI spectrum at the PCE-Attractor is flat and uniquely determined:
+For the selected state $\rho_0=I_a/a\oplus0_b$ with $(d_0,a,b)=(8,2,6)$ and the Hilbert--Schmidt-normalized interface generators of Theorem Z.5, the SLD-QFI calculation gives:
 
-- **Number of Information Modes:** $M = 2ab = 2 \cdot 2 \cdot (8-2) = 24$.
-- **Per-Mode Sensitivity:** $\lambda = 2/a = 2/2 = 1$ (here $\lambda$ denotes the QFI eigenvalue of the interface modes; it is unrelated to the resource-scarcity parameter of Definition 20).
+- **Number of Information Modes:** $M=2ab=2\cdot2\cdot6=24$.
+- **Per-Mode Sensitivity:** $\lambda=2/a=1$ (here $\lambda$ denotes the QFI eigenvalue of the interface modes; it is unrelated to the resource-scarcity parameter of Definition 20).
 
 ### V.2.3 Capacity Saturation Condition
 
-At the PCE-Attractor, the system operates at its maximum information capacity (Theorem Z.6). The predictive information gain equals the operational alphabet capacity:
+On the cap-active PCE-Attractor branch, the operational alphabet capacity saturates at $\ln d_0$ (Theorem Z.7). The predictive information gain equals the operational alphabet capacity:
 
 $$
 \mathcal{I}(u^*) = M \ln(1 + \lambda u^*) = \ln d_0
@@ -691,11 +693,22 @@ s_B\langle\sigma_B\rangle_{\omega_{\theta'}}
 \tag{V.3.11c.2.4}
 $$
 
-*Proof.* The Jacobian of the moment map is minus the covariance matrix. Integrating along the segment and using (V.3.11c.2.1) gives
+*Proof.* Put $d=\theta'-\theta$ and $\theta_t=\theta+td$. Since the exponential-family convention gives $Dc(\theta)=-\operatorname{Cov}_{\omega_\theta}(m)$,
 $$
-\|c'-c\|\ge\gamma\|\theta'-\theta\|,
+c'-c=-\int_0^1\operatorname{Cov}_{\omega_{\theta_t}}(m)d\,dt.
 $$
-proving (V.3.11c.2.2). Differentiating $\langle\sigma_B\rangle$ gives the cross-covariance with the moment vector. Integration, (V.3.11c.2.3), and (V.3.11c.2.2) give (V.3.11c.2.4). ∎
+Taking the inner product with $-d$ and using (V.3.11c.2.1) yields
+$$
+-\langle d,c'-c\rangle
+=\int_0^1\langle d,\operatorname{Cov}_{\omega_{\theta_t}}(m)d\rangle dt
+\ge\gamma\|d\|^2.
+$$
+Cauchy-Schwarz gives $\|d\|\,\|c'-c\|\ge\gamma\|d\|^2$; if $d\ne0$, division proves (V.3.11c.2.2), and the case $d=0$ is immediate. Moreover,
+$$
+\frac d{dt}\langle\sigma_B\rangle_{\omega_{\theta_t}}
+=-\operatorname{Cov}_{\omega_{\theta_t}}(\sigma_B,m)\cdot d.
+$$
+Integrating, applying (V.3.11c.2.3), multiplying by $|s_B|$, and then using $\|d\|\le\|c'-c\|/\gamma$ gives (V.3.11c.2.4). ∎
 
 **Corollary V.3.11c.3 (Calibration Condition-Number Gate).** A final-calibrated numerical interval must propagate the registered moment uncertainty through (V.3.11c.2.4). If the covariance floor $\gamma$ approaches zero, the inverse moment problem is ill-conditioned and the coefficient remains certificate-pending unless a different identifiable chart supplies a positive floor. The no-double-counting conclusion concerns KL increments under exact nesting on one fixed atom set and reference measure; it does not assert statistical independence or erase correlated physical or certificate uncertainties.
 
@@ -1052,14 +1065,14 @@ This gate fixes the automorphism-invariant reference measure and its codeweight 
 
 *Proof.* If the additive code acts by regular translations on the atom set, any invariant probability measure is constant on a single transitive orbit. If equal trace ranks are supplied instead, Definition V.3.11a gives $\nu_{*,\alpha}=\operatorname{Tr}P_\alpha/\operatorname{Tr}I_{\mathrm{cal}}=1/4096$. The weight pushforward and moment identities are then precisely Theorem Z.13c.1. The final sentence follows from the list of required entries in Definition V.3.11a and the coefficient map of Definition V.3.11e. ∎
 
-**Theorem V.3.11i (Golay Association-Scheme Calibration Carrier).** On a final-calibration branch whose finite response carrier is the marked predictive-recovery Golay carrier, let
+**Theorem V.3.11i (Golay association-scheme calibration carrier under the multiplicity-basis quotient).** On a final-calibration branch whose finite response carrier is the marked predictive-recovery Golay carrier, let
 $$
 \mathcal H_{\mathrm{cal}}
 =
 \mathbb C[\mathcal G_{24}\times F]
 \tag{V.3.11i.1}
 $$
-where $F$ is the finite flag set fixed by the accepted branch markings, including the active/passive split, the $3+2+1$ block frame, and any accepted orientation or hypercharge sign convention. Let $\Gamma_{\mathrm{PU}}$ be the finite group of response-preserving automorphisms of this marked carrier. Define
+where $F$ is the finite flag set selected by the accepted branch markings, including the active/passive split, the $3+2+1$ block frame, and any accepted orientation or hypercharge sign convention. Let $\Gamma_{\mathrm{PU}}$ be the finite group of response-preserving automorphisms of this marked carrier. Assume additionally that the response-null quotient identifies operators related by inner conjugation with every unitary of the commutant $\mathcal E_{\mathrm{PU}}$; equivalently, scalar calibration observables must be invariant under all multiplicity-basis changes inside the Wedderburn blocks of $\mathcal E_{\mathrm{PU}}$. Define
 $$
 \mathcal E_{\mathrm{PU}}
 =

@@ -1,6 +1,6 @@
 # 5. Complexity Thresholds: Operational Threshold and Horizon Constant
 
-Having established the logical limits on prediction (SPAP, Theorem 10; Theorem 11) and the notion of **Predictive Physical Complexity** $C_P$ (Equation 1), this section formalizes two distinct complexity thresholds within the PU framework. The **Operational Threshold** $C_{op}$ (Definition 13) is the minimum $C_P$ required for the *full adaptive predictive loop* (Definition 4) to achieve functional viability (prediction better than chance). The **Horizon Constant** $K_0$ (Theorem 15) is the fixed, minimal complexity required to instantiate the *core logic* of the self‑referential paradox (SPAP) that is necessarily embedded, as a sub‑dynamic, within the operational loop. We prove the relationship $C_{op}\ge K_0$ (Corollary 3) and discuss the distinct physical roles of these thresholds.
+Having established the logical limits on prediction (SPAP, Theorem 10; Theorem 11) and the notion of **Predictive Physical Complexity** $C_P$ (Equation 1), this section formalizes two distinct thresholds within the PU framework. The **Operational Threshold** $C_{op}$ (Definition 13) is the infimum of $C_P$ over implementations of the full adaptive predictive loop that exceed a declared random baseline by a declared margin. The **Horizon Constant** $K_0$ (Theorem 15) is a three-bit visited-context floor within the realization class satisfying its register and full-context hypotheses. Corollary 3 proves $C_{op}\ge K_0$ only under an explicit bridge from operational/Hilbert capacity to $C_P$.
 
 **5.1 Operational Threshold $C_{op}$**
 
@@ -15,16 +15,23 @@ $$
 \quad \text{(15)}
 $$
 
-If the set in (15) is empty, define $C_{op}:=\infty$. Otherwise, since $C_P(\mu)\ge 0$ for physically realizable $\mu$ and the set is bounded below, the infimum exists in $[0,\infty)$. For predictions aggregated over $T$ trials, a canonical statistically significant margin is $\epsilon_{acc}=\Theta(T^{-1/2})$ by standard concentration bounds.
+If the set in (15) is empty, define $C_{op}:=\infty$. Otherwise, since $C_P(\mu)\ge 0$ for physically realizable $\mu$ and the set is bounded below, the infimum exists in $[0,\infty)$. For independent trial scores $Z_1,\ldots,Z_T\in[0,1]$ with a declared null mean and one-sided error probability $\delta\in(0,1)$, Hoeffding's inequality (Hoeffding, 1963) gives
+$$
+\Pr\!\left[\frac1T\sum_{t=1}^T Z_t-\mathbb E[Z_t]\ge\epsilon_{acc}\right]
+\le e^{-2T\epsilon_{acc}^2},
+$$
+so $\epsilon_{acc}=\sqrt{\log(1/\delta)/(2T)}$ suffices. Dependent trials require a separately stated mixing, martingale, or other concentration hypothesis.
 
-**Interpretation.** $C_{op}$ is the minimum complexity at which a system “comes online” as a non‑trivial predictive unit capable of sustaining the adaptive Fundamental Predictive Loop (Definition 4; capabilities $b_m,b_p,b_v, D_{cyc}$, Definition 5) and operating within the Space of Becoming $(\alpha,\beta)$ (Definition 8). Any system with instantaneous complexity $C(t)<C_{op}$ lacks the structural resources for reliable better‑than‑chance prediction.
+**Interpretation.** For the declared environment, accuracy functional, baseline, and margin in Definition 13, $C_{op}$ is the infimum of $C_P$ over qualifying full-loop implementations. A state with $C_P<C_{op}$ cannot belong to that qualifying set. Existence of an implementation at $C_P=C_{op}$ requires attainment of the infimum, and membership in a Space-of-Becoming band requires the separate task-and-score identification of Definition 8.
 
 **5.1.1 Physical Interpretation: Baseline Cost and Capability**
 
-The Operational Threshold $C_{op}$ measures the minimum complexity to implement the *integrated functionality* of the adaptive loop with super‑chance performance. Because the loop is adaptive and logically asymmetric, its operation entails irreversibility; thermodynamic costs follow. Let $R(C)$ be the Physical Operational Cost function (Definition 3), mapping complexity to baseline resource‑consumption rate. The minimal continuous dissipation required to sustain the threshold loop is
+The Operational Threshold $C_{op}$ measures the infimum of $C_P$ over the qualifying set $\mathcal Q$ in Definition 13. If $\mathcal Q=\varnothing$, no finite threshold loop exists and $P_{min}$ is undefined. Suppose $\mathcal Q\ne\varnothing$, the integer-valued complexity $C_P$ attains its least qualifying value $C_{op}$, every qualifying implementation with complexity $C$ has baseline resource-consumption rate $R(C)$, and $R$ is non-decreasing. Then the least baseline dissipation among qualifying implementations is
 
 $$
-\boxed{P_{min} \;=\; R(C_{op}).}
+\boxed{P_{min}
+=\min_{\mu\in\mathcal Q}R\big(C_P(\mu)\big)
+=R(C_{op}).}
 \quad \text{(16)}
 $$
 
@@ -40,11 +47,11 @@ A concrete baseline arises from Landauer‑type considerations for logically irr
   \approx\ 2.87\times 10^{-12}\ \mathrm{W}.
   $$
 
-More generally, if the loop executes $n_{\mathrm{irr}}\ge 1$ logically irreversible merges per cycle at temperature $T$ with cycle time $\tau_{cyc}$, the Landauer-limited baseline is
+More generally, suppose the loop executes $n_{\mathrm{reset}}\ge1$ registered resets per cycle at temperature $T$ and cycle time $\tau_{cyc}$. For reset $j$, let $P_j$ be the erased register, let $R_j$ be the retained side information, and measure $H_{q_j}(P_j\mid R_j)$ in nats. On the registered-reset branch of Theorem 31, additivity of the per-reset work lower bounds gives
 $$
-P_{\mathrm{reset}}\ge \frac{k_BT}{\tau_{cyc}}\sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j),
+P_{\mathrm{reset}}\ge \frac{k_BT}{\tau_{cyc}}\sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j).
 $$
-where $\varepsilon_0=\ln2$ is the structural binary log-cardinality and the sum uses the actual conditional entropies of registered resets (Theorem 31); the numerical estimate above is the special conditionally uniform, overhead-free case $n_{\mathrm{reset}}=1$, $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)=\ln2$, $T\approx 300$ K, and $\tau_{cyc}\approx 10^{-9}$ s. If available power falls below the relevant $P_{min}$ for the operating $(T,\tau_{cyc},n_{\mathrm{irr}})$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Appendix D, Section D.3, work-cost gap mechanism, and Theorem 31).
+The numerical estimate above is the conditionally uniform, overhead-free case $n_{\mathrm{reset}}=1$, $H_q(P\mid R)=\ln2$, $T\approx300$ K, and $\tau_{cyc}\approx10^{-9}$ s. If available power is below the right-hand side, the declared reset schedule cannot be sustained under this work bound. Concluding that $C(t)$ falls below $C_{op}$ additionally requires a dynamical hypothesis linking reset failure to departure from the qualifying set of Definition 13.
 
 
 **5.2 Minimal Complexity for Self-Reference and Prediction ($K_0$)**
@@ -53,41 +60,36 @@ We investigate the minimum complexity needed for a system to instantiate the cor
 
 **5.2.1 Fundamental Logical Capabilities for Self-Referential Prediction**
 
-**Proposition 5.2.1 (Necessary Logical Capabilities for Self-Referential Prediction)**
+**Proposition 5.2.1 (Necessary Logical Capabilities for the Adaptive Predictive Loop)**
 
-Any system engaging in non-trivial self-referential prediction, irrespective of its specific physical or computational makeup, must simultaneously possess capabilities equivalent to:
+Any system instantiating the adaptive Fundamental Predictive Loop of Definition 4 must simultaneously possess capabilities equivalent to:
 * (i) **State Distinction ($b_m$):** The ability to represent and distinguish between its own internal states.
-* (ii) **Predictive Generation ($b_p$):** An internal mechanism or model to generate representations of potential future states.
-* (iii) **Verification & Update ($b_v$):** The ability to compare its predictions with actual outcomes and initiate an update to its internal state or model.
+* (ii) **Predictive Generation ($b_p$):** An internal mechanism or model that generates a representation of a possible future state before the outcome is observed.
+* (iii) **Verification & Update ($b_v$):** The ability to compare the stored prediction with the realized outcome and to initiate an outcome-conditioned state or model transition.
 
-*Proof.*
-* (i) **State distinction is necessary.** A self-referential predictor must encode at least one present internal state and distinguish that state from alternatives. Otherwise the phrases "the current internal state," "the predicted successor state," and "the updated state after verification" collapse into an undifferentiated symbol with no operational content. In that case self-reference is not well formed.
-* (ii) **Predictive generation is necessary.** Prediction requires an internal representation of a possible future state prior to the actual outcome. If the system lacks any mechanism for generating such a representation, then it can only react to current input after the fact; it is not performing prediction.
-* (iii) **Verification and update are necessary.** A predictive act is operationally meaningful only if the system can compare the realized outcome with the previously generated prediction and modify its state or model accordingly. Without such a comparison, predictive success or failure is undefined for the system itself, and no adaptive predictive cycle can be instantiated.
-
-These three capabilities are jointly necessary. Removing any one of them destroys one of the three indispensable stages of the predictive loop: identifiable self-state, internally generated forecast, and outcome-conditioned correction. Therefore any non-trivial self-referential predictor must realize all of $b_m$, $b_p$, and $b_v$. ∎
+*Proof.* Definition 4 requires model maintenance, prediction generation, verification, and adaptation. Model maintenance is not operationally defined unless at least two relevant internal alternatives can be distinguished; this is $b_m$. Prediction generation requires a forecast representation to exist before the corresponding outcome; this is $b_p$. Verification and adaptation require joint access to the stored forecast and realized outcome, followed by an outcome-conditioned transition; this is $b_v$. If any one of these capabilities is absent, the corresponding required stage of Definition 4 is absent, so the system does not instantiate that adaptive loop. Therefore every realization of the loop has all three capabilities. ∎
 
 
 The Horizon Constant $K_0$ will represent the minimal physical complexity required to instantiate these capabilities so that the SPAP self-referential loop is encodable. The theorem below then shows that the same three-bit register size also supports a basic super-chance predictive mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$.
 
 **5.2.2 Theorem 15 (Horizon Constant: Minimal Complexity for SPAP Encodability and Minimal Prediction)**
 
-We first formalize operational prerequisites for SPAP encodability within the loop, then state the environment class used to certify minimal predictive success.
+We first state the operational restrictions on the realization class used for the SPAP register-count argument, then state the environment class used to certify minimal predictive success.
 
-**Operational conditions (sub-dynamics constraints).**
-To ensure a logically sound and physically robust implementation of the SPAP sub-dynamics, the system must reliably access and process the necessary information at the critical moment of the reflexive update—the **Commit Snapshot**. The following operational conditions are not extra postulates. They are the minimal, necessary requirements for a robust and computationally efficient implementation consistent with the Principle of Compression Efficiency (PCE):
+**Operational conditions (sub-dynamics hypotheses).**
+At the **Commit Snapshot**, impose the following hypotheses:
 
-* **(O1) Injective stepping on the cycle.** The one-cycle transition over visited internal configurations is injective on the reversible subsystem (excluding the ancilla register subject to reset for cycle closure, as detailed in Section 7.1.3). Without on-cycle injectivity, distinct pre-commit configurations would merge before the Commit Snapshot and the loop could no longer preserve the information needed to compare prediction against realization. This enforces maximal computational efficiency (cf. Landauer's principle) and is distinct from the overall thermodynamic irreversibility of the full MPU loop, which arises from the ancilla reset operation required for cycle closure (Appendix J, Section J.2).
-* **(O2) Explicit two-phase control.** The loop consists of two logically distinct phases—(prepare/predict/store) and (reflex/update)—distinguished internally by a control bit $c_{phase}$. Storing a prediction and consuming that stored value in the reflexive update are temporally ordered operations; without an explicit phase separator the loop would not define a well-posed self-application map.
-* **(O3) Non-destructive retention.** The current state component $\phi$ and the stored prediction $p_{stored}$ must coexist without destructive overwrite across the phase boundary. The Commit Snapshot compares present state to stored prediction, so both registers must remain simultaneously readable when the reflexive update is executed.
+* **(O1) Injective stepping on the reversible subsystem.** Before the cycle-closing reset, the transition restricted to the visited configurations of the reversible subsystem is injective.
+* **(O2) Explicit two-phase control.** A binary response $c_{phase}$ distinguishes the prepare/predict/store phase from the reflex/update phase.
+* **(O3) Non-destructive retention.** The current-state response $\phi$ and stored-prediction response $p_{stored}$ remain simultaneously readable across the phase boundary and at the reflexive comparison.
 
-These conditions are forced by the already stated loop semantics; each derivation isolates a single ingredient already in the framework.
+These hypotheses define the restricted realization class analyzed in Theorem 15. The following arguments give their operational motivation but do not derive them from Definition 4 or PCE.
 
 *(O3) Non-destructive retention.* Verification is the finite-response operation that compares the realized state against the previously stored prediction (Definition 4, Verification phase). Suppose, for contradiction, that some realization of the SPAP sub-dynamics overwrites $p_{stored}$ before the comparison while still claiming to instantiate the verification phase. Then at the comparison instant the system has access to $\phi$ but not to $p_{stored}$; the binary distinction "prediction matched outcome" versus "prediction mismatched outcome" is therefore not extractable as a finite response, since both joint values $(\phi, p_{stored})=(0,0)$ and $(\phi, p_{stored})=(0,1)$ produce the same observable record after the overwrite. The verification phase is ill-defined in this case, so the candidate realization does not implement Definition 4. The same argument applies if $\phi$ is overwritten before the comparison. Hence any realization of the SPAP sub-dynamics that does instantiate verification must keep both registers simultaneously readable at the Commit Snapshot.
 
 *(O2) Two-phase control.* The same logical pair $(\phi, p_{stored})$ participates in two operationally distinct steps: prepare/predict/store, in which $p_{stored}$ is written from the current model output; and reflex/update, in which $\phi$ is updated from $p_{stored}$ via the SPAP rule. A finite autonomous transition law $T:\mathcal S\to\mathcal S$ on the system state space $\mathcal S$ is a single-valued function. If the same configuration of $(\phi, p_{stored})$ admits two different successor configurations depending on which step is being performed, then $T$ cannot be a function unless the system state space carries an additional coordinate distinguishing the two steps. Two distinct successors require at least one bit of distinguishing data. If that bit is supplied by an external clock, PPI counts the clock state as part of the physical implementation (Appendix P.6.2), so the bit is still physically instantiated. Hence one binary phase coordinate $c_{phase}$ is required either internally or as a counted external register.
 
-*(O1) Injective stepping on the reversible subsystem.* The Commit Snapshot compares $\phi$ to $p_{stored}$ as a response-relevant operation. Suppose two distinct pre-commit configurations $s_1, s_2$ of the reversible subsystem are merged by the one-cycle transition before the Commit Snapshot. Three cases exhaust the alternatives. (i) The distinction $s_1$ versus $s_2$ is response-null: it changes no finite protocol-response presheaf. Then PPI quotients $s_1$ and $s_2$ to the same equivalence class before the count, and the merge is not a count-relevant merge in the first place; (O1) holds vacuously on the quotient. (ii) The distinction is response-relevant and the merged information is required by the verification ledger. Then after the merge the verification phase cannot extract the response-relevant distinction, so the loop fails to instantiate Definition 4 on the merged configurations; this candidate realization is excluded from the inf in Definition 13. (iii) The distinction is response-relevant but is not used by the verification ledger and is retained anyway. Then the merge incurs avoidable Landauer cost (Theorem 31) without changing any response, which strictly increases the PCE potential against the same response presheaf; PCE selection (Definition 15) excludes this realization in favor of the merge-free competitor. In every case, on the PPI/PCE-selected branch entering the Definition 13 infimum, the pre-reset reversible subsystem is injective on the visited logical states.
+*(O1) Operational motivation for injective stepping.* If two pre-commit configurations differ only by response-null information, PPI identifies them before operational contexts are counted. If their distinction is required by the verification response, merging them before the Commit Snapshot destroys that response and the realization fails Definition 4. A response-relevant distinction unused by verification can make a merge thermodynamically costly, but PCE excludes that merge only if an admissible merge-free realization with the same response presheaf and strictly smaller total PCE potential exists. These observations motivate (O1); they do not prove injectivity for every element of the qualifying set in Definition 13.
 
 **Environment class for minimal predictive success.**
 
@@ -103,9 +105,23 @@ $$
 \mathcal{E}_{\mathrm{basic}}(\gamma)\;=\;\Big\{\text{stationary ergodic binary processes}\ :\ \liminf_{T\to\infty}\ \frac1T\sum_{t=0}^{T-1}\mathbb{E}[s_t]\ \ge\ \tfrac12+\gamma\Big\}.
 $$
 
-This class includes, for example, i.i.d. Bernoulli($p$) with $p\neq \tfrac12$ (where $\mathbb{E}[s_t]=p^2+(1-p)^2$) and symmetric two‑state Markov chains with persistence $q>1/2$ (where $\mathbb{E}[s_t]=q$).
+For the declared $\gamma>0$, this class includes an i.i.d. Bernoulli($p$) process precisely when
+$$
+p^2+(1-p)^2
+=\frac12+2\left(p-\frac12\right)^2
+\ge\frac12+\gamma,
+$$
+and it includes a stationary symmetric two-state Markov chain with persistence $q$ precisely when $q\ge\frac12+\gamma$.
 
-Under (O1)–(O3), the **Horizon Constant** equals
+Assume (O1)–(O3) and the following full-context hypothesis:
+
+* **(FC) Full binary role context.** On the visited state set $\mathcal S_{\mathrm{vis}}$, the current-state, stored-prediction, and phase responses are represented by maps
+  $$
+  r_m,r_p,r_v:\mathcal S_{\mathrm{vis}}\to\{0,1\}
+  $$
+  whose joint map $r=(r_m,r_p,r_v)$ is surjective onto $\{0,1\}^3$.
+
+Within this realization class, the **Horizon Constant** equals
 
 $$
 \boxed{K_0 = 3\ \text{bits}.}
@@ -119,145 +135,192 @@ More precisely:
    \phi_{t+1}=\mathrm{NOT}\big(p_{stored}\big)
    $$
 
-   that satisfies (O1)–(O3) requires at least $8$ distinct visited operational configurations. Equivalently,
+   that satisfies (O1)–(O3) and (FC) requires at least $8$ distinct visited operational configurations. The construction in part (2) attains the bound, so
    $$
    N_{\mathrm{vis}}^{\min}=8,
    \qquad
    K_0=\log_2 N_{\mathrm{vis}}^{\min}=3.
    $$
-   On the Hilbert-carrier branch this operational count is represented by mutually perfectly distinguishable Hilbert alternatives, giving $\log_2 d_0\ge3$ and hence $d_0\ge8$.
+   On the Hilbert-carrier branch, representing these contexts by mutually perfectly distinguishable alternatives gives $\log_2 d_0\ge3$ and hence $d_0\ge8$.
 
-2. (**SPAP Encodability—Sufficiency**). There exists a three‑bit (eight‑state) architecture with state $(\phi, p_{stored}, c_{phase})$ and a two‑phase injective transition that preserves $(\phi,p_{stored})$ across the Commit Snapshot and implements the reflex update $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ without ambiguity.
+2. (**SPAP Encodability—Sufficiency**). There exists a three‑bit (eight‑state) architecture with state $(\phi, p_{stored}, c_{phase})$ and a two‑phase injective transition that satisfies (O1)–(O3) and (FC), preserves $(\phi,p_{stored})$ across the Commit Snapshot, and implements the reflex update $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ without ambiguity.
 
-3. (**Minimal Predictive Success—Sufficiency on $\mathcal{E}_{\mathrm{basic}}(\gamma)$**). Within the same three-bit register size, a predictive mode that stores the last observed outcome and predicts persistence (equivalently, flips its prediction on error) achieves long-run accuracy strictly greater than $1/2$ on the environment class $\mathcal{E}_{basic}(\gamma)$. In particular, its asymptotic accuracy equals the time‑average of $s_t$, which by stationarity/ergodicity converges almost surely to $\mathbb{E}[s_t]\ge\tfrac12+\gamma$.
+3. (**Minimal Predictive Success—Sufficiency on $\mathcal{E}_{\mathrm{basic}}(\gamma)$**). Within the same three-bit register size, a predictive mode that stores the last observed outcome and predicts persistence achieves long-run accuracy strictly greater than $1/2$ on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. Its empirical accuracy converges almost surely to $\mathbb E[s_0]\ge\tfrac12+\gamma$.
 
 *Proof.*
-**(1) Necessity.** By Proposition 5.2.1 and (O1)–(O3), any faithful SPAP sub-dynamics has three response-relevant binary roles at the Commit Snapshot: current state, stored prediction, and cycle phase. Let
+**(1) Necessity.** Hypothesis (FC) makes
 $$
-B_m=B_p=B_v=\{0,1\}.
+r:\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
 $$
-A physical realization on the visited state set $\mathcal S_{\mathrm{vis}}$ must therefore admit role-readout maps
+surjective. For any map between finite sets, the cardinality of the image cannot exceed that of the domain. Therefore
 $$
-r_m,r_p,r_v:\mathcal S_{\mathrm{vis}}\to\{0,1\}
+8=|\{0,1\}^3|=|r(\mathcal S_{\mathrm{vis}})|
+\le |\mathcal S_{\mathrm{vis}}|.
 $$
-such that the joint readout
+Taking base-two logarithms gives
 $$
-r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\to B_m\times B_p\times B_v
+\log_2|\mathcal S_{\mathrm{vis}}|\ge\log_2 8=3.
 $$
-is surjective onto the eight logical contexts required by the two-phase SPAP update. Surjectivity follows from role independence: $\phi$ and $p_{stored}$ must be simultaneously readable and independently variable at the Commit Snapshot by (O3), giving at least $2\cdot 2=4$ distinguishable configurations of $(\phi,p_{stored})$ within each phase, while $c_{phase}$ must distinguish the prepare/store and reflex/update phases by (O2), giving the further factor of $2$ for a total of $2\cdot 4=8$ logical contexts. If two distinct triples in $B_m\times B_p\times B_v$ were represented by the same physical state, at least one of the three role readouts would fail to be a well-defined finite response; if two response-relevant visited states were merged before the Commit Snapshot, (O1) would fail on the PPI quotient. Hence
-$$
-|\mathcal S_{\mathrm{vis}}|\ge |B_m\times B_p\times B_v|=2^3=8.
-$$
-Thus the required single-cycle distinguishability is at least
-$$
-K_0\ge \log_2 8=3.
-$$
-∎
+Part (2) supplies an eight-state realization, so the lower bound is attained and $N_{\mathrm{vis}}^{\min}=8$, $K_0=3$. If the eight contexts are represented by perfectly distinguishable Hilbert states, those states are mutually orthogonal; an orthonormal set has cardinality at most the Hilbert-space dimension. Hence $d_0\ge8$. ∎
 
-**Remark 5.2.2a (Robustness of $K_0 \ge 3$ under reformalization).**  
-The lower bound in (1) depends only on the need for an injective realization of the SPAP update across a phase boundary: at the Commit Snapshot the machine must distinguish the triple $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$. Any alternative encoding (e.g., relabeling states, using different internal variables, or changing the order of micro-operations) that still satisfies (O1)-(O3) must implement an injective map from these eight logical contexts to visited operational configurations. Consequently, any such realization requires at least $8$ distinguishable visited contexts, i.e.
+**Remark 5.2.2a (Conditional robustness of $K_0 \ge 3$ under reformalization).**  
+The lower bound is invariant under relabeling states, changing internal variable names, or reordering micro-operations provided that the realization continues to satisfy (O1)–(O3) and (FC). Indeed, (FC) requires the joint finite-response map onto the eight elements of $\{0,1\}^3$ to remain surjective. Hence every such encoding has
 $$
-N_{\mathrm{vis}}^{\min}=8,
+|\mathcal S_{\mathrm{vis}}|\ge8,
 \qquad
-K_0\ge\log_2 N_{\mathrm{vis}}^{\min}=3.
+\log_2|\mathcal S_{\mathrm{vis}}|\ge3.
 $$
-
-Thus the required single-cycle distinguishability is at least $3$ bits. Equivalently, the minimal faithful visited-context count is
+The construction in Theorem 15(2) attains this conditional lower bound, so within this realization class
 $$
 N_{\mathrm{vis}}^{\min}=2^3=8,
 \qquad
 K_0=\log_2 N_{\mathrm{vis}}^{\min}=3.
 $$
-On the Hilbert-carrier branch, Convention 1 then translates this operational context count into the rank bound
+On the Hilbert-carrier branch, representing the contexts by mutually perfectly distinguishable alternatives gives
 $$
 \log_2 d_0\ge3,
 \qquad
 d_0\ge8.
 $$
 
-**Corollary 5.2.2b (Finite-State SPAP Counterexample Criterion).** Restated as a finite-audit falsification criterion, the surjectivity step of Theorem 15(1) gives: no faithful SPAP realization satisfying (O1)–(O3) can be carried by fewer than eight visited states. If a candidate realization has a visited state set $\mathcal S_{\mathrm{vis}}$ with
+**Corollary 5.2.2b (Finite-State Full-Context Criterion).** No SPAP realization satisfying (FC) can be carried by fewer than eight visited states. If a candidate has a visited state set $\mathcal S_{\mathrm{vis}}$ with
 $$
 |\mathcal S_{\mathrm{vis}}|=N<8,
 $$
-then no choice of transition table, phase convention, or state relabeling can satisfy the role-readout requirement of Theorem 15.
+then no transition table, phase convention, or state relabeling can make its joint three-role readout surjective onto $\{0,1\}^3$.
 
-*Proof.* Any faithful realization satisfying (O1)–(O3) admits the joint role-readout map
+*Proof.* Let
 $$
-r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
+r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\to\{0,1\}^3.
 $$
-from the proof of Theorem 15. The image of any map from an $N$-element set has cardinality at most $N$:
+For any map from an $N$-element domain,
 $$
-|r(\mathcal S_{\mathrm{vis}})|\le |\mathcal S_{\mathrm{vis}}|=N.
+|r(\mathcal S_{\mathrm{vis}})|\le|\mathcal S_{\mathrm{vis}}|=N.
 $$
 If $N<8$, then
 $$
-|r(\mathcal S_{\mathrm{vis}})|<|\{0,1\}^3|,
+|r(\mathcal S_{\mathrm{vis}})|<8=|\{0,1\}^3|,
 $$
-so $r$ is not surjective onto the eight logical contexts required at the Commit Snapshot. Therefore at least one of the independent binary roles is not represented as a retained finite response, or two response-relevant contexts are merged before verification. Either alternative violates (O1)–(O3) on the PPI quotient. Thus no $N<8$ counterexample exists. The three-bit construction in part (2) shows that the bound is sharp. ∎
+so $r$ is not surjective and (FC) fails. The eight-state construction in Theorem 15(2) satisfies (FC), so the conditional bound is attained. ∎
 
-**(2) Sufficiency.** Define the two-phase transition on the three-bit register $(\phi,p_{stored},c_{phase})$ by:
-- Phase boundary (Commit Snapshot): $(\phi,p_{stored},0)\mapsto(\phi,p_{stored},1)$, preserving $\phi$ and $p_{stored}$ while toggling the internal phase bit (O2–O3).
-- Reflex/update: $(\phi,p_{stored},1)\mapsto(\mathrm{NOT}(p_{stored}),\phi,0)$, which sets the next $\phi$ to $\mathrm{NOT}(p_{stored})$ while swapping the old $\phi$ into the auxiliary register to keep the map bijective (O1).
-The phase-boundary map is a bijection between the phase slices, and the reflex/update map is a bijection from the $c_{phase}=1$ slice to the $c_{phase}=0$ slice. Hence the visited internal transitions are injective and the SPAP update $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ is realized without ambiguity. ∎
+**(2) Sufficiency.** On the register $\{0,1\}^3$ with coordinates $(\phi,p_{stored},c_{phase})$, define
+$$
+T(\phi,p,0)=(\phi,p,1),
+\qquad
+T(\phi,p,1)=(1-p,\phi,0).
+$$
+The first slice map is bijective onto the $c_{phase}=1$ slice. The second is bijective onto the $c_{phase}=0$ slice because
+$$
+T^{-1}(a,b,0)=(b,1-a,1).
+$$
+The two images lie in disjoint phase slices, so $T$ is a bijection of all eight register states and satisfies (O1); the first rule preserves $(\phi,p)$ and supplies (O2)–(O3). Starting from $(0,0,0)$ gives the orbit
+$$
+(0,0,0)\to(0,0,1)\to(1,0,0)\to(1,0,1)
+\to(1,1,0)\to(1,1,1)\to(0,1,0)\to(0,1,1)\to(0,0,0),
+$$
+which visits every element of $\{0,1\}^3$ and therefore satisfies (FC) for the coordinate readouts. On each reflex step the first output coordinate is $1-p=\mathrm{NOT}(p_{stored})$, so the SPAP update is implemented. ∎
 
 This completes the three-bit sufficiency construction for SPAP encodability. The next part addresses a separate claim: using the same three-bit register size, one can also implement a predictive mode with super-chance performance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. The present construction proves encodability of the SPAP reflex rule; the next one proves basic predictive success.
 
-**(3) Minimal Predictive Success.** Consider the predictor $\hat X_{t+1}:=X_t$ ("predict persistence"). Its correctness indicator is $\mathbf{1}\{\hat X_{t+1}=X_{t+1}\}=\mathbf{1}\{X_{t+1}=X_t\}$. Therefore, for any stationary ergodic process in $\mathcal{E}_{basic}(\gamma)$,
+**(3) Minimal Predictive Success.** Let $\hat X_{t+1}:=X_t$ and define
 $$
-\lim_{T\to\infty}\frac1T\sum_{t=0}^{T-1}\mathbf{1}\{\hat X_{t+1}=X_{t+1}\}
-=\lim_{T\to\infty}\frac1T\sum_{t=0}^{T-1}\mathbf{1}\{X_{t+1}=X_t\}
-=\mathbb{E}[s_t]\ge \frac12+\gamma
+Y_t:=\mathbf 1\{\hat X_{t+1}=X_{t+1}\}
+=\mathbf 1\{X_{t+1}=X_t\}.
 $$
-almost surely (ergodic theorem). This rule is equivalent to "flip on error": if $\hat X_{t+1}=X_t$ is wrong, then $X_{t+1}\ne X_t$ and the next prediction $\hat X_{t+2}=X_{t+1}$ is the flipped value. Implementation within the same three-bit register size is immediate: store the last observed outcome in a single bit (identified with $\phi$), copy it into the prediction register as needed during the predict/store phase, and after observing $X_{t+1}$ overwrite $\phi\leftarrow X_{t+1}$ to advance the stored hypothesis. ∎
+The process $(Y_t)$ is a measurable factor of the stationary ergodic process $(X_t)$, hence is stationary and ergodic, and $0\le Y_t\le1$ makes it integrable. The Birkhoff pointwise ergodic theorem (Birkhoff, 1931) therefore gives
+$$
+\frac1T\sum_{t=0}^{T-1}Y_t\longrightarrow\mathbb E[Y_0]
+\qquad\text{almost surely}.
+$$
+By the tower property and the definition of $s_t$,
+$$
+\mathbb E[Y_t]
+=\mathbb E\!\left[\mathbb E[Y_t\mid\mathcal H_t]\right]
+=\mathbb E\!\left[\Pr(X_{t+1}=X_t\mid\mathcal H_t)\right]
+=\mathbb E[s_t].
+$$
+Stationarity makes $\mathbb E[s_t]=\mathbb E[s_0]$ for every $t$. Hence membership in $\mathcal E_{\mathrm{basic}}(\gamma)$ implies
+$$
+\mathbb E[Y_0]=\mathbb E[s_0]\ge\frac12+\gamma,
+$$
+which proves the almost-sure super-chance accuracy claim. If an error occurs at time $t$, then $X_{t+1}=1-X_t$, so $\hat X_{t+2}=X_{t+1}=1-\hat X_{t+1}$; this is the stated flip-on-error behavior. One register bit stores $X_t$, the prediction response reads that bit, and after observing $X_{t+1}$ the register stores $X_{t+1}$ for the next cycle, which fits within the declared three-bit capacity. ∎
 
-**Consequence.** The minimal single-cycle operational context capacity that (i) supports SPAP encodability and (ii) admits a predictive mode with super‑chance performance equals three bits:
+**Consequence.** Within the realization class satisfying (O1)–(O3) and (FC), the least visited-context capacity that supports the stated SPAP encoding is attained by the construction in Theorem 15(2):
 $$
 K_0=3,
 \qquad
 N_{\mathrm{vis}}^{\min}=8.
 $$
-This provides a model-independent lower bound on MPU internal distinguishability. Theorem 15 itself proves the finite operational-context result $N_{\mathrm{vis}}^{\min}=8$. After the Hilbert-carrier gate is imposed, Convention 1 ($C_{cap}=\log_2 d_0$) translates this into the physical rank requirement $d_0\ge8$; the PCE minimality criterion selects the saturating MPU choice $d_0=8$.
+On the Hilbert-carrier branch, Convention 1 translates representation of these eight contexts as mutually perfectly distinguishable alternatives into $d_0\ge8$. The explicit construction shows that $d_0=8$ is admissible for this register model. Selecting that saturating value by PCE requires a separately stated optimization domain and objective, and relating this capacity bound to $C_P$ requires the bridge hypothesis of Corollary 3.
 
-**5.2.3 Corollary 3 (Relation Between Thresholds $C_{op}\ge K_0$)**
+**5.2.3 Corollary 3 (Conditional Relation Between Thresholds $C_{op}\ge K_0$)**
 
-The **Operational Threshold** must satisfy
+Let $\mathcal Q$ be the qualifying set inside the infimum in Definition 13. Assume that every $\mu\in\mathcal Q$ satisfies (O1)–(O3) and (FC), is represented on the Hilbert-carrier branch, and obeys the complexity-capacity bridge
+$$
+C_P(\mu)\ge C_{cap}(\mu)=\log_2d_0(\mu).
+$$
+Then the **Operational Threshold** satisfies
 
 $$
 \boxed{C_{op}\ \ge\ K_0\ =\ 3\ \text{bits}.}
 \quad \text{(17)}
 $$
 
-*Proof.* The adaptive Fundamental Predictive Loop (Definition 4) includes, as an internal sub-dynamic, the SPAP logic and the capabilities $b_m,b_p,b_v,D_{cyc}$ (Definition 5; Proposition 5.2.1). Definition 13 takes its infimum over $\mathcal{S}_{phys}^{loop}$, so every admissible microstate in the definition instantiates this full loop. By Theorem 15(1), any realization of the SPAP sub-dynamics satisfying (O1)-(O3) requires at least $K_0=3$ bits. Theorem 15(2)-(3) then shows that this lower bound is sharp by exhibiting a three-bit realization that both encodes the SPAP update and admits a basic super-chance predictive mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. Therefore, any system meeting the Definition 13 criterion must have $C_P\ge 3$. ∎
+*Proof.* If $\mathcal Q=\varnothing$, Definition 13 gives $C_{op}=\infty$, so the inequality holds in the extended real line. Suppose $\mathcal Q\ne\varnothing$. For every $\mu\in\mathcal Q$, Theorem 15(1) and the Hilbert-carrier hypothesis give
+$$
+C_{cap}(\mu)=\log_2d_0(\mu)\ge3.
+$$
+The complexity-capacity bridge therefore yields $C_P(\mu)\ge3$ for every $\mu\in\mathcal Q$. Taking the infimum over $\mathcal Q$ gives
+$$
+C_{op}=\inf_{\mu\in\mathcal Q}C_P(\mu)\ge3=K_0.
+$$
+∎
 
-**Remark (Explicit Relation).** Since $C_{op}$ is defined as the minimal physical complexity that achieves a target accuracy gap $\epsilon_{acc}>0$ under the full loop, $C_{op}\ge K_0=3$. Achieving larger accuracy gaps generally requires additional structure; informally, in many regimes one expects $C_{op}\approx K_0 + O\!\big(\ln(1/\epsilon'_{acc})\big)$ (cf. Law of Prediction, Theorem 19), with constants depending on the environment class and $A(\cdot)$.
+**Remark (Scope of the Threshold Relation).** Under the realization-class and complexity-capacity bridge hypotheses of Corollary 3, $C_{op}\ge K_0=3$. Separately, under the multiplicative-composition hypothesis of Theorem 19 and for a held task scale $\hat C_{target}$, Equation (23) gives
+$$
+C-C_{op}
+=\frac{\hat C_{target}}{\kappa_{\mathrm{eff}}}
+\ln\!\left(\frac{\beta-\alpha}{\beta-PP}\right).
+$$
+This logarithmic relation concerns complexity above $C_{op}$ near the performance ceiling; it does not determine the dependence of $C_{op}$ on the Definition 13 margin $\epsilon_{acc}$.
 
-**5.2.4 Applicability of SPAP/RUD Limits to MPUs**
+**5.2.4 Conditional Applicability of SPAP/RUD Limits to MPUs**
 
-Minimal Predictive Units (MPUs) operating at or above $C_{op}$ inherit SPAP and Reflexive Undecidability (RUD) constraints through the following chain:
+An MPU belongs to the SPAP/RUD scope only on a branch carrying the required computational certificates:
 
-1. **Embedded structure.** By design, every MPU at operational capacity possesses at least the $K_0\equiv B_3$ three-bit Boolean core (the 8-state architecture $(\phi,p_{stored},c_{phase})$ in Theorem 15) required for self‑referential processing.
-2. **Noise and Stochasticity:** SPAP/RUD arguments rely on reliable execution of the sub‑dynamics in the presence of ND‑RID stochasticity and finite-temperature noise; the loop's irreducible merge cost satisfies $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31), and the completed reset step imposes the structural one-bit reset-support capacity deficit of Proposition E.2a. On refresh/minorization branches the averaged interaction channel is additionally strictly contractive ($f_{RID}<1$, Lemma E.1), so the operational loop must supply the required computational regularity.
-3. **POP/PCE optimization.** POP/PCE dynamics favor MPU networks that function as reliable computational substrates (Appendix A.0), increasing the practical salience of SPAP/RUD limitations.
-4. **Conclusion.** SPAP/RUD constraints thus apply fundamentally to MPUs through their internal $K_0$ structure and the effective computation enabled by network optimization.
+1. **SPAP certificate.** The retained MPU realization class has effective coding, predictor simulation, Boolean or threshold predicate evaluation, uniform finite-program composition, and the diagonal/self-reference closure of Theorems 10–11.
+2. **RUD certificate.** For Theorem 12, the RID maps or kernels are computable and the system descriptions are reliably manipulable within Effective Operational Property R.
+3. **Physical execution.** Any noisy implementation must execute the certified finite computation with the reliability assumed by the relevant operational theorem. Registered reset and refresh/minorization hypotheses govern thermodynamic cost and channel contraction; they do not imply the computational certificates.
 
-**5.2.5 Theorem 16 (Universal Necessity of $C_{op}$ for Modeled Process)**
+Under items 1–2, Theorems 10–12 apply with their stated class-level quantifiers. The three-bit full-context result of Theorem 15 alone supplies neither diagonal closure nor Effective Operational Property R.
 
-Any physical system exhibiting the operational characteristics modeled by the Predictive Universe framework—specifically, sustaining the adaptive Fundamental Predictive Loop (Definition 4) while dynamically maintaining Predictive Performance $PP(t)$ within the Space of Becoming $(\alpha, \beta)$ (Axiom 3)—must possess the necessary integrated functional capabilities ($b_m, b_p, b_v, D_{cyc}$) (Definition 5, Proposition 5.2.1) and therefore must necessarily have a Predictive Physical Complexity $C(t)$ equal to or greater than the Operational Threshold $C_{op}$ (Definition 13). This implies a hard lower bound on its continuous energy dissipation via $P_{min}=R(C_{op})$ (Equation 16), emphasizing the thermodynamic inevitability of operational costs.
-*Proof:*
-1.  Assume a system $S$ exhibits the modeled characteristics.
-2.  The adaptive loop requires the integrated capabilities ($b_m, b_p, b_v, D_{cyc}$) (Proposition 5.2.1).
-3.  $C_{op}$ is the minimum $C_P$ to instantiate these capabilities for prediction significantly better than chance ($A > A_{random} + \epsilon_{acc}$). Since $\alpha > 0$ (Theorem 8), $PP > \alpha$ requires such prediction.
-4.  Thus, implementing these capabilities for $PP > \alpha$ requires $C_P \ge C_{op}$.
-5.  Suppose $C(S) < C_{op}$. By definition of $C_{op}$, $S$ lacks minimal resources for reliable prediction better than chance.
-6.  This prevents sustained adaptive operation with $PP > \alpha$, contradicting the initial assumption.
-7.  Therefore, any such system $S$ must have complexity $C(S) \ge C_{op}$. See Table 5.1. QED
+**5.2.5 Theorem 16 (Threshold Property for Qualifying Modeled Processes)**
+
+Choose the environment class, accuracy functional, random baseline, and margin $\epsilon_{acc}>0$ appearing in Definition 13. Let $S$ have a microstate $\mu_S$ belonging to the corresponding qualifying set $\mathcal Q$. Then
+$$
+C_P(\mu_S)\ge C_{op}.
+$$
+If, in addition, the actual continuous power $P(S)$ satisfies $P(S)\ge R(C_P(\mu_S))$ and $R$ is non-decreasing, then
+$$
+P(S)\ge R(C_{op}).
+$$
+
+*Proof.* Because $\mu_S\in\mathcal Q$ and
+$$
+C_{op}=\inf_{\mu\in\mathcal Q}C_P(\mu),
+$$
+the defining lower-bound property of the infimum gives $C_P(\mu_S)\ge C_{op}$. Under the two cost hypotheses, monotonicity yields
+$$
+P(S)\ge R(C_P(\mu_S))\ge R(C_{op}).
+$$
+No implication from $PP>\alpha$ to membership in $\mathcal Q$ is asserted without a separate relation between $PP$ and the chosen accuracy functional. ∎
 
 **Table 5.1 — Complexity Thresholds and an Example Instantiation**
 
 |  Symbol  | Name                  | Logical Purpose                                                                                               | Complexity (Bits) | Example: 3‑Qubit MPU (Sec. 7.1.3)            |
 | :------: | :-------------------- | :------------------------------------------------------------------------------------------------------------ | :---------------- | :------------------------------------------- |
-|   $K_0$  | Horizon Constant      | Minimal SPAP sub‑dynamics (O1–O3); the same three-bit register size also admits a basic super-chance predictive mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ | Exactly 3         | $d_0=8$ Hilbert subspace, SPAP two-phase map |
-| $C_{op}$ | Operational Threshold | Full adaptive loop at target margin $\epsilon_{acc}>0$                                                        | $\ge K_0=3$       | Can equal $K_0$ for minimal $\epsilon_{acc}$ |
+|   $K_0$  | Horizon Constant      | Least visited-context capacity in the SPAP realization class satisfying (O1)–(O3) and (FC); the same register size admits a basic super-chance mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ | Exactly 3 within that class | $d_0=8$ Hilbert carrier, SPAP two-phase map |
+| $C_{op}$ | Operational Threshold | Infimum of $C_P$ for the declared task and margin $\epsilon_{acc}>0$                                          | $\ge K_0=3$ only under Corollary 3's bridge hypotheses | The three-bit carrier alone does not establish equality |
 
 
 

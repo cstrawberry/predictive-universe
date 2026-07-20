@@ -35,7 +35,7 @@ then no binary coarse-grained outcome can be forced to both deterministic endpoi
 
 *Proof.* Deterministic FTL signaling with a fixed local measurement at $S_B$ would require $S_A$ to encode at least two distinguishable messages by choosing between two contexts that yield two deterministic and distinct outcome distributions at $S_B$. For any POVM, coarse-grain to a binary partition $\{E,\ I-E\}$ and let the baseline Born probability be
 $$
-p=P_{Born}(E)\in(0,1).
+p=P_{Born}(E)\in[0,1].
 $$
 Forcing the endpoint $P_{obs}(E)=1$ requires
 $$
@@ -75,7 +75,7 @@ As a consequence of Hypothesis 3 (CC influence mechanism) combined with quantum 
 
 **(i) Local CPTP branch.** If the CC mechanism is implemented by local CPTP channels on Alice's side, then Bob's local marginal $P(b)$ is preserved exactly for all fixed Bob settings, by the standard no-signaling theorem. On this branch, a change in Alice's context $\mathrm{context}_S$ can statistically alter Alice-side local statistics, the joint distribution $P(a,b)$, and conditional distributions $P(b|a)$ that are only accessible after classical comparison of records, but it cannot alter Bob's unconditional marginal. Branch (i) is the *Bob-marginal-preserving deformation* branch in the sense of Lemma 10.2 below.
 
-**(ii) Preparation-context branch.** If Alice's context $C$ is fixed before, or in the shared causal past of, the spacelike-separated measurement events at $A$ and $B$, then the global state $\omega_C$ delivered to the two stations may itself depend on $C$, and Bob's marginal $P(b\mid C)$ may depend on $C$ through ordinary common-cause statistics with no spacelike action by Alice after separation. Branch (ii) is consistent with operator-level Einstein causality (Corollary F.1) and is excluded as an explanation of any putative branch-(iii) signal only when Alice's context is randomized strictly later than the latest event in the shared causal past of the two measurement regions. Theorem L.12.8 supplies the necessary shared-past requirement for any nontrivial entanglement bias.
+**(ii) Preparation-context branch.** If Alice's context $C$ is fixed before, or in the shared causal past of, the spacelike-separated measurement events at $A$ and $B$, then the global state $\omega_C$ delivered to the two stations may itself depend on $C$, and Bob's marginal $P(b\mid C)$ may depend on $C$ through ordinary common-cause statistics with no spacelike action by Alice after separation. Branch (ii) is consistent with operator-level Einstein causality (Corollary F.1) and is excluded as an explanation of any putative branch-(iii) signal only when Alice's context is randomized strictly later than the latest event in the shared causal past of the two measurement regions. The shared-past placement is part of the causal-temporal definition of branch (ii). Theorem L.12.8 adds only that a strict target-conditioned joint-correlation advantage above the best target-independent policy requires causal or common-cause information about the relevant entanglement record; a generic local joint-correlation change need not involve participation in preparation.
 
 **(iii) Nonlocal/state-mediated marginal-anomaly branch (statistical FTL influence).** Beyond branches (i) and (ii), the framework allows — as a distinct, stronger hypothesis — that a change in Alice's context $\mathrm{context}_S$, performed strictly after the spacelike-separated preparation event, can induce context-dependent shifts in Bob's local marginal $P(b)$ across a spacelike interval, mediated by the globally prepared entangled state rather than by any operator-level carrier and not reducible to the shared-past mechanism of branch (ii). This is a genuine statistical faster-than-light (FTL) influence on Bob's local statistics: it is not derivable from ordinary nonlocal correlations of standard quantum mechanics, it is a real departure from the no-signaling marginals of local CPTP, and it is a falsifiable prediction requiring a separate nonlocal/state-mediated operational model.
 
@@ -188,7 +188,9 @@ Since $\mathbb E_0[Z_C\mid\mathcal F_B]-1$ is $\mathcal F_B$-measurable and inte
 
 **Remark 10.2.1a (Scope of the Radon-Nikodym Form).** Lemma 10.2.1 is a sharpening of the Bob-marginal-preserving part of branch (i) only; it is not an independent prohibition on branches (ii) or (iii). On branch (ii), a comparison between shared-past preparation laws may admit a Radon-Nikodym derivative when the laws are absolutely continuous, but that derivative belongs to a preparation-context comparison rather than to a late-randomized branch-(i) deformation. On branch (iii), the Bob-marginal kernel component is nonzero on the relevant Bob transcript algebra, so $\mathbb E_0[Z_C\mid\mathcal F_B]\ne1$ for at least one late-randomized context comparison. The branch-(iii) consistency claim is supplied separately by Theorems 39a–42 on the regular finite-window branch (Definition 10.2a). The Radon-Nikodym form therefore complements Lemma 10.2: it is the finite-transcript/algebraic restatement of Bob-marginal preservation, and it does not replace the three-branch structure of Postulate 3.
 
-**Definition 10.2a (Regular Statistical Branch).** A branch-(iii) implementation is *regular* in the finite pre-lightcone window of $n\le n_{\max}=\lfloor r_{\max}L/c\rfloor$ trials (Lemma 10.3) when the per-trial 'Evolve' kernels under the two Alice contexts retain common support on every Bob-side outcome with nonzero baseline Born probability. This regularity is a branch condition inside the PU framework, motivated by three independent mechanisms: (a) the endpoint bound $\mathrm{CC}<0.5$ (Theorem 39) excludes deterministic endpoint forcing in binary coarse-grainings; (b) ND-RID finite-transfer limits, supplied by the reset-support deficit of Proposition E.2a and by strict contractivity $f_{RID}<1$ on refresh/minorization branches (Lemma E.1), forbid a perfectly distinguishing single-shot 'Evolve' channel on the regular branch; and (c) the irreducible cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31) forbids zero-noise erasure of the alternative-context branch. Together with PPI admissibility of probability kernels, these conditions define the common-support regular branch used below. Common support of the per-trial conditional kernels lifts to common support of every finite-$n$ transcript law because each transcript probability is a product of strictly positive per-trial conditional probabilities along an admissible adaptive history. The regular statistical branch is the operating regime for Theorems 39a, 40, 41, and Lemma 10.3.
+**Definition 10.2a (Regular Statistical Branch).** A branch-(iii) implementation is *regular* in the finite pre-lightcone window of $n\le n_{\max}=\lfloor r_{\max}L/c\rfloor$ trials when, under the two late-randomized Alice contexts, every admissible Bob-side transcript has positive probability under one context if and only if it has positive probability under the other. A sufficient per-trial condition is that the two conditional `Evolve` kernels have identical support after every admissible adaptive history. Products of the corresponding positive conditional probabilities then give identical support for every finite-$n$ transcript law.
+
+Common support is an independent branch hypothesis. The endpoint condition $\mathrm{CC}<1/2$ excludes a pair of deterministic binary endpoints but does not force positivity of every outcome. Strict contractivity supplies support overlap only on branches whose minorization hypotheses establish it. Proposition E.2a's completed-reset support deficit bounds capacity on its own branch but does not establish an ensemble floor or common transcript support. Theorem 31 supplies only the registered-reset inequality $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; it neither forces a positive entropy floor without an independent ensemble bound nor implies output noise or common support, and paying a positive reset cost does not prohibit a deterministic reset. These results motivate particular regular implementations but do not replace the common-support hypothesis. Together with PPI admissibility of probability kernels, the explicit transcript-support condition defines the operating regime for Theorems 39a, 40, 41, and Lemma 10.3.
 
 **Theorem 39a (Zero-Error Capacity Gate for Statistical FTL).** Let $C\in\{0,1\}$ be Alice's late-randomized context and let $Y_B^n$ be Bob's finite pre-lightcone transcript after $n$ trials, with context-conditioned transcript laws
 $$
@@ -274,9 +276,27 @@ P_{e,*}=\frac12\left(1-\lVert P_0-P_1\rVert_{\mathrm{TV}}\right)<\frac12.
 $$
 Common support implies only $P_{e,*}>0$ for one finite transcript; it does not imply no-signaling. For iid repetitions of distinct laws, the optimal decoding error tends to zero as the number of pre-lightcone samples grows, although any particular geometry may impose a finite sample ceiling.
 
-*Proof.* If the transcript law is context-independent, $C$ and $Y$ are independent for every prior, so (2) implies (3), hence (4). If $W_c\ne W_{c'}$, choose a prior supported equally on those two contexts. Its mutual information is their Jensen--Shannon divergence, which is strictly positive exactly when the laws differ; therefore (4) implies (2). Conditions (1) and (2) are the operational definition of no-signaling for a freely chosen context and a pre-lightcone transcript. The Bayes-error identity in (61j) follows from the Neyman--Pearson decision rule. Standard hypothesis-testing consistency for distinct iid laws gives the repetition statement. ∎
+*Proof.* Conditions (1) and (2) are equivalent by the operational definition of no-signaling for a freely selected context and a pre-lightcone transcript. If (2) holds, then
+$$
+P(C=c,Y=y)=\pi(c)W_c(y)=\pi(c)P(Y=y)
+$$
+for every prior $\pi$, so $C$ and $Y$ are independent and (3) holds. Condition (3) implies (4) by maximizing over priors. Conversely, if $W_c\ne W_{c'}$, choose the prior assigning probability $1/2$ to $c$ and $c'$. The resulting mutual information is
+$$
+\operatorname{JSD}(W_c,W_{c'}),
+$$
+which is strictly positive because relative entropy is nonnegative and vanishes only for equal distributions. Hence (4) implies (2).
 
-**Corollary 39c.1 (Causal Status of the Three Branches).** Branch (i) is causal when Bob's marginal is exactly invariant. Branch (ii) is a shared-past preparation dependence and is not an $A\to B$ channel when the context label is fixed before the spacelike choice event. A branch-(iii) Bob-marginal shift under an independently late-randomized choice has positive Shannon capacity by Theorem 39c and therefore lies outside the Lorentz/AQFT causal branch. Such a shift remains a valid preregistered falsifier of that branch; finite-window sample complexity changes detectability, not causal classification.
+For two equal-prior laws $P_0,P_1$, a decoder minimizes error separately at each transcript by choosing the larger of $P_0(y)$ and $P_1(y)$. Thus
+$$
+P_{e,*}
+=\frac12\sum_y\min\{P_0(y),P_1(y)\}
+=\frac12\left(1-\frac12\sum_y|P_0(y)-P_1(y)|\right),
+$$
+which is (61j). If $P_0\ne P_1$, there is an event $A$ with $P_0(A)\ne P_1(A)$. For iid repetitions, threshold the empirical frequency of $A$ halfway between these two means. The weak law of large numbers makes both conditional error probabilities tend to zero. ∎
+
+**Corollary 39c.1 (Causal Status of the Three Branches).** Branch (i) is causal when Bob's marginal is exactly invariant. Branch (ii) is a shared-past preparation dependence and is not an $A\to B$ channel when the context label is chosen before the spacelike choice event. A branch-(iii) Bob-marginal shift under an independently late-randomized choice has positive Shannon capacity by Theorem 39c and therefore lies outside the Lorentz/AQFT causal branch. Such a shift remains a valid preregistered falsifier of that branch; finite-window sample complexity changes detectability, not causal classification.
+
+*Proof.* On branch (i), exact Bob-marginal invariance says $W_c=W_{c'}$ for every admissible late context, so Theorem 39c gives zero $A\to B$ capacity. On branch (ii), the context label is part of the shared-past preparation and is not an independently selectable input at the later spacelike region $A$; the input hypothesis of Theorem 39c is therefore absent, so correlations with that label do not define a later $A\to B$ channel. On branch (iii), late independent randomization and a Bob-marginal shift give $W_c\ne W_{c'}$ for some contexts. Theorem 39c then gives positive capacity and failure of operational no-signaling. A finite sample ceiling affects whether the inequality of laws can be detected at a prescribed error level, but it does not turn unequal laws into equal laws. ∎
 
 **Corollary 39a.1 (Finite-Window Zero-Error Separation).** On the regular statistical branch of Definition 10.2a, branch (iii) has zero finite-window zero-error FTL capacity for every admissible pre-lightcone transcript length
 $$
@@ -385,74 +405,66 @@ Thus a deterministic zero-variance current signal with nonzero mean is inadmissi
 
 Assume now that the branch also supplies (61h). If $0<\Sigma_\Omega<\infty$ and $\langle Q\rangle\ne0$, multiplying (61h) by $\langle Q\rangle^2/\Sigma_\Omega$ gives (61i). Therefore a nonzero mean current at finite entropy cost cannot have zero variance. If $\Sigma_\Omega=0$, (61h) is incompatible with $\langle Q\rangle\ne0$; if $\Sigma_\Omega=\infty$, the event is not in the finite-cost branch. These alternatives exhaust the finite-current certificate cases. ∎
 
-**Lemma 10.3 (Pre-Lightcone Information Budget and Sampling Gate).** Let $L$ be the spacelike separation between Alice and Bob, $r_{\max}$ the maximum local measurement rate per channel at Bob's station, $\alpha_{\mathrm{err}}\in(0,1/2)$ a target decoding error probability, and $\delta\le\kappa\,\mathrm{CC}(S_A)$ the per-trial Bob-marginal bias on branch (iii). Define the pre-lightcone mutual-information budget
+**Lemma 10.3 (Pre-Lightcone Information Budget and Sampling Gate).** Let
 $$
-\mathcal C_{\mathrm{pre}}(L)
-:=
-r_{\max}\frac{L}{c}\,I(C;Y_B),
+N_{\mathrm{pre}}:=\left\lfloor r_{\max}\frac{L}{c}\right\rfloor
 $$
-where $I(C;Y_B)$ is the per-trial mutual information from Alice's binary context to Bob's outcome. The exact envelope of Theorem 41 gives
+be the maximum number of trials available before a light signal can cross separation $L$. Let $p$ and $q$ be the two per-trial Bob laws, set $B_{01}:=\|p-q\|_1$, and assume $m_0:=\min_i(p_i+q_i)/2>0$. Assume the trials are conditionally independent given the equiprobable binary context and have the same conditional laws $p,q$. Then
 $$
-\mathcal C_{\mathrm{pre}}(L)
+I(C;Y_B^{N_{\mathrm{pre}}})
 \le
-r_{\max}\frac{L}{c}\cdot \frac{\mathrm{CC}(S_A)^2}{4m_0}.
-$$
-In the perturbative small-bias regime, the sharper expansion in Theorem 41 gives
-$$
-\mathcal C_{\mathrm{pre}}(L)
+N_{\mathrm{pre}}I(C;Y_B)
 \le
-r_{\max}\frac{L}{c}\cdot
-\left[
-\frac{\mathrm{CC}(S_A)^2}{8m_0}
-+
-O(\mathrm{CC}(S_A)^3)
-\right].
+N_{\mathrm{pre}}\frac{B_{01}^2}{4m_0}.
 $$
-A one-bit pre-lightcone decoder with error probability at most $\alpha_{\mathrm{err}}$ must at least satisfy the Fano necessary condition
+If $p$ and $q$ are separately within CC distances $c_0,c_1$ of the same Born law, then $B_{01}\le2(c_0+c_1)$ and
 $$
-\mathcal C_{\mathrm{pre}}(L)
-\ge
-\ln2-h_2(\alpha_{\mathrm{err}}),
-$$
-where $h_2$ is binary entropy in nats. Independently, resolving the marginal shift by repeated trials obeys the necessary Bhattacharyya gate of Lemma 10.1:
-$$
-r_{\max}\frac{L}{c}
-\ge
-\frac{\ln\!\big(1/[4\alpha_{\mathrm{err}}(1-\alpha_{\mathrm{err}})]\big)}
-{-\ln(1-4\delta^2)}
-$$
-in the symmetric Bernoulli design, while the majority-decoder Hoeffding gate
-$$
-r_{\max}\frac{L}{c}
-\ge
-\frac{\ln(1/\alpha_{\mathrm{err}})}{2\delta^2}
-$$
-is sufficient for achieving error at most $\alpha_{\mathrm{err}}$.
-Thus deterministic or arbitrarily reliable pre-lightcone communication is excluded whenever the finite pre-lightcone budget lies below these necessary gates, in addition to the deterministic forcing bound
-$$
-|\Delta P(i)|\le \mathrm{CC}(S_A)<\frac12
-$$
-of Theorem 39.
-
-*Proof.* Multiplying the per-trial bound of Theorem 41 by the maximum number of Bob trials before a light signal can cross the separation,
-$$
-N_{\mathrm{pre}}=r_{\max}L/c,
-$$
-gives the mutual-information budget. For any decoder with estimate $\widehat C=\widehat C(Y_B^{N_{\mathrm{pre}}})$ and error probability $P_e=\mathbb P[\widehat C\ne C]$, the binary Fano inequality gives
-$$
-H(C|Y_B^{N_{\mathrm{pre}}})
+I(C;Y_B^{N_{\mathrm{pre}}})
 \le
-H(C|\widehat C)
-\le
-h_2(P_e).
+N_{\mathrm{pre}}\frac{(c_0+c_1)^2}{m_0}.
 $$
-Since $C$ is equiprobable, $I(C;Y_B^{N_{\mathrm{pre}}})=\ln2-H(C|Y_B^{N_{\mathrm{pre}}})$. Hence any decoder with $P_e\le\alpha_{\mathrm{err}}<1/2$ must satisfy
+A decoder with error probability at most $\alpha_{\mathrm{err}}\in(0,1/2)$ must satisfy
 $$
 I(C;Y_B^{N_{\mathrm{pre}}})
 \ge
 \ln2-h_2(\alpha_{\mathrm{err}}).
 $$
-Since independent or conditionally independent trials have total mutual information bounded by the sum of per-trial informations, this gives the displayed necessary budget condition. The sharper high-confidence resolution of a small Bernoulli marginal shift is controlled by the necessary Bhattacharyya gate and sufficient Hoeffding gate recorded in Lemma 10.1, with $\delta\le\kappa\,\mathrm{CC}(S_A)$. The deterministic endpoint gate is Theorem 39. ∎
+For the symmetric Bernoulli design with parameter $\delta$, Lemma 10.1 additionally gives the necessary gate
+$$
+N_{\mathrm{pre}}
+\ge
+\frac{\ln\!\big(1/[4\alpha_{\mathrm{err}}(1-\alpha_{\mathrm{err}})]\big)}{-\ln(1-4\delta^2)},
+$$
+while
+$$
+N_{\mathrm{pre}}
+\ge
+\frac{\ln(1/\alpha_{\mathrm{err}})}{2\delta^2}
+$$
+is sufficient for the majority decoder.
+
+*Proof.* Conditional independence gives
+$$
+I(C;Y_B^{N_{\mathrm{pre}}})
+=
+\sum_{j=1}^{N_{\mathrm{pre}}}I(C;Y_{B,j}\mid Y_{B,1:j-1}).
+$$
+For each $j$,
+$$
+I(C;Y_{B,j}\mid Y_{B,1:j-1})
+=H(Y_{B,j}\mid Y_{B,1:j-1})-H(Y_{B,j}\mid C)
+\le H(Y_{B,j})-H(Y_{B,j}\mid C)
+=I(C;Y_{B,j}),
+$$
+so the total information is at most $N_{\mathrm{pre}}I(C;Y_B)$. Theorem 41 bounds the per-trial term by $B_{01}^2/(4m_0)$. The triangle inequality and Theorem 36 give $B_{01}\le2(c_0+c_1)$.
+
+For any estimate $\widehat C$ based on the transcript, binary Fano inequality gives
+$$
+H(C\mid Y_B^{N_{\mathrm{pre}}})
+\le H(C\mid\widehat C)
+\le h_2(P_e).
+$$
+Since $H(C)=\ln2$ and $h_2$ is increasing on $[0,1/2]$, $P_e\le\alpha_{\mathrm{err}}$ implies the displayed necessary information bound. The two Bernoulli sampling statements are exactly Lemma 10.1 with $N=N_{\mathrm{pre}}$. ∎
 
 **Scope note.** The finite-window budget above is a Fano and sampling gate for the CC branch. It is not an information-causality axiom for arbitrary no-signaling boxes and does not derive the Tsirelson bound by itself. The quantum CHSH/Tsirelson boundary, when invoked, must be supplied by the Hilbert/Born operator structure of Section 8, while branch-(iii) CC claims remain governed by Theorems 39a-42 and their protocol certificates.
 
@@ -577,87 +589,90 @@ I(C;Y)\le4(\kappa\,\mathrm{CC})^2
 $$
 nats/trial, with perturbative leading behavior $I(C;Y)=2\delta^2+O(\delta^4)$ for the symmetric Bernoulli channel. This statistical influence cannot be shaped into deterministic, pre-lightcone zero-error signals on the regular finite-window branch; finite-window zero-error decoding remains excluded by Theorem 39a and Theorem 42, while Theorem 39c classifies any nonzero pre-lightcone context channel as signaling. The full consistency analysis is provided in **Appendix F**.
 
-**No‑signaling equalities.** The standard no-signaling equalities hold with respect to local measurement *settings*. That is, for all choices of local measurement operators corresponding to settings $x,x’$ and $y,y’$ and all outcomes $a,b$,
+**No‑signaling equalities.** Assume the Appendix F continuum hypotheses and let each local measurement setting be represented by a nonselective trace-preserving instrument. Then, for all local settings $x,x'$ and $y,y'$ and outcomes $a,b$,
 $$
-\sum_{a} P(a,b\,|\,x,y)=P(b\,|\,y),\qquad \sum_{b} P(a,b\,|\,x,y)=P(a\,|\,x).
+\sum_aP(a,b\mid x,y)=P(b\mid y),
+\qquad
+\sum_bP(a,b\mid x,y)=P(a\mid x).
 $$
-*Proof.* When the Appendix F continuum AQFT limit applies so that $O_A\subset O_B’$ implies $[\mathcal A(O_A),\mathcal A(O_B)]=\{0\}$, any local operation at $A$ is represented by an instrument that commutes with all effects at $B$, and vice versa. Marginals at one site are therefore invariant under changes of the other site’s setting; the displayed equalities follow by summing joint probabilities over the commuting outcome algebra.
 
-**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to the MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Appendix B) and induces gravitational self-dephasing (Appendix S). The power cost of maintaining the context scales as (Appendix S, Equation S.5):
+*Proof.* Let the nonselective Alice instrument for setting $x$ have Kraus operators $A_{a,r}^{x}\in\mathcal A(O_A)$ satisfying
 $$
-P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,max}-\mathrm{CC}}\right]^2,\qquad
+\sum_{a,r}(A_{a,r}^{x})^\dagger A_{a,r}^{x}=I.
+$$
+For a Bob effect $F_b^y\in\mathcal A(O_B)$, microcausality gives $[A_{a,r}^{x},F_b^y]=0$. Therefore, for the joint state $\omega$,
+$$
+\sum_aP(a,b\mid x,y)
+=
+\sum_{a,r}\omega\!\left((A_{a,r}^{x})^\dagger F_b^yA_{a,r}^{x}\right)
+=
+\omega\!\left(F_b^y\sum_{a,r}(A_{a,r}^{x})^\dagger A_{a,r}^{x}\right)
+=
+\omega(F_b^y),
+$$
+which is independent of $x$. Interchanging Alice and Bob proves the second equality. Outcome-selected conditional states are not covered by this nonselective marginal statement. ∎
+
+**Physical self-limitation.** Appendix S defines a conditional feedback model. Assume the constitutive power law
+$$
+P_{\text{context}}(\mathrm{CC})
+=
+A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,max}-\mathrm{CC}}\right]^2,
+\qquad
 \alpha_{CC,max}<\tfrac12,
 $$
-the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ across the system (Appendix S, Equation S.18):
-$$
-\Delta\tau_d = K\,P_{\text{context}},
-$$
-with geometry constant $K$ defined in Appendix S (Equation S.19). This reduces the achieved $\text{CC}_{eff}$ (Equation S.21). A fully tracked gravitational phase remains coherent, while unresolved chronometric phase on the saturated ND-RID branch gives the residual dephasing rate $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$ (Equation S.57), further limiting any practical advantage on that branch.
+the retained-energy source relation $E_{\mathrm{grav}}^{\mathrm{inst}}=\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c$ with $0<\eta_{\mathrm{ret}}\le1$, and the weak-field geometry yielding $\Delta\tau_d=K P_{\mathrm{context}}$ in the registered operating interval. A tracked deterministic proper-time difference produces a coherent relative phase and does not by itself reduce CC. If a calibrated unresolved-phase or stochastic ensemble supplies the small-response attenuation law of Equation (S.21), then $\mathrm{CC}_{eff}$ is reduced to first order in $K_{\mathrm{eff}}P_{\mathrm{context}}$. On the separate saturated ND-RID response branch, the registered chronometric model gives $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$. These conclusions apply only while the retention, weak-field, and response certificates remain valid.
 
 **10.4 Consistency Analysis: Statistical Influence vs. Causality**
 
 The framework must distinguish finite-window reliability from causal status: by Theorem 39c, an independently selectable statistical FTL marginal channel violates Postulate 2. This analysis relies on the limits imposed by the CC bound and the nature of the information transfer.
 
-**10.4.1 Theorem 40 (Statistical Detection Limit)**
+**10.4.1 Theorem 40 (Sufficient Sample Size for the Direct Two-Context Test)**
 
-Detecting the hypothesized statistical FTL influence (Postulate 3) requires analyzing preregistered outcome statistics conditioned on Alice's context $C_A$. If the tested implementation is local CPTP (branch (i) of Postulate 3), Bob's marginal must remain unchanged and only joint/conditional correlations after classical comparison can vary; the detection protocol below targets the nonlocal/state-mediated FTL branch (branch (iii) of Postulate 3), on which a marginal shift is predicted. Let $p_0(b)$ and $p_1(b)$ denote Bob's marginal probability for some fixed event $b$ under two context conditions of Alice, and define the context-induced effect size $\Delta:=|p_1(b)-p_0(b)|$ (for the symmetric QCP, $\Delta=2|\delta|$). Under the CC-bounded influence mechanism, $\Delta$ is bounded by the operational CC scale (Definition 30; Theorem 36) and therefore remains small when $\alpha_{CC,max}<0.5$. Theorem 39a implies that, on the regular finite-window branch (Definition 10.2a), detection remains statistical rather than zero-error deterministic. For the direct two-context comparison test with $n$ iid trials collected under each context and decision rule $|\hat p_1-\hat p_0|>\Delta/2$, total sample size $N=2n$ satisfying
+Let $p_0(b)$ and $p_1(b)$ be Bob's marginal probabilities for one event $b$ under two Alice contexts, and set $\Delta:=|p_1(b)-p_0(b)|>0$. Suppose the two samples consist of $n$ independent Bernoulli trials under each context. For the decision rule $|\hat p_1-\hat p_0|>\Delta/2$, total sample size $N=2n$ satisfying
 $$
 N \ge \frac{16}{\Delta^2}\ln\!\left(\frac{4}{\alpha_{\mathrm{det}}}\right)\quad \text{(62)}
 $$
-guarantees total decision error at most $\alpha_{\mathrm{det}}$. In particular, detection requires
+is sufficient to make both the false-positive probability under $p_0=p_1$ and the missed-detection probability under $|p_1-p_0|=\Delta$ at most $\alpha_{\mathrm{det}}$. Thus this test has the sufficient scaling
 $$
-N=\Theta\!\left(\frac{\log(1/\alpha_{\mathrm{det}})}{\Delta^2}\right).
+N=O\!\left(\frac{\log(1/\alpha_{\mathrm{det}})}{\Delta^2}\right).
 $$
+If the two context laws are separately within operational CC distances $c_0$ and $c_1$ of the same Born baseline, then
+$$
+\Delta\le c_0+c_1.
+$$
+For the symmetric QCP with $|\delta|\le\kappa c$ in both contexts, $\Delta=2|\delta|\le2\kappa c$.
 
-*Proof:* Under the null hypothesis $H_0:p_1(b)=p_0(b)=p$, a false positive for the threshold test implies
+*Proof.* Under the null $p_0=p_1=p$, the event $|\hat p_1-\hat p_0|>\Delta/2$ implies that at least one sample mean differs from $p$ by at least $\Delta/4$. The two-sided Hoeffding inequality (Hoeffding 1963) and a union bound give
 $$
-|\hat p_1-\hat p_0|>\frac{\Delta}{2}.
+\mathbb P_{H_0}(\text{false positive})\le4e^{-n\Delta^2/8}.
 $$
-If both $|\hat p_1-p|<\Delta/4$ and $|\hat p_0-p|<\Delta/4$, then by the triangle inequality
+Under the alternative, take $p_1-p_0=\Delta$ without loss of generality. If both $|\hat p_j-p_j|<\Delta/4$, then
 $$
-|\hat p_1-\hat p_0|\le |\hat p_1-p|+|\hat p_0-p|<\frac{\Delta}{2},
+\hat p_1-\hat p_0>(p_1-\Delta/4)-(p_0+\Delta/4)=\Delta/2,
 $$
-so a false positive can occur only if at least one sample mean deviates from its expectation by at least $\Delta/4$. Hoeffding's inequality therefore gives
+so the same inequality gives
 $$
-\mathbb{P}_{H_0}(\text{false positive})
-\le 2e^{-2n(\Delta/4)^2}+2e^{-2n(\Delta/4)^2}
-=4e^{-n\Delta^2/8}.
+\mathbb P_{H_1}(\text{missed detection})\le4e^{-n\Delta^2/8}.
 $$
-
-Under the alternative hypothesis $H_1:|p_1(b)-p_0(b)|=\Delta$, assume without loss of generality that $p_1(b)-p_0(b)=\Delta$. A missed detection for the same threshold test implies
+The displayed condition on $N=2n$ makes each bound at most $\alpha_{\mathrm{det}}$. Finally, for the Born baseline law $b$,
 $$
-|\hat p_1-\hat p_0|\le \frac{\Delta}{2}.
+\Delta\le\mathrm{TV}(p_0,p_1)
+\le\mathrm{TV}(p_0,b)+\mathrm{TV}(b,p_1)
+\le c_0+c_1,
 $$
-If both $|\hat p_1-p_1|<\Delta/4$ and $|\hat p_0-p_0|<\Delta/4$, then
-$$
-\hat p_1-\hat p_0>(p_1-\Delta/4)-(p_0+\Delta/4)=\Delta-\frac{\Delta}{2}=\frac{\Delta}{2},
-$$
-so a missed detection can occur only if at least one sample mean deviates from its expectation by at least $\Delta/4$. Again Hoeffding gives
-$$
-\mathbb{P}_{H_1}(\text{missed detection})\le 4e^{-n\Delta^2/8}.
-$$
-
-Hence the total decision error is bounded by $4e^{-n\Delta^2/8}$. Requiring this to be at most $\alpha_{\mathrm{det}}$ yields
-$$
-n\ge \frac{8}{\Delta^2}\ln\!\left(\frac{4}{\alpha_{\mathrm{det}}}\right),
-$$
-equivalently
-$$
-N=2n\ge \frac{16}{\Delta^2}\ln\!\left(\frac{4}{\alpha_{\mathrm{det}}}\right).
-$$
-The final $\Theta(\log(1/\alpha_{\mathrm{det}})/\Delta^2)$ scaling follows immediately. ∎
+and the symmetric specialization follows by substitution. ∎
 
 **10.4.2 Theorem 41 (Finite-Error Information Rate: Exact Envelope and Perturbative Constant)**
 
-Let $p=P_{B|A=0}$ and $q=P_{B|A=1}$ be Bob's outcome distributions for an equal-prior binary context, let
+Let $p=P_{B\mid A=0}$ and $q=P_{B\mid A=1}$ be Bob's outcome distributions for an equal-prior binary context. Define
 $$
 M=\frac12(p+q),
+\qquad
+m_0:=\min_iM_i>0,
+\qquad
+B_{01}:=\|p-q\|_1.
 $$
-and assume the regular operating point condition
-$$
-m_0:=\min_i M_i>0.
-$$
-Then the finite-error mutual information per trial satisfies the exact envelope
+Then
 $$
 I(A;B)
 =
@@ -665,90 +680,82 @@ I(A;B)
 \le
 \frac{1}{4m_0}\|p-q\|_2^2
 \le
-\frac{1}{4m_0}\|p-q\|_1^2
-\le
-\frac{\mathrm{CC}(S)^2}{4m_0}.
+\frac{B_{01}^2}{4m_0}.
 \tag{63}
 $$
-In the perturbative small-bias regime,
+If $p$ and $q$ are deformations of the same Born law $b$ under two contexts with $c_j:=\mathrm{CC}(S_j)$, then
+$$
+B_{01}\le2(c_0+c_1),
+\qquad
+I(A;B)\le\frac{(c_0+c_1)^2}{m_0}.
+$$
+In particular, $c_0,c_1\le c$ gives $I(A;B)\le4c^2/m_0$. In the perturbative regime $B_{01}/m_0\to0$,
 $$
 I(A;B)
 =
 \frac18\sum_i\frac{(q_i-p_i)^2}{M_i}
 +
-O(\|q-p\|_1^3),
+O\!\left(\frac{B_{01}^3}{m_0^2}\right),
 $$
-and therefore
+and hence
 $$
 I(A;B)
 \le
-\frac{\mathrm{CC}(S)^2}{8m_0}
+\frac{B_{01}^2}{8m_0}
 +
-O(\mathrm{CC}(S)^3).
+O\!\left(\frac{B_{01}^3}{m_0^2}\right).
 \tag{63a}
 $$
+For binary outputs, the leading quadratic upper bound in (63a) is also a non-perturbative consequence of (63).
 
-*Proof.* For equal priors,
+*Proof.* Equal priors give
 $$
-I(A;B)=\mathrm{JSD}(p,q)
-=
-\frac12D(p\|M)+\frac12D(q\|M).
+I(A;B)=\frac12D(p\|M)+\frac12D(q\|M).
 $$
-Using $\ln x\le x-1$,
-$$
-D(p\|M)
-=
-\sum_i p_i\ln\frac{p_i}{M_i}
-\le
-\sum_i p_i\left(\frac{p_i}{M_i}-1\right)
-=
-\sum_i\frac{(p_i-M_i)^2}{M_i}.
-$$
-Since $p_i-M_i=(p_i-q_i)/2$,
+The inequality $\ln x\le x-1$ yields
 $$
 D(p\|M)
 \le
-\frac14\sum_i\frac{(p_i-q_i)^2}{M_i}.
+\sum_i\frac{(p_i-M_i)^2}{M_i}
+=
+\frac14\sum_i\frac{(p_i-q_i)^2}{M_i},
 $$
-The same argument gives
+and the same bound holds for $D(q\|M)$. Consequently
 $$
-D(q\|M)
-\le
-\frac14\sum_i\frac{(p_i-q_i)^2}{M_i}.
-$$
-Therefore
-$$
-\mathrm{JSD}(p,q)
+I(A;B)
 \le
 \frac14\sum_i\frac{(p_i-q_i)^2}{M_i}
 \le
 \frac{1}{4m_0}\|p-q\|_2^2
 \le
-\frac{1}{4m_0}\|p-q\|_1^2.
+\frac{B_{01}^2}{4m_0}.
 $$
-By Theorem 36,
+For two deformations of a common Born law $b$, Theorem 36 and the triangle inequality give
 $$
-\|p-q\|_1=2\,\mathrm{TV}(p,q)\le2\sin(\mathrm{CC}(S)/2)\le\mathrm{CC}(S),
+\frac12B_{01}=\mathrm{TV}(p,q)
+\le\mathrm{TV}(p,b)+\mathrm{TV}(b,q)
+\le c_0+c_1,
 $$
-so the exact envelope (63) follows. For binary outputs the bound $\|p-q\|_2^2\le\|p-q\|_1^2$ saturates the perturbative coefficient: any 2-element traceless difference $\Delta=p-q$ has $\Delta_1=-\Delta_2$, so $\|\Delta\|_1=2|\Delta_1|$ and $\|\Delta\|_2^2=2\Delta_1^2=\|\Delta\|_1^2/2$. Hence the binary specialization sharpens to $\mathrm{JSD}\le\mathrm{CC}(S)^2/(8m_0)$ non-perturbatively, recovering the perturbative coefficient as the exact constant in the binary case used throughout Sections 10 and 13.
+which proves the context-budget bounds.
 
-For the perturbative statement, write $q=p+\Delta$ and $M=p+\Delta/2$, so $p-M=-\Delta/2$ and $q-M=\Delta/2$. Taylor expansion of $D(M\pm\Delta/2\|M)$ around $M$ gives
+For the perturbative expansion, put $\Delta=q-p$, so $p=M-\Delta/2$ and $q=M+\Delta/2$. Expanding each scalar term about $\Delta_i=0$ gives
 $$
-D(M\pm\Delta/2\|M)
-=
-\frac12\sum_i\frac{(\Delta_i/2)^2}{M_i}
+\frac12\left[
+\left(M_i-\frac{\Delta_i}{2}\right)\ln\left(1-\frac{\Delta_i}{2M_i}\right)
 +
-O(\|\Delta\|_1^3).
-$$
-Averaging the two divergences yields
-$$
-\mathrm{JSD}(p,q)
+\left(M_i+\frac{\Delta_i}{2}\right)\ln\left(1+\frac{\Delta_i}{2M_i}\right)
+\right]
 =
+\frac{\Delta_i^2}{8M_i}
++
+O\!\left(\frac{|\Delta_i|^3}{M_i^2}\right).
+$$
+Summing and using $M_i\ge m_0$ gives the displayed remainder because $\sum_i|\Delta_i|^3\le B_{01}^3$. Also,
+$$
 \frac18\sum_i\frac{\Delta_i^2}{M_i}
-+
-O(\|\Delta\|_1^3).
+\le\frac{B_{01}^2}{8m_0}.
 $$
-Since $M_i\ge m_0$ and $\|\Delta\|_1\le\mathrm{CC}(S)$ by Theorem 36, (63a) follows. Theorem 39a supplies only a finite-window zero-error reliability statement; Theorem 39c supplies Postulate 2
+For two outcomes, $\Delta_1=-\Delta_2$, so $\|\Delta\|_2^2=B_{01}^2/2$; substituting this identity into (63) gives $I(A;B)\le B_{01}^2/(8m_0)$ without a small-bias assumption. ∎
 
 **10.4.3 Theorem 42 (Finite-Window Zero-Error Loop Exclusion and Shannon-Causality Boundary)**
 
@@ -788,15 +795,26 @@ P(x,y\mid\lambda)=P(x,y).
 $$
 Logical indeterminacy, stochastic outcomes, no-signaling, and absence of a deterministic hidden variable do not imply this equality. Stochastic settings may remain correlated with $\lambda$, and no-signaling constrains outcome marginals rather than the setting distribution. Every Bell-type PU protocol must therefore either assume measurement independence or bound its failure with an explicit causal and statistical model; CC is not presumed to be the only possible common-cause channel.
 
-**Theorem 42a (Relational Decoding Principle: No Actionable Capacity Without Shared Decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. Alice chooses a local instrument $\Phi_x$ labeled by a message $x$. Bob’s local detector is keyed by a classical variable $K$ (unavailable to Bob at measurement time), selecting a unital CP Heisenberg map $\Lambda_K^*$, and he measures effects $\{E_i^{(K)}\}$ with $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume the key distribution $\pi(K)$ is independent of $x$, and that the averaged Heisenberg map
+**Theorem 42a (Relational Decoding Principle: No Actionable Capacity Without Shared Decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. For each message $x$, let Alice apply a local CPTP channel $\Phi_x$ on $A$, equivalently the nonselective trace-preserving sum of a local instrument with its outcome discarded. Bob's detector is keyed by a classical variable $K$ with distribution $\pi(K)$ independent of $x$. For each $K$, let $\Lambda_K^*$ be a unital CP Heisenberg map and let $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume
 $$
-\overline{\Lambda^*}:=\sum_K \pi(K)\,\Lambda_K^*
+\overline{\Lambda^*}:=\sum_K\pi(K)\Lambda_K^*
 $$
-is completely positive, unital, and independent of $x$ (if moreover $\overline{\Lambda^*}=\mathrm{id}$, the baseline statistics are preserved). Then Bob’s observed distribution is independent of $x$ and the classical channel $X\!\to\!Y$ has zero capacity [Watrous 2018; Nielsen & Chuang 2010]:
+is independent of $x$. Then Bob's observed distribution is independent of $x$ and the channel $X\!\to\!Y$ has zero capacity:
 $$
-p_B(i\mid x)=\sum_K\pi(K)\operatorname{tr}\big[\rho_B\,E_i^{(K)}\big]=\operatorname{tr}\big[\rho_B\,\overline{\Lambda^*}(E_i)\big],\qquad I(X;Y)=0.
+p_B(i\mid x)=\sum_K\pi(K)\operatorname{tr}\big[\rho_B E_i^{(K)}\big]
+=\operatorname{tr}\big[\rho_B\overline{\Lambda^*}(E_i)\big],
+\qquad I(X;Y)=0.
 $$
-*Proof.* Local operations on $A$ do not change $B$’s marginal, $\rho_B^{(x)}=\rho_B$. Linearity and the $x$‑independence of $\overline{\Lambda^*}$ give the result. ∎
+
+*Proof.* Write $\Phi_x(Z)=\sum_rA_{x,r}ZA_{x,r}^\dagger$ with $\sum_rA_{x,r}^\dagger A_{x,r}=I_A$. For every Bob effect $F$,
+$$
+\operatorname{tr}\!\left[(\Phi_x\otimes\operatorname{id})(\rho_{AB})(I_A\otimes F)\right]
+=
+\sum_r\operatorname{tr}\!\left[\rho_{AB}(A_{x,r}^\dagger A_{x,r}\otimes F)\right]
+=
+\operatorname{tr}\!\left[\rho_{AB}(I_A\otimes F)\right].
+$$
+Thus $\rho_B^{(x)}=\rho_B$. Averaging the keyed effects gives the displayed distribution, which contains no $x$. Hence $X$ and $Y$ are independent for every prior and $I(X;Y)=0$. ∎
 
 *Foundational reading.* Theorem 42a articulates a principle of *relational decoding* that is built into the framework's relational information ontology (Definition 1, Appendix N): the operational physics of a CC-induced effect resides not in any observer's standalone measurement stream but in the *jointly decoded* statistics that become accessible only after Alice's record, Bob's record, and any classical labels (context tags, basis assignments, timing certificates) have been brought together for joint analysis. Under the hypotheses of Theorem 42a,
 $$
@@ -806,12 +824,10 @@ where $Y_B$ is Bob's record, $C$ is Alice's context label, and $K$ is the keying
 $$
 I(C;Y_A,Y_B,K)\;\text{may be}\;>0.
 $$
-Revealing the key $K$ alone does not unlock $C$ from Bob's stream because the averaged Heisenberg map is $x$-independent by hypothesis. On branch (i) of Postulate 3, Bob's marginal is invariant by Lemma 10.2. On branch (ii), any context dependence of Bob's marginal is a shared-past preparation effect and is excluded as an explanation of late-randomized branch-(iii) data by Theorem L.12.8. On branch (iii), Bob's marginal itself shifts under late randomization, but the shift is statistical with rate bounded by Theorem 41; on the regular finite-window branch (Definition 10.2a) it retains zero-error capacity zero by Theorem 39a in any pre-lightcone window of operational size. The QCP of Section 10.3.2 fixes a single shared decoding rule — the pre-agreed binary mapping between context and target measurement bias — and converts the relational structure into a one-shot decision advantage $\delta=O(\mathrm{CC})$ that cannot be amplified into deterministic or zero-error signaling under the regular-branch hypothesis.
+Revealing the key $K$ alone does not unlock $C$ from Bob's stream because the averaged Heisenberg map is $x$-independent by hypothesis. On branch (i) of Postulate 3, Bob's marginal is invariant by Lemma 10.2. On branch (ii), any context dependence of Bob's marginal is a shared-past preparation effect and is excluded as an explanation of late-randomized branch-(iii) data by the branch definition and the certified causal timing of the randomization. Theorem L.12.8 separately constrains strict target-conditioned joint-correlation advantage above information-free policies. On branch (iii), Bob's marginal itself shifts under late randomization, but the shift is statistical with rate bounded by Theorem 41; on the regular finite-window branch (Definition 10.2a) it retains zero-error capacity zero by Theorem 39a in any pre-lightcone window of operational size. The QCP of Section 10.3.2 fixes a single shared decoding rule — the pre-agreed binary mapping between context and target measurement bias — and converts the relational structure into a one-shot decision advantage $\delta=O(\mathrm{CC})$ that cannot be amplified into deterministic or zero-error signaling under the regular-branch hypothesis.
 
 **10.6 Gravitational Self-Limitation of CC**
 
-The Consciousness Complexity (CC) hypothesis is not without internal constraints. The very act of generating a high-CC context is a physical process that carries a resource cost, manifesting as a contribution to the system's stress-energy tensor. This creates a subtle but profound negative feedback loop: the gravitational field produced by the CC context itself can disrupt the delicate quantum coherence required for the CC effect to manifest.
+The Consciousness Complexity (CC) extension admits a conditional gravitational-feedback branch. On that branch, the physical context contributes to the stress-energy source through the retained-energy relation of Appendix S. The model additionally assumes a constitutive power law that grows as CC approaches its branch ceiling, a weak-field geometry converting retained source energy into differential proper time, and a calibrated unresolved-phase or stochastic response converting that proper-time spread into attenuation.
 
-This self-limiting mechanism arises from the framework's unified nature. A high-CC state requires high aggregate complexity $C_{agg}$, which in turn requires a significant power expenditure $P_{context}$ to maintain. This power contributes to the local energy density, sourcing a gravitational potential. A target quantum system within this potential experiences differential gravitational time dilation across its spatial extent, which acts as a dephasing mechanism. As a system attempts to increase its CC, the power cost rises non-linearly, strengthening the self-generated gravitational field and increasing the dephasing effect.
-
-The Principle of Compression Efficiency (PCE) drives the system to an equilibrium that balances the predictive utility of the CC bias against both its direct resource cost and this indirect gravitational self-disruption. This ensures that CC cannot be increased indefinitely, providing a fundamental physical limit on its efficacy that is independent of the endpoint-bias bound derived in Theorem 39. A full quantitative derivation of this self-limiting feedback loop is provided in **Appendix S**.
+If the same branch also supplies the Appendix S PCE objective and its coercivity or boundary-growth conditions, optimization can yield a finite interior operating point balancing predictive utility, direct resource cost, and gravitational attenuation. A tracked deterministic phase alone does not dephase, and POP/PCE without the constitutive and response certificates does not prove a universal gravitational ceiling. Theorem 39's endpoint-completeness bound remains a separate constraint.

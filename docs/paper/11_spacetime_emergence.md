@@ -24,7 +24,11 @@ $$
 $$
 and the finite transfer budget of the edge. On the completed reset-support branch, the per-link information budget is bounded by Proposition E.2a. On refresh/minorization branches, the same edge may also carry a strict trace-distance contraction factor $f_{RID}^{(xy)}<1$ from Lemma E.1.
 
-After independently imposing positive edge weights, a branch-specific cost representative is
+Choose a symmetric edge-cost representative satisfying the uniform bounds
+$$
+0<w_{\min}\le w_{xy}=w_{yx}\le w_{\max}<\infty
+$$
+on the connected component under consideration. On a registered reset edge, one possible calibrated representative is
 $$
 w_{xy}
 =
@@ -34,11 +38,17 @@ c_C\frac{\ln d_0-C_{xy}}{\ln d_0}
 +
 c_f[-\ln f_{RID}^{(xy)}]_{\mathrm{ref}},
 $$
-where $c_S,c_C>0$, $c_f\ge0$, $C_{xy}\le\ln d_0$ is the retained per-link transfer budget, and $[-\ln f_{RID}^{(xy)}]_{\mathrm{ref}}$ is included only on refresh/minorization branches with strict contraction. Since $\Delta S_{\min}^{(xy)}/k_B\ge\varepsilon_0=\ln2$, every completed edge has $w_{xy}>0$ even when the strict-contraction term is absent. The coefficients $c_S,c_C,c_f$ are calibration-branch parameters fixing the relative weighting of entropy, capacity-deficit, and refresh-contraction costs at a chosen reference scale; any other positive linear combination of these branch-defined positive contributions yields the same asymptotic geometric structure on each branch and is identified with this representative in the continuum/refinement limit. Introducing a fundamental microscopic length scale $\delta$ (units $[L]$, the MPU spacing derived in Appendix Q) associated with a single interaction step, the **propagation cost metric** is the shortest path distance:
+where $c_S,c_C>0$, $c_f\ge0$, $C_{xy}\le\ln d_0$, and the contraction term is present only on a refresh/minorization branch. The reset theorem supplies the branch-dependent inequality $\Delta S_{\min}^{(xy)}/k_B\ge H_{q_{xy}}(P\mid R)$; it supplies a positive uniform contribution only when a positive entropy floor is separately registered. The displayed representative is admissible only when the resulting weights satisfy the stated uniform bounds. Two cost representatives have the same metric scaling limit only under a separate uniform-equivalence or convergence certificate.
+
+With microscopic length $\delta>0$, define
 $$
-d_{\mathcal{N}}(u,v) = \min_{\gamma: u \to v} \sum_{(x,y) \in \gamma} \delta w_{xy} \qquad \text{(64)}
+d_{\mathcal N}(u,v)
+=
+\inf_{\gamma:u\to v}
+\sum_{(x,y)\in\gamma}\delta w_{xy}
+\qquad \text{(64)}.
 $$
-where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Assume the undirected network underlying $\mathcal{E}$ is connected on the viability domain; otherwise set $d_{\mathcal{N}}(u,v)=\infty$ when no path exists and restrict attention to a connected component. With symmetric positive edge weights $w_{xy}=w_{yx}>0$, the shortest‑path construction defines a valid metric on that component. A throughput attribute does not determine a propagation cost by reciprocal conversion. Latency, capacity, and dissipation are separately registered edge coordinates under Definition 35a and Theorem 35b below.
+The infimum is over finite paths. Connectedness makes it finite. Symmetry is immediate, concatenation proves the triangle inequality, and every nontrivial path contains at least one edge, so $d_{\mathcal N}(u,v)\ge\delta w_{\min}>0$ when $u\ne v$. Thus $d_{\mathcal N}$ is a metric. If the network is finite, the infimum is attained and may be written as a minimum. For disconnected networks, set the distance to infinity between components and restrict metric statements to one component. Latency, capacity, and dissipation remain separately registered edge coordinates under Definition 35a.
 
 
 
@@ -100,6 +110,8 @@ $$
 
 **Corollary 35b.1 (Causal-Speed and Area-Capacity Scope).** The emergent causal speed is calibrated from the latency/length branch, whereas the horizon entropy density and $G$ are calibrated from the cut-capacity/area branch. They are projections of one edge ledger but no theorem identifies either from the other without an additional response-active constitutive relation.
 
+*Proof.* Theorem 35b(1) composes path latency from the edge values $\tau_e$, while Theorem 35b(2) composes cut capacity from the edge values $C_e$. Item 3 of that theorem supplies one-edge ledgers having equal latency and unequal capacity and ledgers having equal capacity and unequal latency. Hence neither functional determines the other. The causal-speed calibration uses path length divided by path latency, whereas the horizon entropy and $G$ calibration uses capacity per cut area. An implication between those calibrations would therefore require an additional relation between $\tau_e$ and $C_e$, which is not present in Theorem 35b. ∎
+
 For finite diagnostic comparisons on a fixed connected MPU population graph with $2\le |\mathcal V|<\infty$, the corresponding dimensionless propagation-efficiency observable is
 $$
 E_{\mathcal N}
@@ -114,13 +126,20 @@ For disconnected finite graphs, the summand is taken as $0$ whenever $d_{\mathca
 
 For the discrete metric space $(\mathcal{V}, d_{\mathcal{N}})$ to admit a stable finite-resolution continuum compression, the network structure must possess large-scale geometric regularity.
 
-**11.3.1 Definition 36 (Def 36): Uniform D-dim Polynomial Volume Growth**
+**11.3.1 Definition 36 (Def 36): Uniform Mesoscopic $D$-Dimensional Polynomial Volume Growth**
 
-A sequence of MPU networks $\{\mathcal{N}_n\}$ exhibits uniform D-dimensional polynomial volume growth if there exist constants $K_1, K_2 > 0$, dimension $D \ge 1$, and scale $R_0$ such that for large $n$, all $v \in \mathcal{V}_n$, and all radii $R > R_0$:
+A sequence of MPU networks $\{\mathcal N_n\}$ exhibits uniform mesoscopic $D$-dimensional polynomial volume growth if there exist constants $K_1,K_2>0$, an exponent $D\ge1$, an $n$-independent macroscopic lower scale $R_0>0$, microscopic scales $\delta_{eff,n}>0$, and upper cutoffs $R_{max,n}\le\operatorname{diam}(\mathcal N_n)$ such that $R_0<R_{max,n}$ eventually and
 $$
-K_1 \left(\frac{R}{\delta_{eff, n}}\right)^D \leq |B_{R}(v)| \leq K_2 \left(\frac{R}{\delta_{eff, n}}\right)^D \quad \text{(65)}
+\frac{R_{max,n}-R_0}{\delta_{eff,n}}\longrightarrow\infty.
 $$
-where $B_{R}(v)$ is the metric ball, $|B_{R}(v)|$ its vertex count, and $\delta_{eff, n}$ the characteristic microscopic scale $\delta \langle w_{uv} \rangle_{avg}$. This ensures consistent effective dimension $D$.
+For all sufficiently large $n$, every admissible center $v$ away from any declared boundary layer, and every radius $R$ with $R_0<R\le R_{max,n}$,
+$$
+K_1\left(\frac{R}{\delta_{eff,n}}\right)^D
+\le |B_R(v)|
+\le K_2\left(\frac{R}{\delta_{eff,n}}\right)^D
+\quad \text{(65)}.
+$$
+Here $B_R(v)$ is the propagation-metric ball and $\delta_{eff,n}$ is a declared characteristic microscopic cost length. For an infinite network the upper scale may be infinite. This condition defines a uniform effective dimension only on the registered scale windows.
 
 **11.3.2 Definition 37 (Def 37): Uniformly Bounded Synthetic Ricci Curvature**
 
@@ -138,7 +157,7 @@ Assume the regularity-penalty hypotheses established in Appendix C and the varia
 2. the limit is noncollapsed $\mathrm{RCD}^*(K,4)$;
 3. the rescaled propagation-cost Dirichlet forms Mosco-converge to the quadratic Cheeger energy;
 4. tangent cones are Euclidean $\mathbb R^4$ at $\mu$-almost every point;
-5. on the $\mathfrak H_n\to0$ rigidity subbranch, the regular set carries a $C^{1,\alpha}$ Riemannian metric, and after adjoining the finite ND-RID update clock the corresponding Lorentzian metric is obtained as in Corollary O.7b.1.
+5. on the $\mathfrak H_n\to0$ rigidity subbranch, the regular set carries a $C^{1,\alpha}$ four-dimensional Riemannian metric. A $3+1$ Lorentzian interpretation additionally requires an Appendix O certificate that selects one of these four operational directions as temporal and identifies a three-dimensional positive spatial complement. Adjoining an independent clock direction would produce a $4+1$ extension and is not part of this conclusion.
 
 Moreover, for every $\varepsilon>0$ and each fixed finite-resolution level $n$, the stationary probability of configurations whose total continuum defect exceeds the selected minimum by more than $\varepsilon$ satisfies
 $$
@@ -156,7 +175,7 @@ so the first-shell odd moments vanish, the second moment is positive and isotrop
 
 Theorem D.6e inserts the finite continuum-control defects $\mathfrak B_n,\mathfrak C_n,\mathfrak R_n,\mathfrak H_n$ into the microscopic PCE potential with positive coefficients. Since a competitor sequence with $\mathfrak d_n^*\to 0$ exists in the same global core-minimum class, and since Proposition D.6f shows that this is the sharp condition for defect removal within that class, global minimizers of $V_n^{\mathrm{cont}}$ satisfy $\mathfrak D_n\to0$ along the selected sequence. The detailed-balance low-noise concentration estimate follows from Theorem D.5 applied to $V_n^{\mathrm{cont}}$, giving the displayed exponential bound.
 
-Along the selected sequence, $\mathfrak B_n\to0$ is the asymptotic radius-2 $\mathrm{BE}(K,4)$ curvature transfer required by Theorem C.6c, while geometric noncollapse is an independent volume-certificate input. Under the separately assumed C.6c generator-core/$\Gamma_2$ passage and $\mu=\mathcal H^4$ normalization, C.6c gives strict noncollapse; under the separately assumed D.6e liminf, recovery, and Cheeger-identification hypotheses, D.6e gives Mosco convergence. Vanishing defects alone give neither conclusion. Therefore every measured-GH limit is noncollapsed $\mathrm{RCD}^*(K,4)$ and has Euclidean $\mathbb R^4$ tangent cones at $\mu$-almost every point. The identities $\mathfrak C_n\to0$ and $\mathfrak R_n\to0$ give the finite-core and recovery-map compatibility required for the Mosco argument in Theorem D.6e; hence the rescaled propagation-cost forms converge to the quadratic Cheeger energy. Finally, $\mathfrak H_n\to0$ is the quantitative Euclidean-rigidity and harmonic-coordinate input of Theorem 44a, so the regular branch carries a $C^{1,\alpha}$ spatial metric. Corollary O.7b.1 adjoins the finite ND-RID update clock and yields the Lorentzian extension. Theorem K.10.3a excludes exact continuum ontology under finite-resource PPI, so the limit is an effective finite-resolution compression of the discrete MPU branch. ∎
+Along the selected sequence, $\mathfrak B_n\to0$ is the asymptotic radius-2 $\mathrm{BE}(K,4)$ curvature transfer required by Theorem C.6c, while geometric noncollapse is an independent volume-certificate input. Under the separately assumed C.6c generator-core/$\Gamma_2$ passage and $\mu=\mathcal H^4$ normalization, C.6c gives strict noncollapse; under the separately assumed D.6e liminf, recovery, and Cheeger-identification hypotheses, D.6e gives Mosco convergence. Vanishing defects alone give neither conclusion. Therefore every measured-GH limit is noncollapsed $\mathrm{RCD}^*(K,4)$ and has Euclidean $\mathbb R^4$ tangent cones at $\mu$-almost every point. The identities $\mathfrak C_n\to0$ and $\mathfrak R_n\to0$ give the finite-core and recovery-map compatibility required for the Mosco argument in Theorem D.6e; hence the rescaled propagation-cost forms converge to the quadratic Cheeger energy. Finally, $\mathfrak H_n\to0$ is the quantitative Euclidean-rigidity and harmonic-coordinate input of Theorem 44a, so the regular branch carries a $C^{1,\alpha}$ four-dimensional Riemannian metric. A $3+1$ Lorentzian metric follows only on an Appendix O branch that selects one operational tangent direction as temporal and proves that its positive complement has dimension three. Theorem K.10.3a excludes exact continuum ontology under finite-resource PPI, so the limit is an effective finite-resolution compression of the discrete MPU branch. ∎
 
 **Corollary 43.5a (Zero-Defect $D_4$ Gluing Certificate).** Let $\mathfrak Z_{\mathrm{cont}}$ be a finite record, for each refinement level $n$, consisting of:
 
@@ -202,19 +221,19 @@ Moreover, $(M,d_\infty,\mu_\infty)$ is a doubling PI space, the limit Cheeger en
 
 On the selected continuum branch, the quadratic limit energy together with Euclidean tangent cones on the regular set allows definition of an a.e. Riemannian metric tensor compatible with the limit distance.
 
-**11.5.1 Theorem 45 (Metric Tensor $g_{\mu\nu}$)**
+**11.5.1 Theorem 45 (Riemannian Metric Tensor $g_{\mu\nu}$)**
 
-Conditional on Theorem 44, the limit space admits an a.e. defined, symmetric, non-degenerate rank-2 tensor field $g_{\mu\nu}(x)$ on the regular set $M_{reg}\subseteq M$ (with $\mu_\infty(M\setminus M_{reg})=0$). It relates to infinitesimal distance via:
+Conditional on Theorem 44, the limit space admits an almost-everywhere defined symmetric positive-definite rank-2 tensor $g_{\mu\nu}(x)$ on $M_{reg}$, with $\mu_\infty(M\setminus M_{reg})=0$, such that
 $$
-ds^2 = g_{\mu\nu}(x) dx^\mu dx^\nu \quad \text{(66)}
+ds^2=g_{\mu\nu}(x)dx^\mu dx^\nu \quad \text{(66)}.
 $$
-On $M_{reg}$, the quadraticity of the limit Cheeger energy makes the first-order differential structure infinitesimally Hilbertian, and the branch-appropriate Euclidean-rigidity/regularity theorem assumed in Theorem 44 yields the stated $C^{1,\alpha}$ regularity in appropriate coordinates. This metric tensor endows $(M_{reg}, g_{\mu\nu})$ with a compatible (a.e.) differentiable structure, establishing it as a (pseudo-)Riemannian manifold on the regular set induced by the underlying ND-RID propagation cost metric $d_{\mathcal{N}}$.
+This is the measurable Riemannian tensor associated with the quadratic Cheeger energy. On the separate Euclidean-rigidity subbranch invoked by Theorem 44a, it has the stated $C^{1,\alpha}$ regularity in the corresponding charts. A pseudo-Riemannian or Lorentzian signature is not supplied by the Cheeger construction and requires the additional Appendix O time-orientation, principal-symbol, and cone certificate.
 
-*Proof:* The quadratic Cheeger energy from Theorem 44 implies infinitesimal Hilbertianity, so the first-order differential structure on the doubling PI limit carries a pointwise inner product a.e. On $M_{reg}$, the Euclidean tangent cones $T_xM\cong\mathbb{R}^D$ provide the canonical local model; on the PU branch, $D=4$. Choosing measurable coordinate charts on $M_{reg}$ from the regularity theorem invoked in Theorem 44, define
+*Proof.* Quadraticity of the Cheeger energy makes the first-order differential module infinitesimally Hilbertian and therefore supplies a positive pointwise inner product almost everywhere. On $M_{reg}$, the Euclidean tangent cones provide the local model. In the measurable charts of the regular branch, define
 $$
-g_{\mu\nu}(x):=\langle \partial_\mu,\partial_\nu\rangle_x
+g_{\mu\nu}(x):=\langle\partial_\mu,\partial_\nu\rangle_x.
 $$
-a.e. Symmetry and non-degeneracy follow from the Euclidean inner product on the tangent cone. By construction, (66) matches the quadratic approximation of $d_\infty$ in local coordinates on $M_{reg}$. The stated $C^{1,\alpha}$ regularity is exactly the regularity furnished on the selected branch by the Euclidean-rigidity/regularity hypothesis assumed in Theorem 44. ∎
+The Euclidean tangent inner product gives symmetry and positive definiteness, and its associated quadratic form is the infinitesimal quadratic approximation of $d_\infty$, proving (66). The $C^{1,\alpha}$ conclusion follows only on the rigidity subbranch that assumes the corresponding harmonic-coordinate theorem. ∎
 
 **Corollary 45b (Fisher-Propagation Compatibility).**
 Let $U\Subset M_{reg}$ be a regular chart domain. Suppose the finite protocol family used to define the local propagation-cost distance on $U$ has a smooth identifiable response map
@@ -257,21 +276,29 @@ $$
 $$
 where the finite Markov/CPTP morphisms used to define the response-state Fisher tensor and the Mosco-Cheeger propagation tensor are the same admissible quotient functor after the PPI projection $\Pi_{\mathrm{PPI}}$. The record must identify the pushforward Dirichlet form $\mathcal E_{\mathrm{Mosco}}$, the QFI/Fisher quadratic form $\mathcal Q_{\mathrm{Fisher}}$, the response-null tangent quotient, and the fixed QFI scale $\lambda_{\mathrm{QFI}}$ before comparison.
 
-**Proposition 45d (Geometric Naturality Removes $B$ on the Covered Branch).** If $\mathfrak C_{\mathrm{geo}}$ is accepted on $U$, then on the positive operational-distance quotient,
+**Proposition 45d (Metric Calibration Removes $B$ on the Covered Branch).** Suppose an accepted $\mathfrak C_{\mathrm{geo}}$ explicitly certifies, on the positive operational-distance quotient,
 $$
-h=\lambda_{\mathrm{QFI}}\,g^{sp}.
+\mathcal Q_{\mathrm{Fisher}}=\lambda_{\mathrm{QFI}}\mathcal E_{\mathrm{Mosco}}
 $$
-If the branch normalization fixes $\lambda_{\mathrm{QFI}}=1$, then the comparison endomorphism of Corollary 45b is $B=\mathbb 1$ on the covered quotient. Without $\mathfrak C_{\mathrm{geo}}$, the endomorphism $B$ remains the correct residual comparison datum.
+at the tangent-quadratic-form level. Then
+$$
+h=\lambda_{\mathrm{QFI}}g^{sp}.
+$$
+If the branch calibration sets $\lambda_{\mathrm{QFI}}=1$, the comparison endomorphism of Corollary 45b is $B=\mathbb 1$. Without the explicit proportionality entry, $B$ remains a response-active comparison datum: CPTP monotonicity and naturality alone do not select a unique quantum monotone metric.
 
-*Proof.* The certificate states that both quadratic forms are natural pushforwards of the same finite update functor after the same PPI quotient. Čencov-Petz uniqueness applies only to this statistical/Markov quotient data, leaving a single monotone-metric scale. The Mosco-Cheeger entry identifies the propagation Dirichlet form as the geometric image of that same quotient. Hence the two positive quadratic forms differ only by the fixed branch scale $\lambda_{\mathrm{QFI}}$. Setting that scale to one gives $B=\mathbb 1$ by the uniqueness clause in Corollary 45b. ∎
+*Proof.* The certificate's proportionality entry states that for every quotient tangent vector $v$,
+$$
+h(v,v)=\lambda_{\mathrm{QFI}}g^{sp}(v,v).
+$$
+Polarization gives the same equality for the associated symmetric bilinear forms. Corollary 45b defines $B$ by $h(v,w)=g^{sp}(Bv,w)$; nondegeneracy of $g^{sp}$ therefore gives $B=\lambda_{\mathrm{QFI}}\mathbb 1$, and the unit calibration gives $B=\mathbb 1$. ∎
 
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
-The emergent manifold description obtained via Gromov–Hausdorff convergence (Theorem 44) and the existence of a metric tensor (Theorem 45) does not endow the theory with a preferred coordinate chart: coordinates are bookkeeping devices introduced only after the substrate has been compressed into an effective continuum representation. Because the substrate description is fundamentally relational and label-free, any coordinate chart used to represent the continuum limit is physically redundant.
+The emergent manifold branch of Theorems 44–45 admits coordinate charts without making a chart label an observable. Discrete vertex-relabeling invariance motivates coordinate redundancy, but it does not by itself establish invariance under the full group of smooth diffeomorphisms of the limiting manifold.
 
-Concretely, the PU dynamics and objective are expressed in terms of relational/predictive quantities (Definition D.1; Equation D.0) and graph-induced cost distances (Definition 35). These are invariant under relabelings of underlying degrees of freedom, and in the continuum limit this relabeling freedom becomes coordinate freedom. Operational predictions must therefore be invariant under diffeomorphisms of the induced (a.e.) differentiable structure on the emergent manifold (Theorem 45). This is the continuum expression of the same structural principle: *no physical content is carried by labels.*
+Continuum diffeomorphism covariance is obtained on the closure branch of §11.5.3: the effective theory must admit a local finite-order action, its fields must transform as geometric objects, and Hypothesis 11.5.3.3 must identify continuum bookkeeping relabelings with orientation-preserving diffeomorphisms. Under those three hypotheses, Theorem 45a gives the scalar-density action and diffeomorphism invariance.
 
-As a result, the effective description must be expressible in a diffeomorphism-covariant form. Appendix X makes this concrete by identifying the gravitational sector of the effective action as a scalar-density integral over the emergent manifold (Equation X.7), and Section 12 then uses the standard locality and second-order consistency constraints (Lovelock uniqueness [Lovelock 1971]) to isolate the Einstein–Hilbert structure as the correct leading-order covariant dynamics at the MPU scale (Theorem 50).
+The Einstein–Hilbert specialization requires further inputs. Appendix X supplies a local covariant action branch, while Section 12 adds four-dimensional Lorentzian geometry, a metric-only second-order field equation, and the Wald entropy-density and source certificates used by the Lovelock–Wald closure. Those hypotheses, rather than discrete relabeling alone, select the leading Einstein branch.
 
 **11.5.3 Relabeling–Covariance Closure**
 
@@ -283,7 +310,7 @@ S_U[\Psi] \;=\; \int_{\phi(U)} L\bigl(x,j^k\Psi(x)\bigr)\,d^4 x,\tag{67a}
 $$
 for some finite jet order $k$, where $j^k\Psi$ denotes the $k$-jet of $\Psi$. This is the Wilsonian truncation of Appendix X, also used in §11.3 and §12.
 
-**Hypothesis 11.5.3.2** (Geometric-object status of the fields). The fields $\Psi$ are tensor/spinor geometric objects on $M_{\mathrm{reg}}$ with covariant pushforward under diffeomorphisms. This follows from the $\Gamma$-limit construction of §O.7.1 which produces tensor-valued continuum limits from the discrete PU substrate.
+**Hypothesis 11.5.3.2** (Geometric-object status of the fields). The fields $\Psi$ are tensor/spinor geometric objects on $M_{\mathrm{reg}}$ with covariant pushforward under diffeomorphisms. Appendix O §O.7.1 supplies the positive-definite spatial $\Gamma$-limit used by this branch; the tensor/spinor transformation law is an additional continuum-bridge hypothesis.
 
 **Hypothesis 11.5.3.3** (Relabeling neutrality). For any orientation-preserving $C^\infty$ diffeomorphism $\chi:U\to U'$ representing a change of continuum bookkeeping coordinates,
 $$
@@ -298,12 +325,12 @@ S_U[\Psi] \;=\; \int_U \sqrt{|g|}\,\mathcal L(j^k\Psi)\,d^4 x,\tag{67c}
 $$
 equivalently the density $L=\sqrt{|g|}\,\mathcal L$ is a scalar density of weight one.
 
-(b) *Diffeomorphism invariance of the global action.* For every compactly supported diffeomorphism $\varphi$ of $M_{\mathrm{reg}}$,
+(b) *Diffeomorphism covariance of the global action.* For every compactly supported diffeomorphism $\varphi$ of $M_{\mathrm{reg}}$,
 $$
-S[\varphi^*\Psi] \;=\; S[\Psi].\tag{67d}
+S[\varphi^*\Psi,\varphi^*g]\;=\;S[\Psi,g].\tag{67d}
 $$
 
-Continuum diffeomorphism invariance is therefore a derived consequence of the substrate-level relabeling neutrality of §11.5.2. ∎
+Continuum diffeomorphism invariance is therefore a consequence of the substrate-level relabeling neutrality of §11.5.2.
 
 *Proof.* (a) In one chart, $S_U[\Psi]=\int_{\phi(U)} L\,d^4x$. In a second chart $(\phi',U')$, the same physical functional has $S_{U'}[\chi_*\Psi]=\int_{\phi'(U')} L'\,d^4x'$. By Hypothesis 11.5.3.3 these are equal for every admissible field configuration. Pulling back via $\chi$:
 $$
@@ -311,7 +338,15 @@ $$
 $$
 Since the equality holds for arbitrary $U$ and arbitrary local field data, the integrands satisfy the pointwise density transformation law $L'(x',\,\cdot\,)=L(x,\,\cdot\,)\,|\det D\chi^{-1}(x')|$. This is exactly the weight-one scalar-density transformation. The metric determinant $\sqrt{|g|}$ transforms by the same Jacobian factor under coordinate changes (Wald 1984, §2.4), so the ratio $\mathcal L:=L/\sqrt{|g|}$ is a scalar, giving (67c).
 
-(b) Equivalence of passive coordinate relabeling (used in (a)) and active diffeomorphism of the manifold is standard (Wald 1984, §2.4; Hawking & Ellis 1973, §2.4): on a compactly supported region, the active diffeomorphism $\varphi$ acting on fields as $\Psi\mapsto\varphi^*\Psi$ is equivalent to a passive coordinate change. Applied to (67c): $\varphi$ acts on $\mathcal L$ as a scalar, on $\sqrt{|g|}\,d^4x$ as an invariant volume form, giving $S[\varphi^*\Psi]=S[\Psi]$. ∎
+(b) Under a compactly supported active diffeomorphism, every geometric field is pulled back: $(\Psi,g)\mapsto(\varphi^*\Psi,\varphi^*g)$. The Lagrangian is a scalar and the metric volume form obeys $d\operatorname{vol}_{\varphi^*g}=\varphi^*(d\operatorname{vol}_g)$. Therefore the change-of-variables formula gives
+$$
+S[\varphi^*\Psi,\varphi^*g]
+=
+\int_M\varphi^*\!\left(\mathcal L(\Psi,g)d\operatorname{vol}_g\right)
+=
+S[\Psi,g].
+$$
+This proves (67d). ∎
 
 **Corollary 45a.1 (Derived Noether Identity for the Matter Sector).** Let $S[\Psi,g]=S_{\mathrm{geom}}[g]+S_{\mathrm{MPU}}[\Psi,g]$ with $S_{\mathrm{MPU}}$ of the scalar-density form of Theorem 45a. With covariant metric variations, define the matter stress-energy tensor by
 $$
@@ -420,36 +455,37 @@ V_{\mathrm{cap}}(D)
 $$
 be the finite predictive capacity valuation of $D$, equal to the supremal reliable nats stored or transmitted by $\mathfrak A(D)$ at the stated resolution.
 
-**Theorem 46b (Causal-Diamond Reconstruction of the Emergent Metric Branch).** Let $(M,g,V_{\mathrm{cap}})$ and $(M',g',V'_{\mathrm{cap}})$ be two connected, time-oriented, past-and-future distinguishing, globally hyperbolic regular Lorentzian branches satisfying Definition 46b. Suppose there is a bijection
+**Theorem 46b (Causal-Diamond Reconstruction of the Emergent Metric Branch).** Let $(M,g,V_{\mathrm{cap}})$ and $(M',g',V'_{\mathrm{cap}})$ be connected, time-oriented, past-and-future distinguishing, globally hyperbolic regular Lorentzian branches. Suppose there is a bijection
 $$
 \Phi:\mathcal D_{\mathrm{op}}(M)\to\mathcal D_{\mathrm{op}}(M')
 $$
-such that
-$$
-D_1\subseteq D_2
-\quad\Longleftrightarrow\quad
-\Phi(D_1)\subseteq\Phi(D_2)
-$$
-and
+that preserves and reflects inclusion and satisfies
 $$
 V_{\mathrm{cap}}(D)=V'_{\mathrm{cap}}(\Phi(D))
 $$
-for every operational diamond $D$. Then:
+for every operational diamond. Assume additionally:
 
-1. $\Phi$ induces a homeomorphism $F:M\to M'$.
-2. $F$ preserves the causal order.
-3. $F$ determines the conformal Lorentzian metric:
+1. the basis-order isomorphism extends to an isomorphism of the generated topological frames, equivalently it maps the completely prime filters representing manifold points to such point filters, and its induced point map $F$ satisfies $\Phi(D)=F(D)$;
+2. $\Phi$ preserves the future/past orientation of diamond tips, or equivalently the induced map $F$ preserves the chosen time orientation.
+
+Then:
+
+1. $\Phi$ induces a homeomorphism $F:M\to M'$;
+2. $F$ preserves the directed causal order;
+3. $F$ determines the conformal Lorentzian metric,
 $$
-F^*[g']=\Omega^2[g]
+F^*[g']=\Omega^2[g],
 $$
-for a positive function $\Omega$ on the regular set.
-4. If both branches use the same capacity density normalization
+for a positive function $\Omega$ on the regular set;
+4. if both branches use one capacity-density normalization
 $$
 V_{\mathrm{cap}}(D)=\sigma_{\mathrm{cap}}\operatorname{Vol}_g(D),
 \qquad
 V'_{\mathrm{cap}}(D')=\sigma_{\mathrm{cap}}\operatorname{Vol}_{g'}(D')
 $$
-on sufficiently small diamonds, then $\Omega=1$ almost everywhere on the regular set, so the metric scale is fixed by the capacity valuation.
+on sufficiently small diamonds, then $\Omega=1$ almost everywhere on the regular set.
+
+Without hypothesis 2, the inclusion and capacity data determine the causal structure only up to a global time reversal.
 
 *Proof.* The set of relatively compact causal diamonds is a basis for the manifold topology on a globally hyperbolic distinguishing Lorentzian manifold. Since $\Phi$ preserves and reflects inclusion, it preserves the basis order. For each point $p\in M$, the family of diamonds containing $p$ is a completely prime filter in the inclusion poset. Inclusion preservation sends this filter to a completely prime filter in $\mathcal D_{\mathrm{op}}(M')$, which is the family of diamonds containing a unique point $F(p)\in M'$. This defines a bijection $F:M\to M'$. Because basic neighborhoods are diamonds and $\Phi$ preserves their inclusion relations, $F$ and $F^{-1}$ pull back basic neighborhoods to basic neighborhoods, so $F$ is a homeomorphism.
 
@@ -577,7 +613,16 @@ $$
 $$
 Scale invariance and evaluation of this standard Myrheim--Meyer integral in light-cone coordinates give (46e.1.2) [Abajian & Carlip 2018], and (46e.1.3) is exact arithmetic. Replacing one sampled point changes at most $N-1$ pair indicators, so it changes $U_N$ by at most $2/N$. McDiarmid's bounded-difference inequality therefore gives (46e.1.4). ∎
 
-**Corollary 46e.1a (Independent Dimension Cross-Certificate).** The order-fraction record uses only causal comparability. It is independent of the Appendix Z kissing-number derivation and of volume-growth fitting. A flat-diamond $D=4$ certificate must therefore satisfy (46e.1.3) within the registered sampling error. Curvature, nonuniform sampling, detector-order error, and curved-background finite-size or detector-window effects must be fixed as a preregistered bias interval; the exact $1/10$ value is not asserted outside the flat uniform branch.
+**Corollary 46e.1a (Independent Dimension Cross-Certificate).** The order-fraction record uses only causal comparability. It is independent of the Appendix Z kissing-number derivation and of volume-growth fitting. A flat-diamond $D=4$ certificate must therefore satisfy (46e.1.3) within the registered sampling error. Curvature, nonuniform sampling, detector-order error, and curved-background finite-size or detector-window effects must be specified as a preregistered bias interval; the exact $1/10$ value is not asserted outside the flat uniform branch.
+
+*Proof.* Definition 46e.1 constructs $U_N$ solely from the pair indicators $\mathbf1_{x_i\prec x_j}$. Neither a kissing number nor a fitted volume-growth exponent occurs in that statistic or in the expectation calculation of Theorem 46e.1, which proves the stated derivational independence. On the $D=4$ flat uniform branch,
+$$
+r_4
+=\frac{\Gamma(5)\Gamma(2)}{2\Gamma(6)}
+=\frac{24\cdot1}{2\cdot120}
+=\frac1{10}.
+$$
+Equation (46e.1.4) supplies the registered sampling deviation about this value. Curvature, a nonuniform sampling law, order misclassification, or a detector-window distortion changes a hypothesis used in the expectation integral; its contribution must therefore enter through the declared bias interval rather than through the exact flat-uniform value. ∎
 
 **Definition 46f (Topological-Bandwidth Completion Certificate).** Fix $0<\Omega<\infty$ on a regular Lorentzian branch satisfying Theorem 43.5, Corollary 46a, and Definition 46b. Define
 $$
@@ -723,15 +768,15 @@ F_{\mu\nu}(A^{\mathrm{int}})
 [A_\mu^{\mathrm{int}},A_\nu^{\mathrm{int}}].
 $$
 
-2. For an infinitesimal coordinate parallelogram $\square_{\mu\nu}$ based at $x$, the unitary component $U_{\square_{\mu\nu}}^{\mathrm{pred}}$ of closed-system predictive transport satisfies
+2. Let an infinitesimal oriented parallelogram based at $x$ have independent side vectors $a^\mu$ and $b^\nu$. The unitary component of closed-system predictive transport around its boundary satisfies
 $$
-U_{\square_{\mu\nu}}^{\mathrm{pred}}
+U_{\square(a,b)}^{\mathrm{pred}}
 =
 \mathbb I
 +
-\mathcal F_{\mu\nu}^{\mathrm{pred}}(x)\,\Delta x^\mu\Delta x^\nu
+\mathcal F_{\mu\nu}^{\mathrm{pred}}(x)a^\mu b^\nu
 +
-O(|\Delta x|^3).
+O\!\left((|a|+|b|)^3\right).
 $$
 
 3. The spin projection of $\mathcal F_{\mu\nu}^{\mathrm{pred}}$ is the Riemann curvature of the emergent Lorentzian metric:
@@ -814,11 +859,14 @@ $$
 $$
 with $H$ the unitary (Hamiltonian/connection) component and the $\{L_a\}$ encoding dissipation/decoherence.
 
-For spatial transport, the analogous structure requires path-ordering. Let $\gamma: [0,1] \to M$ be a smooth spatial curve with tangent $\dot{\gamma}^\mu$. The finite transport map $\mathcal{E}_\gamma$ is constructed as:
+For transport along a smooth oriented curve $\gamma:[0,1]\to M$, assume the branch supplies a measurable family $\mathcal L_{\gamma,s}$ such that $\mathcal L_{\gamma,s}$ is a GKSL generator for almost every $s$ and its coefficients satisfy the boundedness conditions required for the evolution equation. Define
 $$
-\mathcal{E}_\gamma = \overleftarrow{\mathcal{P}} \exp\!\left( \int_0^1 ds \, \dot{\gamma}^\mu(s) \, \mathcal{L}_\mu \right),
+\mathcal E_\gamma
+=
+\overleftarrow{\mathcal P}
+\exp\!\left(\int_0^1\mathcal L_{\gamma,s}\,ds\right).
 $$
-where $\overleftarrow{\mathcal{P}}$ denotes path-ordering and each $\mathcal{L}_\mu$ is a GKSL generator along the $\mu$-direction. This path-ordered exponential is necessary because the generators at different points generically do not commute.
+Then the propagator is CPTP. A representation $\mathcal L_{\gamma,s}=\dot\gamma^\mu(s)\mathcal L_\mu$ is admissible only when this contracted generator has GKSL form along the selected orientation; directionwise GKSL form of the individual $\mathcal L_\mu$ does not imply that condition.
 
 * The **unitary part** $H_\mu$ matches the connection structure identified in Theorem 47: its holonomy yields the emergent curvature.
 * The **dissipative part** $\{L_{\mu,a}\}$ is the operational signature of ND-RID: it captures the loss of distinguishability under transport required by irreversibility (Appendix E), and it is naturally represented in the Schwinger–Keldysh/CTP effective action formalism (Section X.5) as the stochastic/noise sector accompanying the retarded response sector.
@@ -832,17 +880,24 @@ and for two branches with proper times $\tau_0(t)$ and $\tau_1(t)$ relative to t
 $$
 \Theta_{ij}(t):=-\frac{\Delta E_{ij}}{\hbar}\bigl(\tau_1(t)-\tau_0(t)\bigr).
 $$
-In the weak-field static branch used in Appendix S,
+In a static weak field with $|\Phi|/c^2\ll1$,
 $$
-\frac{d\tau}{dt}=1+\frac{\Phi}{c^2}+O(c^{-4}),
+\frac{d\tau}{dt}
+=
+1+\frac{\Phi}{c^2}
++
+O\!\left(\frac{\Phi^2}{c^4}\right).
 $$
-so the exact leading chronometric phase-rate invariant is
+For branch potentials $\Phi_0,\Phi_1$, this gives
 $$
 |\dot\Theta_{ij}|
 =
-\frac{|\Delta E_{ij}|}{\hbar}\frac{|\Delta\Phi|}{c^2}
+\frac{|\Delta E_{ij}|}{\hbar}
+\left[
+\frac{|\Delta\Phi|}{c^2}
 +
-O(c^{-4}).
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right)
+\right].
 $$
 Equivalently,
 $$
@@ -852,7 +907,7 @@ $$
 =
 \frac{|\Delta\Phi|}{c^2}
 +
-O(c^{-4}).
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right).
 $$
 This statement is a coherent phase-rate statement. A deterministic, fully tracked $\Theta_{ij}$ is a unitary phase rotation and does not by itself suppress coherence.
 
@@ -873,9 +928,12 @@ Then the residual dephasing rate is
 $$
 \Gamma_{\mathrm{ch}}^{(ij)}
 =
-\frac{|\Delta E_{ij}|}{\hbar}\frac{|\Delta\Phi|}{c^2}
+\frac{|\Delta E_{ij}|}{\hbar}
+\left[
+\frac{|\Delta\Phi|}{c^2}
 +
-O(c^{-4}),
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right)
+\right],
 $$
 and the normalized dephasing invariant is
 $$
@@ -885,7 +943,7 @@ $$
 =
 \frac{|\Delta\Phi|}{c^2}
 +
-O(c^{-4}).
+O\!\left(\frac{\Phi_0^2+\Phi_1^2}{c^4}\right).
 $$
 In Fermi normal coordinates,
 $$
@@ -1032,7 +1090,15 @@ is again a cocycle, hence defines a principal $\mathrm{Spin}(1,3)\times U(d_0)$-
 
 **Corollary 48b.1 (Exact Obstruction).** On a connected oriented time-oriented branch, the only obstruction to globalizing the $\mathrm{Spin}(1,3)$ factor is $w_2(M_{\mathrm{reg}})$. Theorem 48 is therefore globally exact on the spin-admissible branch $w_2=0$ and otherwise only local.
 
-*Proof.* The spin-lift obstruction theorem applied to the orthonormal frame bundle; the internal $U(d_0)$ part carries no analogous obstruction class in the present construction. ∎
+*Proof.* Orientation and time orientation reduce the Lorentzian orthonormal frame bundle to structure group $SO^+(1,3)$. Choose a good cover $\{U_i\}$ and transition maps $\Lambda_{ij}:U_{ij}\to SO^+(1,3)$. Choose local lifts $\widetilde\Lambda_{ij}:U_{ij}\to\mathrm{Spin}(1,3)$. On every triple overlap their product lies in the kernel $\{\pm1\}$ of $\mathrm{Spin}(1,3)\to SO^+(1,3)$:
+$$
+c_{ijk}
+:=\widetilde\Lambda_{ij}\widetilde\Lambda_{jk}\widetilde\Lambda_{ki}
+\in\{\pm1\}.
+$$
+The signs $c_{ijk}$ form a Čech $2$-cocycle representing $w_2(M_{\mathrm{reg}})$. If $w_2=0$, there is a sign-valued Čech $1$-cochain $b_{ij}$ with $c_{ijk}=b_{ij}b_{jk}b_{ki}$. Replacing $\widetilde\Lambda_{ij}$ by $b_{ij}\widetilde\Lambda_{ij}$ makes the triple products equal to $1$, so the lifts form a spin cocycle. Conversely, any spin cocycle has all triple products equal to $1$, so its obstruction class vanishes. Thus a global spin lift exists exactly when $w_2=0$.
+
+The Hermitian bundle $E$ already has unitary transition maps $u_{ij}:U_{ij}\to U(d_0)$ satisfying $u_{ij}u_{jk}u_{ki}=I$. Once the spin cocycle exists, $(\widetilde\Lambda_{ij},u_{ij})$ is a $\mathrm{Spin}(1,3)\times U(d_0)$ cocycle; the unitary factor introduces no additional lifting problem. Hence the only obstruction to the stated product construction is $w_2(M_{\mathrm{reg}})$. ∎
 
 **Definition 48b.2 (Tangential-Structure Certificate $\mathfrak C_{\mathrm{tan}}$).** A tangential-structure certificate for retained fermionic response sectors is a finite record
 $$
@@ -1058,6 +1124,16 @@ A $\mathrm{Spin}^c$ target instead records the corresponding lift condition, for
 
 (ii) *Markovian semigroup limit.* On bounded local time windows, the family $\{\Phi_\gamma\}$ admits a strongly continuous Markovian semigroup limit on $\mathrm{End}(\mathcal W_x)$.
 
+(iii) *Overlap covariance of the open-system channel.* If $g_{ij}$ is a transition function of $\mathcal W$ on $U_i\cap U_j$, the local channel representatives satisfy
+$$
+\Phi_\gamma^{(j)}
+=
+\operatorname{Ad}_{g_{ij}(y)}\circ
+\Phi_\gamma^{(i)}\circ
+\operatorname{Ad}_{g_{ij}(x)^{-1}},
+$$
+and the corresponding generator superoperators satisfy the infinitesimal intertwining relation. Equivalently, the Hamiltonian and dissipative terms together define a global endomorphism-superoperator section.
+
 Then every local CPTP transport map along a curve $\gamma$,
 $$
 \Phi_\gamma:\mathrm{End}(\mathcal W_x)\to\mathrm{End}(\mathcal W_y),
@@ -1072,11 +1148,13 @@ $$
 $$
 where $H_D$ uses the spin-plus-internal covariant derivative of Definition G.4.1 and Theorem G.4b.
 
-*Proof.* Every CPTP map admits a minimal Stinespring dilation [Stinespring 1955]; hypothesis (i) selects the bundle-respecting realization in which the system-side unitary factor lifts the parallel transport of the product connection on $S\otimes E$ (Theorem G.4b). Tracing out the environment gives the open-system transport. Under hypothesis (ii), the Lindblad–GKSL form is the standard classification of completely positive Markov semigroups [Gorini–Kossakowski–Sudarshan 1976; Lindblad 1976]. Covariance follows because the Hamiltonian part is built from the same product connection on every chart overlap, so $H_D$ transforms covariantly under the bundle's transition functions. ∎
+*Proof.* Stinespring's dilation theorem (Stinespring 1955) applies to each finite-dimensional CPTP transport map and gives an isometric dilation, extendable to a unitary after enlarging the environment if necessary. Hypothesis (i) selects a realization whose closed-system restriction is the product-connection transport on $S\otimes E$. Tracing over the environment recovers $\Phi_\gamma$.
+
+Hypothesis (ii) gives a strongly continuous completely positive trace-preserving semigroup on each finite-dimensional endomorphism algebra. The Gorini–Kossakowski–Sudarshan–Lindblad classification (Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976) therefore gives the displayed local GKSL form. Finally, differentiate the channel overlap relation of hypothesis (iii) at semigroup parameter zero. The resulting generator relation intertwines the full superoperator, not only its Hamiltonian commutator. Hence the local generators define a global covariant generator; local Lindblad families on overlaps may differ by the standard representation mixing without changing that superoperator. ∎
 
 Theorem 48c closes the gap between Theorem 47 (predictive holonomy as curvature) and Theorem 48 (fibre-bundle representation): under the stated open-system hypotheses, the CPTP transport law is a completion of the same underlying bundle transport.
 
 **11.9 Role of MPU Stress-Energy Tensor**
 
-As established by Theorem 47 and the connection dynamics of Theorem 48, non-frame-removable inhomogeneities in MPU activity enter the predictive connection and are measured by its curvature. This activity is quantitatively captured by the macroscopic MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Definition B.8 in Appendix B), derived by coarse-graining microscopic MPU costs/activity. It is this macroscopic tensor $T_{\mu\nu}^{(MPU)}$ that serves as the source term driving the spacetime curvature $R^{\rho}{}_{\sigma\mu\nu}$ and appearing on the right-hand side of the emergent gravitational field equations derived thermodynamically in the next section. Theorem 46 supplies only a uniform operational causal-speed upper bound. The identification $c=\delta/\tau_{\min}$ additionally requires the separately accepted normalized uniform-weight one-link-attainment branch of Appendix E, Theorem E.10.2; only on that branch is the attained value tied to the registered costs and timing of information propagation. Its promotion to a Lorentzian light cone is the Appendix O branch imported by Corollary 46a, and the exact values of $\delta$ and $\tau_{\min}$ inherit the Appendix Q discretization branches.
+Theorem 47 and the connection dynamics of Theorem 48 identify non-frame-removable inhomogeneity of predictive transport with curvature of the predictive connection. A macroscopic MPU stress-energy source $T_{\mu\nu}^{(MPU)}$ is available on the separate Appendix B branch carrying admissible bounded-variation coarse-graining, a paired or unique continuum limit, the momentum-flux and Belinfante derivative certificates, variational first-variation consistency, local equilibrium, and the global horizon-flux consistency and quadrature record of Theorem B.8d. On the operational-continuum, local-horizon, area-law, KMS/Clausius, and finite Einstein-closure branch of Section 12, that same certified tensor is the source on the right-hand side of the emergent field equation. Theorem 46 supplies only a uniform operational causal-speed upper bound. The identification $c=\delta/\tau_{\min}$ additionally requires the separately accepted normalized uniform-weight one-link-attainment branch of Appendix E, Theorem E.10.2; only on that branch is the attained value tied to the registered costs and timing of information propagation. Its promotion to a Lorentzian light cone is the Appendix O branch imported by Corollary 46a, and the exact values of $\delta$ and $\tau_{\min}$ inherit the Appendix Q discretization branches.
 

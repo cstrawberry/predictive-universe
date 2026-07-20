@@ -12,8 +12,8 @@ Without an accepted transport certificate, the numerical value of $\eta_B$ is op
 | Quantity | Branch value | Observed | Status |
 |----------|--------------|----------|--------|
 | $\eta_B$ | validation run $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | model/threshold branch pending $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or $\mathfrak C_B^{\mathrm{APSK}}$ |
-| $\delta_{\mathrm{CKM}}$ | $66.7^\circ$ | $65.72^\circ\pm1.49^\circ$ | $+0.7\sigma$ |
-| $J_{CP}$ | $3.22 \times 10^{-5}$ | $(3.12^{+0.13}_{-0.12}) \times 10^{-5}$ | $+0.8\sigma$ |
+| $\delta_{\mathrm{CKM}}$ | $66.7^\circ$ on the registered nonlinear phase-response ansatz of Theorem T.56 | $65.72^\circ\pm1.49^\circ$ | model-conditional; $+0.7\sigma$ comparison |
+| $J_{CP}$ | $3.22 \times 10^{-5}$ on the same conditional flavor branch | $(3.12^{+0.13}_{-0.12}) \times 10^{-5}$ | model-conditional; $+0.8\sigma$ comparison |
 
 
 ---
@@ -49,7 +49,7 @@ The proposition therefore establishes a model-level correspondence between the p
 
 ### Y.2.2 The 2-to-1 Merge and Branch Selection
 
-**Recall from Theorem 31.** The binary SPAP quotient has structural log-cardinality $\varepsilon_0=\ln2$. A registered reset obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a physical $\ln2$ lower bound additionally requires a conditionally uniform binary record with no retained copy.
+**Recall from Definition 28, Lemma J.1, and Theorem 31.** Definition 28 registers the reachable binary verification quotient, and Lemma J.1 gives its structural log-cardinality $\varepsilon_0=\ln2$. Theorem 31 gives the separate registered-reset bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a physical $\ln2$ lower bound additionally requires a conditionally uniform binary record with no retained copy.
 
 **Corollary Y.1.1** (Irreversible Branch Selection). At the verification step of each nontrivial SPAP cycle, the 2-to-1 merge selects one retained branch of the predictive $\mathbb Z_2$ ledger and exports at least $\ln2$ nats of bath entropy only when the discarded binary label is conditionally uniform and not retained as side information. Let $\mathcal E_\Omega$ be a finite set of baryon-relevant update events in a finite spacetime region $\Omega$, equipped with the charge-conjugation pairing $e\mapsto\bar e$ from Proposition Y.1 and an orientation character
 $$
@@ -98,52 +98,69 @@ Choosing the representative with $\chi(e)=+1$ gives (Y.1.3). If CP symmetry and 
 
 ## Y.3 Conditional Sakharov-Branch Realization
 
-**Theorem Y.2 (Conditional Sakharov-Branch Realization).** Suppose the retained branch carries: (i) the electroweak anomaly channel, (ii) a nonzero certified CP-odd datum, (iii) active baryon-number-changing transitions, and (iv) an accepted response-active nonstationary transport, boundary/inflow, preparation, or freeze-out record satisfying Theorems Y.6.1i--Y.6.1k. Then the three Sakharov conditions are realized on that branch. The SPAP arrow and update cost alone do not discharge item (iv).
+**Theorem Y.2 (Conditional Sakharov-Branch Realization).** Suppose the retained branch carries: (i) the electroweak anomaly channel, (ii) a nonzero certified CP-odd datum, (iii) active baryon-number-changing transitions, and (iv) an accepted response-active nonstationary transport, boundary/inflow, preparation, or freeze-out record satisfying Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k. Then the three Sakharov conditions are realized on that branch. The SPAP arrow and update cost alone do not discharge item (iv).
 
 
 ### Y.3.1 Baryon Number Non-Conservation
 
-The gauge structure $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ emerges as PCE-preserving automorphisms of predictive frames (Theorem G.8.4b). On this branch the gauge anomaly classes vanish by the predictive-descent requirement of Theorem X.8d and Section G.8.2.3. The current $B+L$ is not a gauge/frame redundancy; it is a global current. Its electroweak anomaly is therefore an admissible physical update channel rather than a failure of predictive descent. The chiral coupling of left-handed fermions to $SU(2)_L$ implies the Adler-Bell-Jackiw anomaly:
+The gauge structure $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ emerges as PCE-preserving automorphisms of predictive frames (Theorem G.8.4b). On this branch the gauge anomaly classes vanish by the predictive-descent requirement of Theorem X.8d and Section G.8.2.3. The current $B+L$ is not a gauge/frame redundancy; it is a global current. Its electroweak anomaly is therefore an admissible physical update channel rather than a failure of predictive descent. On the retained $SU(2)_L$ topological-transition branch, assume that the integrated hypercharge and gravitational Pontryagin contributions to the $B+L$ Ward identity vanish. The remaining $SU(2)_L$ contribution is
 
-$$\partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu} \tag{Y.1}$$
+$$\partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu}. \tag{Y.1}$$
 
-where $N_g = 3$ is the number of generations (Theorem R.3.4), $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
+where $N_g$ is the number of generations. Theorem R.3.4 gives the minimal admissible count $N_{\min}=3$ in the anomaly-plus-CP family-charge class, and Proposition R.3.5.1a gives the exact realized value $N_g=3$ on the pre-flavor family-redundancy PPI branch used here. The tensor $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
 
-*Derivation:* For a single left-handed $SU(2)_L$ doublet, the $SU(2)$ chiral anomaly contributes
+*Derivation.* Use the Adler–Bell–Jackiw chiral-anomaly theorem (Adler, 1969; Bell and Jackiw, 1969) with $SU(2)$ generators normalized in the fundamental representation by $\operatorname{tr}(T^aT^b)=\frac12\delta^{ab}$. A unit global charge carried by one left-handed $SU(2)_L$ doublet then has
 $$
-\partial_\mu j^\mu = \frac{g^2}{32\pi^2}W^a_{\mu\nu}\tilde W^{a\mu\nu}
+\partial_\mu j^\mu
+=\frac{g^2}{32\pi^2}
+W^a_{\mu\nu}\widetilde W^{a\mu\nu}.
 $$
-to the divergence of the unit-charged current. Weighting by the $B+L$ charge and summing over left-handed doublets in one generation gives: three quark doublets with $B=\frac{1}{3}$ (one per color) contribute total $B$ charge $3\cdot\frac{1}{3}=1$, and the lepton doublet contributes total $L$ charge $1$. Hence the total $B+L$ charge per generation is $2$, yielding
+The electroweak fermions are left-handed fundamental doublets, so the representation and trace hypotheses of the anomaly theorem are satisfied. In one generation, the three color copies of the quark doublet have total baryon charge
 $$
-\partial_\mu J^\mu_{B+L} = 2\cdot \frac{g^2}{32\pi^2}W^a_{\mu\nu}\tilde W^{a\mu\nu}
-= \frac{g^2}{16\pi^2}W^a_{\mu\nu}\tilde W^{a\mu\nu}.
+3\cdot\frac13=1,
 $$
-Multiplying by $N_g$ gives (Y.1).
+and the lepton doublet has total lepton charge $1$. Linearity of the anomaly in the global charge therefore gives total $B+L$ weight
+$$
+1+1=2
+$$
+per generation. Hence
+$$
+\partial_\mu J^\mu_{B+L}
+=2\cdot\frac{g^2}{32\pi^2}
+W^a_{\mu\nu}\widetilde W^{a\mu\nu}
+=\frac{g^2}{16\pi^2}
+W^a_{\mu\nu}\widetilde W^{a\mu\nu}.
+$$
+All $N_g$ generations have the same electroweak representation and charge weights, so summing them multiplies the coefficient by $N_g$ and yields Equation (Y.1). ∎
 
 ### Y.3.2 C and CP Violation
 
-**Imported result (Theorem T.56, CP Phase from Berry Holonomy).** The CP-violating phase in the CKM matrix arises as the Berry holonomy around the minimal flavor-changing loop on the generation manifold $\text{Gr}(2,8)$:
+**Imported results (Theorems T.54--T.56, Berry phase, visibility, and phase-response gate).** On the minimal Berry-area branch of Theorem T.54, the flavor quadrilateral on $\text{Gr}(2,8)$ has the nonzero base Berry phase
 
-$$\delta = \delta_{\text{flat}} \times f_{\text{sinc}} = 70.53° \times 0.9454 = 66.7°$$
+$$\delta_0 = 2\arctan(\sqrt{2}/2) = 70.53°.$$
 
-where
-- $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in $E_8$ root space,
-- $f_{\text{sinc}} = \text{sinc}(1/\sqrt{3}) = 0.9454$ is the coherent averaging factor over the generation wavepacket (Theorem T.55).
+Theorem T.55 gives the uniform phase-noise visibility
 
-The CP phase is non-zero because the up and down quark sectors occupy geometrically distinct triads in the $E_8$ root lattice:
+$$\left|\left\langle e^{i(\delta_0+\xi)}\right\rangle\right|=\text{sinc}(1/\sqrt{3})=0.9454,$$
+
+while leaving the phase equal to $\delta_0$. On the additional nonlinear phase-response ansatz registered in Theorem T.56, one defines
+
+$$\delta_{\mathrm{CKM}}:=\delta_0\,\text{sinc}(1/\sqrt{3})=66.7°.$$
+
+The base Berry phase is nonzero on the declared minimal-area branch because the up and down quark sectors use the distinct geometric data
 - Down quarks: $(d^2_{32}, d^2_{31}) = (2, 4)$
 - Up quarks: $(d^2_{32}, d^2_{31}) = (4, 8)$
 
-This mismatch generates a non-trivial Berry curvature, and the holonomy around the flavor quadrilateral $(u_3 \to d_3 \to d_2 \to u_2 \to u_3)$ yields the physical CP phase.
+The value $66.7°$ is a conditional nonlinear-response branch value, not the phase of the averaged complex amplitude in Theorem T.55.
 
 ### Y.3.3 Departure from Thermal Equilibrium
 
-The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$). The cosmological arrow of time and nonzero predictive-update cost do not by themselves prove that the retained electroweak state departs from KMS stationarity. In the PU baryogenesis mechanism, active sphalerons produce a net yield only when an accepted $\dot\theta_{\mathrm{PU}}$, boundary/inflow, nonstationary preparation, or freeze-out record discharges Theorem Y.6.1i; $e^{-\kappa_B}$ is only a multiplicative branch weight.
+On a registered physical-reset branch, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; strict positivity requires an additional positive conditional-entropy floor. The cosmological arrow of time and nonzero predictive-update cost do not by themselves prove that the retained electroweak state departs from KMS stationarity. In the PU baryogenesis mechanism, active sphalerons produce a net yield only when an accepted $\dot\theta_{\mathrm{PU}}$, boundary/inflow, nonstationary preparation, or freeze-out record discharges Theorem Y.6.1i; $e^{-\kappa_B}$ is only a multiplicative branch weight.
 
 *Proof of Theorem Y.2.*  
-(1) On the SM-gauge branch (Theorem G.8.4b), Equation (Y.1), derived from the chiral $SU(2)_L$ anomaly, gives $\partial_\mu J^\mu_{B+L}\neq 0$ whenever the topological density $W\tilde W$ has nonzero integral, so baryon number is violated.  
-(2) On the chiral SM gauge structure, the electroweak interaction distinguishes charge-conjugate configurations, and on the Berry-loop branch of Appendix T, Theorem T.56 supplies a nonzero CP-violating phase $\delta = 66.7°$, so CP is violated.  
-(3) Theorem 31 provides a reset-heat bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ on a registered reset branch; strict positivity requires a separate entropy floor for the underlying predictive update, and Appendix O supplies the macroscopic arrow of time. The baryogenesis-specific departure from equilibrium must be supplied by the driven transport or boundary/freeze-out certificate of Theorems Y.6.1i--Y.6.1k; the factor $e^{-\kappa_B}$ cannot supply it. Thus Theorem Y.2 is conditional on the complete response-active branch record. Its anomaly, family, CP, transition, and nonequilibrium entries are branch inputs; no unconditional derivation of them from the bare PU axioms is asserted.
+(1) On the SM-gauge branch of Theorem G.8.4b, Equation (Y.1) gives $\partial_\mu J^\mu_{B+L}\ne0$ whenever an active transition has nonzero integrated topological density $W\widetilde W$. Hypotheses (i) and (iii) therefore supply baryon-number violation.  
+(2) Hypothesis (ii) supplies a nonzero certified CP-odd datum. On the minimal Berry-area branch, Theorem T.54 supplies the nonzero base datum $\delta_0=70.53^\circ$. If the numerical CKM specialization is used, the additional nonlinear phase-response ansatz of Theorem T.56 supplies $\delta_{\mathrm{CKM}}=66.7^\circ$. Thus CP is violated only on a branch carrying the corresponding certified nonzero datum.  
+(3) Hypothesis (iv), through Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k, supplies the response-active nonstationary transport, boundary/inflow, preparation, or freeze-out record. This is the required departure from thermal equilibrium. The reset-heat bound of Theorem 31 and the macroscopic arrow of Appendix O do not replace this baryogenesis-specific hypothesis, and $e^{-\kappa_B}$ is only a branch weight. Hence the three Sakharov conditions hold exactly under hypotheses (i)--(iv), with no unconditional claim from the bare PU axioms. ∎
 
 
 ---
@@ -152,22 +169,44 @@ The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon_{\mathrm{
 
 ### Y.4.1 Chern-Simons Number and Vacuum Structure
 
-**Definition Y.3** (Chern-Simons Functional). *On a spatial hypersurface $\Sigma$, the $SU(2)$ Chern-Simons number is:*
+**Definition Y.3** (Chern-Simons Functional). *Let $T_a$ be Hermitian fundamental generators with $\operatorname{tr}(T_aT_b)=\frac12\delta_{ab}$, and let $\mathcal A=-igW^aT_a$ be the dimensionless anti-Hermitian $SU(2)$ connection on a spatial hypersurface $\Sigma$. With $F=d\mathcal A+\mathcal A\wedge\mathcal A$, define*
 
-$$N_{CS}(\Sigma) = \frac{g^2}{32\pi^2}\int_{\Sigma} \text{tr}\left(\mathcal{A} \wedge d\mathcal{A} + \frac{2}{3}\mathcal{A} \wedge \mathcal{A} \wedge \mathcal{A}\right) \tag{Y.2}$$
+$$
+N_{CS}(\Sigma)
+:=-\frac{1}{8\pi^2}\int_\Sigma
+\operatorname{tr}\left(
+\mathcal A\wedge d\mathcal A
++\frac23\mathcal A\wedge\mathcal A\wedge\mathcal A
+\right)
+\pmod{\mathbb Z}.
+\tag{Y.2}
+$$
 
-The electroweak vacuum has a periodic structure with $N_{CS} \in \mathbb{Z}$ labeling topologically distinct sectors. Transitions between adjacent vacua ($\Delta N_{CS} = \pm 1$) violate $B + L$ by $2N_g$ units.
+*Choose a real lift of $N_{CS}$ along each retained interpolation. On a pure-gauge vacuum this lift is an integer, and a unit-winding transition has $\Delta N_{CS}=\pm1$. With the same convention,*
+$$
+-\frac{1}{8\pi^2}\int_X\operatorname{tr}(F\wedge F)=\Delta N_{CS}.
+$$
+*Such a transition changes $B+L$ by $2N_g\Delta N_{CS}$ on the anomaly branch of Theorem Y.4.*
 
-**Theorem Y.4** (Baryon Number from Anomaly Inflow). *For a spacetime 4-volume $\mathcal{V}$ bounded by initial and final Cauchy surfaces $\Sigma_i$ and $\Sigma_f$:*
+**Theorem Y.4** (Baryon Number from Anomaly Inflow). *Let $\mathcal V$ be a spacetime four-volume whose oriented boundary consists of Cauchy surfaces $\Sigma_f\sqcup(-\Sigma_i)$ and either has no additional boundary or has vanishing $B+L$ current and Chern-Simons flux through every additional boundary component. Assume the anomaly restriction of Equation (Y.1) and a finite-action gauge history with pure-gauge endpoints in the normalization of Definition Y.3. Then*
 
-$$\Delta B + \Delta L = 2N_g \left[N_{CS}(\Sigma_f) - N_{CS}(\Sigma_i)\right] \tag{Y.3}$$
+$$\Delta B + \Delta L = 2N_g \left[N_{CS}(\Sigma_f) - N_{CS}(\Sigma_i)\right]. \tag{Y.3}$$
 
-*Proof.* Integrate the anomaly equation (Y.1) over $\mathcal{V}$:
-$$\Delta(B+L) = \int_{\mathcal{V}} d^4x\, \partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2}\int_{\mathcal{V}} W\tilde{W}$$
-
-Using $W\tilde{W} = \partial_\mu K^\mu$ where $K^\mu$ is the Chern-Simons current, Stokes' theorem gives:
-$$\Delta(B+L) = \frac{N_g g^2}{16\pi^2}\left[\int_{\Sigma_f} K^0 - \int_{\Sigma_i} K^0\right] = 2N_g \Delta N_{CS}$$
-∎
+*Proof.* The divergence theorem and the zero-side-flux hypothesis give
+$$
+\Delta(B+L)
+=\int_{\mathcal V}\partial_\mu J_{B+L}^\mu\,d^4x
+=\frac{N_gg^2}{16\pi^2}\int_{\mathcal V}W^a_{\mu\nu}\widetilde W^{a\mu\nu}\,d^4x.
+$$
+Define
+$$
+Q_W:=\frac{g^2}{32\pi^2}\int_{\mathcal V}W^a_{\mu\nu}\widetilde W^{a\mu\nu}\,d^4x.
+$$
+The Chern-Weil transgression formula for Definition Y.3, together with the pure-gauge endpoint hypothesis, gives
+$$
+Q_W=N_{CS}(\Sigma_f)-N_{CS}(\Sigma_i).
+$$
+Therefore $\Delta(B+L)=2N_gQ_W=2N_g\Delta N_{CS}$. ∎
 
 **Corollary Y.4a (Electroweak Anomaly as an Admissible Predictive Update Channel).** On the SM-gauge branch of Theorem G.8.4b, the electroweak relation in Theorem Y.4 is compatible with Predictive Anomaly Descent. The gauge anomaly class vanishes, while the $B+L$ anomaly is a global-current update channel:
 $$
@@ -206,36 +245,36 @@ The lattice sphaleron rate does not supply $A_{CP}$, and no universal factor $1/
 
 ### Y.4.3 Predictive Index Form of Anomaly-Mediated Update
 
-**Definition Y.4.3a (Chiral Predictive Update Operator).** Let $X$ be a compact regular Euclidean interpolation region between initial and final Cauchy hypersurfaces $\Sigma_i$ and $\Sigma_f$. Let $D_X^+$ be the chiral Dirac operator coupled to the electroweak gauge background on the SM branch, with Atiyah-Patodi-Singer boundary conditions. Define the predictive update index
+**Definition Y.4.3a (Chiral Predictive Update Operator).** Let $X$ be a compact oriented Riemannian spin four-manifold with boundary $\partial X=\Sigma_f\sqcup(-\Sigma_i)$ and product metric and connection in collars of the boundary. Let $E_{\mathbf2}$ be one complex rank-two bundle in the fundamental representation of $SU(2)$, normalized by $\operatorname{tr}(T_aT_b)=\frac12\delta_{ab}$, with no flavor, color, or family multiplicity. Let
+$$
+D_{X,\mathbf2}^+:\Gamma(S^+\otimes E_{\mathbf2})\longrightarrow\Gamma(S^-\otimes E_{\mathbf2})
+$$
+carry Atiyah-Patodi-Singer boundary conditions. Define
 $$
 \operatorname{Ind}_{\mathrm{upd}}(D_X)
-=
-\dim\ker D_X^+
--
-\dim\ker D_X^-.
+:=dim\ker D_{X,\mathbf2}^+-\dim\ker(D_{X,\mathbf2}^+)^*.
 \tag{Y.12a}
 $$
 
-For finite-action gauge histories whose initial and final configurations approach pure gauge with the stated orientation and normalization,
+Assume that the degree-four gravitational contribution to $\widehat A(TX)\operatorname{ch}(E_{\mathbf2})$ vanishes and that the finite-action gauge history has pure-gauge endpoints whose boundary Dirac operators are unitarily equivalent. Then the eta and kernel differences of those endpoints vanish and
 $$
-Q_W=\Delta N_{\mathrm{CS}}.
+Q_W=\Delta N_{mathrm{CS}}.
 $$
-Without these asymptotic boundary conditions, the equality is not asserted.
 
-**Theorem Y.4.3b (Predictive Index Theorem for Baryon Update).** On the regular electroweak anomaly branch,
+**Theorem Y.4.3b (Predictive Index Theorem for Baryon Update).** Under the hypotheses of Definition Y.4.3a,
 $$
 \operatorname{Ind}_{\mathrm{upd}}(D_X)
 =
-\int_X \widehat A(R)\operatorname{ch}(F)\big|_4
+\int_X \widehat A(TX)\operatorname{ch}(E_{\mathbf2})\big|_4
 -
 \frac{\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})+h_f-h_i}{2},
 \tag{Y.12b}
 $$
-where $\eta(D_{\Sigma})$ is the eta invariant of the boundary Dirac operator and $h_\Sigma=\dim\ker D_\Sigma$. For an electroweak topological transition with
+and, for the stated fundamental normalization and pure-gauge endpoints,
 $$
-Q_W=\Delta N_{CS},
+\operatorname{Ind}_{\mathrm{upd}}(D_X)=Q_W=\Delta N_{CS}.
 $$
-the baryon-plus-lepton update is
+Consequently the Standard-Model fermion multiplicities give
 $$
 \Delta(B+L)
 =
@@ -245,15 +284,7 @@ $$
 \tag{Y.12c}
 $$
 
-*Proof.* Equation (Y.12b) is the Atiyah-Patodi-Singer index theorem applied to the chiral Dirac operator on the compact interpolation region $X$. On a product interpolation, the same index equals the spectral flow of the corresponding family of spatial Dirac operators between $\Sigma_i$ and $\Sigma_f$. In the electroweak $SU(2)$ sector, the spectral flow equals the gauge topological charge
-$$
-Q_W=\Delta N_{CS}
-$$
-with the standard anomaly normalization used in Theorem Y.4. For each generation, the anomaly changes baryon number and lepton number by the same topological unit, so the combined $B+L$ change per generation is $2Q_W$. Summing over $N_g$ generations gives
-$$
-\Delta(B+L)=2N_gQ_W.
-$$
-Substituting $Q_W=\operatorname{Ind}_{\mathrm{upd}}(D_X)$ gives (Y.12c). ∎
+*Proof.* The Atiyah-Patodi-Singer index theorem (Atiyah, Patodi, and Singer, 1975) applies because $X$ is compact, spin, and product near its boundary and because the APS realization is Fredholm. It gives (Y.12b), with the opposite orientations of $\Sigma_f$ and $\Sigma_i$ producing the displayed eta/kernel difference. For the fundamental representation, $2T(\mathbf2)=1$, so the gauge part of the degree-four Chern character integrates to $Q_W$. The gravitational contribution vanishes by hypothesis, and unitary equivalence of the pure-gauge endpoint operators gives $\eta(D_{\Sigma_f})=\eta(D_{\Sigma_i})$ and $h_f=h_i$. Thus (Y.12b) reduces to $\operatorname{Ind}_{\mathrm{upd}}(D_X)=Q_W$. Chern-Weil transgression for the normalized connection gives $Q_W=\Delta N_{CS}$. Finally, in each generation the three quark doublets have total baryon charge $3(1/3)=1$ and the lepton doublet has lepton charge $1$, so weighting the one-doublet index gives $\Delta(B+L)=2N_gQ_W$. ∎
 
 **Corollary Y.4.3c (Chirality, Anomaly Inflow, and Baryogenesis Share One Index).** On the Appendix Y branch, chiral spectral flow, anomaly-mediated update, and baryon production are three descriptions of the same integer index.
 
@@ -263,25 +294,56 @@ Substituting $Q_W=\operatorname{Ind}_{\mathrm{upd}}(D_X)$ gives (Y.12c). ∎
 
 ### Y.5.1 The Predictive Flavor Bundle
 
-**Definition Y.5** (Predictive Flavor Bundle). *Over the electroweak vacuum manifold $\mathcal{M}_{EW}$, the predictive flavor bundle $\mathcal{E} \to \mathcal{M}_{EW}$ has fiber at each point carrying the generation structure inherited from the $E_8$ embedding (Appendix R).*
-
-The Berry connection on this bundle is:
-$$\mathcal{A} = i\sum_{\alpha,\beta} \bar{z}_{\alpha\beta}\, dz_{\alpha\beta} \tag{Y.5}$$
-
-where $z_{\alpha\beta}$ are local coordinates on $\text{Gr}(2,8)$ (Lemma T.53.1). The Berry curvature is the Kähler form:
-$$\mathcal{F} = d\mathcal{A} = i\sum_{\alpha,\beta} dz_{\alpha\beta} \wedge d\bar{z}_{\alpha\beta} = \omega_{KE} \tag{Y.6}$$
+**Definition Y.5** (Predictive Flavor Bundle). *Over the electroweak vacuum manifold $\mathcal{M}_{EW}$, the predictive flavor bundle $\mathcal{E} \to \mathcal{M}_{EW}$ has fiber at each point carrying the generation structure inherited from the $E_8$ embedding (Appendix R). On a graph chart of $\operatorname{Gr}(2,8)$ write $Z\in\mathbb C^{6\times2}$ and let $\mathcal L=\det(\mathcal S)^*$ be the dual determinant of the tautological bundle. Its standard Hermitian metric has Kähler potential*
+$$
+K(Z,\bar Z)=\log\det(I_2+Z^\dagger Z).
+$$
+*A local real connection one-form on $\mathcal L$ and its curvature are*
+$$
+\mathcal A
+=\frac{i}{2}(\bar\partial K-\partial K),
+\tag{Y.5}
+$$
+$$
+\mathcal F=d\mathcal A=i\,\partial\bar\partial K=\omega_{\operatorname{Gr}}.
+\tag{Y.6}
+$$
+*On an overlap, a unitary change of local frame gives $\mathcal A' =\mathcal A+d\lambda$ with $\lambda$ real modulo $2\pi$, while $\mathcal F$ is global.*
 
 ### Y.5.2 Holonomy as Geometric CP Violation
 
-**Theorem Y.6** (CP-Odd Holonomy Datum). *The Berry-Simon holonomy over a minimal update cycle surface $\Sigma$ provides a gauge-invariant CP-odd datum; it becomes a baryon source only through the nonstationary transport gate of Theorems Y.6.1i--Y.6.1j:*
+**Theorem Y.6** (CP-Odd Holonomy Datum). *Let $c$ be the CP involution on the retained flavor branch and assume $c^*\mathcal F=-\mathcal F$. For a closed flavor loop $\gamma$, define its Berry phase by*
+$$
+e^{i\delta_{\mathrm{hol}}}
+:=exp\left(i\oint_\gamma\mathcal A\right).
+$$
+*If $\gamma=\partial\Sigma$ and the pulled-back line is trivialized over $\Sigma$, then*
+$$
+\delta_{\mathrm{hol}}
+\equiv
+\oint_\gamma\mathcal A
+\equiv
+\int_\Sigma\mathcal F
+\pmod{2\pi}.
+\tag{Y.7}
+$$
+*If CP maps the oriented surface to $c(\Sigma)$, then $\delta_{\mathrm{hol}}\mapsto-\delta_{\mathrm{hol}}$ modulo $2\pi$. This CP-odd phase becomes a baryon source only through the nonstationary transport gate of Theorems Y.6.1i--Y.6.1j.*
 
-$$\gamma = \oint_{\gamma} \mathcal{A} = \int_{\Sigma} \mathcal{F} \tag{Y.7}$$
+*Proof.* Under a unitary frame change, $\oint_\gamma\mathcal A$ changes by $\oint_\gamma d\lambda=2\pi n$ for some $n\in\mathbb Z$, so its exponential and its class modulo $2\pi$ are gauge-invariant. Stokes' theorem on the chosen trivialization gives $\oint_{\partial\Sigma}\mathcal A=\int_\Sigma d\mathcal A$. Finally,
+$$
+\int_{c(\Sigma)}\mathcal F
+=\int_\Sigma c^*\mathcal F
+=-\int_\Sigma\mathcal F,
+$$
+which proves CP oddness. The source qualification is Theorem Y.6.1i. ∎
 
-For the flavor-changing loop $\gamma: u_3 \to d_3 \to d_2 \to u_2 \to u_3$, the holonomy is computed in Theorem T.56 from the $E_8$ sector mismatch:
-$$\delta = 2\arctan\left(\frac{\sqrt{2}}{2}\right) \times \text{sinc}\left(\frac{1}{\sqrt{3}}\right) = 70.53° \times 0.9454 = 66.7°$$
+For the flavor-changing loop $\gamma: u_3 \to d_3 \to d_2 \to u_2 \to u_3$, Theorem T.54 gives the conditional base holonomy
+$$\delta_0 = 2\arctan\left(\frac{\sqrt{2}}{2}\right)=70.53°.$$
+Theorem T.55 gives the visibility factor $\text{sinc}(1/\sqrt{3})=0.9454$ and leaves the phase $\delta_0$ unchanged. On the independently registered nonlinear phase-response ansatz of Theorem T.56,
+$$\delta_{\mathrm{CKM}}:=\delta_0\,\text{sinc}\left(\frac{1}{\sqrt{3}}\right)=70.53°\times0.9454=66.7°.$$
 
-The CP-violating phase entering the master formula is:
-$$\sin\delta = \sin(66.7°) = 0.918 \tag{Y.8}$$
+On that nonlinear-response branch, the CP factor used in the illustrative master-formula row is
+$$\sin\delta_{\mathrm{CKM}} = \sin(66.7°) = 0.918 \tag{Y.8}$$
 
 ### Y.5.3 CP-Odd Effective Action
 
@@ -292,16 +354,39 @@ Q_W
 \int W^a_{\mu\nu}\widetilde W^{a\mu\nu}\,d^4x
 =\Delta N_{\mathrm{CS}}.
 $$
-A normalized local contribution has
+Let $\delta$ be a compact phase modulo $2\pi$. A local CP-odd topological contribution compatible with phase periodicity has the form
 $$
 \frac{\Delta S_{CP}}{\hbar}=\chi_{CP}f(\delta)Q_W,
 $$
-where $f$ is odd and $2\pi$-periodic and $\chi_{CP}$ is an independent matching coefficient. Symmetry fixes neither $\chi_{CP}$ nor a nonequilibrium rate affinity. On a separately certified two-rate branch, the bounded response is $\tanh A_{CP}$; a static phase term alone supplies no production bias. ∎
+where $f(-\delta)=-f(\delta)$, $f(\delta+2\pi)=f(\delta)$, and $\chi_{CP}$ is a matching coefficient. These symmetry conditions determine neither $\chi_{CP}$ nor a nonequilibrium rate affinity. On a separately certified two-rate branch, the bounded response is $\tanh A_{CP}$; a static phase term alone supplies no production bias.
 
-**Proposition Y.7** (Saturated CP Weight in a Certified Driven Single-Harmonic Truncation). *Under the single-harmonic choice $f(\delta)=\sin\delta$, when $\mathcal{S} \cdot \sin\delta \gg 1$, the dimensionless CP response weight saturates:*
-$$\mathcal{F}_{CP} \equiv \frac{\Gamma^{(+)} - \Gamma^{(-)}}{\Gamma^{(+)} + \Gamma^{(-)}} = \tanh(\mathcal{S} \sin\delta) \to 1$$
+*Proof.* The boundary hypotheses and Chern-Weil transgression give the first equality. CP reverses the sign of the topological density and of the retained CP phase, so CP oddness requires an odd coefficient function; compactness requires $2\pi$ periodicity. Every sufficiently regular such function has a sine expansion
+$$
+f(\delta)=\sum_{n\ge1}a_n\sin(n\delta),
+$$
+whose coefficients, including the overall normalization $\chi_{CP}$, are not determined by oddness or periodicity. Definition Y.4.2 gives the rate ratio $\tanh A_{CP}$ only after a signed affinity is supplied. Theorem Y.6.1i shows that a time-independent phase in a stationary state produces no secular change. ∎
 
-*In this regime, phase variations barely change the bounded CP weight. Net baryon production still requires the independently certified source, transport, freeze-out, and washout records of Theorems Y.6.1i--Y.6.1k.*
+**Proposition Y.7** (Saturated CP Weight in a Certified Driven Single-Harmonic Truncation). *Assume the two-rate branch*
+$$
+\Gamma_\pm=\Gamma_0e^{\pm\mathcal S\sin\delta},
+\qquad
+\Gamma_0>0.
+$$
+*Then*
+$$
+\mathcal F_{CP}
+:=\frac{\Gamma_+-\Gamma_-}{\Gamma_++\Gamma_-}
+=\tanh(\mathcal S\sin\delta).
+$$
+*Along any branch on which $\mathcal S\sin\delta\to+\infty$, $\mathcal F_{CP}\to1$. Net baryon production still requires the independently certified source, transport, freeze-out, and washout records of Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k.*
+
+*Proof.* Division of numerator and denominator by $\Gamma_0e^{-\mathcal S\sin\delta}$ gives
+$$
+\mathcal F_{CP}
+=\frac{e^{2\mathcal S\sin\delta}-1}{e^{2\mathcal S\sin\delta}+1}
+=\tanh(\mathcal S\sin\delta).
+$$
+The final limit follows because $e^{2\mathcal S\sin\delta}\to\infty$. ∎
 
 ### Y.5.4 Comparison with Spontaneous Baryogenesis
 
@@ -320,11 +405,18 @@ $$\eta_B^{CK} \propto \frac{\dot{\phi}}{M T} \cdot \frac{\Gamma_{sph}}{H}$$
 
 **PU Baryogenesis:**
 
-The Berry phase $\gamma$ on the generation manifold couples to the Chern-Simons current:
-$$\mathcal{L}_{int} = \frac{\gamma}{16\pi^2} W_{\mu\nu}\tilde{W}^{\mu\nu}$$
-
-This induces an effective theta-angle:
-$$\theta_{eff} = \gamma = \oint \mathcal{A}$$
+On a registered local-operator branch, let
+$$
+q_W:=\frac{g^2}{32\pi^2}W^a_{\mu\nu}\widetilde W^{a\mu\nu}.
+$$
+The Berry phase may enter a CP-odd local term only through the matching data of Theorem Y.6.1:
+$$
+\frac{\mathcal L_{CP}}{\hbar}=\chi_{CP}f(\delta_{\mathrm{hol}})q_W,
+$$
+where $f$ is odd and $2\pi$-periodic and $\chi_{CP}$ is determined by an accepted matching certificate. The phase is
+$$
+\delta_{\mathrm{hol}}\equiv\oint_\gamma\mathcal A\pmod{2\pi}.
+$$
 
 $$
 \eta_B-\eta_{\mathrm{hom}}-r_B
@@ -342,7 +434,7 @@ Static factors such as $\tanh(\mathcal S\sin\delta)$ and $e^{-\kappa_B}$ may occ
 | Scalar field $\phi$ | Berry phase $\gamma$ | CP-odd datum; $\dot\theta_{\mathrm{PU}}$ or boundary inflow is the source |
 | $\dot{\phi}/M$ | $\dot\theta_{\mathrm{PU}}$ or accepted boundary/inflow | response-active source; $\sin\delta$ is a CP-odd weight |
 | Driven $\dot\theta_{\mathrm{PU}}$, boundary inflow, or freeze-out | accepted APS-Kubo source and $f_{\mathrm{neq}}$ | response-active departure from equilibrium |
-| $\Gamma_{sph}/H$ | $\tanh(\mathcal{S}\sin\delta)$ | Sphaleron efficiency |
+| $\Gamma_{sph}/H$ | certified $\Gamma_{CS}/H$ and transport kernel | transition activity relative to expansion; the separate factor $\tanh(\mathcal S\sin\delta)$ is a CP-odd rate bias |
 
 **Key Differences:**
 
@@ -354,7 +446,28 @@ Static factors such as $\tanh(\mathcal S\sin\delta)$ and $e^{-\kappa_B}$ may occ
 
 4. **Saturation:** Cohen-Kaplan is linear in $\dot{\phi}/M$ (perturbative regime). PU saturates via $\tanh(\mathcal{S}\sin\delta) \to 1$ (non-perturbative regime).
 
-**Theorem Y.7.1** (PU Holonomy on a Geometric Spontaneous-Baryogenesis Branch). *The PU baryogenesis mechanism is the geometric realization of spontaneous baryogenesis, where the scalar field $\phi$ is replaced by the Berry phase $\gamma$, the coupling $1/M$ is replaced by $1/(16\pi^2)$, the physical source is the certified $\dot\theta_{\mathrm{PU}}$ or boundary/inflow term, and $e^{-\kappa_B}$ is only a reduced branch weight.*
+**Theorem Y.7.1** (PU Holonomy on a Geometric Spontaneous-Baryogenesis Branch). *Let $\theta_{\mathrm{PU}}$ be a differentiable real lift of the compact Berry phase on a finite transport region. Assume an accepted anomaly and matching certificate supplies constants $C_B\ne0$ and $\chi_{CP}$ such that*
+$$
+\partial_\mu J_B^\mu=C_Bq_W,
+\qquad
+\frac{\mathcal L_{CP}}{\hbar}=\chi_{CP}\theta_{\mathrm{PU}}q_W,
+$$
+*and assume the boundary integral of $\theta_{\mathrm{PU}}J_B^\mu$ vanishes or is retained explicitly as inflow. Then the bulk interaction is equivalent to the derivative-current coupling*
+$$
+\frac{S_{CP}^{\mathrm{bulk}}}{\hbar}
+=-\frac{\chi_{CP}}{C_B}
+\int (\partial_\mu\theta_{\mathrm{PU}})J_B^\mu\,d^4x.
+$$
+*Thus this certified branch has the mathematical source form of spontaneous baryogenesis under the correspondence $\partial_\mu\phi/M\leftrightarrow-(\chi_{CP}/C_B)\partial_\mu\theta_{\mathrm{PU}}$. The coefficient is matching data, the physical source is $\dot\theta_{\mathrm{PU}}$ or retained boundary inflow, and $e^{-\kappa_B}$ is only a reduced branch weight.*
+
+*Proof.* Substitute $q_W=C_B^{-1}\partial_\mu J_B^\mu$ into the local action and integrate by parts:
+$$
+\frac{S_{CP}}{\hbar}
+=\frac{\chi_{CP}}{C_B}\int\theta_{\mathrm{PU}}\partial_\mu J_B^\mu\,d^4x
+=-\frac{\chi_{CP}}{C_B}\int(\partial_\mu\theta_{\mathrm{PU}})J_B^\mu\,d^4x
++\frac{\chi_{CP}}{C_B}\int_{\partial X}\theta_{\mathrm{PU}}J_B^\mu n_\mu\,d^3\sigma.
+$$
+The final term vanishes or is retained by hypothesis. The remaining bulk term is precisely the derivative-current form. A constant phase has zero bulk source, in agreement with Theorem Y.6.1i. ∎
 
 ---
 
@@ -386,7 +499,7 @@ $$\boxed{\kappa_B = \kappa_{CP} + \kappa_{gen} = 19.25 + 0.23 = 19.48} \tag{Y.11
 
 *Proof.*
 
-**Step 1: Electroweak Base Complexity.** Baryogenesis occurs via sphaleron transitions during the electroweak epoch. The underlying gauge-Higgs configuration space inherits the electroweak complexity $\kappa_{EW} = 38.5$ (Theorem T.5).
+**Step 1: Electroweak Base Complexity.** Assume the transverse-positivity, compact Morse–Bott zero-mode manifold, and fluctuation-factorization hypotheses of Theorem T.5, together with the one-zero-mode result of Theorem T.4. On that branch the gauge-Higgs configuration space carries $\kappa_{EW}=38.5$.
 
 **Step 2: CP-Odd Projection via Symplectic Structure.**
 
@@ -396,18 +509,29 @@ $$\boxed{\kappa_B = \kappa_{CP} + \kappa_{gen} = 19.25 + 0.23 = 19.48} \tag{Y.11
 
 **(a) Contact structure and Haar measure.** The electroweak configuration space $\mathcal{M}_{EW} \cong S^3 \cong SU(2)$ is a compact, orientable 3-manifold. As a Lie group, $SU(2)$ carries a bi-invariant Haar measure $\mu_H$ and a canonical volume form $\Omega_3$. The Kähler structure on the ambient $\mathbb{C}^2$ induces the standard contact structure on $S^3$: the restriction of the ambient Liouville 1-form defines a contact form $\eta$ with $\eta \wedge d\eta$ proportional to $\Omega_3$. In particular, $S^3$ is odd-dimensional and cannot carry a symplectic 2-form; the relevant structure for CP projection is the orientation of $\Omega_3$, not a symplectic pairing.
 
-**(b) CP action on configuration space.** Under the identification $S^3 \cong SU(2)$, CP acts by the $\mathbb{Z}_2$ involution $U \mapsto U^{-1}$ (equivalently quaternionic conjugation on unit quaternions), which reverses orientation:
-$$\mathsf{CP}^* \Omega_3 = -\Omega_3$$
-This is the correct mathematical characterization—CP reverses the orientation of the $SU(2)$ group manifold. (The differential of inversion at the identity is $-I$ on $\mathfrak{su}(2)$, so $\det(d\,\mathsf{CP}) = (-1)^3 = -1$.)
+**(b) CP action on configuration space.** Assume that the retained physical CP action is identified with the inversion diffeomorphism $\iota(U)=U^{-1}$ under $S^3\cong SU(2)$. This map reverses orientation:
+$$
+\iota^*\Omega_3=-\Omega_3.
+$$
+Indeed, after identifying tangent spaces by left translation, its differential at $U$ is $-\operatorname{Ad}_U$. Since $SU(2)$ is connected, $\det(\operatorname{Ad}_U)=1$, while $\det(-I_{\mathfrak{su}(2)})=(-1)^3=-1$. Hence $\det(d\iota_U)=-1$ at every $U$. The orientation conclusion is mathematical; the identification of physical CP with $\iota$ is branch data.
 
 **(c) Haar measure.** The path integral measure $\mathcal{D}A \, e^{-S}$ transforms under CP as:
 $$\mathcal{D}(\mathsf{CP} \cdot A) = |\det(\mathsf{CP}^*)| \, \mathcal{D}A = \mathcal{D}A$$
 The Haar measure is CP-invariant (since $|\det| = 1$), but the integrand splits into CP-even and CP-odd components under the $\mathbb{Z}_2$ grading induced by the orientation reversal.
 
-**(d) CP-odd projection.** Net baryon number is CP-odd and is controlled by the CP-odd effective action shift (Theorem Y.6.1), which is proportional to the Chern-Simons change. For a unit transition $\Delta N_{CS}=\pm 1$,
-$$\Delta S_{CP}(\pm)=\frac{\sin\delta}{16\pi^2}\int d^4x\,W\tilde W
-=\pm\frac{2\sin\delta}{g^2}
-=\pm\sin\delta\frac{S_{sph}}{8\pi^2}.$$
+**(d) CP-odd projection.** Net baryon number is CP-odd. With the normalization of Theorem Y.6.1, the CP-odd effective-action shift is
+$$
+\frac{\Delta S_{CP}}{\hbar}
+=
+\chi_{CP}f(\delta)\Delta N_{CS}.
+$$
+For a unit transition $\Delta N_{CS}=\pm1$,
+$$
+\frac{\Delta S_{CP}(\pm)}{\hbar}
+=
+\pm\chi_{CP}f(\delta).
+$$
+On the separately registered single-harmonic unit-matching branch $\chi_{CP}=1$ and $f(\delta)=\sin\delta$, this reduces to $\Delta S_{CP}(\pm)/\hbar=\pm\sin\delta$.
 
 **(e) Complexity cost.** On the CP half-step branch of Theorem Y.11.2, the CP-odd observable is placed on the equal-exponent exponential branch: the CP involution is free or response-null on the retained leading saddle support, the reduced measure is CP-invariant, the CP-odd projection is nonzero at leading order, and the electroweak exponential weight splits into two equal components. Under those branch hypotheses, equivalently by Theorem Y.11.2a with $G=\mathbb Z_2$, the retained CP-odd component has
 $$\kappa_{CP} = \frac{\kappa_{EW}}{2} = \frac{38.5}{2} = 19.25$$
@@ -423,12 +547,12 @@ $$\kappa_{gen} = \frac{\varepsilon_0}{N_g} = \frac{\ln 2}{3} = 0.231.$$
 *Proof of Lemma.*
 
 **(a) Information-theoretic setup.** The CKM matrix $V$ encodes flavor mixing across $N_g = 3$ generations. CP violation requires the Jarlskog invariant:
-$$J_{CP} = \text{Im}(V_{us}V_{cb}V_{ub}^*V_{cs}^*) \neq 0$$
+$$J_{CP} = \operatorname{Im}(V_{us}V_{cb}V_{ub}^*V_{cs}^*) \neq 0$$
 This is non-zero only if $N_g \geq 3$ (Theorem R.3.4).
 
 **(b) Coherent superposition.** The generation state during a flavor-changing process is:
 $$|\psi_{gen}\rangle = \sum_{g=1}^{N_g} c_g |g\rangle$$
-where $\sum_g |c_g|^2 = 1$. The CP-violating phase $\delta$ arises from the coherent interference of all three generation paths (Berry holonomy on Gr(2,8)).
+where $\sum_g |c_g|^2 = 1$. The CP-violating phase $\delta$ arises from the coherent interference of all three generation paths through Berry holonomy on $\operatorname{Gr}(2,8)$.
 
 **(c) Information content.** The information required to specify which generation participates in a given interaction is:
 $$I_{gen} = -\sum_g |c_g|^2 \log |c_g|^2$$
@@ -442,18 +566,20 @@ $$\kappa_{gen} = \frac{\varepsilon_0}{N_g} = \frac{\ln 2}{3} = 0.231.$$
 The democratic amplitude distribution $|c_g|^2 = 1/N_g$ from subpart (c) supplies the amplitude profile consistent with this branch rule; the branch rule itself is the assignment of total verification cost to per-generation cost shares and is not uniquely fixed by the amplitude distribution alone.
 
 
-**(e) Democratic amplitude distribution and branch cost-sharing rule.** The democratic amplitude distribution $|c_g|^2 = 1/N_g$ follows from:
-- PCE optimization: Maximum entropy distribution minimizes description length
-- $S_{N_g}$ symmetry: Generation manifold has permutation symmetry up to relabeling of the three family-charge sectors selected by Theorem R.3.4 and realized by Proposition R.3.5.1a; Proposition R.4.2 records the compatible $D_4$ triality $S_3$ orbit without replacing the family-charge derivation
-- CKM unitarity: $\sum_g |V_{ig}|^2 = 1$ enforces normalization
+**(e) Democratic amplitude distribution and branch cost-sharing rule.** The democratic profile $|c_g|^2=1/N_g$ is a hypothesis of this branch. It also follows if the probability law is invariant under a transitive $S_{N_g}$ action, because invariance gives $|c_g|^2=|c_h|^2$ for all $g,h$ and normalization then gives $|c_g|^2=1/N_g$. CKM unitarity supplies only the normalization condition and does not by itself imply equality.
 
-These ingredients fix the amplitude profile $|c_g|^2 = 1/N_g$. The additional branch rule assigning a single-verification total cost $\varepsilon$ democratically to the $N_g$ coherent paths, giving $\kappa_{gen} = \varepsilon_0/N_g$, is the democratic single-verification branch introduced in the statement of this lemma. Alternative cost-sharing rules compatible with the same amplitude distribution (e.g. a total cost $\varepsilon$ without per-path division, or a weighted rule summing squared amplitudes) would define distinct branches with different numerical $\kappa_{gen}$.
+For a distribution $p$ on $N_g$ outcomes, Shannon entropy satisfies $H(p)\le\log N_g$, with equality at the democratic distribution. Thus maximum entropy does not minimize optimal expected description length; it maximizes the entropy lower bound. The additional rule assigning a single-verification total cost $\varepsilon$ democratically to the $N_g$ coherent paths, giving $\kappa_{gen}=\varepsilon_0/N_g$, remains the branch rule introduced in the lemma statement. Alternative cost-sharing rules compatible with the same amplitude profile define distinct numerical branches.
 
 The single-verification form ($\varepsilon_0/N_g$ rather than $2\varepsilon_0/N_g$) follows because the CP-sector selection is accounted for in $\kappa_{CP} = \kappa_{EW}/2$.
 
 
 
-**Remark Y.8.2.1 (Branch Dependence of the Sharing Rule).** The numerical value $\kappa_{gen} = 0.231$ depends on the democratic single-verification cost-sharing rule of Lemma Y.8.2. The named supporting ingredients (maximum-entropy amplitude distribution, $S_{N_g}$ permutation symmetry, CKM unitarity) fix the amplitude profile $|c_g|^2 = 1/N_g$ but do not uniquely determine how the total Landauer/SPAP verification cost partitions across coherently participating generation paths. A change of the sharing rule from $\varepsilon_0/N_g$ to $\chi \varepsilon_0/N_g$ for a dimensionless branch factor $\chi > 0$ propagates to the baryon-to-photon ratio as $\eta_B(\chi) = \eta_B(1) \exp[-(\chi-1)\varepsilon_0/N_g]$, giving approximately a 21% shift per unit change in $\chi$ at the minimal branch values $\varepsilon_0=\ln2$, $N_g = 3$.
+**Remark Y.8.2.1 (Branch Dependence of the Sharing Rule).** The numerical value $\kappa_{gen}=0.231$ depends on the democratic single-verification cost-sharing rule of Lemma Y.8.2. The democratic amplitude hypothesis, permutation invariance when imposed, and CKM unitarity do not uniquely determine how the total Landauer/SPAP verification cost partitions across coherently participating generation paths. Replacing $\varepsilon_0/N_g$ by $\chi\varepsilon_0/N_g$ for $\chi>0$ gives
+$$
+\frac{\eta_B(\chi)}{\eta_B(1)}
+=\exp\left[-(\chi-1)\frac{\varepsilon_0}{N_g}\right].
+$$
+At $\varepsilon_0=\ln2$ and $N_g=3$, the change $\chi:1\to2$ decreases the yield by $1-2^{-1/3}=20.63\%$, while $\chi:1\to0$ increases it by $2^{1/3}-1=25.99\%$.
 
 
 ∎
@@ -480,11 +606,21 @@ The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon
 
 ∎
 
-**Corollary Y.8.3** (Sensitivity to Generation Number). *If $N_g \neq 3$:*
-- *$N_g = 2$: $J_{CP} = 0$ identically, no CP violation, no baryogenesis*
-- *$N_g = 4$: $\kappa_{gen} = \ln 2/4 = 0.173$, $c_{sph} = 36/101 = 0.356$, $\mathcal{C}_{eff} = 0.212$, giving $\kappa_B = 19.42$, predicting $\eta_B = 4.9 \times 10^{-10}$*
+**Corollary Y.8.3** (Sensitivity to Generation Number). *On the democratic single-verification and CKM-source branch:*
+- *For $N_g=2$, the CKM matrix has no physical CP phase, so this particular CKM-sourced product branch has $\mathcal F_{CP}=0$ unless an independently certified CP source is added.*
+- *For $N_g=4$, the structural substitutions give*
+$$
+\kappa_{gen}=\frac{\ln2}{4}=0.173286\ldots,
+\qquad
+\kappa_B=19.25+\frac{\ln2}{4}=19.423286\ldots,
+$$
+*and the Harvey--Turner conversion with one Higgs doublet is*
+$$
+c_{\mathrm{sph}}=\frac{8(4)+4}{22(4)+13}=\frac{36}{101}=0.356435\ldots.
+$$
+*These substitutions do not determine $\mathcal C_{\mathrm{eff}}$, the CP response, washout, or $\eta_B$ without a four-generation transport certificate.*
 
-*The three-generation structure is thus independently testable through the $\eta_B$ prediction.*
+*Proof.* The two-generation CKM statement is the rephasing result used in Theorem R.3.4. For four generations, substitute $N_g=4$ into Lemma Y.8.2 and Proposition Y.9.1. No equation in those results fixes the remaining transport factors, so no numerical baryon yield follows. ∎
 
 ### Y.6.3 Structure Summary
 
@@ -539,7 +675,7 @@ where:
 
 6. $D_W$ is the chiral retained Dirac operator on $W_{\mathrm{EW}}$, twisted by $A_{\mathrm{EW}}$ and by $\Gamma_{\mathrm{fl}}^*\mathcal L_{\mathrm{Berry}}$, with APS boundary conditions. Its determinant line, boundary zero-mode convention, and finite-part convention are part of the same certificate and are not selected from $\eta_B$.
 
-7. $\Delta N_{CS}\in\mathbb Z$ is the oriented Chern-Simons change of the sphaleron interpolation in the gauge normalization fixed by $\mathfrak R_{\mathrm{EW}}$.
+7. $\Delta N_{CS}\in\mathbb Z\setminus\{0\}$ is the oriented Chern-Simons change of the nontrivial sphaleron interpolation in the gauge normalization recorded by $\mathfrak R_{\mathrm{EW}}$. A zero-transition branch does not define the normalized ratios $I_{CP}$ and $I_{tr}$ and must be recorded without those quotients.
 
 8. $\eta_{\partial W}=\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})$ and $h_{\partial W}=\dim\ker D_{\Sigma_f}-\dim\ker D_{\Sigma_i}$ are the oriented APS boundary eta and kernel corrections, computed with the same finite-part convention as $D_W$.
 
@@ -558,7 +694,7 @@ I_{CP}
 \frac{1}{\Delta N_{CS}}
 \left(
 \int_{W_{\mathrm{EW}}}
-\hat A(R)\operatorname{ch}\left(F_{\mathrm{EW}}\oplus\Gamma_{\mathrm{fl}}^*F_{\mathcal L_{\mathrm{Berry}}}\right)\big|_{[4]}
+\hat A(R)\operatorname{ch}\left(E_{\mathrm{EW}}\otimes\Gamma_{\mathrm{fl}}^*\mathcal L_{\mathrm{Berry}}\right)\big|_{[4]}
 -
 \frac{\eta_{\partial W}+h_{\partial W}}2
 \right)
@@ -566,28 +702,37 @@ I_{CP}
 \tag{Y.6.1a.2}
 $$
 
-13. The baryon-number transport index is
+13. Assume the spatial APS family $D_t$ is a $C^1$ self-adjoint Fredholm path with regular isolated crossings and that $B_{\mathrm{ret}}$ is self-adjoint and preserves every crossing kernel $\ker D_{t_*}$. Define
+$$
+\operatorname{SF}_{B_{\mathrm{ret}}}(D_W)
+:=
+\sum_{t_*}
+\operatorname{tr}_{\ker D_{t_*}}
+\left(
+B_{\mathrm{ret}}\operatorname{sgn}\Gamma(D,t_*)
+\right),
+$$
+where $\Gamma(D,t_*)$ is the nondegenerate crossing form. For a nonregular path, define the same quantity only when an accepted homotopy to a regular path preserves $B_{\mathrm{ret}}$ and the endpoint gap. The baryon-number transport index is
 $$
 I_{tr}
 =
 \mathcal N_B
-\frac{\operatorname{SF}_{B_{\mathrm{ret}}}(D_W)}{N_g\Delta N_{CS}},
+\frac{\operatorname{SF}_{B_{\mathrm{ret}}}(D_W)}{N_g\Delta N_{CS}}.
 \tag{Y.6.1a.3}
 $$
-where $\operatorname{SF}_{B_{\mathrm{ret}}}(D_W)$ is the $B_{\mathrm{ret}}$-weighted spectral flow of the spatial APS family.
 
 14. $\mathfrak h_\eta$ is the source-exhaustion and forward-lock entry. It records that the CP-odd source, baryon generator, Dynkin-index map, determinant orientation, eta finite part, and normalization factors were fixed before comparison with $\eta_B$ and that no source is counted again in the electroweak threshold, flavor, sphaleron, washout, or photon-normalization records.
 
 The certificate is accepted exactly when all entries above are finite, the APS boundary problem is Fredholm, the anomaly/bordism signs agree with the determinant-line orientation, and $\mathfrak h_\eta$ proves overlap compatibility with $\mathfrak R_{\mathrm{EW}}$ and $\mathfrak C_{\mathrm{fl}}^{\circ}$.
 
-**Theorem Y.6.1b (APS-Eta Transport Gate).** On a baryogenesis branch carrying an accepted APS-eta certificate $\mathfrak A_\eta$ of Definition Y.6.1a, the CP matching coefficient and the baryon transport coefficient are
+**Theorem Y.6.1b (APS-Eta Transport Gate).** Let a baryogenesis branch carry an accepted APS-eta certificate $\mathfrak A_\eta$ of Definition Y.6.1a. Suppose, in addition, that the certificate contains a determinant-variation or anomaly-descent matching identity proving that the normalized local CP coefficient and baryon transport coefficient equal the two displayed index ratios. Then
 $$
 \chi_{CP}=I_{CP},
 \qquad
 \chi_{tr}=I_{tr}.
 \tag{Y.6.1b.1}
 $$
-The canonical unit-response branch is theorem-level exactly when
+The canonical unit-response branch is theorem-level when the matching identity holds and
 $$
 I_{CP}=1,
 \qquad
@@ -599,11 +744,11 @@ I_{tr}=1,
 =+1.
 \tag{Y.6.1b.2}
 $$
-If the accepted certificate gives different values, those values replace the unit coefficients in the baryogenesis transport equation. If no accepted $\mathfrak A_\eta$ exists, the Berry-to-density coefficient, the determinant-line sign, and the baryon-number spectral-flow normalization are irreducible baryogenesis branch data.
+Without the matching identity, $I_{CP}$ and $I_{tr}$ are normalized topological data but do not determine $\chi_{CP}$ or $\chi_{tr}$. If no accepted $\mathfrak A_\eta$ exists, the Berry-to-density coefficient, determinant-line sign, and baryon-number spectral-flow normalization are irreducible branch data.
 
-*Proof.* Items 1--8 of Definition Y.6.1a give a Fredholm APS boundary problem for the retained chiral Dirac operator on the electroweak cobordism. The APS index theorem gives the bulk Chern-character term minus the eta/kernel boundary correction. Projecting this index through the Berry determinant line and dividing by the accepted Chern-Simons charge gives (Y.6.1a.2), so the CP-odd topological-density coefficient is $I_{CP}$. The baryon-number anomaly is the same spectral-flow statement evaluated with the finite generator $B_{\mathrm{ret}}$ and normalized by the accepted $N_g\Delta N_{CS}$ denominator, giving (Y.6.1a.3). The determinant-line contribution to the sign is the product of the cobordism, Berry-line, and KMS orientations, proving (Y.6.1b.2). Since every normalization and orientation is an entry of the accepted finite record, changing any one after comparison changes the branch rather than retuning the same source. ∎
+*Proof.* Items 1--8 of Definition Y.6.1a give a Fredholm APS boundary problem. The Atiyah-Patodi-Singer index theorem computes the bulk Chern-character term minus the eta/kernel boundary correction, hence the numerator in (Y.6.1a.2). The spectral-flow theorem computes the normalized transport datum in (Y.6.1a.3). By the additional matching identity, these two normalized data are respectively the local CP coefficient and baryon transport coefficient, which proves (Y.6.1b.1). If their values are one and the three recorded orientations have positive product, substitution gives the unit-response branch in (Y.6.1b.2). No converse from the index theorem alone is used. ∎
 
-**Corollary Y.6.1b.2 (Normalized Unit Spectral-Flow Branch).** Suppose an accepted $\mathfrak A_\eta$ additionally records one mapping-torus family whose APS index, spectral flow, eta/kernel boundary correction, orientation, Chern-Simons increment, and normalization satisfy
+**Corollary Y.6.1b.2 (Normalized Unit Spectral-Flow Branch).** Suppose an accepted $\mathfrak A_\eta$ records the matching identity required by Theorem Y.6.1b and one mapping-torus family whose APS index, spectral flow, eta/kernel boundary correction, orientation, Chern-Simons increment, and normalization satisfy
 $$
 I_{CP}
 =
@@ -614,9 +759,11 @@ I_{CP}
 |\sigma_{CP}|=1.
 \tag{Y.6.1b.3}
 $$
-Then Theorem Y.6.1b gives $\chi_{CP}=\sigma_{CP}$. Unit spectral flow by itself does not imply this conclusion; the denominator, normalization, boundary correction, and orientation in (Y.6.1b.3) are essential.
+Then $\chi_{CP}=\sigma_{CP}$. Unit spectral flow by itself does not imply this conclusion; the matching identity, denominator, normalization, boundary correction, and orientation are all essential.
 
-**Corollary Y.6.1b.3 (Normalized Unit Spectral-Flow Branch).** Suppose an accepted $\mathfrak A_\eta$ records a mapping-torus family with $\Delta N_{CS}\ne0$ and proves, in one orientation and normalization,
+*Proof.* The displayed equality gives $I_{CP}=\sigma_{CP}$. The certified matching identity and Theorem Y.6.1b give $\chi_{CP}=I_{CP}$. Transitivity yields $\chi_{CP}=\sigma_{CP}$. ∎
+
+**Corollary Y.6.1b.3 (Normalized Unit Spectral-Flow Branch).** Suppose an accepted $\mathfrak A_\eta$ records the matching identity required by Theorem Y.6.1b and a mapping-torus family with $\Delta N_{CS}\ne0$ and proves, in one orientation and normalization,
 $$
 I_{CP}
 =\mathcal N_{CP}
@@ -627,7 +774,9 @@ I_{CP}
 \qquad |\sigma_{CP}|=1.
 \tag{Y.6.1b.3.1}
 $$
-Then Theorem Y.6.1b gives $\chi_{CP}=\sigma_{CP}$. Unit spectral flow without the denominator, APS boundary correction, normalization, and orientation is insufficient.
+Then $\chi_{CP}=\sigma_{CP}$. Unit spectral flow without the matching identity, denominator, APS boundary correction, normalization, and orientation is insufficient.
+
+*Proof.* The APS spectral-flow theorem gives the middle equality under the mapping-torus hypotheses. The displayed normalization gives $I_{CP}=\sigma_{CP}$, and the certified matching identity gives $\chi_{CP}=I_{CP}$. ∎
 
 **Definition Y.6.1c (APS-Kubo Baryon Transport Certificate).** An APS-Kubo baryon transport certificate is a finite record
 $$
@@ -690,18 +839,25 @@ and a certified tail interval whose limit is the accepted $\Gamma_{CS}(t)$. The 
 
 7. $s(t)>0$ is the entropy density convention, $\mathcal N_\gamma(t_f)=s(t_f)/n_\gamma(t_f)$ is the photon-normalization factor, and $\mathcal N_B$ is the coefficient normalization inherited from $\mathcal N_{\mathrm{APS}}$.
 
-8. $[t_i,t_f]$ is the transport window and $Y_B(t_i)$ is the initial baryon-to-entropy vector or scalar fixed by the branch.
+8. $[t_i,t_f]$ is a finite transport window and $Y_B(t_i)$ is the initial baryon-to-entropy vector or scalar specified by the branch.
 
-9. The retained transport equation is
+9. The profiles are measurable and satisfy
+$$
+\Gamma_{\mathrm{wash}}\in L^1([t_i,t_f]),
+\qquad
+S_B(t):=
+\mathcal N_B
+\frac{W_{\mathrm{PU}}(t)\dot\theta_{\mathrm{PU}}(t)\Gamma_{CS}(t)}{s(t)}
+\in L^1([t_i,t_f]).
+$$
+The retained transport equation holds almost everywhere for an absolutely continuous $Y_B$:
 $$
 \frac{dY_B}{dt}
 +
 \Gamma_{\mathrm{wash}}(t)Y_B(t)
-=
-\mathcal N_B
-\frac{W_{\mathrm{PU}}(t)\dot\theta_{\mathrm{PU}}(t)\Gamma_{CS}(t)}{s(t)},
+=S_B(t),
 \qquad
-Y_B(t_i)\ \text{fixed}.
+Y_B(t_i)\ \text{specified}.
 \tag{Y.6.1c.4}
 $$
 
@@ -787,9 +943,10 @@ $$
 :=
 \mathcal N_B
 \frac{W_{\mathrm{PU}}(t)\Gamma_{\mathrm{CS}}(t)}{s(t)}
-\exp\left[-\int_t^{t_f}\Gamma_{\mathrm{wash}}(u)\,du\right].
+\exp\left[-\int_t^{t_f}\Gamma_{\mathrm{wash}}(u)\,du\right],
 \tag{Y.6.1f.3}
 $$
+and require $\mathcal W_B\in L^1([t_i,t_f])$.
 
 **Theorem Y.6.1g (Holonomy-Index Normal Form for Baryon Transport).** On a branch carrying an accepted APS-Kubo certificate and a holonomy-transport surface of Definition Y.6.1f, the certified transport output in Theorem Y.6.1d has the exact normal form
 $$
@@ -923,6 +1080,8 @@ For any allowed residual, the magnitude of the response integral is at least the
 
 **Corollary Y.6.1k (Status of the Product Formula).** Theorem Y.9 is a reduced product representation only on a nonstationary transport branch whose $\chi_{\mathrm{tr}}$, $f_{\mathrm{neq}}$, source $q=\dot\theta_{\mathrm{PU}}$, freeze-out map, and residual ledger reproduce (Y.6.1j.1). A static factor such as $\tanh(\mathcal S\sin\delta)$ may weight a driven response but cannot replace $q$. The factor $e^{-\kappa_B}$ is a branch weight, not a proof of departure from equilibrium.
 
+*Proof.* Theorem Y.6.1i proves that a stationary state and time-independent phase produce no secular baryon change. Theorem Y.6.1j writes every accepted linear response in terms of the drive $q=\dot\theta_{\mathrm{PU}}$ plus its homogeneous and residual terms. Therefore any product reduction must reproduce that response data; multiplying by static factors cannot supply a missing drive. ∎
+
 **Relation to Corollary Y.6.1h.** Corollary Y.6.1h already forbids an uncertified scalar replacement of $\dot\theta_{\mathrm{PU}}$. Theorems Y.6.1i--Y.6.1j add, respectively, the exact stationary-state obstruction and the sharp minimum-cost theorem for an accepted driven response.
 
 **Theorem Y.9 (Conditional Reduced Product Formula).** Assume an accepted transport certificate proves that its finite output factorizes into an efficiency coefficient, a CP-odd response, a washout survival factor, and the registered complexity weight. Then
@@ -931,16 +1090,62 @@ $$
 =\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}e^{-\kappa_B}.
 \tag{Y.12}
 $$
-The three prefactors are outputs of that same certificate; the factorization assigns none of them a default value. Without the factorization certificate, the applicable statement is the certified finite transport image and residual interval. ∎
+The three prefactors are outputs of that same certificate; the factorization assigns none of them a default value. Without the factorization certificate, the applicable statement is the certified finite transport image and residual interval.
+
+*Proof.* By hypothesis, the nonresidual output of the accepted certificate is the product of the four named factors, with their normalization and branch placement supplied by that certificate. Writing that assumed factorization gives (Y.12). If the certificate supplies a nonzero residual interval, its Minkowski sum must be retained and the equality (Y.12) is unavailable. ∎
 
 ### Y.7.2 Derivation of Efficiency Coefficient
 
-**Proposition Y.9.1 (Conditional Transport Coefficient).** Let an accepted transport certificate reduce the finite yield to Theorem Y.9's product form. Then $\mathcal C_{\mathrm{eff}}$ is the coefficient obtained from that reduction. The chemical-equilibrium conversion factor is
+**Proposition Y.9.1 (Conditional Transport Coefficient).** Let an accepted transport certificate reduce the finite yield to Theorem Y.9's product form. Then $\mathcal C_{\mathrm{eff}}$ is the coefficient obtained from that reduction. Assume the Harvey--Turner chemical-equilibrium regime: all retained species are relativistic, gauge interactions make multiplet chemical potentials equal, the relevant Yukawa reactions and electroweak sphalerons are in equilibrium, chemical potentials are generation-independent, the plasma is hypercharge neutral, and there are $N_g$ fermion generations and $n_H$ Higgs doublets. Then
 $$
 c_{\mathrm{sph}}
-=\frac{8N_g+4n_H}{22N_g+13n_H},
+=\frac{B}{B-L}
+=\frac{8N_g+4n_H}{22N_g+13n_H}.
 $$
-so $c_{\mathrm{sph}}=28/79$ for $(N_g,n_H)=(3,1)$ under the Standard-Model chemical-equilibrium assumptions (Harvey--Turner conversion). This identity supplies no universal factor $1/(2\pi\alpha_W)$, unit transport coefficient, or default nonequilibrium factor. ∎
+For $(N_g,n_H)=(3,1)$,
+$$
+c_{\mathrm{sph}}=\frac{24+4}{66+13}=\frac{28}{79}.
+$$
+This identity supplies no universal factor $1/(2\pi\alpha_W)$, unit transport coefficient, or default nonequilibrium factor.
+
+*Proof.* Let $\mu_q,\mu_u,\mu_d,\mu_\ell,\mu_e,\mu_H$ denote the common chemical potentials. Yukawa equilibrium gives
+$$
+\mu_u=\mu_q+\mu_H,
+\qquad
+\mu_d=\mu_q-\mu_H,
+\qquad
+\mu_e=\mu_\ell-\mu_H.
+$$
+Electroweak sphaleron equilibrium gives $3\mu_q+\mu_\ell=0$. Including the factor two between bosonic and fermionic number susceptibilities, hypercharge neutrality is
+$$
+N_g(\mu_q+2\mu_u-\mu_d-\mu_\ell-\mu_e)+2n_H\mu_H=0.
+$$
+Substitution of the Yukawa and sphaleron relations yields
+$$
+8N_g\mu_q+(4N_g+2n_H)\mu_H=0,
+\qquad
+\mu_H=-\frac{4N_g}{2N_g+n_H}\mu_q.
+$$
+Up to the common fermionic susceptibility factor,
+$$
+B=N_g(2\mu_q+\mu_u+\mu_d)=4N_g\mu_q,
+$$
+and
+$$
+L=N_g(2\mu_\ell+\mu_e)=N_g(-9\mu_q-\mu_H).
+$$
+Therefore
+$$
+B-L=N_g(13\mu_q+\mu_H)
+=N_g\mu_q\frac{22N_g+13n_H}{2N_g+n_H},
+$$
+so
+$$
+\frac{B}{B-L}
+=\frac{4(2N_g+n_H)}{22N_g+13n_H}
+=\frac{8N_g+4n_H}{22N_g+13n_H}.
+$$
+∎
 
 ### Y.7.3 Washout Correction
 
@@ -952,7 +1157,9 @@ Set
 $$
 f_{\mathrm{wash}}:=e^{-G_{\mathrm{wash}}},\qquad e^{-\infty}:=0.
 $$
-Then $0\le f_{\mathrm{wash}}\le1$, with $f_{\mathrm{wash}}>0$ exactly when $G_{\mathrm{wash}}<\infty$. ∎
+Then $0\le f_{\mathrm{wash}}\le1$, with $f_{\mathrm{wash}}>0$ exactly when $G_{\mathrm{wash}}<\infty$.
+
+*Proof.* If $G_{\mathrm{wash}}<\infty$, then $-G_{\mathrm{wash}}\le0$ and the exponential is in $(0,1]$. If $G_{\mathrm{wash}}=\infty$, the declared convention gives $f_{\mathrm{wash}}=0$. These two exhaustive cases prove both the bound and the equivalence. ∎
 
 ### Y.7.4 Validation-Run Electroweak Coupling
 
@@ -961,24 +1168,47 @@ $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W}$$
 
 *Proof.*
 
-**Step 1 (Fine structure constant).** From Appendix Z, Theorem Z.26, the Thomson-limit fine structure constant is derived from capacity saturation on the PCE-Attractor with interface corrections:
+**Step 1 (Fine structure constant).** On the conditional sinc-core branch of Appendix Z, Theorem Z.26 gives
 $$
-\alpha_{em}^{-1}(\text{Thomson})=\alpha^{-1}_{0}+R_\alpha,
-\qquad
-\alpha^{-1}_{0}=137.03609205522863\ldots
+\alpha^{-1}_{0}=137.03609205522863\ldots.
 $$
-where the quoted $1\sigma$ uncertainty is the combined Appendix Z, Section Z.27.9 theory budget, dominated by subgroup-projection/matching systematics rather than by truncation.
+The Thomson comparison quantity is the residual-gated row
+$$
+\alpha_{em}^{-1}(\text{Thomson})
+=
+\alpha^{-1}_{0}+R_\alpha
+$$
+of Corollary Z.26b. Theorem Z.26 does not fix $R_\alpha$. The scales in Section Z.27.9 are comparison-budget diagnostics and become a certified interval only through an accepted pre-comparison residual gate.
 
-**Step 2 (QED running).** Standard QED running from $q^2 = 0$ to the sphaleron scale $T_{sph} \approx 160$ GeV gives:
-$$\alpha_{em}^{-1}(T_{sph}) \approx 127.5$$
+**Step 2 (Electromagnetic input at the sphaleron scale).** This validation row adopts
+$$
+\alpha_{em}^{-1}(160\,\mathrm{GeV})=127.5
+$$
+as an external scheme-dependent running-coupling input. A derivation within the manuscript would require a specified renormalization scheme, charged-particle thresholds, matching conditions, and beta functions.
 
-**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. Using the Appendix T validation tuple of Theorem T.18, namely $(\Delta_1,\Delta_2)=(15.14,20.94)$ and $(Z_1,Z_2)=\left(1+\frac{15.14}{24},\,1+\frac{20.94}{24}\right)$, the corresponding validation-run boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. Theorem T.78.5 proves that this tuple is not a theorem-level output of the current canonical ledger, because no PU-internal global spectral branch package supplies it. One-loop SM RG running to the sphaleron scale gives:
-$$\sin^2\theta_W(T_{sph}) \approx 0.234$$
+**Step 3 (Weak-angle input at the sphaleron scale).** Appendix T supplies the conditional tree-level normalization $\sin^2\theta_W^{(0)}=3/8$ and the validation tuple described there, but it does not supply a closed RG certificate to $160\,\mathrm{GeV}$. This validation row therefore adopts
+$$
+\sin^2\theta_W(160\,\mathrm{GeV})=0.234
+$$
+as a second external input in the same coupling convention.
 
-**Step 4 (Combination).** By definition of the Weinberg angle:
-$$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W} = \frac{1/127.5}{0.234} \approx \frac{1}{29.8} \approx \frac{1}{30}$$
+**Step 4 (Combination).** At a common scale and in a common scheme, $e=g\sin\theta_W$ implies
+$$
+\alpha_{em}=\alpha_W\sin^2\theta_W.
+$$
+Hence
+$$
+\alpha_W^{-1}
+=\alpha_{em}^{-1}\sin^2\theta_W
+=127.5\times0.234
+=29.835,
+$$
+or
+$$
+\alpha_W=0.0335177\ldots\approx\frac1{29.8}\approx\frac1{30}.
+$$
 
-This numerical evaluation is validation-level because it depends on the Appendix T validation tuple together with the standard one-loop RG running used above; by Theorem T.78.5 it is not promoted to a theorem-level PU input in the canonical minimal ledger. A theorem-level input would require an appended global spectral branch extension fixed before comparison and evaluated forward. ∎
+This is conditional arithmetic from two adopted running inputs, not a manuscript-internal RG derivation. A theorem-level value requires an accepted global spectral/RG branch extension registered before comparison and evaluated forward. ∎
 
 ### Y.7.5 Complete Numerical Calculation
 
@@ -1014,7 +1244,7 @@ The open outputs include $A_{CP}(t)$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{
 
 ## Y.9 Sign of the Baryon Asymmetry
 
-**Theorem Y.10 (Conditional Sign of the Baryon Asymmetry).** The initial condition $N_{CS}(\Sigma_i)=0$ and a time orientation do not determine the sign of $\Delta N_{CS}$. On an accepted transport branch, the sign is fixed by the signed CP source, the oriented transport kernel, the topological transition, and the readout convention. In particular,
+**Theorem Y.10 (Conditional Sign of the Baryon Asymmetry).** The initial condition $N_{CS}(\Sigma_i)=0$ and a time orientation do not determine the sign of $\Delta N_{CS}$. Let an accepted transport branch satisfy the integrability hypotheses of Definition Y.11.7e, let $\nu_B$ be real-valued, and let $\mathcal N_\gamma>0$. If the initial homogeneous term vanishes, then
 $$
 \operatorname{sign}(\eta_B)
 =\operatorname{sign}\!\left[
@@ -1022,39 +1252,48 @@ $$
 \int_{t_i}^{t_f}\mathcal U_B(t_f,t)S_{CP}(t)
 e^{-\int_t^{t_f}W_B(u)\,du}\,dt
 \right)
-\right]
+\right].
 $$
-when the initial homogeneous term vanishes. Matter dominance follows only if this certified quantity is positive. ∎
+Matter dominance follows only if this certified quantity is positive.
 
-**Corollary Y.10.1 (Open Sign Gate).** There is no continuous sign parameter after a complete signed transport certificate is fixed, but the current archive has not derived that certificate from the boundary condition alone. ∎
+*Proof.* Equation (Y.11.7e.1) gives the final transport state as the homogeneous term plus the displayed source integral. The first term is zero by hypothesis. Applying the real linear readout $\nu_B$ and multiplying by the positive photon normalization gives the displayed scalar. Taking its sign proves the identity. The condition $N_{CS}(\Sigma_i)=0$ does not determine the sign of the source integral or of $\Delta N_{CS}$, so no further sign conclusion follows. ∎
 
-**Corollary Y.10.2 (CP Phase as Predictive Orientation Defect).** On the Berry-loop baryogenesis branch, the CKM CP phase is the predictive-orientation holonomy
-$$
-\delta_{\mathrm{CP}}
-=
-\oint_{\gamma_{\mathrm{flavor}}}\mathcal A_{\mathrm{Berry}}
-=
-\int_{\Sigma_{\mathrm{flavor}}}\mathcal F_{\mathrm{Berry}},
-$$
-and the sign of the baryon asymmetry is fixed by the orientation product
-$$
-\mathrm{sign}(\eta_B)
-=
-\mathrm{sign}\!\left(
-\sin\delta_{\mathrm{CP}}\cdot
-\Delta N_{CS}\cdot
-\mathcal T_{\mathrm{KMS}}
-\right),
-$$
-where $\mathcal T_{\mathrm{KMS}}=\pm1$ is the selected thermodynamic time orientation of the KMS drive. Thus CP violation is not an independent scalar insertion on this branch; it is the orientation defect of predictive transport in the generation bundle, projected into the electroweak topological channel.
+**Corollary Y.10.1 (Open Sign Gate).** There is no continuous sign parameter after a complete signed transport certificate is accepted, but the current archive has not derived that certificate from the boundary condition alone.
 
-*Proof.* Theorem T.56 and Theorem Y.6 identify the phase entering the CP source with Berry holonomy over the flavor loop. Stokes' theorem on the chosen Berry surface gives
+*Proof.* Theorem Y.10 expresses the sign as the sign of one real transport functional. Once every entry of that functional is specified and its value is nonzero, its sign is discrete. The condition $N_{CS}(\Sigma_i)=0$ leaves the signed source and oriented transport kernel unspecified, so two admissible completions can give opposite signs. ∎
+
+**Corollary Y.10.2 (CP Phase as Predictive Orientation Defect).** On the Berry-loop baryogenesis branch, define the predictive-orientation holonomy
 $$
+\delta_{\mathrm{hol}}
+=
 \oint_{\gamma_{\mathrm{flavor}}}\mathcal A_{\mathrm{Berry}}
 =
 \int_{\Sigma_{\mathrm{flavor}}}\mathcal F_{\mathrm{Berry}}.
 $$
-Theorem Y.10 states that matter dominance is fixed by the sign of $\sin\delta$, the initial Chern-Simons boundary condition, and the KMS time orientation. Writing these three signs as the displayed product gives the result. ∎
+Suppose an accepted signed transport certificate additionally proves that its nonzero yield has a positive magnitude factor $M_B>0$ and the factorization
+$$
+\eta_B
+=
+M_B\,
+\sin\delta_{\mathrm{hol}}\,
+\Delta N_{CS}\,
+\mathcal T_{\mathrm{KMS}},
+\qquad
+\mathcal T_{\mathrm{KMS}}\in\{+1,-1\}.
+$$
+Then
+$$
+\mathrm{sign}(\eta_B)
+=
+\mathrm{sign}\!\left(
+\sin\delta_{\mathrm{hol}}\cdot
+\Delta N_{CS}\cdot
+\mathcal T_{\mathrm{KMS}}
+\right).
+$$
+Identification of $\delta_{\mathrm{hol}}$ with the numerical value $66.7°$ additionally requires the nonlinear phase-response ansatz of Theorem T.56.
+
+*Proof.* Theorems T.53--T.54 and Theorem Y.6 identify the base CP datum with Berry holonomy over the retained flavor loop. Stokes' theorem on the chosen Berry surface gives the first display. Under the stated signed-factorization hypothesis, $M_B>0$ contributes no sign, so taking the sign of the product gives the final display. The general case remains the complete signed transport functional of Theorem Y.10. ∎
 
 ---
 
@@ -1062,28 +1301,39 @@ Theorem Y.10 states that matter dominance is fixed by the sign of $\sin\delta$, 
 
 ### Y.10.1 The Standard Model Deficit
 
-In standard electroweak baryogenesis (EWBG), the baryon asymmetry is estimated as [Kajantie et al. 1996; Gavela et al. 1994]:
-$$\eta_B^{\text{SM}} \sim J_{CP} \times f_{\text{sphaleron}} \times f_{\text{PT}} \times f_{\text{washout}}$$
-
-where:
-- $J_{CP} \sim 10^{-5}$: Jarlskog invariant (kinematically suppressed)
-- $f_{\text{sphaleron}} \sim 10^{-2}$: sphaleron conversion efficiency
-- $f_{\text{PT}} \sim 10^{-9}$: phase transition departure from equilibrium (SM crossover, not first-order)
-- $f_{\text{washout}} \sim 10^{-4}$: survival against washout processes
-
-The product gives:
-$$\eta_B^{\text{SM}} \sim 10^{-5} \times 10^{-2} \times 10^{-9} \times 10^{-4} \sim 10^{-20}$$
-
-This is $\sim 10^{10}$ times smaller than the observed value $(6.12 \pm 0.04) \times 10^{-10}$, constituting the "baryogenesis problem" that motivates BSM physics.
+For a schematic order-of-magnitude comparison, adopt the illustrative factorization
+$$
+\eta_B^{\mathrm{SM,schematic}}
+\sim J_{CP}f_{\mathrm{sphaleron}}f_{\mathrm{PT}}f_{\mathrm{washout}}
+$$
+and the four illustrative inputs
+$$
+J_{CP}\sim10^{-5},
+\qquad
+f_{\mathrm{sphaleron}}\sim10^{-2},
+\qquad
+f_{\mathrm{PT}}\sim10^{-9},
+\qquad
+f_{\mathrm{washout}}\sim10^{-4}.
+$$
+Their arithmetic product is
+$$
+\eta_B^{\mathrm{SM,schematic}}\sim10^{-20}.
+$$
+Relative to $6.12\times10^{-10}$, the ratio is
+$$
+\frac{6.12\times10^{-10}}{10^{-20}}=6.12\times10^{10}.
+$$
+This schematic comparison illustrates the Standard Model baryogenesis deficit; it is not a controlled transport calculation or an uncertainty-bearing Standard-Model prediction.
 
 ### Y.10.2 PU Resolution
 
-The PU framework resolves this deficit through the following mechanisms:
+On the illustrative Appendix Y product branch, the proposed factors compare with the schematic Standard-Model factors as follows; a resolution claim requires an accepted baryogenesis transport certificate:
 
 | Factor | Standard EWBG | PU Baryogenesis | Enhancement |
 |:-------|:-------------:|:---------------:|:-----------:|
 | CP source | $J_{CP} \sim 10^{-5}$ | $\tanh(\mathcal{S}\sin\delta) \approx 1$ | $\sim 10^{5}$ |
-| Out-of-equilibrium | $f_{\text{PT}} \sim 10^{-9}$ | $e^{-\kappa_B} \sim 3 \times 10^{-9}$ | $\sim 1$ |
+| Complexity weight | not represented by $f_{\text{PT}}$ | $e^{-\kappa_B} \sim 3 \times 10^{-9}$ on the declared branch | no nonequilibrium comparison |
 | Washout survival | $f_{\text{washout}} \sim 10^{-4}$ | $f_{wash} \sim 0.6$ | $\sim 6 \times 10^{3}$ |
 | Efficiency | $f_{\text{sphaleron}} \sim 10^{-2}$ | $\mathcal{C}_{eff} \sim 0.3$ | $\sim 30$ |
 | **Total** | $\sim 10^{-20}$ | $\sim 6 \times 10^{-10}$ | $\sim 10^{10}$ |
@@ -1094,11 +1344,11 @@ The Jarlskog invariant measures flavor-path interference, while the retained PU 
 
 **Mechanism 2: Complexity-Regulated Efficiency**
 
-In PU, the configuration-space complexity $\kappa_B$ may supply a reduced response weight, but nonequilibrium is controlled by the response-active drive, inflow, preparation, and freeze-out data of Theorems Y.6.1i--Y.6.1k. The branch value $\kappa_B=19.48$ gives $e^{-\kappa_B}\sim3\times10^{-9}$ only as a multiplicative weight; it neither establishes departure from equilibrium nor replaces a certified transport solution.
+In PU, the configuration-space complexity $\kappa_B$ may supply a reduced response weight, but nonequilibrium is controlled by the response-active drive, inflow, preparation, and freeze-out data of Theorems Y.6.1i--Y.6.1j and Corollary Y.6.1k. The branch value $\kappa_B=19.48$ gives $e^{-\kappa_B}\sim3\times10^{-9}$ only as a multiplicative weight; it neither establishes departure from equilibrium nor replaces a certified transport solution.
 
 **Mechanism 3: Reduced Washout**
 
-The PU mechanism operates during a different dynamical regime than standard EWBG, with sphaleron freeze-out occurring in a manner that preserves more of the generated asymmetry.
+A reduced-washout PU branch would require an accepted $\Gamma_{\mathrm{wash}}(t)$ and freeze-out solution proving greater survival than the comparison branch. The current archive leaves that transport entry open.
 
 ## Y.10.3 The Hierarchy Unification Theorem
 
@@ -1112,14 +1362,11 @@ $$\boxed{\eta_B = \mathcal{P}_{\mathrm{eff}}\sqrt{\frac{v}{M_{Pl}}}}$$
 
 $$\boxed{\eta_B^2 = \mathcal{P}_{\mathrm{eff}}^2\frac{v}{M_{Pl}}}$$
 
-*Proof.* From Theorem T.6 and Proposition T.4 within the determinant model of Theorem T.29, the electroweak scale satisfies
+*Proof.* Theorem T.6 gives
 $$
-\frac{v}{M_{Pl}} = A_{EW} e^{-\kappa_{EW}},
-\qquad
-\kappa_{EW}=38.5,
-\qquad
-A_{EW}=1.084\pm0.005.
+\frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}}.
 $$
+Under the determinant-model branch of Theorem T.29, Proposition T.4 supplies the central value $A_{EW}=1.08407\ldots$ and adopts the working model allowance $A_{EW}=1.084\pm0.005$; the allowance is not a theorem-level remainder bound. Under the Morse–Bott branch of Theorems T.4–T.5, $\kappa_{EW}=38.5$.
 
 From Theorem Y.8, the baryogenesis complexity is
 $$
@@ -1142,11 +1389,19 @@ Hence the full hierarchy link takes the stated prefactor-weighted square-root fo
 
 ### Y.10.3.2 Numerical Verification
 
-**Proposition Y.11.1 (Open Numerical Prefactor).** The square-root formula in Theorem Y.11 is an algebraic rearrangement after $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, $f_{\mathrm{wash}}$, the equal-exponent decomposition, and $A_{EW}$ are fixed. The current archive does not independently determine the first three entries. Therefore the observational ratio
+**Proposition Y.11.1 (Open Numerical Prefactor).** The square-root formula in Theorem Y.11 is an algebraic rearrangement after $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, $f_{\mathrm{wash}}$, the equal-exponent decomposition, and $A_{EW}$ are specified. The current archive does not independently determine the first three entries. Therefore the observational ratio
 $$
 \frac{\eta_B^{\mathrm{obs}}}{\sqrt{v_{\mathrm{obs}}/M_{Pl}}}
 $$
-is an inversion target, not a numerical verification of the prefactor. ∎
+is an inversion target, not a numerical verification of the prefactor.
+
+*Proof.* Theorem Y.11 defines
+$$
+\mathcal P_{\mathrm{eff}}
+=\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}
+e^{-\varepsilon_0/N_g}A_{EW}^{-1/2}.
+$$
+If the first three factors are not determined upstream, the observed ratio supplies one equation for their product. Substituting observation therefore selects a compatible product and cannot independently verify it. ∎
 
 ### Y.10.3.3 Origin of the Square Root
 
@@ -1161,20 +1416,24 @@ $$
 
 **Step 1 (CP involution).** The CP transformation satisfies $(\mathsf{CP})^2 = 1$, so it defines a $\mathbb{Z}_2$ action on the relevant electroweak configuration sector $\mathcal{M}_{EW}$.
 
-**Step 2 (Sector decomposition).** By the hypothesis that this action is free on the relevant saddle sector and preserves the reduced measure, the sector decomposes into two measure-matched components,
+**Step 2 (Isotypic decomposition).** Measure preservation makes the pullback $U_{CP}$ a unitary involution on the retained $L^2$ saddle space. The orthogonal projectors
 $$
-\mathcal{M}_{EW} = \mathcal{M}_{+} \sqcup \mathcal{M}_{-},
+P_\pm=\frac12(I\pm U_{CP})
 $$
-interchanged by CP.
+give the representation-space decomposition
+$$
+L^2(\mathcal M_{EW},\mu)=\mathcal H_+\oplus\mathcal H_-.
+$$
+Freeness means that geometric orbits have two points; it does not imply that $\mathcal M_{EW}$ is the disjoint union of two topological components.
 
-**Step 3 (Equal leading complexity split).** By the equal-split hypothesis, the leading PCE complexity carried by each component is half of the total electroweak complexity:
+**Step 3 (Equal leading complexity split).** By the independent equal-split hypothesis, the leading PCE complexities assigned to the two nonzero isotypic sectors satisfy
 $$
-\kappa(\mathcal{M}_{+}) = \kappa(\mathcal{M}_{-}) = \frac{\kappa_{EW}}{2}.
+\kappa(\mathcal H_+)=\kappa(\mathcal H_-)=\frac{\kappa_{EW}}2.
 $$
 
-**Step 4 (Definition of the CP contribution).** The baryogenesis CP contribution is the leading suppression exponent attached to the CP-odd component, so
+**Step 4 (Definition of the CP contribution).** The baryogenesis CP contribution is the leading suppression exponent assigned to the nonzero CP-odd isotypic sector, so
 $$
-\kappa_{CP} := \kappa(\mathcal{M}_{-}) = \frac{\kappa_{EW}}{2}.
+\kappa_{CP}:=\kappa(\mathcal H_-)=\frac{\kappa_{EW}}2.
 $$
 
 **Step 5 (Suppression factor).** Exponentiating the previous identity gives
@@ -1229,9 +1488,19 @@ $$
 $$
 The load-bearing hypotheses are the regular-isotypic equal split, the equal-exponent decomposition (hypothesis 6), the nonzero leading projection, and the exponential-placement branch. Without hypothesis 6, character projection generically changes amplitudes and prefactors while leaving the saddle exponent unchanged; the $1/|G|$ exponent step is not automatic from group theory alone. Group theory alone does not promote a physical sector.
 
-**Theorem Y.11.2b (Finite Isotropic Character-Projection Template).** Let $V$ carry one retained regular finite abelian $G$-fiber of order $|G|=n$, and let $X$ be a mean-zero fluctuation with covariance isotropic on that regular fiber and total RMS normalization
+*Proof.* Write $n=|G|$. Hypothesis 6 gives $\kappa_g=\kappa_{\mathcal M}/n$ for every orbit component and states that a retained character observable selects one such component at exponential order. Hypothesis 4 makes its leading coefficient nonzero. Hence, for each retained $\chi$,
 $$
-\mathbb E\lVert X\rVert^2=\sigma_{\mathrm{tot}}^2.
+\mathcal O_\chi
+=A_\chi e^{-\kappa_g}(1+o(1))
+=A_\chi e^{-\kappa_{\mathcal M}/n}(1+o(1)),
+$$
+so $\kappa_\chi=\kappa_{\mathcal M}/n$. For $G=\mathbb Z_2$, $n=2$, which gives the final display. Notice that the projector formula alone contributes the amplitude factor $1/n$; the change of exponent is supplied entirely by hypothesis 6. ∎
+
+**Theorem Y.11.2b (Finite Isotropic Character-Projection Template).** Let $V_{\mathrm{reg}}$ be one complex regular representation of a finite abelian group $G$ of order $n=|G|$. Let $X$ be a mean-zero $V_{\mathrm{reg}}$-valued fluctuation whose covariance operator on that fiber is
+$$
+C=\frac{\sigma_{\mathrm{tot}}^2}{n}I,
+\qquad
+\mathbb E\lVert X\rVert^2=\operatorname{tr}C=\sigma_{\mathrm{tot}}^2.
 $$
 Then projection onto a normalized complex character line satisfies
 $$
@@ -1241,17 +1510,31 @@ $$
 =
 \frac{\lVert X\rVert_{\mathrm{RMS}}}{\sqrt{|G|}}.
 $$
-If the physical field is real, $\chi\ne\bar\chi$, and the observable retains the full conjugate pair $V_\chi\oplus V_{\bar\chi}$, the RMS factor is
+If the physical field is real, $\chi\ne\bar\chi$, and the observable retains the full orthogonal conjugate pair $V_\chi\oplus V_{\bar\chi}$, the RMS factor is
 $$
 \sqrt{\frac{2}{|G|}},
 $$
-not $|G|^{-1/2}$. For self-conjugate characters, the factor is determined by the retained real component dimension rather than by doubling. Therefore a claimed $1/\sqrt{|G|}$ physical factor requires a certificate that the observable selects one normalized complex character line, one oriented real projection direction, or an equivalent response-normalized component.
+not $|G|^{-1/2}$. For a self-conjugate character, the factor is determined by the retained real rank. Therefore a claimed $1/\sqrt{|G|}$ physical factor requires a certificate that the observable selects one normalized complex character line, one oriented real projection direction, or an equivalent response-normalized component.
 
 This RMS projection law is distinct from Theorem Y.11.2a. It does not imply
 $$
 \kappa_\chi=\frac{\kappa_{\mathcal M}}{|G|},
 $$
 and the exponent-step law does not imply an RMS factor.
+
+*Proof.* For any orthogonal projector $P$,
+$$
+\mathbb E\lVert PX\rVert^2
+=\operatorname{tr}(PCP)
+=\operatorname{tr}(PC).
+$$
+For a rank-one character projector, isotropy gives
+$$
+\operatorname{tr}(P_\chi C)
+=\frac{\sigma_{\mathrm{tot}}^2}{n}\operatorname{tr}P_\chi
+=\frac{\sigma_{\mathrm{tot}}^2}{n}.
+$$
+Taking square roots proves the first RMS formula. If $\chi\ne\bar\chi$, the projector onto the orthogonal conjugate pair has rank two, so the same trace is $2\sigma_{\mathrm{tot}}^2/n$ and its square root gives $\sqrt{2/n}$. A self-conjugate real sector contributes its actual real rank by the identical trace calculation. No exponential asymptotic enters this covariance computation. ∎
 
 **Proposition Y.11.2c (Certificate-Pending Triality Route for a Majorana Projection Factor).** A triality route to a Majorana coefficient is certificate-pending unless a finite record
 $$
@@ -1271,31 +1554,50 @@ Only under these conditions does Theorem Y.11.2b give
 $$
 \alpha_\nu=\frac{\alpha_{\mathrm{UV}}}{\sqrt3}=\frac{\sqrt3}{2}
 $$
-when $\alpha_{\mathrm{UV}}=3/2$. The equality is not selected merely because it numerically matches a target. It is falsified if the triality lift fails, if non-null fixed points contribute, if the real observable keeps $\chi\oplus\bar\chi$, or if the projection factor lands in a prefactor, distance variable, or covariance instead of the exponent coefficient.
+when $\alpha_{\mathrm{UV}}=3/2$. The equality is not selected merely because it numerically matches a target. It is falsified if the triality lift fails, if non-null invariant points contribute, if the real observable keeps $\chi\oplus\bar\chi$, or if the projection factor lands in a prefactor, distance variable, or covariance rather than the exponent coefficient.
 
 A global free $\mathbb Z_3$ action on all of $\mathrm{Gr}_{\mathbb C}(2,8)$ is obstructed because
 $$
 \chi(\mathrm{Gr}_{\mathbb C}(2,8))=\binom82=28
 $$
-is not divisible by $3$. Thus any free-action assertion must be restricted to the retained Majorana saddle support or accompanied by a fixed-locus response-null audit.
+is not divisible by $3$. Thus any free-action assertion must be restricted to the retained Majorana saddle support or accompanied by an invariant-locus response-null audit.
 
-**Corollary Y.11.3** (Certified Half-Step Origin). *On the hypotheses of Theorem Y.11.2, equivalently the finite group-step template of Theorem Y.11.2a with $G=\mathbb Z_2$, the denominator $2$ in $\kappa_B=\kappa_{EW}/2$ is exact on that branch. It reflects both the order of the CP action and the equal-exponent exponential-placement certificate. It is not a consequence of group order alone.*
+*Proof.* Conditions 1--5 instantiate the rank-one complex-character case of Theorem Y.11.2b with $|G|=3$, giving the RMS multiplier $1/\sqrt3$. Condition 6 places that multiplier in $\alpha_\nu$, so $\alpha_\nu=(3/2)/\sqrt3=\sqrt3/2$. For the obstruction, a free action of a finite group on a finite CW complex gives a covering $X\to X/G$ of degree $|G|$ and hence $\chi(X)=|G|\chi(X/G)$. Since $\chi(\operatorname{Gr}_{\mathbb C}(2,8))=28$ is not divisible by $3$, no free global $\mathbb Z_3$ action exists. ∎
+
+**Corollary Y.11.3** (Certified Half-Step Origin). *On the hypotheses of Theorem Y.11.2, equivalently the finite group-step template of Theorem Y.11.2a with $G=\mathbb Z_2$, the denominator $2$ in $\kappa_{CP}=\kappa_{EW}/2$ is exact on that branch. It reflects both the order of the CP action and the equal-exponent exponential-placement certificate. It is not a consequence of group order alone.*
+
+*Proof.* Apply Theorem Y.11.2a with $|G|=2$, parent exponent $\kappa_{\mathcal M}=\kappa_{EW}$, and the nonzero CP-odd character projection. Hypothesis 6 of that theorem gives $\kappa_{CP}=\kappa_{EW}/|G|=\kappa_{EW}/2$. Without hypothesis 6, the theorem supplies no exponent division. ∎
 
 ### Y.10.3.4 Unification of Hierarchy Problems
 
-**Theorem Y.11.4** (Conditional Shared-Exponent Statement). *Only under the equal-exponent decomposition and a complete baryon transport certificate do the two model expressions share the stated exponential factor.*
+**Theorem Y.11.4** (Conditional Shared-Exponent Statement). *Assume the equal-exponent decomposition and generation-sharing hypotheses of Theorem Y.8, the electroweak determinant relation $v/M_{Pl}=A_{EW}e^{-\kappa_{EW}}$, and a complete baryon transport certificate whose reduced output is Theorem Y.9. Then the two model expressions share the electroweak exponent in the conditional square-root relation.*
 
-*Proof.* Both quantities derive from the same complexity:
+*Proof.* The two registered expressions are
+$$
+\frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}}
+$$
+and
+$$
+\eta_B
+=\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}
+e^{-\varepsilon_0/N_g}e^{-\kappa_{EW}/2}.
+$$
+Thus
+$$
+\eta_B
+=\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}
+e^{-\varepsilon_0/N_g}A_{EW}^{-1/2}
+\sqrt{\frac{v}{M_{Pl}}}.
+$$
+At $\kappa_{EW}=38.5$, $\varepsilon_0=\ln2$, and $N_g=3$, the exponent and weight are
+$$
+\kappa_B=19.25+\frac{\ln2}{3}=19.481049\ldots,
+\qquad
+e^{-\kappa_B}=3.46328\ldots\times10^{-9}.
+$$
+The shared exponent is therefore conditional on the stated branch data, while every remaining factor is retained explicitly.
 
-| Problem | Quantity | Complexity | Suppression |
-|:--------|:---------|:----------:|:-----------:|
-| Electroweak hierarchy | $v/M_{Pl}$ | $\kappa_{EW}$ | $e^{-38.5} \sim 10^{-17}$ |
-| Baryon asymmetry | $\eta_B$ | $\kappa_{EW}/2$ | $e^{-19.25} \sim 10^{-9}$ |
-
-The complexities satisfy $\kappa_B \approx \kappa_{EW}/2$, hence the suppressions satisfy:
-$$\eta_B \sim \sqrt{v/M_{Pl}}$$
-
-Any mechanism that explains $\kappa_{EW}$ automatically constrains $\eta_B$, and vice versa. The two problems have a common origin in the Golay-Steiner structure (Theorem T.5). ∎
+On the joint Appendix T/Y model branch carrying Theorem T.5's Morse–Bott hypotheses, the CP half-step and generation-sharing rules of Theorem Y.8, and the factorization, transport, and prefactor hypotheses of Theorem Y.11, the same $\kappa_{EW}$ enters both suppressions and yields the conditional square-root relation. Theorem T.5 alone does not constrain $\eta_B$. ∎
 
 **Corollary Y.11.4a (Hierarchy Bridge Ratio).** *The prefactor $\mathcal{P}_{\mathrm{eff}}$ has two determinations, one from the adopted Appendix T/Y model branch and one from observational inversion, and their unrounded values agree at approximately the $0.65\%$ level.*
 
@@ -1303,7 +1605,7 @@ Any mechanism that explains $\kappa_{EW}$ automatically constrains $\eta_B$, and
 $$
 \mathcal{P}_{\mathrm{eff}} = \mathcal{C}_{eff}\,\mathcal{F}_{CP}\,f_{wash}\,e^{-\varepsilon_0/N_g}A_{EW}^{-1/2}.
 $$
-At the PCE-Attractor, $\varepsilon_0=\ln2$ and $N_g = 3$, so
+On the registered binary-quotient branch of Definition 28 and Lemma J.1 and the independent $N_g=3$ family-selection branch of Appendix R,
 $$
 e^{-\varepsilon_0/N_g} = e^{-\ln 2/3} = 2^{-1/3}.
 $$
@@ -1332,9 +1634,9 @@ $$
 $$
 i.e. approximately $0.65\%$. ∎
 
-**Remark Y.11.4a.** The ratio $\eta_B / \sqrt{v/M_{Pl}}$ removes the common exponential suppression carried by the two observables and isolates the derived $O(1)$ prefactor $\mathcal{P}_{\mathrm{eff}}$.
+**Remark Y.11.4a.** On the conditional shared-exponent branch, the ratio $\eta_B / \sqrt{v/M_{Pl}}$ removes the common exponential factor and isolates the branch prefactor $\mathcal{P}_{\mathrm{eff}}$. Its transport, CP-response, and washout components remain open until determined by an accepted baryogenesis certificate.
 
-**Corollary Y.11.4b (Electroweak–Baryon Square-Root Lock).** On the Appendix Y canonical baryogenesis branch,
+**Corollary Y.11.4b (Electroweak–Baryon Square-Root Lock).** Assume: (i) an accepted transport certificate proves the product reduction of Theorem Y.9; (ii) the CP half-step and leading-exponential factorization hypotheses of Theorem Y.8 hold; (iii) the democratic single-verification rule gives $\varepsilon_0/N_g$ with $\varepsilon_0=\ln2$ and $N_g=3$; and (iv) the Appendix T determinant branch gives $v/M_{Pl}=A_{EW}e^{-\kappa_{EW}}$. Then
 $$
 \boxed{
 \eta_B
@@ -1356,7 +1658,7 @@ $$
 \sqrt{\frac{v}{A_{EW}M_{Pl}}}.
 }
 $$
-The factor $2^{-1/3}$ is the generation-shared Landauer correction. The square root is the CP half-step of the electroweak instanton exponent.
+The factor $2^{-1/3}$ is the generation-sharing factor on hypothesis (iii), and the square root is the CP half-step on hypothesis (ii).
 
 *Proof.* Theorem Y.9 gives
 $$
@@ -1392,9 +1694,9 @@ and substitution into the master formula proves the result. ∎
 
 ### Y.10.3.5 Experimental Consequences
 
-**Prediction Y.1** (Sphaleron Saturation). *The geometric CP mechanism predicts that any deformation that modifies the electroweak scale within the same baryogenesis regime produces correlated modifications to the baryon asymmetry at leading order:*
+**Prediction Y.1** (Constant-Prefactor Square-Root Sensitivity). *On the complete branch of Corollary Y.11.4b, consider an infinitesimal deformation for which $A_{EW}$, $M_{Pl}$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, and $f_{\mathrm{wash}}$ are held constant. Then, to first order,*
 
-$$\frac{\delta\eta_B}{\eta_B} \approx \frac{1}{2}\frac{\delta v}{v}$$
+$$\frac{\delta\eta_B}{\eta_B} = \frac{1}{2}\frac{\delta v}{v}+o(\delta v/v).$$
 
 *Proof.* From the leading scaling $\eta_B \propto \sqrt{v}$ at fixed prefactor regime,
 $$\delta\eta_B = \frac{\partial\eta_B}{\partial v}\delta v = \frac{\eta_B}{2v}\delta v.$$
@@ -1404,47 +1706,50 @@ $$\frac{\delta\eta_B}{\eta_B} = \frac{1}{2}\frac{\delta v}{v}. $$
 
 ∎
 
-**Corollary Y.11.5** (BSM Constraints). *Models of electroweak symmetry breaking are constrained by cosmological observations:*
+**Corollary Y.11.5** (Constant-Prefactor Sensitivity). *Assume the complete branch hypotheses of Corollary Y.11.4b and hold $A_{EW}$, $M_{Pl}$, $\mathcal C_{\mathrm{eff}}$, $\mathcal F_{CP}$, and $f_{\mathrm{wash}}$ constant. For infinitesimal variations,*
+$$
+\frac{\delta\eta_B}{\eta_B}=\frac12\frac{\delta v}{v}.
+$$
+*Thus the constant-prefactor linearized changes corresponding to $1\%$, $10\%$, and $50\%$ changes in $v$ are $0.5\%$, $5\%$, and $25\%$, respectively. These numbers are conditional sensitivities, not observational exclusions of a BSM model whose threshold or transport entries also change.*
 
-| If $v$ changes by | Then $\eta_B$ changes by | CMB constraint |
-|:-----------------:|:------------------------:|:--------------:|
-| $\pm 1\%$ | $\pm 0.5\%$ | Marginally detectable |
-| $\pm 10\%$ | $\pm 5\%$ | Strongly constrained |
-| $\pm 50\%$ | $\pm 25\%$ | Excluded by Planck |
-
-*Any proposed solution to the electroweak hierarchy problem that modifies $v$ at the $> 10\%$ level must be checked against the observed value $\eta_B = (6.12 \pm 0.04) \times 10^{-10}$.*
+*Proof.* Take the logarithmic differential of (Y.11.4b) while holding every listed factor constant. A finite $50\%$ change is outside the infinitesimal regime; the quoted $25\%$ is only its linear extrapolation. ∎
 
 ### Y.10.3.6 Conceptual Significance
 
-The hierarchy unification theorem implies:
+On the combined hypotheses of Theorems Y.11, Y.11.2, and Y.11.4, the conditional shared-exponent branch has the following implications:
 
-1. **Reduction of mysteries.** Two apparently independent fine-tuning problems reduce to one. The question "why is $\eta_B \sim 10^{-10}$?" becomes "why is $v/M_{Pl} \sim 10^{-17}$?", which was already being asked.
+1. **Conditional common exponent.** The electroweak and baryogenesis model expressions share one exponential input after the equal-exponent decomposition, determinant relation, and transport certificate are specified. This relates the two hierarchy questions on that branch but does not determine the open prefactors.
 
-2. **Mandatory cross-talk.** The electroweak physics community and the baryogenesis community are studying the same problem from different angles. Solutions must satisfy both constraints simultaneously.
+2. **Branch compatibility.** A completion of this branch must satisfy the electroweak and baryogenesis constraints simultaneously; models outside its hypotheses are not constrained by the square-root identity.
 
-3. **CP as geometry.** The $\mathbb{Z}_2$ structure of CP is not incidental to baryogenesis — it determines the power law relating $\eta_B$ to $v/M_{Pl}$. The square root is a geometric consequence of the two-element structure of $\mathbb{Z}_2$.
+3. **CP half-step.** The factor $1/2$ follows only when the CP action is free on the retained saddle support, preserves the reduced measure, and carries an accepted equal-exponent split. The order of $\mathbb Z_2$ alone does not determine the power law.
 
-4. **Predictive correlation.** The relationship $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$ is a parameter-free prediction that can be tested against any BSM scenario.
+4. **Constant-prefactor correlation.** Within the same certified baryogenesis regime, with the transport, thermal, CP-response, generation, and determinant prefactors held constant, $\delta\eta_B/\eta_B=(1/2)\delta v/v$ at leading order. A BSM deformation that changes those entries does not obey this one-variable differential relation without an additional calculation.
 
-**Theorem Y.11.6 (Generation-Locked Baryogenesis in the Appendix Y Channel).** Within the PU electroweak baryogenesis mechanism of this appendix, the same data that make flavor CP violation possible are structurally required by the baryogenesis formula. In particular:
+**Theorem Y.11.6 (Generation-Locked Baryogenesis in the Appendix Y Channel).** Work on the pre-flavor family-redundancy PPI branch of Proposition R.3.5.1a and on a certified CP-active Berry-loop branch. Within the PU electroweak baryogenesis mechanism of this appendix, the same family and CP data required for flavor CP violation enter the baryogenesis formula. In particular:
 
-1. Theorem R.3.4 shows that the smallest anomaly-free family-charge pattern permitting physical CP violation in the modeled class is the three-sector pattern $\{a,-a,0\}$, hence $N_g=3$.
-2. Theorem T.56 gives a nonzero CKM phase $\delta$ from Berry holonomy on the generation manifold.
-3. Theorem Y.2 uses $N_g=3$ and nonzero $\delta$ only for the family/CP parts of the conditional branch; realization also requires its anomaly, active-transition, and response-active nonequilibrium records. Theorem Y.2 uses exactly these two inputs—$N_g=3$ and nonzero $\delta$—to realize the Sakharov conditions in the PU channel.
-4. Theorems Y.8 and Y.9 then make both inputs enter the baryogenesis formula through
+1. Theorem R.3.4 gives the minimal admissible anomaly-plus-CP family-charge pattern $\{a,-a,0\}$ with $N_{\min}=3$, while Proposition R.3.5.1a gives exact $N_g=3$ on the stated pre-flavor branch.
+2. Theorem T.54 gives a nonzero base Berry phase on its minimal-area branch. The numerical value $\delta_{\mathrm{CKM}}=66.7°$ is available only on the additional nonlinear phase-response ansatz of Theorem T.56.
+3. Theorem Y.2 uses the family count and nonzero CP datum only for the family/CP part of its conditional branch. Those two inputs do not by themselves realize the Sakharov conditions: the electroweak anomaly, an active baryon-number-changing transition, and a response-active nonequilibrium record remain independent required inputs.
+4. On the separate hypotheses of Theorems Y.8 and Y.9, the family count and CP datum enter the reduced formula through
 $$
 \kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon_0}{N_g},
 \qquad
-\mathcal F_{CP}=\tanh(\mathcal S\sin\delta).
+\mathcal F_{CP}=\tanh(\mathcal S\sin\delta)
 $$
+on the registered single-harmonic response branch.
 
-Consequently, within the Appendix Y channel, the flavor-topology sector and the cosmological matter-asymmetry sector are structurally locked: if $N_g<3$ or $\delta=0$, the present mechanism ceases to produce the observed-type baryogenesis channel.
+Consequently, within this complete Appendix Y branch package, the flavor-topology and matter-asymmetry sectors share the stated family and CP inputs. If $N_g<3$ in the modeled CKM class or if the registered CP datum vanishes, this particular baryogenesis channel has no CP-active reduced product.
 
-*Proof.* Theorem R.3.4 proves that two generations cannot support a physical CKM phase after rephasing, whereas the minimal anomaly-free family-charge pattern allowing CP violation is the three-sector pattern $\{a,-a,0\}$. Theorem T.56 then gives a nonzero CKM phase $\delta$ as Berry holonomy. Theorem Y.2 imports both facts into the family/CP part of the Sakharov analysis: baryon violation uses the electroweak anomaly with coefficient proportional to $N_g$, CP violation uses the nonzero Berry-holonomy phase $\delta$, and the independent response-active transport, boundary/inflow, preparation, or freeze-out record supplies the required departure from stationarity. Finally, Theorem Y.8 inserts $N_g$ into the exponent through the generation-sharing term $\varepsilon_0/N_g$, and Theorem Y.9 inserts $\delta$ into the CP factor through $\sin\delta$. If $N_g<3$, the modeled class loses physical CKM CP violation; if $\delta=0$, then $\mathcal F_{CP}=\tanh(0)=0$. In either case the present Appendix Y mechanism collapses. ∎
+*Proof.* Theorem R.3.4 excludes a physical CKM phase for two generations and identifies $\{a,-a,0\}$ as the minimal anomaly-descending CP-capable pattern. Proposition R.3.5.1a supplies exact three-family realization on the declared pre-flavor branch. Theorem T.54 supplies the nonzero base Berry datum, with the $66.7°$ numerical specialization conditional on Theorem T.56. Theorem Y.2 combines those family/CP inputs with its separately required anomaly, transition, and response-active nonequilibrium records. Theorem Y.8 inserts $N_g$ through $\varepsilon_0/N_g$, and Theorem Y.9 inserts the certified CP response on its accepted factorization branch. If $N_g<3$, the modeled CKM class has no physical CP phase; if the registered CP datum is zero, the single-harmonic factor is $\tanh(0)=0$. ∎
 
 **Corollary Y.11.6a (Three Generations Are Operational in the Appendix Y Mechanism).** In the present PU baryogenesis channel, three generations are not merely compatible with the asymmetry calculation; they are part of the mechanism's operating conditions.
 
-*Proof.* Immediate from Theorem Y.11.6. ∎
+*Proof.* Theorem Y.11.6 gives two failure cases. If $N_g<3$, the modeled CKM sector has no physical rephasing-invariant CP phase, so the CP-active input required by Theorem Y.2 is absent. If $\delta=0$, then the response factor is
+$$
+\mathcal F_{CP}=\tanh(\mathcal S\sin\delta)=\tanh(0)=0,
+$$
+so the Appendix Y baryogenesis channel produces no CP-odd source. The operating branch uses $N_g=3$ together with $\delta\ne0$; therefore the three-generation datum is an operating condition of this mechanism. ∎
 
 **Remark Y.11.7a.0 (Anchor to the Global Ledger).** Definition Y.11.7a supplies the local strict PPI/PCE certificate of the baryon asymmetry row in Convention P.14.1k. Theorem Y.11.7b is the local determinacy theorem and Definition Y.11.7e refines the certificate to the finite transport-integral form. Definition Y.6.1c and Theorem Y.6.1d supply the APS-Kubo transport route. An accepted $\mathfrak C_B$, accepted $\mathfrak C_B^{\mathrm{tr}}$, or accepted $\mathfrak C_B^{\mathrm{APSK}}$ closes the row by the corresponding finite transport certificate.
 
@@ -1568,13 +1873,13 @@ where:
 
 3. $Y_B(t_i)$ is the fixed initial baryon vector or scalar.
 
-4. $\mathcal L_B(t)$ is the finite baryon-number transport generator on $\mathcal H_B$; it includes the reversible transport part and any linear washout/freeze-out part not represented separately by $W_B(t)$.
+4. $\mathcal L_B:[t_i,t_f]\to\operatorname{End}(\mathcal H_B)$ is strongly measurable and satisfies $\int_{t_i}^{t_f}\lVert\mathcal L_B(t)\rVert\,dt<\infty$. It includes the reversible transport part and any linear washout/freeze-out part not represented separately by $W_B(t)$.
 
-5. $S_{CP}(t)$ is the determinant-line CP source profile produced by $\mathcal K_{CP}$.
+5. $S_{CP}:[t_i,t_f]\to\mathcal H_B$ is strongly measurable and Bochner integrable and is produced by $\mathcal K_{CP}$.
 
-6. $W_B(t)$ is the nonnegative scalar washout/freeze-out survival profile when the branch uses a scalar survival factor; if washout is already contained in $\mathcal L_B(t)$, then $W_B(t)=0$ and this entry is marked response-null.
+6. $W_B:[t_i,t_f]\to[0,\infty)$ is a measurable washout rate with dimensions of inverse time and $W_B\in L^1([t_i,t_f])$ when the branch uses a scalar survival factor. If washout is already contained in $\mathcal L_B(t)$, then $W_B(t)=0$ and this entry is marked response-null.
 
-7. $\mathcal U_B(t_2,t_1)$ is the time-ordered propagator generated by $\mathcal L_B(t)$.
+7. $\mathcal U_B(t_2,t_1)$ is the unique absolutely continuous propagator satisfying $\partial_{t_2}\mathcal U_B(t_2,t_1)=\mathcal L_B(t_2)\mathcal U_B(t_2,t_1)$ almost everywhere and $\mathcal U_B(t_1,t_1)=I$.
 
 8. $\mathcal Q_B$ is the quadrature and tail-bound ledger for all time integrals and finite Kubo sums.
 
@@ -1665,21 +1970,25 @@ If no record in (Y.11.7h.1) is accepted, Appendix Y supplies no certified numeri
 
 ## Y.11 Baryogenesis Derivation Chain Summary
 
-The complete logical chain from $K_0 = 3$ to $\eta_B$:
+The branch-resolved logical chain from $K_0 = 3$ to the illustrative $\eta_B$ row is:
 
 $$\boxed{
 \begin{aligned}
 K_0 = 3 &\xrightarrow{\text{Thm 15}} N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \xrightarrow{\text{Thm 23/Z.2}} d_0 = 8 \\[4pt]
 &\xrightarrow{\text{Thm Z.1}} a = 2, \quad b = d_0 - a = 6 \\[4pt]
 &\xrightarrow{\text{Thm Z.5}} M = 2ab = 24, \quad k = 12 \\[4pt]
-&\xrightarrow{\text{Thm T.5}} \kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 38.5 \\[4pt]
-&\xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \\[4pt]
-&\xrightarrow{\text{Thm R.3.4}} N_g = 3 \\[4pt]
+&\xrightarrow{\substack{\text{Thm T.4--T.5}\\\text{Morse--Bott branch}}} \kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 38.5 \\[4pt]
+&\xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \\[4pt]
+&\xrightarrow{\text{Thm R.3.4}} N_{\min}=3
+\xrightarrow{\text{Prop R.3.5.1a}} N_g=3 \\[4pt]
 &\xrightarrow{\text{Thm Y.8}} \kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = 19.48 \\[4pt]
-&\xrightarrow{\text{Thm T.56}} \delta = 66.7° \implies \sin\delta = 0.918 \\[4pt]
+&\xrightarrow{\text{Thm T.54}} \delta_0=70.53°
+\xrightarrow{\text{Thm T.55}} \mathcal V_{\mathrm{sinc}}=0.9454 \\[4pt]
+&\xrightarrow{\text{Thm T.56; registered nonlinear ansatz}} \delta_{\mathrm{CKM}}=66.7°
+\implies \sin\delta_{\mathrm{CKM}}=0.918 \\[4pt]
 &\xrightarrow{\text{Thm Y.6.1g, APSK branch}} \dot\theta_{\mathrm{PU}}=\dot\Theta_\eta+\int_{S^1}\Gamma^*\mathcal F_{\mathrm{Berry}}(\partial_t,\partial_s)\,ds \\[4pt]
-&\xrightarrow{\text{Thm Y.9}} \eta_B = \mathcal{C}_{eff} \cdot \tanh(\chi_{CP}\mathcal{S}\sin\delta) \cdot f_{wash} \cdot e^{-\kappa_B} \\[4pt]
-&= 0.282 \times 0.9997 \times 0.63 \times 3.47 \times 10^{-9} = 6.2 \times 10^{-10}\quad\text{as an illustrative factor product}
+&\xrightarrow{\text{Thm Y.9; accepted product reduction}} \eta_B = \mathcal{C}_{eff} \cdot \tanh(\chi_{CP}\mathcal{S}\sin\delta_{\mathrm{CKM}}) \cdot f_{wash} \cdot e^{-\kappa_B} \\[4pt]
+&= 0.282 \times 0.9997 \times 0.63 \times 3.47 \times 10^{-9} = 6.2 \times 10^{-10}\quad\text{as an illustrative factor product}.
 \end{aligned}
 }$$
 
@@ -1706,32 +2015,41 @@ The Planck satellite constrains $\eta_B = (6.12 \pm 0.04) \times 10^{-10}$. Futu
 The CP phase $\delta$ is measured at B-factories and LHCb. Current world average [Particle Data Group 2024]:
 $$\delta_{\mathrm{CKM}}=65.72^\circ\pm1.49^\circ$$
 
-**Prediction:** $\delta = 66.7°$ from Theorem T.56.
+**Conditional response value:** $\delta=66.7°$ on the independently registered nonlinear phase-response ansatz of Theorem T.56; the base Berry phase is $\delta_{\mathrm{flat}}=70.53°$ under Theorem T.54's branch.
 
 Projected LHCb sensitivity of order $1^\circ$ concerns the unitarity-triangle angle $\gamma$. It constrains this branch only after a specified standard-unitary mapping from $\gamma$ to $\delta_{\mathrm{CKM}}$ and a theory covariance are fixed.
 
 ### Y.12.3 Saturation Regime Test
 
-**Prediction Y.2** (Conditional Driven Sphaleron-Weight Saturation). *On a certified nonstationary reduction with fixed source, freeze-out, and residual ledger, the CP response weight is insensitive to the precise value of $\sin\delta$ in the range $\sin\delta>0.2$ because $\tanh(\mathcal S\sin\delta)\approx1$; this does not remove the source requirement of Theorem Y.6.1i.*
+**Prediction Y.2** (Conditional Driven Sphaleron-Weight Saturation). *On a certified nonstationary reduction with specified source, freeze-out, and residual ledger, set $x=\mathcal S\sin\delta\ge0$. For a declared tolerance $0<\tau<1$, the bound*
+$$
+1-\tanh x\le\tau
+$$
+*holds exactly when*
+$$
+x\ge\operatorname{artanh}(1-\tau)
+=\frac12\log\left(\frac{2-\tau}{\tau}\right).
+$$
+*Thus phase-insensitivity follows only on a branch whose allowed phase interval and specified $\mathcal S$ satisfy this product bound; no universal threshold $\sin\delta>0.2$ follows. The source requirement of Theorem Y.6.1i remains independent.*
 
-*Testable consequence:* If future measurements shift $\delta$ within experimental uncertainties, the $\eta_B$ prediction should remain stable. This distinguishes the PU mechanism from scenarios where $\eta_B \propto \sin\delta$.
+*Proof.* Since $1-\tanh x=2/(e^{2x}+1)$, the inequality $1-\tanh x\le\tau$ is equivalent to $e^{2x}\ge(2-\tau)/\tau$, which gives the displayed threshold. ∎
 
 ### Y.12.4 CPT Tests
 
-The framework predicts exact CPT symmetry (the NOT operation is symmetric under time reversal when combined with CP). High-precision tests with antihydrogen at CERN/ALPHA constrain CPT violation at the $10^{-15}$ level.
+On a physical branch that independently satisfies the hypotheses of the CPT theorem—local Lorentz-covariant quantum fields, microcausality, the spin-statistics connection, and unitary dynamics—CPT invariance follows. The logical NOT involution alone does not establish those hypotheses.
 
-**Prediction:** No CPT violation. Any observed asymmetry between hydrogen and antihydrogen spectra would falsify the framework.
+**Conditional prediction:** No CPT violation on that local relativistic QFT branch. A reproducible hydrogen-antihydrogen discrepancy would falsify the conjunction of that branch, its observable mapping, and the CPT hypotheses; it would not by itself refute the abstract binary SPAP involution.
 
 ### Y.12.5 Electric Dipole Moments
 
-CP violation beyond the CKM mechanism would manifest in electric dipole moments (EDMs). Current bounds:
+CP violation beyond the CKM mechanism would manifest in electric dipole moments (EDMs). Representative current bounds are:
 
-| System | Bound | SM Prediction |
-|:-------|:------|:--------------|
-| Electron | $\lvert d_e\rvert < 1.1 \times 10^{-29}$ e·cm | $\sim 10^{-38}$ e·cm |
-| Neutron | $\lvert d_n\rvert < 1.8 \times 10^{-26}$ e·cm | $\sim 10^{-31}$ e·cm |
+| System | $90\%$ CL bound | Primary source |
+|:-------|:-----------------|:---------------|
+| Electron | $\lvert d_e\rvert < 4.1 \times 10^{-30}$ e·cm | Roussy et al. (2023) |
+| Neutron | $\lvert d_n\rvert < 1.8 \times 10^{-26}$ e·cm | Abel et al. (2020) |
 
-**Prediction:** EDMs at or below SM predictions. The PU CP violation is encoded in $\delta$ (CKM mechanism), not in new CP-odd operators.
+**Conditional prediction:** On a branch carrying an accepted effective-action certificate that excludes every CP-odd operator beyond the Standard-Model CKM source, EDMs equal the corresponding Standard-Model predictions within the certificate's residual interval. Appendix Y does not itself supply that operator-exclusion certificate. A quantitative Standard-Model benchmark requires a specified operator calculation and uncertainty convention.
 
 ---
 
@@ -1763,74 +2081,72 @@ This is the illustrative factor-product value on the canonical Appendix Y branch
 
 The derivation reveals that:
 - **CP violation** is geometric transport data. On an accepted APS-Kubo branch, $\dot\theta_{\mathrm{PU}}$ is the APS boundary-phase derivative plus Berry-curvature flux around the retained flavor loop. Transport weighting produces the surface term in (Y.6.1g.1). The approximation $\tanh(\mathcal S\sin\delta)\approx1$ belongs only to the separately certified saturated product branch.
-- **Efficiency** is controlled by the branch value $\kappa_B=19.48$.
-- **Matter dominance** is fixed by the retained initial-condition record, not by an adjustable transport parameter.
+- **Complexity weight** is controlled by the branch value $\kappa_B=19.48$; transport efficiency, CP response, and washout remain separate certificate entries.
+- **Matter dominance** is determined only by a complete retained signed transport certificate, including its source, oriented kernel, topological transition, and readout convention; the initial-condition record alone does not determine the sign.
 
-The framework provides a structurally constrained branch explanation for the sign and scale of the matter excess. The exact numerical row is the finite transport image of the accepted baryogenesis certificate, with the efficiency and washout modeling detailed in Section Y.4.
+The framework provides a structurally constrained branch explanation for the sign and scale of the matter excess. The exact numerical row is the finite transport image of an accepted baryogenesis certificate, with the conditional transport coefficient and washout survival defined in Sections Y.7.2--Y.7.3 and the finite certificate routes specified by Definition Y.11.7a, Definition Y.11.7e, and Definition Y.6.1c.
 
 ---
 
 ## Y.A: Self-Contained Derivations of Key Inputs
 
-### Y.A.1 Derivation of $\kappa_{EW} = 38.5$
+### Y.A.1 Conditional Evaluation of $\kappa_{EW}=38.5$
 
-**Source:** Theorem T.5 (Appendix T)
+**Sources:** Theorems T.4–T.5 (Appendix T)
 
-The electroweak complexity counts constrained degrees of freedom:
-$$\kappa_{EW} = N_0 + \dim(G/H) - \frac{m}{2}$$
-
-**Step 1:** From $K_0 = 3$: $d_0 = 2^3 = 8$ and $(a,b) = (2,6)$.
-
-**Step 2:** The Golay code [24,12,8] gives $M = 24$, $k = 12$.
-
-**Step 3:** $N_0 = bk/2 = 6 \times 12/2 = 36$.
-
-**Step 4:** The electroweak coset is $(SU(2)_L \times U(1)_Y)/U(1)_{em}$:
-$$\dim(G/H) = (3 + 1) - 1 = 3$$
-
-**Step 5:** One zero mode from unbroken $U(1)_{em}$: $m = 1$.
-
-**Result:** $\kappa_{EW} = 36 + 3 - 0.5 = 38.5$ ∎
+Assume the Hessian is positive definite transverse to a compact Morse–Bott zero-mode manifold and that the Gaussian fluctuation integral factorizes as required by Theorem T.5. The electroweak complexity is
+$$
+\kappa_{EW}=N_0+\dim(G/H)-\frac m2.
+$$
+On the registered electroweak branch, $N_0=bk/2=6\cdot12/2=36$ and $\dim(G/H)=(3+1)-1=3$. Theorem T.4 supplies the single residual $U(1)_{em}$ zero mode, so $m=1$. Therefore
+$$
+\kappa_{EW}=36+3-\frac12=38.5.
+$$
+∎
 
 ### Y.A.2 Derivation of $\delta = 66.7°$
 
-**Source:** Theorem T.56 (Appendix T)
+**Sources:** Theorems T.54--T.56 (Appendix T)
 
-The CKM CP phase arises from Berry holonomy on Gr(2,8).
+The base Berry phase, uniform-noise visibility, and nonlinear phase response are distinct branch statements.
 
-**Step 1:** The $E_8$ triads for quark sectors are:
+**Step 1:** On the minimal Berry-area branch of Theorem T.54, the $E_8$ triads for the quark sectors are:
 - Down: $(d^2_{32}, d^2_{31}) = (2, 4)$
 - Up: $(d^2_{32}, d^2_{31}) = (4, 8)$
 
-**Step 2:** The mismatch angle at the 3↔2 interface:
-$$\theta_{mismatch} = \arctan\left(\frac{\sqrt{2}}{2}\right) = 35.26°$$
+**Step 2:** The mismatch angle at the 3↔2 interface is
+$$\theta_{mismatch} = \arctan\left(\frac{\sqrt{2}}{2}\right) = 35.26°.$$
 
-**Step 3:** The holonomy around the flavor quadrilateral:
-$$\delta_{flat} = 2\theta_{mismatch} = 70.53°$$
+**Step 3:** The base holonomy around the flavor quadrilateral is
+$$\delta_0 = 2\theta_{mismatch} = 70.53°.$$
 
-**Step 4:** Finite wavepacket correction:
-$$f_{sinc} = \text{sinc}(1/\sqrt{3}) = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = 0.9454$$
+**Step 4:** Theorem T.55 gives the finite-wavepacket visibility
+$$f_{sinc} = \text{sinc}(1/\sqrt{3}) = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = 0.9454,$$
+while the averaged complex amplitude retains phase $\delta_0$.
 
-**Result:** $\delta = 70.53° \times 0.9454 = 66.7°$ ∎
+**Step 5:** On the independently registered nonlinear phase-response ansatz of Theorem T.56,
+$$\delta_{\mathrm{CKM}}:=\delta_0 f_{sinc}=70.53°\times0.9454=66.7°.$$
+
+**Result:** $\delta_{\mathrm{CKM}}=66.7°$ on the Theorem T.56 nonlinear-response branch. ∎
 
 ### Y.A.3 Derivation of $N_g = 3$
 
-**Source:** Theorem R.3.4 (Appendix R)
+**Sources:** Theorem R.3.4, Proposition R.3.5.1a, and Theorem R.8.5b (Appendix R)
 
-Three generations emerge from two independent constraints:
+The minimal admissible count and exact branch realization are separate statements.
 
-**Constraint 1 (Anomaly cancellation):** Family charges $\{F_g\}$ must satisfy:
-$$\sum_g F_g = 0, \quad \sum_g F_g^3 = 0$$
+**Constraint 1 (Anomaly cancellation):** On the family-redundancy branch, family charges $\{F_g\}$ satisfy
+$$\sum_g F_g = 0, \quad \sum_g F_g^3 = 0.$$
 
-The minimal solution permitting CP violation is $\{a, -a, 0\}$ with $N_g = 3$.
+**Constraint 2 (CP activity):** The Jarlskog invariant requires
+$$J_{CP} = c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}\sin\delta \neq 0.$$
 
-**Constraint 2 (CP violation):** The Jarlskog invariant requires:
-$$J_{CP} = c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}\sin\delta \neq 0$$
+For two generations every CKM phase is removable. Theorem R.3.4 therefore gives the minimal admissible anomaly-descending CP-capable pattern $\{a,-a,0\}$ and the minimal count $N_{\min}=3$; it does not exclude larger anomaly-free patterns.
 
-This requires at least 3 generations (for $N_g = 2$, the CKM matrix is real).
+**Branch realization:** Proposition R.3.5.1a removes response-null supernumerary family copies on the pre-flavor family-redundancy PPI branch and gives
+$$N_g=3.$$
+Theorem R.8.5b supplies the separate PCE minimal-selection audit within its declared integer family-charge class.
 
-**Constraint 3 (PCE minimality):** Additional generations ($N_g > 3$) increase complexity without predictive benefit.
-
-**Result:** $N_g = 3$ is uniquely selected ∎
+**Result:** $N_{\min}=3$ in the anomaly-plus-CP class, and exact $N_g=3$ on the pre-flavor family-redundancy PPI branch. ∎
 
 ---

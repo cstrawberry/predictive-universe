@@ -20,7 +20,7 @@ For the Fundamental Predictive Loop (Definition 4) to operate sustainably and ad
 2.  **Predictive Generation ($b_p$):** The ability to execute the internal model ($M_t$) to generate predictions based on the current state.
 3.  **Verification & Update Initiation ($b_v$):** The ability to interact to acquire outcome information, compare it with the prediction, generate an error/feedback signal, and utilize this signal to initiate the adaptive update process ($D_{cyc}$) for the model and state.
 
-These capabilities must operate in a coordinated, cyclical manner. The minimal physical resources required to implement these integrated functions correspond to the Operational Threshold $C_{op}$ (**Definition 13**), which necessarily satisfies $C_{op} \ge K_0$ (Corollary 3).
+These capabilities must operate in a coordinated, cyclical manner. Definition 13 assigns the task-relative Operational Threshold $C_{op}$ to qualifying implementations of the full loop. The inequality $C_{op}\ge K_0=3$ follows only on the Corollary 3 branch where every qualifying implementation satisfies (O1)–(O3) and (FC), uses a Hilbert carrier for the eight contexts, and obeys $C_P\ge\log_2d_0$.
 
 #### 3.2 Reflexive Interaction Dynamics (RID)
 
@@ -62,32 +62,59 @@ $$
 
 This definition ensures $PP(t) \in (0, 1]$, with $PP = 1$ corresponding to perfect prediction ($PE = 0$) and $PP \to 0$ as $PE \to \infty$. Higher $PP$ corresponds to higher predictive quality $Q$. The specific choice of $k_{PP}$ anchors $PP$ to the task's typical error scale and does not alter the ordering of predictive quality across models or time.
 
-#### 3.3.2 Theorem 8 (Necessity of Lower Performance Bound $\alpha > 0$)
+#### 3.3.2 Theorem 8 (Expected Lower Performance Bound $\alpha > 0$)
 
-For the adaptive predictive cycle (Definition 4) to maintain meaningful coupling to the system or environment being predicted—so that predictions effectively guide actions or internal regulation relevant to solving the POP (Axiom 1)—its Predictive Performance $PP(t)$ must remain strictly above a positive lower bound $\alpha$.
-
-*Proof:* Fix the proper scoring rule $S$ used to define $PE$ (Definition 7) and let $f_{random}$ be a matched random‑chance predictor for the same outcome space and scoring rule. Let $PE_{random}:=\mathbb{E}[S(\hat y_{random}(t),y(t))]$ be the expected error of $f_{random}$ under the task distribution, and define
+Fix an evaluation window $W$ and the proper scoring rule $S$ of Definition 7. Define the system's expected error and its corresponding window performance by
 $$
-\alpha \;:=\; \frac{1}{1+k_{PP}\,PE_{random}} \in (0,1).
+\overline{PE}_W:=\mathbb E\!\left[S(\hat y(t),y(t))\mid t\in W\right],
+\qquad
+PP_W:=\frac{1}{1+k_{PP}\overline{PE}_W}.
 $$
-Since $PP(t)=1/(1+k_{PP}PE(t))$ is strictly decreasing in $PE(t)$, the condition $PP(t)\le \alpha$ implies $PE(t)\ge PE_{random}$, i.e. the system is not strictly super‑chance at that cycle under the chosen scoring rule. A sustained loop that solves the POP requires strictly super‑chance predictive coupling on the relevant task class; otherwise the Verification phase supplies no systematic advantage signal for $D_{cyc}$ and the loop cannot maintain meaningful coupling to the predicted target. Hence, during viable operation one must have $PP(t)>\alpha$. ∎
+Let $f_{random}$ be a matched random-chance predictor for the same outcome space, scoring rule, and task distribution, and assume
+$$
+0<PE_{random}:=\mathbb E\!\left[S(\hat y_{random}(t),y(t))\mid t\in W\right]<\infty.
+$$
+If solving the POP on $W$ requires strict expected super-chance performance, $\overline{PE}_W<PE_{random}$, then
+$$
+PP_W>\alpha,
+\qquad
+\alpha:=\frac{1}{1+k_{PP}PE_{random}}\in(0,1).
+$$
 
-#### 3.3.3 Theorem 9 (Necessity of Upper Performance Bound $\beta < 1$)
+*Proof.* Because $k_{PP}>0$, the function $x\mapsto(1+k_{PP}x)^{-1}$ is strictly decreasing on $[0,\infty)$. Therefore
+$$
+\overline{PE}_W<PE_{random}
+\quad\Longrightarrow\quad
+\frac{1}{1+k_{PP}\overline{PE}_W}
+>
+\frac{1}{1+k_{PP}PE_{random}},
+$$
+which is $PP_W>\alpha$. The assumptions $0<PE_{random}<\infty$ imply $0<\alpha<1$. ∎
 
-For the adaptive predictive cycle (Definition 4), operating under RID constraints (Definition 6) and finite resources (Section 2.4.4), facing changes in the registered internal task scale (dynamics of $\hat{C}_{target}(t)$, Definition 21), with any external-environment interpretation requiring its own innovation record, and using error‑driven adaptation, to retain the capacity for learning, adaptation, and efficient operation, its Predictive Performance $PP(t)$ must be kept strictly below 1. That is, there exists an operational upper bound $\beta < 1$ such that $PP(t) \leq \beta$.
+#### 3.3.3 Theorem 9 (Conditional Upper Performance Bound from a Pathwise Excitation Floor)
 
-*Proof:*
-1. **Nonzero Error is Necessary for Update Identifiability:** The update phase ($D_{cyc}$) is driven by discrepancy information carried by $PE(t)$. If $PP(t)\equiv 1$ on a window, then $PE(t)\equiv 0$ on that window, so the interaction history on that window contains no discrepancy information capable of distinguishing the current target process from an alternative target process that matches the observed history up to the window's start but diverges afterward. Consequently, no update rule that depends only on the observed interaction history can guarantee tracking of nonstationary $\hat{C}_{target}(t)$ if $PE$ is identically zero over macroscopic windows. Therefore, viable adaptive operation in nonstationary contexts requires the existence of a strictly positive excitation floor $\varepsilon_E>0$ such that over update windows the error channel satisfies $\mathbb{E}[PE(t)]\ge \varepsilon_E$.
-2. **Mapping Excitation to a PP Ceiling:** Since $PP(t) = 1/(1 + k_{PP} \cdot PE(t))$ is strictly decreasing in $PE(t)$, any lower bound $\varepsilon_E > 0$ on the error signal implies an upper bound on $PP$:
-   $$
-   PP(t) \le 1/(1 + k_{PP} \varepsilon_E) =: \beta < 1.
-   $$
-3. **Resource Efficiency:** Approaching the operational ceiling incurs rapidly increasing complexity costs. As derived later (Theorem 19; see Equation (23)), the complexity required to sustain a given PP grows as
-   $$
-   C(PP, \hat{C}_{target}) = C_{op} + \frac{\hat{C}_{target}}{\kappa_{\mathrm{eff}}} \ln\!\Bigl(\frac{\beta - \alpha}{\beta - PP}\Bigr),
-   $$
-   which diverges logarithmically as $PP \to \beta^-$. Operating extremely close to $\beta$ is therefore increasingly inefficient and can violate the Principle of Compression Efficiency (PCE, Definition 15) for the POP.
-4. **Synthesis:** To ensure adaptability under RID and nonstationarity and to preserve efficiency under resource constraints, the system must maintain a non‑zero level of informative error. This enforces an operational upper bound $\beta < 1$ on $PP(t)$. QED
+Consider the adaptive predictive cycle of Definition 4 with performance $PP(t)=1/(1+k_{PP}PE(t))$. Assume that its registered error-driven update protocol carries a pathwise excitation certificate: there is a constant $\varepsilon_E>0$ such that
+$$
+PE(t)\ge\varepsilon_E
+$$
+almost surely on every update cycle in the certified operating window. Then
+$$
+PP(t)\le\beta:=\frac{1}{1+k_{PP}\varepsilon_E}<1
+$$
+almost surely on that window. On the additional branch of Theorem 19 where
+$$
+C(PP, \hat{C}_{target}) = C_{op} + \frac{\hat{C}_{target}}{\kappa_{\mathrm{eff}}} \ln\!\Bigl(\frac{\beta - \alpha}{\beta - PP}\Bigr),
+$$
+the required complexity diverges logarithmically as $PP\to\beta^-$.
+
+*Proof.* The function $x\mapsto(1+k_{PP}x)^{-1}$ is strictly decreasing because $k_{PP}>0$. Hence the pathwise inequality $PE(t)\ge\varepsilon_E$ gives
+$$
+PP(t)=\frac{1}{1+k_{PP}PE(t)}
+\le
+\frac{1}{1+k_{PP}\varepsilon_E}
+=\beta<1.
+$$
+For the Theorem 19 branch, $\beta-PP\downarrow0$ as $PP\to\beta^-$, so $\ln((\beta-\alpha)/(\beta-PP))\to+\infty$ when $\beta>\alpha$ and $\hat C_{target}/\kappa_{\mathrm{eff}}>0$. ∎
 
 #### 3.3.4 Remark 1 (Distinction between $\beta$ and $\alpha_{SPAP}$)
 
@@ -95,25 +122,52 @@ It is essential to distinguish the *operational* upper bound $\beta$ from the *f
 
 #### 3.3.5 Definition 8 (Def 8): The Space of Becoming $(\alpha, \beta)$
 
-Based on the necessity of both lower and upper performance bounds (Theorem 8, Theorem 9), the **Space of Becoming** is defined as the open interval $(\alpha, \beta)$, where $0 < \alpha < \beta < \alpha_{SPAP} < 1$. This interval specifies the necessary operational range for Predictive Performance $PP(t)$ (Definition 7) for the viable and adaptive functioning of the Fundamental Predictive Loop (Definition 4) consistent with solving the POP (Axiom 1) under physical and logical constraints.
-
-*   $PP(t) \leq \alpha$: Operational failure threshold (functional decoupling, insufficient predictive quality).
-*   $PP(t) \ge \beta$: Operational boundary associated with loss of adaptability, predictive stasis, prohibitive inefficiency, or proximity to fundamental limits.
-*   $\alpha < PP(t) < \beta$: The viable operational range, enabling a dynamic balance between predictive coherence (for POP goals) and adaptive capability/efficiency (for PCE).
+Fix the task distribution, proper score, and evaluation window of Theorem 8. Let
+$$
+\alpha:=\frac{1}{1+k_{PP}PE_{random}}.
+$$
+On a branch carrying the pathwise excitation certificate of Theorem 9, set
+$$
+\beta_0:=\frac{1}{1+k_{PP}\varepsilon_E}<1
+$$
+and choose a declared operational safety boundary $\beta$ satisfying
+$$
+\max\{\alpha,\beta_0\}<\beta<1.
+$$
+The **Space of Becoming** for this registered task and score is the open interval $(\alpha,\beta)$. Strict expected super-chance performance gives $PP_W>\alpha$ by Theorem 8, while the excitation certificate gives $PP_W\le\beta_0<\beta$.
 
 #### 3.3.6 Axiom 3 (Ax 3): Operational Viability
 
-The process modeled by the adaptive Fundamental Predictive Loop (Definition 4), subject to POP (Axiom 1) and RID (Definition 6) constraints, can only be sustained if its Predictive Performance $PP(t)$ is dynamically maintained within the Space of Becoming, i.e., $\alpha < PP(t) < \beta$.
-
-*Justification:* Theorem 8 supplies a necessary lower bound $PP(t)>\alpha$ for nontrivial predictive coupling, and Theorem 9 supplies a necessary upper bound $PP(t)<\beta$ for adaptability and efficiency under RID and finite resources. Axiom 3 records this viability requirement as the standing constraint on sustained operation: $\alpha<PP(t)<\beta$.
-
-#### 3.3.7 Proposition 1 (Dynamic Regulation Requirement)
-
-Any system governed by Operational Viability (Axiom 3), existing in an environment where perturbations can affect its Predictive Performance $PP(t)$, must possess regulatory mechanisms (e.g., the adaptation dynamics detailed in Section 6) to actively maintain $PP(t)$ within the Space of Becoming $(\alpha, \beta)$.
-*Proof:* Let $\tau := \inf\{t\ge 0: PP(t)\notin (\alpha,\beta)\}$ be the first exit time from the viability interval. In the absence of regulation, the internal parameters governing $PP(t)$ are fixed while perturbations act. Since perturbations can affect $PP(t)$, there exist an integer window length $m\ge 1$ and a constant $p_{exit}>0$ such that, conditional on any history with $PP(t)\in(\alpha,\beta)$, the probability that $PP$ exits $(\alpha,\beta)$ within the next $m$ cycles is at least $p_{exit}$. Then
+For the registered task, score, evaluation windows, and excitation branch above, sustained operation is required to maintain
 $$
-\Pr[\tau>km] \le (1-p_{exit})^k \to 0 \quad \text{as } k\to\infty,
+\alpha<PP_W<\beta.
 $$
-so $\Pr[\tau<\infty]=1$, contradicting sustained operation under Axiom 3. Therefore, maintaining $PP(t)\in(\alpha,\beta)$ requires active regulation that counteracts perturbations by adjusting internal parameters (e.g., complexity $C(t)$) based on deviation signals. ∎
+This is the framework's operational-viability axiom. Theorem 8 verifies its lower inequality when strict expected super-chance performance is required, and Theorem 9 verifies its upper inequality when the pathwise excitation certificate holds. No system-independent scalar relation between $\beta$ and an $\alpha_{SPAP}$ follows from Theorems 10–11.
+
+#### 3.3.7 Proposition 1 (Regulation Requirement under Uniform Uncontrolled Exit Risk)
+
+Let $(PP_n,\mathcal F_n)_{n\ge0}$ be the performance process sampled once per predictive cycle, and define
+$$
+\tau:=\inf\{n\ge0:PP_n\notin(\alpha,\beta)\}.
+$$
+Assume that, without a regulatory or protective response, there exist an integer $m\ge1$ and $p_{exit}>0$ such that for every $k\ge0$,
+$$
+\Pr(\tau\le(k+1)m\mid\mathcal F_{km},\tau>km)\ge p_{exit}
+$$
+almost surely. Then $\Pr(\tau<\infty)=1$. Consequently, a system required by Axiom 3 to remain in $(\alpha,\beta)$ for all cycles almost surely must contain a regulatory or protective mechanism that invalidates this uncontrolled exit-risk condition.
+
+*Proof.* The conditional hypothesis gives
+$$
+\Pr(\tau>(k+1)m\mid\mathcal F_{km},\tau>km)\le1-p_{exit}.
+$$
+Multiplying by $\mathbf 1_{\{\tau>km\}}$, taking expectations, and iterating yields
+$$
+\Pr(\tau>km)\le(1-p_{exit})^k.
+$$
+The right-hand side tends to zero, so continuity from above gives
+$$
+\Pr(\tau=\infty)=\lim_{k\to\infty}\Pr(\tau>km)=0.
+$$
+Thus the unregulated process exits almost surely. Any implementation satisfying perpetual operational viability must alter the uncontrolled dynamics through regulation or protection so that the uniform exit-risk premise no longer holds. ∎
 
 

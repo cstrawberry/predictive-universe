@@ -1,6 +1,6 @@
 # 6. Complexity, Performance, and Adaptation Dynamics
 
-This section explores the crucial interplay between system complexity, achievable predictive performance, and the dynamical processes governing adaptation within the Predictive Universe framework. We introduce the Principle of Compression Efficiency (PCE) as the core driver of adaptation, analyze the scaling relationship between complexity and performance, derive the specific functional form known as the Law of Prediction, and formally model the adaptation dynamics. These elements establish the foundation for understanding how systems governed by POP (Axiom 1) dynamically adjust their complexity, which is fundamentally bounded by the Operational Threshold ($C \ge C_{op} \ge K_0$, Corollary 3), to navigate the Space of Becoming (Definition 8) efficiently.
+This section studies the interplay between complexity, predictive performance, and adaptation dynamics within the Predictive Universe framework. It defines the PCE optimization model, states complexity-performance scaling hypotheses, derives an exponential performance law under an explicit multiplicative-composition condition, and analyzes the resulting dynamics. For states belonging to the qualifying set of Definition 13, $C\ge C_{op}$; the further inequality $C_{op}\ge K_0$ holds only under the realization and complexity-capacity bridge hypotheses of Corollary 3.
 
 ## 6.0 The Capacity Bound as Structural Constraint
 
@@ -12,63 +12,102 @@ A fundamental structural feature of the PU framework is that finite predictive t
 
 ### 6.0.1 Capacity Manifestations Across Domains
 
-**Theorem 6.0.1 (Capacity Bound Propagation).** *The channel capacity bound $C_{\max} < \ln d_0$ appears as a limiting factor in distinct physical contexts:*
+**Theorem 6.0.1 (Conditional Capacity-Bound Propagation).** *Finite predictive-transfer capacity supplies the following bounds and, on the saturated Clausius-calibration branch, the following gravitational relation:*
 
 | Domain | Capacity Role | Derived Relation | Reference |
 |:-------|:--------------|:-----------------|:----------|
-| Information channels | Upper bound on reliable transmission | $C_{\max}\le\ln d_0-\ln r$ on the completed reset-support branch (specializing to $\ln d_0-\ln2$ for $r=2$); $C_{\max}(f_{RID}) < \ln d_0$ on the refresh/minorization branch | Proposition E.2a; Theorem E.2 |
-| Horizon entropy | Entropy per boundary channel | $S_{channel}^{max} \leq k_B C_{\max}$ | Corollary E.2 |
-| Gravitational constant | Inverse proportionality | $G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}}$ | Equation E.9 |
+| Information channels | Upper bound on reliable transmission | $C_{\max}\le\ln d_0-\ln r$ on the completed reset-support branch (specializing to $\ln d_0-\ln2$ for $r=2$); $C_{\max}(f_{RID})<\ln d_0$ on the refresh/minorization branch | Proposition E.2a; Theorem E.2 |
+| Horizon entropy | Entropy upper bound per boundary channel | $S_{channel}^{max}\le k_BC_{\max}$ | Corollary E.2 |
+| Gravitational calibration | Inverse proportionality on the capacity-saturated area-law branch | $G=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}$ | Equation E.9 |
 
-*where $\delta$ is the effective MPU spacing (Definition 35), $\eta$ is the geometric packing factor, and $\chi$ is the correlation factor quantifying reduction in independent degrees of freedom (all defined in Theorem E.3).*
+*Here $\delta$ is the effective MPU spacing, $\eta$ is the geometric packing factor, and $\chi$ is the correlation factor defined in Theorem E.3. The equality in the gravitational row additionally assumes that boundary channels attain the registered capacity and that the Clausius normalization is imposed.*
 
 *Proof.*
 
-**Part A (Information Channels).** Proposition E.2a gives the structural completed-cycle bound. If the SPAP cycle resets an $r$-dimensional register inside the $d_0$-dimensional MPU Hilbert space to a fixed ready state, then all outputs of one completed use lie in a support of dimension at most $d_0/r$. Because the channel acts componentwise on tensor factors, the $n$-use output support has dimension at most $(d_0/r)^n$ on every input ensemble (entangled or not), so the Holevo information per use is bounded by $\ln d_0-\ln r$. For the binary SPAP reset $r=2$,
+**Part A (Information Channels).** On the tensor-factor reset branch of Proposition E.2a, every one-use output is supported on a subspace of dimension $m=d_0/r$, and the memoryless $n$-use channel has output support dimension at most $m^n$, even for entangled inputs. For any $n$-use input ensemble $\{q_i,\rho_i\}$ with outputs $\sigma_i$ and average $\bar\sigma=\sum_iq_i\sigma_i$, its Holevo information satisfies
 $$
-C(\mathcal{E}_N)\le \ln d_0-\ln2.
+\chi
+=S(\bar\sigma)-\sum_iq_iS(\sigma_i)
+\le S(\bar\sigma)
+\le\ln\operatorname{rank}(\bar\sigma)
+\le n\ln(d_0/r).
 $$
-On the independent refresh/minorization branch, Theorem E.2 gives the strict inequality $C(\mathcal{E}_N)<\ln d_0$ via the flagged erasure-mixture argument. The key additional input is Lemma E.1: the averaged ND-RID channel contains a nonzero input-independent full-state refresh component,
+Dividing by $n$ and taking the supremum over blocklengths and ensembles gives
 $$
-\mathcal{E}_N=(1-p)\Psi+pT_\sigma,\qquad p>0,
+C(\mathcal E_N)\le\ln d_0-\ln r,
 $$
-so a fraction $p$ of uses are effectively erased when the refresh triggers. Conditioning on the conceptual refresh flag yields
-$$
-C(\mathcal{E}_N)\le (1-p)\ln d_0<\ln d_0.
-$$
-Achievability and strong converse are established in [Holevo 1998; Winter 1999].
+and $r=2$ gives $C(\mathcal E_N)\le\ln d_0-\ln2$.
 
-**Part B (Horizon Entropy).** From Corollary E.2, the maximum thermodynamic entropy per channel is $S_{channel}^{max} = k_B C_{\max}$ (SI units) or simply $C_{\max}$ (natural units). Combined with channel counting (Theorem E.3), the total boundary entropy is:
+On the independent refresh/minorization branch, append a receiver-visible flag to
 $$
-S_{boundary} = N_{eff} \cdot S_{channel}^{max} = \sigma_{link} \cdot \mathcal{A} \cdot k_B \cdot C_{\max}
+\mathcal E_N=(1-p)\Psi+pT_\sigma,
+\qquad p>0.
 $$
-where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of independent channels. Writing the operational area law in the standard normalization defines $1/(4G):=\sigma_{link}\,C_{\max}$ (Theorem E.5).
+For $n$ uses, the flag pattern is independent of the encoded message. Conditional on a pattern with $k$ nonrefresh positions, all message dependence lies in a space of dimension at most $d_0^k$, so the conditional Holevo information is at most $k\ln d_0$. Averaging over the binomial flag pattern gives
+$$
+\chi_n\le\mathbb E[k]\ln d_0
+=n(1-p)\ln d_0.
+$$
+Discarding the flag cannot increase accessible classical information. Dividing by $n$ and taking the regularized supremum therefore yields
+$$
+C(\mathcal E_N)\le(1-p)\ln d_0<\ln d_0.
+$$
 
-**Part C (Gravitational Constant).** From Equation E.9, requiring Clausius consistency on all local horizons fixes:
+**Part B (Horizon Entropy).** Corollary E.2 gives the per-channel upper bound
 $$
-G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}(f_{RID})}
+S_{channel}^{max}\le k_BC_{\max}.
 $$
-The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At the PCE-Attractor (Definition 15a), admissibility requires $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31), and response-null dissipative overhead is PCE-dominated. For the minimal MPU with $d_0=8$ (Theorem 23), the residual-budget branch uses the structural floor in Equation E.15, giving $C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2$, which determines $G$ in terms of the microscopic MPU parameters. ∎
+With $N_{eff}=\sigma_{link}\mathcal A$ and $\sigma_{link}=\chi/(\eta\delta^2)$ from Theorem E.3,
+$$
+S_{boundary}
+\le\sigma_{link}\mathcal A\,k_BC_{\max}.
+$$
+Equality requires an achievable capacity-saturating boundary ensemble and saturation by every counted effective channel.
+
+**Part C (Gravitational Constant).** On that saturation branch, impose the local-horizon Clausius normalization used in Equation E.9. The equality of area coefficients then gives
+$$
+G=\frac{\eta\delta^2c^3}
+{4\hbar\chi C_{\max}(f_{RID})}.
+$$
+This expression is dimensionally consistent because $[\delta^2c^3/\hbar]=L^3M^{-1}T^{-2}=[G]$. On the additional residual-budget branch with $d_0=8$ and $\varepsilon_0=\ln2$,
+$$
+C_{\max}^*=\ln d_0-\varepsilon_0
+=\ln8-\ln2=2\ln2.
+$$
+Substitution gives the corresponding conditional calibration of $G$ in terms of the microscopic parameters. ∎
 
 **Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by finite predictive-transfer capacity: the structural reset-support deficit $C_{\max}\le\ln d_0-\ln r$ on completed SPAP reset cycles (specializing to $\ln d_0-\ln2$ for the binary reset) and, on refresh/minorization branches, the strict contractive bound $C_{\max}<\ln d_0$.*
 
-**Remark 6.0.1: Origin of the Constraint.** The structural capacity deficit traces to the irreversibility of self-referential prediction:
+**Remark 6.0.1: Conditional Origins of the Capacity Bounds.** The support-deficit route begins with a separately registered physical implementation:
 $$
-\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \text{completed binary reset-support certificate}\xrightarrow{\text{Prop E.2a}} C_{\max}\le \ln d_0-\ln2.
+\text{reachable binary record}
++
+\text{completed tensor-factor reset-support certificate}
+\xrightarrow{\text{Prop E.2a}}
+C_{\max}\le\ln d_0-\ln2.
 $$
-On the refresh/minorization branch this is accompanied by the stricter channel-dynamical route
+For the same registered reset ensemble, Theorem 31 supplies the independent heat ledger
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+\ge H_q(P\mid R).
+$$
+On a refresh/minorization branch, the channel-dynamical route is
 $$
 \mathcal{E}_N=(1-p)\Psi+pT_\sigma,\ p>0
 \xrightarrow{\text{Lem E.1}} f_{RID}<1
 \xrightarrow{\text{Thm E.2}} C_{\max}<\ln d_0.
 $$
-The logical structure of self-reference (SPAP) propagates through thermodynamics (Landauer cost) to information theory (channel capacity) to geometry (gravitational coupling).
+SPAP supplies the diagonal prediction obstruction but does not imply either physical channel branch. A geometric or gravitational conclusion additionally requires the area-density, capacity-saturation, and local Clausius hypotheses of Theorems E.3 and E.5.
 
-**Remark 6.0.2: PCE Optimization.** At the PCE-Attractor (Definition 15a), the structural SPAP quotient is fixed at $\varepsilon_0=\ln2$ (Theorem 31), while response-null implementation overhead is removed by PCE dominance. For the minimal MPU ($d_0=8$, Theorem 23) this gives the PCE-optimal channel capacity
+**Remark 6.0.2: Residual-Budget Saturation Branch.** The declared reusable binary SPAP register has structural log-cardinality $\varepsilon_0=\ln2$ (Proposition 5; Lemma J.1), while Definition 28 and Theorem 31 govern only a registered physical reset ledger. The completed binary reset gives
 $$
-C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2 \quad \text{(Equation E.15)}.
+C_{\max}\le\ln d_0-\varepsilon_0.
 $$
-This partitions the MPU information budget between the irreducible structural internal processing cost ($\varepsilon_0$) and the remaining external communication capacity ($C_{\max}$).
+Assume the residual-budget branch on which no additional response-relevant or implementation deficit remains and an admissible channel attains this upper bound. For the minimal MPU value $d_0=8$ (Theorem 23), Equations (E.14)–(E.15) give
+$$
+C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2.
+$$
+This equality is the branch-specific partition of the MPU information budget between the structural binary register cost and the residual external communication capacity; the reset-support theorem alone supplies only the preceding inequality.
 
 ---
 
@@ -78,38 +117,60 @@ The adaptation of predictive systems is governed by an optimization principle th
 
 **6.1.1 Definition 14 (Def 14): Optimal Complexity Allocation Criteria**
 
-Given the relationship between Predictive Physical Complexity ($C \equiv C_P$, assumed operationally tracked by $\langle \hat{C}_v \rangle$ per Theorem 2) and achievable Predictive Performance $PP(C, \hat{C}_{target})$ (derived later in Theorem 19), the Optimal Complexity Allocation $C^*$ represents the level of complexity that maximizes the net benefit under resource constraints. For a given registered internal task-scale coordinate $\hat{C}_{target}$ (Definition 21) and effective resource scarcity $\lambda$ (Definition 20)
+Throughout the differential model in Sections 6.1–6.8, let
+$$
+C(t):=\langle\hat C_v\rangle(t)
+$$
+be the continuous operational complexity coordinate, measured in the same calibrated bit units as the proxy baseline corresponding to $C_{op}$. Assume that $PP(C,\hat C_{target})$, $R(C)$, and $R_I(C)$ admit the differentiable interpolations stated below on this operational domain. The integer-valued theoretical quantity $C_P$ remains distinct; equality $C_P=\langle\hat C_v\rangle$ is used only on branches satisfying the hypotheses of Theorem 2.
+
+The Optimal Complexity Allocation $C^*$ is a maximizer of the declared net-benefit function on this operational domain for a registered task-scale coordinate $\hat C_{target}$ and resource-scarcity weight $\lambda$.
 
 
-1.  **Marginal Benefit Equals Marginal Cost:** The marginal improvement in performance, converted to an equivalent power benefit rate via factor $\Gamma_0$ (Definition 20), equals the marginal increase in the total weighted resource cost rate:
-    $$
-    \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda R'(C^*) + R_I'(C^*) \quad \text{(18)}
-    $$
-    (This corresponds to the condition $\Psi(C^*) = 0$, where $\Psi$ is the Adaptation Driving Force, Definition 20). Here $\Gamma_0$ is the power-conversion factor (Definition 20), a system-level constant with dimensions of power $[E][T]^{-1}$.
+Let
+$$
+J(C):=\Gamma_0PP(C,\hat C_{target})-\lambda R(C)-R_I(C)
+$$
+on the feasible domain $C\ge C_{op}$. Assume these functions are twice differentiable near a candidate allocation $C^*$.
 
-2.  **Second Order Optimality (Diminishing Returns Exceed Cost Acceleration):** For a stable maximum, the second derivative of the net benefit must be negative:
-    $$
-    \Gamma_0 \frac{\partial^2 PP}{\partial C^2}\bigg|_{C^*} < \lambda R''(C^*) + R_I''(C^*) \quad \text{(19)}
-    $$
-3.  **Viability Constraint:** The performance achieved at the optimal complexity $C^*$ must lie strictly within the Space of Becoming: $\alpha < PP(C^*, \hat{C}_{target}) < \beta$ (Axiom 3).
+1. **Interior stationarity.** If $C^*>C_{op}$ is an interior local maximizer, then
+   $$
+   J'(C^*)
+   =\Gamma_0\frac{\partial PP}{\partial C}\bigg|_{C^*}
+   -\lambda R'(C^*)-R_I'(C^*)=0,
+   \quad \text{(18)}
+   $$
+   so marginal benefit equals marginal cost.
+
+2. **Strict local maximality.** If Equation (18) holds and
+   $$
+   J''(C^*)
+   =\Gamma_0\frac{\partial^2PP}{\partial C^2}\bigg|_{C^*}
+   -\lambda R''(C^*)-R_I''(C^*)<0,
+   \quad \text{(19)}
+   $$
+   then $C^*$ is a strict local maximizer. At the boundary $C^*=C_{op}$, the corresponding one-sided necessary condition is $J'(C_{op})\le0$; Equation (18) is not required.
+
+3. **Viability constraint.** An operationally viable allocation must also satisfy $\alpha<PP(C^*,\hat C_{target})<\beta$.
 
 **6.1.2 Definition 15 (Def 15): Principle of Compression Efficiency (PCE)**
 
 The adaptation dynamics of systems within the PU framework are governed by the Principle of Compression Efficiency (PCE). This principle posits that complex predictive systems naturally evolve or self-organize towards configurations that optimize the trade-off between maximizing the functional utility or Meaning Potential (MP) derived from processed information—quantified by the expected improvement in predictive quality ($\Delta Q$, operationally related to achieving high PP, Definition 7) relevant to the POP (Axiom 1)—and minimizing the comprehensive Signal Cost (SC) associated with acquiring, representing, processing, updating, and utilizing that information. The Signal Cost encompasses the ongoing operational resource costs ($R(C), R_I(C)$, Definition 3, represented operationally by $\langle \hat{R} \rangle, \langle \hat{R}_I \rangle$ when acting on $\langle \hat{C}_v \rangle$) and any transient costs associated with adaptation (complexity changes, model updates). The system implicitly seeks configurations that maximize a net benefit, effectively balancing MP against SC, driving it towards states satisfying the optimal allocation criteria (Definition 14). The ultimate expression of this optimization is the PCE-Attractor.
 
-**Remark (Relation to PPI).** PCE is an operational specialization of PPI-optimality (Definition P.6.2, Appendix P): PPI asserts that physical instantiations of abstract structures are constrained by irreducible thermodynamic costs and selected by resource-minimality, while PCE provides the explicit potential $V(x)$ and dynamics realizing that selection for adaptive predictive systems. In derivations, "PPI requires…" invokes admissibility and PPI-optimality; "PCE selects…" invokes the concrete $V$-minimization used to single out a unique attractor within the admissible class.
+**Remark (Relation to PPI).** PCE supplies an explicit potential $V$ and adaptation dynamics on a declared admissible class. Existence of a global minimizer requires attainment hypotheses; uniqueness modulo symmetry, flat QFI, and capacity saturation require additional branch conditions. The phrase "PCE selects" refers to minimization subject to those stated conditions.
 
-**Definition 15a (Def 15a): The PCE-Attractor**
+**Definition 15a (Def 15a): PCE-Attractor Branch**
 
- The **PCE-Attractor**, denoted $x_{attr}$, is the canonically selected global-minimum configuration within $\mathcal{E}_{*}^{\text{global}}$ (see Theorem D.3). Existence is guaranteed by the coercivity/compactness hypotheses used in Appendix D to show that $V$ attains its infimum on $\mathcal{E}_{*}^{\text{global}}$. Uniqueness is understood after quotienting by the internal symmetries that leave $V$ invariant (e.g., gauge and relabeling symmetries); $x_{attr}$ denotes any representative of the resulting unique minimizer equivalence class, singled out by the *co-occurring* conditions:
+Let $\mathcal G_V$ be the declared group of gauge, relabeling, and other symmetries preserving $V$. A **PCE-Attractor branch** is a branch on which:
 
- 1.  **Maximal Symmetry (Flat Spectrum):** For the U(1) sector, the SLD-QFI spectrum is flat ($\sigma^2=0$), reflecting a state of maximal robustness where all information-carrying modes are utilized democratically (see Appendix W; §Z.3).
+1. $V$ attains its infimum and $\mathcal E_*^{\mathrm{global}}\ne\varnothing$;
+2. the quotient minimizer set is a singleton,
+$$
+\mathcal E_*^{\mathrm{global}}/\mathcal G_V=\{[x_{\mathrm{attr}}]\};
+$$
+3. the selected orbit has the U(1)-sector flat SLD-QFI spectrum $\sigma^2=0$ required by the cited Appendix W and Z branch;
+4. the constrained minimum of the rate-level potential lies on the declared upper capacity boundary; on the one-dimensional cap-active branch, the unconstrained minimizer lies strictly above that boundary.
 
- 2.  **Maximal Efficiency (Capacity Saturation):** The system operates at the "zero-slack" or "branch boundary" condition, where the unconstrained minimum of the rate-level PCE potential $\phi(u)$ coincides with the information capacity limit ($V_{benefit} = \ln d_0$).
-
- The equality $\kappa^*_{\mathrm{bulk}}=1$ is not part of the definition of $x_{attr}$; it is a downstream U(1)-sector consequence derived at the attractor in Appendix Z (Theorem Z.14) and Appendix X (Theorem X.3).
-
- This orbit (equivalence class under the symmetries of $V$ and gauge redundancy) is the unique, PCE-favored selection used for predictions once the additional sector-specific consequences are derived; throughout we fix a canonical representative and denote it by $x_{attr}$.
+The symbol $x_{\mathrm{attr}}$ denotes a chosen representative of this orbit. Theorem D.3 may be used to infer geometric regularity only when its strict-comparison hypothesis holds; it does not establish clauses 1–4. The equality $\kappa^*_{\mathrm{bulk}}=1$ requires the separate unit Predictive-Ward branch of Theorem Z.14 and Theorem X.3.
 
 **6.1.3 Definition 16 (Def 16): Prediction Optimization Problem - Operational Goal**
 
@@ -121,11 +182,15 @@ We now establish the general principles governing the relationship between inves
 
 **6.2.1 Definition 17 (Def 17): Physical Realizability**
 
-A predictive model $M$ or system state $\mu$ characterized by $C_P$ is physically realizable if there exists at least one admissible construction/operation program that realizes $\mu$ while satisfying the full physical constraint hierarchy. Equivalently, there exists a refinement level $n_0$ such that $C_{P,n}(\mu)<\infty$ for all $n\ge n_0$, and the monotone limit
+A predictive model $M$ or system state $\mu$ is physically realizable when there is a single finite program satisfying every constraint in the declared hierarchy:
 $$
-C_P(\mu)=\lim_{n\to\infty} C_{P,n}(\mu)
+\bigcap_{n\ge0}\mathcal M_n(\mu)\ne\varnothing.
 $$
-is finite. Any witness program admissible for the full constraint set supplies a finite upper bound on every sufficiently refined stage.
+Any $P_{\mathrm{phys}}$ in this intersection gives
+$$
+C_{P,n}(\mu)\le K(P_{\mathrm{phys}})
+$$
+for every $n$, so the monotone limit $C_P(\mu)$ is finite. The converse from finite stagewise minima to a common realizer is used only under the declared finite program alphabet, integer-valued program length, nested admissible sets, and attained-minimum hypotheses of Theorem 2.4.1a; under those hypotheses the descending finite minimizer sets have a nonempty intersection.
 
 **6.2.2 Definition 18 (Def 18): PPC Requirement $C_{PPC}(PP_{target})$**
 
@@ -135,14 +200,30 @@ C_{PPC}(PP_{target}) = \inf \{ C_P(\mu) \mid \mu \in \mathcal{S}_{phys}, \mathbb
 $$
 where the expectation $\mathbb{E}[\cdot]$ averages over relevant environmental conditions or task distributions.
 
-**6.2.3 Theorem 17 (Complexity Lower Bound ($C > C_{op}$))**
+**6.2.3 Theorem 17 (Complexity Lower Bound above a Nonviable Budget)**
 
-Any system operating sustainably within the Space of Becoming ($\alpha < PP(t) < \beta$, Axiom 3) in an environment presenting a non-trivial predictive challenge (where the baseline performance achievable with minimal operational complexity $C_{op}$ is at or below the viability threshold, i.e., $PP(C_{op}) \le \alpha$) necessarily requires an operational complexity $C(t) = C_P(\mu(t))$ strictly greater than the Operational Threshold $C_{op}$.
-*Proof:* Fix an environment/task distribution and define the maximal achievable average performance at complexity budget $C$ by
+Choose an environment and task distribution, and define
 $$
-PP_{\max}(C):=\sup\{\mathbb{E}[PP(f_\mu)]\mid \mu\in\mathcal{S}_{phys},\ C_P(\mu)\le C\}.
+PP_{\max}(C)
+:=\sup\{\mathbb E[PP(f_\mu)]\mid
+\mu\in\mathcal S_{phys},\ C_P(\mu)\le C\}.
 $$
-Because the feasible set $\{\mu:\ C_P(\mu)\le C\}$ is nested in $C$, $PP_{\max}(C)$ is non-decreasing in $C$. The hypothesis $PP(C_{op})\le \alpha$ states that, at the operational threshold budget, even the best achievable performance is at or below the viability boundary: $PP_{\max}(C_{op})\le \alpha$. Viability requires sustained operation with $PP(t)>\alpha$, hence the realized complexity must satisfy $PP_{\max}(C(t))>\alpha$. Monotonicity then forces $C(t)>C_{op}$. ∎
+Assume $PP_{\max}(C_{op})\le\alpha$. Then every physically realizable state $\mu$ with $\mathbb E[PP(f_\mu)]>\alpha$ satisfies $C_P(\mu)>C_{op}$.
+
+*Proof.* If $C_1\le C_2$, then
+$$
+\{\mu:C_P(\mu)\le C_1\}
+\subseteq
+\{\mu:C_P(\mu)\le C_2\},
+$$
+so $PP_{\max}$ is non-decreasing. Suppose $C_P(\mu)\le C_{op}$. By the definition of the supremum and the hypothesis,
+$$
+\mathbb E[PP(f_\mu)]
+\le PP_{\max}(C_P(\mu))
+\le PP_{\max}(C_{op})
+\le\alpha.
+$$
+The contrapositive gives $\mathbb E[PP(f_\mu)]>\alpha\Rightarrow C_P(\mu)>C_{op}$. ∎
 
 **6.2.4 Physical Nature of Complexity Transformations (Thermodynamic Irreversibility)**
 
@@ -160,75 +241,103 @@ The upper bound $\beta$ is approached asymptotically but not reached for finite 
 3.  **Diminishing Returns:** The marginal gain in performance decreases as complexity increases: $\partial^2 PP / \partial C^2 < 0$ for $C > C_{op}$. Achieving further improvements becomes progressively harder.
 4.  **Dependence on Relative Complexity:** Performance depends primarily on the ratio of invested complexity above baseline relative to the task difficulty, i.e., on a function of $x = (C-C_{op})/\hat{C}_{target}$. Increasing the target difficulty $\hat{C}_{target}$ for a fixed complexity $C$ decreases performance $PP$.
 
-**6.2.6 Theorem 18 (General Functional Form for Performance)**
+**6.2.6 Theorem 18 (Functional Form under Exact Relative-Complexity Scaling)**
 
-Any function $PP(C, \hat{C}_{target})$ satisfying the scaling principles outlined in Definition 19 must be expressible in the form:
+Assume $\beta>\alpha$, $\hat C_{target}>0$, and exact relative-complexity scaling: there is a twice differentiable function $G:[0,\infty)\to[\alpha,\beta)$ such that
 $$
-PP(C, \hat{C}_{target}) = \alpha + (\beta - \alpha) \cdot F\left(\frac{C-C_{op}}{\hat{C}_{target}}\right) \quad \text{(21)}
+PP(C,\hat C_{target})=G(x),
+\qquad
+x=\frac{C-C_{op}}{\hat C_{target}},
 $$
-where the function $F: \mathbb{R}_{\geq 0} \rightarrow [0, 1)$ satisfies:
-*   $F(0)=0$ (performance is $\alpha$ at baseline complexity $C=C_{op}$).
-*   $\lim_{x \rightarrow \infty} F(x) = 1$ (performance approaches $\beta$ as relative complexity $x \rightarrow \infty$).
-*   $F'(x) > 0$ for $x > 0$ (monotonicity, Principle 2).
-*   $F''(x) < 0$ for $x > 0$ (diminishing returns, Principle 3).
-*Proof:* Principle 1 (Bounds) dictates the scaling form $PP = \alpha + (\beta - \alpha) F_{int}$, where $F_{int}$ maps complexity to $[0, 1)$. Principle 4 (Relative Complexity) implies $F_{int} = F(x)$ with $x = (C-C_{op})/\hat{C}_{target}$. The boundary conditions $F(0)=0$ and $\lim_{x\rightarrow\infty} F(x)=1$ follow directly from Principle 1 applied to $C=C_{op}$ and $C\rightarrow\infty$. Principle 2 (Monotonicity) ($\partial PP / \partial C = (\beta - \alpha) F'(x) / \hat{C}_{target} > 0$) requires $F'(x)>0$. Principle 3 (Diminishing Returns) ($\partial^2 PP / \partial C^2 = (\beta - \alpha) F''(x) / (\hat{C}_{target})^2 < 0$) requires $F''(x)<0$. QED
+with $G(0)=\alpha$, $\lim_{x\to\infty}G(x)=\beta$, $G'(x)>0$, and $G''(x)<0$ for $x>0$. Then
+$$
+PP(C,\hat C_{target})
+=\alpha+(\beta-\alpha)F\left(\frac{C-C_{op}}{\hat C_{target}}\right),
+\quad \text{(21)}
+$$
+where $F:[0,\infty)\to[0,1)$ satisfies $F(0)=0$, $\lim_{x\to\infty}F(x)=1$, $F'(x)>0$, and $F''(x)<0$ for $x>0$.
+
+*Proof.* Define
+$$
+F(x):=\frac{G(x)-\alpha}{\beta-\alpha}.
+$$
+Because $\beta-\alpha>0$ and $G(x)\in[\alpha,\beta)$, $F(x)\in[0,1)$. The boundary values give
+$$
+F(0)=0,
+\qquad
+\lim_{x\to\infty}F(x)=1.
+$$
+Differentiation yields
+$$
+F'(x)=\frac{G'(x)}{\beta-\alpha}>0,
+\qquad
+F''(x)=\frac{G''(x)}{\beta-\alpha}<0.
+$$
+Substitution of the definition of $F$ gives Equation (21). ∎
 
 **6.3 Derivation of the Law of Prediction from POP / PCE**
 
-We now derive the explicit complexity–performance relationship—the *Law of Prediction*—from the scaling principles (Definition 19). The multiplicative compounding of the remaining performance gap is not an additional axiom: it is the PPI/PCE schedule-quotient consequence of allocating relative complexity in independent refinement stages. Splitting a finite-response refinement budget into response-null schedule labels cannot change the final prediction ledger, and PCE removes any surplus schedule memory.
+The scaling principles of Definition 19 determine a class of saturation curves. The exponential member is selected by the following additional composition hypothesis: independent refinement stages act linearly on the unresolved performance fraction, and sequential stages with relative budgets $x_1,x_2$ have the same response as one stage with budget $x_1+x_2$.
 
-**6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation Model)**
+**6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation under Multiplicative Composition)**
 
-Assume Definition 19. Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$ to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$, and define the dimensionless relative complexity and normalized residual performance gap by
+Assume Definition 19 with exact dependence on
 $$
-x:=\frac{C-C_{op}}{\hat C_{target}},
-\qquad
-g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha}.
+x:=\frac{C-C_{op}}{\hat C_{target}}\ge0,
 $$
-The PPI/PCE schedule quotient forces the residual gap to compound multiplicatively:
+where $\hat C_{target}>0$. Define
 $$
-g(x_1+x_2)=g(x_1)\,g(x_2)
-\qquad\text{for all }x_1,x_2\ge 0.
+g(x):=\frac{\beta-PP(C,\hat C_{target})}{\beta-\alpha}.
 $$
-For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by the following minimal model (consistent with the principles of Definition 19 and discussed in Section 6.7):
-$$
-PP(C,\hat C_{\mathrm{target}}) =\beta-(\beta-\alpha)\, \exp\!\Bigl[-\kappa_{\mathrm{eff}}\, \tfrac{C-C_{op}}{\hat C_{\mathrm{target}}}\Bigr] \quad \text{(22)}
-$$
-and the **complexity required** to reach a chosen performance $PP\in(\alpha,\beta)$ is:
-$$
-C(PP,\hat C_{\mathrm{target}}) = C_{op} +\frac{\hat C_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}\, \ln\!\Bigl(\tfrac{\beta-\alpha}{\beta-PP}\Bigr). \quad \text{(23)}
-$$
-Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (22) realizes the generic form Equation (21) with $F(x)=1-e^{-\kappa_{\mathrm{eff}}x}$, satisfying the required properties (Theorem 18) and exhibiting logarithmic divergence of $C$ as $PP\rightarrow\beta$.
-
-*Proof:* By Definition 19, predictive performance depends on the invested complexity above baseline only through the dimensionless relative budget
-$$
-x:=\frac{C-C_{op}}{\hat{C}_{target}}\ge 0,
-$$
-and the normalized residual gap
-$$
-g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha}
-$$
-satisfies $g(0)=1$, $0<g(x)\le1$, and $g(x)\to0$ as $x\to\infty$. The differentiability required by the monotonicity and diminishing-return clauses of Definition 19 implies continuity.
-
-Let $R_x$ denote the finite-response operation of allocating relative refinement budget $x$ to the unresolved prediction ledger. The relative-complexity clause of Definition 19 says that $R_x$ has no response-relevant parameter other than $x$ and the current unresolved fraction. Thus applying $R_x$ to an unresolved fraction $u$ leaves the fraction $g(x)u$. If two independent refinement stages with budgets $x_1$ and $x_2$ are performed in sequence, their response ledger has total relative budget $x_1+x_2$. PPI identifies the sequential schedule and the unsplit schedule whenever they induce the same finite protocol-response data, and PCE removes any retained schedule label that changes no response and lowers no cost. Therefore
-$$
-R_{x_2}R_{x_1}=R_{x_1+x_2}
-$$
-on the response quotient, and applying both sides to the unit unresolved fraction gives
+Assume additionally that
 $$
 g(x_1+x_2)=g(x_1)g(x_2)
-\qquad \text{for all }x_1,x_2\ge0.
+\qquad\text{for all }x_1,x_2\ge0.
 \tag{*}
 $$
-Since $g(x)>0$, define $h(x):=\ln g(x)$. Equation (*) gives
+Then there is a dimensionless constant $\kappa_{\mathrm{eff}}>0$ such that
 $$
-h(x_1+x_2)=h(x_1)+h(x_2).
+PP(C,\hat C_{\mathrm{target}})
+=\beta-(\beta-\alpha)
+\exp\!\Bigl[-\kappa_{\mathrm{eff}}\,
+\tfrac{C-C_{op}}{\hat C_{\mathrm{target}}}\Bigr].
+\quad \text{(22)}
 $$
-Continuity on $\mathbb R_{\ge0}$ implies $h(x)=-\kappa_{\mathrm{eff}}x$ for a constant $\kappa_{\mathrm{eff}}\ge0$. The strict monotonicity of $PP$ for $x>0$ makes $g$ strictly decreasing, so $\kappa_{\mathrm{eff}}>0$. Hence
+For $PP\in(\alpha,\beta)$, the inverse is
 $$
-g(x)=e^{-\kappa_{\mathrm{eff}}x}.
+C(PP,\hat C_{\mathrm{target}})
+=C_{op}+\frac{\hat C_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}
+\ln\!\Bigl(\tfrac{\beta-\alpha}{\beta-PP}\Bigr).
+\quad \text{(23)}
 $$
-Substituting back yields Equation (22), and solving Equation (22) for $C$ yields Equation (23). ∎
+
+*Proof.* Definition 19 gives $g(0)=1$, $0<g(x)\le1$, strict decrease on $(0,\infty)$, and continuity. Positivity permits
+$$
+h(x):=\ln g(x).
+$$
+Taking logarithms in (*) gives
+$$
+h(x_1+x_2)=h(x_1)+h(x_2)
+\qquad(x_1,x_2\ge0).
+$$
+For every nonnegative integer $n$, additivity gives $h(n)=nh(1)$. For positive integers $m,n$,
+$$
+nh(m/n)=h(m)=mh(1),
+$$
+so $h(q)=qh(1)$ for every nonnegative rational $q$. For any $x\ge0$, choose nonnegative rationals $q_n\to x$. Continuity yields
+$$
+h(x)=\lim_{n\to\infty}h(q_n)=xh(1).
+$$
+Because $g$ is strictly decreasing and $g(0)=1$, $g(1)<1$, hence $h(1)<0$. Set $\kappa_{\mathrm{eff}}:=-h(1)>0$. Then
+$$
+g(x)=e^{h(x)}=e^{-\kappa_{\mathrm{eff}}x}.
+$$
+Substitution of the definitions of $g$ and $x$ gives Equation (22). Rearranging it gives
+$$
+e^{-\kappa_{\mathrm{eff}}(C-C_{op})/\hat C_{\mathrm{target}}}
+=\frac{\beta-PP}{\beta-\alpha},
+$$
+and taking logarithms yields Equation (23). ∎
 
 *Remark:* Equation (23) implies $(C-C_{op})\propto -\ln(\beta-PP)$ as $PP\to\beta$, consistent with logarithmic rate–distortion scaling when the operational prediction error is proportional to the performance gap.
 
@@ -248,21 +357,23 @@ C(PP)=C_{op}+C_s\ln\!\frac{\beta-\alpha}{\beta-PP}.
 \tag{22c}
 $$
 
-**Proposition 19a (Equilibrium Form of $C_s$).** At a PCE optimum $C^*$ with performance $PP^*$, the effective complexity scale satisfies
+**Proposition 19a (Interior Equilibrium Form of $C_s$).** Assume the exponential branch of Theorem 19 and let $C^*>C_{op}$ be an interior stationary PCE point with $PP^*\in(\alpha,\beta)$. Then
 $$
 C_s=\frac{\Gamma_0(\beta-PP^*)}{\lambda R'(C^*)+R_I'(C^*)}.
 \tag{22d}
 $$
 
-*Proof.* At equilibrium, $\Psi(C^*)=0$ (Equation 18), so
+*Proof.* Interior stationarity gives
 $$
-\Gamma_0 \left.\frac{\partial PP}{\partial C}\right|_{C^*}=\lambda R'(C^*)+R_I'(C^*).
+\Gamma_0\left.\frac{\partial PP}{\partial C}\right|_{C^*}
+=\lambda R'(C^*)+R_I'(C^*).
 $$
-From (22b),
+Equation (22b) gives
 $$
-\left.\frac{\partial PP}{\partial C}\right|_{C^*}=\frac{\beta-PP^*}{C_s}.
+\left.\frac{\partial PP}{\partial C}\right|_{C^*}
+=\frac{\beta-PP^*}{C_s}>0.
 $$
-Substituting and solving for $C_s$ gives (22d). ∎
+Since $\Gamma_0>0$, the equilibrium equation makes the marginal-cost sum positive. Substitution followed by division by that positive sum gives Equation (22d). ∎
 
 **Corollary 19.1 (Power-Law Learning Curves on Logarithmic Complexity Budgets).** Let a predictive system accumulate experience by successively allocating predictive complexity above baseline through a logarithmic budget,
 $$
@@ -315,21 +426,33 @@ $$
 
 **Remark 19.2 (Predictive Content).** Corollaries 19.1-19.2 identify empirically reported power-law regimes for learning curves [Newell & Rosenbloom 1981] and neural-network loss scaling with model size and dataset size [Kaplan et al. 2020; Hoffmann et al. 2022] as conditional images of the Law of Prediction under logarithmic complexity-budget hypotheses. On a fixed branch, the exponents $s,s_p,s_d$ are determined by the performance-efficiency constant $\kappa_{\mathrm{eff}}$, the logarithmic accumulation rate $\eta_\bullet$, and the task-difficulty scale $\hat C_{\mathrm{target}}$. Deviations from power-law behavior are expected when the logarithmic-budget hypothesis fails or when the saturation regime $PP\to\beta$ is reached.
 
-**Remark 19.3 (Weber-Fechner Relation from Equation (5)).** Let a predictive system represent an external stimulus by allocating reflexive-information complexity $C$ above the Horizon Constant $K_0$ (Theorem 15). By Definition 3b, the representative reflexive-information cost rate is
+**Remark 19.3 (Weber-Fechner Relation from Equation (5)).** Let a predictive system represent an external stimulus by allocating reflexive-information complexity $C$ above the Horizon Constant $K_0$ (Theorem 15). By Definition 3b and Equation (5), the representative reflexive-information cost rate is
 $$
 R_I(C;T_{\mathrm{eff}})=\frac{r_I(T_{\mathrm{eff}})}{\ln 2}\ln\!\bigl(C/K_0\bigr),
-\qquad C\ge K_0. \quad \text{(5)}
+\qquad C\ge K_0.
 $$
 If the operational internal signal representing the stimulus is identified with the expended reflexive-information rate $R_I$, then for any two stimulus levels $C_1,C_2>K_0$ the internal difference is
 $$
 \Delta R_I=\frac{r_I}{\ln 2}\ln\!\bigl(C_2/C_1\bigr).
 \tag{5a}
 $$
-A fixed just-noticeable internal increment $\Delta R_I=\delta_R$ is therefore equivalent to the constant-ratio condition
+A prescribed just-noticeable internal increment $\Delta R_I=\delta_R$ is equivalent to
 $$
-\frac{C_2}{C_1}=\exp\!\left(\frac{\delta_R\ln 2}{r_I}\right),
+\frac{C_2}{C_1}=e^a,
+\qquad
+a:=\frac{\delta_R\ln2}{r_I}.
 $$
-or, for small increments, $\Delta C/C\approx \delta_R\ln 2/r_I$.
+Hence the exact fractional increment is
+$$
+\frac{C_2-C_1}{C_1}=e^a-1.
+$$
+Taylor's theorem gives
+$$
+e^a-1=a+\mathcal R_2(a),
+\qquad
+|\mathcal R_2(a)|\le\frac12e^{|a|}a^2.
+$$
+Thus $\Delta C/C=a+O(a^2)$ in the regime $|a|\ll1$.
 
 *Proof.* Subtract Equation (5) at $C_1$ and $C_2$:
 $$
@@ -342,7 +465,7 @@ $$
 $$
 so $dR_I=(r_I/\ln 2)(dC/C)$ and fixed $dR_I$ is equivalent to fixed $dC/C$. ∎
 
-This is the Weber-Fechner relation [Weber 1834; Fechner 1860]: the minimum discriminable stimulus increment is proportional to the stimulus magnitude, with logarithmic compression of perceived intensity. Within PU, the logarithmic form is the representative reflexive-information cost (5) already used by the framework. The identification of an operational internal signal with expended $R_I$ is an explicit psychophysical bridge assumption, not a claim that every stimulus code is exhausted by reflexive-information cost. For self-model-engaging perception, the relevant internal-cost interpretation is the perspectival profile and self-model cost functional of Appendix M.10, especially Definition M.10.1 and Proposition M.10.9. The logarithmic gain is $r_I/\ln 2$, while the Weber fraction is fixed by the chosen just-noticeable internal threshold $\delta_R$ through $\Delta C/C\approx \delta_R\ln 2/r_I$ in the small-increment limit.
+This is the Weber-Fechner relation [Weber 1834; Fechner 1860]: the minimum discriminable stimulus increment is proportional to the stimulus magnitude, with logarithmic compression of perceived intensity. Within PU, the logarithmic form is the representative reflexive-information cost (5) already used by the framework. The identification of an operational internal signal with expended $R_I$ is an explicit psychophysical bridge assumption, not a claim that every stimulus code is exhausted by reflexive-information cost. For self-model-engaging perception, the relevant internal-cost interpretation is the perspectival profile and self-model cost functional of Appendix M §M.6.10, especially Definition M.10.1 and Proposition M.10.9. The logarithmic gain is $r_I/\ln 2$, while the Weber fraction is fixed by the chosen just-noticeable internal threshold $\delta_R$ through $\Delta C/C\approx \delta_R\ln 2/r_I$ in the small-increment limit.
 
 **6.4 Adaptation Dynamics Driven by PCE**
 
@@ -380,40 +503,83 @@ $$
 
 *Interpretation:* The driving force $\Psi(t)$ quantifies the net marginal incentive for complexity changes: $\Psi > 0$ favors increasing $C$, $\Psi < 0$ favors decreasing $C$. Equilibrium, corresponding to the optimal complexity allocation (Definition 14), occurs when $\Psi = 0$, precisely where the gradient of the effective potential with respect to complexity vanishes.
 
-**Theorem 20 (Physical Bounds and Self-Consistency of $\Gamma_0$)**
+**Theorem 20 (Conditional Calibration Relations for $\Gamma_0$)**
 
-The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **system-level constant** of the PCE potential, constrained by thermodynamic limits inherent in the MPU framework.
+Let $\Gamma_0>0$ be the system-level conversion factor appearing in the PCE potential.
 
-1.  **Conditional lower comparison from registered reset power.** The minimal baseline power $P_{\min}=R(C_{op})$ sets a comparison scale for energy valuation. On a branch with completed-cycle rate $\nu$, with each listed reset executed once per completed cycle and with the registered Landauer conditions of Theorem 31, the reset contribution satisfies
-    $$
-    P_{\mathrm{reset}}\ge k_BT\nu
-    \sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j).
-    \quad\text{(27)}
-    $$
-    If the model additionally identifies $P_{\min}\ge P_{\mathrm{reset}}$, then the threshold for $\Psi>0$ may be calibrated by $\Gamma_0\gtrsim P_{\min}\ge P_{\mathrm{reset}}$. Each $R_j$ contains all retained unchanged side information. A positive universal floor requires separate bounds on both $\nu$ and $H_{q_j}(P_j\mid R_j)$. The specialization $\nu=1/\tau_{\min}$ requires a separately registered saturated cycle clock; it is not supplied by Theorem 29 alone.
-2.  **Upper Bound (from $\varepsilon$):** A registered reset supplies the heat lower bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ (Theorem 31); it does not by itself provide an upper bound on the phenomenological conversion factor $\Gamma_0$. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), may be compared with an independently registered energy budget. Such a comparison is a calibration condition, not a consequence of Landauer:
-     $$
-    \Gamma_0 \lesssim \frac{P_{\mathrm{avail}}}{\Delta PP_{\max}} =: \Gamma_{0,\mathrm{crit}} \quad \text{(28)}
-    $$
-3.  **Equilibrium Calibration Identity:** At a stable equilibrium configuration characterized by complexity $C^*$ and performance $PP^*$, the Adaptation Driving Force vanishes: $\Psi(C^*, PP^*) = 0$ (Equation 18). This provides a calibration identity relating the constant $\Gamma_0$ to the equilibrium properties of the system:
-    $$
-    \Gamma_0 = \frac{\lambda R'(C^*) + R_I'(C^*)}{\frac{\partial PP}{\partial C} \big|_{C^*, PP^*}} \quad \text{(29)}
-    $$
-    For a given constant value of $\Gamma_0$ within the physical bounds, this equation determines the optimal complexity $C^*$ that the system will adapt towards.
+1. On a branch with completed-cycle rate $\nu$, one execution of each listed registered reset per cycle, and the Landauer hypotheses of Theorem 31, the reset power satisfies
+   $$
+   P_{\mathrm{reset}}\ge k_BT\nu
+   \sum_{j=1}^{n_{\mathrm{reset}}}H_{q_j}(P_j\mid R_j).
+   \quad\text{(27)}
+   $$
+   This inequality does not bound $\Gamma_0$ unless a separate calibration relation between reset power and the performance benefit scale is imposed.
 
-*Conclusion:* $\Gamma_0$ is a **system-level constant** of the PCE potential, physically grounded by thermodynamic limits derived within the framework. Its value determines the location of the optimal equilibrium state achieved under PCE optimization.
+2. If an independently registered available-power budget satisfies
+   $$
+   \Gamma_0\Delta PP_{\max}\le P_{\mathrm{avail}}
+   $$
+   for a declared $\Delta PP_{\max}>0$, then
+   $$
+   \Gamma_0\le\frac{P_{\mathrm{avail}}}{\Delta PP_{\max}}
+   =:\Gamma_{0,\mathrm{crit}}.
+   \quad \text{(28)}
+   $$
+
+3. At an interior equilibrium $C^*$ with $\partial PP/\partial C|_{C^*}>0$, Equation (24) gives the calibration identity
+   $$
+   \Gamma_0
+   =\frac{\lambda R'(C^*)+R_I'(C^*)}
+   {\frac{\partial PP}{\partial C}|_{C^*}}.
+   \quad \text{(29)}
+   $$
+   Determination and uniqueness of $C^*$ require the existence and strict-concavity hypotheses of Theorem 22.
+
+*Proof.* The first relation is the sum of the registered per-cycle reset-work bounds multiplied by the cycle rate. The second follows by dividing the declared budget inequality by $\Delta PP_{\max}>0$. At an interior equilibrium, $\Psi(C^*)=0$; substituting Equation (24) and dividing by the positive performance derivative yields Equation (29). ∎
 
 **6.4.2 Proposition 3 (Complexity Adaptation Dynamics Model)**
 
-Assuming the rate of change of complexity $C(t)$ (operationally, $C(t) = \langle \hat{C}_v \rangle(t)$) is proportional to the net driving force $\Psi(t)$ acting to optimize the PCE objective, the basic adaptation dynamics follow a gradient ascent on the effective benefit landscape defined implicitly by $V(x)$ (Appendix D, **Equation D.8**):
+Assume $C(t)>0$, $\hat C_{target}(t)>0$, and that the rate of change of complexity $C(t)=\langle\hat C_v\rangle(t)$ is proportional to the net driving force $\Psi(t)$:
 $$
-\frac{dC}{dt} = \eta_{adapt} \cdot \Psi(C(t), \hat{C}_{target}(t), \lambda, \Gamma_0) \quad \text{(30)}
+\frac{dC}{dt}=\eta_{adapt}\Psi(C(t),\hat C_{target}(t),\lambda,\Gamma_0),
+\qquad \eta_{adapt}>0.
+\tag{30}
 $$
-Substituting the expression for $\Psi$ (Equation 24) using the derived forms for $\partial PP/\partial C$ (Equation 25) and $R_I'(C)$ (Equation 26):
+Then Equations (24)–(26) imply
 $$
-\frac{dC}{dt} = \eta_{adapt} \left[ \Gamma_0 \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}(t)} (\beta - PP(t)) - \lambda R'(C(t)) - \frac{r_I}{C(t) \ln 2} \right] \quad \text{(31)}
+\frac{dC}{dt}=\eta_{adapt}\left[
+\Gamma_0\frac{\kappa_{\mathrm{eff}}}{\hat C_{target}(t)}(\beta-PP(t))
+-\lambda R'(C(t))
+-\frac{r_I}{C(t)\ln2}
+\right].
+\tag{31}
 $$
-where $\eta_{adapt} > 0$ is the adaptation rate parameter. It has dimensions of $[E]^{-1}[\text{Complexity}]^2$ (from $dC/dt = \eta_{adapt} \Psi$, with $[dC/dt] = [\text{Complexity}][T]^{-1}$ and $[\Psi] = [E][T]^{-1}[\text{Complexity}]^{-1}$), and it determines the timescale and responsiveness of the complexity adaptation to the driving force $\Psi$ (Definition 20). This model describes the dynamics within the viable range $(\alpha, \beta)$, prior to the activation of the viability enforcement mechanisms (Definition 22).
+If $[\Psi]=[E][T]^{-1}[\mathrm{Complexity}]^{-1}$, then
+$$
+[\eta_{adapt}]=[E]^{-1}[\mathrm{Complexity}]^2.
+$$
+The model is restricted to the viable interval $(\alpha,\beta)$ before activation of Definition 22.
+
+*Proof.* Equation (24) is
+$$
+\Psi=\Gamma_0\frac{\partial PP}{\partial C}-\lambda R'(C)-R_I'(C).
+$$
+Equations (25) and (26) give, respectively,
+$$
+\frac{\partial PP}{\partial C}
+=\frac{\kappa_{\mathrm{eff}}}{\hat C_{target}}(\beta-PP),
+\qquad
+R_I'(C)=\frac{r_I}{C\ln2}.
+$$
+Substitution of these two identities into (24), followed by multiplication by $\eta_{adapt}$ in (30), gives (31) term by term. Finally,
+$$
+[\eta_{adapt}]
+=\frac{[dC/dt]}{[\Psi]}
+=\frac{[\mathrm{Complexity}][T]^{-1}}
+{[E][T]^{-1}[\mathrm{Complexity}]^{-1}}
+=[E]^{-1}[\mathrm{Complexity}]^2.
+$$
+The positivity assumptions make both displayed reciprocal complexity factors well defined. ∎
 
 *Interpretation:* Complexity $C(t)$ evolves over time, driven by the imbalance $\Psi(t)$ between marginal benefits and costs, towards the locally optimal value $C^*(t)$ where $\Psi(t)$ approaches zero. This equilibrium $C^*(t)$ represents an efficient operating point satisfying the PCE principle (Definition 14, Equation 18). The dynamics depend explicitly on the current state ($C, \hat{C}_{target}$), the system's energy valuation ($\Gamma_0$), resource scarcity ($\lambda$), intrinsic performance efficiency ($\kappa_{\mathrm{eff}}$), informational overhead ($r_I$), and the marginal physical cost $R'$.
 
@@ -434,7 +600,7 @@ Rearranging yields the equilibrium expression:
 $$
 \kappa_{\mathrm{eff}} = \frac{\hat{C}_{\text{target}}}{\Gamma_0\,(\beta-PP^{*})} \bigl[\lambda R'(C^{*}) + R_I'(C^{*})\bigr] \quad \text{(32)}
 $$
-Thus $\kappa_{\mathrm{eff}}$ encodes the ratio of marginal resource costs (weighted physical cost gradient $\lambda R' + R_I'$) to the power-equivalent value of the remaining performance gap $(\beta-PP^{*})$, scaled by the target complexity $\hat{C}_{\text{target}}$. Higher costs or a lower constant energy valuation $\Gamma_0$ reduce the effective efficiency $\kappa_{\mathrm{eff}}$.
+Thus $\kappa_{\mathrm{eff}}$ is the target-complexity-weighted ratio of the marginal-cost sum $\lambda R'(C^*)+R_I'(C^*)$ to the power-equivalent remaining gap $\Gamma_0(\beta-PP^*)$. Holding the other displayed equilibrium quantities constant, a larger marginal-cost sum increases the inferred $\kappa_{\mathrm{eff}}$, while a larger $\Gamma_0$ decreases it. Because $C^*$ and $PP^*$ can co-vary with these parameters, Equation (32) alone supplies no total comparative-static conclusion along re-optimized equilibria.
 
 **6.5 Stability, Response, and Target-Scale Control**
 
@@ -442,15 +608,26 @@ We analyze stability and sensitivity with respect to the registered task-scale c
 
 
 
-**6.5.1 Theorem 21 (Adaptation Response)**
+**6.5.1 Theorem 21 (Adaptation Response along a Differentiable Equilibrium Branch)**
 
-The sensitivity of the optimal complexity $C^*(t)$ (where $\Psi(C^*) = 0$) to small changes in the registered task-scale coordinate $\hat{C}_{target}(t)$ is given by the implicit function theorem:
+Write $T=\hat C_{target}$. Assume $\Psi$ is continuously differentiable near $(C_*,T_*)$, and let $C^*(T)$ be a differentiable local equilibrium branch satisfying
+$$
+\Psi(C^*(T),T)=0,
+\qquad
+\Psi_C(C^*(T),T)\ne0.
+$$
+Then
+$$
+\frac{dC^*}{dT}
+=-\frac{\Psi_T}{\Psi_C}\bigg|_{C=C^*(T)}.
+\quad \text{(33)}
+$$
 
-$$\frac{dC^*(t)}{d\hat{C}_{target}(t)} = -\frac{\partial \Psi / \partial \hat{C}_{target}}{\partial \Psi / \partial C}\bigg|_{C=C^*(t)} \quad \text{(33)}$$
-
-(assuming the denominator $\partial \Psi / \partial C$ is non-zero at $C^*$).
-
-*Proof:* The total differential of $\Psi(C^*(\hat{C}_{target}), \hat{C}_{target}) = 0$ with respect to $\hat{C}_{target}$ is $d\Psi = (\partial \Psi / \partial C^*) (dC^*/d\hat{C}_{target}) + (\partial \Psi / \partial \hat{C}_{target}) = 0$. Rearranging gives Equation (33). We compute the partial derivatives from Equation (24), using Equations (25) and (26).
+*Proof.* Differentiate the identity $\Psi(C^*(T),T)=0$. The chain rule gives
+$$
+0=\Psi_C(C^*(T),T)\frac{dC^*}{dT}+\Psi_T(C^*(T),T).
+$$
+Division by the declared nonzero $\Psi_C$ gives Equation (33). The required partial derivatives follow from Equations (24)–(26).
 
 *   **Derivative w.r.t. C:**
 
@@ -482,57 +659,131 @@ $$\frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \left( \frac{\parti
 
  QED
 
-**6.5.2 Theorem 22 (Existence, uniqueness, and exponential stability of the PCE optimum)**
+**6.5.2 Theorem 22 (Existence, Uniqueness, and Local Exponential Stability of the PCE Optimum)**
 
-Let $J(C):=\Gamma_0\,PP(C)-\big[\lambda R(C)+R_I(C)\big]$ on $[C_{op},\infty)$. Assume the Dominance of Stabilizing Costs (DSC) condition holds, such that $J(C)$ is strictly concave on $[C_{op},\infty)$, and that there exists $\mu>0$ and a neighborhood $\mathcal N(C^*)$ of the unique maximizer $C^*$ where $J(C)$ is $\mu$-strongly concave. Then:
+Let $J\in C^2([C_{op},\infty))$ be strictly concave and satisfy
+$$
+\lim_{C\to\infty}J(C)=-\infty,
+\qquad
+J'(C_{op})>0.
+$$
+These hypotheses give a unique maximizer $C^*\in(C_{op},\infty)$. For the stability conclusion, assume additionally that $I=[a,b]$ is closed,
+$$
+C_{op}\le a<C^*<b,
+$$
+and that $J$ is $\mu$-strongly concave on $I$ for some $\mu>0$. Then:
 
-1. There exists a unique maximizer $C^*$ of $J(C)$, characterized by the first‑order condition $\partial J/\partial C = \Psi(C^*) = 0$ (Equation 18).
+1. $J$ has a unique maximizer $C^*\in(C_{op},\infty)$, and $J'(C^*)=\Psi(C^*)=0$.
 
-2. The adaptation dynamics $\dot C=\eta_{adapt}\,\partial J/\partial C$ with $\eta_{adapt}>0$ converge locally and exponentially to $C^*$: for any $C(0)\in\mathcal N(C^*)$,
+2. For $\eta_{adapt}>0$, every solution of
 $$
-|C(t)-C^*|\le e^{-\eta_{adapt}\mu t}\,|C(0)-C^*|.
+\dot C=\eta_{adapt}J'(C)
+$$
+with $C(0)\in I$ remains in $I$ and satisfies
+$$
+|C(t)-C^*|\le e^{-\eta_{adapt}\mu t}|C(0)-C^*|.
 $$
 
-*Proof.* Strict concavity of $J$ guarantees a unique maximizer $C^*$. Strong concavity in a neighborhood implies $(C-C^*)\,\partial J/\partial C\le -\mu(C-C^*)^2$ for $C\in\mathcal N(C^*)$. Let $V(t)=\frac{1}{2}(C(t)-C^*)^2$. Then $\dot V = (C-C^*)\dot C = \eta_{adapt}(C-C^*)\partial J/\partial C \le -\eta_{adapt}\mu(C-C^*)^2 = -2\eta_{adapt}\mu V$. By Grönwall's inequality, $V(t)\le e^{-2\eta_{adapt}\mu t}V(0)$, which yields the stated exponential bound on $|C(t)-C^*|$. ∎
+*Proof.* The limit condition supplies $M>C_{op}$ such that $J(C)<J(C_{op})$ for $C\ge M$. Continuity gives a maximizer on the compact interval $[C_{op},M]$, hence on the full domain. Because $J'(C_{op})>0$, this maximizer is not the left endpoint and is therefore interior. Strict concavity gives uniqueness, and differentiability at the interior maximizer gives $J'(C^*)=0$.
 
-**Corollary 22.1 (Gaussian Attractor under Quadratic-Cost PCE).** Let $\mathcal K\subset\mathcal X_{adm}$ be the compact PCE-admissible set of Appendix D (Theorem D.5, assumptions A1-A6). Suppose the PCE potential $V$ has a unique global minimum at $x^*\in\operatorname{int}(\mathcal K)$ and is twice continuously differentiable in a neighborhood of $x^*$, with non-degenerate Hessian
+For a differentiable strictly concave function, $J'(C)>0$ when $C<C^*$ and $J'(C)<0$ when $C>C^*$. Thus the vector field points toward $C^*$ at both endpoints of $I$, and solutions beginning in $I$ remain there. Strong concavity gives
 $$
-H:=\nabla^2 V(x^*)\succ 0.
+(C-C^*)\bigl(J'(C)-J'(C^*)\bigr)
+\le-\mu(C-C^*)^2.
 $$
-Let $d$ be the local dimension of $\mathcal K$ at $x^*$. In the detailed-balance low-noise regime of Theorem D.5 with stationary density
+Since $J'(C^*)=0$, for $W(t)=\frac12(C(t)-C^*)^2$,
 $$
-\pi_\theta(dx)=Z_\theta^{-1}\exp[-V(x)/\theta]dx, \quad \text{(D.12a)}
+\dot W
+=\eta_{adapt}(C-C^*)J'(C)
+\le-2\eta_{adapt}\mu W.
 $$
-the rescaled fluctuation
+Multiplying by $e^{2\eta_{adapt}\mu t}$ and differentiating shows
 $$
-\xi_\theta:=\frac{x-x^*}{\sqrt\theta}
+\frac{d}{dt}\left(e^{2\eta_{adapt}\mu t}W(t)\right)\le0.
 $$
-converges in distribution as $\theta\downarrow0$ to the centered Gaussian
+Hence $W(t)\le e^{-2\eta_{adapt}\mu t}W(0)$, and taking square roots proves the asserted bound. ∎
+
+**Corollary 22.1 (Gaussian Attractor under Quadratic-Cost PCE).** Let $\mathcal K\subset\mathbb R^d$ be compact with $x^*\in\operatorname{int}(\mathcal K)$. Assume $V$ is continuous on $\mathcal K$, twice continuously differentiable near $x^*$, and has $x^*$ as its unique global minimum, with
 $$
-\xi\sim\mathcal N(0,H^{-1}).
+H:=\nabla^2V(x^*)\succ0.
+$$
+For $\theta>0$, let
+$$
+\pi_\theta(dx)=Z_\theta^{-1}e^{-V(x)/\theta}\mathbf1_{\mathcal K}(x)\,dx,
+$$
+as given by Equation (D.12a) of Appendix D,
+and define $\xi_\theta=(x-x^*)/\sqrt\theta$. Then
+$$
+\xi_\theta\xrightarrow{d}\mathcal N(0,H^{-1})
+\qquad(\theta\downarrow0).
 \tag{37a}
 $$
-Consequently, every fixed coordinate projection converges to a one-dimensional Gaussian with variance given by the corresponding diagonal entry of $H^{-1}$. Normalized sums of independent stationary samples of any fixed projection satisfy the ordinary central limit theorem in the low-noise limit. Quantitative Berry-Esseen rates require additional uniform third-moment control and are not asserted from the $C^2$ hypotheses alone.
+Each coordinate projection therefore converges to a centered one-dimensional Gaussian whose variance is the corresponding diagonal entry of $H^{-1}$.
 
-*Proof.* Since $x^*$ is a non-degenerate interior minimum and $V\in C^2$ near $x^*$,
+*Proof.* Let $\lambda_{min}>0$ be the smallest eigenvalue of $H$. Taylor expansion at the critical point $x^*$ gives
 $$
-V(x^*+\sqrt\theta\,\xi)=V(x^*)+\frac{\theta}{2}\xi^T H\xi+o(\theta\|\xi\|^2)
+V(x^*+h)-V(x^*)
+=\frac12h^THh+r(h),
+\qquad
+\frac{r(h)}{\|h\|^2}\longrightarrow0.
 $$
-for bounded $\xi$. The change of variables $x=x^*+\sqrt\theta\,\xi$ gives Jacobian $\theta^{d/2}$. On every bounded $\xi$-set, the rescaled density therefore converges pointwise to
+Choose $\rho>0$ such that $B_\rho(x^*)\subset\mathcal K$ and
 $$
-\exp\!\left[-\frac12\xi^TH\xi\right].
+V(x^*+h)-V(x^*)\ge\frac{\lambda_{min}}4\|h\|^2
+\qquad(\|h\|\le\rho).
 $$
-Because $x^*$ is the unique global minimum on compact $\mathcal K$, every closed set outside a sufficiently small neighborhood of $x^*$ has a positive potential gap above $V(x^*)$. Thus the mass of $\pi_\theta$ outside that neighborhood is exponentially small as $\theta\downarrow0$, and the local quadratic approximation controls the partition function. Laplace's method gives
+Continuity, compactness, and uniqueness of the minimum give
 $$
-Z_\theta e^{V(x^*)/\theta}\theta^{-d/2}\longrightarrow
-\int_{\mathbb R^d}\exp\!\left[-\frac12\xi^TH\xi\right]d\xi
+\Delta_\rho
+:=\min_{x\in\mathcal K\setminus B_\rho(x^*)}
+\bigl(V(x)-V(x^*)\bigr)>0.
+$$
+
+Let $\varphi$ be bounded and continuous and put
+$$
+\mathcal K_\theta:=\frac{\mathcal K-x^*}{\sqrt\theta}.
+$$
+After the change of variables $x=x^*+\sqrt\theta\,\xi$, the common Jacobian cancels and
+$$
+\mathbb E_{\pi_\theta}[\varphi(\xi_\theta)]
+=\frac{
+\int_{\mathcal K_\theta}\varphi(\xi)
+e^{-[V(x^*+\sqrt\theta\xi)-V(x^*)]/\theta}\,d\xi}
+{
+\int_{\mathcal K_\theta}
+e^{-[V(x^*+\sqrt\theta\xi)-V(x^*)]/\theta}\,d\xi}.
+$$
+On $\|\xi\|\le\rho/\sqrt\theta$, the integrands are dominated by
+$$
+\|\varphi\|_\infty e^{-\lambda_{min}\|\xi\|^2/4},
+$$
+which is integrable on $\mathbb R^d$, and they converge pointwise to
+$$
+\varphi(\xi)e^{-\xi^TH\xi/2}.
+$$
+The contribution from $\mathcal K\setminus B_\rho(x^*)$ to either rescaled integral is bounded by a constant times
+$$
+\theta^{-d/2}e^{-\Delta_\rho/\theta},
+$$
+which tends to zero. Dominated convergence therefore gives
+$$
+\lim_{\theta\downarrow0}
+\mathbb E_{\pi_\theta}[\varphi(\xi_\theta)]
+=\frac{
+\int_{\mathbb R^d}\varphi(\xi)e^{-\xi^TH\xi/2}\,d\xi}
+{
+\int_{\mathbb R^d}e^{-\xi^TH\xi/2}\,d\xi}.
+$$
+Orthogonal diagonalization of $H$ and the one-dimensional Gaussian integral give
+$$
+\int_{\mathbb R^d}e^{-\xi^TH\xi/2}\,d\xi
 =\frac{(2\pi)^{d/2}}{\sqrt{\det H}}.
 $$
-Normalizing yields weak convergence to the Gaussian density
+Thus the limiting density is
 $$
-\frac{\sqrt{\det H}}{(2\pi)^{d/2}}\exp\!\left[-\frac12\xi^TH\xi\right]d\xi.
+\frac{\sqrt{\det H}}{(2\pi)^{d/2}}e^{-\xi^TH\xi/2},
 $$
-The statement for coordinate projections follows by the continuous mapping theorem. For independent stationary samples of a fixed projection, the limiting Gaussian has finite variance, so the classical Lindeberg-Feller theorem gives the stated central-limit behavior. ∎
+the density of $\mathcal N(0,H^{-1})$. Taking $\varphi(\xi)$ to depend on one coordinate proves the projection statement. ∎
 
 **Remark 22.1 (Explanatory Scope).** Corollary 22.1 identifies the empirical ubiquity of Gaussian statistics for small perturbations around stable operating points as the local quadratic normal form of the PCE potential near a non-degenerate attractor. The result is local and low-noise: it does not claim that all stationary PU fluctuations are Gaussian, only that the rescaled fluctuations near a unique non-degenerate PCE minimum have Gaussian leading order.
 
@@ -543,11 +794,12 @@ The statement for coordinate projections follows by the continuous mapping theor
 The variable $\hat C_{target}(t)>0$ is the internal task-scale coordinate entering the Law of Prediction. On the homeostatic branch it is a response-active task-selection/control coordinate, and the certificate must include an intervention map showing that changing it changes retained measured performance according to $p(C,T)$. If it is only an estimator or label, Equation (38) regulates an internal score and is not a physical homeostasis law. When the response-active record exists for a registered target performance $PP_{op}\in(\alpha,\beta)$, its feedback law is
 $$
 \frac{d\hat C_{target}}{dt}
-=
-\mu_{target}\hat C_{target}(t)
+=\mu_{target}\hat C_{target}(t)
 \left(PP(C(t),\hat C_{target}(t))-PP_{op}\right),
 \qquad
-\mu_{target}>0.
+\mu_{target}>0,
+\qquad
+[\mu_{target}]=[T]^{-1}.
 \tag{38}
 $$
 This sign is fixed by Equation (22). For $C>C_{op}$,
@@ -610,7 +862,26 @@ $$
 $$
 On the DSC branch $\Psi_C<0$, so (38b) makes (38f) automatic; Equation (38g) is the additional joint-stability gate that scalar Theorem 22 does not supply.
 
-*Proof.* Direct differentiation of Equation (22) gives (38b), and solving $p=PP_{op}$ gives (38c). Linearizing the corrected scalar law yields coefficient $\mu_{target}T_*p_T<0$; the reversed law yields $-\mu_{target}T_*p_T>0$. Equation (38e) is the derivative of (38d). A real $2\times2$ matrix is Hurwitz exactly when its trace is negative and its determinant is positive, proving (38f)--(38g). ∎
+*Proof.* Differentiating Equation (22) gives
+$$
+p_C=\frac{\kappa_{eff}}T(\beta-p),
+\qquad
+p_T=-\frac{\kappa_{eff}(C-C_{op})}{T^2}(\beta-p),
+$$
+which proves (38b). Solving $p(C,T_*)=PP_{op}$ gives
+$$
+e^{-\kappa_{eff}(C-C_{op})/T_*}
+=\frac{\beta-PP_{op}}{\beta-\alpha},
+$$
+and taking logarithms gives (38c). The derivative of $\mu_{target}T(p-PP_{op})$ at $T_*$ is $\mu_{target}T_*p_T<0$; reversing the controller sign changes this coefficient to a positive number.
+
+Differentiating the two components of (38d) gives (38e). If $\lambda_1,\lambda_2$ are the eigenvalues of the real $2\times2$ matrix $J_*$, then
+$$
+\lambda_1+\lambda_2=\operatorname{tr}J_*,
+\qquad
+\lambda_1\lambda_2=\det J_*.
+$$
+If the eigenvalues are real, negative trace and positive determinant are equivalent to both being negative. If they are nonreal, they are conjugates, their common real part is $\operatorname{tr}J_*/2$, and their product is positive. Thus both eigenvalues have negative real part exactly when the trace is negative and determinant positive, proving (38f)–(38g). ∎
 
 **6.6 Viability Enforcement**
 
@@ -638,14 +909,19 @@ $$
 and a continuous buffer controller is
 $$
 F_{corr}(p)
-=
-k_\alpha[\alpha+\delta-p]_+
+=k_\alpha[\alpha+\delta-p]_+
 -k_\beta[p-(\beta-\delta)]_+,
 \qquad
-k_\alpha,k_\beta,\delta>0.
+k_\alpha,k_\beta,\delta>0,
 \tag{40}
 $$
-The gains do not establish viability merely by being positive. They are accepted only when the full coupled vector field, including Equation (38) and the registered disturbance set, satisfies Theorem 22a.
+with
+$$
+[k_\alpha]=[k_\beta]=[\text{complexity}][T]^{-1},
+\qquad
+[\delta]=1.
+$$
+The gains are accepted only when the full coupled vector field, including Equation (38) and the registered disturbance set, satisfies Theorem 22a.
 
 **Theorem 22a (Robust Predictive-Viability Kernel).** Let
 $$
@@ -675,7 +951,23 @@ $$
 $$
 If the same uniform performance margin $m_p$ holds throughout the corresponding exterior buffer regions inside an invariant $C,T$ domain, every trajectory in that domain enters $K_{viab}$. From $p_0<\alpha$ the entry time is at most $(\alpha-p_0)/m_p$, and from $p_0>\beta$ it is at most $(p_0-\beta)/m_p$. Boundary inequalities alone prove invariance, not finite-time capture.
 
-*Proof.* The tangent cone of the sublevel face $p\le\beta$ is characterized by $\nabla p\cdot v\le0$, and that of the superlevel face $p\ge\alpha$ by $\nabla p\cdot v\ge0$. Conditions (40b)--(40c) place every allowed velocity in the appropriate tangent cone. Under the stated differential-inclusion regularity, the strong Nagumo theorem makes this tangent-cone condition necessary and sufficient for strong invariance. The margin statement follows by adding the outward normal component of $e$ on each face. In an exterior buffer, the uniform bound gives $\dot p\ge m_p$ below $\alpha$ or $\dot p\le-m_p$ above $\beta$; integration gives the entry-time bounds. ∎
+*Proof.* Put $G(z):=F(z)+\mathcal D(z)$. The compact-convex value, Hausdorff-Lipschitz, and strong-solution hypotheses in the theorem are the regularity assumptions used by the strong-invariance form of Nagumo's tangent theorem for differential inclusions (Aubin and Cellina, 1984): a closed uniformly prox-regular set is strongly invariant exactly when
+$$
+G(z)\subseteq T_{K_{viab}}(z)
+\qquad(z\in\partial K_{viab}).
+$$
+The constraint qualification makes the tangent cone the intersection of the active face half-spaces. On $p=\alpha$, membership of every $F(z)+d$ in the tangent cone is equivalent to
+$$
+\nabla p(z)\cdot(F(z)+d)\ge0
+\qquad\text{for every }d\in\mathcal D(z),
+$$
+which is Equation (40b). On $p=\beta$, the analogous all-velocity condition is $\nabla p\cdot(F+d)\le0$, which is Equation (40c). The registered $C,T$ faces give the stated analogous inequalities.
+
+If an additional perturbation $e$ has outward normal component smaller than a strict face margin, adding $e$ preserves the corresponding tangent inequality. In the lower exterior buffer, $\dot p\ge m_p$ implies
+$$
+p(t)-p_0\ge m_pt
+$$
+until entry, so entry occurs by $(\alpha-p_0)/m_p$. The upper-buffer calculation with $\dot p\le-m_p$ gives $(p_0-\beta)/m_p$. Conditions only on the boundary contain no estimate before a trajectory reaches the boundary and therefore prove invariance but not capture. ∎
 
 **6.7 Model-Form Robustness**
 
@@ -696,11 +988,11 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ by Equation (38) supplies homeostatic task-scale control; interpreting it as an estimator of external difficulty requires a separate innovation record. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
 *   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and the registered task-scale coordinate $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$), enabling sustained viable prediction.
 
-**6.9 Self-Consistent Determination of Viability Bounds $\alpha$ and $\beta$**
+**6.9 Task- and Branch-Dependent Viability Bounds $\alpha$ and $\beta$**
 
-In the PU framework, $\alpha$ and $\beta$ are derived thresholds tied to the structure of SPAP, ND-RID, and thermodynamic bounds. Key constraints include:
+The viability bounds are registered relative to a task, score calibration, and physical branch. The SPAP theorems do not determine either numerical endpoint, and a Landauer bound does not determine a dimensionless performance score.
 
-*   **Lower Bound $\alpha$:** Let $R_{base}$ be the registered chance or reference risk for the task and let $\phi$ be the strictly decreasing calibration from risk to predictive performance. Then $\alpha_{task}=\phi(R_{base})$. Its numerical value is task- and score-dependent; the Landauer floor constrains physical update cost and attainable risk but does not by itself imply $\alpha=1/2$.
+* **Lower bound $\alpha$.** Let $R_{base}$ be the registered chance or reference risk and let $\phi$ be the strictly decreasing calibration from risk to performance. Then $\alpha_{task}=\phi(R_{base})$.
 
 
 

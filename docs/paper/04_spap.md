@@ -18,12 +18,13 @@ A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses **
 
 Property R establishes a sufficient level of computational sophistication for the kind of self-referential reasoning that leads to the SPAP paradoxes. Property R emerges through **two complementary foundations** rigorously established in **Appendix A.0**: (I) **Logical Necessity** (§A.0.2), which demonstrates that Property R follows from the predict-verify architecture once the Logical-Structural Assumptions of Appendix A are made explicit; and (II) **Physical Instantiation** (§A.0.3-A.0.5), which demonstrates how this abstract capacity manifests in finite resource systems through POP/PCE optimization dynamics.
 
-The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle together with the stated Logical-Structural Assumptions, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks, each with minimal capacity $K_0 = 3$ bits, achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This physical realization is conditional upon either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (§A.0.4; Definition A.0.1q) or, on the predictive-recovery Golay branch, an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that supplies the same certificate entries for the protected windows (Definition A.0.1q.1; Theorem A.0.2a). For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use the following finite subcapacity of Property R: representation of coded systems and predictors, simulation of the nominated predictor on coded inputs, predicate evaluation of the retained binary or threshold outcome, finite Boolean post-processing, logical memory, and uniform finite-program composition. Appendix A.0.2 derives this subcapacity from composition closure, logical memory, and uniform specification; Theorem A.0.1 and Corollary A.0.1 give the finite circuit/program realization; the proofs of Theorems A.1.1 and A.1.3 supply the deterministic and probabilistic diagonal constructions used in Theorems 10–11. This finite diagonal-closure subcapacity is weaker than total internal reflexive self-closure, which is excluded by Appendix A.6.
+The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle together with the stated Logical-Structural Assumptions, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks, each with minimal capacity $K_0 = 3$ bits, achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This physical realization is conditional on the refresh, reduced-cost, Dominant Cost Convexity, and robustness hypotheses of Theorem A.0.2, including a certified stationary point $p_{\mathrm{err}}^*<1/2$, and on either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (§A.0.4; Definition A.0.1q) or an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that supplies the same entries on the protected windows (Definition A.0.1q.1; Theorem A.0.2a). Full Effective Operational Property R additionally requires the working-memory, protected-gate, code-overhead, and finite circuit-execution resources stated in Theorem A.0.6. For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use the following finite subcapacity of Property R: representation of coded systems and predictors, simulation of the nominated predictor on coded inputs, predicate evaluation of the retained binary or threshold outcome, finite Boolean post-processing, logical memory, and uniform finite-program composition. Appendix A.0.2 derives this subcapacity from composition closure, logical memory, and uniform specification; Theorem A.0.1 and Corollary A.0.1 give the finite circuit/program realization; the proofs of Theorems A.1.1 and A.1.3 supply the deterministic and probabilistic diagonal constructions used in Theorems 10–11. This finite diagonal-closure subcapacity is weaker than total internal reflexive self-closure, which is excluded by Appendix A.6.
 
-**4.1.3 Proposition 2 (Sufficient Conditions for Property R)**
+**4.1.3 Proposition 2 (Sufficient Conditions for Finite Operational Property R)**
 
-Any model class $\mathcal{M}$ that is **Turing-complete** possesses Property R relative to a suitable consistent formal system $\mathcal{F}$.
-*Proof:* Turing-completeness implies the ability to perform universal computation. (1) Representation is possible via standard encoding schemes (e.g., Gödel numbering of Turing machines and their inputs/outputs). (2) Simulation is possible via a Universal Turing Machine (UTM); formal reasoning about computations can be embedded within sufficiently strong logical systems $\mathcal{F}$ that formalize UTM behavior. (3) Evaluation of computable predicates concerning model behavior (e.g., checking if a simulated prediction matches a condition) is inherent in the definition of computability. Therefore, Turing-completeness provides the necessary machinery for Property R. QED
+Let $\mathcal M$ be a model class equipped with (i) an effective coding of its finite programs, inputs, outputs, and finite computation traces by natural numbers; (ii) an implementable universal interpreter $U\in\mathcal M$ for those codes; (iii) closure under uniform finite-program composition and computable Boolean post-processing; and (iv) a consistent formal system $\mathcal F$ that represents the finite-step computation relation of $U$. Then $\mathcal M$ possesses the finite operational subcapacity of Property R used by the SPAP constructions: coded representation, simulation of any nominated program for any specified finite number of steps, and evaluation of every decidable predicate of the resulting finite trace. This conclusion does not include a total decision procedure for unrestricted halting, semantic correctness, or theoremhood.
+
+*Proof.* Hypothesis (i) supplies the representation clause. Given a program code $e$, input code $x$, and step bound $n$, hypothesis (ii) supplies the simulation $U(e,x,n)$ of the first $n$ steps, while hypothesis (iv) represents that finite computation relation in $\mathcal F$. If $q$ is a decidable predicate of the finite trace, its characteristic function is computable; hypothesis (iii) therefore permits composition of the simulation with that characteristic function and with the finite Boolean operations used by SPAP. These are exactly the stated finite representation, simulation, and predicate-evaluation capabilities. No step decides a predicate outside the stipulated decidable finite-trace class. ∎
 
 **4.2 The Self-Referential Paradox of Accurate Prediction (SPAP)**
 
@@ -37,47 +38,43 @@ f(n) = F(\dots, \text{ProofSearch}_{\le g(n)}[\phi(\dots, e, \dots)], \dots) \qu
 $$
 where $F$ is computable, and ProofSearch represents a bounded search for proofs of formula $\phi$ which may refer to $e$. This formalizes the capability for bounded self-monitoring relevant to SPAP.
 
-**4.2.2 Theorem 10 (Deterministic SPAP - Impossibility of Perfect Self-Prediction)**
+**4.2.2 Theorem 10 (Deterministic SPAP on a Uniformly Diagonal-Closed Model Class)**
 
-Let $\mathcal{M}$ be a model class whose formalism can represent coded descriptions of systems in $\mathcal{M}$, simulate the nominated predictor on those coded descriptions, and evaluate the relevant binary predicates about predicted outcomes. In particular, any model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$ capable of representing basic arithmetic satisfies these conditions. There exists no single deterministic prediction function $P_f$, implementable within $\mathcal{M}$, that can guarantee perfect prediction of the future state $S(t+\Delta t)$ for all possible systems $S$ constructible within $\mathcal{M}$ that engage in self-prediction based on $P_f$.
-*Proof:* Assume, for contradiction, that a single deterministic predictor $P_f$ as stated exists. By the represent / simulate / predicate-evaluate subcapacity just stated, the model class $\mathcal{M}$ can represent coded descriptions of systems in $\mathcal{M}$, simulate the action of predictors on those coded descriptions, and evaluate the relevant binary predicates about predicted outcomes. Using these capabilities, construct a system $S_{diag}\in\mathcal{M}$ whose nominated binary next-state component $\phi_{t+1}\in\{0,1\}$ is defined by first querying $P_f$ on its own current description and then applying the update rule
-$$
-\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f}) \quad \text{(10)}
-$$
-where $\hat{\phi}_{P_f}$ denotes the value predicted by $P_f$ for that same component of $S_{diag}$ at time $t+\Delta t$.
+Let $\mathcal M$ be a model class with coded descriptions and the finite operational Property-R capabilities of representation, simulation, decidable binary predicate evaluation, Boolean negation, and uniform finite-program composition. Assume uniform diagonal closure: for every implementable deterministic predictor $P\in\mathcal M$, the recursion/self-reference construction belongs to $\mathcal M$ and yields a system $D(P)$ that can obtain its own code, query $P$ for a nominated binary next-state component of $D(P)$, and apply Boolean negation to the returned bit. Then no deterministic predictor $P_f\in\mathcal M$ perfectly predicts that nominated component for every system in this diagonal-closed class.
 
-Because the construction uses only these representation, simulation, and predicate-evaluation operations, the system $S_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were perfect for every such system, then in particular it would be perfect for $S_{diag}$, so
+*Proof.* Suppose that such a universal perfect predictor $P_f$ exists. By uniform diagonal closure, $S_{diag}:=D(P_f)$ belongs to $\mathcal M$. Let $\hat\phi_{P_f}\in\{0,1\}$ be the value returned by $P_f$ for the nominated next-state component of $S_{diag}$, and define the component by
 $$
-\hat{\phi}_{P_f}=\phi_{t+1}.
+\phi_{t+1}=\operatorname{NOT}(\hat\phi_{P_f}). \quad \text{(10)}
 $$
-Substituting the defining rule of $S_{diag}$ gives
+Universality and perfection require $\hat\phi_{P_f}=\phi_{t+1}$. Substitution gives
 $$
-\hat{\phi}_{P_f}=\text{NOT}(\hat{\phi}_{P_f}).
+\hat\phi_{P_f}=\operatorname{NOT}(\hat\phi_{P_f}),
 $$
-No element of $\{0,1\}$ satisfies this equation. This contradiction shows that no universal perfect deterministic predictor $P_f$ can exist. ∎
+but neither element of $\{0,1\}$ satisfies this equation. This contradiction proves that no such $P_f$ exists. ∎
 
 **4.2.2a Theorem 10a (Lawvere Form of Deterministic SPAP)**
 
-Let $\mathsf P_{\mathrm{PU}}$ be the retained category of operational predictive contexts and verification protocols, and let $\mathsf{Out}=\{0,1\}$. Suppose the represent / simulate / predicate-evaluate subcapacity used in Theorem 10 internalizes an evaluation map
+Let $\mathsf P_{\mathrm{PU}}$ be the retained category of operational predictive contexts and verification protocols, and let $\mathsf{Out}=\{0,1\}$. Suppose the retained predictor class internalizes an evaluation map
 $$
 \operatorname{eval}:A\times A\to\mathsf{Out}
 \tag{10a.1}
 $$
-that is weakly point-surjective on the retained predictor class: for every operationally definable binary predicate $h:A\to\mathsf{Out}$, there exists $a_h\in A$ such that
+and satisfies predicate-realization closure: for every retained operationally definable binary predicate $h:A\to\mathsf{Out}$, there exists $a_h\in A$ such that
 $$
 \operatorname{eval}(a_h,x)=h(x)
 \qquad
-\forall x\in A
+\forall x\in A.
 \tag{10a.2}
 $$
-on the retained context domain. Then Theorem 10 is the Lawvere diagonal obstruction for the fixed-point-free endomap
+Then the evaluator is weakly point-surjective on that predicate class, and Theorem 10 is the Lawvere diagonal obstruction for the endomap
 $$
 \tau:\mathsf{Out}\to\mathsf{Out},
 \qquad
 \tau(0)=1,\quad \tau(1)=0.
 \tag{10a.3}
 $$
-In particular, a universal perfect deterministic predictor would make (10a.1) weakly point-surjective, but Lawvere diagonalization would force a fixed point of $\tau$, which does not exist.
+No $o\in\mathsf{Out}$ satisfies $\tau(o)=o$.
+A purported universal perfect deterministic predictor is subject to this obstruction when its retained evaluator also satisfies the stated predicate-realization closure.
 
 *Proof.* Define the diagonal predicate
 $$
@@ -101,37 +98,43 @@ Thus $\operatorname{eval}(a_d,a_d)$ is a fixed point of $\tau$. Since $\mathsf{O
 
 *Proof.* The proof of Theorem 10a uses only weak point-surjectivity of the evaluation map and the fixed-point-free NOT endomap. If a system lacks the retained evaluation map, or if the map is not weakly point-surjective on the relevant predictor predicates, the Lawvere diagonal cannot be formed inside that system. This is exactly the operational boundary captured by the represent / simulate / predicate-evaluate clauses of Definition 10. ∎
 
-**4.2.3 Theorem 11 (Probabilistic SPAP)**
+**4.2.3 Theorem 11 (Probabilistic SPAP on a Threshold-Decidable Diagonal Class)**
 
-Let $\mathcal{M}$ be a model class whose formalism can represent coded descriptions of systems in $\mathcal{M}$, simulate the nominated predictor on those coded descriptions, and evaluate predicates concerning the predicted distribution. In particular, any model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$ satisfies these conditions. There exists no single probabilistic predictor $P_f: \mathcal{S} \times \mathcal{M} \rightarrow \Delta(\mathcal{S})$ implementable within $\mathcal{M}$ that can guarantee assignment of probabilities that exactly match the true distribution of outcomes for all aspects of all self-predicting systems $S$ constructible within $\mathcal{M}$.
-*Proof:* Assume, for contradiction, that a single probabilistic predictor $P_f: \mathcal{S}\times\mathcal{M}\to\Delta(\mathcal{S})$ as stated exists. By the represent / simulate / predicate-evaluate subcapacity just stated, systems in $\mathcal{M}$ can represent their own descriptions, simulate the action of $P_f$ on those descriptions, and evaluate predicates concerning the predicted distribution. Construct a system $S'_{diag}\in\mathcal{M}$ with a nominated binary next-state aspect $\phi_{t+1}\in\{0,1\}$ that first computes the predicted marginal
+Let $\mathcal M$ be a coded model class with uniform diagonal closure for nominated binary probabilistic predictors. Assume that each predicted binary marginal $p$ has a finite representation for which the predicate $p>1/2$ versus $p\le1/2$ is decidable inside $\mathcal M$, and that $\mathcal M$ is closed under constructing the Bernoulli law selected by that predicate. Then no probabilistic predictor $P_f\in\mathcal M$ assigns a binary marginal that exactly matches the true marginal for every system in this diagonal class.
+
+*Proof.* Suppose that an exact universal predictor $P_f$ exists. Uniform diagonal closure supplies a system $S'_{diag}\in\mathcal M$ that obtains its own code and computes
 $$
 p:=P_f(\phi_{t+1}=1\mid S'_{diag},t).
 $$
-It then defines the actual one-step law for that same aspect by
+By threshold decidability and the stated closure, $S'_{diag}$ has the one-step law
 $$
-P_{actual}(\phi_{t+1}=1) = \begin{cases} 0, & \text{if } p > 0.5 \\ 1, & \text{if } p \le 0.5 \end{cases} \quad \text{(11)}
+P_{actual}(\phi_{t+1}=1)
+=
+\begin{cases}
+0,&p>1/2,\\
+1,&p\le1/2.
+\end{cases}
+\quad \text{(11)}
 $$
+Exactness requires $p=P_{actual}(\phi_{t+1}=1)$. If $p>1/2$, this equality gives $p=0$, a contradiction. If $p\le1/2$, it gives $p=1$, also a contradiction. The cases exhaust the decidable threshold partition, so no exact universal predictor exists on the stated class. ∎
 
-Because this construction again uses only the represent / simulate / predicate-evaluate operations just stated, the system $S'_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were exact for every such self-predicting system, then it would be exact for $S'_{diag}$, so its predicted marginal $p$ would have to equal the actual marginal specified by the rule above.
+**4.2.4 Corollary 1 (Uniform Prediction Limit)**
 
-There are two cases.
+On a model class satisfying the diagonal-closure hypotheses of Theorems 10–11, no single deterministic or threshold-decidable probabilistic predictor is exact on every constructible self-referential system in the class. Equivalently, for each proposed universal predictor, the corresponding diagonal construction supplies a system and a nominated binary aspect on which that predictor fails. This class-level statement does not imply that every individual system is imperfectly predictable.
 
-1. If $p>0.5$, then the defining rule sets $P_{actual}(\phi_{t+1}=1)=0$, so exactness requires $p=0$, contradicting $p>0.5$.
+*Proof.* Apply Theorem 10 to a proposed deterministic universal predictor and Theorem 11 to a proposed probabilistic universal predictor. Each theorem constructs a counterexample relative to the nominated predictor. Neither theorem quantifies over every system as a counterexample. ∎
 
-2. If $p\le 0.5$, then the defining rule sets $P_{actual}(\phi_{t+1}=1)=1$, so exactness requires $p=1$, contradicting $p\le 0.5$.
+**4.2.5 Corollary 2 (Potential Unpredictability of Rich Predictive Classes)**
 
-Both cases are impossible. Hence no universal probabilistic predictor can assign probabilities that exactly match the true outcome law for every self-predicting system in $\mathcal{M}$. ∎
+If a family of operational models for complex predictive processes is embedded in a uniformly diagonal-closed Property-R class, no predictor in that class can guarantee perfect self-prediction across every retained system and every nominated binary aspect in the family. Restricted systems or restricted task families may remain perfectly predictable.
 
-**4.2.4 Corollary 1 (Fundamental Limits)**
+*Proof.* The claimed universal guarantee is exactly the guarantee excluded by Corollary 1. The final sentence records the unchanged quantifier scope of Theorems 10–11. ∎
 
-Any predictive system operating within a framework $\mathcal{M}$ possessing Property R (Definition 10) is subject to inherent logical limitations on the guaranteed accuracy with which it can predict certain aspects of its own future state. This limitation arises directly from the logical structure of self-reference as demonstrated by SPAP (Theorem 10, Theorem 11) and is independent of physical noise, epistemic uncertainty, or finite resource constraints, persisting even probabilistically (Theorems A.1.2, A.1.4, A.2.3, and A.2.4 in Appendix A).
-
-**4.2.5 Corollary 2 (Potential Unpredictability)**
-
-If the operational models associated with complex predictive processes (such as those related to consciousness within the PU framework, e.g., via MPU aggregates, Section 7, Section 9) are implemented within a computational framework $\mathcal{M}$ possessing Property R (Definition 10), then such systems are intrinsically subject to the limitations established by SPAP. Guaranteed, perfect self-prediction across all relevant aspects is logically precluded, establishing inherent unpredictability stemming directly from the system's logical structure.
-
-**Remark (Pattern-Specific SPAP Engagement).** SPAP (Theorems 10–11) establishes that no system can achieve perfect self-prediction universally. This system-level impossibility induces a *pattern-specific cost landscape*: for any system $S$ with Effective Operational Property R (Definition A.0.1) and self-model $\mathcal{M}_S$, each pattern $E$ engages $S$'s self-referential structure to a degree determined by the self-model change it induces. The gap $\delta_S(E) = \alpha_{SPAP} - PP_S^{(E)}$ between the required self-predictive performance on the affected self-model component and the SPAP boundary determines a pattern-specific processing cost via Theorem 14 (see Corollary B.2.1, Appendix B.3). On the independent-register amplification construction formalized in Theorem M.10.4, there exist patterns $E^*$—constructed by multi-register SPAP diagonal amplification (Equation 10)—for which $\delta_S(E^*)=0$ and full integration requires infinite cost. The baseline regime is supplied by purely external patterns with $\delta_S=\alpha_{SPAP}$, while finite-cost approaches to the boundary require an explicit separate interpolation-realization theorem, as noted by Corollary M.10.4.1. The formal construction is developed in Appendix M, §M.6.10.
+**Remark (Conditional Pattern-Specific SPAP Engagement).** SPAP (Theorems 10–11) proves that no total predictor is exact throughout the declared diagonal-closed class. A pattern-specific quantity
+$$
+\delta_S(E)=\alpha_{SPAP}-PP_S^{(E)}
+$$
+is available only after the self-model, performance map, and attainability criterion of Appendix M are specified. A processing-cost lower bound additionally requires the pattern-specific hard-family reduction and implementation certificates of Corollary B.2.1 and Theorem M.10.3. On the independent-register amplification branch, Theorem M.10.4 constructs particular patterns $E^*$ with $\delta_S(E^*)=0$, and Theorem M.10.6 gives the corresponding boundary obstruction under its certificate. Purely external patterns attain the baseline only under the baseline-invariance hypothesis of Corollary M.10.3.1. SPAP alone supplies neither a cost for every pattern nor realization of every intermediate gap.
 
 **4.2.6 Infinite Regress Obstruction to Perfect Self-Prediction**
 
@@ -168,7 +171,17 @@ There is no $r \in \mathcal{R}$ such that $r \prec r$.
 $$
 r_0 \succ r_1 \succ r_2 \succ \cdots
 $$
-in $\mathcal{R}$, since $\mu(r_i)$ would form a strictly decreasing sequence in $\mathbb{N}$, contradicting the well-ordering of $\mathbb{N}$.
+in $\mathcal{R}$.
+
+*Proof.* If such a chain existed, the rank hypothesis would give
+$$
+\mu(r_{i+1})<\mu(r_i)
+$$
+for every $i\ge0$. Since these ranks are natural numbers, strict decrease implies $\mu(r_{i+1})\le\mu(r_i)-1$. Induction therefore gives
+$$
+\mu(r_i)\le\mu(r_0)-i.
+$$
+Taking $i=\mu(r_0)+1$ makes the right-hand side equal to $-1$, contradicting $\mu(r_i)\in\mathbb N$. ∎
 
 ---
 
@@ -291,14 +304,14 @@ The framework recognizes multiple origins for the deviation of predictions from 
 
 **Definition 12 (Def 12): Logical Indeterminacy**
 
-Logical Indeterminacy is defined as the fundamental, in-principle unpredictability arising directly from the logical structure of self-reference and reflexive interaction in systems possessing sufficient computational richness (Property R, Definition 10), as demonstrated by SPAP (Theorem 10, Theorem 11) and Reflexive Undecidability (Theorem 12). This form of indeterminacy persists even under idealized assumptions of complete knowledge and unbounded resources, stemming purely from the inherent logical and computational constraints on self-prediction and interactive computation within reflexive systems.
+Logical Indeterminacy denotes the following class-relative obstruction. On a coded model class satisfying the diagonal-closure hypotheses of Theorems 10–11, no single retained deterministic or threshold-decidable probabilistic predictor is exact on every constructible self-referential system in that class. Under the computability, Effective Operational Property-R, and interaction-model hypotheses of Theorem 12, some RID properties are not uniformly decidable by a total interacting algorithm. These statements persist when any finite resource bound is enlarged, but they do not assert that every individual system or event is unpredictable, that every 'Evolve' law is stochastic, or that the conclusions survive removal of the theorems' computability and representability hypotheses.
 
-In addition to Logical Indeterminacy, prediction error can also stem from more conventional sources:
+Prediction error can also arise from distinct sources:
 
-1.  **Stochasticity:** Potential intrinsic randomness in the underlying dynamics of the system or its environment, or specifically within the probabilistic transition rules ($V_{prob}, T_{prob}$) of Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6).
-2.  **Epistemic Uncertainty:** Limitations arising from the predictor's perspective, such as incomplete information about the system's state or parameters, inadequacies of the internal model used (e.g., model complexity $C(M_t)$ being less than the target complexity $\hat{C}_{target}(t)$), or constraints imposed by finite computational resources (time, memory, energy).
+1. **Stochasticity:** randomness posited in the underlying dynamics or in the kernels $(V_{prob},T_{prob})$ of ND-RID.
+2. **Epistemic uncertainty:** incomplete state or parameter information, model inadequacy, or finite time, memory, and energy.
 
-The PU framework derives (Theorem 28a) that the apparent randomness observed in fundamental physical processes (e.g., quantum measurement outcomes) originates from this Logical Indeterminacy after non-simplex state-space closure, PCE/PPI response quotienting, finite-response additivity, and the Born-selector descent on the MPU Hilbert branch.
+On the complex Hilbert branch carrying noncontextuality and finite-effect additivity, Theorem 28a represents the registered probability ledger by the Born trace rule. That theorem uses additional branch hypotheses and does not follow from Logical Indeterminacy alone.
 
 **4.5 Complexity Dynamics Near Predictive Limits**
 
@@ -319,35 +332,61 @@ Hence $C(M_n)=\Omega(n)$. ∎
 
 **4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{SPAP}$)**
 
-Let $\delta_{\mathrm{SPAP}}:=\alpha_{\mathrm{SPAP}}-\alpha\in(0,1/8]$. Assume a certificate $\mathfrak C_{B.2}$ proves that every admissible strategy in the declared task class contains the Bernoulli hard subfamily of Theorem B.2, preserves independent observations and the sample-cost ledger, and meets the error/confidence requirements uniformly under either Bernoulli law. Then
+Let $\delta_{\mathrm{SPAP}}:=\alpha_{SPAP}-\alpha\in(0,1/8]$. Assume a certificate $\mathfrak C_{B.2}$ proves that every admissible strategy in the declared task class contains the Bernoulli hard subfamily of Theorem B.2, preserves independent observations and the sample-cost ledger, and meets the error/confidence requirements uniformly under either Bernoulli law. Then
 $$
 C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})=\Omega\!\left(\frac{\log(1/\delta_{\mathrm{SPAP}})}{\delta_{\mathrm{SPAP}}^2}\right).\tag{13}
 $$
-With a preregistered horizon confidence budget $\beta=1/\mathcal T$, the same certificate gives
+With a preregistered horizon confidence budget $\beta=1/\mathcal T$ and $\mathcal T\ge1/\delta_{\mathrm{SPAP}}$, the same certificate gives
 $$
 \mathcal C_{\mathrm{stat}}(\delta_{\mathrm{SPAP}},\mathcal T)=\Omega\!\left(\frac{\log\mathcal T}{\delta_{\mathrm{SPAP}}^2}\right).\tag{14}
 $$
-A guarantee for one selected instance does not imply either minimax lower bound. ∎
+A guarantee for one selected instance does not imply either minimax lower bound.
 
-**Corollary 14.1 (Finite-Budget Bound on Reflexive Depth).** Let $B_C(T)$ be the total operational complexity budget available to a predictive system over horizon $T$. If each additional self-modeling level incurs minimum overhead $k>0$ as in Theorem 13, and if $B_C(T)\ge c_0$, then any sustainable recursion depth $n(T)$ satisfies
+*Proof.* The certificate $\mathfrak C_{B.2}$ supplies every premise of Theorem B.2 with $\delta=\delta_{\mathrm{SPAP}}$. Therefore every admissible strategy satisfies
 $$
-n(T)\le \left\lfloor \frac{B_C(T)-c_0}{k}\right\rfloor .
+N(S,\delta_{\mathrm{SPAP}})
+\ge
+\frac{3}{128\delta_{\mathrm{SPAP}}^2}
+\ln\!\left(\frac1{4\beta(\delta_{\mathrm{SPAP}})}\right),
 $$
-Moreover, if the target predictive performance is
+and its cost is at least $c_s$ times this quantity. Taking the infimum over the declared strategy class proves (13), because $\beta(\delta)\le\delta$ and
 $$
-\alpha = \alpha_{SPAP} - \delta_{SPAP},
+\ln\!\left(\frac1{4\delta}\right)
+=\ln(1/\delta)-\ln4
+=\Omega(\ln(1/\delta))
 $$
-then the required verification/update overhead is at least
+as $\delta\downarrow0$. If $\beta=1/\mathcal T$, the condition $\mathcal T\ge1/\delta_{\mathrm{SPAP}}$ verifies the premise $\beta\le\delta_{\mathrm{SPAP}}$, and the same bound becomes
 $$
-\Omega\!\left(\frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2}\right)
+\frac{3c_s}{128\delta_{\mathrm{SPAP}}^2}\ln(\mathcal T/4)
+=\Omega\!\left(\frac{\ln\mathcal T}{\delta_{\mathrm{SPAP}}^2}\right),
 $$
-by Theorem 14. Therefore no finite-budget system can sustain unbounded reflexive depth or arbitrarily SPAP-near self-prediction.
+which proves (14). The proof takes an infimum over a uniformly certified class, so it yields no lower bound from a guarantee for only one selected instance. ∎
 
-*Proof.* Theorem 13 gives $C(M_n)\ge c_0+nk$. Sustainability within budget $B_C(T)$ requires $c_0+nk\le B_C(T)$, yielding the stated depth bound. The SPAP-near lower bound is Theorem 14 with $\alpha=\alpha_{SPAP}-\delta_{SPAP}$. Combining both bounds proves that finite budget excludes both unbounded recursion depth and arbitrarily SPAP-near predictive performance. ∎
+**Corollary 14.1 (Finite-Budget Bound on Reflexive Depth and a Conditional SPAP-Near Bound).** Let $B_C(T)$ be the total operational complexity budget over horizon $T$. If each additional self-modeling level incurs the non-shared overhead $k>0$ of Theorem 13 and $B_C(T)\ge c_0$, then every sustainable recursion depth satisfies
+$$
+n(T)\le\left\lfloor\frac{B_C(T)-c_0}{k}\right\rfloor.
+$$
 
-**Corollary 14.1a (Operational Self-Modeling Hierarchy).** Predictive systems are stratified by sustainable reflexive depth, and, under PPI plus the SPAP/Landauer lower bound, higher strata require strictly greater physical implementation budget.
+For the additional SPAP-near conclusion, assume the certificate $\mathfrak C_{B.2}$ of Theorem 14 and a no-double-counting budget bridge under which the theorem's uniform verification/update complexity $C_{\mathrm{uni}}(\delta_{SPAP})$ is charged to $B_C(T)$. If
+$$
+\alpha=\alpha_{SPAP}-\delta_{SPAP},
+$$
+then
+$$
+B_C(T)\ge C_{\mathrm{uni}}(\delta_{SPAP})
+=\Omega\!\left(\frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2}\right).
+$$
+Consequently, a finite budget excludes $\delta_{SPAP}\downarrow0$ only on this certified task and budget-bridge branch.
 
-*Proof.* Increasing sustainable depth raises the lower bound $c_0+nk$ from Theorem 13. By PPI, physically instantiated nontrivial updates carry SPAP/Landauer cost, so the increased operational complexity entails increased physical implementation budget. ∎
+*Proof.* Theorem 13 gives $C(M_n)\ge c_0+nk$; comparison with $B_C(T)$ yields the depth bound. Under $\mathfrak C_{B.2}$, Theorem 14 gives the displayed lower bound for $C_{\mathrm{uni}}$. The budget bridge gives $B_C(T)\ge C_{\mathrm{uni}}$, completing the second implication. ∎
+
+**Corollary 14.1a (Conditional Operational Self-Modeling Hierarchy).** Predictive systems are stratified by sustainable reflexive depth. Choose an operational horizon and an accounting branch on which each additional functionally distinct self-modeling level contributes the non-shared overhead $k>0$ of Theorem 13 to a physical implementation budget that is strictly increasing in retained operational complexity. On that branch, higher sustainable reflexive depth requires strictly greater physical implementation budget.
+
+*Proof.* Theorem 13 gives
+$$
+C(M_n)\ge c_0+nk.
+$$
+If $n_2>n_1$, then the lower bounds differ by $(n_2-n_1)k>0$. The stated accounting hypothesis maps this non-shared increase strictly monotonically into physical implementation budget at the chosen horizon. Hence the minimum physical budget for depth $n_2$ is strictly greater than the corresponding minimum for depth $n_1$. ∎
 
 
 
@@ -412,17 +451,34 @@ f'(\delta)=-\frac{1+2\log(1/\delta)}{\delta^3}<0,
 f''(\delta)=\frac{5+6\log(1/\delta)}{\delta^4}>0.
 \tag{14.1h.2}
 $$
-For fixed $\delta_s$, (14.1h.1) has at most one admissible $\delta_w$. The budget equation alone selects no unique pair and yields no marginal-balance equation; a unique optimum requires a separately declared objective and its full KKT hypotheses.
+For a specified value of $\delta_s$, (14.1h.1) has at most one admissible $\delta_w$. The budget equation alone selects no unique pair and yields no marginal-balance equation; a unique optimum requires a separately declared objective and its full KKT hypotheses.
 
-**Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**
+*Proof.* Since $f(\delta)=-\log\delta\,\delta^{-2}$,
+$$
+f'(\delta)
+=-\delta^{-3}+2\log\delta\,\delta^{-3}
+=-\frac{1+2\log(1/\delta)}{\delta^3}.
+$$
+Differentiating once more gives
+$$
+f''(\delta)
+=\frac{5+6\log(1/\delta)}{\delta^4}.
+$$
+For $0<\delta<1$, $\log(1/\delta)>0$, so $f'<0$ and $f''>0$. Thus $f$ is strictly decreasing and injective. With $\delta_s$ held constant, Equation (14.1h.1) is equivalent to
+$$
+f(\delta_w)
+=
+\frac{B_C-C_{\mathrm{sh}}-c_sf(\delta_s)}{c_w},
+$$
+and $c_w>0$ by Definition 14.1g. Injectivity gives at most one admissible $\delta_w$. Because one scalar equation leaves $\delta_s$ free, it does not select a unique pair or imply an optimization stationarity condition. ∎
 
-The SPAP limit $\alpha_{SPAP} < 1$ (Theorems 10, 11) establishes a fundamental barrier—the **Prediction Coherence Boundary**—analogous to the speed-of-light limit in special relativity. This analogy is not merely metaphorical. The Predictive Universe framework reveals a deep, physical unification of these two limits through the **Unified Cost of Transgression (UCT) theorem** (Appendix N, Section N.4). The UCT demonstrates that these are two facets of a single, underlying thermodynamic cost principle.
+**Remark 3: Conceptual Synthesis—Branch-Separated Prediction Relativity.**
 
-The unifying mechanism is the **thermodynamic cost of acceleration**. An accelerating MPU perceives a thermal bath at the Unruh temperature, which acts as a source of noise that fundamentally degrades predictive capacity. As developed in Appendix N on the additive-work and effective-bath branches, counteracting this "Unruh cost" while maintaining a given level of predictive performance requires additional predictive complexity and power. The cost of prediction is therefore explicitly coupled to the MPU's trajectory.
+Theorems 10–11 establish a diagonal obstruction to a universally exact predictor on their declared model classes. They do not determine a system-independent scalar $\alpha_{SPAP}<1$. A quantitative **Prediction Coherence Boundary** requires a registered task, performance functional, model class, and a uniform quantitative bound such as the certified lower-bound branch of Theorem 14. Comparison with the relativistic causal frontier is therefore a structural analogy, not an identification.
 
-This direct coupling means that approaching the speed of light ($v \rightarrow c$) and approaching the Prediction Coherence Boundary ($PP \rightarrow \alpha_{SPAP}$) are not independent challenges; they are competing demands on a unified resource budget. The total work required for any process is the sum of the kinetic work and the predictive work, where the predictive work is explicitly dependent on both the desired accuracy and the acceleration profile.
+Appendix N's **Unified Cost of Transgression (UCT)** introduces a conditional bookkeeping bridge. When an operational detector has the stated Unruh response, temperatures are additive in the specified effective-bath model, predictive records are actively refreshed, and exported energy obeys the registered frame rule, the incremental predictive-refresh work may be added to a distinct endpoint kinetic-work ledger. Proper acceleration, not velocity alone, activates that modeled increment; inertial high-speed coasting has no Unruh term.
 
-This combined phenomenon—the existence of a fundamental logical limit on self-prediction *and* the associated divergent physical resource costs that are thermodynamically coupled to the costs of relativistic motion—is termed **Prediction Relativity**. It encapsulates several core ideas: prediction requires time (Theorem 4); relies on causal structure (Theorem 6); necessitates physical resources ($C_P$); encounters fundamental logical limits from self-reference (SPAP); and approaching *either* the relativistic or the predictive limit incurs physically divergent and interconnected costs. This analogy extends to relativistic trade-offs. Just as an object approaching the speed of light experiences length contraction and time dilation, a predictive system approaching the Prediction Coherence Boundary must make fundamental compromises due to its finite resources being consumed by the diverging complexity costs. This leads to a **Temporal Horizon Contraction**, where the system's ability to make reliable long-term predictions shrinks, and a **Predictive Resolution Contraction**, where the level of detail in its predictions must decrease. Striving for ultimate accuracy forces a sacrifice in predictive scope and granularity. Prediction Relativity signifies that the logic and thermodynamics of prediction itself, when applied within a physical system, impose intrinsic boundaries on both foresight and motion.
+The UCT does not prove that a registered predictive-performance boundary and the relativistic frontier share a microscopic origin. **Prediction Relativity** names the comparison of these separate limits and, on the UCT branch, the optimization problem that trades trajectory smoothness against predictive-refresh resources. Temporal-horizon and predictive-resolution contraction remain conditional consequences of that optimization.
 
 
 

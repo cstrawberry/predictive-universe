@@ -9,7 +9,7 @@ This appendix addresses this crucial issue. It does not attempt to derive the ex
 2.  **The Problem of Directionality:** What physical mechanism enforces the observed, universal, and irreversible direction of time's flow—the arrow of time?
 3.  **The Problem of Dynamics:** If time emerges from this synchronized medium, what is the nature of disturbances within it, and how does this temporal structure provide a substrate for advanced predictive phenomena like Consciousness Complexity (CC)?
 
-We demonstrate that the solutions to these problems are necessary consequences of the framework's core principles. We show that temporal coherence emerges dynamically because desynchronization incurs a severe penalty under the Principle of Compression Efficiency (PCE). We then prove that the arrow of time is physically enforced by the fundamental thermodynamic irreversibility of the MPU's 'Evolve' process. Finally, we argue that this emergent temporal medium is not static; its dynamic properties can be modulated by complex MPU aggregates to enact the CC influence, and propagating disturbances within it provide a physical interpretation for gravitational waves. The full derivation of the arrow of time is provided in this appendix.
+This appendix develops branch-conditional results for these three problems. Under the statistical and cost-ledger hypotheses of Theorem O.1 and the connected low-noise detailed-balance hypotheses of Theorem O.2, desynchronization is penalized and stationary measures concentrate near synchronized configurations. Under the independent pathwise entropy-production certificates of Theorems O.3 and O.3a, forward histories are exponentially favored over their reversals. Section O.6 proposes a CC-modulation interpretation of the coherent medium, while the identification of temporal disturbances with gravitational waves is restricted to the linearized Einstein/spin-2 branch stated in Remark O.4. Section O.7 derives Lorentzian signature only under its four explicit structural hypotheses.
 
 ## O.2 The MPU Cycle as a Quantum of Causal Process
 
@@ -28,37 +28,40 @@ For the MPU network to function as a coherent predictive system capable of suppo
 
 Consider two interacting MPU ensembles, *i* and *j*, whose collective cycles are misaligned by a phase lag $\Delta\phi_{ij} \in [0, 2\pi)$. Any residual misalignment introduces irreducible prediction error and compensatory resource costs. Theorem O.1 formalizes this: temporal desynchronization increases the global PCE potential $V(x)$ through reduced predictive benefit and increased operational and/or propagation costs.
 
-**Theorem O.1 (PCE Potential of Desynchronization).** A state of temporal desynchronization in an MPU network leads to a quantifiable increase in the global PCE Potential $V(x)=V_{op}+V_{prop}-V_{benefit}$ through two sources:
+**Theorem O.1 (Local PCE Penalty for Desynchronization).** Fix an interacting edge $(i,j)$. Assume log-loss; a finite outcome alphabet and a family $p_j(y|t)$ such that every $p_j(y|t)>0$ and each coordinate is twice continuously differentiable near the comparison time; finite, positive temporal Fisher information
+$$
+I_j(t)=\sum_y\frac{(\partial_tp_j(y|t))^2}{p_j(y|t)}>0;
+$$
+and a small principal phase lag
+$$
+\delta t_{ij}=\frac{\tau_{\mathrm{medium}}}{2\pi}\Delta\phi_{ij}.
+$$
+Assume also that the PCE cost ledger assigns nonnegative propagation cost to added timing jitter and strictly positive operational cost to any compensating control that restores the synchronized prediction. Then a nonzero sufficiently small lag either produces a strict predictive-benefit loss or a strict compensation cost, and the local PCE potential exceeds its synchronized value. Without compensation,
+$$
+\Delta PE_{ij}(t)
+=
+\frac12I_j(t)
+\left(\frac{\tau_{\mathrm{medium}}}{2\pi}\right)^2
+(\Delta\phi_{ij})^2
++o((\Delta\phi_{ij})^2).
+\tag{O.2}
+$$
 
-1.  **Reduced Predictive Benefit ($V_{benefit}$):** Phase misalignment induces a strictly nonnegative excess prediction error across at least one interacting edge, thereby reducing $PP$ and lowering the benefit term $\Gamma_0 B(PP)$.
-
-2.  **Increased Resource Cost ($V_{op}$ and $V_{prop}$):** Any attempt to compensate this excess error (e.g., phase tracking, error correction, or increased interaction) requires additional complexity and/or reduces effective channel fidelity, increasing operational and propagation costs.
-
-*Proof.*
-1.  **Phase lag induces a nonnegative excess prediction error:** Fix an interacting pair $(i,j)$ and let $p_j(\cdot|t)$ denote the outcome distribution for the verified event in ensemble $j$ at local time $t$. Let $\Delta\phi_{ij}\in(-\pi,\pi]$ denote the principal phase difference and define the corresponding verification-time offset by
-    $$
-    \delta t_{ij} := \frac{\tau_{medium}}{2\pi}\,\Delta\phi_{ij},
-    $$
-    where $\tau_{medium}$ is the characteristic cycle time of the coherent medium (Equation O.1). Take the scoring rule in Definition 7 to be log-loss. If $i$ forms a prediction using the stale distribution $p_j(\cdot|t)$ while the realized outcome is distributed as $p_j(\cdot|t+\delta t_{ij})$, the excess expected prediction error relative to perfect synchronization is
-    $$
-    \Delta PE_{ij}(t)
-    = D_{KL}\!\big(p_j(\cdot|t+\delta t_{ij})\,\|\,p_j(\cdot|t)\big) \ge 0.
-    $$
-    When $p_j(\cdot|t)$ is not locally constant in $t$, this divergence is strictly positive for all sufficiently small nonzero $\delta t_{ij}$. Moreover, if $p_j(\cdot|t)$ is $C^1$ with full support, then
-    $$
-    \Delta PE_{ij}(t) = \frac{1}{2} I_j(t)\,\delta t_{ij}^2 + o(\delta t_{ij}^2)
-    = \frac{1}{2} I_j(t)\Big(\frac{\tau_{medium}}{2\pi}\Big)^2 (\Delta\phi_{ij})^2 + o((\Delta\phi_{ij})^2),
-    \tag{O.2}
-    $$
-    where $I_j(t) := \sum_y \frac{(\partial_t p_j(y|t))^2}{p_j(y|t)}$ (with the analogous integral form for continuous outcomes).
-
-2.  **Reduced predictive benefit:** By Definition 7, $PP(t)=\frac{1}{1+k_{PP}PE(t)}$ is strictly decreasing in $PE(t)$. Thus any $\Delta PE_{ij}(t)>0$ strictly decreases the corresponding $PP_v$, hence decreases $B(PP_v)$ and lowers $V_{benefit}=\sum_v \Gamma_0 B(PP_v)$. Since $V=V_{op}+V_{prop}-V_{benefit}$, this increases $V$.
-
-3.  **Operational-cost penalty under compensation:** If the system seeks to maintain the synchronized $PP$ despite a fixed nonzero $\Delta\phi_{ij}$, it must reduce the excess divergence in (O.2) by additional modeling/control resources (e.g., tracking and correcting phase offsets). This requires an increase in effective complexity $C$ relative to the synchronized optimum. Because $R(C)$ is increasing (Definition 3), such compensation strictly increases $V_{op}$.
-
-4.  **Propagation-cost penalty under misalignment:** Even without compensation, a nonzero phase lag acts as additional time-jitter noise on the link $(i,j)$, which cannot increase effective channel fidelity or transmitted mutual information (data processing). The propagation term $V_{prop}$ penalizes decoherence and irreversibility (Definition D.1; Appendix E), and therefore cannot decrease under added time-jitter; it increases whenever the effective fidelity is degraded.
-
-5.  **Conclusion:** For any desynchronized configuration with $\Delta\phi_{ij}\neq 0$ on at least one predictive edge with nontrivial temporal variation, either the excess divergence in (O.2) is tolerated (reducing $V_{benefit}$) or it is compensated (increasing $V_{op}$ and typically $V_{prop}$), so $V(x)$ is strictly larger than in synchronized configurations (up to a global phase). For small misalignments, (O.2) yields a quadratic leading-order penalty in $\Delta\phi_{ij}$.
+*Proof.* Under log-loss, using $p_j(\cdot|t)$ when the outcome law is $p_j(\cdot|t+\delta t)$ incurs the excess
+$$
+D_{\mathrm{KL}}\!\left(p_j(\cdot|t+\delta t)\,\middle\|\,p_j(\cdot|t)\right).
+$$
+Write $p_y=p_y(t)$ and $h=\delta t$. Coordinatewise Taylor expansion and $\log(1+x)=x-x^2/2+o(x^2)$ give
+$$
+p_y(t+h)\log\frac{p_y(t+h)}{p_y(t)}
+=h\dot p_y+\frac{h^2}{2}\ddot p_y+\frac{h^2}{2}\frac{\dot p_y^2}{p_y}+o(h^2).
+$$
+The alphabet is finite and every $p_y$ is positive, so the remainders may be summed. Differentiating $\sum_yp_y(t)=1$ twice gives $\sum_y\dot p_y=\sum_y\ddot p_y=0$. Hence
+$$
+D_{\mathrm{KL}}(p(t+h)\|p(t))
+=\frac{h^2}{2}\sum_y\frac{\dot p_y^2}{p_y}+o(h^2)
+=\frac12I_j(t)h^2+o(h^2).
+$$ Since $I_j(t)>0$, the divergence is strictly positive for every sufficiently small nonzero $\delta t$. Definition 7 makes predictive performance strictly decrease with this excess loss, hence increases $V_{\mathrm{PCE}}$ through $-V_{\mathrm{benefit}}$. If the loss is removed by compensation, the declared cost-ledger hypothesis gives a strict increase of $V_{\mathrm{op}}$, while the jitter contribution to $V_{\mathrm{prop}}$ is nonnegative. Substituting the phase-to-time relation proves (O.2). ∎
 
 ## O.4 Dynamical Emergence of a Coherent Causal Medium
 
@@ -66,17 +69,19 @@ The existence of a desynchronization penalty in the PCE potential implies that t
 
 Let the network configuration state $x$ be expanded to include the set of local MPU time phases $\{\phi_i(t)\}$. The PCE potential $V(x, \{\phi_i\})$ has a global minimum where the phase differences $\Delta\phi_{ij} = \phi_i - \phi_j$ are zero for all interacting pairs.
 
-**Theorem O.2 (Dynamical Emergence of a Coherent Causal Medium).**
-The stochastic adaptation dynamics of the MPU network, governed by minimizing the PCE Potential $V(x, \{\phi_i\})$ (Appendix D, Equation D.8), drive the system toward phase-synchronized configurations and, in the low-noise detailed-balance stationary regime of Appendix D, self-organize into macroscopic domains of temporal coherence. This process establishes a **coherent causal medium**, a stable background of phase-locked MPU cycles upon which more complex dynamics can unfold.
+**Theorem O.2 (Conditional Low-Noise Concentration Near Synchronization).** Assume that the interaction graph is connected, every edge phase penalty is nonnegative and vanishes exactly at zero phase difference modulo $2\pi$, and all remaining terms of the PCE potential are phase-independent. Assume further the compactness, ergodicity, detailed-balance, and low-noise concentration hypotheses of Appendix D. Then the phase-sector global minimizers form
+$$
+\mathcal M_{\mathrm{sync}}
+=
+\{\phi:\phi_i-\phi_j=0\pmod{2\pi}\text{ on every edge}\},
+$$
+which consists of global phase shifts of a synchronized configuration, and the stationary measures satisfy
+$$
+\pi_\beta(U)\longrightarrow1
+$$
+for every open neighborhood $U\supset\mathcal M_{\mathrm{sync}}$ as $\beta\to\infty$.
 
-*Proof.*
-1.  **Restoring Gradient:** As established in Theorem O.1, the PCE potential is minimized when phase differences are zero. The gradient of the potential with respect to the phase differences, $\nabla_{\Delta\phi_{ij}} V$, acts as a restoring force, driving $\Delta\phi_{ij}$ towards zero.
-2.  **Long-Run Behavior of Stochastic Dynamics:** The system's evolution is described by the stochastic gradient flow $dx(t) = -\eta(x) \nabla V dt + \sqrt{2D(x)} dW(t)$. As formalized in Appendix D (Theorem D.5), these dynamics admit an ergodic stationary regime; and in low-noise detailed-balance regimes the stationary measure is biased toward (and concentrates near) the set of global minima of the potential $V$.
-3.  **Emergence of a Coherent Medium:** Theorem O.1 implies that the PCE potential depends on phase differences and is minimized on the synchronized manifold
-    $$
-    \mathcal M_{sync}:=\{\{\phi_i\}:\Delta\phi_{ij}=0\ \text{for all interacting pairs }(i,j)\},
-    $$
-    which is invariant under global phase shifts. Thus the set of global minimizers is $\mathcal M_{sync}$ rather than a single configuration. By Theorem D.5, in the low-noise detailed-balance regime the stationary measure concentrates on neighborhoods of the global minimizer set (Eq. D.12b): for any open neighborhood $U\supset \mathcal M_{sync}$, $\pi_\beta(U)\to 1$ as $\beta\to\infty$. Consequently, typical long-run configurations exhibit small local phase differences across edges and form macroscopic domains of phase-locked MPU cycles; deviations (e.g., domain walls) incur a positive potential gap and are exponentially suppressed. This establishes a coherent causal medium consistent with the background structure used in Section 11.
+*Proof.* Nonnegativity and exact vanishing show that a phase configuration minimizes the phase-sector potential exactly when every edge difference is zero. Connectedness then implies $\phi_i=\phi_j$ modulo $2\pi$ for every pair of vertices, leaving only one global phase. The phase-independent terms do not change this minimizer set. Under the stated Appendix D hypotheses, its low-noise detailed-balance concentration theorem applies to the global minimizer set and gives the displayed limit. ∎
 
 ## O.5 The Physical Origin of the Arrow of Time
 
@@ -84,38 +89,62 @@ The stochastic adaptation dynamics of the MPU network, governed by minimizing th
 
 The coherent causal rhythm that emerges from the synchronized MPU network is not symmetric; it possesses an intrinsic and irreversible direction.
 
-**Theorem O.3 (Conditional Pathwise Arrow Bound).** Suppose a coherent macroscopic step consists of $N$ update cycles with forward and reversed path measures on the same event algebra and additive stochastic entropy production
+**Theorem O.3 (Conditional Pathwise Arrow Bound).** Suppose a coherent macroscopic step consists of $N$ update cycles with forward and reversed path measures on the same event algebra and
 $$
-\Sigma_{\mathrm{tot}}=\log\frac{P_F}{P_R}=\sum_{k=1}^N\sigma_k.
+\Sigma_{\mathrm{tot}}
+=
+\log\frac{P_F}{P_R}
+=
+\sum_{k=1}^N\sigma_k.
 $$
-If a preregistered pathwise certificate gives $\sigma_k\ge h_{\min}>0$ for every cycle in the selected class, then
+If $\sigma_k\ge h_{\min}>0$ for every selected cycle, then
 $$
 \frac{P_R}{P_F}\le e^{-Nh_{\min}}.
 $$
-The specialization $P_R/P_F\le2^{-N}$ requires the additional guarantee $h_{\min}\ge\ln2$. Conditional Landauer for a reset record supplies a lower bound on bath heat; it does not by itself supply this pathwise lower bound on stochastic total entropy production. ∎
+If $h_{\min}\ge\ln2$, then $P_R/P_F\le2^{-N}$.
 
-**Theorem O.3a (Conditional Single-Cycle Irreversibility Bound).** Let $c$ and $c^\dagger$ have forward and reversed weights on the same event algebra and suppose
+*Proof.* Summing the $N$ pathwise inequalities gives
 $$
-\sigma(c)=\log\frac{P_F(c)}{P_R(c^\dagger)}.
+\log\frac{P_F}{P_R}
+=
+\sum_{k=1}^N\sigma_k
+\ge
+Nh_{\min}.
+$$
+Exponentiation gives $P_F/P_R\ge e^{Nh_{\min}}$, and inversion of positive probabilities gives the first conclusion. For $h_{\min}\ge\ln2$,
+$$
+e^{-Nh_{\min}}\le e^{-N\ln2}=2^{-N}.
+$$
+∎
+
+**Theorem O.3a (Conditional Single-Cycle Irreversibility Bound).** Let $P_F(c)>0$ and $P_R(c^\dagger)>0$ be weights on the same event algebra and suppose
+$$
+\sigma(c)=\log\frac{P_F(c)}{P_R(c^\dagger)}
+\ge h_{\min}>0.
 \tag{O.3a.1}
 $$
-If an independent guarantee-level certificate gives the pathwise bound
+Then
 $$
-\sigma(c)\ge h_{\min}>0,
-\tag{O.3a.2}
-$$
-then
-$$
-\frac{P_R(c^\dagger)}{P_F(c)}\le e^{-h_{\min}}.
+\frac{P_R(c^\dagger)}{P_F(c)}
+\le
+e^{-h_{\min}}.
 \tag{O.3a.3}
 $$
-In particular, a factor $1/2$ requires $h_{\min}\ge\ln2$. The reset-heat identity of Appendix J cannot replace assumption (O.3a.2). ∎
+In particular, a factor $1/2$ follows if $h_{\min}\ge\ln2$.
+
+*Proof.* Exponentiating the hypothesis gives
+$$
+\frac{P_F(c)}{P_R(c^\dagger)}
+\ge
+e^{h_{\min}}.
+$$
+Both weights are positive, so inversion proves (O.3a.3). If $h_{\min}\ge\ln2$, then $e^{-h_{\min}}\le1/2$. ∎
 
 **Corollary O.3a.1 (No Ensemble Requirement Under a Pathwise Cycle Bound).** When the guarantee-level update bound is imposed pathwise at the coarse-grained cycle level, the arrow of time applies to each processable actualization cycle in that class. Ensembles are then required only to estimate frequencies of outcomes, not to define the directionality of such a single update.
 
 *Proof.* Theorem O.3a uses a single cycle $c$ satisfying the single-cycle entropy-production identity and the pathwise lower bound. No averaging over a population of cycles is used in deriving (O.3a.3). ∎
 
-**Remark O.3a.2 (Scope of the Single-Cycle Bound).** Equation (O.3a.3) is a conditional pathwise consequence of (O.3a.1)-(O.3a.2). Without the pathwise lower bound (O.3a.2), Appendix J still supplies the nonzero cycle entropy budget and the macroscopic theorem O.3 supplies the multi-cycle suppression result, but an individual stochastic microscopic trajectory need not obey a separate universal lower bound on $\sigma(c)$.
+**Remark O.3a.2 (Scope of the Single-Cycle Bound).** Equation (O.3a.3) is a conditional pathwise consequence of (O.3a.1)-(O.3a.2). Without the pathwise lower bound (O.3a.2), Appendix J supplies its declared cycle-cost ledger, but neither the single-cycle bound of Theorem O.3a nor the multi-cycle suppression of Theorem O.3 follows. Theorem O.3 requires the corresponding pathwise lower bound for every selected cycle.
 
 **Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice, quantum-eraser, and pre/post-selected weak-probe protocols, a later recorded event changes which conditional subensemble or verification channel becomes operationally relevant for the retained record. It does not reverse the P-V-U order of the actualized MPU cycle and does not alter unconditioned earlier marginals (Corollary M.6.14d). Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
 
@@ -186,9 +215,9 @@ $$
 \tau=\beta_O t.
 \tag{O.3a.3.2}
 $$
-The arrow of time is then the orientation selected by the SPAP entropy-production branch of Theorem O.3 on the modular clock determined by $(\mathfrak A_O,\omega_O)$.
+If histories parametrized by this modular clock also carry the independent pathwise certificate of Theorem O.3, that theorem selects the orientation in which cumulative certified entropy production increases.
 
-*Proof.* The identity (O.3a.3.1) is Theorem F.10.4b.2 applied to the local state $\omega_O$. Equation (O.3a.3.2) is the same equality written in the physical prediction-time parameter. Theorem O.3 supplies the orientation by comparing forward and reversed update-history measures with entropy production bounded below by the SPAP cycle cost. The modular group supplies the local clock; the SPAP thermodynamic ratchet supplies its physically realized direction. ∎
+*Proof.* The identity (O.3a.3.1) is Theorem F.10.4b.2 applied to the local state $\omega_O$. Equation (O.3a.3.2) is the same equality written in the physical prediction-time parameter. These identities supply the modular clock but no orientation. Under the additional pathwise certificate $\sigma_k\ge h_{\min}>0$ on every selected cycle, Theorem O.3 gives $P_R/P_F\le e^{-Nh_{\min}}$ and therefore selects the forward orientation. ∎
 
 **Definition O.3b (Three-Term Predictive Entropy Resolution).** Let $\gamma=(x_0\to\cdots\to x_T)$ be a finite coarse-grained predictive path with reversed path $\gamma^\dagger$. A three-term predictive entropy resolution is a branch datum
 $$
@@ -467,7 +496,7 @@ $$
 
 **Corollary O.4.1 (No Externally Imposed Exact Reversal).** Even a more complex external agent cannot impose an exact reversal of the arrow of time for a less complex agent $B$ by communicating a specification of $B$'s own prior state. Any such specification that $B$ can process is itself integrated through a further forward update, and the exact-restoration idealization sits at the unprocessable boundary.
 
-*Proof.* Immediate from clauses (ii)–(iii) of Theorem O.4. Partial or shallow self-model corrections may remain SPAP-flat or near-baseline as emphasized in Remark M.10.3, but exact restoration of the prior self-model cannot be imposed from outside. ∎
+*Proof.* Let $E_{rev}$ be a message intended to restore $B$'s prior self-model. By clause (ii) of Theorem O.4, integrating $E_{rev}$ changes $B$'s own self-model, so $\Delta M_B^{(\mathrm{self})}(E_{rev})\ne0$. In the exact-restoration idealization, the task lies on the $\mu_B=\infty$ boundary and is unprocessable. If $B$ processes a sub-exact message, clause (iii) says that this integration is a new Evolve cycle in $B$'s history; on the pathwise branch it has positive stochastic entropy production, and a registered reset obeys the separate reset ledger. Thus the exact message cannot be integrated, while every processable approximation advances rather than reverses $B$'s history. Partial or shallow corrections may remain SPAP-flat as in Remark M.10.3, but they do not constitute exact restoration. ∎
 
 This result is consistent with global unitarity (Theorem E.9.5). The total closed-system state remains pure under $U_{\text{total}}$. What Theorem O.4 adds is that each observer occupies a subsystem perspective, accessing only reduced states as in Remark E.9.5.3; within that perspectival restriction, exact temporal self-restoration is unavailable from inside the subsystem boundary. Irreversibility is therefore not a violation of global information conservation, but the subsystem-level manifestation of the entropy unification thesis.
 
@@ -518,6 +547,8 @@ This partition is determined by what the information is about, not by how it arr
 (iii) The same obstruction applies reflexively to $A$ itself: no system can universally compute or exactly impose restoration of its own complete prior self-model from within its own perspective (Corollary M.10.5.1; Theorems M.10.4 and M.10.6).
 
 This parallels the relativization of simultaneity in Structural Correspondence M.6.4: the arrow of time is physically real for every observer, but the internal accessibility of one's own past is relative to the observer's complexity and self-referential structure.
+
+*Proof.* For (i), clause (i) of Theorem M.10.5 applies because the candidate record concerns $B$, not $A$'s own self-model; it therefore lies on the sender-side external-modeling branch for $A$. For (ii), when the same record is presented to $B$ as a record of $B$'s own prior self-state, Theorems M.10.4 and M.10.6 give the increasing receiver-relative burden and the infinite-cost exact-restoration boundary, while Theorem O.4 gives the temporal-restoration specialization. For (iii), interchange the target with $A$'s own complete prior self-model. Corollary M.10.5.1 and Theorems M.10.4 and M.10.6 then apply to $A$ for the same receiver-relative reason. These three cases establish the claimed difference in access structure. ∎
 
 **Corollary O.4.3a (Bidirectional Simulation Limit).**
 Let $S$ be an embedded Property-R predictive system, and let $\mathcal H^{-}$ be a past-directed reconstruction or $\mathcal H^{+}$ a future-directed simulation. If either simulation, when exposed to $S$, contains an integrated finite prefix $R_k$ such that
@@ -699,7 +730,7 @@ Second, the quantifiers differ. The relevant SPAP form is
 $$
 \forall\mathcal P\;\exists S_{\mathcal P}
 \quad
-\text{such that the predictor-responsive system $S_{\mathcal P}$ defeats $\mathcal P$},
+\text{such that the predictor-responsive system }S_{\mathcal P}\text{ defeats }\mathcal P,
 $$
 whereas standard one-wayness has the form
 $$
@@ -801,7 +832,7 @@ Equivalently, the solver-reduction and distribution-transport diagrams commute a
 $$
 \mathsf{P}^{\mathcal O}=\mathsf{NP}^{\mathcal O}
 \quad\Longleftrightarrow\quad
-\text{every polynomially balanced $\mathsf{P}^{\mathcal O}$-decidable relation has an $\mathsf{FP}^{\mathcal O}$ total witness selector.}
+\text{every polynomially balanced }\mathsf{P}^{\mathcal O}\text{-decidable relation has an }\mathsf{FP}^{\mathcal O}\text{ total witness selector.}
 $$
 
 No unlisted PU statement is declared oracle-stable, and no bridge is declared oracle-natural, merely because it belongs to the PU scaffold.
@@ -875,7 +906,13 @@ $$
 $$
 Without a proof $\mathsf K\vdash A$, the record is conditional on $A$ and does not establish $\mathsf K\vdash H$. If a proof of $A$ is later supplied in $\mathsf K$, modus ponens discharges the condition. No claim that $A$ is “at least as strong as” $H$ follows without a separate interpretation or conservativity theorem.
 
-*Proof.* The first implication is the deduction theorem. The remaining statements follow from the presence or absence of a proof of $A$ and ordinary modus ponens. ∎
+*Proof.* Let $\pi$ be the finite $\mathsf K\cup\{A\}$-derivation of $H$. Because $\mathsf K$ is assumed to support the deduction theorem, induction on the length of $\pi$ transforms every line $B$ of $\pi$ into a $\mathsf K$-derivation of $A\to B$: axioms of $\mathsf K$ are prefixed using propositional tautologies, the premise line $A$ becomes $A\to A$, and a modus-ponens step is transported by
+$$
+(A\to(B\to C))\to((A\to B)\to(A\to C)).
+$$
+Applying the transformation to the last line yields $\mathsf K\vdash A\to H$.
+
+If $\mathsf K\nvdash A$, the transformed proof ends at $A\to H$ and supplies no rule deriving $H$ without the antecedent. If a derivation $\mathsf K\vdash A$ is supplied, combining it with $\mathsf K\vdash A\to H$ by modus ponens gives $\mathsf K\vdash H$. None of these syntactic steps defines an interpretation comparing the strength of $A$ and $H$, so no such comparison follows. ∎
 
 **Proposition O.5.3f (Fixed-Exponent Deterministic All-Image Inversion Obstruction).** For every fixed $k\in\mathbb N$ there exists a length-preserving family $f^{(k)}=(f_n^{(k)})_{n\ge2}$ with one uniform polynomial-time evaluator such that every deterministic machine running in time $O(n^k)$ fails, at infinitely many input lengths, to return a valid preimage for at least one image point.
 
@@ -1088,8 +1125,8 @@ The coherent causal medium established in Theorem O.2 is not a passive or static
 The establishment of a coherent causal medium is the necessary prerequisite for the emergence of Consciousness Complexity (CC), as described in Hypothesis 3. We propose that the CC influence channel $N(t)$ is realized through the controlled modulation of this temporal medium.
 
 The causal chain proceeds as follows:
-> 1.  **Context State to Physical Signal:** A complex MPU aggregate forms a stable, coherent internal model, represented by the **context state $\text{context}_S$** (Definition L.1). This abstract state is translated into a physical, time-varying signal $N(t)$ via a PCE-optimized mapping $\mathcal{M}$ (Appendix L, Theorem L.1). This signal emerges as a temporal wave modulation (Appendix L, Theorem L.8), manifesting primarily through the electromagnetic channel $E_{rad}(t)$ (Theorem L.2), which dominates gravitational effects on the analyzed far-field classical-channel parameter range, with baseline ratio $\mathcal{R}\sim 10^{36}$ and conservative range $\mathcal{R}\sim 10^{33}\text{--}10^{39}$ (Appendix L, Proposition L.5).
-> 2.  **Signal Modulates 'Evolve' Dynamics:** This physical signal $N(t)$ interacts with a target MPU during its 'Evolve' process (Definition 27), acting as a time-dependent term in the interaction Hamiltonian $H_{int}$ (Appendix L, Equation L.87) and thereby modulating the parameters of the underlying ND-RID through AC Stark shifts (Corollary L.2.1) with rate modulation (Equation L.91).
+> 1.  **Context State to Physical Signal:** A complex MPU aggregate forms a stable, coherent internal model, represented by the **context state $\text{context}_S$** (Definition L.1). This abstract state is translated into a physical, time-varying signal $N(t)$ via a PCE-optimized mapping $\mathcal{M}$ (Appendix L, Theorem L.1). This signal emerges as a temporal wave modulation (Appendix L, Theorem L.8), manifesting primarily through the electromagnetic channel $E_{\mathrm{rad}}(t)$ (Theorem L.2), which dominates gravitational effects on the analyzed far-field classical-channel parameter range, with baseline ratio $\mathcal{R}\sim 10^{36}$ and conservative range $\mathcal{R}\sim 10^{33}\text{--}10^{39}$ (Appendix L, Proposition L.5).
+> 2.  **Signal Modulates 'Evolve' Dynamics:** This physical signal $N(t)$ interacts with a target MPU during its 'Evolve' process (Definition 27), acting as a time-dependent term in the interaction Hamiltonian $H_{\mathrm{int}}$ (Appendix L, Equation L.87) and thereby modulating the parameters of the underlying ND-RID through AC Stark shifts (Corollary L.2.1) with rate modulation (Equation L.91).
 > 3.  **Physical Influence on Perspective Shift:** The physical signal $N(t)$ provides the concrete realization of the interaction argument $N$ in the **Conditional Perspective Transition Kernel**, $G_{\text{persp}}(s' | s, k, N, \Delta t)$ (Appendix M, Equation M.2). The temporal characteristics of the signal physically set the parameters of the drift-diffusion process on the perspective manifold, creating a biased random walk.
 
 In this view, CC influence is a form of temporal signaling that steers the evolution of interaction context.
@@ -1119,7 +1156,7 @@ Therefore, CC does not act as a new, independent source of gravity. Rather, the 
 
 ## O.7 Mathematical Emergence of the Lorentzian Signature
 
-The logical and thermodynamic arguments in this appendix establish the *directionality* of time. The mathematical formalism of **Γ-convergence** provides a rigorous pathway to show how this microscopic, directed, and irreversible process necessarily gives rise to the **Lorentzian signature** of the emergent spacetime metric in the continuum limit.
+Theorems O.3 and O.3a establish a time orientation on histories carrying their pathwise entropy-production certificates. Theorem O.7a derives Lorentzian signature on the separate branch carrying a positive-definite spatial Γ-limit, an entropy-selected time coordinate, a second-order continuum principal symbol, a nondegenerate characteristic cone coinciding with an attained operational frontier, and the three-spatial-dimensional hypothesis.
 
 ### O.7.1 Γ‑convergence of the Spatial Sector
 
@@ -1154,7 +1191,7 @@ The direct Hypotheses O.7.2.1–O.7.2.4 remain the theorem-level route of Theore
 
 **Hypothesis O.7.2.1 (Positive-definite spatial $\Gamma$-limit).** The spatial $\Gamma$-limit of §O.7.1 yields a symmetric positive-definite matrix field $A^{ij}(x)$ on the regular set $M_{\mathrm{reg}}$ of Theorem 45.
 
-**Hypothesis O.7.2.2 (Entropy-selected time coordinate).** Theorem 31 together with the 2-to-1 state-merge of the SPAP update cycle (Appendix J) supplies a distinguished local time coordinate $t$ on $M_{\mathrm{reg}}$ with future direction fixed by increasing cumulative entropy production.
+**Hypothesis O.7.2.2 (Entropy-selected time coordinate).** Assume that $M_{\mathrm{reg}}$ carries a distinguished local time coordinate $t$ and that histories in the retained sector carry the independent pathwise certificate of Theorem O.3, with the future direction defined by increasing cumulative certified entropy production. Theorem 31 and the 2-to-1 SPAP merge of Appendix J motivate this hypothesis but do not construct the coordinate or discharge the pathwise certificate.
 
 **Hypothesis O.7.2.3 (Second-order continuum closure).** Any local second-order continuum closure for a scalar probe field compatible with the quadratic limit on $M_{\mathrm{reg}}$ has principal symbol
 $$
@@ -1181,18 +1218,39 @@ a_2(v,v)\ge c_2\delta^2|v|^2,
 \tag{O.7.2.3c.1}
 $$
 
-**Proposition O.7.2.3d (Gaussian Rescaled-Diagonal Limit).** For
+**Proposition O.7.2.3d (Higher-Order Symbol Bound at Observed Wavenumbers).** Under Definition O.7.2.3c, for every $m\ge3$ and
 $$
 0<|k|\le L_{\mathrm{obs}}^{-1},
 $$
-the record gives
+one has
 $$
 \frac{|a_m[k^{\otimes m}]|}{a_2[k,k]}
 \le\frac{C_m}{c_2}
 \left(\frac{\delta}{L_{\mathrm{obs}}}\right)^{m-2}.
 \tag{O.7.2.3d.1}
 $$
-The registered mixing theorem controls standardized cumulants and residuals. This is an asymptotic diagonal Gaussian statement, not a Lorentzian-signature or exact finite-cycle theorem.
+This is a deterministic higher-order-symbol estimate. A Gaussian convergence rate follows only if the audit record additionally identifies a particular central-limit or Berry--Esseen theorem and verifies all of that theorem's moment and mixing hypotheses.
+
+*Proof.* The operator-norm bound in Definition O.7.2.3c gives
+$$
+|a_m[k^{\otimes m}]|
+\le\lVert a_m\rVert |k|^m
+\le C_m\delta^m|k|^m.
+$$
+The ellipticity bound gives
+$$
+a_2[k,k]\ge c_2\delta^2|k|^2>0.
+$$
+Division is therefore valid and yields
+$$
+\frac{|a_m[k^{\otimes m}]|}{a_2[k,k]}
+\le
+\frac{C_m}{c_2}(\delta|k|)^{m-2}
+\le
+\frac{C_m}{c_2}
+\left(\frac{\delta}{L_{\mathrm{obs}}}\right)^{m-2},
+$$
+where the last inequality uses $m\ge3$ and $|k|\le L_{\mathrm{obs}}^{-1}$. No probability limit follows from these symbol inequalities alone. ∎
 
 **Hypothesis O.7.2.4 (Nondegenerate causal cone).** Assume a separately established attained operational frontier whose speed obeys the uniform upper bound of Theorem 46 and whose discrete propagation compatibility is recorded by Proposition F.1. This frontier is nondegenerate at every point of $M_{\mathrm{reg}}$ and coincides with the characteristic cone of $p_x$: for every nonzero spatial covector $k_i$, the polynomial
 $$
@@ -1262,11 +1320,29 @@ $$
 $$
 By Hypothesis O.7.2.1, $A^{ij}k_ik_j>0$; by Hypothesis O.7.2.4, $\Delta(k)>0$. Hence $a(x)<0$.
 
-*Proof of (b).* Write $G^{\mu\nu}$ in block form with $a<0$ and $A$ positive-definite. Apply the Haynsworth/Sylvester inertia additivity for the Schur complement: since $A$ is invertible,
+*Proof of (b).* For $t\in\mathbb R$ and $x\in\mathbb R^3$, the quadratic form of $G$ is
 $$
-\mathrm{inertia}(G) \;=\; \mathrm{inertia}(A) + \mathrm{inertia}\bigl(a - b^\top A^{-1}b\bigr).
+q(t,x)=at^2+2t\,b^Tx+x^TAx.
 $$
-$A$ positive-definite yields inertia $(0,0,3)$. $A^{-1}$ positive-definite yields $b^\top A^{-1}b\ge 0$, hence $a-b^\top A^{-1}b\le a<0$ is a negative scalar with inertia $(1,0,0)$. Summing, $\mathrm{inertia}(G)=(1,0,3)$. ∎
+Since $A$ is positive-definite, it is invertible. Set
+$$
+y:=x+tA^{-1}b.
+$$
+Then
+$$
+y^TAy
+=x^TAx+2t\,b^Tx+t^2b^TA^{-1}b,
+$$
+and consequently
+$$
+q(t,x)
+=y^TAy+\bigl(a-b^TA^{-1}b\bigr)t^2.
+$$
+The map $(t,x)\mapsto(t,y)$ is invertible, so it preserves the maximal dimensions of positive and negative subspaces of the quadratic form. The first term has three positive directions because $A\succ0$. Moreover $A^{-1}\succ0$, so
+$$
+a-b^TA^{-1}b\le a<0,
+$$
+and the second term has one negative direction. There is no zero direction. Hence $G$ has exactly one negative and three positive eigenvalues, i.e. inertia $(1,0,3)$. ∎
 
 **Corollary O.7a.1 (Entropy-orthogonal normal form).** Under the hypotheses of Theorem O.7a, at each $x\in M_{\mathrm{reg}}$ there exists a linear change of cotangent coordinates preserving the entropy-selected future cone such that
 $$
@@ -1281,7 +1357,7 @@ $$
 $$
 p_x(\xi) \;=\; -\alpha\bigl(\xi_0 - \alpha^{-1}b^i\xi_i\bigr)^2 + \bigl(A^{ij}+\alpha^{-1}b^ib^j\bigr)\xi_i\xi_j.
 $$
-Define $\xi_0':=\xi_0-\alpha^{-1}b^i\xi_i$ and $\xi_i':=\xi_i$. The spatial quadratic form $\widetilde A^{ij}:=A^{ij}+\alpha^{-1}b^ib^j$ is positive-definite as the sum of the positive-definite $A$ and a positive-semidefinite rank-one term. The shear is a triangular transformation with unit diagonal entries in the basis ordering $(\xi_1',\xi_2',\xi_3',\xi_0')$, hence orientation-preserving, and the entropy-selected future cone of Hypothesis O.7.2.2 maps to itself. Spatial orthonormalization $\widetilde A = O^\top D O$ with $D=\mathrm{diag}(\mu_1,\mu_2,\mu_3)$, $\mu_i>0$, followed by $\xi_i'\mapsto \sqrt{\mu_i}\,(O\xi')_i$, brings the spatial block to $\delta^{ij}$ without affecting $\xi_0'$. ∎
+Define $\xi_0':=\xi_0-\alpha^{-1}b^i\xi_i$ and $\xi_i':=\xi_i$. The spatial quadratic form $\widetilde A^{ij}:=A^{ij}+\alpha^{-1}b^ib^j$ is positive-definite as the sum of the positive-definite $A$ and a positive-semidefinite rank-one term. The shear is a triangular transformation with unit diagonal entries in the basis ordering $(\xi_1',\xi_2',\xi_3',\xi_0')$, hence orientation-preserving, and the entropy-selected future cone of Hypothesis O.7.2.2 maps to itself. Spatial orthonormalization $\widetilde A = Q^\top D Q$ with $Q\in O(3)$, $D=\operatorname{diag}(\mu_1,\mu_2,\mu_3)$, and $\mu_i>0$, followed by $\xi_i'\mapsto \sqrt{\mu_i}\,(Q\xi')_i$, brings the spatial block to $\delta^{ij}$ without affecting $\xi_0'$. ∎
 
 **Theorem O.7b (Operational Speed Normalization).** Assume the hypotheses of Corollary O.7a.1, a nondegenerate characteristic cone satisfying Hypothesis O.7.2.4, and a separately established attained local operational frontier with speed $c(x)>0$. Then in entropy-orthogonal, spatially orthonormal coordinates,
 $$
@@ -1305,13 +1381,21 @@ on such an attained-frontier branch; it supplies no uniform positive lower bound
 
 (d) When the spin obstruction class $w_2(M_{\mathrm{reg}})\in H^2(M_{\mathrm{reg}};\mathbb Z/2)$ vanishes, spin lifts exist and each has structure group equal to the unique connected double cover $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. The group factor is therefore fixed on the spin-admissible branch, but the global spin structure need not be unique.
 
-*Proof.* (a) Direct substitution of the rescaling yields the Minkowski form; $O(1,3)$ is the defining isometry group.
+*Proof.* (a) Theorem O.7b gives
+$$
+p_x(\xi)=-\frac{1}{c(x)^2}\xi_0^2+\delta^{ij}\xi_i\xi_j.
+$$
+Writing $\xi_0':=\xi_0/c(x)$ gives
+$$
+p_x(\xi)=-(\xi_0')^2+\delta^{ij}\xi_i\xi_j.
+$$
+The linear transformations preserving this quadratic form are, by definition, the elements of $O(1,3)$.
 
-(b) The four components of $O(1,3)$ are distinguished by the signs of $\det\Lambda$ and $\Lambda^0{}_0$. Orientation from §O.7.1 restricts to $\det\Lambda=+1$; the entropy-selected future cone (Hypothesis O.7.2.2) restricts to $\Lambda^0{}_0>0$. The intersection is $SO^+(1,3)$.
+(b) For $\Lambda\in O(1,3)$, the sign of $\det\Lambda$ records spatial orientation and the sign of $\Lambda^0{}_0$ records preservation or reversal of the chosen time cone. The orientation chosen in §O.7.1 imposes $\det\Lambda=1$, and Hypothesis O.7.2.2 imposes $\Lambda^0{}_0>0$. Their intersection is the identity component $SO^+(1,3)$.
 
-(c) Standard differential geometry: the orthonormal frame bundle of an oriented time-oriented Lorentzian metric has structure group $SO^+(1,3)$.
+(c) An orthonormal frame at $x$ is an ordered basis whose Gram matrix is $\operatorname{diag}(-1,1,1,1)$. Two such frames differ by an element of $O(1,3)$. Restricting to frames with the chosen spatial orientation and future time orientation restricts every transition function to $SO^+(1,3)$; hence the oriented, time-oriented orthonormal frame bundle has that structure group.
 
-(d) $\pi_1(SO^+(1,3))=\mathbb Z/2$, and the unique connected double cover is $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. A spin lift of the frame bundle exists iff the second Stiefel–Whitney class vanishes. When lifts exist, their isomorphism classes form a torsor for $H^1(M_{\mathrm{reg}};\mathbb Z/2)$, so uniqueness holds only when this torsor is trivial. Every chosen lift has structure group $\mathrm{Spin}(1,3)$, which is the Lorentzian group factor used in Theorem 48. ∎
+(d) The spin-obstruction theorem [Milnor & Stasheff 1974] applies to the oriented frame bundle from (c): its hypotheses are an oriented tangent bundle and the second Stiefel--Whitney class $w_2(M_{\mathrm{reg}})$. It states that a lift through the connected double cover exists exactly when $w_2(M_{\mathrm{reg}})=0$, and that the isomorphism classes of lifts, when nonempty, form a torsor for $H^1(M_{\mathrm{reg}};\mathbb Z/2)$. The connected double cover of $SO^+(1,3)$ is $\operatorname{Spin}(1,3)\cong SL(2,\mathbb C)$. Thus every lift has this structure group, whereas the global lift is unique only when the stated torsor has one element. ∎
 
 **Corollary O.7b.2 (No Riemannian Replacement of the Causal Cone).** Under Hypotheses O.7.2.1–O.7.2.4, a positive-definite four-dimensional principal symbol cannot represent the separately accepted nondegenerate characteristic cone and attained operational frontier. If $H^{\mu\nu}$ is positive-definite, then
 $$
@@ -1326,11 +1410,11 @@ Premise (A5) of §12 is therefore theorem-level only on the emergent-spacetime b
 
 ## O.8 Conclusion
 
-The familiar properties of time—its coherence over vast scales and its unwavering forward direction—are not postulated in the Predictive Universe framework but are derived as necessary emergent features of the collective predictive process.
-*   **Temporal Coherence** emerges as a dynamically stable state, enforced by the Principle of Compression Efficiency, which penalizes the predictive errors and resource costs inherent in desynchronization. The MPU network self-organizes into a synchronized coherent causal medium to optimize its collective predictive function.
-*   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle. Under the pathwise guarantee-level coarse graining of Theorem O.3a, a cycle satisfies $P_R/P_F\le e^{-h_{\min}}$; the factor $1/2$ requires the separate certificate $h_{\min}\ge\ln2$.
+The framework obtains temporal coherence and a probabilistic forward orientation on explicitly certified branches.
+*   **Temporal Coherence:** Under the statistical and ledger premises of Theorem O.1 and the connected low-noise detailed-balance hypotheses of Theorem O.2, stationary measures concentrate near synchronized phase configurations.
+*   **The Arrow of Time:** Under the pathwise guarantee-level certificate of Theorem O.3a, a cycle satisfies $P_R/P_F\le e^{-h_{\min}}$; the factor $1/2$ requires the separate condition $h_{\min}\ge\ln2$. The structural SPAP merge and reset-cost ledger do not by themselves establish this stochastic pathwise bound.
 *   **The Perspectival Arrow** reveals that temporal irreversibility possesses internal structure graded by observer complexity (Theorem O.4; Proposition O.4.2). Even a more complex external agent cannot impose an exact reversal of another agent's arrow by communicating a specification of that agent's prior self-state: any such message that is processable is integrated through a further forward update, and the exact-restoration idealization is unprocessable (Corollary O.4.1). The depth of the arrow — the cost of temporal self-restoration — is relative to the observer's position in the complexity hierarchy, paralleling the relativization of simultaneity in Structural Correspondence M.6.4 (Corollary O.4.3). The irreversibility resides in the processing of self-referential content, not in the loss of information (Remark O.4.2): global unitarity preserves all information (Theorem E.9.5), yet no observer can use that conserved information for self-reversal, because integrating a specification of one's own prior self-model is itself another irreversible forward step. A more complex in-universe agent may externally model a less complex one at sender-side SPAP-flat cost, but every modeler remains subject to its own self-referential limits, and the decisive obstruction to exact reversal remains at the receiver (Remark O.4.3). Even highly accurate sub-exact reconstruction that targets deep self-model parameters already enters the divergent cost regime (Remark O.4.4). Communicated information partitions into externally targeted content with $\sigma_B(E) = 0$ and self-referential content with $\sigma_B(E) > 0$; the former is SPAP-flat, while the latter ranges from baseline cost in shallow cases to SPAP-divergent cost for deep self-model demands (Remark O.4.5; Remark M.10.3).
 
-Crucially, this emergent temporal structure is not a passive background. Its dynamic properties provide the physical substrate for the framework's most profound emergent phenomena. The controlled modulation of this medium's coherence provides a channel for Consciousness Complexity to exert its influence, with the energy cost of this modulation being properly accounted for within the standard stress-energy tensor. Meanwhile, uncontrolled, large-scale disturbances in the medium, sourced by bulk fluctuations in $T_{\mu\nu}$, propagate as temporal waves that are physically identical to the gravitational waves of General Relativity. This unifies the emergence of time, the mechanism of CC, and the nature of gravity within a single, coherent, and dynamic picture.
+The temporal-coherence and pathwise-arrow results can be combined with the CC and gravity sectors only on their common certified branch. A CC modulation requires the independent context-to-response and energy-accounting data of Appendices L and S. A gravitational-wave identification additionally requires the Appendix-B source tensor, the operational-continuum/AQFT bridge, the metric equation, and a linearized transverse-traceless propagation theorem. Appendix O supplies temporal ordering and, on Hypotheses O.7.2.1–O.7.2.4, a Lorentzian-signature branch; it does not by itself identify a temporal-coherence disturbance with a gravitational wave.
 
 

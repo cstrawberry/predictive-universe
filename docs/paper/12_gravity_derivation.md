@@ -86,13 +86,23 @@ $$
 T_U=\frac{\kappa}{2\pi}.
 $$
 
-*Proof.* The equilibrium certificate assumed in Theorem 48a.0 and Theorems G.1.9.4-G.1.9.5 identify the local reference state as physical Gibbs/KMS rather than merely modularly representable.
-
-
+*Proof.* The equilibrium certificate assumed in Theorem 48a.0 and Theorems G.1.9.4–G.1.9.5 identifies the local reference state as a physical Gibbs/KMS state rather than merely a modularly representable state. By Theorem G.1.9.6,
 $$
-\delta S=\delta\langle K_{\mathrm{mod}}\rangle=\frac{\delta Q}{T_U}
+K_{\mathrm{mod}}=\frac{2\pi}{\kappa}K_{\mathrm{boost}}.
 $$
-to first order. This is the local near-equilibrium Clausius relation used below. ∎
+The local heat perturbation in Definition 39 is the perturbation of boost energy, $\delta Q=\delta\langle K_{\mathrm{boost}}\rangle$, with the stated horizon orientation. Therefore the entanglement first law of Theorem G.1.9.7 gives
+$$
+\delta S
+=
+\delta\langle K_{\mathrm{mod}}\rangle
+=
+\frac{2\pi}{\kappa}\delta\langle K_{\mathrm{boost}}\rangle
+=
+\frac{\delta Q}{T_U},
+\qquad
+T_U=\frac{\kappa}{2\pi}.
+$$
+The omitted terms are second order in the near-horizon perturbation parameter, yielding $\delta S=\delta Q/T_U+O(\lambda^2)$. ∎
 
 **12.1.3 Definition 39 (Def 39): Horizon Heat Flux $\delta Q$**
 
@@ -259,27 +269,54 @@ $$
 -\frac12\theta^2-\sigma_{\alpha\beta}\sigma^{\alpha\beta}-R_{\mu\nu}k^\mu k^\nu.
 \tag{73}
 $$
-Because $\theta(0)=0$ and $\sigma(0)=0$, the quadratic terms are higher order and
+Because $\theta(0)=0$ and $\sigma(0)=0$, smoothness of the congruence and curvature gives
 $$
-\theta(\lambda)=-\lambda\,R_{\mu\nu}k^\mu k^\nu+O(\lambda^2).
+\theta(\lambda)
+=
+-\lambda\,R_{\mu\nu}(p)k^\mu k^\nu
++
+O(\lambda^2)
 $$
-Since $d(\delta\mathcal A)/d\lambda=\theta\,dA$, integration yields
+uniformly on a sufficiently small segment $\lambda\in[\lambda_0,0]$. Since $d(\delta\mathcal A)/d\lambda=\theta\,dA$, integration yields
 $$
 \delta\mathcal A
 =
--\int_\mathcal H R_{\mu\nu}k^\mu k^\nu\,\lambda\,d\lambda\,dA
-+O(\lambda^2).
+-\int_\mathcal H R_{\mu\nu}(p)k^\mu k^\nu\,\lambda\,d\lambda\,dA
++
+O(|\lambda_0|^3)
 \tag{74}
 $$
+for a transverse patch of constant finite reference area, with the constant in the remainder uniform on that patch.
 
-**Step 3 (Clausius equality).** Using $T=\kappa/(2\pi)$ and $\delta S=\eta\,\delta\mathcal A$, the equality $\delta Q=T\delta S$ gives
+**Step 3 (Clausius equality and localization).** Let the transverse reference patch have area $A_0>0$, and let the affine interval be $[\lambda_0,0]$. Continuity of $T_{\mu\nu}^{(MPU)}k^\mu k^\nu$ and $R_{\mu\nu}k^\mu k^\nu$ at $p$, together with (72) and (74), gives
 $$
-T_{\mu\nu}^{(MPU)}k^\mu k^\nu
+\delta Q
 =
-\frac{\eta}{2\pi}\,R_{\mu\nu}k^\mu k^\nu
+\frac{\kappa A_0|\lambda_0|^2}{2}
+T_{\mu\nu}^{(MPU)}(p)k^\mu k^\nu
++O(|\lambda_0|^3),
+$$
+$$
+\delta\mathcal A
+=
+\frac{A_0|\lambda_0|^2}{2}
+R_{\mu\nu}(p)k^\mu k^\nu
++O(|\lambda_0|^3).
+$$
+Using $T=\kappa/(2\pi)$ and $\delta S=\eta\,\delta\mathcal A$, the equality $\delta Q=T\delta S$ therefore implies
+$$
+\frac{\kappa A_0|\lambda_0|^2}{2}T_{kk}(p)+O(|\lambda_0|^3)
+=
+\frac{\kappa\eta A_0|\lambda_0|^2}{4\pi}R_{kk}(p)+O(|\lambda_0|^3).
+$$
+Divide by $\kappa A_0|\lambda_0|^2/2>0$ and take $\lambda_0\to0^-$ to obtain
+$$
+T_{\mu\nu}^{(MPU)}(p)k^\mu k^\nu
+=
+\frac{\eta}{2\pi}\,R_{\mu\nu}(p)k^\mu k^\nu.
 \tag{75}
 $$
-for every null $k^\mu$. Define
+Because $p$ and the local null direction $k$ were arbitrary, this holds for every null $k^\mu$. Define
 $$
 X_{\mu\nu}:=R_{\mu\nu}-\frac{2\pi}{\eta}\,T_{\mu\nu}^{(MPU)}.
 $$
@@ -352,12 +389,17 @@ $$
 (Equations (E.7)–(E.9)). Substituting this calibration and restoring SI units converts the natural-units result of Theorem 12.1 into Equation (76). Thus Section 12 uses the area law and the coefficient $G$ already obtained in Appendix E; it does not re-derive them from the Clausius argument alone. QED
 
 **Lemma 12.1 (Uniqueness of Einstein Tensor).**
-In four dimensions, the only generally covariant, symmetric, divergence-free rank-2 tensor field derivable from a Lagrangian containing at most second derivatives of $g_{\mu\nu}$, and consistent with the emergent Bekenstein-Hawking entropy density fixed by PU principles (Appendix E), is the Einstein tensor plus a cosmological term: $\mathcal E_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu} = R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}$.
-*Proof.* Lovelock's classification theorem [Lovelock 1971] states that in $D=4$ every local diffeomorphism-invariant metric action whose Euler-Lagrange equations are symmetric, divergence-free, and involve at most second derivatives yields field equations of the form
+In four dimensions, let $\mathcal E_{\mu\nu}$ be the metric Euler–Lagrange tensor of a local diffeomorphism-invariant metric action. Assume that $\mathcal E_{\mu\nu}$ is symmetric, divergence-free, and depends on $g_{\mu\nu}$ and its derivatives through at most second differential order, and require consistency with the emergent Bekenstein-Hawking entropy density supplied by the Appendix E branch. Then, up to the normalization set by that entropy density, $\mathcal E_{\mu\nu}$ is the Einstein tensor plus a cosmological term:
 $$
-\mathcal E_{\mu\nu} = c_1 G_{\mu\nu} + c_0 g_{\mu\nu},
+\mathcal E_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+R_{\mu\nu}-\tfrac12 Rg_{\mu\nu}+\Lambda g_{\mu\nu}.
 $$
-because the only additional Lovelock density, the Gauss-Bonnet term, is topological in four dimensions and contributes no local field equations. Hence no independent second-order covariant rank-2 tensor beyond $G_{\mu\nu}$ and $g_{\mu\nu}$ is available under the stated hypotheses. Appendix E fixes the horizon entropy density to the Bekenstein-Hawking value $1/(4G)$, which calibrates the normalization of the Einstein-Hilbert term and therefore sets $c_1=1$ in the units used in Equation (76). Writing $c_0=\Lambda$ gives the stated tensor. Any higher-curvature correction would either violate the hypothesis of at most second derivatives or modify the Wald entropy density away from the Appendix E coefficient. Therefore the only tensor consistent with all stated hypotheses is $G_{\mu\nu}+\Lambda g_{\mu\nu}$. QED
+*Proof.* Lovelock's classification theorem [Lovelock 1971] states that in $D=4$ every local diffeomorphism-invariant metric action whose Euler–Lagrange equations are symmetric, divergence-free, and involve at most second derivatives yields field equations of the form
+$$
+\mathcal E_{\mu\nu}=c_1G_{\mu\nu}+c_0g_{\mu\nu},
+$$
+because the only additional Lovelock density, the Gauss–Bonnet term, is topological in four dimensions and contributes no local bulk field equations. Hence no independent second-order covariant rank-2 Euler–Lagrange tensor beyond $G_{\mu\nu}$ and $g_{\mu\nu}$ is available under the stated hypotheses. Appendix E supplies the horizon entropy density $1/(4G)$, which calibrates the Einstein–Hilbert normalization and sets $c_1=1$ in the units used in Equation (76). Writing $c_0=\Lambda$ gives the stated tensor. Higher-curvature terms whose metric equations have differential order greater than two lie outside the hypotheses; the four-dimensional Gauss–Bonnet density is already included as a topological exception. QED
 
 This subsection gives an action-level closure of the preceding thermodynamic derivation on the accepted local metric-action branch. It should not be read as replacing the MPU/channel-capacity derivation of the entropy density; rather, it shows that once the area-law density has been fixed by the MPU channel count and the finite KMS-descent/Clausius gate has supplied local equilibrium, the corresponding local metric equation is the Einstein equation. PCE supplies the entropy-density and channel-capacity input; Lovelock/Jacobson/Wald-style locality, diffeomorphism invariance, second-order field equations, and Wald-density matching supply the metric-action uniqueness gate. PCE alone is not used as a substitute for the local metric-action hypotheses. The finite max-flow/min-cut statements of Appendix E.8.4 supply the entropy bottleneck and its first variation; they do not replace the local Clausius, Raychaudhuri, KMS/generator-convergence, and Lovelock/Wald gates by a KKT or convex-duality derivation of the metric field equations.
 
@@ -390,46 +432,100 @@ $$
 $$
 using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}=4\pi a_1\,A$. Matching to the PU area law $A/(4G)$ gives $4\pi a_1=1/(4G)$, hence $a_1=1/(16\pi G)$. The cosmological term contributes no Wald area density; writing $a_0=-2a_1\Lambda$ yields the stated action. Thus PU fixes the thermodynamic entropy-density side of the argument through finite channel capacity, while the metric-action uniqueness side is the standard local Lovelock/Wald gate. Restoring SI units by the conventional factor $c^3$ gives the SI form. Varying the sum $S_{\mathrm{grav}}+S_{\mathrm{matter}}$ with respect to $g^{\mu\nu}$, using (67e), yields (76a). ∎
 
-**Corollary 12.1b (Certificate-Complete Emergent Metric Branch).** On any regular operational-continuum branch satisfying the finite KMS-descent certificate of Definition F.10.12a, the route to (76a) is a certificate-complete emergent metric/channel-capacity thermodynamics derivation. No independent microscopic gravitational Hilbert sector is introduced.
+**Corollary 12.1b (Certificate-Complete Emergent Metric Branch).** Let a regular operational-continuum branch satisfy the finite KMS-descent certificate of Definition F.10.12a and the Appendix B source certificate: admissible bounded-variation coarse-graining with a paired or unique continuum limit, the momentum-flux and Belinfante derivative identities, Gâteaux differentiability and discrete-to-continuum first-variation consistency, local-equilibrium continuity, and global horizon-flux consistency with convergent quadrature. If the area-law and local-horizon entries used by Theorem 12.1 are accepted on the same retained cover, the route to (76a) is a certificate-complete emergent metric/channel-capacity thermodynamics derivation. No independent microscopic gravitational Hilbert sector is introduced.
 
-*Proof.* Definition F.10.12a fixes, on every element of a refining finite cover, the local modular generator, finite-temperature/KMS state, channel min-cut entropy, overlap cocycle, Clausius defect, stress-energy flux, and certified error bounds. Theorem F.10.12c proves that vanishing certificate defect gives a compatible KMS sheaf, vanishing Connes cocycle obstruction, and zero local Clausius mismatch in the continuum limit. The local-horizon bridge of Theorem 48a then supplies the local Rindler horizon used in Theorem 12.1. Corollary E.8.4g supplies the channel-capacity area law, and Appendix B supplies the conserved stress-energy tensor. Therefore every premise used in Theorem 12.1 is supplied by a finite operational certificate and its limiting regular branch. The construction is entirely through metric response, finite channel capacity, KMS thermodynamics, and stress-energy conservation, so no additional microscopic gravitational state space is added. ∎
+*Proof.* Definition F.10.12a fixes on the refining cover the modular generator, KMS state, channel min-cut entropy, overlap cocycle, Clausius defect, stress-energy flux, and error bounds. Theorem F.10.12c sends vanishing certificate defect to a compatible KMS sheaf and zero local Clausius mismatch. Theorem 48a supplies the local Rindler horizon, and Corollary E.8.4g supplies the channel-capacity area law. Under the Appendix B source certificate, Theorems B.8b–B.8d identify the recorded flux with one conserved continuum tensor and with the metric variational source. These are exactly the source, entropy, temperature, and local-horizon premises used by Theorem 12.1. Every input is a finite metric-response, channel-capacity, KMS, stress, or overlap datum, so the derivation introduces no microscopic gravitational state space. ∎
 
-**Theorem 12.1g (Clausius-Defect Tensor Tomography).** Let $p$ be a point in a regular emergent-continuum branch and let $\mathcal N_B(p)$ be the finite retained set of null directions at budget $B$. Suppose the finite KMS/Clausius certificate assigns a retained defect
+**Theorem 12.1g (Clausius-Defect Tensor Tomography).** Let $p$ be a point in a regular emergent-continuum branch and let $\mathcal N_B(p)=\{k_1,\ldots,k_m\}$ be the finite retained set of null directions at budget $B$. For a transverse cell of area $A_0$ and an affine interval $[\lambda_0,0]$, let the finite KMS/Clausius certificate assign the integrated defect
 $$
-\chi_p(k)
+\chi_{p,A_0,\lambda_0}(k)
 :=
-\delta Q_p(k)-T_p\delta S_p(k)
+\delta Q_{p,A_0,\lambda_0}(k)-T_p\delta S_{p,A_0,\lambda_0}(k).
 \tag{12.1g.1}
 $$
-for $k\in\mathcal N_B(p)$, and suppose $\chi_p$ is homogeneous quadratic in $k$ within the declared finite tolerance. If $\mathcal N_B(p)$ separates trace-free symmetric quadratic forms, then there is a unique trace-free symmetric tensor representative $C^0_{\mu\nu}(p)$ such that
+Assume the localized density limit
 $$
-\chi_p(k)
+\widehat\chi_p(k)
+:=
+\lim_{(A_0,\lambda_0)\to(0,0^-)}
+\frac{2\chi_{p,A_0,\lambda_0}(k)}{\kappa A_0|\lambda_0|^2}
+\tag{12.1g.1a}
+$$
+exists for every retained direction and is independent of the admissible shrinking-cell sequence. Define
+$$
+E_B:\operatorname{Sym}^2_0(T_p^*M)\longrightarrow\mathbb R^m,
+\qquad
+(E_BJ)_a=J_{\mu\nu}k_a^\mu k_a^\nu.
+$$
+Assume that $\ker E_B=\{0\}$ and that the data vector $(\widehat\chi_p(k_a))_{a=1}^m$ belongs to $\operatorname{ran}E_B$. Then there is a unique trace-free symmetric tensor $J^0_{\mu\nu}(p)$ such that
+$$
+\widehat\chi_p(k)
 =
-C^0_{\mu\nu}(p)k^\mu k^\nu
+J^0_{\mu\nu}(p)k^\mu k^\nu
 \tag{12.1g.2}
 $$
-for every retained null direction $k\in\mathcal N_B(p)$.
+for every retained null direction.
 
-In the continuum closure, values on all null directions determine the corresponding symmetric tensor only modulo pure trace, because $g_{\mu\nu}k^\mu k^\nu=0$ for null $k$. With stress conservation and the Bianchi identity, this trace freedom is absorbed into the local cosmological or integration term. In natural units, the retained equation-of-state branch therefore has the form
+For the continuum equation-of-state conclusion, assume in addition that the fields $J^0(p)$ extend smoothly and admit a symmetric completion
+$$
+J_{\mu\nu}=J^0_{\mu\nu}+\psi g_{\mu\nu}
+$$
+with $\nabla^\mu J_{\mu\nu}=0$ on the same branch. Define the curvature-dimension defect tensor
+$$
+C_{\mu\nu}:=-\frac{2\pi}{\eta}J_{\mu\nu}.
+\tag{12.1g.2a}
+$$
+Then the retained equation-of-state branch has the natural-unit form
 $$
 G_{\mu\nu}+\Lambda g_{\mu\nu}
 =
 8\pi G\,T_{\mu\nu}+C_{\mu\nu},
 \tag{12.1g.3}
 $$
-with the usual replacement $8\pi G\mapsto 8\pi G/c^4$ in SI units, where $C_{\mu\nu}$ is the chosen symmetric representative of the retained Clausius-defect class. The accepted reversible PU gravity branch is the special case
+where $\eta=1/(4G)$ and $\Lambda$ is constant on each connected component. In SI units the matter coefficient is $8\pi G/c^4$, with the same unit restoration applied to the calibrated defect source. The zero-defect branch determines
 $$
-C_{\mu\nu}=0.
+C^0_{\mu\nu}=0.
 \tag{12.1g.4}
 $$
-If the finite certificate bounds $|\chi_p(k)|\le\eta$ on all retained null directions and the separating null-frame system has condition constant $\kappa_B$, then
+Its conserved completion is $C_{\mu\nu}=\varphi g_{\mu\nu}$ with $\varphi$ constant on each connected component. This term is absorbed into $\Lambda$; after that absorption, or after imposing the representative convention $\psi=0$, one may write $C_{\mu\nu}=0$.
+If $|\widehat\chi_p(k)|\le\epsilon_B$ on all retained directions and the injective evaluation map has inverse-on-range norm $\kappa_B$, then
 $$
-\lVert C^0(p)\rVert_B^*\le \kappa_B\eta
+\lVert J^0(p)\rVert_B^*\le\kappa_B\epsilon_B,
+\qquad
+\lVert C^0(p)\rVert_B^*\le\frac{2\pi}{\eta}\kappa_B\epsilon_B.
 \tag{12.1g.5}
 $$
-in the corresponding dual trace-free tensor norm.
 
-*Proof.* The null-cone lemma used in the proof of Theorem 12.1 states that a symmetric tensor whose contraction with every null vector vanishes is proportional to the metric. Therefore null contractions determine only the trace-free part of a symmetric tensor. On a finite budget, the same conclusion holds for the retained directions exactly when they separate trace-free quadratic forms; finite-dimensional linear algebra then gives existence and uniqueness of the trace-free representative and the norm bound with condition constant $\kappa_B$. In the continuum closure the remaining pure-trace ambiguity is invisible on null contractions and is absorbed into the cosmological/integration term once the Bianchi identity and stress conservation are imposed. Setting the retained defect to zero recovers the reversible branch of Theorem 12.1. ∎
+*Proof.* The expansions in the proof of Theorem 12.1 give
+$$
+\delta Q
+=
+\frac{\kappa A_0|\lambda_0|^2}{2}T_{kk}(p)+O(|\lambda_0|^3),
+\qquad
+T_p\delta S
+=
+\frac{\kappa\eta A_0|\lambda_0|^2}{4\pi}R_{kk}(p)+O(|\lambda_0|^3).
+$$
+Consequently (12.1g.1a) gives
+$$
+\widehat\chi_p(k)
+=
+T_{kk}(p)-\frac{\eta}{2\pi}R_{kk}(p).
+\tag{12.1g.6}
+$$
+The range hypothesis supplies $J^0$ with $E_BJ^0=(\widehat\chi_p(k_a))_a$, and $\ker E_B=\{0\}$ makes it unique. Applying the inverse on the range gives $\lVert J^0\rVert_B^*\le\kappa_B\epsilon_B$; multiplication by $2\pi/\eta$ gives the second norm bound.
+
+In the continuum null-direction closure, (12.1g.6) and (12.1g.2a) imply
+$$
+\left(R_{\mu\nu}-\frac{2\pi}{\eta}T_{\mu\nu}-C_{\mu\nu}\right)k^\mu k^\nu=0
+$$
+for every null $k$. The null-cone lemma makes the tensor in parentheses proportional to $g_{\mu\nu}$. Rewriting the proportionality term as $-\tfrac12Rg_{\mu\nu}+\Lambda g_{\mu\nu}$ gives
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+\frac{2\pi}{\eta}T_{\mu\nu}+C_{\mu\nu}.
+$$
+The contracted Bianchi identity, $\nabla^\mu T_{\mu\nu}=0$, and the assumed conservation of $J_{\mu\nu}$, hence of $C_{\mu\nu}$, make $\Lambda$ constant. Finally $2\pi/\eta=8\pi G$. If the null defect vanishes, injectivity gives $J^0=C^0=0$. The completion is then pure trace. Its conservation gives $\nabla_\nu\varphi=0$, so $\varphi$ is constant on each connected component and may be absorbed into $\Lambda$. Fixing the representative $\psi=0$ gives $J=C=0$. ∎
 
 **Corollary 12.1g.a (Minimal Nine-Horizon Tensor Tomography and Tenth-Direction Sum Rule).** Work at one event in a local orthonormal frame of signature $(-,+,+,+)$. For a trace-free symmetric tensor $C_{\mu\nu}$ and $k(n)=(1,n)$ with $n\in S^2$, define $q(n)=C_{\mu\nu}k^\mu(n)k^\nu(n)$. Take
 $$
@@ -471,7 +567,70 @@ q_{10}
 \tag{12.1g.a.4}
 $$
 
-*Proof.* The trace-free symmetric tensors in four dimensions form a nine-dimensional vector space. Equation (12.1g.a.2) follows by substituting $C_{33}=C_{00}-C_{11}-C_{22}$ into $C_{\mu\nu}k^\mu k^\nu$. Direct exact elimination on the nine rows gives (12.1g.a.3), so the map is injective and reconstructs $u=A^{-1}q$. No design with fewer than nine scalar contractions can be injective on a nine-dimensional vector space. Expressing $A(n_{10})$ in the row span of $A(n_1),\ldots,A(n_9)$ gives (12.1g.a.4). ∎
+*Proof.* A symmetric $4\times4$ tensor has ten independent components, and the trace equation $-C_{00}+C_{11}+C_{22}+C_{33}=0$ removes one, so the trace-free space has dimension nine. Substitution of $C_{33}=C_{00}-C_{11}-C_{22}$ into $C_{\mu\nu}k^\mu k^\nu$ gives (12.1g.a.2).
+
+For the first six directions, the upper-left block of the tomography matrix is
+$$
+B=
+\begin{pmatrix}
+1&2&0&0&1&0\\
+1&-2&0&0&1&0\\
+1&0&2&0&0&1\\
+1&0&-2&0&0&1\\
+2&0&0&2&-1&-1\\
+2&0&0&-2&-1&-1
+\end{pmatrix},
+$$
+and those six rows vanish in columns $7,8,9$. The lower-right block from $n_7,n_8,n_9$ is
+$$
+D=\frac23
+\begin{pmatrix}
+1&1&1\\
+1&-1&-1\\
+-1&1&-1
+\end{pmatrix}.
+$$
+Replace each consecutive row pair of $B$ by its half-sum and half-difference. The determinant of this row transformation is $(-1/2)^3=-1/8$. Ordering the three difference rows before the three sum rows and ordering columns as $(2,3,4,1,5,6)$ leaves a block-diagonal matrix with blocks $2I_3$ and
+$$
+S=
+\begin{pmatrix}
+1&1&0\\
+1&0&1\\
+2&-1&-1
+\end{pmatrix},
+\qquad
+\det S=4.
+$$
+The row permutation is even and the column permutation is odd, so the transformed determinant in the original column order is $-2^3\det S=-32$. Hence $(-1/8)\det B=-32$, and therefore $\det B=256$. Also
+$$
+\det D
+=\left(\frac23\right)^3
+\det\begin{pmatrix}1&1&1\\1&-1&-1\\-1&1&-1\end{pmatrix}
+=\frac8{27}\cdot4
+=\frac{32}{27}.
+$$
+The full matrix is block lower triangular, so
+$$
+\det A=\det B\det D
+=256\cdot\frac{32}{27}
+=\frac{8192}{27}\ne0.
+$$
+Thus the nine contractions determine $u=A^{-1}q$. A linear map from a nine-dimensional vector space to fewer than nine scalars has a nonzero kernel by rank-nullity, proving minimality.
+
+Finally, put $a_+=(2+\sqrt3)/3$ and $a_-=(2-\sqrt3)/3$. Substitution into (12.1g.a.2) gives
+$$
+A(n_{10})
+=
+\left(\frac43,-\frac2{\sqrt3},\frac2{\sqrt3},\frac2{\sqrt3},0,0,-\frac23,-\frac23,\frac23\right),
+$$
+and coordinate-by-coordinate addition gives
+$$
+A(n_{10})
+=a_+\bigl(A(n_1)+A(n_3)+A(n_5)\bigr)
++a_-\bigl(A(n_2)+A(n_4)+A(n_6)\bigr)
+-A(n_7)-A(n_8)-A(n_9).
+$$
+Multiplying this row identity by $u$ proves (12.1g.a.4). ∎
 
 **Operational use.** The nine directions are a minimal reconstruction certificate for the trace-free Clausius defect of Theorem 12.1g; the tenth is an overdetermined falsifier. The pure-trace term remains null-invisible and descends to the cosmological integration term exactly as in Theorem 12.1g. The determinant is frame-coordinate dependent, while injectivity and minimality concern the specified $k^0=1$-normalized null-vector design. Under independent rescaling $k_a\mapsto s_ak_a$, each datum scales as $q_a\mapsto s_a^2q_a$, and the tenth-direction coefficients must be rescaled accordingly.
 
@@ -497,7 +656,7 @@ with the following entries.
 
 1. $\bar Q_{\mathrm{grav},n}$ is the finite operational quotient of admissible local stress-energy/min-cut profiles compatible with the cover $\mathcal U_n$, modulo equality of all retained finite protocol responses on $\mathcal U_n$.
 
-2. $E_n$ is a finite-dimensional real coordinate envelope containing $\bar Q_{\mathrm{grav},n}$ as a finite subset. The envelope is not an additional physical arena: two points of $E_n$ represent physical alternatives only when they restrict to retained finite protocol responses. It is introduced solely to define derivatives of the finite-response cost.
+2. $E_n$ is a finite-dimensional real coordinate envelope containing $\bar Q_{\mathrm{grav},n}$ as a finite subset. Fix a norm on $E_n$, denoted $\|\cdot\|$ throughout Definition 12.1d and Theorem 12.1c; every ball, radius, bounded-derivative statement, and $O(\|\Delta q\|^2)$ estimate in those results refers to this norm. The envelope is not an additional physical arena: two points of $E_n$ represent physical alternatives only when they restrict to retained finite protocol responses. It is introduced solely to define derivatives of the finite-response cost.
 
 3. $\widetilde V_{\mathrm{grav},n}:E_n\to\mathbb R$ is a twice differentiable extension of the gravitational PCE cost whose restriction to $\bar Q_{\mathrm{grav},n}$ equals the finite cost assigned by the accepted KMS-descent certificate. It contains only the description, violation, and regret components already present in the PPI/PCE cost.
 
@@ -521,7 +680,7 @@ H_{\mathrm{grav},n}
 \left.\nabla^2\widetilde V_{\mathrm{grav},n}\right|_{q=q_{\mathrm{grav},n}^*}
 \tag{12.1d.3}
 $$
-is positive definite on $\mathcal T_{\mathrm{grav},n}$. Positive definiteness on $\mathcal T_{\mathrm{grav},n}$ is an explicit certificate entry; it is supplied by the strict-convexity entry of Theorem D.8.9b's certificate, or — when SPAP/Landauer cost dominance applies — by the strict-saturation argument of Theorem 31.
+is positive definite on $\mathcal T_{\mathrm{grav},n}$. Positive definiteness on $\mathcal T_{\mathrm{grav},n}$ is an explicit certificate entry; it is supplied by the strict-convexity entry of Theorem D.8.9b's certificate or by another accepted certificate that evaluates this Hessian on the same retained tangent space. Theorem 31 supplies a conditional reset-cost inequality and does not establish Hessian positivity.
 
 7. $\Gamma_n:E_n\supset B(q_{\mathrm{grav},n}^*,r_{\mathrm{grav},n})\to\mathrm{Lor}(M_n)$ is twice differentiable on a certified radius $r_{\mathrm{grav},n}>0$ and sends each retained profile to the symmetric covariant 2-tensor reconstructed from the Appendix B flux functional and the Appendix E channel-capacity area law.
 
@@ -605,14 +764,14 @@ $$
 Writing this bilinear form in distribution kernel notation gives (12.1e.1) with $\Sigma_n$ as defined in (12.1d.4). Uniqueness follows because a centered Gaussian is determined by its covariance and the pushforward map is fixed by the accepted certificate. ∎
 
 **Corollary 12.1e.0a (Cramér-Rao Status of Metric Fluctuations).**
-Assume the finite gravitational channel ensemble $\mathfrak G_n$ of Definition 12.1d is locally asymptotically normal on the retained tangent subspace $\mathcal T_{\mathrm{grav},n}$, with classical Fisher matrix $F_{\mathrm{grav},n}$ for the accepted finite protocol family. For any unbiased estimator $\widehat{\Delta q}$ of the retained gravitational tangent coordinate $\Delta q$ from $N$ independent samples,
+Assume the finite gravitational channel ensemble $\mathfrak G_n$ of Definition 12.1d is represented on the identifiable quotient of $\mathcal T_{\mathrm{grav},n}$ by a regular finite-dimensional likelihood family with parameter-independent support, a square-integrable zero-mean score, differentiability under the expectation, and positive-definite classical Fisher matrix $F_{\mathrm{grav},n}$. Let $\widehat{\Delta q}$ be an unbiased estimator with finite covariance from $N$ independent samples. Then
 $$
 \operatorname{Cov}(\widehat{\Delta q})
 \succeq
 \frac1N F_{\mathrm{grav},n}^{-1}
 \tag{12.1e.3}
 $$
-on the identifiable quotient, with $F_{\mathrm{grav},n}^{-1}$ read as the quotient inverse, equivalently the Moore-Penrose inverse on the identifiable image. Pushing forward by the reconstruction derivative gives the bilinear-form covariance bound
+on the identifiable quotient, with $F_{\mathrm{grav},n}^{-1}$ equivalently represented by the Moore-Penrose inverse on the identifiable image. Pushing forward by the reconstruction derivative gives the bilinear-form covariance bound
 $$
 \operatorname{Cov}(\widehat{\delta g}_n)
 \succeq
@@ -634,12 +793,12 @@ D\Gamma_n(q_{\mathrm{grav},n}^*)^*\phi
 \right\rangle.
 \tag{12.1e.4a}
 $$
-On the log-score LAN subbranch where the PCE Hessian equals the Fisher Hessian,
+On the log-score locally asymptotically normal subbranch where the PCE Hessian equals the Fisher Hessian,
 $$
 H_{\mathrm{grav},n}=F_{\mathrm{grav},n},
 \tag{12.1e.5}
 $$
-and where $\tau_{\mathrm{PCE},n}=1/N$, Equation (12.1e.4) is exactly the covariance kernel $\Sigma_n$ of Theorem 12.1e. Thus the Cramér-Rao structure controls the finite metric-fluctuation and estimation sector. The Einstein equation itself remains the Clausius-area-law equation of state derived in Theorem 12.1.
+and where $\tau_{\mathrm{PCE},n}=1/N$, Equation (12.1e.4) is exactly the covariance kernel $\Sigma_n$ of Theorem 12.1e. Thus the Cramér-Rao structure controls the finite metric-fluctuation and estimation sector under the stated regularity conditions. The Einstein equation itself remains the Clausius-area-law equation of state derived in Theorem 12.1.
 
 *Proof.* The first inequality is the finite-dimensional Cramér-Rao inequality applied on the locally identifiable quotient of $\mathcal T_{\mathrm{grav},n}$. The reconstructed metric estimator is the linear image
 $$
@@ -698,6 +857,16 @@ Thus every nonzero retained metric perturbation has strictly positive PCE cost, 
 *Proof.* Put $z=H_n^{1/2}v$ and $B=A_nH_n^{-1/2}$. Equation (12.1e.a.1) becomes the minimum Euclidean-norm problem $Bz=h$. Its unique minimum-norm solution is $z=B^+h$, which yields (12.1e.a.2) and the first equality in (12.1e.a.3). Definition 12.1d.4 gives $\Sigma_n=\tau_{\mathrm{PCE},n}A_nH_n^{-1}A_n^*$; on its range, $\Sigma_n^+=\tau_{\mathrm{PCE},n}^{-1}(A_nH_n^{-1}A_n^*)^+$, proving the second equality. Finally, every feasible $v$ obeys $\lVert h\rVert\le\lVert A_n\rVert\lVert v\rVert$ and $\langle v,H_nv\rangle\ge\lambda_{\min}(H_n)\lVert v\rVert^2$, which gives (12.1e.a.4). ∎
 
 **Corollary 12.1e.a.1 (No Fundamental Carrier Introduced by the Linearized Contraction).** Equation (12.1e.a.3) is a contraction principle: both the metric covariance and its dual fluctuation cost are deterministic images of the retained PCE Hessian and reconstruction derivative. It introduces neither a graviton field nor a metric path integral. Beyond the certified linearization radius, the theorem supplies no Gaussian or quadratic claim; the nonlinear PCE functional must be evaluated directly.
+
+*Proof.* Definition 12.1d.4 gives
+$$
+\Sigma_n=\tau_{\mathrm{PCE},n}A_nH_n^{-1}A_n^*,
+$$
+and Theorem 12.1e.a gives
+$$
+I_n(h)=\frac{\tau_{\mathrm{PCE},n}}2\langle h,\Sigma_n^+h\rangle.
+$$
+Thus both objects are obtained solely by applying linear maps, inversion on the retained tangent quotient, and Moore–Penrose inversion on the retained metric-response range to the certificate entries $H_n$, $A_n$, and $\tau_{\mathrm{PCE},n}$. No additional state space or path-integration measure occurs in either construction. Theorem 12.1c defines $A_n$ only as the derivative of $\Gamma_n$ within the certified radius, so these formulas make no claim outside that radius. ∎
 
 **External AQFT comparison.** Dorau and Much study coherent scalar-field excitations on bifurcate Killing horizons in algebraic quantum field theory. In their setting, modular relative entropy equals the corresponding horizon energy flux. Their semiclassical Einstein equation with the standard $8\pi$ normalization follows only after adjoining the entropy--area identification $S_{\mathrm{rel}}=\delta A/4$. This provides a standard-AQFT comparison for the relative-entropy/flux step used here. It neither derives the PU channel-capacity area law nor supplies any missing entry of $\mathfrak C_{\mathrm{EH}}$, and it is not load-bearing for the present derivation.
 
@@ -846,7 +1015,7 @@ u^\mu\nabla_\mu u^\nu=0,
 $$
 equivalently
 $$
-\frac{D^2 x^\mu}{D\tau^2}+\Gamma^\mu_{\alpha\beta}\frac{dx^\alpha}{d\tau}\frac{dx^\beta}{d\tau}=0.
+\frac{d^2 x^\mu}{d\tau^2}+\Gamma^\mu_{\alpha\beta}\frac{dx^\alpha}{d\tau}\frac{dx^\beta}{d\tau}=0.
 $$
 Thus the same metric governs both the field equation and the test-body limit at the fixed coarse-graining scale.
 
@@ -883,7 +1052,11 @@ $$
 0=\nabla_\mu(\rho u^\mu u^\nu)
 =u^\nu\nabla_\mu(\rho u^\mu)+\rho\,u^\mu\nabla_\mu u^\nu.
 $$
-Contracting with $u_\nu$ and using $u^\nu u_\nu=-1$ yields the continuity equation $\nabla_\mu(\rho u^\mu)=0$. Substituting this back gives
+Contracting with $u_\nu$ and using $u^\nu u_\nu=-1$ yields the continuity equation $\nabla_\mu(\rho u^\mu)=0$. Substitution gives
+$$
+\rho\,u^\mu\nabla_\mu u^\nu=0.
+$$
+On the support of the pressureless body, where $\rho>0$, division by $\rho$ yields
 $$
 u^\mu\nabla_\mu u^\nu=0.
 $$
@@ -903,7 +1076,7 @@ the overall factor $m$ cancels from the Euler–Lagrange equations. A species-de
 
 **12.5.1 Uniqueness of the Free Worldline Functional**
 
-**Theorem 12.3a (Uniqueness of the Free Worldline Functional).** Work on the Lorentzian/local-Lorentz branch of Sections 11–12 (with the derived structure of Corollary 46a). Let $\gamma$ be a future-directed timelike $C^1$ curve in a local freely-falling patch $U\subset M_{\mathrm{reg}}$, and fix a test-body species. Suppose $S_{\mathrm{free}}[\gamma]$ satisfies:
+**Theorem 12.3a (Uniqueness of the Free Worldline Functional).** Work on the Lorentzian/local-Lorentz branch of Sections 11–12 (with the derived structure of Corollary 46a). Let $\gamma$ be a future-directed timelike $C^1$ curve in a local freely-falling patch $U\subset M_{\mathrm{reg}}$, and choose a test-body species. Suppose $S_{\mathrm{free}}[\gamma]$ satisfies:
 
 **H 12.3a.1** (Local first-order integral form). $S_{\mathrm{free}}[\gamma]=\int_{\lambda_0}^{\lambda_1} L(x,\dot x)\,d\lambda$ for a Lagrangian $L$ depending on position and tangent vector only.
 
@@ -911,15 +1084,51 @@ the overall factor $m$ cancels from the Euler–Lagrange equations. A species-de
 
 **H 12.3a.3** (Local Lorentz invariance in freely-falling charts). In any freely-falling chart at $p\in U$ (where $g_{\mu\nu}(p)=\eta_{\mu\nu}$ and $\partial_\rho g_{\mu\nu}(p)=0$), $L$ depends on the tangent vector $\dot x$ only through local Lorentz scalars formed from $\dot x$ and $\eta_{\mu\nu}$ (Corollary O.7b.1).
 
-**H 12.3a.4** (Free sector). The test body is free: no external field coupling enters $L$; any coefficients are intrinsic body constants.
+**H 12.3a.4** (Minimal free metric coupling). No external field, curvature scalar, derivative of the metric, or additional background structure enters $L$, and the coefficient multiplying the velocity-dependent scalar is independent of position and is intrinsic to the body species.
 
-Then there exists a positive constant $m$, depending only on the test-body species, such that
+**H 12.3a.5** (Mass normalization). For a species constant $m>0$, in a local inertial chart parametrized by coordinate time and in the limit $|\mathbf v|/c\to0$,
+$$
+L=-mc^2+\frac12m|\mathbf v|^2+O(|\mathbf v|^4/c^2).
+$$
+
+Then
 $$
 S_{\mathrm{free}}[\gamma] \;=\; -mc\int_{\lambda_0}^{\lambda_1}\sqrt{-g_{\mu\nu}(x)\,\dot x^\mu\dot x^\nu}\,d\lambda \;=\; -mc^2\int_\gamma d\tau,\tag{76b}
 $$
-with $d\tau=c^{-1}\sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\,d\lambda$ the proper-time element. ∎
+with $d\tau=c^{-1}\sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\,d\lambda$ the proper-time element.
 
-*Proof.* Fix $p\in U$ and adopt freely-falling coordinates at $p$. Write $L_p(v):=L(p,v)$ on future-directed timelike $v$. *Step 1 (Homogeneity).* H 12.3a.2 with $\lambda(s)=s/\alpha$, $\alpha>0$, gives $L_p(v)\,d\lambda=L_p(\alpha v)\,d\lambda/\alpha$, hence $L_p(\alpha v)=\alpha L_p(v)$ for $\alpha>0$. *Step 2 (Lorentz-scalar dependence).* By H 12.3a.3, $L_p$ depends on $v$ only through the unique (up to sign) Lorentz scalar $s:=-\eta_{\mu\nu}v^\mu v^\nu>0$ for timelike $v$. Write $L_p(v)=\phi_p(s)$. *Step 3 (Functional form).* Substituting Step 2 into Step 1: under $v\mapsto\alpha v$, $s\mapsto\alpha^2 s$, so $\phi_p(\alpha^2 s)=\alpha\,\phi_p(s)$. Setting $r=\alpha^2 s$ with $s=1$ gives $\phi_p(r)=\phi_p(1)\sqrt r$. Therefore $L_p(v)=\phi_p(1)\sqrt{-\eta_{\mu\nu}v^\mu v^\nu}$. *Step 4 (Species constant).* H 12.3a.4 forbids any dependence on $x$ or external fields, so $\phi_p(1)$ is a species-intrinsic constant. The sign $\phi_p(1)=-mc$ with $m>0$ is fixed by requiring the classical non-relativistic limit $L\to \tfrac12 m v^2 -mc^2$ and bounded-below action for physically admissible worldlines. *Step 5 (Covariant completion).* The unique diffeomorphism-covariant lift to $M_{\mathrm{reg}}$ (Theorem 45a) replaces $\eta_{\mu\nu}$ by $g_{\mu\nu}$, giving (76b). ∎
+*Proof.* Choose $p\in U$ and adopt freely-falling coordinates at $p$. Write $L_p(v):=L(p,v)$ on future-directed timelike $v$.
+
+*Step 1 (Homogeneity).* H 12.3a.2 with $\lambda(s)=s/\alpha$, $\alpha>0$, gives $L_p(v)\,d\lambda=L_p(\alpha v)\,d\lambda/\alpha$, hence
+$$
+L_p(\alpha v)=\alpha L_p(v).
+$$
+
+*Step 2 (Lorentz-scalar dependence).* By H 12.3a.3, $L_p$ depends on $v$ only through
+$$
+s:=-\eta_{\mu\nu}v^\mu v^\nu>0
+$$
+on the future timelike cone. Thus $L_p(v)=\phi_p(s)$.
+
+*Step 3 (Functional form).* Under $v\mapsto\alpha v$, one has $s\mapsto\alpha^2s$, so Steps 1–2 give
+$$
+\phi_p(\alpha^2s)=\alpha\phi_p(s).
+$$
+For arbitrary $r,s>0$, choose $\alpha=\sqrt{r/s}$ to obtain
+$$
+\phi_p(r)=\sqrt{\frac rs}\,\phi_p(s).
+$$
+Hence $\phi_p(s)=a_p\sqrt s$ for a constant $a_p$.
+
+*Step 4 (Species constant and normalization).* H 12.3a.4 makes $a_p=a$ independent of $p$. In a local inertial chart with coordinate-time parameter,
+$$
+L=a\sqrt{c^2-|\mathbf v|^2}
+=
+ac-\frac{a}{2c}|\mathbf v|^2+O(|\mathbf v|^4/c^3).
+$$
+Comparison with H 12.3a.5 gives $a=-mc$.
+
+*Step 5 (Covariant completion).* H 12.3a.4 permits only the metric norm of the tangent, so replacing the inertial-frame norm by $-g_{\mu\nu}\dot x^\mu\dot x^\nu$ gives (76b) throughout $U$. ∎
 
 **12.5.2 Geodesic Law from the Proper-Time Action**
 
@@ -931,9 +1140,9 @@ equivalently
 $$
 \frac{d^2 x^\mu}{d\tau^2} + \Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\tau}\,\frac{dx^\beta}{d\tau} \;=\; 0,\tag{76d}
 $$
-where $\Gamma^\mu_{\alpha\beta}$ are the Christoffel symbols of $g_{\mu\nu}$. ∎
+where $\Gamma^\mu_{\alpha\beta}$ are the Christoffel symbols of $g_{\mu\nu}$.
 
-*Proof.* Drop the overall constant $-mc$ and consider $\widetilde S[\gamma]=\int\sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\,d\lambda$. The Euler–Lagrange equations for $x^\mu(\lambda)$ with endpoints fixed read
+*Proof.* Drop the overall constant $-mc$ and consider $\widetilde S[\gamma]=\int\sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\,d\lambda$. The Euler–Lagrange equations for $x^\mu(\lambda)$ with prescribed endpoints read
 $$
 \frac{d}{d\lambda}\!\left(\frac{g_{\mu\nu}\dot x^\nu}{\sqrt{-g_{\alpha\beta}\dot x^\alpha\dot x^\beta}}\right) - \frac{\partial_\mu g_{\rho\sigma}\,\dot x^\rho\dot x^\sigma}{2\sqrt{-g_{\alpha\beta}\dot x^\alpha\dot x^\beta}} \;=\; 0.
 $$
@@ -947,13 +1156,33 @@ g_{\mu\nu}\frac{du^\nu}{d\tau} + \tfrac12\bigl(\partial_\alpha g_{\mu\nu}+\parti
 $$
 Using the Christoffel identity $2 g_{\mu\beta}\Gamma^\beta_{\alpha\nu}=\partial_\alpha g_{\mu\nu}+\partial_\nu g_{\mu\alpha}-\partial_\mu g_{\alpha\nu}$ and contracting with $g^{\lambda\mu}$ yields (76d) and equivalently (76c). ∎
 
-**Corollary 12.3b.1 (Action–Entropy–Geodesic Equivalence).** For free timelike worldlines $\gamma$ with fixed endpoints on $M_{\mathrm{reg}}$, the following three conditions are equivalent:
+**Corollary 12.3b.1 (Conditional Action–Ledger–Geodesic Equivalence).** Let $\gamma$ range over free timelike worldlines with prescribed endpoints on $M_{\mathrm{reg}}$. Assume the calibrated continuum-action hypotheses of Corollary Q.0.1 and, for the admissible variations under consideration, an explicit affine branch identification
 $$
-\delta\!\left(-mc^2\int_\gamma d\tau\right) \;=\; 0 \;\Longleftrightarrow\; u^\mu\nabla_\mu u^\nu \;=\; 0 \;\Longleftrightarrow\; \delta\!\Bigl(\sum_i \varepsilon_i\Bigr) \;=\; 0,\tag{76e}
+-mc^2\int_\gamma d\tau
+=
+C+a\hbar\sum_i\varepsilon_i,
+\qquad
+a\ne0,
+\tag{76e.0}
 $$
-where $\varepsilon_i\ge\ln 2$ is the per-cycle SPAP entropy at the $i$-th MPU cycle along $\gamma$ (Theorem 31).
+where $C$ and $a$ are independent of $\gamma$. Then
+$$
+\delta\!\left(-mc^2\int_\gamma d\tau\right) \;=\; 0
+\;\Longleftrightarrow\;
+u^\mu\nabla_\mu u^\nu \;=\; 0
+\;\Longleftrightarrow\;
+\delta\!\Bigl(\sum_i \varepsilon_i\Bigr) \;=\; 0.
+\tag{76e}
+$$
+Here $\varepsilon_i$ denotes the $i$-th entry of the additive dimensionless history ledger on the calibrated recovery sequence of Corollary Q.0.1. No universal physical inequality $\varepsilon_i\ge\ln2$ follows from Theorem 31: a registered reset obeys $\varepsilon_i\ge H_{q_i}(P_i\mid R_i)$, and the structural binary value $\ln2$ is a log-cardinality. A physical lower bound $\varepsilon_i\ge\ln2$ therefore requires the independent condition $H_{q_i}(P_i\mid R_i)=\ln2$.
 
-*Proof.* Theorems 12.3a–b give the equivalence of the first two conditions. The Action–Entropy Identity (Appendix Q, Theorem Q.0.1) gives $\mathcal S_{\mathrm{classical}}=\hbar\sum_i\varepsilon_i$. For the free sector, $\mathcal S_{\mathrm{free}}=-mc^2\int_\gamma d\tau$, so $\delta\mathcal S_{\mathrm{free}}=\hbar\,\delta\sum_i\varepsilon_i$ and stationarity of one is equivalent to stationarity of the other. ∎
+*Proof.* Theorems 12.3a–12.3b give the equivalence of the first two conditions. Varying (76e.0), with $C$ and $a\ne0$ independent of the path, gives
+$$
+\delta\!\left(-mc^2\int_\gamma d\tau\right)
+=
+a\hbar\,\delta\sum_i\varepsilon_i.
+$$
+Therefore the first variation of the worldline action vanishes if and only if the first variation of the additive ledger vanishes. ∎
 
 Theorem 12.3 (universality at fixed scale via boundary-sufficient metric reconstruction, diff-invariance, and stress-energy conservation) and Theorem 12.3b (extremization of the proper-time action) provide two independent derivations of the same geodesic law; both rest on the same underlying metric action at fixed coarse-graining scale.
 
@@ -1053,7 +1282,7 @@ The affine term $a_0+a_1n$ has zero second finite difference. Multiplying by $2\
 
 *Proof.* Theorem 12.5.3a.2 derives the finite second-difference identity from the ledger data alone. The only continuum step is the regular localized-cell limit already required for the null-cut branch. The affine ambiguity drops out before the limit is taken. ∎
 
-**Theorem 12.5.3b (Predictive Null Energy Inequality).** This is a conditional null-cut theorem, not a consequence of relative-entropy monotonicity alone. Data processing gives the first-difference monotonicity used in Theorem 12.5.3m; the local second-variation sign is a stronger null-convexity input. Assume the null-cut branch satisfies:
+**Theorem 12.5.3b (Predictive Null Energy Inequality).** This is a conditional null-cut theorem, not a consequence of relative-entropy monotonicity alone. Data processing gives the first-difference monotonicity used in Theorem 12.5.3m; the local second-variation sign is a stronger null-convexity input. Fix a fiducial transverse cell of area $A>0$, held constant to the order of the local affine variation, and assume the null-cut branch satisfies:
 
 1. either the null-convexity certificate $\mathfrak C_{\mathrm{NC}}$ of Definition 12.5.3n is accepted on the retained cut family, or the branch supplies the same finite-response inequality directly,
 $$
@@ -1062,6 +1291,7 @@ $$
 $$
 2. the branch carries the finite null-boost ledger of Definition 12.5.3a.1 and the regular localized-cell limit of Theorem 12.5.3a.2, so the local Rindler modular identity holds per unit transverse area,
 $$
+\frac{1}{A}
 \frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
 =
 2\pi\,\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho.
@@ -1073,7 +1303,7 @@ $$
 \boxed{
 \langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
 \ge
-\frac{1}{2\pi}
+\frac{1}{2\pi A}
 \frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda)
 }
 \tag{76i}
@@ -1088,19 +1318,19 @@ S_{\mathrm{rel}}''(\lambda)
 -
 \Delta S_{\mathrm{pred}}''(\lambda).
 $$
-Using the modular identity (76h),
+Dividing by $A>0$ and using the modular identity (76h) gives
 $$
-S_{\mathrm{rel}}''(\lambda)
+\frac{1}{A}S_{\mathrm{rel}}''(\lambda)
 =
 2\pi\,\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
 -
-\Delta S_{\mathrm{pred}}''(\lambda).
+\frac{1}{A}\Delta S_{\mathrm{pred}}''(\lambda).
 $$
 By null convexity (76g), the left side is nonnegative. Rearranging gives (76i). ∎
 
-**Corollary 12.5.3c (Classical Null Energy as the Entropy-Flat Limit).** On a coarse-grained classical branch where the predictive entropy term is locally affine or concave along the null deformation,
+**Corollary 12.5.3c (Classical Null Energy as the Entropy-Flat Limit).** On a coarse-grained classical branch where the predictive entropy term is locally affine along the null deformation,
 $$
-\Delta S_{\mathrm{pred}}''(\lambda)\le0,
+\Delta S_{\mathrm{pred}}''(\lambda)=0,
 $$
 the predictive null energy inequality implies
 $$
@@ -1108,21 +1338,21 @@ $$
 \tag{76j}
 $$
 
-*Proof.* Substitute $\Delta S_{\mathrm{pred}}''(\lambda)\le0$ into (76i). ∎
+*Proof.* Substituting $\Delta S_{\mathrm{pred}}''(\lambda)=0$ into (76i) gives $\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho\ge0$. ∎
 
-**Corollary 12.5.3d (Averaged Predictive Null Energy).** Let $f$ be a smooth compactly supported test function along the generator. Under the hypotheses of Theorem 12.5.3b,
+**Corollary 12.5.3d (Averaged Predictive Null Energy).** Let $f$ be a smooth compactly supported test function along the generator. Under the hypotheses of Theorem 12.5.3b, with fiducial transverse area $A>0$,
 $$
 \int f(\lambda)^2
 \langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho\,d\lambda
 \ge
-\frac{1}{2\pi}
+\frac{1}{2\pi A}
 \int f(\lambda)^2
 \Delta S_{\mathrm{pred}}''(\lambda)\,d\lambda.
 \tag{76k}
 $$
 If the entropy term has vanishing boundary contribution after integrating by parts, this gives the corresponding averaged null energy bound.
 
-*Proof.* Multiply (76i) by the nonnegative function $f^2$ and integrate. If the entropy contribution has vanishing boundary terms, the right side reduces to the integrated entropy-curvature correction determined by the compact support of $f$. ∎
+*Proof.* Multiply (76i) by the nonnegative function $f^2$ and integrate. The positive constant $A$ is the fiducial transverse-cell area in Theorem 12.5.3b. If the entropy contribution has vanishing boundary terms, the right side reduces to the integrated entropy-curvature correction determined by the compact support of $f$. ∎
 
 **Corollary 12.5.3e (Shape-Derivative Null Modular Tomography).** Let $\Sigma_X$ be a regular null cut of the same null hypersurface, described locally by a cut function $X(y)$ on transverse coordinates $y$. For a smooth compactly supported shape deformation $f(y)$, define
 $$
@@ -1134,7 +1364,11 @@ S_{\mathrm{rel}}[X+\epsilon f]
 \right|_{\epsilon=0}.
 \tag{76l}
 $$
-Assume the functional shape derivatives exist on the finite-resolution branch and that the finite null-boost ledger of Definition 12.5.3a.1 supplies the local Rindler modular identity (76h) per unit transverse area for localized shape deformations. Then
+Assume that the functional shape derivatives exist on the finite-resolution branch, that the finite null-boost ledger of Definition 12.5.3a.1 supplies the local Rindler modular identity (76h) per unit transverse area for localized shape deformations, and that the accepted shape-positivity certificate gives
+$$
+\mathcal N_\rho[f]\ge0
+$$
+for every admissible $f$. Then
 $$
 \mathcal N_\rho[f]
 =
@@ -1202,12 +1436,13 @@ for every admissible $f$. Thus this term is precisely the nonnegative predictive
 
 For a shrinking transverse cell, $f_{\mathrm{cell}}$ is constant on the cell and zero outside it. Dividing (76m) by $A_{\mathrm{cell}}$ and taking the regular localized-cell limit removes the off-diagonal contribution by hypothesis and evaluates the continuous diagonal integrand at $y_0$. Rearranging gives (76n). The Clausius-saturated case is the equality branch of Theorem F.10.4 and Theorem 12.1, so the relative-entropy slack term is zero there. ∎
 
-**Theorem 12.5.3f (QNEC-Slack Form of Metric Thermodynamics).** On the null-cut branch of Theorem 12.5.3b, define the predictive QNEC slack density by
+**Theorem 12.5.3f (QNEC-Slack Form of Metric Thermodynamics).** On the null-cut branch of Theorem 12.5.3b, with fiducial transverse area $A>0$, define the predictive QNEC slack density by
 $$
 \mathfrak S_{\mathrm{QNEC}}(\lambda)
 :=
 2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
 -
+\frac{1}{A}
 \frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda).
 \tag{76o}
 $$
@@ -1215,28 +1450,29 @@ Then
 $$
 \mathfrak S_{\mathrm{QNEC}}(\lambda)
 =
+\frac{1}{A}
 \frac{d^2}{d\lambda^2}S_{\mathrm{rel}}(\lambda)
 \ge0.
 \tag{76p}
 $$
-The local null Clausius defect per unit transverse area,
+Define the local null entropy-density residual by
 $$
 \mathfrak C_{\mathrm{Cl}}(\lambda)
 :=
 \langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
 -
-\frac{1}{2\pi}
-\frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda),
+\frac{1}{2\pi A}
+\frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda).
 \tag{76q}
 $$
-satisfies
+It satisfies
 $$
 \mathfrak C_{\mathrm{Cl}}(\lambda)
 =
 \frac{1}{2\pi}\mathfrak S_{\mathrm{QNEC}}(\lambda).
 \tag{76r}
 $$
-Thus the local Clausius-saturated emergent metric/channel-capacity thermodynamic branch is exactly the zero-QNEC-slack branch:
+On a branch that also identifies the entropy-density second variation in (76q) with the area-law/Raychaudhuri entropy variation entering Theorem 12.1, the local Clausius-saturated emergent metric/channel-capacity thermodynamic branch is the zero-QNEC-slack branch:
 $$
 \mathfrak C_{\mathrm{Cl}}(\lambda)=0
 \quad\Longleftrightarrow\quad
@@ -1244,41 +1480,45 @@ $$
 \tag{76s}
 $$
 
-*Proof.* Differentiating Definition 12.5.3a twice gives
+*Proof.* Differentiating Definition 12.5.3a twice and dividing by $A>0$ gives
 $$
+\frac{1}{A}
 \frac{d^2}{d\lambda^2}S_{\mathrm{rel}}(\lambda)
 =
+\frac{1}{A}
 \frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
 -
+\frac{1}{A}
 \frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda).
 $$
 Using the local Rindler modular identity (76h),
 $$
+\frac{1}{A}
 \frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
 =
 2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho,
 $$
-so the right side is exactly (76o). This proves the equality in (76p). The inequality is the finite-resolution null convexity hypothesis (76g). Equation (76r) follows by dividing (76o) by $2\pi$ and comparing with (76q). Since $2\pi>0$, the zero sets of $\mathfrak C_{\mathrm{Cl}}$ and $\mathfrak S_{\mathrm{QNEC}}$ coincide, proving (76s). ∎
+so the right side is exactly (76o). This proves the equality in (76p). The inequality is the finite-resolution null-convexity hypothesis (76g). Equation (76r) follows by dividing (76o) by $2\pi$ and comparing with (76q). Since $2\pi>0$, the zero sets of $\mathfrak C_{\mathrm{Cl}}$ and $\mathfrak S_{\mathrm{QNEC}}$ coincide, proving (76s) on the stated geometric-identification branch. ∎
 
-**Corollary 12.5.3g (Relative-Entropy Slack as the Local Thermodynamic Gate).** On the regular branch, any derivation of the metric field equation through local channel-capacity thermodynamics must either use the zero-slack condition
+**Corollary 12.5.3g (Relative-Entropy Slack as the Local Thermodynamic Gate).** On a regular branch carrying the area-law/Raychaudhuri identification stated in Theorem 12.5.3f, any derivation of the metric field equation through local channel-capacity thermodynamics must either use the zero-slack condition
 $$
 S_{\mathrm{rel}}''(\lambda)=0
 $$
 on every local null generator in the Clausius patch, or retain the nonnegative correction
 $$
-\frac{1}{2\pi}S_{\mathrm{rel}}''(\lambda)
+\frac{1}{2\pi A}S_{\mathrm{rel}}''(\lambda)
 $$
-as a finite-response non-equilibrium source term. It cannot silently impose local Clausius equality while retaining positive predictive QNEC slack.
+as a finite-response non-equilibrium source term. It cannot impose local Clausius equality while retaining positive predictive QNEC slack.
 
-*Proof.* By Theorem 12.5.3f, the local Clausius defect is exactly $S_{\mathrm{rel}}''/(2\pi)$. Therefore imposing the local Clausius equality used in Theorem 12.1 is equivalent to setting the slack to zero. If the slack is positive, the equality fails by that amount and must be represented as a non-equilibrium correction term. ∎
+*Proof.* By Theorem 12.5.3f, the local entropy-density residual is $S_{\mathrm{rel}}''/(2\pi A)$. On the stated area-law/Raychaudhuri identification branch, imposing the local Clausius equality used in Theorem 12.1 is therefore equivalent to setting the slack to zero. If the slack is positive, the equality fails by that amount and the derivation must retain it as a non-equilibrium correction term. ∎
 
-**Theorem 12.5.3h (Modular-QNEC Closure of the Emergent Einstein Branch).** Let a regular finite KMS/AQFT branch satisfy the local generator convergence certificate of Definition F.0a and Theorem F.0b and the predictive-energy hypotheses of Theorem 12.5.3f on every local null Clausius patch. Define the predictive QNEC slack on a local null generator $k$ by
+**Theorem 12.5.3h (Modular-QNEC Closure of the Emergent Einstein Branch).** Let a regular finite KMS/AQFT branch satisfy the local generator convergence certificate of Definition F.0a and Theorem F.0b and the predictive-energy hypotheses of Theorem 12.5.3f on every local null Clausius patch of fiducial transverse area $A>0$. Assume on the same patch the area-law/Raychaudhuri identification stated in Theorem 12.5.3f, the vanishing initial expansion and shear of Theorem 12.1(c), and conservation $\nabla^\mu T_{\mu\nu}^{(\mathrm{MPU})}=0$. Define the predictive QNEC slack density on a local null generator $k$ by
 $$
 \mathcal Q(k)
 =
 2\pi\langle T_{kk}^{(\mathrm{MPU})}\rangle
 -
-\Delta S_{\mathrm{pred}}''(k).
+\frac{1}{A}\Delta S_{\mathrm{pred}}''(k).
 \tag{76t}
 $$
 If PCE equilibrium imposes zero retained modular slack,
@@ -1295,14 +1535,14 @@ G_{\mu\nu}+\Lambda g_{\mu\nu}
 8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})}
 \tag{76v}
 $$
-on the smooth-envelope branch. If $\mathcal Q(k)>0$ for a retained local null direction, the reversible Einstein branch is not closed unless the branch retains a finite non-equilibrium slack tensor $T_{\mu\nu}^{(\mathrm{sl})}$ whose null projections satisfy
+on the smooth-envelope branch. If the slack is nonzero, assume that the branch supplies a symmetric, covariantly conserved tensor $T_{\mu\nu}^{(\mathrm{sl})}$ whose null projections satisfy
 $$
 T_{kk}^{(\mathrm{sl})}
 =
 \frac{\mathcal Q(k)}{2\pi}
 \tag{76w}
 $$
-on the retained null directions. With this sign convention the corrected finite-response equation is
+for every local null direction in the covered patch. If projections are supplied only on a finite retained family, also assume the injective-tomography and range conditions of Theorem 12.1g. Positivity of $\mathcal Q$ alone does not prove existence of such a tensor. With this sign convention the finite-response equation is
 $$
 G_{\mu\nu}+\Lambda g_{\mu\nu}+8\pi G T_{\mu\nu}^{(\mathrm{sl})}
 =
@@ -1311,19 +1551,19 @@ G_{\mu\nu}+\Lambda g_{\mu\nu}+8\pi G T_{\mu\nu}^{(\mathrm{sl})}
 $$
 equivalently $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G(T_{\mu\nu}^{(\mathrm{MPU})}-T_{\mu\nu}^{(\mathrm{sl})})$.
 
-*Proof.* Theorem 12.5.3f identifies the Clausius defect on a local null generator with the relative-entropy/QNEC slack. Condition (76u) is therefore exactly the local reversible Clausius equality on every retained null patch. The Raychaudhuri variation of the local horizon area then gives, for every null vector $k$ in the patch,
+*Proof.* Theorem 12.5.3f identifies $\mathcal Q(k)/(2\pi)$ with the entropy-density residual on a local null generator. On the assumed area-law/Raychaudhuri identification branch, Condition (76u) is the local reversible Clausius equality on every retained null patch. The proof of Theorem 12.1 therefore gives, for every null vector $k$ in the patch,
 $$
 \left(G_{\mu\nu}-8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})}\right)k^\mu k^\nu=0.
 \tag{76x}
 $$
-A symmetric tensor whose contraction with every null vector vanishes is proportional to the metric: applying the identity in a local orthonormal frame to $k=e_0\pm e_i$ gives equality of diagonal spatial components with the time component, and applying it to $k=e_0\pm(e_i+e_j)/\sqrt2$ gives the off-diagonal components. Hence
+A symmetric tensor whose contraction with every null vector vanishes is proportional to the metric: in a local orthonormal frame, applying the identity to $k=e_0\pm e_i$ gives equality of the diagonal spatial components with the time component, and applying it to $k=e_0\pm(e_i+e_j)/\sqrt2$ gives the off-diagonal components. Hence
 $$
 G_{\mu\nu}-8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})}
 =-\Lambda g_{\mu\nu}.
 $$
-The contracted Bianchi identity and local conservation of the MPU stress tensor make $\Lambda$ constant on each connected smooth-envelope component, proving (76v). If the slack is positive, Corollary 12.5.3g says the local Clausius equality fails by $\mathcal Q(k)/(2\pi)$. The entropy-side source represented by $\Delta S_{\mathrm{pred}}''/(2\pi)$ is then $T_{kk}^{(\mathrm{MPU})}-\mathcal Q(k)/(2\pi)$, so the retained slack tensor has null projections (76w) and enters with the sign shown in (76w.1). When the retained slack tensor is supplied consistently on the null cone, the same null-projection argument applies to $T^{(\mathrm{MPU})}-T^{(\mathrm{sl})}$. ∎
+The contracted Bianchi identity and the assumed local conservation of the MPU stress tensor make $\Lambda$ constant on each connected smooth-envelope component, proving (76v). If the slack is positive, Corollary 12.5.3g says the local Clausius equality fails by $\mathcal Q(k)/(2\pi)$. The entropy-side source represented by $\Delta S_{\mathrm{pred}}''/(2\pi A)$ is then $T_{kk}^{(\mathrm{MPU})}-\mathcal Q(k)/(2\pi)$, so the retained slack tensor has null projections (76w) and enters with the sign shown in (76w.1). When a symmetric conserved slack tensor with these null projections is supplied consistently on the retained null cone, the same null-projection argument applies to $T^{(\mathrm{MPU})}-T^{(\mathrm{sl})}$. ∎
 
-**Corollary 12.5.3i (QNEC Slack as Local Recoverability Slack Curvature).** Let $\mathfrak A_{\lambda-h}\subseteq\mathfrak A_\lambda\subseteq\mathfrak A_{\lambda+h}$ be a $C^2$ nested finite null-cut algebra family on the branch of Theorem 12.5.3f, and let
+**Corollary 12.5.3i (QNEC Slack as Local Recoverability Slack Curvature).** Let $\mathfrak A_{\lambda-h}\subseteq\mathfrak A_\lambda\subseteq\mathfrak A_{\lambda+h}$ be a $C^2$ nested finite null-cut algebra family on the branch of Theorem 12.5.3f, with fiducial transverse area $A>0$, and let
 $$
 \rho_\lambda:=\rho|_{\mathfrak A_\lambda},
 \qquad
@@ -1340,10 +1580,11 @@ D(\rho_\lambda\Vert\omega_\lambda)
 \Delta_{\Phi_{\lambda+h\to\lambda}}^{\omega_{\lambda+h}}(\rho_{\lambda+h}).
 \tag{76y}
 $$
-Then the predictive QNEC slack density is the second local finite-difference curvature of this recoverability ledger:
+Then the predictive QNEC slack density is the transverse-area-normalized second local finite-difference curvature of this recoverability ledger:
 $$
 \mathfrak S_{\mathrm{QNEC}}(\lambda)
 =
+\frac{1}{A}
 \lim_{h\to0}
 \frac{
 D(\rho_{\lambda+h}\Vert\omega_{\lambda+h})
@@ -1354,7 +1595,7 @@ D(\rho_{\lambda-h}\Vert\omega_{\lambda-h})
 }{h^2}.
 \tag{76z}
 $$
-Consequently the reversible emergent metric/channel-capacity thermodynamic branch is the locally affine, zero-curvature branch of the recoverability ledger.
+Consequently the reversible emergent metric/channel-capacity thermodynamic branch is the locally affine, zero-curvature branch of the recoverability ledger, provided the geometric identification hypotheses of Theorem 12.5.3h hold.
 
 *Proof.* By Definition 12.5.3a,
 $$
@@ -1369,7 +1610,7 @@ S_{\mathrm{rel}}(\lambda+h)-2S_{\mathrm{rel}}(\lambda)+S_{\mathrm{rel}}(\lambda-
 =
 S_{\mathrm{rel}}''(\lambda).
 $$
-Theorem 12.5.3f identifies $S_{\mathrm{rel}}''(\lambda)$ with $\mathfrak S_{\mathrm{QNEC}}(\lambda)$, proving (76z). The zero-curvature statement follows from Theorem 12.5.3f and Corollary 12.5.3g, which identify zero QNEC slack with local Clausius saturation. ∎
+Theorem 12.5.3f identifies $A^{-1}S_{\mathrm{rel}}''(\lambda)$ with $\mathfrak S_{\mathrm{QNEC}}(\lambda)$, proving (76z). The zero-curvature statement follows from Theorem 12.5.3f and Corollary 12.5.3g on the branch carrying the geometric identification required in Theorem 12.5.3h. ∎
 
 **Corollary 12.5.3j (Modular Recoverability Gravity Gate).** Let $\mathcal D$ be a finite retained family of local diamonds on a regular KMS/AQFT branch. For each $D\in\mathcal D$, let $\mathfrak A_D$ be the retained finite algebra, let $\omega_D$ be the faithful KMS/reference state, and let
 $$
@@ -1480,20 +1721,31 @@ No independent microscopic graviton Hilbert sector is an input to either closure
 $$
 \mathfrak C_{\mathrm{PGSL}}
 =
-(\mathcal A_\lambda,\rho_\lambda,\omega_\lambda,\Phi_{\lambda_2\lambda_1},K_\lambda,\eta_\partial,\mathfrak A_\partial,\mathfrak C^{\mathrm{KMS}},\mathfrak O_{\mathrm{PGSL}},\text{forward lock})
+(\mathcal A_\lambda,\rho_\lambda,\omega_\lambda,\Phi_{\lambda_2\lambda_1,*},K_\lambda,\eta_\partial,\mathfrak A_\partial,\mathfrak C^{\mathrm{KMS}},\mathfrak O_{\mathrm{PGSL}},\text{forward lock})
 \tag{76ak}
 $$
-with the following entries fixed before comparison.
+with the following entries specified before comparison.
 
 1. $\mathcal A_\lambda$ is a nested retained exterior algebra for a future-directed causal-horizon cut family, with $\lambda_2>\lambda_1$ interpreted in the direction of exterior restriction/evolution used by the record.
-2. $\rho_\lambda$ is the retained exterior state and $\omega_\lambda$ is the compatible attractor/KMS reference state on $\mathcal A_\lambda$.
-3. $\Phi_{\lambda_2\lambda_1}:\mathcal A_{\lambda_1}\to\mathcal A_{\lambda_2}$ is the Heisenberg adjoint, or equivalently the Schrödinger channel on states, of the finite algebra restriction plus exterior ND-RID evolution between cuts. The channel is CPTP on the retained finite algebra and fixes the reference family: $\Phi_{\lambda_2\lambda_1}(\omega_{\lambda_1})=\omega_{\lambda_2}$.
-4. $K_\lambda=-\log\omega_\lambda$ is the finite modular Hamiltonian in the retained algebra, with the affine modular ambiguity fixed by the null-boost ledger of Definition 12.5.3a.1 when a local second-variation statement is used.
+2. $\rho_\lambda$ is the retained exterior state and $\omega_\lambda$ is a faithful compatible attractor/KMS reference state on $\mathcal A_\lambda$.
+3. The Schrödinger-picture map
+   $$
+   \Phi_{\lambda_2\lambda_1,*}:\mathcal S(\mathcal A_{\lambda_1})\longrightarrow\mathcal S(\mathcal A_{\lambda_2})
+   $$
+   is the CPTP finite state channel implementing algebra restriction plus exterior ND-RID evolution between cuts, and it preserves the reference family:
+   $$
+   \Phi_{\lambda_2\lambda_1,*}(\omega_{\lambda_1})=\omega_{\lambda_2}.
+   $$
+   Its Heisenberg adjoint is the unital completely positive map
+   $$
+   \Phi_{\lambda_2\lambda_1}^*:\mathcal A_{\lambda_2}\longrightarrow\mathcal A_{\lambda_1}.
+   $$
+4. $K_\lambda=-\log\omega_\lambda$ is the finite modular Hamiltonian in the retained algebra, with the affine modular ambiguity chosen by the null-boost ledger of Definition 12.5.3a.1 when a local second-variation statement is used.
 5. $\eta_\partial$ and $\mathfrak A_\partial$ are the Appendix E horizon density and area-calibration records identifying the channel min-cut entropy with the retained area density on the same boundary family.
 6. $\mathfrak C^{\mathrm{KMS}}$ is the finite KMS-descent record identifying the reference state and modular flow on the same cover.
 7. $\mathfrak O_{\mathrm{PGSL}}$ is the overlap audit proving that the cut algebras, KMS reference, area density, stress-energy branch, and null-boost ledger use the same retained response presheaves and branch maps.
 
-Define the retained generalized entropy, up to the fixed additive constant $S_0$, by
+Define the retained generalized entropy, up to the chosen additive constant $S_0$, by
 $$
 S_{\mathrm{gen}}(\lambda)
 :=
@@ -1519,15 +1771,21 @@ D(\rho_{\lambda_2}\Vert\omega_{\lambda_2})
 $$
 Thus the finite PU horizon GSL is data-processing monotonicity of relative entropy on the retained cut channel. It is a first-difference theorem. It does not by itself prove the local null-convexity inequality (76g), the zero-slack condition, or the Einstein equation.
 
-*Proof.* By Definition 12.5.3l, the map from the earlier exterior cut to the later exterior cut is a CPTP channel on the retained finite algebra and sends the reference state to the reference state. Uhlmann monotonicity gives
+*Proof.* The certificate supplies a CPTP map $\Phi_{\lambda_2\lambda_1,*}$ on states and gives
+$$
+\rho_{\lambda_2}=\Phi_{\lambda_2\lambda_1,*}(\rho_{\lambda_1}),
+\qquad
+\omega_{\lambda_2}=\Phi_{\lambda_2\lambda_1,*}(\omega_{\lambda_1}).
+$$
+Uhlmann monotonicity of quantum relative entropy therefore gives
 $$
 D(\rho_{\lambda_2}\Vert\omega_{\lambda_2})
 =
-D(\Phi_{\lambda_2\lambda_1}(\rho_{\lambda_1})\Vert\Phi_{\lambda_2\lambda_1}(\omega_{\lambda_1}))
+D(\Phi_{\lambda_2\lambda_1,*}(\rho_{\lambda_1})\Vert\Phi_{\lambda_2\lambda_1,*}(\omega_{\lambda_1}))
 \le
 D(\rho_{\lambda_1}\Vert\omega_{\lambda_1}).
 $$
-Using the definition (76al) gives (76am). The final sentence is a status statement: monotonicity is a first-difference inequality, while (76g) is a second-variation statement and zero slack is a saturation statement. ∎
+Using the definition (76al) gives (76am). Monotonicity is a first-difference inequality, whereas (76g) is a second-variation statement and zero slack is a saturation statement. ∎
 
 **Definition 12.5.3n (Null-Convexity/Saturation Certificate $\mathfrak C_{\mathrm{NC}}$).** A null-convexity/saturation certificate for a retained local-horizon family is a finite record
 $$
@@ -1550,27 +1808,27 @@ r_\lambda\ge0.
 $$
 Detailed balance, a positive semigroup generator, or the GSL certificate alone is not enough unless the finite second-variation representation (76ao), the sign of the residual, and the overlap audit are recorded. A zero-slack conclusion additionally requires $\mathcal Z_{\mathrm{slack}}$ to record that the quadratic form and residual vanish on every retained null generator, not merely that they are nonnegative.
 
-**Proposition 12.5.3o (Null-Convexity Discharge and Sign-Definite Gravity Correction).** If $\mathfrak C_{\mathrm{NC}}$ is accepted on the retained local-horizon family, then the null-convexity hypothesis (76g) of Theorem 12.5.3b is discharged on that family. Consequently the predictive QNEC slack of Theorem 12.5.3f satisfies
+**Proposition 12.5.3o (Null-Convexity Discharge and Sign-Definite Gravity Correction).** If $\mathfrak C_{\mathrm{NC}}$ is accepted on the retained local-horizon family of fiducial transverse area $A>0$, then the null-convexity hypothesis (76g) of Theorem 12.5.3b is discharged on that family. Consequently the predictive QNEC slack density of Theorem 12.5.3f satisfies
 $$
 \mathcal Q(k)
 =
-2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle-\Delta S_{\mathrm{pred}}''(\lambda)
+2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle-\frac{1}{A}\Delta S_{\mathrm{pred}}''(\lambda)
 =
-\frac{d^2}{d\lambda^2}D(\rho_\lambda\Vert\omega_\lambda)
+\frac{1}{A}\frac{d^2}{d\lambda^2}D(\rho_\lambda\Vert\omega_\lambda)
 \ge0.
 \tag{76ap}
 $$
-If $\mathcal Z_{\mathrm{slack}}$ is the zero-slack ledger, then Corollary 12.5.3g and Theorem 12.5.3h give the reversible Einstein branch. If instead $\mathcal Z_{\mathrm{slack}}$ supplies a conserved retained tensor $T_{\mu\nu}^{(\mathrm{rec})}$ with
+If $\mathcal Z_{\mathrm{slack}}$ is the zero-slack ledger, then Corollary 12.5.3g and Theorem 12.5.3h give the reversible Einstein branch under the geometric-identification hypotheses of Theorem 12.5.3h. If $\mathcal Z_{\mathrm{slack}}$ supplies a conserved retained tensor $T_{\mu\nu}^{(\mathrm{rec})}$ with
 $$
-8\pi G\,T_{\mu\nu}^{(\mathrm{rec})}k^\mu k^\nu
+T_{\mu\nu}^{(\mathrm{rec})}k^\mu k^\nu
 =
-\mathcal Q(k)
+\frac{\mathcal Q(k)}{2\pi}
 \ge0
 \tag{76aq}
 $$
 for all covered null generators, then the retained metric equation is the sign-definite non-equilibrium response equation (76aj). The sign statement is only a null-projection statement unless the null-direction tomography condition of Theorem 12.1g supplies the full tensor.
 
-*Proof.* Equation (76ao) gives (76g) directly. The identity between the second derivative of the relative-entropy ledger and the predictive QNEC slack is Theorem 12.5.3f, so (76ap) follows. Zero slack invokes Corollary 12.5.3g and Theorem 12.5.3h. The nonzero case is exactly the conserved-slack alternative of Definition 12.5.3k and Theorem 12.5.3k.1, with the null-projection sign inherited from (76ap). ∎
+*Proof.* Equation (76ao) gives (76g) directly. Theorem 12.5.3f identifies the transverse-area-normalized second derivative of the relative-entropy ledger with the predictive QNEC slack density, so (76ap) follows. Zero slack invokes Corollary 12.5.3g and Theorem 12.5.3h on their stated geometric branch. In the nonzero case, Theorem 12.5.3h requires $T_{kk}^{(\mathrm{rec})}=\mathcal Q(k)/(2\pi)$ and yields the conserved-slack alternative of Definition 12.5.3k and Theorem 12.5.3k.1, with the null-projection sign inherited from (76ap). ∎
 
 **Definition 12.5.3o.1 (Fisher-Curvature Null-Convexity Discharge Record).** A Fisher-curvature discharge record for a retained local-horizon family is a finite forward-locked record
 $$
@@ -1650,6 +1908,21 @@ S_{\mathrm{cross}}
 \tag{76as}
 $$
 This is a finite retained light-sheet bound, not an unconditional global Bousso theorem outside the cut family, orientation convention, and overlap audit certified by $\mathfrak C_{\mathrm{PGSL}}$.
+
+*Proof.* Theorem 12.5.3m gives $\Delta S_{\mathrm{gen}}\ge0$ for the two covered cuts. On the Bekenstein-Hawking calibration branch, Definition 12.5.3l gives
+$$
+\Delta S_{\mathrm{gen}}
+=
+\Delta S_{\mathrm{out}}+\frac{\Delta\mathcal A_{\mathrm{GSL}}}{4G},
+$$
+which proves (76ar). On the stated light-sheet bookkeeping branch, the exterior loses precisely the crossing entropy, so $\Delta S_{\mathrm{out}}=-S_{\mathrm{cross}}$, while the accepted orientation gives $\Delta\mathcal A_{\mathrm{GSL}}=\mathcal A(\lambda_1)-\mathcal A(\lambda_2)$. Substitution into (76ar) yields
+$$
+-S_{\mathrm{cross}}
++
+\frac{\mathcal A(\lambda_1)-\mathcal A(\lambda_2)}{4G}
+\ge0,
+$$
+and rearrangement proves (76as). ∎
 
 **Definition 12.5.5a (Typed Non-Equilibrium Gravity Ledger).** A finite ledger fixes tensor/scalar retarded responses, contact terms, hydrodynamic frame and order, null normalization, focusing-to-throughput map, and typed intervals for transport, relaxation, ringdown, and curvature response. It also certifies serial cycle use, a minimum cycle duration $\tau_{\min}>0$, and
 $$

@@ -6,14 +6,12 @@ This appendix separates generation topology, $D_4$ triality, binary coding, and 
 
 
 
-This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector and the hierarchical pattern of fermion masses emerge from the topology and geometry of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space $\Sigma_8$ is the complete flag manifold, rigorously defined in **Section 7.2.7** (Theorem 26, formalized in Appendix M.2),
-
+This appendix studies a conditional family-count branch and separate flavor-response models on the MPU perspective geometry. On the minimal Hilbert-carrier branch, $H_0\cong\mathbb C^8$ and the labeled rank-one perspective space is the complete flag manifold
 $$
-\Sigma_8 \cong U(8)/U(1)^8,
+\Sigma_8\cong U(8)/U(1)^8.
 \tag{R.1}
 $$
-
-naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the minimal dimension required for self-referential logic (Theorem 23). This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
+Theorem 23 supplies the dimension lower bound under its Hilbert-carrier hypotheses, while equality $d_0=8$ uses the additional minimality branch. The family count further requires the anomaly, CP-capability, and additive-selection premises below. Fermion masses and mixings require the independent localization, label, response, scale, and remainder certificates of the flavor layer.
 
 **Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Proposition G.M1 together with the capacity-saturating, SM-type anomaly analysis of Theorem G.8.4b and Corollary G.8.4c; Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
 $$
@@ -23,21 +21,22 @@ using the conditional registered-reset bound $\varepsilon_{\mathrm{phys}}\ge H_q
 1. The **gauge structure:** $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ in the conditional sense of Theorem G.8.4b
 2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
 
-The generation structure derived in this appendix thus shares a common origin with the gauge structure: both arise from the topology and symmetries of the fundamental MPU state space, as optimized by PCE. This provides a unified geometric foundation for the SM's horizontal (gauge) and vertical (generation) structures.
+The gauge and family sectors use related MPU branch data but have different proof obligations. Gauge selection does not imply the family count, and the family-count theorem does not imply flavor observables.
 
-**Generation Count and Structural Compatibility:** This appendix contains one theorem-level derivation of the generation count and two compatibility layers:
+**Generation Count and Structural Compatibility:**
 
-1. **Topological derivation (Sections R.1-R.4.1):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with the family-charge anomaly constraints and the requirement of nontrivial CP violation, this yields the minimal admissible three-generation pattern with family charges $\{a,-a,0\}$. Proposition R.3.5.1a then removes supernumerary response-null copies on the pre-flavor family-redundancy PPI branch.
+1. **Minimal admissible family count:** On the connected regular anomaly-descent branch, within the uniform $U(1)_F$ charge class and with nontrivial CP capability required, Theorem R.3.4 gives the smallest admissible count $N=3$. Proposition R.3.5.1a selects it only under its additive-monotone family objective. Response-null labels are removed independently by Corollary P.6.1b.8.
+2. **Triality compatibility:** A marked real 8-carrier with compact $\mathfrak{so}(8)$ structure has the three-element triality orbit $\{V,S^+,S^-\}$. This does not identify $H_0\cong\mathbb C^8$ with a real vector carrier or generate $U(1)_F$.
+3. **Lattice compatibility:** A registered $E_8$ root system supplies candidate squared distances $\{0,2,4,6,8\}$, and a registered Leech construction contains the scaled three-fold $E_8$ scaffold. These are compatibility and realizability data, not independent selections of family labels or flavor responses.
 
-2. **Triality compatibility (Section R.4.2):** The minimal branch has $d_0=8$. On any marked real 8-carrier equipped with the compact rotation algebra $\mathfrak{so}(8)$, the complexified algebra has type $D_4$, whose outer automorphism group is $S_3$. The three 8-dimensional fundamental $\mathrm{Spin}(8)$ modules $V,S^+,S^-$ form a canonical three-element triality orbit. This supplies a representation-theoretic compatibility check for the three-sector ledger, but it does not by itself identify the complex MPU Hilbert space $H_0\cong\mathbb C^8$ with a real $\mathrm{Spin}(8)$ vector carrier, and it does not generate the continuous family symmetry $U(1)_F$ used in Theorem R.3.4.
-
-3. **Geometric compatibility (Sections R.4.2 and R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a nontrivial three-fold scaffold compatible with the topological count. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
-
-**Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a discrete geometric invariant with zero continuously adjustable parameters:
+**Conditional mass-ratio diagnostic:** If three physical root labels are selected and the same Gaussian coefficient applies to both logarithmic ratios with controlled remainders, the leading model gives
 $$
-\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}
+\mathcal R
+:=\frac{\ln(m_3/m_1)}{\ln(m_3/m_2)}
+=\frac{d_{31}^2}{d_{32}^2}
+\in\left\{\frac43,\frac32,2,3,4\right\}.
 $$
-This $\xi$-independent ratio (with $\xi$ defined in Section R.5.3) provides sharp, falsifiable predictions. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete value 3 to within 3.8%, providing strong phenomenological support.
+The charged-lepton proximity to $3$ is a retrospective model comparison. A forward prediction requires preregistered labels, response law, scale scheme, and remainder interval.
 
 **Reading Guide:**
 - **For topology only:** Sections R.1-R.3 (standard flag manifold results)
@@ -61,7 +60,7 @@ To aid clarity, we summarize the key mathematical objects and their notation:
 | Symbol | Meaning | Defined In |
 |--------|---------|------------|
 | $H_0$ | MPU Hilbert space, $\mathbb{C}^8$ | Theorem 23 |
-| $\Sigma_8$ | Perspective Space, $U(8)/U(1)^8$ | Theorem 26 |
+| $\Sigma_8$ | Perspective Space on the ordered rank-one context branch, $U(8)/U(1)^8$ | Corollary 26 |
 | $\pi_2(\Sigma_8)$ | Second homotopy group, $\mathbb{Z}^7$ | Theorem R.1.1 |
 | $\omega_i$ | Generators of $H^2(\Sigma_8;\mathbb{Z})$ | Eq. R.4 |
 | $q = (q_1,\ldots,q_7)$ | Topological charge vector | Eq. R.6 |
@@ -93,25 +92,42 @@ Let $\Sigma_8 := U(8)/U(1)^8$ be the complete flag manifold of $\mathbb{C}^8$. I
 
 The Perspective Space $\Sigma_8$ is simply connected and its second homotopy group is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$.
 
-*Proof.* This is a standard result in algebraic topology (Hatcher 2002; Bott & Tu 1982). Consider the principal fiber bundle $T^8 \hookrightarrow U(8) \to \Sigma_8$, where $T^8 \cong U(1)^8$ is the maximal torus. The long exact sequence in homotopy associated with this fibration provides the necessary relationships.
-
+*Proof.* The quotient map $U(8)\to U(8)/T^8=\Sigma_8$ is a principal $T^8$-bundle. The long exact homotopy sequence of a fibration (Hatcher 2002) contains
 $$
-\dots \to \pi_2(U(8)) \to \pi_2(\Sigma_8) \to \pi_1(T^8) \to \pi_1(U(8)) \to \pi_1(\Sigma_8) \to 0.
+\pi_2(U(8))\longrightarrow\pi_2(\Sigma_8)
+\longrightarrow\pi_1(T^8)\xrightarrow{i_*}\pi_1(U(8))
+\longrightarrow\pi_1(\Sigma_8)\longrightarrow\pi_0(T^8).
 \tag{R.2}
 $$
-
-Using the standard homotopy groups of Lie groups (Nakahara 2003): $\pi_2(U(n)) = 0$, $\pi_1(T^n) \cong \mathbb{Z}^n$, and $\pi_1(U(n)) \cong \mathbb{Z}$. The relevant segment of the sequence reduces to:
-
+The torus is connected, so $\pi_0(T^8)=0$, and
 $$
-0 \to \pi_2(\Sigma_8) \to \mathbb{Z}^8 \to \mathbb{Z} \to \pi_1(\Sigma_8) \to 0.
+\pi_1(T^8)=\pi_1(U(1))^8\cong\mathbb Z^8.
+$$
+Bott periodicity (Bott 1959) gives $\pi_2(U(8))=0$. The determinant fibration
+$$
+SU(8)\longrightarrow U(8)\xrightarrow{\det}U(1)
+$$
+and simple connectedness of $SU(8)$ give $\pi_1(U(8))\cong\pi_1(U(1))\cong\mathbb Z$. For a diagonal torus loop with winding vector $(k_1,\ldots,k_8)$, its determinant is the product of the eight diagonal loops, whose winding number is
+$$
+i_*(k_1,\ldots,k_8)=\sum_{r=1}^8k_r.
+$$
+This map is surjective because $i_*(1,0,\ldots,0)=1$. Exactness therefore gives
+$$
+\pi_1(\Sigma_8)\cong\operatorname{coker}i_*=0
+$$
+and
+$$
+\pi_2(\Sigma_8)
+\cong\ker i_*
+=\{(k_1,\ldots,k_8)\in\mathbb Z^8:\sum_rk_r=0\}
+\cong\mathbb Z^7.
 \tag{R.3}
 $$
-
-The homomorphism $\mathbb{Z}^8 \to \mathbb{Z}$ is induced by the inclusion $T^8 \hookrightarrow U(8)$ and is given by the summation map $(k_1, \dots, k_8) \mapsto \sum_i k_i$, which is surjective. By exactness of the sequence, $\pi_1(\Sigma_8) = 0$ and $\pi_2(\Sigma_8) \cong \ker(\sum: \mathbb{Z}^8 \to \mathbb{Z}) \cong \mathbb{Z}^7$. ∎
+∎
 
 ### R.1.2 Topological generators and cohomology in degree two
 
-Let $0 \subset S_1 \subset S_2 \subset \dots \subset S_8$ be the universal flag of tautological subbundles over $\Sigma_8$, where $S_8$ is the trivial bundle $\mathbb{C}^8 \times \Sigma_8$, and $\mathrm{rank}(S_k) = k$. Define the tautological quotient line bundles $Q_k := S_k/S_{k-1}$ and their first Chern classes $x_k := c_1(Q_k) \in H^2(\Sigma_8; \mathbb{Z})$ (Milnor & Stasheff 1974; Griffiths & Harris 1978). The total Chern class of the ambient rank-8 bundle $S_8$ is trivial, which implies $\sum_k x_k = 0$ in $H^2(\Sigma_8; \mathbb{Z})$.
+Let $0 \subset S_1 \subset S_2 \subset \dots \subset S_8$ be the universal flag of tautological subbundles over $\Sigma_8$, where $S_8$ is the trivial bundle $\mathbb{C}^8 \times \Sigma_8$, and $\operatorname{rank}(S_k) = k$. Define the tautological quotient line bundles $Q_k := S_k/S_{k-1}$ and their first Chern classes $x_k := c_1(Q_k) \in H^2(\Sigma_8; \mathbb{Z})$ (Milnor & Stasheff 1974; Griffiths & Harris 1978). The total Chern class of the ambient rank-8 bundle $S_8$ is trivial, which implies $\sum_k x_k = 0$ in $H^2(\Sigma_8; \mathbb{Z})$.
 
 An integral basis for $H^2(\Sigma_8; \mathbb{Z})$ is given by differences of these Chern classes (Brion 2005; Fulton 1997):
 
@@ -331,15 +347,31 @@ These are topological charges neutral under $SU(3)\times SU(2)$. Sectors $q \not
 
 **Definition R.3.3 (Predictive block).** A predictive block $\mathrm{Rep}$ is a representation of $G_{\mathrm{SM}}$ on a finite-dimensional Hilbert space, corresponding to a collection of chiral fermions with specified gauge quantum numbers. For the Standard Model, a single generation forms one predictive block.
 
-**Lemma R.IDX1 (Atiyah-Singer index formula for Dirac operator).**
-Let $M$ be a compact, oriented, spin manifold with a vector bundle $E_{\mathrm{Rep}}$ associated to the predictive block $\mathrm{Rep}$ (Atiyah & Singer 1968). The index of the Dirac operator $\not{D}_A$ coupled to a gauge connection $A$ on $E_{\mathrm{Rep}}$ is:
+**Lemma R.IDX1 (Atiyah--Singer Index Formula for a Twisted Chiral Dirac Operator).**
+Let $M$ be a smooth closed even-dimensional Riemannian spin manifold, let $S^\pm\to M$ be its chiral spinor bundles, and let $E_{\mathrm{Rep}}\to M$ be a smooth Hermitian vector bundle with a compatible connection $A$. The coupled chiral Dirac operator
 $$
-\mathrm{Ind}(\not{D}_A) = \int_M \widehat{A}(TM) \, \mathrm{ch}(E_{\mathrm{Rep}}),
+\not D_A^+:\Gamma(S^+\otimes E_{\mathrm{Rep}})
+\longrightarrow
+\Gamma(S^-\otimes E_{\mathrm{Rep}})
+$$
+is Fredholm and satisfies
+$$
+\operatorname{Ind}(\not D_A^+)
+=\int_M\left[\widehat A(TM)\,\operatorname{ch}(E_{\mathrm{Rep}})\right]_{\dim M}.
 \tag{R.10}
 $$
-where $\widehat{A}(TM)$ is the A-hat genus of the tangent bundle and $\mathrm{ch}(E_{\mathrm{Rep}})$ is the Chern character of $E_{\mathrm{Rep}}$.
 
-*Proof.* This is the Atiyah-Singer index theorem for twisted Dirac operators. In four dimensions, the analytical index (LHS of R.10) equals the difference between the dimensions of the spaces of left-handed and right-handed zero modes (since $\dim\operatorname{coker}(\not D_A) = \dim\ker(\not D_A^\dagger)$), which corresponds to the net chiral asymmetry of the matter content in representation $\mathrm{Rep}$. The RHS provides the topological expression for this index. ∎
+*Proof.* The principal symbol of $\not D_A^+$ is Clifford multiplication by a nonzero cotangent vector and is invertible away from the zero section, so the operator is elliptic. Because $M$ is closed, elliptic regularity makes its kernel and cokernel finite-dimensional and its image closed; hence it is Fredholm. The Atiyah--Singer index theorem for twisted Dirac operators (Atiyah and Singer 1968a) applies to the closed spin manifold and the smooth complex twisting bundle and gives
+$$
+\operatorname{Ind}(\not D_A^+)
+=\left\langle\widehat A(TM)\operatorname{ch}(E_{\mathrm{Rep}}),[M]\right\rangle,
+$$
+which is the displayed integral of the top-degree component. The formal adjoint is $\not D_A^-$, so
+$$
+\operatorname{Ind}(\not D_A^+)
+=\dim\ker\not D_A^+-\dim\ker\not D_A^-.
+$$
+In four dimensions this is the left-minus-right zero-mode count for the declared chirality convention. ∎
 
 **Corollary R.IDX1.1 (Degree-4 characteristic-class form).**
 In 4D, only the degree-4 part contributes:
@@ -427,17 +459,16 @@ $$
 $$
 The index therefore represents the minimal family count selected by Theorem R.3.4 on the flag lift. It does not replace Theorem R.3.4; it globalizes its selected three-family branch as an index statement. ∎
 
-**Theorem R.3.4 (Family-charge anomaly constraints).**
+**Theorem R.3.4 (Family-Charge Anomaly Constraints on the Regular Descent Branch).**
 
-Let $\{q^{(g)}\}\subset L_{\rm light}$ be the set of realized light sectors. Each sector corresponds to a full SM generation with identical $G_{\rm SM}$ charges, but carries a distinct **family** charge offset $F_g := f \cdot q^{(g)}$, where $f$ is a fixed vector in the dual lattice. On the branch where the family $U(1)_F$ is treated as a predictive-frame redundancy rather than a physical global update channel, Theorem X.8d requires the total $U(1)_F$ anomaly class to vanish. In the uniform family-charge branch this descent condition reduces to
+Let $\{q^{(g)}\}\subset L_{\rm light}$ be the set of realized light sectors. Assume that each sector is a full Standard Model generation with identical $G_{\rm SM}$ charges and uniform family charge $F_g:=f\cdot q^{(g)}$, where $f$ is a specified dual-lattice vector. Assume also the connected regular source domain of Theorem X.8d, with $Z_x[J]\ne0$ for every admitted object and source, and treat $U(1)_F$ as a predictive-frame redundancy. Finally, assume that the admitted global/torsion anomaly ledger contains no additional class, or supply a cancellation certificate for every such class. Then predictive descent requires
 $$
-\sum_g F_g = 0,
+\sum_gF_g=0,
 \qquad
-\sum_g F_g^3 = 0.
+\sum_gF_g^3=0.
 \tag{R.11}
 $$
-
-These constraints admit multiple solutions. The pattern $\{a, -a, 0\}$ with $N=3$ sectors is the minimal solution that satisfies predictive anomaly descent and permits CP violation. The theorem is therefore a statement about the family-redundancy branch; if $U(1)_F$ were instead treated as a physical global update channel, a nonzero anomaly would be analyzed by Theorem X.8d as a channel, not as a quotient obstruction.
+Within this uniform-charge class, the pattern $\{a,-a,0\}$ with $a\ne0$ is the smallest family count satisfying these equations and admitting a physical CKM phase. The anomaly equations admit larger solutions. If $U(1)_F$ is treated as a physical global update channel, Theorem X.8d does not require quotient descent.
 
 *Proof.* Assume $U(1)_F$ is an emergent family symmetry for which every chiral fermion in generation $g$ carries the same family charge $F_g$ (i.e., the $g$-th predictive block is replicated with a uniform $U(1)_F$ charge).
 
@@ -495,98 +526,84 @@ L_{\mathrm{model}}(N) \;\ge\; L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N)
 $$
 can in principle attain its minimum at an interior value $N > 3$, because a strictly increasing lower bound does not force the bounded quantity to be monotone. For example, the assignment $L(3)=100$, $L(4)=5$, $L(N)=N$ for $N \ge 5$ respects the lower bound $B(N)=N$ for every $N \ge 3$ yet is minimized at $N=4$. Proposition R.3.5 therefore establishes the selection result strictly within the surrogate class in which $L_{\mathrm{fam}}$ equals the displayed additive-monotone expression; it establishes minimal admissibility, while exact realized multiplicity is confined to the surrogate-objective selection branch. This is consistent with the theorem-model boundary recorded in Proposition R.3.5f: the theorem-level structural content of the generation sector is minimal admissibility within the anomaly+CP class of Theorem R.3.4; exact realized $N_g = 3$ is on the surrogate-objective selection branch defined in part (c) above.
 
-**Proposition R.3.5.1a (PPI-Realized Family Count on the Pre-Flavor Family-Redundancy Branch).** On the family-redundancy branch of Theorem R.3.4, before appending a separate flavor-potential package, the realized light family count is exactly
+**Proposition R.3.5.1a (Family Count on the Additive-Monotone Selection Branch).** Assume the family-redundancy and anomaly-plus-CP admissibility conditions of Theorem R.3.4 and assume that the realized family-count objective is
+$$
+L_{\mathrm{fam}}(N)=L_0+NL_{\mathrm{block}}+L_{\mathrm{mix}}(N),
+$$
+where $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}$ is nondecreasing for $N\ge3$. Then
 $$
 N_g=3.
 $$
 
-*Proof.* Theorem R.3.4 proves that $N=3$ with family charges $\{a,-a,0\}$ is the minimal anomaly-descending family ledger that permits a physical CP phase. It remains only to exclude $N>3$ as a retained pre-flavor ledger.
-
-Fix the gauge-capacity branch of Theorem G.8.4b and Corollary G.8.4c. An additional full family beyond the three-sector ledger has the same Standard Model gauge response as an existing full family. Since no additional gauge generator is available after the $12$-generator bound is saturated, the extra family can have only two possible statuses at the pre-flavor level.
-
-First, if the extra label carries no distinct finite protocol response, then it is response-null. By Corollary P.6.1b.8 it is quotiented out because it increases description length without lowering violation cost or predictive regret.
-
-Second, if the extra label is assigned distinct masses, mixings, or flavor-holonomy data, then it is no longer part of the pre-flavor family-redundancy ledger. It is an appended flavor-sector datum and must be paid for in the separate Appendix T/R flavor package. Such appended data cannot lower the pre-flavor anomaly+CP objective because the anomaly descent equations and the existence of a physical CP phase are already satisfied by $\{a,-a,0\}$. They therefore add positive branch description cost at the pre-flavor selection step.
-
-Thus every $N>3$ candidate is either response-null at the pre-flavor level or belongs to a later flavor model layer with positive additional branch cost. PPI therefore retains exactly the minimal anomaly-descending CP-capable family ledger:
+*Proof.* Theorem R.3.4 shows that $N=3$ is admissible and that $N<3$ cannot support a physical CKM phase. For every $N\ge3$,
 $$
-N_g=3.
+L_{\mathrm{fam}}(N+1)-L_{\mathrm{fam}}(N)
+=
+L_{\mathrm{block}}+
+L_{\mathrm{mix}}(N+1)-L_{\mathrm{mix}}(N)>0.
 $$
-∎
+Thus the objective is strictly increasing on the admissible counts and has its unique minimum at $N=3$. ∎
 
-**Corollary R.3.5a** (Golay Correction Radius Equals Generation Count). The Golay correction radius equals the minimal generation count:
+**Corollary R.3.5a (Golay Radius and Selected Family Count).** Assume both the predictive-recovery branch on which Theorem Z.13 selects the $[24,12,8]$ Golay code and the additive-monotone family-selection branch of Proposition R.3.5.1a. Then
 $$
-t = \left\lfloor \frac{d_{\min}-1}{2} \right\rfloor = 3 = N_g.
+t=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor=3=N_g.
 $$
 
-*Proof.* Theorem Z.13 fixes the PCE-optimal code as $[24,12,8]$, so $d_{\min}=8$ and therefore
-$$
-t=\left\lfloor\frac{8-1}{2}\right\rfloor=3.
-$$
-Theorem R.3.4 gives the minimal admissible value $N_g=3$ in the anomaly+CP family-charge class, and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. Hence $t=N_g$ on that branch. ∎
+*Proof.* Theorem Z.13 gives $d_{\min}=8$, hence $t=\lfloor(8-1)/2\rfloor=3$. Proposition R.3.5.1a gives $N_g=3$ under its additive-monotone objective. Therefore $t=N_g=3$ on the intersection of the two branches. ∎
 
-**Corollary R.3.5a.1 (Code-Radius Family Ledger).**
-On the pre-flavor family-redundancy PPI branch, the realized family ledger is exactly the radius-three correction ledger of the selected Golay code:
+**Corollary R.3.5a.1 (Conditional Code-Radius Family Ledger).** Under the hypotheses of Corollary R.3.5a,
 $$
 N_g
-=
-t_{\mathrm{Golay}}
-=
-\left\lfloor\frac{d_{\min}(\mathcal G_{24})-1}{2}\right\rfloor
-=
-3.
+=t_{\mathrm{Golay}}
+=\left\lfloor\frac{d_{\min}(\mathcal G_{24})-1}{2}\right\rfloor
+=3.
 \tag{R.3.5a.1}
 $$
-Any additional family label at this pre-flavor level is either response-null and removed by PPI, or response-active only after adding a separate flavor-sector datum with positive branch cost.
+This equality does not classify family labels outside the additive-monotone selection model. A label with no distinct finite-protocol response is removed independently by Corollary P.6.1b.8. A response-active extra family requires an enlarged flavor objective and is outside Proposition R.3.5.1a unless its additional cost and benefit are included explicitly.
 
-*Proof.* The equality $t_{\mathrm{Golay}}=3$ is Corollary R.3.5a. Proposition R.3.5.1a proves that the pre-flavor PPI-realized family count is exactly $N_g=3$. Combining these gives (R.3.5a.1). If a fourth pre-flavor label has no distinct finite protocol response, Corollary P.6.1b.8 quotients it as response-null. If it has distinct masses, mixings, or flavor holonomy, then by Proposition R.3.5.1a it is not part of the pre-flavor family-redundancy ledger but belongs to a later response-active flavor layer with separate description cost. ∎
+*Proof.* Corollary R.3.5a establishes every equality in (R.3.5a.1). The final scope statements follow from the response-null quotient of Corollary P.6.1b.8 and from the declared domain of Proposition R.3.5.1a. ∎
 
-**Corollary R.3.5b** (Topological Rank Identity). On the minimal Appendix Z branch,
+**Corollary R.3.5b (Conditional Topological Rank Identity).** Assume the minimal Appendix-Z Hilbert and dimension branches, the anomaly/CP class of Theorem R.3.4, and the additive-monotone selection branch of Proposition R.3.5.1a. Then
 $$
-\operatorname{rank}\pi_2(\Sigma_8) = d_0 - 1 = N_g + D = 7.
+\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D=7.
 $$
 
-*Proof.* Theorem R.1.1 gives $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, so $\operatorname{rank}\pi_2(\Sigma_8)=7$. On the minimal branch, Theorem Z.2 gives $d_0=8$, hence $d_0-1=7$. Theorem R.3.4 gives the minimal admissible value $N_g=3$ in the anomaly+CP family-charge class, Proposition R.3.5.1a realizes that value on the pre-flavor family-redundancy PPI branch, and Theorem Z.11 gives $D=4$, so $N_g+D=7$ on that branch. Therefore all quantities coincide. ∎
+*Proof.* The cited branches give $\operatorname{rank}\pi_2(\Sigma_8)=7$, $d_0=8$, $N_g=3$, and $D=4$. Hence $d_0-1=N_g+D=7$. ∎
 
-**Corollary R.3.5c (Minimal-Branch Structural Identity).** On the minimal branch,
+**Corollary R.3.5c (Conditional Structural Identity).** Under the hypotheses of Corollary R.3.5b and the Theorem-15 branch $K_0=3$,
 $$
-2^{K_0}=N_g+D+1.
-$$
-Equivalently,
-$$
+2^{K_0}=N_g+D+1,
+\qquad
 K_0=\log_2(N_g+D+1).
 $$
 
-*Proof.* Theorem 15 gives $K_0=3$ and hence $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$. On the minimal Appendix Z Hilbert-carrier branch, Theorem Z.2 gives $d_0=N_{\mathrm{vis}}^{\min}=8$. Corollary R.3.5b gives $d_0-1=N_g+D$. Therefore $d_0=N_g+D+1=8=N_{\mathrm{vis}}^{\min}=2^{K_0}$. Taking $\log_2$ of both sides gives the equivalent formula. ∎
+*Proof.* Both sides of the first equality are $8$; taking $\log_2$ gives the second. ∎
 
-**Corollary R.3.5d (Three Independently Derived Threes).** On the minimal branch,
+**Corollary R.3.5d (Three Branch-Selected Threes).** Assume, in addition, the predictive-recovery Golay branch of Corollary R.3.5a. Then
 $$
 K_0=N_g=t_{\mathrm{Golay}}=3,
+\qquad
+t_{\mathrm{Golay}}=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor.
 $$
-where
-$$
-t_{\mathrm{Golay}}=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor
-$$
-is the Golay correction radius.
 
-*Proof.* Theorem 15 gives $K_0=3$. Theorem R.3.4 gives the minimal admissible value $N_g=3$ in the anomaly+CP family-charge class, and Proposition R.3.5.1a realizes that value on the pre-flavor family-redundancy PPI branch. Corollary R.3.5a gives $t_{\mathrm{Golay}}=3=N_g$ on that branch. Combining the three equalities proves the claim. ∎
+*Proof.* Theorem 15 gives $K_0=3$, the effective R.3.5.1a gives $N_g=3$ on its additive branch, and $d_{\min}=8$ gives $t_{\mathrm{Golay}}=3$. ∎
 
-**Proposition R.3.5e (Minimal-Branch Integer Ledger).** The recurrent minimal-branch integers satisfy the exact ledger
+**Proposition R.3.5e (Conditional Integer Ledger).** On the intersection of the source branches named in the last column,
 
-| Integer | Rigorous identity on the minimal branch | Source chain |
+| Integer | Identity | Source branches |
 |:--:|:--|:--|
-| $3$ | $K_0=N_g=t_{\mathrm{Golay}}$ | Theorem 15; Theorem R.3.4; Proposition R.3.5.1a; Corollary R.3.5a |
-| $4$ | $D=4$ | Theorem Z.11 |
-| $7$ | $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D$ | Theorem R.1.1; Corollary R.3.5b |
-| $8$ | $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ and $d_0=8$ on the minimal branch | Theorem 15; Theorem 23; Theorem Z.2 |
-| $12$ | $12=M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)$ | Theorem Z.5; Theorem Z.2.5b; Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13; Theorem U.7a; Theorem G.8.4f |
-| $24$ | $24=M=K(4)$ | Theorem Z.5; Theorem Z.11 |
+| $3$ | $K_0=N_g=t_{\mathrm{Golay}}$ | Theorem 15; anomaly/CP class; additive family selection; predictive-recovery Golay branch |
+| $4$ | $D=4$ | Theorem Z.11 dimension branch |
+| $7$ | $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D$ | R.1.1; minimal Hilbert branch; additive family selection; dimension branch |
+| $8$ | $N_{\mathrm{vis}}^{\min}=2^{K_0}=d_0=8$ | Theorem 15; Theorem 23; Theorem Z.2 minimal branch |
+| $12$ | $12=M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)$ | The cited interface, code, Grassmannian, and gauge branches |
+| $24$ | $24=M=K(4)$ | Theorem Z.5 and Theorem Z.11 branches |
 
-*Proof.* The first four rows are exactly Corollaries R.3.5a-R.3.5d together with Theorems R.1.1, 15, Z.2, and Z.11. The $12$-row combines the Peirce-Grassmannian half-mode count from Theorem Z.5 and Theorem Z.2.5b, the predictive-recovery code dimension from Definition Z.13b.0 and Theorems Z.13b.0a and Z.13, and the Grassmannian/gauge correspondences of Theorem U.7a and Theorem G.8.4f. The $24$-row combines Theorems Z.5 and Z.11. These are exact minimal-branch identities on the stated branch. ∎
+*Proof.* Each row follows by substituting the values supplied by its listed source branches. The ledger records cross-branch numerical identities; it does not derive one source branch from another. ∎
 
-**Remark R.3.5e.1.** Proposition R.3.5e records a compact ledger of exact equalities on the minimal branch. It is not, by itself, a single-parent derivation of all entries. The closure supplied by the following results is a current-graph non-collapse decomposition: the present proof graph decomposes the recurrent ledger into structural subchains with named source invariants, separates these from downstream equality and rigidity invariants, and proves that no current source invariant subsumes the others. Whether a future common parent invariant underlies all source roles remains open.
+**Remark R.3.5e.1.** Proposition R.3.5e records a compact ledger of exact equalities on the intersection of the source branches named in its final column. It is not, by itself, a single-parent derivation of all entries. The closure supplied by the following results is a current-graph non-collapse decomposition: the present proof graph decomposes the recurrent ledger into structural subchains with named source invariants, separates these from downstream equality and rigidity invariants, and proves that no current source invariant subsumes the others. Whether a future common parent invariant underlies all source roles remains open.
 
-**Proposition R.3.5e.2 (Three-Chain Decomposition of the Recurrent Integer Subledger).** The minimal-branch subledger
+**Proposition R.3.5e.2 (Three-Chain Decomposition of the Recurrent Integer Subledger).** On the intersection of the capacity-saturation, Peirce--Grassmannian, predictive-recovery, family-selection, topology, and dimension branches cited by Proposition R.3.5e, the subledger
 $$
 (\varepsilon_0,a,d_0,b,k,M,D)
 $$
@@ -608,7 +625,7 @@ Here $\mathcal C_{\mathrm{cap}}$ is the capacity-saturation chain using Theorem 
 
 *Proof.* The first chain follows from the Landauer-SPAP lower bound and the structural reference $\varepsilon_0=\ln2$, the sharp match/mismatch active-verification record $a\ge2$, the integer capacity condition $\ln a\ge\varepsilon_0$, and PPI/PCE no-surplus selection giving $a=2$; the minimal SPAP tensor realization then gives $d_0=8=2a^2$. The second chain follows from the rank-$a$ projector on $\mathbb C^{d_0}$: $b=d_0-a=6$, $k=\dim_\mathbb C\operatorname{Hom}(pE,(1-p)E)=ab=12$, and $M=2k=24$. Here $k$ is the complex tangent half-mode count; on the predictive-recovery MacWilliams branch, Definition Z.13b.0 and Theorem Z.13b.0a identify the interface-code dimension with the same value $M/2=12$. The third chain is the channel-complete Bures tangent-cell condition $M=K(D)$, whose accepted minimal solution is $K(4)=24$ on the checked branch of Corollary Z.11.1. The $3$ and $7$ rows are not part of this subledger decomposition because their cited proofs use Theorem 15, Theorem R.3.4, Proposition R.3.5.1a, Corollary R.3.5a, Theorem R.1.1, and Corollary R.3.5b. ∎
 
-**Theorem R.3.5e.3 (Non-Collapse of the Source Roles in the Present Dependency Graph).** Let $G$ be the finite directed proof-role graph of the recurrent minimal-branch ledger as currently cited in Appendices R and Z. Its source roles are the four chains
+**Theorem R.3.5e.3 (Non-Collapse of the Source Roles in the Present Dependency Graph).** On the intersection of the source branches stated in Propositions R.3.5e and R.3.5e.2, let $G$ be the finite directed proof-role graph of the recurrent conditional ledger as cited in Appendices R and Z. Its source roles are the four chains
 $$
 \mathcal C_3,
 \quad
@@ -717,7 +734,7 @@ K_0=3=\#\{\mathbb C,\mathbb H,\mathbb O\}
 $$
 remains a numerical coherence check and not a categorical source. The finite list above exhausts the current source roles of $G$, so no current-source compression exists. ∎
 
-**Corollary R.3.5e.4 (No Single-Source Reduction from the Current Inputs Alone).** The present proof graph does not reduce
+**Corollary R.3.5e.4 (No Single-Source Reduction from the Current Inputs Alone).** Assume the intersection of the source branches of Proposition R.3.5e, the marked-arena hypotheses of Definition Z.35d and Theorem Z.35e, and the branch hypotheses of Corollary T.59a and Corollary 23a.1. On this common branch, the present proof graph does not reduce
 $$
 (K_0,d_0,\varepsilon_0,a,b,M,k,D)
 $$
@@ -731,9 +748,9 @@ M_8(\mathbb C)\cong\mathrm{Cl}_{\mathbb C}(6),
 \qquad
 M_8(\mathbb R)\cong\mathrm{Cl}_{\mathbb R}(0,6)\text{ (marked)}
 $$
-is unique under the marks of Definition Z.35d but does not collapse the four source roles into one parent.
+is unique under the registered marks but does not collapse the four source roles into one parent.
 
-*Proof.* The exact tuple is Proposition R.3.5e and Corollary T.59a. The uniqueness of the marked arena hierarchy is Theorem Z.35e. The Clifford coherence is Corollary 23a.1. The nonexistence of a current-source compression is Theorem R.3.5e.3. ∎
+*Proof.* Proposition R.3.5e and Corollary T.59a give the tuple on the declared common branch. Theorem Z.35e gives uniqueness of the marked arena hierarchy, Corollary 23a.1 gives the Clifford coherence, and Theorem R.3.5e.3 gives nonexistence of a current-source compression in the resulting graph. ∎
 
 **Remark R.3.5e.5 (Status of a Possible Bott-Theoretic Source).** Corollary R.3.5e.4 is a relative statement about the present dependency graph, not a global impossibility theorem. A future Bott-periodicity theorem or other proposed parent source would be additional structure, not a replacement already contained in the current ledger. To be admissible it must supply a parent invariant $P$ together with structure-preserving projections to every source invariant,
 $$
@@ -905,7 +922,7 @@ This section compares the theorem-level generation-count derivation with the str
 
 7. **Minimal solution:** Combined constraints yield $N=3$ with pattern $\{a, -a, 0\}$ as the smallest admissible solution in the modeled class.
 
-This topological mechanism derives the minimal admissible three-generation ledger from first principles within the stated anomaly and CP-violation assumptions; Proposition R.3.5 records the MDL-surrogate selection statement, and Proposition R.3.5.1a records exact realization on the pre-flavor family-redundancy PPI branch. The compatibility checks in Section R.4.2 are deliberately downstream of this theorem boundary.
+The anomaly and CP-capability argument gives the smallest admissible three-family ledger within its declared uniform-charge class. Proposition R.3.5 gives the MDL-surrogate statement, and Proposition R.3.5.1a selects $N_g=3$ on its additional additive-monotone family objective. The compatibility checks in Section R.4.2 are downstream of this branch boundary.
 
 ### R.4.2 Structural Compatibility
 
@@ -922,16 +939,16 @@ The convergence of these independent mathematical structures at 24 suggests deep
 
 **Proposition R.4.2 (Three-Fold Compatibility of Topology, Triality, Geometry, and Mode Count).**
 
-The number 3 enters the framework in four distinct ways:
+The number $3$ occurs in four distinct branch records:
 
-1. **Topological:** $\pi_2(\Sigma_8)$ anomaly cancellation together with the CP-violation requirement yields the minimal family-charge pattern $\{a,-a,0\}$ (Section R.4.1).
-2. **Triality:** on a marked real 8-carrier $W$ with compact rotation algebra $\mathfrak{so}(W)\cong\mathfrak{so}(8)$, the three 8-dimensional fundamental $\mathrm{Spin}(8)$ modules form the canonical triality orbit $\{V,S^+,S^-\}$.
-3. **Geometric:** the Leech lattice contains a scaled triple $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (this section).
-4. **Information:** the interface mode count factors as $M = 24 = 3 \times 8$ (**Appendix Z, Section Z.12**).
+1. **Family count:** Theorem R.3.4 gives the smallest anomaly-descending CP-capable uniform-charge pattern $\{a,-a,0\}$; Proposition R.3.5.1a selects it on the additive-monotone objective branch.
+2. **Triality:** a marked real 8-carrier with compact $\mathfrak{so}(8)$ structure has the triality orbit $\{V,S^+,S^-\}$.
+3. **Lattice scaffold:** the registered Leech construction contains $\sqrt2E_8^{\oplus3}$.
+4. **Mode factorization:** the interface branch has $M=24=3\times8$.
 
-These appearances are mutually compatible with a three-generation interpretation. Among them, item 1 is the generation-count derivation in the current theorem stack. Items 2-4 are compatibility checks unless an additional branch separately identifies the relevant real carrier and promotes the associated finite labels through the anomaly-descent gate of Appendix X.
+Items 2–4 are compatibility records. They do not derive the family count without independent carrier, label, and anomaly-descent identifications.
 
-*Proof.* Item 1 is Theorem R.3.4: from $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, gauge embedding, anomaly cancellation, and the requirement of nontrivial CP violation, the smallest admissible solution is $N=3$ with charges $\{a,-a,0\}$. Proposition R.3.5.1a then removes response-null supernumerary family copies on the pre-flavor family-redundancy PPI branch.
+*Proof.* Item 1 follows from R.3.4 plus the additive-monotone branch of the effective R.3.5.1a. A supernumerary response-null label is removed independently by Corollary P.6.1b.8. Items 2–4 are the representation, lattice, and arithmetic facts proved in the remainder of this proposition. No implication among those three facts and the family-charge selection is used. 
 
 For item 2, let $W$ be a marked Euclidean real vector space of dimension 8 and let $\mathfrak g=\mathfrak{so}(W)\cong\mathfrak{so}(8)$ be its compact rotation algebra. Its complexification $\mathfrak g_{\mathbb C}$ has Dynkin type $D_4$. The classification of complex simple Lie algebras identifies the outer automorphism group with the automorphism group of the Dynkin diagram (Humphreys 1972; Fulton & Harris 1991). The $D_4$ diagram has one central node and three indistinguishable outer nodes, so its diagram automorphism group is $S_3$. Therefore
 $$
@@ -991,20 +1008,15 @@ The coding and lattice classification statements below are independent until a f
 
 
 
-The preceding discussion noted that the Leech lattice "can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code." This section proves that this construction follows necessarily from PCE optimization. The key insight is that the Golay code appears independently in two optimization contexts:
-
-1. As the unique optimal error-correcting code for $M = 24$ modes (Theorem Z.13)
-2. As the gluing code in the construction of $\Lambda_{24}$ from $E_8^3$
-
-This convergence reflects a single optimization principle—PCE—operating at different scales.
+The preceding discussion notes that the Leech lattice can be obtained from the scaled triple $\sqrt{2}E_8^3$ by a gluing construction involving cosets and the extended binary Golay code. The predictive-recovery theorem selecting $\mathcal G_{24}$ does not itself construct that gluing. The lattice conclusion is available only after the finite-quadratic-module marking, maximal isotropic subgroup, glue representatives, and coset-minimum ledger of Lemma R.4.5 are independently registered. The occurrence of $\mathcal G_{24}$ in both ledgers is a compatibility observation, not a necessary implication from PCE optimization.
 
 ---
 
 #### R.4.2.1.1 $E_8$ as PCE-Optimal Lattice Structure in Eight Dimensions
 
-**Theorem R.4.3 ($E_8$ as Optimal Lattice Structure in Eight Dimensions).**
+**Theorem R.4.3 ($E_8$ as the Unique Positive-Definite Even Unimodular Rank-Eight Lattice).**
 
-Let $d_0 = 8$ be the MPU Hilbert space dimension (Theorem 23). The unique even unimodular lattice in $d_0 = 8$ dimensions is $E_8$.
+On the minimal Hilbert-carrier branch, Theorem 23 gives $d_0\ge8$ and Theorem Z.2 supplies the saturating value $d_0=8$. Independently assume a positive-definite real Euclidean lattice carrier of rank $d_0$ that is even and unimodular. Then that lattice is isometric to $E_8$.
 
 *Proof.*
 
@@ -1166,30 +1178,30 @@ with index $[L_H:L_0]=2^{12}$. Its three rank-$8$ summands are dimensionally com
 The automorphism group of the Leech lattice is:
 
 $$
-\text{Aut}(\Lambda_{24}) = \text{Co}_0
+\operatorname{Aut}(\Lambda_{24}) = \mathrm{Co}_0
 $$
 
-where $\text{Co}_0$ is the Conway group with order:
+where $\mathrm{Co}_0$ is the Conway group with order:
 
 $$
-|\text{Co}_0| = 2^{22} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23 = 8{,}315{,}553{,}613{,}086{,}720{,}000
+|\mathrm{Co}_0| = 2^{22} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23 = 8{,}315{,}553{,}613{,}086{,}720{,}000
 $$
 
 *Proof.*
 
-**Step 1 (Automorphism group).** $\text{Aut}(\Lambda_{24})$ consists of all orthogonal transformations $O \in O(24)$ such that $O(\Lambda_{24}) = \Lambda_{24}$.
+**Step 1 (Automorphism group).** $\operatorname{Aut}(\Lambda_{24})$ consists of all orthogonal transformations $O \in O(24)$ such that $O(\Lambda_{24}) = \Lambda_{24}$.
 
-**Step 2 (Conway's theorem).** By Conway (1969), this group is denoted $\text{Co}_0$ and has the stated order. The center contains $\{-I_{24}\}$.
+**Step 2 (Conway's theorem).** By Conway (1969b), this group is denoted $\mathrm{Co}_0$ and has the stated order. The center contains $\{-I_{24}\}$.
 
-**Step 3 (Sporadic simple group).** The quotient $\text{Co}_1 = \text{Co}_0/\{\pm I\}$ is a simple group, one of the 26 sporadic simple groups.
+**Step 3 (Sporadic simple group).** The quotient $\mathrm{Co}_1 = \mathrm{Co}_0/\{\pm I\}$ is a simple group, one of the 26 sporadic simple groups.
 
 **Step 4 (Subgroup structure).** The stabilizer of various sublattice structures yields other sporadic groups:
 
-- Stabilizer of a norm-4 vector: $\text{Co}_2$
-- Stabilizer of a norm-6 vector: $\text{Co}_3$
+- Stabilizer of a norm-4 vector: $\mathrm{Co}_2$
+- Stabilizer of a norm-6 vector: $\mathrm{Co}_3$
 - Stabilizer of a coordinate frame: $2^{12}:M_{24}$
 
-The appearance of $M_{24} = \text{Aut}(\mathcal{G}_{24})$ reflects the Golay code's role in the construction. ∎
+The appearance of $M_{24} = \operatorname{Aut}(\mathcal{G}_{24})$ reflects the Golay code's role in the construction. ∎
 
 ---
 
@@ -1204,7 +1216,19 @@ Two statements are distinct:
 
 Thus the code class and the Leech construction form a valid bridge only through the explicit marking and coset-minimum certificate. The code parameters do not determine $\phi$, $q_B$, the glue representatives, or the ledger $m(h)$, and the theorem does not assert uniqueness of those markings.
 
-*Proof.* The first statement is the binary-code classification used in Theorem R.4.4. The second is exactly the implication of Lemma R.4.5 together with (R.4.2a.1). Neither implication supplies the hypotheses of the other. ∎
+*Proof.* For a binary linear $[24,12,d]$ code, the Griesmer bound (Griesmer 1960) requires
+$$
+24\ge\sum_{i=0}^{11}\left\lceil\frac d{2^i}\right\rceil.
+$$
+If $d\ge9$, the right-hand side is at least
+$$
+9+5+3+2+\underbrace{1+\cdots+1}_{8\text{ terms}}=27,
+$$
+a contradiction. Hence $d\le8$. The extended binary Golay code has parameters $[24,12,8]$, so it attains the maximum. The classification theorem for binary linear $[24,12,8]$ codes (Pless 1968; MacWilliams and Sloane 1977) states that every such code is permutation-equivalent to the extended binary Golay code; its hypotheses are exactly binary linearity and the three displayed parameters. This proves statement 1.
+
+For statement 2, assume the separately registered finite-quadratic-module datum. Lemma R.4.5 applies to its isotropic embedded Golay subgroup and proves that the associated overlattice $L_H$ is even and unimodular. Equation (R.4.2a.1) asserts that every nonzero glue coset has minimum norm greater than $2$, while the base-lattice part of the certificate excludes norm-$2$ vectors there; hence $L_H$ is rootless. Theorem R.4.10 then identifies every positive-definite even unimodular rootless rank-$24$ lattice with $\Lambda_{24}$, so $L_H\cong\Lambda_{24}$.
+
+Statement 1 uses only code parameters and code classification. Statement 2 additionally uses the marked discriminant-form embedding, glue representatives, and coset-minimum ledger. Therefore neither statement supplies the hypotheses of the other. ∎
 
 #### R.4.2.1.8 Dual Optimality Summary
 
@@ -1272,7 +1296,7 @@ D=4,&\text{independent channel-complete }M=K(D)\text{ branch}.
 $$
 Code distance transfers to minimum lattice norm only when Equation (R.4.2a.1) is part of the marked construction. No code-to-spacetime, code-to-dynamics, or physical-vacuum-stability implication follows from the shared count.
 
- Hence PCE selection for optimal error correction on the $M=24$ interface simultaneously enforces geometric stability (minimum norm $4$) of the corresponding vacuum lattice, without an additional dynamical assumption.
+PCE selection of the predictive-recovery code on the $M=24$ interface does not by itself enforce a lattice minimum norm. Minimum norm $4$ follows only on a registered gluing branch carrying the finite coset-minimum ledger of Lemma R.4.5, and that dimensionless norm statement does not establish physical vacuum stability without a separate dynamical realization certificate.
 
 ### R.4.2.3 Code Distance and the Registered Gluing Datum
 
@@ -1291,11 +1315,13 @@ then, and only then, code distance $8$ is equivalent to rootlessness within that
 
 *Proof.* The left side depends on the discriminant quadratic form, its marking, and minimum norms in the marked cosets; the right side depends on the chosen binary coordinate Hamming metric. Equation (R.4.2a.1) is precisely the missing compatibility theorem. Lemma R.4.5 proves the lattice conclusion once that finite compatibility ledger is supplied. ∎
 
-**Corollary R.4.2b (Error Correction Implies Geometric Stability).** The Golay code's information-theoretic optimality (maximum error correction for length 24, rate 1/2) entails the Leech lattice's geometric optimality (unique rootless even unimodular lattice in 24 dimensions): under the gluing correspondence, PCE optimization of error correction yields PCE optimization of packing geometry.
+**Corollary R.4.2b (Conditional Code-to-Rootlessness Transfer).** Assume the registered discriminant-form, marking, and coset-minimum datum of Lemma R.4.5 and assume that the marked construction satisfies Equation (R.4.2a.1). If the selected binary code is the extended Golay code $\mathcal G_{24}$ with $d=8$, then the resulting even unimodular rank-$24$ lattice is rootless and hence isometric to the Leech lattice.
 
-*Proof.* By Proposition R.4.2a, rootlessness requires $d \ge 8$. By Theorem R.4.4, any $[24,12,d]$ code satisfies $d \le 8$, and the unique code attaining $d=8$ is the extended binary Golay code $\mathcal{G}_{24}$. By Theorem Z.13, PCE selects this optimal code on the $M=24$ interface. Therefore:
-$$\text{PCE-optimal error correction} \Rightarrow d = 8 \Rightarrow \text{rootlessness} \Rightarrow \Lambda_{24}\ (\text{hence optimal 24D packing})$$
-Each implication is a theorem; their composition is logical necessity. ∎
+*Proof.* The Golay parameter gives $d=8$. Equation (R.4.2a.1) transfers this Hamming-distance statement to the finite coset-minimum bound
+$$
+\min_{h\in\phi^{-1}(\mathcal G_{24})}m(h)\ge4.
+$$
+Lemma R.4.5 then proves rootlessness of the registered glued lattice. The lattice is even, unimodular, and rank $24$ by the same registered datum, so Niemeier's classification identifies it as $\Lambda_{24}$. A Euclidean packing-optimality statement requires its own prescribed-dimension energy or density theorem. Physical vacuum stability and a dynamical mass gap require separate certificates. ∎
 
 **Corollary R.4.2b.1 (Conditional Universal-Optimality Support for Fixed-Dimension Lattice Subledgers).** Let a PU lattice subledger already be fixed to a Euclidean dimension $n\in\{8,24\}$ and to an admissible periodic-configuration class $\mathcal A_n$ with the density, covolume, and regularization conventions required by the corresponding universal-optimality theorem. Suppose the descended PCE pair cost on that subledger has the form
 $$
@@ -1322,24 +1348,11 @@ Thus the common backbone propagates code distance and dimensionless norm isolati
 
 
 
-1. PCE selects the extended binary Golay code $[24,12,8]$.
-2. The number $12$ simultaneously equals
-$$
-\frac{M}{2}=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8).
-$$
-3. The Golay distance condition $d=8$ is equivalent to rootlessness of the glued 24-dimensional lattice.
-4. On the even unimodular rootless 24-dimensional branch, the vacuum lattice is uniquely the Leech lattice.
-5. The scaled three-fold scaffold $\sqrt{2}E_8^3$ is compatible with, but does not independently derive, the three-generation result.
-
-Therefore a single code-lattice backbone propagates from interface optimization to gauge-capacity saturation, vacuum stability, and a compatible three-fold internal geometry.
-
-*Proof.* Item 1 is Theorem Z.13. Item 2 is Theorem G.8.4f together with Theorem U.7a. Item 3 is Proposition R.4.2a. Item 4 is Theorem R.4.10. Item 5 is Proposition R.4.2, which explicitly preserves the logical boundary that the topological route, not the lattice scaffold, derives $N_g=3$. Composing these statements yields the claimed propagation chain. ∎
-
 ### R.4.2.4 Niemeier Classification and Conditional Selection
 
-**Theorem R.4.10 (Unique Rootless Niemeier Lattice; Conditional PCE Selection).** Among the even unimodular lattices in dimension $24$, exactly one is rootless: the Leech lattice $\Lambda_{24}$. Therefore any already-registered PCE branch whose admissibility conditions independently require an even unimodular rootless rank-$24$ lattice selects $\Lambda_{24}$ uniquely. PCE alone does not supply the rootlessness condition or physical-vacuum stability.
+**Theorem R.4.10 (Unique Rootless Positive-Definite Niemeier Lattice; Conditional PCE Selection).** Among positive-definite even unimodular lattices of rank $24$, exactly one has no norm-$2$ vectors: the Leech lattice $\Lambda_{24}$. Therefore any already-registered PCE branch whose admissibility conditions independently require a positive-definite even unimodular rootless rank-$24$ lattice selects $\Lambda_{24}$ uniquely. PCE alone does not supply positive definiteness, rootlessness, or physical-vacuum stability.
 
-*Proof.* Niemeier's classification gives exactly $24$ even unimodular rank-$24$ lattices. Twenty-three have nonempty root systems and one has none. The rootless member is $\Lambda_{24}$. The conditional selection follows by restricting the admissible class to the rootless branch. ∎
+*Proof.* The Niemeier classification theorem (Niemeier 1973; Conway and Sloane 1999) applies to positive-definite even unimodular lattices of rank $24$. It gives exactly 24 isometry classes. Twenty-three classes have a nonempty root system consisting of their norm-$2$ vectors, and the remaining class has no norm-$2$ vectors. The classification identifies that remaining class as the Leech lattice $\Lambda_{24}$. Restricting any independently certified admissible class to the stated positive-definite, even, unimodular, rank-$24$, rootless conditions therefore leaves exactly the isometry class of $\Lambda_{24}$. ∎
 
 **Remark R.4.2a: Nested Uniqueness.** Three finite statements meet at the number $24$: the registered mode-channel branch selects $D=4$ from $K(D)=24$; Niemeier classification contains $24$ even unimodular rank-$24$ lattices; and exactly one of them is rootless. Their conjunction identifies one rootless lattice label, not a unique physical vacuum without a dynamical realization certificate.
 
@@ -1354,7 +1367,7 @@ Each level selects a unique object from a finite set, with the selections interl
 
 ### R.4.2.5 Automorphism Group and Symmetry Structure
 
-**Proposition R.4.4 (Automorphism Group).** The stabilizer in $\mathrm{Aut}(\Lambda_{24})$ of a coordinate frame has the form $2^{12}:M_{24}$, where $M_{24}=\mathrm{Aut}(\mathcal{G}_{24})$. This follows from Proposition R.4.8 (Step 4). ∎
+**Proposition R.4.4 (Automorphism Group).** The stabilizer in $\operatorname{Aut}(\Lambda_{24})$ of a coordinate frame has the form $2^{12}:M_{24}$, where $M_{24}=\operatorname{Aut}(\mathcal{G}_{24})$. This follows from Proposition R.4.8 (Step 4). ∎
 
 **Remark R.4.2b: Physical Status of Sporadic Symmetries.** The emergence of sporadic simple groups ($\text{Co}_0$, $\text{Co}_1$, $M_{24}$) as automorphism groups of the framework's fundamental structures is mathematically necessary but physically subtle. These groups act on the 24-dimensional mode space, not directly on the 4-dimensional emergent spacetime. Physical observables in emergent spacetime reflect only those symmetries compatible with the dimensional reduction $24 \to 4$ via the mode-channel correspondence.
 
@@ -1507,19 +1520,19 @@ Therefore circuits are minimal supports of nonzero Golay codewords. The dual mat
 
 ### R.4.3 Synthesis: Why Three is Necessary
 
-The theorem-level derivation of three generations in this appendix is the topological one:
+The family-count and flavor layers have distinct premise packages:
 
-**Topological derivation:** Sections R.3–R.4.1 show that anomaly cancellation together with the requirement of nontrivial CP violation selects $N=3$ as the smallest admissible family count in the modeled class; Proposition R.3.5.1a realizes this count exactly on the pre-flavor family-redundancy PPI branch.
+**Minimal admissible count:** Sections R.3–R.4.1 show that anomaly cancellation together with nontrivial CP capability selects $N=3$ as the smallest count in the declared uniform family-charge class. Proposition R.3.5.1a selects that count on its additional additive-monotone objective branch.
 
-**Triality compatibility:** Section R.4.2 shows that a marked real 8-carrier with $\mathfrak{so}(8)$ structure has the canonical $D_4$ triality orbit $\{V,S^+,S^-\}$ and that the anomaly equations on this three-element orbit reproduce $\{a,-a,0\}$. This is a nontrivial representation-theoretic compatibility check, not a replacement for the $U(1)_F$ anomaly+CP theorem.
+**Triality compatibility:** Section R.4.2 shows that a marked real 8-carrier with $\mathfrak{so}(8)$ structure has the canonical $D_4$ triality orbit $\{V,S^+,S^-\}$ and that the anomaly equations on this orbit reproduce $\{a,-a,0\}$. This is a representation-theoretic compatibility check, not a derivation of the family-charge symmetry or its physical realization.
 
-**Geometric compatibility:** Section R.4.2 also shows that the Leech/$E_8$ construction and the factorization $M = 24 = 8 \times 3$ carry a compatible three-fold structure. These are internal coherence checks, not independent proofs of the generation count.
+**Geometric compatibility:** The Leech/$E_8$ construction and $M=24=8\times3$ carry a compatible three-fold scaffold. They do not independently select the family count.
 
-**Phenomenological Success:** The observed three-generation structure of the Standard Model matches the topological prediction, with the triality and geometric sectors providing additional structural support.
+**Phenomenological comparison:** The observed Standard Model count agrees with the selected value on the combined anomaly, CP-capability, and additive-monotone branch. Triality and lattice records test internal compatibility only.
 
-## R.5 Mass Hierarchy from $E_8$ Geometry
+## R.5 Conditional Mass-Hierarchy Model from $E_8$ Geometry
 
-Having established why there are three generations, we now derive why they have hierarchical masses. The key insight is that Yukawa couplings arise from overlap integrals of wavepackets localized at different points in the $E_8$ root system, with geodesic distances determined by the discrete $E_8$ geometry.
+The following flavor model localizes wavepackets at selected $E_8$-related vacua and assigns Yukawa responses through overlap kernels. Hierarchical masses follow only after the localization, label, kernel, normalization, scale, and remainder certificates stated here and in Appendix T are imposed.
 
 ### R.5.1 Kähler Geometry and PCE-Compatible Potential
 
@@ -1529,7 +1542,7 @@ K(Z, Z^\dagger) = \sum_{k=1}^7 \log\det(I_k + Z_k Z_k^\dagger),
 $$
 with metric $g = i\partial\bar\partial K$, where $Z_k$ are the coordinate matrices parametrizing the flag.
 
-The $U(8)$ moment map evaluated at a point $x \in \Sigma_8$ is $\mu_{U(8)}(x) = U(x)\Lambda U(x)^\dagger$ where $\Lambda = \mathrm{diag}(\lambda_1,\dots,\lambda_8)$ with $\lambda_i - \lambda_{i+1} = \delta_i > 0$. A PCE-symmetric choice is $\delta_i = 1$ for all $i$.
+The $U(8)$ moment map evaluated at a point $x \in \Sigma_8$ is $\mu_{U(8)}(x) = U(x)\Lambda U(x)^\dagger$ where $\Lambda = \operatorname{diag}(\lambda_1,\dots,\lambda_8)$ with $\lambda_i - \lambda_{i+1} = \delta_i > 0$. A PCE-symmetric choice is $\delta_i = 1$ for all $i$.
 
 Projecting to $\mathfrak{g}_{\rm SM}$ gives $\mu_{G_{\rm SM}} = \mathrm{pr}_{\mathfrak{g}_{\rm SM}} \mu_{U(8)}$. A PCE-compatible potential on $\Sigma_8$ is:
 $$
@@ -1538,11 +1551,11 @@ V = (\kappa_\Sigma/2)\, \| \mu_{G_{\rm SM}} \|^2 + \Lambda_I\, V_S,
 $$
 where the first term penalizes non-Abelian charges (selecting points in $L_{\mathrm{light}}$), and $V_S$ is a small Morse-Schubert term that breaks degeneracy and ensures non-degenerate minima at torus-fixed points $p_\sigma$.
 
-The Morse-Schubert function is a sum over fixed points:
+For a diagonal matrix $B$ encoding the topological sector, define the moment-map component
 $$
-V_S = \sum_{\sigma \in \mathcal{F}} e^{-\langle B, \Lambda_\sigma \rangle}
+V_S(x):=-\langle B,\mu_{U(8)}(x)\rangle.
 $$
-where $\mathcal{F}$ is the set of torus-fixed points (Schubert cells), $\Lambda_\sigma$ is the diagonal matrix at fixed point $\sigma$, and $B$ is a diagonal matrix encoding the topological sector. This function has unique minimum at the fixed point where $\langle B, \Lambda_\sigma \rangle$ is maximal.
+If the restriction of this function to the relevant compact critical manifold is Morse with a unique minimizing torus-invariant point, it supplies the pinning term used below. The uniqueness property is a branch hypothesis and is not implied solely by summing values over invariant-point labels.
 
 ### R.5.2 Generation Vacua and $E_8$ Root Distances
 
@@ -1552,15 +1565,16 @@ $$
 $$
 where $\eta > 0$ is small and $B(q)$ is a diagonal matrix encoding the topological charge $q$.
 
-**Theorem R.5.1 (Three Generation Vacua).** For sufficiently small $\eta > 0$, the sector-resolved potentials $V_q = V_0 + \eta V_B$ have exactly one nondegenerate local minimum in each of the three sectors $q \in \{q_+, q_-, q_0\}$ with family charges $\{+a, -a, 0\}$, and no other local minima in the same low-energy window.
+**Theorem R.5.1 (Conditional Three-Sector Vacuum Persistence).** For each $q\in\{q_+,q_-,q_0\}$, assume:
 
-*Proof.* Set $V_0(x) := \frac{\kappa_\Sigma}{2}|\mu_{G_{\mathrm{SM}}}(x)|^2$. The space $\Sigma_8$ is a compact coadjoint orbit of $U(8)$, hence a compact Hamiltonian Kähler manifold. By Kirwan's theory [1984], $V_0$ is minimally degenerate in the sense of Kirwan, with critical sets that are unions of group orbits. For our setting this implies the stronger Morse–Bott condition, by the following special-case argument: $\Sigma_8$ is a coadjoint orbit and the critical sets of $V_0$ are themselves compact group orbits (intersections of $\Sigma_8$ with level sets of the norm-square), hence smooth compact submanifolds. At the minimal critical set $\mathcal{C}_{\min}$ (the zero level set of $\mu_{G_{\mathrm{SM}}}$, or the closest critical value), $V_0$ attains its minimum, so the normal Hessian is necessarily non-negative; the strict positivity of the normal Hessian at $\mathcal{C}_{\min}$ follows from the fact that the Kähler metric on $\Sigma_8$ ensures $\nabla^2 V_0$ restricted to the normal bundle is a sum of squares of moment-map components (Guillemin–Zara 2001, §3), which vanishes only along $\mathcal{C}_{\min}$ itself. Thus $\mathcal{C}_{\min}$ is a smooth compact critical manifold with non-degenerate normal Hessian — i.e., $V_0$ is Morse–Bott at $\mathcal{C}_{\min}$.
+1. the sector is a compact smooth manifold;
+2. the minimum set $\mathcal C_q$ of $V_0$ is a compact Morse–Bott critical manifold with positive-definite normal Hessian;
+3. $h_q=-\langle\mu_{U(8)},B(q)\rangle$ restricts to a Morse function on $\mathcal C_q$ with exactly one local minimum $p_q$;
+4. a declared low-energy window contains a neighborhood of $\mathcal C_q$ and is separated from every other local minimum of $V_0$ by a positive $C^2$-stable gap.
 
-Let $\mathcal{C}_q$ denote the minimal critical manifold of $V_0$ in sector $q$. The pinning function $h_q(x) := -\langle\mu_{U(8)}(x), B(q)\rangle$ is the component of the moment map along the regular torus direction $B(q)$. On a compact Hamiltonian torus orbit, the Atiyah–Guillemin–Sternberg convexity theorem guarantees that a regular linear functional attains its minimum at a unique vertex — i.e., a unique torus-fixed (Schubert) point $p_q$. Hence $h_q|_{\mathcal{C}_q}$ is Morse with a unique minimum.
+Then, for all sufficiently small $\eta>0$, $V_q=V_0+\eta h_q$ has exactly one nondegenerate local minimum in that window. The three minima are distinct when the three sectors are disjoint.
 
-By the Morse–Bott perturbation theorem (Banyaga–Hurtubise 2004), for sufficiently small $\eta > 0$ the perturbed function $V_0 + \eta h_q$ has, near each critical manifold of $V_0$, one nondegenerate critical point for each critical point of $h_q$ restricted to that manifold, with Morse index equal to the sum of the normal index and the restricted index. Since $\mathcal{C}_q$ is a minimal critical manifold (normal index $0$) and $p_q$ is a minimum of $h_q|_{\mathcal{C}_q}$ (tangent index $0$), the perturbed potential $V_q$ has exactly one nondegenerate local minimum near $\mathcal{C}_q$.
-
-The three minima are distinct because they belong to different topological sectors. Additional minima outside the low-energy window are excluded by the positive energy gap $\gamma := \inf_{x \notin U}(V_0(x) - V_0(\mathcal{C})) > 0$ for a sufficiently small neighborhood $U$ of the union $\mathcal{C} = \mathcal{C}_+ \cup \mathcal{C}_- \cup \mathcal{C}_0$. Choosing $\eta$ so that $\eta\|h_q\|_{C^0} < \gamma/3$ ensures the perturbation cannot create new low-energy minima outside $U$. ∎
+*Proof.* The Morse–Bott perturbation theorem [Banyaga–Hurtubise 2004] applies by assumptions 2 and 3. It gives, near $\mathcal C_q$, one critical point of $V_q$ for each critical point of $h_q|_{\mathcal C_q}$, with index equal to the sum of the normal and tangential indices. The unique restricted minimum $p_q$ has tangential index zero, and the positive normal Hessian has normal index zero; hence the corresponding critical point is a nondegenerate local minimum. Assumption 3 excludes any second minimum near $\mathcal C_q$, and assumption 4 excludes additional minima in the declared low-energy window for sufficiently small $C^2$ perturbation. Disjointness of sectors makes the three resulting minima distinct. ∎
 
 The three vacua are:
 - $p_1$: vacuum for generation 1 (family charge $+a$)
@@ -1693,19 +1707,17 @@ The generation-number theorem and the flavor-response models are separate layers
 
 
 
-Before evaluating experimental agreement, we clarify how this appendix advances beyond earlier treatments of generation structure:
+Before the observational comparison, the theorem and model layers are:
 
-| **Aspect** | **Previous Approach** | **This Appendix** |
-|------------|----------------------|-------------------|
-| **Generation Count** | Topological only (anomaly cancellation) | Topological derivation with pre-flavor PPI realization + triality/$E_8$/Leech compatibility checks |
-| **Mass Hierarchy** | PCE minimality (qualitative order) | $E_8$ geodesic distances (quantitative ratios) |
-| **Predictions** | $N=3$, hierarchical pattern | Discrete $\mathcal{R}$ values: $\left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$ |
-| **Mixing Angles** | Small (qualitative statement) | Exponential suppression $\exp(-d^2/2\sigma^2)$ with $d^2$ from geometry |
-| **Free Parameters** | Family charge unit $a$ (integer) | **Zero on the $E_8$-root-vacuum branch** ($\mathcal{R}$ is ratio of root distances once the discrete root triad is selected; vacuum-root identification is a branch input from R.5.2) |
-| **Experimental Test** | Verify $N=3$ | Measure $\mathcal{R}$ in each fermion sector |
-| **Success Metric** | Correct generation count | $\mathcal{R}_\ell$: 3.8% agreement with discrete value 3 |
+| **Aspect** | **Result in this appendix** | **Required branch data** |
+|------------|-----------------------------|--------------------------|
+| **Family count** | Smallest anomaly-descending CP-capable count is $3$ | Uniform family charges, regular anomaly descent, CP capability, additive-monotone selection |
+| **Compatibility** | $D_4$ triality and $E_8$/Leech three-fold records | Marked real carrier and registered lattice construction |
+| **Mass diagnostic** | Candidate set $\{4/3,3/2,2,3,4\}$ | Physical root triad and common leading response law |
+| **Mixing mechanism** | Exponential overlap can suppress selected transitions | Packet kernel, distances, normalization, and response map |
+| **Numerical status** | Retrospective comparisons | Scale, scheme, effective dimension, and remainder certificates remain open |
 
-**Key Advancement:** The addition of $E_8$ geometry transforms generation structure from a "why three?" explanation to a "what mass ratios?" prediction engine with no continuously adjustable parameters on the $E_8$-root-vacuum and diagonal-alignment Gaussian branch. The discrete nature of root distances in $E_8$ provides falsifiable predictions distinct from phenomenological fits within that branch.
+The $E_8$ geometry supplies a discrete candidate space for flavor models. It does not by itself select sector labels or close the Appendix-T flavor certificate, so the resulting comparisons are not zero-parameter predictions.
 
 ### R.6.1 Observational Data and Conditional Model Comparisons
 
@@ -1734,29 +1746,13 @@ $$
 \tag{R.19}
 $$
 
-**Comparison with $E_8$ discrete set:**
-- Closest discrete value: $\mathcal{R} = 3$
-- Difference: $|2.889 - 3|/3 \approx 3.8\%$
-- This strongly supports the geometric picture with $(d^2_{31}, d^2_{32}) = (6, 2)$
+**Comparison with the $E_8$ discrete candidate set:**
+- Closest candidate value: $\mathcal R=3$
+- Fractional difference: $|2.8890355-3|/3\approx3.70\%$
 
-**$E_8$ Realization:**
+An explicit $E_8$ triad realizes $(d_{31}^2,d_{32}^2)=(6,2)$: choosing a half-integral root $r_3$, flipping six signs gives inner product $-1$ and distance $6$, while flipping two signs gives inner product $+1$ and distance $2$. Thus the candidate ratio $6/2=3$ is geometrically realizable.
 
-For a Type II root $r_3 = (\frac{1}{2}, \frac{1}{2}, \ldots, \frac{1}{2})$ (8 entries, even number of minus signs):
-- Flipping 6 signs (preserving even parity) gives $r_1$ with $r_3 \cdot r_1 = \tfrac{1}{4}(2 - 6) = -1$, hence $d^2_{31} = 4 - 2(-1) = 6$
-- Flipping 2 signs gives $r_2$ with $r_3 \cdot r_2 = \tfrac{1}{4}(6 - 2) = +1$, hence $d^2_{32} = 4 - 2(+1) = 2$
-- This configuration yields $\mathcal{R} = 6/2 = 3$
-
-The existence of such triads is generic in $E_8$, confirming the geometric mechanism.
-
-**Assessment:**
-
-The discrete set $\{4/3, 3/2, 2, 3, 4\}$ contains five values spanning a factor of 3. The observed value $\mathcal{R}_\ell \approx 2.889$ lies within 3.8% of the discrete prediction $\mathcal{R} = 3$, providing strong support for the $E_8$ geometric mechanism. The agreement is notable given that:
-
-1. The prediction has **zero continuously adjustable parameters** (no fitting to lepton masses)
-2. The predicted values form a **discrete set** (not a continuous range)
-3. The mechanism derives from **first principles** ($E_8$ geometry + PCE)
-
-The consistency between observed and predicted values suggests the framework captures genuine structural features of fermion mass generation.
+**Assessment:** The observed value is close to one member of a five-value candidate set. Because the member, triad assignment, response law, and higher-order flavor entries are not selected independently of the comparison in this section, the result is calibration evidence rather than a zero-parameter first-principles prediction.
 
 **Quark Sector Predictions:**
 
@@ -1777,14 +1773,19 @@ $$
 Y_{12} \propto \exp\left[-\alpha_1(d^2_{13} + d^2_{23}) - \alpha_2 d^2_{12}\right]
 $$
 
-For large separations $d^2_{ij} \gg 1$ (in units of $1/\alpha_i$), the off-diagonal couplings are exponentially suppressed, leading to small mixing angles:
+If the diagonal texture gives the displayed ratio, define
 $$
-\theta_{12} \sim \frac{Y_{12}}{Y_{22}} \sim \exp\left[-\alpha_1(d^2_{13} - d^2_{23}) - \alpha_2 d^2_{12}\right]
+E_{12}:=\alpha_1(d^2_{13}-d^2_{23})+\alpha_2d^2_{12},
+\qquad
+\theta_{12}\sim\frac{Y_{12}}{Y_{22}}\sim e^{-E_{12}}.
 $$
+Small $\theta_{12}$ requires $E_{12}>0$. The numerical band $0.01\le\theta_{12}\le0.1$ would require
+$$
+\ln 10\le E_{12}\le\ln100,
+$$
+whereas $E_8$ distances $d^2=O(1)$ and coefficients $\alpha_i=O(1)$ alone determine neither the sign nor this interval. Among the illustrative CKM magnitudes $0.22$, $0.004$, and $0.04$, only $0.04$ belongs to $[0.01,0.1]$.
 
-With $E_8$ distances $d^2 \sim O(1)$ in natural units and $\alpha_i \sim O(1)$, typical mixing angles are $\theta \sim 0.01-0.1$, consistent with the observed CKM matrix structure where $\theta_{12} \approx 0.22$, $\theta_{13} \approx 0.004$, $\theta_{23} \approx 0.04$.
-
-The hierarchy $\theta_{13} \ll \theta_{23} \ll \theta_{12}$ arises naturally from the geometric separations: states 1 and 3 are most separated (largest $d^2_{13}$, hence smallest $\theta_{13}$), while states 1 and 2 are closer (smaller $d^2_{12}$, hence larger $\theta_{12}$).
+For three mixing entries, a hierarchy follows only if their complete suppression exponents satisfy the corresponding strict ordering, for example $E_{13}>E_{23}>E_{12}>0$ when $\theta_{ij}\sim e^{-E_{ij}}$. Ordering selected pairwise distances does not establish that exponent ordering when each $E_{ij}$ contains several distances and coefficients. A numerical CKM prediction therefore requires the complete diagonal and off-diagonal texture, its normalization, and independently specified labels and coefficients.
 
 **PMNS vs. CKM:**
 
@@ -1796,28 +1797,22 @@ The generation-number theorem is distinct from the later flavor-texture models. 
 
 
 
-| Sector | Predicted $\mathcal{R}$ | Observed $\mathcal{R}$ | Agreement |
-|--------|------------------------|------------------------|-----------|
-| Charged Leptons | 3 (discrete) | 2.889 | 3.8% |
-| Up Quarks | $\{3/2, 2, 3\}$ | $\sim 2.4$ (estimate) | Consistent |
-| Down Quarks | $\{3/2, 2\}$ | $\sim 1.9$ (estimate) | Consistent |
+| Sector | Registered candidate set | Comparison value | Status |
+|--------|--------------------------|------------------|--------|
+| Charged leptons | $3$ selected from the root-triad catalog | 2.889 | Retrospective calibration residual $3.8\%$ |
+| Up quarks | $\{3/2,2,3\}$ | $\sim2.4$ | Unselected candidate set |
+| Down quarks | $\{3/2,2\}$ | $\sim1.9$ | Unselected candidate set |
 
-The framework makes **sharp predictions** for each sector with **zero continuously adjustable parameters** in the ratio $\mathcal{R}$. The charged lepton sector provides the cleanest test, showing excellent agreement (3.8%). Quark sector tests require more detailed analysis of QCD effects.
+These rows are model comparisons. Forward predictions require independently selected sector labels and response/error certificates.
 
 ## R.7 CP Violation and Jarlskog Invariant
 
-The framework naturally accommodates CP violation through the complex phase structure of the Yukawa matrices. The Jarlskog invariant, which quantifies CP violation in the quark sector, is:
+For the standard three-family parametrization,
 $$
-J_{CP} = \mathrm{Im}[V_{us}V_{cb}V_{ub}^*V_{cs}^*]
+J_{CP}
+=c_{12}c_{23}c_{13}^2s_{12}s_{23}s_{13}\sin\delta_{CP}.
 $$
-
-For three generations with non-degenerate masses and generic mixing, $J_{CP} \neq 0$. The framework predicts:
-$$
-J_{CP} \sim \sin\theta_{12}\sin\theta_{13}\sin\theta_{23} \times \sin\delta_{CP}
-$$
-where $\delta_{CP}$ is the CP-violating phase arising from the complex overlaps of Gaussian wavepackets.
-
-The observed value $J_{CP} \approx 3 \times 10^{-5}$ is consistent with small mixing angles and a moderate CP phase. The framework does not predict the specific value of $\delta_{CP}$ (which depends on the detailed geometry of vacuum locations in $\Sigma_8$), but it explains why CP violation is **possible** (requires $N \geq 3$) and why the Jarlskog invariant is **small** (exponentially suppressed mixing angles).
+Thus three nondegenerate families permit a physical phase, but $J_{CP}\ne0$ additionally requires every displayed mixing factor and $\sin\delta_{CP}$ to be nonzero. The anomaly/CP theorem imposes CP capability; it does not select $\delta_{CP}$ or prove exponential mixing suppression. Those are separate flavor-model inputs.
 
 ## R.8 Discussion and Limitations
 
@@ -1831,15 +1826,14 @@ The model-independent statement about CP is limited: within the ordinary three-f
 
 
 
-The framework provides first-principles explanations for:
+The theorem/model status is:
 
-1. **Generation count:** $N = 3$ from the topological anomaly-cancellation and CP-violation argument of Sections R.3-R.4.1, with Proposition R.3.5.1a giving exact pre-flavor PPI realization and Section R.4.2 providing $D_4$ triality plus $E_8$/Leech compatibility
-2. **Mass hierarchy:** Exponential suppression from $E_8$ geodesic distances on the attractor orbit $\text{Gr}(2,8)$
-3. **Discrete mass ratios:** $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ from allowed root distances $d^2 \in \{2, 4, 6, 8\}$
-4. **Small mixing angles:** Exponential suppression from large vacuum separations
-5. **CP violation:** Jarlskog invariant non-zero for $N \geq 3$
-6. **CKM vs. PMNS structure:** Different vacuum geometries for quarks vs. leptons
-7. **Hierarchy coefficient:** $\alpha = 3/2$ from Schur constraint at $K$-invariant minimum (Corollary T.41.3)
+1. **Family count:** Theorem R.3.4 proves minimal admissibility in its uniform anomaly/CP class; effective R.3.5.1a adds the additive-monotone selection branch.
+2. **Triality and lattice records:** $D_4$, $E_8$, and Leech structures are compatibility or realizability statements.
+3. **Mass hierarchy and ratio catalog:** These follow within a selected localization and Gaussian-response model.
+4. **Mixing angles and CKM/PMNS contrast:** These require sector labels, mass matrices, response maps, and normalization certificates.
+5. **CP:** Three families permit a physical Jarlskog phase; nonzero magnitude requires nonzero phase and mixing factors.
+6. **Coefficient $\alpha=3/2$:** This is conditional on the packet-width and Schur-normalization branch of Corollary T.41.3.
 
 ### R.8.2 What Requires Additional Input
 
@@ -1918,38 +1912,18 @@ and the $R^2$ terms cancel, yielding (R.8.2a.2). Rearranging gives $(1-6\beta G_
 
 ### R.8.3 Epistemological Status
 
-This derivation occupies a middle ground between pure mathematics and phenomenological modeling:
+This appendix separates one conditional family-count result from later flavor models:
 
-**Strengths:**
-- Derives the **minimality** of three generations from topology, anomaly cancellation, and the CP-violation requirement in the modeled family-charge class
-- Provides **mechanism** for mass hierarchy via $E_8$ root distances
-- Achieves **unification** of horizontal (gauge) and vertical (generation) SM structure
-- Supplies **discrete candidate diagnostics** only after a root triad is selected; retrospective proximity is not independent support
-- Supplies **compatibility checks:** the $D_4$ triality orbit, $E_8$/Leech scaffold, and QFI mode structures are nontrivially consistent with the topological count $N=3$
+- The anomaly equations plus ordinary CKM CP capability give the smallest admissible count $N=3$ in the declared uniform family-charge class.
+- The additive-monotone objective selects that smallest count on the effective R.3.5.1a branch.
+- $D_4$ triality, $E_8$/Leech scaffolds, and QFI mode counts are compatibility records.
+- Root-distance hierarchies, mixings, and phases require the independent flavor certificates described above.
 
-**Limitations:**
-- Requires **specific choices** (embedding ansatz, potential form) motivated by PCE but not uniquely derived
-- Some **intermediate steps** (overlap integrals, cost functions) use standard techniques but lack full first-principles derivation
-- **Quantitative predictions** require fixing several $O(1)$ geometric parameters (Hessian ratios, distances)
+### R.8.4 Conditional Connection to Baryogenesis
 
-The framework succeeds in explaining **why three generations** and **why hierarchical mixing**, even if precise numerical values remain phenomenological inputs requiring additional development or experimental measurement.
+Within the Standard Model three-family mixing formalism, a physical CKM phase requires at least three families. A baryon yield additionally requires baryon-number violation, a CP-odd source, nonequilibrium transport, freeze-out, washout, normalization, and uncertainty certificates. The Berry-holonomy and sphaleron entries of Appendix Y are therefore conditional source-model data; they do not by themselves derive the observed $\eta_B$ or make exactly three generations cosmologically necessary.
 
-### R.8.4 Connection to Cosmology: Baryon Asymmetry
-
-The three-generation structure has cosmological implications via the Sakharov conditions for baryogenesis:
-
-1. **Baryon number violation:** Provided by SM sphaleron processes
-2. **C and CP violation:** Requires $N \geq 3$ (Jarlskog invariant)
-3. **Departure from equilibrium:** Provided by early universe dynamics
-
-The SM CKM CP violation, enabled by three generations, provides a mechanism for the observed baryon asymmetry $\eta_B \approx 6\times 10^{-10}$. In the PU framework, the Berry holonomy $\delta = 66.7°$ on $\text{Gr}(2,8)$ couples to electroweak sphalerons via the mixed flavor-gauge anomaly, supplying a saturated CP response weight that contributes to, but does not by itself resolve the standard EWBG deficit (Appendix Y). The **structural necessity** of $N \geq 3$ for any CP violation remains crucial.
-
-This provides an independent, cosmological motivation for the three-generation structure beyond the information-theoretic arguments of this appendix. The convergence of:
-- Topological necessity (anomaly cancellation)
-- Representation-geometric compatibility ($D_4$ triality and $E_8$ structure)  
-- Cosmological necessity (baryogenesis)
-
-strongly suggests three generations are fundamentally required rather than environmentally selected.
+The family-count theorem and baryogenesis model are compatible on their common branch. Baryogenesis is not an independent proof of the generation count, because alternative CP sources or enlarged family sectors are outside the theorem's declared class.
 
 ### R.8.5 Minimal Family-Charge Selection Audit
 
@@ -2039,17 +2013,12 @@ Thus failure of a later flavor texture, neutrino row, CKM/PMNS profile, or baryo
 
 ## R.9 Summary
 
-*   **Topology:** The second homotopy group of the MPU's Perspective Space is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$, providing seven independent topological charges.
-*   **$E_8$ Geometry:** The $E_8$ root system emerges as the information-optimal coordinatization in 8 dimensions, with discrete squared distances $d^2 \in \{2, 4, 6, 8\}$ between roots.
-*   **Gauge–Topology Correspondence:** An embedding of the Standard Model gauge group into the MPU's internal symmetry group induces a homomorphism from the topological charges to the Cartan weight lattice of the gauge group.
-*   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
-*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1), Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch, and Theorem R.8.5b records the PCE minimal-selection audit without claiming an exhaustive classification of all larger anomaly-free charge multisets. Section R.4.2 records the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the factorization $M = 24 = 8 \times 3$ as structural compatibility checks rather than independent derivations.
-*   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
-*   **Mass Hierarchy:** A registered distance triad supplies a leading algebraic ratio $\mathcal R=d_{31}^2/d_{32}^2$. Physical root labels, continuous hierarchy coefficients, effective dimensions, and remainder intervals remain Appendix T model data, so the current flavor comparison is not a zero-continuous-parameter theorem.
-
-
-*   **Flavor-Comparison Status:** The charged-lepton value was compared retrospectively with the selected leading ratio. It is calibration evidence only; a prediction requires a preregistered triad, response map, scale scheme, and remainder interval evaluated on held-out data.
-
-
-*   **Masses and Mixings:** A PCE-compatible potential on the Perspective Space creates distinct vacuum states for each generation. Yukawa couplings arise from the overlap of Gaussian wavepackets centered at these vacua, naturally producing hierarchical masses and small CKM mixing angles controlled by the geodesic distances between the vacua. The same mechanism allows for large PMNS mixing if the leptonic vacua have smaller separations or different Hessian ratios.
-*   **Unified Origin:** The generation structure shares a common origin with gauge structure—both arise from the topology and symmetries of the fundamental MPU state space as optimized by PCE.
+*   **Topology:** On the $d_0=8$ flag-manifold branch, $\pi_2(\Sigma_8)\cong\mathbb Z^7$.
+*   **$E_8$ Geometry:** A registered $E_8$ root model supplies candidate squared distances $\{2,4,6,8\}$; its physical embedding and labels are branch data.
+*   **Gauge–Topology Map:** The declared gauge embedding induces the stated homomorphism to the Cartan weight lattice.
+*   **Family Minimality:** On the regular uniform-$U(1)_F$ anomaly-descent branch with CP capability required, the smallest admissible pattern is $\{a,-a,0\}$. Larger anomaly-free patterns exist.
+*   **Family Selection:** Effective Proposition R.3.5.1a selects $N_g=3$ under its additive-monotone objective. Response-null removal is supplied separately by Corollary P.6.1b.8.
+*   **Compatibility Records:** Triality, the scaled $E_8^{\oplus3}$ scaffold, interface mode count, and Golay code are cross-branch compatibility facts, not further proofs of $N_g=3$.
+*   **Flavor Diagnostics:** A registered triad and common leading response give candidate ratios. Physical labels, coefficients, effective dimensions, scales, phases, schemes, and remainders remain Appendix-T certificate data.
+*   **Phenomenological Status:** Charged-lepton and quark comparisons are calibration evidence until the flavor certificate is specified independently and evaluated on held-out data.
+*   **Gauge/Family Relation:** Gauge and family constructions share some MPU scaffolding but follow different conditional inference chains; neither theorem derives the other.

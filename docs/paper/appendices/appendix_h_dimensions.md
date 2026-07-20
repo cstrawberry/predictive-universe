@@ -15,7 +15,7 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Quantity                      | Symbol(s)                                                                        | Dimension                                            | Comment                                              |
 | :---------------------------- | :------------------------------------------------------------------------------- | :--------------------------------------------------- | :--------------------------------------------------- |
 | Predictive Physical Complexity | $C_{P}, K_{0}, C_{\text{agg}}, \hat{C}_{\text{target}}, \hat{C}_{v}$             | $[\text{Complexity}]$                                | structural / resource capacity                       |
-| Probability / Performance     | $PP, Q, \alpha, \beta, \alpha_{\text{SPAP}}, \alpha_{\text{CC,max}}, \mathrm{CC}$ | $1$                                                  | dimensionless                                        |
+| Probability / Performance     | $PP, Q, \alpha, \beta, \alpha_{\text{SPAP}}, \alpha_{CC,max}, \mathrm{CC}$ | $1$                                                  | dimensionless                                        |
 | Information / Capacity        | $\Delta I, C_{\max}(f_{\text{RID}})$                                             | $1$                                                  | dimensionless (nats)                                 |
 | Structural/reset entropy | $\varepsilon_0=\ln2$; $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on a registered reset branch | $1$ | structural log-cardinality versus ensemble-dependent physical nats |
 | Reflexivity constant          | $\kappa_{r}$                                                                     | $1$                                                  | dimensionless                                        |
@@ -49,6 +49,11 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Transition-length scale       | $L_{0}$                                                                          | $[L]$                                                | scale at which $G(R)$ changes                        |
 | Simulation steps / Horizon    | $\mathcal{T}$                                                                | $1$                                                  | Dimensionless count                                  |
 
+**Entropy-role convention for Sections H.4.2–H.4.7.** The structural reference $\varepsilon_0=\ln2$ and the physical reset entropy $\varepsilon_{\mathrm{phys}}$ have distinct roles. Define
+$$
+w_{\mathrm{cmp}}(C):=\frac{C}{\varepsilon_0}
+$$
+as the dimensionless comparison-slot weight of the adopted bridge law. It is not, in general, an integer count of physical resets. At the operating point $C=C_{\max}^*=2\varepsilon_0$, the acceleration-lock branch additionally registers an actual two-copy i.i.d. realization, so $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ and QFI additivity applies. Any irreversible physical reset separately obeys $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on its registered reset branch; Landauer accounting alone neither fixes $\varepsilon_{\mathrm{phys}}=\varepsilon_0$ nor supplies the two-copy realization.
 
 
 ## H.3 Dimensional Consistency Checks
@@ -73,7 +78,7 @@ Using the dimensional assignments in Table H.1, we verify the dimensional homoge
      *   Equation (71): $S_{max}$ has dimensions $[E][\Theta]^{-1}$. $k_B$ has $[E][\Theta]^{-1}$. $\mathcal A$ has $[L]^{2}$. $L_P$ has $[L]$. $S_{max} = \frac{[E][\Theta]^{-1} [L]^2}{[L]^2} = [E][\Theta]^{-1}$. Equation is dimensionally consistent.
 
 *   **Emergent $G$ (Equation (E.9))**
-    *   Equation (E.9) from Appendix E is $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$. $G$ has dimensions $[M]^{-1}[L]^3[T]^{-2}$. For the RHS: $\eta$ is dimensionless (1), $\delta$ has dimensions $[L]$, $c$ has $[L][T]^{-1}$, $\hbar$ has $[E][T]$, $\chi$ is dimensionless (1), and $C_{\max}$ is dimensionless (1).
+    *   Equation (E.9) from Appendix E is $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{\mathrm{RID}})}$. $G$ has dimensions $[M]^{-1}[L]^3[T]^{-2}$. For the RHS: $\eta$ is dimensionless (1), $\delta$ has dimensions $[L]$, $c$ has $[L][T]^{-1}$, $\hbar$ has $[E][T]$, $\chi$ is dimensionless (1), and $C_{\max}$ is dimensionless (1).
     RHS dimensions: $\frac{1 \cdot [L]^2 \cdot ([L][T]^{-1})^3}{[E][T] \cdot 1 \cdot 1} = \frac{[L]^2 [L]^3 [T]^{-3}}{[E][T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-2} [T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-1}} = [M]^{-1}[L]^3[T]^{-2}$.
     Equation is dimensionally consistent.
 
@@ -89,7 +94,7 @@ $C_{\text{uni}}$ represents the unified complexity, a dimensionless measure of e
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
-The empirical acceleration scale therefore arises from the same structural sector as the cosmological-constant bridge, but with status separation. The five-mode Appendix U working-prefactor evaluation gives the reference value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. The Definition U.6 four-mode false-vacuum branch fixes only the exponent $\kappa=142$ under Theorem U.13b, so the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains prefactor-certificate-pending until $\mathfrak F_U^{(4)}$ and $\mathfrak I_U^{(4)}$ are supplied.
+The empirical acceleration scale therefore arises from the same structural sector as the cosmological-constant bridge, but with status separation. The five-mode Appendix U working-prefactor evaluation gives the reference value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. The Definition U.6 four-mode false-vacuum branch fixes only the exponent $\kappa=142$ under Theorem U.13b, so the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains prefactor-certificate-pending until an accepted $\mathfrak F_U^{(4)}$ of Definition U.73e is supplied. The earlier Definition U.15d certificate $\mathfrak F_U$ together with the interval audit $\mathfrak I_U^{(4)}$ is not automatically equivalent to the canonical record; it discharges the canonical gate only through an accepted embedding that additionally supplies $H_4$, $\mathcal T_4$, and every remaining field of Definition U.73e on the same four-mode branch.
 
 ### H.4.1 de Sitter temperature
 
@@ -141,50 +146,51 @@ g_0
 \tag{H.4c}
 $$
 
-#### H.4.2.1 The Bridge Law: QFI Linear Response Per Spatial Channel
+#### H.4.2.1 The Bridge Law: Dimensionless QFI Ratios and Generator-Amplitude Normalization
 
-The efficiency factor $\eta'$ is the unique admissible QFI linear-response normalization in the bridge-law class of Definition H.4.2.8a. It is not fitted to galaxy data. Once the linear-response role, QFI additivity, active-support projection, spatial projection, and democratic $K_0$ generator normalization are fixed, Theorem H.4.2.8b forces Equation H.4b.
+Let $\vartheta$ be a registered dimensionless acceleration-deformation coordinate. The efficiency factor $\eta'$ is a dimensionless bridge response constructed from QFI norm ratios with respect to $\vartheta$ and a separately declared generator-amplitude normalization. The factor $1/\sqrt{K_0}$ is an amplitude convention; it is not the scaling law of SLD QFI under generator rescaling.
 
-**Definition H.0 (Gravitational Efficiency - Bridge Law).**
-*The gravitational efficiency $\eta'$ is defined as the Quantum Fisher Information (QFI) linear-response coefficient for estimating an acceleration parameter, per spatial channel, normalized by the maximal per-channel interface QFI:*
+**Definition H.0 (Gravitational Efficiency - Hybrid Bridge Law).**
+Define
 $$
-\eta' := \frac{F_{\mathrm{grav}}}{M_{\mathrm{sp}}}
+\eta' := \frac{F_{\mathrm{grav}}}{M_{\mathrm{sp}}},
 \tag{H.4.BL}
 $$
+where $F_{\mathrm{grav}}$ is the dimensionless bridge-response ledger of Definition H.0a and $M_{\mathrm{sp}}=M/(D-1)=24/3=8$ on the equal-channel decomposition branch.
 
-*where:*
-- $F_{\mathrm{grav}}$ is the gravitationally observable QFI (defined below)
-- $M_{\mathrm{sp}} = M/(D-1) = 24/3 = 8$ is the number of interface modes per spatial channel
-
-Definition H.0 fixes $\eta'$ operationally as the per-spatial-channel QFI linear-response coefficient used to identify the Milgrom scale in Appendix I.
-
-**Physical Interpretation:** The gravitationally relevant observable is the ability of an MPU network (at $\rho_0$) to statistically distinguish an "accelerated" deformation from the de Sitter baseline. The normalization by $M_{\mathrm{sp}}$ (not $M$) reflects that gravitational observations measure spatial acceleration components, and there are $(D-1) = 3$ such channels sharing the $M = 24$ interface modes.
-
-**Definition H.0a (Gravitationally Observable QFI).**
+**Definition H.0a (Dimensionless Gravitational Bridge Response).**
+Let $\hat X$ be a unit QFI tangent direction for the dimensionless coordinate $\vartheta$. Assume the branch supplies linear maps $\Pi_{\mathrm{act}}$ and $\Pi_{\mathrm{sp}}$ satisfying
 $$
-F_{\mathrm{grav}} := N \cdot \mathbb{E}\left[|\Pi_{\mathrm{sp}} \Pi_{\mathrm{act}} \hat{X}|^2\right] \cdot \frac{1}{\sqrt{K_0}} \cdot M_{\mathrm{sp}}
+\mathbb E\|\Pi_{\mathrm{act}}\hat X\|^2
+=\frac{a}{d_0}\mathbb E\|\hat X\|^2,
+\qquad
+\mathbb E\|\Pi_{\mathrm{sp}}\Pi_{\mathrm{act}}\hat X\|^2
+=\frac{D-1}{D}\mathbb E\|\Pi_{\mathrm{act}}\hat X\|^2.
+$$
+Define the hybrid bridge response by
+$$
+F_{\mathrm{grav}}
+:=
+w_{\mathrm{cmp}}(C)
+\mathbb E\!\left[\|\Pi_{\mathrm{sp}}\Pi_{\mathrm{act}}\hat X\|^2\right]
+\frac{1}{\sqrt{K_0}}M_{\mathrm{sp}},
 \tag{H.4.F}
 $$
+where $w_{\mathrm{cmp}}(C):=C/\varepsilon_0$, and where $1/\sqrt{K_0}$ is the declared amplitude normalization of the discrete generator. If the generator itself parameterizes a unitary statistical family, its SLD QFI scales by $1/K_0$ under $G\mapsto G/\sqrt{K_0}$; the hybrid ledger above does not identify its amplitude factor with that QFI scaling.
 
-*where:*
-- $\hat{X}$ is a unit-norm random interface direction (unit w.r.t. QFI metric at $\rho_0$)
-- $\Pi_{\mathrm{act}}$ is the active participation coarse-graining
-- $\Pi_{\mathrm{sp}}$ is the ADM spatial projection
-- $N := C/\varepsilon$ is the number of independent comparison events of minimal entropy cost $\varepsilon$ supported per cycle by an information budget $C$ (so at the PCE operating point $C=C_{\mathrm{max}}^*=2\varepsilon$, one has $N=2$)
-- $1/\sqrt{K_0}$ is the canonical normalization of the democratic discrete generator
-
-Substituting into Equation (H.4.BL):
+Substitution gives
 $$
-\eta' = N \cdot \mathbb{E}\left[|\Pi_{\mathrm{sp}} \Pi_{\mathrm{act}} \hat{X}|^2\right] \cdot \frac{1}{\sqrt{K_0}}
-$$
-
-Under the attractor symmetries, each projection acts as a scalar rescaling in expectation, giving:
-$$
-\eta'(C) = \left(\frac{C}{\varepsilon}\right)\left(\frac{a}{d_0}\right)\left(\frac{D-1}{D}\right)\left(\frac{1}{\sqrt{K_0}}\right)
+\eta'(C)
+=
+w_{\mathrm{cmp}}(C)
+\left(\frac{a}{d_0}\right)
+\left(\frac{D-1}{D}\right)
+\left(\frac{1}{\sqrt{K_0}}\right),
+\qquad
+w_{\mathrm{cmp}}(C)=\frac{C}{\varepsilon_0}.
 \tag{H.4a}
 $$
-
-Each factor has a **rigorous mathematical derivation** from standard theorems:
+The numerical value in this bridge law is therefore conditional on the two displayed projection identities, the equal-channel decomposition, and the independent generator-amplitude convention.
 
 #### H.4.2.2 Factor 1: Active Participation Fraction ($a/d_0 = 1/4$)
 
@@ -194,11 +200,31 @@ $$
 \mathbb{E}_{\mathrm{Haar}}[\langle\psi|P_a|\psi\rangle] = \frac{\mathrm{Tr}(P_a)}{d_0} = \frac{a}{d_0}
 $$
 
-*Proof.* This is the standard isotropy theorem. Under the Haar measure on the unit sphere in $\mathbb{C}^{d_0}$, all directions are equivalent. The expected overlap with any rank-$a$ subspace is $a/d_0$ by linearity and symmetry. Specifically, for any unit vector $|\psi\rangle$ and any projector $P$ of rank $r$:
+*Proof.* Let $\mu$ be normalized Haar measure on the unit sphere and define
 $$
-\mathbb{E}_{\mathrm{Haar}}[\langle\psi|P|\psi\rangle] = \frac{1}{d_0}\sum_{i=1}^{d_0} \langle e_i|P|e_i\rangle = \frac{\mathrm{Tr}(P)}{d_0} = \frac{r}{d_0}
+X:=\int|\psi\rangle\langle\psi|\,d\mu(\psi).
 $$
-where $\{|e_i\rangle\}$ is any orthonormal basis. ∎
+Haar invariance (Haar 1933) gives, for every $U\in U(d_0)$,
+$$
+UXU^\dagger
+=\int|U\psi\rangle\langle U\psi|\,d\mu(\psi)
+=X.
+$$
+In an orthonormal basis, invariance under all diagonal phase unitaries forces every off-diagonal matrix element of $X$ to vanish. Invariance under permutation unitaries forces all diagonal elements to be equal. Hence $X=cI_{d_0}$. Since
+$$
+1=\operatorname{Tr}X=c,d_0,
+$$
+we have $X=I_{d_0}/d_0$. Therefore, for every rank-$r$ projector $P$,
+$$
+\begin{aligned}
+\mathbb E_{\mathrm{Haar}}[\langle\psi|P|\psi\rangle]
+&=\int\operatorname{Tr}(P|\psi\rangle\langle\psi|)\,d\mu(\psi)\\
+&=\operatorname{Tr}(PX)
+=\frac{\operatorname{Tr}P}{d_0}
+=\frac r{d_0}.
+\end{aligned}
+$$
+Taking $P=P_a$ and $r=a$ proves the theorem. ∎
 
 **Application:** The coarse-graining $\Pi_{\mathrm{act}}$ that restricts to the active subspace rescales the expected squared norm by:
 $$
@@ -207,26 +233,62 @@ $$
 
 This is the unique isotropy-invariant scalar measuring "how much of a random direction overlaps the support" at the attractor.
 
-#### H.4.2.3 Factor 2: Repetition Multiplier ($C/\varepsilon = 2$)
+#### H.4.2.3 Factor 2: Structural Comparison Weight and Registered Repetition ($w_{\mathrm{cmp}}=2$)
 
 **Theorem H.1b (QFI Additivity for Independent Repetitions).**
-*For $N$ independent and identically distributed (i.i.d.) samples from a parameterized family $\rho_\theta$:*
+*Let $\theta\mapsto\rho_\theta$ be a $C^1$ finite-dimensional density-operator family whose support is independent of $\theta$. For $N\in\mathbb N$ independent identical copies,*
 $$
-F_Q^{(N)}(\theta) = N \cdot F_Q^{(1)}(\theta)
+F_Q[\rho_\theta^{\otimes N}]
+=N F_Q[\rho_\theta].
 $$
 
-*Proof.* This is standard quantum estimation theory (quantum Cramér-Rao bound) [Helstrom 1976; Braunstein & Caves 1994]. For i.i.d. states $\rho_\theta^{\otimes N}$, the joint QFI equals the sum of individual QFIs:
+*Proof.* On the common support, let $L_\theta$ be the symmetric logarithmic derivative defined by
 $$
-F_Q[\rho_\theta^{\otimes N}] = \sum_{i=1}^N F_Q[\rho_\theta] = N \cdot F_Q[\rho_\theta]
+\partial_\theta\rho_\theta
+=\frac12(L_\theta\rho_\theta+\rho_\theta L_\theta),
+\qquad
+F_Q[\rho_\theta]=\operatorname{Tr}(\rho_\theta L_\theta^2)
 $$
-by the additivity of QFI for tensor product states. ∎
+(Helstrom 1976; Braunstein and Caves 1994). Differentiating the tensor power gives
+$$
+\partial_\theta\rho_\theta^{\otimes N}
+=\sum_{j=1}^N
+\rho_\theta^{\otimes(j-1)}\otimes
+\partial_\theta\rho_\theta\otimes
+\rho_\theta^{\otimes(N-j)}.
+$$
+Therefore its symmetric logarithmic derivative is
+$$
+L_\theta^{(N)}
+=\sum_{j=1}^N
+I^{\otimes(j-1)}\otimes L_\theta\otimes I^{\otimes(N-j)}.
+$$
+Taking the trace of the defining SLD equation gives
+$$
+\operatorname{Tr}(\rho_\theta L_\theta)
+=\operatorname{Tr}(\partial_\theta\rho_\theta)
+=\partial_\theta\operatorname{Tr}\rho_\theta=0.
+$$
+Consequently every cross term with $i\ne j$ in $(L_\theta^{(N)})^2$ has expectation
+$$
+\operatorname{Tr}(\rho_\theta L_\theta)^2=0,
+$$
+whereas each of the $N$ diagonal terms has expectation $\operatorname{Tr}(\rho_\theta L_\theta^2)$. Thus
+$$
+F_Q[\rho_\theta^{\otimes N}]
+=\operatorname{Tr}\!\left(\rho_\theta^{\otimes N}(L_\theta^{(N)})^2\right)
+=N\operatorname{Tr}(\rho_\theta L_\theta^2)
+=NF_Q[\rho_\theta].
+$$
+∎
 
 **Application (conditional i.i.d. repetition model):**
-- One irreversible comparison event costs at least $\varepsilon$, with $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, nats (Landauer principle [Landauer 1961], Theorem 31)
-- At the PCE-optimal operating point, the per-cycle information budget is $C_{\mathrm{max}}^* = 2\varepsilon$ (Appendix Q, Equation Q.10)
-- If the comparison events contributing to this budget are modeled as independent identically prepared Landauer-costed comparison channels, then at most $N := C_{\mathrm{max}}^*/\varepsilon = 2$ such events can be supported per cycle; the bridge-law normalization adopts this maximal i.i.d. count
+- The structural binary reference is $\varepsilon_0=\ln2$; it is not asserted to be a universal physical reset-entropy floor.
+- At the PCE-optimal operating point, the adopted bridge convention has $C_{\mathrm{max}}^*=2\varepsilon_0$ (Appendix Q, Equation Q.10), hence $w_{\mathrm{cmp}}(C_{\mathrm{max}}^*)=2$.
+- The acceleration-lock branch additionally registers two independent identically prepared comparison copies at that operating point. For this integer realization, Theorem H.1b gives the QFI multiplier $N_{\mathrm{cmp}}=2$.
+- If either copy requires an irreversible physical reset, its implementation must separately satisfy $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$; a positive physical floor requires a registered $H_q(P\mid R)\ge h_{\min}>0$.
 
-Thus, under the i.i.d. repetition model at $C=C_{\mathrm{max}}^*$, the repetition multiplier is $N=2$.
+Thus the factor $2$ is exact inside the adopted structural-slot plus two-copy bridge branch. It is not derived from Landauer accounting alone.
 
 #### H.4.2.4 Factor 3: Spatial Projection ($(D-1)/D = 3/4$)
 
@@ -256,31 +318,35 @@ $$
 
 #### H.4.2.5 Factor 4: Democratic Generator Normalization ($1/\sqrt{K_0} = 1/\sqrt{3}$)
 
-**Theorem H.1c (Democratic Generator Normalization).**
-Let $Z_1,\ldots,Z_{K_0}$ be Pauli-$Z$ observables on $K_0$ independent qubits in the maximally mixed state. Define the democratic discrete generator
+**Theorem H.1c (Democratic Generator Normalization on the Product-Mixed Register).**
+Let $Z_1,\ldots,Z_{K_0}$ be Pauli-$Z$ observables on $K_0$ qubits in the product maximally mixed state
 $$
-G_{\mathrm{disc}}:=\sum_{i=1}^{K_0} Z_i.
+\rho_{\mathrm{mix}}:=\left(\frac{I_2}{2}\right)^{\otimes K_0}.
+$$
+Define
+$$
+G_{\mathrm{disc}}:=\sum_{i=1}^{K_0}Z_i.
 $$
 Then
 $$
-\mathrm{Var}_{\rho_0}(G_{\mathrm{disc}})=K_0,
+\mathrm{Var}_{\rho_{\mathrm{mix}}}(G_{\mathrm{disc}})=K_0,
 \qquad
 G_{\mathrm{can}}:=\frac{G_{\mathrm{disc}}}{\sqrt{K_0}}
 \ \Rightarrow\
-\mathrm{Var}_{\rho_0}(G_{\mathrm{can}})=1.
+\mathrm{Var}_{\rho_{\mathrm{mix}}}(G_{\mathrm{can}})=1.
 $$
 
-*Proof.* In the maximally mixed state, each $Z_i$ has mean $0$ and variance $1$. Independence and commutativity give
+*Proof.* For every $i$, $\operatorname{Tr}(\rho_{\mathrm{mix}}Z_i)=0$ and $\operatorname{Tr}(\rho_{\mathrm{mix}}Z_i^2)=1$. For $i\ne j$, product structure gives $\operatorname{Tr}(\rho_{\mathrm{mix}}Z_iZ_j)=0$. Hence
 $$
-\mathrm{Var}_{\rho_0}\!\left(\sum_{i=1}^{K_0} Z_i\right)=\sum_{i=1}^{K_0}\mathrm{Var}_{\rho_0}(Z_i)=K_0.
+\mathrm{Var}_{\rho_{\mathrm{mix}}}\!\left(\sum_{i=1}^{K_0}Z_i\right)
+=
+\sum_i\mathrm{Var}_{\rho_{\mathrm{mix}}}(Z_i)
++2\sum_{i<j}\operatorname{Cov}_{\rho_{\mathrm{mix}}}(Z_i,Z_j)
+=K_0.
 $$
-$\square$
+Dividing the generator by $\sqrt{K_0}$ divides its variance by $K_0$. $\square$
 
-**Application:**
-- The democratic generator is $G_{\mathrm{disc}} = Z_1 + Z_2 + Z_3$ (sum over $K_0 = 3$ Pauli-$Z$ operators)
-- By variance additivity: $\mathrm{Var}_{\rho_0}(G_{\mathrm{disc}})=K_0$
-- The canonically normalized generator is $G_{\mathrm{can}} = G_{\mathrm{disc}}/\sqrt{K_0}$
-- Any coupling defined via $G_{\mathrm{can}}$ inherits the factor $1/\sqrt{K_0} = 1/\sqrt{3}$
+**Application.** A coupling linear in $G_{\mathrm{can}}$ carries the amplitude coefficient $1/\sqrt{K_0}$. A QFI generated by $G_{\mathrm{can}}$ carries the squared coefficient $1/K_0$. Applying either statement to the rank-$a$ attractor state requires an independent register embedding and covariance certificate; it does not follow from this product-state calculation.
 
 #### H.4.2.6 Why the Four Factors Multiply (Product Structure)
 
@@ -310,103 +376,98 @@ Iterating this identity across the active-subspace projection, spatial projectio
 1. **$\Pi_{\mathrm{act}}$ (active participation):** Scalar factor $a/d_0$ by Theorem H.1a
 2. **$\Pi_{\mathrm{sp}}$ (spatial projection):** Scalar factor $(D-1)/D$ by Theorem H.2
 3. **Normalization:** Factor $1/\sqrt{K_0}$ by Theorem H.1c
-4. **Repetition:** Factor $N = C/\varepsilon$ by Theorem H.1b under the i.i.d. repetition model
+4. **Comparison-slot/repetition factor:** Structural weight $w_{\mathrm{cmp}}(C)=C/\varepsilon_0$ by the bridge convention; at the operating point $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$, and Theorem H.1b applies to the registered i.i.d. realization
 
 The chain $\Pi_{\mathrm{sp}} \circ \Pi_{\mathrm{act}}$ is multiplicative once the scalar-action hypothesis is imposed:
 $$
 \mathbb{E}[|\Pi_{\mathrm{sp}} \Pi_{\mathrm{act}} \hat{X}|^2] = \frac{a}{d_0} \cdot \frac{D-1}{D}\,\mathbb{E}[|\hat X|^2].
 $$
 
-The repetition count multiplies by QFI additivity in the i.i.d. setting. The normalization factor is multiplicative by construction.
+At the operating point, the registered integer repetition count multiplies by QFI additivity in the i.i.d. setting. The structural weight $w_{\mathrm{cmp}}(C)$ is a bridge coordinate; away from the integer operating point its continuous use is a T2 interpolation rather than a consequence of the tensor-product QFI theorem. The normalization factor is multiplicative by construction.
 
 **Therefore:** the product structure holds under:
 1. scalar action on the already coarse-grained quadratic form at each stage,
-2. QFI additivity over independent repetitions, and
-3. multiplicative generator normalization.
+2. the registered two-copy i.i.d. realization at the operating point,
+3. the structural interpolation convention for $w_{\mathrm{cmp}}(C)$ away from that point, and
+4. multiplicative generator normalization.
 
 #### H.4.2.7 Why Only These Four Factors (Completeness)
 
-**Theorem H.4 (Linear Response Excludes Curvature Invariants).**
-*QFI is a local quadratic quantity (second-order distinguishability at a point). Curvature invariants ($K_{\mathrm{eff}}$, scalar curvature, VVM coefficients, heat kernel data) enter only at third order and beyond.*
-
-*Proof.* The quantum Fisher information is the quadratic form controlling the second-order expansion of state distinguishability in parameter space: for a smooth family $\rho(\theta)$, the Bures line element satisfies
+**Theorem H.4 (Pointwise QFI Does Not Determine Curvature Corrections).**
+For a smooth state family $\rho(\theta)$, the SLD quantum Fisher tensor is the quadratic coefficient in the Bures line element,
 $$
-ds_{\rm Bures}^2 \;=\;\frac14\,F_{ij}(\theta)\,d\theta^i d\theta^j,
+ds_{\rm Bures}^2=\frac14F_{ij}(\theta)\,d\theta^i d\theta^j.
 $$
-so $F_{ij}$ is the (pullback) Riemannian metric on the statistical manifold at the point $\theta$. Curvature invariants (Riemann tensor contractions) depend on derivatives of the metric, schematically $R\sim \partial^2 g + (\partial g)^2$, and therefore cannot appear as pointwise components of $g_{ij}$ itself. Such invariants enter only when comparing $g_{ij}$ at different points (e.g., via geodesic deviation or higher-order expansions). Hence the linear-response object $F_{ij}$ cannot directly contain spacetime curvature invariants. $\square$
+The value of $F_{ij}$ at one parameter point does not determine derivatives of that metric and therefore does not determine its intrinsic curvature, Van Vleck--Morette coefficients, or heat-kernel coefficients.
 
-**Consequence:** If $g_0$ is defined as the **linear-response susceptibility** at the attractor (per spatial channel, per Landauer event), it **cannot** depend on curvature invariants by construction.
+*Proof.* Intrinsic curvature depends on first and second derivatives of the metric in a coordinate chart, whereas the pointwise bilinear form supplies only the value of the metric. Two smooth metrics can agree at one point and have different derivatives and curvature there. Consequently no curvature correction is derivable from pointwise QFI data alone. This statement does not prohibit $F_{ij}(\theta)$ from depending on an independently supplied spacetime-curvature parameter through the state family. $\square$
 
-Curvature data ($K_{\mathrm{eff}} = 2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a), scalar curvature $S_B = 768$, etc.) enters only for:
-- Environmental corrections (different $\rho$, not at attractor)
-- Finite-deviation effects (large parameter shifts)
-- VVM-type focusing (geodesic bundles, higher-order expansion)
-
-**Selection Principle:** The bridge law (Definition H.0) selects exactly the four factors by defining $\eta'$ as a QFI linear-response coefficient. This automatically excludes all higher-order geometric invariants.
+**Consequence:** A bridge class may exclude curvature-dependent coefficients by an explicit locality convention. Such exclusion is a defining hypothesis of that bridge class, not a consequence of QFI being quadratic.
 
 #### H.4.2.8 Combined Result
 
-Combining the four factors within the bridge-law normalization and the factorized scalar coarse-graining ansatz of Theorem H.3 at the operating point $C = C_{\mathrm{max}}^* = 2\varepsilon$:
+Combining the four factors within the bridge-law normalization and the factorized scalar coarse-graining ansatz of Theorem H.3 at the operating point $C=C_{\mathrm{max}}^*=2\varepsilon_0$, with the registered two-copy realization $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$:
 $$
-\eta'(2\varepsilon) = \frac{C_{\mathrm{max}}^*}{\varepsilon} \cdot \frac{a}{d_0} \cdot \frac{D-1}{D} \cdot \frac{1}{\sqrt{K_0}} = 2 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} = \frac{3}{8\sqrt{3}} \approx 0.2165
+\eta'(2\varepsilon_0)
+=
+w_{\mathrm{cmp}}(2\varepsilon_0)
+\cdot \frac{a}{d_0}
+\cdot \frac{D-1}{D}
+\cdot \frac{1}{\sqrt{K_0}}
+=
+2 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}}
+=
+\frac{3}{8\sqrt{3}}
+\approx 0.2165.
 \tag{H.4b}
 $$
 
-**Definition H.4.2.8a (Admissible QFI-Gravity Bridge-Law Class).** Let $\mathcal B_H$ be the class of bridge-law normalizations assigning a positive dimensionless coefficient $\eta$ to
+**Definition H.4.2.8a (Factor-Certified Gravity Bridge-Law Class).** Let $\mathcal B_H$ be the class of bridge laws assigning a positive dimensionless coefficient $\eta$ to
 $$
 g_0(\eta)=\eta c^2\sqrt{\frac{\Lambda}{3}}.
 $$
-A bridge law is admissible when it satisfies all of the following finite-response conditions:
+A member of $\mathcal B_H$ carries all of the following records:
 
-1. **Linear-response locality:** $\eta$ is computed from the pointwise QFI quadratic form at the attractor and contains no finite-deviation or curvature-invariant term.
-2. **Tensor-product additivity:** independent Landauer-costed comparison events contribute additively to QFI.
-3. **Active-support isotropy:** the active projection is the unique Haar-isotropic rank-$a$ projection inside $\mathbb C^{d_0}$.
-4. **Spatial equivariance:** the acceleration response is the $SO(D-1)$-equivariant spatial projection of the $D$-dimensional local response.
-5. **Per-channel intensivity:** $\eta$ is normalized per spatial channel, so the factor $M_{\rm sp}$ appearing in $F_{\rm grav}$ cancels the denominator in Definition H.0.
-6. **Democratic generator normalization:** the $K_0$ independent SPAP generators are combined with unit total QFI norm, giving the scalar factor $1/\sqrt{K_0}$.
-7. **No observational fitting:** no parameter in $\eta$ is chosen from galaxy rotation, lensing, or cosmological acceleration data.
+1. a dimensionless deformation coordinate and the hybrid response ledger of Definitions H.0–H.0a;
+2. two i.i.d. comparison copies at $C=C_{\max}^*=2\varepsilon_0$;
+3. an active-tangent contraction certificate
+   $$
+   \mathbb E\|\Pi_{\rm act}\hat X\|^2
+   =\frac{a}{d_0}\mathbb E\|\hat X\|^2;
+   $$
+4. a spatial contraction certificate
+   $$
+   \mathbb E\|\Pi_{\rm sp}\Pi_{\rm act}\hat X\|^2
+   =\frac{D-1}{D}\mathbb E\|\Pi_{\rm act}\hat X\|^2;
+   $$
+5. an orthogonal equal-channel decomposition with $M_{\rm sp}=M/(D-1)$;
+6. factorized scalar action of the repetition, active, spatial, and generator-amplitude stages on successive images;
+7. the declared amplitude normalization $G_{\rm can}=G_{\rm disc}/\sqrt{K_0}$, recorded separately from SLD-QFI scaling; and
+8. no coefficient chosen from galaxy rotation, lensing, or cosmological acceleration data.
 
-**Theorem H.4.2.8b (Uniqueness of the QFI-Gravity Bridge Normalization).** Every bridge law in $\mathcal B_H$ has
+**Theorem H.4.2.8b (Normalization on the Factor-Certified Bridge Class).** Every bridge law in $\mathcal B_H$ has
 $$
 \eta(C)=
-\left(\frac{C}{\varepsilon}\right)
+w_{\mathrm{cmp}}(C)
 \left(\frac{a}{d_0}\right)
 \left(\frac{D-1}{D}\right)
-\left(\frac1{\sqrt{K_0}}\right).
+\left(\frac1{\sqrt{K_0}}\right),
+\qquad
+w_{\mathrm{cmp}}(C)=\frac{C}{\varepsilon_0}.
 $$
-At the operating point $C=C_{\max}^*=2\varepsilon$, this gives
+At $C=C_{\max}^*=2\varepsilon_0$, $a=2$, $d_0=8$, $D=4$, and $K_0=3$,
 $$
 \eta'=
 2\cdot\frac14\cdot\frac34\cdot\frac1{\sqrt3}
-=
-\frac{3}{8\sqrt3}.
+=\frac{3}{8\sqrt3}.
 $$
 
-*Proof.* By linear-response locality, $\eta$ is a scalar contraction of the QFI metric at the attractor. Tensor-product additivity fixes the comparison-event multiplier uniquely: if $C$ nats of comparison budget are divided into events of cost $\varepsilon$, the number of independent repetitions is $C/\varepsilon$, and QFI adds linearly by Theorem H.1b.
-
-Active-support isotropy fixes the active projection factor. For a rank-$a$ projector in $\mathbb C^{d_0}$, Theorem H.1a gives
+*Proof.* The two-copy record gives the factor $2$ by QFI additivity. Conditions 3 and 4 give the two displayed contraction ratios. Condition 5 cancels the equal per-channel mode count in Definition H.0. Condition 7 supplies the generator-amplitude coefficient, and condition 6 permits multiplication of the four scalar stages. Their product is the displayed formula. Substitution gives
 $$
-\mathbb E\lVert \Pi_{\rm act}\hat X\rVert^2=\frac{a}{d_0}.
+2\cdot\frac14\cdot\frac34\cdot\frac1{\sqrt3}
+=\frac{3}{8\sqrt3}.
 $$
-No other scalar is invariant under the full unitary action while depending only on the rank of the active support.
-
-Spatial equivariance fixes the spatial factor. The unique $SO(D-1)$-equivariant scalar projection from the $D$ local directions onto the spatial acceleration channel has trace ratio
-$$
-\frac{D-1}{D},
-$$
-which is Theorem H.2. Per-channel intensivity cancels the explicit $M_{\rm sp}$ count in Definition H.0, leaving this projection ratio rather than an additional mode-count factor.
-
-Democratic generator normalization fixes the final scalar. Combining $K_0$ independent SPAP generators with unit total QFI norm assigns equal squared weight $1/K_0$ to each and amplitude normalization $1/\sqrt{K_0}$ to the selected scalar response, as in Theorem H.1c.
-
-The four operations act on independent tensor factors: event repetition, active support, spacetime direction, and SPAP-generator normalization. Multiplicativity of independent QFI coarse-grainings therefore gives the product
-$$
-\eta(C)=
-\left(\frac{C}{\varepsilon}\right)
-\left(\frac{a}{d_0}\right)
-\left(\frac{D-1}{D}\right)
-\left(\frac1{\sqrt{K_0}}\right).
-$$
-Curvature invariants and finite-deviation terms are excluded by linear-response locality, and observational coefficients are excluded by condition 7. Thus the displayed product is the unique admissible normalization. Substituting $C_{\max}^*=2\varepsilon$, $a=2$, $d_0=8$, $D=4$, and $K_0=3$ gives $\eta'=3/(8\sqrt3)$. ∎
+The theorem is a uniqueness statement only within the factor-certified class just defined; it does not derive conditions 3–7 from unitary or rotational invariance alone. ∎
 
 **Corollary H.4.2.8c (Acceleration Lock).** In the admissible QFI-gravity bridge-law class,
 $$
@@ -455,35 +516,35 @@ This budget uses the paper-wide Convention P.14.1c. The value of $\eta'$ has no 
 **T1 (internal truncation/control):**
 The algebraic factors in Equation H.4b are exact inside the adopted bridge law:
 - **QFI isotropy average:** exact under Theorem H.1a;
-- **capacity count:** $C_{\mathrm{max}}^*=2\varepsilon$ at the PCE operating point;
+- **structural-ratio arithmetic:** $C_{\mathrm{max}}^*=2\varepsilon_0$ and hence $w_{\mathrm{cmp}}=2$ on the named operating-point branch; the existence of two physical i.i.d. copies is the T2 bridge condition recorded below;
 - **dimensional projection:** $(D-1)/D=3/4$ for $D=4$;
 - **democratic generator normalization:** $1/\sqrt{K_0}=1/\sqrt{3}$.
 
 Numerical rounding gives $\delta\eta'/\eta' \lesssim 10^{-5}$, so the T1 contribution is negligible at the displayed precision.
 
 **T2 (bridge/branch/convention):**
-Definition H.0 is the active bridge-law normalization connecting the QFI linear-response coefficient to the galactic acceleration channel. Conditional on that normalization and the operating-point value used in Equation H.4b,
+Definition H.0 is the active bridge-law normalization connecting the QFI linear-response coefficient to the galactic acceleration channel. Its T2 data include the structural interpolation $w_{\mathrm{cmp}}(C)=C/\varepsilon_0$ and the registered two-copy i.i.d. realization at $C=C_{\mathrm{max}}^*=2\varepsilon_0$. Conditional on those entries,
 $$
 \eta'=\frac{3}{8\sqrt3}.
 $$
-Thus the T2 status dependency is present, but its numerical uncertainty is zero inside the adopted bridge law. Alternative bridge laws would be different T2 branches, not variations of a fitted parameter.
+The physical reset ledger remains separate and does not set this factor through Landauer accounting alone. Thus the T2 status dependency is present, but its numerical uncertainty is zero inside the adopted bridge law. Alternative slot interpolations or implementations without the registered two-copy realization are different T2 branches, not variations of a fitted parameter.
 
 **T3 (empirical/model mapping):**
-The comparison uses either the observed cosmological constant or the Appendix U branch value selected for forward evaluation. For observational propagation,
+The comparison uses either the observational hybrid cosmological-input convention or the Appendix U branch value selected for forward evaluation. For the declared diagonal propagation,
 $$
 \Lambda = \frac{3\Omega_\Lambda H_0^2}{c^2},
 $$
 and Appendix V reports
 $$
-(\Lambda L_P^2)_{\mathrm{obs}}=(2.86599\pm0.04849)\times10^{-122},
+(\Lambda L_P^2)_{\mathrm{obs}}=(2.86599\pm0.04849)\times10^{-122}.
 $$
-so $\delta\Lambda/\Lambda=0.0169$ at $1\sigma$.
+The fractional value $0.0169$ is the diagonal marginal-input propagation for $\Lambda$, not a covariance-aware joint Planck credible interval.
 
 Since $g_0\propto\sqrt{\Lambda}$,
 $$
 \frac{\delta g_0}{g_0}=\frac12\frac{\delta\Lambda}{\Lambda}.
 $$
-At $1\sigma$, $\delta g_0/g_0=0.0085$. Propagating the $2\sigma$ uncertainty gives $\delta g_0/g_0=0.0169$, i.e. $\delta g_0\approx0.02\times10^{-10}\,\mathrm{m/s^2}$ for $g_0\approx1.18\times10^{-10}\,\mathrm{m/s^2}$.
+The corresponding diagonal $1\sigma$ propagation is $\delta g_0/g_0=0.0085$; twice that value is $0.0169$, giving $\delta g_0\approx0.02\times10^{-10}\,\mathrm{m/s^2}$ for $g_0\approx1.18\times10^{-10}\,\mathrm{m/s^2}$. These are sensitivity bands under the declared input convention.
 
 The empirical $g_0$ inferred from galaxy data has systematic uncertainties at the tens-of-percent level, dominated by astrophysical systematics and calibration choices [McGaugh et al. 2016; Lelli et al. 2017].
 
@@ -500,11 +561,11 @@ The $2\%$ central deviation between prediction and observation is within the emp
 
 **Remark H.1.** Writing $H_\Lambda = c\sqrt{\Lambda/3}$ (the de Sitter Hubble parameter) yields $a_0 = cH_\Lambda$. Since $H_\Lambda \approx H_0$, this implies $a_0 \sim cH_0$, connecting the MOND scale to the Hubble scale. The derived result $g_0 = \eta' \cdot cH_\Lambda$ with $\eta' = 3/(8\sqrt{3}) \approx 0.22$ thus connects the galactic acceleration scale directly to the cosmological constant through the PU interface geometry.
 
-**Remark H.2 (Summary of factors).** Equation (H.4b) follows by multiplying the four factors $a/d_0$, $C/\varepsilon$, $(D-1)/D$, and $1/\sqrt{K_0}$, justified by Theorems H.1a, H.1b, H.2, H.1c and the multiplicative structure theorem H.3. Together with Proposition H.1, this yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted parameters.
+**Remark H.2 (Summary of factors).** Equation (H.4b) follows by multiplying the four factors $a/d_0$, $w_{\mathrm{cmp}}(C)$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorems H.1a, H.1b, H.2, H.1c and the multiplicative structure theorem H.3 justify the mathematical factors once the structural-slot and two-copy bridge entries are adopted. Together with Proposition H.1, this yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
 
 **Remark H.3 (Shared geometric input).** The same attractor geometry $\mathrm{Gr}(2,8)$ that fixes the factors in Equation (H.4b) also determines the QFI spectrum used in Appendix Z and enters the electroweak matching analysis in Appendix T.
 
-**Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal capacity $C=C_{\mathrm{max}}^*=2\varepsilon$ (Appendix Q, Equation Q.10), then Equation (H.4a) fixes $\eta'$ near its attractor value, and hence $g_0$ is approximately universal across such systems.
+**Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal structural capacity $C=C_{\mathrm{max}}^*=2\varepsilon_0$ (Appendix Q, Equation Q.10) and remains on the registered two-copy bridge branch, then Equation (H.4a) fixes $\eta'$ near its attractor value, and hence $g_0$ is approximately universal across such systems.
 
 **Corollary H.1 (Bridge-Conditional Galactic Scale and Cosmological Acceleration Lock).**
 Under Proposition H.1, Definition H.0, and Equation H.4b, the acceleration scale entering the Appendix I galaxy-sector model is fixed by
@@ -571,14 +632,20 @@ or
 $$
 16\pi G\Sigma_\dagger=c^2\sqrt{\Lambda}.
 $$
-Using Equation H.6,
+Using the higher-precision central value $g_0=1.17674\times10^{-10}\,\mathrm{m\,s^{-2}}$ implied by Equations (V.4)–(V.5) under the Appendix V hybrid diagonal-input convention,
 $$
 \Sigma_\dagger
-= \frac{1.18\times 10^{-10}\,\mathrm{m\,s^{-2}}}{2\pi\cdot 6.67430\times 10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}}
-= 0.281 \pm 0.005\,\mathrm{kg\,m^{-2}}
-= (134.7 \pm 2.3)\,M_\odot\,\mathrm{pc^{-2}}.
+= \frac{1.17674\times 10^{-10}\,\mathrm{m\,s^{-2}}}{2\pi\cdot 6.67430\times 10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}}
+= (0.2806 \pm 0.0047)\,\mathrm{kg\,m^{-2}}
+= (134.4 \pm 2.3)\,M_\odot\,\mathrm{pc^{-2}}.
 \tag{H.6d}
 $$
+Here $M_\odot=1.98841\times10^{30}\,\mathrm{kg}$ and $1\,\mathrm{pc}=3.0857\times10^{16}\,\mathrm{m}$. The displayed uncertainties are twice the diagonal marginal-input propagation used in Section H.4.3.1; they are not a covariance-aware joint Planck credible interval:
+$$
+\frac{\delta\Sigma_\dagger}{\Sigma_\dagger}
+=\frac{\delta g_0}{g_0}=0.0169.
+$$
+The two-significant-figure value $g_0\approx1.18\times10^{-10}\,\mathrm{m\,s^{-2}}$ elsewhere is the rounded display of the same central value. Uncertainties in $G$ and the unit-conversion constants are negligible at the displayed precision.
 
 *Proof.* For an infinite thin sheet, Gauss's law gives $g_N = 2\pi G\Sigma_b$. Setting $g_N=g_0$ defines the transition scale, so $\Sigma_\dagger=g_0/(2\pi G)$. Substituting Corollary H.1 gives
 $$
@@ -590,7 +657,34 @@ $$
 $$
 The numerical value follows by inserting Equation H.6. ∎
 
-**Remark H.1a.1.** The quantity $\Sigma_\dagger$ is a zero-parameter PU prediction for the characteristic baryonic surface-density threshold at which the low-acceleration galactic regime turns on.
+**Remark H.1a.1.** The quantity $\Sigma_\dagger$ is a conditional PU output fixed by the acceleration-lock bridge once $\Lambda$ and the thin-sheet crossover mapping are specified. It is not an input-free prediction.
+
+**Remark H.1a.2 (Cosmological-Input Dependence of the Acceleration Lock).** The observational-input evaluations of $g_0$, $\Sigma_\dagger$, $A_{\mathrm{eff}}^{(\mathrm{obs})}$, and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}$ use the Appendix V hybrid diagonal-input convention formed from the rounded Planck 2018 base-$\Lambda$CDM marginals in Equations (V.4)–(V.5),
+$$
+H_0=67.4\pm0.5\,\mathrm{km\,s^{-1}\,Mpc^{-1}},
+\qquad
+\Omega_\Lambda=0.6889\pm0.0056
+$$
+[Planck Collaboration 2020a]. These inputs are not treated as a covariance-aware joint Planck posterior. Their numerical values inherit the declared diagonal convention; the exact bridge relation remains
+$$
+16\pi G\Sigma_\dagger=c^2\sqrt{\Lambda}.
+$$
+As a sensitivity calculation, replace the Planck value of $H_0$ by
+$$
+H_0=73.04\pm1.04\,\mathrm{km\,s^{-1}\,Mpc^{-1}}
+$$
+[Riess et al. 2022], retain the Planck value and uncertainty for $\Omega_\Lambda$, and treat the quoted uncertainties as independent. Then
+$$
+\frac{\Lambda(H_0=73.04,\Omega_\Lambda=0.6889)}{\Lambda(H_0=67.4,\Omega_\Lambda=0.6889)}
+=\left(\frac{73.04}{67.4}\right)^2
+=1.17436,
+$$
+$$
+g_0=(1.2752\pm0.0378)\times10^{-10}\,\mathrm{m\,s^{-2}},
+\qquad
+\Sigma_\dagger=(145.6\pm4.3)\,M_\odot\,\mathrm{pc^{-2}},
+$$
+where both displayed bands are twice the declared diagonal marginal-input propagation. This substitution is a one-parameter sensitivity calculation, not an independent joint cosmological fit, and the two displayed input choices are not exhaustive. A direct cosmological test of the acceleration-lock relation must combine an external cosmological posterior for $\Lambda$ with an independent galactic likelihood and reject $16\pi G\Sigma_\dagger=c^2\sqrt{\Lambda}$ after the cosmological, astrophysical, geometry, and bridge-law uncertainties are jointly propagated. Excluding only the two illustrative windows does not by itself falsify that relation. Independent inconsistency between $g_0$ and $\Sigma_\dagger$ through $\Sigma_\dagger=g_0/(2\pi G)$ remains a separate falsifier of the thin-sheet crossover mapping in Corollary H.1a.
 
 **Corollary H.1b (Redshift Lock on the Constant-$\Lambda$ Branch).**
 Let the acceleration-lock representative be evaluated on a cosmological branch with effective vacuum curvature $\Lambda_{\mathrm{eff}}(z)$. Then the bridge acceleration scale evolves as
@@ -625,33 +719,29 @@ Taking the ratio with the $z=0$ value cancels $c^2/8$ and gives Equation H.6e. I
 
 A common normalization error is to divide by the total interface modes $M = 24$ rather than the per-spatial-channel modes $M_{\mathrm{sp}} = 8$.
 
-**Theorem H.5 (Per-Channel Normalization).**
-*The correct normalization denominator for gravitational efficiency is:*
+**Theorem H.5 (Per-Channel Normalization on an Equal-Channel Decomposition).**
+Assume the $M$-dimensional interface-mode space decomposes as an orthogonal direct sum of $D-1$ spatial-channel subspaces of equal dimension. Then
 $$
-M_{\mathrm{sp}} = \frac{M}{D-1} = \frac{24}{3} = 8
+M_{\mathrm{sp}}=\frac{M}{D-1}.
 $$
-*not $M = 24$.*
+For $M=24$ and $D=4$, $M_{\mathrm{sp}}=8$.
 
-**Remark H.5.1 (Sector-Dependent Mode-Count Selection).** The manuscript uses three distinct discrete mode counts derived from the backbone, and each is the correct normalization for a different sector. They are not interchangeable:
+**Remark H.5.1 (Sector-Dependent Mode-Count Selection).** On this equal-channel branch, the gravitational denominator is $M_{\mathrm{sp}}=8$. The counts $M=24$ and $k=12$ belong to the spacetime/channel-matching and gauge/code ledgers, respectively, and are not substituted for $M_{\mathrm{sp}}$ in Definition H.0.
 
-| Mode count | Value | Sector | Role |
-|:-----------|:-----:|:-------|:-----|
-| $M$ | 24 | spacetime/channel matching | selects $D=4$ via $K(D)=M$ (Theorem Z.11) |
-| $k$ | 12 | gauge / complex orbit | Golay-code dimension and gauge-generator capacity |
-| $M_{\mathrm{sp}}$ | 8 | gravitational bridge | per-spatial-channel normalization (Theorem H.5) |
-
-A quantity tied to a single spatial acceleration component normalizes by $M_{\mathrm{sp}}=8$. Gauge-sector capacities normalize by $k=12$. Structural dimensional-selection statements use $M=24$. Applying $M$ or $k$ indiscriminately to the gravitational bridge violates Theorem H.5 and produces the spurious factor-of-3 discrepancy in $g_0$.
-
-*Proof.* The gravitationally observable quantity is a spatial acceleration—a $(D-1) = 3$ component vector. The total $M = 24$ interface modes distribute across the $D-1 = 3$ spatial channels. The efficiency for observing **one spatial acceleration component** should be normalized by the modes available to that component:
+*Proof.* If
 $$
-M_{\mathrm{sp}} = \frac{M}{D-1} = 8
+\mathcal H_{\mathrm{mode}}
+=\bigoplus_{j=1}^{D-1}\mathcal H_j,
+\qquad
+\dim\mathcal H_j=M_{\mathrm{sp}}
 $$
-
-The bridge law (Definition H.0) defines $\eta' = F_{\mathrm{grav}}/M_{\mathrm{sp}}$, where $F_{\mathrm{grav}}$ already includes a factor of $M_{\mathrm{sp}}$ from the sum over modes. These factors cancel, leaving:
+with equal dimensions, then
 $$
-\eta' = \frac{C}{\varepsilon} \cdot \frac{a}{d_0} \cdot \frac{D-1}{D} \cdot \frac{1}{\sqrt{K_0}}
+M=\dim\mathcal H_{\mathrm{mode}}
+=\sum_{j=1}^{D-1}\dim\mathcal H_j
+=(D-1)M_{\mathrm{sp}}.
 $$
-∎
+Thus $M_{\mathrm{sp}}=M/(D-1)=8$. Cancellation of this count in the bridge response is then the explicit per-channel normalization of Definition H.0. ∎
 
 **Why This Matters:** Normalizing by $M = 24$ instead of $M_{\mathrm{sp}} = 8$ gives $\eta' = \sqrt{3}/24 \approx 0.072$ instead of the correct $\eta' = \sqrt{3}/8 \approx 0.217$—off by exactly a factor of 3.
 
@@ -665,48 +755,50 @@ The linear-response derivation (Section H.4.2) yields $\eta' = 3/(8\sqrt{3})$ ex
 - Large parameter shifts (beyond linear response)
 - Geodesic focusing effects (finite "diffusion time")
 
-**Effective Curvature (From Symmetric-Space Geometry).** From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a):
+**Effective Curvature on the Democratic Visible-Response Branch.** The symmetric-space geometry of $\mathrm{Gr}(2,8)$ gives $K_{\mathrm{avg}}^{\mathrm{Bures}}=32/23$. On the additional democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24 and Corollary Z.11,
 $$
-K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \cdot \frac{M-1}{ad_0} = \frac{32}{23} \cdot \frac{23}{16} = 2
+K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \cdot \frac{M-1}{ad_0} = \frac{32}{23} \cdot \frac{23}{16} = 2.
 \tag{H.11}
 $$
 
-The exact value $K_{\mathrm{eff}} = 2$ arises from the same $(M-1)=23$ cancellation used in Appendix Z, as derived from the symmetric-space structure (Lemma Z.24a).
+The factor $L_{\mathrm{vis}}=1/(ad_0)$ is a response-model input. Lemma Z.24a establishes that it does not follow from symmetric-space isotropy.
 
-**Van Vleck-Morette Expansion.** For transverse Jacobi modes with sectional curvature $K$, geodesic focusing yields [DeWitt & Brehme 1960]:
+**Van Vleck-Morette Expansion.** Let $K>0$ and set $x=\sqrt{K}t$. For $|x|<\pi$, transverse Jacobi-mode focusing gives [DeWitt & Brehme 1960]
 $$
-\ln\left(\frac{\sqrt{K}t}{\sin(\sqrt{K}t)}\right) = \frac{Kt^2}{6} + \frac{K^2 t^4}{180} + O(t^6)
+\ln\left(\frac{\sqrt{K}t}{\sin(\sqrt{K}t)}\right)
+= \frac{Kt^2}{6}+\frac{K^2t^4}{180}+R_6(K,t),
+\qquad |R_6(K,t)|\le C_r K^3|t|^6
 \tag{H.18}
 $$
+for every $r<\pi$ and all $|\sqrt{K}t|\le r$, where $C_r<\infty$ depends only on $r$.
 
+The bridge coefficient $\eta'$ is the quadratic-response coefficient evaluated at $t=0$. Consequently the $K^2t^4/180$ term and $R_6(K,t)$ contribute only to finite-deviation corrections and do not enter $\eta'$ at the attractor.
 
-Because $\eta'$ is defined by Definition H.0 as a linear-response coefficient (a pointwise QFI quadratic form), the $O(t^2)$ and higher terms in (H.18) contribute only to nonlinear (finite-deviation) corrections and do not modify $\eta'$ at the attractor.
+**Conditional environmental interpolation.** Off-operating-point behavior may be modeled at leading order by evaluating the T2 bridge interpolation $w_{\mathrm{cmp}}(C)=C/\varepsilon_0$ at $C\neq C_{\mathrm{max}}$, with (H.18) governing higher-order finite-deviation effects when needed. Fractional values of $w_{\mathrm{cmp}}$ are susceptibility weights, not fractional physical reset or sample counts.
 
-**Environmental Predictions.** Off-operating-point behavior is captured at leading order by evaluating Equation (H.4a) at capacities $C\neq C_{\mathrm{max}}$, with (H.18) governing higher-order finite-deviation effects when needed.
+### H.4.7 Conditional Environmental Bridge Benchmarks
 
-### H.4.7 Environmental Predictions
+For systems assigned an off-operating structural weight, the following values are conditional interpolation benchmarks rather than consequences of the integer-copy QFI theorem.
 
-For systems operating at capacity $C \neq C_{\mathrm{max}}$, the efficiency varies. Using the linear-response formula extended with VVM corrections:
-
-**Void Galaxies.** If a system operates at reduced capacity $C_{\mathrm{void}}=\varepsilon$:
+**Void-galaxy benchmark.** If a branch assigns $C_{\mathrm{void}}=\varepsilon_0$, so $w_{\mathrm{cmp}}=1$:
 $$
 \eta'_{\mathrm{void}} = 1 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} \approx 0.108, \quad g_{0,\mathrm{void}} \approx 5.9 \times 10^{-11}\,\mathrm{m/s^2}
 \tag{H.27}
 $$
 
-The ratio to standard: $g_{0,\mathrm{void}}/g_0 \approx 0.50$.
+The ratio to the registered operating-point branch is $g_{0,\mathrm{void}}/g_0 \approx 0.50$.
 
-*Observable:* Void galaxies would appear more Newtonian than field galaxies, requiring less "dark matter" enhancement.
+*Conditional observable:* Such a branch would make void galaxies appear more Newtonian than field galaxies, requiring less "dark matter" enhancement.
 
-**Ultra-Diffuse Galaxies (UDGs).** If a system operates at capacity $C_{\mathrm{UDG}}=\varepsilon/2$:
+**Ultra-diffuse-galaxy benchmark.** If a branch assigns $C_{\mathrm{UDG}}=\varepsilon_0/2$, so $w_{\mathrm{cmp}}=0.5$:
 $$
 \eta'_{\mathrm{UDG}} = 0.5 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} \approx 0.054, \quad g_{0,\mathrm{UDG}} \approx 2.9 \times 10^{-11}\,\mathrm{m/s^2}
 \tag{H.28}
 $$
 
-*Observable:* UDGs would exhibit nearly Newtonian dynamics to larger radii. Some ultra-diffuse galaxies have been reported to be "dark matter deficient" (e.g., DF2) [van Dokkum et al. 2018], which corresponds in the PU parameterization to a smaller effective $C$ and hence a smaller inferred $g_0$ via Equation (H.4a).
+*Conditional observable:* This interpolation would make UDGs exhibit nearly Newtonian dynamics to larger radii. Some ultra-diffuse galaxies have been reported to be "dark matter deficient" (e.g., DF2) [van Dokkum et al. 2018], but that observation does not derive the structural weight; it can only test a weight fixed independently before comparison.
 
-Determining $C$ for a specific system requires specifying its effective per-cycle information budget in the operational sense of Appendix Q; once $C$ is fixed, Equations (H.4a) and (H.27)–(H.28) give the corresponding $g_0(C)$.
+Determining $C$ for a specific system requires an independently specified operational bridge from the system to its structural per-cycle information budget in the sense of Appendix Q. Once that T2 bridge is fixed, Equations (H.4a) and (H.27)–(H.28) give the corresponding conditional $g_0(C)$.
 
 ## H.8 Derivation Summary: The Bridge Law
 
@@ -714,7 +806,7 @@ Determining $C$ for a specific system requires specifying its effective per-cycl
 
 | Step | Factor | Value | Theorem | Source |
 |:-----|:-------|:------|:--------|:-------|
-| 1 | Repetition count | $N = C/\varepsilon = 2$ | QFI additivity (i.i.d.) | Quantum estimation theory |
+| 1 | Structural comparison weight / registered repetition | $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ at $C=2\varepsilon_0$ | bridge registration plus QFI additivity for two i.i.d. copies | Definition H.0a; Theorem H.1b |
 | 2 | Active participation | $a/d_0 = 1/4$ | Isotropy (Haar average) | Representation theory |
 | 3 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance | Linear algebra |
 | 4 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | Variance normalization (H.1c) | Discrete generator normalization |
@@ -744,18 +836,18 @@ $$
 
 Through careful dimensional analysis, all core PU equations are shown to be homogeneous according to the defined units. The Unruh–de Sitter temperature matching criterion (Proposition H.1) yields the cosmic acceleration floor $a_0 = c^2\sqrt{\Lambda/3}$.
 
-The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed once the QFI linear-response bridge law of Definition H.0 is adopted and the four normalized factors are inserted into that bridge-law formula:
+The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed once the QFI linear-response bridge law of Definition H.0, its structural comparison weight, and its registered two-copy operating-point realization are adopted and the four normalized factors are inserted into that bridge-law formula:
 
 | Factor | Value | Source |
 |--------|-------|--------|
 | Active participation | $a/d_0 = 1/4$ | Isotropy theorem |
-| Repetition multiplier | $C/\varepsilon = 2$ | QFI additivity (i.i.d.) |
+| Structural comparison weight / registered repetition | $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ at $C=2\varepsilon_0$ | bridge registration plus QFI additivity for two i.i.d. copies |
 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance |
 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | Democratic generator normalization (Theorem H.1c) |
 
-The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry enters the Appendix Z Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, whose arithmetic offset from the NIST/CODATA comparison central value is about $0.678$ ppm before residual closure.
+The resulting branch value $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry enters the Appendix Z Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, whose arithmetic offset from the NIST/CODATA comparison central value is about $0.678$ ppm before residual closure.
 
-The derivation is conditional on Definition H.0, whose validity is tested by predictive agreement.
+The derivation is conditional on Definition H.0, the structural interpolation $w_{\mathrm{cmp}}(C)$, and the registered two-copy operating-point realization. Physical reset entropy remains a separate implementation ledger.
 
 With that bridge-law normalization fixed, the scale-dependent gravity model of Appendix I has no remaining continuously adjustable parameter.
 

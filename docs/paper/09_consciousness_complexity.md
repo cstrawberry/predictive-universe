@@ -14,7 +14,7 @@ An **MPU aggregate** is a physical system composed of multiple interacting Minim
 
 The fundamental transition probabilities $P(o | x, y)$ (outcome probability) and $P(x' | x, y, o)$ (state transition probability) defining the local Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6), which governs the 'Evolve' process (Definition 27), are parameterized not only by the immediate state $x$ and interaction $y$ but also by the broader local physical context provided by the surrounding MPU network state. While the Born rule (Proposition 7) describes baseline probabilities emerging from the Hilbert space structure in a minimal context, the *observable* probabilities $P_{obs}$ for an 'Evolve' event involving an MPU that is part of a complex aggregate will depend on the state of that aggregate, $S_{agg}$, which constitutes the dominant local context.
 
-*Justification:* This dependence is motivated by the adaptive nature of the MPU network operating under POP/PCE and is adopted as an explicit modeling assumption for the CC program. For an aggregate to optimize predictions efficiently, it is natural for its constituent MPUs' interactions to be sensitive to the aggregate context $S_{agg}$; a strictly context-independent ND-RID parameterization would generically restrict the controllable degrees of freedom available for PCE-driven adaptation. PCE optimization is therefore expected to favor configurations where ND-RID parameters can be modulated by $S_{agg}$. This allows the system to learn—via dynamics that minimize the PCE Potential $V(x)$ (Appendix D)—how to locally adapt interaction probabilities to enhance overall predictive performance. The physical realization of ND-RID involves coupling to underlying degrees of freedom (Appendix B.4 regarding interaction operators), and Appendix L presents a concrete instantiation in which electromagnetic field modulation of local interaction parameters (Theorem L.2) is shown to dominate gravitational effects by a factor $\mathcal{R} \sim 10^{36}$ (Proposition L.5), with both channels emerging from unified temporal wave modulation (Theorem L.8) and satisfying universal thermodynamic requirements (Theorem L.9).
+*Justification:* This dependence is motivated by the adaptive nature of the MPU network operating under POP/PCE and is adopted as an explicit modeling assumption for the CC program. For an aggregate to optimize predictions efficiently, it is natural for its constituent MPUs' interactions to be sensitive to the aggregate context $S_{agg}$; a strictly context-independent ND-RID parameterization would generically restrict the controllable degrees of freedom available for PCE-driven adaptation. PCE optimization is therefore expected to favor configurations where ND-RID parameters can be modulated by $S_{agg}$. This allows the system to learn—via dynamics that minimize the PCE Potential $V(x)$ (Appendix D)—how to locally adapt interaction probabilities to enhance overall predictive performance. Appendix L describes conditional implementation classes for such modulation. An AC-Stark implementation requires a specified source, coupling Hamiltonian, target response, coherence window, and likelihood map; the Fourier construction of Theorem L.8 does not identify a carrier without an additional physical-response model, and Theorem L.9 applies only to its declared admissible mapping class. Assumption 1 does not determine a universal electromagnetic-to-gravitational ratio or a universal thermodynamic implementation law.
 
 **9.2 The Emergence of Biasing Capability from POP/PCE Optimization**
 
@@ -22,14 +22,17 @@ Given context-dependent ND-RID probabilities (Assumption 1), and that the aggreg
 
 **Remark (Strict-Improvement Branch Discipline).** The strict-improvement antecedent is a branch condition, not a consequence of complexity alone. On differentiable admissible mapping classes where the context map has nonzero predictive sensitivity to the retained outcome statistics and the predictive-benefit gradient is not cancelled by the resource-cost gradient at the null/Born-realizing map, the null map is not a local PCE optimum and a nonzero context map is selected. If the sensitivity vanishes, if the resource cost dominates the reachable benefit, or if the relevant side-information has already been absorbed into the state-preparation ledger, the strict-improvement inequality can fail and PCE selects the Born/null equivalence class. The empirical content of Theorem 34 is therefore conditional: a complex aggregate coupled to a measurement channel exhibits nonzero CC on the strict-improvement branch, while the named edge cases remain zero-CC branches rather than contradictions of the theorem.
 
-**9.2.1 Theorem 34 (POP/PCE Drives Emergent Biasing)**
+**9.2.1 Theorem 34 (POP/PCE Selects Biasing on the Strict-Improvement Branch)**
 
-Assume context-dependent ND-RID probabilities (Assumption 1). Let $S$ be an MPU aggregate with $C_{agg} > C_{op}$. Let $\mathcal U$ denote the set of reachable, dynamically stable internal context states $u$ of the aggregate on the timescale of the local 'Evolve'/ND-RID events of interest, and let $P_{obs}(\cdot|u)$ be the induced distribution over those local outcomes (for a fixed local measurement setting). Let $V(u)$ denote the effective PCE potential governing the adaptive dynamics restricted to this reduced description (Definition D.1, Appendix D). Assume there exists a reachable reference context $u_0\in\mathcal U$ such that $P_{obs}(\cdot|u_0)=P_{Born}$, and that there exists at least one $u_+\in\mathcal U$ with $V(u_+) < V(u_0)$ and $P_{obs}(\cdot|u_+)\ne P_{Born}$. Assume additionally:
+Assume context-dependent ND-RID probabilities (Assumption 1). Let $S$ be an MPU aggregate with $C_{agg}>C_{op}$. Let $\mathcal U$ be the set of reachable internal context states on the timescale of the local `Evolve`/ND-RID events, let $P_{obs}(\cdot\mid u)$ be the induced distribution for one retained measurement, and let $V:\mathcal U\to\mathbb R$ be the reduced PCE potential. Assume:
 
-1.  **Born-level minimality:** if $P_{obs}(\cdot|u)=P_{Born}$, then $V(u)\ge V(u_0)$;
-2.  **Operational representability:** whenever $P_{obs}(\cdot|u)\ne P_{Born}$, the induced local deviation is representable by a Hermitian-preserving, trace-annihilating linear map $L_{S,u}$ on states in the sense of Definition 30.
+1. there is a reference context $u_0\in\mathcal U$ with $P_{obs}(\cdot\mid u_0)=P_{Born}$;
+2. there is $u_+\in\mathcal U$ with $V(u_+)<V(u_0)$ and $P_{obs}(\cdot\mid u_+)\ne P_{Born}$;
+3. if $P_{obs}(\cdot\mid u)=P_{Born}$, then $V(u)\ge V(u_0)$;
+4. whenever $P_{obs}(\cdot\mid u)\ne P_{Born}$, the deviation on the retained event algebra is represented by a Hermitian-preserving, trace-annihilating complex-linear map $L_{S,u}$ in the sense of Definition 30;
+5. $V$ attains its global minimum on $\mathcal U$, and the adaptive dynamics has an asymptotically stable attractor $u^*\in\arg\min_{u\in\mathcal U}V(u)$.
 
-Then any asymptotically stable attractor $u^*\in\arg\min_{u\in\mathcal U}V(u)$ satisfies $P_{obs}(\cdot|u^*)\ne P_{Born}$. Consequently $L_{S,u^*}\ne0$, so the aggregate has nonzero operational Consciousness Complexity,
+Then $P_{obs}(\cdot\mid u^*)\ne P_{Born}$ and $L_{S,u^*}\ne0$. Consequently
 $$
 \mathrm{CC}(S)=\|L_{S,u^*}\|_{\mathrm{op}}>0.
 $$
@@ -89,17 +92,40 @@ holds for all POVMs.
 
 **Lemma 9.1 (Variational characterization).** For Hermitian $H$ with $\mathrm{tr}\,H=0$,
 $$
-\sup_{0\le E\le I}\big|\mathrm{tr}(H E)\big|=\tfrac12\|H\|_1,
+\sup_{0\le E\le I}\big|\mathrm{tr}(HE)\big|=\tfrac12\|H\|_1,
 $$
-with the supremum attained by the projector onto the positive (or negative) eigenspace of $H$.
+with the supremum attained by the projector onto the positive or negative eigenspace of $H$.
 
-*Proof:* Decompose $H=H_+-H_-$ with $H_\pm\ge0$ and $H_+H_-=0$. Since $\mathrm{tr}\,H=0$, we have $\mathrm{tr}(H_+)=\mathrm{tr}(H_-)=\tfrac12\|H\|_1$. Choosing $E=\mathrm{supp}(H_+)$ gives $\mathrm{tr}(H E)=\mathrm{tr}(H_+)=\tfrac12\|H\|_1$, and choosing $E=\mathrm{supp}(H_-)$ gives the negative extremum. QED
+*Proof.* Write the Jordan decomposition $H=H_+-H_-$, where $H_\pm\succeq0$ and $H_+H_-=0$. Since $\mathrm{tr}\,H=0$,
+$$
+\mathrm{tr}(H_+)=\mathrm{tr}(H_-)=\tfrac12\|H\|_1.
+$$
+For every effect $0\le E\le I$,
+$$
+0\le\mathrm{tr}(H_+E)
+=\mathrm{tr}(H_+^{1/2}EH_+^{1/2})
+\le\mathrm{tr}(H_+),
+$$
+and similarly $0\le\mathrm{tr}(H_-E)\le\mathrm{tr}(H_-)$. Therefore
+$$
+-\tfrac12\|H\|_1
+\le\mathrm{tr}(HE)
+\le\tfrac12\|H\|_1.
+$$
+Taking $E$ to be the support projector of $H_+$ gives the upper endpoint, while the support projector of $H_-$ gives the lower endpoint. Hence the supremum of the absolute value is $\tfrac12\|H\|_1$. ∎
 
 **Corollary 9.1.** For Hermitian-preserving, trace-annihilating $L_S$,
 $$
 \|L_S\|_{\mathrm{op}}=\tfrac12\sup_{\rho}\big\|L_S(\rho)\big\|_1,
 $$
 where the supremum ranges over density operators $\rho$.
+
+*Proof.* For every density operator $\rho$, Hermitian preservation makes $L_S(\rho)$ Hermitian and trace annihilation gives $\operatorname{tr}L_S(\rho)=0$. Lemma 9.1 therefore gives
+$$
+\sup_{0\le E\le I}\left|\operatorname{tr}\!\bigl(L_S(\rho)E\bigr)\right|
+=\frac12\|L_S(\rho)\|_1.
+$$
+Taking the supremum over density operators and using Definition 30 proves the identity. ∎
 
 **9.3.2 Definition 31 (Def 31): Physical Constraints on CC Scaling**
 
@@ -123,11 +149,15 @@ where:
 *   $C_{op}$ is the operational threshold (Definition 13),
 *   $\Theta$ is the Heaviside step function.
 
-*Proof:* For $C_{agg}\le C_{op}$, Definition 31 gives $\text{CC}(C_{agg})=0$, enforced by $\Theta(C_{agg}-C_{op})$. For $C_{agg}>C_{op}$, set $x=(C_{agg}-C_{op})/C_{scale}\ge0$ and define
+*Proof.* For $C_{agg}\le C_{op}$, Definition 31 gives $\text{CC}(C_{agg})=0$, as represented by $\Theta(C_{agg}-C_{op})$. For $C_{agg}>C_{op}$, set $x=(C_{agg}-C_{op})/C_{scale}$ and define
 $$
 \alpha_\infty:=\lim_{C_{agg}\to\infty}\text{CC}(C_{agg}).
 $$
-Existence of this limit follows from monotonicity and the global upper bound in Definition 31 (a bounded monotone function has a limit equal to its supremum). If $\alpha_\infty=0$, take $\mathcal G\equiv0$. Otherwise define $\mathcal G(x):=\text{CC}(C_{op}+C_{scale}x)/\alpha_\infty$ for $x\ge0$. Then $0\le\mathcal G(x)\le1$, $\mathcal G(0)=0$, $\lim_{x\to\infty}\mathcal G(x)=1$, and $\mathcal G'\ge0$, $\mathcal G''\le0$ follow directly from the corresponding properties of $\text{CC}$ under the affine reparameterization. If $\text{CC}$ approaches its supremum only asymptotically, then $\mathcal G(x)<1$ for all finite $x$; if $\text{CC}$ has a finite plateau, then $\mathcal G(x)=1$ on that plateau, which is still admissible because it represents zero marginal gain after saturation. Substituting back yields Equation (55). QED
+The limit exists because CC is nondecreasing and bounded above. If $\alpha_\infty=0$, nonnegativity and monotonicity imply $\text{CC}(C_{agg})=0$ for every $C_{agg}$; choose, for example, $\mathcal G(x)=x/(1+x)$, which satisfies all of the stated shape conditions and yields $\alpha_\infty\mathcal G(x)=0$. If $\alpha_\infty>0$, define
+$$
+\mathcal G(x):=\frac{\text{CC}(C_{op}+C_{scale}x)}{\alpha_\infty}.
+$$
+Then $0\le\mathcal G(x)\le1$, $\mathcal G(0)=0$, $\lim_{x\to\infty}\mathcal G(x)=1$, and the derivative signs are inherited under the positive affine rescaling. A finite plateau gives $\mathcal G=1$ on that plateau; otherwise $\mathcal G(x)<1$ at every finite $x$. Substitution gives Equation (55). ∎
 
 **9.3.4 Definition 32 (Def 32): Specific CC Scaling Model Example**
 
@@ -192,34 +222,65 @@ nats.
 
 **9.3.4d Remark 35a.2 (Status of the Backbone Representative).** Definition 31 and Theorem 35 permit many monotone-concave scaling functions. Definition 32 remains a rational example, while Definition 32a supplies a binary-saturating benchmark representative. The branch condition $3/8\le\alpha_{CC,max}<1/2$ of Definition 32a is strictly stronger than the universal Theorem 39 bound $\alpha_{CC,max}<1/2$, so the representative is admissible only on the upper portion of CC branches consistent with the kernel and is not a universal closure for every Theorem 35 branch. The asymptotic value $3/8$ is the same ratio as the sub-threshold Van Vleck effective dimension $D_{\mathrm{eff}}=t/d_{\min}=3/8$ of Theorem T.42.5 on the Golay assignment branch; the scale $K_0\varepsilon_0=3\ln2$ matches the per-cycle Landauer complexity quantum used in the capacity-floor analysis of Theorem E.6 and Equation E.9. These are cross-sector resonance choices motivating the representative from shared Golay integers $(t=3,d_{\min}=8)$ and the structural quantum $\varepsilon_0=\ln2$; they are not derivations of a unique CC scaling function, and the numerical coincidence of ratios from common upstream invariants does not by itself elevate the identification beyond model-representative status. The value $3/8$ and the scale $3\ln2$ are therefore status-labeled model choices inside the CC extension on branches whose endpoint-bias ceiling admits $3/8$, unless a later forward-locked protocol package derives them from the underlying response dynamics.
 
-**Definition 35b (Certified CC Response Shape and Tilt Budget).** A certificate fixes $C_0>0$, $\Delta C_{\mathrm{self}}\ge0$, $\alpha_{CC,\max}\ge0$, a residual interval $I_{\mathrm{shape}}$, $C_{\max}^*>0$, and nonnegative $\epsilon_0,\epsilon_{\mathrm{tilt}}$. It records
+**Definition 35b (Certified CC Response Shape and Tilt Budget).** A certificate fixes $C_0>0$, $\Delta C_{\mathrm{self}}\ge0$, $\alpha_{CC,max}\ge0$, a residual interval $I_{\mathrm{shape}}$, $C_{\max}^*>0$, and nonnegative $\epsilon_{\mathrm{base}},\epsilon_{\mathrm{tilt}}$. It records
 $$
 P(X>x)=e^{-x/C_0}\quad(x\ge0),
 \tag{56c}
 $$
 $$
 \Delta\alpha_{CC}
-\in\alpha_{CC,\max}
+\in\alpha_{CC,max}
 P(0\le X\le\Delta C_{\mathrm{self}})+I_{\mathrm{shape}},
 \tag{56d}
 $$
-and $C_{\max}^*\operatorname{TV}(p,q)\le\epsilon_0+\epsilon_{\mathrm{tilt}}$.
+and $C_{\max}^*\operatorname{TV}(p,q)\le\epsilon_{\mathrm{base}}+\epsilon_{\mathrm{tilt}}$.
 
 **Proposition 35c (Conditional Exponential Response).** The response interval is
 $$
 \Delta\alpha_{CC}
-\in\alpha_{CC,\max}
+\in\alpha_{CC,max}
 \left(1-e^{-\Delta C_{\mathrm{self}}/C_0}\right)+I_{\mathrm{shape}}.
 \tag{56e}
 $$
 
+*Proof.* Definition 35b gives $\Delta C_{\mathrm{self}}\ge0$ and
+$$
+P(X>x)=e^{-x/C_0}
+\qquad(x\ge0).
+$$
+In particular, $P(X>0)=1$, so $P(X<0)=P(X=0)=0$. Therefore
+$$
+\begin{aligned}
+P(0\le X\le\Delta C_{\mathrm{self}})
+&=1-P(X>\Delta C_{\mathrm{self}})\\
+&=1-e^{-\Delta C_{\mathrm{self}}/C_0}.
+\end{aligned}
+$$
+Substitution in Equation (56d) gives Equation (56e). ∎
+
 **Proposition 35d (Residual-Aware Endpoint Ceiling).** One has
 $$
 \operatorname{TV}(p,q)
-\le\frac{\epsilon_0+\epsilon_{\mathrm{tilt}}}{C_{\max}^*}.
+\le\frac{\epsilon_{\mathrm{base}}+\epsilon_{\mathrm{tilt}}}{C_{\max}^*}.
 \tag{56f}
 $$
-The value $1/2$ requires $\epsilon_{\mathrm{tilt}}=0$, $\epsilon_0=\ln2$, and $C_{\max}^*=2\ln2$; equality does not meet a strict $<1/2$ condition.
+The value $1/2$ requires $\epsilon_{\mathrm{tilt}}=0$, $\epsilon_{\mathrm{base}}=\ln2$, and $C_{\max}^*=2\ln2$; equality does not meet a strict $<1/2$ condition.
+
+*Proof.* Definition 35b gives
+$$
+C_{\max}^*\operatorname{TV}(p,q)
+\le\epsilon_{\mathrm{base}}+\epsilon_{\mathrm{tilt}}
+$$
+and $C_{\max}^*>0$. Division by $C_{\max}^*$ proves Equation (56f). For
+$$
+(\epsilon_{\mathrm{base}},\epsilon_{\mathrm{tilt}},C_{\max}^*)
+=(\ln2,0,2\ln2),
+$$
+the right-hand side is
+$$
+\frac{\ln2}{2\ln2}=\frac12.
+$$
+Thus this specialization permits $\operatorname{TV}(p,q)\le1/2$ and cannot establish the strict condition $\operatorname{TV}(p,q)<1/2$. ∎
 
 **9.4 Proposed Mechanism of CC Influence**
 
@@ -231,9 +292,9 @@ The operational Consciousness Complexity CC(S) (Definition 30) of an MPU aggrega
 
 1.  **Internal State as Context ($\mathrm{context}_S$):** The aggregate's internal state providing context is formally the **context state $\mathrm{context}_S(t)$** (defined via the minimal sufficient statistic construction in Appendix L, Definition L.1). Operationally, it represents the coarse-grained, predictively sufficient slice of the aggregate state $\rho_{agg}(t)$ relevant to influencing local ND-RID within available resources.
 2.  **Physical Manifestation of Context:** $\mathrm{context}_S(t)$ manifests physically through properties like the reduced density operator, entanglement structure, patterns in the coarse-grained MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B), or emergent curvature patterns.
-3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Appendix L Equations (L.88) and (L.90)) of the underlying 'Evolve'/ND-RID process. Concretely, a proposed controlled AC-Stark pathway utilizes context-conditioned classical fields to induce shifts in MPU level splittings ($\Delta E \propto \alpha_{pol} E^2/\Delta$, with $\alpha_{pol}$ the effective polarizability coefficient). This tunes the effective jump rates $\gamma_k$ within the Lindblad description, consequently modulating the local 'Evolve' probabilities. The required mapping $\mathcal{M}:\mathcal{C}_{ctx} \to \mathcal{P}_{control}$ must be Lipschitz and low-cost and satisfy the POP/PCE cost–benefit inequality (L.2) to remain dynamically stable. See **Appendix L** for the rigorous formal construction (Definition L.1; Definition L.2; Lemma L.1; Theorem L.1). The electromagnetic channel dominates by factor $\mathcal{R} \sim 10^{36}$ (Proposition L.5), while gravitational self-limitation (Appendix S) bounds achievable CC. On branches satisfying the strict-improvement antecedent of Theorem 34, a high-CC system has the optimized ability to generate and control these patterns to bias the outcomes of the 'Evolve' process.
+3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) are hypothesized to act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Appendix L Equations (L.88) and (L.90)) of the underlying 'Evolve'/ND-RID process. A candidate controlled AC-Stark pathway uses context-conditioned classical fields to shift MPU level splittings and thereby alter effective jump rates. This candidate requires a specified control Hamiltonian, source geometry, target polarizability and detuning, coherence window, noise model, and likelihood map from the induced dynamics to the retained outcome probabilities. The mapping $\mathcal M:\mathcal C_{ctx}\to\mathcal P_{control}$ must belong to the admissible class of Theorem L.1 and satisfy its declared continuity, compactness, stability, and cost-benefit hypotheses. Appendix L supplies this conditional optimization framework; it does not determine a universal electromagnetic-to-gravitational channel ratio. Appendix S supplies a self-limitation model only on its registered power-law, retained-energy, weak-field, and calibrated-response branches. On branches satisfying both the strict-improvement antecedent of Theorem 34 and the relevant implementation certificates, the selected non-null map can represent controlled bias of the retained 'Evolve' outcomes.
 4.  **Primary Locus of Observable Effect:** The principal observable consequence is hypothesized to be the biasing of probabilities associated with probabilistic amplitude actualization within the universal 'Evolve' process. This leads to measurable deviations $|\Delta P| \le \mathrm{CC}(S)$ from the baseline Born rule (Proposition 7) that would otherwise solely govern the 'Evolve' outcome probabilities in the absence of such high-complexity contextual influence.
-5.  **Operational Nature:** CC measures this biasing capability. The link between specific content of $\mathrm{context}_S$ (e.g., intent, attention, report-induced expectation, or other retained predictive state) and bias direction is learned or selected via adaptation (driven by POP/PCE), potentially related to interpretive postulates (Postulate 1), but the mechanism of influence on the 'Evolve' parameters is proposed as objective physics. A semantic item such as a belief, report, or expectation enters the mechanism only through its physical instantiation inside $\mathrm{context}_S$; the truth value of the represented proposition is not itself a probability-control parameter unless it is physically available to the aggregate or apparatus.
+5.  **Operational Nature:** CC measures this biasing capability. The link between specific content of $\mathrm{context}_S$ (e.g., intent, attention, report-induced expectation, or other retained predictive state) and bias direction is learned or selected via adaptation (driven by POP/PCE), potentially related to interpretive postulates (the Minimal Awareness interpretive convention of Section 7.1.2), but the mechanism of influence on the 'Evolve' parameters is proposed as objective physics. A semantic item such as a belief, report, or expectation enters the mechanism only through its physical instantiation inside $\mathrm{context}_S$; the truth value of the represented proposition is not itself a probability-control parameter unless it is physically available to the aggregate or apparatus.
 6.  **Implications for Locality:** Since $\mathrm{context}_S$ can involve non-local entanglement, and the CC mechanism acts by influencing local 'Evolve' events, a context change in one part of an entangled aggregate might have statistical consequences (via entanglement and the modified 'Evolve' probabilities) on 'Evolve' outcomes in space-like separated parts. This underpins the statistical FTL influence hypothesis (Postulate 3), which operates within the deterministic endpoint constraint of Theorem 39, the finite-window zero-error constraint of Theorem 39a on the regular statistical branch, and the predictive-current no-loop/precision-cost gate of Theorem 39b whenever a current representation is asserted.
 7.  **Physical Realization:** The challenge lies in the mapping $\mathcal{M}: \mathrm{context}_S \to (\text{Physical Control})$ respecting POP/PCE constraints (Appendix L, Lemma L.1, Theorem L.1), which generates the physical fields or boundary conditions that modulate the 'Evolve' process, alongside the physics of the interaction channel itself (Appendix L).
 
@@ -298,8 +359,12 @@ $$
 $$
 Two operational implementations are possible:
 
-1.  **CPTP pre-processing** $\rho \mapsto e^{\xi L_S}(\rho)$ when $L_S$ is a GKLS generator.
-2.  **Calibrated POVM deformations** $E_{i,\xi}=E_i+\xi K_S(E_i)$ with positivity on $\ker(E_i)$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, imposing the completeness-preserving constraint $\sum_i K_S(E_i)=0$ ensures $\sum_i E_{i,\xi}=I+O(\xi^2)$.
+1.  **CPTP pre-processing** $\rho\mapsto e^{\xi L_S}(\rho)$ when $L_S$ is a GKLS generator and $\xi\ge0$.
+2.  **Calibrated POVM deformations** $E_{i,\xi}=E_i+\xi K_S(E_i)$ on a stated interval of $\xi$ for which $E_{i,\xi}\succeq0$ for every $i$. The completeness-preserving condition $\sum_iK_S(E_i)=0$ then gives
+    $$
+    \sum_iE_{i,\xi}=\sum_iE_i+\xi\sum_iK_S(E_i)=I
+    $$
+    exactly throughout that interval. Positivity on $\ker(E_i)$ is a necessary first-order test but is not by itself a sufficient positivity certificate when kernel-to-support cross terms are present.
 
 **Theorem (Heisenberg–Schrödinger identity for CPTP semigroups).** Let $\Lambda_\xi=e^{\xi\mathcal L}$ be a CPTP quantum Markov semigroup on $\mathcal B(\mathcal H)$ [Lindblad 1976; Gorini–Kossakowski–Sudarshan 1976; Nielsen & Chuang 2010] and let $\{E_i\}_i$ be any POVM on $\mathcal H$. Define the Heisenberg‑picture effects
 $$
@@ -414,11 +479,18 @@ c:=\sum_k\sqrt{p_kq_k},
 \qquad
 H^2(p,q):=1-c,
 $$
-the standard inequality $H^2(p,q)\le\mathrm{TV}(p,q)$ gives
+one has $\sqrt{p_kq_k}\ge\min\{p_k,q_k\}$ for every $k$. Therefore
 $$
-c\ge1-\min\{\mathrm{CC}(S),1\},
+c
+\ge\sum_k\min\{p_k,q_k\}
+=\frac12\sum_k\bigl(p_k+q_k-|p_k-q_k|\bigr)
+=1-\mathrm{TV}(p,q),
 $$
-hence
+so $H^2(p,q)\le\mathrm{TV}(p,q)$. Since every total variation distance is at most one,
+$$
+c\ge1-\min\{\mathrm{CC}(S),1\}.
+$$
+The function $\arccos$ is decreasing on $[0,1]$, and hence
 $$
 d_{\mathrm{FR}}(p,q)=2\arccos(c)
 \le
@@ -567,7 +639,12 @@ m(1-\lambda_{\min}(\sigma))
 \le
 1-\lambda_{\min}(\sigma).
 $$
-The same upper bound applies to $\sup_\rho \mathrm{tr}\!\big((\sigma-\rho)E\big)$ by exchanging the positive and negative parts. The bound is attained by taking $E$ to be the projector onto an eigenvector of $\sigma$ with eigenvalue $\lambda_{\min}(\sigma)$ and $\rho=E$. Hence the supremum is exactly $1-\lambda_{\min}(\sigma)$. ∎
+Because $\operatorname{tr}(\sigma-\rho)=0$,
+$$
+\operatorname{tr}\!\bigl((\sigma-\rho)E\bigr)
+=\operatorname{tr}\!\bigl((\rho-\sigma)(I-E)\bigr).
+$$
+The operator $I-E$ is an effect, so the preceding upper bound applied to $I-E$ gives the same bound for the opposite sign. The bound is attained by taking $E$ to be the projector onto an eigenvector of $\sigma$ with eigenvalue $\lambda_{\min}(\sigma)$ and $\rho=E$. Hence the supremum is exactly $1-\lambda_{\min}(\sigma)$. ∎
 
 **9.5.3 Definition 34 (Def 34): Context-Targeted Bias (CTB) Model**
 
@@ -753,10 +830,21 @@ Assuming the validity of the CC hypothesis (Theorem 34, Hypothesis 3), several i
 
 **Proposition 13 (Potential CC effect on quantum coherence).** The CC mechanism (Hypothesis 3), by influencing “Evolve”/ND-RID parameters contributing to decoherence, could modify effective decoherence rates $\Gamma_{eff}$ or coherence times $\tau_{coh}$ of quantum systems interacting with the high-CC aggregate. Fractional change might scale as $O(\mathrm{CC})$, with context-dependent sign (Section 13.3).
 
-**Proposition 14 (Relation between operational CC and system integration/prediction).** Since CC (Definition 30) emerges from optimized generation and control of complex internal states $\mathrm{context}_S$ (Theorem 34, Hypothesis 3), it should correlate with measures of functional integration, sophisticated internal modeling, and high-level predictive capacity.
+**Proposition 14 (Relation between operational CC and system integration/prediction).** Theorem 34 establishes a nonzero operational bias map only on its strict-improvement and representability branch. It supplies no measure of functional integration and no theorem relating such a measure to $\mathrm{CC}(S)$. A positive relation among CC, integration, internal modeling, and predictive capacity is an explicit empirical hypothesis.
 
-**Proposition 15 (Introspection limits from Reflexivity Constraint).** The Reflexivity Constraint ($\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$, Theorem 33) applies to aggregates. Attempts to gain precise internal information $\Delta I$ about $\mathrm{context}_S$ (introspection) necessarily induce minimum state disturbance $\Delta S_{min}$, limiting simultaneous precision of self-knowledge and state stability.
+**Proposition 15 (Introspection limits from Reflexivity Constraint).** Let an aggregate run a registered introspection protocol satisfying
+$$
+\Delta I\ge\Delta I_{\min}>0,
+\qquad
+H_q(P\mid R)\ge h_{\min}>0.
+$$
+Theorem 33 then gives the reset-cost trade-off
+$$
+\Delta I\,\varepsilon_{\mathrm{reset}}
+\ge\Delta I_{\min}h_{\min}.
+$$
+Here $\varepsilon_{\mathrm{reset}}=\langle Q_{\mathrm{bath}}\rangle/(k_BT)$ is a thermodynamic reset ledger. This inequality does not define or lower-bound a state-space disturbance $\Delta S_{\min}$.
 
-**Proposition 16 (Dynamic nature of high-CC states).** A consequence of Proposition 15 is that internal states $\mathrm{context}_S$ associated with high operational CC or subjective experience (if linked via Postulate 1, Proposition 14) must be fundamentally dynamic. The interplay between acquiring internal information and resulting disturbance prevents static, perfectly known internal states while maintaining high CC or awareness.
+**Proposition 16 (Dynamic nature of high-CC states).** Assume, in addition to Proposition 15, that a high-CC protocol repeatedly acquires fresh introspective information and that every registered acquisition causes a nonzero displacement in a specified metric on $\mathrm{context}_S$. Then the context cannot remain static while that protocol operates. Without the repeated-acquisition, metric-displacement, and CC-to-protocol hypotheses, Theorem 33 does not exclude a static high-CC state or establish a claim about subjective experience.
 
 
