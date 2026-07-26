@@ -230,7 +230,7 @@ $$|\Delta\phi_{\text{grav}}|=\frac{\omega_{\text{TLS}}}{c^2}|\Delta\Phi|\tau_c+\
 
 ### **Proposition L.4 (Parametric Scaling Analysis for High-Complexity Aggregates)**
 
-For a macroscopic MPU aggregate (Definition 29) with aggregate Predictive Physical Complexity $C_{\text{agg}} = C_P(\mu_{\text{agg}})$ satisfying $C_{\text{agg}} \ge C_{op}$ (Definition 13, Corollary 3) where $C_{op}$ is the Operational Threshold satisfying $C_{op} \ge K_0$ per Corollary 3, the electromagnetic and gravitational effect magnitudes scale with aggregate and target parameters as follows.
+For a macroscopic MPU aggregate (Definition 29) with aggregate Predictive Physical Complexity $C_{\text{agg}} = C_P(\mu_{\text{agg}})$ satisfying $C_{\text{agg}} \ge C_{op}$ (Definition 13, Corollary 3) where $C_{op}$ is the task-indexed Operational Threshold and where the additional relation $C_{op}\ge K_0$ is invoked only under all realization and complexity-capacity hypotheses of Corollary 3 but is not used in the scaling identities below, the electromagnetic and gravitational effect magnitudes scale with aggregate and target parameters as follows.
 
 ### **General Scaling Laws:**
 
@@ -1226,7 +1226,7 @@ The electromagnetic-to-gravitational coupling ratio emerges from the framework's
 
 $$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.81a} $$
 
-Including the discrete-to-continuous interface correction and exact $SU(2)$ transport, Appendix Z gives the Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$ (Theorem Z.26). The operator-realization-open comparison row is $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$; on the candidate hypercharge-recoil (operator realization open) finite Ward branch, Definition Z.27.11k.12 and Theorem Z.27.11k.20 fix $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=137.03599917753023\ldots$, with the registry entry supplied by Corollary Z.27.11k.21.1. The electromagnetic fine structure constant in standard form is:
+Including the registered interface-response and $SU(2)$ transport inputs, Appendix Z gives the scheme-specified sinc-core candidate $\alpha^{-1}_{0}=137.03609205522863\ldots$ (Theorem Z.26). The physical comparison identity is $\alpha^{-1}=\alpha^{-1}_{0}+R_\alpha$ only after a complete remainder certificate is supplied. The diagnostic hypercharge-recoil construction gives $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cand}}=137.03599917753023\ldots$; Corollary Z.27.11k.21.1 records that candidate, while its operator-realization and source-exhaustion gates remain open. The electromagnetic fine structure constant in standard form is:
 
 $$ \alpha_{\text{em}} = \frac{e^2}{4\pi\epsilon_{\mathrm{vac}}\hbar c} \tag{L.81b} $$
 
@@ -1317,7 +1317,7 @@ $$ \gamma_k(t) \approx \gamma_k^{(0)}\bigl[1+\chi_k(\omega_{\text{rad}}(t), \Del
 
 where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{\text{TLS}}$, $E_{\text{max}}$, and details of the TLS-environment coupling modulated by the Stark shift.
 
-**Note on Born Rule:** The CC influence modulates the *parameters* governing the ND-RID process (the Lindblad rates $\gamma_k$), not the Born rule itself. The Born rule, interpreted in this framework as emergent from ND-RID over many 'Evolve' cycles (Section 8), remains the fundamental probability assignment mechanism. CC bias operates by changing the *effective Hamiltonian* and *decoherence rates* that enter into this emergent Born rule, analogous to how external magnetic fields modify energy levels without changing quantum mechanical probability axioms. The probability shifts therefore arise from modified quantum states evolving under modified dynamics, not from violations of quantum probability rules.
+**Note on Born Response.** The CC model changes the effective Hamiltonian and the Lindblad rates $\gamma_k$; it does not alter the probability functional. On the selected complex-Hilbert branch, Theorem 8.3 gives the trace weight $\operatorname{tr}(\rho E_k)$ and Principle 8.0c identifies it with the registered single-run outcome probability. Changing the generator can change $\rho$ and the instrument effects $E_k$, hence the numerical probabilities, without changing that rule. Empirical-frequency convergence requires a separate i.i.d., exchangeable, or stationary-ergodic repeated-trial certificate.
 
 Let $L_S(t)$ denote the bounded time-dependent Lindblad generator on $0\leq t\leq\tau_{int}$ and let
 $$
@@ -1875,7 +1875,7 @@ Proposition L.12.1 makes $\eta_{\text{res}}$ non-decreasing along context refine
 
 ### **L.12.9 The Entanglement-Mediated Channel**
 
-The causal information framework extends first to the local-CPTP entanglement-correlation branch, where $S$ modulates preparation, measurement, or local context channels while preserving no-signaling marginal identities. A stronger nonlocal/state-mediated marginal-anomaly branch is not part of the core CC closure; it is an explicitly separated experimental extension requiring the finite-window gates of Section 10 before any validation claim. The branch analyzed here uses pre-existing entanglement in the global state $\omega_{AB}$ and local context-dependent modulation of joint statistics $\omega(A \otimes B)$.
+The causal information framework extends first to the local-CPTP entanglement-correlation branch, where $S$ modulates preparation, measurement, or local context channels while preserving no-signaling marginal identities. A stronger nonlocal/state-mediated marginal-anomaly branch is not part of the core CC closure; it is absent from the exact pre-lightcone context-independence branch and would falsify that branch by Corollary 39c.1. As an external regular finite-window model, it requires the declared support, sampling, information-rate, and validation gates of Section 10 before any empirical claim. The branch analyzed here uses pre-existing entanglement in the global state $\omega_{AB}$ and local context-dependent modulation of joint statistics $\omega(A \otimes B)$.
 
 **Definition L.12.2 (Entanglement Causal Information on the Operator-Schmidt Branch).** Let $\omega_{AB}$ be a bipartite density operator on finite-dimensional Hilbert spaces $\mathcal H_A\otimes\mathcal H_B$. Equivalently, in an infinite-dimensional representation, assume that
 $$
@@ -1950,7 +1950,7 @@ $$
 \operatorname{tr}_A(\omega_{AB})
 \tag{L.111}
 $$
-whenever $\Phi_A^C$ is completely positive and trace-preserving. Therefore Bob-side marginal shifts under late-randomized Alice context choices are not a consequence of core CC. They belong only to the separated nonlocal/state-mediated marginal-anomaly branch of Postulate 3 and require the finite-window zero-error and validation gates of Section 10.
+whenever $\Phi_A^C$ is completely positive and trace-preserving. Therefore Bob-side marginal shifts under late-randomized Alice context choices are not a consequence of core CC. They belong only to the separated nonlocal/state-mediated marginal-anomaly branch of Postulate 3. By Corollary 39c.1 such a shift is outside and would falsify the exact pre-lightcone context-independence branch; as an external regular finite-window model, it is subject to the zero-error, sample-complexity, information-rate, and validation gates of Section 10.
 
 *Proof.* For any Bob-side observable $B$,
 $$

@@ -3,8 +3,8 @@
 ## D.1 Introduction: Optimization Landscape and Convergence
 
 This Appendix develops the variational perspective on the Predictive Universe (PU) framework's dynamics, providing rigorous dynamical justifications for two cornerstone results presented in the main text:
-1.  **Theorem 2 (Dynamically Enforced Functional Correspondence):** Isolating the exact equilibrium condition $C_P(v)=\langle \hat{C}_v \rangle$ for true stable PCE equilibria, together with the quantitative operational tracking bound that drives the proxy toward that condition.
-2.  **Theorem 43 (Necessary Emergence of Geometric Regularity):** Showing that geometric regularity characterizes the lowest-potential sector of the dynamics and is selected by the low-noise detailed-balance stationary regime, complementing the necessity argument in Appendix C.
+1.  **Dynamical justification of Theorem 2 (Dynamically Enforced Functional Correspondence):** Isolating the exact equilibrium condition $C_P(v)=\langle \hat{C}_v \rangle$ for true stable PCE equilibria, together with the quantitative operational tracking bound that drives the proxy toward that condition.
+2.  **Dynamical justification of Theorem 43 (Necessary Emergence of Geometric Regularity):** Showing that geometric regularity characterizes the lowest-potential sector of the dynamics and is selected by the low-noise detailed-balance stationary regime, complementing the necessity argument in Appendix C.
 
 We introduce the **Principle of Compression Efficiency (PCE) Potential $V(x)$**, an effective potential function derived from the framework's core principles (Axiom 1: POP, Definition 15: PCE). The system's slow adaptation dynamics, governing the evolution of the network configuration $x(t)$, are modeled as a stochastic gradient flow on the landscape defined by $V(x)$. The stochastic differential equation (SDE) governing these dynamics is:
 $$
@@ -551,13 +551,19 @@ d_{\min}\|v\|^2\le v^TD(x)v\le d_{\max}\|v\|^2
 $$
 for every tangent vector $v$.
 *   **(A4) Drift regularity:** The drift $b(x)=-\eta(x)\nabla V(x)$ is globally Lipschitz on the retained state space.
-*   **(A5) Compact state-space branch:** The retained state space $\mathcal K$ is a connected compact smooth manifold without boundary, and (D.8) is interpreted as its intrinsic diffusion in local charts. A branch with boundary requires a separately specified reflecting diffusion and its no-flux boundary condition.
+*   **(A5) Compact intrinsic state-space branch:** The retained state space $\mathcal K$ is a connected compact Riemannian manifold without boundary. Equation (D.8) denotes the intrinsic diffusion whose generator on $C^2(\mathcal K)$ is
+    $$
+    \mathcal L f
+    =-\langle\eta\,\operatorname{grad}V,\operatorname{grad}f\rangle
+    +\operatorname{tr}\!\bigl(D\,\operatorname{Hess}f\bigr),
+    $$
+    where $\eta$ is a symmetric positive tangent-bundle endomorphism, $D$ is a symmetric positive contravariant diffusion tensor, and the gradient and Hessian are taken with respect to the declared Riemannian metric. Any local-coordinate Itô representation must include the connection correction needed to realize this generator. A branch with boundary requires a separately specified reflecting diffusion and no-flux boundary condition.
 *   **(A6) Irreducibility:** For every nonempty open $U\subset\mathcal K$, every $t>0$, and every $x\in\mathcal K$, one has $\mathbb P_x(X_t\in U)>0$.
 
 ### D.6.2 Lyapunov Analysis
 
-**Lemma D.5 (Stochastic Lyapunov Property of $V(x)$).**
-Under assumptions (A1)-(A5), the PCE Potential $V(x)$ serves as a stochastic Lyapunov function for the dynamics (Equation D.8). Applying Ito's formula to $V(x(t))$ yields the expected instantaneous rate of change (the infinitesimal generator $\mathcal{L}V$ applied to $V$):
+**Lemma D.5 (Stochastic Drift Bound for $V(x)$).**
+Under assumptions (A1)–(A5), Itô's formula for the intrinsic generator of (D.8) yields the following drift identity and bound for $V$. They do not by themselves make $V(X_t)$ a global supermartingale.
 $$
 \mathcal{L}V(x) = \lim_{\Delta t \to 0} \frac{\mathbb{E}[V(x(t+\Delta t)) - V(x(t)) | x(t)=x]}{\Delta t}
 $$
@@ -574,7 +580,25 @@ $$
 \le -\eta_{min} \|\nabla V(x)\|^2 + C_{noise}
 \quad \text{(D.10)}
 $$
-where $C_{noise} = \sup_{x \in \mathcal{K}} |\mathrm{tr}(D(x) \nabla^2 V(x))|$ is a positive constant related to $D_{max}$ and the bounds on the Hessian eigenvalues on the compact set $\mathcal{K}$. This inequality shows that whenever the gradient $\|\nabla V(x)\|$ is sufficiently large (specifically, when $\|\nabla V(x)\|^2 > C_{noise}/\eta_{min}$), the negative drift term dominates, $\mathcal{L}V(x) < 0$, and the potential $V(x)$ decreases on average.
+where
+$$
+C_{\mathrm{noise}}
+:=
+\sup_{x\in\mathcal K}
+\left|
+\operatorname{tr}\!\left(D(x)\operatorname{Hess}V(x)\right)
+\right|
+<\infty.
+$$
+Consequently,
+$$
+\mathcal LV(x)<0
+\quad\text{whenever}\quad
+\|\operatorname{grad}V(x)\|^2
+>
+\frac{C_{\mathrm{noise}}}{\eta_{\min}}.
+$$
+Thus $V(X_{t\wedge\tau})$ is a supermartingale only after localization on a region where the displayed nonpositive drift condition holds, with $\tau$ its exit time. The estimate supplies no global monotonicity, almost-sure point convergence, or convergence to a single minimizer without additional recurrence, invariance, and asymptotic-stability hypotheses.
 
 ### D.6.3 Characterization of the Critical Set $\mathcal{E}_{*}$
 
@@ -683,11 +707,19 @@ $$
 \frac{1}{T}\int_0^T f(x(t))\,dt \xrightarrow[T\to\infty]{a.s.} \int_{\mathcal{K}} f(x)\,\pi(dx). \qquad \text{(D.12)}
 $$
 
-To identify when this stationary regime localizes near the PCE-optimal set, consider a "temperature-scaled" family of dynamics obtained by scaling the diffusion as $D_\theta(x):=\theta\,D(x)$ for $\theta>0$ (so the noise strength decreases as $\theta\downarrow 0$). Let $\pi_\theta$ denote the invariant measure of the corresponding diffusion. Then, in regimes where detailed balance holds (e.g., constant-coefficient Langevin with $D_\theta=\theta\,\eta$ and symmetric constant $\eta$), $\pi_\theta$ has the Gibbs form
+To identify when this stationary regime localizes near the PCE-optimal set, consider a "temperature-scaled" family of dynamics obtained by scaling the diffusion as $D_\theta(x):=\theta\,D(x)$ for $\theta>0$ (so the noise strength decreases as $\theta\downarrow 0$). Let $\pi_\theta$ denote the invariant measure of the corresponding diffusion. The Gibbs form is available on the registered reversible subbranch, namely when $D_\theta=\theta\eta$ and the generator is the divergence-form operator
 $$
-\pi_\theta(dx) \;=\; Z_\theta^{-1}\exp\!\left(-\frac{V(x)}{\theta}\right)\,dx, \qquad \text{(D.12a)}
+\mathcal L_\theta f
+=\theta\,e^{V/\theta}\operatorname{div}\!\left(e^{-V/\theta}\,\eta\operatorname{grad}f\right)
+=\theta\operatorname{div}(\eta\operatorname{grad}f)-\langle\eta\operatorname{grad}V,\operatorname{grad}f\rangle,
 $$
-and therefore concentrates on the global-minimizer set
+with $\eta$ a symmetric positive-definite mobility field on $\mathcal K$. On that subbranch the invariant probability measure is
+$$
+\pi_\theta(dx)
+=Z_\theta^{-1}\exp\!\left(-\frac{V(x)}{\theta}\right)d\operatorname{vol}(x).
+\tag{D.12a}
+$$
+On a flat compact torus with constant $\eta$ this generator coincides with $-\langle\eta\nabla V,\nabla f\rangle+\theta\operatorname{tr}(\eta\nabla^2f)$; on a curved manifold or with state-dependent mobility the two differ by the noise-induced drift $\theta\langle\operatorname{div}\eta,\operatorname{grad}f\rangle$, so (D.12a) does not follow from $D_\theta=\theta\eta$ alone. On this reversible subbranch, the family concentrates on the global-minimizer set
 $$
 \mathcal E_*^{\mathrm{global}}:=\operatorname*{argmin}_{x\in\mathcal K}V(x)
 $$
@@ -738,11 +770,12 @@ $$
 $$
 for every $f\in C(\mathcal K)$. Comparing with (D.12) on a countable point-separating dense subset of $C(\mathcal K)$ would imply $f(X_\infty)=\int f\,d\pi$ for all continuous $f$, which is possible only if $\pi=\delta_{X_\infty}$. This contradiction proves the nonconvergence clause on the nontrivial-state-space branch.
 
-For the low-noise concentration statement, consider the temperature-scaled family with $D_\theta=\theta D$. In regimes satisfying detailed balance with respect to Lebesgue measure (e.g., constant SPD mobility $\eta$ and $D_\theta=\theta\eta$), the stationary Fokker–Planck equation for a density $p_\theta$ on $\mathcal K$ is
+For the low-noise concentration statement, work on the registered reversible subbranch stated in the theorem, where $\mathcal L_\theta f=\theta e^{V/\theta}\operatorname{div}(e^{-V/\theta}\eta\operatorname{grad}f)$. Put $\pi_\theta:=Z_\theta^{-1}e^{-V/\theta}d\operatorname{vol}$. For $f,g\in C^\infty(\mathcal K)$ the divergence theorem on the closed manifold $\mathcal K$ gives
 $$
-\nabla\cdot(\eta(\nabla V\,p_\theta + \theta\nabla p_\theta))=0.
+\int_{\mathcal K}g\,\mathcal L_\theta f\,d\pi_\theta
+=-\theta Z_\theta^{-1}\int_{\mathcal K}\langle\eta\operatorname{grad}f,\operatorname{grad}g\rangle\,e^{-V/\theta}\,d\operatorname{vol},
 $$
-Taking $p_\theta(x)=Z_\theta^{-1}e^{-V(x)/\theta}$ gives $\nabla p_\theta = -(p_\theta/\theta)\nabla V$, so the vector field inside the divergence vanishes identically, proving (D.12a).
+which is symmetric in $f$ and $g$ because $\eta$ is symmetric. Taking $g\equiv1$ gives $\int_{\mathcal K}\mathcal L_\theta f\,d\pi_\theta=0$ for every such $f$, so $\pi_\theta$ is reversible and invariant, proving (D.12a) on the stated branch. On the flat torus with constant $\eta$ the same computation reduces to the stationary Fokker-Planck identity $\nabla\cdot(\eta(\nabla V\,p_\theta+\theta\nabla p_\theta))=0$, whose probability current vanishes identically at $p_\theta=Z_\theta^{-1}e^{-V/\theta}$.
 
 Let $A_\delta$ and $\Delta_\delta$ be as in (D.12b), choose $\varepsilon\in(0,\Delta_\delta)$, and choose a minimizer $x_*$. Continuity of $V$ makes
 $$

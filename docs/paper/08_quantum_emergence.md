@@ -4,12 +4,79 @@
 
 This section constructs a consistent effective quantum description on a declared finite-response branch. The construction assumes a complex operational $C^*$-algebra with a positive normalized state, a response-null quotient with finite-effect additivity and noncontextual weights, the local-tomography and minimal-phase package used to select the complex carrier, the tensor-product and local-CPTP package used for composites, and the continuous transition-probability-preserving ray dynamics used for time evolution. Under those hypotheses, the results recover the Hilbert representation, Born weights, superposition interpretation, Robertson inequality, entanglement formalism, and Schrödinger dynamics.
 
+**Principle 8.0b (Fundamental Predictive Carrier Closure).** Every fundamental MPU on this physical closure branch, after finite-response quotienting, carries the Sharp Homogeneous Carrier Certificate $\mathfrak C_{\mathrm{car}}$ of Definition G.1.8a. Its retained finite-dimensional ordered state space has: (i) a closed, pointed, generating state cone and a separating effect cone; (ii) a symmetric positive-definite predictive pairing with respect to which the cone is self-dual; (iii) a cost-bounded reversible group acting transitively on the cone interior; (iv) locally tomographic composition within one scalar/Jordan family, with multiplicative sizes $mn$ for all nontrivial factors $m,n\ge2$; (v) full retained scalar phase redundancy whose connected group is exactly one-dimensional $U(1)$; and (vi) a finite Jordan-exclusion record that certifies simplicity and irreducibility and excludes simplex, real, quaternionic, spin-factor, exceptional, and every additional response-active central summand. Principle 5b supplies eight response triples; the present certificate separately makes them one sharp jointly perfectly distinguishable context. A faithful $M_8(\mathbb C)$ representative realizes the complete retained response presheaf, and after response-null quotienting every higher-dimensional representative of that same presheaf has strictly larger total PCE potential.
+
+This is a falsifiable physical closure principle, not a consequence of the diagonal theorem.
+
+**Principle 8.0c (Response-Complete Actualization on the Selected Matrix Carrier).** On the complex matrix carrier supplied by Principle 8.0b, every registered finite verification with outcome set $\mathcal K$ has an operational map
+$$
+\Gamma:\mathcal D(\mathcal H)\longrightarrow
+\mathcal D(\mathbb C^{|\mathcal K|}\otimes\mathcal H')
+$$
+that is normalized, preparation-equivalent, spectator-stable, and classical in the outcome register:
+$$
+\Gamma(\rho)
+=
+\sum_{k\in\mathcal K}|k\rangle\langle k|\otimes\mathcal I_k(\rho).
+\tag{8.0c.1}
+$$
+In each registered run exactly one mutually exclusive label $k$ is written, and its registered outcome probability is the weight of the corresponding block. A frequency-convergence statement additionally requires an i.i.d., exchangeable, or stationary-ergodic repeated-trial certificate.
+
+For every PPI-retained pre-event record $R$ that leaves the complete preparation $\rho$ and registered verification $\Gamma$ unchanged, the operational stochastic postulate is
+$$
+\Pr(k\mid\rho,\Gamma,R)=\Pr(k\mid\rho,\Gamma)
+$$
+almost surely. In particular, when two block weights are positive, no such retained record is a deterministic selector. This excludes accessible retained selectors on the PPI quotient; it does not exclude mathematically equivalent latent-variable completions whose extra variables are inaccessible to every admitted response.
+
+**Theorem 8.0d (Closed MPU Quantum Representation).** Principles 5b, 8.0b, and 8.0c, together with Theorem 8.2 and Lemma 8.2a, imply:
+
+1. $\mathcal H_0\cong\mathbb C^8$;
+2. every normalized, positive, noncontextual, finitely additive quotient projection ledger satisfying Theorem 8.2 and Lemma 8.2a has a unique density operator $\rho$ such that
+   $$
+   \omega(P)=\operatorname{tr}(\rho P)
+   \tag{8.0d.1}
+   $$
+   for every projection $P$;
+3. every registered verification is an instrument with completely positive trace-nonincreasing maps $\mathcal I_k$ and trace-preserving sum;
+4. for $E_k:=\mathcal I_k^*(I)$,
+   $$
+   \Pr(k\mid\rho)
+   =
+   \operatorname{tr}\mathcal I_k(\rho)
+   =
+   \operatorname{tr}(\rho E_k),
+   \qquad
+   \sum_kE_k=I.
+   \tag{8.0d.2}
+   $$
+   For $\rho=|\psi\rangle\langle\psi|$ and $E_k=|k\rangle\langle k|$,
+   $$
+   \Pr(k\mid\psi)=|\langle k|\psi\rangle|^2.
+   \tag{8.0d.3}
+   $$
+
+*Proof.* Principle 8.0b supplies the symmetric self-dual homogeneous cone, same-family local tomography, exact $U(1)$ scalar-phase, simplicity, and finite exclusion data used by Theorem G.1.8 to select the single complex matrix branch. Principle 5b supplies eight response triples, while Principle 8.0b makes them sharply jointly distinguishable, so $d_0\ge8$. The faithful $M_8(\mathbb C)$ representative realizes the complete response presheaf, and the strict same-presheaf total-cost comparison excludes every larger representative; hence $d_0=8$.
+
+Under Theorem 8.2's response-completeness and global-minimizer hypotheses, $\omega$ descends to quotient events. Under Lemma 8.2a's normalization, positivity, affine-payoff, and refinement hypotheses, its restriction to projections is finitely additive. Since $d_0\ge3$, the projection form of Theorem 8.3 gives (8.0d.1).
+
+Principle 8.0c makes $\Gamma$ preparation-equivalent, spectator-stable, and normalized. Theorem 8.3b gives its CPTP linear extension. Define
+$$
+\mathcal I_k(X):=(\langle k|\otimes I)\Gamma(X)(|k\rangle\otimes I).
+$$
+Compression of a completely positive map is completely positive, so each $\mathcal I_k$ is CP and trace-nonincreasing; normalization makes $\sum_k\mathcal I_k$ trace-preserving. Duality gives $E_k\succeq0$, $\sum_kE_k=I$, and
+$$
+\operatorname{tr}\mathcal I_k(\rho)
+=
+\operatorname{tr}\bigl(\rho\mathcal I_k^*(I)\bigr).
+$$
+The rank-one formula follows by substitution. Principle 8.0c identifies each block weight with the registered single-run outcome probability; frequency convergence requires a separate repeated-trial law-of-large-numbers hypothesis. ∎
+
 **8.1 QM Formalism as Effective Description**
 
 PCE/PPI supplies the response quotient and the branch-selection grammar. It does not by itself derive the complex scalar field, stochastic law, additive probability ledger, tensor-product composition, or continuous ray symmetry. Each theorem below therefore retains the hypotheses that select its part of the effective quantum formalism.
 
 **Lemma 8.0a (Finite-Response $C^*$-Envelope of the Predictive Observable Algebra).**
-Let $\mathfrak A_{\mathrm{alg}}$ be the unital *-algebra generated by finite-resolution operational outcome effects, their adjoints, finite sums, products, and scalar multiples on the complex scalar branch selected in Theorem 8.4. Let $\Pi_{\mathrm{adm}}$ be the class of admissible finite-response *-representations of these operational effects as bounded operators, with each primitive effect represented by an operator $E$ satisfying $0\le E\le I$. Assume $\Pi_{\mathrm{adm}}\ne\varnothing$. In PU applications this nonemptiness is supplied by a retained finite-response Hilbert representative on the branch being enveloped, or equivalently by the GNS representation of a normalized positive operational state after quotienting response-null relations. No scalar ultrafilter over all primitive effects is required: only *-representations preserving the retained finite-response relations enter $\Pi_{\mathrm{adm}}$. Define
+Let $\mathfrak A_{\mathrm{alg}}$ be the unital *-algebra generated by finite-resolution operational outcome effects, their adjoints, finite sums, products, and scalar multiples on the complex scalar branch selected in Theorem 8.4. Let $\Pi_{\mathrm{adm}}$ be the class of admissible finite-response *-representations of these operational effects as bounded operators, with each primitive effect represented by an operator $E$ satisfying $0\le E\le I$. Assume $\Pi_{\mathrm{adm}}\ne\varnothing$, witnessed independently by an explicitly retained bounded Hilbert representation that preserves the stated operational relations. The GNS construction is invoked only after the present $C^*$-seminorm and completion have been established. No scalar ultrafilter over all primitive effects is required: only *-representations preserving the retained finite-response relations enter $\Pi_{\mathrm{adm}}$. Define
 $$
 \|a\|_u:=\sup_{\pi\in\Pi_{\mathrm{adm}}}\|\pi(a)\|.
 $$
@@ -255,7 +322,12 @@ $$
 F\!\left(\sum_i p_i\rho_i\right)=\sum_i p_iF(\rho_i)
 \tag{8.3a.1}
 $$
-for every finite probability distribution $(p_i)$ and states $(\rho_i)$. Equation (8.3a.1) determines the positive-cone extension $\Phi(0)=0$ and $\Phi(A)=\operatorname{tr}(A)F(A/\operatorname{tr}A)$ for $A\succeq0$, $A\ne0$. The update is spectator-stable when the induced extension satisfies
+for every finite probability distribution $(p_i)$ and states $(\rho_i)$. Equation (8.3a.1) determines the positive-cone map $\Phi(0)=0$ and
+$$
+\Phi(A)=\operatorname{tr}(A)F\!\left(\frac{A}{\operatorname{tr}A}\right)
+\qquad(A\succeq0,\ A\ne0).
+$$
+Preparation equivalence makes this map additive and positively homogeneous on the positive cone. Its group completion therefore defines a unique real-linear map on Hermitian operators and hence a unique complex-linear extension $\Phi:\mathcal B(\mathcal H_A)\to\mathcal B(\mathcal H_B)$. The update is spectator-stable when this complex-linear extension satisfies
 $$
 (\Phi\otimes\operatorname{id}_R)(X)\succeq0
 \tag{8.3a.2}
@@ -556,7 +628,7 @@ A change of orthonormal basis changes the coefficients by the corresponding unit
 
 **Proposition 7 (Emergence of the Born Rule)**
 
-By Theorem 8.2, Lemma 8.2a, Theorem 8.3, and Appendix G.1, the PCE-optimal predictive weights first descend to the response quotient, then satisfy finite additivity under payoff refinement, and are finally selected uniquely by the Born selector theorem. Given that the minimal Appendix Z branch satisfies $d_0=8\ge3$ (Theorem Z.2; Theorem 23 gives the lower bound), the probability $P(i|S(t),s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely fixed to the Born rule:
+By Principle 8.0b and Theorem 8.0d, the fundamental MPU has carrier $\mathcal H_0\cong\mathbb C^8$. Theorem 8.2 and Lemma 8.2a make its predictive weights response-quotiented, normalized, positive, and finitely additive; Theorem 8.3 then uniquely represents them in Born trace form. Principle 8.0c identifies those weights with the registered single-run outcome probabilities. Given that the minimal Appendix Z branch satisfies $d_0=8\ge3$ (Theorem Z.2; Theorem 23 gives the lower bound), the probability $P(i|S(t),s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely fixed to the Born rule:
 $$
 \sum_i |i\rangle_s\langle i|_s=I \quad \text{(49)}
 $$
@@ -585,23 +657,25 @@ P(i|S(t),s)=\omega(P_i)=\operatorname{tr}(\rho P_i)
 $$
 This is Equation (50). Theorem 8.3 also excludes non-Born additive alternatives on the quotient ledger. ∎
 
-**Theorem 8.6 (SPAP-to-Born Reconstruction Status and No-Alternative Selector).**
-The SPAP-to-Born route consists of three claims with distinct burdens:
+**Theorem 8.6 (SPAP-to-Quantum Dependency Separation and Born Uniqueness).** The complete PU route has five logically distinct steps:
 
-1. **Idle-context quotient:** response-null context labels quotient away by Theorem 8.2.
-2. **Finite-response additivity:** payoff-refinement consistency makes the quotient ledger finitely additive by Lemma 8.2a.
-3. **Born selector:** on the complex Hilbert branch with $d_0\ge8$, Theorem 8.3 uniquely fixes the normalized positive additive quotient ledger to
-$$
-\omega(E)=\operatorname{tr}(\rho E),
-$$
-and for a pure ray $S(t)=|\psi\rangle$ fixes outcome weights to
-$$
-P(i|S(t),s)=|\langle i|\psi\rangle_s|^2.
-$$
+1. Theorems 10–11 exclude a universally exact predictor on their diagonal-closed classes.
+2. Principle 11b selects the invariant convex response completion, and Theorem 11b proves the unique binary law $(1/2,1/2)$.
+3. Principle 8.0b supplies the carrier certificate, and Theorems G.1.8 and 8.0d select $\mathcal H_0\cong\mathbb C^8$.
+4. Theorem 8.2 and Lemma 8.2a make the predictive projection ledger response-quotiented, normalized, positive, and finitely additive. Theorem 8.3 then uniquely gives
+   $$
+   \omega(P)=\operatorname{tr}(\rho P)
+   $$
+   for every projection $P$; full-effect statements require the separately stated POVM affine-additivity hypothesis.
+5. Principle 8.0c identifies the instrument block weights with registered single-run outcome probabilities. Frequency convergence requires the repeated-trial certificate stated in Principle 8.0c.
 
-Thus SPAP alone does not prove all of quantum mechanics. SPAP supplies the deterministic-closure obstruction and the need for a finite predictive ledger; PPI/PCE supply the quotient and additivity layer; Gleason/Busch supply the uniqueness selector on the Hilbert carrier. Under these stated branch assumptions, the squared-amplitude Born measure is not one member of a family: every normalized positive additive quotient measure is the trace-form measure, and the pure-ray trace form is exactly squared amplitude.
+For a pure state and a rank-one sharp outcome,
+$$
+\Pr(i\mid\psi)=|\langle i|\psi\rangle|^2.
+$$
+No normalized positive finitely additive alternative exists on the same quotient projection ledger in dimension at least three. Steps 1--2 do not logically imply Steps 3--5: Principles 8.0b and 8.0c are independent, falsifiable physical closure principles, and every conclusion using them is conditional on that closure branch.
 
-*Proof.* Claim 1 is Theorem 8.2. Claim 2 is Lemma 8.2a. Claim 3 is Theorem 8.3. The final statement follows because Theorem 8.3 proves uniqueness of the density operator representing any admissible quotient ledger and also proves that the common normalized power alternatives $p_i^{(\gamma)}\propto |c_i|^\gamma$ violate coarse/refined additivity unless $\gamma=2$. ∎
+*Proof.* Steps 1–3 are the cited theorems and principles. Step 4 is Theorems 8.2–8.3; in dimension $8\ge3$, the Gleason representation on projections is unique, and the normalized power alternatives $p_i^{(\gamma)}\propto|c_i|^\gamma$ fail coarse/refined additivity unless $\gamma=2$. Step 5 is Principle 8.0c and the instrument conclusion of Theorem 8.0d. ∎
 
 
 **8.4 Derivation of Uncertainty Relations**
@@ -654,7 +728,7 @@ $$
 $$
 ∎
 
-The deeper unification of uncertainty with irreversibility—showing both arise from SPAP through two distinct finite-response projections, complementarity/noncommutation for simultaneous variables and the SPAP merge/reset-support ledger for sequential updates—is developed in Section 14.2.6. Channel contractivity is a refresh-branch strengthening of the sequential projection (Lemma E.1, Theorem E.2); it is not the source of the simultaneous-variable noncommutation derived in Proposition 8 above.
+Section 14.2.6 compares two separately registered finite-response branches: a Hilbert/complementarity branch for simultaneous-variable uncertainty and a fixed-ready-state reset branch for sequential support and heat ledgers. SPAP supplies only the diagonal limitation relevant to the discussion; it does not imply the reset architecture, conditional Landauer hypotheses, or channel contractivity.
 
 The finite MPU carrier $\mathcal H_0\cong\mathbb C^8$ cannot itself support an exact canonical pair, because $\operatorname{tr}[\hat x,\hat p]=0$ for finite matrices whereas $\operatorname{tr}(i\hbar I)=i\hbar\dim\mathcal H_0\ne0$. An exact position-momentum pair therefore belongs, if present, to a separately constructed infinite-dimensional effective carrier. Assume on that carrier that the Weyl relations have a regular irreducible representation. The Stone–von Neumann theorem (von Neumann 1932) then classifies that representation up to unitary equivalence; it does not supply the Weyl relations. On a common invariant domain containing a normalized state $|\psi\rangle$ and lying in $D(\hat x\hat p)\cap D(\hat p\hat x)$, the assumed canonical commutation relation is
 $$
@@ -671,32 +745,32 @@ Thus Equation (53) is conditional on an infinite-dimensional effective represent
 
 The PU framework explains quantum measurement, including the apparent wavefunction collapse, by identifying measurement as a specific instance of the universal 'Evolve' interaction dynamics, eliminating the need for a separate collapse postulate.
 
-**8.5.1 Proposition 9 (Measurement Explained as 'Evolve' Instance)**
+**8.5.1 Proposition 9 (Ideal Measurement as a Registered `Evolve` Instrument)**
 
-Consider an ideal nondegenerate rank-one projective measurement of an observable $\hat A=\sum_k a_k|k\rangle\langle k|$ on a system $S$, implemented by an `Evolve` interaction with an apparatus. Assume the apparatus selects the basis $\{|k\rangle\}$ and that the joint update instrument has the factorized outcome/perspective kernel displayed in the proof below. Then:
-
-1.  **Probabilistic Amplitude Actualization:** A pre-measurement pure state $S(t)=|\psi\rangle$ produces outcome $k$ with probability $P(k)=|\langle k|\psi\rangle|^2$ and conditional amplitude $|k\rangle$.
-2.  **Stochastic Perspective Shift:** Conditional on $k$, the perspective is distributed according to the normalized kernel $G(s'\mid s,k,N_{app})$.
-
-The post-measurement perspectival state is therefore $(|k\rangle,s')$ with $s'$ sampled from the stated conditional kernel. For a registered reset branch, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; it gives a strictly positive mean reset cost when $H_q(P\mid R)>0$. Degenerate projective measurements and general POVMs require a separately specified quantum instrument for their conditional poststates.
-
-*Proof.* Let the pre-measurement state be $(|\psi\rangle,s_{initial})$. By Theorem 24, the apparatus-selected measurement context is an ordered orthonormal basis $B=\{|k\rangle_{s_{meas}}\}$ for $\mathcal H_0$. Definition 27 and Appendix M.4 decompose the interaction into amplitude actualization and conditional perspective update. For measurement interaction $N_{app}$, the joint transition density has the form
+Let $\hat A=\sum_k a_kP_k$ be nondegenerate with $P_k=|k\rangle\langle k|$. On Principles 8.0b–8.0c, suppose the registered verification is sharp and repeatable: its effect is $P_k$, and conditional on $k$ a second immediate verification returns $k$ with probability one. Then
 $$
-\frac{d\mathbb P\big((|k\rangle_{s_{meas}},s')\mid (|\psi\rangle,s_{initial}),N_{app},\Delta t\big)}{d\mu(s')}
+\mathcal I_k(\rho)=P_k\rho P_k,
+\tag{8.5.1}
+$$
+so
+$$
+\Pr(k\mid\rho)=\operatorname{tr}(\rho P_k).
+\tag{8.5.2}
+$$
+For a normalized conditional perspective kernel $G_{\mathrm{persp}}$,
+$$
+\frac{d\mathbb P(k,s'\mid\rho,s,N_{\mathrm{app}},\Delta t)}{d\mu(s')}
 =
-P_{Born}(k\mid |\psi\rangle,s_{meas})\,G_{persp}(s' \mid s_{initial},k,N_{app},\Delta t),
+\operatorname{tr}(\rho P_k)
+G_{\mathrm{persp}}(s'\mid s,k,N_{\mathrm{app}},\Delta t).
+\tag{8.5.3}
 $$
-where $G_{persp}$ is normalized in $s'$:
+
+*Proof.* Theorem 8.0d makes the update an instrument. For Kraus operators $A_{k\alpha}$,
 $$
-\int_\Sigma G_{persp}(s' \mid s_{initial},k,N_{app},\Delta t)\,d\mu(s')=1.
+\sum_\alpha A_{k\alpha}^\dagger A_{k\alpha}=P_k.
 $$
-Integrating over $s'$ therefore gives
-$$
-P(\text{outcome }k)
-=
-P_{Born}(k\mid |\psi\rangle,s_{meas}).
-$$
-Thus the statistics are exactly the Born statistics in the apparatus basis. Conditioned on outcome $k$, the post-interaction state has amplitude $|k\rangle_{s_{meas}}$ and final perspective distributed according to the conditional kernel $G_{persp}(\cdot \mid s_{initial},k,N_{app},\Delta t)$, which is concentrated near the outcome perspective in the ideal-measurement limit described in Appendix M.4. For a registered measurement reset, Theorem 31 gives the conditional reset-heat ledger; strict positivity needs $H_q(P\mid R)\ge h_{\min}>0$, and a pathwise arrow additionally needs Theorem O.3a's entropy-production certificate. Hence measurement is a special case of the universal 'Evolve' mechanism rather than an additional collapse postulate. ∎
+If $|x\rangle\perp|k\rangle$, the nonnegative sum $\sum_\alpha\|A_{k\alpha}|x\rangle\|^2$ vanishes, so $A_{k\alpha}=|v_{k\alpha}\rangle\langle k|$. Repeatability puts every $v_{k\alpha}$ in $\operatorname{Ran}P_k$, hence $A_{k\alpha}=c_{k\alpha}P_k$. The effect identity gives $\sum_\alpha|c_{k\alpha}|^2=1$ and therefore $\mathcal I_k(\rho)=P_k\rho P_k$. The probability and normalized perspective law follow. ∎
 
 **8.5.2 Example 8.1 (Qubit Measurement Illustration)**
 
@@ -714,15 +788,15 @@ Consider an MPU qubit in perspectival state $S_{(s_{initial})}(t) = (|\psi\rangl
 
 *   **Relative Actuality:** The outcome $|0\rangle$ is actual relative to perspective $s'_{Z,0}$. From the incompatible perspective $s'_{X,+}$, state $|0\rangle$ remains a superposition. There is no absolute collapsed state; actuality is relative to the post-interaction perspective, consistent with causality constraints (Section 10).
 
-**8.5.3 Corollary 4 (Potential Resolution of Measurement Problem)**
+**8.5.3 Corollary 4 (Operational Measurement Closure)**
 
-The explanation of measurement as perspectival actualization via 'Evolve' (Proposition 9) potentially resolves the measurement problem:
-1.  **Provides Mechanism:** Offers a physical mechanism ('Evolve', Definition 27) for state actualization, replacing the collapse postulate.
-2.  **Grounds Probabilities:** Grounds Born rule probabilities (Proposition 7) in fundamental Logical Indeterminacy and its theorem-level Born-rule descent (Theorem 28a).
-3.  **Definite Outcomes:** Explains definite outcomes via probabilistic actualization relative to the interaction perspective. Decoherence arises naturally from frequent environmental 'Evolve' interactions.
-4.  **Universality:** 'Evolve' is universal, removing the need for special observers or a Heisenberg cut. Actuality is perspectival but objective within frame, consistent with causality (Section 10).
+On Principles 8.0b–8.0c, a finite verification is a registered quantum instrument by Theorem 8.0d. For an ideal nondegenerate sharp repeatable verification, Proposition 9 derives the Lüders update and Born single-run probabilities. Frequency convergence requires a separate repeated-trial certificate. The unconditioned channel is
+$$
+\rho\longmapsto\sum_kP_k\rho P_k,
+$$
+while the conditioned state is $P_k$ for the unique registered label $k$. Internal unitary prediction and registered verification/update are successive stages of one cycle.
 
-By unifying dynamics and providing a physical grounding for outcomes, the PU framework offers a potential resolution consistent with its foundational principles.
+The logical status is explicit: Principle 8.0b and Theorem 8.0d give the carrier, Theorems 8.2–8.3 give trace weights, and Principle 8.0c gives irreducible single-outcome registration. Thermodynamic irreversibility is not used to manufacture definiteness; it enters only when the architecture contains a registered reset, through Theorem 31 or Theorem 31a.
 
 **8.6 Interpretation of Entanglement (Proposition 10)**
 

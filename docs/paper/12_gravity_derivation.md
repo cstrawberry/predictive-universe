@@ -31,7 +31,7 @@ The macroscopic emergent metric/channel-capacity dynamics derive from the follow
 
 *   (T1) **Local Thermodynamic Equilibrium at Causal Horizons:** Theorem 48a.0 derives local LTE from the local KMS/Clausius theorem stack on the Appendix F/G operational-continuum branch. Theorem 48a gives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation $\delta S=\delta Q/T_U+O(\lambda^2)$. The finite channel min-cut realization of local horizon entropy is supplied by Corollary E.8.4g, with the finite KMS-descent certificate of Definition F.10.12a available when that certificate is accepted. On a branch additionally carrying the Predictive Generalized Second Law certificate $\mathfrak C_{\mathrm{PGSL}}$ (Definition 12.5.3l), the exterior generalized entropy is monotone along the retained horizon-cut family. On a branch carrying the null-convexity certificate $\mathfrak C_{\mathrm{NC}}$ (Definition 12.5.3n), the second-variation sign needed for the predictive null-energy/QNEC step is supplied as finite response data. On the accepted finite modular-Clausius Hodge datum, Theorem F.10.12f identifies the closed retained KMS/Clausius obstruction with its harmonic representative; after the zero-defect stationarity gate, or the zero-curvature subcase of Proposition 12.5.3o, the reversible Einstein branch is the harmonic-zero branch.
 *   (T2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the Appendix E area-law branch. Corollary E.8.4g supplies the local finite min-cut entropy, while Theorem E.8.4m identifies the same entropy as the least sufficient predictive update-current entropy on the capacity-tight PCE-no-surplus horizon branch. The modular/KMS input is theorem-level via Theorems F.10.1–F.10.4 and is certificate-complete on the branch of Theorem F.10.12c.
-*   (T3) **Geometric Regularity and operational-continuum closure:** Theorem 43.5 is a conditional package for the $M=24$, $D=4$ operational-continuum branch. Lemma C.6d and Theorem C.6e provide fixed-trace $D_4$ shell-tensor isotropy only. Geometric noncollapse, interpolation/recovery, compactness, curvature transfer, and the generator-core/$\Gamma_2$ passage are independent certificate entries; with them, Theorems D.6e, C.6c, and 44a give the stated Mosco--Cheeger, $\mathrm{RCD}^*(K,4)$, and regular-manifold conclusions. Strict noncollapse additionally requires $\mu=\mathcal H^4$.
+*   (T3) **Geometric Regularity and operational-continuum closure:** Theorem 43.5 is a conditional package for the $M=24$, $D=4$ operational-continuum branch. Lemma C.6d and Theorem C.6e provide fixed-trace $D_4$ shell-tensor isotropy, and Lemma C.6f supplies the exact fourth-moment isotropy of the equal-weight $D_4$ shell. Geometric noncollapse, interpolation/recovery, compactness, curvature transfer, and the generator-core/$\Gamma_2$ passage are independent certificate entries; with them, Theorems D.6e, C.6c, and 44a give the stated Mosco--Cheeger, $\mathrm{RCD}^*(K,4)$, and regular-manifold conclusions. Strict noncollapse additionally requires $\mu=\mathcal H^4$.
 *   (T4) **Conserved Energy-Momentum Source:** Corollary 45a.1 derives covariant conservation $\nabla_\mu T^{(MPU){\mu\nu}}=0$ from diffeomorphism invariance of the matter action and the matter equations of motion (Appendix B).
 *   (T5) **Local Lorentz Invariance and Universality:** Corollary 46a derives local Lorentz invariance with structure group $SO^+(1,3)$ from Theorem 46 together with the full Appendix O signature package used by Theorems O.7a, O.7b, and Corollary O.7b.1, with the cone-coincidence entry supplied either by Hypothesis O.7.2.4 or by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) for the retained sectors under discussion. Corollary 46e derives metric universality from common PCE-minimal boundary sufficiency: retained species sharing the same Markov boundary syndrome reconstruct the same causal-diamond poset, capacity valuation, and Lorentzian metric. The Clausius step below uses one local horizon cone only for stress-energy sectors covered by these inputs; sectors not covered by the Lorentzian/cone-coincidence package remain outside the theorem-level Einstein-branch derivation. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
 
@@ -139,7 +139,7 @@ A crucial ingredient is the relationship between the entropy associated with a c
 
 **12.2.1 Theorem 49 (Horizon-Entropy Area Law)**
 
-**On the Necessary Emergence of Geometric Regularity branch of Theorem 43, the density-certificate branch of Theorem E.3, and the PCE residual-budget saturation branch of Proposition E.2a**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal H$ is proportional to the horizon's cross-sectional area $\mathcal A$. The per-channel reliable classical information budget is bounded structurally by the completed reset-support deficit
+**On the Necessary Emergence of Geometric Regularity branch of Theorem 43, the density-certificate branch of Theorem E.3, the PCE residual-budget saturation branch of Proposition E.2a, and the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6 applied to the same retained horizon channels**, the saturated boundary entropy $S_{boundary}$ associated with a causal-horizon cross-section is proportional to its area $\mathcal A$. The per-channel reliable classical information budget is bounded structurally by the completed reset-support deficit
 $$
 C_{\max}\le\ln d_0-\ln2
 $$
@@ -153,7 +153,15 @@ N_{\mathrm{eff\,links}}
 =
 \frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A).
 $$
-By Theorem E.8.3.4, the boundary-entropy potential on the holographic-attractor branch is strictly decreasing on $[0,S_{\max})$, so the unique stable equilibrium occurs at $S=S_{\max}$. Hence the bound is saturated at equilibrium on this branch, and the relationship takes the universal Bekenstein-Hawking form, $S = k_B c^3 \mathcal A / (4G\hbar)$ in SI units. With Planck length $L_P^2 = G\hbar/c^3$, this is $S = k_B\mathcal A/(4L_P^2)$. In natural units ($c=\hbar=k_B=1$, $L_P^2=G$):
+The three additional hypotheses of Theorem E.6 make both the per-channel entropy bound and the additive effective-channel sum achievable, so equality holds on this saturation branch. Define $L_{P,\mathrm{op}}$ and $G_{\mathrm{op}}$ by
+$$
+\frac{\chi C(\mathcal E_N)}{\eta\delta^2}
+=
+\frac1{4L_{P,\mathrm{op}}^2}
+=
+\frac{c^3}{4G_{\mathrm{op}}\hbar}.
+$$
+Here $\eta$ is Appendix E's packing/orientation factor. For this section write $G:=G_{\mathrm{op}}$; identifying it with measured Newton $G$ is a separate calibration. On this same retained horizon-channel branch set $S_{boundary}:=S_{\mathrm{rel}}$. Then $S_{boundary}=k_Bc^3\mathcal A/(4G\hbar)+o(\mathcal A)$, or $S_{boundary}=k_B\mathcal A/(4L_{P,\mathrm{op}}^2)+o(\mathcal A)$. The value $C_{\max}^*=2\ln2$ may be substituted only on the explicit minimal $d_0=8$ residual-budget saturation branch. In natural units ($c=\hbar=k_B=1$, $L_{P,\mathrm{op}}^2=G$):
 
 $$
 S_{boundary}(\mathcal A)=\frac{\mathcal A}{4G}+o(\mathcal A)
@@ -183,15 +191,15 @@ Each such channel carries at most
 $$
 S^{\max}_{\mathrm{channel}}=k_B C_{\max}
 $$
-(Corollary E.2), with $C_{\max}$ supplied quantitatively on the completed reset-support branch by Proposition E.2a and strictly bounded on refresh/minorization branches by Theorem E.2. Therefore the maximum boundary entropy is
+(Corollary E.2), where $C_{\max}$ is the registered same-family upper bound and is supplied quantitatively on the completed reset-support branch by Proposition E.2a and strictly bounded on refresh/minorization branches by Theorem E.2. Hence density certification alone gives
 $$
 S_{boundary}(\mathcal A)
-=
+\le
 N_{\mathrm{eff\,links}}\,S^{\max}_{\mathrm{channel}}
 =
-k_B\left(\frac{\chi C_{\max}}{\eta\delta^2}\right)\mathcal A+o(\mathcal A),
+k_B\left(\frac{\chi C_{\max}}{\eta\delta^2}\right)\mathcal A+o(\mathcal A).
 $$
-which is Equation (E.6) of Appendix E on the density-certificate branch.
+On the capacity-achieving, entropy-saturating, additive-ledger branch assumed in the theorem statement, require the same-family saturation $C(\mathcal E_N)=C_{\max}$ and identify $S_{boundary}:=S_{\mathrm{rel}}$; then both inequalities are attained for that effective horizon-channel family. Therefore equality holds, which is precisely the saturation clause of Theorem E.6.
 
 Appendix E then defines the effective gravitational coupling by the standard normalization
 $$
@@ -226,7 +234,7 @@ We combine the local thermodynamic relations (Theorem 48a.0, Theorem 48a, Defini
 **Theorem 12.1 (Local Clausius relation for all null generators ⇒ EFE).**
 Let $(M,g)$ be the emergent Lorentzian manifold of Section 11 with local Rindler horizons generated by null $k^\mu$ (affinely parameterized by $\lambda$) and Unruh temperature $T=\kappa/2\pi$. Assume:
 
-(a) **Area law** $\delta S=\eta\,\delta\mathcal{A}$ for horizon entropy (Appendix E), with $\eta=1/(4G)$ in natural units;
+(a) **Area law** $\delta S=\eta_{\partial}\,\delta\mathcal A$ for horizon entropy (Appendix E), with $\eta_{\partial}=1/(4G_{\mathrm{op}})$ on the saturated operational branch;
 
 (b) **Energy flux** $\delta Q=\int T_{\mu\nu}^{(MPU)}\,\xi^\mu d\Sigma^\nu$ through the horizon (to first order in $\lambda$, with $\kappa$ the surface gravity);
 
@@ -235,20 +243,23 @@ $$
 \frac{d\theta}{d\lambda}=-R_{\mu\nu}k^\mu k^\nu+O(\lambda);
 $$
 
-(d) **Local equilibrium / near‑equilibrium**, realized to first order by Theorem 48a under the Appendix F/G bridge, so that higher‑order corrections are negligible on the horizon slice:
+(d) **Local equilibrium / near-equilibrium**, realized on the Appendix F/G bridge with a quantitative localization remainder. For every family of transverse horizon patches $P_\varepsilon$ containing $p$, with area $A_\varepsilon>0$ and $\operatorname{diam}(P_\varepsilon)=o(h_\varepsilon)$, where the affine lengths $h_\varepsilon:=|\lambda_{0,\varepsilon}|\to0$, require
 $$
-\delta S=\eta\,\delta\mathcal{A}+O(\lambda^2),
+\delta S=\eta_{\partial}\,\delta\mathcal A+o(A_\varepsilon h_\varepsilon^2),
 \qquad
-\delta Q=T\,\delta S+O(\lambda^2).
+\delta Q=T\,\delta S+o(A_\varepsilon h_\varepsilon^2),
 $$
+where the little-$o$ terms are uniform over the retained null directions used in the all-null conclusion and $\eta_{\partial}$ is constant on the localization family.
 
-If the **Clausius relation** holds for all such $k^\mu$ to linear order in $\lambda$, then in natural units
+(e) **Conserved source:** $T_{\mu\nu}^{(MPU)}$ is symmetric and $\nabla^\mu T_{\mu\nu}^{(MPU)}=0$ on the retained continuum branch, as supplied by the accepted Appendix-B source certificate.
+
+If the **Clausius relation** holds for every such $k^\mu$ with the accuracy specified in (d), then in natural units
 $$
 R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
 =
-8\pi G\,T^{(MPU)}_{\mu\nu},
+8\pi G_{\mathrm{op}}\,T^{(MPU)}_{\mu\nu}.
 $$
-with $\Lambda$ an integration constant fixed by the vacuum sector. Restoring SI units gives Equation (76).
+Here $\Lambda$ is an integration constant fixed by the vacuum sector. Setting $G_{\mathrm{op}}=G$ and restoring SI units are separate empirical/unit calibrations.
 
 *Proof.* Fix $p\in M$ and a future-directed null vector $k^\mu$ at $p$, and consider the associated local Rindler horizon $\mathcal H$ generated by the congruence tangent to $k^\mu$. Let $\lambda$ be an affine parameter along generators with $\lambda=0$ at $p$, and let $d\Sigma^\nu=k^\nu\,d\lambda\,dA$.
 
@@ -269,56 +280,62 @@ $$
 -\frac12\theta^2-\sigma_{\alpha\beta}\sigma^{\alpha\beta}-R_{\mu\nu}k^\mu k^\nu.
 \tag{73}
 $$
-Because $\theta(0)=0$ and $\sigma(0)=0$, smoothness of the congruence and curvature gives
+Smoothly extend the chosen null direction to the local congruence. Impose $\theta(0,p)=0$ and $\sigma(0,p)=0$. Smoothness on a common normal neighborhood gives $\theta(0,q)=O(\!\operatorname{diam}P_\varepsilon)$ and $\sigma(0,q)=O(\!\operatorname{diam}P_\varepsilon)$ uniformly for $q\in P_\varepsilon$. The Raychaudhuri equation therefore gives
 $$
-\theta(\lambda)
+\theta(\lambda,q)
 =
--\lambda\,R_{\mu\nu}(p)k^\mu k^\nu
-+
-O(\lambda^2)
-$$
-uniformly on a sufficiently small segment $\lambda\in[\lambda_0,0]$. Since $d(\delta\mathcal A)/d\lambda=\theta\,dA$, integration yields
-$$
-\delta\mathcal A
+\theta(0,q)-\lambda R_{\mu\nu}(q)k^\mu(q)k^\nu(q)
++O\!\left(\lambda^2+|\lambda|\operatorname{diam}(P_\varepsilon)^2\right)
 =
--\int_\mathcal H R_{\mu\nu}(p)k^\mu k^\nu\,\lambda\,d\lambda\,dA
-+
-O(|\lambda_0|^3)
+-\lambda R_{\mu\nu}(q)k^\mu(q)k^\nu(q)
++O\!\left(\operatorname{diam}(P_\varepsilon)+\lambda^2+|\lambda|\operatorname{diam}(P_\varepsilon)^2\right)
+$$
+uniformly for $q\in P_\varepsilon$ and $\lambda\in[-h_\varepsilon,0]$. Hence
+$$
+\delta\mathcal A_\varepsilon
+=
+-\int_{-h_\varepsilon}^{0}\!\int_{P_\varepsilon}
+\lambda R_{\mu\nu}(q)k^\mu(q)k^\nu(q)\,dA_q\,d\lambda
++O(A_\varepsilon h_\varepsilon^3)
++O(A_\varepsilon h_\varepsilon\operatorname{diam}P_\varepsilon).
 \tag{74}
 $$
-for a transverse patch of constant finite reference area, with the constant in the remainder uniform on that patch.
 
-**Step 3 (Clausius equality and localization).** Let the transverse reference patch have area $A_0>0$, and let the affine interval be $[\lambda_0,0]$. Continuity of $T_{\mu\nu}^{(MPU)}k^\mu k^\nu$ and $R_{\mu\nu}k^\mu k^\nu$ at $p$, together with (72) and (74), gives
+**Step 3 (Clausius equality and localization).** Continuity at $p$ and $\operatorname{diam}(P_\varepsilon)\to0$ imply
 $$
-\delta Q
+\frac1{A_\varepsilon}\int_{P_\varepsilon}T_{\mu\nu}^{(MPU)}(q)k^\mu(q)k^\nu(q)\,dA_q
+=T_{kk}^{(MPU)}(p)+o(1),
+$$
+$$
+\frac1{A_\varepsilon}\int_{P_\varepsilon}R_{\mu\nu}(q)k^\mu(q)k^\nu(q)\,dA_q
+=R_{kk}(p)+o(1).
+$$
+Equations (72) and (74) therefore give
+$$
+\delta Q_\varepsilon
 =
-\frac{\kappa A_0|\lambda_0|^2}{2}
+\frac{\kappa A_\varepsilon h_\varepsilon^2}{2}
+\bigl(T_{kk}^{(MPU)}(p)+o(1)\bigr)
++O(A_\varepsilon h_\varepsilon^3),
+$$
+$$
+\delta\mathcal A_\varepsilon
+=
+\frac{A_\varepsilon h_\varepsilon^2}{2}
+\bigl(R_{kk}(p)+o(1)\bigr)
++O(A_\varepsilon h_\varepsilon^3)
++O(A_\varepsilon h_\varepsilon\operatorname{diam}P_\varepsilon).
+$$
+Because $\operatorname{diam}(P_\varepsilon)=o(h_\varepsilon)$, both added geometric remainders are $o(A_\varepsilon h_\varepsilon^2)$. Using $T=\kappa/(2\pi)$ and the remainder hypothesis (d), divide the Clausius relation by $\kappa A_\varepsilon h_\varepsilon^2/2>0$ and take the joint limit $\varepsilon\to0$. This yields
+$$
 T_{\mu\nu}^{(MPU)}(p)k^\mu k^\nu
-+O(|\lambda_0|^3),
-$$
-$$
-\delta\mathcal A
 =
-\frac{A_0|\lambda_0|^2}{2}
-R_{\mu\nu}(p)k^\mu k^\nu
-+O(|\lambda_0|^3).
-$$
-Using $T=\kappa/(2\pi)$ and $\delta S=\eta\,\delta\mathcal A$, the equality $\delta Q=T\delta S$ therefore implies
-$$
-\frac{\kappa A_0|\lambda_0|^2}{2}T_{kk}(p)+O(|\lambda_0|^3)
-=
-\frac{\kappa\eta A_0|\lambda_0|^2}{4\pi}R_{kk}(p)+O(|\lambda_0|^3).
-$$
-Divide by $\kappa A_0|\lambda_0|^2/2>0$ and take $\lambda_0\to0^-$ to obtain
-$$
-T_{\mu\nu}^{(MPU)}(p)k^\mu k^\nu
-=
-\frac{\eta}{2\pi}\,R_{\mu\nu}(p)k^\mu k^\nu.
+\frac{\eta_{\partial}}{2\pi}\,R_{\mu\nu}(p)k^\mu k^\nu.
 \tag{75}
 $$
 Because $p$ and the local null direction $k$ were arbitrary, this holds for every null $k^\mu$. Define
 $$
-X_{\mu\nu}:=R_{\mu\nu}-\frac{2\pi}{\eta}\,T_{\mu\nu}^{(MPU)}.
+X_{\mu\nu}:=R_{\mu\nu}-\frac{2\pi}{\eta_{\partial}}\,T_{\mu\nu}^{(MPU)}.
 $$
 Then $X_{\mu\nu}k^\mu k^\nu=0$ for every null $k^\mu$.
 
@@ -343,7 +360,7 @@ at $p$, and since $p$ was arbitrary the identity holds tensorially on $M$.
 
 Thus
 $$
-R_{\mu\nu}+\Phi g_{\mu\nu}=\frac{2\pi}{\eta}\,T_{\mu\nu}^{(MPU)}.
+R_{\mu\nu}+\Phi g_{\mu\nu}=\frac{2\pi}{\eta_{\partial}}\,T_{\mu\nu}^{(MPU)}.
 $$
 Taking the divergence and using $\nabla^\mu T_{\mu\nu}^{(MPU)}=0$ together with the contracted Bianchi identity gives
 $$
@@ -353,19 +370,19 @@ so $\Phi=-\tfrac12 R+\Lambda$ for some constant $\Lambda$. Therefore
 $$
 R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
 =
-\frac{2\pi}{\eta}\,T_{\mu\nu}^{(MPU)}.
+\frac{2\pi}{\eta_{\partial}}\,T_{\mu\nu}^{(MPU)}.
 $$
-Finally, using $\eta=1/(4G)$ in natural units yields
+Finally, using $\eta_{\partial}=1/(4G_{\mathrm{op}})$ on the saturated operational branch yields
 $$
-\frac{2\pi}{\eta}=8\pi G,
+\frac{2\pi}{\eta_{\partial}}=8\pi G_{\mathrm{op}},
 $$
-so
+and therefore
 $$
 R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
 =
-8\pi G\,T_{\mu\nu}^{(MPU)}.
+8\pi G_{\mathrm{op}}\,T_{\mu\nu}^{(MPU)}.
 $$
-This is the Einstein field equation in natural units. Restoring SI units gives
+On the separate calibration branch $G_{\mathrm{op}}=G$, restoring SI units gives
 $$
 R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
 =
@@ -375,16 +392,16 @@ $$
 
 ### 12.3.1 Theorem 50 (Einstein Field Equations)
 
-The local thermodynamic consistency derived by Theorem 48a.0 and sharpened by Theorem 48a, together with the horizon area law and the micro-macro calibration of the entropy density established in Appendix E, implies that the emergent spacetime geometry $(M, g_{\mu\nu})$ and the emergent macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ are related by Einstein's Field Equations (EFE) in SI units:
+Assume every hypothesis of Theorem 12.1 on the same retained local-horizon branch, including the shrinking-patch Clausius remainder, the saturated area-law density, linearized Raychaudhuri data, the all-null requirement, constant local entropy density, and covariant conservation of $T_{\mu\nu}^{(MPU)}$. With the operational coupling defined by Appendix E and calibrated as stated there, the emergent spacetime geometry $(M,g_{\mu\nu})$ and the macroscopic MPU stress-energy tensor satisfy Einstein's field equation in SI units:
 $$
 R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}
 \quad \text{(76)}
 $$
 where $R_{\mu\nu}$ is the Ricci curvature tensor, $R$ is the Ricci scalar, $g_{\mu\nu}$ is the metric tensor, $\Lambda$ is the cosmological constant, $G$ is the emergent gravitational constant (Equation E.9), $c$ is the invariant characteristic speed on the accepted Corollary 46a/Appendix O Lorentzian branch, and $T_{\mu\nu}^{(MPU)}$ is the stress-energy tensor derived from the underlying MPU network activity (Appendix B). Theorem 46 supplies only the corresponding uniform operational speed upper bound; frontier attainment and Lorentzian identification are separate branch inputs.
 
-*Proof:* Theorem 12.1 proves the Einstein equation in natural units under the Clausius relation, the area law $\delta S=\eta\,\delta\mathcal A$, and stress-energy conservation. Appendix E identifies the entropy density by
+*Proof:* Theorem 12.1 proves the Einstein equation in natural units under the Clausius relation, the area law $\delta S=\eta_{\partial}\,\delta\mathcal A$, and stress-energy conservation. Appendix E identifies the entropy density by
 $$
-\eta=\frac{c^3}{4G\hbar}
+\eta_{\partial}=\frac{c^3}{4G\hbar}
 $$
 (Equations (E.7)–(E.9)). Substituting this calibration and restoring SI units converts the natural-units result of Theorem 12.1 into Equation (76). Thus Section 12 uses the area law and the coefficient $G$ already obtained in Appendix E; it does not re-derive them from the Clausius argument alone. QED
 
@@ -436,22 +453,23 @@ using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}
 
 *Proof.* Definition F.10.12a fixes on the refining cover the modular generator, KMS state, channel min-cut entropy, overlap cocycle, Clausius defect, stress-energy flux, and error bounds. Theorem F.10.12c sends vanishing certificate defect to a compatible KMS sheaf and zero local Clausius mismatch. Theorem 48a supplies the local Rindler horizon, and Corollary E.8.4g supplies the channel-capacity area law. Under the Appendix B source certificate, Theorems B.8b–B.8d identify the recorded flux with one conserved continuum tensor and with the metric variational source. These are exactly the source, entropy, temperature, and local-horizon premises used by Theorem 12.1. Every input is a finite metric-response, channel-capacity, KMS, stress, or overlap datum, so the derivation introduces no microscopic gravitational state space. ∎
 
-**Theorem 12.1g (Clausius-Defect Tensor Tomography).** Let $p$ be a point in a regular emergent-continuum branch and let $\mathcal N_B(p)=\{k_1,\ldots,k_m\}$ be the finite retained set of null directions at budget $B$. For a transverse cell of area $A_0$ and an affine interval $[\lambda_0,0]$, let the finite KMS/Clausius certificate assign the integrated defect
+**Theorem 12.1g (Clausius-Defect Tensor Tomography).** Let $p$ be a point in a regular emergent-continuum branch and let $\mathcal N_B(p)=\{k_1,\ldots,k_m\}$ be the finite retained set of null directions at budget $B$. For the shrinking-patch family $(P_\varepsilon,h_\varepsilon)$ of Theorem 12.1, let the finite KMS/Clausius certificate assign
 $$
-\chi_{p,A_0,\lambda_0}(k)
+\chi_{p,\varepsilon}(k)
 :=
-\delta Q_{p,A_0,\lambda_0}(k)-T_p\delta S_{p,A_0,\lambda_0}(k).
+\delta Q_{p,\varepsilon}(k)-T_p\delta S_{p,\varepsilon}(k).
 \tag{12.1g.1}
 $$
-Assume the localized density limit
+Assume that, for every retained null direction $k$, the normalized defect limit
 $$
 \widehat\chi_p(k)
 :=
-\lim_{(A_0,\lambda_0)\to(0,0^-)}
-\frac{2\chi_{p,A_0,\lambda_0}(k)}{\kappa A_0|\lambda_0|^2}
+\lim_{\varepsilon\to0}
+\frac{2\chi_{p,\varepsilon}(k)}
+{\kappa A_\varepsilon h_\varepsilon^2}
 \tag{12.1g.1a}
 $$
-exists for every retained direction and is independent of the admissible shrinking-cell sequence. Define
+exists for the shrinking-patch family of Theorem 12.1 and is independent of the admissible family with $\operatorname{diam}(P_\varepsilon)=o(h_\varepsilon)$. Define
 $$
 E_B:\operatorname{Sym}^2_0(T_p^*M)\longrightarrow\mathbb R^m,
 \qquad
@@ -470,9 +488,9 @@ For the continuum equation-of-state conclusion, assume in addition that the fiel
 $$
 J_{\mu\nu}=J^0_{\mu\nu}+\psi g_{\mu\nu}
 $$
-with $\nabla^\mu J_{\mu\nu}=0$ on the same branch. Define the curvature-dimension defect tensor
+with $\nabla^\mu J_{\mu\nu}=0$ on the same branch. In addition, require either (i) Equation (12.1g.2) for every normalized null direction, or (ii) a refining family of retained direction sets dense in the normalized null sphere for which the normalized defects converge uniformly to the quadratic form reconstructed from $J^0$. Continuity then extends the identity to every null direction. Finite nine-direction tomography alone reconstructs a candidate trace-free tensor but does not establish this all-null equation-of-state antecedent. Define the curvature-dimension defect tensor
 $$
-C_{\mu\nu}:=-\frac{2\pi}{\eta}J_{\mu\nu}.
+C_{\mu\nu}:=-\frac{2\pi}{\eta_{\partial}}J_{\mu\nu}.
 \tag{12.1g.2a}
 $$
 Then the retained equation-of-state branch has the natural-unit form
@@ -482,7 +500,7 @@ G_{\mu\nu}+\Lambda g_{\mu\nu}
 8\pi G\,T_{\mu\nu}+C_{\mu\nu},
 \tag{12.1g.3}
 $$
-where $\eta=1/(4G)$ and $\Lambda$ is constant on each connected component. In SI units the matter coefficient is $8\pi G/c^4$, with the same unit restoration applied to the calibrated defect source. The zero-defect branch determines
+where $\eta_{\partial}=1/(4G)$ and $\Lambda$ is constant on each connected component. In SI units the matter coefficient is $8\pi G/c^4$, with the same unit restoration applied to the calibrated defect source. The zero-defect branch determines
 $$
 C^0_{\mu\nu}=0.
 \tag{12.1g.4}
@@ -492,40 +510,54 @@ If $|\widehat\chi_p(k)|\le\epsilon_B$ on all retained directions and the injecti
 $$
 \lVert J^0(p)\rVert_B^*\le\kappa_B\epsilon_B,
 \qquad
-\lVert C^0(p)\rVert_B^*\le\frac{2\pi}{\eta}\kappa_B\epsilon_B.
+\lVert C^0(p)\rVert_B^*\le\frac{2\pi}{\eta_{\partial}}\kappa_B\epsilon_B.
 \tag{12.1g.5}
 $$
 
-*Proof.* The expansions in the proof of Theorem 12.1 give
+*Proof.* Use the same shrinking family $(P_\varepsilon,h_\varepsilon)$ as in Theorem 12.1. Its expansions give
 $$
-\delta Q
+\delta Q_\varepsilon
 =
-\frac{\kappa A_0|\lambda_0|^2}{2}T_{kk}(p)+O(|\lambda_0|^3),
-\qquad
-T_p\delta S
-=
-\frac{\kappa\eta A_0|\lambda_0|^2}{4\pi}R_{kk}(p)+O(|\lambda_0|^3).
+\frac{\kappa A_\varepsilon h_\varepsilon^2}{2}
+\bigl(T_{kk}(p)+o(1)\bigr)
++o(A_\varepsilon h_\varepsilon^2),
 $$
-Consequently (12.1g.1a) gives
+and
+$$
+T_p\delta S_\varepsilon
+=
+\frac{\kappa\eta_{\partial}A_\varepsilon h_\varepsilon^2}{4\pi}
+\bigl(R_{kk}(p)+o(1)\bigr)
++o(A_\varepsilon h_\varepsilon^2).
+$$
+Consequently the defect limit is
 $$
 \widehat\chi_p(k)
 =
-T_{kk}(p)-\frac{\eta}{2\pi}R_{kk}(p).
+\lim_{\varepsilon\to0}
+\frac{2\chi_{p,\varepsilon}(k)}
+{\kappa A_\varepsilon h_\varepsilon^2}
+=
+T_{kk}(p)-\frac{\eta_{\partial}}{2\pi}R_{kk}(p).
 \tag{12.1g.6}
 $$
-The range hypothesis supplies $J^0$ with $E_BJ^0=(\widehat\chi_p(k_a))_a$, and $\ker E_B=\{0\}$ makes it unique. Applying the inverse on the range gives $\lVert J^0\rVert_B^*\le\kappa_B\epsilon_B$; multiplication by $2\pi/\eta$ gives the second norm bound.
+The range hypothesis supplies $J^0$ with $E_BJ^0=(\widehat\chi_p(k_a))_a$, and $\ker E_B=\{0\}$ makes it unique. Applying the inverse on the range gives $\lVert J^0\rVert_B^*\le\kappa_B\epsilon_B$; multiplication by $2\pi/\eta_{\partial}$ gives the second norm bound.
 
 In the continuum null-direction closure, (12.1g.6) and (12.1g.2a) imply
 $$
-\left(R_{\mu\nu}-\frac{2\pi}{\eta}T_{\mu\nu}-C_{\mu\nu}\right)k^\mu k^\nu=0
+\left(
+R_{\mu\nu}
+-\frac{2\pi}{\eta_{\partial}}T_{\mu\nu}
+-C_{\mu\nu}
+\right)k^\mu k^\nu=0
 $$
 for every null $k$. The null-cone lemma makes the tensor in parentheses proportional to $g_{\mu\nu}$. Rewriting the proportionality term as $-\tfrac12Rg_{\mu\nu}+\Lambda g_{\mu\nu}$ gives
 $$
 G_{\mu\nu}+\Lambda g_{\mu\nu}
 =
-\frac{2\pi}{\eta}T_{\mu\nu}+C_{\mu\nu}.
+\frac{2\pi}{\eta_{\partial}}T_{\mu\nu}+C_{\mu\nu}.
 $$
-The contracted Bianchi identity, $\nabla^\mu T_{\mu\nu}=0$, and the assumed conservation of $J_{\mu\nu}$, hence of $C_{\mu\nu}$, make $\Lambda$ constant. Finally $2\pi/\eta=8\pi G$. If the null defect vanishes, injectivity gives $J^0=C^0=0$. The completion is then pure trace. Its conservation gives $\nabla_\nu\varphi=0$, so $\varphi$ is constant on each connected component and may be absorbed into $\Lambda$. Fixing the representative $\psi=0$ gives $J=C=0$. ∎
+The contracted Bianchi identity, $\nabla^\mu T_{\mu\nu}=0$, and the assumed conservation of $J_{\mu\nu}$, hence of $C_{\mu\nu}$, make $\Lambda$ constant. Finally $2\pi/\eta_{\partial}=8\pi G$. If the null defect vanishes, injectivity gives $J^0=C^0=0$. The completion is then pure trace. Its conservation gives $\nabla_\nu\varphi=0$, so $\varphi$ is constant on each connected component and may be absorbed into $\Lambda$. Fixing the representative $\psi=0$ gives $J=C=0$. ∎
 
 **Corollary 12.1g.a (Minimal Nine-Horizon Tensor Tomography and Tenth-Direction Sum Rule).** Work at one event in a local orthonormal frame of signature $(-,+,+,+)$. For a trace-free symmetric tensor $C_{\mu\nu}$ and $k(n)=(1,n)$ with $n\in S^2$, define $q(n)=C_{\mu\nu}k^\mu(n)k^\nu(n)$. Take
 $$
@@ -949,11 +981,11 @@ The derivation of Einstein's equations (Theorem 12.1) applies the Clausius relat
 
 
 
-**Part B (Macroscopic).** From Theorem 12.1, applying the Clausius relation to local Rindler horizons with Unruh temperature $T = \kappa/(2\pi)$, area-law entropy $\delta S = \eta \delta\mathcal{A}$, and energy flux $\delta Q = \int T_{\mu\nu}^{(MPU)}\,\xi^\mu d\Sigma^\nu$, combined with the Raychaudhuri equation, yields:
+**Part B (Macroscopic).** From Theorem 12.1, applying the Clausius relation to local Rindler horizons with Unruh temperature $T = \kappa/(2\pi)$, area-law entropy $\delta S = \eta_{\partial}\delta\mathcal{A}$, and energy flux $\delta Q = \int T_{\mu\nu}^{(MPU)}\,\xi^\mu d\Sigma^\nu$, combined with the Raychaudhuri equation, yields:
 $$
 R_{\mu\nu} - \tfrac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(MPU)}
 $$
-The coefficient $\eta$ appearing in $\delta S = \eta\,\delta\mathcal{A}$ is related to the gravitational coupling by $\eta=1/(4G)$ in the standard normalization (Theorem E.5).
+The coefficient $\eta_{\partial}$ appearing in $\delta S = \eta_{\partial}\,\delta\mathcal{A}$ is related to the operational coupling by $\eta_{\partial}=1/(4G_{\mathrm{op}})$ in natural units and by $\eta_{\partial}=k_Bc^3/(4G_{\mathrm{op}}\hbar)$ in SI units (Theorem E.6, saturation branch); identifying the resulting operational coupling with measured $G$ is a separate calibration.
 
 **Part C (Cosmological).** The de Sitter horizon at $r_\Lambda = \sqrt{3/\Lambda}$ has Gibbons-Hawking temperature $T_{dS} = (\hbar c/2\pi k_B)\sqrt{\Lambda/3}$ [Gibbons & Hawking 1977]. The instanton tunneling rate $\Gamma \propto e^{-2\kappa}$ determines the vacuum energy density; Appendix U records a five-mode reference branch with $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16) and Theorem U.8c shows that the pure-coordinate dilatation mode needed to realize that branch is obstructed in the current continuum action. ∎
 
@@ -961,7 +993,7 @@ The coefficient $\eta$ appearing in $\delta S = \eta\,\delta\mathcal{A}$ is rela
 $$
 G=\frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}}.
 $$
-Here $C_{\max}$ is supplied quantitatively by the completed reset-support branch of Proposition E.2a, with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget branch; refresh/minorization branches additionally give the strict inequality $C_{\max}<\ln d_0$ by Lemma E.1 and Theorem E.2. The Born rule is not derived from this capacity bound. It descends separately from the predictive observable algebra, PPI/PCE response-null quotienting, finite-response additivity, and the Gleason-Busch Born selector. The common origin is SPAP finite-response closure: simultaneous ledgers yield the Born/noncommutative probability structure, while sequential update ledgers yield entropy and finite boundary capacity.
+Here $C_{\max}$ is supplied quantitatively by the completed reset-support branch of Proposition E.2a, with $C_{\max}^*=2\ln2$ only on the minimal $d_0=8$ residual-budget and saturation branch; refresh/minorization separately gives the strict inequality $C_{\max}<\ln d_0$ by Lemma E.1 and Theorem E.2. The Born, reset-support, refresh-capacity, and gravitational-calibration branches have distinct antecedents and can be intersected only after their bridge records are supplied. In particular, the Born rule is not derived from this capacity bound. It descends separately from the predictive observable algebra, PPI/PCE response-null quotienting, finite-response additivity, and the Gleason-Busch Born selector. The common origin is SPAP finite-response closure: simultaneous ledgers yield the Born/noncommutative probability structure, while sequential update ledgers yield entropy and finite boundary capacity.
 
 Einstein's Field Equations (Equation 76) represent the equation of state ensuring local thermodynamic consistency between the emergent spacetime geometry and the underlying MPU network's predictive activity. The factor $1/4$ enters through the standard normalization relating horizon entropy density to the coupling in the Einstein equation; PU's nontrivial content is the operational evaluation of the entropy density from channel counting (Appendix E). PCE optimization of the vacuum state yields $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln2$, predicting the MPU-to-Planck scale ratio $\delta/L_P=\sqrt{8\ln2}$ on the Appendix Q packing branch. The curvature of spacetime reflects the geometric adjustments needed to satisfy the Clausius relation on all local causal horizons, given the Horizon Entropy Area Law (Theorem 49), which arises from the completed reset-support capacity budget and density-certificate channel count. The distribution of predictive activity ($T_{\mu\nu}^{(MPU)}$)—which itself quantifies the coarse-grained density and flux of the resource costs optimized by the predictive network—dictates local information capacity of boundaries, and geometry ($g_{\mu\nu},R_{\mu\nu}$) adapts via EFE to maintain local thermodynamic equilibrium.
 
@@ -974,7 +1006,7 @@ The Principle of Compression Efficiency (PCE) dictates that the mechanism for em
 
 *   **At Galactic Scales:** In environments with moderate potential wells, PCE favors a low-cost "Law Modification." This manifests as a scale-dependent effective Newton constant, $G(R)$ (Equation I.4). This is the Appendix I phenomenological relaxation branch for galaxy rotation curves and baryonic scaling relations; it remains model-level until the dark-sector response kernel is derived from first principles.
 
-*   **At Cluster Scales:** In the deep potential wells of clusters, a large change in $G$ is ruled out by global cosmological constraints (e.g., from the CMB). PCE therefore selects a different, globally-consistent mechanism: a "Source Modification." This manifests as a non-local "predictive matter" response (Equation I.7), a collective reconfiguration of the MPU substrate that contributes to the stress-energy tensor only in these extreme environments.
+*   **At Cluster Scales:** In the deep potential wells of clusters, the framework adopts the separate phenomenological source-modification branch of Appendix I.7.2: a non-local "predictive matter" response (Equation I.7), a collective reconfiguration of the MPU substrate that contributes to the stress-energy tensor only in these extreme environments. A cluster-scale change in $G$ is not excluded by CMB data alone; admissibility of either mechanism requires the local-gravity, lensing, CMB-projection, and covariant-conservation certificates of Appendix I, and PCE selects among mechanisms only relative to those certificates.
 
 This two-tiered model provides a unified phenomenological description of dark-matter-like behavior across scales while remaining consistent with cosmological constraints. Within the QFI linear-response bridge-law normalization of Appendix H (Definition H.0), the efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed by PU constants, yielding the bridge-law prediction
 $$
@@ -1632,7 +1664,7 @@ $$
 =
 \sum_{D\in\mathcal D}w_D\mathfrak R_D(\rho[g])
 +
-\sum_{D\in\mathcal D}\lambda_D\left|S_D[g]-\eta A_D[g]\right|
+\sum_{D\in\mathcal D}\lambda_D\left|S_D[g]-\eta_{\partial} A_D[g]\right|
 +
 \mathcal C_{\mathrm{reg}}[g]
 \tag{76ab}
@@ -1686,7 +1718,7 @@ with the following entries.
 1. $\mathfrak Z_{\mathrm{cont}}$ is an accepted operational-continuum gluing certificate of Corollary 43.5a.
 2. $\mathfrak P_{\mathrm{AQFT}}$ is an accepted projective single-clock AQFT certificate of Definition F.0e, or the pair $(\mathfrak B_{\mathrm{AQFT}},\mathfrak C_{\mathrm{gen}})$ is accepted on the same cover.
 3. $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent certificate of Definition F.10.12a with vanishing Connes-cocycle and Clausius defects on the retained local Rindler cover.
-4. $\mathfrak A_{\partial}$ is the Appendix E channel-area density record fixing $\eta$ and the local entropy variation $\delta S=\eta\delta A$.
+4. $\mathfrak A_{\partial}$ is the Appendix E saturated channel-area record fixing the local entropy-variation coefficient $\eta_{\partial}$ and $\delta S=\eta_{\partial}\delta A$.
 5. $\mathfrak T_{\mathrm{MPU}}$ is the Appendix B stress-energy flux record fixing $T_{\mu\nu}^{(\mathrm{MPU})}$ and its conservation law on the same retained diamond cover.
 6. $\mathfrak Q_{\mathrm{null}}$ is either the zero-slack ledger
 $$
@@ -1786,6 +1818,10 @@ D(\Phi_{\lambda_2\lambda_1,*}(\rho_{\lambda_1})\Vert\Phi_{\lambda_2\lambda_1,*}(
 D(\rho_{\lambda_1}\Vert\omega_{\lambda_1}).
 $$
 Using the definition (76al) gives (76am). Monotonicity is a first-difference inequality, whereas (76g) is a second-variation statement and zero slack is a saturation statement. ∎
+
+**Corollary 12.5.3m (Exclusion of Certified Generalized-Entropy Decrease).** On a retained horizon-cut family carrying $\mathfrak C_{\mathrm{PGSL}}$, no retained protocol record can certify, for any covered pair $\lambda_1<\lambda_2$, both the trace-preserving cut-channel and reference-state entries of Definition 12.5.3l used in Theorem 12.5.3m and a strict decrease $S_{\mathrm{gen}}(\lambda_2)<S_{\mathrm{gen}}(\lambda_1)$. Consequently any record exhibiting such a decrease lies outside the applicability domain of Theorem 12.5.3m: at least one hypothesis in the complete certificate $\mathfrak C_{\mathrm{PGSL}}$, Definition 12.5.3l, or Theorem 12.5.3m fails on that pair. A normalized selective operation in place of the certified trace-preserving cut channel is one possible failure, not an exhaustive classification. Selective subensemble records, including probe-blind postselected records of the kind treated in Corollary S.6.1e, are outside the trace-preservation hypothesis and are therefore not constrained by (76am).
+
+*Proof.* Suppose both entries are certified on the pair. Theorem 12.5.3m applies verbatim and gives $S_{\mathrm{gen}}(\lambda_2)-S_{\mathrm{gen}}(\lambda_1)\ge0$ by (76am), contradicting the strict decrease; this proves the first statement. For the second statement, the proof of Theorem 12.5.3m invokes Uhlmann monotonicity only for the certified trace-preserving completely positive map $\Phi_{\lambda_2\lambda_1,*}$ applied to both $\rho_{\lambda_1}$ and $\omega_{\lambda_1}$, together with the identifications recorded in (76al); if the update between the cuts is selective, the map is not trace-preserving before normalization, the cut-channel entry is not satisfied, and (76am) is not asserted for the record. The enumerated alternatives are exactly the certificate entries consumed in that proof, so at least one must fail. ∎
 
 **Definition 12.5.3n (Null-Convexity/Saturation Certificate $\mathfrak C_{\mathrm{NC}}$).** A null-convexity/saturation certificate for a retained local-horizon family is a finite record
 $$

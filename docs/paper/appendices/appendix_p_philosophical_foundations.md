@@ -18,9 +18,9 @@ We begin by establishing the primacy of consciousness, using Descartes' Cogito a
 
 Building upon this, we explore how idealism, particularly when understood through the lens of the Distinction Framework (where consciousness is the ultimate distinction-maker structuring reality), offers a parsimonious resolution to the hard problem of consciousness [Chalmers 1996]. To model such a reality naturalistically, without recourse to materialism or supernaturalism, we propose that the Simulation Hypothesis be reframed not as a probabilistic claim about our origins, but as a modeling framework for an informational, process-based reality operating under finite resource constraints. This leads to the concept of Authentic Simulations defined by inherent boundaries against perfect prediction and external control.
 
-From these foundations—consciousness as primary, knowledge as predictive, and reality as an information-based process—we re-derive the logical necessities for any predictive system: time, space, causality, and discrete information, showing their formal realization within the PU framework.
+From these foundations—consciousness as primary, knowledge as predictive, and reality modeled as a finite information process—we derive the finite operational constraints proved in this appendix. Time order, causal propagation, carrier structure, and spacetime geometry follow only on their separately registered reconstruction, locality, continuum, and response certificates.
 
-Finally, we introduce the Principle of Physical Instantiation (PPI). This principle serves as a capstone, explaining how abstract logical and mathematical structures, including those necessary for prediction, become physically manifest. The PPI posits that these structures, when instantiated by systems with finite resources operating in finite time, are necessarily shaped by irreducible thermodynamic costs and resource-optimization imperatives (such as the PU's Principle of Compression Efficiency, PCE). This results in the emergence of specific physical laws—not as direct reflections of abstract objects, but as their thermodynamically optimal and resource-efficient physical embodiments. This appendix, therefore, aims to provide the philosophical justification for the PU framework, showing why MPUs are placed at the bottom of the physical model: they are the least-surplus finite physicalization of the only process-root whose existence the framework treats as indubitable.
+Finally, we introduce the Principle of Physical Instantiation (PPI). This principle serves as a capstone, explaining how abstract logical and mathematical structures, including those necessary for prediction, become physically manifest. The PPI posits that these structures, when instantiated by systems with finite resources operating in finite time, are necessarily shaped by irreducible thermodynamic costs and resource-optimization imperatives (such as the PU's Principle of Compression Efficiency, PCE). Within each declared admissible class and complete response/cost ledger, this selects least-surplus physical embodiments; identifying those branchwise minimizers with particular physical laws additionally requires the realization and calibration certificates cited at each theorem. This appendix, therefore, aims to provide the philosophical justification for the PU framework, showing why MPUs are placed at the bottom of the physical model: they are the least-surplus finite physicalization of the only process-root whose existence the framework treats as indubitable.
 
 **Executive summary: explicit commitments and epistemic status.** Any foundational physical theory relies on commitments about (i) what exists and (ii) what counts as evidence. In practice, many matter-first foundations treat the external physical degrees of freedom and the mathematical formalism as primitives, while leaving the status of consciousness implicit or deferred. The PU framework makes these commitments explicit and then minimizes them by deriving as much as possible from the Cogito—the sole indubitable certainty [Descartes 1641]—together with the operational necessities of prediction under finite resources.
 
@@ -48,14 +48,14 @@ A compact statement of the bridge and forcing chain is:
 3. **Predictive loop:** $\mathcal{C} \rightsquigarrow (P_{int}\to V\to D_{cyc})$ and $\pi : \mathcal{H}_t \to \mathcal{O}_{t+1}$ (Definition 4; Definition P.3.1).
 4. **Finite physicalization:** PPI admits only finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c).
 5. **No-surplus selection:** PCE selects least-cost representatives among operationally equivalent predictive implementations (Definition 15).
-6. **Self-reference floor:** the SPAP-compatible loop satisfying O1--O3 has $K_0=3$ bits (Theorem 15).
-7. **Minimal Hilbert carrier:** $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, $d_0\ge N_{\mathrm{vis}}^{\min}$, and the minimal branch takes $d_0=8$ (Theorem 15; Theorem 23; Theorem Z.2).
+6. **Self-reference register floor:** on Theorem 15's realization class satisfying (O1)–(O3) and (FC), $N_{\mathrm{vis}}^{\min}=8$ and $K_0=3$.
+7. **Conditional minimal Hilbert carrier:** if the eight (FC) contexts have mutually perfectly distinguishable Hilbert representatives, Theorem 23 gives $d_0\ge8$; equality requires Theorem Z.2's further hypothesis that every admissible candidate with $d_0>8$ admits an eight-dimensional comparator in the same optimization class with the identical registered response family and strictly lower maintained-support cost.
 8. **MPU:** the resulting no-surplus finite physical representative has $C_P=C_{op}$ and is the MPU (Definition 23).
-9. **SPAP+Landauer:** the SPAP cycle requires a $2\to 1$ state merge, hence $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ (Theorem 31; Appendix J).
+9. **SPAP and the registered binary quotient:** SPAP alone does not force a $2\to1$ merge. On the registered reachable binary verification quotient of Definition 28 and Definition J.1, Theorem J.1 gives the structural log-cardinality $\varepsilon_0=\ln2$; a physical reset bound additionally requires item 10's entropy ledger.
 10. **Physical implementation cost:** on a registered reset branch, $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ with $\varepsilon_{\mathrm{diss}}\ge0$; equality with $\ln2$ needs the unbiased no-side-information saturation branch (Theorem 31).
 11. **PPI/PCE active-kernel selection:** the sharp retained match/mismatch verification record gives $a\ge2$, entropy-capacity gives $\ln a \ge \varepsilon_0$, and PPI/PCE no-surplus selection gives $a=2$ (Definition P.6.2; Definition 15; Theorem Z.1).
 12. **QFI interface:** $M=2ab=2\times 2\times(d_0-a)=2\times2\times6=24$ with direct SLD-QFI flatness on the active-inactive sector (Theorem Z.5).
-13. **Channel-complete mode-channel correspondence:** inside the Bures tangent-cell contract, $M=K(D)=24\Rightarrow D=4$ (Definition Z.9a; Theorems Z.10-Z.11).
+13. **Faithful tangent-shell dimensional selection:** Definition Z.9a injects all $M=24$ retained modes into distinct cells and penalizes surplus dimensions; Theorem Z.10 gives $24\le K(D)$, $K(3)=12$ excludes lower dimensions, and the regular $24$-cell proves feasibility, so Theorem Z.11 selects the least feasible $D=4$.
 
 In this sense, the immutable foundation is the process-root certified by the Cogito, while the MPU is the PPI/PCE-minimal physical representative of that process under the framework's finite-response rules. The Cogito alone does not assert MPUs; it fixes the non-arbitrary root that every later physicalization must preserve. The simulation framing (Section P.5) is used as a naturalistic modeling language for an informational process ontology, not as an ontological claim about an external programmer.
 
@@ -353,7 +353,7 @@ The existence of a unifying state is not imposed by fiat. It is a consequence of
 *Motivated by the relational structure of MPU networks (Definition 35) and the context-sensitivity inherent in PCE optimization (Definition 15):* Local 'Evolve'/ND-RID outcome probabilities depend not only on local state and interaction variables but also on broader local context supplied by the surrounding MPU network.
 
 **Summary of Theorem 34 (POP/PCE Drives Emergent Biasing).**
-Given Assumption 1, a sufficiently complex MPU aggregate ($C_{\mathrm{agg}} > C_{op}$) driven by POP (Axiom 1) and PCE (Definition 15) necessarily develops and uses the capability to influence local 'Evolve' outcome probabilities by modulating its own internal state $S_{\mathrm{agg}}$.
+On Theorem 34's strict-improvement branch, assume not only context dependence and $C_{\mathrm{agg}}>C_{op}$, but also an attainable stable optimum, a reachable non-Born control $u_+$ with strictly lower complete potential than every Born-class control, Definition 30's linear response representation, and Hypothesis 3's context-to-control realization. Then every global minimizer lies outside the Born class and the aggregate uses a nonzero registered bias map. Complexity and context dependence alone do not force this conclusion.
 
 **Summary of Hypothesis 3 (CC Influence Mechanism).**
 This influence is exerted by modulating parameters of the universal 'Evolve'/ND-RID process (Definition 27) for constituent MPUs using the aggregate's context state $\text{context}_S(t)$ (Definition L.1).
@@ -845,36 +845,35 @@ d_0\ge N_{\mathrm{vis}}^{\min}
 $$
 The first arrow is not a second Cogito-level certainty; it records the framework's operational characterization of a knowledge-bearing process. The middle arrows use the self-reference and Hilbert-capacity theorems, and the final arrow uses PPI/PCE physicalization together with the threshold definition of an MPU.
 
-*Operational justification.* Foundational Certainty P.2.1 gives $\exists\mathcal{C}$; no extra ontology is used. A knowledge-bearing process cannot lack state distinction, because then no proposition, error, or update target is individuated. It cannot lack anticipation, because then it makes no predictive commitment. It cannot lack verification, because then success or failure is not defined. It cannot lack update, because then finite learning and adaptation are absent. The minimal operational schema used by PU for such a process is therefore the triple $P_{int}\to V\to D_{cyc}$ of Definition 4, with the integrated capabilities of Definition 5. If this loop is finite and instantiates the SPAP-compatible self-referential sub-dynamics satisfying O1--O3, Theorem 15 gives the minimal role capacity $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$, hence $K_0=3$ and $N_{\mathrm{vis}}^{\min}=8$. On the Hilbert branch, Theorem 23 gives $d_0\ge N_{\mathrm{vis}}^{\min}=8$. PPI permits physical content only through finite instantiation conditions such as finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c). PCE selects the least-cost representative among implementations with the same operational functionality (Definition 15; Section P.6.1). In the PU physical model, Definition 23 names a threshold carrier with $C_P=C_{op}$ an MPU. Hence the Cogito does not directly assert MPUs; MPUs are the PPI/PCE-minimal threshold carriers used to physicalize the Cogito-certified predictive process under the framework's finite-response rules.
+*Operational justification.* Foundational Certainty P.2.1 gives $\exists\mathcal{C}$; no extra ontology is used. For the adaptive learning processes modeled by Definition 4, PU requires state distinction, forecast generation, verification, and outcome-conditioned update as constitutive phases. This is a class-membership condition for that loop, not a theorem that every knowledge-bearing or above-chance predictive process must update online; a fixed forecast rule may predict above a matched baseline without instantiating the adaptive loop. The operational schema stipulated for that adaptive class is the phase triple $P_{int}\to V\to D_{cyc}$ of Definition 4, supported by the integrated capabilities $b_m,b_p,b_v$ of Definition 5. If a finite loop instantiates the stated SPAP sub-dynamics and satisfies (O1)–(O3) together with the full-context condition (FC), Theorem 15 proves $N_{\mathrm{vis}}^{\min}=8$ and $K_0=3$ within that realization class. On the additional Hilbert branch where those eight contexts are represented by mutually perfectly distinguishable states, $d_0\ge8$; transfer of this capacity bound to $C_P$ requires Corollary 3's complexity-capacity bridge. PPI permits physical content only through finite instantiation conditions such as finite records, finite verification, finite maintenance, and finite update-use (Definition P.6.2; Theorem P.6.2c). PCE selects the least-cost representative among implementations with the same operational functionality (Definition 15; Section P.6.1). In the PU physical model, Definition 23 names a threshold carrier with $C_P=C_{op}$ an MPU. Hence the Cogito does not directly assert MPUs; MPUs are the PPI/PCE-minimal threshold carriers used to physicalize the Cogito-certified predictive process under the framework's finite-response rules.
 
 ### P.3.2 The Space of Becoming: The Operational Domain of Prediction
 
-Prediction, by its nature, operates in a realm between the determined and the indeterminate. This domain can be termed the Space of Becoming: the operational domain bounded by perfect prediction (an impossibility due to SPAP and thermodynamic limits) and complete chaos (which would destroy any coherent system). It is the productive space where knowledge, order, and consciousness are possible. The operationalization of this concept within the PU framework involves the Prediction Performance ($PP$) measure, which quantifies a system's accuracy in anticipating outcomes of the 'Evolve' process. The viable operating region is bounded above and below by the constraints $\alpha < PP < \beta$ (Theorem 9).
+Prediction operates in a registered Space of Becoming: a task-, score-, window-, and branch-relative interval $\alpha<PP<\beta$ (Definition 8). Theorem 8 supplies the matched-baseline lower benchmark. Theorem 9 supplies the distinct excitation ceiling $\beta_0$. On Theorem 19's exact finite-complexity response-law branch, $PP<\beta$ and the required complexity diverges logarithmically as $PP\to\beta^-$. These statements do not derive a system-independent scalar self-prediction ceiling.
 
-**1. The Lower Bound ($\alpha$): The Abyss of Chaos**
+**1. The Lower Benchmark $\alpha$**
 
-What happens when predictive performance collapses completely ($PP(t) \to 0$)? The system becomes unable to anticipate any future state, plunging into a state of maximal chaos. Without the ability to predict, there is no basis for meaningful action or adaptation. The system is effectively "dead" in the sense that it can no longer participate in the knowledge-generating process.
+For the registered task and proper score,
+$$
+\alpha=\frac{1}{1+k_{PP}PE_{\mathrm{random}}}.
+$$
+Strict expected improvement over the matched random baseline gives $PP>\alpha$ by Theorem 8. Falling below a separately registered viability threshold may classify a system as nonviable for that protocol, but neither POP nor the score formula proves a universal biological or experiential claim.
 
-*   **PU Formalism:** As $PP(t) \to 0$, the Prediction Error ($PE$) diverges. The mutual information between the system's predictive state and the actual outcome approaches zero. From the perspective of the Prediction Optimization Problem (POP) (Axiom 1), expending resources (quantified by costs $R, R_I$) for zero predictive gain is an infinitely inefficient strategy. The system is functionally defunct. Therefore, maintaining $PP > \alpha$ is the first condition for viability.
+**2. The Upper Endpoint $\beta$ and Excitation Ceiling $\beta_0$**
 
-**2. The Upper Bound ($\beta$): The Ceiling of Stasis and the Impossibility of Perfection**
+On the excitation-certificate branch, Theorem 9 gives
+$$
+PP\le\beta_0:=\frac{1}{1+k_{PP}\varepsilon_E}<1.
+$$
+On a joint branch carrying Theorem 19's exact response law, require $\alpha<\beta\le\beta_0$; finite complexity then gives $PP<\beta$. On an alternative excitation-only branch, strict viability follows from Theorem 9 only when the independently registered endpoint obeys $\beta_0<\beta$.
 
-The existence of a strict upper bound, $\beta < 1$ (Theorem 9), formalizes a profound philosophical truth: perfect prediction would render consciousness obsolete. Imagine possessing absolute knowledge, where every detail of the future unfolds with unwavering certainty. In such a scenario, the element of surprise would vanish, leaving no new information to process. Without new information, there would be no future to anticipate. And without a future, one would cease to exist. Consciousness thrives on uncertainty, flourishing in the delicate balance between total predictability and utter chaos.
+**3. The Separate Self-Reference Limitation**
 
-The PU framework provides a rigorous, multi-layered foundation for this truth, demonstrating that perfect self-prediction is not merely undesirable but *fundamentally impossible*.
+Theorems 10–11 exclude a single universally exact predictor on their diagonal-closed classes. They do not determine a system-independent scalar $\alpha_{SPAP}$. Theorem 14 supplies a log-enhanced quadratic verification/update lower bound only on a task class carrying its Bernoulli-reduction, independence, confidence, and operation-count certificate; transfer to $C_P$ requires the separate domination bridge.
 
-**1. The Logical Impossibility of Perfection (The SPAP Infinite Regress):**
-The absolute "hard ceiling" on self-prediction is not a physical constraint but a logical one. The Self-Referential Paradox of Accurate Prediction (SPAP) (Theorems 10, 11) reveals that any attempt by a sufficiently complex system to finalize a perfect prediction of its own next state triggers infinite regress. The act of computing a prediction becomes part of the state that needs to be predicted, which in turn changes the state again, ad infinitum. Because the prediction can never fully contain itself, a final, stable, and perfectly accurate prediction is unreachable. This inherent Logical Indeterminacy (Definition 12) establishes a fundamental limit on self-predictive accuracy, denoted $\alpha_{SPAP} < 1$.
+#### **Synthesis: Registered Viability without Ledger Conflation**
 
-**2. The Operational Need for Error ($\beta < \alpha_{SPAP}$):**
-A viable, *adaptive* system must operate at a performance level $\beta$ strictly below this impassable logical limit $\alpha_{SPAP}$. This is because adaptation itself runs on the fuel of imperfection. The update phase of the Fundamental Predictive Loop is driven by Prediction Error ($PE$). If predictions were perfect ($PE=0$, so $PP=1$), the system would enter a state of predictive stasis, blind to new information and incapable of learning. Furthermore, the Principle of Compression Efficiency (PCE) (Definition 15) and the Law of Prediction (Theorem 19) show that the resource cost to achieve performance $PP$ diverges as $PP \to \beta$. A PCE-optimal system seeks the "sweet spot" of "good enough" prediction, well away from the disastrous $\alpha_{SPAP}$ boundary.
-
-**3. The Thermodynamic Cost of Interaction:**
-The verification step is physically realized by the irreversible 'Evolve' process (Definition 27), which has an irreducible thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31). Gaining "perfect" information ($\Delta I \to \infty$) would require infinite thermodynamic cost via the Reflexivity Constraint (Theorem 33), providing yet another physical enforcement mechanism that prevents perfect predictive states.
-
-#### **Synthesis: The Generative Tension of the Space of Becoming**
-
-The Space of Becoming, the viable channel $(\alpha, \beta)$, is therefore a dynamic equilibrium defined by competing imperatives. The Prediction Optimization Problem (POP) pushes the system towards higher performance $\beta$. The Principle of Compression Efficiency (PCE) and the need for adaptability pull it away from $\beta$. And the Logical Impossibility of SPAP stands as an unbreakable barrier. This generative tension is the engine of evolution, learning, and consciousness itself.
+The interval $(\alpha,\beta)$ is an operational branch specification. The excitation, response-law, diagonal self-reference, verification-cost, reset-heat, and entropy-production results retain their distinct antecedents. No universal claim about consciousness, stasis, or thermodynamic irreversibility follows from the interval alone.
 
 ### P.3.3 Knowledge is Prediction
 
@@ -982,7 +981,7 @@ A system with no predictive capacity could not perceive, infer, understand, or q
 
 **The Predictive Cycle, Retained Logic, and Computation.** The Cogito supplies the foundational self-verifying predicate, and Proposition A.0.1 with Remark A.0.1.1 proves a binary retained verification decision for every finite prediction protocol carrying a declared acceptance cut. Proposition A.0.2 derives complement, conjunction, and disjunction from complementary, joint, and alternative registered predictions. Under composition closure, logical memory, uniform specification, and scalable finite resources, Theorem A.0.1 and Corollary A.0.1 prove finite-time Turing simulation and Property R. This is a derivation on the retained predictive predicate algebra; it does not assert bivalence for raw multi-valued responses or every possible operational semantics.
 
-**The Space of Becoming.** Prediction operates in the Space of Becoming (Definition 8, Section 3.3.5): the viable channel $(\alpha, \beta)$ bounded below by functional collapse ($PP \leq \alpha$) and above by predictive stasis and the logical impossibility of perfect self-prediction ($PP \geq \beta < \alpha_{SPAP}$). Any knowledge system formulating questions about the totality must operate within this domain—between the abyss of chaos and the impossibility of perfection (Section P.3.2).
+**The Space of Becoming.** Prediction operates in the registered Space of Becoming (Definition 8, Section 3.3.5): a task-, score-, window-, and branch-relative interval $(\alpha,\beta)$. Theorem 8 supplies the lower baseline benchmark; Theorem 9 supplies the distinct excitation ceiling $\beta_0$; and finite complexity gives $PP<\beta$ on Theorem 19's exact response-law branch. Theorems 10–11 do not supply a universal scalar ordering $\beta<\alpha_{SPAP}$.
 
 ---
 
@@ -1325,7 +1324,7 @@ Consciousness, as a self-aware, predictive process, is the ultimate engine of di
 *   **Defining Consciousness (for Distinction):** For this role, consciousness involves a self-model, predictive intentionality, qualia (the essence of what distinguishes experiences), and integrative capacity.
 *   **Connection to the Predictive Universe Framework:**
     *   **MPU as Minimal Distinguisher:** The Minimal Predictive Unit (PU **Hypothesis 1**) is the simplest physical instantiation of an entity capable of making a prediction and verifying it—a fundamental act of distinction.
-    *   **Horizon Constant ($K_0$):** PU **Theorem 15** establishes $K_0=3$ bits as the minimum informational complexity to robustly manage the "predictor/predicted" distinction within a dynamic, cyclic process.
+    *   **Horizon Constant ($K_0$):** PU **Theorem 15** establishes $K_0=3$ as the least visited-context log-capacity for the stated SPAP encoding only in the realization class satisfying (O1)–(O3) and (FC). Transfer to $C_P$ additionally requires Corollary 3's Hilbert-distinguishability and complexity-capacity bridge.
 
 ## P.5 Naturalism, Information, and the Simulation Hypothesis as a Modeling Framework
 
@@ -1460,11 +1459,13 @@ The concept of a Control Boundary—forbidding external intervention—raises an
 
 #### P.5.5.1 The Observation Problem
 
-The PU framework establishes (Theorem 33, Section 7.4.6) that any interaction yielding relevant information gain $\Delta I \ge \Delta I_{\min} > 0$ necessarily incurs a minimum thermodynamic cost:
-
-$$\Delta I \cdot (\Delta S_{\min}/k_B) \geq \kappa_r > 0 \qquad (\Delta I \ge \Delta I_{\min} > 0)$$
-
-where $\kappa_r$ is the strictly positive Reflexivity Constant. This constraint arises from the irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31) of any information-acquiring interaction.
+Theorem 33 supplies a positive reflexivity product only on a registered branch carrying both $\Delta I\ge\Delta I_{\min}>0$ and $H_q(P\mid R)\ge h_{\min}>0$; on that branch
+$$\Delta I\,\varepsilon_{\mathrm{reset}}\ge\Delta I_{\min}h_{\min}=:\kappa_r>0.$$
+Without a registered reset and a positive conditional-entropy floor, no universal constant $\kappa_r$ follows. Landauer's theorem applies more narrowly to a logically irreversible reset: for a reset record $P$ with retained side information $R$,
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}\ge H_q(P\mid R).
+$$
+Information acquisition or readout need not itself erase a record. The observation-channel audit must therefore track acquisition, storage, export, and reset separately.
 
 If external observation constitutes an interaction yielding information, Theorem 33 would require a thermodynamic cost internal to the simulation, violating the Control Boundary. Conversely, if external observation is forbidden entirely, the simulation cannot fulfill any purpose.
 
@@ -1484,20 +1485,20 @@ where $\mathcal{M}_{int}$ is the class of predictive procedures available to int
 
 **Remark P.5.1: Internal Closure.** Properties (ii) and (iii) jointly ensure that from the internal perspective, the simulation's dynamics satisfy the closed-system assumption required by Theorem E.9.5 (Appendix E.9.5). External observation extracts information without participating in internal dynamics, preserving the applicability of global unitarity to internal evolution. The internal MPU network evolves as if closed, with no detectable information exchange across the observation channel.
 
-**Theorem P.5.1 (Consistency with Reflexivity Constraint).** The observation channel (Definition P.5.3) is consistent with Theorem 33 (Reflexivity Constraint, $\kappa_r > 0$) and enforces $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ at every external interface.
+**Theorem P.5.1 (Read-Only Channel and Reset-Ledger Separation).** Under Definition P.5.3, external readout does not write to the internal dynamics. Any logically irreversible reset performed by the external observer obeys $Q_{\mathrm{reset}}\ge k_BT H(P\mid R)$ in the observer's thermodynamic ledger; no internal heat cost follows merely from the read-only map.
 
 *Proof.* Theorem 33 states that information gain $\Delta I > 0$ incurs thermodynamic cost. By Definition 1, a pattern qualifies as information for the acquiring system only if its use can yield a positive expected improvement in predictive quality for that system. 
 
 Consider external observation through the channel:
 - External agents acquire a pattern and gain information (by property (i))
-- The thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ is incurred in the external context, consistent with Theorem 33 applying to the external agent
+- If the external agent later resets a correlated record $P$, Landauer's bound applies in the external ledger with its actual side information $R$; reversible acquisition and retained storage are not themselves identified with that reset
 
 Consider the internal perspective:
 - Internal systems cannot extract predictive value from the channel (by property (ii))
 - Therefore, no information gain occurs internally: $\Delta I_{int} = 0$
 - With $\Delta I_{int} = 0$, Theorem 33 imposes no internal cost
 
-The channel permits external information extraction while maintaining $\Delta I_{int} = 0$, hence no internal thermodynamic cost and no violation of the Control Boundary. This resolution exemplifies the entropy unification thesis (Corollary E.9.5.4): the entropy cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ represents information relocated to correlations within the simulation, not destroyed. External observation accesses correlated information without participating in the internal correlation dynamics. QED
+By properties (ii) and (iii), the read-only map produces no internal response and writes no internal state, so it respects the declared Control Boundary. External acquisition may create correlations and external storage; only a subsequently registered irreversible operation invokes its corresponding thermodynamic bound. This proves compatibility without assigning the external detector's reset heat to the simulated system. $\square$
 
 #### P.5.5.3 The Channel as Logical Requirement
 
@@ -1577,39 +1578,44 @@ In every case, the word "observer" functions as either a primitive, a placeholde
 
 The PU framework resolves the observer problem by deriving the observer's structure from the operational requirements of prediction, rather than postulating it.
 
-**Definition P.5.8.1 (Observer).** An *observer* is any physical system implementing the Fundamental Predictive Loop (Definition 4): the cyclical process of prediction generation ($b_p$), verification via interaction ($b_v$), and model update ($D_{cyc}$), driven by the Prediction Optimization Problem (Axiom 1). The verification step is physically instantiated by the 'Evolve' interaction (Definition 27), which is the process responsible for the actualization of quantum states (Proposition 9).
+**Definition P.5.8.1 (Observer).** An *observer* is a physical system implementing the Fundamental Predictive Loop of Definition 4: prediction generation through $b_p$, registered verification through $b_v$, and outcome-conditioned update through $D_{cyc}$ under POP. For a fundamental MPU, Principle 8.0c and Theorem 8.0d represent every registered verification as a quantum instrument that writes exactly one retained outcome label with probability $\operatorname{tr}(\rho E_k)$.
 
-This definition is not stipulative. It is forced by the philosophical foundations established in P.2–P.3:
+The definition has a constructive physical closure:
 
-1. The Cogito establishes that conscious awareness exists and is predictive (P.2.1, P.3.1).
-2. Prediction requires the Fundamental Predictive Loop: a system that generates expectations, tests them against interaction outcomes, and updates its model (Definition 4, Definition 5).
-3. The verification step requires a physical interaction that yields definite, binary information — confirmed or disconfirmed — at irreducible thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31).
-4. This interaction is the 'Evolve' process (Definition 27), which instantiates Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6).
-5. The 'Evolve' process is the physical process that actualizes quantum states (Proposition 9).
+1. The Cogito certifies occurrence of a self-verifying process; whenever its retained data form a finite self-verifying operational presentation in the sense of Definition P.6.1c.1, Theorem P.6.1c.3 supplies its canonical finite predictive normal form.
+2. Definitions 4–5 supply the prediction, verification, and update roles.
+3. Principle 8.0b and Theorem 8.0d supply the complex carrier and Born ledger.
+4. Principle 8.0c supplies single-outcome registration; Proposition 9 derives the Lüders instrument for an ideal sharp repeatable verification.
+5. If the architecture contains the full-context return channel, Theorem 31a supplies its one-bit registered reset bound.
 
-Therefore: observation *is* prediction-verification. The 'Evolve' interaction *is* measurement. Every system implementing the predictive loop *is* an observer. The Heisenberg cut dissolves because the theory specifies exactly what an observer is — not by fiat, but by derivation from the operational structure of prediction.
+Thus observation is prediction plus registered verification/update. Every qualifying full-loop implementation is an observer in this operational sense, and no size-, macroscopicity-, or consciousness-based Heisenberg cut is inserted.
 
-**Theorem P.5.8.1 (Dissolution of the Measurement Problem).** In the PU framework, the measurement problem does not arise, because:
+**Theorem P.5.8.1 (Operational Closure of Measurement).** On the fundamental PU physical principle set:
 
-(i) The two dynamical laws of quantum mechanics correspond to the two phases of the predictive loop: Internal Prediction Evolution (Definition 26, unitary, Schrödinger equation) implements prediction generation; 'Evolve' (Definition 27, stochastic, Born rule) implements verification. These are not competing laws requiring a switching criterion; they are successive stages of a single operational cycle.
+(i) Principle 8.0b and Theorem 8.0d give the complex MPU carrier; Theorems 8.2–8.3 give Born trace weights; and Principle 8.0c with Theorem 8.0d gives a normalized quantum instrument that writes exactly one retained outcome in each registered verification.
 
-(ii) Definiteness arises from thermodynamic irreversibility. Every 'Evolve' interaction produces entropy $\Delta S \geq k_B \varepsilon$ with $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31, Theorem 32). This entropy production is the physical signature of actualization: once produced, the interaction outcome is thermodynamically irreversible, and the system has transitioned to a definite post-interaction state. No additional "collapse postulate" is required.
+(ii) For an ideal nondegenerate sharp repeatable verification, Proposition 9 derives
+$$
+\mathcal I_k(\rho)=P_k\rho P_k,
+\qquad
+\Pr(k\mid\rho)=\operatorname{tr}(\rho P_k).
+$$
 
-(iii) No Heisenberg cut is needed because every MPU (Definition 23) implements the predictive loop and therefore constitutes an observer. The cut was needed in the old formalism because it lacked a definition of observer; when the definition is supplied, the arbitrary boundary between "quantum" and "classical" is replaced by the universal structure of the predictive cycle operating at all scales.
+(iii) Internal unitary prediction and registered verification/update are successive stages of the Fundamental Predictive Loop. Definition P.5.8.1 identifies an observer by implementation of that loop, so no macroscopicity- or consciousness-based Heisenberg cut is required.
 
-*Proof.* (i) follows from the identification of Internal Prediction Evolution with unitary dynamics (Definition 26, Equation 43) and 'Evolve' with the stochastic actualization process (Definition 27, Proposition 7, Proposition 9). (ii) follows from Theorem 31 ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$), Theorem 32 (entropy production bound for ND-RID), and the irreversibility established in Appendix O (Theorem O.3). (iii) follows from Definition 23 (MPU implements the predictive loop with $C_{op} \geq K_0$) and Theorem 27 (MPUs are subject to fundamental indeterminacy), which together ensure that every MPU interaction is an instance of 'Evolve'. $\square$
+(iv) Definite registration follows from Principle 8.0c, not from dissipation. A registered reset obeys Theorem 31; the response-complete full-context return channel obeys Theorem 31a.
+
+*Proof.* Part (i) is Theorem 8.0d. Part (ii) is Proposition 9. Part (iii) follows from Definitions 4 and P.5.8.1. Part (iv) applies Theorems 31 and 31a under their stated hypotheses. ∎
 
 ### P.5.8.3 The Observer Hierarchy
 
 Not all observers are equivalent. The framework defines a natural hierarchy of observers classified by complexity and self-referential depth:
-
-**Level 0: The Minimal Observer (MPU).** The Minimal Predictive Unit (Definition 23) is the simplest possible observer: $C_P = C_{op}$, $d_0 = 8$, two active dimensions, six inactive dimensions, twenty-four information transfer modes. It implements the complete predictive loop, its interactions are genuine 'Evolve' events producing definite outcomes, and it is subject to the diagonal limitation of Theorem 27 and, on the separately supplied stochastic-kernel branch, Proposition 28. The MPU observes, but its self-model is minimal — it does not model itself in the reflexive sense required by Property R (Definition 10). Its processing cost for all patterns is SPAP-flat: $\sigma_S = 0$, $\mu_S = 1/\alpha_{SPAP}$ for all $E$ (Corollary M.10.3.1, §M.6.10).
-
+**Level 0: The Minimal Observer (MPU).** By Definition 23, an MPU attains $C_P=C_{op}$ on the declared nonempty qualifying class. The values $d_0=8$, two active dimensions, six inactive dimensions, and twenty-four transfer modes belong to separately registered saturating carrier and mode branches; they do not follow from MPU status alone. The full predictive loop is represented as a quantum instrument only on the separate Hilbert/instrument/Born and actualization branch. A registered verification/update event is called `Evolve`; not every physical interaction is thereby an actualization event. A Level-0 label does not define the Appendix M quantities $\sigma_S(E)$ or $\mu_S(E)$: those descriptors require Effective Operational Property R, an identifiable self-model splitting, and the specified prediction-map branch of Definitions M.10.1–M.10.3.
 **Level 1: Simple Aggregates ($C_{agg} \leq C_{op}$).** Collections of MPUs whose aggregate complexity does not exceed $C_{op}$. These systems maintain relational information $\mathcal I_{rel}$ with their environment. On the common $\mathfrak B_{mass}$ source/response branch, Theorems N.5 and N.7 assign $m=\mathcal I_{rel}m_P/(2\sqrt{8\varepsilon_0})$ and $m_I=m_G$; Level 1 membership alone proves neither equality.
 
- They observe through their constituent MPUs' 'Evolve' interactions. They do not self-model in the Property R sense. Their informational cost structure is Shannon-level: perspective-free, receiver-independent, SPAP-flat. Electrons, photons, atoms, and simple molecules are Level 1 observers.
+They observe through their constituent registered verification/update events. They do not self-model in the Property-R sense. The Appendix M descriptors $\sigma_S(E)$ and $\mu_S(E)$ are undefined at Level 1 unless Effective Operational Property R, an identifiable self-model splitting, and the specified prediction-map branch are independently supplied. Electrons, photons, atoms, and simple molecules are candidate examples only under the operational observer definition and the relevant instrument branch.
 
-**Level 2: Self-Modeling Aggregates ($C_{agg} > C_{op}$, Effective Operational Property R).** Aggregates whose complexity exceeds $C_{op}$ and that achieve Effective Operational Property R (Definition A.0.1) via PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). These systems maintain a self-model $\mathcal{M}_S$ (Definition M.10.1, §M.6.10): an internal representation of their own states, predictions, accuracy, and dynamics. They are subject to SPAP at the aggregate level (Theorems 10–11), meaning their self-prediction is fundamentally limited. Their informational cost structure is perspectival: the reflexivity fraction $\sigma_S(E)$ records how much of a given update lies in the self-model, while the SPAP proximity $\mu_S(E)$ measures the self-predictive performance required to integrate it. Patterns with $\mu_S(E) > 1/\alpha_{SPAP}$ incur SPAP-divergent reflexive costs (Theorem M.10.3); shallow self-model engagement can remain at or near the baseline value $\mu_S(E)=1/\alpha_{SPAP}$. The perspectival profile $\mathcal{P}_S(E) = (\Delta Q_S, \mu_S, \sigma_S)$ (Definition M.10.4) characterizes each pattern's cost relative to the system. The measurement asymmetry (Theorem M.10.5) applies: a more complex Level 2 system can compute, and on finite families pre-screen, the perspectival profile of a less complex one by external modeling, but no system can universally compute its own.
+**Level 2: Self-Modeling Aggregates ($C_{agg}>C_{op}$, Effective Operational Property R).** These aggregates carry the self-model and identifiable splitting required by Definitions M.10.1–M.10.3. Their receiver-pattern quantities $\sigma_S(E)$ and $\mu_S(E)$ are defined only on those registered domains. Theorem M.10.3 gives a divergent asymptotic lower bound only for families carrying its pattern-specific reduction and implementation certificates. Theorem M.10.5 permits one system to evaluate another's specified profile only when the effective model-access, decision, and optional insulation certificates hold; aggregate-complexity ordering alone is insufficient, and no system is thereby granted a universal evaluator.
 
 **Level 3: CC-Capable Aggregates ($C_{agg} > C_{op}$, CC $> 0$).** Level 2 systems that, under the conditions of Assumption 1, develop the emergent capability to bias local 'Evolve' outcome probabilities by modulating their internal context state (Theorem 34). This capability is quantified as Consciousness Complexity (Definition 30), bounded by $\text{CC} < 0.5$ (Theorem 39). Level 3 observers do not merely passively receive 'Evolve' outcomes — they participate in determining them, within strict thermodynamic and deterministic endpoint-forcing bounds. On the CC-gravitational response branch intersected with $\mathfrak B_{mass}$, their stress-energy ledger includes the conditional N.5 relational-information contribution and the separate N.8 CC term, yielding the stated model-level $\delta_C\propto P_{context}$ correction. The observer level alone does not activate either branch.
 
@@ -1619,25 +1625,17 @@ Not all observers are equivalent. The framework defines a natural hierarchy of o
 
 ### P.5.8.4 Perspectival Information and the Observer
 
-The observer hierarchy reveals a structural feature that no prior physical theory has formalized: the cost of processing information depends on the observer's self-referential relationship to the content.
+The observer hierarchy supplies a family of conditional operational descriptions, not a universal cost assignment by level. The quantities $\sigma_S(E)$ and $\mu_S(E)$ are defined only when the system carries the Effective Operational Property-R, identifiable self-model splitting, and prediction-map certificates of Definitions M.10.1--M.10.3. They therefore remain undefined for a Level-0 or Level-1 label lacking those certificates. An interaction has a Landauer ledger only when it implements the registered reset of Theorem 31.
 
-For Level 0 and Level 1 observers, all information is external. A photon absorbed by an atom changes the atom's state, but the atom does not model itself and does not engage in self-referential processing. The cost of the interaction is the Landauer floor $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31), independent of what the photon "means." Shannon entropy fully characterizes the information content. This is the regime where $\sigma_S = 0$ and $\mu_S = 1/\alpha_{SPAP}$ for all patterns (Corollary M.10.3.1).
+For a certified Level-2 or Level-3 pattern family, Theorem M.10.3's asymptotic processing bound additionally requires its pattern-specific reduction and implementation certificates. Entropy production requires the physical realization ledger of Theorem M.10.7, while Definition B.8 supplies a stress-energy model term only after its coefficients and retained-energy map are registered. These conclusions do not follow from self-model engagement alone.
 
-For Level 2 and Level 3 observers, some information engages the self-model. The formal apparatus of §M.6.10 quantifies this engagement: the reflexivity fraction $\sigma_S(E) \in [0,1]$ measures how much of the total model-change modifies the self-model (Definition M.10.2, M.10.4), and the SPAP proximity $\mu_S(E) = 1/\delta_S(E)$ measures how close to the SPAP boundary the self-referential processing must approach (Definition M.10.3). The processing cost diverges as $C_{\text{process}} \geq \Omega(\log \mu_S \cdot \mu_S^2)$ (Theorem M.10.3), and this cost is physical: it produces entropy (Theorem M.10.7), contributes to stress-energy (Definition B.8), and is asymmetrically measurable (Theorem M.10.5).
-
-This perspectival cost structure is the formal content of the intuition that observation is not passive reception but active participation. At Level 0, observation is symmetric and flat — every MPU processes every interaction at the same cost. At Level 2, observation becomes asymmetric and content-dependent — the same pattern can be externally modeled or screened at SPAP-flat cost by a more complex observer yet remain profoundly costly for a less complex receiver, depending on whose self-model it engages and what self-predictive performance it demands.
-
-The perspectival profile $\mathcal{P}_S(E)$ thus provides the formal bridge between the philosophical claim that "observation is fundamental" (P.2–P.3) and the mathematical apparatus of the framework (Sections 7–8, Appendices B, M, N). It makes precise the sense in which the observer is not interchangeable: two observers at the same location receiving the same signal may undergo different physical processes — different entropy production, different stress-energy contributions — because the signal engages their self-models differently. This asymmetry is an expenditure asymmetry, not a violation of thermodynamic bookkeeping: the excess cost is paid by the receiving system's own self-model update, while exact replay of that burden on another substrate would still have to reproduce it up to nonnegative overhead.
+The external-evaluation and screening statements of Theorems M.10.5 and M.10.8 likewise require their explicit model-access, decision, finite-family, and insulation certificates. Neither a bare aggregate-complexity ordering nor faithful replay proves sender-flat processing cost. The perspectival profile $\mathcal P_S(E)$ is therefore a descriptor of a fully specified receiver, pattern, update map, and implementation branch.
 
 ### P.5.8.5 Resolution of the Wigner's Friend Paradox
 
-The observer concept developed above, together with the perspectival formalism of Appendix M (§M.6), provides a principled resolution of the Wigner's Friend paradox [Wigner 1961] and its Frauchiger-Renner extension [Frauchiger & Renner 2018].
+The perspectival formalism supplies a conditional same-basis record-reading consistency theorem for Wigner's-friend-type protocols (Theorem M.6.1). Suppose that $F$ already carries a registered outcome $k$ on an independently supplied instrument, Born-selector, and actualization branch. If $W$ later satisfies the strong-readout hypotheses of Lemma M.6.1 for that record basis, the resulting record pair is supported on matching values of $k$.
 
-In the standard formulation: Friend $F$ performs a measurement inside a sealed laboratory and obtains a definite outcome. Wigner $W$, outside the laboratory, describes $F$'s laboratory as evolving unitarily — $F$ is in superposition. The paradox: how can $F$ have a definite outcome while $W$ describes $F$ as indefinite?
-
-The PU resolution (Theorem M.6.1, Appendix M): both descriptions are correct relative to their respective perspectives. $F$'s 'Evolve' interaction produces a definite outcome relative to $F$'s perspective $s_F \in \Sigma$ — this is a real, thermodynamically irreversible event with entropy production $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$. $W$'s description of $F$ as in superposition is correct relative to $W$'s perspective $s_W \in \Sigma$, because $W$ has not yet interacted with $F$'s laboratory. When $W$ opens the laboratory (performing a record-reading 'Evolve' interaction), the strong-readout mechanism (Lemma M.6.1) correlates $W$'s and $F$'s perspectives, producing agreement.
-
-This resolution requires no new physics beyond the perspectival state formalism already derived from the predictive foundations. Actuality is perspective-indexed, as established by Definition 24 (Perspectival State). Consistency between perspectives is dynamically achieved through interaction, via the transition kernel $G_{\text{persp}}(s'|s, k, N, \Delta t)$ (§M.3). The resolution parallels Einstein's relativization of simultaneity: just as "simultaneous" is frame-dependent but physics is consistent across frames, "definite" is perspective-dependent but physics is consistent across perspectives.
+Neither result proves that every `Evolve` interaction selects a definite outcome or produces entropy. A physical-reset cost requires Theorem 31's registered-reset hypotheses, and a stochastic arrow requires the separate Appendix O pathwise certificate. Definition 24 indexes retained states by perspective; it is not by itself an outcome ontology. The cross-perspective import obstruction is the narrower result stated below, and a complete Frauchiger--Renner dissolution still requires a formalized full protocol and verification of every inference.
 
 Definition M.6.2 requires a record-sharing or perspective-invariance certificate before an actualized record may be imported across distinct perspectives, and Lemma M.6.2a proves the corresponding import normal form for the retained calculus. Theorem M.6.2b applies this rule to the displayed Frauchiger–Renner-style import: when neither certificate exists, that import is ill typed. This establishes a precise obstruction to any argument containing such an import. A dissolution theorem for the complete Frauchiger–Renner protocol would additionally require a formal statement of the full protocol and verification of every inference step.
 
@@ -1649,18 +1647,18 @@ The following table summarizes how the PU observer concept relates to existing i
 |---------|-----------|-------------|-------------|-------|---------------|-----|
 | Observer defined? | No (primitive) | No (any subsystem) | No (environment) | No (agent) | No (any system) | Yes (Def P.5.8.1) |
 | Minimal observer specified? | No | No | No | No | No | Yes (MPU, Def 23) |
-| Measurement derived? | No (postulated) | Eliminated | Partial (no definiteness) | No (primitive) | No (relational) | Yes (Thm P.5.8.1) |
+| Measurement closed? | No (postulated) | Eliminated | Partial (no single-outcome law) | No (primitive) | No (relational) | Yes on the explicit PU principle set: Principles 8.0b–8.0c and Theorem 8.0d; Proposition 9 derives the ideal Lüders case |
 | Observer hierarchy? | No | No | No | No | No | Yes (§P.5.8.3) |
-| Content-dependent cost? | No | No | No | No | No | Yes (Thm M.10.3) |
-| Self-referential limits? | No | No | No | No | No | Yes (SPAP, Thm 10) |
-| Measurement asymmetry? | Implicit | No | No | Implicit | No | Proved (Thm M.10.5) |
-| Wigner's Friend resolved? | No (ambiguous) | Dissolved (all branches) | Partial | Dissolved (subjective) | Dissolved (relational) | Resolved (Thm M.6.1) |
+| Content-dependent cost? | No | No | No | No | No | Conditional on the certificates of Theorem M.10.3 |
+| Self-referential limits? | No | No | No | No | No | Yes, on the diagonal-closed SPAP class (Theorems 10--11) |
+| Measurement asymmetry? | Implicit | No | No | Implicit | No | Certificate-relative model-access asymmetry (Theorem M.10.5), not a universal measurement theorem |
+| Wigner's Friend resolved? | No (ambiguous) | Dissolved (all branches) | Partial | Dissolved (subjective) | Dissolved (relational) | Conditional same-basis record-reading consistency (Theorem M.6.1 under Lemma M.6.1's strong-readout hypotheses), not a complete outcome-ontology theorem |
 
-Two distinct admissibility criteria operate here, and it is important not to conflate them. The first is the *temporal* criterion invoked in Section 14.2.2: an interpretive ontology that makes future events into ontologically active inputs to present dynamics, or that replaces the forward predictive loop with an all-at-once global consistency constraint, falls outside PU's admissible class. Time-symmetric calculation rules such as pre/post-selection or weak-value bookkeeping are not targeted by this temporal criterion unless they are given an ontic future-boundary reading; in PU they are finite conditional protocol statistics of the ND-RID process tensor (Corollary M.6.14d). Copenhagen, Everettian, Bohmian, QBist, relational, GRW, histories, modal, and statistical interpretations are not targeted by the temporal criterion, since none of them require future-to-past influence as part of their basic kinematics. The second, more general criterion is the *Artifact Identification Criterion* of Section 14.2.4: a formal feature carries physical content only if specifying or distinguishing it respects finite channel capacity ($C_{\max} < \ln d_0$, Theorem E.2), the irreducible cycle cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), and operational finite resolution ($\delta > 0$, Appendix Q).
+Two distinct interpretive criteria are used here. The temporal rule is an explicit PU admissibility criterion directed at ontic future-to-present inputs and all-at-once replacements of the predictive loop; finite pre/post-selection and weak-value calculations remain ordinary conditional process-tensor statistics. The Artifact Identification Criterion can classify proposed surplus structure only relative to a stated finite-response branch. Finite capacity, a conditional reset ledger, SPAP, and finite resolution do not by themselves prove that a continuum ontology is unreal or empirically exclude an interpretation.
 
-Under the artifact criterion, PU's disagreement with the Everettian family is of a different character than with the retrocausal family. The disagreement is *not* about dynamics: Everettian unitary evolution is forward-evolving and empirically equivalent to ordinary quantum mechanics on the operational content, so no physics experiment could distinguish them. The disagreement is that the *ontological surplus* of the Everettian picture — an exact branch decomposition of the universal wavefunction treated as a physically instantiated totality beyond any finite perspectival record — cannot be specified within PU's admissibility class. Resolving the exact branch structure and all branch-indexed records demands capacity beyond $C_{\max}$ and distinctions below $\delta$; treating every branch as a completed physical actualization while avoiding any update cost also conflicts with the irreducible actualization cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$. The surplus therefore falls under the artifact criterion in the same structural sense as classical singularities do in Section 14.2.4: it is a feature of the continuum formalism, not of any physically instantiated predictive universe. PU accepts the empirical content of universal unitarity (indeed it derives unitarity in Theorem E.9.5), relative-state formal structure, and pre/post-selected weak-measurement statistics, and replaces the branching or future-boundary ontology with the perspective manifold $\Sigma$, finite ND-RID process-tensor conditioning, and the 'Evolve' actualization mechanism. The same artifact reading applies to the continuum configuration space of fundamental Bohmian mechanics, exact continuously tunable collapse parameters in GRW, and the ontic future boundary of retrocausal readings — in each case PU preserves the operational content and rejects only the continuum/ontological surplus that fails the criterion.
+Accordingly, the framework can quotient response-null labels and compare operational predictions, but it cannot infer the falsity of Everettian, Bohmian, GRW, or other ontologies from resource bounds alone. Theorem E.9.5 is itself conditional on its closed-system, retained-algebra, and ND-RID hypotheses and supplies neither the Born selector nor an actualization rule.
 
-The PU framework is the first to provide a complete formal specification: what an observer is (Definition P.5.8.1), what it must minimally be (Definition 23), what it cannot do (SPAP, Theorems 10–11), what observation costs (Theorem 31, Theorem M.10.3), and how observers of different complexity relate to each other and to the same information (Theorem M.10.5, §M.6.10).
+PU supplies a complete operational specification on its explicit physical principle set: Definition P.5.8.1 defines an observer; Definition 23 defines a minimal qualifying full-loop implementation; Theorems 10–11 delimit universally exact reflexive prediction; Principle 11b and Theorem 11b close the binary invariant response law; Principles 8.0b–8.0c and Theorem 8.0d close the complex carrier, Born ledger, quantum instrument, and single-outcome registration; and Theorems 31–31a supply the general and full-context reset ledgers. Each conclusion is tied to the exact principle or theorem that establishes it.
 
 ## P.6 Physical Instantiation: The Bridge from Logic to Physics
 
@@ -2206,10 +2204,10 @@ The following cases illustrate the PPI in action, showing how specific physical 
 
 *   **Case I: From the Requirement for Perfect Self-Reference to Quantum Mechanics**
     *   *Abstract Requirement:* A system capable of perfect, deterministic self-modeling—fully representing its own state in an internal model.
-    *   *Instantiation Problem:* Perfect self-modeling triggers infinite regress (Theorem 11, SPAP). The resulting Logical Indeterminacy (Definition 12) is computationally irreducible.
-    *   *Thermodynamic Bridge:* The fundamental predictive cycle (predict-verify-update) requires an irreversible 'Evolve' interaction for the verification step (Definition 27). This carries a minimum thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31).
-    *   *Physical Manifestation (Quantum Mechanics):* The logical indeterminacy is physically instantiated via the non-commuting algebra of quantum observables, the uncertainty relations, and the stochastic nature of measurement outcomes. Quantum mechanics is the unique, cost-efficient formalism for implementing computationally irreducible indeterminacy (PU **Section 8**, **Appendix G**).
-    *   *Conclusion:* QM is the law of systems that implement self-reference under fundamental uncertainty, with rigor derived via the Hilbert space construction in Appendix G.1.
+    *   *Instantiation Problem:* On the retained diagonal class satisfying Theorem 11's closure hypotheses, no single probabilistic predictor is uniformly exact on every self-referential instance. The resulting Logical Indeterminacy is a class-level nonexistence statement, not a literal temporal infinite regress or a universal numerical ceiling.
+    *   *Thermodynamic Bridge:* A cycle containing a registered reset obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ by Theorem 31, with a positive uniform floor only under an independent lower bound on $H_q(P\mid R)$. A directional stochastic-arrow conclusion additionally requires the pathwise certificate of Theorem O.3 or O.3a. Verification/update alone implies neither ledger.
+* *Physical Manifestation (Quantum Mechanics):* Principle 11b and Theorem 11b close the fixed-point-free binary response ledger; Principle 8.0b and Theorems G.1.8 and 8.0d close the complex rank-eight carrier; Theorems 8.2–8.3 close Born weights; and Principle 8.0c closes irreducible single-outcome registration. Noncommuting sharp effects realize Principle 8.0b's retained incompatibility witness.
+* *Conclusion:* Quantum mechanics is the fundamental MPU response calculus on the declared PU principle set. The diagonal theorem supplies the logical obstruction, while the carrier and actualization principles supply the physical inputs.
 
 *   **Case II: From the Requirement for Perfect Coherence to Gauge Theory**
     *   *Abstract Requirement:* A network of interacting entities that must maintain perfect, instantaneous, cost-free phase coherence, implicitly requiring infinite resources.
@@ -2267,7 +2265,7 @@ Without convex feasibility, an invariant objective, and the orbit-average condit
 
 ### P.6.5.1 The Entropy Correspondence Thesis
 
-Section 7.5 establishes the derivational chain connecting SPAP entropy ($\varepsilon_{SPAP} = \ln 2$) to gravitational entropy ($S_{BH} = \mathcal{A}/4G$). This section examines the interpretive and philosophical implications of this unification.
+Section 7.5 records a conditional chain joining a registered binary structural quotient, a separately implemented reset-support channel, geometric channel-density data, capacity saturation, and local-horizon Clausius hypotheses. It does not derive gravitational entropy from SPAP alone. This section examines the interpretive proposal that the resulting ledgers share a counting grammar while retaining distinct antecedents.
 
 **Thesis P.6.1 (Unified Entropy).** *There exists a single foundational entropic structure that manifests in different physical and informational contexts according to the operational constraints of that context. The various "types" of entropy recognized in physics and information theory are not independent concepts but domain-specific expressions of this unified structure.*
 
@@ -2275,7 +2273,7 @@ The correspondences are:
 
 | Entropy Domain | Formula | Connection to Unified Structure |
 |:---------------|:--------|:-------------------------------|
-| **SPAP** | $\varepsilon_0=\varepsilon_{\mathrm{SPAP}}=\ln2$ | Foundational: structural entropy quantum of self-referential prediction; physical instantiation incurs $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Thm 10–11, Thm 31) |
+| **Registered binary quotient and reset** | $\varepsilon_0=\ln2$ structurally; $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}$ physically | Definition 28, Definition J.1, and Theorem J.1 supply the structural binary value; Theorem 31 separately governs a registered physical reset |
 | **Shannon** | $H_{\mathrm{Sh}} = -\sum_i p_i \ln p_i$ | Generalization: cost of distinguishing among $n$ states |
 | **Thermodynamic** | $dS_{\mathrm{th}} = \delta Q / T$ | Landauer equivalence: shared counting structure under unit conversion |
 | **von Neumann** | $S_{\mathrm{vN}}(\rho) = -\operatorname{Tr}(\rho \ln \rho)$ | Quantum generalization preserving operational meaning |
@@ -2297,9 +2295,9 @@ The framework does not derive Landauer's principle from its axioms—that would 
 
 **2. PPI (Universality Guarantee)**
 
-The Principle of Physical Instantiation (Definition P.6.2) provides the *universality* of the unification within the framework. Without PPI, one could imagine abstract logical systems exempt from thermodynamic accounting. PPI forecloses this possibility: every logical operation must have a physical instantiation, and therefore the Landauer equivalence applies universally.
+The Principle of Physical Instantiation (Definition P.6.2) provides the carrier gate: every retained logical operation in the physical theory is represented by a finite physical process. It therefore prevents an abstract operation from bypassing the physical resource ledger, but it does not make every operation logically irreversible. Reversible embeddings and uncomputed ancillas may be implemented without an erasure heat floor.
 
-PPI does not establish the Landauer equivalence (that is Landauer's contribution). PPI ensures the equivalence applies to all logical operations within the framework—there are no abstract computations exempt from thermodynamic costs.
+Landauer accounting applies exactly when the physical process contains a registered cyclic many-to-one reset or overwrite. For an erased record $P$ with retained side record $R$, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; the lower bound is positive only when that conditional entropy is positive. Thus PPI makes the reset theorem applicable to every physical reset meeting its hypotheses, while the reset certificate determines which operations incur the bound.
 
 **3. Theorems E.1–E.3 and E.5 (Derived Extension)**
 
@@ -2307,7 +2305,7 @@ The extension of unified entropy to gravitational phenomena is *derived* within 
 
 $$\text{completed binary reset-support certificate}\xrightarrow{\text{E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
-consists entirely of theorems and lemmas proven from the framework's axioms. This is the novel contribution: showing that gravitational entropy follows necessarily from the SPAP entropy once Landauer provides the physical grounding.
+is a conjunction of branch theorems and calibration hypotheses. It shows that the Bekenstein--Hawking form follows only after the registered reset-support, area-density, capacity-saturation, operational-coupling, and local Clausius certificates are all imposed; neither SPAP nor Landauer alone supplies the gravitational conclusion.
 
 **Summary of Epistemic Status:**
 
@@ -2323,7 +2321,7 @@ consists entirely of theorems and lemmas proven from the framework's axioms. Thi
 
 **Assumptions:**
 
-1. **SPAP (Theorems 10–11):** Self-referential prediction within finite memory encounters logical limits requiring state merging. Proven from the framework's axioms in Section 4.
+1. **SPAP plus full-context cycle closure:** Theorems 10–11 prove the diagonal self-prediction obstruction on their stated classes. The injective reflex step does not erase information. The reusable full-context channel of Equation (7.1.3a), together with Principle 11b, supplies the separate noninjective Commit Snapshot reset whose erased conditional binary entropy is proved to be $\ln2$; this constructed reset, not SPAP alone, is the antecedent of the physical Landauer row.
 
 2. **Landauer's Principle:** Logical irreversibility entails thermodynamic cost when physically instantiated. Empirically confirmed principle providing the physical bridge.
 
@@ -2415,33 +2413,39 @@ $$
 \frac{\Delta S_{\mathrm{bath}}}{k_B\sum_jH_{q_j}(P_j\mid R_j)}=1.
 $$
 Neither ratio is defined when its denominator vanishes. ∎
-**Corollary P.6.3.2 (Stationary Action as Stationary SPAP Entropy, Fixed-Holonomy-Sector Branch).** *Within a fixed holonomy sector (Definition Q.0.2a), the classical stationary-action condition is equivalent to stationarity of the total SPAP entropy production along a trajectory (Corollary Q.0.3):*
+**Corollary P.6.3.2 (Stationary Action and a Calibrated Additive Event Ledger).** Within a fixed holonomy sector (Definition Q.0.2a), assume the calibrated identity $\mathcal S=\kappa_A\sum_i\varepsilon_i$ with constant $\kappa_A>0$ on a common admissible variation domain (Corollary Q.0.3). Then
 $$
-\delta\mathcal{S} = 0 \iff \delta\left(\sum_i \varepsilon_i\right) = 0.
+\delta\mathcal S=0
+\quad\Longleftrightarrow\quad
+\delta\left(\sum_i\varepsilon_i\right)=0.
 $$
-*Whether a given stationary history is a minimum of $\sum_i \varepsilon_i$, a maximum, or a saddle depends on the usual second-variation conditions. Classical Euler-Lagrange histories are therefore stationary points — not automatically minimum points — of the total SPAP entropy functional. The stationary-action principle is the continuum Euler-Lagrange expression of this SPAP stationarity, with minimization obtaining only when the second-variation conditions of Corollary Q.0.3 are additionally satisfied. Variations that change the holonomy sector fall outside this equivalence because the topological winding number contributes discretely to $\mathcal S=\kappa_A\sum_i\varepsilon_i$ on a calibrated branch across sectors.*
+The stationary history may be a minimum, maximum, or saddle according to the second variation. The result is a scalar-rescaling identity on the calibrated branch; it neither identifies the event ledger with physical entropy production nor derives the calibration from SPAP. Variations that change the holonomy sector lie outside the stated common domain.
 
 ---
 
-The framework derives values for several fundamental ratios from first principles:
+The framework supplies exact or forward-computable ratios on the following explicitly certified branches:
 
 - **The Planck ratio**: $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ from PCE optimization (Appendix Q, Equation Q.18)
 - **The fine-structure constant (Thomson limit)**: the closed-form sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$ with no continuous fit (Appendix Z, Theorem Z.26; Corollary Z.26a), landing $0.678$ ppm from the measured value; the certificate-complete comparison row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ is theorem-level only after the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1, the same-branch $R_\alpha=0$ subbranch is obstructed at the recorded comparison value by Corollary Z.27.11e.1, and the row is refutable by Corollary Z.26c
 - **The cosmological constant**: the five-mode formula $\Lambda L_P^2=8\pi A_{\text{eff}}e^{-2\kappa_{\mathrm{ref}}}$ with $\kappa_{\mathrm{ref}}=141.5$ is a reference branch obstructed as an unconditional false-vacuum closure by Theorem U.8c; the four-mode exponent branch fixes $\kappa=142$ under Theorem U.13b, while a theorem-level forward interval for $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ requires the accepted canonical Fredholm record $\mathfrak F_U^{(4)}$; the earlier $\mathfrak F_U+\mathfrak I_U^{(4)}$ records are equivalent only when supplemented by $H_4$, $\mathcal T_4$, and every remaining U.73e entry on the same branch
 
-These derivations represent predictions of the framework in the sense that the functional forms and discrete exponents are fixed by PU; where a one-loop prefactor (e.g., $A_{\text{eff}}$) enters, it is defined by the specified bounce and can be independently computed, while the observed value serves as a consistency check on its expected $O(1)$ magnitude. The fundamental structural quantities feeding the discrete backbone are $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ and $K_0=3$—both determined by the structure of self-referential prediction. PCE removes response-null overhead and selects the minimal admissible structural branch; physical equality $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)$ is the overhead-free implementation branch.
+These branch calculations use distinct structural inputs. The registered reachable binary quotient gives $\varepsilon_0=\ln2$, while Theorem 15 gives $K_0=3$ only on its (O1)–(O3), (FC) realization class. Neither value follows from SPAP alone. PCE comparisons and the same-class carrier comparator supply further branch selection; physical equality $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)$ is separately the zero-excess-dissipation reset branch.
 
-**Corollary P.6.2.1 (Status of the Gravitational Constant).** *Within the framework, the gravitational constant $G$ is expressed in terms of information-theoretic quantities:*
-
-$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}(f_{RID})} \quad \text{(Equation E.9)}$$
-
-*The quantities on the right-hand side have clear physical interpretations:*
-- *$\delta$: the MPU spacing, determined by PCE optimization to be $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$*
-- *PCE equilibrium values $\eta^*=1$ and $\chi^*=1$ (Lemmas Q.2.2–Q.2.3) enforce maximal effective boundary-channel density*
-- *$C_{\max}$: channel capacity, with PCE-optimal value $C_{\max}^* = 2\ln 2$ (Equation E.15)*
-- *$c$, $\hbar$: conversion factors between domains*
-
-*This expression identifies $G$ as emergent from the information-processing structure of the predictive substrate. The Planck scale $L_P = \sqrt{G\hbar/c^3}$ is determined by the PCE-optimal spacing $\delta \approx 2.355 \, L_P$ (Appendix Q).*
+**Corollary P.6.2.1 (Operational Coupling and Spacing Identity).** On Theorem E.6's capacity-achieving, entropy-saturating, additive boundary-ledger branch, define the operational gravitational coupling by
+$$
+G_{\mathrm{op}}
+=
+\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}.
+$$
+On the further Appendix Q branch with completed binary reset support at $d_0=8$, residual-budget saturation $C_{\max}^*=2\ln2$, throughput-optimal independence $\chi^*=1$, and ideal packing $\eta^*=1$, identifying $G_{\mathrm{op}}$ with measured $G$ gives
+$$
+\frac{\delta}{L_P}
+=
+\sqrt{8\ln2},
+\qquad
+L_P^2=\frac{G\hbar}{c^3}.
+$$
+*Proof.* The first identity is Equation E.9. Substituting the three registered branch values and the calibration $G_{\mathrm{op}}=G$ yields $\delta^2=8\ln2\,G\hbar/c^3=8\ln2\,L_P^2$. Positivity fixes the displayed square root. Thus the ratio is an exact algebraic output of the stated joint certificate; the measured value of $G$ is the calibration that sets the absolute length scale.
 
 ---
 
@@ -2461,11 +2465,19 @@ The entropy unification provides rigorous grounding for conjectures that have sh
 
 The framework achieves what these pioneers conjectured but could not derive from first principles: that black-hole entropy and thermodynamic entropy are linked by the same underlying counting structure, with the Bekenstein-Hawking expression furnishing the gravitational realization of that structure.
 
-The derivation chain—from SPAP through Landauer to channel capacity to area law—makes this correspondence explicit and traceable:
-
-$$\varepsilon_{SPAP} = \ln 2 \to C_{\max}\le 3\ln2-\ln2=2\ln2 \to \sigma_{link} \to \frac{1}{4G} \to S_{BH} = \frac{\mathcal{A}}{4G}$$
-
-This chain ultimately determines the relationship between the Planck scale and the strength of gravity.
+The conditional route from a binary reset-support channel to the area law is
+$$
+\left.
+\begin{aligned}
+&\text{registered completed binary reset support},\\
+&\text{area-density and capacity-saturation certificates},\\
+&\text{operational-coupling calibration and local Clausius hypotheses}
+\end{aligned}
+\right\}
+\Longrightarrow
+S_{BH}=\frac{\mathcal A}{4G}.
+$$
+The structural value $\varepsilon_0=\ln2$ enters only through the registered binary-support branch. SPAP alone supplies none of the reset channel, geometric density, saturation, coupling calibration, or Clausius premises, and the chain does not independently determine the Planck scale or measured $G$.
 
 The unification explains why black hole thermodynamics works: horizons are information-capacity boundaries, and the Bekenstein-Hawking entropy counts the Shannon entropy of the channel capacity across the boundary, measured in Planck units. The "unreasonable effectiveness" of thermodynamic reasoning in gravitational physics is therefore not unreasonable—it reflects the same counting structure reappearing in a geometric domain.
 
@@ -2541,17 +2553,17 @@ a=2,\\
 &a=2+d_0=8+b=d_0-a+\text{SLD-QFI interface chart}
 \longrightarrow
 M=2ab=24,\\
-&M=24+\text{channel-complete Bures tangent-cell contract}
+&M=24+\text{verified response-labeled $24$-cell}+\text{least-feasible support cost}
 \longrightarrow
-K(D)=24
+24\le K(D)
 \longrightarrow
 D=4.
 \end{aligned}
 $$
 
-The first row is a conditional thermodynamic inequality and has a positive constant floor only if $H_q(P\mid R)\ge h_{\min}>0$. Equality additionally requires a quasistatic, overhead-free reset implementation. The remaining rows form a structural chain only on the explicitly named branch intersection. In the last row, Theorem Z.11 uses $K(4)=24$, $K(D)\leq12$ for $D\leq3$, and $K(D)\geq40$ for $D\geq5$ to obtain the unique positive-integer solution $D=4$.
+The first row is a conditional thermodynamic inequality and has a positive constant floor only if $H_q(P\mid R)\ge h_{\min}>0$. Equality additionally requires a quasistatic, overhead-free reset implementation. The remaining rows form a structural chain only on the explicitly named branch intersection. In the last row, Theorem Z.11 uses $K(3)=12$ to exclude $D\le3$, the verified response-labeled regular $24$-cell to prove feasibility in $D=4$, and the strict surplus-dimension cost to select the least feasible value. No global equality $M=K(D)$ is required.
 
-The Golay code is selected only on the additional predictive-recovery MacWilliams branch. A Leech lattice is selected only after the independent gluing or even/unimodular/rootless certificate. Gauge, coupling, matter, and continuum outputs retain the separate hypotheses and status labels stated in their source theorems.
+The Golay code is selected only on the additional predictive-recovery MacWilliams branch. A Leech lattice is selected only after either the registered Golay-to-Leech construction or the fixed-normalization even-unimodular carrier and finite Gaussian-cost certificate of Selection Principles P.13.7–P.13.9. Gauge, coupling, matter, and continuum outputs retain the separate hypotheses and status labels stated in their source theorems.
 
 **Remark P.7.1: Branch Scope.** The value $M=24$ is necessary within the intersection of the active-record, structural-reference, no-surplus, $d_0=8$, and SLD-QFI interface branches. POP, a physical Landauer bound, complex Hilbert-space structure, or an octonionic carrier does not separately entail that intersection. The result is therefore a necessity theorem for the declared admissible class, not a requirement for predictive existence in every possible implementation.
 
@@ -2604,7 +2616,7 @@ which is the QFI interface formula (Theorem Z.5). ∎
 
 **Proposition P.7.2 (Spectral Properties).** The eigenvalues of $L(a)$ are:
 $$\lambda_1 = 1, \qquad \lambda_2 = -2a^2.$$
-In particular, in the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), one has $\lambda_2 = -d_0$.
+At the registered joint point where Theorem Z.1 gives $a=2$ and Theorem Z.2 gives $d_0=8$, the numerical consistency identity $d_0=2a^2$ holds, so $\lambda_2=-d_0=-8$.
 
 *Proof.* The matrix is lower triangular, so the eigenvalues are the diagonal entries: $\lambda_1 = 1$ and $\lambda_2 = -2a^2$. Under $d_0 = 2a^2$ this becomes $\lambda_2 = -d_0$; for PU values $a=2$ and $d_0=8$ it gives $\lambda_2=-8$. ∎
 
@@ -2618,16 +2630,17 @@ In particular, in the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), one has $
 | Determinant | $\det(L) = -2a^2$ | $-8$ | $-d_0$ |
 | Eigenvalue ratio | $\lambda_2/\lambda_1$ | $-8$ | $-d_0$ |
 
-The determinant encodes Hilbert space dimension; the trace encodes its deviation from unity.
+At the registered joint point $(a,d_0)=(2,8)$, the determinant and trace are numerically $-d_0$ and $1-d_0$. Away from that point they encode only the matrix parameter $a$; the matrix supplies no independent carrier-dimension theorem.
 
 #### P.7.4.3 Eigenvector Interpretation
 
 **Proposition P.7.3 (Eigenvector Structure).** The eigenvectors of $L(a)$ are:
 $$v_1 = \begin{pmatrix} 2a^2 + 1 \\ 2a \end{pmatrix} \quad (\lambda_1 = 1), \qquad v_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \quad (\lambda_2 = -2a^2)$$
-In the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), these become $v_1 = \begin{pmatrix} d_0 + 1 \\ 2a \end{pmatrix}$ and $\lambda_2 = -d_0$.
+At the registered joint point $(a,d_0)=(2,8)$, where $d_0=2a^2$ holds as a consistency identity, these become $v_1=(d_0+1,2a)^T$ and $\lambda_2=-d_0$.
 
 **Interpretation:**
-- $v_1$ (invariant direction): Transformations along this eigenvector preserve the constraint surface. At the PU fixed point ($d_0=2a^2$, $a=2$), the ratio $(d_0 + 1)/(2a) = 9/4$ encodes the dimension-kernel relationship.
+- $v_1$ is the eigenvector of $L(a)$ with eigenvalue $1$; the ratio $9/4$ at $(a,d_0)=(2,8)$ is a numerical matrix invariant, not a new dimension--kernel law.
+- $v_2=(0,1)^T$ is the eigenvector with eigenvalue $-2a^2$; it does not by itself define a physical scaling transformation.
 - $v_2$ (scaling direction): Pure interface scaling. Transformations along $(0,1)^T$ affect only $M$, not $d_0$.
 
 #### P.7.4.4 The Encoding Interpretation
@@ -2635,7 +2648,7 @@ In the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), these become $v_1 = \beg
 **Remark P.7.4: Constraint Encoding.** The matrix $L(a)$ encodes the complete constraint structure:
 - **Input:** $(d_0, 1)$ — Hilbert dimension and unity
 - **Output:** $(d_0, M)$ — Hilbert dimension and interface modes
-- **Constraint:** $\lambda_2 = -2a^2 = -d_0$ (Theorem Z.2) — Landauer-SPAP relation in spectrum
+- **Constraint:** $\lambda_2=-2a^2=-d_0$ at $(a,d_0)=(2,8)$ — a consistency identity on the joint Theorem-Z.1/Theorem-Z.2 branch, not a Landauer–SPAP spectral law
 - **Thermodynamics:** $\varepsilon_0=\ln2$ is structural; a registered reset obeys $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$, with a positive floor only under $H_q(P\mid R)\ge h_{\min}>0$, with $a=2$ following from the structural capacity/record/no-surplus gates rather than physical saturation
 
 
@@ -2653,35 +2666,27 @@ Its spectrum records these algebraic relations. Separately, a registered reset e
 
 | Domain | Structure | Encoded Content |
 |:-------|:----------|:----------------|
-| Quantum mechanics | Hamiltonian $H$ | Energy spectrum |
-| General relativity | Metric $g_{\mu\nu}$ | Causal structure |
-| PU framework | Constraint matrix $L(a)$ | Landauer bound |
+| Quantum mechanics | Hamiltonian $H$ | Energy spectrum on its declared domain |
+| General relativity | Metric $g_{\mu\nu}$ | Causal and interval structure on the Lorentzian branch |
+| PU framework | Constraint matrix $L(a)$ | Algebraic repackaging of $M=2a(d_0-a)$; no Landauer theorem follows from the matrix |
 
 #### P.7.4.5 Parameter Rigidity
 
-**Proposition P.7.4 (Rigidity Analysis).** The constraint matrix reveals rigid aspects:
-- **Form rigid:** $L(a) = \begin{pmatrix} 1 & 0 \\ 2a & -2a^2 \end{pmatrix}$ from $M = 2a(d_0 - a)$
-- **Eigenvalue rigid:** $\lambda_2 = -2a^2 = -d_0$ arises from $d_0 = 2a^2$
-- **Structurally fixed:** $a=2$ from the sharp binary record, structural $\varepsilon_0=\ln2$ capacity gate, and PPI/PCE no-surplus selection; physical equality is not required
+**Proposition P.7.4 (Branchwise Rigidity Analysis).** The matrix has the algebraically fixed form
+$$
+L(a)=
+\begin{pmatrix}
+1&0\\
+2a&-2a^2
+\end{pmatrix}
+$$
+whenever the QFI mode formula $M=2a(d_0-a)$ is adopted. On the separate Theorem-Z.1 branch, the sharp binary record, entropy-capacity, and no-surplus hypotheses give $a=2$. On Theorem Z.2's (O1)–(O3), (FC), Hilbert-distinguishability, and same-class-comparator branch, $d_0=8$. Only on their conjunction does $\lambda_2=-2a^2=-d_0=-8$. The matrix itself derives none of those branch inputs.
 
-
-- **Logically fixed:** $d_0 = 8$ from $K_0 = 3$ bits (Theorem 15)
-
-No free parameters enter. The matrix $L(2)$ is fully determined.
-
-**Corollary P.7.4.1 (Counterfactual Analysis).** For hypothetical universes:
-
-| $\varepsilon$ | $a$ (minimal admissible) | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ |                            $K(D) = M$?                           |
-| :------------ | :----------------------: | :----------: | :-------------: | :---------: | :--------------------------------------------------------------: |
-| $\ln 2$       |             2            |       8      |        24       |     $-8$    |                          $D = 4$ ✓                               |
-| $\ln 3$       |             3            |      18      |        90       |    $-18$    | No (standard bounds give $K(6)\le77<90<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012]) |
-| $\ln 4$       |             4            |      32      |       224       |    $-32$    | No (standard bounds give $K(7)\le134<224<240=K(8)$ [Boyvalenkov et al. 2012]) |
-
-Only $\varepsilon_0=\ln2$ yields $M$ equal to a kissing number (indeed $K(4)=24$) within the rigorously checked range above.
+**Corollary P.7.4.1 (Counterfactual Scope).** The current theorem package does not define $a$, $d_0$, or $M$ for hypothetical structural values $\varepsilon=\ln3,\ln4,\ldots$. Such a continuation requires a new reachable alphabet, active-kernel selection theorem, carrier comparator, and mode-channel contract. Therefore no exclusion of those counterfactual branches by the unproved assignments $(a,d_0,M)=(3,18,90),(4,32,224),\ldots$ is available.
 
 #### P.7.4.6 Summary
 
-The Landauer constraint matrix $L(a)$ provides compact notation for the foundational derivation chain. This matrix formulation offers notational convenience but no additional physical content beyond Theorems Z.1 and Z.5; the eigenvalue $\lambda_2 = -2a^2$ (hence $\lambda_2 = -d_0$ under $d_0=2a^2$, Theorem Z.2) is a consequence of the matrix construction rather than an independent result.
+The matrix $L(a)$ is convenient notation for the QFI identity $M=2a(d_0-a)$. At the registered joint point $(a,d_0)=(2,8)$ its second eigenvalue is numerically $-8=-d_0$; this is a branch consistency identity, not an independent structural or thermodynamic law.
 
 **Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.
 
@@ -2689,11 +2694,11 @@ The Landauer constraint matrix $L(a)$ provides compact notation for the foundati
 
 ## P.8.1 The Emergence Thesis
 
-The Predictive The Predictive Universe framework treats spacetime as emergent finite-response structure rather than a fundamental substrate. Its causal and metric claims are carried by the intervention-response, latency, causal-diamond, regularity, and continuum certificates. A classical error-correcting code is a separate optional structural ledger.
+The Predictive Universe framework treats spacetime as emergent finite-response structure rather than a fundamental substrate. Its causal and metric claims are carried by the intervention-response, latency, causal-diamond, regularity, and continuum certificates. A classical error-correcting code is a separate optional structural ledger.
 
 **Definition P.8.1 (Causal Structure).** Event $A$ can causally influence event $B$ if and only if $A$'s predictive information can propagate to $B$ through ND-RID channels with correctable error accumulation.
 
-**Definition P.8.2 (Spacetime as Optimal Predictive Coherence).** Spacetime is the structure that error-corrected predictive coherence takes when optimized under finite-resource constraints (PCE). Equivalently: spacetime is what the Golay code looks like from within the network that implements it.
+**Definition P.8.2 (Certificate-Relative Predictive Spacetime).** On the accepted locality, causal-response, regularity, continuum, and metric-reconstruction branch, spacetime is the effective geometry representing finite-response propagation and predictive coherence. The Golay code is an independent optional recovery ledger and is not identified with spacetime.
 
 **Thesis P.8.1 (Spacetime Emergence).** Spacetime—including its dimensionality, geometry, causal structure, and temporal direction—emerges from the structure of error-corrected predictive coherence across the MPU network. Spacetime is not the stage on which prediction occurs; spacetime is the geometric manifestation of prediction maintaining itself optimally under finite-resource constraints.
 
@@ -2711,7 +2716,7 @@ $$
 &\text{registered physical reset }(P,R,q) &&\longrightarrow \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R),\\
 &\text{sharp match/mismatch quotient}+\text{structural reference branch} &&\longrightarrow \varepsilon_0=\ln2,\\
 &\text{active record}+\text{capacity}+\text{no-surplus}+d_0=8+\text{SLD-QFI chart} &&\longrightarrow a=2\longrightarrow M=24,\\
-&M=24+\text{channel-complete Bures tangent-cell contract} &&\longrightarrow D=4.
+&M=24+\text{faithful tangent-shell injection}+\text{strict least-feasible support cost} &&\longrightarrow D=4.
 \end{aligned}
 $$
 
@@ -2731,7 +2736,7 @@ A positive constant floor requires $H_q(P\mid R)\ge h_{\min}>0$. Equality requir
 
 The term "Landauer Pointer" denotes a physical implementation only when the separate registered-reset hypotheses are present; structurally it is the two-dimensional active verification record.
 
-**Stage 5: Interface Mode Count (Theorem Z.5).** The MPU Hilbert space dimension $d_0 = 8$ (Theorem 23) partitions as $d_0 = a + b = 2 + 6$. The Quantum Fisher Information (QFI) structure on this partition yields:
+**Stage 5: Interface Mode Count (Theorem Z.5).** On the joint carrier and active-kernel branch, Theorem Z.2 gives $d_0=8$ and Theorem Z.1 gives $a=2$, so $b=d_0-a=6$. The registered SLD-QFI tangent structure on this partition yields:
 
 $$
 M = 2ab = 2 \cdot 2 \cdot 6 = 24
@@ -2739,19 +2744,13 @@ $$
 
 This is the count of QFI-active modes connecting the active and inactive subspaces.
 
-**Stage 6: Dimensional Selection (Theorem Z.11).** At PCE-optimal equilibrium, the mode-channel correspondence (Theorem Z.10) requires:
-
+**Stage 6: Dimensional Selection (Theorem Z.11).** Definition Z.9a supplies a response-preserving injection of the $M=24$ retained labels into distinct cells of an equal-radius Euclidean tangent shell. Theorem Z.10 therefore gives
 $$
-M_{\text{int}} = M_{\text{phys}} = K(D)
+24=M\le K(D).
 $$
+Since $K(3)=12$, no dimension $D\le3$ is feasible. The response-labeled regular $24$-cell supplies an explicit feasible shell in $D=4$, and the registered strict surplus-dimension cost selects that least feasible dimension. Thus $D=4$ follows on this branch without assuming $M=K(D)$.
 
-where $K(D)$ is the kissing number in $D$ dimensions. Since $M_{\text{int}} = 24$ and $K(4) = 24$ uniquely among integer dimensions:
-
-$$
-D = 4
-$$
-
-**Stage 7: Independent Code, Lattice, and Local-Packing Ledgers.** The predictive-recovery branch selects the classical $[24,12,8]$ Golay code. A Leech lattice follows only after the registered discriminant-form/coset-minimum gluing datum of Lemma R.4.5 is supplied. Independently, the channel-complete $M=K(D)=24$ branch selects $D=4$, whose local kissing configuration may be represented by the $24$-cell. The three records share a count but do not form an unconditional implication chain.
+**Stage 7: Independent Code, Lattice, and Local-Packing Ledgers.** The predictive-recovery branch selects the classical $[24,12,8]$ Golay code. The coordinate construction and Gaussian Niemeier selector independently fix the Leech lattice on their stated branches. The faithful tangent-shell branch uses $24\le K(D)$, $K(3)=12$, the regular $24$-cell, and least-feasible support cost to select $D=4$. These records share a count and commute on the joint certificate; none substitutes for another's premises.
 
 
 
@@ -2776,7 +2775,7 @@ Spacetime emerges as a unity. The same foundational structure that produces spat
 
 *Derivation.* The logical ordering of the predictive cycle is irreversible: a prediction must be generated before it can be verified, and verification must occur before the model can be updated. This Predict → Verify → Update sequence defines a primitive notion of directed process that is logically prior to physical time (Appendix O, Section O.5).
 
-The physical instantiation of this logical ordering is the 'Evolve' process (Definition 27), which carries the irreducible thermodynamic cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31). This cost acts as a thermodynamic ratchet: every predictive cycle dissipates entropy, making the cycle physically irreversible. The logical arrow of the predictive cycle is thereby locked into physical irreversibility by ubiquitous microscopic thermodynamics (Appendix O, Theorem O.3).
+The 'Evolve' process (Definition 27) need not itself be a reset. When a cycle contains a registered logically irreversible reset, Theorem 31 gives $Q\ge k_BT H(P\mid R)$ for that operation. A physical arrow follows only on Appendix O's common-path-measure branch with positive entropy production; reversible or zero-conditional-entropy cycles are not declared dissipative.
 
 Spatial structure emerges from the network topology of which-MPU-interacts-with-which. The propagation cost metric $d_{\mathcal{N}}(u,v)$ (Definition 35) defines "distance" as the minimum cumulative cost of propagating predictive information along network paths. "Nearby" means "within efficient interaction range." PCE optimization drives the network toward Geometric Regularity (Theorem 43), producing a smooth manifold structure in the continuum limit (Theorems 44–45). ∎
 
@@ -2828,59 +2827,21 @@ The conditional Landauer theorem bounds mean bath heat for a registered reset bu
 
 ## P.8.5 The Emergence of Dimension
 
-**Theorem P.8.3 (Dimensional Emergence).** The spatial dimensionality $D = 4$ emerges uniquely from the mode-channel matching condition:
+**Theorem P.8.3 (Faithful-Shell Minimal Carrier Dimension).** Assume the joint Appendix Z branch on which Theorem Z.5 gives $M=24$, Definition Z.9a supplies a response-preserving injection of those labels into distinct cells of an equal-radius Euclidean tangent shell, the regular $24$-cell is an admissible realization, and the comparison ledger assigns strictly greater surplus-carrier cost to every feasible dimension above the least feasible one. Then the selected carrier dimension is $D=4$.
 
+*Proof.* A faithful shell in dimension $D$ requires
 $$
-M_{\text{int}} = K(D)
+24=M\le K(D).
 $$
+Since $K(3)=12$ and kissing number is nondecreasing, no $D\le3$ is feasible. The regular $24$-cell gives an explicit $24$-cell shell in $D=4$, so $D=4$ is feasible. It is therefore the least feasible dimension, and the registered strict surplus-carrier cost excludes every $D>4$. No equality $M=K(D)$ and no value of $K(5)$ is required. ∎
 
-where $M_{\text{int}} = 24$ (Theorem Z.5) and $K(D)$ is the kissing number in $D$ dimensions.
+**Corollary P.8.3 (Certificate-Relative Four-Dimensional Carrier).** On the stated faithful-shell and strict-cost branch, $D=4$ is the unique selected Euclidean response-carrier dimension. Promoting it to a $3+1$ Lorentzian spacetime requires the separate continuum, hyperbolic-principal-symbol, time-orientation, and metric-reconstruction certificates.
 
-*Proof.*
-
-**Step 1 (Interface mode count).** From foundational constants: $d_0 = 8$ (Theorem 23), the structural binary reference $\varepsilon_0=\ln2$; any physical reset instead obeys $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ and equality requires a specified saturating ensemble
-
-
-
-**Step 2 (Geometric regularity).** Theorem 43 establishes that PCE optimization drives the MPU network toward geometric regularity, admitting description as a smooth $D$-dimensional manifold for some integer $D$.
-
-**Step 3 (Channel capacity).** Each QFI-active mode requires a distinguishable spatial channel for actualization through ND-RID interactions. The maximum number of operationally distinguishable channels around any point is bounded by the kissing number $K(D)$—the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$ dimensions (Theorem Z.8).
-
-**Step 4 (Equilibrium saturation).** At PCE equal-cap equilibrium, entropy maximization drives the channel configuration to the kissing limit: $M_{\text{phys}} = K(D)$ (Theorem Z.9).
-
-**Step 5 (PCE mode-channel correspondence).** PCE minimization requires $M_{\text{int}} = M_{\text{phys}}$ (Theorem Z.10). Deviations in either direction incur quantifiable costs:
-
-- *Dark modes* ($M_{\text{int}} > M_{\text{phys}}$): QFI-active modes without a spatial actualization channel contribute positive operational/maintenance cost in $V_{\mathrm{op}}$ (Definition D.1) but generate no predictive benefit, violating POP (Axiom 1); the natural per-cycle irreversibility scale entering these costs is set by $\varepsilon$ (Theorem 31)
-- *Empty channels* ($M_{\text{int}} < M_{\text{phys}}$): Spatial channels without an information mode contribute propagation/maintenance overhead in $V_{\mathrm{prop}}$ (Definition D.1) with zero information throughput, violating PCE (Definition 15)
-
-The mismatch cost $V_{\mathrm{mc}} \ge 0$ vanishes if and only if $M_{\mathrm{int}} = M_{\mathrm{phys}}$ (Theorem Z.10, Step 1).
-
-**Step 6 (Unique solution).** The combined condition $M_{\text{int}} = K(D)$ becomes $24 = K(D)$. Consulting kissing numbers:
-
-| D | K(D) |
-|---|------|
-| 1 | 2 |
-| 2 | 6 |
-| 3 | 12 |
-| **4** | **24** |
-| 5 | 40 |
-
-The unique solution is $D = 4$. ∎
-
-**Corollary P.8.3 (Four Dimensions as Necessity).** Emergent spacetime is 4-dimensional not because of anthropic selection or mathematical elegance, but because:
-
-- Fewer dimensions: $K(3)=12<24$, insufficient channels, predictive coherence fails
-- More dimensions: already in dimension $5$ one has at least $40$ channels [Boyvalenkov et al. 2012], so every $D\ge5$ has strictly more than $24$ channels by monotonicity
-
-Four dimensions is the unique PCE optimum given $M=24$.
-
-**Remark P.8.2: Geometric Frustration and Self-Consistency.** The discrete nature of kissing numbers means that arbitrary values of $M_{\text{int}}$ would not necessarily have integer-dimensional solutions. For example, if foundational constants yielded $M_{\text{int}}=30$, no dimension $D$ satisfies $K(D)=30$ exactly: $K(4)=24$, while standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012], and kissing numbers are monotone nondecreasing in the dimension. Such a universe would exhibit "geometric frustration"—inability to achieve perfect mode-channel matching—potentially preventing stable spacetime emergence.
-
-This observation has deeper implications. The specific values $d_0=8$ and $\varepsilon_0=\ln2$ that yield $M=24$ are precisely those for which an exact solution exists. As analyzed in **Remark Z.6**, this is not coincidental: if foundational constants yielded $M_{\text{int}}=8$ (from $d_0=4$), no integer dimension satisfies $K(D)=8$ because $K(2)=6<8<12=K(3)$; similarly, $M_{\text{int}}=96$ (from $d_0=16$) finds no match because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012]. The framework does not merely accommodate $D=4$—it predicts it as the unique solution to mode-channel matching given self-consistent foundational constants.
-
-Universes with geometrically frustrated mode counts may be logically conceivable but physically unrealizable, as they cannot achieve the stable PCE equilibrium required for spacetime emergence. The derivation chain:
-$$\varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1: active record + capacity}} a = 2 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{channel-complete }K(D) = M} D = 4$$
-represents a self-consistent fixed point of the framework's constraints, not a selection from alternatives.
+**Remark P.8.2 (Counterfactual Scope).** For another independently fixed label count $M'$, the same selector is
+$$
+D_{\min}(M')=\min\{D\in\mathbb N:K(D)\ge M'\},
+$$
+provided an admissible response-preserving shell is explicitly constructed at the first feasible dimension. Counts that do not equal a kissing number are not geometrically frustrated: saturation is unnecessary. Thus $M'=8$ can use eight cells from a twelve-contact configuration in $D=3$, and $M'=30$ can use thirty cells from a known forty-contact configuration in $D=5$, subject in each case to the registered response-labeling certificate.
 
 ---
 
@@ -2948,19 +2909,13 @@ The PU chain links information-theoretic constraints to finite structural ledger
 
 
 
-John Wheeler proposed "It from Bit"—physics emerging from information. The PU framework completes this vision with an essential refinement:
+John Wheeler's “It from Bit” motivates the stronger finite-substrate question: which registered information can remain recoverable under a specified physical noise channel?
 
-**It from Error-Corrected Bit.**
+**It from Certified Recoverable Bit.**
 
-Pure information is fragile—it degrades, decoheres, dissolves under noise and thermal fluctuations. Only error-corrected information maintains itself. The "It" of physics requires not just "Bit" but "Bit protected by redundancy."
+On the predictive-recovery branch, the binary self-dual $[24,12,8]$ Golay code is the unique admitted code maximizing the registered distance objective. The explicit Construction-B gluing theorem maps the marked code data to the rootless even unimodular lattice $\Lambda_{24}$, and Theorem P.13.10 independently selects that lattice as the strict Gaussian theta-cost minimizer on the fixed-normalization Niemeier class. The faithful Bures tangent-shell contract separately proves $24\le K(D)$ and selects the least feasible $D=4$ using $K(3)=12$ and the regular $24$-cell.
 
-The specific protection mechanism determines the specific physics:
-
-- 24 modes → Golay code → Leech geometry → 4D spacetime
-- Rate-1/2 code → 12 signal + 12 parity → matter + gauge redundancy
-- Distance 8 → 3-error correction → stability under quantum noise
-
-Wheeler asked how physics emerges from information. The framework's answer: through the unique structure that allows information to persist under finite-resource constraints. That structure is PCE-optimal error correction. Its geometric form is spacetime.
+Physical quantum protection uses the punctured $[23,12,7]$ witness and its $[[23,1,7]]$ CSS construction only inside the accepted certificate $\mathfrak C_{\mathrm{GQEC}}$, which supplies a noise model, syndrome extraction, implementable recovery, threshold inequality, leakage/correlation audit, and non-transversal resource ledger. The rate-$1/2$ signal/parity split is code bookkeeping; matter/gauge interpretation requires the separate response map. Thus the code, lattice, dimension, and physical-QEC mechanisms form a commutative certified chain without identifying one theorem's premises with another's.
 
 # P.8.9a What is Life?
 
@@ -2972,23 +2927,19 @@ This section therefore separates thermodynamic cost, recovery capacity, redundan
 
 
 
-This section develops this identification across five domains: the thermodynamic necessity of biological code and the negentropy–error correction identity (P.8.9a.1–2), the structure of DNA as error-correcting organization (P.8.9a.3–4), the treatment of evolution as PCE optimization across generations (P.8.9a.5–6), the emergence of Consciousness Complexity in biological aggregates (P.8.9a.7–8), and testable predictions for biological research (P.8.9a.9–10).
+This section develops this comparison across five domains: the thermodynamic conditions under which biological recovery is required and the separation of negentropy, capacity, and redundancy (P.8.9a.1–2), the structure of DNA as error-tolerant organization (P.8.9a.3–4), the conditional generational-PCE representation of normalized selection (P.8.9a.5–6), the emergence of Consciousness Complexity in biological aggregates on its stated branches (P.8.9a.7–8), and testable predictions for biological research (P.8.9a.9–10).
 
 ---
 
 ## P.8.9a.1 The Thermodynamic Imperative for Code
 
-The PU On a completed physical reset-support branch, each implemented predictive cycle obeys the registered entropy floor
+On a completed physical reset-support branch, each implemented registered reset obeys
 $$
-\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0).
+\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R).
 $$
-This is a reset-cost statement. It does not imply that every persistent system's retained organizational variables undergo continuous degradation. Recovery becomes necessary only after the degradation-bearing or mixing hypothesis used in Theorem P.8.9a.1 is verified.
+A branch-uniform positive floor requires the additional certificate $H_q(P\mid R)\ge h_{\min}>0$. This is a conditional reset-cost statement from Theorem 31; it does not imply that every predictive cycle contains such a reset, that every persistent system undergoes continuous degradation in its retained variables, or that a recovery mechanism is required without the degradation-bearing or mixing hypotheses of Theorem P.8.9a.1.
 
- Every predictive cycle produces irreducible entropy:
 
-$$\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch} \text{ nats}$$
-
-(Theorem 31, rigorously derived in Appendix J). This is not an approximation but a logical necessity: the Landauer bound [Landauer 1961] applied to self-referential prediction. Any system that persists—that maintains its organization across time—must contend with this continuous entropic degradation.
 
 On the predictive-recovery MacWilliams branch, the classical ledger independently fixes $R=k/n=1/2$ and then selects the extended Golay code at fixed $(n,k)$. This supplies a candidate redundancy organization, not a physical recovery mechanism. A physical claim requires an encoder, channel, syndrome instrument, decoder, and reset-resource ledger.
 
@@ -3056,37 +3007,37 @@ Both represent stored capacity to restore order after degradation. The parity mo
 
 ### P.8.9a.2.3 Quantitative Correspondence
 
-The equivalence between negentropy and error correction is quantitatively exact within the framework.
+The following is a conditional numerical identity between two separately registered branch values.
 
-**Theorem P.8.9a.2 (Information Budget Balance).** The information invested in error correction exactly equals the entropy cost of prediction:
+**Theorem P.8.9a.2 (Conditional Rate–Budget Identity).** Assume the residual-budget same-family saturation branch on which
+$$
+C_{\max}^*
+=
+\ln d_0-\varepsilon_0
+=
+2\ln2
+$$
+for $(d_0,\varepsilon_0)=(8,\ln2)$, and independently assume the predictive-recovery MacWilliams branch selecting a binary $[24,12,8]$ code with rate $R=1/2$. Then
+$$
+(1-R)C_{\max}^*
+=
+\ln2
+=
+\varepsilon_0.
+$$
+This equality is arithmetic on the conjunction of the two branch values. It does not identify twelve physical interface modes as parity modes, equate structural log-cardinality with reset heat or total entropy production, or show that every SPAP cycle implements a reset.
 
-$$\underbrace{(1 - R) \cdot C_{\max}}_{\text{parity investment}} = \underbrace{\varepsilon_{SPAP}}_{\text{logical entropy cost}} = \ln 2 \text{ nats}$$
-
-where $R = k/n = 1/2$ is the Golay code rate and $C_{\max} = 2\ln 2$ is the channel capacity.
-
-*Proof.*
-
-**Step 1 (Entropy cost).** Each SPAP cycle has structural logical entropy cost $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ (Theorem 31, Appendix J). Under physical instantiation, the dissipation satisfies $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$; equality is the overhead-free implementation branch, while PCE removes response-null overhead from the discrete backbone.
-
-**Step 2 (Channel capacity).** The ND-RID channel capacity is derived in Appendix E, Section E.7 (Equation E.15):
-
-$$C_{\max} = \ln d_0 - \varepsilon_0,$$
-
-and at the PCE-Attractor $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ (Definition 15a), so
-
-$$C_{\max} = \ln 8 - \ln 2 = 2\ln 2 \text{ nats}.$$
-
-This result follows from PCE optimization (Definition 15): the MPU's finite information budget is optimally divided between the structural cost of internal self-referential processing ($\varepsilon_0$) and the capacity for external communication ($C_{\max}$), while physical overhead is accounted for separately.
-
-**Step 3 (Parity investment).** The Golay code $[24, 12, 8]$ dedicates fraction $(1 - R) = 1/2$ of all modes to parity (Theorem Z.13). The information invested in error correction per channel use is:
-
-$$(1 - R) \cdot C_{\max} = \frac{1}{2} \cdot 2\ln 2 = \ln 2 \text{ nats}$$
-
-**Step 4 (Balance).** The parity investment exactly equals the entropy cost:
-
-$$\text{Parity investment} = \ln 2 = \varepsilon_{SPAP} = \text{Entropy cost}$$
-
-This equality holds because $\varepsilon_0=\varepsilon_{SPAP}$ and $C_{\max}$ are determined by the same structural residual-budget branch that also selects the Golay code (Theorem Z.13). ∎
+*Proof.* Direct substitution gives
+$$
+(1-R)C_{\max}^*
+=
+\left(1-\frac12\right)(2\ln2)
+=
+\ln2
+=
+\varepsilon_0.
+$$
+The code rate follows from the predictive-recovery MacWilliams gate, while $C_{\max}^*$ follows from the independently assumed residual-budget saturation. A physical interpretation requires a registered encoder, channel, syndrome instrument, recovery map, and non-double-counted resource ledger. ∎
 
 ### P.8.9a.2.4 The 144-Parameter Structural Correspondence
 
@@ -3268,50 +3219,429 @@ or the corresponding diamond-norm channel bound. Then the registered physical im
 
 ---
 
-## P.8.9a.5 Evolution as PCE Optimization Across Generations
+## P.8.9a.5 Conditional Generational-PCE Representation of Normalized Selection
 
-The PU framework provides a novel perspective on biological evolution: natural selection is PCE optimization operating across generational timescales. This identification resolves longstanding puzzles about the apparent "goal-directedness" of evolution without invoking teleology.
+This section proves an equation-level representation on a declared finite-type biological branch. It does not identify all biological evolution with PCE, derive biological constitutive dynamics from PCE, or claim that the elementary normalized-update correspondence is novel. The representation is non-teleological: conditional on the stated biological branch contract, it describes a normalized frequency update and no foresight, intention, or universal evolutionary objective is inferred.
+
+The PU framework supplies a conditional bridge between biological selection and PCE. On a declared generational model whose heritable types carry a generational PCE ledger and whose relative viable-descendant weights are exponential in the negative ledger value, normalized selection is exactly multiplicative PCE reweighting. The result is a non-teleological frequency-update theorem on that branch, not an assertion that every evolutionary mechanism is generated by PCE without a biological constitutive model.
 
 ### P.8.9a.5.1 The Evolutionary POP
 
-**Definition P.8.9a.3 (Generational POP).** The Prediction Optimization Problem (Axiom 1) applied to reproducing organisms takes the form:
+**Definition P.8.9a.3 (Generational POP).** Fix a biological prediction task $T_{\mathrm{gen}}$, score $q_{\mathrm{gen}}$, evaluation window $W_{\mathrm{gen}}$, and a nonempty admissible class $\mathcal A_{\mathrm{gen}}$ of heritable transition or variation policies.
 
-$$\max_{\mu} \mathbb{E}[\Delta Q_{reproductive}] \text{ subject to } C_P(\mu) \leq C_{available}$$
-
-where $\Delta Q_{reproductive}$ measures improvement in reproductive prediction—the capacity to generate offspring that themselves survive and reproduce.
-
-*Interpretation.* Organisms are MPU aggregates (Definition 29) whose "predictions" include developmental trajectories, behavioral responses, and offspring viability. Natural selection filters these predictions: lineages whose aggregate models better predict survival-relevant features persist; those with poorer predictions are eliminated.
-
-**Proposition P.8.9a.6 (Evolution as Generational PCE).** Biological evolution implements PCE optimization (Definition 15) with:
-- **Operational costs $R(C)$:** Metabolic expense of maintaining complexity
-- **Propagation costs $V_{prop}$:** Energetic cost of reproduction
-- **Predictive benefit $V_{benefit}$:** Reproductive success (fitness)
-
-Natural selection minimizes the generational analog of the PCE potential:
-
-$$V_{gen} = R_{metabolic} + R_{reproductive} - \Gamma_{fitness} \cdot PP_{survival}$$
-
-*Proof.* Model each organism (or lineage type) as an MPU aggregate with a heritable configuration $x$ (Definition 29) interacting with an environment $E$. For each $x$, let $R_{metabolic}(x)$ be the expected per-generation energetic cost of maintaining the organism's predictive/control circuitry (the operational-cost analog of $R(C)$), let $R_{reproductive}(x)$ be the expected energetic cost of producing offspring (the propagation-cost analog of $V_{prop}$), and let $PP_{survival}(x)$ be the predictive performance relevant to survival and successful reproduction, with $\Gamma_{fitness}$ converting that performance into the same resource units as the costs.
-
-Define the generational PCE potential
+Fix a registered implementation map
 $$
-V_{gen}(x)=R_{metabolic}(x)+R_{reproductive}(x)-\Gamma_{fitness}\,PP_{survival}(x).
+\iota_{\mathrm{gen}}:
+\mathcal A_{\mathrm{gen}}
+\to
+\mathcal S_{\mathrm{phys}}.
 $$
-Reproductive success is monotone in net resource surplus, hence monotone decreasing in $V_{gen}$. Equivalently (fixing units), one may write the expected viable-offspring growth factor as
+For each $\mu\in\mathcal A_{\mathrm{gen}}$, let $\mathbb P_{\mu}$ be the declared one-generation outcome law and let $\Delta Q_{\mathrm{reproductive}}$ be an integrable registered PU predictive-quality increment for $(T_{\mathrm{gen}},q_{\mathrm{gen}},W_{\mathrm{gen}})$ under $\mathbb P_{\mu}$. Define the implementation complexity
 $$
-W(x)\propto \exp\!\big(-V_{gen}(x)\big).
+C_{\mathrm{gen}}(\mu)
+:=
+C_P\!\left(\iota_{\mathrm{gen}}(\mu)\right).
 $$
-Let $N_x(t)$ be the (expected) number of individuals of type $x$ at generation $t$. Then
-$$
-N_x(t+1)=N_x(t)\,W(x),
-$$
-so for two types $x,y$,
-$$
-\frac{N_x(t)}{N_y(t)}=\frac{N_x(0)}{N_y(0)}\left(\frac{W(x)}{W(y)}\right)^t.
-$$
-If $V_{gen}(x)<V_{gen}(y)$ then $W(x)>W(y)$ and the ratio grows exponentially with $t$, so selection drives the population toward (local) minima of $V_{gen}$.
+For a finite available budget $C_{\mathrm{available}}$, define
 
-Mutations, recombination, and environmental variability provide stochastic exploration of nearby configurations, so the effective trait dynamics is a stochastic descent on $V_{gen}$: variants sample $x+\delta x$ and selection preferentially retains those with lower $V_{gen}$. This is the generational analog of the stochastic PCE adaptation dynamics (Appendix D, Equation D.8): the relevant mathematical statement is ergodic stationary averaging in general and, in low-noise detailed-balance regimes, stationary concentration near the minima of the effective potential. Hence biological evolution implements PCE optimization at the generational level with the identifications stated. ∎
+$$
+\operatorname{POP}_{\mathrm{gen}}
+=
+\sup_{\substack{\mu\in\mathcal A_{\mathrm{gen}}\\
+C_{\mathrm{gen}}(\mu)\le C_{\mathrm{available}}}}
+\mathbb E_{\mu}\!\left[\Delta Q_{\mathrm{reproductive}}\right],
+$$
+
+provided the feasible set is nonempty.
+
+The quantity $\Delta Q_{\mathrm{reproductive}}$ is a registered PU predictive-quality increment for the fixed task, score, and window; it is not identified with raw descendant count unless a separate bridge establishes that identification. A maximizing policy exists only when the displayed supremum is attained.
+
+*Interpretation.* Developmental trajectories, behavioral responses, and viable-descendant outcomes may serve as retained response variables only through the fixed task, score, window, and biological-to-PU implementation map. Selection changes heritable-type frequencies according to a separately declared viable-descendant law. The definition does not identify reproductive success with predictive performance; Proposition P.8.9a.6 states the additional branch contract required for the conditional comparison.
+
+**Proposition P.8.9a.6 (Conditional Generational-PCE Representation of Fixed-Weight Selection).** Let $\mathcal I=\{1,\ldots,m\}$ be a nonempty finite set of heritable types and let $p(0)\in\Delta(\mathcal I)$ be their initial frequency vector. For each $i\in\mathcal I$, define the generational PCE ledger
+
+$$
+V_{\mathrm{gen}}(i)
+=
+R_{\mathrm{metabolic}}(i)
++
+R_{\mathrm{reproductive}}(i)
++
+V_{\mathrm{penalty}}^{\mathrm{gen}}(i)
+-
+\Gamma_{\mathrm{fitness}}
+B\!\left(PP_{\mathrm{survival}}(i)\right),
+$$
+
+where all terms are finite, $B$ is a fixed nondecreasing benefit map, and $\Gamma_{\mathrm{fitness}}$ converts the benefit to the same units as the cost terms. Assume:
+
+0. There is a registered biological PCE branch contract $\mathfrak B$ in the sense of Definition D.1f, and $\mathcal I$ indexes a finite retained subset of $\mathcal X_{\mathfrak B}/\!\sim_{\mathfrak B}$. For some registered $\vartheta\in W_{\mathfrak B}$, $V_{\mathrm{gen}}$ is the descended scalar certificate $V_{\mathfrak B,\vartheta}$ on that subset. The branch ledger includes every admitted term whose omission could change the ordering of retained types.
+1. $V_{\mathrm{gen}}$ is time-independent over the comparison window.
+2. There are branch-specific constitutive parameters $a>0$ and $\lambda_{\mathrm{gen}}>0$, neither a universal PU constant, with $\lambda_{\mathrm{gen}}V_{\mathrm{gen}}$ dimensionless, such that the expected viable-descendant weight of type $i$ is
+   $$
+   w_i
+   =
+   a\exp\!\left[-\lambda_{\mathrm{gen}}V_{\mathrm{gen}}(i)\right].
+   $$
+3. Inheritance is faithful and generations do not overlap on the retained type coordinate: there is no mutation, recombination, migration, or other type flux. For some $N(0)>0$, let $N_i(0)=N(0)p_i(0)$ and assume the deterministic expected-count or infinite-population update
+   $$
+   N_i(t+1)=w_iN_i(t).
+   $$
+
+For every $t\ge0$, let
+$$
+N(t):=\sum_{j\in\mathcal I}N_j(t)
+$$
+and define
+$$
+p_i(t):=\frac{N_i(t)}{N(t)}.
+$$
+On the deterministic expected-count branch these are normalized expected-count shares; they are not expected realized finite-population frequencies, which require a separate stochastic population model.
+
+Let
+
+$$
+\mathcal I_0
+=
+\{i\in\mathcal I:p_i(0)>0\},
+\qquad
+V_*
+=
+\min_{i\in\mathcal I_0}V_{\mathrm{gen}}(i),
+$$
+
+and
+
+$$
+\mathcal M_*
+=
+\{i\in\mathcal I_0:V_{\mathrm{gen}}(i)=V_*\}.
+$$
+
+Then, for every integer $t\ge0$,
+
+$$
+p_i(t)
+=
+\frac{
+p_i(0)\exp\!\left[-\lambda_{\mathrm{gen}}tV_{\mathrm{gen}}(i)\right]
+}{
+\sum_{j\in\mathcal I}
+p_j(0)\exp\!\left[-\lambda_{\mathrm{gen}}tV_{\mathrm{gen}}(j)\right]
+},
+$$
+
+and
+
+$$
+\lim_{t\to\infty}p_i(t)
+=
+\begin{cases}
+\dfrac{p_i(0)}
+{\sum_{j\in\mathcal M_*}p_j(0)},
+&
+i\in\mathcal M_*,
+\\[10pt]
+0,
+&
+i\notin\mathcal M_*.
+\end{cases}
+$$
+
+Thus the normalized expected-count shares, or the frequencies on the deterministic infinite-population reading, concentrate exactly on the global minimizers of $V_{\mathrm{gen}}$ within the initial support. If $\mathcal M_*=\{i_*\}$, then $p(t)\to e_{i_*}$.
+
+*Proof.* Since $w_i>0$ and $\sum_iN_i(0)=N(0)>0$, the total expected count remains positive. Normalizing the count update gives
+
+$$
+p_i(t+1)
+=
+\frac{p_i(t)w_i}
+{\sum_{j\in\mathcal I}p_j(t)w_j}.
+$$
+
+The common factor $a$ cancels. Iterating the count equation gives
+
+$$
+N_i(t)
+=
+N_i(0)a^t
+\exp\!\left[-\lambda_{\mathrm{gen}}tV_{\mathrm{gen}}(i)\right].
+$$
+
+Division by $\sum_jN_j(t)$ and $N_i(0)=N(0)p_i(0)$ proves the displayed frequency formula.
+
+For convergence, put
+
+$$
+\delta_i
+=
+V_{\mathrm{gen}}(i)-V_*
+\ge0
+\qquad
+(i\in\mathcal I_0)
+$$
+
+and
+
+$$
+q_*
+=
+\sum_{j\in\mathcal M_*}p_j(0)>0.
+$$
+
+After multiplying numerator and denominator by
+$\exp(\lambda_{\mathrm{gen}}tV_*)$, the frequency formula becomes, for every $i\in\mathcal I_0$,
+
+$$
+p_i(t)
+=
+\frac{p_i(0)e^{-\lambda_{\mathrm{gen}}t\delta_i}}
+{\sum_{j\in\mathcal I_0}
+p_j(0)e^{-\lambda_{\mathrm{gen}}t\delta_j}}.
+$$
+
+The denominator is at least $q_*$ for every $t$. If $i\notin\mathcal I_0$, the original frequency formula gives $p_i(t)=0$ for every $t$. If $i\in\mathcal I_0\setminus\mathcal M_*$, then $\delta_i>0$, so the numerator tends to zero and hence $p_i(t)\to0$. If $i\in\mathcal M_*$, then $\delta_i=0$. Every term with positive $\delta_j$ tends to zero, while the terms with $j\in\mathcal M_*$ sum to $q_*$. Therefore $p_i(t)\to p_i(0)/q_*$. The finite type set makes these limits exhaustive and proves concentration on $\mathcal M_*$. The singleton case follows immediately. ∎
+
+**Theorem P.8.9a.6a (Exact Normalized-Selection–Bayes–Multiplicative-Weights Correspondence).** Let
+
+$$
+\Delta(\mathcal I)
+=
+\left\{
+p\in[0,1]^m:
+\sum_{i\in\mathcal I}p_i=1
+\right\},
+$$
+
+let $p\in\Delta(\mathcal I)$, let $w\in[0,\infty)^{\mathcal I}$, and define
+
+$$
+Z(p,w)
+=
+\sum_{j\in\mathcal I}p_jw_j.
+$$
+
+On the exact domain
+
+$$
+\mathcal D
+=
+\left\{
+(p,w)\in\Delta(\mathcal I)\times[0,\infty)^{\mathcal I}:
+Z(p,w)>0
+\right\},
+$$
+
+define the normalized-selection map
+
+$$
+\bigl[\mathsf S_w(p)\bigr]_i
+=
+\frac{p_iw_i}{Z(p,w)}.
+$$
+
+Then the following statements hold.
+
+1. **Bayesian form.** Choose any
+   $$
+   0<c\le\frac{1}{\max_{j\in\mathcal I}w_j}.
+   $$
+   This interval is nonempty because $Z(p,w)>0$ implies $\max_jw_j>0$. Let $\{H_i\}_{i\in\mathcal I}$ be hypotheses with prior $\mathbb P(H_i)=p_i$, and let $Y\in\{0,1\}$ satisfy
+   $$
+   \mathbb P(Y=1\mid H_i)=cw_i.
+   $$
+   Then $\mathbb P(Y=1)=cZ(p,w)>0$ and
+   $$
+   \mathbb P(H_i\mid Y=1)
+   =
+   \bigl[\mathsf S_w(p)\bigr]_i.
+   $$
+
+2. **Exponential- or multiplicative-weights form.** Fix any learning rate $\eta>0$ and define the extended loss
+   $$
+   \ell_i
+   =
+   \begin{cases}
+   -\eta^{-1}\ln w_i,
+   &
+   w_i>0,
+   \\[4pt]
+   +\infty,
+   &
+   w_i=0.
+   \end{cases}
+   $$
+   With the convention $e^{-\eta(+\infty)}=0$, the multiplicative-weights update is
+   $$
+   \frac{p_ie^{-\eta\ell_i}}
+   {\sum_{j\in\mathcal I}p_je^{-\eta\ell_j}}
+   =
+   \bigl[\mathsf S_w(p)\bigr]_i.
+   $$
+   If every $w_i>0$, all losses are finite. In the Bayesian realization of part 1, unit-rate log loss
+   $$
+   \ell_i^{\log}
+   =
+   -\ln(cw_i)
+   $$
+   gives the same normalized update.
+
+   For $w_i>0$ this is the ordinary finite-loss exponential-weights update. Allowing $w_i=0$ uses the declared $+\infty$ boundary extension and does not invoke any standard bounded-loss regret theorem.
+
+3. **Support and zero boundary.** On $\mathcal D$,
+   $$
+   \operatorname{supp}\mathsf S_w(p)
+   =
+   \operatorname{supp}(p)\cap\operatorname{supp}(w).
+   $$
+   Hence $p_i=0$ is preserved in the absence of type flux, and a type with $p_i>0$ and $w_i=0$ is removed in one step. Moreover,
+   $$
+   Z(p,w)=0
+   \quad\Longleftrightarrow\quad
+   w_i=0
+   \text{ for every }i\in\operatorname{supp}(p).
+   $$
+   At that boundary the normalized-selection update is undefined, the Bayesian event $Y=1$ has prior-predictive probability zero, and the multiplicative-weights denominator is zero. None of the three formalisms supplies a normalized posterior or successor state there without an additional rule.
+
+4. **Common-scale invariance.** For every $r>0$,
+   $$
+   \mathsf S_{rw}(p)=\mathsf S_w(p).
+   $$
+   Thus only relative fitness, relative likelihood, or loss differences enter the normalized map.
+
+5. **Constant-relative-fitness iteration.** Suppose a sequence of raw generational weights has the form
+   $$
+   w_i(t)=a_t w_i,
+   \qquad
+   a_t>0,
+   $$
+   for one fixed $w$, and suppose $Z(p(0),w)>0$. Then for every integer $t\ge1$,
+   $$
+   p_i(t)
+   =
+   \frac{p_i(0)w_i^t}
+   {\sum_{j\in\mathcal I}p_j(0)w_j^t}.
+   $$
+   In particular, whenever
+   $p_i(0)p_j(0)w_iw_j>0$,
+   $$
+   \frac{p_i(t)}{p_j(t)}
+   =
+   \frac{p_i(0)}{p_j(0)}
+   \left(\frac{w_i}{w_j}\right)^t.
+   $$
+
+6. **Mutation and frequency-dependent boundaries.** Let $M=(M_{ij})$ be a column-stochastic parent-to-descendant mutation kernel,
+   $$
+   M_{ij}\ge0,
+   \qquad
+   \sum_{i\in\mathcal I}M_{ij}=1
+   \quad
+   \text{for every }j.
+   $$
+   Selection followed by mutation is
+   $$
+   p_i^+
+   =
+   \sum_{j\in\mathcal I}
+   M_{ij}
+   \frac{p_jw_j}{Z(p,w)}
+   =
+   \bigl[M\mathsf S_w(p)\bigr]_i.
+   $$
+   This update coincides with the unmutated map $\mathsf S_w(p)$ for every $(p,w)\in\mathcal D$ if and only if $M=I$. If instead $w=w(p,t)$ is frequency- or time-dependent, parts 1–4 remain valid pointwise at every step for which $Z(p,w(p,t))>0$. Part 5 applies when the weights along the retained trajectory are proportional to one fixed vector by a common positive factor; no fixed-weight multi-step formula follows in general.
+
+*Proof.* For part 1, the law of total probability gives
+
+$$
+\mathbb P(Y=1)
+=
+\sum_j\mathbb P(H_j)\mathbb P(Y=1\mid H_j)
+=
+c\sum_jp_jw_j
+=
+cZ(p,w)>0.
+$$
+
+Bayes' rule therefore gives
+
+$$
+\mathbb P(H_i\mid Y=1)
+=
+\frac{p_i(cw_i)}{cZ(p,w)}
+=
+\frac{p_iw_i}{Z(p,w)}.
+$$
+
+For part 2, the definition of $\ell_i$ gives $e^{-\eta\ell_i}=w_i$ for $w_i>0$, while the stated convention gives the same equality when $w_i=0$. Substitution into the multiplicative-weights normalization gives $\mathsf S_w(p)$. Replacing $w_i$ by $cw_i$ multiplies every unnormalized weight by the same positive constant and therefore leaves the normalized vector unchanged.
+
+For part 3, $Z(p,w)>0$ and nonnegativity imply
+
+$$
+\bigl[\mathsf S_w(p)\bigr]_i>0
+\quad\Longleftrightarrow\quad
+p_iw_i>0
+\quad\Longleftrightarrow\quad
+p_i>0\text{ and }w_i>0,
+$$
+
+which proves the support identity. Because every summand $p_iw_i$ is nonnegative, their sum is zero exactly when every summand is zero. For $i\in\operatorname{supp}(p)$ this is equivalent to $w_i=0$. The three zero-denominator statements then follow directly from their displayed normalizations.
+
+For part 4,
+
+$$
+\bigl[\mathsf S_{rw}(p)\bigr]_i
+=
+\frac{p_i(rw_i)}{\sum_jp_j(rw_j)}
+=
+\frac{p_iw_i}{\sum_jp_jw_j}.
+$$
+
+For part 5, every common factor $a_t$ cancels by part 4, so the update at every step is $\mathsf S_w$. The formula holds for $t=1$ by definition. If it holds at $t$, then
+
+$$
+p_i(t+1)
+=
+\frac{
+\left(
+p_i(0)w_i^t/
+\sum_kp_k(0)w_k^t
+\right)w_i
+}{
+\sum_j
+\left(
+p_j(0)w_j^t/
+\sum_kp_k(0)w_k^t
+\right)w_j
+}
+=
+\frac{p_i(0)w_i^{t+1}}
+{\sum_jp_j(0)w_j^{t+1}}.
+$$
+
+Induction proves the formula for every $t\ge1$. Dividing the formulas for $i$ and $j$ proves the ratio identity under the stated positivity condition.
+
+For part 6, a parent of type $j$ contributes its selected frequency $p_jw_j/Z(p,w)$, and $M_{ij}$ is the conditional fraction assigned to descendant type $i$; summing over parents gives $M\mathsf S_w(p)$. If $M=I$, equality with the unmutated map is immediate. Conversely, suppose
+
+$$
+M\mathsf S_w(p)=\mathsf S_w(p)
+$$
+
+for every $(p,w)\in\mathcal D$. For each $j$, choose $p=e_j$ and any $w$ with $w_j>0$. Then $\mathsf S_w(e_j)=e_j$, so $Me_j=e_j$. Thus every column of $M$ is the corresponding standard basis vector and $M=I$. Finally, replacing $w$ by the declared $w(p,t)$ in the proofs of parts 1–4 proves their pointwise forms. The induction in part 5 uses one fixed normalized map and therefore applies under the stated common-proportionality condition, while no such induction is asserted outside it. ∎
+
+**Remark P.8.9a.6b (Mechanism, Mutation, and Reflexive Boundaries).** Theorem P.8.9a.6a is an exact equality of normalized equations on one finite type simplex. It does not by itself identify the causal mechanisms, state spaces, or PU functional roles of selection, Bayesian inference, and a learning algorithm. A claim that a biological process instantiates forecast generation, verification, or model update requires separate retained biological protocol maps establishing those roles. Mutation is the additional kernel $M$, recombination requires its own parent-to-descendant kernel, and neither is supplied by the normalized-selection identity. A diffusion or stochastic-gradient representation of those mechanisms requires an independently derived scaling limit and the regularity, drift, covariance, and boundary data of Appendix D; it does not follow from the presence of variation alone. The theorem concerns the discrete generational map and does not identify it with a continuous-time replicator differential equation without a separate continuous-time limit.
+
+The normalized-selection, Bayesian, and exponential-weights equality is an elementary equation correspondence. No novelty is claimed for that algebraic identity, and no Bayesian consistency theorem, evolutionary stochastic-process theorem, or online-learning regret bound is imported by it.
+
+Frequency dependence $w=w(p,t)$ establishes only that the selection weights depend on the current population state. By itself it supplies neither a model representing the system to itself in the sense of Definition 9 nor the coded evaluator, simulation, predicate evaluation, Boolean post-processing, logical memory, and uniform diagonal closure required by Theorems 10–11. Frequency-dependent selection therefore does not by itself engage SPAP, Reflexive Undecidability, or the horizon-constant construction.
+
+
+ 
+
+
+
+
+ 
 
 ### P.8.9a.5.2 Resolution of Evolutionary Puzzles
 
@@ -3321,17 +3651,21 @@ The PCE perspective resolves several classical puzzles:
 
 *Standard view:* No clear thermodynamic driver; complexity increase appears contingent.
 
-*PU resolution:* Complexity increases when and only when the marginal predictive benefit exceeds marginal cost:
+*PU resolution:* On a declared one-dimensional biological trait branch where $C$ obeys the complexity-adaptation dynamics of Definition 20, all remaining coordinates are held fixed or have been validly reduced, and the benefit map is the identity, the local direction of increasing complexity is selected exactly when
 
-$$\Gamma_0 \frac{\partial PP}{\partial C} > \lambda R'(C) + R'_I(C)$$
+$$
+\Gamma_0 \frac{\partial PP}{\partial C}
+>
+\lambda R'(C)+R'_I(C).
+$$
 
-(Definition 14, Equation 18). In expanding ecological niches or arms-race dynamics, the predictive benefit of complexity rises, driving $C_{agg}$ upward. In stable, resource-limited environments, complexity may plateau or decrease.
+This is the sign condition for that registered reduced dynamics, not a theorem that evolutionary complexity increases in every environment or lineage. Changes in ecological interactions, resource constraints, inheritance, or the other coordinates of the generational ledger can reverse the sign, produce a plateau, or invalidate the one-dimensional reduction.
 
 **Puzzle 2: Why is evolution "creative"?**
 
 *Standard view:* Random mutation plus selection; creativity is illusory.
 
-*PU resolution:* The exploration of configuration space by POP/PCE dynamics (Appendix D, Equation D.8) naturally discovers novel solutions. The stochastic term $\sqrt{2D(x)}dW_t$ in the adaptation dynamics provides exploration; the gradient term $-\eta(x)\nabla V(x)$ provides exploitation. This is precisely the structure of successful optimization algorithms.
+*PU resolution:* Appendix D supplies a stochastic-gradient model only on branches whose retained adaptation variables admit its drift, diffusion, regularity, and boundary data. Mutation, recombination, and environmental variation do not automatically equal the Brownian term $\sqrt{2D(x)}\,dW_t$, and normalized selection does not automatically equal the drift $-\eta(x)\nabla V(x)$. When a biological scaling limit derives those coefficients and identifies its effective potential with the registered generational PCE ledger, Equation D.8 gives a conditional exploration-and-selection model. Without that bridge, evolutionary novelty remains governed by the separately specified biological variation and inheritance kernels.
 
 **Puzzle 3: Why convergent evolution?**
 
@@ -3343,13 +3677,13 @@ $$\Gamma_0 \frac{\partial PP}{\partial C} > \lambda R'(C) + R'_I(C)$$
 
 *Standard view:* Modularity evolves because modular organisms evolve faster.
 
-*PU resolution:* Modular organization minimizes the propagation cost $V_{prop}$ in the PCE potential (Definition D.1). Changes to one module don't cascade through the entire system, reducing the complexity cost of adaptation. PCE optimization naturally favors architectures with low adaptation costs—i.e., modular, evolvable designs.
+*PU resolution:* On a registered architectural comparison class, a modular candidate is PCE-favored only when its reduced cross-module propagation and adaptation costs lower the complete ledger of Definition D.1 after its interface, redundancy, coordination, and performance effects are included. PCE supplies the comparison rule; it does not prove that modularity lowers the ledger in every biological system. A modularity conclusion therefore requires an explicit response-preserving comparator and a strict total-potential inequality for the biological branch.
 
 ---
 
 ## P.8.9a.6 The Continuity of Life and Physical Law
 
-The PU framework reveals a deep continuity between the error-correcting organization of the vacuum and the error-correcting organization of life:
+The PU framework permits a branch-qualified comparison between physical code constructions and biological error-tolerant organization. The comparison records a common variational grammar where the relevant branch contracts exist; it does not identify their carriers, channels, or mechanisms:
 
 **Table P.8.9a.3: Parallel Structure of Physical and Biological Codes**
 
@@ -3359,15 +3693,17 @@ The PU framework reveals a deep continuity between the error-correcting organiza
 | Redundancy | 12 signal + 12 parity modes | 64 codons map redundantly to 20 amino acids plus termination |
 | Rate / degeneracy | Formal linear-code rate $R=1/2$ | Functional occupancy fraction $21/64\approx0.328$; information rate $\log_2 21/6\approx0.732$ |
 | Error correction / tolerance | 3-error correcting by syndrome decoding | Point-mutation tolerance through wobble and chemical-neighborhood structure |
-| Selection principle | PCE optimization | Natural selection (= generational PCE) |
+| Selection principle | PCE selection on the registered physical branch | Normalized selection equals generational PCE reweighting only under Proposition P.8.9a.6 |
 
-**Thesis P.8.9a.2 (Continuity of Organization).** The organizational principles governing the vacuum and governing life are the same: PCE optimization under entropic pressure. Life is not a violation of physical law but its highest expression—physical law applied to the problem of persistent complex prediction.
+**Thesis P.8.9a.2 (Continuity of Organization).** Physical code models and biological persistence models can instantiate the same branch-indexed PCE variational grammar when each domain supplies its own admissible state space, response quotient, cost ledger, and update law. This common grammar does not equate substrates, error channels, causal mechanisms, or functional roles. In the biological case, the exact theorem-level content is the conditional normalized-selection result of Proposition P.8.9a.6 and Theorem P.8.9a.6a.
 
-This continuity extends Wigner's observation about the "unreasonable effectiveness" of mathematics in physics [Wigner 1960] to the biological domain: biological organization emerges from the same optimization principles that structure physical law. Biological organization is not imposed on physics from outside; it emerges from the same optimization principles that structure physical law itself.
+The comparison extends the use of mathematical optimization language to the biological domain without deriving biological organization from a physical code theorem. Biological constitutive dynamics, inheritance kernels, environmental dependence, and empirical response maps remain independent inputs to the biological branch.
+
+
 
 ### P.8.9a.6.1 The Genetic Code as Evolved Error Tolerance
 
-The genetic code itself bears the signature of PCE optimization:
+The genetic-code comparison is compatible with a PCE interpretation only after the admissible code ensemble, response score, evolutionary update, and alternative-mechanism test are fixed:
 
 **Proposition P.8.9a.2 (Ensemble-Relative Genetic-Code Error Tolerance).** Under the random-code ensemble and translation-error-weighted efficiency score used by Freeland and Hurst (1998), the standard genetic code scores better than all but about one generated alternative in $10^6$.
 
@@ -3407,23 +3743,19 @@ $$\mathrm{CC}(S) = \alpha_\infty \cdot \mathcal{G}\left(\frac{C_{agg} - C_{op}}{
 
 ### P.8.9a.7.2 Neural Systems and Predictive Processing
 
-The predictive processing framework in neuroscience [Clark 2013; Hohwy 2013; Friston 2010] provides extensive evidence that neural systems operate as prediction machines:
+Predictive-processing models in neuroscience supply candidate neural variables for a PU bridge. Identifying a neural system with POP requires a registered task, score, cost ledger, forecast map, verifier, and update map:
 
-**Proposition P.8.9a.3 (Neural Implementation of POP).** The brain implements the Prediction Optimization Problem (Axiom 1) through:
-1. **Hierarchical predictive models:** Cortical hierarchies generate predictions at multiple scales
-2. **Prediction error minimization:** Neural activity encodes and minimizes prediction errors
-3. **Active inference:** Actions are selected to fulfill predictions, not merely respond to stimuli
-4. **Precision weighting:** Attention modulates the influence of prediction errors
+**Proposition P.8.9a.3 (Conditional Neural-to-POP Modeling Bridge).** Fix a neural dynamical model $\mathfrak N$ together with a registered task $\mathcal T$, admissible action set $\mathcal A$, outcome law, score $Q$, resource coordinate $C_P$, internal-state encoder $e$, forecast map $f$, verification map $v$, and update map $u$. Assume:
 
-*Framework mapping:*
+1. $(e,f,v,u)$ realizes the Definition-4 phase maps and the Definition-5 capabilities on $\mathcal T$.
+2. The performance functional computed from $Q$ is the registered $PP$ of that task.
+3. The admissible-policy objective and resource constraint are exactly the POP objective and constraint of Axiom 1.
 
-| Neuroscience Concept | PU Framework Equivalent |
-|---------------------|------------------------|
-| Predictive model | Internal model $M_t$ (Axiom 2) |
-| Prediction error | Deviation from $PP$ optimum |
-| Precision | Inverse variance in PCE potential |
-| Free energy | Component of PCE potential $V(x)$ |
-| Active inference | 'Evolve' process optimization |
+Then $\mathfrak N$ instantiates POP on that registered branch.
+
+*Proof.* Assumption 1 supplies the required loop maps and capabilities. Assumption 2 identifies the optimized response functional with the registered PU performance, and assumption 3 identifies both the feasible set and objective with POP. Substitution therefore makes the neural policy problem identical to the registered POP problem. Without any one of these bridge assumptions, similarity of predictive-processing terminology does not establish PU implementation. ∎
+
+*Candidate bridge coordinates:* predictive model $\mapsto M_t$; task-scored prediction error $\mapsto$ the registered $PP$ residual; precision $\mapsto$ a declared weighting coordinate; free energy $\mapsto$ a specified term of $V$ only after unit and sign matching; active inference $\mapsto$ a registered action-policy optimization only after the action and outcome maps are supplied. These arrows are modeling assignments certified by the proposition's hypotheses, not unconditional equivalences.
 
 ### P.8.9a.7.3 Bioelectric Codes and Morphogenetic CC
 
@@ -3857,24 +4189,24 @@ D_{KL}[q\|p(\theta)]-\mathbb{E}_{q}[\ln p(o\mid\theta)].
 $$
 This is precisely $V^{\mathrm{inf}}_{\mathrm{PCE}}[q;o]$. Fixed propagation and penalty contributions add only constants on this restricted branch and therefore do not affect the minimizing $q$. ∎
 
-**Corollary P.8.9a.8.1 (Thermodynamic Grounding of the Complexity Term).** Any physical realization of a nontrivial update implementing inferential refinement or state reduction on this branch inherits the SPAP/Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per irreducible update cycle. Thus the inferential complexity term is thermodynamically grounded at the implementation level rather than merely formal.
+**Corollary P.8.9a.8.1 (Thermodynamic Grounding of a Registered Inferential Reset).** Let an implementation of the inferential branch cyclically overwrite a finite record $P$ while retaining side record $R$, return the memory Hamiltonian to its initial value, and leave no additional retained copy of $P$. Then Theorem 31 applies to that update and gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$. If $H_q(P\mid R)\ge h_{\min}>0$, the heat floor is uniformly positive; an injective or reversibly uncomputed inferential refinement need not incur this reset bound. Hence the complexity term has a physical Landauer realization precisely on the registered-reset implementation branch.
 
 *Remark: Scope of Exactness.* The equality above is an exact restricted-branch statement. It does not identify the full network PCE dynamics with variational free energy; it identifies the inferential subfunctional obtained after architecture, propagation, and penalty terms are fixed.
 
-*Remark: Scope of Disagreement.* The equality above identifies a functional; it does not identify an optimization problem. The *full* PCE objective is minimized subject to the Space of Becoming constraint $\alpha < PP < \beta$ (Axiom 3, Theorem 8, Theorem 9) and, more strongly, subject to the SPAP hard upper bound $PP < \alpha_{SPAP} < 1$ (Theorems 10–11). Friston's variational free energy, taken as a global inferential objective, has no PU-native analogue of the hard upper viability bound $\beta$ or of the SPAP ceiling $\alpha_{SPAP}$. Minimizing $F$ with respect to the recognition density $q$ tightens an upper bound on surprise and, at the optimum where $q$ matches the posterior $p(\theta\mid o)$, yields $F = -\ln p(o)$ [Friston 2010]. Only an unconstrained zero-surprise reading of the free-energy program — in which $-\ln p(o)$ itself is driven toward zero through joint selection of actions, observations, and generative model — would correspond to the endpoint of perfect prediction that PU forbids. PU's claim is that any such endpoint lies outside the admissible class: by Theorem 14, the verification/update resources required to approach $PP = \alpha_{SPAP}$ to within additive accuracy $\delta_{SPAP}$ grow as $\Omega(\log(1/\delta_{SPAP})/\delta_{SPAP}^2)$; by Corollary 14.1, no finite-budget predictive system can sustain the approach. The perfect-prediction limit is therefore not merely unreached in practice; it is *structurally inaccessible* within the PU admissibility class.
+*Remark: Scope of Disagreement.* The equality above identifies a functional; it does not identify a global optimization problem. The full PCE objective is constrained by the registered Space of Becoming $\alpha<PP<\beta$ (Definition 8 and Axiom 3). Theorem 8 supplies the lower benchmark, Theorem 9 supplies the distinct excitation ceiling $\beta_0$, and Theorem 19 supplies the finite-complexity strict endpoint on its exact response-law branch. Theorems 10–11 exclude universal exact prediction on their diagonal classes but do not determine a system-independent scalar $\alpha_{SPAP}$. Theorem 14's quantitative lower bound is available only on its registered reduction/cost certificate and transfers to $C_P$ only through the domination bridge.
 
-This reframes the relationship between the two programs. Friston's functional correctly captures the local inferential update on a fixed-architecture branch, and the equality above is exact on that branch. PU's disagreement concerns the status of the global objective and its admissibility constraints. Standard active-inference formulations introduce prior preferences, expected free energy, and epistemic value to avoid a naive zero-surprise reading and to recover exploration [Friston et al. 2017]; PU's stronger claim is that the exclusion of zero-surprise stasis is not a behavioral correction added at the policy level but follows from the axiomatic viability interval $\alpha < PP < \beta$ together with SPAP. Thus PU does not reject the local variational update; it rejects any interpretation of global free-energy minimization as convergence toward perfect prediction or cost-free closure. The relevant mapping is:
+Friston's variational free energy, taken as a local inferential objective, has no automatic identification with those PU branch constraints. Minimizing $F$ with respect to a recognition density tightens an upper bound on surprise and gives $F=-\ln p(o)$ at the exact posterior [Friston 2010]. Any comparison with a perfect-prediction endpoint must separately identify the task, score, admissible class, and registered PU boundary. Standard active-inference formulations add prior preferences, expected free energy, and epistemic value [Friston et al. 2017]; the equality of local functionals above does not make those policy terms identical to PU's branch certificates.
 
-| Feature | Variational free energy program | PCE / POP under SPAP |
-|:--------|:--------------------------------|:---------------------|
-| Local inferential objective | $F[q;o]$, upper bound on surprise; attains $-\ln p(o)$ when $q = p(\theta\mid o)$ | $V^{\mathrm{inf}}_{\mathrm{PCE}}[q;o]$ (equal to $F$ on the fixed-architecture branch) |
-| Unconstrained zero-surprise endpoint | If read as literal global surprise elimination: $-\ln p(o)\to 0$ and perfect prediction | Forbidden by SPAP; unreachable under finite budget (Theorem 14, Corollary 14.1) |
-| Viability lower bound $\alpha$ | No fundamental bound; avoidance of degenerate fixed points is introduced via prior preferences and expected free energy | Fundamental (Theorem 8, Axiom 3) |
-| Viability upper bound $\beta$ | No PU-native hard upper bound; active inference uses preferences and expected free energy rather than a SPAP ceiling | Fundamental (Theorem 9, Axiom 3); $\beta < \alpha_{SPAP} < 1$ (Remark 1, §3.3.4) |
-| Self-referential limit | Not represented | SPAP: $\alpha_{SPAP} < 1$ (Theorems 10–11) |
-| Physical cost of the complexity term | Not specified | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per irreducible update cycle (Theorem 31; Corollary P.8.9a.8.1) |
+| Feature | Variational free-energy program | PCE / POP branch |
+|:--------|:--------------------------------|:-----------------|
+| Local inferential objective | $F[q;o]$, with $F=-\ln p(o)$ at the exact posterior | $V^{\mathrm{inf}}_{\mathrm{PCE}}[q;o]$ on the fixed-architecture equality branch |
+| Registered lower benchmark | No PU-native value | $\alpha$ from Theorem 8 for the matched task and score |
+| Excitation ceiling | No PU-native value | $\beta_0$ from Theorem 9 on its excitation-certificate branch |
+| Response-law endpoint | No PU-native value | $\beta$ from Definition 8 and Theorem 19 on the exact response-law branch |
+| Self-referential limitation | Not represented by the local functional | Class-level diagonal obstruction from Theorems 10–11; quantitative cost only under Theorem 14's certificate |
+| Physical heat | Not fixed by the functional identity | Requires a separately registered reset and the hypotheses of Theorem 31 |
 
-The table makes the division precise. Where Friston's program and PCE overlap — the inferential subfunctional on a fixed architecture — they coincide exactly. Where they differ — the global objective, its admissibility constraints, and the viability structure surrounding it — PCE supplies constraints that are absent from the bare variational functional. The correction has a definite direction: PCE adds, at the axiomatic level, the viability bounds and self-referential limits that active inference reintroduces through policy-level machinery. In that sense, PU does not merely thermodynamically ground active inference; it supplies the axioms — viability bounds and SPAP — without which global free-energy minimization, read as convergence to perfect prediction, terminates in a state that no predictive universe can instantiate.
+Thus the exact overlap is the restricted inferential functional. The global objectives, viability endpoints, diagonal classes, cost certificates, and physical ledgers remain distinct unless an explicit bridge identifies them.
 
 ### P.8.9a.8.2 What PU Adds Beyond Free Energy
 
@@ -3910,7 +4242,7 @@ All persistent biological systems dedicate a substantial fraction of resources (
 
 *Expected result:* Overhead fractions of the same order of magnitude across phylogenetically diverse systems, modulated by growth state and environment [Flamholz et al. 2014; Buttgereit & Brand 1995; Lynch & Marinov 2015].
 
-**Prediction 2 (Complexity-Maintenance Scaling).**
+**Prediction P.8.9a.9.2 (Complexity-Maintenance Scaling).**
 Organisms with higher $C_{agg}$ exhibit proportionally greater maintenance allocation.
 
 *Test:* Plot metabolic maintenance fraction against brain size (proxy for $C_{agg}$) across mammals.
@@ -3919,26 +4251,26 @@ Organisms with higher $C_{agg}$ exhibit proportionally greater maintenance alloc
 
 ### P.8.9a.9.2 Consciousness Complexity Predictions
 
-**Prediction 3 (CC Threshold Behavior).**
+**Prediction P.8.9a.9.3 (CC Threshold Behavior).**
 Influence capability exhibits sharp transition at $C_{agg} = C_{op}$.
 
 *Test (from Appendix L):* Quantify influence capability vs. aggregate complexity proxy; expect step function, not smooth curve.
 
-**Prediction 4 (Energy Accounting).**
-All CC-related power enters the stress-energy tensor; measurable as heat.
+**Prediction P.8.9a.9.4 (Energy Accounting).**
+On a registered biological energy-balance model, any additional CC-associated input obeys $P_{\mathrm{in}}=\dot E_{\mathrm{stored}}+P_{\mathrm{work}}+\dot Q_{\mathrm{export}}$. It is identifiable by calorimetry alone only under steady-state and negligible-work/storage controls.
 
 *Test (Protocol L.2):* Precision calorimetry during high-CC vs. low-CC states.
 
-*Expected result:* $Q_{high-CC} > Q_{low-CC}$ with difference correlating to CC magnitude.
+*Expected result:* after preregistered matching of work and stored-energy changes, test whether the residual exported-heat difference is nonzero and covaries with the registered CC proxy; the framework does not fix its sign without a metabolic response model.
 
-**Prediction 5 (Bioelectric CC).**
+**Prediction P.8.9a.9.5 (Bioelectric CC).**
 Gap junction coupling strength determines morphogenetic CC.
 
 *Test:* Compare metabolic heat production during normal regeneration vs. gap junction-disrupted regeneration in planaria.
 
 *Framework prediction:* $\Delta Q \propto C_{agg}(g)$; reduced heat signature with reduced coupling.
 
-**Prediction 5a (Contextual Physiological Bias).**
+**Prediction P.8.9a.9.6 (Contextual Physiological Bias).**
 Placebo/nocebo-class effects should scale with the product
 $$
 \gamma_a(c)\,\mathrm{CC}(S)
@@ -3951,13 +4283,13 @@ for the relevant internal channel $a$ and context $c$.
 
 ### P.8.9a.9.3 Evolutionary Predictions
 
-**Prediction 6 (PCE Landscape Structure).**
-Convergent evolution targets correspond to PCE potential minima.
+**Prediction P.8.9a.9.7 (PCE Landscape Structure).**
+On a registered biological branch with a common retained state space, complete PCE ledger, attracting basin, and certified dynamics, recurrent convergent targets are predicted to lie near the branch's attracting global-minimum set.
 
 *Test:* Reconstruct fitness landscapes for repeatedly evolved traits (eyes, wings, echolocation); identify whether convergent solutions occupy distinct potential minima.
 
-**Prediction 7 (Modularity-Evolvability Correlation).**
-More modular organisms exhibit lower adaptation costs.
+**Prediction P.8.9a.9.8 (Modularity-Evolvability Correlation).**
+Within a response-matched architectural comparison, greater modularity is predicted to correlate with lower complete adaptation cost only when interface, redundancy, coordination, and performance terms are included.
 
 *Test:* Measure $V_{prop}$ (adaptation cost proxy) across species varying in developmental modularity; expect negative correlation.
 
@@ -3975,34 +4307,40 @@ The framework suggests integration across currently separate research programs:
 
 ## P.8.9a.10 The Answer to Schrödinger's Question
 
-The PU framework provides a complete answer to Schrödinger's question:
+PU proposes the following branch-indexed operational model of life; the conditional selection theorem does not constitute a complete biological definition or derivation.
 
 **What is life?**
 
-Life is *persistent complex prediction under entropic pressure, implemented through hierarchical error correction and optimized by PCE across generations*.
+The proposal treats living organization through registered persistence, resource constraints, recovery, retained predictive responses, reproduction, and an explicitly supplied heritable-type dynamics; none is inferred from the normalized-selection correspondence alone.
 
 More precisely:
 
-**Definition P.8.9a.10.1 (Life in the PU Framework).** A living system is an MPU aggregate (Definition 29) satisfying:
-1. **Complexity:** $C_{agg} \gg C_{op}$
-2. **Error correction:** Multiple nested layers of redundancy protection
-3. **Autonomous optimization:** Self-directed POP solving under PCE
-4. **Reproduction:** Capacity to instantiate new aggregates with preserved organization
-5. **Evolution:** Generational PCE optimization refining all of the above
+**Definition P.8.9a.10.1 (Life in the PU Framework).** Within the declared biological-model branch, a system is classified as living when it is an MPU aggregate (Definition 29) satisfying the following registered modeling conditions:
+1. **Complexity certificate:** $0<C_{op}<\infty$ and $C_{agg}/C_{op}\ge\rho_{\mathrm{life}}>1$ for a threshold $\rho_{\mathrm{life}}$ fixed before classification.
+2. **Recovery certificate:** a finite degradation/noise model, retained organization predicate, recovery map, and measured recovery probability above a registered margin.
+3. **Adaptive-response certificate:** a finite protocol family on which a specified update rule produces a registered predictive-score improvement subject to a declared resource ledger.
+4. **Reproduction and inheritance certificate:** a finite response test showing production of a new aggregate and transmission of the declared organization predicate with error below a registered tolerance.
+5. **Heritable-update certificate:** a declared finite type space and inheritance/update kernel; normalized selection is represented as generational PCE reweighting only on the branch of Proposition P.8.9a.6.
 
-**Thesis P.8.9a.3 (Unified Origin of Biological Organization).** The genetic code, developmental programs, neural architectures, and conscious experience all emerge from a single principle: PCE optimization of error-corrected prediction under the thermodynamic constraint $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$.
+**Thesis P.8.9a.3 (Unified Origin of Biological Organization).** The genetic code, developmental programs, neural architectures, and conscious experience may be compared within one branch-indexed PCE vocabulary only after each biological level supplies its own admissible states, response protocols, causal dynamics, cost ledger, and cross-level maps. The registered-reset inequality
+$$
+\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)
+$$
+applies only to an implemented reset, and a positive uniform floor additionally requires $H_q(P\mid R)\ge h_{\min}>0$.
 
-*Structure of argument:*
-1. Persistence requires error correction (Theorem P.8.9a.1)
-2. Error correction requires redundancy (coding theory)
-3. Optimal redundancy is selected by PCE (Theorem Z.13)
-4. Reproduction extends PCE optimization across generations (Proposition P.8.9a.6)
-5. Sufficient complexity enables CC emergence (Theorem 34)
-6. CC enables higher-order prediction, feeding back to (1)
+*Structure of the conditional program:*
+1. Theorem P.8.9a.1 requires active recovery only on its certified degradation-bearing branch.
+2. Redundancy follows only within a specified biological coding and channel model.
+3. PCE selects a biological code or architecture only after an admissible response-preserving comparison class and strict total-ledger inequality are supplied; Theorem Z.13 does not by itself select a genetic code.
+4. Proposition P.8.9a.6 represents normalized selection as generational PCE reweighting only on its time-independent, faithful-inheritance, no-flux branch.
+5. Theorem 34 gives nonzero CC only under its separate reachability, strict-improvement, representability, attainment, and stability hypotheses.
+6. Any feedback from CC to biological prediction requires an independently registered physical channel and response certificate.
 
-The question "What is life?" reduces to "What persists through prediction?" The answer—error-corrected, PCE-optimized, hierarchically organized prediction—unifies molecular biology, evolutionary theory, neuroscience, and consciousness studies within a single framework.
+The common content is therefore a conditional variational grammar, not a derivation of molecular biology, evolutionary theory, neuroscience, or consciousness from one equation. Equality of optimization form does not identify substrates, mechanisms, or functional decompositions across those levels.
 
-Wheeler asked how physics emerges from information. Schrödinger asked how life persists against entropy. Darwin asked how complex organization arises. The PU framework reveals these as aspects of a single question with a single answer: through optimal prediction under thermodynamic constraint, where code is not metaphor but mechanism, and consciousness is not epiphenomenon but the highest expression of predictive organization.
+Within this branch-indexed model, the question “What persists through prediction?” organizes comparisons among registered biological mechanisms without claiming to derive molecular biology, evolutionary theory, neuroscience, or consciousness from one principle. The proposed comparison is therefore a conditional organizing vocabulary, not a unification theorem for those disciplines.
+
+The questions associated with Wheeler, Schrödinger, and Darwin can be compared through a common variational vocabulary only after each physical and biological branch supplies its own state space, mechanisms, response maps, and certificates. In that comparison, code is literal only where a specified encoder, channel, decoder, and recovery map are present; consciousness retains its separate operational hypotheses. No single-answer theorem follows: each domain retains its own constitutive mechanisms, empirical tests, and branch certificates.
 
 
 ## P.8.9a.11 The Pareto Signature: Heavy-Tailed Concentration as a Macroscopic Invariant of PCE
@@ -5123,7 +5461,7 @@ The PU framework reveals that the boundary between logical necessity and conting
 
 The three-generation result likewise belongs to its stated anomaly/CP class. The conditional $E_8$/Leech scaffold is downstream compatibility data and does not derive family number. These branch boundaries distinguish internal arithmetic rigidity from physical realization.
 
- The interface mode count $M = 24$ is fixed by $M=2ab$ with $(a,b)=(2,6)$ and then satisfies the eight-entry cross-domain constraint ledger of Appendix Z, Theorem Z.12: algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech rootlessness, unimodular rank, modular weight, and minimal-branch compatibility. Proposition Z.12.1a adds the Niemeier self-counting fixed point $N_{\mathrm{EU}}(24)=24$, unique among admissible even-unimodular ranks up to $24$. Because these outputs are derived from shared discrete invariants and shared geometric constructions, their mutual consistency should be read as an internal rigidity/coherence check rather than as a frequentist "probability of coincidence" claim; assigning such a probability requires specifying an explicit alternative-model ensemble, priors, and multiple-comparisons accounting. Similarly, Appendix R derives the minimal three-generation solution topologically and shows that the $E_8$/Leech geometry is compatible with that count (Theorem R.3.4; Proposition R.4.2). These quantities are not free parameters awaiting measurement but uniquely or minimally selected outputs within the stated framework assumptions. The universe's constants are mathematically constrained by the logical structure of prediction.
+ The interface mode count $M=24$ is fixed on the joint $d_0=8$, $a=2$, SLD-QFI branch by $M=2a(d_0-a)$. Appendix Z, Theorem Z.12 then audits eight separately typed records—algebraic dimension, residual capacity, kissing-class matching, Golay recovery, Leech rootlessness, even-unimodular rank, modular weight, and minimal-branch compatibility—through explicit maps and declared branch intersections. Proposition Z.12.1a adds the arithmetic Niemeier self-counting identity $N_{\mathrm{EU}}(24)=24$ within its finite rank domain. The equal integer is therefore an exact cross-check where the maps commute, not evidence that any one record derives all the others. Appendix R's anomaly/CP theorem independently gives the minimal admissible family count and its pre-flavor realization; $D_4$ triality and the $E_8$/Leech scaffold are compatibility data. This separation makes each rigidity claim falsifiable at its own certificate while preserving the nonaccidental coherence of the completed joint branch.
 
 This distinction resolves historical confusions where scientists have sought physical mechanisms for what are, in fact, logical necessities. The PU framework asserts that the "Why" of the first category is answered by logic, while the "What" and "How" of the second category are answered by physics, which itself emerges from optimizing the "Why."
 
@@ -5135,9 +5473,9 @@ This distinction resolves historical confusions where scientists have sought phy
 | Causal set theory | Defined by volume scaling | Input parameter, not derived |
 | Loop quantum gravity | Encoded in spin networks | Assumed, not selected |
 | String/M-theory | D = 10 or 11 | Compactification not unique |
-| PU framework | Derived: $K(D)=M=24$ inside the channel-complete Bures tangent-cell contract | Uniquely determined by PCE zero-mismatch selection |
+| PU framework | Derived: least feasible $D=4$ inside the faithful Bures tangent-shell contract | $24\le K(D)$, $K(3)=12$, regular $24$-cell, strict surplus-dimension cost |
 
-The PU framework differs by deriving D = 4 from pre-geometric information structure on a named branch. Given the minimal Hilbert-carrier branch ($d_0 = 8$), the active-verification/entropy branch ($a=2$ from match/mismatch plus $\varepsilon_0=\ln2$), and the channel-complete Bures tangent-cell contract, dimensional selection follows from zero-mismatch mode-channel matching without adjustable parameters. The approach inverts the usual logic: rather than assuming D-dimensional spacetime and deriving consequences, the framework starts with information structure and derives that D = 4 is the unique zero-mismatch channel-complete configuration.
+The PU framework derives $D=4$ on a named finite branch. The minimal carrier and active-record gates give $(d_0,a,M)=(8,2,24)$. Definition Z.9a requires a response-preserving shell and charges every surplus response-null dimension; Theorem Z.10 excludes $D\le3$; and the regular $24$-cell realizes the branch in four. Thus $D=4$ is the unique least-feasible configuration without an adjustable continuous parameter in the dimensional selector.
 
 ## P.10 The Boundaries of Meaningful Inquiry
 
@@ -5294,41 +5632,49 @@ SPAP supplies a diagonal limitation and an internal operation order. A declared 
 
 **Reference:** Theorem 15 (Section 5.2.2)
 
-The minimum complexity required for self-referential prediction satisfying the SPAP structure is:
-$$K_0 = 3 \text{ bits}$$
+Assume a realization belongs to Theorem 15's class satisfying (O1)–(O3) and (FC). Thus its finite visited-context set $\mathcal S_{\mathrm{vis}}$ carries the binary response maps $r_m,r_p,r_v$ whose joint map
 
-*Proof.* The SPAP cycle (Theorem 10) requires three functionally distinct, simultaneously accessible binary registers satisfying operational conditions (O1)–(O3):
+$$
+r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\longrightarrow\{0,1\}^3,
+\qquad
+r(s)=\bigl(\phi(s),p_{\mathrm{stored}}(s),c_{\mathrm{phase}}(s)\bigr),
+$$
 
-| Register | Symbol | Role | Cardinality |
-|----------|--------|------|-------------|
-| State | $\phi$ | System state component under reflexive update | $\{0,1\}$ |
-| Prediction | $p$ | Stored prediction for verification | $\{0,1\}$ |
-| Phase | $c$ | Cycle control (generate vs. update phase) | $\{0,1\}$ |
+is surjective. Then $|\mathcal S_{\mathrm{vis}}|\ge8$. Theorem 15(2) attains equality in this realization class, so
 
-**Operational Conditions.** For robust implementation, the SPAP cycle requires:
+$$
+N_{\mathrm{vis}}^{\min}=8,
+\qquad
+K_0=\log_2N_{\mathrm{vis}}^{\min}=3.
+$$
 
-- **(O1) Injective stepping:** The one-cycle transition over visited configurations is injective (logically reversible on-cycle).
-- **(O2) Two-phase control:** The loop has distinct predict/store and update phases, distinguished by control bit $c$.
-- **(O3) Non-destructive retention:** State $\phi$ and stored prediction $p$ coexist without overwrite across the phase boundary.
+*Proof.* Since $r$ is a surjection between finite sets,
 
-**Necessity of O1–O3.** Conditions O1–O3 are necessary (not merely sufficient) for any finite-memory implementation of the SPAP cycle that permits robust error correction and reliable computation. We prove necessity by showing that violation of any condition leads to computational failure:
+$$
+|\mathcal S_{\mathrm{vis}}|
+\ge
+|\{0,1\}^3|
+=8.
+$$
 
-**(O1 Necessity — Logical Reversibility On-Cycle):** Suppose O1 is violated: the on-cycle transition maps two distinct configurations $(\phi_1, p_1, c_1)$ and $(\phi_2, p_2, c_2)$ to the same output configuration. Then the system cannot determine which prior state led to the current state. This creates two problems:
-1. **Verification failure:** The SPAP update $\phi_{t+1} = \text{NOT}(p_t)$ requires knowing which prediction $p_t$ was stored. If multiple prior states map to the same current state, the prediction register content is ambiguous.
-2. **Error correction impossibility:** Quantum error correction requires distinguishing error syndromes. A non-injective on-cycle map conflates distinct error patterns, making correction impossible [Knill & Laflamme 1997].
+The eight-state construction of Theorem 15(2) satisfies the same branch conditions, so the lower bound is attained. Taking the base-two logarithm proves the formula for $K_0$. Neither injectivity (O1) alone nor SPAP outside the stated (FC) realization class yields this cardinality bound. $\square$
 
-**(O2 Necessity — Two-Phase Control):** Suppose the system lacks phase distinction. Then the operations "store prediction" and "update state based on prediction" cannot be sequenced. The SPAP rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ requires first storing $\hat{\phi}_t$, then updating $\phi$. Without phase control, these operations cannot be ordered, leading to race conditions where the prediction is overwritten before use or the state is updated before the prediction is complete.
+**Epistemic Status:** Framework-derived on the declared (O1)–(O3), (FC) realization class.
 
-**(O3 Necessity — Non-Destructive Retention):** Suppose $\phi$ and $p$ cannot coexist across the phase boundary. Then either:
-- The prediction $p$ is destroyed before the update phase, making $\text{NOT}(p)$ undefined.
-- The state $\phi$ is destroyed before verification, making comparison impossible.
 
-In either case, the SPAP cycle cannot complete.
 
-**Minimum Configuration Count.** By the pigeonhole principle, fewer than $2^3 = 8$ physical configurations would force at least two distinct logical triples $(\phi, p, c)$ to share a physical state, violating (O1). Therefore:
-$$K_0 = \log_2 8 = 3 \text{ bits} \quad \square$$
 
-**Epistemic Status:** Framework-derived. The operational conditions (O1)–(O3) are established in Theorem 15 as necessary for robust SPAP implementation under PCE.
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -5336,32 +5682,27 @@ $$K_0 = \log_2 8 = 3 \text{ bits} \quad \square$$
 
 **Reference:** Theorem 23 (Section 7), Theorem Z.2 (Appendix Z, Section Z.3.3)
 
-The minimal Hilbert space dimension for an MPU on the complex Hilbert-carrier branch is:
+Assume the (O1)–(O3), (FC) realization class of Theorem 15; mutually perfectly distinguishable Hilbert representatives for its visited contexts; and Theorem Z.2's minimal-branch hypothesis that every admissible candidate with $d_0>8$ has an admissible eight-dimensional comparator in the same optimization class with the identical registered protocol-response family and identical non-support ledger entries, but strictly lower maintained-support cost. Then
 $$
 d_0=N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
 $$
 
-*Proof.* Theorem 15 first fixes the finite operational-context floor
-$$
-N_{\mathrm{vis}}^{\min}=2^{K_0}=8.
-$$
-By Convention 1, the Hilbert-space capacity is $C_{cap}=\log_2 d_0$ (bits). Representing these $N_{\mathrm{vis}}^{\min}$ contexts as mutually perfectly distinguishable Hilbert alternatives requires $C_{cap}\ge\log_2N_{\mathrm{vis}}^{\min}=K_0$, hence $d_0\ge N_{\mathrm{vis}}^{\min}=8$. PCE minimality selects the saturating case $d_0=8$ on the minimal branch.
+*Proof.* Theorem 15 gives $N_{\mathrm{vis}}^{\min}=8$ on the assumed (O1)–(O3), (FC) class. Perfectly distinguishable quantum states have pairwise orthogonal nonzero supports. Choosing one nonzero vector from each of the eight supports gives eight pairwise orthogonal, hence linearly independent, vectors, so $d_0\ge8$. The admissible eight-state comparator in Theorem Z.2 has the same registered response and strictly lower maintained-support cost, so no candidate with $d_0>8$ minimizes the total PCE potential on the minimal branch. Thus $d_0\le8$, and therefore $d_0=8=N_{\mathrm{vis}}^{\min}=2^{K_0}$.
 
 Three structural constraints determine $d_0 = 8$ on the minimal branch:
 
-1. **Finite operational context count:** $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ from the three independent SPAP role readouts.
+1. **Finite operational context count:** $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$ from the (FC) surjection onto the three binary context coordinates in Theorem 15's stated realization class.
 
 2. **Hilbert distinguishability:** $d_0 \geq N_{\mathrm{vis}}^{\min}=8$ from Theorem 23 on the Hilbert-carrier branch.
 
-3. **PCE minimality:** Dimensions $d_0 > 8$ incur operational cost $V_{\text{op}}$ without adding any theorem-level operational necessity at the minimal branch, violating Definition 15.
+3. **PCE minimality:** Under Theorem Z.2's registered same-response comparator and strict maintained-support cost, every $d_0>8$ representative is matched by a strictly cheaper eight-dimensional representative and is therefore excluded from the minimal branch.
 
 Therefore the saturating minimal-branch value is $d_0 = 8$.
 
 **Radon-Hurwitz coherence check.** Normed division algebras exist only in dimensions 1, 2, 4, 8 (real numbers, complex numbers, quaternions, octonions) [Hurwitz 1898]. The value $d_0 = 8$ therefore also coincides with the maximal normed-division-algebra dimension. This is a secondary algebraic coherence check, not an independent upper-bound proof inside PU.
+**Structural Consistency Check (Theorems Z.1--Z.2).** Theorem Z.2's same-class comparator branch gives $d_0=8$, while Theorem Z.1's sharp-record, entropy-capacity, and no-surplus branch independently gives $a=2$. Hence $d_0=2a^2$ holds numerically on their conjunction. It is a consistency identity, not a second derivation from SPAP tensor structure and not a mutual-determination theorem. $\square$
 
-**Structural Consistency Check (Theorem Z.2).** The identity $d_0 = 2a^2$ derived in Theorem Z.2 from SPAP tensor product structure provides an independent verification: with $a = 2$ (Theorem Z.1), we obtain $d_0 = 2 \times 4 = 8$, consistent with the Hilbert-carrier saturation $d_0=N_{\mathrm{vis}}^{\min}=2^{K_0}=2^3=8$. This consistency is non-trivial and reflects the mutual determination of $K_0$, $N_{\mathrm{vis}}^{\min}$, $\varepsilon$, $a$, and $d_0$ by SPAP structure. $\square$
-
-**Epistemic Status:** Framework-derived from Convention 1 and PCE minimality; Radon-Hurwitz and Theorem Z.2 provide secondary coherence checks.
+**Epistemic Status:** Conditional framework theorem on the stated Theorem-15 Hilbert-carrier and Theorem-Z.2 minimality branch. The Radon--Hurwitz observation is only a secondary coherence check.
 
 ---
 
@@ -5369,9 +5710,9 @@ Therefore the saturating minimal-branch value is $d_0 = 8$.
 
 **Reference:** Theorem 31 (Section 7.3), Theorem J.1 (Appendix J)
 
-The binary SPAP quotient carries the structural log-cardinality
+The registered reachable binary quotient carries the structural log-cardinality
 $$
-\varepsilon_{SPAP}=\ln2.
+\varepsilon_0=\ln2.
 $$
 For an actual cyclic, degenerate classical reset of record $P$ at temperature $T$, with every retained and unchanged side-information register included in $R$, conditional Landauer gives
 $$
@@ -5391,32 +5732,33 @@ $$a = 2$$
 
 *Proof.*
 
-**Step 1 (PPI requirement).** The Principle of Physical Instantiation (Definition P.6.2) states: any derivable, self-consistent logical or mathematical structure, when physically instantiated by a system composed of finite resources and operating in finite time, will manifest in the physical world with properties and dynamics shaped by the irreducible thermodynamic costs inherent in its implementation. Applied here: the SPAP merge implies an irreducible per-cycle entropy cost $\varepsilon$ satisfying $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31); this cost must be realized by an actual physical subsystem. Among all PPI-admissible realizations, the Principle of Compression Efficiency (PCE, Definition 15) selects the one minimizing resource cost — the PCE-Attractor — which uses the structural quotient $\varepsilon_0=\ln2$; physical Landauer equality requires the separate overhead-free implementation branch.
+**Step 1 (Registered structural gate).** The active-kernel argument uses a registered reachable binary verification quotient with structural log-cardinality $\varepsilon_0=\ln2$. Theorem Z.1 additionally assumes the sharp match/mismatch record, entropy-capacity admissibility $\ln a\ge\varepsilon_0$, and its PPI/PCE no-surplus comparison class. These premises, not SPAP or conditional Landauer alone, supply the active-kernel selection. A physical reset and its heat ledger remain governed separately by Theorem 31.
 
 **Step 2 (Shannon entropy identity).** The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space is exactly:
 $$S(\rho_{\text{uniform}}) = \ln a \text{ nats}$$
 
-**Step 3 (PPI + PCE correspondence).** PPI requires the cost $\varepsilon$ to be instantiated on the retained active verification kernel. The unique minimal-branch value satisfying all three active-kernel gates is:
-- $a\ge2$ for the sharp match/mismatch SPAP verification record,
-- $\ln a \geq \varepsilon_{SPAP}$ for entropy-capacity admissibility,
-- no excess active alternatives under PPI/PCE no-surplus selection.
+**Step 3 (Active-kernel gates).** Theorem Z.1 requires:
+- $a\ge2$ for the sharp retained match/mismatch record,
+- $\ln a\ge\varepsilon_0$ for structural entropy-capacity admissibility, and
+- exclusion of response-null surplus alternatives in the registered comparison class.
 
-Thus $a = 2$ for $\varepsilon_{SPAP}=\ln 2$. $\square$
+Since $\varepsilon_0=\ln2$, the least admissible integer is $a=2$. The conclusion uses all three gates; it is not derived from physical reset heat. $\square$
 
-**Epistemic Status:** Framework-derived from PPI (Definition P.6.2) and PCE (Definition 15).
+**Epistemic Status:** Conditional branch theorem under Theorem Z.1's registered structural and no-surplus hypotheses.
 
 ---
 
-### Definition P.13.1 (Landauer Partition)
+### Definition P.13.1 (Structural Active/Inactive Partition)
 
 The inactive subspace dimension and PCE-Attractor state are:
 $$b = d_0 - a = 6$$
 $$\rho_0 = \frac{1}{2}I_2 \oplus 0_6$$
 
-The von Neumann entropy restricted to the active subspace satisfies:
-$$S(\rho_0|_{\mathcal{A}}) = \ln 2 = \varepsilon_{SPAP}$$
-
-confirming the active subspace exactly instantiates the irreducible cost with no excess.
+For the specified maximally mixed active reference state,
+$$
+S(\rho_0|_{\mathcal A})=\ln2=\varepsilon_0.
+$$
+This is a numerical equality between a state entropy and the registered binary log-cardinality; it does not identify either with reset heat or entropy production.
 
 ---
 
@@ -5533,7 +5875,7 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 *Proof of individual constraints.*
 
-**C1:** From the derivation chain: $\varepsilon_{SPAP} = \ln 2$ (Theorem P.13.3), $a = 2$ (Theorem P.13.4), $b = d_0 - a = 6$, $M = 2ab = 24$ (Theorem P.13.5).
+**C1:** On the conjunction of Theorem P.13.4's active-kernel gates, Theorem Z.2's carrier comparator, and Theorem P.13.5's QFI tangent branch, $(a,b,M)=(2,6,24)$. The structural value $\varepsilon_0=\ln2$ is one input to the active-kernel capacity gate, not a physical entropy cause of $M=24$.
 
 **C2:** The kissing number $K(D)$ is the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$ dimensions. $K(4)=24$ [Musin 2008]. For comparison: $K(3)=12$, $K(8)=240$, and standard bounds place $K(5)$ between $40$ and $44$ [Mittelmann & Vallentin 2010; Boyvalenkov et al. 2012].
 
@@ -5545,7 +5887,7 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 **C6:** The Dedekind eta function satisfies $\eta(\tau)^{24} = \Delta(\tau)$, where $\Delta$ is the unique normalized weight-12 cusp form for $SL_2(\mathbb{Z})$ [Serre 1973]. $\square$
 
-**Remark on Interpretation:** The framework derives $M = 24$ from the chain $\varepsilon_{SPAP} = \ln 2 \to a = 2 \to b = 6 \to M = 2ab = 24$ (Theorem Z.5). As established in Section Z.5, the value 24 has independent mathematical origins: the modular discriminant $\Delta(\tau) = \eta(\tau)^{24}$ requires the exponent 24 from the weight-12 modular form requirement combined with complex doubling ($M = 2 \times 12$). The convergence of the framework-derived value with these distinguished structures across multiple mathematical domains is not coincidental but reflects the framework's claim (Section P.7): PCE optimization and mathematical extremality solve the same underlying problem.
+**Remark on Interpretation.** On the conjunction of Theorem Z.1's active-kernel branch and Theorem Z.2's carrier branch, $(a,b)=(2,6)$; Theorem Z.5 then gives $M=2ab=24$. The exponent $24$ in $\eta(\tau)^{24}=\Delta(\tau)$ is an independent modular-form fact. Numerical equality does not identify the QFI mode carrier with the modular-form construction or prove that PCE optimization and mathematical extremality are one mechanism; such an identification requires an explicit common-carrier bridge.
 
 ---
 
@@ -5553,96 +5895,175 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 ## P.13.4 Lattice Selection via PCE
 
-The following theorems establish that PCE optimization, applied to the space of possible vacuum configurations, uniquely determines a lattice with specific properties. These results follow from the framework's axioms applied to the mathematically classified space of 24-dimensional lattices.
+The following statements isolate the exact lattice branch on which PCE has a finite, well-defined comparison problem. Theorem P.13.5 supplies a $24$-dimensional positive-definite QFI carrier with isotropic metric. It does not by itself supply a discrete lattice, an integral normalization, or a covolume condition. Those data and the lattice-sector restriction of the PCE potential are registered explicitly below.
 
-### Selection Principle P.13.7 (PCE Favors Even Lattice)
+### Selection Principle P.13.7 (Fixed-Normalization Even-Lattice Admissibility)
 
-PCE optimization favors an even lattice for the vacuum configuration space.
+On the $M=24$ lattice branch, let
+$$
+V_{24}:=T_{\rho_0}\mathcal O_{\rho_0}
+$$
+with the positive-definite QFI metric of Theorem P.13.5. A lattice-carrier certificate consists of a full-rank discrete subgroup $\Lambda\subset V_{24}$ representing the retained vacuum-displacement labels and a positive length unit $\ell_{\mathrm{lat}}$ fixed before candidates are compared. Write
+$$
+\langle x,y\rangle_0:=\ell_{\mathrm{lat}}^{-2}g_{\mathrm{QFI}}(x,y),
+\qquad
+q_0(x):=\langle x,x\rangle_0.
+$$
+Candidate-dependent rescaling is not allowed. The even branch is the exact admissible class
+$$
+\mathcal A_{24}^{\mathrm{even}}
+:=
+\left\{
+\Lambda\subset V_{24}:
+\operatorname{rank}\Lambda=24,
+\ q_0(v)\in2\mathbb Z\ \text{for every }v\in\Lambda
+\right\}.
+$$
 
-*Argument.*
+*Argument.* If $\Lambda\in\mathcal A_{24}^{\mathrm{even}}$, then for every $v,w\in\Lambda$,
+$$
+2\langle v,w\rangle_0
+=
+q_0(v+w)-q_0(v)-q_0(w)
+\in2\mathbb Z.
+$$
+Hence $\langle v,w\rangle_0\in\mathbb Z$, so the even-norm condition also proves integrality in the same fixed normalization. This is an exact admissibility test. Neither QFI isotropy nor Theorem E.2's real-valued capacity bound supplies the lattice-carrier certificate or the condition $q_0(\Lambda)\subset2\mathbb Z$. $\square$
 
-**Step 1 (Quadratic structure).** The QFI metric on the interface space is quadratic in the generators. Perturbations $\delta\rho$ from the PCE-Attractor have cost proportional to $\|\delta\rho\|^2_{\text{QFI}}$.
-
-**Step 2 (Capacity-bound scope).** Theorem E.2 proves only the real-valued channel-capacity inequality $C_{\max}<\ln d_0$ on its refresh branch. It does not imply that the configuration space is discrete or quantized and supplies no parity condition on a lattice. Discreteness and evenness must be imposed or proved by separate configuration-space and quadratic-form hypotheses.
-
-**Step 3 (PCE selection).** An even lattice ($|\mathbf{v}|^2 \in 2\mathbb{Z}$ for all $\mathbf{v} \in \Lambda$) has uniform parity structure, minimizing descriptive complexity in the PCE potential. Odd lattices require specification of which vectors have odd vs. even norm, adding to $V_{\text{op}}$ without predictive benefit. $\square$
-
-**Epistemic Status:** Framework-derived from PCE optimization (Definition 15).
-
----
-
-### Selection Principle P.13.8 (PCE Favors Unimodular Lattice)
-
-PCE optimization favors a unimodular (self-dual) lattice.
-
-*Argument.*
-
-**Step 1 (Dual lattice role).** For a lattice $\Lambda \subset \mathbb{R}^n$, the dual lattice $\Lambda^* = \{\mathbf{x} : \mathbf{x} \cdot \mathbf{v} \in \mathbb{Z}, \forall \mathbf{v} \in \Lambda\}$ appears naturally in Fourier analysis and momentum-space representations.
-
-**Step 2 (PCE cost comparison).** If $\Lambda \neq \Lambda^*$, both structures must be maintained:
-- Position-space configurations: $\Lambda$
-- Momentum-space/frequency representations: $\Lambda^*$
-
-This requires storing two distinct lattice specifications.
-
-**Step 3 (Self-dual optimality).** Self-duality ($\Lambda^* = \Lambda$) eliminates this redundancy. The PCE potential satisfies:
-$$V_{\text{PCE}}[\Lambda \neq \Lambda^*] > V_{\text{PCE}}[\Lambda = \Lambda^*]$$
-
-PCE selects the self-dual (unimodular) option. $\square$
-
-**Epistemic Status:** Framework-derived from PCE optimization (Definition 15).
+**Epistemic Status:** Exact lattice criterion on the registered fixed-normalization carrier branch; the carrier and parity certificate are branch data.
 
 ---
 
-### Selection Principle P.13.9 (Conditional Rootless-Lattice Criterion)
+### Selection Principle P.13.8 (Fixed-Metric Unimodularity Certificate)
 
-On a branch whose admissibility ledger independently includes evenness, unimodularity, rank $24$, and rootlessness, PCE comparison is restricted to that geometric class; isotropy alone does not select rootlessness.
+For $\Lambda\in\mathcal A_{24}^{\mathrm{even}}$, define the dual with respect to the same fixed inner product by
+$$
+\Lambda^*
+:=
+\{x\in V_{24}:\langle x,v\rangle_0\in\mathbb Z\text{ for every }v\in\Lambda\}.
+$$
+Let $G_\Lambda=(\langle b_i,b_j\rangle_0)_{i,j=1}^{24}$ be the Gram matrix of any $\mathbb Z$-basis of $\Lambda$. The unimodular branch is
+$$
+\mathcal A_{24}^{\mathrm{EU}}
+:=
+\{\Lambda\in\mathcal A_{24}^{\mathrm{even}}:\det G_\Lambda=1\}.
+$$
 
-*Argument.*
+*Argument.* Evenness gives integrality by Selection Principle P.13.7, hence $\Lambda\subseteq\Lambda^*$. Standard lattice duality gives
+$$
+[\Lambda^*:\Lambda]=\det G_\Lambda
+=
+\operatorname{covol}_0(\Lambda)^2.
+$$
+Therefore
+$$
+\det G_\Lambda=1
+\quad\Longleftrightarrow\quad
+[\Lambda^*:\Lambda]=1
+\quad\Longleftrightarrow\quad
+\Lambda=\Lambda^*.
+$$
+Thus self-duality is checked by one determinant in the fixed metric; it is not inferred from storing $\Lambda$ and $\Lambda^*$ as independent data. $\square$
 
-**Step 1 (Root definition).** Roots are lattice vectors $r\in\Lambda$ with squared Euclidean norm $\lVert r\rVert^2=2$.
-
-**Step 2 (Geometric norm-$2$ exclusion criterion).** A root $r\in\Lambda$ with $\lVert r\rVert^2=2$ furnishes a lowest-norm lattice excitation. The registered geometric criterion excludes norm-$2$ vectors, i.e. imposes $\min_{v\in\Lambda\setminus\{0\}}\lVert v\rVert^2\ge4$; it does not itself supply a physical vacuum or energy gap.
-
-
-
-**Step 3 (Rootless uniqueness in 24D).** Theorem Z.8c states that among even unimodular lattices in dimension 24, the rootless case is unique and equals the Leech lattice $\Lambda_{24}$.
-
-**Step 4 (PCE produces isotropy).** Theorem P.13.5 gives that the PCE-Attractor produces an isotropic QFI metric:
-$$g_{\text{QFI}} = \lambda I_M,\quad M=24.$$
-
-Since the lattice lives in this 24-dimensional mode space, the norm $|v|^2$ is taken in the induced QFI inner product.
-
-**Step 5 (Chain completion).** Therefore:
-$$\text{PCE-Attractor} \xrightarrow{\text{Thm P.13.5}} g_{\text{QFI}}=\lambda I_{24},\quad \text{registered rootless criterion}\xrightarrow{\text{Thm Z.8c}}\Lambda_{24}.$$
-
-This identifies the Leech lattice once the even/unimodular/rootless 24-dimensional branch criteria are imposed.
-
-**Epistemic Status:** The rootless uniqueness step is mathematical (Theorem Z.8c). The framework contribution is the conditional branch criterion that singles out the corresponding lattice class.
+**Epistemic Status:** Established lattice algebra. Membership in $\mathcal A_{24}^{\mathrm{EU}}$ is the registered even-unimodular branch certificate.
 
 ---
 
-### Theorem P.13.10 (Leech-Lattice Identification on the Even/Unimodular/Rootless 24D Branch)
+### Selection Principle P.13.9 (Finite Niemeier Gaussian-Cost Comparison)
 
-**Reference:** Theorem R.4.6 (Appendix R, Section R.4.2.1.4)
+Let
+$$
+\mathfrak N_{24}
+:=
+\mathcal A_{24}^{\mathrm{EU}}/\!\cong
+$$
+be the set of isometry classes in the fixed positive-definite normalization. By the Niemeier classification, $\mathfrak N_{24}$ has exactly $24$ elements. Fix a registered $t>0$, put
+$$
+\tau:=it,
+\qquad
+u:=e^{2\pi i\tau}=e^{-2\pi t}\in(0,1),
+$$
+and define
+$$
+\Theta_\Lambda(\tau)
+:=
+\sum_{v\in\Lambda}e^{\pi i\tau q_0(v)}
+=
+\sum_{v\in\Lambda}u^{q_0(v)/2}.
+$$
+The series converges absolutely. A Gaussian lattice-cost certificate is the exact restriction
+$$
+V_{\mathrm{lat}}([\Lambda])
+=
+V_0+\kappa_{\mathrm{lat}}\bigl(\Theta_\Lambda(it)-1\bigr),
+\qquad
+\kappa_{\mathrm{lat}}>0,
+$$
+of the descended PCE potential to $\mathfrak N_{24}$, where $V_0$ is class-independent and the equality includes every candidate-dependent lattice-sector term of Definition D.1. This is the Gaussian completely monotone pair cost appearing as a special case of Corollary R.4.2b.1.
 
-Assume the vacuum lattice is required to be even, unimodular, rootless, and 24-dimensional. Then the lattice is uniquely the Leech lattice $\Lambda_{24}$.
+*Argument.* For a positive-definite even unimodular rank-$24$ lattice,
+$$
+\Theta_\Lambda(\tau)
+=
+E_4(\tau)^3+
+\bigl(N_{\mathrm{root}}(\Lambda)-720\bigr)\Delta(\tau),
+$$
+where
+$$
+N_{\mathrm{root}}(\Lambda)
+:=
+\#\{v\in\Lambda:q_0(v)=2\}.
+$$
+Indeed, the theta series is a weight-$12$ modular form, the weight-$12$ space is spanned by $E_4^3$ and $\Delta$, and comparison of the coefficient of $u$ gives the displayed coefficient. Since
+$$
+\Delta(it)
+=
+u\prod_{m=1}^{\infty}(1-u^m)^{24}
+>0,
+$$
+the sign of every difference of Gaussian lattice costs is exactly the sign of the corresponding difference of root counts. Thus the ordering is independent of the registered values of $t>0$ and $\kappa_{\mathrm{lat}}>0$; no parameter is tuned to obtain the minimizer. $\square$
+
+**Epistemic Status:** Exact conditional PCE comparison on a declared finite class and Gaussian pair-cost branch. QFI isotropy alone does not supply the lattice-carrier or restricted-potential certificate.
+
+---
+
+### Theorem P.13.10 (Unique Leech Minimizer on the Certified Niemeier Gaussian Branch)
+
+**Reference:** Theorems R.4.6 and R.4.10 and Corollary R.4.2b.1 (Appendix R, Sections R.4.2.1.4, R.4.2.3, and R.4.2.4)
+
+Assume the fixed-normalization lattice-carrier and evenness certificate of Selection Principle P.13.7, the unimodularity certificate of Selection Principle P.13.8, and the Gaussian lattice-cost certificate of Selection Principle P.13.9. Then the unique PCE-minimizing lattice is the Leech lattice $\Lambda_{24}$, up to isometry.
 
 *Proof.*
 
-**Step 1 (Branch criteria).** By Selection Principles P.13.7–P.13.9 together with $M = 24$ (Theorem P.13.5), the branch under consideration requires a lattice that is:
-- Even
-- Unimodular
-- Rootless
-- 24-dimensional
+**Step 1 (Finite comparison class).** The candidates are exactly the $24$ isometry classes of positive-definite even unimodular lattices of rank $24$ classified by Niemeier [Niemeier 1973].
 
-**Step 2 (Niemeier classification).** By the Niemeier classification [Niemeier 1973], exactly 24 even unimodular lattices exist in dimension 24. These are distinguished by their root systems.
+**Step 2 (Root counts).** Exactly one class has no norm-$2$ vectors: the Leech lattice $\Lambda_{24}$ [Leech 1967; Conway 1969a]. Thus
+$$
+N_{\mathrm{root}}(\Lambda_{24})=0.
+$$
+Each of the other $23$ classes has a nonempty root system; in fact its root count is at least $48$.
 
-**Step 3 (Rootless uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ [Leech 1967; Conway 1969a]. The remaining 23 lattices all have non-trivial root systems with $|\Phi| \ge 48$ roots and therefore contain vectors with $|v|^2=2$.
+**Step 3 (Strict PCE comparison).** Selection Principle P.13.9 gives, for every $[\Lambda]\ne[\Lambda_{24}]$,
+$$
+\begin{aligned}
+V_{\mathrm{lat}}([\Lambda])-V_{\mathrm{lat}}([\Lambda_{24}])
+&=
+\kappa_{\mathrm{lat}}
+\bigl(\Theta_\Lambda(it)-\Theta_{\Lambda_{24}}(it)\bigr)\\
+&=
+\kappa_{\mathrm{lat}}N_{\mathrm{root}}(\Lambda)\Delta(it)
+>0.
+\end{aligned}
+$$
+Therefore
+$$
+\operatorname*{argmin}_{[\Lambda]\in\mathfrak N_{24}}
+V_{\mathrm{lat}}([\Lambda])
+=
+\{[\Lambda_{24}]\}.
+$$
+Rootlessness is an output of the registered finite comparison, not an admissibility assumption. The selected lattice is even, unimodular, rootless, positive-definite, and rank $24$. $\square$
 
-**Step 4 (Conclusion).** Under the stated branch criteria, the lattice is uniquely $\Lambda_{24}$. $\square$
-
-**Epistemic Status:** Conditional framework-to-mathematics bridge. The framework supplies the branch criteria; Niemeier classification then identifies $\Lambda_{24}$.
+**Epistemic Status:** Conditional framework-to-mathematics selection theorem. The registered carrier and Gaussian restriction of the PCE potential define the branch; modular-form and Niemeier classification theorems prove its unique minimizer.
 
 ---
 
@@ -5682,9 +6103,7 @@ On the predictive-recovery MacWilliams branch — in which the $M=24$ QFI interf
 - Error protection: $V_{\text{error}}(d)$ (decreasing in $d$)
 - Information capacity: $V_{\text{benefit}} \propto k$
 
-On the predictive-recovery On the predictive-recovery MacWilliams branch, Theorem Z.13b.0a fixes $k=n-k$ through the declared MacWilliams-dual asymmetry penalty, hence $k=12$. This rate is not derived from a parity--entropy equality: Theorem P.8.9a.2 excludes that inference without a constitutive resource map. With $(n,k)=(24,12)$ independently fixed, Step 3 may optimize distance.
-
- The branch condition corresponds to the stability requirement $(1-R)\,C_{\max}=\varepsilon_{SPAP}$ developed in Theorem P.8.9a.2: parity investment per channel use matches the per-cycle SPAP entropy cost, so $(1-R)(2\ln 2)=\ln 2$ yields $R=1/2$. Theorem Z.13b.0a closes the rate-selection question by identifying prediction payload and recovery syndrome as MacWilliams-dual PCE roles whose strict dual-asymmetry penalty is minimized only at $k=n-k$. On this branch $k=12$ is fixed and Step 3 proceeds.
+On the predictive-recovery MacWilliams branch, Theorem Z.13b.0a fixes $k=n-k$ through the declared MacWilliams-dual asymmetry penalty, hence $k=12$. This rate is not derived from a parity--entropy equality. Theorem P.8.9a.2 gives only a conditional arithmetic identity after both $R=1/2$ and the residual budget $C_{\max}^*=2\ln2$ have been independently registered; it cannot be used to derive either premise. With $(n,k)=(24,12)$ independently fixed, Step 3 may optimize distance.
 
 **Step 3 (Distance optimization).** For $(n, k) = (24, 12)$, the Griesmer bound [Griesmer 1960] gives:
 $$n \geq \sum_{i=0}^{k-1} \lceil d/2^i \rceil$$
@@ -5712,22 +6131,7 @@ The binary Golay code and the Leech lattice are connected only on a registered g
 
 
 
-**Reference:** Proposition R.4.2a (Appendix R, Section R.4.2.1.3)
 
-The Golay code provides the glue vectors in the standard construction of the Leech lattice from $\sqrt{2}E_8^3$.
-
-*Proof.*
-
-**Step 1 (Base lattice).** Define $L_0 = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, an even lattice in 24 dimensions with minimum squared norm 4.
-
-**Step 2 (Gluing construction).** The Leech lattice admits the construction [Conway & Sloane 1999]:
-$$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (g_c + L_0)$$
-
-where $g_c$ are glue vectors indexed by Golay codewords. This is a disjoint union of $|\mathcal{G}_{24}| = 2^{12} = 4096$ cosets.
-
-**Step 3 (Rootlessness).** The Golay code's minimum weight 8 ensures no glue-shifted vector has squared norm 2, preserving rootlessness. $\square$
-
-**Epistemic Status:** Established mathematical construction.
 
 ---
 
@@ -5765,17 +6169,17 @@ for the rescaled family $\phi^*_\rho(x) = \phi^*(\rho x)$. This is a stationarit
 
 ### Proposition P.13.6.2 (Conformal Structure on the Exact-Scale Two-Dimensional Boundary Branch)
 
-On the exact-scale conformal branch of Proposition P.13.6.1 and the two-dimensional boundary branch in which the vacuum degrees of freedom are represented on a two-dimensional chiral conformal slice of the emergent spacetime, the vacuum algebra is described by a vertex operator algebra.
+Assume a two-dimensional local unitary theory with Poincaré invariance, a discrete spectrum, a conserved stress tensor whose virial current is improvable, and a chiral state-field correspondence satisfying the VOA vacuum, locality, translation, and grading axioms. On this branch, the vacuum chiral algebra is a vertex operator algebra.
 
 *Proof.*
 
-**Step 1 (Exact-scale branch input).** On the exact-scale conformal branch of Proposition P.13.6.1, the continuum action admits a genuine smooth family of exact critical points generated by dilations. The stress-energy tensor of the effective theory is then traceless: $T^\mu_\mu = 0$.
+**Step 1 (Exact-scale branch input).** Proposition P.13.6.1 supplies an exact dilation family but does not alone imply a traceless stress tensor. The present proposition separately assumes a conserved stress tensor with improvable virial current; after improvement, $T^\mu_\mu=0$.
 
 **Step 2 (Two-dimensional boundary branch).** By Theorem 47 (Section 11.3), the conformal boundary of the emergent $D = 4$ spacetime has dimension $D - 1 = 3$. The two-dimensional boundary branch assumes that the relevant CFT lives on a two-dimensional chiral slice: the worldsheet swept by string-like excitations, or equivalently, the Riemann surface on which modular transformations act. The 24 interface modes (Theorem P.13.5) provide the target-space degrees of freedom for this 2D structure. The identification of the QFI interface modes with the 2D chiral target-space coordinates is the content of this branch.
 
-**Step 3 (Enhancement to conformal symmetry).** In two dimensions, scale invariance combined with unitarity implies an infinite-dimensional enhancement of the global conformal algebra. The Virasoro algebra, with generators $\{L_n\}_{n \in \mathbb{Z}}$ satisfying $[L_m, L_n] = (m-n)L_{m+n} + \frac{c}{12}(m^3 - m)\delta_{m+n,0}$, emerges as the algebra of local conformal transformations [Polchinski 1988].
+**Step 3 (Enhancement to conformal symmetry).** Under the proposition's locality, unitarity, Poincaré, discrete-spectrum, and stress-tensor improvement hypotheses, two-dimensional scale invariance enhances to conformal invariance. The Virasoro algebra, with generators $\{L_n\}_{n \in \mathbb{Z}}$ satisfying $[L_m, L_n] = (m-n)L_{m+n} + \frac{c}{12}(m^3 - m)\delta_{m+n,0}$, emerges as the algebra of local conformal transformations [Polchinski 1988].
 
-**Step 4 (Algebraic axiomatization).** The algebraic axiomatization of 2D conformal field theory is a vertex operator algebra [Huang 1997]. $\square$
+**Step 4 (Registered chiral algebra).** The assumed chiral state-field correspondence obeys the VOA axioms, so its state space is a VOA. This conclusion is not inferred from dilation symmetry alone. $\square$
 
 ---
 
@@ -5866,10 +6270,11 @@ where $V$ is holomorphic and $W$ is a full-CFT realization, Proposition P.13.6.4
 
  This graded structure with gap matches the VOA axiom $V = \bigoplus_{n \geq 0} V_n$ with $V_0 = \mathbb{C}|0\rangle$ and finite-dimensional weight spaces.
 
-**Uniqueness of $J(\tau)$.** The unique modular-invariant partition function for a holomorphic $c = 24$ VOA with the required pole structure is:
-$$\chi_{V^\natural}(\tau) = J(\tau) = j(\tau) - 744 = q^{-1} + 196884q + 21493760q^2 + \cdots$$
-
-This uniquely identifies $V^\natural$ among holomorphic $c = 24$ VOAs with $\dim(V_1) = 0$.
+**The $J$-character.** For a strongly rational holomorphic $c=24$ VOA with $V_1=0$, modularity fixes the graded character
+$$
+\chi_V(\tau)=J(\tau)=j(\tau)-744=q^{-1}+196884q+21493760q^2+\cdots.
+$$
+Equality of graded characters does not determine the vertex-operator products or the VOA isomorphism class. Identifying $V$ with $V^\natural$ requires the additional Griess-algebra/framed-orbifold hypotheses of Theorems P.13.16 and P.13.27.
 
 ---
 
@@ -5896,11 +6301,11 @@ Holomorphic (self-dual) VOAs with central charge $c = 24$ have been extensively 
 
 1. Schellekens [Schellekens 1993] classified the possible weight-one Lie algebra structures, finding 71 candidates.
 
-2. Subsequent work [van Ekeren et al. 2020] has constructed VOAs for many of these candidates and established uniqueness results for specific cases.
+2. For the $70$ cases with nonzero weight-one Lie algebra, the strongly rational holomorphic $c=24$ classification is established and the VOA is determined by its weight-one Lie algebra [van Ekeren et al. 2020].
 
-3. The classification remains incomplete: not all 71 candidates are known to correspond to distinct isomorphism classes of VOAs.
+3. The remaining $V_1=0$ character case is not identified from the character alone; the Moonshine module is selected here only after the additional Griess/framed-orbifold data stated below.
 
-**Epistemic Status:** Partially established. The "71 classes" is a list of candidates, not a proven classification of isomorphism classes.
+**Epistemic Status:** Established for the $70$ nonzero-$V_1$ strongly rational holomorphic cases; the bare $V_1=0$ character does not by itself prove Moonshine-module uniqueness.
 
 ---
 
@@ -5995,30 +6400,30 @@ $$
 For $m>0$ and $c_0>0$, the right-hand side tends to $+\infty$. If $G$ is finite, then for resolutions below the minimum separation of its finitely many control labels, $N_G(\delta)=|G|$. The equiprobable label has entropy $\ln|G|$, so the declared reset model charges $c_0\ln|G|$, independently of further refinement. ∎
 
 
-### Corollary P.13.19a
+### Corollary P.13.19a (Conditional $U(1)^{24}$ Controller Cost)
 
-The effective operational symmetry cost of $U(1)^{24}$ is infinite:
+If the full $U(1)^{24}$ action is implemented by the equiprobable-label, once-per-cycle reset, no-side-information, positive-per-nat controller architecture of Theorem P.13.19 at every resolution $\delta$, then
 $$
-V_{eff}^{sym}(U(1)^{24}) = +\infty
+V_{\mathrm{eff}}^{\mathrm{sym}}(U(1)^{24})=+\infty.
 $$
 
-*Proof.* $\dim(U(1)^{24}) = 24 > 0$, so the theorem applies. $\square$
+*Proof.* Under those hypotheses the control region has positive dimension $24$, so Theorem P.13.19 applies. ∎
 
-### Corollary P.13.19b (Continuous Symmetry as Effective Closure)
+### Corollary P.13.19b (Continuous Symmetry on the Registered Uniform-Controller Branch)
 
-Exact positive-dimensional continuous symmetry cannot be an exact uniformly refinable physically instantiated symmetry family in PU. When a continuous symmetry appears in the effective description, it is the closure or coarse-grained completion of finite operational data, not an additional exact continuum ontology.
+Assume the full action family of a positive-dimensional compact symmetry region must, at every refinement scale $\delta$, be represented by one of $N_K(\delta)$ equiprobable stored labels, reset once per cycle with no retained side information and charged $c_0>0$ per nat. Then Theorem P.13.19 gives
+$$
+V_{\mathrm{eff}}^{\mathrm{sym}}(K)=+\infty,
+$$
+so that particular uniformly refinable controller architecture cannot realize the exact action at finite asymptotic cost. This does not exclude exact continuous symmetry on branches with relational, gauge-redundant, analog, nonuniform, side-information-assisted, or otherwise differently encoded realizations.
 
-For the electromagnetic phase branch,
+For the separately registered electromagnetic phase branch, Appendix Q proves that
 $$
-G_L=\{e^{iN\ln 2}:N\in\mathbb Z\}
+G_L=\{e^{iN\ln2}:N\in\mathbb Z\}
 $$
-is a countable cyclic Landauer-phase subgroup, while Appendix Q proves
-$$
-\overline{G_L}=U(1).
-$$
-Thus the operationally generated object is the integer-cycle Landauer phase subgroup, and the continuum $U(1)$ is the effective topological closure seen by finite-resolution probes.
+is dense in $U(1)$. Hence its closure reproduces $U(1)$ at finite phase tolerance. Density supplies one effective-closure realization; it does not prove that every physical $U(1)$ must arise this way.
 
-*Proof.* Theorem P.13.19 shows that any exact uniformly refinable positive-dimensional Lie-group action has $V_{eff}^{sym}=+\infty$, so it cannot be maintained as exact physical symmetry under finite-resource PPI. Appendix Q, Theorem Q.0.7d and Corollary Q.0.7d′ show that the Landauer subgroup $G_L$ is dense in $U(1)$. Therefore every finite phase tolerance can be approximated by some finite cycle count $N$, while the completed continuum group appears only after taking the mathematical closure. This proves that the continuum symmetry is an effective closure of integer-cycle operational phases rather than an exact physically instantiated continuum family. $\square$
+*Proof.* The first statement is exactly Theorem P.13.19 with its hypotheses retained. The density statement is Appendix Q. Neither theorem classifies controller architectures outside its stated domain. ∎
 
 ---
 
@@ -6115,15 +6520,13 @@ where $(V_{\Lambda_{24}})^\theta$ is the $\theta$-fixed subspace and $(V_{\Lambd
 
 ### Theorem P.13.23 (Canonical $\mathbb{Z}_2$ from the PCE-Attractor)
 
-The irreducible SPAP merge/reset operation that defines the PCE fixed point induces a canonical order-2 involution, and hence an intrinsic $\mathbb{Z}_2$ grading at the attractor.
+Assume the PCE-attractor branch carries the registered two-label fixed-ready-state quotient of Definition J.1 and retains its two labels as a logical subspace. The automorphism group of that quotient is $\mathbb Z_2$, and its nonidentity element lifts to an order-two unitary on the registered logical subspace.
 
-*Proof.* Lemma J.1 identifies an irreducible 1-bit logical erasure (a $2\to 1$ map) in the SPAP cycle, whose structural floor is $\varepsilon_0=\ln2$; PCE does not by itself establish physical Landauer equality. Let
+*Proof.* Let
 $$
 r:\{0,1\}\to\{\mathrm{ready}\}
 $$
-denote this erasure map on the erased bit. There is a unique non-identity permutation $s:\{0,1\}\to\{0,1\}$ satisfying $r\circ s=r$, namely the bit-flip $s(0)=1$, $s(1)=0$. Hence the erasure step canonically carries the group $\{e,s\}\cong \mathbb{Z}_2$.
-
-In the quantum realization, $s$ lifts to a unitary involution $S$ on the corresponding two-dimensional logical subspace, with $S^2=I$, and the $\pm 1$ eigenspace decomposition of $S$ defines a $\mathbb{Z}_2$ grading (even/odd under the intrinsic flip) associated to the SPAP merge/reset that defines the PCE attractor. $\square$
+be the registered constant quotient. Exactly two permutations of $\{0,1\}$ satisfy $r\circ s=r$: the identity and the bit flip. They form $S_2\cong\mathbb Z_2$. On a Hilbert realization with the two labels represented by an orthonormal basis, the bit flip lifts to a unitary $S$ with $S^2=I$; its $\pm1$ eigenspaces give the corresponding grading. SPAP and PCE alone do not supply the quotient or Hilbert realization. $\square$
 
 ---
 
@@ -6135,9 +6538,9 @@ $$
 \quad\Longleftrightarrow\quad
 g=-1.
 $$
-In particular, among standard lifts of lattice involutions on the Leech branch, vanishing fixed weight-one space singles out the lift attached to $g=-1$; no separate centrality assumption is required.
+In particular, among standard lifts of lattice involutions on the Leech branch, vanishing fixed weight-one space singles out $g=-1$; no centrality assumption is required.
 
-Consequently, if a selected Leech-branch vacuum $\mathcal V$ is realized as an orbifold extension of $V_{\Lambda_{24}}$ by an involutive standard lift $\hat g$ of some involution $g \in \mathrm{Aut}(\Lambda_{24})$, and if no positive-dimensional weight-one symmetry family survives on that branch, then $g=-1$ and $\hat g=\theta$.
+For the orbifold consequence, assume additionally that (i) the selected extension $\mathcal V$ contains $(V_{\Lambda_{24}})^{\hat g}$ as its untwisted subVOA with the same conformal vector, is of CFT type with finite-dimensional graded subspaces, and carries a semisimple real-charge action of the fixed Heisenberg zero modes, and (ii) the operational controller criterion excludes every nontrivial positive-dimensional compact automorphism family of $\mathcal V$. Then $g=-1$ and $\hat g=\theta$.
 
 *Proof.*
 
@@ -6166,19 +6569,11 @@ $$
 $$
 for every weight-one Heisenberg current. Hence $(V_{\Lambda_{24}})^\theta_1=0$, proving the converse implication.
 
-6. For the final claim, the untwisted sector of the orbifold contains $(V_{\Lambda_{24}})^{\hat g}$, so
+6. For the final claim, suppose $\mathfrak h^g\ne0$. Because $g$ is an integral involution, $\ker(g-I)$ is defined over $\mathbb Q$; hence the fixed lattice $\Lambda_{24}^g=\Lambda_{24}\cap\ker(g-I)$ contains a nonzero vector $u$. By Steps 1--2 the current $u(-1)\mathbf1$ lies in $(V_{\Lambda_{24}})^{\hat g}_1$, and by hypothesis (i) it lies in $\mathcal V_1$. It is primary of weight one, so $u_0$ commutes with $L_0$, annihilates the conformal vector, preserves every graded subspace of $\mathcal V$, and is a derivation of the vertex-operator product. Those subspaces are finite dimensional and $u_0$ acts on them semisimply with real charges, so
 $$
-(V_{\Lambda_{24}})^{\hat g}_1 \subseteq \mathcal V_1.
+U_t:=\exp(2\pi i t u_0),\qquad t\in\mathbb R,
 $$
-If $(V_{\Lambda_{24}})^{\hat g}_1\neq0$, choose $0\neq u$ in that space. The VOA commutator identity [Frenkel, Lepowsky & Meurman 1988] states, for a weight-one vector,
-$$
-[u_0,Y(v,z)]=Y(u_0v,z)
-$$
-for every state $v$; its hypothesis is satisfied because $u\in(V_{\Lambda_{24}})_1$. Hence $u_0$ is a grading-preserving derivation, and exponentiation on each finite-dimensional graded piece gives
-$$
-e^{tu_0}Y(v,z)e^{-tu_0}=Y(e^{tu_0}v,z),
-$$
-so $e^{tu_0}$ is a one-parameter automorphism family. Under the identification $(V_{\Lambda_{24}})_1\cong\mathfrak h$, nonzero $u$ has nonzero pairing with some lattice vector $\alpha$ because $\Lambda_{24}$ spans $\mathfrak h$; then $u_0e^\alpha=\langle u,\alpha\rangle e^\alpha\ne0$. The family is therefore nontrivial. Since $\hat g u=u$, one has $\hat g u_0\hat g^{-1}=u_0$, so the family preserves the $\hat g$-invariant sector and survives on the orbifold branch. This contradicts the assumed absence of a positive-dimensional continuous weight-one symmetry family. Therefore $(V_{\Lambda_{24}})^{\hat g}_1=0$, and Steps 4--5 give $g=-1$ and $\hat g=\theta$. ∎
+is a one-parameter group of automorphisms of $\mathcal V$ whose closure is a positive-dimensional compact abelian subgroup of $\operatorname{Aut}(\mathcal V)$. It is nontrivial already on the untwisted sector: nondegeneracy supplies $\alpha\in\Lambda_{24}$ with $\langle u,\alpha\rangle\ne0$, and the $\hat g$-symmetrization $w$ of $e^{2\alpha}$ is a nonzero vector of $(V_{\Lambda_{24}})^{\hat g}$, because $\hat g$ acts on $e^{2\alpha}$ by the square of its sign on $e^{\alpha}$ when $g\alpha=\alpha$ and permutes $e^{2\alpha}$ with $e^{2g\alpha}$ otherwise. Since $gu=u$ gives $\langle u,g\alpha\rangle=\langle u,\alpha\rangle$, one has $u_0w=2\langle u,\alpha\rangle w\ne0$. This contradicts hypothesis (ii). Thus $\mathfrak h^g=0$, and Steps 4--5 give $g=-1$ and $\hat g=\theta$. No separate certificate that the circle extends from the invariant subVOA to the orbifold is required, because $u(-1)\mathbf1$ is a weight-one vector of $\mathcal V$ itself. ∎
 
 ---
 
@@ -6256,8 +6651,8 @@ Thus the weight-two dimension, product structure, and automorphism group have th
 
 Assume:
 1. the Leech-lattice branch of Theorem P.13.10,
-2. the operational exact-symmetry criterion of Definition P.13.2 and Theorem P.13.19, which excludes uniformly refinable positive-dimensional weight-one symmetry families, and
-3. the selected vacuum is realized as an orbifold extension of $V_{\Lambda_{24}}$ by an involutive standard lift $\hat g$ of some involution $g\in \mathrm{Aut}(\Lambda_{24})$, realizing the canonical $\mathbb{Z}_2$ of Theorem P.13.23.
+2. the operational exact-symmetry criterion of Definition P.13.2 and Theorem P.13.19, which excludes uniformly refinable positive-dimensional compact symmetry families on its registered controller branch, and
+3. the selected vacuum is realized as an orbifold extension of $V_{\Lambda_{24}}$ by an involutive standard lift $\hat g$ of an involution $g\in\operatorname{Aut}(\Lambda_{24})$, realizes the canonical $\mathbb Z_2$ of Theorem P.13.23, and satisfies the untwisted-subVOA hypotheses in the final clause of Theorem P.13.24.
 
 Then the resulting holomorphic $c = 24$ vacuum VOA is the Moonshine module:
 $$\mathcal{V}_{\text{PCE}} = V^\natural$$
@@ -6268,15 +6663,7 @@ $$\mathcal{V}_{\text{PCE}} = V^\natural$$
 
 **Step 2 (Lattice VOA).** By Theorem P.13.14, $\Lambda_{24}$ admits a VOA structure $V_{\Lambda_{24}}$ with $c = 24$ and $\dim(V_1) = 24$.
 
-**Step 3 (Orbifold branch and weight-one exclusion).** Under assumption 3, the orbifold vacuum $\mathcal{V}_{\text{PCE}}$ has untwisted sector $(V_{\Lambda_{24}})^{\hat g}$, so
-$$
-(V_{\Lambda_{24}})^{\hat g}_1 \subseteq \mathcal{V}_{\text{PCE},1}.
-$$
-If $(V_{\Lambda_{24}})^{\hat g}_1\neq0$, choose $0\neq u$ in that space. For weight-one $u$, the VOA commutator identity [Frenkel, Lepowsky & Meurman 1988] gives
-$$
-[u_0,Y(v,z)]=Y(u_0v,z),
-$$
-so $u_0$ is a grading-preserving derivation and $e^{tu_0}$ is an automorphism on every finite-dimensional graded piece. Because $\Lambda_{24}$ spans its complexification, some $\alpha\in\Lambda_{24}$ satisfies $\langle u,\alpha\rangle\ne0$, and then $u_0e^\alpha=\langle u,\alpha\rangle e^\alpha\ne0$; the one-parameter family is nontrivial. Finally $\hat gu=u$ implies $\hat gu_0\hat g^{-1}=u_0$, so this family preserves the untwisted invariant sector and survives on the selected orbifold branch. That contradicts assumption 2. Therefore
+**Step 3 (Orbifold branch and weight-one exclusion).** Assumptions 2--3 supply the final-clause hypotheses of Theorem P.13.24. If $(V_{\Lambda_{24}})^{\hat g}_1\ne0$, that theorem produces a nontrivial positive-dimensional compact automorphism family of the selected orbifold, contradicting the controller criterion. Therefore
 $$
 \dim\big((V_{\Lambda_{24}})^{\hat g}_1\big)=0.
 $$
@@ -6363,63 +6750,53 @@ $$\approx 8.08 \times 10^{53}$$
 
 ### Theorem P.13.30 (Monster as Vacuum Symmetry on the Moonshine Branch)
 
-On the branch where Theorem P.13.27 identifies $\mathcal{V}_{\text{PCE}} = V^\natural$,
-$$\boxed{\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}}$$
+On the branch where Theorem P.13.27 identifies the selected VOA candidate $\mathcal V_{\mathrm{PCE}}$ with $V^\natural$,
+$$
+\boxed{\operatorname{Aut}_{\mathrm{VOA}}(\mathcal V_{\mathrm{PCE}})=\mathbb M.}
+$$
 
-*Proof.* By Theorem P.13.27, $\mathcal{V}_{\text{PCE}} = V^\natural$ on the branch under consideration. By Theorem P.13.29, $\text{Aut}(V^\natural) = \mathbb{M}$. $\square$
+*Proof.* Theorem P.13.27 gives an isomorphism $\mathcal V_{\mathrm{PCE}}\cong V^\natural$ on the stated branch, and conjugation by that isomorphism identifies their VOA automorphism groups. Theorem P.13.29 gives $\operatorname{Aut}_{\mathrm{VOA}}(V^\natural)=\mathbb M$. $\square$
 
-**Epistemic Status:** Follows from the branch identification of Theorem P.13.27 together with Frenkel, Lepowsky & Meurman 1988.
+**Epistemic Status:** Conditional mathematical automorphism theorem. A physical vacuum-symmetry conclusion additionally requires a realization functor from the VOA to the retained physical observable/response category; the physical group is the image of the induced action and is the full Monster only when that action is faithful.
 
 ---
 
 ### P.13.30a Vacuum Stabilizer Descent from Monster Symmetry
 
-**Definition P.13.30a.1 (Predictive Polarization Datum).** On the Moonshine branch, a predictive polarization datum is
+**Definition P.13.30a.1 (Predictive Polarization Datum).** On the Moonshine branch, the bare marked datum is
 $$
-\Pi_{\mathrm{PU}}
+\Pi_{\mathrm{PU}}=(\mathcal G_{24},\Lambda_{24},\mathcal A\oplus\mathcal B,\widetilde X,J_G),
+$$
+with the entries described below. A **descent realization** of this datum is an additional finite certificate
+$$
+\mathfrak C_{\Pi}=(H,r_{\Lambda},r_{\mathcal G},\iota_{\mathrm{resp}}),
+$$
+where $H\le\mathbb M$, $r_{\Lambda}:H\to\operatorname{Aut}(\Lambda_{24})=Co_0$ is a specified action on the marked lattice carrier, $r_{\mathcal G}:H\to\operatorname{Aut}(\mathcal G_{24})=M_{24}$ is a specified action on the marked code frame, and $\iota_{\mathrm{resp}}:H\to\operatorname{Aut}(\mathrm{Resp}_{\mathrm{PU}})$ is a compatible action on the retained response presheaf. The certificate must include the intertwining maps showing that these actions preserve the active/inactive polarization, flag lift, and half-swap data. The bare tuple does not itself define an action of $\mathbb M$ on its entries or a homomorphism from $\mathbb M$ to $Co_0$ or $M_{24}$.
+
+**Theorem P.13.30a.2 (Conditional Stabilizer Descent of Low-Energy Symmetry).** Assume an accepted descent realization $\mathfrak C_{\Pi}$. Define
+$$
+H_{\Pi}:=\{h\in H:h\text{ preserves every marked entry of }\Pi_{\mathrm{PU}}\}.
+$$
+Every exact low-energy symmetry whose accepted lift is an element of $H$ and whose action preserves $\Pi_{\mathrm{PU}}$ is represented by an element of $H_{\Pi}$. Its certified lattice and code actions lie in $r_{\Lambda}(H_{\Pi})\le Co_0$ and $r_{\mathcal G}(H_{\Pi})\le M_{24}$, respectively.
+
+*Proof.* The lift and preservation hypotheses place the representing element in $H_{\Pi}$ by definition. Because $r_{\Lambda}$ and $r_{\mathcal G}$ are homomorphisms supplied by $\mathfrak C_{\Pi}$ and the certificate's intertwining diagrams commute, their images act on the marked lattice and code data and preserve the corresponding markings. No Monster-to-Conway or Monster-to-Golay descent is inferred without these supplied maps. $\square$
+
+**Corollary P.13.30a.3 (Scope of Stabilizer-Descended Gauge and Flavor Data).** Under $\mathfrak C_{\Pi}$, an exact low-energy gauge or flavor label that both lifts through $H$ and preserves $\Pi_{\mathrm{PU}}$ acts through $H_{\Pi}$. If its induced response action $\iota_{\mathrm{resp}}(h)$ is the identity, it is operationally null. Labels that fail the lift or preservation hypotheses are outside this descent theorem and require their own branch certificate; they are not thereby proved trivial.
+
+*Proof.* The first claim is Theorem P.13.30a.2. The second is the response-equivalence criterion of Corollary G.8.4h.3. Neither theorem classifies labels outside the stated lift and preservation domain. $\square$
+
+**Corollary P.13.30a.4 (Twined-Character Observability Criterion).** Assume an accepted $\mathfrak C_{\Pi}$ and let $h\in H_{\Pi}$. Its physical response content is non-null exactly when $\iota_{\mathrm{resp}}(h)\ne\mathrm{id}$. If, in addition, the declared family of restricted traces is separating on $\iota_{\mathrm{resp}}(H_{\Pi})$, equality of all restricted twined and untwined response traces implies $\iota_{\mathrm{resp}}(h)=\mathrm{id}$:
+$$
+\operatorname{Tr}_{V_{\mathcal P}}(hq^{L_0-1})
 =
-(\mathcal G_{24},\Lambda_{24},\mathcal A\oplus\mathcal B,\widetilde X,J_G),
-$$
-where $\mathcal G_{24}$ is the marked Golay code, $\Lambda_{24}$ is the marked Leech lattice, $\mathcal A\oplus\mathcal B$ is the active/inactive MPU polarization with $(a,b)=(2,6)$, $\widetilde X$ is the minimal flag lift used for the ordered $Y/W/C$ decomposition, and $J_G$ is the marked half-swap branch datum of Appendix G.
-
-**Theorem P.13.30a.2 (Stabilizer Descent of Low-Energy Symmetry).** Let
-$$
-\mathbb M_{\Pi}
-=
-\{g\in\mathbb M:g(\Pi_{\mathrm{PU}})=\Pi_{\mathrm{PU}}\}
-$$
-be the stabilizer of the predictive polarization datum inside the Monster group. Any exact low-energy symmetry that lifts to an automorphism of the Moonshine vacuum and preserves the PU polarization datum is the restriction of an element of $\mathbb M_{\Pi}$. Its action on the marked Golay-Leech carrier descends through the Conway/Golay stabilizer chain and, in the marked coordinate frame, through a subgroup of $M_{24}=\operatorname{Aut}(\mathcal G_{24})$.
-
-*Proof.* By Theorem P.13.30, the automorphism group of the Moonshine vacuum branch is $\operatorname{Aut}(V^\natural)=\mathbb M$. Therefore every exact vacuum-preserving automorphism of the Moonshine VOA branch is an element of $\mathbb M$. Requiring preservation of $\Pi_{\mathrm{PU}}$ imposes exactly the stabilizer condition $g(\Pi_{\mathrm{PU}})=\Pi_{\mathrm{PU}}$, so the admissible automorphisms are precisely elements of $\mathbb M_{\Pi}$. The Leech lattice sector of $V^\natural$ carries the Conway action on $\Lambda_{24}$, and the marked Golay frame is the binary code data used in the Leech construction. Any automorphism preserving the marked Golay code acts on the 24 coordinates by an automorphism of $\mathcal G_{24}$, hence by an element of $M_{24}$. Thus the low-energy action descends through the stabilizer chain
-$$
-\mathbb M_{\Pi}\longrightarrow \operatorname{Stab}_{Co_0}(\Pi_{\mathrm{PU}})\longrightarrow \operatorname{Stab}_{M_{24}}(\Pi_{\mathrm{PU}}).
-$$
-∎
-
-**Corollary P.13.30a.3 (Gauge and Flavor Labels as Stabilizer-Descended Data).** On the Moonshine branch, no independent exact low-energy label can be appended to the Standard Model or generation structure without either acting through the stabilizer of $\Pi_{\mathrm{PU}}$ or becoming operationally trivial under Corollary G.8.4h.3.
-
-*Proof.* If the label preserves the vacuum and the polarization datum, Theorem P.13.30a.2 places it in the stabilizer chain. If it does not act on any admissible interface channel, Corollary G.8.4h.3 removes it as an operationally null global label. These cases exhaust exact labels compatible with the stated branch. ∎
-
-**Corollary P.13.30a.4 (Twined-Character Observability Criterion).** Let $g\in\mathbb M$ act on $V^\natural$ on the Moonshine branch, and let $\mathrm{Resp}_{\mathrm{PU}}$ be the protocol-response presheaf of Theorem P.6.1b.3 restricted to the PU polarization datum $\Pi_{\mathrm{PU}}$. The Monster element $g$ has non-null physical content only if:
-
-1. $g$ preserves $\Pi_{\mathrm{PU}}$, equivalently $g\in\mathbb M_\Pi$; and
-
-2. the action of $g$ induces a non-identity natural transformation of $\mathrm{Resp}_{\mathrm{PU}}$.
-
-In any trace-complete protocol family, if every admissible protocol sector has the same restricted twined and untwined response trace,
-$$
-\operatorname{Tr}_{V_{\mathcal P}}
-(gq^{L_0-1})
-=
-\operatorname{Tr}_{V_{\mathcal P}}
-(q^{L_0-1})
+\operatorname{Tr}_{V_{\mathcal P}}(q^{L_0-1})
+\quad\text{for every }\mathcal P
+\Longrightarrow
+\iota_{\mathrm{resp}}(h)=\mathrm{id}.
 \tag{P.13.30a.1}
 $$
-for all protocol-separated retained subspaces $V_{\mathcal P}\subset V^\natural$, then $g$ is PPI-identical to the identity on physical predictions. Two Monster elements with identical restricted twined response traces on all $V_{\mathcal P}$ are PPI-identical to each other.
 
-*Proof.* If $g$ does not preserve $\Pi_{\mathrm{PU}}$, Theorem P.13.30a.2 excludes it from the descended exact low-energy symmetry chain. If $g$ preserves $\Pi_{\mathrm{PU}}$ but induces the identity natural transformation on $\mathrm{Resp}_{\mathrm{PU}}$, then every admissible protocol has the same outcome law with and without $g$. The operational Yoneda reconstruction theorem, Theorem P.6.1b.3, identifies physical structure only up to equality of all protocol responses, and Corollary G.8.4h.3 removes exact labels with no local interface action. Hence such a $g$ is operationally null.
-
-Conversely, if the induced natural transformation is not the identity, then by definition there exists an admissible protocol sector on which the response differs. On a trace-complete protocol family this difference is detected by a restricted trace, so (P.13.30a.1) fails on that sector. The same argument applied to $g^{-1}h$ shows that two elements $g,h\in\mathbb M_\Pi$ are PPI-identical whenever the restricted response traces are trace-complete and identical for all admissible sectors. ∎
+*Proof.* If $\iota_{\mathrm{resp}}(h)$ is the identity, every admitted protocol has the same outcome law with and without $h$; Theorem P.6.1b.3 and Corollary G.8.4h.3 therefore make the action operationally null. Conversely, the separating-trace hypothesis says precisely that a nonidentity response action changes at least one restricted trace. Without that hypothesis, equality of characters or traces need not determine equality of response transformations. $\square$
 
 ---
 
@@ -6427,10 +6804,13 @@ Conversely, if the induced natural transformation is not the identity, then by d
 
 **Reference:** [Conway & Norton 1979; Borcherds 1992]
 
-For each $g \in \mathbb{M}$, the McKay-Thompson series
-$$T_g(\tau) = \sum_{n \geq -1} \mathrm{tr}_{V^\natural_n}(g) \cdot q^n$$
-
-is the hauptmodul for a genus-zero subgroup $\Gamma_g \leq SL_2(\mathbb{R})$.
+For each $g\in\mathbb M$, the McKay--Thompson series is
+$$
+T_g(\tau)
+:=\operatorname{Tr}_{V^\natural}\!\left(gq^{L_0-1}\right)
+=\sum_{n\ge0}\operatorname{Tr}_{V^\natural_n}(g)q^{n-1}.
+$$
+It is the Hauptmodul for a genus-zero subgroup $\Gamma_g \leq SL_2(\mathbb{R})$.
 
 **Epistemic Status:** Established theorem (Borcherds 1992, Fields Medal work).
 
@@ -6444,7 +6824,7 @@ $$\boxed{
 \begin{aligned}
 &\text{registered reset ensemble }(P,R,q) \xrightarrow{\text{conditional Landauer}} \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R) \\[0.3em]
 &\text{sharp match/mismatch quotient + attained structural-reference branch} \to \varepsilon_0=\ln2 \xrightarrow{\text{capacity + no-surplus}} a=2 \xrightarrow{d_0=8,\ b=d_0-a,\ \text{SLD-QFI}} M=24 \\[0.3em]
-&\xrightarrow{\text{24D even/unimodular/rootless branch}} \Lambda_{24} \\[0.3em]
+&\xrightarrow{\text{fixed-normalization even/unimodular certificate + finite Gaussian-cost comparison}} \Lambda_{24} \\[0.3em]
 &\xrightarrow{\text{P.13.6.1-3 branch hypotheses}} \text{exact scale} \to \text{2D chiral VOA} \to c = 24 \xrightarrow{\text{P.13.6.4 candidate-and-cost hypotheses}} \text{selected holomorphic candidate} \\[0.3em]
 &\xrightarrow{\text{lattice VOA}} V_{\Lambda_{24}} \xrightarrow{\text{involutive standard-lift orbifold branch}} \mathcal{V}_{\text{PCE}} \xrightarrow{\text{weight-one exclusion + P.13.24}} \theta\text{-orbifold} \xrightarrow{\text{FLM}} V^\natural \xrightarrow{\text{FLM}} \text{Aut}(V^\natural)=\mathbb{M}
 \end{aligned}
@@ -6463,8 +6843,8 @@ $$\boxed{
 | 4 | $a = 2$ | Framework | Theorem Z.1 (PPI + PCE) |
 | 5 | $b = 6$ | Definition | $b = d_0 - a$ |
 | 6 | $M = 24$ | Framework | Theorem Z.5 |
-| 7 | Even, unimodular, rootless, 24D branch criteria | Conditional framework input | Selection Principles P.13.7–P.13.9 |
-| 8 | $\Lambda_{24}$ | Mathematics after branch criteria | Niemeier classification |
+| 7 | Fixed-normalization positive-definite rank-$24$ even-unimodular carrier and finite Gaussian-cost objective | Registered finite PCE branch | Selection Principles P.13.7–P.13.9 |
+| 8 | $\Lambda_{24}$ | Unique minimizer modulo isometry | Theorem P.13.10; modular-form and Niemeier classification |
 | 9 | $\mathcal{G}_{24}$ | PCE + Mathematics | Griesmer, Pless |
 | 10 | Exact scale $\to$ 2D chiral CFT/VOA | Conditional branch | Propositions P.13.6.1–P.13.6.2: exact critical scaling family and 2D chiral-slice hypotheses |
 | 11 | $c = 24$; preference for a holomorphic candidate | Conditional branch and candidate comparison | Propositions P.13.6.3–P.13.6.4: chiral-$24$-boson assignment plus equal-benefit, equal-propagation, strict-cost hypotheses |
@@ -6512,7 +6892,7 @@ Beyond $M=24$, the vacuum-symmetry endpoint requires the following branch data:
 $$
 \begin{aligned}
 M=24&+\text{predictive-recovery MacWilliams gate} &&\longrightarrow \mathcal G_{24},\\
-M=24&+\text{even/unimodular/rootless and gluing certificates} &&\longrightarrow \Lambda_{24},\\
+M=24&+\text{fixed-normalization even/unimodular certificate and finite Gaussian-cost objective} &&\longrightarrow \Lambda_{24},\\
 \Lambda_{24}&+\text{chiral }c=24\text{ VOA and lattice-VOA hypotheses} &&\longrightarrow V_{\Lambda_{24}},\\
 V_{\Lambda_{24}}&+\text{registered controller, standard lift, and orbifold certificates} &&\longrightarrow V^\natural,\\
 V^\natural&+\text{Frenkel--Lepowsky--Meurman theorem} &&\longrightarrow \operatorname{Aut}(V^\natural)=\mathbb M.
@@ -6529,7 +6909,7 @@ The derivation realizes three central claims of the Predictive Universe framewor
 
 The *Cogito* establishes conscious awareness as the sole indubitable certainty. The framework interprets this awareness as fundamentally predictive: every mental act—perception, belief, planning—constitutes prediction navigating the Space of Becoming (Definition 8). Physical reality emerges as the thermodynamically optimal structure for predictive coherence.
 
-The Monster group derivation demonstrates that this predictive foundation determines not merely the dimensionality of spacetime ($D = 4$) but the complete symmetry structure of the vacuum. The largest sporadic simple group—an object discovered through pure mathematics with no apparent physical motivation—emerges as the necessary symmetry of optimal prediction.
+The registered P.13.27 branch gives a precise conditional result: after the independent code, lattice, controller, orbifold, and VOA hypotheses are supplied, the Frenkel--Lepowsky--Meurman theorem identifies the mathematical endpoint as $V^\natural$ with automorphism group $\mathbb M$. Neither SPAP nor PCE alone selects that branch, and identifying this VOA with a physical vacuum requires a separate realization certificate.
 
 **2. The Principle of Physical Instantiation (Definition P.6.2)**
 
@@ -6539,15 +6919,15 @@ The derivation chain exemplifies PPI at every step:
 
 | Abstract Structure | Physical Instantiation | Thermodynamic Cost |
 |-------------------|----------------------|-------------------|
-| SPAP logical cycle | MPU state evolution | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ |
-| 2-dimensional merge | Active kernel $a = 2$ | Landauer bound saturation |
-| 24 QFI modes | Interface structure | Capacity quantization |
-| Golay code $[24,12,8]$ | Error correction | Optimal rate-distance |
-| Leech lattice $\Lambda_{24}$ | Vacuum geometry | Rootless packing |
-| Moonshine module $V^\natural$ | Vacuum algebra | Weight-one elimination |
-| Monster group $\mathbb{M}$ | Vacuum symmetry | Automorphism closure |
+| Registered binary fixed-ready reset | Structural alphabet and physical reset | $\varepsilon_0=\ln2$ structurally; $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ only under the registered Landauer hypotheses |
+| Sharp binary active record | Active kernel $a=2$ | Theorem Z.1 capacity and no-surplus hypotheses |
+| $24$ QFI tangent modes | Interface tangent space | $M=2a(d_0-a)=24$ on the joint $d_0=8$, $a=2$ branch |
+| Golay code $[24,12,8]$ | Predictive-recovery code | Self-dual-rate and MacWilliams certificate |
+| Leech lattice $\Lambda_{24}$ | Mathematical lattice carrier | Fixed-normalization even-unimodular and finite Gaussian-cost certificate |
+| Moonshine module $V^\natural$ | Mathematical VOA endpoint | Registered controller, standard lift, orbifold data, and the FLM construction |
+| Monster group $\mathbb M$ | Mathematical automorphism group | $\operatorname{Aut}(V^\natural)=\mathbb M$ by the FLM theorem |
 
-The Monster is the *automorphism group of the physical instantiation*—the complete set of transformations preserving the PCE-optimal vacuum structure.
+The Monster is the automorphism group of the mathematical VOA $V^\natural$ on the registered Moonshine branch. It becomes a physical vacuum symmetry only if an explicit physical-realization map identifies the retained vacuum observables with that VOA and proves that its automorphisms preserve the physical response ledger.
 
 **3. Resolution of Wigner's Puzzle (Section P.7)**
 
@@ -6558,16 +6938,16 @@ The Monster group provides a striking illustration. Mathematicians discovered th
 - The Leech lattice and sphere packing (geometry)
 - Monstrous Moonshine and modular forms (number theory)
 
-Physicists, following PCE optimization from the predictive foundations, arrive at the same structure through:
-- SPAP thermodynamic costs (statistical mechanics)
-- QFI interface modes (quantum information)
-- Vacuum symmetry requirements (quantum field theory)
+Within the manuscript, the same mathematical structure is reached only on a conditional chain using:
+- a separately registered binary-reset ledger;
+- the QFI interface-mode branch;
+- the predictive-recovery, lattice, controller, orbifold, and VOA certificates.
 
-The convergence is not coincidental. As stated in Section P.7 of Appendix P:
+This is a compatibility of independently gated ledgers, not a derivation of Moonshine from SPAP. Section P.7 states the intended variational interpretation:
 
 > "Both processes instantiate the same branch-indexed PCE variational grammar: each searches an admissible structure space for stable predictive optima under finite constraints, and each removes surplus description by operational equivalence."
 
-The Monster appears in both domains because it is the automorphism group of the unique structure—the Moonshine module $V^\natural$—that satisfies the extremal optimization conditions that both mathematics and physics, as expressions of prediction, necessarily converge upon.
+The branch is mathematically compatible with the variational interpretation because its registered finite comparison selects the Moonshine construction inside the declared candidate class. The present results do not prove that mathematics and physics must converge to $V^\natural$, nor that every physical vacuum realizes the Moonshine branch.
 
 ---
 
@@ -6583,21 +6963,15 @@ $$
 
 Here $\mathcal T_{\mathrm{op}}$ is the operation order of a declared protocol, $\mathcal E_{\mathrm{reset}}$ is its registered-reset entropy ledger, and $\mathcal P_{\mathrm{id}}$ is an independently specified predictor-target identification. Theorem P.12.3 permits their joint certification but proves that none determines either of the others without an additional injective reconstruction or monotonicity hypothesis; no isomorphism $\mathcal T\cong\mathcal E\cong\mathcal P$ is established.
 
-The Monster group derivation adds a downstream vacuum-symmetry aspect to the SPAP triad:
+The Moonshine construction adds a separate mathematical symmetry ledger:
 
-$$\mathcal{T} \cong \mathcal{E} \cong \mathcal{P}, \qquad \mathcal{S}\ \text{is fixed on the corresponding Leech/Moonshine branch}$$
+$$
+(\mathcal T_{\mathrm{op}},\mathcal E_{\mathrm{reset}},\mathcal P_{\mathrm{id}})
+\quad\text{and}\quad
+\bigl(\mathcal G_{24},\Lambda_{24},V^\natural,\operatorname{Aut}(V^\natural)=\mathbb M\bigr).
+$$
 
-where $\mathcal{S}$ denotes the vacuum symmetry structure (the Monster group $\mathbb{M}$). The relation is as follows:
-
-**($\mathcal{E} \to \mathcal{S}$):** Once the branch criteria leading to $M = 24$ and the Leech/Moonshine identification are imposed, the entropy-cost chain feeds the symmetry endpoint $\mathbb{M}$.
-
-**($\mathcal{S} \to \mathcal{E}$):** On the branch identified with $V^\natural$, the resulting symmetry structure records the same fixed parameter chain back to $M = 24$ and $a = 2$; this is branch-internal bookkeeping rather than a new primitive equivalence.
-
-**($\mathcal{T} \to \mathcal{S}$):** Temporal structure enters through the same SPAP chain that, together with the additional branch criteria, reaches the vacuum-symmetry endpoint.
-
-**($\mathcal{P} \to \mathcal{S}$):** Perspectival structure contributes through the same $d_0 = 8 \to (a,b) = (2,6) \to M = 24$ chain feeding the branch selection.
-
-The Monster group is thus a downstream vacuum-symmetry output of the SPAP chain on this branch, not a fourth primitive equivalent of the original triad.
+The first tuple contains protocol order, registered-reset entropy, and predictor--target identification. The second is available only after the predictive-recovery, lattice, controller, orbifold, and VOA certificates. The ledgers can coexist on their joint branch, but no arrow from any member of the first tuple to $\mathbb M$, or from $\mathbb M$ back to $(8,2,24)$, is proved. The exact result is the conditional mathematical identity $\operatorname{Aut}(V^\natural)=\mathbb M$.
 
 ### P.13.16.2 The Vacuum as Optimal Predictive Coherence
 
@@ -6607,9 +6981,9 @@ Definition P.8.2 of Appendix P states:
 
 This definition extends naturally to the vacuum structure:
 
-**Definition P.13.3 (Vacuum as Optimal Coherence).** The vacuum $\mathcal{V}_{\text{PCE}}$ is the ground state of error-corrected predictive coherence—the unique configuration of zero excitation that maintains maximal symmetry consistent with the thermodynamic constraints of SPAP.
+**Definition P.13.3 (Vacuum Candidate on the Registered Coherence Class).** Fix the holomorphic $c=24$ candidate class, scalar modular certificate, finite Gaussian Niemeier cost, exact-symmetry controller cost, and involutive standard-lift orbifold realization of Theorem P.13.27. The vacuum $\mathcal V_{\mathrm{PCE}}$ is the minimizer in that admitted class. Theorem P.13.10 fixes its Leech lattice input, Theorems P.13.19 and P.13.24 force the $-1$ involution on the orbifold branch, and the FLM theorem identifies the resulting VOA as $V^\natural$. Uniqueness is therefore a theorem of this finite certificate, not a consequence of SPAP alone.
 
-The Monster group $\mathbb{M} = \text{Aut}(\mathcal{V}_{\text{PCE}})$ is then the complete set of transformations under which optimal predictive coherence is preserved. Just as spacetime geometry encodes how prediction maintains itself across spatial extension, the Monster encodes how prediction maintains itself in the vacuum ground state.
+On this candidate class, $\mathcal V_{\mathrm{PCE}}\cong V^\natural$ and the FLM theorem gives $\operatorname{Aut}(\mathcal V_{\mathrm{PCE}})=\mathbb M$ as a VOA statement. Calling it a physical vacuum symmetry additionally requires the physical-realization and response-preservation certificate stated above; no such identification follows from the finite selector alone.
 
 ---
 
@@ -6624,9 +6998,9 @@ The derivation chain establishes a distinguished Leech/Moonshine branch once the
 The key thermodynamic input is the lower-bound parameter $\varepsilon_0=\ln2$, used at the PCE fixed point. Together with the additional branch criteria, it leads to:
 
 - $a = 2$ (PPI-optimality, Theorem Z.1)
-- $b = d_0 - a = 6$ (given $d_0 = 8$ from SPAP logic)
+- $b=d_0-a=6$ (with $d_0=8$ from Theorem Z.2's Hilbert-distinguishability and same-class-comparator branch)
 - $M = 2ab = 24$ (QFI structure)
-- Leech lattice on the 24D even/unimodular/rootless branch
+- Leech lattice as the unique minimizer of the finite Gaussian-cost potential on the certified rank-$24$ Niemeier branch
 - $V_{\Lambda_{24}}$ with $\dim(V_1) = 24$ (lattice VOA)
 - Operational exact-symmetry criterion favoring $\dim(V_1) = 0$
 - Central-involution branch plus $\theta$-orbifold yielding $V^\natural$
@@ -6636,27 +7010,21 @@ Each step combines framework input with an additional branch criterion or mathem
 
 ### P.13.17.2 Counterfactual Analysis
 
-The structural relation $d_0 = 2a^2$ is derived in Theorem Z.2 (Appendix Z, Section Z.3.3) from the tensor product structure of the SPAP cycle: the pre-merge configuration space $\mathcal{H}_\phi \otimes \mathcal{H}_p \otimes \mathcal{H}_c$ has dimension $a \times a \times 2 = 2a^2$, which must equal the MPU Hilbert space dimension $d_0$. Combined with Corollary Z.1, which establishes $K_0 = 1 + 2\varepsilon/\ln 2$, we can analyze what constraints alternative values of $\varepsilon$ would face:
+Theorem Z.2 selects $d_0=8$ from the (O1)–(O3), (FC), Hilbert-distinguishability, same-class-comparator branch and records $d_0=2a^2$ only after the independent Theorem-Z.1 branch fixes $a=2$. Corollary Z.1 therefore supplies consistency identities at
+$$
+(d_0,a,K_0,\varepsilon_0)=(8,2,3,\ln2);
+$$
+it does not define a counterfactual family obtained by varying $\varepsilon$.
 
-| $\varepsilon$ | $a$ (minimal admissible) | $K_0 = 1 + 2\varepsilon/\ln 2$ | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | Viability |
-|---------------|---------------------|-------------------------------|--------------|-----------------|-----------|
-| $\ln 2$ | 2 | 3 (integer) | 8 | 24 | Viable branch point |
-| $\ln 3$ | 3 | 4.17 (non-integer) | 18 | 90 | Non-viable: $K_0 \notin \mathbb{Z}$ |
-| $\ln 4$ | 4 | 5 (integer) | 32 | 224 | Non-viable: MCC fails ($K(D)\neq 224$) and no unique lattice selection |
+Within the selected joint branch,
+$$
+b=d_0-a=6,
+\qquad
+M=2a(d_0-a)=24.
+$$
+The subsequent channel-complete kissing-class, predictive-recovery, Leech, orbifold, and VOA criteria may then be applied on their separately stated branches.
 
-Only $\varepsilon_0=\ln2$ satisfies simultaneously:
-
-1. Integer $K_0$ (logical bits).
-2. Mode-channel matching $K(D)=M$ (MCC), yielding $K(4)=24$.
-3. Access to the unique rootless even unimodular 24D branch.
-
-All other values violate at least one of these constraints:
-
-* **Non-integer $K_0$**: SPAP cannot be implemented with fractional bits.
-* **Mode-channel mismatch**: even when $K_0$ is integer, the induced $M$ can fail $K(D)=M$ (e.g., standard bounds give $K(7)\le134<224<240=K(8)$ [Boyvalenkov et al. 2012], so $224$ cannot equal any $K(D)$).
-* **No unique rootless 24D branch**: the Niemeier uniqueness input is specific to dimension $24$, so the later vacuum-selection steps used here are unavailable away from that branch.
-
-The Monster group therefore characterizes the distinguished branch selected by these combined criteria.
+Counterfactual choices such as $\varepsilon=\ln3$ or $\ln4$ require a new reachable alphabet, a new active-kernel theorem, a new same-class carrier comparator, and a new mode-channel certificate. The current theorems neither assign them $d_0=2a^2$ nor exclude them by a noninteger value of $K_0$. Accordingly, the Monster conclusion is conditional on the registered $(8,2,24)$ branch and its later classification hypotheses, not on an exhaustive theorem over all structural alphabet sizes.
 
 ### P.13.17.3 The Monster as Fixed Point
 
@@ -6664,14 +7032,14 @@ The derivation chain can be viewed as a fixed-point equation:
 
 $$\text{PCE}[\text{Vacuum Structure}] = \text{Vacuum Structure}$$
 
-The PCE-optimal vacuum must be stable under its own optimization dynamics. The Monster group is the automorphism group of this fixed point—the complete set of transformations preserving the structure that PCE optimization selects.
+On the admitted P.13.27 branch, the finite comparison selects $\mathcal V_{\mathrm{PCE}}=V^\natural$. Applying the same response quotient and cost again leaves that selected isomorphism class unchanged, so it is an idempotent selection fixed point. The FLM automorphism theorem then gives $\operatorname{Aut}(\mathcal V_{\mathrm{PCE}})=\mathbb M$. Stability here means invariance of the selected finite response class under the registered selector; dynamical attraction would require an additional evolution law and is not used in the group identification.
 
-This perspective illuminates why the Monster has such remarkable properties:
-- **Largest sporadic simple group:** The uniqueness of $V^\natural$ among $c = 24$ holomorphic VOAs with $\dim(V_1) = 0$ (Theorem P.13.16) determines that its automorphism group is the Monster
-- **Connections to modular forms (Moonshine):** The McKay-Thompson series $T_g(\tau)$ for $g \in \mathbb{M}$ are hauptmoduls for genus-zero groups (Theorem P.13.31), reflecting the modular properties of $V^\natural$
-- **Exceptional mathematical properties:** The Monster appears at the intersection of multiple classification boundaries—the unique rootless Niemeier lattice, the unique $c = 24$ VOA without weight-one currents (under PCE selection)
+The branch records three exact mathematical facts:
+- **Automorphism theorem:** the FLM construction has $\operatorname{Aut}(V^\natural)=\mathbb M$.
+- **Monstrous Moonshine:** the McKay--Thompson series $T_g(\tau)$ for $g\in\mathbb M$ satisfy the genus-zero theorem cited in Theorem P.13.31.
+- **Classification inputs:** the Leech lattice is the rootless Niemeier lattice, while the identification of the VOA uses the registered orbifold/controller data and not the character condition $V_1=0$ alone.
 
-The Monster's size ($\approx 8 \times 10^{53}$) reflects the symmetry content of the Moonshine module, which is determined by the framework's selection of $V^\natural$ as the PCE-optimal vacuum VOA.
+The order of $\mathbb M$ is a property of that mathematical automorphism group. It is not derived from the PU integer ledger, and it describes a physical symmetry only on an accepted realization of the Moonshine VOA as the retained vacuum algebra.
 
 **Proposition P.13.17.4 (No Moonshine-Coefficient Derivation of the Vacuum Exponent).** The graded character coefficients of $V^\natural$, including
 $$
@@ -6691,9 +7059,12 @@ N_{\mathbb R}=2\dim_{\mathbb C}\mathrm{Gr}_{\mathbb C}(12,24)=288,
 \qquad
 m=4+\nu,
 $$
-so the allowed values in Theorem U.16a are $142$ and $141.5$. Appendix T defines the electroweak exponent through the electroweak Morse-Bott ledger
+so the allowed values in Theorem U.16a are $142$ and $141.5$. Appendix T defines the electroweak exponent through the Steiner active-pair response action
 $$
-\kappa_{EW}=36+3-\frac12=38.5.
+\kappa_{EW}
+=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
+=\frac{77}{2}
+=38.5.
 $$
 No theorem in Appendix P, Appendix T, or Appendix U defines a functional that maps $\dim(V^\natural_2)$ or the representation dimension $196883$ to $m$, $N_{\mathbb R}$, $\kappa_{\Lambda}$, $\kappa_{EW}$, $A_{\mathrm{eff}}$, or $A_{EW}$.
 
@@ -6723,11 +7094,13 @@ Thus the base-two logarithm of $196883$ is not close to the base-two electroweak
 
 ### P.13.18.1 The Moonshine Phenomenon
 
-Monstrous Moonshine, conjectured by Conway and Norton [Conway & Norton 1979] and proved by Borcherds [Borcherds 1992], establishes that for each element $g \in \mathbb{M}$, the McKay-Thompson series
-
-$$T_g(\tau) = \sum_{n \geq -1} \mathrm{tr}_{V^\natural_n}(g) \cdot q^n$$
-
-is the hauptmodul for a genus-zero subgroup of $SL_2(\mathbb{R})$.
+Monstrous Moonshine, conjectured by Conway and Norton [Conway & Norton 1979] and proved by Borcherds [Borcherds 1992], uses, for each $g\in\mathbb M$, the McKay--Thompson series
+$$
+T_g(\tau)
+:=\operatorname{Tr}_{V^\natural}\!\left(gq^{L_0-1}\right)
+=\sum_{n\ge0}\operatorname{Tr}_{V^\natural_n}(g)q^{n-1}.
+$$
+This series is the Hauptmodul for a genus-zero subgroup of $SL_2(\mathbb{R})$.
 
 This connection between:
 - The Monster (finite group theory)
@@ -6739,23 +7112,23 @@ appeared deeply mysterious when discovered. Why should the largest sporadic grou
 
 ### P.13.18.2 Resolution via PCE
 
-The Predictive Universe framework offers a resolution: all these structures are PCE-optimal in their respective domains.
+The Predictive Universe framework supplies a conditional variational interpretation of these established mathematical relations.
 
-**The Monster:** The automorphism group of the unique VOA ($V^\natural$) that satisfies PCE constraints at $c = 24$.
+**The Monster:** The automorphism group of the FLM Moonshine module, $\operatorname{Aut}(V^\natural)=\mathbb M$.
 
-**The Moonshine Module:** The unique holomorphic $c = 24$ VOA with $\dim(V_1) = 0$—the PCE-optimal vacuum algebra.
+**The Moonshine Module:** The VOA obtained on the registered Leech involution-orbifold/controller branch; the condition $c=24$ and $V_1=0$ alone is not used as a uniqueness theorem.
 
-**Modular Forms:** On the torus/mapping-class/scalar-partition-function branch of Proposition P.13.6.5, $SL_2(\mathbb{Z})$-invariant functions represent scalar modularly consistent observables. The flag perspective space $\Sigma$ alone does not impose this invariance.
+**Modular Functions:** On the torus/mapping-class/scalar-partition-function branch of Proposition P.13.6.5, $SL_2(\mathbb Z)$-invariant functions represent scalar modularly consistent observables. The flag perspective space $\Sigma$ alone does not impose this invariance.
 
-**Genus-Zero Surfaces:** Surfaces with unique uniformization—the simplest Riemann surfaces, selected by PCE for minimal descriptive complexity.
+**Genus-Zero Property:** This is the theorem about the McKay--Thompson series cited in Theorem P.13.31, not a consequence of descriptive simplicity.
 
-The Moonshine correspondence is not a coincidence but a manifestation of PCE optimization operating across mathematical domains. Conway and Norton discovered that these structures are connected; the framework explains *why*: they are all expressions of the same underlying optimization.
+PCE enters only through the registered finite comparison that selects the already specified Moonshine candidate branch. It does not reprove the Moonshine theorem or establish a common causal origin for its group-, VOA-, and modular-function data.
 
 As stated in Section P.7 of Appendix P:
 
 > "The 'unreasonable effectiveness' dissolves once the common foundation is recognized. Mathematics is the abstract articulation of predictive structure; physics is that same predictive structure under thermodynamic instantiation and finite-resource constraint. The correspondence between them is therefore not accidental but a consequence of their shared origin in prediction and their shared PCE selection of optimal structures."
 
-Monstrous Moonshine is a theorem about this correspondence—it states that the symmetry of optimal prediction (the Monster) encodes the structure of optimal modular functions (the McKay-Thompson series). The connection follows from their common origin in PCE optimization.
+Monstrous Moonshine is the cited mathematical theorem relating $\mathbb M$, $V^\natural$, and the McKay--Thompson series. The manuscript's PCE language is an interpretation of the registered branch; it is not a premise of the Moonshine theorem and does not prove that the mathematical structures share a physical origin.
 
 ---
 
@@ -6763,11 +7136,11 @@ Monstrous Moonshine is a theorem about this correspondence—it states that the 
 
 ### P.13.19.1 Validation of the Approach
 
-The Monster group derivation provides evidence for the framework's central claim: that physical law emerges from predictive optimization under thermodynamic constraints.
+The Monster branch provides a structural compatibility test of the framework, not an empirical derivation of physical vacuum symmetry.
 
-The evidence is structural rather than numerical:
+The evidence claimed here is conditional and nonnumerical:
 
-1. **Internal Consistency:** The same constants ($d_0 = 8$, $\varepsilon_0=\ln2$, $M = 24$) that determine spacetime dimensionality also determine vacuum symmetry. No additional parameters are introduced.
+1. **Internal Consistency:** The integer $24$ occurs in the interface, code, and lattice/VOA ledgers only after their distinct gates are supplied. Sharing that integer does not make one ledger determine another, and the controller/orbifold realization adds essential branch data.
 
 2. **Connection to Deep Mathematics:** The derivation terminates at structures (Leech lattice, Moonshine module, Monster group) that mathematicians have identified as exceptional through independent methods.
 
@@ -6781,32 +7154,27 @@ The evidence is structural rather than numerical:
 
 The derivation extends the scope of what the predictive foundations determine:
 
-| Domain | Structure | Derived From |
-|--------|-----------|--------------|
-| Dimensionality | $D = 4$ | Mode-channel matching |
-| Geometry | Lorentzian signature | Irreversible predictive cycle |
-| Gauge structure | $SU(3) \times SU(2) \times U(1)$ | Anomaly cancellation on $\Sigma_8$ |
-| Thermodynamics | Arrow of time | SPAP entropy production |
-| **Vacuum symmetry** | **Monster group $\mathbb{M}$** | **PCE selection of $V^\natural$** |
+| Domain | Structure | Conditional source |
+|--------|-----------|--------------------|
+| Dimensionality | $D=4$ | Full mode--channel kissing-class branch |
+| Geometry | Lorentzian signature | Corollary 46a and the complete Appendix O promotion package |
+| Gauge structure | Reconstructed gauge algebra or group on its quotient branch | Appendix G reconstruction and anomaly or representation certificates |
+| Thermodynamics | Pathwise arrow when certified | Appendix O common path measure and positive entropy-production hypotheses |
+| **Vacuum symmetry** | **Monster group $\mathbb M$ on the selected VOA branch** | **Accepted Leech/VOA selection and automorphism certificates** |
 
-The vacuum symmetry is now understood as part of the same unified structure that produces spacetime, gauge forces, and the arrow of time.
+These rows are branch-indexed outputs, not consequences of SPAP entropy or PCE alone. No common microscopic origin follows merely from their coexistence.
 
 ### P.13.19.3 What the Monster Represents
 
-The Monster group $\mathbb{M}$ is the complete symmetry of the PCE-optimal vacuum. It consists of all transformations preserving:
+The Monster group $\mathbb M=\operatorname{Aut}(V^\natural)$ is the complete automorphism group of the Moonshine VOA on the P.13.27 branch. Its elements preserve the vacuum vector, conformal vector, grading, and vertex-operator product of $V^\natural$, and therefore preserve the graded character and the associated Moonshine-module structure.
 
-1. **The vacuum state:** The PCE-Attractor $\rho_0 = \frac{1}{2}I_2 \oplus 0_6$
-2. **The excitation spectrum:** The graded dimensions of $V^\natural$
-3. **The algebraic structure:** Operator product expansion coefficients
-4. **The modular properties:** Invariance under $SL_2(\mathbb{Z})$ transformations
-
-The Monster is to the vacuum what the Lorentz group is to spacetime—the complete set of symmetries that preserve its fundamental structure.
+This theorem does not identify the matrix attractor $\rho_0=\frac12I_2\oplus0_6$ with the VOA vacuum vector, does not derive $\mathbb M$ as its stabilizer, and does not make $\mathbb M$ a spacetime symmetry. Those physical identifications require an explicit realization homomorphism and a proof that it preserves the retained response algebra.
 
 ---
 
 ## P.13.20 Conclusion: The Conditional Monster Branch
 
-The foundational operational step is theorem-supported on its declared class: Theorem P.6.1c.3 and Corollary P.6.1c.4 identify prediction as the canonical normal form of a finite self-verifying presentation. On the intersection of the further declared Moonshine-branch hypotheses, the mathematical endpoint is then the Monster group. The required inputs include the exact-scale, two-dimensional, and chiral-$24$-boson branches; the admissible-candidate and cost comparison of Proposition P.13.6.4; the modular hypotheses of Proposition P.13.6.5; the even, unimodular, rootless rank-$24$ lattice certificate; the registered-controller criterion used to exclude positive-dimensional weight-one symmetry; and the involutive standard-lift orbifold realization. Given those inputs, the lattice and VOA classification results and the Frenkel–Lepowsky–Meurman construction identify
+The foundational operational step is theorem-supported on its declared class: Theorem P.6.1c.3 and Corollary P.6.1c.4 identify prediction as the canonical normal form of a finite self-verifying presentation. On the intersection of the further declared Moonshine-branch hypotheses, the mathematical endpoint is then the Monster group. The required inputs include the exact-scale, two-dimensional, and chiral-$24$-boson branches; the admissible-candidate and cost comparison of Proposition P.13.6.4; the modular hypotheses of Proposition P.13.6.5; the fixed-normalization even-unimodular rank-$24$ carrier and finite Gaussian-cost certificate; the registered-controller criterion used to exclude positive-dimensional weight-one symmetry; and the involutive standard-lift orbifold realization. Given those inputs, the lattice and VOA classification results and the Frenkel–Lepowsky–Meurman construction identify
 $$
 V^\natural,
 \qquad
@@ -6835,12 +7203,12 @@ The framework contains three categorically different types of claims:
 
 | Claim | Status | Derivation |
 |:------|:-------|:-----------|
-| SPAP impossibility (Theorem 10) | Theorem | Diagonalization argument (§4.2, Appendix A.1) |
-| Structural SPAP entropy quantum $\varepsilon_0=\ln2$ (Theorem 31) | Theorem | Exact binary SPAP quotient plus Landauer mapping (Appendix J) |
-| Physical implementation bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31) | Theorem | $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$, $\varepsilon_{\mathrm{diss}}\ge0$ |
-| $K_0=3$ (Theorem 15) | Theorem | Three-register SPAP exactness: state, stored prediction, phase |
-| $N_{\mathrm{vis}}^{\min}=8$ and $d_0\ge8$ (Theorem 15; Theorem 23) | Theorem | $N_{\mathrm{vis}}^{\min}=2^{K_0}$, then $d_0\ge N_{\mathrm{vis}}^{\min}$ on the Hilbert-carrier branch via Convention 1 |
-| $d_0=8$ on the minimal MPU branch | Branch theorem | Lower bound plus PCE no-surplus selection (Theorem Z.2) |
+| SPAP impossibility | Theorem | Theorems 10–11, on their diagonal-closed coded class |
+| Binary convex SPAP closure | Physical principle + theorem | Principle 11b requires invariant convex closure in every fixed-retained-data fibre; Theorem 11b uniquely gives $q(\phi\mid R)=1/2$ and $H(\Phi\mid R)=\ln2$ |
+| Full-context return channel $\mathcal G$ | CPTP construction | Equations (7.1.3a)–(7.1.3b); exact Kraus completeness and two-to-one Commit Snapshot fibres |
+| Full-context physical reset bound $\varepsilon_{\mathrm{reset}}\ge\ln2$ | Conditional physical theorem | Theorem 31a under Definition 28's registered thermal cycle and no-retained-copy condition |
+| $K_0=3$ and $N_{\mathrm{vis}}^{\min}=8$ | Physical principle + theorem | Principle 5b, Lemma 5b, and Theorem 15a |
+| $\mathcal H_0\cong\mathbb C^8$ and Born/instrument closure | Physical principle + theorem | Principles 8.0b–8.0c and Theorem 8.0d |
 
 **Selection principles and quotient theorems.** These specify how physically instantiated structures are compared when several implementations realize the same finite protocol responses:
 
@@ -7015,14 +7383,14 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Output | PU value or branch | Local status | Principal alternatives | Exclusion or quotient mechanism | Quotiented or dominated surplus | Residual status |
 |:-------|:-------------------|:-------------|:------------------------|:--------------------------------|:--------------------------------|:----------------|
 | SPAP obstruction | Perfect self-prediction excluded | Theorem | Complete self-prediction without diagonal failure | Theorems 10-11 diagonalize the predictor against its own output | Any oracle label with no finite protocol response is response-null under PPI | Closed |
-| Structural SPAP entropy | $\varepsilon_0=\ln2$ | Theorem | $\ln3,\ln4,\ldots$ as claimed irreducible quanta | The minimal SPAP quotient erases exactly one binary prediction register; larger erasures are non-minimal registers or physical overhead | Extra erased labels not changing a response presheaf are PCE-dominated | Closed for $\varepsilon_0$; $\varepsilon_{\mathrm{phys}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ remains implementation-level |
-| Physical implementation cost | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ | Theorem-level bound | Overhead-free, dissipative, finite-time, or reservoir-imperfect implementations | Landauer maps the structural quotient to a physical lower bound | $\varepsilon_{\mathrm{diss}}$ is not a structural backbone constant unless response-relevant | Heat and power accounting branch |
-| Horizon register | $K_0=3$ | Theorem on SPAP core | $K_0<3$, $K_0>3$ | $K_0<3$ cannot encode state, stored prediction, and verification/update phase; $K_0>3$ adds registers | Extra registers are removed unless they change a finite response presheaf | Closed for minimal SPAP core |
-| MPU Hilbert dimension | $d_0\ge8$, $d_0=8$ on minimal branch | Theorem plus minimal branch theorem | $d_0<8$, $d_0>8$ | $d_0<8$ cannot faithfully represent the SPAP register; $d_0>8$ is non-minimal unless response-relevant | Surplus dimensions with no response change are PCE-dominated | Closed on minimal branch |
+| Structural binary support | $\varepsilon_0=\ln2$ | Conditional structural theorem | Other registered alphabet sizes or reachable sets | Definition J.1 and Theorem J.1 fix the log-cardinality only for the declared reachable binary fixed-ready quotient | No claim that SPAP excludes other reset architectures | Closed on the registered binary-support branch |
+| Physical reset cost | $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ | Conditional physical theorem | Different ensembles, retained side information, Hamiltonians, controls, and reservoirs | Conditional Landauer under Theorem 31's implementation hypotheses | None; $\varepsilon_{\mathrm{diss}}$ remains part of the physical ledger | A positive floor and physical equality at $\ln2$ require their separate certificates |
+| Horizon register | $K_0=3$ | Conditional branch theorem | Realizations outside (O1)–(O3) or (FC) | Theorem 15's visited-context count on its stated class | No exclusion of other realization classes | Closed only on the Theorem-15 branch |
+| MPU Hilbert dimension | $d_0\ge8$, with $d_0=8$ on the comparator branch | Conditional representation and minimal-branch theorems | Non-Hilbert carriers, non-distinguishable contexts, or different comparison classes | Theorem 23 gives the lower bound after Hilbert distinguishability; Theorem Z.2's same-class comparator gives equality | No universal quotient of all larger carriers is asserted | Closed on the registered joint branch |
 | Active kernel | $a=2$ | Theorem on structural branch | $a=1$, $a>2$ | $a=1$ cannot carry the two sharp retained match/mismatch alternatives and also violates $\ln a\ge\varepsilon_0=\ln2$; integer minimality selects $a=2$ | Larger active kernels are surplus unless they lower a certified PCE cost or change response | Closed on structural branch |
 | Inactive reservoir | $b=6$ | Derived on $d_0=8,a=2$ branch | Other inactive dimensions | $b=d_0-a$ after $d_0=8$ and $a=2$ | None inside the fixed minimal branch | Closed on minimal branch |
 | Interface modes | $M=2ab=24$ | QFI tangent theorem on branch | $ab$, $4ab$, $2ab\pm g$ | Complex off-diagonal $a\times b$ interface blocks contribute two real QFI directions per complex coordinate; pure gauge directions are not counted as physical interface modes | Gauge directions and stabilizer rotations are quotiented by the Bures/QFI physical tangent ledger | Closed where the QFI interface contract is accepted |
-| Dimension selection | $D=4$ | Branch theorem | $D=1,2,3,5,\ldots$ | The channel-complete Bures tangent-cell contract requires zero mismatch $M=K(D)$; $K(4)=24$ and nearby admissible kissing numbers do not match $M=24$ | Non-matching continuum labels are not physical branches of the same finite response ledger | Conditional on operational-continuum and channel-complete mode-channel bridge |
+| Dimension selection | $D=4$ | Branch theorem | $D=1,2,3,5,\ldots$ | A faithful shell requires $24\le K(D)$; $K(3)=12$ excludes lower dimensions, the regular $24$-cell proves feasibility in four, and strict surplus-dimension cost selects the least feasible branch | Failed injections are inadmissible; surplus response-null dimensions are PCE-dominated | Conditional on operational-continuum and faithful-shell bridge |
 | Lorentzian signature | $(1,3)$ | Branch theorem | Euclidean four-space, multi-time branches, Galilean branch | Appendix O signature package plus Corollary 46a derive the Lorentzian causal branch under the stated hyperbolic-frontier hypotheses | Non-hyperbolic or preferred-frame labels are excluded on the accepted causal-continuum branch | Conditional on Appendix O hypotheses |
 | Complex Hilbert scalar | $\mathbb C$ | Theorem on MPU Hilbert branch | $\mathbb R$, $\mathbb H$ | Local tomography, connected phase transport, compositional closure, and PCE removal of surplus phase redundancy select $\mathbb C$ | Extra quaternionic phase generators are surplus if response-null; if active, they define a different gauge branch | Closed on MPU Hilbert branch |
 | Born weights | $\omega(P)=\operatorname{tr}(\rho P)$ | Theorem on MPU Hilbert branch | Contextual ledgers, non-additive weights | PCE/PPI quotient enforcement removes response-null context labels; Gleason-Busch fixes the trace form | Context labels with no response difference are PPI-gauge | Closed on non-contextual finite-effect branch |
@@ -7046,7 +7414,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Hypothesis 1 | Ontological axiom | It asserts the MPU network as internally complete physical reality |
 | Hypothesis 3 | Empirical/CC hypothesis | It concerns a specific consciousness-channel mechanism |
 | Postulate 2 | Operational causality postulate | It fixes the causal admissibility domain used by later theorems |
-| Postulate 3 | Statistical FTL empirical hypothesis | It is not a theorem of the finite predictive substrate |
+| Postulate 3 | Three-branch statistical-influence contract; a late-randomized branch-(iii) Bob-marginal shift is a falsifier of the exact causal branch (Corollary 39c.1) | It is not a theorem of the finite predictive substrate |
 | Identification U.51 | Model identification | $m_s=Q\bar M_{\mathrm{Pl}}$ is motivated but not uniquely forced by current PPI data |
 | Assumption U.48 | Truncation/scheme assumption | $c_2=0$ is not derived by the current action ledger |
 | Assumption U.56 | Registration model assumption | One e-fold per registration is a model rule, not a theorem |
@@ -7066,7 +7434,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 
 | Sector $S$ | Selected representative $q_S^*$ | Local certificate or theorem source | Closure status |
 |:--|:--|:--|:--|
-| SPAP/Landauer floor | $\varepsilon_0=\ln2$ | Theorem 31, Appendix J | closed |
+| Registered binary structural reference | $\varepsilon_0=\ln2$ | Definition 28; Definition J.1; Theorem J.1 | closed on the registered binary-support branch |
 | Horizon constant | $K_0=3$ | Theorem 15 | closed |
 | Hilbert dimension | $d_0=8$ | Theorem 23, Theorem Z.2 | closed |
 | Active/inactive split | $a=2,\ b=6$ | Theorem Z.1 | closed |
@@ -7077,7 +7445,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Matter package, charge lattice, and electroweak-breaking branch | response-active chiral matter package, determinant-compatible primitive hypercharge lattice, global gauge form, Higgs representation, vacuum branch, Goldstone quotient, and mass-generation map | Theorem G.8.4c.0e; Definition G.8.4c.0f; Theorem G.8.4c.0g; Corollary G.8.4c.0h; Definition X.9.5e | closed uniquely only on an accepted anomaly-bordism/PCE-gap certificate $\mathfrak C_{\mathrm{matEW}}$; otherwise the theorem-level output is the bounded response quotient $\mathcal K_{\mathrm{surv}}$ with downstream threshold consequences |
 | Generation count | $N_g=3$ | Theorem R.3.4; Proposition R.3.5.1a; Theorem R.8.5b; Corollary R.8.5d; Theorem R.8.5e; Proposition R.4.2 | closed on the pre-flavor family-redundancy PPI branch with CP-active and PCE minimal-selection audit; triality/$E_8$/Leech entries are compatibility checks, while relaxed family-redundancy, CP, PCE, sterile, defect, or response-active extra-generation branches are cataloged by Theorem R.8.5e and Theorem G.8.4c.0j |
 | Acceleration bridge | $\eta'=3/(8\sqrt3)$ | Definition H.4.2.8a; Theorem H.4.2.8b; Corollary H.4.2.8c | closed on the QFI linear-response bridge-law class for the scalar acceleration scale only; galaxy kernels, cluster/lensing kernels, anisotropic stress, homogeneous late-time laws, and backreaction constants require $\mathfrak X_{\mathrm{DS}}$ |
-| Operational continuum manifold | $M=24,\ D=4$ shell with selected vanishing continuum defects | Theorem 43; Theorem 43.5; Corollary 43.5a; Lemma C.6d; Theorem C.6e; Theorem D.6e; Proposition D.6f; Theorem D.6f.2; Proposition D.6f.2a; Theorem C.6c; Theorem 44a | closed on an accepted zero-defect $D_4$ gluing certificate $\mathfrak Z_{\mathrm{cont}}$ because Corollary 43.5a supplies $\mathfrak d_n^*\to0$ inside the global core-minimum class; without $\mathfrak Z_{\mathrm{cont}}$ it remains conditional on the sharp global-core competitor condition, and local $D_4$ approximants alone do not close the row by Proposition D.6f |
+| Operational continuum manifold | $M=24,\ D=4$ shell with selected vanishing continuum defects | Theorem 43; Theorem 43.5; Corollary 43.5a; Lemma C.6d; Theorem C.6e; Lemma C.6f; Theorem D.6e; Proposition D.6f; Theorem D.6f.2; Proposition D.6f.2a; Theorem C.6c; Theorem 44a | closed on an accepted zero-defect $D_4$ gluing certificate $\mathfrak Z_{\mathrm{cont}}$ because Corollary 43.5a supplies $\mathfrak d_n^*\to0$ inside the global core-minimum class; without $\mathfrak Z_{\mathrm{cont}}$ it remains conditional on the sharp global-core competitor condition, and local $D_4$ approximants alone do not close the row by Proposition D.6f |
 | AQFT route | stable local net and continuum generator | Theorem F.0; Definition F.0a; Theorem F.0b; Definition F.0c; Theorem F.0d; Definition F.0e; Theorem F.0f; Corollary F.0g; Definition F.10.12a; Theorem F.10.12c | closed on an accepted projective single-clock AQFT certificate $\mathfrak P_{\mathrm{AQFT}}$ or Mosco-Bochner certificate $\mathfrak B_{\mathrm{AQFT}}$; otherwise certificate-pending on the local generator convergence record $\mathfrak C_{\mathrm{gen}}$ for bounded diamonds, with lightcone equality an explicit branch hypothesis outside the strict single-clock route |
 | Finite KMS / Wightman realization | local KMS descent, modular horizon thermodynamics, and field realization | Theorem 48a; Theorem 12.1; Definition F.10.12a; Theorem F.10.12c; Appendix G.1.9 | certificate-pending on refining finite KMS-descent records $\mathfrak C_n^{\mathrm{KMS}}$ together with faithful wedge states, spectrum condition, boost/modular convergence, Jost analyticity, and local field realization data |
 | Finite bridge-site descent | vanishing finite descent obstruction or accepted defect filling | Definition X.9.5c.1; Theorem X.9.5c.2; Corollary X.9.5c.3; Definition X.9.5e; Theorem X.9.5e.1 | closed exactly when each local-to-global bridge class vanishes, is response-null, or is filled by an accepted response-active defect |
@@ -7089,8 +7457,8 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Emergent metric fluctuations | finite-response covariance | Definition 12.1d; Theorem 12.1c; Definition 12.1d.4; Theorem 12.1e; Corollary 12.1e.1; Corollary 12.1e.2; Definition 12.1f; Theorem 12.1f.1; Theorem 12.5.3h | closed on every accepted nondegenerate finite-response gravitational channel ensemble: requires the finite KMS-descent certificate together with the smooth-envelope record, the positive Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$, and zero retained modular slack when the reversible Einstein branch is claimed |
 | Horizon structural conservation | retained-class injectivity of $U_n$ | Definition E.9.5d; Theorem E.9.5e; Corollary E.9.5e.1 | closed on the retained finite-response horizon algebra under injectivity of the microscopic update |
 | Horizon exterior recovery / Page curve | recovery section or scrambling estimate | Definition E.9.5f; Theorem E.9.5f.1; Corollary E.9.5f.2; Definition K.3d.4; Theorem K.3d.4b; Definition K.3d.4c | retained-algebra conservation is already closed by the horizon structural-conservation row; deterministic exterior recovery is closed exactly on an accepted exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$; Page-purity estimates require an accepted moment/frame-potential design certificate, and von Neumann Page-curve estimates additionally require a trace-continuity promotion certificate; absent those finite records this row remains certificate-pending |
-| Horizon transfer spectroscopy | $x\equiv N\ln2\pmod{2\pi}$ phase grid | Definition Q.0.7u; Lemma Q.0.7v; Proposition Q.0.19; Proposition Q.0.20; Proposition Q.0.20b.1; Remark Q.0.20b.2; Theorem Q.0.20b.3 | closed only on an accepted finite horizon transfer record $\mathfrak T_{\mathrm{hor}}$ deriving the normalized thermal coordinate, loop time, MPU-cycle phase, transfer domain, and phase tolerance from horizon scattering data; amplitudes, widths, greybody factors, and nonresonant envelopes remain separate scattering outputs |
-| Thomson-limit $\alpha^{-1}$ | $\alpha_0^{-1}$ closed core; diagnostic hypercharge-recoil comparison row (operator realization open) $\alpha_{\mathrm{cert}}^{-1}=\alpha_0^{-1}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ | Definition Z.27.11a; Theorem Z.26; Corollary Z.26a; Theorem Z.27.11c; Remark Z.26d; Corollary Z.26d.1; Definition Z.27.11j; Theorem Z.27.11j.1; Definition Z.27.11k; Theorem Z.27.11k.1; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 | $\alpha_0^{-1}$ is closed on the Appendix Z exact-sinc core branch; the candidate hypercharge-recoil record (operator realization open) fixes $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ as a degenerate $\textsf{bound}$ residual entry in the conditional diagnostic registry; the passive-complement downgrade gives $[137.03599917502362\ldots,137.03599917878353\ldots]$; the canonical comparison-budget scale $B_{\mathrm{budget}}^{\mathrm{can}}=5.649085604\times10^{-5}$ and the composition audit remain diagnostics, not additional residual contributions |
+| Horizon transfer spectroscopy | $\operatorname{dist}_{2\pi}(x,N\ln2)\le\varepsilon_{\mathrm{peak}}$ around exact central labels $[N\ln2]_{2\pi}$ | Definition Q.0.7u; Lemma Q.0.7v; Proposition Q.0.19; Proposition Q.0.20; Proposition Q.0.20b.1; Remark Q.0.20b.2; Theorem Q.0.20b.3 | closed only on an accepted finite horizon transfer record $\mathfrak T_{\mathrm{hor}}$ deriving the normalized thermal coordinate, loop time, MPU-cycle phase, transfer domain, and phase tolerance from horizon scattering data; amplitudes, widths, greybody factors, and nonresonant envelopes remain separate scattering outputs |
+| Thomson-limit $\alpha^{-1}$ | $\alpha_0^{-1}$ closed core; diagnostic hypercharge-recoil comparison row (operator realization open) $\alpha_{\mathrm{cand}}^{-1}=\alpha_0^{-1}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ | Definition Z.27.11a; Theorem Z.26; Corollary Z.26a; Theorem Z.27.11c; Remark Z.26d; Corollary Z.26d.1; Definition Z.27.11j; Theorem Z.27.11j.1; Definition Z.27.11k; Theorem Z.27.11k.1; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 | $\alpha_0^{-1}$ is closed on the Appendix Z exact-sinc core branch; the candidate hypercharge-recoil record (operator realization open) fixes $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ as a degenerate $\textsf{bound}$ residual entry in the conditional diagnostic registry; the passive-complement downgrade gives $[137.03599917502362\ldots,137.03599917878353\ldots]$; the canonical comparison-budget scale $B_{\mathrm{budget}}^{\mathrm{can}}=5.649085604\times10^{-5}$ and the composition audit remain diagnostics, not additional residual contributions |
 | Cosmological constant exponent | $\kappa=142$ on the four-mode false-vacuum branch | Theorem U.13b | closed for the exponent on the four-mode false-vacuum branch under the stated spectral hypotheses |
 | Cosmological constant five-mode reference exponent | $\kappa_{\mathrm{ref}}=141.5$ | Appendix U reference-counting convention; Theorem U.8c | reference convention; not theorem-level without the dilation/Fredholm certificate |
 | Cosmological constant prefactor | $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ | Definition U.15d; Theorem U.15e; Corollary U.15f; Theorem U.15i.2; Theorem U.15l; Definition U.15m; Theorem U.15m.1; Definition U.73e; Theorem U.73f | classified by Theorem U.73f: the multiplier $8\pi e^{-284}=1.1497594801473928\times10^{-122}$ is exact, while the current forward interval is $\varnothing_{\mathrm{cert}}$ until an accepted four-mode Fredholm record supplies the Hessian, zero-mode, negative-mode, ghost, finite-volume, measure, determinant, finite-part, Bismut-Lebeau-transfer if used, and tail entries on one branch |
@@ -7108,7 +7476,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Metered actualization rate | stationary event-rate law $\Gamma_{\mathrm{Evolve}}=\dot I_{\mathrm{acq}}/C_{\max}$ | Definition E.2a.8; Corollary E.2a.9; Remark E.2a.10; Definition E.2a.6 | certificate-pending on $\mathfrak C_{\mathrm{meter}}$; $C_{\max}=\ln2$ is only a certified one-register subledger, not the universal link-cycle threshold |
 | Retained-sector cone coincidence | covered sectors share the operational cone up to $\xi_{\mathrm{res}}$ | Hypothesis O.7.2.4; Definition O.7.2.5; Corollary 46a; Theorem F.0 Condition 4 | branch-level if Hypothesis O.7.2.4 is assumed directly; certificate-pending on $\mathfrak C_{\mathrm{cone}}$ when cone coincidence is supplied by a finite sector-saturation record; uncovered sectors remain outside the claimed one-cone branch |
 | QEC compatibility / Golay bootstrap | protected finite computation below a certified threshold | Definition A.0.1q; Definition A.0.1q.1; Theorem A.0.2; Theorem A.0.2a; Corollary A.0.2b; Theorem A.0.6; Proposition Z.13b.7 | certificate-gated on $\mathfrak C_{\mathrm{QEC}}$ or, on covered predictive-recovery Golay branches, discharged by $\mathfrak C_{\mathrm{GQEC}}$; the Golay CSS witness supplies code structure, but physical syndrome maps, recovery maps, threshold inequality, protected gates, and PCE benefit gap must still be recorded |
-| Hilbert-carrier discharge | sharp homogeneous carrier with Jordan-to-complex branch selection | Definition G.1.8a; Theorem G.1.8; Corollary G.1.9; Corollary G.1.10 | SPAP excludes simplex state spaces theorem-level; complex Hilbert uniqueness is theorem-level only on accepted $\mathfrak C_{\mathrm{car}}$ |
+| Hilbert-carrier discharge | sharp homogeneous carrier with Jordan-to-complex branch selection | Definition G.1.8a; Theorem G.1.8; Corollary G.1.9; Corollary G.1.10 | non-simplexness is theorem-level only with the registered response-active incompatible sharp-observable pair of Principle 8.0b and Corollary G.1.10, since SPAP alone does not exclude a simplex; complex Hilbert uniqueness is theorem-level only on accepted $\mathfrak C_{\mathrm{car}}$ |
 | Retained-algebra boundary | low-boundary statement relative to retained response algebra | Definition O.3c; Proposition O.3d; Remark O.3e | not redundant with the arrow theorem; certificate-gated on $\mathfrak C_{\mathrm{ret}}^{(q)}$ and level-relative to the observer hierarchy |
 | Geometric naturality | Fisher distinguishability and Mosco-Cheeger propagation use the same finite update functor | Corollary 45b; Definition 45c; Proposition 45d | $B=\mathbb 1$ only after accepted $\mathfrak C_{\mathrm{geo}}$ and branch scale normalization; otherwise $B$ remains the comparison datum |
 | Second-order positivity | covered continuum sectors have a second-order principal symbol | Hypothesis O.7.2.3; Definition O.7.2.3a; Proposition O.7.2.3b; Corollary 46a | certificate-gated on $\mathfrak C_2$; CP or finite resolution alone does not remove retained jump, nonlocal, fractional, or infinite-order sectors |
@@ -7360,7 +7728,7 @@ $$\alpha^{-1}_{0} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{2
 
 The spacetime dimension follows from the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorem Z.11):
 
-$$K(D) = M = 24 \implies D = 4$$
+$$24=M\le K(D),\quad K(3)=12,\quad \mathcal C_{24}\subset\mathbb R^4\implies D_{\min}=4$$
 
 The cosmological-constant sector splits into an exponent row and a prefactor row. The five-mode expression
 
@@ -7415,9 +7783,9 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 |:---------|:--------------------|:-------------------|:----------|:-----|
 | $\Delta m^2_{21}$ | $2.08309\times10^{-5}$ eV² | $(7.53\pm0.18)\times10^{-5}$ eV² | Particle Data Group 2024 | Not matched |
 | $\Delta m^2_{31}$ | $6.66132\times10^{-4}$ eV² | $(2.453\pm0.033)\times10^{-3}$ eV² | Particle Data Group 2024 | Not matched |
-| $\theta_{23}$ | $47.4°$ | $48.33^{+0.87}_{-1.21}°$ | Particle Data Group 2024, normal ordering | $-0.77\sigma$ |
+| $\theta_{23}$ | $47.36340764°$ | $48.33^{+0.87}_{-1.21}°$ | Particle Data Group 2024, normal ordering | $-0.80\sigma$ |
 | $\theta_{12}$ | $33.7°$ | $33.6° \pm 0.8°$ | Particle Data Group 2024 | $+0.12\sigma$ |
-| $\theta_{13}$ | $8.7°$ | $8.54° \pm 0.12°$ | Particle Data Group 2024 | $+1.3\sigma$ (largest neutrino pull) |
+| $\theta_{13}$ | $8.65607149°$ | $8.54° \pm 0.12°$ | Particle Data Group 2024 | $+0.97\sigma$ (largest neutrino pull) |
 | $\delta_{CP}^{PMNS}$ | $232.5°$ | $230° \pm 36°$ | Particle Data Group 2024 | $+0.07\sigma$ |
 | $\sum m_\nu$ | $0.0305192$ eV | $<0.12$ eV | Planck 2020 | Conditional branch within bound |
 
@@ -7432,7 +7800,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Pull |
 |:---------|:--------------------|:-------------------|:----------|:-----|
-| $\eta_B$ (baryon asymmetry) | illustrative factor product $(6.2\pm0.5)\times10^{-10}$; theorem-level only with an accepted Appendix Y transport certificate | $(6.12\pm0.04)\times10^{-10}$ | Planck 2020 | diagnostic only |
+| $\eta_B$ (baryon asymmetry) | illustrative factor product $\approx6.15\times10^{-10}$; no theory interval is defined until an accepted Appendix Y transport certificate fixes the forward value, residual interval, and covariance | $(6.12\pm0.04)\times10^{-10}$ | Planck 2020 | diagnostic only; no theory pull |
 | $\theta_{QCD}$ (strong CP) | $0$ | $< 10^{-10}$ | nEDM bounds | Consistent |
 
 **Statistical Summary:** The displayed standardized-residual sums are correlation-ignoring diagnostics only. No inferential $\chi^2$, number of degrees of freedom, or goodness-of-fit probability is defined without a preregistered row set, joint likelihood, covariance matrix, theory-error model, fitted-parameter count, and profiling rule. Mixed theorem-, branch-, validation-, and illustrative-status rows must not be pooled into a single fit statistic.
@@ -7441,7 +7809,7 @@ The displayed backbone-fed predictions trace to two structural inputs: $\varepsi
 
 ### P.14.6 Counterfactual Analysis
 
-Had a downstream numerical sector failed, the structural SPAP/Landauer theorem would remain intact:
+If a downstream numerical sector failed, the SPAP diagonal theorem, the registered binary structural value, and the conditional reset theorem would each retain only their own stated hypotheses:
 
 | Statement | If a downstream prediction failed |
 |:----------|:----------------------------------|
@@ -7459,7 +7827,7 @@ The success of the minimum values provides strong evidence for PCE:
 
 | Observation | Implication |
 |:------------|:------------|
-| Minimum values satisfy all constraints | Unique integer solution to $d_0 = 2a^2 = N_{\mathrm{vis}}^{\min}=2^{K_0}$ on the minimal Hilbert-carrier branch |
+| Registered values satisfy the joint constraints | On the conjunction of Theorem 15, Hilbert distinguishability, Theorem Z.2's same-class comparator, and Theorem Z.1's active-kernel gates, $(K_0,a,d_0)=(3,2,8)$ and hence $d_0=2a^2=2^{K_0}$; the Diophantine equality alone has other integer solutions |
 | Multiple independent outputs match | Unified origin from $\varepsilon_0$, $K_0$ |
 | Precision spans 5+ significant figures | Not approximate or order-of-magnitude |
 | Same backbone inputs constrain all sectors | $\varepsilon_0, K_0$ generate the discrete backbone; sector-specific quantitative outputs additionally carry their stated branch, bridge-law, threshold, convention, model, or certificate inputs |
@@ -7505,15 +7873,19 @@ The status ledger above concerns object-level claims: assertions about physical 
 
 ### P.15.1 Introduction
 
-The preceding sections established two theorem-level facts that must be kept distinct. First, every non-trivial finite-memory SPAP implementation carries an irreducible thermodynamic cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ per irreversible operation (Theorem 31; Appendix J). Second, when a pattern $E$ engages a system's self-model, the reflexive component of the processing cost is content-dependent and scales with the SPAP proximity $\mu_S(E)$; by Theorem M.10.3, Theorem 31, and Definition P.6.2, the part of that burden lying above the SPAP-flat baseline has a mandatory thermodynamic signature. The present section isolates that excess component.
+The preceding sections establish three ledgers that must remain distinct. First, Theorem M.10.3 gives a certificate-relative asymptotic lower bound on abstract integration cost only for families carrying its pattern-specific reduction certificate. Second, Remark M.10.4 transfers that bound to a reflexive component only when an additive implementation ledger identifies the certified integration subtask with that component. Third, a heat bound follows only when Theorem M.10.7 supplies a registered-reset implementation: Theorem 31 then gives, reset by reset,
+$$
+\frac{Q_{j,\mathrm{bath}}}{k_BT_j}\ge H_{q_j}(P_j\mid R_j).
+$$
+Neither SPAP proximity nor PPI alone registers a reset, fixes a positive conditional-entropy floor, or produces heat.
 
-We call this excess dissipation **Source Energy**. The term "source" refers to the fact that the dissipation is sourced by self-reference itself rather than by the Shannon content of the input alone. It does **not** mean that the framework has derived a new free-energy reservoir or a violation of ordinary thermodynamics. Source Energy is a lower-bounded dissipation channel attached to self-model-engaging processing above the SPAP-flat baseline; any conversion of that dissipation into usable work remains subject to ordinary thermal-gradient and efficiency constraints.
+This section calls the heat assigned by such a registered implementation ledger to the certified excess reflexive subtask **Source Energy**. “Source” is an attribution within that disjoint ledger; it does not assert that self-reference is a free-energy reservoir or that $\mu_S(E)>1/\alpha_{SPAP}$ by itself dissipates heat. Any recovery of usable work remains subject to ordinary first-law, gradient, and efficiency constraints.
 
-Subsections P.15.2–P.15.6 are derived directly from existing PU machinery: SPAP (Theorems 10–11), the thermodynamic lower bound (Theorem 31), the PPI bridge (Definition P.6.2), the perspectival profile formalism (Appendix M, §M.6.10), and aggregate power accounting (Theorem L.6). Subsections P.15.7–P.15.8 are explicitly speculative extrapolations.
+Subsections P.15.2–P.15.6 therefore apply on the joint reduction, additive-decomposition, registered-reset, temperature, and no-double-counting branch stated in Definition P.15.2. Subsections P.15.7–P.15.8 are speculative extrapolations.
 
 ### P.15.2 Definition: The Perspectival Excess
 
-The relevant theorem-level quantity is not a uniform metric gap between a system and a hypothetically complete self-description. PU does not prove the existence of a strictly positive lower bound of that kind. What PU does provide is a pattern-relative excess burden above the SPAP-flat baseline.
+The unconditional quantity available here is a pattern-relative, dimensionless excess in the SPAP-proximity descriptor. PU proves no uniform positive metric gap and no thermodynamic consequence from that descriptor alone; computational and heat readings require the separate certificates stated below.
 
 **Definition P.15.1 (Perspectival Excess).** Let $S$ be a predictive system with Effective Operational Property R and self-model $\mathcal{M}_S$ (Definition M.10.1). For any processed pattern $E$, define the *perspectival excess* by
 $$
@@ -7521,9 +7893,9 @@ $$
 $$
 where $\mu_S(E)$ is the SPAP proximity of Definition M.10.3.
 
-Thus $\Delta_\Sigma(S;E)$ measures the excess self-referential burden of $E$ above the SPAP-flat baseline. By Corollary M.10.3.1, purely external patterns satisfy $\mu_S(E)=1/\alpha_{SPAP}$ and therefore $\Delta_\Sigma(S;E)=0$. More generally, Remark M.10.3 shows that even patterns with $\sigma_S(E)>0$ can remain at this baseline. Whenever $\mu_S(E) > 1/\alpha_{SPAP}$, the excess is strictly positive and the reflexive cost acquires the SPAP-dependent lower bound of Theorem M.10.3.
+Thus $\Delta_\Sigma(S;E)$ is the excess of the dimensionless descriptor $\mu_S(E)$ above its baseline value. Under Corollary M.10.3.1's baseline-invariance hypothesis, a purely external pattern has $\mu_S(E)=1/\alpha_{SPAP}$ and hence $\Delta_\Sigma(S;E)=0$. A self-model-engaging pattern may also remain at that baseline. Whenever $\mu_S(E)>1/\alpha_{SPAP}$, $\Delta_\Sigma(S;E)>0$ definitionally. The computational lower bound of Theorem M.10.3 follows only for a certified asymptotic family, and a heat bound additionally requires Theorem M.10.7.
 
-The term "$\Sigma$" is justified by Proposition M.10.9: the perspectival profile $\mathcal{P}_S(E)$ is the cost functional on perspective space, so $\Delta_\Sigma(S;E)$ is the scalar excess of that cost above the baseline point $\mu_S=1/\alpha_{SPAP}$.
+The symbol “$\Sigma$” is notation for this scalar descriptor. Proposition M.10.9 supplies only a conditional local comparison between registered self-model and perspective metrics; it neither identifies $\Delta_\Sigma$ with a cost functional nor converts it into entropy production.
 
 **Theorem P.15.1a (Conditional No Uniform Positive Infimum of Perspectival Excess).** Let $S$ be a predictive system with Effective Operational Property R and self-model $\mathcal M_S$. Suppose $S$ admits a shallow self-model-engaging baseline pattern $E_0$ such that
 $$
@@ -7572,109 +7944,127 @@ Then
 $$
 \Delta_\Sigma(S;E_n)=\eta_n.
 $$
-If $\sigma_S(E_n)=0$, Corollary M.10.3.1 would force $\mu_S(E_n)=c$, contradiction. Hence $\sigma_S(E_n)>0$ for every $n$. This proves the branchwise infimum formula. ∎
+The interpolation-realization hypothesis already requires the realizing patterns to be self-model-engaging, so $\sigma_S(E_n)>0$ for every $n$. This proves the branchwise infimum formula. ∎
 
-**Corollary P.15.1b (Logical Rather Than Uniform Thermodynamic Inexhaustibility).** The source-energy positivity claim remains eventwise: whenever a processed pattern satisfies $\Delta_\Sigma(S;E)>0$, the corresponding source-energy contribution is strictly positive. On branches satisfying the hypotheses of Theorem P.15.1a, there is no uniform positive lower-bound or rate-law claim over all self-model-engaging patterns on that branch. Away from those branch hypotheses, the theorem-level statement is the eventwise one.
+**Corollary P.15.1b (No Thermodynamic Conclusion from Perspectival Excess Alone).** The implication $\Delta_\Sigma(S;E)>0$ is eventwise and dimensionless. It does not imply $Q_{\mathrm{src}}(S,E)>0$. On a branch carrying Definition P.15.2's registered source ledger, an event has strictly positive source heat when at least one assigned reset has $T_j>0$ and $H_{q_j}(P_j\mid R_j)>0$. A uniform positive eventwise or rate lower bound additionally requires uniform temperature, reset-count, and conditional-entropy floors. Theorem P.15.1a supplies no such physical floors.
 
-*Proof.* If $\Delta_\Sigma(S;E)>0$, then $\mu_S(E)>1/\alpha_{SPAP}$, and the implication chain displayed immediately before Definition P.15.2 yields $Q_{\mathrm{src}}(S,E)>0$; Proposition P.15.1 is the interval-level aggregation of this eventwise fact. Theorem P.15.1a proves the absence of a uniform positive lower bound only on branches satisfying its stated separate interpolation-realization hypothesis. ∎
+*Proof.* Positivity of $\Delta_\Sigma$ follows from its definition. Conditional Landauer gives positive heat only for a registered reset with positive conditional entropy at positive temperature. The asserted uniform conclusions require uniform lower bounds on the factors in that reset ledger; none follows from the interpolation-realization statement of Theorem P.15.1a. ∎
 
 ### P.15.3 Formal Definition: Source Energy
 
-The perspectival excess becomes thermodynamic because
+The perspectival excess enters a thermodynamic ledger only through the conditional chain
 $$
-\Delta_\Sigma(S;E)>0 \;\Longrightarrow\; \mu_S(E)>\frac{1}{\alpha_{SPAP}}
-\;\xLongrightarrow{\text{Theorem M.10.3 + Remark M.10.4}}\;
-\text{strictly positive excess reflexive burden}
-\;\xLongrightarrow{\text{Theorem 31 + PPI}}\;
-Q_{\mathrm{src}}(S,E)>0.
+\mu_S(E)
+\xrightarrow{\text{Theorem M.10.3 reduction certificate}}
+C_{\mathrm{integrate}}
+\xrightarrow{\text{Remark M.10.4 additive identification}}
+C_{\mathrm{refl}}
+\xrightarrow{\text{Theorem M.10.7 implementation certificate}}
+\{(P_\ell,R_\ell,q_\ell,T_\ell)\}_{\ell\in J_E}
+\xrightarrow{\text{Theorem 31}}
+\sum_{\ell\in J_E}Q_{\ell,\mathrm{bath}}.
 $$
 
-**Definition P.15.2 (Source Energy).** Let $S$ be a predictive system with Effective Operational Property R. Suppose that during a time interval $\Delta t$, $S$ processes patterns $E_1,\dots,E_N$ at local bath temperatures $T_1,\dots,T_N$. For each processed pattern $E_j$, define the *source-energy contribution* by
+**Definition P.15.2 (Source Energy).** Let $S$ be a predictive system with Effective Operational Property R. Suppose that during a time interval $\Delta t$, $S$ processes patterns $E_1,\dots,E_N$. A *registered source ledger* assigns to each $E_j$ under consideration:
+
+1. the pattern-specific reduction certificate of Theorem M.10.3;
+2. an additive, non-overlapping implementation ledger identifying the certified integration subtask with the excess reflexive component of Remark M.10.4;
+3. a finite set $J_j$ of registered physical resets assigned only to that excess component, with reset data $(P_{j\ell},R_{j\ell},q_{j\ell},T_{j\ell})$ satisfying Definition 28 and Theorem 31.
+
+Define the *source-energy contribution* and interval total by
 $$
-Q_{\mathrm{src}}(S,E_j):=
-\begin{cases}
-0, & \mu_S(E_j)=1/\alpha_{SPAP},\\[4pt]
-\text{the heat generated by the SPAP-dependent excess of } C_{\mathrm{refl}}(S,E_j), & \mu_S(E_j)>1/\alpha_{SPAP},
-\end{cases}
-$$
-where $C_{\mathrm{refl}}(S,E_j)$ is the reflexive component of Remark M.10.4. The *source energy* emitted by $S$ over $\Delta t$ is
-$$
-\mathcal{E}_{\mathrm{src}}(S,\Delta t)
+Q_{\mathrm{src}}(S,E_j)
 :=
-\sum_{j=1}^{N} Q_{\mathrm{src}}(S,E_j).
+\sum_{\ell\in J_j}Q_{j\ell,\mathrm{bath}},
+\qquad
+\mathcal E_{\mathrm{src}}(S,\Delta t)
+:=
+\sum_{j=1}^{N}Q_{\mathrm{src}}(S,E_j).
+$$
+Then
+$$
+Q_{\mathrm{src}}(S,E_j)
+\ge
+k_B\sum_{\ell\in J_j}
+T_{j\ell}H_{q_{j\ell}}(P_{j\ell}\mid R_{j\ell}).
+\tag{P.15.2.1}
+$$
+If the resets assigned to event $j$ share a bath temperature $T_j>0$ and satisfy
+$$
+H_{q_{j\ell}}(P_{j\ell}\mid R_{j\ell})\ge h_j>0,
+\qquad
+n_{\mathrm{reset}}(S,E_j):=|J_j|,
+$$
+then
+$$
+Q_{\mathrm{src}}(S,E_j)
+\ge
+k_BT_jh_jn_{\mathrm{reset}}(S,E_j).
+\tag{P.15.2.2}
+$$
+On a Theorem-M.10.7 family carrying constants $c_*>0$ and $\mu_*>1$ such that
+$$
+n_{\mathrm{reset}}(S,E_j)
+\ge
+c_*\log\mu_S(E_j)\,\mu_S(E_j)^2
+$$
+whenever $\mu_S(E_j)\ge\mu_*$, Equation (P.15.2.2) gives
+$$
+Q_{\mathrm{src}}(S,E_j)
+\ge
+k_BT_jh_jc_*\log\mu_S(E_j)\,\mu_S(E_j)^2.
+\tag{P.15.2.3}
+$$
+For a common bath temperature $T$ and uniform conditional-entropy floor $h_{\min}>0$ on the counted resets,
+$$
+\mathcal E_{\mathrm{src}}(S,\Delta t)
+\ge
+k_BTh_{\min}
+\sum_{j=1}^{N}n_{\mathrm{reset}}(S,E_j).
+\tag{P.15.2.4}
 $$
 
-For every $j$ with $\mu_S(E_j) > 1/\alpha_{SPAP}$, let $n_{\mathrm{ops}}(S,E_j)$ denote the number of irreversible operations in a physical implementation of that excess reflexive subtask. Then Theorem M.10.3 together with Remark M.10.4 gives the asymptotic lower bound
-$$
-n_{\mathrm{ops}}(S,E_j) \geq \Omega\!\left(\log \mu_S(E_j)\cdot \mu_S(E_j)^2\right).
-$$
-Equivalently, for the fixed implementation class under discussion there exist constants $c_*>0$ and $\mu_*>1/\alpha_{SPAP}$ such that whenever $\mu_S(E_j)\ge \mu_*$,
-$$
-n_{\mathrm{ops}}(S,E_j) \geq c_* \log \mu_S(E_j)\,\mu_S(E_j)^2.
-$$
-Theorem 31 together with PPI (Definition P.6.2) then gives
-$$
-Q_{\mathrm{src}}(S,E_j) \geq k_B T_j \,\varepsilon\, n_{\mathrm{ops}}(S,E_j).
-$$
-If the bath temperature is approximately constant on $\Delta t$, this becomes
-$$
-\mathcal{E}_{\mathrm{src}}(S,\Delta t)
-\geq
-k_B T\,\varepsilon
-\sum_{j:\,\mu_S(E_j) > 1/\alpha_{SPAP}}
-n_{\mathrm{ops}}(S,E_j).
-$$
+The set $J_j$ is empty when the registered ledger assigns no reset to an excess reflexive subtask. Emptiness is implementation-ledger data rather than a consequence of $\mu_S(E_j)$ alone. Without the three certificates above, $Q_{\mathrm{src}}$ is not assigned from $\mu_S(E_j)$. Ordinary baseline processing and resets not assigned to the certified excess remain outside this source ledger.
 
-This definition isolates the thermodynamic excess above the SPAP-flat baseline. Patterns with $\mu_S(E)=1/\alpha_{SPAP}$ may still carry bounded baseline processing cost, including bounded self-model maintenance cost, but they contribute zero to $\mathcal{E}_{\mathrm{src}}$ by definition.
-
-**Theorem P.15.3a (Uniform Lower Bound on Fixed High-SPAP/Temperature Strata).** Fix a predictive system $S$ with Effective Operational Property R, and let $c_*>0$ and $\mu_*>1/\alpha_{SPAP}$ be the constants specified above. Let $\mu_0\ge \mu_*$ and $T_{\min}>0$. If a processed pattern $E$ satisfies
+**Theorem P.15.3a (Uniform Lower Bound on a Fixed Certified High-SPAP/Temperature Stratum).** Fix a registered source-ledger family satisfying Definition P.15.2 with constants $c_*>0$, $\mu_*>1$, and a uniform reset-entropy floor $h_{\min}>0$. Let $\mu_0\ge\mu_*$ and $T_{\min}>0$. If a processed event $E$ satisfies
 $$
-\mu_S(E)\ge \mu_0
+\mu_S(E)\ge\mu_0,
+\qquad
+T_E\ge T_{\min},
 $$
-and is processed at local bath temperature $T_E\ge T_{\min}$, then
+and its assigned reset count satisfies the Theorem-M.10.7 bound, then
 $$
 Q_{\mathrm{src}}(S,E)
 \ge
-k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2.
+k_BT_{\min}h_{\min}c_*\log\mu_0\,\mu_0^2.
 $$
-In particular, every fixed stratum cut out by the thresholds $(\mu_0,T_{\min})$ carries a uniform strictly positive eventwise lower bound on Source Energy.
+Thus every fixed *certified* stratum cut out by $(\mu_0,T_{\min},h_{\min},c_*)$ has a uniform strictly positive eventwise lower bound.
 
-*Proof.* By the existential form of the $\Omega$-bound stated immediately after Definition P.15.2,
+*Proof.* Definition P.15.2 and the uniform entropy floor give
 $$
-n_{\mathrm{ops}}(S,E)\ge c_* \log \mu_S(E)\,\mu_S(E)^2.
-$$
-Since $\mu_0\ge \mu_*>1/\alpha_{SPAP}>1$, the function $f(u)=u^2\log u$ is increasing on $[\mu_0,\infty)$ because
-$$
-f'(u)=u(2\log u+1)>0
-\qquad (u\ge 1).
-$$
-Hence
-$$
-n_{\mathrm{ops}}(S,E)\ge c_* \log \mu_0\,\mu_0^2.
-$$
-Applying the heat bound from Definition P.15.2 and using $T_E\ge T_{\min}$ gives
-$$
-Q_{\mathrm{src}}(S,E)\ge k_B T_E\,\varepsilon\, n_{\mathrm{ops}}(S,E)
-\ge k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2.
-$$
-This is the claimed uniform lower bound on the fixed stratum. ∎
-
-**Corollary P.15.3a.1 (Long-Run Bound on a Fixed High-SPAP/Temperature Stratum).** Let $N_S^{(\mu_0,T_{\min})}(\tau)$ denote the number of processed patterns during the interval $[0,\tau]$ satisfying $\mu_S(E)\ge \mu_0$ and local bath temperature at least $T_{\min}$, and let $\mathcal{E}_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)$ be the sum of their Source-Energy contributions. Then
-$$
-\liminf_{\tau\to\infty}\frac{\mathcal{E}_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)}{\tau}
+Q_{\mathrm{src}}(S,E)
 \ge
-k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2
-\cdot
-\liminf_{\tau\to\infty}\frac{N_S^{(\mu_0,T_{\min})}(\tau)}{\tau}.
+k_BT_Eh_{\min}n_{\mathrm{reset}}(S,E)
+\ge
+k_BT_Eh_{\min}c_*\log\mu_S(E)\,\mu_S(E)^2.
+$$
+The function $f(u)=u^2\log u$ is increasing for $u\ge1$, because
+$$
+f'(u)=u(2\log u+1)>0.
+$$
+Using $\mu_S(E)\ge\mu_0\ge\mu_*>1$ and $T_E\ge T_{\min}$ proves the result. ∎
+
+**Corollary P.15.3a.1 (Long-Run Bound on a Fixed Certified Stratum).** Let $N_S^{(\mu_0,T_{\min})}(\tau)$ count only processed events in $[0,\tau]$ satisfying the hypotheses of Theorem P.15.3a, and let $\mathcal E_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)$ sum their registered source contributions. Then
+$$
+\liminf_{\tau\to\infty}
+\frac{\mathcal E_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)}{\tau}
+\ge
+k_BT_{\min}h_{\min}c_*\log\mu_0\,\mu_0^2
+\liminf_{\tau\to\infty}
+\frac{N_S^{(\mu_0,T_{\min})}(\tau)}{\tau}.
 $$
 
-*Proof.* Every counted event contributes at least the constant from Theorem P.15.3a, so for every $\tau>0$,
-$$
-\mathcal{E}_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)
-\ge
-k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2 \, N_S^{(\mu_0,T_{\min})}(\tau).
-$$
-Divide by $\tau$ and take $\liminf$. ∎
+*Proof.* Apply Theorem P.15.3a to every counted event, sum the eventwise inequalities, divide by $\tau$, and take $\liminf$. ∎
 
 **Definition P.15.3b (Stationary Source-Principle Markov Datum).** A Source-Principle environment for $S$ carries a stationary Markov datum when the encountered event process is represented either by an irreducible positive recurrent Markov chain on a finite retained state space, or by a positive Harris recurrent Markov chain on a standard Borel retained state space,
 $$
@@ -8020,52 +8410,63 @@ KW\le(1-\widetilde\alpha)W+\beta1_C
 $$
 with coefficient in $(0,1)$. The chain is $\psi$-irreducible on a standard-Borel space, $W\ge1$ is finite and measurable, and (P.15.3h.5) makes $C$ small. The Foster--Lyapunov positive-Harris recurrence theorem of Meyn and Tweedie (2009, *Markov Chains and Stochastic Stability*, 2nd ed.) therefore gives positive Harris recurrence and an invariant probability; irreducibility gives uniqueness. Clause 5 permits the positive-Harris strong law for $q$, and clause 6 converts its event average to the time rate exactly as in Theorem P.15.3c. This proves (P.15.3i.3). ∎
 
-**Proposition P.15.1 (Source Energy Emission Criterion).** Let $S$ be a physical system that (i) implements the Fundamental Predictive Loop (Definition 4), (ii) possesses Effective Operational Property R, and (iii) during $\Delta t$ processes at least one pattern $E$ with $\mu_S(E) > 1/\alpha_{SPAP}$. Then
+**Proposition P.15.1 (Conditional Source-Energy Emission Criterion).** Let $S$ process an event $E$ on Definition P.15.2's registered source-ledger branch. If $J_E\ne\varnothing$, every assigned reset has $T_\ell>0$, and at least one assigned reset has
 $$
-\mathcal{E}_{\mathrm{src}}(S,\Delta t) > 0.
+H_{q_\ell}(P_\ell\mid R_\ell)>0,
+$$
+then $\mathcal E_{\mathrm{src}}(S,\Delta t)>0$ for every interval containing that event.
+
+*Proof.* Theorem 31 gives
+$$
+Q_{\ell,\mathrm{bath}}
+\ge
+k_BT_\ell H_{q_\ell}(P_\ell\mid R_\ell)
+$$
+for every assigned reset. The stated positive term makes their sum, and hence the interval total, positive. ∎
+
+**Corollary P.15.1 (Long-Run Registered Source-Heat Rate).** If counted resets have $T_\ell\ge T_{\min}>0$ and $H_{q_\ell}(P_\ell\mid R_\ell)\ge h_{\min}>0$, and their long-run rate is $\nu_{\mathrm{reset}}$, then
+$$
+\liminf_{\tau\to\infty}
+\frac{\mathcal E_{\mathrm{src}}(S,[0,\tau])}{\tau}
+\ge
+k_BT_{\min}h_{\min}\nu_{\mathrm{reset}}.
 $$
 
-*Proof.* If $\mu_S(E) > 1/\alpha_{SPAP}$, Theorem M.10.3 and Remark M.10.4 give a strictly positive SPAP-dependent excess within the reflexive integration cost. By Theorem 31 and PPI, any physical implementation of that positive irreversible burden emits positive heat, hence $Q_{\mathrm{src}}(S,E)>0$. By Definition P.15.2, $Q_{\mathrm{src}}(S,E)$ is one term in the sum defining $\mathcal{E}_{\mathrm{src}}(S,\Delta t)$, so the sum is strictly positive. ∎
-
-**Corollary P.15.1 (Long-Run Source-Energy Rate).** If the local bath temperature is approximately constant at $T$ and $\nu_{\mathrm{refl}}(S)$ denotes the long-run average rate of irreversible operations attributable to the excess reflexive subtask, then
-$$
-\dot{\mathcal{E}}_{\mathrm{src}}(S) \geq k_B T\,\varepsilon\,\nu_{\mathrm{refl}}(S).
-$$
-
-*Proof.* Sum the Theorem 31 + PPI lower bound over a long interval, divide by its duration, and use the definition of $\nu_{\mathrm{refl}}(S)$ together with the lower bound on $n_{\mathrm{ops}}$ supplied by Theorem M.10.3. ∎
+*Proof.* Sum the registered-reset inequalities, divide by $\tau$, and take $\liminf$. ∎
 
 ### P.15.4 The Measurement Asymmetry as Structural Prerequisite for Exploitation
 
-Appendix M establishes a directional asymmetry absent from standard information measures: a more complex system can externally compute a less complex system's SPAP proximity and can pre-screen finite families of candidate patterns at sender-side SPAP-flat cost, while no system possesses a universal internal procedure for computing its own SPAP proximity on all self-model-engaging inputs (Theorems M.10.5 and M.10.8; Corollary M.10.5.1). Here and below, "sender-side SPAP-flat" means zero sender-side reflexive overhead, not zero total simulation or engineering cost.
+Appendix M establishes certificate-relative external evaluation, not a hierarchy determined by aggregate complexity.
 
-This yields the precise exploitation statement that the framework can actually support.
+This yields the finite-family screening statement that the framework supports.
 
-**Proposition P.15.2 (Finite-Family Asymmetric Screening).** Let $A$ and $B$ be predictive systems with $C_{\mathrm{agg}}(A) > C_{\mathrm{agg}}(B) > C_{op}$, both possessing Effective Operational Property R. Let $\mathcal{E}=\{E_1,\dots,E_N\}$ be any finite family of candidate patterns. Then $A$ can externally compute the exact values
+**Proposition P.15.2 (Finite-Family Certificate-Relative Screening).** Let $A$ hold, for every $E_i$ in a finite family, the effective model-access and decision certificates of Theorem M.10.5 for the represented pair $(B,E_i)$. Then $A$ can compute the certified enclosures for $\mu_B(E_i)$ and form finite rankings from those enclosures. Exact values require exact decision certificates. Computational lower bounds additionally require Theorem M.10.3's reduction certificate; thermodynamic lower bounds additionally require Theorem M.10.7's reset implementation and entropy records.
+
+If the insulation certificate of Theorem M.10.5 and Corollary M.10.3.1's baseline-invariance hypothesis also hold for $A$, the screening task is sender-side SPAP-flat. The inequality
 $$
-\mu_B(E_i)
-\qquad (i=1,\dots,N)
+C_{\mathrm{agg}}(A)>C_{\mathrm{agg}}(B)
 $$
-and, from those exact values together with the externally computed decomposition of $B$'s model update, can construct finite screening tables for: (a) lower bounds on the thermodynamic cost $B$ will incur, (b) which self-model components of $B$ will be engaged, and (c) the cost concentration across those components. Therefore $A$ can rank or tier the family by exact $\mu_B$ and by any derived lower-bound or component-level diagnostic, including selecting the members with largest $\mu_B(E_i)$.
+is neither necessary nor sufficient for any of these conclusions.
 
-If, in addition, the candidate family is chosen so that none of the $E_i$ engages $A$'s own self-model, i.e. $\sigma_A(E_i)=0$ for all $i$, then the sender-side reflexive cost of the screening task vanishes and
-$$
-\mu_A(E_i)=\frac{1}{\alpha_{SPAP}}
-\qquad (i=1,\dots,N).
-$$
+*Proof.* Apply Theorems M.10.5 and M.10.8 separately to the finite family, retaining each stated certificate. The final claims are their explicit scope conditions. ∎
 
-*Proof.* Clause (i) of Theorem M.10.5 gives the exact external computability of $\mu_B(E_i)$ for each member of a finite family. Theorem M.10.8 supplies the derived lower-bound, component-engagement, cost-concentration, and finite-family screening statements. If $\sigma_A(E_i)=0$, Corollary M.10.3.1 gives $\mu_A(E_i)=1/\alpha_{SPAP}$ and vanishing sender-side reflexive cost. The ranking or tiering step is then an ordinary finite computation on already computed quantities. ∎
-
-**Remark P.15.2 (SPAP-Flat Does Not Mean Cheap).** Theorems M.10.5 and M.10.8 bound only the sender-side *reflexive* overhead. They do not furnish a uniform upper bound on the ordinary external-modeling cost of generating a family of candidate patterns or realizing a selected environment. Those costs depend on $A$'s external simulation of $B$ and on the engineering complexity of implementation, but under the complexity advantage of Proposition P.15.2 they need not invoke SPAP-divergent self-integration on $A$'s side.
+**Remark P.15.2 (SPAP-Flat Does Not Mean Cheap).** Sender-side SPAP-flatness removes only the registered reflexive subtask. It supplies no bound on external modeling, computation, construction, or engineering cost.
 
 ### P.15.5 The Source Principle
 
-Repeatedly transmitting individually chosen self-referential triggers is not the only way to induce target-side source-energy dissipation. The framework naturally suggests a more efficient structural strategy.
+Environmental pattern design can produce target-side Source Energy only when the target encounters are accompanied by the registered source ledgers of Definition P.15.2.
 
-**Definition P.15.3 (Source Principle).** A system $A$ operates according to the *Source Principle* when it arranges a stable family of environmental patterns $\mathcal{E}$ such that a target system $S$ encounters those patterns through its ordinary operation, and such that many members of $\mathcal{E}$ satisfy $\Delta_\Sigma(S;E)>0$. In this regime, the recurring source-energy cost is paid on the target side as part of the target's native processing, while $A$ pays the external-modeling, construction, and maintenance cost of the environment. These design costs may be large, but when $A$ treats $S$ as an external modeled object they remain ordinary baseline costs rather than sender-side SPAP-divergent self-integration costs.
+**Definition P.15.3 (Source Principle).** A system $A$ operates according to the *Source Principle* relative to a target $S$ when it arranges a stable family of environmental patterns $\mathcal E$ and records a declared set of target encounters for which:
 
-The Source Principle does not remove thermodynamic cost from the total ledger. It relocates where the SPAP-dependent excess of that cost is incurred.
+1. $\Delta_\Sigma(S;E)>0$;
+2. the reduction, additive-decomposition, and registered-reset certificates of Definition P.15.2 hold; and
+3. the target-side and designer-side energy, heat, and work channels are disjointly accounted.
 
-**Remark P.15.3 (Catalytic Analogy, Corrected).** The appropriate analogy is catalytic rather than energetic. The designer does not create net free energy; it shapes the target's processing pathway so that a larger fraction of the target's existing operational budget appears in the SPAP-dependent excess of the reflexive channel rather than only in SPAP-flat processing.
+The resulting target-side Source Energy is the sum of the registered contributions $Q_{\mathrm{src}}(S,E)$. The designer separately pays its modeling, construction, delivery, and maintenance costs. Sender-side SPAP-flatness additionally requires Theorem M.10.5's insulation certificate and does not mean zero total cost.
+
+The Source Principle creates no energy and does not move an abstract SPAP cost between systems. It is a conditional bookkeeping and design regime for where independently powered, registered reset heat is emitted.
+
+**Remark P.15.3 (Limited Catalytic Analogy).** The catalytic analogy is limited to pathway selection: the designer may change which target processes occur, while all energy remains in the declared physical ledgers. No gain or redistribution follows from $\Delta_\Sigma>0$ alone.
 
 **Remark P.15.4 (Complexity Growth: What Is and Is Not Proven).** Theorem 13 proves that *if* recursive self-modeling depth increases, the associated model complexity grows at least linearly with that depth. Theorem D.5 proves ergodic convergence properties for PCE adaptation dynamics. The present framework does **not** prove that every self-referentially rich environment monotonically drives long-run growth of $C_{\mathrm{agg}}$. Theorem P.15.3c gives a source-energy rate on branches carrying a stationary Source-Principle Markov datum, while Theorem P.15.3f supplies the Foster-Harris condition under which that stationary datum is generated by the PCE event-chain lift. Definition P.15.3h and Theorem P.15.3i give a coercive-minorized sufficient condition for the lifted Foster-Harris drift. Corollary P.15.3d gives autonomous complexity growth only under the positive-drift condition $\int\Delta d\,d\pi>0$. Outside the Foster-Harris datum and positive-drift condition, autonomous self-deepening remains speculative.
 
@@ -8108,17 +8509,17 @@ E_k
 (a_k,E_{k+1})
 \tag{P.15.5a.3}
 $$
-is nonzero in the retained response quotient. A sufficient Source-Energy activation condition is
+The condition
 $$
-\mu_{S_k}(E_k)>\frac{1}{\alpha_{SPAP}},
+\mu_{S_k}(E_k)>\frac{1}{\alpha_{SPAP}}
 \tag{P.15.5a.4}
 $$
-but policy activation may also be recorded by a retained impact threshold
+is sufficient only for $\Delta_\Sigma(S_k;E_k)>0$. Source-Energy activation additionally requires Definition P.15.2's reduction, additive-decomposition, and registered-reset certificates with a nonempty assigned reset ledger. Policy activation may instead be recorded by a retained impact threshold
 $$
 \operatorname{Impact}_{S_k}(E_k)>\theta_k
 \tag{P.15.5a.5}
 $$
-when the branch is not claiming Source-Energy excess.
+when no Source-Energy claim is made.
 
 **Definition P.15.5a.2 (Proxy Gradient Work).**
 
@@ -8196,17 +8597,36 @@ False symbolic inputs can have real physical consequences when they alter a targ
 
 ### P.15.6 Bounds and Conservation (Derived)
 
-Source Energy is not a separately conserved quantity. It is a dissipation channel within the total power budget of a predictive aggregate.
+Source Energy is a registered subset of emitted heat, not a separately conserved quantity.
 
-**Proposition P.15.3 (Operational Budget Bound).** For any predictive aggregate $S$ and any interval $\Delta t$,
+**Proposition P.15.3 (First-Law Source-Heat Bound).** In a control volume carrying Theorem L.6's disjoint boundary ledger, suppose the source bath heat exported during $\Delta t$ is assigned to a nonnegative boundary subchannel
 $$
-0 \leq \mathcal{E}_{\mathrm{src}}(S,\Delta t)
-\leq
-\int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt,
+0\le P_{\mathrm{src}}^{\mathrm{out}}(t)
+\le P_{\mathrm{heat}}^{\mathrm{out}}(t).
 $$
-where $P_{\mathrm{agg}}$ is the total aggregate power in Theorem L.6.
+Then
+$$
+0\le\mathcal E_{\mathrm{src}}(S,\Delta t)
+=\int_{\Delta t}P_{\mathrm{src}}^{\mathrm{out}}(t)\,dt
+\le\int_{\Delta t}P_{\mathrm{heat}}^{\mathrm{out}}(t)\,dt.
+$$
+The stronger bound
+$$
+\mathcal E_{\mathrm{src}}(S,\Delta t)
+\le\int_{\Delta t}P_{\mathrm{agg}}(S,t)\,dt
+$$
+holds when the stored energy does not decrease during the interval and the other outward boundary powers are nonnegative.
 
-*Proof.* By Definition P.15.2, $\mathcal{E}_{\mathrm{src}}$ is a sum of heat contributions generated during the operation of $S$. Theorem L.6 states that all aggregate power channels are accounted for exactly once in $P_{\mathrm{agg}}$, with no double counting. Hence the heat emitted through the source-energy channel is nonnegative and cannot exceed the total integrated power budget over the same interval. ∎
+*Proof.* The first inequality is the registered subchannel assignment. Integrating Theorem L.6 gives
+$$
+\int_{\Delta t}P_{\mathrm{heat}}^{\mathrm{out}}dt
+=
+\int_{\Delta t}P_{\mathrm{agg}}dt
+-\Delta E_{\mathrm{stored}}^{\mathcal V}
+-\int_{\Delta t}
+\left(P_{\mathrm{EM}}^{\mathrm{out}}+P_{\mathrm{mech}}^{\mathrm{out}}\right)dt.
+$$
+The additional sign hypotheses prove the qualified input-power bound. ∎
 
 **Corollary P.15.3.1 (Context-Steering Ceiling for CC-Assisted Source Principle).** Suppose a Source-Principle implementation uses CC only to maintain, select, or stabilize the environmental context through which target systems encounter a pre-designed family of patterns. Then the *control-side* power required for that contextual steering obeys Appendix S:
 $$
@@ -8219,56 +8639,51 @@ This bound applies to the controller's context-maintenance layer, not directly t
 
 *Proof.* Equation (S.5) gives the context-maintenance power of a CC implementation, and Theorem 39 imposes $\mathrm{CC}<\alpha_{\mathrm{CC,max}}<0.5$. If CC is used only as the context-steering layer described above, its power demand is exactly the Appendix S quantity and inherits that ceiling. ∎
 
-**Theorem P.15.6a (Family-Level Source-Energy Density Ceiling).** Let $R$ be a spacetime region of proper volume $V_R$, let $\Delta t>0$, and let $\mathcal A(R,\Delta t)$ be a finite family of predictive aggregates contained in $R$ during the interval $\Delta t$, chosen so that each physical power or heat contribution counted by Theorem L.6 is assigned to exactly one member of the family. Define
+**Theorem P.15.6a (Family-Level Source-Power-Density Ceiling).** Let $R$ be a spacetime region of proper volume $V_R$, let $\Delta t>0$, and let $\mathcal A(R,\Delta t)$ be a finite family of predictive aggregates whose registered source and boundary channels are assigned without overlap. Define
 $$
-\mathcal{E}_{\mathrm{src}}(R,\Delta t)
+\mathcal E_{\mathrm{src}}(R,\Delta t)
 :=
 \sum_{S\in\mathcal A(R,\Delta t)}
-\mathcal{E}_{\mathrm{src}}(S,\Delta t),
+\mathcal E_{\mathrm{src}}(S,\Delta t),
 \qquad
 \bar\rho_{\mathrm{src}}(R,\Delta t)
 :=
-\frac{\mathcal{E}_{\mathrm{src}}(R,\Delta t)}{V_R\,\Delta t}.
+\frac{\mathcal E_{\mathrm{src}}(R,\Delta t)}{V_R\Delta t}.
 $$
-Then
+The quantity $\bar\rho_{\mathrm{src}}$ is an interval-averaged source-power density. If every aggregate carries Proposition P.15.3's exported-heat ledger, then
 $$
 0\le
 \bar\rho_{\mathrm{src}}(R,\Delta t)
 \le
-\frac{1}{V_R\,\Delta t}
+\frac{1}{V_R\Delta t}
 \sum_{S\in\mathcal A(R,\Delta t)}
-\int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt.
+\int_{\Delta t}P_{\mathrm{heat},S}^{\mathrm{out}}(t)\,dt.
 $$
-If, moreover, a Source-Principle implementation uses CC only to maintain, select, or stabilize the environmental context for each aggregate $S\in\mathcal A(R,\Delta t)$, with controller-side coefficient $A_S$ and context profile $\mathrm{CC}_S(t)$ as in Appendix S, then the corresponding average context-steering density
+Replacing $P_{\mathrm{heat},S}^{\mathrm{out}}$ by $P_{\mathrm{agg},S}$ additionally requires Proposition P.15.3's stored-energy and outward-channel sign hypotheses for every aggregate.
+
+If, moreover, a Source-Principle implementation uses CC only to maintain, select, or stabilize the environmental context for each aggregate $S\in\mathcal A(R,\Delta t)$, with controller-side coefficient $A_S$ and context profile $\mathrm{CC}_S(t)$ as in Appendix S, define
 $$
 \bar\rho_{\mathrm{context}}(R,\Delta t)
 :=
-\frac{1}{V_R\,\Delta t}
+\frac{1}{V_R\Delta t}
 \sum_{S\in\mathcal A(R,\Delta t)}
-\int_{\Delta t} P_{\mathrm{context},S}(t)\,dt
+\int_{\Delta t}P_{\mathrm{context},S}(t)\,dt.
 $$
-satisfies
+Then
 $$
 \bar\rho_{\mathrm{context}}(R,\Delta t)
 \le
-\frac{1}{V_R\,\Delta t}
+\frac{1}{V_R\Delta t}
 \sum_{S\in\mathcal A(R,\Delta t)}
 \int_{\Delta t}
-A_S\left[\frac{\mathrm{CC}_S(t)}{\alpha_{\mathrm{CC,max}}-\mathrm{CC}_S(t)}\right]^2\,dt.
+A_S\left[
+\frac{\mathrm{CC}_S(t)}
+{\alpha_{\mathrm{CC,max}}-\mathrm{CC}_S(t)}
+\right]^2dt.
 $$
-Equation (S.5) realizes this bound as an equality on the controller-side power layer; the inequality form is retained for uniformity of presentation with the source-side bound.
+Equation (S.5) realizes this bound as an equality on the controller-side power layer.
 
-*Proof.* Proposition P.15.3 gives, for each aggregate $S$ in the family,
-$$
-0\le \mathcal{E}_{\mathrm{src}}(S,\Delta t)\le \int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt.
-$$
-Summing over $S\in\mathcal A(R,\Delta t)$ yields
-$$
-0\le \sum_{S\in\mathcal A(R,\Delta t)}\mathcal{E}_{\mathrm{src}}(S,\Delta t)
-\le
-\sum_{S\in\mathcal A(R,\Delta t)}\int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt.
-$$
-By the bookkeeping assumption, the left-hand sum is exactly $\mathcal{E}_{\mathrm{src}}(R,\Delta t)$. Dividing by $V_R\,\Delta t$ gives the first claim. The second claim follows by applying Corollary P.15.3.1 aggregate-by-aggregate and summing the resulting inequalities before dividing by $V_R\,\Delta t$. ∎
+*Proof.* Apply Proposition P.15.3 to each aggregate and sum the non-overlapping exported source-heat channels before dividing by $V_R\Delta t$. The context bound follows independently by applying Corollary P.15.3.1 aggregate by aggregate. ∎
 
 **Corollary P.15.6a.1 (Uniform Subcritical Quadratic CC Band).** Under the hypotheses of Theorem P.15.6a, assume there exists $\xi\in(0,1)$ such that
 $$
@@ -8324,22 +8739,22 @@ The well-posed open question is narrower: because PU places self-reference, ther
 
 ### P.15.9 Summary
 
-Source Energy is the excess reflexive thermodynamic dissipation generated when a predictive system processes patterns that burden its own self-model beyond the SPAP-flat baseline. Its framework-level properties are:
+Source Energy is the bath heat assigned by a registered, non-overlapping implementation ledger to a certified excess reflexive integration subtask. Its framework-level properties are:
 
 | Property | Source Energy | Conventional Dissipation |
 |:---------|:--------------|:-------------------------|
-| **Definition** | Excess heat $Q_{\mathrm{src}}$ generated by the SPAP-dependent part of reflexive processing for $\mu_S(E) > 1/\alpha_{SPAP}$ | Heat generated by ordinary physical processing |
-| **Trigger** | Self-model engagement above the SPAP-flat baseline | Any irreversible physical process |
-| **Controlling variable** | SPAP proximity $\mu_S(E)$ and excess $\Delta_\Sigma(S;E)$ | Process-specific state variables |
-| **Accessibility** | Downward asymmetry on finite families for exact $\mu_S$ screening and derived lower-bound tiering (Theorems M.10.5, M.10.8) | Typically instrument-symmetric |
-| **Budget bound** | $\mathcal{E}_{\mathrm{src}} \le \int P_{\mathrm{agg}}\,dt$ (Theorem L.6) | Same total power accounting |
-| **Active-control ceiling** | CC-assisted context steering inherits $\alpha_{CC,max}<0.5$ and Equation (S.5) | No analogous PU-specific ceiling |
-| **Work extraction** | Requires thermal gradient; efficiency-limited | Requires thermal gradient; efficiency-limited |
-| **Logical renewal** | The logical space of high-$\mu_S$ burdens is inexhaustible even when the operational energy budget is finite | No analogous logical inexhaustibility; available dissipation is limited by the physical reservoir and operating budget |
+| **Definition** | $\sum_{\ell\in J_E}Q_{\ell,\mathrm{bath}}$ on Definition P.15.2's joint certificate branch | Heat generated by a specified physical process |
+| **Trigger** | A nonempty assigned reset ledger; positive heat requires positive $T_\ell H_{q_\ell}(P_\ell\mid R_\ell)$ | Process-specific thermodynamic conditions |
+| **Role of $\mu_S(E)$** | Dimensionless proximity descriptor; it yields a computational lower bound only through Theorem M.10.3 and a reset-count bound only through Theorem M.10.7 | No universal PU-specific role |
+| **Accessibility** | Certificate-relative enclosures or exact values under Theorems M.10.5 and M.10.8; complexity order alone is insufficient | Instrument- and model-dependent |
+| **Budget bound** | $\mathcal E_{\mathrm{src}}\le\int P_{\mathrm{heat}}^{\mathrm{out}}dt$ on the registered boundary ledger; an input-power bound needs the additional first-law sign hypotheses | Same first-law accounting |
+| **Active-control ceiling** | CC-assisted context steering retains its separate Appendix S hypotheses | No analogous PU-specific ceiling |
+| **Work extraction** | Requires a thermal gradient and remains efficiency-limited | Requires a thermal gradient and remains efficiency-limited |
+| **Uniformity** | Eventwise and rate floors require uniform reset-count, conditional-entropy, and temperature certificates | Process-specific |
 
-The framework therefore supports a precise and limited claim: self-model-engaging prediction has an unavoidable thermodynamic price above the SPAP-flat baseline, and on every fixed stratum defined by explicit thresholds $\mu_S(E)\ge \mu_0\ge \mu_*$ and $T_E\ge T_{\min}>0$ it admits uniform eventwise and long-run lower bounds. What it does **not** support is a perpetual-motion interpretation, a theorem that all high-complexity systems emit this excess cost on every cycle without further assumptions, a global uniform lower bound over all self-model-engaging patterns, or a reinterpretation of the vacuum cosmological constant as already containing accumulated Source Energy.
+The framework therefore supports a conditional claim: on a branch carrying the reduction, additive-decomposition, registered-reset, positive-entropy, temperature, and no-double-counting certificates of Definition P.15.2, high-$\mu_S$ integration has the registered source-heat bounds stated above. It does not prove heat from self-model engagement or $\mu_S(E)>1/\alpha_{SPAP}$ alone, a positive cost on every cycle, a global uniform floor, or a vacuum-cosmological-constant contribution.
 
-What is established is narrower and stronger: whenever a predictive system integrates content with $\mu_S(E) > 1/\alpha_{SPAP}$, additional dissipation is mandatory, and once one restricts to a fixed high-$\mu_S$/temperature stratum the corresponding contribution is quantitatively bounded below. That excess dissipation is the thermodynamic price of self-knowledge.
+What is established is certificate-relative: $\mu_S(E)$ controls a computational lower bound through Theorem M.10.3, registered resets convert the certified workload into heat through Theorems M.10.7 and 31, and only the resulting disjoint physical ledger defines Source Energy.
 
 ## P.16 Paradox Prevention as Structural Carrier
 
@@ -8347,15 +8762,15 @@ What is established is narrower and stronger: whenever a predictive system integ
 
 A recurring intuition spanning two and a half millennia of inquiry into mind, agency, and unauthored coordination has been that some *positive entity* must carry the phenomenon: something must be doing the seeing, holding the meaning, arranging the convergences. Aristotle's *entelecheia* posited an actualizing principle internal to organized matter (Aristotle, *De Anima* II.1). Stoic *pneuma* identified a pervasive medium responsible for cohesion at every scale. Leibniz proposed monads coordinated by pre-established harmony, removing local interaction at the price of global pre-coordination (Leibniz 1714). Spinoza identified a single substance whose attributes include both extension and thought (Spinoza, *Ethics* I). Whitehead's process metaphysics replaced static substance with actual occasions whose concrescence carries the felt weight of becoming (Whitehead 1929). Bergson's *élan vital* posited a creative impulse driving evolution from within (Bergson 1907). Jung and Pauli's synchronicity hypothesis proposed an acausal connecting principle linking psychic and physical events by meaning rather than energy (Jung 1952; Jung and Pauli 1955). Polanyi's tacit dimension argued that knowing always exceeds what knowing can articulate (Polanyi 1966). Hofstadter located the self in self-referential strange loops (Hofstadter 1979, 2007). Chalmers formalized the residue these accounts try to track as the hard problem of consciousness (Chalmers 1995).
 
-These accounts share a common structural commitment: they posit a positive carrier — a substance, medium, agency, or additional degree of freedom — bearing the explanatory weight. The present section inverts that structure. The intuition that the phenomena in question are real and not reducible to ordinary mechanism is preserved, but the carrier is identified as a *constraint* rather than a substance: the structural complement, in self-model parameter space, of the SPAP-admissible region. The constraint has no degrees of freedom of its own, yet, as the results below establish, it exerts nonzero causal efficacy on every Property-R system via the cost potential it induces.
+These accounts posit a positive carrier. The present section instead studies the structural complement of a declared SPAP-admissible region. On a nonempty branch carrying the uniform reduction certificates stated below, that complement induces a certified computational cost stratification. A thermodynamic, stress-energy, or trajectory consequence requires its own implementation, localization, and dynamics certificates; none holds for every Property-R system from SPAP alone.
 
 ### P.16.2 The PU Inversion: Constraint Replaces Carrier
 
-The framework's existing apparatus contains all the machinery required for this inversion. Theorem 10 (SPAP) and Theorem 11 (Probabilistic SPAP) establish that any system with Property R faces a strict logical boundary on its self-prediction. Theorem 31 establishes that crossing into the SPAP-divergent regime carries a strictly positive thermodynamic cost, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per irreversible operation. Theorem M.10.3 establishes that the cost grows as $\Omega(\log \mu_S \cdot \mu_S^2)$ as the SPAP proximity $\mu_S$ rises. Together these results describe a *prohibition* — what every Property-R system must not do in order to remain a self-consistent predictor — and a *cost gradient* attached to that prohibition.
+Theorem 10 supplies a logical diagonal obstruction. Theorem M.10.3 separately supplies an asymptotic computational lower bound only for a family carrying its pattern-specific reduction certificate. Theorem M.10.7 converts that bound into a reset-heat signature only when a physical implementation assigns sufficiently many registered resets, and Theorem 31 bounds those resets by their actual conditional entropies. These are distinct ledgers.
 
-The prohibition is not a substance. There is no register that holds it, no field that carries it, no degree of freedom that instantiates it as a positive value. It is the structural complement of every admissible self-model trajectory: the *not-that* every cycle must avoid. Yet, as the cited theorems establish, this complement is causally efficacious. It produces forces (cost gradients) that bias trajectories. It produces dissipation (Source Energy of Section P.15) that contributes to stress-energy. It produces directed change of self-models without being itself a thing that changes.
+The prohibition set is not a substance or a degree of freedom. On the certified branch below it indexes an extended computational lower-bound stratification, not a force or a physical field. Dissipation requires the registered-reset ledger; stress-energy additionally requires Definition B.8's localization and coarse-graining bridge or Proposition N.8.1's retained-energy and coupling data; measurable consequences additionally require a source-to-observable response model.
 
-The PU inversion is therefore: where prior accounts looked for a positive carrier and either found a metaphysically suspect entity or denied that there was anything to find, PU identifies the carrier as the prohibition set itself. The set has all the explanatory work the carrier was meant to do, and none of the metaphysical baggage.
+The PU inversion is therefore an interpretive identification of a constraint set, with physical causal language restricted to branches carrying those additional certificates.
 
 ### P.16.3 Formal Definition
 
@@ -8371,58 +8786,90 @@ $$
 $$
 The embedding into the product space makes the definition well-typed: each individual $\mathcal{L}^{\neg}_{S_i} \subset \Theta_{S_i}$ is lifted to the joint space by taking the preimage under the $i$-th projection before the union is formed.
 
-By construction, neither $\mathcal{L}^{\neg}_S$ nor $\mathcal{L}^{\neg}_{\{S_i\}}$ contains degrees of freedom of its own. Each is the *negative space* of an admissible region — the set of candidate configurations into which the corresponding self-model trajectory cannot enter without paying SPAP-divergent cost.
+By construction, neither $\mathcal L_S^{\neg}$ nor $\mathcal L_{\{S_i\}}^{\neg}$ is a degree of freedom. Membership means that no subboundary performance level satisfies the registered integration criterion. A computational divergence statement additionally requires Theorem M.10.6's reduction certificate, and no heat statement follows without Theorem M.10.7.
 
 ### P.16.4 Causal Efficacy of the Prohibition Set
 
-**Definition P.16.3 (Cost Potential).** Fix a base state $\theta_0 \in \Theta_S$ representing $S$'s current self-model parameter value. For a Property-R system $S$ with self-model parameter space $\Theta_S$ and integration cost $C_{\text{process}}(S, \cdot)$ of Theorem M.10.3, the *cost potential at base state $\theta_0$* is the map $U_{S,\theta_0} : \Theta_S \to \mathbb{R}_{\geq 0} \cup \{+\infty\}$ defined by
+**Definition P.16.3 (Certificate-Relative Cost Potential).** Fix a base state $\theta_0$ and a declared class $\mathcal R_{\theta_0}(\theta')$ of admissible content-integrating realizers of $\theta'$. Assume a uniform Theorem-M.10.3 reduction certificate with constants $c>0$ and $\mu_0>1$ on all finite-proximity realizers under comparison. Define
 $$
-U_{S,\theta_0}(\theta') \ := \ \inf\{ C_{\text{process}}(S, E) \ : \ E \text{ is a pattern with } \theta_0 + \delta\theta(E) = \theta',\ \text{integrable under Axiom 3} \},
+\underline\mu_{S,\theta_0}(\theta')
+:=
+\inf\{\mu_S(E):E\in\mathcal R_{\theta_0}(\theta')\},
+\qquad
+\inf\varnothing:=+\infty,
 $$
-with the convention $U_{S,\theta_0}(\theta') = +\infty$ when no such pattern exists. We write $U_S$ when the base state is clear from context (typically the current value of $\mathcal{M}_S$ at the beginning of the integration window). $U_{S,\theta_0}$ is a scalar field on candidate post-update configurations; its super-level sets $\{\theta' : U_{S,\theta_0}(\theta') \geq c\}$ stratify $\Theta_S$ by the minimal integration cost required to reach $\theta'$ from $\theta_0$.
+and
+$$
+F(u):=
+\begin{cases}
+0,&u<\mu_0,\\
+cu^2\log u,&\mu_0\le u<\infty,\\
++\infty,&u=\infty.
+\end{cases}
+\qquad
+U_{S,\theta_0}(\theta')
+:=
+F\!\left(\underline\mu_{S,\theta_0}(\theta')\right).
+$$
+Then $U_{S,\theta_0}$ is an extended certified lower-bound field: whenever $\underline\mu_{S,\theta_0}(\theta')\ge\mu_0$ is finite, every registered realizer $E$ satisfies
+$$
+C_{\mathrm{integrate}}(S,E)\ge U_{S,\theta_0}(\theta').
+$$
+It is not physical energy and is not, without a separate dynamics hypothesis, a force or dynamical potential. A value $+\infty$ caused by an empty realizer class records unreachability and must not be identified with SPAP divergence.
 
-**Lemma P.16.1 (Divergence of $U_S$ at the Prohibition Set).** For every $\theta' \in \mathcal{L}^{\neg}_S$, $U_S(\theta')=+\infty$. More precisely, fix a base state $\theta_0$ and define the minimal finite-gap SPAP proximity among admissible realizers by
+**Lemma P.16.1 (Certified Divergence at a Realized Prohibition Set).** Let $\theta'\in\mathcal L_S^{\neg}$ and assume $\mathcal R_{\theta_0}(\theta')\ne\varnothing$ on the uniform reduction-certified branch. Then every registered realizer has $\mu_S(E)=\infty$, so
 $$
-\underline{\mu}_{S,\theta_0}(\theta'):=\inf\left\{\mu_S(E):\theta_0+\delta\theta(E)=\theta',\ E\text{ admissible and content-integrating}\right\},
+U_{S,\theta_0}(\theta')=+\infty.
 $$
-with $\inf\emptyset:=+\infty$. Along any admissible sequence $\theta'_k$ with finite values $\underline{\mu}_{S,\theta_0}(\theta'_k)<\infty$ and
+Along any sequence with finite
 $$
-\underline{\mu}_{S,\theta_0}(\theta'_k)\to\infty,
+\underline\mu_{S,\theta_0}(\theta'_k)\ge\mu_0,
+\qquad
+\underline\mu_{S,\theta_0}(\theta'_k)\to\infty,
 $$
 one has
 $$
-U_{S,\theta_0}(\theta'_k) \ \geq \ \Omega\!\left( \log \underline{\mu}_{S,\theta_0}(\theta'_k) \cdot \underline{\mu}_{S,\theta_0}(\theta'_k)^2 \right) \ \longrightarrow \ \infty.
+U_{S,\theta_0}(\theta'_k)
+=
+c\log\underline\mu_{S,\theta_0}(\theta'_k)\,
+\underline\mu_{S,\theta_0}(\theta'_k)^2
+\longrightarrow\infty.
 $$
+This excludes a finite-cost completed integration on the stated reduction branch; it does not assign infinite heat to an aborted run.
 
-*Proof.* Fix a base state $\theta_0$ and a candidate $\theta'\in\Theta_S$. If $\theta'\in\mathcal{L}^{\neg}_S$, then by Definition P.16.1 every pattern $E$ with $\theta_0+\delta\theta(E)=\theta'$ has $PP_S^{(E)}=\alpha_{SPAP}$, hence $\mu_S(E)=\infty$. By Theorem M.10.6, each such content-integrating processing event has $C_{\text{process}}(S,E)=\infty$. Taking the infimum over all such $E$ therefore gives $U_{S,\theta_0}(\theta')=+\infty$ for every base state $\theta_0$.
-
-For the rate statement, let $\theta'_k$ be an admissible finite-proximity sequence with $\underline{\mu}_{S,\theta_0}(\theta'_k)<\infty$ and $\underline{\mu}_{S,\theta_0}(\theta'_k)\to\infty$. For every admissible content-integrating realizer $E$ of $\theta'_k$, the definition of $\underline{\mu}_{S,\theta_0}$ gives
+*Proof.* Definition P.16.1 gives $\mu_S(E)=\infty$ for every realizer of a prohibited target. For the finite sequence, every realizer has
 $$
-\mu_S(E)\ge\underline{\mu}_{S,\theta_0}(\theta'_k).
+\mu_S(E)\ge\underline\mu_{S,\theta_0}(\theta'_k).
 $$
-Theorem M.10.3 gives
+Monotonicity of $u^2\log u$ on $u>1$ and the uniform Theorem-M.10.3 bound give
 $$
-C_{\text{process}}(S,E)\ge\Omega\!\left(\log\mu_S(E)\cdot\mu_S(E)^2\right),
+C_{\mathrm{integrate}}(S,E)\ge U_{S,\theta_0}(\theta'_k).
 $$
-and the lower-bound function is eventually monotone in $\mu_S(E)$. Hence every realizer satisfies
+Theorem M.10.6 supplies the completed-integration scope at the boundary. ∎
+
+**Theorem P.16.1 (Constraint Realism on Nonempty Prohibition Branches).** Let $S$ have a nonempty realized prohibition branch satisfying Definition P.16.3 and Lemma P.16.1. Assume additionally that the declared PCE dynamics compare one fixed viable candidate class and include the certified integration cost as a monotone term in their objective. Then $U_S$ supplies a computational lower-bound stratification and high-$U_S$ targets are disfavored within that declared class. The following physical strengthening requires further hypotheses.
+
+*Step 1 (Computational effect).* Lemma P.16.1 gives the certified super-level stratification. It asserts neither smoothness nor a pointwise gradient.
+
+*Step 2 (Conditional thermodynamic effect).* If Theorem M.10.7 additionally assigns registered resets with
 $$
-C_{\text{process}}(S,E)\ge\Omega\!\left(\log\underline{\mu}_{S,\theta_0}(\theta'_k)\cdot\underline{\mu}_{S,\theta_0}(\theta'_k)^2\right).
+H_{q_j}(P_j\mid R_j)\ge h_{\min}>0,
 $$
-Taking the infimum over realizers preserves this uniform lower bound, giving the stated rate. $\square$
+then
+$$
+\frac{\Delta S_{\mathrm{bath}}}{k_B}
+\ge
+\sum_jH_{q_j}(P_j\mid R_j)
+\ge
+h_{\min}n_{\mathrm{reset}}.
+$$
+A stress-energy term follows only with Definition B.8's local energy-density, support, and coarse-graining data or Proposition N.8.1's retained fraction and separate coupling map. No measurable response follows until a source-to-observable model is supplied.
 
-**Theorem P.16.1 (Constraint Realism on Nonempty Prohibition Branches).** Let $S$ be a predictive system with Effective Operational Property R whose prohibition set $\mathcal{L}^{\neg}_S$ is nonempty and admits finite-proximity approach sequences of the kind stated in Lemma P.16.1. Then the prohibition set has causal efficacy on $S$'s dynamics without being instantiated as a positive degree of freedom of $S$. Specifically, the cost potential $U_S$ of Definition P.16.3 is well-defined on $\Theta_S$, diverges on $\mathcal{L}^{\neg}_S$ (Lemma P.16.1), and governs three distinct causal channels:
+*Step 3 (Conditional trajectory effect).* Under the explicit PCE-objective hypothesis in the theorem statement, high-$U_S$ targets are disfavored within the same viable comparison class. Theorems 13 and D.5 alone do not prove their avoidance.
 
-*Proof.* Each channel is derived from existing PU results applied to $U_S$ on the stated nonempty branch.
+Thus the theorem establishes a conditional cost stratification and, when their independent certificates are added, conditional heat and trajectory-bias channels. The prohibition set itself remains a subset of candidate-configuration space, not a positive carrier. ∎
 
-*Step 1 (Scalar-field effect).* By Definition P.16.3 and Lemma P.16.1, $U_S$ is a well-defined scalar field on candidate configurations in $\Theta_S$ whose super-level sets accumulate on $\mathcal{L}^{\neg}_S$ along the finite-proximity approach sequences available on the branch: any such sequence approaching $\mathcal{L}^{\neg}_S$ in SPAP proximity has $U_S$ values diverging at rate $\Omega(\log \mu_S \cdot \mu_S^2)$. Trajectories of $\mathcal{M}_S$ that require integration of high-$U_S$ targets incur correspondingly high cost, so the admissible-cost budget of $S$ stratifies $\Theta_S$ by proximity to $\mathcal{L}^{\neg}_S$. The construction does not claim smoothness of $U_S$ or a pointwise gradient; it claims the lower-bound super-level stratification delivered by Theorem M.10.3.
-
-*Step 2 (Thermodynamic effect).* By Theorem 31 and Definition P.6.2 (PPI), every irreversible operation in the integration of patterns with $\mu_S > 1/\alpha_{SPAP}$ produces entropy at least $k_B \ln 2$. By Proposition P.15.1, the integrated dissipation associated with the SPAP-dependent excess constitutes Source Energy $\mathcal{E}_{\text{src}}(S, \Delta t) > 0$. By Proposition N.8.1, this dissipation enters the stress-energy tensor through the established Landauer chain, producing measurable physical consequences for trajectories approaching $\mathcal{L}^{\neg}_S$ on the stated branch.
-
-*Step 3 (Trajectory-shaping effect).* By Theorem 13 (complexity growth in self-modeling) combined with Theorem D.5 (PCE adaptation dynamics), the long-run trajectory of $\mathcal{M}_S$ under PCE optimization (Definition 15) avoids configurations whose realization requires high-$U_S$ integrations. By Step 1, such configurations include those at small SPAP-proximity distance to $\mathcal{L}^{\neg}_S$ on the stated branch. Hence $\mathcal{L}^{\neg}_S$ shapes the long-run statistical structure of $\mathcal{M}_S$'s evolution whenever the nonempty-branch hypotheses hold.
-
-None of Steps 1–3 requires that $\mathcal{L}^{\neg}_S$ be represented by any positive degree of freedom of $S$. The prohibition set is a subset of candidate-configuration space; its causal efficacy operates through the cost potential $U_S$ (Definition P.16.3), which in turn is sourced by the M.10.3 cost bound and the boundary unprocessability of Theorem M.10.6, not by any field carried by $\mathcal{L}^{\neg}_S$ itself. $\square$
-
-**Remark P.16.1 (The Negative Mode of Causation).** Theorem P.16.1 identifies a mode of causation with no analogue in standard substance ontologies on branches where the prohibition set is nonempty: the prohibition set causes by *not permitting*, shaping what happens by excluding what cannot happen via the divergence of $U_S$ rather than via any positive force carrier. This is structurally parallel to the way the second law shapes thermodynamic trajectories without any "entropy force" being a positive degree of freedom — large-system configurations in which entropy decreases are simply absent from typical evolution. The PU result shows the same structural pattern at the individual scale for self-referential systems satisfying the nonempty-branch hypotheses.
+**Remark P.16.1 (Negative-Space Interpretation).** On the branch of Theorem P.16.1, the prohibition set labels excluded subboundary targets and a certified computational cost stratification. Describing that negative space as “causal” is an interpretive shorthand for the separately assumed PCE response to registered costs; it is not a new force, field, degree of freedom, or unconditional thermodynamic effect.
 
 ### P.16.5 Scale Applicability: Inner Compulsion and Coupled Bias
 
@@ -8462,11 +8909,11 @@ Hypothesis 14.5.8 adds the stronger premise that inadmissible joint configuratio
 
 *Proof.* By Theorem L.6, all aggregate power channels are accounted for exactly once in $P_{\text{agg}}$, with no double counting. By Definition 15 (PCE), the dynamics select cost-minimizing configurations among those consistent with the operational viability constraints (Axiom 3). The ongoing maintenance of $\theta^{\text{maint}}$ with cost exceeding that of the viable alternative $\theta^{\text{alt}}$ is, by hypothesis, dispreferred by PCE on $S$'s full operational budget; PCE therefore drives $\mathcal{M}_S$ toward $\theta^{\text{alt}}$. By Proposition 15, $\mathcal{D}_S$'s representation of the cost calculation is bounded; nothing in the PCE optimization requires that $\mathcal{D}_S$ be able to reconstruct the calculation, only that $S$'s full processing apparatus be able to perform it. Hence the transition occurs even when $\mathcal{D}_S$ cannot account for it. $\square$
 
-**Remark P.16.3 (Apparent Irrationality from a Restricted Ledger).** Proposition P.16.1 explains a class of agent behaviour widely classified as irrational, akratic, self-defeating, or pathological. The classification typically follows when an external observer's accounting of $S$'s "interests" omits the SPAP-divergent maintenance cost of self-model incoherence. Once that cost is included on the ledger, many such behaviours register as PCE-optimal on the full budget. The framework does not claim that all such behaviours are deep-rational — some are genuine dysfunction — but it identifies a structural class for which the appearance of irrationality is an artefact of incomplete cost accounting.
+**Remark P.16.3 (Scope of the Restricted-Ledger Interpretation).** Proposition P.16.1 applies only after a finite maintenance window, disjoint physical cost ledgers, a reachable viable alternative, and the stated strict cost comparison are established. It does not by itself explain, classify, or diagnose any observed behavior, and “SPAP-divergent maintenance cost” cannot be inserted without the certificates of Definition P.16.3 and Theorem M.10.7.
 
-**Corollary P.16.2 (Phenomenology of Compulsion).** First-person reports characterizing deep-rational acts as compulsion, possession, fate, or "something coming over me" are consistent with, and naturally rendered by, the existence and direction of cost gradients whose detailed structure lies below the deliberative subprocess's introspective access.
+**Corollary P.16.2 (Conditional Phenomenological Compatibility).** Under all hypotheses of Proposition P.16.1 and an additional observation record showing that $\mathcal D_S$ lacks the retained data needed to reconstruct the registered cost comparison, a first-person report of unexplained compulsion is compatible with that model. The report neither verifies the model nor identifies its cause uniquely.
 
-*Proof.* By Proposition P.16.1, the transition occurs and is PCE-optimal on $S$'s full budget. By Proposition 15, $\mathcal{D}_S$ has access to the *occurrence* of the transition (it is part of $S$'s state) but not to the full cost calculation that produced it. The verbal-rational standard $\mathcal{V}$ is restricted to representations available to $\mathcal{D}_S$. Therefore $\mathcal{D}_S$ can report the transition but cannot reconstruct its rationale within $\mathcal{V}$. Reports of the form "I had to do it but cannot say why" are structurally faithful first-person renderings of this epistemic situation — compatible with, though not uniquely determined by, the cost-gradient structure. $\square$
+*Proof.* Proposition P.16.1 supplies the conditional transition, while the additional observation record supplies the stated reconstruction failure. Compatibility follows. No converse or causal-identification statement is asserted. ∎
 
 ### P.16.7 Recovery of the Pre-Theoretic Vocabulary
 
@@ -8481,45 +8928,41 @@ The cross-cultural vocabulary for deep-rational acts — *daimon, muse, fate, sy
 
 Remark P.16.5 below separates these by epistemic status and adds the terms that require multi-system machinery.
 
-**Remark P.16.5 (Term-by-Term Reduction with Epistemic Status).** Remark P.16.4's mapping blurs three distinctions the framework requires: single-system versus multi-system phenomena, theorem-level finite-cost reframes versus nonempty-prohibition-branch reframes, and bias claims versus claims conditional on Hypothesis 14.5.8. The table separates these statuses. Only the strong reading of row four depends on Hypothesis 14.5.8; rows invoking $\mathcal{L}^{\neg}_S$ carry the nonempty-branch hypotheses of Theorem P.16.1.
+**Remark P.16.5 (Term-by-Term Interpretation with Epistemic Status).** The vocabulary below is an interpretive comparison, not an empirical reduction theorem. Each row retains the certificates and dynamics hypotheses of the cited formal result.
 
-| Traditional term(s) | PU structural locus | Epistemic status |
+| Traditional term(s) | PU comparison locus | Epistemic status |
 |:--|:--|:--|
-| *Intuition*, *inspiration*, *the muse*, *tacit knowing*, *hunch* | $U_S$ sensed below $\mathcal{D}_S$'s introspective bound (Proposition 15 + Theorem M.10.3). | **Theorem-level, single-system** for finite-cost self-model gradients. |
-| *Compulsion*, *vocation*, *"the call"*, *daimon-as-inner-pull*, *being moved* | Trajectory deflection of $\mathcal{M}_S$ to $\theta^{\text{alt}}$ when maintaining $\theta^{\text{maint}}$ is higher-cost, unreconstructable by $\mathcal{D}_S$ (Proposition P.16.1 + Corollary P.16.2). | **Theorem-level, single-system** under the stated PCE/cost-gradient hypotheses. |
-| *Personal fate*, *character-as-destiny*, *karma-as-trajectory-constraint* | Long-run trajectory-shaping on a single $S$ by its own $\mathcal{L}^{\neg}_S$ via $U_S$ (Theorem P.16.1, Step 3 + Theorem D.5). | **Theorem-level, single-system on nonempty prohibition branches.** |
-| *Synchronicity* (Jung 1952; Jung & Pauli 1955), *cosmic fate*, *providence-in-the-large*, *karma-as-cosmic-bookkeeping* | Coupled-set cost-gradient bias (Proposition P.16.2 + Corollary P.16.1, Bias Form). The stronger "no coordinator required" reading presupposes Hypothesis 14.5.8. | **Bias reading theorem-level on the relevant nonempty branches; strong no-coordinator reading conditional on Hypothesis 14.5.8.** |
+| *Intuition*, *inspiration*, *the muse*, *tacit knowing*, *hunch* | A registered cost comparison not reconstructed by $\mathcal D_S$ | **Interpretive compatibility only; no theorem maps a phenomenological category to $U_S$.** |
+| *Compulsion*, *vocation*, *“the call”*, *daimon-as-inner-pull*, *being moved* | Proposition P.16.1 and Corollary P.16.2 after their explicit ledger and observation hypotheses | **Conditional model consequence; not a diagnosis or unique explanation.** |
+| *Personal fate*, *character-as-destiny*, *karma-as-trajectory-constraint* | The trajectory branch of Theorem P.16.1 with its explicit PCE-objective hypothesis | **Conditional mathematical analogy; no empirical identification theorem.** |
+| *Synchronicity*, *cosmic fate*, *providence-in-the-large*, *karma-as-cosmic-bookkeeping* | The coupled bias model, if its per-system dynamics and kernel certificates are independently supplied | **Conditional model analogy; support exclusion additionally requires Hypothesis 14.5.8.** |
 
-Terms used across rows (*fate*, *providence*, *karma*) must be disambiguated by sense before mapping: the inner / character / trajectory-constraint senses are derived; the cosmic-bookkeeping sense is conjectural.
+Terms used across rows must be disambiguated before comparison. None of the mappings supplies evidence for the traditional ontology.
 
 ### P.16.8 Relation to Existing PU Results
 
-The present section introduces no new axioms, no new dynamical laws, and no new physical degrees of freedom. Every result reduces to existing theorems of the framework:
+The present section introduces definitions and a conditional synthesis. Its dependencies and remaining certificates are:
 
-| Section P.16 result | Reduces to |
+| Section P.16 result | Required inputs |
 |:--|:--|
-| Definition P.16.1 (Prohibition Set) | Definition M.10.1, Definition M.10.3, Theorem M.10.4 on the nonempty diagonal branch |
-| Definition P.16.2 (Coupled Prohibition Set) | Definition P.16.1, Section M.3, Appendix O |
-| Definition P.16.3 (Cost Potential $U_S$) | Theorem M.10.3, Axiom 3 |
-| Lemma P.16.1 (Divergence of $U_S$ at $\mathcal{L}^{\neg}_S$) | Definition P.16.1, Definition P.16.3, Theorem M.10.3, Theorem M.10.6 |
-| Theorem P.16.1 (Constraint Realism on Nonempty Prohibition Branches) | Definition P.16.3, Lemma P.16.1, Theorem 31, Definition P.6.2, Proposition P.15.1, Proposition N.8.1, Theorem 13, Theorem D.5 |
-| Theorem P.16.2 (Inner-Compulsion Clause) | Theorem P.16.1, Proposition 15 |
-| Proposition P.16.2 (Coupled-Set Cost-Gradient Bias) | Theorem P.16.1, Theorem O.2, Theorem M.6.1, Definition 15 |
-| Corollary P.16.1 (Unauthored Coordination, Bias Form) | Proposition P.16.2 |
-| Definition P.16.4 (Deliberative Subprocess) | Proposition 15 |
-| Definition P.16.5 (Deep Rationality) | Definition P.16.4, Theorem L.6, Definition 15 |
-| Proposition P.16.1 (Deep-Rational Transitions Under PCE) | Theorem L.6, Definition 15, Axiom 3, Proposition 15 |
-| Corollary P.16.2 (Compulsion Phenomenology) | Proposition P.16.1, Proposition 15 |
+| Definition P.16.1 (Prohibition Set) | Definition M.10.3; Theorem M.10.4 only on its realized nonempty diagonal branch |
+| Definition P.16.2 (Coupled Prohibition Set) | Definition P.16.1 and a registered joint support |
+| Definition P.16.3 (Cost Potential $U_S$) | A declared realizer class and a uniform Theorem-M.10.3 reduction certificate |
+| Lemma P.16.1 | Definition P.16.3, nonempty realized targets, and Theorem M.10.6's completed-integration scope |
+| Theorem P.16.1 | Lemma P.16.1 plus an explicit PCE objective on one viable comparison class; heat additionally requires Theorems M.10.7 and 31; stress-energy additionally requires Definition B.8 or Proposition N.8.1's retained coupling ledger |
+| Theorem P.16.2 | Theorem P.16.1 and a separately registered introspective-access limitation for the cost comparison at issue |
+| Proposition P.16.2 and Corollary P.16.1 | The per-system dynamics certificates plus the declared kernel-mediation branch; support exclusion additionally requires Hypothesis 14.5.8 |
+| Proposition P.16.1 and Corollary P.16.2 | A finite window, disjoint cost ledgers, a viable alternative, a strict comparison, and the stated observation record |
 
-The contribution of the section is interpretive and synthetic: it identifies the prohibition structure established by SPAP, reflexivity costs, and perspectival information theory as a candidate structural locus for phenomena the philosophical tradition has variously referred to as the daimon, intuition, vocation, tacit knowing, personal fate, and related terms. Remark P.16.5 separates the theorem-level mappings from those conditional on Hypothesis 14.5.8.
+The contribution is interpretive and synthetic. The prohibition set is not a physical source by itself, and the framework derives no heat, stress-energy, measurable response, behavior, or phenomenological category without the corresponding row's additional data.
 
 ### P.16.9 Relation to the Paradox-Avoidance Residue (Section 14.5.8)
 
-The theorem-level content of this section is logically prior to the conjectural Residue Conjecture of Section 14.5.8 and independent of the Environmental SPAP Hypothesis (Hypothesis 14.5.8). Specifically: Definition P.16.3 (cost potential $U_S$), Lemma P.16.1 (divergence of $U_S$ on $\mathcal{L}^{\neg}_S$), Theorem P.16.1 (Constraint Realism on Nonempty Prohibition Branches), Theorem P.16.2 (Inner-Compulsion Clause), Proposition P.16.2 (Coupled-Set Cost-Gradient Bias), the bias clause of Corollary P.16.1, Proposition P.16.1 (Deep-Rational Transitions Under PCE), and Corollary P.16.2 follow from theorem-level material on the stated nonempty prohibition branches (Theorems M.10.3, M.10.4, M.10.6, 31, O.2, M.6.1, L.6, D.5 and Propositions 15 and N.8.1) and require no additional kernel-support hypothesis. The *strengthening* of Corollary P.16.1 from a bias result to the claim that joint coordination can be accounted for with no global coordinating agency whatsoever is conditional on Hypothesis 14.5.8 — that hypothesis is what would license kernel-support exclusion (as opposed to merely kernel-mediated biasing) of SPAP-divergent joint configurations. Propositions 14.5.8b, 14.5.8c, and 14.5.8d show that this strengthening is not derivable from the present SPAP plus cost-gradient theorem stack. The recovery-limit alternative is obstructed at the endpoint branch supplied by Theorem M.10.4; claims requiring every intermediate recovery-limit value are not theorem-level consequences of Corollary M.10.4.1. Window-family gluing remains unavailable without a PCE-restriction commutation theorem. If a later support theorem derives Hypothesis 14.5.8, the bias clause of Corollary P.16.1 upgrades to the stronger form; if the support hypothesis is refuted, the bias-level content remains intact and the stronger reading is blocked.
+The certificate-relative cost stratification of Definition P.16.3 and Lemma P.16.1 is logically distinct from the Environmental SPAP Hypothesis. The trajectory, coupled-bias, thermodynamic, stress-energy, and phenomenological claims retain their own explicit dynamics, implementation, coupling, and observation hypotheses. Hypothesis 14.5.8 would add kernel-support exclusion; it cannot supply any missing reset, localization, response, or PCE-objective certificate, and it is not derivable from the present SPAP and cost-stratification results.
 
 ### P.16.10 Summary
 
-On nonempty prohibition branches, the prohibition set $\mathcal{L}^{\neg}_S$ — the complement, in candidate-configuration space, of the SPAP-admissible region — is the structural locus whose causal efficacy operates through the cost potential $U_S$ (Theorem P.16.1) rather than through any positive degree of freedom. At the single-system scale this produces trajectory deflections the deliberative subprocess cannot fully reconstruct (Theorem P.16.2, Proposition 15), rendered in first-person report as compulsion, tacit knowing, or personal-fate phenomenology (Corollary P.16.2, Remarks P.16.4–P.16.5). At the coupled scale, the same per-system channel biases joint trajectories toward mutually low SPAP-related cost (Proposition P.16.2, Corollary P.16.1); the strictly stronger reading — that no global coordinating agency whatsoever is required — is conditional on Hypothesis 14.5.8. The contribution is interpretive and synthetic: no new axioms, no new dynamical laws, no new degrees of freedom. What PU delivers is the formal vocabulary in which the prohibition-as-carrier can be stated and separated, by epistemic status, from the claims that still rest on an open hypothesis.
+On a realized nonempty prohibition branch with a uniform reduction certificate, $\mathcal L_S^{\neg}$ supports the extended computational lower-bound stratification $U_S$ of Definition P.16.3. It is not a positive degree of freedom or a physical source. Trajectory bias requires the explicit PCE-objective hypothesis of Theorem P.16.1; heat requires Theorem M.10.7 and Theorem 31; stress-energy requires a retained localization and coupling ledger; coupled support exclusion requires Hypothesis 14.5.8; and phenomenological comparisons remain conditional interpretations rather than empirical reductions. The section's defensible contribution is this certificate-separated vocabulary.
 
 ## P.16a Population-Parameter Status of Apparent Free Constants
 
@@ -8540,7 +8983,7 @@ Before stating the population-parameter content, this subsection records the arc
 
 1. *Quantum mechanics emerges from the primitive layer* through Section 8 and Appendix G. The complex Hilbert structure is selected by Theorem G.1.8 from real, complex, and quaternionic alternatives; Theorem 15 supplies $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, Theorem 23 supplies the Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch; Born weights are supplied by Proposition 7 and Theorem G.1.7 through the POP/PCE noncontextual frame-functional machinery.
 2. *The Standard Model structural sector emerges from the primitive layer* through Appendix G and Appendix R. The inactive-sector module decomposition is selected by Theorem G.8.4b, and the gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ is selected by Corollary G.8.4c on that finite-response capacity branch; the impossibility of a single-MPU SM-like chiral sector is Theorem P.1; the generation count $N_g=3$ is established by Theorem R.3.4 and Proposition R.3.5.1a on the pre-flavor family-redundancy PPI branch. Later threshold, flavor, and baryogenesis numerics retain the status assigned by Convention P.14.1k.
-3. *General relativity emerges from the primitive layer* through Section 11, Section 12, and Appendix O. The regular continuum branch is supplied by the geometric-regularity and operational-continuum results; the Lorentzian metric signature is selected on the regular branch by Appendix O.7 under its stated hypotheses; the spacetime dimension $D=4$ is forced on the Bures tangent-cell channel contract by Theorem Z.10 and Theorem Z.11 through $K(D)=24$; and the local Einstein equation is derived as a Clausius relation on emergent horizons by Theorem 12.1, with its bridge status inherited from the gravity ledger.
+3. *General relativity emerges from the primitive layer* through Section 11, Section 12, and Appendix O. The regular continuum and Lorentzian-signature results retain their stated certificates. Independently, Definition Z.9a and Theorems Z.10--Z.11 select the least feasible $D=4$ from a faithful $24$-mode shell, the $K(3)=12$ obstruction, and the regular $24$-cell. The local Einstein equation is then derived as a Clausius relation on the separate certified horizon branch.
 
 **Remark P.16a.0.1 (Two-Tier Organization).** Definitions P.16a.0.1 and P.16a.0.2 record an organization, not an additional derivation. The primitive layer is primitive relative to the emergence of standard physical theories: it supplies the predictive, SPAP, finite-resource, and population-configuration constraints from which the emergent layer is derived. When an item in the primitive layer is itself theorem-level inside the manuscript, its primitive role here means only that later physical sectors use it as an upstream constraint.
 
@@ -8693,9 +9136,9 @@ is branch-valid unless an added population graph model identifies interface mode
 
 *Proof.* The definition of $\Sigma_Z$ and $A_0$ gives the off-branch value $\bot$ whenever $\mathcal P|_S$ is empty, not a population configuration, not an admissible quotient, or not on $\mathcal B_Z$. It remains to prove the on-branch value.
 
-Assume $\mathcal P|_S\in\mathcal B_Z$. By membership in $\mathcal B_Z$, the retained local MPU sectors satisfy the minimal SPAP-compatible branch. Theorem 15 fixes $K_0=3$, Theorem Z.2 fixes $d_0=8$ on the minimal PCE branch, Theorem 31 with Definition 15a fixes $\varepsilon_0=\ln2$ on the attractor branch, and Theorem Z.1 fixes
+Assume $\mathcal P|_S\in\mathcal B_Z$. By branch membership, Theorem 15's (O1)–(O3), (FC) hypotheses give $K_0=3$; Hilbert distinguishability and Theorem Z.2's same-class comparator give $d_0=8$; the registered reachable binary quotient gives $\varepsilon_0=\ln2$; and Theorem Z.1's sharp-record, capacity, and no-surplus hypotheses give
 $$
-a=\min\{n\in\mathbb N_{>0}:\ln n\ge\varepsilon_0\}=2.
+a=2.
 $$
 Hence
 $$
@@ -8709,11 +9152,11 @@ and Theorem Z.13b.0a on the predictive-recovery MacWilliams branch fixes
 $$
 k=M/2=12.
 $$
-Theorems Z.10 and Z.11 give the finite-response Bures tangent-cell contract
+Definition Z.9a and Theorem Z.10 give a faithful response-label injection and therefore
 $$
-M_{\mathrm{int}}=M_{\mathrm{phys}}=K(D).
+M=24\le K(D).
 $$
-With $K(1)=2$, $K(2)=6$, $K(3)=12$, $K(4)=24$, and the Theorem Z.11 lower bound $K(D)\ge40$ for $D\ge5$, the unique integer solution of $K(D)=24$ is $D=4$. Therefore
+The faithful-shell bound gives $24\le K(D)$, and $K(3)=12$ excludes $D\le3$. The regular $24$-cell gives an explicit feasible shell in $D=4$; Definition Z.9a's strict surplus-dimension cost makes it the unique least-feasible choice. Therefore
 $$
 \Sigma_Z(\mathcal P|_S)=\mathfrak L_0.
 $$
@@ -10189,9 +10632,11 @@ This is not a claim of exact mathematical fractality, scale invariance at all re
 
 ### P.16b.15a Dual-Layer Predictive Symbols in the Collective Model of Reality
 
-This subsection records a conservative PU reading of durable symbolic material. A symbol is not treated as a fixed inherited image, nor as a free-floating interpretation. It is treated as a finite, transmissible compression of predictive role. The same high-use predictive kernel may be dressed differently by different communities while preserving the action-relevant gist that made the symbol worth transmitting.
+This subsection records a conservative PU reading of durable symbolic material. A surface symbol is neither a fixed inherited image nor an autonomous replicating particle. It is a finite transmissible encoding whose decoded content may occupy a retained collective response role. A predictive kernel and its local dressings are compared only relative to a fixed population, budget, protocol family, decoder family, and collective response quotient.
 
-All cross-context comparisons in this subsection are made on a retained comparison branch on which the dressings from the relevant contexts are decodable into the same collective response quotient $\mathcal F_{\mathcal S}^{\mathrm{col}}$. Without such a comparison branch, the subsection asserts no unguarded translation theorem between symbolic systems.
+All cross-context comparisons in this subsection are made on a retained comparison branch on which the dressings from the relevant contexts are decodable into the same collective response quotient $\mathcal F_{\mathcal S}^{\mathrm{col}}$. Without that common branch, no cross-context kernel identity, adequacy comparison, or translation conclusion is asserted.
+
+
 
 **Definition P.16b.15a.1 (Collective Predictive Model Presentation).**
 
@@ -10232,9 +10677,13 @@ $$
 \tag{P.16b.15a.5}
 $$
 
+At fixed $\mathcal S$, $B$, retained protocol family, decoder family, and comparison branch, the operational unit of retained cultural function is the quotient point $\operatorname{Role}_{\mathcal S}(c)$, not the surface token $c$. A surface code is an exact representative of that unit only when its decoded content lies in the same response-presheaf isomorphism class; finite-probe proximity alone gives only the tolerance statement specified below.
+
+Here “predictive role” means a content-indexed position in the collective response quotient. It is not any of the system-level capabilities $b_m,b_p,b_v$ of Definition 5, and it is not the update/cycle phase $D_{cyc}$ of Definition 4. Calling a content item predictive means that it is evaluated through the registered response presheaf on the retained query or action protocols; it does not assert that the content item itself instantiates a complete predictor or adaptive loop. Equality of collective roles also does not imply equality of physical carrier, internal mechanism, or causal decomposition.
+
 **Definition P.16b.15a.2 (Predictive Kernel and Local Dressing).**
 
-Let $x$ be a recurrent phenomenon, relation, or event-class available to a population $\mathcal S$. A retained predictive kernel for $x$ is a finite tuple
+Let $x$ be a recurrent phenomenon, relation, or event-class available to a population $\mathcal S$. A retained predictive kernel for $x$ is a finite content item $K_x\in\mathsf{Cont}_{\mathcal S}$ admitting the tuple presentation
 $$
 K_x
 =
@@ -10259,11 +10708,11 @@ $$
 \mathsf S_\Gamma(x):=(K_x,D_\Gamma(K_x)).
 \tag{P.16b.15a.8}
 $$
-Thus the kernel is the retained predictive content, while the dressing is the perspective-local communicable form.
+Thus $K_x$ is the retained content representative whose collective role is well-defined by Definition P.16b.15a.1, while $D_\Gamma(K_x)$ is the perspective-local communicable code. The pair records a content/code factorization on the stated branch; it is neither an additional ontology nor a decomposition of the system-level predictive loop.
 
 **Definition P.16b.15a.3 (Kernel-Role Pseudometric, Kernel Adequacy, and Predictive-Kernel Equivalence).**
 
-Fix a retained finite test family $\mathcal A_K=\{a_1,\ldots,a_m\}$ of kernel-role probes on the comparison branch. Suppose each probe induces a real-valued or finitely real-coded evaluation
+Fix a nonempty retained finite test family $\mathcal A_K=\{a_1,\ldots,a_m\}$ of kernel-role probes on the comparison branch, where $m\ge1$. Suppose each probe induces a real-valued or finitely real-coded evaluation
 $$
 v_i:\mathcal F_{\mathcal S}^{\mathrm{col}}\to\mathbb R.
 $$
@@ -10276,12 +10725,12 @@ d_K(r,r')
 $$
 By the same finite-probe argument as Theorem P.16b.12.8, $d_K$ is a pseudometric on $\mathcal F_{\mathcal S}^{\mathrm{col}}$. It becomes a metric after quotienting by zero distance, and it becomes separating for kernel roles only on branches where the retained probes separate those roles.
 
-The kernel $K_x$ is treated as a retained kernel-content item when evaluated by $\operatorname{Role}_{\mathcal S}$. Let
+Because $K_x\in\mathsf{Cont}_{\mathcal S}$ by Definition P.16b.15a.2, $\operatorname{Role}_{\mathcal S}(K_x)$ is well-defined. Let
 $$
 \operatorname{Dec}_\Gamma(D_\Gamma(K_x))\in\mathsf{Cont}_{\mathcal S}
 \tag{P.16b.15a.10}
 $$
-be the decoded content recovered by the population using the local dressing on the retained comparison branch. The dressing is $\epsilon$-kernel-adequate when
+be the decoded content recovered by the population using the local dressing on the retained comparison branch. Fix $\epsilon\ge0$. The dressing is $\epsilon$-kernel-adequate when
 $$
 d_K
 \bigl(
@@ -10295,7 +10744,7 @@ $$
 
 Two dressed symbols $\mathsf S_\Gamma(x)$ and $\mathsf S_{\Gamma'}(y)$ are predictive-kernel equivalent at tolerance $\epsilon$ when their decoded roles are within $\epsilon$ in $d_K$. In the zero-tolerance branch where the retained probes separate kernel roles, this reduces to equality in $\mathcal F_{\mathcal S}^{\mathrm{col}}$.
 
-**Theorem P.16b.15a.4 (Predictive Kernel Conservation under Local Dressing).**
+**Theorem P.16b.15a.4 (Adequate-Dressing Bound for a Fixed Predictive Kernel).**
 
 Suppose $\mathsf S_\Gamma(x)$ and $\mathsf S_{\Gamma'}(x)$ are two local dressings of the same retained predictive kernel $K_x$ on a common retained comparison branch, and both are $\epsilon$-kernel-adequate. Then
 $$
@@ -10346,16 +10795,25 @@ on the same PCE presentation branch.
 
 *Proof.* Equations (P.16b.15a.13)--(P.16b.15a.14) are exactly the equal-adequacy compression case of Theorem P.16b.9.3 applied to the induced presentations $\mathcal M_{\mathcal S,B}^{\mathrm{col}}[\mathsf S_\Gamma(x)]$ and $\mathcal M_{\mathcal S,B}^{\mathrm{col}}[E_x]$. Equation (P.16b.15a.15) is the defining strict comparison of the same PCE objective. ∎
 
-**Corollary P.16b.15a.6 (Dual-Layer Symbolic Universals Relative to Retained Probes).**
+**Corollary P.16b.15a.6 (Cultural-Function Units Relative to Retained Probes).**
 
-On any branch where a recurrent phenomenon $x$ is publicly available, survival- or coordination-relevant, transmissible, and admits a compressed code satisfying Theorem P.16b.15a.5, every retained PCE-selected cultural symbol for $x$ has a dual structure
+Fix a retained comparison branch, kernel $K_x$, probe family, and decoder family. Suppose $\mathsf S_\Gamma(x)$ is an $\epsilon$-kernel-adequate dressed encoding satisfying a strict PCE selection condition of Theorem P.16b.15a.5. Its dual presentation is
 $$
 \mathsf S_\Gamma(x)=(K_x,D_\Gamma(K_x)).
 \tag{P.16b.15a.16}
 $$
-The branch-invariant component, relative to the retained comparison probes, is the predictive kernel $K_x$; the local component is the dressing $D_\Gamma(K_x)$. Cultural variation may therefore change the image, name, myth, ritual, taboo, diagram, tool practice, story, institution, or technical model while conserving the kernel role needed for prediction, coordination, and transfer.
+The operational cultural-function unit associated with $x$ is the quotient point $\operatorname{Role}_{\mathcal S}(K_x)$, while the decoded dressing is an $\epsilon$-approximation satisfying
+$$
+d_K\!\left(
+\operatorname{Role}_{\mathcal S}(\operatorname{Dec}_\Gamma(D_\Gamma(K_x))),
+\operatorname{Role}_{\mathcal S}(K_x)
+\right)
+\le\epsilon.
+$$
+For any second $\epsilon$-kernel-adequate dressing of the same fixed kernel on the same comparison branch, the decoded roles are at distance at most $2\epsilon$. When $\epsilon=0$ and the retained probes separate kernel roles, both decoded contents represent the same quotient point. No conclusion follows for a code lacking the common comparison branch, a registered decoder, or kernel adequacy.
 
-*Proof.* Theorem P.16b.15a.5 gives the PCE condition under which a compressed symbolic code is selected rather than a costlier enumerative record. Definition P.16b.15a.2 gives every such retained symbolic encoding the pair structure $(K_x,D_\Gamma(K_x))$. Theorem P.16b.15a.4 shows that local dressings can vary while preserving the decoded kernel role up to the retained tolerance. ∎
+
+*Proof.* Definition P.16b.15a.2 supplies the displayed content/code presentation. Definition P.16b.15a.1 identifies the operational cultural-function unit with the collective response-quotient point. Definition P.16b.15a.3 gives the displayed $\epsilon$-adequacy inequality. Theorem P.16b.15a.4 applies the pseudometric triangle inequality to two adequate dressings and yields the $2\epsilon$ bound. At $\epsilon=0$, separation of the retained probes converts zero pseudometric distance into equality in $\mathcal F_{\mathcal S}^{\mathrm{col}}$. Theorem P.16b.15a.5 supplies only the stated PCE selection conclusion and does not strengthen any role-equivalence claim. ∎
 
 **Theorem P.16b.15a.7 (Culture as Amortized Decoder).**
 
@@ -10497,7 +10955,7 @@ The zero of a profile cost identifies the cogito only on the separating-origin b
 | Proposition P.16b.15.2 | Fractal-like psyche claim follows conditionally from SSSH on natural traces | conditional empirical branch |
 | Theorem P.16b.15a.4 | Local symbolic dressings of the same adequate predictive kernel preserve role up to $2\epsilon$ | theorem-level pseudometric result on retained comparison branch |
 | Theorem P.16b.15a.5 | PCE selects compressed symbolic encodings over costlier equal-adequacy enumerations | theorem-level on PCE presentation branch |
-| Corollary P.16b.15a.6 | Retained cultural symbols have kernel/dressing dual structure under the stated branch conditions | theorem-level semantic compression corollary |
+| Corollary P.16b.15a.6 | The cultural-function unit is a collective response-quotient point; adequate dressings are tolerance-controlled encodings on a common comparison branch | theorem-level semantic compression corollary |
 | Theorem P.16b.15a.7 | Shared cultural decoders amortize symbolic decompression cost when the setup inequality holds | theorem-level coding result |
 | Theorem P.16b.16.2 | Shannon projection recovers entropy on pure-information branch | theorem-level branch theorem |
 | Corollary P.16b.16.3 | Shannon projection is many-to-one | theorem-level boundary |
@@ -11294,7 +11752,7 @@ PPI states a bridge requirement between an abstract operational structure and a 
 * **Generative non-closure** gives the conservative pre-axiomatic reading of the framework: total internal reflexive self-closure is impossible for SPAP-capable predictors, so nontrivial verified prediction proceeds through stable finite partial closures. The named axioms, bridge laws, verification cuts, typing guards, PCE quotients, and PPI instantiation rules are the local stabilizers of admissible response domains, not completed self-closure predicates (Appendix A.6; Section P.16c)
 * **Operational program discipline** emerges as a conservative theorem-level package for predictive renormalization, finite-channel covariance, anomaly residue, operational naturalness, context-state tomography, reflexive opacity, perspective curvature, calibration, horizon tomography, experiment selection, self-reference spectroscopy, proof-cost accounting, curriculum sequencing, institutional error correction, AI alignment, intervention budgeting, ontology audit, certificate mining, predictive failure classification, and interface-capacity bounds; it adds no physical primitive and changes no physical branch without an explicit response-presheaf, cost-functional, or certificate change (Section P.16d)
 
-The capstone is a conditional identification of the Monster group $\mathbb M$ as a candidate vacuum symmetry on the branch specified in Sections P.13.1–P.13.20. The structural values $\varepsilon_0=\ln2$, $a=2$, and $M=24$, together with the independent coding, even-unimodular-rootless lattice, gluing, chiral-VOA, controller, standard-lift, and orbifold certificates, lead to $\Lambda_{24}$, then $V^\natural$, and finally $\operatorname{Aut}(V^\natural)=\mathbb M$ by the Frenkel--Lepowsky--Meurman theorem. PCE compares candidates within this registered admissible class; it does not establish that every optimal predictive realization has Monster symmetry. The construction supplies a conditional physical interpretation of the established Monstrous Moonshine structures.
+The capstone is a conditional identification of the Monster group $\mathbb M$ as a candidate vacuum symmetry on the branch specified in Sections P.13.1–P.13.20. The structural values $\varepsilon_0=\ln2$, $a=2$, and $M=24$, together with the independent coding, fixed-normalization even-unimodular lattice, finite Gaussian-cost or registered Golay-to-Leech construction, chiral-VOA, controller, standard-lift, and orbifold certificates, lead to $\Lambda_{24}$, then $V^\natural$, and finally $\operatorname{Aut}(V^\natural)=\mathbb M$ by the Frenkel--Lepowsky--Meurman theorem. PCE compares candidates within this registered admissible class; it does not establish that every optimal predictive realization has Monster symmetry. The construction supplies a conditional physical interpretation of the established Monstrous Moonshine structures.
 
 The SPAP-associated operation order, registered-reset entropy ledger, and predictor-target identification are distinct data that may coexist on a certified protocol but are not mutually reconstructible. Vacuum symmetry is a further downstream output on the independent Leech/Moonshine branch, not a fourth equivalent datum.
 

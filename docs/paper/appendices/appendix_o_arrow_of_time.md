@@ -89,6 +89,71 @@ for every open neighborhood $U\supset\mathcal M_{\mathrm{sync}}$ as $\beta\to\in
 
 The coherent causal rhythm that emerges from the synchronized MPU network is not symmetric; it possesses an intrinsic and irreversible direction.
 
+**Principle O.3c0 (Autonomous Cyclic-Update Closure).** A registered coarse-grained Predict–Verify–Update sector admits an autonomous continuous-time Markov description on states $P,V,D$ with strictly positive rates
+$$
+P\mathop{\rightleftarrows}^{a}_{\bar a}V,
+\qquad
+V\mathop{\rightleftarrows}^{b}_{\bar b}D,
+\qquad
+D\mathop{\rightleftarrows}^{c}_{\bar c}P.
+$$
+The operational cycle orientation is the forward orientation and satisfies the testable nonequilibrium inequality
+$$
+abc>\bar a\bar b\bar c.
+\tag{O.3c0.1}
+$$
+
+**Theorem O.3c0 (Strict Autonomous Arrow and Fluctuation Identity).** Under Principle O.3c0, the unique stationary cycle current and affinity are
+$$
+J
+=
+\frac{abc-\bar a\bar b\bar c}
+{ab+a\bar b+ac+\bar a\bar b+\bar ac+\bar a\bar c+bc+b\bar c+\bar b\bar c},
+\tag{O.3c0.2}
+$$
+$$
+\mathcal A
+=
+\ln\frac{abc}{\bar a\bar b\bar c}>0.
+\tag{O.3c0.3}
+$$
+The stationary entropy-production rate is
+$$
+\dot\sigma=J\mathcal A>0.
+\tag{O.3c0.4}
+$$
+Let $\pi$ be the stationary distribution. For every finite stationary trajectory
+$$
+\gamma=(x_0\to x_1\to\cdots\to x_N),
+$$
+recorded together with its holding times, and its time reverse $\gamma^\dagger$, define the total entropy production
+$$
+\Sigma_{\mathrm{tot}}[\gamma]
+:=
+\ln\frac{\pi(x_0)}{\pi(x_N)}
++
+\sum_{j=1}^{N}
+\ln\frac{k_{x_{j-1}x_j}}{k_{x_jx_{j-1}}}.
+$$
+Then
+$$
+\ln\frac{\mathbb P_{\pi}[\gamma]}{\mathbb P_{\pi}[\gamma^\dagger]}
+=
+\Sigma_{\mathrm{tot}}[\gamma],
+\qquad
+\left\langle e^{-\Sigma_{\mathrm{tot}}}\right\rangle_{\pi}=1.
+\tag{O.3c0.5}
+$$
+For a closed cycle $x_N=x_0$, the stationary endpoint term vanishes.
+Hence forward-oriented histories are exponentially favored on positive-production trajectories. A bound by $\ln2$ per completed cycle follows only if the separate registered affinity bound $\mathcal A\ge\ln2$ is verified.
+
+*Proof.* Solving the stationary master equations with normalization gives the common oriented edge current (O.3c0.2); its denominator is a sum of positive two-rate monomials. Equation (O.3c0.1) therefore gives $J>0$ and (O.3c0.3). Schnakenberg's cycle decomposition gives $\dot\sigma=J\mathcal A$. In the ratio of stationary path densities, the holding-time exponentials cancel because the reversed trajectory visits the same states for the same durations. The initial-density ratio contributes $\ln[\pi(x_0)/\pi(x_N)]$, and each jump contributes the logarithm of its forward/reverse rate ratio. Their sum is $\Sigma_{\mathrm{tot}}[\gamma]$. Hence
+$$
+\mathbb P_{\pi}[\gamma]e^{-\Sigma_{\mathrm{tot}}[\gamma]}
+=\mathbb P_{\pi}[\gamma^\dagger].
+$$
+Time reversal is a bijection on the finite path space, so summation proves the integral fluctuation identity. ∎
+
 **Theorem O.3 (Conditional Pathwise Arrow Bound).** Suppose a coherent macroscopic step consists of $N$ update cycles with forward and reversed path measures on the same event algebra and
 $$
 \Sigma_{\mathrm{tot}}
@@ -144,7 +209,7 @@ Both weights are positive, so inversion proves (O.3a.3). If $h_{\min}\ge\ln2$, t
 
 *Proof.* Theorem O.3a uses a single cycle $c$ satisfying the single-cycle entropy-production identity and the pathwise lower bound. No averaging over a population of cycles is used in deriving (O.3a.3). ∎
 
-**Remark O.3a.2 (Scope of the Single-Cycle Bound).** Equation (O.3a.3) is a conditional pathwise consequence of (O.3a.1)-(O.3a.2). Without the pathwise lower bound (O.3a.2), Appendix J supplies its declared cycle-cost ledger, but neither the single-cycle bound of Theorem O.3a nor the multi-cycle suppression of Theorem O.3 follows. Theorem O.3 requires the corresponding pathwise lower bound for every selected cycle.
+**Remark O.3a.2 (Scope of the Single-Cycle Bound).** Equation (O.3a.3) is a conditional pathwise consequence of (O.3a.1). Without the pathwise lower bound in (O.3a.1), Appendix J supplies its declared cycle-cost ledger, but neither the single-cycle bound of Theorem O.3a nor the multi-cycle suppression of Theorem O.3 follows. Theorem O.3 requires the corresponding pathwise lower bound for every selected cycle.
 
 **Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice, quantum-eraser, and pre/post-selected weak-probe protocols, a later recorded event changes which conditional subensemble or verification channel becomes operationally relevant for the retained record. It does not reverse the P-V-U order of the actualized MPU cycle and does not alter unconditioned earlier marginals (Corollary M.6.14d). Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
 
@@ -386,7 +451,7 @@ S_{\mathrm{ret}}^{(q)}(t_0)
 $$
 If $\dim\mathcal A_{\mathrm{ret}}^{(q)}(t_0)$ is minimal in the certified filtration, the low-retained-entropy boundary is a consequence of retained-record smallness at that level, not an additional absolute microscopic boundary condition. Record-shaped configurations lacking accepted ledger ancestry are outside this retained-conditioning class only when $\mathcal L_{\mathrm{anc}}$ distinguishes them by a finite response protocol.
 
-*Proof.* Each accepted record appends a verified finite response after the SPAP update cycle and pays the entropy floor of Theorem 31. The forward-lock and no-deletion/retention entries prevent erasure from the retained algebra in the certified window, giving the inclusion maps. Entropy on a finite retained algebra is bounded by the logarithm of its dimension. The ancestry clause is a PPI statement: exclusion applies to the retained conditioning class exactly when a finite protocol distinguishes ancestry-bearing records from record-shaped states without such ancestry. ∎
+*Proof.* Each accepted record appends a verified finite response after the relevant update cycle. By the certificate's forward-lock and no-deletion/retention entries, later algebras contain the earlier retained records, giving the inclusion maps. Entropy on a finite retained algebra is bounded by the logarithm of its dimension. The ancestry clause is a PPI statement: exclusion applies to the retained conditioning class exactly when a finite protocol distinguishes ancestry-bearing records from record-shaped states without such ancestry. No positive thermodynamic cost is needed for these conclusions; Theorem 31 supplies only the distribution-dependent reset ledger when its separate reset hypotheses hold. ∎
 
 **Remark O.3e (Non-Redundancy with the Arrow Theorem).** Theorems O.3, O.3a, and O.3b derive directionality and fluctuation suppression. Proposition O.3d does not rederive that arrow. It supplies the separate retained-algebra reading of low-boundary and conditioning claims, and is therefore used only where the text discusses the Past Hypothesis or record-selection ambiguity.
 
@@ -401,13 +466,14 @@ $$
 \chi_{\mathrm{ECF}})
 \tag{O.3f.1}
 $$
-where $\mathcal E_R$ is the finite retained event alphabet, $\sigma_R^{\mathrm{ECF}}:\mathcal E_R\to[0,\infty)$ is the branch-fixed retained entropy-production increment, $\mathcal G_R\subseteq\mathcal E_R$ is the locked guarantee-level retained-update subset, $\varepsilon_0=\ln2$ is the SPAP structural entropy unit of Theorem 31, $\mathcal N_R$ is the null-exchange and label-swap control ledger, $\tau_R^{\mathrm{cyc}}$ is either a fixed physical cycle-time calibration or the symbol $\bot$ when only dimensionless clock count is claimed, and $\chi_{\mathrm{ECF}}$ records that the event alphabet, retained entropy-increment estimator, guarantee-level subset, null controls, and calibration were fixed before the clock-flow comparison.
+where $\mathcal E_R$ is the finite retained event alphabet, $\sigma_R^{\mathrm{ECF}}:\mathcal E_R\to[0,\infty)$ is the branch-fixed retained entropy-production increment, $\mathcal G_R\subseteq\mathcal E_R$ is the locked guarantee-level retained-update subset, $\varepsilon_0=\ln2$ is the binary structural log-cardinality supplied by Definition 28, Definition J.1, and Theorem J.1, $\mathcal N_R$ is the null-exchange and label-swap control ledger, $\tau_R^{\mathrm{cyc}}$ is either a fixed physical cycle-time calibration or the symbol $\bot$ when only dimensionless clock count is claimed, and $\chi_{\mathrm{ECF}}$ records that the event alphabet, retained entropy-increment estimator, guarantee-level subset, null controls, and calibration were fixed before the clock-flow comparison.
 
-For $e\in\mathcal G_R$, the certificate records that $e$ is the retained projection of a nontrivial guarantee-level SPAP update cycle to which Theorem O.3a applies, so that the imported retained increment satisfies
+For $e\in\mathcal G_R$, the certificate independently records both that $e$ is the retained projection of a nontrivial update cycle and that its matched forward and reversed path weights satisfy Equation (O.3a.1) with $h_{\min}\ge\varepsilon_0=\ln2$. Hence
 $$
 \sigma_R^{\mathrm{ECF}}(e)\ge\varepsilon_0=\ln2.
 \tag{O.3f.2}
 $$
+This lower bound is certificate data; it does not follow from SPAP or from the structural binary log-cardinality alone.
 No such lower bound is claimed for events outside $\mathcal G_R$ unless they are separately certified.
 
 For a retained event history $e_1,\ldots,e_n$ define
@@ -468,98 +534,39 @@ $$
 
 Theorem O.3 gives $P_R/P_F\le e^{-Nh_{\min}}$ only on the branch carrying common forward/reverse path measures and the pathwise certificate $\sigma_k\ge h_{\min}>0$. The observer hierarchy of §P.5.8.3 shows that this global asymmetry acquires additional internal structure once some systems possess Effective Operational Property R and an operational self-model. The relevant mechanism is the conjunction of measurement asymmetry (Theorem M.10.5) with the SPAP-dependent integration cost of self-referential patterns (Definition M.10.3; Theorem M.10.3). A more complex system can externally model the self-referential burden of a less complex one, but it cannot thereby impose an exact temporal reversal on the less complex system from within that system's own perspective.
 
-**Theorem O.4 (Perspectival Irreversibility).** Let $A$ and $B$ be predictive systems with Effective Operational Property R and $C_{agg}(A) > C_{agg}(B) > C_{op}$. Let $B$ undergo an 'Evolve' cycle (Definition 27) with entropy production $\Sigma_B \ge \varepsilon$, carrying $B$ from a pre-transition state $x_B$ to a post-transition state $x_B'$. Let $E_{rev}$ be a communicated pattern whose intended function is to restore, within $B$, the pre-transition self-model configuration associated with $x_B$. Then:
+**Theorem O.4 (Registered-History Separation from State Recurrence).** Let $B$ carry a retained-algebra conditioning certificate $\mathfrak C_{\mathrm{ret}}^{(q)}$ from Definition O.3c on a certified interval. Suppose an update record is retained at $t_1$ and the certificate supplies the injective inclusion $\iota_{t_1,t_2}:\mathcal A_{\mathrm{ret}}^{(q)}(t_1)\hookrightarrow\mathcal A_{\mathrm{ret}}^{(q)}(t_2)$ for $t_2>t_1$. If later processing returns the accessible state, a reduced state, or a declared response profile to its earlier value, that equality is a state or response recurrence; it does not delete the registered event from the forward-locked retained algebra. A directional path-probability conclusion additionally requires Theorem O.3a, and a reset-heat conclusion additionally requires a registered reset satisfying Theorem 31.
 
-(i) *External modeling.* System $A$ can represent a candidate description of $B$'s prior self-state as an external object and evaluate the induced SPAP proximity $\mu_B(E_{rev})$ at sender-side SPAP-flat cost by externally modeling $\mathcal{M}_B$ (clause (i) of Theorem M.10.5).
+*Proof.* The injective inclusion preserves the earlier event as an element of the later retained algebra. Equality of an accessible state or declared response profile therefore does not identify the retained algebras or erase that element. The final two claims follow directly from the independent antecedents of Theorems O.3a and 31. ∎
 
-(ii) *Internal cost of attempted restoration.* For $B$, integrating $E_{rev}$ engages the self-model: $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$. This need not by itself force $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$: shallow self-model corrections can remain at the baseline value (Remark M.10.3). But whenever the restoration demand is deep enough that the self-consistency condition of Equation (M.18) is not already satisfied at $PP=0$, one has $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. If $E_{rev}$ remains processable, $\delta_B(E_{rev})>0$, and the pattern-specific reduction certificate of Corollary B.2.1 is accepted, then
-$$
-C_{\text{process}}(B,E_{rev}) \;\ge\; C_{\text{integrate}}(B,E_{rev}) \;\ge\; C_{\text{uni}}(\delta_B(E_{rev})),
-\qquad
-\delta_B(E_{rev}) := \alpha_{SPAP} - PP_B^{(E_{rev})},
-$$
-with asymptotic growth $C_{\text{uni}}(\delta)=\Omega(\log(1/\delta)/\delta^2)$ as $\delta \to 0^+$ (Corollary B.2.1; Theorem B.2 = Theorem 14). Equivalently, for $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$,
-$$
-C_{\text{process}}(B,E_{rev}) \ge \Omega\!\bigl(\log \mu_B(E_{rev}) \cdot \mu_B(E_{rev})^2\bigr)
-$$
-(Theorem M.10.3). In the exact-restoration idealization, the task reaches the full-self-model obstruction class exemplified by Remark M.10.7(5), i.e. the $\mu_B=\infty$ boundary whose existence and unprocessability are guaranteed by Theorems M.10.4 and M.10.6.
+**Corollary O.4.1 (No Erasure of a Forward-Locked History by Later Communication).** Under Theorem O.4's retention hypothesis, a later communicated description cannot erase the earlier registered event from the forward-locked ledger. It may nevertheless enable the physical state, a reduced state, or a declared finite response profile to recur; PU's self-reference theorems do not by themselves forbid such restoration.
 
-(iii) *Ratchet reinforcement.* Whenever $B$ actually processes $E_{rev}$, that processing is itself another 'Evolve' cycle. If it lies in the pathwise class of Theorem O.3a, it produces stochastic entropy $\Sigma_B^{(\text{proc})}\ge h_{\min}>0$; a registered reset separately obeys the heat ledger of Theorem 31 and constitutes a further forward update in $B$'s own history rather than an inversion of that history.
+*Proof.* The first conclusion is Theorem O.4. The second is a scope statement: SPAP excludes a universal exact predictor on its diagonal class, not a control map that returns a particular system to a prior accessible state. ∎
 
-*Proof.*
+Theorem O.4 is compatible with global unitarity (Theorem E.9.5): it concerns persistence of a certified retained event, not a general impossibility of state, reduced-state, or response-profile recurrence.
 
-(i) Clause (i) of Theorem M.10.5 states that a more complex system $A$ can externally model $B$'s self-model $\mathcal{M}_B$, compute the decomposition of Equation (M.17) relative to $B$, evaluate the associated self-consistency condition of Definition M.10.3, and thereby determine $\mu_B(E)$ for any candidate pattern $E$. Because this computation concerns $B$'s self-model rather than $A$'s own, it has sender-side $\sigma_A = 0$ and is SPAP-flat as a function of $\mu_B(E)$. Applying this to the candidate restoration message $E_{rev}$ yields (i).
+**Remark O.4.2 (Locus of Irreversibility).** Theorem O.4 locates its conclusion in the retained history ledger. A positive stochastic arrow requires Theorem O.3a's pathwise certificate, and positive reset heat requires a registered reset with positive $H_q(P\mid R)$. Processing self-referential content may carry the conditional complexity bounds of Appendix M, but self-reference alone supplies neither positive entropy production nor impossibility of state recurrence.
 
-(ii) By construction, $E_{rev}$ is not merely external information about the environment; it is information directed at $B$'s own prior self-state. The self-model $\mathcal{M}_B$ represents $B$'s own states, predictions, accuracy, and dynamics (Definition M.10.1), so any message whose intended role is to restore a prior self-model configuration induces a nonzero self-model update, hence $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$ and $\sigma_B(E_{rev}) > 0$ by Definition M.10.2. However, Remark M.10.3 must be respected: $\sigma_B(E_{rev}) > 0$ alone does **not** imply $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. Shallow self-model perturbations can remain at the baseline value $\mu_B = 1/\alpha_{SPAP}$. The divergent regime begins only when the restoration demand is deep enough that the self-consistency condition of Equation (M.18) is not already satisfied at $PP=0$. In that case $PP_B^{(E_{rev})} > 0$, so $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. For processable such messages carrying that reduction certificate, Corollary B.2.1 and Theorem B.2 give the lower bound through $C_{\text{uni}}(\delta_B(E_{rev}))$, and Theorem M.10.3 gives the equivalent $\Omega(\log \mu \cdot \mu^2)$ form. In the exact-restoration idealization, the task reaches the same full-self-model obstruction class exemplified by the pattern "Here is your complete self-model, including this statement" in Remark M.10.7(5), namely the $\mu_B=\infty$ boundary whose existence and unprocessability are guaranteed by Theorems M.10.4 and M.10.6.
+**Remark O.4.3 (Certificate-Relative External Evaluation; cf. Theorem M.10.5).** Theorem M.10.5 permits an external system $A$ to evaluate a specified pair $(B,E)$ only when $A$ holds the effective model-access and decision certificates stated there; sender-side SPAP-flatness additionally requires its insulation certificate. The inequality $C_{agg}(A)>C_{agg}(B)$ is neither necessary nor sufficient. Corollary M.10.5.1 excludes a universal internal evaluator only on its explicit reduction branch. These facts establish no strict hierarchy of temporal access and no universal obstruction to restoring a selected prior state.
 
-(iii) If $B$ actually integrates $E_{rev}$, that integration is a physical instance of the predict-verify-update loop, i.e. an 'Evolve' cycle (Definition 27). For a registered reset, Theorem 31 bounds bath heat by $H_q(P\mid R)$; for a directional probability statement, the independent pathwise certificate of Theorem O.3a is required. The communicated restoration therefore reaches $B$ only by generating a further irreversible update within $B$. It cannot constitute an exact reversal of $B$'s own arrow from within $B$'s perspective. ∎
+**Remark O.4.4 (Certificate-Relative Reconstruction Cost).** Reconstruction accuracy alone does not determine $\mu_B(E)$ and does not imply the asymptotic lower bound of Theorem M.10.3. That bound applies only to an asymptotic family for which $\mu_{B_\lambda}(E_\lambda)\to\infty$ and the pattern-specific reduction certificate of Corollary B.2.1 is supplied. A token describing a prior state, its processing by $B$, and physical restoration of that state are distinct operations and require separately specified maps.
 
-**Corollary O.4.1 (No Externally Imposed Exact Reversal).** Even a more complex external agent cannot impose an exact reversal of the arrow of time for a less complex agent $B$ by communicating a specification of $B$'s own prior state. Any such specification that $B$ can process is itself integrated through a further forward update, and the exact-restoration idealization sits at the unprocessable boundary.
+**Remark O.4.5 (Receiver-Pattern Classification).** On the identifiable Fisher stratum of Definition M.10.2, $\sigma_B(E)=0$ or $\sigma_B(E)>0$ classifies the registered update relative to $B$'s declared self-model splitting. Baseline proximity for $\sigma_B(E)=0$ additionally requires Corollary M.10.3.1's baseline-invariance hypothesis. A divergent integration-cost lower bound additionally requires an asymptotic family with $\mu_{B_\lambda}(E_\lambda)\to\infty$ and the pattern-specific reduction certificate of Theorem M.10.3. The classification is a property of the fully specified receiver, pattern, and update map; channel-independence does not follow unless those maps are themselves invariant under the compared delivery channels.
 
-*Proof.* Let $E_{rev}$ be a message intended to restore $B$'s prior self-model. By clause (ii) of Theorem O.4, integrating $E_{rev}$ changes $B$'s own self-model, so $\Delta M_B^{(\mathrm{self})}(E_{rev})\ne0$. In the exact-restoration idealization, the task lies on the $\mu_B=\infty$ boundary and is unprocessable. If $B$ processes a sub-exact message, clause (iii) says that this integration is a new Evolve cycle in $B$'s history; on the pathwise branch it has positive stochastic entropy production, and a registered reset obeys the separate reset ledger. Thus the exact message cannot be integrated, while every processable approximation advances rather than reverses $B$'s history. Partial or shallow corrections may remain SPAP-flat as in Remark M.10.3, but they do not constitute exact restoration. ∎
+**Proposition O.4.2 (Complexity-Graded Self-Model Descriptors).** The observer levels of §P.5.8.3 grade which Appendix M descriptors are defined, not whether a thermodynamic arrow exists.
 
-This result is consistent with global unitarity (Theorem E.9.5). The total closed-system state remains pure under $U_{\text{total}}$. What Theorem O.4 adds is that each observer occupies a subsystem perspective, accessing only reduced states as in Remark E.9.5.3; within that perspectival restriction, exact temporal self-restoration is unavailable from inside the subsystem boundary. Irreversibility is therefore not a violation of global information conservation, but the subsystem-level manifestation of the entropy unification thesis.
+1. At Levels 0 and 1, the Appendix M self-model descriptor is not assigned unless Effective Operational Property R and the registered self-model splitting are independently supplied.
+2. At Levels 2 and 3, the receiver-pattern quantities $\sigma_S(E)$ and $\mu_S(E)$ are available only on Definition M.10.2's identifiable Fisher stratum and Definition M.10.3's specified prediction-map branch.
+3. At every level, a directional probability bound requires Theorem O.3 or O.3a, and a reset-heat bound requires Theorem 31. A CC intervention or a self-model update does not replace either certificate.
 
-**Remark O.4.2 (Locus of Irreversibility).** The standard account of the arrow of time locates irreversibility in information loss: entropy increases, information scrambles across inaccessible degrees of freedom, and practical recovery becomes impossible. Theorem O.4 reveals a deeper mechanism. Grant the most favorable scenario: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ reconstructs the complete prior state of $B$ and communicates it to $B$. By clause (i) of Theorem O.4, representing and evaluating such a candidate restoration description is sender-side SPAP-flat for $A$. But the communicated pattern $E_{rev}$ targets $B$'s own self-model at a depth that, for exact restoration, reaches the $\mu_B = \infty$ boundary (clause (ii) of Theorem O.4). Even if $B$ processes a sub-exact approximation, that processing is itself an 'Evolve' cycle producing $\Sigma_B^{(\text{proc})} \ge \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (clause (iii) of Theorem O.4), advancing $B$'s history rather than inverting it. The arrow does not depend on whether the information has been lost. It persists because the act of integrating self-referential content is itself irreversible.
+*Proof.* The first two clauses are the domain conditions of Definitions M.10.1–M.10.3 and Remark M.10.1. The third clause follows from the antecedents of Theorems O.3, O.3a, and 31. None of those antecedents is implied solely by an observer-level label. ∎
 
-**Remark O.4.3 (Hierarchy Opacity and In-Universe Reconstruction Limits; cf. Theorem M.10.5).** The measurement asymmetry (Theorem M.10.5) induces a strict hierarchy of temporal access. Every level of the observer hierarchy (§P.5.8.3) can look downward: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ can treat $B$'s self-model $\mathcal{M}_B$ as a modeling target with $\sigma_A = 0$, represent a candidate restoration description of $B$'s prior self-state, and evaluate the associated burden of communication at sender-side SPAP-flat cost (clause (i) of Theorem O.4; clause (i) of Theorem M.10.5). But every level is opaque to itself: no universal procedure within $A$ correctly computes $\mu_A(E)$ for all patterns $E$ with $\sigma_A(E) > 0$ (clause (ii) of Theorem M.10.5), and exact restoration of $A$'s own prior self-model is unavailable from within $A$'s own perspective (clause (iii) of Corollary O.4.3; Theorems M.10.4 and M.10.6).
+**Corollary O.4.3 (Certificate-Relative Asymmetry of Model Access).** Let $A$ and $B$ satisfy the effective model-access, decision, and insulation hypotheses of Theorem M.10.5 for a specified pattern $E$. Then $A$ may evaluate the certified enclosure of $\mu_B(E)$ while treating the computation as external to $A$'s self-model. A cost conclusion for $B$ follows only if the corresponding pattern-specific reduction certificate is also supplied. Aggregate-complexity ordering alone implies neither conclusion, and neither conclusion forbids state recurrence under Theorem O.4.
 
-Consider the strongest possible modeler within the closed system — a system $A$ with $C_{agg}(A) \gg C_{agg}(B)$ for any chosen target $B$. Such a system can still treat $B$'s self-model $\mathcal{M}_B$ as data with $\sigma_A = 0$ (clause (i) of Theorem O.4; clause (i) of Theorem M.10.5). But $A$ remains a subsystem of the same global entangled state $\omega$ (Remark L.12.6), and the self-referential limits of clause (ii) of Theorem M.10.5 together with Theorems M.10.4 and M.10.6 apply to $A$ itself. The decisive obstruction to temporal reversal therefore remains receiver-side: even granting the most favorable description of $B$'s prior self-state, $B$ cannot integrate an exact specification of that state without encountering the obstruction of clauses (ii)–(iii) of Theorem O.4.
+*Proof.* The evaluation statement is Theorem M.10.5, the cost statement is Theorem M.10.3, and the final scope statement is Theorem O.4. ∎
 
-**Remark O.4.4 (Sub-Exact Reconstruction and the Divergent Cost Regime).** The impossibility of exact restoration ($\mu_B = \infty$, Theorems M.10.4 and M.10.6) is the boundary case. But even highly accurate sub-exact reconstruction already enters the divergent cost regime. A restoration message $E_{rev}$ that targets $B$'s self-model parameters with accuracy $(1 - \eta)$ for small $\eta > 0$ still induces $\sigma_B(E_{rev}) > 0$ and, whenever the targeted parameters engage the self-consistency condition of Equation (M.18) at nontrivial $PP$, satisfies $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. The integration cost then grows as $C_{\text{process}}(B, E_{rev}) \ge \Omega(\log \mu_B(E_{rev}) \cdot \mu_B(E_{rev})^2)$ (Theorem M.10.3). Perfection was never needed for the arrow to hold: any reconstruction that targets $B$'s self-model at depth beyond the shallow regime of Remark M.10.3 incurs costs that diverge with the self-referential depth of the demand.
+**Corollary O.4.3a (Orientation-Independent Certified Integration Boundary).** Let $S$ be an embedded Property-R predictive system, and let $\mathcal H^-$ be a past-labeled reconstruction or $\mathcal H^+$ a future-labeled simulation. If an integrated finite prefix $R_k$ has $\mu_S(R_k)=\infty$ and carries Theorem M.10.6's pattern-specific reduction certificate, then no finite-cost completed integration is certified for that prefix. The conclusion is independent of the temporal-origin label. A complete self-model record or an exact restoration instruction is covered only if a separate construction proves that its induced prefix satisfies these hypotheses.
 
-Critically, having access to a token that encodes a description of one's prior self-model and becoming that prior self-model are categorically different operations. Access to the token does not itself perform the restoration. The relevant event for Theorem O.4 is its integration by $B$: once $B$ processes the token as a specification of $\mathcal{M}_B$, one has $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$ (clause (ii) of Theorem O.4), and the processing cost is governed by $\mu_B(E_{rev})$, i.e. by what the content is about, not by the sender's confidence level (Definition M.10.3; Corollary B.2.1).
-
-**Remark O.4.5 (Information Categorization by Self-Referential Content).** The perspectival irreversibility of Theorem O.4 induces a partition of communicated information into two categories with respect to any recipient $B$:
-
-(i) *Externally targeted content*: patterns $E$ with $\sigma_B(E) = 0$ (Definition M.10.2), targeting only external degrees of freedom. These are SPAP-flat for $B$ and can be integrated at baseline cost $\mu_B(E) = 1/\alpha_{SPAP}$. External facts — predictions about the environment, measurement outcomes of distant systems — fall in this category regardless of the channel through which they arrive.
-
-(ii) *Self-referential content*: patterns $E$ with $\sigma_B(E) > 0$, engaging $B$'s own self-model $\mathcal{M}_B$. Shallow self-model engagement may remain at baseline cost (Remark M.10.3), but patterns demanding deep self-predictive performance satisfy $\mu_B(E) > 1/\alpha_{SPAP}$ and incur the divergent lower bound of Theorem M.10.3. In the exact self-restoration idealization, the task reaches the $\mu_B(E) = \infty$ boundary and is unprocessable (Theorems M.10.4 and M.10.6).
-
-This partition is determined by what the information is about, not by how it arrives. The delivery mechanism — subluminal, superluminal, or any intermediate channel — is irrelevant to the categorization. The processing cost depends on the self-referential depth $\mu_B(E)$, which is a property of the content-recipient pair, not of the channel (Definition M.10.3; Corollary B.2.1).
-
-**Proposition O.4.2 (Complexity-Graded Arrow).** The structure of temporal irreversibility exhibited by a predictive system $S$ is graded by $S$'s position in the observer hierarchy (§P.5.8.3):
-
-(a) *Level 0 (MPU).* All information is external to the minimal observer in the reflexive sense relevant here. The processing cost is SPAP-flat: $\sigma_S = 0$ and $\mu_S(E) = 1/\alpha_{SPAP}$ for all patterns (Level 0 of §P.5.8.3). The arrow is therefore the bare thermodynamic ratchet: $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ per cycle.
-
-(b) *Level 1 (Simple Aggregate).* Aggregates that have not achieved Effective Operational Property R lack an operational self-model (Remark M.10.1; §P.5.8.3). Their cost structure remains SPAP-flat and Shannon-level: aggregation alone does not introduce a self-referential processing burden.
-
-(c) *Level 2 (Self-Modeling Aggregate).* Once Effective Operational Property R is achieved, some patterns engage the self-model. Shallow self-model engagement can still remain at the baseline value $\mu_S(E)=1/\alpha_{SPAP}$ even when $\sigma_S(E)>0$ (Remark M.10.3; §P.5.8.3). But patterns that demand deeper self-predictive performance satisfy $\mu_S(E) > 1/\alpha_{SPAP}$ and incur the SPAP-divergent lower bound of Theorem M.10.3. In the exact self-restoration idealization, the task meets the full-self-model obstruction class exemplified by Remark M.10.7(5), i.e. the $\mu_S=\infty$ boundary of Theorems M.10.4 and M.10.6.
-
-(d) *Level 3 (CC-Capable Aggregate).* Level 3 systems inherit the full Level 2 structure and add CC-mediated interventions into 'Evolve' dynamics (Theorem 34). CC-mediated processing contributes to $T_{\mu\nu}^{(\text{MPU})}$ (Theorem N.8), and its effects propagate through the temporal medium as physical disturbances (Definition O.1; Remark O.4) with finite propagation speed (Proposition F.1). Any attempted retraction or correction is therefore another irreversible intervention rather than a cancellation of the first from the agent's own perspective.
-
-*Proof.*
-
-(a) Level 0 systems do not possess Property R in the reflexive sense required for an operational self-model (§P.5.8.3). Their pattern-processing cost is explicitly SPAP-flat: $\sigma_S=0$ and $\mu_S(E)=1/\alpha_{SPAP}$ for all $E$. Irreversibility therefore enters only through the baseline entropy production of the predictive cycle (Theorem 31).
-
-(b) Level 1 systems likewise do not self-model in the Property R sense (§P.5.8.3; Remark P.5.8.1). By Remark M.10.1, systems without Effective Operational Property R do not engage the self-referential processing that generates SPAP-dependent costs. Their arrow is therefore of the same character as in (a): thermodynamic, but not reflexively graded.
-
-(c) Level 2 systems possess a self-model $\mathcal{M}_S$ (Definition M.10.1). Definition M.10.2 and Definition M.10.3 then make available the decomposition into external and self-model components and the associated SPAP proximity $\mu_S(E)$. Remark M.10.3 and the Level 2 statement of §P.5.8.3 show that shallow self-model engagement can remain at baseline, whereas Theorem M.10.3 applies once $\mu_S(E) > 1/\alpha_{SPAP}$. The boundary behavior at $\mu_S=\infty$ is supplied by Theorems M.10.4 and M.10.6, with the full-self-model obstruction illustrated in Remark M.10.7(5).
-
-(d) Level 3 systems are Level 2 systems with CC $>0$ (§P.5.8.3). By Theorem 34, they can bias local 'Evolve' outcome probabilities; by Theorem N.8, this processing contributes to the stress-energy accounting; and by Definition O.1, Remark O.4, and Proposition F.1, those interventions propagate as physical temporal disturbances at finite speed. Any further attempt to undo or offset such an intervention is another physical processing event and hence, by Theorem 31, another irreversible step. ∎
-
-**Corollary O.4.3 (Perspectival Relativity of Temporal Access).** Let $A$ and $B$ be predictive systems with Effective Operational Property R and $C_{agg}(A) > C_{agg}(B) > C_{op}$. Then the same event-history has different temporal access structure for the two systems:
-
-(i) $A$ can treat a candidate description of $B$'s prior self-state as an external modeling target and evaluate the burden of communicating that description at sender-side SPAP-flat cost (clause (i) of Theorem M.10.5).
-
-(ii) $B$ encounters the same content, insofar as it targets $B$'s own self-model, as a self-referential integration problem whose cost grows with self-referential depth and reaches unprocessability at the exact-restoration boundary (Theorem O.4; Theorems M.10.4 and M.10.6).
-
-(iii) The same obstruction applies reflexively to $A$ itself: no system can universally compute or exactly impose restoration of its own complete prior self-model from within its own perspective (Corollary M.10.5.1; Theorems M.10.4 and M.10.6).
-
-This parallels the relativization of simultaneity in Structural Correspondence M.6.4: the arrow of time is physically real for every observer, but the internal accessibility of one's own past is relative to the observer's complexity and self-referential structure.
-
-*Proof.* For (i), clause (i) of Theorem M.10.5 applies because the candidate record concerns $B$, not $A$'s own self-model; it therefore lies on the sender-side external-modeling branch for $A$. For (ii), when the same record is presented to $B$ as a record of $B$'s own prior self-state, Theorems M.10.4 and M.10.6 give the increasing receiver-relative burden and the infinite-cost exact-restoration boundary, while Theorem O.4 gives the temporal-restoration specialization. For (iii), interchange the target with $A$'s own complete prior self-model. Corollary M.10.5.1 and Theorems M.10.4 and M.10.6 then apply to $A$ for the same receiver-relative reason. These three cases establish the claimed difference in access structure. ∎
-
-**Corollary O.4.3a (Bidirectional Simulation Limit).**
-Let $S$ be an embedded Property-R predictive system, and let $\mathcal H^{-}$ be a past-directed reconstruction or $\mathcal H^{+}$ a future-directed simulation. If either simulation, when exposed to $S$, contains an integrated finite prefix $R_k$ such that
-$$
-\mu_S(R_k)=\infty,
-$$
-then that prefix cannot be processed by $S$ at finite cost. Hence no PPI-admissible finite process can give $S$ a past- or future-directed simulation output whose integration would realize a SPAP-prohibited self-model update.
-
-Complete self-model records and exact temporal self-restoration records are sufficient examples of such obstruction. Complete totality specifications are independently blocked as internally guaranteed totality records by Theorem P.3.5.9; they fall under the present receiver-side SPAP-processing obstruction only for the component whose integration would force the receiver to a prohibited self-model update. Smaller patterns are already blocked whenever they contain enough perspectival information to force $S$ to the SPAP boundary.
-
-*Proof.* Apply Theorem M.10.11 to $\mathcal H^{-}$ and $\mathcal H^{+}$. Temporal orientation does not enter $\mu_S(E)$; only the receiver-relative self-model update does. Exact temporal self-restoration is the special case handled by Theorem O.4. Complete self-model records are the boundary case illustrated in Remark M.10.7(5) and formalized by Theorem M.10.6. Theorem P.3.5.9 supplies the separate totality-specification obstruction; the present corollary uses that obstruction only when the totality record would be integrated by $S$ as a prohibited self-model update. ∎
+*Proof.* Theorem M.10.11 makes the criterion depend on the receiver-pattern pair rather than the temporal-origin label. Theorem M.10.6 then gives the certified integration boundary under its reduction hypothesis. No further class of records may be inserted into that boundary without proving the required $\mu_S(R_k)=\infty$ and reduction premises. ∎
 
 ### O.5.2 Typed Computational-Thermodynamic Asymmetry and the P-versus-NP Boundary
 
@@ -720,7 +727,7 @@ This language is in $\mathsf{NP}$ because $z$ has polynomial length and $V$ veri
 
 Conversely, apply the assumed generator to the standard polynomially balanced satisfiability relation. It returns a satisfying assignment exactly on satisfiable formulas and $\bot$ otherwise, deciding SAT in polynomial time. Since SAT is $\mathsf{NP}$-complete, $\mathsf{P}=\mathsf{NP}$ [Cook 1971; Karp 1972]. ∎
 
-**Theorem O.5.2e (No Separation by Untyped Asymmetry).** SPAP diagonal obstruction, a positive SPAP reset cost, a thermodynamic arrow, and large physical or computational possibility spaces do not by themselves furnish or discharge the certificate $\mathfrak C_{\mathrm{OWF}}$ of Definition O.5.2f. No inference from these facts to one-wayness or $\mathsf{P}\ne\mathsf{NP}$ is licensed merely by placing them in $\mathsf{Asym}_{\mathrm{PU}}$ or identifying their untyped cardinalities. Moreover, any route using only the current common-oracle-relativizing SPAP construction is blocked as a $\mathsf{P}$-versus-$\mathsf{NP}$ separation proof. This theorem is a certificate-insufficiency and proof-route statement; it does not exclude a future explicit nonrelativizing bridge or a different separation method.
+**Theorem O.5.2e (No Separation by Untyped Asymmetry).** SPAP diagonal obstruction, a positive registered-reset cost, a thermodynamic arrow, and large physical or computational possibility spaces do not by themselves furnish or discharge the certificate $\mathfrak C_{\mathrm{OWF}}$ of Definition O.5.2f. No inference from these facts to one-wayness or $\mathsf{P}\ne\mathsf{NP}$ is licensed merely by placing them in $\mathsf{Asym}_{\mathrm{PU}}$ or identifying their untyped cardinalities. Moreover, any route using only the current common-oracle-relativizing SPAP construction is blocked as a $\mathsf{P}$-versus-$\mathsf{NP}$ separation proof. This theorem is a certificate-insufficiency and proof-route statement; it does not exclude a future explicit nonrelativizing bridge or a different separation method.
 
 *Proof.* Four independent checks leave the proposed certificate undischarged.
 
@@ -1191,7 +1198,7 @@ The direct Hypotheses O.7.2.1–O.7.2.4 remain the theorem-level route of Theore
 
 **Hypothesis O.7.2.1 (Positive-definite spatial $\Gamma$-limit).** The spatial $\Gamma$-limit of §O.7.1 yields a symmetric positive-definite matrix field $A^{ij}(x)$ on the regular set $M_{\mathrm{reg}}$ of Theorem 45.
 
-**Hypothesis O.7.2.2 (Entropy-selected time coordinate).** Assume that $M_{\mathrm{reg}}$ carries a distinguished local time coordinate $t$ and that histories in the retained sector carry the independent pathwise certificate of Theorem O.3, with the future direction defined by increasing cumulative certified entropy production. Theorem 31 and the 2-to-1 SPAP merge of Appendix J motivate this hypothesis but do not construct the coordinate or discharge the pathwise certificate.
+**Hypothesis O.7.2.2 (Entropy-Selected Time Coordinate).** Assume that $M_{\mathrm{reg}}$ carries a distinguished local time coordinate $t$ and that retained histories carry Theorem O.3's independent pathwise certificate, with the future direction defined by increasing cumulative certified entropy production. A registered fixed-ready-state reset and Theorem 31 may motivate this hypothesis but do not construct the coordinate or discharge the pathwise certificate; SPAP alone supplies neither.
 
 **Hypothesis O.7.2.3 (Second-order continuum closure).** Any local second-order continuum closure for a scalar probe field compatible with the quadratic limit on $M_{\mathrm{reg}}$ has principal symbol
 $$
@@ -1344,20 +1351,59 @@ a-b^TA^{-1}b\le a<0,
 $$
 and the second term has one negative direction. There is no zero direction. Hence $G$ has exactly one negative and three positive eigenvalues, i.e. inertia $(1,0,3)$. ∎
 
-**Corollary O.7a.1 (Entropy-orthogonal normal form).** Under the hypotheses of Theorem O.7a, at each $x\in M_{\mathrm{reg}}$ there exists a linear change of cotangent coordinates preserving the entropy-selected future cone such that
+**Corollary O.7a.1 (Entropy-orthogonal normal form).** Under the hypotheses of Theorem O.7a, at each $x\in M_{\mathrm{reg}}$ there is an orientation-preserving linear change of cotangent coordinates for which
 $$
-p_x(\xi) \;=\; -\alpha(x)\,(\xi_0')^2 + \widetilde A^{ij}(x)\,\xi_i'\xi_j',\qquad \alpha(x)>0,\quad \widetilde A(x)\succ 0.
+p_x(\xi)
+=-\alpha(x)(\xi_0')^2
++\widetilde A^{ij}(x)\xi_i'\xi_j',
+\qquad
+\alpha(x)>0,
+\qquad
+\widetilde A(x)\succ0.
 $$
-After an $x$-dependent spatial orthogonalization this reduces to
+After an orientation-preserving spatial orthonormalization,
 $$
-p_x(\xi) \;=\; -\alpha(x)\,(\xi_0')^2 + \delta^{ij}\,\xi_i'\xi_j'.
+p_x(\xi)
+=-\alpha(x)(\xi_0')^2
++\delta^{ij}\xi_i'\xi_j'.
 $$
+The algebraic normal-form construction preserves orientation. Preservation of a selected future cone is a separate restriction supplied by Hypothesis O.7.2.2; it does not follow from the determinant of the coordinate change.
 
-*Proof.* Set $\alpha(x):=-a(x)>0$ and complete the square in $\xi_0$:
+*Proof.* Write the quadratic form as
 $$
-p_x(\xi) \;=\; -\alpha\bigl(\xi_0 - \alpha^{-1}b^i\xi_i\bigr)^2 + \bigl(A^{ij}+\alpha^{-1}b^ib^j\bigr)\xi_i\xi_j.
+p_x(\xi)
+=a\xi_0^2+2b^i\xi_0\xi_i+A^{ij}\xi_i\xi_j,
+\qquad
+a<0,
+\qquad
+A\succ0.
 $$
-Define $\xi_0':=\xi_0-\alpha^{-1}b^i\xi_i$ and $\xi_i':=\xi_i$. The spatial quadratic form $\widetilde A^{ij}:=A^{ij}+\alpha^{-1}b^ib^j$ is positive-definite as the sum of the positive-definite $A$ and a positive-semidefinite rank-one term. The shear is a triangular transformation with unit diagonal entries in the basis ordering $(\xi_1',\xi_2',\xi_3',\xi_0')$, hence orientation-preserving, and the entropy-selected future cone of Hypothesis O.7.2.2 maps to itself. Spatial orthonormalization $\widetilde A = Q^\top D Q$ with $Q\in O(3)$, $D=\operatorname{diag}(\mu_1,\mu_2,\mu_3)$, and $\mu_i>0$, followed by $\xi_i'\mapsto \sqrt{\mu_i}\,(Q\xi')_i$, brings the spatial block to $\delta^{ij}$ without affecting $\xi_0'$. ∎
+Set $\alpha=-a>0$ and complete the square:
+$$
+p_x(\xi)
+=-\alpha\left(\xi_0-\alpha^{-1}b^i\xi_i\right)^2
++\left(A^{ij}+\alpha^{-1}b^ib^j\right)\xi_i\xi_j.
+$$
+Thus
+$$
+\xi_0'
+=\xi_0-\alpha^{-1}b^i\xi_i,
+\qquad
+\xi_i'=\xi_i,
+\qquad
+\widetilde A^{ij}
+=A^{ij}+\alpha^{-1}b^ib^j.
+$$
+For every nonzero spatial covector $v$,
+$$
+v_i\widetilde A^{ij}v_j
+=v_iA^{ij}v_j+\alpha^{-1}(b^iv_i)^2>0,
+$$
+so $\widetilde A\succ0$. The shear has determinant $1$. Choose an oriented orthonormalizing map $R\in GL^+(3,\mathbb R)$ with
+$$
+R^\top\widetilde A R=I_3;
+$$
+for example, take the positive-definite square root and, if necessary, an orientation-preserving orthogonal factor. Extending $R$ trivially in the time coordinate gives a positive-determinant four-dimensional change of coordinates and the displayed normal form. No step proves invariance of a designated cone under the coordinate change; that restriction is imposed separately by Hypothesis O.7.2.2. ∎
 
 **Theorem O.7b (Operational Speed Normalization).** Assume the hypotheses of Corollary O.7a.1, a nondegenerate characteristic cone satisfying Hypothesis O.7.2.4, and a separately established attained local operational frontier with speed $c(x)>0$. Then in entropy-orthogonal, spatially orthonormal coordinates,
 $$
@@ -1373,7 +1419,7 @@ on such an attained-frontier branch; it supplies no uniform positive lower bound
 
 **Corollary O.7b.1 (Derived Local Lorentz Invariance).** As a consequence of Theorems O.7a and O.7b:
 
-(a) After the rescaling $\xi_0\mapsto c(x)\,\xi_0$, the principal symbol takes the standard Minkowski form $p_x(\xi)=\eta^{\mu\nu}\xi_\mu\xi_\nu=-\xi_0^2+\delta^{ij}\xi_i\xi_j$. Its linear isometry group is $O(1,3)$.
+(a) After the rescaling $\xi_0':=\xi_0/c(x)$, the principal symbol takes the standard Minkowski form $p_x(\xi)=\eta^{\mu\nu}\xi_\mu\xi_\nu=-\xi_0^2+\delta^{ij}\xi_i\xi_j$. Its linear isometry group is $O(1,3)$.
 
 (b) Requiring preservation of spatial orientation (from the oriented spatial $\Gamma$-limit of §O.7.1) and of the entropy-selected future cone (Hypothesis O.7.2.2) restricts $O(1,3)$ to the proper orthochronous Lorentz group $SO^+(1,3)$.
 
@@ -1391,7 +1437,7 @@ p_x(\xi)=-(\xi_0')^2+\delta^{ij}\xi_i\xi_j.
 $$
 The linear transformations preserving this quadratic form are, by definition, the elements of $O(1,3)$.
 
-(b) For $\Lambda\in O(1,3)$, the sign of $\det\Lambda$ records spatial orientation and the sign of $\Lambda^0{}_0$ records preservation or reversal of the chosen time cone. The orientation chosen in §O.7.1 imposes $\det\Lambda=1$, and Hypothesis O.7.2.2 imposes $\Lambda^0{}_0>0$. Their intersection is the identity component $SO^+(1,3)$.
+(b) For $\Lambda\in O(1,3)$, the sign of $\det\Lambda$ records four-dimensional orientation, while the sign of $\Lambda^0{}_0$ distinguishes preservation from reversal of the chosen time cone. After the future time orientation is fixed by $\Lambda^0{}_0>0$, the condition $\det\Lambda=1$ is equivalent to preservation of the induced spatial orientation. The orientation chosen in §O.7.1 imposes $\det\Lambda=1$, and Hypothesis O.7.2.2 imposes $\Lambda^0{}_0>0$. Their intersection is the identity component $SO^+(1,3)$.
 
 (c) An orthonormal frame at $x$ is an ordered basis whose Gram matrix is $\operatorname{diag}(-1,1,1,1)$. Two such frames differ by an element of $O(1,3)$. Restricting to frames with the chosen spatial orientation and future time orientation restricts every transition function to $SO^+(1,3)$; hence the oriented, time-oriented orthonormal frame bundle has that structure group.
 
@@ -1412,8 +1458,8 @@ Premise (A5) of §12 is therefore theorem-level only on the emergent-spacetime b
 
 The framework obtains temporal coherence and a probabilistic forward orientation on explicitly certified branches.
 *   **Temporal Coherence:** Under the statistical and ledger premises of Theorem O.1 and the connected low-noise detailed-balance hypotheses of Theorem O.2, stationary measures concentrate near synchronized phase configurations.
-*   **The Arrow of Time:** Under the pathwise guarantee-level certificate of Theorem O.3a, a cycle satisfies $P_R/P_F\le e^{-h_{\min}}$; the factor $1/2$ requires the separate condition $h_{\min}\ge\ln2$. The structural SPAP merge and reset-cost ledger do not by themselves establish this stochastic pathwise bound.
-*   **The Perspectival Arrow** reveals that temporal irreversibility possesses internal structure graded by observer complexity (Theorem O.4; Proposition O.4.2). Even a more complex external agent cannot impose an exact reversal of another agent's arrow by communicating a specification of that agent's prior self-state: any such message that is processable is integrated through a further forward update, and the exact-restoration idealization is unprocessable (Corollary O.4.1). The depth of the arrow — the cost of temporal self-restoration — is relative to the observer's position in the complexity hierarchy, paralleling the relativization of simultaneity in Structural Correspondence M.6.4 (Corollary O.4.3). The irreversibility resides in the processing of self-referential content, not in the loss of information (Remark O.4.2): global unitarity preserves all information (Theorem E.9.5), yet no observer can use that conserved information for self-reversal, because integrating a specification of one's own prior self-model is itself another irreversible forward step. A more complex in-universe agent may externally model a less complex one at sender-side SPAP-flat cost, but every modeler remains subject to its own self-referential limits, and the decisive obstruction to exact reversal remains at the receiver (Remark O.4.3). Even highly accurate sub-exact reconstruction that targets deep self-model parameters already enters the divergent cost regime (Remark O.4.4). Communicated information partitions into externally targeted content with $\sigma_B(E) = 0$ and self-referential content with $\sigma_B(E) > 0$; the former is SPAP-flat, while the latter ranges from baseline cost in shallow cases to SPAP-divergent cost for deep self-model demands (Remark O.4.5; Remark M.10.3).
+*   **The Arrow of Time:** Under the pathwise guarantee-level certificate of Theorem O.3a, a cycle satisfies $P_R/P_F\le e^{-h_{\min}}$; the factor $1/2$ requires the separate condition $h_{\min}\ge\ln2$. The registered binary-support and reset-cost ledgers do not by themselves establish this stochastic pathwise bound; SPAP alone does not require a physical state merge.
+*   **Retained history and receiver-pattern scope:** Theorem O.4 distinguishes recurrence of an accessible state from deletion of a forward-locked retained history. Proposition O.4.2 grades the availability of Appendix M's receiver-pattern descriptors, not the existence of a thermodynamic arrow. External evaluation and integration-cost conclusions retain the model-access, decision, insulation, and pattern-specific reduction certificates of Theorems M.10.3 and M.10.5. None of these results forbids an external controller from restoring a selected accessible state.
 
 The temporal-coherence and pathwise-arrow results can be combined with the CC and gravity sectors only on their common certified branch. A CC modulation requires the independent context-to-response and energy-accounting data of Appendices L and S. A gravitational-wave identification additionally requires the Appendix-B source tensor, the operational-continuum/AQFT bridge, the metric equation, and a linearized transverse-traceless propagation theorem. Appendix O supplies temporal ordering and, on Hypotheses O.7.2.1–O.7.2.4, a Lorentzian-signature branch; it does not by itself identify a temporal-coherence disturbance with a gravitational wave.
 

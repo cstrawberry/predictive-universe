@@ -1,6 +1,6 @@
 # 7. The Minimal Predictive Unit (MPU) Framework
 
-Having established the foundational principles governing adaptive prediction, complexity, self-reference, and dynamics, we now introduce the core MPU model. The role of MPUs is fixed by the Cogito-to-PPI/PCE bridge developed in the Introduction and Appendix P: the framework first isolates the indubitable process-root, models its minimal operational content as prediction, and then asks for the least nontrivial finite physical carrier of that predictive loop. This section defines those carriers—Minimal Predictive Units (MPUs)—details their state representation involving perspectival information and Hilbert spaces, outlines their dual dynamics governed by prediction and interaction, postulates the origin of quantum randomness from inherent logical limits, and derives the crucial thermodynamic constraints governing their operation.
+Having established the foundational principles governing adaptive prediction, complexity, self-reference, and dynamics, we now introduce the core MPU model. The role of MPUs is fixed by the Cogito-to-PPI/PCE bridge developed in the Introduction and Appendix P: the framework first isolates the certified process-root, models its operational content as prediction, and then asks for a least nontrivial finite physical carrier on branches where the qualifying infimum is attained. This section defines those carriers, details their Hilbert and perspectival representations on the stated branches, specifies deterministic internal and stochastic interaction dynamics, and separates structural register size from the distribution-sensitive thermodynamic reset ledger.
 
 **7.1 Hypothesis 1 (Hyp 1): The MPU Reality Model**
 
@@ -8,7 +8,7 @@ Physical reality, from the internal perspective, is modeled as fundamentally con
 *   The Dual Dynamics of internal prediction (unitary evolution) and 'Evolve' interaction (stochastic ND-RID) (Section 7.3.3).
 *   Optimization via the Prediction Optimization Problem (Axiom 1) and the Principle of Compression Efficiency (Definition 15).
 *   Constraints arising from self-reference limits (SPAP, Theorem 10, Theorem 11) and reflexive interaction dynamics (RID, Definition 6).
-*   A fundamental irreversibility cost split $(\varepsilon_0,\varepsilon_{\mathrm{phys}})$ sets entropy and governs spacetime coupling, with structural floor $\varepsilon_0=\ln2$ and physical implementation cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31; Appendix E; Appendix O; Section 7.5).
+* The registered binary Commit Snapshot quotient has structural log-cardinality $\varepsilon_0=\ln2$. The reusable full-context return channel $\mathcal G$ merges that label at fixed retained data. If the actual input ensemble is separately certified to be conditionally invariant under input-fibre exchange $\phi\mapsto1-\phi$, Theorem 31a gives $H(\Phi\mid R)=\ln2$ and $\varepsilon_{\mathrm{reset}}\ge\ln2$ on Definition 28's registered thermal branch. The separate CNOT diagnostic remains reversible and carries no such floor. Spacetime coupling uses the independent Appendix E/O bridge certificates.
 
 **7.1.1 Definition 23 (Def 23): Minimal Predictive Unit (MPU)**
 
@@ -35,20 +35,20 @@ with the residual-budget branch still using the paper's default link-cycle thres
 
 **7.1.2 Interpretive Convention: Minimal Awareness**
 
-The ongoing, cyclical operation of an MPU (Definition 23)—prediction ($P_{int}$), verification ($V$), update ($D_{cyc}$) under the imperative of the POP (Axiom 1)—represents the minimal instance of a system actively navigating uncertainty through self-referential prediction and interaction. This operational cycle is *interpreted* within this framework as corresponding to the most basic, elemental form of awareness. Crucially, this elemental awareness is intrinsically tied to the MPU's full operational cycle, including the 'Evolve' interaction (Definition 27), which is the process responsible for the actualization of quantum states (Proposition 9). Therefore, within this framework, every quantum actualization event is underpinned by at least this minimal, operational form of awareness. This postulate serves primarily to connect the operational dynamics of the $C_{op}$ cycle to phenomenal concepts. The subsequent physical derivations rely on the MPU's *operational* characteristics (prediction, effective Property R applicability, ND-RID, $C_{op} \ge K_0$, POP/PCE optimization) and their logical/thermodynamic limits (SPAP, Theorem 10, Theorem 11; Reflexive Undecidability, Theorem 12; $\varepsilon_0$ and $\varepsilon_{\mathrm{phys}}$, Theorem 31; $\kappa_r$, Theorem 33), not directly on this interpretive postulate. The specific physical realization of this minimal awareness, if it exists, is beyond the scope of this framework.
+The ongoing, cyclical operation of an MPU (Definition 23)—prediction ($P_{int}$), verification ($V$), update ($D_{cyc}$) under the imperative of the POP (Axiom 1)—represents the minimal instance of a system actively navigating uncertainty through self-referential prediction and interaction. This operational cycle is *interpreted* within this framework as corresponding to the most basic, elemental form of awareness. Crucially, this elemental awareness is intrinsically tied to the MPU's full operational cycle, including the 'Evolve' interaction (Definition 27), which is the process responsible for the actualization of quantum states (Proposition 9). Therefore, within this framework, every quantum actualization event is underpinned by at least this minimal, operational form of awareness. This postulate serves primarily to connect the operational dynamics of the $C_{op}$ cycle to phenomenal concepts. The subsequent physical derivations rely on the MPU's operational prediction, ND-RID, and POP/PCE characteristics, on separately certified Effective Operational Property R where required, and on each cited logical or thermodynamic result only under its own hypotheses. The relation $C_{op}\ge K_0$ is used only on Theorem 15 and Corollary 3's (O1)–(O3), (FC), Hilbert-distinguishability, and complexity-capacity branch. These derivations do not depend on the interpretive awareness postulate. The specific physical realization of this minimal awareness, if it exists, is beyond the scope of this framework.
 
 **7.1.3 Example: An Explicit Three-Qubit Register Carrier**
 
-This construction exhibits an eight-dimensional carrier for three binary register roles, an injective reflexive update, and a registered one-qubit reset with structural alphabet value $\varepsilon_0=\ln2$. It does not by itself compute $C_P$, establish $C_{op}=K_0$, or prove a global POP optimum; those conclusions require the bridge, attainment, and optimization hypotheses stated separately.
+This construction exhibits an eight-dimensional carrier for three binary register roles and an injective reflexive update, and it tests whether the stated reachable circuit actually contains a logically irreversible reset. The structural alphabet value $\varepsilon_0=\ln2$ is a separate log-cardinality ledger. It does not by itself compute $C_P$, establish $C_{op}=K_0$, or prove a global POP optimum; those conclusions require the bridge, attainment, and optimization hypotheses stated separately.
 
 **1. Hilbert Space and Computational Basis**
 
-*   **Hilbert Space:** The MPU’s state amplitude resides in $\mathcal{H}_0 = (\mathbb{C}^2)^{\otimes 3} \cong \mathbb{C}^8$. The computational basis vectors are $|b_2 b_1 b_0\rangle$, where $b_j \in \{0,1\}$. The dimension $d_0 = 8$ satisfies the requirement $d_0 \ge 8$ (Theorem 23).
+*   **Hilbert Space:** The MPU’s state amplitude resides in $\mathcal{H}_0 = (\mathbb{C}^2)^{\otimes 3} \cong \mathbb{C}^8$. The computational basis vectors are $|b_2 b_1 b_0\rangle$, where $b_j \in \{0,1\}$. The choice $d_0=8$ realizes this explicit register carrier and attains Theorem 15's conditional Hilbert-carrier bound on the (O1)–(O3), (FC) branch; it is not forced by MPU status alone.
 
 *   **Logical Roles of the Three Qubits:**
     1.  **Memory Qubit ($Q_M$, e.g., $b_2$):** Stores the MPU’s current internal model or state under reflexive update.
     2.  **Prediction Qubit ($Q_P$, e.g., $b_1$):** Holds the generated prediction for the next outcome, refreshed each cycle.
-    3.  **Interface/Ancilla Qubit ($Q_I$, e.g., $b_0$):** Mediates interaction with the environment and is used for the logically irreversible reset.
+    3.  **Interface/Ancilla Qubit ($Q_I$, e.g., $b_0$):** Mediates interaction with the environment and may carry a temporary record. Whether resetting it is logically irreversible depends on the reachable state set and on the retained side information.
 
 **2. Internal Prediction (Unitary) Evolution**
 
@@ -65,42 +65,109 @@ This state is entangled between $Q_M$ and $Q_P$ when $ab\ne0$ and therefore is n
 
 **3. The ‘Evolve’ Interaction Implementing SPAP Logic**
 
-The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive update on ($Q_M,Q_P$) and a logically irreversible ancilla reset on $Q_I$:
+The three-register construction contains two different maps that must not be conflated.
 
-*   **Reversible Reflexive Update (on $Q_M,Q_P,Q_A$):**
-    *   Logical steps:
-        (i) Prediction $p$ is present in $Q_P$ (from $U_{pred}$).
-        (ii) Reversible update: set $Q_M \leftarrow \text{NOT}(Q_P)$ while preserving the pre‑update $m$ in an ancilla $Q_A$.
-    *   Net effect on the triple $(m,p,i)$ in the computational basis:
-        $(m,p,i) \mapsto (\text{NOT}(p\oplus i),\,p,\,m)$.
-    *   which is a bijection on the 8 basis states and, on the initialized subspace $i=0$, restricts to the DSRO rule $m'=\text{NOT}(p)$ while coherently storing the old memory bit in $Q_I$. One explicit implementation is:
-        $\mathrm{SWAP}(Q_M,Q_I)$; $\mathrm{CNOT}(Q_P \to Q_M)$; $X(Q_M)$.
+First, after $U_{\mathrm{pred}}$ the diagnostic circuit has reachable subspace
+$$
+\mathcal R_{\mathrm{diag}}
+=
+\operatorname{span}\{|0,0,0\rangle,|1,1,0\rangle\}.
+$$
+For
+$$
+U_{\mathrm{rev}}:(m,p,i)\longmapsto(\operatorname{NOT}(p\oplus i),p,m),
+$$
+one has
+$$
+U_{\mathrm{rev}}U_{\mathrm{pred}}
+\bigl((a|0\rangle+b|1\rangle)_M|0\rangle_P|0\rangle_I\bigr)
+=
+a|1,0,0\rangle+b|0,1,1\rangle.
+$$
+On this image $I'=P$, so $V=\operatorname{CNOT}_{P\to I}$ resets $I$ coherently. The diagnostic subprotocol is injective and has no positive Landauer floor.
 
-*   **Ancilla Reset (on $Q_I$):**
-    *   Reset $Q_I$ to $|0\rangle$ irrespective of its prior state via a completely positive trace-preserving (CPTP) map with Kraus operators acting on $\mathcal{H}_0 = \mathcal{H}_{MP} \otimes \mathcal{H}_I$:
-        *   $E_b = (I_{MP} \otimes |0\rangle\langle b|_I)\,U_{rev}$, $\quad b \in \{0,1\}$.
-    *   Completeness:
-        *   $\sum_b E_b^\dagger E_b = I_{MPI}$,
-        ensuring CPTP.
-    *   Action: The ancilla’s reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset.
+The reusable full-context cycle instead acts on
+$$
+\mathcal B_{\mathrm{com}}
+=
+\{|\phi,p,1\rangle:\phi,p\in\{0,1\}\}
+$$
+and returns it to $c=0$.
+Theorem 15's reflexive step remains the injective map
+$$
+T(\phi,p,1)=(1-p,\phi,0).
+$$
+The cycle-closing operation follows that step:
+$$
+(\phi,p,1)
+\xrightarrow{\ T\ }
+(1-p,\phi,0)
+\xrightarrow{\ \text{closure reset}\ }
+(1-p,0,0).
+$$
+Thus O1 injectivity is preserved through the reflex step, and the old-current-state label $\Phi=\phi$ is erased only by the declared closure channel. Let
+$$
+\Pi_{\mathrm{ready}}
+=
+\sum_{\phi,p}|\phi,p,0\rangle\langle\phi,p,0|,
+$$
+and define
+$$
+K_{\mathrm{ready}}=\Pi_{\mathrm{ready}},
+\qquad
+K_{\phi}=\sum_{p}|1-p,0,0\rangle\langle\phi,p,1|
+\qquad(\phi\in\{0,1\}).
+$$
+The full-context return channel is
+$$
+\mathcal G(\rho)
+=
+K_{\mathrm{ready}}\rho K_{\mathrm{ready}}^\dagger
++
+\sum_{\phi}K_{\phi}\rho K_{\phi}^\dagger.
+\tag{7.1.3a}
+$$
+It is CPTP because
+$$
+K_{\mathrm{ready}}^\dagger K_{\mathrm{ready}}
++
+\sum_{\phi}K_{\phi}^\dagger K_{\phi}
+=
+\Pi_{c=0}+\Pi_{c=1}=I_8 .
+$$
+Only the label $\Phi$ is merged: coherence between distinct stored predictions is transported, while coherence between the two values of $\phi$ is destroyed. On Commit Snapshot basis states,
+$$
+\mathcal G\bigl(|\phi,p,1\rangle\langle\phi,p,1|\bigr)
+=
+|1-p,0,0\rangle\langle1-p,0,0|.
+\tag{7.1.3b}
+$$
+Thus, at fixed retained data, the two values of $\Phi=\phi$ merge.
 
-*   **Entropy Cost:** The reset is a one-bit logical merge. Its structural quotient cost is
-    $$
-    \varepsilon_0=\ln2,
-    $$
-    and any physical implementation satisfies
-    $$
-    \varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R).
-    $$
-    Equality with $H_q(P\mid R)$ holds only on the overhead-free Landauer-saturating implementation branch; equality with $\ln2$ also requires conditional uniformity (Theorem 31).
+Let $R$ contain $P$ and every classical record retained and unchanged through closure. Assume as additional ensemble data that, for every $r$ with $\Pr(R=r)>0$, both input labels occur and the actual pre-closure law is invariant under the input-fibre exchange $\phi\mapsto1-\phi$. This is a symmetry of the erased input ensemble, not the physical channel $\mathcal G$. Then
+$$
+q(\phi\mid R)=\frac12,
+\qquad
+H_{\mathrm{Sh}}(\Phi\mid R)=\ln2.
+\tag{7.1.3c}
+$$
+Under Definition 28's degenerate-register, cyclic-controller, and isothermal-bath hypotheses,
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+\ge
+H_{\mathrm{Sh}}(\Phi\mid R)
+=
+\ln2.
+\tag{7.1.3d}
+$$
+Equality is only the quasistatic zero-excess limit. Any unitary dilation of $\mathcal G$ must export an orthogonal record of $\Phi$. If that record remains available, it belongs to $R$ and the one-bit bound is not activated. Reusing a finite MPU on the closed branch instead requires that record to be reset or thermalized as part of returning the controller and environment to their registered cycle conditions. Equations (7.1.3a)–(7.1.3d), not the injective diagnostic circuit, supply the registered one-bit full-context reset.
 
 **4. Capacity and Cost Accounting**
 
 * **Register capacity:** The three binary registers have $C_{cap}=\log_2 8=3$ bits. Within Theorem 15's full-context realization class this attains $K_0=3$.
 * **Predictive Physical Complexity:** The construction does not evaluate $C_P$ or $C_{op}$. An equality $C_{op}=K_0$ requires an attained qualifying state and a saturating complexity-capacity bridge.
 * **Characteristic internal timescale:** A positive excitation scale and a specified orthogonalization task give Corollary 29.1. Other operations require separate clock data.
-* **Registered reset cost:** When the reset is physically implemented under Definition 28, $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a positive uniform floor requires $H_q(P\mid R)\ge h_{\min}>0$.
-
+* **Full-context reset cost:** The diagnostic subprotocol resets $Q_I$ unitarily and has no positive Landauer floor. The full-context return channel $\mathcal G$ of Equation (7.1.3a) instead merges the Commit Snapshot label $\Phi$. On the conditionally exchange-invariant input-ensemble branch and Definition 28's registered thermal branch, Theorem 31a gives $\varepsilon_{\mathrm{reset}}\ge\ln2$. If either the conditional symmetry or the absence of a retained copy fails, only the general bound $\varepsilon_{\mathrm{reset}}\ge H_q(\Phi\mid R)$ remains.
 **5. Solving the Prediction Optimization Problem (POP)**
 
 Let $V(C) = \lambda R(C) + R_I(C) - \Gamma_0 PP(C)$, with:
@@ -199,7 +266,7 @@ Let the PCE potential for an MPU with an active operational dimension $d$ be $V(
 1.  **Algebraic Sufficiency and Diminishing Returns:** The core predictive benefit, derived from instantiating the complete, self-referential predictive algebra (SPAP/RID), is fully realized at $d=8$. Assume the marginal predictive benefit $\Delta V_{benefit}(d)=V_{benefit}(d)-V_{benefit}(d-1)$ is significant for $d\le 8$ but vanishes for $d>8$. Any additional dimension is a "spectator" that does not contribute to the core predictive task and is subject to rapidly diminishing returns.
 2.  **Monotonic Complexity Cost:** The resource cost of maintaining and integrating an active dimension, $V_{cost}(d)$, is a strictly increasing function of $d$. Adding a dimension always incurs a non-zero physical cost.
 
-Under these conditions, any configuration with an active dimension $d > 8$ is definitionally inefficient under PCE. It pays a strictly positive marginal cost for a negligible marginal benefit. The PCE dynamics, which minimize the total potential $V(d)$, will therefore drive the system to decouple or "freeze out" these superfluous dimensions, dynamically reducing the active operational dimension until it reaches the minimal sufficient boundary.
+Under these conditions, $V(d)$ is strictly increasing for $d>8$, so $d=8$ is the unique minimizer of the static discrete optimization problem on $\{8,9,10,\ldots\}$. This establishes only the unique static minimizer. Decoupling or convergence of larger active sectors requires a separately specified dynamics and convergence theorem.
 
 *Proof.* For any dimension $d > 8$, the change in the potential from adding the $d$-th dimension is $\Delta V(d) = \Delta V_{cost}(d) - \Delta V_{benefit}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{cost}(d) > 0$. By condition (1), the marginal benefit vanishes, $\Delta V_{benefit}(d)=0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
 
@@ -207,7 +274,13 @@ Here $d$ is the **active operational dimension**, the dimension coupled into the
 
 ### **Logical Structure, Minimal Realization, and Predictive-Semantic Geometry of the MPU State Space**
 
-Theorem 15 already fixes the logical core of the minimal MPU: under (O1)–(O3), the Commit Snapshot data $(\phi,p_{stored},c_{phase})\in{0,1}^3$ provide the Boolean-cube coordinates of the SPAP sub-dynamics, and the explicit eight-state realization of Theorem 15 identifies the minimal logical core with $B_3={0,1}^3$. Theorem 15 by itself does not force a tensor-product decomposition; that stronger conclusion uses the commuting-subalgebra hypotheses of the Minimal Predictive Algebra discussion. The next results identify the corresponding minimal faithful Hilbert-space realization and the operational geometry carried by its pure states.
+On Theorem 15's realization class satisfying (O1)–(O3) and (FC), the joint response map
+$$
+r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\longrightarrow\{0,1\}^3,
+\qquad
+r(s)=\bigl(\phi(s),p_{\mathrm{stored}}(s),c_{\mathrm{phase}}(s)\bigr),
+$$
+is surjective, and the explicit eight-state construction attains the least context set $B_3=\{0,1\}^3$ on that class. Theorem 15 does not force a tensor-product decomposition or an eight-dimensional physical carrier. The former requires the commuting-subalgebra hypotheses of the Minimal Predictive Algebra discussion; the latter requires mutually perfectly distinguishable Hilbert representatives and, for equality $d_0=8$, the admissible-comparator, response-quotient, strict-cost, and minimal-branch hypotheses of Theorem Z.2. The next results apply only on their separately stated algebraic and carrier branches.
 
 **Theorem 23a (Minimal Faithful Realization is 3-Qubit).**
 Assume the hypotheses of the lemma above, and let
@@ -368,7 +441,7 @@ This makes it impossible for the essential image to consist of all three non-iso
 
 **Remark 23a.1d (What Survives).** Corollary 23a.1b remains a valid numerical coherence check. Theorem 23a.1c excludes a categorical derivation of the three non-real Hurwitz objects from the canonical minimal-branch SPAP configuration groupoid. A coarser comparison between the ordered three-register tower and the first three nontrivial Cayley-Dickson stages may still be mathematically useful, but that would be a separate construction on a different source category; it is not the same as a functor from the canonical minimal-branch SPAP configuration category.
 
-The compatible real-carrier refinement of Corollary 23a.1 selects the $\mathrm{Cl}_{\mathbb R}(0,6)$ real form. Cayley-Dickson, octonionic, or $\mathrm{Spin}(7)$ data remain additional markings unless the branch separately supplies an octonionic product, a Cayley four-form, or an equivalent stabilizer datum. They are compatible with the $d_0=8$ carrier but do not replace the SPAP/PCE proof of $d_0=8$, the capacity chain, the Peirce tangent count, or the mode-channel/kissing-number selection.
+The compatible real-carrier refinement of Corollary 23a.1 selects the $\mathrm{Cl}_{\mathbb R}(0,6)$ real form. Cayley--Dickson, octonionic, or $\mathrm{Spin}(7)$ data remain additional markings unless the branch separately supplies an octonionic product, a Cayley four-form, or an equivalent stabilizer datum. They are compatible with the $d_0=8$ carrier but do not replace Theorem 15's context count, Theorem 23's Hilbert lower bound, Theorem Z.2's same-class comparator, the Peirce tangent count, or the mode--channel/kissing-number selection.
 
 **Remark 23a.1e (Inner Symmetry of the Three-Register SPAP Frame).** Let
 
@@ -590,8 +663,7 @@ Assume the retained operational questions form a unital complex $C^*$-algebra $\
 $$
 \omega(A)=\langle\Omega_\omega,\pi_\omega(A)\Omega_\omega\rangle.
 $$
-If the full-context Hilbert hypotheses of Theorem 23 also hold, then $\dim\mathcal H_\omega\ge8$.
-
+If $\pi_\omega(\mathcal A)$ contains eight nonzero mutually orthogonal projections $Q_1,\ldots,Q_8$ representing the support subspaces of the eight Theorem-23 context states, then $\dim\mathcal H_\omega\ge8$. A sufficient condition is that the generated algebra contain a specified copy of $M_8(\mathbb C)$ with nonzero mutually orthogonal minimal projections $q_1,\ldots,q_8$, that $Q_i=\pi_\omega(q_i)$, and that $\omega$ be faithful on this copy.
 *Proof.* Define
 $$
 \mathcal N_\omega:=\{A\in\mathcal A:\omega(A^*A)=0\}.
@@ -619,7 +691,7 @@ $$
 \langle\Omega_\omega,\pi_\omega(A)\Omega_\omega\rangle
 =\omega(A),
 $$
-and $\pi_\omega(\mathcal A)\Omega_\omega$ is dense by construction. Under Theorem 23's additional distinguishability hypotheses, eight nonzero mutually orthogonal response supports exist, so $\dim\mathcal H_\omega\ge8$. ∎
+and $\pi_\omega(\mathcal A)\Omega_\omega$ is dense by construction. Under the additional same-representation support hypothesis in the proposition, the eight nonzero response supports are mutually orthogonal in $\mathcal H_\omega$, so $\dim\mathcal H_\omega\ge8$. ∎
 
 **7.2.3 Definition 24 (Def 24): Perspectival State $S_{(s)}(t)$**
  The complete state of an MPU at time $t$ is the perspectival state $S_{(s)}(t) = (S(t), s)$, whose formal mathematical structure is detailed in Appendix M (Section M.2). It comprises:
@@ -760,7 +832,7 @@ $$
 (S(t+\Delta t), s') \sim \text{Evolve}(S_{(s)}(t), N(t)) \quad \text{(44)}
 $$
 As formalized in Appendix M (Equation M.2), the 'Evolve' process comprises two conceptually distinct but intertwined components:
-1.  **Probabilistic Amplitude Actualization:** The state amplitude $S(t)=|\psi(t)\rangle$ actualizes to one of the possible outcome states $|i\rangle_s$ corresponding to the interaction perspective $s$. This occurs with probability given by the Born rule (Proposition 7, Equation 50): $P(i|S(t), s) = |\langle i | S(t) \rangle_s|^2$. The resulting state is $|\psi(t+\Delta t)\rangle = |i\rangle_s$ (normalized).
+1.  **Registered Instrument Update:** For a registered instrument $\{\mathcal I_i\}$ and pre-event state $\rho$, outcome $i$ has probability $p_i=\operatorname{tr}\mathcal I_i(\rho)$ and, when $p_i>0$, conditional state $\rho'_i=\mathcal I_i(\rho)/p_i$. Only Proposition 9's nondegenerate sharp repeatability branch gives $\rho'_i=P_i=|i\rangle_s\langle i|_s$ and $p_i=\operatorname{tr}(\rho P_i)$.
 2.  **Stochastic Perspective Shift:** Simultaneously or immediately following actualization, the perspective index $s$ transitions stochastically to a new perspective $s'$ according to a Conditional Perspective Transition Kernel $G_{persp}(s' | s, i, N, \Delta t)$ defined on the Perspective Space $\Sigma$ (Definition 25, elaborated in Appendix M, Section M.3.3). This shift reflects the system registering the specific interaction context $N(t)$ and the outcome $i$.
 On the stochastic-kernel branch of Proposition 28 and the Hilbert/noncontextual/additive branch of Theorem 28a, the post-interaction state is the realized perspectival state $(|i\rangle_s,s')$ with the registered transition probabilities. Theorem 27 supplies only the diagonal limitation on a universally correct total predictor; it does not derive eventwise stochasticity. An 'Evolve' implementation is resource-consuming under the registered-reset hypotheses of Definition 28 and Theorem 31, with $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; the structural value $\varepsilon_0=\ln2$ alone is not a heat bound.
 
@@ -775,7 +847,7 @@ $$
 \omega(E_i)=|\langle i|\psi\rangle|^2.
 $$
 
-*Proof.* Theorem 8.2 supplies the noncontextual quotient only on its stated PPI/PCE branch, and Lemma 8.2a supplies finite-effect additivity. Under the complex Hilbert and dimension hypotheses, the Gleason-Busch selector in Theorem 8.3 represents every such normalized additive effect functional by a unique positive trace-one operator $\rho$, giving the trace formula. Substitution of $\rho=|\psi\rangle\langle\psi|$ and $E_i=|i\rangle\langle i|$ gives
+*Proof.* Theorem 8.2 supplies the noncontextual quotient only on its stated PPI/PCE branch. Finite additivity on arbitrary POVM effects is an explicit hypothesis of the present theorem, stronger than Lemma 8.2a's orthogonal-refinement conclusion. Under that effect-level affine/additive hypothesis, the Busch selector represents the functional by a unique positive trace-one operator $\rho$, giving the trace formula. Substitution of $\rho=|\psi\rangle\langle\psi|$ and $E_i=|i\rangle\langle i|$ gives
 $$
 \operatorname{tr}(\rho E_i)
 =\operatorname{tr}(|\psi\rangle\langle\psi|i\rangle\langle i|)
@@ -831,6 +903,23 @@ Because $P$ is binary, $0\le H_q(P\mid R)\le\ln2$. If $H_q(P\mid R)=\ln2$, then 
 
 *Proof.* Definition 28 gives $\varepsilon_{\mathrm{diss}}=\varepsilon_{\mathrm{reset}}-H_q(P\mid R)$, and conditional Landauer gives $\varepsilon_{\mathrm{diss}}\ge0$, proving (45). A classical binary conditional entropy lies in $[0,\ln2]$. When it equals $\ln2$, Equation (45) reads $\varepsilon_{\mathrm{reset}}=\ln2+\varepsilon_{\mathrm{diss}}$, so equality with $\ln2$ is equivalent to zero excess dissipation. Conversely, $\varepsilon_{\mathrm{reset}}=\ln2$ is compatible with any smaller conditional entropy when $\varepsilon_{\mathrm{diss}}=\ln2-H_q(P\mid R)>0$. ∎
 
+**Theorem 31a (Conditionally Exchange-Invariant Full-Context Reset Bound).** Let $\mathcal G$ be Equation (7.1.3a), let $\Phi$ be the Commit Snapshot label merged by Equation (7.1.3b), and let $R$ contain every record retained and unchanged through closure. Assume the actual pre-closure joint law obeys $q(\phi\mid R=r)=q(1-\phi\mid R=r)$ for every $r$ of positive probability, equivalently invariance under the input-fibre exchange, and assume no retained record resolves $\Phi$. Then
+$$
+q(\phi\mid R)=\frac12,
+\qquad
+H_{\mathrm{Sh}}(\Phi\mid R)=\ln2.
+$$
+If Definition 28 also holds,
+$$
+\varepsilon_{\mathrm{reset}}
+=
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+\ge\ln2.
+\tag{45a}
+$$
+
+*Proof.* For fixed $R=r$, put $x=q(0\mid r)$. Invariance gives $x=q(1\mid r)=1-x$, hence $x=1/2$. Averaging the conditional binary entropies gives $\ln2$. Equation (7.1.3b) merges the two values at fixed retained data, so Theorem 31 gives (45a). ∎
+
 **7.4.5 Theorem 32 (Registered Reset Bound for `Evolve`)**
 
 An `Evolve` implementation satisfying Definition 28 obeys
@@ -871,7 +960,7 @@ The specialization $P_{\mathrm{reset}}\ge n_{\mathrm{reset}}k_BT\ln2/\tau_{\math
 
 ### 7.5.1 The Central Result
 
-The declared reusable binary SPAP register has exact structural log-cardinality $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ (Proposition 5; Lemma J.1). A physical heat ledger arises only on a branch satisfying Definition 28, where Theorem 31 gives $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ with $\varepsilon_{\mathrm{diss}}\ge0$. A positive uniform physical floor requires an independent ensemble bound. Structural log-cardinality, ensemble entropy, bath heat, channel capacity, and horizon entropy remain distinct quantities.
+The registered reachable binary quotient has structural log-cardinality $\varepsilon_0=\ln2$ (Definition 28; Definition J.1; Theorem J.1). A physical heat ledger arises only on a branch satisfying Definition 28, where Theorem 31 gives $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ with $\varepsilon_{\mathrm{diss}}\ge0$. A positive uniform physical floor requires an independent ensemble bound. Structural log-cardinality, ensemble entropy, bath heat, channel capacity, and horizon entropy remain distinct quantities.
 
 **Theorem 7.5.1 (Conditional Structural-to-Horizon Chain).** *Assume a reachable binary record, a completed tensor-factor reset, the density certificate of Theorem E.3, capacity saturation of the counted boundary channels, and the local-horizon Clausius hypotheses of Theorem E.5. Then:*
 
@@ -913,9 +1002,9 @@ The bath heat reaches $k_BT\ln2$ only for a conditionally uniform binary record 
 
 #### Stage 3: Information-Theoretic Entropy (Reset Support → Capacity Deficit)
 
-The fixed-support capacity statement is independent of the physical heat ledger. The key structural point is that the SPAP cycle resets a binary register to a fixed ready state, so one binary support factor is removed from the completed output ledger.
+The fixed-support capacity statement is independent of the physical heat ledger. On a branch registering a completed reset of a factor $\mathcal H_R$ to a fixed ready state, one support factor is absent from the completed output ledger.
 
-On the minimal saturating branch singled out in Theorem 23, the MPU state space has dimension $d_0 = 8$, corresponding to $K_0 = 3$ bits of complexity (Theorem 15). This yields $\ln d_0 = \ln 8 = 3\ln 2$ nats of maximum ideal support capacity per MPU before the completed reset is imposed.
+On the joint Theorem-15/Theorem-23 branch with the same-class comparator of Theorem Z.2, $d_0=8$ and the ideal input-support log-cardinality is $\ln d_0=3\ln2$. This equality is not supplied by SPAP alone.
 
 **Imported result (Proposition E.2a, Reset-Support Capacity Deficit).** Let
 $$
@@ -923,11 +1012,11 @@ $$
 \qquad
 \dim\mathcal H_R=r,
 $$
-and let the completed SPAP reset return $\mathcal H_R$ to a fixed ready state. Proposition E.2a shows that every output of the completed channel lies in a support of dimension at most $d_0/r$. Therefore
+and let a registered completed reset return $\mathcal H_R$ to a fixed ready state. Every output of the completed channel then lies in a support of dimension at most $d_0/r$, so
 $$
 C(\mathcal E_N)\le \ln d_0-\ln r.
 $$
-For the binary SPAP reset $r=2$,
+For a binary registered reset, $r=2$.
 $$
 C(\mathcal E_N)\le \ln d_0-\ln2.
 $$
@@ -971,7 +1060,7 @@ In the Hilbert carrier, two sharp record alternatives require two orthogonal ray
 $$
 a=\dim_{\mathbb C}\mathcal{H}_a\ge2.
 $$
-The entropy capacity of an $a$-dimensional active register is $\ln a$. To instantiate the irreducible structural per-cycle quotient cost $\varepsilon_0$ within the active kernel, admissibility also requires
+The entropy capacity of an $a$-dimensional active register is $\ln a$. To represent the declared two-label structural quotient within the active kernel, admissibility also requires
 $$
 \ln a \ge \varepsilon_0.
 $$
@@ -1002,9 +1091,15 @@ $$\rho_0 = \frac{I_2}{2} \oplus 0_6 = \mathrm{diag}\left(\frac{1}{2}, \frac{1}{2
 where $I_2/2$ is the maximally mixed state on the 2-dimensional active subspace and $0_6$ represents the zero operator on the 6-dimensional inactive complement ($b = d_0 - a = 6$). The von Neumann entropy restricted to the active subspace is:
 
 $$
-S(\rho_0)=-\operatorname{tr}(\rho_0\ln\rho_0)=\ln 2=\varepsilon_{SPAP},
+S(\rho_0)
+=
+-\operatorname{tr}(\rho_0\ln\rho_0)
+=
+\ln2
+=
+\varepsilon_0,
 $$
-matching the structural Landauer value $\varepsilon_0=\varepsilon_{SPAP}$ at the PCE-Attractor; physical equality requires the overhead-free implementation branch.
+which is a numerical state-counting identity for the specified maximally mixed active state. It does not identify structural log-cardinality with conditional entropy, bath heat, or total entropy production.
 
 #### Stage 4a: Error Correction Structure (The Golay Realization)
 
@@ -1073,7 +1168,7 @@ Without capacity saturation, channel counting supplies only the entropy upper bo
 | Step | Source | Statement | Role |
 |:-----|:-------|:----------|:-----|
 | 1 | Reachable-record hypothesis | The verification alphabet has two response-relevant labels | Structural input |
-| 2 | Lemma J.1 | Its log-cardinality is $\varepsilon_0=\ln2$ | Structural register size |
+| 2 | Theorem J.1 | Its log-cardinality is $\varepsilon_0=\ln2$ | Structural register size |
 | 3 | Conditional Landauer theorem | $\langle Q_{bath}\rangle/(k_BT)\ge H_q(P\mid R)$ | Distribution-sensitive heat bound |
 | 4 | Proposition E.2a | The completed binary reset gives $C_{\max}\le\ln d_0-\ln2$ | Support-capacity deficit |
 | 5 | Theorem E.3 | $N_{eff}=\sigma_{link}\mathcal A$ on the density-certificate branch | Channel counting |
@@ -1133,20 +1228,23 @@ The value is conditional on all listed saturation and equilibrium hypotheses. Th
 
 ---
 
-### 7.5.5 The $\varepsilon$-Duality
+### 7.5.5 The Separated $\varepsilon$ Ledgers
 
-The quantity $\varepsilon_0=\ln2$ plays two roles that are unified on the attractor-saturating branch:
+The structural binary value and the physical reset ledger have distinct antecedents:
 
-| Role | Manifestation |
-|:-----|:--------------|
-| **Thermodynamic cost** | Minimum entropy production per SPAP cycle is bounded below by $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31) while physical saturation occurs only on the overhead-free Landauer implementation branch |
-| **Structure generator** | At $\varepsilon_0=\ln2$, the sharp retained match/mismatch active-verification record gives $a\ge2$, entropy-capacity gives $\ln a\ge\varepsilon_0$, and PPI/PCE no-surplus selection fixes $a = 2$, initiating the Golay chain (Theorem Z.1) |
+| Ledger | Statement |
+|:-------|:----------|
+| **Structural support** | A registered binary quotient has $\varepsilon_0=\ln2$ (Definition 28; Definition J.1; Theorem J.1); Lemma J.1 separately proves noninjectivity for the fixed-ready-state reset. |
+| **Physical reset** | A separately registered reset obeys $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$; total entropy production is $k_B\varepsilon_{\mathrm{diss}}$ (Theorem 31) |
+| **Active-kernel selection** | Theorem Z.1 fixes $a=2$ only with its sharp-record, entropy-capacity, and no-surplus hypotheses |
 
-These are not independent facts but two aspects of the same branch-specific constraint:
-
-$$\varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm 31}} \text{thermodynamic cost} \quad \text{AND} \quad \varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm Z.1: active record + capacity}} a = 2 \xrightarrow{} M = 24 \xrightarrow{} [24,12,8]$$
-
-The structural SPAP coordinate $\varepsilon_0$ and the Golay code ledger meet in the same discrete branch-selection chain, but neither determines the other without the intervening active-record, capacity, predictive-recovery, and code-class gates. The classical code does not protect physical processing unless an encoding, error channel, syndrome map, and decoder are registered.
+On the conjunction of the structural and active-kernel branches,
+$$
+\varepsilon_0=\ln2
+\xrightarrow{\text{record/capacity/no-surplus gates}}
+a=2\to M=24\to[24,12,8].
+$$
+The physical reset inequality is a separate implementation statement. Neither it nor the Golay code follows from SPAP alone, and physical error correction requires a registered encoder, channel, syndrome instrument, decoder, and non-double-counted resource ledger.
 
 **Corollary (Conditional Decoder-Failure Entropy).** On such a registered classical binary channel, the $[24,12,8]$ code uniquely corrects error patterns of Hamming weight at most $3$. Patterns outside that radius may create residual uncertainty, but their occurrence and entropy contribution are channel-dependent. This conditional contribution is distinct from the per-cycle physical bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ and is not a universal second mechanism operating on every MPU cycle.
 

@@ -29,7 +29,7 @@ $$
 S_E[\varphi]\;:=\;-\ln p_\theta[\varphi]\;-\;\ln Z_0,
 $$
 
-defined up to an additive constant. This ensures that $W,\Gamma$ agree with the standard definitions in statistical field theory up to $J$‑independent additive constants, adapted to the PU coarse‑graining context. At vanishing sources $J=0$, stationary configurations $\delta\Gamma/\delta\Phi=0$ are the PU macrostates at the chosen resolution.
+defined up to an additive constant. This ensures that $W,\Gamma$ agree with the standard definitions in statistical field theory up to $J$‑independent additive constants, adapted to the PU coarse‑graining context. At vanishing sources $J=0$, configurations satisfying $\delta\Gamma/\delta\Phi=0$ are stationary expectation-field configurations of this generating functional at the chosen resolution. Identifying them with PCE-selected PU macrostates requires the effective-action/PCE bridge hypotheses used later in this appendix.
 
 **Proposition X.1 (Legendre-Dual Response Kernel on the Regular Sector).**
 Let $\mathcal G_{ab}(x,y)=\delta^2 W/\delta J^a(x)\delta J^b(y)$ be the connected two‑point kernel, and restrict to a regular sector on which the source-to-field map
@@ -161,7 +161,7 @@ $$
 \tag{X.7}
 $$
 
-with curvature invariants $\mathcal O_i$ (e.g., $R^2,R_{\mu\nu}R^{\mu\nu},\dots$). Appendix E imposes **thermodynamic consistency** via the local Clausius relation and the **Wald entropy density** on local Rindler sections. In $D=4$, consistency with the **Bekenstein–Hawking area coefficient** selects the Einstein–Hilbert structure at leading order (Appendix E; Section 12), yielding field equations
+with curvature invariants $\mathcal O_i$ such as $R^2$ and $R_{\mu\nu}R^{\mu\nu}$. The area coefficient alone does not eliminate these operators. On the metric-only, local, diffeomorphism-invariant branch of Theorem 12.1a, requiring at-most-second-order metric equations and matching the Wald entropy density on every retained local bifurcate horizon selects the Einstein-Hilbert bulk term in $D=4$, up to a total divergence and the topological Gauss-Bonnet density. On that branch the field equation is
 
 $$
 \frac{\delta \Gamma^{\text{grav}}}{\delta g_{\mu\nu}}
@@ -170,7 +170,7 @@ $$
 \tag{X.8}
 $$
 
-The area‑law coefficient $1/(4G)$ is fixed microscopically by Appendix E, while scale dependence $G(k)$ is discussed in Appendix I and Section 12.5; in $D>4$ the same Clausius/Wald logic selects the Lovelock class.
+Appendix E supplies an operational channel entropy coefficient on its density-and-saturation branch and defines $G_{\mathrm{op}}$ by the Bekenstein-Hawking normalization; identifying $G_{\mathrm{op}}$ with measured $G$ is a separate calibration. Scale dependence is discussed in Appendix I and Section 12.5. In $D>4$, a Lovelock conclusion likewise requires the independent metric-only locality and second-order field-equation hypotheses; it does not follow from the Clausius relation alone.
 
 **Definition X.4a (Constant Vacuum-Shift Response Quotient).** On a fixed-scale Einstein branch, decompose the matter expectation as
 $$
@@ -712,10 +712,9 @@ These are four branch-qualified realizations of information-geometric control; n
 
 *Proof.* Proposition X.1 gives $\Gamma^{(2)}\mathcal G=I$ and identifies $\mathcal G$ with Fisher information under its statistical hypotheses. The unit Predictive-Ward hypothesis permits Theorem X.3 to give item 2. Theorem K.10.7 gives item 3 with its stated correspondence status. Equations M.5a–M.5c and the Bakry-Émery bound give item 4. The final scope statement follows because these results establish a shared structural class, while Section X.9.6 supplies the additional common-operator hypotheses. ∎
 
-**Corollary X.8a.1 (Gradient-Flow Compatibility Across Appendices).** The stochastic PCE adaptation flow of Appendix D, the FRG compression flow of Appendix K/X, and the perspective diffusion of Appendix M are mutually compatible metric-controlled evolutions on PU state space.
+**Corollary X.8a.1 (Gradient-Flow Compatibility Across Appendices).** Under the hypotheses of Theorem X.8a, the Appendix D adaptation flow, the Appendix K/X FRG compression flow, and the Appendix M perspective diffusion are branchwise metric-controlled evolutions belonging to the same structural information-geometric class. No common state space, metric, or generator is implied unless the additional finite common-operator bridge of Section X.9.6 is supplied.
 
-*Proof.* Appendix D models slow adaptation as stochastic gradient flow on the PCE potential, Theorem K.10.7 identifies FRG flow with PCE compression, and Equations (M.5a)-(M.5c) supply the metric diffusion on perspective space. Theorem X.8a records that all three are governed by the same information-geometric data. ∎
-
+*Proof.* The four conclusions of Theorem X.8a establish the stated branchwise structural class. Its final scope clause excludes identification of the underlying state spaces or generators without the Section X.9.6 bridge. ∎
 
 **Remark X.8a.2 (Status of the Stronger Identity Claim).** Theorem X.8a proves a shared information-geometric control structure at the level of a common structural class. Section X.9.6 gives the finite-branch operator statement: after the regular response, RG, and perspective sectors are represented as closed quadratic forms on one direct-sum predictive Hilbert module, their generators are compressions of a single self-adjoint predictive operator. The statement is exact on that finite closed-form branch and inherits precisely the regularity hypotheses stated there.
 
@@ -1819,7 +1818,7 @@ The multiplier sign convention and shadow-price interpretation are inherited fro
 **Proposition X.8g.5 (Projection Guardrail for the Becoming Flow).** Suppose $\mathfrak C_{\Omega}$ is accepted. Then Equation (X.8g.4a) has the following sector readings, and no stronger reading.
 
 1. On the ray sector, if $\Phi_{\Omega}|_{\mathrm{ray}}=\langle H\rangle$, $\mathsf E_{\Omega}=0$ on that sector, and the branch carries the Section 8 Hilbert/Stone data, (X.8g.4a) reduces to the projective Schrödinger/Kähler-Hamiltonian flow by Corollary X.8g.3.
-2. On a purely dissipative or slow-adaptation sector, if $\mathsf J_{\Omega}=0$ and $\mathsf E_{\Omega}$ is the accepted mobility, (X.8g.4a) reduces to the corresponding natural-gradient PCE/adaptation flow. The structural binary reference $\varepsilon_0=\ln2$ enters only on a branch carrying the binary quotient of Proposition 5 and Lemma J.1. A physical reset cost enters only for registered resets satisfying Theorem 31 and is bounded by the distribution-sensitive quantity $H_q(P\mid R)$; smooth damping alone does not assert a reset cost or a new collapse law.
+2. On a purely dissipative or slow-adaptation sector, if $\mathsf J_{\Omega}=0$ and $\mathsf E_{\Omega}$ is the accepted mobility, (X.8g.4a) reduces to the corresponding natural-gradient PCE/adaptation flow. The structural binary reference $\varepsilon_0=\ln2$ enters only on a branch carrying the binary quotient of Proposition 5 and Theorem J.1. A physical reset cost enters only for registered resets satisfying Theorem 31 and is bounded by the distribution-sensitive quantity $H_q(P\mid R)$; smooth damping alone does not assert a reset cost or a new collapse law.
 3. At stationary active faces, (X.8g.4b) gives the Noether/Ward/shadow-price statement of Theorem X.8f.2. It identifies only those active coupling or capacity entries whose constraints already belong to $\mathcal K_{\Omega}$ and whose unit bridges are present in $\mathfrak o_{\Omega}$.
 4. On a local-horizon boundary sector, the KKT reading supplies the variational form used by the gravity branch only when the full Section 12 package is already present: Lorentzian/cone input, local KMS/Clausius input, area-density calibration, and the Appendix B stress-energy source. Equation (X.8g.4a) is not an independent derivation of Theorem 50 without that package.
 5. The Born-rule probabilities remain the Section 8 Hilbert/Born operator-structure theorem chain. The becoming-flow datum may use the same response metric and projection ledger, but it does not replace Gleason-Busch or promote non-Hilbert branches.

@@ -123,9 +123,9 @@ where $X_{\mathrm{value}}$ is the predicted value or finite-combinatorial patter
 
 *Proof.* Each listed component is part of the forward-locked record $\mathfrak W_{\mathrm{ML}}$. Changing any component after outcome inspection changes the tested object. Theorem 13.0e forbids counting such a changed object as forward evidence for the original prediction, and Corollary 13.0f prevents widening the failed interval or replacing the falsifier while retaining the same branch identity. ∎
 
-**Corollary 13.0k (Landauer-Ledger Constellation Standard).** When distinct protocols consume the same structural source constant $\varepsilon_0=\ln2$ through independent finite-response maps, their joint evidential value is recorded as a Landauer-ledger constellation only if each row separately satisfies Definition 13.0i and the common structural source $\varepsilon_0$ is inherited from Proposition 5 and Lemma J.1 rather than refit per platform. Any physical reset row must separately satisfy Definition 28 and Theorem 31. Examples of such rows include metered actualization thresholds, retained entropic clock-flow, conditional horizon phase grids, and finite record-current TUR tests. Failure of one branch-level row falsifies the named row or bridge; failure of a theorem-level row under a closed certificate falsifies the corresponding theorem stack.
+**Corollary 13.0k (Landauer-Ledger Constellation Standard).** When distinct protocols consume the same structural source constant $\varepsilon_0=\ln2$ through independent finite-response maps, their joint evidential value is recorded as a Landauer-ledger constellation only if each row separately satisfies Definition 13.0i and the common structural source $\varepsilon_0$ is inherited from Proposition 5 and Theorem J.1 rather than refit per platform. Any physical reset row must separately satisfy Definition 28 and Theorem 31. Examples of such rows include metered actualization thresholds, retained entropic clock-flow, conditional horizon phase grids, and finite record-current TUR tests. Failure of one branch-level row falsifies the named row or bridge; failure of a theorem-level row under a closed certificate falsifies the corresponding theorem stack.
 
-*Proof.* Definition 13.0i requires every witness row to carry its own value, shape, null, unit, and artifact locks. Sharing the source label $\varepsilon_0$ cannot discharge any of those row-specific requirements. Proposition 5 and Lemma J.1 supply the structural value $\varepsilon_0=\ln2$ independently of the platforms, so a platform-level refit would replace the common source by separate empirical parameters and would not define a constellation. A row interpreted as physical reset heat must additionally satisfy Definition 28 and Theorem 31. Finally, Theorem 13.0j and Corollary 13.0f apply to each registered row separately, giving the stated branch-level and theorem-level failure consequences. ∎
+*Proof.* Definition 13.0i requires every witness row to carry its own value, shape, null, unit, and artifact locks. Sharing the source label $\varepsilon_0$ cannot discharge any of those row-specific requirements. Proposition 5 and Theorem J.1 supply the structural value $\varepsilon_0=\ln2$ independently of the platforms, so a platform-level refit would replace the common source by separate empirical parameters and would not define a constellation. A row interpreted as physical reset heat must additionally satisfy Definition 28 and Theorem 31. Finally, Theorem 13.0j and Corollary 13.0f apply to each registered row separately, giving the stated branch-level and theorem-level failure consequences. ∎
 
 **Definition 13.0l (Prediction Map and Whitened Tangent).** Let a forward-locked branch have coordinates $\theta\in\Theta\subset\mathbb R^p$ and predict $m$ registered observables through a $C^1$ map
 $$
@@ -732,7 +732,7 @@ $|\Delta P|_{\rm EM}\ \lesssim\ 2.68\times 10^{-13}\,T$ (with $T$ in seconds). T
 
 **13.5 Prediction/Protocol 3: Exploratory Bell Tests / Statistical FTL Search (Three-Branch)**
 
-Addresses the most speculative prediction: potential statistical FTL influence mediated by CC acting on entangled systems (Postulate 3). The protocol targets the nonlocal/state-mediated marginal-anomaly branch (iii) of Postulate 3, on which Bob's marginal $P(b)$ shifts with Alice's *late-randomized* context; the local CPTP branch (i) preserves Bob's marginal and permits only Alice-local or joint-correlation changes detectable after classical comparison of records, and the preparation-context branch (ii) admits a Bob-marginal shift only when Alice's context is fixed in the shared causal past of the two measurement regions and is therefore excluded as an explanation of branch-(iii) data by a late-randomization design.
+Addresses the most speculative registered anomaly class: a possible late-randomized Bob-marginal shift associated with CC acting on entangled systems (Postulate 3). The protocol tests the external nonlocal/state-mediated class (iii), whose certified occurrence would falsify the exact pre-lightcone context-independence branch by Theorem 39c and Corollary 39c.1. The local CPTP branch (i) preserves Bob's marginal and permits only Alice-local or joint-correlation changes detectable after classical comparison of records, while the preparation-context branch (ii) admits a Bob-marginal dependence only when the context is fixed in the shared causal past and is excluded as an explanation of class-(iii) data by late randomization.
 
 *   **Objective:** Sensitive search for preregistered statistical dependence of Bob's local measurement outcomes on Alice's remote context $\mathrm{context}_S$ (associated with system $S_A$ at her station), with A and B space-like separated and with $\mathrm{context}_S$ randomized strictly later than the latest event in the shared causal past of the two measurement regions. On branch (i), only Alice-local or joint/conditional correlations after classical comparison can vary; on branch (ii), a Bob-marginal shift can occur only when context randomization precedes preparation; on branch (iii), Bob's marginal itself shifts under late randomization. Secondary search for context-dependent changes in Bell parameters.
 *   **Theoretical Basis:** Postulate 3 defines three branches. On branch (i), Bob's marginal probabilities are invariant by standard no-signaling (Bob-marginal kernel decomposition, Lemma 10.2). On branch (ii), Bob's marginal can depend on $C_A$ through common-cause statistics inherited from a preparation that, by the branch definition, occurs in the shared causal past. Theorem L.12.8 separately states that strict target-conditioned joint-correlation advantage above the best information-free policy requires causal or common-cause information about the entanglement record. On branch (iii), Alice's late-randomized context $C_A$ shifts Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while remaining non-deterministic and zero-error inaccessible in finite pre-lightcone windows on the regular branch, but by Theorem 39c this would falsify Postulate 2. Detection of a marginal shift requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40); joint-correlation tests require classical comparison of records; the pre-lightcone information budget and sampling gate are bounded by Lemma 10.3.
@@ -785,7 +785,7 @@ The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\mat
 
 *Proof.* Theorem 39 bounds the operational bias strength on the bounded-bias branch by $\mathrm{CC}\le\alpha_{CC,max}<0.5$. In particular, the CC mechanism cannot force both deterministic endpoints of a binary trial; hence it cannot implement deterministic one-shot superluminal signaling. Theorem 39a then addresses the finite-window statistical branch on the regular operating regime: under the common-support condition of Definition 10.2a — motivated by the endpoint gate, ND-RID finite-transfer limits, irreducible $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, PPI admissibility of probability kernels, and refresh-branch strict contractivity where available — the context-conditioned transcript distributions retain positive overlap, so every finite pre-lightcone decoder has nonzero error probability. Theorem 39b adds that any current representation of such a signal is a coarse-graining of the same finite transcript algebra and therefore cannot create a zero-error decoder; when a finite Markov/KMS precision certificate is supplied, nonzero finite-cost current signals also carry nonzero variance. Theorem 40 shows that any nonzero CC signal can only be detected statistically, with required sample size scaling as $N=O(\mathrm{CC}^{-2})$. Theorem 41 bounds the finite-error information rate by a quantity of order $\mathrm{CC}^2$ at a regular operating point. Finally, Theorem 42 excludes a finite-window zero-error contradiction protocol; Theorem 39c independently shows that any nonzero freely selected pre-lightcone channel already violates Postulate 2. Appendix F supplies the AQFT locality framework for the Bob-marginal-preserving branch and the operator-local baseline; the branch-(iii) finite-window reliability bounds are furnished by Theorems 39a–42, while its noncausal status is fixed by Theorem 39c, with Theorem 39b supplying the current-level no-loop gate when that representation is used. Therefore the CC mechanism is compatible with Postulate 2 exactly when its pre-lightcone marginal channel is constant; branch (iii) remains testable as a falsifier of that condition. ∎
 
-*Note:* Empirical investigation of Postulate 3 (Protocol 3) critically tests this distinct aspect of PU's locality/causality. Confirmation requires re-evaluating standard locality; null results constrain/falsify this prediction.
+*Note:* Protocol 3 tests the external branch-(iii) anomaly class. A certified late-randomized Bob-marginal shift would falsify the exact causal branch and require a separate nonlocal/state-mediated model; null results constrain class (iii) but do not falsify the local-CPTP or shared-past branches.
 
 ## 13.8 High-Precision Falsification Windows
 
@@ -804,7 +804,8 @@ $$
 =
 137.03609205522863\ldots .
 $$
-This is a closed-form finite-response result: $K_0=3$, $d_0=8$, $M=24$, $D=4$, and $u^*=2^{1/8}-1$ are fixed upstream, and no continuous fit parameter appears in the expression. The closed-form core value is a single-valued elementary function of forced integers with no continuous tunable in the displayed chain (Theorem Z.26 with Corollary Z.26a). Its distance from $\alpha^{-1}_{\mathrm{exp}}=137.035999177(21)$ is
+This is a closed-form finite-response branch evaluation. Its structural inputs are $K_0=3$, $d_0=8$, $a=2$ (equivalently $a/d_0=1/4$), $M=24$, and $u^*=2^{1/8}-1$; it additionally uses the independently registered unit-Ward, unit-interface-response, democratic visible-response, separable curvature-response, normalized-flux, electromagnetic-projection, and $SU(2)$ transport entries of Appendix Z (Theorem Z.26; Corollary Z.26a). Once those branch entries are fixed, the displayed expression contains no continuously adjusted coefficient. The structural integers alone do not determine the formula.
+Its arithmetic distance from $\alpha^{-1}_{\mathrm{exp}}=137.035999177(21)$ is
 $$
 0.00009287822863\ldots,
 $$
@@ -886,15 +887,17 @@ A_{\mathrm{eff}}^{\mathrm{BL}}A_{EW}^2
 $$
 On that branch, the primitive uncertainty variables are $(\Xi_{\perp},A_{EW})$, not an independent pair $(A_{\mathrm{eff}},A_{EW})$. The resulting $360$ row is therefore a correlated determinant-transfer consistency check rather than an independent vacuum–electroweak prefactor test. A value inconsistent with $360$ after the appropriate primitive-variable covariance ledger is propagated falsifies the named five-mode transfer branch; an independently evaluated vacuum-prefactor branch must be tested with its own forward covariance record.
 
-The zero-mode ledger identity of Corollary U.72c is
+The mechanism-separated identity of Corollary U.72c is
 $$
 2\kappa_\Lambda+2\kappa_{EW}
-=366-(m_\Lambda+m_{EW}).
+=(288-m_\Lambda)+77
+=365-m_\Lambda.
 $$
-Thus $(m_\Lambda,m_{EW})=(5,1)$ gives $360$, whereas the corrected four-mode exponent branch of Theorem U.13b, together with $m_{EW}=1$ from Theorem T.5, gives
+Thus the five-mode vacuum reference branch gives $360$, whereas the four-mode theorem branch of Theorem U.13b gives
 $$
 2\kappa_{\Lambda,\mathrm{trans}}+2\kappa_{EW}=361.
 $$
+The electroweak term is the Steiner response action, not a zero-mode subtraction.
 This is an exponent-ledger result. A numerical four-mode product-lock prediction additionally requires an independently evaluated forward prefactor $A_{\mathrm{eff}}^{(\mathrm{Fred},4)}$ and its accepted interval. The quantity $A_{\mathrm{eff}}^{(\mathrm{obs},4)}$ is an observational inversion, not a forward vacuum-prefactor prediction (Proposition U.15c; Corollary U.15f).
 
 For the diagnostic definitions of Corollary U.72d,
@@ -1079,7 +1082,7 @@ Appendix Q, Definition Q.0.7u, defines a horizon closed-loop transfer branch for
 $$
 x := \frac{\hbar\omega}{k_B T_H}=\omega\tau_H,
 \qquad
-x\equiv N\ln2\pmod{2\pi}.
+\operatorname{dist}_{2\pi}(x,N\ln2)\le\varepsilon_{\mathrm{peak}},\qquad\text{with exact central labels }[N\ln2]_{2\pi}.
 $$
 
 The two fixed scales are:
@@ -1104,10 +1107,10 @@ By Lemma Q.0.7b, $\alpha_L$ is transcendental and hence irrational.
 | 4 | $(139,1260)$ | $3.40\times10^{-7}$ | $0.00269$ |
 | 5 | $(170,1541)$ | $1.75\times10^{-7}$ | $0.00170$ |
 
-**Three-gap finite-budget test.** For any finite cutoff $N_{\max}$, the points $\{N\ln2\bmod2\pi:N=1,\ldots,N_{\max}\}$ partition $[0,2\pi)$ into at most three distinct gap lengths by Proposition Q.0.7n.
+**Three-gap finite-budget test.** For any finite cutoff $N_{\max}$, the exact central labels $\{N\ln2\bmod2\pi:N=1,\ldots,N_{\max}\}$ partition $[0,2\pi)$ into at most three distinct gap lengths by Proposition Q.0.7n. For cyclically order-matched measured peaks, each observed adjacent gap must lie within $2\varepsilon_{\mathrm{peak}}$ of its central gap.
 
 **Falsification conditions on this branch:**
-- no phase-grid component at $x\equiv N\ln2\pmod{2\pi}$ in a system independently shown to satisfy Definition Q.0.7u;
+- no label-matched phase-grid component within the registered tolerance of $[N\ln2]_{2\pi}$ in a system independently shown to satisfy Definition Q.0.7u;
 - a measured exact rational phase-step ratio replacing $\alpha_L$;
 - a dimensionless phase grid whose positions vary with horizon mass after transforming to $x=\hbar\omega/(k_B T_H)$.
 
@@ -1479,7 +1482,7 @@ The count $M=24$ enters three separate branches:
 
 1. the predictive-recovery rate gate gives $k=12$, and an additional minimum-distance-eight construction/selection certificate gives $\mathcal G_{24}$ by Theorem U.1;
 2. a supplied discriminant-form/coset-minimum datum satisfying Lemma R.4.5 and Equation (R.4.2a.1) gives $\Lambda_{24}$;
-3. the independent channel-complete equation $M=K(D)$ gives $D=4$.
+3. the independent faithful-shell certificate gives $24\le K(D)$ and selects the least feasible $D=4$ using $K(3)=12$ and the regular $24$-cell.
 
 The shared count is a compatibility ledger, not an unconditional sequence. The rate gate does not supply distance-eight attainment, Lemma R.4.5 does not produce its own gluing datum, and neither code nor lattice selection establishes the mode-channel certificate.
 
@@ -1487,11 +1490,11 @@ The three conditional arrows are
 $$
 M=24 \xrightarrow{\substack{\text{rate gate plus}\\\text{distance-eight certificate}}} \mathcal{G}_{24},\qquad
 \mathcal{G}_{24} \xrightarrow{\text{registered Lemma R.4.5 datum}} \Lambda_{24},\qquad
-M=24=K(D) \xrightarrow{\text{mode-channel certificate}} D=4.
+M=24\xrightarrow{\text{verified response-labeled $24$-cell; least-feasible cost}}D=4.
 $$
 Accordingly, the code, lattice, and spacetime-dimension branches share a numerical 24-mode backbone but retain distinct hypotheses.
 
-*Proof.* Definition Z.13b.0 and Theorem Z.13b.0a give $k=12$. Under the additional minimum-distance-eight construction/selection certificate, Theorem U.1 identifies the resulting binary linear $[24,12,8]$ code with $\mathcal G_{24}$ up to coordinate permutation. Given the separate discriminant-form/coset-minimum datum, Lemma R.4.5 supplies the registered gluing step to $\Lambda_{24}$. Independently, Theorem Z.11 gives $D=4$ from the channel-complete equation $M=K(D)$ with $M=24$. No hypothesis of one branch supplies the missing certificate of another. ∎
+*Proof.* Definition Z.13b.0 and Theorem Z.13b.0a give $k=12$. The minimum-distance-eight certificate identifies the resulting $[24,12,8]$ code with $\mathcal G_{24}$, and the separate gluing datum supplies $\Lambda_{24}$. Independently, Definition Z.9a and Theorems Z.10--Z.11 give $24\le K(D)$, exclude $D\le3$ by $K(3)=12$, realize the shell with the regular $24$-cell, and select the least feasible $D=4$. No branch supplies another branch's missing certificate. ∎
 
 ### 13.9.6 Classical Code, CSS State, and Quantum-Code Scope
 
@@ -1505,15 +1508,9 @@ The $k=0$ CSS construction may be labeled $[[24,0,8]]$ only under a stated stabi
 
 
 
-The framework's prediction concerns the classical extended binary Golay code $[24, 12, 8]$, whose parameters directly reflect the PCE-Attractor structure. The quantum codes derived from this classical code are:
+The first table separates three objects that must not be conflated. Theorem 54 selects the classical $[24,12,8]$ carrier only on the predictive-recovery rate branch with the fixed-rate distance-maximization objective. The self-dual CSS construction gives a unique $[[24,0]]$ mathematical stabilizer state with $12$ independent $X$-type and $12$ independent $Z$-type generators and $M_{24}$ permutation symmetry; it becomes a physical-vacuum realization only when a registered Hamiltonian or dynamics, encoder, physical channel, syndrome instrument, recovery map, and response certificate realize that state on the same branch.
 
-| Code | Parameters | Construction | Role |
-|------|------------|--------------|------|
-| Classical extended Golay | $[24, 12, 8]$ | PCE-optimal (Theorem 54) | Information structure |
-| Golay stabilizer state | $[[24, 0, 8]]$ | CSS from self-dual code | Vacuum state (Remark G.8.4g.1a) |
-| Quantum Golay | $[[23, 1, 7]]$ | Punctured CSS construction | Error correction |
-
-The $[[24, 0, 8]]$ CSS construction from the self-dual Golay code yields a unique stabilizer state rather than a code space, since the quantum Singleton bound requires $k \leq 10$ for $[[24, k, 8]]$. This state represents the PCE-Attractor vacuum, stabilized by 12 X-type and 12 Z-type generators with $M_{24}$ symmetry. The $[[23, 1, 7]]$ punctured code encodes one logical qubit; puncturing reduces the distance from 8 to 7 and removes the self-duality constraint. Experimental tests of the substrate alignment hypothesis (Protocol 4) should focus on the $[[23, 1, 7]]$ code and structurally similar alternatives.
+For physical error correction, Proposition Z.13b.7 supplies the punctured $[[23,1,7]]$ CSS code witness. An accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ of Definition A.0.1q.1 then supplies the noise, syndrome, recovery, threshold, protected-gate, overhead, and branch-overlap data, and Theorem A.0.2a promotes the witness to a QEC compatibility certificate on exactly the covered finite windows. Protocol 4 tests this certificate-complete substrate-alignment claim against structurally similar alternatives.
 
 **Remark on Quantum Bounds.** The quantum Hamming bound constrains nondegenerate quantum codes. For a $[[n,k,d]]$ code with $t=\lfloor(d-1)/2\rfloor$ correctable errors, it requires
 $$
@@ -1746,7 +1743,7 @@ The following branch-relative rows share the integer $M=24$ but do not form a si
 | Result | Source | Branch-specific connection to $M = 24$ |
 |--------|--------|-----------------------------------------|
 | Fine-structure constant core $\alpha^{-1}_{0}=137.03609205522863\ldots$ and diagnostic-only hypercharge-recoil (operator realization open) row $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ | Section 13.8.1, Appendix Z | Capacity saturation plus the Appendix Z Ward, interface, curvature, and conditional transport package; the candidate residual additionally requires its operator certificate |
-| Spacetime dimensionality $D = 4$ | Appendix Z, Theorem Z.11 (see also Appendix H, Theorem H.4) | $K(D)=M=24$ only in the channel-complete Bures tangent-cell contract |
+| Spacetime dimensionality $D=4$ | Appendix Z, Definition Z.9a and Theorems Z.10--Z.11 | Faithful $24$-cell injection, $K(3)=12$ obstruction, explicit regular $24$-cell, and least-feasible support cost |
 | Geometric norm isolation | Appendix R, Proposition R.4.2a; Appendix Z, Theorem Z.8c and Proposition Z.13a | A certified discriminant-form/coset-minimum gluing datum maps Golay $d=8$ to the absence of a norm-$2$ shell; no dynamical stability follows |
 | Standard Model gauge-algebra dimension | Appendices G and T | $\dim[\mathfrak g_{\mathrm{SM}}]=12=k$ on the finite-response block-frame, chirality, determinant, and anomaly-admissibility branch; the equality of integers is not a derivation from Appendix W |
 
@@ -1823,9 +1820,9 @@ The predictions fall into three epistemic categories that must be distinguished 
 
 **Prediction:** Emergent spacetime has exactly $D = 4$ macroscopic dimensions.
 
-**Derivation Summary:** Inside the channel-complete Bures tangent-cell contract (Definition Z.9a; Theorem Z.10), zero mismatch requires $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$ at thermodynamic equilibrium, where $K(D)$ is the kissing number in the effective tangent dimension. With $M_{\mathrm{int}} = 2ab = 24$ (Theorem Z.5), the equation $K(D) = 24$ has the isolated positive-integer solution $D = 4$ on the checked Euclidean branch (Theorem Z.11). On the minimal Appendix Z branch this is equivalently the chain
+**Derivation Summary:** Definition Z.9a requires a response-preserving injection of all $M_{\mathrm{int}}=24$ modes into distinct tangent cells and makes PCE select the least feasible integer dimension with positive cost for response-null surplus dimensions. Theorem Z.10 gives $24\le K(D)$; $K(3)=12$ excludes lower dimensions; and the regular $24$-cell proves feasibility in $D=4$. Theorem Z.11 therefore selects $D=4$. On the minimal Appendix Z branch this is equivalently the chain
 $$
-M=24=K(4),
+D_{\min}=\min\{D\in\mathbb N:K(D)\ge24\}=4,
 $$
 and Corollary Z.11.3 makes the resulting falsifier explicit.
 
@@ -1860,9 +1857,9 @@ R_{\alpha}^{YR\perp}
 -\frac{1}{3}c_1(u^*)^7
 =-0.00009287769839723537\ldots,
 $$
-with $u^*=2^{1/8}-1$ and $c_1=\pi/(24\sqrt3)$. Thus
+with $u^*=2^{1/8}-1$ and $c_1=\pi/(24\sqrt3)$. Thus the diagnostic-only candidate evaluation is
 $$
-\alpha^{-1}_{\mathrm{cert}}
+\alpha^{-1}_{\mathrm{cand}}
 =
 \alpha^{-1}_{0}+R_{\alpha}^{YR\perp}
 =137.03599917753023\ldots.
@@ -2046,7 +2043,7 @@ $$
 $$
 A positive result must show the clock-flow slope, the stall/null condition, and the current-precision inequality under the same fixed $\ln2$ unit bridge. Cold-atom bright/dark-sector entropic-time experiments such as Barontini [2026] are recorded as external analogue tests of internal entropy-clock ordering, not as forward PU evidence for the $\ln2$ unit bridge unless the PU unit, retained entropy-increment estimator, null windows, guarantee-level subset when used, and witness locks were registered before comparison. A result is classified as failure if the apparent clock advances during null-exchange windows, if the effect follows laboratory timing rather than retained entropy flow after label swaps, if the retained entropy-increment estimator or guarantee-level subset is chosen after unblinding, or if the clock-current TUR is violated after the finite record quotient and entropy ledger have been fixed.
 
-**Experimental row for Landauer-ledger constellations.** A cross-protocol claim that PU is supported by repeated appearances of $\ln2$ must satisfy Corollary 13.0k: the same structural $\varepsilon_0=\ln2$ must be inherited from Proposition 5 and Lemma J.1 and consumed through independent finite-response maps; any physical reset row must separately satisfy Definition 28 and Theorem 31. Separate fitted $\ln2$-like constants in different platforms do not count as a constellation.
+**Experimental row for Landauer-ledger constellations.** A cross-protocol claim that PU is supported by repeated appearances of $\ln2$ must satisfy Corollary 13.0k: the same structural $\varepsilon_0=\ln2$ must be inherited from Proposition 5 and Theorem J.1 and consumed through independent finite-response maps; any physical reset row must separately satisfy Definition 28 and Theorem 31. Separate fitted $\ln2$-like constants in different platforms do not count as a constellation.
 
 **Table 13.1: Falsifiable Predictions and Current Status**
 
@@ -2060,22 +2057,22 @@ A positive result must show the clock-flow slope, the stall/null condition, and 
 | Chronometric curvature phase/dephasing | $\hbar\lvert\dot\Theta\rvert/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
 | Retained entropic clock-flow | On accepted $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, $\Delta\mathcal T_R=\Delta\Sigma_R^{\mathrm{ECF}}/\ln2$; zero retained entropy/update flow gives $\Delta\mathcal T_R=0$; record-current estimates with nonzero registered mean obey $\operatorname{Var}(\widehat{\Delta\mathcal T_R})\Sigma_T/\langle\widehat{\Delta\mathcal T_R}\rangle^2\ge2$ | Barontini-type cold-atom bright/dark-sector analogue clocks, reservoir-swap quantum simulators, photonic/ion-trap retained-record clocks, and stochastic record-current tests with null-exchange windows | Definition O.3f; Theorem O.3f; Corollary O.3g; Barontini [2026] as analogue only | ◐ certificate-gated finite-record theorem; ○ protocol-specific tests pending |
 | Actualization threshold under engineered leakage | On branches with accepted $\mathfrak C_{\mathrm{act}}$, commit onset occurs when the retained link ledger reaches the certified $C_{\max}$; on the residual-budget minimal branch $C_{\max}^*=2\ln2$ nats per link-cycle and $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ | controlled-leakage interferometry with a locked ledger-to-laboratory bridge required | Definition E.2a.4; Proposition E.2a.5; Definition E.2a.6; Corollary M.6.14b.1 | ◐ certificate-gated branch prediction; ○ untested |
-| Landauer-ledger constellation | The same structural $\varepsilon_0=\ln2$ must appear through independent locked maps: metered actualization, retained entropic clock-flow, conditional horizon phase grid $x\equiv N\ln2\pmod{2\pi}$, and finite record-current TUR; no platform-specific refitting of the unit is allowed, and physical reset rows retain the separate Definition 28/Theorem 31 gate | multi-platform finite-register, horizon-analogue, and stochastic-current protocols entered as Definition 13.0i witnesses | Proposition 5; Lemma J.1; Theorem 31 for registered reset rows; Definition 13.0i; Corollary 13.0k; Definition O.3f; Proposition Q.0.19; Theorem D.8.7f; Corollary D.8.7g | ◐ multi-lock evidence standard; ○ protocol constellation pending |
+| Landauer-ledger constellation | The same structural $\varepsilon_0=\ln2$ must appear through independent locked maps: metered actualization, retained entropic clock-flow, conditional horizon tolerance grid $\operatorname{dist}_{2\pi}(x,N\ln2)\le\varepsilon_{\mathrm{peak}}$ around exact central labels, and finite record-current TUR; no platform-specific refitting of the unit is allowed, and physical reset rows retain the separate Definition 28/Theorem 31 gate | multi-platform finite-register, horizon-analogue, and stochastic-current protocols entered as Definition 13.0i witnesses | Proposition 5; Theorem J.1; Theorem 31 for registered reset rows; Definition 13.0i; Corollary 13.0k; Definition O.3f; Proposition Q.0.19; Theorem D.8.7f; Corollary D.8.7g | ◐ multi-lock evidence standard; ○ protocol constellation pending |
 | Cone-saturation residual floor | With accepted $\mathfrak C_{\mathrm{cone}}$, retained sector front-speed splitting in vacuum is represented by a pre-locked misalignment functional satisfying $\xi_{\mathrm{cone}}\le\xi_{\mathrm{res}}$; no universal no-birefringence theorem is asserted without that certificate | multi-messenger timing, polarization, and in-vacuo dispersion tests constrain the future certificate | Definition O.7.2.5; Corollary 46a; Theorem F.0 Condition 4 | ◐ certificate-gated structural test; ○ existing bounds constrain certificate choices |
 | Predictive GSL / null-slack tomography | With accepted $\mathfrak C_{\mathrm{PGSL}}$, retained generalized entropy satisfies $\Delta S_{\mathrm{out}}+\Delta\mathcal A/(4G)\ge0$ on covered horizon cuts; with accepted $\mathfrak C_{\mathrm{NC}}$, the QNEC/null-slack ledger is nonnegative and zero slack selects the reversible Einstein branch | local horizon analogues, modular-flow tomography, and Clausius-defect null-tomography protocols constrain the finite cut records | Definition 12.5.3l; Theorem 12.5.3m; Definition 12.5.3n; Proposition 12.5.3o; Theorem 12.1g | ◐ certificate-gated branch prediction; ○ protocol-specific tests pending |
 | Self/world predictive complementarity | With accepted $\mathfrak C_{\mathrm{SW}}$, external task capacity obeys $C_{\mathrm{world}}\le B_C-C_{\mathrm{sh}}-c_{\mathrm{SPAP}}\log(1/\delta_{\mathrm{self}})/\delta_{\mathrm{self}}^2$ for certified SPAP-near self-model tasks | AI metacognition/world-task scaling, cognitive-load, and neuroscience bandwidth protocols with a locked task split | Definition 14.1d; Proposition 14.1e; Remark 14.1f | ◐ certificate-gated allocation test; ○ protocol-specific tests pending |
 | Predictive free-energy envelope | On accepted $\mathfrak C_{\mathrm{Pred2}}$ branches, $d\mathbb E[-V]/dt\ge0$ on the Lyapunov window and the running viable envelope $\widehat F_{\max}(t)$ is nondecreasing | learning-curve, evolutionary-lineage, or structure-growth tests with inheritance/archive ledger fixed before comparison | Definition D.6.5c; Proposition D.6.5d; Theorem D.6.5a | ◐ certificate-gated envelope law; ○ domain ledgers pending |
 | Marginal predictability / criticality | Criticality claims require $\mathfrak C_{\mathrm{crit}}$ and report $d_{\mathrm{crit}}\le\epsilon_{\mathrm{crit}}$; exponents inherit the universality-class entry and are not fixed by PCE alone | finite-size scaling, avalanche, $1/f$, or cosmological-spectrum tests with a pre-registered critical manifold | Definition P.8.9a.12.0c; Proposition P.8.9a.12.0d | ◐ certificate-gated criticality claim; ○ not a core theorem |
-| Reflexive-charge loop ledger | Closed retained predictive loops satisfy $N\ln2+\Delta=2\pi k$ with $k\in\mathbb Z$; nonzero exact sectors require positive overhead above Landauer baseline | closed-loop interference/thermodynamic overhead protocols and finite phase-grid audits | Definition Q.0.7g.1; Proposition Q.0.7g.2; Proposition Q.0.7f; Corollary Q.0.7g | ✓ fixed-loop sector theorem; ◐ protocol bridge pending |
-| Predictive-equivalence ledger | With accepted $\mathfrak C_{\mathrm{PEq}}$, definiteness, temporal access, action phase, finite speed, and curvature readings are projections of the same retained update-cost record through their existing unit bridges | Wigner-friend-style perspective tests, complexity-asymmetric temporal-access protocols, and unit-bridge consistency audits | Definition M.6.6a; Proposition M.6.6b; Corollary O.4.3; Theorem Q.0.1 | ◐ certificate-gated compression test; ○ protocol-specific tests pending |
+| Reflexive-charge loop ledger | Closed retained predictive loops satisfy $N\ln2+\Delta=2\pi k$ with $k\in\mathbb Z$; nonzero exact sectors require positive structural phase-defect overhead in the Q.0.7f--g ledger | closed-loop interference and finite phase-grid audits; a thermodynamic reading additionally requires the eventwise reset calibration (Q.0.7e.0) | Definition Q.0.7e with Equation (Q.0.7e.0); Definition Q.0.7g.1; Proposition Q.0.7g.2; Proposition Q.0.7f; Corollary Q.0.7g | ✓ fixed-loop structural theorem; ◐ physical bridge pending |
+| Predictive-equivalence ledger | With accepted $\mathfrak C_{\mathrm{PEq}}$, definiteness, temporal access, action phase, finite speed, and curvature readings are projections of the same retained update-cost record through their existing unit bridges | Wigner-friend-style perspective tests, certificate-relative model-access asymmetry protocols under Theorem M.10.5's hypotheses, and unit-bridge consistency audits | Definition M.6.6a; Proposition M.6.6b; Corollary O.4.3; Theorem Q.0.1 | ◐ certificate-gated compression test; ○ protocol-specific tests pending |
 | Report-induced expectation CC | On the expectation-mediated branch, seen false reports can produce a report-content-aligned later outcome shift $\delta_{\mathrm{false}}\ne0$ while unseen and delayed-report controls remain null; CTB subbranch requires target-vector alignment and vanishing orthogonal residual | dedicated blinded true/false/unseen/delayed QRNG or finite-POVM expectation protocol required | Theorem 51; Definition 34; Corollary 37a; Protocol 1a | ◐ branch prediction; ○ untested |
 | Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch; incidence $253:77:21:5:1$; controlled weight-4 fibers form $1771$ six-tetrad sextets | dedicated 24-mode residual-noise and decoder-boundary tests required | Theorem Z.13b.3; Corollary Z.13b.5; Protocol 4.4 | ◐ branch prediction; ○ untested |
 | Golay-QEC bootstrap | On accepted $\mathfrak C_{\mathrm{GQEC}}$ branches, the punctured Golay witness supplies a $[[23,1,7]]$ CSS code inside a finite physical syndrome/recovery/threshold ledger; direct Golay statistics alone do not certify protected computation | 23/24-mode syndrome extraction, logical-error scaling, leakage/correlation audits, and non-transversal resource-injection tests | Definition A.0.1q.1; Theorem A.0.2a; Corollary A.0.2b; Proposition Z.13b.7 | ◐ certificate-gated foundation test; ○ architecture-pending |
 | Golay-Steiner octad stiffness | normalized Hessian spectrum $0^{(1)}\oplus352^{(23)}$ on the exact octad stiffness branch | classical-emulator audit available now; physical 24-mode quadratic-response spectroscopy with $759$-term octad coupling is architecture-pending | Corollary Z.13b.1a; Definition T.10a; Lemma T.2; Protocol 4.5 | ◐ branch prediction (emulator gate); ○ untested (physical gate) |
 | Cosmological acceleration lock | $g_0=c^2\sqrt{\Lambda}/8$; $\Sigma_\dagger=c^2\sqrt{\Lambda}/(16\pi G)$ | $g_0\sim1.2\times10^{-10}\,\mathrm{m/s^2}$; surface-density tests pending | Cor H.1, Cor H.1a, Cor I.3a | ◐ bridge-law branch; ○ redshift/lensing tests pending |
 | Primordial complexity product | $A_s r=A_Qe^{-22}/(4\pi^2)$; leading $A_Q=1$ gives $7.07\times10^{-12}$ | tensor measurement pending | Corollary U.65a; Section 13.10.6 | ◐ branch prediction; ○ untested |
-| Conditional $A_2$ internal absolute-scale projection | $\Sigma_\nu=30.519194260\,\mathrm{meV}$, $m_\beta=4.63977871\,\mathrm{meV}$; cited oscillation splittings are not matched | conditional cosmology and beta-endpoint comparison | Corollary T.24.16a | ◐ internal branch; ✗ oscillation closure |
-| Oscillation-anchored $A_2$ calibration | $\Sigma_\nu=58.565457244\,\mathrm{meV}$, $m_\beta=8.90360209\,\mathrm{meV}$ | empirical calibration comparison, not an internal-branch prediction | Corollary T.24.16a | ◐ calibration row; ○ prospective comparison |
+| Conditional $A_2$ internal absolute-scale projection | $\Sigma_\nu=30.519194260\,\mathrm{meV}$, $m_\beta=4.62339623\,\mathrm{meV}$; cited oscillation splittings are not matched | conditional cosmology and beta-endpoint comparison | Corollary T.24.16a | ◐ internal branch; ✗ oscillation closure |
+| Oscillation-anchored $A_2$ calibration | $\Sigma_\nu=58.565457244\,\mathrm{meV}$, $m_\beta=8.87216457\,\mathrm{meV}$ | empirical calibration comparison, not an internal-branch prediction | Corollary T.24.16a | ◐ calibration row; ○ prospective comparison |
 | Proper-acceleration entropy drag | $\mathcal Q_a=q_{\mathrm{act}}$ | dedicated acceleration calorimetry required | Cor N.12b | ◐ proper-acceleration branch; ○ untested |
 | Predictive record-current TUR | $\operatorname{Var}(J_T)\Sigma_T/\langle J_T\rangle^2\ge2$ on every Blackwell-PCE classical record quotient with $\langle J_T\rangle\ne0$ | stochastic record-current and entropy-production tests | Thm D.8.7f; Cor D.8.7g | ✓ finite record theorem; ○ protocol-specific tests |
 | Scalar-channel hyperon spin filter | short-range $\Lambda\bar\Lambda$ nonzero; long-range, same-sign, spin-zero controls vanish | collider correlation tests | Cor Z.8k.1a | ◐ scalar-channel branch |
@@ -2094,7 +2091,7 @@ after the Blackwell-PCE record channel and entropy-production ledger have been f
 
 | Prediction | Dominant Uncertainty Source | Estimated Magnitude |
 |:-----------|:---------------------------|:--------------------|
-| $\alpha^{-1}$ | exact sinc-core arithmetic plus diagnostic-only finite Ward hypercharge-recoil (operator realization open) residual; no residual contribution is shared with the bulk, interface, electromagnetic-projection, curvature, sinc-transport, or future residual ledgers | candidate branch: degenerate residual interval $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=137.03599917753023\ldots$; passive-complement downgrade interval width $3.759913047\times10^{-9}$; $\pm0.000060$ remains only a diagnostic budget |
+| $\alpha^{-1}$ | exact sinc-core arithmetic plus diagnostic-only finite Ward hypercharge-recoil (operator realization open) residual; no residual contribution is shared with the bulk, interface, electromagnetic-projection, curvature, sinc-transport, or future residual ledgers | candidate branch: degenerate residual interval $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cand}}=137.03599917753023\ldots$; passive-complement downgrade interval width $3.759913047\times10^{-9}$; $\pm0.000060$ remains only a diagnostic budget |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
 | $N_{\mathrm{gen}}$ | Minimal admissible count $3$ on the connected regular uniform-charge anomaly/CP branch with global/torsion cancellation; exact selected count $3$ only under the additive-monotone objective of Proposition R.3.5.1a; $D_4$ triality and $E_8$/Leech are compatibility checks | branch-discrete |
 | $D$ | Exact in the Appendix Z Bures tangent-cell mode-channel contract | branch-discrete |
@@ -2120,9 +2117,9 @@ The branch predicts $\mathcal Q_a=q_{\mathrm{act}}$ and no proper-acceleration U
 $$
 \Sigma_\nu=30.519194\,\mathrm{meV},
 \qquad
-m_\beta=4.63978\,\mathrm{meV},
+m_\beta=4.62340\,\mathrm{meV},
 \qquad
-\frac{m_\beta}{\Sigma_\nu}=0.15203.
+\frac{m_\beta}{\Sigma_\nu}=0.15149.
 $$
 These are conditional absolute-scale projections. The same branch does not match the cited mass-squared splittings and therefore is not an oscillation-data closure.
 
@@ -2142,21 +2139,28 @@ S_{CP}(t)e^{-W_B(t)}
 \,dt
 \right].
 $$
-The displayed validation run uses the reduced product form
+The displayed illustrative reduction is
+
 $$
 \eta_B^{\mathrm{illustr}}
 =
 \mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}e^{-\kappa_B}
-=
-(6.2\pm0.5)\times10^{-10},
+\approx
+6.15\times10^{-10},
 \qquad
-\kappa_B=\kappa_{EW}/2+\varepsilon_0/N_g=19.48.
+\kappa_B
+=
+\frac{\kappa_{EW}}2+\frac{\varepsilon_0}{N_g}
+=
+19.481049060\ldots.
 $$
-This value is theorem-level only after an accepted $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or APS-Kubo certificate $\mathfrak C_B^{\mathrm{APSK}}$ fixes the compact Morse-Bott electroweak instanton record supplying $\kappa_{EW}=38.5$, the regular anomaly/CP and additive-monotone family-selection record supplying $N_g=3$, the CP-sector record, sphaleron coefficient, washout profile, transport window, quadrature ledger, photon normalization, and residual interval before comparison.
 
-**Observational Status:** The Planck measurement $\eta_B^{obs}=(6.12\pm0.04)\times10^{-10}$ is consistent with the displayed validation run at its model/threshold status.
+The number uses the illustrative factors $\mathcal C_{\mathrm{eff}}=0.282$, $\mathcal F_{CP}=0.9997$, and $f_{\mathrm{wash}}=0.63$. The current archive fixes the displayed exponent only on the registered Steiner response-action, midpoint-readout, parallel-family-saddle, and family-selection branches; the transport factors and their covariance require the accepted transport certificate.
+This value is theorem-level only after an accepted $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or APS-Kubo certificate $\mathfrak C_B^{\mathrm{APSK}}$ fixes the Steiner active-pair action and scale-bridge record supplying $\kappa_{EW}=77/2$, the regular anomaly/CP and additive-monotone family-selection record supplying $N_g=3$, the CP-sector record, sphaleron coefficient, washout profile, transport window, quadrature ledger, photon normalization, and residual interval before comparison.
 
-**Falsification Criterion:** A future value outside the accepted forward interval would falsify the accepted baryogenesis certificate if such a certificate is supplied; before acceptance, it falsifies the displayed validation branch or one of its transport inputs.
+**Observational Status:** The Planck measurement $\eta_B^{obs}=(6.12\pm0.04)\times10^{-10}$ is comparison data. No theory pull or agreement statement is defined before acceptance of a source, transport, freeze-out, washout, normalization, residual, and covariance certificate.
+
+**Falsification Criterion:** A future value outside an accepted forward interval would falsify that accepted baryogenesis certificate. No numerical falsification interval exists on the current certificate-pending branch.
 
 **Correlated Branch Prediction (Theorem Y.11):** The baryogenesis hierarchy relation of Theorem Y.11 gives a leading square-root sensitivity on the same transport branch, so within the same prefactor regime any BSM modification to the electroweak scale produces correlated shifts $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$.
 

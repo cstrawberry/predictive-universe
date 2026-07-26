@@ -62,7 +62,7 @@ define the declared additive-temperature branch. More general backgrounds and no
 
 ### N.3.3 Internal Thermodynamic Costs from "Predictive Acceleration"
 
-Internal implementation heating is distinct from the proper-acceleration/Unruh branch. Choose an operational throughput coordinate $A_{\mathrm{pred}}$ measured per unit proper time—for example a registered completed-reset rate or a separately defined complexity-update rate—and specify its implementation before comparing costs. Theorem 31 supplies the structural entropy statement $\varepsilon_0=\ln2$ and, on a registered reset branch, $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; conversion of that statement into heat requires the implementation's reset temperature, activity fraction, and dissipation ledger.
+Internal implementation heating is distinct from the proper-acceleration/Unruh branch. Choose an operational throughput coordinate $A_{\mathrm{pred}}$ measured per unit proper time--for example a registered completed-reset rate or a separately defined complexity-update rate--and specify its implementation before comparing costs. Definition 28 and Definition J.1 register the binary structural quotient, and Theorem J.1 gives its log-cardinality $\varepsilon_0=\ln2$. On a separately registered physical-reset branch, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; conversion into heat requires the implementation's reset temperature, activity fraction, and dissipation ledger.
 
 Suppose that implementation supplies a generated-heat rate $\dot Q_{\mathrm{gen}}(A_{\mathrm{pred}})$, a cooling law $\dot Q_{\mathrm{diss}}(T)$, and a finite thermal response. If the resulting internal temperature affects the prediction channel according to the monotonicity hypothesis of Lemma N.4, the associated implementation-specific overhead may be recorded as $C_{\mathrm{noise,internal}}(A_{\mathrm{pred}})$ inside $C_{\mathrm{req}}$. No such overhead follows from SPAP or Landauer alone without this heat-balance bridge.
 
@@ -976,7 +976,7 @@ The modular KMS identity of Theorem G.1.9.5 is a representation statement and do
 
 
 
-**Theorem N.4 (Activity-Conditioned Steady-State Exchange Bound).** Assume a registered active boundary channel whose physical-time certificate states that every completed exchange cycle has duration at least $\tau_{\min}>0$. If $r_e$ is its completed-cycle rate, then
+**Theorem N.4 (Activity-Conditioned Steady-State Exchange Bound).** Assume a registered active boundary channel on which completed exchange cycles are serialized, so distinct cycles on that channel do not overlap in physical time, and whose physical-time certificate states that every completed cycle has duration at least $\tau_{\min}>0$. If $r_e$ is its completed-cycle rate, then
 $$
 0\le r_e\le\frac1{\tau_{\min}}.
 $$
@@ -1372,7 +1372,7 @@ $$
 
 for all CPTP maps $\mathcal{E}$ and all density operators $\rho, \sigma$. Examples include the trace distance $D_{tr}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$, the relative entropy $S(\rho \| \sigma) = \mathrm{tr}(\rho \ln \rho - \rho \ln \sigma)$ when $\text{supp}(\rho) \subseteq \text{supp}(\sigma)$, quantum fidelity-derived measures [Uhlmann 1976; Jozsa 1994], and generalized relative entropy monotones [Petz 1986; Ruskai 1994].
 
-**Theorem N.10 (ND-RID Data Processing and Refresh-Branch Contractivity).** The 'Evolve' channel $\mathcal{E}_N$ implementing ND-RID dynamics (Definition 27) is CPTP and therefore satisfies the data processing inequality with non-expansive trace-distance factor $0\le f_{RID}\le1$. On refresh/minorization branches satisfying Lemma E.1 it is strictly contractive:
+**Theorem N.10 (ND-RID Data Processing and Refresh-Branch Contractivity).** On the Hilbert/instrument branch, assume that the averaged ND-RID `Evolve` update $\mathcal E_N$ is represented by a CPTP map and therefore satisfies the data processing inequality with non-expansive trace-distance factor $0\le f_{RID}\le1$. On refresh/minorization branches satisfying Lemma E.1 it is strictly contractive:
 
 $$
 D_{tr}(\mathcal{E}_N(\rho), \mathcal{E}_N(\sigma)) \leq f_{RID} \cdot D_{tr}(\rho, \sigma)
@@ -1599,7 +1599,7 @@ Therefore the entropy flow rate $d\mathcal S/d\tau$ depends only on the relation
 
 **Step 4 (Converse on the non-compensation branch).** Suppose a retained ND-RID coupling datum differs between matter sectors. This may be a reset-support capacity datum, an entropy-flow normalization, a stress-energy source coefficient, or, on refresh/minorization branches, a contractivity factor $f_{RID}^{(i)}$. At fixed $\mathcal I_{rel}$, the corresponding entropy-flow or stress-energy maps acquire sector-dependent contributions. On the non-compensation branch — under which these sector-dependent contributions are not exactly offset by matching sector-dependent terms elsewhere in the stress-energy or relational-information maps — the ratio $m_I/m_G$ acquires matter-dependent corrections, contradicting universal EP. Off the non-compensation branch, sector-dependent terms can in principle cancel between numerator and denominator of $m_I/m_G$, leaving EP undetected.
 
-Therefore, on the non-compensation branch, EP holds if and only if the retained ND-RID coupling ledger is universal. ∎
+Therefore universality of the complete retained ledger is sufficient for EP. On the non-compensation branch, every sector variation that changes the retained ratio $m_G/m_I$ violates EP; a sector variation that leaves that ratio constant is not excluded. The converse is therefore constancy of the retained source-to-response ratio on the tested probe class, as in Theorem N.11a, not equality of every ledger entry. ∎
 
 
 **Corollary N.11.1 (EP Violations as First-Principles Coupling-Ledger Deviations).** Use the standard Eötvös convention of Theorem N.8.2,
@@ -1813,7 +1813,20 @@ The equivalence-principle chain additionally requires universality of the retain
 
 For systems with high internal complexity ($C_{agg} > C_{op}$), the equivalence principle receives corrections.
 
-**Theorem N.8 (Complexity Correction to the Equivalence Principle on the CC-Gravitational Response Branch).** On the CC-gravitational response branch — comprising (a) the Appendix S gravitational-decoherence model with rate $\Gamma_{\mathrm{deco}} = (\Delta E/\hbar) K_{\mathrm{eff}} P_{context}$ at the system's boundary, (b) $\mathfrak B_{mass}$ (Theorem N.5) for the conditional inertial-mass coefficient, and (c) the retained-energy / instantaneous-stress-energy convention of Theorem L.3 for the gravitational source — assume that both induced mass corrections are small relative to the baseline inertial mass $m_I$. Then
+**Theorem N.8 (Complexity Correction to the Equivalence Principle on the CC-Gravitational Response Branch).** On the CC-gravitational response branch — comprising (a) the Appendix S gravitational-decoherence model with rate $\Gamma_{\mathrm{deco}} = (\Delta E/\hbar) K_{\mathrm{eff}} P_{context}$ at the system's boundary, (b) $\mathfrak B_{mass}$ (Theorem N.5) for the conditional inertial-mass coefficient, and (c) the retained-energy / instantaneous-stress-energy convention of Theorem L.3 for the gravitational source — assume in addition the response ledger
+$$
+\left.\frac{d\mathcal S}{d\tau}\right|_{\mathrm{CC}}
+=
+\frac{\mathcal I_{\mathrm{rel}}}{2\tau_{\min}}
+\left(1+\Gamma_{\mathrm{deco}}\tau_{\min}\right),
+$$
+the retained-energy assignment
+$$
+E_{\mathrm{grav}}^{\mathrm{inst}}
+=
+\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c,
+$$
+and that both induced mass corrections are small relative to the baseline inertial mass $m_I$. The two displayed ledgers are independent constitutive assumptions connecting the Appendix S decoherence rate to the inertial and gravitational ledgers; neither follows from (a)–(c). Then
 
 $$
 \frac{m_G^{(CC)}-m_I^{(CC)}}{m_I^{(CC)}}
@@ -2206,21 +2219,32 @@ Because $\alpha_{IR}>0$, division is defined and cancels $\alpha_{IR}$. Substitu
 
 ### N.11.8 The Complete Derivation Chain
 
-On the joint saturated-boundary/activity completed-reset and action--entropy branches, the conditional chain to inertial mass is:
-
+On the joint carrier, structural-binary, saturated-boundary/activity, completed-reset, and action–entropy branches, the conditional dependency ledger to inertial mass is
 $$
-\boxed{K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon_0 = \ln 2 \xrightarrow{\text{Eq Q.18}} \delta = \sqrt{8\varepsilon_0} \cdot L_P \xrightarrow{\text{Thm N.5}} m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P}
+\boxed{
+\begin{aligned}
+(\mathrm{O1})\text{--}(\mathrm{O3})+(\mathrm{FC})
+&\xrightarrow{\text{Thm 15}}K_0=3,\ N_{\mathrm{vis}}^{\min}=8
+\xrightarrow{\text{Hilbert distinguishability; Thm 23}}d_0\ge8
+\xrightarrow{\text{Thm Z.2 comparator}}d_0=8,\\
+\text{registered binary quotient}
+&\xrightarrow{\text{Def 28; Thm J.1}}\varepsilon_0=\ln2,\\
+(d_0,\varepsilon_0)=(8,\ln2)
+&\xrightarrow{\text{Eq Q.18}}\delta=\sqrt{8\varepsilon_0}\,L_P
+\xrightarrow{\text{Thm N.5}}m=\frac{\mathcal I_{\mathrm{rel}}}{2\sqrt{8\varepsilon_0}}\,m_P.
+\end{aligned}
+}
 $$
 
 Steps 1--5 list the registered structural chain; Steps 6--9 are branch-conditional implications requiring the physical-time equilibrium, saturated-activity, saturated-boundary, and action--entropy certificates stated below:
 
 | Step | Result | Origin |
 |:-----|:-------|:-------|
-| 1 | $K_0 = 3$ | Horizon Constant from SPAP encodability (Theorem 15) |
-| 2 | $N_{\mathrm{vis}}^{\min}=8$, $d_0 = 8$ | Finite operational-context floor and minimal Hilbert-carrier saturation: $N_{\mathrm{vis}}^{\min}=2^{K_0}$ and $d_0=N_{\mathrm{vis}}^{\min}$ on the minimal complex branch (Theorem 15; Theorem 23) |
-| 3 | $\varepsilon_0 = \ln 2$, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ | Structural SPAP cost and physical implementation bound (Theorem 31, Appendix J) |
-| 4 | $\tau_{\min}=\sqrt{8\varepsilon_0}\,t_P$ | Conditional calibration on the joint Eq. Q.18 and saturated Proposition Q.6.1 branch |
-| 5 | $C_{\max} = 2\varepsilon_0$ | PCE-optimal structural channel capacity (Equation E.15) |
+| 1 | $K_0=3$ | Least visited-context log-capacity on Theorem 15's (O1)–(O3), (FC) realization class |
+| 2 | $N_{\mathrm{vis}}^{\min}=8$, $d_0\ge8$, with $d_0=8$ on the comparator branch | Theorem 15 gives the context count; Hilbert distinguishability and Theorem 23 give the carrier lower bound; Theorem Z.2's same-class comparator gives equality |
+| 3 | $\varepsilon_0=\ln2$; independently, $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ on a registered reset branch | Structural quotient: Definition 28, Definition J.1, Theorem J.1; physical ledger: Theorem 31; a positive physical floor requires $H_q(P\mid R)\ge h_{\min}>0$ |
+| 4 | $\tau_{\min}=\sqrt{8\varepsilon_0}\,t_P$ | Conditional calibration on the joint Equation Q.18 and saturated Proposition Q.6.1 branch |
+| 5 | $C_{\max}^*=2\varepsilon_0$ | Conditional residual-budget assignment of Equation E.15, not a consequence of SPAP or reset heat |
 | 6 | Modular KMS representation; physical equilibrium only with an independent selector | Theorems G.1.9.3c and G.1.9.5; no activity rate follows |
 
 

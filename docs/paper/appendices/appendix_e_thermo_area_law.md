@@ -6,7 +6,7 @@ This appendix develops branch-qualified information-theoretic and thermodynamic 
 
 The derivation proceeds logically:
 1.  Separate the structural reset-support value $\varepsilon_0=\ln2$ (Proposition 5; Appendix J, Theorem J.1) from the physical implementation bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ on the registered reset branch of Definition 28 and Theorem 31; a positive physical floor additionally requires $H_q(P\mid R)\ge h_{\min}>0$. (Section E.2: Theorem E.1, Corollary E.1)
-2.  Establish the structural reset-support capacity deficit caused by the completed SPAP reset: resetting an $r$-dimensional register inside the $d_0$-dimensional MPU Hilbert space bounds the completed-cycle capacity by $C(\mathcal{E}_N)\le\ln d_0-\ln r$, hence by $\ln d_0-\ln2$ for the binary SPAP reset. (Section E.4: Proposition E.2a)
+2.  Establish the reset-support capacity deficit caused by a registered completed reset: resetting an $r$-dimensional factor inside the $d_0$-dimensional MPU Hilbert space bounds the completed-cycle capacity by $C(\mathcal E_N)\le\ln d_0-\ln r$, hence by $\ln d_0-\ln2$ for a binary reset. SPAP alone does not register this architecture. (Section E.4: Proposition E.2a)
 3.  Establish strict trace-distance contractivity ($f_{\mathrm{RID}} < 1$) and the corresponding strict capacity bound ($C(\mathcal{E}_N)<\ln d_0$) on the separate refresh/minorization branch where the averaged channel contains a nonzero input-independent full-state refresh component. (Section E.3: Lemma E.1; Section E.4: Theorem E.2)
 4.  Establish the geometric scaling of effective independent boundary information channels, conditional on emergent geometric regularity (Theorem 43), incorporating correlation effects. (Section E.5: Theorem E.3)
 5.  Synthesize the per-channel and boundary-count bounds into the conditional area bound of Theorem E.6; obtain equality on its capacity-achieving, entropy-saturating, additive-ledger branch; and define the operational coupling through the Bekenstein–Hawking normalization. (Section E.6)
@@ -72,7 +72,7 @@ Define $\varepsilon_{\mathrm{diss}}:=\Delta S_{\mathrm{tot}}/k_B$. Rearrangement
 
 **E.3 Strict Contractivity of the Average 'Evolve' Channel**
 
-On the refresh/minorization branch, the averaged Evolve channel contains a nonzero input-independent full-state refresh component. This branch yields strict trace-distance contractivity. The completed SPAP reset by itself yields the reset-support capacity deficit of Proposition E.2a; it does not by itself require full-state trace-distance contraction on all of $\mathcal{H}_{d_0}$.
+On the refresh/minorization branch, the averaged `Evolve` channel contains a nonzero input-independent full-state refresh component and is strictly trace-distance contractive. A registered completed reset by itself yields only Proposition E.2a's support-capacity deficit; it does not require full-state contraction.
 
 
 **Lemma E.1 (Strict Contractivity of the Average "Evolve" Channel).**
@@ -203,7 +203,7 @@ Combining the three cases, each obstruction forbids a perfect free transfer, dup
 
 **E.4 Limited Information Capacity Across Boundaries due to ND–RID**
 
-There are two capacity statements used in PU. First, the completed SPAP reset gives a structural support-loss bound: if an $r$-dimensional register inside $\mathcal{H}_{d_0}$ is reset to a fixed ready state, then the completed-cycle output support has dimension at most $d_0/r$, so the regularized classical capacity is bounded by $\ln d_0-\ln r$ (Proposition E.2a). For the binary SPAP reset, $r=2$.
+There are two independent capacity statements. First, a registered completed reset of an $r$-dimensional factor confines completed outputs to support dimension at most $d_0/r$, hence $C(\mathcal E_N)\le\ln d_0-\ln r$; for a binary factor, $r=2$ (Proposition E.2a).
 
 Second, on the refresh/minorization branch, strict contractivity is ensured by the presence of a nonzero input-independent full-state refresh component in the averaged ND-RID "Evolve" channel (Lemma E.1). Physical overhead only adds nonnegative dissipation; non-unitarity alone is not sufficient to guarantee strict trace-distance contraction. On this branch the average Evolve channel $\mathcal{E}_N$ satisfies
 $$
@@ -305,8 +305,8 @@ $$
 The claimed bound follows, with no rank condition on $\sigma$. ∎
 
 
-**Proposition E.2a (Reset-Support Capacity Deficit for a Completed SPAP Cycle).**
-Let the completed SPAP reset branch of an MPU cycle act on a factorization
+**Proposition E.2a (Reset-Support Capacity Deficit for a Registered Completed Cycle).**
+Let a registered completed-reset branch act on the factorization
 $$
 \mathcal H_{d_0}=\mathcal H_K\otimes\mathcal H_R,
 \qquad
@@ -325,7 +325,7 @@ $$
 C(\Phi)\le \ln d_0-\ln r.
 \tag{E.2a-cap}
 $$
-For the binary SPAP reset, $r=2$, hence
+For a binary registered reset, $r=2$, hence
 $$
 C(\Phi)\le \ln d_0-\ln2.
 \tag{E.2a-bin}
@@ -352,22 +352,15 @@ S\!\left(\sum_m p_m\Phi(\rho_m)\right)
 \le
 \ln(d_0/r).
 $$
-For $n$ uses of the channel on any input ensemble $\{p_m,\rho_m^{(n)}\}$ on $\mathcal H_{d_0}^{\otimes n}$, possibly entangled across uses, the output of $\Phi^{\otimes n}$ obeys
+For every $n$ and every input state $\rho^{(n)}$,
 $$
-\Phi^{\otimes n}\bigl(\rho^{(n)}\bigr)
-\in
-\operatorname{span}\!\left\{
-\Phi(\sigma_1)\otimes\cdots\otimes\Phi(\sigma_n)
-:\sigma_i\in\mathcal S(\mathcal H_{d_0})
-\right\}
+\operatorname{supp}\!\left[\Phi^{\otimes n}(\rho^{(n)})\right]
 \subseteq
-\bigl(\mathcal H_K\otimes\operatorname{span}\{|0\rangle_R\}\bigr)^{\otimes n}
+\left(\mathcal H_K\otimes\operatorname{span}\{|0\rangle_R\}\right)^{\otimes n}.
 $$
-because $\Phi^{\otimes n}$ acts componentwise on the tensor factors of any input, regardless of input correlations across the $n$ copies. Hence the output support of $\Phi^{\otimes n}$ on every input has dimension at most $(d_0/r)^n$, and
+Indeed, each output reset factor is fixed to $|0\rangle_R$, independently of correlations among the input factors. Hence every output ensemble of $\Phi^{\otimes n}$ is supported on a Hilbert space of dimension at most $(d_0/r)^n$, and therefore
 $$
-\chi^*(\Phi^{\otimes n})\le \ln\left((d_0/r)^n\right)
-=
-n(\ln d_0-\ln r).
+\chi^*(\Phi^{\otimes n})\le n\ln(d_0/r).
 $$
 Dividing by $n$ and taking the regularized HSW limit [Holevo 1998; Schumacher–Westmoreland 1997] gives
 $$
@@ -375,7 +368,7 @@ C(\Phi)=\lim_{n\to\infty}\frac1n\chi^*(\Phi^{\otimes n})
 \le
 \ln d_0-\ln r.
 $$
-The binary SPAP reset has $r=2$, giving (E.2a-bin), and the minimal MPU branch has $d_0=8$, giving (E.2a-min). ∎
+A binary registered reset has $r=2$, giving (E.2a-bin), and the minimal MPU branch has $d_0=8$, giving (E.2a-min). ∎
 
 **Remark E.2a.1 (Scope of the reset-support bound).**
 Proposition E.2a is a support-dimension theorem. It does not assert strict trace-distance contraction on all of $\mathcal H_{d_0}$. Full-state strict contraction is the separate refresh/minorization branch of Lemma E.1. The PCE residual-budget equality
@@ -384,21 +377,16 @@ C_{\max}^*=\ln d_0-\varepsilon_0
 $$
 is the saturation of the reset-support bound when the reset is binary, $\varepsilon_0=\ln2$, and no additional response-relevant overhead is retained.
 
-**Remark E.2a.2 (Substrate independence as a support-dimension condition).**
-Proposition E.2a is best read as a support-dimension theorem: the conclusion follows from the weaker condition
-$$
-\operatorname{supp}\Phi(\rho)\subseteq \mathcal H_K\otimes\operatorname{span}\{|0\rangle_R\}
-\qquad\text{for every input }\rho,
-$$
-since the HSW argument needs only the dimension of the output support, not the explicit unitary normal form. Any PPI-admissible completed binary SPAP cycle that returns one binary degree of freedom to a fixed ready state — including general physical reset implementations involving environment/Stinespring auxiliaries — produces output supports contained in the displayed kept-register-times-ready-state subspace once the response quotient is taken: response-null environment factors are removed by PPI, and any retained environment label that changes no finite protocol response is excluded by PCE. The explicit factored form $\Phi(\rho)=\operatorname{Tr}_R(U\rho U^\dagger)\otimes|0\rangle\langle0|_R$ is one canonical representative satisfying this support condition; the proof of (E.2a-cap) goes through for any channel meeting the support condition, regardless of its specific Stinespring dilation. Hence Proposition E.2a applies to every PPI-admissible completed binary SPAP branch, not only to channels in the displayed unitary normal form.
+**Remark E.2a.2 (Whole-retained-output support condition).**
+Proposition E.2a extends to any channel whose entire retained output, after the PPI quotient, has support in a fixed subspace of dimension at most $d_0/r$. Returning only $\mathcal H_R$ to $|0\rangle_R$ does not establish that condition when a retained environment or auxiliary output carries input-dependent information. Every response-active retained factor must be included in the output-support dimension before applying the HSW bound. Thus extension beyond the displayed normal form requires an explicit whole-retained-output support certificate.
 
 **Remark E.2a.3 (Branch attribution for downstream uses).**
 Two structurally distinct finite-transfer routes are now available, and downstream theorems use one or the other depending on what they need.
 
 | Downstream result | Branch used | What it needs |
 |:---|:---|:---|
-| Area-law coefficient (Thm E.6) and emergent $G$ (Eq E.9) | Reset-support (Prop E.2a) | Quantitative capacity bound; saturation gives $C_{\max}^*=2\ln2$ on $d_0=8$ |
-| Bekenstein-Hawking $S_{BH}=\mathcal A/4G$ identification | Reset-support (Prop E.2a) | Same |
+| Area-law coefficient (Theorem E.6) and $G_{\mathrm{op}}$ | Declared channel capacity together with Theorem E.3 density, capacity-achievement, entropy-saturation, and additive-ledger certificates | Proposition E.2a supplies the optional specialization $C(\mathcal E_N)=2\ln2$ only when its whole-retained-output support bound is achieved on $d_0=8$ |
+| Bekenstein--Hawking identification | The preceding saturated operational branch plus the information--entropy bridge and $G_{\mathrm{op}}=G$ calibration | Not a consequence of reset support alone |
 | Strict capacity inequality $C(\mathcal E_N)<\ln d_0$ (Thm E.2) | Refresh/minorization (Lem E.1) | Strict, possibly non-quantitative bound |
 | Mixing/primitivity, unique full-rank fixed point (Sanz et al. 2010) | Refresh/minorization (Lem E.1) | Strict trace-distance contraction $f_{RID}<1$ |
 | Data-processing contraction $f_{RID}<1$ (Thm N.10, App C, App K transport) | Refresh/minorization (Lem E.1) | Strict trace-distance contraction across multiple cycles |
@@ -504,7 +492,7 @@ For the binary one-register subledger this becomes $\Gamma_{\mathrm{Evolve}}^{(R
 
 *Proof.* The first metered commit occurs at the first time when the monotone acquisition ledger reaches $C_{\max}^{(R)}$ within the residual tolerance. Under stationary flux this time is $C_{\max}^{(R)}/\dot I_{\mathrm{acq}}^R$, and the reciprocal is the displayed rate. The final sentence is the distinction between the register subledger and the link-cycle ledger of Definition E.2a.4. ∎
 
-**Remark E.2a.10 (Metered Subledger Guardrail).** A $\ln2$ threshold is a certified binary-register write threshold, not the universal per-link ND-RID threshold. The physical cost of the recorded write is bounded below by the Landauer/SPAP floor, and any verification, syndrome, overwrite, or recovery overhead remains in the branch ledger.
+**Remark E.2a.10 (Metered Subledger Guardrail).** A $\ln2$ threshold is a certified binary-register acquisition threshold, not a universal per-link ND-RID threshold and not a heat quantum. Reversible writing or acquisition need not dissipate heat. A physical lower bound arises only for a separately registered erase, reset, or overwrite satisfying Theorem 31, in which case the bound is distribution-sensitive through $H_q(P\mid R)$; verification, syndrome, recovery, and implementation overhead remain separate ledger entries.
 
 
 
@@ -644,18 +632,17 @@ A two-sided estimate $N_{\partial A}\ge c_-\,\mathcal{A}/\delta^2$ requires an a
 **Remark E.5.1a (Connection to $\eta$ and $\chi$).**
 Lemma E.5.1 supplies the deterministic geometric upper bound behind the scaling used in Theorem E.3. The packing/orientation factor $\eta$ encodes the transversality details of the interaction graph relative to the surface, while the correlation factor $\chi$ encodes the reduction from geometric links to independent ND–RID information channels.
 
+## E.6 Conditional Area Bounds from Local Many-Body and Boundary-Channel Structure
 
-## E.6 Area Law from Entanglement and Boundary Channel Structure
+This section separates three statements: rigorous local many-body correlation bounds on their stated hypotheses, a higher-dimensional entanglement ansatz where no general theorem is available, and the operational boundary-channel bound of Theorem E.6. Operational equality additionally requires the capacity-achieving, entropy-saturating, and additive-ledger entries stated below. Identifying $G_{\mathrm{op}}$ with measured Newton $G$ is a separate external calibration, not an antecedent of the channel equality.
 
-The horizon entropy-area relationship is derived here from fundamental principles of quantum information and many-body physics, independent of gravitational field equations. This establishes the area law as a consequence of the MPU network's quantum structure.
-
-### E.6.1 Prerequisites: ND-RID Satisfies Quantum Many-Body Assumptions
+### E.6.1 Local Many-Body Branch Prerequisites
 
 **Lemma E.6.1 (Locality, Finite Propagation Speed, Mixing, and Clustering).**
-To apply Theorem E.4a and derive an area law, we use the following standard properties of local dynamics and (when stated) their consequences under the ND-RID mixing structure:
+Assume a selected ND-RID implementation carries the following local many-body data and, where indicated, their additional consequences:
 
-1. **Locality**: The interaction Hamiltonian $H$ is short-range, with finite interaction length $\ell_0$.  
-2. **Finite Lieb-Robinson Velocity**: Locality and bounded interaction strength imply a finite information propagation speed $v_{\text{LR}}$ (Proposition F.1), so that for local observables $O_A,O_B$:
+1. **Locality hypothesis:** The interaction Hamiltonian or generator is short-range, has finite interaction length $\ell_0$, and has the uniform local norm bound required by Proposition F.1.  
+2. **Finite Lieb-Robinson Velocity:** Locality and bounded interaction strength imply a finite information propagation speed $v_{\text{LR}}$ (Proposition F.1), so that for local observables $O_A,O_B$:
 $$
 \|[\mathcal{E}_N^{*n}(O_A),O_B]\| \le C \|O_A\|\|O_B\| e^{-\mu(d(A,B)-v_{\text{LR}} n\tau)}.
 \tag{E.3c}
@@ -678,7 +665,7 @@ $$
 This certificate may be discharged by a dissipative clustering theorem only after its locality, volume-uniform rapid-mixing, and any reversibility or stability hypotheses have been verified for the particular ND--RID channel family. Equations (E.3c)--(E.4b) alone do not assign a numerical value to $\xi$.
 
 *Proof.*  
-(1) is Definition 6.  
+(1) is an explicit implementation hypothesis; Definition 6 specifies reflexive transition dependence but does not imply metric locality, finite range, or a bounded local generator.  
 (2) is Proposition F.1; it depends on the locality scale and bounded local-generator norm, not on $f_{\mathrm{RID}}$.  
 (3) follows by induction. For $n=1$ it is the one-step contraction (E.2). If it holds at $n$, then, using $\mathcal E_N(\rho_{\mathrm{fix}})=\rho_{\mathrm{fix}}$,
 $$
@@ -761,41 +748,36 @@ is a separately declared semiclassical ansatz unless a model-specific area-law t
 **Remark E.6.2a (Rigorous boundary-correlation control at finite temperature).**
 For Gibbs states in any dimension, a distribution-free boundary law holds for mutual information (Theorem E.4a), which already captures the PU requirement that total correlations across $\partial A$ are controlled by boundary interaction terms.
 
-### E.6.3 Theorem E.5 (Operational Horizon Entropy Density and Definition of $G$)
+### E.6.3 Theorem E.5 (Operational Horizon Entropy Bound and Calibrated Saturation)
 
-The PU input required downstream (Section 12) is an entropy–area proportionality for local causal horizons. PU supplies this *operationally* from boundary-channel counting (Theorem E.3, Corollary E.2, and Lemma E.5.1), without requiring a general entanglement-entropy area theorem in $3+1$ dimensions.
-
-**Summary of Theorem E.5 (Operational area law and definition of the effective Newton coupling).**
-Let $\mathcal{H}$ be a causal-horizon cross-section of area $\mathcal{A}$ in the emergent geometry (Theorem 43). The maximum equilibrium boundary entropy obtainable from ND–RID channels crossing $\mathcal{H}$ obeys
+**Summary of Theorem E.5 (Operational area bound and saturated coupling).** Let $\mathcal H$ be a causal-horizon cross-section of area $\mathcal A$ on the branch of Theorem E.3, and let $S_{\mathrm{rel}}(\mathcal A)$ denote the reliable thermodynamic response entropy of the boundary channels crossing $\mathcal H$, as in Theorem E.6. Boundary-channel counting gives
 $$
-S_{max}(\mathcal{H})
-=
-k_B\left(\frac{\chi\,C_{max}(f_{RID})}{\eta\,\delta^2}\right)\mathcal{A}
-+o(\mathcal A)
-\quad\text{(equivalently, in natural units }k_B=1\text{)}
+S_{\mathrm{rel}}(\mathcal A)
+\le
+k_B\frac{\chi C(\mathcal E_N)}{\eta\delta^2}\mathcal A+o(\mathcal A).
 \tag{E.6b}
 $$
-Define the effective Newton coupling $G$ **operationally** by
+Equality holds only on the jointly capacity-achieving, entropy-saturating, additive-ledger branch stated in Theorem E.6. When the saturated coefficient is positive, define the operational coupling $G_{\mathrm{op}}$ and the operational Planck area $L_{P,\mathrm{op}}^2:=G_{\mathrm{op}}\hbar/c^3$ by
 $$
-\boxed{\quad
-\frac{1}{4G}
-:=
-\frac{\chi\,C_{max}(f_{RID})}{\eta\,\delta^2}
-\quad}
+\frac{\chi C(\mathcal E_N)}{\eta\delta^2}
+=
+\frac{1}{4L_{P,\mathrm{op}}^2}
+=
+\frac{c^3}{4G_{\mathrm{op}}\hbar}.
 \tag{E.6c}
 $$
-so that the operational area law can be written in the Bekenstein–Hawking normalization
+Then, on that branch,
 $$
-\boxed{\quad
-S_{max}(\mathcal{H})=\frac{k_B\,\mathcal{A}}{4G}
-\quad}
+S_{\mathrm{rel}}(\mathcal A)
+=
+\frac{k_Bc^3\mathcal A}{4G_{\mathrm{op}}\hbar}+o(\mathcal A).
 \tag{E.6d}
 $$
 
 **Remark E.6.3.1 (Calibration vs. derivation).**
-Equation (E.6c) is the internal PU definition of the coupling that appears in the Einstein equations derived from the Clausius relation in Section 12. Identifying this $G$ with the experimentally measured Newton constant is a calibration step external to the mathematical derivations; it fixes a relation among $\delta,\eta,\chi,$ and $C_{max}(f_{RID})$ in the microscopic model.
+Equation (E.6c) is the internal PU definition of the coupling that appears in the Einstein equations derived from the Clausius relation in Section 12; it fixes a relation among $\delta,\eta,\chi,$ and $C(\mathcal E_N)$ in the microscopic model. Identifying $S_{\mathrm{rel}}$ with thermodynamic horizon entropy, and $G_{\mathrm{op}}$ with the experimentally measured Newton constant, are separate calibration bridges external to the counting argument; neither follows from the upper bound (E.6b).
 
-**Proposition E.6.3.2 (Reverse Area-Law Implication on the Refresh Branch).** Work on the refresh-parametrized ND--RID branch
+**Proposition E.6.3.2 (Refresh-Parameter Identity and Separate Reset Ledger).** Work on the refresh-parametrized ND--RID branch
 $$
 \mathcal E_N
 =
@@ -831,20 +813,17 @@ A positive conditional-heat floor requires $H_q(P\mid R)>0$, and positive total 
 
 *Proof.* The identity $f_{\mathrm{RID}}=1-p<1$ gives $1-p<1$ and hence $p>0$. The remaining display is Theorem E.1 applied only when its registered-reset hypotheses hold. Neither $p>0$ nor information gain determines $H_q(P\mid R)$ or $\varepsilon_{\mathrm{diss}}$. ∎
 
-**Remark E.6.3.3 (Scope of the reverse implication).** An area-law coefficient by itself does not imply $p>0$ without specifying the microscopic channel branch. A strict gap caused by an unrelated noisy channel, or a coefficient introduced only by calibration, would not prove SPAP refresh. Proposition E.6.3.2 is the exact reverse statement available inside the refresh-parametrized ND-RID branch used in Lemma E.1 and Theorem E.2.
+**Remark E.6.3.3 (Scope of the refresh-parameter identity).** An area-law coefficient by itself does not imply $p>0$ without specifying the microscopic channel branch. A strict gap caused by an unrelated noisy channel, or a coefficient introduced only by calibration, would not prove SPAP refresh. Proposition E.6.3.2 is the exact reverse statement available inside the refresh-parametrized ND-RID branch used in Lemma E.1 and Theorem E.2.
 
 ### E.6.4 Connection to Channel Capacity Derivation
 
-From Theorem E.3 and Corollary E.2, the operational entropy density is
+Theorem E.3 and Corollary E.2 give the density-branch bound
 $$
-\frac{S_{max}}{\mathcal{A}}
-=
-k_B\,\sigma_{\mathrm{eff\,link}}\,C_{max}(f_{RID})
-=
-k_B\left(\frac{\chi\,C_{max}(f_{RID})}{\eta\,\delta^2}\right).
+\frac{S_{\mathrm{rel}}(\mathcal A)}{\mathcal A}
+\le
+k_B\frac{\chi C(\mathcal E_N)}{\eta\delta^2}+o(1).
 $$
-The definition (E.6c) packages this operational density into the standard normalization $S_{max}=k_B\mathcal{A}/(4G)$. If one also adopts the entanglement area-scaling ansatz (Theorem E.4') as semiclassical context, its coefficient should be consistent with the same operational density.
-
+Equality holds only under the three saturation entries of Theorem E.6. On that branch, Definition (E.6c) writes the positive saturated coefficient as $1/(4L_{P,\mathrm{op}}^2)=c^3/(4G_{\mathrm{op}}\hbar)$. If the entanglement area-scaling ansatz of Theorem E.4' is also adopted as semiclassical context, matching its coefficient to this operational density is an additional consistency requirement rather than a second derivation.
 
 ### E.6.5 Derivation of the Horizon Entropy Area Law (Unified Synthesis)
 
@@ -947,11 +926,11 @@ o(\mathcal A).
 $$
 These equations verify consistency with the Bekenstein--Hawking convention. The channel-counting argument determines the coefficient $\rho_S$; the numeral $1/4$ enters through the definition of $G_{\mathrm{op}}$. An independent derivation of that numeral would require a separately normalized gravitational or horizon-thermodynamic input.
 
-**Remark E.1 (Unit Cell Interpretation of Horizon Entropy from SPAP Cost)**
+**Remark E.1 (Illustrative Equal-Cell Restatement of Horizon Entropy)**
 
 On the density-certificate, capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6, the area-law coefficient is the effective channel density times the certified per-channel capacity. Equation (E.9) defines $G_{\mathrm{op}}$ by writing that coefficient in Bekenstein–Hawking normalization; identifying it with measured $G$ is a calibration. The following unit-cell construction is an additional interpretation on that branch.
 
-A reusable binary SPAP register has structural log-cardinality $\varepsilon_0=\ln2$ nats. This is not, by itself, generated physical entropy. If a physical branch resets a record $P$ with retained side information $R$, conditional Landauer gives
+A registered reachable binary quotient has structural log-cardinality $\varepsilon_0=\ln2$ nats. This is not, by itself, generated physical entropy. If a physical branch resets a record $P$ with retained side information $R$, conditional Landauer gives
 $$
 \frac{\Delta S_{\mathrm{env}}}{k_B}\ge H_q(P\mid R).
 $$
@@ -973,16 +952,16 @@ $$
 \ln2 = \frac{\Delta\mathcal{A}_{cell}}{4G} \quad \Rightarrow \quad \Delta\mathcal{A}_{cell} = 4G\ln2.
 \tag{E.13b}
 $$
-The total horizon entropy $S$ can then be conceptualized as arising from $N_{cells} = \mathcal{A}/\Delta\mathcal{A}_{cell}$ such independent "SPAP-entropy cells" tiling the horizon:
+On an additional illustrative equal-cell ansatz, assign each independent horizon cell the structural count $\varepsilon_0=\ln2$ and the area $\Delta\mathcal A_{\mathrm{cell}}=4G\ln2$. Then
 $$
-S = N_{cells} \cdot \Delta S_{\text{SPAP}} = \left( \frac{\mathcal{A}}{4G\ln2} \right) \ln2 = \frac{\mathcal{A}}{4G}.
+S=N_{\mathrm{cells}}\varepsilon_0
+=\left(\frac{\mathcal A}{4G\ln2}\right)\ln2
+=\frac{\mathcal A}{4G}.
 \tag{E.13c}
 $$
-This "tiling" argument self-consistently reproduces the $S=\mathcal{A}/(4G)$ formula. It provides an interpretation where the horizon entropy is composed of fundamental $\ln 2$ units, each associated with an area $4G\ln2$. The value of $G$ itself is determined by the more fundamental MPU parameters ($\delta, C_{\max}, \eta, \chi$) as per Equation (E.9). On the refresh/minorization branch, $C_{\max}(f_{\mathrm{RID}})<\ln d_0$ by Theorem E.2; PCE optimisation plausibly drives it near $\ln2$ for consistency with this unit cell interpretation in some regimes. This assumption is used here only illustratively to connect to $\Delta S_{SPAP}$ and is not required for the main derivation of the Area Law form.
+This is an algebraic restatement of the area law after the cell area and independent-additivity ansatz have been imposed. It does not derive a horizon-cell ontology, $G$, or the cell density from SPAP. Compatibility with Theorem E.6 additionally requires the independently calibrated identity $\sigma_{\mathrm{eff\,link}}C_{\max}=1/(4G)$; Theorem E.2's strict capacity bound alone supplies no saturation or value $C_{\max}=\ln2$.
 
-The consistency of this unit cell interpretation with the primary derivation in Theorem E.6 requires an alignment between the "entropy per effective channel" ($C_{\max}(f_{RID})$ in nats, from Theorem E.2) and this fundamental SPAP cost ($\ln 2$ nats). Specifically, the product of channel density and capacity per channel must yield the same overall entropy density: $\sigma_{eff_link} \cdot C_{\max}(f_{RID}) = (\text{density of SPAP cells}) \cdot \ln 2$. Since density of SPAP cells is $1/\Delta\mathcal{A}_{cell} = 1/(4G\ln2)$, this requires $\sigma_{eff_link} \cdot C_{\max}(f_{RID}) = 1/(4G)$. This is precisely what Equation (E.7) (and its natural units version, Equation E.10) states, confirming the structural consistency between the two viewpoints. Essentially, PCE optimizes the network such that the effective boundary channel capacity $C_{\max}$ (influenced by $\varepsilon_0=\ln2$) and the effective channel density $\sigma_{eff_link}$ (influenced by $\delta$) combine to yield the emergent value of $G$ and thus the Bekenstein-Hawking entropy with the standard $1/4$ coefficient.
-
-**Corollary E.6.1 (Conditional Channel Capacity in SPAP Units).** Assume residual-capacity saturation $C_{\max}^{*}=\ln d_0-\varepsilon_0$, together with $d_0=8$, $\varepsilon_0=\ln2$, and $a=2$. Then
+**Corollary E.6.1 (Conditional Residual-Capacity Arithmetic).** Assume residual-capacity saturation $C_{\max}^{*}=\ln d_0-\varepsilon_0$, together with $d_0=8$, $\varepsilon_0=\ln2$, and $a=2$. Then
 $$
 C_{\max}^{*}
 =2\ln2
@@ -996,7 +975,7 @@ C_{\max}^{*}=3\ln2-\ln2=2\ln2=a\varepsilon_0.
 $$
 $\square$
 
-**Corollary E.6.2 (Conditional MPU--SPAP Cell Ratio).** Assume $\delta^2=8\ln2\,L_P^2$, $\Delta\mathcal A_{cell}=4\ln2\,L_P^2$, and $a=2$. Then
+**Corollary E.6.2 (Conditional Length-to-Illustrative-Cell-Area Arithmetic).** Assume $\delta^2=8\ln2\,L_P^2$, $\Delta\mathcal A_{cell}=4\ln2\,L_P^2$, and $a=2$. Then
 $$
 \delta^2=a\,\Delta\mathcal A_{cell}.
 \tag{E.13e}
@@ -1011,7 +990,7 @@ $$
 $$
 $\square$
 
-*Remark.* Corollaries E.6.1 and E.6.2 establish a two-level horizon-entropy decomposition. The SPAP cell is the fundamental thermodynamic unit, carrying $\ln 2$ nats, while the MPU cell is the computational unit, carrying $C_{\max}^{*} = 2\ln 2$ nats. At the PCE-Attractor the ratio between the two levels is $a = 2$, the active kernel dimension.
+*Remark.* The two corollaries prove only the displayed arithmetic identities under their explicit residual-capacity, spacing, cell-area, and active-rank assumptions. They do not establish fundamental thermodynamic cells, a two-level ontology, or a common origin for $a$, $C_{\max}^{*}$, and the illustrative cell area.
 
 **E.7 Conditional Planck--MPU Calibration**
 
@@ -2358,9 +2337,9 @@ $$
 $$
 in natural units. $\square$
 
-#### E.9.3.1 Temperature as Information Rate
+#### E.9.3.1 Temperature as a Geometric Inverse-Time Scale
 
-All horizon temperatures appearing in the framework share a common structure reflecting the rate of information processing at causal boundaries.
+The listed stationary-horizon temperatures share the algebraic form $T=\hbar\Gamma/(2\pi k_B)$ for the stated geometric inverse-time scales.
 
 **Theorem E.9.3 (Temperature Structure of the Listed Stationary Horizons).** For the Rindler, Schwarzschild, and de Sitter horizons in the table below,
 $$
@@ -2384,7 +2363,7 @@ For Hawking radiation, the surface gravity $\kappa = c^4/(4GM)$ gives $\Gamma_\k
 
 For de Sitter space, $H_\Lambda = c\sqrt{\Lambda/3}$ is the Hubble expansion rate at the cosmological horizon.
 
-In each case, the temperature measures how rapidly an observer encounters the causal boundary—the rate at which the horizon processes the observer's trajectory through spacetime. ∎
+Thus the table establishes a common geometric inverse-time form. Identifying $\Gamma$ with a channel information-processing rate requires a separate operational channel-and-clock certificate and is not proved here. ∎
 
 **Corollary E.9.3.1 (Prefactor Universality).** *The prefactor $\hbar/(2\pi k_B)$ relates the quantum of action $\hbar$ to thermal energy via Boltzmann's constant $k_B$, with the factor $2\pi$ arising from the periodicity of Euclidean time in the thermal field theory representation* [Gibbons & Hawking 1977].
 
@@ -2430,9 +2409,9 @@ The same inequality applies to $\dim\mathcal H_A$ only if every state of $\mathc
 *Proof.* Perfect recovery of $d_{\mathrm{code}}$ equiprobable labels yields mutual information $\ln d_{\mathrm{code}}$. Apply Theorem E.9.4 and exponentiate. $\square$
 
 
-## E.9.5 Information Conservation from Causal Structure
+## E.9.5 Conditional Unitary Representation of a Closed Retained Automorphism Circuit
 
-The preceding results establish that causal boundaries have finite information capacity. We now show that this finiteness implies global information conservation—unitarity is not an independent axiom but a theorem following from the structure of self-referential prediction and the closed-system assumption.
+We now give a conditional unitary-representation theorem for a retained finite-dimensional closed circuit whose interaction layers are already registered $*$-automorphisms. Capacity finiteness and SPAP do not imply that automorphism premise.
 
 ### E.9.5.1 Preliminary Definitions and Prior Results
 
@@ -2454,7 +2433,7 @@ This section derives global unitarity from the causal and thermodynamic structur
 
 - **Recall from Theorem 29 and Corollary 29.1:** The internal Hamiltonian supplies a characteristic timescale and a task-specific orthogonalization bound. A positive lower duration for each ND-RID traversal is separately registered in the branch hypothesis of Theorem E.10.2; it is not a consequence of Theorem 29 alone.
 
-- **Recall from Proposition 5, Definition 28, Theorem 31, and Lemma J.1:** The structural binary reset-support ledger has $\varepsilon_0=\ln2$. On the declared prescribed-ready binary-ancilla architecture, Lemma J.1 gives a noninjective merge when its reachable-domain hypothesis is satisfied. If that architecture performs a registered reset satisfying Definition 28, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; equality at $\ln2$ additionally requires a conditionally uniform binary record and zero dissipative overhead.
+- **Recall from Proposition 5, Definition 28, Theorem J.1, Lemma J.1, and Theorem 31:** Theorem J.1 gives the structural binary reset-support value $\varepsilon_0=\ln2$. On the declared prescribed-ready binary-ancilla architecture, Lemma J.1 gives a noninjective merge when its reachable-domain hypothesis is satisfied. If that architecture performs a registered reset satisfying Definition 28, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; equality at $\ln2$ additionally requires a conditionally uniform binary record and zero dissipative overhead.
 
 - **Summary of Lemma E.1 (Strict Contractivity):** If the average Evolve channel contains a nonzero input-independent refresh component, $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, then it is strictly contractive in trace distance with factor $f_{\text{RID}}=1-p<1$. If $\sigma\succ0$, the channel is strictly positive and hence primitive (unique full-rank fixed point). No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone.
 
@@ -2499,7 +2478,7 @@ For Theorem E.9.5, internal closure supplies the absence of an external retained
 
 *Proof.*
 
-**Step 1 (MPU network structure).** By Definition 23, the MPU network $\mathcal{N} = (\mathcal{V}, \mathcal{E}, \{w_{uv}\})$ consists of vertices $v \in \mathcal{V}$ representing MPUs and weighted edges $(u,v) \in \mathcal{E}$ representing possible ND-RID interactions. Each MPU has Hilbert space dimension $d_0 = 8$ (Theorem 23). The network topology determines which MPUs can interact directly.
+**Step 1 (MPU network structure).** By Definition 23, the MPU network $\mathcal N=(\mathcal V,\mathcal E,\{w_{uv}\})$ consists of MPU vertices and weighted possible ND-RID edges. On the separately registered Hilbert/comparator branch, Theorem 23 gives $d_0\ge8$ and Theorem Z.2 gives $d_0=8$. The network topology determines which MPUs can interact directly.
 
 **Step 2 (Definitional completeness of dynamics).** The MPU dynamics are exhaustively specified by:
 
@@ -2830,7 +2809,7 @@ $$
 
 For systems with observation channels (Appendix P.5), Branch II applies to internal dynamics when the channel satisfies Definition P.5.3, ensuring internal closure from the internal perspective.
 
-The same SPAP structure that generates the reduced-channel capacity bound also supplies the perspectival restriction under which subsystem entropy increases while the closed ledger remains unitary. Causality and unitarity are therefore compatible consequences of one closed predictive architecture, not competing assumptions.
+The registered reset-support capacity deficit, reduced-state entropy growth under entangling unitary dynamics, and perspectival access restriction are separate branch statements. Their coexistence is compatible with global retained unitarity, but SPAP alone supplies none of the reset channel, the entangling dynamics, or a monotone entropy-production certificate.
 
 *Proof.* The derivation chains are verified by tracing the logical dependencies:
 
@@ -2857,7 +2836,7 @@ On refresh/minorization subbranches, the additional full-state refresh component
 4. Lemma E.9.5.3 converts this finite-dimensional automorphism into unitary conjugation on $\mathcal H_A\otimes\mathcal H_B$.
 5. Unitary tensoring and composition give global retained unitarity by Theorem E.9.5.
 
-Branch I uses the structural SPAP cost to bound reduced channel capacity. Branch II uses closed retained-ledger automorphism plus ND-RID pair structure to prove total retained unitarity. The apparent tension is removed because reduced contractivity is a subsystem restriction of closed evolution rather than a fundamental global loss. ∎
+Branch I uses a registered reset-support channel and separate saturation and calibration hypotheses to obtain its reduced-capacity and area-law statements. Branch II uses a closed retained-ledger automorphism and ND-RID pair structure to prove global retained unitarity. The two coexist because the Branch I channel is a subsystem restriction of the Branch II closed evolution together with its reset register, so reduced contractivity is not a loss of globally retained information; neither branch is a consequence of SPAP entropy. ∎
 
 ---
 
@@ -3101,7 +3080,7 @@ The key insight is that while reduced ND-RID channels may be strictly contractiv
 
 - *Subsystem level:* Every physical observer occupies a subsystem perspective, accessing only reduced states via partial trace. Reduced-state entropy can increase through correlations with inaccessible degrees of freedom. On a separate registered-reset branch satisfying Definition 28, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; that heat ledger does not quantify the correlation information.
 
-The arrow of time (Appendix O, Theorem O.3) emerges not from fundamental non-unitarity but from the universality of the perspectival restriction: every predictor is necessarily embedded in what it predicts (SPAP self-other partition, Appendix P.12), ensuring that the thermodynamic ratchet operates for all observers. This reconciliation exemplifies the entropy unification thesis (Thesis P.6.1): apparent irreversibility and fundamental reversibility coexist because "irreversibility" is always relative to a subsystem boundary.
+Appendix O's thermodynamic arrow holds only on its common forward/reverse path-measure and positive entropy-production branch. Predictor embedding or a perspectival subsystem split alone does not ensure a thermodynamic ratchet for every observer. Global retained unitarity, reduced-state entropy change, registered-reset heat, and pathwise entropy production therefore remain compatible but logically distinct ledgers.
 
 **Remark E.9.5.4: Derivational Priority.** The framework places unitarity and conditional thermodynamic irreversibility in compatible but logically distinct ledgers. Unitarity follows on the closed retained-ledger branch carrying the response-product-preserving $*$-automorphism certificate of Lemma E.9.5.3 and Theorem E.9.5. The registered-reset inequality $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ follows from Definition 28 and Theorem 31. These results describe global retained dynamics and a specified reset implementation, respectively.
 
@@ -3144,14 +3123,14 @@ This section separates two independent ledgers: a conditional thermodynamic cost
 
 ### E.10.1 Conditional Reset Cost of Correlation Extension
 
-**Definition E.10.1 (Registered Correlation-Extension Cost).** Let a retained path use $n$ channels. For every channel use $j$ that physically resets a memory register $P_j$ while retaining side information $R_j$, record
+**Definition E.10.1 (Registered Correlation-Extension Cost).** Let a retained path use $n$ channels, and let $J_{\mathrm{reset}}\subseteq\{1,\ldots,n\}$ be the set of channel uses that physically reset a memory register $P_j$ while retaining side information $R_j$. For every $j\in J_{\mathrm{reset}}$, record
 $$
 \varepsilon_{\mathrm{reset},j}
 \ge H_{q_j}(P_j\mid R_j).
 $$
 The registered reset contribution and total PCE comparison are
 $$
-S_{\mathrm{reset}}:=\sum_{j=1}^{n}\varepsilon_{\mathrm{reset},j},
+S_{\mathrm{reset}}:=\sum_{j\in J_{\mathrm{reset}}}\varepsilon_{\mathrm{reset},j},
 \qquad
 \Delta V_{\mathrm{corr}}:=V_{\mathrm{prop}}+\gamma S_{\mathrm{reset}},
 $$
@@ -3165,7 +3144,7 @@ edges. Equality requires a separately exhibited geodesic path whose edges attain
 
 *Proof.* The triangle inequality gives $R\le\sum_{j=1}^{n}\ell_j\le n\delta$. Taking ceilings proves the bound; neither geometric regularity nor a continuum approximation proves equality. ∎
 
-**Theorem E.10.1 (Conditional Linear Reset-Cost Comparison).** Assume the metric hypotheses of Lemma E.10.1, one registered reset per traversed edge, constants $h_{\min}>0$ and $\gamma>0$ with
+**Theorem E.10.1 (Conditional Linear Reset-Cost Comparison).** Assume the metric hypotheses of Lemma E.10.1, one registered reset per traversed edge so that $J_{\mathrm{reset}}=\{1,\ldots,n\}$, constants $h_{\min}>0$ and $\gamma>0$ with
 $$
 H_{q_j}(P_j\mid R_j)\ge h_{\min}
 $$
@@ -3259,7 +3238,7 @@ The registered serialized branch yields a finite operational speed upper bound f
 
 This appendix gives a conditional operational area-law construction, bulk and horizon refinements, and the two scoped results of Section E.10: registered reset operations can carry a linear implementation cost, while independent serialized edge-length and edge-time hypotheses give a propagation-speed upper bound. The area-law argument has two branch-qualified stages:
 
-**Stage 1 (Boundary Correlations and Operational Area Law, Sections E.6.1–E.6.3):** The MPU network's ND-RID dynamics satisfy locality, a finite Lieb-Robinson velocity, a spectral gap, and exponential clustering (Lemma E.6.1). A rigorous distribution-free boundary law holds for total correlations measured by mutual information in any finite-range Gibbs state (Theorem E.4a). A von Neumann entanglement-entropy area law is proven in the 1D gapped setting (Hastings); in higher dimensions an entanglement area-scaling inequality is treated as a semiclassical ansatz (Theorem E.4').
+**Stage 1 (Boundary Correlations and Operational Area Law, Sections E.6.1–E.6.3):** On the independently registered local many-body branch, the finite-range and bounded-strength hypotheses give a Lieb-Robinson bound; the refresh/minorization branch separately gives a mixing gap; and exponential clustering requires the additional uniform certificate in Lemma E.6.1. A distribution-free boundary law holds for mutual information in finite-range Gibbs states under Theorem E.4a. A von Neumann entanglement-entropy area law is theorem-level in the stated one-dimensional gapped setting; the higher-dimensional entanglement area inequality remains the explicit ansatz of Theorem E.4'.
 
 **Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** A completed reset gives the support-loss capacity bound of Proposition E.2a. Strict contraction requires the independent full-state refresh/minorization decomposition of Lemma E.1, and Theorem E.2 supplies the strict capacity bound only on that branch. Together with the boundary-density certificate of Theorem E.3, these inputs yield the operational area-law coefficient on the stated branch. The standard $1/(4G)$ normalization and the residual-budget values remain branch calibrations.
 **Synthesis:** Equation (E.9) links the emergent coupling $G$ to microscopic MPU parameters. Identifying this $G$ with the experimentally measured Newton constant is a calibration step; after calibration, Equations E.14–E.16 constrain the allowed microscopic parameter combinations. Section 12 uses the proportionality $\delta S\propto\delta\mathcal{A}$ to derive the Einstein Field Equations via the Clausius relation.

@@ -177,25 +177,53 @@ Theorem D.6e inserts the finite continuum-control defects $\mathfrak B_n,\mathfr
 
 Along the selected sequence, $\mathfrak B_n\to0$ is the asymptotic radius-2 $\mathrm{BE}(K,4)$ curvature transfer required by Theorem C.6c, while geometric noncollapse is an independent volume-certificate input. Under the separately assumed C.6c generator-core/$\Gamma_2$ passage and $\mu=\mathcal H^4$ normalization, C.6c gives strict noncollapse; under the separately assumed D.6e liminf, recovery, and Cheeger-identification hypotheses, D.6e gives Mosco convergence. Vanishing defects alone give neither conclusion. Therefore every measured-GH limit is noncollapsed $\mathrm{RCD}^*(K,4)$ and has Euclidean $\mathbb R^4$ tangent cones at $\mu$-almost every point. The identities $\mathfrak C_n\to0$ and $\mathfrak R_n\to0$ give the finite-core and recovery-map compatibility required for the Mosco argument in Theorem D.6e; hence the rescaled propagation-cost forms converge to the quadratic Cheeger energy. Finally, $\mathfrak H_n\to0$ is the quantitative Euclidean-rigidity and harmonic-coordinate input of Theorem 44a, so the regular branch carries a $C^{1,\alpha}$ four-dimensional Riemannian metric. A $3+1$ Lorentzian metric follows only on an Appendix O branch that selects one operational tangent direction as temporal and proves that its positive complement has dimension three. Theorem K.10.3a excludes exact continuum ontology under finite-resource PPI, so the limit is an effective finite-resolution compression of the discrete MPU branch. ∎
 
-**Corollary 43.5a (Zero-Defect $D_4$ Gluing Certificate).** Let $\mathfrak Z_{\mathrm{cont}}$ be a finite record, for each refinement level $n$, consisting of:
+**Corollary 43.5a (Quantitative $D_4$ Stability and Gluing Certificate).** Let $\delta_n\downarrow0$ and let the candidate core at level $n$ be a finite truncation of $\delta_nD_4$ with boundary exhaustion. On interior vertices define
+$$
+\mu_n
+=
+2\delta_n^4\sum_{x\in\delta_nD_4}\delta_x
+$$
+and
+$$
+\mathcal E_n(f)
+=
+\frac{\delta_n^2}{12}
+\sum_x\sum_{r\in\Xi_{D_4}}
+|f(x+\delta_nr)-f(x)|^2.
+\tag{43.5a.1}
+$$
+A quantitative $D_4$ stability record $\mathfrak Z_{\mathrm{cont}}$ contains:
 
-1. a finite cover by propagation-cost cells $\{U_i^{(n)}\}$ whose first shells are identified with the $D_4$ root shell $\Xi_{D_4}$ of Lemma C.6d;
-2. local interpolation charts $\psi_i^{(n)}:U_i^{(n)}\to\mathbb R^4$ whose first-shell second moments are scalar multiples of the identity and whose odd shell moments vanish;
-3. overlap maps $\theta_{ij}^{(n)}$ in the signed $D_4$ orthogonal frame group on nonempty overlaps;
-4. finite overlap equalities $\Omega_C^{(n)}$ on every directed overlap cycle, so the cocycle defect vanishes modulo the response-equivalence relation;
-5. certified bounds $\varepsilon_n\downarrow0$ such that the continuum-control defects of Theorem D.6e satisfy
-$$
-\mathfrak B_n+\mathfrak C_n+\mathfrak R_n+\mathfrak H_n\le\varepsilon_n
-$$
-for the glued candidate in the same global core-minimum class as the PCE-selected branch.
+1. the exact shell identity
+   $$
+   \sum_{r\in\Xi_{D_4}}rr^{\mathsf T}=12I_4
+   $$
+   and covolume $\operatorname{covol}(D_4)=2$;
+2. uniform local Ahlfors-$4$ bounds, a fixed-radius noncollapse bound, and boundary-exhaustion control;
+3. finite interpolation charts and overlap maps whose metric, cocycle, and recovery defects tend to zero;
+4. pointed measured-Gromov–Hausdorff distance $o(1)$ from the corresponding Euclidean candidate charts;
+5. Mosco liminf and recovery estimates for $\mathcal E_n$, together with a common generator core on which the discrete generators converge to the flat Laplacian;
+6. membership of the candidate in the same global core-minimum class as the PCE-selected branch and
+   $$
+   \mathfrak B_n+\mathfrak C_n+\mathfrak R_n+\mathfrak H_n\le\varepsilon_n,
+   \qquad
+   \varepsilon_n\downarrow0.
+   $$
 
-If $\mathfrak Z_{\mathrm{cont}}$ is accepted, then the competitor condition $\mathfrak d_n^*\to0$ used in Theorem 43.5 is satisfied. Hence the operational-continuum manifold row of Convention P.14.1k is closed on the $\mathfrak Z_{\mathrm{cont}}$ branch.
+Then the competitor hypothesis $\mathfrak d_n^*\to0$ in Theorem 43.5 is discharged, and the candidate forms converge to the flat quadratic Cheeger energy on a noncollapsed four-dimensional limit. Consequently the operational-continuum row is closed on $\mathfrak Z_{\mathrm{cont}}$.
 
-*Proof.* The four defect terms in Theorem D.6e are nonnegative by construction. The candidate supplied by $\mathfrak Z_{\mathrm{cont}}$ lies in the same global core-minimum class by item 5, so the core infimum satisfies
+*Proof.* The covolume normalization makes $\mu_n$ converge locally to Lebesgue measure. Taylor expansion on the common core and the second-moment identity give
 $$
-0\le\mathfrak d_n^*\le\mathfrak B_n+\mathfrak C_n+\mathfrak R_n+\mathfrak H_n\le\varepsilon_n.
+\mathcal E_n(f)\longrightarrow\frac12\int_{\mathbb R^4}|\nabla f|^2\,dx.
 $$
-Since $\varepsilon_n\to0$, one has $\mathfrak d_n^*\to0$. Items 1--4 supply exactly the shell isotropy, noncollapse, overlap compatibility, and vanishing cocycle data required by the Appendix C/D bridge package, so no extra continuum ontology is introduced. Theorem 43.5 therefore applies with its competitor hypothesis discharged by a finite record. ∎
+Items 2–5 supply tightness, noncollapse, the Mosco liminf, recovery, and generator identification, so the limit is the flat noncollapsed $\operatorname{RCD}(0,4)$ model on each candidate chart. Item 3 glues the charts in the response quotient. Finally,
+$$
+0\le\mathfrak d_n^*
+\le
+\mathfrak B_n+\mathfrak C_n+\mathfrak R_n+\mathfrak H_n
+\le\varepsilon_n\to0.
+$$
+Theorem 43.5 therefore applies with its previously independent competitor and convergence entries explicitly supplied by the finite stability record. ∎
 
 **11.4 Geometric Convergence to an Operational Continuum Manifold**
 
@@ -623,6 +651,18 @@ r_4
 =\frac1{10}.
 $$
 Equation (46e.1.4) supplies the registered sampling deviation about this value. Curvature, a nonuniform sampling law, order misclassification, or a detector-window distortion changes a hypothesis used in the expectation integral; its contribution must therefore enter through the declared bias interval rather than through the exact flat-uniform value. ∎
+
+**Remark 46e.1b (Neighboring-Dimension Values of the Order Fraction).** Direct evaluation of (46e.1.2) gives the exact neighboring values
+$$
+r_2=\frac{\Gamma(3)\Gamma(1)}{2\Gamma(3)}=\frac12,
+\qquad
+r_3=\frac{\Gamma(4)\Gamma(3/2)}{2\Gamma(9/2)}=\frac8{35},
+\qquad
+r_5=\frac{\Gamma(6)\Gamma(5/2)}{2\Gamma(15/2)}=\frac{128}{3003}=0.0426240\ldots,
+$$
+and the five values $r_D$ are strictly decreasing for integer dimensions $D\in\{2,3,4,5,6\}$, so the order-fraction record separates the neighboring dimensions: the $D=4$ value $1/10$ lies strictly between $r_5$ and $r_3$. The value $r_2=1/2$ has an independent verification: in two dimensions, light-cone coordinates order two independently sampled points compatibly exactly when both coordinates order alike, an event of probability $1/2$ for the flat-uniform Alexandrov-diamond law, whose light-cone coordinates are independent and continuous.
+
+*Proof.* The three displayed values are exact $\Gamma$-function arithmetic from (46e.1.2): $\Gamma(3/2)=\sqrt\pi/2$, $\Gamma(9/2)=105\sqrt\pi/16$ give $r_3=6\cdot(\sqrt\pi/2)/(2\cdot105\sqrt\pi/16)=8/35$; $\Gamma(5/2)=3\sqrt\pi/4$, $\Gamma(15/2)=135135\sqrt\pi/128$ give $r_5=120\cdot(3\sqrt\pi/4)/(2\cdot135135\sqrt\pi/128)=128/3003$; the $D=2$ ratio cancels to $1/2$. Strict monotonicity on the listed range is direct comparison of the five exact values $1/2,8/35,1/10,128/3003,\Gamma(7)\Gamma(3)/(2\Gamma(9))=1/56$. For the independent $D=2$ check, in light-cone coordinates $u=t+x$, $v=t-x$ the causal relation $x_i\prec x_j$ holds if and only if $u_i<u_j$ and $v_i<v_j$; for two independent samples from the flat-uniform Alexandrov-diamond law, the $u$- and $v$-coordinates are independent and continuous, so their two rankings are independent and each ordering is equally probable, so the comparability probability is $2\cdot\tfrac12\cdot\tfrac12=\tfrac12$, agreeing with the formula. ∎
 
 **Definition 46f (Topological-Bandwidth Completion Certificate).** Fix $0<\Omega<\infty$ on a regular Lorentzian branch satisfying Theorem 43.5, Corollary 46a, and Definition 46b. Define
 $$

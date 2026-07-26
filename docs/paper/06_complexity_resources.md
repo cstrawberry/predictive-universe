@@ -4,11 +4,11 @@ This section studies the interplay between complexity, predictive performance, a
 
 ## 6.0 The Capacity Bound as Structural Constraint
 
-**Capacity branch note.** The refresh/minorization branch gives the theorem-level strict ND-RID bound $C_{\max}<\ln d_0$ under Lemma E.1 and Theorem E.2. Independently, the completed SPAP reset of an $r$-dimensional register inside the $d_0$-dimensional MPU Hilbert space gives the structural reset-support bound $C_{\max}\le\ln d_0-\ln r$ by Proposition E.2a. For the binary SPAP reset $r=2$, this specializes to $C_{\max}\le\ln d_0-\ln2$. Exact residual-budget equalities such as $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln 2$ on $d_0=8$ and ratios such as $C_{\max}^*/\varepsilon_0=2$ are saturations of the reset-support bound on the PCE residual-budget branch specified in Appendices E/Q; they are not consequences of the refresh strict-capacity upper bound alone.
+**Capacity branch note.** The refresh/minorization branch gives the theorem-level strict ND-RID bound $C_{\max}<\ln d_0$ under Lemma E.1 and Theorem E.2. Independently, a registered completed reset of an $r$-dimensional factor inside the $d_0$-dimensional MPU Hilbert space gives $C(\mathcal E_N)\le\ln d_0-\ln r$ by Proposition E.2a. For a binary registered reset, $r=2$. Exact equalities such as $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln2$ require the separate residual-budget same-family saturation branch; they do not follow from SPAP or from the refresh strict-capacity bound alone.
 
 *Throughout this section, natural units $\hbar = c = k_B = 1$ are used unless otherwise noted.*
 
-A fundamental structural feature of the PU framework is that finite predictive transfer is bounded in two compatible ways. The completed SPAP reset of an $r$-dimensional register inside $\mathcal H_{d_0}$ imposes the structural reset-support bound $C_{\max}\le\ln d_0-\ln r$ (Proposition E.2a), specializing to $C_{\max}\le\ln d_0-\ln2$ for the binary SPAP reset $r=2$. The refresh/minorization branch independently gives the strict ND-RID channel bound $C_{\max}<\ln d_0$ (Theorem E.2). The first bound follows directly from the support loss required by a completed reset; the second follows when the averaged channel has the full-state refresh component of Lemma E.1, giving strict contractivity $f_{RID}<1$.
+Finite predictive transfer is bounded on two independent channel branches. A registered completed reset of an $r$-dimensional factor gives $C(\mathcal E_N)\le\ln d_0-\ln r$ by Proposition E.2a, specializing to $\ln d_0-\ln2$ for $r=2$. A refresh/minorization channel independently gives $C_{\max}<\ln d_0$ by Theorem E.2. The first conclusion uses fixed-ready-state support loss; the second uses the full-state refresh component of Lemma E.1. SPAP alone implies neither physical channel architecture.
 
 ### 6.0.1 Capacity Manifestations Across Domains
 
@@ -76,7 +76,7 @@ C_{\max}^*=\ln d_0-\varepsilon_0
 $$
 Substitution gives the corresponding conditional calibration of $G$ in terms of the microscopic parameters. ∎
 
-**Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by finite predictive-transfer capacity: the structural reset-support deficit $C_{\max}\le\ln d_0-\ln r$ on completed SPAP reset cycles (specializing to $\ln d_0-\ln2$ for the binary reset) and, on refresh/minorization branches, the strict contractive bound $C_{\max}<\ln d_0$.*
+**Principle 6.0 (Capacity Constraint Propagation).** *Finite predictive-transfer capacity is branch-constrained by the reset-support deficit $C(\mathcal E_N)\le\ln d_0-\ln r$ on a registered completed reset and, independently, by $C_{\max}<\ln d_0$ on a refresh/minorization branch. Gravitational or thermodynamic conclusions require their additional density, saturation, calibration, and implementation hypotheses.*
 
 **Remark 6.0.1: Conditional Origins of the Capacity Bounds.** The support-deficit route begins with a separately registered physical implementation:
 $$
@@ -99,11 +99,11 @@ $$
 $$
 SPAP supplies the diagonal prediction obstruction but does not imply either physical channel branch. A geometric or gravitational conclusion additionally requires the area-density, capacity-saturation, and local Clausius hypotheses of Theorems E.3 and E.5.
 
-**Remark 6.0.2: Residual-Budget Saturation Branch.** The declared reusable binary SPAP register has structural log-cardinality $\varepsilon_0=\ln2$ (Proposition 5; Lemma J.1), while Definition 28 and Theorem 31 govern only a registered physical reset ledger. The completed binary reset gives
+**Remark 6.0.2: Residual-Budget Saturation Branch.** The declared reusable binary SPAP register has structural log-cardinality $\varepsilon_0=\ln2$ (Proposition 5; Theorem J.1), while Definition 28 and Theorem 31 govern only a registered physical reset ledger. The completed binary reset gives
 $$
 C_{\max}\le\ln d_0-\varepsilon_0.
 $$
-Assume the residual-budget branch on which no additional response-relevant or implementation deficit remains and an admissible channel attains this upper bound. For the minimal MPU value $d_0=8$ (Theorem 23), Equations (E.14)–(E.15) give
+Assume the residual-budget branch on which no additional response-relevant or implementation deficit remains and an admissible channel attains this upper bound. For the Theorem-Z.2 comparator value $d_0=8$, Equations (E.14)--(E.15) give
 $$
 C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2.
 $$
@@ -236,7 +236,7 @@ The function $PP(C, \hat{C}_{target})$ describing the achievable Predictive Perf
 $$
 PP(C_{op},\hat{C}_{target})=\alpha,\qquad \lim_{C\to\infty} PP(C,\hat{C}_{target})=\beta.
 $$
-The upper bound $\beta$ is approached asymptotically but not reached for finite complexity $C$, reflecting the need for adaptation (Theorem 9) and efficiency considerations (PCE, Definition 15).
+The response-law parameter $\beta$ is approached asymptotically but not reached for finite $C$ on the branch carrying Definition 19's analytic law. It is distinct from Theorem 9's certified pathwise ceiling $\beta_0$ and from any task-relative SPAP boundary; neither Theorem 9 nor PCE alone derives this response law.
 2.  **Monotonicity with Complexity:** Performance increases with complexity investment above the baseline: $\partial PP / \partial C > 0$ for $C > C_{op}$.
 3.  **Diminishing Returns:** The marginal gain in performance decreases as complexity increases: $\partial^2 PP / \partial C^2 < 0$ for $C > C_{op}$. Achieving further improvements becomes progressively harder.
 4.  **Dependence on Relative Complexity:** Performance depends primarily on the ratio of invested complexity above baseline relative to the task difficulty, i.e., on a function of $x = (C-C_{op})/\hat{C}_{target}$. Increasing the target difficulty $\hat{C}_{target}$ for a fixed complexity $C$ decreases performance $PP$.
@@ -375,14 +375,14 @@ $$
 $$
 Since $\Gamma_0>0$, the equilibrium equation makes the marginal-cost sum positive. Substitution followed by division by that positive sum gives Equation (22d). ∎
 
-**Corollary 19.1 (Power-Law Learning Curves on Logarithmic Complexity Budgets).** Let a predictive system accumulate experience by successively allocating predictive complexity above baseline through a logarithmic budget,
+**Corollary 19.1 (Conditional Power-Law Learning Curves on Logarithmic Complexity Budgets).** Fix a registered predictive-system branch satisfying every hypothesis of Theorem 19, with branch-fixed parameters $\alpha,\beta,C_{op},\hat C_{\mathrm{target}}$, and $\kappa_{\mathrm{eff}}$. Define $PP(N):=PP(C(N),\hat C_{\mathrm{target}})$ and assume independently that the registered positive experience coordinate $N$ and effective predictive complexity obey the exact logarithmic budget
 $$
 C(N)-C_{op}=\eta_{\ell}\ln\!\bigl(N/N_0\bigr),
 \qquad N\ge N_0>0,
 \qquad \eta_{\ell}>0,
 \tag{22e}
 $$
-where $N$ is a monotone non-negative experience parameter and $N_0,\eta_{\ell}$ are constants. Under Theorem 19, the performance gap obeys the exact power law
+Under these joint branch hypotheses, the performance gap obeys the exact power law
 $$
 \beta-PP(N)=(\beta-\alpha)\bigl(N/N_0\bigr)^{-s},
 \qquad
@@ -398,33 +398,128 @@ $$
 $$
 Using $\exp[-s\ln(N/N_0)]=(N/N_0)^{-s}$ gives (22f). Positivity of $s$ follows from $\kappa_{\mathrm{eff}},\eta_{\ell},\hat C_{\mathrm{target}}>0$. ∎
 
-**Remark 19.1a (Interpretation of (22e)).** The logarithmic budget (22e) is an admissible PCE-efficient allocation regime whenever each additional experience increment contributes a multiplicatively diminishing update to effective complexity above baseline. The constant $\eta_{\ell}$ has dimensions of complexity per dimensionless experience unit and is fixed operationally by the system's internal accumulation rule; $\hat C_{\mathrm{target}}$ enters only through the Law-of-Prediction scale factor $C_s$.
+**Remark 19.1a (Interpretation of (22e)).** Equation (22e) is additional branch data; it is not implied by POP, PCE, Definition 19, or Theorem 19. On a connected differentiable range $N\ge N_0$, Equation (22e) is equivalent to the boundary condition $C(N_0)=C_{op}$ together with
+$$
+N\frac{dC}{dN}=\eta_{\ell}
+$$
+throughout that range. Differentiating (22e) proves necessity, while integrating $dC/dN=\eta_{\ell}/N$ from $N_0$ to $N$ proves sufficiency. Consequently, a qualitative observation of diminishing returns does not establish the exact logarithmic budget. The constant $\eta_{\ell}$ has dimensions of complexity and must be fixed by the registered complexity-accumulation map; $\hat C_{\mathrm{target}}$ enters the resulting exponent only through $C_s=\hat C_{\mathrm{target}}/\kappa_{\mathrm{eff}}$.
 
-**Corollary 19.2 (Conditional Neural Scaling Laws).** Let an aggregate predictive system (Definition 29) parametrized by size $N_p$ satisfy the size-to-complexity relation
+**Corollary 19.2 (Conditional Size- and Data-Coordinate Power Laws).** Fix a registered aggregate predictive-system branch (Definition 29) satisfying every hypothesis of Theorem 19, with branch-fixed parameters $\alpha,\beta,C_{op},\hat C_{\mathrm{target}}$, and $\kappa_{\mathrm{eff}}$. Suppose its registered size coordinate $N_p$ and effective predictive complexity obey the exact relation
 $$
 C(N_p)-C_{op}=\eta_p\ln\!\bigl(N_p/N_{p,0}\bigr),
+\qquad N_p\ge N_{p,0}>0,
 \qquad \eta_p>0,
 \tag{22g}
 $$
-on a scaling branch where size increments expand the effective predictive complexity logarithmically. Then the achievable performance gap obeys
+Then $PP(N_p):=PP(C(N_p),\hat C_{\mathrm{target}})$ obeys
 $$
 \beta-PP(N_p)=(\beta-\alpha)\bigl(N_p/N_{p,0}\bigr)^{-s_p},
 \qquad
 s_p=\frac{\kappa_{\mathrm{eff}}\eta_p}{\hat C_{\mathrm{target}}}.
 \tag{22h}
 $$
-An analogous identity with exponent $s_d=\kappa_{\mathrm{eff}}\eta_d/\hat C_{\mathrm{target}}$ holds for data-size scaling when $C-C_{op}=\eta_d\ln(N_d/N_{d,0})$. If several independent logarithmic contributions add,
+On a separately registered data-size branch satisfying
 $$
-C-C_{op}=\sum_i \eta_i\ln(N_i/N_{i,0}),
+C(N_d)-C_{op}=\eta_d\ln(N_d/N_{d,0}),
+\qquad N_d\ge N_{d,0}>0,
+\qquad \eta_d>0,
+$$
+define $PP(N_d):=PP(C(N_d),\hat C_{\mathrm{target}})$. The analogous identity then holds with exponent $s_d=\kappa_{\mathrm{eff}}\eta_d/\hat C_{\mathrm{target}}$. If a registered branch instead has a nonempty finite coordinate set $\mathcal I$ whose positive-coordinate complexity contributions add exactly,
+$$
+C-C_{op}=\sum_{i\in\mathcal I}\eta_i\ln(N_i/N_{i,0}),
+\qquad
+N_i\ge N_{i,0}>0,
+\qquad
+\eta_i>0,
 $$
 then the performance gap factorizes into
 $$
-\beta-PP=(\beta-\alpha)\prod_i (N_i/N_{i,0})^{-\kappa_{\mathrm{eff}}\eta_i/\hat C_{\mathrm{target}}}.
+\beta-PP
+=
+(\beta-\alpha)
+\prod_{i\in\mathcal I}
+(N_i/N_{i,0})^{-\kappa_{\mathrm{eff}}\eta_i/\hat C_{\mathrm{target}}}.
 $$
 
 *Proof.* Direct substitution of (22g) into (22b) via Definition 19a gives (22h). The data-size and compositional statements follow from the same substitution in the additive logarithmic regime. ∎
 
-**Remark 19.2 (Predictive Content).** Corollaries 19.1-19.2 identify empirically reported power-law regimes for learning curves [Newell & Rosenbloom 1981] and neural-network loss scaling with model size and dataset size [Kaplan et al. 2020; Hoffmann et al. 2022] as conditional images of the Law of Prediction under logarithmic complexity-budget hypotheses. On a fixed branch, the exponents $s,s_p,s_d$ are determined by the performance-efficiency constant $\kappa_{\mathrm{eff}}$, the logarithmic accumulation rate $\eta_\bullet$, and the task-difficulty scale $\hat C_{\mathrm{target}}$. Deviations from power-law behavior are expected when the logarithmic-budget hypothesis fails or when the saturation regime $PP\to\beta$ is reached.
+**Proposition 19.2a (Exact Finite-Record Compatibility Criterion for the Registered Power-Law Formula).** Fix $\alpha<\beta$, $N_0>0$, and exact registered observations
+$$
+(N_k,P_k),
+\qquad
+k=0,1,\ldots,m,
+\qquad
+m\ge2,
+$$
+with
+$$
+N_0<N_1<\cdots<N_m,
+\qquad
+P_k<\beta.
+$$
+Define
+$$
+G_k:=\frac{\beta-P_k}{\beta-\alpha}>0.
+$$
+There exists $s>0$ such that
+$$
+G_k=\left(\frac{N_k}{N_0}\right)^{-s}
+\quad
+\text{for every }k=0,1,\ldots,m
+\tag{22i}
+$$
+if and only if
+$$
+G_0=1
+$$
+and the numbers
+$$
+s_k:=-\frac{\ln G_k}{\ln(N_k/N_0)},
+\qquad
+k=1,\ldots,m,
+\tag{22j}
+$$
+are all defined, positive, and equal. When these conditions hold, the common value is the unique exponent $s$.
+
+*Proof.* If (22i) holds, then $G_0=1^{-s}=1$. For $k\ge1$, $N_k/N_0>1$, so taking logarithms in (22i) gives
+$$
+\ln G_k=-s\ln(N_k/N_0),
+$$
+and hence $s_k=s>0$. Conversely, suppose $G_0=1$ and every $s_k$ equals one common $s>0$. Rearranging (22j) gives
+$$
+\ln G_k=-s\ln(N_k/N_0)
+$$
+for each $k\ge1$. Exponentiation yields (22i) for $k\ge1$, while the $k=0$ case follows from $G_0=1$. If both $s$ and $s'$ satisfy (22i), then for $k=1$,
+$$
+(N_1/N_0)^{-s}=(N_1/N_0)^{-s'}.
+$$
+Taking logarithms and using $\ln(N_1/N_0)>0$ gives $s=s'$. ∎
+
+Compatibility on finitely many points neither proves the formula between observations nor verifies either antecedent from which Corollary 19.1 derives it.
+
+**Remark 19.2 (Scope and Registered Falsifier).** Corollaries 19.1-19.2 are conditional images of two independent antecedents: Theorem 19's exact multiplicative residual-composition hypothesis and an exact logarithmic map from the registered resource coordinate to effective predictive complexity. Proposition 19.2a gives the exact-record compatibility test after $\alpha$, $\beta$, $N_0$, the score, task, system or population, measurement protocol, and coordinate range have been fixed. Failure of $G_0=1$, or failure of the off-baseline $s_k$ to be defined, positive, and equal, rejects the formula on that exact record; it does not identify which antecedent failed and does not refute a whole empirical domain. With noisy observations, one joint uncertainty region, including any registered covariance, and the acceptance rule must be fixed before the holdout observations; the branch is rejected only when no common $s>0$ is compatible with that pre-registered joint region. Agreement with one power-law form does not establish equality of mechanism across carriers. Once $\alpha$, $\beta$, and $N_0$ are fixed, the curve identifies only the combination $\kappa_{\mathrm{eff}}\eta_\bullet/\hat C_{\mathrm{target}}$, not its three factors separately; all remain branch-specific unless a separate transport theorem identifies them. 
+
+On an explicitly registered mixture evaluation, let a resource-independent fraction $f\in[0,1]$ of scored examples be diagonal cycles satisfying Theorem 11a, let $L_{\mathrm{data}}(N)$ be the conditional mean logarithmic loss on the remaining examples, and measure logarithmic score in nats. Then
+$$
+L(N)\ge f\ln2+(1-f)L_{\mathrm{data}}(N).
+$$
+Equality in the diagonal contribution holds exactly when the predictor reports $p=1/2$ on every diagonal cycle. Under the lower bound alone, no mixture exponent follows. If instead $0\le f<1$ is fixed, $c\ne0$, every diagonal cycle reports $p=1/2$, and the complete registered loss contains no additional $N$-dependent mixture term, so that
+$$
+L(N)=f\ln2+(1-f)L_{\mathrm{data}}(N),
+$$
+then
+$$
+L_{\mathrm{data}}(N)
+=L_{\mathrm{data},\infty}+cN^{-s_p}+o(N^{-s_p}),
+\qquad s_p>0,
+$$
+implies
+$$
+L(N)
+=f\ln2+(1-f)L_{\mathrm{data},\infty}
++(1-f)cN^{-s_p}+o(N^{-s_p}).
+$$
+Only under these equality and nondegeneracy hypotheses does the mixture inherit the exponent $s_p$. No architecture-, scale-, or tokenizer-independent transport conclusion follows without a separate theorem identifying the score and registered mixture across those representations.
 
 **Remark 19.3 (Weber-Fechner Relation from Equation (5)).** Let a predictive system represent an external stimulus by allocating reflexive-information complexity $C$ above the Horizon Constant $K_0$ (Theorem 15). By Definition 3b and Equation (5), the representative reflexive-information cost rate is
 $$

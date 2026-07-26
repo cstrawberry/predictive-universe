@@ -24,9 +24,9 @@ The following results and branch data are imported from elsewhere in the framewo
 
 | Symbol | Value | Definition | Source |
 |--------|-------|------------|--------|
-| $\varepsilon_0$ | $\ln 2$ | Structural log-cardinality of the registered binary verification quotient | Definition 28; Lemma J.1 |
+| $\varepsilon_0$ | $\ln 2$ | Structural log-cardinality of the registered binary verification quotient | Definition 28; Theorem J.1 |
 | $\varepsilon_{\mathrm{phys}}$ | $\ge H_q(P\mid R)$ on a registered reset branch | Physical reset cost including overhead; a positive floor needs an ensemble bound | Theorem 31 |
-| $K_0$ | 3 | Minimal self-referential bits | Theorem 15 |
+| $K_0$ | 3 | Least visited-context log-capacity on the (O1)–(O3), (FC) SPAP-register branch | Theorem 15; $C_P$ transfer requires Corollary 3 |
 | $N_{\mathrm{vis}}^{\min}$ | $2^{K_0} = 8$ | Minimal faithful visited-context count | Theorem 15 |
 | $d_0$ | $8$ | Minimal MPU Hilbert-carrier dimension after saturation | Theorem 23; Theorem Z.2 |
 | $a$ | sharp match/mismatch active record plus minimal integer with $\ln a\ge\varepsilon_0$, hence $2$ | Active kernel dimension | Theorem Z.1 |
@@ -348,11 +348,11 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 **Step 1 (Interface mode count).** From Theorem Z.5, the QFI-active interface modes number $M = 2ab = 24$, where $a = 2$ (Theorem Z.1, from the sharp match/mismatch record plus entropy-capacity/no-surplus gate) and $b = d_0 - a = 6$.
 
-**Step 2 (Equilibrium saturation).** Inside the channel-complete Bures tangent-cell contract of Definition Z.9a, Theorem Z.9 establishes that the completed first-shell channel count saturates the equal-radius tangent packing bound, yielding $M_{\text{phys}} = K(D)$.
+**Step 2 (Faithful tangent-shell premise).** Definition Z.9a supplies a response-preserving injection of the retained QFI modes into distinct equal-radius tangent cells, quotients response-null anisotropy, and assigns positive support cost to every additional response-null dimension. Theorem Z.10 then gives the necessary bound $M_{\mathrm{int}}\le K(D)$.
 
-**Step 3 (Mode-channel correspondence).** Theorem Z.10 requires $M_{\text{int}} = M_{\text{phys}}$ at PCE-optimal zero-mismatch equilibrium. This matching is the unique zero of the finite-response mismatch ledger (Lemma Z.5).
+**Step 3 (Lower-dimensional obstruction).** With $M_{\text{int}}=24$, the exact values $K(1)=2$, $K(2)=6$, and $K(3)=12$ rule out every faithful realization in $D\le3$.
 
-**Step 4 (Dimensional selection).** Theorem Z.11 establishes that $K(D) = 24$ uniquely selects $D = 4$ inside the contract, since $K(4) = 24$ is the isolated positive-integer solution on the checked Euclidean tangent-cell branch.
+**Step 4 (Constructive dimensional selection).** The regular $24$-cell supplies the required response-cell geometry in $\mathbb R^4$. Since Definition Z.9a selects the least feasible dimension after predictive performance is fixed, Theorem Z.11 gives $D=4$ without a global-saturation premise.
 
 **Step 5 (Geometric realization).** By Definition Z.8, fix the standard 24-point configuration on $S^3$ given by the unit Hurwitz integers. This configuration realizes the optimal kissing count $K(4)=24$ and provides a concrete 24-point geometric model for the mode-channel correspondence.
 
@@ -514,7 +514,7 @@ $$
 S_{\text{cont}}[\phi] = \frac{1}{2\pi^2\varepsilon_0}\int_{\mathbb{R}^4} d^4x \left[\frac{1}{2}|\nabla \phi|^2 + V_{\text{eff}}(\phi) - V_{\text{eff}}(0)\right].
 $$
 
-Here $\varepsilon_0=\ln2$ is the structural binary-quotient normalization of Definition 28 and Lemma J.1. Its use as the overall normalization of $S_{\mathrm{cont}}$ is part of Definition U.4 and is not a physical reset-cost conclusion of Theorem 31. In polar coordinates $x=r\omega$, $\omega\in S^3$, this is
+Here $\varepsilon_0=\ln2$ is the structural binary-quotient normalization of Definition 28 and Theorem J.1. Its use as the overall normalization of $S_{\mathrm{cont}}$ is part of Definition U.4 and is not a physical reset-cost conclusion of Theorem 31. In polar coordinates $x=r\omega$, $\omega\in S^3$, this is
 
 $$
 S_{\text{cont}}[\phi] = \frac{1}{\varepsilon_0}\int_0^\infty r^3 dr \int_{S^3} d\sigma_3 \left[\frac{1}{2}(\partial_r \phi)^2 + \frac{1}{2r^2}|\nabla_{S^3}\phi|^2 + V_{\text{eff}}(\phi) - V_{\text{eff}}(0)\right],
@@ -1002,9 +1002,11 @@ with uniform derivative bounds by compactness. Uniform positive definiteness sup
 
 Within the Appendix U five-mode reference branch, model the discretized bounce $u^*$ as lying on a critical manifold of dimension $m = 5$ (the collective coordinates). Theorem U.14 then identifies the corresponding leading Morse-Bott zero-mode counting pattern
 $$
-Z = A_{\mathrm{MB}}(\lambda)\,\lambda^{-(N-5)/2} e^{-\lambda S^*}(1+O(\lambda^{-1})),
+Z = A_{\mathrm{MB}}(\lambda)\,\lambda^{-(N_{\mathbb R}-5)/2} e^{-\lambda S^*}(1+O(\lambda^{-1})),
 $$
-where $A_{\mathrm{MB}}(\lambda)$ collects determinant and Jacobian factors, $N$ is the total number of Gaussian directions, and $S^* = S_{\text{disc}}(u^*)$ is the instanton action. In the PU application $\lambda = C_{\max}/\varepsilon_0 = 2$ is fixed rather than taken to $+\infty$, so this formula is used only to identify the zero-mode power $(N-5)/2$ entering the exponent-counting convention below; the omitted $O(\lambda^{-1})$ term is not discarded as a controlled small correction. Theorem U.8c shows that this five-mode count is not realized by the pure-coordinate dilatation direction of the current continuum action.
+where $A_{\mathrm{MB}}(\lambda)$ collects determinant and Jacobian factors, $N_{\mathbb R}$ is the total number of real Gaussian directions, and $S^* = S_{\text{disc}}(u^*)$ is the instanton action. In the PU application $\lambda = C_{\max}/\varepsilon_0 = 2$ is fixed rather than taken to $+\infty$, so this formula is used only to identify the zero-mode power $(N_{\mathbb R}-5)/2$ entering the exponent-counting convention below; the omitted $O(\lambda^{-1})$ term is not discarded as a controlled small correction.
+
+Theorem U.13b supplies the operative false-vacuum branch: under its stated spectral hypotheses the full discrete Hessian has exactly four translational zero modes and no additional nullity, while the imported $s$-wave input of Lemma U.13a.2 gives Morse index one on that sector. Theorem U.8c separately shows that the five-mode count is not realized by the pure-coordinate dilatation direction of the current continuum action, so the five-coordinate construction is retained only as a comparison convention and is not used to set the theorem-level exponent.
 
 ---
 
@@ -1028,9 +1030,19 @@ The equal-contribution action map is a branch hypothesis; Equation Q.10 supplies
 
 **Remark U.14.1: One-Loop Correction via Zeta Regularization.** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\operatorname{Gr}(2,8)$:
 
-$$\log\det'(-\Delta_{g_B} + \alpha) = -\zeta'_{\mathcal{O}}(0)$$
-
-where $\zeta_{\mathcal{O}}(s) = \sum_{(m_1,m_2) \neq (0,0)} \operatorname{mult}(m_1, m_2) \cdot (\lambda_B(m_1, m_2) + \alpha)^{-s}$ uses the Laplacian eigenvalues on $\operatorname{Gr}(2,8)$ (Helgason 1984). The multiplicities follow from spherical representation theory for the symmetric pair $(U(8), U(2) \times U(6))$. Under $K$-invariance, the mass parameter equals the hierarchy coefficient:
+Let $\mathcal O=-\Delta_{g_B}+\alpha$. Since $\alpha=3/2>0$, $\mathcal O$ is strictly positive, including on the constant representation, and its unprojected zeta determinant is
+$$
+\log\det_{\zeta}\mathcal O=-\zeta'_{\alpha}(0),
+$$
+where
+$$
+\zeta_{\alpha}(s)
+=
+\sum_{m_1\ge m_2\ge0}
+\operatorname{mult}(m_1,m_2)
+\bigl(\lambda_B(m_1,m_2)+\alpha\bigr)^{-s}.
+$$
+The multiplicities follow from spherical representation theory for the symmetric pair $(U(8),U(2)\times U(6))$. A primed determinant is used only after an explicitly registered collective-coordinate or gauge projection names the removed subspace. Under $K$-invariance, the mass parameter equals the hierarchy coefficient:
 
 $$\alpha = \frac{1}{16\sigma_B^2} = \frac{1}{16 \cdot (1/24)} = \frac{24}{16} = \frac{3}{2}$$
 
@@ -1050,7 +1062,34 @@ Relative to an isolated $N$-dimensional Gaussian saddle, the Morse-Bott removal 
 
 ### U.10.2 Zero Mode Contribution
 
-**Convention U.14a (Complexity Parameter).** The instanton complexity $\kappa$ is defined as the effective number of complex normal directions contributing to the exponential suppression factor $e^{-2\kappa}$. All power-law prefactors in $\lambda$, determinants, and Jacobian contributions from the Morse-Bott measure are absorbed into the effective prefactor $A_{\text{eff}}$. This convention separates the dominant exponential scaling (controlled by $\kappa$) from subleading polynomial corrections (packaged into $A_{\text{eff}} \sim O(1)$).
+**Convention U.14a (Normal-Response Action Quantization).** Let $N_{\mathbb R}=288$ be the real normal-response count of $\operatorname{Gr}_{\mathbb C}(12,24)$, and let $m=\dim\ker\mathcal H_{\mathrm{bounce}}$ on the accepted Hessian branch. Define
+$$
+N_{\mathrm{norm}}:=N_{\mathbb R}-m,
+\qquad
+\kappa:=\frac{N_{\mathrm{norm}}}{2}.
+\tag{U.14a.1}
+$$
+On the isotropic additive-action branch, each pair of real normal-response directions contributes one structural action unit. Proposition U.14 fixes the common action scale
+$$
+\rho=\frac{C_{\max}}{\varepsilon_0}=2,
+$$
+so
+$$
+S_{\mathrm{inst}}=\rho\kappa=2\kappa.
+\tag{U.14a.2}
+$$
+Equation (U.14a.2) is the explicit PU action-quantization principle connecting a response-mode count to a saddle exponent; it is not a consequence of the Morse–Bott Laplace formula. Determinants, collective-coordinate Jacobians, gauge/ghost volumes, the unique negative-mode prescription, and finite-volume normalization belong to $A_{\mathrm{eff}}$.
+
+On the theorem-level four-mode branch of Theorem U.13b,
+$$
+m=4,
+\qquad
+N_{\mathrm{norm}}=284,
+\qquad
+\boxed{\kappa=142,\quad S_{\mathrm{inst}}=284}.
+\tag{U.14a.3}
+$$
+The dilatation direction is nonzero and negative, not a zero mode, and is handled by $\Pi_-$, $\mathcal A_{\mathrm{neg}}$, and the determinant certificate.
 
 **Theorem U.15 (Leading-Order Complexity Deficit from Zero Modes).** Assume the Appendix U leading-order reference-counting convention of Corollary U.10, namely that the relevant collective-coordinate manifold has real dimension $m = 5$ (four translations and one dilatation mode). Under the leading-order Morse-Bott counting pattern of Section U.9.3 and Convention U.14a, these collective coordinates contribute the deficit
 $$
@@ -1211,6 +1250,30 @@ A_{\mathrm{eff}}^{\mathrm{Fred}}=\mathcal J_{\mathrm{coll}}\,|\mathcal A_{\mathr
 \tag{U.15d.3}
 $$
 where $|\mathcal A_{\mathrm{neg}}|$ and $|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|$ retain the modulus on the negative spectral subspace; the imaginary part required for false-vacuum decay is carried by $\mathcal A_{\mathrm{neg}}$ and is not part of the magnitude prefactor used in the static $\Lambda$ formula.
+
+**Remark U.15d.4 (Backbone Value of the Measure Entry and Branch Dependence).** With the interface capacity coordinate $g(u)=M\ln(1+u)$, the per-mode capacity Jacobian is $\hat g(u)=g(u)/M=\ln(1+u)$ and
+$$
+\frac{d\hat g}{du}\bigg|_{u^*}=\frac1{1+u^*}=2^{-1/d_0}=d_0^{-1/M}=0.9170040\ldots,
+$$
+an exact identity, since $1+u^*=2^{1/d_0}$ and $d_0^{1/M}=8^{1/24}=2^{1/8}$. The candidate identification
+$$
+\mathcal A_{\mathrm{meas}}=d_0^{-1/M},
+$$
+entered before comparison, assigns only the measure-normalization entry of Definition U.15d. The complete magnitude prefactor remains
+$$
+A_{\mathrm{eff}}^{\mathrm{Fred}}
+=
+d_0^{-1/M}
+\mathcal J_{\mathrm{coll}}
+|\mathcal A_{\mathrm{neg}}|
+\mathcal A_{\mathrm{ghost}}
+\mathcal A_{\mathrm{fv}}
+\left(
+\frac{\det'_\zeta\mathcal H_{\mathrm{false}}}
+{|\det''_\zeta\mathcal H_{\mathrm{bounce}}|}
+\right)^{1/2}.
+$$
+Every factor other than the displayed measure candidate remains unevaluated. Their product equals unity only under a separate, independently certified total-prefactor condition. The identification is branch-dependent before it is prefactor-dependent: on the four-mode branch of Theorem U.13b, reproducing the same numerical $\Lambda$ row requires the prefactor $e\,d_0^{-1/M}=2.4926754\ldots$, which is not a backbone value, so the Corollary U.10 versus Theorem U.13b mode-count split precedes any prefactor claim and both rows remain conditional on the Fredholm certificates of Definition U.15d, Theorem U.15e, and Definition U.15m.
 
 **Theorem U.15e (Fredholm gate and dilatation spectral audit).** Let $s_D=x^\mu\partial_\mu\phi^*$ belong to the quotient Hilbert space of a candidate false-vacuum record $\mathfrak F_U$. First apply the certificate gate: if the quotient Hessian is not self-adjoint Fredholm with the recorded spectral projections, or if the determinant line, orientation, anomaly condition, or common finite-part convention required by Definition U.15d fails, the branch is rejected as a theorem-level prefactor branch. If the gate is satisfied, exactly one of the following spectral alternatives holds:
 
@@ -1866,9 +1929,9 @@ For general emergent dimension $D'$:
 - Translational branch count: $m_{\mathrm{trans}} = D'$; for $D=4$ the corrected full discrete closure is Theorem U.13b under the explicit false-vacuum spectral hypotheses stated there, while other dimensions would require the corresponding discrete spectral proof
 - A further dilatation mode would require an additional exact-scale-family hypothesis of the type isolated in Theorem U.9
 - Deficit: $\delta = m/2$
-- Requires the channel-complete Bures tangent-cell condition $M = K(D')$ (Definition Z.9a; Theorem Z.10) and existence of appropriate spherical design
+- Requires a faithful response-label injection $M\le K(D')$ with strict least-feasible support cost (Definition Z.9a; Theorem Z.10) and an independently accepted spherical-design quadrature record
 
-For $D = 4$ (Theorem Z.11): the 24-cell realizes the optimal kissing configuration $K(4)=24$ and furnishes the spherical 5-design exactness used in Appendix U. This locks the channel-complete mode-channel correspondence at the level of cardinality, dimension, and quadrature input. Theorem U.8c shows that this design-exactness does not by itself create a fifth pure-coordinate dilatation zero mode in the current continuum action.
+For $D=4$ (Theorem Z.11), the regular $24$-cell supplies an explicit feasible $24$-cell shell and the spherical $5$-design input used in Appendix U. The quadrature property is a separate property of that registered realization; neither it nor dimensional feasibility requires a global saturation postulate. Theorem U.8c shows that this design exactness does not itself create a fifth pure-coordinate dilatation zero mode in the current continuum action.
 
 ---
 
@@ -3689,41 +3752,41 @@ The framework achieves inflationary predictions from the Golay-Steiner structure
 
 ---
 
-**Proposition U.72 (Shared Zero-Mode Counting Law for the Present Electroweak and Vacuum Hierarchies).** The currently derived electroweak and vacuum hierarchy exponents all take the form
-$$
-\kappa=\kappa_0-\frac{m}{2},
-$$
-where $\kappa_0$ is the base complex Gaussian count and $m$ is the real collective-coordinate count on the relevant branch. More precisely:
+**Proposition U.72 (Mechanism-Separated Electroweak and Vacuum Exponent Ledger).** The electroweak and vacuum exponents have distinct derivations:
 
-1. Electroweak sector:
-$$
-\kappa_{EW}=39-\frac12=38.5.
-$$
-2. Appendix U five-mode reference branch:
-$$
-\kappa_{\Lambda,\mathrm{ref}}=144-\frac52=141.5.
-$$
-3. Corrected four-mode vacuum branch under Theorem U.13b:
-$$
-\kappa_{\Lambda,\mathrm{trans}}=144-2=142.
-$$
+1. Theorem T.5 gives the Steiner active-pair response action
+   $$
+   \kappa_{EW}
+   =\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
+   =\frac{77}{2}.
+   $$
+2. The Appendix U five-mode reference convention gives
+   $$
+   \kappa_{\Lambda,\mathrm{ref}}
+   =\frac{288-5}{2}
+   =141.5.
+   $$
+3. The four-mode theorem branch of Theorem U.13b gives
+   $$
+   \kappa_{\Lambda,\mathrm{trans}}
+   =\frac{288-4}{2}
+   =142.
+   $$
 
-*Proof.* Theorem T.5 gives the electroweak base count $\kappa_0^{EW}=39$ and zero-mode count $m_{EW}=1$, hence $\kappa_{EW}=39-\frac12=38.5$. Theorem U.3 gives
-$$
-\dim_{\mathbb C}\operatorname{Gr}_{\mathbb C}(12,24)=12(24-12)=144,
-$$
-and Convention U.14a identifies this complex normal-direction count with the vacuum base exponent $\kappa_0^\Lambda=144$. Under the Appendix U five-mode reference counting convention of Theorems U.15-U.16, one subtracts $m=5$, obtaining $\kappa_{\Lambda,\mathrm{ref}}=144-\frac52=141.5$. Theorem U.8c simultaneously shows that this is a reference-counting branch rather than theorem-level continuum closure. Under the Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b, the full discrete problem has exactly four translational zero modes and no additional nullity, hence $\kappa_{\Lambda,\mathrm{trans}}=144-\frac42=142$. ∎
+The equality of their half-unit normalization is arithmetic; there is no shared electroweak/vacuum zero-mode theorem.
 
-**Corollary U.72a (Reference-Branch Vacuum–Electroweak Sum Rule).** On the Appendix U five-mode reference branch,
-$$
-2\kappa_{\Lambda,\mathrm{ref}}+2\kappa_{EW}=360=\binom{D+2}{2}M.
-$$
+*Proof.* Item 1 is the diagonal pair-incidence action and fixed-time minimization of Theorem T.5. Items 2–3 are Convention U.14a on the five-mode reference and accepted four-mode Hessian branches. Their premises and operators are different. ∎
 
-*Proof.* Corollary T.62a proves the identity. Using Theorem Z.11 and Theorem Z.5 gives
+**Corollary U.72a (Reference-Branch Vacuum–Electroweak Numerical Identity).** On the five-mode reference branch,
 $$
-\binom{D+2}{2}M=\binom{6}{2}\cdot 24=360.
+2\kappa_{\Lambda,\mathrm{ref}}+2\kappa_{EW}
+=283+77
+=360
+=\binom{D+2}{2}M
 $$
-∎
+at $(D,M)=(4,24)$. On the four-mode branch the corresponding sum is $284+77=361$.
+
+*Proof.* The first two equalities use Proposition U.72. The last uses $\binom62\cdot24=360$. This is a cross-ledger arithmetic identity, not a common-mechanism derivation. ∎
 
 **Proposition U.72b (No Moonshine-Coefficient Shortcut for $\kappa_{\Lambda}$).** In Appendix U, the cosmological exponent is fixed only by the Grassmannian dimension and the zero-mode branch:
 $$
@@ -3737,20 +3800,15 @@ The Moonshine character coefficient $196884$ and the Monster representation dime
 
 *Proof.* Theorem U.16a gives $\kappa=142-\nu/2$ with $\nu\in\{0,1\}$, so the branch data needed for the vacuum exponent are the real dimension $N_{\mathbb R}=288$ and the zero-mode indicator $\nu$. Theorem U.8c, Theorem U.13, and Theorem U.13b decide the status of the fifth mode by continuum and discrete Hessian information. None of those statements contains a VOA weight-space dimension or Monster representation dimension. Conversely, Theorem P.13.17 supplies the character coefficient $196884$ only after the Leech/Moonshine branch has been selected; it does not supply a Hessian null vector, a finite determinant, a zero-mode volume, a Jacobian, or a measure normalization. Therefore replacing the Morse-Bott zero-mode ledger by Moonshine coefficient data would change the definition of the Appendix U exponent rather than deriving it. ∎
 
-**Corollary U.72c (Zero-Mode Ledger Identity).** With
-$$
-\kappa_\Lambda=144-\frac{m_\Lambda}{2},
-\qquad
-\kappa_{EW}=39-\frac{m_{EW}}{2},
-$$
-one has
+**Corollary U.72c (Mechanism-Separated Cross-Sector Exponent Identity).** For a vacuum branch with $m_\Lambda$ registered Hessian zero modes and the Steiner electroweak action of Theorem T.5,
 $$
 2\kappa_\Lambda+2\kappa_{EW}
-=366-(m_\Lambda+m_{EW}).
+=(288-m_\Lambda)+77
+=365-m_\Lambda.
 $$
-Consequently, the five-mode reference convention $(m_\Lambda,m_{EW})=(5,1)$ gives $360$, whereas the corrected four-mode branch of Theorem U.13b together with the electroweak branch of Theorem T.5, $(m_\Lambda,m_{EW})=(4,1)$, gives $361$. The value $360$ is therefore a property of the five-mode reference-counting convention, not a branch-independent constant.
+Thus $m_\Lambda=5$ gives $360$, while the four-mode theorem branch $m_\Lambda=4$ gives $361$.
 
-*Proof.* Substitute the two zero-mode budgets into the displayed identity. No prefactor evaluation enters this arithmetic. ∎
+*Proof.* Substitute $2\kappa_\Lambda=288-m_\Lambda$ from Convention U.14a and $2\kappa_{EW}=77$ from Theorem T.5. No electroweak zero-mode count or prefactor evaluation enters. ∎
 
 **Corollary U.72d (Cosmological-Anchor-Free Electroweak Diagnostic from the Four-Mode Observational Inversion).** Define from observed inputs
 $$

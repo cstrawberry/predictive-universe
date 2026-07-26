@@ -276,10 +276,47 @@ Under Assumption W.3.A, if $M_Y=M_2=M$ and $x_Y=x_2=x_0$, then the two Jensen-ca
 
 $$ \sin^2\theta_W(\mathrm{MPU})=\tfrac12. \tag{W.3.2} $$
 
-**Proposition W.13 (GUT‑normalized template).**
-If one further assumes an $SU(5)$‑style generator normalization at $\mu^*$ with $g_1=g_2$ and $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$ (here $g_1$ is the **GUT‑normalized** $U(1)$ coupling), then
+**Proposition W.13 (Full-Block Common-Stiffness Normalization).** On the complex electroweak carrier
+$$
+W_5\cong\mathbb C^3\oplus\mathbb C^2
+$$
+of Definition T.14a, take
+$$
+T_3=\operatorname{diag}(0,0,0,\tfrac12,-\tfrac12),
+\qquad
+\frac Y2
+=\operatorname{diag}(-\tfrac13,-\tfrac13,-\tfrac13,\tfrac12,\tfrac12).
+$$
+Then
+$$
+\operatorname{Tr}(T_3^2)=\frac12,
+\qquad
+\operatorname{Tr}\!\left((Y/2)^2\right)=\frac56.
+$$
+The unit-normalized hypercharge direction is
+$$
+T_Y=\sqrt{\frac35}\,\frac Y2.
+$$
+Assume that at the matching scale the gauge-kinetic quadratic form on the registered electroweak generator image is exactly
+$$
+B(X,Y)=c\,\operatorname{Tr}_{W_5}(XY),
+\qquad c>0,
+$$
+with no independent $U(1)$ coefficient. A QFI realization establishes this premise only when it supplies an injective response map $R$ from gauge-generator space and proves $R^*g_{\mathrm{QFI}}=B$ with the same $c$ on both sectors. Then $g_1=g_2$ in the resulting unit normalization and
+$$
+g_Y=\sqrt{\frac35}\,g_2,
+\qquad
+\boxed{
+\sin^2\theta_W
+=\frac{g_Y^2}{g_Y^2+g_2^2}
+=\frac38.
+}
+\tag{W.3.3}
+$$
 
-$$ \sin^2\theta_W(\mathrm{MPU})=\frac{3}{8}. \tag{W.3.3} $$
+*Proof.* The two traces are direct diagonal sums. Multiplication by $\sqrt{3/5}$ makes $\operatorname{Tr}(T_Y^2)=1/2=\operatorname{Tr}(T_3^2)$. The explicit form $B=c\operatorname{Tr}_{W_5}$ supplies the same quadratic coefficient for these unit-normalized directions. Undoing the hypercharge normalization gives $g_Y=\sqrt{3/5}\,g_2$, and substitution gives $3/(3+5)=3/8$. The flat active-interface QFI by itself does not identify gauge-vertical directions and is not used as a coupling-ratio proof. ∎
+
+The result is exact on the full-block common-stiffness branch. A $3{:}1$ count of generators is not its proof and, inserted into the separate Jensen-cap formula (W.3.1) with flat sector weights, would not give $3/8$.
 
 ## W.3a Gauge Mode Counting at the PCE-Attractor
 
@@ -310,18 +347,18 @@ At the PCE-Attractor $a=2$, so each real interface basis direction has QFI eigen
 
 ### W.3a.3 Uniform Per-Generator Capacity
 
-**Theorem W.3a.3 (Uniform Capacity from PCE Isotropy in an Orthonormal Generator Basis).** At the PCE-Attractor, if each gauge sector is described in a generator basis that is orthonormal with respect to the inherited QFI metric on the embedded gauge subspace, then each generator carries equal information capacity:
+**Theorem W.3a.3 (Uniform Capacity on a Registered Gauge-Response Image).** Assume a registered injective linear response map $R:\mathfrak g_{\mathrm{SM}}\to T_{\rho_0}\mathrm{Gr}(2,8)$ and describe each sector in a basis orthonormal for the pullback $R^*g_{\mathrm{QFI}}$. At the PCE attractor, every such basis generator carries equal QFI capacity:
 $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in that orthonormal basis.}$$
 
 *Proof.*
 
 **Step 1.** The full 24-dimensional interface has flat QFI spectrum $g_{\mathrm{QFI}} = \lambda_0 \cdot I_{24}$ (Proposition W.3a.2).
 
-**Step 2.** The SM gauge algebra embeds into a 12-dimensional subspace $\mathcal{I}_{\mathrm{SM}} \subset \mathbb{R}^{24}$.
+**Step 2.** By hypothesis, the registered injection $R$ supplies $\mathcal I_{\mathrm{SM}}:=R(\mathfrak g_{\mathrm{SM}})\subset T_{\rho_0}\mathrm{Gr}(2,8)$ and $\mathcal I_s:=R(\mathfrak g_s)$. The dimension inequality $12\le24$ alone neither constructs $R$ nor identifies gauge-vertical directions.
 
 **Step 3.** Restriction of the flat metric to any subspace remains flat: $g_{\mathrm{QFI}}|_{\mathcal{I}_s} = \lambda_0 \cdot I_{M_s}$.
 
-**Step 4.** In a basis orthonormal with respect to this inherited metric, every basis vector has the same norm and therefore the same single-generator QFI weight $\lambda_0$. This is the sense in which PCE isotropy enforces equal per-generator capacity. $\square$
+**Step 4.** In a basis orthonormal with respect to this inherited metric, every basis vector has the same norm and therefore the same single-generator QFI weight $\lambda_0$. This is the sense in which PCE isotropy enforces equal per-generator capacity. The theorem does not equate gauge couplings or gauge-kinetic coefficients; that conclusion requires Proposition W.13's common-stiffness pullback premise. $\square$
 
 ### W.3a.4 Mode Ratio and Electroweak Structure
 

@@ -21,7 +21,7 @@ Foundation I supplies the logical model-class route without using the later MPU 
 2.  **Simulate/Reason:** Simulate the execution of any model $M \in \mathcal{M}$ applied to a state $s$, or formally reason about this process within $\mathcal{F}$, subject to fundamental computational limits.
 3.  **Evaluate Predicates:** Represent and evaluate logical formulas within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$, including self-referential predicates.
 
-**Summary of Definition 23 (MPU):** Fundamental unit operating at complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Theorem 15, Corollary 3). MPUs possess Hilbert space $\mathcal{H}_0$ with $\dim(\mathcal{H}_0) \geq 8$ (Theorem 23) and operate via dual dynamics: Internal Prediction ($P_{\text{int}}$, Definition 26) and 'Evolve'/ND-RID interaction (Definition 27).
+**Summary of Definition 23 (MPU):** An MPU is a qualifying full-loop implementation that attains $C_P=C_{op}$ on the declared nonempty implementation class. It has the dual Internal Prediction and 'Evolve'/ND-RID dynamics of Definitions 26–27. The inequalities $C_{op}\ge K_0=3$ and $d_0\ge8$ apply only when the MPU additionally satisfies Theorem 15's (O1)–(O3), (FC) SPAP-register conditions, represents the eight contexts as mutually perfectly distinguishable Hilbert alternatives, and obeys Corollary 3's complexity-capacity bridge.
 
 **Recall of Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
 
@@ -140,29 +140,65 @@ For an unbounded partial computation, each finite search stage is represented by
 **Significance:** This derivation is independent of the Self-Referential Paradox of Accurate Prediction. Property R is established before SPAP is invoked, providing a non-circular foundation. The logical sequence is:
 
 $$
-\text{Predictive structure} + \text{Logical-Structural Assumptions} \to \text{Property R} \to \text{SPAP} \to K_0 = 3 \text{ bits} \to \text{MPU structure}
+\begin{aligned}
+&\text{Predictive structure}+\text{Logical-Structural Assumptions}
+\to\text{Property R}
+\to\text{SPAP diagonal limitation},\\
+&(\mathrm{O1})\text{--}(\mathrm{O3})+(\mathrm{FC})
+\to N_{\mathrm{vis}}^{\min}=8
+\to K_0=3.
+\end{aligned}
 $$
 
-Property R does not depend on physical structures it helps derive. This logical foundation applies to any conscious predictive system that satisfies the above structural assumptions, regardless of physical substrate, establishing computational capacity as a universal feature of consciousness.
-
+The two rows are independent. Transfer of the second row to an MPU's $C_P$ additionally requires Definition 23, Hilbert distinguishability, and Corollary 3's complexity-capacity bridge. Property R does not depend on the later MPU structures it helps analyze. The conclusion applies only to predictive model classes satisfying composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic capable of coding finite strings, circuits, and bounded computations. It establishes no unconditional claim about consciousness or about finite physical systems that lack those hypotheses.
 ### A.0.3 Foundation II: Minimal Physical Capacity
 
 Having established Property R as a logical necessity, we now address how this abstract structure manifests in physical systems with finite resources.
 
-**Proposition A.0.3 (MPUs Possess Minimal Self-Referential Capacity)**
-Minimal Predictive Units, possessing complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Definition 23, Theorem 15), inherently contain the minimal structural complexity (equivalent to 3 bits or 8 distinguishable physical configurations) required to physically represent and logically process the core elements of self-referential computations, satisfying foundational aspects of Property R: basic representation and logical negation.
+**Proposition A.0.3 (Conditional Self-Referential Carrier Capacity of an MPU)**
+Let $\mu_*$ be an MPU in the sense of Definition 23. Assume that its registered SPAP sub-dynamics satisfies (O1)–(O3) and (FC), that its eight response contexts are represented by mutually perfectly distinguishable states on a Hilbert carrier of dimension $d_0(\mu_*)$, and that
+$$
+C_P(\mu_*)\ge C_{cap}(\mu_*)=\log_2d_0(\mu_*).
+$$
+Then
+$$
+|\mathcal S_{\mathrm{vis}}(\mu_*)|\ge8,
+\qquad
+d_0(\mu_*)\ge8,
+\qquad
+C_P(\mu_*)=C_{op}\ge K_0=3.
+$$
+The registered sub-dynamics therefore carries the state, stored-prediction, and phase/comparison readouts required by the stated SPAP encoding. This carrier result alone does not establish Effective Operational Property R.
 
-*Proof.* Theorem 15 (Section 5.2.2) establishes $K_0 \equiv B_3$ as the minimum complexity needed to implement the deterministic SPAP contradiction logic $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$. This requires:
-1.  Representing binary state $\phi \in \{0,1\}$
-2.  Representing binary prediction $\hat{\phi} \in \{0,1\}$
-3.  Executing the NOT operation
-4.  Storing the result as next state $\phi_{t+1}$
+*Proof.* By the (FC) hypothesis, the joint response map
+$$
+r=(r_m,r_p,r_v):
+\mathcal S_{\mathrm{vis}}(\mu_*)\to\{0,1\}^3
+$$
+is surjective. Hence
+$$
+|\mathcal S_{\mathrm{vis}}(\mu_*)|
+\ge|\{0,1\}^3|
+=8
+$$
+by the finite cardinality inequality. Mutually perfect distinguishability of these eight contexts on the Hilbert carrier gives
 
-A 3-bit system provides 8 distinguishable configurations ($2^3 = 8$), sufficient to encode these elements and manage the computational sequence without destructive overwriting (Section 5.2.2, Theorem 15 demonstrates fewer than 8 configurations are insufficient). Since MPUs operate at $C_{\text{op}} \geq K_0$, they possess at least this structural capacity within their physical state space (related to $\dim(\mathcal{H}_0) \geq 8$, Theorem 23).
+$$
+d_0(\mu_*)\ge8
+$$
+and therefore
+$$
+C_{cap}(\mu_*)=\log_2d_0(\mu_*)\ge3.
+$$
+The complexity-capacity bridge yields
+$$
+C_P(\mu_*)\ge C_{cap}(\mu_*)\ge3.
+$$
+Definition 23 gives $C_P(\mu_*)=C_{op}$, so $C_{op}\ge3=K_0$ on this branch.
 
-However, this minimal capacity is insufficient for full Property R. The ability to represent arbitrary computations, simulate complex models, and evaluate predicates requires greater resources, which emerge through network composition (§A.0.5). □
+Finally, the hypothesis that $\mu_*$ realizes the registered SPAP sub-dynamics supplies the reflex update itself; the cardinality argument supplies its carrier lower bound and does not independently derive the update law. The conditional carrier result is insufficient for full Property R. Representation of the finite computations covered by a declared SPAP or RUD protocol requires the separate coding, composition, working-memory, protected-execution, and reliability certificates of Definition A.0.1 and Theorems A.0.2 and A.0.6. ∎
 
-**Role in Physical Instantiation:** The horizon constant $K_0 = 3$ bits does not create Property R—Property R exists by logical necessity (§A.0.2). Rather, $K_0$ specifies the minimum physical structure required to *instantiate* the most basic self-referential computation. This establishes MPUs as the fundamental physical units capable of participating in the predictive cycle.
+**Role in Physical Instantiation:** Proposition A.0.3 is conditional on the registered SPAP realization, full-context, Hilbert-distinguishability, and complexity-capacity hypotheses. It does not show that every MPU or every above-chance predictor has eight operational contexts. On its stated branch, $K_0=3$ is the attained lower bound for the SPAP context encoding; Property R retains its independent logical and physical certificates.
 
 ### A.0.4 Emergence of Reliable Computation from POP/PCE Optimization
 
@@ -180,6 +216,18 @@ V_{\mathrm{rel}}(p_{\mathrm{err}})
 V_{\mathrm{err}}(p_{\mathrm{err}}).
 $$
 The minimizer is unique only under Dominant Cost Convexity. Operational applicability at logical depth $T$ additionally requires the QEC/bootstrap, working-memory, and execution records to certify the error tolerance of that finite protocol.
+
+**Proposition A.0.2c (Golay Code-Capacity Sufficient Threshold Certificate).** Consider the binary Golay block $[M,k,d_{\mathrm{code}}]=[24,12,8]$ with hard-decision block decoding, which corrects every error pattern of weight at most $t=\lfloor(d_{\mathrm{code}}-1)/2\rfloor=3=K_0$, under independent identically distributed link errors of rate $p$ per block position. Then the logical block error probability obeys
+$$
+P_L(p)\le\binom{24}{4}p^4=10626\,p^4,
+$$
+and under level-wise concatenation with $p_{\ell+1}\le\binom{24}{4}p_\ell^{\,4}$ the rescaled error $\binom{24}{4}^{1/3}p_\ell$ is fourth-power contracting, so $p_\ell\to0$ doubly exponentially whenever
+$$
+p_0<p_{\mathrm{suf}}:=\binom{24}{4}^{-1/3}=0.045486=4.55\%.
+$$
+For the exact iid disjoint-concatenation model only, one may conservatively register $p_{\mathrm{th}}:=p_{\mathrm{suf}}$ to fill the numerical threshold-inequality slot of Definition A.0.1q whenever $0<p_{\mathrm{err},0}<p_{\mathrm{suf}}$. This does not discharge the rest of the QEC certificate. The equality $t=3=K_0$ is numerical and supplies no bridge between code correction and the horizon constant. The union-bound value is not the exact decoder threshold or a universal physical fault-tolerance threshold. Correlated or adversarial noise is outside this certificate and requires its own noise-model record, as stated in Definition A.0.1q.
+
+*Proof.* Since the decoder corrects all patterns of weight at most $3$, a logical error requires at least $4$ position errors, hence the error set contains some $4$-element subset of the $24$ positions on which all entries are flipped. For any fixed $4$-subset that event has probability $p^4$ under the iid law, and the union bound over the $\binom{24}{4}$ subsets gives $P_L\le\binom{24}{4}p^4$. Writing $A=\binom{24}{4}$ and $q_\ell=A^{1/3}p_\ell$, the recursion $p_{\ell+1}\le Ap_\ell^4$ gives $q_{\ell+1}\le q_\ell^{\,4}$, so $q_\ell\le q_0^{\,4^\ell}$ and $q_0<1$, equivalently $p_0<A^{-1/3}$, forces $p_\ell\to0$ doubly exponentially. Evaluating $A=10626$ gives $A^{-1/3}=0.045486$. ∎
 
 **Definition A.0.1q (QEC Compatibility Certificate $\mathfrak C_{\mathrm{QEC}}$).** A QEC compatibility certificate is a finite forward-locked record
 $$
@@ -567,7 +615,7 @@ Alternative substrates or branches that fail the direct QEC certificate, the Gol
 
 ### A.0.5 Network Composition and Full Property R
 
-Individual MPUs possess minimal self-referential capacity ($K_0 = 3$ bits, §A.0.3) but lack resources for full Property R. Universal computation emerges through network composition.
+On the registered SPAP realization satisfying (O1)–(O3), (FC), Hilbert distinguishability, and the complexity-capacity bridge, an MPU can carry the three-bit context register of Proposition A.0.3. Full Property R still requires the independent network composition, memory, coding, and protected-execution certificates of §A.0.5.
 
 **Proposition A.0.6 (Compositional Enhancement)**
 For a network of $n$ MPUs with individual Hilbert spaces $\mathcal{H}_0 \cong \mathbb{C}^8$, the composite Hilbert space is $\mathcal{H}_{\text{composite}} = \mathcal{H}_0^{\otimes n} \cong \mathbb{C}^{8^n}$. The composite system's state space dimension grows exponentially: $\dim(\mathcal{H}_{\text{composite}}) = 8^n$.
@@ -649,11 +697,11 @@ This refined definition makes explicit the network-level realization of computat
 *   **Source:** Predictive structure of consciousness (Predictionism Appendix P.3.4)
 *   **Derivation:** Cogito → Binary verification → Boolean operations → Functional completeness → Property R
 *   **Status:** Logical necessity, independent of physical implementation
-*   **Significance:** Establishes why computational capacity must exist in any conscious predictive system
+*   **Significance:** Establishes the Property-R computational requirement for predictive model classes satisfying the stated closure assumptions
 
 **Foundation II (Physical Instantiation, §A.0.3-A.0.5):**
 *   **Source:** MPU framework under POP/PCE dynamics with ND-RID interactions
-*   **Derivation:** Individual MPU minimal capacity ($K_0 = 3$ bits) → POP/PCE optimization driving reliable computation → Network composition achieving universality → Operational Property R
+*   **Derivation:** Registered (O1)–(O3), (FC) three-bit context carrier plus the Hilbert and complexity-capacity bridges → independently certified POP/PCE reliability dynamics → network composition with the stated memory, coding, gate, and execution resources → Effective Operational Property R on the covered tasks and windows
 *   **Status:** Physical realization under an accepted $\mathfrak C_{\mathrm{QEC}}$ or a covered $\mathfrak C_{\mathrm{GQEC}}$ discharge route, together with Dominant Cost Convexity
 *   **Significance:** Demonstrates how logical necessity manifests in finite resource systems
 
@@ -905,9 +953,10 @@ so $M_{decide}'$ cannot be guaranteed to decide $P$ with arbitrarily high confid
 
 ## A.3 Significance and Relation to Logical Indeterminacy
 
-*   **Foundation for Logical Indeterminacy:** The SPAP theorems (A.1.1, A.1.3, robust to noise via A.1.2, A.1.4) and RUD theorems (A.2.3, A.2.4) provide rigorous formal grounding for Logical Indeterminacy (Definition 12) within the PU framework. They establish fundamental, in-principle limits on prediction accuracy and interactive knowledge acquisition arising directly from self-reference and reflexive dynamics in systems possessing Effective Operational Property R. This indeterminacy is intrinsic to the logic of the system's operation under the framework's assumptions.
-*   **Origin of Quantum Randomness:** This inherent Logical Indeterminacy, applicable to MPUs via the mechanism argued in Appendix A.0, is the structural source of the ontological randomness observed in the MPU 'Evolve' process (Theorem 28a), manifesting mathematically through the Born rule probabilities derived via Theorem 8.2, Lemma 8.2a, Theorem 8.3, Theorem G.1.7, and Theorem G.1.11b.
-*   **Complexity Costs of Prediction:** The SPAP theorems underpin Theorem 14, which shows that approaching the fundamental performance limit $\alpha_{SPAP}$ requires divergent computational complexity (Appendix B.3), establishing physical bounds on achievable predictive accuracy.
+* **Logical Indeterminacy:** The SPAP and RUD theorems exclude a single universally exact predictor or total uniform decider on their stated diagonal-closed classes.
+* **Physical Stochastic Closure:** Principle 11b requires the PPI-complete convex invariant response ledger when the registered finite reflexive map has no pure fixed point. For binary negation, Theorem 11b proves $q(\phi\mid R)=1/2$ and $H_{\mathrm{Sh}}(\Phi\mid R)=\ln2$. Principle 8.0c identifies that ledger with the registered single-run outcome probabilities; a frequency law additionally requires an i.i.d., exchangeable, or stationary-ergodic repeated-trial certificate.
+* **Quantum Reconstruction:** Principle 8.0b supplies the sharp homogeneous carrier certificate and Theorem 8.0d fixes $\mathcal H_0\cong\mathbb C^8$. Theorem 8.2 and Lemma 8.2a give quotient noncontextuality and finite additivity; Theorem 8.3 proves the Born trace rule.
+* **Complexity Costs of Prediction:** On a task class carrying the certificate $\mathfrak C_{B.2}$, Theorem 14 supplies the log-enhanced quadratic lower bound $C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})=\Omega\!\left(\log(1/\delta_{\mathrm{SPAP}})/\delta_{\mathrm{SPAP}}^{2}\right)$, so verification and update complexity on that class diverges as the gap $\delta_{\mathrm{SPAP}}$ to $\alpha_{SPAP}$ closes (Appendix B.3; Theorem B.2). Transfer of that bound to $C_P$ uses its declared domination bridge.
 *   **Limits on Interaction:** RUD theorems (A.2.3, A.2.4) formally demonstrate that interaction via ND-RID ('Evolve') is fundamentally limited in its ability to reliably extract certain types of information about the system being probed. This complements the thermodynamic channel capacity bounds ($C_{\max} < \ln d_0$) derived in Appendix E from the irreversibility ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) of ND-RID.
 
 These core logical and computational limitations, derived rigorously under the assumption of Effective Operational Property R (motivated by POP/PCE dynamics), are foundational constraints shaping the emergent quantum mechanics, thermodynamics, information processing limits, and gravitational dynamics within the Predictive Universe framework.

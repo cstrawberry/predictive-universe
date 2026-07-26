@@ -492,7 +492,35 @@ $$
 $$
 Passing to the paired limits gives $\langle\mathbf T-\widetilde{\mathbf T},\phi\rangle=0$ for all such $\phi$, hence equality as Radon measures. Radon–Nikodym uniqueness gives equality of densities. Uniqueness of a cluster point upgrades subsequential convergence to convergence of the family. ∎
 
-**Theorem B.8c (Variational Identification of the Continuum Source Tensor).** Let $S_{(\mathrm{MPU})}[g,\Phi]=\int_{M_{\mathrm{reg}}}\mathcal L_{(\mathrm{MPU})}(g,\Phi)\sqrt{|g|}\,d^4x$ be the continuum matter action obtained from Theorem D.6d. Assume: (H B.8c.1) $S_{(\mathrm{MPU})}$ is Gâteaux differentiable with respect to compactly supported smooth metric perturbations $\delta g_{\mu\nu}$; (H B.8c.2) the discrete first variations agree with the continuum first variation up to $O(h)$ remainders under the admissible coarse-graining of Definition B.8a. Then
+**Theorem B.8c (Variational Identification of the Continuum Source Tensor).** Let
+$$
+S_{(\mathrm{MPU})}[g,\Phi]
+=
+\int_{M_{\mathrm{reg}}}
+\mathcal L_{(\mathrm{MPU})}(g,\Phi)\sqrt{|g|}\,d^4x
+$$
+be the continuum matter action obtained from Theorem D.6d. Assume:
+
+1. **(H B.8c.1)** $S_{(\mathrm{MPU})}$ is Gâteaux differentiable with respect to compactly supported smooth metric perturbations $\delta g_{\mu\nu}$.
+2. **(H B.8c.2)** For every fixed compactly supported smooth $\delta g$,
+   $$
+   \delta_gS_h^{(\mathrm{MPU})}[\delta g]
+   =
+   \frac12\int\delta g_{\mu\nu}\,d\mathbf T_h^{\mu\nu}
+   +
+   r_h(\delta g),
+   \qquad
+   r_h(\delta g)=O(h).
+   $$
+3. **(H B.8c.3)** Along the subsequence of Theorem B.8b,
+   $$
+   \delta_gS_{h_j}^{(\mathrm{MPU})}[\delta g]
+   \longrightarrow
+   \delta_gS_{(\mathrm{MPU})}[g,\Phi;\delta g]
+   $$
+   for every such $\delta g$.
+
+Then
 $$
 \delta_g S_{(\mathrm{MPU})}[g,\Phi;\delta g] \;=\; \tfrac12\int_{M_{\mathrm{reg}}}\delta g_{\mu\nu}\,d\mathbf T^{\mu\nu},
 $$
@@ -526,7 +554,7 @@ $$
 \to
 \int \delta g_{\mu\nu}\,d\mathbf T^{\mu\nu}.
 $$
-Combined with (H B.8c.1), which supplies $\delta_g S_{h_j}^{(\mathrm{MPU})}\to\delta_g S_{(\mathrm{MPU})}$, this yields the stated identity. Under local equilibrium,
+Combined with (H B.8c.3), which supplies $\delta_g S_{h_j}^{(\mathrm{MPU})}\to\delta_g S_{(\mathrm{MPU})}$, this yields the stated identity. Under local equilibrium,
 $$
 d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}\sqrt{|g|}\,d^4x,
 $$
@@ -601,7 +629,7 @@ O(\lambda^2)
 $$
 in the local expansion, proving part (b) to the stated order. ∎
 
-**Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$ under the admissibility and local-equilibrium hypotheses of Definition B.8a and (H B.8d.1), the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source of Theorem B.8c, written equivalently as
+**Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$, assume the hypotheses of Theorems B.8b and B.8c, local equilibrium, and the continuity, flux-consistency, and Riemann-sum hypotheses of Theorem B.8d. Then the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source of Theorem B.8c, written equivalently as
 $$
 T_{(\mathrm{MPU})}^{\mu\nu}
 =
@@ -615,7 +643,7 @@ T^{(\mathrm{MPU})}_{\mu\nu}
 -\frac{2}{\sqrt{|g|}}\,
 \frac{\delta S_{(\mathrm{MPU})}}{\delta g^{\mu\nu}};
 $$
-(3) a covariantly conserved symmetric tensor ($\nabla_\mu T^{\mu\nu}=0$ by Theorem B.8b(b) and, independently, by Corollary 45a.1); (4) the horizon heat-flux source of Theorem B.8d. The gravity derivation of §12 therefore uses one and the same stress-energy object at the microscopic, variational, thermodynamic, and conservation levels. ∎
+(3) a covariantly conserved symmetric tensor ($\nabla_\mu T^{\mu\nu}=0$ by Theorem B.8b(b) and, independently, by Corollary 45a.1); (4) the horizon heat-flux source of Theorem B.8d. The gravity derivation of §12 therefore uses one and the same stress-energy object at the microscopic, variational, thermodynamic, and conservation levels.
 
 *Proof.* Items (1), (2), (4) follow from Theorems B.8b, B.8c, B.8d. Item (3) follows from Theorem B.8b(b) directly and, independently, from Corollary 45a.1 applied to the scalar-density matter action of Theorem 45a. The two routes agree because they refer to the same underlying tensor identified by (1) and (2). ∎
 
@@ -653,7 +681,7 @@ k_BT_{\mathrm{eff}}h_{\min}\,dN_{\mathrm{str}}
 $$
 Division by $dt$ proves the first inequality, and multiplication by $\varepsilon_0$ proves the second. ∎
 
-**Remark B.8f.1 (Capacity Cost of a Metered Event).** Under $\mathfrak C_{\mathrm{meter}}$ a binary retained event carries the Landauer floor $k_BT_{\mathrm{eff}}\ln2$ for the recorded bit, plus any SPAP, verification, recovery, or overwrite overhead already present in the capacity ledger. This is a lower bound on the certified register write, not a claim that the full physical episode costs exactly one bit.
+**Remark B.8f.1 (Reset Cost of a Metered Binary Label).** Writing or retaining a binary label need not dissipate $k_BT_{\mathrm{eff}}\ln2$. That bath-heat lower bound applies only when a separately registered cyclic protocol noninjectively resets a conditionally uniform binary label and no retained side record contains the erased information. More generally Theorem 31 gives $Q_{\mathrm{bath}}\ge k_BT_{\mathrm{eff}}H(P\mid R)$ for the specified reset ensemble; equality additionally requires a thermodynamically reversible implementation with zero excess dissipation. Verification, recovery, and overwrite overheads remain separate nonnegative ledger entries.
 
 **Corollary B.8g (Complexity Backreaction Bound).** If $\mathfrak C_{\mathrm{eng}}$ is supplemented by an FRW or Buchert averaging certificate fixing the homogeneity scale, stress coefficient, and averaging window, then the complexity-growth contribution to $T_{\mu\nu}^{(\mathrm{MPU})}$ is bounded by the time integral of Proposition B.8f through the corresponding term in Definition B.8. This gives a finite backreaction estimate. It proves negligible contamination of the Appendix U $\Lambda$ branch only when the resulting bound is below the accepted residual budget fixed before comparison.
 

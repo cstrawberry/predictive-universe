@@ -83,9 +83,40 @@ $$
 
 where $T_{\mu\nu}^{(baseline)}$ represents the minimal operational state stress-energy ($C_{agg} = C_{op}$), $\Delta T_{\mu\nu}^{(CC)}$ is the additional matter contribution from maintaining high-complexity context, and $T_{\mu\nu}^{(EM)}$ accounts for any electromagnetic field generation (Theorem L.2).
 
-**Result (Self-limiting CC bound under resource ceiling).** If an operational ceiling $u_{context} \le u_{\max}$ holds, then using $P_{context} \ge \Gamma_0 C_{context}/\tau_c$ (where $\Gamma_0$ is the power conversion factor, Definition 20), we have $u_{context} \ge \Gamma_0 C_{context}/V_S$ and hence:
+**Result (Self-limiting CC bound under resource ceiling).** Suppose $u_{\mathrm{context}}\le u_{\max}$ and
 $$
-\boxed{\text{CC} \le \alpha_{CC,max} \frac{u_{\max}}{u_{\max} + \kappa_* C_{scale}}}, \qquad \kappa_* := \Gamma_0/V_S
+P_{\mathrm{context}}\ge\frac{\Gamma_0 C_{\mathrm{context}}}{\tau_c}.
+$$
+Since
+$$
+u_{\mathrm{context}}
+=\frac{\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{V_S},
+$$
+one has
+$$
+u_{\mathrm{context}}
+\ge
+\eta_{\mathrm{ret}}\frac{\Gamma_0}{V_S}C_{\mathrm{context}}
+=\eta_{\mathrm{ret}}\kappa_*C_{\mathrm{context}},
+\qquad
+\kappa_*:=\frac{\Gamma_0}{V_S}.
+$$
+Combining this with
+$$
+\mathrm{CC}
+=\alpha_{CC,\max}
+\frac{C_{\mathrm{context}}}
+{C_{\mathrm{context}}+C_{\mathrm{scale}}}
+$$
+gives
+$$
+\boxed{
+\mathrm{CC}
+\le
+\alpha_{CC,\max}
+\frac{u_{\max}}
+{u_{\max}+\eta_{\mathrm{ret}}\kappa_*C_{\mathrm{scale}}}
+}.
 \tag{S.10}
 $$
 
@@ -278,18 +309,28 @@ for $\mathrm{CC}\ge0$, so this root is the unique maximizer of the truncated uti
 
 ## S.5 Schwarzschild Interpretation of the CC Endpoint-Bias Bound
 
-The endpoint-bias constraint $\text{CC}<0.5$ (Theorem 39) is weaker than exact causality and admits a separate gravitational interpretation; causal compliance still requires Theorem 39c. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The total energy associated with maintaining this context over timescale $\tau_c$ is:
+The endpoint-bias constraint $\text{CC}<0.5$ (Theorem 39) is weaker than exact causality and admits a separate gravitational interpretation; causal compliance still requires Theorem 39c. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The supplied work over the coherence interval is
 $$
-E_{context} = P_{context} \tau_c
+E_{\mathrm{context}}
+=P_{\mathrm{context}}\tau_c.
 \tag{S.28}
 $$
-
-The Schwarzschild radius (Schwarzschild, 1916; Misner et al., 1973) corresponding to energy $E_{context}$ is, on the retained-energy branch (with $E_{\mathrm{grav}}^{\mathrm{inst}} = \eta_{\mathrm{ret}} P_{context} \tau_c$ as in the Theorem L.3 and the Patch 12 fix to S.2 below):
+Only the retained, localized part is assigned to the instantaneous gravitational source:
 $$
-r_s = \frac{2G E_{context}}{c^4} = \frac{2G \eta_{\mathrm{ret}} P_{context} \tau_c}{c^4}
+E_{\mathrm{grav}}^{\mathrm{inst}}
+=\eta_{\mathrm{ret}}E_{\mathrm{context}}
+=\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c,
+\qquad
+0<\eta_{\mathrm{ret}}\le1.
+$$
+Accordingly, the Schwarzschild radius associated with the retained source energy is
+$$
+r_s
+=\frac{2GE_{\mathrm{grav}}^{\mathrm{inst}}}{c^4}
+=\frac{2G\eta_{\mathrm{ret}}P_{\mathrm{context}}\tau_c}{c^4}.
 \tag{S.29}
 $$
-The denominator is $c^4$, not $c^2$: Schwarzschild radius for mass $M$ is $r_s = 2GM/c^2$, and identifying $M = E/c^2$ gives $r_s = 2GE/c^4$. Dimensional check: $[G \cdot E / c^4] = (m^3 / (kg \cdot s^2)) \cdot (kg \cdot m^2 / s^2) / (m^4 / s^4) = m$, as required.
+The use of $c^4$ follows from $r_s=2GM/c^2$ and $M=E_{\mathrm{grav}}^{\mathrm{inst}}/c^2$.
 
 Substituting Equation S.5:
 $$
@@ -324,20 +365,21 @@ Together with collapse avoidance $r_s<R_S$ (Equation S.31), these conditions enf
 
 **Theorem S.2 (Unified Bounded-Bias and Gravity Ceiling).**
 
-On the bounded-bias CC branch of Theorem 39, operational causality at the deterministic endpoOn the bounded-bias CC branch of Theorem 39, deterministic endpoint forcing is excluded by
+On the bounded-bias CC branch of Theorem 39, deterministic endpoint forcing is excluded by
 $$
 \alpha_{CC,\max}<0.5.
 $$
-Independently, for any finite aggregate with the context-power law of Equation S.5, physical viability and perturbative weak-field operation impose system-dependent ceilings strictly below the branch parameter $\alpha$:
+Independently, for any finite aggregate with the context-power law of Equation S.5 and finite positive $A,\tau_c,R_S,\eta_{\mathrm{ret}}$, assume a nondegenerate weak-field geometry with $K_{\mathrm{eff}}>0$, a declared tolerance $0<\delta_{\mathrm{WF}}\ll1$, and the strict perturbative requirement $K_{\mathrm{eff}}P_{\mathrm{context}}<\delta_{\mathrm{WF}}$. Together with collapse avoidance, these hypotheses impose
 $$
-\mathrm{CC}<\mathrm{CC}_{BH}<\alpha,\qquad
-\mathrm{CC}\le\mathrm{CC}_{WF}<\alpha.
+\mathrm{CC}<\mathrm{CC}_{BH}<\alpha,
+\qquad
+\mathrm{CC}<\mathrm{CC}_{WF}<\alpha.
 $$
-Thus the admissible operating ceiling for a finite system is
+Thus the admissible operating ceiling is
 $$
 \mathrm{CC}
 <
-\min\{\alpha_{CC,\max},\mathrm{CC}_{BH},\mathrm{CC}_{WF}\},
+\min\{\alpha_{CC,\max},\mathrm{CC}_{BH},\mathrm{CC}_{WF}\}.
 \tag{S.34a}
 $$
 with $\alpha_{CC,\max}<0.5$ on the bounded-bias branch.
@@ -380,14 +422,16 @@ $$
 \mathrm{CC}_{BH}<\alpha.
 $$
 
-For the perturbative weak-field ceiling, fix a declared tolerance $0<\delta_{\mathrm{WF}}\ll1$ and impose
+For the perturbative weak-field ceiling, impose the theorem's nondegenerate-geometry and strict-tolerance hypotheses
 $$
-K_{\mathrm{eff}}P_{\mathrm{context}}\le\delta_{\mathrm{WF}}.
+K_{\mathrm{eff}}>0,
+\qquad
+K_{\mathrm{eff}}P_{\mathrm{context}}<\delta_{\mathrm{WF}}.
 $$
 Using Equation S.5,
 $$
 A\left[\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\right]^2
-\le
+<
 \frac{\delta_{\mathrm{WF}}}{K_{\mathrm{eff}}}.
 $$
 Let
@@ -398,12 +442,12 @@ W
 $$
 Then
 $$
-\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\le\sqrt W,
+\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}<\sqrt W,
 $$
 and hence
 $$
 \mathrm{CC}
-\le
+<
 \frac{\alpha\sqrt W}{1+\sqrt W}
 =:\mathrm{CC}_{\mathrm{WF}}<\alpha.
 $$
@@ -415,13 +459,13 @@ Combining the independent endpoint, collapse, and weak-field requirements gives 
 On the bounded-bias CC branch, no finite system can increase operational CC without encountering at least one of the following gates:
 - the endpoint-forcing gate $\alpha_{CC,\max}<0.5$ from Theorem 39;
 - the collapse-avoidance ceiling $\mathrm{CC}<\mathrm{CC}_{BH}$;
-- the weak-field perturbative ceiling $\mathrm{CC}\le\mathrm{CC}_{WF}$.
+- the nondegenerate weak-field perturbative ceiling $\mathrm{CC}<\mathrm{CC}_{WF}$.
 
 Thus arbitrary CC enhancement is excluded by the combined branch and finite-system ceilings. The endpoint gate controls deterministic outcome forcing, while the gravitational ceilings control physical viability and perturbative validity.
 
 ## S.6 Non-Local Gravitational Influence via Entanglement
 
-While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can modulate joint $A$-$B$ correlation statistics without violating no-signaling. As with standard quantum entanglement, Alice's local action changes joint correlations detectable only after classical comparison of measurement records, while leaving Bob's marginal statistics unchanged. This is local phase control of entangled joint correlations under no-signaling — a standard quantum mechanical effect — and is not Bob-marginal FTL influence. Reconciliation with any main-text Postulate 3 statement asserting Bob-marginal statistical shifts would require a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here.
+While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can modulate joint $A$-$B$ correlation statistics without violating no-signaling. As with standard quantum entanglement, Alice's local action changes joint correlations detectable only after classical comparison of measurement records, while leaving Bob's marginal statistics unchanged. This is local phase control of entangled joint correlations under no-signaling — a standard quantum mechanical effect — and is not Bob-marginal FTL influence. Reconciliation with any main-text Postulate 3 statement asserting Bob-marginal statistical shifts would require a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here, and any mechanism producing such a shift would lie outside and falsify the exact pre-lightcone context-independence branch classified by Corollary 39c.1.
 
 **Setup:** Consider Alice and Bob sharing a maximally entangled two-qubit state:
 $$
@@ -644,6 +688,85 @@ $$
 \ge\frac12\inf_{\varphi\in I_\Phi}|\sin(\varphi/2)|-\epsilon_N>0
 $$
 by (S.6.1a.2). ∎
+
+**Definition S.6.1c (Classical-Mediator Implementation Class).** Fix finite-dimensional matter systems $A$ and $B$, a probe of mass $m>0$ with position operator $\hat{\mathbf r}=(\hat x,\hat y,\hat z)$ and axial momentum operator $\hat p_x$, and a protocol window $[0,t]$ with $t>0$. A mediator implementation belongs to the classical-mediator class $\mathfrak K_{\mathrm{cl}}$ if a finite record supplies entries 1 and 2; its probe sector is admissible if the record also supplies entries 3, 4, and 5.
+
+1. *(Configuration entry.)* A measurable configuration space $(\Lambda,\mu)$ and a probability density $p(\lambda)$ whose elements label definite mediator configurations; $\lambda$ may be correlated with any source-preparation or classical communication record.
+
+2. *(Product-response entry.)* For every $\lambda$, measurable trace-nonincreasing completely positive maps $\mathcal E_A^\lambda$ on $A$ and $\mathcal E_B^\lambda$ on $B$ such that, for every input $\rho_A\otimes\rho_B$ and every acceptance set $\Lambda_{\mathrm{acc}}\subseteq\Lambda$ for which the operator-valued integrand is trace-norm Bochner integrable and its accepted trace is finite and strictly positive, the selective matter output is
+$$
+\rho_{\mathrm{sel}}
+=
+\frac{\displaystyle\int_{\Lambda_{\mathrm{acc}}}p(\lambda)\bigl(\mathcal E_A^\lambda\otimes\mathcal E_B^\lambda\bigr)(\rho_A\otimes\rho_B)\,d\mu(\lambda)}
+{\displaystyle\operatorname{tr}\int_{\Lambda_{\mathrm{acc}}}p(\lambda)\bigl(\mathcal E_A^\lambda\otimes\mathcal E_B^\lambda\bigr)(\rho_A\otimes\rho_B)\,d\mu(\lambda)}.
+\tag{S.6.1c.1}
+$$
+Postselection on any classical record, including the mediator record itself, acts only through the choice of $\Lambda_{\mathrm{acc}}$ and the induced reweighting of $p$. An acceptance rule is probe-blind if $\Lambda_{\mathrm{acc}}$ is determined by $\lambda$ and by records generated without measuring the probe.
+
+3. *(Source-positivity entry.)* Every $\lambda$ assigns a finite nonnegative source mass measure $\nu_\lambda$ on $\mathbb R^3$, and the probe evolves on $[0,t]$ under the gravitational potential
+$$
+V_\lambda(\mathbf r)=-Gm\int\frac{d\nu_\lambda(\mathbf r')}{|\mathbf r-\mathbf r'|}.
+\tag{S.6.1c.2}
+$$
+
+4. *(Axial-separation entry.)* There exist $x_0\in\mathbb R$ and $\Delta>0$ with $\operatorname{supp}\nu_\lambda\subseteq\{\mathbf r':x'\le x_0-\Delta\}$ for every $\lambda\in\Lambda$, and the probe state $\psi_\tau^\lambda$ satisfies $\operatorname{supp}|\psi_\tau^\lambda|^2\subseteq\{\mathbf r:x\ge x_0\}$ for every $\lambda\in\Lambda$ and every $\tau\in[0,t]$.
+
+5. *(Ehrenfest-regularity entry.)* For every $\lambda\in\Lambda$ the pair $(\psi_\tau^\lambda,V_\lambda)$ satisfies
+$$
+\frac{d}{d\tau}\langle\hat p_x\rangle_{\psi_\tau^\lambda}
+=
+\bigl\langle-\partial_xV_\lambda\bigr\rangle_{\psi_\tau^\lambda}
+\qquad(\tau\in[0,t]).
+\tag{S.6.1c.3}
+$$
+
+**Lemma S.6.1d (Classical-Mediator Response Bounds).** Let a mediator implementation lie in $\mathfrak K_{\mathrm{cl}}$.
+
+(i) For every product input $\rho_A\otimes\rho_B$ and every acceptance set satisfying Definition S.6.1c(2), the selective output (S.6.1c.1) is separable and
+$$
+\mathcal N(\rho_{\mathrm{sel}})=0.
+\tag{S.6.1d.1}
+$$
+
+(ii) If the probe sector is admissible, then for every probe-blind acceptance set with a measurable induced accepted density $\tilde p\ge0$ satisfying $\int_{\Lambda_{\mathrm{acc}}}\tilde p\,d\mu=1$,
+$$
+\langle\Delta p_x\rangle_{\mathrm{sel}}
+:=
+\int_{\Lambda_{\mathrm{acc}}}\tilde p(\lambda)
+\Bigl(\langle\hat p_x\rangle_{\psi_t^\lambda}-\langle\hat p_x\rangle_{\psi_0^\lambda}\Bigr)d\mu(\lambda)
+\le0,
+\tag{S.6.1d.2}
+$$
+with strict inequality whenever $\nu_\lambda\neq0$ on a set of positive $\tilde p\,d\mu$ measure.
+
+*Proof.* (i) Complete positivity gives $\mathcal E_A^\lambda(\rho_A)\ge0$ and $\mathcal E_B^\lambda(\rho_B)\ge0$, so each integrand in (S.6.1c.1) is a nonnegative multiple of a product state. The accepted integral is therefore an unnormalized separable operator, and division by its positive trace preserves separability; continuous mixtures are included because the accepted integral is a trace-norm limit of finite separable sums and the separable states form a trace-norm closed convex set in finite dimension. For a separable state $\sigma=\sum_r q_r\,\sigma_A^{(r)}\otimes\sigma_B^{(r)}$ with $q_r\ge0$, the partial transpose $\sigma^{T_B}=\sum_r q_r\,\sigma_A^{(r)}\otimes(\sigma_B^{(r)})^{T}$ is a sum of positive operators, hence positive with unit trace, so $\lVert\sigma^{T_B}\rVert_1=\operatorname{tr}\sigma^{T_B}=1$ and $\mathcal N(\sigma)=(\lVert\sigma^{T_B}\rVert_1-1)/2=0$ in the negativity convention of Proposition S.6.1b. Only the product form of the maps per configuration is used, so classical communication or feedforward folded into $\lambda$ leaves the conclusion unchanged.
+
+(ii) Fix $\lambda\in\Lambda$. For $x\ge x_0$ the axial-separation entry gives $x-x'\ge\Delta>0$ for every $\mathbf r'\in\operatorname{supp}\nu_\lambda$, and $|x-x'|\,|\mathbf r-\mathbf r'|^{-3}\le|\mathbf r-\mathbf r'|^{-2}\le\Delta^{-2}$, so differentiation of (S.6.1c.2) under the integral is justified by dominated convergence and
+$$
+-\partial_xV_\lambda(\mathbf r)
+=
+-Gm\int\frac{x-x'}{|\mathbf r-\mathbf r'|^{3}}\,d\nu_\lambda(\mathbf r')
+\le0
+\qquad(x\ge x_0),
+$$
+with strict inequality when $\nu_\lambda\neq0$. Since $\operatorname{supp}|\psi_\tau^\lambda|^2\subseteq\{x\ge x_0\}$ for all $\tau\in[0,t]$, (S.6.1c.3) gives $\frac{d}{d\tau}\langle\hat p_x\rangle_{\psi_\tau^\lambda}\le0$ on $[0,t]$, and integration over $[0,t]$ gives $\langle\hat p_x\rangle_{\psi_t^\lambda}-\langle\hat p_x\rangle_{\psi_0^\lambda}\le0$ for every configuration, strictly when $\nu_\lambda\neq0$. A probe-blind acceptance rule replaces $p$ by $\tilde p\ge0$ without altering any per-configuration term, so (S.6.1d.2) is an average of nonpositive numbers, strictly negative under the stated nondegeneracy. ∎
+
+**Corollary S.6.1e (Two Discharge Witnesses for Mediator Nonclassicality).** Consider a gravitational causal mediator implementation on the branch of Definition S.6.1a.
+
+(a) Acceptance of (S.6.1a.1) and (S.6.1a.2) excludes every implementation in $\mathfrak K_{\mathrm{cl}}$: Proposition S.6.1b certifies $\mathcal N(\rho_{\mathrm{out}})>0$ for the product input $|+\rangle_A|+\rangle_B$, while Lemma S.6.1d(i) gives $\mathcal N(\rho_{\mathrm{sel}})=0$ for every selective output of the class from that input.
+
+(b) Let a retained probe record carry the source-positivity and axial-separation geometry of Definition S.6.1c, a probe-blind acceptance rule, a force-provenance entry attributing the retained axial impulse to the gravitational interaction channel, and a certified conditional mean
+$$
+\langle\Delta p_x\rangle_{\mathrm{sel}}\ge\kappa>0
+\tag{S.6.1e.1}
+$$
+after subtraction of the certified statistical and systematic error budget. Then every implementation in $\mathfrak K_{\mathrm{cl}}$ with admissible probe sector is excluded by Lemma S.6.1d(ii).
+
+Either record excludes $\mathfrak K_{\mathrm{cl}}$ for the registered protocol. Neither record selects a particular nonclassical completion, and neither asserts any unconditioned or marginal anomaly.
+
+*Proof.* Each part is a direct contradiction between the certified strict inequality and the corresponding bound of Lemma S.6.1d, quantified over all class members carrying the stated entries. The final statement holds because exclusion of $\mathfrak K_{\mathrm{cl}}$ is purely negative: any implementation outside the class, in particular any implementation whose mediator response is conditioned coherently on nonorthogonal source amplitudes, is compatible with both records, and both records are selective, so no unconditioned or marginal statement follows from them. ∎
+
+**Remark S.6.1 (Selective Records and the Trace-Preserving Branch).** A record of the form (S.6.1e.1) is produced by a normalized selective operation and lies outside the trace-preserving channel hypotheses of Theorem S.1 and Theorem S.3; no marginal statement is asserted for it, consistent with the separation stated at the opening of Section S.6. Within $\mathfrak K_{\mathrm{cl}}$ the unconditioned ensemble mean obeys the nonpositive bound of Lemma S.6.1d(ii) with $\Lambda_{\mathrm{acc}}=\Lambda$. When $\Lambda_{\mathrm{acc}}\subsetneq\Lambda$, witness (b) is a proper selective-subensemble record and does not by itself assert an unconditional marginal effect. When $\Lambda_{\mathrm{acc}}=\Lambda$, it is a full-ensemble record and must separately satisfy the applicable marginal and no-signaling constraints. A spatially superposed source with probe-blind postselection in a nonorthogonal source basis is a candidate realization of (S.6.1e.1) on the coherent-mediator branch (Saldanha, Marletto and Vedral 2026); such an implementation lies outside $\mathfrak K_{\mathrm{cl}}$ precisely because its mediator response is not of the configuration-diagonal product form (S.6.1c.1).
 
 ## S.7 Conditional Gravitational Phase and Dephasing Mechanisms
 

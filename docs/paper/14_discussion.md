@@ -8,10 +8,11 @@ This section provides a synthesis and interpretation of the Predictive Universe 
 The Predictive Universe (PU) framework offers a theoretical structure aimed at unifying aspects of consciousness, quantum mechanics, and spacetime geometry without taking a matter field, background metric, or gauge group as its first primitive. It begins with the Cogito-certified knowledge process; Appendix P.3.1 and Thesis P.3.5.1 identify its expectation-verification-update structure, and Theorem P.6.1c.3 with Corollary P.6.1c.4 proves prediction to be the canonical normal form of every finite self-verifying operational presentation carrying those data. The physical model then adds Axioms 1–3, PPI/PCE, and Hypothesis 1's network of interacting Minimal Predictive Units. Later quantum, continuum, gauge, source, and thermodynamic results add their stated branch hypotheses and finite certificates. The framework thus reconstructs familiar effective laws from this operational foundation and its registered physical branches; it does not eliminate all physical input.
 
 The framework originates from axioms defining the Prediction Optimization Problem (POP, Axiom 1) and the necessity of internal models (Axiom 2). Information (Definition 1) is defined functionally. Predictive Physical Complexity ($C_P$, Equation 1) quantifies the resource cost of predictive capability, argued via Dynamically Enforced Functional Correspondence (Theorem 2) to align with an operational proxy ($\hat{C}_v$, Theorem 1) used in defining resource cost operators ($\hat{R}, \hat{R}_I$, Theorem 3).
+Systems operate within a registered Space of Becoming $(\alpha,\beta)$ (Definition 8): Theorem 8 supplies the matched-baseline lower benchmark, Theorem 9 supplies the distinct excitation ceiling $\beta_0$, and Theorem 19 supplies the finite-complexity strict upper endpoint only on its exact response-law branch. The Self-Referential Paradox of Accurate Prediction (Theorems 10–11) proves a class-level diagonal obstruction for systems with the required finite-program and closure capacities; it does not determine a universal scalar $\alpha_{SPAP}$. Theorem 14 gives a quantitative verification/update lower bound only on its certified reduction branch. The Horizon Constant ($K_0$, Theorem 15) and Operational Threshold ($C_{op}$, Definition 13) remain distinct, with $C_{op}\ge K_0$ only under Corollary 3's bridge.
 
-Systems operate within the Space of Becoming $(\alpha, \beta)$ (Definition 8), bounds derived from the need for functional utility and adaptability (Theorem 8, Theorem 9). The Self-Referential Paradox of Accurate Prediction (SPAP, Theorem 10, Theorem 11) proves inherent Logical Indeterminacy (Definition 12) for systems with Property R (Definition 10), thereby establishing a fundamental performance limit $\alpha_{SPAP}<1$ for SPAP-limited aspects; Theorem 14 then gives the associated lower bound on the resources required to approach that limit. This motivates identification of the Horizon Constant ($K_0$, Theorem 15) as minimal complexity for SPAP logic, and definition of the Operational Threshold ($C_{op}$, Definition 13) as minimum $C_P$ for the adaptive loop, with $C_{op} \ge K_0$ (Corollary 3).
+Adaptation dynamics (Section 6) are organized by the Principle of Compression Efficiency (PCE, Definition 15), the branch potential $V(x)=V_{op}(x)+V_{prop}(x)-V_{benefit}(x)+V_{penalty}(x)$ of Definition D.1, and the stated adaptation law. The exponential Law of Prediction follows only after Theorem 19's exact multiplicative residual-composition hypothesis is imposed. Its power-law images additionally require exact logarithmic maps from registered resource coordinates to effective predictive complexity; Proposition 19.2a and Remark 19.2 state the corresponding finite-record compatibility boundary.
 
-Adaptation dynamics (Section 6) are driven by the Principle of Compression Efficiency (PCE, Definition 15), operationally encoded by the PCE potential $V(x) = V_{op}(x) + V_{prop}(x) - V_{benefit}(x) + V_{penalty}(x)$ (Definition D.1) and its gradient-based adaptation dynamics (Definition 20), while the Law of Prediction (Theorem 19) supplies the resulting complexity-performance relation within the viability bounds $(\alpha,\beta)$.
+The cross-domain correspondences are therefore typed bridge results rather than an identity of mechanisms. Definition 5a and Proposition 5a transport functional support only when original and null-intervened response laws are carried by a certified protocol and outcome equivalence. Proposition P.8.9a.6 and Theorem P.8.9a.6a identify normalized selection with Bayesian and multiplicative-weights normalization on the stated finite-type map, while mutation, recombination, frequency dependence, and SPAP conditions remain separate. Appendix P.16b.15a places retained cultural function in a collective response quotient relative to fixed protocols and decoders; that content role is not a system-level loop capability. A common response form or scaling curve across carriers does not establish a common physical mechanism.
 
 The MPU Reality Model (Hypothesis 1) posits Minimal Predictive Units as the fundamental network entities. A complex Hilbert representation is available on Proposition 4's complex-$C^*$ and positive-state branch. Internal Prediction becomes unitary Schrödinger evolution on the continuous time-translation ray branch, while Proposition 28 treats the stochastic `Evolve` Markov kernel as explicit law data. Theorem 28a then gives the Born trace representation only under normalized noncontextual finite-effect additivity on the complex Hilbert branch; it does not derive stochasticity from Logical Indeterminacy.
 
@@ -21,7 +22,7 @@ $$
 $$
 Theorem 33 gives $\kappa_r>0$ only when positive information and conditional-entropy floors are supplied. The probability-level arrow of Theorem O.3 additionally requires common forward/reverse path measures and a positive pathwise entropy-production certificate.
 
-The quantum mechanical formalism (Section 8) emerges as a consistent effective description of MPU dynamics under the PCE/PPI constraints, including the Born Rule (Proposition 7). Measurement is reinterpreted as perspectival actualization via the universal 'Evolve' process (Proposition 9), which provides the general mechanism for outcome realization.
+On the separately assumed complex-Hilbert, finite-effect, normalized noncontextual-additivity branch, Theorem 28a supplies the Born representation. A registered instrument and outcome kernel supply conditional measurement statistics; SPAP, PPI, and PCE alone do not derive Hilbert structure, the Born rule, or an outcome-selection ontology. The `Evolve` process is a model branch, not a universal actualization theorem.
 
 The thermodynamic equilibrium branch combines ND-RID stationarity with a separate detailed-balance/physical-time or complete-passivity certificate (Theorems G.1.9.3 and G.1.9.3c). Detailed balance removes stationary irreversible currents but does not make relaxation production vanish for every initial state; the physical Gibbs/KMS reading therefore cannot be inferred from PCE optimization alone.
 
@@ -41,7 +42,7 @@ The PU framework carries significant implications, offering a perspective potent
 
 *   **Process Ontology & Relational Reality:** The framework interprets reality through prediction, verification, and adaptation by interacting MPUs (Definitions 4, 23, and 27). SPAP supplies a diagonal limit on universal exact prediction. On the separately assumed stochastic complex-Hilbert branch, normalized noncontextual finite-effect additivity yields the Born representation through Theorem 28a. The order of the P-V-U protocol gives a local operational sequence but does not by itself orient every physical history. A registered reset obeys the distribution-sensitive bound of Theorem 31, and the macroscopic probability arrow of Theorem O.3 follows only on its common path-algebra branch with a positive pathwise entropy-production certificate.
 
-*   **Energy as Predictive Cost:** Energy is framed as the resource bill for prediction. Baseline work ($\hat H_{v}$), complexity upkeep ($\langle\hat R\rangle, \langle\hat R_I\rangle$), interaction ($\hat V_{vv'}$), and the physical manifestation of the irreversible update cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) contribute to the MPU Stress-Energy Tensor $T_{\mu\nu}^{(\text{MPU})}$ (Appendix B, Definition B.8). Because prediction requires resources scaling with target complexity and incurs irreversible costs, the energy needed reflects predictive effort. Gravity couples to this predictive work via $T_{\mu\nu}^{(\text{MPU})}$. The magnitude of the computational-complexity contribution relative to ordinary mass-energy must be determined from the registered stress coefficients and state; Definition B.8 alone does not prove that it is negligible. On the Appendix S branch carrying the constitutive power law, retained-energy source, weak-field geometry, and calibrated attenuation and optimization records, gravitational feedback supplies a conditional CC ceiling or operating point. Theorem 39's endpoint-completeness gate is a separate probability bound and does not follow from the Schwarzschild interpretation. Perfect foresight is impossible (Theorem 10, Theorem 11), and maintaining accuracy arbitrarily close to the SPAP boundary requires verification/update resources that obey the lower bound of Theorem 14. This cost structure is observer-relative: a more complex system can model a less complex system's perspectival response externally at SPAP-flat sender cost, while the less complex receiver may still pay a large reflexive processing cost internally; thermodynamically faithful replay does not erase this asymmetry, because replay must reproduce the receiver-side burden up to nonnegative overhead.
+*   **Energy as a Conditional Predictive-Cost Ledger:** Definition B.8 permits baseline work, registered complexity terms, interactions, and a separately implemented reset-energy term to enter $T_{\mu\nu}^{(\mathrm{MPU})}$ after their coefficients and retained-energy maps are supplied. Theorem 31 gives dimensionless bath heat only on its reset branch; it does not make every update an energy source. The Appendix S gravitational feedback bounds likewise require their constitutive, retained-energy, weak-field, calibration, and optimization certificates. Theorem 14 supplies a verification/update lower bound only on its registered reduction branch. Receiver-relative cost is available only on Appendix M's Property-R and pattern-reduction branch. Cross-system evaluation requires the model-access, decision, finite-family, and insulation certificates of Theorems M.10.5 and M.10.8; complexity ordering alone proves neither sender-flat cost nor a replay lower bound.
   
 *   **Causality from Layered Predictive Constraints (Operational Speed and Processing Cost):** The framework combines separately certified mechanisms. SPAP and its conditional resource-transfer bounds constrain paradox-enabling self-referential processing. The geometric speed branch instead requires independent spacing, clock, serialization, bounded-weight, frontier-attainment, and Lorentzian-promotion data. PCE organizes the accepted ledgers but does not derive either branch's missing hypotheses from the other.
 
@@ -51,7 +52,7 @@ Throughout this discussion, zero-error exclusions are coding bounds only. Operat
 
     1.  **Conditional Operational Speed Bound:** On the branch with nonzero spacing, a separately registered positive edge-update duration, edge-by-edge serialization, and bounded weights, Theorem 46 gives a uniform propagation-speed upper bound. Equality with an invariant frontier $c=\delta/\tau_{\min}$ requires normalized uniform weights and one-link attainment; its Lorentzian light-cone interpretation additionally requires Corollary 46a and Appendix O. Neither PCE, SPAP, Theorem 29, nor the reset ledger alone supplies these gates.
 
-    2.  **Emergent Processing Cost Limit:** Simultaneously, PCE interacts with the logical limits of self-prediction (SPAP). Prediction Relativity (Remark 3) demonstrates that achieving the extreme predictive/computational capability implicitly required to violate causality would require verification/update resources diverging at least as
+    2. **Conditional Self-Prediction Resource Bound:** Theorem 14 applies only to a registered task family, scalar prediction boundary, and pattern-specific reduction certificate. The result is not a generic capability requirement for violating causality and does not identify the prediction boundary with a propagation-speed frontier. On that branch, approaching the declared boundary forces verification/update resources growing at least as
 $$
 \Omega\\!\left(\frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2}\right),
 \qquad \delta_{SPAP}:=\alpha_{SPAP}-\alpha,
@@ -65,17 +66,17 @@ Therefore, the framework supplies a layered defense rather than one common deriv
 
 *   **Predictive Information, Optimization, and Ephemeralization:** Information (Definition 1), defined by its potential to improve prediction relative to POP (Axiom 1), shapes dynamics via PCE (Definition 15). PCE mandates minimizing costs (operational, propagation, adaptation) for acquiring and utilizing predictive information. This drive towards maximum predictive utility with minimal cost can be seen as the microscopic engine realizing Ephemeralization (Fuller 1938)—"doing more with less"—suggesting efficient information processing is a foundational principle.
 
-*   **Perspectival Realism:** The necessity of the Perspectival State ($S_{(s)}(t)$, Definition 24) implies the interaction context ($s \in \Sigma$) is integral. Physical outcomes are actualized relative to the perspective established by 'Evolve' (Proposition 9). This suggests a realism compatible with quantum contextuality: reality has definite properties, but their description is inherently perspective-dependent.
+*   **Perspectival Realism:** This is an interpretive convention built on the perspective-indexed state formalism. Definition 24 indexes descriptions by $s$; it does not prove that every `Evolve` event selects a definite outcome or that perspective-indexed properties are ontologically fundamental.
 
 *   **Graduated Consciousness and Emergent Self:** the Minimal Awareness interpretive convention of Section 7.1.2 proposes a link between minimal awareness and the $C_{op}$ cycle. High aggregate complexity is a necessary threshold in Theorem 34 but is not sufficient for nonzero CC: the strict-improvement, attainment, and representability hypotheses must also hold. Correlations among CC, integration, sophisticated prediction, subjective awareness, and narrative self-modeling remain interpretive or empirical hypotheses. The resulting program is non-teleological and permits zero-CC high-complexity branches when the relevant benefit does not exceed its registered cost.
 
-*   **Prediction Relativity and Communication Costs:** Prediction Relativity (Remark 3), from SPAP limits ($\alpha_{SPAP}<1$) and diverging costs (Theorem 14), constrains inter-predictor communication. Effective communication is limited by complexity differences ($\Delta C_P$) and divergence in learned predictive models. Model divergence introduces additional encoding, translation, and verification work that PCE penalizes whenever the extra coherence gained is smaller than the cost required to maintain it; the resulting resource costs escalate with cognitive distance. Appendix P.2.6.4 adds a simple surrogate statement on genuinely shared coarse-grained structure: Proposition P.2.6.4.1 bounds reconstruction-cost disagreement along a shared path linearly by the edgewise weight discrepancy and the path length.
+*   **Prediction Relativity and Communication Costs:** Remark 3 and Theorem 14 apply to a registered task, prediction boundary, and reduction certificate. SPAP supplies no system-independent scalar $\alpha_{\mathrm{SPAP}}$, no generic law relating communication cost to aggregate-complexity difference, and no universal ordering of observers. Encoding, translation, and verification costs may be compared only after the communicating systems, protocols, scores, and resource ledgers are fixed. On genuinely shared coarse-grained structure Appendix P.2.6.4 supplies one unconditional surrogate: Proposition P.2.6.4.1 bounds reconstruction-cost disagreement along a shared path $\gamma$ by $\epsilon|\gamma|$, the edgewise weight discrepancy times the path length.
 
 *   **Conditional UCT Ledger:** The **Unified Cost of Transgression (UCT)** in **Appendix N** does not identify the relativistic and SPAP limits. It adds their distinct resource entries only on the declared detector-response, additive-temperature, active-refresh, disjoint-ledger, and frame-export branch. Proper acceleration can then add an Unruh–Landauer predictive-refresh term, while endpoint kinetic work remains a separate relativistic entry; high constant velocity alone produces no such increment. Within a specified trajectory class this conditional functional defines a testable optimization problem, but it supplies neither a common microscopic origin nor an unconditional universal resource economy.
 
 * **Conditional self-model heat signature:** The complexity bound supplies no heat or stress tensor by itself. Proposition N.8.1 yields a maintenance-power lower bound only when a certificate maps charged computation to reset records with $H_{q_j}(P_j\mid R_j)\ge h_{\min}>0$ and supplies a retained-energy stress-tensor coupling.
 
-*   **Semantic Compression:** At cognitive/cultural levels, language implements PCE via compact symbol systems. Metaphor fuses conceptual domains, reducing bits needed to encode relations—a micro-instance of semantic compression preserving inferentially useful information while discarding domain specifics.
+*   **Semantic Compression:** At cognitive and cultural levels, Appendix P.16b.15a represents a retained cultural-function unit by a point of a collective response quotient at fixed population, budget, protocols, decoders, and comparison branch. Surface symbols are local codes; at nonzero tolerance their decoded roles are approximations, and only zero-tolerance equality on a separating branch makes them representatives of the same quotient point. This semantic role is not a system-level capability $b_m,b_p,b_v$ or the phase $D_{cyc}$, and PCE selects a compressed code only under the explicit adequacy and cost comparisons of Theorem P.16b.15a.5.
 
 *   **Conditional Introspection Cost and Dynamics:** For a registered introspection reset with $\Delta I\ge\Delta I_{\min}>0$ and $H_q(P\mid R)\ge h_{\min}>0$, Theorem 33 gives
 $$
@@ -85,36 +86,28 @@ This is a heat ledger, not a state-disturbance inequality. Proposition 16 exclud
 
 In summary, PU presents reality governed by the logic, thermodynamics, and optimization of prediction. Physical laws, spacetime, and consciousness emerge from the collective dynamics of the MPU network operating under derived logical and resource limitations.
 
-**Entropy Domain Unification:** A fundamental achievement of the framework is the demonstration (Thesis P.6.1, Appendix P.6.5) that all distinct formulations of entropy in physics—SPAP entropy, Shannon entropy, thermodynamic entropy, von Neumann entropy, and Bekenstein-Hawking entropy—are related by the same underlying counting structure under the PPI mapping:
+**Entropy-Ledger Comparison.** Appendix P.6.5 compares several mathematically distinct ledgers. A correspondence requires the stated state space, probability law, thermodynamic implementation, quantum state, or horizon bridge; equality of numerical values on one branch does not identify the ledgers generally.
 
-**Table 14.1: Entropy domain unification across the PU framework.**
-| Domain | Entropy Expression | Operational Context |
-|:-------|:-------------------|:--------------------|
-| Logical (SPAP) | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ | Irreducible cost of self-referential prediction cycle |
-| Information (Shannon) | $H = -\sum p_i \ln p_i$ | Uncertainty measure for distinguishability |
-| Thermodynamic | $dS = \delta Q / T$ | Heat flow in physical processes |
-| Quantum (von Neumann) | $S(\rho) = -\mathrm{tr}(\rho \ln \rho)$ | Quantum statistical entropy |
-| Gravitational (BH) | $S_{BH} = \mathcal{A}/4G$ | Horizon entropy from area law |
+**Table 14.1: Entropy ledgers and their scopes across the PU framework.**
+| Domain | Quantity | Scope |
+|:-------|:---------|:------|
+| Structural binary support | $\varepsilon_0=\ln2$ | Log-cardinality of a registered reachable binary quotient |
+| Shannon | $H(P)=-\sum_i p_i\ln p_i$ | Entropy of a specified probability law |
+| Physical reset | $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}$ | Registered reset with all retained side information in $R$ |
+| von Neumann | $S(\rho)=-\operatorname{tr}(\rho\ln\rho)$ | Entropy of a specified density operator |
+| Horizon | $S_{\mathrm{BH}}=k_Bc^3\mathcal A/(4G\hbar)$ | Accepted horizon and gravitational-calibration branch |
 
-The constants $k_B$, $\hbar$, $c$, and $G$ convert between separately defined physical ledgers. The structural binary log-cardinality is $\varepsilon_0=\ln2$. On the declared degenerate-register, cyclic, isothermal reset branch, $\varepsilon_{\mathrm{reset}}:=\langle Q_{\mathrm{bath}}\rangle/(k_BT)\ge H_q(P\mid R)$. The saturated maximal-binary statement is $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)=\ln2$ and requires $H_q(P\mid R)=\ln2$ together with zero excess dissipation. The numerical equality $\varepsilon_{\mathrm{reset}}=\ln2$ alone does not imply either condition.
-
-
-
-$$
-S_{\text{SPAP}} = k_B \ln 2 = -k_B\,\mathrm{tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = S_{vN}\!\left(\frac{I_2}{2}\right).
-$$
-
-More general Shannon, thermodynamic, and von Neumann entropies correspond to multi-bit uncertainty/mixtures built from this unit; the unification claim is therefore a statement about shared counting structure and unit conversion under the PPI mapping, not an identity $S_{vN} \equiv k_B\ln 2$ for arbitrary states.
+For the maximally mixed binary state, Shannon and von Neumann entropy both equal $\ln2$. For a conditionally uniform erased binary record with no retained copy and zero excess dissipation, the dimensionless bath heat also equals $\ln2$. These special equalities do not make structural log-cardinality, ensemble entropy, total entropy production, reset heat, and horizon entropy one universal quantity.
 
 **14.2.1 Causality, Statistical Advantage, and the Limits of Influence**
 
-The framework’s stance on causality (Postulate 2) and its hypothesis of statistical influence (Postulate 3) culminate in a subtle but testable implication for non-local correlations. The PU framework precludes the transmission of arbitrary, deterministic information faster than light, thereby excluding deterministic endpoint forcing; exact operational causality still requires Theorem 39c. However, it allows for the establishment of a statistical advantage on a pre-agreed decision task across spacelike separation. Section 10.3.2 formalizes this via the QCP, in which a system under Alice’s control induces a lawful, probabilistic “nudge” for Bob.
+The framework’s stance on causality (Postulate 2) and its three-branch statistical-influence contract (Postulate 3) separate two cases. Marginal-invariant local operations and shared-past preparations can remain within the exact causal branch, with any joint-correlation advantage available only after classical comparison or through shared-past information. A QCP in which Alice's independently late-randomized context changes Bob's pre-lightcone marginal belongs instead to the external branch-(iii) anomaly class and would falsify the exact causal branch by Theorem 39c and Corollary 39c.1; finite-window error and rate bounds do not make that “nudge” causal.
 
 On the relational-decoding branch of Theorem 42a, Bob's unkeyed local record has $I(C;Y_B)=0$, while the jointly decoded record may carry a pre-agreed decision advantage. If a registered binary task has induced bias $\delta$, its success probability is $0.5+\delta$; for $\delta=0.01$, 100 independent trials have an expected excess of one success over the chance baseline. Theorem 39 bounds endpoint-complete deterministic forcing by $\mathrm{CC}<0.5$, and Theorems 39a–42 impose their regular-branch zero-error, sampling, and information-rate limits. Exact causal compliance additionally requires the marginal invariance of Theorem 39c. Appendix S supplies a gravitational ceiling or PCE operating point only on its constitutive power-law, retained-energy, weak-field, calibrated-response, and objective-function branches. These bounds exclude the stated deterministic or finite-window zero-error protocols under their hypotheses; they do not convert a freely selectable pre-lightcone marginal anomaly into a causal channel.
 
 ## 14.2.2 Temporal Asymmetry as a Foundational Commitment: The Case Against Retrocausality
 
-A distinctive and testable feature of the PU framework is its strong commitment regarding temporal structure. Unlike standard quantum mechanics, where the dynamical equations (Schrödinger equation) are time-symmetric and the arrow of time must be introduced through additional assumptions—typically statistical mechanics or cosmological boundary conditions—the PU framework **derives** temporal asymmetry from the logic of prediction itself. This derivation has concrete empirical consequences that distinguish PU from time-symmetric interpretations of quantum mechanics and provide a falsifiable commitment.
+PU contains a definitional Predict–Verify–Update order. A probabilistic arrow follows only on Appendix O branches carrying common forward and reverse path measures and a positive entropy-production certificate. Theorem 14.1 separately excludes intervention-stable paradox-enabling retrocausal control transcripts with a uniform receiver-policy guarantee. These results do not exclude every time-symmetric formulation, post-selected correlation, retrocausal ontology, or closed-timelike-curve spacetime.
 
 ### The Time-Symmetry of Standard Quantum Mechanics
 
@@ -126,30 +119,24 @@ Standard quantum mechanics presents a fundamental tension regarding time. The Sc
 
 Because standard QM is **agnostic** about microscale temporal direction, retrocausal interpretations represent legitimate interpretive options within the formalism. This is the crucial context for understanding PU’s distinctive commitment.
 
-### Interpretive Taxonomy: Which Quantum Interpretations Are Mathematical Artifacts?
+### Interpretive Taxonomy: Operational Compatibility and Additional Ontology
 
-Consequently, a cosmological-constant prefactor obtained from a Gelfand-Yaglom computation is accepted only as a relative, convention-locked branch value. It is not described as scheme-free unless the subtraction, anomaly, measure, and tail records are included in $\mathfrak GY_U^{(4)}$.
+PU can compare the finite operational predictions of an interpretation with its registered process model. Its finite-capacity, finite-resolution, SPAP, and conditional-reset results do not by themselves establish that an interpretation's additional ontology is nonexistent. The Artifact Identification Criterion is therefore an explicit PU admissibility convention, not an empirical no-go theorem for empirically equivalent ontologies.
 
-The GR analogy should be stated carefully. In general relativity, spacetimes with closed timelike curves or failures of Cauchy predictability are not distinct "interpretations" of Einstein's equations but distinct solution classes, or more precisely distinct admissibility classes of solution. A chronology-protection or global-hyperbolicity requirement therefore functions as a restriction on which spacetimes count as physically admissible, not as a reinterpretation of the field equations. The analogous PU move in quantum foundations should be understood in the same way: the framework is not selecting among verbal glosses indiscriminately, but asking, for each interpretive ontology, whether its defining content survives the Artifact Identification Criterion (Section 14.2.4) or, instead, requires violation of a core PU constraint — finite channel capacity ($C_{\max} < \ln d_0$, Theorem E.2), irreducible cycle cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), or operational finite resolution ($\delta > 0$, Appendix Q) — in order to be specified at all.
+| Family | Operational status in PU | Additional status claim |
+|:-------|:-------------------------|:------------------------|
+| Textbook / Copenhagen | Compatible where its instruments reproduce the registered probabilities | The measurement cut requires an additional model if it is to be explained |
+| Everettian | Unitary relative-state predictions can be operationally equivalent | Finite resolution does not falsify an ontology of branches |
+| Bohmian / forward hidden-variable | Born-compatible predictions can be operationally equivalent; response-null labels may be quotiented within a fixed protocol, and Theorem 14.4c classifies the remaining finite-resource completion classes | Capacity bounds do not prove that a continuum configuration ontology is unreal |
+| Objective collapse | A separate stochastic dynamics is testable through its response law | Continuous parameters are estimable model parameters; they are not excluded merely by finite measurement precision |
+| Relational / agent-centered | Compatible with perspective-indexed descriptions | Definition 24 does not uniquely select an interpretation |
+| Histories / modal / statistical | Compatible when their finite-record predictions agree | Extra ontology requires its own empirical or theoretical assessment |
+| Retrocausal / two-boundary | Post-selection and weak-value statistics remain ordinary conditional process-tensor probabilities (Corollary M.6.14d) | Theorem 14.1 excludes only intervention-stable paradox-enabling control on its stated finite-protocol class |
+| Global-constraint / blockworld | Requires a separate mapping to the predictive protocol | Definitional mismatch is not a mathematical impossibility theorem |
+| Superdeterminist / measurement-dependent | Requires an explicit finite response model for setting dependence | No generic conspiracy conclusion follows without that model |
+| Decoherence | Not a standalone interpretation; a mechanism suppressing off-diagonal coherence, compatible with the registered process model | It supplies no definite-outcome ontology by itself |
 
-The critique is therefore not a physical polemic against rival theories. Those interpretations that reproduce the operational statistics of ordinary unitary-plus-measurement quantum mechanics are empirically indistinguishable from it to any finite-resource observer, and PU does not claim otherwise. What PU claims is narrower and more precise: the *ontological surplus* each interpretation adds to the bare operational formalism (continuum branches of a universal wavefunction, pilot-wave configurations on a fundamental continuum, ontic future boundary states, adynamical global consistency constraints, and so on) is, in every case where the surplus fails the Artifact Identification Criterion, a feature of the mathematical description rather than a feature of any physically instantiated predictive universe. Under the Principle of Physical Instantiation (Definition P.6.2), structures that cannot be specified within the admissible-resource class are not physically realized; they remain formal shadows of the continuum formalism.
-
-The major interpretive families can be sorted under this criterion:
-
-| Family | Representative examples | Ontological surplus beyond operational statistics | Artifact Identification Criterion (Section 14.2.4) | PU status |
-|:-------|:------------------------|:---------------------------------------------------|:----------------------------------------------------|:----------|
-| Textbook / Copenhagen family | Copenhagen, instrumental collapse, pragmatist variants | Minimal; treats the formalism operationally, leaves the cut unanalyzed | Does not require violating a core PU constraint at the level of its explicit commitments; leaves the measurement cut unanalyzed rather than requiring extra ontology | Operationally admissible; the unanalyzed cut is supplied a principled reading by PU ('Evolve', Definition 27) and the perspective manifold $\Sigma$ (Definition 25) |
-| Everettian family | Many-Worlds, relative-state, branching variants | Literal ontic reality of all decohered branches of the universal wavefunction as coexisting physical sectors, beyond any single finite perspectival record | *Fails as fundamental ontology.* Promoting the exact branch decomposition and all branch-indexed records to instantiated ontology requires a specification beyond any finite perspectival record: resolving exact branches demands distinctions below $\delta > 0$ (Appendix Q), while labelling an unbounded or continuum branch structure and its internal records exceeds finite channel throughput $C_{\max} < \ln d_0$ (Theorem E.2). Treating every branch actualization as physically complete while avoiding any thermodynamic update cost also conflicts with the irreducible actualization cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31). | Operational content (unitary dynamics + relative states on correlated subsystems) is preserved under PU; the *additional ontic branching* is a mathematical artifact of treating the universal wavefunction as a cost-free continuum object. |
-| Hidden-variable family, forward-causal | Ordinary Bohmian mechanics / pilot-wave theory | A trajectory or supplementary hidden label in addition to operational quantum statistics | Theorem 14.4c supplies the finite-resource classification. Finite self-access is SPAP-excluded; finite spacelike exposure is off the sealed CPTP core; local statistical deviations are separate model layers; true no-signaling inaccessible completions are response-null. A fundamental continuum pilot-wave substrate additionally requires exact continuum-valued configuration data and a globally defined guiding field beyond finite resolution and finite channel capacity, violating Appendix Q and Theorem E.2. | Operational Born/Bell statistics are preserved. Response-null hidden labels are quotiented; finite deviations require a separate forward-locked model certificate; the continuum substrate remains a mathematical artifact of the continuum formalism. |
-| Objective-collapse family | GRW-type collapse models | A stochastic collapse process with continuously tunable rate/length parameters added to Schrödinger dynamics | *Fails as a continuum add-on; its discrete analogue is recovered only with branch status made explicit.* Exact continuum-valued collapse rates and localization lengths require distinctions below $\delta$ if treated as fundamental parameters. PU supplies finite thermodynamic actualization through 'Evolve' (Definition 27) at cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$; on branches carrying $\mathfrak C_{\mathrm{act}}$ (Definition E.2a.6), the trigger is the capacity-saturation ledger of Definition E.2a.4 rather than a tunable stochastic field. Without that certificate, the timing remains the branch interaction predicate of Definition 27. | The collapse-like operational mechanism is retained as finite actualization; tunable continuum collapse parameters are mathematical artifacts unless promoted to a separate finite response branch. |
-| Relational / agent-centered family | Relational QM, QBism | Facts relative to systems/agents, without a global ontic wavefunction | No added ontology that exceeds PU constraints; in fact the agent/system-relativity is structurally parallel to perspective-relativity in PU | Admissible; PU provides the formal substrate (perspectival states, Definition 24) these interpretations require without deriving. |
-| Histories / modal / statistical family | Consistent histories, modal interpretations, ensemble/statistical interpretation | Families of coarse-grained histories or modal property assignments; ensemble averages over an unobserved full state space | Pure statistical/modal readings require no constraint-violating ontology; versions that posit a fundamental continuum of unobserved microstates violate capacity and resolution bounds. | Operational readings admissible; continuum-ensemble readings are mathematical artifacts in the same sense. |
-| Retrocausal / two-boundary / time-symmetric ontologies | TSVF only on an ontic future-boundary reading, Transactional Interpretation, and related two-boundary or all-at-once models | Future boundary conditions as ontologically active causal inputs; advanced-wave handshakes; global constraints treated as replacing update dynamics | *Fails as fundamental ontology.* Ontic future-to-past dependence contradicts the logical ordering of the Fundamental Predictive Loop (Definition 4) and the thermodynamic ratchet $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31), as derived in Theorem O.3. Pre/post-selected and weak-value statistics are preserved as ordinary conditional process-tensor probabilities (Corollary M.6.14d); the surplus is the claim that the conditioning event is an additional ontic cause. | Excluded on the primary temporal admissibility criterion (this is the direct target of §14.2.2); also excluded, independently, on the Artifact Identification Criterion. The operational ABL/weak-measurement calculus is retained as post-selected finite-protocol conditioning. |
-| Adynamical global-constraint approaches | blockworld / strongly all-at-once consistency readings | A globally fixed four-dimensional history replacing forward dynamical updating | Replaces the forward predictive loop with an all-at-once constraint; the forward ordering required for prediction (Definition 4) is lost by construction. | In strong tension with PU's forward predictive ordering; the all-at-once surplus is a mathematical artifact of a static four-dimensional formalism. |
-| Superdeterminist / measurement-dependence family | setting-dependent hidden-variable completions | Failure of Bell measurement independence, i.e. $\rho(\lambda\mid a,b)\ne\rho(\lambda)$ in general; this may be modeled either as conspiratorial setting-hidden-variable coordination or as a claim that some counterfactual setting changes are not branch-preserving admissible variations | PU rejects the conspiratorial surplus when it requires finite-resource specification of cosmological-scale setting coordination. It does not identify every denial of independent setting variation with conspiracy: a branch-admissibility reading must instead supply a finite-response branch predicate showing which setting variations remain physically meaningful. | Operational Bell statistics are preserved. Conspiratorial coordination is an artifact; branch-admissibility readings are not excluded merely for rejecting syntactic counterfactual settings, but they must be expressible as finite-response PU branch constraints. |
-| Decoherence | environment-induced decoherence | Not a standalone interpretation; a mechanism describing suppression of off-diagonal coherence | Neutral mechanism; does not by itself add artifact-ontology | Operationally compatible; PU supplies both the mechanism and the missing story of definite outcomes via 'Evolve'. |
-
-The lesson of the table is that PU's critique of rival interpretations is uniform in *form* but varies in *reach*. Every rejection is an application of the same criterion: a feature of a mathematical description carries no physical content if specifying or distinguishing it requires violating a core PU constraint. In every case the *operational content* of the interpretation — the statistics, correlations, and predictions it shares with ordinary quantum mechanics — is preserved, because those statistics are themselves PU-admissible. Pre/post-selected and weak-measurement statistics are included in this preserved operational content: they are conditional statistics of finite records, not evidence for a second physical state propagating from the future. What is rejected in each case is only the *ontological surplus* added on top of the operational core: the exact continuum or unbounded branch ontology in Many-Worlds, the fundamental continuum configuration space in Bohmian mechanics, the exact continuous collapse parameters in GRW, the active ontic future boundary in retrocausal readings, and conspiratorial setting-hidden-variable coordination in superdeterminist readings. What is not rejected is the methodological point that a syntactically describable counterfactual setting or parameter change may fail to be physically admissible if it leaves the branch on which the theory is defined. PU expresses that point through branch-preserving finite-response variation, not through hidden coordination of agents, devices, and particles.
+The operational content shared with ordinary quantum mechanics is retained. Any stronger rejection of an ontology must follow from a dedicated empirical discriminator or a theorem whose hypotheses encode that ontology, neither of which is supplied by the general resource bounds alone.
 
 ### The PU Commitment: Conditional Exclusion of Retrocausal Signaling
 
@@ -161,7 +148,7 @@ The stronger $2^{-N}$ form requires $h_{\min}\ge\ln2$ per selected cycle. Landau
 
 ### Contrast with the Past Hypothesis
 
-Unlike standard statistical mechanics, which must postulate a low-entropy initial state (the “Past Hypothesis” [Albert 2000; Davies 1977; Reichenbach 1956]) without providing a dynamical reason for its existence, PU first derives temporal directionality from the logic of prediction itself. The arrow result is supplied by Appendix O: SPAP update asymmetry, the per-cycle entropy floor, and the forward/reverse path-ratio theorem fix the operational time orientation without selecting a cosmological boundary condition by hand.
+PU has a definitional Predict--Verify--Update order. A probability-level arrow follows only on Appendix O's common forward/reverse path-measure branch with $\sigma_k\ge h_{\min}>0$; reset heat and the structural binary value do not supply that certificate or remove the need for a cosmological boundary analysis outside the retained-record theorem.
 
 The retained-algebra question is narrower. A time-symmetric entropy process does not by itself determine which time-entropy pair should be used as a conditioning event; this is the ambiguity sharpened by Wolpert, Rovelli & Scharnhorst [2025]. PU answers only on branches carrying the retained-algebra conditioning certificate $\mathfrak C_{\mathrm{ret}}^{(q)}$ of Definition O.3c. On such a branch, entropy claims are made relative to the PPI-retained algebra $\mathcal A_{\mathrm{ret}}^{(q)}(t)$ at an observer hierarchy level $q$, the retained algebras form a forward-locked filtration, and the earliest retained-record algebra has entropy bounded by its small dimension. This is a retained-record boundary theorem, not an assertion that all microscopic non-retained degrees of freedom begin in an absolutely low-entropy state.
 
@@ -173,11 +160,7 @@ The delayed-choice quantum eraser experiments provide a concrete case study for 
 
 **The Retrocausal Interpretation:** Wheeler's delayed-choice experiments [Wheeler 1978] raised profound questions about temporal ordering in quantum mechanics. Wheeler himself emphasized that "no elementary quantum phenomenon is a phenomenon until it is a registered phenomenon," suggesting the meaninglessness of attributing definite properties before measurement rather than explicit retrocausation. However, some researchers took stronger positions: Aharonov and Zubairy [2005] explored interpretations involving "erasing the past and impacting the future." Given QM's time-symmetry, retrocausal interpretations represented a serious—if minority—position in foundations research.
 
-**The PU Framework’s Requirement:** Because retrocausality is forbidden within the PU framework’s foundations, the framework **requires** that quantum eraser phenomena have a non-retrocausal explanation. This is not an accommodation after the fact but a necessary consequence of the framework’s structure. Specifically, PU requires that:
-
-1. **Entanglement as Predictive Coupling:** The signal-idler pair forms a composite state $S_{AB}(t)$ in the tensor product Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$ that encodes predictive coupling through entanglement (**Proposition 10**). This coupling exists from the moment of pair creation, encoding correlations between all possible future measurement outcomes. As established in Proposition 10: “Entangled states maximize mutual information $I(A;B)$ relative to individual entropies, representing the strongest predictive coupling allowed between interacting MPUs.”
-1. **Perspectival Actualization Without Retrocausation:** The ‘Evolve’ process (**Definition 27**) provides the physical mechanism for state actualization through perspectival shifts (**Proposition 9**). When the signal photon undergoes ‘Evolve’ at the detector screen, the outcome is actualized relative to a perspective $s’_{final}$. When the idler photon is later measured, its outcome is actualized relative to its own perspective. Neither measurement event causally influences the other; both actualize pre-existing correlations established at pair creation through local ‘Evolve’ dynamics acting on subsystems.
-1. **Post-Selection Reveals Pre-Existing Correlations:** The apparent “erasure” is a post-selection effect. Sorting signal detections by correlated idler outcomes reveals subensembles with different statistical patterns. This sorting requires classical (subluminal) communication and cannot be performed until after both measurements. No information travels backward in time.
+PU requires no ontic retrocausal explanation of the quantum eraser. Given a registered bipartite state and local commuting or CPTP instruments, the joint law has setting-independent remote marginals; sorting signal records by later idler records is post-selection performed after classical communication. This standard operational account is compatible with PU but is not uniquely derived by it. Proposition 10 does not say that every entangled state maximizes mutual information, and no `Evolve` outcome ontology is needed for this conclusion.
 
 **Analysis Supporting Non-Retrocausal Interpretation:** Detailed analyses have confirmed that quantum eraser experiments are fully explained without retrocausality:
 
@@ -215,7 +198,7 @@ The predictive loop at each location proceeds strictly forward in time:
 - At Alice’s location: $\text{Predict} \rightarrow \text{Verify} \rightarrow \text{Update}$ proceeds forward in time.
 - At Bob’s location: $\text{Predict} \rightarrow \text{Verify} \rightarrow \text{Update}$ proceeds forward in time.
 
-The statistical correlation between their outcomes does not require either party to influence the other’s past. As Appendix F states: “The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.” The CC influence operates through state-mediated correlations established at state preparation, respecting the forward direction of time at each local site while permitting non-local statistical dependencies. This distinction between **spacelike correlation** (permitted) and **timelike reversal** (prohibited) is principled and maintained throughout the framework (Section 10.4, **Theorem 42**).
+The joint correlation does not imply that either party influences the other's past. On the sealed local-instrument branch of Appendix F, the state $\omega$ mediates the correlations while local CPTP operations preserve the remote marginal. A shared-past preparation can therefore produce spacelike correlations without a controllable signal. A late selectable context that changed a pre-lightcone marginal would instead violate Theorem 39c; Theorem 42's zero-error bound does not make such an anomaly causal.
 
 The no-signaling equalities hold with respect to local measurement settings:
 $$
@@ -223,7 +206,7 @@ $$
 $$
 As Section 10 establishes: “Any local operation at Alice’s site is represented by an instrument that commutes with all effects at Bob’s site, and vice versa, ensuring marginals at one site are invariant under changes of the other site’s setting.”
 
-**Application of Theorem 42.** The statistical FTL channel, constrained by $\text{CC} < 0.5$ (**Theorem 39**), cannot achieve the deterministic or zero-error decoding step used by the finite-window contradiction criterion of **Theorem 42**; this weaker result does not establish Postulate 2. The underlying ND-RID interactions are subject to irreducible irreversibility ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) and finite information capacity ($f_{RID} < 1$, $C_{\max} < \ln d_0$, Theorem E.2), which severely constrain the rate and fidelity of any information transfer via this mechanism.
+**Application of Theorem 42.** Theorem 42 excludes only its finite-window deterministic or zero-error contradiction protocol. A registered reset separately obeys Theorem 31, and $f_{\mathrm{RID}}<1$ and $C_{\max}<\ln d_0$ require the refresh/minorization branch; none of these statements makes every ND-RID interaction irreversible or excludes every positive-capacity causal-loop construction.
 
 This application excludes a zero-error contradiction protocol and does not replace Theorem 39c.
 
@@ -236,36 +219,33 @@ The significance of this case lies in the **asymmetry of commitments** between P
 |Framework |Position on Retrocausality |Implication for Quantum Eraser |
 |-----------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------|
 |**Standard QM** |Agnostic (time-symmetric equations) |Either retrocausal or non-retrocausal explanations are formally compatible|
-|**Ontic retrocausal QM** (TI; ontic readings of TSVF)|Treats future boundary data or advanced waves as causal inputs rather than only post-selected conditioning|Interprets quantum eraser as evidence for backwards-in-time influence |
-|**PU Framework** |Impossible (derived from prediction logic + thermodynamics) |**Requires** non-retrocausal explanation must exist |
+|**Ontic retrocausal QM** (TI; ontic readings of TSVF)|Treats future boundary data or advanced waves as causal inputs rather than only post-selected conditioning|Interprets quantum eraser through a retrocausal ontology |
+|**PU Framework** |Excludes intervention-stable paradox-enabling retrocausal control under Theorem 14.1; other retrocausal or time-symmetric descriptions require separate branch analysis |Quantum-eraser statistics remain ordinary conditional probabilities; no backwards-control inference follows |
 
-PU makes a commitment **stronger than standard QM warrants**. If rigorous analysis had shown that quantum eraser experiments genuinely required retrocausal interpretation—which was a live possibility given QM’s time-symmetry—the PU framework would have been falsified. The framework made a falsifiable commitment by asserting that retrocausality is not merely unnecessary but **logically impossible** for any universe characterized by predictive dynamics.
-
-The convergence of the physics community toward non-retrocausal explanations is consistent with PU’s temporal structure. The framework did not merely accommodate this conclusion; its structure **required** that such an explanation exist.
+The table's scoped commitment is the operative one: a protocol satisfying all antecedents of Theorem 14.1 but violating its conclusion would falsify that branch. Quantum-eraser statistics do not test the intervention-stable paradox-control premise, so their nonretrocausal operational explanation is compatibility evidence, not a uniquely required prediction.
 
 ### Falsifiability
 
 This aspect of the framework generates a sharp falsification criterion:
 
-**Any confirmed retrocausal phenomenon would falsify the PU framework.**
+**A finite PPI-admissible protocol satisfying every antecedent of Theorem 14.1 and nevertheless supplying intervention-stable paradox-enabling control information to its own causal past would falsify Theorem 14.1.**
 
-Unlike interpretations that are merely agnostic about retrocausality (neither requiring nor forbidding it), PU makes the strong claim that retrocausality is logically impossible given the nature of prediction. Should future experiments or theoretical developments establish that microscale retrocausality is real—for instance, if certain quantum phenomena could only be explained through genuine backwards-in-time influences—the PU framework would be definitively refuted.
+The temporal-control theorem is refuted only by a reproducible protocol satisfying all of its antecedents and violating its conclusion. A microscopic fluctuation compatible with a fluctuation theorem, a Euclidean auxiliary formulation, or failure of one physical reset model is not by itself a refutation of Theorem 14.1.
 
-Specific examples of what would constitute falsification include:
+The other temporal branches carry their own preregistered falsifiers and are tested separately:
 
-- Successful retrocausal signaling experiments where future choices demonstrably alter past measurement records
-- Phenomena requiring genuine backwards-in-time state modification (not merely post-selection effects)
-- Violation of the second law at microscales in ways inconsistent with fluctuation theorems, indicating reversible fundamental dynamics
-- Discovery of physical processes that circumvent the $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ bound (Theorem 31), enabling coherent reversal of MPU cycles
-- Discovery that the emergent spacetime metric has Euclidean rather than Lorentzian signature, which would indicate reversible temporal dynamics inconsistent with the framework’s derivation
+- Theorem O.3's pathwise arrow: a registered process with common forward and reverse path measures and a certified floor $\sigma_k\ge h_{\min}>0$ whose measured path statistics give $P_R/P_F>e^{-Nh_{\min}}$.
+- Theorem 31's reset ledger: a registered cyclic isothermal reset with degenerate register whose measured dimensionless bath heat satisfies $\varepsilon_{\mathrm{reset}}<H_q(P\mid R)$ for the actual reset law and all retained side information.
+- Theorem O.7a's signature branch: an accepted cone-saturation certificate whose principal symbol nevertheless fails the inertia $(1,0,3)$ conclusion.
+- Theorem 39c's causal branch: an independently late-randomized spacelike context that shifts a pre-lightcone marginal, which by Corollary 39c.1 falsifies the exact causal branch.
 
-The current empirical situation—where no confirmed retrocausal phenomena exist, and detailed analyses have shown retrocausal interpretations of quantum eraser experiments to be unnecessary—is consistent with PU’s temporal structure. The framework’s commitment to temporal asymmetry, derived from the logic and thermodynamics of prediction, remains unfalsified.
+The current empirical situation—where no confirmed retrocausal phenomena exist, and detailed analyses have shown retrocausal interpretations of quantum eraser experiments to be unnecessary—is consistent with PU’s temporal structure. The framework’s commitment to temporal asymmetry, adopted as a definitional commitment on the predictive-cycle order and supported on its registered thermodynamic branches, remains unfalsified.
 
-As stated in Appendix O.8: “The Arrow of Time is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU’s self-referential update cycle.”
+Appendix O distinguishes internal protocol order, registered-reset heat, and pathwise history orientation. Only the last gives a probabilistic arrow, under Theorem O.3's explicit certificates.
 
 ### 14.2.3 Chronology Protection from Predictive Asymmetry
 
-The preceding analysis established that within the PU framework, retrocausality is excluded at all scales through two reinforcing mechanisms: the logical arrow of the Fundamental Predictive Loop (**Definition 4**) and the thermodynamic ratchet enforced by the irreducible cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (**Theorem 31**). This section demonstrates that these results have profound implications for the causal structure of spacetime itself, providing a principled resolution to the question of closed timelike curves (CTCs) that remains open within General Relativity.
+Theorem 14.1 excludes paradox-enabling intervention-stable control only within its stated finite PPI-admissible protocol class. The Predict–Verify–Update order is an internal protocol order, and the Appendix O pathwise arrow is conditional on its common-measure and positive-entropy-production hypotheses. Neither result proves the absence of closed timelike curves, chronology horizons, time-symmetric equations, or retrocausal ontologies in every physical model. Any chronology-protection conclusion therefore requires an additional geometric theorem connecting those protocol hypotheses to the relevant spacetime class.
 
 #### The Time-Symmetry of General Relativity
 
@@ -279,7 +259,7 @@ Hawking’s **Chronology Protection Conjecture** [Hawking 1992] proposes that qu
 
 #### The Time-Asymmetry of the Predictive Universe
 
-The PU framework is fundamentally time-asymmetric. This asymmetry is not postulated but derived from the logical structure of prediction itself, as rigorously established in **Appendix O**.
+PU contains a definitionally ordered predictive protocol and, on separate certified branches, a thermodynamic or pathwise time orientation. It does not derive fundamental time asymmetry from prediction logic alone.
 
 **The Logical Arrow (Appendix O, Section O.5).** The Fundamental Predictive Loop (**Definition 4**) possesses an intrinsic ordering: Predict ($P_{int}$) → Verify ($V$) → Update ($D_{cyc}$). This ordering is definitional to what “prediction” means:
 
@@ -300,16 +280,11 @@ $$
 $$
 and the specialization $2^{-N}$ requires $h_{\min}\ge\ln2$. No universal single-cycle probability bound follows from the binary alphabet size alone.
 
-**Emergence of Lorentzian Signature (Appendix O, Section O.7).** The time-asymmetry is encoded in the very structure of emergent spacetime. The Γ-convergence analysis demonstrates that the Lorentzian signature $(-,+,+,+)$ is not postulated but derived:
+**Conditional Lorentzian Signature (Appendix O.7).** Theorem O.7a gives inertia $(1,0,3)$ only after assuming a positive-definite spatial $\Gamma$-limit, an independently entropy-selected time coordinate, a local second-order principal symbol, a nondegenerate characteristic cone coincident with an attained operational frontier, and the $D=4$ branch. Neither $\Gamma$-convergence nor irreversibility alone fixes $g^{00}<0$.
 
-1. **Spatial sector**: The discrete PCE potential contribution from spatial variations Γ-converges to a continuum functional with positive-definite spatial metric components $g^{ij} > 0$.
-1. **Temporal sector**: The temporal coordinate inherits the directed, irreversible structure of the predictive cycle. The dissipative character of the ‘Evolve’ process introduces a sign asymmetry in the temporal contribution to the cost functional, yielding $g^{00} < 0$ in the continuum limit.
+#### Chronology Protection as a Scoped Operational Theorem
 
-As **Appendix O** states: “The signature is not a postulate but a direct mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum.”
-
-#### Chronology Protection as a Theorem
-
-These derived asymmetries yield chronology protection not as a conjecture but as a consequence of the framework’s foundations.
+The following theorem concerns intervention-stable paradox-enabling control, not all CTC geometries or retrocausal models.
 
 **Theorem 14.1 (Chronology Protection from SPAP).** No PPI-admissible finite process can supply intervention-stable paradox-enabling retrocausal control information to its own causal past. Equivalently: the SPAP diagonal obstruction (Theorems 10–11) defeats any retrocausal channel whose predictive guarantee about a causally affectable future variable survives the receiver's choice of policy.
 
@@ -334,11 +309,7 @@ This contradicts (14.1a) for every $\epsilon<1$. Therefore no intervention-stabl
 
 **Remark 14.1a.0 (Branch Separation for State-Mediated Correlations).** Theorem 14.1 concerns an intervention-stable transcript that predicts a receiver's later policy and survives diagonal use. Postulate 3(ii) is different: its context dependence is fixed in the shared past and therefore supplies no late $A\to B$ message input. Postulate 3(iii) is different again: Alice's independently late-randomized context is chosen after distribution, and a resulting change in Bob's pre-lightcone law has positive capacity and lies outside operational causality by Theorem 39c. Theorem 14.1 does not convert branch (iii) into a prepared-state correlation. Theorems 39a and 42 establish only finite-window zero-error and contradiction-protocol limits; they do not restore the causal branch.
 
-**Remark 14.1a.1 (Resource-level gates on carrier-mediated implementations).** Independently of the logical impossibility theorem, every completed SPAP/ND-RID cycle on the physical implementation carries the structural entropy floor $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31) and the completed reset-support capacity deficit of Proposition E.2a; refresh/minorization branches additionally satisfy $f_{RID}<1$ and $C_{\max}<\ln d_0$ (Lemma E.1 and Theorem E.2). On the thermodynamic arrow branch of Theorem O.3, reversed update histories obey the fluctuation bound
-$$
-\frac{P_R}{P_F}\le e^{-N\varepsilon},
-$$
-which is exponential suppression for finite $N$ and tends to zero in the macroscopic or repeated-cycle limit. These bounds do not prove chronology protection; they prevent any candidate finite-error retrocausal transcript from being promoted to an unconstrained, support-preserving, reversible carrier. The logical theorem above is what excludes paradoxes; the resource gates constrain the implementation layer.
+**Remark 14.1a.1 (Resource-level gates on carrier-mediated implementations).** Independently of the logical impossibility theorem, a completed binary fixed-ready-state reset satisfying Proposition E.2a has the registered support-capacity deficit, and a physical reset satisfying Theorem 31 obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$. Neither statement holds for every SPAP/ND-RID cycle. Refresh/minorization branches additionally satisfy $f_{\mathrm{RID}}<1$ and $C_{\max}<\ln d_0$ under Lemma E.1 and Theorem E.2. On the independent thermodynamic-arrow branch of Theorem O.3, a positive pathwise-production lower bound gives the corresponding fluctuation suppression. These resource statements do not prove chronology protection; Theorem 14.1's diagonal argument is the logical obstruction.
 
 **Remark 14.1a.2 (Where the impossibility lives).** Chronology protection in PU rests on the SPAP diagonal argument applied to intervention-stable predictors. The information-theoretic and thermodynamic bounds in PU constrain how a carrier-mediated channel could be physically implemented; they do not by themselves exclude paradoxes. What excludes paradoxes is the logical impossibility of an intervention-stable self-referential predictor: any channel whose accuracy guarantee survives diagonal use by the receiver triggers SPAP. Theorem 14.1 is therefore a logical theorem about the operational target "intervention-stable carrier-mediated retrocausal control," not a thermodynamic claim about CTC geometries and not a blanket prohibition on finite-error retrocausal correlations.
 
@@ -417,77 +388,49 @@ The final statement follows because Theorem 14.1 excludes carrier-mediated backw
 1. Inference from statistical patterns has non-zero error probability
 1. Information rate is quadratically suppressed ($I \propto \text{CC}^2$, **Theorem 41**)
 
-For CTCs, the analogous constraints are:
+For CTC-related protocols the registered conclusions are narrower:
 
-1. Channel capacity bounds prevent reliable transmission
-1. The thermodynamic ratchet exponentially suppresses reverse trajectories
-1. SPAP prevents consistent self-referential prediction
+1. Finite capacity bounds rates but does not prevent reliable transmission below capacity.
+1. Reverse-history suppression requires Theorem O.3's common-measure and positive pathwise-production floor.
+1. SPAP excludes a uniformly accurate intervention-stable predictor under diagonal use, not every self-referential process.
 
-These safeguards share a broad directed-asymmetry motif, but their formal conclusions use distinct registered hypotheses.
+**Remark 14.2 (Layered Causality Protection).** Four logically distinct layers occur in the manuscript:
 
-**Remark 14.2 (Layered Causality Protection).** The framework compares four causality-protection layers. The logical and registered-reset layers use SPAP/thermodynamic premises; the geometric and channel layers carry additional independent branch data:
+(i) Theorem 14.1 applies the diagonal construction to intervention-stable paradox-control protocols satisfying its finite-carrier, policy, guarantee, and closure hypotheses.
 
-(i) *Logical layer*: no prediction architecture can guarantee perfect self-prediction on paradox-inducing self-referential cases (Theorems 10–11). The diagonal construction $\phi_{t+1} = \text{NOT}(\hat{\phi})$ defeats any deterministic predictor, and Theorem 11 extends the obstruction to probabilistic predictors, regardless of channel properties.
+(ii) Theorem 31 bounds heat only for a registered physical reset; Theorem O.3 separately bounds reverse path probability only on its common-measure and positive-production branch.
 
-(ii) *Thermodynamic layer*: every processing attempt produces irreversible entropy $\Sigma \ge \varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per cycle (Theorem 31), advancing the system's arrow and, in the fluctuation-relation regime of Theorem O.3, exponentially suppressing reversed trajectories.
+(iii) Theorem 46 gives a uniform propagation-speed upper bound only on the branch carrying a positive registered edge-update duration, nonzero spacing, edge-by-edge serialization, and bounded edge weights; the frontier $c=\delta/\tau_{\min}$ additionally requires normalized uniform weights and one-link attainment, and its Lorentzian reading requires Corollary 46a together with Theorem O.7a's independent continuum, time-coordinate, principal-symbol, attained-frontier, and $D=4$ inputs.
 
-(iii) *Geometric layer*: Theorem 46 supplies a uniform propagation-speed upper bound on the branch with a separately registered positive edge-update time, nonzero spacing, successive edge-by-edge serialization in the propagation-cost metric, and bounded edge weights. A separately attained normalized uniform-weight one-link frontier may then satisfy $c=\delta/\tau_{\min}$ and provide spatial separation as a causal buffer; Corollary 46a and Appendix O are additionally required for its Lorentzian interpretation. Neither SPAP nor Theorem 29 alone establishes these branch hypotheses (Appendix M, §M.6.6, Branch II).
+(iv) Theorems 39--42 give endpoint, detectability, rate, and zero-error statements on their stated CC branches; only Theorem 39c supplies the exact marginal-invariance causal gate.
 
-(iv) *Channel layer*: the CC bound $\text{CC} < 0.5$ (Theorem 39; Theorem S.2) keeps statistical influence below the deterministic threshold, with information rate quadratically suppressed (Theorem 41); consequently the noisy, rate-limited CC channel cannot realize paradox-inducing causal loops (Theorem 42).
-
-Each layer addresses a distinct threat class. The logical and registered thermodynamic layers are tied to SPAP and reset processing; the geometric layer additionally requires independent spacing, clock, serialization, bounded-weight, frontier-attainment, and Lorentzian-promotion data; and the operational channel layer uses its own CC hypotheses. The manuscript does not derive all four from one certified root.
-
-Within the bounded-bias regime analyzed by the framework ($\text{CC} < 0.5$, Theorem 39), all four layers operate simultaneously. Whether the logical and thermodynamic layers alone would suffice to prevent paradoxes in a hypothetical regime with $\text{CC} \ge 0.5$ is not addressed by the present analysis, since that regime is outside the bounded-bias branch unless a separate finite-response certificate excludes endpoint-complete context pairs. For finite systems on the Appendix S constitutive power-law and retained-energy branch, the accepted compactness and weak-field geometry records yield the conditional ceilings $\mathrm{CC}_{BH}$ and $\mathrm{CC}_{WF}$; the weak-field ceiling also depends on the declared tolerance $\delta_{\mathrm{WF}}$ and calibrated response regime.
+No theorem makes these four layers activate jointly, and $\mathrm{CC}<0.5$ does not by itself establish chronology protection or exact no-signaling. On the Appendix S constitutive power-law and retained-energy branch, the accepted compactness and weak-field geometry records supply the conditional ceilings $\mathrm{CC}_{BH}$ and $\mathrm{CC}_{WF}$, the latter also depending on the declared tolerance $\delta_{\mathrm{WF}}$ and the calibrated response regime; these are branch ceilings, not causality theorems.
 
 #### Comparison: GR vs. PU on Temporal Structure
 
 |Feature |General Relativity |Predictive Universe |
 |---------------------------------|------------------------------------------------|------------------------------------------------|
-|**Field equations** |Time-symmetric ($t \to -t$ invariant) |Time-asymmetric (derived) |
-|**Arrow of time** |Not explained; external input (Past Hypothesis) |Derived from predictive logic (**Appendix O**) |
-|**Lorentzian signature** |Postulated |Emergent from irreversibility (**Appendix O.7**)|
-|**Thermodynamic irreversibility**|Statistical, requires special initial conditions|Fundamental, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ per cycle |
-|**Closed timelike curves**|Allowed in some solutions of field equations |Intervention-stable carrier-mediated retrocausal control is forbidden by SPAP |
-|**Chronology protection** |Conjectured [Hawking 1992] |SPAP logical theorem (**Theorem 14.1**) |
-|**Information conservation**|Postulated (unitarity axiom) |Derived from SPAP (**Theorem E.9.5**; **Corollary E.9.5.1**)|
+|**Field equations** |Time-symmetric ($t\to-t$ invariant) |The effective field-equation branch may be time-symmetric; Predict--Verify--Update is only an internal protocol order |
+|**Arrow of time** |Requires an ensemble or boundary condition |Theorem O.3 supplies a path-probability arrow only with common forward/reverse measures and a positive pathwise-production certificate |
+|**Lorentzian signature** |Postulated in the spacetime model |Theorem O.7a selects it only on the independent spatial-limit, time-selection, principal-symbol, attained-frontier, and $D=4$ branch |
+|**Thermodynamic irreversibility**|Statistical and state-dependent|A registered reset obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; positive heat and positive entropy production require separate hypotheses |
+|**Closed timelike curves**|Allowed in some solutions|Theorem 14.1 excludes only intervention-stable paradox-enabling control satisfying its finite-protocol antecedents |
+|**Chronology protection** |Conjectured in general |No blanket CTC-exclusion theorem; a geometry-to-protocol bridge would be required |
+|**Information conservation**|Postulated through unitary dynamics |Theorem E.9.5 represents an assumed retained finite-dimensional $*$-automorphism circuit unitarily |
 
-**Remark 14.1b (Co-Derivation of Unitarity and Irreversibility).** In standard quantum mechanics, unitarity is an independent axiom governing closed-system evolution (von Neumann's Postulate 2 [von Neumann 1932]; Remark E.9.5.2). It guarantees that the total closed-system quantum state evolves reversibly and that information is not fundamentally destroyed. Taken on its own authority, this axiom logically permits reversal of closed-system evolution in principle — the information needed for reversal is never erased. The second law of thermodynamics then appears to stand in tension with this permission at the subsystem level: entropy increases, processes are irreversible, and the arrow of time points in one direction. The tension between these two claims has remained unresolved since the founding of statistical mechanics. If information is never destroyed, why is the arrow of time not merely a subsystem-level practical limitation?
+**Remark 14.1b (Conditional Unitary Representation and Independent Irreversibility Ledgers).** Theorem E.9.5 assumes that the retained finite-dimensional closed-system circuit acts by $*$-automorphisms. For each full matrix factor covered by Lemma E.9.5.3, the registered automorphism is inner and hence has a unitary representation. The theorem does not derive the automorphism premise from SPAP or reset heat. Reduced irreversible channels and a global unitary description coexist only after the stated factorization or dilation data are supplied. Registered-reset heat and Theorem O.3's path probabilities remain separate ledgers.
 
-Within the PU framework, this tension does not arise, because unitarity is not an independent axiom. It is a theorem. **Corollary E.9.5.1** states: "Unitarity of quantum evolution is not an independent axiom but a theorem following from the structure of self-referential prediction in a closed system." The derivation proceeds through SPAP $\to$ $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31), together with the closed-system assumption (Hypothesis 1) and ND-RID pairwise structure (Definition 27), $\to$ joint unitarity $U_{AB}$ (Lemma E.9.5.3) $\to$ global unitarity of the total closed system (Theorem E.9.5; Branch II of Corollary E.9.5.1 and Remark E.9.5.4).
-
-The completed reset-support branch belongs to Branch I and supplies the reduced causal-capacity ledger:
-$$
-C_{\max}\le\ln d_0-\ln2
-$$
-(Proposition E.2a), with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget branch. The strict subsystem-level contractivity $f_{RID}<1$ belongs to the refresh/minorization subbranch of Branch I and characterizes reduced-channel contraction when a full-state refresh component is present. It is not a precursor to unitarity and is not the sole source of finite causal capacity.
-
-The registered-reset heat ledger and the pathwise arrow ledger are distinct. On the additional Theorem O.3 branch, $\sigma_k\ge h_{\min}>0$ implies $P_R/P_F\le e^{-Nh_{\min}}$; Theorem 31 alone supplies only $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$. Remark E.9.5.4 identifies the causal capacity bounds, refresh-branch contraction, and global unitarity as complementary level-distinct consequences of a single constraint; the thermodynamic arrow (Theorem O.3) is a third parallel consequence of the same $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ root. All three — capacity bounds, unitarity, and the second law — are derived from the thermodynamic cost of self-referential prediction.
-
-The apparent permission for reversal that unitarity seems to grant is therefore not an independent physical permission. It is a mathematical property of the derived global description. The total closed-system state evolves unitarily because of SPAP together with Hypothesis 1 and the ND-RID pairwise structure, and every subsystem is irreversible because of the same SPAP-generated entropy cost. No entity within the universe can exploit the global reversibility, because every entity is a subsystem of the system whose unitarity was derived from the constraint that simultaneously makes subsystem evolution irreversible (Remark E.9.5.3). 
-
-#### Physical Interpretation
-
-The PU framework resolves the question: *Why doesn’t nature permit time travel?*
-
-The answer is that **time travel is incompatible with a universe whose fundamental structure is predictive**. The arrow of time is not an accident of initial conditions or an emergent statistical phenomenon requiring special boundary conditions. It is a **logical necessity** for any system that predicts, and it is **physically enforced** by the thermodynamic costs inherent in self-referential information processing.
-
-As stated in **Appendix O.8**: "The Arrow of Time is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle."
-
-All causal paradoxes analyzed in the literature — including those that appear purely geometric — require self-reference at some node in the causal loop: the paradox-inducing content must be processed by the system whose behavior it constrains. The tachyonic anti-telephone, for instance, delivers a bit from Alice's future to her past; the bit appears to be trivial external information, but its content is about what Alice will do, so using it to determine her next action implements the diagonal structure $\phi_{t+1} = \text{NOT}(\hat{\phi})$ through a causal loop rather than through direct self-inspection. The grandfather paradox similarly requires some agent at some point in the loop to process information that constrains their own action and then act contrary to that constraint. In every case, the loop can close only if one node executes a self-referential model update on paradox-inducing content. SPAP (Theorems 10–11) blocks any universal predictor that would make such a contradiction-resolving update exact, while the perspectival processing analysis shows that self-referential content ranges from baseline cost in shallow cases to divergent or unprocessable cost as the demand approaches the diagonal/self-restorative boundary (Remark O.4.5; Remark M.10.3; Theorems M.10.3, M.10.4, and M.10.6). The structural point is general: a causal loop without a self-referential processing node reduces to a consistency constraint rather than a paradox. The causal loop is the delivery mechanism; SPAP is the obstruction.
-
-From this perspective, GR's CTC solutions are mathematical solutions of an effective time-symmetric field-equation layer, not automatically PPI-admissible finite-response implementations. A CTC geometry becomes physically relevant in PU only if it supports admitted finite protocols. Theorem 14.1 excludes the protocol content needed for a time machine: intervention-stable carrier-mediated retrocausal control of paradox-enabling information. The distinction between timelike and spacelike directions—encoded in the Lorentzian signature—is itself selected on the predictive-irreversibility branch, so a closed timelike carrier whose predictive guarantee survives adversarial use is outside the predictive dynamics from which the physical spacetime branch is generated.
+The resulting physical claim is scoped. PU rules out an intervention-stable paradox-control protocol on Theorem 14.1's domain; it does not prove that every mathematical CTC geometry, time-symmetric model, or retrocausal ontology is impossible. A full chronology-protection theorem would require a bridge from the relevant geometric solution class to the theorem's finite carrier, intervention, policy, and diagonal-closure hypotheses.
 
 #### Relation to Other Approaches
 
-The PU chronology protection mechanism differs fundamentally from other proposals:
+- Hawking's chronology-protection conjecture concerns quantum back-reaction at chronology horizons and is not proved here.
+- Novikov-style global consistency and Deutsch-style CTC models lie outside Theorem 14.1 unless a finite protocol satisfying its antecedents is exhibited.
+- Standard unitary quantum mechanics, post-selection, and weak-value bookkeeping are not themselves retrocausal control channels.
 
-- **Hawking’s Chronology Protection Conjecture** [Hawking 1992] relies on quantum back-reaction diverging at chronology horizons—an unproven dynamical claim within semiclassical gravity.
-- **Novikov’s Self-Consistency Principle** [Novikov 1989] permits CTCs but restricts initial conditions to self-consistent histories. PU instead forbids PPI-admissible intervention-stable retrocausal control protocols; mathematical CTC geometries that carry no intervention-stable paradox-enabling control are outside the operational target of Theorem 14.1.
-- **Deutsch’s Quantum CTC Model** [Deutsch 1991] permits CTCs with modified quantum mechanics involving non-linear evolution. The PU framework’s derivation of standard quantum mechanics from predictive foundations (**Section 8**) renders such modifications inconsistent with the framework.
+The PU contribution is therefore a scoped operational diagonal obstruction, not a derivation of quantum mechanics, unitarity, Lorentzian signature, or universal chronology protection from SPAP.
 
-The PU approach derives chronology protection from **pre-geometric** principles — the logic of prediction, the thermodynamics of self-reference, and the information-theoretic limits of ND-RID channels — rather than from dynamical equations or conjectured back-reaction.
-
-Structural Correspondence M.6.4 records a structural parallel between frame-relative simultaneity and perspective-relative actuality. It does not derive both from the same SPAP/reset premise: the kinematic side additionally requires the independent causal-speed and Lorentzian branch packages, while the perspectival side uses the Hilbert/Born, update, and perspective records. The perspectival arrow (Theorem O.4; Corollary O.4.3) extends this relativization to a new domain: temporal reversibility. Einstein resolved the tension between "the speed of light is the same in all frames" and "velocities should add" by showing simultaneity is frame-relative. The perspectival arrow resolves the tension between "information is conserved" (Theorem E.9.5) and "subsystem evolution is thermodynamically directional" (Theorem O.3) by showing temporal reversibility is vantage-relative. In both cases, an apparently absolute physical quantity turns out to be observer-dependent, and the contradiction dissolves. The depth of the arrow — the cost of temporal self-restoration — depends on the observer's position in the complexity hierarchy (Proposition O.4.2), just as the ordering of events depends on the observer's reference frame. All three relativizations — simultaneity, actuality, and reversibility — trace to the same source: SPAP together with the conditional registered-reset cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ of self-referential prediction, with a positive floor only when $H_q(P\mid R)\ge h_{\min}>0$ (Appendix M, §M.6.6, Remark M.6.6).
+Structural Correspondence M.6.4 records a formal parallel between frame-indexed simultaneity and perspective-indexed outcome descriptions; it does not derive either structure from SPAP or from reset cost. Appendix O separately distinguishes recurrence of an accessible state from deletion of a forward-locked retained history (Theorem O.4). Directional path probabilities require Theorem O.3 or O.3a, while registered reset heat requires Theorem 31 and can vanish when $H_q(P\mid R)=0$. Appendix M's receiver-pattern complexity bounds apply only with their model-access, decision, and pattern-specific reduction certificates and do not prohibit external restoration of a selected state.
 
 #### Falsification Criteria
 
@@ -499,29 +442,17 @@ This prohibition follows analytically from the framework's definition of predict
 
 The asymmetry between GR and PU on this question is operational: GR admits mathematical CTC solutions in some effective geometries, while PU forbids their promotion to functioning intervention-stable retrocausal control devices.
 
-## 14.2.4 Classical Singularities as Framework Non-Features
+## 14.2.4 Scope of the Singularity Claims
 
-**Criterion (Artifact Identification).** A formal feature $F$ of a mathematical description carries no physical content if specifying or distinguishing $F$ requires violation of any core PU constraint: finite channel capacity ($C_{\max} < \ln d_0$, Theorem E.2), irreversible cost ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), or operational finite resolution ($\delta > 0$, Appendix Q). The criterion is constructive: by operational accessibility (Definition K.10.1), physical content requires a finite protocol distinguishing "worlds with $F$" from "worlds without $F$" to arbitrary precision. If $F$ requires transmitting unbounded information (violating finite capacity), costless logical irreversibility (violating Theorem 31), complete self-prediction (violating SPAP), or distinctions below $\delta$ (violating operational finite resolution), then no such protocol exists and $F$ carries no physical content. The dissolutions below apply this criterion.
+**Criterion (Artifact Identification).** This is an explicit operational convention: a claimed feature is excluded from the retained PU description only when a specified finite-response comparison proves that it cannot affect any admitted protocol. The resource theorems do not turn this convention into a general ontological no-go result.
 
-The preceding analysis established that time asymmetry within the PU framework is not an imposed constraint requiring explanation, but a structural feature arising necessarily from the logical ordering of the Fundamental Predictive Loop (Definition 4) and its physical enforcement via the thermodynamic ratchet $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31). Classical singularities—the divergent curvatures and infinite densities predicted by General Relativity's Penrose-Hawking theorems—occupy an analogous status: they are not problems the framework "resolves" but artifacts of continuum physics that lie outside the PU solution space entirely.
+No current theorem in the manuscript excludes classical singularities. A finite capacity per channel does not bound curvature, energy density, or the number of channels in a shrinking region, and a curvature singularity is not equivalent to storage of an infinite message. The boundary-area result of Appendix E and the spacing formula of Appendix Q are conditional branch statements; neither proves global existence, geodesic completeness, bounded curvature, or a nonsingular continuation of a collapsing solution.
 
-The exclusion of singularities follows from the same information-theoretic foundations that yield the arrow of time:
+A singularity-avoidance theorem would require a registered Planck-regime evolution law, uniform curvature or energy estimates, a global-existence or continuation argument, and a theorem connecting the discrete dynamics to geodesic completeness of the effective limit. Until those certificates are supplied, continuum breakdown and singularity avoidance are hypotheses and research targets, not established conclusions.
 
-1. **Channel Capacity Bound.** The completed ND-RID reset branch has structural capacity bound $C_{\max}\le\ln d_0-\ln2=2\ln2$ on the minimal $d_0=8$ branch (Proposition E.2a). On refresh/minorization branches the capacity is additionally strictly bounded, $C_{\max}(f_{\text{RID}})<\ln d_0$ (Theorem E.2), from strict contractivity $f_{\text{RID}} < 1$ (Lemma E.1). These bounds limit the rate at which information can be reliably transmitted through any interaction channel. A classical singularity, requiring specification of unbounded information to characterize a divergent configuration, would violate this fundamental constraint.
+## 14.2.4.1 Predictive Throughput Bounds and a Manifold-Resolution Diagnostic
 
-2. **Holographic Information Bound.** The Horizon Entropy Area Law (Theorem 49, derived in Appendix E) establishes that the maximum entropy (information content) associated with any region scales with its boundary area: $S \leq \mathcal{A}/(4G)$. This bound is not a conjecture but a theorem following from ND-RID channel counting and geometric regularity (Theorem 43). A configuration with $\rho \to \infty$ in a finite region would require information content exceeding what the bounding area can support—a logical impossibility within the framework.
-
-3. **Discrete Substrate.** The emergent spacetime of Section 11 arises as a continuum approximation to the underlying MPU network. This approximation has a characteristic breakdown scale: the PCE-optimal MPU spacing $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ (Appendix Q). The "singularity" at $r = 0$ in classical black hole solutions, or the $t = 0$ Big Bang, corresponds to extrapolating the continuum description beyond its domain of validity. The discrete MPU network remains well-defined at these scales; only the smooth manifold approximation fails.
-
-The parallel to thermodynamics is instructive. One does not ask "how does thermodynamics resolve perpetual motion machines?"—the Second Law simply excludes them from the solution space. Similarly, asking "how does PU avoid singularities?" misframes the issue. The capacity bound $C_{\max} < \ln d_0$ and the Area Law $S \leq \mathcal{A}/(4G)$ make unbounded information density incoherent within the framework, just as $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ makes time-reversal incoherent. Singularities are not avoided; they are not features of the theory.
-
-What remains to be characterized is the Planck-regime physics that replaces singular behavior in the classical limit. When matter collapses toward what GR would call a singularity, the PU framework predicts that the continuum approximation breaks down at scale $\sim \delta$, information bounds become saturating constraints, and the dynamics transition to a regime governed directly by MPU network physics rather than smooth field equations. The absence of true singularities is a theorem, not a hypothesis.
-
-This dissolution of classical singularities exemplifies a broader pattern: phenomena that appear as "problems" or "paradoxes" in frameworks assuming time-symmetric fundamental laws and continuous substrates often dissolve when the foundational structure incorporates irreversibility and discreteness from the outset. The arrow of time, the black hole information paradox (Appendix K.3), and classical singularities all share this character—they are artifacts of approximations that the PU framework identifies and supersedes.
-
-## 14.2.4.1 Predictive Throughput Bounds and Operational Weak Cosmic Censorship
-
-Appendix E makes a sharp operational statement: irreversibility enforces the completed reset-support capacity deficit (Proposition E.2a), while refresh/minorization branches additionally have strict contractivity (Lemma E.1) and strict capacity bound (Theorem E.2). The number of effective channels crossing a closed surface has an area density on the density-certificate branch (Theorem E.3). A rate bound additionally requires a registered single-clock protocol branch on which every channel use has duration at least $\tau_{\min}>0$; Theorem 29 alone does not supply that channel-use premise.
+Appendix E gives a support-capacity deficit only for a registered completed fixed-ready-state reset. Refresh/minorization branches separately give strict contractivity and a strict capacity bound. A boundary-rate estimate additionally needs the area-density and single-clock protocol certificates, including a positive lower duration for each channel use; none of these statements follows from irreversibility alone or supplies a curvature bound.
 
 **Definition 14.2.4.1 (Predictive Throughput Requirement).**
 Let $S$ be a closed two-surface with area $A(S)$ in the emergent manifold regime (conditional on Theorem 43). Let $\mathcal{H}_{\mathrm{int}}$ denote the Hilbert space of MPU degrees of freedom in the interior region bounded by $S$, and let $\rho_{\mathrm{int}}(S) \in \mathcal{S}(\mathcal{H}_{\mathrm{int}})$ denote the interior reduced state.
@@ -580,206 +511,118 @@ S_{BH}(S)=\frac{c^3}{4G\hbar}A(S)+o(A),
 $$
 or $S=A/(4G)$ in units $\hbar=c=1$. Throughput alone proves neither saturation nor this entropy identification.
 
-**Theorem 14.2.4.2 (Operational Weak Cosmic Censorship).**
-In the manifold regime (Theorem 43), curvature blow-up visible to exterior observers is operationally excluded: either a capacity-saturating boundary forms or the manifold approximation fails, in the sense that the curvature-controlled normal-coordinate expansion ceases to be valid on MPU-resolvable neighborhoods (Lemma 14.2.4.2b).
-
-*Definitions.* Let $S$ be a closed two-surface and $\gamma$ a causal curve from the interior of $S$ to an exterior observation event. Define the **predictive sensitivity** of an exterior observable $O \in \mathcal{O}_{ext}$ with respect to interior state variations as
+**Theorem 14.2.4.2 (Fixed-Resolution Manifold-Certificate Boundary).** Let $\gamma$ be a registered causal curve in the manifold regime (Theorem 43), and fix $\delta>0$ and $\varepsilon_{\mathrm{cert}}>0$. Extend a parallel-propagated orthonormal frame $(e_A)_{A=0}^3$ from $\gamma$ over its Fermi neighborhood $U_\delta:=\{x:|x|\le\delta\}$, write $R_{ABCD}:=R(e_A,e_B,e_C,e_D)$ in that frame, and define
 $$
-\mathcal{S}(O; \gamma) := \sup_{\substack{\rho_1, \rho_2 \in \mathcal{S}(\mathcal{H}_{\mathrm{int}}) \\ \rho_1 \neq \rho_2}} \frac{D_{TV}(p(\cdot \mid O; \rho_1), p(\cdot \mid O; \rho_2))}{D_{tr}(\rho_1, \rho_2)}.
-$$
-Fix a parallel-propagated orthonormal frame $(e_A)_{A=0}^3$ along $\gamma$, write $R_{ABCD}:=R(e_A,e_B,e_C,e_D)$, and define the positive component norm
-$$
-\lVert R\rVert_\gamma
+\lVert R\rVert_{\mathrm{fr},\delta}
 :=
-\left(\sum_{A,B,C,D=0}^3|R_{ABCD}|^2\right)^{1/2}.
+\sup_{x\in U_\delta}\max_{A,B,C,D}|R_{ABCD}(x)|.
 $$
-An **operationally naked singularity** is a manifold-regime configuration where $\lVert R\rVert_\gamma\to\infty$ along some $\gamma$ that remains future-causally connected to exterior observers through a finite-area surface $S$.
+In the associated Fermi normal coordinates write
+$$
+g_{AB}(x)=\eta_{AB}+Q_{AB}(x)+\mathcal R_{AB}(x),
+$$
+where $Q_{AB}$ collects the quadratic curvature terms and $\mathcal R_{AB}$ the higher-order remainder, and assume the accepted expansion obeys
+$$
+|Q_{AB}(x)|\le C_1\lVert R\rVert_{\mathrm{fr},\delta}|x|^2,
+\qquad
+|\mathcal R_{AB}(x)|\le C_2|x|^3
+$$
+throughout $U_\delta$ for registered constants $C_1,C_2>0$. Put
+$$
+B_\delta:=C_1\lVert R\rVert_{\mathrm{fr},\delta}\delta^2+C_2\delta^3.
+$$
+If $B_\delta\le\varepsilon_{\mathrm{cert}}$, then the accepted estimate certifies $\sup_{U_\delta}|g_{AB}-\eta_{AB}|\le\varepsilon_{\mathrm{cert}}$. If $B_\delta>\varepsilon_{\mathrm{cert}}$, this sufficient certificate is inconclusive; the inequality does not prove that the actual correction is large or that no other manifold certificate exists. No horizon, bounded-curvature, extendibility, completeness, or censorship conclusion follows.
 
-**Lemma 14.2.4.2a (Curvature-Sensitivity Bound).**
-Let the CPTP transport map $\mathcal{E}_\gamma$ along $\gamma$ be decomposed as in Section 11.7.2 into unitary (holonomy) and dissipative components. Then for all interior states $\rho_1,\rho_2$,
-$$
-D_{tr}(\mathcal{E}_\gamma(\rho_1), \mathcal{E}_\gamma(\rho_2)) \le D_{tr}(\rho_1, \rho_2),
-$$
-and when ND-RID is strict with per-cycle contraction factor $0<f_{RID}<1$ (Lemma E.1), for transport realized over $n(\gamma)$ MPU cycles,
-$$
-D_{tr}(\mathcal{E}_\gamma(\rho_1), \mathcal{E}_\gamma(\rho_2)) \le f_{RID}^{n(\gamma)}\,D_{tr}(\rho_1, \rho_2).
-$$
-Consequently, for any exterior observable $O \in \mathcal{O}_{ext}$,
-$$
-D_{TV}(p(\cdot \mid O; \rho_1), p(\cdot \mid O; \rho_2))
-\le D_{tr}(\mathcal{E}_\gamma(\rho_1), \mathcal{E}_\gamma(\rho_2))
-\le f_{RID}^{n(\gamma)}\,D_{tr}(\rho_1, \rho_2),
-$$
-so the predictive sensitivity satisfies
-$$
-\mathcal{S}(O; \gamma) \le f_{RID}^{n(\gamma)} \le 1.
-$$
-In particular, curvature-dependent unitary holonomy cannot amplify distinguishability: the unitary component preserves trace distance, while the dissipative component enforces contractivity.
-
-*Proof.* Let $X=\rho_1-\rho_2$. It is Hermitian and trace zero, so Lemma 9.1 gives
-$$
-D_{\mathrm{tr}}(\rho_1,\rho_2)
-=\sup_{0\le E\le I}|\operatorname{tr}(EX)|.
-$$
-If $\Phi$ is CPTP, its adjoint $\Phi^*$ is unital and positive. Thus $0\le E\le I$ implies $0\le\Phi^*(E)\le I$, and
-$$
-\begin{aligned}
-D_{\mathrm{tr}}(\Phi(\rho_1),\Phi(\rho_2))
-&=\sup_{0\le E\le I}|\operatorname{tr}(E\Phi(X))|\\
-&=\sup_{0\le E\le I}|\operatorname{tr}(\Phi^*(E)X)|\\
-&\le D_{\mathrm{tr}}(\rho_1,\rho_2).
-\end{aligned}
-$$
-For a unitary channel, applying the same inequality to its unitary inverse gives equality. If each ND-RID cycle contracts trace distance by at most $f_{RID}$, induction over the $n(\gamma)$ cycles gives the factor $f_{RID}^{n(\gamma)}$; inserting unitary holonomy channels between the cycles leaves that factor unchanged.
-
-Let $\{E_i\}$ be the POVM for the exterior observable, and put $p_i-q_i=\operatorname{tr}(E_iX')$ for the transported difference $X'$. If $A=\{i:p_i\ge q_i\}$, then $E_A=\sum_{i\in A}E_i$ is an effect and
+**Lemma 14.2.4.2a (Transport-Contraction Sensitivity Bound).** Let $\mathcal E_\gamma$ be the CPTP transport map along $\gamma$, let $\rho_1,\rho_2$ be input states, and let $O=\{E_i\}$ be any output POVM with outcome laws $p$ and $q$. Then
 $$
 D_{\mathrm{TV}}(p,q)
-=\sum_{i\in A}(p_i-q_i)
-=\operatorname{tr}(E_AX')
-\le D_{\mathrm{tr}}(\mathcal E_\gamma(\rho_1),\mathcal E_\gamma(\rho_2)).
+\le
+D_{\mathrm{tr}}\!\left(\mathcal E_\gamma(\rho_1),\mathcal E_\gamma(\rho_2)\right)
+\le
+D_{\mathrm{tr}}(\rho_1,\rho_2).
 $$
-Combining the two bounds and taking the supremum in the definition of $\mathcal S(O;\gamma)$ proves every displayed inequality. ∎
-
-**Lemma 14.2.4.2b (Operational Curvature-Resolution Bound).**
-In the manifold regime (Theorem 43) at MPU resolution $\delta$, the continuum curvature tensor inferred from predictive holonomy (Theorem 47) is operationally meaningful only on neighborhoods whose linear size is $\ell \gtrsim \delta$. Along the curve and in the frame specified above, define the local curvature scale by $\ell_R:=\lVert R\rVert_\gamma^{-1/2}$ when $\lVert R\rVert_\gamma>0$ and by $\ell_R:=\infty$ when $\lVert R\rVert_\gamma=0$. Consequently, along any curve segment where the manifold approximation is valid at MPU resolution, $\ell_R\gtrsim\delta$, equivalently
+If the transport is a composition of $n(\gamma)$ cycles along $\gamma$, each contracting trace distance by at most a registered factor $f_{\mathrm{RID}}\in[0,1)$, interspersed with arbitrary unitary holonomy channels, then
 $$
-\lVert R\rVert_\gamma\,\delta^2=O(1).
+D_{\mathrm{TV}}(p,q)
+\le
+f_{\mathrm{RID}}^{\,n(\gamma)}
+D_{\mathrm{tr}}(\rho_1,\rho_2).
 $$
+This is a transport-distinguishability theorem; it supplies no curvature, horizon, or censorship conclusion.
 
-*Proof.* In Fermi normal coordinates built from that frame, every quadratic correction to a metric component is a linear combination with numerical coefficients of terms $R_{ABCD}x^Cx^D$. Hence its absolute value is bounded by a dimension-dependent constant times $\lVert R\rVert_\gamma\lVert x\rVert^2$. Control of the quadratic curvature contribution on the minimal operational neighborhood $\lVert x\rVert\sim\delta$ therefore requires $\lVert R\rVert_\gamma\delta^2=O(1)$. If $\lVert R\rVert_\gamma\delta^2\gg1$ at an event, at least one curvature component is too large for the curvature-controlled normal-coordinate approximation on an MPU-resolvable neighborhood, so the continuum curvature tensor is not operationally valid there. ∎
+*Proof.* Trace distance is contractive under every CPTP map. A POVM is a CPTP classical readout, so its total-variation distance cannot exceed the trace distance of the measured states. Unitary channels preserve trace distance, while composition multiplies the certified cyclewise contraction factors. ∎
 
-**Proof of Theorem 14.2.4.2.**
-Suppose, for contradiction, that an operationally naked singularity exists in the manifold regime (Theorem 43): $\lVert R\rVert_\gamma\to\infty$ along a causal curve $\gamma$ that remains future-causally connected to exterior observers through a finite-area surface $S$, while the continuum manifold description remains operationally valid at MPU resolution.
+**Lemma 14.2.4.2b (Normal-Coordinate Certificate Test).** Under Theorem 14.2.4.2's hypotheses, $B_\delta\le\varepsilon_{\mathrm{cert}}$ is sufficient for the stated normal-coordinate accuracy. If it fails, only that sufficient upper-bound certificate is lost.
 
-By Lemma 14.2.4.2b, validity of the manifold approximation at MPU resolution enforces $\lVert R\rVert_\gamma=O(1/\delta^2)$ on any segment where continuum curvature is operationally meaningful. Therefore $\lVert R\rVert_\gamma\to\infty$ cannot occur while remaining in the manifold regime for a prescribed $\delta>0$: once $\lVert R\rVert_\gamma$ exceeds the MPU curvature scale, the manifold approximation fails.
+*Proof.* For $|x|\le\delta$, the triangle inequality gives $|g_{AB}(x)-\eta_{AB}|\le|Q_{AB}(x)|+|\mathcal R_{AB}(x)|\le B_\delta$. The two conclusions follow directly. $\square$
 
-Thus any would-be curvature blow-up that remains future-causally connected to exterior observers is operationally resolved by one of:
-1. **Horizon formation:** A capacity-saturating boundary forms (Definition E.9.1; Theorem E.9.4), so exterior predictions decouple from interior microdetails.
-2. **Manifold breakdown:** The classical manifold approximation (Theorem 43) fails before curvature divergence becomes operationally meaningful at MPU resolution. ∎
+**Remark.** General-relativistic singularity theorems establish geodesic incompleteness under their hypotheses and need not assert divergent curvature or storage of an infinite message. A singularity-resolution or censorship theorem would require a microscopic high-curvature evolution law together with regularity, continuation, or extendibility estimates not supplied here.
 
 
-### 14.2.5 The Yang–Mills Mass Gap as a Dissolved Problem
+### 14.2.5 Finite-Resolution Comparison with the Yang–Mills Mass-Gap Problem
 
-The dissolution pattern of §14.2.4 (singularities) and Theorem K.10.5 (UV divergences) extends to the Yang–Mills existence and mass gap problem. That problem asks: *prove that for any compact simple gauge group $G$, a non-trivial quantum Yang–Mills theory exists on $\mathbb{R}^4$ satisfying the Wightman axioms and has a mass gap $\Delta > 0$.*
+The Yang–Mills existence and mass-gap problem asks for a nontrivial continuum theory on $\mathbb R^4$ satisfying the stated axioms and possessing a positive spectral gap. PU neither solves nor dissolves that problem. Finite operational resolution and channel capacity do not prove that continuum completions are physically empty, and they do not establish that all completions have identical finite-scale observables.
 
-The problem has two components: (i) constructive existence of a continuum theory satisfying the Wightman axioms, and (ii) a strictly positive mass gap. Under PU's operational constraints, the framework proposes a finite-resolution confinement/mass-gap branch for the physical content of (ii), while the continuum Wightman existence problem remains an external mathematical problem rather than something solved by the PU formalism.
+PU instead supplies several conditional finite-model ledgers. Refresh/minorization can give a transfer-mixing gap through Lemma E.1 and Theorem E.2; the accepted rootless branch gives a dimensionless lattice norm gap, since Theorem Z.8c identifies $\Lambda_{24}$ as the unique rootless even unimodular rank-$24$ lattice and Theorem Z.8g supplies the conditional energy--norm normalization on $\mathfrak B_{\mathrm{mass}}$; and Corollary Q.0.1's action-per-update ledger provides a scale only after duration and spectral maps are registered. None is a continuum Yang–Mills mass gap.
 
-**The continuum presupposition.** The Wightman axioms require operator-valued tempered distributions $\phi(f)$ defined for all Schwartz test functions $f \in \mathcal{S}(\mathbb{R}^4)$, including those with arbitrarily small support (the Wightman-domain assumption that smeared fields are defined for all Schwartz test functions). This demands the theory assign operational meaning to arbitrarily fine spatial and temporal distinctions. But the ND-RID channel capacity is strictly bounded ($C_{\max} < \ln d_0 = \ln 8$, Theorem E.2), the holographic bound limits information content to boundary area ($S \leq \mathcal{A}/(4G)$, Theorem 49), and the emergent spacetime has a characteristic discretization scale ($\delta/L_P = \sqrt{8\ln 2}$, Appendix Q). Specifying or distinguishing field configurations at sub-$\delta$ resolution would require transmitting information through channels that do not exist in the MPU network. By the same logic that excludes singularities (§14.2.4) and UV divergences (Theorem K.10.5), the sub-$\delta$ structure demanded by that continuum assumption is a formal artifact: mathematically legitimate but physically empty.
+**Conditional finite-resolution component.** At fixed resolution $\delta>0$, a positive mapped gap requires an explicit confinement dynamics, a transfer or spectral operator, a normalization and scale calibration, the bridge $\mathfrak B_{\mathrm{mass}}$, and proof that the relevant eigenvalue is isolated uniformly on the declared model class. The canonical shell-assignment and mass-readout branch cannot supply that certificate: Theorem Z.8h.3 proves the reassignment no-go for the pinned discrete scales and Remark Z.8h.4 retires the branch against the declared continuum benchmark.
 
-**Distinct gap ledgers and a conditional physical mass map.** PU supplies an operational transfer/mixing gap on refresh branches, a Leech norm gap on the rootless lattice branch, and an action-per-update floor. These are not three independent proofs of a Yang--Mills particle mass gap. A physical absolute gap additionally requires the confinement/spectral bridge, $\mathfrak B_{mass}$, and a norm--information calibration:
+**Continuum component.** Existence of a Wightman theory and a positive continuum gap remain external mathematical questions. Relating a cutoff model to that problem would require a universality or renormalization-group theorem controlling the continuum limit and its observables. No such theorem is presently supplied.
 
+Accordingly, a finite-response quotient can identify operational equivalence relative to declared protocols, but it cannot establish ontological absence or make the continuum existence question physically inert. The Millennium Prize problem remains open and unaffected by this conditional finite-resolution comparison.
 
-
-1. **Finite-transfer operational gap.** The irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31) gives the completed reset-support capacity deficit of Proposition E.2a, and refresh/minorization branches additionally give strict contractivity of the ND-RID channel ($f_{\text{RID}} < 1$, Lemma E.1). This supplies an operational finite-transfer gap for single-link predictive propagation. It does not by itself prove continuum Yang-Mills confinement. The confinement and mass-gap claims in this section therefore rest on the separate branch inputs below: the Leech/rootlessness flux-tube route, the action-entropy scale route, and the finite-resolution operational cutoff.
-
-2. **Leech lattice rootlessness.** On the accepted Golay-gluing/rootless branch, Theorem Z.8c identifies the resulting even unimodular rank-$24$ lattice as $\Lambda_{24}$; Theorem Z.8c alone is a classification theorem, not a PCE selector.
-
- The Leech lattice is the unique even unimodular lattice in 24 dimensions with no roots (no vectors of norm 2). On the separately registered confinement branch, rootlessness is the lattice-norm input to the flux-tube/area-law model. It fixes a norm gap; an absolute string tension or particle mass gap additionally needs the conditional energy--norm normalization of Theorem Z.8g.
-
-Theorem Z.8h defines conditional shell ratios on its canonical assignment/readout branch. Section 13.8.3 and Theorem Z.8h.3 show that this branch is incompatible with the declared continuum pure $SU(3)$ Yang–Mills benchmark and Remark Z.8h.4 retires it. The independent scale inventory $(a,b,M,|v|_{\min}^2,d_{\mathrm{Golay}})=(2,6,24,4,8)$ remains, but it does not supply a physical $J^{PC}$ assignment, confinement proof, absolute mass scale, or parameter-free continuum Yang–Mills theorem.
+**Remark 14.2.5.1 (Scope and Conditionality).** This comparison is conditional on PU's registered finite-resolution branches. It is not a solution of the continuum Yang–Mills existence and mass-gap problem, does not establish a continuum limit, and does not replace the missing confinement, spectral, calibration, or universality certificates.
 
 
+### 14.2.6 Branch Separation of Uncertainty and Registered-Reset Ledgers
 
-3. **Action--entropy ledger.** Corollary Q.0.1 assigns an action cost to completed irreversible updates. An action-per-update floor does not by itself imply a spectral energy gap; that inference requires a registered duration/frequency and excitation-spectrum bridge.
+The Hilbert/complementarity route and the registered-reset route are logically distinct. SPAP supplies a diagonal limitation on its stated class; it does not force a Hilbert representation, complementary observables, a fixed-ready-state reset, a probability law, or a thermodynamic implementation.
 
+**Theorem 14.2 (Conditional Branchwise Uncertainty and Reset Bounds).** Assume either or both of the following independent packages:
 
+1. the Hilbert-space branch of Proposition 4 together with a registered map from two sharp prediction ledgers to complementary observables $\hat A,\hat B$ satisfying Lemma 14.2a;
+2. the reachable binary fixed-ready-state architecture of Definition J.1, the tensor-factor hypotheses of Proposition E.2a when a capacity bound is requested, and the physical reset hypotheses of Theorem 31 when a heat bound is requested.
 
-**Dissolution.** 
+Then package 1 gives
+$$
+\Delta A\,\Delta B
+\ge
+\frac12\left|\langle[\hat A,\hat B]\rangle\right|.
+$$
+Package 2 gives, on its corresponding subbranches,
+$$
+C(\mathcal E_N)\le\ln d_0-\ln2,
+\qquad
+\varepsilon_{\mathrm{reset}}
+=
+H_q(P\mid R)+\varepsilon_{\mathrm{diss}}
+\ge
+H_q(P\mid R).
+$$
+A positive reset floor requires $H_q(P\mid R)\ge h_{\min}>0$, and positive total entropy production requires $\varepsilon_{\mathrm{diss}}>0$. No implication from package 1 or from SPAP alone to package 2 is asserted.
 
-**(A) Conditional finite-resolution component.** At resolution $\delta>0$, the registered transfer, confinement, calibration, and $\mathfrak B_{mass}$ branches define a conditional finite model with a positive mapped gap. This is neither an unconditional Yang--Mills mass-gap theorem nor a solution of the continuum existence problem.
-
-
-
-**(B) Mathematical component (physically inert).** Whether the continuum limit $a \to 0$ produces a Wightman theory on $\mathbb{R}^4$ is a question in pure mathematics. Its resolution—positive or negative—has no bearing on any operational observable, because the additional structure demanded by W1 below resolution $\delta$ corresponds to no independent degrees of freedom in the MPU network. The Wilsonian effective action at cutoff $\delta$ parametrizes the complete space of operational predictions; sub-$\delta$ completions merely reparametrize this same space (Appendix K, Theorem K.10.7).
-
-The structural parallel is exact: just as singularities are not avoided but are not features of the theory (§14.2.4), and UV divergences are not regularized but are not features of the theory (Theorem K.10.5), the continuum Yang–Mills existence problem is not solved but is not a problem in physics. What remains is well-posed pure mathematics—interesting, difficult, and physically inert.
-
-**Remark 14.2.5.1 (Scope and Conditionality).** This dissolution is conditional on the PU framework's operational constraints. This analysis does not constitute a solution to the Millennium Prize Problem as posed [Jaffe & Witten 2000]: the Clay problem asks for a rigorous continuum construction, which remains open and is unaffected by this reclassification of its physical status.
-
-
-### 14.2.6 The Uncertainty-Irreversibility Identity
-
-The derivation of the Heisenberg uncertainty relations from SPAP-induced complementarity (Section 8.4) and the conditional registered-reset irreversibility bound of Theorem 31 share a proposed SPAP motivation, but Theorem 31 does not by itself derive a general second law or positive entropy-production rate. Any second-law statement additionally requires the path-measure, reset-ensemble, and positivity hypotheses stated for that thermodynamic branch. This section compares the two constraints only within their common stated branch.
-
-**Theorem 14.2 (Conditional Uncertainty-Irreversibility Correspondence).** Assume two branch packages. First, assume the Hilbert-space branch of Proposition 4 together with a registered identification of two SPAP-limited sharp prediction ledgers with complementary observables $\hat A,\hat B$. Second, assume the registered-reset and physical-instantiation hypotheses of Theorem 31. Then the two packages give distinct consequences with a common SPAP input:
-
-| Constraint | Manifestation | Operational Context |
-|:-----------|:--------------|:--------------------|
-| $\Delta A \cdot \Delta B \geq \frac{1}{2}\lvert\langle[\hat{A},\hat{B}]\rangle\rvert$ | Robertson uncertainty | Simultaneous variable prediction on the registered Hilbert branch |
-| $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$, with a positive floor only if $H_q(P\mid R)\ge h_{\min}>0$ | Landauer entropy bound | Sequential registered reset under finite memory |
-
-Theorems 10–11 supply the common diagonal obstruction. The Hilbert/complementarity package and the registered-reset/physical-instantiation package are additional hypotheses that map that obstruction to the two displayed physical ledgers.
-
-*Proof.*
-
-**Step 1 (SPAP as the common source).** The Self-Referential Paradox of Accurate Prediction (Theorems 10, 11) establishes that any finite-memory system engaged in self-referential prediction encounters irreducible logical limitations. These limitations manifest through two distinct but coupled mechanisms:
-
-(a) *Logical indeterminacy* (Definition 12): Certain aspects of the system's future state cannot be simultaneously predicted with arbitrary accuracy. This is the *instantaneous* predictive limitation.
-
-(b) *Logically irreversible state merge* (Lemma J.1, equivalently Lemma Z.2): The SPAP update cycle maps multiple input states to fewer output states, necessarily losing distinguishability. This is the *dynamical* cost of operating under the instantaneous limitation.
-
-These mechanisms are not independent consequences but two aspects of the same logical structure. Mechanism (a) characterizes what cannot be known; mechanism (b) characterizes the thermodynamic cost of the process that generates this unknowability.
-
-**Step 2 (Conditional path to uncertainty).** Theorems 10–11 give Logical Indeterminacy. On the additional Hilbert/complementarity branch assumed in the theorem, the registered sharp observables $\hat A,\hat B$ satisfy the complementarity hypothesis of Lemma 14.2a. The valid implication chain is therefore
-
-$$\text{SPAP} \xrightarrow{\text{Thms 10–11}} \text{Logical Indeterminacy} \xrightarrow{\text{registered Hilbert/complementarity map}} \text{complementary }\hat A,\hat B \xrightarrow{\text{Lemma 14.2a}} [\hat A,\hat B]\ne0.$$
-
-For every normalized state $|\psi\rangle$ in the common domain of $\hat A\hat B$ and $\hat B\hat A$, put $A'=\hat A-\langle\hat A\rangle$ and $B'=\hat B-\langle\hat B\rangle$. Cauchy-Schwarz gives
+*Proof.* On package 1, the registered complementarity map and Lemma 14.2a give $[\hat A,\hat B]\ne0$. For a normalized state $|\psi\rangle$ in the common domain of $\hat A\hat B$ and $\hat B\hat A$, let $A'=\hat A-\langle\hat A\rangle$ and $B'=\hat B-\langle\hat B\rangle$. Cauchy–Schwarz gives
 $$
 (\Delta A)^2(\Delta B)^2
-=\|A'\psi\|^2\|B'\psi\|^2
-\ge |\langle A'\psi,B'\psi\rangle|^2
-\ge \frac14|\langle\psi,[\hat A,\hat B]\psi\rangle|^2.
+=
+\|A'\psi\|^2\|B'\psi\|^2
+\ge
+|\langle A'\psi,B'\psi\rangle|^2
+\ge
+\frac14|\langle\psi,[\hat A,\hat B]\psi\rangle|^2.
 $$
-Taking nonnegative square roots gives the Robertson inequality. Noncommutation alone does not guarantee a positive statewise lower bound when the commutator expectation vanishes.
+Taking nonnegative square roots proves the first statement. Noncommutation does not guarantee a positive statewise lower bound when the commutator expectation vanishes.
 
-**Step 3 (Conditional path to irreversibility).** On the registered-reset and physical-instantiation branch, mechanism (b) gives
+On package 2, Lemma J.1 gives noninjectivity only when its reachable-domain and fixed-ready-state hypotheses hold. Theorem J.1 gives the separate binary structural log-cardinality $\varepsilon_0=\ln2$. Proposition E.2a confines the completed output support to dimension at most $d_0/2$, proving the capacity bound. Under Theorem 31's separate cyclic, degenerate-register, and isothermal hypotheses with all retained side information included in $R$, conditional Landauer gives the displayed reset ledger. These arguments use no implication from SPAP to a reset architecture. ∎
 
-$$\text{SPAP merge} \xrightarrow{\text{Lemma J.1}} \text{logical support loss} \xrightarrow{\text{Theorem 31}} \varepsilon_{\mathrm{reset}}\ge H_q(P\mid R) \xrightarrow{\text{PPI}} \Delta S_{env}\ge k_BH_q(P\mid R).$$
-
-Here $H_q(P\mid R)$ is evaluated for the actual reset distribution and retained side-information register. A positive branchwise floor follows only from the additional hypothesis $H_q(P\mid R)\ge h_{\min}>0$, in which case $\Delta S_{env}\ge k_Bh_{\min}$. The structural binary reference value $\ln2$ is attained only for an unbiased erased bit with no predictive side information and a Landauer-saturating implementation.
-
-**Step 4 (Mutual consistency through the SPAP ledger).** The two constraints are mutually consistent because they are two finite-response projections of the same SPAP obstruction, not because uncertainty requires strict channel contractivity.
-
-*(i) Simultaneous-variable projection:* SPAP gives Logical Indeterminacy (Definition 12). On the Hilbert branch, Logical Indeterminacy descends to complementarity by Corollary 1 and then to noncommuting observable representatives by Lemma 14.2a. Section 8.4 derives the Robertson inequality from this noncommutation by Cauchy-Schwarz on the Hilbert inner product, with no appeal to channel contractivity at any step. This route is instantaneous and algebraic:
+**Remark 14.2f (Conditional Self/World Budget Bound).** Proposition 14.1e supplies a task- and ledger-relative self/world allocation bound only on its pattern-specific reduction, verification/update-cost, and shared-budget certificate. On that branch, an SPAP-limited self-model verification/update task to gap $\delta_{\mathrm{self}}$ leaves
 $$
-\text{SPAP}
-\to
-\text{Logical Indeterminacy}
-\to
-\text{Complementarity}
-\to
-[\hat A,\hat B]\ne0
-\to
-\Delta A\,\Delta B\ge\frac12|\langle[\hat A,\hat B]\rangle|.
+C_{\mathrm{world}}
+\le
+B_C(T)-C_{\mathrm{sh}}
+-c_{\mathrm{SPAP}}\frac{\log(1/\delta_{\mathrm{self}})}{\delta_{\mathrm{self}}^2}
 $$
-
-*(ii) Sequential-update projection:* The SPAP update contains the logically irreversible merge of Lemma J.1. On the completed reset-support branch, the binary support certificate gives the structural reference deficit $\varepsilon_0=\ln2$ and Proposition E.2a gives
-$$
-C_{\max}\le\ln d_0-\ln2.
-$$
-On a registered physical reset, Theorem 31 separately gives
-$$
-\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R),
-$$
-with a positive physical floor only when $H_q(P\mid R)\ge h_{\min}>0$. On refresh/minorization branches, Lemma E.1 and Theorem E.2 additionally give $f_{RID}<1$ and $C_{\max}<\ln d_0$. The valid sequential ledger is
-$$
-\text{SPAP merge}
-\to
-\begin{cases}
-\text{support deficit }\ln2 & \text{on the completed binary support branch},\\
-\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R) & \text{on a registered physical reset}.
-\end{cases}
-$$
-
-**Step 5 (Conclusion).** Uncertainty and irreversibility share the same SPAP root but descend through different mathematical projections. Uncertainty is the simultaneous-variable projection of Logical Indeterminacy into the noncommutative Hilbert ledger. Irreversibility is the sequential-update projection of the SPAP merge into entropy and finite transfer capacity. The common mechanism is finite self-referential predictive closure; strict channel contractivity is a refresh-branch strengthening of the sequential route, not the source of noncommutation. ∎
-
-**Remark 14.2f (Self/World Budget Projection of the Same Constraint).** The discussion above records the simultaneous-variable and sequential-update projections. Proposition 14.1e adds a third projection: once a finite predictor fixes a self/world allocation ledger $\mathfrak C_{\mathrm{SW}}$, SPAP-near self-model fidelity consumes verification/update budget at least as
-$$
-c_{\mathrm{SPAP}}\frac{\log(1/\delta_{\mathrm{self}})}{\delta_{\mathrm{self}}^2},
-$$
-leaving only the residual budget for external world modeling. This is why the self/world tradeoff is not a new postulate and not Heisenberg in disguise. It is the resource-allocation face of the same finite self-referential closure that gives noncommutation on the Hilbert branch and irreversible capacity loss on the update branch. The statement remains ledger-relative: without a certified task split and shared-cost audit, no universal numerical consciousness curve is asserted.
+for external world modeling, and the claimed simultaneous self-gap and world-task family is uncertifiable when the right-hand side is negative. This is a finite-resource allocation frontier, not a third projection of one uncertainty/reset mechanism. Without a certified task split, implementation bridge, and non-double-counted cost audit, no universal numerical consciousness or self/world tradeoff follows.
 
 **Lemma 14.2a (Complementarity Implies Non-Commutativity).** Let $\mathcal{H}_0$ be the MPU Hilbert space (Proposition 4, justified by Theorem G.1.8) with $\dim(\mathcal{H}_0) = d_0 \geq 8$ (Theorem 23). Let $\hat{A}$ and $\hat{B}$ be Hermitian operators representing observables that are complementary in the sense of Corollary 1: no state exists in which both can be simultaneously predicted with arbitrary precision. Then $[\hat{A}, \hat{B}] \neq 0$.
 
@@ -824,19 +667,15 @@ C(\mathcal E_N)
 $$
 where existence of the limit follows from superadditivity and Fekete's lemma. Equality $C(\mathcal E_N)=\chi(\mathcal E_N)$ requires a separate additivity theorem.
 
-**Corollary 14.2a (Zero-Error Information-Theoretic Form).** SPAP imposes two finite-response zero-error obstructions:
-
-1. **Simultaneous obstruction:** if sharp observables $\hat A$ and $\hat B$ are complementary, then their spectral projective measurements are not jointly measurable with zero error. Equivalently, no finite-response joint ledger can output both sharp values for all states unless the corresponding projectors commute.
-
-2. **Sequential obstruction:** on the completed SPAP reset branch,
+**Corollary 14.2a (Branchwise Zero-Error and Capacity Statements).** On the registered Hilbert/complementarity package, two complementary sharp observables have no zero-error joint sharp measurement unless their spectral projectors commute. Independently, on the registered completed binary reset-support package,
 $$
-C(\mathcal E_N)\le \ln d_0-\ln2,
+C(\mathcal E_N)\le\ln d_0-\ln2.
 $$
-and on refresh/minorization branches satisfying Lemma E.1,
+On a refresh/minorization branch satisfying Lemma E.1,
 $$
 C(\mathcal E_N)<\ln d_0.
 $$
-The one-use quantity $\chi(\mathcal E_N)$ satisfies $\chi(\mathcal E_N)\le C(\mathcal E_N)$; equality requires a separate additivity result.
+The one-use quantity $\chi(\mathcal E_N)$ satisfies $\chi(\mathcal E_N)\le C(\mathcal E_N)$; equality requires a separate additivity result. SPAP alone supplies neither physical channel branch.
 
 *Proof.* For the simultaneous obstruction, let $\{P_i\}$ and $\{Q_j\}$ be the spectral projectors of two sharp observables. Suppose a zero-error joint finite-response measurement exists. Then there are positive effects $G_{ij}$ such that
 $$
@@ -870,7 +709,7 @@ Q_jG_{ij}
 =
 G_{ij}.
 $$
-Hence $P_iQ_j=Q_jP_i$ for all $i,j$. Thus zero-error joint measurability of sharp observables implies commutativity. By Lemma 14.2a, complementary SPAP-descended observables do not commute, so the zero-error joint ledger is impossible.
+Hence $P_iQ_j=Q_jP_i$ for all $i,j$. Thus zero-error joint measurability of sharp observables forces their spectral projectors to commute, which proves the first statement. On the registered Hilbert/complementarity package, Lemma 14.2a gives $[\hat A,\hat B]\ne0$, so no zero-error joint sharp ledger exists for that pair. This package and the separately registered reset ledger are independent; neither is derived from the other.
 
 For the sequential obstruction, Proposition E.2a gives the completed reset-support capacity deficit:
 $$
@@ -880,7 +719,7 @@ On the separate refresh/minorization branch, Lemma E.1 gives $f_{RID}<1$ and The
 $$
 C(\mathcal E_N)<\ln d_0.
 $$
-Thus the simultaneous and sequential obstructions are both finite-response information limits, but they arise through different projections of SPAP: noncommuting sharp ledgers for simultaneous variables and reset-support capacity loss for sequential update. ∎
+Thus the Hilbert/complementarity, registered-reset support, and refresh-contractivity statements are finite-response limits on separate branches with different antecedents. No theorem makes them projections of SPAP. $\square$
 
 #### Unified Dimensional Structure
 
@@ -941,24 +780,23 @@ $$
 
 *Proof.* Proposition E.2a converts the completed binary reset-support certificate into the stated channel-capacity deficit. Theorem E.3, under its area-density hypotheses, converts the retained channel count into a quantity proportional to the horizon area. Theorem E.5 adds the Bekenstein-Hawking calibration and identifies the resulting entropy as $\mathcal A/(4G)$ in units $c=\hbar=k_B=1$. Theorem E.9.1 supplies the retained-horizon channel interpretation, so the entropy has the asserted thermodynamic channel meaning on this branch. Every arrow consumes a separate named hypothesis; no arrow establishes uniqueness among possible explanations or applies outside the certified branch. ∎
 
-**Corollary 14.2e (Branchwise Structural Robustness).** Every finite-memory self-referential predictor in the scope of Theorems 10–11 is subject to the SPAP diagonal obstruction. If the predictor also carries the registered Hilbert/complementarity package of Theorem 14.2, its complementary sharp observables satisfy the Robertson uncertainty relation. If it carries the registered-reset and physical-instantiation package of Theorem 31, its reset entropy satisfies $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$. The logical obstruction is unconditional within the SPAP model; the two physical manifestations retain their respective branch hypotheses.
+**Corollary 14.2e (Branchwise Structural Robustness).** Every predictor in the scope of Theorems 10–11 is subject to the stated diagonal obstruction. The Robertson inequality follows only after the Hilbert/complementarity package is added. The reset-support and heat bounds follow only after the independent fixed-ready-state, tensor-factor, ensemble, and thermodynamic packages are added. Failure of one physical package does not invalidate the diagonal theorem or the other package.
 
 #### Summary
 
-The Heisenberg uncertainty principle and the second law of thermodynamics share a unified origin in the logical structure of self-referential prediction. Both arise from SPAP: the impossibility of perfect self-referential prediction under finite resources. The uncertainty principle describes the *instantaneous* predictability limit; the second law describes the *sequential* distinguishability limit. They are unified by:
+The comparison is a separation result, not an uncertainty–irreversibility identity:
 
-1. **Common source:** the finite self-referential SPAP obstruction.
-2. **Simultaneous projection:** Logical Indeterminacy descends to complementary sharp ledgers, then to noncommuting Hilbert representatives and the Robertson uncertainty inequality.
-3. **Sequential projection:** the SPAP merge gives the structural entropy floor $\varepsilon_0=\ln2$ and, after physical instantiation, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$.
-4. **Capacity branches:** the completed reset-support branch gives $C_{\max}\le\ln d_0-\ln2$; refresh/minorization branches add $f_{\mathrm{RID}}<1$ and the strict capacity inequality $C_{\max}<\ln d_0$.
+1. SPAP supplies a class-level diagonal obstruction.
+2. The Robertson inequality uses a separately registered Hilbert/complementarity map.
+3. The support deficit uses a separately registered completed binary reset factor.
+4. Conditional Landauer uses the actual reset law, all retained side information, and the cyclic thermodynamic hypotheses.
+5. Refresh/minorization is an additional channel branch giving strict contractivity and a strict capacity bound.
 
-Thus strict contractivity is not the common mechanism behind uncertainty and irreversibility. It is a sequential refresh-branch strengthening. The common mechanism is the SPAP obstruction itself, with uncertainty and thermodynamic irreversibility appearing as two finite-response projections of that obstruction.
-
-The identity explains why quantum and thermodynamic descriptions of nature are mutually consistent: they are not independent theories requiring reconciliation but dual windows onto a single SPAP-constrained reality.
+These ledgers can coexist on a joint branch, but none is derived from another merely by sharing a predictive interpretation.
 
 #### 14.2.6.1 Extension to Inter-Observer Signaling: The Signaling Uncertainty Principle
 
-Theorem 14.2 unifies the *instantaneous* predictability limit (Heisenberg uncertainty, simultaneous-variable context) and the *sequential* distinguishability limit (second law, single-channel evolution context) under a single SPAP origin. A third operational context arises when two perspectival systems compare information across spacelike separation: the *inter-observer signaling* context. In this context the same SPAP-rooted causality and finite-window regularity gates force a determinism–reach tradeoff.
+Theorem 14.2 relates the *instantaneous* predictability limit (Heisenberg uncertainty, simultaneous-variable context) and the *sequential* distinguishability limit (second law, single-channel evolution context) through separately certified branch ledgers with distinct antecedents rather than a single SPAP origin. A third operational context arises when two perspectival systems compare information across spacelike separation: the *inter-observer signaling* context. In this context the same SPAP-rooted causality and finite-window regularity gates force a determinism–reach tradeoff.
 
 **Theorem 14.2.6.1 (Signaling Uncertainty Principle).** Let $S_A$ and $S_B$ be MPU aggregates whose relevant measurement regions are spacelike separated on the AQFT branch of Theorem F.0, and let Alice's late context be binary, $C_A\in\mathcal C_A:=\{0,1\}$, with the context-fixing event outside Bob's past lightcone. Let $\Phi$ be any admissible context-to-transcript experiment assigning context-conditioned laws $P_c^{(n)}$ to a finite Bob-side transcript $Y_B^n$ over a finite alphabet. Let $D$ range over possibly randomized decoders from $Y_B^n$ to $\mathcal C_A$, with decoder randomness included in the displayed probabilities. Define
 
@@ -1140,11 +978,25 @@ so the observed baryon asymmetry becomes a test of the CP half-step relation bet
 2. *C and CP violation:* Berry-holonomy CP phases on the Appendix T flavor branch; non-zero Jarlskog invariant for the exact-three-generation branch
 3. *Departure from stationarity:* an accepted response-active transport, source, boundary/inflow, nonstationary preparation, or freeze-out record satisfying Theorems Y.6.1i–Y.6.1j and Corollary Y.6.1k; the arrow of time and positive temperature alone do not discharge this item
 
-**Certificate-pending validation-run evaluation (Theorem Y.9):** At the registered validation-run coordinates, $\kappa_B=\kappa_{EW}/2+\varepsilon_0/N_g=19.48$ enters the following conditional output; theorem-level promotion requires an accepted Appendix Y source, transport, freeze-out, washout, normalization, residual, and uncertainty certificate:
+**Certificate-pending illustrative evaluation (Theorem Y.9):** On the registered Steiner response-action and certified baryogenesis branch,
+
 $$
-\eta_B = (6.2 \pm 0.5) \times 10^{-10}
+\kappa_B
+=
+\frac{\kappa_{EW}}2+\frac{\varepsilon_0}{N_g}
+=
+19.481049060\ldots.
 $$
-The observational comparison $\eta_B=(6.12\pm0.04)\times10^{-10}$ is a validation-run diagnostic, not an independent prediction, until that certificate is accepted.
+
+Substituting the illustrative factors $\mathcal C_{\mathrm{eff}}=0.282$, $\mathcal F_{CP}=0.9997$, and $f_{\mathrm{wash}}=0.63$ gives
+
+$$
+\eta_B^{\mathrm{illustr}}
+\approx
+6.15\times10^{-10}.
+$$
+
+The current archive defines no theory interval or agreement pull. Numerical promotion requires an accepted Appendix Y source, transport, freeze-out, washout, normalization, residual, and covariance certificate fixed before comparison with $\eta_B^{\mathrm{obs}}=(6.12\pm0.04)\times10^{-10}$.
 
 ## 14.3 Distinctions, Connections, and Information Processing Frameworks
 
@@ -1187,17 +1039,28 @@ $$
 =
 \frac{c^2\sqrt{\Lambda}}{16\pi G}.
 $$
-This derivation follows the chain:
+This derivation follows the registered dependency ledger:
 $$
-\text{SPAP} \xrightarrow{K_0=3} d_0 = 8 \xrightarrow{\text{match/mismatch}+\varepsilon_0} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{\text{channel-complete }M=K(D)} D = 4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}} \xrightarrow{\Lambda} g_0=\frac{c^2\sqrt{\Lambda}}{8}.
+\begin{aligned}
+(\mathrm{O1})\text{--}(\mathrm{O3})+(\mathrm{FC})
+&\xrightarrow{\text{Thm 15}}K_0=3,\ N_{\mathrm{vis}}^{\min}=8
+\xrightarrow{\text{Thm 23 + Hilbert distinguishability}}d_0\ge8
+\xrightarrow{\text{Thm Z.2 comparator}}d_0=8,\\
+\varepsilon_0=\ln2+\text{Theorem-Z.1 gates}
+&\longrightarrow a=2
+\xrightarrow{M=2a(d_0-a)}M=24
+\xrightarrow{\text{faithful-shell certificate; least feasible }D}D=4\\
+&\xrightarrow{\text{Bridge Law}}\eta'=\frac{3}{8\sqrt3}
+\xrightarrow{\Lambda}g_0=\frac{c^2\sqrt\Lambda}{8}.
+\end{aligned}
 $$
 Once Definition H.0 is fixed, the result has no additional continuous fitting inside that bridge-law branch and connects microscopic quantum geometry directly to galactic dynamics without invoking dark matter particles. The branch is experimentally sharper than an order-of-magnitude $cH_0$ relation: on a constant-$\Lambda$ branch, $g_0$ is redshift-independent even though $H(z)$ changes.
 
 *   **Internal Justification for Emergence (via Appendices):** PU's viability relies on emergence mechanisms justified internally: Complexity Alignment (Theorem 2, Appendix D via work-cost gap feedback); Applicability of SPAP/RUD limits (grounded in the MPU's intrinsic $K_0$ complexity, Definition 23, with network context enabling effective reliable computation, Proposition A.0.3); Geometric Regularity (Theorem 43, Appendices C/D via POP/PCE optimization against irregularity); Thermodynamics/Area Law (Theorem 49, Appendix E via ND-RID limits); Stress-Energy Tensor (Appendices B/F via coarse-graining/conservation); Locality Framing (Appendix F, where the Bob-marginal-invariant and shared-past branches are compared with operator locality, while Theorem 39c places a late-randomized marginal anomaly outside operational causality
 
-*   **Emergence and Self-Organization:** PU is built on emergence, deriving QM/GR from collective MPU dynamics under POP/PCE and constraints (SPAP, $\varepsilon_0$ and $\varepsilon_{\mathrm{phys}}$). Macroscopic features like geometric regularity (Theorem 43) result from self-organization driven by optimization (Appendices C, D). CC (Hypothesis 3) proposes feedback within the emergent hierarchy.
+*   **Emergence and Self-Organization:** PU supplies branch-conditional models of quantum and gravitational structure from collective MPU dynamics. The Hilbert/Born, continuum, locality, thermodynamic, area-law, stress-energy, and calibration packages remain independent hypotheses or certificates; POP, PCE, SPAP, and $\varepsilon_0$ alone do not derive all of quantum mechanics or general relativity. Geometric regularity results similarly retain the hypotheses of Theorem 43 and Appendices C–D. CC (Hypothesis 3) remains an additional proposal within the emergent hierarchy.
 
-*   **Action Principles as Emergent Bookkeeping:** Action principles ($\delta S = 0$) are reframed as emergent descriptions of underlying optimization. Appendix X identifies the standard 1PI effective action of QFT, $\Gamma[\Phi]$, as the Legendre transform of the cumulant generating functional for the network's predictive statistics, providing a direct physical interpretation of the action principle as the macroscopic bookkeeping rule for the network's resource economy under the constraints of PCE. The Predictive Ward Identity (Theorem X.3) shows that the connected response kernel and the quadratic effective-action kernel are the QFI kernel written in dual variables, through the chain $\mathcal{G}=\mathcal{K}^{-1}$ (Ward identity) $\to$ $\Gamma^{(2)}=\mathcal{G}^{-1}=\mathcal{K}$ (Legendre duality). Appendix Q adds the Landauer-Noether closure layer: on the $\varepsilon_0=\ln2$ branch, the dense subgroup $G_L=\{e^{iN\ln2}:N\in\mathbb Z\}$ forces full effective $U(1)$ invariance for continuous finite-resolution response functionals, so the Noether current used in Appendix G is the closure of discrete irreversible phase updates rather than evidence for an ontologically fundamental phase continuum. Appendix Z then supplies the QFI-rigidity and capacity-saturation input that fixes $\kappa^*_{\mathrm{bulk}}=1$ at the PCE-Attractor in the U(1) sector by obstructing the usual field-rescaling freedom. The PU natural-gradient RG flow corresponds to Wilsonian coarse-graining (Section X.2), while the open-system structure of ND-RID dynamics requires Schwinger-Keldysh closed-time-path formalism (Section X.5), encoding dissipation and noise consistent with the local second law.
+*   **Action Principles as Emergent Bookkeeping:** On its regular Legendre branch Appendix X identifies the standard 1PI effective action $\Gamma[\Phi]$ with the Legendre transform of the cumulant generating functional for the network's predictive statistics (Proposition X.1), reading the action principle as macroscopic bookkeeping for the network's resource economy under PCE. On the unit Predictive-Ward branch of Theorem Z.14, the Predictive Ward Identity (Theorem X.3) gives $\mathcal G=\mathcal K^{-1}$ and fixes $\kappa^*_{\mathrm{bulk}}=1$ in the parametrization $\Gamma^{(2)}=\kappa^*_{\mathrm{bulk}}\mathcal K$; outside that branch the normalization is separate data. Section X.2 compares the natural-gradient flow with Wilsonian coarse-graining, and Section X.5 places the open-system ND-RID structure in the Schwinger-Keldysh closed-time-path formalism. The Appendix Q density argument assumes the phase assignment $N\mapsto e^{iN\ln2}$ and continuity of the retained finite-resolution response functional; under those assumptions, invariance under the dense cyclic subgroup extends to $U(1)$ invariance. The structural value $\varepsilon_0=\ln2$ does not by itself define a phase, a physical reset, or irreversibility.
 
 *   **Connections to Information Processing:** PU provides a potential physical realization for "it from bit" ideas [Wheeler 1990], portraying reality as an efficient, self-regulating information processing system.
 
@@ -1296,7 +1159,7 @@ is the temporal Fisher information of $B$'s task distribution, with the analogou
 
 **Regularity caveat.** Equation (14.3.3) is a smooth-regime expansion. If the remote task distribution undergoes a discontinuity, support change, or regime switch within the delay window, the KL term in Equation (14.3.1) need not scale quadratically and can become large; with exact log-loss and support loss it can diverge. In those regimes the exact non-perturbative quantity in Equation (14.3.1) is the relevant object.
 
-The relevant ceiling here is the operational ceiling $\beta < 1$ of the Space of Becoming (Theorem 9), not the self-prediction ceiling $\alpha_{SPAP}$. Mutual prediction between distinct systems is bounded by the viability interval of Definition 8. Delay therefore contributes an additional task-level error term inside the existing $(\alpha,\beta)$ regime; it does not replace that regime.
+The relevant ceiling here is the registered operational endpoint $\beta<1$ of Definition 8, not a universal self-prediction scalar. On the exact response-law branch, finite complexity gives $PP<\beta$ by Theorem 19; Theorem 9 supplies the distinct excitation ceiling $\beta_0$. Delay contributes an additional task-level error term inside the registered $(\alpha,\beta)$ regime and does not derive or replace that regime.
 
 **Proposition 14.3.1 (Delay-induced complexity premium and feasibility ceiling).** Under Definition 7 and Theorem 19, fix a target delayed performance $PP^\star \in (\alpha,\beta)$ for the task $A \leftarrow B$, and write
 
@@ -1837,7 +1700,7 @@ Theorem Z.12 records $M=24$ as a minimal-branch consequence and separates the ad
 
 **Implication:** Stable physics requires hitting specific "critical values" where multiple optimization criteria converge. The framework predicts that universe-like structures exist only at discrete parameter values—not because of fine-tuning, but because optimization landscapes have isolated minima.
 
-This inverts the fine-tuning puzzle. The question is not "why are constants tuned?" but "what are the fixed points and active constraint prices of PCE optimization?" The discrete backbone values $M = 24$, $D = 4$, and $\varepsilon_0=\ln2$ are derived, not assumed. On the regular effective-action branch, coupling strengths are likewise not free knobs: they are normalized shadow prices or active capacity-boundary coordinates of the relevant admissibility constraints (Theorem X.8c; Appendix Z, Corollary Z.8.2a). Universes at other parameter values exhibit geometric frustration (Remark P.8.2): inability to satisfy mode-channel matching, producing no stable spacetime. Appendix P.16a records the broader open conjectural row: the listed apparent constants, including certificate-pending numerical sectors, are conjectured to be joint readouts of the population configuration $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ together with the recurrent minimal-branch ledger and current certificate gates, rather than independently variable knobs. On the closed Appendix Z core, MPU removal is correspondingly only branch-preserving or branch-failing: it cannot continuously tune $\alpha^{-1}_0$, and $M=24$ is not a graph-degree deletion coordinate without an added population graph theorem. This does not promote any certificate-pending numerical row.
+The registered discrete values $M=24$, $D=4$, and $\varepsilon_0=\ln2$ arise on different branch packages: the binary structural quotient, active/carrier/QFI tangent count, and channel-complete mode--kissing comparison. Effective couplings require their separate response, normalization, calibration, and spectral certificates. The current results therefore organize a conditional fine-tuning program; they do not prove that all constants are PCE shadow prices or that other parameter values admit no stable spacetime.
 
 ### 14.5.3 The Unity of Mathematics and Physics
 
@@ -1859,14 +1722,15 @@ The Leech lattice is mathematically optimal for the registered fixed-dimensional
 
 ### 14.5.4 Information Density and Dimensional Selection
 
-Shannon's channel capacity theorem establishes that sphere packing density determines maximum information transmission rate. The channel-complete mode-channel correspondence (Definition Z.9a; Theorem Z.10) makes this physical on its named branch:
-$$M_{\text{int}} = M_{\text{phys}} = K(D)$$
+Definition Z.9a registers a response-preserving injection of the $M=24$ retained interface labels into distinct cells of an equal-radius tangent shell. Theorem Z.10 therefore gives the necessary feasibility inequality
+$$
+M=24\le K(D).
+$$
+Here $K(D)$ is the maximal number of equal non-overlapping spheres tangent to a central equal sphere in a $D$-dimensional Euclidean carrier. The inequality is a capacity bound on the registered shell; it is not the saturation identity $M=K(D)$.
 
-The kissing number $K(D)$—the maximal number of equal non-overlapping spheres that can touch a central equal sphere in $D$ Euclidean dimensions—sets the number of independent completed first-shell interface channels in the Euclideanized tangent space used by the channel-complete mode-channel correspondence.
+**Implication:** Within Appendix Z's faithful tangent-shell model, all 24 retained modes must have distinct response cells. The bound $24\le K(D)$ excludes $D\le3$, the regular $24$-cell proves feasibility in $D=4$, and the strict surplus-dimension cost selects the least feasible $D=4$.
 
-**Implication:** Within the Appendix Z channel-complete mode-channel correspondence model, spacetime dimension is determined by zero-mismatch information-density optimization. At $M = 24$ modes, the isolated solution is $K(4) = 24$, yielding $D = 4$ (interpreted as $3+1$ macroscopic dimensions in Section 11).
-
-This provides an information-theoretic answer to “why 3+1 dimensions?” within that model: because $K(4) = 24$ and no other checked positive-integer tangent dimension satisfies $K(D) = 2ab$ with $a = 2$, $b = 6$, $d_0 = 8$. The question becomes: why does PCE at $\varepsilon_0=\ln2$ produce exactly 24 interface modes? Given the Appendix Z channel-complete mode-channel identification, $D = 4$ follows by arithmetic.
+The value $M=24$ follows on the joint Theorem-Z.1/Theorem-Z.2 carrier partition through Theorem Z.5's QFI tangent count. The further selection $D=4$ requires Definition Z.9a's independent response-preserving shell injection and strict support-cost comparison, Theorem Z.10's bound, and the explicit regular-$24$-cell realization. Neither step follows from $\varepsilon_0$, reset heat, or PCE alone.
 
 Similarly, the number of fermion generations $N_g = 3$ is fixed in the framework by one derivation together with three supporting consistency checks (Appendix R):
 
@@ -1894,17 +1758,9 @@ The PCE potential may have a local minimum in its registered configuration coord
 
 
 
-These implications combine into a unified picture: the vacuum is not empty but maximally structured.
+The combined branches supply compatible structures: a $24$-mode QFI interface, a predictive-recovery Golay branch, a separately registered rootless Leech construction, and a faithful-shell least-feasible proof of $D=4$. The commutative certificate preserves the shared finite structure without identifying a physical crystal vacuum, code syndromes with particles, or any one branch's premises with another's.
 
-The PCE-Attractor state (Definition 15a) is:
-- **Informationally organized:** 24 modes in Golay $[24,12,8]$ error-correcting configuration
-- **Geometrically constrained:** Leech lattice packing with 196,560 nearest neighbors in mode space
-- **Topologically protected:** Rootless structure creating gap between vacuum and excitations
-- **Dimensionally determined:** $K(4) = 24$ forcing 4D spacetime emergence
-
-The vacuum resembles less a "blank canvas" and more a "crystalline grid"—a specific, derivable structure permitting stable information processing. Physical law is the grammar of this structure; particles and fields are its excitations; spacetime is its emergent geometry.
-
-Each property follows from PCE optimization given $d_0 = 8$ and $\varepsilon_0=\ln2$. The structured vacuum emerges as a global minimum candidate of the PCE potential within the admissible family of MPU-network configurations satisfying the fixed-invariant constraints $(d_0,\varepsilon)$ together with locality and bounded interaction cost. Local robustness is quantified by the positive stability gap for departures from the attractor established in Appendix D.
+A PCE local-minimum statement requires the Appendix D Hessian or second-variation certificate. Thermal, tunneling, spectral, and error-correction stability require separate dynamics, scales, and noise channels. The present ledger records where those bridges would enter rather than treating the mathematical structures as one mechanism.
 
 ### 14.5.6 Status-Separated Bridging Ledgers
 
@@ -1915,7 +1771,7 @@ PU uses distinct bridges: active-record/capacity selection for $a=2$; conditiona
 The framework operates through six critical bridging mechanisms that convert abstract logical and information-theoretic requirements into concrete physical structures:
 
 **1. PPI Bridge: $\varepsilon_0=\ln2 \to a = 2$**
-The Principle of Physical Instantiation (Definition P.6.2) requires the abstract Landauer cost $\varepsilon_0=\ln2$ to be instantiated on the retained active verification kernel. The active kernel must carry the sharp SPAP match/mismatch record, so $a\ge2$ on the Hilbert-carrier branch. Entropy-capacity independently requires $\ln a \ge \varepsilon_0$. PPI/PCE no-surplus selection then removes $a>2$ from the minimal branch, yielding $a = 2$.
+Theorem Z.1 assumes a registered binary quotient with $\varepsilon_0=\ln2$, a sharp two-value retained record, the entropy-capacity gate $\ln a\ge\varepsilon_0$, and no-surplus selection; together these give $a=2$. The physical reset ledger is independent and is not an abstract Landauer cost that PPI must instantiate.
 
 **2. Golay-Leech Bridge: $d = 8 \to$ Vacuum Stability**
 On the registered gluing datum of Lemma R.4.5 and Equation (R.4.2a.1), the Golay distance $d_{\min}=8$ transfers to the rootless Leech lattice $\Lambda_{24}$ with $|v|_{\min}^2=4$ (Proposition R.4.2a; Theorem Z.8c). This is a dimensionless norm gap. Physical-vacuum stability requires a separate dynamical certificate, and an absolute mass gap additionally requires $\mathfrak B_{\mathrm{mass}}$ and the norm--information calibration of Theorem Z.8g.
@@ -1923,8 +1779,8 @@ On the registered gluing datum of Lemma R.4.5 and Equation (R.4.2a.1), the Golay
 **3. Geometric Frustration Bridge: D₄/A₂ $\to$ CKM Mixing**
 The D₄ lattice constraint (generation 1) and A₂ lattice constraint (generation 2) exhibit geometric mismatch in the shared vacuum valley (Theorem T.49). The root-weight duality projection factor $\mathcal{P} = \sqrt{3}/2 = \cos(30°)$ converts this frustration into the Cabibbo angle: $|V_{us}| = \mathcal{P} \cdot \theta_{\text{valley}} \cdot f_{\text{corr}} \approx 0.225$ (Theorem T.52).
 
-**4. Dual CC Channel Bridge: Single Mechanism $\to$ EM + Gravitational**
-The single CC mechanism splits into electromagnetic (dominant, $\mathcal{R}_{\text{EM}} \sim 10^{36} \mathcal{R}_{\text{grav}}$, Definition 31) and gravitational (regulatory, Definition 32) channels. This resolves the signaling paradox and explains why CC effects haven't been definitively observed—the wrong channel (gravitational) was tested.
+**4. Conditional CC Response Channels**
+Appendices L and S introduce electromagnetic and gravitational response terms on separate model and calibration branches. Their relative hierarchy depends on the registered coefficients, state, and operating regime. These hypotheses do not resolve no-signaling, and a null experiment tests only the preregistered response model and protocol.
 
 **5. QFI-Gravity Bridge: Vacuum Geometry $\to g_0$**
 On the Definition H.0 and Equation H.4b bridge-normalization branch, Theorems H.1a–H.3 give $g_0=\eta'c^2\sqrt{\Lambda/3}=(1.18\pm0.02)\times10^{-10}\,\text{m/s}^2$, where the displayed interval is the approximately $2\sigma$ diagonal sensitivity band propagated from the Appendix V cosmological inputs.
@@ -1932,7 +1788,7 @@ On the Definition H.0 and Equation H.4b bridge-normalization branch, Theorems H.
 **6. PCE-RID Bridge: Optimization $\to$ Stochasticity**
 Definition 6 registers ND-RID as the retained interaction model. Theorem 27 excludes a universally correct total predictor on its diagonal-closed class, but it does not exclude deterministic dynamics. Proposition 28 supplies a stochastic Markov kernel only as separate branch data. The registered-reset inequality $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ constrains the thermodynamic cost of a specified reset and does not enforce stochasticity. On the Hilbert, noncontextual, and additive branch, Theorem 28a supplies the Born representation.
 
-These bridges collectively demonstrate that physical law is not arbitrary but emerges as the resource-efficient embodiment of logical and predictive necessities.
+Together these bridges define a branch-conditioned model ledger; their conclusions hold only on the conjunction of their stated hypotheses and do not establish that all physical law follows from logical necessity.
 
 
 ## 14.5.7 Conditional Defect and Superselection Sectors
@@ -2361,7 +2217,7 @@ and Corollary T.59a records the resulting backbone data
 $$
 (K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4).
 $$
-On this branch, $K_0=3$ together with the named local finite-response contracts (Landauer/PPI capacity, the Peirce-Grassmann tangent count, the predictive-recovery MacWilliams gate, and the Bures tangent-cell mode-channel contract) closes the discrete backbone exactly: no further discrete branch choice enters within the backbone itself. The packaging of these gates is not a single-source compression. Appendix R decomposes the proof graph into source roles $(\mathcal C_3,\mathcal C_{\mathrm{cap}},\mathcal C_{\mathrm{tan}},\mathcal C_{\mathrm{kis}})$ and downstream coherence invariants $(J_{\mathrm{top}},J_{\mathrm{Cl}},J_{\mathrm{ar}})$, and proves that the current source roles do not collapse into one supplied parent invariant.
+On this branch, $K_0=3$ together with the named local finite-response contracts (the entropy-capacity/PPI gate, the Peirce-Grassmann tangent count, the predictive-recovery MacWilliams gate, and the Bures tangent-cell mode-channel contract) closes the discrete backbone exactly: no further discrete branch choice enters within the backbone itself. The packaging of these gates is not a single-source compression. Appendix R decomposes the proof graph into source roles $(\mathcal C_3,\mathcal C_{\mathrm{cap}},\mathcal C_{\mathrm{tan}},\mathcal C_{\mathrm{kis}})$ and downstream coherence invariants $(J_{\mathrm{top}},J_{\mathrm{Cl}},J_{\mathrm{ar}})$, and proves that the current source roles do not collapse into one supplied parent invariant. The registered binary quotient contributes only the structural log-cardinality $\varepsilon_0=\ln2$; a physical Landauer bound applies to a separately implemented reset and is not a consequence of SPAP alone.
 
 Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes $D=4$ (Theorem Z.11), and the predictive-recovery MacWilliams self-dual-rate gate fixes the interface code dimension $k=12$ (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b). The abstract gauge algebra appears on the finite-response block-frame positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its anomaly+CP route (Theorem R.3.4), the exact pre-flavor family-redundancy realization (Proposition R.3.5.1a), and the $D_4$ triality/$E_8$/Leech compatibility record (Proposition R.4.2). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The slogan "$K_0=3$ determines everything" should therefore be read precisely: on the minimal branch, $K_0=3$ together with the named local finite-response contracts closes the discrete backbone exactly and seeds later sectors through the contracts stated there. It is not used as a proof rule by itself; the paper uses the explicit finite-response contracts named in each sector.
 
@@ -2385,7 +2241,7 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 
 | Sector | Best current status |
 |:-------|:--------------------|
-| Backbone $K_0 \to d_0 \to \varepsilon_0 \to a \to b \to M \to k \to D$ | Theorem-level on the minimal finite-response Appendix Z / attractor branch, with $\varepsilon_0=\ln2$ on the Landauer-saturating branch. The predictive-recovery MacWilliams gate of Definition Z.13b.0 and Theorem Z.13b.0a forces $k=12$ inside the interface-code contract, and the Bures tangent-cell correspondence of Theorem Z.10 together with Theorem Z.11 forces $D=4$ inside the admissible finite-response channel representation. |
+| Backbone $K_0 \to d_0 \to \varepsilon_0 \to a \to b \to M \to k \to D$ | Theorem-level on the minimal finite-response Appendix Z / attractor branch, with $\varepsilon_0=\ln2$ read as the structural binary log-cardinality rather than a physical reset heat. The predictive-recovery MacWilliams gate of Definition Z.13b.0 and Theorem Z.13b.0a forces $k=12$ inside the interface-code contract; Definition Z.9a's faithful mode-to-cell injection, Theorem Z.10's bound $24\le K(D)$, and Theorem Z.11's least-feasible selection give $D=4$. The structural binary reference, the conditional physical-reset heat, and the pathwise entropy-production arrow are distinct quantities with distinct antecedents and may not be substituted for one another. |
 | $N_g=3$ | Theorem-level as the minimal admissible count in the anomaly+CP family-charge class by Theorem R.3.4; exact realized $N_g=3$ holds on the pre-flavor family-redundancy PPI branch by Proposition R.3.5.1a. Proposition R.4.2 supplies $D_4$ triality and $E_8$/Leech compatibility checks without replacing the anomaly+CP proof. Detailed flavor masses and mixings are certificate-complete only under Definition T.79.4 and Theorem T.79.6. |
 | Abstract gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ | Theorem-level on the finite-response block-frame positive-marginal capacity branch: Theorem G.8.4b forces the $3+2+1$ inactive-sector split inside the block-frame/interface family and Corollary G.8.4c gives the determinant-compatible gauge algebra. This is not arbitrary compact-subgroup uniqueness in $U(6)$. |
 | Thomson-limit $\alpha$ | Canonical Appendix Z branch prediction through Theorem Z.26. Theorem-level normalization closure requires an accepted Thomson normalization certificate $\mathfrak C_\alpha$ in the sense of Definition Z.27.11a and Theorem Z.27.11c; failure of the certified interval demotes the branch by Corollary Z.27.11d. |

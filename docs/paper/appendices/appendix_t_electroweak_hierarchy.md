@@ -28,7 +28,7 @@ $$
 The appendix uses a three-level dictionary to separate the PU fixed point from physical matching scales:
 
 - $\mathfrak{A}_{PU}$: the PU fixed point in theory space, characterized by PCE isotropy and capacity saturation (not an energy scale).
-- $\mu_G$: the PU-to-SM matching scale at which canonically normalized gauge directions are identified with SM gauge kinetic terms. Remark T.62.1 derives $\mu_G = M_{Pl}e^{-9}$ from the confinement complexity exponent, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV. This identification is used throughout this appendix for all numerical results.
+- $\mu_G$: the PU-to-SM matching scale at which canonically normalized gauge directions are identified with SM gauge kinetic terms. Its value $\mu_G=M_{Pl}e^{-9}\approx1.5\times10^{15}$ GeV is a matching-scale ansatz with a declared unreduced Planck convention; confinement counting does not derive the exponent. The seesaw branch reaches the same exponent independently, from its own scale map together with $\alpha_{UV}=3/2$ (Corollary T.41.3) and $d_{31}^2=6$ (Section T.24.5), giving $M_R=M_{Pl}e^{-9}$ in Theorem T.64. Theorem T.64a identifies the two only when both branches, exponents, and Planck conventions are jointly imposed, so the equality is not independent evidence for the matching ansatz. This identification is used throughout this appendix for all numerical results.
 - $(\Delta_1,\Delta_2,\Delta_3)$: the flag-lift spectral threshold shifts above the PU bulk value $\alpha_U^{-1}=24$, defined by the canonical $\mathrm{MS2}_{\mu_G}$ sector functional of Definition T.17a and Convention T.69a. In this appendix the validation tuple
   $$
   (\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)
@@ -56,9 +56,9 @@ The following constants are derived in the main text and Appendix Z:
 
 |Constant |Value |Origin |Reference |
 |:-----------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|
-|$K_0$ |3 bits |Horizon constant (SPAP logic) |Theorem 15 |
+| $K_0$ | 3 bits | Least visited-context log-capacity on the (O1)–(O3), (FC) branch | Theorem 15 |
 |$d_0$ |8 on the minimal Appendix Z branch |MPU Hilbert space dimension: lower bound from Theorem 23, equality from Theorem Z.2 |Theorem 23; Theorem Z.2 |
-|$\varepsilon_0$ |$\ln2$ structurally |Log-cardinality of the registered reachable binary verification quotient; no physical heat equality is asserted |Definition 28; Lemma J.1 |
+|$\varepsilon_0$ |$\ln2$ structurally |Log-cardinality of the registered reachable binary verification quotient; no physical heat equality is asserted |Definition 28; Theorem J.1 |
 
 
 |$a$ |2 |Active kernel dimension on the attractor-saturating branch (Theorem Z.1) |Theorem Z.1 |
@@ -72,7 +72,7 @@ The following constants are derived in the main text and Appendix Z:
 |$\alpha_U^{-1}$ |$2M\chi_U$; $24$ when $M=24$ and $\chi_U=1/2$ |Inverse matching-scale gauge coefficient on the same calibration branch |Theorem T.39a; Theorem T.39a.2 |
 |$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple); current theorem-level certificate interval $\varnothing_{\mathrm{cert}}$ |Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger, Theorem T.78.5 proves that no PU-internal branch package supplies them from the current framework, and Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent spectral-source class supplies no certified $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, or gauge/Higgs finite-part intervals |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 / Theorem T.78.5 / Theorem T.78.14 |
 
-The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
+The matching-scale branch uses the independent ansatz $\mu_G=M_{Pl}e^{-9}$. The seesaw branch independently uses $M_R=M_{Pl}e^{-9}$. They are equal only on the joint convention branch of Theorem T.64a; confinement counting does not derive either exponent.
 
 **Theorem T.2.1a (Minimal Electroweak Mass-Bridge Representation).** On the locked one-family chiral branch
 $$
@@ -320,7 +320,7 @@ with the parity modes determined by $p = Ps$ for signal vector $s$.
 
 ### T.3.1 Left-Chiral Sector
 
-The Standard Model gauge group $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ has dimension 12 (Appendix G, Corollary G.8.4c). The electroweak sector $SU(2)_L \times U(1)_Y$ has dimension 4 and acts on left-chiral fermions.
+The connected-cover notation $SU(3)_C\times SU(2)_L\times U(1)_Y$ represents the twelve-dimensional gauge algebra selected in Appendix G. The global form, including a possible quotient by $\mathbb Z_6$, requires the determinant/global-form certificate. The electroweak sector $SU(2)_L \times U(1)_Y$ has dimension 4 and acts on left-chiral fermions.
 
 **Definition T.3a** (Left-Chiral Information Modes on the Weak-Left Projection Branch). On the weak-left projection branch — under which the $SU(2)_L$ chiral interaction selects exactly $k/2 = 6$ of the $k = 12$ Golay signal modes — the left-chiral projection $\Pi_L: \mathbb{R}^{12} \to \mathbb{R}^6$ is the rank-6 projection onto these directions:
 $$
@@ -380,7 +380,12 @@ so it is maximally isotropic and therefore Lagrangian. The rank of the orthogona
 $$
 N_0 = b \times \frac{k}{2} = 6 \times 6 = 36.
 $$
-Off the Lagrangian half-polarization branch, $N_0$ would be replaced by $b \cdot n_L$ where $n_L$ is the number of weak-left active directions, with $\kappa_{EW} = b n_L + \dim(G/H) - m/2$ shifting accordingly: a unit change in $n_L$ shifts $\kappa_{EW}$ by $b = 6$ and rescales $v$ by $e^{\pm 6}$.
+Off the Lagrangian half-polarization branch, the legacy Gaussian comparator replaces $N_0$ by $bn_L$. If a separate fluctuation model registers $n_{\mathrm{coset}}^{\mathbb C}$ complex channels and a compact $m$-dimensional zero-mode manifold, its Gaussian power is
+$$
+\widetilde\kappa_{\mathrm{G}}
+=bn_L+n_{\mathrm{coset}}^{\mathbb C}-\frac m2.
+$$
+This comparator controls a prefactor power on that fluctuation model. It is not the electroweak action $\kappa_{EW}$ of Definition T.13, which is fixed by the Steiner incidence minimization of Theorem T.5.
 
 **Proposition T.2b** (Equivalent Forms of $N_0$). The base complexity $N_0 = 36$ admits equivalent expressions:
 $$
@@ -501,7 +506,7 @@ with:
 - $\psi \in \mathbb{R}$: U(1)$_{em}$ gauge angle
 - $R = I_6$: isotropic coupling matrix
 - $\mu > 0$: isotropic curvature for broken directions
-- $\varepsilon_0=\ln2$: structural binary log-cardinality of the registered verification quotient (Definition 28; Lemma J.1)
+- $\varepsilon_0=\ln2$: structural binary log-cardinality of the registered verification quotient (Definition 28; Theorem J.1)
 
 -----
 
@@ -577,58 +582,105 @@ $$
 ## T.6 Derivation of $\kappa_{EW}$
 
 ### T.6.1 Complexity Counting
-
-**Definition T.13** (Electroweak Complexity). The electroweak complexity $\kappa_{EW}$ counts the effective complex Gaussian dimension of the instanton saddle-point integral after zero-mode reduction:
+**Definition T.13 (Steiner Incidence Electroweak Action).** Let $\mathcal P_2([24])$ be the $276$ unordered pairs of interface labels and let $\mathcal O_8$ be the octads of the Steiner system $S(5,8,24)$. Define
 $$
-\kappa_{EW} = N_0 + \dim(G/H) - \frac{m}{2},
+B_{O,p}:=\mathbf1_{\{p\subset O\}},
+\qquad
+N:=B^{\mathsf T}B.
+\tag{T.13.1}
 $$
-where
+The active kernel selects one pair $p_A$. A registered unit electroweak update is an absolutely continuous path
+$$
+x:[0,1]\longrightarrow\mathbb R^{\mathcal P_2([24])},
+\qquad
+x(0)=0,\quad x(1)=e_{p_A},
+$$
+with dimensionless response action
+$$
+\mathcal I_{EW}[x]
+:=
+\frac12\int_0^1\|B\dot x(t)\|_2^2\,dt.
+\tag{T.13.2}
+$$
+Define the electroweak structural exponent by
+$$
+\kappa_{EW}
+:=
+\inf_x\mathcal I_{EW}[x].
+\tag{T.13.3}
+$$
+The interval and endpoints are fixed by the registered unit update; reparameterizations that do not preserve this unit-response clock are different implementations.
 
-- $N_0 = bk/2 = 36$ is the reservoir-alignment count,
-- $\dim(G/H) = 3$ is the coset dimension,
-- $m$ is the real zero-mode manifold dimension (Theorem T.4),
-- the factor $1/2$ arises from the Morse–Bott stationary-phase structure derived in Theorem T.5.
+**Principle T.13a (Electroweak Response-Action Closure).** On the fundamental active-pair branch, the least registered response action (T.13.3) is the semiclassical suppression exponent of that update. Fluctuation determinants, gauge volumes, and the residual $U(1)$ orbit multiply the saddle weight and do not alter $\kappa_{EW}$. This is a falsifiable physical closure principle, separate from the Steiner counting theorem.
 
 ### T.6.2 Main Result
-
-**Theorem T.5** (Electroweak Complexity). For the electroweak PCE instanton with base complex Gaussian count $\kappa_0 = N_0 + \dim(G/H)$ and real zero-mode manifold dimension $m$, assume: (i) the Hessian is positive definite transverse to the zero-mode manifold; (ii) the zero modes form a compact Morse-Bott critical manifold of real dimension $m$; and (iii) the Gaussian fluctuation integral factorizes into the transverse determinant times the zero-mode volume. Then the effective complexity is
+**Theorem T.5 (Steiner Electroweak Action).** For the action of Definition T.13,
 $$
-\kappa_{EW} = \kappa_0 - \frac{m}{2}.
+N=72I+16A_1+5J,
+\tag{T.5.1}
 $$
-
-In the present electroweak problem,
+where $A_1$ is the adjacency matrix of the Johnson graph $J(24,2)$ and $J$ is the all-ones matrix. Its spectrum is
 $$
-\kappa_0 = N_0 + \dim(G/H) = 36 + 3 = 39,
-\qquad
-m = 1,
+\operatorname{Spec}(N)
+=
+\{2156^{(1)},\,392^{(23)},\,40^{(252)}\},
+\tag{T.5.2}
 $$
-so
+so $N$ is positive definite. The unique minimizing path is
 $$
-\kappa_{EW} = 39 - \frac{1}{2} = 38.5.
+x_*(t)=t e_{p_A},
+\tag{T.5.3}
 $$
-
-*Proof.* Theorem T.2 and Theorem T.3 show that the Hessian is positive in the $(s,r,\xi)$ directions, while Theorem T.4 identifies a unique zero mode corresponding to the residual $U(1)_{em}$ angle. Hence the critical set is a one-dimensional compact manifold generated by that gauge angle, so $m=1$. Under the Morse-Bott assumptions stated above, each real zero mode removes one half-unit from the complex Gaussian count. Therefore the reduced complexity is $\kappa_0-m/2 = 39-1/2 = 38.5$. QED
-
-**Corollary T.5c** (Steiner–Electroweak Numerical Identity). Under Theorem T.5,
+and
 $$
-2\kappa_{EW} = bk + 2\dim(G/H) - m = 77.
-$$
-Using Corollary U.2a, this equals the pair multiplicity of the Steiner system $S(5,8,24)$:
-$$
-2\kappa_{EW} = \lambda = 77.
+\boxed{\kappa_{EW}=\mathcal I_{EW}[x_*]=\frac{77}{2}=38.5.}
+\tag{T.5.4}
 $$
 
-*Proof.* Theorem T.5 gives
+*Proof.* A fixed pair lies in $77$ octads. Two distinct pairs sharing one point have a three-point union and lie together in $21$ octads; disjoint pairs have a four-point union and lie together in $5$ octads. Hence
 $$
-2\kappa_{EW} = 2\left(\frac{bk}{2} + \dim(G/H) - \frac{m}{2}\right)=bk+2\dim(G/H)-m.
+N=77I+21A_1+5(J-I-A_1)=72I+16A_1+5J.
 $$
-With $b=6$, $k=12$, $\dim(G/H)=3$, and $m=1$, this becomes
+The Johnson adjacency spectrum is
 $$
-2\kappa_{EW}=72+6-1=77.
+44^{(1)},\quad20^{(23)},\quad(-2)^{(252)},
 $$
-Corollary U.2a gives $\lambda=77$ for $S(5,8,24)$, hence $2\kappa_{EW}=\lambda$. ∎
+and $J$ has eigenvalue $276$ on the constant vector and zero on its orthogonal complement. This gives (T.5.2).
 
-**Remark T.5d (Cross-Appendix Significance of the Steiner–Electroweak Identity).** The identity $2\kappa_{EW} = 77 = \lambda_{S(5,8,24)}$ is an exact algebraic consequence of the electroweak counting data $(b,k,\dim(G/H),m) = (6,12,3,1)$. It connects the electroweak instanton mechanism directly to the Golay-Steiner coding structure that governs the interface mode geometry ($M=24$), the gauge generator budget ($n_G=12$), and the vacuum configuration space ($\mathrm{Gr}_\mathbb{C}(12,24)$). The electroweak hierarchy and the code-theoretic structure of the vacuum are therefore not independent at the level of the currently derived backbone data: they share the same Steiner pair-count as their common complexity anchor. On the active-pair branch below, this equality is represented as a finite projector trace in the Steiner pair-incidence algebra.
+For every admissible path, Cauchy–Schwarz in the positive inner product $\langle u,v\rangle_N=u^{\mathsf T}Nv$ gives
+$$
+\int_0^1\dot x^{\mathsf T}N\dot x\,dt
+\ge
+\left(\int_0^1\dot x\,dt\right)^{\mathsf T}
+N
+\left(\int_0^1\dot x\,dt\right)
+=e_{p_A}^{\mathsf T}Ne_{p_A}.
+$$
+Equality holds exactly when $\dot x$ is constant, proving (T.5.3) and uniqueness. Finally,
+$$
+e_{p_A}^{\mathsf T}Ne_{p_A}
+=\sum_O B_{O,p_A}^2
+=77,
+$$
+so (T.13.2) gives $\kappa_{EW}=77/2$. ∎
+
+**Corollary T.5c (Steiner Incidence Diagonal Identity).** For every active pair $p$,
+$$
+2\kappa_{EW}
+=e_p^{\mathsf T}B^{\mathsf T}Be_p
+=\lambda_2(S(5,8,24))
+=77.
+$$
+
+*Proof.* The quadratic action contributes the factor $1/2$. The diagonal matrix element counts octads containing $p$, and the Steiner parameter is
+$$
+\lambda_2
+=\frac{\binom{22}{3}}{\binom63}
+=77.
+$$
+Theorem T.5 proves that the straight unit-update path attains this diagonal action. ∎
+
+**Remark T.5d (Status of the Steiner–Electroweak Identity).** The equality is not a coincidence between an electroweak zero-mode count and an unrelated design number. Definition T.13 constructs the electroweak response action directly from the pair-octad incidence operator, and Principle T.13a is the explicit, testable action-to-suppression bridge. A different response operator, endpoint, or unit-update clock defines a different branch.
 
 **Definition T.5d.1 (Active-Pair Steiner Incidence Projector).** Let $\mathcal O_8$ be the set of octads of the Steiner system $S(5,8,24)$ and let
 $$
@@ -669,7 +721,7 @@ $$
 77.
 \tag{T.5d.4}
 $$
-Consequently the electroweak Morse-Bott half-complexity satisfies the projector identity
+Consequently the registered fixed-time electroweak response action satisfies the projector identity
 $$
 \boxed{
 \kappa_{EW}
@@ -702,7 +754,7 @@ $$
 =
 77.
 $$
-This proves (T.5d.4). The factor $1/2$ in (T.5d.5) is the Morse-Bott real-zero-mode half-count already derived in Theorem T.5, not an additional normalization. Therefore Theorem T.5 and (T.5d.4) give
+This proves (T.5d.4). The factor $1/2$ in (T.5d.5) is the quadratic-action normalization in Equation (T.13.2); Theorem T.5 proves that the unit active-pair path has squared incidence length $77$. Therefore Theorem T.5 and (T.5d.4) give
 $$
 \kappa_{EW}=\frac{77}{2}.
 $$
@@ -717,14 +769,21 @@ $$
 ## T.7 Numerical Verification of Electroweak Scale
 
 ### T.7.1 Scale Prediction
-
-**Theorem T.6** (Electroweak Scale). The Higgs vacuum expectation value is:
+**Principle T.6a (Semiclassical Scale Bridge).** On the registered electroweak branch, the order-parameter scale responds to the least unit-update action by
 $$
-\boxed{v = A_{EW}\, e^{-\kappa_{EW}}\, M_{Pl}}
+\frac v{M_{Pl}}=A_{EW}e^{-\kappa_{EW}},
+\tag{T.6a.1}
+$$
+where $M_{Pl}$ uses the unreduced convention and $A_{EW}$ is the forward determinant, gauge-volume, and matching prefactor computed on the same saddle. The relation is a physical scale-bridge principle: it is testable and is not inferred from a Gaussian power count.
+
+**Theorem T.6 (Electroweak Scale on the Response-Action Branch).** Principles T.13a and T.6a and Theorem T.5 give
+$$
+\boxed{
+v=A_{EW}e^{-77/2}M_{Pl}.
+}
 $$
 
-where $A_{EW} \sim \mathcal{O}(1)$ is the one-loop determinant prefactor.
-
+*Proof.* Theorem T.5 gives $\kappa_{EW}=77/2$. Substitution in (T.6a.1) proves the formula. The exponent is fixed by the Steiner response action; the numerical scale is a forward prediction once $A_{EW}$ is evaluated rather than fitted. ∎
 **Proposition T.3** (Baseline Scale from Complexity).
 $$
 e^{-\kappa_{EW}} = e^{-38.5} \approx 1.90 \times 10^{-17}.
@@ -780,15 +839,21 @@ This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV. The agreement is a det
 
 ### T.8.1 Structural Parallel
 
-**Theorem T.7** (Unified Hierarchy Structure). Both hierarchies emerge from the same Golay $[24,12,8]$ code:
+**Theorem T.7** (Mechanism-Separated Hierarchy Ledger). The vacuum and electroweak hierarchies use the same registered $M=24$ discrete backbone but different action operators:
 
-|Quantity |$\Lambda$ (Appendix U) |$v$ (This Appendix) |
-|:--------------|:--------------------------|:------------------------|
-|Configuration |Full Grassmannian Gr(12,24)|Left-chiral × reservoir |
-|Base complexity|$k^2 = 144$ |$bk/2 = 36$ |
-|Zero modes |4 exact translations, with a five-mode reference count used only on the Appendix U reference branch |1 |
-|**Complexity** |$\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the five-mode reference branch; $\kappa_{\Lambda,\mathrm{trans}} = 142$ is the corrected four-mode branch value under the explicit false-vacuum spectral hypotheses of Theorem U.13b |$\kappa_{EW} = 38.5$ |
-|**Suppression**|$e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the translational branch |$e^{-38.5} \sim 10^{-17}$|
+|Quantity |Vacuum branch (Appendix U) |Electroweak branch (Appendix T) |
+|:--|:--|:--|
+|Carrier |$\operatorname{Gr}_{\mathbb C}(12,24)$ Hessian problem |$S(5,8,24)$ pair-to-octad incidence response |
+|Discrete action |$\kappa_\Lambda=(288-m_\Lambda)/2$ |$\kappa_{EW}=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |
+|Registered value |$141.5$ for $m_\Lambda=5$; $142$ for $m_\Lambda=4$ |$77/2=38.5$ |
+|Zero modes |They enter $m_\Lambda$ in the vacuum Hessian ledger |Gaussian zero modes enter the determinant/prefactor ledger, not $\kappa_{EW}$ |
+|Scale law |$\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa_\Lambda}$ |$v/M_{Pl}=A_{EW}e^{-\kappa_{EW}}$ |
+
+*Proof.* Appendix U supplies the vacuum Hessian dimension $288$, the branch value $m_\Lambda$, and the stated exponent. Definition T.13 and Theorem T.5 give
+$$
+e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=77
+$$
+and the fixed-time response action $77/2$; Principle T.13a identifies that action with the electroweak exponent. The determinant and Gaussian-mode records enter $A_{\mathrm{eff}}$ and $A_{EW}$ on their respective branches. Therefore the two rows share discrete inputs but not a zero-mode action formula. ∎
 
 -----
 
@@ -796,7 +861,11 @@ This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV. The agreement is a det
 
 ### T.9.1 Quantization Signature
 
-**Prediction T.1** (Half-Integer Shifts). Any additional zero mode would shift $\kappa_{EW}$ by $\pm 0.5$, rescaling $v$ by $e^{\mp 0.5} \approx 0.61$ or $1.65$.
+**Prediction T.1** (Electroweak Action Rigidity). On the registered Steiner branch, relabeling the active pair leaves $\kappa_{EW}=77/2$ invariant. A different response endpoint $u$ or incidence operator $B'$ changes the exponent only by the computed action difference
+$$
+\Delta\kappa_{EW}=\frac12\left(u^{\mathsf T}{B'}^{\mathsf T}B'u-e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}\right).
+$$
+At fixed prefactor the scale changes by $e^{-\Delta\kappa_{EW}}$. Electroweak Gaussian zero modes alter the prefactor ledger and do not shift this action.
 
 ### T.9.2 No Fourth Generation
 
@@ -812,29 +881,36 @@ The prediction has empirical content because the existing $M=24$, $D=4$, $k=12$ 
 
 ### T.10.1 Decomposition of the Inactive Subspace
 
-**Theorem T.8** (3 ⊗ 2 Factorization on the Row-Pair Branch). On the row-pair branch — under which the $b = 6$ inactive directions are organized into three ordered pairs — the $b=6$ sector admits an $S_3 \times \mathbb{Z}_2$-equivariant factorization:
+**Theorem T.8 (Complex Electroweak Carrier on the Ordered Full-Block Branch).** On the ordered flag lift $\pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to X=\mathrm{Gr}(2,8)$ of Theorem G.8.4c.0c, whose block ranks are fixed by the inactive-sector certificate of Theorem G.8.4b,
 $$
-\mathbb{R}^6 \cong \mathbb{R}^3 \otimes \mathbb{R}^2,
+\pi^*Q
+\cong
+\widetilde Q_C\oplus\widetilde Q_W\oplus\widetilde Q_Y,
+\qquad
+\operatorname{rk}_{\mathbb C}
+(\widetilde Q_C,\widetilde Q_W,\widetilde Q_Y)
+=(3,2,1).
 $$
-where $\mathbb{R}^3$ carries the triplet index (the fundamental of $SU(3)_C$) and $\mathbb{R}^2$ carries the within-pair index (the fundamental of $SU(2)_L$). The identification is unique up to independent basis changes in the two factors once the underlying $S_3 \times \mathbb{Z}_2$ pairing structure is fixed (made explicit in Theorem T.30).
+The electroweak normalization carrier is the complex rank-$5$ bundle
+$$
+W_5:=\widetilde Q_C\oplus\widetilde Q_W.
+$$
+It is unique up to independent $U(3)\times U(2)$ block-frame changes once the ordered full-block certificate is fixed. A local unitary fiber isometry from the active rank-$2$ bundle to $\widetilde Q_W$ transports the Pauli $\mathfrak{su}(2)$ action by Theorem G.8.4c.0c; this is a local frame identification, not a real tensor factorization or a canonical global bundle isomorphism.
 
-*Proof.* The module partition from Theorem G.8.4b gives $(n_3,n_2,n_1) = (3, 2, 1)$ as block sizes in a direct-sum decomposition $3 + 2 + 1 = 6$. Numerically $\dim(\mathbb{R}^6) = 6 = 3 \cdot 2$, but a direct-sum block decomposition into three blocks of sizes $(3, 2, 1)$ does not by itself entail a canonical tensor-product structure $\mathbb{R}^3 \otimes \mathbb{R}^2$ on the $b = 6$ sector. The tensor identification requires the row-pair branch input of Theorem T.30: once the six left-chiral links are organized into three ordered pairs $(1,2), (3,4), (5,6)$, the resulting 6-dimensional space admits the natural identification $\mathbb{R}^6 \cong \mathbb{R}^3 \otimes \mathbb{R}^2$, with the ambiguity reduced to an $O(3) \times O(2)$ change of basis. The numerical coincidence $3 + 2 + 1 = 6 = 3 \cdot 2$ is consistent with this identification but does not force it. ∎
+*Proof.* Theorem G.8.4b gives the unique block split $3+2+1$ of the inactive-sector certificate, and Theorem G.8.4c.0c realizes it as the displayed splitting of $\pi^*Q$ on the ordered flag lift. Its rank-$3$ and rank-$2$ summands define $W_5$. Unitary changes preserving the ordered summands form $U(3)\times U(2)$. Transport through a local unitary fiber isometry preserves commutators and the Hermitian trace pairing, so it carries the Pauli action to the weak block. ∎
 
-**Definition T.14a** (Electroweak 5-Plane). Write the internal $8$-space as a direct sum of the active and $b=6$ sectors,
-$$
-\mathbb{R}^8 \cong U_W \oplus U_{6}, \qquad U_W \cong \mathbb{R}^2,\quad U_{6}\cong \mathbb{R}^3\otimes \mathbb{R}^2.
-$$
-Let $w_0\in\mathbb{R}^2$ denote the $\mathbb{Z}_2$-even unit vector singled out by the within-pair splitting (Theorem T.30) in the second factor of $U_6\cong\mathbb{R}^3\otimes\mathbb{R}^2$ and define the color triplet slice
-$$
-U_C := \mathbb{R}^3\otimes \mathrm{span}{w_0} \cong \mathbb{R}^3.
-$$
-Then the electroweak 5-plane is
-$$
-W_5 := U_C \oplus U_W \cong \mathbb{R}^3 \oplus \mathbb{R}^2.
-$$
+**Remark T.8a (Scope: Gauge Carrier versus Row-Pair Labelling).** The gauge-module content of the $b=6$ sector is the ordered complex block decomposition above; no real $\mathbb R^6\cong\mathbb R^3\otimes\mathbb R^2$ gauge-module identification is used here. The separate real row-pair identification of Theorem T.30 remains available as a labelling of the six left-chiral links by pair index and within-pair index. Results that consume that labelling, including the link count of Theorem T.18a and the generation projectors of Theorem T.31, rest on Theorem T.30 rather than on this theorem, and the $SU(2)_L$ action they invoke is carried by the weak block $\widetilde Q_W$.
 
-- $U_C \cong \mathbb{R}^3$: color triplet sector (weak singlet slice of $U_6$)
-- $U_W \cong \mathbb{R}^2$: weak doublet sector (the active plane)
+**Definition T.14a (Electroweak 5-Plane).** On this branch,
+$$
+W_5
+=\widetilde Q_C\oplus\widetilde Q_W
+\cong\mathbb C^3\oplus\mathbb C^2.
+$$
+The color and weak blocks carry their fundamental complex $SU(3)$ and $SU(2)$ actions. A block-scalar hypercharge endomorphism has the form
+$$
+Y=\operatorname{diag}(y_cI_3,y_wI_2).
+$$
 
 ### T.10.2 Hypercharge Structure
 
@@ -1354,18 +1430,23 @@ with the local affine truncation used only as the diagnostic no-go above.
 
 ### T.12.2 PCE Isotropy at the Fixed Point
 
-**Theorem T.13** (Predictive Ward Identity). At the PU fixed point $\mathfrak{A}_{PU}$, the susceptibility is flat across all canonically normalized signal directions:
+**Theorem T.13** (Predictive Ward Identity on a Registered Common-Stiffness Response Image). Assume a registered injective response map
 $$
-\Gamma^{(2)}\big|_{W_5} = \kappa_{\mathrm{bulk}}^* I_5 = I_5.
+R:\mathfrak g_{\mathrm{SM}}\longrightarrow T_{\rho_0}\mathrm{Gr}(2,8)
 $$
+as in Corollary G.8.2f, and assume its image is supplied with the common-stiffness pullback certificate
+$$
+R^*\Gamma^{(2)}=\kappa_{\mathrm{bulk}}^* B_{\mathrm{SM}},
+$$
+where $B_{\mathrm{SM}}$ is the fixed positive invariant quadratic form whose canonically normalized color, weak, and primitive hypercharge directions use one common coefficient. Then Theorem Z.14 gives $\kappa_{\mathrm{bulk}}^*=1$, so
+$$
+R^*\Gamma^{(2)}=B_{\mathrm{SM}}.
+$$
+In a $B_{\mathrm{SM}}$-orthonormal generator basis the pulled-back susceptibility is the identity. On the electroweak branch, the primitive block-scalar hypercharge direction and the weak generators are normalized on $W_5$ by Theorems T.9--T.12. Thus a single PU bulk coefficient is obtained on this registered response image. Flatness of the ambient QFI metric alone does not construct $R$, identify gauge-vertical directions, or prove the common-stiffness pullback.
 
-*Proof.* Theorem Z.14 fixes the PU bulk normalization to $\kappa_{\mathrm{bulk}}^*=1$ and identifies the quadratic kernel with the QFI-normalized Hessian on the active subspace. The electroweak 5-plane $W_5$ is a canonically normalized subspace of that active signal sector, and by construction the induced quadratic form is the restriction of the isotropic bulk kernel. Therefore
-$$
-\Gamma^{(2)}\big|_{W_5} = \kappa_{\mathrm{bulk}}^* I_5 = I_5,
-$$
-which is the required flat predictive susceptibility across the canonically normalized electroweak signal directions. QED
+*Proof.* The pullback identity is the registered bridge from gauge-generator space to the QFI tangent space. Theorem Z.14 fixes its scalar bulk coefficient to $1$. Restriction to the electroweak generator subspace and passage to a $B_{\mathrm{SM}}$-orthonormal basis give the displayed identity. The final scope statement follows because a flat metric restricts uniformly only after the response embedding and its normalization have been fixed. ∎
 
-**Corollary T.13.1** (PU-to-SM Gauge Matching). At the PU matching scale $\mu_G$, PCE isotropy fixes a single PU bulk gauge coefficient $g_U$ for the canonically normalized signal generators (Theorem T.13). After matching to SM-canonical gauge fields, the gauge kinetic term at $\mu_G$ takes the form
+**Corollary T.13.1** (PU-to-SM Gauge Matching). On the common-stiffness response-image branch of Theorem T.13, the canonically normalized gauge generators carry one PU bulk coefficient $g_U$. At the matching scale $\mu_G$, after matching to SM-canonical gauge fields, the gauge kinetic term at $\mu_G$ takes the form
 $$
 \mathcal{L}_{\mathrm{kin}}(\mu_G)
 =
@@ -1393,7 +1474,7 @@ for $i=1,2,3$, where $Z_i=1+\Delta_i/24$.
 
 ### T.12.3 Tree-Level Weinberg Angle
 
-**Theorem T.14** (Weinberg Angle at the Matching Scale). The PU fixed-point output implies the PU-normalized value $\sin^2\theta_W^{(0)}=3/8$, while the SM-canonical tree-level weak mixing angle at the matching scale $\mu_G$ is
+**Theorem T.14** (Weinberg Angle at the Matching Scale). Assume the normalized block-scalar hypercharge and weak-generator branches of Theorems T.9--T.12 together with the common-stiffness response-image certificate of Theorem T.13. Then the PU-normalized value $\sin^2\theta_W^{(0)}=3/8$, while the SM-canonical tree-level weak mixing angle at the matching scale $\mu_G$ is
 $$
 \boxed{
 \sin^2\theta_W(\mu_G)
@@ -1722,9 +1803,9 @@ $$
 
 ### T.14.2 Six Left-Chiral Links
 
-**Theorem T.18a** (Link Count on the Weak-Left Projection Branch). On the weak-left projection branch (Definition T.3a) and the row-pair branch (Theorem T.8), the electroweak sector contains exactly 6 left-chiral SU(2) links, corresponding to $b = 6$ inactive modes.
+**Theorem T.18a** (Link Count on the Weak-Left Projection Branch). On the weak-left projection branch (Definition T.3a) and the ordered full-block branch (Theorem T.8), the electroweak sector contains exactly 6 left-chiral SU(2) links, corresponding to $b = 6$ inactive modes.
 
-*Proof.* On the weak-left projection branch, Definition T.3a fixes the rank-6 projection $\Pi_L:\mathbb{R}^{12}\to\mathbb{R}^6$ identifying $k/2 = 6$ independent information modes that couple to $SU(2)_L$, with $\Pi_L\Pi_L^T = I_6$ confirming six independent directions. On the row-pair branch (Theorem T.8), each such direction supports an independent $SU(2)_L$ doublet rotation via the $\mathbb{R}^3 \otimes \mathbb{R}^2$ identification, so each corresponds to one left-chiral SU(2) link. Therefore on the combined branch the electroweak sector contains exactly 6 independent left-chiral SU(2) links, matching the inactive dimension $b = 6$ used in the alignment-counting definition of $N_0$ (Definition T.5a). ∎
+*Proof.* On the weak-left projection branch, Definition T.3a fixes the rank-6 projection $\Pi_L:\mathbb{R}^{12}\to\mathbb{R}^6$ identifying $k/2 = 6$ independent information modes that couple to $SU(2)_L$, with $\Pi_L\Pi_L^T = I_6$ confirming six independent directions. On the ordered full-block branch (Theorem T.8), the local finite-response frame identification between the active rank-$2$ carrier and the weak rank-$2$ block $\widetilde Q_W$ transports an independent $SU(2)_L$ doublet action to each such direction, so each corresponds to one left-chiral SU(2) link. Therefore on the combined branch the electroweak sector contains exactly 6 independent left-chiral SU(2) links, matching the inactive dimension $b = 6$ used in the alignment-counting definition of $N_0$ (Definition T.5a). ∎
 
 The $SU(2)_L$ algebra used by these six left-chiral links is the rank-2 weak-block algebra selected by Theorem G.8.4b and locally reflected from the active Pauli carrier by Theorem G.8.4c.0c. The link count remains $b=6$, while the Pauli algebra on each weak link is compatible with any local finite-response frame identification between the active rank-2 carrier and the capacity-selected weak rank-2 block.
 
@@ -2166,7 +2247,7 @@ fixed before comparison and used together with the completed threshold record. A
 
 - "Exact" — exact arithmetic consequence once every stated branch datum is fixed (e.g., $\sin^2\theta_W^{(0)}=3/8$ on the primitive-$(1/6)$-quantized hypercharge branch; $\lambda_{\mathrm{elastic}}(\gamma)=\gamma^2/36$ for a declared target shift). The special value $\lambda_{\mathrm{elastic}}=1/36$ is exact only inside the accepted Definition T.22a unit branch. A summary convention propagates status; it does not supply a missing target-shift or fixed-point-to-SM matching datum.
 
-- "Derived" — derived within the adopted Appendix T branches (predictive-recovery MacWilliams Golay rate-$\tfrac12$, weak-left projection, row-pair, Bures-gauge holonomy normalization or the Kostant-Souriau prequantization gate, Toeplitz-Kraus Yukawa probability-overlap, $E_8$ triad selection, generation-internal tensor factorization, Takagi-Weyl Majorana $A_2$, triplet-projection exponent, PMNS Berry-loop, and the controlling branch package of Theorem T.79), not necessarily unconditional theorem-level output from the foundational PU axioms alone.
+- "Derived" — derived within the adopted Appendix T branches (predictive-recovery MacWilliams Golay rate-$\tfrac12$, weak-left projection, row-pair, Bures-gauge holonomy normalization or the Kostant-Souriau prequantization gate, Toeplitz-Kraus Yukawa probability-overlap, $E_8$ triad selection, generation-internal tensor factorization, Takagi-Weyl Majorana $A_2$, triplet-projection exponent, the PMNS CP-phase branch of Theorem T.24.22, and the controlling branch package of Theorem T.79), not necessarily unconditional theorem-level output from the foundational PU axioms alone.
 
 - "Validation" — validation-run output produced by the displayed validation tuple $\Delta^{\mathrm{val}}$ in conjunction with SM running. Such entries remain validation targets rather than derived predictions under the canonical minimal ledger. Theorem T.78.5 closes the current-framework flag-lift gate negatively, and Theorem T.78.14 closes the current RHG, torsion, spectral-action, and equivalent electroweak source class negatively for theorem-level $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite-part intervals. Only a separately appended spectral branch extension fixed before validation comparison and evaluated by Theorem T.78, Definition T.78.10, and the relevant source theorem can supply a positive theorem-level tuple.
 
@@ -2180,7 +2261,7 @@ Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, Theorem T.78.14, and Theorem T
 
 |Parameter |PU construction / dependency |Framework value or status |Observed |Status |
 |------------------------------------------|------------------------------------------------------------------------|---------------------------------|------------|----------|
-|$\kappa_{EW}$ |$bk/2 + 3 - 1/2$ |38.5 |— |Exact |
+|$\kappa_{EW}$ |$\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ with $B$ the pair--octad incidence matrix of $S(5,8,24)$ |$77/2=38.5$ |— |Exact on the registered Steiner response-action branch |
 |$A_{EW}$ |One-loop determinant model |1.084 |— |Model layer |
 |$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
@@ -2219,7 +2300,7 @@ $$
 \boxed{
 \text{Golay } [24,12,8] \xrightarrow{b=6, k=12}
 \begin{cases}
-\kappa_{EW} = 38.5 \text{ (constraint-counting branch)} \\[3pt]
+\kappa_{EW} = \tfrac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=\tfrac{77}{2} \text{ (Steiner response-action branch)} \\[3pt]
 A_{EW} = 1.084 \text{ (separate determinant-model branch)} \\[3pt]
 v = A_{EW} e^{-\kappa_{EW}} M_{Pl} = 252 \text{ GeV} \text{ (model-conditional)} \\[3pt]
 \sin^2\theta_W^{(0)} = 3/8;\quad \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (completed-threshold branch)} \\[3pt]
@@ -2384,7 +2465,7 @@ where $\mathbf{t}$ is the $S_3$-trivial direction and ${\mathbf{u}, \mathbf{w}}$
 
 ### T.20.6 Solved: Generation Projectors ✓
 
-**Theorem T.31** (Generation projector construction in the fixed $S_3\times \mathbb{Z}_2$ basis). Relative to the tensor-product structure of Theorem T.8 and the bases of Definition T.24a, the left-chiral space admits the orthogonal rank-2 decomposition
+**Theorem T.31** (Generation projector construction in the fixed $S_3\times \mathbb{Z}_2$ basis). Relative to the ordered block decomposition of Theorem T.8, with the local fiber identification of its active rank-$2$ block, and the bases of Definition T.24a, the left-chiral space admits the orthogonal rank-2 decomposition
 $$
 \mathbb{R}^6 = \text{Ran}(P_1) \oplus \text{Ran}(P_2) \oplus \text{Ran}(P_3),
 $$
@@ -5226,30 +5307,35 @@ Therefore, the framework's anti-numerology content is the rigidity of a shared c
 
 ### T.23.1 Introduction
 
-The derivations of the cosmological constant $\Lambda$ (Appendix U) and the electroweak scale $v$ (Sections T.2–T.7) reveal that these two hierarchies—conventionally treated as separate “problems”—emerge from a single underlying mechanism: exponential suppression from configuration space complexity. This section synthesizes these results into a unified framework, demonstrating that hierarchically small quantities associated with instanton-type transitions follow a universal pattern determined by the Golay-Steiner structure.
-
-The central result is the **Master Formula** for instanton-mediated exponential suppression:
+The cosmological and electroweak branches use a common exponential template only after each sector separately identifies a counting index with an action and that action with a physical observable. The reusable branch template is
 
 $$
-\boxed{\frac{X}{M_{Pl}^n} = A_X \cdot \exp(-\kappa_X)}
+\frac{X}{M_{Pl}^n}
+=
+A_Xe^{-\kappa_X}.
 $$
 
-where:
+For each sector this formula requires a specified state space, saddle or action, counting-to-action map, observable normalization, determinant or measure prefactor, threshold route, and residual interval. Morse–Bott dimension counting controls Gaussian powers; it does not by itself identify a classical action exponent. The common functional form is therefore a conditional synthesis.
 
-- $X$ is the physical quantity
-- $n$ is the mass dimension
-- $A_X \sim \mathcal{O}(1)$ is a one-loop determinant prefactor
-- $\kappa_X$ is the **complexity parameter** determined by configuration space geometry
-
-The complexity parameter has the universal structure:
-
+The reusable synthesis is the registered sector scale law
 $$
-\boxed{\kappa = (\text{base dimension}) + (\text{coset/extra DOF}) - \frac{(\text{zero modes})}{2}}
+\boxed{\frac{X}{M_{Pl}^n}=A_Xe^{-\kappa_X}},
 $$
+where the named sector certificate fixes the observable $X$, mass dimension $n$, action $\kappa_X$, scale bridge, and prefactor $A_X$ before comparison.
 
-This formula encompasses both the cosmological constant and the electroweak scale as special cases, unifying the “cosmological constant problem” and the “hierarchy problem” into manifestations of a single mechanism operating on different configuration spaces.
+There is no universal base-plus-coset-minus-zero-modes formula for all rows. Appendix U uses the Grassmannian Hessian action
+$$
+\kappa_\Lambda=\frac{288-m_\Lambda}{2},
+$$
+the electroweak branch uses the Steiner incidence response action
+$$
+\kappa_{EW}
+=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
+=\frac{77}{2},
+$$
+and the flavor and baryogenesis branches use their own registered distance, path, midpoint-readout, and transport data. Cross-sector identities are obtained by algebraically composing these separately proved scale laws. They do not identify their operators or move a Gaussian zero mode from a determinant ledger into the electroweak action.
 
-**Scope.** This unification applies to hierarchies arising from instanton-type tunneling processes in configuration spaces derived from the Golay-Steiner structure. Other hierarchies, such as Yukawa couplings, arise from distinct mechanisms ($E_8$ geodesic distances, Section T.9) that share the same foundational constants but employ different geometric structures.
+**Scope.** The common exponential form is a composition rule. A physical numerical prediction in any row additionally requires that row's determinant, matching, threshold, transport, normalization, and certified-remainder record.
 
 -----
 
@@ -5261,7 +5347,7 @@ The backbone values are assembled from distinct structural gates:
 |:---|:----------------------------------|:-----------------------|:------------------------------------------------------------------|:---------------|
 |1 |$K_0$ |3 bits |Minimum visited-context capacity under the Theorem 15 hypotheses |Theorem 15 |
 |2 |$d_0$ |$8$ on the minimal Appendix Z branch |Hilbert distinguishability lower bound plus active-dimension saturation |Theorem 23; Theorem Z.2 |
-|3 |$\varepsilon_0$ |$\ln 2$ on the registered binary-record branch |Structural binary log-cardinality, independent of the Hilbert-carrier chain |Definition 28; Lemma J.1 |
+|3 |$\varepsilon_0$ |$\ln 2$ on the registered binary-record branch |Structural binary log-cardinality, independent of the Hilbert-carrier chain |Definition 28; Theorem J.1 |
 |4 |$a$ |$2$ |Active kernel dimension on the attractor-saturating branch |Theorem Z.1 |
 |5 |$b$ |$d_0 - a = 6$ |Inactive subspace dimension |Definition |
 |5a |$\dim_{\mathbb{C}}(\text{Gr}(2,8))$|$ab = 12$ |Attractor orbit complex dimension; equals Golay $k$ |Theorem Z.6.3a |
@@ -5272,7 +5358,7 @@ The backbone values are assembled from distinct structural gates:
 |9 |$\sigma_B^2$ |$1/M = 1/24$ |Bures variance from capacity saturation |Lemma T.41.2 |
 |10 |$\alpha$ |$1/(16\sigma_B^2) = 3/2$|Hierarchy coefficient |Corollary T.41.3|
 
-**Proposition T.59** (Forked Minimal-Branch Backbone Ledger). *Assume the minimal Appendix Z Hilbert and active-projector branches, the registered binary verification quotient, the predictive-recovery MacWilliams gate of Definition Z.13b.0, and the channel-complete Bures tangent-cell contract of Definition Z.9a. Then the forked dependency graph is
+**Proposition T.59** (Forked Minimal-Branch Backbone Ledger). *Assume the minimal Appendix Z Hilbert and active-projector branches, the registered binary verification quotient, the predictive-recovery MacWilliams gate of Definition Z.13b.0, and the faithful least-feasible tangent-shell contract of Definition Z.9a. Then the forked dependency graph is
 $$
 \begin{gathered}
 K_0=3\Longrightarrow N_{\mathrm{vis}}^{\min}=8\Longrightarrow d_0\ge8\Longrightarrow d_0=8,\\
@@ -5288,7 +5374,7 @@ $$
 $$
 on the conjunction of these branches. Quantitative hierarchy calculations require their additional threshold, determinant, response, and matching records.*
 
-*Proof.* Theorem 15 gives $K_0=3$ and $N_{\mathrm{vis}}^{\min}=8$. Theorem 23 gives $d_0\ge8$, and Theorem Z.2 gives $d_0=8$ on the minimal carrier branch. Independently, Definition 28 and Lemma J.1 give the structural value $\varepsilon_0=\ln2$. Theorem Z.1 consumes the active-record, entropy-capacity, and no-surplus hypotheses and gives $a=2$; therefore the complement has
+*Proof.* Theorem 15 gives $K_0=3$ and $N_{\mathrm{vis}}^{\min}=8$. Theorem 23 gives $d_0\ge8$, and Theorem Z.2 gives $d_0=8$ on the minimal carrier branch. Independently, Definition 28 and Theorem J.1 give the structural value $\varepsilon_0=\ln2$. Theorem Z.1 consumes the active-record, entropy-capacity, and no-surplus hypotheses and gives $a=2$; therefore the complement has
 $$
 b=d_0-a=6.
 $$
@@ -5300,11 +5386,11 @@ On the predictive-recovery MacWilliams branch (Definition Z.13b.0; Theorem Z.13b
 $$
 k=M/2=12.
 $$
-The channel-complete Bures tangent-cell mode-channel contract of Definition Z.9a and Theorem Z.11 gives
+The faithful Bures tangent-shell contract of Definition Z.9a and Theorems Z.10--Z.11 gives
 $$
-K(D)=M=24,
+24=M\le K(D),\qquad K(3)=12,
 $$
-and the kissing-number gap in that theorem uniquely selects $D=4$. This closes the backbone counting chain on the stated branch. The proof is a composition of the cited structural gates, so it does not collapse those gates into one parent invariant. Later hierarchy sections supplement the backbone with their own sector-specific inputs. ∎
+while the regular $24$-cell proves feasibility in $D=4$. The registered strict cost for response-null surplus dimensions therefore selects the least feasible value $D=4$. This closes the backbone counting chain on the stated branch without assuming global kissing saturation. The proof composes the cited structural gates and does not collapse them into one parent invariant. ∎
 
 **Corollary T.59a (Backbone Tuple).** The closed minimal-branch backbone tuple is
 $$
@@ -5385,16 +5471,19 @@ $$\mathcal{M}_{EW} = \frac{SU(2)_L \times U(1)_Y}{U(1)_{em}} \cong S^3$$
 
 |Component |Formula |Value |
 |:----------------|:------------------|:-------|
-|Base (alignment) |$bk/2 = b^2$ |36 |
-|Coset DOF |$\dim(G/H) = 4 - 1$|+3 |
-|Zero modes |$U(1)_{em}$ gauge |1 |
-|**$\kappa_{EW}$**|$36 + 3 - 1/2$ |**38.5**|
+|Registered endpoint |$x(1)=e_{p_A}$ |one active pair |
+|Pair-incidence norm |$e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |77 |
+|Quadratic-action normalization |$\tfrac12$ |$1/2$ |
+|**$\kappa_{EW}$** |$\tfrac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |**38.5** |
 
-**Summary (Electroweak Complexity).** *The electroweak complexity is:*
-
-$$\kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 36 + 3 - \frac{1}{2} = 38.5$$
-
-*The base complexity $bk/2 = b^2 = 36$ counts reservoir-alignment constraints (Proposition T.2b), while the coset dimension $\dim(G/H) = 3$ adds the broken gauge directions. The single zero mode $m = 1$ from U(1)$_{em}$ is established in Theorem T.4.*
+**Summary (Electroweak Response Action).** Theorem T.5 proves
+$$
+\kappa_{EW}
+=\frac12\lambda_2(S(5,8,24))
+=\frac{77}{2}
+=38.5.
+$$
+This is the exact least action of the registered fixed-time unit update. The older alignment/coset/zero-mode expression may be retained only as a separate Gaussian-prefactor comparator and is not used to derive the action exponent.
 
 **Result.**
 
@@ -5432,7 +5521,7 @@ $$
 
 **Effective Complexity.** In terms of the suppression mechanism:
 
-$$G_F \sim \frac{e^{2\kappa_{EW}}}{M_{Pl}^2} = \frac{e^{77}}{M_{Pl}^2}$$
+$$G_F=\frac{e^{2\kappa_{EW}}}{\sqrt2\,A_{EW}^2M_{Pl}^2}=\frac{e^{77}}{\sqrt2\,A_{EW}^2M_{Pl}^2}$$
 
 The effective complexity $\kappa_{G_F} = 2\kappa_{EW} = 77$ reflects the squared dependence on the VEV.
 
@@ -5477,21 +5566,21 @@ $$
 
 **Theorem T.62** (Compiled hierarchy table). *The previously derived hierarchy relations organize into the following two classes.*
 
-**Mechanism A: Configuration-space instanton exponents**
+**Registered sector-specific exponent ledger**
 
-|Quantity |Configuration Space |Base |Coset|Zero Modes|$\kappa$|Scaling |
-|:--------|:----------------------------------|:---:|:---:|:--------:|:------:|:-------------------|
-|$\Lambda$|Gr(12,24) |144 |0 |5 on the Appendix U five-mode reference branch |141.5 |$\Lambda L_P^2 \propto e^{-2\kappa}$ on that reference branch |
-|$v$ |$SU(2) \times U(1)/U(1)$ |36 |+3 |1 |38.5 |$v/M_{Pl} \propto e^{-\kappa}$ |
-|$\eta_B$ |CP-odd sector of $\mathcal{M}_{EW}$|19.25|0 |$+0.23$ |19.48 |$\eta_B \propto e^{-\kappa}$ |
-|$M_R$ |$E_8$ instanton ($d^2_{31} = 6$) |– |– |– |9 |$M_R/M_{Pl} = e^{-9}$ |
-|$G_F$ |(derived from $v$) |— |— |— |77 |$G_F \propto e^{2\kappa_{EW}} M_{Pl}^{-2}$ |
+|Quantity |Registered carrier/action |Exponent rule |Independent completion |$\kappa$ or exponent |Scaling |
+|:--|:--|:--|:--|:--:|:--|
+|$\Lambda$ |$\operatorname{Gr}_{\mathbb C}(12,24)$ vacuum Hessian |$(288-m_\Lambda)/2$ |vacuum branch and determinant certificate |$141.5$ for $m_\Lambda=5$; $142$ for $m_\Lambda=4$ |$\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa_\Lambda}$ |
+|$v$ |Steiner active-pair response |$\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |Principle T.13a and $A_{EW}$ |$77/2=38.5$ |$v/M_{Pl}=A_{EW}e^{-38.5}$ |
+|$\eta_B$ |CP half-path plus binary/family share |$77/4+\ln2/3$ |midpoint readout, parallel-family saddles, transport certificate |$19.481049\ldots$ |$\eta_B=\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}e^{-(77/4+\ln2/3)}$ |
+|$M_R$ |registered $E_8$ distance branch |$\alpha_{UV}d_{31}^2$ |scale-map and neutrino branch |$9$ for $(\alpha_{UV},d_{31}^2)=(3/2,6)$ |$M_R/M_{Pl}=e^{-9}$ |
+|$G_F$ |derived from the electroweak scale |$2\kappa_{EW}=77$ in the squared scale |electroweak prefactor and matching convention |$77$ |$G_F=A_{EW}^{-2}e^{77}/(\sqrt2M_{Pl}^2)$ |
 
 **Remark T.62.1: QCD Confinement Scale.** The matching scale $\mu_G = M_{Pl} \cdot e^{-\kappa_{\text{QCD}}}$ with $\kappa_{\text{QCD}} = \text{rank}(E_8) + 1 = 9$ yields:
 
 $$\mu_G \approx 1.22 \times 10^{19} \text{ GeV} \times e^{-9} \approx 1.5 \times 10^{15} \text{ GeV}$$
 
-The complexity parameter $\kappa_{\text{QCD}} = 9$ counts the minimum Weyl reflections required for vacuum transitions in the $E_8$ root system (cf. Theorem T.24.3 for the role of $E_8$ geodesics in mass hierarchies).
+The relation $\mu_G=M_{Pl}e^{-9}$ is a registered matching-scale ansatz. The arithmetic identity $9=\operatorname{rank}(E_8)+1$ does not prove that nine is a minimal Weyl-reflection length or that it defines a physical scale. Standard QCD running from a chosen $\mu_G$ additionally requires the coupling, renormalization scheme, particle content, and thresholds as external matching data.
 
 Standard QCD renormalization group running from $\mu_G$ with SM particle content yields:
 
@@ -5516,11 +5605,14 @@ consistent with the world average $\Lambda_{\text{QCD}}^{(5)} = 210 \pm 14$ MeV 
 $$
 \kappa_{\Lambda,\mathrm{ref}} = 144 - \frac{5}{2} = 141.5,
 $$
-so $\Lambda L_P^2 \propto e^{-2\kappa_{\Lambda,\mathrm{ref}}}=e^{-283}$ at fixed prefactor on the Appendix U five-mode reference branch. Theorem U.8c shows that this row is branch-dependent rather than a theorem-level consequence of the current Definition U.4 continuum action. The electroweak row is the counting result of Section T.23.5:
+so $\Lambda L_P^2 \propto e^{-2\kappa_{\Lambda,\mathrm{ref}}}=e^{-283}$ at fixed prefactor on the Appendix U five-mode reference branch. Theorem U.8c shows that this row is branch-dependent rather than a theorem-level consequence of the current Definition U.4 continuum action. The electroweak row is the Steiner response-action result of Definition T.13 and Theorem T.5:
 $$
-\kappa_{EW}=36+3-\frac12=38.5,
+\kappa_{EW}
+=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
+=\frac{77}{2}
+=38.5,
 $$
-hence $v/M_{Pl}\propto e^{-38.5}$. The baryogenesis row is Theorem Y.8:
+hence Principle T.6a gives $v/M_{Pl}=A_{EW}e^{-38.5}$. The baryogenesis row is Theorem Y.8:
 $$
 \kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon_0}{N_g}=19.25+0.23=19.48.
 $$
@@ -5555,7 +5647,14 @@ $$
 $$
 Therefore the two expressions agree on that reference branch. Theorem U.8c shows that this identity is branch-specific rather than a theorem-level vacuum closure for the current Definition U.4 continuum action. ∎
 
-**Remark T.62b (Cross-Appendix Significance of the Vacuum–Electroweak Sum Rule).** The identity $2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 360 = \binom{D+2}{2}M$ holds on the Appendix U five-mode reference branch and carries the branch-dependent status of that branch. Its structural content is that the two largest instanton complexity exponents in the framework sum to exactly $15M$, where $15 = \binom{D+2}{2}$ encodes the emergent spacetime dimension $D=4$ and $M=24$ is the interface mode count. This sum rule is therefore sensitive to the spacetime dimension through $\binom{D+2}{2}$: any $D \neq 4$ would give a different right-hand side, so the identity provides a cross-check linking the hierarchy mechanism to the dimensional selection of Theorem Z.11. Turning that sensitivity into a standalone falsifier would require an external observable that constrains the effective dimensional count independently of the identity itself; the present manuscript does not yet supply such an independent bound. The identity is not a Moonshine-character coefficient identity: the numbers $196883$ and $196884$ do not enter the vacuum zero-mode count, the electroweak Morse-Bott count, or the determinant-prefactor ledgers.
+**Remark T.62b (Scope of the Vacuum–Electroweak Numerical Identity).** On the Appendix U five-mode reference branch,
+$$
+2\kappa_{\Lambda,\mathrm{ref}}+2\kappa_{EW}
+=283+77
+=360
+=\binom{D+2}{2}M
+$$
+at $(D,M)=(4,24)$. The first term is the vacuum reference Hessian ledger and the second is the independent Steiner response action. The equality to $15M$ is exact arithmetic on the intersection of those registered branches; it neither derives $D=4$ nor supplies a common vacuum/electroweak mechanism. Changing the independently determined $D$, $M$, vacuum branch, or electroweak response operator changes the identity. The Moonshine dimensions $196883$ and $196884$ enter neither ledger.
 
 **Corollary T.62c (Vacuum–Electroweak Complexity Product Lock).** On the Appendix U five-mode reference branch, together with the electroweak hierarchy branch of Theorem T.5 and the determinant normalization of Theorem T.29, the measured dimensionless vacuum/electroweak product satisfies
 $$
@@ -5642,29 +5741,35 @@ $$\frac{\kappa_{\Lambda,\mathrm{ref}}}{\kappa_{EW}} = \frac{141.5}{38.5} \approx
 
 $$\frac{\kappa_{\Lambda,\mathrm{trans}}}{\kappa_{EW}} = \frac{142}{38.5} \approx 3.69.$$
 
-**Corollary T.63.1** (Reference Complexity Difference). *On the five-mode reference branch,*
-
-$$\kappa_{\Lambda,\mathrm{ref}} - \kappa_{EW} = 103,$$
-
-*yielding the leading exponential comparison*
-
-$$\frac{\Lambda}{v^4} \sim e^{-206} = 3.43 \times 10^{-90}.$$
-
-*The corresponding corrected four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} - \kappa_{EW} = 103.5$, hence $e^{-207} = 1.26 \times 10^{-90}$.*
-
-**Corollary T.63.2** (Electroweak–Baryon Square-Root Lock). *The baryogenesis complexity satisfies*
+**Corollary T.63.1** (Dimensionless Vacuum–Electroweak Quotient). On the five-mode reference branch and the electroweak scale branch,
 $$
-\kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon_0}{N_g}.
+\kappa_{\Lambda,\mathrm{ref}}-\kappa_{EW}=103
 $$
-On the minimal Appendix Y branch with $\varepsilon_0=\ln2$ and $N_g=3$,
+and the dimensionless quotient is
 $$
-\kappa_B=\frac{\kappa_{EW}}2+\frac{\ln2}{3}=19.48.
+\frac{\Lambda L_P^2}{(v/M_{Pl})^2}
+=\frac{8\pi A_{\mathrm{eff}}}{A_{EW}^2}
+e^{-2(\kappa_{\Lambda,\mathrm{ref}}-\kappa_{EW})}
+=\frac{8\pi A_{\mathrm{eff}}}{A_{EW}^2}e^{-206}.
 $$
-Combining this with
+Here $e^{-206}=3.43\times10^{-90}$. On the four-mode theorem branch,
+$$
+\frac{\Lambda L_P^2}{(v/M_{Pl})^2}
+=\frac{8\pi A_{\mathrm{eff}}^{(4)}}{A_{EW}^2}e^{-207},
+\qquad
+e^{-207}=1.26\times10^{-90}.
+$$
+The prefactor ratio is part of the equality and cannot be omitted.
+
+**Corollary T.63.2** (Electroweak–Baryon Square-Root Lock). On the Appendix Y branch carrying Lemma Y.8.1's midpoint half-history, Lemma Y.8.2's noncancelling parallel-family saddles, the structural binary value of Definition J.1 and Theorem J.1, and the accepted transport certificate,
+$$
+\kappa_B=\frac{\kappa_{EW}}2+\frac{\ln2}{3}.
+$$
+Combining this identity with
 $$
 \frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}}
 $$
-gives the branch-level square-root lock
+gives
 $$
 \boxed{
 e^{-\kappa_B}
@@ -5674,7 +5779,7 @@ e^{-\kappa_B}
 }
 \tag{T.63.2}
 $$
-Consequently the Appendix Y master formula becomes
+Consequently,
 $$
 \boxed{
 \eta_B
@@ -5683,43 +5788,59 @@ $$
 \sqrt{\frac{v}{A_{EW}M_{Pl}}}.
 }
 $$
-Thus the baryon asymmetry and the electroweak hierarchy are not independent exponential suppressions on this branch; the baryogenesis exponent is the CP-odd half-step of the electroweak exponent plus the generation-shared Landauer correction.
+The equality is exact on that joint branch; its transport and determinant factors remain the independently evaluated prefactor.
 
-**Proposition T.64a** (Near-Integer Ratios). *The complexity ratios satisfy*
-
-$$\frac{\kappa_{\Lambda,\mathrm{ref}}}{k^2} = \frac{141.5}{144} = 1 - \frac{5}{288} \approx 0.983,$$
-
-$$\frac{\kappa_{\Lambda,\mathrm{trans}}}{k^2} = \frac{142}{144} = 1 - \frac{1}{72} \approx 0.986,$$
-
-$$\frac{\kappa_{EW}}{b^2} = \frac{38.5}{36} \approx 1.069.$$
-
-*The base complexities $k^2$ and $b^2$ are modified only by zero-mode corrections of order unity. Theorem U.8c shows that the five-mode cosmological value is a reference-branch statement rather than a theorem-level continuum zero-mode count, while Theorem U.13b closes the corrected four-mode branch under its explicit false-vacuum spectral hypotheses.*
+**Proposition T.64a** (Registered Dimensionless Ledger Ratios). The vacuum branches satisfy
+$$
+\frac{\kappa_{\Lambda,\mathrm{ref}}}{k^2}
+=\frac{141.5}{144}
+=1-\frac{5}{288},
+\qquad
+\frac{\kappa_{\Lambda,\mathrm{trans}}}{k^2}
+=\frac{142}{144}
+=1-\frac1{72}.
+$$
+The independent electroweak response action satisfies the numerical comparison
+$$
+\frac{\kappa_{EW}}{b^2}
+=\frac{77}{72}.
+$$
+The first two equalities encode the Appendix U zero-mode deficits. The last compares the Steiner pair-incidence action with $b^2=36$ and is not a zero-mode formula.
 
 -----
 
-### T.23.10 The “Hierarchy Problem” Dissolves
+### T.23.10 Sector-Resolved Hierarchy Composition
 
-**Theorem T.63** (Unified Hierarchy Interpretation). *The “hierarchy problem” and the “cosmological constant problem” are not separate puzzles but different manifestations of the same mechanism.*
+**Theorem T.63** (Sector-Resolved Hierarchy Composition). On the intersection of the registered Appendix U and Appendix T branches,
+$$
+\Lambda L_P^2
+=8\pi A_{\mathrm{eff}}e^{-2\kappa_\Lambda},
+\qquad
+\frac v{M_{Pl}}
+=A_{EW}e^{-\kappa_{EW}},
+$$
+where $\kappa_\Lambda=(288-m_\Lambda)/2$ is the vacuum Hessian-counting exponent and
+$$
+\kappa_{EW}
+=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
+=\frac{77}{2}
+$$
+is the Steiner response action. Hence the two sector laws compose into the exact cross-ledger product
+$$
+(\Lambda L_P^2)\left(\frac v{M_{Pl}}\right)^2
+=8\pi A_{\mathrm{eff}}A_{EW}^2
+e^{-[(288-m_\Lambda)+77]}.
+$$
 
-*Proof.* Both problems ask: “Why is $X \ll M_{Pl}$?” The framework provides a single answer: exponential suppression from instanton complexity on configuration spaces of different topology.
+*Proof.* Substitute the two registered scale laws and collect exponents. Convention U.14a gives $2\kappa_\Lambda=288-m_\Lambda$, while Theorem T.5 gives $2\kappa_{EW}=77$. No common fluctuation operator is required or asserted. ∎
 
-For the cosmological constant:
-
-- Configuration space: Gr(12, 24)
-- Complexity: $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; the corresponding corrected four-mode branch value is $\kappa_{\Lambda,\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b
-- Suppression: $e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the translational branch
-
-For the electroweak scale:
-
-- Configuration space: $SU(2) \times U(1)/U(1)$
-- Complexity: $\kappa_{EW} = 38.5$
-- Suppression: $e^{-38.5} \sim 10^{-17}$
-
-The different numerical values arise from the different dimensions and symmetries of these configuration spaces, not from different mechanisms. Theorem U.8c shows that the five-mode cosmological value is branch-dependent rather than a theorem-level continuum zero-mode count, while the corrected four-mode branch is theorem-level on the discrete side under the stated hypotheses. ∎
-
-**Corollary T.65.1** (No fine-tuning of the counting data on the reference branches). *Within the counting conventions used in Theorem U.16 and Section T.23.5, the leading hierarchy exponents are fixed by discrete geometric data: the vacuum reference exponent uses Grassmannian dimension $144$ with the Appendix U five-mode reference count, and the electroweak exponent uses effective dimension $39$ with $1$ zero mode. Theorem U.8c shows that the vacuum five-mode statement is branch-dependent rather than theorem-level for the current Definition U.4 continuum action.*
-
-*This means the leading counting inputs are not continuously adjusted inside the framework once the relevant configuration spaces and symmetry data are fixed. Continuous effects can still enter through prefactors, threshold corrections, and matching conventions, so the discrete counting does not by itself eliminate every source of numerical variation. The Golay code minimum distance $d = 8$ supplies a structural gap in the coding sector, while the Leech-lattice rootlessness statement governs the corresponding vacuum-isolation claim in the lattice sector.*
+**Corollary T.65.1** (Discrete Action Data on the Registered Branches). Once a vacuum branch fixes $m_\Lambda$ and an electroweak branch fixes $(B,p_A)$, the two leading exponents are discrete:
+$$
+2\kappa_\Lambda=288-m_\Lambda,
+\qquad
+2\kappa_{EW}=e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=77.
+$$
+The vacuum exponent changes only when its certified Hessian kernel changes, and the electroweak action changes only when the registered incidence operator, endpoint, or action normalization changes. Determinants, matching, threshold corrections, and renormalized stability remain in their named certificates and prefactors.
 
 -----
 
@@ -5727,47 +5848,67 @@ The different numerical values arise from the different dimensions and symmetrie
 
 |Approach |Mechanism |Explanation for $\Lambda$|Explanation for $v/M_{Pl}$ |
 |:------------------------|:----------------------------------|:------------------------|:----------------------------|
-|**SUSY** |Boson-fermion cancellation |Partial |Partial (not observed at LHC)|
-|**Extra dimensions** |Geometric dilution |Requires tuning |Requires tuning |
-|**Anthropic/landscape** |Selection from $10^{500}$ vacua |Non-predictive |Non-predictive |
-|**Technical naturalness**|Symmetry protection |Does not apply |Partial |
-|**PU Framework** |Exponential from config. space dim.|Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$, with corresponding corrected four-mode branch value $\kappa_{\Lambda,\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b |$\kappa_{EW} = 38.5$ derived |
+|**SUSY** |Boson-fermion cancellation |Partial |Partial |
+|**Extra dimensions** |Geometric dilution |Model-dependent |Model-dependent |
+|**Anthropic/landscape** |Environmental selection |Selection statement |Selection statement |
+|**Technical naturalness**|Symmetry protection |Model-dependent |Partial |
+|**PU Framework** |Sector-resolved registered actions |Appendix U five-mode reference exponent $141.5$ or certified four-mode exponent $142$ |Steiner response action $\kappa_{EW}=77/2$ plus the scale bridge and forward prefactor |
 
-The PU framework **derives** the electroweak suppression and a branch-dependent cosmological reference suppression from the same counting mechanism, providing predictive relationships between scales rather than treating them as independent parameters. The discrete nature of the configuration space dimensions ($k^2 = 144$, $b^2 = 36$) and exact zero-mode counts ($m \in \{1, 4\}$ in the current continuum action) protects the leading exponents against continuous quantum corrections, while the Appendix U five-mode count is retained only as the stated reference branch singled out by Theorem U.16 and qualified by Theorem U.8c.
+The PU entry is a constructive two-operator result: Appendix U fixes the vacuum exponent on its accepted Hessian branch, while Definition T.13 and Theorem T.5 fix the electroweak response action. Theorem T.63 proves their product composition. Radiative stability and the numerical scale remain controlled by the renormalized matching and determinant certificates rather than by a false shared zero-mode count.
 
 -----
 
 ### T.23.12 Predictions and Extensions
 
-**Prediction T.3** (Discrete $\kappa$ Spectrum). *New physics scales should appear at masses determined by the discrete spectrum of complexity parameters:*
-
-$$\log_{10}\left(\frac{E}{M_{Pl}}\right) \approx -0.434 \times \kappa$$
-
-The allowed $\kappa$ values form a discrete set determined by:
-
-1. Grassmannian dimensions: $k(M-k)$ for various $k$, $M$
-1. Coset dimensions: $\dim(G/H)$ for gauge breaking patterns
-1. Zero modes: from preserved symmetries
-1. $E_8$ distances: $d^2 \in \{2, 4, 6, 8\}$ with coefficient $\alpha = 3/2$ (Dirac) or $\alpha_\nu = \sqrt{3}/2$ (Majorana)
-
-**Prediction T.4** (Quantization Signature). *Any additional zero mode at the electroweak scale would shift $\kappa_{EW}$ by $\pm 0.5$, rescaling $v$ by $\sqrt{e}^{\mp 1} \approx 1.65^{\mp 1}$. The observed value strongly constrains the zero mode count to exactly 1.*
-
-**Theorem T.64** (Seesaw Scale). *The right-handed Majorana scale is:*
-
-$$M_R = M_{Pl} \cdot e^{-\kappa_R}, \quad \kappa_R = \alpha_{UV} \cdot d^2_{31} = \frac{3}{2} \times 6 = 9$$
-
-*yielding $M_R = 1.51 \times 10^{15}$ GeV.*
-
-*Proof.* The right-handed neutrino sector is an SU(2) singlet, so it couples to the UV attractor value $\alpha_{UV} = 3/2$ (Corollary T.41.3) rather than the IR-corrected $\alpha_{IR}$. The $E_8$ distance $d^2_{31} = 6$ follows from the neutrino triad $(2, 6, 6)$ derived in Section T.24.5. ∎
-
-*Verification.* With $\langle H\rangle=(0,v/\sqrt2)^T$, the type-I seesaw carries the factor $1/2$. Using the manuscript's $M_R$ and normalization assumptions gives $m_3=25.80994\,\mathrm{meV}$; the result remains conditional on those inputs.
-
-**Theorem T.64a** (Matching-Scale Identification). The PU-to-SM matching scale equals the seesaw scale:
+**Prediction T.3** (Registered Discrete-Action Spectrum). For any accepted scale branch
 $$
-\boxed{\mu_G = M_R = M_{Pl}e^{-9}}.
+\frac E{M_{Pl}}=A_Ee^{-\kappa_E},
+\qquad
+\log_{10}\frac E{M_{Pl}}
+=\log_{10}A_E-\frac{\kappa_E}{\ln10}.
+$$
+Its allowed values are computed from that branch's registered action: Appendix U uses the Grassmannian Hessian ledger; the electroweak branch uses $\frac12e_p^{\mathsf T}B^{\mathsf T}Be_p$; and the flavor branches use registered $E_8$ distance actions. A new scale tests PU only after its operator, endpoint or saddle, scale bridge, and prefactor interval are fixed before comparison.
+
+**Prediction T.4** (Steiner Relabeling and Operator-Change Signature). For the $S(5,8,24)$ incidence operator, every unit pair endpoint obeys
+$$
+e_p^{\mathsf T}B^{\mathsf T}Be_p=77,
+$$
+so relabeling the active pair leaves $\kappa_{EW}=77/2$ invariant. Replacing the registered endpoint $e_p$ by $u$ or the operator $B$ by $B'$ changes the action by the computable amount
+$$
+\Delta\kappa_{EW}
+=\frac12\left(
+u^{\mathsf T}{B'}^{\mathsf T}B'u
+-e_p^{\mathsf T}B^{\mathsf T}Be_p
+\right),
+$$
+and, at fixed prefactor, rescales $v$ by $e^{-\Delta\kappa_{EW}}$. Electroweak Gaussian zero modes alter the separate prefactor ledger and do not shift this response action.
+**Theorem T.64 (Seesaw Scale).** Assume the scale map
+$$
+\frac{M_R}{M_{Pl}}
+=
+e^{-\alpha_{UV}d_{31}^2}.
+$$
+Corollary T.41.3 gives the UV hierarchy coefficient $\alpha_{UV}=3/2$ from $\sigma_B^2=1/24$, and the Majorana $A_2$ neutrino triad $(d^2_{32},d^2_{31},d^2_{21})=(2,6,6)$ of Section T.24.5 selects $d_{31}^2=6$. Then
+$$
+M_R
+=
+M_{Pl}e^{-9}
+\approx
+1.5067\times10^{15}\,\mathrm{GeV}
+$$
+for the unreduced Planck convention $M_{Pl}=1.2209\times10^{19}\,\mathrm{GeV}$ used in Appendix T.
+
+*Proof.* Substitution gives $\alpha_{UV}d_{31}^2=(3/2)6=9$, and the numerical value is the stated Planck convention times $e^{-9}$. The right-handed neutrino sector is an $SU(2)$ singlet, so it uses the UV attractor coefficient rather than an IR-corrected one. The result remains conditional on the scale map, that normalization, and the triad label selection. ∎
+
+*Verification.* With $\langle H\rangle=(0,v/\sqrt2)^T$, the type-I seesaw carries the factor $1/2$. Using this $M_R$ and the normalization assumptions of Theorem T.24.14 gives $m_3=25.809938\,\mathrm{meV}$; the result remains conditional on those inputs.
+**Theorem T.64a (Matching-Scale Identification).** The matching-scale branch posits $\mu_G=M_{Pl}e^{-9}$, while Theorem T.64 computes $M_R=M_{Pl}e^{-\alpha_{UV}d_{31}^2}=M_{Pl}e^{-9}$ on its own scale map with $(\alpha_{UV},d_{31}^2)=(3/2,6)$. If both use the same unreduced Planck convention, then
+$$
+\boxed{
+\mu_G=M_R=M_{Pl}e^{-9}
+}.
 $$
 
-*Proof.* Remark T.62.1 fixes the matching exponent by confinement complexity: $\mu_G=M_{Pl}e^{-\kappa_{QCD}}$ with $\kappa_{QCD}=\mathrm{rank}(E_8)+1=9$, hence $\mu_G=M_{Pl}e^{-9}$. Theorem T.64 gives $M_R=M_{Pl}e^{-\alpha_{UV}d_{31}^2}$ with $\alpha_{UV}=3/2$ and $d_{31}^2=6$, hence $M_R=M_{Pl}e^{-9}$. Therefore $\mu_G=M_R$. ∎
+*Proof.* The conclusion is substitution into the two scale maps, whose exponents both equal $9$. Only the seesaw exponent is computed from registered data; the matching exponent remains an ansatz, so the equality is not independent evidence for either scale. ∎
 
 -----
 
@@ -5779,17 +5920,19 @@ Exponential suppression is a reusable model form, not one universal derivation o
 
 
 
-The unified exponential suppression mechanism demonstrates that:
+The sector-resolved exponential ledger demonstrates that:
 
-1. **All instanton-type hierarchies trace to $K_0 = 3$**: The foundational cascade $K_0 \to d_0 \to M \to k \to k^2$ determines the base complexity scales.
-1. **Configuration space geometry determines $\kappa$**: Different physical quantities correspond to instanton tunneling on different configuration spaces, with dimensions fixed by the Golay-Steiner structure.
-1. **Zero modes provide $\mathcal{O}(1)$ corrections**: Symmetry-preserved directions reduce effective complexity by $(m/2)$.
-1. **The mechanism is predictive**: Relationships between scales (e.g., $\kappa/\kappa_{EW} \approx 3.68$) follow from geometry, not fitting.
-1. **“Problems” become derivations**: The cosmological constant, hierarchy, and flavor problems dissolve into calculations within the unified framework anchored at the PU fixed point $\mathfrak{A}_{PU}$. The discrete nature of configuration space dimensions provides intrinsic protection against fine-tuning. The neutrino sector (Section T.24) demonstrates that Majorana fermions follow the same $E_8$ geometric structure with the triad $(a, b, b) = (2, 6, 6)$ replacing the Dirac triad $(a, b, 2a) = (2, 6, 4)$.
+1. **The discrete backbone fixes common inputs:** The registered chain $K_0\to d_0\to(a,b)\to M$ fixes the carrier and interface data used by the sector models.
+1. **Each exponent has its own action:** The vacuum exponent is a certified Hessian-counting action, the electroweak exponent is the Steiner response action, and flavor exponents use their registered distance kernels.
+1. **Cross-sector identities are exact compositions:** Theorem T.63 and Corollary T.63.2 follow by eliminating the registered exponentials without identifying their operators.
+1. **Prefactors remain calculable obligations:** Determinants, matching, transport, thresholds, and remainders are fixed by the named forward certificates.
+1. **Falsification is branch-local and quantitative:** A failed exponent, scale bridge, or prefactor interval rejects the corresponding registered branch without altering unrelated theorem stacks.
 
-The master formula
-
-$$X/M_{Pl}^n = A_X \cdot \exp(-\kappa_X)$$
+The reusable scale form is
+$$
+\frac{X}{M_{Pl}^n}=A_Xe^{-\kappa_X},
+$$
+with $(A_X,\kappa_X,n)$ supplied by the named sector certificate.
 
 On the stated Majorana-normalization branch, the recomputed spectrum is $(m_1,m_2,m_3)=(0.142931,4.566325,25.809938)\,\mathrm{meV}$, with $(\Delta m^2_{21},\Delta m^2_{31})=(2.08309\times10^{-5},6.66132\times10^{-4})\,\mathrm{eV}^2$. This conditional branch does not match the cited oscillation splittings.
 
@@ -5817,7 +5960,7 @@ This part develops a conditional neutrino and PMNS model on declared $E_8$/Grass
 |Solar Angle |$\theta_{12} = 33.7^\circ$ |
 |Reactor Angle |$\theta_{13} = 8.7^\circ$ |
 |Neutrino CP Phase |$\delta_{CP} = 232.5^\circ$ |
-|Jarlskog Invariant |$J_{CP} = -0.026$ |
+|Jarlskog Invariant |$J_{CP} = -0.0268414$ |
 
 All parameters connect directly to geometry and PCE. Any quoted $\chi^2/\text{dof}$ should be read only as a diagnostic (it depends on the uncertainty model and ignores correlations), not as a standalone goodness-of-fit proof.
 
@@ -5829,7 +5972,7 @@ All parameters connect directly to geometry and PCE. Any quoted $\chi^2/\text{do
 
 The derivation chain from Sections T.1–T.21 establishes the complete set of foundational constants.
 
-**Recall from Theorem 15 (Horizon Constant).** The minimal complexity for self-referential prediction is $K_0 = 3$ bits.
+**Recall from Theorem 15 (Horizon Constant).** On the realization class satisfying (O1)–(O3) and (FC), the least visited-context log-capacity for the stated SPAP encoding is $K_0=3$; this is not a universal complexity floor for self-referential prediction.
 
 **Recall from Theorem 23 (MPU Dimension).** Theorem 15 gives $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, and Theorem 23 gives $d_0 \ge N_{\mathrm{vis}}^{\min}$ on the Hilbert-carrier branch; on the minimal PCE branch used throughout the Appendix Z backbone one has $d_0 = 8$ (Theorem Z.2).
 
@@ -6643,9 +6786,9 @@ Rounding gives all three displayed values. ∎
 $$
 \Sigma_\nu=30.519194\,\mathrm{meV},
 \qquad
-m_\beta=4.63978\,\mathrm{meV},
+m_\beta=4.62340\,\mathrm{meV},
 \qquad
-\frac{m_\beta}{\Sigma_\nu}=0.15203.
+\frac{m_\beta}{\Sigma_\nu}=0.15149.
 \tag{T.24.16a}
 $$
 Here
@@ -6654,7 +6797,7 @@ m_\beta
 =\sqrt{c_{13}^2c_{12}^2m_1^2+c_{13}^2s_{12}^2m_2^2+s_{13}^2m_3^2}
 \tag{T.24.16b}
 $$
-with $\theta_{12}=33.7^\circ$ and $\theta_{13}=8.7^\circ$.
+with the unrounded upstream outputs $\theta_{12}=33.69735528^\circ$ and $\theta_{13}=8.65607149^\circ$.
 
 A distinct oscillation-anchored calibration may instead set
 $$
@@ -6673,7 +6816,7 @@ $$
 $$
 \Sigma_\nu^{\mathrm{osc}}=58.565457\,\mathrm{meV},
 \qquad
-m_\beta^{\mathrm{osc}}=8.90360\,\mathrm{meV}.
+m_\beta^{\mathrm{osc}}=8.87216\,\mathrm{meV}.
 $$
 This second set is an empirical calibration, not a consequence of the internally normalized seesaw value. The two calibrations must not be combined, and neither constitutes an oscillation-data closure of the internal branch.
 
@@ -6688,27 +6831,27 @@ $$
 =0.142931067+4.566325340+25.809937853
 =30.519194260\,\mathrm{meV}.
 $$
-For $\theta_{12}=33.7^\circ$ and $\theta_{13}=8.7^\circ$,
+For the unrounded angle outputs $\theta_{12}=33.69735528^\circ$ and $\theta_{13}=8.65607149^\circ$,
 $$
 (s_{12}^2,c_{12}^2,s_{13}^2,c_{13}^2)
-=(0.30785234,0.69214766,0.02287984,0.97712016).
+=(0.30780972,0.69219028,0.02265112,0.97734888).
 $$
-The three terms in $m_\beta^2$ are therefore
+The three terms in $m_\beta^2$ are
 $$
-c_{13}^2c_{12}^2m_1^2=0.01381656\,\mathrm{meV}^2,
-$$
-$$
-c_{13}^2s_{12}^2m_2^2=6.27226118\,\mathrm{meV}^2,
+c_{13}^2c_{12}^2m_1^2=0.01382065\,\mathrm{meV}^2,
 $$
 $$
-s_{13}^2m_3^2=15.24146875\,\mathrm{meV}^2.
+c_{13}^2s_{12}^2m_2^2=6.27286089\,\mathrm{meV}^2,
+$$
+$$
+s_{13}^2m_3^2=15.08911112\,\mathrm{meV}^2.
 $$
 Thus
 $$
-m_\beta=\sqrt{21.52754649}\,\mathrm{meV}
-=4.63977871\,\mathrm{meV},
+m_\beta=\sqrt{21.37579266}\,\mathrm{meV}
+=4.62339623\,\mathrm{meV},
 \qquad
-\frac{m_\beta}{\Sigma_\nu}=0.15202822.
+\frac{m_\beta}{\Sigma_\nu}=0.15149142.
 $$
 
 On the oscillation-anchored branch, the common ratios give
@@ -6734,11 +6877,11 @@ $$
 (m_1,m_2,m_3)
 =(0.274280612,8.762647178,49.528529454)\,\mathrm{meV}.
 $$
-Their sum is $58.565457244\,\mathrm{meV}$. Substitution of these masses into the same beta-decay formula gives
+Their sum is $58.565457244\,\mathrm{meV}$. Substitution of these masses and the same unrounded angles into the beta-decay formula gives
 $$
 m_\beta
-=\sqrt{0.05087881+23.09729301+56.12595832}\,\mathrm{meV}
-=8.90360209\,\mathrm{meV}.
+=\sqrt{0.05089385+23.09950141+55.56490886}\,\mathrm{meV}
+=8.87216457\,\mathrm{meV}.
 $$
 Rounding yields the two separately displayed sets. ∎
 
@@ -6856,8 +6999,8 @@ No truncated Baker-Campbell-Hausdorff series is used in this conditional arithme
 
 |Quantity |Theory|Experiment |Pull |
 |:------------------|:-----|:------------|:-----|
-|$\theta_{23}$ |47.4° |$48.33^{+0.87}_{-1.21}$° |$-0.77\sigma$|
-|$\sin^2\theta_{23}$|0.542 |$0.558^{+0.015}_{-0.021}$|$-0.77\sigma$|
+|$\theta_{23}$ |47.36340764° |$48.33^{+0.87}_{-1.21}$° |$-0.80\sigma$|
+|$\sin^2\theta_{23}$|0.54120247 |$0.558^{+0.015}_{-0.021}$|$-0.80\sigma$|
 
 ∎
 
@@ -6983,7 +7126,7 @@ $$
 |Quantity |Theory|Experiment |Pull |
 |:------------------|:-----|:------------|:-----|
 |$\theta_{12}$ |33.7° |33.6° ± 0.8° |+0.12σ|
-|$\sin^2\theta_{12}$|0.308 |0.307 ± 0.013|+0.08σ|
+|$\sin^2\theta_{12}$|0.30780973 |0.307 ± 0.013|+0.06σ|
 
 ∎
 
@@ -7043,35 +7186,42 @@ QED
 
 ### T.24.23 Jarlskog Invariant
 
-**Theorem T.24.23** (Leptonic Jarlskog Invariant). *The CP-violating Jarlskog invariant is:*
+**Theorem T.24.23** (Leptonic Jarlskog Invariant). *On the conditional mixing branch of Theorems T.24.19–T.24.22, the leptonic Jarlskog invariant is*
+$$
+J_{CP}
+=
+c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}\sin\delta_{CP}
+=
+-0.0268414194.
+$$
 
-$$J_{CP} = c_{12}s_{12}c_{23}s_{23}c^2_{13}s_{13}\sin\delta_{CP}$$
-
-*Proof.* Computing with derived parameters:
-
-|Parameter |Value |
-|:-------------------------------|:-----|
-|$c_{12} = \cos(33.7°)$ |0.832 |
-|$s_{12} = \sin(33.7°)$ |0.555 |
-|$c_{23} = \cos(47.4°)$ |0.677 |
-|$s_{23} = \sin(47.4°)$ |0.736 |
-|$c_{13} = \cos(8.7°)$ |0.988 |
-|$s_{13} = \sin(8.7°)$ |0.151 |
-|$\sin\delta_{CP} = \sin(232.5°)$|−0.793|
-
-**Angular Coefficient:**
-$$c_{12}s_{12}c_{23}s_{23}c^2_{13}s_{13} = 0.832 \times 0.555 \times 0.677 \times 0.736 \times 0.977 \times 0.151 = 0.03394$$
-
-**Jarlskog Invariant:**
-$$\boxed{J_{CP} = 0.03394 \times (-0.793) = -0.0269 \approx -0.027}$$
-
-**Experimental Comparison** (Particle Data Group 2024):
-
-|Quantity|Theory|Experiment |Pull |
-|:-------|:-----|:-------------|:-----|
-|$J_{CP}$|−0.027|−0.030 ± 0.010|+0.30σ|
-
-∎
+*Proof.* Use the unrounded upstream angle outputs
+$$
+(\theta_{12},\theta_{23},\theta_{13},\delta_{CP})
+=
+(33.69735528^\circ,47.36340764^\circ,8.65607149^\circ,232.5^\circ).
+$$
+They give
+$$
+c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}
+=0.0338328687127,
+$$
+and
+$$
+\sin\delta_{CP}
+=\sin(232.5^\circ)
+=-0.793353340291.
+$$
+Therefore
+$$
+\boxed{J_{CP}=-0.0268414194049}.
+$$
+Using the displayed comparison value $-0.030\pm0.010$, the diagonal standardized residual is
+$$
+\frac{-0.0268414194-(-0.030)}{0.010}
+=+0.315858\ldots,
+$$
+which rounds to $+0.32\sigma$. This comparison is subject to the likelihood and covariance caveat of Section T.24.26. ∎
 
 -----
 
@@ -7097,47 +7247,47 @@ m_1c_{12}^2c_{13}^2
 +m_3s_{13}^2e^{i(\alpha_{31}-2\delta)}
 \right|.
 $$
-Using the internally normalized masses, $\theta_{12}=33.7^\circ$, $\theta_{13}=8.7^\circ$, $\alpha_{21}=0$, $\alpha_{31}=\pi$, and $\delta=232.5^\circ$ gives
+Using the internally normalized masses, the unrounded angle outputs $\theta_{12}=33.69735528^\circ$ and $\theta_{13}=8.65607149^\circ$, the assignment $\alpha_{21}=0$, $\alpha_{31}=\pi$, and the existing branch value $\delta=232.5^\circ$ gives
 $$
-\boxed{m_{\beta\beta}=1.72041\,\mathrm{meV}}.
+\boxed{m_{\beta\beta}=1.71723393\,\mathrm{meV}}.
 $$
-This value is conditional on both the phase assignment and the internal absolute-scale branch.
+This value is conditional on the Majorana-phase assignment and the internal absolute-scale branch.
 
-*Proof.* With the unrounded masses of Theorem T.24.15 and the stated angles, the magnitudes of the three summands are
+*Proof.* With the unrounded masses of Theorem T.24.15, the three summand magnitudes are
 $$
-m_1c_{12}^2c_{13}^2=0.09666591\,\mathrm{meV},
-$$
-$$
-m_2s_{12}^2c_{13}^2=1.37359052\,\mathrm{meV},
+m_1c_{12}^2c_{13}^2=0.09669449\,\mathrm{meV},
 $$
 $$
-m_3s_{13}^2=0.59052714\,\mathrm{meV}.
+m_2s_{12}^2c_{13}^2=1.37372185\,\mathrm{meV},
 $$
-The first two phases vanish. The third phase is
+$$
+m_3s_{13}^2=0.58462408\,\mathrm{meV}.
+$$
+The first two phases vanish, while
 $$
 \alpha_{31}-2\delta
 =180^\circ-465^\circ
 =-285^\circ
 \equiv75^\circ\pmod{360^\circ}.
 $$
-Therefore the complex sum has real and imaginary parts
+Consequently
 $$
 \operatorname{Re}z
-=0.09666591+1.37359052+0.59052714\cos75^\circ
-=1.62309610\,\mathrm{meV},
+=0.09669449+1.37372185+0.58462408\cos75^\circ
+=1.62172819\,\mathrm{meV},
 $$
 $$
 \operatorname{Im}z
-=0.59052714\sin75^\circ
-=0.57040541\,\mathrm{meV}.
+=0.58462408\sin75^\circ
+=0.56470350\,\mathrm{meV}.
 $$
-Taking the modulus gives
+Thus
 $$
 m_{\beta\beta}
-=\sqrt{(1.62309610)^2+(0.57040541)^2}\,\mathrm{meV}
-=1.72040788\,\mathrm{meV},
+=\sqrt{(1.62172819)^2+(0.56470350)^2}\,\mathrm{meV}
+=1.71723393\,\mathrm{meV}.
 $$
-which rounds to the stated value. ∎
+∎
 
 -----
 
@@ -7164,10 +7314,10 @@ which rounds to the stated value. ∎
 |$\theta_{13}$ |8.7° |8.54° ± 0.12° |Diagonal residual only|Conditional calibrated model|
 |$\sin^2\theta_{13}$ |0.0226 |0.0220 ± 0.0007 |Diagonal residual only|Conditional calibrated model|
 |$\delta_{CP}$ |232.5° |230° ± 36° |Diagonal residual only|Conditional holonomy model|
-|$J_{CP}$ |−0.027 |−0.030 ± 0.010 |Diagonal residual only|Conditional mixing/phase model|
+|$J_{CP}$ |$-0.0268414$ |−0.030 ± 0.010 |Diagonal residual only|Conditional mixing/phase model|
 |$\sum m_\nu$|0.030519194 eV|<0.12 eV|Bound comparison|Conditional branch output|
-|$m_\beta$|4.63978 meV|—|—|Conditional branch output|
-|$m_{\beta\beta}$|1.72041 meV|<50 meV|Bound comparison|Conditional Majorana-phase model|
+|$m_\beta$|4.62340 meV|—|—|Conditional branch output|
+|$m_{\beta\beta}$|1.71723 meV|<50 meV|Bound comparison|Conditional Majorana-phase model|
 
 **Statistical Summary:** The displayed standardized residual sum is a diagonal, correlation-ignoring diagnostic. It is not an inferential $\chi^2$ statistic, and no degrees-of-freedom claim is made, unless a predeclared row set, joint likelihood, covariance matrix, theory-error model, fitted-parameter count, and profiling rule are supplied.
 
@@ -7244,11 +7394,10 @@ Falsified if: Inverted Hierarchy confirmed at > 5σ significance.
 
 |Observable |Prediction|3σ Range |Falsification |
 |:------------------|:---------|:------------------------------------|:-------------------------------------------|
-|$\sin^2\theta_{23}$|0.541 |0.478 – 0.604 |Outside range at > 3σ |
-|$\delta_{CP}$ |232.5° |160° – 305° |Outside range at > 3σ |
-|$\sum m_\nu$|0.0305192 eV|<0.10 eV|Conditional absolute-scale projection; oscillation branch already nonclosing|
-|$m_{\beta\beta}$|1.72041 meV|< 10 meV (below next-gen sensitivity)|Observation at LEGEND-1000/nEXO falsifies NH|
-
+|$\sin^2\theta_{23}$|$0.5412$|$0.478$–$0.604$|Falsified if the measured value lies outside this range at $>3\sigma$; the branch value currently lies inside it|
+|$\delta_{CP}$|$232.5^\circ$|$160^\circ$–$305^\circ$|Falsified if the measured value lies outside this range at $>3\sigma$; the branch value currently lies inside it|
+|$\sum m_\nu$|$0.0305192\,\mathrm{eV}$|$<0.10\,\mathrm{eV}$|Conditional absolute-scale projection, falsified by an established $\sum m_\nu>0.10\,\mathrm{eV}$; the internal splittings remain nonclosing|
+|$m_{\beta\beta}$|$1.71723\,\mathrm{meV}$|$<10\,\mathrm{meV}$|Conditional Majorana-phase output, falsified by a confirmed $m_{\beta\beta}$ signal at LEGEND-1000 or nEXO sensitivity|
 **Experimental Timeline:**
 
 |Experiment |Years |Sensitivity |
@@ -9560,7 +9709,7 @@ For Step 7, the complete record includes the specified RG system and, on every r
 | top-sector normalization $y_t(\mu_G)=1$ | boundary normalization | branch boundary condition | T2 | absolute Yukawa scale and seesaw normalization |
 | Majorana A₂ geometry and anchored neutrino reading | branch geometry | branch/model layer as recorded in Proposition T.24.28 | T2 | neutrino mass hierarchy and PMNS geometry |
 | type-I seesaw and $M_R=\mu_G$ identification | sector-linking identification | conditional branch input | T2 | absolute light-neutrino masses |
-| CKM/PMNS Berry-loop and CP profile $\mathcal B$ | PhenomenologicalKernel / ThresholdData | branch-fixed profile data | T2 for profile branch; T3 for phase-convention or extraction comparisons | CKM, PMNS, Jarlskog, baryogenesis CP factors |
+| CKM/PMNS CP-loop, response, and profile data $\mathcal B$ | PhenomenologicalKernel / ThresholdData | branch-fixed loop, response, orientation, and profile data | T2 for response/profile branches; T3 for phase-convention or extraction comparisons | CKM, PMNS, Jarlskog, baryogenesis CP factors |
 | common-scale quark reductions | SchemeScale / EmpiricalInput for comparison | comparison convention, not derivation input | T3 | quark-ratio validation tables |
 | baryogenesis washout and thermal factors | PhenomenologicalKernel | Appendix Y model layer unless separately derived | T2, with T3 only for observational extraction | $\eta_B$ comparison |
 

@@ -135,12 +135,12 @@ Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\
 
 ## V.2 Certificate-Conditional Derivation of $\alpha_{\mathrm{em}}$ on the Appendix Z Branch
 
-This section derives the Appendix Z fine-structure value conditionally on its registered branch and matching data. The inherited package includes the PCE-attractor conditions of Definition 15a, the minimal Hilbert-carrier and rank-two active-projector branches, the unit Predictive-Ward normalization of Theorem Z.14, the unit-interface-response specialization $c_{\mathrm{int}}=1$ of Theorem Z.17, the separable curvature-response branch of Theorem Z.25, and the column-covariance branch of Lemma Z.24a. Once these antecedent certificates are supplied, the displayed spectral and coupling values are deductive consequences of the cited theorems. No coefficient is adjusted to comparison data within this declared package.
+This section evaluates the Appendix Z fine-structure value conditionally on its registered branch and matching data. The inherited package includes the PCE-attractor conditions of Definition 15a, the minimal Hilbert-carrier and rank-two active-projector branches, the unit Predictive-Ward normalization of Theorem Z.14, the independent unit-interface-response specialization $c_{\mathrm{int}}=1$ of Theorem Z.17, the independent democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, which Lemma Z.24a does not derive, the normalized Chern-flux branch of Lemma Z.14, the separable curvature-response branch of Theorem Z.25, the electromagnetic-projection branch, the $SU(2)$ transport ansatz of Lemma Z.13, and the residual gate. Once those antecedents are supplied, the remaining evaluation is arithmetic.
 
 ### V.2.1 Structural and Branch Inputs
 
 - **MPU Hilbert Space Dimension:** Theorem 23 gives $d_0\ge8$ from Hilbert distinguishability; Theorem Z.2 gives $d_0=8$ only on the active-dimension-saturation branch.
-- **Structural Binary Reference:** $\varepsilon_0=\ln2$ nats is the log-cardinality of the registered binary verification quotient (Definition 28; Lemma J.1).
+- **Structural Binary Reference:** $\varepsilon_0=\ln2$ nats is the log-cardinality of the registered binary verification quotient (Definition 28; Theorem J.1).
 - **Attractor Conditions:** Definition 15a requires attainment, a singleton quotient minimizer, flat U(1) SLD-QFI, and the declared capacity-boundary condition.
 
 ### V.2.2 Derived Interface Spectrum on the Registered Branch

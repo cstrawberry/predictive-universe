@@ -18,7 +18,7 @@ A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses **
 
 Property R establishes a sufficient level of computational sophistication for the kind of self-referential reasoning that leads to the SPAP paradoxes. Property R emerges through **two complementary foundations** rigorously established in **Appendix A.0**: (I) **Logical Necessity** (§A.0.2), which demonstrates that Property R follows from the predict-verify architecture once the Logical-Structural Assumptions of Appendix A are made explicit; and (II) **Physical Instantiation** (§A.0.3-A.0.5), which demonstrates how this abstract capacity manifests in finite resource systems through POP/PCE optimization dynamics.
 
-The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle together with the stated Logical-Structural Assumptions, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks, each with minimal capacity $K_0 = 3$ bits, achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This physical realization is conditional on the refresh, reduced-cost, Dominant Cost Convexity, and robustness hypotheses of Theorem A.0.2, including a certified stationary point $p_{\mathrm{err}}^*<1/2$, and on either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (§A.0.4; Definition A.0.1q) or an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that supplies the same entries on the protected windows (Definition A.0.1q.1; Theorem A.0.2a). Full Effective Operational Property R additionally requires the working-memory, protected-gate, code-overhead, and finite circuit-execution resources stated in Theorem A.0.6. For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use the following finite subcapacity of Property R: representation of coded systems and predictors, simulation of the nominated predictor on coded inputs, predicate evaluation of the retained binary or threshold outcome, finite Boolean post-processing, logical memory, and uniform finite-program composition. Appendix A.0.2 derives this subcapacity from composition closure, logical memory, and uniform specification; Theorem A.0.1 and Corollary A.0.1 give the finite circuit/program realization; the proofs of Theorems A.1.1 and A.1.3 supply the deterministic and probabilistic diagonal constructions used in Theorems 10–11. This finite diagonal-closure subcapacity is weaker than total internal reflexive self-closure, which is excluded by Appendix A.6.
+The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle together with the stated Logical-Structural Assumptions, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks whose units lie on Theorem 15's (O1)–(O3), (FC) realization class and carry its three-bit visited-context capacity can achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This physical realization is conditional on the refresh, reduced-cost, Dominant Cost Convexity, and robustness hypotheses of Theorem A.0.2, including a certified stationary point $p_{\mathrm{err}}^*<1/2$, and on either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ (§A.0.4; Definition A.0.1q) or an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that supplies the same entries on the protected windows (Definition A.0.1q.1; Theorem A.0.2a). Full Effective Operational Property R additionally requires the working-memory, protected-gate, code-overhead, and finite circuit-execution resources stated in Theorem A.0.6. For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use the following finite subcapacity of Property R: representation of coded systems and predictors, simulation of the nominated predictor on coded inputs, predicate evaluation of the retained binary or threshold outcome, finite Boolean post-processing, logical memory, and uniform finite-program composition. Appendix A.0.2 derives this subcapacity from composition closure, logical memory, and uniform specification; Theorem A.0.1 and Corollary A.0.1 give the finite circuit/program realization; the proofs of Theorems A.1.1 and A.1.3 supply the deterministic and probabilistic diagonal constructions used in Theorems 10–11. This finite diagonal-closure subcapacity is weaker than total internal reflexive self-closure, which is excluded by Appendix A.6.
 
 **4.1.3 Proposition 2 (Sufficient Conditions for Finite Operational Property R)**
 
@@ -117,6 +117,72 @@ P_{actual}(\phi_{t+1}=1)
 \quad \text{(11)}
 $$
 Exactness requires $p=P_{actual}(\phi_{t+1}=1)$. If $p>1/2$, this equality gives $p=0$, a contradiction. If $p\le1/2$, it gives $p=1$, also a contradiction. The cases exhaust the decidable threshold partition, so no exact universal predictor exists on the stated class. ∎
+
+**Theorem 11a (Diagonal Log-Score Floor of $\ln2$ Nats, or One Bit)**
+
+Under the hypotheses of Theorem 11, score each diagonal cycle with the logarithmic rule
+$$
+S(p,x)=-\ln\bigl(px+(1-p)(1-x)\bigr),
+\qquad x\in\{0,1\},
+$$
+
+Let $PE(p)$ denote the realized diagonal expected score when the predictor reports marginal $p\in[0,1]$ and the system responds by the law (11). Then
+$$
+PE(p)=
+\begin{cases}
+-\ln(1-p),&p>1/2,\\
+-\ln p,&p\le1/2,
+\end{cases}
+\qquad
+\inf_{p\in[0,1]}PE(p)=\ln2,
+$$
+and the infimum is attained uniquely at $p^*=1/2$. Consequently, under the registered logarithmic-score objective, the unique pointwise minimizer reports $p^*=1/2$ on each diagonal cycle and incurs $\ln2$ nats there. This numerical value is one bit; it is not one nat. Its equality to the separately denoted structural alphabet value $\varepsilon_0=\ln2$ is numerical and does not identify the scoring, structural, reset-heat, or entropy-production ledgers.
+
+*Proof.* By the law (11), the outcome conditional on the report is deterministic: if $p>1/2$ the outcome is $x=0$ with probability one, so the expected score is $-\ln(1-p)$, which is strictly greater than $\ln2$ because $1-p<1/2$, and equals $+\infty$ at $p=1$. If $p\le1/2$ the outcome is $x=1$ with probability one, so the expected score is $-\ln p\ge\ln2$, with equality if and only if $p=1/2$, and $+\infty$ at $p=0$. The two cases exhaust $[0,1]$, the displayed piecewise formula follows, the infimum over $[0,1]$ is $\ln2$, and it is attained only at $p^*=1/2$. A predictor that minimizes this registered diagonal log-score contribution pointwise therefore reports $p^*=1/2$ and incurs $\ln2$ nats. No conclusion about a global PCE objective follows unless that objective is separately specified to minimize this contribution independently. ∎
+
+**Principle 11b (PPI-Complete Convex SPAP Closure).** Let $X$ be a finite retained response set and let $\tau:X\to X$ be the registered reflexive response map. When a closed SPAP context requires a stationary response but $\tau$ has no pure fixed point, the physical response ledger is completed on $\Delta(X)$ and must satisfy
+$$
+q=\tau_*q.
+\tag{11b.1}
+$$
+The same requirement holds conditionally on every record $R$ retained and unchanged by the reflexive closure:
+$$
+q(\cdot\mid R=r)=\tau_*q(\cdot\mid R=r)
+\qquad(\Pr(R=r)>0),
+\tag{11b.2}
+$$
+A finer variable is response-null only when conditioning on it leaves every admitted finite response law unchanged. In particular, a selector of a retained $x\in X$ is not response-null merely because $x$ lies in a free $\tau$-orbit. Assume $R\circ\tau=R$ and either a finite or countable retained record, or interpret (11b.2) through regular conditional probabilities almost surely. Equations (11b.1)--(11b.2) are a physical closure principle; they are not consequences of the diagonal contradiction by itself.
+
+**Theorem 11b (Unique Binary SPAP Completion).** For
+$$
+X=\{0,1\},
+\qquad
+\tau(\phi)=1-\phi,
+$$
+Principle 11b has the unique invariant law
+$$
+q(0)=q(1)=\frac12.
+\tag{11b.3}
+$$
+For every retained unchanged record value $r$ of positive probability,
+$$
+q(0\mid r)=q(1\mid r)=\frac12,
+\qquad
+H_{\mathrm{Sh}}(\Phi\mid R=r)=\ln2,
+$$
+and therefore
+$$
+H_{\mathrm{Sh}}(\Phi\mid R)=\ln2.
+\tag{11b.4}
+$$
+
+*Proof.* Write $q=(x,1-x)$. Pushforward by negation gives $\tau_*q=(1-x,x)$. Invariance is equivalent to $x=1-x$, whose unique solution is $x=1/2$. The same calculation in each fixed-$r$ fibre proves the conditional statement, and the entropy is
+$$
+-2\left(\frac12\ln\frac12\right)=\ln2.
+$$
+A point mass is not invariant because negation exchanges the two points. ∎
+
+**Status.** Theorems 10–11 prove the prediction obstruction. Principle 11b is the additional physical rule selecting the convex invariant completion, Theorem 11b proves its unique binary law, and Principle 8.0c separately identifies that law with the registered single-run outcome probabilities; convergence of empirical frequencies requires a repeated-trial certificate.
 
 **4.2.4 Corollary 1 (Uniform Prediction Limit)**
 

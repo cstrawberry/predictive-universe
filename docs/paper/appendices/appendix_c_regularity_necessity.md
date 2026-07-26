@@ -711,9 +711,38 @@ The ambient set of positive-semidefinite $4\times4$ matrices with trace $C_\Sigm
 
 This local tensor result does not prove a global bi-Lipschitz atlas, fixed-radius geometric noncollapse, a global quasi-isometry, or interpolation and recovery maps; those are independent continuum-bridge hypotheses.
 
+**Lemma C.6f (Exact Fourth-Moment Isotropy and Sixth-Moment Defects of the Equal-Weight $D_4$ Shell).** Let $\Xi$ be the $M=24$ vectors of the $D_4$ root shell in $\mathbb R^4$, the signed permutations of $(1,1,0,0)$, each with $|\xi|^2=2$, taken with equal weight $1/M$. Then the fourth-moment tensor is exactly isotropic,
+$$
+\frac1M\sum_{\xi\in\Xi}\xi^i\xi^j\xi^k\xi^l
+=c_4\bigl(\delta^{ij}\delta^{kl}+\delta^{ik}\delta^{jl}+\delta^{il}\delta^{jk}\bigr),
+\qquad
+c_4=\frac{|\xi|^4}{D(D+2)}=\frac16,
+$$
+and every odd moment vanishes. The sixth-moment tensor is not isotropic: with $c_6=|\xi|^6/\bigl(D(D+2)(D+4)\bigr)=1/24$, the two independent defects are
+$$
+\frac1M\sum_\xi(\xi^1)^6-15c_6=-\frac18=-\frac1{d_0},
+\qquad
+\frac1M\sum_\xi(\xi^1)^4(\xi^2)^2-3c_6=+\frac1{24}=+\frac1M,
+$$
+in exact ratio $-3:1$. Consequently, on the equal-weight $D_4$ orbit the scalar-curvature averaging step that uses fourth moments is exact, there is no anisotropic correction at fourth-moment order, and the first anisotropy enters only through sixth moments. This lemma supplies one input to the continuum chain; the noncollapse, compactness, Mosco, recovery, and generator-core hypotheses of Theorems D.6e, C.6c, and 44a are unaffected, and vanishing defects alone give neither conclusion.
+
+*Proof.* The shell is invariant under the group $\Gamma$ of coordinate permutations and independent sign flips, and under $\xi\mapsto-\xi$; the latter annihilates every odd moment, and sign flips annihilate every even-order component in which some index appears an odd number of times. The surviving components of the fourth-moment tensor are determined by two numbers. Coordinate $1$ is nonzero on exactly the $12$ shell vectors pairing it with one of the other $3$ coordinates under $4$ sign choices, and there its value is $\pm1$, so
+$$
+\frac1M\sum_\xi(\xi^1)^4=\frac{12}{24}=\frac12,
+\qquad
+\frac1M\sum_\xi(\xi^1)^2(\xi^2)^2=\frac4{24}=\frac16,
+$$
+the second count being the $4$ sign choices on the single vector type supported on coordinates $\{1,2\}$. A $\Gamma$-invariant fully symmetric fourth-order tensor has the form $\alpha(\delta^{ij}\delta^{kl}+\delta^{ik}\delta^{jl}+\delta^{il}\delta^{jk})+\beta\,\Delta^{ijkl}$ with $\Delta$ the diagonal tensor $\Delta^{ijkl}=1$ iff $i=j=k=l$. Evaluating on $(1,1,2,2)$ gives $\alpha=1/6$, and on $(1,1,1,1)$ gives $3\alpha+\beta=1/2$, hence $\beta=0$, which is the displayed isotropy with $c_4=1/6=|\xi|^4/(D(D+2))=4/24$. For the sixth moments,
+$$
+\frac1M\sum_\xi(\xi^1)^6=\frac{12}{24}=\frac12,
+\qquad
+\frac1M\sum_\xi(\xi^1)^4(\xi^2)^2=\frac4{24}=\frac16,
+$$
+by the same counts, while the isotropic values at $|\xi|^2=2$ are $15c_6=5/8$ and $3c_6=1/8$ with $c_6=8/192=1/24$. Subtraction gives the displayed defects $-1/8=-1/d_0$ and $+1/24=+1/M$, whose ratio is $-3$; the second defect is nonzero, so the sixth-moment tensor is not proportional to the isotropic tensor. All arithmetic is exact rational arithmetic on the finite shell. The scope sentences restate which continuum-chain hypotheses this lemma does and does not touch. ∎
+
 ## C.7 Conclusion and status boundary
 
-This appendix separates local shell isotropy from global continuum closure. Theorem C.6e controls only the fixed-trace shell tensor; geometric noncollapse, measured-Gromov--Hausdorff compactness, Mosco convergence, and Cheeger-energy identification remain independent hypotheses.
+This appendix separates local shell isotropy from global continuum closure. Theorem C.6e controls only the fixed-trace shell tensor and Lemma C.6f only the exact fourth-moment shell tensor; geometric noncollapse, measured-Gromov--Hausdorff compactness, Mosco convergence, and Cheeger-energy identification remain independent hypotheses.
 
 Appendix C does not by itself construct the full AQFT net or the local-horizon KMS/Clausius bridge. Those are supplied separately by Theorem F.0 and Theorem 48a. The operational-continuum branch proves a finite-resolution manifold compression after the microscopic continuum-control defects of Theorem D.6e are included in the adaptation potential and selected by Theorem 43.5; the exact real-number continuum remains an effective completion, not an additional physical substrate.
 

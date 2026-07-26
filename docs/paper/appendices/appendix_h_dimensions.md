@@ -65,7 +65,7 @@ Using the dimensional assignments in Table H.1, we verify the dimensional homoge
     *   Equation (30) for $\dot C$: $dC/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\eta_{\text{adapt}}$ has $[\text{Complexity}]^2 [E]^{-1}$, $\Psi$ has $[E][T]^{-1}[\text{Complexity}]^{-1}$. The product $\eta_{\text{adapt}}\Psi$ has dimensions $[\text{Complexity}]^2 [E]^{-1} \times [E][T]^{-1}[\text{Complexity}]^{-1} = [\text{Complexity}][T]^{-1}$. Equation (30) is dimensionally consistent.
     *   Equation (38) for $\dot{\hat C}_{\text{target}}$: $d\hat C_{\text{target}}/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\mu_{\text{target}}$ has $[T]^{-1}$. $\hat C_{\text{target}}$ has $[\text{Complexity}]$. $(PP-PP_{op})$ is dimensionless. The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP - PP_{op})$ is dimensionally consistent
 
- The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP_{op} - PP)$ is dimensionally consistent: $[\text{Complexity}][T]^{-1} = [T]^{-1} \times [\text{Complexity}] \times 1$.
+ 
 
 *   **Law of Prediction (Equations (22)–(23))**
     *   Equation (22): $PP$ dimensionless. $\beta, \alpha$ dimensionless. $\kappa_{\text{eff}}$ dimensionless. $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $(C-C_{op})/\hat C_{\text{target}}$ is dimensionless. Exponent argument is dimensionless. Equation is dimensionally consistent.
@@ -825,9 +825,21 @@ $$
 
 **Agreement with observation:** 98% (within the $\sim 20\%$ systematic uncertainty of current empirical determinations)
 
-**Derivation Chain:**
+**Dependency Ledger:**
 $$
-\boxed{\text{SPAP} \xrightarrow{K_0=3} d_0 \ge 8 \xrightarrow{\text{minimal branch}} d_0 = 8 \xrightarrow{\varepsilon_0=\ln2\ \text{on attractor branch}} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{\text{mode-channel model}} D=4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}}}
+\boxed{
+\begin{aligned}
+(\mathrm{O1})\text{--}(\mathrm{O3})+(\mathrm{FC})
+&\xrightarrow{\text{Thm 15}}K_0=3,\ N_{\mathrm{vis}}^{\min}=8
+\xrightarrow{\text{Hilbert distinguishability; Thm 23}}d_0\ge8
+\xrightarrow{\text{same-class comparator; Thm Z.2}}d_0=8,\\
+\varepsilon_0=\ln2+\text{Theorem-Z.1 gates}
+&\longrightarrow a=2
+\xrightarrow{M=2a(d_0-a)}24
+\xrightarrow{\text{faithful shell}+K(3)=12+\text{regular }24\text{-cell}+\text{least-feasible cost}}D=4
+\xrightarrow{\text{Bridge Law}}\eta'=\frac{3}{8\sqrt3}.
+\end{aligned}
+}
 $$
 
 
@@ -849,7 +861,7 @@ The resulting branch value $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ ag
 
 The derivation is conditional on Definition H.0, the structural interpolation $w_{\mathrm{cmp}}(C)$, and the registered two-copy operating-point realization. Physical reset entropy remains a separate implementation ledger.
 
-With that bridge-law normalization fixed, the scale-dependent gravity model of Appendix I has no remaining continuously adjustable parameter.
+With that bridge-law normalization fixed, the Appendix H acceleration scale $g_0=c^2\sqrt{\Lambda}/8$ is fixed on the stated branch, and of the Appendix I model parameters only the crossover scale $L_0$ is tied to it. The amplitude $A_G$ and steepness $m$ of the Equation (I.4) interpolation remain phenomenological parameters, and the response kernel, background-subtraction prescription, covariant completion, and matching data of Appendix I remain independent model inputs or certificate entries.
 
 
 

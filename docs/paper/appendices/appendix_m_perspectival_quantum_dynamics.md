@@ -4,7 +4,7 @@
 
 This appendix provides a detailed mathematical formalism for the concepts of the Perspectival State ($S_{(s)}(t)$, Definition 24) and the 'Evolve' dynamics (Definition 27) introduced in Section 7. The purpose is to enhance the formal precision and mathematical rigor of the description of quantum states and the interaction ('Evolve'/measurement) process presented in Sections 7 and 8, demonstrating consistency with established mathematical structures and resolving long-standing foundational puzzles in quantum mechanics.
 
-We assume the validity of the foundational principles established earlier, including the Prediction Optimization Problem (POP, Axiom 1), Principle of Compression Efficiency (PCE, Definition 15), the existence of Minimal Predictive Units (MPUs, Definition 23) operating at complexity $C_{op} \ge K_0$, the emergence of the MPU Hilbert space $\mathcal{H}_0$ (Proposition 4), the Dual Dynamics model (Section 7.3.3), and importantly, the derivation of the Born rule from POP/PCE consistency principles as detailed in Appendix G (Theorem G.1.7). This appendix builds upon these results to provide a precise mathematical model for the stochastic dynamics associated with MPU interactions ('Evolve').
+We use POP, PCE, the MPU of Definition 23, the full-context response closure of Principle 5b, the invariant SPAP response ledger of Principle 11b, and the quantum closure of Principles 8.0b–8.0c and Theorem 8.0d. Theorem 8.0d supplies $\mathcal H_0\cong\mathbb C^8$, the Born trace law, and a normalized quantum instrument for every registered verification; Principle 8.0c supplies the single retained outcome of each registered run. This appendix develops the remaining perspective dynamics of those registered instruments; its kernels do not re-postulate the carrier, Born weights, or actualization law.
 
 The appendix is organized as follows:
 
@@ -77,7 +77,7 @@ The 'Evolve' process (Definition 27), triggered by an interaction $N(t)$, repres
         $$ \int_{\Sigma} G_{persp}(s' | s, k, N, \Delta t) \, d\mu(s') = 1 \quad \forall s, k, N, \Delta t \quad \text{(M.3)} $$
     *   $d\mu(s')$ is the volume element associated with the unique unit-normalized Haar measure (invariant measure) on the compact manifold $\Sigma$.
 
-This formulation rigorously separates the probability of *which* outcome occurs (governed by the derived Born rule) from the dynamics of *where* the perspective lands conditioned on that outcome (governed by the kernel $G_{persp}$).
+This formulation separates the probability assigned to the registered outcome by the Born trace rule on the independent Hilbert/effect-additivity/noncontextuality branch of Theorem G.1.7 from the conditional perspective transition kernel $G_{\mathrm{persp}}$. Neither SPAP nor PCE alone derives the Born selector, a stochastic actualization kernel, or the perspective dynamics.
 
 ### M.3.3 Properties and an Explicit Drift-Diffusion Realization of the Conditional Perspective Kernel $G_{persp}$
 
@@ -242,7 +242,7 @@ Using this mathematical framework, we provide a precise description of the quant
     $$ S_{(s'_{final})}(t_0+\Delta t) = (|\psi'_{post-actualization}\rangle, s'_{final}) \quad \text{(M.8)} $$
     where $|\psi'_{post-actualization}\rangle$ represents the state amplitude *after* actualization (often taken as the projected state $|i\rangle_{s_{meas}}$ or incorporating subsequent rapid evolution governed by $H_{int}$ during $\Delta t$), and $s'_{final}$ is the realized perspective. The outcome $i$ is definite and factual relative to this final perspective $s'_{final}$.
 
-This formalized process shows how the framework, augmented with the mathematical machinery for perspective dynamics, provides a consistent account of measurement, incorporating the derived Born rule and explaining the emergence of definite outcomes via perspective shifts without invoking amplitude collapse.
+This construction refines the closed registered instrument of Theorem 8.0d by adjoining its perspective-transition kernel. For an ideal sharp repeatable verification, Proposition 9 supplies the Lüders system operation and the Born single-run outcome probability; the normalized kernel supplies the conditional distribution of the post-event perspective. Frequency convergence additionally requires the i.i.d., exchangeable, or stationary-ergodic repeated-trial certificate of Principle 8.0c. Definite operational registration follows from Principle 8.0c, while any stronger metaphysical interpretation remains separate from the instrument theorem.
 
 **Theorem M.4a (Operational Record Consensus after Perspectival Actualization).**
 Let $K$ be the finite outcome set of a measurement interaction, and let
@@ -498,10 +498,10 @@ The PU resolution bears surface similarity to Rovelli's Relational Quantum Mecha
 | **Mathematical structure** | No explicit perspective space formalism | Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ with Riemannian structure (Definition 25, Theorem 25) |
 | **Dynamics** | No quantitative mechanism for perspective change | Explicit drift-diffusion realization of $G_{\text{persp}}$ on $\Sigma$ (Equations M.5a–b) |
 | **Consistency criterion** | Interactions establish relations (qualitative) | Bakry-Émery control yields $W_2$-contractive convergence for the constructed class (Equation M.5c) |
-| **Origin of probability** | Born rule assumed | Born rule derived from PCE optimization (Theorem G.1.7, Appendix G.1) |
+| **Origin of probability** | Born rule assumed | On the accepted carrier branch, Principle 11b fixes the invariant response ledger, Principle 8.0b and $\mathfrak C_{\mathrm{car}}$ fix the complex carrier, and Theorems 8.2–8.3 give its unique Born trace representation from normalized additive/noncontextual effect probabilities; Principle 8.0c separately supplies irreducible registered single outcomes |
 | **Temporal structure** | Time assumed | Directed time required for prediction (Theorem 4); emerges from thermodynamic irreversibility (Appendix O) |
 
-**Remark M.6.3: RQM as Limiting Case.** Relational Quantum Mechanics can be understood as capturing the interpretive content of the PU perspectival formalism when the underlying derivational structure (SPAP, PCE, MPU dynamics) is suppressed and only the relational consequences retained. The crucial distinction is that PU answers *why* quantum mechanics has a relational structure—because the framework is built from prediction, and prediction is inherently perspectival due to self-referential limitations (Corollary 1). RQM correctly identifies the relational character but lacks the foundation that makes it *necessary*.
+**Remark M.6.3: RQM as Limiting Case.** Relational Quantum Mechanics can be understood as capturing the interpretive content of the PU perspectival formalism when the underlying derivational structure (SPAP, PCE, MPU dynamics) is suppressed and only the relational consequences retained. The distinction is one of derivational route rather than certified necessity: on the declared response branch, PU represents prediction perspectivally (Corollary 1) and supplies an explicit perspective-space formalism and dynamics, while RQM takes the relational character as an interpretive starting point. PU's route is conditional on its stated branch records; it does not prove that quantum mechanics must be relational.
 
 ### M.6.6 Toward Completing the Relativistic Program
 
@@ -715,7 +715,7 @@ Accordingly, frame-relative simultaneity and perspective-relative actuality rema
 
 The resolution of Wigner's Friend via perspectival states has several implications:
 
-**1. No Heisenberg Cut Required.** The 'Evolve' process (Definition 27) is universal; it applies to all MPU interactions regardless of system size or complexity. There is no special role for consciousness, macroscopic apparatus, or "classical" measuring devices. The apparent Heisenberg cut—the division between quantum system and classical observer—is an artifact of ignoring perspective indices. When perspectives are tracked explicitly, the same 'Evolve' dynamics apply uniformly, and no ad hoc boundary is needed.
+**1. No Primitive Heisenberg Cut on the Registered Instrument Branch.** On the separately assumed Hilbert/instrument/Born and actualization branch, a registered verification/update event is represented by the `Evolve` instrument of Definition 27 and Proposition 9. The same representation can be used across the qualifying implementations without inserting a size- or consciousness-based cut. This does not make every MPU interaction an actualization event and does not derive the instrument or outcome ontology from SPAP or PCE.
 
 **2. No Privileged Observers.** All perspectives $s \in \Sigma$ are equally valid; none occupies a "God's eye view" from which actuality is absolute. This democratic structure parallels the equivalence of inertial frames in special relativity. Just as no inertial frame is privileged for determining "true" simultaneity, no perspective is privileged for determining "true" outcome actuality.
 
@@ -782,7 +782,7 @@ by Definition 30 and Theorem 36. On the stricter Fisher-budget subbranch of Theo
 $$
 |\Delta P(i)|\le4\sin(\mathrm{CC}(S)/4).
 $$
-- **Statistical FTL Influence (Postulate 3, Section 10).** Because $\text{context}_S$ can involve non-local entanglement, and the CC mechanism acts on local 'Evolve' events, context changes in one part of an entangled aggregate can have statistical consequences on 'Evolve' outcomes in spacelike-separated regions—but a late-randomized Bob-marginal consequence would violate operational causality by Theorem 39c; only marginal-invariant or shared-past consequences retain the Appendix F causal branch.
+- **Statistical FTL Influence (Postulate 3, Section 10).** Because $\text{context}_S$ can involve non-local entanglement, and the CC mechanism acts on local 'Evolve' events, context changes in one part of an entangled aggregate can have statistical consequences on 'Evolve' outcomes in spacelike-separated regions—but a late-randomized Bob-marginal consequence would violate operational causality by Theorem 39c; only marginal-invariant or shared-past consequences retain the Appendix F causal branch; by Corollary 39c.1, a late-randomized Bob-marginal shift is absent from and would falsify that branch.
 - **Consciousness-Correlated Anomalies (Section 13).** The experimental protocols in Section 13 target detection of CC effects through quantum random number generators, pre-registered intention experiments, and neurophysiological correlates.
 
 **Physical Implementation.** The physical realization of the mapping $\mathcal{M}$ is analyzed in Appendix L. The dominant channel is electromagnetic: coherent charge oscillations within the aggregate generate classical fields that modulate local MPU interaction parameters (Theorem L.2). This electromagnetic channel dominates gravitational effects by a factor $\mathcal{R} \sim 10^{36}$ (Proposition L.5). However, gravitational self-limitation (Appendix S) provides an upper bound on achievable CC, as the stress-energy associated with generating high-CC contexts can disrupt the quantum coherence required for the effect.

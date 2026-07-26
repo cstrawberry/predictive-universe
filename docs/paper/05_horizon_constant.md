@@ -6,7 +6,7 @@ Having established the logical limits on prediction (SPAP, Theorem 10; Theorem 1
 
 **Definition 13 (Def 13): Operational Threshold ($C_{op}$)**
 
-Let $\mathcal{S}_{phys}$ denote the set of physically realizable system microstates consistent with the physical law set $\mathcal{L}_{phys}$. Let $\mathcal{S}_{phys}^{loop}\subseteq\mathcal{S}_{phys}$ denote the physically realizable microstates whose implemented dynamics instantiate the full adaptive Fundamental Predictive Loop (Definition 4), including the capabilities $b_m,b_p,b_v,D_{cyc}$ of Definition 5. For a microstate $\mu\in\mathcal{S}_{phys}^{loop}$, let $C_P(\mu)$ be its Predictive Physical Complexity (Equation 1), and let $f_\mu$ denote the predictive function implemented by $\mu$. Fix a relevant set of environmental variables $\mathcal{E}$ and a well‑defined accuracy functional $A(\cdot)$ (e.g., $1-\mathrm{PE}$, information gain). Let $f_{random}$ denote a baseline random‑chance predictor matched to the task. For a chosen, strictly positive accuracy margin $\epsilon_{acc}>0$,
+Let $\mathcal{S}_{phys}$ denote the set of physically realizable system microstates consistent with the physical law set $\mathcal{L}_{phys}$. Let $\mathcal{S}_{phys}^{loop}\subseteq\mathcal{S}_{phys}$ denote the physically realizable microstates whose implemented dynamics instantiate the three phases of the full adaptive Fundamental Predictive Loop (Definition 4), including the integrated capabilities $b_m,b_p,b_v$ of Definition 5. Membership in this set is stipulated by the loop dynamics; it is not inferred from above-chance accuracy or from a functional-support test. For a microstate $\mu\in\mathcal{S}_{phys}^{loop}$, let $C_P(\mu)$ be its Predictive Physical Complexity (Equation 1), and let $f_\mu$ denote the predictive function implemented by $\mu$. Fix a relevant set of environmental variables $\mathcal{E}$ and a well‑defined accuracy functional $A(\cdot)$ (e.g., $1-\mathrm{PE}$, information gain). Let $f_{random}$ denote a baseline random‑chance predictor matched to the task. For a chosen, strictly positive accuracy margin $\epsilon_{acc}>0$,
 
 $$
 \boxed{
@@ -15,9 +15,15 @@ $$
 \quad \text{(15)}
 $$
 
-If the set in (15) is empty, define $C_{op}:=\infty$. Otherwise, since $C_P(\mu)\ge 0$ for physically realizable $\mu$ and the set is bounded below, the infimum exists in $[0,\infty)$. For independent trial scores $Z_1,\ldots,Z_T\in[0,1]$ with a declared null mean and one-sided error probability $\delta\in(0,1)$, Hoeffding's inequality (Hoeffding, 1963) gives
+If the set in (15) is empty, define $C_{op}:=\infty$. Otherwise, since $C_P(\mu)\ge0$ for physically realizable $\mu$ and the set is bounded below, the infimum exists in $[0,\infty)$. For independent trial scores $Z_1,\ldots,Z_T\in[0,1]$, let
 $$
-\Pr\!\left[\frac1T\sum_{t=1}^T Z_t-\mathbb E[Z_t]\ge\epsilon_{acc}\right]
+\bar\mu_0:=\frac1T\sum_{t=1}^T\mathbb E_0[Z_t]
+$$
+be their declared average null mean, and let $\delta\in(0,1)$ be the one-sided error probability. Hoeffding's inequality (Hoeffding, 1963) gives
+$$
+\Pr_0\!\left[
+\frac1T\sum_{t=1}^T Z_t-\bar\mu_0\ge\epsilon_{acc}
+\right]
 \le e^{-2T\epsilon_{acc}^2},
 $$
 so $\epsilon_{acc}=\sqrt{\log(1/\delta)/(2T)}$ suffices. Dependent trials require a separately stated mixing, martingale, or other concentration hypothesis.
@@ -69,8 +75,53 @@ Any system instantiating the adaptive Fundamental Predictive Loop of Definition 
 
 *Proof.* Definition 4 requires model maintenance, prediction generation, verification, and adaptation. Model maintenance is not operationally defined unless at least two relevant internal alternatives can be distinguished; this is $b_m$. Prediction generation requires a forecast representation to exist before the corresponding outcome; this is $b_p$. Verification and adaptation require joint access to the stored forecast and realized outcome, followed by an outcome-conditioned transition; this is $b_v$. If any one of these capabilities is absent, the corresponding required stage of Definition 4 is absent, so the system does not instantiate that adaptive loop. Therefore every realization of the loop has all three capabilities. ∎
 
+**Principle 5b (Response-Independent Full-Context Closure).** A fundamental full-context MPU carries a joint registered readout
+$$
+r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
+$$
+whose distinct values are perfectly distinguishable in one registered cycle. For each $j\in\{m,p,v\}$ the branch supplies an admissible endomorphism $F_j:\mathcal S_{\mathrm{vis}}\to\mathcal S_{\mathrm{vis}}$; every finite composition of these endomorphisms is admissible, and after every intermediate state
+$$
+r_i(F_j s)=
+\begin{cases}
+1-r_j(s),&i=j,\\
+r_i(s),&i\ne j.
+\end{cases}
+\tag{5b.1}
+$$
+The readouts are typed indicators of the three loop roles. Identifying them with Theorem 15's current-state, stored-prediction, and phase registers requires a separate response-preserving overlap map. A hardwired realization lies outside this full-context branch.
 
-The Horizon Constant $K_0$ will represent the minimal physical complexity required to instantiate these capabilities so that the SPAP self-referential loop is encodable. The theorem below then shows that the same three-bit register size also supports a basic super-chance predictive mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$.
+**Lemma 5b (Full Context from Independent Register Roles).** Principle 5b implies
+$$
+r(\mathcal S_{\mathrm{vis}})=\{0,1\}^3,
+\qquad
+r=(r_m,r_p,r_v),
+$$
+and hence $|\mathcal S_{\mathrm{vis}}|\ge8$.
+
+*Proof.* Fix $s_0$. For any desired triple, apply once, in any order, exactly those admissible interventions whose coordinates differ from $r(s_0)$. Equation (5b.1) holds after every intermediate state and toggles only the selected coordinate, so every triple is reached. Surjectivity and the cardinality bound follow. ∎
+
+**Principle 5c (Operational Online-Capacity Accounting).** Define $C_{\mathrm{on}}(\mu)$ as the peak base-two log-cardinality of the jointly perfectly distinguishable retained register used by one registered cycle. If that register has $N_{\mathrm{dist}}(\mu)$ distinguishable contexts, then by definition
+$$
+C_{\mathrm{on}}(\mu)\ge\log_2N_{\mathrm{dist}}(\mu).
+\tag{5c.1}
+$$
+This online resource is not the program-description complexity $C_P$ of Equation (1): a short program can generate a large compressible register. Any inequality relating $C_P$ or $C_{op}$ to $C_{\mathrm{on}}$ requires Corollary 3's separately registered complexity--capacity bridge.
+
+**Theorem 15a (Independent Full-Context Register and Carrier Bound).** Principles 5b--5c imply
+$$
+|\mathcal S_{\mathrm{vis}}|\ge8,
+\qquad
+C_{\mathrm{on}}(\mu)\ge3
+$$
+for every implementation in their intervention-closed full-context class. This is independent of Theorem 15's minimum over the (O1)--(O3), (FC) SPAP-register class. On a branch supplying a response-preserving overlap map that identifies the three typed Principle-5b readouts with Theorem 15's current-state, stored-prediction, and phase responses, the two eight-state lower bounds coincide and Theorem 15 separately gives $K_0=3$.
+
+On Principle 8.0b's sharp joint complex-carrier branch, the eight perfectly distinguishable outcomes give $d_0\ge8$. If a faithful $\mathbb C^8$ representative realizes the complete retained response presheaf and every higher-dimensional representative of that same presheaf has strictly larger total PCE potential after response-null quotienting, the selected carrier has $d_0=8$.
+
+*Proof.* Lemma 5b gives the independent eight-context bound, and Principle 5c gives $C_{\mathrm{on}}(\mu)\ge\log_2 8=3$ for each member of this class. These statements do not take an infimum over Definition 13's unrestricted qualifying set. Theorem 15 proves its own eight-state attainment under (O1)--(O3) and (FC); the overlap map is what permits the two typed ledgers to be compared. On the carrier branch, perfect distinguishability gives eight orthogonal supports, hence $d_0\ge8$. The faithful same-presheaf $\mathbb C^8$ comparator attains the bound, and the strict total-cost hypothesis excludes every larger same-presheaf representative. ∎
+
+**Remark 5.2.1a (Class Membership, Performance, and SPAP Scope).** Proposition 5.2.1 is a necessary-condition statement for systems already assumed to instantiate Definition 4. It does not imply that every above-chance predictor is an adaptive loop: a fixed forecast rule can exceed a matched chance baseline without performing online verification or update. Nor does the proposition imply that nulling one capability sends performance to chance. Response activity, loss of a registered qualifying margin, and collapse to a baseline are the three distinct conclusions formalized in Definition 5a and Proposition 5a. The Horizon Constant is proved by Theorem 15 on its (O1)--(O3), (FC) class. Principles 5b--5c give an independent three-bit capacity bound for their intervention-closed full-context class; the two results coincide only on the response-preserving overlap branch of Theorem 15a. Theorem 15(3) proves predictive existence on $\mathcal E_{\mathrm{basic}}(\gamma)$ rather than a universal lower bound for every predictive system.
+
+The Horizon Constant $K_0=3$ is the minimum proved by Theorem 15 in its explicitly typed SPAP-register class. The theorem below gives its eight-state realization and basic super-chance predictive mode; Theorem 15a records when the separate Principle-5b context cube represents the same response data.
 
 **5.2.2 Theorem 15 (Horizon Constant: Minimal Complexity for SPAP Encodability and Minimal Prediction)**
 
@@ -99,19 +150,23 @@ $$
 s_t \;=\; \Pr\!\big[X_{t+1}=X_t\ \big|\ \mathcal{H}_t\big].
 $$
 
-For $\gamma>0$, define
+For $0<\gamma\le\tfrac12$, define
 
 $$
 \mathcal{E}_{\mathrm{basic}}(\gamma)\;=\;\Big\{\text{stationary ergodic binary processes}\ :\ \liminf_{T\to\infty}\ \frac1T\sum_{t=0}^{T-1}\mathbb{E}[s_t]\ \ge\ \tfrac12+\gamma\Big\}.
 $$
 
-For the declared $\gamma>0$, this class includes an i.i.d. Bernoulli($p$) process precisely when
+For the declared $0<\gamma\le\tfrac12$, this class includes an i.i.d. Bernoulli($p$) process precisely when
 $$
 p^2+(1-p)^2
 =\frac12+2\left(p-\frac12\right)^2
 \ge\frac12+\gamma,
 $$
-and it includes a stationary symmetric two-state Markov chain with persistence $q$ precisely when $q\ge\frac12+\gamma$.
+and it includes the usual uniform-stationary ergodic symmetric two-state Markov chain with persistence $q$ precisely when
+$$
+\frac12+\gamma\le q<1.
+$$
+At $q=1$ the uniform-stationary chain is not ergodic and therefore is not an element of $\mathcal E_{\mathrm{basic}}(\gamma)$; degenerate absorbing stationary realizations, if admitted, must be stated separately.
 
 Assume (O1)–(O3) and the following full-context hypothesis:
 

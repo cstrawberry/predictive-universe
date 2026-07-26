@@ -60,24 +60,30 @@ The coordinate $\hat C_{\mathrm{target}}$ is the internal task scale of Definiti
 *   **Hypothesis I.1:** On a branch carrying an external innovation certificate for Definition 21, low-density sparse regions have a lower externally measured exploitable-pattern scale than high-density regions, and the certificate identifies this difference with a lower effective $\hat C_{\mathrm{target}}(R)$ within its registered error. Without that certificate, sparsity alone does not determine the internal target coordinate.
 
 
-*   **Corollary I.2:** Under Hypothesis I.1 and the Law of Prediction (Equation 22), achieving high predictive performance $PP$ requires allocating complexity $C(PP, \hat C_{\mathrm{target}})$ proportional to $\hat C_{\mathrm{target}}$ (Equation 23). Equation (I.2) determines the optimal saturation complexity $\bar C_{\mathrm{agg,sat}}(\hat C_{\mathrm{target}})$. A lower $\hat C_{\mathrm{target}}$ in sparse environments implies that the PCE optimization balancing benefit and cost will lead to a lower saturation threshold $\bar C_{\mathrm{agg,sat}}$ compared to dense regions. The system saturates its complexity investment sooner because there are fewer exploitable predictive patterns to justify higher costs.
+**Corollary I.2 (Conditional Target-Scale Comparative Statics).** Write $B(C;\theta)=\Gamma_0\partial_CPP(C,\theta)$ with $\theta=\hat C_{\mathrm{target}}$, and let the marginal-cost function $M(C)$ be common across the compared environments. In addition to Proposition I.2, assume that $\theta_1\le\theta_2$ implies $B(C;\theta_1)\le B(C;\theta_2)$ for every $C$, with strict inequality at any interior crossing. Then the unique saturation optimizers obey $C^*(\theta_1)\le C^*(\theta_2)$.
 
-**I.5 Parameter-Relaxation Mechanism due to Early Saturation**
+*Proof.* At $C^*(\theta_2)$ one has $B(C^*(\theta_2);\theta_1)\le M(C^*(\theta_2))$. Since $B(\cdot;\theta_1)-M$ is strictly decreasing, its zero cannot lie to the right. Without this monotone-differences premise, Hypothesis I.1 and Equation (23) do not order the PCE optimizers. ∎
 
-When the MPU network in sparse regions saturates at a lower complexity level $\bar C_{\mathrm{agg,sat}}$ (Corollary I.2), the selection pressure on the microscopic MPU parameters governing network structure and interaction efficiency is altered. Specifically, PCE (Definition 15) drives configurations that minimize costs. If the density of predictive information does not warrant maintaining high complexity, the pressure to maintain the high-fidelity, densely packed configurations optimal for high complexity is reduced. This drives a "relaxation" of the effective microscopic MPU parameters:
+**I.5 Conditional Parameter-Relaxation Mechanism after Early Saturation**
 
-*   **Effective Microscopic Spacing $\delta(R)$ increases:** Maintaining a tight packing (small $\delta$) is costly (e.g., propagation costs $\propto 1/\delta^2$ or $\ln \delta$ type terms). If the predictive benefit from close spacing is low, PCE favors larger effective spacing, reducing propagation cost.
-*   **Effective Channel Capacity $C_{\max}(R)$ decreases:** High channel capacity requires maintaining high-fidelity evolution, i.e. a small refresh weight $p$ in the decomposition $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ (equivalently $f_{RID}=1-p$ close to $1$, Lemma E.1). In sparse environments where additional fidelity yields little predictive benefit, PCE can favor allowing a larger refresh component (and thus smaller $C_{\max}$), while remaining consistent with the irreducible per-cycle entropy floor $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31).
+Assume a registered optimizer map $(\theta\mapsto\delta^*(\theta),p^*(\theta))$ for the complete PCE potential, with $\delta^*$ nonincreasing and $p^*$ nonincreasing in target scale, and assume the selected channel family has actual capacity $C(\mathcal E_p)$ nonincreasing in $p$ on the admitted interval. These are branch data to be proved for a concrete microscopic model; Theorem E.2 supplies an upper bound, not monotonicity of the actual capacity or of the optimizer. Under these assumptions, the lower sparse-region target of Corollary I.2 gives larger $\delta^*$, larger $p^*$, and lower $C(\mathcal E_{p^*})$. A small-spacing cost may, for example, scale as $1/\delta^2$ or $\ln(\delta_{\mathrm{ref}}/\delta)$ on a declared interval; $\ln\delta$ alone has the opposite monotonicity.
 
-These parameter variations, $\delta(R)$ increasing and $C_{\max}(R)$ decreasing in sparse, large-scale regions ($R \gg L_0$), combine to raise the factor $\eta\delta^2/C_{\max}$ in Equation (I.1).
+*   **Effective spacing:** $\delta^*$ increases on the assumed monotone optimizer branch.
+*   **Effective channel capacity:** $C(\mathcal E_{p^*})$ decreases only under the assumed capacity monotonicity.
+
+On this branch, the two variations raise $\eta(\delta^*)^2/C(\mathcal E_{p^*})$ in Equation (I.1).
 
 **I.5.1 Crossover Scale from Information Resolution Limits**
 
 The parameter relaxation described in Section I.5 implies that the MPU network's equilibrium structure depends on the local information environment. We derive the transition scale $a_0$ from the resolution limits of the MPU in the cosmic vacuum.
 
-**Proposition I.3 (Information Resolution Threshold).**
+**Proposition I.3 (Detector-Calibrated Crossover Threshold).**
 
-If the MPU network relaxes its parameters when the local environmental information density drops below the thermodynamic threshold required to distinguish a predictive gradient against the vacuum background, then, in a de Sitter background with cosmological constant $\Lambda>0$, the crossover acceleration is uniquely determined by $\Lambda$.
+Assume an independently registered detector-and-relaxation certificate which (i) validates the Unruh and de Sitter detector temperatures for the selected operational probes and (ii) defines the relaxation crossover as their equality. Then, in a de Sitter background with $\Lambda>0$, the crossover acceleration is uniquely
+$$
+a_0=c^2\sqrt{\frac{\Lambda}{3}}.
+$$
+This is an algebraic threshold calibration; temperature equality alone does not prove gradient indistinguishability or parameter relaxation.
 
 **Physical Setup:**
 
@@ -93,7 +99,7 @@ T_U(a) = \frac{\hbar a}{2\pi c k_B}
 \tag{I.3.2}
 $$
 
-**The Crossover Criterion:** Parameter relaxation is triggered when the local Unruh temperature drops to the cosmic de Sitter temperature, rendering local gradients indistinguishable from vacuum fluctuations. Setting $T_U(a_0) = T_{dS}$:
+**The Crossover Criterion on the registered certificate branch:** By definition of that branch, the relaxation threshold is the equality $T_U(a_0) = T_{dS}$:
 $$
 \frac{\hbar a_0}{2\pi c k_B} = \frac{\hbar c}{2\pi k_B}\sqrt{\frac{\Lambda}{3}}
 $$
@@ -112,9 +118,9 @@ a_0 = c^2\sqrt{\frac{\Lambda}{3}}.
 $$
 This proves existence of a threshold acceleration with the stated value. For uniqueness, observe that for $a\ge0$ the function $T_U(a)=\hbar a/(2\pi c k_B)$ is strictly increasing in $a$, while $T_{dS}$ is a fixed positive constant when $\Lambda>0$. Therefore the equation $T_U(a)=T_{dS}$ has exactly one nonnegative solution, namely Equation (I.3.3). ∎
 
-**Physical Interpretation:**
-- For $a \gg a_0$: $T_U \gg T_{dS}$, local gradients detectable $\to$ high-fidelity channels $\to$ $G \approx G_0$
-- For $a \ll a_0$: $T_U \ll T_{dS}$, gradients masked by cosmic noise $\to$ channel relaxation $\to$ $G$ increases
+**Physical interpretation on that certificate branch:**
+- For $a\gg a_0$, the registered detector inequality is $T_U\gg T_{dS}$; the asserted high-fidelity response additionally uses the optimizer certificate.
+- For $a\ll a_0$, the registered detector inequality is $T_U\ll T_{dS}$; the asserted channel relaxation and change of effective coupling additionally use the optimizer and gravity-calibration certificates.
 
 **Numerical Estimate:** Using $\Lambda \approx 1.1 \times 10^{-52}$ m$^{-2}$ [Planck Collaboration 2020a]:
 $$
@@ -166,7 +172,7 @@ $$
 =
 \frac{d}{d\lambda}
 \left(
-\frac{a(\lambda)}{4G}+S_{\mathrm{pred}}(\lambda)
+\frac{a(\lambda)}{4G_{\mathrm{op}}}+S_{\mathrm{pred}}(\lambda)
 \right).
 \tag{I.3b.1}
 $$
@@ -182,7 +188,7 @@ for the effective metric response to a retained baryonic stress perturbation, wi
 
 **Theorem I.3c (Predictive Focusing and Susceptibility Sum Rule).** Suppose the retained horizon pencil satisfies
 $$
-\frac{1}{4G}\frac{d^2a}{d\lambda^2}
+\frac{1}{4G_{\mathrm{op}}}\frac{d^2a}{d\lambda^2}
 =
 -2\pi a(\lambda)T^{\mathrm{PU}}_{kk}
 -
@@ -223,7 +229,7 @@ $$
 $$
 \frac{d\Theta_{\mathrm{PU}}}{d\lambda}
 =
-\frac{1}{4G}\frac{d^2a}{d\lambda^2}
+\frac{1}{4G_{\mathrm{op}}}\frac{d^2a}{d\lambda^2}
 +
 \frac{d^2S_{\mathrm{pred}}}{d\lambda^2}
 \le
@@ -232,7 +238,9 @@ $$
 =-\mathcal S_{\mathrm{ch}}\le0.
 $$
 
-For the susceptibility, apply the unsubtracted Kramers-Kronig relation to $\chi_g-\chi_g(\infty)$:
+On a calibrated branch one may set $G_{\mathrm{op}}=G$; the focusing inequality itself does not perform that calibration.
+
+For the susceptibility, apply the unsubtracted Kramers--Kronig relation to $\chi_g-\chi_g(\infty)$:
 $$
 \operatorname{Re}\chi_g(0,\mathbf k)-\chi_g(\infty,\mathbf k)
 =
@@ -350,41 +358,35 @@ for fixed $v_-,v_+>0$ on retained local scales;
 
 5. the Dirichlet forms $\mathcal E_n$ converge to the limit Cheeger energy in the Mosco sense;
 
-6. on each retained cosmological averaging domain $D$, the emergent metric/channel-capacity thermodynamic field equation admits an elliptic gauge in which
+6. on each retained cosmological averaging domain $D$ with spectral gap $\lambda_1(D)>0$, the emergent metric/channel-capacity field equation admits an elliptic gauge and a dimensionless source-control certificate
 $$
-\mathrm{Ch}_D(\theta)+\langle\sigma^2\rangle_D
+\frac{1}{\lambda_1(D)}\mathrm{Ch}_D(\theta)
++
+\langle\sigma^2\rangle_D
 \le
-C_D
-\left(
-\operatorname{Var}_D(T_{\mathrm{pred}})
-+
-\dot\rho_{\mathrm{src}}
-+
-\mathfrak B_D+
+\mathcal B_D^{\mathrm{ell}}
+\left[
+\operatorname{Var}_D(T_{\mathrm{pred}}),
+\dot\rho_{\mathrm{src}},
+\mathfrak B_D,
 \mathfrak H_D
-\right)
+\right],
 \tag{I.3h.2}
 $$
-for a finite domain constant $C_D$.
+where $\mathcal B_D^{\mathrm{ell}}$ is a finite dimensionless bound in the declared normalization.
 
 **Theorem I.3i (RCD Elliptic Scale-Bridge Completion).** Let a branch carry the datum of Definition I.3h and, in addition, a discrete-to-continuum stability certificate proving that its measured Gromov-Hausdorff limit satisfies $\mathrm{RCD}^*(K,4)$ and that the Mosco limit of $\mathcal E_n$ is the Cheeger energy of $(X,d,m)$. Then the limit Cheeger energy is quadratic and
 $$
 |\mathcal Q_D^{\mathrm{PU}}|
 \le
-C_D'
-\left(
-\operatorname{Var}_D(T_{\mathrm{pred}})
-+
-\dot\rho_{\mathrm{src}}
-+
-\mathfrak B_D+
+2\mathcal B_D^{\mathrm{ell}}
+\left[
+\operatorname{Var}_D(T_{\mathrm{pred}}),
+\dot\rho_{\mathrm{src}},
+\mathfrak B_D,
 \mathfrak H_D
-\right),
+\right].
 \tag{I.3i.1}
-$$
-where
-$$
-C_D'=C_D\max\left\{\frac{2}{3\lambda_1(D)},2\right\}<\infty.
 $$
 
 *Proof.* The stability certificate identifies $(X,d,m)$ as an $\mathrm{RCD}^*(K,4)$ space and identifies the Mosco limit with its Cheeger energy. Infinitesimal Hilbertianity in the definition of an $\mathrm{RCD}$ space makes that Cheeger energy quadratic. Theorem I.3f gives
@@ -395,36 +397,39 @@ $$
 +
 2\langle\sigma^2\rangle_D.
 $$
-For nonnegative $u$ and $v$, $au+bv\le\max\{a,b\}(u+v)$. Therefore
+Since both terms are nonnegative and $2/3\le2$,
 $$
 |\mathcal Q_D^{\mathrm{PU}}|
 \le
-\max\left\{\frac{2}{3\lambda_1(D)},2\right\}
-\left(\mathrm{Ch}_D(\theta)+\langle\sigma^2\rangle_D\right).
+2\left(
+\frac{1}{\lambda_1(D)}\mathrm{Ch}_D(\theta)
++
+\langle\sigma^2\rangle_D
+\right).
 $$
-Applying (I.3h.2) gives (I.3i.1) with the displayed finite value of $C_D'$. ∎
+Applying the dimensionless certificate (I.3h.2) proves (I.3i.1). ∎
 
 **Corollary I.3j (Scale-Bridge Scope).** The predictive-stress backreaction estimate (I.3i.1) is established only on branches satisfying Definition I.3h and the discrete-to-continuum stability certificate of Theorem I.3i. If that package is unavailable, the local estimate (I.3f.1) remains available only on domains carrying items 1--3 of Definition I.3e, including the stated positive spectral gap. No estimate in terms of predictive stress and defect budgets follows without the elliptic source-control estimate.
 
 *Proof.* Theorem I.3i requires its entire branch package to derive (I.3i.1). Independently, the proof of Theorem I.3f derives (I.3f.1) from the definition of $\mathcal Q_D^{\mathrm{PU}}$ and the spectral-gap inequality; it derives (I.3f.2) only after applying (I.3e.2). Therefore the local bound has exactly the scope stated here, and the predictive-stress bound additionally requires elliptic source control. ∎
 
 
-**Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The RCD elliptic-regularity step is not presently a computed numerical closure in Appendix I. The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and an elliptic scale-bridge estimate
+**Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The RCD elliptic-regularity step is not presently a computed numerical closure in Appendix I. The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and a dimensionless elliptic scale-bridge estimate
 $$
-\mathrm{Ch}_D(\theta)+\langle\sigma^2\rangle_D
+\frac{1}{\lambda_1(D)}\mathrm{Ch}_D(\theta)
++
+\langle\sigma^2\rangle_D
 \le
-C_D
-\left(
-\operatorname{Var}_D(T_{\mathrm{pred}})
-+
-\dot\rho_{\mathrm{src}}
-+
-\mathfrak B_D+
+\mathcal B_D^{\mathrm{ell}}
+\left[
+\operatorname{Var}_D(T_{\mathrm{pred}}),
+\dot\rho_{\mathrm{src}},
+\mathfrak B_D,
 \mathfrak H_D
-\right),
+\right],
 \tag{I.3k.1}
 $$
-then the Buchert-type backreaction is bounded by the same predictive-stress and defect budgets up to the Poincaré/Cheeger constants. Without (I.3k.1), Appendix I has only a conditional analytic target, not a theorem-level numerical estimate.
+then $|\mathcal Q_D^{\mathrm{PU}}|\le2\mathcal B_D^{\mathrm{ell}}$ for the same declared arguments. Without (I.3k.1), Appendix I has only a conditional analytic target, not a theorem-level numerical estimate.
 
 In particular, no current Appendix I calculation fixes a canonical-domain value such as $C_D\approx10^{20}$ in Planck units. Such a number may be integrated only after the domain geometry, Poincaré constant, Hölder regularity scale, field-equation elliptic gauge, and finite defect budgets are computed on the same branch.
 
@@ -438,7 +443,7 @@ $$
 The system dynamically adjusts its effective local parameters $\delta$ and $C_{\max}$ to minimize this potential.
 
 *   **Analysis of Cost and Benefit:**
-    *   **Structural Cost $V_{cost}$:** This term represents the physical resources needed to maintain the network infrastructure. A denser network (smaller $\delta$) implies higher resource density and potentially higher propagation costs. Higher-fidelity channels (larger $C_{\max}$, which requires minimizing the irreversibility cost $\varepsilon$) also demand more resources (as analyzed in Appendix A.0.4, $V_{rel}$). Thus, $V_{cost}$ generally increases as $\delta$ decreases and increases as $C_{\max}$ increases.
+    *   **Structural Cost $V_{cost}$:** This term records the declared physical resources needed to maintain the network infrastructure. A denser network may carry a specified spacing cost. Channel fidelity is parametrized independently by the registered refresh decomposition $\mathcal E_N=(1-p)\Psi+pT_\sigma$: Lemma E.1 gives $f_{RID}\le1-p$, and Theorem E.2 supplies the associated strict capacity record. Appendix A.0.4's $V_{rel}$ is a reliability/error-correction cost as a function of the declared error model; it does not prove that $C_{\max}$ is monotone in reset heat. Accordingly, a constructive branch must enter an explicit increasing maintenance function $V_{\mathrm{chan}}(p)$ or $V_{\mathrm{chan}}(C_{\max})$ and verify its derivative on the admitted interval. With that registered function, $V_{cost}=V_{\mathrm{spacing}}(\delta)+V_{\mathrm{chan}}(C_{\max})$ has the monotonicity used below.
     *   **Predictive Benefit $V_{benefit}$:** The benefit arises from the network's ability to form complex predictive models of the local environment. This ability, $PP_{agg}$, depends on having a dense (small $\delta$) and high-fidelity (large $C_{\max}$) network. The total benefit is proportional to the amount of "stuff to predict," which is directly related to $\rho_b$. Thus, $V_{benefit}$ generally increases as $\delta$ decreases, increases as $C_{\max}$ increases, and increases with $\rho_b$.
 
 *   **Conditional crossover behavior:** If $V_{struct}(\delta,C_{\max};\rho_b)$ is coercive on the admissible parameter domain, has a unique minimizer for each retained value of $\rho_b$, and its minimizer moves from a small-$\delta$, large-$C_{\max}$ regime at high $\rho_b$ to a large-$\delta$, small-$C_{\max}$ regime at low $\rho_b$, then the equilibrium pair depends on $\rho_b$ and exhibits the stated crossover.
@@ -528,7 +533,7 @@ Thus a freely varying universal coupling is incompatible with those conserved so
 
 **I.7 A Multi-Scale Solution from Global PCE Optimization**
 
-The PU framework provides two distinct mechanisms to augment gravity: adapting local network parameters to modify the emergent law ($G$), or collectively reconfiguring the substrate to modify the emergent source ($T_{\mu\nu}$). The choice of mechanism is not arbitrary but is determined by a global PCE optimization that balances local resource costs against global consistency costs.
+This appendix compares two conditional phenomenological mechanisms: adapting local network parameters to modify the emergent law ($G$), and reconfiguring the substrate to modify the effective source ($T_{\mu\nu}$). Selection between them requires a preregistered common objective, admissible covariant completions, and the observational and conservation certificates stated below; PCE alone does not determine the choice.
 
 **I.7.1 Galactic Scales: Law Modification as the Low-Cost Solution**
 
@@ -551,22 +556,28 @@ $$
 $$
 satisfies $\bar\gamma(L\!\ll\!L_0)\to 0$, preserving precision‑gravity bounds.
 
-This adaptation is **environment‑dependent** and does not alter the homogeneous early‑Universe limit relevant for the CMB.
+Environmental dependence does not by itself establish early-Universe safety. A covariant cosmological completion must satisfy the CMB background and perturbation projections of Definition I.13d.
 
-**I.7.2 Cluster Scales: Non-Local Source Modification as the Necessary Solution**
+**I.7.2 Cluster Scales: Conditional Non-Local Source-Modification Branch**
 
-In the deep potential wells of galaxy clusters, the required gravitational enhancement is large. A "Law Modification" ($G(R)$) that could produce this effect is ruled out *a priori* by the global consistency requirement, as it would violate precise CMB constraints on the value of $G$ in the early universe.
+A cluster-scale modification of the gravitational law is not excluded by CMB data without specifying a covariant cosmological completion and computing its perturbation-era response. This appendix instead studies a separate phenomenological source-modification branch. Its admissibility requires the local-gravity, lensing, CMB-projection, and covariant-conservation certificates stated later in this appendix; PCE alone does not select this branch over every law-modification alternative.
 
-Within the present model, global PCE optimization favors the remaining globally consistent mechanism: "Source Modification." A purely local response ($\rho_{\rm PM}(r)\propto\rho_b(r)$) is treated as informationally suboptimal in this regime because it ignores the global potential structure. The non-local gravitational environment, characterized by the baryonic potential $\Phi_b$, is therefore modeled as the dominant feature. This is a phenomenological-kernel step until the non-local susceptibility is derived from the microscopic adaptation dynamics.
-
-Therefore, PCE **preferentially selects** a **non‑local "predictive matter" (PM) response**, a collective reconfiguration of the MPU substrate that is a functional of the baryonic potential. The minimal mathematical implementation of this required non‑local principle is an integral model:
+On this branch, the predictive-matter response is modeled by the quasistatic spatial convolution
 
 $$
 \rho_{\rm PM}(r)=A_{\rm PM}\!\int K\!\big(|\mathbf r-\mathbf r'|;L_0\big)\,\rho_b(r')\!\left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^{q}\! d^3r',
 \tag{I.7}
 $$
 
-where $K$ is a causally supported kernel representing the network's correlation length, $\Phi_b$ is the baryonic potential, $g_\ast$ is a characteristic acceleration, and $q$ is a universal nonlinearity exponent. This model, where predictive matter tracks the gravitational potential rather than baryonic density directly, naturally predicts the observed offsets between lensing and baryonic mass in systems like the Bullet Cluster. With $\int K d^3x=1$, the total PM mass is $M_{\rm PM} = A_{\rm PM} \int \rho_b(r') \left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^{q} d^3r' = A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b} M_b$; thus, once $q$ and $g_\ast$ are fixed, cluster baryon budgets constrain the combination $A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b}$ (not $A_{\rm PM}$ alone). For $q>0$, $\rho_{\rm PM}$ vanishes in homogeneous backgrounds, keeping the recombination-era coupling unchanged and satisfying CMB bounds. We take $\rho_{\rm PM}$ to arise from an effective nonlocal susceptibility (or action) so that the associated stress-energy tensor $T^{\mu\nu}_{\rm PM}$ ensures covariant conservation of the total: $\nabla_\mu (T^{\mu\nu}_{\rm b}+T^{\mu\nu}_{\rm PM})=0$.
+Here $K$ is a normalized spatial response kernel, $\int K\,d^3x=1$, $\Phi_b$ is the background-subtracted baryonic potential, $g_\ast$ is a characteristic acceleration, and $q$ is a nonlinearity exponent. Calling this equal-time kernel causal requires an additional construction as the quasistatic reduction of a retarded spacetime susceptibility. For fixed kernel and parameters the model can be tested against cluster lensing and baryonic maps; offsets in merging clusters are outputs to be calculated, not consequences of nonlocality alone.
+
+The integrated predictive-matter mass is
+$$
+M_{\rm PM}
+=A_{\rm PM}\int\rho_b(r')\left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^q d^3r'
+=A_{\rm PM}\left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^q\right\rangle_{\rho_b}M_b.
+$$
+Thus cluster baryon budgets constrain the displayed combination rather than $A_{\rm PM}$ alone. For $q>0$, the exactly homogeneous background contribution vanishes only after the declared background subtraction sets $\nabla\Phi_b=0$. This fact does not establish CMB compatibility: perturbations at recombination must satisfy the CMB projection and residual bounds of Definition I.13d. Likewise, covariant conservation does not follow from the scalar density formula (I.7); it requires the action/Ward or retarded-susceptibility conservation certificate used by Theorem I.13e.
 
 **Anisotropic stress.** The lensing–dynamics identity (I.8) assumes a metric theory with minimal coupling and negligible anisotropic stress so that both probes are sensitive to the same potential; departures from this condition are separately testable.
 
