@@ -1,6 +1,6 @@
 # 10. Causality, Locality, and Statistical Influence
 
-The introduction of the Consciousness Complexity (CC) hypothesis (Section 9), particularly its proposed mechanism involving influence on quantum probabilities (Hypothesis 3) potentially mediated by non-local entanglement (Proposition 10), necessitates a careful examination of its compatibility with fundamental principles of causality and locality. This section defines the framework's operational stance on causality, derives a strict upper bound on deterministic CC endpoint forcing, introduces the statistical faster-than-light (FTL) anomaly hypothesis and its causal-branch falsifier status The analysis uses finite-window zero-error capacity, sample-complexity bounds, information-rate bounds, and the conditional emergent Algebraic Quantum Field Theory (AQFT) structure detailed in Appendix F.
+The Consciousness Complexity hypothesis of Section 9 nominates a possible response-active modification of quantum probabilities; neither entanglement nor Hypothesis 3 constructs such a channel. This section defines PU's operational causality condition, derives a strict endpoint-forcing bound, and classifies a statistical faster-than-light anomaly as a falsifier of the sealed causal branch. The analysis uses finite-window zero-error capacity, sample-complexity and information-rate bounds, and the conditional local-net and relativistic-QFT structures of Appendix F.
 
 **10.1 Framework's Definition of Causality**
 
@@ -22,7 +22,7 @@ Equivalently, the induced context channel has zero Shannon capacity, as proved i
 
 **10.2 Derivation of the Consciousness Complexity Causality Constraint**
 
-To ensure compliance with Postulate 2, the maximum possible strength of the CC effect must be constrained.
+The endpoint bound below excludes endpoint-complete deterministic forcing. Exact compliance with Postulate 2 separately requires the full marginal-invariance condition of Theorem 39c; a magnitude bound alone does not imply it.
 
 **10.2.1 Theorem 39 (Endpoint Gate for the Bounded-Bias CC Branch)**
 
@@ -67,11 +67,11 @@ Theorem 39 is an endpoint gate, not the whole statistical-FTL consistency theore
 
 **10.3 The Statistical FTL Influence Hypothesis**
 
-While deterministic FTL signaling is ruled out by Theorem 39, the proposed CC mechanism (Hypothesis 3), acting on entangled states (Proposition 10), naturally leads to the possibility of statistical correlations across space-like separations that depend on the CC context.
+Theorem 39 excludes only one-shot endpoint-complete forcing, and Theorem 39a excludes finite-window zero-error signaling only on its common-support branch; neither proves Postulate 2. Hypothesis 3 therefore motivates, but does not derive, the following classification of possible context-dependent spacelike statistics.
 
 **10.3.1 Postulate 3 (Post 3): Statistical Influence (Three-Branch Causal Classification)**
 
-As a consequence of Hypothesis 3 (CC influence mechanism) combined with quantum entanglement (Proposition 10) within the MPU network (Hypothesis 1), the Predictive Universe framework distinguishes three operationally distinct branches of statistical influence, individuated by *which causal-temporal placement of Alice's context choice* is required to reproduce the predicted statistics. The label Postulate 3 is a branch contract, not a theorem-level consequence of the core finite predictive substrate: each branch inherits only the status supplied by its no-loop, no-zero-error, protocol, and empirical certificates.
+As a branch contract motivated by Hypothesis 3 and the availability of entangled states on Proposition 10's quantum branch, PU distinguishes three operationally distinct classes of statistical influence according to the causal-temporal placement of Alice's context choice. Postulate 3 is not a theorem-level consequence of the finite predictive substrate or of entanglement: each class inherits only the status supplied by its realization, no-loop, no-zero-error, protocol, and empirical certificates.
 
 Beyond the local CPTP and shared-past preparation branches, PU admits as a falsifiable dynamical hypothesis a family of global context-indexed state maps $\{\Phi_x\}_{x\in\{0,1\}}$ on a distributed system $AB$. For at least one registered input $\rho_{AB}$ and a late selected Alice context $x$, define
 $$
@@ -99,7 +99,7 @@ The induced binary statistical channel therefore has positive classical capacity
 $$
 I(X;Y)\ge1-h_2(p_e)>0
 $$
-for the registered repeated preparation. Every local CPTP implementation instead satisfies $\rho_B^{(0)}=\rho_B^{(1)}$ and $\delta_B=0$. Observation of $\delta_B>0$ would validate this nonlocal PU branch while falsifying the sealed local Lorentz/AQFT branch; non-observation bounds its kernel. The distinction preserves the intended PU hypothesis without attributing signaling to ordinary local entanglement.
+for the registered repeated preparation. Every local CPTP implementation instead satisfies $\rho_B^{(0)}=\rho_B^{(1)}$ and $\delta_B=0$. Only after a forward-locked realization, timing, artifact, likelihood, and sensitivity record is accepted can a replicated $\delta_B>0$ support the named nonlocal anomaly; it would then falsify the sealed local Lorentz/AQFT branch rather than validate PU generally. A null result constrains only the certified sensitivity interval. Ordinary entanglement alone supplies no such marginal shift.
 
 The three branches do not share one causal status: branches (i) and (ii) can satisfy Theorem 39c, whereas a freely selectable branch-(iii) pre-lightcone marginal shift is, by Corollary 39c.1, a preregistered falsifier of the sealed Lorentz/AQFT branch. The discrimination between branches is operational: branch (i) is tested through Alice-local and post-comparison joint-correlation analysis with Bob's marginal invariant; branch (ii) is excluded as an explanation of a Bob-marginal shift only by late randomization of Alice's context strictly after the latest event in the shared causal past of the two measurement regions; branch (iii) is the unique branch on which a Bob-marginal shift of $P(b)$ persists under late randomization. The endpoint, zero-error, sample-complexity, information-rate, chronology, and contradiction gates of Theorems 39–42 remain mandatory. They limit the admissible nonlocal maps but do not turn them into local CPTP dynamics.
 
@@ -445,12 +445,13 @@ I(C;Y_B^{N_{\mathrm{pre}}})
 \le
 N_{\mathrm{pre}}\frac{(c_0+c_1)^2}{m_0}.
 $$
-A decoder with error probability at most $\alpha_{\mathrm{err}}\in(0,1/2)$ must satisfy
+A decoder with error probability at most $\alpha_{\mathrm{err}}\in(0,1/2)$ must satisfy, in nats,
 $$
 I(C;Y_B^{N_{\mathrm{pre}}})
 \ge
-\ln2-h_2(\alpha_{\mathrm{err}}).
+(\ln2)\bigl[1-h_2(\alpha_{\mathrm{err}})\bigr],
 $$
+where $h_2$ retains the bits convention fixed earlier in this section.
 For the symmetric Bernoulli design with parameter $\delta$, Lemma 10.1 additionally gives the necessary gate
 $$
 N_{\mathrm{pre}}
@@ -480,13 +481,13 @@ I(C;Y_{B,j}\mid Y_{B,1:j-1})
 $$
 so the total information is at most $N_{\mathrm{pre}}I(C;Y_B)$. Theorem 41 bounds the per-trial term by $B_{01}^2/(4m_0)$. The triangle inequality and Theorem 36 give $B_{01}\le2(c_0+c_1)$.
 
-For any estimate $\widehat C$ based on the transcript, binary Fano inequality gives
+For any estimate $\widehat C$ based on the transcript, binary Fano inequality gives, in nats,
 $$
 H(C\mid Y_B^{N_{\mathrm{pre}}})
 \le H(C\mid\widehat C)
-\le h_2(P_e).
+\le(\ln2)h_2(P_e).
 $$
-Since $H(C)=\ln2$ and $h_2$ is increasing on $[0,1/2]$, $P_e\le\alpha_{\mathrm{err}}$ implies the displayed necessary information bound. The two Bernoulli sampling statements are exactly Lemma 10.1 with $N=N_{\mathrm{pre}}$. ∎
+Since $H(C)=\ln2$ and $h_2$ is increasing on $[0,1/2]$, $P_e\le\alpha_{\mathrm{err}}$ implies $I(C;Y_B^{N_{\mathrm{pre}}})\ge(\ln2)[1-h_2(\alpha_{\mathrm{err}})]$. The two Bernoulli sampling statements are exactly Lemma 10.1 with $N=N_{\mathrm{pre}}$. ∎
 
 **Scope note.** The finite-window budget above is a Fano and sampling gate for the CC branch. It is not an information-causality axiom for arbitrary no-signaling boxes and does not derive the Tsirelson bound by itself. The quantum CHSH/Tsirelson boundary, when invoked, must be supplied by the Hilbert/Born operator structure of Section 8, while branch-(iii) CC claims remain governed by Theorems 39a-42 and their protocol certificates.
 

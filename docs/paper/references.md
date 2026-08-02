@@ -39,9 +39,11 @@
 *   Baker, H. F. (1905). Alternants and continuous groups. *Proceedings of the London Mathematical Society*, *s2-3*, 24–47.
 *   Baker, T., Gill, J., & Solovay, R. (1975). Relativizations of the P = ? NP question. *SIAM Journal on Computing*, *4*(4), 431–442. DOI: 10.1137/0204037
 *   Bakry, D., & Émery, M. (1985). Diffusions hypercontractives. In *Séminaire de Probabilités XIX 1983/84* (Lecture Notes in Mathematics, Vol. 1123, pp. 177–206). Springer. DOI: 10.1007/BFb0075847
+*   Bakry, D., Gentil, I., & Ledoux, M. (2014). *Analysis and Geometry of Markov Diffusion Operators*. Grundlehren der mathematischen Wissenschaften, Vol. 348. Springer. DOI: 10.1007/978-3-319-00227-9
 *   Baldwin, T. (1996). There might be nothing. *Analysis*, *56*, 231–238.
 *   Bargmann, V. (1964). Note on Wigner's theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188
 *   Barnes, E. W. (1901). The theory of the double gamma function. *Philosophical Transactions of the Royal Society of London. Series A*, *196*, 265–387. DOI: 10.1098/rsta.1901.0006
+
 *   Barontini, G. (2026). Testing the problem of time with cold atoms. *Physical Review Research*, *8*, L022047. DOI: 10.1103/1h9j-df4k. arXiv:2509.07745
 *   Barthel, T., & Kliesch, M. (2012). Quasilocality and Efficient Simulation of Markovian Quantum Dynamics. *Physical Review Letters*, *108*(23), 230504. DOI: 10.1103/PhysRevLett.108.230504
 *   Bass, H. (1992). The Ihara–Selberg zeta function of a tree lattice. *International Journal of Mathematics*, *3*(6), 717–797. DOI: 10.1142/S0129167X92000357.
@@ -76,9 +78,12 @@
 *   Bisognano, J. J., & Wichmann, E. H. (1976). On the duality condition for quantum fields. *Journal of Mathematical Physics*, *17*(3), 303–321. DOI: 10.1063/1.522898
 *   Blackiston, D., Lederer, E., Kriegman, S., Garnier, S., Bongard, J., & Levin, M. (2021). A cellular platform for the development of synthetic living machines. *Science Robotics*, *6*(52).
 *   Blanco, D. D., Casini, H., Hung, L.-Y., & Myers, R. C. (2013). Relative entropy and holography. *Journal of High Energy Physics*, *2013*(8), 60. DOI: 10.1007/JHEP08(2013)060
+*   Bohr, N. (1928). The quantum postulate and the recent development of atomic theory. *Nature*, *121*, 580–590. DOI: 10.1038/121580a0
+*   Bohr, N. (1935). Can quantum-mechanical description of physical reality be considered complete? *Physical Review*, *48*(8), 696–702. DOI: 10.1103/PhysRev.48.696
 *   Bostrom, N. (2003). Are You Living in a Computer Simulation? *Philosophical Quarterly*, *53*(211), 243–255. DOI: 10.1111/1467-9213.00309
 *   Bong, K.-W., Utreras-Alarcón, A., Ghafari, F., Liang, Y.-C., Tischler, N., Cavalcanti, E. G., Pryde, G. J., & Wiseman, H. M. (2020). A strong no-go theorem on the Wigner's friend paradox. *Nature Physics*, *16*(12), 1199–1205. DOI: 10.1038/s41567-020-0990-x
 *   Borcherds, R. E. (1986). Vertex algebras, Kac-Moody algebras, and the Monster. *Proceedings of the National Academy of Sciences*, *83*, 3068–3071.
+
 *   Borcherds, R. E. (1992). Monstrous moonshine and monstrous Lie superalgebras. *Inventiones Mathematicae*, *109*, 405–444.
 *   Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. *Zeitschrift für Physik*, *37*, 863–867. DOI: 10.1007/BF01397477
 *   Bott, R., & Tu, L. W. (1982). *Differential Forms in Algebraic Topology*. Springer (Graduate Texts in Mathematics, 82). DOI: 10.1007/978-1-4757-3951-0
@@ -207,9 +212,11 @@
 *   Deutsch, D. (1999). Quantum Theory of Probability and Decisions. *Proceedings of the Royal Society of London A*, *455*(1988), 3129–3137. DOI: 10.1098/rspa.1999.0443
 *   Devetak, I. (2005). The private classical capacity and quantum capacity of a quantum channel. *IEEE Transactions on Information Theory*, *51*(1), 44–55. DOI: 10.1109/TIT.2004.839516
 *   DeWitt, B. S. (1965). *Dynamical Theory of Groups and Fields*. Gordon & Breach.
+*   DeWitt, B. S. (1970). Quantum mechanics and reality. *Physics Today*, *23*(9), 30–35. DOI: 10.1063/1.3022331
 *   DeWitt, B. S., & Brehme, R. W. (1960). Radiation damping in a gravitational field. *Annals of Physics*, *9*(2), 220–259.
 *   Diósi, L. (1987). A universal master equation for the gravitational violation of quantum mechanics. *Physics Letters A*, *120*, 377–381.
 *   Dittmann, J. (1999). Explicit formulae for the Bures metric. *Journal of Physics A: Mathematical and General*, *32*, 2663–2670.
+
 *   Doplicher, S., Haag, R., & Roberts, J. E. (1971). Local observables and particle statistics I. *Communications in Mathematical Physics*, *23*, 199–230.
 *   Doplicher, S., Haag, R., & Roberts, J. E. (1974). Local observables and particle statistics II. *Communications in Mathematical Physics*, *35*, 49–85.
 *   Doplicher, S., & Roberts, J. E. (1990). Why there is a field algebra with a compact gauge group describing the superselection structure in particle physics. *Communications in Mathematical Physics*, *131*, 51–107.
@@ -242,9 +249,11 @@
 *   Frisch, U. (1995). *Turbulence: The Legacy of A. N. Kolmogorov*. Cambridge University Press.
 *   Feroz, F., Hobson, M. P., Cameron, E., & Pettitt, A. N. (2019). Importance Nested Sampling and the MultiNest Algorithm. *The Open Journal of Astrophysics*, *2*, 10. DOI: 10.21105/astro.1306.2144
 *   Feynman, R. P., & Hibbs, A. R. (1965). *Quantum Mechanics and Path Integrals*. McGraw-Hill.
+*   Fields, C., & Levin, M. (2020). Scale-free biology: Integrating evolutionary and developmental thinking. *BioEssays*, *42*(8), e1900228. DOI: 10.1002/bies.201900228
 *   Finkelstein, D., & Rubinstein, J. (1968). Connection between spin, statistics, and kinks. *Journal of Mathematical Physics*, *9*(11), 1762–1779. DOI: 10.1063/1.1664510
 *   Flamholz, A., Phillips, R., & Milo, R. (2014). The quantified cell. *Molecular Biology of the Cell*, *25*(22), 3497–3500. DOI: 10.1091/mbc.e14-09-1347
 *   Fodor, J. A. (1975). *The Language of Thought*. Harvard University Press.
+
 *   Fortuin, C. M., Kasteleyn, P. W., & Ginibre, J. (1971). Correlation inequalities on some partially ordered sets. *Communications in Mathematical Physics*, *22*(2), 89–103. DOI: 10.1007/BF01651330 
 *   Fowler, A. G., Mariantoni, M., Martinis, J. M., & Cleland, A. N. (2012). Surface codes: Towards practical large-scale quantum computation. *Physical Review A*, *86*(3), 032324. DOI: 10.1103/PhysRevA.86.032324
 *   Fraenkel, A. (1922). Zu den Grundlagen der Cantor-Zermeloschen Mengenlehre. *Mathematische Annalen*, *86*, 230–237. DOI: 10.1007/BF01457986
@@ -375,9 +384,11 @@
 *   Jech, T. (2003). *Set Theory* (The Third Millennium Edition, revised and expanded). Springer.
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
 *   Jet Propulsion Laboratory. (2020). *6 Things to Know About NASA's Ingenuity Mars Helicopter*. NASA Jet Propulsion Laboratory, July 14, 2020.
+*   Joos, E., & Zeh, H. D. (1985). The emergence of classical properties through interaction with the environment. *Zeitschrift für Physik B: Condensed Matter*, *59*, 223–243. DOI: 10.1007/BF01725541
 *   Joos, E., Zeh, H. D., Kiefer, C., Giulini, D. J., Kupsch, J., & Stamatescu, I. O. (2003). *Decoherence and the Appearance of a Classical World in Quantum Theory* (2nd ed.). Springer.
 *   Johnson, E. E. (1991). An efficient Golay codec for MIL-STD-188-141A and FED-STD-1045. Technical Report NMSU-ECE-91-001, Department of Electrical and Computer Engineering, New Mexico State University.
 *   Jost, R. (1957). Eine Bemerkung zum CTP-Theorem. *Helvetica Physica Acta*, *30*, 409–416.
+
 *   Jozsa, R. (1994). Fidelity for mixed quantum states. *Journal of Modern Optics*, 41(12), 2315–2323.
 *   Jung, C. G. (1952). Synchronizität als ein Prinzip akausaler Zusammenhänge. In C. G. Jung & W. Pauli, *Naturerklärung und Psyche* (pp. 1–107). Rascher Verlag.
 *   Jung, C. G., & Pauli, W. (1955). *The Interpretation of Nature and the Psyche* (Bollingen Series LI). Pantheon Books.
@@ -729,9 +740,11 @@
 *   Whitehead, A. N. (1929). *Process and Reality: An Essay in Cosmology*. Macmillan. (Corrected edition: D. R. Griffin & D. W. Sherburne, Eds., Free Press, 1978.)
 *   Wheeler, J. A. (1989). Information, physics, quantum: The search for links. In *Proceedings of the 3rd International Symposium on Foundations of Quantum Mechanics* (pp. 354–368). Physical Society of Japan.
 *   Wheeler, J. A. (1990). Information, physics, quantum: The search for links. In W. H. Zurek (Ed.), *Complexity, Entropy, and the Physics of Information* (pp. 3–28). Addison-Wesley.
+*   Wigner, E. P. (1931). *Gruppentheorie und ihre Anwendung auf die Quantenmechanik der Atomspektren*. Vieweg. DOI: 10.1007/978-3-663-02555-9
 *   Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natural sciences. *Communications on Pure and Applied Mathematics*, *13*(1), 1–14. DOI: 10.1002/cpa.3160130102
 *   Wigner, E. P. (1961). Remarks on the mind-body question. In I. J. Good (Ed.), *The Scientist Speculates: An Anthology of Partly-Baked Ideas* (pp. 284–302). William Heinemann.
 *   Wigner, E. P. (1967). Remarks on the mind-body question. In *Symmetries and Reflections* (pp. 171–184). Indiana University Press.
+
 *   Williams, G., & Watts, D. C. (1970). Non-symmetrical dielectric relaxation behaviour arising from a simple empirical decay function. *Transactions of the Faraday Society*, *66*, 80–85. DOI: 10.1039/TF9706600080
 *   Wilde, M. M. (2017). *Quantum Information Theory* (2nd ed.). Cambridge University Press. DOI: 10.1017/9781316809976
 *   Will, C. M. (2014). The Confrontation between General Relativity and Experiment. *Living Reviews in Relativity*, *17*(1), 4. DOI: 10.12942/lrr-2014-4
@@ -752,9 +765,11 @@
 *   Zhu, Y. (1996). Modular invariance of characters of vertex operator algebras. *Journal of the American Mathematical Society*, *9*, 237–302.
 *   Zurek, W. H. (1989). Thermodynamic cost of computation, algorithmic complexity and the information metric. *Nature*, *341*(6238), 119–124.
 *   Zurek, W. H. (1991). Decoherence and the transition from quantum to classical. *Physics Today*, *44*(10), 36–44.
+*   Zurek, W. H. (2009). Quantum Darwinism. *Nature Physics*, *5*(3), 181–188. DOI: 10.1038/nphys1202
 *   Abramsky, S., & Brandenburger, A. (2011). The sheaf-theoretic structure of non-locality and contextuality. *New Journal of Physics*, *13*, 113036. DOI: 10.1088/1367-2630/13/11/113036
 *   Almheiri, A., Engelhardt, N., Marolf, D., & Maxfield, H. (2019). The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole. *Journal of High Energy Physics*, *2019*(12), 063. DOI: 10.1007/JHEP12(2019)063
 *   Araki, H., & Yanase, M. M. (1960). Measurement of quantum mechanical operators. *Physical Review*, *120*, 622–626. DOI: 10.1103/PhysRev.120.622
+
 *   Arkani-Hamed, N., Bai, Y., & Lam, T. (2017). Positive geometries and canonical forms. *Journal of High Energy Physics*, *2017*(11), 039. DOI: 10.1007/JHEP11(2017)039
 *   Barato, A. C., & Seifert, U. (2015). Thermodynamic uncertainty relation for biomolecular processes. *Physical Review Letters*, *114*, 158101. DOI: 10.1103/PhysRevLett.114.158101
 *   Bhardwaj, L., Bottini, L. E., Schäfer-Nameki, S., & Tiwari, A. (2023). Non-invertible higher-categorical symmetries. *SciPost Physics*, *14*, 007. DOI: 10.21468/SciPostPhys.14.1.007

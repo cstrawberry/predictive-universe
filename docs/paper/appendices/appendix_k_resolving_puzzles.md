@@ -70,10 +70,11 @@ $$
 \alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha
 }
 $$
-where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $R_\alpha$ is determined only by the residual gate. The derivation proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon_0=\ln2$) → active kernel dimension $a = 2$ via the Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$, the second-order correction uses the Grassmannian curvature sector (Theorem Z.24; Lemma Z.24a) and minimal holonomy (Lemma Z.14); the exact transport factor is $\operatorname{sinc}(u^*)$ from the $SU(2)$ geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension $D = 4$ from the mode-channel correspondence (Theorems Z.10-Z.11), while Appendix G supplies an independent stability-based reinforcement.
+where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $R_\alpha$ is determined only by the residual gate. The derivation proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon_0=\ln2$) → active kernel dimension $a = 2$ via the Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$, the second-order correction uses the Grassmannian curvature sector (Theorem Z.24; Lemma Z.24a) and minimal holonomy (Lemma Z.14); the exact transport factor is $\operatorname{sinc}(u^*)$ from the $SU(2)$ geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the Euclidean response-carrier dimension $D=4$ from the mode-channel correspondence (Theorems Z.10-Z.11); the $3+1$ spacetime interpretation requires the separate continuum/Lorentzian promotion certificates, while Appendix G supplies only a compatibility branch.
 
 **Strong coupling $g_s$ and weak coupling $g_w$:** These relate to stiffness or inverse-stiffness coefficients in the effective gauge actions (Appendix G, Equation G.5.2). Under the KKT regularity and normalization map of Theorem X.8c, $1/g_i^2$ is the normalized shadow price of the corresponding active gauge-coherence constraint; the interaction-strength convention uses the reciprocal normalized price after matching factors are supplied. The algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ is selected in the determinant-compatible finite-response block-frame capacity class (Appendix G, Theorem G.8.4b and Corollary G.8.4c). On the specified Bures-to-gauge calibration branch of Theorems T.39a and T.39a.2,
 $$
+
 g_U^2=\frac{2\pi}{M\chi_U},
 \qquad
 \alpha_U^{-1}=2M\chi_U.
@@ -1170,20 +1171,23 @@ then gives the last display. ∎
 **Physical Interpretation:** On the throughput branch, no finite-area, finite-clock protocol in the declared channel class extracts information at an unbounded rate. On the curvature branch, the controlled Fermi expansion loses its certificate at finite framewise curvature. Horizon formation, MPU successor dynamics, and preservation of exterior predictability remain separate questions; the two theorems do not establish a censorship dichotomy.
 
 
-## K.6 Strong CP Problem Resolution
+## K.6 Conditional Strong-CP Branch
 
-**Puzzle:** Quantum Chromodynamics (QCD) permits a CP-violating term proportional to $\theta_{\text{QCD}} \, \mathrm{tr}(G_{\mu\nu} \tilde{G}^{\mu\nu})$, yet the experimental bound on the neutron electric dipole moment constrains $|\bar{\theta}| < 10^{-10}$ (Abel et al. 2020). Why is this parameter so unnaturally small, and why does CP violation appear in the weak sector but not in the strong sector?
+**Puzzle:** Quantum chromodynamics permits a CP-violating term proportional to $\theta_{\mathrm{QCD}}\,\operatorname{tr}(G_{\mu\nu}\widetilde G^{\mu\nu})$, while the neutron-electric-dipole-moment bound constrains $|\bar\theta|<10^{-10}$ (Abel et al. 2020). Why is this parameter so small, and why does CP violation appear in the weak sector but not in the strong sector?
 
-**PU Resolution:** The framework provides a branch-level resolution through two independent geometric mechanisms operating on the PCE-Attractor orbit $\operatorname{Gr}(2,8)$. The first fixes $\theta_{\text{QCD}}=0$ on the σ-symmetric topological-cost branch. The second fixes $\arg(\det M_q)=0$ only on a certified positive-orientation real-Yukawa branch: $E_8$ reality supplies real Yukawa data, while the determinant-orientation certificate selects the positive connected component. Under both branch inputs, $\bar\theta=0$.
+**Conditional branch statement:** If the framework is supplied with a constructed equivariant $\sigma$-CP parameter map, an accepted gauge-topology bridge relating the QCD second-Chern sector to the retained holonomy coordinate, a $\sigma$-invariant vacuum, a certified operative QCD vacuum-selection functional with that vacuum as a global minimizer on the retained invariant sector, and a common-convention absolute determinant-line certificate for the full quark mass matrices, then $z_{\mathrm{CP}}=e^{i\bar\theta}=1$ and hence $\bar\theta\equiv0\pmod{2\pi}$. The all-harmonic route of Theorem K.6.2a can replace the first-harmonic ansatz when its positive sector-partition hypotheses are constructed. These are branch hypotheses; this section does not construct them from QCD or establish a branch-independent solution.
 
 ### K.6.1 The Physical θ-Parameter
 
 The physical CP-violating parameter in QCD is the combination:
-$$\bar{\theta} = \theta_{\text{QCD}} + \arg(\det M_q)$$
-where $\theta_{\text{QCD}}$ is the vacuum angle and $M_q$ is the quark mass matrix. The experimental constraint $|\bar{\theta}| < 10^{-10}$ from the neutron electric dipole moment (Abel et al. 2020; Baker et al. 2006) requires explanation for both terms.
+$$
+\bar\theta=\theta_{\mathrm{QCD}}+\arg(\det M_q)\pmod{2\pi}
+$$
+Here $\theta_{\mathrm{QCD}}$ is the vacuum angle and $M_q$ is the quark mass matrix. The experimental constraint $|\bar\theta|<10^{-10}$ from the neutron electric dipole moment (Abel et al. 2020; Baker et al. 2006) requires an account of both contributions.
 
 **Definition K.6.1 (Topological Charge Density and Quantized Sector).** Adopt $\operatorname{tr}(T^aT^b)=\delta^{ab}/2$ and $\widetilde G^{\mu\nu}=\epsilon^{\mu\nu\rho\sigma}G_{\rho\sigma}/2$. Define
 $$
+
 Q(x)=\frac{g_s^2}{32\pi^2}G^a_{\mu\nu}(x)\widetilde G^{a\mu\nu}(x).
 $$
 For a smooth finite-action Euclidean $SU(3)$ connection on a compact oriented four-manifold, or on $\mathbb R^4$ with pure-gauge asymptotics that extend the bundle over $S^4$,
@@ -1192,13 +1196,14 @@ $$
 $$
 is the second Chern number in this convention. For a general local configuration or noncompact boundary condition, the integral need not be an integer.
 
-The neutron electric dipole moment scales as $d_n \sim 10^{-16} \bar{\theta}$ e·cm (Crewther et al. 1979; Pospelov & Ritz 2005), making the current experimental bound $|d_n| < 1.8 \times 10^{-26}$ e·cm (Abel et al. 2020) a precision probe of CP violation in the strong sector.
+The neutron electric dipole moment scales as $d_n\sim10^{-16}\bar\theta$ e·cm (Crewther et al. 1979; Pospelov & Ritz 2005), making the current experimental bound $|d_n| < 1.8 \times 10^{-26}$ e·cm (Abel et al. 2020) a precision probe of CP violation in the strong sector.
 
 ### K.6.2 Framework Context and Fundamental Parameters
 
-The resolution employs the geometric structures established in earlier sections:
+The conditional branch uses the following geometric structures and independently supplied certificates:
 
 **Table K.6.0: Fundamental Parameters**
+
 
 | Quantity | Symbol | Value | Source |
 |:---------|:-------|:------|:-------|
@@ -1382,10 +1387,11 @@ so the determinant map sends every class of $\pi_3(SU(3))\cong\mathbb Z$ to the 
 
 ### K.6.5 PCE Cost Functional on S¹
 
-The θ-parameter lives on the circle $S^1 \cong U(1)$. The PCE cost functional on this space is uniquely determined by geometric constraints.
+The θ-parameter lives on the circle $S^1 \cong U(1)$. The retained PCE cost is specified on the first-harmonic branch of Theorem K.6.2; smoothness, parity, periodicity, and the quadratic coefficient alone do not determine it.
 
 **Definition K.6.9 (Topological Susceptibility).** Assume a translation-invariant Euclidean state for which the connected correlation integral and thermodynamic limit exist. Then
 $$
+
 \chi_{\mathrm{top}}
 :=
 \int d^4x\,\langle Q(x)Q(0)\rangle_c
@@ -1431,9 +1437,56 @@ The Bures variance and hierarchy coefficient alone do not derive the normalizati
 
 *Proof.* Direct multiplication gives $2(3/2)(1/24)=3/24=1/8$. ∎
 
-**Remark K.6.1: Consistency with QCD.** The QCD dilute instanton gas approximation yields $V(\theta) = \chi_{\text{top}}(1 - \cos\theta)$ where $\chi_{\text{top}}$ is the topological susceptibility (Callan, Dashen & Gross 1976). The agreement with the PCE-derived form is a consistency check: both the geometric PCE derivation and the QCD calculation yield the same functional form because both respect the U(1) holonomy structure and the physical requirement of quadratic cost near the vacuum.
+**Theorem K.6.2a (All-Harmonic Positive-Sector Selection of the Invariant Strong-CP Angle).** Let
+$$
+\phi:=\bar\theta
+\quad\text{and}\quad
+Z(\phi)=\sum_{\nu\in\mathbb Z}Z_\nu e^{i\nu\phi},
+$$
+where $\sum_\nu Z_\nu<\infty$, $Z_\nu=Z_{-\nu}\ge0$, $Z(0)>0$, and $Z(\phi)>0$ on the retained parameter circle. Let
+$$
+\mathcal N_+:=\{\nu\in\mathbb N:Z_\nu>0\},
+\qquad
+g:=\gcd\mathcal N_+,
+$$
+with $\mathcal N_+\ne\varnothing$, and define the normalized topological free-energy cost
+$$
+F_{\mathrm{top}}(\phi)
+:=
+-\frac1{\mathcal V}\log Z(\phi)
++\frac1{\mathcal V}\log Z(0),
+\qquad
+\mathcal V>0.
+$$
+Then
+$$
+F_{\mathrm{top}}(\phi)\ge0,
+$$
+with equality exactly when
+$$
+\phi\in\frac{2\pi}{g}\mathbb Z
+\pmod{2\pi}.
+$$
+In particular, charge-one support $Z_1>0$ gives the unique minimum
+$$
+\bar\theta\equiv0\pmod{2\pi}.
+$$
+
+*Proof.* Absolute convergence and nonnegative coefficients give
+$$
+0<Z(\phi)
+\le |Z(\phi)|
+\le\sum_{\nu\in\mathbb Z}Z_\nu
+=Z(0).
+$$
+Monotonicity of $-\log$ yields $F_{\mathrm{top}}(\phi)\ge0$. If equality $F_{\mathrm{top}}(\phi)=0$ holds, then $Z(\phi)=Z(0)>0$ and equality holds in the triangle inequality. The active phases therefore share one common phase; positivity of $Z(\phi)$ forces that common phase to be $+1$. This is equivalent to $\nu\phi\in2\pi\mathbb Z$ for every $\nu\in\mathcal N_+$, hence to $\phi\in(2\pi/g)\mathbb Z$ by Bezout's identity. If $Z_1>0$, then $g=1$ and only $\phi\equiv0\pmod{2\pi}$ remains. ∎
+
+**Remark K.6.2a.1 (Physical-Selection Gate).** Theorem K.6.2a is an exact all-harmonic implication and does not require the first-harmonic ansatz. Its use as a strong-CP solution still requires a constructed QCD sector partition with the stated positivity and charge support, proof that the invariant coordinate is $\phi=\bar\theta$, and proof that $F_{\mathrm{top}}$ is the actual descended PCE cost over physically admissible values of $\bar\theta$. Ordinary evaluation of a theory at a fixed coupling does not by itself turn that coupling into a dynamical selection coordinate.
+
+**Remark K.6.1: Consistency with QCD.** The QCD dilute-instanton-gas expression $V(\theta)=\chi_{\mathrm{top}}(1-\cos\theta)$ (Callan, Dashen & Gross 1976) has the same form as the retained first-harmonic PCE branch. This is a branch-level consistency check. The QCD expression does not derive the PCE truncation, and the PCE truncation does not supply either the gauge-topology bridge required by Proposition K.6.4 or a certificate that the PCE cost is the operative QCD vacuum-selection functional.
 
 ### K.6.6 First Mechanism: σ-Invariance Selects θ = 0
+
 
 **Theorem K.6.3 (Hermiticity under the Normal-Observable Hypothesis).** Assume physical observables on the finite retained Hilbert space are represented by normal operators and that their possible outcomes are their spectral values. If every outcome is real, then the observable operator is Hermitian.
 
@@ -1461,22 +1514,48 @@ is Hermitian and positive definite but satisfies $\sigma(\rho) = \frac{1}{2}\big
 
 Consequently, the strong-CP argument below uses σ-invariance as a PCE symmetry condition characterizing the σ-symmetric attractor branch, not as a derived consequence of Hermiticity alone. ∎
 
-**Theorem K.6.5 (θ-Selection on the σ-Symmetric PCE-Attractor Branch).** On the σ-symmetric PCE-attractor branch — under which the physical vacuum is required to be invariant under the antiholomorphic involution $\sigma$ of Definition K.6.3 — and using the action $\sigma: \theta \mapsto -\theta$, the vacuum θ-parameter is restricted to:
-$$\theta_{\text{QCD}} \in \{0, \pi\}.$$
-The σ-symmetric attractor branch is supplied by Lemma K.6.4 as a symmetry condition on the PCE-Attractor state $\rho_0$ rather than as a consequence of Hermiticity. The energy-selection step in Theorem K.6.6 then resolves the two-valued σ-symmetric set to $\theta_{\text{QCD}} = 0$.
+**Theorem K.6.5 (θ-Selection on the σ-Symmetric PCE-Attractor Branch).** Assume:
 
-*Proof.* On the σ-symmetric PCE-attractor branch, the PCE-Attractor state $\rho_0$ is required to be invariant under the geometric involution $\sigma$ of Definition K.6.3, motivated by maximal-symmetry selection (Definition 15a) and the cost of unnecessary symmetry-breaking (Appendix P, Section P.6.4). This σ-invariance is the branch input — not a derived consequence of Hermiticity, by Lemma K.6.4.
+1. a constructed equivariant parameter map satisfying Theorem K.6.1;
+2. a specified accepted bridge $\mathcal B_\theta$ satisfying Proposition K.6.4 that identifies the registered holonomy coordinate with $\theta_{\mathrm{QCD}}$ modulo $2\pi$, preserves integer topological charge, and intertwines $\sigma$ with physical CP;
+3. a vacuum state invariant under the fixed antiholomorphic involution $\sigma$.
 
-For a state parametrized by $\theta$, σ-invariance requires $\sigma(\theta) = \theta$, i.e., $-\theta \equiv \theta \pmod{2\pi}$. This has exactly two solutions: $\theta = 0$ and $\theta = \pi$. ∎
+Then the physical QCD angle obeys
+$$
+\theta_{\mathrm{QCD}}\in\{0,\pi\}.
+$$
 
-**Theorem K.6.6 (Energy Selection of θ = 0).** Between the two σ-invariant values, PCE selects the global minimum of the cost functional:
-$$V_{\text{PCE}}(0) = 0 < V_{\text{PCE}}(\pi) = 2V_0$$
-Therefore $\theta_{\text{QCD}} = 0$ exactly.
+*Proof.* By item 2, $\mathcal B_\theta$ identifies the registered holonomy coordinate with the QCD topological angle and intertwines the physical CP action with $\sigma:\theta\mapsto-\theta$. Vacuum $\sigma$-invariance therefore requires
+$$
+\theta_{\mathrm{QCD}}
+\equiv
+-\theta_{\mathrm{QCD}}
+\pmod{2\pi},
+$$
+whose two solutions modulo $2\pi$ are $0$ and $\pi$. Lemma K.6.4 is used only to distinguish this branch hypothesis from Hermiticity; it does not supply the hypothesis. ∎
 
-*Proof.* From Theorem K.6.2, $V_{\text{PCE}}(\theta) = V_0(1 - \cos\theta)$. Evaluating at the σ-invariant points: $V_{\text{PCE}}(0) = V_0(1 - 1) = 0$ and $V_{\text{PCE}}(\pi) = V_0(1 - (-1)) = 2V_0$. PCE minimization (Definition 15) selects the global minimum, yielding $\theta_{\text{QCD}} = 0$. ∎
+**Theorem K.6.6 (Conditional Energy Selection of θ = 0).** Under the hypotheses of Theorem K.6.5, assume additionally that
+$$
+V_{\mathrm{PCE}}(\theta)=V_0(1-\cos\theta),
+\qquad
+V_0>0,
+$$
+is certified as the operative QCD vacuum-selection functional on the retained $\sigma$-invariant sector and that the realized physical vacuum is a global minimizer of this functional on that sector. Then
+$$
+V_{\mathrm{PCE}}(0)=0
+<
+V_{\mathrm{PCE}}(\pi)=2V_0,
+$$
+and hence
+$$
+\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}.
+$$
+
+*Proof.* Theorem K.6.5 restricts the angle to $\{0,\pi\}$ modulo $2\pi$. Evaluation at the two retained points gives the displayed strict inequality. Because the physical vacuum is assumed to be a global minimizer of the operative QCD selection functional, $\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}$; its canonical representative is $0$. ∎
 
 **Corollary K.6.3 (Conditional Gibbs Weight of the First-Harmonic Cost).** Suppose a probability law is separately declared by
 $$
+
 P_\beta(\theta)=Z_\beta^{-1}e^{-\beta V_{\mathrm{PCE}}(\theta)},
 $$
 where $\beta V_{\mathrm{PCE}}$ is dimensionless. On the first-harmonic branch of Theorem K.6.2,
@@ -1582,12 +1661,13 @@ $$
 $$
 This is the asserted set. ∎
 
-**Theorem K.6.7 (Yukawa Reality on the Toeplitz-Kraus Probability-Overlap Branch).** Assume the Gaussian localization, Toeplitz-Kraus probability-overlap rule, Bures variance, and local Bures-$E_8$ conversion of Theorem T.41.5, Lemma T.41.2, and Lemma T.41.4. Then, to quadratic order in the registered local chart,
+**Theorem K.6.7 (Yukawa-Magnitude Positivity on the Toeplitz-Kraus Probability-Overlap Branch).** Assume the Gaussian localization, Toeplitz-Kraus probability-overlap rule, Bures variance, and local Bures-$E_8$ conversion of Theorem T.41.5, Lemma T.41.2, and Lemma T.41.4. Then, to quadratic order in the registered local chart, the physical magnitude kernel satisfies
 $$
-Y_{ij}
+Y^{\mathrm{mag}}_{ij}
 \propto
 \exp\left[-\alpha d_{E_8}^2(r_i,r_j)\right]
 \in\mathbb R_{>0},
+
 \qquad
 \alpha=\frac{1}{16\sigma_B^2}=\frac32.
 $$
@@ -1608,10 +1688,13 @@ Y_{ij}
 $$
 With $\sigma_B^2=1/24$, the coefficient is $24/16=3/2$. Finally, $d_{E_8}^2(r_i,r_j)$ is a nonnegative real number, so every displayed exponential is strictly positive and real. ∎
 
-**Theorem K.6.8 (Real Yukawa Orientation Decomposition).** Let $Y_f$ be a real nondegenerate $3\times3$ Yukawa matrix. Then there exist $O_{L,f},O_{R,f}\in O(3)$ and
+The theorem fixes only $|Y_{ij}|$. On a flavor branch carrying Berry phases, the full entries are $Y_{ij}=Y^{\mathrm{mag}}_{ij}e^{i\theta_{ij}^{\mathrm{Berry}}}$ and need not be real.
+
+**Theorem K.6.8 (Real Yukawa Orientation Decomposition).** Let $Y_f$ be a genuinely real nondegenerate $3\times3$ Yukawa matrix. Then there exist $O_{L,f},O_{R,f}\in O(3)$ and
 $$
 D_f=\operatorname{diag}(y_1^f,y_2^f,y_3^f),
 \qquad
+
 y_i^f>0,
 $$
 such that
@@ -1628,10 +1711,11 @@ $$
 \in\{+1,-1\}.
 \tag{K.6.8.1}
 $$
-This sign is independent of the singular-vector choices inside degenerate singular-value subspaces. Theorem K.6.7 fixes the real-positive entry property of the Gaussian overlap branch, but that property alone does not fix $\epsilon_f$.
+This sign is independent of the singular-vector choices inside degenerate singular-value subspaces. Theorem K.6.7 fixes the positive magnitude kernel of the Gaussian overlap branch, not reality of a Berry-phased full Yukawa matrix. Even on a separately certified genuinely real branch, positive entries alone do not fix $\epsilon_f$.
 
 *Proof.* Since $Y_f$ is real and nondegenerate, the real singular-value theorem gives orthogonal matrices $O_{L,f},O_{R,f}$ and positive singular values $y_i^f$ with $Y_f=O_{L,f}D_fO_{R,f}^T$. Taking determinants gives
 $$
+
 \det Y_f=(\det O_{L,f})(\det D_f)(\det O_{R,f}),
 $$
 and $\det D_f=\prod_i y_i^f>0$, hence (K.6.8.1). If a singular value has multiplicity, the corresponding singular-vector bases may be changed by the same orthogonal matrix $S$ on the left and right singular subspaces. This multiplies $\det O_{L,f}$ and $\det O_{R,f}$ by the same factor $\det S$, so their product is unchanged. Thus $\epsilon_f$ is a well-defined orientation invariant of the real nondegenerate Yukawa matrix. The final sentence follows because entrywise positivity is a condition on matrix entries, whereas $\epsilon_f$ is the connected-component sign of $GL(3,\mathbb R)$. ∎
@@ -1773,37 +1857,40 @@ then $\det Y>0$ and the sector lies in the positive determinant component.
 
 **Theorem K.6.10 (Quark Mass Matrix Phase on the Real Branch).** Let $M_f=vY_f/\sqrt2$ with $v>0$ fixed by electroweak gauge choice and $Y_f\in GL(3,\mathbb R)$. Then
 $$
-\arg\det M_f
+\arg(\det M_f)
 =
 \begin{cases}
 0,&\det Y_f>0,\\
+
 \pi,&\det Y_f<0,
 \end{cases}
 \quad\text{mod }2\pi.
 \tag{K.6.10.1}
 $$
-In particular, any positive-orientation branch certified by Theorem K.6.9 or Corollary K.6.9a.1 gives $\arg\det M_f=0$ in that sector.
+In particular, any positive-orientation branch certified by Theorem K.6.9 or Corollary K.6.9a.1 gives $\arg(\det M_f)\equiv0\pmod{2\pi}$ in that sector.
 
 *Proof.* Since $v/\sqrt2>0$,
 $$
+
 \det M_f=(v/\sqrt2)^3\det Y_f,
 $$
 so the phase of $\det M_f$ is exactly the phase of the nonzero real number $\det Y_f$. A nonzero real number has phase $0$ if positive and $\pi$ if negative, modulo $2\pi$. The final sentence follows from (K.6.9.2) or Corollary K.6.9a.1. ∎
 
-**Corollary K.6.5 (arg(det M_q) = 0 on a Certified Positive-Orientation Real-Yukawa Branch).** On the branch where both quark Yukawa matrices either satisfy the nonzero-path criterion of Theorem K.6.9 or are certified by the ordered heat-kernel chamber of Corollary K.6.9a.1,
+**Corollary K.6.5 (Quark Determinant Phase on a Certified Positive-Orientation Real-Yukawa Branch).** On the branch where both quark Yukawa matrices either satisfy the nonzero-path criterion of Theorem K.6.9 or are certified by the ordered heat-kernel chamber of Corollary K.6.9a.1,
 $$
-\arg(\det M_q)=0.
+\arg(\det M_q)\equiv0\pmod{2\pi}.
 $$
-Without a positive-orientation certificate, $E_8$ reality gives real Yukawa data and hence only the alternatives $\arg\det M_f\in\{0,\pi\}$ sector by sector.
+On a separately certified genuinely real full-Yukawa branch, absence of a positive-orientation certificate leaves only the alternatives $\arg(\det M_f)\in\{0,\pi\}\pmod{2\pi}$ sector by sector. The $E_8$ probability-overlap construction alone fixes magnitudes and does not establish this real branch when Berry phases are retained.
 
 *Proof.* The quark determinant entering the strong-CP parameter is
 $$
 \det M_q=\frac{v^6}{2^3}\det Y_u\det Y_d.
 $$
-The electroweak gauge choice fixes $v>0$. Theorem K.6.9 gives $\det Y_f>0$ when the branch supplies a nonzero path from the positive diagonal reference. Corollary K.6.9a.1 gives $\det Y_f>0$ when the branch supplies an ordered heat-kernel chamber. If both quark sectors satisfy either certificate, then $\det Y_u>0$ and $\det Y_d>0$, hence $\det M_q>0$ and $\arg(\det M_q)=0$ modulo $2\pi$. The last sentence is Theorem K.6.10 applied before imposing a positive-orientation certificate. ∎
+The electroweak gauge choice fixes $v>0$. Theorem K.6.9 gives $\det Y_f>0$ when the branch supplies a nonzero path from the positive diagonal reference. Corollary K.6.9a.1 gives $\det Y_f>0$ when the branch supplies an ordered heat-kernel chamber. If both quark sectors satisfy either certificate, then $\det Y_u>0$ and $\det Y_d>0$, hence $\det M_q>0$ and $\arg(\det M_q)\equiv0\pmod{2\pi}$. The last sentence is Theorem K.6.10 applied before imposing a positive-orientation certificate. ∎
 
 **Definition K.6.10a (Pfaffian Real-Orientation Certificate).** For a real quark Yukawa branch, define the real doubled skew operator
 $$
+
 \mathcal D_q(Y_u,Y_d)
 :=
 \begin{pmatrix}
@@ -1879,10 +1966,11 @@ $$
 
 **Theorem K.6.10b (Pfaffian Orientation Forces the Quark Determinant Phase).** On a branch carrying an accepted $\mathfrak O_{\mathrm{Pf}}$,
 $$
-\arg\det M_q=0.
+\arg(\det M_q)\equiv0\pmod{2\pi}.
 \tag{K.6.10b.1}
 $$
 Moreover, the opposite determinant-orientation component cannot be reached inside the same finite branch without either closing the quark determinant gap or paying the explicit orientation overhead (K.6.10a.6).
+
 
 *Proof.* At the positive diagonal reference point, the accepted orientation gives
 $$
@@ -1896,37 +1984,57 @@ throughout $\mathcal Y_{\mathbb R}^+$. With the reference orientation of (K.6.10
 
 A path to the opposite determinant component must change the sign of the Pfaffian. Since the Pfaffian is continuous, this requires $\operatorname{Pf}(\mathcal D_q)=0$ somewhere unless the path leaves the certified oriented chamber. By (K.6.10a.2), $\operatorname{Pf}(\mathcal D_q)=0$ implies $\det M_q=0$. If the path leaves the chamber without closing the gap, the certificate assigns the explicit topological overhead (K.6.10a.6), so it is not the same zero-surplus PCE branch. ∎
 
-### K.6.9 Combined Resolution
+### K.6.9 Combined Conditional Implication
 
-**Theorem K.6.11 (Strong CP Resolution on the σ-Symmetric Positive-Orientation Branch).** On the branch satisfying the σ-symmetric PCE-attractor condition of Theorem K.6.6 and either:
+**Theorem K.6.11 (Conditional $\bar\theta\equiv0\pmod{2\pi}$ on the σ-Symmetric Positive-Orientation Branch).** Assume:
 
-1. one of the positive-orientation real-Yukawa certificates of Corollary K.6.5 in both quark sectors, or
+1. a constructed equivariant parameter map satisfying Theorem K.6.1;
+2. a specified accepted QCD gauge-topology bridge satisfying Proposition K.6.4;
+3. the $\sigma$-symmetric vacuum branch of Theorem K.6.5;
+4. the positive first-harmonic cost is certified as the operative QCD vacuum-selection functional, and the realized vacuum is a global minimizer on the retained invariant sector, as required by Theorem K.6.6;
+5. an absolute determinant-line certificate for the full nondegenerate quark mass matrices,
+   $$
+   \frac{\det(M_uM_d)}{|\det(M_uM_d)|}=1.
+   $$
+   This may be discharged by: (a) genuinely real full Yukawa matrices, positive-orientation certificates of Corollary K.6.5 in both sectors, and a certificate that no Berry factors multiply those mass entries; (b) a registered nondegenerate reference pair $(M_u^0,M_d^0)$ with $\det(M_u^0M_d^0)>0$, together with full complex flavor transport from that pair whose determinant holonomy obeys $\det U_u\det U_d=1$ along the retained path; or (c) an accepted Pfaffian real-orientation certificate $\mathfrak O_{\mathrm{Pf}}$ of Definition K.6.10a on a genuinely real branch.
 
-2. an accepted Pfaffian real-orientation certificate $\mathfrak O_{\mathrm{Pf}}$ of Definition K.6.10a,
-
-the physical strong-CP parameter is
+Then
 $$
 \bar\theta
 =
-\theta_{\text{QCD}}+\arg(\det M_q)
-=
-0.
+\theta_{\mathrm{QCD}}+\arg(\det M_q)
+\equiv
+0
+\pmod{2\pi}.
 $$
 
-*Proof.* Theorem K.6.6 gives $\theta_{\text{QCD}}=0$ on the σ-symmetric PCE-attractor branch. Corollary K.6.5 gives $\arg(\det M_q)=0$ on any certified positive-orientation real-Yukawa branch. Theorem K.6.10b gives the same determinant-phase conclusion on the Pfaffian orientation branch. Therefore $\bar\theta=0+0=0$ in either certified case. Without a positive-orientation determinant or Pfaffian-orientation certificate, $E_8$ reality gives real Yukawa data but does not exclude the negative determinant component, so the theorem is branch-level exactly as stated. ∎
+*Proof.* Items 1–4 and Theorem K.6.6 give $\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}$ in the fixed common chiral convention. Item 5 fixes the determinant phase of the full mass matrices in that same convention; alternatives (a)–(c) are sufficient ways to discharge it. Their invariant product is therefore $z_{\mathrm{CP}}=1$, equivalently $\bar\theta\equiv0\pmod{2\pi}$. Without items 1–4 the gauge angle has not been selected; without item 5, neither positive magnitudes nor separately assigned Berry phases fix the determinant line of the full quark mass matrices. ∎
 
-**Theorem K.6.12 (Independence of Mechanisms).** The two mechanisms are mathematically independent branch inputs:
+**Theorem K.6.12 (Basis-Covariant Strong-CP Bookkeeping).** Define
+$$
+z_{\mathrm{CP}}
+:=
+e^{i\theta_{\mathrm{QCD}}}
+\frac{\det(M_uM_d)}{|\det(M_uM_d)|}
+=e^{i\bar\theta}.
+$$
+Under an anomalous chiral rephasing by an angle $\chi$, the two displayed factors transform oppositely,
+$$
+\theta_{\mathrm{QCD}}\longmapsto\theta_{\mathrm{QCD}}-\chi,
+\qquad
+\arg\det(M_uM_d)\longmapsto\arg\det(M_uM_d)+\chi,
+$$
+so $z_{\mathrm{CP}}$ is invariant although its two terms are not. Consequently the following may be supplied as separate constructions only after one common chiral-basis and determinant-line convention is fixed:
 
-1. **Mechanism I** ($\theta_{\text{QCD}}=0$): uses the complex structure of $\operatorname{Gr}(2,8)$ via the anti-holomorphic involution σ and the topological-cost selection.
-2. **Mechanism II** ($\arg(\det M_q)=0$): uses real Yukawa data together with a positive-orientation determinant certificate, supplied either by the nonzero-path criterion of Theorem K.6.9 or by the ordered heat-kernel chamber of Corollary K.6.9a.1.
+1. a gauge-vacuum construction fixing the first factor in that convention; and
+2. a full mass determinant-line construction fixing the second factor in the same convention.
 
-*Proof.* Mechanism I operates on the parameter space of gauge vacua, utilizing the Kähler geometry of $\operatorname{Gr}(2,8)$ and the action of complex conjugation as an anti-holomorphic involution. Mechanism II operates on the internal flavor space. The fact that $E_8$ roots lie in real Euclidean space $\mathbb R^8$ supplies real Yukawa entries. The determinant-component selection is supplied separately: either by a nonzero determinant path from the diagonal reference, or by the strict total-positivity theorem for an ordered Gaussian heat-kernel chamber.
+*Proof.* The anomalous Jacobian of the chiral rephasing shifts the coefficient of the topological term by the negative of the mass-determinant phase shift. Their sum modulo $2\pi$, and hence $z_{\mathrm{CP}}$, is unchanged. Therefore the individual zero statements are convention-dependent bookkeeping statements, whereas $z_{\mathrm{CP}}=1$ is the physical conclusion. Theorem K.6.11 is valid only when its gauge and flavor certificates use the same convention and jointly establish that invariant conclusion. ∎
 
-The mechanisms share the common origin $d_0=8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge8$) but employ disjoint geometric data: complex structure and topological cost for $\theta_{\text{QCD}}$, versus real-lattice Yukawa data and determinant orientation for $\arg(\det M_q)$. Neither mechanism implies the other; both are required for the complete branch-level resolution. ∎
-
-**Remark K.6.2: Contrast with Fine-Tuning.** In standard treatments, $\bar\theta\approx0$ would require $\theta_{\text{QCD}}\approx-\arg(\det M_q)$ with both terms potentially $\mathcal O(1)$ but canceling to high precision. In the PU branch stated here, $\theta_{\text{QCD}}=0$ is selected by σ-invariance plus PCE, and $\arg(\det M_q)=0$ is selected by a positive-orientation real-Yukawa branch. No cancellation is used. The $E_8$ input supplies real Yukawa data; the determinant-orientation certificate supplies the sign.
+**Remark K.6.2: Contrast with Fine-Tuning.** In standard treatments, $\bar\theta\approx0$ can be written in a fixed convention as a cancellation between $\theta_{\mathrm{QCD}}$ and $\arg\det(M_uM_d)$. In the conditional branch of Theorem K.6.11, the common-convention gauge and full-mass determinant-line certificates jointly give the invariant statement $z_{\mathrm{CP}}=1$ without a fitted cancellation. The $E_8$ input supplies the positive Yukawa magnitude kernel; it supplies neither the full Berry-phased determinant line nor its orientation.
 
 ### K.6.10 $E_8$ Triad Selection
+
 
 **Definition K.6.12 (Mass Ratio Invariant).** For path-additive Dirac-type generation sectors with masses $m_3 > m_2 > m_1$:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}}$$
@@ -1982,18 +2090,23 @@ Thus larger arguments lower $C$. Distances alone also leave the actual root labe
 
 ### K.6.11 Type I and Type II CP Violation
 
-The framework distinguishes two geometric types of CP violation, explaining why strong CP is absent on the stated Appendix K branch while weak CP is present.
+The framework distinguishes two geometric types of CP violation. On the complete conditional Appendix K branch, the absolute strong-sector phase vanishes, while a separately certified weak-sector Berry phase may remain nonzero; this does not explain why physical QCD realizes the Appendix K hypotheses.
 
-**Definition K.6.13 (Type I CP Violation).** CP violation appearing in strong-sector Lagrangian parameters or absolute determinant-line data. Such violation requires $\theta_{\text{QCD}}\ne0$, complex Yukawa entries, or an unfixed real Yukawa determinant orientation contributing a nonzero $\arg(\det M_q)$.
+**Definition K.6.13 (Type I CP Violation).** Strong-sector CP violation is the nontrivial basis-invariant absolute determinant-line class
+$$
+z_{\mathrm{CP}}=e^{i\bar\theta}\ne1.
+$$
+The separate values of $\theta_{\mathrm{QCD}}$ and $\arg\det(M_uM_d)$, and the mere presence of complex Yukawa entries, are not individually invariant criteria.
 
 **Definition K.6.14 (Type II CP Violation).** CP violation appearing as Berry holonomy on the generation manifold, arising from the geometric phase acquired during flavor-changing processes.
 
-**Theorem K.6.15 (Strong-Sector Type I Gate).** On the σ-symmetric topological-cost branch together with a certified positive-orientation real-Yukawa determinant branch, strong-sector Type I CP phases vanish.
+**Theorem K.6.15 (Strong-Sector Type I Gate).** Under all five hypotheses of Theorem K.6.11, with the gauge and full-mass determinant records expressed in one common chiral convention, the strong-sector Type I class vanishes.
 
-*Proof.* The σ-symmetric topological-cost branch gives $\theta_{\text{QCD}}=0$ by Theorem K.6.6. $E_8$ reality gives real Yukawa data by Theorem K.6.7, and the positive-orientation certificate of Corollary K.6.5 fixes $\arg(\det M_q)=0$ when its finite data are supplied. Hence both absolute strong-sector Type I contributions vanish on the stated branch. Without the determinant-orientation certificate, real Yukawa data alone leave the determinant sign unfixed, so the gate is branch-level exactly as stated. ∎
+*Proof.* Theorem K.6.11 gives the invariant statement $z_{\mathrm{CP}}=1$. This is exactly the negation of Type I CP violation in Definition K.6.13. Positive magnitude data alone do not establish the result. ∎
 
 **Theorem K.6.16 (Real-Locus Kähler-Holonomy Constraint).** The invariant locus $\operatorname{Gr}(2,8)^\sigma$ is Lagrangian. Consequently, if a contractible loop $\gamma$ bounds a surface $\Sigma$ contained in that locus and the Berry curvature is the restricted Kähler form, then
 $$
+
 \int_\Sigma\omega_{KE}=0.
 $$
 A nonzero continuous curvature holonomy therefore requires a certified relative loop or spanning surface that is not contained in the real locus. A flat topological holonomy not represented by the curvature integral requires its own bundle certificate.
@@ -2006,15 +2119,16 @@ $$
 $$
 so $\omega_{KE}(X,Y)=0$ for all tangent $X,Y$. Proposition K.6.5 gives real dimension $12$, half the ambient real dimension $24$, hence the invariant locus is Lagrangian. The curvature integral over any surface contained in it vanishes. ∎
 
-**Theorem K.6.17 (Certificate-Gated Type Classification).** On the $\sigma$-symmetric topological-cost branch with a certified positive-orientation real-Yukawa determinant:
+**Theorem K.6.17 (Certificate-Gated Type Classification).** Under all five hypotheses of Theorem K.6.11:
 
 - **Type I** strong-sector phases vanish.
 - **Type II** phases are permitted only when the flavor branch supplies a relative Berry-loop certificate whose holonomy is nonzero, obeys the declared $\sigma$/CP transformation law, and changes a retained generation protocol. A continuous Kähler-curvature realization must satisfy the off-real-locus condition of Theorem K.6.16.
 
-*Proof.* Theorem K.6.6 gives $\theta_{\mathrm{QCD}}=0$ on its stated branch, and Corollary K.6.5 gives $\arg\det M_q=0$ when its orientation data are supplied; hence the Type-I conclusion follows. For Type II, a connection and loop define
+*Proof.* Theorem K.6.11 gives $z_{\mathrm{CP}}=1$, so the Type-I conclusion follows invariantly. For Type II, a connection and loop define
 $$
 \delta=\arg\operatorname{Hol}_\gamma(\mathcal A_B)
 $$
+
 only after the bundle, connection, and loop are specified. Nonzero holonomy plus the response condition makes that relative phase physical. Theorem K.6.16 excludes a nonzero continuous Kähler-curvature integral for a spanning surface wholly inside the real locus, so the stated additional certificate is necessary. ∎
 
 **Theorem K.6.18 (Conditional CKM Phase on the Nonlinear Phase-Response Branch).** Assume the branch registers the additional nonlinear response ansatz of Theorem T.56,
@@ -2044,11 +2158,12 @@ whose positive real factor preserves the phase and reduces only visibility. Theo
 
 | Effect | Type | Determinant-line status | Result |
 |:-------|:-----|:------------------------|:-------|
-| $\theta_{\text{QCD}}$ | I | Absolute σ-exact class plus topological-cost selection | $=0$ on the σ-symmetric branch |
-| $\arg\det M_q$ | I | Real $E_8$ determinant class plus positive-orientation certificate | $=0$ on the certified orientation branch |
+| $\theta_{\mathrm{QCD}}$ | I | Constructed equivariant $\sigma$-CP map, accepted QCD gauge-topology bridge, $\sigma$-invariant vacuum, and positive first-harmonic cost certified as the operative QCD vacuum-selection functional with a globally minimizing realized vacuum | $\equiv0\pmod{2\pi}$ on the complete conditional gauge-angle branch |
+| $\arg\det(M_uM_d)$ | I | Common-convention absolute full-mass determinant-line certificate: a genuinely real positive-orientation path with no Berry mass factors, a positive-reference determinant-one complex transport, or the accepted Pfaffian branch | $\equiv0\pmod{2\pi}$ on that certificate |
 | $\delta_{\text{CKM}}$ | II | Relative flavor holonomy | $=66.7°$ |
 | $\delta_{\text{PMNS}}$ | II | Relative neutrino-sector holonomy | Appendix T branch value |
 | Baryogenesis CP-odd datum | II | Relative holonomy weighted by a driven APS-Kubo update | Appendix Y branch value; Theorems Y.6.1i--Y.6.1k |
+
 
 **Theorem K.6.18a (Relative Determinant-Line CP Ledger under Explicit Bridge Data).** Let $D_{\mathrm{PU}}(x)$ be a smooth retained family of finite chiral update operators over the gauge-flavor parameter branch, and let
 $$
@@ -2076,10 +2191,11 @@ Assume the branch supplies:
 3. an index-preserving map from the resulting APS family to the anomaly-update operator used in Appendix Y; and
 4. an operational response certificate showing that the relative holonomy changes a retained flavor or anomaly protocol.
 
-In the convention $\Theta_{\mathrm{APS}}(\gamma)=\pi\eta_\gamma$, the phase is $\arg\operatorname{Hol}_\gamma(\mathcal L_{\det})+\pi\eta_\gamma$. On the $\sigma$-symmetric PCE-Attractor branch with a certified positive-orientation real-Yukawa determinant branch and the four bridge entries above:
+In the convention $\Theta_{\mathrm{APS}}(\gamma)=\pi\eta_\gamma$, the phase is $\arg\operatorname{Hol}_\gamma(\mathcal L_{\det})+\pi\eta_\gamma$. On the $\sigma$-symmetric PCE-Attractor branch with the full absolute determinant-line certificate of Theorem K.6.11, including determinant compatibility of any Berry-phased quark matrices, and the four bridge entries above:
 
 1. Type I CP phases are absolute determinant-line classes. The QCD vacuum contribution is σ-exact and PCE-null, and the quark determinant contribution is positive-oriented:
 $$
+
 \Theta_{\det}(\gamma_{\mathrm{abs}})
 =
 \bar\theta
@@ -2111,9 +2227,10 @@ $$
 
 Thus absolute CP phase is exact and removed, while relative CP holonomy is physical when it changes a finite generation or anomaly protocol response.
 
-*Proof.* The determinant line of a finite Fredholm update operator is functorial under direct sum, dualization, and restriction to retained finite sectors. The $\sigma$-involution of Definition K.6.3 acts by complex conjugation on this line. For an absolute Type I phase, Theorem K.6.6 gives a σ-invariant real trivialization of the QCD vacuum angle after PCE selection of the $\theta=0$ minimum. The quark-mass determinant contribution is real by Theorem K.6.7 and has positive determinant orientation only when the branch supplies the finite certificate of Corollary K.6.5. Under those two branch inputs, the absolute determinant-line phase is trivial, so (K.6.18a.3) follows.
+*Proof.* The determinant line of a finite Fredholm update operator is functorial under direct sum, dualization, and restriction to retained finite sectors. The $\sigma$-involution of Definition K.6.3 acts by complex conjugation on this line. For an absolute Type I phase, the common-convention gauge-angle record and full-mass determinant-line record of Theorem K.6.11 give the invariant identity $z_{\mathrm{CP}}=1$. Theorem K.6.7 supplies only the positive magnitude kernel and cannot replace that full determinant-line record when Berry phases are present. Thus (K.6.18a.3) follows exactly from the accepted absolute certificate.
 
 For a relative flavor loop, the endpoints are compared inside the same real vacuum class, but the path may enclose Berry curvature on the generation bundle. The determinant-line connection restricted to the retained flavor bundle is the Berry connection used in Theorem K.6.18 and Appendix T. Hence its relative holonomy is (K.6.18a.4). Because PPI identifies only protocol-invisible phases, a relative holonomy survives exactly when it changes a generation-changing response presheaf.
+
 
 For baryogenesis, Theorem Y.4.3b identifies the anomaly-mediated update with the APS index of the chiral predictive update operator, including the APS boundary phase contribution on the boundary Dirac operator. Corollary Y.10.2 identifies the CP phase weighting the certified baryogenesis transport response with predictive orientation holonomy. Substituting the relative determinant-line phase into the Appendix Y CP factor gives (K.6.18a.5). Therefore the Type I/Type II split is the exact/non-exact split of the determinant-line CP ledger. ∎
 
@@ -2155,37 +2272,31 @@ $$
 
 *Proof.* The first equation is the conditional product form of Appendix Y. The stated structural inputs fix only $\kappa_B$. The remaining factors and their covariance are independent transport-certificate entries. Direct substitution gives the displayed illustrative product; no uncertainty interval or agreement pull follows without the accepted certificate. ∎
 
-### K.6.13 Experimental Predictions
+### K.6.13 Conditional Consequences and Empirical Scope
 
-**Prediction K.6.1 (No Axion on the Strong-CP Branch).** On the σ-symmetric, certified positive-orientation real-Yukawa branch, the framework predicts $\bar\theta=0$ exactly without introducing an axion degree of freedom or Peccei-Quinn symmetry (Peccei & Quinn 1977a, 1977b). This branch therefore contains no QCD axion in the strong-CP sector.
+**Branch-Scope Statement K.6.1 (No Axion Introduced by This Construction).** The complete conditional branch obtains $\bar\theta\equiv0\pmod{2\pi}$ without adding an axion or Peccei-Quinn symmetry. This is an absence from the branch's assumed field content, not a derivation that QCD axions do not exist. Detection of an axion would refute this branch only if an independent completeness theorem identified the branch as exhaustive of the physical field content; no such theorem is supplied here.
 
-This prediction is falsifiable at the branch level: detection of a QCD axion with coupling $g_{a\gamma\gamma}\propto1/f_a$ in the canonical window $10^9\lesssim f_a\lesssim10^{12}$ GeV would refute the Appendix K strong-CP branch. Experiments such as ADMX, ABRACADABRA, and CASPEr are testing this window (Graham et al. 2015).
+**Table K.6.3: Axion Search Context**
 
-**Table K.6.3: Axion Search Experiments**
+| Axion Type | Mass Range | Detection Method | Appendix K implication |
+|:-----------|:-----------|:-----------------|:-----------------------|
+| KSVZ | $10^{-6}$-$10^{-3}$ eV | ADMX, HAYSTAC | No exclusion follows without an exhaustive-field-content theorem |
+| DFSZ | $10^{-6}$-$10^{-3}$ eV | IAXO | No exclusion follows without an exhaustive-field-content theorem |
+| Ultralight | $10^{-22}$-$10^{-18}$ eV | Cosmological | No exclusion follows without an exhaustive-field-content theorem |
 
-| Axion Type | Mass Range | Detection Method | PU Prediction |
-|:-----------|:-----------|:-----------------|:--------------|
-| KSVZ | $10^{-6}$ – $10^{-3}$ eV | ADMX, HAYSTAC | Not present |
-| DFSZ | $10^{-6}$ – $10^{-3}$ eV | IAXO | Not present |
-| Ultralight | $10^{-22}$ – $10^{-18}$ eV | Cosmological | Not present |
-
-**Prediction K.6.2 (Neutron EDM on the Strong-CP Branch).** On the σ-symmetric, certified positive-orientation Appendix K branch, the framework predicts
-$$
-d_n=0\quad\text{from the strong-CP contribution}
-$$
-modulo small SM contributions from the CKM phase at the level $|d_n|\sim10^{-31}$ e·cm (Pospelov & Ritz 2005), far below current experimental sensitivity.
+**Branch-Scope Statement K.6.2 (Strong-CP Contribution to the Neutron EDM).** If the complete branch yields $\bar\theta\equiv0\pmod{2\pi}$, the neutron-EDM contribution proportional to $\bar\theta$ vanishes. This is not a prediction that the total neutron EDM is zero: CKM effects and any additional CP-violating operators require independent hadronic calculations and certificates. A nonzero measured total $d_n$ refutes this branch only if the contribution is independently identified with nonzero $\bar\theta$.
 
 **Table K.6.4: Neutron EDM Experiments**
 
-| Experiment | Projected Sensitivity | Timeline | PU Prediction |
-|:-----------|:----------------------|:---------|:--------------|
-| n2EDM (PSI) | $10^{-27}$ e·cm | 2025+ | Null |
-| LANL nEDM | $10^{-27}$ e·cm | 2025+ | Null |
-| PanEDM | $10^{-28}$ e·cm | 2030+ | Null |
-
+| Experiment | Projected Sensitivity | Timeline | Role |
+|:-----------|:----------------------|:---------|:-----|
+| n2EDM (PSI) | $10^{-27}$ e·cm | 2025+ | Constrains total $d_n$; source attribution required |
+| LANL nEDM | $10^{-27}$ e·cm | 2025+ | Constrains total $d_n$; source attribution required |
+| PanEDM | $10^{-28}$ e·cm | 2030+ | Constrains total $d_n$; source attribution required |
 **Prediction K.6.3 (Static $\theta$-Vacuum Stability on the First-Harmonic Branch).** For $V_0>0$,
 $$
 V_{\mathrm{PCE}}'(0)=0,
+
 \qquad
 V_{\mathrm{PCE}}''(0)=V_0>0,
 $$
@@ -2198,41 +2309,68 @@ so $\theta=0$ is a strict local minimum of the declared static cost. A decay law
 | CKM phase $\delta_{\mathrm{CKM}}$ | $66.7^\circ$ | $65.72^\circ\pm1.49^\circ$ | ✓ ($+0.7\sigma$) |
 | Jarlskog invariant | $3.22 \times 10^{-5}$ | $(3.12^{+0.13}_{-0.12}) \times 10^{-5}$ | ✓ (+0.8σ) |
 | Baryon asymmetry | illustrative factor product $\approx6.15\times10^{-10}$; no theory interval defined | $(6.12 \pm 0.04) \times 10^{-10}$ | certificate pending; no theory pull defined |
-| Neutron EDM | $0$ on the Appendix K strong-CP branch | $<1.8 \times 10^{-26}$ e·cm | branch-consistent |
+| Neutron EDM contribution proportional to $\bar\theta$ | $0$ if every Appendix K branch hypothesis is supplied | The measured bound constrains total $d_n$ | conditional identity; not a total-neutron-EDM prediction |
 
-### K.6.14 Derivation Chain Summary
+### K.6.14 Conditional Implication Chain
 
-**Chain for θ_QCD = 0:**
+**Conditional chain for $\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}$:**
 
-$$\text{PCE} \to \text{Hermiticity} \to \sigma\text{-invariance} \to \theta \in \{0,\pi\} \to \text{PCE cost} \to \theta_{\text{QCD}} = 0$$
+$$
+\begin{gathered}
+\text{constructed equivariant }\sigma\text{--CP map}
++
+\text{accepted QCD gauge-topology bridge}
++
+\sigma\text{-symmetric vacuum branch}
+\\
+\Longrightarrow
+\theta_{\mathrm{QCD}}\in\{0,\pi\},
+\\[3pt]
+V_{\mathrm{PCE}}(\theta)=V_0(1-\cos\theta),
+\quad V_0>0
+\quad\text{operative QCD vacuum-selection functional}
+\quad\text{with a globally minimizing realized vacuum}
+\Longrightarrow
+\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}.
+\end{gathered}
+$$
 
 Explicitly:
-1. PCE (Definition 15) requires minimal complexity.
-2. Physical observables have real spectra (Theorem K.6.3).
-3. Hermiticity: $O=O^\dagger$ (Step 4 of Theorem K.6.3).
-4. σ-invariance of the PCE-Attractor is a branch input, with σ-invariance implying Hermiticity (Lemma K.6.4).
-5. CP corresponds to σ through the antiunitary structure (Theorem K.6.1).
-6. The θ-vacuum embeds in $\operatorname{Gr}(2,8)$ with $\theta\mapsto-\theta$ under σ (Proposition K.6.4).
-7. σ-invariance forces $\theta\in\{0,\pi\}$ (Theorem K.6.5).
-8. PCE cost gives $V(\pi)=2V_0>V(0)=0$ (Theorem K.6.6).
-9. Therefore $\theta_{\text{QCD}}=0$.
+1. Theorem K.6.1 states the required equivariant parameter action; its concrete realization is branch data.
+2. Proposition K.6.4 states the QCD gauge-topology bridge that must be constructed and accepted.
+3. The $\sigma$-symmetric vacuum is a branch hypothesis; Lemma K.6.4 proves that Hermiticity does not imply it.
+4. The accepted bridge intertwines physical CP with $\theta\mapsto-\theta$, so Theorem K.6.5 gives $\theta_{\mathrm{QCD}}\in\{0,\pi\}$.
+5. The branch must certify the positive first-harmonic cost as the operative QCD vacuum-selection functional and the realized vacuum as its global minimizer on the retained invariant sector.
+6. Theorem K.6.6 then gives $\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}$, with canonical representative $0$.
 
-**Chain for $\arg(\det M_q)=0$:**
+**Conditional chain for $\arg(\det M_q)\equiv0\pmod{2\pi}$:**
 
-$$E_8 \subset \mathbb R^8 \to d^2\in\mathbb R \to Y_{ij}\in\mathbb R_{>0} \to \text{positive-orientation certificate} \to \arg(\det M_q)=0$$
+$$
+E_8\subset\mathbb R^8
+\Longrightarrow
+d_{E_8}^2\in\mathbb R_{\ge0}
+\Longrightarrow
+Y^{\rm mag}_{ij}=Ce^{-\alpha d_{E_8}^2}\in\mathbb R_{>0},
+\qquad
+\text{registered full-mass lift}
++
+\text{common-convention absolute determinant-line certificate}
+\Longrightarrow
+\frac{\det(M_uM_d)}{|\det(M_uM_d)|}=1.
+$$
 
 Explicitly:
 1. $E_8\subset\mathbb R^8$ (Lemma K.6.2).
 2. $d^2_{E_8}\in\mathbb R_{\ge0}$ (Lemma K.6.3).
-3. Gaussian overlap gives real positive entries $Y_{ij}=Ce^{-\alpha d^2}$ (Theorem K.6.7).
-4. Real positive entries alone do not fix the determinant component (Theorem K.6.9).
-5. The finite branch supplies either a path from the positive diagonal reference to the physical Yukawa matrix inside $GL(3,\mathbb R)$ or an ordered heat-kernel chamber (Theorem K.6.9; Corollary K.6.9a.1).
-6. The certificate gives $\det Y_u>0$ and $\det Y_d>0$.
-7. Therefore $\arg(\det M_q)=0$ (Corollary K.6.5).
-
+3. Gaussian probability overlap gives a real positive magnitude kernel $Y^{\mathrm{mag}}_{ij}=Ce^{-\alpha d^2}$ (Theorem K.6.7).
+4. A separate branch must determine whether the full matrices are genuinely real or carry Berry phases.
+5. On a genuinely real branch, positive entries alone do not fix the determinant component (Theorem K.6.9).
+6. The finite branch supplies either a path from the positive diagonal reference inside $GL(3,\mathbb R)$, an ordered heat-kernel chamber, a positive-oriented nondegenerate reference plus determinant-one full complex transport, or the accepted Pfaffian record (Theorem K.6.9; Corollary K.6.9a.1; Theorem K.6.11).
+7. The resulting common-convention absolute determinant-line certificate gives $\arg\det(M_uM_d)\equiv0\pmod{2\pi}$ and, with the gauge-angle record, $z_{\mathrm{CP}}=1$.
 ### K.6.15 Comparison with Alternative Solutions
 
 **Table K.6.6: Alternative Solutions to the Strong CP Problem**
+
 
 | Solution | Mechanism | New Physics | Prediction | Status |
 |:---------|:----------|:------------|:-----------|:-------|
@@ -2240,50 +2378,50 @@ Explicitly:
 | **Nelson-Barr** | Spontaneous CP | New scalars | Model-dependent | Viable |
 | **Massless u** | θ unphysical | None | $m_u = 0$ | Ruled out |
 | **Anthropic** | Selection | None | Non-predictive | Unfalsifiable |
-| **PU (this work)** | σ-invariance + $E_8$ reality + positive-orientation certificate | None | $\bar\theta=0$ on the Appendix K branch | Testable |
+| **PU conditional branch** | Constructed equivariant $\sigma$-CP map + accepted QCD gauge-topology bridge + $\sigma$-invariant vacuum + positive first-harmonic cost certified as the operative QCD vacuum-selection functional with a globally minimizing realized vacuum + determinant- or Pfaffian-orientation certificate | None introduced by this branch | $\bar\theta\equiv0\pmod{2\pi}$ if every hypothesis is supplied | Conditional implication; physical bridge records open |
 
-**Key Distinction:** The PU solution requires no new particles or symmetries beyond the Standard Model. The same geometric structures determine:
-
-- Fine-structure constant α (Appendix Z)
-- Spacetime dimension $D = 4$ (Theorem Z.11)
-- Cosmological constant Λ (Appendix U)
-- Electroweak scale v (Appendix T)
-- Baryon asymmetry η_B (Appendix Y)
+**Scope Distinction:** This conditional branch introduces no new field, but it neither proves that no axion exists nor establishes an exhaustive QCD solution. Its geometric ingredients overlap with other framework branches only through separately accepted bridge certificates; agreement in the fine-structure, dimension, cosmological, electroweak, or baryogenesis sectors does not validate the strong-CP hypotheses.
 
 ### K.6.16 Summary
 
-**Main Result (Theorem K.6.11):**
-$$\boxed{\bar\theta=\theta_{\text{QCD}}+\arg(\det M_q)=0\quad\text{on the σ-symmetric positive-orientation branch}}$$
+**Conditional Result (Theorem K.6.11):**
+$$
+\boxed{
+\bar\theta
+=
+\theta_{\mathrm{QCD}}+\arg(\det M_q)
+\equiv0\pmod{2\pi}
+}
+$$
+provided every constructed-map, QCD topology-bridge, vacuum-selection, global-minimizer, and orientation hypothesis of that theorem is supplied.
 
-The Strong CP Problem is resolved through two independent geometric mechanisms:
+The conditional value $\bar\theta\equiv0\pmod{2\pi}$ follows from two common-convention construction packages whose individual phase assignments are basis-covariant bookkeeping:
 
-**Table K.6.7: Resolution Summary**
+**Table K.6.7: Conditional Branch Summary**
 
 | Component | Value | Mechanism | Reference |
 |:----------|:------|:----------|:----------|
-| $\theta_{\text{QCD}}$ | 0 | σ-invariance + PCE minimization | Theorem K.6.6 |
-| $\arg(\det M_q)$ | 0 | $E_8$ root reality + positive-orientation determinant certificate | Corollary K.6.5 |
-| $\bar{\theta}$ | 0 | Combined | Theorem K.6.11 |
+| $\theta_{\mathrm{QCD}}$ | $0$ modulo $2\pi$ | Constructed equivariant $\sigma$-CP map, accepted QCD gauge-topology bridge, $\sigma$-invariant vacuum, and positive first-harmonic cost certified as the operative QCD vacuum-selection functional with a globally minimizing realized vacuum | Theorems K.6.1-K.6.2; Proposition K.6.4; Theorems K.6.5-K.6.6 |
+| $\arg(\det M_q)$ | $0$ modulo $2\pi$ in the fixed common convention | Absolute full-mass determinant-line certificate; a real positive-orientation, positive-reference determinant-one complex-transport, or Pfaffian branch can discharge it | Corollary K.6.5; Definition K.6.10a; Theorems K.6.10b–K.6.11 |
+| $z_{\mathrm{CP}}=e^{i\bar\theta}$ | $1$ | Basis-invariant conjunction of the two complete conditional packages | Theorems K.6.11–K.6.12 |
 | CKM phase $\delta$ | 66.7° | Berry holonomy (Type II) | Theorem K.6.18 |
 | $\eta_B$ | illustrative factor product $\approx6.15\times10^{-10}$; no theory interval defined until an accepted $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, or $\mathfrak C_B^{\mathrm{APSK}}$ fixes the forward covariance | Baryogenesis | Theorem K.6.19; Definitions Y.11.7a, Y.11.7e, and Y.6.1c; Theorem Y.6.1d |
 
 **Key Insights:**
 
-1. **σ-invariance forces θ_QCD = 0**: The anti-holomorphic involution on Gr(2,8) corresponds to CP in QFT. Physical (Hermitian) observables are σ-invariant, restricting θ to {0, π}. PCE then selects θ = 0.
+1. **The complete conditional gauge-angle branch gives $\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}$**: a constructed equivariant parameter map, an accepted QCD gauge-topology bridge, and a $\sigma$-invariant vacuum restrict $\theta$ to $\{0,\pi\}$; a positive first-harmonic cost certified as the operative QCD vacuum-selection functional, with the realized vacuum as a global minimizer, then selects the canonical representative $0$. Hermiticity alone does not imply $\sigma$-invariance.
 
-2. **$E_8$ reality plus orientation fixes $\arg(\det M_q)=0$**: Yukawa couplings derive from Gaussian overlaps on the real $E_8$ lattice, giving real positive entries. The determinant phase is fixed only after the branch supplies a positive-orientation certificate, either by a nonzero determinant path or by an ordered heat-kernel chamber.
+2. **Magnitude geometry plus a full determinant-line certificate fixes the mass contribution in a common convention**: Gaussian overlaps on the real $E_8$ lattice give positive magnitudes, while the full Berry-phased determinant requires a real-orientation, positive-reference determinant-one complex-transport, or Pfaffian certificate.
 
-3. **No fine-tuning**: Both contributions vanish independently through different branch mechanisms rather than by cancellation.
+3. **No fitted cancellation on the certified branch**: the two common-convention records jointly fix the invariant product $z_{\mathrm{CP}}=1$; the individual phases are not independent observables.
 
 4. **Weak CP survives**: Berry holonomy (Type II) is σ-compatible, allowing the CKM phase δ = 66.7° needed for baryogenesis.
 
-5. **Falsifiable branch**: The Appendix K strong-CP branch predicts no QCD axion and exact $\bar\theta=0$ within its stated symmetry and orientation hypotheses.
+5. **Empirical scope:** The branch introduces no axion and implies $\bar\theta\equiv0\pmod{2\pi}$ only after every stated bridge, vacuum, cost-selection, global-minimizer, and orientation hypothesis is supplied. Absence of an axion is not a branch-independent prediction, and the branch does not determine the total neutron EDM.
 
-The resolution requires no new particles (no axion), no new symmetries (Peccei & Quinn 1977a, 1977b), and no fine-tuning on the stated branch. The mechanism naturally explains why CP is violated in weak interactions (Type II, Berry phase) but not in strong interactions (Type I, forbidden by σ-symmetry plus positive-orientation real Yukawa data).
-
-The same geometric structure that generates the three-generation hierarchy (Appendix R) and the fine-structure constant (Appendix Z) also supplies the branch data for $\bar\theta=0$. The Strong CP resolution is not an independent postulate but emerges on the unified PCE-Attractor branch.
-
+The construction is a conditional consistency branch, not a derivation of why physical QCD realizes its hypotheses. It neither excludes Peccei-Quinn physics nor proves the absence of additional fields or symmetries. Connections to the generation and fine-structure branches are compatibility records; they do not construct the QCD gauge-topology bridge or select the physical vacuum.
 ---
+
 
 
 ## K.7 Hierarchy Problem and Naturalness: Conditional Status
@@ -3158,17 +3296,17 @@ S=\frac{\chi C_{\max}}{\eta\delta^2}A,
 $$
 and the area calibration defines the coefficient as $1/(4G)$ in the manuscript's unit convention. For item 3, Theorem K.10.10 shows that the KMS/Clausius/Raychaudhuri/source package yields the tensor equation; the capacity-area relation sets its gravitational normalization. Since those thermodynamic and geometric hypotheses are not consequences of a channel-capacity inequality, the three roles form a package of independent inputs rather than one inference from capacity. ∎
 
-**Corollary K.10.13 (Status of Gravitational Waves).** The framework predicts:
+**Corollary K.10.13 (Conditional Status of Gravitational Waves).** Assume a branch carries (a) an emergent metric and a faithful microscopic-to-metric perturbation map identifying retained long-wavelength network excitations with $h_{\mu\nu}$, (b) the Einstein dynamics and a smooth Minkowski-background approximation, and (c) no additional retained field or higher-order operator contributing at linear order. Then:
 
-(i) Gravitational waves are collective excitations of MPU network geometry—propagating disturbances in the relational structure of the network.
+(i) The represented gravitational waves are collective long-wavelength excitations of the emergent MPU-network geometry.
 
-(ii) At wavelengths $\lambda \gg \delta$, these excitations satisfy the linearized Einstein equations and exhibit massless spin-2 tensor structure, consistent with observations.
+(ii) At wavelengths $\lambda\gg\delta$, they satisfy the linearized Einstein equations and, after the linearized diffeomorphism gauge quotient, have the massless helicity-$2$ tensor structure.
 
-(iii) The framework does not require a fundamental graviton: the spin-2 behavior at $\lambda \gg \delta$ is a property of collective perturbations of the emergent metric. If a "graviton" description is used, it is an effective quasiparticle language for those collective modes rather than a fundamental degree of freedom.
+(iii) These conclusions require no fundamental graviton degree of freedom; a graviton description, if used, is an effective quasiparticle description of the certified collective modes.
 
-(iv) On the finite-substrate cutoff branch of Theorem K.10.4 and Corollary K.10.5a, reduced wavelengths $\bar\lambda\sim\delta$—equivalently ordinary wavelengths $\lambda\sim2\pi\delta\approx14.80\,L_P$—lie at the boundary of the operational continuum description.
+Separately, on the finite-substrate cutoff branch of Theorem K.10.4 and Corollary K.10.5a, reduced wavelengths $\bar\lambda\sim\delta$—equivalently ordinary wavelengths $\lambda\sim2\pi\delta\approx14.80\,L_P$—lie at the boundary of the certified operational continuum description.
 
-*Proof.* Linearizing an emergent metric $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}$ about Minkowski space yields the standard linearized tensor equations only on a branch that has already established the Einstein dynamics and the required smooth-background approximation. Theorem K.10.4 and Corollary K.10.5a identify $k\sim k_{\mathrm{MPU}}=\delta^{-1}$ as the conditional effective-cutoff boundary. They do not by themselves determine whether an effective quasiparticle description persists at that boundary. ∎
+*Proof.* Under assumptions (a)--(c), linearization of $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}$ gives the vacuum linearized Einstein equations. Their gauge quotient leaves the two transverse-traceless helicity-$2$ modes, and the faithful perturbation map identifies those modes with collective network excitations. Theorem K.10.4 and Corollary K.10.5a separately identify $k\sim k_{\mathrm{MPU}}=\delta^{-1}$ as the conditional cutoff boundary. They do not determine whether an effective quasiparticle description persists at that boundary. ∎
 
 **Proposition K.10.14 (Conditional Cutoff-Matching Status of Parameters).** In a regulated QFT, bare parameters depend on the regulator, cutoff, and renormalization prescription; they may diverge, vanish, or approach finite values as the cutoff is removed. On a PU branch carrying the ultraviolet lattice or bandlimit and matching certificate of Theorem K.10.4:
 
@@ -3380,10 +3518,11 @@ The following ledger mixes exact mathematical results with branch-qualified nume
 | Gravitational coupling | $G_{\mathrm{op}}$ is defined by the positive saturated channel-capacity area coefficient on the gravity-bridge package of Theorem K.10.12; $G_{\mathrm{op}}=G$ is a separate empirical calibration; $\delta/L_{P,\mathrm{op}}\approx2.355$ holds on the Appendix Q packing branch | Appendices E, Q |
 | Cosmological constant | Appendix U reference evaluation $\Lambda L_P^2 = 8\pi A_{\text{eff}}e^{-283}\sim 10^{-122}$ under the stated counting and prefactor conventions | Appendix U |
 | Primordial observables | $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$, conditional on the Appendix U primordial identifications and assumptions | Appendix U |
-| Spacetime dimension | $D=4$ on the faithful tangent-shell least-feasible branch | Appendix Z, Definition Z.9a and Theorems Z.10--Z.11; independent compatibility checks in Appendices G and H do not replace that branch |
+| Euclidean response-carrier dimension and spacetime promotion | $D=4$ on the faithful tangent-shell least-feasible branch; $3+1$ interpretation separately certificate-gated | Appendix Z, Definition Z.9a and Theorems Z.10-Z.11; Corollary P.8.3; compatibility checks in Appendices G and H do not replace the promotion certificates |
 | Arrow of time | Conditional pathwise orientation on the common-measure, positive-production branch | Appendix O |
 | Cosmic censorship | Open; current capacity and throughput bounds do not exclude naked singularities | Section K.5 research program |
 | MPU comparison/cutoff scale | $\hbar/\delta\approx0.42466\,m_Pc$ on Equation Q.18's branch; a hard retained-mode cutoff additionally requires Theorem K.10.4's lattice/bandlimit and matching certificate | Section K.10, Theorem K.10.4; Corollary K.10.5a |
+
 
 ### K.11.2 Active Development Areas
 
@@ -3434,11 +3573,12 @@ The register reports status only; it does not promote any row to theorem level.
 
 1. **Black hole information:** Perspectival Information Channel and reflexive extraction costs defined (Section K.3); detailed calculations of information recovery rates and scrambling times in progress.
 
-2. **Strong CP problem:** PCE mechanism proposed (Section K.6) with $\sigma$-invariance selecting $\theta = 0$; explicit derivation of the topological cost term $V_{\text{topo}}(\theta)$ from first principles required.
+2. **Strong CP problem:** Section K.6 gives a conditional implication. Physical closure still requires construction of the equivariant $\sigma$-CP parameter map, the QCD second-Chern-to-holonomy bridge, a derivation of the $\sigma$-invariant vacuum, certification that the positive first-harmonic cost is the operative QCD vacuum-selection functional with the realized vacuum as a global minimizer, and noncircular determinant- or Pfaffian-orientation data. Until those records are supplied, $\bar\theta\equiv0\pmod{2\pi}$ is branch-conditional rather than a solved strong-CP problem.
 
 3. **Modified cosmology:** homogeneous FLRW constitutive law closed at the background level (Section K.9); derivation of $(A_c,n)$ from the relaxation potential and perturbation-level observational tests remain.
 
-4. **Renormalization-PCE correspondence:** FRG flow identified with PCE-selected compression (Theorem K.10.7); rigorous derivation of the PCE functional $\mathcal{L}_{\text{PCE}}^{(k)}$ from MPU dynamics required.
+
+4. **Renormalization-PCE correspondence:** Theorem K.10.7 gives a conditional formal correspondence when an explicit state-space map identifies the Wilsonian flow with a PCE gradient flow and the functionals agree under that map. Those data have not been derived from MPU dynamics, so FRG flow is not presently identified with PCE-selected compression.
 
 5. **Nuclear finite-aggregate sector:** Appendix T fixes the elementary electroweak/flavor parameter sector on its stated branch, but isotope stability, magic-number gaps, and spin-dependent nuclear effects require a derived finite nuclear Hamiltonian $H_A^{\mathrm{PU}}$ on the many-nucleon aggregate space. The determinacy boundary is Theorem T.79a.
 
@@ -3464,20 +3604,21 @@ The register reports status only; it does not promote any row to theorem level.
 
 ### K.11.4 Experimental Validation
 
-The framework makes precise, falsifiable predictions across multiple domains:
+The framework registers a mixed-status set of exact branch consequences, interval predictions, candidate relations, consistency checks, and open empirical protocols. Each item is falsifiable only at its declared status and after its antecedent certificate and forward-lock record are fixed:
 
 **Fundamental Constants:**
-- Registry-entered Thomson branch $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$, with passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ if the seventh-order source is weakened
+- Diagnostic Thomson candidate $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ conditional on the independently accepted operator-realization and physical source-exhaustion certificate of Definition Z.27.11k.12; those gates remain open. If only the positive-contraction seventh-order record is accepted, the corresponding conditional candidate interval is $[137.03599917502362\ldots,137.03599917878353\ldots]$.
 - $\sin^2\theta_W$ and $m_H$ consistency checks with RG evolution to high precision
 
 **Particle Physics:**
 - Fermion hierarchy model: preregister the root labels, continuous coefficients, scheme, and remainder interval, then test only held-out mass data
 
 
-- Three-generation structure from topological constraints (Appendix R)
+- Conditional least-family count $N_g=3$ on the declared SM15 or SM16 family-redundancy candidate class with a nonzero CKM-type rephasing invariant and the realized additive-monotone objective; triality and $E_8$/Leech structures are compatibility checks (Appendix R)
 
 **Consciousness and Complexity:**
 - Consciousness Complexity scaling (Section 13): compare a preregistered activity observable $A(N)$ with a model $A(N)=aN^\beta$ only after specifying the size variable $N$, network ensemble, observation window, scaling range, estimator, covariance, and uncertainty interval; the framework does not derive the numerical exponents $0.8$ and $0.6$ without such a model
+
 - CC threshold behavior and endpoint-bias bound $\alpha_{CC,max} < 0.5$
 
 **Cosmology:**
@@ -3489,7 +3630,7 @@ The framework makes precise, falsifiable predictions across multiple domains:
 - Gravitational wave behavior at wavelengths approaching $\lambda \sim \delta$ (Corollary K.10.13)
 - On a branch carrying Theorem K.10.4's lattice/bandlimit and matching certificate: no retained operational observable depends on independent modes above $k_{\mathrm{MPU}}=\delta^{-1}$ except through the matched effective parameters at that scale; a certified observable dependence on such modes falsifies that branch
 
-The experimental program outlined in Section 13, particularly tests of the Consciousness Complexity (CC) hypothesis, provides crucial empirical anchors. Positive or null results will validate, falsify, or refine core framework aspects and guide future theoretical development.
+The Section 13 program supplies empirical tests of specified branches, including the CC response branch. A result supports, constrains, or falsifies only the preregistered branch whose source, endpoint, artifact model, sign, interval, stopping rule, and replication criterion were fixed in advance. A null result cannot validate the PU core; it may falsify a branch that predicts a detectable nonzero effect or remain uninformative when the registered sensitivity is insufficient.
 
 ### K.11.5 Broader Implications
 
@@ -3500,6 +3641,6 @@ Finite channel capacity is one input shared by several conditional branches, not
 - The holographic entropy bound requires geometric boundary-link control and the Theorem E.6 branch; saturation and normalization require its extra certificates.
 - Einstein's equation requires the local-equilibrium horizon, Clausius, Unruh, conservation, and metric-continuum hypotheses of the gravity bridge.
 - Theorem 39 supplies an endpoint reliability threshold on its bounded-bias branch; exact causal compliance is the separate Theorem 39c branch.
-- The spacetime-dimension result of Theorem Z.11 retains its lattice, representation, and selection certificates.
+- The Euclidean response-carrier result of Theorem Z.11 retains its shell, response-labeling, and least-feasible-selection certificates; its $3+1$ spacetime interpretation additionally requires the independent promotion certificates.
 
 The framework therefore supplies a conditional dependency stack with a recurrent finite-capacity input. It does not derive the five conclusions from the capacity inequality alone.

@@ -32,10 +32,11 @@ The following results and branch data are imported from elsewhere in the framewo
 | $a$ | sharp match/mismatch active record plus minimal integer with $\ln a\ge\varepsilon_0$, hence $2$ | Active kernel dimension | Theorem Z.1 |
 | $b$ | $d_0 - a = 6$ | Inactive subspace dimension | Definition |
 | $M$ | $2ab = 24$ | Interface modes | Theorem Z.5 |
-| $D$ | 4 | Emergent spacetime dimension | Theorem Z.11 |
+| $D$ | 4 | Euclidean response-carrier dimension; cosmological use assumes the separately certified $3+1$ continuum/Lorentzian promotion branch | Definition Z.9a; Theorems Z.10-Z.11; Corollary P.8.3 |
 | $C_{\max}/\varepsilon_0$ | 2 | PCE capacity ratio | Appendix Q |
 
 **Proposition U.2b (Reflexive Vacuum-Weight Accounting).**
+
 Let
 $$
 w_\Lambda:=\frac{\Lambda L_P^2}{8\pi}.
@@ -1766,9 +1767,10 @@ $$\boxed{\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5
 
 where:
 - $k = 12$ is the Golay code dimension (Theorem Z.13)
-- $D = 4$ is the emergent spacetime dimension (Theorem Z.11)
+- $D=4$ is the Euclidean response-carrier value of Theorem Z.11, used here only on the separately certified $3+1$ continuum/Lorentzian promotion branch
 - The complex dimension $k^2=144$ is proved by Theorem U.3 and is assigned to the base complexity under Convention U.14a
 - The deficit $(D+1)/2 = 5/2$ is the leading-order zero-mode deficit supplied by Theorem U.15
+
 
 This theorem records the Appendix U reference exponent only within the stated leading-order counting convention; it does not assert that the five-mode count has already been established as an unconditional property of the continuum Hessian.
 
@@ -2507,9 +2509,10 @@ Thus $S_\ell=0$ for $\ell=1,\dots,5$, while $S_6\neq 0$. Hence the 24-cell is a 
 
 $$t = D + 1$$
 
-where $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
+where $D=4$ is the Euclidean response-carrier value of Theorem Z.11; its spacetime reading in this corollary is conditional on the separately certified $3+1$ continuum/Lorentzian promotion branch.
 
 *Remark.* The identity $t=D+1=5$ records the arithmetic relation between the explicit design strength of Theorem U.30 and the dimensional value $D=4$ from Theorem Z.11. No stronger rigidity statement about 24-point spherical 5-designs is used in Appendix U.
+
 
 ---
 
@@ -3714,7 +3717,7 @@ $$
 (\mu_Q,m_Q^2,\mathcal J_Q,\operatorname{rank}\mathcal M_{\mathrm{HM}},\lambda^2,\Phi_s,I_{c_2},I_{c_W},\rho_N,\phi_0,\mathcal Q_{\mathrm{tr}}).
 \tag{U.69b.1}
 $$
-The determinant prefactor, scalaron-mass map, local-equilibrium truncation, e-fold registration, initial field, and trans-horizon quotient are not all instantiated as accepted forward-locked finite records in the current file. Therefore the theorem-level registry value for the full primordial interval vector is
+The determinant prefactor, scalaron-mass map, local-equilibrium truncation, e-fold registration, initial field, and trans-horizon quotient are not all instantiated as accepted forward-locked finite records in the current file. Therefore the theorem-level manuscript-ledger value for the full primordial interval vector is
 $$
 \mathcal R_{\mathrm{prim}}=\varnothing_{\mathrm{cert}}
 \tag{U.69b.2}
@@ -4075,7 +4078,7 @@ $$
 \,I_A,
 \tag{U.73f.3}
 $$
-where $I_A$ is the accepted interval for $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ from (U.73e.5). In the current file no accepted tuple supplies all entries of Definition U.73e; therefore the registry value for the four-mode forward prefactor is
+where $I_A$ is the accepted interval for $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ from (U.73e.5). In the current file no accepted tuple supplies all entries of Definition U.73e; therefore the manuscript-ledger value for the four-mode forward prefactor is
 $$
 A_{\mathrm{eff}}^{\mathrm{Fred},4}=\varnothing_{\mathrm{cert}},
 \qquad

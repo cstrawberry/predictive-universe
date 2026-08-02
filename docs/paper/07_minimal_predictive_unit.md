@@ -2,9 +2,9 @@
 
 Having established the foundational principles governing adaptive prediction, complexity, self-reference, and dynamics, we now introduce the core MPU model. The role of MPUs is fixed by the Cogito-to-PPI/PCE bridge developed in the Introduction and Appendix P: the framework first isolates the certified process-root, models its operational content as prediction, and then asks for a least nontrivial finite physical carrier on branches where the qualifying infimum is attained. This section defines those carriers, details their Hilbert and perspectival representations on the stated branches, specifies deterministic internal and stochastic interaction dynamics, and separates structural register size from the distribution-sensitive thermodynamic reset ledger.
 
-**7.1 Hypothesis 1 (Hyp 1): The MPU Reality Model**
+**7.1 Hypothesis 1 (Hyp 1): The Nominated MPU Reality Model**
 
-Physical reality, from the internal perspective, is modeled as fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs), as defined below (Definition 23). The reason for placing MPUs at the bottom is not that PU assumes particle-like primitives, but that the bottom layer must preserve the Cogito-certified process-root while adding only finite physical instantiation and no-surplus efficiency. PPI restricts admissible carriers to finite, verifiable, maintainable, update-using implementations; PCE selects the least-cost representative among operationally equivalent carriers. The MPU is therefore the simplest nontrivial predictive process that can physically instantiate the adaptive loop and its $K_0$ self-reference floor. This network structure is not merely a postulate of efficiency but is also a requirement for mathematical self-consistency; within the PPI instantiation constraints and the standard anomaly-cancellation conditions, a universe containing the chiral gauge structure of the Standard Model is incompatible with a singular predictive entity and requires a substrate of at least two interacting MPUs (Appendix P). The collective dynamics of this MPU network give rise to all emergent physical phenomena, including particles, fields, the formalism of quantum mechanics (Section 8), and spacetime geometry (Section 11, Section 12). These dynamics are governed by several core principles:
+PU nominates a network of interacting Minimal Predictive Units (MPUs), as defined below, as its foundational physical realization. The nomination preserves the Cogito-certified process root while imposing finite implementation, verifiability, maintenance, update use, and response-null compression. These constraints motivate the MPU as a minimal nontrivial predictive carrier, but they do not by themselves prove that the realized universe has this substrate. Appendix P proves only that a singleton carrier is incompatible with a separately supplied chiral-matter and anomaly package; that downstream package cannot be used to derive the MPU substrate and then be rederived from it. Accordingly, all quantum, field, matter, and spacetime conclusions below are consequences of Hypothesis 1 only together with their declared realization and bridge certificates. The nominated dynamics obey:
 *   The Dual Dynamics of internal prediction (unitary evolution) and 'Evolve' interaction (stochastic ND-RID) (Section 7.3.3).
 *   Optimization via the Prediction Optimization Problem (Axiom 1) and the Principle of Compression Efficiency (Definition 15).
 *   Constraints arising from self-reference limits (SPAP, Theorem 10, Theorem 11) and reflexive interaction dynamics (RID, Definition 6).
@@ -23,9 +23,9 @@ The operational-context result is separate from this program-complexity minimum.
 
 An MPU's state and dynamics are characterized by:
 
-1. **State representation.** Its perspectival state $S_{(s)}(t)=(S(t),s)$ has amplitude component $|\psi(t)\rangle\in\mathcal H_0$ on the Hilbert branch and perspective index $s\in\Sigma$.
+1. **State representation.** Its perspectival state is $S_{(s)}(t)=(\rho(t),s)$, where $\rho(t)$ is a density operator on $\mathcal H_0$ and $s\in\Sigma$; $(|\psi\rangle,s)$ is the pure-state shorthand fixed in Definition 24.
 2. **Dual dynamics.** Internal prediction evolution and the stochastic `Evolve` law are the branch dynamics specified in Definitions 26–27. Capacity-triggered actualization is used only when the certificate $\mathfrak C_{\mathrm{act}}$ is present.
-3. **Minimal qualifying complexity.** The equality $C_P(\mu_*)=C_{op}$ holds by the attainment hypothesis and this definition, not by Theorem 16.
+3. **Minimal qualifying complexity.** The equality $C_P(\mu_*)=C_{op}$ holds by the attainment hypothesis and this definition, not by Theorem 16. Suppose the task and evaluation window are those of Axiom 3, a registered order-preserving score bridge identifies Definition 13's accuracy functional and matched random baseline with $PP_W$ and $\alpha$, and a registered same-state complexity bridge sends $\mu_*$ to Definition 19's coordinate $C=C_{op}$. Then membership in $\mathcal Q$ gives $PP_W(\mu_*)>\alpha$. Hence that attained MPU cannot be identified with Definition 19's $\alpha$-valued analytic endpoint; the latter belongs to a separate nonattained boundary branch.
 
 **Metered actualization certificate.** The actualization certificate may be sharpened by an accepted metered actualization subcertificate $\mathfrak C_{\mathrm{meter}}(R)$ (Definition E.2a.8) for an interface register $R$. The certificate specifies the register alphabet, the capacity increment assigned to the retained record, a monotone acquisition interval, an overwrite bound, a no-early-firing comparison against PCE/PPI, and the process-tensor no-future-to-past causality record for the interventions used to read the meter. For a certified binary one-register interface the timing threshold is
 $$
@@ -43,7 +43,7 @@ This construction exhibits an eight-dimensional carrier for three binary registe
 
 **1. Hilbert Space and Computational Basis**
 
-*   **Hilbert Space:** The MPU’s state amplitude resides in $\mathcal{H}_0 = (\mathbb{C}^2)^{\otimes 3} \cong \mathbb{C}^8$. The computational basis vectors are $|b_2 b_1 b_0\rangle$, where $b_j \in \{0,1\}$. The choice $d_0=8$ realizes this explicit register carrier and attains Theorem 15's conditional Hilbert-carrier bound on the (O1)–(O3), (FC) branch; it is not forced by MPU status alone.
+*   **Hilbert Space:** The MPU carrier is $\mathcal{H}_0 = (\mathbb{C}^2)^{\otimes 3} \cong \mathbb{C}^8$. General states are density operators on $\mathcal H_0$; a pure state may be represented by a ray $[|\psi\rangle]$, with a unit-vector representative when needed. The computational basis vectors are $|b_2 b_1 b_0\rangle$, where $b_j \in \{0,1\}$. The choice $d_0=8$ realizes this explicit register carrier and attains Theorem 15's conditional Hilbert-carrier bound on the (O1)–(O3), (FC) branch; it is not forced by MPU status alone.
 
 *   **Logical Roles of the Three Qubits:**
     1.  **Memory Qubit ($Q_M$, e.g., $b_2$):** Stores the MPU’s current internal model or state under reflexive update.
@@ -170,12 +170,16 @@ Equality is only the quasistatic zero-excess limit. Any unitary dilation of $\ma
 * **Full-context reset cost:** The diagnostic subprotocol resets $Q_I$ unitarily and has no positive Landauer floor. The full-context return channel $\mathcal G$ of Equation (7.1.3a) instead merges the Commit Snapshot label $\Phi$. On the conditionally exchange-invariant input-ensemble branch and Definition 28's registered thermal branch, Theorem 31a gives $\varepsilon_{\mathrm{reset}}\ge\ln2$. If either the conditional symmetry or the absence of a retained copy fails, only the general bound $\varepsilon_{\mathrm{reset}}\ge H_q(\Phi\mid R)$ remains.
 **5. Solving the Prediction Optimization Problem (POP)**
 
-Let $V(C) = \lambda R(C) + R_I(C) - \Gamma_0 PP(C)$, with:
-*   Physical Cost $R(C) = R(C_{op}) + r_p (C - C_{op})^{\gamma_p}$ for $C \ge C_{op}$ and $\gamma_p > 1$.
-*   Reflexive-Information Cost $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$, for $C > K_0$ and $R_I(K_0) = 0$.
-*   Predictive Performance $PP(C) = \beta - (\beta - \alpha)\exp[-\kappa_{\mathrm{eff}} (C - C_{op})/K_0]$, giving $PP(K_0) = \alpha$.
+For this analytic boundary diagnostic, define
+$$
+\overline V(C)=\lambda R(C)+R_I(C)-\Gamma_0\overline{PP}(C),
+$$
+where:
+*   $R(C)=R(C_{op})+r_p(C-C_{op})^{\gamma_p}$ for $C\ge C_{op}$ and $\gamma_p>1$;
+*   $R_I(C)=(r_I/\ln2)\ln(C/K_0)$ for $C>K_0$, with continuous boundary value $R_I(K_0)=0$;
+*   $\overline{PP}(C)=\beta-(\beta-\alpha)\exp[-\kappa_{\mathrm{eff}}(C-C_{op})/K_0]$ is the analytic extension of Definition 19.
 
-Assume for this local calculation that $C_{op}=K_0$ and $\gamma_p=2$. The right derivatives at the feasible boundary are
+Assume locally that $C_{op}=\hat C_{target}=K_0$ and $\gamma_p=2$. Then $\overline{PP}(K_0)=\alpha$, while physical $PP$ on this branch is restricted to $C>K_0$. The right derivatives of the extensions are
 $$
 R'_+(K_0)=0,
 \qquad
@@ -188,26 +192,26 @@ R_I''(K_0)=-\frac{r_I}{K_0^2\ln2},
 $$
 and
 $$
-PP'(K_0)=\frac{(\beta-\alpha)\kappa_{\mathrm{eff}}}{K_0},
+\overline{PP}'(K_0)=\frac{(\beta-\alpha)\kappa_{\mathrm{eff}}}{K_0},
 \qquad
-PP''(K_0)=-\frac{(\beta-\alpha)\kappa_{\mathrm{eff}}^2}{K_0^2}.
+\overline{PP}''(K_0)=-\frac{(\beta-\alpha)\kappa_{\mathrm{eff}}^2}{K_0^2}.
 $$
-For minimization on $[K_0,\infty)$, the one-sided necessary condition is
+For minimization of the closed analytic extension on $[K_0,\infty)$, the one-sided necessary condition is
 $$
-V'_+(K_0)\ge0.
+\overline V'_+(K_0)\ge0.
 $$
-One may impose the stronger equality $V'_+(K_0)=0$, which calibrates
+One may impose the stronger equality $\overline V'_+(K_0)=0$, which calibrates
 $$
 \Gamma_0
 =\frac{r_I}{(\beta-\alpha)\kappa_{\mathrm{eff}}\ln2}>0.
 $$
 Under this calibration,
 $$
-V''_+(K_0)
+\overline V''_+(K_0)
 =2\lambda r_p
 +\frac{r_I}{K_0^2\ln2}(\kappa_{\mathrm{eff}}-1).
 $$
-If this quantity is positive, the one-sided Taylor expansion gives $V(K_0+h)>V(K_0)$ for all sufficiently small $h>0$, so $K_0$ is a strict local boundary minimizer. In particular, $\lambda r_p>0$ and $\kappa_{\mathrm{eff}}\ge1$ suffice. This is a local result on the declared quadratic and equality-calibrated branch; global POP optimality requires comparison with the full feasible domain.
+If this quantity is positive, the one-sided Taylor expansion gives $\overline V(K_0+h)>\overline V(K_0)$ for all sufficiently small $h>0$; in particular, $\lambda r_p>0$ and $\kappa_{\mathrm{eff}}\ge1$ suffice. Thus $K_0$ is a strict local boundary minimizer of the closed analytic extension only. It is not an attained minimizer on the open physical response-law domain, is not viable under Axiom 3, and cannot be the same-task MPU of Definition 23. Global POP optimality remains unproved.
 
 *Numeric cycle for a dimensionless model-layer arming score:* Set $\alpha=0.60$, $\beta=0.98$, $\kappa_{\mathrm{eff}}=0.25$, $K_0=3$ bits, and $C_{op}=K_0$. Introduce dimensionless policy penalties $c_p=0.10$ and $c_I=0.02$, distinct from the cost-rate coefficients $r_p$ and $r_I$, and define
 $$
@@ -694,10 +698,12 @@ $$
 and $\pi_\omega(\mathcal A)\Omega_\omega$ is dense by construction. Under the additional same-representation support hypothesis in the proposition, the eight nonzero response supports are mutually orthogonal in $\mathcal H_\omega$, so $\dim\mathcal H_\omega\ge8$. ∎
 
 **7.2.3 Definition 24 (Def 24): Perspectival State $S_{(s)}(t)$**
- The complete state of an MPU at time $t$ is the perspectival state $S_{(s)}(t) = (S(t), s)$, whose formal mathematical structure is detailed in Appendix M (Section M.2). It comprises:
-  *   $S(t) \in \mathcal{H}_0$: The state amplitude, represented by a vector $|\psi(t)\rangle \in \mathcal{H}_0$ (Proposition 4), encoding the MPU's predictive potential.
-  *   $s \in \Sigma$: The perspective index, representing the interaction context or observational frame relevant to the MPU's current interaction potential. $\Sigma$ is the Perspective Space (Definition 25).
-The perspectival nature is crucial because interaction outcomes ('Evolve', Definition 27) are actualized relative to a specific interaction context or basis, represented by $s$.
+The complete operational quantum state of an MPU at time $t$ is the perspectival state
+$$
+S_{(s)}(t)=(\rho(t),s),
+$$
+where $\rho(t)$ is a density operator on $\mathcal H_0$ and $s\in\Sigma$ is the perspective index. A pure-state branch is the special case $\rho(t)=|\psi(t)\rangle\langle\psi(t)|$. This typing includes reduced states and general quantum instruments without assigning a state vector to a mixed subsystem. Interaction outcomes under Definition 27 are indexed by the registered context $s$ and updated by the instrument formalism of Appendix M.
+When $\rho=|\psi\rangle\langle\psi|$, the notation $(|\psi\rangle,s)$ is permitted only as shorthand for $(|\psi\rangle\langle\psi|,s)$; it does not change the general density-operator type.
 
 **7.2.4 Theorem 24 (Nondegenerate Projective Contexts and Basis Rays)**
 
@@ -750,7 +756,7 @@ $$
 
 **7.3 MPU Dual Dynamics Driven by POP**
 
-The operational cycle of an MPU, driven by the need to solve the POP (Axiom 1), manifests as two distinct but coupled dynamical modes acting on the Perspectival State $S_{(s)}(t) = (S(t), s)$.
+The operational cycle of an MPU, driven by the nominated POP objective, has two declared dynamical modes acting on the Perspectival State $S_{(s)}(t)=(\rho(t),s)$.
 
 **7.3.1 Theorem 27 (Diagonal Limitation on Universal MPU Outcome Prediction)**
 
@@ -783,17 +789,21 @@ $$
 
 **7.3.3 Dual Dynamics Overview**
 
-The MPU's continuous effort to solve the POP (Axiom 1) under the diagonal limitation of Theorem 27 and, on the stochastic-law branch, Proposition 28 is realized through two distinct dynamical modes acting on the Perspectival State $S_{(s)}(t) = (S(t), s)$:
+The declared MPU cycle has two modes acting on $S_{(s)}(t)=(\rho(t),s)$:
 
 **7.3.3.1 Definition 26 (Def 26): Internal Prediction Evolution**
 
-Between 'Evolve' interactions, the state amplitude $S(t)\in\mathcal H_0$ undergoes deterministic internal predictive generation representing the $b_p$ phase of the Fundamental Predictive Loop. This phase is evidence-free and reset-free: it does not perform verification, outcome actualization, or a response-relevant irreversible merge. Its operational role is to transport the current predictive state to the next internally generated predictive state before an 'Evolve' event.
-
-On the Hilbert/Born branch, Theorem 8.7 proves that when this internal ray dynamics is continuous and time-translation symmetric, the PPI/PCE-admissible evolution is implemented by a strongly continuous unitary group and is governed by the time-dependent Schrödinger equation:
+Between `Evolve` interactions, the quantum component undergoes reset-free unitary transport
 $$
-i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H} |\psi(t)\rangle\quad \text{(43)}
+\rho(t_1)=U(t_1,t_0)\rho(t_0)U(t_1,t_0)^\dagger.
+\tag{43a}
 $$
-where $\hbar$ is the action-unit normalization identified in Appendix Q, $|\psi(t)\rangle$ is the state vector, and $\hat H$ is the self-adjoint generator. The physical interpretation of $\hat H$ as the MPU baseline operational energy generator is given in Theorem 29.
+This mode performs no verification, outcome actualization, or response-relevant irreversible merge. On the continuous time-translation-symmetric Hilbert branch of Theorem 8.7, $U$ is a strongly continuous unitary propagator. For a differentiable pure-state shorthand $\rho(t)=|\psi(t)\rangle\langle\psi(t)|$, a representative vector obeys
+$$
+i\hbar\frac{d}{dt}|\psi(t)\rangle=\hat H(t)|\psi(t)\rangle.
+\tag{43}
+$$
+Here $\hat H(t)$ is self-adjoint and is defined up to the usual scalar phase gauge on the density-operator dynamics. Its interpretation as a physical baseline-energy generator additionally requires Theorem 29's clock and power calibration.
 
 **7.3.3.2 Theorem 29 (Generator and Conditional Energy Calibration)**
 
@@ -827,14 +837,22 @@ for the first time at which the evolved state is orthogonal to the initial state
 
 **7.3.3.3 Definition 27 (Def 27): Interaction and Perspectival Actualization ('Evolve'/ND-RID)**
 
-Upon significant interaction $N(t)$ with its environment or other MPUs (triggering the verification phase $V$), the MPU undergoes a stochastic 'Evolve' event. On branches carrying an accepted actualization-threshold certificate $\mathfrak C_{\mathrm{act}}$ (Definition E.2a.6), significant interaction means that the locally retained link ledger of Definition E.2a.4 reaches the certified per-cycle capacity $C_{\max}$ within the operational window; on branches without that certificate, it remains the explicit branch-level arming predicate. This event instantiates Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6), resulting in both the actualization of the state amplitude and a shift in perspective, corresponding to verification ($b_v$) and update initiation ($D_{cyc}$). Appendix M (Section M.3.2) provides the formal mathematical description of this process as a stochastic transition characterized by a probability measure $d\mathbb{P}(f | i, N, \Delta t)$. The process maps the pre-interaction state to a post-interaction state probabilistically:
+Upon an interaction $N(t)$ satisfying the branch's arming predicate, the nominated `Evolve` law applies. On a branch carrying $\mathfrak C_{\mathrm{act}}$, arming means that the retained link ledger reaches its certified threshold; otherwise arming remains explicit branch data. A normalized instrument $\{\mathcal I_i^N\}$ and a conditional perspective kernel determine
 $$
-(S(t+\Delta t), s') \sim \text{Evolve}(S_{(s)}(t), N(t)) \quad \text{(44)}
+(\rho_i',s')
+\sim
+\operatorname{Evolve}\big((\rho,s),N,\Delta t\big),
+\qquad
+\rho_i'=\frac{\mathcal I_i^N(\rho)}
+{\operatorname{tr}\mathcal I_i^N(\rho)}
+\tag{44}
 $$
-As formalized in Appendix M (Equation M.2), the 'Evolve' process comprises two conceptually distinct but intertwined components:
-1.  **Registered Instrument Update:** For a registered instrument $\{\mathcal I_i\}$ and pre-event state $\rho$, outcome $i$ has probability $p_i=\operatorname{tr}\mathcal I_i(\rho)$ and, when $p_i>0$, conditional state $\rho'_i=\mathcal I_i(\rho)/p_i$. Only Proposition 9's nondegenerate sharp repeatability branch gives $\rho'_i=P_i=|i\rangle_s\langle i|_s$ and $p_i=\operatorname{tr}(\rho P_i)$.
-2.  **Stochastic Perspective Shift:** Simultaneously or immediately following actualization, the perspective index $s$ transitions stochastically to a new perspective $s'$ according to a Conditional Perspective Transition Kernel $G_{persp}(s' | s, i, N, \Delta t)$ defined on the Perspective Space $\Sigma$ (Definition 25, elaborated in Appendix M, Section M.3.3). This shift reflects the system registering the specific interaction context $N(t)$ and the outcome $i$.
-On the stochastic-kernel branch of Proposition 28 and the Hilbert/noncontextual/additive branch of Theorem 28a, the post-interaction state is the realized perspectival state $(|i\rangle_s,s')$ with the registered transition probabilities. Theorem 27 supplies only the diagonal limitation on a universally correct total predictor; it does not derive eventwise stochasticity. An 'Evolve' implementation is resource-consuming under the registered-reset hypotheses of Definition 28 and Theorem 31, with $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; the structural value $\varepsilon_0=\ln2$ alone is not a heat bound.
+for outcomes with nonzero probability.
+
+1. **Registered instrument update:** $p_i=\operatorname{tr}\mathcal I_i^N(\rho)$ and $\sum_i\mathcal I_i^N$ is trace preserving. Only the nondegenerate sharp repeatability branch gives $\rho_i'=|i\rangle_s\langle i|_s$.
+2. **Conditional perspective shift:** given $i$, $s'$ is drawn from the normalized kernel $G_{\mathrm{persp}}(s'|s,i,N,\Delta t)$.
+
+The post-event state is therefore $(\rho_i',s')$, with $(|i\rangle_s,s')$ permitted only as the pure-state shorthand of Definition 24. Theorem 27 does not derive eventwise stochasticity, and Theorem 28a does not derive the physical instrument or single-run selector. A physical reset cost follows only under Definition 28 and Theorem 31; $\varepsilon_0=\ln2$ alone is not a heat bound.
 
 **7.3.4 Theorem 28a (Conditional Born-Rule Representation on the Hilbert Branch).**
 
@@ -1107,7 +1125,7 @@ The active kernel dimension $a = 2$ initiates the canonical chain:
 
 $$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{predictive-recovery MacWilliams}} [24, 12, 8]$$
 
-On the predictive-recovery MacWilliams Golay branch (Definition Z.13b.0 and Theorem Z.13b.0a), the endpoint is the extended binary Golay code with parameters $[n,k,d]=[24,12,8]$. The coding-theory uniqueness is theorem-level once the dual-asymmetry gate fixes $k=12$; it is not an unconditional consequence of $M=24$ alone.
+On the predictive-recovery MacWilliams Golay branch of Theorem Z.13b—namely Definition Z.13b.0, Theorem Z.13b.0a, and the fixed-rate maximum-distance criterion—the endpoint is a binary linear $[24,12,8]$ code, unique up to coordinate permutation by Theorem U.1. The dual-asymmetry gate alone fixes only $k=12$; it proves neither distance-eight attainment nor Golay uniqueness.
 
 **Remark (Conditional Error-Correction Interpretation).** On the predictive-recovery MacWilliams branch, the $[24,12,8]$ Golay code is a classical redundancy ledger with rate $1/2$. The twelve parity coordinates support reconstruction only after a classical encoder, error model, syndrome map, and decoder have been specified.
 

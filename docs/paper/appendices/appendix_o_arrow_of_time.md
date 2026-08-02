@@ -895,7 +895,7 @@ Every premise in $\Gamma$ remains true at $\mathcal O_{\mathrm{BGS}}$, and oracl
 4. A proposed nonrelativizing step whose claimed lower bound has not been proved remains certificate-pending.
 5. A certificate is discharged only when its finite proof object, named proof checker, standard-model soundness warrant, bridge obligations, and dependency ledger are all accepted with no unresolved assumption.
 
-These are audit outcomes for submitted records, not an exhaustive classification of every informal or future idea. Write $\operatorname{Acc}_{\mathrm{cert}}(R)=1$ exactly when the submitted record $R$ passes item 5 in the named registry; merely naming or storing $R$ does not make this proposition true. Until an accepted proof object exists, the framework registry continues to use $\varnothing_{\mathrm{cert}}$ rather than introducing a positive theorem token.
+These are audit outcomes for submitted records, not an exhaustive classification of every informal or future idea. Write $\operatorname{Acc}_{\mathrm{cert}}(R)=1$ exactly when the submitted record $R$ passes item 5 under a named sound proof checker; merely naming or storing $R$ does not make this proposition true. Until an accepted proof object exists, the manuscript certificate ledger uses $\varnothing_{\mathrm{cert}}$ rather than introducing a positive theorem token. A machine-audited status additionally requires the executable and run package of Convention P.14.9a and Algorithm P.14.1m.0; Theorem P.14.1m.2 supplies only canonical encoding and round-trip.
 
 **Definition O.5.3e (Direct Separation Certificate).** A direct separation certificate $\mathfrak C_{\mathrm{sep}}$ is a finite checked proof of $\mathsf{P}\ne\mathsf{NP}$ in a named formal theory $\mathsf T_{\mathrm{cert}}$, together with the accepted standard-model soundness warrant for the used fragment and a dependency ledger containing no unresolved assumption. It is a sufficient certificate format for a direct mathematical route that does not pass through one-wayness. This definition does not assert that every conceivable physical argument already has this form.
 
@@ -1111,7 +1111,7 @@ An abstract inverter or SAT algorithm is a mathematical counterexample, not by i
 3. Proposition O.5.3g gives a weak $\mathsf{AC}^0$ inversion bound whose displayed reduction does not discharge negligible inversion; and
 4. $[\mathrm{PHP}]_{f_{\mathrm{PHP}}}$ plus the quantified PPT-to-PU simulation certificate implies $\mathsf{P}\ne\mathsf{NP}$ only conditionally.
 
-No accepted unconditional OWF or direct-separation proof object is supplied. The registry therefore remains
+No accepted unconditional OWF or direct-separation proof object is supplied. The manuscript certificate ledger therefore remains
 $$
 \boxed{
 \mathfrak C_{\mathrm{OWF}}=\varnothing_{\mathrm{cert}},
@@ -1163,9 +1163,10 @@ Therefore, CC does not act as a new, independent source of gravity. Rather, the 
 
 ## O.7 Mathematical Emergence of the Lorentzian Signature
 
-Theorems O.3 and O.3a establish a time orientation on histories carrying their pathwise entropy-production certificates. Theorem O.7a derives Lorentzian signature on the separate branch carrying a positive-definite spatial Γ-limit, an entropy-selected time coordinate, a second-order continuum principal symbol, a nondegenerate characteristic cone coinciding with an attained operational frontier, and the three-spatial-dimensional hypothesis.
+Theorems O.3 and O.3a establish a time orientation on histories carrying their pathwise entropy-production certificates. Theorem O.7a derives Lorentzian signature on the separate branch carrying a rank-four positive Euclidean continuum tensor, a nonvanishing entropy-selected time covector whose kernel supplies the three-dimensional spatial subspace, a second-order continuum principal symbol, and a nondegenerate characteristic cone coinciding with an attained operational frontier.
 
 ### O.7.1 Γ‑convergence of the Spatial Sector
+
 
 Consider a sequence of locally-finite graphs $(G_n)$ with vertex sets $V(G_n)$ and mesh size $h_n\to 0$ approximating a spatial slice $(M,g)$ of dimension $D$. For a discrete test field $u_n:V(G_n)\to\mathbb R$, a representative discrete spatial functional takes the form
 $$
@@ -1185,20 +1186,32 @@ Thus, the spatial geometry emerges as the effective continuum limit of the PU ne
 
 ### O.7.2 Hyperbolic Signature Closure and Operational Speed
 
-The Appendix O signature closure is a four-input branch theorem: the positive-definite spatial $\Gamma$-limit $A(x)$ of O.7.1, a time orientation from Theorem 31 and Appendix J, a second-order continuum principal symbol, and a separately accepted nondegenerate characteristic cone coinciding with an attained operational frontier. Proposition F.1 supplies its stated discrete propagation cone and Theorem 46 supplies a uniform operational causal-speed upper bound; neither establishes frontier attainment or continuum cone coincidence. The fourth input may be supplied directly as Hypothesis O.7.2.4 or, for the retained sector family covered by a finite record, by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) that explicitly includes attainment. On the three-spatial-dimensional branch fixed by Theorem Z.11, these four inputs force the Lorentzian signature and normalize the characteristic speed to the separately accepted frontier.
+The Appendix O signature closure is a four-input branch theorem: a rank-four positive-definite continuum tensor, a nonvanishing time covector oriented by Theorem 31 and Appendix J, a second-order continuum principal symbol, and a separately accepted nondegenerate characteristic cone coinciding with an attained operational frontier. Proposition F.1 supplies its stated discrete propagation cone and Theorem 46 supplies a uniform operational causal-speed upper bound; neither establishes frontier attainment or continuum cone coincidence. The fourth input may be supplied directly as Hypothesis O.7.2.4 or, for the retained sector family covered by a finite record, by an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ (Definition O.7.2.5) that explicitly includes attainment. On a branch combining Theorem Z.11's four-dimensional Euclidean carrier with a rank-four continuum realization and a separately accepted nonvanishing temporal covector, rank-nullity supplies the three-dimensional spatial kernel. These inputs then force the Lorentzian signature and normalize the characteristic speed to the separately accepted frontier.
 
 **Remark O.7.2.0 (Second-Order Closure versus Signature Selection).** When the second-order and cone-coincidence inputs are supplied by finite certificates rather than by the direct hypotheses, the covered-sector signature reading is audited by the predictive well-posedness signature certificate $\mathfrak C_{\mathrm{sig}}$ of Definition 46a.1. The certificate excludes elliptic, ultrahyperbolic, constrained, higher-derivative, or nonlocal representatives that reproduce only a coarse finite-frontier behavior. Thus the finite-certificate implication used for covered sectors is
 $$
+
 \mathfrak C_2\wedge \mathfrak C_{\mathrm{cone}}\wedge \mathfrak C_{\mathrm{sig}}
 \Longrightarrow
 \text{one-time Lorentzian branch on the tested sector}.
 $$
-The direct Hypotheses O.7.2.1–O.7.2.4 remain the theorem-level route of Theorem O.7a.
+The direct Hypotheses O.7.2.1--O.7.2.4 remain the theorem-level route of Theorem O.7a.
 
 
-**Hypothesis O.7.2.1 (Positive-definite spatial $\Gamma$-limit).** The spatial $\Gamma$-limit of §O.7.1 yields a symmetric positive-definite matrix field $A^{ij}(x)$ on the regular set $M_{\mathrm{reg}}$ of Theorem 45.
+**Hypothesis O.7.2.1 (Rank-Four Positive Continuum Tensor).** Assume the promoted continuum branch has a real rank-four tangent bundle on $M_{\mathrm{reg}}$ and carries the symmetric positive-definite Cheeger tensor $g^E$ of Theorem 45.
 
-**Hypothesis O.7.2.2 (Entropy-Selected Time Coordinate).** Assume that $M_{\mathrm{reg}}$ carries a distinguished local time coordinate $t$ and that retained histories carry Theorem O.3's independent pathwise certificate, with the future direction defined by increasing cumulative certified entropy production. A registered fixed-ready-state reset and Theorem 31 may motivate this hypothesis but do not construct the coordinate or discharge the pathwise certificate; SPAP alone supplies neither.
+**Hypothesis O.7.2.2 (Entropy-Selected Time Coordinate, Spatial Kernel, and Propagation Identification).** Assume that $M_{\mathrm{reg}}$ carries a distinguished local time coordinate $t$ with $dt_x\ne0$ at every point and that retained histories carry Theorem O.3's independent pathwise certificate, with the future direction defined by increasing cumulative certified entropy production. Define
+$$
+S_x:=\ker dt_x.
+$$
+Then $\dim S_x=3$ by rank-nullity, and $g^E|_{S_x}$ is positive definite. Let $A_\Gamma^{ij}$ be the spatial propagation coefficient produced by the $\Gamma$-limit of §O.7.1. Require a registered common spatial frame and a specified positive density $\rho(x)>0$ such that
+$$
+A_\Gamma^{ij}(x)
+=
+\rho(x)\bigl(g^E|_{S_x}\bigr)^{-1,ij}.
+\tag{O.7.2.2a}
+$$
+Write this registered coefficient as $A^{ij}$ in Hypotheses O.7.2.3--O.7.2.4. A fixed-ready-state reset and Theorem 31 may motivate the time orientation but do not construct the coordinate, discharge the pathwise certificate, or prove (O.7.2.2a); SPAP alone supplies none of them.
 
 **Hypothesis O.7.2.3 (Second-order continuum closure).** Any local second-order continuum closure for a scalar probe field compatible with the quadratic limit on $M_{\mathrm{reg}}$ has principal symbol
 $$
@@ -1297,9 +1310,10 @@ Any nonadjacent numerical tolerance requires a separate path-accumulation ledger
 
 **Remark O.7.2.6 (Finite Speed versus Cone Saturation).** Theorem 46 supplies a uniform operational causal-speed upper bound for serialized ND-RID substrate propagation. It does not establish an attained frontier, prove that every retained continuum sector saturates a frontier, or show that all sector characteristic cones coincide. Frontier attainment and sector-cone saturation are branch statements only when directly derived or supplied by accepted records. An accepted $\mathfrak C_{\mathrm{desync}}^{\mathrm{cone}}$ supplies only the edgewise finite-response quotient statement of Proposition O.7.2.5b unless its path and sector-coverage entries also discharge the full frontier-attainment and cone-saturation record.
 
-**Theorem O.7a (Hyperbolic Signature Closure).** Under Hypotheses O.7.2.1–O.7.2.4 and the three-spatial-dimensional hypothesis of Theorem Z.11, for every $x\in M_{\mathrm{reg}}$:
+**Theorem O.7a (Hyperbolic Signature Closure).** Under Hypotheses O.7.2.1–O.7.2.4, for every $x\in M_{\mathrm{reg}}$:
 
 (a) *Negative time-time component.* $a(x)<0$.
+
 
 (b) *Lorentzian inertia.* The symmetric matrix
 $$
@@ -1319,12 +1333,13 @@ $$
 \;\Longrightarrow\;
 \mathrm{LorentzianSignature}\ (-,+,+,+),
 $$
-with the four antecedents supplied by Theorem 31 plus §O.4 (entropy-selected time), §O.7.1 (positive-definite spatial $\Gamma$-limit), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose operational-speed upper-bound input is supplied by Theorem 46 plus Theorem P.8.4, while its attained-frontier, nondegeneracy, and cone-coincidence inputs remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; entropy-time selection alone does not force the Lorentzian signature without the other three structural inputs.
+with the four antecedents supplied by the rank-four continuum branch of Theorem 45, Theorem 31 plus §O.4 and Hypothesis O.7.2.2 (entropy-selected time and its rank-three spatial kernel), Hypothesis O.7.2.3 (second-order continuum closure), and Hypothesis O.7.2.4, whose operational-speed upper-bound input is supplied by Theorem 46 plus Theorem P.8.4, while its attained-frontier, nondegeneracy, and cone-coincidence inputs remain branch clauses of the characteristic principal symbol. The signature conclusion is conditional theorem-level on this branch; neither the Euclidean carrier dimension nor entropy-time selection alone forces the Lorentzian signature without the other structural inputs.
 
-*Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in\mathbb R^3\setminus\{0\}$. The spatial cotangent space at $x$ is three-dimensional by Theorem Z.11, so the orthogonal complement $\{k : b^i k_i=0\}\subset\mathbb R^3$ is a two-dimensional subspace and contains infinitely many nonzero $k$. For any nonzero $k$ in this subspace, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
+*Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in S_x^*\setminus\{0\}$. Hypotheses O.7.2.1–O.7.2.2 and rank-nullity give $\dim S_x^*=3$, so the orthogonal complement $\{k:b^ik_i=0\}\subset S_x^*$ is at least two-dimensional and contains nonzero $k$. For any such $k$, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
 $$
 \Delta(k) \;=\; -4\,a(x)\,A^{ij}(x)\,k_i k_j.
 $$
+
 By Hypothesis O.7.2.1, $A^{ij}k_ik_j>0$; by Hypothesis O.7.2.4, $\Delta(k)>0$. Hence $a(x)<0$.
 
 *Proof of (b).* For $t\in\mathbb R$ and $x\in\mathbb R^3$, the quadratic form of $G$ is
@@ -1417,9 +1432,10 @@ on such an attained-frontier branch; it supplies no uniform positive lower bound
 
 *Proof.* Corollary O.7a.1 gives $p_x(\xi)=-\alpha(x)\xi_0^2+|\xi|^2$ with $\alpha(x)>0$. Its null relation has characteristic speed $1/\sqrt{\alpha(x)}$. Cone coincidence with the separately established attained frontier therefore gives $\alpha(x)=1/c(x)^2$. Theorem 46 gives the displayed upper bound. The normalized equality uses the additional uniform-weight and one-link-attainment hypotheses. A lower edge weight together with a lower traversal-time bound does not imply a positive lower speed. ∎
 
-**Corollary O.7b.1 (Derived Local Lorentz Invariance).** As a consequence of Theorems O.7a and O.7b:
+**Corollary O.7b.1 (Derived Tangent-Frame Lorentz Group and Local Lorentz Kinematics).** As a consequence of Theorems O.7a and O.7b:
 
 (a) After the rescaling $\xi_0':=\xi_0/c(x)$, the principal symbol takes the standard Minkowski form $p_x(\xi)=\eta^{\mu\nu}\xi_\mu\xi_\nu=-\xi_0^2+\delta^{ij}\xi_i\xi_j$. Its linear isometry group is $O(1,3)$.
+
 
 (b) Requiring preservation of spatial orientation (from the oriented spatial $\Gamma$-limit of §O.7.1) and of the entropy-selected future cone (Hypothesis O.7.2.2) restricts $O(1,3)$ to the proper orthochronous Lorentz group $SO^+(1,3)$.
 
@@ -1427,8 +1443,11 @@ on such an attained-frontier branch; it supplies no uniform positive lower bound
 
 (d) When the spin obstruction class $w_2(M_{\mathrm{reg}})\in H^2(M_{\mathrm{reg}};\mathbb Z/2)$ vanishes, spin lifts exist and each has structure group equal to the unique connected double cover $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. The group factor is therefore fixed on the spin-admissible branch, but the global spin structure need not be unique.
 
+These conclusions concern the principal symbol, causal cone, and tangent-frame bundle. Lorentz covariance of the full realized matter dynamics additionally requires a common cone for every response-active sector, covariant lower-order and interaction terms, and compatible tensor or spinor representations; it does not follow from the tangent-frame result alone.
+
 *Proof.* (a) Theorem O.7b gives
 $$
+
 p_x(\xi)=-\frac{1}{c(x)^2}\xi_0^2+\delta^{ij}\xi_i\xi_j.
 $$
 Writing $\xi_0':=\xi_0/c(x)$ gives

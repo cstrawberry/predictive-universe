@@ -1,6 +1,6 @@
 # Appendix B: Operational Complexity, Costs, and Stress–Energy Tensor Construction
 
-This appendix provides the detailed construction and justification for key operators used within the Predictive Universe (PU) framework, culminating in the definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$. This includes the operational complexity operator $\hat{C}_v$ used as a proxy for the theoretical $C_P$, the associated resource cost operators $\hat{R}$ and $\hat{R}_I$, a rigorous lower bound for complexity near the SPAP limit, and the operators representing local energy density and flows, ensuring consistency with the framework's principles and conservation laws.
+This appendix provides the detailed construction and justification for key operators used within the Predictive Universe (PU) framework, culminating in the definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$. This includes the operational complexity operator $\hat{C}_v$ used as a proxy for the theoretical $C_P$, the associated resource cost operators $\hat{R}$ and $\hat{R}_I$, a certificate-relative lower bound for verification/update complexity near a registered quantitative self-prediction boundary, and the operators representing local energy density and flows, ensuring consistency with the framework's principles and conservation laws.
 
 *(Units convention.)* Throughout this appendix we retain explicit
 $\hbar$, $c$, and $k_B$ factors so that every operator’s physical
@@ -124,17 +124,17 @@ $$
 $$
 Hence both operators are Hermitian and positive-semidefinite. ∎
 
-## B.3 Fundamental Complexity Bound for SPAP Prediction
+## B.3 Certificate-Relative Complexity Bound for a Registered Quantitative Task
 
 **Definition B.2 (Unified Complexity Functional $C_{\mathrm{uni}}$)**
 
-Consider the task of achieving average predictive performance $\alpha$ on SPAP-limited aspects, where $\alpha$ is within an error margin $\delta_{\mathrm{SPAP}} = \alpha_{SPAP} - \alpha$ of the maximum limit $\alpha_{SPAP}$.
+Fix a registered self-prediction task, score, admissible strategy class, verification rule, and a quantitative certificate that defines a scalar performance boundary $\alpha_{\mathrm{SPAP}}$ for that class. For a target performance $\alpha<\alpha_{\mathrm{SPAP}}$, set $\delta_{\mathrm{SPAP}}:=\alpha_{\mathrm{SPAP}}-\alpha$. Theorems 10–11 supply the class-level diagonal obstruction but do not by themselves supply this scalar certificate.
 
-A $\delta_{\mathrm{SPAP}}$-accurate SPAP strategy is any physically realizable procedure $S$ whose verification/calibration loop produces a predictor that achieves performance at least $\alpha_{SPAP}-\delta_{\mathrm{SPAP}}$ while the probability of violating this target is at most $\delta_{\mathrm{SPAP}}$. For such a strategy, define $\mathrm{Cost}(S;\delta_{\mathrm{SPAP}})$ to be its worst-case number of elementary physical operations, counting (i) each acquisition of an interaction outcome used for verification/calibration and (ii) each elementary internal update step used to process those outcomes and update the predictor. The unified complexity functional $C_{\mathrm{uni}}$ is the minimal such cost over all $\delta_{\mathrm{SPAP}}$-accurate strategies:
+A $\delta_{\mathrm{SPAP}}$-accurate strategy is a procedure $S$ in the registered admissible class whose verification/calibration loop produces a predictor that achieves performance at least $\alpha_{\mathrm{SPAP}}-\delta_{\mathrm{SPAP}}$ while the probability of violating this target is at most $\delta_{\mathrm{SPAP}}$. For such a strategy, define $\mathrm{Cost}(S;\delta_{\mathrm{SPAP}})$ to be its worst-case number of elementary physical operations, counting (i) each acquisition of an interaction outcome used for verification/calibration and (ii) each elementary internal update step used to process those outcomes and update the predictor. The unified complexity functional is
 $$
-C_{\mathrm{uni}}\bigl(\delta_{\mathrm{SPAP}}\bigr) := \inf_{S\ \delta_{\mathrm{SPAP}}\text{-accurate}} \mathrm{Cost}(S;\delta_{\mathrm{SPAP}}). \tag{B.4}
+C_{\mathrm{uni}}\bigl(\delta_{\mathrm{SPAP}}\bigr) := \inf_{S\ \delta_{\mathrm{SPAP}}\text{-accurate}} \mathrm{Cost}(S;\delta_{\mathrm{SPAP}}), \tag{B.4}
 $$
-This functional captures the fundamental effective computational resources demanded by high-accuracy self-calibration within the PU framework.
+with value $+\infty$ when the registered strategy class contains no $\delta_{\mathrm{SPAP}}$-accurate member. The functional is therefore task-, score-, class-, and certificate-relative; it is not a universal complexity function obtained from SPAP alone.
 
 **Theorem B.2 (Conditional Log-Enhanced Quadratic Lower Bound).** For every $0<\delta\le1/8$ and every $\delta$-accurate admissible strategy $S$, assume certificate $\mathfrak C_{B.2}$ maps $S$, under either Bernoulli law $p_\pm=1/2\pm2\delta$, to a test based on $N(S,\delta)$ independent observations whose two errors are at most $\beta(\delta)\le\delta$, and proves
 $$
@@ -210,6 +210,54 @@ $$
 \ge C_{\mathrm{uni}}(\delta_S(E)).
 $$
 Combining this inequality with the certified cost preservation gives the first inequality in (B.5a). Theorem B.2 supplies the final asymptotic lower bound. Every step uses the uniform reduction certificate; absent that certificate, the comparison with the infimum class is unavailable. ∎
+
+**Corollary B.2.2 (Finite Certificate-Level Cost Floor and Audit Scope).**
+
+Let $E$ and an admissible integration strategy $S$ satisfy Corollary B.2.1 with
+$$
+\delta_S(E)=\frac1{\mu_S(E)}\le\frac18.
+$$
+Assume the uniform reduction certificate retains the same observation-cost constant $c_s>0$ and error bound $\beta(\delta)\le\delta$ used in Theorem B.2. Then
+$$
+\operatorname{Cost}_{\mathrm{integrate}}(S,E)
+\ge
+\frac{3c_s}{128}\,
+\mu_S(E)^2
+\ln\!\left(\frac{\mu_S(E)}4\right).
+\tag{B.5c}
+$$
+
+*Proof.* Cost preservation and Theorem B.2 give
+$$
+\operatorname{Cost}_{\mathrm{integrate}}(S,E)
+\ge
+c_sN(\mathcal R_E(S),\delta_S(E))
+\ge
+\frac{3c_s}{128\delta_S(E)^2}
+\ln\!\left(
+\frac1{4\beta(\delta_S(E))}
+\right).
+$$
+Since $\beta(\delta)\le\delta$ and $\delta_S(E)=1/\mu_S(E)$,
+$$
+\ln\!\left(
+\frac1{4\beta(\delta_S(E))}
+\right)
+\ge
+\ln\!\left(\frac{\mu_S(E)}4\right).
+$$
+Substitution proves (B.5c). ∎
+
+The bound concerns the worst-case operation count of Definition B.2. A sample mean, median, finite-ladder regression, or individual low-cost execution does not contradict it. A finite implementation audit contradicts the joint implementation-and-reduction certificate only when the registered implementation has one fixed operation count $C_{\mathrm{fix}}(S,E)$ on every admissible execution path and that count is below the right-hand side of (B.5c), or when a verified all-path upper bound $U(S,E)$ satisfies
+$$
+U(S,E)
+<
+\frac{3c_s}{128}\,
+\mu_S(E)^2
+\ln\!\left(\frac{\mu_S(E)}4\right).
+\tag{B.5d}
+$$
+The admissible execution class, $c_s$, and the bridge from instrument counts to Definition B.2 operations must be fixed before outcome inspection.
 
 ## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 
@@ -721,27 +769,28 @@ $$
 T_{\mu\nu}^{(MPU)}\big|_{vac} = 0. \tag{B.17}
 $$
 
-(b) **Perfect Fluid (Local Thermal Equilibrium $\omega_{th}$):**
+(b) **Perfect Fluid (Local Thermal Equilibrium $\omega_{th}$):** Let $e_{th}$ denote rest-frame energy density, let $p_{th}$ denote pressure, and normalize the four-velocity by $u^\mu u_\mu=-1$. Then
 $$
-T_{\mu\nu}^{(MPU)} \big|_{th} = (\rho_{th} + p_{th}/c^2) u_\mu u_\nu + p_{th} g_{\mu\nu} \tag{B.18}
+T_{\mu\nu}^{(MPU)} \big|_{th}
+=
+(e_{th}+p_{th})u_\mu u_\nu+p_{th}g_{\mu\nu}.
+\tag{B.18}
 $$
 
-*Proof:* (a) In a Poincaré-invariant vacuum, translation invariance makes $T_{\mu\nu}^{(MPU)}\big|_{vac}$ constant in spacetime, and Lorentz invariance restricts any constant symmetric rank-2 tensor to be proportional to $g_{\mu\nu}$. In the convention of Eq (76) (with $\Lambda g_{\mu\nu}$ retained on the geometric side), the vacuum contribution is absorbed into $\Lambda$ by definition of the renormalized matter stress-energy, so the proportionality constant is fixed to zero, giving (B.17). (b) In the local rest frame of an isotropic medium, spatial isotropy forces $T_{0i}=0$ and $T_{ij}=p\,\delta_{ij}$ while $T_{00}=\rho c^2$. Writing this covariantly in terms of the four-velocity $u^\mu$ yields $T_{\mu\nu}^{(MPU)}=(\rho+p/c^2)u_\mu u_\nu + p\, g_{\mu\nu}$. ∎
+*Proof.* (a) In a Poincaré-invariant vacuum, translation invariance makes $T_{\mu\nu}^{(MPU)}\big|_{vac}$ constant, and Lorentz invariance restricts a constant symmetric rank-two tensor to a multiple of $g_{\mu\nu}$. In the convention of Equation (76), that vacuum multiple is absorbed into $\Lambda$ by definition of the renormalized excitation tensor, giving (B.17). (b) In the local rest frame and signature $(-,+,+,+)$, isotropy gives $T_{0i}=0$, $T_{ij}=p_{th}\delta_{ij}$, and $T_{00}=e_{th}$. The displayed covariant tensor has exactly those components. Here $e_{th}$ has energy-density units; if a mass density $\rho_m$ is used instead, then $e_{th}=\rho_m c^2$. ∎
 
 ## B.10 Construction Pathway (Summary)
 
-This appendix detailed the construction of $T_{\mu\nu}^{(MPU)}$:
+This appendix gives a typed construction pathway for $T_{\mu\nu}^{(MPU)}$:
 
-1.  Defined operational complexity $\hat{C}_v$ (Def B.1) and cost operators $\hat{R}, \hat{R}_I$ (Thm B.1), justified via dynamic correspondence (Thm 2).
-2.  Derived the SPAP complexity bound (Thm B.2) using a unified complexity functional (Def B.2).
-3.  Constructed microscopic energy density $\hat{\rho}_v$ (Def B.3) including interaction energy $\hat{V}_{vv'}$ incorporating dissipative costs linked to $\varepsilon$ (Def B.4).
-4.  Defined microscopic flow operators $\hat{\pi}, \hat{p}$ via local conservation (Def B.5).
-5.  Assembled the canonical tensor $\hat{T}^{\mu\nu}_{(can)}$ (Def B.6) and proved its conservation (Thm B.3).
-6.  Constructed the symmetric, physical tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Thm B.4, Def B.7).
-7.  Defined the macroscopic tensor $T_{\mu\nu}^{(MPU)}$ (Def B.8).
-8.  Established its covariant conservation (Thm B.5) and correspondence with standard forms (Thm B.6).
+1. operational complexity and cost operators are defined in Definition B.1 and Theorem B.1;
+2. the SPAP-side lower bound is obtained on the reduction-certificate branch of Theorem B.2;
+3. Definition B.3 converts registered Hamiltonian, reset-power, interaction-energy, volume, and clock data into a microscopic energy-density operator; computational cost alone does not perform this physical conversion;
+4. Definitions B.5-B.7 construct flow, canonical, and symmetric tensors when the stated local continuity, momentum-flux, and improvement records exist;
+5. Definition B.8 and Theorem B.5 pass to a macroscopic covariantly conserved tensor only on the stated coarse-graining, convergence, and continuum branches; and
+6. Theorem B.6 identifies vacuum and perfect-fluid forms after the corresponding symmetry, renormalization, and local-equilibrium hypotheses are supplied.
 
-This provides a self-consistent definition of the stress-energy tensor arising from the underlying MPU network dynamics and costs, suitable for sourcing the emergent gravitational field (Eq 76).
+The resulting tensor is suitable as the source in Equation (76) only on a branch that also carries the metric-continuum, variational, horizon-flux, normalization, and overlap certificates required by the gravity derivation. This pathway preserves the finite MPU energy ledger without identifying an abstract processing cost with physical stress-energy in the absence of an implementation map.
 
 
 

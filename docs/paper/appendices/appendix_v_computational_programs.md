@@ -52,12 +52,13 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 ### V.1.2 Observational Inputs
 
-- **Cosmological hybrid diagonal-input convention (Planck 2018, base-$\Lambda$CDM) [Planck Collaboration 2020a]:**
+- **Cosmological hybrid diagonal-input convention for the 2018 Planck base-$\Lambda$CDM results [Planck Collaboration 2020a]:**
   $H_0=67.4\pm0.5~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_{\Lambda}=0.6889\pm0.0056$.
   The $H_0$ pair is the rounded Planck TT,TE,EE+lowE+lensing marginal, while the $\Omega_\Lambda$ pair is from the corresponding Planck+BAO column. They are deliberately combined only as a declared diagonal sensitivity convention and are not presented as a draw from one joint Planck posterior.
-- **Planck length (CODATA 2022) [Mohr et al. 2025; NIST 2024]:**
+- **Planck length from the 2022 CODATA adjustment [Mohr et al. 2025; NIST 2024]:**
   $L_P=1.616255(18)\times 10^{-35}~\mathrm{m}$.
 - **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
+
 
 ### V.1.3 Calculation of $\Lambda L_P^2$
 

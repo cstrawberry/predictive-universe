@@ -277,48 +277,58 @@ h_x(v,w)
 v,w\in T_xU.
 \tag{45b.1}
 $$
-Then $h$ is a positive semidefinite quadratic tensor on $U$ and becomes positive definite after quotienting response-null tangent directions. Let $g^{sp}$ denote the positive operational-distance tensor supplied by the Cheeger/Mosco branch of Theorem 45 before the causal-clock direction is appended. If the same retained finite-response protocol family supplies both:
+Then $h$ is a positive semidefinite quadratic tensor on $U$ and becomes positive definite after quotienting response-null tangent directions. Let $g^E$ denote the positive rank-four operational-distance tensor supplied by the Cheeger/Mosco branch of Theorem 45 on that quotient. On a Lorentzian-promotion branch carrying a local time function $t$ with $dt_x\ne0$, define
+$$
+S_x:=\ker dt_x\subset T_xM_{\mathrm{reg}},
+\qquad
+h_x^{sp}:=h_x|_{S_x\times S_x},
+\qquad
+g_x^{sp}:=g_x^E|_{S_x\times S_x}.
+$$
+Rank-nullity gives $\dim S_x=3$, and both restricted forms are positive definite after the response-null quotient. If the same retained finite-response protocol family supplies both:
 
-1. the second variation of statistical distinguishability in Corollary 23c.1, and  
-2. the second variation of the rescaled propagation cost whose Mosco-Cheeger limit defines $g^{sp}$,
+1. the restriction to $S_x$ of the statistical-distinguishability variation in Corollary 23c.1, and
+2. the restriction to $S_x$ of the rescaled propagation-cost variation whose Mosco--Cheeger limit defines $g^{sp}$,
 
 then
 $$
-h_{\mu\nu}=g_{\mu\nu}^{sp}
+h_{\mu\nu}^{sp}=g_{\mu\nu}^{sp}
 \tag{45b.2}
 $$
-on the positive operational-distance sector. This equality is a certificate statement about the same retained protocol family supplying both quadratic forms. Absent that protocol-family identification, capacity saturation, PCE minimality, or a change of cost units does not by itself force the comparison endomorphism below to be the identity. More generally, whenever $h$ and $g^{sp}$ are positive definite on the same quotient tangent space, there is a unique positive $g^{sp}$-self-adjoint bundle endomorphism $B$ such that
+on the spatial positive operational-distance sector. This equality is a certificate statement about the same retained protocol family supplying both restricted quadratic forms. Absent that identification, capacity saturation, PCE minimality, or a change of cost units does not force the comparison endomorphism below to be the identity. More generally, whenever $h^{sp}$ and $g^{sp}$ are positive definite on $S_x$ after the quotient, there is a unique positive $g^{sp}$-self-adjoint bundle endomorphism $B:S_x\to S_x$ such that
 $$
-h(v,w)=g^{sp}(Bv,w).
+h^{sp}(v,w)=g^{sp}(Bv,w).
 \tag{45b.3}
 $$
-The Lorentzian metric of Section 11.6 is obtained only after adding the causal-clock direction and the cone-orientation structure; the Fisher tensor above is the positive distinguishability tensor on the operational spatial/response quotient.
+The Lorentzian metric of Section 11.6 is obtained only after selecting one direction already present in the rank-four carrier as temporal and supplying the cone-orientation structure; no fifth direction is appended. The Fisher tensor $h^{sp}$ is the positive distinguishability tensor on the operational spatial/response quotient.
 
-*Proof.* The pullback of a positive semidefinite bilinear form is positive semidefinite, so (45b.1) follows from Corollary 23c.1. Its kernel consists of tangent vectors whose image under $d\theta$ is response-null; the PPI quotient removes exactly those vectors, leaving a positive definite form. The metric $g^{sp}$ of Theorem 45 is the pointwise quadratic form representing the Mosco-Cheeger limit of the rescaled propagation energy on the regular branch. If the retained protocol certificate identifies that quadratic variation with the Fisher distinguishability variation, the two quadratic forms agree on every tangent vector. Equality of quadratic forms implies equality of the associated symmetric bilinear forms by polarization, proving (45b.2). If the two positive definite forms are not identical, the finite-dimensional Riesz representation theorem gives a unique endomorphism $B$ satisfying (45b.3); symmetry of $h$ makes $B$ self-adjoint with respect to $g^{sp}$, and positivity of $h$ makes $B$ positive. ∎
+*Proof.* The pullback of a positive semidefinite bilinear form is positive semidefinite, so (45b.1) follows from Corollary 23c.1. Its kernel consists of tangent vectors whose image under $d\theta$ is response-null; the PPI quotient removes exactly those vectors. Since $dt_x\ne0$ on a rank-four tangent space, rank-nullity gives $\dim S_x=3$. Restricting the positive-definite quotient forms $h$ and $g^E$ to $S_x$ gives the positive-definite forms $h^{sp}$ and $g^{sp}$. If the retained protocol certificate identifies their quadratic variations, they agree on every spatial tangent vector. Polarization proves (45b.2). Otherwise the finite-dimensional Riesz representation theorem gives a unique $B:S_x\to S_x$ satisfying (45b.3); symmetry of $h^{sp}$ makes $B$ self-adjoint with respect to $g^{sp}$, and positivity makes $B$ positive. ∎
 
 **Definition 45c (Geometric-Naturality Certificate $\mathfrak C_{\mathrm{geo}}$).** A geometric-naturality certificate for a regular chart domain $U\Subset M_{reg}$ is a finite record
 $$
 \mathfrak C_{\mathrm{geo}}
 =
-(\mathsf{PU}_{\mathrm{fin}}|_U,\;\theta,\;\mathcal E_{\mathrm{Mosco}},\;\mathcal Q_{\mathrm{Fisher}},\;\Pi_{\mathrm{PPI}},\;\lambda_{\mathrm{QFI}},\;\text{naturality squares},\;\text{forward lock})
+(\mathsf{PU}_{\mathrm{fin}}|_U,\;\theta,\;\mathcal E_{\mathrm{Mosco}},\;\mathcal Q_{\mathrm{Fisher}},\;\Pi_{\mathrm{PPI}},\;t,\;\lambda_{\mathrm{QFI}},\;\text{naturality squares},\;\text{forward lock})
 $$
-where the finite Markov/CPTP morphisms used to define the response-state Fisher tensor and the Mosco-Cheeger propagation tensor are the same admissible quotient functor after the PPI projection $\Pi_{\mathrm{PPI}}$. The record must identify the pushforward Dirichlet form $\mathcal E_{\mathrm{Mosco}}$, the QFI/Fisher quadratic form $\mathcal Q_{\mathrm{Fisher}}$, the response-null tangent quotient, and the fixed QFI scale $\lambda_{\mathrm{QFI}}$ before comparison.
+where the finite Markov/CPTP morphisms used to define the response-state Fisher tensor and the Mosco--Cheeger propagation tensor are the same admissible quotient functor after the PPI projection $\Pi_{\mathrm{PPI}}$. The record must identify the response-null quotient, a nonvanishing $dt$, the spatial kernel $S=\ker dt$, the restrictions $\mathcal E_{\mathrm{Mosco}}|_S$ and $\mathcal Q_{\mathrm{Fisher}}|_S$, and the fixed QFI scale $\lambda_{\mathrm{QFI}}$ before comparison.
 
-**Proposition 45d (Metric Calibration Removes $B$ on the Covered Branch).** Suppose an accepted $\mathfrak C_{\mathrm{geo}}$ explicitly certifies, on the positive operational-distance quotient,
+**Proposition 45d (Metric Calibration Removes $B$ on the Covered Branch).** Suppose an accepted $\mathfrak C_{\mathrm{geo}}$ explicitly certifies
 $$
-\mathcal Q_{\mathrm{Fisher}}=\lambda_{\mathrm{QFI}}\mathcal E_{\mathrm{Mosco}}
+\mathcal Q_{\mathrm{Fisher}}|_S
+=
+\lambda_{\mathrm{QFI}}\mathcal E_{\mathrm{Mosco}}|_S
 $$
-at the tangent-quadratic-form level. Then
+on the spatial positive operational-distance quotient. Then
 $$
-h=\lambda_{\mathrm{QFI}}g^{sp}.
+h^{sp}=\lambda_{\mathrm{QFI}}g^{sp}.
 $$
-If the branch calibration sets $\lambda_{\mathrm{QFI}}=1$, the comparison endomorphism of Corollary 45b is $B=\mathbb 1$. Without the explicit proportionality entry, $B$ remains a response-active comparison datum: CPTP monotonicity and naturality alone do not select a unique quantum monotone metric.
+If the branch calibration sets $\lambda_{\mathrm{QFI}}=1$, the comparison endomorphism of Corollary 45b is $B=\mathbb 1_S$. Without the explicit proportionality entry, $B$ remains a response-active comparison datum: CPTP monotonicity and naturality alone do not select a unique quantum monotone metric.
 
-*Proof.* The certificate's proportionality entry states that for every quotient tangent vector $v$,
+*Proof.* The certificate states
 $$
-h(v,v)=\lambda_{\mathrm{QFI}}g^{sp}(v,v).
+h^{sp}(v,v)=\lambda_{\mathrm{QFI}}g^{sp}(v,v)
 $$
-Polarization gives the same equality for the associated symmetric bilinear forms. Corollary 45b defines $B$ by $h(v,w)=g^{sp}(Bv,w)$; nondegeneracy of $g^{sp}$ therefore gives $B=\lambda_{\mathrm{QFI}}\mathbb 1$, and the unit calibration gives $B=\mathbb 1$. ∎
+for every quotient vector $v\in S$. Polarization gives equality of the associated symmetric bilinear forms. Equation (45b.3) and nondegeneracy of $g^{sp}$ give $B=\lambda_{\mathrm{QFI}}\mathbb 1_S$, and unit calibration gives $B=\mathbb 1_S$. ∎
 
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
@@ -358,7 +368,7 @@ $$
 S[\varphi^*\Psi,\varphi^*g]\;=\;S[\Psi,g].\tag{67d}
 $$
 
-Continuum diffeomorphism invariance is therefore a consequence of the substrate-level relabeling neutrality of §11.5.2.
+Continuum diffeomorphism invariance is therefore a consequence of the conjunction of Hypotheses 11.5.3.1–11.5.3.3; substrate-level relabeling neutrality alone supplies neither locality and finite jet order nor the geometric-field transformation laws.
 
 *Proof.* (a) In one chart, $S_U[\Psi]=\int_{\phi(U)} L\,d^4x$. In a second chart $(\phi',U')$, the same physical functional has $S_{U'}[\chi_*\Psi]=\int_{\phi'(U')} L'\,d^4x'$. By Hypothesis 11.5.3.3 these are equal for every admissible field configuration. Pulling back via $\chi$:
 $$
@@ -461,9 +471,10 @@ Division yields the displayed uniform bound. The hypotheses give no lower bound 
 
 **Corollary 46a (Lorentzian Signature and Local Lorentz Kinematics from Theorem 46 and Appendix O).** The uniform operational causal-speed bound of Theorem 46, together with a separately accepted attained operational frontier and the positive-definite spatial $\Gamma$-limit of §O.7.1, the entropy-selected time coordinate of Hypothesis O.7.2.2, the second-order continuum principal symbol supplied directly by Hypothesis O.7.2.3 or, for covered sectors, by an accepted second-order positivity certificate $\mathfrak C_2$ (Definition O.7.2.3a), and either the cone-coincidence/nondegeneracy clause of Hypothesis O.7.2.4 or an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ supplying that clause for the covered retained sectors (Definition O.7.2.5), supplies the four hypotheses of Theorem O.7a. When the latter two inputs are supplied by finite sector certificates, the well-posedness/signature audit is recorded by $\mathfrak C_{\mathrm{sig}}$ (Definition 46a.1). By Theorems O.7a and O.7b and Corollary O.7b.1 of Appendix O, this package forces a Lorentzian principal symbol on the emergent manifold and derives local Lorentz invariance with structure group $SO^+(1,3)$. Premise (A5) of §12 is therefore a theorem on precisely this branch or certificate package. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle $G=\mathrm{Spin}(1,3)\times U(d_0)$ of Theorem 48 is structurally forced only on the spin-admissible branch $w_2(M_{\mathrm{reg}})=0$ or on a strict-spin tangential-structure certificate $\mathfrak C_{\mathrm{tan}}$ (Definition 48b.2). Charged or twisted fermionic sectors may instead require a $\mathrm{Spin}^c$ or gauge-twisted tangential structure, in which case Theorem 48 must be read with the corresponding replacement bundle rather than as the global product $\mathrm{Spin}(1,3)\times U(d_0)$. The $D_4$ continuum gluing certificate supplies local regular-continuum data used by the branch, but it does not by itself assert global frame triviality, remove the spin obstruction, or discharge the second-order, cone-coincidence, and signature gates for uncovered sectors.
 
-*Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (derived local Lorentz invariance and frame-bundle structure) to the separately accepted attained frontier, the upper-bound output of Theorem 46, and §O.7.1, with the second-order input supplied either by Hypothesis O.7.2.3 or by $\mathfrak C_2$, and with the fourth cone input supplied either by Hypothesis O.7.2.4 or by $\mathfrak C_{\mathrm{cone}}$ as stated. When the finite certificate route is used, $\mathfrak C_{\mathrm{sig}}$ records the well-posedness exclusion of non-Lorentzian representatives. The three-spatial-dimensional hypothesis of Theorem O.7a is supplied on the Appendix Z channel-complete Bures tangent-cell contract of Definition Z.9a and Theorem Z.11. The global spin-bundle clause is then exactly the obstruction statement of Theorem 48b and Corollary 48b.1, optionally discharged by $\mathfrak C_{\mathrm{tan}}$ on the strict-spin branch. ∎
+*Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (tangent-frame Lorentz group and local kinematics) to the separately accepted attained frontier, the upper-bound output of Theorem 46, and §O.7.1, with the second-order input supplied either by Hypothesis O.7.2.3 or by $\mathfrak C_2$, and with the fourth cone input supplied either by Hypothesis O.7.2.4 or by $\mathfrak C_{\mathrm{cone}}$ as stated. When the finite certificate route is used, $\mathfrak C_{\mathrm{sig}}$ records the well-posedness exclusion of non-Lorentzian representatives. Definition Z.9a and Theorem Z.11 supply only the four-dimensional Euclidean response carrier. The rank-three spatial subspace follows only after the rank-four continuum realization and the nonvanishing time covector of Hypotheses O.7.2.1–O.7.2.2 are accepted. The global spin-bundle clause is then exactly the obstruction statement of Theorem 48b and Corollary 48b.1, optionally discharged by $\mathfrak C_{\mathrm{tan}}$ on the strict-spin branch. Full matter-dynamical Lorentz covariance additionally requires common-cone and covariant interaction certificates. ∎
 
 ### 11.6.3 Causal-Diamond Reconstruction from Predictive Inclusion
+
 
 **Definition 46b (Operational Causal-Diamond Valuation).** On a regular Lorentzian branch, let $\mathcal D_{\mathrm{op}}$ be the set of relatively compact operational causal diamonds. Each $D\in\mathcal D_{\mathrm{op}}$ carries a finite predictive algebra $\mathfrak A(D)$ satisfying isotony:
 $$
@@ -1094,7 +1105,7 @@ Unifying external spacetime and internal MPU degrees of freedom requires a princ
 
 **11.8.1 Theorem 48 (Fibre-Bundle Representation)**
 
-Assume in addition to Theorems 44-46 that the emergent Lorentzian manifold $M$ is oriented, time-oriented, and spin, and that the internal rank-$d_0$ Hilbert bundle carries a Hermitian structure. Then the full state and dynamics of the MPU network can be described using a principal fibre bundle $P(M,G)$ over $M$, with structure group $G = \text{Spin}(1,3) \times U(d_0)$.
+Assume in addition to Theorems 44-46 that the emergent Lorentzian manifold $M$ is oriented, time-oriented, and spin, and that the internal rank-$d_0$ Hilbert bundle carries a Hermitian structure. Then the combined spin and unitary frame data define a principal fibre bundle $P(M,G)$ over $M$, with structure group $G=\text{Spin}(1,3)\times U(d_0)$. This construction supplies a kinematic carrier and its associated bundles; it does not by itself select an MPU state, a connection, an action, a generator, or the full network dynamics.
 
 1.  **Fibre:** At each spacetime point $x \in M$, the fibre $\pi^{-1}(x)$ represents the space of possible local reference frames. It consists of pairs $(\mathcal{F}_x, \mathcal{P}_x)$, where $\mathcal{F}_x$ is a spin frame above an oriented, time-oriented orthonormal frame of $T_x M$, and $\mathcal{P}_x$ is a unitary frame for the internal Hilbert fibre $E_x \cong \mathbb{C}^{d_0}$.
 2.  **Structure Group Action:** An element $g = (\Lambda, u) \in G$, where $\Lambda \in \text{Spin}(1,3)$ and $u \in U(d_0)$, acts freely and transitively on the fibre elements by $(\mathcal{F}_x, \mathcal{P}_x) \mapsto (\Lambda \cdot \mathcal{F}_x, u \cdot \mathcal{P}_x)$. The $U(d_0)$ factor represents the local gauge freedom in choosing the internal reference basis.

@@ -4,16 +4,17 @@
 
 This Appendix develops the variational perspective on the Predictive Universe (PU) framework's dynamics, providing rigorous dynamical justifications for two cornerstone results presented in the main text:
 1.  **Dynamical justification of Theorem 2 (Dynamically Enforced Functional Correspondence):** Isolating the exact equilibrium condition $C_P(v)=\langle \hat{C}_v \rangle$ for true stable PCE equilibria, together with the quantitative operational tracking bound that drives the proxy toward that condition.
-2.  **Dynamical justification of Theorem 43 (Necessary Emergence of Geometric Regularity):** Showing that geometric regularity characterizes the lowest-potential sector of the dynamics and is selected by the low-noise detailed-balance stationary regime, complementing the necessity argument in Appendix C.
+2.  **Conditional dynamical justification of Theorem 43 (Geometric Regularity on the Strict-Comparison Branch):** Showing that geometric regularity characterizes the lowest-potential sector only when the declared monotonicity and regular-comparator hypotheses hold, and is selected by the low-noise detailed-balance stationary regime only under the additional stochastic hypotheses.
 
-We introduce the **Principle of Compression Efficiency (PCE) Potential $V(x)$**, an effective potential function derived from the framework's core principles (Axiom 1: POP, Definition 15: PCE). The system's slow adaptation dynamics, governing the evolution of the network configuration $x(t)$, are modeled as a stochastic gradient flow on the landscape defined by $V(x)$. The stochastic differential equation (SDE) governing these dynamics is:
+We introduce the **Principle of Compression Efficiency (PCE) Potential $V(x)$**, a branch-defined effective potential whose admissible terms, weights, and physical identification must be independently specified or derived. Axiom 1 (POP) and Definition 15 (PCE) provide the optimization grammar; they do not uniquely determine the physical function $V$. The system's slow adaptation dynamics, governing the evolution of the network configuration $x(t)$, are modeled as a stochastic gradient flow on the landscape defined by $V(x)$. The stochastic differential equation (SDE) governing these dynamics is:
 $$
 \mathrm{d}x_t \;=\; -\eta(x_t)\,\nabla V(x_t)\,\mathrm{d}t \;+\; \sqrt{2D(x_t)}\,\mathrm{d}W_t,
 \quad \text{(D.0)}
 $$
-where the potential $V(x_t)$ serves as a stochastic Lyapunov function (after an irrelevant additive normalization one may take $V\ge 0$). Under suitable conditions (detailed in Section D.6.2), the expected rate of change satisfies $\frac{\mathrm{d}}{\mathrm{d}t}\mathbb{E}[V(x_t)]\le 0$ when far from equilibrium, driving the system towards lower-potential regions. The stability of this process requires that the gradient $\nabla V$ be well-defined, which in turn necessitates that the underlying cost functions are non-contextual (i.e., independent of the choice of predictive basis), a key justification for the derivation of the Born rule (Appendix G). As detailed in Appendix X, this foundational potential $V(x)$ gives rise to the 1PI effective action of quantum field theory, and the stochastic gradient flow on $V(x)$ is a specific realization of the functional renormalization group. By analyzing the structure of $V(x)$ and the properties of this process, we prove three complementary results: exact alignment as a necessary condition at true stable PCE equilibria, quantitative proxy tracking with an explicit noise floor under the operational stochastic dynamics, and geometric regularity of the lowest-potential sector, which in detailed-balance low-noise regimes carries the dominant stationary mass. This establishes these properties not as assumptions, but as dynamically selected consequences of the fundamental optimization processes governing the MPU network under the stated hypotheses.
+where the potential $V(x_t)$ serves as a stochastic Lyapunov function (after an irrelevant additive normalization one may take $V\ge 0$). Under suitable conditions (detailed in Section D.6.2), the expected rate of change satisfies $\frac{\mathrm{d}}{\mathrm{d}t}\mathbb{E}[V(x_t)]\le 0$ when far from equilibrium, driving the system towards lower-potential regions. The stability of this process requires that the gradient $\nabla V$ be well-defined, which in turn requires the declared regularity and response-coordinate hypotheses. As detailed in Appendix X, additional branch hypotheses connect this potential to a 1PI effective action and a functional-renormalization-group representation. By analyzing the structure of $V(x)$ and the properties of this process, we prove three complementary conditional results: exact alignment at true stable PCE equilibria on the faithful-force-identifiability branch, quantitative proxy tracking with an explicit noise floor under the operational stochastic hypotheses, and geometric regularity of the lowest-potential sector on the strict-comparison branch. These are implications of the named potential, comparison, and stochastic premises; they do not derive the realized physical potential from POP/PCE alone.
 
 ## D.2 The Instantaneous PCE Potential ($V(x)$)
+
 
 The PCE principle mandates that the MPU network seeks configurations $x$ that optimize the trade-off between maximizing predictive utility (Benefit) and minimizing comprehensive costs (Operational, Propagation, Adaptation). The PCE Potential $V(x)$ quantifies this trade-off, such that configurations minimizing $V(x)$ correspond to the PCE-optimal states. $V(x)$ represents the effective potential governing the *slow* adaptation dynamics of the network configuration $x(t)$, encompassing network structure $\mathcal{N}(t)$, local MPU complexities $\{C_v(t) = \langle \hat{C}_v \rangle_{x(t)}\}$, and related macroscopic variables influencing costs and benefits.
 
@@ -26,9 +27,10 @@ where:
 *   **$V_{op}(x) = \sum_{v} \langle \lambda \hat{R}(C_v) + \hat{R}_I(C_v) \rangle_{\rho^{(v)}(x)}$**: The total expected operational cost rate (power) associated with the complexity configuration $\{C_v = \langle \hat{C}_v \rangle_x\}$, including physical costs $R(C)$ and informational costs $R_I(C)$ (Definition 3), weighted by the scarcity factor $\lambda$ (Definition 20).
 *   **$V_{prop}(x) = \sum_{(u,v)} \langle \Phi(w_{uv}) \rangle_{\rho(x)}$**: The total expected propagation cost rate associated with maintaining predictive coherence and communication infrastructure across the network. The cost function $\Phi(w_{uv})$ for a link $(u,v)$ with weight $w_{uv}$ (related to ND-RID fidelity $f_{RID}$ and cost $\varepsilon$, cf. Definition 35) is fundamentally information-theoretic: it scales with the rate of information required to be sent across the link to maintain coherence, penalized by the link's finite channel capacity $C_{\max}$ (derived from ND-RID limits in Appendix E). Irregular network geometries (as analyzed in Appendix C) increase path lengths and decrease effective channel fidelity, thus quantitatively increasing $V_{prop}$. A concrete example of this principle is used in Appendix G.8 to model the communication cost of maintaining gauge field coherence (see Equation G.8.5).
 *   **$V_{benefit}(x) = \sum_{v} \Gamma_0 B(PP_v(x))$**: The total effective power-equivalent predictive benefit derived from the network's performance. $PP_v(x)$ is the local Predictive Performance (Definition 7) of MPU $v$ in configuration $x$, dependent on $C_v = \langle \hat{C}_v \rangle_x$ and the local effective target complexity $\hat{C}_{target}(v, x)$ via the Law of Prediction (Theorem 19, Equation 22). $B(PP)$ is a monotonically increasing benefit function (e.g., $B(PP) = PP$ or related to reduction in prediction error), and $\Gamma_0$ is the power conversion factor (Definition 20).
-*   **$V_{penalty}(x)$**: Represents effective penalty terms implicitly required for the consistency of the framework. As derived below (Sections D.3, D.4), self-consistent optimization requires that the structure of $V(x)$ effectively incorporates terms equivalent to penalties for complexity misalignment ($V_{proxy}$) and geometric irregularity ($V_{geom}$).
+*   **$V_{penalty}(x)$**: Represents effective penalty terms supplied on the corresponding branch. Sections D.3 and D.4 show the consequences of a faithful misalignment restoring force and of a strict geometric-comparator penalty; they do not derive those physical terms from the bare POP/PCE grammar.
 
 The potential $V(x)$ is assumed to be continuously differentiable ($C^1$) with respect to the relevant components of configuration $x$ within $\mathcal{X}_{adm}$, and bounded below. The system's adaptation dynamics aim to minimize this operational potential $V(x)$, subject to the resource-order gate below.
+
 
 **Definition D.1b (PCE Resource Preorder and Dual Certificates).** For each admissible configuration $x\in\mathcal X_{adm}$ define its PCE resource vector
 $$
@@ -427,10 +429,11 @@ Then $R_f(f(C))=R(C)$, so the physical cost, work-cost gap, and PCE ordering are
 
 ## D.4 Dynamical Emergence of Geometric Regularity
 
-This section provides the dynamical justification for Theorem 43, showing that minimizing the PCE Potential $V(x)$ inherently drives the system towards geometrically regular configurations.
+This section provides the conditional dynamical justification for Theorem 43: minimizing $V(x)$ selects geometrically regular configurations only under the monotonicity and regular equal-proxy comparator hypotheses stated in Theorem D.3.
 
 **Lemma D.3 (Quantitative Cost of Irregularity under monotonicity/comparison hypotheses).**
 Assume, in addition to the results of Appendix C, that:
+
 
 1. $V_{prop}$ is monotone increasing in the bottleneck severity
    $$
@@ -1014,9 +1017,10 @@ Taking the infimum over all admissible paths proves the quasipotential bound. �
 
 ## D.7 Formal Justification of Theorems 2 and 43
 
-The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.
+The results derived in this appendix provide conditional dynamical justifications for Theorems 2 and 43 under their faithful-identifiability, comparison, regularity, and stochastic hypotheses. They are not necessary consequences of the bare optimization grammar. The convergence from the discrete MPU network to a continuum description governed by a standard action is likewise conditional on the hypotheses of the following theorem.
 
 **Lemma D.6a (Equicoercivity of the discrete predictive action from PU bounded geometry).**
+
 
 Let $\{(\mathcal G_h,d_h,\mu_h)\}_{h\downarrow 0}$ be the family of PU weighted graphs used in Theorem D.6, with the PU macroscopic rescaling already applied. Assume
 $$
@@ -2684,8 +2688,6 @@ The reported current obeys (D.8.7.9) only when the induced output record indepen
 
 *Proof.* The independent Definition D.8.7e entry supplies exactly the hypotheses of Theorem D.8.7f; apply that theorem. Without the entry, no TUR conclusion follows. ∎
 
-**Conditional reciprocity identity.** If $\Psi\in C^2$ on an open coordinate domain and $L_{ab}:=\partial_a\partial_b\Psi$, then $L_{ab}=L_{ba}$. A physical response matrix inherits this symmetry only after a bridge identifies it with that Hessian while fixing constraints, contact terms, frame, and time-reversal parity. In time-reversal-odd backgrounds the relevant relation may be Onsager-Casimir rather than simple symmetry.
-
 **Conditional reciprocity identity.** Let $\Psi(\lambda_1,\ldots,\lambda_n)$ be one scalar value function on an open coordinate domain, with $\Psi\in C^2$, and define the response matrix $L_{ab}:=\partial_a\partial_b\Psi$. Then
 $$
 L_{ab}=L_{ba}
@@ -2767,7 +2769,7 @@ so multiplication of weights corresponds to addition of costs. Sums of weights a
 
 ### D.8.9 Strict Finite-Certificate Closure
 
-**Remark D.8.9.0 (Global Ledger Anchor).** The strict PPI/PCE certificate object defined below is the local sector record consumed by the Global Strict-Certificate Ledger of Convention P.14.1k and the No-Overclaim Discipline of Convention P.14.1l. Theorem D.8.9b is the local closure theorem; Theorem D.8.9c is the acyclic gluing theorem; Corollary D.8.9d is the global closure criterion. Convention P.14.1k records, sector by sector, which strict certificates are already closed and which remain certificate-pending or open.
+**Remark D.8.9.0 (Global Ledger Anchor).** The strict PPI/PCE certificate object defined below is the local sector record consumed by the Global Strict-Certificate Ledger of Convention P.14.1k and the No-Overclaim Discipline of Convention P.14.1l. Theorem D.8.9b is the local closure theorem; Theorem D.8.9c is the acyclic compatible-tuple theorem; Corollary D.8.9d is the sectorwise closure criterion. Ambient realization retains the separate restriction-fiber gate of Theorem P.14.1k.3.
 
 **Definition D.8.9a (Strict PPI/PCE Certificate).** For a sector $S$ with fixed parent data, a strict PPI/PCE certificate is a tuple
 $$
@@ -2911,9 +2913,9 @@ Exactness is therefore equivalent to vanishing harmonic/cycle projection, which 
 
 **Remark D.8.9c.2 (Scope: Audit, Not Cyclic Selection).** Theorem D.8.9c.1 audits compatibility only after local representatives have been selected. It does not remove the acyclicity requirement on PU's parent-dependency graph and does not prove a fixed point for cyclic parent-dependent certificate selection. Non-flat or nonabelian overlap maps require twisted cohomology or ordered holonomy; applying the ordinary incidence formulas there is not licensed.
 
-**Corollary D.8.9d (Global Strict-Certificate Closure Criterion).** A PU branch is globally closed at theorem level by the strict-certificate route when every live sector in its dependency graph has a strict PPI/PCE certificate with theorem-level entries and all overlap maps commute. If a sector lacks one finite entry required by this route, then by Convention P.14.1a and Corollary P.14.1g the branch keeps the weakest unresolved status of that entry until an equivalent theorem-level record is supplied.
+**Corollary D.8.9d (Sectorwise Strict-Certificate Closure Criterion).** Suppose every live sector in a finite acyclic dependency graph has a strict PPI/PCE certificate with theorem-level entries and all typed overlap maps commute. Then Theorem D.8.9c selects a unique compatible tuple of sector response classes. This conclusion neither constructs an ambient global realizer nor proves a unique lift of the tuple; those claims require a declared restriction map with a nonempty, respectively singleton, fiber as in Theorem P.14.1k.3. If a sector lacks one finite entry required by this route, Convention P.14.1a and Corollary P.14.1g retain the weakest unresolved status until an equivalent theorem-level record is supplied.
 
-*Proof.* The positive direction is Theorem D.8.9c applied to the full dependency graph. For the unresolved-entry statement, if a live sector lacks an admissible family, quotient relation, response record, cost functional, selected minimizer, strict gap, or overlap map, then the strict-certificate route cannot evaluate the sector as a unique PPI/PCE-selected quotient class. The dependency ledger therefore cannot assign theorem-level closure to that sector through Definition D.8.9a. Convention P.14.1a and Corollary P.14.1g block promotion until the missing finite entry is supplied or replaced by an equivalent theorem-level record. ∎
+*Proof.* Theorem D.8.9c gives existence and uniqueness of the compatible product tuple. A lift through an ambient restriction map is additional data, so it cannot follow from product compatibility alone. The unresolved-entry statement follows because Definition D.8.9a cannot select the affected sector class when its candidate family, quotient, response record, cost, minimizer, strict gap, or overlap map is missing. ∎
 
 **Remark D.8.9d.1 (Structural-Invariant Projection on a Strict Branch).** Let $S$ be a sector with strict PPI/PCE certificate $\mathfrak C_S$ in the sense of Definition D.8.9a, and let $q_S^*\in\bar Q_S$ be its unique selected class from Theorem D.8.9b. If
 

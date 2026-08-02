@@ -1214,21 +1214,21 @@ The certificate is accepted only when (I.13d.3) holds, the local high-accelerati
 
 **Theorem I.13e (Dark-Kernel Determinacy from Covariant Susceptibility).** If $\mathfrak X_{\mathrm{DS}}$ is accepted, then the galaxy response kernel, cluster/lensing response, conserved stress-energy tensor, anisotropic-stress projection, merger and cluster limits, local-gravity limit, CMB-era behavior, homogeneous late-time law, RCD-Buchert-Cheeger backreaction bound, elliptic scale bridge, predictive-stress variance, source-energy rate density, and finite defect budgets are deterministic outputs of the accepted susceptibility/effective-action branch, up to $\mathcal R_{\mathrm{DS}}$.
 
-If $\mathfrak X_{\mathrm{DS}}$ is absent, the acceleration scale $g_\Lambda=c^2\sqrt\Lambda/8$ remains closed by Appendix H, but $(L_0,A_G,m)$, $(K,q,A_{\mathrm{PM}})$, the lensing/anisotropic-stress map, the homogeneous law $\Theta_{\mathrm{hom}}$, and the backreaction constants in $\mathfrak B_D$ remain phenomenological or branch-classification data.
+If $\mathfrak X_{\mathrm{DS}}$ is absent, the acceleration-scale identity $g_\Lambda=c^2\sqrt\Lambda/8$ remains available only on an independently accepted Definition H.0 bridge-law branch; it is not thereby identified with a realized observable. The remaining galaxy, cluster, lensing, homogeneous, and backreaction data remain phenomenological or branch-classification data.
 
 *Proof.* Items 2 and 3 supply a generally covariant action or retarded susceptibility with a conserved stress tensor. Items 5--10 are the finite projection maps to galaxy dynamics, lensing, clusters, local tests, CMB-era behavior, and homogeneous late-time evolution. Item 11 supplies the RCD-Buchert-Cheeger and elliptic scale bridge, while item 12 gives a finite admissible ansatz family with a strict PCE gap modulo response equivalence. Theorem D.8.9b fixes $\Theta_{\mathrm{DS}}^*$ uniquely in the retained quotient, and the projection maps then produce the stated kernels and stress-energy components with residuals $\mathcal R_{\mathrm{DS}}$. Without the certificate, at least one of the covariant source, kernel, projection maps, minimizer, conservation proof, or residual ledger is not fixed; Theorem P.14.1f therefore blocks theorem-level promotion beyond the acceleration bridge. ∎
 
 **Theorem I.13f (Harmonic Recoverability Realization of the Dark-Susceptibility Kernel).** Let $\mathcal D_B$ be a finite causal-diamond complex on a regular emergent metric branch, and choose a reference orientation set $E_+$ containing exactly one orientation of each retained unoriented inclusion edge. For $e:D_-\to D_+$ in $E_+$, let
 $$
-\Phi_e:\mathcal A(D_+)\to\mathcal A(B_e)
+\Phi_{e,*}:\mathcal A(D_+)_{*}\to\mathcal A(B_e)_{*}
 $$
-be a completely positive trace-preserving boundary/compression channel, and let $\rho_{D_+}$ and $\omega_{D_+}$ be the retained state and a faithful local PCE/KMS reference state. Define
+be a linear Schrödinger-picture completely positive trace-preserving map on the finite-dimensional predual spaces, restricting to a channel between their convex state spaces. Equivalently, its Heisenberg adjoint $\Phi_e:\mathcal A(B_e)\to\mathcal A(D_+)$ is unital and completely positive. Let $\rho_{D_+}$ and $\omega_{D_+}$ be the retained state and a faithful local PCE/KMS reference state. Define
 $$
 J_{\mathrm{rec}}(e)
 :=
 D(\rho_{D_+}\Vert\omega_{D_+})
 -
-D(\Phi_e\rho_{D_+}\Vert\Phi_e\omega_{D_+})
+D(\Phi_{e,*}\rho_{D_+}\Vert\Phi_{e,*}\omega_{D_+})
 \ge0
 \qquad(e\in E_+),
 \tag{I.13f.1}
@@ -1269,15 +1269,46 @@ $$
 \Pi_{\mathrm{harm}}\Lambda_h^{-1}\Pi_{\mathrm{harm}};
 $$
 
-3. null-response data for every retained null direction $k$ spanning the tangent-space null cone,
+3. a finite null-tomography record for the linear map
 $$
-8\pi G\,T^{\mathrm{DS}}_{\mu\nu}k^\mu k^\nu
+\mathcal L_x:
+\operatorname{Sym}^2(T_x^*M)\big/\operatorname{span}\{g\}
+\longrightarrow\mathbb R^9,
+\qquad
+\mathcal L_x([S])_i=S_{\mu\nu}k_i^\mu k_i^\nu,
+\tag{I.13f.3a}
+$$
+where $k_1,\ldots,k_9$ are null and $\operatorname{rank}\mathcal L_x=9$. The map is well defined because $g_{\mu\nu}k_i^\mu k_i^\nu=0$. Pointwise in an orthonormal Lorentz frame, one exact witness is
+$$
+\begin{aligned}
+k_1&=(1,1,0,0),&k_2&=(1,-1,0,0),\\
+k_3&=(1,0,1,0),&k_4&=(1,0,-1,0),\\
+k_5&=(1,0,0,1),&k_6&=(1,0,0,-1),\\
+k_7&=(1,\tfrac35,\tfrac45,0),&
+k_8&=(1,\tfrac35,0,\tfrac45),&
+k_9&=(1,0,\tfrac35,\tfrac45).
+\end{aligned}
+\tag{I.13f.3b}
+$$
+In the quotient gauge $S_{00}=0$ and ordered coordinates
+$$
+(S_{01},S_{02},S_{03},S_{11},S_{22},S_{33},S_{12},S_{13},S_{23}),
+$$
+the exact determinant of the resulting $9\times9$ evaluation matrix is
+$$
+\det\mathcal L_x=-\frac{884736}{15625}\ne0.
+\tag{I.13f.3c}
+$$
+The record also contains the nine responses
+$$
+8\pi G\,T^{\mathrm{DS}}_{\mu\nu}k_i^\mu k_i^\nu
 =
-\mathcal Q_h(k);
+\mathcal Q_h(k_i),
+\qquad i=1,\ldots,9;
 \tag{I.13f.3}
 $$
 
-4. a scalar trace datum $\tau_{\mathrm{DS}}=g^{\mu\nu}T^{\mathrm{DS}}_{\mu\nu}$ compatible with the conservation law (I.13d.3) and the cosmological boundary ledger.
+4. a tenth scalar datum $\tau_{\mathrm{DS}}=g^{\mu\nu}T^{\mathrm{DS}}_{\mu\nu}$ compatible with the conservation law (I.13d.3) and the cosmological boundary ledger.
 
 Then Theorem 12.1g and the trace datum determine a unique symmetric tensor $T^{\mathrm{DS}}_{\mu\nu}$. The metric equation on this branch is
 $$
@@ -1305,7 +1336,7 @@ $$
 $$
 Hence $J_{\mathrm{rec}}\in\ker\Delta_1$. Uniqueness of the orthogonal decomposition then gives $d_0\phi=0$, $\delta_1\psi=0$, and $J_{\mathrm{rec}}=h$. An exact current arising from one global vertex potential has zero harmonic projection, so it cannot yield a nonzero $h$.
 
-Invertibility of $\Lambda_h$ makes $\mathcal K_{\mathrm{DS}}$ a well-defined finite operator on the harmonic subspace. Theorem 12.1g reconstructs the trace-free tensor class from $\mathcal Q_h(k)$. If two symmetric tensors have the same contraction with every null vector, their difference is $f g_{\mu\nu}$; equality of their traces gives $4f=0$ in four dimensions. The supplied trace datum therefore selects one tensor, and (I.13d.3) verifies its conservation compatibility. This proves uniqueness and the source equation (I.13f.4). If $h=0$, then $\mathcal Q_h=0$; together with $\tau_{\mathrm{DS}}=0$, the same null-cone argument gives $T^{\mathrm{DS}}_{\mu\nu}=0$. Equation (I.13f.5) is Corollary I.3a. ∎
+Invertibility of $\Lambda_h$ makes $\mathcal K_{\mathrm{DS}}$ a well-defined finite operator on the harmonic subspace. Nullity of the nine vectors in (I.13f.3b) makes $\mathcal L_x$ well defined on the covariant quotient by $\operatorname{span}\{g\}$. Equation (I.13f.3c) proves that this map has rank $9$, equal to the quotient dimension, so the nine values in (I.13f.3) determine the trace-free covariant tensor class uniquely. The trace datum fixes the remaining multiple of $g_{\mu\nu}$, and (I.13d.3) verifies conservation compatibility. This proves uniqueness and the source equation (I.13f.4). If $h=0$, then every recorded $\mathcal Q_h(k_i)$ vanishes; together with $\tau_{\mathrm{DS}}=0$, injectivity gives $T^{\mathrm{DS}}_{\mu\nu}=0$. Equation (I.13f.5) is Corollary I.3a. ∎
 
 **Corollary I.13g (Chern-Simons Inflow as a Dark-Susceptibility Subcertificate).** Let
 $$
@@ -1323,8 +1354,14 @@ On the quasistatic local-relaxation branch, the adaptation dynamics of local MPU
 
 **I.15 Conclusion**
 
-The PU framework proposes a multi-scale solution to the phenomena attributed to dark matter, driven by the Principle of Compression Efficiency.
-1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Equation I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
-2.  **At cluster scales**, where a running $G(R)$ is cosmologically constrained, the mass discrepancy is modeled by a **non‑local predictive‑matter response**. A linear, single‑scale kernel is sufficient for **stacked profiles**, while **high‑concentration outliers** (e.g., A1689) demand either a **mild nonlinearity $q>0$** or a **multi‑scale kernel**. All options remain **CMB‑safe** with $A_G\simeq 0$ and are quantitatively testable against lensing data.
+The appendix defines a multi-scale dark-response candidate program and separates its proved identities from its model coordinates.
 
-This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale after the Appendix H bridge normalization is adopted, with the adopted representative giving the exact lock $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the corresponding vacuum branch. The galaxy and cluster response kernels are phenomenological until an accepted covariant dark-susceptibility certificate $\mathfrak X_{\mathrm{DS}}$ supplies the common kernel, projection maps, conservation check, strict PCE minimizer, and residual interval of Definition I.13d. With that record accepted, Theorem I.13e makes the galaxy law, cluster predictive-matter source, and shared acceleration scale deterministic outputs of one susceptibility branch. When the certificate uses the harmonic recoverability realization of Theorem I.13f, the retained dark-response source is exactly the harmonic part of the finite edge recoverability current and vanishes on the harmonic-zero reversible Einstein branch. The strongest common test is whether galaxy dynamics, baryonic surface-density thresholds, and cluster/lensing response can all be written with the same $g_\Lambda$ rather than with independent acceleration scales.
+1. **Acceleration-scale branch.** Once the independent Appendix H normalization and the same vacuum branch are accepted, the scale is
+   $$
+   g_\Lambda=\frac{c^2\sqrt{\Lambda}}8.
+   $$
+   This identity does not determine a galaxy, lensing, cluster, merger, CMB, or homogeneous response kernel.
+2. **Galaxy and cluster models.** Equation I.4 and the nonlocal predictive-matter kernels are phenomenological candidate laws until one accepted $\mathfrak X_{\mathrm{DS}}$ supplies their common covariant action or retarded susceptibility, projections, conservation law, parameter selector, and residual intervals. Stacked-profile agreement does not select the kernel, and CMB safety requires the perturbative projection $\Pi_{\mathrm{CMB}}$ for that same accepted record.
+3. **Conditional closure and falsification.** Given an accepted $\mathfrak X_{\mathrm{DS}}$, Theorem I.13e makes all registered projections deterministic outputs of one branch. A failure of common conservation, lensing, local-gravity, CMB, homogeneous, or residual tests falsifies that branch. On the harmonic realization of Theorem I.13f, the source is the harmonic part of the finite recoverability current and vanishes on the certified harmonic-zero, trace-zero branch.
+
+The discriminating test is therefore not numerical reuse of $g_\Lambda$, but simultaneous forward prediction of galaxy dynamics, baryonic thresholds, lensing, clusters, local gravity, CMB-era perturbations, and homogeneous evolution from one preregistered covariant response record.

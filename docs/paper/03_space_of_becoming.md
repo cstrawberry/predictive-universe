@@ -1,6 +1,6 @@
 # 3. The Dynamics of Prediction and Interaction
 
-Building upon the foundational principles of prediction, optimization, and resource constraints established in Section 2, this section delves into the core dynamical processes governing predictive systems within the PU framework. We formally define the operational cycle—the Fundamental Predictive Loop—that systems employ to address the Prediction Optimization Problem (POP). We then introduce Reflexive Interaction Dynamics (RID) as the formal structure characterizing the crucial interaction and update phases of this loop. We highlight the inherent properties of RID that impose fundamental constraints on predictive systems. Finally, we derive the necessity of operating within specific performance bounds, defining the "Space of Becoming".
+Building on Section 2, this section defines the Fundamental Predictive Loop and Reflexive Interaction Dynamics as PU's operational update model. The loop and RID do not by themselves force one numerical viability interval. Theorem 8 supplies a lower bound only under its super-chance success premise, while Theorem 9 supplies an upper bound only under its pathwise-excitation certificate; Definition 8 registers the resulting branch-relative Space of Becoming.
 
 #### 3.1 The Fundamental Predictive Loop
 
@@ -248,7 +248,7 @@ These properties highlight the intrinsic limitations and complexities introduced
 
 #### 3.3 The Space of Becoming: Predictive Viability Bounds
 
-The adaptive Fundamental Predictive Loop (Definition 4), driven by the POP (Axiom 1) and operating under the constraints of RID (Definition 6) and finite resources (Section 2.4.4), requires a specific operational range of predictive effectiveness to function sustainably. This section defines the measure of predictive effectiveness—Predictive Performance (PP)—and derives the necessity of both lower and upper bounds on this performance, defining the "Space of Becoming" within which viable, adaptive prediction must occur.
+This section defines Predictive Performance and a branch-relative viability band. Theorem 8's lower bound requires its registered super-chance premise; Theorem 9's upper bound requires its pathwise-excitation certificate. POP, RID, and finite resources alone do not imply either bound. Definition 8 names the Space of Becoming only after the applicable antecedents are supplied.
 
 #### 3.3.1 Definition 7 (Def 7): Predictive Performance (PP)
 

@@ -3367,12 +3367,12 @@ H^n_{\mathrm{PU}}(\mathcal U,\mathcal F_\varepsilon)
 \tag{X.9.5.2}
 $$
 
-**Theorem X.9.5b (Obstruction-Exactness Classification).** For every finite operational cover $\mathcal U$ and finite-cost sheaf $\mathcal F_\varepsilon$ as in Definition X.9.5a:
+**Theorem X.9.5b (Obstruction-Exactness Classification).** For every finite operational cover $\mathcal U$ and finite-cost abelian sheaf $\mathcal F_\varepsilon$ as in Definition X.9.5a:
 
 1. $\delta^2=0$, so $H^n_{\mathrm{PU}}(\mathcal U,\mathcal F_\varepsilon)$ is well-defined.
 2. $H^0_{\mathrm{PU}}$ consists exactly of globally glueable finite-cost predictive assignments.
-3. A nonzero class in $H^1_{\mathrm{PU}}$ is exactly the obstruction to choosing local predictive representatives whose pairwise transition corrections are all removed by local redefinitions.
-4. A nonzero class in $H^2_{\mathrm{PU}}$ is exactly the obstruction to coherent triple-overlap closure; on regular connection branches this is the Cech representative of predictive curvature or anomaly descent.
+3. $H^1_{\mathrm{PU}}$ classifies abelian transition torsors. A nonzero class obstructs removal of all transition corrections by local redefinitions; it does not obstruct existence of a twisted global object when effective descent is available.
+4. A degree-two cocycle may classify retained curvature, gerbe, or anomaly-polynomial data. Its class is an obstruction only to a specified lift, lower-degree trivialization, or declared anomaly-free redundancy. Failure of the cocycle equation itself is a descent failure.
 5. For a pair $(X,\partial X)$ with boundary cover induced from $\mathcal U$, assume that the restriction cochain map
 $$
 r:C^n_{\mathrm{PU}}(X)\to C^n_{\mathrm{PU}}(\partial X)
@@ -3386,23 +3386,24 @@ $$
 \cdots\to H^n_{\mathrm{PU}}(X,\partial X)\to H^n_{\mathrm{PU}}(X)\to H^n_{\mathrm{PU}}(\partial X)\xrightarrow{\Delta}H^{n+1}_{\mathrm{PU}}(X,\partial X)\to\cdots.
 \tag{X.9.5.3}
 $$
-Without degreewise surjectivity, relative cohomology is defined by the shifted mapping cone $\operatorname{Cone}(r)[-1]$, which has the same long exact sequence. Anomaly inflow and horizon compensation are exactness conditions in the applicable relative complex.
+Without degreewise surjectivity, relative cohomology is defined by the shifted mapping cone $\operatorname{Cone}(r)[-1]$, which has the same long exact sequence. Anomaly inflow and horizon compensation are exactness conditions for the specifically declared anomaly or trivialization obstruction in the applicable relative complex.
 
-*Proof.* In the displayed computation of $\delta^2c$, every term obtained by deleting indices $r$ and $s$ appears once in each sum with opposite sign; hence $\delta^2=0$. The descriptions of $H^0$, $H^1$, and $H^2$ follow directly from the definitions of cocycle and coboundary and the sheaf gluing axiom, proving items 1–4. Under degreewise surjectivity, the sequence
+*Proof.* In the displayed computation of $\delta^2c$, every term obtained by deleting indices $r$ and $s$ appears once in each sum with opposite sign; hence $\delta^2=0$. The descriptions of $H^0$, $H^1$, and $H^2$ follow from cocycle and coboundary definitions and the sheaf gluing axiom. Under degreewise surjectivity, the short exact sequence
 $$
 0\to\ker r\to C^\bullet_{\mathrm{PU}}(X)\xrightarrow{r}C^\bullet_{\mathrm{PU}}(\partial X)\to0
 $$
-is a short exact sequence of cochain complexes. The connecting-homomorphism construction therefore gives (X.9.5.3): lift a boundary cocycle, apply $\delta$, observe that its restriction vanishes, and take the resulting relative cohomology class; changing the lift changes the result by a relative coboundary. If $r$ is not surjective, the standard mapping-cone short exact sequence gives the same long exact sequence with $H^\bullet(\operatorname{Cone}(r)[-1])$ as the relative term. ∎
+gives (X.9.5.3). Without surjectivity, the mapping-cone sequence gives the same conclusion. ∎
 
-**Corollary X.9.5c (One Exactness Principle for Curvature, Gauge Anomaly, and Horizon Inflow).** On regular branches where curvature, gauge anomaly, perspective mismatch, and horizon boundary data are represented by finite-cost transition functionals, their consistency condition is the same mathematical statement:
+**Corollary X.9.5c (Typed Exactness for Curvature, Gauge Anomaly, and Horizon Inflow).** When a claimed conclusion requires an untwisted global representative or declares a transformation to be an exact redundancy, the applicable anomaly or trivialization class must be the distinguished trivial class after accepted boundary or defect inflow:
 $$
 [\omega_{\mathrm{bulk}}]+[\omega_{\mathrm{boundary}}]=0
 \quad
-\text{in the relevant }H^\bullet_{\mathrm{PU}}.
+\text{in the declared abelian obstruction group}.
 \tag{X.9.5.4}
 $$
+A genuine transition, curvature, or holonomy class may instead be nonzero and label a consistent twisted or curved global object; it is not an anomaly merely by nonvanishing.
 
-*Proof.* Theorem X.9.5b identifies each listed mismatch as a cohomology class in the same finite-cost Cech complex or its relative version. Total consistency means the combined class is exact, equivalently zero in cohomology. ∎
+*Proof.* Theorem X.9.5b separates physical cocycle classes from obstructions to a declared exact redundancy or required trivialization. Only the latter require exact cancellation in the applicable absolute or relative complex. ∎
 
 **Definition X.9.5c.1 (Finite Bridge-Site Descent Datum).** A finite bridge-site descent datum is a tuple
 $$
@@ -3435,28 +3436,33 @@ g_{ij}g_{jk}g_{ki}=1
 \text{on every nonempty }U_i\cap U_j\cap U_k,
 \tag{X.9.5.7}
 $$
-and its obstruction class is
+and its transition class is
 $$
-[\omega_{\mathrm{br}}]
+[g_{\mathrm{br}}]:=[\omega_{\mathrm{br}}]
 \in
 \check H^1(\mathcal U,\mathcal G_{\mathrm{br}}).
 \tag{X.9.5.8}
 $$
+For a nonabelian response groupoid, this $H^1$ is a pointed set with distinguished trivial class $[1]$; for abelian coefficients $[1]$ may be written $0$. A genuine cocycle class is called an obstruction only when a claimed lift or untwisted trivialization requires $[g_{\mathrm{br}}]=[1]$.
 
-**Theorem X.9.5c.2 (Finite Bridge-Descent Closure).** Let $\mathfrak B_{\mathrm{desc}}$ be a finite bridge-site descent datum satisfying $\chi_{\mathrm{br}}$, and assume that $\mathcal F_{\mathrm{br}}$ is an effective descent stack for the stated response-gauge groupoid and is separated modulo the declared response equivalence. The local representatives $\{r_i\}$ glue to a unique global retained response object modulo response equivalence if and only if
-$$
-[\omega_{\mathrm{br}}]=0.
-\tag{X.9.5.9}
-$$
-If $[\omega_{\mathrm{br}}]\ne0$, the branch must record whether the class is response-null and quotiented, response-active and retained through Definition X.9.5e, or branch-rejecting.
+**Theorem X.9.5c.2 (Finite Bridge Descent and Trivialization).** Let $\mathfrak B_{\mathrm{desc}}$ be a genuine finite bridge-site descent datum satisfying $\chi_{\mathrm{br}}$ and the cocycle equation (X.9.5.7). Assume that $\mathcal F_{\mathrm{br}}$ is an effective descent stack for the stated response-gauge groupoid and is separated modulo the declared response equivalence. Then:
 
-*Proof.* If the class vanishes, choose local gauge elements $h_i$ with $g_{ij}=h_i^{-1}h_j$. The adjusted representatives $h_ir_i$ have identity transitions and hence form an effective descent datum. Effective descent supplies a global object, and separatedness makes it unique modulo response equivalence. Conversely, restrictions of a global object have transition maps induced by local trivializations; those maps form a coboundary, so $[\omega_{\mathrm{br}}]=0$. If the class is nonzero, no global object with those local representatives exists in this descent stack. The three stated ledger outcomes exhaust the declared response-null, response-active, and inadmissible cases. ∎
+1. the local representatives $\{r_i\}$ descend to a global retained response object, unique modulo response equivalence;
+2. the descended object admits an untwisted global representative obtained by local redefinitions with identity transition maps if and only if
+   $$
+   [g_{\mathrm{br}}]=[1];
+   \tag{X.9.5.9}
+   $$
+3. if $[g_{\mathrm{br}}]\ne[1]$, the class records a possibly response-active twist of the descended global object; nonvanishing alone is not an obstruction to existence of that object.
 
-**Corollary X.9.5c.3 (No Silent Bridge Assumption).** Assume the finite bridge datum, effective-descent-stack, and separatedness hypotheses of Theorem X.9.5c.2. A local theorem promotes to a global retained theorem exactly when its bridge-site descent class vanishes, or when an accepted response-active defect fills the class under Definition X.9.5e.
+*Proof.* Effective descent is essential surjectivity from global objects to cocycle descent data. Equation (X.9.5.7) therefore supplies a global object whose restrictions are equivalent to the $r_i$, and separatedness gives uniqueness modulo response equivalence. If $[g_{\mathrm{br}}]=[1]$, there are local gauge elements $h_i$ with $g_{ij}=h_i^{-1}h_j$; the adjusted representatives $h_ir_i$ have identity transitions and define an untwisted global representative. Conversely, identity transitions after local redefinition imply $g_{ij}=h_i^{-1}h_j$, so the class is the distinguished point. A nonzero class prevents that global trivialization but is still genuine cocycle descent data, hence still descends by effectiveness. ∎
 
-*Proof.* The zero-class case is Theorem X.9.5c.2 under its stated hypotheses. The nonzero filled case uses the accepted defect and cancellation equation of Definition X.9.5e. ∎
+**Corollary X.9.5c.3 (No Silent Bridge Assumption).** Under Theorem X.9.5c.2, a compatible family of local retained theorems promotes to a theorem about the descended, possibly twisted, global response object when its transition data satisfy the cocycle equation. The equality $[g_{\mathrm{br}}]=[1]$ is required only when the claimed conclusion needs one untwisted global representative. A failure of the cocycle equation, or an independently specified anomaly class that obstructs a required trivialization, must instead be rejected or filled by an accepted response-active defect under Definition X.9.5e.
+
+*Proof.* The first two statements are Theorem X.9.5c.2. Data that fail (X.9.5.7) are not descent data, so effective descent cannot be invoked. For an independently declared obstruction to a required trivialization, Definition X.9.5e supplies exactly the registered defect-filling equation. ∎
 
 ### X.9.5d Higher-Form Predictive Ledger
+
 
 **Definition X.9.5d.1 (Higher-Form Ledger Complex).** Let $\mathcal U$ be a finite operational cover whose nerve carries oriented cellular chains $C_q(\mathcal U;\mathbb Z)$. A $q$-dimensional protocol operator is a finite assignment
 $$
@@ -3481,17 +3487,11 @@ A class is boundary-active when its pairing with at least one admissible boundar
 
 2. A declared exact $q$-form label whose class has no action on any admissible local, boundary, or interface $q$-dimensional protocol operator is PCE-null and is quotiented out.
 
-3. A gauged, boundary-active, or interface-active $q$-form ledger class is retained exactly when its obstruction class satisfies the same exactness condition as Theorem X.9.5b on the relevant absolute or relative complex.
+3. A boundary-active class is retained when it is genuine cocycle data admitting effective descent. If it is asserted to be an exact redundancy, or if the claimed object requires a specified lift or trivialization, the corresponding obstruction must be trivial, response-null, or filled by accepted inflow.
 
-4. For $q=0$, this reduces to the ordinary no-exact-operational-global-symmetry rule of Corollary G.8.4h.3 and the obstruction-exactness classification of Theorem X.9.5b.
+4. For $q=0$, this reduces to the ordinary no-exact-operational-global-symmetry rule of Corollary G.8.4h.3 together with the typed obstruction classification of Theorem X.9.5b.
 
-*Proof.* Item 1 follows because the coboundary $\delta$ is the Cech coboundary of (X.9.5.1) with coefficients in the sheaf $\mathcal F_{\varepsilon}^{(q)}$, so the same cancellation proof gives $\delta^2=0$.
-
-For item 2, if the label acts on no admissible $q$-dimensional protocol operator, then inserting or removing it leaves every protocol-response distribution unchanged. By Definition X.9.1 such descriptions are MPU-equivalent. Since the label has positive description cost and zero predictive benefit, Proposition X.9.3 and Corollary G.8.4h.3 remove it by PCE.
-
-For item 3, a gauged or boundary-active class changes at least one admissible protocol response or supplies required boundary gluing data. It therefore cannot be removed as operationally null. Its consistency is exactly the question whether its local ledger representatives glue across the cover or are compensated by a relative boundary term. Theorem X.9.5b proves that this condition is exactness of the corresponding absolute or relative cohomology class.
-
-For item 4, when $q=0$, the protocol operators are local operators and the ledger class is an ordinary symmetry, anomaly, or boundary-transition class. The statement is then precisely Corollary G.8.4h.3 together with Theorem X.9.5b. ∎
+*Proof.* The Cech coboundary with coefficients in the abelian sheaf $\mathcal F_{\varepsilon}^{(q)}$ satisfies $\delta^2=0$, proving item 1. For item 2, a label acting on no admissible extended protocol changes no response distribution; PPI identifies it and PCE removes any positive-cost surplus representative. For item 3, nonzero active cocycle data may encode physical curvature, holonomy, or an unbroken center class. Exactness is required only for the separately declared anomaly, redundancy, lift, or trivialization obstruction. Item 4 is the $q=0$ specialization. ∎
 
 **Definition X.9.5d.3 (Electric Center Ledger Confinement Datum).** A finite electric center ledger confinement datum is a tuple
 $$
@@ -3570,14 +3570,14 @@ $$
 $$
 Because $\ell_{\mathrm{scr}}>0$, the exponential term tends to zero, and the certificate assumes $\mathcal R_{\mathrm{conf}}(L)\to0$. The squeeze theorem gives (X.9.5d.7.1). The inequality permits a positive value at every finite $L$, so finite-distance nullity does not follow. ∎
 
-**Definition X.9.5e (Finite Defect-Filling Datum).** A finite defect-filling datum for a nonzero response obstruction class is a tuple
+**Definition X.9.5e (Finite Defect-Filling Datum).** A finite defect-filling datum applies to an independently declared abelian obstruction class that prevents a cocycle condition or a separately required lift or global trivialization. A nontrivial transition class of genuine nonabelian descent data is not by itself such an obstruction: Theorem X.9.5c.2 instead gives a possibly twisted global object. For an obstruction in the stated sense, a finite defect-filling datum is a tuple
 $$
 \mathfrak D_{\mathrm{fill}}
 =
 (H_{\mathrm{obs}},[\omega],\mathcal D_{\mathrm{act}},\partial,\otimes,\mathbf 1,C_{\mathrm{def}},\sim_{\mathrm{resp}})
 \tag{X.9.5.10}
 $$
-where $H_{\mathrm{obs}}$ is the finite obstruction group or semigroup containing $[\omega]$, $\mathcal D_{\mathrm{act}}$ is the finite set of response-active operational defects, $\partial:\mathcal D_{\mathrm{act}}\to H_{\mathrm{obs}}$ is the boundary/inflow map, $\otimes$ is the finite fusion product with unit $\mathbf 1$, $C_{\mathrm{def}}$ is the PCE defect cost, and $\sim_{\mathrm{resp}}$ is response equivalence. The datum is accepted only when
+where $H_{\mathrm{obs}}$ is a finite abelian obstruction group containing $[\omega]$, $\mathcal D_{\mathrm{act}}$ is the finite set of response-active operational defects, $\partial:\mathcal D_{\mathrm{act}}\to H_{\mathrm{obs}}$ is the boundary/inflow map, $\otimes$ is an associative finite fusion product with unit $\mathbf 1$, $C_{\mathrm{def}}$ is the PCE defect cost, and $\sim_{\mathrm{resp}}$ is response equivalence. The datum is accepted only when
 $$
 \partial(D_1\otimes D_2)
 =
@@ -3593,14 +3593,15 @@ $$
 \tag{X.9.5.12}
 $$
 
-**Theorem X.9.5e.1 (Cobordism and Non-Invertible Defect Completion).** Let $[\omega]$ be represented in a finite PU obstruction complex. For the zero-class case, assume the effective-descent-stack and separatedness hypotheses of Theorem X.9.5c.2. A branch containing $[\omega]$ is theorem-admissible under exactly one of the following registered alternatives:
+**Theorem X.9.5e.1 (Descent, Cobordism, and Non-Invertible Defect Completion).** Distinguish a genuine transition class $[g]$ in the pointed set of Theorem X.9.5c.2 from an independently declared abelian obstruction class $[\omega]\in H_{\mathrm{obs}}$ of Definition X.9.5e. For genuine cocycle descent data, assume the effective-descent-stack and separatedness hypotheses. A branch is theorem-admissible under one of the following registered alternatives:
 
-1. $[\omega]=0$ and ordinary descent closes the branch;
-2. $[\omega]\ne0$ is response-null and is quotiented by $\sim_{\mathrm{resp}}$; or
-3. an accepted defect-filling datum supplies $D\in\mathcal D_{\mathrm{act}}$ with $[\omega]+\partial D=0$.
+1. $[g]$ is the transition class of a genuine cocycle descent datum, so effective descent gives a global object, possibly twisted; $[g]=[1]$ is additionally required exactly when the claimed conclusion requires an untwisted global representative;
+2. $[\omega]$ is an obstruction in the sense of Definition X.9.5e but is response-null and is quotiented by $\sim_{\mathrm{resp}}$; or
+3. $[\omega]$ is a response-active obstruction in the sense of Definition X.9.5e and an accepted defect-filling datum supplies $D\in\mathcal D_{\mathrm{act}}$ with $[\omega]+\partial D=0$.
 
 If several filling defects exist and the feasible response-class set has an attained unique minimum of $C_{\mathrm{def}}$, define
 $$
+
 \mathcal D([\omega])
 :=
 \operatorname*{argmin}_{D\in\mathcal D_{\mathrm{act}}:
@@ -3611,11 +3612,12 @@ C_{\mathrm{def}}(D)
 $$
 Non-invertible defects are admitted by the same rule when they possess a finite fusion law, a boundary map, and non-null protocol response.
 
-*Proof.* If $[\omega]=0$, ordinary descent closes the branch by Theorem X.9.5c.2. If $[\omega]$ is response-null, PPI identifies all representatives differing by it, so quotienting removes no observable response. If a response-active obstruction remains, exactness of the total obstruction is restored precisely by a defect whose boundary satisfies the cancellation equation (X.9.5.12). Additivity (X.9.5.11) makes fusion compatible with obstruction addition, so non-invertible fusion defects obey the same exactness law even without inverses for individual objects. PCE then forbids an arbitrary choice among fillings and selects the unique least-cost response class when it exists. If none of the three cases holds, the branch contains an unfilled response-active inconsistency and is not theorem-admissible. ∎
+*Proof.* The first alternative is Theorem X.9.5c.2: every genuine cocycle datum descends under effectiveness, while equality of its pointed transition class with $[1]$ is equivalent only to global trivializability. If an actual obstruction is response-null, PPI identifies all representatives differing by it, so quotienting removes no observable response. If a response-active obstruction remains, exactness of the total obstruction is restored precisely by a defect whose boundary satisfies the cancellation equation (X.9.5.12). Additivity (X.9.5.11) makes fusion compatible with obstruction addition, so non-invertible fusion defects obey the same exactness law even without inverses for individual objects. PCE selects the unique least-cost response class only when the feasible filling set has an attained unique minimum. If none of the three cases holds, the branch contains an unfilled response-active inconsistency and is not theorem-admissible. ∎
 
-**Corollary X.9.5e.2 (No Surplus Symmetry or Unfilled Anomaly).** In PU, a declared exact redundancy must have zero total obstruction after quotienting response-null classes and after including accepted defect inflow. Any nonzero unfilled response-active obstruction is not a hidden symmetry or harmless global label; it is either a physical defect channel selected by Theorem X.9.5e.1 or a rejected branch.
+**Corollary X.9.5e.2 (No Surplus Symmetry or Unfilled Anomaly).** In PU, a declared exact redundancy must have zero total obstruction after quotienting response-null classes and after including accepted defect inflow. A nonzero genuine transition class may label a twisted global object and is not thereby an anomaly. Any nonzero unfilled response-active obstruction in the sense of Definition X.9.5e is either completed by a physical defect channel under Theorem X.9.5e.1 or the branch is rejected.
 
 *Proof.* This is the contrapositive of the admissibility criterion in Theorem X.9.5e.1. ∎
+
 
 **Definition X.9.5f (Finite Response Differential Characters).** Let $C_\bullet^B$ be the finite protocol cell complex of a retained budget $B$, with integer chains, real cochains, and the response-null quotient already imposed on cycle evaluations. A degree-$n$ response differential character is a pair
 $$
@@ -3660,28 +3662,16 @@ Z^n_{\mathbb Z,\mathrm{PU}}(C_\bullet^B;\mathbb R)
 0.
 \tag{X.9.5f.2}
 $$
-Consequently, every retained holonomy-type response label satisfying a finite curvature/descent law is represented in one finite object:
+Consequently:
 
-1. flat torsion or finite frameness labels lie in the left term of (X.9.5f.2);
-2. gauge curvature, calibration curvature, perspective curvature, Clausius defects, and local anomaly-polynomial shadows lie in the curvature image;
-3. Chern-Simons, anomaly-inflow, horizon, interface, and higher-form protocol charges are relative or higher-degree characters on the same finite complex;
-4. a declared redundancy is admissible only when its differential-character class is zero after quotienting response-null characters and adding accepted defect or boundary inflow as in Theorem X.9.5e.1.
+1. flat torsion or finite frameness labels lie in the left term;
+2. gauge, calibration, and perspective curvature, Clausius defects, and local anomaly-polynomial shadows lie in the curvature image;
+3. Chern--Simons, anomaly-inflow, horizon, interface, and higher-form protocol charges are relative or higher-degree characters on the same finite complex;
+4. a declared exact redundancy is admissible only when its anomaly or required-trivialization obstruction is canceled after quotienting response-null characters and adding accepted defect or boundary inflow. Nonzero differential characters may remain as physical curvature or holonomy.
 
-Thus the finite obstruction rule of Theorem X.9.5b can be read equivalently as a differential-character exactness test: a class must vanish, be response-null, or be filled by an accepted response-active defect. No fundamental gauge, gravity, or horizon Hilbert sector is added by this reformulation.
+Thus the exactness test is typed: cocycle failure or an obstruction to a declared redundancy or required trivialization must vanish, be response-null, or be filled by an accepted response-active defect. A genuine transition, curvature, or holonomy character need not vanish.
 
-*Proof.* The curvature map sends $(\chi,\omega)$ to $\omega$. If $\omega=0$, Equation (X.9.5f.1) gives $\chi(\partial a)=0$ for every $n$-chain $a$, so $\chi$ factors through
-$$
-H_{n-1}(C_\bullet^B)=Z_{n-1}(C_\bullet^B)/B_{n-1}(C_\bullet^B).
-$$
-Thus the kernel is $\operatorname{Hom}(H_{n-1},\mathbb R/\mathbb Z)=H^{n-1}(C_\bullet^B;\mathbb R/\mathbb Z)$.
-
-For surjectivity, let $\omega$ be a closed cochain with integral periods. Define a homomorphism on the boundary subgroup by
-$$
-\varphi(\partial a):=\langle\omega,a\rangle\quad\mathrm{mod}\ \mathbb Z.
-$$
-If $\partial a=\partial a'$, then $a-a'$ is an $n$-cycle, and integrality gives $\langle\omega,a-a'\rangle\in\mathbb Z$; hence $\varphi$ is well-defined. Apply Smith normal form to the inclusion $B_{n-1}\subseteq Z_{n-1}$. There are bases in which $B_{n-1}$ is generated by $d_1e_1,\ldots,d_re_r$. Because multiplication by every positive integer is surjective on $\mathbb R/\mathbb Z$, choose $x_i$ with $d_ix_i=\varphi(d_ie_i)$ and assign arbitrary values to the remaining basis elements. This extends $\varphi$ to a homomorphism $\chi:Z_{n-1}\to\mathbb R/\mathbb Z$. Then $(\chi,\omega)$ satisfies (X.9.5f.1), proving surjectivity.
-
-Two extensions with the same curvature differ by a homomorphism vanishing on boundaries, hence by the left-hand cohomology term. This proves exactness. Items 1–3 are the corresponding degree assignments, and item 4 is Theorem X.9.5e.1 applied after the response-null quotient. ∎
+*Proof.* The curvature map sends $(\chi,\omega)$ to $\omega$. If $\omega=0$, Equation (X.9.5f.1) makes $\chi$ factor through $H_{n-1}(C_\bullet^B)$, so the kernel is $H^{n-1}(C_\bullet^B;\mathbb R/\mathbb Z)$. Conversely, for a closed $\omega$ with integral periods, define $\varphi(\partial a)=\langle\omega,a\rangle$ modulo $\mathbb Z$. Integrality makes this well-defined. Smith normal form and divisibility of $\mathbb R/\mathbb Z$ extend $\varphi$ to a character $\chi$ on cycles, proving surjectivity. Two extensions with the same curvature differ by the left-hand cohomology term. Items 1--3 are the corresponding degree assignments, and item 4 applies Theorem X.9.5e.1 only to the typed anomaly or trivialization obstruction. ∎
 
 ### X.9.6 Master Predictive Operator
 
@@ -3721,7 +3711,10 @@ $$
 $$
 This operator is the master predictive operator of the datum.
 
+**Scope (Datum-Relative Uniqueness).** The uniqueness in Definition X.9.6a is relative to the supplied closed predictive Dirichlet datum, in particular its quadratic form $\mathscr Q_{\mathrm{PU}}$ and common form domain $\mathcal D_{\mathrm{PU}}$. It does not assert that the preceding PU axioms select a unique admissible datum $\mathfrak D_{\mathrm{PU}}$. Two admissible data with response-distinct forms, domains, or sector projections are distinct branches unless an accepted strict certificate or an all-completions response-equivalence theorem identifies them.
+
 **Theorem X.9.6b (Projection Theorem for Response, RG, Perspective Transport, and PCE Flow).** Assume the regular finite-mode branch in which the quadratic effective action, Wetterich regulator sector, Appendix M perspective diffusion form, and Appendix D PCE adaptation form are represented by restrictions of one closed predictive Dirichlet datum $\mathfrak D_{\mathrm{PU}}$. Require that every retained summand reduces $\mathfrak L_{\mathrm{PU}}$, that its form and operator domains are invariant under the corresponding orthogonal projection, and that each restricted perspective form is Dirichlet. Require also that $\Pi_{\mathrm{RG}}\mathfrak L_{\mathrm{PU}}\Pi_{\mathrm{RG}}^*+R_k$ is boundedly invertible and that its inverse times $\partial_kR_k$ has a defined supertrace. Finally, assume that the PCE restricted form is the response metric used in the Appendix D natural-gradient equation. Then:
+
 
 1. The field response Hessian is the field form-compression of the master operator:
 $$

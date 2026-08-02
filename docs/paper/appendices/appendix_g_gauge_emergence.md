@@ -850,10 +850,11 @@ $$
 S_{\text{field}}[A] = \int d^{D}x\,\sqrt{-g}\;\left(-\frac{1}{4\kappa_F} F_{\mu\nu}(x)F^{\mu\nu}(x)\right)
 \quad \text{(G.5.2)}
 $$
-(using D=4 for spacetime dimension). Define $A_{\mu,\mathrm{can}}:=A_\mu/\sqrt{\kappa_F}$ and $q_{\mathrm{can}}:=q\sqrt{\kappa_F}$. Then $qA_\mu=q_{\mathrm{can}}A_{\mu,\mathrm{can}}$ and the kinetic term becomes the standard dimensionless form for the Maxwell action:
+(specializing to the separately certified $3+1$ spacetime-promotion branch). Define $A_{\mu,\mathrm{can}}:=A_\mu/\sqrt{\kappa_F}$ and $q_{\mathrm{can}}:=q\sqrt{\kappa_F}$. Then $qA_\mu=q_{\mathrm{can}}A_{\mu,\mathrm{can}}$ and the kinetic term becomes the standard dimensionless form for the Maxwell action:
  $$
 S_{\text{field}}[A] = \int d^{4}x\,\sqrt{-g}\;\left(-\frac{1}{4} F_{\mu\nu}(x)F^{\mu\nu}(x)\right)
 \quad \text{(G.5.3)}
+
  $$
 Minimizing this action with respect to variations in $A_\nu$ ($\delta S_{field} / \delta A_\nu = 0$) yields the source-free Maxwell equations in curved spacetime: $\nabla_{\mu}F^{\mu\nu} = 0$ (where $\nabla_\mu$ is the metric-compatible covariant derivative). This represents the simplest, most resource-efficient dynamics for the emergent connection field, strongly favored by PCE as it minimizes unnecessary field energy contributions to $V(x)$.
 
@@ -1173,9 +1174,10 @@ The conditional $U(1)$ realization uses the following branch ledger:
 
 On the registered phase-character branch of Appendix Q, invariance under integer phase updates together with finite-resolution continuity gives an effective $U(1)$ closure. An edge-local $U(1)$ transporter is an admissible extensive representation of local phase coherence and is cheaper than the specified all-pairs phase table. The leading Maxwell and minimal-coupling description additionally assumes the local Lorentz-covariant, differentiable, two-derivative effective-action branch and the quadratic leading-order cost of Assumption G.3.3. This construction establishes a conditional $U(1)$ gauge realization; it does not exclude every other extensive local representation or every higher-derivative gauge-invariant action.
 
-## G.8 The Standard Model Gauge Group and Spacetime Dimension D=4 as a Unified PCE-Optimal Structure
+## G.8 Conditional Gauge, Matter, and Four-Dimensional Spacetime Compatibility
 
 ### G.8.1 Introduction and Objective: Conditional Co-selection Problem
+
 
 This section studies three branch-qualified selection problems. The gauge-algebra result is relative to the determinant-compatible finite-response block-frame/interface family declared in Section G.8.4. The chiral-matter result is relative to the finite representation, response, Higgs-slot, and anomaly-descent records declared in Sections G.8.4c–G.8.5. The dimensional result imports the independent channel-complete Bures tangent-cell mode-matching contract of Appendix Z.
 
@@ -1322,18 +1324,20 @@ PCE co‑selects $G$, $\{\psi\}$, and $D$ to ensure $V_{\text{anom}}=0$. Global-
 
 The existence of stable, complex, bound MPU aggregates ($C_{agg}\gg C_{op}$) is essential for generating significant predictive benefit ($V_{benefit}$). The stability of such structures (e.g., “atoms,” “planetary systems,” “galaxies” in the MPU‑network sense) depends critically on the long‑range behavior of fundamental forces, which is D‑sensitive.
 
-*   For unscreened massless force carriers (like those associated with $U(1)$ gauge fields or gravity), the classical potential in D‑dimensional spacetime scales as $1/r^{D-3}$ for $D>3$ and $\ln r$ for $D=3$ (corresponding to $D_{\text{space}}=D-1$ spatial dimensions). Stable, closed, non‑circular orbits under attractive central forces are robustly supported for an inverse‑square force law ($F\propto 1/r^2$, potential $\propto 1/r$), corresponding to $D_{\text{space}}=3$, i.e., $D=4$ spacetime dimensions [Bertrand, 1873].
-*   Higher spatial dimensions ($D_{\text{space}}>3$, i.e., $D>4$) tend towards unstable orbits for such potentials, making the formation and persistence of complex, gravitationally or electrodynamically bound MPU aggregates highly problematic. Lower spatial dimensions ($D_{\text{space}}<3$) can be too restrictive for the topological complexity and degrees of freedom needed for rich aggregate structures.
+*   For an assumed unscreened massless-force law in $D$-dimensional spacetime, the classical potential scales as $1/r^{D-3}$ for $D>3$ and as $\ln r$ for $D=3$. The inverse-square case occurs for three spatial dimensions and is compatible with the closed-orbit criterion of Bertrand's theorem. This is a viability comparison inside the modeled spacetime class, not a derivation of $D=4$ or a substitute for the Appendix Z carrier theorem and the separate spacetime-promotion certificates [Bertrand, 1873].
+*   For the assumed central potential, the effective radial potential has no strict stable circular minimum when $D_{\text{space}}\ge4$ (the four-spatial-dimensional case is marginal and higher dimensions are unstable). This is a classical obstruction within the declared unscreened central-force model. No converse exclusion is proved for $D_{\text{space}}\le2$; any claim that lower dimensions lack sufficient topology or degrees of freedom is an additional viability premise that must be encoded and tested in $\eta_{\rm ben}(D)$ or the registered penalty.
 *   A universe unable to form stable complex structures incurs a catastrophic loss of $V_{benefit}$ (as these structures are the primary engines of advanced prediction) and is thus strongly disfavored by PCE. It is a core hypothesis of this co‑selection argument that PCE robustly translates these D‑sensitive stability issues into highly unfavorable D‑dependent coefficients within the PCE potential model (Equation G.8.5), for instance, by yielding a significantly lower benefit coefficient $\eta_{ben}(D)$ or imposing high effective penalty terms for dimensions $D\neq 4$ that fail to support such stable complexity.
+
 
 #### G.8.2.5 Information‑Theoretic and Network Efficiency (D‑Sensitive)
 
 The MPU network’s efficiency under PCE depends on D‑sensitive information‑theoretic properties.
 
-*   **Holographic Efficiency:** The horizon‑entropy area law $S=\mathcal A/(4G)$ holds in the emergent D=4 spacetime. The efficiency of bulk–boundary information encoding (related to how much complexity $C_P$ can be supported within a volume relative to its boundary information capacity) may be optimal in D=4. Other dimensions might lead to less favorable scaling or consistency issues between bulk degrees of freedom and boundary information limits.
-*   **Network Propagation and Coherence ($V_{prop}$):** Costs of information propagation, maintaining coherence, and error correction (achieving $p_{err}^*$ in App. A.0) are D‑sensitive. For instance, the nature of random walks (fundamental to information diffusion and error propagation) changes qualitatively: they are recurrent in $D_{\text{space}}\le 2$ but transient in $D_{\text{space}}\ge 3$. D=4 ($D_{\text{space}}=3$) may offer an optimal trade‑off between network connectivity, path‑length scaling, and the stability of information propagation against noise for achieving robust, large‑scale predictive coherence. It is further hypothesized that PCE favors dimensions where these D‑sensitive network efficiencies (which would contribute to minimizing cost coefficients like $\lambda_c(D)$ or maximizing benefit coefficients like effective $\eta_{ben}(D)$ in Equation G.8.5) are optimized, with D=4 emerging as a strong candidate under such comprehensive optimization.
+*   **Holographic Efficiency:** On a separately certified $3+1$ spacetime and horizon-thermodynamic branch, the entropy-area law gives a bulk-boundary scaling comparison. No theorem in this section proves that this efficiency is optimized uniquely at $D=4$ or promotes the Euclidean response carrier to physical spacetime.
+*   **Network Propagation and Coherence ($V_{prop}$):** Recurrence and transience of random walks change with spatial dimension, so a declared propagation-cost model may compare dimensions. Any claimed optimum depends on explicitly supplied coefficients and admissible competitors in Equation G.8.5; it is a modeled viability test, not an independent theorem selecting $D=4$.
 
 ### G.8.3 A Model for the PCE Potential of the Gauge Sector (in a given D)
+
 
 For a fixed dimension $D$, consistent with the approach outlined in Section 6.7 regarding the use of minimal phenomenological models for tractability, we model the net PCE potential contribution per MPU, $V_{net}(G,{\psi},D)/N$, for a candidate gauge group $G=\prod_i G_i$ (a product of simple compact Lie groups and $U(1)$ factors) and its fermion content ${\psi}$. This contribution is a component of the global PCE potential $V(x)$ (Definition D.1). The terms included in this model are motivated by their fundamental role in the operation and consistency of a predictive network supporting gauge symmetries, as dictated by PCE:
 
@@ -2012,7 +2016,7 @@ For matter packages, Theorem X.8d and Theorem X.8d.3 require vanishing of every 
 *Proof.* Such $X,Y$ bosons correspond to additional generators beyond the twelve generators of $\mathfrak g_{\mathrm{SM}}$ [Georgi & Glashow 1974; Langacker 1981]. The certified bound $n_G\le12$ and saturation by $\mathfrak g_{\mathrm{SM}}$ exclude those additional generators. This argument does not classify massive vector matter, higher-dimensional baryon-violating operators, or other non-GUT mechanisms. ∎
 
 
-**Remark G.8.4c.3: Experimental Status.** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. The framework predicts continued null results in searches for gauge-mediated proton decay modes.
+**Remark G.8.4c.3: Experimental Status.** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. On the saturated certified branch, PU predicts continued null results only for proton-decay modes mediated by the excluded $X,Y$ generators of a larger unified gauge algebra; Corollary G.8.4c.2 does not exclude other baryon-violating mechanisms.
 
 
 **Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal block-frame module split is fixed. Theorem G.8.4b derives the unique PCE-selected block-frame decomposition
@@ -2855,17 +2859,18 @@ If a defect is response-null, then every admissible local protocol has the same 
 
 For item 4, impose the stated coefficient hypothesis: overlap comparisons take values in the abelian sheaf $\mathcal Z$ of central unitary natural automorphisms. On triple overlaps, the failure of the comparisons to satisfy the module associativity relation is a $2$-cochain $\omega_{\mathsf{Def}}$. The pentagon identity gives the Cech cocycle condition $\delta\omega_{\mathsf{Def}}=1$. Replacing the overlap comparisons by a $1$-cochain $b$ changes the mismatch to $\omega_{\mathsf{Def}}\delta b$. Hence a choice with zero mismatch exists exactly when $\omega_{\mathsf{Def}}$ is a coboundary, equivalently when $[\omega_{\mathsf{Def}}]=0$. This proves the conditional module-descent statement. ∎
 
-### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
+### G.8.5 Conditional Common-Branch Gauge, Matter, and Family Selection
 
-The PU framework provides a dependency-locked co-selection theorem on the intersection of its registered branches. The channel-complete Bures tangent-cell contract selects $D=4$; the positive-marginal capacity-saturating block-frame branch selects the Standard Model gauge algebra; and the anomaly, matter/EWSB, and family certificates below select their stated packages. The combined conclusion follows when these records are accepted on one overlap-audited branch, rather than from an unspecified global PCE potential.
+The PU framework provides a dependency-locked co-selection theorem on the intersection of its registered branches. The channel-complete Bures tangent-cell contract selects $D_{\rm car}=4$; the positive-marginal capacity-saturating block-frame branch selects the Standard Model gauge algebra; and the anomaly, matter/EWSB, and family certificates below select their stated packages. The combined conclusion follows when these records are accepted on one overlap-audited branch, rather than from an unspecified global PCE potential.
 
-1.  **Primacy of $D=4$ for Structural Stability and Information Efficiency:**
+1.  **Euclidean response-carrier input and physical-promotion gate:**
     The equalities $M=2ab=24=\dim_{\mathbb R}\operatorname{Gr}(2,8)$ and $K(4)=24$ provide the internal/geometric compatibility check. The selection theorem is the separate Appendix Z faithful Bures tangent-shell contract: Theorem Z.10 gives $24\le K(D)$, $K(3)=12$ excludes lower dimensions, the regular $24$-cell proves feasibility in four, and Definition Z.9a's strict surplus-dimension cost makes $D=4$ the unique least-feasible choice.
 
-2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
-    On the common $D=4$, positive-marginal capacity, full-block response, anomaly-cancellation, and matter-certificate branch, the following finite comparisons select the retained gauge and matter data.
+2.  **Conditional selection of $G_{SM}$, hypercharge, and family count on the common certified branch:**
+    On one common branch carrying (i) the $D_{\rm car}=4$ carrier certificate, (ii) an accepted Lorentzian promotion to $D_{\rm st}=4$ with the chiral matter complex and anomaly operator defined on that same base, and (iii) the positive-marginal capacity, full-block response, anomaly-cancellation, and matter certificates, the following finite comparisons select the retained gauge and matter data.
     *   **Gauge algebra $\mathfrak g_{SM}$.** By the finite syndrome normal form and exhaustive partition analysis (Lemma G.8.4a.1, Theorem G.8.4b, Corollary G.8.4c), the decomposition $\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$ is uniquely selected in the positive-marginal capacity-saturating block-frame branch. The non-abelian part contributes $\mathfrak{su}(3)\oplus\mathfrak{su}(2)$ with dimension $8+3=11$. The PU Lagrangian capacity bound on jointly estimable generators (Theorem G.8.2e; Eq. G.8.0) leaves exactly one retained abelian response direction, since $12-11=1$. Thus the retained gauge algebra is $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ (Proposition G.M1; Corollary G.8.4c). Simple unification groups are excluded by the same capacity bounds (Theorem G.8.4a, Corollary G.8.4c.1). The total generator count $n_G=12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k=12$ only after the predictive-recovery self-dual-rate gate (Theorem Z.13). The tree-level Weinberg angle $\sin^2\theta_W^{(0)}=3/8$ emerges from PCE isotropy at the PU fixed point without requiring grand unified gauge symmetry; the value $3/8$ coincides with the standard tree-level $SU(5)$ unification prediction [de Boer 1994] (Appendix T, Theorem T.14).
     *   **Minimal chiral anomaly package and hypercharge uniqueness.** Gauge redundancy is a finite-response quotient; therefore a quantum anomaly in the declared gauge redundancy is not admissible, because it would make two gauge-identified histories assign different finite response phases.
+
 
        **Theorem G.8.5a (Minimal-Support One-Family Chiral Anomaly Package).** In the $D=4$ chiral-continuum branch with gauge algebra
        $$
@@ -3209,10 +3214,11 @@ The PU framework provides a dependency-locked co-selection theorem on the inters
 **Homogeneous Casimir spectral certificate.** Electroweak or homogeneous spectral entries are promoted only under the finite certificate $\mathfrak C_{\mathrm{Cas}}$. The certificate fixes the homogeneous space and metric, the isotropy bundles and sector operators, the branching tables and multiplicities up to cutoff, the Casimir shifts, the parity or Golay marking used to label sectors, the $\mathrm{MS2}_{\mu_G}$ finite-part convention, the residual tail estimate, and a forward-lock stating that these choices are fixed before comparison with measured masses or couplings.
 
     *   **Minimal-branch singlet scope.** In Theorems G.8.5a and G.8.1b, an added sterile field is gauge-null by the declared candidate class. Giving it nonzero hypercharge changes the abelian anomaly equations and requires compensating charged content or a separately registered response channel; that is a different branch. Thus neutrality follows for the sterile slot in this minimal anomaly/Yukawa class, not from a universal claim that every charged singlet lacks predictive response.
-    *   **Three Generations (Unique Minimizer).** Appendix R shows that, in the modeled family-charge sector, the smallest nontrivial anomaly-consistent family structure compatible with CP violation is $N=3$ with offsets $\{a,-a,0\}$ (Theorem R.3.4), and Proposition R.3.5.1a realizes this count exactly on the pre-flavor family-redundancy PPI branch. Proposition R.4.2 adds that the $D_4$ triality orbit, $E_8$/Leech scaffold, and $M=24=8\times 3$ structure are compatible with this count, but they do not provide an independent derivation.
+    *   **Conditional Family-Count Minimizer in the Declared Class.** Appendix R shows that, in the modeled family-charge sector, the smallest nontrivial anomaly-consistent family structure compatible with CP violation is $N=3$ with offsets $\{a,-a,0\}$ (Theorem R.3.4), and Proposition R.3.5.1a realizes this count exactly on the pre-flavor family-redundancy PPI branch. Proposition R.4.2 adds that the $D_4$ triality orbit, $E_8$/Leech scaffold, and $M=24=8\times 3$ structure are compatible with this count, but they do not provide an independent derivation.
 
 3.  **Confluence and Co-selection:**
     On the channel-complete mode-matching branch, $D=4$ supplies the dimensional arena. Within the determinant-compatible finite-response block-frame family, the capacity-saturating algebra is $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$. The Standard Model chiral package is selected only in the one-seed fundamental-representation and anomaly/response class stated in Sections G.8.4c–G.8.5, and $N=3$ is the smallest CP-capable solution in the modeled family-charge class. The bound $n_G\le12$ excludes the enumerated simple gauge-mediated unification branches; it implies no proton decay through those excluded gauge bosons but does not exclude every baryon-number-violating mechanism.
+
     
 ### G.8.6 Emergent Couplings and Masses
 
@@ -3729,9 +3735,10 @@ This is an exact algebraic identity between an algebraic mass-dimension normaliz
 
 ### G.8.7 Mode-Polarization Correspondence
 
-**Definition G.8.7a (Gauge Polarization Space).** In $D = 4$ spacetime, each massless gauge boson has $n_{\mathrm{pol}} = D - 2 = 2$ transverse polarizations. The total gauge polarization space has dimension:
+**Definition G.8.7a (Gauge Polarization Space).** On the separately certified $3+1$ Lorentzian spacetime-promotion branch, each massless gauge boson has $n_{\mathrm{pol}}=D-2=2$ transverse polarizations. The total gauge polarization space has dimension:
 
 $$\dim(\mathcal{P}_{24}) = \dim(\mathfrak{g}_{\mathrm{SM}}) \times n_{\mathrm{pol}} = 12 \times 2 = 24$$
+
 
 **Theorem G.8.7b (Mode-Polarization Isometries after Registered Frame Choices).** Let $\mathcal M_{24}$ be the 24-dimensional QFI-active interface-mode space and let $\mathcal P_{24}=\mathfrak g_{\mathrm{SM}}\otimes\mathbb R^2$ be the 24-dimensional gauge-polarization space. After choosing
 

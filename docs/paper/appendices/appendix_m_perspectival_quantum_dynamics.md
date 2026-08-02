@@ -2,21 +2,21 @@
 
 ## M.1 Introduction
 
-This appendix provides a detailed mathematical formalism for the concepts of the Perspectival State ($S_{(s)}(t)$, Definition 24) and the 'Evolve' dynamics (Definition 27) introduced in Section 7. The purpose is to enhance the formal precision and mathematical rigor of the description of quantum states and the interaction ('Evolve'/measurement) process presented in Sections 7 and 8, demonstrating consistency with established mathematical structures and resolving long-standing foundational puzzles in quantum mechanics.
+This appendix gives a mathematical formalism for the Perspectival State ($S_{(s)}(t)$, Definition 24) and the registered `Evolve` instruments of Definition 27. It constructs a conditional perspective-update model, proves its stated finite-dimensional properties, analyzes Wigner's-Friend-type records, and isolates a certificate-scoped obstruction to one cross-perspective import. It does not claim a proof of every extended Wigner's-Friend protocol.
 
 We use POP, PCE, the MPU of Definition 23, the full-context response closure of Principle 5b, the invariant SPAP response ledger of Principle 11b, and the quantum closure of Principles 8.0b–8.0c and Theorem 8.0d. Theorem 8.0d supplies $\mathcal H_0\cong\mathbb C^8$, the Born trace law, and a normalized quantum instrument for every registered verification; Principle 8.0c supplies the single retained outcome of each registered run. This appendix develops the remaining perspective dynamics of those registered instruments; its kernels do not re-postulate the carrier, Born weights, or actualization law.
 
 The appendix is organized as follows:
 
-- **Section M.2** formalizes the Perspectival State $S_{(s)}(t) = (|\psi(t)\rangle, s)$, establishing the Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ as the complete flag manifold equipped with a natural Riemannian metric.
+- **Section M.2** formalizes the Perspectival State $S_{(s)}(t)=(\rho(t),s)$, with pure vectors as a special case, and equips the complete-flag Perspective Space $\Sigma\cong U(d_0)/U(1)^{d_0}$ with its declared Riemannian metric.
 
-- **Section M.3** develops the Dual Dynamics formalism, decomposing measurement into Born actualization together with a conditional perspective transition kernel $G_{\text{persp}}(s'|s, k, N, \Delta t)$, and then exhibiting an explicit drift-diffusion realization on $\Sigma$ whose constructed class satisfies the stated normalization and Wasserstein-contractivity properties.
+- **Section M.3** decomposes a registered quantum instrument from the conditional perspective kernel $G_{\text{persp}}(s'|s,k,N,\Delta t)$ and gives an explicit drift-diffusion realization on $\Sigma$.
 
-- **Section M.4** applies this formalism to the quantum measurement process, demonstrating how definite outcomes emerge through the 'Evolve' dynamics without invoking wavefunction collapse as a separate postulate.
+- **Section M.4** applies that conditional instrument model to measurement records. The Born selector and single-run actualization remain inputs from the cited quantum branch rather than consequences of perspective diffusion.
 
-- **Section M.5** addresses the mathematical consistency of the framework, confirming compatibility with standard mathematical structures (Hilbert spaces, homogeneous spaces, Markov kernels).
+- **Section M.5** records compatibility with finite-dimensional operator algebras, homogeneous spaces, and Markov kernels; it is not a consistency proof for the full physical theory.
 
-- **Section M.6** demonstrates the explanatory power of the perspectival formalism by resolving the Wigner's Friend paradox and the Frauchiger-Renner extension. The resolution proceeds by recognizing that actuality is indexed by perspective: both Friend and Wigner provide correct descriptions relative to their respective perspectives, with consistency emerging dynamically upon interaction through the kernel $G_{\text{persp}}$. This section establishes the structural correspondence between the perspectival resolution and Einstein's relativization of simultaneity, and connects the formalism to the Consciousness Complexity (CC) hypothesis by identifying the interaction context $N$ as the entry point for CC modulation.
+- **Section M.6** gives a perspectival analysis of Wigner's Friend and proves a certificate-scoped obstruction for an actualized record imported across distinct perspectives without a sharing or invariance certificate. The complete Frauchiger--Renner protocol requires a separate formalization. The section also identifies the interaction context $N$ as the conditional entry point for the independently certificate-gated CC program.
 
 - **Section M.7** concludes by synthesizing the contributions of the appendix and situating the perspectival formalism within the broader framework.
 
@@ -25,9 +25,9 @@ The appendix is organized as follows:
 
 We formally define the components describing the state of a Minimal Predictive Unit (MPU).
 
-*   **Perspectival State:** As defined in Definition 24, the complete state of an MPU at time $t$ is the **perspectival state** $S_{(s)}(t) = (S(t), s)$.
-*   **State Amplitude:** The component $|\psi(t)\rangle$ is the state vector $|\psi(t)\rangle$, an element of the MPU's complex Hilbert space $\mathcal{H}_0$ (Proposition 4). The dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23).
-*   **Perspective Index:** The component $s$ is the perspective index, representing the interaction context or observational basis relevant to the MPU's potential interactions. It is an element of the Perspective Space $\Sigma$.
+*   **Perspectival State:** As defined in Definition 24, the complete operational quantum state is $S_{(s)}(t)=(\rho(t),s)$.
+*   **Quantum component:** $\rho(t)$ is a positive trace-one operator on $\mathcal H_0$. Pure states are the special case $\rho(t)=|\psi(t)\rangle\langle\psi(t)|$. The dimension $d_0=\dim\mathcal H_0$ satisfies $d_0\ge8$ on the Theorem 23 branch.
+*   **Perspective index:** $s\in\Sigma$ records the registered interaction context or labeled projective basis. It is not a replacement for $\rho$ and does not purify a mixed state.
 *   **Perspective Space $\Sigma$:** On the ordered rank-one context branch of Theorem 25 and Corollary 26, the Perspective Space $\Sigma$ is mathematically identified with the space of all possible ordered orthonormal bases (ONBs) of the Hilbert space $\mathcal{H}_0$, modulo phase equivalence. This space possesses the structure of the complete flag manifold, a compact complex homogeneous space, specifically $\Sigma \cong U(d_0)/U(1)^{d_0}$. Here, $U(d_0)$ is the unitary group on $\mathcal{H}_0$ and $U(1)^{d_0}$ is the maximal torus subgroup representing the freedom to choose phases for each basis vector independently.
 *   **Metric on $\Sigma$:** Fix the normal homogeneous metric on $\Sigma=U(d_0)/U(1)^{d_0}$ induced by the Ad-invariant Hilbert–Schmidt inner product $\langle X,Y\rangle=-\operatorname{Tr}(XY)$ on the off-diagonal anti-Hermitian complement of the torus algebra. Let $g_\Sigma$ and $d_\Sigma$ denote its Riemannian metric and geodesic distance. Any alternative weighted flag metric must be declared separately because it changes the Hessian, Ricci tensor, and Wasserstein distance used below.
 
@@ -37,75 +37,74 @@ This structure $(\mathcal{H}_0, \Sigma, d_\Sigma)$ provides the formal mathemati
 
 The framework posits Dual Dynamics for MPUs (Section 7.3.3). We formalize both components.
 
-### M.3.1 Amplitude Evolution (Internal Prediction)
+### M.3.1 Quantum Evolution between Registered Interactions
 
-During the Internal Prediction phase (Definition 26), the state amplitude $S(t)=|\psi(t)\rangle$ evolves deterministically. On the finite-dimensional Hilbert/Born branch satisfying the continuity and time-translation hypotheses of Theorem 8.7, this deterministic reset-free branch is implemented unitarily and obeys
+On the finite-dimensional Hilbert branch satisfying the continuity and time-translation hypotheses of Theorem 8.7, reset-free evolution is
 $$
-i\hbar \frac{d}{dt}|\psi(t)\rangle=\hat H(t)|\psi(t)\rangle
-\quad\text{(M.1, cf. Equation 43)},
-$$
-where $\hat H(t)$ is self-adjoint. Its propagator is
-$$
+\rho(t_1)=U_0(t_1,t_0)\rho(t_0)U_0(t_1,t_0)^\dagger,
+\qquad
 U_0(t_1,t_0)
 =
 \mathcal T\exp\!\left[-\frac{i}{\hbar}\int_{t_0}^{t_1}\hat H(u)\,du\right].
 $$
-If $\hat H(t)=\hat H$ is time independent, this reduces to $U_0(t_1,t_0)=\exp[-i\hat H(t_1-t_0)/\hbar]$. The propagator acts only on the Hilbert-space component $|\psi(t)\rangle$ of the Perspectival State $S_{(s)}(t)$ between Evolve events.
+On a pure-state trajectory this is equivalent to
+$$
+i\hbar\frac{d}{dt}|\psi(t)\rangle=\hat H(t)|\psi(t)\rangle.
+\tag{M.1}
+$$
+The unitary acts on $\rho$; the perspective label remains a separate registered component between `Evolve` events.
 
-### M.3.2 Interaction ('Evolve') Dynamics as a Stochastic Process
+### M.3.2 Registered Instrument and Conditional Perspective Dynamics
 
-The 'Evolve' process (Definition 27), triggered by an interaction $N(t)$, represents a stochastic transition of the full Perspectival State $S_{(s)}(t) = (|\psi(t)\rangle, s)$. Mathematically, this is described as a stochastic process occurring over a characteristic interaction time interval $\Delta t$.
+Let the interaction record $N$ supply a normalized quantum instrument $\{\mathcal I_k^N\}_k$ on $\mathcal H_0$. For an initial state $\rho$ define
+$$
+p_k^N(\rho):=\operatorname{Tr}\mathcal I_k^N(\rho),
+\qquad
+\rho_k^N:=\frac{\mathcal I_k^N(\rho)}{p_k^N(\rho)}
+$$
+when $p_k^N(\rho)>0$. The instrument satisfies $\sum_k\mathcal I_k^N$ trace preserving. For a sharp projective Lüders instrument, $\mathcal I_k^N(\rho)=P_k\rho P_k$ and $p_k^N(\rho)=\operatorname{Tr}(\rho P_k)$.
 
-*   **Transition Probability Measure:** The transformation is characterized by a transition probability measure, denoted $d\mathbb{P}(f | i, N, \Delta t)$. This gives the probability for a system starting in initial state $i = (|\psi\rangle, s)$ to transition into an infinitesimal region of the final state space centered around $f = (|\psi'\rangle, s')$, under the influence of interaction $N$ during the interval $\Delta t$.
-*   **Structure Imposed by Framework Principles:** The structure of this transition measure is constrained by the principles established earlier:
-    1.  *(Amplitude Actualization)* The state amplitude component undergoes a probabilistic transition, actualizing into one of the basis states $|k\rangle_{s_{\mathrm{int}}}$ corresponding to the interaction-selected perspective $s_{\mathrm{int}}=s_{\mathrm{int}}(N)$. For a measurement interaction, $s_{\mathrm{int}}=s_{meas}$ is fixed by the apparatus. Let $P_k = |k\rangle_{s_{\mathrm{int}}}\langle k|_{s_{\mathrm{int}}}$ be the projector onto this outcome state.
-    2.  *(Born Rule Probability)* The probability for the system to actualize into the specific outcome state $|k\rangle_{s_{\mathrm{int}}}$ is given by
-        $$
-        P_{Born}(k | |\psi\rangle, s_{\mathrm{int}}) = |\langle k | \psi \rangle_{s_{\mathrm{int}}}|^2.
-        $$
-        This rule is derived from POP/PCE consistency principles (Appendix G, Theorem G.1.7).
-    3.  *(Perspective Shift)* Concurrently with or subsequent to the amplitude actualization yielding outcome $k$, the perspective index undergoes a stochastic transition $s \to s'$. The distribution of the final perspective $s'$ depends on the initial perspective $s$, the specific outcome $k$, and the nature of the interaction $N$.
-
-*   **Formal Decomposition of the Transition:** Based on these constraints, we decompose the probability measure for the transition $(|\psi\rangle, s) \to (|k\rangle_{s_{\mathrm{int}}}, s')$ occurring via interaction $N$ over $\Delta t$. The joint probability (density with respect to $s'$) for actualizing the amplitude into state $|k\rangle_{s_{\mathrm{int}}}$ *and* transitioning the perspective to $s'$ can be expressed as:
-    $$
-    \frac{d\mathbb{P}( (|k\rangle_{s_{\mathrm{int}}}, s') | (|\psi\rangle, s), N, \Delta t)}{d\mu(s')} = P_{Born}(k | |\psi\rangle, s_{\mathrm{int}}) \times G_{persp}(s' | s, k, N, \Delta t) \quad \text{(M.2)}
-    $$
-    where:
-    *   $P_{Born}(k | |\psi\rangle, s_{\mathrm{int}})$ is the probability of amplitude actualization to outcome $k$ in the interaction-selected basis.
-    *   $G_{persp}(s' | s, k, N, \Delta t)$ is the Conditional Perspective Transition Kernel. This function represents the probability density (with respect to the measure $d\mu(s')$) for the perspective index to transition from the initial perspective $s$ to the final perspective $s'$, *given that* outcome $k$ was actualized during the interaction $N$ over the interval $\Delta t$.
-    *   $G_{persp}$ must satisfy the properties of a Markov kernel density on the perspective space $\Sigma$. For fixed $s, k, N, \Delta t$, it must be non-negative and normalized with respect to the invariant measure $\mu(s')$ on $\Sigma$:
-        $$ \int_{\Sigma} G_{persp}(s' | s, k, N, \Delta t) \, d\mu(s') = 1 \quad \forall s, k, N, \Delta t \quad \text{(M.3)} $$
-    *   $d\mu(s')$ is the volume element associated with the unique unit-normalized Haar measure (invariant measure) on the compact manifold $\Sigma$.
-
-This formulation separates the probability assigned to the registered outcome by the Born trace rule on the independent Hilbert/effect-additivity/noncontextuality branch of Theorem G.1.7 from the conditional perspective transition kernel $G_{\mathrm{persp}}$. Neither SPAP nor PCE alone derives the Born selector, a stochastic actualization kernel, or the perspective dynamics.
+Given outcome $k$, the perspective changes by a Markov kernel density $G_{\mathrm{persp}}(s'|s,k,N,\Delta t)$. The joint transition law is
+$$
+\frac{d\mathbb P\big((\rho_k^N,s')\mid(\rho,s),N,\Delta t\big)}{d\mu(s')}
+=
+p_k^N(\rho)\,
+G_{\mathrm{persp}}(s'|s,k,N,\Delta t).
+\tag{M.2}
+$$
+For every fixed $s,k,N,\Delta t$,
+$$
+G_{\mathrm{persp}}(s'|s,k,N,\Delta t)\ge0,
+\qquad
+\int_\Sigma G_{\mathrm{persp}}(s'|s,k,N,\Delta t)\,d\mu(s')=1.
+\tag{M.3}
+$$
+Here $\mu$ is the normalized $U(d_0)$-invariant quotient probability measure on $\Sigma=U(d_0)/U(1)^{d_0}$ induced by normalized Haar measure on $U(d_0)$. Equation (M.2) separates the instrument probability from the conditional perspective kernel and applies to mixed, entangled-reduced, and pure states. The Born trace law and single-run selection retain the independent premises of the registered quantum branch; neither SPAP, PCE, nor the perspective diffusion derives them.
 
 ### M.3.3 Properties and an Explicit Drift-Diffusion Realization of the Conditional Perspective Kernel $G_{persp}$
 
 The detailed interaction dependence of the conditional kernel $G_{persp}(s' | s, k, N, \Delta t)$ is not fixed uniquely at the present level of the framework: it encodes the physics of the interaction $N$ and may vary across admissible interaction models. What is fixed here is the structural decomposition (M.2), the normalization requirement (M.3), the ideal projective limit (M.4), and an explicit drift-diffusion realization whose short-time behavior matches the Gaussian-with-drift heuristic form and whose semigroup satisfies the robustness conditions used below. We therefore begin by stating the generic properties and then present that constructive realization.
 
 *   **Dependence on Interaction $N$:** The kernel $G_{persp}$ depends fundamentally on the nature of the interaction $N$. Different interactions will induce different perspective dynamics.
-*   **Ideal Projective Measurement Limit:** In the idealized limit of a perfect projective measurement designed to ascertain outcome $k$ (corresponding to state $|k\rangle_s$), the interaction strongly forces the post-interaction perspective $s'$ to align with the outcome state $|k\rangle_s$. In this limit, the kernel should become sharply peaked:
+*   **Ideal Projective Measurement Limit:** Let the apparatus record a complete outcome flag $s_k\in\Sigma$ whose distinguished ray is $[|k\rangle]$. A ray alone is not a point of the complete-flag manifold. In the idealized sharp limit the conditional kernel is required to converge weakly to
     $$
-    G_{persp}(s' | s, k, N_{proj}, \Delta t \to \tau_{meas}) \longrightarrow \delta_{\Sigma}(s', |k\rangle_s) \quad \text{(M.4)}
+    G_{persp}(s' | s, k, N_{proj}, \Delta t \to \tau_{meas}) \Longrightarrow \delta_{\Sigma}(s',s_k) \quad \text{(M.4)}.
     $$
-    where $\delta_{\Sigma}$ is the Dirac delta distribution on the manifold $\Sigma$ centered at the perspective corresponding to the state vector $|k\rangle_s$.
 
-**Remark M.3.3a (Sharp-Projective Conditional Kernel and No Born Double Counting).** On the sharp projective perspective branch, the ideal conditional perspective kernel is unique:
+**Remark M.3.3a (Sharp-Projective Conditional Kernel and No Born Double Counting).** On the sharp projective perspective branch,
 $$
 G_{persp}(s'|s,k,N_{proj},\Delta t\to\tau_{meas})
 =
 \delta_\Sigma(s',s_k),
 $$
-where $\delta_\Sigma(\cdot,s_k)$ denotes the Dirac measure-valued (Dirac Markov) kernel on $\Sigma$ concentrated at the outcome perspective $s_k$, understood as a weak-limit measure rather than a pointwise density. It is the unique normalized Markov kernel supported at $s_k$. The Born factor remains outside $G_{persp}$ in Equation (M.2), because $G_{persp}$ is already conditional on the realized outcome $k$. Placing another Born factor inside $G_{persp}$ would double count actualization probability and violate the Markov normalization (M.3).
+where $\delta_\Sigma(\cdot,s_k)$ is the unique normalized Dirac Markov kernel supported at the apparatus-selected complete flag $s_k$. The Born factor remains outside $G_{persp}$ because the kernel is already conditional on the registered outcome $k$.
 
-**Remark M.3.3b (Kolmogorov Kernel Reading).** On the standard-Borel finite-protocol branches established in Section M.2 and Definition M.10.10a, the Born rule, perspective-update kernel, Gibbs stationary law, and large-deviation path law are all probability kernels on explicit measurable spaces. A finite protocol history has a unique joint law obtained by composing these kernels. Conditioning on positive-probability events uses the ordinary ratio formula; conditioning on zero-measure fibers requires regular conditional probabilities, which exist on these standard-Borel branches. The Born kernel is state-conditioned response probability, not a Haar pushforward of the perspective measure.
-*   **Finite Interaction Model (Diffusion/Relaxation):** For realistic physical interactions occurring over a finite time $\Delta t$ with finite strength, the perspective shift might be modeled as a diffusion or relaxation process on $\Sigma$, biased towards the outcome perspective $|k\rangle_s$. A potential model capturing this involves a diffusion term combined with a drift towards the target perspective $|k\rangle_s$:
+**Remark M.3.3b (Kolmogorov Kernel Reading).** On the standard-Borel finite-protocol branches, the instrument, perspective-update, Gibbs, and path laws are probability kernels on explicit measurable spaces. Finite histories have joint laws obtained by kernel composition; zero-measure fibers use regular conditional probabilities.
+*   **Finite Interaction Model (Diffusion/Relaxation):** For a finite interaction, a candidate kernel may be biased toward $s_k$:
     $$
-    G_{persp}(s' | s, k, N, \Delta t) = \mathcal{N}^{-1} \exp\left(-\frac{d_{\Sigma}^2(s', |k\rangle_s)}{2\sigma^2(\Delta t, N)}\right) K(s', s, k, N) \quad \text{(M.5)}
+    G_{persp}(s' | s, k, N, \Delta t) = \mathcal{N}^{-1} \exp\left(-\frac{d_{\Sigma}^2(s',s_k)}{2\sigma^2(\Delta t, N)}\right) K(s', s, k, N) \quad \text{(M.5)}.
     $$
-    Here:
-    *   The exponential term imposes a tendency for the final perspective $s'$ to be near the outcome perspective $|k\rangle_s$. The width $\sigma^2(\Delta t, N)$ depends on the interaction duration and strength; for strong measurements, $\sigma^2 \to 0$, recovering (M.4).
-    *   $K(s', s, k, N)$ is a factor ensuring normalization and potentially encoding residual dependencies on the initial perspective $s$ or other details.
+    Here $\sigma^2(\Delta t,N)$ is the declared width, $K$ records residual interaction dependence, and $\mathcal N$ is the finite normalizer when the displayed density is integrable. The strong-measurement statement $\sigma^2\to0$ is valid only on a branch whose normalized measures are proved to converge weakly to $\delta_{s_k}$.
     *   $\mathcal{N}$ is the normalization constant ensuring Equation (M.3).
 
 #### M.3.3.1 Constructive realization of $G_{\mathrm{persp}}$
@@ -117,7 +116,7 @@ $\Sigma\cong U(d_{0})/U(1)^{d_{0}}$ whose time-$t$ transition kernel has the sam
 
 Equip $\Sigma$ with the quotient Riemannian metric $g_\Sigma$ of Definition 25. Let $\Delta_{\Sigma}:=\operatorname{div}_{\Sigma}\nabla_{\Sigma}$ denote the corresponding **nonpositive** Laplace–Beltrami operator, so that $e^{t\Delta_{\Sigma}}$ is the heat semigroup on $\Sigma$.
 
-**(b) Interaction-biased Lindblad generator**
+**(b) Interaction-biased Markov diffusion generator**
 
 Fix a complete target perspective $s_k\in\Sigma$, namely an ordered orthonormal flag selected by the measurement apparatus and carrying outcome label $k$. A single outcome ray is not sufficient to determine $s_k$. In a convex normal neighborhood of this complete flag, define
 $$
@@ -190,10 +189,11 @@ W_2(\mu P_t,\nu P_t)
 e^{-\kappa_{\mathrm{eff}}t}W_2(\mu,\nu)
 \tag{M.5c}
 $$
-for all $\mu,\nu\in\mathcal P_2(\Sigma)$ [Bakry et al. 2014; Ambrosio, Gigli & Savaré 2008]. On a local normal-neighborhood branch, the same conclusion requires a separately defined stopped or reflected process and a curvature bound compatible with its boundary conditions. Equation (M.5c) is therefore conditional on the stated global bound, or on that separate local-process construction; no identification of $\kappa_{\mathrm{eff}}$ with $\lambda_{\mathrm{drift}}$ is made.
+for all $\mu,\nu\in\mathcal P_2(\Sigma)$ [Bakry, Gentil & Ledoux 2014; Ambrosio, Gigli & Savaré 2008]. On a local normal-neighborhood branch, the same conclusion requires a separately defined stopped or reflected process and a curvature bound compatible with its boundary conditions. Equation (M.5c) is therefore conditional on the stated global bound, or on that separate local-process construction; no identification of $\kappa_{\mathrm{eff}}$ with $\lambda_{\mathrm{drift}}$ is made.
 For $V_k=\lambda_{\mathrm{drift}}V_{k,0}$, the weak-interaction limit $\lambda_{\mathrm{drift}}\to0$ reduces the generator to the isotropic heat generator $\Delta_\Sigma$. If $V_{k,0}$ has the unique global minimizer $s_k$, its invariant measures
 $$
 d\pi_{k,\lambda}
+
 =
 Z_{k,\lambda}^{-1}e^{-\lambda V_{k,0}}\,d\mu
 $$
@@ -219,37 +219,48 @@ Thus $H(\mu_0\mid\pi_k)-H(\mu_{\Delta t}\mid\pi_k)\ge0$ is a dimensionless relat
 
 ## M.4 The Measurement Process Formalized
 
-Using this mathematical framework, we provide a precise description of the quantum measurement process. Consider the measurement of an observable $\hat{A}$ with eigenbasis $B = \{|i\rangle_{s_{meas}}\}$ (corresponding to perspective $s_{meas}$) on an MPU initially in state $S_{(s_{initial})}(t_0) = (|\psi(t_0)\rangle, s_{initial})$. The measurement interaction $N_{meas}$ occurs over $[t_0, t_0+\Delta t]$.
-
-1.  **Unitary Pre-Actualization Evolution:** The state amplitude evolves under the total Hamiltonian, including $H_{int}$, from $t_0$ to the pre-actualization endpoint:
-    $$ |\psi_-\rangle = U_{total}(t_0+\Delta t,t_0)|\psi(t_0)\rangle \quad \text{(M.6)} $$
-2.  **Stochastic 'Evolve' Transition:** The Evolve transition is governed by (M.2) with pre-actualization state $(|\psi_-\rangle,s_{initial})$ and interaction $N_{meas}$. The apparatus fixes the interaction perspective $s_{meas}$.
-3.  **Outcome Probability:** Integrating the joint transition density over the final perspective gives
-    $$
-    \begin{aligned}
-    P(\text{outcome }i)
-    &=\int_\Sigma
-    \frac{d\mathbb P((|i\rangle_{s_{meas}},s')\mid(|\psi_-\rangle,s_{initial}),N_{meas},\Delta t)}{d\mu(s')}
-    \,d\mu(s')\\
-    &=P_{Born}(i\mid|\psi_-\rangle,s_{meas})
-    \int_\Sigma G_{persp}(s'\mid s_{initial},i,N_{meas},\Delta t)\,d\mu(s')\\
-    &=|\langle i|\psi_-\rangle_{s_{meas}}|^2.
-    \end{aligned}
-    \tag{M.7}
-    $$
-4.  **Conditional Final Perspective:** If outcome $i$ is realized, the perspective index transitions from $s_{initial}$ to a final perspective $s'_{final}$ drawn from the conditional probability distribution defined by the kernel density $G_{persp}(s' | s_{initial}, i, N_{meas}, \Delta t)$. For an ideal measurement (large $\lambda_{drift}$ in the model M.3.3.1), $s'_{final}$ will be sharply localized around the perspective $s_i$ corresponding to the outcome state $|i\rangle_{s_{meas}}$.
-5.  **Post-Measurement State:** The complete description of the MPU immediately after the 'Evolve' event, given outcome $i$, is the Perspectival State:
-    $$ S_{(s'_{final})}(t_0+\Delta t) = (|\psi'_{post-actualization}\rangle, s'_{final}) \quad \text{(M.8)} $$
-    where $|\psi'_{post-actualization}\rangle$ represents the state amplitude *after* actualization (often taken as the projected state $|i\rangle_{s_{meas}}$ or incorporating subsequent rapid evolution governed by $H_{int}$ during $\Delta t$), and $s'_{final}$ is the realized perspective. The outcome $i$ is definite and factual relative to this final perspective $s'_{final}$.
-
-This construction refines the closed registered instrument of Theorem 8.0d by adjoining its perspective-transition kernel. For an ideal sharp repeatable verification, Proposition 9 supplies the Lüders system operation and the Born single-run outcome probability; the normalized kernel supplies the conditional distribution of the post-event perspective. Frequency convergence additionally requires the i.i.d., exchangeable, or stationary-ergodic repeated-trial certificate of Principle 8.0c. Definite operational registration follows from Principle 8.0c, while any stronger metaphysical interpretation remains separate from the instrument theorem.
+Let the initial perspectival state be $(\rho_0,s_{\mathrm{initial}})$ and let the registered interaction $N_{\mathrm{meas}}$ supply a normalized instrument $\{\mathcal I_i\}$ and a conditional perspective kernel. Unitary pre-interaction transport gives
+$$
+\rho_-
+=
+U_{\mathrm{total}}(t_0+\Delta t,t_0)\rho_0
+U_{\mathrm{total}}(t_0+\Delta t,t_0)^\dagger.
+\tag{M.6}
+$$
+For every outcome with $p_i>0$,
+$$
+p_i=\operatorname{Tr}\mathcal I_i(\rho_-),
+\qquad
+\rho_i'=\frac{\mathcal I_i(\rho_-)}{p_i}.
+$$
+Normalization of the conditional perspective kernel gives
+$$
+\begin{aligned}
+P(\text{outcome }i)
+&=
+\int_\Sigma
+p_iG_{\mathrm{persp}}
+(s'|s_{\mathrm{initial}},i,N_{\mathrm{meas}},\Delta t)
+\,d\mu(s')\\
+&=p_i.
+\end{aligned}
+\tag{M.7}
+$$
+Given outcome $i$, draw $s'_{\mathrm{final}}$ from that kernel. The post-event state is
+$$
+S_{(s'_{\mathrm{final}})}(t_0+\Delta t)
+=
+(\rho_i',s'_{\mathrm{final}}).
+\tag{M.8}
+$$
+For a sharp nondegenerate Lüders instrument and pure input, $\rho_i'=|i\rangle\langle i|$ and the pure-state shorthand of Definition 24 may be used. General instruments, degenerate outcomes, and reduced entangled states need not have vector poststates. The instrument, Born selector, single-run registration, and repeated-trial frequency law retain their independently stated quantum-branch premises; normalization of $G_{\mathrm{persp}}$ does not derive them.
 
 **Theorem M.4a (Operational Record Consensus after Perspectival Actualization).**
-Let $K$ be the finite outcome set of a measurement interaction, and let
+Let $K$ be the finite outcome set of a registered instrument $\{\mathcal I_k\}_{k\in K}$ acting on the pre-event density operator $\rho_-$, and set
 $$
-p(k)=P_{\mathrm{Born}}(k\,|\,|\psi\rangle,s_{\mathrm{int}})
+p(k)=\operatorname{Tr}\mathcal I_k(\rho_-).
 $$
-be the Born distribution supplied by Equation (M.7). After a definite outcome has been actualized relative to a participating perspective, let $r=1,\ldots,N$ be finite record channels carrying likelihood functions
+This is the normalized outcome distribution supplied by Equation (M.7); for a nondegenerate sharp projective instrument and pure input it reduces to the usual vector Born formula. After a definite outcome has been registered relative to a participating perspective, let $r=1,\ldots,N$ be finite record channels carrying likelihood functions
 $$
 L_r:K\to[0,\infty)
 $$
@@ -307,15 +318,15 @@ $$
 $$
 Solving for $q(k)$ and normalizing gives (M.4a.3). Constant positive-weight likelihoods cancel in the normalizer and return $q^*=p$. A positive-weight sharp record with value $k_0$ assigns zero likelihood to every $k\ne k_0$, so the retained support of the product in (M.4a.2) is contained in $\{k_0\}$. The conditions $p(k_0)>0$ and $Z>0$ leave exactly $k_0$, giving $q^*=\delta_{k_0}$. For the Byzantine layer, at least $N-f$ records report $k_0$. Since $N>3f$, one has $N-f>2N/3$, while any incorrect label can receive support from at most the $f<N/3$ arbitrary records. Thus $k_0$ is the unique supermajority label. ∎
 
-An observer with high Consciousness Complexity is a high-resource record-integrating subsystem within this theorem. The theorem does not add a separate collapse postulate: Born actualization is still the amplitude component of Evolve, while consensus is the finite record-merging step that aligns durable records across perspectives.
+An observer with high Consciousness Complexity is a high-resource record-integrating subsystem within this theorem. The theorem does not add a separate collapse postulate: the registered instrument supplies the outcome probability and conditional density-operator update, the independent selector supplies the single registered outcome, and consensus is the finite record-merging step that aligns durable records across perspectives.
 
 ## M.5 Mathematical Consistency
 
 The finite-dimensional Hilbert spaces, compact homogeneous manifolds, Riemannian operators, and Markov kernels used in this appendix are formalizable in ZFC. This formalizability does not prove the consistency of ZFC or the joint consistency of the manuscript's additional physical axioms. A relative-consistency claim would require an explicit model satisfying those axioms inside a background theory whose consistency is assumed.
 
-## M.6 Resolution of the Wigner's Friend Paradox and Extension of the Relativistic Program
+## M.6 Perspectival Analysis of Wigner's Friend and Certificate-Scoped Cross-Perspective Imports
 
-The perspectival formalism developed in Sections M.1–M.5 resolves a long-standing paradox in quantum foundations and extends a conceptual program initiated by Einstein's relativistic revolution.
+The following analysis supplies a branch-consistent semantics for Wigner's-Friend records and proves one exact typing obstruction for cross-perspective imports. It is a conditional interpretive model on the registered instrument branch, not a proof that every extended Wigner's-Friend protocol is resolved.
 
 ### M.6.1 The Wigner's Friend Paradox
 
@@ -341,27 +352,29 @@ At least one assumption must fail. The logical structure of their argument proce
 
 ### M.6.2 Resolution via Perspectival States
 
-The PU framework dissolves this paradox through the Perspectival State formalism (Definition 24, Section 7.2.3). The resolution proceeds as follows:
+On the registered perspectival-instrument branch, the two descriptions are typed as follows.
 
-**Step 1 (Complete State Specification).** The physical state is never simply $|\psi\rangle$ but always the Perspectival State $S_{(s)}(t) = (|\psi(t)\rangle, s)$, where $|\psi(t)\rangle \in \mathcal{H}_0$ is the state amplitude and $s \in \Sigma$ is the perspective index (Section M.2). The perspective space $\Sigma \cong U(d_0)/U(1)^{d_0}$ is the manifold of ordered orthonormal bases modulo phases (Theorem 25, Definition 25).
+**Step 1 (Complete operational state).** The Perspectival State is $S_{(s)}(t)=(\rho(t),s)$, where $\rho$ may be mixed and $s\in\Sigma$ is the registered perspective.
 
-**Step 2 (Perspective-Relative Actuality).** When $F$ performs a measurement, an 'Evolve' event occurs (Definition 27, Section 7.3.3.3). Relative to $F$'s post-measurement perspective $s'_F$, a definite outcome is actualized:
-
+**Step 2 (Friend record).** When $F$ performs the registered outcome-$0$ instrument event, the post-event state relative to $s'_F$ is
 $$
-S_{(s'_F)}(t + \Delta t) = (|0\rangle, s'_F) \tag{M.10}
+S_{(s'_F)}(t+\Delta t)
+=
+(|0\rangle\langle0|,s'_F).
+\tag{M.10}
 $$
+For the displayed pure input, the registered Born probability is $|\alpha|^2$.
 
-This is not merely $F$'s knowledge or belief—outcome $|0\rangle$ is *actual* relative to perspective $s'_F$. The actualization occurs through the probabilistic amplitude transition governed by the Born rule (Proposition 7, Theorem G.1.7), with probability $P(0|\,|\psi\rangle, s_F) = |\alpha|^2$.
-
-**Step 3 (No Absolute Collapse).** From $W$'s external perspective $s_W$, no 'Evolve' event has occurred between $W$ and the laboratory. The complete state relative to $s_W$ remains:
-
+**Step 3 (External laboratory state).** Before $W$ interacts with the laboratory, the branch assigns
 $$
-S_{(s_W)}(t + \Delta t) = (|\Psi\rangle_{FQ}, s_W) \tag{M.11}
+S_{(s_W)}(t+\Delta t)
+=
+(|\Psi\rangle_{FQ}\langle\Psi|,s_W).
+\tag{M.11}
 $$
+Equations (M.10) and (M.11) are propositions with different perspective indices. Their joint consistency is a postulate of the declared semantics plus the registered interaction rules; it is not inferred from the ordered-pair notation alone.
 
-Both descriptions (M.10) and (M.11) are correct—they describe the same physical situation relative to different perspectives. There is no contradiction because actuality is indexed by perspective.
-
-**Step 4 (Consistency upon Interaction).** When $W$ opens the laboratory and interacts with $F$, this constitutes an 'Evolve' event correlating their perspectives. The transition kernel $G_{\text{persp}}(s'|s, k, N, \Delta t)$ (Equations M.5a–b, Section M.3.3.1) governs the evolution on the perspective manifold $\Sigma$. For the joint $W$-$F$ system, the interaction induces correlated dynamics on the product space $\Sigma_W \times \Sigma_F$, driving both perspectives toward mutual consistency regarding the observed outcome.
+**Step 4 (Certified consistency upon interaction).** When $W$ opens the laboratory, a joint `Evolve` record is registered. Correlation toward a common outcome flag follows only if its joint kernel satisfies the conditional-independence, strong-readout, and contractivity hypotheses of Lemma M.6.1; an arbitrary normalized interaction kernel need not produce that convergence.
 
 **Remark M.6.1: Idealized Isolation.** The Wigner's Friend scenario stipulates idealized isolation of $F$'s laboratory—no decoherence channels connect $F+Q$ to $W$'s environment during the intermediate period. In realistic settings, environmental decoherence would establish shared perspective records through uncontrolled 'Evolve' events before $W$ deliberately opens the laboratory [Zurek 2003; Schlosshauer 2007]. The paradox arises precisely because the gedanken experiment suppresses these channels.
 
@@ -447,7 +460,7 @@ Because the two assertions are indexed to different perspectives before $t_2$ an
 
 The apparent paradox dissolves because we never assert both "outcome is definite" and "outcome is indefinite" relative to the *same* perspective.
 
-### M.6.4 Resolution of the Frauchiger-Renner Paradox
+### M.6.4 Certificate-Scoped Frauchiger--Renner Import Obstruction
 
 The Frauchiger-Renner (FR) scenario involves four agents ($F$, $\bar{F}$, $W$, $\bar{W}$) and a chain of reasoning that derives a contradiction. The PU framework identifies the precise point of failure.
 
@@ -468,7 +481,7 @@ The contradiction arises when $\bar{W}$ concludes with certainty an outcome that
 
 (b) **Perspective-invariance certificate:** the imported conclusion is proved to be independent of the actualization index. Functions of a shared density operator, such as registered expectation values or transition probabilities, are examples when their operators and basis conventions are also shared.
 
-This is a typing rule of the perspectival semantics. It does not claim that every logically valid statement is amplitude-only, nor that these certificates are derived from the ordered-pair notation $S_{(s)}=(|\psi\rangle,s)$.
+This is a typing rule of the perspectival semantics. It does not claim that every logically valid statement is state-only, nor that these certificates are derived from the ordered-pair notation $S_{(s)}=(\rho,s)$; the vector notation is only the pure-state shorthand of Definition 24.
 
 **Lemma M.6.2a (Cross-Perspective Import Normal Form in the Retained Calculus).** In a derivation system whose cross-perspective import rules are exactly the two clauses of Definition M.6.2, every well-typed derivation that imports an actualized record from $s$ to $s'\ne s$ contains either a record-sharing certificate or a perspective-invariance certificate for that import.
 
@@ -492,14 +505,14 @@ The PU resolution bears surface similarity to Rovelli's Relational Quantum Mecha
 
 | Aspect | Relational QM | PU Framework |
 |--------|---------------|--------------|
-| **Ontological status** | Interpretive stance; standard QM reinterpreted | Derived structure; perspectives are physical degrees of freedom |
+| **Ontological status** | Interpretive stance; standard QM reinterpreted | Declared branch structure; physical perspectives require the registered perspective-space, instrument, and realization certificates |
 | **Grounding** | Taken as interpretive starting point | Conditional on SPAP together with the retained Hilbert/Born, update, and perspective records; a registered physical reset is a separate branch with $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ |
-| **Why relational?** | "Because that's what QM implies" | Because self-referential prediction is inherently perspectival (Corollary 1, Section 4.2.4) |
+| **Why relational?** | "Because that's what QM implies" | SPAP motivates perspective indexing on the declared response branch; it does not by itself derive the quantum perspective space or its physical realization |
 | **Mathematical structure** | No explicit perspective space formalism | Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ with Riemannian structure (Definition 25, Theorem 25) |
 | **Dynamics** | No quantitative mechanism for perspective change | Explicit drift-diffusion realization of $G_{\text{persp}}$ on $\Sigma$ (Equations M.5a–b) |
 | **Consistency criterion** | Interactions establish relations (qualitative) | Bakry-Émery control yields $W_2$-contractive convergence for the constructed class (Equation M.5c) |
 | **Origin of probability** | Born rule assumed | On the accepted carrier branch, Principle 11b fixes the invariant response ledger, Principle 8.0b and $\mathfrak C_{\mathrm{car}}$ fix the complex carrier, and Theorems 8.2–8.3 give its unique Born trace representation from normalized additive/noncontextual effect probabilities; Principle 8.0c separately supplies irreducible registered single outcomes |
-| **Temporal structure** | Time assumed | Directed time required for prediction (Theorem 4); emerges from thermodynamic irreversibility (Appendix O) |
+| **Temporal structure** | Time assumed | Directed order is required by Theorem 4; a thermodynamic arrow follows only on the independently certified Appendix O branch |
 
 **Remark M.6.3: RQM as Limiting Case.** Relational Quantum Mechanics can be understood as capturing the interpretive content of the PU perspectival formalism when the underlying derivational structure (SPAP, PCE, MPU dynamics) is suppressed and only the relational consequences retained. The distinction is one of derivational route rather than certified necessity: on the declared response branch, PU represents prediction perspectivally (Corollary 1) and supplies an explicit perspective-space formalism and dynamics, while RQM takes the relational character as an interpretive starting point. PU's route is conditional on its stated branch records; it does not prove that quantum mechanics must be relational.
 
@@ -529,9 +542,9 @@ The perspectival resolution of Wigner's Friend extends a conceptual program init
 
 (ii) Each relativization is branch-relative. Frame-relative simultaneity uses an accepted Lorentzian characteristic-cone branch; perspective-relative actuality uses the retained SPAP, Hilbert/Born, update, and perspective records. A registered reset, a full-state refresh channel, and a Lorentzian cone are independent additional gates.
 
-(iii) The underlying reality remains unified (one spacetime / one MPU network); only descriptions are relativized.
+(iii) On the nominated Hypothesis 1 branch, one registered MPU network supplies the common substrate; this ontological identification is not derived by the perspectival semantics.
 
-(iv) Consistency is maintained through transformation laws (Lorentz transformations / $G_{\text{persp}}$) governing how contexts relate.
+(iv) Lorentz transformations govern frame changes on the Lorentzian branch. A perspective kernel yields record consistency only on the certified strong-readout branch of Lemma M.6.1.
 
 *Justification.* The structural correspondence is established by the mapping:
 
@@ -550,29 +563,47 @@ The comparison is structural but branch-separated. Frame-relative simultaneity u
 
 **Remark M.6.5: Scope of the Correspondence.** The correspondence is structural and conceptual rather than mathematical in detail. Lorentz transformations form a continuous Lie group acting on Minkowski spacetime; the perspective dynamics governed by $G_{\text{persp}}$ are stochastic transitions on a distinct manifold $\Sigma$. The parallel illuminates the *type* of conceptual move—relativizing an apparently absolute concept—rather than claiming isomorphism of the mathematical structures.
 
-**Definition M.6.5a (Covariant Perspectival-Actualization Certificate).** A covariant actualization certificate fixes a common invariant operator core $\mathcal D$, a PPI quotient map $\mathfrak q_{\mathrm{PPI}}$ into a normed response space, a Lorentz representation $\rho_{\mathrm{Spin}}$, a perspective generator $G_{\mathrm{persp}}$, and tolerances $\epsilon_{\mathrm{cov}}(\Lambda)$. It certifies
+**Definition M.6.5a (Covariant Perspectival-Actualization Certificate).** A covariant actualization certificate fixes a Hilbert representation carrier $\mathcal H$, a dense common core $\mathcal D\subseteq\mathcal H$, and a representation $\rho_{\mathrm{Spin}}(\Lambda)$ by bounded invertible operators on $\mathcal H$ leaving $\mathcal D$ invariant. It fixes a lift $\widehat G_{\mathrm{persp}}:\mathcal D\to\mathcal D$ and a bounded surjective linear PPI quotient map $\mathfrak q_{\mathrm{PPI}}:\mathcal H\to\mathcal R_{\mathrm{PPI}}$ whose kernel is $\rho_{\mathrm{Spin}}$-invariant, so
+$$
+\bar\rho_{\mathrm{Spin}}(\Lambda)\mathfrak q_{\mathrm{PPI}}(\psi)
+:=\mathfrak q_{\mathrm{PPI}}(\rho_{\mathrm{Spin}}(\Lambda)\psi)
+$$
+defines the induced response-space representation. Separately, the certificate fixes an ordered Banach perspective-law carrier $\mathcal X_\Sigma$ with a closed generating cone and a continuous normalization functional, a dense domain $\mathcal D_\Sigma\subseteq\mathcal X_\Sigma$, and a closed generator $G_{\mathrm{persp}}^\Sigma:\mathcal D_\Sigma\to\mathcal X_\Sigma$ of a strongly continuous positive normalization-preserving semigroup. It fixes a bridge $J:\mathcal D\to\mathcal D_\Sigma$, a finite protocol set $\mathfrak P_{\mathrm{cov}}$, bounded real-linear readouts $s_P:\mathcal X_\Sigma\to\mathbb R$ and $\ell_P:\mathcal R_{\mathrm{PPI}}\to\mathbb R$, and tolerances $\epsilon_{\mathrm{br}}(P)\ge0$ satisfying, for $P\in\mathfrak P_{\mathrm{cov}}$ and $\psi\in\mathcal D$,
+$$
+\left|s_P(G_{\mathrm{persp}}^\Sigma J\psi)
+-\ell_P\!\left(\mathfrak q_{\mathrm{PPI}}(\widehat G_{\mathrm{persp}}\psi)\right)\right|
+\le\epsilon_{\mathrm{br}}(P)\|\psi\|.
+\tag{M.6.5a.0}
+$$
+The covariance entry is
 $$
 \left\|
 \mathfrak q_{\mathrm{PPI}}
 \left(
-G_{\mathrm{persp}}\rho_{\mathrm{Spin}}(\Lambda)
--\rho_{\mathrm{Spin}}(\Lambda)G_{\mathrm{persp}}
+\widehat G_{\mathrm{persp}}\rho_{\mathrm{Spin}}(\Lambda)
+-\rho_{\mathrm{Spin}}(\Lambda)\widehat G_{\mathrm{persp}}
 \right)\psi
 \right\|
 \le\epsilon_{\mathrm{cov}}(\Lambda)\|\psi\|
 \tag{M.6.5a.1}
 $$
-for $\psi\in\mathcal D$. A metered rate statement additionally requires the stationary/metering record of Definition E.2a.8 and Corollary E.2a.9. Order-independence of conditioned process functionals is a separate certificate entry and is not inferred merely from commutativity of spacelike observable algebras.
+for $\psi\in\mathcal D$, with $\epsilon_{\mathrm{cov}}(\Lambda)\ge0$. Without the invariant core, typed lift, and bridge, a commutator between the Markov generator and the spin representation is undefined and no covariance claim is made. A Lorentz-scalar metered rate additionally requires the stationary/metering record of Definition E.2a.8 and Corollary E.2a.9 to fix an invariant proper-time parameter $\tau$ on the same representation branch, to register $I_{\mathrm{acq}}$ as a scalar, and to define $\dot I=dI_{\mathrm{acq}}/d\tau$; without that clock entry, $\dot I/C_{\max}$ is only the rate in the selected meter clock. Order-independence of conditioned process functionals is a separate certificate entry.
 
-**Theorem M.6.5b (Certificate-Relative Covariant Statistics).** On an accepted certificate, perspective-transition statistics intertwine the recorded Lorentz action up to $\epsilon_{\mathrm{cov}}$ in the PPI quotient. If the metering record is also accepted, the rate $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ is a scalar on that record. Spacelike order-independence is obtained only for the process functionals explicitly covered by its independent entry.
+**Theorem M.6.5b (Certificate-Relative Covariant Generator Responses).** On an accepted certificate, every registered readout obeys
+$$
+\begin{aligned}
+&\left|s_P(G_{\mathrm{persp}}^\Sigma J\rho_{\mathrm{Spin}}(\Lambda)\psi)
+-\ell_P\!\left(\mathfrak q_{\mathrm{PPI}}
+(\rho_{\mathrm{Spin}}(\Lambda)\widehat G_{\mathrm{persp}}\psi)\right)\right|\\
+&\qquad\le
+\epsilon_{\mathrm{br}}(P)\|\rho_{\mathrm{Spin}}(\Lambda)\psi\|
++\|\ell_P\|\,\epsilon_{\mathrm{cov}}(\Lambda)\|\psi\|.
+\end{aligned}
+\tag{M.6.5b.1}
+$$
+If that invariant-clock metering record is also accepted, $\Gamma_{\mathrm{Evolve}}=\dot I/C_{\max}$ is a Lorentz scalar on that record. Spacelike order-independence holds only for process functionals covered by its independent entry.
 
-*Proof.* The covariance entry of Definition M.6.5a states, for every $\psi\in\mathcal D$,
-$$
-\left\|\mathfrak q_{\mathrm{PPI}}
-\left(G_{\mathrm{persp}}\rho_{\mathrm{Spin}}(\Lambda)-\rho_{\mathrm{Spin}}(\Lambda)G_{\mathrm{persp}}\right)\psi\right\|
-\le\epsilon_{\mathrm{cov}}(\Lambda)\|\psi\|,
-$$
-which is exactly the first conclusion. The independent stationary metering record defines both $\dot I$ and $C_{\max}$ as scalars on the same record, with $C_{\max}>0$; their quotient is therefore a scalar. Definition M.6.5a expressly places order-independence in a separate certificate entry, so it applies precisely to, and only to, the process functionals listed there. ∎
+*Proof.* Apply (M.6.5a.0) to $\rho_{\mathrm{Spin}}(\Lambda)\psi$, then add and subtract $\ell_P(\mathfrak q_{\mathrm{PPI}}(\widehat G_{\mathrm{persp}}\rho_{\mathrm{Spin}}(\Lambda)\psi))$. The triangle inequality, boundedness of $\ell_P$, and (M.6.5a.1) give (M.6.5b.1). The invariant-clock metering record defines $I_{\mathrm{acq}}$ and $C_{\max}>0$ as scalars and $\dot I=dI_{\mathrm{acq}}/d\tau$ with scalar proper time $\tau$; hence their quotient is a Lorentz scalar. The order-independence conclusion is restricted by definition to its separately listed process functionals. ∎
 
 **Remark M.6.6 (Branch-Indexed Structural Relation Between the Two Relativizations).** Structural Correspondence M.6.4 compares two accepted branch outputs; it does not derive them from one premise. The registered binary architecture supplies the alphabet-count identity $\varepsilon_0=\ln2$ and, when a physical reset is declared, the ledger
 $$
@@ -713,7 +744,7 @@ Accordingly, frame-relative simultaneity and perspective-relative actuality rema
 
 ### M.6.7 Implications
 
-The resolution of Wigner's Friend via perspectival states has several implications:
+The certificate-scoped perspectival analysis of Wigner's Friend has the following implications on its declared instrument and strong-readout branches:
 
 **1. No Primitive Heisenberg Cut on the Registered Instrument Branch.** On the separately assumed Hilbert/instrument/Born and actualization branch, a registered verification/update event is represented by the `Evolve` instrument of Definition 27 and Proposition 9. The same representation can be used across the qualifying implementations without inserting a size- or consciousness-based cut. This does not make every MPU interaction an actualization event and does not derive the instrument or outcome ontology from SPAP or PCE.
 
@@ -721,83 +752,21 @@ The resolution of Wigner's Friend via perspectival states has several implicatio
 
 **3. Certificate-Scoped Extended Wigner's-Friend Imports.** Definition M.6.2 requires a record-sharing or perspective-invariance certificate for an actualized record imported across distinct perspectives, and Lemma M.6.2a gives the corresponding import normal form. Theorem M.6.2b proves that the displayed Frauchiger–Renner-style import is ill typed when neither certificate exists. Any extended Wigner's-Friend argument containing an import that satisfies those hypotheses is blocked at that import; analysis of the complete Frauchiger–Renner protocol requires a separate formalization.
 
-**4. Agreement with Standard Laboratory Quantum Mechanics.** In ordinary laboratory scenarios where preparation devices, measured systems, apparatuses, and observers become physically correlated through the measurement chain, the perspectival framework reproduces the standard quantum predictions for the registered outcomes. Distinctively perspectival effects appear in gedanken setups that compare uncorrelated perspectives before interaction, while the separate CC program studies bounded deviations from Born statistics when a high-CC aggregate modulates the interaction context $N$.
+**4. Registered laboratory branch.** With the standard instrument and Born selector supplied as premises, the perspectival kernel preserves the registered laboratory outcome law by construction while adding a conditional perspective record. This establishes compatibility, not an independent derivation of quantum statistics or a novel effect. Any CC-dependent deviation requires the separate G9CC realization certificate.
 
-**5. Resolution of the "Absoluteness" Debate.** Recent no-go theorems [Brukner 2018; Bong et al. 2020] have been interpreted as ruling out "observer-independent facts." The PU framework clarifies this: facts about outcomes *are* observer-independent once the perspective is specified. What is ruled out is not objective facts per se, but *perspective-independent* facts about inherently perspectival quantities. This parallels relativity: the time-ordering of spacelike-separated events is not "subjective"—it is objectively frame-dependent.
+**5. Perspective-Indexed Account of the "Absoluteness" Debate.** Within the declared perspectival semantics, outcome propositions are objective only after their registered perspective is specified. The cited no-go results do not by themselves prove PU's perspective space, actualization rule, or physical realization.
 
-### M.6.8 Connection to Consciousness Complexity
+### M.6.8 Certificate-Gated Interface to Consciousness Complexity
 
-The perspectival formalism developed in this appendix is not merely interpretive infrastructure for resolving foundational puzzles—it provides the essential mathematical substrate for the framework's most distinctive empirical content: the Consciousness Complexity (CC) hypothesis.
+Dependence of $G_{\mathrm{persp}}(s'|s,k,N,\Delta t)$ on the registered context $N$ supplies a typed interface at which a separately constructed physical control may enter. It proves no nonzero CC effect. A physical CC branch must supply:
 
-**The Load-Bearing Role of Perspectival Dynamics.** The transition kernel $G_{\text{persp}}(s'|s, k, N, \Delta t)$ governing perspective evolution (Equations M.5a–b) depends explicitly on the interaction context $N$. This parameter $N$ characterizes the physical conditions under which the 'Evolve' event occurs—the environment, boundary conditions, and local field configurations that shape the interaction. The CC hypothesis (Hypothesis 3, Section 9.4.1) proposes that high-complexity MPU aggregates can systematically modulate this context parameter, thereby influencing the probabilistic outcomes of 'Evolve' events.
+1. a causal map from an aggregate state to a realizable control $N$;
+2. one normalized instrument family on which that control changes a registered outcome law, or a theorem that every admissible change is zero;
+3. a forward-locked signed effect interval, with exact/hard-support or statistical status, separated from source leakage and artifacts;
+4. complete source-energy, reset, and no-double-counting ledgers; and
+5. pre-lightcone marginal invariance, or explicit classification of a response-active marginal as the external branch-(iii) falsifier of the sealed causal branch.
 
-**The Mechanism Chain.** The connection proceeds through a precise sequence of formal constructions:
-
-1. **Context-Dependent ND-RID (Assumption 1, Section 9.1.2).** The observable probability $P_{\text{obs}}(o|\rho, s, N, S_{\text{agg}})$ for an 'Evolve' outcome depends on the local aggregate state $S_{\text{agg}}$. This dependence is motivated by PCE: for aggregates to optimize predictions efficiently, their constituent MPUs' interactions must be sensitive to aggregate context.
-
-2. **Emergent Biasing Capability (Theorem 34, Section 9.2.1).** Given context-dependent ND-RID, the adaptive dynamics of sufficiently complex aggregates ($C_{\text{agg}}>C_{op}$), driven by POP (Axiom 1) and PCE (Definition 15), develop nonzero biasing capability exactly on the strict-improvement branch of Theorem 34. In that branch there exists a reachable context $u_+$ with
-$$
-V(u_+)<V(u_0),
-\qquad
-P_{\mathrm{obs}}(\cdot|u_+)\ne P_{\mathrm{Born}},
-$$
-and every Born-realizing minimizer has cost at least $V(u_0)$. If this strict-improvement antecedent fails, PCE may select the Born reference context and the operational CC map is zero. Thus optimization does not assert bias from complexity alone; it selects bias precisely when a reachable non-Born context strictly improves the PCE objective. By the genericity remark of §9.2.1, the strict-improvement branch is the generic case for complex aggregates whose control degrees of freedom are nontrivially coupled to the measurement context; the three non-generic exclusions (decoupled control, cost-dominated regime, already-encoded improvement) are explicitly named there.
-
-3. **Context State Formalization (Definition L.1, Appendix L).** The aggregate's relevant internal state is formalized as the context state $\text{context}_S(t)$, constructed as the minimal sufficient statistic of the aggregate density operator $\rho_{\text{agg}}(t)$ under PCE optimization. This captures precisely those features capable of influencing local ND-RID while minimizing representational cost.
-
-4. **Context-to-Control Mapping (Definition L.2, Appendix L).** The mapping $\mathcal{M}: \mathcal{C}_{\text{ctx}} \to \mathcal{P}_{\text{control}}$ translates the abstract context state into physically realizable control parameters—classical field configurations, boundary conditions, or other physical variables that enter the 'Evolve' dynamics. Lemma L.1 establishes that $\mathcal{M}$ must be Lipschitz continuous, bounded, stable under feedback, and satisfy a cost-benefit inequality to be POP-admissible. Theorem L.1 proves existence of such a mapping under POP/PCE optimization.
-
-5. **Modified Outcome Probabilities (Definition 33, Section 9.5.1).** The CC influence manifests as a bounded modification of Born rule probabilities:
-
-$$
-P_{\text{obs}}(i) = P_{\text{Born}}(i) + \Delta P(i), \quad |\Delta P(i)| \leq \text{CC}(S) \tag{M.15}
-$$
-
-where $\text{CC}(S) = \|L_S\|_{\text{op}}$ is the operational norm of the probability modification map (Definition 30). The Context-Targeted Bias model (Definition 34) provides a specific realization where the modification interpolates toward a target distribution determined by $\text{context}_S$.
-
-**Why the Perspectival Formalism is Essential.** Without the perspectival structure developed in Sections M.1–M.5, the CC hypothesis would lack mathematical precision:
-
-- The statement "consciousness affects quantum outcomes" would be vague without the kernel $G_{\text{persp}}$ providing the dynamical framework.
-- The interaction context $N$ would have no formal home in the theory.
-- The distinction between modulating $N$ (which CC does) versus modulating the Born rule directly (which would violate the framework's foundations) would be unclear.
-- The endpoint and finite-window zero-error reliability constraints of Theorems 39 and 39a could not be rigorously established; Postulate 2 separately requires Theorem 39c.
-
-The perspectival formalism makes CC mathematically coherent by identifying the precise entry point for conscious influence: the interaction context $N$ that parameterizes the 'Evolve' dynamics, rather than the quantum state itself.
-
-**Consistency with Wigner's Friend Resolution.** A potential concern arises: if CC modulates the interaction context $N$, could sufficiently strong CC disrupt the consistency mechanism (Lemma M.6.1) that ensures perspectives correlate upon interaction? The deterministic endpoint-forcing bound (Theorem 39) controls the size of the allowed probability modification:
-
-$$
-\alpha_{CC,max} = \sup_S \text{CC}(S) < 0.5 \tag{M.16}
-$$
-
-This bound alone does not prove preservation of the record-correlation mechanism. That preservation requires an additional hypothesis: for the readout interaction under consideration, the CC-modulated kernel must still satisfy the strong-readout and contractive assumptions of Lemma M.6.1, equivalently the post-actualization perspective dynamics must remain in the same Bakry–Émery-controlled class used there. Under that hypothesis, CC changes the distribution of realized outcomes but does not obstruct the subsequent correlation of perspectives conditioned on the realized record value.
-
-**Experimental Predictions.** The empirical content distinguishing PU from standard quantum mechanics flows directly from this mechanism:
-
-- **Born Rule Deviations (Theorem 51, Section 13.1.1).** Systems with $\mathrm{CC}(S)>0$ induce statistically detectable deviations from Born rule predictions on the strict-improvement branch of Theorem 34. The operational bound is
-$$
-|\Delta P(i)|\le\mathrm{CC}(S)
-$$
-by Definition 30 and Theorem 36. On the stricter Fisher-budget subbranch of Theorem 36 this refines to
-$$
-|\Delta P(i)|\le4\sin(\mathrm{CC}(S)/4).
-$$
-- **Statistical FTL Influence (Postulate 3, Section 10).** Because $\text{context}_S$ can involve non-local entanglement, and the CC mechanism acts on local 'Evolve' events, context changes in one part of an entangled aggregate can have statistical consequences on 'Evolve' outcomes in spacelike-separated regions—but a late-randomized Bob-marginal consequence would violate operational causality by Theorem 39c; only marginal-invariant or shared-past consequences retain the Appendix F causal branch; by Corollary 39c.1, a late-randomized Bob-marginal shift is absent from and would falsify that branch.
-- **Consciousness-Correlated Anomalies (Section 13).** The experimental protocols in Section 13 target detection of CC effects through quantum random number generators, pre-registered intention experiments, and neurophysiological correlates.
-
-**Physical Implementation.** The physical realization of the mapping $\mathcal{M}$ is analyzed in Appendix L. The dominant channel is electromagnetic: coherent charge oscillations within the aggregate generate classical fields that modulate local MPU interaction parameters (Theorem L.2). This electromagnetic channel dominates gravitational effects by a factor $\mathcal{R} \sim 10^{36}$ (Proposition L.5). However, gravitational self-limitation (Appendix S) provides an upper bound on achievable CC, as the stress-energy associated with generating high-CC contexts can disrupt the quantum coherence required for the effect.
-
-**Unified Structure.** The perspectival resolution of Wigner's Friend (Sections M.6.1–M.6.4) and the CC hypothesis (Section 9) share a common mathematical foundation:
-
-| Component | Role in Wigner's Friend | Role in CC |
-|-----------|------------------------|------------|
-| Perspectival State $S_{(s)}(t)$ | Indexes actuality to perspectives | Provides substrate for context-dependent dynamics |
-| Perspective Space $\Sigma$ | Houses transformation laws between observers | Defines manifold on which $G_{\text{persp}}$ acts |
-| Transition Kernel $G_{\text{persp}}$ | Ensures consistency upon interaction | Provides entry point for CC modulation via $N$ |
-| 'Evolve' Process | Universal actualization mechanism | Target of CC influence |
-| Interaction Context $N$ | Determines measurement basis | Modulated by $\mathcal{M}(\text{context}_S)$ |
-
-This unity reflects the deeper coherence of the PU framework: the same structures that resolve interpretive puzzles in quantum foundations also generate the framework's novel empirical predictions.
+Theorems 39, 39a, and 51 constrain a nominated response after it exists; they do not construct its carrier, sign, or magnitude. Appendix L supplies conditional electromagnetic and gravitational carrier models but derives no universal dominance ratio for an aggregate. Thus perspective dynamics provides a mathematical interface for the CC hypothesis, not its physical realization. G9CC in the completion program is the finite closure obligation.
 
 ### M.6.9 Synthesis
 
@@ -805,11 +774,11 @@ The perspectival resolution of quantum measurement represents not a retreat from
 
 The key elements of the resolution are:
 
-1. **Complete state specification** includes perspective: $S_{(s)}(t) = (|\psi(t)\rangle, s)$
+1. **Complete operational state specification** includes both the density operator and the registered perspective: $S_{(s)}(t)=(\rho(t),s)$.
 
 2. **Actuality is perspective-relative**: Outcomes are actual relative to the perspective participating in the 'Evolve' interaction
 
-3. **Perspectives correlate through interaction**: The kernel $G_{\text{persp}}$ and its extension to joint systems (Lemma M.6.1) ensure consistency emerges dynamically
+3. **Certified readout kernels correlate perspectives**: under every hypothesis of Lemma M.6.1, the joint strong-readout law converges to a common outcome flag; normalization alone does not imply consistency.
 
 4. **Cross-perspective reasoning is certificate-governed**: Definition M.6.2 permits an actualized-record import across distinct perspectives only through a record-sharing or perspective-invariance certificate, and Lemma M.6.2a gives the corresponding normal form.
 
@@ -827,9 +796,9 @@ Sections M.2–M.5 specify the geometric substrate for perspectival dynamics: th
 
 Shannon entropy $H(X)=-\sum_xp(x)\ln p(x)$ is a functional of a specified probability distribution. Fisher information, Kolmogorov complexity, integrated-information quantities, and quantum entropies likewise require their respective mathematical inputs, and their computability depends on how those inputs are represented. The construction below defines the receiver-pattern descriptor $\mathcal P_S(E)=(\Delta Q_S,\mu_S(E),\sigma_S(E))$. Its established comparison result is non-determination of $\mu_S(E)$ by Shannon entropy on the branch of Theorem M.10.2. External evaluation is certificate-relative under Theorem M.10.5; no general computability ordering follows from aggregate complexity alone.
 
-**Definition M.10.1 (Self-Model).** Let $S$ be a predictive system with $C_{agg}(S) > C_{op}$ possessing Effective Operational Property R (Definition A.0.1). The *self-model* $\mathcal{M}_S$ is the component of $S$'s internal model $M_t$ (Axiom 2) that represents aspects of $S$ itself — its states, predictions, accuracy, and dynamics — as required by Property R. In the perspectival formalism, $\mathcal{M}_S$ encodes $S$'s internal representation of its own perspective $s \in \Sigma$ and its own predictive state $|\psi(t)\rangle$.
+**Definition M.10.1 (Self-Model).** Let $S$ be a predictive system with $C_{agg}(S)>C_{op}$ possessing Effective Operational Property R. The self-model $\mathcal M_S$ is the component of $S$'s internal model that represents its own states, predictions, accuracy, and dynamics. On the perspectival branch it encodes an internal representation of the registered perspective $s\in\Sigma$ and density operator $\rho(t)$; vector notation is restricted to the pure-state shorthand of Definition 24.
 
-**Remark M.10.1.** The definitions below apply to systems possessing Effective Operational Property R together with an operational self-model of the form specified in Definition M.10.1. They assign no SPAP-proximity value or cost law to systems outside that domain. Within the domain, Theorem M.10.3 gives an asymptotic computational lower bound only for families carrying its pattern-specific reduction certificate, and Theorem M.10.7 gives a physical reset signature only when its implementation certificate is supplied. Effective Operational Property R is therefore a domain condition, not by itself a divergence or thermodynamic-cost theorem.
+**Remark M.10.1.** The definitions below apply to systems possessing Effective Operational Property R together with an operational self-model of the form specified in Definition M.10.1. They assign no SPAP-proximity value or cost law to systems outside that domain. Within the domain, Theorem M.10.3 gives an asymptotic computational lower bound only for families carrying its pattern-specific reduction certificate, and Theorem M.10.7 gives a physical reset signature only when its implementation certificate is supplied. Effective Operational Property R is therefore a domain condition, not by itself a divergence or thermodynamic-cost theorem. A parameter $\theta_S$ is not thereby a retained content object or a complete finite-budget candidate. Any persistence claim in the complete finite-budget quotient $\sim_B$ requires a registered encoder from the parameter domain into complete candidates carrying the response, update, verification, certificate, decoder, tolerance, and cost data of Definition P.16d.0.1; equality of the raw parameter follows from equality of retained quotient classes only when the composite quotient encoder is injective on the compared domain.
 
 **Definition M.10.2 (Model-Change Decomposition on an Identifiable Fisher Stratum).** Let $E$ be a physical pattern and let $S$ have Effective Operational Property R. Assume that the retained parameter point lies on a finite-dimensional identifiable stratum on which the Fisher tensor $g_{\mathcal F_S}$ is positive definite, and assume the registered tangent splitting
 $$
@@ -952,6 +921,35 @@ C_{\mathrm{uni}}(\delta)
 $$
 for $0<\delta\le\delta_0$. Substituting $\delta_\lambda=1/\mu_{S_\lambda}(E_\lambda)$ and setting $\mu_0=1/\delta_0$ proves (M.23). A thermodynamic lower bound requires a separate implementation ledger mapping the certified computation to registered physical resets or another calibrated resource. $\square$
 
+**Corollary M.10.3a (Asymptotic Lower Exponent Without a Finite-Ladder Slope Law).**
+
+Let $\lambda_n$ be any sequence satisfying the hypotheses of Theorem M.10.3 and
+$$
+\mu_{S_{\lambda_n}}(E_{\lambda_n})\longrightarrow\infty.
+$$
+Then
+$$
+\liminf_{n\to\infty}
+\frac{
+\log C_{\mathrm{integrate}}(S_{\lambda_n},E_{\lambda_n})
+}{
+\log\mu_{S_{\lambda_n}}(E_{\lambda_n})
+}
+\ge2.
+\tag{M.23a}
+$$
+
+*Proof.* For all sufficiently large $n$, Equation (M.23) gives
+$$
+\frac{\log C_{\mathrm{integrate}}}{\log\mu}
+\ge
+2+
+\frac{\log c+\log\log\mu}{\log\mu}.
+$$
+The final quotient tends to zero as $\mu\to\infty$, proving (M.23a). ∎
+
+Equation (M.23a) is an asymptotic lower exponent. It supplies no monotonicity, derivative, or ordinary-least-squares slope on a finite ladder. On any finite ladder, a constant cost chosen above every displayed lower bound has regression slope zero while satisfying all those pointwise bounds. Equation (M.23) also supplies no cost-ratio conclusion against a second receiver unless that receiver's cost has an independently registered upper bound.
+
 **Remark M.10.4 (Cost decomposition).** If an implementation ledger supplies an additive decomposition $C_{\mathrm{process}}=C_{\mathrm{ext}}+C_{\mathrm{refl}}$ and identifies the certified integration subtask with $C_{\mathrm{refl}}$, then (M.23) bounds that reflexive component. No boundedness claim for $C_{\mathrm{ext}}$ follows from SPAP proximity alone.
 
 **Corollary M.10.3.1 (Conditional SPAP Baseline).** Suppose $\sigma_S(E)=0$ and the baseline-invariance condition
@@ -979,7 +977,7 @@ $$
 N^*(S):=\left\lceil\left(\frac{g(\alpha_{SPAP})}{D_1(S)}\right)^2\right\rceil+1.
 $$
 
-If $n_S\ge N^*(S)$, then the retained formal pattern language contains a joint diagonal challenge $E^*$ for which the constraint set in (M.18) is empty and hence $\mu_S(E^*)=\infty$ by definition. If an independent implementation certificate realizes that joint challenge as a physical pattern with the same register responses and Fisher geometry, the same conclusion holds for the realized pattern. For a scalable MPU-network product family, this conclusion applies at precisely those family members for which $n_S\ge N^*(S)$ and such an implementation certificate is supplied. No family-wide unboundedness conclusion follows from block-diagonal Fisher geometry alone unless the family also satisfies a quantitative separation condition ensuring $\sqrt{n_S}D_1(S)>g(\alpha_{SPAP})$ along an unbounded subsequence.
+If $n_S\ge N^*(S)$, then the retained formal pattern language contains a joint diagonal challenge $E^*$ for which the constraint set in (M.18) is empty and hence $\mu_S(E^*)=\infty$ by definition. If an independent implementation certificate realizes that joint challenge as a physical pattern with the same register responses and Fisher geometry, the same conclusion holds for the realized pattern. For a scalable MPU-network product family, this conclusion applies at every family member for which $n_S\ge N^*(S)$ and such an implementation certificate is supplied. No family-wide unboundedness conclusion follows from block-diagonal Fisher geometry alone unless the family also satisfies a quantitative separation condition ensuring $\sqrt{n_S}D_1(S)>g(\alpha_{SPAP})$ along an unbounded subsequence.
 
 *Proof.* The uniform register discrepancy is supplied by the register antecedent. Theorem 15 supplies the deterministic SPAP core with finite binary roles capable of storing and comparing the predicted bit and the realized bit. The independent-register hypothesis further requires that each retained register instantiate those two operational binary code states as distinct parameter values with Fisher distance $\eta_{S,j}>0$. Since the retained register family used in the construction is finite, $D_1(S)=\min_j\eta_{S,j}>0$.
 
@@ -1065,9 +1063,29 @@ Define $E^*:=E^{(N^*(S))}$. The diagonal construction of Theorem A.1.1 makes eac
 
 **Remark M.10.5 (Terminological consistency with Definition 1).** The pattern $E^*$ with $\mu_S(E^*) = \infty$ is unprocessable by $S$ at finite cost (Theorem M.10.6 below). Since $S$ cannot process $E^*$, $E^*$ does not constitute *information for $S$* under Definition 1. The perspectival profile $\mathcal{P}_S(E^*)$ characterizes the boundary of the information regime — the point at which self-referential depth exceeds the system's processing capacity — rather than an instance of information.
 
-**Corollary M.10.4.1 (Endpoint Range of SPAP Proximity).** Every predictive system $S$ with Effective Operational Property R attains the baseline value $\mu_S=1/\alpha_{SPAP}$ on purely external patterns. Every system satisfying the independent-register amplification conditions of Theorem M.10.4 also attains the boundary value $\mu_S=\infty$.
+**Corollary M.10.4.1 (Endpoint Range of SPAP Proximity).** For every retained pair $(S,E)$ satisfying Effective Operational Property R,
+$$
+\Delta M_S^{(\mathrm{self})}(E)=0,
+\qquad
+\Pi_S^{(0)}(\theta_S)=\theta_S,
+$$
+Corollary M.10.3.1 gives
+$$
+\mu_S(E)=\frac1{\alpha_{SPAP}}.
+$$
+This pointwise statement does not assert that every system realizes such a pattern. Under Theorem M.10.4's independent-register hypotheses there exists a formal boundary object $E^*$ with $\mu_S(E^*)=\infty$; a physical endpoint additionally requires that theorem's implementation certificate.
 
-*Proof.* Corollary M.10.3.1 gives $\mu_S=1/\alpha_{SPAP}$ for any pattern with $\sigma_S=0$. Theorem M.10.4 gives $\mu_S(E^*)=\infty$ for systems with enough Fisher-orthogonal deterministic SPAP registers to satisfy the derived amplification inequality. Therefore the theorem-level endpoint landscape consists of the SPAP-flat baseline and the diagonal boundary. No claim that every intermediate value in $(1/\alpha_{SPAP},\infty)$ is realized follows from continuity alone; such a continuum claim requires an additional realization theorem for admissible interpolating patterns and is not used in the endpoint obstruction. $\square$
+*Proof.* Corollary M.10.3.1 supplies the baseline for every pair satisfying its self-model and invariance premises, and Theorem M.10.4 supplies the formal boundary object under its register hypotheses. The integer
+$$
+N^*(S)
+=
+\left\lceil
+\left(
+\frac{g(\alpha_{SPAP})}{D_1(S)}
+\right)^2
+\right\rceil+1
+$$
+is a sufficient register count for the displayed proof and is not asserted to be least. Neither theorem proves convergence to the endpoint as $N\uparrow N^*(S)$ or realization of any intermediate value in $(1/\alpha_{SPAP},\infty)$. Either conclusion requires a separately registered interpolation-realization theorem. $\square$
 
 **Theorem M.10.5 (Certificate-Relative External Evaluation).** Let $A$ hold an external representation of $B$'s self-model data for a specified pattern $E$. Assume that the representation includes:
 
@@ -1194,6 +1212,109 @@ $$
 $$
 which proves the tensor inequality. $\square$
 
+**Remark M.10.9a (Distinct Perspective Metrics and Divergences).**
+
+The finite valuation pseudometric $d_{\mathcal A}$, the evidential $L^1$ metric $\Delta_{\mathcal P}$, the closure-profile discrepancies of Definition P.16b.12.8a, the flag-manifold metric $d_\Sigma$, the Wasserstein distance of the perspective-diffusion branch, the Fisher metric induced by $g_{\mathcal F_S}$, and the relative-entropy quantity $\mathcal C_{\mathrm{QRF}}$ have different carriers and types. The regularized objective of Definition M.10.10a is not itself a Wasserstein metric, and $\mathcal C_{\mathrm{QRF}}$ is a directed divergence rather than a metric. Proposition M.10.9, Corollary X.8a.1, and Corollary P.16b.11.2 supply no identification among these objects.
+
+**Definition M.10.9b (Typed Semantic--Perspective Bridge Certificate).**
+
+Let $\mathcal E_0\subseteq P$ be a declared comparison class in a Borel-registered semantic layer and define
+$$
+p\sim_\lambda q
+\quad\Longleftrightarrow\quad
+\Delta_{\mathrm{rel}}(p,q)=0.
+$$
+Write $\overline{\mathcal E}_0:=\mathcal E_0/\!\sim_\lambda$. A typed semantic--perspective bridge consists of:
+
+1. an injective registered map
+   $$
+   \bar\iota_P:\overline{\mathcal E}_0\to\Sigma;
+   $$
+2. constants $0<c_P\le C_P<\infty$ such that, for every $p,q\in\mathcal E_0$,
+   $$
+   c_P\Delta_{\mathrm{rel}}(p,q)
+   \le
+   d_\Sigma\!\left(\bar\iota_P[p],\bar\iota_P[q]\right)
+   \le
+   C_P\Delta_{\mathrm{rel}}(p,q);
+   \tag{M.10.9b.1}
+   $$
+3. a common finite shared active algebra $\mathfrak A_{\mathrm{sh}}$, faithful states
+   $$
+   \rho_{[p]}>0
+   $$
+   on that algebra representing $\bar\iota_P[p]$, and the finite frame-pair/channel ledger of Definition M.6.10a.1 for every ordered pair used;
+4. one of the following uniform alternatives for every $p,q\in\mathcal E_0$: either a direct directed comparison
+   $$
+   D(\rho_{[p]}\Vert\rho_{[q]})
+   \ge
+   c_P^\rightarrow
+   \overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)
+   \tag{M.10.9b.2}
+   $$
+   with $c_P^\rightarrow>0$, or a trace-separation comparison
+   $$
+   \|\rho_{[p]}-\rho_{[q]}\|_1
+   \ge
+   b_P^\rightarrow
+   \overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)
+   \tag{M.10.9b.3}
+   $$
+   with $b_P^\rightarrow>0$.
+
+The directed discrepancy is well defined on $\overline{\mathcal E}_0$, because replacing either closure profile by a $\lambda$-almost-everywhere equal profile does not change the measure of its set difference. No subset of $P$ is called open unless a compatible topology generating the registered Borel structure is separately chosen.
+
+**Proposition M.10.9c (Conditional Transport Across the Typed Bridge).**
+
+Under Definition M.10.9b,
+$$
+\Delta_{\mathrm{rel}}(p,q)\ge\epsilon
+\Longrightarrow
+d_\Sigma\!\left(\bar\iota_P[p],\bar\iota_P[q]\right)
+\ge c_P\epsilon,
+\tag{M.10.9c.1}
+$$
+and
+$$
+\Delta_{\mathrm{rel}}(p,q)\le M
+\Longrightarrow
+d_\Sigma\!\left(\bar\iota_P[p],\bar\iota_P[q]\right)
+\le C_PM.
+\tag{M.10.9c.2}
+$$
+On the direct directed branch,
+$$
+\mathcal C_{\mathrm{QRF}}
+\!\left(
+\bar\iota_P[p]\to\bar\iota_P[q]
+\right)
+\ge
+c_P^\rightarrow
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q).
+\tag{M.10.9c.3}
+$$
+On the trace-separation branch, quantum Pinsker gives
+$$
+\mathcal C_{\mathrm{QRF}}
+\!\left(
+\bar\iota_P[p]\to\bar\iota_P[q]
+\right)
+\ge
+\frac{(b_P^\rightarrow)^2}{2}
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)^2.
+\tag{M.10.9c.4}
+$$
+
+*Proof.* Equations (M.10.9c.1)--(M.10.9c.3) are the corresponding registered inequalities evaluated at $p,q$. Under (M.10.9b.3),
+$$
+D(\rho_{[p]}\Vert\rho_{[q]})
+\ge
+\frac12\|\rho_{[p]}-\rho_{[q]}\|_1^2
+$$
+gives (M.10.9c.4). ∎
+
+These are dimensionless geometric and distinguishability bounds. A physical-action conclusion additionally requires the action--entropy calibration certificate of Theorem Q.0.1, heat requires a registered reset ledger, and stress-energy requires the localization and projection hypotheses of Definition B.8. No bridge conclusion is available when the data of Definition M.10.9b are absent.
+
 The SPAP proximity $\mu_S(E)$ is a dimensionless quantity defined by the receiver-pattern integration criterion (M.18). It does not by itself specify physical heat or entropy production.
 
 - If $\sigma_S(E)=0$ and the baseline-invariance hypothesis of Corollary M.10.3.1 holds, then $\mu_S(E)=1/\alpha_{SPAP}$. No positive reset heat follows unless the implementation separately registers a reset with positive conditional entropy.
@@ -1215,16 +1336,53 @@ $$
 $$
 a contradiction. Comparisons with Fisher information, Kolmogorov complexity, quantum information, or integrated information require a separately defined reduction map and are not conclusions of this theorem. ∎
 
+**Proposition M.10.9d (Matched-Encoding Invariance and Receiver-Relative Scope).**
+
+Let $W$ be a finite serialized-pattern random variable with preregistered law $Q$, and let a fixed encoding $e$ assign a state $\rho_w$ to every realization $w$. Suppose the same realization $w$, with the same serialization and encoding, is delivered to receivers $S$ and $S'$.
+
+Every registered functional whose arguments are confined to $(Q,e,w)$ has the same value in the two arms. In particular, the arms have the same Shannon entropy $H_Q(W)$, the same fixed-machine Kolmogorov complexity $K_U(w)$, the same fixed-code length, and the same von Neumann entropy of
+$$
+\bar\rho_Q
+:=
+\sum_wQ(w)\rho_w.
+\tag{M.10.9d.1}
+$$
+Suppose additionally that a typed receiver-role certificate proves
+$$
+\Delta M_S^{(\mathrm{self})}(w)\ne0,
+\qquad
+\Delta M_{S'}^{(\mathrm{self})}(w)=0,
+\tag{M.10.9d.2}
+$$
+and that $S'$ satisfies the baseline-invariance condition of Corollary M.10.3.1. Then
+$$
+\sigma_S(w)>0,
+\qquad
+\sigma_{S'}(w)=0,
+\qquad
+\mu_{S'}(w)=\frac1{\alpha_{SPAP}}.
+\tag{M.10.9d.3}
+$$
+No value or divergence law for $\mu_S(w)$ follows without evaluating (M.18), and no measured-cost conclusion follows without Theorem M.10.3's reduction certificate and a registered implementation ledger.
+
+*Proof.* The first conclusions follow because every argument of each pattern-side functional is identical. Equation (M.10.9d.2), Definitions M.10.2 and M.10.4, and Corollary M.10.3.1 give (M.10.9d.3). The final scope sentence retains the antecedents of Theorems M.10.3 and M.10.5. ∎
+
+A register permutation alone does not establish (M.10.9d.2). The receiver-role certificate must prove that off-target addressing lies in the external Fisher component and that indirect propagation does not return a nonzero component to the self-model subspace.
+
 ### M.10.10 Measurement as Entropic Perspective Transport
 
 **Definition M.10.10a (Entropic Perspective-Transport Problem).** Let $(\Sigma,d_\Sigma)$ be the compact perspective space of Appendix M and let $c(s,s')=d_\Sigma(s,s')^2$ be the quadratic perspective-transport cost. For a measurement partition $\{P_k\}$ and pre-measurement state $\rho$, let
 $$
 p_k=\operatorname{Tr}(\rho P_k)
 $$
-be the descended Born weights of Theorem G.1.11b. Let $\mu_0$ be the pre-interaction perspective distribution and let $\nu_k$ be the normalized endpoint distribution concentrated on perspectives in which outcome $k$ is actual. Define the endpoint mixture
+be the Born weights supplied by Theorem G.1.11b. Let $\mu_0$ be the pre-interaction perspective distribution and let $\nu_k$ be the normalized endpoint distribution concentrated on perspectives in which outcome $k$ is actual. Define the prescribed endpoint mixture
 $$
 \nu=\sum_kp_k\nu_k.
 $$
+Thus the Born weights are input marginal data for this transport problem. The minimization below can select a coupling between $\mu_0$ and $\nu$ but cannot derive the already prescribed coefficients $p_k$.
+
+If the resulting endpoint kernel is used as $G_{\mathrm{persp}}(\,\cdot\,|s,k,N,\Delta t)$, the registered interaction record must fix $\mu_0^{N,\Delta t}$, $\pi_0^{N,\Delta t}$, $\varepsilon_{N,\Delta t}$, and $\nu_k^{N,\Delta t}$ before the minimization. Without those indexed inputs, the static transport problem defines no dependence on $N$ or $\Delta t$.
+
 For a finite-resolution support, or more generally when $\mu_0$ and $\nu$ admit couplings absolutely continuous with respect to a strictly positive reference coupling $\pi_0$ on $\Sigma\times\Sigma$, and for $\varepsilon>0$, the entropic perspective-transport plan is the minimizer
 $$
 \pi^\star
@@ -1267,7 +1425,7 @@ $$
 $$
 which proves (M.10.10.2). ∎
 
-**Corollary M.10.10c (Measurement Kernel as a Schrödinger Bridge).** Let
+**Corollary M.10.10c (Entropic Transport Kernel with Prescribed Born Endpoint Law).** Let
 $$
 A_k:=\operatorname{supp}\nu_k
 $$
@@ -1287,7 +1445,7 @@ G_{\mathrm{persp}}(B|s,k,N,\Delta t)
 \frac{K^\star(B\cap A_k|s)}{K^\star(A_k|s)}
 \tag{M.10.10.4}
 $$
-for $\mu_0$-almost every $s$ with $K^\star(A_k|s)>0$. On the null set where $K^\star(A_k|s)=0$, the conditional value is arbitrary because outcome $k$ has zero conditional weight from that starting perspective. Thus the path is selected by the unique entropic transport plan, while the endpoint sector weights remain exactly Born.
+for $\mu_0$-almost every $s$ with $K^\star(A_k|s)>0$. On the set where $K^\star(A_k|s)=0$, which is null for the outcome-$k$ joint measure $K^\star(A_k|s)\mu_0(ds)$, the conditional value is arbitrary because outcome $k$ has zero conditional weight from that starting perspective. Thus the endpoint coupling and its disintegrated endpoint kernel are selected by the unique static entropic transport plan, while the endpoint-sector weights remain the prescribed Born inputs. No time-indexed path measure, reference Markov process, or Schrödinger bridge is constructed by this static problem.
 
 *Proof.* Since $\Sigma$ is compact and standard Borel, the disintegration theorem gives a Markov kernel $K^\star(ds'|s)$ satisfying
 $$
@@ -1400,6 +1558,92 @@ This criterion depends on the receiver-prefix pairs $(S,R_k)$ and not on the ori
 
 *Proof.* Definition M.10.3 assigns $PP_S^{(R_k)}$ and $\mu_S(R_k)$ from the candidate update induced by the accumulated prefix. If $\mu_S(R_k)=\infty$, Theorem M.10.6 shows that no $PP<\alpha_{SPAP}$ satisfies (M.18), contradicting the stated admissibility criterion. Hence every admissible prefix has finite $\mu_S(R_k)$. The formula (M.18) contains $S$ and $R_k$ but no temporal-origin label $\tau$, proving origin-label independence. The final two conclusions are direct applications of Theorems M.10.3 and M.10.6 with their reduction hypotheses retained. ∎
 
+**Protocol M.10.12 (Matched-Encoding Yoked-Receiver Audit).**
+
+Let $n\mapsto(S_n,S_n',W_n)$ be a preregistered family of finite classical pattern experiments. For each $n$, the same realized serialization of $W_n$ is delivered to both receivers. An optional crossed extension introduces target labels $T\in\{0,1\}$ and patterns $W_{nT}$, with every realized $W_{nT}$ delivered to both receiver arms. A matched-encoding audit must register before cost data are inspected:
+
+1. the serialization, sampling law, and encoding, with equality of the realized input verified across the two arms;
+2. a common operation-count unit and calibrated meter, together with restored initial-state snapshots or an explicit carryover model;
+3. a typed receiver-role certificate of the form (M.10.9d.2), including a no-leakage proof for indirect updates;
+4. Theorem M.10.5 model-access and decision certificates, obtained independently of the cost measurements;
+5. a *finite-proximity ladder certificate*
+   $$
+   \frac1{\alpha_{SPAP}}
+   \le
+   \mu_{S_n}(W_n)<\infty,
+   \qquad
+   \mu_{S_n}(W_n)\longrightarrow\infty;
+   \tag{M.10.12.1}
+   $$
+6. the uniform pattern-specific reduction certificate of Theorem M.10.3 for the treatment arm;
+7. if a ratio or subtractive divergence is claimed, an independent control-cost certificate
+   $$
+   C_{\mathrm{integrate}}(S_n',W_n)\le K
+   \tag{M.10.12.2}
+   $$
+   with one finite $K$ for the registered family;
+8. for a crossed receiver-target claim, randomized target and receiver labels together with role certificates in both target directions; every audit must include an exchange-isomorphism check for instruction semantics, address resolution, memory locality, cross-talk, and order effects.
+
+Theorem M.10.4 does not supply item 5. Its endpoint object has $\mu=\infty$ and is not a completed finite-cost integration datapoint.
+
+**Proposition M.10.12a (Conditional Divergence of the Yoked Cost Contrast).**
+
+Assume Protocol M.10.12, including (M.10.12.1)--(M.10.12.2). Define
+$$
+D_n
+:=
+C_{\mathrm{integrate}}(S_n,W_n)
+-
+C_{\mathrm{integrate}}(S_n',W_n).
+\tag{M.10.12.3}
+$$
+Then, for all sufficiently large $n$,
+$$
+D_n
+\ge
+c\log\mu_{S_n}(W_n)\,
+\mu_{S_n}(W_n)^2
+-K,
+\tag{M.10.12.4}
+$$
+and therefore
+$$
+D_n\longrightarrow\infty.
+\tag{M.10.12.5}
+$$
+If additionally
+$$
+0<C_{\mathrm{integrate}}(S_n',W_n)\le K,
+$$
+then the ratio
+$$
+\rho_n
+:=
+\frac{
+C_{\mathrm{integrate}}(S_n,W_n)
+}{
+C_{\mathrm{integrate}}(S_n',W_n)
+}
+$$
+satisfies
+$$
+\rho_n
+\ge
+\frac cK
+\log\mu_{S_n}(W_n)\,
+\mu_{S_n}(W_n)^2
+\longrightarrow\infty.
+\tag{M.10.12.6}
+$$
+
+*Proof.* Theorem M.10.3 and item 6 give the treatment-arm lower bound. Subtracting (M.10.12.2) gives (M.10.12.4), whose right-hand side diverges by (M.10.12.1). Under the positive-denominator condition, division by a number at most $K$ gives (M.10.12.6). ∎
+
+**Remark M.10.12b (Inference Boundary).**
+
+Identical serialization fixes only registered pattern-side functionals. It does not remove receiver state, implementation, carryover, address binding, or receiver-by-target interactions. A crossed arm swap tests fixed hardware asymmetry only when the exchange isomorphism in item 8 has been proved. A nonzero finite contrast establishes a receiver-target interaction for the registered implementation; it does not uniquely identify $\mu$, SPAP, CC, the perspectival quantum branch, gravity, or cosmology.
+
+Neither $\mu_{S_n'}=1/\alpha_{SPAP}$ nor $C_{\mathrm{refl}}(S_n',W_n)=0$ supplies (M.10.12.2), because the external cost can remain unbounded. The lower bound (M.23) supplies the asymptotic exponent of Corollary M.10.3a, not a finite-ladder regression slope. Every finite observed ladder is bounded, so finite data cannot establish observed unboundedness. A finite contradiction must instead use the all-path upper-bound audit of Corollary B.2.2. Registered-reset calorimetry is a separate secondary branch requiring Theorem M.10.7's reset-count and conditional-entropy data.
+
 **Table M.6.10.1: Scoped comparison of information quantities.**
 
 | Quantity | Mathematical input | Dependence and bounds | Computational or physical-cost scope |
@@ -1418,15 +1662,19 @@ This criterion depends on the receiver-prefix pairs $(S,R_k)$ and not on the ori
 | Theorem M.10.1 | Perspectival dependence | Def M.10.2, M.10.4 |
 | Theorem M.10.2 | Content dependence (Shannon-decoupled) | Def M.10.4 |
 | Theorem M.10.3 | Certificate-relative asymptotic integration complexity | Corollary B.2.1 reduction certificate; Theorem B.2 |
+| Corollary M.10.3a | Asymptotic lower exponent at least two, with no finite-ladder slope implication | Theorem M.10.3 |
 | Theorem M.10.4 | Existence of $\mu_S = \infty$ on the independent-register amplification construction | SPAP diagonal; uniform Fisher-orthogonal $N$-register amplification |
 | Theorem M.10.5 | Certificate-relative external evaluation | Effective model access and decision procedures; optional insulation certificate |
 | Theorem M.10.6 | Boundary of the certified integration criterion | Equation (M.18); pattern-specific reduction certificate for divergence |
 | Theorem M.10.7 | Conditional registered-reset signature | Theorem M.10.3; implementation reset-count and conditional-entropy certificates |
 | Theorem M.10.8 | Certificate-relative screening and replay bookkeeping | Theorems M.10.5 and M.10.3; specified target reset ledger for replay |
+| Proposition M.10.9 and Proposition M.10.9c | Typed local metric comparisons and certificate-relative semantic/physical transport | Registered embeddings, comparison constants, common active algebra, faithful states |
 | Theorem M.10.9 | Non-determination by Shannon entropy | Theorem M.10.2 |
+| Proposition M.10.9d | Matched encoding fixes pattern-side functionals but not receiver-relative profiles or costs | Fixed encoding; typed receiver-role and baseline certificates |
 | Theorem M.10.10b | Entropic perspective transport | Compactness, strict convexity, Born descent |
 | Theorem M.10.10d | Predictive role-position equivalence and profile overclaim guard | Response-presheaf quotient, separating-profile branch |
 | Theorem M.10.11 | Perspectival simulation admissibility | Def M.10.3, Def P.16.1, Thm M.10.3, Thm M.10.6 |
+| Protocol M.10.12 and Proposition M.10.12a | Matched-encoding receiver audit and conditional cost-contrast divergence | Finite-$\mu$ ladder, reduction, bounded-control, model-access, and exchange-isomorphism certificates |
 | Theorem M.6.10a.2 | Finite frame-change cost and covariance defect | Relative entropy, data processing, Pinsker bound |
 
 ### M.6.10a Finite Perspective-Frame Backreaction
@@ -2155,10 +2403,10 @@ This appendix provides a conditional mathematical model for Perspectival State a
 - **Summary of Definition M.6.2, Lemma M.6.2a, and Theorem M.6.2b:** Actualized records may be imported across distinct perspectives only with a record-sharing or perspective-invariance certificate. Theorem M.6.2b proves that the displayed Frauchiger–Renner-style import is ill typed when both certificates are absent; it does not claim a formal analysis of every step of the complete protocol.
 - **Summary of Structural Correspondence M.6.4:** The comparison with frame-relative simultaneity is interpretive. SPAP and the registered-reset inequality do not derive the perspective space, actuality rule, transition kernel, or Lorentzian frame structure.
 
-**Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The deterministic endpoint-forcing bound $\alpha_{CC,max} < 0.5$ (Theorem 39) controls the size of those deviations; preservation of the consistency mechanism of Lemma M.6.1 requires, in addition, that the CC-modulated readout kernel remain within the strong-readout and contractive class assumed there.
+**Connection to CC.** The variable $N$ is a typed interface for Hypothesis 3. An aggregate may influence an outcome through $N$ only on an accepted G9CC response certificate constructing the causal aggregate-to-control map and changed normalized instrument. Theorems 39 and 51 then bound the supplied response; they neither prove it nonzero nor fix its effect size. Preservation of Lemma M.6.1 additionally requires the modulated readout kernel to remain in its strong-readout and contractive class.
 
 **Cost Functional (M.6.10).** The perspectival profile $\mathcal{P}_S(E)=(\Delta Q_S,\mu_S,\sigma_S)$ is a receiver-pattern descriptor on $\Sigma$. The SPAP proximity $\mu_S(E)$ records the performance level required by criterion (M.18), while $\sigma_S(E)$ records the fraction of the update assigned to the self-model subspace. On an asymptotic family carrying the reduction certificate of Theorem M.10.3, $\mu_{S_\lambda}(E_\lambda)\to\infty$ gives the certified computational lower bound (M.23). Purely external patterns attain $\mu_S(E)=1/\alpha_{SPAP}$ only under the baseline-invariance hypothesis of Corollary M.10.3.1; neither statement alone fixes physical heat. External evaluation and finite-family screening require the effective model-access, decision, and optional insulation certificates of Theorems M.10.5 and M.10.8. A replay penalty is available only for an implementation defined to reproduce a specified target reset ledger, with nonnegative overhead imposed by that accounting convention. Theorem M.10.9 proves that $\mu_S(E)$ is not determined by Shannon entropy alone; comparisons with other information quantities require separately defined reduction maps.
 
-**Synthesis.** The perspectival formalism achieves mathematical precision for the 'Evolve' process, resolves foundational paradoxes by explicit perspective tracking, represents memory, causal-order, post-selection, and weak-probe histories through finite ND-RID process tensors (Definition M.6.14a; Theorem M.6.14b; Corollaries M.6.14c–M.6.14d), and generates empirical predictions through the CC mechanism. The resolution generalizes realism rather than retreating from it: the MPU network remains unified and objective, while descriptions exhibit the perspective-relativity, finite-record conditioning, and thermodynamic irreversibility demanded by SPAP together with the finite update-cost bounds.
+**Synthesis.** On its declared instrument and perspective-kernel premises, the formalism types `Evolve` records and represents memory, causal-order, post-selection, and weak-probe histories through finite process tensors. It proves the stated cross-perspective import obstruction, not a resolution of every foundational protocol. The CC variable $N$ is a conditional empirical interface whose physical realization remains G9CC. The framework thereby supplies a coherent branch model while retaining the independent carrier, actualization, thermodynamic, and realization obligations.
 
 **Causality terminology rule.** Every endpoint, bias-strength, gravity-backreaction, or zero-error bound in this appendix is weaker than operational causality. Postulate 2 means exact pre-lightcone context independence by Theorem 39c; a late-randomized Bob-marginal shift lies outside that branch.

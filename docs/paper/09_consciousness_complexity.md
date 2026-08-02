@@ -284,7 +284,7 @@ Thus this specialization permits $\operatorname{TV}(p,q)\le1/2$ and cannot estab
 
 **9.4 Proposed Mechanism of CC Influence**
 
-Having defined Consciousness Complexity (CC) operationally (Definition 30) as an emergent biasing capability (Theorem 34), we now propose a specific hypothesis for the physical mechanism through which this influence is exerted on the fundamental MPU interactions.
+Having defined Consciousness Complexity operationally in Definition 30 and proved Theorem 34's strict-improvement implication under its stated non-null-map and selector hypotheses, we now nominate a physical mechanism for a possible influence on MPU interactions.
 
 **9.4.1 Hypothesis 3 (Hyp 3): CC Influence Mechanism**
 
@@ -293,7 +293,7 @@ The operational Consciousness Complexity CC(S) (Definition 30) of an MPU aggrega
 1.  **Internal State as Context ($\mathrm{context}_S$):** The aggregate's internal state providing context is formally the **context state $\mathrm{context}_S(t)$** (defined via the minimal sufficient statistic construction in Appendix L, Definition L.1). Operationally, it represents the coarse-grained, predictively sufficient slice of the aggregate state $\rho_{agg}(t)$ relevant to influencing local ND-RID within available resources.
 2.  **Physical Manifestation of Context:** $\mathrm{context}_S(t)$ manifests physically through properties like the reduced density operator, entanglement structure, patterns in the coarse-grained MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B), or emergent curvature patterns.
 3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) are hypothesized to act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Appendix L Equations (L.88) and (L.90)) of the underlying 'Evolve'/ND-RID process. A candidate controlled AC-Stark pathway uses context-conditioned classical fields to shift MPU level splittings and thereby alter effective jump rates. This candidate requires a specified control Hamiltonian, source geometry, target polarizability and detuning, coherence window, noise model, and likelihood map from the induced dynamics to the retained outcome probabilities. The mapping $\mathcal M:\mathcal C_{ctx}\to\mathcal P_{control}$ must belong to the admissible class of Theorem L.1 and satisfy its declared continuity, compactness, stability, and cost-benefit hypotheses. Appendix L supplies this conditional optimization framework; it does not determine a universal electromagnetic-to-gravitational channel ratio. Appendix S supplies a self-limitation model only on its registered power-law, retained-energy, weak-field, and calibrated-response branches. On branches satisfying both the strict-improvement antecedent of Theorem 34 and the relevant implementation certificates, the selected non-null map can represent controlled bias of the retained 'Evolve' outcomes.
-4.  **Primary Locus of Observable Effect:** The principal observable consequence is hypothesized to be the biasing of probabilities associated with probabilistic amplitude actualization within the universal 'Evolve' process. This leads to measurable deviations $|\Delta P| \le \mathrm{CC}(S)$ from the baseline Born rule (Proposition 7) that would otherwise solely govern the 'Evolve' outcome probabilities in the absence of such high-complexity contextual influence.
+4.  **Candidate Locus of Observable Effect:** On a branch carrying a response-active aggregate-to-control map and a normalized target instrument, the nominated mechanism may change a registered outcome law subject to $|\Delta P|\le\mathrm{CC}(S)$. Hypothesis 3 and Definition 30 alone prove neither existence, sign, nor a nonzero effect interval, and they do not make 'Evolve' a universal physical actualization mechanism.
 5.  **Operational Nature:** CC measures this biasing capability. The link between specific content of $\mathrm{context}_S$ (e.g., intent, attention, report-induced expectation, or other retained predictive state) and bias direction is learned or selected via adaptation (driven by POP/PCE), potentially related to interpretive postulates (the Minimal Awareness interpretive convention of Section 7.1.2), but the mechanism of influence on the 'Evolve' parameters is proposed as objective physics. A semantic item such as a belief, report, or expectation enters the mechanism only through its physical instantiation inside $\mathrm{context}_S$; the truth value of the represented proposition is not itself a probability-control parameter unless it is physically available to the aggregate or apparatus.
 6.  **Implications for Locality:** Since $\mathrm{context}_S$ can involve non-local entanglement, and the CC mechanism acts by influencing local 'Evolve' events, a context change in one part of an entangled aggregate might have statistical consequences (via entanglement and the modified 'Evolve' probabilities) on 'Evolve' outcomes in space-like separated parts. This underpins the three-branch statistical-influence structure of Postulate 3; any late-randomized branch-(iii) Bob-marginal shift is a causal-branch falsifier by Corollary 39c.1, and its external regular finite-window model is analyzed within the deterministic endpoint constraint of Theorem 39, the finite-window zero-error constraint of Theorem 39a on the regular statistical branch, and the predictive-current no-loop/precision-cost gate of Theorem 39b whenever a current representation is asserted.
 7.  **Physical Realization:** The challenge lies in the mapping $\mathcal{M}: \mathrm{context}_S \to (\text{Physical Control})$ respecting POP/PCE constraints (Appendix L, Lemma L.1, Theorem L.1), which generates the physical fields or boundary conditions that modulate the 'Evolve' process, alongside the physics of the interaction channel itself (Appendix L).
@@ -340,11 +340,20 @@ D_{\mathrm{CC}}(S)
 $$
 On branches where $0\le\mathrm{CC}(S)\le1$, this reduces to $D_{\mathrm{CC}}(S)=2\arccos(1-\mathrm{CC}(S))$. A stricter Fisher-budget subbranch may impose $d_{\mathrm{FR}}(p,q)\le\mathrm{CC}(S)$; Theorem 36 records the sharper trigonometric bounds available on that subbranch. The operational probability-shift bound itself does not require the stricter Fisher-budget condition.
 
-**Covariance:** under unitary $U$,
+**Typed adjoint and covariance:** Let $\mathcal X_{\mathrm{ret}}\subseteq\mathcal B(\mathcal H)$ be the finite-dimensional complex operator span generated by the retained event algebra, assume it is closed under adjoint and contains the tested states and effects, and require $L_S:\mathcal X_{\mathrm{ret}}\to\mathcal X_{\mathrm{ret}}$ to be complex-linear and Hermiticity-preserving. Use the restricted Hilbert–Schmidt inner product $\langle X,E\rangle_{\mathrm{HS}}=\operatorname{tr}(X^\dagger E)$ and define
+$$
+K_S:=L_S^*,
+\qquad
+\operatorname{tr}\!\bigl(L_S(X)^\dagger E\bigr)
+=
+\operatorname{tr}\!\bigl(X^\dagger K_S(E)\bigr).
+$$
+For Hermitian inputs this reduces to the usual Schrödinger–Heisenberg trace duality. If $\operatorname{Ad}_U(\mathcal X_{\mathrm{ret}})=\mathcal X_{\mathrm{ret}}$ and the family $L_S$ is unitary-covariant on that retained space, taking Hilbert–Schmidt adjoints gives, for retained $\rho$ and $E$,
 $$
 L_{USU^\dagger}(U\rho U^\dagger)=U\,L_S(\rho)\,U^\dagger,\qquad
 K_{USU^\dagger}(U E U^\dagger)=U\,K_S(E)\,U^\dagger.
 $$
+Thus covariance of $K_S$ is a consequence of the declared covariance of $L_S$, not an independent unconditional assertion.
 
 **Bipartite consistency** on $\mathcal{H}_A\otimes\mathcal{H}_B$:
 $$

@@ -65,10 +65,11 @@ The following constants are derived in the main text and Appendix Z:
 |$b$ |6 |Inactive subspace dimension ($d_0 - a$) |Definition |
 |$M$ |24 |QFI interface mode count ($2ab$) |Theorem Z.5 |
 |$k$ |12 |Golay code dimension ($M/2$) on the predictive-recovery MacWilliams branch |Definition Z.13b.0; Theorem Z.13b.0a |
-|$D$ |4 |Emergent spacetime dimension |Theorem Z.11 |
+|$D$ |4 |Euclidean response-carrier dimension; any spacetime use requires the separate continuum/Lorentzian promotion certificates |Definition Z.9a; Theorems Z.10-Z.11; Corollary P.8.3 |
 |$n_G$ |12 |Gauge algebra dimension |Corollary G.8.4c|
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|Branch optimum on the imposed $c_\ell/c_d = 8/3$ normalization branch |Corollary T.34.2 (with imposed Corollary T.34.1) |
 |$g_U^2$ |$2\pi/(M\chi_U)$; $\pi/6$ when $M=24$ and $\chi_U=1/2$ |Bures-gauge holonomy coefficient on the specified calibration branch |Theorem T.39a; Theorem T.39a.2 |
+
 |$\alpha_U^{-1}$ |$2M\chi_U$; $24$ when $M=24$ and $\chi_U=1/2$ |Inverse matching-scale gauge coefficient on the same calibration branch |Theorem T.39a; Theorem T.39a.2 |
 |$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple); current theorem-level certificate interval $\varnothing_{\mathrm{cert}}$ |Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger, Theorem T.78.5 proves that no PU-internal branch package supplies them from the current framework, and Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent spectral-source class supplies no certified $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, or gauge/Higgs finite-part intervals |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 / Theorem T.78.5 / Theorem T.78.14 |
 
@@ -3153,9 +3154,10 @@ $$
 Y_{ij}=|Y_{ij}|\,e^{i\theta_{ij}^{\mathrm{Berry}}},\qquad|Y_{ij}|\propto\operatorname{Tr}(P_iP_j).
 \tag{T.41.4c.1}
 $$
-The magnitude is determined by Theorem T.41.4b; the phase $\theta_{ij}^{\mathrm{Berry}}$ is the holonomy of the retained flavor Berry connection along the chosen generation path, as in Theorems T.53–T.54 and Appendix Y. The numerical value $66.7°$ requires the additional response ansatz of Theorem T.56.
+The magnitude is determined by Theorem T.41.4b; the phase $\theta_{ij}^{\mathrm{Berry}}$ is the holonomy of the retained flavor Berry connection along the chosen generation path, as in Theorems T.53–T.54 and Appendix Y. The numerical value $66.7°$ requires the additional response ansatz of Theorem T.56. The full Berry-phased matrix does not inherit the reality or determinant orientation of its positive magnitude matrix. Any strong-CP use therefore requires a common-convention absolute full-mass determinant-line certificate, such as a positively oriented reference pair together with determinant-one full complex transport; determinant-one holonomy without the base orientation, and entrywise magnitude positivity, are insufficient.
 
 *Proof.* The probability overlap $\operatorname{Tr}(P_iP_j)$ is a gauge-invariant nonnegative real scalar, so it can determine only the magnitude $|Y_{ij}|$. A transported Yukawa section between $P_i$ and $P_j$ on the flavor bundle acquires an additional phase equal to the holonomy of the Berry connection along the generation path; this phase is gauge-invariant modulo $2\pi$ on closed loops by Lemma T.53.2 and supplies the base CKM/PMNS phase of Theorems T.53–T.54 and the Appendix Y CP-odd response datum. The numerical CKM phase $66.7°$ additionally requires the response ansatz of Theorem T.56, and baryon production additionally requires the driven gate of Theorem Y.6.1i. Combining the magnitude from Theorem T.41.4b with the Berry phase gives (T.41.4c.1). ∎
+
 
 **Definition T.41.4d (Schur-Heat Realization of the Yukawa Magnitude Kernel).** On the retained flavor boundary branch, let the quadratic predictive operator split into visible flavor-boundary and internal blocks,
 $$
@@ -5185,10 +5187,11 @@ The core counting parameters trace to the foundational derivation, while the qua
 |M |24 |Interface modes 2ab |§6.4 |
 |σ²_B |1/24 |Capacity saturation |T.41.2 |
 |α |3/2 |Hierarchy coefficient 1/(16σ²_B) |T.41.3 |
-|N_g |3 |Topological (π₂ constraint) |R.4.2 |
+|$N_g$ |$3$ |Conditional least-family selector on the declared SM15 linear-plus-cubic or SM16 linear-plus-primitive-norm family-redundancy candidate class, with a nonzero CKM-type rephasing invariant and the realized additive-monotone family-count objective |R.3.4; R.3.4a; R.3.5.1a; R.8.5b; R.8.5d |
 |d²_{32,d} |2 |$E_8$ triad (down) |T.21.9.1|
 |d²_{31,d} |4 |$E_8$ triad (down) |T.21.9.1|
 |d²_{21,d} |6 |$E_8$ triad (down) |T.21.9.1|
+
 |d²_{32,u} |4 |$E_8$ triad (up) |T.21.9.1|
 |d²_{31,u} |8 |$E_8$ triad (up) |T.21.9.1|
 |d²_{21,u} |4 |$E_8$ triad (up) |T.21.9.1|
@@ -5238,17 +5241,18 @@ On either nonzero-phase branch, the Jarlskog invariant satisfies $J\propto\sin\d
 
 ### T.22.10.4 Berry Phase Origin of CP Violation
 
-The CP-violating phases of the Standard Model are organized in this framework by two distinct mechanisms operating on the generation manifold $\mathrm{Gr}(2,8)$: a Berry-holonomy mechanism for CKM and PMNS phases (Type II CP violation in the language of Remark T.57a.1), and a separate strong-CP mechanism combining σ-invariance, PCE topological-cost selection, and a certified positive-orientation real-Yukawa determinant branch. The synthesis below identifies the mechanism in each sector:
+The CP-violating phases of the Standard Model are organized by two distinct conditional mechanisms. CKM and PMNS relative phases use the Berry-holonomy branch on $\mathrm{Gr}(2,8)$ described as Type II CP violation in Remark T.57a.1. The strong sector uses the separate Appendix K implication requiring a constructed equivariant $\sigma$-CP map, an accepted QCD gauge-topology bridge, a $\sigma$-invariant vacuum, an operative first-harmonic QCD selection functional with a globally minimizing realized vacuum, and determinant- or Pfaffian-orientation data. The synthesis below identifies the mechanism in each sector:
 
 |Observable |Berry or branch mechanism |Predicted value|Reference |
 |:--------------------|:----------------------------------------------------|:--------------|:--------------|
 |CKM base phase $\delta_{\mathrm{flat}}$ |Holonomy around $u_3 \to d_3 \to d_2 \to u_2 \to u_3$ on the minimal Berry-area branch |$70.53°$ |Theorems T.53–T.54 |
 |CKM response phase $\delta$ |Independent nonlinear response ansatz applied to the base phase |$66.7°$ conditionally |Theorem T.56 |
 |PMNS $\delta_{CP}$ |Holonomy with D₄-A₂ sector mismatch |$232.5°$ |Theorem T.24.22|
-|Strong $\bar\theta$|σ-invariance plus PCE topological-cost selection and certified real-Yukawa positive orientation |$0$ on the Appendix K branch |Theorem K.6.6; Corollary K.6.5; Theorem K.6.11 |
-**Theorem T.57a (CP from Holonomy).** *CP-violating phases arise as Berry-Simon holonomy on the generation manifold* [Berry 1984; Simon 1983].
+|Strong $\bar\theta$|Constructed equivariant $\sigma$-CP map, accepted QCD gauge-topology bridge, $\sigma$-invariant vacuum, operative first-harmonic QCD selection functional with a globally minimizing realized vacuum, and determinant- or Pfaffian-orientation certificate |$0$ modulo $2\pi$ on the complete conditional Appendix K branch |Theorem K.6.1; Proposition K.6.4; Theorems K.6.2, K.6.5-K.6.6, K.6.10b-K.6.11 |
+**Theorem T.57a (CP from Holonomy).** *On the stated flavor-bundle branch, the CKM and PMNS relative phases arise as Berry-Simon holonomy on the generation manifold; the absolute strong-sector phase is governed by the independent Appendix K certificate branch* [Berry 1984; Simon 1983].
 
 *Proof.*
+
 
 **Step 1 (Berry connection).** From Lemma T.53.1, the Berry connection on $\text{Gr}(2,8)$ is:
 $$
@@ -5267,12 +5271,15 @@ $$
 
 **Step 3 (PMNS phase).** The leptonic sector involves D₄ (charged leptons) and A₂ (neutrinos) geometries. The additional holonomy from the D₄-A₂ mismatch contributes $75°$ (Theorem T.24.22, Steps 3-4), yielding $\delta_{CP} = 232.5°$.
 
-**Step 4 (Strong CP via the σ-invariance + topological-cost + determinant-orientation branch — separate mechanism from Berry holonomy).** Strong CP is governed by a different mechanism than CKM/PMNS Berry holonomy. On the σ-symmetric attractor branch, the σ-involution (Definition K.6.3) restricts $\theta_{QCD}\in\{0,\pi\}$, and on the topological-cost branch Theorem K.6.6 selects $\theta_{QCD}=0$. The quark determinant phase is fixed only when the branch also supplies the positive-orientation real-Yukawa certificate of Corollary K.6.5, via the nonzero-path criterion of Theorem K.6.9 or the ordered heat-kernel chamber of Corollary K.6.9a.1. The Berry-holonomy identification of Steps 1-3 does not apply to the strong-CP sector; the unification claim is that all SM CP-violating phases admit geometric branch data on $\mathrm{Gr}(2,8)$, not that they share a single Berry-loop mechanism. ∎
+**Step 4 (Strong CP on the separate conditional Appendix K branch).** A constructed equivariant parameter map satisfying Theorem K.6.1 and an accepted QCD gauge-topology bridge satisfying Proposition K.6.4 identify the invariant strong-CP coordinate. A $\sigma$-invariant vacuum plus the operative global-minimizer record selects the gauge-angle representative on the first-harmonic route of Theorem K.6.6, or the all-harmonic positive-sector route of Theorem K.6.2a selects $\bar\theta=0$ directly when its stronger sector-partition hypotheses hold. Because Steps 1–3 retain Berry-phased full Yukawa matrices, the strong-CP branch must additionally supply the common-convention absolute determinant-line certificate of Theorem K.6.11, such as a positive-oriented nondegenerate reference plus determinant-one full complex flavor transport. Positive magnitude data alone do not fix the quark determinant phase. ∎
 
-**Remark T.57a.1: Type I vs Type II.** The framework distinguishes Type I CP violation (Lagrangian parameters, excluded on the σ-symmetric topological-cost branch together with a positive-orientation real-Yukawa determinant certificate in Appendix K) from Type II (Berry holonomy, permitted). This explains why $\bar\theta=0$ on the Appendix K branch while $\delta_{CKM}\ne0$.
+**Remark T.57a.1: Type I vs Type II.** The framework distinguishes Type I CP violation in absolute strong-sector parameters from Type II relative Berry holonomy. Type I vanishes only conditionally on the complete Appendix K branch carrying a constructed equivariant $\sigma$-CP map, accepted QCD gauge-topology bridge, $\sigma$-invariant vacuum, operative first-harmonic QCD selection functional with a globally minimizing realized vacuum, and determinant- or Pfaffian-orientation certificate. Type II remains permitted on its separately certified flavor-holonomy branch.
 
 ### T.22.10.5 Conditional CKM--PMNS Comparison
 
+
+
+The all-harmonic route subsumes this datum only if its constructed sector partition is explicitly a function of the full invariant $\bar\theta$, including the mass determinant line; otherwise the determinant-line gate remains independent.
 CKM and PMNS outputs may be compared only after their distinct triads, transport kernels, phases, and scale maps are registered. A shared geometric vocabulary does not make one a prediction of the other.
 
 ## T.22.11 Calibration and Validation Status
@@ -5354,9 +5361,10 @@ The backbone values are assembled from distinct structural gates:
 |5b |$\dim_{\mathbb{R}}(\text{Gr}(2,8))$|$2ab = 24$ |Attractor orbit real dimension; equals Golay $n$ and mode count $M$|Theorem Z.6.3a |
 |6 |$M$ |$2ab = 24$ |QFI interface modes |Theorem Z.5 |
 |7 |$k$ |$M/2 = 12$ |Golay code dimension on the predictive-recovery MacWilliams branch |Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13 |
-|8 |$D$ |4 |Emergent spacetime dimension |Theorem Z.11 |
+|8 |$D$ |4 |Euclidean response-carrier dimension; $3+1$ spacetime interpretation separately certificate-gated |Definition Z.9a; Theorems Z.10-Z.11; Corollary P.8.3 |
 |9 |$\sigma_B^2$ |$1/M = 1/24$ |Bures variance from capacity saturation |Lemma T.41.2 |
 |10 |$\alpha$ |$1/(16\sigma_B^2) = 3/2$|Hierarchy coefficient |Corollary T.41.3|
+
 
 **Proposition T.59** (Forked Minimal-Branch Backbone Ledger). *Assume the minimal Appendix Z Hilbert and active-projector branches, the registered binary verification quotient, the predictive-recovery MacWilliams gate of Definition Z.13b.0, and the faithful least-feasible tangent-shell contract of Definition Z.9a. Then the forked dependency graph is
 $$
@@ -7891,12 +7899,13 @@ $$
 $$
 If $\mathcal{R}_d^{(0)}=2.11$ at that truncation order, then
 $$
-\mathcal{R}_d^{\text{pred}}=2.11\cdot \frac{5}{6}=1.758.
+\mathcal{R}_d^{\text{pred}}=\frac{211}{120}\approx1.75833.
 $$
 
-**Remark T.25.6a.8: Interpretation of $s_b$ and $N_g$.** The screening factor $s_b=b/(b+1)$ encodes that one frustrated edge direction competes with $b$ inactive relaxation directions in distributing strain, while $N_g=3$ encodes coherent propagation across the generation graph in the symmetry-broken vacuum. Both are fixed by the PU point data $(a,b)=(2,6)$ and the derived generation count.
+**Remark T.25.6a.8: Interpretation of $s_b$ and $N_g$.** The screening factor $s_b=b/(b+1)$ encodes the stipulated competition between one frustrated edge direction and $b$ inactive relaxation directions in this strain model. The value $N_g=3$ is imported from the completed Appendix R family-selection branch; it is not fixed by $(a,b)=(2,6)$ alone. Consequently, the displayed correction is conditional on both the strain-response model and the accepted family-count objective.
 
 **Remark T.25.6a.9: Connection to Cabibbo mixing.** The same $A_2/D_4$ mismatch that shifts $\mathcal{R}_d$ also determines the Cabibbo angle via the vacuum position $\theta_{\text{vac}}=105.15^\circ$ (Section T.25.6.1). Both effects arise from a single geometric source: incompatibility between hexagonal (down) and cubic (up) lattice structures in the $1\leftrightarrow 2$ sector.
+
 
 #### T.25.6a.11 Uncertainty budget for the frustration correction (T1/T2/T3)
 
@@ -9608,7 +9617,7 @@ $$
 $$
 Here $\mathfrak S_{\mathrm{EW}}^{\mathrm{equiv}}$ denotes any equivalent completed spectral tuple intended to supply the same threshold or Higgs finite-part entries.
 
-Equivalently, in the current PU-internal registry,
+Equivalently, in the current PU-internal manuscript certificate ledger,
 $$
 \operatorname{Acc}_{\mathrm{cur}}(\mathfrak R_{\mathrm{RHG}})
 =
@@ -9634,7 +9643,7 @@ Z_i=1+\frac{\Delta_i}{24},
 \text{or any claimed gauge/Higgs finite part arising from an electroweak spectral source.}
 \tag{T.78.14.3}
 $$
-The corresponding registry value is $\varnothing_{\mathrm{cert}}$, meaning that no accepted certificate interval exists in the present PU-internal branch. This is a negative closure of the current source class, not a numerical interval.
+The corresponding manuscript-ledger value is $\varnothing_{\mathrm{cert}}$, meaning that no accepted certificate interval exists in the present PU-internal branch. This is a negative closure of the current source class, not a numerical interval or a populated machine-registry output.
 
 The classification exhausts the source alternatives as follows.
 

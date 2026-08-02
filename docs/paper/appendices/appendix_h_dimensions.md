@@ -2,7 +2,7 @@
 
 ## H.1 Introduction
 
-This appendix records the physical dimensions assigned to key symbols in the Predictive-Universe (PU) framework and verifies the dimensional homogeneity of its core equations. It then derives the Milgrom acceleration scale $g_{0}$—used in Appendix I—from the PU vacuum structure via the QFI linear-response bridge law, relating $g_{0}$ to the cosmological constant $\Lambda$.
+This appendix records the physical dimensions assigned to key PU symbols and verifies dimensional homogeneity. On the separately adopted QFI linear-response bridge of Definition H.0, it evaluates the conditional acceleration-scale relation between $g_0$ and $\Lambda$. Dimensional consistency and the exact algebraic reduction do not derive the bridge or identify its output with the realized Milgrom scale.
 
 Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Energy $[E]=[M][L]^{2}[T]^{-2}$ and Temperature $[\Theta]$. Boltzmann's constant $k_{B}$ carries $[E][\Theta]^{-1}$. Predictive Physical Complexity $[Complexity]$ is treated as a fundamental dimension within the PU framework, representing the quantifiable structural resources required for prediction. Dimensionless information measures (nats) are noted where relevant. Factors of $c$ and $\hbar$ are kept explicit where needed for standard physics relations, but often $c=1, \hbar=1, k_B=1$ are used in derivations for simplicity.
 
@@ -85,12 +85,12 @@ Using the dimensional assignments in Table H.1, we verify the dimensional homoge
 *   **Einstein Field Equations (Equation (76))**
     *   Equation (76): $R_{\mu\nu}$ has dimensions $[L]^{-2}$. Ricci scalar $R$ has $[L]^{-2}$. $\Lambda$ has $[L]^{-2}$. $g_{\mu\nu}$ is dimensionless metric component. $T_{\mu\nu}$ has $[E][L]^{-3}$. $G$ has $[M]^{-1}[L]^3[T]^{-2}$, $c$ has $[L][T]^{-1}$. The term $\frac{8\pi G}{c^4} T_{\mu\nu}$ must also have dimensions $[L]^{-2}$. Checking the dimensions: $\frac{[G]}{[c^4]} [T_{\mu\nu}] = \frac{[M]^{-1}[L]^3[T]^{-2}}{[L]^4[T]^{-4}} [E][L]^{-3} = [M]^{-1}[L]^{-1}[T]^{2} [E][L]^{-3}$. Using $[E]=[M][L]^2[T]^{-2}$, this becomes $[M]^{-1}[L]^{-1}[T]^{2} ([M][L]^2[T]^{-2}) [L]^{-3} = [L]^{-2}$. Each term in the EFE carries dimensions of $[L]^{-2}$. Equation is dimensionally consistent.
 
-*   **SPAP Complexity Bound (Equation (B.5))**
-    *   Equation (B.5) from Appendix B.3 gives the poly-logarithmic complexity divergence near the SPAP limit:
+*   **Certificate-Relative SPAP Complexity Bound (Equation (B.5))**
+    *   On a registered quantitative task carrying the Bernoulli reduction, independence, confidence, and operation-count certificate of Appendix B.3,
  $$
-        C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right)
+        C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right).
         $$
-$C_{\text{uni}}$ represents the unified complexity, a dimensionless measure of effective computational resources (Theorem B.2). The accuracy gap $\delta_{\rm SPAP}$ is a dimensionless probability margin. The logarithm of a dimensionless quantity is dimensionless. 
+$C_{\text{uni}}$ is the dimensionless count of the registered verification/update operations, and $\delta_{\rm SPAP}$ is the dimensionless preregistered target margin relative to the certified class-specific boundary. The logarithm therefore has a dimensionless argument. This dimensional check does not construct the boundary, identify the target with an observed score, or discharge the certificate.
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
@@ -212,7 +212,7 @@ UXU^\dagger
 $$
 In an orthonormal basis, invariance under all diagonal phase unitaries forces every off-diagonal matrix element of $X$ to vanish. Invariance under permutation unitaries forces all diagonal elements to be equal. Hence $X=cI_{d_0}$. Since
 $$
-1=\operatorname{Tr}X=c,d_0,
+1=\operatorname{Tr}X=c\,d_0,
 $$
 we have $X=I_{d_0}/d_0$. Therefore, for every rank-$r$ projector $P$,
 $$
@@ -309,14 +309,15 @@ $$
 $$
 ∎
 
-**Application:** The ADM spatial projection $\Pi_{\mathrm{sp}}$ from $D=4$ spacetime dimensions to $D-1=3$ spatial dimensions rescales the QFI quadratic form by:
+**Application:** Theorem H.2 gives the factor
 $$
 \frac{D-1}{D} = \frac{3}{4}
 $$
 
-**Physical Interpretation:** In the ADM 3+1 decomposition, the 4-acceleration has $D=4$ components, but the temporal component is constrained by $a^\mu u_\mu = 0$. Only the $(D-1)=3$ spatial components are independently observable. Since QFI is a quadratic form (metric) at $\rho_0$, the observable fraction is $(D-1)/D$.
+**Physical Interpretation:** The factor applies to a positive-definite four-dimensional QFI tangent variable with a Euclidean-rotationally isotropic registered ensemble and a rank-three projector orthogonal in that QFI metric. In Lorentzian spacetime, $a^\mu u_\mu=0$ places the four-acceleration in the three-dimensional rest space orthogonal to $u^\mu$; it does not remove one statistically isotropic Euclidean component from a four-dimensional acceleration ensemble. Therefore Theorem H.2 establishes only the Euclidean codimension-one identity unless a separate certificate supplies a positive-definite QFI/rest-space isometry, the required isotropic ensemble, and the rank-three orthogonal projection. No physical observable fraction $3/4$ follows without that certificate.
 
 #### H.4.2.5 Factor 4: Democratic Generator Normalization ($1/\sqrt{K_0} = 1/\sqrt{3}$)
+
 
 **Theorem H.1c (Democratic Generator Normalization on the Product-Mixed Register).**
 Let $Z_1,\ldots,Z_{K_0}$ be Pauli-$Z$ observables on $K_0$ qubits in the product maximally mixed state
@@ -481,32 +482,28 @@ The coefficient has no free fit parameter once the upstream PU structural data a
 
 *Proof.* Substitute the unique value of $\eta'$ from Theorem H.4.2.8b into $g_0=\eta'c^2\sqrt{\Lambda/3}$. Since $\sqrt{\Lambda/3}/\sqrt3=\sqrt\Lambda/3$, the coefficient is $(3/8)(1/3)=1/8$. The remaining response kernels require a conserved stress tensor or susceptibility map and are not arguments of the scalar bridge-law normalization. ∎
 
-### H.4.3 Numerical Prediction
+### H.4.3 Bridge-Conditional Numerical Evaluation
 
-Using $\Lambda \approx 1.1 \times 10^{-52}$ m$^{-2}$ [Planck Collaboration 2020a] and $c = 2.998 \times 10^8$ m/s:
+Adopt Definition H.0 and use $\Lambda\approx1.1\times10^{-52}\,\mathrm m^{-2}$ and $c=2.998\times10^8\,\mathrm{m\,s^{-1}}$. Then
 $$
-a_0 = c^2\sqrt{\frac{\Lambda}{3}} \approx 5.44 \times 10^{-10} \text{ m/s}^2
+a_0=c^2\sqrt{\frac{\Lambda}{3}}\approx5.44\times10^{-10}\,\mathrm{m\,s^{-2}},
 \tag{H.5}
 $$
-
-With the corresponding efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$:
+and, with $\eta'=3/(8\sqrt3)$,
 $$
-g_0
+g_0^{\mathrm{branch}}
 =
-\eta'\cdot a_0
+\eta'a_0
 =
-\frac{3}{8\sqrt3}c^2\sqrt{\frac{\Lambda}{3}}
-=
-\frac{c^2\sqrt{\Lambda}}{8}
-\approx 1.18 \times 10^{-10} \text{ m/s}^2.
+\frac{c^2\sqrt\Lambda}{8}
+\approx1.18\times10^{-10}\,\mathrm{m\,s^{-2}}.
 \tag{H.6}
 $$
-
-**Comparison with observations:** The empirical value $g_0^{\mathrm{obs}} \approx 1.2 \times 10^{-10}$ m/s$^2$ [McGaugh et al. 2016] gives:
+For the empirical central value $g_0^{\mathrm{obs}}\approx1.2\times10^{-10}\,\mathrm{m\,s^{-2}}$,
 $$
-\frac{g_0^{\mathrm{pred}}}{g_0^{\mathrm{obs}}} \approx \frac{1.18}{1.2} \approx 0.98
+\frac{g_0^{\mathrm{branch}}}{g_0^{\mathrm{obs}}}\approx0.98.
 $$
-a 2% deviation. This agreement lies within the systematic uncertainty of the empirical acceleration scale (of order $\sim 20\%$), so while encouraging, it does not yet constitute a definitive test of the framework.
+This is an arithmetic central-value comparison on the adopted bridge-law branch. It neither derives Definition H.0 nor identifies $g_0^{\mathrm{branch}}$ with the realized Milgrom scale; that identification requires an independent physical-realization certificate.
 
 
 #### H.4.3.1 Uncertainty Budget
@@ -557,9 +554,9 @@ The empirical $g_0$ inferred from galaxy data has systematic uncertainties at th
 | $\Lambda$ input (Eq. V.5) | T3 | $1.7\%$ in $g_0$ at $2\sigma$ | observational propagation |
 | Empirical $g_0$ extraction | T3 | order $20\%$ | astrophysical systematic |
 
-The $2\%$ central deviation between prediction and observation is within the empirical systematic uncertainty.
+The approximately $2\%$ central-value difference is within the quoted empirical systematic uncertainty, but this arithmetic compatibility does not validate the bridge law.
 
-**Remark H.1.** Writing $H_\Lambda = c\sqrt{\Lambda/3}$ (the de Sitter Hubble parameter) yields $a_0 = cH_\Lambda$. Since $H_\Lambda \approx H_0$, this implies $a_0 \sim cH_0$, connecting the MOND scale to the Hubble scale. The derived result $g_0 = \eta' \cdot cH_\Lambda$ with $\eta' = 3/(8\sqrt{3}) \approx 0.22$ thus connects the galactic acceleration scale directly to the cosmological constant through the PU interface geometry.
+**Remark H.1.** Writing $H_\Lambda=c\sqrt{\Lambda/3}$ gives $a_0=cH_\Lambda$. On the adopted Definition H.0 branch, $g_0^{\mathrm{branch}}=\eta'cH_\Lambda$ with $\eta'=3/(8\sqrt3)$. This supplies a candidate acceleration--vacuum relation; no realized galactic connection follows without an independently accepted observable and response certificate.
 
 **Remark H.2 (Summary of factors).** Equation (H.4b) follows by multiplying the four factors $a/d_0$, $w_{\mathrm{cmp}}(C)$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorems H.1a, H.1b, H.2, H.1c and the multiplicative structure theorem H.3 justify the mathematical factors once the structural-slot and two-copy bridge entries are adopted. Together with Proposition H.1, this yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
 
@@ -818,12 +815,14 @@ $$
 \eta' = 2 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} = \frac{3}{8\sqrt{3}} \approx 0.2165
 $$
 
-**Physical Prediction:**
+**Bridge-conditional evaluation:**
 $$
-g_0 = \eta' \cdot c^2\sqrt{\frac{\Lambda}{3}} = 1.18 \times 10^{-10}\,\mathrm{m/s^2}
+g_0=\eta'c^2\sqrt{\frac{\Lambda}{3}}
+=\frac{c^2\sqrt{\Lambda}}8
+\approx1.18\times10^{-10}\,\mathrm{m/s^2}.
 $$
 
-**Agreement with observation:** 98% (within the $\sim 20\%$ systematic uncertainty of current empirical determinations)
+The quoted value is an arithmetic evaluation after Definition H.0 and an external $\Lambda$ are supplied. Its ratio to a representative empirical central value near $1.2\times10^{-10}\,\mathrm{m/s^2}$ is approximately $0.98$; this central-value comparison is not a validation probability, uncertainty coverage statement, or derivation of the bridge.
 
 **Dependency Ledger:**
 $$

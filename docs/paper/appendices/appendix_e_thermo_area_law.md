@@ -2145,13 +2145,6 @@ $$
 $$
 A covariant light-sheet statement additionally requires the relevant geometric, focusing, caustic, overlap, and matter hypotheses. Off-equilibrium applicability requires an explicit entropy-production and time-dependent channel ledger; it does not follow from spatial SPAP alone.
 
-**Spatial-record factorization guardrail.** A boundary-rate statement for a bounded region $\Omega$ requires an independent finite record proving that all retained exterior readouts factor through declared boundary variables, with channel capacities $C_e$ and use rates $\nu_e$. Only then,
-$$
-\dot I_{\mathrm{out}}(\Omega)
-\le\sum_{e\in\partial\Omega}\nu_eC_e.
-$$
-A light-sheet version additionally needs its geometric, focusing, caustic, overlap, and matter hypotheses. Spatial SPAP alone supplies none of these entries.
-
 ### E.8.5 PU Entropy-Cone Constraints
 
 **Definition E.8.5a (Predictive Cut Entropy Vector).** Let $\mathcal N=(V,E)$ be a finite undirected predictive channel network with nonnegative edge capacities $C_e$. Let boundary regions be labeled by a finite set $\mathcal B$. For each $A\subseteq\mathcal B$, define the cut entropy
@@ -2417,7 +2410,7 @@ We now give a conditional unitary-representation theorem for a retained finite-d
 
 This section derives global unitarity from the causal and thermodynamic structure established in preceding sections. For reference, the key prior results upon which the derivation depends are:
 
-- **Summary of Hypothesis 1 (MPU Reality Model):** Physical reality, from the internal perspective, is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs). This network $\mathcal{N}$ constitutes the complete internal substrate; no external degrees of freedom are accessible to internal systems.
+- **Summary of Hypothesis 1 (Nominated MPU Reality Model):** On this nominated physical-realization branch, the internally accessible substrate is modeled as a network $\mathcal N$ of interacting Minimal Predictive Units, with no internally accessible degrees of freedom outside the registered network. This is branch data, not a consequence of SPAP, capacity finiteness, or the Cogito.
 
   *Remark (Consistency with P.5):* The closed-system assumption is consistent with the authentic simulation architecture (Appendix P.5). "No external degrees of freedom accessible to internal systems" refers to internal physical reality; external observation channels (Definition P.5.3) operate outside this substrate by construction, satisfying internal inaccessibility ($\mathbb{E}[\Delta Q \mid E; M] = 0$ for all internal procedures $M \in \mathcal{M}_{int}$) and non-intervention.
 
@@ -2484,7 +2477,7 @@ For Theorem E.9.5, internal closure supplies the absence of an external retained
 
 - Definition 26: Internal unitary evolution $U_0(\Delta t) = e^{-i\hat{H}\Delta t/\hbar}$ between interactions
 - Definition 27: 'Evolve'/ND-RID interactions between MPUs (instantiating Definition 6/A.2.2)
-- Hypothesis 1: The network $\mathcal{N}$ constitutes the complete substrate; no external degrees of freedom exist
+- Hypothesis 1: on the nominated closed-network branch, $\mathcal N$ is the complete admitted internal substrate; excluding other internally accessible degrees of freedom is a branch premise, not a derived fact about the realized universe
 
 These definitions constitute the complete dynamical specification of the framework. Any hypothetical mechanism $\mathcal{M}$ for information transfer that is not reducible to compositions of internal evolution and ND-RID interactions would, by definition, lie outside the framework's ontology.
 

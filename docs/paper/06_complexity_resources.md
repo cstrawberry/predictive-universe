@@ -154,7 +154,7 @@ on the feasible domain $C\ge C_{op}$. Assume these functions are twice different
 
 **6.1.2 Definition 15 (Def 15): Principle of Compression Efficiency (PCE)**
 
-The adaptation dynamics of systems within the PU framework are governed by the Principle of Compression Efficiency (PCE). This principle posits that complex predictive systems naturally evolve or self-organize towards configurations that optimize the trade-off between maximizing the functional utility or Meaning Potential (MP) derived from processed information—quantified by the expected improvement in predictive quality ($\Delta Q$, operationally related to achieving high PP, Definition 7) relevant to the POP (Axiom 1)—and minimizing the comprehensive Signal Cost (SC) associated with acquiring, representing, processing, updating, and utilizing that information. The Signal Cost encompasses the ongoing operational resource costs ($R(C), R_I(C)$, Definition 3, represented operationally by $\langle \hat{R} \rangle, \langle \hat{R}_I \rangle$ when acting on $\langle \hat{C}_v \rangle$) and any transient costs associated with adaptation (complexity changes, model updates). The system implicitly seeks configurations that maximize a net benefit, effectively balancing MP against SC, driving it towards states satisfying the optimal allocation criteria (Definition 14). The ultimate expression of this optimization is the PCE-Attractor.
+The Principle of Compression Efficiency declares an objective on a specified admissible comparison class: maximize registered predictive benefit while charging every registered acquisition, representation, processing, update, maintenance, and adaptation cost. It does not by itself prove that a minimizer exists or that physical dynamics reaches one. A PCE-attractor conclusion requires an explicit adaptation law together with attainment, invariance, stability, recurrence or convergence, and strictness hypotheses appropriate to that law. When those records are supplied, the objective balances Meaning Potential, quantified through registered improvements such as $\Delta Q$, against the Signal Cost entries $R(C)$ and $R_I(C)$ and their operational representatives.
 
 **Remark (Relation to PPI).** PCE supplies an explicit potential $V$ and adaptation dynamics on a declared admissible class. Existence of a global minimizer requires attainment hypotheses; uniqueness modulo symmetry, flat QFI, and capacity saturation require additional branch conditions. The phrase "PCE selects" refers to minimization subject to those stated conditions.
 
@@ -231,25 +231,29 @@ The adaptation process involves changing the system's complexity $C(t) \to C(t+1
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
-The function $PP(C, \hat{C}_{target})$ describing the achievable Predictive Performance (Definition 7) within the viable operational range $(\alpha, \beta)$ as a function of invested complexity $C \ge C_{op}$ (Equation 1) and the estimated target complexity $\hat{C}_{target}$ (Definition 21) must adhere to the following general principles, derived from operational requirements and physical limitations:
-1.  **Bounds and Diminishing Returns:** $PP(C, \hat{C}_{target})$ is bounded within the viable operational range $(\alpha, \beta)$, with
+Definition 19 specifies a branch-level analytic interpolation for a declared task, score, evaluation window, boundary coordinate $C_{op}$, and estimated target scale $\hat C_{target}$. Let $\overline{PP}$ denote its continuous analytic extension to $C=C_{op}$; the corresponding viable physical performance curve is its restriction $PP=\overline{PP}|_{C>C_{op}}$. This definition is not a model-existence or infimum-attainment theorem.
+
+1.  **Bounds and boundary value:** The image of $\overline{PP}$ for $C\ge C_{op}$ lies in $[\alpha,\beta)$, while the viable realized image of $PP$ lies in $(\alpha,\beta)$:
 $$
-PP(C_{op},\hat{C}_{target})=\alpha,\qquad \lim_{C\to\infty} PP(C,\hat{C}_{target})=\beta.
+\overline{PP}(C_{op},\hat{C}_{target})=\alpha,\qquad \lim_{C\to\infty} PP(C,\hat{C}_{target})=\beta.
 $$
-The response-law parameter $\beta$ is approached asymptotically but not reached for finite $C$ on the branch carrying Definition 19's analytic law. It is distinct from Theorem 9's certified pathwise ceiling $\beta_0$ and from any task-relative SPAP boundary; neither Theorem 9 nor PCE alone derives this response law.
+The response-law parameter $\beta$ is approached asymptotically but not reached for finite $C$ on this branch. It is distinct from Theorem 9's certified pathwise ceiling $\beta_0$ and from any task-relative SPAP boundary; neither Theorem 9 nor PCE alone derives this response law.
+
+**Same-task attainment guard.** Suppose this $PP$ is the score used in Definition 13, $\alpha$ is that task's random-baseline value, the qualifying margin is strictly positive, and a registered same-state complexity bridge sends an attained $\mu_*$ with $C_P(\mu_*)=C_{op}$ to the response-law coordinate $C=C_{op}$. Then every $\mu\in\mathcal Q$ has $PP(\mu)>\alpha$, so the displayed extension value cannot be assigned to that same-task MPU. The $\alpha$-anchored law is admissible only as a nonattained analytic-boundary interpolation or on a separately indexed task, score, evaluation-window, or complexity-coordinate branch. An attained branch requires the missing same-state bridge together with a separately specified boundary anchor greater than $\alpha$ and propagation of that anchor through its response law; no such joint package is derived here.
+
 2.  **Monotonicity with Complexity:** Performance increases with complexity investment above the baseline: $\partial PP / \partial C > 0$ for $C > C_{op}$.
 3.  **Diminishing Returns:** The marginal gain in performance decreases as complexity increases: $\partial^2 PP / \partial C^2 < 0$ for $C > C_{op}$. Achieving further improvements becomes progressively harder.
 4.  **Dependence on Relative Complexity:** Performance depends primarily on the ratio of invested complexity above baseline relative to the task difficulty, i.e., on a function of $x = (C-C_{op})/\hat{C}_{target}$. Increasing the target difficulty $\hat{C}_{target}$ for a fixed complexity $C$ decreases performance $PP$.
 
 **6.2.6 Theorem 18 (Functional Form under Exact Relative-Complexity Scaling)**
 
-Assume $\beta>\alpha$, $\hat C_{target}>0$, and exact relative-complexity scaling: there is a twice differentiable function $G:[0,\infty)\to[\alpha,\beta)$ such that
+Assume $\beta>\alpha$, $\hat C_{target}>0$, and exact relative-complexity scaling: there is a continuous function $G:[0,\infty)\to[\alpha,\beta)$, twice differentiable on $(0,\infty)$, such that on the analytic extension
 $$
-PP(C,\hat C_{target})=G(x),
+\overline{PP}(C,\hat C_{target})=G(x),
 \qquad
 x=\frac{C-C_{op}}{\hat C_{target}},
 $$
-with $G(0)=\alpha$, $\lim_{x\to\infty}G(x)=\beta$, $G'(x)>0$, and $G''(x)<0$ for $x>0$. Then
+with $G(0)=\alpha$, $\lim_{x\to\infty}G(x)=\beta$, $G'(x)>0$, and $G''(x)<0$ for $x>0$. Then, for $C>C_{op}$,
 $$
 PP(C,\hat C_{target})
 =\alpha+(\beta-\alpha)F\left(\frac{C-C_{op}}{\hat C_{target}}\right),
@@ -273,7 +277,7 @@ F'(x)=\frac{G'(x)}{\beta-\alpha}>0,
 \qquad
 F''(x)=\frac{G''(x)}{\beta-\alpha}<0.
 $$
-Substitution of the definition of $F$ gives Equation (21). ∎
+Substitution of the definition of $F$ and restriction to $C>C_{op}$ give Equation (21). ∎
 
 **6.3 Derivation of the Law of Prediction from POP / PCE**
 
@@ -281,13 +285,11 @@ The scaling principles of Definition 19 determine a class of saturation curves. 
 
 **6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation under Multiplicative Composition)**
 
-Assume Definition 19 with exact dependence on
+Assume Theorem 18 and define, on its analytic extension,
 $$
 x:=\frac{C-C_{op}}{\hat C_{target}}\ge0,
-$$
-where $\hat C_{target}>0$. Define
-$$
-g(x):=\frac{\beta-PP(C,\hat C_{target})}{\beta-\alpha}.
+\qquad
+g(x):=\frac{\beta-G(x)}{\beta-\alpha}.
 $$
 Assume additionally that
 $$
@@ -295,7 +297,7 @@ g(x_1+x_2)=g(x_1)g(x_2)
 \qquad\text{for all }x_1,x_2\ge0.
 \tag{*}
 $$
-Then there is a dimensionless constant $\kappa_{\mathrm{eff}}>0$ such that
+Then there is a dimensionless constant $\kappa_{\mathrm{eff}}>0$ such that, for every $C>C_{op}$,
 $$
 PP(C,\hat C_{\mathrm{target}})
 =\beta-(\beta-\alpha)
@@ -303,7 +305,7 @@ PP(C,\hat C_{\mathrm{target}})
 \tfrac{C-C_{op}}{\hat C_{\mathrm{target}}}\Bigr].
 \quad \text{(22)}
 $$
-For $PP\in(\alpha,\beta)$, the inverse is
+The continuous extension of (22), not a physical state on this branch, has value $\alpha$ at $C=C_{op}$. For $PP\in(\alpha,\beta)$, the inverse is
 $$
 C(PP,\hat C_{\mathrm{target}})
 =C_{op}+\frac{\hat C_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}
@@ -311,7 +313,7 @@ C(PP,\hat C_{\mathrm{target}})
 \quad \text{(23)}
 $$
 
-*Proof.* Definition 19 gives $g(0)=1$, $0<g(x)\le1$, strict decrease on $(0,\infty)$, and continuity. Positivity permits
+*Proof.* Theorem 18 gives $g(0)=1$, $0<g(x)\le1$, strict decrease on $(0,\infty)$, and continuity. Positivity permits
 $$
 h(x):=\ln g(x).
 $$
@@ -332,7 +334,7 @@ Because $g$ is strictly decreasing and $g(0)=1$, $g(1)<1$, hence $h(1)<0$. Set $
 $$
 g(x)=e^{h(x)}=e^{-\kappa_{\mathrm{eff}}x}.
 $$
-Substitution of the definitions of $g$ and $x$ gives Equation (22). Rearranging it gives
+Substitution of $G(x)=\overline{PP}(C,\hat C_{\mathrm{target}})$ and the definition of $x$, followed by restriction to $C>C_{op}$, gives Equation (22). Rearranging it on that domain gives
 $$
 e^{-\kappa_{\mathrm{eff}}(C-C_{op})/\hat C_{\mathrm{target}}}
 =\frac{\beta-PP}{\beta-\alpha},
@@ -346,12 +348,12 @@ $$
 C_s := \frac{\hat{C}_{target}}{\kappa_{\mathrm{eff}}}.
 \tag{22a}
 $$
-Then Equation (22) becomes
+Then, on the physical domain $C>C_{op}$, Equation (22) becomes
 $$
 PP(C)=\beta-(\beta-\alpha)e^{-(C-C_{op})/C_s},
 \tag{22b}
 $$
-and the inverse relation is
+and for $PP\in(\alpha,\beta)$ the inverse relation is
 $$
 C(PP)=C_{op}+C_s\ln\!\frac{\beta-\alpha}{\beta-PP}.
 \tag{22c}
@@ -375,28 +377,29 @@ $$
 $$
 Since $\Gamma_0>0$, the equilibrium equation makes the marginal-cost sum positive. Substitution followed by division by that positive sum gives Equation (22d). ∎
 
-**Corollary 19.1 (Conditional Power-Law Learning Curves on Logarithmic Complexity Budgets).** Fix a registered predictive-system branch satisfying every hypothesis of Theorem 19, with branch-fixed parameters $\alpha,\beta,C_{op},\hat C_{\mathrm{target}}$, and $\kappa_{\mathrm{eff}}$. Define $PP(N):=PP(C(N),\hat C_{\mathrm{target}})$ and assume independently that the registered positive experience coordinate $N$ and effective predictive complexity obey the exact logarithmic budget
+**Corollary 19.1 (Conditional Power-Law Learning Curves on Logarithmic Complexity Budgets).** Fix a registered predictive-system branch satisfying every hypothesis of Theorem 19, with branch-fixed parameters $\alpha,\beta,C_{op},\hat C_{\mathrm{target}}$, and $\kappa_{\mathrm{eff}}$. Define the analytic composite $\overline{PP}(N):=\overline{PP}(C(N),\hat C_{\mathrm{target}})$ for $N\ge N_0$ and its physical restriction $PP(N):=\overline{PP}(N)$ for $N>N_0$. Assume independently that the registered positive experience coordinate $N$ and effective predictive complexity obey the exact logarithmic budget
 $$
 C(N)-C_{op}=\eta_{\ell}\ln\!\bigl(N/N_0\bigr),
 \qquad N\ge N_0>0,
-\qquad \eta_{\ell}>0,
+\qquad \eta_{\ell}>0.
 \tag{22e}
 $$
-Under these joint branch hypotheses, the performance gap obeys the exact power law
+Under these joint branch hypotheses, the analytic performance gap obeys the exact power law
 $$
-\beta-PP(N)=(\beta-\alpha)\bigl(N/N_0\bigr)^{-s},
+\beta-\overline{PP}(N)=(\beta-\alpha)\bigl(N/N_0\bigr)^{-s},
 \qquad
 s=\frac{\kappa_{\mathrm{eff}}\eta_{\ell}}{\hat C_{\mathrm{target}}}>0.
 \tag{22f}
 $$
+At $N=N_0$ this is the formal boundary normalization $\overline{PP}(N_0)=\alpha$; for $N>N_0$ it is the physical $PP$ law.
 
-*Proof.* Substitute (22e) into Equation (22b), using $C_s=\hat C_{\mathrm{target}}/\kappa_{\mathrm{eff}}$ from Definition 19a:
+*Proof.* Substitute (22e) into the analytic extension of Equation (22b), using $C_s=\hat C_{\mathrm{target}}/\kappa_{\mathrm{eff}}$ from Definition 19a:
 $$
-\beta-PP(N)
+\beta-\overline{PP}(N)
 =(\beta-\alpha)\exp\!\left[-\frac{C(N)-C_{op}}{C_s}\right]
 =(\beta-\alpha)\exp\!\left[-\frac{\kappa_{\mathrm{eff}}\eta_{\ell}}{\hat C_{\mathrm{target}}}\ln(N/N_0)\right].
 $$
-Using $\exp[-s\ln(N/N_0)]=(N/N_0)^{-s}$ gives (22f). Positivity of $s$ follows from $\kappa_{\mathrm{eff}},\eta_{\ell},\hat C_{\mathrm{target}}>0$. ∎
+Using $\exp[-s\ln(N/N_0)]=(N/N_0)^{-s}$ gives (22f). Positivity of $s$ follows from $\kappa_{\mathrm{eff}},\eta_{\ell},\hat C_{\mathrm{target}}>0$. Restriction to $N>N_0$ gives the physical statement. ∎
 
 **Remark 19.1a (Interpretation of (22e)).** Equation (22e) is additional branch data; it is not implied by POP, PCE, Definition 19, or Theorem 19. On a connected differentiable range $N\ge N_0$, Equation (22e) is equivalent to the boundary condition $C(N_0)=C_{op}$ together with
 $$
@@ -408,12 +411,12 @@ throughout that range. Differentiating (22e) proves necessity, while integrating
 $$
 C(N_p)-C_{op}=\eta_p\ln\!\bigl(N_p/N_{p,0}\bigr),
 \qquad N_p\ge N_{p,0}>0,
-\qquad \eta_p>0,
+\qquad \eta_p>0.
 \tag{22g}
 $$
-Then $PP(N_p):=PP(C(N_p),\hat C_{\mathrm{target}})$ obeys
+Define $\overline{PP}(N_p):=\overline{PP}(C(N_p),\hat C_{\mathrm{target}})$ for $N_p\ge N_{p,0}$ and physical $PP(N_p):=\overline{PP}(N_p)$ for $N_p>N_{p,0}$. Then
 $$
-\beta-PP(N_p)=(\beta-\alpha)\bigl(N_p/N_{p,0}\bigr)^{-s_p},
+\beta-\overline{PP}(N_p)=(\beta-\alpha)\bigl(N_p/N_{p,0}\bigr)^{-s_p},
 \qquad
 s_p=\frac{\kappa_{\mathrm{eff}}\eta_p}{\hat C_{\mathrm{target}}}.
 \tag{22h}
@@ -424,7 +427,7 @@ C(N_d)-C_{op}=\eta_d\ln(N_d/N_{d,0}),
 \qquad N_d\ge N_{d,0}>0,
 \qquad \eta_d>0,
 $$
-define $PP(N_d):=PP(C(N_d),\hat C_{\mathrm{target}})$. The analogous identity then holds with exponent $s_d=\kappa_{\mathrm{eff}}\eta_d/\hat C_{\mathrm{target}}$. If a registered branch instead has a nonempty finite coordinate set $\mathcal I$ whose positive-coordinate complexity contributions add exactly,
+define the analogous analytic composite for $N_d\ge N_{d,0}$ and its physical restriction for $N_d>N_{d,0}$; the identity then holds with exponent $s_d=\kappa_{\mathrm{eff}}\eta_d/\hat C_{\mathrm{target}}$. If a registered branch instead has a nonempty finite coordinate set $\mathcal I$ whose positive-coordinate complexity contributions add exactly,
 $$
 C-C_{op}=\sum_{i\in\mathcal I}\eta_i\ln(N_i/N_{i,0}),
 \qquad
@@ -432,32 +435,37 @@ N_i\ge N_{i,0}>0,
 \qquad
 \eta_i>0,
 $$
-then the performance gap factorizes into
+then the analytic performance gap factorizes into
 $$
-\beta-PP
+\beta-\overline{PP}
 =
 (\beta-\alpha)
 \prod_{i\in\mathcal I}
 (N_i/N_{i,0})^{-\kappa_{\mathrm{eff}}\eta_i/\hat C_{\mathrm{target}}}.
 $$
+It is a physical $PP$ statement only where $C>C_{op}$, equivalently where at least one coordinate is strictly above its anchor.
 
-*Proof.* Direct substitution of (22g) into (22b) via Definition 19a gives (22h). The data-size and compositional statements follow from the same substitution in the additive logarithmic regime. ∎
+*Proof.* Direct substitution of (22g) into the analytic extension of (22b) via Definition 19a gives (22h). The data-size and compositional statements follow from the same substitution in the additive logarithmic regime; restricting away from the joint anchor gives the physical statements. ∎
 
-**Proposition 19.2a (Exact Finite-Record Compatibility Criterion for the Registered Power-Law Formula).** Fix $\alpha<\beta$, $N_0>0$, and exact registered observations
+**Proposition 19.2a (Exact Finite-Record Compatibility Criterion for the Registered Power-Law Formula).** Fix $\alpha<\beta$ and $N_0>0$. Take the formal analytic-boundary datum
+$$
+(N_0,P_0):=(N_0,\alpha)
+$$
+together with exact registered off-boundary observations
 $$
 (N_k,P_k),
 \qquad
-k=0,1,\ldots,m,
+k=1,\ldots,m,
 \qquad
 m\ge2,
 $$
-with
+where
 $$
 N_0<N_1<\cdots<N_m,
 \qquad
 P_k<\beta.
 $$
-Define
+Index the combined formal-and-observational record by $k=0,1,\ldots,m$ and define
 $$
 G_k:=\frac{\beta-P_k}{\beta-\alpha}>0.
 $$
@@ -479,7 +487,7 @@ s_k:=-\frac{\ln G_k}{\ln(N_k/N_0)},
 k=1,\ldots,m,
 \tag{22j}
 $$
-are all defined, positive, and equal. When these conditions hold, the common value is the unique exponent $s$.
+are all defined, positive, and equal. Here $G_0=1$, equivalently $P_0=\alpha$, checks the formal boundary normalization rather than validation data. When these conditions hold, the common value is the unique exponent $s$.
 
 *Proof.* If (22i) holds, then $G_0=1^{-s}=1$. For $k\ge1$, $N_k/N_0>1$, so taking logarithms in (22i) gives
 $$
@@ -495,9 +503,9 @@ $$
 $$
 Taking logarithms and using $\ln(N_1/N_0)>0$ gives $s=s'$. ∎
 
-Compatibility on finitely many points neither proves the formula between observations nor verifies either antecedent from which Corollary 19.1 derives it.
+Compatibility on finitely many off-boundary observations neither proves the formula between them nor verifies either antecedent from which Corollary 19.1 derives it.
 
-**Remark 19.2 (Scope and Registered Falsifier).** Corollaries 19.1-19.2 are conditional images of two independent antecedents: Theorem 19's exact multiplicative residual-composition hypothesis and an exact logarithmic map from the registered resource coordinate to effective predictive complexity. Proposition 19.2a gives the exact-record compatibility test after $\alpha$, $\beta$, $N_0$, the score, task, system or population, measurement protocol, and coordinate range have been fixed. Failure of $G_0=1$, or failure of the off-baseline $s_k$ to be defined, positive, and equal, rejects the formula on that exact record; it does not identify which antecedent failed and does not refute a whole empirical domain. With noisy observations, one joint uncertainty region, including any registered covariance, and the acceptance rule must be fixed before the holdout observations; the branch is rejected only when no common $s>0$ is compatible with that pre-registered joint region. Agreement with one power-law form does not establish equality of mechanism across carriers. Once $\alpha$, $\beta$, and $N_0$ are fixed, the curve identifies only the combination $\kappa_{\mathrm{eff}}\eta_\bullet/\hat C_{\mathrm{target}}$, not its three factors separately; all remain branch-specific unless a separate transport theorem identifies them. 
+**Remark 19.2 (Scope and Registered Falsifier).** Corollaries 19.1-19.2 are conditional images of two independent antecedents: Theorem 19's exact multiplicative residual-composition hypothesis and an exact logarithmic map from the registered resource coordinate to effective predictive complexity. Proposition 19.2a gives the exact-record compatibility test after $\alpha$, $\beta$, $N_0$, the score, task, system or population, measurement protocol, and coordinate range have been fixed. Failure of $G_0=1$ is a formal boundary-normalization failure, not empirical evidence. Failure of the off-boundary $s_k$ to be defined, positive, and equal rejects the formula on that exact observational record; it does not identify which antecedent failed and does not refute a whole empirical domain. With noisy observations, one joint uncertainty region, including any registered covariance, and the acceptance rule must be fixed before the holdout observations; the branch is rejected only when no common $s>0$ is compatible with that pre-registered joint region. Agreement with one power-law form does not establish equality of mechanism across carriers. Once $\alpha$, $\beta$, and $N_0$ are fixed, the curve identifies only the combination $\kappa_{\mathrm{eff}}\eta_\bullet/\hat C_{\mathrm{target}}$, not its three factors separately; all remain branch-specific unless a separate transport theorem identifies them.
 
 On an explicitly registered mixture evaluation, let a resource-independent fraction $f\in[0,1]$ of scored examples be diagonal cycles satisfying Theorem 11a, let $L_{\mathrm{data}}(N)$ be the conditional mean logarithmic loss on the remaining examples, and measure logarithmic score in nats. Then
 $$
@@ -583,7 +591,7 @@ where:
 2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
 
 The specific components of the driving force are:
-*   **Marginal Benefit:** The term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units $[E][T]^{-1}[\text{Complexity}]^{-1}$. From the Law of Prediction (Theorem 19), the performance gradient is:
+*   **Marginal Benefit:** On the physical Law-of-Prediction branch and at times for which $C(t)>C_{op}$, the term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units $[E][T]^{-1}[\text{Complexity}]^{-1}$. The performance gradient is
 $$
 \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)}
 = (\beta - \alpha)\left(\frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}(t)}\right)
@@ -634,7 +642,7 @@ Let $\Gamma_0>0$ be the system-level conversion factor appearing in the PCE pote
 
 **6.4.2 Proposition 3 (Complexity Adaptation Dynamics Model)**
 
-Assume $C(t)>0$, $\hat C_{target}(t)>0$, and that the rate of change of complexity $C(t)=\langle\hat C_v\rangle(t)$ is proportional to the net driving force $\Psi(t)$:
+Assume $C(t)>\max\{C_{op},K_0\}$, $\hat C_{target}(t)>0$, and that the trajectory remains in this physical response-law domain while the rate of change of complexity $C(t)=\langle\hat C_v\rangle(t)$ is proportional to the net driving force $\Psi(t)$:
 $$
 \frac{dC}{dt}=\eta_{adapt}\Psi(C(t),\hat C_{target}(t),\lambda,\Gamma_0),
 \qquad \eta_{adapt}>0.

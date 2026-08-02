@@ -25,11 +25,12 @@ Foundation I supplies the logical model-class route without using the later MPU 
 
 **Recall of Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
 
-### A.0.2 Foundation I: Logical Necessity from Predictive Structure
+### A.0.2 Foundation I: Conditional Property R from Predictive Closure Structure
 
-> **Methodological Note:** This section establishes computational capacity as a logical necessity arising from the structure of prediction itself, independent of physical implementation details. Physical realization under resource constraints is addressed subsequently in §A.0.3-A.0.5.
+> **Methodological Note:** This section proves a sufficient formal construction: Property R follows for predictive model classes satisfying the declared composition, memory, uniformity, scalability, and arithmetic-coding hypotheses. It does not claim that prediction alone supplies those hypotheses. Physical realization under resource constraints is addressed subsequently in §A.0.3-A.0.5.
 
 For a predictive model class satisfying composition closure, logical memory, uniform specification, and arbitrarily large finite memory and composition depth, the finite computational subcapacity of Property R follows without choosing a physical implementation. The construction below is logically prior to the MPU realization but conditional on those explicit structural hypotheses.
+
 
 **Proposition A.0.1 (Binary Necessity for Retained Verification Decisions)**
 The Cogito predicate has a determinate retained verification value, and every finite prediction protocol that enters a prediction-update loop through a declared acceptance set has a binary retained decision predicate. More precisely, let a finite protocol have response set $R$ and declared acceptance set $A\subseteq R$. Then
@@ -68,15 +69,16 @@ Let a finite protocol use binary predicates $V_A=\mathbf1_A$. Assume its retaine
 
 **Logical Infrastructure of Prediction**
 
-The derivation of universal computation from functional completeness requires making explicit three structural features that any persistent predictive system operating over time must possess. These are not additional postulates about physics but rather explicit Logical-Structural Assumptions characterizing what the predictive cycle entails:
+The derivation of uniform bounded computation from functional completeness requires three explicit structural hypotheses on the declared predictive model class. Adaptive prediction by itself does not entail these hypotheses: a finite-state predictor may forecast, verify, and update without composition closure, arbitrarily scalable memory, or a universal specification mechanism. The Property-R branch therefore assumes:
 
-1.  **Composition Closure:** If a system can verify prediction A and verify prediction B, it can verify compound predictions ("A and B," "A or B"). More generally, complex predictions are built compositionally from simpler components, with outputs of one verification serving as inputs to subsequent ones. This is inherent to structured prediction—models compose.
-2.  **Logical Memory:** Predictions from cycle $t$ inform cycle $t+1$. The system must maintain internal state across cycles, storing intermediate verification results for reuse. Without memory, there is no "learning" or model updating—no predictive cycle at all.
-3.  **Uniform Specification:** Models exhibit systematic, rule-based structure rather than arbitrary associations. The relationships between sub-predictions follow patterns that can be represented and manipulated formally, enabling the system to reason about its own predictive processes.
+1.  **Composition Closure:** If a member of the class can verify prediction A and verify prediction B, the class contains retained protocols for the compound predictions ("A and B," "A or B") and permits outputs of one verification to serve as inputs to subsequent ones.
+2.  **Logical Memory:** The class contains implementations that retain intermediate verification and gate results across the number of cycles required by each bounded simulation.
+3.  **Uniform Specification:** One finite rule generates the relevant model, circuit, and update descriptions from their finite codes and resource bounds.
 
-These features characterize the minimal logical infrastructure for sustained, adaptive prediction. They are not separate from the predictive structure but rather make explicit what the fundamental predictive cycle (Definition 4) requires to operate across time.
+These hypotheses characterize the computationally rich predictive class used by Theorem A.0.1. They are sufficient for that theorem and are not asserted for every sustained, adaptive, or above-chance predictor.
 
 **Theorem A.0.1 (Functional Completeness and Explicit Turing Simulation)**
+
 
 The set $\{\mathrm{NOT},\mathrm{AND},\mathrm{OR}\}$ is functionally complete. Given the Logical-Structural Assumptions of composition closure, logical memory, and uniform specification, the resulting predictive model class can simulate every finite-time computation of a Turing machine by an explicitly constructed Boolean circuit family. Thus the theorem uses a direct simulation construction, not the Church-Turing thesis as a proof step.
 
@@ -153,10 +155,11 @@ $$
 The two rows are independent. Transfer of the second row to an MPU's $C_P$ additionally requires Definition 23, Hilbert distinguishability, and Corollary 3's complexity-capacity bridge. Property R does not depend on the later MPU structures it helps analyze. The conclusion applies only to predictive model classes satisfying composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic capable of coding finite strings, circuits, and bounded computations. It establishes no unconditional claim about consciousness or about finite physical systems that lack those hypotheses.
 ### A.0.3 Foundation II: Minimal Physical Capacity
 
-Having established Property R as a logical necessity, we now address how this abstract structure manifests in physical systems with finite resources.
+Having established Property R on the stated uniform computationally rich model class, we now address how that conditional abstract structure may be represented in physical systems with finite resources.
 
 **Proposition A.0.3 (Conditional Self-Referential Carrier Capacity of an MPU)**
 Let $\mu_*$ be an MPU in the sense of Definition 23. Assume that its registered SPAP sub-dynamics satisfies (O1)–(O3) and (FC), that its eight response contexts are represented by mutually perfectly distinguishable states on a Hilbert carrier of dimension $d_0(\mu_*)$, and that
+
 $$
 C_P(\mu_*)\ge C_{cap}(\mu_*)=\log_2d_0(\mu_*).
 $$
@@ -204,7 +207,7 @@ Finally, the hypothesis that $\mu_*$ realizes the registered SPAP sub-dynamics s
 
 While $K_0$ supplies structural carrier capacity on its realization branch, reliable execution of the finite computations required for SPAP and RUD is a separate physical problem. The analysis below uses the refresh-branch premise that each relevant ND-RID implementation contains a nonzero input-independent refresh component, for which Lemma E.1 gives $f_{\mathrm{RID}}<1$, together with the protected-computation certificates stated below.
 
-The dynamics are governed by the **Prediction Optimization Problem (POP, Axiom 1)** and **Principle of Compression Efficiency (PCE, Definition 15)**, realized as stochastic gradient flow minimizing the PCE Potential $V(x)$ (Definition D.1, Appendix D). Effective prediction requires computation, often complex and self-referential. PCE mandates these computations be performed reliably and efficiently, minimizing contributions to $V(x)$ from operational costs ($V_{\text{op}}$), propagation costs ($V_{\text{prop}}$), and error-induced performance loss (reduced $V_{\text{benefit}}$).
+POP (Axiom 1) and PCE (Definition 15) nominate the comparison objective. Definition D.1 and Equation D.8 represent that objective by a stochastic gradient model only on a branch fixing a smooth state manifold $X$, metric defining $\operatorname{grad}_gV$, tangent mobility $\eta_x:T_xX\to T_xX$, coefficient domains and regularity, filtered $m$-dimensional Brownian motion, diffusion factor $\sigma_x:\mathbb R^m\to T_xX$ with $\sigma_x\sigma_x^*=2D_x$, boundary behavior, and either a Stratonovich convention or an Itô convention with the required connection/chart data, together with common unit/metering data. Any entropy-per-reset cost also requires a reset frequency, and physical power requires an energy conversion. POP and PCE alone do not construct this dynamics, prove existence or attainment of a minimizer, or prove convergence. Effective prediction additionally requires the independent protected-computation certificates below; when those and the dynamical branch data are accepted, the declared potential compares operational cost $V_{\text{op}}$, propagation cost $V_{\text{prop}}$, and predictive benefit $V_{\text{benefit}}$.
 
 **Definition A.0.1 (Effective Operational Property R)**
 Effective Operational Property R is the capability of an MPU network to execute the finite representation, simulation/reasoning, predicate-evaluation, logical-memory, Boolean-processing, and diagonal-wrapper tasks required by the declared SPAP or RUD protocol with its registered finite error bound. When this capability is physically realized through Theorem A.0.2, let $p_{\mathrm{err}}^*$ be a selected minimizer of
@@ -631,9 +634,10 @@ $$
 $$
 Mapping this basis bijectively to the standard basis of $\mathbb C^{8^n}$ gives the asserted Hilbert-space isomorphism. ∎
 
-This exponential growth provides resources for representing complex computations. A system of $n$ MPUs can represent $8^n$ distinguishable configurations, enabling encoding of arbitrarily large Gödel numbers, storage of intermediate results, and execution of deep circuits.
+This exponential growth provides finite representation capacity. A fixed network of $n$ MPUs has only $8^n$ mutually distinguishable basis configurations and therefore cannot encode arbitrarily large Gödel numbers or execute arbitrarily deep circuits by dimension counting alone. Arbitrarily large finite encodings require a scalable family with unbounded $n$; storage of intermediate results and deep-circuit execution additionally require the working-memory, gate, protection, and runtime hypotheses stated below.
 
 **Assumptions for Theorem A.0.6:** The following assumes either an accepted QEC compatibility certificate $\mathfrak C_{\mathrm{QEC}}$ for the protected network family (Definition A.0.1q) or an accepted Golay-QEC bootstrap record $\mathfrak C_{\mathrm{GQEC}}$ that discharges the same certificate entries (Definition A.0.1q.1; Theorem A.0.2a). It also assumes a universal protected gate ledger implementable via ND-RID channels and fault-tolerance threshold conditions for the recorded noise model and code family. The direct certificate or bootstrap record must supply the locality window, implementable syndrome/recovery instruments, baseline error $p_{\text{err},0}$, threshold $p_{\text{th}}$, and code-overhead ledger used in the theorem statement.
+
 
 **Theorem A.0.6 (Conditional Network Universality with Explicit Overhead Scope)**
 A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions and with sufficient additional resources for working memory, error-correction overhead, and circuit execution, can realize full Property R. More precisely:
@@ -669,55 +673,57 @@ For item 3, the accepted certificate $\mathfrak C_{\mathrm{QEC}}$, or the accept
 
 **Corollary A.0.3 (Resource Requirements for SPAP/RUD)**
 The SPAP diagonalization (Theorems A.1.1, A.1.3) requires:
-*   Representing predictor's Gödel number: $O(k \cdot m \cdot \log(k \cdot m))$ bits for a predictor with $k$ states and $m$ symbols
-*   Simulating predictor's prediction: Circuit depth $O(\mathrm{poly}(k))$
-*   Implementing NOT operation: Single gate
-*   Verification: Comparison operation, constant depth
+*   Representing a direct transition-table description: $\Theta(k \cdot m \cdot \log(k \cdot m))$ bits for a predictor with $k$ states and $m$ symbols
+*   Simulating the nominated prediction: the registered finite runtime and working-memory budget of that predictor; no depth bound in $k$ alone follows
+*   Implementing the binary diagonal complement: one logical NOT on the retained decision bit
+*   Verification: the finite comparison circuit declared by the nominated protocol
 
-Thus the representation lower bound is
+Thus this direct transition-table encoding has the sufficient description-carrier count
 $$
-n = O(k \cdot m \cdot \log(k \cdot m))
+n_{\mathrm{desc}}=\Theta(k \cdot m \cdot \log(k \cdot m))
 $$
-MPUs for description storage alone. The total MPU requirement additionally depends on working memory, error-correction overhead, and the required circuit depth. No universal numeric MPU count follows from the present derivation without a separate model for those overhead terms.
+for description storage alone. This is not a lower bound against compressed encodings. The total MPU requirement additionally depends on working memory, error-correction overhead, and the required circuit depth. No universal numeric MPU count follows from the present derivation without a separate model for those overhead terms.
 
 **Definition A.0.6 (Effective Operational Property R - Refined)**
 The MPU network possesses Effective Operational Property R when:
 1.  Network size $n$ provides sufficient representation capacity for relevant Gödel encodings
 2.  QEC Compatibility ensures baseline error below threshold ($p_{\text{err},0} < p_{\text{th}}$)
 3.  PCE optimization drives system to optimal error rate $p_{\text{err}}^* < 1/2$ for relevant computational depths
-4.  Resulting reliability enables successful execution of SPAP/RUD diagonalization arguments with high probability
+4.  Resulting reliability enables protected execution of the finite SPAP diagonal circuits and the registered-clock RID simulations used by the fixed-$\mathsf{TERM}$ reduction on the certified windows
 
 This refined definition makes explicit the network-level realization of computational richness required by the framework's core theorems.
+
 
 ### A.0.6 Synthesis: Complete Foundation for Property R
 
 **Summary of Foundations:**
 
-**Foundation I (Logical Necessity, §A.0.2):**
-*   **Source:** Predictive structure of consciousness (Predictionism Appendix P.3.4)
-*   **Derivation:** Cogito → Binary verification → Boolean operations → Functional completeness → Property R
-*   **Status:** Logical necessity, independent of physical implementation
-*   **Significance:** Establishes the Property-R computational requirement for predictive model classes satisfying the stated closure assumptions
+**Foundation I (Conditional Logical Construction, §A.0.2):**
+*   **Source:** Declared predictive closure, memory, uniformity, scalability, and arithmetic-coding hypotheses
+*   **Derivation:** Binary retained decisions + Boolean composition + logical memory + uniform scalable resources + arithmetic coding → Property R
+*   **Status:** Conditional theorem, independent of any particular physical implementation
+*   **Significance:** Establishes Property R for exactly the predictive model classes satisfying the stated hypotheses
 
 **Foundation II (Physical Instantiation, §A.0.3-A.0.5):**
 *   **Source:** MPU framework under POP/PCE dynamics with ND-RID interactions
 *   **Derivation:** Registered (O1)–(O3), (FC) three-bit context carrier plus the Hilbert and complexity-capacity bridges → independently certified POP/PCE reliability dynamics → network composition with the stated memory, coding, gate, and execution resources → Effective Operational Property R on the covered tasks and windows
 *   **Status:** Physical realization under an accepted $\mathfrak C_{\mathrm{QEC}}$ or a covered $\mathfrak C_{\mathrm{GQEC}}$ discharge route, together with Dominant Cost Convexity
-*   **Significance:** Demonstrates how logical necessity manifests in finite resource systems
+*   **Significance:** Gives a certificate-gated route by which the conditional formal construction may be represented in finite resource systems
 
 **Complementarity:** The foundations answer different questions:
-*   Logical foundation: *Why* must computational capacity exist at all?
-*   Physical foundation: *How* does it manifest under resource constraints?
+*   Logical foundation: *Which formal closure and scalability conditions suffice for Property R?*
+*   Physical foundation: *How can those conditions be represented under resource constraints?*
 
-Together, they provide complete, non-circular account of Property R in the PU framework.
+Together, they provide a non-circular, branch-resolved account of Property R when all listed hypotheses and physical certificates are satisfied.
 
 **Application to Core Theorems:**
-With Property R established through both logical necessity and physical realization, the framework's core theorems apply:
+On a model class carrying the conditional logical construction, and on a physical branch carrying the separate realization certificates, the framework's core theorems apply:
 
-*   **SPAP (Theorems A.1.1-A.1.4):** Property R enables construction of self-referential systems that predict their own state. Diagonalization proves perfect self-prediction is impossible, establishing Logical Indeterminacy (Definition 12) and fundamental limit $\alpha_{\text{SPAP}}$.
-*   **RUD (Theorems A.2.3-A.2.4):** Property R enables construction of algorithms interacting with reflexive systems. Diagonalization proves certain properties are undecidable, extending computational limits beyond halting problem to interactive contexts.
+*   **SPAP (Theorems A.1.1-A.1.4):** On a coded model class carrying the registered self-representation/evaluator, predicate-decision, Boolean post-processing, and uniform diagonal-closure hypotheses of Theorems A.1.1 and A.1.3, the corresponding diagonal systems are constructible. Diagonalization then excludes one predictor that is perfectly correct throughout that declared class, establishing Logical Indeterminacy (Definition 12). Property R without those class-closure data does not by itself construct the diagonal member. A numerical boundary $\alpha_{\mathrm{SPAP}}$ exists only for a separately registered task, score, admissible class, and quantitative certificate; the diagonal theorem alone supplies no system-independent scalar.
+*   **RUD (Theorems A.2.3-A.2.4):** A fixed terminal-reachability property is undecidable on every effectively coded pointed RID class containing the registered-clock simulations $\mathbf S_{e,w}$. The probabilistic extension assumes a computable finite runtime bound and computable complete finite support lists with rational probabilities; exact tree enumeration then gives the same halting reduction.
 
 **Physical Applicability:** On a branch carrying the optimizer, robustness, QEC, protected-gate, memory, and execution certificates of Theorems A.0.2 and A.0.6, a physical MPU network possesses Effective Operational Property R for the covered finite tasks and windows. SPAP additionally requires its diagonal-closure and nominated-predictor hypotheses, while RUD requires its computable RID and interaction-model hypotheses. The resulting conclusions constrain prediction and computation only on windows satisfying all of those conditions. These theorems do not establish dynamical convergence of an arbitrary MPU network to such a certified configuration.
+
 
 **Falsifiability:** The physical instantiation makes testable predictions. If the fundamental substrate is intrinsically non-QEC-compatible, meaning that its retained noise is fundamentally nonlocal for every protected branch, or its baseline error rates remain irreducibly above threshold for every accessible direct certificate $\mathfrak C_{\mathrm{QEC}}$ and every Golay-bootstrap certificate $\mathfrak C_{\mathrm{GQEC}}$, this would falsify the PU framework's claim that physical law emerges from predictive optimization in SPAP/RUD-capable networks. On the Golay-bootstrap subbranch, additional falsifiers are failure of the retained Golay syndrome statistics, failure of the finite syndrome/recovery maps to implement the recorded $[[23,1,7]]$ witness, or failure of the protected-window threshold inequality after the branch records are forward-locked. The framework requires that Nature's substrate supports at least one finite, below-threshold, operationally implementable protected-computation branch.
 
@@ -750,21 +756,22 @@ These four scenarios demonstrate that the core constraints are conceptually inde
 
 ### A.1.2 Theorem A.1.1 (Deterministic SPAP = Theorem 10)
 
-Let $\mathcal{M}$ be a class of predictive models implementable within the PU framework possessing Effective Operational Property R (Definition A.0.1) relative to a consistent formal system $\mathcal{F}$. There exists no single deterministic prediction function $P_f$, implementable within $\mathcal{M}$, that can guarantee perfect prediction of a nominated binary aspect $\phi(s_{t+1}) \in \{0,1\}$ of the future state for *every* possible system $S \in \mathcal{M}$ that engages in self-prediction based on $P_f$.
+Let $\mathcal M$ be a class of predictive models with Effective Operational Property R (Definition A.0.1) relative to a consistent formal system $\mathcal F$. Assume the following diagonal-closure property: for every nominated deterministic predictor $P_f$ in the class, $\mathcal M$ contains a system $S_{\mathrm{diag}}^{P_f}$ with a writable nominated bit $\phi$ and a registered protocol that (i) supplies $P_f$'s announced next-bit value $\hat\phi_{P_f,t}$ to $S_{\mathrm{diag}}^{P_f}$ before that system commits $\phi_{t+1}$ and (ii) permits the system to commit
+$$
+\phi_{t+1}=\operatorname{NOT}(\hat\phi_{P_f,t}).
+\tag{A.1}
+$$
+Then no single $P_f$ can predict $\phi(s_{t+1})$ perfectly for every system in $\mathcal M$ on that protocol.
 
-*Proof:* Assume, for contradiction, that such a perfect deterministic predictor $P_f$ exists and is implementable within $\mathcal{M}$. By Effective Operational Property R, $P_f$ can be represented and simulated reliably within the framework. Construct a system $S_{diag}$ implementable in $\mathcal{M}$ whose state includes a binary component $\phi$. $S_{diag}$ uses its computational capabilities to:
-1.  reliably simulate the predictor $P_f$ applied to its own current state $s_t$ to compute a prediction $\hat{\phi}_{P_f}$ for the value of $\phi$ in its next state $s_{t+1}$.
-2.  reliably implement the deterministic update rule:
-    $$
-    \phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})
-    \quad (\text{A.1})
-    $$
-    where $\text{NOT}(0)=1$ and $\text{NOT}(1)=0$.
-If $P_f$ were perfect for $S_{diag}$, its prediction must equal the actual outcome: $\hat{\phi}_{P_f} = \phi_{t+1}$. Substituting the system's rule (Equation A.1) gives:
+*Proof.* Suppose that $P_f$ is perfect on every system in $\mathcal M$. Apply it to the diagonal system supplied by the closure hypothesis. Perfection requires
 $$
-\hat{\phi}_{P_f} = \text{NOT}(\hat{\phi}_{P_f})
+\hat\phi_{P_f,t}=\phi_{t+1}.
 $$
-This is a logical contradiction (equivalent to $x = \neg x$). The contradiction arises from assuming a perfect predictor $P_f$ exists for $S_{diag}$. Since $S_{diag}$ is constructible and reliably executable within $\mathcal{M}$ due to Effective Operational Property R (which includes the capability to complete the necessary simulation and update within the MPU cycle time, an implicit assumption), no such universal perfect deterministic predictor $P_f$ can exist within $\mathcal{M}$. QED
+The registered update rule gives
+$$
+\phi_{t+1}=\operatorname{NOT}(\hat\phi_{P_f,t}),
+$$
+and hence $\hat\phi_{P_f,t}=\operatorname{NOT}(\hat\phi_{P_f,t})$, impossible for a Boolean value. Therefore no such universal perfect predictor exists. The theorem uses the explicit read-before-commit protocol above; it makes no unstated claim about a universal MPU cycle duration or about classes that are not closed under this diagonal construction. ∎
 
 ### A.1.3 Theorem A.1.2 (Noise Robustness - Deterministic SPAP)
 
@@ -781,36 +788,59 @@ $$
 \tag{A.2}
 $$
 
-*Proof:* Let $P(\text{correct}_t)$ be the probability that $P_f$'s prediction $\hat{\phi}_{P_f, t}$ matches the actual outcome $\phi_{t+1}$ in cycle $t$. The system $S_{noisy}$ generates an internal prediction $\hat{\phi}_t$. The actual outcome is $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ with probability $1-p_{err}$ and $\phi_{t+1} = \hat{\phi}_t$ with probability $p_{err}$.
-*   Case 1: Suppose the external predictor outputs $\hat{\phi}_{P_f, t} = \hat{\phi}_t$. Then $P_f$ is correct if the actual outcome is $\phi_{t+1} = \hat{\phi}_t$. This occurs with probability $p_{err}$.
-*   Case 2: Suppose the external predictor outputs $\hat{\phi}_{P_f, t} = \text{NOT}(\hat{\phi}_t)$. Then $P_f$ is correct if the actual outcome is $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$. This occurs with probability $1-p_{err}$.
-The external predictor $P_f$ might attempt to predict the noisy system's behavior. However, regardless of $P_f$'s strategy (which determines its output $\hat{\phi}_{P_f, t}$ relative to the internal $\hat{\phi}_t$), the maximum probability of $P_f$ being correct in any single cycle is $\max(p_{err}, 1-p_{err})$. Since $0 < p_{err} < 1/2$ is assumed, this maximum probability is $1-p_{err}$.
-
-Note that the diagonal construction guarantees a history-uniform per-cycle error bound: because $S_{noisy}$ applies NOT with probability $1-p_{err}$ and the identity with probability $p_{err}$ in each cycle independently of previous outcomes, the predictor's maximum correctness probability satisfies $\mathbb{P}(\text{correct}_t \mid h_{t-1}) \le 1-p_{err}$ for every interaction history $h_{t-1}$. (This is a consequence of the construction, not an additional assumption.) By the chain rule for conditional probabilities,
+*Proof.* For each cycle $r$, define
 $$
-P(\text{correct for } k \text{ cycles}) = \prod_{i=0}^{k-1} \mathbb{P}(\text{correct}_{t+i} \mid \text{correct}_t,\dots,\text{correct}_{t+i-1}) \le (1-p_{err})^k.
+C_r:=\{\phi_{r+1}=\hat\phi_{P_f,r}\},
 $$
-Since $p_{err} > 0$ (otherwise the system is deterministic, covered by Thm A.1.1), we have $0 < 1-p_{err} < 1$. Therefore, the limit as $k \to \infty$ is:
+and let $\mathcal G_r$ be the $\sigma$-algebra generated by the admissible history through cycle $r-1$ together with the announced prediction $\hat\phi_{P_f,r}$. The fresh-noise hypothesis is
 $$
-\lim_{k\to\infty} P(\text{correct for } k \text{ cycles}) \le \lim_{k\to\infty} (1-p_{err})^k = 0
+\mathbb P(C_r\mid\mathcal G_r)=p_{err}
 $$
-Thus, no deterministic predictor can maintain perfect accuracy indefinitely against such a noisy, self-referentially defined system, demonstrating the robustness of the SPAP limit under the history-uniform per-cycle error bound (which follows from the diagonal construction). QED
+almost surely. Put $K_0:=\Omega$ and, for $j\ge1$,
+$$
+K_j:=\bigcap_{i=0}^{j-1}C_{t+i}.
+$$
+Since $K_j\in\mathcal G_{t+j}$, the tower property gives
+$$
+\begin{aligned}
+\mathbb P(K_{j+1})
+&=
+\mathbb E\!\left[
+\mathbf 1_{K_j}\mathbb P(C_{t+j}\mid\mathcal G_{t+j})
+\right] \\
+&=
+p_{err}\mathbb P(K_j).
+\end{aligned}
+$$
+Induction from $\mathbb P(K_0)=1$ yields
+$$
+\mathbb P(K_k)=p_{err}^{k}.
+$$
+Thus the probability of remaining correct for $k$ consecutive diagonal cycles is $p_{err}^{k}$, which tends to zero because $0<p_{err}<1/2$. ∎
 
 ### A.1.4 Theorem A.1.3 (Probabilistic SPAP = Theorem 11)
 
-Let $\mathcal{M}$ be a class of predictive models implementable within the PU framework possessing Effective Operational Property R (Definition A.0.1). There exists no single probabilistic predictor $P_f: \mathcal{S} \times \mathcal{M} \rightarrow \Delta(\mathcal{S})$ implementable within $\mathcal{M}$ that can guarantee its predicted probabilities $p = P_f(\phi=1 | s_t)$ exactly match the true probability distribution $P_{actual}(\phi=1 | s_t)$ for a binary outcome $\phi$ of *every* possible system $S \in \mathcal{M}$ that engages in self-prediction based on $P_f$.
+Let $\mathcal M$ be a coded class of predictive models possessing Effective Operational Property R on the registered finite task. Assume uniform diagonal closure for every nominated binary probabilistic predictor $P_f\in\mathcal M$: the reported marginal
+$$
+p=P_f(\phi_{t+1}=1\mid S,t)
+$$
+has a finite representation for which the predicate $p>1/2$ versus $p\le1/2$ is decidable inside $\mathcal M$, and $\mathcal M$ contains a system $S_{\mathrm{diag}}^{P_f}$ that reads that report before commitment and realizes the Bernoulli law
+$$
+P_{\mathrm{actual}}(\phi_{t+1}=1)
+=
+\begin{cases}
+0,&p>1/2,\\
+1,&p\le1/2.
+\end{cases}
+\tag{A.3}
+$$
+Then no single predictor $P_f\in\mathcal M$ can assign a binary marginal that exactly matches the true marginal for every system in this declared diagonal class.
 
-*Proof:* Assume, for contradiction, that such a perfect probabilistic predictor $P_f$ exists. By Effective Operational Property R, $P_f$ can be represented and simulated reliably. Construct a system $S'_{diag}$ implementable in $\mathcal{M}$. $S'_{diag}$ uses its computational capabilities to:
-1.  reliably simulate $P_f$ applied to its current state $s_t$ to compute the predicted probability $p = P_f(\phi=1 | s_t)$ for its next binary outcome $\phi_{t+1}$.
-2.  reliably implement the rule to deterministically set the *actual* probability distribution for its next outcome:
-    $$
-    P_{actual}(\phi_{t+1}=1) = \begin{cases} 0, & \text{if } p > 0.5 \\ 1, & \text{if } p \le 0.5 \end{cases}
-    \quad (\text{A.3})
-    $$
-If $P_f$ were perfect for $S'_{diag}$, its predicted probability $p$ must equal the actual probability determined by the rule (Equation A.3): $p = P_{actual}(\phi_{t+1}=1)$.
-*   Case 1: Assume $P_f$ predicts $p > 0.5$. The rule dictates $P_{actual}(\phi_{t+1}=1) = 0$. Perfection requires $p=0$. This contradicts the initial assumption $p > 0.5$.
-*   Case 2: Assume $P_f$ predicts $p \le 0.5$. The rule dictates $P_{actual}(\phi_{t+1}=1) = 1$. Perfection requires $p=1$. This contradicts the initial assumption $p \le 0.5$.
-In both cases, the assumption of a perfect probabilistic predictor $P_f$ leads to a contradiction. Since $S'_{diag}$ is constructible and reliably executable within $\mathcal{M}$ due to Effective Operational Property R, no such universal perfect probabilistic predictor $P_f$ can exist within $\mathcal{M}$. QED
+*Proof.* Suppose that one predictor is exact throughout the class. Uniform diagonal closure supplies $S_{\mathrm{diag}}^{P_f}\in\mathcal M$ and the finite threshold decision defining (A.3). Exactness on this member requires
+$$
+p=P_{\mathrm{actual}}(\phi_{t+1}=1).
+$$
+If $p>1/2$, Equation (A.3) makes the right-hand side $0$, contradicting $p>1/2$. If $p\le1/2$, it makes the right-hand side $1$, contradicting $p\le1/2$. The two decidable cases exhaust the registered marginal representation. Hence no such universally exact predictor exists. Effective Operational Property R supplies the registered finite computation; uniform diagonal closure is the separate hypothesis that places the counter-predictive member in $\mathcal M$. ∎
 
 ### A.1.5 Theorem A.1.4 (Noise Robustness - Probabilistic SPAP)
 
@@ -890,76 +920,115 @@ For either prediction $q$, the realized next state is its negation. Hence the RI
 
 ### A.2.3 Reflexive Undecidability (RUD)
 
-Interaction with RID systems possessing Effective Operational Property R to determine certain properties can be computationally undecidable, meaning no algorithm interacting with the system can guarantee a correct answer in finite time for all systems in the class.
-
-**Theorem A.2.3 (Deterministic Reflexive Undecidability for a Terminal-Bit Property = Part of Theorem 12)**
-
-Let $\mathcal C_{DRID}$ be a computable D-RID class with Effective Operational Property R and assume it is closed under the recursion-theoretic diagonal construction below. Equip each constructed system with a designated terminal bit $b$. Let $P_{term}(S)$ mean that $b=1$ when a nominated total interactive decider halts. No total interactive algorithm can correctly decide $P_{term}(S)$ for every $S\in\mathcal C_{DRID}$ through a finite interaction sequence.
-
-*Proof (Diagonalization):*
-Assume that a total ITM $M_{decide}$ halts and correctly decides $P_{term}$ for every $S\in\mathcal C_{DRID}$. By the closure hypothesis and Kleene's Second Recursion Theorem (Kleene, 1952), construct $S_{diag}\in\mathcal C_{DRID}$ with access to its own code. Its state stores the interaction transcript and its designated terminal bit.
-$S_{diag}$'s internal logic for determining its outcome $o=V(x,y)$ and next state $x'=T(x,y,o)$ when interacted with by the *real* $M_{decide}$ (using interaction $y$) is as follows:
-1.  $S_{diag}$ uses its Property R capabilities to simulate $M_{decide}$ running on a representation of $S_{diag}$ itself ($\ulcorner S_{diag} \urcorner$), incorporating the current interaction $y$ into the simulated history.
-2.  $S_{diag}$ simulates $M_{decide}$ until it halts (which it must by assumption) and determines the output decision $d \in \{\text{Yes}, \text{No}\}$ regarding property $P(S_{diag})$.
-3.  $S_{diag}$ defines its *actual* state transformation rule $T$ based on this simulated outcome $d$:
-    *   If the simulation yields $d=\text{'Yes'}$ (predicting $P$ is True), $S_{diag}$ transitions deterministically to a next state $x'$ such that property $P(x')$ is False.
-    *   If the simulation yields $d=\text{'No'}$ (predicting $P$ is False), $S_{diag}$ transitions deterministically to a next state $x'$ such that property $P(x')$ is True.
-This rule utilizes the reflexive nature of RID (the transition $T$ depends on the outcome $o$ of interaction $y$, which in turn depends on the simulated behavior of the interactor $M_{decide}$).
-Now, consider the *real* interaction between $M_{decide}$ and $S_{diag}$.
-*   Suppose $M_{decide}$ halts after $k$ interactions and outputs "Yes", claiming $P(S_{diag})$ is True. Its decision is based on the interaction history. However, on the $k$-th interaction, $S_{diag}$ simulated this exact scenario and, because the simulated output was "Yes", it deterministically transitioned to a final state where $P$ is False. Thus, $M_{decide}$'s output is incorrect.
-*   Suppose $M_{decide}$ halts and outputs "No", claiming $P(S_{diag})$ is False. By the same logic, $S_{diag}$ simulated this and transitioned to a final state where $P$ is True. Thus, $M_{decide}$'s output is again incorrect.
-Since $M_{decide}$ must halt but produces an incorrect answer in either case, it contradicts the assumption that $M_{decide}$ correctly decides $P$ for all systems in $\mathcal{C}_{DRID}$. Therefore, no such total halting $M_{decide}$ can exist, and property $P$ is interactively undecidable for this class. QED
-
-**Theorem A.2.4 (Uniformly Bounded Non-deterministic Reflexive Undecidability = Part of Theorem 12)**
-
-Let $\mathcal C_{NDRID}$ be closed under the diagonal construction below, and assume its finite-horizon transition kernels have finite branching and rational probabilities. Fix $T_{\max}<\infty$. For every probabilistic interactive algorithm $M_{decide}'$ that halts within at most $T_{\max}$ interactions on every system in the class, there is a computable statistical property $P$ and a system $S'_{diag}\in\mathcal C_{NDRID}$ on which the algorithm's probability of a correct decision is at most $1/2$. Hence no uniformly $T_{\max}$-bounded algorithm decides every such property with confidence $1-\delta$ for any $\delta<1/2$.
-
-*Proof (Diagonalization):*
-Fix such an algorithm $M_{decide}'$. The uniform horizon and finite rational branching make every finite-transcript conditional probability used below a rational number obtained by a finite sum, so comparison with $1/2$ is decidable.
-
-Define a statistical property $P$ as follows. Fix a designated probe interaction $y_{\text{test}}$. After the interaction between $M_{decide}'$ and $S$ halts, consider the induced conditional outcome probability for the probe, $p_{\text{test}}:=\mathbb{P}(o=1 \mid y_{\text{test}}, x_{\text{final}})$. Let $P(S)$ be the statement $p_{\text{test}} > 1/2$.
-
-By Effective Operational Property R, construct an ND-RID system $S'_{diag}\in\mathcal{C}_{NDRID}$ that keeps an internal simulation of $M_{decide}'$ on input $\ulcorner S'_{diag}\urcorner$ and maintains the full interaction transcript in its state. During the interaction phase with $M_{decide}'$ (up to $T_{max}$ steps), $S'_{diag}$ responds with an outcome bit $o\in\{0,1\}$ drawn from a fixed computable distribution (e.g., $\mathbb{P}(o=1)=1/2$), independent of the branch used below, so that the transcript distribution is fully specified and computable.
-
-After each interaction step $t$, given the current transcript $h_t$ (which includes the observed interaction symbols from $M_{decide}'$), $S'_{diag}$ computes the conditional probability
+For a coded pointed deterministic RID instance $(S,x_0)$ whose state space carries a designated terminal-bit projection $\pi_b:X\to\{0,1\}$, define its registered repeated-tick trajectory by
 $$
-q_t := \mathbb{P}\bigl(M_{decide}' \text{ eventually outputs "Yes"} \mid h_t\bigr).
+x_{n+1}
+:=
+T\!\left(x_n,\mathsf{tick},V(x_n,\mathsf{tick})\right),
+\qquad
+b_n:=\pi_b(x_n),
 $$
-Because $M_{decide}'$ halts within $T_{max}$ interactions, this conditional probability is computable from $h_t$ by finite enumeration over the remaining random bits of $M_{decide}'$ and the remaining probabilistic outcomes of $S'_{diag}$ (under the fixed computable response distribution used during the interaction phase).
+and fix the terminal-reachability property
+$$
+\mathsf{TERM}(S,x_0)
+\quad\Longleftrightarrow\quad
+\exists n<\infty\text{ such that }b_n=1.
+$$
+This property, including the registered trajectory, is fixed before any decider is quantified.
 
-$S'_{diag}$ stores a flag $b_t\in\{0,1\}$ in its state, updated by
+For each Turing-machine code $e$ and input $w$, let
 $$
-b_t =
+S_{e,w}
+=
+\bigl(X_{e,w},Y,O,V,T\bigr)
+$$
+be the deterministic RID system of Definition A.2.1, and let $\mathbf S_{e,w}:=(S_{e,w},x_0)$ be its pointed instance, where
+$$
+X_{e,w}:=\operatorname{Conf}_e\times\{0,1\},
+\qquad
+Y:=\{\mathsf{tick}\},
+\qquad
+O:=\{0,1\}.
+$$
+Here $\operatorname{Conf}_e$ is the computable configuration space of $e$, $\operatorname{Step}_e$ is its total one-step transition map with halting configurations absorbing, and $\operatorname{Halt}_e(c)\in\{0,1\}$ is the decidable predicate that $c$ is halting. Set
+$$
+x_0
+:=
+\bigl(c_0(e,w),\operatorname{Halt}_e(c_0(e,w))\bigr),
+\qquad
+V((c,b),\mathsf{tick}):=b,
+$$
+and
+$$
+T((c,b),\mathsf{tick},o)
+:=
 \begin{cases}
-0, & \text{if } q_t > 1/2,\\
-1, & \text{if } q_t \le 1/2.
+(c,1),&b=1,\\
+\bigl(c',\operatorname{Halt}_e(c')\bigr),
+&b=0,\ c'=\operatorname{Step}_e(c).
 \end{cases}
 $$
-When $M_{decide}'$ halts at some (random) time $\tau\le T_{max}$, define the post-halt probe behavior of $S'_{diag}$ by setting
-$$
-\mathbb{P}(o=1 \mid y_{\text{test}}, x_{\text{final}}) =
-\begin{cases}
-1/4, & \text{if } b_\tau=0,\\
-3/4, & \text{if } b_\tau=1.
-\end{cases}
-$$
-Thus $P(S'_{diag})$ is True iff $b_\tau=1$.
+The transition is independent of $o$, and $\pi_b(c,b):=b$. Thus one registered tick performs one simulated step, and the terminal bit is absorbing.
 
-Conditioned on the transcript at halting time, $M_{decide}'$ outputs "Yes" with probability $q_\tau$ and "No" with probability $1-q_\tau$. If $q_\tau>1/2$, then $b_\tau=0$ so $P(S'_{diag})$ is False and $M_{decide}'$ is correct only when it outputs "No", with probability $1-q_\tau<1/2$. If $q_\tau\le 1/2$, then $b_\tau=1$ so $P(S'_{diag})$ is True and $M_{decide}'$ is correct only when it outputs "Yes", with probability $q_\tau\le 1/2$. Hence in all cases,
+**Theorem A.2.3 (Fixed-Property Deterministic Reflexive Undecidability = Part of Theorem 12)**
+
+Let $\mathcal C_{DRID}^{\bullet}$ be any effectively coded class of pointed RID instances containing every $\mathbf S_{e,w}$, with effective codes for the designated initial state, terminal-bit projection, verifier, and transition. No total interactive algorithm, given the code and registered interaction access, halts and correctly decides $\mathsf{TERM}(S,x_0)$ for every $(S,x_0)\in\mathcal C_{DRID}^{\bullet}$.
+
+*Proof.* The construction $(e,w)\mapsto\ulcorner\mathbf S_{e,w}\urcorner$ is effective. By induction on the tick count, the first component of the state after $n$ ticks is the configuration of $e(w)$ after $n$ steps, while $b_n=1$ exactly when a halting configuration has been reached by that time. Hence
 $$
-\mathbb{P}\bigl(M_{decide}' \text{ outputs the correct decision on } S'_{diag}\bigr)\le 1/2,
+\mathsf{TERM}(S_{e,w},x_0)
+\quad\Longleftrightarrow\quad
+e(w)\text{ halts}.
 $$
-so $M_{decide}'$ cannot be guaranteed to decide $P$ with arbitrarily high confidence for all $S\in\mathcal{C}_{NDRID}$ within finite interaction time. QED
+If a total correct interactive decider $D$ existed, compute the effective code of $\mathbf S_{e,w}$, simulate its registered interaction with $D$, and return $D$'s answer. Every requested verifier or transition response is computable from the displayed data, so this procedure would decide the halting problem. ∎
+
+**Theorem A.2.4 (Fixed-Property Uniformly Bounded Probabilistic Reflexive Undecidability = Part of Theorem 12)**
+
+Let $\mathcal C_{NDRID}^{\bullet}$ contain the pointed deterministic instances $\mathbf S_{e,w}$ as point-mass kernels. Fix a rational $0<\epsilon<1/2$. There is no probabilistic interactive algorithm $D_\epsilon$ satisfying all of the following conditions:
+
+1. at every internal or interaction node, a complete finite support list of successors and their probabilities is computable;
+2. every listed transition probability is rational;
+3. a total computable function $B(\ulcorner S,x_0\urcorner)$ bounds the total number of internal and interaction transitions before $D_\epsilon$ halts on $(S,x_0)$;
+4. for every $\mathbf S_{e,w}$, it decides $\mathsf{TERM}(S_{e,w},x_0)$ with probability at least $1/2+\epsilon$.
+
+*Proof.* Suppose $D_\epsilon$ existed. For fixed $\ulcorner\mathbf S_{e,w}\urcorner$, compute $B(\ulcorner\mathbf S_{e,w}\urcorner)$. The complete finite support lists and the total transition bound make the joint computation-and-interaction tree finite and effectively enumerable. Exact rational summation over its leaves computes
+$$
+q_{e,w}
+:=
+\mathbb P\!\left(D_\epsilon(\mathbf S_{e,w})=\mathsf{Yes}\right).
+$$
+The success guarantee implies
+$$
+\mathsf{TERM}(S_{e,w},x_0)
+\Longrightarrow
+q_{e,w}\ge\frac12+\epsilon,
+$$
+and
+$$
+\neg\mathsf{TERM}(S_{e,w},x_0)
+\Longrightarrow
+q_{e,w}\le\frac12-\epsilon.
+$$
+Comparing the exactly computed $q_{e,w}$ with $1/2$ decides whether $e(w)$ halts, contradicting Theorem A.2.3. ∎
+
+**Scope.** A fixed protected window of $N$ registered ticks decides only the bounded property
+$$
+\mathsf{TERM}_{N}(S,x_0)
+\quad\Longleftrightarrow\quad
+\exists n\le N\text{ such that }b_n=1.
+$$
+Physical use of Theorems A.2.3–A.2.4 therefore requires a scalable coded RID family that realizes every finite prefix requested during the computation of a purported total decider; no single fixed finite window realizes the unbounded reduction.
 
 ## A.3 Significance and Relation to Logical Indeterminacy
 
-* **Logical Indeterminacy:** The SPAP and RUD theorems exclude a single universally exact predictor or total uniform decider on their stated diagonal-closed classes.
+* **Logical Indeterminacy:** SPAP excludes a single universally exact predictor on its stated diagonal-closed class. RUD excludes a total uniform $\mathsf{TERM}$ decider on the stated coded terminal-simulation class, with the separately qualified bounded probabilistic extension of Theorem A.2.4.
 * **Physical Stochastic Closure:** Principle 11b requires the PPI-complete convex invariant response ledger when the registered finite reflexive map has no pure fixed point. For binary negation, Theorem 11b proves $q(\phi\mid R)=1/2$ and $H_{\mathrm{Sh}}(\Phi\mid R)=\ln2$. Principle 8.0c identifies that ledger with the registered single-run outcome probabilities; a frequency law additionally requires an i.i.d., exchangeable, or stationary-ergodic repeated-trial certificate.
 * **Quantum Reconstruction:** Principle 8.0b supplies the sharp homogeneous carrier certificate and Theorem 8.0d fixes $\mathcal H_0\cong\mathbb C^8$. Theorem 8.2 and Lemma 8.2a give quotient noncontextuality and finite additivity; Theorem 8.3 proves the Born trace rule.
 * **Complexity Costs of Prediction:** On a task class carrying the certificate $\mathfrak C_{B.2}$, Theorem 14 supplies the log-enhanced quadratic lower bound $C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})=\Omega\!\left(\log(1/\delta_{\mathrm{SPAP}})/\delta_{\mathrm{SPAP}}^{2}\right)$, so verification and update complexity on that class diverges as the gap $\delta_{\mathrm{SPAP}}$ to $\alpha_{SPAP}$ closes (Appendix B.3; Theorem B.2). Transfer of that bound to $C_P$ uses its declared domination bridge.
-*   **Limits on Interaction:** RUD theorems (A.2.3, A.2.4) formally demonstrate that interaction via ND-RID ('Evolve') is fundamentally limited in its ability to reliably extract certain types of information about the system being probed. This complements the thermodynamic channel capacity bounds ($C_{\max} < \ln d_0$) derived in Appendix E from the irreversibility ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) of ND-RID.
+*   **Limits on Interaction:** RUD theorems A.2.3-A.2.4 exclude a total uniform decider for $\mathsf{TERM}$ on the stated effectively coded pointed RID class. The probabilistic result additionally requires a computable finite runtime bound, computable complete finite support lists with rational probabilities, and fixed positive advantage. This complements the thermodynamic channel capacity bounds ($C_{\max} < \ln d_0$) derived in Appendix E from the irreversibility ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) of ND-RID.
 
 These core logical and computational limitations, derived rigorously under the assumption of Effective Operational Property R (motivated by POP/PCE dynamics), are foundational constraints shaping the emergent quantum mechanics, thermodynamics, information processing limits, and gravitational dynamics within the Predictive Universe framework.
+
 
 
 ## A.4 Formal Realizability of Property R: The LITE Construction in Peano Arithmetic
@@ -1070,31 +1139,17 @@ The LITE construction robustly demonstrates that standard Peano Arithmetic, a fo
 
 MPUs are physical entities rather than abstract arithmetical functions. The LITE construction proves that a standard arithmetical framework can realize total computable functions with bounded adaptive self-reference. It therefore supplies an existence example for the logical form used in the later diagonal arguments. Physical realization by an MPU network is the separate conditional result of Theorem A.0.2 (Conditional Effective Property R at a Certified PCE Optimum), whose optimizer, robustness, QEC, protected-gate, memory, and execution certificates are not supplied by LITE. The PU resource quantities $C_P$, $R$, and $R_I$ may be compared with LITE's bounded proof-search function $g(n)$ only at this structural level.
 
-## A.5 Complexity-Bounded Incompleteness: Predictor-Indexed Reachability Horizons in Peano Arithmetic
+## A.5 Trace-Certified Diagonal Transcripts and Live-Challenge Scope
 
-The LITE construction (§A.4) establishes that Peano Arithmetic is rich enough to host total computable functions whose definitions route through bounded proof searches about themselves. That result is an existence proof of **tractable self-reference**: LITE is total and computable (Theorem A.4.1), so the self-referential machinery it exhibits is processable as an arithmetical computation.
+The LITE construction (§A.4) establishes that Peano Arithmetic can host total computable functions whose definitions use bounded self-reference. This section separates two further objects.
 
-This section establishes the complementary phenomenon. The same formal machinery—Gödel numbering, primitive-recursive substitution, finite computation traces, and Kleene's Second Recursion Theorem (Theorem A.4.1a)—can be aimed not at producing a tractable function, but at producing a family of arithmetical proof-objects indexed by the predictor that would have to process them. For such objects, Peano Arithmetic may already contain the proof-object, while the indexed predictor cannot integrate that proof-object into its own self-model at finite cost. The obstruction is not a missing proof. It is a predictor-indexed reachability horizon.
+1. $G_S$ is a closed PA formula recording completed finite computation traces. Its truth and finite PA proof object are retrospective trace facts.
+2. $E^*$ in Theorem M.10.4 is a live joint diagonal challenge whose retained outputs are selected against the predictor's current nominated outputs.
 
-The result combines four components already present in the framework:
-
-1. the LITE/Recursion-Theorem machinery of §A.4;
-2. the finite-trace representability of computations in PA;
-3. the Horizon Constant $K_0=3$ (Theorem 15), used only as the minimal per-register SPAP core;
-4. the perspectival apparatus of Appendix M: the self-model $\mathcal M_S$ (Definition M.10.1), the model-change decomposition (Definition M.10.2), SPAP proximity $\mu_S$ (Definition M.10.3), the independent-register construction (Theorem M.10.4), downward measurability on the model-access branch (Theorem M.10.5), and unprocessability at $\mu_S=\infty$ (Theorem M.10.6).
-
-The name **complexity-bounded incompleteness** is used in the precise sense defined below: not incompleteness of PA, but incompleteness of a bounded predictor's reachable proof-integration acts.
-
-The theorem is an internal PU theorem. The ordinary logical ingredients—arithmetization, trace checking, and fixed-point machinery—are standard. The divergent processing conclusion depends on the PU apparatus of SPAP, PPI, and Appendix M's perspectival-cost structure. Thus the section should be read as:
-
-$$
-\text{standard PA trace machinery}
-+\text{PU SPAP/PPI perspectival-cost apparatus}
-\Longrightarrow
-\text{predictor-indexed reachability horizon}.
-$$
+A record of a completed challenge is not the challenge itself. Consequently, Theorem M.10.4 does not assign $\mu_S(G_S)=\infty$, and Theorem M.10.6 does not assign a pointwise infinite processing cost to $G_S$. The PA-side trace theorem uses standard arithmetization, finite trace checking, and fixed-point machinery. The live diagonal conclusion separately requires Theorem M.10.4's contemporaneous register construction and implementation hypotheses. The certified cost limit separately requires Theorem M.10.6's pattern-specific reduction certificate. The valid conclusions below are retrospective trace certification, conditional external processing, a typed separation from the live diagonal branch, and the cycle-indexed obstruction of §A.5.6a.
 
 ### A.5.1 PA Trace Objects and Predictor Reachability
+
 
 We first separate three notions that must not be conflated:
 
@@ -1102,9 +1157,10 @@ We first separate three notions that must not be conflated:
 2. existence of a PA proof-object for that sentence;
 3. reachability of that proof-object by a particular predictor as a content-integrating act.
 
-Gödelian incompleteness concerns the second notion: for suitable recursively axiomatized theories extending enough arithmetic, there are sentences not provable in the theory, and under the corresponding soundness assumptions those sentences are true in the intended model [Gödel 1931]. The phenomenon here concerns the third notion: the proof-object exists in PA, but a specified predictor cannot process it as self-model content at finite cost. Gödel's original 1931 paper is the reference point for the formal-system-relative result, while the representability and fixed-point tools used below are standard arithmetical machinery [Kleene 1952; Mendelson 2015].
+Gödelian incompleteness concerns the second notion: for suitable recursively axiomatized theories extending enough arithmetic, there are sentences not provable in the theory, and under the corresponding soundness assumptions those sentences are true in the intended model [Gödel 1931]. The third notion is processing-event-relative: the proof object may exist in PA while reachability or unreachability for a specified predictor remains undecided until a concrete model-change map and finite-cost or cost-divergence certificate are supplied. Gödel's original 1931 paper is the reference point for the formal-system-relative result, while the representability and fixed-point tools used below are standard arithmetical machinery [Kleene 1952; Mendelson 2015].
 
 Fix once and for all an acceptable Gödel coding of finite strings, formulas, proofs, machines, machine inputs, and finite computation traces. For a machine/program code $e$, input code $x$, finite trace code $\tau$, and output $y\in\{0,1\}$, let
+
 
 $$
 \mathrm{Trace}(e,x,\tau,y)
@@ -1152,32 +1208,17 @@ $$
 
 The formula $\varphi$ is **reachable for $S$** if $\mathrm{Reach}_S(\varphi,p)$ holds for at least one PA proof-object $p$. It is **unreachable for $S$** if no PA proof-object for $\varphi$ is reachable in this sense.
 
-This definition is intentionally stronger than ordinary proof checking. A predictor may manipulate a proof string as an uninterpreted external symbol pattern; that is not yet reachability. Reachability requires the proof-content to be integrated into the predictor's model. Therefore, when the theorem below says that $S$ cannot reach $G_S$, it means that $S$ cannot complete a self-integrating proof-act for $G_S$ at finite cost. It does **not** mean that the finite PA proof string fails to exist.
+This definition is intentionally stronger than ordinary proof checking. A predictor may manipulate a proof string as an uninterpreted external symbol pattern without integrating its content into the specified self-model; that operation is not reachability under this definition. Reachability and unreachability are properties of the declared processing event and its finite-cost or cost-divergence certificate. Predictor indexing of a completed transcript establishes neither conclusion. In particular, no theorem below claims that $S$ cannot reach $G_S$ unless a separate certificate proves that claim.
+### A.5.2 Retrospective and Live Diagonal Objects
 
-### A.5.2 Motivation and Relation to Nearby Notions
+Gödelian incompleteness concerns absence of a proof from a fixed formal system under its usual hypotheses. The object $G_S$ below is different: it is a finite conjunction of true closed trace facts and therefore has a finite PA proof object.
 
-Gödel's First Incompleteness Theorem is axiom-system-relative: under the usual hypotheses, fixing a sufficiently strong consistent formal system $\mathcal F$ yields a sentence not provable in $\mathcal F$ [Gödel 1931]. The gap is formal. No predictor closes that gap while remaining inside the same fixed proof system, because the required proof-object is absent from that system.
+The live diagonal limitation is also different. Theorem M.10.4 applies to a contemporaneous joint challenge whose output on each retained register is defined against the current prediction on that register. Once those outputs have occurred and are encoded by fixed numerals in $G_S$, later verification of the transcript cannot change them. Therefore neither PA proofhood nor predictor indexing identifies $G_S$ with the live pattern $E^*$.
 
-The present construction holds PA fixed and moves the index onto the predictor. The proof-object exists in PA. What varies is whether a particular predictor can integrate that proof-object. A predictor at its own diagonal boundary fails at the content-integration stage; a predictor above the target with model access, external register separation, and the relevant finite witnesses can verify and integrate the same proof-object externally. Thus the incompleteness is not a deficiency of PA. It is a reachability horizon induced by the predictor's bounded self-referential processing capacity.
-
-This places the result near, but not inside, several existing literatures. Cook-style relative completeness in program verification holds completeness relative to a sufficiently expressive semantic assertion basis: if the required semantic facts are available, the proof system can derive the corresponding program judgments [Cook 1978]. Bounded arithmetic and proof complexity study logical theories whose reasoning strength is tied to computational-complexity classes, and resource-bounded unprovability studies failures of proof under computational or theory-theoretic restrictions [Cook and Nguyen 2010; Okamoto and Kashima 2005]. These works relate proof to resource bounds, but their index is a formal theory, proof system, proof length, proof resource, or complexity class, not a thermodynamic self-model integration horizon of an embedded predictor.
-
-Logical non-omniscience and logical induction model bounded reasoners that assign and refine beliefs over mathematical statements, including statements about long computations and their own beliefs [Garrabrant et al. 2016; Garrabrant et al. 2017]. Vingean reflection, tiling-agent work, and reflective-oracle models study agents reasoning about themselves, successors, other agents, and environments containing agents; reflective oracles explicitly address diagonalization by changing the oracle interface [Yudkowsky and Herreshoff 2013; Fallenstein and Soares 2015; Fallenstein, Taylor, and Christiano 2015]. These works concern bounded self-reference, but they do not formulate the specific PA-internal trace-certified proof-object whose reachability depends on the SPAP proximity of the processing predictor.
-
-Wolpert's physical-limits-of-inference program is also adjacent: it proves impossibility results for physical inference devices performing observation, prediction, or recollection, and defines an inference-complexity analogue of Kolmogorov complexity [Wolpert 2008]. That work supports the general expectation that embedded inference has physical limits, but it does not supply the present PA-internal, predictor-indexed, above-threshold reachability theorem.
-
-Treur's use of “relative incompleteness” in heuristic reasoning is another nearby reference, because it explicitly treats incompleteness as relative to available observations and reasoning resources [Treur 1993]. In the present section, however, the relative parameter is not an observation layer or diagnostic cost layer. It is the intrinsic predictive complexity and self-model integration structure of the processor.
-
-The present section therefore uses the term **complexity-bounded incompleteness** for the conjunction of the following four features:
-
-1. the object is a closed PA formula;
-2. the PA proof-object exists and can be trace-certified;
-3. the object is indexed to the self-model registers of a target predictor $S$;
-4. reachability is asymmetric: $S$ cannot integrate $G_S$, while an above-threshold predictor with externally insulated model access can process $G_S$ externally on the witnessed branch.
-
-The result is deliberately limited to predictor-indexed self-referential objects. It is not a claim that ordinary, non-self-referential arithmetic problems are complexity-bounded-incomplete for a predictor class.
+Any processing conclusion for $G_S$ requires its own model-change map and finite-cost certificate. Any cost-divergence conclusion for a live pattern requires the implementation and pattern-specific reduction certificates stated in Theorem M.10.6.
 
 ### A.5.3 The Predictor-Indexed Diagonal Transcript Family
+
 
 We work with predictive systems possessing Effective Operational Property R (Definition A.0.1; Definition A.0.6), each carrying an operational self-model $\mathcal M_S$ (Definition M.10.1). By Property R (Definition 10), such a system's relevant model class can represent coded descriptions, simulate nominated predictors on those descriptions, and evaluate the relevant predicates about predicted outputs. This is the subcapacity required by SPAP (Theorems 10–11).
 
@@ -1243,10 +1284,11 @@ Equivalently, $G_S$ asserts the exact finite output transcript of the $N^*(S)$ S
 It would be too weak to define $G_S$ as “all diagonal outputs are $1$.” Such a sentence would be true only on the branch where those outputs happened to be $1$. The transcript formulation removes that branch dependence. $G_S$ records the actual finite output transcript of the specified diagonal systems. Its truth is unconditional in the standard model, because each conjunct is a concrete finite computation trace.
 
 **Remark A.5.2 (Relation to LITE).**
-Definition A.5.3 uses the same arithmetical infrastructure as §A.4: Gödel coding, primitive-recursive substitution, finite proof/trace checking, and fixed-point machinery. LITE applies this machinery to construct a total computable function $f$. Definition A.5.3 applies it to construct, for each predictor $S$, a PA object whose content is wired to $S$'s own self-model prediction registers. LITE demonstrates tractable self-reference; $G_S$ targets the processor's self-model boundary.
+Definition A.5.3 uses the same arithmetical infrastructure as §A.4: Gödel coding, primitive-recursive substitution, finite proof/trace checking, and fixed-point machinery. LITE applies this machinery to construct a total computable function $f$. Definition A.5.3 applies it to construct, for each predictor $S$, a PA object whose content is wired to $S$'s own self-model prediction registers. LITE demonstrates tractable self-reference. The index $S$ in $G_S$ records which completed computations are encoded; it does not convert their later verification into a live diagonal challenge.
 
 **Lemma A.5.1 (Existence, Truth, and PA Proof-Object).**
 Let $S$ be a predictive system with Effective Operational Property R satisfying $n_S\ge N^*(S)$. Then $G_S$ exists as a closed PA formula, is true in the standard model $\mathbb N$, and has a finite PA proof-object.
+
 
 *Proof.* For each $j\le N^*(S)$, Theorem A.1.1 constructs the diagonal component $S_{\mathrm{diag}}^{(j)}$, and Theorem M.10.4 supplies the independent-register amplification. The hypothesis $n_S\ge N^*(S)$ supplies the required addressable Fisher-orthogonal registers.
 
@@ -1300,63 +1342,34 @@ $A$ has Effective Operational Property R, and $A$ has externally insulated model
 Complexity alone is not sufficient. Model access and external register separation are part of the definition; discovery of the proof-object is not assumed unless the finite witness or a sufficient ordinary external proof-search budget is supplied for the processing event.
 
 **Lemma A.5.2 (External-Model Safety for Represented Diagonal Families).**
-Let $S$ satisfy the conditions of Lemma A.5.1, and let $A$ be above-threshold for $S$. Then processing $G_S$ as an object-level fact about $S$'s represented diagonal transcript modifies only $A$'s external model. Therefore
-
+Let $S$ satisfy Lemma A.5.1, and let $A$ be above-threshold for $S$. Processing $G_S$ under the externally insulated branch of Definition A.5.4 gives
 $$
-\Delta M_A^{(\mathrm{self})}(G_S)=0,
+\Delta M_A^{(\mathrm{self})}(G_S)=0
 $$
-
-$$
-\sigma_A(G_S)=0,
-$$
-
-$$
-PP_A^{(G_S)}=0,
-$$
-
-$$
-\delta_A(G_S)=\alpha_{SPAP},
-$$
-
 and
-
-$$
-\mu_A(G_S)=\frac{1}{\alpha_{SPAP}}.
-\tag{A.5.7}
-$$
-
-*Proof.* By Definition A.5.4, $A$'s representation of $S$'s self-model is typed as external object data through the embedding
-
-$$
-\iota_{S\to A}:\Theta_S\to\Theta_A^{(\mathrm{ext})}.
-$$
-
-Each diagonal component $S_{\mathrm{diag}}^{(j)}$ in $G_S$ is constructed against $S$'s $j$-th self-model prediction register. Under $\iota_{S\to A}$, these become represented external coordinates of $A$, not $A$'s own self-model coordinates. Thus the proof-content of $G_S$ changes $A$'s external model of $S$, if it changes anything, but it does not update $A$'s self-model subspace.
-
-By Definition M.10.2, the self-model component of the induced model-change is therefore
-
-$$
-\Delta M_A^{(\mathrm{self})}(G_S)=0.
-$$
-
-By Definition M.10.4,
-
 $$
 \sigma_A(G_S)=0.
 $$
-
-Then Corollary M.10.3.1 gives
-
+If $A$ also satisfies the baseline-invariance hypothesis
 $$
-PP_A^{(G_S)}=0,\qquad
-\delta_A(G_S)=\alpha_{SPAP},\qquad
+\Pi_A^{(0)}(\theta_A)=\theta_A,
+$$
+then
+$$
+PP_A^{(G_S)}=0,
+\qquad
+\delta_A(G_S)=\alpha_{SPAP},
+\qquad
 \mu_A(G_S)=\frac{1}{\alpha_{SPAP}}.
+\tag{A.5.7}
 $$
+These identities concern the reflexive profile. Reachability additionally requires a finite certificate for the external proof-checking and model-update event.
 
-The statement is branch-specific: if $A$ appends an additional self-referential update about its own act of verification, that appended content has its own perspectival profile. It is not part of the object-level processing of $G_S$. $\square$
+*Proof.* Definition A.5.4 places the represented registers of $S$ in $A$'s external-model subspace and requires the represented transcript to induce no retained update of $A$'s self-model coordinates. Hence $\Delta M_A^{(\mathrm{self})}(G_S)=0$, and Definition M.10.4 gives $\sigma_A(G_S)=0$. Under the additional baseline-invariance hypothesis, Corollary M.10.3.1 gives the displayed values of $PP_A^{(G_S)}$, $\delta_A(G_S)$, and $\mu_A(G_S)$. No statement about the remaining external processing cost follows from those quantities. ∎
 
 **Definition A.5.6 (Horizon-Core Aggregate Witness).**
 Let $S_{K_0}$ denote the three-bit SPAP core supplied by Theorem 15, with the required roles $(\phi,p_{\mathrm{stored}},c_{\mathrm{phase}})$ and operational conditions O1–O3. For any $N$, let
+
 
 $$
 \mathsf{Amp}_{K_0}(N)
@@ -1374,294 +1387,112 @@ $$
 such that
 
 $$
-d_{S_0}\ge N^*(S_0).
+n_{S_0}\ge N^*(S_0).
 \tag{A.5.9}
 $$
 
 Theorem 15 supplies the minimal per-register SPAP logic; Theorem A.0.6 supplies the network-level route to Effective Operational Property R; Theorem M.10.4 supplies the required independent-register branch. No claim is made that the total aggregate $S_0$ has exact complexity $K_0$. The exact claim is that each SPAP register core is $K_0$-minimal, while the full witness is the finite Property-R aggregate required to host the diagonal amplification.
 
-### A.5.5 The Complexity-Bounded Incompleteness Theorem
+### A.5.5 Retrospective Trace Certification and Live-Challenge Separation
 
-**Theorem A.5.1 (Complexity-Bounded Incompleteness: Predictor-Indexed Reachability Horizon).**
-Fix Peano Arithmetic as the object-language proof system. Let $S$ be a predictive system with Effective Operational Property R satisfying
+For every predictor $S$ satisfying the implementation hypotheses of Theorem M.10.4, let $E_S^*$ denote the live joint diagonal pattern constructed there. When an attempted integration of $E_S^*$ induces a candidate updated self-model parameter, denote that parameter by $\theta_S'$.
 
+**Theorem A.5.1 (Retrospective Trace Certification and Live-Challenge Separation).**
+Fix Peano Arithmetic as the object-language proof system. Let $S$ have Effective Operational Property R, satisfy $n_S\ge N^*(S)$, and let $G_S$ be the predictor-indexed diagonal transcript object of Definition A.5.3. Then:
+
+**(i) PA proof object.** $G_S$ is true in $\mathbb N$ and has a finite PA proof object.
+
+**(ii) Typed separation.** The objects used by the trace theorem and the live diagonal theorem have different operational types:
 $$
-n_S\ge N^*(S),
-$$
-
-and let $G_S$ be the predictor-indexed diagonal transcript object of Definition A.5.3. Then:
-
-**(i) PA proof-object exists.** $G_S$ is true in $\mathbb N$ and has a finite PA proof-object.
-
-**(ii) $G_S$ is unreachable for $S$.** Every content-integrating proof-act in which $S$ reaches $G_S$ induces
-
-$$
-\mu_S(G_S)=\infty,
-$$
-
-and therefore
-
-$$
-C_{\mathrm{process}}(S,G_S)=\infty.
+G_S\text{ is a completed-trace sentence},
+\qquad
+E_S^*\text{ is a live challenge}.
 \tag{A.5.10}
 $$
+Consequently, Theorem M.10.4 does not by itself imply $\mu_S(G_S)=\infty$, and Theorem M.10.6 does not by itself imply any pointwise equality $C_{\mathrm{process}}(S,G_S)=\infty$.
 
-Thus $G_S$ is not reachable for $S$ in the sense of Definition A.5.2.
-
-**(iii) $G_S$ is externally reachable for any above-threshold predictor on the witnessed external branch.** If $A$ is above-threshold for $S$ and the finite transcript witnesses or a PA proof-object for $G_S$ are supplied as external data for the processing event, then $G_S$ is processed by $A$ as an external model fact about $S$. Consequently,
-
+**(iii) Conditional external reachability.** Let $A$ be above-threshold for $S$. Suppose either a PA proof object for $G_S$ is supplied, or the complete finite transcript witnesses are supplied together with a certified finite construction of such a proof. If $A$ satisfies baseline invariance and one finite external-processing certificate covers every invoked operation—syntactic proof verification, any claimed proof construction, and the external-model update—then $G_S$ is reachable for $A$. On that branch,
 $$
 \sigma_A(G_S)=0,
-$$
-
-$$
+\qquad
 PP_A^{(G_S)}=0,
-$$
-
-$$
+\qquad
 \delta_A(G_S)=\alpha_{SPAP},
-$$
-
-and
-
-$$
+\qquad
 \mu_A(G_S)=\frac{1}{\alpha_{SPAP}}.
 \tag{A.5.11}
 $$
 
-Accordingly, on the witnessed external branch, $A$ can verify and integrate $G_S$ at SPAP-flat reflexive cost. If the PA proof-object or transcript witnesses are supplied, verification is direct. If they are not supplied, exhaustive PA proof search is only a mathematical semidecision route: it halts for $G_S$ because a proof-object exists, but physical reachability then requires an ordinary external search budget large enough to complete that finite search, and no uniform bound is claimed.
-
-**(iv) Explicit stratification.** For any horizon-core aggregate witness $S_0=\mathsf{Amp}_{K_0}(N_0)$ satisfying Definition A.5.6, the fixed PA formula $G_{S_0}$ is unreachable for $S_0$, but externally reachable on the witnessed external branch for any predictor $A$ above-threshold for $S_0$. The same PA proof-object therefore lies on opposite sides of the reachability horizon depending only on the processing predictor.
-
-*Proof.*
-
-**(i)** This is Lemma A.5.1. $G_S$ is a finite conjunction of true closed trace facts. Each conjunct has a finite PA trace-verification proof, and finite conjunction preserves PA provability. Therefore $G_S$ has a PA proof-object. $\square$
-
-**(ii)** Processing $G_S$ as content requires $S$ to integrate the exact transcript of the $N^*(S)$ diagonal systems $S_{\mathrm{diag}}^{(j)}$, each constructed against $S$'s own $j$-th self-model prediction register. Therefore the induced model-change has nonzero self-model component:
-
+**(iv) Live diagonal boundary.** Let $S_0$ be a horizon-core aggregate witness, and suppose an independent implementation certificate realizes the live joint challenge $E_{S_0}^*$ of Theorem M.10.4 with its declared register responses and Fisher geometry. Let $\theta_{S_0}'$ be the candidate updated self-model parameter induced by the attempted integration of that live pattern. For every $PP\in[0,\alpha_{SPAP})$,
 $$
-\Delta M_S^{(\mathrm{self})}(G_S)\ne 0,
-$$
-
-so by Definition M.10.2 and Definition M.10.4,
-
-$$
-\sigma_S(G_S)>0.
-$$
-
-More strongly, $G_S$ is the arithmetical encoding of the joint diagonal pattern $E^{(N)}$ in Theorem M.10.4 with $N=N^*(S)$. By the uniform per-register diagonal discrepancy and Fisher orthogonality of the independent registers, for every $PP\in[0,\alpha_{SPAP})$,
-
-$$
-\left\|\Pi_S^{(PP)}(\theta_S')-\theta_S'\right\|_{\mathcal F_S}
+\left\|\Pi_{S_0}^{(PP)}(\theta_{S_0}')-\theta_{S_0}'\right\|_{\mathcal F_{S_0}}
 \ge
-\sqrt{N^*(S)}\,D_1(S).
+\sqrt{N^*(S_0)}D_1(S_0),
 \tag{A.5.12}
 $$
-
-The choice of $N^*(S)$ in Equation A.5.1 gives
-
+and
 $$
-\sqrt{N^*(S)}\,D_1(S)>g(\alpha_{SPAP}).
+\sqrt{N^*(S_0)}D_1(S_0)>g(\alpha_{SPAP}).
 \tag{A.5.13}
 $$
-
-Since $g$ is monotone and $g(\alpha_{SPAP}-PP)\le g(\alpha_{SPAP})$ for every $PP\in[0,\alpha_{SPAP})$, the self-consistency constraint of Equation M.18 fails at every subboundary performance level. At $PP=\alpha_{SPAP}$, the tolerance is $g(0)=0$, and the SPAP fixed-point exclusion for the joint diagonal object rules out exact equality. Hence the constraint set is empty. Therefore
-
+Because $g$ is nondecreasing, for every $PP<\alpha_{SPAP}$,
 $$
-PP_S^{(G_S)}=\alpha_{SPAP},
+\sqrt{N^*(S_0)}D_1(S_0)
+>
+g(\alpha_{SPAP})
+\ge
+g(\alpha_{SPAP}-PP),
 $$
-
+so the finite-$\mu$ criterion fails. At $PP=\alpha_{SPAP}$, $g(0)=0$, while the live NOT construction excludes the required fixed point. Hence $\mu_{S_0}(E_{S_0}^*)=\infty$. If the pattern-specific reduction certificate of Theorem M.10.6 is also supplied, then
 $$
-\delta_S(G_S)=0,
+\liminf_{\delta\downarrow0}
+C_{\mathrm{integrate}}(S_0,E_{S_0}^*;\delta)=\infty.
 $$
+This is a certificate-relative absence of a finite uniform upper bound in the accuracy limit, not a pointwise infinite cost for the retrospective sentence $G_{S_0}$.
 
-and
+*Proof.* Part (i) is Lemma A.5.1. For part (ii), every numeral $\bar\tau_j(S)$ in $G_S$ denotes a trace that has already terminated. Verifying the resulting closed sentence occurs after those outputs are fixed and therefore cannot determine them. Theorem M.10.4 instead constructs each component of $E_S^*$ so that its current output negates the nominated current prediction on the corresponding register. No map identifying later verification of $G_S$ with that live response event is supplied. Thus the hypotheses of Theorem M.10.4 do not apply to $G_S$, and Theorem M.10.6 cannot be invoked for $G_S$ without a separate pattern and reduction certificate.
 
-$$
-\mu_S(G_S)=\infty
-$$
+For part (iii), Lemma A.5.2 gives the reflexive-profile identities under external insulation and baseline invariance. The supplied finite external-processing certificate bounds proof verification, any invoked proof construction, and the external-model update, so Definition A.5.2 gives reachability.
 
-by Theorem M.10.4.
+For part (iv), Equations A.5.12 and A.5.13 are the independent-register estimate and strict amplification inequality of Theorem M.10.4 applied to the realized live pattern. That theorem gives $\mu_{S_0}(E_{S_0}^*)=\infty$. The final limit is exactly Theorem M.10.6 under its additional pattern-specific reduction certificate. ∎
 
-By Theorem M.10.6, $\mu_S(G_S)=\infty$ implies
+**Corollary A.5.1 (No Retrospective-Horizon Inference).**
+For every $S$ satisfying Theorem A.5.1, the PA proofhood of $G_S$ establishes neither its reachability nor its unreachability for $S$. Either conclusion requires a separately specified processing event and cost certificate. The live diagonal obstruction remains the one in Theorem M.10.4 and §A.5.6a.
 
-$$
-C_{\mathrm{process}}(S,G_S)=\infty.
-$$
+*Proof.* This is Theorem A.5.1(i)-(ii) together with Definition A.5.2. ∎
 
-Equivalently, no finite content-integrating processing event by $S$ can reach $G_S$. This remains true even though the PA proof-object exists by part (i). $\square$
+**Corollary A.5.2 (Certificate-Relative Live Cost Boundary).**
+On the branch of Theorem A.5.1(iv), no $PP<\alpha_{SPAP}$ satisfies the live integration criterion. With the additional reduction certificate of Theorem M.10.6, the certified integration cost has no finite uniform upper bound as $\delta\downarrow0$. No conclusion about the cost of checking a fixed finite transcript, and no claim that a completed individual run dissipates infinite energy, follows.
 
-**(iii)** Let $A$ be above-threshold for $S$, and suppose the finite transcript witnesses or a PA proof-object for $G_S$ are supplied as external data for the processing event. The diagonal systems $S_{\mathrm{diag}}^{(j)}$ are constructed against $S$'s self-model registers, not $A$'s. By Definition A.5.5, $A$ has externally insulated model access to $S$. Hence Lemma A.5.2 applies:
-
-$$
-\Delta M_A^{(\mathrm{self})}(G_S)=0,
-$$
-
-$$
-\sigma_A(G_S)=0,
-$$
-
-and
-
-$$
-\mu_A(G_S)=\frac{1}{\alpha_{SPAP}}.
-$$
-
-The reflexive cost component for $A$ vanishes. $A$'s remaining cost is the ordinary external cost of reading or computing the finite transcript $T_S$, checking the PA proof-object from part (i), and updating its external model of $S$. That cost may scale with the size of $S$, the length of the transcript, and the length of the PA proof-object, but it is SPAP-flat on $A$'s externally insulated branch. Thus $G_S$ is externally reachable for $A$ on the witnessed external branch. $\square$
-
-**(iv)** Let $S_0=\mathsf{Amp}_{K_0}(N_0)$ be a horizon-core aggregate witness. By Definition A.5.6, $S_0$ has Effective Operational Property R and enough Fisher-orthogonal self-model register capacity for Theorem M.10.4. Applying part (ii) with $S=S_0$ gives
-
-$$
-\mu_{S_0}(G_{S_0})=\infty
-$$
-
-and
-
-$$
-C_{\mathrm{process}}(S_0,G_{S_0})=\infty.
-$$
-
-Therefore $G_{S_0}$ is unreachable for $S_0$. Applying part (iii) to any predictor $A$ above-threshold for $S_0$ gives
-
-$$
-\mu_A(G_{S_0})=\frac{1}{\alpha_{SPAP}},
-$$
-
-so $G_{S_0}$ is externally reachable for $A$ on the witnessed external branch. The PA formula $G_{S_0}$ and its proof-object are fixed. Only the processing predictor changes. $\square$
-
-**Corollary A.5.1 (No Predictor Clears Its Own Horizon).**
-For every predictive system $A$ satisfying the hypotheses of Theorem A.5.1, the object $G_A$ is unreachable for $A$. Therefore no such predictor reaches the whole family
-
-$$
-\{G_S:S\text{ satisfies the hypotheses of Theorem A.5.1}\}.
-$$
-
-*Proof.* Apply Theorem A.5.1(ii) with $S=A$. Since $G_A$ is constructed against $A$'s own self-model prediction registers,
-
-$$
-\mu_A(G_A)=\infty
-$$
-
-and
-
-$$
-C_{\mathrm{process}}(A,G_A)=\infty.
-$$
-
-Thus $A$ fails to reach at least $G_A$. If $A'$ is above-threshold for $A$ and is supplied with the finite external witnesses required by Theorem A.5.1(iii), then $A'$ can reach $G_A$ on the witnessed external branch, but applying Theorem A.5.1(ii) to $A'$ gives that $G_{A'}$ is unreachable for $A'$. Greater complexity moves the horizon outward; it does not abolish the horizon. $\square$
-
-**Corollary A.5.2 (Non-Closability by Resources Internal to the Same Fixed Predictor).**
-Let $S$ satisfy the hypotheses of Theorem A.5.1, and hold $S$'s indexed predictor identity fixed over the evaluation interval. The unreachability of $G_S$ for that fixed $S$ is not removed by:
-
-1. acquiring additional external data while remaining the same indexed predictor $S$;
-2. adding axioms to PA;
-3. increasing finite computation time;
-4. non-integrating collaboration with predictors that do not form an above-threshold aggregate for $S$.
-
-For the fixed indexed claim, the gap is closed only by changing the processing event to an above-threshold predictor in the sense of Definition A.5.5 on the witnessed external branch.
-
-*Proof.* The obstruction is
-
-$$
-\mu_S(G_S)=\infty
-$$
-
-and hence
-
-$$
-C_{\mathrm{process}}(S,G_S)=\infty
-$$
-
-by Theorem A.5.1(ii).
-
-Additional external data can modify $\Delta M_S^{(\mathrm{ext})}$, but it does not remove the fact that $G_S$ is indexed to $S$'s own self-model registers. If the acquired data changes $S$'s self-model, register capacity, or aggregate complexity enough that the processor is no longer the same indexed predictor, the formal object has changed from $S$ to a new predictor $S'$. In that case, the specific claim about fixed $G_S$ no longer describes the same processor. The hierarchy claim persists because Corollary A.5.1 applies to $G_{S'}$.
-
-Adding axioms cannot remove the obstruction, because the PA proof-object already exists by Theorem A.5.1(i). The failure is not absence of formal derivability; it is divergent self-model integration cost.
-
-Increasing finite computation time cannot complete a processing event whose required cost is infinite. An infinite limiting process is not a completed finite operational proof-act in the sense of Definition A.5.2.
-
-Finally, collaboration helps only if the collaborators form a new integrated aggregate $A$ with Effective Operational Property R, externally insulated model access to $S$, and
-
-$$
-C_{agg}(A)>C_{agg}(S).
-$$
-
-But such an aggregate is precisely an above-threshold predictor by Definition A.5.5, and reachability still requires the witnessed external branch of Theorem A.5.1(iii). Collaboration that does not produce such an aggregate leaves the self-model-indexed SPAP boundary unchanged. Therefore the fixed-predictor gap is closed only by an above-threshold predictor on the witnessed external branch. $\square$
+*Proof.* Apply Theorem M.10.6 to $E_{S_0}^*$ and retain all of its hypotheses and scope qualifications. ∎
 
 ### A.5.6 Interpretation and Scope
 
 **Remark A.5.3 (Contrast with Gödel).**
-Theorem A.5.1 is not another proof of Gödelian incompleteness. It is a predictor-indexed dual phenomenon.
+Theorem A.5.1 is not an incompleteness theorem for PA. The sentence $G_S$ has a PA proof. The theorem establishes a type distinction between retrospective proof verification and a live diagonal challenge.
 
-In Gödelian incompleteness, the formal system is the limiting object: under the relevant hypotheses, the proof is not present in the system. In complexity-bounded incompleteness, PA is not the limiting object: $G_S$ is already PA-provable. The limiting object is the predictor's ability to integrate that proof-content.
+**Remark A.5.4 (Syntactic Proof Checking).**
+A supplied proof of $G_S$ is finite and syntactically checkable. Whether a physical predictor can complete the associated content update is a separate finite-processing question; no divergence follows from predictor indexing alone.
 
-In Gödelian incompleteness, adding axioms may settle the specific Gödel sentence, though new incompleteness phenomena arise for the strengthened system. In complexity-bounded incompleteness, adding axioms does not address the obstruction, because the proof-object already exists. The obstruction is the SPAP proximity boundary
-
-$$
-\mu_S(G_S)=\infty,
-$$
-
-On a branch satisfying Theorems M.10.3 and M.10.6 and carrying the uniform reduction certificate of Corollary B.2.1, the predictor-indexed boundary inherits the physical processing lower bound of Theorem B.2. Without that reduction certificate, $\mu_S(G_S)=\infty$ is a self-model reachability statement and does not by itself imply the Bernoulli discrimination cost bound.
-
-**Remark A.5.4 (Why the Theorem Is Not Syntactic-Proof Triviality).**
-If a PA proof string for $G_S$ is handed to $S$, $S$ may be able to perform finite syntactic manipulations on the string as an uninterpreted external object. That does not contradict Theorem A.5.1. The theorem concerns the reachability of the proof-content: the act in which $S$ verifies the proof and integrates what it proves about $S$'s own diagonal self-model registers. The divergent term is the self-model integration cost, not the symbol-by-symbol proof-checking cost considered in isolation.
-
-**Remark A.5.5 (Scope: the Horizon Surrounds Predictor-Indexed Self-Reference).**
-The family $\{G_S\}$ consists of predictor-indexed self-referential transcript objects. Each $G_S$ is wired to the diagonal systems constructed against $S$'s own self-model prediction registers. Theorem A.5.1 therefore establishes a reachability horizon for this family of arithmetical objects.
-
-No claim is made that ordinary, non-self-referential number-theoretic statements are complexity-bounded-incomplete for any predictor class. For a non-self-referential arithmetic statement that modifies only an external model component, the relevant processing has
-
-$$
-\sigma_S=0,
-$$
-
-and hence
-
-$$
-\mu_S=\frac{1}{\alpha_{SPAP}}
-$$
-
-by Corollary M.10.3.1. Such statements are outside the diagonal family unless their processing necessarily engages the predictor's self-model. Whether an apparently ordinary theorem can be transformed into a predictor-indexed self-model engagement is a separate question and is not asserted here.
+**Remark A.5.5 (Live Scope).**
+Theorem M.10.4 applies only to its realized live joint challenge with the stated register and Fisher-separation data. A historical record of that challenge may later be processed without recreating the prediction-contingent event.
 
 **Remark A.5.6 (Consistency with LITE).**
-There is no tension with §A.4. LITE is total and computable (Theorem A.4.1), and evaluating $f(n)$ does not by itself require the evaluator to integrate a statement about its own SPAP diagonal self-model registers. LITE is therefore a tractable self-referential construction.
-
-The object $G_S$ is different. It is not merely a function value to compute. It is a trace-certified PA object whose content is about the exact diagonal transcript targeted at $S$'s own self-model registers. LITE shows that PA can host tractable self-reference. Theorem A.5.1 shows that PA can also host proof-objects whose reachability is stratified by the predictor processing them.
+There is no tension with §A.4. LITE is total and computable, $G_S$ is a finite trace-certified PA object, and §A.5.6a supplies the distinct time-indexed active diagonal limitation.
 
 **Remark A.5.7 (Conditional Status Within PU).**
-Theorem A.5.1 is conditional on the PU formal apparatus. The PA-side claims use standard trace representability and finite proof verification. The reachability and unreachability claims additionally require the PU assumptions and derived results that connect self-model engagement to SPAP proximity and SPAP proximity to processing cost:
-
-$$
-\text{Property R}
-\to
-\text{SPAP diagonal construction}
-\to
-\mu_S(G_S)=\infty
-\to
-C_{\mathrm{process}}(S,G_S)=\infty.
-$$
-
-Readers who accept only the PA side get a trace-certified family of predictor-indexed arithmetical objects. The incompleteness-as-processing-horizon conclusion follows only when the Appendix M and Appendix B cost chain is also granted.
+The trace-certification result uses standard arithmetization. The live boundary uses Theorem M.10.4's independent-register and implementation hypotheses. A computational divergence additionally uses Theorem M.10.6's pattern-specific reduction certificate. A thermodynamic statement additionally requires Theorem M.10.7's implementation ledger.
 
 **Remark A.5.8 (Terminology).**
-The term *complexity-bounded incompleteness* is narrower than *relative incompleteness*. It does not mean “incomplete relative to an oracle,” “incomplete relative to a dataset,” or “incomplete relative to a weaker proof system.” It means:
-
-$$
-\text{PA proof exists}
-\quad+\quad
-\text{target predictor cannot integrate it}
-\quad+\quad
-\text{above-threshold predictor can integrate it externally on the witnessed branch}.
-$$
-
-The incompleteness is therefore bounded by predictive complexity and self-model integration structure, not by the formal strength of PA.
+The phrase *complexity-bounded incompleteness* is not used for $G_S$. The established statements are retrospective trace certification, phase-indexed active diagonal failure, conditional historical or external accessibility, and certificate-relative live integration bounds.
 
 ### A.5.6a Phase-Indexed Access, Historical Recovery, and Model-Indexed LITE
 
-The A.5 theorem separates PA proof-existence from predictor reachability. This subsection records the cycle-indexed form of that separation. It is a conservative refinement of the same mechanism: truth and proofhood remain fixed, while active access is predictor-indexed, time-indexed, and verification-gated.
+Theorem A.5.1 separates retrospective PA trace certification from a live diagonal challenge. This subsection gives the cycle-indexed form directly: truth and proofhood remain fixed while active access is predictor-indexed, time-indexed, and verification-gated, and the same object may become historically accessible after the targeted register is recorded. For the semantic steps in Theorem A.5.6a.2 and Appendix A.6, require the fixed-point biconditional to be proved in a base whose axioms are true in $\mathbb N$—for example PA—or assume its displayed standard-model equivalence directly. Mere consistency of an arithmetically adequate theory is not used to infer truth in $\mathbb N$.
 
 **Definition A.5.6a.1 (Time-Indexed Prediction Register).** Let $\mathcal F$ be a consistent arithmetically adequate formal theory capable of representing primitive-recursive functions, finite computations, execution traces, and Gödel coding. A trace-certified predictor $B$ has a total prediction-register map
 $$
+
 P_B:\mathbb N\times\mathbb N\to\{1,0,\bot\},
 $$
 where $1$ means that $B$ predicts the sentence true, $0$ means that $B$ predicts the sentence false, and $\bot$ means that no Boolean prediction is delivered by the cycle boundary.
@@ -2053,122 +1884,93 @@ This is a local proof-access gain for the fixed diagonal task; it does not asser
 
 ## A.6 Generative Non-Closure and Axiom Stabilization
 
-This section records a conservative consequence of §§A.0-A.5. It introduces no new physical primitive and no additional axiom. It only reorganizes the existing SPAP/RUD/Property-R and reachability-horizon results into a structural statement: total internal reflexive self-closure is impossible for the relevant predictors, while stable finite partial closures are necessary for any nontrivial verified prediction-update cycle. These partial closures are the formal source of axiom-like structure inside PU.
+This section records a conservative consequence of the phase-indexed diagonal theorem in §A.5.6a. It introduces no physical primitive and no additional axiom. The precise obstruction is same-cycle and domain-specific: a trace-certified predictor cannot implement a total standard-sound Boolean closure on a represented domain containing the live diagonal sentence targeted at that cycle. The same sentence may be processed externally or historically after the targeted register is fixed. Stable finite partial closures are asserted only for prediction-update cycles satisfying the hypotheses stated below.
 
 ### A.6.1 Internal closure maps
 
-**Definition A.6.1 (Trace-diagonal internal closure domain).** Let $S$ be a predictive system with Effective Operational Property R and self-model $\mathcal M_S$. Let $\mathsf{TC}_S$ be the represented class of finite PA trace-certified objects whose decoded content concerns states, predictions, proof traces, update traces, or model registers that $S$ can encode. On the hypotheses of Theorem A.5.1, let
-
+**Definition A.6.1 (Live-diagonal internal closure domain).** Let $S$ be a trace-certified predictor in the sense of Definition A.5.6a.1, and fix a cycle $t$. Let $\mathsf{TC}_{S,t}$ be the represented class of closed arithmetical sentences whose codes can be placed in $S$'s active prediction register at $t$. Let
 $$
-G_S\in\mathsf{TC}_S
+E_{S,t}\in\mathsf{TC}_{S,t}
 $$
-
-denote the predictor-indexed diagonal transcript object of Definition A.5.3. A represented domain
-
+be the time-indexed diagonal sentence of Theorem A.5.6a.2. A represented domain
 $$
-D_S\subseteq\mathsf{TC}_S
+D_{S,t}\subseteq\mathsf{TC}_{S,t}
 $$
+is **live-diagonal complete for $(S,t)$** when $E_{S,t}\in D_{S,t}$. Historical processing of $E_{S,t}$ at a later cycle is not same-cycle closure on $D_{S,t}$.
 
-is **trace-diagonal complete for $S$** when $G_S\in D_S$ and $D_S$ contains the finite trace witnesses needed to recognize $G_S$ as the object constructed in Definition A.5.3.
-
-**Definition A.6.2 (Internal finite-cost closure map).** Let $D_S\subseteq\mathsf{TC}_S$. An $S$-internal map
-
+**Definition A.6.2 (Internal finite-cycle closure map).** Let $D_{S,t}\subseteq\mathsf{TC}_{S,t}$. An $S$-internal map
 $$
-\operatorname{Cl}_S:D_S\to\{0,1,\bot\}
+\operatorname{Cl}_{S,t}:D_{S,t}\to\{0,1,\bot\}
 $$
-
-is an **internal finite-cost closure map** on $D_S$ when the following conditions hold.
-
-1. **Representability.** A code for $\operatorname{Cl}_S$ is represented in the model class available to $S$.
-2. **Internal update use.** When $\operatorname{Cl}_S(H)\in\{0,1\}$, the output is available to $S$ as a retained judgment in its own prediction-update loop.
-3. **Finite integration.** If $\operatorname{Cl}_S(H)=1$ for a PA-provable trace-certified object $H$ with proof-object $p$, then the accepting update requires a finite content-integrating event of the form $\mathrm{Reach}_S(H,p)$ in the sense of Definition A.5.2.
-4. **Abstention.** The value $\bot$ is an explicit refusal to close the object internally. It is not a truth value.
-
-The map is **total on $D_S$** when it never returns $\bot$. It is **trace-accepting on $D_S$** when every true trace-certified object $H\in D_S$ with a PA proof-object is assigned value $1$ and accepted through a finite content-integrating event.
-
-**Theorem A.6.2 (No total internal trace-diagonal self-closure).** Let $S$ satisfy the hypotheses of Theorem A.5.1, and let $D_S$ be trace-diagonal complete for $S$. Then no $S$-internal map
-
+is an **internal finite-cycle closure map** when
 $$
-\operatorname{Cl}_S:D_S\to\{0,1,\bot\}
+\operatorname{Cl}_{S,t}(H)=P_S(t,\ulcorner H\urcorner)
+$$
+for every $H\in D_{S,t}$ and the output is delivered by the cycle-$t$ boundary. The values $1$ and $0$ are retained Boolean judgments that $H$ is true and false, respectively; $\bot$ is explicit abstention. The map is **total** when it never returns $\bot$. It is **standard-sound** when, for every $H\in D_{S,t}$,
+$$
+\operatorname{Cl}_{S,t}(H)=1
+\Longrightarrow
+\mathbb N\models H
+$$
+and
+$$
+\operatorname{Cl}_{S,t}(H)=0
+\Longrightarrow
+\mathbb N\models\neg H.
 $$
 
-is simultaneously total, trace-accepting, and finite-cost on $D_S$.
+**Theorem A.6.2 (No total standard-sound live-diagonal self-closure).** Let $S$ be trace-certified, fix $t$, and let $D_{S,t}$ be live-diagonal complete for $(S,t)$. No $S$-internal finite-cycle closure map on $D_{S,t}$ is both total and standard-sound.
 
-*Proof.* Since $D_S$ is trace-diagonal complete, $G_S\in D_S$. By Theorem A.5.1(i), $G_S$ is true in $\mathbb N$ and has a finite PA proof-object. If $\operatorname{Cl}_S$ is total and trace-accepting on $D_S$, then
-
+*Proof.* Since $E_{S,t}\in D_{S,t}$, totality gives
 $$
-\operatorname{Cl}_S(G_S)=1
+\operatorname{Cl}_{S,t}(E_{S,t})\in\{0,1\}.
 $$
-
-and the accepting update requires a finite content-integrating event $\mathrm{Reach}_S(G_S,p)$ for some PA proof-object $p$ of $G_S$. This contradicts Theorem A.5.1(ii), which states that every content-integrating proof-act for $G_S$ by $S$ induces
-
-$$
-\mu_S(G_S)=\infty
-$$
-
-and hence
-
-$$
-C_{\mathrm{process}}(S,G_S)=\infty.
-$$
-
-Therefore no such total trace-accepting finite-cost internal closure map exists. ∎
+If this value is $1$, then $P_S(t,\ulcorner E_{S,t}\urcorner)=1$, so Equation A.5.6a.3 makes $E_{S,t}$ false in $\mathbb N$, contradicting standard soundness. If the value is $0$, then $P_S(t,\ulcorner E_{S,t}\urcorner)=0$, so Equation A.5.6a.3 makes $E_{S,t}$ true in $\mathbb N$, again contradicting standard soundness. The remaining value $\bot$ violates totality. ∎
 
 ### A.6.2 Stable partial closures
 
 **Definition A.6.3 (Stable axiom-stabilizer).** A **stable axiom-stabilizer** for a predictor $S$ under finite budget $B$ is a tuple
-
 $$
 \mathfrak A_{S,B}
 =
 (D_{S,B},J_{S,B},\vdash_{S,B},V_{S,B},q_{S,B})
 $$
-
 with the following components.
 
 1. $D_{S,B}$ is a finite or finitely generated retained judgment domain of represented prediction, verification, model-update, and response claims available within budget $B$.
 2. $J_{S,B}\subseteq D_{S,B}$ is the seed set of accepted base judgments.
 3. $\vdash_{S,B}$ is the retained finite inference/update relation generated by the composition, memory, and uniform-specification operations available to the predictor.
-4. $V_{S,B}:D_{S,B}\to\{0,1\}$ is the finite verification predicate obtained from the protocol acceptance cut of Remark A.0.1.1.
-5. $q_{S,B}$ is the response quotient identifying judgments that have the same retained finite protocol-response role.
+4. $V_{S,B}:D_{S,B}\to\{0,1\}$ is the finite protocol-verification predicate, and for every active cycle $t$ represented in $D_{S,B}$ no retained same-cycle subdomain containing $E_{S,t}$ is assigned total standard-sound Boolean judgments.
+5. $q_{S,B}$ is the response quotient identifying judgments with the same retained finite protocol-response role.
 
 The tuple is stable when it satisfies:
 
-1. **finite response:** every retained judgment in $D_{S,B}$ has finite protocol response and finite processing cost bounded by $B$;
-2. **local soundness:** derivability inside $\vdash_{S,B}$ preserves the retained verification predicate after quotienting by $q_{S,B}$;
+1. **finite response:** every retained judgment in $D_{S,B}$ has finite protocol response and processing cost bounded by $B$;
+2. **local soundness:** derivability under $\vdash_{S,B}$ preserves $V_{S,B}$ after quotienting by $q_{S,B}$;
 3. **composition closure:** finite compositions of admitted prediction-update steps remain in $D_{S,B}$ whenever their protocol responses are retained by $q_{S,B}$;
-4. **diagonal guard:** no trace-diagonal complete subdomain is closed by forced retained truth values at finite cost; any trace-diagonal object whose accepting update would trigger the Theorem A.5.1(ii) obstruction is excluded from $D_{S,B}$ rather than accepted as an internally integrated judgment;
+4. **live-diagonal guard:** for each represented active cycle $t$, the sentence $E_{S,t}$ is omitted from the same-cycle retained domain, assigned $\bot$ in a ternary extension, or deferred to a later cycle;
 5. **PCE minimality:** when the relevant response-equivalence class has an attained PCE minimum under Definition 15 and Definition 15a, $\mathfrak A_{S,B}$ is represented by a least-cost member of that class.
 
-**Theorem A.6.4 (Axiom-stabilizer necessity for nontrivial verified prediction).** Every nontrivial finite prediction-update cycle satisfying the Fundamental Predictive Loop, binary verification, composition closure, logical memory, and uniform specification induces a stable axiom-stabilizer on its retained finite response domain. Conversely, every stable axiom-stabilizer is an axiom-like local formal system for the corresponding retained prediction-update domain.
+**Theorem A.6.4 (Axiom-stabilizer necessity for nontrivial verified prediction).** Every nontrivial finite prediction-update cycle satisfying the Fundamental Predictive Loop, binary verification, finite-budget retention, the live-diagonal guard, and composition, logical-memory, and uniform-specification rules that preserve the declared verification predicate modulo the retained response quotient induces a stable axiom-stabilizer on its retained finite response domain. Conversely, every stable axiom-stabilizer supplies the data of an axiom-like local formal system for the corresponding retained prediction-update domain.
 
-*Proof.* Let a nontrivial finite prediction-update cycle be given. The cycle contains a finite prediction object, a finite response protocol, a returned response $r$ in a finite response set $R$, and an acceptance condition for whether the prediction is retained as successful. By Remark A.0.1.1 this acceptance condition is exactly a subset $A\subseteq R$ and therefore induces the binary verification predicate
-
+*Proof.* Let such a cycle be given. It contains a finite prediction object, a finite response protocol, a returned response $r$ in a finite response set $R$, and an acceptance set $A\subseteq R$. Remark A.0.1.1 therefore gives
 $$
 V_A(r)=\mathbf 1_A(r).
 $$
+Let $D_{S,B}$ be the finite or finitely generated domain of claims actually queried, verified, remembered, composed, or updated within the retained finite budget $B$. Let $J_{S,B}$ be its accepted seed claims, let $\vdash_{S,B}$ be the retained composition, memory, and uniform-specification relation, and let $q_{S,B}$ identify claims with the same retained protocol-response role.
 
-Let $D_{S,B}$ be the finite or finitely generated retained domain of represented claims actually queried, verified, remembered, composed, or updated during the cycle and its finite retained compositions within budget $B$. Let $J_{S,B}$ be the subset accepted by $V_A$. Let $\vdash_{S,B}$ be the finite relation generated by the cycle's retained verification-preserving composition rules, memory transfer rules, and uniform specification rules. Let $q_{S,B}$ identify judgments that have the same finite protocol-response role.
+Finite response holds by finite-budget retention. Local soundness holds by the verification-preservation hypothesis. Composition closure follows from the retained-rule hypothesis. The live-diagonal guard is a theorem hypothesis; Theorem A.6.2 shows that a standard-sound domain containing $E_{S,t}$ cannot instead carry a total same-cycle Boolean closure. If the relevant response-equivalence class has an attained PCE minimum, replacing the stabilizer by a least-cost representative preserves every retained response and gives PCE minimality. Hence the cycle induces a stable axiom-stabilizer.
 
-Finite response and bounded processing hold by construction of $D_{S,B}$ from a finite cycle under budget $B$. Local soundness holds in the protocol sense because accepted updates are exactly those passing the retained verification predicate, and $q_{S,B}$ identifies only response-equivalent judgments. Composition closure holds because $\vdash_{S,B}$ was defined as the retained finite composition/update relation. The diagonal guard is supplied by restricting the domain to retained finite-response judgments and by not accepting any trace-diagonal object whose internal integration would trigger the Theorem A.5.1(ii) obstruction. If such an object is presented, it is left outside the retained finite-cost domain rather than assigned a forced truth value by the stabilizer. If the PCE minimum exists in the response-equivalence class, replacing the stabilizer by its least-cost representative gives PCE minimality without changing its retained responses.
+Conversely, a stable axiom-stabilizer supplies accepted seeds, a retained inference/update relation, a verification predicate, and a response quotient on its retained domain. These data are an axiom-like local formal system, with omission, abstention, or historical deferral at the live boundary rather than a total same-cycle truth predicate. ∎
 
-Thus the prediction-update cycle induces a stable axiom-stabilizer. Conversely, a stable axiom-stabilizer contains seed judgments, inference/update rules, a verification predicate, and a response quotient. This is precisely an axiom-like local formal system for its retained domain, with abstention outside that domain rather than total reflexive closure. ∎
+**Corollary A.6.5 (Generative non-closure chain).** For every trace-certified predictor $S$ and targeted cycle $t$, every standard-sound same-cycle closure on a represented domain must omit $E_{S,t}$, return $\bot$ on it, or defer it to a later cycle. Equivalently, any total same-cycle Boolean closure on a domain containing $E_{S,t}$ relinquishes standard soundness at that live diagonal sentence.
 
-**Corollary A.6.5 (Generative non-closure chain).** For any predictor satisfying Theorem A.5.1, the following chain holds inside PU:
+Independently, every nontrivial finite verified prediction-update cycle satisfying all hypotheses of Theorem A.6.4 induces a stable axiom-stabilizer. When a PCE minimizer exists in the relevant response-equivalence class, the retained stabilizer may be represented by a least-cost member of that class. Live-diagonal non-closure alone neither constructs nor uniquely selects an axiom-stabilizer.
 
-$$
-\text{no total internal trace-diagonal closure}
-\Longrightarrow
-\text{only guarded finite partial closures are admissible on trace-diagonal domains}
-\Longrightarrow
-\text{nontrivial verified prediction requires stable axiom-stabilizers}.
-$$
-
-When PCE minimizers exist in the relevant response-equivalence classes, the retained stabilizers are selected as least-cost representatives.
-
-*Proof.* The first implication is Theorem A.6.2. The second follows because a closure that tried to be total on the trace-diagonal domain would contradict Theorem A.6.2, so admissible finite-cost closure must be partial or guarded. The third implication is Theorem A.6.4: every nontrivial verified prediction-update cycle induces a stable axiom-stabilizer. The final sentence is the PCE-minimality clause of Definition A.6.3. ∎
+*Proof.* The first assertion is the contrapositive form of Theorem A.6.2 with the three permitted boundary treatments made explicit; a total Boolean alternative remains possible only by loss of standard soundness. The stabilizer conclusion is Theorem A.6.4, and the PCE statement is clause 5 of Definition A.6.3. The hypotheses of Theorem A.6.4 are independent additional premises, so the final qualification follows. ∎
 
 **Theorem A.6.6 (Conservativity of the generative non-closure vocabulary).** Assume Definitions A.6.1–A.6.3 are explicit, nonrecursive definitions in the preceding PU language. Adding the vocabulary of generative non-closure, stable partial closure, and axiom-stabilizer is then a definitional and status-conservative extension of the preceding PU formal apparatus. It changes no theorem in the earlier language, branch condition, numerical backbone value, or certificate status unless a later theorem changes the underlying response domain, cost functional, PPI quotient, or branch certificate.
+
 
 *Proof.* Let $L$ be the preceding PU language and $L^+$ its expansion by the symbols introduced in Definitions A.6.1–A.6.3. Define a translation $\tau$ from $L^+$-formulas to $L$-formulas by replacing every new atomic expression by its explicit definiens and then commuting $\tau$ with Boolean connectives and quantifiers. Because the definitions are explicit and nonrecursive, this process terminates and $\tau(\phi)=\phi$ for every $L$-formula $\phi$.
 
@@ -2178,10 +1980,11 @@ Branch conditions, numerical values, and certificate statuses are expressions in
 
 **Cosmology typing guardrail.** Generative non-closure implies neither a vacuum instanton, positive cosmological constant, nor a low-entropy macrostate. Any bridge must independently fix a vacuum response map, reachability, exponent, prefactor interval, coarse-graining map, entropy residual, and forward lock before Appendix U is evaluated.
 
-**Instance verification versus total generation.** A particular external response $r$ is finitely verifiable only when $V_A(r)$ is represented by an executable procedure with a certified finite cost. Theorem A.6.2 separately excludes a total internal closure map on its diagonal domain. This is a difference of domains and quantifiers; it proves no P-versus-NP or finite-instance hardness statement.
+**Instance verification versus total generation.** A particular external response $r$ is finitely verifiable only when $V_A(r)$ is represented by an executable procedure with certified finite cost. Theorem A.6.2 separately excludes a total standard-sound same-cycle closure on a domain containing the targeted live diagonal sentence. Historical verification, fixed finite instances, and uniform same-cycle generation have different domains and quantifier order; no P-versus-NP or finite-instance hardness statement follows.
 
 **Definition A.6.7 (Finite Stabilizer-Comparison Certificate).** For a declared finite exhaustive comparison class $\mathfrak S_{\mathrm{stab}}$, a stabilizer-comparison certificate records for every $S\in\mathfrak S_{\mathrm{stab}}$: its response envelope, stabilization verdict, response-equivalence class, PCE cost interval, and either a finite failure witness or a strict cost-separation witness. The unresolved set is required to be
 $$
+
 \mathcal R_{\mathrm{stab}}=\varnothing.
 \tag{A.6.7.1}
 $$

@@ -2,30 +2,37 @@
 
 ## N.1 Master Principle: The PCE Potential
 
-The foundational dynamical principle of the Predictive Universe (PU) framework is the minimization of the **PCE Potential**, $V$. This is a functional that quantifies the net resource cost rate of a given MPU network configuration, balancing the costs of operation and interaction against the benefits of predictive accuracy. The system's evolution is governed by a stochastic process that seeks the global minimum of this potential. For a single MPU $i$ interacting with its local environment, its contribution to the global potential is derived from the structure of $V$ as defined in the PU framework [**Appendix D**, Def. D.1]:
+On a registered finite-resolution branch, the PU variational grammar nominates a **PCE Potential** $V$ that balances declared operation and interaction costs against predictive benefit. Definition D.1 is a branch-indexed potential schema; it does not by itself construct a physical dynamics or prove that a global minimizer exists. For a single MPU $i$ interacting with its local environment, one admitted decomposition is
 
 $$
 V_i = \underbrace{V_{op}(i)}_{\text{Operational Cost}} + \underbrace{V_{prop}(i)}_{\text{Propagation Cost}} - \underbrace{V_{benefit}(i)}_{\text{Predictive Benefit}}
 \tag{N.1}
 $$
 
-where each term is a rate (power):
-*   **$V_{op}$**: The cost of maintaining and operating the MPU's internal complexity $C_i$, given by the PU cost functions $R(C_i)$ and $R_I(C_i)$ [Def. 3].
-*   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the structural thermodynamic cost $\varepsilon_0=\ln2$, with physical implementation cost $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$, of interaction [Appx. C, D].
-*   **$V_{benefit}$**: The reward for predictive accuracy, proportional to the MPU's success in predicting the states of its neighbors, derived from its Predictive Performance $PP$ [Def. 7, D.1].
+where each term is a rate only after the branch supplies a common unit and metering record:
+*   **$V_{op}$**: The declared cost of maintaining and operating the MPU's internal complexity $C_i$, represented by the branch functions $R(C_i)$ and $R_I(C_i)$ [Def. 3].
+*   **$V_{prop}$**: The declared cost of predictive links with neighbors, including any registered information-loss term and, on a physical reset branch, an implementation cost satisfying $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$. The structural log-cardinality $\varepsilon_0=\ln2$ is not itself a heat or power without the reset and unit bridges [Appx. C, D].
+*   **$V_{benefit}$**: A branch reward functional built from the registered Predictive Performance record $PP$ [Def. 7, D.1].
 
-The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [**Appendix D**, Equation D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
+Equation D.8 nominates the stochastic model
+$$
+dx_t=-\eta(x_t)\operatorname{grad}_gV(x_t)\,dt+\sigma(x_t)\,dW_t,
+\qquad \sigma\sigma^*=2D,
+$$
+only on a branch fixing a finite-dimensional smooth state manifold $X$ (a vector space is allowed), a Riemannian metric $g$, tangent mobility $\eta_x:T_xX\to T_xX$, Brownian dimension $m$, a filtered probability space with an $m$-dimensional Brownian motion, a diffusion factor $\sigma_x:\mathbb R^m\to T_xX$ satisfying $\sigma_x\sigma_x^*=2D_x$, coefficient domains and regularity, boundary behavior, and either a Stratonovich convention or an Itô convention with the required connection/chart data. A common unit/metering record is also required. If a reset entropy enters a cost term, a registered reset frequency is required to make an entropy rate; physical power additionally requires the declared temperature/energy conversion. The equation alone proves neither well-posedness nor existence, attainment, or uniqueness of a global minimizer, and it does not prove convergence to one. Those conclusions require the separate existence, stability, ergodicity, low-noise, or attractor certificates stated in Appendix D. The principles below are therefore conditional inputs to this branch model rather than an unconditional evolution law of a frozen joint PU theory.
 
 ## N.2 Divergence Laws for Hardware and Software Limits
 
 The PCE Potential incorporates costs that diverge as the system approaches fundamental physical or logical limits. Two such divergences are critical:
 
-*   **Predictive Divergence** [Thm. 14]. For a self-referential task with performance gap $\delta_{\text{SPAP}}:=\alpha_{SPAP}-PP$, On a task class carrying the Bernoulli reduction, independence, confidence, and cost certificate $\mathfrak C_{B.2}$, Theorem 14 furnishes the lower bound:
+*   **Predictive Divergence** [Thm. 14]. Fix a preregistered target $\alpha_{\mathrm{tgt}}<\alpha_{SPAP}$ and set $\delta_{\text{SPAP}}:=\alpha_{SPAP}-\alpha_{\mathrm{tgt}}$. On a task class carrying the Bernoulli reduction, independence, confidence, and operation-count certificate $\mathfrak C_{B.2}$, Theorem 14 gives
     $$
-    C_{\text{uni}}(PP) = \Omega\left(\frac{\log(1/(\alpha_{SPAP} - PP))}{(\alpha_{SPAP} - PP)^2}\right)
+    C_{\text{uni}}(\delta_{\text{SPAP}})
+    =
+    \Omega\left(\frac{\log(1/\delta_{\text{SPAP}})}{\delta_{\text{SPAP}}^2}\right).
     \tag{N.2}
     $$
-    Any transfer of this lower bound to a specific predictive-complexity notion such as $C_P$ requires the explicit bridge hypothesis that the operational predictive complexity dominates the universal SPAP complexity in the regime under study.
+    An observed $PP$ may replace $\alpha_{\mathrm{tgt}}$ only when the certificate registers that identification and retains its confidence condition. Transfer to a specific predictive-complexity notion such as $C_P$ requires the separate domination bridge on the same task family.
 
 *   **Relativistic Divergence** (Special Relativity). The kinetic energy required to accelerate a particle of rest mass $m_0$ to a velocity $v$ diverges as $v$ approaches the invariant speed $c$:
     $$
@@ -178,28 +185,23 @@ R\!\left(C_{\mathrm{req}}(\tau),T_{\mathrm{eff}}(\tau)\right).
 $$
 *Proof.* This is the temperature-dependent operational-cost assumption of Section N.3.1, evaluated in the instantaneous comoving frame. Transformation of the associated exported energy to another frame is a separate four-momentum step and is not contained in the definition of $R_{\mathrm{com}}$. ∎
 
-**Lemma N.2 (Conditional transfer of the SPAP divergence bound).** Let $\delta_{\text{SPAP}}=\alpha_{\text{SPAP}}-PP\in(0,\delta_0]$. If $\mathfrak C_{B.2}$ is accepted and
+**Lemma N.2 (Conditional transfer of the SPAP divergence bound).** Fix a target $\alpha_{\mathrm{tgt}}<\alpha_{\mathrm{SPAP}}$ and set $\delta_{\mathrm{SPAP}}:=\alpha_{\mathrm{SPAP}}-\alpha_{\mathrm{tgt}}\in(0,\delta_0]$. Suppose $\mathfrak C_{B.2}$ is accepted for the same task family and that
 $$
-C_{\text{SPAP}}(PP)\ge C_{\text{uni}}(PP),
-$$
-then
-$$
-C_{\text{SPAP}}(PP)
+C_{\mathrm{SPAP}}(\alpha_{\mathrm{tgt}})
 \ge
-c_{\text{SPAP}}
-\frac{\log(1/\delta_{\text{SPAP}})}
-{\delta_{\text{SPAP}}^2}.
+C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}}).
 $$
+Then
+$$
+C_{\mathrm{SPAP}}(\alpha_{\mathrm{tgt}})
+\ge
+c_{\mathrm{SPAP}}
+\frac{\log(1/\delta_{\mathrm{SPAP}})}
+{\delta_{\mathrm{SPAP}}^2}.
+$$
+An observed value $PP$ may be substituted for $\alpha_{\mathrm{tgt}}$ only when the certificate registers that identification and its confidence event.
 
-*Proof.* Theorem 14 gives
-$$
-C_{\text{uni}}(PP)
-\ge
-c_{\text{SPAP}}
-\frac{\log(1/\delta_{\text{SPAP}})}
-{\delta_{\text{SPAP}}^2}.
-$$
-Combining this inequality with the bridge hypothesis by transitivity proves the claim. ∎
+*Proof.* Theorem 14 gives the displayed lower bound for $C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})$ on the certified task family. Transitivity with the domination hypothesis proves the claim. ∎
 
 **Lemma N.3 (Relativistic work).** For a point particle of rest mass $m_0$, the minimum work required to accelerate it from rest to speed $v_f<c$, with no dissipative losses, is
 $$
@@ -257,17 +259,32 @@ so $C\in\mathcal F_{T_1}$. Thus $\mathcal F_{T_2}\subseteq\mathcal F_{T_1}$, and
     \ge
     \int_0^{\tau_f}\gamma(\tau)R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau))\,d\tau,
     $$
-    where $C_{\text{req}}(\tau)=C_{\text{SPAP}}(PP(\tau))+C_{\text{noise,external}}(a(\tau))+C_{\text{noise,internal}}(A_{\text{pred}}(\tau))$ as in the theorem statement.
-
-3.  **Explicit SPAP lower bound (optional form):** By Lemma N.2, for $\delta(\tau)=\alpha_{\text{SPAP}}-PP(\tau)\in(0,\delta_0]$,
+    On the optional SPAP/noise decomposition branch, require a registered source-disjointness audit proving that the SPAP, external-noise, internal-noise, and $T_{\mathrm{eff}}$ entries do not charge the same physical mechanism twice. With $\alpha_{\mathrm{tgt}}(\tau)$ fixed by the registered task schedule, define
     $$
-    C_{\text{SPAP}}(PP(\tau)) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}.
+    C_{\text{req}}(\tau)
+    =
+    C_{\text{SPAP}}(\alpha_{\mathrm{tgt}}(\tau))
+    +C_{\text{noise,external}}(a(\tau))
+    +C_{\text{noise,internal}}(A_{\text{pred}}(\tau)).
+    $$
+
+3.  **Explicit SPAP lower bound (optional form):** Assume one same-family $\mathfrak C_{B.2}$ and domination certificate supplies constants $c_{\text{SPAP}}>0$ and $\delta_0>0$ uniformly over the entire target schedule. By Lemma N.2, for $\delta(\tau)=\alpha_{\text{SPAP}}-\alpha_{\mathrm{tgt}}(\tau)\in(0,\delta_0]$,
+    $$
+    C_{\text{SPAP}}(\alpha_{\mathrm{tgt}}(\tau))
+    \ge
+    c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}.
     $$
     Since $R(C,T)$ is non-decreasing in $C$ (Definition 3), this yields
     $$
-    W_{\text{pred}}^{\mathrm{lab}} \ge \int_0^{\tau_f}\gamma(\tau) R\!\left(c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}+C_{\text{noise,external}}(a(\tau))+C_{\text{noise,internal}}(A_{\text{pred}}(\tau)),\,T_{\text{eff}}(\tau)\right)\,d\tau.
+    W_{\text{pred}}^{\mathrm{lab}}
+    \ge
+    \int_0^{\tau_f}\gamma(\tau)R\!\left(
+    c_{\text{SPAP}}\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}
+    +C_{\text{noise,external}}(a(\tau))
+    +C_{\text{noise,internal}}(A_{\text{pred}}(\tau)),
+    T_{\text{eff}}(\tau)\right)\,d\tau.
     $$
-    This transfer uses the bridge hypothesis of Lemma N.2; without it the lower bound remains a statement about $C_{\mathrm{uni}}$.
+    This transfer uses the same-family domination hypothesis of Lemma N.2. Replacing $\alpha_{\mathrm{tgt}}(\tau)$ by an observed $PP(\tau)$ additionally requires the registered confidence event.
 
 4.  **Add Kinetic Work:** The laboratory kinetic work required to accelerate from rest to velocity $v_f$ is at least $W_{\text{kin}}^{\mathrm{lab}}\ge m_0c^2(\gamma_f-1)$ (Lemma N.3). The theorem's disjoint-ledger hypothesis permits addition, giving exactly (N.5). QED.
 
@@ -664,9 +681,9 @@ The UCT does not by itself dictate a knowledge-acquisition strategy or establish
 
 1.  **Rindler Response and Sampling:** An ideal detector on an eternally uniformly accelerated worldline has a Rindler horizon and a KMS response characterized by $T_U=\hbar a/(2\pi c k_B)$. This detector-response statement is not a universal ambient thermal bath interacting with every accelerated system. Only on the declared response and refresh branch may the modeled increment enter the predictor's cost ledger. Broad sampling may also include inertial coasting, for which proper acceleration and the Unruh increment vanish.
 
-2.  **The Prediction Coherence Boundary and the Cost of Modeling:** For task classes carrying the certificate $\mathfrak C_{B.2}$, Theorem 14 gives
+2.  **The Prediction Coherence Boundary and the Cost of Modeling:** For a preregistered target schedule $\alpha_{\mathrm{tgt}}(\tau)<\alpha_{\mathrm{SPAP}}$ on task classes carrying $\mathfrak C_{B.2}$, Theorem 14 gives
     $$
-    C_{\mathrm{uni}}(PP)
+    C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})
     =
     \Omega\!\left(
     \frac{\log(1/\delta_{\mathrm{SPAP}})}
@@ -675,9 +692,9 @@ The UCT does not by itself dictate a knowledge-acquisition strategy or establish
     \qquad
     \delta_{\mathrm{SPAP}}
     :=
-    \alpha_{\mathrm{SPAP}}-PP.
+    \alpha_{\mathrm{SPAP}}-\alpha_{\mathrm{tgt}}.
     $$
-    Transfer of this lower bound to the operational predictive complexity $C_P$ or $C_{\mathrm{SPAP}}$ requires the explicit domination bridge of Lemma N.2. No unconditional $C_P$ divergence follows merely by renaming $C_{\mathrm{uni}}$.
+    Transfer to $C_P$ or $C_{\mathrm{SPAP}}$ requires the same-family domination bridge of Lemma N.2. An observed $PP$ may instantiate the target only with the registered confidence event; no unconditional $C_P$ divergence follows from notation alone.
 
 For a specified proper-time interval, suppose the baseline task power, the saturation-branch acceleration-refresh increment, endpoint kinetic work, and all other entries are disjoint and transformed to the laboratory ledger according to Theorem N.UCT. If the available laboratory work is $B_{\mathrm{lab}}$, a necessary feasibility condition is
 $$
@@ -913,10 +930,10 @@ The Unified Cost of Transgression places two distinct resource effects in one fr
 |Domain |Limit |Resource statement |Status |
 |--------------|----------------------|-------------------------------------------------------------|---------------|
 |**Kinematics**|$v \to c$ |$m_0c^2(\gamma-1)\to\infty$ |standard relativistic input |
-|**Prediction**|$PP \to \alpha_{SPAP}$|$C_{\mathrm{uni}}\to\Omega\!\left(\log(1/\delta)/\delta^2\right)$ under $\mathfrak C_{B.2}$ |transfers to $C_P$ only with the bridge of Lemma N.2 |
+|**Prediction target**|$\alpha_{\mathrm{tgt}}\uparrow\alpha_{\mathrm{SPAP}}$|$C_{\mathrm{uni}}(\delta)=\Omega\!\left(\log(1/\delta)/\delta^2\right)$ as $\delta\downarrow0$ under $\mathfrak C_{B.2}$ |transfers to $C_P$ only with the same-family bridge of Lemma N.2 |
 |**Acceleration coupling**|$a\ne0$ |Unruh–Landauer incremental cost on the registered saturation/activation branch |conditional bridge |
 
-Here $\delta=\alpha_{SPAP}-PP$. The shared laboratory work functional does not make the two limiting operations identical. It says that, when the Unruh response and predictive-refresh bridge are active, acceleration adds a prediction-related cost to the already distinct kinetic and SPAP ledgers.
+Here $\delta=\alpha_{\mathrm{SPAP}}-\alpha_{\mathrm{tgt}}$. The shared laboratory work functional does not identify the two limiting operations. When the Unruh response and predictive-refresh bridge are active, acceleration adds a prediction-related term to the distinct kinetic and SPAP ledgers. Substitution of an observed $PP$ for the target requires the registered confidence event.
 
 Equation (N.17) recovers the same $c$ from the saturated Unruh–Landauer formula because that formula imports $c$ through the standard Unruh temperature. It is a consistency calibration, not a derivation of Lorentz causality from SPAP. Theorem 46 supplies only the independent uniform operational speed upper bound. An attained normalized frontier $c=\delta/\tau_{\min}$ requires the separate uniform-weight one-link-attainment branch, and its Lorentzian invariant-speed interpretation requires Corollary 46a and the full Appendix O package.
 

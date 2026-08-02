@@ -14,7 +14,7 @@ Adaptation dynamics (Section 6) are organized by the Principle of Compression Ef
 
 The cross-domain correspondences are therefore typed bridge results rather than an identity of mechanisms. Definition 5a and Proposition 5a transport functional support only when original and null-intervened response laws are carried by a certified protocol and outcome equivalence. Proposition P.8.9a.6 and Theorem P.8.9a.6a identify normalized selection with Bayesian and multiplicative-weights normalization on the stated finite-type map, while mutation, recombination, frequency dependence, and SPAP conditions remain separate. Appendix P.16b.15a places retained cultural function in a collective response quotient relative to fixed protocols and decoders; that content role is not a system-level loop capability. A common response form or scaling curve across carriers does not establish a common physical mechanism.
 
-The MPU Reality Model (Hypothesis 1) posits Minimal Predictive Units as the fundamental network entities. A complex Hilbert representation is available on Proposition 4's complex-$C^*$ and positive-state branch. Internal Prediction becomes unitary Schrödinger evolution on the continuous time-translation ray branch, while Proposition 28 treats the stochastic `Evolve` Markov kernel as explicit law data. Theorem 28a then gives the Born trace representation only under normalized noncontextual finite-effect additivity on the complex Hilbert branch; it does not derive stochasticity from Logical Indeterminacy.
+The Nominated MPU Reality Model (Hypothesis 1) posits Minimal Predictive Units as the network entities on PU's foundational physical branch; it does not prove that this is the realized substrate. A complex Hilbert representation is available on Proposition 4's complex-$C^*$ and positive-state branch. Internal Prediction becomes unitary Schrödinger evolution on the continuous time-translation ray branch, while Proposition 28 treats the stochastic `Evolve` Markov kernel as explicit law data. Theorem 28a then gives the Born trace representation only under normalized noncontextual finite-effect additivity on the complex Hilbert branch; it does not derive stochasticity from Logical Indeterminacy.
 
 A reachable binary verification record has structural log-cardinality $\varepsilon_0=\ln2$. A separately registered reset obeys
 $$
@@ -511,6 +511,46 @@ S_{BH}(S)=\frac{c^3}{4G\hbar}A(S)+o(A),
 $$
 or $S=A/(4G)$ in units $\hbar=c=1$. Throughput alone proves neither saturation nor this entropy identification.
 
+**Definition 14.2.4.1a (Boundary-Learned Guard Batch).**
+
+A boundary-learned guard batch of size $m$ is represented by a finite classical source register $G_m$ selecting the $m$ guard entries to be established. Let $R_{0,m}$ contain every exterior record available before the registered boundary round, and let $Y_m$ be the newly received exterior channel output in that round. The batch has a joint new-information certificate $I_{\mathrm{guard}}>0$ when
+$$
+I(G_m;Y_m\mid R_{0,m})
+\ge
+mI_{\mathrm{guard}},
+\tag{14.2.4.1a}
+$$
+The registered code class must use the same side-information convention in its aggregate-capacity bound. Separate labels, distinct memory addresses, preshared correlations, or marginal information bounds do not imply the conditional joint lower bound (14.2.4.1a).
+
+**Corollary 14.2.4.1b (Conditional Boundary-Learned Guard Bound).**
+
+Assume the aggregate-capacity, no-bypass, and one-round premises used to define
+$$
+C_{\partial}(S)
+=
+N_{\mathrm{eff\,links}}(S)C_{\max}.
+$$
+Assume also that the registered code class satisfies the side-information-aware bound
+$$
+I(G_m;Y_m\mid R_{0,m})
+\le
+C_{\partial}(S).
+$$
+Every boundary-learned guard batch with the joint certificate of Definition 14.2.4.1a satisfies
+$$
+m
+\le
+\left\lfloor
+\frac{N_{\mathrm{eff\,links}}(S)C_{\max}}
+{I_{\mathrm{guard}}}
+\right\rfloor.
+\tag{14.2.4.1b}
+$$
+
+*Proof.* Combine the registered conditional aggregate-capacity bound with (14.2.4.1a), divide by $I_{\mathrm{guard}}>0$, and use integrality of $m$. ∎
+
+This result applies only to physically learned guard records on the stated channel branch. A semantic CPA permission or a predetermined entry supplies no positive boundary-learning lower bound. Reversible retention does not remove an already certified boundary transfer; it prevents only a reset-heat inference. Heat requires a separately assigned registered reset satisfying Corollary J.4a.3. Proposition N.4 is not used as a one-round transfer theorem.
+
 **Theorem 14.2.4.2 (Fixed-Resolution Manifold-Certificate Boundary).** Let $\gamma$ be a registered causal curve in the manifold regime (Theorem 43), and fix $\delta>0$ and $\varepsilon_{\mathrm{cert}}>0$. Extend a parallel-propagated orthonormal frame $(e_A)_{A=0}^3$ from $\gamma$ over its Fermi neighborhood $U_\delta:=\{x:|x|\le\delta\}$, write $R_{ABCD}:=R(e_A,e_B,e_C,e_D)$ in that frame, and define
 $$
 \lVert R\rVert_{\mathrm{fr},\delta}
@@ -794,11 +834,11 @@ The comparison is a separation result, not an uncertainty–irreversibility iden
 
 These ledgers can coexist on a joint branch, but none is derived from another merely by sharing a predictive interpretation.
 
-#### 14.2.6.1 Extension to Inter-Observer Signaling: The Signaling Uncertainty Principle
+#### 14.2.6.1 Extension to Inter-Observer Signaling: The Branch-Disjunctive Signaling Uncertainty Principle
 
-Theorem 14.2 relates the *instantaneous* predictability limit (Heisenberg uncertainty, simultaneous-variable context) and the *sequential* distinguishability limit (second law, single-channel evolution context) through separately certified branch ledgers with distinct antecedents rather than a single SPAP origin. A third operational context arises when two perspectival systems compare information across spacelike separation: the *inter-observer signaling* context. In this context the same SPAP-rooted causality and finite-window regularity gates force a determinism–reach tradeoff.
+Theorem 14.2 compares the *instantaneous* predictability limit and the *sequential* distinguishability limit through separately certified branch ledgers with distinct antecedents rather than a single SPAP origin. A third operational context arises when two perspectival systems compare information across spacelike separation. Its determinism–reach exclusion follows from either exact marginal invariance or a separately registered positive-overlap condition; neither condition follows from SPAP alone.
 
-**Theorem 14.2.6.1 (Signaling Uncertainty Principle).** Let $S_A$ and $S_B$ be MPU aggregates whose relevant measurement regions are spacelike separated on the AQFT branch of Theorem F.0, and let Alice's late context be binary, $C_A\in\mathcal C_A:=\{0,1\}$, with the context-fixing event outside Bob's past lightcone. Let $\Phi$ be any admissible context-to-transcript experiment assigning context-conditioned laws $P_c^{(n)}$ to a finite Bob-side transcript $Y_B^n$ over a finite alphabet. Let $D$ range over possibly randomized decoders from $Y_B^n$ to $\mathcal C_A$, with decoder randomness included in the displayed probabilities. Define
+**Theorem 14.2.6.1 (Branch-Disjunctive Signaling Uncertainty Principle).** Let $S_A$ and $S_B$ be MPU aggregates on a branch with a registered causal frontier, and let Alice's late context be binary, $C_A\in\mathcal C_A:=\{0,1\}$, with the context-fixing event outside Bob's registered causal past. Let $\Phi$ assign context-conditioned laws $P_c^{(n)}$ to a finite Bob-side transcript $Y_B^n$ over a finite alphabet. Let $D$ range over possibly randomized decoders from $Y_B^n$ to $\mathcal C_A$, with decoder randomness included in the displayed probabilities. Define
 
 $$
 e_{\mathrm{wc}}(\Phi):=\inf_D\sup_{c\in\mathcal C_A}P\!\left(D(Y_B^n)\ne c\,\middle|\,C_A=c\right),
@@ -812,7 +852,16 @@ $$
 \Pi(\Phi):=\mathbf{1}\{Y_B^n\text{ is closed before any subluminal signal from Alice's context-fixing event could reach Bob's region}\}.
 $$
 
-Then, under the framework's standing finite-window assumptions (Postulate 2; Theorems 14.1, 31, 39, 39a, 42, 46; Definition 10.2a; Lemma E.1; and the AQFT branch of Theorem F.0 when operator locality is invoked),
+Assume that every run with $\Pi(\Phi)=1$ carries one of the following separately typed certificates:
+
+1. **sealed causal certificate:** $P_0^{(n)}=P_1^{(n)}$, supplied by Postulate 2 or the Bob-marginal-preserving AQFT/local-CPTP branch; or
+2. **regular overlap certificate:**
+   $$
+   \Omega_n:=\sum_y\min\{P_0^{(n)}(y),P_1^{(n)}(y)\}>0,
+   $$
+   supplied by Definition 10.2a and Theorem 39a.
+
+A response-active branch-(iii) marginal shift may satisfy the second certificate, but it is then an external alternative that falsifies the first certificate rather than a simultaneous part of the sealed causal branch. Under either certificate,
 
 $$
 \Delta(\Phi)\cdot\Pi(\Phi)<1.
@@ -835,37 +884,32 @@ $$
 \sup_{c\in\mathcal C_A}P\!\left(D^*(Y_B^n)\ne c\,\middle|\,C_A=c\right)=0.
 $$
 
-Because $\Pi(\Phi^*)=1$, this is a finite pre-lightcone zero-error decoder of Alice's late context, exactly the configuration excluded by the zero-error theorem, Theorem 39a, Equation (61d); Postulate 2 is stronger by Theorem 39c.
+Because $\Pi(\Phi^*)=1$, one of the two declared certificates applies.
 
-**Step 3 (Branchwise exclusion of the corner).** The framework supplies the required exclusion on each admissible branch.
-
-(i) *Endpoint gate.* By Theorem 39, $\alpha_{CC,max}<0.5$, so no binary coarse-graining of Bob-side outcomes can be driven to both deterministic endpoints by Alice's context choice. This rules out one-shot deterministic endpoint forcing on the CC branch.
-
-(ii) *Regular statistical branch.* On branch (iii) of Postulate 3 in the regular finite-window regime of Definition 10.2a, the two context-conditioned transcript laws have common support. Theorem 39a gives transcript overlap $\Omega_n>0$ and, for every deterministic decoder,
-
+**Step 3 (Separate certificate cases).** On the sealed causal certificate, $P_0^{(n)}=P_1^{(n)}$. If $q_j$ is the probability that a decoder outputs $j$ under this common transcript law, its two conditional error probabilities are $q_1$ and $q_0$. Their maximum is at least $1/2$, while uniform random guessing attains $1/2$. Hence
 $$
-P_{\mathrm{err}}(D)\ge\Omega_n/2>0.
+e_{\mathrm{wc}}(\Phi)=\frac12,
+\qquad
+\Delta(\Phi)=0.
 $$
 
-By convexity of randomized decoding over deterministic decoding rules, the same lower bound holds for randomized decoders. Since the worst-case error is at least the equal-prior error, $e_{\mathrm{wc}}(\Phi)\ge\Omega_n/2>0$. Hence $\Delta(\Phi)\le1-\Omega_n<1$ on the regular statistical branch.
-
-(iii) *AQFT/local-CPTP branch.* On the conditional AQFT branch of Theorem F.0 and Corollary F.1, local operators commute across spacelike separation. The Bob-marginal-preserving branch has
-
+On the regular overlap certificate, the minimum equal-prior decoding error is
 $$
-\omega_{C_{A,1}}(\mathbf 1_A\otimes B)=\omega_{C_{A,2}}(\mathbf 1_A\otimes B)
+\frac12\sum_y\min\{P_0^{(n)}(y),P_1^{(n)}(y)\}
+=
+\frac{\Omega_n}{2}.
 $$
+The worst-case error is at least the equal-prior error, so
+$$
+e_{\mathrm{wc}}(\Phi)\ge\frac{\Omega_n}{2}>0,
+\qquad
+\Delta(\Phi)\le1-\Omega_n<1.
+$$
+Randomization cannot lower this Bayes bound. Thus either certificate contradicts $e_{\mathrm{wc}}(\Phi^*)=0$.
 
-for every Bob-side observable $B$ (Equation F.4a), so Bob's unconditional transcript law is independent of Alice's late context and $e_{\mathrm{wc}}=1/2$, $\Delta=0$. Joint-statistic decoding using both Alice and Bob records is not a counterexample: extracting those joint statistics requires a classical comparison channel, which is timelike and therefore has $\Pi=0$ for the comparison stage.
+The two cases are alternatives, not a common certificate package: if $P_0^{(n)}\ne P_1^{(n)}$, the regular branch is response-active and falsifies the sealed marginal-invariance branch. SPAP, reset heat, refresh contractivity, and chronology protection provide separate constraints but are not premises of the decoder inequality proved here. Therefore $\Delta(\Phi)\Pi(\Phi)<1$. ∎
 
-(iv) *Carrier-mediated chronology route.* Theorem 14.1 excludes carrier-mediated CTC channels capable of transmitting predictively useful information across a chronology gap; Corollary 14.1c classifies finite higher-order process structure as a predictive resource rather than retrocausal signaling; and Theorem 42 excludes paradox-inducing loops from the statistical branch. Thus a finite higher-order or CTC-like carrier process cannot be used to realize the missing $\Delta=1$, $\Pi=1$ corner outside the branches above.
-
-Together, (i)–(iv) eliminate every admissible route to (R3), contradicting Step 2.
-
-**Step 4 (Joint SPAP and regular-channel branch).** SPAP (Theorems 10–11) supplies the logical impossibility of a universally accurate self-referential predictor. The finite-window signaling conclusion additionally uses Postulate 2, Definition 10.2a, and Theorem 39a; the AQFT subcase uses its own locality branch. On a registered-reset branch, Theorem 31 separately supplies $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a positive uniform floor requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$. On a refresh/minorization branch, Lemma E.1 independently supplies a nonzero refresh component and hence $f_{RID}<1$. No theorem identifies reset heat with refresh weight, and none of these causality, support, or locality inputs follows from the diagonal theorem alone. The signaling tradeoff may therefore be compared structurally with simultaneous-variable and sequential-update obstructions, but it remains a conditional inter-observer realization on the joint branch carrying all stated hypotheses.
-
-Hence $\Delta(\Phi)\cdot\Pi(\Phi)<1$. ∎
-
-**Remark 14.2.6.1a (Member of the Uncertainty Family).** The Signaling Uncertainty Principle is the inter-observer member of the SPAP-uncertainty family extended from Theorem 14.2. The three operational contexts and their property pairs are:
+**Remark 14.2.6.1a (Comparison of Operational Transfer Bounds).** The branch-disjunctive signaling theorem can be compared with, but is not derived from, the simultaneous-variable and sequential-channel bounds. The three operational contexts and their property pairs are:
 
 | Operational context | Property pair | Tradeoff statement | Source |
 |:--------------------|:--------------|:-------------------|:-------|
@@ -873,12 +917,12 @@ Hence $\Delta(\Phi)\cdot\Pi(\Phi)<1$. ∎
 | Sequential single-channel | $(I_{\mathrm{in}},I_{\mathrm{out}})$ | $C(\mathcal E_N)<\ln d_0$ | Theorem 14.2; Theorem E.2 |
 | Inter-observer signaling | $(\Delta,\Pi)$ | $\Delta(\Phi)\cdot\Pi(\Phi)<1$ | Theorem 14.2.6.1 |
 
-The first row is a continuous Robertson-style inequality on real-valued spreads; the second is a capacity bound on real-valued mutual information; the third is a corner-exclusion statement in a plane whose reach coordinate is binary by construction. The shared claim is not equality of analytic form, but common descent from the SPAP-induced obstruction to perfect predictive transfer under finite operational constraints.
+The first row is a Robertson inequality derived from a Hilbert-space commutator, the second is a channel-capacity bound derived on the registered refresh branch, and the third is a corner exclusion derived from exact marginal invariance or positive transcript overlap. Their common role is comparative rather than inferential: they constrain different forms of operational transfer, but none is derived from another or from SPAP alone.
 
 **Corollary 14.2.6.1a (Format Pluralism).** The binary finite-window projection to the $(\Delta,\Pi)$ plane admits two operational format regions and one excluded corner:
 
 - *Local/timelike format* ($\Pi=0$, $0\le\Delta\le1$): ordinary channels whose operational influence propagates no faster than $c$ (Theorem 46). Zero-error transmission is possible only when the ordinary channel resources support a zero-error code.
-- *Spacelike finite-window format* ($\Pi=1$, $0\le\Delta<1$): the Bob-marginal-preserving AQFT/local-CPTP branch has $\Delta=0$, while the regular branch-(iii) statistical channel may have positive finite-error information but retains nonzero finite-window decoding error. At a regular operating point its per-trial information rate is $I=O(\mathrm{CC}^2)$ (Theorem 41) and direct detection obeys $N=O(\mathrm{CC}^{-2})$ scaling when the effect size is proportional to $\mathrm{CC}$ (Theorem 40).
+- *Spacelike finite-window alternatives* ($\Pi=1$): the sealed AQFT/local-CPTP branch has $\Delta=0$. A regular branch-(iii) model may instead have $0<\Delta<1$ and positive finite-error information, but any such response-active marginal shift falsifies the sealed branch. The alternatives share only the zero-error exclusion and are not asserted to coexist.
 - *Forbidden corner* ($\Pi=1$, $\Delta=1$): excluded by Theorem 14.2.6.1.
 
 *Proof.* The local/timelike region has $\Pi=0$, so the product bound is automatically satisfied. Theorem 46 supplies a uniform operational causal-speed upper bound; any attained $c$-frontier used to classify the local/timelike region is a separate accepted branch input. The spacelike finite-window region has $\Pi=1$, and Theorem 14.2.6.1 gives $\Delta<1$; its branch-specific rate and sample bounds are Theorems 40–41. The remaining corner is exactly the contradiction case in Theorem 14.2.6.1, Step 2. ∎
@@ -894,36 +938,15 @@ The first row is a continuous Robertson-style inequality on real-valued spreads;
 
 *Proof.* Remark 14.2 already identifies the logical, thermodynamic, geometric, and channel layers. Theorem 14.2.6.1 states their common finite-window target: no admissible branch supplies a zero-error decoder at spacelike reach. The table records which route each layer blocks. ∎
 
-**Corollary 14.2.6.1c (Cosmological Format Suitability).** Let $L$ be the spatial separation between two MPU aggregates and $\tau_{\mathrm{op}}$ a chosen operational coordination timescale. Define
-
+**Corollary 14.2.6.1c (Cosmological Format Suitability).** Let two MPU aggregates be separated by distance $L$, and let $\tau_{\mathrm{op}}$ be the coordination timescale. On the sealed causal branch, a context selected at one aggregate during the interval can influence the other within that interval only if
 $$
-\sigma_{\det}(L,\tau_{\mathrm{op}}):=\mathbf{1}\{L/c\le\tau_{\mathrm{op}}\},
-\qquad
-\sigma_{\mathrm{stat}}(L,\tau_{\mathrm{op}}):=\mathbf{1}\{\text{an established joint-state structure is available between the aggregates in the sense of Postulate 3 branch (ii), or the prepared-state support required for a regular branch-(iii) statistical channel}\}.
+L/c\le\tau_{\mathrm{op}}.
 $$
+A joint state prepared in the shared causal past may generate correlations at larger separation, but it does not transmit a late-selected context before a causal comparison channel arrives. A response-active branch-(iii) Bob-marginal shift is therefore an external falsifier of the sealed causal branch, not an additional cosmological coordination resource within it.
 
-Here "established joint-state structure" includes the shared-past joint preparation structure of Postulate 3 branch (ii) and the prepared-state support required for a regular branch-(iii) statistical channel.
+*Proof.* Theorem 46 bounds response-active propagation on the sealed branch by the accepted causal frontier. Postulate 2 and the AQFT/local-CPTP certificate make Bob's pre-lightcone marginal independent of a late Alice context. Shared-past preparation changes the common initial state rather than transmitting that late context. Theorem 39c classifies a freely selected positive pre-lightcone marginal channel as a violation of the sealed branch. ∎
 
-Then
-
-$$
-\sigma_{\det}(L,\tau_{\mathrm{op}})+\sigma_{\mathrm{stat}}(L,\tau_{\mathrm{op}})
-\ge
-\mathbf{1}\{L/c\le\tau_{\mathrm{op}}\ \text{or such an established joint-state/statistical structure is available}\}.
-$$
-
-Strict inequality occurs exactly when both the deterministic lightcone condition and the established joint-state/statistical condition hold.
-
-*Proof.* The right-hand side is the indicator of the union of the deterministic-suitability event and the statistical-suitability event. The sum of the two indicator functions dominates the indicator of their union, with strict inequality precisely on their intersection. If $L/c>\tau_{\mathrm{op}}$, deterministic suitability vanishes and any pre-lightcone coordination must use the statistical/common-cause format, which requires an established joint-state structure in the sense of the shared-past preparation branch of Postulate 3, or the prepared-state support required for the regular branch-(iii) state-mediated statistical regime, with the AQFT state-dependence discussion around Equations F.4–F.4a supplying the operator-local baseline. ∎
-
-**Remark 14.2.6.1d (Two Primitive Finite-Window Communication Formats).** Theorem 14.2.6.1 can be read as a finite-window classification of inter-location channels by the two operational coordinates $(\Delta,\Pi)$. Once the corner $(1,1)$ is excluded, an admissible one-bit channel projected to this plane has, at the level of this projection, one of two primitive format types, or a finite concatenation of them:
-
-- *Deterministic, reach-limited format* ($\Pi=0$, $0\le\Delta\le1$): ordinary timelike or lightlike channels. They can carry zero-error content when the ordinary channel resources support a zero-error code, but their operational reach in time $\tau$ is limited by $L\le c\tau$ (Theorem 46).
-- *Spacelike, non-zero-error format* ($\Pi=1$, $0\le\Delta<1$): finite pre-lightcone channels. They carry no zero-error deterministic content in any finite pre-lightcone window. On the AQFT/local-CPTP branch Bob's unconditional marginal has $\Delta=0$; on the regular nonlocal/state-mediated branch, positive finite-error information may occur with rate $I=O(\mathrm{CC}^2)$ at a regular operating point (Theorem 41) and detection scaling $N=O(\mathrm{CC}^{-2})$ when the tested effect size is proportional to $\mathrm{CC}$ (Theorem 40).
-
-No third zero-error/reach primitive exists within this binary one-bit $(\Delta,\Pi)$ projection. Higher-arity contexts, post-selection protocols, and multi-channel concatenations may carry further internal structure that this projection collapses; they do not restore the excluded zero-error spacelike corner. This statement is a projection to the $(\Delta,\Pi)$ plane, not a collapse of the three mechanisms distinguished in Postulate 3: local CPTP/AQFT marginal preservation, shared-past preparation context, and the stronger regular branch-(iii) marginal anomaly remain operationally distinct mechanisms.
-
-Standard no-signaling theorems require exact context independence of Bob's spacelike marginal; zero-error unavailability alone is only a reliability bound. Bell-type correlations belong to the spacelike non-zero-error side only as joint or conditional correlations revealed after classical comparison; by themselves they do not instantiate branch-(iii) Bob-marginal signaling. Cosmological-scale coordination outside a deterministic lightcone can therefore use only an established joint-state/common-cause structure of the shared-past kind, or the prepared-state regular statistical branch, never a zero-error spacelike message channel, recovering Corollary 14.2.6.1c as the large-separation projection of the same format split.
+**Remark 14.2.6.1d (Finite-Window Branch Separation).** The $(\Delta,\Pi)$ projection compares, but does not merge, three mechanisms. Timelike or lightlike channels have $\Pi=0$ and may support zero-error transmission. The sealed spacelike branch has $\Pi=1$ and $\Delta=0$. A regular branch-(iii) anomaly may have $\Pi=1$ and $0<\Delta<1$, but then it is a distinct noncausal candidate constrained by Theorems 39a–42 and tested as a falsifier of exact marginal invariance. Common-cause Bell correlations revealed after causal record comparison do not instantiate that anomaly. Excluding the corner $(1,1)$ is a reliability statement and does not convert a positive finite-error spacelike marginal channel into a causal communication format.
 
 **Corollary 14.2.6.1e (Rate-Latency Products Require a Cost Ledger).** Let $I(C_A:Y_B^n)$ be mutual information measured in nats, and let $\Delta\tau$ be a signaling latency. The product $I(C_A:Y_B^n)\Delta\tau$ is not an action and is not the invariant quantity controlled by Theorem 14.2.6.1. Therefore a bound of the form
 $$
@@ -939,30 +962,44 @@ $$
 
 *Proof.* Mutual information in nats and $\mathrm{CC}$ are dimensionless, while $\hbar$ carries units of action and $\Delta\tau$ carries units of time. Thus (14.2.6.1e.1) is not invariant under a change of physical units unless an additional energy scale or information-to-action map is part of the branch data. Moreover, an upper bound on accessible information together with a lower bound on transition time does not imply a lower bound on their product. Theorem 14.2.6.1 avoids both issues by using the normalized decoder determinism $\Delta$ and the binary reach indicator $\Pi$, both dimensionless, and by proving only the excluded zero-error spacelike corner. ∎
 
-### 14.2.7 Resolution of the Strong CP Problem
+### 14.2.7 Conditional Strong-CP Branch
 
-The Strong CP problem—why the QCD vacuum angle $\bar{\theta}<10^{-10}$ despite no apparent symmetry requiring it—is addressed on the Appendix K strong-CP branch, whose topological-cost, $\sigma$-symmetric, and orientation-preserving real-Yukawa assumptions remain part of the stated branch data.
+Appendix K supplies a conditional implication. It requires a constructed equivariant $\sigma$-CP parameter map, an accepted QCD gauge-topology bridge satisfying Proposition K.6.4, a $\sigma$-invariant vacuum, a positive first-harmonic cost certified as the operative QCD vacuum-selection functional with the realized vacuum as a global minimizer on the retained invariant sector, and a positive determinant- or Pfaffian-orientation certificate.
 
-**Mechanism I ($\sigma$-Invariance):** The anti-holomorphic involution $\sigma$ on Gr(2,8) corresponds to CP transformation (Theorem K.6.1). On the $\sigma$-symmetric PCE-attractor branch, the physical vacuum is required to be $\sigma$-invariant, restricting $\theta\in\{0,\pi\}$. The PCE cost functional $V_{PCE}(\theta) = V_0(1 - \cos\theta)$ selects the global minimum $\theta_{QCD} = 0$.
-
-**Mechanism II ($E_8$ Reality):** The $E_8$ root system lies in $\mathbb R^8$ (Lemma K.6.2). Gaussian overlap on $E_8$ gives real Yukawa data,
+**Mechanism I (conditional gauge-angle package).** The accepted bridge intertwines physical CP with $\theta\mapsto-\theta$, so vacuum $\sigma$-invariance gives
 $$
-Y_{ij}\propto\exp\left(-\frac34 d^2_{E_8}(r_i,r_j)\right)\in\mathbb R_{>0},
+\theta_{\mathrm{QCD}}\in\{0,\pi\}.
 $$
-but raw positivity of entries alone does not fix the determinant component. The determinant phase is therefore fixed only by a positive-orientation certificate: either the nonzero-path criterion of Theorem K.6.9 or the ordered heat-kernel total-positivity chamber of Corollary K.6.9a.1. On such a branch Corollary K.6.5 gives $\arg(\det M_q)=0$; without the certificate, $E_8$ reality gives only a real determinant sign, not its value.
-
-**Combined Result (Theorem K.6.11):**
+When the first-harmonic cost is certified as the operative QCD selection functional and the realized vacuum is its global minimizer,
 $$
-\bar{\theta} = \theta_{QCD} + \arg(\det M_q) = 0 + 0 = 0\quad\text{on the Appendix K strong-CP branch}
+V_{\mathrm{PCE}}(\theta)=V_0(1-\cos\theta),
+\qquad
+V_0>0,
 $$
+and $V_{\mathrm{PCE}}(0)<V_{\mathrm{PCE}}(\pi)$ gives $\theta_{\mathrm{QCD}}\equiv0\pmod{2\pi}$. Hermiticity alone does not imply $\sigma$-invariance, and the abstract PCE ansatz alone is not a QCD vacuum-selection law.
 
-The framework distinguishes Type I CP violation (absolute strong-sector phases, excluded on the σ-symmetric positive-orientation branch) from Type II CP violation (Berry holonomy, permitted). This explains why $\bar\theta=0$ on the Appendix K branch while $\delta_{CKM}\ne0$.
+**Mechanism II ($E_8$ reality and orientation).** On Theorem K.6.7's Toeplitz--Kraus probability-overlap branch with $\sigma_B^2=1/24$ and its local quadratic distance approximation, the retained Gaussian kernel is
+$$
+Y_{ij}
+\propto
+\exp\left(-\frac32d^2_{E_8}(r_i,r_j)\right)
+\in\mathbb R_{>0}.
+$$
+Positive entries alone do not fix the determinant component. Corollary K.6.5 therefore requires a positive-orientation path or ordered total-positive chamber, while Theorem K.6.10b supplies the alternative accepted Pfaffian-orientation route. Either certificate gives $\arg(\det M_q)\equiv0\pmod{2\pi}$.
 
-**Experimental Predictions:**
-- No QCD axion degree of freedom is present on the Appendix K strong-CP branch.
-- Neutron EDM $d_n=0$ from the strong-CP contribution on that branch; SM CKM contribution $\sim10^{-31}$ e$\cdot$cm.
+Under all of these hypotheses,
+$$
+\bar\theta
+=
+\theta_{\mathrm{QCD}}+\arg(\det M_q)
+\equiv
+0
+\pmod{2\pi}.
+$$
+The branch permits a distinct Berry-holonomy weak-CP phase; no cancellation between two nonzero strong-sector phases is used. The required physical bridges are not constructed by this implication, so it is not a branch-independent strong-CP solution.
 
 ### 14.2.8 Baryon Asymmetry from Anomaly Inflow
+
 
 The cosmic baryon asymmetry $\eta_B=n_B/n_\gamma\approx6\times10^{-10}$ is computed in **Appendix Y** on the anomaly-holonomy, Berry-response, sphaleron-transport, electroweak-threshold, and washout branches. The relevant anomaly is not an uncanceled gauge redundancy anomaly: by Theorem X.8d and Section G.8.2.3, gauge anomaly classes must vanish for predictive descent. The Appendix Y anomaly is instead the allowed global-current $B+L$ update channel whose integrated form is Theorem Y.4. Corollary Y.11.4b also gives the sharper square-root form
 $$
@@ -1008,9 +1045,9 @@ The PU framework distinguishes itself while connecting to other approaches:
     *   *IIT:* Operational CC (Definition 30, Theorem 34) based on biasing capability, distinct from axiomatic $\Phi$ [Tononi et al. 2016; Tononi & Koch 2015]. Potential correlation explored (Proposition 14).
     *   *Orch OR:* Relies on general prediction/complexity/thermodynamics, not specific biology/quantum gravity mechanism [Penrose 1994; Hameroff & Penrose 1996].
     *   *Standard Locality:* A branch-(iii) statistical FTL marginal shift is a testable departure that falsifies operational causality by Theorem 39c; branches (i) and (ii) retain the causal comparison.
-    *   *Emergent/Entropic Gravity and a Unified Dark Sector:* PU derives spacetime (Section 11) and the EFE (Section 12) thermodynamically from optimizing prediction under ND-RID information limits, which yields the Area Law (**Theorem 49**). The key distinction is that PU provides a specific microscopic origin for horizon entropy: it is grounded in the quantifiable information bottleneck of the ND-RID channel ($C_{\max} < \ln d_0$), which arises from the irreducible thermodynamic cost of self-reference ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$). The emergent scale of gravity, $G$, is thereby linked to the underlying MPU parameters governing information capacity and network geometry (Equation E.9). This same PCE-driven adaptation of MPU parameters to the local information environment leads to a multi-scale solution for the dark matter problem (Appendix I). At galactic scales, a scale-dependent $G(R)$ explains rotation curves as an **environment‐dependent relaxation**. At cluster scales, where a running $G$ is cosmologically constrained, the framework **preferentially selects** a non-local "predictive matter" response of the MPU substrate to the baryonic potential—**CMB‐safe with a negligible asymptotic enhancement to gravity, $A_G \simeq 0$**—providing a unified but environmentally‐dependent explanation for dark sector phenomenology, which is testable via the bridge-normalized lensing-dynamics identity of **Theorem I.5**. At recombination the framework reduces to the homogeneous limit with $G_{\rm eff} \approx G_0$, ensuring consistency with CMB constraints ($A_G \simeq 0$).
+    *   *Emergent/Entropic Gravity and Dark-Sector Branches:* Sections 11–12 derive the Einstein equation only on the joint operational-continuum, horizon-density, KMS/Clausius, conserved-source, all-null, and zero-slack certificate package. The ND-RID capacity deficit alone supplies neither the area-law saturation nor the value of $G$. Appendix I defines scale-dependent and nonlocal dark-response kernels as conditional response models. Their galaxy, lensing, cluster, merger, recombination, and homogeneous limits become deterministic PU outputs only when one accepted generally covariant certificate $\mathfrak X_{\mathrm{DS}}$ fixes the susceptibility kernel, normalization, covariance, overlap maps, and forward-locked residuals before comparison. Without that certificate, the kernels are phenomenological branches rather than a derived unified dark-sector solution.
 
-Beyond the scale-dependent $G(R)$ mechanism, the framework fixes the fundamental acceleration scale once the QFI-Gravity Bridge Law of **Appendix H** (Definition H.0) is adopted. That bridge relates the galactic acceleration threshold to the cosmological constant via vacuum information geometry:
+On the separate QFI-Gravity Bridge Law branch of Appendix H, Definition H.0 postulates the map from the registered information-geometric factors to a galactic acceleration threshold:
 $$
 g_0 = \eta' \cdot c^2\sqrt{\frac{\Lambda}{3}}
 $$
@@ -1031,7 +1068,7 @@ g_0
 =
 \frac{c^2\sqrt{\Lambda}}{8}.
 $$
-The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\text{m/s}^2$ agrees with the empirically observed Milgrom scale $a_0 \approx 1.2 \times 10^{-10}\,\text{m/s}^2$ to within current observational systematics. The same lock fixes the baryonic surface-density threshold:
+The branch value $g_0\approx1.18\times10^{-10}\,\mathrm{m/s}^2$ is numerically compatible with the observed Milgrom scale. This comparison validates neither Definition H.0 nor its physical realization; those require an independently accepted acceleration observable and dark-response certificate. Within the same bridge convention, the associated surface-density value is
 $$
 \Sigma_\dagger
 =
@@ -1054,7 +1091,7 @@ $$
 \xrightarrow{\Lambda}g_0=\frac{c^2\sqrt\Lambda}{8}.
 \end{aligned}
 $$
-Once Definition H.0 is fixed, the result has no additional continuous fitting inside that bridge-law branch and connects microscopic quantum geometry directly to galactic dynamics without invoking dark matter particles. The branch is experimentally sharper than an order-of-magnitude $cH_0$ relation: on a constant-$\Lambda$ branch, $g_0$ is redshift-independent even though $H(z)$ changes.
+Once Definition H.0 and its four realization and normalization entries are fixed, the displayed algebra has no additional continuous parameter. The bridge itself remains load-bearing: a physical prediction requires a forward-locked observable map, covariance, and redshift-dependent response certificate. On the constant-$\Lambda$ version of that branch, the falsifiable shape claim is that the inferred $g_0$ is redshift-independent even though $H(z)$ changes.
 
 *   **Internal Justification for Emergence (via Appendices):** PU's viability relies on emergence mechanisms justified internally: Complexity Alignment (Theorem 2, Appendix D via work-cost gap feedback); Applicability of SPAP/RUD limits (grounded in the MPU's intrinsic $K_0$ complexity, Definition 23, with network context enabling effective reliable computation, Proposition A.0.3); Geometric Regularity (Theorem 43, Appendices C/D via POP/PCE optimization against irregularity); Thermodynamics/Area Law (Theorem 49, Appendix E via ND-RID limits); Stress-Energy Tensor (Appendices B/F via coarse-graining/conservation); Locality Framing (Appendix F, where the Bob-marginal-invariant and shared-past branches are compared with operator locality, while Theorem 39c places a late-randomized marginal anomaly outside operational causality
 
@@ -1627,7 +1664,7 @@ It remains to identify classes (QF) and (QO). In a true completion, by definitio
 
 ## 14.5 Interpretive Implications: The Vacuum as Structured Information
 
-The derivation chain from foundational principles to emergent spacetime yields several implications that merit explicit articulation. These are not additional assumptions but consequences of the framework's core results.
+The following interpretations combine proved structural results with the branch and realization certificates stated in each subsection. Only the explicitly cited implications are theorem consequences; physical code, vacuum, mass, and stability readings remain conditional on their named maps.
 
 ### 14.5.1 Reality as Error-Correcting Code
 
@@ -1692,33 +1729,31 @@ Theorem Z.12 records $M=24$ as a minimal-branch consequence and separates the ad
 
 
 
-| Nearby Value | Failure Modes |
-|:-------------|:--------------|
-| $M = 23$ | Non-integer algebraic constraint; no optimal code with $d = 8$; prime (no rich factorization) |
-| $M = 24$ | All constraints satisfied |
-| $M = 25$ | Non-integer algebraic constraint; $25/2 \neq 12$; no optimal code |
+| Candidate | Consequence within the fixed minimal comparison class |
+|:----------|:------------------------------------------------------|
+| $M=23$ | Does not satisfy the registered tangent count $M=2a(d_0-a)$ at $(a,d_0)=(2,8)$ |
+| $M=24$ | Satisfies that count and the separately registered rate and shell certificates |
+| $M=25$ | Does not satisfy the same fixed tangent count; a self-dual binary rate-$1/2$ code would also require nonintegral dimension $25/2$ |
 
-**Implication:** Stable physics requires hitting specific "critical values" where multiple optimization criteria converge. The framework predicts that universe-like structures exist only at discrete parameter values—not because of fine-tuning, but because optimization landscapes have isolated minima.
-
-The registered discrete values $M=24$, $D=4$, and $\varepsilon_0=\ln2$ arise on different branch packages: the binary structural quotient, active/carrier/QFI tangent count, and channel-complete mode--kissing comparison. Effective couplings require their separate response, normalization, calibration, and spectral certificates. The current results therefore organize a conditional fine-tuning program; they do not prove that all constants are PCE shadow prices or that other parameter values admit no stable spacetime.
+Thus $M=24$ is isolated only inside the declared minimal comparison class with its fixed carrier, active-rank, rate, and shell premises. No theorem here proves that all universe-like structures occur only at discrete parameter values or that $M=23$ and $M=25$ are impossible in every other physical comparison class. The values $M=24$, $D=4$, and $\varepsilon_0=\ln2$ retain their distinct source packages, while effective couplings retain their response, normalization, calibration, and spectral certificates.
 
 ### 14.5.3 The Unity of Mathematics and Physics
 
-The convergence of independent mathematical structures at $M = 24$—modular forms ($\eta^{24}$), optimal lattices ($\Lambda_{24}$), perfect codes ($\mathcal{G}_{24}$), the $D_4$ root system, and the kissing number $K(4)$—is often presented as mysterious. The framework dissolves this mystery.
+Several independently defined mathematical structures contain distinguished objects at rank or length $24$: the extended binary Golay code, the Leech lattice, the $D_4$ root shell, and the four-dimensional kissing configuration. Their extremality statements use different comparison classes and cost functions. PU relates them only through the explicit code, gluing, tangent-shell, response, and dynamical certificates stated in the corresponding branches.
 
-Both mathematics and physics are manifestations of optimal structure under constraints:
-
-- **Mathematics** explores what structures *can* achieve in principle. Mathematicians discover structures satisfying extremal optimization because such structures exhibit maximal symmetry and minimal description length.
-
-- **Physics** instantiates what structures *do* achieve under finite resources. PCE selects configurations maximizing predictive accuracy per unit cost, yielding the same optimal structures discovered mathematically.
-
-Both activities converge on the same objects because they solve the same problem. The Golay code is mathematically optimal in the binary linear $[24,12]$ class and selected on PU's predictive-recovery ledger. A physical encoder/channel realization remains a separate certificate.
-
-The Leech lattice is mathematically optimal for the registered fixed-dimensional pair-energy class. A physical mode-space realization is conditional on the gluing, response, and dynamical certificates; mathematical and physical optimization are not identical objectives merely because they share a minimizer on one branch.
-
- These are identities, not coincidences. On the minimal Appendix Z branch this same convergence sharpens to the low-rank root-system chain $A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8$, with root counts $(|\Phi(A_1)|,|\Phi(A_2)|,|\Phi(A_3)|,|\Phi(D_4)|)=(a,b,k,M)=(2,6,12,24)$. The 12-step of the discrete backbone is therefore the $A_3$ rung, the 24-mode spacetime closure is the $D_4$ rung, and the chain lands directly in the $E_8$ scaffold already used for flavor geometry rather than floating as a free numerical pattern.
-
-**Perspective on Wigner's Puzzle:** The "unreasonable effectiveness of mathematics in physics" [Wigner 1960] admits a natural interpretation within this framework: mathematics and physics can be viewed as the same optimization problem—one abstract, one thermodynamic. At $M = 24$, this perspective becomes explicit. Whether this fully resolves Wigner's puzzle remains a matter of philosophical interpretation.
+The root-count equality
+$$
+(|\Phi(A_1)|,|\Phi(A_2)|,|\Phi(A_3)|,|\Phi(D_4)|)
+=
+(a,b,k,M)
+=
+(2,6,12,24)
+$$
+is exact arithmetic after the independently obtained branch values are inserted. The inclusion
+$$
+A_1\subset A_2\subset A_3\subset D_4\subset E_8
+$$
+is a compatible mathematical scaffold. Neither fact alone derives a physical encoder, spacetime realization, flavor map, or common optimization functional. The resulting perspective on Wigner's puzzle is therefore a structured compatibility proposal rather than a theorem identifying mathematical and physical optimization.
 
 ### 14.5.4 Information Density and Dimensional Selection
 
@@ -1732,17 +1767,18 @@ Here $K(D)$ is the maximal number of equal non-overlapping spheres tangent to a 
 
 The value $M=24$ follows on the joint Theorem-Z.1/Theorem-Z.2 carrier partition through Theorem Z.5's QFI tangent count. The further selection $D=4$ requires Definition Z.9a's independent response-preserving shell injection and strict support-cost comparison, Theorem Z.10's bound, and the explicit regular-$24$-cell realization. Neither step follows from $\varepsilon_0$, reset heat, or PCE alone.
 
-Similarly, the number of fermion generations $N_g = 3$ is fixed in the framework by one derivation together with three supporting consistency checks (Appendix R):
+Similarly, Appendix R selects $N_g=3$ only within its declared SM15/SM16 family-charge candidate class, nonzero CKM-type branch, and realized additive-monotone family-count objective; three further structures provide compatibility checks:
 
-1. **Topological Derivation (Theorem R.3.4; Proposition R.3.5.1a):** In the modeled family-charge sector, the anomaly constraints
+1. **Family-Charge Minimality and Realization (Theorem R.3.4; Proposition R.3.5.1a):** In the modeled family-charge sector, the anomaly constraints
 $$
 \sum_g F_g = 0,
 \qquad
 \sum_g F_g^3 = 0
 $$
-together with the requirement of nontrivial CP violation select the minimal admissible solution $N_g = 3$ with charges $\{a,-a,0\}$, and the pre-flavor family-redundancy PPI branch removes response-null supernumerary copies.
+together with a registered nonzero CKM-type rephasing invariant give the smallest admissible count $N_{\min}=3$ with charges $\{a,-a,0\}$ in the declared class. Exact realized $N_g=3$ additionally requires Proposition R.3.5.1a's displayed additive-monotone family-count objective; response-null labels are removed only under the separate PPI quotient.
 
 2. **Triality Compatibility (Proposition R.4.2):** On a marked real 8-carrier with $\mathfrak{so}(8)$ structure, $D_4$ triality gives the canonical $S_3$ orbit $\{V,S^+,S^-\}$ of three 8-dimensional $\mathrm{Spin}(8)$ modules. This reproduces the same $\{a,-a,0\}$ charge pattern when the anomaly equations are imposed on the three-element orbit, but it does not generate the connected $U(1)_F$ used in Theorem R.3.4.
+
 
 3. **Geometric Compatibility (Proposition R.4.2):** The $E_8$/Leech structure and the decomposition $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ furnish a three-fold scaffold compatible with three generations, but they do not independently derive the count.
 
@@ -1843,9 +1879,9 @@ The later parapsychology literature — including Rhine's early card-guessing st
 
 The framework admits a layered treatment of these two cases.
 
-1. *Active tier.* For aggregates with $C_{agg}$ sufficient to support CC modulation, high-reflexive-depth patterns couple to the interaction context via the mapping $\mathcal{M}$ of Appendix L, producing bounded Born-rule deviations (Theorem 51). The active tier is bounded above by $\alpha_{CC,\max} < 0.5$ (Theorem 39), which is the same deterministic endpoint-forcing bound that controls the CC mechanism throughout the framework. The active tier is theorem-level within the present manuscript.
+1. *Active tier.* On the Appendix L model branch, a supplied mapping $\mathcal M$ and CC response law are constrained by Theorems 39 and 51. Those theorems bound a response if it exists; they do not construct the physical mapping, prove a nonzero deviation, or fix an effect-size interval. The bound is theorem-level on its hypotheses, while existence of an active physical effect remains model- and certificate-level.
 
-2. *Passive tier.* A hypothetical structural residue, independent of CC modulation and of the aggregate complexity threshold $C_{agg}$, tied instead to the support structure of the perspectival kernel $G_{\text{persp}}$. The passive tier is *not* derived in the present manuscript; the remainder of this section states precisely what would be required to derive it.
+2. *Passive tier.* The hard-core construction below can determine the support of a specified perspectival Gibbs measure. A passive outcome residue additionally requires an actualization map, a quantitative outcome-shift law, reflexive-depth dependence, separation from active CC, and a no-signaling marginal-invariance certificate. Those conclusions are not supplied by support alone.
 
 #### The Environmental SPAP Hypothesis
 
@@ -2175,25 +2211,25 @@ As an orientation: the mechanism posited here is negative in the same sense that
 
 Two constraints are binding on any future attempt to derive the Residue Conjecture or to strengthen it.
 
-1. **No-signalling constraint.** Any admissible observer-indexed correction must preserve the no-signalling and chronology-protection results of Sections 14.2.2–14.2.3. A correction that allowed controllable changes of distant marginals would fall outside the presently admissible PU structure. The passive tier, as stated, carries no signal because it is a property of the kernel's support rather than of any propagating degree of freedom; the active tier inherits its bound from the CC causality theorem. Neither tier permits retrocausal information transfer: the kernel is a global-in-time consistency object on the MPU network substrate (Appendix O), and the apparent time-ordering of residue effects would be a perspectival feature of how $S$ indexes its own updates, not a signal travelling against the arrow of time.
+1. **No-signalling constraint.** Support restriction alone does not imply no-signaling. A passive-residue completion must prove that every allowed remote intervention leaves each pre-lightcone local marginal invariant, or supply an equivalent process-tensor causality certificate. Any response-active late-context marginal shift belongs instead to the external branch-(iii) anomaly class. Global-in-time notation and absence of a propagating field do not by themselves establish either marginal invariance or chronology protection.
 
-2. **CC separation constraint.** The only quantitative observer-linked modulation currently derived in the manuscript is the active CC channel of Appendix L. When an effect is mediated by that channel, its magnitude is already bounded by Theorem 39; it must not be conflated with the passive tier, which is posited as structurally distinct and which — if it exists — would be experimentally separable by its independence from $C_{agg}$.
+2. **CC separation constraint.** Appendix L supplies conditional bounds for a nominated active CC response law, not a theorem that a nonzero physical modulation exists. A passive completion must additionally prove that its outcome correction is not already contained in the active map, response kernel, artifact budget, or conditioning ledger, thereby preventing double counting.
 
 The Pauli–Jung intuition that observer and observed could not be fully separated is recovered, in the present framework, as the perspectival structure of $G_{\text{persp}}$ itself: the kernel's admissible support depends on the self-model state of the system whose perspective indexes it. This identification is independent of whether any specific empirical residue exists, and it is the point at which the framework makes precise contact with a philosophical intuition that had no formal home in the physics of Jung and Pauli's period.
 
 #### Relation to the Historical Corpus
 
-If the Residue Conjecture holds, the structural features a passive residue would necessarily have — small magnitude, persistence across large trial counts, concentration at moments of high reflexive engagement, and independence from macroscopic energy transfer — would align with the sort of bounded, non-signalling effects that parts of the Rhine, SRI, PEAR, Ganzfeld, and precognition literatures have claimed. Whether that literature is in fact measuring such a residue is an empirical question the framework does not settle; what the framework provides is a structural template against which carefully controlled future experiments could be evaluated. The framework neither ratifies nor dismisses the historical corpus; it identifies a specific conditional statement — *if the Environmental SPAP Hypothesis holds, or if the hard-core perspective Gibbs datum of Definition 14.5.8e is accepted, then effects with this structural fingerprint would be expected* — and leaves the empirical status of the consequent as an open question.
+If the Residue Conjecture and its missing outcome, magnitude, covariance, reflexive-depth, and no-signaling certificates were accepted, the resulting signature could be compared with historical observer-effect claims. The Environmental SPAP Hypothesis or hard-core Gibbs datum alone implies no such empirical effect. The framework therefore neither ratifies nor dismisses the historical corpus and makes no historical-data claim without a forward-locked protocol and artifact ledger.
 
 #### Open Problems
 
-The three obstructions identified by this section are resolved on the hard-core perspective Gibbs branch and remain open outside it.
+The hard-core datum resolves the measure-construction and support-exclusion obstructions only. The outcome-residue bridge remains open even on that branch.
 
-1. *Support-exclusion gap.* Proposition 14.5.8b shows that SPAP diagonalization, Theorem M.10.3, and PCE cost-gradient bias alone do not determine null sets. Proposition 14.5.8c shows that weak finite-resource recovery limits can charge the SPAP boundary. Proposition 14.5.8d shows that window-local PCE minimizers need not be projectively consistent. Definition 14.5.8e supplies the stronger datum needed to bypass all three obstructions: total-variation cylinder convergence, zero boundary capacity, and DLR consistency. Theorem 14.5.8f then derives support exclusion on that branch.
+1. *Support-exclusion result.* Definition 14.5.8e supplies projective consistency, boundary control, and noncollapse; Theorem 14.5.8f then identifies the support of the constructed measure with $\Sigma_{\mathrm{SPAP}}$.
 
-2. *Quantitative magnitude mapping.* Corollary 14.5.8g gives the passive-tier ceiling in terms of the hard-core rate gap $R(A)$. The manuscript still does not assign a universal numerical value to $R(A)$; that value is a branch-specific consequence of the accepted finite-resource perspective potential.
+2. *Outcome and magnitude obligation.* Corollary 14.5.8g bounds finite-window probability outside the accepted support. It does not convert the rate gap $R(A)$ into a local outcome shift, covariance, sign, or reflexive-depth correlation. Those require a separately normalized actualization map and quantitative response certificate.
 
-3. *Protocol-invariance prediction.* Corollary 14.5.8g also gives protocol invariance for finite-window exhaustions preserving the same DLR specification. Outside the hard-core DLR branch, protocol invariance remains a target for experimental design rather than a theorem-level prediction.
+3. *Invariance obligation.* Corollary 14.5.8g gives exhaustion invariance for cylinder laws preserving the same projectively consistent specification. Observable protocol invariance and no-signaling additionally require proof that the outcome map and every allowed intervention commute with the projective limits and preserve the relevant local marginals.
 
 #### Experimental Signature
 
@@ -2201,7 +2237,7 @@ If both tiers exist, they are in principle distinguishable by their scaling with
 
 #### Status Summary
 
-The Residue Conjecture introduces no new formal objects. Within the current manuscript, the active tier is theorem-level and bounded by Theorem 39. The passive tier is theorem-level only on the hard-core perspective Gibbs branch of Definition 14.5.8e and Theorem 14.5.8f; outside that branch it remains conditional on the Environmental SPAP Hypothesis. Propositions 14.5.8b, 14.5.8c, and 14.5.8d remain important because they show exactly why ordinary cost-gradient bias, weak recovery limits, and window-local PCE minimization are insufficient. The present framework supports a strong exclusion statement — no macroscopic acausal control channel is licensed — while assigning the passive observer-indexed, non-signalling residue to the hard-core support branch or to the conditional model layer if that branch datum is not supplied.
+The active tier currently consists of theorem-level bounds on a nominated Appendix L response law; physical existence and nonzero magnitude remain certificate-pending. The hard-core branch proves the support theorem 14.5.8f and the outside-support bound of Corollary 14.5.8g, but it does not prove the Residue Conjecture. The passive tier remains conjectural until one accepted joint certificate supplies the actualization map, quantitative outcome law, reflexive-depth dependence, active/passive source separation, protocol invariance, and no-signaling marginal identities. The sealed causal core licenses no acausal control channel; a positive late-context marginal channel is instead the explicit external falsifier classified by Theorem 39c.
 
 ## 14.6 Scope of the Core Derivations
 
@@ -2219,9 +2255,10 @@ $$
 $$
 On this branch, $K_0=3$ together with the named local finite-response contracts (the entropy-capacity/PPI gate, the Peirce-Grassmann tangent count, the predictive-recovery MacWilliams gate, and the Bures tangent-cell mode-channel contract) closes the discrete backbone exactly: no further discrete branch choice enters within the backbone itself. The packaging of these gates is not a single-source compression. Appendix R decomposes the proof graph into source roles $(\mathcal C_3,\mathcal C_{\mathrm{cap}},\mathcal C_{\mathrm{tan}},\mathcal C_{\mathrm{kis}})$ and downstream coherence invariants $(J_{\mathrm{top}},J_{\mathrm{Cl}},J_{\mathrm{ar}})$, and proves that the current source roles do not collapse into one supplied parent invariant. The registered binary quotient contributes only the structural log-cardinality $\varepsilon_0=\ln2$; a physical Landauer bound applies to a separately implemented reset and is not a consequence of SPAP alone.
 
-Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes $D=4$ (Theorem Z.11), and the predictive-recovery MacWilliams self-dual-rate gate fixes the interface code dimension $k=12$ (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b). The abstract gauge algebra appears on the finite-response block-frame positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its anomaly+CP route (Theorem R.3.4), the exact pre-flavor family-redundancy realization (Proposition R.3.5.1a), and the $D_4$ triality/$E_8$/Leech compatibility record (Proposition R.4.2). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The slogan "$K_0=3$ determines everything" should therefore be read precisely: on the minimal branch, $K_0=3$ together with the named local finite-response contracts closes the discrete backbone exactly and seeds later sectors through the contracts stated there. It is not used as a proof rule by itself; the paper uses the explicit finite-response contracts named in each sector.
+Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes Euclidean response-carrier dimension $D=4$ (Theorem Z.11), and the predictive-recovery MacWilliams self-dual-rate gate fixes the interface code dimension $k=12$ (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b). The abstract gauge algebra appears on the finite-response block-frame positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the smallest admissible family-charge count in its declared SM15/SM16 candidate classes when a nonzero CKM-type rephasing invariant is required (Theorem R.3.4; Lemma R.3.4a), and Proposition R.3.5.1a selects realized $N_g=3$ only under its displayed additive-monotone objective. The $D_4$ triality/$E_8$/Leech record is a compatibility result (Proposition R.4.2). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The slogan "$K_0=3$ determines everything" therefore does not function as a proof rule: every sector retains the explicit finite-response contracts named there, and the family result is a conditional least-family selector rather than a branch-independent origin of the observed generations.
 
 ### 14.6.2 What is conditional, convention-carried, or model-level
+
 
 Sections 11 and 12 should be read through the operational-continuum distinction. Theorem 43 is the manuscript's formal regularity-necessity theorem. Theorem 43.5 packages the geometric continuum-compression branch for the $M=24$, $D=4$ shell by combining Appendix C.6d–C.6e, Theorem C.6c, Theorem D.6e, and Theorem 44a under their stated branch hypotheses. This proves an effective finite-resolution manifold branch when those hypotheses hold, not an actual continuum ontology. Appendix F adds a separate AQFT layer with controlled coarse-graining and compatible-embedding hypotheses through Theorem F.0; on the strict finite-range single-clock ND-RID branch, Corollary F.1a supplies the lightcone normalization, while outside that branch it remains an explicit AQFT bridge hypothesis. The Einstein-equation step of Section 12 uses local thermodynamic equilibrium derived by Theorem 48a.0, with the local-horizon KMS/Clausius bridge formalized in Theorem 48a under the Appendix F/G hypotheses.
 
@@ -2242,29 +2279,30 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 | Sector | Best current status |
 |:-------|:--------------------|
 | Backbone $K_0 \to d_0 \to \varepsilon_0 \to a \to b \to M \to k \to D$ | Theorem-level on the minimal finite-response Appendix Z / attractor branch, with $\varepsilon_0=\ln2$ read as the structural binary log-cardinality rather than a physical reset heat. The predictive-recovery MacWilliams gate of Definition Z.13b.0 and Theorem Z.13b.0a forces $k=12$ inside the interface-code contract; Definition Z.9a's faithful mode-to-cell injection, Theorem Z.10's bound $24\le K(D)$, and Theorem Z.11's least-feasible selection give $D=4$. The structural binary reference, the conditional physical-reset heat, and the pathwise entropy-production arrow are distinct quantities with distinct antecedents and may not be substituted for one another. |
-| $N_g=3$ | Theorem-level as the minimal admissible count in the anomaly+CP family-charge class by Theorem R.3.4; exact realized $N_g=3$ holds on the pre-flavor family-redundancy PPI branch by Proposition R.3.5.1a. Proposition R.4.2 supplies $D_4$ triality and $E_8$/Leech compatibility checks without replacing the anomaly+CP proof. Detailed flavor masses and mixings are certificate-complete only under Definition T.79.4 and Theorem T.79.6. |
+| $N_g=3$ | Theorem R.3.4 gives the minimal admissible count in its anomaly+CP family-charge class. Proposition R.3.5.1a selects exactly three only on the pre-flavor PPI branch carrying the additive objective $\mathcal L_{\mathrm{fam}}=\mathcal L_0+N\mathcal L_{\mathrm{block}}+\mathcal L_{\mathrm{mix}}$, with $\mathcal L_{\mathrm{block}}>0$ and $\mathcal L_{\mathrm{mix}}$ nondecreasing. Response-active $N>3$ branches remain admissible outside that surrogate-objective class. Detailed flavor masses and mixings require Definition T.79.4 and Theorem T.79.6. |
 | Abstract gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ | Theorem-level on the finite-response block-frame positive-marginal capacity branch: Theorem G.8.4b forces the $3+2+1$ inactive-sector split inside the block-frame/interface family and Corollary G.8.4c gives the determinant-compatible gauge algebra. This is not arbitrary compact-subgroup uniqueness in $U(6)$. |
 | Thomson-limit $\alpha$ | Canonical Appendix Z branch prediction through Theorem Z.26. Theorem-level normalization closure requires an accepted Thomson normalization certificate $\mathfrak C_\alpha$ in the sense of Definition Z.27.11a and Theorem Z.27.11c; failure of the certified interval demotes the branch by Corollary Z.27.11d. |
 | QFI acceleration bridge $\eta'$ | Unique inside the admissible QFI linear-response bridge-law class of Definition H.4.2.8a; Theorem H.4.2.8b fixes $\eta'=3/(8\sqrt3)$ and Corollary H.4.2.8c gives $g_0=c^2\sqrt\Lambda/8$. |
 | Operational continuum manifold / Lorentzian geometry | Conditional on the $M=24$, $D=4$ shell branch packaged by Theorem 43.5, using Appendix C.6d-C.6e, the finite-defect microscopic selection and Mosco closure of Theorem D.6e, the curvature-transfer bridge of Theorem C.6c, the rigidity upgrade of Theorem 44a, and the global-core competitor condition refined by Proposition D.6f.2a; exact continuum ontology excluded by Theorem K.10.3a. |
-| AQFT route | Certificate-complete on the finite KMS-descent branch of Definition F.10.12a and Theorem F.10.12c; otherwise conditional on the operational-continuum branch plus the controlled generator convergence and compatible-embedding hypotheses of Theorem F.0. Lightcone normalization is supplied by Corollary F.1a on the strict finite-range single-clock ND-RID branch and remains explicit otherwise. |
-| Emergent metric / field equations | Certificate-complete on the F.10.12 branch by Corollary 12.1b; otherwise conditional on the operational-continuum branch, Appendix E area-law/calibration branch, Appendix B stress-energy source construction, Appendix F local Rindler/KMS modular bridge, the Clausius relation, and the local-horizon bridge of Theorem 48a. This is an emergent metric and channel-capacity thermodynamics route. |
+| AQFT route | Conditional implication: Theorem F.10.12c gives a compatible limiting state, cocycle trivialization, and Clausius closure only if its accepted refining certificate sequence exists. A relativistic AQFT realization additionally requires the common-embedding generator, locality, spectrum, Hadamard, and field-realization data of Theorem F.0 and Definition F.0h. No accepted common record is asserted. |
+| Emergent metric / field equations | Conditional implication: Corollary 12.1b yields the metric equation only when the operational continuum, Lorentzian promotion, finite KMS/AQFT, Appendix E area and normalization, Appendix B conserved source, local-horizon, all-null, and zero-slack records coexist on one compatible cover. The paper supplies this closure criterion, not a currently accepted joint certificate. |
 | Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there; Remark T.17a.4 and Proposition T.17a.5 rule out the sector-independent local affine truncation, Theorem T.78.5 proves negative closure for the pre-certificate canonical ledger, Theorem T.78.11 gives the forward-locked RHG certificate route, Theorem T.78.14 proves that the current RHG/torsion/spectral-action/equivalent source class supplies no accepted $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, or gauge/Higgs finite-part interval, and Theorem T.5d.2 gives the direct Steiner-electroweak pair-count identity. |
 | Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | $\kappa=142$ is the corrected four-mode branch value under the explicit false-vacuum spectral hypotheses of Theorem U.13b; $\kappa_{\mathrm{ref}}=141.5$ remains the Appendix U five-mode reference branch value, which Theorem U.8c does not realize in the current continuum action. |
 | Appendix U numerical prefactor $A_{\mathrm{eff}}$ | A theorem-level four-mode value requires the relative Quillen-Fredholm prefactor certificate of Definition U.15d, Theorem U.15e, and Theorem U.15i.2, with no promotion without the audit by Corollary U.15f. If determinant transfer is used, the Bismut-Lebeau datum of Definition U.15g through Corollary U.15j fixes the transfer ledger. The Corollary U.15b working value remains a forward-evaluation convention unless independently reproduced by the four-mode certificate. |
 | Flavor numerics and baryogenesis numerics | Certificate-complete only under the flavor completion certificate of Definition T.79.4/Theorem T.79.6 and the baryogenesis transport certificate of Definition Y.11.7a/Theorem Y.11.7b. Without those records they remain model-layer. On a final-calibrated branch, the relevant Yukawa, neutrino, CP, and transport coefficients are branch-scaled spectral moments of the accepted $\omega_*$ of Appendix V.3.11. |
 | Final continuous coefficients | Not fixed by symmetry alone. They become theorem-level SpectralMoment outputs only after an accepted finite spectral calibration datum $\mathfrak S_*$ supplies $\mathcal A_*$, $\Omega_*$, $\nu_*$, full-support witness $\nu_*^{\mathrm{fs}}$, all independent constraint moments, unit bridges, RG/threshold route, circular-angle convention, parent-sector overlap map, and all operator symbols before comparison. Then Theorem V.3.11f removes continuous moduli. |
-| CC influence | The sealed local CPTP core is no-signaling. CC influence is model layer unless its local protocol package is fixed before validation comparison under Definition 13.0d and the evidence standard of Definition 13.0a. A nonlocal Bob-marginal anomaly is outside the sealed CPTP core unless a non-CPTP finite-response branch is explicitly supplied and certified. |
+| CC influence | The sealed local CPTP core is no-signaling. A physical CC claim requires both a G9CC realization record—causal source-to-control map, normalized instrument, energy/reset/source and no-double-counting ledgers, and a signed interval or zero theorem—and a forward-locked protocol under Definitions 13.0a and 13.0d. A protocol alone cannot construct the carrier. A nonlocal Bob-marginal anomaly lies outside the sealed CPTP core unless a distinct finite-response branch is explicitly supplied and certified. |
 
 ### 14.6.6 What remains for full closure
 
-The remaining non-theorem rows are the rows without accepted finite certificates or without an accepted final spectral calibration datum together with the required unit bridges and RG/threshold route: the Thomson normalization certificate $\mathfrak C_\alpha$, the local generator convergence certificate $\mathfrak C_{\mathrm{gen}}$ outside already closed AQFT branches, the torsion or RHG electroweak spectral certificates $\mathfrak C_{\mathrm{tor}}$ and $\mathfrak R_{\mathrm{RHG}}$, the spectral-action electroweak/Higgs certificate $\mathfrak S_{\mathrm{SA}}(P)$, the canonical four-mode vacuum prefactor certificate $\mathfrak F_U^{(4)}$ (or the earlier $\mathfrak F_U+\mathfrak I_U^{(4)}$ records supplemented by $H_4$, $\mathcal T_4$, and every remaining U.73e entry), with the Bismut–Lebeau transfer datum $\mathfrak B_{\mathrm{BL}}$ when used, the flavor completion certificate $\mathfrak C_{\mathrm{fl}}$ and joint ledger $\mathfrak J_{\mathrm{RHG-fl}}$, the baryogenesis certificates $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, and $\mathfrak C_B^{\mathrm{APSK}}$, the final spectral calibration datum $\mathfrak S_*$ of Definition V.3.11a for continuous coefficients, and any CC/statistical-influence protocol package entered under Definition 13.0d. By Theorem P.14.1f, Corollary P.14.1g, and Corollary P.14.1b.1, these rows cannot be promoted by prose, status labels, or post-comparison interval choices. They require their actual finite records: calibration algebras, spectral atoms, invariant reference measures, full-support moment polytopes, unit bridges, RG/threshold routes, operator symbols, spectral matrices, determinant records, finite-part sums, first-order Dirac certificates, cutoff functions, projection lists, heat coefficients, subtraction orders, finite-part scales, Higgs normalizations, Dynkin-index maps, Hessian and orientation data, local generator maps, tail bounds, stationary data, transport integrals, and forward-lock ledgers. Quantitative residual control must also preserve status: a theorem-level bound can close an interval only when it is fixed before comparison, while a comparison-budget scale remains a diagnostic. For the electroweak row, Theorem T.78.14 records the current PU-internal negative classification: $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, and equivalent completed spectral tuples have no accepted current record, so the present registry value for $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite parts is $\varnothing_{\mathrm{cert}}$. If a future shared source is accepted, every projection and finite part must descend from one master zeta-index ledger without retuning finite-part convention, projector, tail bound, grading, or normalization after a dependent row is fixed. For the Thomson row, Remark Z.26d records the canonical budget arithmetic and Corollary Z.26d.1 gives the conditional radius test; neither replaces the accepted residual certificate demanded by Definition Z.27.11a unless the final spectral datum supplies the corresponding residual symbol and moment constraint before comparison. Symmetric-space, heat-kernel, or determinant proposals can enter only as accepted finite records with source-exhaustion, operator-symbol, unit-bridge, finite-measure or regularization, route, tail-bound, and forward-lock data; arena invariance alone does not close $R_\alpha$, $A_{\mathrm{eff}}$, electroweak thresholds, spectral-action Higgs finite parts, or the final spectral calibration datum $\mathfrak S_*$. The global registry that audits these statuses, residual-control records, overlap maps, spectral calibration records $\zeta$, and forward-locks is the strict-certificate registry $\mathfrak G_{\mathrm{PU}}$ of Definition P.14.1m, with the acceptance test in Algorithm P.14.1m.0 and soundness/realization results in Theorems P.14.1m.1 and P.14.1m.2. The canonical arena hierarchy is closed by Definition Z.35d and Theorem Z.35e on packages preserving the marked minimal-branch data. The geometric-naturality certificate $\mathfrak C_{\mathrm{geo}}$ (Definition 45c), the predictive-engine rate certificate $\mathfrak C_{\mathrm{eng}}$ (Definition B.8e), the scrambling-saturation certificate $\mathfrak C_{\mathrm{scr}}$ (Definition F.10.4b.6a), and an accepted becoming-flow compression datum $\mathfrak C_{\Omega}$ in the sense of Definition X.8g.4 turn the previously listed functorial-geometry, source-energy-rate, autonomous-complexity-growth, cosmological-backreaction, scrambling-completion, and sector-flow-compression targets into explicit finite gates. Accepted Margolus-Levitin saturation certificates in the sense of Definition Q.0.10d.1, accepted symmetric-space transport exhaustion certificates in the sense of Definition Z.27.11M, accepted soft-dilatation Fredholm audits in the sense of Definition U.15e.1, and a future common parent invariant for the Appendix R source roles would further compress the framework. Corollary R.4.2b.1 supplies only fixed-dimension universal-optimality support for the $E_8$ and Leech subledgers; it is not such a parent invariant. These absences do not permit post-comparison branch changes. Remark P.14.1m.5 records this as a registry-aligned compression-trajectory schema: further compression may reduce the description of accepted records, but it cannot alter any existing status assignment, bridge condition, spectral datum, or validation-locked branch. Each such sector is either certificate-complete or final-calibrated before comparison, or remains branch/model-layer by the ledger.
+The remaining non-theorem rows are the rows without accepted finite certificates or without an accepted final spectral calibration datum together with the required unit bridges and RG/threshold route: the Thomson normalization certificate $\mathfrak C_\alpha$, the local generator convergence certificate $\mathfrak C_{\mathrm{gen}}$ outside already closed AQFT branches, the torsion or RHG electroweak spectral certificates $\mathfrak C_{\mathrm{tor}}$ and $\mathfrak R_{\mathrm{RHG}}$, the spectral-action electroweak/Higgs certificate $\mathfrak S_{\mathrm{SA}}(P)$, the canonical four-mode vacuum prefactor certificate $\mathfrak F_U^{(4)}$ (or the earlier $\mathfrak F_U+\mathfrak I_U^{(4)}$ records supplemented by $H_4$, $\mathcal T_4$, and every remaining U.73e entry), with the Bismut–Lebeau transfer datum $\mathfrak B_{\mathrm{BL}}$ when used, the flavor completion certificate $\mathfrak C_{\mathrm{fl}}$ and joint ledger $\mathfrak J_{\mathrm{RHG-fl}}$, the baryogenesis certificates $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, and $\mathfrak C_B^{\mathrm{APSK}}$, the final spectral calibration datum $\mathfrak S_*$ of Definition V.3.11a for continuous coefficients, and any CC/statistical-influence protocol package entered under Definition 13.0d. By Theorem P.14.1f, Corollary P.14.1g, and Corollary P.14.1b.1, these rows cannot be promoted by prose, status labels, or post-comparison interval choices. They require their actual finite records: calibration algebras, spectral atoms, invariant reference measures, full-support moment polytopes, unit bridges, RG/threshold routes, operator symbols, spectral matrices, determinant records, finite-part sums, first-order Dirac certificates, cutoff functions, projection lists, heat coefficients, subtraction orders, finite-part scales, Higgs normalizations, Dynkin-index maps, Hessian and orientation data, local generator maps, tail bounds, stationary data, transport integrals, and forward-lock ledgers. Quantitative residual control must also preserve status: a theorem-level bound can close an interval only when it is fixed before comparison, while a comparison-budget scale remains a diagnostic. For the electroweak row, Theorem T.78.14 records the current PU-internal negative classification: $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, and equivalent completed spectral tuples have no accepted current record, so the manuscript-ledger value for $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite parts is $\varnothing_{\mathrm{cert}}$. It becomes machine-audited only if a scope-complete populated instance, exact input hash, sound versioned verifier, and recorded successful execution of Algorithm P.14.1m.0 are supplied; none is present here. If a future shared source is accepted, every projection and finite part must descend from one master zeta-index ledger without retuning finite-part convention, projector, tail bound, grading, or normalization after a dependent row is fixed. For the Thomson row, Remark Z.26d records the canonical budget arithmetic and Corollary Z.26d.1 gives the conditional radius test; neither replaces the accepted residual certificate demanded by Definition Z.27.11a unless the final spectral datum supplies the corresponding residual symbol and moment constraint before comparison. Symmetric-space, heat-kernel, or determinant proposals can enter only as accepted finite records with source-exhaustion, operator-symbol, unit-bridge, finite-measure or regularization, route, tail-bound, and forward-lock data; arena invariance alone does not close $R_\alpha$, $A_{\mathrm{eff}}$, electroweak thresholds, spectral-action Higgs finite parts, or the final spectral calibration datum $\mathfrak S_*$. Definition P.14.1m specifies the strict-certificate registry schema $\mathfrak G_{\mathrm{PU}}$, Algorithm P.14.1m.0 specifies its acceptance test, Theorem P.14.1m.1 proves soundness conditional on acceptance, and Theorem P.14.1m.2 proves canonical encoding and round-trip for an independently verified finite tuple. The schema template is not a populated global instance, so it does not machine-audit the manuscript statuses, residual controls, overlaps, spectral calibration records, or forward-locks. The canonical arena hierarchy is closed by Definition Z.35d and Theorem Z.35e on packages preserving the marked minimal-branch data. The geometric-naturality certificate $\mathfrak C_{\mathrm{geo}}$ (Definition 45c), the predictive-engine rate certificate $\mathfrak C_{\mathrm{eng}}$ (Definition B.8e), the scrambling-saturation certificate $\mathfrak C_{\mathrm{scr}}$ (Definition F.10.4b.6a), and an accepted becoming-flow compression datum $\mathfrak C_{\Omega}$ in the sense of Definition X.8g.4 turn the previously listed functorial-geometry, source-energy-rate, autonomous-complexity-growth, cosmological-backreaction, scrambling-completion, and sector-flow-compression targets into explicit finite gates. Accepted Margolus-Levitin saturation certificates in the sense of Definition Q.0.10d.1, accepted symmetric-space transport exhaustion certificates in the sense of Definition Z.27.11M, accepted soft-dilatation Fredholm audits in the sense of Definition U.15e.1, and a future common parent invariant for the Appendix R source roles would further compress the framework. Corollary R.4.2b.1 supplies only fixed-dimension universal-optimality support for the $E_8$ and Leech subledgers; it is not such a parent invariant. These absences do not permit post-comparison branch changes. Remark P.14.1m.5 records this as a registry-aligned compression-trajectory schema: further compression may reduce the description of accepted records, but it cannot alter any existing status assignment, bridge condition, spectral datum, or validation-locked branch. Each such sector is either certificate-complete or final-calibrated before comparison, or remains branch/model-layer by the ledger.
 
 ### 14.6.7 Final scope statement
 
-Read in this way, the manuscript has a clear and economical architecture: a theorem-level discrete backbone $K_0=3,N_{\mathrm{vis}}^{\min}=8,d_0=8,\varepsilon_0=\ln2,a=2,b=6,M=24,k=12,D=4$ on the stated branch; a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible; a gravity step whose local-horizon thermodynamic input is sharpened by Theorem 48a; a metric-fluctuation closure given by Definition 12.1d, Theorem 12.1c, Definition 12.1d.4, Theorem 12.1e, Corollary 12.1e.1, Corollary 12.1e.2, Definition 12.1f, and Theorem 12.1f.1 on the nondegenerate finite-response gravitational branch, deriving the linearized emergent metric and its covariance without an independent microscopic graviton Hilbert sector; a retained-horizon no-deletion closure given by Definition E.9.5d, Theorem E.9.5e, Definition E.9.5f, Theorem E.9.5f.1, and Corollary E.9.5e.1, closing the structural-conservation layer while keeping exterior recovery and Page-curve estimates under their proper sufficiency and scrambling certificates; a theorem-level or branch-theorem gauge algebra selection inside Appendix G; a tightly controlled but branch-normalized fine-structure calculation in Appendix Z; a cosmological-constant sector whose current five-mode numerical value is a reference convention rather than an unconditional theorem; electroweak/flavor quantitative layers whose certificate gaps are visible instead of hidden; and a final spectral calibration layer in Appendix V.3.11 that removes continuous moduli exactly on branches carrying an accepted $\mathfrak S_*$ together with the required unit bridges, RG/threshold route, and registry record $\zeta$. The Global Strict-Certificate Ledger of Convention P.14.1k records, sector by sector, which strict PPI/PCE certificates are already closed, which final spectral calibration records $\zeta$ are accepted, and which rows remain certificate-pending, with Theorem P.14.1k.1 forcing global closure under acceptance and overlap-map commutativity, Corollary P.14.1k.2 localizing the remaining open closure, and Theorem V.3.11f eliminating continuous moduli after final calibration. A branch condition is a live degree of freedom only until the relevant finite-response certificate either excludes it, quotients it as response-null surplus, supplies a strict PPI/PCE gap in the sense of Definition D.8.9a, or supplies an accepted finite spectral calibration datum in the sense of Definition V.3.11a together with the required $\zeta$ record. This identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, downstream finite records, or final spectral symbols, unit bridges, and RG/threshold routes.
+Read in this way, the manuscript has a clear and economical architecture: a theorem-level discrete backbone $K_0=3,N_{\mathrm{vis}}^{\min}=8,d_0=8,\varepsilon_0=\ln2,a=2,b=6,M=24,k=12,D=4$ on the stated branch; a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible; a gravity step whose local-horizon thermodynamic input is sharpened by Theorem 48a; a metric-fluctuation closure given by Definition 12.1d, Theorem 12.1c, Definition 12.1d.4, Theorem 12.1e, Corollary 12.1e.1, Corollary 12.1e.2, Definition 12.1f, and Theorem 12.1f.1 on the nondegenerate finite-response gravitational branch, deriving the linearized emergent metric and its covariance without an independent microscopic graviton Hilbert sector; a retained-horizon no-deletion closure given by Definition E.9.5d, Theorem E.9.5e, Definition E.9.5f, Theorem E.9.5f.1, and Corollary E.9.5e.1, closing the structural-conservation layer while keeping exterior recovery and Page-curve estimates under their proper sufficiency and scrambling certificates; a theorem-level or branch-theorem gauge algebra selection inside Appendix G; a tightly controlled but branch-normalized fine-structure calculation in Appendix Z; a cosmological-constant sector whose current five-mode numerical value is a reference convention rather than an unconditional theorem; electroweak/flavor quantitative layers whose certificate gaps are visible instead of hidden; and a final spectral calibration layer in Appendix V.3.11 that removes continuous moduli exactly on branches carrying an accepted $\mathfrak S_*$ together with the required unit bridges, RG/threshold route, and registry record $\zeta$. The Global Strict-Certificate Ledger of Convention P.14.1k is the manuscript-level status table recording, sector by sector, which strict PPI/PCE certificates are declared closed, which final spectral calibration records $\zeta$ are declared accepted, and which rows remain certificate-pending. A machine audit additionally requires a scope-complete populated instance, exact input hash, versioned executable semantic verifiers or proof kernel, their termination and soundness certificates, and a recorded successful (C1)--(C18) execution; these are not supplied. Conditional on genuinely accepted physical entries and commuting overlap maps, Theorem P.14.1k.1 selects a compatible sector tuple; the following scope criterion separately requires a nonempty global-realizer fiber for existence and a singleton fiber for uniqueness up to global response equivalence. Corollary P.14.1k.2 localizes remaining sectorwise obligations, and Theorem V.3.11f eliminates continuous moduli only after final calibration. A branch condition is a live degree of freedom only until the relevant finite-response certificate either excludes it, quotients it as response-null surplus, supplies a strict PPI/PCE gap in the sense of Definition D.8.9a, or supplies an accepted finite spectral calibration datum in the sense of Definition V.3.11a together with the required $\zeta$ record. This identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, downstream finite records, or final spectral symbols, unit bridges, and RG/threshold routes.
 
 ### 14.6.8 Input-output economy and comparative adequacy
+
 
 A framework is not more economical merely because its master equation is shorter. Economy is measured by the ratio of derived physical structure to external input structure. A variational principle defined on a preselected arena may be compact in notation while carrying substantial input through the arena itself: dimension, signature, admissible variables, constraint class, and observable map. PU therefore distinguishes notational compactness from foundational economy.
 

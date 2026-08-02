@@ -37,9 +37,10 @@ Within PU, the epistemic status of the core commitments is stratified:
 
 - **Certainty (epistemic):** the existence of conscious awareness (Cogito) [Descartes 1641].
 - **Operational necessity:** the predictive cycle as the minimal structure supporting verification, learning, and knowledge (Sections P.3–P.4).
-- **Logical theorems:** impossibility results for perfect self-prediction (SPAP, Theorem 10) and bounded self-decision (RUD, Theorem A.2.3).
+- **Logical theorems:** impossibility of one universally exact predictor on the stated SPAP class (Theorem 10) and undecidability of the fixed terminal-reachability property on the coded RID simulation class (RUD, Theorems A.2.3-A.2.4).
 - **Empirical anchor:** Landauer's principle relating logical irreversibility to physical dissipation [Landauer 1961; Bennett 1982], yielding the strict floor $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$ (Theorem 31; Appendix J).
 - **Framework selection:** PPI (Definition P.6.2) and PCE (Definition 15) determine which physically instantiated structures are stable under finite resources, selecting saturation at the PCE-Attractor where applicable.
+
 
 A compact statement of the bridge and forcing chain is:
 
@@ -74,9 +75,10 @@ The first option faces what Chalmers [1996] termed the *hard problem of consciou
 
 The second option—treating consciousness as outside physics—renders any physical theory fundamentally incomplete. A theory that cannot account for the one phenomenon we know with certainty exists fails to be a complete description of reality.
 
-A consciousness-first ontology uniquely resolves both problems: consciousness requires no further explanation (it is the explanatory bedrock), and the theory is complete by construction (the foundation itself is the phenomenon we seek to explain). Moreover, such an approach is maximally parsimonious—it starts from what we know exists rather than positing additional ontological primitives (matter, fields) whose existence we infer rather than directly experience.
+The consciousness-first thesis proposes to address both problems by treating conscious process as explanatory bedrock rather than deriving it from non-conscious matter. That move removes one emergence question from the starting ontology, but it does not by construction prove a complete physical theory, select one external-world model, or derive the realized universe. Its claimed parsimony is therefore a philosophical comparison criterion to be tested against the framework's explicit physical constructions and empirical record.
 
 ### The Historical Marginalization of Consciousness in Physics
+
 
 Despite this epistemological foundation, consciousness has been systematically marginalized in modern physics. In mainstream physics, consciousness has traditionally been treated as irrelevant to fundamental theory—at best an emergent phenomenon to be explained [Searle 1992; Chalmers 1996], at worst a source of confusion to be avoided. When consciousness has been proposed as playing a fundamental role in physics, such proposals have faced substantial skepticism. Early quantum interpretations invoking consciousness in measurement [von Neumann 1932; Wigner 1961] were largely abandoned. More recent attempts to link consciousness to quantum processes [Penrose 1989; Hameroff & Penrose 1996] have encountered significant criticism from both physicists [Tegmark 2000; Koch & Hepp 2006] and neuroscientists, with critics arguing these approaches lack empirical support and violate known decoherence timescales.
 
@@ -84,17 +86,18 @@ Contemporary philosophical positions on consciousness—ranging from eliminativi
 
 The historical trajectory of interpretations of quantum mechanics reveals this pattern clearly [Freire 2015; Becker 2018]. As Freire documents, approaches that privileged the observer's consciousness were progressively marginalized in favor of more "objective" formulations. The implicit assumption—rarely stated as a formal impossibility claim but evident in the structure of the field—has been that rigorous physics must proceed from matter, fields, or information as its ontological foundation, not from subjective experience or consciousness.
 
-### This Framework as Existence Proof
+### This Framework as a Formal Candidate Construction
 
-This framework serves as an existence proof challenging that assumption and demonstrating that the epistemologically necessary foundation is also scientifically viable. Regardless of whether the specific model proposed here is empirically vindicated, the framework demonstrates that:
+This framework provides a worked formal candidate challenging that methodological assumption. It shows that a consciousness-first starting point can be combined with explicit mathematical branches and empirical proposals; scientific viability and physical identification remain questions for proof and experiment. In that qualified sense, the framework establishes that:
 
 1. **Consciousness-first ontology can be mathematically formalized with rigor:** Through axiomatization (POP, PCE), formal definitions (MPUs, Perspectival States), and rigorous derivations (SPAP theorems, thermodynamic bounds).
 
-2. **Such formalization can generate structures isomorphic to known physics:** The emergence of quantum mechanical formalism (Section 8), Lorentzian spacetime geometry (Section 11), Einstein's Field Equations (Section 12), and Standard Model structures (Appendices G, R).
+2. **Such formalization can contain conditional structures analogous to known physics:** The quantum, Lorentzian-spacetime, Einstein-equation, and Standard-Model branches in Sections 8, 11, and 12 and Appendices G and R are mathematical implications of their declared reconstruction and realization hypotheses.
 
-3. **Quantitative predictions can be derived:** Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor with zero continuously adjustable parameters (Appendix Z), derivation of three fermion generations (Appendix R), and a branch-dependent cosmological-constant reference scaling law from Golay-Steiner structure (Appendix U), where Theorem U.8c blocks a theorem-level pure-dilatation realization of the Appendix U five-mode branch.
+3. **Quantitative branch calculations can be made:** Appendix Z gives its zero-continuous-fit-parameter sinc-core value on a declared branch; Appendix R gives a conditional least-family result in its anomaly-plus-CKM and additive-monotone class; and Appendix U gives a branch-dependent cosmological-constant reference scaling while Theorem U.8c blocks a theorem-level pure-dilatation realization of its five-mode branch. These are not unconditional realized-universe predictions.
 
 4. **Falsifiable experimental protocols can be formulated:** Detailed protocols with power analyses and statistical requirements for testing Consciousness Complexity effects (Section 13).
+
 
 5. **Explanatory scope comparable to established foundations:** Addressing foundational puzzles from the information paradox to the arrow of time (Appendix K), with comparable breadth to matter-first or information-first approaches.
 
@@ -102,15 +105,16 @@ This framework serves as an existence proof challenging that assumption and demo
 
 ### The Fundamental Advancement
 
-The question therefore shifts from "Can consciousness-based physics be rigorous?" to "Is this particular consciousness-first framework empirically correct?" This transition—from methodological exclusion to empirical evaluation—constitutes a fundamental advancement in two respects:
+The framework therefore turns the question "Can a consciousness-first physics be formalized?" into the sharper questions "Which conclusions follow from its explicit premises?" and "Do its independently fixed branches survive empirical tests?" This transition from methodological exclusion to formal and empirical evaluation is the intended advancement:
 
-**Methodologically:** Consciousness-first ontology is now established as a viable candidate foundation for physics, to be evaluated on empirical grounds alongside matter-first and information-first approaches.
+**Methodologically:** Consciousness-first ontology is presented as a mathematically articulated candidate foundation to be evaluated alongside matter-first and information-first approaches; the present manuscript does not prove it uniquely viable.
 
-**Conceptually:** A complete theory of physics—one that accounts for both the external world and the consciousness that observes it—may require a consciousness-first foundation. Matter-first approaches will always face the hard problem; consciousness-first approaches dissolve it by construction.
+**Conceptually:** A complete theory of physics that accounts for both the external world and conscious observation may benefit from a consciousness-first foundation. In this framework that choice treats consciousness as primitive, but completeness still requires the missing physical realization and empirical closure theorems.
 
-The framework's philosophical arguments (developed throughout this appendix) provide the grounding for why this particular approach is not only viable but, starting from the indubitable certainty of the *Cogito* and the requirement of explanatory completeness, potentially the only truly non-arbitrary and complete foundation for understanding physical reality. If a quantifiable, rigorous theory can be developed that integrates consciousness from the outset—as this framework demonstrates—then the epistemological and explanatory advantages of the consciousness-first approach become compelling.
+The framework's philosophical arguments motivate why this approach may be comparatively non-arbitrary when starting from the *Cogito* and a requirement of explanatory completeness. That motivation is not a uniqueness theorem. If the physical constructions, global selector, and empirical bridges are independently completed, the epistemological and explanatory advantages of the consciousness-first approach can then be assessed against competing foundations.
 
 ## P.2 The Primacy of Consciousness and the Certainty of the Cogito
+
 
 ### P.2.1 The Unshakeable Certainty: *Cogito Ergo Sum*
 
@@ -778,12 +782,13 @@ If thinking is prediction (Appendix P.3; Thesis P.3.5.1), then cognition is fund
 
 Internal simulation is constrained in PU by resource, logical, and thermodynamic limits:
 
-1. **Resource limits (PCE / complexity cost).** Predictive Physical Complexity ($C\equiv C_P$) (Section 2.4.1, Eq. 1) is costly. The Law of Prediction (Theorem 19) implies diminishing returns: predictive performance rises toward a ceiling $\beta$ with exponential saturation set by the registered task scale $C_{target}$; identifying that coordinate with environmental complexity requires an external innovation record:
+1. **Resource limits (PCE / complexity cost).** The operational response coordinate $C$ carries the declared complexity cost on this branch. Identifying it statewise with Predictive Physical Complexity $C_P$ requires the registered same-state bridge isolated by Definition 19; identifying it with environmental complexity additionally requires an external innovation record. On Definition 19's nonattained analytic-boundary branch, the Law of Prediction (Theorem 19) implies for $C>C_{op}$ that predictive performance rises toward a ceiling $\beta$ with exponential saturation set by the registered task scale $C_{target}$:
 
 
    $$
-   PP(C)=\beta-(\beta-\alpha)e^{-\kappa(C-C_{op})/C_{target}}.
+   PP(C)=\beta-(\beta-\alpha)e^{-\kappa(C-C_{op})/C_{target}},\qquad C>C_{op}.
    $$
+   Its value at $C=C_{op}$ is only the continuous analytic extension and cannot be assigned to a same-task attained Definition 23 MPU.
 
 2. **Logical limits (SPAP).** Even unlimited resources cannot yield perfect self‑prediction (Theorems 10–11).
 
@@ -1448,9 +1453,10 @@ The simulation framing leads to a crucial architectural distinction:
 
 **Definition P.5.2 (Authentic Simulation).** An *authentic simulation* is an information-processing system that generates genuine novelty through the maintenance of two essential boundaries:
 
-1. **Epistemic Boundary:** The system resists perfect prediction, both internal and external. This boundary aligns with SPAP (Theorems 10, 11), which establishes the internal logical necessity of predictive limits through self-referential arguments.
+1. **Epistemic Boundary:** The system resists perfect prediction, both internal and external. This boundary aligns with SPAP (Theorems 10, 11), which proves conditional diagonal limits for nominated predictor classes satisfying its self-reference and response hypotheses.
 
 2. **Control Boundary:** No external intervention can manipulate internal states or dictate outcomes. External agents cannot write to the simulation; internal causality is preserved.
+
 
 
 ### P.5.5 The Observation Requirement and the Logical Necessity of an Observation Channel
@@ -2293,7 +2299,7 @@ Landauer's principle provides the *physical content* of the logical-thermodynami
 
 The framework does not derive Landauer's principle from its axioms—that would be circular since Landauer provides the physical basis for entropy unification. Landauer is *incorporated* as the empirical bridge between logical and physical entropy.
 
-**2. PPI (Universality Guarantee)**
+**2. PPI (Finite Physicalizability and Carrier Gate)**
 
 The Principle of Physical Instantiation (Definition P.6.2) provides the carrier gate: every retained logical operation in the physical theory is represented by a finite physical process. It therefore prevents an abstract operation from bypassing the physical resource ledger, but it does not make every operation logically irreversible. Reversible embeddings and uncomputed ancillas may be implemented without an erasure heat floor.
 
@@ -2312,7 +2318,7 @@ is a conjunction of branch theorems and calibration hypotheses. It shows that th
 | Component | Status | Role |
 |:----------|:-------|:-----|
 | Landauer's principle | Incorporated (empirical) | Physical content of equivalence |
-| PPI | Axiom | Guarantees universality |
+| PPI | Definition / physical bridge | Finite-response physicalizability rule; does not construct a universal physical realization |
 | Theorems E.1–E.3 and E.5 | Derived | Extension to gravity |
 
 ---
@@ -2553,7 +2559,7 @@ a=2,\\
 &a=2+d_0=8+b=d_0-a+\text{SLD-QFI interface chart}
 \longrightarrow
 M=2ab=24,\\
-&M=24+\text{verified response-labeled $24$-cell}+\text{least-feasible support cost}
+&M=24+\text{verified response-labeled 24-cell}+\text{least-feasible support cost}
 \longrightarrow
 24\le K(D)
 \longrightarrow
@@ -2857,9 +2863,10 @@ Then every edge traversal and every serialized path obeys the uniform upper boun
 $$
 v\le\frac{\delta w_{\max}}{\tau_{\min}}.
 $$
-Theorem 29 supplies a characteristic internal Hamiltonian timescale but does not establish premise 1 for every ND-RID traversal. The displayed inequality need not be attained. An attained operational frontier is separate branch data, and its promotion to a Lorentzian characteristic cone requires Hypotheses O.7.2.1–O.7.2.4 together with the three-spatial-dimensional branch of Theorem Z.11.
+Theorem 29 supplies a characteristic internal Hamiltonian timescale but does not establish premise 1 for every ND-RID traversal. The displayed inequality need not be attained. An attained operational frontier is separate branch data, and its promotion to a Lorentzian characteristic cone requires Hypotheses O.7.2.1–O.7.2.4. Theorem Z.11 supplies only a four-dimensional Euclidean response carrier; the three-dimensional spatial kernel follows from the rank-four continuum realization and the nonvanishing time covector of Hypotheses O.7.2.1–O.7.2.2.
 
 *Proof.* For a serialized path of $n$ edges, the hypotheses give $t\ge n\tau_{\min}$ and $d_{\mathcal N}\le n\delta w_{\max}$. Division yields the stated bound. Nothing in the inequalities proves attainment, position-independence, or cone coincidence; those are the separately named branch inputs. ∎
+
 
 **Corollary P.8.4 (Conditional Speed Normalization).** If the preceding bound is attained by a retained one-link process and the normalized uniform-weight branch has $w_{xy}=1$, then the attained frontier is $c=\delta/\tau_{\min}$. Without attainment, $\delta/\tau_{\min}$ is only an upper bound; Lorentzian interpretation still requires the Appendix O package.
 
@@ -2867,9 +2874,10 @@ Theorem 29 supplies a characteristic internal Hamiltonian timescale but does not
 
 ## P.8.7 The Emergence of the Lorentzian Signature
 
-**Theorem P.8.5 (Lorentzian Signature on the Appendix O Hyperbolic-Principal-Symbol Branch).** On the branch satisfying Hypotheses O.7.2.1-O.7.2.4 of Appendix O — a second-order continuum principal symbol, a positive-definite spatial block, an entropy-selected time coordinate, and a nondegenerate hyperbolic cone coinciding with the operational causal frontier — the emergent metric has Lorentzian signature $(-, +, +, +)$. This is not a standalone corollary of finite propagation speed; it is the signature theorem of Appendix O (Theorems O.7a-O.7b, Corollary O.7b.1) instantiated on the three-spatial-dimensional branch fixed by Theorem Z.11, with the operational causal frontier supplied by Theorem P.8.4.
+**Theorem P.8.5 (Lorentzian Signature on the Appendix O Hyperbolic-Principal-Symbol Branch).** On the branch satisfying Hypotheses O.7.2.1-O.7.2.4 of Appendix O — a rank-four positive continuum tensor, a nonvanishing entropy-selected time covector whose kernel has rank three, a second-order continuum principal symbol, and a nondegenerate hyperbolic cone coinciding with the operational causal frontier — the emergent metric has Lorentzian signature $(-,+,+,+)$. This is not a standalone corollary of finite propagation speed or of $D=4$; it is the signature theorem of Appendix O (Theorems O.7a-O.7b, Corollary O.7b.1) instantiated on a branch combining Theorem Z.11's four-dimensional Euclidean response carrier with the separately certified rank-four continuum and temporal-covector data, with the operational causal frontier supplied by Theorem P.8.4.
 
 *Proof.* The four hypotheses O.7.2.1-O.7.2.4 are supplied as follows on this branch.
+
 
 **(i) Spatial sector (Hypothesis O.7.2.1, positive definiteness).** Assume the geometric, liminf, recovery, identification, and nondegeneracy hypotheses of Theorem D.6e, so that the rescaled propagation-cost Dirichlet forms Mosco-converge to a closed strongly local regular Cheeger energy whose leading spatial-gradient term is
 $$
@@ -4216,7 +4224,7 @@ The PU framework extends beyond the free energy principle in several directions:
 |--------|----------------------|--------------|
 | Foundation | Variational inference | Prediction + thermodynamics |
 | Origin of cost | Not specified | $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ (Theorem 31) |
-| Fundamental limits | None specified | SPAP (Theorem 10), $\alpha_{SPAP} < 1$ |
+| Fundamental limits | None specified | SPAP class-level diagonal obstruction (Theorems 10–11); a scalar $\alpha_{\mathrm{SPAP}}<1$ requires a registered task, score, admissible class, and quantitative certificate |
 | Spacetime | Assumed | Emergent (Section 11) |
 | Consciousness | Peripheral | Central (CC, Section 9) |
 | Error correction | Not addressed | Fundamental (Golay structure) |
@@ -5589,7 +5597,7 @@ There is no hard problem of consciousness because consciousness isn't trying to 
 
 When we ask "How does consciousness influence reality?" we're asking the wrong question. The right question is: "How do complex organizations of fundamental awareness develop the capability to bias their own predictive operations?" The answer is temporal engineering—the capability to modulate the rate of the very predictions from which physical reality emerges, acquired through POP/PCE optimization (Theorem L.1) and constrained by fundamental physical limits (Theorems 39, L.6, L.7).
 
-## P.12 The SPAP Origin of Time, Entropy, and Perspective
+## P.12 SPAP-Associated Time, Entropy, and Perspective
 
 ### P.12.1 Three Aspects of One Structure
 
@@ -6175,9 +6183,10 @@ Assume a two-dimensional local unitary theory with Poincaré invariance, a discr
 
 **Step 1 (Exact-scale branch input).** Proposition P.13.6.1 supplies an exact dilation family but does not alone imply a traceless stress tensor. The present proposition separately assumes a conserved stress tensor with improvable virial current; after improvement, $T^\mu_\mu=0$.
 
-**Step 2 (Two-dimensional boundary branch).** By Theorem 47 (Section 11.3), the conformal boundary of the emergent $D = 4$ spacetime has dimension $D - 1 = 3$. The two-dimensional boundary branch assumes that the relevant CFT lives on a two-dimensional chiral slice: the worldsheet swept by string-like excitations, or equivalently, the Riemann surface on which modular transformations act. The 24 interface modes (Theorem P.13.5) provide the target-space degrees of freedom for this 2D structure. The identification of the QFI interface modes with the 2D chiral target-space coordinates is the content of this branch.
+**Step 2 (Two-dimensional boundary branch).** On a separately certified $3+1$ Lorentzian conformal-boundary branch, assume that the relevant conformal boundary is three-dimensional. The two-dimensional boundary branch further assumes that the relevant CFT lives on a two-dimensional chiral slice: the worldsheet swept by string-like excitations, or equivalently, the Riemann surface on which modular transformations act. The 24 interface modes (Theorem P.13.5) provide the target-space degrees of freedom for this 2D structure. The identification of the QFI interface modes with the 2D chiral target-space coordinates is the content of this branch.
 
 **Step 3 (Enhancement to conformal symmetry).** Under the proposition's locality, unitarity, Poincaré, discrete-spectrum, and stress-tensor improvement hypotheses, two-dimensional scale invariance enhances to conformal invariance. The Virasoro algebra, with generators $\{L_n\}_{n \in \mathbb{Z}}$ satisfying $[L_m, L_n] = (m-n)L_{m+n} + \frac{c}{12}(m^3 - m)\delta_{m+n,0}$, emerges as the algebra of local conformal transformations [Polchinski 1988].
+
 
 **Step 4 (Registered chiral algebra).** The assumed chiral state-field correspondence obeys the VOA axioms, so its state space is a VOA. This conclusion is not inferred from dilation symmetry alone. $\square$
 
@@ -6458,9 +6467,10 @@ The Leech lattice contains nonzero vectors, so $-I\ne I$; consequently its order
 $$
 Z(\text{Co}_0)=\{\pm1\}
 $$
-[Conway 1969]. Hence the only central elements are $\pm1$, and the unique non-identity central involution is $(-1)$. ∎
+[Conway 1969b]. Hence the only central elements are $\pm1$, and the unique non-identity central involution is $(-1)$. ∎
 
 ---
+
 
 ### Theorem P.13.21 (Lift to VOA)
 
@@ -7372,9 +7382,10 @@ F(D_{\mathrm{prior}},c_1)\sim_{\mathcal O}F(D_{\mathrm{prior}},c_2),
 $$
 contradicting the hypothesis. Hence the prior PU branch does not determine the sector output. The three listed gates exhaust the possible closures: the first selects the finite record, the second proves that the missing choice is response-null at the output level, and the third removes the sector from the dependency graph. Any post-comparison selection uses the validation observable as part of the definition of the output, so Convention P.14.1d forbids theorem-level promotion. ∎
 
-**Corollary P.14.1g (No Text-Only Sector Promotion).** The sectors controlled by $\mathfrak C_\alpha$, $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, $\mathfrak F_U^{(4)}$, $\mathfrak B_{\mathrm{BL}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak J_{\mathrm{RHG-fl}}$, $\mathfrak C_{\mathrm{gen}}$, $\mathfrak Z_{\mathrm{cont}}$, $\mathfrak P_{\mathrm{AQFT}}$, $\mathfrak C_{\mathrm{EH}}$, $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, $\mathfrak C_B^{\mathrm{APSK}}$, $\mathfrak C_n^{\mathrm{KMS}}$, $\mathfrak S_{\mathrm{hor},n}$, $H_A^{\mathrm{PU}}(Z,N)$, $\Lambda_A^{\mathrm{PU}}(E)$, the hard-core perspective Gibbs datum, the RCD-Buchert-Cheeger datum, the dark-response certificate $\mathfrak X_{\mathrm{DS}}$, and the shared-control operator data $\mathfrak D_{\mathrm{PU}},\mathfrak B_{\mathrm{PU}},\mathcal R_{\mathrm{dec}}$ cannot be promoted by adding prose, status labels, proposed principles, admissibility definitions, or compatibility diagrams alone. They require the finite records named by their certificates, including their spectral data, determinant data, finite-part sums, first-order Dirac certificates, cutoff functions, sector projectors, heat coefficients, subtraction orders, finite-part scales, Higgs normalizations, Dynkin-index maps, Hessian and kernel data, orientation data, local generator maps, recovery sections, transport windows, tail bounds, covariance entries, support conditions, susceptibility kernels, overlap audits, and forward-lock ledgers.
+**Corollary P.14.1g (No Text-Only Sector Promotion).** The sectors controlled by $\mathfrak C_\alpha$, $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, $\mathfrak F_U^{(4)}$, $\mathfrak B_{\mathrm{BL}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak J_{\mathrm{RHG-fl}}$, $\mathfrak C_{\mathrm{gen}}$, $\mathfrak Z_{\mathrm{cont}}$, $\mathfrak P_{\mathrm{AQFT}}$, $\mathfrak C_{\mathrm{EH}}$, $\mathfrak C_B$, $\mathfrak C_B^{\mathrm{tr}}$, $\mathfrak C_B^{\mathrm{APSK}}$, $\mathfrak C_n^{\mathrm{KMS}}$, $\mathfrak S_{\mathrm{hor},n}$, $\mathfrak C_{\mathrm{cen}}$, $H_{\mathrm{conf}}$, $\Lambda_{\mathrm{QCD}}(E)$, $\mathfrak B_{mass}$, the constructed equivariant $\sigma$-CP map, accepted QCD gauge-topology bridge, $\sigma$-invariant vacuum, and operative QCD vacuum-selection certificate of Theorems K.6.1-K.6.6 and Proposition K.6.4, the positive-orientation data of Corollary K.6.5 or $\mathfrak O_{\mathrm{Pf}}$, $H_A^{\mathrm{PU}}(Z,N)$, $\Lambda_A^{\mathrm{PU}}(E)$, the hard-core perspective Gibbs datum, the RCD-Buchert-Cheeger datum, the dark-response certificate $\mathfrak X_{\mathrm{DS}}$, and the shared-control operator data $\mathfrak D_{\mathrm{PU}},\mathfrak B_{\mathrm{PU}},\mathcal R_{\mathrm{dec}}$ cannot be promoted by adding prose, status labels, proposed principles, admissibility definitions, or compatibility diagrams alone. They require the finite records named by their certificates, including their spectral data, determinant data, finite-part sums, first-order Dirac certificates, cutoff functions, sector projectors, heat coefficients, subtraction orders, finite-part scales, Higgs normalizations, Dynkin-index maps, Hessian and kernel data, orientation data, local generator maps, recovery sections, transport windows, tail bounds, covariance entries, support conditions, susceptibility kernels, overlap audits, and forward-lock ledgers.
 
 A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-action slogan, a Landauer or spectral-gap statement, a Cramér-Rao-Holevo duality statement, a Bott/KO orientation statement, real $E_8$ Yukawa positivity, a retained-algebra injectivity statement, a cost-gradient SPAP bias, an acceleration-scale bridge, or a shared information-geometric control class counts as theorem-level input only when it supplies the exact finite entries demanded by the corresponding local certificate before comparison with the row being predicted. Without those entries, it is a branch label, candidate construction, compatibility check, or model-layer datum.
+
 
 *Proof.* Each listed sector output is either the deterministic image of a finite certificate record or a structural row whose claimed stronger output requires a finite record. If a missing entry can be varied while preserving the transported parent datum and the output class changes, Theorem P.14.1f blocks promotion. If every admissible variation is output-equivalent, that fact is exactly the all-completions theorem allowed by Theorem P.14.1f and must be proved. If the sector candidate class is impossible, that fact is exactly the no-go gate of Theorem P.14.1f. Prose describing an admissible record fixes the type of record but does not select its finite entries. The named mechanism classes therefore do not change the closure condition: metric normalization does not by itself select an action Hessian; an octad character does not by itself supply zeta finite parts and tail intervals; a gap bound does not by itself supply compatible embeddings and local generator convergence; retained horizon injectivity does not by itself supply an exterior section or a scrambling frame-potential bound; cost-gradient SPAP bias does not by itself exclude support on the SPAP boundary; an acceleration lock does not by itself fix galaxy or cluster kernels; and a shared information-geometric control class does not by itself supply a single closed operator with sector projections and finite-part prescriptions. Hence theorem-level promotion requires an accepted finite record, an all-completions equivalence theorem, or a no-go theorem, not only a definition of what such a record would be. ∎
 
@@ -7390,10 +7401,11 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Active kernel | $a=2$ | Theorem on structural branch | $a=1$, $a>2$ | $a=1$ cannot carry the two sharp retained match/mismatch alternatives and also violates $\ln a\ge\varepsilon_0=\ln2$; integer minimality selects $a=2$ | Larger active kernels are surplus unless they lower a certified PCE cost or change response | Closed on structural branch |
 | Inactive reservoir | $b=6$ | Derived on $d_0=8,a=2$ branch | Other inactive dimensions | $b=d_0-a$ after $d_0=8$ and $a=2$ | None inside the fixed minimal branch | Closed on minimal branch |
 | Interface modes | $M=2ab=24$ | QFI tangent theorem on branch | $ab$, $4ab$, $2ab\pm g$ | Complex off-diagonal $a\times b$ interface blocks contribute two real QFI directions per complex coordinate; pure gauge directions are not counted as physical interface modes | Gauge directions and stabilizer rotations are quotiented by the Bures/QFI physical tangent ledger | Closed where the QFI interface contract is accepted |
-| Dimension selection | $D=4$ | Branch theorem | $D=1,2,3,5,\ldots$ | A faithful shell requires $24\le K(D)$; $K(3)=12$ excludes lower dimensions, the regular $24$-cell proves feasibility in four, and strict surplus-dimension cost selects the least feasible branch | Failed injections are inadmissible; surplus response-null dimensions are PCE-dominated | Conditional on operational-continuum and faithful-shell bridge |
+| Euclidean response-carrier dimension | $D=4$ | Branch theorem | $D=1,2,3,5,\ldots$ | A faithful shell requires $24\le K(D)$; $K(3)=12$ excludes lower dimensions, the regular $24$-cell proves feasibility in four, and strict surplus-dimension cost selects the least feasible branch | Failed injections are inadmissible; surplus response-null dimensions are PCE-dominated | Closed on the faithful Bures tangent-shell branch; promotion to $3+1$ spacetime additionally requires continuum, principal-symbol, time-orientation, and metric-reconstruction certificates |
 | Lorentzian signature | $(1,3)$ | Branch theorem | Euclidean four-space, multi-time branches, Galilean branch | Appendix O signature package plus Corollary 46a derive the Lorentzian causal branch under the stated hyperbolic-frontier hypotheses | Non-hyperbolic or preferred-frame labels are excluded on the accepted causal-continuum branch | Conditional on Appendix O hypotheses |
 | Complex Hilbert scalar | $\mathbb C$ | Theorem on MPU Hilbert branch | $\mathbb R$, $\mathbb H$ | Local tomography, connected phase transport, compositional closure, and PCE removal of surplus phase redundancy select $\mathbb C$ | Extra quaternionic phase generators are surplus if response-null; if active, they define a different gauge branch | Closed on MPU Hilbert branch |
 | Born weights | $\omega(P)=\operatorname{tr}(\rho P)$ | Theorem on MPU Hilbert branch | Contextual ledgers, non-additive weights | PCE/PPI quotient enforcement removes response-null context labels; Gleason-Busch fixes the trace form | Context labels with no response difference are PPI-gauge | Closed on non-contextual finite-effect branch |
+
 | Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Finite-response block-frame branch theorem | Other block-frame partitions of $6$: $\{6\}$, $\{5,1\}$, $\{4,2\}$, $\{4,1,1\}$, $\{3,3\}$, $\{3,1,1,1\}$, $\{2,2,2\}$, $\{2,2,1,1\}$, $\{2,1,1,1,1\}$, $\{1,1,1,1,1,1\}$ | The unordered block-frame partition table of Theorem G.8.4b has exactly one capacity-saturating admissible row under $n_G\le ab=12$, namely $3+2+1$. Rows with $n_G>12$ violate the Lagrangian capacity bound; rows with $n_G<12$ are PCE-dominated in the positive-marginal regime because the $3+2+1$ row is admissible and saturates the bound. The determinant-compatible abelian response gives the retained hypercharge direction. | Response-null exact phases and surplus non-response labels are quotiented. The theorem is block-frame/interface-category uniqueness, not a classification of all compact connected subgroups of $U(6)$; irreducible tensor-product embeddings are outside this admissible family. | Closed on the finite-response block-frame anomaly/capacity branch; arbitrary-subgroup uniqueness is not claimed |
 | Hypercharge | SM hypercharge vector up to normalization | Branch theorem | Other anomaly-free $U(1)$ assignments | Anomaly cancellation, Yukawa compatibility, Witten anomaly gate, and minimal charge lattice fix the SM pattern up to scale | Redundant $U(1)$ mixtures are quotiented by anomaly and charge-lattice equivalence | Overall normalization remains tied to charge-unit convention |
 | Generations | $N_g=3$ | Theorem plus pre-flavor PPI realization branch | $N_g=1,2,4,\ldots$ | Anomaly balance plus CP phase requires the minimal nontrivial balanced family pattern $\{a,-a,0\}$; Proposition R.3.5.1a removes response-null supernumerary copies before the flavor-potential layer | Extra balanced pairs are surplus unless response-relevant flavor data are appended | Closed on the pre-flavor family-redundancy PPI branch; larger anomaly-free branches exist at later flavor-model cost |
@@ -7411,7 +7423,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 
 | Residual gate | Correct status | Reason it is not promoted |
 |:--------------|:---------------|:--------------------------|
-| Hypothesis 1 | Ontological axiom | It asserts the MPU network as internally complete physical reality |
+| Hypothesis 1 | Nominated physical-realization hypothesis | It selects the MPU network as the internally complete substrate on that branch; neither the Cogito nor the preceding formal core proves that the realized universe instantiates it |
 | Hypothesis 3 | Empirical/CC hypothesis | It concerns a specific consciousness-channel mechanism |
 | Postulate 2 | Operational causality postulate | It fixes the causal admissibility domain used by later theorems |
 | Postulate 3 | Three-branch statistical-influence contract; a late-randomized branch-(iii) Bob-marginal shift is a falsifier of the exact causal branch (Corollary 39c.1) | It is not a theorem of the finite predictive substrate |
@@ -7440,18 +7452,21 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Active/inactive split | $a=2,\ b=6$ | Theorem Z.1 | closed |
 | QFI mode count | $M=24$ | Theorem Z.5 | closed |
 | Predictive-recovery code dimension | $k=12$ | Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b | closed on the predictive-recovery MacWilliams branch |
-| Spacetime dimension | $D=4$ | Theorem Z.10; Theorem Z.11; Corollary Z.11.0a | closed on the Bures tangent-cell branch |
+| Euclidean response-carrier dimension | $D=4$ | Definition Z.9a; Theorem Z.10; Theorem Z.11; Corollary Z.11.0a | closed on the faithful Bures tangent-cell branch; the $3+1$ spacetime interpretation remains conditional on the continuum, principal-symbol, time-orientation, and metric-reconstruction certificates |
 | Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Theorem G.8.4b; Corollary G.8.4c; Corollary G.8.4c.0a; Definition G.8.4c.0i; Theorem G.8.4c.0j | closed on the finite-response block-frame positive-marginal capacity branch; when module locality, saturation, abelian determinant data, global gauge form, or anomaly premises are relaxed, the surviving response-active alternatives are the bounded catalog of Theorem G.8.4c.0j rather than counterexamples to the closed branch |
 | Matter package, charge lattice, and electroweak-breaking branch | response-active chiral matter package, determinant-compatible primitive hypercharge lattice, global gauge form, Higgs representation, vacuum branch, Goldstone quotient, and mass-generation map | Theorem G.8.4c.0e; Definition G.8.4c.0f; Theorem G.8.4c.0g; Corollary G.8.4c.0h; Definition X.9.5e | closed uniquely only on an accepted anomaly-bordism/PCE-gap certificate $\mathfrak C_{\mathrm{matEW}}$; otherwise the theorem-level output is the bounded response quotient $\mathcal K_{\mathrm{surv}}$ with downstream threshold consequences |
 | Generation count | $N_g=3$ | Theorem R.3.4; Proposition R.3.5.1a; Theorem R.8.5b; Corollary R.8.5d; Theorem R.8.5e; Proposition R.4.2 | closed on the pre-flavor family-redundancy PPI branch with CP-active and PCE minimal-selection audit; triality/$E_8$/Leech entries are compatibility checks, while relaxed family-redundancy, CP, PCE, sterile, defect, or response-active extra-generation branches are cataloged by Theorem R.8.5e and Theorem G.8.4c.0j |
+
 | Acceleration bridge | $\eta'=3/(8\sqrt3)$ | Definition H.4.2.8a; Theorem H.4.2.8b; Corollary H.4.2.8c | closed on the QFI linear-response bridge-law class for the scalar acceleration scale only; galaxy kernels, cluster/lensing kernels, anisotropic stress, homogeneous late-time laws, and backreaction constants require $\mathfrak X_{\mathrm{DS}}$ |
 | Operational continuum manifold | $M=24,\ D=4$ shell with selected vanishing continuum defects | Theorem 43; Theorem 43.5; Corollary 43.5a; Lemma C.6d; Theorem C.6e; Lemma C.6f; Theorem D.6e; Proposition D.6f; Theorem D.6f.2; Proposition D.6f.2a; Theorem C.6c; Theorem 44a | closed on an accepted zero-defect $D_4$ gluing certificate $\mathfrak Z_{\mathrm{cont}}$ because Corollary 43.5a supplies $\mathfrak d_n^*\to0$ inside the global core-minimum class; without $\mathfrak Z_{\mathrm{cont}}$ it remains conditional on the sharp global-core competitor condition, and local $D_4$ approximants alone do not close the row by Proposition D.6f |
 | AQFT route | stable local net and continuum generator | Theorem F.0; Definition F.0a; Theorem F.0b; Definition F.0c; Theorem F.0d; Definition F.0e; Theorem F.0f; Corollary F.0g; Definition F.10.12a; Theorem F.10.12c | closed on an accepted projective single-clock AQFT certificate $\mathfrak P_{\mathrm{AQFT}}$ or Mosco-Bochner certificate $\mathfrak B_{\mathrm{AQFT}}$; otherwise certificate-pending on the local generator convergence record $\mathfrak C_{\mathrm{gen}}$ for bounded diamonds, with lightcone equality an explicit branch hypothesis outside the strict single-clock route |
 | Finite KMS / Wightman realization | local KMS descent, modular horizon thermodynamics, and field realization | Theorem 48a; Theorem 12.1; Definition F.10.12a; Theorem F.10.12c; Appendix G.1.9 | certificate-pending on refining finite KMS-descent records $\mathfrak C_n^{\mathrm{KMS}}$ together with faithful wedge states, spectrum condition, boost/modular convergence, Jost analyticity, and local field realization data |
-| Finite bridge-site descent | vanishing finite descent obstruction or accepted defect filling | Definition X.9.5c.1; Theorem X.9.5c.2; Corollary X.9.5c.3; Definition X.9.5e; Theorem X.9.5e.1 | closed exactly when each local-to-global bridge class vanishes, is response-null, or is filled by an accepted response-active defect |
+| Finite bridge-site descent | effective gluing of genuine cocycle data, with separate trivialization and obstruction gates | Definition X.9.5c.1; Theorem X.9.5c.2; Corollary X.9.5c.3; Definition X.9.5e; Theorem X.9.5e.1 | a genuine cocycle glues, possibly to a twisted global object; vanishing is required exactly for an untwisted representative, while cocycle failure or a required-trivialization obstruction must be response-null or filled by an accepted response-active defect |
+| Finite-resolution confinement | unbroken-center Wilson-line response with $|\langle\mathsf W(C)\rangle|\le\exp[-\sigma_0\mathsf A_{\min}(C)+\lambda_{\partial}|\partial C|]$, together with asymptotic color-frame nullity when its residual-decay record is accepted | Definition X.9.5d.3; Theorem X.9.5d.4; Corollary X.9.5d.5; Definition X.9.5d.6; Proposition X.9.5d.7 | certificate-pending until one strict certificate supplies an unbroken electric-center datum with $\sigma_0>0$ and, when color-frame nullity is claimed, the residual-decay record of Definition X.9.5d.6; the Leech-Golay route to $\sigma_0$ additionally requires Proposition Z.8d's gauge-dynamical, $\mathfrak B_{mass}$, calibration, and center-flux-identification hypotheses; no continuum Yang-Mills gap, finite-$L$ exact color nullity, or broken-center perimeter law follows |
 | Master zeta-index ledger | one finite spectral ledger for simultaneous numerical sectors | Definition X.9.6g; Theorem X.9.6g.1; Corollary X.9.6g.2; Corollary X.9.6g.3; Theorem X.9.6g.4 | closed for simultaneous numerical claims only when all sector projections are restrictions of one accepted master ledger and pass bridge descent |
 | Shared-control operator sector | one closed predictive operator and sector projections | Definition X.8a.2a; Theorem X.8a.2b; Definition X.8a.5a; Theorem X.8a.5; Definition X.9.6a; Theorem X.9.6b; Theorem X.9.6g.4; Theorem X.9.6h.3 | closed as a maximality boundary on accepted $\mathfrak D_{\mathrm{PU}}$, $\mathfrak B_{\mathrm{PU}}$, or $\mathcal R_{\mathrm{dec}}$ branches; any independent sector operator is either response-null surplus or new branch data |
 | Becoming-flow compression | one retained flow datum whose projections recover accepted reversible response, dissipative adaptation, active KKT prices, and boundary-variation readings | Definition X.8g.4; Proposition X.8g.5; Remark X.8g.6; Theorem X.8f.2; Corollary X.8g.3; Theorem Q.0.1; Corollary Q.0.1 | certificate-pending on an accepted $\mathfrak C_{\Omega}$ and its overlap audit; it compresses accepted sector laws but does not promote Hilbert-carrier, Lorentzian/cone, KMS/Clausius, spectral-calibration, or empirical protocol gates |
+
 | Emergent metric / Einstein equation | $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}^{(\mathrm{MPU})}$ | Theorem 48a; Theorem 12.1; Corollary 12.1b; Theorem 12.1c; Theorem 12.5.3f; Corollary 12.5.3g; Theorem 12.5.3h; Definition 12.5.3k; Theorem 12.5.3k.1; Definition 12.5.3l; Theorem 12.5.3m; Definition 12.5.3n; Proposition 12.5.3o | closed as a branch theorem on an accepted finite Einstein-branch closure record $\mathfrak C_{\mathrm{EH}}$: the operational-continuum, AQFT, finite KMS, area-density, stress-flux, null-slack, second-order metric-action, and overlap-audit entries fix the emergent equation of state; $\mathfrak C_{\mathrm{PGSL}}$ supplies monotone generalized entropy, while $\mathfrak C_{\mathrm{NC}}$ and the zero-slack ledger are required for the second-variation and reversible Einstein saturation claim |
 | Predictive GSL / null-convexity route | generalized entropy monotonicity plus optional null-saturation discharge | Definition 12.5.3l; Theorem 12.5.3m; Definition 12.5.3n; Proposition 12.5.3o; Corollary 12.5.3p | $\mathfrak C_{\mathrm{PGSL}}$ gives the finite retained GSL by data processing; $\mathfrak C_{\mathrm{NC}}$ is the separate second-variation gate for (76g); zero slack or conserved positive slack is recorded in the Einstein-branch closure ledger rather than inferred from monotonicity alone |
 | Emergent metric fluctuations | finite-response covariance | Definition 12.1d; Theorem 12.1c; Definition 12.1d.4; Theorem 12.1e; Corollary 12.1e.1; Corollary 12.1e.2; Definition 12.1f; Theorem 12.1f.1; Theorem 12.5.3h | closed on every accepted nondegenerate finite-response gravitational channel ensemble: requires the finite KMS-descent certificate together with the smooth-envelope record, the positive Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$, and zero retained modular slack when the reversible Einstein branch is claimed |
@@ -7461,14 +7476,18 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a spectral-a
 | Thomson-limit $\alpha^{-1}$ | $\alpha_0^{-1}$ closed core; diagnostic hypercharge-recoil comparison row (operator realization open) $\alpha_{\mathrm{cand}}^{-1}=\alpha_0^{-1}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ | Definition Z.27.11a; Theorem Z.26; Corollary Z.26a; Theorem Z.27.11c; Remark Z.26d; Corollary Z.26d.1; Definition Z.27.11j; Theorem Z.27.11j.1; Definition Z.27.11k; Theorem Z.27.11k.1; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 | $\alpha_0^{-1}$ is closed on the Appendix Z exact-sinc core branch; the candidate hypercharge-recoil record (operator realization open) fixes $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ as a degenerate $\textsf{bound}$ residual entry in the conditional diagnostic registry; the passive-complement downgrade gives $[137.03599917502362\ldots,137.03599917878353\ldots]$; the canonical comparison-budget scale $B_{\mathrm{budget}}^{\mathrm{can}}=5.649085604\times10^{-5}$ and the composition audit remain diagnostics, not additional residual contributions |
 | Cosmological constant exponent | $\kappa=142$ on the four-mode false-vacuum branch | Theorem U.13b | closed for the exponent on the four-mode false-vacuum branch under the stated spectral hypotheses |
 | Cosmological constant five-mode reference exponent | $\kappa_{\mathrm{ref}}=141.5$ | Appendix U reference-counting convention; Theorem U.8c | reference convention; not theorem-level without the dilation/Fredholm certificate |
-| Cosmological constant prefactor | $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ | Definition U.15d; Theorem U.15e; Corollary U.15f; Theorem U.15i.2; Theorem U.15l; Definition U.15m; Theorem U.15m.1; Definition U.73e; Theorem U.73f | classified by Theorem U.73f: the multiplier $8\pi e^{-284}=1.1497594801473928\times10^{-122}$ is exact, while the current forward interval is $\varnothing_{\mathrm{cert}}$ until an accepted four-mode Fredholm record supplies the Hessian, zero-mode, negative-mode, ghost, finite-volume, measure, determinant, finite-part, Bismut-Lebeau-transfer if used, and tail entries on one branch |
+| Cosmological constant prefactor | $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ | Definition U.15d; Theorem U.15e; Corollary U.15f; Theorem U.15i.2; Theorem U.15l; Definition U.15m; Theorem U.15m.1; Definition U.73e; Theorem U.73f | classified by Theorem U.73f: the exact multiplier $8\pi e^{-284}\approx1.1497594801473928\times10^{-122}$, while the current forward interval is $\varnothing_{\mathrm{cert}}$ until an accepted four-mode Fredholm record supplies the Hessian, zero-mode, negative-mode, ghost, finite-volume, measure, determinant, finite-part, Bismut-Lebeau-transfer if used, and tail entries on one branch |
 | Primordial determinant and inflation branch | $Q$, $A_s$, $n_s$, $r$, $n_t$, running, and $f_{NL}^{\mathrm{local}}$ | Definition U.26b; Theorem U.26c; Definition U.41a; Theorem U.41b; Definition U.44b; Theorem U.44c; Definition U.48a; Theorem U.48b; Definition U.51a; Definition U.56a; Theorem U.69; Definition U.69a; Theorem U.69b | current full interval vector is $\varnothing_{\mathrm{cert}}$; leading numerical values are branch-comparison data until an accepted $\mathfrak P_{\mathrm{prim}}$ fixes the determinant convention, rank budget, kinetic normalization, scalaron map, local-equilibrium truncation including $c_2=0$, e-fold registration, initial field, trans-horizon quotient, and residual intervals |
-| Electroweak threshold and spectral-action Higgs finite parts | $\Delta_{\mathrm{EW}}$, $Z_i=1+\Delta_i/24$, and, only on an accepted spectral-action branch, $(\mu_H^2,\lambda_H)$ | Definition T.78.5a; Theorem T.78.5b; Definition T.78.6; Algorithm T.78.6a; Theorem T.78.7; Definition T.78.10; Theorem T.78.11; Theorem T.78.12; Theorem T.78.14; Definition X.9.6g; Theorem X.9.6g.4; Definition X.9.6h.4; Theorem X.9.6h.5; Corollary T.79.8d; Definition X.9.6g.7; Theorem X.9.6g.8 | current PU-internal source class is negatively closed by Theorem T.78.14, so the registry value is $\varnothing_{\mathrm{cert}}$ for $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite parts; positive closure requires an accepted $\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, accepted $\mathfrak S_{\mathrm{SA}}(P)$, accepted equivalent spectral tuple, or accepted joint $\mathfrak J_{\mathrm{RHG-fl}}$ fixed before comparison and descending from one master zeta-index ledger when shared |
-| Flavor parameter vector | $\Pi_T$ | Definition T.79.4; Algorithm T.79.5; Theorem T.79.6; Definition T.79.8a; Theorem T.79.8b; Corollary T.79.8d; Theorem T.79.8e; Definition X.9.6g.7; Theorem X.9.6g.8 | closed on an accepted flavor certificate $\mathfrak C_{\mathrm{fl}}$ together with an accepted threshold record, or on an accepted joint $\mathfrak J_{\mathrm{RHG-fl}}$; otherwise the certified interval vector is $\varnothing_{\mathrm{cert}}$, since gauge algebra plus $N_g=3$ fixes the representation skeleton but not flavor numerics, determinant orientation, Majorana/seesaw data, or $\bar\theta$ |
+| Electroweak threshold and spectral-action Higgs finite parts | $\Delta_{\mathrm{EW}}$, $Z_i=1+\Delta_i/24$, and, only on an accepted spectral-action branch, $(\mu_H^2,\lambda_H)$ | Definition T.78.5a; Theorem T.78.5b; Definition T.78.6; Algorithm T.78.6a; Theorem T.78.7; Definition T.78.10; Theorem T.78.11; Theorem T.78.12; Theorem T.78.14; Definition X.9.6g; Theorem X.9.6g.4; Definition X.9.6h.4; Theorem X.9.6h.5; Corollary T.79.8d; Definition X.9.6g.7; Theorem X.9.6g.8 | current PU-internal source class is negatively closed by Theorem T.78.14, so the manuscript-ledger value is $\varnothing_{\mathrm{cert}}$ for $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite parts; this status is not a populated machine-registry output; positive closure requires an accepted $\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, accepted $\mathfrak S_{\mathrm{SA}}(P)$, accepted equivalent spectral tuple, or accepted joint $\mathfrak J_{\mathrm{RHG-fl}}$ fixed before comparison and descending from one master zeta-index ledger when shared |
+| Flavor parameter vector | $\Pi_T$ | Definition T.79.4; Algorithm T.79.5; Theorem T.79.6; Definition T.79.8a; Theorem T.79.8b; Corollary T.79.8d; Theorem T.79.8e; Definition X.9.6g.7; Theorem X.9.6g.8 | closed on an accepted flavor certificate $\mathfrak C_{\mathrm{fl}}$ together with an accepted threshold record, or on an accepted joint $\mathfrak J_{\mathrm{RHG-fl}}$; otherwise the certified interval vector is $\varnothing_{\mathrm{cert}}$, since gauge algebra plus $N_g=3$ fixes the representation skeleton but not flavor numerics, Majorana/seesaw data, or the complete typed vector; real-Yukawa and determinant-orientation data used only for $\bar\theta$ are owned by the Strong CP row and do not by themselves close the flavor vector |
+| Strong CP | $\bar\theta=\theta_{\mathrm{QCD}}+\arg(\det M_q)\equiv0\pmod{2\pi}$ | Theorem K.6.1; Proposition K.6.4; Theorem K.6.2; Theorems K.6.5-K.6.11; Corollary K.6.5; Definition K.6.10a; Theorem K.6.10b | certificate-pending until one strict certificate supplies a constructed equivariant $\sigma$-CP map, an accepted QCD gauge-topology bridge satisfying Proposition K.6.4, a $\sigma$-invariant vacuum, a positive first-harmonic cost certified as the operative QCD vacuum-selection functional with that vacuum as a global minimizer on the retained invariant sector, and a common-convention absolute full-mass determinant-line certificate, discharged for example by genuinely real full matrices with positive orientation and no Berry mass factors, by a positive-oriented nondegenerate reference plus determinant-one full complex transport, or by the accepted Pfaffian branch. The first-harmonic gauge-angle package may be replaced by Theorem K.6.2a only when an accepted positive symmetric sector partition with charge-one support proves that its operative descended coordinate is the full invariant $\phi=\bar\theta$; if that construction does not already include the mass determinant line, the determinant-line certificate remains separate; this row is a conditional implication, not an independently closed physical solution |
 | Nuclear aggregate sector | finite nuclear Hamiltonian, colorless boundary impedance, spin-current, transition, decay, open-channel, covariance, and Appendix T overlap package | Theorem T.79a; Corollary T.79a.1; Theorem T.79a.2; Definition X.8k.5; Theorem X.8k.6; Definition X.8k.6a; Theorem X.8k.6b; Theorem X.8k.6c | certificate-pending on an accepted $\mathfrak B_A^{\mathrm{nuc}}$ for every claimed isotope or decay chain; Appendix T elementary data $\Pi_T$ fix elementary inputs but do not determine nuclear many-body operators, boundary impedances, spin currents, transition operators, decay operators, exterior channels, or nuclear covariance ledgers |
+| Confined boundary spectrum | colorless boundary-response energies satisfying $\det\Lambda_{\mathrm{QCD}}(E)=0$ for $E\notin\operatorname{spec}(H_{II})$ and nonzero colorless boundary component; with a supplied exterior impedance, bound or resonance energies instead satisfy $\det(\Lambda_{\mathrm{QCD}}(E)-\Lambda_{\mathrm{out}}(E))=0$ | Definition X.8k.5; Theorem X.8k.6 | certificate-pending until the finite self-adjoint $H_{\mathrm{conf}}$, block decomposition, colorless boundary map, energy-domain restriction, any exterior impedance, scale, normalization, and error records are accepted; no claim is made for interior eigenvectors with zero boundary component |
+| Conditional Leech mass scale | $m(v)=(\gamma/q)\mu_0^{alg}|v|$ and lowest nonzero value $2\mu_0^{alg}$ when $\gamma/q=1$, with canonical normalization $q=\gamma=1$ | Definition Z.8f; Theorem Z.8g; Corollary Z.8g.1; Remarks Z.8g.2-Z.8g.3 | branch-level until the canonical $\mathfrak B_{mass}$, full-utilization, norm-information, scale, and normalization records are accepted; it is not identified with the confined boundary spectrum unless an accepted Leech-to-boundary-spectrum overlap map is supplied |
 | Baryon asymmetry $\eta_B$ | finite transport image | Definition Y.11.7a; Theorem Y.11.7b; Definition Y.11.7e; Theorem Y.11.7f; Theorem Y.11.7h; Definition Y.6.1a; Theorem Y.6.1b; Definition Y.6.1c; Theorem Y.6.1d | closed on an accepted $\mathfrak C_B$, accepted transport certificate $\mathfrak C_B^{\mathrm{tr}}$, or accepted APS-Kubo certificate $\mathfrak C_B^{\mathrm{APSK}}$ fixing the electroweak threshold record, flavor/CP record or accepted flavor-independent CP substitute, sphaleron generator, APS eta/index data, finite baryon-number generator, CP Kubo pairing, transport window, washout/freeze-out profile, quadrature and tail ledger, photon normalization, coefficient normalization, no-double-counting audit, and residual interval before comparison; otherwise the current output is the finite branch classification of Theorem Y.11.7h |
 | Environmental SPAP passive tier | hard-core perspective Gibbs kernel | Definition 14.5.8e; Theorem 14.5.8f; Corollary 14.5.8g; Propositions 14.5.8b--14.5.8d; Theorem M.10.3; Theorem M.10.4; Corollary M.10.4.1 | theorem-level only on the hard-core perspective Gibbs branch; the endpoint obstruction uses Theorem M.10.4, while finite recovery-limit boundary charging would additionally require a separate interpolation-realization theorem not supplied by Corollary M.10.4.1; outside those data the passive tier remains conditional model-layer because cost-gradient bias and weak limits do not imply support exclusion |
 | Dark-sector response kernels | acceleration bridge plus galaxy, lensing, cluster, and homogeneous kernels | Definition H.4.2.8a; Theorem H.4.2.8b; Corollary H.4.2.8c; Equation I.4; Equations I.7--I.8; Theorem I.5; Definition I.13a; Proposition I.13b; Remark I.13c; Definition I.13d; Theorem I.13e | the acceleration scale is closed on the bridge branch; galaxy, lensing, cluster, merger, local-gravity, CMB-era, and homogeneous late-time kernels are theorem-level exactly when they are deterministic images of an accepted generally covariant effective-action or dark-susceptibility certificate $\mathfrak X_{\mathrm{DS}}$ fixed before comparison; $(A_G,m)=(7,3)$ remains a preregistered backbone-motivated benchmark pair unless such a kernel-forward-lock certificate is supplied; $L_0$, $(K,q,A_{\mathrm{PM}})$, anisotropic stress, and $\Theta_{\mathrm{hom}}$ remain phenomenological without that record |
+
 | Late-time backreaction | RCD-Buchert-Cheeger estimate | Definition I.3e; Theorem I.3f; Theorem I.3i; Corollaries I.3g--I.3j; Definition I.13d; Theorem I.13e | closed exactly when $\mathfrak X_{\mathrm{DS}}$ supplies the RCD-Buchert-Cheeger datum, elliptic scale bridge, predictive-stress variance, source-energy rate density, homogeneous conservation law, and finite defect budgets; otherwise these constants remain branch data |
 | Recurrent integer subledger | current-graph non-collapse decomposition of $(K_0,d_0,\varepsilon_0,a,b,M,k,D)$ with marked arena rigidity | Proposition T.59; Corollary T.59a; Proposition R.3.5e; Remark R.3.5e.1; Proposition R.3.5e.2; Theorem R.3.5e.3; Corollary R.3.5e.4; Remarks R.3.5e.5–R.3.5e.6; Definition Z.35d; Theorem Z.35e | closed as a non-collapse decomposition: the exact tuple is theorem-level on the minimal branch, the marked arena hierarchy is unique under Definition Z.35d, and no current-source compression exists in the stated proof graph; a future common parent invariant remains open |
 | CC influence | bounded protocol response; binary-saturating backbone representative available as a resonance-motivated model branch | Definition 13.0a; Definition 13.0d; Theorem 13.0e; Theorem 39; Theorem 39a; Definition 32a; Proposition 35a; Corollary 35a.1 | open until a forward-locked protocol package satisfying $\chi_{\mathrm{pred}}$ is entered; the representative scaling is admissible on branches whose endpoint-bias ceiling admits $3/8$ (strictly stronger than the universal Theorem 39 bound $\alpha_{CC,max}<1/2$) but is not a unique theorem-level closure |
@@ -7521,11 +7540,82 @@ Assume by induction that all parent vertices preceding a vertex $S$ have unique 
 
 With fixed parent data, a strict certificate of $S$ supplies the admissible set $Q_S$, equivalence relation $\sim_S$, retained responses $\mathcal R_S$, PCE functional $V_S$, selected representative $q_S^*$, strict gap $g_S$, and overlap maps $\Pi_S$. Theorem D.8.9b then fixes $q_S^*$ uniquely modulo response equivalence. If $S$ is final-calibrated, its accepted $\zeta(S)$ record supplies the spectral datum and all coefficient bridges at the fixed parent data; Theorem V.3.11c and Theorem V.3.11f fix its claimed coefficient record uniquely. Induction over the finite topological order fixes every vertex. Theorem D.8.9c applies on the strict-certificate substack, and the accepted $\zeta$ records supply the same acyclic overlap discipline on final-calibrated vertices. Hence the combined ledger has the asserted unique selected tuple and final-calibrated coefficient records. ∎
 
+**Scope (Sectorwise Closure versus Global Realization).** Let $\mathcal V_{\mathrm{strict}}$ be the strict-sector index set and $\mathcal V_{\mathrm{cal}}$ the final-calibration index set. For $S\in\mathcal V_{\mathrm{cal}}$, let $\mathcal Z_S$ be the set of admissible final-calibration records $\zeta(S)$ declared by Convention P.14.1k and Definition P.14.1m. Define the compatible sector-record space
+$$
+Q_{\mathrm{comp}}
+:=
+\left\{
+q_{\bullet}\in
+\prod_{S\in\mathcal V_{\mathrm{strict}}}(Q_S/\!\sim_S)
+\times
+\prod_{S\in\mathcal V_{\mathrm{cal}}}\mathcal Z_S
+:
+\text{for every overlap cell }C,\text{ the accepted maps from their}
+\text{ common source domain to their common target agree on }q_{\bullet}
+\right\}.
+$$
+Here each $\Omega_C$ of Definition P.14.1k.0 is the corresponding typed equality check, not a scalar obstruction. Theorem P.14.1k.1 selects one element $q_{\bullet}\in Q_{\mathrm{comp}}$ under its hypotheses. A single ambient realization is a separate datum: declare a global-realizer space $Q_{\Omega}$, a global response equivalence $\sim_{\Omega}$, and restriction data invariant under $\sim_{\Omega}$ so that they induce a well-defined map
+$$
+\operatorname{res}:Q_{\Omega}/\!\sim_{\Omega}\longrightarrow Q_{\mathrm{comp}}.
+$$
+The selected tuple has a global realization exactly when
+$$
+\operatorname{res}^{-1}(q_{\bullet})\ne\varnothing,
+$$
+and that realization is unique up to global response equivalence exactly when this fiber is a singleton. Global injectivity of $\operatorname{res}$ is a sufficient uniform condition, not a necessary condition for uniqueness of the selected fiber. Sectorwise closure and overlap commutativity alone imply neither existence nor uniqueness of a global lift.
+
 **Corollary P.14.1k.2 (Localization of Open Closure).** If at least one row in Convention P.14.1k is open or has an unaccepted certificate-pending or final-calibration status, the global PU branch retains the meet of the listed statuses by Corollary D.8.9d and Convention P.14.1a. The closed rows above continue to deliver their selected representatives or final-calibrated coefficient records, while the unaccepted rows remain branch-, model-, certificate-pending, or validation-layer.
 
 *Proof.* By Corollary D.8.9d the global status equals the weakest unresolved status on the live dependency graph for strict-certificate rows, and Convention P.14.1a gives the same meet discipline for final-calibrated rows whose $\zeta$ record is absent or incomplete. The closed rows of Convention P.14.1k satisfy Theorem D.8.9b or Theorem V.3.11f independently of unresolved downstream entries because the dependency graph is acyclic and they are upstream nodes. Hence their selected representatives or final-calibrated coefficient records are forced by the cited theorems regardless of unresolved certificates. The unaccepted rows fall under Theorem P.14.1f, Corollary P.14.1g, and Corollary P.14.1b.1 and cannot be promoted by prose. ∎
 
+**Theorem P.14.1k.3 (Two-Model Noncategoricity and Ambient-Lift Criteria).** Let $T_{\mathrm{core}}$ be a theory of admissible PU response quotients and physical PCE costs. Suppose $T_{\mathrm{core}}$ has two models $\mathcal M_0,\mathcal M_1$ that agree on the registered non-cost response structure and use a common quotient containing response-distinct classes $q_0\ne q_1$, but whose physical costs have unique minimizers $q_0$ and $q_1$, respectively. Then $T_{\mathrm{core}}$ does not entail a unique realized response class.
+
+An explicit two-point witness is available whenever both expansions of the same registered non-cost structure on $Q=\{q_0,q_1\}$ with
+$$
+V_0(q_0)=0,\qquad V_0(q_1)=1,
+$$
+and
+$$
+V_1(q_0)=1,\qquad V_1(q_1)=0.
+$$
+are models of every axiom of $T_{\mathrm{core}}$. Failure to derive the complete physical cost is evidence that a categoricity proof is missing, but is not by itself a proof that both expansions are models.
+
+Likewise, let a sector theory fix $q_\bullet\in Q_{\mathrm{comp}}$. If it has admissible ambient extensions preserving every sector record whose restriction fibers over $q_\bullet$ have different cardinalities, then it entails neither a unique fiber cardinality nor any existence or uniqueness property on which those extensions disagree. In particular, if the following three extensions are all admissible,
+$$
+Q_\Omega=\varnothing,
+\qquad
+Q_\Omega=\{\omega\},\quad \operatorname{res}([\omega])=q_\bullet,
+$$
+and
+$$
+Q_\Omega=\{\omega_0,\omega_1\},\quad
+[\omega_0]\ne[\omega_1],\quad
+\operatorname{res}([\omega_0])=\operatorname{res}([\omega_1])=q_\bullet.
+$$
+then the sector theory entails neither ambient existence nor uniqueness. If an independent PPI axiom excludes the empty extension, the one- and two-lift extensions still refute uniqueness.
+
+*Proof.* A consequence of a theory holds in every model. The first two models satisfy $T_{\mathrm{core}}$ but assign different unique minimizers, so no unique selected class is entailed. The ambient extensions agree on the sector theory but disagree on fiber cardinality, so that cardinality and each dependent existence or uniqueness claim are not entailed. ∎
+
+**Corollary P.14.1k.3.1 (Sufficient Criterion for Unique Global Realization).** Let $\mathcal C=Q_\Omega/\!\sim_\Omega$ be a proved nonempty exhaustive class of global physical candidates. Suppose:
+
+1. every candidate has a constructed finite-cost global PPI realizer and physically realized overlap morphisms;
+2. the compatible spacetime, quantum-net, action, state, and observable-calibration maps are defined on all of $\mathcal C$;
+3. the descended physical PCE functional $\overline V_\Omega:\mathcal C\to\mathbb R\cup\{+\infty\}$ is derived independently of the target empirical values, attains a finite minimum at $[\omega_*]$, and has a strict global gap
+   $$
+   \inf_{[\omega]\ne[\omega_*]}
+   \bigl(\overline V_\Omega([\omega])-\overline V_\Omega([\omega_*])\bigr)>0;
+   $$
+4. the global response representation separates inequivalent candidates; and
+5. the constructed restriction map sends $[\omega_*]$ to the selected compatible tuple $q_\bullet$.
+
+Then PU selects exactly one global physical response class $[\omega_*]$, and every registered observable is the unique value of its observable map on that class.
+
+*Proof.* Nonemptiness and construction give at least one physical candidate. Attainment and the strict gap make $[\omega_*]$ the unique global minimizer. Response separation prevents a second inequivalent candidate from being observationally identified with it, and the restriction-map condition verifies compatibility with the selected sector ledger. Each registered observable map is a function, so evaluation at the unique selected class is single-valued. ∎
+
+**Remark P.14.1k.3.2 (No-Circularity Boundary).** The hypotheses of Corollary P.14.1k.3.1 are sufficient conditions, not certificates of their own existence. Declaring $\mathcal C=\{[\omega_{\mathrm{obs}}]\}$, stipulating the observed constants in the observable maps, or choosing $\overline V_\Omega$ after comparison so that $[\omega_{\mathrm{obs}}]$ is its minimum encodes the desired conclusion and is not an unconditional derivation. Empirical identification of the selected mathematical response class with the realized universe also requires the registered calibration and testing maps.
+
 **Convention P.14.1l (No-Overclaim Discipline).** No sector listed in Convention P.14.1k may inherit theorem-level numerical status from a parent theorem unless every finite-response map used by that sector also has a theorem-level certificate or a closed-status entry. A theorem-level parent together with an open or certificate-pending observable map yields an open or certificate-pending child, never a theorem-level child. Equivalently, status propagation in the global ledger is by the meet rule of Convention P.14.1d on the dependency graph of Convention P.14.1k.
+
 
 *Proof of consistency.* If a child sector's observable map is open or certificate-pending, then by Theorem P.14.1f at least two admissible completions of the missing finite record produce different numerical outputs while preserving every parent constraint. By Convention P.14.1d the child status is then the meet with the missing entry, which is open or certificate-pending; theorem-level promotion would require the missing record. Therefore the meet rule on the dependency graph of Convention P.14.1k is the only status assignment consistent with Theorem P.14.1f, Corollary P.14.1g, and Corollary D.8.9d. ∎
 
@@ -7534,13 +7624,18 @@ With fixed parent data, a strict certificate of $S$ supplies the admissible set 
 $$
 \mathfrak G_{\mathrm{PU}}
 =
-(\mathcal V,\mathcal E,\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta).
+(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta).
 $$
 
 The components are as follows.
 
-1. $\mathcal V$ is the finite set of sector identifiers in Convention P.14.1k together with one identifier for each named finite certificate used by any row.
-2. $\mathcal E\subseteq\mathcal V\times\mathcal V$ is the parent-to-child dependency relation. An edge $R\to S$ is present when the certificate or theorem stack of $S$ uses the selected representative, response presheaf, or finite certificate data of $R$.
+1. $\mathcal V$ is the finite set of distinct identifiers for every sector row and every theorem, corollary, convention, definition, finite certificate, branch condition, model layer, external input, finite-part prescription, tail bound, bridge normalization, descent obstruction, overlap map, output row, uncertainty contribution, covariance entry, and master-zeta projection whose coverage is required by (C11).
+2. $\mathcal E\subseteq\mathcal V\times\mathcal V$ is the parent-to-child dependency relation. An edge $R\to S$ is present when the certificate or theorem stack of $S$ uses the selected representative, response presheaf, or finite certificate data of $R$. The tuple also carries the total vertex-kind map
+   $$
+   \kappa_{\mathcal V}:\mathcal V\longrightarrow\mathsf K_{\mathcal V},\qquad
+   \mathsf K_{\mathcal V}=
+   \{\textsf{theorem},\textsf{certificate},\textsf{branch},\textsf{model},\textsf{external},\textsf{finitePart},\textsf{tail},\textsf{bridge},\textsf{descent},\textsf{overlap},\textsf{output},\textsf{uncertainty},\textsf{covariance},\textsf{masterZeta}\}.
+   $$
 3. $\sigma:\mathcal V\to\{\textsf{closed},\textsf{certificate-pending},\textsf{open}\}$ records the closure status. The status order is $\textsf{closed}\succ\textsf{certificate-pending}\succ\textsf{open}$; write $\tau_1\preceq\tau_2$ when $\tau_1$ is no stronger than $\tau_2$, so $\textsf{open}\preceq\textsf{certificate-pending}\preceq\textsf{closed}$.
 4. $\rho$ assigns to each vertex a finite list of named residual entries. The empty list is allowed.
 5. $\beta$ assigns to each residual entry a finite residual-control record whose kind is either $\textsf{bound}$ or $\textsf{budget}$. A $\textsf{bound}$ record is an absolute theorem-level or certificate-level residual bound. A $\textsf{budget}$ record is a comparison-budget scale and cannot by itself close a theorem-level interval.
@@ -7553,7 +7648,7 @@ $$
 $$
 where $\mathfrak S_{*,S}$ is the datum of Definition V.3.11a and $\chi_{\mathrm{USCP},S}$ is the finite acceptance record listing the sealed branch identifier, $\mathcal A_*$, $\Omega_*$, atom multiplicities, automorphism orbits, the response-null quotient, the constraint functions $m_a$ and values $c_a^*$, a full-support feasibility witness for $\mathcal C_*$, the independent-constraint quotient, the accepted unit bridges $s_B$, the RG/threshold route $\mathcal R^*_{\mu\leftarrow\mu_*}$, all operator symbols $\sigma_B$ claimed by $S$, the circular-angle convention when needed, and every overlap map connecting the spectral datum to parent sectors. If $S$ is not a final-calibrated row, then $\zeta(S)=\varnothing$.
 
-A registry is **schema-consistent** when $\mathcal E$ is finite and acyclic, $\sigma$ is meet-monotone along dependency edges except for vertices closed by an independent theorem stack or by an accepted final-calibration record, $\rho$ lists only residuals named by the cited certificates, $\beta$ records only finite expressions in named certificate data and never in validation observables, $\theta$ is nonempty exactly on non-closed vertices, $\gamma$ supplies every required overlap map and cell check, $\delta$ satisfies the forward-lock condition above, and $\zeta(S)$ is nonempty exactly for rows whose asserted status uses final spectral calibration. A nonempty $\zeta(S)$ is schema-consistent only when every field in $\chi_{\mathrm{USCP},S}$ is fixed before comparison and no field is imported from a validation observable unless the dependent row is explicitly demoted to EmpiricalInput status.
+A registry is **schema-consistent** when $\kappa_{\mathcal V}$ is total and single-valued with codomain $\mathsf K_{\mathcal V}$, $\mathcal E$ is finite and acyclic, $\sigma$ is meet-monotone along dependency edges except for vertices closed by an independent theorem stack or by an accepted final-calibration record, $\rho$ lists only residuals named by the cited certificates, $\beta$ records only finite expressions in named certificate data and never in validation observables, $\theta$ is nonempty exactly on non-closed vertices, $\gamma$ supplies every required overlap map and cell check, $\delta$ satisfies the forward-lock condition above, and $\zeta(S)$ is nonempty exactly for rows whose asserted status uses final spectral calibration. Each covered identifier carries the registry role declared by its record. A nonempty $\zeta(S)$ is schema-consistent only when every field in $\chi_{\mathrm{USCP},S}$ is fixed before comparison and no field is imported from a validation observable unless the dependent row is explicitly demoted to EmpiricalInput status.
 
 **Algorithm P.14.1m.0 (Registry Acceptance Test).** A registry $\mathfrak G_{\mathrm{PU}}$ is accepted exactly when all of the following finite checks pass.
 
@@ -7577,33 +7672,79 @@ A registry is **schema-consistent** when $\mathcal E$ is finite and acyclic, $\s
 
 (C10) **Master-ledger and spectral-calibration projection rule.** Whenever multiple numerical sectors cite the same spectral source, the registry attaches the shared master-ledger label and records the bridge-descent obligation of Theorem X.9.6g.4 on every affected sector. An electroweak threshold or spectral-action Higgs finite-part row may cite $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, $\mathfrak J_{\mathrm{RHG-fl}}$, or an equivalent completed spectral tuple only when the row records the threshold vector, $Z_i$ vector, finite-part convention, projectors, grading, tail bound, matching map, normalization map, master-ledger label, and forward-lock indicator. Whenever a sector is labelled final-calibrated, $\zeta(S)$ must contain the full Definition V.3.11a datum, the full-support feasibility witness for $\mathcal C_*$, all unit bridges and RG/threshold routes claimed by $S$, all symbols for coefficients claimed by $S$, and the overlap maps proving that the spectral datum descends from the same accepted parent branch as the sector output. Whenever a sector is labelled branch-discharged, the registry must contain the named discharge record, such as $\mathfrak Z_{\mathrm{cont}}$, $\mathfrak P_{\mathrm{AQFT}}$, $\mathfrak B_{\mathrm{AQFT}}$, or $\mathfrak X_{\mathrm{DS}}$, together with its overlap maps and finite residual interval.
 
-(C11) **Vertex coverage and kind discipline.** Every theorem, corollary, convention, definition, finite certificate, branch condition, model layer, external input, finite-part prescription, tail bound, bridge normalization, descent obstruction, overlap map, output row, uncertainty contribution, covariance entry, and master-zeta projection cited by a status row is represented by a vertex in $\mathcal V$ with kind in
-$$
-\{\textsf{theorem},\textsf{certificate},\textsf{branch},\textsf{model},\textsf{external},\textsf{finitePart},\textsf{tail},\textsf{bridge},\textsf{descent},\textsf{overlap},\textsf{output},\textsf{uncertainty},\textsf{covariance},\textsf{masterZeta}\}.
-$$
-No output row may cite an object absent from $\mathcal V$.
+(C11) **Vertex coverage and kind discipline.** Every theorem, corollary, convention, definition, finite certificate, branch condition, model layer, external input, finite-part prescription, tail bound, bridge normalization, descent obstruction, overlap map, output row, uncertainty contribution, covariance entry, and master-zeta projection cited by a status row is represented by a vertex $S\in\mathcal V$, and its registry role is the single value $\kappa_{\mathcal V}(S)\in\mathsf K_{\mathcal V}$. The theorem kind covers formal-declaration objects, including theorems, corollaries, conventions, and definitions; every other cited object carries the corresponding kind displayed in Definition P.14.1m. No output row may cite an object absent from $\mathcal V$, and no vertex may omit or multiply encode its kind.
 
 (C12) **Finite-prescription lock.** Every finite-part convention, projector, grading, determinant orientation, tail bound, scheme, unit bridge, RG route, and normalization used by an accepted or forward-locked row has a prescription identifier under $\beta$ and a parent edge to every row using it. Once $\delta(S)=1$ or a dependent child is closed, changing such a prescription requires a new vertex identifier.
 
 (C13) **Residual-bound, budget, and uncertainty separation.** Residual bounds, comparison budgets, systematic uncertainty components, statistical uncertainty components, and covariance entries are distinct categories in $\rho$ and $\beta$. A category may appear at most once in a row's uncertainty decomposition unless the covariance matrix explicitly records the overlap. A budget cannot be used as a bound, and a residual bound cannot be duplicated as an uncertainty contribution.
 
-(C14) **Bridge-site descent.** Every local-to-global promotion has an explicit bridge-site vertex. The vertex must either carry a vanishing descent obstruction, an accepted response-null quotient, or an accepted response-active defect filling in the sense of Definition X.9.5e. A theorem row using local data without such a bridge vertex is rejected.
+(C14) **Bridge-site descent.** Every local-to-global promotion has an explicit bridge-site vertex. A genuine cocycle descent datum must pass the effective-descent and separatedness gate of Theorem X.9.5c.2; its transition class may be nonzero when the output is allowed to be twisted, and must vanish when an untwisted representative is claimed. Cocycle failure or a separately required-trivialization obstruction must carry an accepted response-null quotient or an accepted response-active defect filling in the sense of Definition X.9.5e. A theorem row using local data without such a bridge vertex is rejected.
 
 (C15) **Parent-data transport only through accepted overlaps.** If a child row uses parent data, the record must use the overlap map in $\gamma$ and the corresponding commutative-cell checks. Noncommuting paths into the same child datum reject the registry unless the discrepancy is recorded as a response-active branch split.
+
 
 (C16) **No validation import and no hidden residuals.** Every numerical row has a finite source-origin list and a residual-exhaustion list. A residual contribution not assigned to a named source, proved response-null, or proved absent rejects the row. Any empirical input used as a calibration target is labelled $\textsf{external}$ or $\textsf{model}$ and cannot support a theorem-level status.
 
 (C17) **Shared-source no-double-count and covariance discipline.** Threshold, flavor, RG, pole conversion, determinant, finite-part, and residual categories that share a parent source must be routed through one covariance entry or one master projection. Duplicate uncertainty categories, independent copies of one determinant tail, or separate finite-part choices for a shared source reject the registry.
 
-(C18) **Machine-file round trip.** The markdown, YAML, or JSON implementation of $\mathfrak G_{\mathrm{PU}}$ must round-trip to the tuple $(\mathcal V,\mathcal E,\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$ without losing vertex identifiers, status labels, parent edges, closure gates, residual kinds, finite prescriptions, overlap maps, covariance entries, master-ledger tags, or forward-lock flags. The acceptance tests are run on the parsed tuple, not on prose.
+(C18) **Machine-file round trip.** Every markdown, YAML, or JSON implementation claimed as normative for $\mathfrak G_{\mathrm{PU}}$ must round-trip to the tuple $(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$ without losing vertex identifiers, vertex-kind assignments, status labels, parent edges, closure gates, residual kinds, finite prescriptions, overlap maps, covariance entries, master-ledger tags, or forward-lock flags. Generated views make no separate normative claim. The acceptance tests are run on the parsed tuple, not on prose.
 
 **Theorem P.14.1m.1 (Registry Soundness).** If $\mathfrak G_{\mathrm{PU}}$ is accepted by Algorithm P.14.1m.0, then every status label $\sigma(S)$ is consistent with Convention P.14.1k and the No-Overclaim Discipline of Convention P.14.1l.
 
 *Proof.* (C1) gives either the strict-certificate hypotheses required for closed rows, invoking Definition D.8.9a with Theorem D.8.9b, or the accepted final-calibration hypotheses, invoking Definition V.3.11a, Theorem V.3.11c, Definition V.3.11e, and Theorem V.3.11f through $\zeta(S)$. (C2) and (C3) keep unresolved finite records in certificate-pending or open status, as required by Theorem P.14.1f and Corollary P.14.1g. (C4) is exactly the meet rule of Convention P.14.1l, with the accepted final-calibration exception already recorded in $\zeta$. (C5) supplies the overlap audit of Definition P.14.1k.0. (C6) and (C7) enforce the forward-lock and no-retuning requirements, including Corollary Z.27.11i in the Thomson row and the analogous branch rules in the other numerical sectors. (C8) is the three-gate exhaustion of Theorem P.14.1f. (C9) prevents comparison budgets from being mislabelled as theorem-level residual intervals. (C10) enforces the one-ledger discipline of Theorem X.9.6g.4 and the USCP acceptance discipline of Definition V.3.11a through the registry field $\zeta$. (C11) prevents hidden theorem or certificate dependencies. (C12) enforces the finite-part, projector, tail, grading, and normalization locks. (C13) and (C17) prevent budget-as-bound substitutions, duplicated uncertainty categories, and no-double-count failures. (C14) blocks silent local-to-global promotions. (C15) blocks parent-data transport except through accepted overlap maps. (C16) blocks validation import and hidden residuals. (C18) makes the registry machine-file implementation equivalent to the mathematical tuple. Therefore the registry cannot assign a stronger status than the finite records justify. ∎
 
-**Theorem P.14.1m.2 (Registry Realization of Any Consistent Finite Ledger).** Conversely, any finite sector ledger that already satisfies Convention P.14.1k, Convention P.14.1l, Theorem P.14.1f, Corollary P.14.1g, Definition P.14.1k.0, and the sector-specific residual-control statements can be encoded as an accepted registry $\mathfrak G_{\mathrm{PU}}$.
+**Theorem P.14.1m.2 (Canonical Encoding of a Verified Finite Ledger).** A codec certificate for the registry tuple
+$$
+\mathfrak G=(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)
+$$
+is a finite record
+$$
+\mathfrak C_{\mathrm{codec}}
+=
+(S_{\mathrm{field}},S_{\mathrm{id}},O_{\mathrm{Expr}}).
+$$
+The field table $S_{\mathrm{field}}$ assigns to every constructor occurring in the tuple a distinct constructor tag, its exact ordered field names, the type and cardinality of each field, and whether each collection is an ordered list, a finite set, or a finite map. It covers every nested residual, prescription, overlap-cell, covariance, spectral-calibration, and forward-lock record, and supplies mutually inverse typed tree maps
+$$
+\operatorname{Tree}_{S}:\mathfrak G\longmapsto T,
+\qquad
+\operatorname{Untree}_{S}:T\longmapsto\mathfrak G.
+\tag{P.14.1m.2a}
+$$
+The identifier table $S_{\mathrm{id}}$ gives the grammar and sort of every identifier and requires distinct identifiers to have distinct Unicode-NFC UTF-8 byte strings. The finite operator table $O_{\mathrm{Expr}}$ lists every exact-expression operator, its arity, input sorts, and output sort. An exact-expression payload is a finite abstract-syntax tree admitted by that table; prose is a different field type and is never parsed as an exact expression. The codec certificate passes its syntactic audit exactly when the constructor, field, identifier, and operator tables are finite, total on the submitted tree, single-valued, type-correct, and the two maps in (P.14.1m.2a) round-trip on every constructor.
 
-*Proof.* Let $\mathcal V$ be the listed sectors and certificates, let $\mathcal E$ be the stated parent-to-child dependency graph, let $\sigma$ be the given status assignment, let $\rho$ be the finite residual lists, let $\beta$ be the finite residual-control records with their $\textsf{bound}$ or $\textsf{budget}$ kind, let $\theta$ be the targeted closure gates for non-closed rows, let $\gamma$ be the accepted overlap audit of Definition P.14.1k.0, let $\delta$ be the forward-lock indicator for comparison rows, and let $\zeta$ be empty off final-calibrated vertices and equal to the accepted spectral calibration record of Definition P.14.1m, carrying the Definition V.3.11a datum and its acceptance record, on final-calibrated vertices. The assumed consistency conditions are exactly (C1)--(C10), so Algorithm P.14.1m.0 accepts the registry. ∎
+Canonical JSON strings are required already to be in Unicode NFC; the encoder rejects rather than normalizes a non-NFC string. Quotation mark and reverse solidus are encoded as `\"` and `\\`. The characters U+0008, U+0009, U+000A, U+000C, and U+000D are encoded respectively as `\b`, `\t`, `\n`, `\f`, and `\r`. Every other character U+0000--U+001F is encoded as lowercase `\u00hh`, and every other character is emitted as UTF-8. Object keys are ordered lexicographically by their unsigned UTF-8 byte strings. Integers use base ten with no leading zeros and no negative zero. Booleans and null are `true`, `false`, and `null`.
+
+The keys `"$rat"`, `"$interval"`, `"$set"`, `"$map"`, `"$ref"`, and `"$expr"` are reserved and forbidden as keys of an ordinary schema object. Their tagged values are
+$$
+\{\texttt{"\$rat"}:[p,q]\},
+\quad
+\{\texttt{"\$interval"}:[a,b]\},
+\quad
+\{\texttt{"\$set"}:[x_1,\ldots,x_n]\},
+$$
+$$
+\{\texttt{"\$map"}:[[k_1,v_1],\ldots,[k_n,v_n]]\},
+\quad
+\{\texttt{"\$ref"}:s\},
+\quad
+\{\texttt{"\$expr"}:[o,[x_1,\ldots,x_k]]\}.
+\tag{P.14.1m.2b}
+$$
+Here $p/q$ is reduced with $q>0$; the interval endpoints are canonical exact values with an accepted order check $a\le b$; a set contains no duplicate canonical element encoding and is sorted by encoded bytes; a map contains no duplicate canonical key encoding and is sorted by the encoded key bytes; $s$ is a typed identifier accepted by $S_{\mathrm{id}}$; and $o$ is an operator accepted by $O_{\mathrm{Expr}}$ with $k$ equal to its declared arity and arguments of its declared input sorts. Ordered lists retain order.
+
+Let $\operatorname{Enc}_{\mathfrak C}$ apply these rules recursively to $\operatorname{Tree}_{S}(\mathfrak G)$. Let $\operatorname{Dec}_{\mathfrak C}$ parse bytes before constructing an object and reject invalid UTF-8; non-NFC strings; noncanonical escaping; duplicate, missing, extra, out-of-order, or reserved ordinary-object keys; noncanonical integers or tagged values; duplicate or unsorted set or map entries; unknown constructors, identifiers, references, or operators; wrong arities or sorts; unresolved references; and malformed paths. If $\mathfrak G$ is a finite tuple satisfying (C1)--(C17) as mathematical predicates and $\mathfrak C_{\mathrm{codec}}$ passes its syntactic audit, then
+$$
+\operatorname{Untree}_{S}\!\left(
+\operatorname{Dec}_{\mathfrak C}
+(\operatorname{Enc}_{\mathfrak C}(\operatorname{Tree}_{S}(\mathfrak G)))
+\right)
+=
+\mathfrak G.
+\tag{P.14.1m.2c}
+$$
+Consequently the canonical JSON artifact satisfies (C18), and Algorithm P.14.1m.0 accepts the decoded registry. Conversely, if a byte artifact canonically decodes under a passing $\mathfrak C_{\mathrm{codec}}$ and independent verifiers accept (C1)--(C17) on the decoded tuple, then the artifact represents a tuple satisfying (C1)--(C18). Markdown and YAML require separately frozen codec certificates with the same rejection and round-trip properties. This theorem supplies a finite codec obligation and a round-trip result. It does not assert that the manuscript contains a populated registry, a passing populated codec certificate, semantic verifiers for (C1)--(C17), or a successful machine run.
+
+*Proof.* The scalar encodings and the six reserved tags are disjoint. Deterministic escaping and key ordering give one byte representation of every admitted string and schema object. Reduction of rationals, order checks for intervals, sorting with duplicate rejection for sets and maps, and the finite arity-and-sort table for exact expressions give one representation of every admitted tagged value. Structural induction on the finite typed tree therefore proves that decoding reverses encoding. The audited inverse tree maps then give (P.14.1m.2c). The independently verified predicates (C1)--(C17), together with this round trip, are exactly the acceptance conditions (C1)--(C18). The converse follows by the same decoding identity and the independent semantic checks. ∎
 
 **Corollary P.14.1m.3 (Failure-Mode Catalog).** The registry rejects the following overclaim attempts.
 
@@ -7639,7 +7780,7 @@ No output row may cite an object absent from $\mathcal V$.
 
 *Proof.* Each item is the contrapositive of the cited acceptance checks. ∎
 
-**Remark P.14.1m.4 (Machine-Checkable Markdown/YAML/JSON Registry File).** A text implementation of $\mathfrak G_{\mathrm{PU}}$ records the same tuple in a machine-checkable file. The canonical schema is:
+**Remark P.14.1m.4 (Machine-Checkable Markdown/YAML/JSON Registry File).** A populated canonical JSON implementation of $\mathfrak G_{\mathrm{PU}}$ would use a passing codec certificate $\mathfrak C_{\mathrm{codec}}$ in the sense of Theorem P.14.1m.2. Markdown and YAML are generated views unless separately frozen codec certificates prove the same rejection and round-trip properties. The following is a field template, not a populated registry instance, a populated codec certificate, or the normative serialization grammar:
 
 ~~~~yaml
 registry: PU
@@ -7699,17 +7840,19 @@ tests:
   - C18_round_trip
 ~~~~
 
-The markdown implementation may use tables with the same fields; the JSON implementation uses the same keys. The acceptance suite parses the file, reconstructs $(\mathcal V,\mathcal E,\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$, and runs checks (C1)--(C18). It rejects hidden residuals, status mixing, noncommuting overlaps, inadmissible row promotions, budget-as-bound substitutions, duplicate uncertainty categories, silent bridge assumptions, spectral-source sharing without master projection, and finite-part/projector/tail/normalization changes after a dependent sector is fixed. Because the vertex list, edge list, commutative-cell list, residual list, covariance list, and spectral-calibration records are finite, the test suite is a finite enumeration over records. ∎
+A populated implementation must parse through a frozen decoder, reconstruct $(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$, and evaluate (C1)--(C18) on those reconstructed records. The checks include totality and single-valuedness of the vertex-kind map and are designed to reject missing or invalid vertex-role assignments, hidden residuals, status mixing, noncommuting overlaps, inadmissible row promotions, budget-as-bound substitutions, duplicate uncertainty categories, silent bridge assumptions, spectral-source sharing without master projection, and finite-part, projector, tail, or normalization changes after a dependent sector is fixed. Finiteness permits finite traversal of the registry records only. Decidability, termination, and soundness of each semantic predicate still require a declared verifier or proof certificate; a finite record may cite an infinite-domain analytic obligation. The template above, by itself, is not a populated instance and assigns no machine-audited status to any manuscript claim. ∎
 
-**Remark P.14.1m.5 (Compression-Trajectory Schema for the Registry Snapshot).** The strict-certificate registry $\mathfrak G_{\mathrm{PU}}$ admits a registry-aligned compression-trajectory reading. The reading adds no new physical postulate, no new strict certificate in the sense of Definition D.8.9a, no new operator, no new bridge condition, and no new acceptance gate. It is methodological at the level of Convention P.14.1l.
+**Remark P.14.1m.5 (Compression-Trajectory Schema for an Accepted Registry Snapshot).** Let $\varnothing\ne\mathcal C^{(0)}$ be the finite set of records in a populated registry instance accepted by Algorithm P.14.1m.0. Registered recovery maps contain identities and are closed under composition. A syntactic record-count compression step chooses $A\subseteq\mathcal C$ with $|A|\ge2$ and replaces it by one fresh record $r_A\notin\mathcal C\setminus A$ carrying maps that recover every member of $A$, while preserving every accepted strict certificate and status assignment. Thus
+$$
+\mathcal C'=(\mathcal C\setminus A)\cup\{r_A\},
+\qquad
+\mu(\mathcal C):=|\mathcal C|,
+\qquad
+\mu(\mathcal C')=\mu(\mathcal C)-|A|+1<\mu(\mathcal C).
+$$
+Every maximal trajectory from $\mathcal C^{(0)}$ therefore terminates after at most $|\mathcal C^{(0)}|-1$ steps. Composable recovery maps ensure that each terminal record recovers the initial records below it. The terminal form is singleton when one record recovers the entire initial snapshot, and otherwise is irreducibly plural relative to the declared steps. This is a record-count theorem, not a decrease of information, Kolmogorov complexity, PCE cost, or physical resources; any such interpretation requires its own cost-decrease certificate. Candidate records already named in the manuscript include $\mathfrak L_{\mathrm{PU}}$, $\mathfrak Z_{\mathrm{PU}}$, $\mathfrak C_{\Omega}$ when its projection ledger is accepted, and the marked-arena package; whether any candidate is admissible is a separate recovery-map certificate. The recurrent-ledger non-collapse status of Theorem R.3.5e.3 and the open status of Remark R.3.5e.5 are unchanged.
 
-1. *Compression step.* A compression step on the current registry snapshot $\mathcal C^{(0)}_{\mathrm{PU}}$ replaces a finite collection of accepted records by a single record from which they are recovered by composition of registered projection or restriction maps, while preserving every accepted strict certificate and every status assignment of Convention P.14.1k.
-2. *Compression measure.* A registry-aligned compression measure $\mu$, defined as the cardinality of accepted records weighted by the status rank of Convention P.14.1k, takes values in a well-ordered set. A non-trivial compression step strictly decreases $\mu$.
-3. *Finite-snapshot termination.* From a fixed finite snapshot, every compression trajectory terminates after finitely many steps. The terminal form is either singleton, meaning one record recovers all theorem-level rows of $\mathcal C^{(0)}_{\mathrm{PU}}$ by registered maps, or plural, meaning an irreducibly plural collection has joint recovery and no further admissible compression step.
-4. *Current candidate menu within existing apparatus.* Current candidates are: the master predictive operator $\mathfrak L_{\mathrm{PU}}$ of Definition X.9.6a and Theorem X.9.6b; the master zeta-index ledger $\mathfrak Z_{\mathrm{PU}}$ of Definition X.9.6g and Theorem X.9.6g.4; the becoming-flow compression datum $\mathfrak C_{\Omega}$ of Definition X.8g.4 when its projection ledger is accepted; the marked-arena package of Definition Z.35d with rigidity by Theorem Z.35e; a future common parent invariant for the recurrent-ledger source roles in the sense of Remark R.3.5e.5; and plural termination by joint recovery from the retained candidate records.
-5. *Status preservation.* The recurrent-ledger non-collapse status of Theorem R.3.5e.3 and the open status of Remark R.3.5e.5 are preserved. Every status assignment in Convention P.14.1k is unchanged, and no description-layer output is reinterpreted as a selection-layer assertion.
-
-*Proof.* Items 1-2 are definitions on the finite registry. Item 3 is well-founded descent: $\mu$ takes values in a well-ordered set, and each non-trivial compression step strictly decreases $\mu$. Item 4 enumerates records already present in the manuscript or explicitly marked open. Item 5 follows because the schema introduces no new acceptance test and does not alter Algorithm P.14.1m.0. ∎
+*Proof.* Freshness of $r_A$ gives the displayed cardinality identity. Each step decreases the positive integer $\mu$ by at least one, so no trajectory contains more than $|\mathcal C^{(0)}|-1$ steps. Induction using identity and composable recovery maps recovers every initial record below each current record. Maximality gives the terminal alternatives. Status preservation is part of admissibility and creates no new physical postulate, strict certificate, operator, bridge condition, or acceptance gate. ∎
 
 
 ### P.14.4 The Derivation Chain
@@ -7726,9 +7869,10 @@ The fine-structure constant core follows from Theorem Z.26:
 
 $$\alpha^{-1}_{0} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*), \qquad \operatorname{sinc}(u)=\frac{\sin u}{u}$$
 
-The spacetime dimension follows from the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorem Z.11):
+The Euclidean response-carrier dimension follows from the channel-complete Bures tangent-cell mode-channel correspondence (Definition Z.9a; Theorem Z.11); its $3+1$ spacetime interpretation requires the separate continuum and Lorentzian-promotion certificates:
 
 $$24=M\le K(D),\quad K(3)=12,\quad \mathcal C_{24}\subset\mathbb R^4\implies D_{\min}=4$$
+
 
 The cosmological-constant sector splits into an exponent row and a prefactor row. The five-mode expression
 
@@ -7755,9 +7899,10 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
 | $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$; candidate hypercharge-recoil (operator realization open) branch $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ | $137.035999177(21)$ | Mohr et al. 2025; NIST 2024; Appendix Z | open operator-realization gate; current published comparison certificate-retrodictive |
-| $D$ | $4$ | $4$ | — | exact on the Bures tangent-cell branch |
+| $D$ | $4$ for the Euclidean response carrier on the faithful Bures tangent-cell branch | $3+1$ observed spacetime | — | exact carrier result; spacetime interpretation certificate-gated |
 | $\Lambda L_P^2$ | five-mode reference $(2.88\pm0.03)\times10^{-122}$; four-mode exponent row $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ | $(2.86599\pm0.04849)\times10^{-122}$ | Planck Collaboration 2020a; NIST 2024; Appendix V | prefactor certificate-pending |
 | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Equation Q.18 | Structural prediction |
+
 
 **Electroweak Sector:**
 
@@ -7801,9 +7946,10 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Pull |
 |:---------|:--------------------|:-------------------|:----------|:-----|
 | $\eta_B$ (baryon asymmetry) | illustrative factor product $\approx6.15\times10^{-10}$; no theory interval is defined until an accepted Appendix Y transport certificate fixes the forward value, residual interval, and covariance | $(6.12\pm0.04)\times10^{-10}$ | Planck 2020 | diagnostic only; no theory pull |
-| $\theta_{QCD}$ (strong CP) | $0$ | $< 10^{-10}$ | nEDM bounds | Consistent |
+| $\bar\theta$ (strong CP) | $0$ if every bridge, vacuum-selection, and orientation hypothesis of Theorem K.6.11 is supplied | $<10^{-10}$ | nEDM bounds | conditional implication; not independently validated |
 
 **Statistical Summary:** The displayed standardized-residual sums are correlation-ignoring diagnostics only. No inferential $\chi^2$, number of degrees of freedom, or goodness-of-fit probability is defined without a preregistered row set, joint likelihood, covariance matrix, theory-error model, fitted-parameter count, and profiling rule. Mixed theorem-, branch-, validation-, and illustrative-status rows must not be pooled into a single fit statistic.
+
 
 The displayed backbone-fed predictions trace to two structural inputs: $\varepsilon_0=\ln2$ and $K_0 = 3$, with downstream sectors retaining their local bridge, branch, convention, model, or certificate status. The derivation chains are documented in the referenced appendices.
 
@@ -7821,19 +7967,19 @@ If a downstream numerical sector failed, the SPAP diagonal theorem, the register
 
 The structural floor is not replaced by $\ln3,\ln4,\ldots$. Those values describe larger erased registers, additional implementation overhead, or different non-minimal branches. A failed numerical prediction would therefore demote or repair the relevant sector bridge, certificate, or model layer before altering the SPAP theorem.
 
-### P.14.7 Significance of Immediate Success
+### P.14.7 Evidential Scope of Structural Recurrence
 
-The success of the minimum values provides strong evidence for PCE:
+The minimum values define a compact structural backbone whose physical evidential force depends on the independence and common-source records:
 
 | Observation | Implication |
 |:------------|:------------|
 | Registered values satisfy the joint constraints | On the conjunction of Theorem 15, Hilbert distinguishability, Theorem Z.2's same-class comparator, and Theorem Z.1's active-kernel gates, $(K_0,a,d_0)=(3,2,8)$ and hence $d_0=2a^2=2^{K_0}$; the Diophantine equality alone has other integer solutions |
-| Multiple independent outputs match | Unified origin from $\varepsilon_0$, $K_0$ |
-| Precision spans 5+ significant figures | Not approximate or order-of-magnitude |
-| Same backbone inputs constrain all sectors | $\varepsilon_0, K_0$ generate the discrete backbone; sector-specific quantitative outputs additionally carry their stated branch, bridge-law, threshold, convention, model, or certificate inputs |
+| Several downstream values agree numerically | Evidence for a common-source hypothesis only after source independence, forward projection from one parent record, and overlap commutativity are proved; agreement alone is not a derivation |
+| Agreement spans 5+ significant figures | Arithmetic precision of the comparison, not theorem status or causal origin |
+| Same backbone inputs constrain several sectors | $\varepsilon_0,K_0$ organize the discrete backbone; every sector-specific output retains its branch, bridge, threshold, convention, model, residual, and certificate inputs |
 | Standardized-residual display | Diagnostic only; no goodness-of-fit claim without a declared joint likelihood and covariance model |
 
-Had we required $\varepsilon = \ln 7.43$ to match observations, PCE would be essentially abandoned—the "minimum suffices" elegance lost, and the result would resemble parameter fitting. Instead, two structural numbers ($\varepsilon_0=\ln2$, $K_0 = 3$) generate the discrete backbone that organizes the downstream parameter sectors without erasing their local status labels.
+The structural choices $\varepsilon_0=\ln2$ and $K_0=3$ avoid fitting those two backbone labels separately in each sector. Their recurrence is scientifically testable through the common-source and source-exhaustion ledgers; it is not, by itself, proof that every downstream physical quantity has a unified origin.
 
 
 
@@ -7856,7 +8002,7 @@ The compiled tests are consistent with operation near the boundary of thermodyna
 
 The status ledger above concerns object-level claims: assertions about physical reality or about the finite-response structures that generate physical predictions. The manuscript also contains meta-level claims about how physical frameworks are compared and how PU positions itself under that comparison. These two levels must remain separate.
 
-**Convention P.14.9a (Object-Level / Meta-Level Separation).** A PU object-level claim is a finite-record assertion about a physical branch, response quotient, operator, sector value, or bridge map. Its status is assigned by Convention P.14.1a and audited by the registry $\mathfrak G_{\mathrm{PU}}$ of Definition P.14.1m. A PU meta-level claim is a methodological assertion about the comparison criterion for theories, the role of compression in theory choice, or PU's own positioning under that criterion. Meta-level claims may be recorded in Appendix P, the discussion, or the conclusion, but they do not create new physical sectors, constants, operators, certificates, or validation rows.
+**Convention P.14.9a (Object-Level / Meta-Level Separation).** A PU object-level claim is a finite-record assertion about a physical branch, response quotient, operator, sector value, or bridge map. Its manuscript status is assigned by Convention P.14.1a. A populated tuple satisfying Definition P.14.1m and Algorithm P.14.1m.0 has a mathematically accepted registry status. Calling that status **machine-audited** additionally requires a versioned executable verifier or proof kernel, a termination and soundness certificate for every invoked semantic predicate, the exact input artifact and cryptographic hash, and a recorded successful execution result. The schema template alone supplies none of these. A PU meta-level claim is a methodological assertion about the comparison criterion for theories, the role of compression in theory choice, or PU's own positioning under that criterion. Meta-level claims may be recorded in Appendix P, the discussion, or the conclusion, but they do not create new physical sectors, constants, operators, certificates, or validation rows.
 
 **Definition P.14.9b (Structural Description Cost).** For a theory or framework $\mathcal T$ and empirical domain $\mathcal E$, let $K_{\mathcal E}(\mathcal T)$ denote the structural description cost of producing the predictions of $\mathcal T$ on $\mathcal E$ from the admitted initial data, boundary data, and observational protocols. $K_{\mathcal E}$ is a methodological comparison proxy modeled on Kolmogorov description length, not a new physical observable. It is generally not computable exactly and is proxy-dependent in practice; comparisons using it must therefore state the shared domain $\mathcal E$ and the structural inputs counted.
 
@@ -7868,6 +8014,111 @@ The status ledger above concerns object-level claims: assertions about physical 
 
 **Convention P.14.9f (Conservative Status of the Meta-Theoretic Layer).** The meta-theoretic layer is methodological. It does not add a branch, close a certificate, promote a model-level row, modify the strict-certificate registry, or change any status in Convention P.14.1k. Rejection or alteration of the meta-theoretic layer would not by itself affect any object-level theorem. Conversely, acceptance of the meta-theoretic layer cannot repair a failed physical prediction or fill a missing certificate.
 
+**Definition P.14.9g (Response Completeness, Global-Lift Completeness, and Empirical Realization Identification).** Let $T$ be a theory in a language $L$, let $\operatorname{Mod}(T)$ be its model class, and let $\mathfrak P$ be a fixed family of finite registered protocols. For each $P\in\mathfrak P$, let $\mathcal R_P(\mathcal M)$ be the normalized response law of model $\mathcal M$, with a registered equivalence relation $\sim_P$. A numerical tolerance may be used only after taking its transitive closure or otherwise proving reflexivity, symmetry, and transitivity; pairwise distance below a tolerance is not automatically an equivalence relation. Define
+$$
+\mathcal M\sim_{\mathrm{resp}}\mathcal N
+\quad\Longleftrightarrow\quad
+\mathcal R_P(\mathcal M)\sim_P\mathcal R_P(\mathcal N)
+\quad\text{for every }P\in\mathfrak P.
+\tag{P.14.9g.1}
+$$
+The theory is **mathematically response-complete** on $\mathfrak P$ when $\operatorname{Mod}(T)\ne\varnothing$, every $\mathcal R_P$ is total and normalized on $\operatorname{Mod}(T)$, and
+$$
+\left|\operatorname{Mod}(T)/\!\sim_{\mathrm{resp}}\right|=1.
+\tag{P.14.9g.2}
+$$
+
+For the compatible tuple $q_\bullet$ and restriction map of the scope clause following Theorem P.14.1k.1, **global-lift completeness** means
+$$
+\operatorname{res}^{-1}(q_\bullet)
+=
+\{[\omega_*]\}
+\tag{P.14.9g.3}
+$$
+in the declared global response quotient. **Empirical realization identification** is a separate finite record consisting of calibrated protocol implementations, unit maps, sampling and covariance laws, preregistered residual intervals and stopping rules, and observed response data used to test whether the realized records lie in the response class of $[\omega_*]$. It is not part of the definition of $\omega_*$ or of the physical PCE functional.
+
+**Theorem P.14.9h (Formal-Core Realization Non-Entailment).** Let $T$ be any classical theory with ordinary two-valued model semantics in a language $L$, and let $A_{\mathrm{real}}$ be a fresh zero-ary predicate in the expanded language $L^+=L\cup\{A_{\mathrm{real}}\}$, read as “the selected PU response class is instantiated as the realized physical universe.” Then exactly one of the following holds:
+
+1. $\operatorname{Mod}(T)=\varnothing$, in which case $T$ supplies no candidate realization; or
+2. $\operatorname{Mod}(T)\ne\varnothing$, in which case, when $T$ is read as an $L^+$-theory,
+   $$
+   T\not\models A_{\mathrm{real}},
+   \qquad
+   T\not\models\neg A_{\mathrm{real}}.
+   \tag{P.14.9h.1}
+   $$
+
+Consequently, a satisfiable formal core whose axioms do not contain a realization statement cannot derive its own external actuality. Mathematical response completeness, a unique PCE minimizer, and global-lift completeness do not alter this result.
+
+*Proof.* If $T$ has no model, the first case holds. Otherwise choose $\mathcal M\models T$. Because $A_{\mathrm{real}}$ is fresh and no sentence of $T$ constrains it, $\mathcal M$ has an $L^+$-expansion $\mathcal M^+$ in which $A_{\mathrm{real}}$ is true and another expansion $\mathcal M^-$ in which it is false. Both reducts satisfy every sentence of $T$. Hence $A_{\mathrm{real}}$ fails in one model of $T$ and $\neg A_{\mathrm{real}}$ fails in another, proving (P.14.9h.1). Conditions on response quotients or minimizers are $L$-statements and therefore do not distinguish the two expansions. ∎
+
+**Corollary P.14.9i (Maximum Noncircular PU Completion Target).** For a declared scope, PU proves mathematical response completeness only after the following independently checkable gates are discharged:
+
+1. a versioned typed language $L$, exact theory $T_{\mathrm{PU}}\subseteq\operatorname{Sent}(L)$, model semantics, a fixed carrier or foundational-universe convention making the models a set up to $L$-isomorphism, a finite protocol family $\mathfrak P$, and, for every $P$, a fixed finite outcome space $\Omega_P$, response codomain $\Delta(\Omega_P)$, and proved equivalence relation $\sim_P$ are frozen before validation;
+2. at least one $L$-structure satisfying every axiom of $T_{\mathrm{PU}}$ is constructed;
+3. every registered response map $\mathcal R_P$ is defined and proved total and normalized on every member of $\operatorname{Mod}(T_{\mathrm{PU}})$; and
+4. every two models of $T_{\mathrm{PU}}$ are proved response-equivalent on every $P\in\mathfrak P$:
+   $$
+   \forall\mathcal M,\mathcal N\in\operatorname{Mod}(T_{\mathrm{PU}}),\qquad
+   \mathcal M\sim_{\mathrm{resp}}\mathcal N.
+   $$
+   Because item 1 makes the quotient a set and item 2 makes it nonempty, this is equivalent to
+   $$
+   \left|\operatorname{Mod}(T_{\mathrm{PU}})/\!\sim_{\mathrm{resp}}\right|=1.
+   $$
+
+A single constructed model discharges nonemptiness only; it does not discharge the universal comparison in item 4. Corollary P.14.1k.3.1 may identify a unique PCE-selected candidate, but a unique minimizer alone does not exclude response-distinct nonminimizing models. PU proves global-lift completeness only after it constructs the global restriction map and proves separately that the selected fiber is nonempty and injective modulo global response equivalence. When both results and a forward-locked observable registry are accepted, all PU models lie in one joint registered response class. This still does not prove $A_{\mathrm{real}}$. Identification with observed physical records is an empirical realization-identification result. Violation of an exact consequence or hard-support bound falsifies the tested realization class; a statistical-tail event triggers the preregistered rejection rule at its declared error level rather than a deductive contradiction. Adding $A_{\mathrm{real}}$ as an axiom is a realization postulate; defining the global candidate class, cost, or protocols from the observed target is circular and is excluded by Remark P.14.1k.3.2.
+
+*Proof.* Items 1–4 unpack Definition P.14.9g. Item 2 establishes only $\operatorname{Mod}(T_{\mathrm{PU}})\ne\varnothing$; item 4 supplies the distinct universal statement needed for a singleton quotient. Corollary P.14.1k.3.1 contributes the selected-minimizer conclusion under its hypotheses but contains no universal quantifier identifying every model with that minimizer. Equation (P.14.9g.3) similarly requires both an ambient witness and uniqueness of its response class. The non-entailment conclusion is Theorem P.14.9h. The empirical statements follow from the forward-lock and no-validation-import clauses of a populated accepted registry. ∎
+
+**Proposition P.14.9i.1 (Finite Four-Protocol Response-Table Witness).** Let $B=\{0,1\}$, let $\mathcal I=B\times\{0,1\}$, and write an implementation as $(b,r)$. Every protocol has outcome space $B$, and
+$$
+\mathfrak P=\{\mathsf{read},\mathsf{step},\mathsf{meter},\mathsf{diag}\}.
+$$
+For $b\in B$, let $\delta_b$ be the point mass at $b$, let $q_b(b)=3/4$ and $q_b(1-b)=1/4$, and let $u(0)=u(1)=1/2$. Define the response table and diagonal nomination by
+$$
+\begin{aligned}
+\mathcal R_{\mathsf{read}}(b,r)&=\delta_b,&
+\mathcal R_{\mathsf{step}}(b,r)&=q_b,\\
+\mathcal R_{\mathsf{meter}}(b,r)&=\delta_r,&
+\mathcal R_{\mathsf{diag}}(b,r)&=\delta_{1-b},
+\qquad
+\mathcal N_{\mathsf{diag}}(b,r)=\delta_b .
+\end{aligned}
+\tag{P.14.9i.1}
+$$
+Use exact equality as every protocol equivalence, set $Q_b=\{(b,0),(b,1)\}$, and define $V_b(b,r)=r$. For a probability law $p$ and outcome $o\in B$, define the full Brier loss
+$$
+\ell(p,o):=\sum_{a\in B}\bigl(p(a)-\mathbf1_{\{a=o\}}\bigr)^2,
+$$
+and define
+$$
+PE:=\sum_{o\in B}q_b(o)\ell(q_b,o),
+\qquad
+PE_0:=\sum_{o\in B}q_b(o)\ell(u,o),
+\qquad
+\Delta Q:=PE_0-PE,
+\qquad
+PP:=\frac1{1+PE}.
+\tag{P.14.9i.1a}
+$$
+Then:
+
+1. every displayed response is a normalized probability law;
+2. response equivalence on $\mathcal I$ is equality, because $\mathsf{read}$ and $\mathsf{meter}$ recover $(b,r)$;
+3. $V_b$ has the unique minimizer $(b,0)$ on $Q_b$, with strict gap $1$;
+4. the exact Brier quantities are
+   $$
+   PE=\frac38,\qquad PE_0=\frac12,\qquad
+   \Delta Q=\frac18,\qquad PP=\frac8{11},
+   \qquad \frac23<\frac8{11}<\frac34;
+   \tag{P.14.9i.2}
+   $$
+5. $\mathcal N_{\mathsf{diag}}(b,r)\ne\mathcal R_{\mathsf{diag}}(b,r)$ for every implementation.
+
+*Proof.* Normalization is immediate. Equality of the read and meter point masses forces equality of both coordinates, proving item 2. On $Q_b$, the two costs are $0$ and $1$, proving item 3. If the realized outcome is $b$, $\ell(q_b,b)=(1-3/4)^2+(0-1/4)^2=1/8$; if it is $1-b$, $\ell(q_b,1-b)=(0-3/4)^2+(1-1/4)^2=9/8$. Hence $PE=(3/4)(1/8)+(1/4)(9/8)=3/8$. The uniform forecast has loss $1/2$ for either outcome, so $PE_0=1/2$, $\Delta Q=1/8$, and $PP=1/(1+3/8)=8/11$. The strict inequalities follow from $22<24$ and $32<33$. Finally $\delta_b\ne\delta_{1-b}$. ∎
+
+This proposition is an exact finite response-table witness for four stipulated maps, a strict two-candidate minimizer, and a diagonal mismatch. It is not a model of the full $T_{\mathrm{PU}}$, a strict PPI/PCE certificate for the global physical theory, a construction of $C_P$, a physicalization bridge, a source-exhaustion proof, an empirical realization, or a proof of response completeness for every PU model.
 
 ## P.15 Source Energy: The Thermodynamic Cost of Self-Knowledge
 
@@ -9281,7 +9532,7 @@ The framework's existing commitments — finite-resource prediction, SPAP, PPI/P
 This section extends the philosophical foundations by formalizing six semantic and interpretive structures in PU notation:
 
 1. role-indexed self-reference and the failure of the Universality Assumption;
-2. perspective-indexed closure and guarded cross-perspective adoption;
+2. perspective-indexed closure, guarded cross-perspective adoption, Borel closure profiles, directed discrepancy, and extension firewalls;
 3. local classicality with global holonomy or process-type obstruction;
 4. cogito-centered perspective geometry;
 5. shape recognition, decompression, and bounded creative transfer;
@@ -9437,6 +9688,10 @@ $$
 $$
 means that $p$ is allowed to adopt a judgment validated by $q$ when the target perspective is $u$.
 
+**Remark P.16b.2.2a (Semantic Guard and Physical-Import Scope).**
+
+The value $\mathrm{CPA}_p(q,u)=1$ is a semantic permission in the labeled proof system. It is not by itself a physical channel, a retained record, or an Appendix M cross-perspective actualization certificate. A physical reading additionally requires a registered typing map from the semantic indices to physical perspectives and, for each imported proposition, one of the record-sharing or perspective-invariance certificates of Definition M.6.2 with its retained protocol and error data. Because $\mathrm{CPA}_p(q,u)$ records only $(p,q,u)$, it does not encode those proposition-specific witnesses. Neither direction of an equivalence between CPA permission and the certificates of Definition M.6.2 follows from the present definitions.
+
 **Definition P.16b.2.3 (Closure Operator).**
 
 Let
@@ -9513,6 +9768,10 @@ so $T$ is Scott-continuous.
 
 The lattice $\mathcal L$ is complete. By the Kleene fixed-point theorem for Scott-continuous maps on complete lattices with bottom, the least fixed point exists and is the union of the ascending chain from $\bot$. ∎
 
+**Remark P.16b.2.4a (Closure Stage Is Not Physical Time).**
+
+The index $n$ in $R^{(n)}$ is a Kleene-closure stage, equivalently a bound on finite derivation depth. It is not a physical clock or an ND--RID round count. Converting it into elapsed time requires both a registered realization of each rule application by a finite physical protocol, including a concurrency or serialization convention, and a positive round-clock certificate. A closure-stage bound yields heat only through a registered reset implementation satisfying Theorem 31 or Theorem M.10.7, and yields stress-energy only through Definition B.8.
+
 **Corollary P.16b.2.5 (Local Preorders).**
 
 For each validating perspective $p$, define
@@ -9550,6 +9809,71 @@ $$
 *Proof.* Soundness follows by induction on proof height. Base and Refl match the Seed and Reflexivity clauses. Trans and CPA match the closure clauses defining $T$. Therefore every derivable judgment appears at some finite stage and hence in $R^\star$.
 
 For completeness, suppose $(s,u,a,c)\in R_p^\star$. By Theorem P.16b.2.4, the tuple appears in some finite stage $R_p^{(n)}$. Induct on the least such $n$. Each tuple introduced at stage $n+1$ is introduced by one of the four defining clauses of $T$. The corresponding proof rule derives it from premises that appeared at earlier stages. The induction hypothesis supplies derivations of those premises. Thus the tuple is derivable. ∎
+
+**Definition P.16b.2.8 (Borel-Registered Perspective Layer).**
+
+A perspective layer is *Borel-registered* when $P$ and $V$ are standard Borel spaces and the global seed and guard sets
+$$
+\mathsf B^\circ
+:=
+\left\{
+(p,s,u,a,c)\in P^3\times V^2:
+(s,u,a,c)\in R_p^\circ
+\right\},
+$$
+$$
+\mathsf C
+:=
+\left\{
+(p,q,u)\in P^3:
+\mathrm{CPA}_p(q,u)=1
+\right\}
+$$
+are Borel. Register Borel probability measures $\nu$ on $P$ and $\mu_V$ on $V$, and let
+$$
+\lambda
+:=
+\overline{\nu^{\otimes2}\otimes\mu_V^{\otimes2}}
+$$
+denote the completion of their product on
+$$
+Z:=P^2\times V^2.
+$$
+The closure operator remains exactly the Seed, Reflexivity, Transitivity, and CPA operator of Definition P.16b.2.3; no substitution rule is added.
+
+**Theorem P.16b.2.9 (Analyticity of the Borel-Registered Closure).**
+
+On a Borel-registered perspective layer, the global closed relation
+$$
+\mathsf R^\star
+:=
+\left\{
+(p,s,u,a,c)\in P^3\times V^2:
+(s,u,a,c)\in R_p^\star
+\right\}
+$$
+is analytic. Consequently, for every $p\in P$, the closure profile
+$$
+\mathsf R_p
+:=
+\left\{
+(s,u,a,c)\in Z:
+(p,s,u,a,c)\in\mathsf R^\star
+\right\}
+$$
+is analytic and therefore $\lambda$-measurable.
+
+*Proof.* Write $\mathsf R^{(n)}$ for the global form of the $n$-th Kleene stage. The seed set is Borel by Definition P.16b.2.8, and the reflexive set
+$$
+\{(p,s,s,a,a):p,s\in P,\ a\in V\}
+$$
+is Borel because equality is Borel on a standard Borel space. Suppose $\mathsf R^{(n)}$ is analytic. A Transitivity conclusion is obtained by taking two coordinate pullbacks of $\mathsf R^{(n)}$, intersecting them on their common middle perspective and value, and projecting away those middle variables. A CPA conclusion is obtained in the same way after intersecting with the Borel guard set $\mathsf C$ and retaining the validating-perspective coordinate of the left premise. Analytic sets are closed under Borel pullback, finite intersection, and projection. Hence $\mathsf R^{(n+1)}$ is analytic. The countable union
+$$
+\mathsf R^\star=\bigcup_{n<\omega}\mathsf R^{(n)}
+$$
+is analytic. Sections of analytic subsets of standard Borel products are analytic, and analytic sets are universally measurable, hence measurable in the completed product measure $\lambda$. ∎
+
+Theorem P.16b.2.4 and Theorem P.16b.2.7 already apply to arbitrary sets $P$ and $V$. The Borel registration adds measurability; it does not replace the finite valuation pseudometric $d_{\mathcal A}$ of Definition P.16b.12.7 or identify that metric with the closure-profile discrepancies defined below.
 
 ---
 
@@ -9907,15 +10231,15 @@ $$
 $$
 By Definition P.16b.7.3, the right-hand side is $\operatorname{Role}_S(c)$. Hence all displayed quantities are identical in the quotient. ∎
 
-**Corollary P.16b.7.5 (Finite Profiles Are Charts, Not Complete Identities).**
+**Corollary P.16b.7.5 (Finite Profiles Are Descriptors, Not Complete Identities).**
 
 A finite profile such as
 $$
 (\Delta Q,\mu,\sigma)
 $$
-is a coordinate chart on $\mathcal F_S$ where defined. Equality of finite profile coordinates implies equality of predictive role only on a separating-profile branch.
+is a finite descriptor on the part of $\mathcal F_S$ where it is defined. Equality of profile coordinates implies equality of predictive role only on a separating-profile branch. The term *coordinate chart* is reserved for a map proved to be an injective local parametrization on a registered topological domain.
 
-*Proof.* The full point of $\mathcal F_S$ is the response-presheaf equivalence class. A finite coordinate chart can fail to separate distinct points unless separation is assumed. Therefore coordinate equality alone is weaker than role-position equality except on a separating branch. ∎
+*Proof.* A point of $\mathcal F_S$ is a response-presheaf equivalence class. A finite descriptor need not separate distinct classes. Therefore equality of descriptor values is weaker than role-position equality unless injectivity on the retained class has been proved. ∎
 
 ---
 
@@ -10026,15 +10350,125 @@ MP(\mathcal M_S)=
 \mathbb E_{q\sim\mu_S}\left[\operatorname{Adeq}(\mathrm{Pred}_S(q),q)\right].
 $$
 
+**Definition P.16b.9.1a (Budget Restriction, Query-to-Role Allocation, and Occupancy).**
+
+Fix a finite predictive budget $B$ in the sense of Definition P.16d.0.1 and a registered protocol embedding
+$$
+\iota_B:\mathsf P_B\hookrightarrow\mathsf P_S.
+$$
+Let $T_B:\mathsf P_B^{op}\to\mathbf{Resp}$ be a registered finite or compact response presheaf. For every arrow $f:P'\to P$ in $\mathsf P_B$, require the coarse-graining and tolerance maps to satisfy the naturality identity
+$$
+T_B(f)\circ\vartheta_{B,P}\circ(q_{B,P})_*
+=
+\vartheta_{B,P'}\circ(q_{B,P'})_*
+\circ\mathcal R_c^S(\iota_B f)
+\tag{P.16b.9.1a}
+$$
+on every response law used below. On a deterministic branch, a response is first identified with its Dirac law. A set-valued response lacking a registered probability-law or deterministic embedding is outside this budget restriction rather than being pushed forward implicitly.
+
+Define $\mathsf{Cont}_{S,B}$ to be the retained contents $c\in\mathsf{Cont}_S$ for which every response law in (P.16b.9.1a) is defined and the displayed naturality identities hold. For $c\in\mathsf{Cont}_{S,B}$, define the budget-level response presheaf by
+$$
+\mathcal R_c^{S,B}(P)
+:=
+\vartheta_{B,P}\!\left((q_{B,P})_*\mathcal R_c^S(\iota_B P)\right),
+\qquad
+\mathcal R_c^{S,B}(f):=T_B(f).
+$$
+Put
+$$
+c\equiv_B^S c'
+\quad\Longleftrightarrow\quad
+\mathcal R_c^{S,B}\cong\mathcal R_{c'}^{S,B},
+$$
+$$
+\mathcal F_{S,B}:=\mathsf{Cont}_{S,B}/{\equiv_B^S},
+\qquad
+\operatorname{Role}_{S,B}(c):=[c]_{\equiv_B^S}.
+\tag{P.16b.9.1b}
+$$
+This is a budget-level role quotient. Equality in the full role space $\mathcal F_S$ descends to equality in $\mathcal F_{S,B}$ only when the registered restriction and tolerance maps are equivariant under the corresponding full natural isomorphism.
+
+Let $\mathsf Q_{S,B}$ be a nonempty retained query family equipped with a registered probability law $\mu_{S,B}$ obtained by restriction and normalization of $\mu_S$, or supplied directly when that restriction has zero mass. Require every evaluated adequacy integrand to be measurable and integrable. For a presentation $\mathcal M$ on this branch, set
+$$
+MP_B(\mathcal M)
+:=
+\int_{\mathsf Q_{S,B}}
+\operatorname{Adeq}(\operatorname{Pred}_{\mathcal M}(q),q)
+\,d\mu_{S,B}(q),
+$$
+$$
+\mathcal F_{\mathrm{PCE},B}(\mathcal M)
+:=
+SC_B(\mathcal M)-\lambda MP_B(\mathcal M),
+$$
+where $SC_B$ is the complete signal cost evaluated in the units and over the horizon fixed by $B$. Let
+$$
+\varnothing\ne\mathcal F_{S,B}^{\mathrm{act}}\subseteq\mathcal F_{S,B}
+$$
+be the finite set of predictive roles available to the retained prediction paths.
+
+A query-to-role allocation kernel is a registered Markov kernel
+$$
+\kappa_{S,B}:\mathsf Q_{S,B}\longrightarrow
+\Delta(\mathcal F_{S,B}^{\mathrm{act}})
+$$
+defined on the quotient roles themselves and satisfying
+$$
+\kappa_{S,B}(\mathfrak r\mid q)>0
+\quad\Longrightarrow\quad
+\text{the registered evaluation path for }q\text{ uses }\mathfrak r
+$$
+for $\mu_{S,B}$-almost every $q$. Its role-occupancy law is
+$$
+\nu_{S,B}(\mathfrak r)
+=
+\int_{\mathsf Q_{S,B}}
+\kappa_{S,B}(\mathfrak r\mid q)\,d\mu_{S,B}(q).
+\tag{P.16b.9.1c}
+$$
+Every coordinate $q\mapsto\kappa_{S,B}(\mathfrak r\mid q)$ is measurable. Fractional allocation records shared participation of several quotient roles in one prediction path. Because the kernel is registered on $\mathcal F_{S,B}^{\mathrm{act}}$, it cannot depend on a choice of content representative. Query frequency alone is not a role-occupancy law.
+
 **Theorem P.16b.9.2 (Finite-Resource Compression Necessity).**
 
-Let $S$ have finite predictive complexity budget $C_P(S)$. For a task family $Q$, suppose the minimum enumerative code length satisfies
+Fix a nonempty task family $Q\subseteq\mathsf Q_{S,B}$, a preregistered adequacy threshold $a_0$, and a finite presentation-cost cap $b_S\ge0$ in the units of $SC_B$. Let $\mathfrak A(Q,a_0)$ be the registered admissible presentations satisfying the task and adequacy requirement. Assume a finite presentation-grammar certificate proves the exhaustive disjoint normal-form decomposition
 $$
-K_{\mathrm{enum}}(Q)>C_P(S).
+\mathfrak A(Q,a_0)
+=
+\mathfrak A_{\mathrm{enum}}(Q,a_0)
+\,\dot\cup\,
+\mathfrak A_{\mathrm{shared}}(Q,a_0).
+\tag{P.16b.9.2a}
 $$
-If $S$ remains viable on $Q$, then its model cannot be purely enumerative. It must use a compressed relational presentation with cost at most $C_P(S)$.
+Here an enumerative presentation stores the retained task responses independently and contains no rule, relation, program, or composition node shared by two distinct retained query paths. A shared-structure presentation contains at least one such node used by two distinct retained query paths. Define
+$$
+K_{\mathrm{enum}}(Q,a_0)
+:=
+\inf_{\mathcal M\in\mathfrak A_{\mathrm{enum}}(Q,a_0)}
+SC_B(\mathcal M),
+\qquad
+\inf\varnothing:=+\infty.
+\tag{P.16b.9.2b}
+$$
+Call $S$ viable on this registered task branch at cap $b_S$ exactly when there exists $\mathcal M\in\mathfrak A(Q,a_0)$ with
+$$
+SC_B(\mathcal M)\le b_S.
+\tag{P.16b.9.2c}
+$$
+If
+$$
+K_{\mathrm{enum}}(Q,a_0)>b_S
+$$
+and $S$ is viable in the sense of (P.16b.9.2c), then at least one cap-feasible shared-structure presentation exists, and every cap-feasible member of $\mathfrak A(Q,a_0)$ belongs to $\mathfrak A_{\mathrm{shared}}(Q,a_0)$.
 
-*Proof.* A purely enumerative model for $Q$ must store independent responses for the required tasks, so its representation cost is at least $K_{\mathrm{enum}}(Q)$. By hypothesis this exceeds $C_P(S)$, making enumeration nonviable. Since $S$ is viable, some presentation has cost at most $C_P(S)$. That presentation cannot be enumerative, so it must use relations, rules, composition, or shared structure to generate multiple predictions. This is exactly a compressed relational presentation. ∎
+*Proof.* Viability supplies a presentation $\mathcal M$ with $SC_B(\mathcal M)\le b_S$. If $\mathcal M$ were enumerative, Definition (P.16b.9.2b) would give
+$$
+K_{\mathrm{enum}}(Q,a_0)
+\le SC_B(\mathcal M)
+\le b_S,
+$$
+contrary to the strict hypothesis. The exhaustive normal-form certificate (P.16b.9.2a) therefore places $\mathcal M$ in $\mathfrak A_{\mathrm{shared}}(Q,a_0)$. The same argument applies to every cap-feasible presentation. ∎
+
+The scalar cap $b_S$ is presentation-cost branch data. Identifying it with $C_P(S)$ requires a separate unit and domination bridge proving that the same complete presentation cost is bounded by, or equals, $C_P(S)$. Without that bridge, finite $C_P(S)$ alone does not imply (P.16b.9.2c), and the theorem makes no budget-independent self-incompleteness claim.
 
 **Theorem P.16b.9.3 (PCE Selection of Equal-Adequacy Compression).**
 
@@ -10067,6 +10501,82 @@ $$
 \mathcal F_{\mathrm{PCE}}(\mathcal M_1)<\mathcal F_{\mathrm{PCE}}(\mathcal M_2).
 $$
 ∎
+
+**Theorem P.16b.9.3a (Occupancy-Controlled Pairwise Deletion Bound).**
+
+The law $\nu_{S,B}$ of Definition P.16b.9.1a is a probability measure on $\mathcal F_{S,B}^{\mathrm{act}}$ and is independent of the retained content representative used for a predictive role.
+
+Fix $\mathfrak r\in\mathcal F_{S,B}^{\mathrm{act}}$ and two feasible presentations $\mathcal M$ and $\mathcal M^{-\mathfrak r}$ on the same registered comparison branch, where the latter removes $\mathfrak r$ while keeping the query law, protocol family, adequacy functional, tolerances, and PCE parameter $\lambda$ fixed. Suppose that for $\mu_{S,B}$-almost every $q$,
+$$
+0
+\le
+\operatorname{Adeq}(\operatorname{Pred}_{\mathcal M}(q),q)
+-
+\operatorname{Adeq}(\operatorname{Pred}_{\mathcal M^{-\mathfrak r}}(q),q)
+\le
+L_{\mathfrak r}\kappa_{S,B}(\mathfrak r\mid q)
+\tag{P.16b.9.3a}
+$$
+for a finite constant $L_{\mathfrak r}\ge0$. Then
+$$
+0
+\le
+MP_B(\mathcal M)-MP_B(\mathcal M^{-\mathfrak r})
+\le
+L_{\mathfrak r}\nu_{S,B}(\mathfrak r).
+\tag{P.16b.9.3b}
+$$
+If, in addition,
+$$
+c_{\mathfrak r}
+:=
+SC_B(\mathcal M)-SC_B(\mathcal M^{-\mathfrak r})>0,
+$$
+then the PCE objective strictly prefers $\mathcal M^{-\mathfrak r}$ whenever
+$$
+c_{\mathfrak r}
+>
+\lambda L_{\mathfrak r}\nu_{S,B}(\mathfrak r).
+\tag{P.16b.9.3c}
+$$
+This is a sufficient pairwise comparison, not a uniqueness claim for the global PCE minimizer.
+
+*Proof.* For every $q$, the Markov-kernel normalization gives
+$$
+\sum_{\mathfrak r\in\mathcal F_{S,B}^{\mathrm{act}}}
+\kappa_{S,B}(\mathfrak r\mid q)=1.
+$$
+The active role set is finite, so integration and summation commute and yield
+$$
+\sum_{\mathfrak r}\nu_{S,B}(\mathfrak r)
+=
+\int_{\mathsf Q_{S,B}}1\,d\mu_{S,B}=1.
+$$
+The kernel is indexed by quotient points of $\mathcal F_{S,B}$, so changing a content representative within the same budget-level natural-isomorphism class changes neither $\kappa_{S,B}$ nor $\nu_{S,B}$.
+
+Integrating (P.16b.9.3a) against $\mu_{S,B}$ gives (P.16b.9.3b) by the definition of $MP_B$ and Equation (P.16b.9.1c). Put
+$$
+\Delta MP_B
+=
+MP_B(\mathcal M)-MP_B(\mathcal M^{-\mathfrak r}).
+$$
+The objective change under deletion is
+$$
+\mathcal F_{\mathrm{PCE},B}(\mathcal M^{-\mathfrak r})
+-
+\mathcal F_{\mathrm{PCE},B}(\mathcal M)
+=
+-c_{\mathfrak r}+\lambda\Delta MP_B.
+$$
+By (P.16b.9.3b), this is at most
+$$
+-c_{\mathfrak r}
++
+\lambda L_{\mathfrak r}\nu_{S,B}(\mathfrak r),
+$$
+which is strictly negative under (P.16b.9.3c). ∎
+
+**Remark P.16b.9.3d (Scope of Occupancy).** Occupancy is not engagement depth, abstraction level, importance, or retention priority. It affects a PCE comparison only through an explicit adequacy envelope such as (P.16b.9.3a), together with the complete cost difference on one fixed branch.
 
 **Definition P.16b.9.4 (Exact Shape).**
 
@@ -10183,7 +10693,7 @@ The semantic, metric, and creativity structures of Section P.16b do not change g
 On the named branches, Section P.16b establishes:
 
 1. the Liar contradiction requires role collapse;
-2. perspective-indexed closure has a least fixed point and guarded import proof theory;
+2. perspective-indexed closure has a least fixed point and guarded import proof theory, and its global closed relation is analytic on the Borel-registered branch;
 3. finite-support paradox cycles do not explode globally;
 4. Prop-typed local reasoning is classical on the value-compositional branch;
 5. global obstruction is represented by holonomy rather than local contradiction;
@@ -10192,13 +10702,13 @@ On the named branches, Section P.16b establishes:
 8. predictive role equals position in the operational response quotient;
 9. the philosophy-extension ledger has minimal description-arity three on the typed non-collapse and Primitive-Lens Independence branch;
 10. shape recognition plus decompression gives a sound mechanism for structural creative transfer;
-11. provenance, conservative fusion, finite process typing, perspective metrics, and semantic holonomy are separated as distinct semantic structures;
+11. provenance, conservative and expansive fusion, finite process typing, valuation and closure-profile discrepancies, extension firewalls, and semantic holonomy are separated as distinct semantic structures;
 12. statistical self-similarity is a finite empirical branch with theorem-level recurrence statistics;
 13. perspectival self-organization represents engagement as configuration membership;
 14. dual-layer symbolic compression separates retained predictive kernels from local symbolic dressings in collective predictive model presentations;
 15. information projections such as Shannon entropy are many-to-one and do not replace response-presheaf role identity.
 
-*Proof.* Item 1 is Theorem P.16b.1.3. Item 2 is Theorem P.16b.2.4 for least closure and Theorem P.16b.2.7 for guarded import proof theory. Items 3--9 are Theorem P.16b.3.2, Theorem P.16b.4.2, Theorem P.16b.5.2, Theorem P.16b.6.2, Theorem P.16b.6.6, Theorem P.16b.7.4, and Theorem P.16b.8.5 respectively. Item 10 is Theorem P.16b.10.3 for structural decompression, Theorem P.16b.10.4 for annotation-status separation, and Theorem P.16b.10.6 for the creativity algorithm status partition. Item 11 is Theorem P.16b.12.2 for provenance, Theorem P.16b.12.4 for conservative fusion, Theorem P.16b.12.6 for finite process typing, Theorems P.16b.12.8 and P.16b.12.10 for perspective and operational qualia metrics, and Theorems P.16b.5.2, P.16b.12.12, and P.16b.12.13 for semantic holonomy and obstruction separation. Item 12 is Theorem P.16b.13.4 and Theorem P.16b.13.5. Item 13 is Theorem P.16b.14.5. Item 14 is Theorem P.16b.15a.4, Theorem P.16b.15a.5, Corollary P.16b.15a.6, and Theorem P.16b.15a.7. Item 15 is Theorem P.16b.16.4. ∎
+*Proof.* Item 1 is Theorem P.16b.1.3. Item 2 is Theorem P.16b.2.4 for least closure, Theorem P.16b.2.7 for guarded import proof theory, and Theorem P.16b.2.9 for analyticity on the Borel-registered branch. Items 3--9 are Theorem P.16b.3.2, Theorem P.16b.4.2, Theorem P.16b.5.2, Theorem P.16b.6.2, Theorem P.16b.6.6, Theorem P.16b.7.4, and Theorem P.16b.8.5 respectively. Item 10 is Theorem P.16b.10.3 for structural decompression, Theorem P.16b.10.4 for annotation-status separation, and Theorem P.16b.10.6 for the creativity algorithm status partition. Item 11 is Theorem P.16b.12.2 for provenance, Theorems P.16b.12.4 and P.16b.12.8d for conservative and expansive fusion, Theorem P.16b.12.6 for finite process typing, Theorems P.16b.12.8, P.16b.12.8b, and P.16b.12.10 for valuation, closure-profile, and operational qualia discrepancies, Theorems P.16b.12.4b and P.16b.12.4d for extension leakage and the exact fixed-point firewall criterion, and Theorems P.16b.5.2, P.16b.12.12, and P.16b.12.13 for semantic holonomy and obstruction separation. Item 12 is Theorem P.16b.13.4 and Theorem P.16b.13.5. Item 13 is Theorem P.16b.14.5. Item 14 is Theorem P.16b.15a.4, Theorem P.16b.15a.5, Corollary P.16b.15a.6, and Theorem P.16b.15a.7. Item 15 is Theorem P.16b.16.4. ∎
 
 ---
 
@@ -10255,6 +10765,153 @@ $$
 
 *Proof.* The fused base kernel is contained in each parent base kernel, and the fused CPA guard is true only when both parent guards are true. Reflexivity is shared by all perspectives. If a fused judgment is derived by Trans, the induction hypothesis puts both premises in each parent, and the parent Trans rule gives the same conclusion. If it is derived by CPA, the imported premise and the guard are valid in each parent, so the same CPA conclusion is derivable in each parent. Induction on proof height proves the claim. ∎
 
+**Definition P.16b.12.4a (Self-Indexed Sector and Monotone Extension).**
+
+For a fixed intrinsic perspective $p$, define the protected tuple set
+$$
+Q_p
+:=
+\left\{
+(s,u,a,c)\in D:
+s=p\ \text{or}\ u=p
+\right\}
+$$
+and the self-indexed part of the closed relation by
+$$
+R_p^{\star,\mathrm{self}}
+:=
+R_p^\star\cap Q_p.
+$$
+A monotone extension replaces the closure operator $T$ by an operator $T'$ obtained by adjoining base entries and/or guard permissions, so that
+$$
+T(A)\subseteq T'(A)
+\qquad(A\in\mathcal L).
+$$
+Write $R^\star$ and $R^{\star\prime}$ for the respective least fixed points.
+
+**Theorem P.16b.12.4b (Guard-Only Leakage into the Self-Indexed Sector).**
+
+Requiring every new guard to have target intrinsic perspective different from $p$ does not preserve $R_p^{\star,\mathrm{self}}$. Leakage may occur even when no base kernel changes.
+
+*Proof.* Let $p,t,u$ be distinct, set $P=\{p,t,u\}$ and $q:=t$, and choose distinct $a,b,c\in V$. Apart from reflexive entries, take
+$$
+R_p^\circ=\{(p,t,a,b)\},
+\qquad
+R_q^\circ=\{(t,u,b,c)\}
+$$
+with all other base entries absent and every original CPA entry equal to zero. Then $(p,u,a,c)\notin R_p^\star$. Extend only the guard by setting
+$$
+\mathrm{CPA}'_p(q,u)=1,
+\qquad u\ne p.
+$$
+The CPA rule now derives
+$$
+(p,u,a,c)\in R_p^{\star\prime}.
+$$
+Its source has intrinsic perspective $p$, so it belongs to $Q_p$. Hence the self-indexed sector grows although no base entry was added and the new guard target is not $p$. ∎
+
+**Definition P.16b.12.4c (Fixed-Point Extension Firewall Certificate).**
+
+A *fixed-point extension firewall certificate* for $p$ is a family
+$$
+I=(I_r)_{r\in P}\in\mathcal L
+$$
+such that
+$$
+T'(R^\star\cup I)\subseteq R^\star\cup I
+\tag{P.16b.12.1}
+$$
+componentwise and
+$$
+I_p\cap Q_p=\varnothing.
+\tag{P.16b.12.2}
+$$
+Condition (P.16b.12.1) is an inductive invariant for all new seeds, newly enabled CPA instances, transitive composites, and cross-evaluator feedback. It cannot be replaced by a condition on new base edges alone.
+
+**Theorem P.16b.12.4d (Exact Fixed-Point Firewall Criterion).**
+
+For a monotone extension,
+$$
+R_p^{\star\prime}\cap Q_p
+=
+R_p^\star\cap Q_p
+\tag{P.16b.12.3}
+$$
+if and only if a fixed-point extension firewall certificate of Definition P.16b.12.4c exists.
+
+*Proof.* Suppose $I$ is such a certificate. Equation (P.16b.12.1) makes $R^\star\cup I$ a prefixed point of $T'$. Leastness gives
+$$
+R^{\star\prime}\subseteq R^\star\cup I.
+$$
+Since $T\le T'$, monotonicity of least fixed points gives
+$$
+R^\star\subseteq R^{\star\prime}.
+$$
+Intersecting the two inclusions in the $p$-component with $Q_p$ and using (P.16b.12.2) proves (P.16b.12.3).
+
+Conversely, suppose (P.16b.12.3) holds and set
+$$
+I_r:=R_r^{\star\prime}\setminus R_r^\star
+\qquad(r\in P).
+$$
+Then $R^\star\cup I=R^{\star\prime}$, so
+$$
+T'(R^\star\cup I)=R^{\star\prime}=R^\star\cup I,
+$$
+and (P.16b.12.3) gives $I_p\cap Q_p=\varnothing$. Thus $I$ is a firewall certificate. ∎
+
+**Definition P.16b.12.4e (Semantic-to-Self-Model Factorization Certificate).**
+
+Let $E$ be a registered physical pattern in the domain of Definition M.10.2, and let $S$ satisfy that definition's identifiable-stratum and self/external splitting hypotheses for $E$. A semantic-to-self-model factorization certificate for evaluating perspective $p$ consists of a registered update map
+$$
+\Delta\Phi_S(R^\star,R^{\star\prime})
+\in T_{M_S}\mathcal M_S
+$$
+satisfying
+$$
+\Delta M_S(E)
+=
+\Delta\Phi_S(R^\star,R^{\star\prime}),
+\tag{P.16b.12.4e.1}
+$$
+and a map $\Psi_S$ such that
+$$
+\operatorname{pr}_{\mathrm{self}}
+\Delta M_S(E)
+=
+\Psi_S\!\left(
+R_p^\star\cap Q_p,\,
+R_p^{\star\prime}\cap Q_p
+\right),
+\tag{P.16b.12.4}
+$$
+with
+$$
+\Psi_S(A,A)=0
+\tag{P.16b.12.5}
+$$
+for every retained self-indexed sector $A$. Merely assigning semantic sectors to namesake model components does not imply the factorization (P.16b.12.4).
+
+**Corollary P.16b.12.4f (Conditional Zero-Reflexivity Transport).**
+
+If a monotone extension has a fixed-point firewall certificate for $p$ and $S$ has the factorization certificate of Definition P.16b.12.4e, then
+$$
+\Delta M_S^{(\mathrm{self})}(E)=0,
+\qquad
+\sigma_S(E)=0.
+$$
+If the baseline-invariance condition
+$$
+\Pi_S^{(0)}(\theta_S)=\theta_S
+$$
+also holds, Corollary M.10.3.1 gives
+$$
+\mu_S(E)=\frac1{\alpha_{SPAP}}.
+$$
+No computational, reset, heat, or stress-energy conclusion follows without the independent certificates of Theorems M.10.3 and M.10.7 and Definition B.8.
+
+*Proof.* Theorem P.16b.12.4d gives equality of the two self-indexed sectors. Equations (P.16b.12.4)--(P.16b.12.5) therefore make the self projection of the registered update vanish. Definition M.10.4 gives $\sigma_S(E)=0$, including its zero-total-update convention. The final displayed identity is Corollary M.10.3.1 under its additional hypothesis. ∎
+
 **Definition P.16b.12.5 (Bounded Prop/Proc evaluation system).**
 
 A bounded evaluation system consists of a finite expression set $\mathcal E$, a finite state set $X_E$ for each expression $E$, an evaluation transition map
@@ -10298,6 +10955,140 @@ $$
 |v_p(a)-v_q(a)|+|v_q(a)-v_r(a)|.
 $$
 Summing over $a\in\mathcal A$ and dividing by $|\mathcal A|$ gives the triangle inequality. Distinct perspectives may agree on all retained atoms, so the function can vanish on distinct points. The zero-distance quotient is therefore a metric. ∎
+
+**Definition P.16b.12.8a (Symmetric and Directed Closure-Profile Discrepancies).**
+
+On the Borel-registered branch of Definition P.16b.2.8, let $\mathsf R_p\subseteq Z$ be the analytic closure profile of Theorem P.16b.2.9. Define
+$$
+\Delta_{\mathrm{rel}}(p,q)
+:=
+\lambda(\mathsf R_p\triangle\mathsf R_q)
+\tag{P.16b.12.6}
+$$
+and
+$$
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)
+:=
+\lambda(\mathsf R_p\setminus\mathsf R_q).
+\tag{P.16b.12.7}
+$$
+These are discrepancies between closed judgment relations. They are not the finite valuation discrepancy $d_{\mathcal A}$ unless a separate encoding proves the two constructions equivalent.
+
+**Theorem P.16b.12.8b (Closure-Profile Discrepancy Algebra).**
+
+The function $\Delta_{\mathrm{rel}}$ is a pseudometric. The directed function $\overrightarrow{\Delta}_{\mathrm{rel}}$ is a quasi-pseudometric:
+$$
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert r)
+\le
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)
++
+\overrightarrow{\Delta}_{\mathrm{rel}}(q\Vert r).
+\tag{P.16b.12.8}
+$$
+Moreover,
+$$
+\Delta_{\mathrm{rel}}(p,q)
+=
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)
++
+\overrightarrow{\Delta}_{\mathrm{rel}}(q\Vert p),
+\tag{P.16b.12.9}
+$$
+and
+$$
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)=0
+\quad\Longleftrightarrow\quad
+\mathsf R_p\subseteq\mathsf R_q
+\quad\lambda\text{-almost everywhere}.
+\tag{P.16b.12.10}
+$$
+
+*Proof.* All sets in the definitions are measurable in the completion $\lambda$. Nonnegativity, symmetry, and diagonal vanishing of $\Delta_{\mathrm{rel}}$ are immediate. The inclusion
+$$
+A\triangle C
+\subseteq
+(A\triangle B)\cup(B\triangle C)
+$$
+gives its triangle inequality. Likewise,
+$$
+A\setminus C
+\subseteq
+(A\setminus B)\cup(B\setminus C)
+$$
+gives (P.16b.12.8). The disjoint decomposition
+$$
+A\triangle B
+=(A\setminus B)\sqcup(B\setminus A)
+$$
+gives (P.16b.12.9). Finally, a nonnegative measure of a set difference vanishes exactly when that difference is null, which is (P.16b.12.10). ∎
+
+**Definition P.16b.12.8c (Expansive Fusion on a Registered Ambient Layer).**
+
+Let $p,q,p\boxplus q$ be validating perspectives already registered in one common layer. The expansive fusion is specified by
+$$
+R_{p\boxplus q}^{\circ}
+=
+R_p^\circ\cup R_q^\circ
+$$
+and
+$$
+\mathrm{CPA}_{p\boxplus q}(r,u)=1
+\quad\Longleftrightarrow\quad
+\mathrm{CPA}_p(r,u)=1
+\ \text{or}\
+\mathrm{CPA}_q(r,u)=1.
+$$
+Registration in one ambient layer is required so that every imported premise has the same type and the parent closures are not silently replaced by closures from a different system.
+
+**Theorem P.16b.12.8d (Qualified Fusion Orientation).**
+
+For the conservative and expansive fusions registered in one Borel layer,
+$$
+R_{p\boxtimes q}^\star
+\subseteq
+R_p^\star\cap R_q^\star,
+\qquad
+R_p^\star\cup R_q^\star
+\subseteq
+R_{p\boxplus q}^\star.
+\tag{P.16b.12.11}
+$$
+Consequently,
+$$
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\boxtimes q\Vert p)=0,
+\qquad
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert p\boxplus q)=0,
+\tag{P.16b.12.12}
+$$
+and the analogous identities hold with $q$. A reverse excess is positive exactly when the corresponding set difference has positive $\lambda$-measure. The symmetric discrepancy records the magnitude of the difference but not which inclusion direction holds.
+
+*Proof.* The first inclusion is Theorem P.16b.12.4. For the second, induct on a labeled proof at $p$. A Base conclusion is a base conclusion at $p\boxplus q$ because of the kernel union. Reflexivity is shared. Transitivity is preserved by the induction hypothesis. In a CPA step, the left premise transfers by induction, the imported premise retains its original validating perspective, and every guard true at $p$ is true at $p\boxplus q$ by disjunction. Hence $R_p^\star\subseteq R_{p\boxplus q}^\star$; the proof for $q$ is identical. Equations (P.16b.12.12) follow from (P.16b.12.10). The reverse and symmetric statements follow from (P.16b.12.9). ∎
+
+**Corollary P.16b.12.8e (Descriptor and Import Boundaries).**
+
+The equality
+$$
+\Delta_{\mathrm{rel}}(p,q)=0
+$$
+asserts equality of the two closure profiles only modulo $\lambda$-null sets. It implies neither equality of the underlying perspectives nor operational equivalence of content items without a registered map
+$$
+\kappa:\mathcal E\to\mathsf{Cont}_S
+$$
+and a separation proof
+$$
+\Delta_{\mathrm{rel}}(p,q)=0
+\Longrightarrow
+\mathcal R_{\kappa(p)}^S\cong\mathcal R_{\kappa(q)}^S
+\qquad(p,q\in\mathcal E).
+\tag{P.16b.12.13}
+$$
+Likewise,
+$$
+\overrightarrow{\Delta}_{\mathrm{rel}}(p\Vert q)=0
+$$
+does not assert inclusion of every individual judgment. Exact import requires either a separate exact-inclusion certificate or a finite retained branch on which every retained judgment has strictly positive $\lambda$-mass.
+
+*Proof.* The first assertion is Theorem P.16b.12.8b applied in both directions. Equation (P.16b.12.13) is additional response-presheaf data, not a consequence of measure-zero equality. The directed assertion is exactly the distinction between almost-everywhere and pointwise inclusion in (P.16b.12.10). ∎
 
 **Definition P.16b.12.9 (Operational qualia metric).**
 
@@ -10589,6 +11380,80 @@ If the cogito-origin separating branch is assumed, $o_S$ is the unique zero-radi
 
 *Proof.* The Lipschitz property is the triangle inequality for distance from a fixed point. Uniqueness of the zero follows from the separating-origin condition: $d_{Q,S}(q,o_S)=0$ implies equality in the metric quotient, hence operational equivalence to the cogito origin. ∎
 
+**Definition P.16b.14.9a (Budget-Relative Engagement Depth).**
+
+Fix a finite predictive budget $B$ and use the budget-level content domain $\mathsf{Cont}_{S,B}$, response presheaves $\mathcal R_c^{S,B}$, role quotient $\mathcal F_{S,B}$, and role map $\operatorname{Role}_{S,B}$ of Definition P.16b.9.1a. Let $\mathcal A_{S,B}(q)$ be the registered budget restriction of the active response configuration $\mathcal A_S(q)$, and require it to be a response presheaf on the same budget category. For each $c\in\mathsf{Cont}_{S,B}$, define
+$$
+\mathrm{Eng}_{S,B}(c)
+=
+\left\{
+q\in Q_S:
+\mathcal A_{S,B}(q)
+\text{ contains a subpresheaf naturally isomorphic to }
+\mathcal R_c^{S,B}
+\right\}.
+\tag{P.16b.14.9a.1}
+$$
+
+Assume the retained-metric branch on which $d_{Q,S}$ and $o_S$ survive the budget quotient and $d_{Q,S}$ is constant on every configuration identification made by $B$. Define
+$$
+r_{S,B}(c)
+:=
+\inf_{q\in\mathrm{Eng}_{S,B}(c)}d_{Q,S}(q,o_S)
+\in[0,+\infty],
+\tag{P.16b.14.9a.2}
+$$
+with $r_{S,B}(c)=+\infty$ when $\mathrm{Eng}_{S,B}(c)=\varnothing$. If the retained-metric branch is absent, $r_{S,B}$ is undefined rather than evaluated after its distinctions have been discarded.
+
+**Theorem P.16b.14.9b (Role Descent, Hausdorff Stability, and the Zero-Depth Criterion).**
+
+The following statements hold on the branch of Definition P.16b.14.9a.
+
+1. For $c,c'\in\mathsf{Cont}_{S,B}$, if
+   $$
+   \operatorname{Role}_{S,B}(c)=\operatorname{Role}_{S,B}(c'),
+   $$
+   then
+   $$
+   \mathrm{Eng}_{S,B}(c)=\mathrm{Eng}_{S,B}(c')
+   \quad\text{and}\quad
+   r_{S,B}(c)=r_{S,B}(c').
+   \tag{P.16b.14.9b.1}
+   $$
+   Hence engagement depth descends to a function
+   $$
+   r_{S,B}:\mathcal F_{S,B}\longrightarrow[0,+\infty].
+   $$
+
+2. If $A=\mathrm{Eng}_{S,B}(c)$ and $A'=\mathrm{Eng}_{S,B}(c')$ are nonempty and their Hausdorff distance $d_H(A,A')$ induced by $d_{Q,S}$ is finite, then
+   $$
+   |r_{S,B}(c)-r_{S,B}(c')|
+   \le d_H(A,A').
+   \tag{P.16b.14.9b.2}
+   $$
+
+3. For every $c\in\mathsf{Cont}_{S,B}$,
+   $$
+   r_{S,B}(c)=0
+   \quad\Longleftrightarrow\quad
+   o_S\in\overline{\mathrm{Eng}_{S,B}(c)}.
+   \tag{P.16b.14.9b.3}
+   $$
+   If $\mathrm{Eng}_{S,B}(c)$ is closed, zero depth is equivalent to $o_S\in\mathrm{Eng}_{S,B}(c)$.
+
+*Proof.* Equality of budget-level roles is the natural isomorphism $\mathcal R_c^{S,B}\cong\mathcal R_{c'}^{S,B}$. By transitivity of natural isomorphism, a subpresheaf of $\mathcal A_{S,B}(q)$ is naturally isomorphic to $\mathcal R_c^{S,B}$ if and only if it is naturally isomorphic to $\mathcal R_{c'}^{S,B}$. This proves (P.16b.14.9b.1) and descent to $\mathcal F_{S,B}$.
+
+For item 2, put $h=d_H(A,A')$. Given $q\in A$ and $\epsilon>0$, choose $q'\in A'$ with $d_{Q,S}(q,q')\le h+\epsilon$. The triangle inequality gives
+$$
+d_{Q,S}(q',o_S)
+\le d_{Q,S}(q,o_S)+h+\epsilon.
+$$
+Taking the infimum first over $q'\in A'$, then over $q\in A$, and then letting $\epsilon\downarrow0$ gives $r_{S,B}(c')\le r_{S,B}(c)+h$. Interchanging $A$ and $A'$ proves (P.16b.14.9b.2).
+
+If $o_S$ belongs to the closure of the engagement region, points of that region occur at arbitrarily small distance from $o_S$, so the infimum is zero. Conversely, if the infimum is zero, for every $n\ge1$ choose $q_n$ in the engagement region with $d_{Q,S}(q_n,o_S)<1/n$; then $q_n\to o_S$, proving closure membership. Closedness converts closure membership into membership. ∎
+
+**Remark P.16b.14.9c (Scope of Engagement Depth).** Engagement depth is a budget-relative radial diagnostic defined only for $c\in\mathsf{Cont}_{S,B}$ on the retained-metric branch. It is not, without a separately registered bridge, a measure of importance, awareness, abstraction level, causal centrality, retention priority, or uniqueness of the cogito-associated role. Distinct role classes may have zero depth because their engagement regions can all accumulate at $o_S$.
+
 **Theorem P.16b.14.10 (Operational qualia are configurations).**
 
 Within PU's operational domain, qualia are active configurations of $Q_S$ as registered by the organismic response structure. They are not additional decorations attached to configurations.
@@ -10743,6 +11608,57 @@ d_K
 $$
 
 Two dressed symbols $\mathsf S_\Gamma(x)$ and $\mathsf S_{\Gamma'}(y)$ are predictive-kernel equivalent at tolerance $\epsilon$ when their decoded roles are within $\epsilon$ in $d_K$. In the zero-tolerance branch where the retained probes separate kernel roles, this reduces to equality in $\mathcal F_{\mathcal S}^{\mathrm{col}}$.
+
+**Definition P.16b.15a.3a (Individual-to-Collective Role Bridge).**
+
+Fix an individual finite predictive budget $B_{\mathrm{ind}}$ in the sense of Definition P.16d.0.1, a collective presentation cost cap $B_{\mathrm{col}}$ in the sense of Definition P.16b.15a.1, and all population, protocol, tolerance, probe, decoder, and quotient data used by Definition P.16b.15a.3. For a retained individual role $\mathfrak s_*\in\mathcal F_{S,B_{\mathrm{ind}}}$ and a retained collective identity kernel $K_*^{\mathrm{id}}\in\mathsf{Cont}_{\mathcal S}$, an individual-to-collective role bridge is a registered partial map
+$$
+J_{S,B_{\mathrm{ind}}\to\mathcal S,B_{\mathrm{col}}}:
+\mathcal F_{S,B_{\mathrm{ind}}}
+\dashrightarrow
+\mathcal F_{\mathcal S}^{\mathrm{col}}
+\tag{P.16b.15a.11a}
+$$
+defined at $\mathfrak s_*$ and calibrated by a number $\eta\ge0$ satisfying
+$$
+d_K\!\left(
+J_{S,B_{\mathrm{ind}}\to\mathcal S,B_{\mathrm{col}}}(\mathfrak s_*),
+\operatorname{Role}_{\mathcal S}(K_*^{\mathrm{id}})
+\right)
+\le\eta.
+\tag{P.16b.15a.11b}
+$$
+There is no canonical bridge between the individual and collective quotients; without a registered map and a common comparison branch, their roles cannot be equated.
+
+**Theorem P.16b.15a.3b (Retained-to-Transmitted Role Bound).**
+
+Assume Definition P.16b.15a.3a. Let $D_\Gamma(K_*^{\mathrm{id}})$ be a local dressing whose decoded content is $\epsilon$-kernel-adequate:
+$$
+d_K\!\left(
+\operatorname{Role}_{\mathcal S}\!\left(
+\operatorname{Dec}_\Gamma(D_\Gamma(K_*^{\mathrm{id}}))
+\right),
+\operatorname{Role}_{\mathcal S}(K_*^{\mathrm{id}})
+\right)
+\le\epsilon.
+\tag{P.16b.15a.11c}
+$$
+Then
+$$
+d_K\!\left(
+J_{S,B_{\mathrm{ind}}\to\mathcal S,B_{\mathrm{col}}}(\mathfrak s_*),
+\operatorname{Role}_{\mathcal S}\!\left(
+\operatorname{Dec}_\Gamma(D_\Gamma(K_*^{\mathrm{id}}))
+\right)
+\right)
+\le\eta+\epsilon.
+\tag{P.16b.15a.11d}
+$$
+If $\eta=\epsilon=0$ and $d_K$ separates the two compared roles on the registered domain, the bridged individual role and decoded collective role are equal in $\mathcal F_{\mathcal S}^{\mathrm{col}}$. Without separation, only zero pseudometric distance follows.
+
+*Proof.* Apply the triangle inequality for $d_K$ through the intermediate point $\operatorname{Role}_{\mathcal S}(K_*^{\mathrm{id}})$ and use (P.16b.15a.11b)–(P.16b.15a.11c). When both bounds vanish, the resulting distance is zero; separation converts zero distance into equality. ∎
+
+**Remark P.16b.15a.3c (Identity Scope).** The bound compares a retained individual role, a registered collective kernel, and one decoded transmission on fixed branches. It identifies neither legal nor metaphysical identity and does not imply persistence after a change of population, budget, protocol family, tolerance, probe family, or decoder unless a registered continuation map transports the compared quotients.
 
 **Theorem P.16b.15a.4 (Adequate-Dressing Bound for a Fixed Predictive Kernel).**
 
@@ -10927,6 +11843,7 @@ The zero of a profile cost identifies the cogito only on the separating-origin b
 | Theorem P.16b.1.3 | Liar contradiction requires role collapse | theorem-level semantic algebra |
 | Theorem P.16b.2.4 | Least perspective closure exists | theorem-level lattice theorem |
 | Theorem P.16b.2.7 | Labeled proof system is sound and complete | theorem-level |
+| Theorem P.16b.2.9 | Global closure relation is analytic and its evaluator sections are universally measurable | theorem-level on the Borel-registered branch |
 | Theorem P.16b.3.2 | Finite-support no-explosion | theorem-level on finite-support branch |
 | Theorem P.16b.4.2 | Prop-typed expressions are locally classical | theorem-level on value-compositional Prop branch |
 | Theorem P.16b.5.2 | Global section iff holonomy is trivial and overlaps are compatible | theorem-level finite-atlas theorem |
@@ -10934,14 +11851,22 @@ The zero of a profile cost identifies the cogito only on the separating-origin b
 | Theorem P.16b.6.6 | Cogito is unique zero only on separating-origin branch | theorem-level branch theorem |
 | Theorem P.16b.7.4 | Predictive role-position equivalence | theorem-level quotient theorem |
 | Theorem P.16b.8.5 | Description-arity equals three for the core semantic ledger | theorem-level on typed non-collapse and Primitive-Lens Independence branch |
-| Theorem P.16b.9.2 | Over-budget task families force compression | theorem-level finite-resource theorem |
+| Definition P.16b.9.1a | Budget-level response roles and query-to-role occupancy | definition on a fixed finite-budget comparison branch |
+| Theorem P.16b.9.2 | An exhaustive registered presentation grammar, cap-feasible viability, and an enumerative-cost infimum above the cap force a shared-structure presentation | theorem-level finite-resource theorem on the registered grammar and common-cost branch |
+| Theorem P.16b.9.3a | A registered occupancy envelope yields an integrated deletion bound and sufficient pairwise PCE criterion | theorem-level on the fixed query-law and feasible-deletion branch |
 | Theorem P.16b.10.3 | Structural decompression is sound | theorem-level |
 | Theorem P.16b.10.4 | Annotation transfer is hypothesis generation | theorem-level status separation |
 | Theorem P.16b.10.6 | Creativity algorithm has theorem/error/hypothesis output statuses | theorem-level |
 | Theorem P.16b.12.2 | Derivable perspective judgments have finite provenance | theorem-level |
 | Theorem P.16b.12.4 | Conjunctive fusion is conservative | theorem-level |
+| Theorem P.16b.12.4b | A guard-only extension can leak into the self-indexed sector | theorem-level finite counterexample |
+| Theorem P.16b.12.4d | Self-sector preservation is equivalent to existence of a fixed-point firewall invariant | theorem-level lattice criterion |
+| Corollary P.16b.12.4f | Firewall transport gives $\sigma_S=0$ only through the semantic-to-self-model factorization certificate | certificate-level bridge |
 | Theorem P.16b.12.6 | Finite Prop/Proc classification criterion | theorem-level on bounded-evaluation branch |
 | Theorem P.16b.12.8 | Perspective discrepancy is a pseudometric | theorem-level |
+| Theorem P.16b.12.8b | Closure-profile symmetric discrepancy is a pseudometric and directed discrepancy is a quasi-pseudometric | theorem-level on the Borel-registered branch |
+| Theorem P.16b.12.8d | Directed discrepancy records qualified fusion inclusion orientation | theorem-level on the common ambient-layer branch |
+| Corollary P.16b.12.8e | Measure-zero profile agreement does not by itself imply exact import or operational identity | theorem-level scope boundary |
 | Theorem P.16b.12.10 | Operational qualia metric descends to a metric quotient | theorem-level on retained-test branch |
 | Theorem P.16b.12.12 | Nontrivial signed holonomy obstructs a global Boolean section | theorem-level finite-atlas theorem |
 | Theorem P.16b.12.13 | Role, process, and holonomy obstructions are distinct | theorem-level branch synthesis |
@@ -10950,9 +11875,11 @@ The zero of a profile cost identifies the cogito only on the separating-origin b
 | Theorem P.16b.14.5 | Engagement is internal configuration membership | theorem-level on self-organization branch |
 | Theorem P.16b.14.8 | Recognition is shape-coherent self-reconfiguration | branch-level representation theorem |
 | Theorem P.16b.14.9 | Cogito radial coordinate is 1-Lipschitz and unique on separating branch | theorem-level metric result |
+| Theorem P.16b.14.9b | Budget-relative engagement depth descends to response roles, is Hausdorff-stable, and vanishes exactly at origin adherence | theorem-level on the retained-metric branch |
 | Theorem P.16b.14.10 | Operational qualia are active configurations | branch-level boundary theorem |
 | Theorem P.16b.14.11 | Creativity is reconfiguration plus decompression/export | branch-level integration theorem |
 | Proposition P.16b.15.2 | Fractal-like psyche claim follows conditionally from SSSH on natural traces | conditional empirical branch |
+| Theorem P.16b.15a.3b | A registered individual-to-collective role bridge and one adequate dressing obey the $\eta+\epsilon$ bound | theorem-level pseudometric result on the registered bridge branch |
 | Theorem P.16b.15a.4 | Local symbolic dressings of the same adequate predictive kernel preserve role up to $2\epsilon$ | theorem-level pseudometric result on retained comparison branch |
 | Theorem P.16b.15a.5 | PCE selects compressed symbolic encodings over costlier equal-adequacy enumerations | theorem-level on PCE presentation branch |
 | Corollary P.16b.15a.6 | The cultural-function unit is a collective response-quotient point; adequate dressings are tolerance-controlled encodings on a common comparison branch | theorem-level semantic compression corollary |
@@ -10967,109 +11894,95 @@ The zero of a profile cost identifies the cogito only on the separating-origin b
 
 ### P.16c.0 Standing and Scope
 
-This section records the philosophical form of Appendix A.6. It does not add a fourth axiom, a new postulate, or a new physical branch. It gives the conservative reading of the existing formal apparatus:
-
+This section records the philosophical form of Appendix A.6. It adds no axiom, postulate, or physical branch. Its theorem-level content is the conjunction of two separately stated results:
 $$
-\text{incompleteness is not contained by a complete axiom system;}
+\text{same-cycle live-diagonal non-closure}
 $$
-
-rather,
-
+and
 $$
-\text{stable axiom-like structure is generated as the finite response to non-closure.}
+\text{a finite verified prediction-update cycle satisfying Theorem A.6.4}
+\Longrightarrow
+\text{a stable local axiom-stabilizer}.
 $$
-
-The claim is not that incompleteness alone uniquely derives ZFC, type theory, the Standard Model, or any particular completed formalism. The claim is narrower and theorem-level inside PU: once a predictor has the SPAP-capable self-referential structure of Appendix A, total internal reflexive self-closure is impossible, and any nontrivial verified prediction-update cycle must operate through stable finite partial closures.
+The live-diagonal obstruction alone neither constructs nor uniquely selects a formal system. Historical or external processing of the targeted sentence remains possible. No claim is made that the conjunction uniquely derives ZFC, type theory, the Standard Model, or any other completed formalism.
 
 ### P.16c.1 Generative non-closure reading
 
-**Definition P.16c.1 (Generative non-closure reading).** A PU presentation has the **generative non-closure reading** when the following identifications are made.
+**Definition P.16c.1 (Generative non-closure reading).** A PU presentation has the **generative non-closure reading** when:
 
-1. The primitive obstruction is the impossibility of total internal reflexive self-closure established by Theorem A.6.2.
-2. The admissible internal replacements for total closure are the stable axiom-stabilizers of Definition A.6.3.
-3. The ordinary formal roles of axioms, inference rules, verification predicates, typing restrictions, bridge laws, and response quotients are read as finite partial-closure boundaries.
-4. PCE selects least-cost representatives of these boundaries when the relevant existence hypotheses for a PCE minimum hold.
-5. PPI admits only those abstract structures whose retained distinctions have finite protocol-response instantiation.
+1. the primitive obstruction is the absence of a total standard-sound same-cycle Boolean closure on a live-diagonal-complete active domain, as established by Theorem A.6.2;
+2. every stable axiom-stabilizer is the local finite object defined in Definition A.6.3;
+3. axioms, inference rules, verification predicates, typing restrictions, bridge laws, and response quotients are read as finite partial-closure boundaries only on prediction-update cycles satisfying Theorem A.6.4;
+4. PCE selects a least-cost representative only when the relevant minimum exists;
+5. PPI admits only distinctions with finite protocol-response instantiation.
 
-Under this reading, incompleteness is not an additional item placed inside an otherwise complete formal container. It is the obstruction that forces finite containers to form.
+**Theorem P.16c.2 (Axioms as stabilization boundaries).** Every nontrivial finite prediction-update cycle satisfying all hypotheses of Theorem A.6.4 induces a stable partial-closure boundary. Conversely, every stable axiom-stabilizer supplies an axiom-like local formal system on its retained response domain.
 
-**Theorem P.16c.2 (Axioms as stabilization boundaries).** In the PU formal setting, every axiom-like structure generated by the retained domain of a nontrivial finite prediction-update cycle is a stable partial closure boundary in the sense of Appendix A.6. Conversely, every stable axiom-stabilizer supplies an axiom-like local formal system for its retained response domain.
-
-*Proof.* Let a nontrivial finite prediction-update cycle be given. By Theorem A.6.4 it induces a stable axiom-stabilizer
-
+*Proof.* The forward direction is Theorem A.6.4. For the converse, a stable tuple
 $$
 \mathfrak A_{S,B}
 =
-(D_{S,B},J_{S,B},\vdash_{S,B},V_{S,B},q_{S,B}).
+(D_{S,B},J_{S,B},\vdash_{S,B},V_{S,B},q_{S,B})
+$$
+supplies accepted seeds, a retained inference/update relation, a verification predicate, and a response quotient. These are exactly the local data of an axiom-like formal system on $D_{S,B}$. The live-diagonal guard prevents this local system from being read as a total same-cycle truth predicate. ∎
+
+**Corollary P.16c.3 (Predictionism as axiom-generation).** On the conjunction of Theorem A.6.2 and the independent hypotheses of Theorem A.6.4,
+$$
+\text{same-cycle live-diagonal non-closure}
++
+\text{guarded finite verified prediction}
+\Longrightarrow
+\text{stable local axiom-stabilizer}.
 $$
 
-The components of this tuple have exactly the local roles of a formal system: $J_{S,B}$ supplies accepted seeds, $\vdash_{S,B}$ supplies rules, $V_{S,B}$ supplies retained verification, and $q_{S,B}$ supplies the equality or quotient relation under which redundant labels are removed. The diagonal guard prevents the stabilizer from becoming an illicit total internal truth predicate. This proves that every axiom-like structure generated by the retained finite domain of the cycle is a stable partial closure boundary.
+*Proof.* Theorem A.6.2 gives the same-cycle obstruction. Remark A.0.1.1 gives the finite verification cut for the declared protocol. Theorem A.6.4 constructs the stabilizer from the independently supplied finite-cycle hypotheses. ∎
 
-Conversely, given a stable axiom-stabilizer, the same tuple supplies seeds, rules, verification, and quotienting on its retained response domain. That is an axiom-like local formal system. ∎
-
-**Corollary P.16c.3 (Predictionism as axiom-generation).** Predictionism can be stated in generative-non-closure form:
-
+**Theorem P.16c.4 (Conservative inversion of the usual axiom-incompleteness order).** Under the effectiveness, arithmetic-strength, and consistency or soundness hypotheses of the particular incompleteness theorem being invoked, its ordinary schematic presentation is
 $$
-\text{reflexive non-closure}
+\text{effective axiomatization}
 \Longrightarrow
-\text{finite distinction}
+\text{diagonal fixed point}
 \Longrightarrow
-\text{verification cut}
-\Longrightarrow
-\text{logic}
-\Longrightarrow
-\text{stable partial closure}.
+\text{relative incompleteness}.
 $$
-
-*Proof.* The impossibility of total reflexive closure is Theorem A.6.2. A nontrivial prediction-update cycle must nevertheless distinguish accepted from non-accepted responses, and Remark A.0.1.1 identifies this distinction with a binary verification cut. Propositions A.0.1-A.0.2 derive the corresponding Boolean operations from verification. Theorem A.6.4 then packages the retained verified update domain as a stable axiom-stabilizer. ∎
-
-**Theorem P.16c.4 (Conservative inversion of the usual axiom-incompleteness order).** Within PU, the ordinary explanatory order
-
+This presentation admits the following conservative PU reading:
 $$
-\text{axioms}
+\left[
+\text{same-cycle live-diagonal non-closure}
++
+\text{guarded finite verified prediction}
+\right]
 \Longrightarrow
-\text{self-reference}
+\text{stable finite partial closure}
 \Longrightarrow
-\text{incompleteness}
+\text{axiom-like local formal structure}.
 $$
+This reading changes no theorem, branch condition, certificate status, or numerical value.
 
-has the conservative equivalent reading
-
-$$
-\text{reflexive non-closure}
-\Longrightarrow
-\text{stable finite partial closures}
-\Longrightarrow
-\text{axiom-like formal structure}.
-$$
-
-This inversion changes no theorem-level result and promotes no branch-conditional or certificate-pending claim to theorem status.
-
-*Proof.* The first chain is the ordinary formal-system presentation: once a sufficiently expressive axiom system represents its own syntax and proof relation, diagonal incompleteness phenomena arise. PU retains that presentation wherever formal proof systems are used.
-
-The second chain follows from Appendix A.6. Theorem A.6.2 supplies reflexive non-closure. Theorem A.6.4 supplies the necessity of stable finite partial closures for nontrivial verified prediction. Definition A.6.3 identifies those closures with the components that play axiom-like roles. Theorem A.6.6 proves that this vocabulary is conservative over the prior apparatus, so no theorem, branch condition, certificate status, or numerical backbone value changes. ∎
+*Proof.* The first display is only a schematic summary under the stated hypotheses of the selected incompleteness theorem. In the second display, Theorem A.6.2 supplies the live-diagonal obstruction and Theorem A.6.4 supplies the stabilizer only after all of its independent finite-cycle hypotheses are assumed. Definition A.6.3 identifies the stabilizer's local formal roles. Theorem A.6.6 gives conservativity. ∎
 
 ### P.16c.5 Relation to ordinary mathematical foundations
 
 The generative-non-closure reading separates three claims.
 
 1. **Ordinary incompleteness claim:** a sufficiently strong fixed formal system may contain true but unprovable sentences relative to that system.
-2. **PU reachability claim:** a PA proof-object may exist while a bounded predictor cannot integrate its proof-content into its own self-model at finite cost.
-3. **Generative-non-closure claim:** because total internal self-closure is impossible, stable local axiom systems arise as finite partial-closure boundaries.
+2. **PU active-access claim:** the time-indexed sentence $E_{S,t}$ cannot be correctly processed by $S$ at the targeted cycle, although external or faithful historical processing may be possible.
+3. **Stable-boundary claim:** a finite prediction-update cycle satisfying Theorem A.6.4 induces a local axiom-stabilizer.
 
-These claims are compatible but not identical. The first is formal-system-relative. The second is predictor-relative. The third is structural: it explains why finite axiom-like boundaries are needed at all.
+The first claim is formal-system-relative, the second is predictor-and-cycle-relative, and the third is conditional on the declared finite-cycle hypotheses. None implies either of the others without the stated bridge assumptions.
 
 ### P.16c.6 Reduction table
 
 | Generative non-closure item | Reduces to | Status |
 |:--|:--|:--|
-| No total internal reflexive self-closure | Theorem A.5.1 and Theorem A.6.2 | theorem-level inside PU |
-| Stable axiom-stabilizer | Definition A.6.3 | definition over existing finite-response apparatus |
-| Necessity of local axiom-like structure | Theorem A.6.4 | theorem-level for nontrivial verified finite prediction |
-| Incompleteness-to-axiom inversion | Theorem P.16c.4 | conservative philosophical theorem |
+| No total standard-sound same-cycle closure on a live-diagonal-complete domain | Theorem A.5.6a.3 and Theorem A.6.2 | theorem-level on the trace-certified active-register domain |
+| Stable axiom-stabilizer | Definition A.6.3 | definition over the finite-response apparatus |
+| Existence of a local axiom-stabilizer | Theorem A.6.4 | theorem-level for cycles satisfying every stated finite-cycle hypothesis |
+| Conservative inversion | Theorem P.16c.4 | conditional philosophical theorem |
 | No promotion of physical branch status | Theorem A.6.6 | theorem-level conservativity guard |
 
 ---
+
 
 ## P.16d Operational Program Modules from the Finite-Response Quotient
 
@@ -11219,6 +12132,53 @@ whenever $B_3\preceq B_2\preceq B_1$. A distinction has physical content at budg
 
 *Proof.* If $X\sim_{B_1}Y$, the defining compatibility of $B_2\preceq B_1$ gives $X\sim_{B_2}Y$, so $\Phi_{B_2\leftarrow B_1}$ is independent of representative. The identity and composition equations follow from applying the same representative $X$ and then taking the appropriate quotient class. The final statement is Corollary P.6.1b.8 and Corollary P.6.1b.8b applied to $Q_B$: a distinction that changes no retained response or map, supplies no certificate role, and lowers no cost is quotient-null; the listed alternatives are exactly the retained channels. ∎
 
+**Definition P.16d.1.2a (Finite Self-Resolution Ratio).** Let $\mathscr X_S^{\mathrm{self}}$ be a registered finite family of complete self-description candidates, each carrying every response, update, verification, certificate, and cost datum required by Definition P.16d.0.1, and assume
+$$
+2\le|\mathscr X_S^{\mathrm{self}}|<\infty.
+$$
+Restrict $\sim_B$ to this family and define
+$$
+\operatorname{Res}_{S,B}(\mathscr X_S^{\mathrm{self}})
+:=
+\frac{\log|\mathscr X_S^{\mathrm{self}}/{\sim_B}|}
+{\log|\mathscr X_S^{\mathrm{self}}|}.
+\tag{P.16d.1.3}
+$$
+The ratio is relative to the registered candidate family; values on different families are not comparable without a registered inclusion, weighting, or transport map.
+
+**Theorem P.16d.1.2b (Self-Resolution Bounds and PRG Monotonicity).** For every family in Definition P.16d.1.2a,
+$$
+0\le\operatorname{Res}_{S,B}(\mathscr X_S^{\mathrm{self}})\le1.
+\tag{P.16d.1.4}
+$$
+The upper equality holds exactly when every $\sim_B$-class in $\mathscr X_S^{\mathrm{self}}$ is a singleton. The lower equality holds exactly when every candidate belongs to one $\sim_B$-class.
+
+If $B_2\preceq B_1$ and the same candidate family is admissible under both budgets, then
+$$
+\operatorname{Res}_{S,B_2}(\mathscr X_S^{\mathrm{self}})
+\le
+\operatorname{Res}_{S,B_1}(\mathscr X_S^{\mathrm{self}}).
+\tag{P.16d.1.5}
+$$
+
+*Proof.* A quotient of a nonempty finite set has between one and the cardinality of that set many classes. Taking logarithms and dividing by the positive denominator in (P.16d.1.3) proves (P.16d.1.4). Equality at the upper endpoint means that the quotient has as many classes as elements, which is equivalent to every class being a singleton. Equality at the lower endpoint means that the quotient has one class.
+
+For $B_2\preceq B_1$, Definition P.16d.1.1 gives
+$$
+X\sim_{B_1}Y\Longrightarrow X\sim_{B_2}Y.
+$$
+Therefore
+$$
+[X]_{B_1}\longmapsto[X]_{B_2}
+$$
+defines a surjection
+$$
+\mathscr X_S^{\mathrm{self}}/{\sim_{B_1}}
+\twoheadrightarrow
+\mathscr X_S^{\mathrm{self}}/{\sim_{B_2}}.
+$$
+The coarser quotient has no more classes. The denominator of (P.16d.1.3) is unchanged because the candidate family is fixed, so (P.16d.1.5) follows. ∎
+
 ---
 
 ### P.16d.2 Finite-Channel Covariance
@@ -11361,6 +12321,98 @@ $$
 $$
 
 *Proof.* A perfect protocol with $\Delta I>0$ would have $\Delta S_{\min}=0$ and no retained disturbance. On the stated branch, Theorem 33 gives (P.16d.6.1), so this is impossible. If the protocol tries instead to predict the full future behavior of the self-modeling system, it becomes a complete self-prediction protocol for a Property-R system and violates SPAP (Theorems 10–11). Therefore a transparency attempt must give up at least one perfection condition: it pays cost, disturbs the retained response class, or remains incomplete. ∎
+
+**Definition P.16d.6.2a (Budget-Relative Self-Description Trace).** Let $S$ satisfy the Effective Operational Property R and self-model domain conditions of Definition M.10.1 and Remark M.10.1. Fix a retained self-model parameter domain $\Theta_{S,B}$, a finite ordered time window $W$, a registered trajectory $\theta_S:W\to\Theta_{S,B}$, a registered admissible candidate family $\mathcal A_{S,B}^{\mathrm{self}}$ serving as the candidate component of a retained program module in Definition P.16d.0.2, and a complete self-description encoder
+$$
+X_{S,B}^{\mathrm{self}}:\Theta_{S,B}\longrightarrow\mathcal A_{S,B}^{\mathrm{self}},
+\tag{P.16d.6.3}
+$$
+where every candidate in $\mathcal A_{S,B}^{\mathrm{self}}$ carries the retained content, response presheaf, update map, verification map, certificate map, decoder, tolerances, and complete cost required by the budget $B$. Define
+$$
+\mathsf{IdClass}_{S,B}(t)
+:=
+\left[X_{S,B}^{\mathrm{self}}(\theta_S(t))\right]_{\sim_B}.
+\tag{P.16d.6.4}
+$$
+The self-description is $B$-persistent on $W$ when this quotient class is constant on $W$. If the candidate family, encoder, or quotient datum changes, persistence is defined only after a registered continuation map identifies the compared quotients.
+
+**Theorem P.16d.6.2b (Persistence Is Retained Response Constancy).** If the self-description is $B$-persistent on $W$, then its retained response presheaves, update maps, verification maps, and certificate maps agree after the fixed $B$-quotient throughout $W$. Under this persistence hypothesis,
+$$
+\theta_S(t)=\theta_S(t')
+\qquad\text{for all }t,t'\in W
+$$
+if and only if the composite
+$$
+\Theta_{S,B}
+\xrightarrow{\ X_{S,B}^{\mathrm{self}}\ }
+\mathcal A_{S,B}^{\mathrm{self}}
+\longrightarrow
+\mathcal A_{S,B}^{\mathrm{self}}/{\sim_B}
+\tag{P.16d.6.5}
+$$
+is injective on the trajectory image $\theta_S(W)$.
+
+*Proof.* Constancy of (P.16d.6.4) is equality under $\sim_B$. Definition P.16d.0.1 makes that equivalence exactly natural isomorphism of the tolerance-quotiented response presheaves together with agreement of the retained update, verification, and certificate maps, proving the first statement. If the composite (P.16d.6.5) is injective on the trajectory image, equality of quotient classes implies equality of the corresponding parameters. Conversely, if it is not injective on that image, two distinct trajectory parameters have the same quotient class, so $B$-persistence does not imply their equality. ∎
+
+**Definition P.16d.6.2c (Audited Generative Self-Description Frontier).** Let $\mathscr A_{S,B}\subseteq\mathcal F_{S,B}$ be a nonempty finite audited role family and $\mathsf P_B^{\mathrm{audit}}$ a nonempty finite retained protocol family. Choose positive weights $a_{\mathfrak r}$ and $w_P$, and for each $P$ a metric $d_{B,P}$ on the natural-isomorphism classes of its tolerance-quotiented responses. Write $\mathcal R_{\mathfrak r}^B(P)$ for the retained response class of any representative of $\mathfrak r$; this is well defined by the budget-level quotient in Definition P.16b.9.1a.
+
+Let $\mathcal G_{S,B}^{\mathrm{self}}$ be a registered candidate class. Each $m\in\mathcal G_{S,B}^{\mathrm{self}}$ has complete code, decoder, and evaluation cost $C_{S,B}^{\mathrm{self}}(m)\ge0$ and generates tolerance-quotiented responses $\mathcal R_{m,\mathrm{gen}}^B(\mathfrak r;P)$. Define
+$$
+D_{S,B}(m)
+=
+\sum_{\mathfrak r\in\mathscr A_{S,B}}a_{\mathfrak r}
+\sum_{P\in\mathsf P_B^{\mathrm{audit}}}w_P
+d_{B,P}\!\left(
+\mathcal R_{\mathfrak r}^B(P),
+\mathcal R_{m,\mathrm{gen}}^B(\mathfrak r;P)
+\right).
+\tag{P.16d.6.6}
+$$
+All weights are positive and all $d_{B,P}$ are metrics, so $D_{S,B}(m)=0$ exactly when every audited response is reproduced. Define
+$$
+K_{S,B}^{\mathrm{exact}}
+:=
+\inf\left\{
+C_{S,B}^{\mathrm{self}}(m):
+m\in\mathcal G_{S,B}^{\mathrm{self}},\ D_{S,B}(m)=0
+\right\},
+\tag{P.16d.6.7}
+$$
+with $\inf\varnothing=+\infty$, and for a scalar cap $b\ge0$ in the units of $C_{S,B}^{\mathrm{self}}$ define
+$$
+D_{S,B}^*(b)
+:=
+\inf\left\{
+D_{S,B}(m):
+m\in\mathcal G_{S,B}^{\mathrm{self}},\
+C_{S,B}^{\mathrm{self}}(m)\le b
+\right\}.
+\tag{P.16d.6.8}
+$$
+Again $\inf\varnothing=+\infty$. The scalar $b$ is an auxiliary cost cap inside the fixed tuple budget $B$; it is not a replacement for $B$.
+All occurrences of exactness in this definition mean exact equality in the retained tolerance quotient, not equality of discarded raw responses.
+
+**Theorem P.16d.6.2d (Exact Generative Obstruction and Cost-Distortion Frontier).** For every scalar cap $b$ in a declared interval, assume the sublevel
+$$
+\mathcal G_b
+:=
+\{m\in\mathcal G_{S,B}^{\mathrm{self}}:C_{S,B}^{\mathrm{self}}(m)\le b\}
+$$
+is nonempty and compact in the retained finite-response topology and $D_{S,B}$ is continuous on $\mathcal G_b$. Then:
+
+1. $D_{S,B}^*(b)$ is attained;
+2. $D_{S,B}^*(b)$ is non-increasing in $b$;
+3. if $b<K_{S,B}^{\mathrm{exact}}$, then $D_{S,B}^*(b)>0$ and no exact audited self-description is feasible at cap $b$;
+4. for every $\lambda_D>0$, each minimizer, if one exists, of
+   $$
+   C_{S,B}^{\mathrm{self}}(m)+\lambda_DD_{S,B}(m)
+   \tag{P.16d.6.9}
+   $$
+   is Pareto-undominated in the registered cost and audited distortion.
+
+*Proof.* Compactness of $\mathcal G_b$ and continuity of $D_{S,B}$ give attainment by the extreme-value theorem. If $b_1\le b_2$, then $\mathcal G_{b_1}\subseteq\mathcal G_{b_2}$, so taking an infimum over the larger set cannot increase the value. If $b<K_{S,B}^{\mathrm{exact}}$, an exact candidate in $\mathcal G_b$ would contradict (P.16d.6.7). By attainment, $D_{S,B}^*(b)=0$ would itself supply such an exact candidate, so $D_{S,B}^*(b)>0$. Finally, if a minimizer of (P.16d.6.9) were dominated by another candidate in both cost and distortion, with at least one strict inequality, positivity of $\lambda_D$ would make the dominating candidate's objective strictly smaller, a contradiction. ∎
+
+**Remark P.16d.6.2e (Non-Equivalence of Self-Limits).** The quotient obstruction $D_{S,B}^*(b)>0$, the diagonal self-prediction obstruction of Theorems 10–11, and the thermodynamic reflexive-opacity bound of Theorem P.16d.6.2 are distinct. None implies either of the others without a registered reduction. In particular, enumerative code length larger than $C_P(S)$ does not prove a generative obstruction, because one shared generator may reproduce many audited responses.
 
 ---
 
@@ -11714,12 +12766,12 @@ $$
 
 | Module | Formal locus | Status |
 |:--|:--|:--|
-| Predictive Renormalization Group | Definition P.16d.1.1, Theorem P.16d.1.2 | theorem-level quotient functor |
+| Predictive Renormalization Group | Definition P.16d.1.1, Theorem P.16d.1.2, Definition P.16d.1.2a, Theorem P.16d.1.2b | theorem-level quotient functor and finite-family resolution monotonicity |
 | Finite-Channel Covariance | Definition P.16d.2.1, Theorem P.16d.2.2 | theorem-level invariance principle |
 | Anomaly-as-Paradox-Residue | Definition P.16d.3.1, Theorem P.16d.3.2 | theorem-level diagnostic |
 | Operational Naturalness | Definition P.16d.4.1, Theorem P.16d.4.2 | theorem-level quotient criterion |
 | Context-State Tomography | Definition P.16d.5.1, Theorem P.16d.5.2 | theorem-level identifiability criterion |
-| Thermodynamic Privacy / Reflexive Opacity | Definition P.16d.6.1, Theorem P.16d.6.2 | theorem-level bound on Property-R branches |
+| Thermodynamic Privacy / Reflexive Opacity | Definition P.16d.6.1, Theorem P.16d.6.2, Definitions P.16d.6.2a and P.16d.6.2c, Theorems P.16d.6.2b and P.16d.6.2d | theorem-level opacity bound plus separate quotient-persistence and cost--distortion diagnostics on their registered branches |
 | Perspective Curvature | Definition P.16d.7.1, Theorem P.16d.7.2 | theorem-level finite-holonomy criterion |
 | Observer Calibration Theory | Definition P.16d.8.1, Theorem P.16d.8.2 | theorem-level response-alignment criterion |
 | Horizon Tomography Beyond Gravity | Definition P.16d.9.1, Theorem P.16d.9.2 | theorem-level kernel criterion |
@@ -11748,11 +12800,13 @@ PPI states a bridge requirement between an abstract operational structure and a 
 * **General relativity:** the Einstein equation requires the operational-continuum, local KMS/Clausius, area-density, Raychaudhuri, conserved-source, and normalization hypotheses stated in Appendices E, F, and the gravity chapters
 * **Vacuum symmetry:** the Monster endpoint requires the independent rank-24 lattice, chiral-VOA, controller, standard-lift, and orbifold certificates of Sections P.13.1–P.13.20
 * **Agency** (single-system, theorem-level) emerges as a trajectory-shaping effect of the cost potential $U_S$ induced by the prohibition set $\mathcal{L}^{\neg}_S$ — the structural complement of the SPAP-admissible region — without requiring any positive carrier substance; coupled-system **unauthored coordination** follows in bias form (Proposition P.16.2, Corollary P.16.1), with the stronger "no coordinator required" reading conditional on Hypothesis 14.5.8 (Section P.16)
-* **Semantic perspective discipline** emerges as a conservative theorem-level package for role-indexed self-reference, perspective-indexed closure, semantic holonomy, cogito-radius geometry, predictive role-position identity, description-arity, and creative decompression on their named branches; it adds no physical primitive and changes no physical branch without an explicit response-presheaf, cost-functional, or certificate change (Section P.16b)
-* **Generative non-closure** gives the conservative pre-axiomatic reading of the framework: total internal reflexive self-closure is impossible for SPAP-capable predictors, so nontrivial verified prediction proceeds through stable finite partial closures. The named axioms, bridge laws, verification cuts, typing guards, PCE quotients, and PPI instantiation rules are the local stabilizers of admissible response domains, not completed self-closure predicates (Appendix A.6; Section P.16c)
-* **Operational program discipline** emerges as a conservative theorem-level package for predictive renormalization, finite-channel covariance, anomaly residue, operational naturalness, context-state tomography, reflexive opacity, perspective curvature, calibration, horizon tomography, experiment selection, self-reference spectroscopy, proof-cost accounting, curriculum sequencing, institutional error correction, AI alignment, intervention budgeting, ontology audit, certificate mining, predictive failure classification, and interface-capacity bounds; it adds no physical primitive and changes no physical branch without an explicit response-presheaf, cost-functional, or certificate change (Section P.16d)
+* **Semantic perspective discipline** emerges as a conservative theorem-level package for role-indexed self-reference, perspective-indexed closure, semantic holonomy, cogito-radius geometry, budget-relative role occupancy and engagement depth, registered individual-to-collective comparison, predictive role-position identity, description-arity, and creative decompression on their named branches; it adds no physical primitive and changes no physical branch without an explicit response-presheaf, cost-functional, or certificate change (Section P.16b)
+* **Generative non-closure** gives a conservative pre-axiomatic reading: no trace-certified predictor has a total standard-sound same-cycle Boolean closure on a domain containing its targeted live diagonal sentence. A stable finite partial closure follows only for cycles satisfying every hypothesis of Theorem A.6.4, including finite-budget retention, verification preservation, and the live-diagonal guard. The named axioms, bridge laws, verification cuts, typing guards, PCE quotients, and PPI instantiation rules are local stabilizers of admissible response domains, not completed self-truth predicates (Appendix A.6; Section P.16c).
+
+* **Operational program discipline** emerges as a conservative theorem-level package for predictive renormalization, finite-family resolution, finite-channel covariance, anomaly residue, operational naturalness, context-state tomography, reflexive opacity, encoded self-description persistence, audited self-model cost--distortion, perspective curvature, calibration, horizon tomography, experiment selection, self-reference spectroscopy, proof-cost accounting, curriculum sequencing, institutional error correction, AI alignment, intervention budgeting, ontology audit, certificate mining, predictive failure classification, and interface-capacity bounds; the three self-description diagnostics are not SPAP or thermodynamic equivalents, and the package adds no physical primitive or physical-branch change without an explicit response-presheaf, cost-functional, or certificate change (Section P.16d)
 
 The capstone is a conditional identification of the Monster group $\mathbb M$ as a candidate vacuum symmetry on the branch specified in Sections P.13.1–P.13.20. The structural values $\varepsilon_0=\ln2$, $a=2$, and $M=24$, together with the independent coding, fixed-normalization even-unimodular lattice, finite Gaussian-cost or registered Golay-to-Leech construction, chiral-VOA, controller, standard-lift, and orbifold certificates, lead to $\Lambda_{24}$, then $V^\natural$, and finally $\operatorname{Aut}(V^\natural)=\mathbb M$ by the Frenkel--Lepowsky--Meurman theorem. PCE compares candidates within this registered admissible class; it does not establish that every optimal predictive realization has Monster symmetry. The construction supplies a conditional physical interpretation of the established Monstrous Moonshine structures.
+
 
 The SPAP-associated operation order, registered-reset entropy ledger, and predictor-target identification are distinct data that may coexist on a certified protocol but are not mutually reconstructible. Vacuum symmetry is a further downstream output on the independent Leech/Moonshine branch, not a fourth equivalent datum.
 

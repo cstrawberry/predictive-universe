@@ -679,8 +679,71 @@ L_{\mathrm{mix}}(N+1)-L_{\mathrm{mix}}(N)>0.
 $$
 Thus the objective is strictly increasing on the admissible counts and has its unique minimum at $N=3$. ∎
 
+**Proposition R.3.5.1b (Anomaly and CP Data Do Not Exclude Response-Active Extra Families).** For every $N\ge3$, the primitive charge vector
+$$
+f^{(N)}=(1,-1,0,\ldots,0)\in\mathbb Z^N
+$$
+satisfies
+$$
+\sum_{g=1}^N f_g^{(N)}=0,
+\qquad
+\sum_{g=1}^N\bigl(f_g^{(N)}\bigr)^3=0,
+\qquad
+\sum_{g=1}^N\bigl(f_g^{(N)}\bigr)^2=2.
+$$
+Let $F_3$ be the positive-exponent normalized discrete Fourier matrix
+$$
+(F_3)_{jk}=3^{-1/2}e^{2\pi i(j-1)(k-1)/3},
+\qquad 1\le j,k\le3,
+$$
+ and set
+$$
+U_N:=F_3\oplus I_{N-3}.
+$$
+Then the first three families carry a nonzero rephasing-invariant CP witness,
+$$
+\operatorname{Im}
+\bigl((F_3)_{11}(F_3)_{22}
+\overline{(F_3)_{12}}\,
+\overline{(F_3)_{21}}\bigr)
+=\frac{\sqrt3}{18}\ne0.
+$$
+Consequently the family-charge anomaly equations, primitive charge norm, and existence of CKM-type CP violation imply a minimum $N\ge3$ but do not by themselves imply the exact realized value $N_g=3$. If the additional families have distinct masses or other retained gauge/flavor responses, they are not response-null and cannot be removed by the PPI quotient.
+
+*Proof.* The three displayed charge identities follow directly from $1+(-1)=0$, $1^3+(-1)^3=0$, and $1^2+(-1)^2=2$. The stated Fourier-matrix product evaluates to $\sqrt3/18$, while adjoining an identity block leaves that $3\times3$ invariant unchanged. Distinct retained mass thresholds or scattering responses distinguish the extra families operationally. Thus every $N\ge3$ has an anomaly-compatible CP-capable representative in this broad class, and response-null quotienting does not remove the response-active examples. ∎
+
+**Theorem R.3.5.1c (Exact Full-PCE Family Selector).** Let
+$$
+\widetilde Q_B=\bigsqcup_{N\ge1}\widetilde Q_{B,N}
+$$
+be the exhaustive raw finite-family candidate set and let $Q_B:=\widetilde Q_B/\!\sim_{\rm resp}$. For $q\in Q_B$ define
+$$
+N_{\rm phys}(q)
+:=
+\min\{N\ge1:q\cap\widetilde Q_{B,N}\ne\varnothing\},
+$$
+which exists by well-ordering, and set $Q_{B,N}^{\rm phys}:=N_{\rm phys}^{-1}(N)$. Let $\overline V_B:Q_B\to\mathbb R\cup\{+\infty\}$ be the full descended PCE functional. Suppose $q_*\in Q_{B,3}^{\rm phys}$, $\overline V_B(q_*)<\infty$, and
+$$
+\Delta_{\rm fam}
+:=
+\inf_{\substack{q\in Q_B\\q\ne q_*}}
+\bigl(\overline V_B(q)-\overline V_B(q_*)\bigr)
+>0.
+$$
+Then $q_*$ is the unique global selected response class and its physical family count is
+$$
+N_g=N_{\rm phys}(q_*)=3.
+$$
+
+*Proof.* Every other quotient point has cost at least $\Delta_{\rm fam}$ above $q_*$. Exhaustiveness leaves no physical candidate outside $Q_B$, so $q_*$ is the unique global minimizer. The definition of $N_{\rm phys}$ removes response-null surplus representatives and gives the displayed family count. ∎
+
+**Finite family-selection certificate.** A certificate consists of a canonical response-quotient encoder, a feasible $q_*$ with $N_{\rm phys}(q_*)=3$, a rational $\delta>0$, an integer $N_0$, certified interval enclosures for every response class with $N_{\rm phys}\le N_0$, and a symbolic tail bound $L(N)$ proved for all $N>N_0$. The verifier checks: (i) exhaustiveness and canonicalization of the finite part; (ii) response separation; (iii) $\inf\overline V_B(q)\ge\overline V_B(q_*)+\delta$ for every other finite-part class; and (iv) $L(N)\ge\overline V_B(q_*)+\delta$ for all $N>N_0$. Acceptance supplies $\Delta_{\rm fam}\ge\delta$ and closes Theorem R.3.5.1c. Any admissible class violating one of these inequalities falsifies the certificate.
+
+**Remark R.3.5.1d (Status of the Exact Selector).** Theorem R.3.5.1c gives the mathematical closure after its exhaustive quotient, descended functional, and strict-gap certificate have been supplied; it is not itself a derivation of those inputs. Proposition R.3.5.1a proves the conclusion only inside the additive-monotone surrogate class. The present framework has not supplied the finite family-selection certificate above.
+
 **Corollary R.3.5a (Golay Radius and Selected Family Count).** Assume both the predictive-recovery branch on which Theorem Z.13 selects the $[24,12,8]$ Golay code and the additive-monotone family-selection branch of Proposition R.3.5.1a. Then
 $$
+
 t=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor=3=N_g.
 $$
 
@@ -1376,9 +1439,10 @@ with rootlessness independently included in the admissibility ledger. QFI isotro
 
 **Step 2 (Root-system characterization).** Each Niemeier lattice is characterized by its root system, namely the set of vectors of squared norm $2$. Twenty-three of the Niemeier lattices have nonempty root system. Exactly one has empty root system.
 
-**Step 3 (Rootless branch).** The unique Niemeier lattice with empty root system is the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969).
+**Step 3 (Rootless branch).** The unique Niemeier lattice with empty root system is the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969a).
 
 **Step 4 (Application of the admissibility criteria).** Under the stated criteria, the admissible lattice must lie in the positive-definite rank-$24$ even unimodular class and must be rootless. By Steps 1–3, there is exactly one such lattice, namely $\Lambda_{24}$.
+
 
 Therefore the admissibility criteria select the Leech lattice uniquely. ∎
 
@@ -1558,9 +1622,10 @@ This support is fixed-dimension support only. It does not derive $d_0=8$, $M=24$
 2. the retained arithmetic identities give $M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)=12$ on their cited branches;
 3. the explicit coordinate construction following Lemma R.4.5 sends the selected Golay copy to an even unimodular rootless rank-$24$ lattice $\Lambda_C\cong\Lambda_{24}$;
 4. independently, the $(\sqrt2E_8)^3$ scaffold yields the same isometry class only after items 1–2 of Lemma R.4.5 and either its complete minimum ledger or $m_0^{\times}=4$ together with Equation (R.4.2a.1); and
-5. the scaled three-block scaffold is compatible with, but does not derive, the three-generation theorem.
+5. the scaled three-block scaffold is compatible with, but does not derive, the conditional family-count selector.
 
 These statements share branch-selected integers and a compatible lattice isometry class; no one of the gauge, generation, code, or mode-count records is thereby derived from another. The coordinate construction closes the mathematical code-to-Leech map, but neither route establishes a physical vacuum, decoder for physical noise, dynamical stability, or an energy gap. ∎
+
 
 
 
@@ -1585,9 +1650,10 @@ The class count does not select rank $24$, and a lattice isometry class is not a
 
 **Proposition R.4.4 (Automorphism Group).** The stabilizer in $\operatorname{Aut}(\Lambda_{24})$ of a coordinate frame has the form $2^{12}:M_{24}$, where $M_{24}=\operatorname{Aut}(\mathcal{G}_{24})$. This follows from Proposition R.4.8 (Step 4). ∎
 
-**Remark R.4.2b: Physical Status of Sporadic Symmetries.** Once the marked Golay and Leech structures are selected, their automorphism groups are determined: $\operatorname{Aut}(\mathcal G_{24})=M_{24}$ and $\operatorname{Aut}(\Lambda_{24})=\mathrm{Co}_0=2.\mathrm{Co}_1$, whose central quotient is $\mathrm{Co}_1$. A physical action of those groups is not thereby established. These groups act on the 24-dimensional mode space, not directly on the 4-dimensional emergent spacetime. Physical observables in emergent spacetime reflect only those symmetries compatible with the dimensional reduction $24 \to 4$ via the mode-channel correspondence.
+**Remark R.4.2b: Physical Status of Sporadic Symmetries.** Once the marked Golay and Leech structures are selected, their automorphism groups are determined: $\operatorname{Aut}(\mathcal G_{24})=M_{24}$ and $\operatorname{Aut}(\Lambda_{24})=\mathrm{Co}_0=2.\mathrm{Co}_1$, whose central quotient is $\mathrm{Co}_1$. A physical action of those groups is not thereby established. These groups act on the $24$-dimensional mode space, not directly on the four-dimensional Euclidean response carrier or on any promoted spacetime. A physical action on $3+1$ spacetime would require independent promotion and observable-action certificates in addition to the mode-to-carrier map.
 
 Whether sporadic group structure produces observable signatures—such as specific degeneracy patterns in quantum systems engineered to probe the full 24-mode space, or constraints on allowed transitions—remains an open question. The experimental predictions in **Section Z.29–Z.31** provide protocols for testing the $M = 24$ mode structure and Golay code organization; confirmation of these predictions would indirectly validate the mathematical structures whose automorphism groups are sporadic. Direct physical manifestations of sporadic symmetries represent an avenue for future theoretical and experimental investigation.
+
 
 ---
 

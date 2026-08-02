@@ -2142,9 +2142,10 @@ $$\delta_{\mathrm{CKM}}:=\delta_0 f_{sinc}=70.53°\times0.9454=66.7°.$$
 
 **Result:** $\delta_{\mathrm{CKM}}=66.7°$ on the Theorem T.56 nonlinear-response branch. ∎
 
-### Y.A.3 Derivation of $N_g = 3$
+### Y.A.3 Conditional Selection of $N_g=3$
 
 **Sources:** Theorem R.3.4, Proposition R.3.5.1a, and Theorem R.8.5b (Appendix R)
+
 
 The minimal admissible count and exact branch realization are separate statements.
 

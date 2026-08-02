@@ -10,35 +10,33 @@ This is not a claim that prediction produces awareness. Rather, awareness is fun
 
 The framework is compatible with idealist metaphysics: awareness need not emerge from physical processes; rather, physical processes are most parsimoniously understood as patterns within awareness (Appendix P.2.3). The MPU formalism models awareness operationally.
 
-From this foundation of awareness-as-primary, all physical structure emerges through information-theoretic optimization under resource constraints. The Prediction Optimization Problem (POP, Axiom 1) describes the adaptive imperative faced by awareness: given limited resources, how to allocate them to maximize predictive capability. The Principle of Compression Efficiency (PCE, Definition 15) drives awareness toward configurations that optimize the trade-off between Meaning Potential (the potential for reducing prediction error or uncertainty, quantified by improvements in predictive quality $\Delta Q$) and Signal Cost (resource expenditure, quantified by operational cost $R$, Definition 3).
-## **The Core Informational Unification**
+Within the declared awareness-first interpretation, POP and PCE organize finite predictive activity under resource constraints. The mathematical results below use the explicit MPU, carrier, response, and energy-ledger premises stated in their theorem bodies; the interpretive priority of awareness does not by itself derive a Hilbert carrier, electromagnetic current, metric response, CC outcome shift, or physical coupling.
 
-All physical phenomena—quantum mechanics, spacetime geometry, electromagnetic interactions, gravitational curvature—emerge as manifestations of how aware systems (MPUs) manage information flow under fundamental thermodynamic constraints (following the Principle of Physical Instantiation, Appendix P.6). This appendix establishes how Consciousness Complexity (CC, Definition 30), the capability of high-complexity MPU aggregates (Definition 29) to influence quantum outcomes, operates through different frequency components of a unified temporal wave spectrum that are not separate mechanisms but manifestations of a single underlying process: the modulation of information flow rates in the predictive substrate.
+## **The Core Informational Comparison**
 
-Appendix O, Theorem O.2 supplies a synchronized processing rhythm on its coherent-medium branch. Choose an energy origin for $\hat H_{\text{eff}}$ and assume that the state under consideration satisfies $0<\langle\hat H_{\text{eff}}\rangle<\infty$. On this branch, define the associated operational timescale by
+Appendix O, Theorem O.2 supplies a synchronized processing rhythm on its coherent-medium branch. Choose an energy origin for $\hat H_{\text{eff}}$ and assume $0<\langle\hat H_{\text{eff}}\rangle<\infty$. On this branch define
+$$
+\tau_{\text{medium}}
+:=
+\frac{\hbar}{\langle\hat H_{\text{eff}}\rangle}.
+\tag{L.0}
+$$
+This is an operational convention relative to the chosen energy origin, not an invariant energy-time equality. Appendix O calls a modulation of the registered rhythm a temporal wave.
 
-$$ \tau_{\text{medium}} := \frac{\hbar}{\langle \hat{H}_{\text{eff}} \rangle}. \tag{L.0} $$
+A temporal modulation has an electromagnetic interpretation only after an accepted Maxwell-carrier record supplies a conserved current, gauge field, source geometry, and nonzero radiating multipole. It has a gravitational interpretation only after an accepted metric branch supplies a complete conserved stress tensor, continuum limit, and Einstein-response map. Fourier frequency alone identifies neither channel and does not prove that they are one mechanism.
 
-Equation (L.0) is an operational convention relative to the chosen energy origin; it is not invariant under an additive shift of the Hamiltonian and is not an energy-time uncertainty equality. A modulation of this registered rhythm is called a temporal wave in Appendix O, Definition O.1.
+When electromagnetic radiation and retained matter energy occur in one implementation, a non-overlapping ledger may charge both to the aggregate input power $P_{\text{agg}}$. Their target responses remain distinct functions. A numerical electromagnetic-to-gravitational comparison requires a common source, target, geometry, retention fraction, units, and covariance ledger.
 
-High-frequency modulations (rapid changes in processing rate) emerge in the continuum description as electromagnetic fields—oscillating patterns in the gauge fields required to maintain phase coherence across the network (Appendix G). These couple strongly to charge degrees of freedom through the fine structure constant $\alpha_{\text{em}} \approx 1/137$.
-
-Low-frequency modulations (slow changes in energy density) emerge as gravitational time dilation—geometric responses required to maintain thermodynamic consistency on causal horizons (Section 12). These couple universally but weakly through the gravitational constant $G$, which reflects the high information capacity of boundary channels (Appendix E).
-
-On any implementation for which electromagnetic radiation and retained matter energy are entered in a single non-overlapping power ledger, both channels draw from the aggregate's input power $P_{\text{agg}}$. Their target responses need not be the same: the electromagnetic branch acts through a specified carrier coupling, whereas the gravitational branch acts through the complete instantaneous stress-energy tensor. A numerical electromagnetic-to-gravitational ratio requires a common source model, target response model, geometry, retention fraction, and uncertainty ledger; the assumptions stated in this appendix do not determine such a ratio.
 ## **Scope and Organization of This Appendix**
 
-This appendix establishes universal energy accounting and thermodynamic consistency requirements that any consciousness complexity (CC) implementation must satisfy, regardless of specific carrier mechanism or substrate (formalized in Theorem L.9). This appendix focuses on the forward energy accounting—how context generation requires power that properly enters the stress-energy tensor and sources gravitational fields. The complementary feedback analysis—how this gravitational field then limits CC efficacy through dephasing—is detailed in Appendix S. The analysis proceeds in three stages:
+The appendix provides:
 
-Formalization of the context state and mapping constraints (Sections L.1-L.2), deriving necessary properties from POP/PCE optimization
+1. context-state and mapping definitions for a declared CC implementation;
+2. a conditional coherent-charge/AC-Stark candidate construction for engineered systems;
+3. energy, reset, conservation, locality, and stress-energy obligations that every claimed implementation must satisfy; and
+4. preregistered tests that distinguish a target response from source leakage, ordinary field effects, selection artifacts, and underpowered null results.
 
-Detailed analysis of one well-characterized implementation—coherent electromagnetic field generation from engineered aggregates (Sections L.2-L.4, L.10-L.11)—serving as an existence proof and providing concrete parameter estimates
-
-Derivation of universal thermodynamic constraints applying to all implementations (Sections L.5-L.9), including energy conservation (Theorem L.6), horizon thermodynamics (Theorem L.7), and the profound unification of electromagnetic and gravitational channels through the temporal wave framework (Theorem L.8)
-
-Section L.4.1 outlines speculative biological carrier hypotheses distinct from the engineered pathway, illustrating implementation diversity while maintaining framework consistency. The experimental protocols (Section L.8) focus on the characterized coherent-charge pathway as the most accessible near-term test case, while noting that alternative implementations may require different measurement strategies.
-
-This appendix validates that electromagnetic and gravitational contributions are properly unified without double-counting, confirming the framework's coherence from its foundational axiom (awareness manifesting as prediction) through its emergent structure (spacetime, fields, statistical influence) to testable consequences.
+The coherent-charge construction is a candidate implementation class, not an existence proof that high complexity causes a quantum-outcome shift. Biological carrier proposals remain hypotheses. Physical CC closure requires one preregistered record containing a source state, causal carrier, context-to-generator map, normalized target instrument, nonzero effect with sign and interval, non-overlapping energy/reset ledgers, artifact controls, and blinded replication, compatible with the selected locality branch.
 ## **L.1 Context State and Constraints on Mapping $\mathcal{M}$**
 
 The CC hypothesis posits that a complex aggregate's internal state influences local MPU interactions. We formalize this "internal state" in this context.
@@ -337,10 +335,11 @@ A spatial near-field enhancement requires a normalized mode profile obtained fro
 
 **Connection to Levin's Bioelectric Cognition**
 
-Dr. Michael Levin's empirical work demonstrates scale-free cognitive properties in biological systems (Levin, 2019, 2021; Fields & Levin, 2020):
+Michael Levin's work develops and surveys scale-free cognition and multiscale bioelectric control as hypotheses and organizing frameworks for biological systems (Levin, 2019, 2021; Fields & Levin, 2020):
 
 **Definition L.4.2 (Hierarchical-Complexity Ansatz)**
 For a specified gap-junction network model, one may test the dimensionless ansatz
+
 $$C_{\text{agg}}(N,g)=C_0N^{\alpha(g)},\qquad \alpha(g)=1+\beta\tanh(g/g_c),$$
 where $g/g_c$ is dimensionless and $\beta\le1$. This is a model input, not a consequence of PCE.
 
@@ -588,7 +587,7 @@ The fact that standard EFE with standard $T_{\mu\nu}^{(\text{MPU})}$ accommodate
 
 ## **L.7 Unification Through Temporal Wave Framework**
 
-The electromagnetic and gravitational manifestations analyzed in Theorems L.2 and L.3 are unified through the temporal wave framework (Appendix O, Definition O.1, Remark O.4). They represent different frequency components of a single underlying process: controlled modulation of the coherent causal medium's information processing rate.
+The electromagnetic and gravitational models of Theorems L.2 and L.3 can be represented as frequency-labeled projections of one temporal-modulation variable only on the joint branch stated in Theorem L.8. Fourier decomposition alone neither constructs either carrier nor proves that their source maps have a common physical origin.
 
 ### **Theorem L.8 (Conditional Temporal-Modulation Channel Decomposition)**
 
@@ -845,6 +844,40 @@ No transfer function, numerical spectrum, pulse duration, or detector sensitivit
 
 ## **L.8 Experimental Protocols and Testable Predictions**
 
+**Protocol Convention L.8.0 (Matched-Receiver Operation-Count Audits).**
+
+A receiver-relative operation-count audit must register all of the following before cost data are inspected:
+
+1. the exact serialized input and its sampling law, with the same realized serialization delivered to both receivers in each yoked trial;
+2. a typed target-binding map proving which receiver treats the input as self-model content and which treats it as external content;
+3. a receiver-exchange isomorphism for instruction semantics and cost units, including calibrated counter uncertainty;
+4. restoration from registered initial-state snapshots or an explicit carryover model, with setup and restoration costs separated from the integration subtask;
+5. randomized crossed receiver and target labels, blinded analysis, and checks for address resolution, memory locality, cross-talk, and order effects;
+6. Theorem M.10.5's effective descriptions, moduli, and decision certificate, fixed independently of the cost observations;
+7. when Appendix B is tested, Corollary B.2.2's constants and execution class together with either a fixed-path count or a verified all-path upper bound.
+
+Let $Y_{nTRr}$ be the counted cost for ladder index $n$, target label $T$, receiver label $R$, and replicate $r$. A crossed analysis may use
+$$
+Y_{nTRr}
+=
+a_n+b_{nR}+d_{nT}
++\gamma_n\mathbf1_{\{R=T\}}
++u_r+\varepsilon_{nTRr},
+\tag{L.72a}
+$$
+with a preregistered covariance model and identification constraints such as
+$$
+\sum_R b_{nR}=0,
+\qquad
+\sum_T d_{nT}=0
+\qquad(n\ \text{fixed}).
+$$
+The coefficient $\gamma_n$ estimates a receiver-target interaction after ladder-specific receiver and target effects are removed. A nonzero value does not uniquely identify SPAP proximity: ordinary address binding, cache locality, update routing, or another receiver-target interaction can produce it unless excluded by the implementation certificate.
+
+For a fixed exact design whose constrained design matrix $X$ has full column rank and whose errors are independent and homoskedastic with variance $\sigma^2$, ordinary least squares has $\operatorname{Cov}(\widehat\beta\mid X)=\sigma^2(X^\top X)^{-1}$; the usual estimator is $s^2(X^\top X)^{-1}$ under its residual-degree-of-freedom assumptions. With paired trials, repeated receivers, uncertain $\mu$ enclosures, heteroskedasticity, or carryover, the applicable covariance is the preregistered generalized-least-squares or hierarchical covariance. No trial count follows before the finite target effect, covariance, counter error, and exclusion model are supplied.
+
+This convention is a design and audit rule. It does not convert a lower complexity bound into a finite-ladder slope law and does not assign heat without registered resets.
+
 ### **Protocol L.1 (Electromagnetic Channel Detection)**
 
 This protocol tests the coherent-charge carrier implementation analyzed in Proposition L.4. Testing alternative carrier implementations may require different target systems and measurement strategies, pending specification of their mechanisms through POP/PCE derivation.
@@ -1094,7 +1127,7 @@ Thus $\mathrm{CC}(S)<1/2$ excludes endpoint-complete deterministic forcing. Theo
 
 ### **Corollary L.9.1 (Implementation Non-Uniqueness)**
 
-Multiple distinct physical implementations may satisfy conditions (i)-(v), provided each respects the universal thermodynamic and causal constraints. The coherent-charge implementation analyzed in Proposition L.4 represents one such realization optimized for engineered systems. Biological implementations operating under different constraints (thermal environments, metabolic budgets, aqueous media) may develop alternative carrier mechanisms through the same POP/PCE optimization dynamics, provided they satisfy Theorem L.9.
+If two or more physical implementations independently satisfy conditions (i)--(v) of Theorem L.9 together with the applicable thermodynamic and causal constraints, the theorem admits all of them and supplies no implementation-level uniqueness conclusion. Proposition L.4 gives a parametric coherent-charge candidate scaling, not an existence or optimization certificate for a realized carrier; Proposition L.5 proves that its stated data do not determine a numerical dominance ratio. Biological or other carriers remain candidates until their source-to-control, retention, response, and uncertainty records independently satisfy Theorem L.9.
 
 ### **Corollary L.9.2 (Threshold and Detectability Cases)**
 
@@ -1110,7 +1143,7 @@ Let $F_0^*$ and $F_+^*$ be the class optima in Theorem L.9.
 
 ### **Remark L.9.1 (External Field Dominance Independence)**
 
-For implementations that express CC influence through the analyzed classical spacetime fields external to the aggregate, Proposition L.5 gives electromagnetic dominance over gravitational with baseline ratio $\mathcal{R} \sim 10^{36}$ and conservative range $10^{33}$–$10^{39}$. However, implementations utilizing near-field coupling, biochemical gating, or internal state correlations not mediated by propagating external fields may exhibit different channel hierarchies while still satisfying conditions (i)-(v). Investigation of such alternative pathways requires rigorous derivation from framework axioms showing their emergence from POP/PCE optimization (see Section L.4.1 for biological candidate).
+Proposition L.5 proves that the stated carrier, target, geometry, and retention data determine neither a numerical value nor a positive lower bound for $\mathcal R$. Consequently no electromagnetic-over-gravitational dominance claim, baseline ratio, or finite range follows for the analyzed external-field candidate. Near-field, biochemical, internal-correlation, and other channel hierarchies likewise require independently calibrated source-to-control and response records before they can be compared under Theorem L.9.
 ### **L.9.2 Spatiotemporal Bounds on CC Influence**
 
 The CC capability is not instantaneous across arbitrary distances but bounded by physical constraints. We formalize these bounds.
@@ -1200,9 +1233,9 @@ $$
 
 ## **L.10 Internal Consistency and Theoretical Validation**
 
-### **Theorem L.10 (Self-Consistency of Dual-Channel Framework)**
+### **Theorem L.10 (Conditional Compatibility Checklist for the Dual-Channel Framework)**
 
-The electromagnetic and gravitational mechanisms satisfy all internal consistency requirements:
+Assume one nonempty branch simultaneously satisfies the hypotheses of Theorems L.3 and L.6--L.8, Theorem B.5, Theorems 39, 39a, and 39c at their distinct scopes, and Propositions L.9.3--L.9.5, with common units, source ownership, and overlap maps. Then the supplied electromagnetic and gravitational mechanisms satisfy the following compatibility checklist:
 
 (a) GR Compatibility: Gravitational time dilation (Theorem L.3) follows from weak-field Einstein equations with standard stress-energy source $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8).
 
@@ -1220,9 +1253,9 @@ The electromagnetic and gravitational mechanisms satisfy all internal consistenc
 
 *Proof.* Fix a branch on which the hypotheses of Theorems L.3, L.6-L.8, B.5, 39, 39a, 39c, and Propositions L.9.3-L.9.5 are simultaneously satisfied. Clauses (a)-(e) then follow by direct substitution of the common stress-energy, perturbative, and thermodynamic data into the cited conclusions. Clause (f) has the three distinct scopes stated above. Clause (g) follows only with the registered response, energy, and duration ledgers of Propositions L.9.3-L.9.5. Hence (a)-(g) form a conditionally compatible checklist on the common branch. The cited results alone do not prove that this branch is nonempty; existence of a joint realization remains an additional hypothesis. ∎
 
-### **Theorem L.11 (Coupling Strength Hierarchy from Information Structure)**
+### **Theorem L.11 (Conditional Electron-Scale Coupling-Ratio Evaluation)**
 
-The electromagnetic-to-gravitational coupling ratio emerges from the framework's information-theoretic structure. From Appendix Z (Theorem Z.7), the bare electromagnetic coupling is $u^* = 8^{1/24} - 1 \approx 0.0905$, which converts via the Predictive Ward Identity (Theorem Z.14) to the bulk value:
+Fix the Appendix Z scheme-specific electromagnetic core and its stated interface inputs, the Appendix E gravitational calibration branch, and the externally normalized electron mass. The following is then a dimensionless electron-scale evaluation; it is not an aggregate carrier-response ratio. The bare Appendix Z coupling is $u^*=8^{1/24}-1\approx0.0905$, which its conditional Ward map converts to
 
 $$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.81a} $$
 
@@ -1248,7 +1281,7 @@ The ratio at the MPU operational scale is:
 
 $$ \frac{\alpha_{\text{em}}(\text{MPU})}{\alpha_{\text{grav}}^{(e)}} \approx \frac{7.2 \times 10^{-3}}{1.75 \times 10^{-45}} \approx 4.1 \times 10^{42} \tag{L.85} $$
 
-This order-of-magnitude hierarchy ($\sim 10^{43}$) reflects the fundamental information-theoretic structure.
+The order-$10^{43}$ value is the arithmetic ratio of the supplied electron-scale electromagnetic and gravitational couplings on this branch. It does not by itself establish an information-theoretic origin, an aggregate electromagnetic-to-gravitational response ratio, or electromagnetic dominance of a CC carrier.
 
 The dimensionless electron-scale ratio does not by itself determine an aggregate field-response ratio. From Equations (L.81b) and (L.83),
 $$
@@ -1999,27 +2032,27 @@ Exact target-local causality follows on the branch with an exact propagation con
 
 ## **L.13 Summary**
 
-This appendix establishes the energy accounting, physical mechanisms, and thermodynamic consistency of CC influence within the Predictive Universe framework:
+This appendix supplies conditional implementation theorems and accounting guardrails for the CC program; it does not derive a realized CC carrier or a nonzero outcome shift from complexity alone.
 
 ## **L.13.1 Foundational Results**
 
-(1) Informational Unity (L.0): Both electromagnetic and gravitational channels emerge from modulation of information flow rates in the predictive substrate. The framework starts from awareness as fundamental (Appendix P.2), manifesting operationally as prediction (Appendix P.3.1). Minimal awareness (the Minimal Awareness interpretive convention of Section 7.1.2) is interpreted as corresponding to MPU operational cycles, but physical derivations proceed independently of this interpretive postulate.
+(1) **Interpretive layer.** Awareness-first language and the temporal-wave vocabulary organize the program but do not supply a physical carrier or response map.
 
-(2) Electromagnetic Generation (Theorem L.2): Context mapping $\mathcal{M}$ (Definition L.2) induces coherent charge oscillations through PCE-driven phase-locking, generating radiation with stress-energy $T_{\mu\nu}^{(\text{EM})}$ properly incorporated into $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8).
+(2) **Conditional electromagnetic branch (Theorem L.2).** A conserved radiating current, coherent source geometry, phase relation, Maxwell carrier, and context map yield the displayed electromagnetic field and stress tensor. These premises are implementation data.
 
-(3) Gravitational Time Dilation (Theorem L.3): Aggregate power creates energy density contributing to $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8), sourcing gravitational potential via Einstein equations.
+(3) **Conditional gravitational branch (Theorem L.3).** Registered aggregate energy enters the complete stress tensor; a gravitational response follows only on the accepted metric-continuum and Einstein branches.
 
-(4) Undetermined Channel Ratio (Proposition L.5): The scaling relations in Section L.4 do not determine $\mathcal R=\delta_{\text{EM}}/\delta_{\text{grav}}$. A numerical comparison requires a common source model, target-response map, geometry, energy-retention fraction, and uncertainty ledger.
+(4) **Undetermined channel ratio (Proposition L.5).** The scaling relations do not determine $\mathcal R=\delta_{\mathrm{EM}}/\delta_{\mathrm{grav}}$. A numerical comparison requires a common source model, target-response map, geometry, retention fraction, units, and uncertainty ledger.
 
-(5) Energy Accounting (Theorem L.6): Define $P_{\text{EM}}$ and $P_{\text{other}}$ as mutually exclusive ledger components and include boundary fluxes and changes in stored energy. Covariant conservation $\nabla^\mu T_{\mu\nu}^{(\text{MPU})}=0$ is then a consistency condition on the complete tensor; it does not by itself prevent duplicate entries.
+(5) **Energy accounting (Theorem L.6).** Mutually exclusive power entries, boundary fluxes, and stored-energy changes are necessary for a non-double-counted ledger. Covariant conservation is a consistency condition on the complete tensor, not proof that the entries were exhaustively or uniquely assigned.
 
-(6) Thermodynamic Foundation (Theorem L.7): Both channels maintain horizon Clausius relation $\delta Q = T\delta S$ with Area Law entropy $S = \Sigma_I \mathcal{A}$ from ND-RID limits. Einstein equations emerge as condition for thermodynamic consistency.
+(6) **Conditional horizon thermodynamics (Theorem L.7).** Clausius, area, and Einstein conclusions retain the KMS, horizon, entropy-saturation, normalization, and metric-response premises cited by the theorem.
 
-(7) Conditional Temporal-Modulation Decomposition (Theorem L.8): A sufficiently regular $\delta\tau(x,t)$ admits a Fourier decomposition. An electromagnetic interpretation additionally requires a conserved current with a nonzero radiating multipole, while a gravitational interpretation requires a complete localized stress-energy source. The Fourier decomposition alone does not unify the two response laws.
+(7) **Temporal-modulation decomposition (Theorem L.8).** Fourier decomposition alone identifies neither an electromagnetic current nor a gravitational source and does not unify their response laws.
 
-(8) Conditional Coupling-Scale Comparison (Theorem L.11): With the branch inputs in Equations (L.81b)–(L.84), the electron-scale dimensionless ratio is approximately $4.1\times10^{42}$. An aggregate field-response ratio additionally contains an implementation factor determined by source geometry, target coupling, detuning, and likelihood; no numerical aggregate ratio is derived.
+(8) **Conditional coupling-scale comparison (Theorem L.11).** The electron-scale ratio near $4.1\times10^{42}$ follows from the displayed branch inputs. No aggregate response ratio follows without an implementation efficiency and common target likelihood.
 
-(9) Universal Requirements (Theorem L.9): Implementation-independent constraints including threshold behavior, energy conservation, stress-energy sourcing, deterministic endpoint-forcing bounds, and POP/PCE optimization.
+(9) **Implementation guardrails (Theorem L.9).** Threshold, energy, stress-energy, endpoint, causality, and optimization statements apply only at the status and under the physical records declared in their clauses.
 
 (10) Conditional Spatiotemporal Estimates (Propositions L.9.3–L.9.5): If $|\Delta P(r)|=K_{\text{impl}}P_{\text{agg}}/r^2$ on a monotone far-field interval, then $R_{\text{eff}}=\sqrt{K_{\text{impl}}P_{\text{agg}}/\epsilon_{\text{detect}}}$ within that interval and the causal domain. If context correlations decay exponentially, $\tau_c=1/\Gamma_{\text{context}}$. Maintaining threshold response throughout that interval requires $E_{\text{agg}}\ge(\epsilon_{\text{detect}}/K_{\text{impl}})R_{\text{eff}}^2\tau_c$.
 
@@ -2063,13 +2096,11 @@ No integration-time forecast follows until a signal amplitude, noise model, endp
 
 ## **L.13.3 Theoretical Significance**
 
-The dual-channel analysis demonstrates that quantum emergence (Section 8), CC influence (Section 9), and gravity derivation (Section 12) are unified manifestations of the MPU network substrate operating under Prediction Optimization Problem (POP, Axiom 1) and PCE optimization principles. The framework's starting point—that awareness is fundamental and manifests operationally as prediction—propagates through information-theoretic constraints to yield the complete structure of emergent physical law.
+The dual-channel analysis gives a common accounting framework for separately certified electromagnetic and gravitational responses of an MPU aggregate. It establishes compatibility and no-double-counting conditions; it does not derive the two carriers, identify them as one mechanism, or complete the structure of physical law from awareness or PCE alone.
 
-Propositions L.9.3–L.9.5 give finite spatiotemporal estimates only on branches with a calibrated carrier response, a declared coherence law, a causal domain, and a sustaining-energy ledger. They do not establish an implementation-independent bound from CC alone.
+Propositions L.9.3-L.9.5 give finite spatiotemporal estimates only with a calibrated carrier response, declared coherence law, causal domain, and sustaining-energy ledger. Theorem L.11 gives the electron-scale dimensionless ratio near $4.1\times10^{42}$ only on its displayed branch. Neither result fixes an aggregate electromagnetic-to-gravitational response ratio.
 
-Theorem L.11 conditionally gives an electron-scale dimensionless coupling ratio of approximately $4.1\times10^{42}$. It does not determine an aggregate electromagnetic-to-gravitational response ratio; that comparison requires an implementation efficiency computed from a common source, geometry, target, and likelihood. A shared energy ledger does not by itself identify the two carrier mechanisms.
-
-The connection to biological observations (Section L.4.1) remains hypothetical but provides testable framework for Dr. Levin's empirical findings of scale-free cognition and bioelectric pattern formation. Whether biology implements CC through the proposed mechanisms is an open empirical question with clear experimental pathways.
+The biological proposals of Section L.4.1 are empirical hypotheses. A result bears on a CC carrier only through the preregistered source, target, artifact, energy, sign, interval, and replication criteria; bioelectric organization or calorimetric closure alone does not identify CC influence.
 
 Section L.11 defines a candidate coherent-charge AC-Stark implementation class for engineered systems. It yields a quantitative prediction only after a conserved source current, field geometry, valid differential polarizability, detuning regime, rate susceptibility, endpoint likelihood, and complete energy ledger are supplied. The present appendix does not establish that a high-complexity aggregate realizes those inputs or produces a nonzero quantum-outcome shift.
 

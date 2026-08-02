@@ -1,12 +1,13 @@
-# APPENDIX Z: Certificate-Conditional Interface Ledger, Fine-Structure Candidate, and Spacetime Dimension
+# APPENDIX Z: Certificate-Conditional Interface Ledger, Fine-Structure Candidate, and Euclidean Response-Carrier Dimension
 
 ## Overview Structure
 
 This appendix derives the minimal interface ledger $M=24$ on the stated Hilbert-carrier, binary-record, active-projector, and PCE-attractor branches. It then:
 - evaluates a scheme-specified Thomson-limit core candidate on the Ward, interface-response, curvature, projection, and transport model branches of Sections Z.24--Z.26;
-- proves the least-feasible spacetime dimension on the Bures tangent-cell branch of Theorems Z.10--Z.11.
+- proves the least-feasible Euclidean response-carrier dimension on the Bures tangent-cell branch of Theorems Z.10--Z.11, with physical spacetime promotion separately certificate-gated by Corollary P.8.3.
 
 The core arithmetic is deductive after its independent model and normalization inputs are fixed. Identification with the physical Thomson coupling requires an operator/current realization and a complete residual certificate; the diagnostic hypercharge-recoil construction does not yet supply those gates.
+
 
 **Organization:**
 
@@ -19,9 +20,10 @@ The core arithmetic is deductive after its independent model and normalization i
 ### Z.1.1 Scope and Objectives
 - Derivation of the discrete chain to $M=24$ on the stated MPU branches
 - Scheme-specified Thomson-core candidate and complete-remainder gate (Sections Z.24--Z.27)
-- Least-feasible $D=4$ on the mode-channel contract (Theorems Z.10--Z.11)
+- Least-feasible Euclidean response-carrier value $D=4$ on the mode-channel contract, with spacetime promotion separately certificate-gated (Theorems Z.10--Z.11)
 
 **Notation.** In this appendix, $\lambda$ denotes the QFI eigenvalue of the interface-mode metric (later $g_{QFI}=\lambda I_{24}$); it is unrelated to the resource-scarcity parameter of Definition 20.
+
 
 ### Z.1.2 The Seven-Stage Derivation Roadmap
 - **Part I (Z.1–Z.5):** Foundations — MPU invariants, SPAP structure, algebraic constraints, and the ordered $(12,24)$ Ramanujan-PU-Leech ledger
@@ -29,7 +31,7 @@ The core arithmetic is deductive after its independent model and normalization i
 - **Part III (Z.9–Z.14):** Dimensional Emergence — Operational distinguishability, mode-channel correspondence, dimensional selection, over-determination
 - **Part IV (Z.15–Z.21):** Electromagnetic Coupling — Ward identity, discrete gauge structure, interface correction, complete formula
 - **Part V (Z.22–Z.27):** Verification and Extensions — Numerical evaluation, QED running, higher-order corrections
-- **Part VI (Z.28–Z.32):** Experimental Predictions — Mode suppression, coordination scaling, dimensional stability, golden ratio crossover
+- **Part VI (Z.28–Z.32):** Experimental Predictions — thresholded mode support and relaxation, coordination scaling, dimensional stability, golden-ratio marker
 - **Part VII (Z.33–Z.35):** Synthesis and Corrections — Dual emergence, physical interpretation, Appendix X corrections
 
 $$
@@ -60,9 +62,10 @@ $$
 $$
 It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixed by Definition Z.27.11j, by an accepted all-orders residual certificate of Definition Z.27.11g, or by a theorem proving $R_\alpha=0$ on the same branch. The hypothetical residual-free same-branch theorem is constrained by Corollary Z.27.11e.1: the closed-form core lands $0.678$ ppm from the CODATA Thomson comparison value, with an offset much larger than the recorded measurement-side uncertainty and larger than the canonical comparison-budget diagnostic of Remark Z.26d. Hence a same-branch theorem fixing $R_\alpha=0$ does not land at the recorded comparison value; theorem-level comparison requires a certified nonzero residual gate or a different branch fixed before comparison.
 
-**PPI mapping chain for this appendix (α and D).** The result $D=4$ follows once the internal interface structure is identified with macroscopic operational channels through PPI. The Thomson-limit alpha core follows as a closed-form finite-response calculation, while the comparison interval follows only after the residual gate is closed:
+**PPI mapping chain for this appendix (α and D).** The Euclidean response-carrier result $D=4$ follows once the internal interface structure is identified with the registered operational response channels through PPI; its physical $3+1$ spacetime interpretation requires the separate promotion certificates. The Thomson-limit alpha core follows as a closed-form finite-response calculation, while the comparison interval follows only after the residual gate is closed:
 
 1. **Internal modes $\to$ operational channels.** Identification: $M=2ab$ counts the real tangent directions of the attractor orbit (Theorem Z.6.3a) and is interpreted as the number of locally distinguishable interaction channels. Assumptions: local homogeneity/isotropy at the attractor and a locally Euclidean tangent cone for channel packing.
+
 
 2. **Operational channels $\to$ dimension.** Definition Z.9a registers an injective response-preserving map from the $M=24$ QFI-active modes to distinct equal-radius tangent cells and makes PCE select the least feasible integer dimension after predictive performance is held fixed; every extra response-null dimension has positive support cost. Theorem Z.10 proves the necessary bound $M\le K(D)$. Since $K(1)=2$, $K(2)=6$, and $K(3)=12$, no faithful $24$-mode shell exists in $D\le3$. The regular $24$-cell explicitly realizes all $24$ cells in $\mathbb R^4$, so $D=4$ is feasible. Least-feasible selection therefore gives $D=4$ without assuming global kissing saturation, an equality $M=K(D)$, or any bound in $D\ge5$.
 
@@ -71,12 +74,12 @@ It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixe
 4. **Uncertainty accounting.** The number $\pm0.000060$ is a diagnostic comparison-budget scale, not a certified interval. A theorem-level Thomson interval requires the finite residual entry $R_\alpha$ to be fixed before comparison by Definition Z.27.11j, Definition Z.27.11g, or a same-branch zero-residual theorem. Corollary Z.27.11e.1 shows that the zero-residual core does not land at the recorded comparison value; the currently displayed hypercharge-recoil value remains diagnostic until its independent operator-realization and source-exhaustion gates are supplied.
 
 ### Z.1.4 Methodological Note
-- Two independent selection mechanisms for $D = 4$:
-  1. Mode–channel matching (this appendix)
-  2. External stability requirements (Section G.8.2)
-- Convergence from different mechanisms → multiply-determined necessity
+- One carrier-selection theorem: the faithful least-feasible mode-channel contract of this appendix.
+- One separate spacetime viability comparison: the coefficient-dependent stability model of Section G.8.2.
+- Agreement of the two records is a conditional compatibility check, not a multiply-determined necessity theorem.
 
 External path (Section G.8.2): inverse-square orbital stability, anomaly cancellation, and network information efficiency provide a separate viability comparison. Internal path (this appendix): a faithful shell must satisfy $M_{\mathrm{int}}\le K(D)$, and Definition Z.9a selects the least feasible dimension. For $M_{\mathrm{int}}=24$, the exact values $K(1)=2$, $K(2)=6$, $K(3)=12$ exclude lower dimensions, while the regular $24$-cell proves feasibility in $D=4$.
+
 
 ---
 
@@ -955,6 +958,40 @@ u^*=8^{1/24}-1=2^{1/8}-1.
 $$
 The Hilbert-space Holevo bound motivates, but does not prove, the surrogate inequality assumed in this branch. ∎
 
+**Remark Z.7c (Reset-Support-Cap Branch Boundary).** Proposition E.2a bounds the registered support of a completed reset cycle by $\ln d_0-\ln2$; it does not identify that support with the LAN/QFI capacity coordinate used in Theorem Z.7. Replacing $\ln d_0$ by $\ln d_0-\ln2$ therefore requires an additional whole-retained-output bridge and a cap-saturation certificate. On that separate branch, $d_0=8$ and $M=24$ would give
+$$
+u_{\mathrm{reset}}
+=
+\exp\!\left(\frac{\ln8-\ln2}{24}\right)-1
+=
+2^{1/12}-1
+=
+0.059463094359295\ldots.
+$$
+Substitution at this coordinate gives
+$$
+\frac{4\pi}{u_{\mathrm{reset}}}
+\left(
+1-\frac{u_{\mathrm{reset}}}{4\sqrt3}
++\frac{u_{\mathrm{reset}}^2}{96\sqrt3}
+\operatorname{sinc}(u_{\mathrm{reset}})
+\right)
+=
+209.521278549360\ldots
+$$
+for the additive core expression and
+$$
+\frac{4\pi}{u_{\mathrm{reset}}}
+\left(1-\frac{u_{\mathrm{reset}}}{4\sqrt3}\right)
+\left(
+1+\frac{u_{\mathrm{reset}}^2}{96\sqrt3}
+\operatorname{sinc}(u_{\mathrm{reset}})
+\right)
+=
+209.521240001841\ldots
+$$
+for the multiplicative diagnostic. These are counterfactual branch values, not conclusions of Theorem Z.7.
+
 **Corollary Z.8.2a (Capacity Shadow Price of the Bare Electromagnetic Coupling).** On the cap-active, flat-QFI branch of Theorem Z.7, the bare rate coordinate $u^*$ and the capacity shadow price are determined by the same constrained PCE problem but are distinct quantities. With
 $$
 \mathcal C_{\mathrm{cap}}(u)
@@ -1068,13 +1105,14 @@ Setting $\gamma=q=1$ and squaring proves the canonical formula. Unsaturated acti
 
 
 
-**Corollary Z.8g.1 (Conditional Physical Mass Gap).** On $\mathfrak B_{mass}$ with canonical $\gamma=1$, the Leech norm gap gives the physical mass gap:
+**Corollary Z.8g.1 (Conditional Physical Mass Gap).** On $\mathfrak B_{mass}$ with canonical $q=\gamma=1$, the Leech norm gap gives the physical mass gap:
 
 $$\Delta_{gap}=\mu_0^{alg}\sqrt{|v|_{min}^2}=2\mu_0^{alg}.$$
 
 The factor of 2 arises from the Leech lattice's minimum squared norm $|v|^2_{\min} = 4$ (Theorem Z.8c).
 
-**Remark Z.8g.2: Scope of the Gap.** Leech geometry alone fixes the dimensionless norm gap $|v|_{min}=2$. It becomes the physical energy gap $2\mu_0^{alg}c^2$ only on $\mathfrak B_{mass}$ with $\gamma=1$; Landauer and rootlessness alone do not fix that absolute energy.
+**Remark Z.8g.2: Scope of the Gap.** Leech geometry alone fixes the dimensionless norm gap $|v|_{min}=2$. On $\mathfrak B_{mass}$ it becomes $2\mu_0^{alg}c^2$ whenever $\gamma/q=1$; the canonical normalization used in Corollary Z.8g.1 is $q=\gamma=1$. Landauer and rootlessness alone do not fix that absolute energy.
+
 
 
 
@@ -1771,43 +1809,46 @@ $$
 $$
 No comparison class of integers or quantitative richness predicate is specified, so no further uniqueness conclusion follows. ∎
 
-**Remark Z.7b: Unification of Abstract and Physical at M = 24.** The number 24 serves as the unique meeting point where abstract mathematical structure and physical information structure coincide:
+**Remark Z.7b: Compatibility of Abstract and Response Structures at $M=24$.** The integer $24$ appears in several independently gated records:
 
-| Domain | Mathematical | Physical |
-|--------|-------------|----------|
-| **24 appears as** | Modular weight (η²⁴), Leech lattice dimension, Ramanujan τ-function support | QFI mode count (2ab), Golay code [24,12,8], kissing number K(4) |
-| **Selection principle** | Uniqueness under consistency constraints | Efficiency under resource constraints |
-| **Why 24** | Unique weight for cusp forms with integer Fourier coefficients | Unique solution to $M_{\mathrm{int}} = K(D)$ |
+| Record | Role of $24$ | Status |
+|:--|:--|:--|
+| QFI interface modes | $M=2ab=24$ | Theorem Z.5 branch |
+| Euclidean response carrier | A faithful $24$-cell shell is feasible in four dimensions | Theorems Z.10--Z.11 branch; no equality $M=K(D)$ is assumed |
+| Golay and Leech structures | Code length and lattice rank | Separate predictive-recovery and lattice-selection branches |
+| Modular structures | Weight or coefficient index | Separate arithmetic record |
 
-This convergence is not coincidental. Predictionism (Section P.3.4) grounds mathematics in the Cogito: binary verification yields Boolean operations, which yield universal computation (Theorem A.0.1). Mathematics is thus the operational structure of prediction—the explicit articulation of what predictors implicitly do. Physical structures emerge from the same foundation through thermodynamic instantiation (PPI, Definition P.6.2), with PCE selecting for resource efficiency. That both domains arrive at 24 reflects a deeper unity: **mathematical proof and physical law are the same predictive activity viewed at different levels of abstraction**.
-
-This resolves Wigner's puzzle (Appendix P, Section P.7.1). Mathematicians exploring computable structures through proof discover those satisfying extremal optimization—modular forms, exceptional lattices, perfect codes. PCE, selecting structures through thermodynamic competition, converges on the same extrema. Mathematics articulates what prediction *can* do in principle; physics specifies what prediction *does* do under finite resources. At M = 24, their identity becomes explicit: one optimization problem, approached from different directions, yielding the same answer.
-
+These shared integers establish compatibility only. No declared comparison class or richness functional proves that $24$ is the unique meeting point of mathematics and physics, that the records arise from one optimization problem, or that their agreement is non-coincidental. Any stronger unification claim requires an explicit map between the independently certified structures.
 ### Z.12.3 Physical Emergence from Interface Mode Structure
 
-The $M = 24$ QFI interface modes (Theorem Z.5) are generators in the internal MPU Hilbert space $\mathcal{H}_0 = \mathbb{C}^8$. Through the faithful minimal tangent-shell realization (Definition Z.9a; Theorem Z.10) and least-feasible dimensional selection (Theorem Z.11), these internal modes constrain the emergent spacetime dimension $D = 4$. This section establishes consistency relations between the internal mode count and physical degrees of freedom in $D = 4$ spacetime.
+The $M=24$ QFI interface modes (Theorem Z.5) are generators in the internal MPU Hilbert space $\mathcal H_0=\mathbb C^8$. Through the faithful minimal tangent-shell realization of Definition Z.9a and Theorems Z.10-Z.11, these internal modes select the least feasible Euclidean response-carrier dimension $D=4$. Relations to physical degrees of freedom in $3+1$ spacetime are asserted only on the separate operational-continuum, principal-symbol, time-orientation, and metric-reconstruction certificate branch.
 
 #### Z.12.3.1 The Mode-Emergence Logical Chain
 
-**Definition Z.10a (Mode-Emergence Correspondence).** The mode-emergence correspondence is the logical chain:
+**Definition Z.10a (Mode-Emergence Correspondence).** The mode-emergence correspondence separates carrier selection from physical promotion:
 
-$$\boxed{M_{\mathrm{int}}=24
-\xrightarrow{\text{faithful shell; Thm Z.10}}24\le K(D)
+$$
+\boxed{
+M_{\mathrm{int}}=24
+\xrightarrow{\text{faithful shell; Theorem Z.10}}
+24\le K(D)
 \xrightarrow[\text{regular }24\text{-cell}]{K(3)=12}
 D_{\min}=4
-\xrightarrow{\text{Standard theory}}\text{Physical structure}}$$
+}
+$$
 
-**Interpretive Principle:** The internal mode count $M_{\mathrm{int}}$ does not directly "become" physical degrees of freedom. Rather:
-1. $M_{\mathrm{int}}=24$ is fixed by the structural active-kernel partition of Theorem Z.1 together with the QFI tangent count of Theorem Z.5
-2. Definition Z.9a supplies a response-preserving injection into distinct tangent cells and a strict cost for response-null dimensions.
-3. Theorem Z.10 requires $24\le K(D)$; $K(3)=12$ excludes lower dimensions, and the regular $24$-cell proves feasibility in $D=4$.
-4. Standard mathematical theory determines the structure of physics in $D = 4$
+The final output is a four-dimensional Euclidean response carrier. A physical $3+1$ spacetime requires the independent operational-continuum, hyperbolic-principal-symbol, time-orientation, and metric-reconstruction certificates; a physical gauge action requires the separate Appendix G reconstruction and matter-response certificates.
 
-The physical structures (Lorentz group, gauge symmetries) are consequences of $D = 4$, not direct encodings of the 24 internal modes.
+**Interpretive Principle:** The internal mode count does not directly become physical spacetime or gauge degrees of freedom.
 
+1. $M_{\mathrm{int}}=24$ is fixed by the active-kernel partition and QFI tangent count.
+2. Definition Z.9a supplies a response-preserving injection into distinct tangent cells and a strict cost for response-null surplus dimensions.
+3. Theorem Z.10 gives $24\le K(D)$; $K(3)=12$ excludes lower dimensions, and the regular $24$-cell proves feasibility in $D=4$.
+4. Theorems Z.10--Z.11 stop at the Euclidean carrier; downstream spacetime and gauge structures retain their own certificates.
 #### Z.12.3.2 Consistency with Lorentz Structure
 
 **Proposition Z.3 (Lorentz Algebra Dimension).** In emergent $D$-dimensional spacetime,
+
 $$
 \dim\mathfrak{so}(D-1,1)=\frac{D(D-1)}2.
 $$
@@ -1920,15 +1961,16 @@ remains a ledger remainder unless a separate residual-sector certificate is supp
 
 | Component | Value | Derivation | Reference |
 |:----------|:-----:|:-----------|:----------|
-| Lorentz | $\frac{D(D-1)}{2}=6$ | $D=4$ from the faithful-shell bound, the $K(3)=12$ obstruction, the regular $24$-cell realization, and least-feasible selection | Theorems Z.10--Z.11; Prop. Z.3 |
+| Lorentz | $\frac{D(D-1)}{2}=6$ | On the separately promoted $3+1$ Lorentzian branch, $D=4$ and Proposition Z.3 give the six-dimensional Lorentz algebra | Theorems Z.10--Z.11; Corollary G.10.5.1; Proposition Z.3 |
 | Gauge | $\dim[\mathfrak{g}_{\mathrm{SM}}] = 12$ | Anomaly cancellation + PCE | Appendix G.8 |
 | Residual | $24 - 6 - 12 = 6$ | Arithmetic closure | Definition |
 
 *Proof.*
 
-**Step 1 (Lorentz).** From Theorem Z.11, $D = 4$. By Proposition Z.3, $\dim[\mathfrak{so}(3,1)] = 6$.
+**Step 1 (Lorentz).** Theorem Z.11 supplies the four-dimensional Euclidean carrier. On the separately accepted $3+1$ Lorentzian-promotion branch of Corollary G.10.5.1, Proposition Z.3 then gives $\dim[\mathfrak{so}(3,1)]=6$.
 
 **Step 2 (Gauge).** From Appendix G (Theorem G.8.4b, Corollary G.8.4c), the capacity-saturating SM-type anomaly regime yields $\dim[\mathfrak{g}_{\mathrm{SM}}] = 12$.
+
 
 **Step 3 (Residual).** $R := M - 6 - 12 = 6$.
 
@@ -2018,13 +2060,11 @@ A sector that changes one of these values must either leave the finite response 
 - (b) Or breakdown of PCE-optimal Golay organization at high energies
 
 
-**Prediction Z.7 (Three Generations Only).** The compatibility $24 = 8 \times 3$ with $N_{\text{gen}} = 3$ from anomaly cancellation predicts no fourth sequential fermion generation. A fourth generation would require:
-- (a) $M > 24$, contradicting $K(4) = 24$
-- (b) departure from the minimal Appendix Z branch $d_0 = 8$, contradicting Theorem Z.2 (with Theorem 23 supplying only the lower bound $d_0 \ge 8$)
-
+**Prediction Z.7 (Conditional Sequential-Family Scope).** Appendix R proves that $N_{\min}=3$ is the smallest admissible count in its declared SM15/SM16 family-charge candidate classes when a nonzero CKM-type rephasing invariant is required. Exact realized $N_g=3$ additionally requires Proposition R.3.5.1a's additive-monotone family-count objective. The identity $24=8\times3$ is a compatibility check, not an independent count proof. A fourth sequential family would refute the completed family-selection branch only if it lies in the declared response-active candidate class and satisfies the same selection hypotheses; it does not by itself contradict $K(4)=24$ or Theorem Z.2.
 **Prediction Z.8 (Grand Unification Structure).** If grand unification occurs, the 12 gauge modes should exhibit enhanced symmetry. Candidate groups consistent with $\dim[\mathfrak{g}] = 12$ include $SU(3) \times SU(2) \times U(1)$ itself.
 
 **Prediction Z.9 (Geometric Norm-Isolation Falsifier).** On the registered Golay-to-Leech branch, the native lattice-label spectrum has no norm-$2$ shell and begins at $|v|^2=4$. Observation of a native norm-$2$ label falsifies that branch. This statement does not imply dynamical vacuum stability or automatic correction of physical perturbations; those require a registered Hamiltonian and error-channel/decoder certificate, and a mass or energy reading additionally requires $\mathfrak B_{mass}$.
+
 
 
 
@@ -3509,13 +3549,14 @@ $$144 = 3 \times 48 = N_{\text{gen}} \times (b \times d_0)$$
 
 **Step 1 (Arithmetic).** $3 \times 6 \times 8 = 3 \times 48 = 144$. ✓
 
-**Step 2 (Generation Count).** Appendix R derives $N_{\text{gen}} = 3$ from the topological anomaly-cancellation and CP-violation argument of Sections R.3-R.4.1. Section R.4.2 shows that the $E_8$/Leech construction is compatible with the same count.
+**Step 2 (Generation Count).** Appendix R gives the smallest admissible count $N_{\min}=3$ in the declared SM15 linear-plus-cubic or SM16 linear-plus-primitive-norm family-redundancy candidate class when a nonzero CKM-type rephasing invariant is required. Realized $N_{\text{gen}}=3$ additionally requires Proposition R.3.5.1a's displayed additive-monotone objective as the realized family-count objective. Section R.4.2 records the $D_4$ triality and $E_8$/Leech structures as compatibility checks rather than independent count proofs. This is a conditional least-family selector, not a branch-independent derivation of the observed generation count.
 
 **Step 3 (Compatibility).** The factorization $144 = 3 \times 48$ is compatible with organizing the constraint structure into three generational sectors, with $48 = b \times d_0$ constraints per generation. ∎
 
-**Remark Z.8e: Interpretive Status.** The $3 \times 48$ factorization is an arithmetic fact consistent with the independently derived $N_{\text{gen}} = 3$. Whether this decomposition corresponds to physical organization of the constraint structure (e.g., relating to CKM/PMNS mixing hierarchy) remains an open question. Derivation of explicit mixing matrices from the $E_8$ geodesic structure is discussed in Appendix R, Section R.6.
+**Remark Z.8e: Interpretive Status.** The $3\times48$ factorization is an arithmetic fact consistent with $N_{\text{gen}}=3$ as independently selected on the stated Appendix R family-count branch. It neither derives that count nor establishes a physical decomposition of the constraint structure. Any relation to CKM/PMNS mixing requires the separate flavor and spectral certificates stated in Appendices R and T.
 
 #### Z.13.5.5.5 Computational Verification
+
 
 The following code verifies all claimed properties:
 
@@ -3798,6 +3839,56 @@ $$
 =c_{\mathrm W}^{-1}\mathcal Q_{\mathrm{PU}}.
 $$
 Because $\mathcal Q_{\mathrm{PU}}>0$, division yields $c_{\mathrm W}=1$. The two remaining equalities follow from the definitions of the unit Ward branch and $\kappa^*_{\mathrm{bulk}}$. The second spectral-weight identity is an independent current-to-QFI bridge; QFI normalization alone does not establish it. ∎
+
+**Proposition Z.14f (Finite-Rank Kubo--QFI Spectral Identity).** Let
+$$
+\rho_0=\frac12P_A
+$$
+on $\mathbb C^8=A\oplus B$, where $\dim A=2$. Let $H=H_A\oplus H_B$ commute with $\rho_0$, assume every eigenvalue of $H_B$ is strictly larger than every eigenvalue of $H_A$, and let $\Omega$ exceed every $A\leftrightarrow B$ transition frequency. For every Hermitian operator $O$, the retarded-Kubo convention
+$$
+\chi''_{OO}(\omega)
+=
+\pi\sum_{m,n}(r_m-r_n)|O_{mn}|^2
+\delta\!\left(\omega-(E_n-E_m)\right),
+\qquad \omega>0,
+\tag{Z.14f.1}
+$$
+where $r_m$ are the eigenvalues of $\rho_0$, gives
+$$
+\frac4\pi\int_0^\Omega\chi''_{OO}(\omega)\,d\omega
+=
+F_Q[\rho_0,O]
+=
+2\|P_AOP_B\|_{\mathrm{HS}}^2.
+\tag{Z.14f.2}
+$$
+If the spectral ordering fails or $\Omega$ omits an interface transition, the positive-frequency equality in (Z.14f.2) need not hold.
+
+*Proof.* Choose an eigenbasis of $H$ adapted to $A\oplus B$. The eigenvalues of $\rho_0$ are $r_a=1/2$ for $a\in A$ and $r_b=0$ for $b\in B$. Equal populations make every $A$--$A$ and $B$--$B$ term vanish. The ordering hypothesis makes each $A\to B$ transition positive-frequency, and the bandwidth hypothesis includes all of them. Hence (Z.14f.1) gives
+$$
+\int_0^\Omega\chi''_{OO}(\omega)\,d\omega
+=
+\frac\pi2\sum_{a\in A,\,b\in B}|O_{ab}|^2.
+\tag{Z.14f.3}
+$$
+The unitary-family SLD QFI is
+$$
+F_Q[\rho_0,O]
+=
+2\sum_{m,n:r_m+r_n>0}
+\frac{(r_m-r_n)^2}{r_m+r_n}|O_{mn}|^2.
+$$
+Only the two ordered orientations of each $A$--$B$ pair survive. Since their population ratio is $1/2$ and $O$ is Hermitian, their combined contribution is $2|O_{ab}|^2$. Therefore
+$$
+F_Q[\rho_0,O]
+=
+2\sum_{a,b}|O_{ab}|^2
+=
+2\|P_AOP_B\|_{\mathrm{HS}}^2,
+$$
+which together with (Z.14f.3) proves (Z.14f.2). The final statement follows because a reversed transition contributes at negative frequency and an omitted transition contributes to the QFI but not to the truncated integral. ∎
+
+**Remark Z.14f.1 (Certificate Scope).** Proposition Z.14f is a finite spectral identity. It neither identifies $O$ with the operational electromagnetic current nor supplies the current normalization, source-exhaustion, retained-bandwidth, or PCE-null tail conditions of Definition Z.14d.
 
 **Remark Z.14a (Comparison with Standard QFT).** In standard QFT, $\kappa$ in $S_{\mathrm{Maxwell}}$ carries no empirical content because a constant field rescaling can be absorbed into a redefinition of the free gauge coupling. In PU, the coupling $u^*$ is fixed by capacity saturation in QFI-natural units (Theorem Z.7) and the QFI normalization $\lambda=1$ is fixed by state-space geometry (Theorem Z.5), which removes the ordinary $U(1)$ rescaling freedom. On the unit Predictive-Ward branch of Theorem Z.14, $\kappa^*_{\mathrm{bulk}}=1$ is a theorem. On a branch carrying the Thomson-Ward spectral-weight certificate of Definition Z.14d, Theorem Z.14e closes the unit Jacobian $c_{\mathrm W}=1$ from the operational $f$-sum/TRK identity (Z.14d.4) together with the QFI-canonical evaluation (Z.14e.2), rather than taking $c_{\mathrm W}=1$ as an independent branch input.
 
@@ -4565,6 +4656,77 @@ $$\sum_{\alpha < \beta} K(e_\alpha, e_\beta) = \frac{S_B}{2} = 384$$
 
 ∎
 
+**Proposition Z.23b (Jacobi Spectra and Isotropic Ricci Trace).** Identify the tangent space with $\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$ and use
+$$
+g_{KE}(Z,W)=2\operatorname{Re}\operatorname{Tr}(ZW^\dagger),
+\qquad
+g_B=\frac14g_{KE}.
+$$
+For a rank-one $g_B$-unit tangent, the full real Jacobi spectrum is
+$$
+\{8^{(1)},2^{(12)},0^{(11)}\},
+\tag{Z.23b.1}
+$$
+and its transverse spectrum is $\{8^{(1)},2^{(12)},0^{(10)}\}$. For an equal-singular-value rank-two $g_B$-unit tangent, the full spectrum is
+$$
+\{4^{(4)},1^{(16)},0^{(4)}\}.
+\tag{Z.23b.2}
+$$
+Thus the Jacobi spectrum is direction-dependent, while its trace is $32$ in both cases, as required by $\operatorname{Ric}_{g_B}=32g_B$.
+
+*Proof.* Represent $Z\in\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$ by
+$$
+\widehat Z
+=
+\begin{pmatrix}
+0&-Z^\dagger\\
+Z&0
+\end{pmatrix}
+\in\mathfrak p\subset\mathfrak u(8).
+$$
+Then
+$$
+-\operatorname{Tr}(\widehat Z\widehat W)
+=
+2\operatorname{Re}\operatorname{Tr}(ZW^\dagger)
+=
+g_{KE}(Z,W).
+$$
+For this compact symmetric-space metric,
+$$
+R(\widehat Y,\widehat X)\widehat X
+=
+-[[\widehat Y,\widehat X],\widehat X].
+$$
+Direct block multiplication shows that its lower-left block is
+$$
+YX^\dagger X+XX^\dagger Y-2XY^\dagger X.
+$$
+Consequently, in tangent-matrix coordinates,
+$$
+J_X(Y)
+=
+R(Y,X)X
+=
+YX^\dagger X+XX^\dagger Y-2XY^\dagger X.
+\tag{Z.23b.3}
+$$
+First take the $g_{KE}$-unit rank-one matrix $X_1=E_{11}/\sqrt2$. The real line $\mathbb R iX_1$ has eigenvalue $2$. The real span of
+$$
+\{E_{\mu1},iE_{\mu1}:2\le\mu\le6\}
+\cup
+\{E_{12},iE_{12}\}
+$$
+has dimension $12$ and eigenvalue $1/2$. The real line $\mathbb RX_1$ together with the real span of $\{E_{\mu2},iE_{\mu2}:2\le\mu\le6\}$ has dimension $11$ and eigenvalue $0$. These statements follow by direct substitution into (Z.23b.3) and exhaust the $24$ real tangent dimensions. A $g_B$-unit vector is $2X_1$, and (Z.23b.3) is quadratic in $X$, so the eigenvalues are multiplied by $4$, proving (Z.23b.1); removing the radial zero direction gives the transverse spectrum.
+
+For the rank-two case take the $g_{KE}$-unit matrix $X_2=(E_{11}+E_{22})/2$. Write $Y=(A,C)^{\mathsf T}$ with $A\in M_2(\mathbb C)$ and $C\in M_{4\times2}(\mathbb C)$. For the $g_B$-unit vector $2X_2$, Equation (Z.23b.3) reduces to
+$$
+J_{2X_2}(A,C)
+=
+\bigl(2(A-A^\dagger),C\bigr).
+$$
+The skew-Hermitian, Hermitian, and $C$ subspaces have real dimensions $4$, $4$, and $16$ and eigenvalues $4$, $0$, and $1$, respectively, proving (Z.23b.2). Finally, $8+12\cdot2=32$ and $4\cdot4+16\cdot1=32$. ∎
+
 **Remark Z.10: Dimensional Coincidence.** The real dimension of $Gr(2,8)$ is $\dim_\mathbb{R} = 2ab = 24 = M$. This is not coincidental: the QFI mode count equals the geometric degrees of freedom of the interface manifold.
 
 ### Z.27.5 Extrinsic Curvature Contribution
@@ -4595,11 +4757,25 @@ because $(M-1)(32/23)/(2\cdot8)=2$. The value $1/(ad_0)$ is a branch input, not 
 
 ### Z.27.6 Minimal Holonomy and Second-Order Correction Formula
 
-**Lemma Z.14 (Conditional Normalized Chern-Flux Branch).** The group $\pi_2(\mathrm{Gr}(a,d_0))\cong\mathbb Z$ is generated by the standard Schubert $\mathbb{CP}^1$. Topology alone does not define a holonomy around a two-cycle. If a separately chosen Hermitian line bundle and connection have curvature $F$ normalized by
+**Lemma Z.14 (Conditional Normalized Chern-Flux Branch).** The group $\pi_2(\mathrm{Gr}(a,d_0))\cong\mathbb Z$ is generated by the standard Schubert $\mathbb{CP}^1$. Topology alone does not define a holonomy around a two-cycle. Let $L$ be a separately chosen Hermitian line bundle with unitary connection of curvature $F_\nabla$, adopt the convention
+$$
+F:=-iF_\nabla,
+\qquad
+c_1(L)=\left[\frac{F}{2\pi}\right],
+$$
+and assume
 $$
 \frac1{2\pi}\int_{\mathbb{CP}^1}F=1,
 $$
-then the generator carries flux $2\pi$ and class $n$ carries flux $2\pi n$. Selecting $n=1$ and identifying this flux with the scalar $\Omega_{\min}$ in Theorem Z.25 are additional branch choices. The Bures metric normalization by itself does not supply this line-bundle normalization. ∎
+Then the generator carries flux $2\pi$ and class $n$ carries flux $2\pi n$. On the standard complex orientation, the tautological rank-$a$ bundle $S$ satisfies
+$$
+\det(S)|_{\mathbb{CP}^1}\cong\mathcal O(-1),
+\qquad
+\int_{\mathbb{CP}^1}c_1(\det S)=-1,
+\qquad
+\int_{\mathbb{CP}^1}c_1((\det S)^*)=1.
+$$
+Thus the displayed positive unit normalization is realized by the dual determinant line, or by the determinant line with reversed orientation. Selecting the line bundle, orientation, $n=1$, and the identification of this flux with the scalar $\Omega_{\min}$ in Theorem Z.25 are additional branch choices. The calculation fixes the sign only after those choices and does not select an electromagnetic charge line. The Bures metric normalization by itself does not supply this line-bundle normalization. ∎
 
 **Theorem Z.25 (Complete Second-Order Correction on the Canonical Separable Curvature-Response Branch).** Assume the canonical separable second-order response normalization for the $U(1)$ interface matching functional, namely
 $$
@@ -5131,7 +5307,7 @@ R_\alpha^{\mathrm{cent}}-\Delta_{\times}
 $$
 which is $173.5$ recorded comparison standard uncertainties, or $26.59$ ppb of $\alpha^{-1}$.
 
-*Proof.* The identities follow by substituting $u^*=2^{1/8}-1$ into the exact sinc-core formula and the definitions of $A$ and $B$. The multiplicative law expands as $(1+A)(1+B)=1+A+B+AB$, giving (Z.27.11e.4c). The exponential law has expansion $1+A+B+A^2/2+O(u^3)$; since $A^2$ contributes at the same displayed kernel order as the certified curvature slot, it is not an admissible same-slot completion of Theorem Z.26 unless a separate residual-operator gate reopens that slot. The numerical values are direct evaluations of these fixed expressions and use no measured value except in the after-the-fact comparison differences. ∎
+*Proof.* The identities follow by substituting $u^*=2^{1/8}-1$ into the exact sinc-core formula and the definitions of $A$ and $B$. The multiplicative law expands as $(1+A)(1+B)=1+A+B+AB$, giving (Z.27.11e.4c). The exponential law has expansion $1+A+B+A^2/2+O(u^3)$; since $A^2$ contributes at the same displayed kernel order as the certified curvature slot, it is not an admissible same-slot completion of Theorem Z.26 unless a separate residual-operator gate reopens that slot. The numerical values are direct evaluations of these fixed expressions and use no measured value except in the after-the-fact comparison differences. The factorization is an arithmetic audit only: promoting it to a physical response law with $c_{11}=1$ requires an accepted factorization of the operator-realized response maps under Definition Z.27.11j or Definition Z.27.11g. Legendre congruence, a one-dimensional target channel, or disjoint provenance of $A$ and $B$ does not prove that factorization. Until that gate is supplied, the additive sinc core remains the registered core and the multiplicative value remains diagnostic. ∎
 
 **Corollary Z.27.11e.5 (Cross-Response Localization of the Centered Residual).** Any future residual certificate on the same exact sinc-core branch that uses a leading completion expansion
 $$
@@ -6429,6 +6605,159 @@ which is positive exactly under the displayed conditions. Every unordered pair s
 
 A dynamical prediction that either count converges to $24$ requires a specified channel whose stationary state is $I_2/2\oplus0_6$ and a proved convergence law. Ordinary thermalization alone supplies neither condition.
 
+**Proposition Z.28.1 (Margin-Stable QFI Support Count).** For a diagonal spectrum $p$, write
+$$
+\lambda_{ij}(p)
+=
+\frac{(p_i-p_j)^2}{p_i+p_j},
+\qquad i<j,
+\tag{Z.28.1}
+$$
+with $\lambda_{ij}=0$ when $p_i=p_j=0$. Let an ideal target spectrum have every coefficient either zero or at least $m>0$, and suppose the total preparation-and-estimation certificate gives
+$$
+|\widehat\lambda_{ij}-\lambda_{ij}|\le\eta
+$$
+for every pair. If the activity threshold $\tau$ is fixed before inspection and satisfies
+$$
+\eta<\tau<m-\eta,
+\tag{Z.28.2}
+$$
+then thresholding $\widehat\lambda_{ij}>\tau$ recovers the exact ideal QFI support and hence its generator count.
+
+*Proof.* If the ideal coefficient is zero, then $\widehat\lambda_{ij}\le\eta<\tau$. If it is nonzero, then $\widehat\lambda_{ij}\ge m-\eta>\tau$. Thus the threshold separates the two classes pairwise. Each active unordered pair supplies exactly two real off-diagonal Hermitian generators, so the support count is recovered. ∎
+
+Counting both real generators per active unordered pair, the complete positive-coefficient multiset for the canonical specialization $(3/5,2/5,0^6)$ is
+$$
+\left\{
+\left(\frac35\right)^{(12)},
+\left(\frac25\right)^{(12)},
+\left(\frac1{25}\right)^{(2)}
+\right\}.
+\tag{Z.28.2a}
+$$
+For $(2/5,3/10,3/20,3/20,0^4)$ it is
+$$
+\left\{
+\left(\frac25\right)^{(8)},
+\left(\frac3{10}\right)^{(8)},
+\left(\frac3{20}\right)^{(16)},
+\left(\frac5{44}\right)^{(4)},
+\left(\frac1{20}\right)^{(4)},
+\left(\frac1{70}\right)^{(2)}
+\right\}.
+\tag{Z.28.2b}
+$$
+These follow by substituting each positive--zero and unequal positive--positive pair into (Z.28.1); the multiplicities sum to $26$ and $42$. Thus the respective smallest positive coefficients are $1/25$ and $1/70$. For a general first-family spectrum the margin is
+$$
+m=\min\left\{p_1,p_2,\frac{(p_1-p_2)^2}{p_1+p_2}\right\}.
+$$
+Any numerical robustness claim must establish (Z.28.2) for the complete preparation-and-estimation error, not merely bound one component of state-preparation error.
+
+**Theorem Z.28.2 (Specified Relaxation Channel and Thresholded Terminal Count).** Let the active levels be $1,2$, let $\gamma_\perp,\gamma_{\mathrm{ex}}>0$, and define
+$$
+\mathcal D[L](\rho)
+=
+L\rho L^\dagger-\frac12\{L^\dagger L,\rho\}.
+$$
+Consider the Lindblad equation
+$$
+\dot\rho
+=
+\sum_{j=3}^{8}\sum_{a=1}^{2}\mathcal D[L_{aj}](\rho)
++
+\mathcal D[L_{12}](\rho)
++
+\mathcal D[L_{21}](\rho),
+\tag{Z.28.3}
+$$
+where
+$$
+L_{aj}=\sqrt{\gamma_\perp}\,|a\rangle\langle j|,
+\qquad
+L_{12}=\sqrt{\gamma_{\mathrm{ex}}}\,|1\rangle\langle2|,
+\qquad
+L_{21}=\sqrt{\gamma_{\mathrm{ex}}}\,|2\rangle\langle1|.
+$$
+For a diagonal initial state with $p_1(0)+p_2(0)>0$, put
+$$
+w_\perp=\sum_{j=3}^{8}p_j(0),
+\qquad
+\Delta_0=p_1(0)-p_2(0).
+$$
+Then
+$$
+p_j(t)=e^{-2\gamma_\perp t}p_j(0),
+\qquad 3\le j\le8,
+\tag{Z.28.4}
+$$
+$$
+p_1(t)+p_2(t)=1-w_\perp e^{-2\gamma_\perp t},
+\qquad
+p_1(t)-p_2(t)=\Delta_0e^{-2\gamma_{\mathrm{ex}}t}.
+\tag{Z.28.5}
+$$
+The unique stationary density operator is
+$$
+\rho_\infty=\frac12I_2\oplus0_6.
+\tag{Z.28.6}
+$$
+
+For a fixed threshold $0<\tau<1/2$, define
+$$
+M_{\mathrm{QFI}}^{(\tau)}(t)
+=
+2\#\{\{i,j\}:i<j,\ \lambda_{ij}(p(t))>\tau\}.
+\tag{Z.28.7}
+$$
+There is a finite $T_\tau$ such that
+$$
+M_{\mathrm{QFI}}^{(\tau)}(t)=24
+\qquad
+\text{for every }t\ge T_\tau.
+\tag{Z.28.8}
+$$
+
+More precisely, passive-passive coefficients satisfy
+$$
+\lambda_{jk}(t)=e^{-2\gamma_\perp t}\lambda_{jk}(0),
+\qquad 3\le j<k\le8,
+\tag{Z.28.9}
+$$
+and the active-active coefficient is
+$$
+\lambda_{12}(t)
+=
+\frac{\Delta_0^2e^{-4\gamma_{\mathrm{ex}}t}}
+{1-w_\perp e^{-2\gamma_\perp t}}.
+\tag{Z.28.10}
+$$
+Every active-passive coefficient tends to $1/2$. If $\lambda_{12}(0)>\tau$, let $t_A$ be the unique solution of $\lambda_{12}(t_A)=\tau$. Let $T_\perp$ be the last downward threshold-crossing time among the passive-passive coefficients, with $T_\perp=0$ when none starts above threshold, and choose $T_\times$ so that every active-passive coefficient is above threshold for all $t\ge T_\times$. If
+$$
+t_A>\max\{T_\perp,T_\times\},
+\tag{Z.28.11}
+$$
+then the terminal step is $26\to24$ at $t_A$. Without (Z.28.11), neither that terminal ordering nor the interior staircase
+$$
+56\to54\to\cdots\to26\to24
+$$
+is forced; simultaneous crossings, absent initial modes, and active-passive crossings can change the transient sequence.
+
+*Proof.* Equation (Z.28.3) preserves diagonal states. For $j\ge3$, the two jumps from $j$ to the active levels give $\dot p_j=-2\gamma_\perp p_j$, proving (Z.28.4). Their gains enter $p_1$ and $p_2$ equally. The two active exchange jumps give
+$$
+\frac{d}{dt}(p_1-p_2)=-2\gamma_{\mathrm{ex}}(p_1-p_2),
+$$
+while trace preservation gives the first equation in (Z.28.5). This proves (Z.28.4)–(Z.28.5). At stationarity every passive population vanishes and active exchange forces $p_1=p_2=1/2$. Passive-passive, active-passive, and active-active coherences decay under the anticommutator terms of (Z.28.3), so no stationary off-diagonal component remains; hence (Z.28.6) is unique.
+
+Substitution of (Z.28.4) into (Z.28.1) gives (Z.28.9), and substitution of (Z.28.5) gives (Z.28.10). Thus every passive-passive and active-active coefficient tends to zero. For $a\in\{1,2\}$ and $j\ge3$,
+$$
+p_a(t)\longrightarrow\frac12,
+\qquad
+p_j(t)\longrightarrow0,
+$$
+so $\lambda_{aj}(t)\to1/2$. Because there are finitely many pairs and $0<\tau<1/2$, after some finite time precisely the twelve active-passive pairs exceed threshold. Each contributes two generators, proving (Z.28.8).
+
+When $\lambda_{12}(0)>\tau$, the numerator of (Z.28.10) decreases strictly and its denominator increases, so $\lambda_{12}(t)$ decreases continuously from above $\tau$ to zero and has a unique crossing $t_A$. After $\max\{T_\perp,T_\times\}$, the twelve active-passive pairs are the only active pairs apart from $\{1,2\}$. Under (Z.28.11), the count is therefore $2(12+1)=26$ immediately before $t_A$ and $2\cdot12=24$ at and after the crossing. The final sentence follows because the hypotheses impose no distinctness or ordering on the remaining threshold crossings. ∎
+
 ---
 
 ## Z.29 Coordination Number Scaling
@@ -6501,9 +6830,10 @@ On the branch where MCC-type local channel crystallization is independently cert
 
 The reasoning:
 
-1. **Spacetime from channel optimization.** On the operational-continuum branch, emergent spacetime geometry is recovered from finite channel and propagation-cost constraints (Theorem Z.11; Section 11).
+1. **Carrier selection and spacetime promotion.** Theorem Z.11 selects a four-dimensional Euclidean response carrier on its faithful-shell branch. Emergent $3+1$ spacetime requires the independent operational-continuum and Lorentzian-promotion certificates of Section 11 and Appendix O.
 
 2. **Channel geometry as packing.** The mode–channel correspondence maps distinguishable channels onto directions on $S^{D-1}$, turning channel optimization into a constrained sphere-packing / spherical-code problem (Corollary Z.4).
+
 
 3. **Relaxation path.** During thermalization, the system explores configurations where the normalized effective neighbor-shell radius $R$ evolves from near-contact ($R \approx 1$) outwards.
 
@@ -6601,13 +6931,14 @@ This is a conditional finite minimization theorem inside the declared tangent-sh
 
 | Prediction | Value | Source |
 |------------|-------|--------|
-| Spacetime dimension | D = 4 | Theorem Z.11 |
+| Euclidean response-carrier dimension and spacetime promotion | $D=4$ on the faithful tangent-shell branch; $3+1$ interpretation separately certificate-gated | Definition Z.9a; Theorems Z.10-Z.11; Corollary P.8.3 |
 | Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; diagnostic-only hypercharge-recoil (operator realization open) candidate $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$; downgraded passive-complement branch $[137.03599917502362\ldots,137.03599917878353\ldots]$; canonical composition audit cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ remains a diagnostic and is not a second residual contribution | Theorem Z.26; Definition Z.27.11a; Corollary Z.27.11e.1; Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 |
 | Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
+
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
 | Z-pole coupling | α⁻¹(M_Z) = 127.93 | Corollary Z.8 |
-| Hot-state mode excess | M_hot > 24 | Prediction Z.1 |
+| Thresholded hot-state QFI support | Static counts $26$ and $42$ for the displayed spectra; the specified relaxation channel is eventually $24$, and if $\lambda_{12}(0)>\tau$ and (Z.28.11) hold, its terminal step is $26\to24$ | Prediction Z.1; Proposition Z.28.1; Theorem Z.28.2 |
 | Coordination scaling | N_coord = K(D_eff) | Prediction Z.2 |
 | Dimensional frustration | D≠4 unstable | Prediction Z.3 |
 | Golden ratio crossover | $R\approx\varphi$ on the OSC$\to$DLP MCC branch | Prediction Z.5 |
@@ -6679,10 +7010,11 @@ Relative = 0.677765 ppm
 
 ## From M = 24 to Two Fundamental Constants
 
-1. **Spacetime Dimension D = 4**
+1. **Euclidean Response-Carrier Dimension $D=4$**
    - Every faithful $24$-mode tangent shell obeys $24\le K(D)$, so $K(3)=12$ excludes $D\le3$
    - The regular $24$-cell explicitly proves feasibility in $D=4$
    - Definition Z.9a's strict response-null support cost selects the least feasible dimension, hence uniquely $D_{\min}=4$
+
    - Theorem Z.12 audits this geometric record separately from the Golay, Leech, modular, and Niemeier records
 
 2. **Fine-Structure Constant Core $\alpha^{-1}_{0}=137.03609205522863\ldots$**
@@ -6830,9 +7162,10 @@ These are branch-indexed uses of holonomy or curvature data. They do not establi
 2. the cited capacity and Grassmannian ledgers share the count $12$ on their named branches;
 3. only on a registered discriminant-form/coset-minimum datum satisfying Equation (R.4.2a.1) does $d=8$ transfer to rootlessness of the resulting lattice;
 4. conditional on an even unimodular rootless rank-$24$ lattice, classification identifies $\Lambda_{24}$;
-5. the scaled $(\sqrt2E_8)^3$ scaffold is compatible with, but does not derive, the three-generation theorem.
+5. the scaled $(\sqrt2E_8)^3$ scaffold is compatible with, but does not derive, the conditional family-count selector.
 
 The common backbone therefore propagates code and dimensionless norm information only on the explicit bridge. It does not establish a physical decoder, vacuum stability, spacetime dimension, or energy gap. ∎
+
 
 
 

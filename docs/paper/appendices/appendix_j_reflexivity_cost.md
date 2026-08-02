@@ -104,6 +104,52 @@ $$
 $$
 The structural label ledger for $N_{\mathrm{ref}}$ binary reset supports is $N_{\mathrm{ref}}\ln2$, but it equals neither term in (J.4a.2) unless the relevant maximal-entropy and saturation hypotheses are separately verified. For sequential resets, each $R_e$ includes all earlier records still available and unchanged; this prevents double counting. ∎
 
+**Corollary J.4a.3 (Conditional Guard-Reset Subledger).**
+
+Let
+$$
+\mathcal E_{\mathrm{guard}}
+\subseteq
+\mathcal E_{\mathrm{ref}}(D)
+$$
+be a set of $m$ distinct registered reset events injectively assigned to $m$ physically established guard entries. Suppose
+$$
+H_{q_e}(P_e\mid R_e)\ge h_{\min}>0
+\qquad
+(e\in\mathcal E_{\mathrm{guard}}),
+$$
+where $R_e$ contains every record retained and unchanged through event $e$. Define
+$$
+\mathcal X_{\mathrm{guard}}(D)
+:=
+\sum_{e\in\mathcal E_{\mathrm{guard}}}
+\varepsilon_{\mathrm{reset}}(e).
+$$
+Then
+$$
+\mathcal X_{\mathrm{guard}}(D)
+\ge
+mh_{\min}.
+\tag{J.4a.3}
+$$
+If each $P_e$ is conditionally uniform binary, then
+$$
+\mathcal X_{\mathrm{guard}}(D)
+=
+m\ln2
++
+\sum_{e\in\mathcal E_{\mathrm{guard}}}
+\varepsilon_{\mathrm{diss}}(e)
+\ge
+m\ln2,
+\tag{J.4a.4}
+$$
+with equality exactly when every displayed dissipative overhead vanishes.
+
+*Proof.* Restrict Equation (J.4a.2) to $\mathcal E_{\mathrm{guard}}$ and use the stated conditional-entropy floor. On the conditionally uniform binary branch, every conditional entropy equals $\ln2$, giving (J.4a.4). ∎
+
+No reset term follows merely because a guard is semantic or predetermined. This corollary counts exactly the physically assigned reset events satisfying its conditional-entropy premise; an entry retained reversibly or never reset contributes no event to $\mathcal E_{\mathrm{guard}}$. A predetermined guard is nevertheless counted if its physical implementation contains an assigned reset satisfying the stated hypotheses.
+
 **Theorem J.4b (Conditional Finite-Work Quantum-Zeno Obstruction).** Consider $N$ equal interrogation cycles over duration $T$, with $\tau=T/N\le\tau_0$. Assume that every surviving cycle closes a registered reset in a cyclic degenerate register at common bath temperature $T_b>0$ and that, uniformly over surviving histories,
 $$
 q_j(\tau\mid H_{j-1})\ge b\tau^2,
