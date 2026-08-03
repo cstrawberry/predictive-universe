@@ -3,7 +3,7 @@
 This section provides a synthesis and interpretation of the Predictive Universe (PU) framework presented in this paper. We summarize the core elements, explore its philosophical implications, compare it to existing approaches, acknowledge its limitations, and suggest directions for future research.
 
 
-**14.1 Summary of the Unified Framework**
+
 
 The Predictive Universe (PU) framework offers a theoretical structure aimed at unifying aspects of consciousness, quantum mechanics, and spacetime geometry without taking a matter field, background metric, or gauge group as its first primitive. It begins with the Cogito-certified knowledge process; Appendix P.3.1 and Thesis P.3.5.1 identify its expectation-verification-update structure, and Theorem P.6.1c.3 with Corollary P.6.1c.4 proves prediction to be the canonical normal form of every finite self-verifying operational presentation carrying those data. The physical model then adds Axioms 1–3, PPI/PCE, and Hypothesis 1's network of interacting Minimal Predictive Units. Later quantum, continuum, gauge, source, and thermodynamic results add their stated branch hypotheses and finite certificates. The framework thus reconstructs familiar effective laws from this operational foundation and its registered physical branches; it does not eliminate all physical input.
 
@@ -84,7 +84,7 @@ $$
 $$
 This is a heat ledger, not a state-disturbance inequality. Proposition 16 excludes a static context only on a further branch where high CC entails repeated fresh introspection and every such acquisition has nonzero displacement in a specified context metric. Claims about subjective experience, extreme computational density, and future information horizons remain speculative.
 
-In summary, PU presents reality governed by the logic, thermodynamics, and optimization of prediction. Physical laws, spacetime, and consciousness emerge from the collective dynamics of the MPU network operating under derived logical and resource limitations.
+In summary, PU presents reality governed by the logic, thermodynamics, and optimization of prediction. Physical laws and spacetime emerge from the collective dynamics of the MPU network operating under derived logical and resource limitations. Awareness does not emerge; it is the framework's starting point.
 
 **Entropy-Ledger Comparison.** Appendix P.6.5 compares several mathematically distinct ledgers. A correspondence requires the stated state space, probability law, thermodynamic implementation, quantum state, or horizon bridge; equality of numerical values on one branch does not identify the ledgers generally.
 
@@ -823,6 +823,10 @@ $$
 **Corollary 14.2e (Branchwise Structural Robustness).** Every predictor in the scope of Theorems 10–11 is subject to the stated diagonal obstruction. The Robertson inequality follows only after the Hilbert/complementarity package is added. The reset-support and heat bounds follow only after the independent fixed-ready-state, tensor-factor, ensemble, and thermodynamic packages are added. Failure of one physical package does not invalidate the diagonal theorem or the other package.
 
 #### Summary
+
+These five results describe different limits. Self-prediction, quantum uncertainty, memory loss, reset heat, and channel mixing may occur together, but none is derived merely from the others.
+
+**Technical ledger.**
 
 The comparison is a separation result, not an uncertainty–irreversibility identity:
 
@@ -2236,6 +2240,10 @@ The hard-core datum resolves the measure-construction and support-exclusion obst
 If both tiers exist, they are in principle distinguishable by their scaling with aggregate complexity. Active-tier effects require $C_{agg}$ sufficient to support CC modulation and inherit the Theorem 39 bound; passive-tier effects, if the Residue Conjecture holds, would be independent of $C_{agg}$ and would be present wherever Effective Operational Property R is present. A carefully designed experiment varying aggregate complexity while holding reflexive engagement fixed would therefore be able, in principle, to separate the two tiers — or to falsify the passive tier by establishing that all observed residue effects scale with $C_{agg}$ in the manner predicted by the active tier alone.
 
 #### Status Summary
+
+The active proposal currently has mathematical bounds, while its physical existence and size are open. The passive proposal has a proved support result inside its model and a conjectural outcome effect.
+
+**Technical ledger.**
 
 The active tier currently consists of theorem-level bounds on a nominated Appendix L response law; physical existence and nonzero magnitude remain certificate-pending. The hard-core branch proves the support theorem 14.5.8f and the outside-support bound of Corollary 14.5.8g, but it does not prove the Residue Conjecture. The passive tier remains conjectural until one accepted joint certificate supplies the actualization map, quantitative outcome law, reflexive-depth dependence, active/passive source separation, protocol invariance, and no-signaling marginal identities. The sealed causal core licenses no acausal control channel; a positive late-context marginal channel is instead the explicit external falsifier classified by Theorem 39c.
 

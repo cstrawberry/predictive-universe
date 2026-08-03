@@ -2,6 +2,10 @@
 
 ## Y.1 Overview and Derivation Chain
 
+This appendix develops a conditional account of baryogenesis. Its structural branch fixes the complexity and flavor inputs, while a numerical baryon yield also requires completed source, transport, freeze-out, washout, normalization, and residual records.
+
+### Technical branch ledger
+
 This appendix formulates a conditional baryogenesis transport branch. The finite structural chain fixes registered exponent and flavor inputs, but the baryon yield is an output only after a source, transport, freeze-out, washout, normalization, and residual certificate is supplied:
 $$
 K_0=3\longrightarrow d_0=8\longrightarrow(a,b)=(2,6)\longrightarrow M=24
@@ -45,7 +49,7 @@ This proposition establishes a correspondence principle between logical and phys
 $$
 \mathsf{C}|0\rangle = |1\rangle, \qquad \mathsf{C}|1\rangle = |0\rangle.
 $$
-The proposition therefore establishes a model-level correspondence between the predictive involution and charge conjugation, not an unconditional derivation of $\mathsf{C}$ from CPT. ∎
+The proposition therefore establishes the predictive-involution–charge-conjugation correspondence at model level. ∎
 
 ### Y.2.2 The 2-to-1 Merge and Branch Selection
 
@@ -592,6 +596,10 @@ $$
 *Proof.* The two-generation CKM statement is the rephasing result used in Theorem R.3.4. For four generations, substitute $N_g=4$ into Lemma Y.8.2 and Proposition Y.9.1. No equation in those results fixes the remaining transport factors, so no numerical baryon yield follows. ∎
 
 ### Y.6.3 Structure Summary
+
+On the fixed-total-budget, parallel, three-family-symmetric, noncancelling branch, the CP-odd half-path contributes 19.25 and the shared binary family term contributes one third of the natural logarithm of two. Together they give a baryogenesis complexity of about 19.48.
+
+#### Technical structure ledger
 
 | Component | Value | Physical Origin |
 |:----------|:-----:|:----------------|
@@ -1961,6 +1969,10 @@ If no record in (Y.11.7h.1) is accepted, Appendix Y supplies no certified numeri
 
 ## Y.11 Baryogenesis Derivation Chain Summary
 
+The derivation moves from the three-part operational threshold through the eight-state carrier, the two-plus-six split, twenty-four interface modes, the electroweak complexity, and the three-family flavor branch. If an accepted transport and product reduction is supplied, those inputs determine its baryon ratio. At present, the open transport records give the displayed factor product illustrative status.
+
+### Technical derivation ledger
+
 The branch-resolved logical chain from $K_0 = 3$ to the illustrative $\eta_B$ row is:
 
 $$\boxed{
@@ -2063,6 +2075,10 @@ The CP-response sensitivity remains open until an accepted transport calculation
 ---
 
 ## Y.14 Conclusion
+
+Appendix Y supplies a structurally constrained baryogenesis branch and an illustrative matter-excess scale. Its numerical value and sign become physical outputs only after the source, transport, washout, normalization, residual, and orientation records are accepted.
+
+### Technical conclusion ledger
 
 The Appendix Y branch gives the illustrative factor-product value
 

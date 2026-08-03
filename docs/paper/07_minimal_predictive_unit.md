@@ -789,6 +789,10 @@ $$
 
 **7.3.3 Dual Dynamics Overview**
 
+Each basic unit changes in two ways. Between interactions it develops its current prediction without recording an outcome. During an interaction it can register an outcome, check the prediction, and update its state.
+
+**Technical ledger.**
+
 The declared MPU cycle has two modes acting on $S_{(s)}(t)=(\rho(t),s)$:
 
 **7.3.3.1 Definition 26 (Def 26): Internal Prediction Evolution**

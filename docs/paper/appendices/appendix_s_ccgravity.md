@@ -465,7 +465,7 @@ Thus arbitrary CC enhancement is excluded by the combined branch and finite-syst
 
 ## S.6 Non-Local Gravitational Influence via Entanglement
 
-While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can modulate joint $A$-$B$ correlation statistics without violating no-signaling. As with standard quantum entanglement, Alice's local action changes joint correlations detectable only after classical comparison of measurement records, while leaving Bob's marginal statistics unchanged. This is local phase control of entangled joint correlations under no-signaling — a standard quantum mechanical effect — and is not Bob-marginal FTL influence. Reconciliation with any main-text Postulate 3 statement asserting Bob-marginal statistical shifts would require a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here, and any mechanism producing such a shift would lie outside and falsify the exact pre-lightcone context-independence branch classified by Corollary 39c.1.
+While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can modulate joint $A$-$B$ correlation statistics through standard local-unitary phase control: Alice's action changes joint correlations detectable only after classical comparison of measurement records, while Bob's marginal statistics remain unchanged, preserving no-signaling. Reconciliation with any main-text Postulate 3 statement asserting Bob-marginal statistical shifts would require a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here, and any mechanism producing such a shift would lie outside and falsify the exact pre-lightcone context-independence branch classified by Corollary 39c.1.
 
 **Setup:** Consider Alice and Bob sharing a maximally entangled two-qubit state:
 $$
@@ -540,9 +540,8 @@ $$
 2. Local gravitational field affects only Alice's particle (local interaction)
 3. Because Alice's particle is entangled with Bob's, the global entanglement correlations are modified
 4. Bob's marginal statistics remain unchanged (no-signaling preserved, Equation S.37)
-5. The modification is detectable only after classical comparison of $A$ and $B$ measurement records, exactly as for any other entangled-state local-unitary effect — this is not Bob-marginal FTL influence.
-5. Joint statistics $P(ij)$ are modified, detectable only through comparison between Alice and Bob
-6. Effect is probabilistic, not deterministic: cannot force specific outcomes
+5. The local-unitary phase modifies the joint probabilities $P(ij)$; detecting the modification requires classical comparison of Alice's and Bob's measurement records.
+6. The effect changes probabilities without selecting a specific outcome.
 7. Detection requires a protocol-specific sample size whose leading small-CC scaling is proportional to $\mathrm{CC}^{-8}$ when the response coefficients are nonzero
 
 **Detection requirements:** If Equation S.5 is written as
@@ -1008,7 +1007,7 @@ Equation S.21 and Equation S.64 have the same linear form only after the additio
 
 ## S.8 Integration with Appendix L
 
-This appendix analyzes gravitational feedback effects that limit CC efficacy. For comprehensive treatment of CC implementation mechanisms, energy accounting, and practical experimental protocols, see Appendix L. The relationship between these appendices is complementary, not competitive.
+This appendix analyzes gravitational feedback effects that limit CC efficacy. For comprehensive treatment of CC implementation mechanisms, energy accounting, and practical experimental protocols, see Appendix L.
 
 ### S.8.1 Division of Labor
 
@@ -1207,6 +1206,10 @@ Several framework elements require both appendices for complete understanding:
 Assume the mutually exclusive channel ledger of Theorem L.6 and Equations (L.38) and (L.40). Then $P_{agg}$ is partitioned so that each registered channel contributes once to $T_{\mu\nu}^{(MPU)}$, and $P_{context}$ splits into radiated and non-radiated components according to that ledger. If the common source also lies on the regular local-equilibrium branch of Theorem B.5, it is covariantly conserved in distributions; on the smooth on-shell variational branch the conservation equation holds pointwise. Channel exclusivity comes from the L.6 ledger, while conservation comes from the separate B.5 hypotheses.
 
 ## S.9 Conclusion
+
+This appendix models gravitational feedback from contextual communication. On the stated branches, retained context energy produces weak timing changes, bounded optimization, and selected correlation effects while preserving the causal marginal.
+
+### Technical conclusion ledger
 
 This appendix develops a conditional gravitational-feedback model for operational CC.
 

@@ -2,6 +2,10 @@
 
 ## O.1 Introduction: The Problem of Temporal Coherence
 
+This appendix asks how many local predictive cycles can form a coherent temporal order and why histories have a preferred direction. It treats synchronization, irreversibility, and large-scale timing as separate problems.
+
+**Technical ledger.**
+
 The Predictive Universe (PU) framework is built upon the operational dynamics of interacting Minimal Predictive Units (MPUs). As established in Theorem 4, the very act of prediction requires a primitive, ordered, and directional concept of evolution, which we identify with local time. Each MPU, through its cyclical operation, effectively possesses its own internal "clock." However, the existence of these local causal rhythms does not, in itself, explain the emergence of the coherent, large-scale temporal structure observed in the universe.
 
 This appendix addresses this crucial issue. It does not attempt to derive the existence of time *ex nihilo*—a task fraught with logical circularity. Instead, it starts from the premise established in Theorem 4: the very act of prediction logically presupposes a primitive, ordered, and directional concept of evolution. We argue this is a non-negotiable prerequisite for any universe containing predictive agents. The central challenge addressed here is then threefold:
@@ -1474,6 +1478,10 @@ Premise (A5) of §12 is therefore theorem-level only on the emergent-spacetime b
 
 
 ## O.8 Conclusion
+
+The framework obtains coherent timing and a preferred statistical direction only when the relevant synchronization and history records are present. Connections to consciousness or gravity need additional physical models.
+
+**Technical ledger.**
 
 The framework obtains temporal coherence and a probabilistic forward orientation on explicitly certified branches.
 *   **Temporal Coherence:** Under the statistical and ledger premises of Theorem O.1 and the connected low-noise detailed-balance hypotheses of Theorem O.2, stationary measures concentrate near synchronized phase configurations.

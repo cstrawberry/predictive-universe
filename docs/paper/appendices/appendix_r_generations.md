@@ -2,6 +2,10 @@
 
 ## R.0 Introduction
 
+This appendix asks why the framework uses three particle families. It separates the family-count argument from triality, coding, lattice, and mass models. Agreements among them provide cross-checks between distinct constructions.
+
+### Technical family-count introduction
+
 This appendix separates generation topology, $D_4$ triality, binary coding, and lattice gluing. On SM15, linear and cubic anomaly cancellation plus a registered CP-active realization supplies the smallest admissible three-charge orbit; on SM16, the linear anomaly equation must be supplemented by primitive charge-norm minimization. The additive-monotone family objective separately selects the realized count. Triality and the factorization $24=3\cdot8$ are compatibility records. The Golay code is selected only on the predictive-recovery branch. From a marked Golay copy, the explicit coordinate construction following Lemma R.4.5 produces a mathematical Leech lattice; the separate $(\sqrt2E_8)^3$ realization still requires the registered discriminant-form and norm-certificate routes of Lemma R.4.5 and Corollary R.4.2b. None of these finite structures alone supplies masses, vacuum dynamics, or spacetime.
 
 
@@ -1522,6 +1526,10 @@ Statement 1 supplies the classified code up to coordinate permutation. Statement
 
 #### R.4.2.1.8 Dual Optimality Summary
 
+The binary code and the twenty-four-dimensional lattice are each optimal in their own setting. Their registered construction supplies the connection between them.
+
+##### Technical comparison ledger
+
 **Remark R.4.2: Conditional Code--Lattice Cross-Ledger.**
 
 | Domain | Closed statement | Additional bridge datum |
@@ -1669,9 +1677,9 @@ These four strands are logically distinct, though they share foundational consta
 
 **Structural compatibility from QFI mode count:** The interface mode count $M = 24$ (**Appendix Z**, Theorem Z.5) admits the factorization:
 $$
-M = 24 = 8 \times 3 = d_0 \times N_{\text{gen}}.
+M = 24 = 8 \times 3 = d_0 \times N_g.
 $$
-This factorization does not independently derive $N_{\text{gen}} = 3$; rather, it shows that the topological count is compatible with organizing the interface modes into three 8-dimensional blocks. The QFI structure is therefore a consistency check, not an additional derivation pathway.
+This factorization does not independently derive $N_g = 3$; rather, it shows that the topological count is compatible with organizing the interface modes into three 8-dimensional blocks. The QFI structure is therefore a consistency check, not an additional derivation pathway.
 
 **Qualitative assessment:** The convergence of one branch-resolved derivation with three compatibility checks supports internal coherence. The proved result is the SM15 anomaly-plus-CP minimum or the SM16 linear-anomaly-plus-primitive-norm-plus-CP minimum, followed by the additive-monotone pre-flavor realization theorem.
 
@@ -1791,6 +1799,10 @@ Therefore circuits are minimal supports of nonzero Golay codewords. The dual mat
 *Proof.* Theorem R.4.2.9b identifies circuits with minimal dependencies and cocircuits with minimal cuts. Self-duality identifies the two classes, and the common girth is $8$. ∎
 
 ### R.4.3 Synthesis: Why Three is Necessary
+
+Three families arise from the anomaly and mixing requirements only on the registered selection branch. Triality and lattice geometry supply independent compatibility checks for that result.
+
+#### Technical synthesis ledger
 
 The family-count and flavor layers have distinct premise packages:
 
@@ -2397,6 +2409,10 @@ Thus failure of a later flavor texture, CKM/PMNS fit, neutrino mass model, or ba
 *Proof.* Item 1 is Theorem R.8.5b. Item 2 is the redundancy/physical-channel distinction of Theorem X.8d. Item 3 follows from (P1) and the two-family rephasing theorem. Item 4 follows from the explicit objective comparison in Theorem R.8.5b and the independent response quotient. Item 5 is Corollary R.8.5d together with Lemma R.3.4a. ∎
 
 ## R.9 Summary
+
+The appendix gives a conditional three-family selection and keeps it separate from the geometric structures used to model masses and mixing. Triality, coding, and lattice geometry support compatibility checks, while physical labels, scales, and response laws remain distinct inputs.
+
+### Technical results ledger
 
 *   **Topology:** On the $d_0=8$ flag-manifold branch, $\pi_2(\Sigma_8)\cong\mathbb Z^7$.
 *   **$E_8$ Geometry:** A registered $E_8$ root model supplies candidate squared distances $\{2,4,6,8\}$; its physical embedding and labels are branch data.

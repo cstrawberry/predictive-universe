@@ -2,6 +2,10 @@
 
 ## H.1 Introduction
 
+This appendix checks that the framework's formulas use compatible physical units and explains how one conditional acceleration scale is assembled.
+
+**Technical ledger.**
+
 This appendix records the physical dimensions assigned to key PU symbols and verifies dimensional homogeneity. On the separately adopted QFI linear-response bridge of Definition H.0, it evaluates the conditional acceleration-scale relation between $g_0$ and $\Lambda$. Dimensional consistency and the exact algebraic reduction do not derive the bridge or identify its output with the realized Milgrom scale.
 
 Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Energy $[E]=[M][L]^{2}[T]^{-2}$ and Temperature $[\Theta]$. Boltzmann's constant $k_{B}$ carries $[E][\Theta]^{-1}$. Predictive Physical Complexity $[Complexity]$ is treated as a fundamental dimension within the PU framework, representing the quantifiable structural resources required for prediction. Dimensionless information measures (nats) are noted where relevant. Factors of $c$ and $\hbar$ are kept explicit where needed for standard physics relations, but often $c=1, \hbar=1, k_B=1$ are used in derivations for simplicity.
@@ -545,7 +549,7 @@ The corresponding diagonal $1\sigma$ propagation is $\delta g_0/g_0=0.0085$; twi
 
 The empirical $g_0$ inferred from galaxy data has systematic uncertainties at the tens-of-percent level, dominated by astrophysical systematics and calibration choices [McGaugh et al. 2016; Lelli et al. 2017].
 
-**Summary Table:**
+**Technical factor table:**
 
 | Source | Category | Magnitude | Type |
 |--------|----------|-----------|------|
@@ -558,7 +562,7 @@ The approximately $2\%$ central-value difference is within the quoted empirical 
 
 **Remark H.1.** Writing $H_\Lambda=c\sqrt{\Lambda/3}$ gives $a_0=cH_\Lambda$. On the adopted Definition H.0 branch, $g_0^{\mathrm{branch}}=\eta'cH_\Lambda$ with $\eta'=3/(8\sqrt3)$. This supplies a candidate acceleration--vacuum relation; no realized galactic connection follows without an independently accepted observable and response certificate.
 
-**Remark H.2 (Summary of factors).** Equation (H.4b) follows by multiplying the four factors $a/d_0$, $w_{\mathrm{cmp}}(C)$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorems H.1a, H.1b, H.2, H.1c and the multiplicative structure theorem H.3 justify the mathematical factors once the structural-slot and two-copy bridge entries are adopted. Together with Proposition H.1, this yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
+**Remark H.2 (Factor ledger).** Equation (H.4b) follows by multiplying the four factors $a/d_0$, $w_{\mathrm{cmp}}(C)$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorems H.1a, H.1b, H.2, H.1c and the multiplicative structure theorem H.3 justify the mathematical factors once the structural-slot and two-copy bridge entries are adopted. Together with Proposition H.1, this yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
 
 **Remark H.3 (Shared geometric input).** The same attractor geometry $\mathrm{Gr}(2,8)$ that fixes the factors in Equation (H.4b) also determines the QFI spectrum used in Appendix Z and enters the electroweak matching analysis in Appendix T.
 
@@ -799,6 +803,10 @@ Determining $C$ for a specific system requires an independently specified operat
 
 ## H.8 Derivation Summary: The Bridge Law
 
+The bridge law combines four independent factors into one conditional acceleration scale.
+
+**Technical ledger.**
+
 **Table H.2: Complete Derivation Chain for η'**
 
 | Step | Factor | Value | Theorem | Source |
@@ -844,6 +852,10 @@ $$
 
 
 ## H.9 Conclusion
+
+The formulas are dimensionally consistent. The acceleration value follows only after the bridge inputs are fixed.
+
+**Technical ledger.**
 
 Through careful dimensional analysis, all core PU equations are shown to be homogeneous according to the defined units. The Unruh–de Sitter temperature matching criterion (Proposition H.1) yields the cosmic acceleration floor $a_0 = c^2\sqrt{\Lambda/3}$.
 

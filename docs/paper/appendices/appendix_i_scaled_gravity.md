@@ -2,6 +2,10 @@
 
 **I.1 Aim and Scope**
 
+This appendix presents a testable dark-sector model at galaxy, cluster, and cosmological scales. Its response laws are model inputs; a common physical construction would turn them into one multi-scale physical model.
+
+**Technical ledger.**
+
 Within the Predictive-Universe (PU) framework, this appendix develops the dark-sector response stack as a multi-scale, environment-dependent model of emergent gravity. The theorem-level inputs are the emergent-gravity bridge of Sections 11–12 and the acceleration-scale identity of Appendix H conditional on Definition H.0 and Equation H.4b. The galaxy-scale law modification $G(R)$ is a phenomenological kernel constrained by those inputs and by local-gravity limits. The cluster-scale "predictive matter" response is a separate non-local source-modification kernel. The composite model is PCE-motivated and falsifiable, with the parameter roles and T1/T2/T3 dependencies stated explicitly below. The galaxy-scale law modification is **environment-dependent** and does not imply a universal large-scale shift of $G$ relevant for the CMB.
 
 **I.2 Foundations of Emergent Gravity in PU**
@@ -1353,6 +1357,10 @@ be preregistered before cluster or lensing comparison. Suppose its variation sup
 On the quasistatic local-relaxation branch, the adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $G(R)$ are assumed to reach local PCE equilibrium on timescales (Myr–Gyr in this branch) short compared with potential cosmological drift of the environment or fundamental parameters that might cause $(L_0, A_G, m)$ to evolve (Gyr–Hubble time). Under this branch assumption, $G(R)$ may be treated as quasi-static when analyzing galaxy dynamics, while allowing for a slow cosmic evolution of the universal parameters themselves. A first-principles derivation of the Myr–Gyr local equilibration scale from the Appendix D adaptation dynamics ($\eta_{\mathrm{adapt}}$ and the local-PL neighborhood structure of Theorem D.8) remains a separate closure lemma; the galaxy-scale phenomenology of Sections I.6-I.13 inherits this quasistatic branch label.
 
 **I.15 Conclusion**
+
+The appendix defines a multi-scale dark-sector research program. Its strongest test is whether one independently fixed response can account for all listed scales at once.
+
+**Technical ledger.**
 
 The appendix defines a multi-scale dark-response candidate program and separates its proved identities from its model coordinates.
 

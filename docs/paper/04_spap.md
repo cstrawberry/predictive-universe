@@ -341,7 +341,7 @@ These mechanisms are distinct:
 
 - **Encoded representations** shift the analysis to self-referential value constraints, where diagonal constructions—analogous in structure to Gödel's incompleteness theorems [Gödel 1931] and Turing's undecidability results [Turing 1936]—establish that no single predictor achieves universal perfection across all retained constructible self-referential systems in a uniform Property-R framework satisfying the finite diagonal-closure conditions of §A.0.2 (Theorem A.0.1; Corollary A.0.1).
 
-Together, these independent routes demonstrate that perfect complete-state self-prediction cannot be achieved as a general guaranteed capability: unfolded representation fails structurally under the stated assumptions, while encoded representation admits no universal predictor guarantee. The convergence of independent arguments from distinct mathematical foundations strengthens confidence in the fundamental nature of the limitation.
+Together, these independent routes demonstrate that perfect complete-state self-prediction cannot be achieved as a general guaranteed capability: unfolded representation fails structurally under the stated assumptions, while encoded representation admits no universal predictor guarantee. 
 
 **4.3 Reflexive Undecidability**
 

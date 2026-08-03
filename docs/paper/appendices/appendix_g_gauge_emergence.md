@@ -2,6 +2,10 @@
 
 **G.0 Introduction**
 
+This appendix explains how the framework connects quantum outcome weights, gauge structure, matter, and spacetime dimension. Each connection depends on its own stated assumptions.
+
+**Technical ledger.**
+
 This appendix assembles typed closure results. An accepted sharp homogeneous carrier certificate $\mathfrak C_{\mathrm{car}}$ supplies the hypotheses under which Theorem G.1.8 selects complex matrix quantum theory from the finite Jordan alternatives. On that carrier, normalized nonnegative additive projector or effect probabilities give the trace/Born form by the Gleason--Busch selector. Registered local-frame, horizontal-transport, and response maps give a principal gauge connection, with $U(1)$ the single-phase-fiber case. The Standard Model gauge algebra is selected within the positive-marginal capacity-saturating block-frame class, while its matter/EWSB realization uses the anomaly and matter certificates stated in Section G.8; the $D=4$ conclusion comes independently from the channel-complete Bures tangent-cell contract. Sections G.1.9 and G.9 record the modular-representation and rate-level ledgers, and Section G.10 records the conditional projective-lift and spinor branch. POP/PCE supplies the explicit quotient, no-surplus, and optimization steps within these declared classes, so every conclusion retains the finite premises that make it a theorem.
 
 The analysis takes place on the emergent Lorentzian manifold $(M,g_{\mu\nu})$ whose existence is justified conditionally in Section 11 and Appendix D. The metric signature is $(-,+,\ldots,+)$, $g:=\det(g_{\mu\nu})$, and natural units $\hbar=c=k_B=1$ are used unless stated otherwise.
@@ -163,6 +167,10 @@ The framework also has two compatible descriptions of effective qubit measuremen
 The derivation shows that the Born rule is not an ad-hoc postulate. It is the unique probability ledger left after three independent filters are imposed on the Hilbert branch: response-null context labels are quotient labels, payoff-refinement consistency gives finite additivity, and Theorem G.1.3 selects the trace-form frame function. The quadratic dependence on amplitudes ($|\langle i|\psi\rangle|^2$) is not inserted as a separate rule; it is the pure-ray specialization of $f(P)=\operatorname{tr}(\rho P)$. SPAP supplies only the diagonal obstruction on its stated class; it neither makes a probabilistic ledger necessary nor supplies the selector conditions, which come from the PPI/PCE quotient and the carrier certificate $\mathfrak C_{\mathrm{car}}$.
 
 **G.1.7 Summary Theorem**
+
+The usual quantum outcome weights follow when event weights are additive, independent of measurement context, and calibrated as probabilities.
+
+**Technical ledger.**
 
 **Theorem G.1.7 (Born Rule from Quotient Additivity and the Born Selector).** In the PU framework, POP assigns to each sharp event projector $P$ a predictive weight $f(P)$ that is normalized, non-negative, additive under orthogonal refinement, and non-contextual on the PPI/PCE quotient (Definition G.1.1; Lemma G.1.1b; Lemma G.1.1ba; Section 8, Theorem 8.2 and Lemma 8.2a). By the Born selector theorem (Theorem G.1.3; Section 8, Theorem 8.3), $f$ has the unique trace form $f(P)=\operatorname{Tr}(\rho_{phys}P)$. On the separate probability-calibration branch of Theorem G.1.4, equivalently the registered actualization/instrument branch of Principle 8.0c and Theorem 8.0d, these trace weights are the single-run outcome probabilities of "Evolve"; the pure-state rank-one probability is $p_i=|\langle\psi_i|\psi\rangle|^2$. Frequency convergence is an additional repeated-trial statement and requires an i.i.d., exchangeable, or stationary-ergodic certificate.
 
@@ -1163,6 +1171,10 @@ $$
 
 **G.7 Summary of $U(1)$ Emergence**
 
+Local phase coherence can be represented by a gauge field when the framework supplies a local phase action, a connection, field dynamics, and matter coupling.
+
+**Technical ledger.**
+
 The conditional $U(1)$ realization uses the following branch ledger:
 
 1. **Quantum weights.** A complex Hilbert carrier together with normalized positive finite-effect additivity and noncontextuality yields the Born trace rule on Theorems G.1.7--G.1.8. PCE does not supply those hypotheses.
@@ -1177,6 +1189,10 @@ On the registered phase-character branch of Appendix Q, invariance under integer
 ## G.8 Conditional Gauge, Matter, and Four-Dimensional Spacetime Compatibility
 
 ### G.8.1 Introduction and Objective: Conditional Co-selection Problem
+
+This section compares compatible choices of gauge structure, matter content, and spacetime dimension within three explicitly limited candidate classes.
+
+**Technical ledger.**
 
 
 This section studies three branch-qualified selection problems. The gauge-algebra result is relative to the determinant-compatible finite-response block-frame/interface family declared in Section G.8.4. The chiral-matter result is relative to the finite representation, response, Higgs-slot, and anomaly-descent records declared in Sections G.8.4c–G.8.5. The dimensional result imports the independent channel-complete Bures tangent-cell mode-matching contract of Appendix Z.
@@ -3623,6 +3639,10 @@ The value $\varepsilon_0=\ln2$ is a structural log-cardinality, not a universal 
 
 ### G.1.9.9 Summary
 
+The reference state, equilibrium dynamics, thermal interpretation, and gravity connection are separate results. They coincide only when their assumptions are jointly satisfied.
+
+**Technical ledger.**
+
 This section has established:
 
 1. **Conditional Reference State:** On Theorem Z.2's comparator/minimality branch, Theorem Z.1's sharp-record/capacity/no-surplus branch, and Definition 15a's reference-state convention, $\tau^*=(I_2/2)\oplus0_6$. It is not derived from SPAP or Landauer reset heat alone.
@@ -4232,6 +4252,10 @@ It does not by itself select the fermionic sign. The missing selection is precis
 
 ## G.10.8 Summary: Branch-Qualified Construction
 
+A binary self-reference structure can support spinor behavior only after separate geometric and spacetime constructions are supplied. Physical mass interpretation belongs to an additional bridge.
+
+**Technical ledger.**
+
 **Table G.10.1: Branch-Qualified Construction from the SPAP Involution to Spinor Compatibility**
 
 | Step | Result | Origin | Status | Reference |
@@ -4280,6 +4304,10 @@ The last two arrows are conditional branch junctions, not consequences of the SP
 
 
 ## G.11 Conclusion
+
+The appendix builds conditional links from predictive structure to quantum probabilities, gauge fields, matter, spacetime dimension, and selected numerical relations. Each link keeps its own assumptions and evidential status.
+
+**Technical ledger.**
 
 This appendix establishes the following branch-qualified constructions within the Predictive Universe framework:
 

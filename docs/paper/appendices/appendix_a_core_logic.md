@@ -4,6 +4,10 @@
 
 ### A.0.1 Overview: Two Complementary Foundations
 
+Two routes provide the abilities needed for self-reference. One builds them in a logical model; the other asks when a protected physical network can carry them. Each route applies only when its stated construction and reliability conditions hold.
+
+**Technical ledger.**
+
 The **Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1.1, A.1.3)** and **Reflexive Undecidability (RUD, Theorems A.2.3, A.2.4)** apply to predictive systems possessing the computational subcapacities collected under **Property R** (Definition 10). This appendix gives two conditional routes:
 
 *   **Foundation I: Logical construction (§A.0.2)** — Composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic representing bounded computations yield Property R for the resulting uniform predictive model class.
@@ -16,12 +20,20 @@ Foundation I supplies the logical model-class route without using the later MPU 
 
 #### Foundational Definitions Recap:
 
-**Summary of Definition 10 (Property R - Computational Richness):** A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Property R relative to a consistent formal logical system $\mathcal{F}$ (e.g., Peano Arithmetic) if models $M \in \mathcal{M}$ and the associated formalism provide the machinery to:
+**Summary of Definition 10 (Property R - Computational Richness):** Property R means that a model can describe computations, reason about them, and test statements about its own predictive behavior.
+
+**Technical ledger.**
+
+A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Property R relative to a consistent formal logical system $\mathcal{F}$ (e.g., Peano Arithmetic) if models $M \in \mathcal{M}$ and the associated formalism provide the machinery to:
 1.  **Represent:** Encode system states $s$, models $M$ (e.g., via Gödel numbering $\ulcorner M \urcorner$), predictions $\hat{s}$, and computational processes as objects manipulable within $\mathcal{F}$.
 2.  **Simulate/Reason:** Simulate the execution of any model $M \in \mathcal{M}$ applied to a state $s$, or formally reason about this process within $\mathcal{F}$, subject to fundamental computational limits.
 3.  **Evaluate Predicates:** Represent and evaluate logical formulas within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$, including self-referential predicates.
 
-**Summary of Definition 23 (MPU):** An MPU is a qualifying full-loop implementation that attains $C_P=C_{op}$ on the declared nonempty implementation class. It has the dual Internal Prediction and 'Evolve'/ND-RID dynamics of Definitions 26–27. The inequalities $C_{op}\ge K_0=3$ and $d_0\ge8$ apply only when the MPU additionally satisfies Theorem 15's (O1)–(O3), (FC) SPAP-register conditions, represents the eight contexts as mutually perfectly distinguishable Hilbert alternatives, and obeys Corollary 3's complexity-capacity bridge.
+**Summary of Definition 23 (MPU):** A Minimal Predictive Unit is the least costly system that completes the full cycle of prediction, checking, and update within the chosen class. Stronger claims about its memory and state capacity require the additional implementation conditions listed below.
+
+**Technical ledger.**
+
+An MPU is a qualifying full-loop implementation that attains $C_P=C_{op}$ on the declared nonempty implementation class. It has the dual Internal Prediction and 'Evolve'/ND-RID dynamics of Definitions 26–27. The inequalities $C_{op}\ge K_0=3$ and $d_0\ge8$ apply only when the MPU additionally satisfies Theorem 15's (O1)–(O3), (FC) SPAP-register conditions, represents the eight contexts as mutually perfectly distinguishable Hilbert alternatives, and obeys Corollary 3's complexity-capacity bridge.
 
 **Recall of Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
 
@@ -698,6 +710,10 @@ This refined definition makes explicit the network-level realization of computat
 
 **Summary of Foundations:**
 
+One route establishes the needed logical abilities from closure, memory, and scalable computation. The other shows how a protected physical network could realize those abilities. The first answers what is sufficient in a formal model; the second answers how that model could be implemented.
+
+**Technical ledger.**
+
 **Foundation I (Conditional Logical Construction, §A.0.2):**
 *   **Source:** Declared predictive closure, memory, uniformity, scalability, and arithmetic-coding hypotheses
 *   **Derivation:** Binary retained decisions + Boolean composition + logical memory + uniform scalable resources + arithmetic coding → Property R
@@ -1134,6 +1150,10 @@ The LITE function $f$, constructed entirely within PA, explicitly demonstrates t
 The LITE function's structure (Equation A.4.1) provides a concrete arithmetical realization of a Dynamic Self-Reference Operator (DSRO, Definition 11). The output $f(n)$ depends on the outcome of a bounded proof search (a computable process) for formulas $\phi_{\beta}(n)$ that refer to the function's own index $\beta$. This iterative process, where $f(n)$'s value is determined at step $n$ based on provability checks and can influence future checks, embodies the dynamic, adaptive self-reference that DSROs formalize.
 
 ### A.4.5 Conclusion: LITE and the Plausibility of Property R for MPUs
+
+The construction shows that ordinary arithmetic can represent a total procedure that examines bounded statements about itself and changes its output in response. It therefore supplies a concrete logical example of adaptive self-reference. The appendix treats realization of the same abilities in a physical network as a separate implementation problem.
+
+**Technical ledger.**
 
 The LITE construction robustly demonstrates that standard Peano Arithmetic, a foundational system of mathematics, possesses sufficient richness to define total computable functions exhibiting dynamic, adaptive self-reference based on bounded internal "proof discovery." It formally shows that capabilities analogous to self-representation, bounded self-simulation/reasoning, and adaptive predicate evaluation—the core components of Property R—are not reliant on exotic computational models but can be realized within a well-understood arithmetical framework.
 

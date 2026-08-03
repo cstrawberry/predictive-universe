@@ -2,6 +2,10 @@
 
 ## D.1 Introduction: Optimization Landscape and Convergence
 
+This appendix studies how the model's cost landscape can guide slow adaptation. It shows when a stable state aligns its internal complexity estimate with its true cost, when noisy updates remain close to that alignment, and when the lowest-cost network geometry is regular. Each conclusion depends on the stated cost, comparison, and stochastic assumptions.
+
+**Technical ledger.**
+
 This Appendix develops the variational perspective on the Predictive Universe (PU) framework's dynamics, providing rigorous dynamical justifications for two cornerstone results presented in the main text:
 1.  **Dynamical justification of Theorem 2 (Dynamically Enforced Functional Correspondence):** Isolating the exact equilibrium condition $C_P(v)=\langle \hat{C}_v \rangle$ for true stable PCE equilibria, together with the quantitative operational tracking bound that drives the proxy toward that condition.
 2.  **Conditional dynamical justification of Theorem 43 (Geometric Regularity on the Strict-Comparison Branch):** Showing that geometric regularity characterizes the lowest-potential sector only when the declared monotonicity and regular-comparator hypotheses hold, and is selected by the low-noise detailed-balance stationary regime only under the additional stochastic hypotheses.
@@ -1713,11 +1717,19 @@ Uniform ellipticity and the local $C^{1,\alpha}$ bounds give, by Arzelà--Ascoli
 This appendix thus provides the variational and action-level part of the PU dynamical bridge. The Mosco/quadratic limit-energy step and branch-specific Euclidean-rigidity input are encoded in the continuum-control defects of Theorem D.6e and selected only on the vanishing-defect operational branch; the AQFT coarse-graining closure remains the separate Appendix F bridge.
 
 **Summary of Theorem 2 (Conditional Dynamical Functional Correspondence):**
+
+Stable alignment is exact only when the measured cost faithfully identifies the true cost. With noisy measurements, the model instead approaches a controlled error range; long-run averages follow the stationary behavior when the stated stability assumptions hold.
+
+**Technical ledger.**
 The exact equilibrium statement of Theorem 2 is Corollary D.1 on its faithful-cost-identifiability branch. Lemma D.2, Proposition D.1, and Corollary D.2 give the registered work-cost feedback and its noise-floor estimate under their measurement, drift, and martingale hypotheses. Theorem D.5 identifies long-run averages with invariant-measure expectations under (A1)–(A6); its detailed-balance subbranch gives low-noise concentration near the global-minimum set. Calling that set regular additionally requires the strict-comparison hypothesis of Theorem D.3.
 
 *Proof Reference:* Corollary D.1 supplies exact alignment on its stated branch. Lemma D.2, Proposition D.1, and Corollary D.2 supply the conditional tracking chain. Theorem D.5 supplies ergodic averaging and detailed-balance concentration. Theorem D.3 supplies regularity only under strict comparison.
 
 **Summary of Theorem 43 (Geometric Regularity on the Strict-Comparison Branch):**
+
+Low-noise dynamics favor the configurations with the smallest total cost. Those configurations are geometrically regular only when every irregular competitor has a regular alternative with the same predictive value and lower cost.
+
+**Technical ledger.**
 Under (A1)–(A6), Equation (D.8) has the ergodic stationary regime of Theorem D.5. Under detailed balance, its low-noise invariant measures concentrate near the global-minimum set of $V$. If every irregular admissible configuration has a regular equal-proxy comparator with strictly smaller core potential, Theorem D.3 makes every such global minimizer geometrically regular. Without that comparison premise, Theorem D.5 still gives concentration near global minimizers but does not identify their geometry.
 
 *Proof Reference:* Theorem D.5 gives ergodicity and conditional Gibbs concentration. The strict-comparison hypothesis followed by Theorem D.3 gives regularity of the minimizer set. ∎
@@ -2960,6 +2972,10 @@ If, in addition, $M_S$ is a polytope in the retained affine response coordinates
 
 
 ## D.9 Conclusion
+
+The appendix gives a conditional account of how cost minimization can align internal complexity estimates, favor regular geometry, and drive adaptation toward stable states. It also shows how a broad range of relaxation rates can produce pink-noise behavior. These results hold only with the stated identification, comparison, and stochastic assumptions.
+
+**Technical ledger.**
 
 This appendix has provided a rigorous analysis grounded in the variational perspective of minimizing the PCE Potential $V(x)$ (Definition D.1), modeling the slow adaptation dynamics of the MPU network as a stochastic gradient flow (Equation D.8). We demonstrated through formal proofs and analysis of the potential structure and dynamics that:
 

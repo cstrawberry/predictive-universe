@@ -2,6 +2,10 @@
 
 ## C.1 Introduction: The Requirement for Geometric Order
 
+This appendix asks when highly irregular network shapes become too costly or unreliable to sustain prediction. It develops separate tests based on long communication paths, uneven local geometry, coherence, and finite resource budgets. Passing those tests supports an orderly large-scale geometry; a separate continuum construction supplies the further step to a smooth effective description.
+
+**Technical ledger.**
+
 This appendix formulates conditional exclusion gates supporting Theorem 43. The anomalous-distance gate applies to network families carrying uniform edge-cost comparability together with a registered global-coherence synchronization task or a non-amortized traffic ledger, per-step channel or clock data, and the corresponding extensive resource bound. The curvature-fluctuation gate applies after fixing the graph metric and response kernel and supplying curvature-load coupling, adaptation variance transfer, convex operational cost, and any distant-failure independence model used by the viability estimate. Under those premises, sufficiently severe irregularity violates at least one registered requirement:
 
 *   **(LV) Local Viability:** Each MPU $v$ must maintain its registered predictive performance within the task-dependent Space of Becoming $(\alpha,\beta)$.
@@ -741,6 +745,10 @@ $$
 by the same counts, while the isotropic values at $|\xi|^2=2$ are $15c_6=5/8$ and $3c_6=1/8$ with $c_6=8/192=1/24$. Subtraction gives the displayed defects $-1/8=-1/d_0$ and $+1/24=+1/M$, whose ratio is $-3$; the second defect is nonzero, so the sixth-moment tensor is not proportional to the isotropic tensor. All arithmetic is exact rational arithmetic on the finite shell. The scope sentences restate which continuum-chain hypotheses this lemma does and does not touch. ∎
 
 ## C.7 Conclusion and status boundary
+
+Local symmetry of the model's nearest-neighbor shell is only one part of large-scale geometric order. A continuum description also needs independent control of collapse, convergence, energy, and rigidity. Under the stated cost, communication, and viability conditions, the appendix excludes sufficiently severe irregularity and identifies the extra records needed for the continuum branch.
+
+**Technical ledger.**
 
 This appendix separates local shell isotropy from global continuum closure. Theorem C.6e controls only the fixed-trace shell tensor and Lemma C.6f only the exact fourth-moment shell tensor; geometric noncollapse, measured-Gromov--Hausdorff compactness, Mosco convergence, and Cheeger-energy identification remain independent hypotheses.
 

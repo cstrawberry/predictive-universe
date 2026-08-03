@@ -229,6 +229,10 @@ The structural value $\varepsilon_0=\ln2$ counts a binary alphabet. The physical
 
 **J.7 Conclusion**
 
+A reset dissipates heat when its physical implementation erases uncertain information. The implementation's actual erasures determine that dissipation.
+
+**Technical ledger.**
+
 On the declared binary-ancilla architecture, noninjectivity displaces a binary structural label only when the reachable pre-reset domain and fixed-ready-state hypotheses of Definition J.1 hold. An injective extension may retain that label in side information. If a classical record $P$ is later reset while a classical record $R$ remains available and unchanged, the registered branch obeys
 $$
 \frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}\ge H_q(P\mid R).

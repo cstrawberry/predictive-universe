@@ -781,6 +781,10 @@ $$
 
 ## B.10 Construction Pathway (Summary)
 
+The appendix builds a physical stress-and-energy description in stages. It begins with computational and energy records, adds local flow and momentum information, and then passes to a large-scale conserved source when the required physical and geometric links are available.
+
+**Technical ledger.**
+
 This appendix gives a typed construction pathway for $T_{\mu\nu}^{(MPU)}$:
 
 1. operational complexity and cost operators are defined in Definition B.1 and Theorem B.1;

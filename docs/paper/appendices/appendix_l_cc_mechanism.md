@@ -4,7 +4,7 @@
 
 The Predictive Universe framework begins from the irreducible certainty of awareness itself. The starting point is the Cartesian cogito ergo sum—"I think, therefore I am"—which establishes awareness as the one indubitable fact of existence. However, within the operational context of this framework, thinking is fundamentally predictive: to think is to anticipate, to form expectations about what comes next, to distinguish self from non-self through anticipatory models. Thus we reformulate: praedico ergo sum—"I predict, therefore I am."
 
-This is not a claim that prediction produces awareness. Rather, awareness is fundamental and irreducible (Appendix P.2), and prediction represents awareness's most primitive operational manifestation—not because prediction produces awareness, but because awareness, being primary, makes prediction possible (Appendix P.3.1). The capacity to form anticipations, to distinguish expected from actual, to adaptively update models—these are the minimal expressions of awareness in physical systems.
+Within PU's declared awareness-first interpretation, awareness is fundamental and irreducible (Appendix P.2), and prediction is its scoped operational manifestation (Appendix P.3.1). Anticipation, comparison of expected with actual outcomes, and adaptive updating are the activities modeled by the predictive loop.
 
 **Interpretive note (outside the deductive premise ledger).** One may interpret the complete operational MPU cycle—prediction ($P_{\text{int}}$), verification ($V$), and update ($D_{\text{cyc}}$), including the 'Evolve' interaction—as a minimal physical correlate of awareness. No theorem, proposition, corollary, numerical estimate, energy ledger, thermodynamic conclusion, or coupling hierarchy in this appendix uses that interpretation as a hypothesis. The formal arguments use only the operational MPU definitions and the explicitly cited logical, thermodynamic, carrier, and branch premises.
 
@@ -430,7 +430,7 @@ If the conditional response model of Proposition L.4.6 applies, a large measured
 
 Likewise, an observer-state comparison can test whether a measured coherence time or radiative-loss observable changes with the intervention. The present equations do not imply that meditation increases $\tau_c$, produces a sub-radiant state, or enlarges a probability seed. Those are empirical hypotheses and are logically separate from reports of group differences in an outcome statistic.
 
-*Note: This analysis is provided for completeness in mapping the framework's predictions to reported anomalies; the framework does not depend on or endorse these empirical claims, which remain controversial and require independent replication.*
+
 
 ## **L.5 Unified Energy Accounting**
 
@@ -1497,6 +1497,10 @@ Appendix S therefore supplies conditional feedback models and resource ceilings,
 
 ### **L.12.1 Overview: Four Levels of Description**
 
+The discussion separates a physical carrier model, an experimental control problem, the target information available to the controller, and a timing model. A measurable shift still requires a calibrated carrier and response.
+
+**Technical ledger.**
+
 Sections L.11.1–L.11.4 define a conditional AC-Stark implementation class. A quantitative realization still requires the source, geometry, detuning, susceptibility, and likelihood data listed in Section L.11.3. The logical levels used below are:
 
 |Level |Object |Status |
@@ -2009,6 +2013,10 @@ for every $B$, which is exactly (L.111). Hence a Bob-side marginal anomaly canno
 
 ### **L.12.10 Summary**
 
+Target-specific performance requires usable information from a shared causal history. Turning that information into a measurable effect requires separate physical, thermodynamic, and causal records.
+
+**Technical ledger.**
+
 The AC-Stark construction is a conditional implementation class. Under the causal-separation hypotheses, performance strictly above the optimal information-free baseline requires a causal or common-cause record carrying information about the target. This statement does not require direct participation in target preparation and does not turn an abstract model record into a physical carrier. The key results are:
 
 - **Summary of Definition L.12.1 and Equations L.92–L.93:** Causal information $\mathcal{I}(S \to T,t)$ is defined as mutual information under $\mathcal{P}_{\text{causal}}$, satisfying the inequality chain $\mathcal{I}(S \to T) \leq I(S:T) \leq \mathcal{I}_{\text{rel}}(S)$ by data processing and subadditivity respectively. On a common $\mathfrak B_{mass}$ branch only, Theorem N.5 converts the relational-information upper scale into a target-mass upper scale; the information inequality itself is branch independent.
@@ -2022,7 +2030,7 @@ The AC-Stark construction is a conditional implementation class. Under the causa
 - **Summary of Theorem L.12 (Conditional Locality):** Target-conditioned advantage is confined to a shared causal history when the causal-Markov, adaptedness, and exact-cone hypotheses hold. In the Appendix F continuum branch, the cone is identified with the geometric lightcone only under its bridge assumptions. Thermodynamic range cost supplies an optimization penalty and the arrow-of-time branch supplies directionality; neither alone proves exact locality.
 - **Summary of Proposition L.12.2, Theorem L.12.8, and Corollary L.12.8a:** A strict target-conditioned joint-correlation advantage requires positive entanglement causal information under the causal-separation hypotheses; a generic local channel can change joint correlators without such information. Equation (L.110) is the trace-distance pairwise correlator bound with its stated factor, and Equation (L.111) preserves the remote marginal exactly on the local-CPTP branch. No Section 10 capacity bound follows without an additional channel model.
 
-**Remark L.12.6 (Global Entangled Accounting).** The section has been written from the aggregate's vantage — what it must acquire, model, and do — but this framing risks a misreading: that the aggregate acts on the universe from outside, with the probability shift as the universe's reaction. Neither is correct within the PU framework, and the distinction matters.
+**Remark L.12.6 (Global Entangled Accounting).** The aggregate-centered account describes one subsystem acting within the common global state.
 
 The aggregate $S$ and target $T$ are subsystems of a common global state $\omega$, but entanglement alone is not a dynamical channel. On the core local-CPTP branch, a context-dependent operation on $S$ can change joint observables and conditional statistics revealed after comparison, while Corollary L.12.8a gives exact invariance of every spacelike target marginal. A target-local probability shift requires either a causal interaction reaching $T$ or the separately declared marginal-anomaly branch with the validation and causality gates of Section 10.
 
@@ -2031,6 +2039,10 @@ Every acquisition or control operation that includes a registered reset must app
 Exact target-local causality follows on the branch with an exact propagation cone and an adapted causal model. Under the causal-separation hypotheses, a strict target-conditioned advantage additionally requires a causal or common-cause record. Thermodynamic range cost can make remote control PCE-disfavored, and the arrow-of-time branch supplies directionality, but neither is an independent proof of exact spatial locality.
 
 ## **L.13 Summary**
+
+The appendix supplies conditional carrier models, accounting rules, and empirical tests for proposed complexity-related effects.
+
+**Technical ledger.**
 
 This appendix supplies conditional implementation theorems and accounting guardrails for the CC program; it does not derive a realized CC carrier or a nonzero outcome shift from complexity alone.
 

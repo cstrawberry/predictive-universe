@@ -1,6 +1,6 @@
 # APPENDIX Z: Certificate-Conditional Interface Ledger, Fine-Structure Candidate, and Euclidean Response-Carrier Dimension
 
-## Overview Structure
+## Technical Scope and Dependency Structure
 
 This appendix derives the minimal interface ledger $M=24$ on the stated Hilbert-carrier, binary-record, active-projector, and PCE-attractor branches. It then:
 - evaluates a scheme-specified Thomson-limit core candidate on the Ward, interface-response, curvature, projection, and transport model branches of Sections Z.24--Z.26;
@@ -17,7 +17,14 @@ The core arithmetic is deductive after its independent model and normalization i
 
 ## Z.1 Introduction: From MPU Primitives to Fundamental Constants
 
+This appendix starts from the finite structures used to count the system's interface directions. It keeps that mathematical result separate from the further evidence needed to interpret those directions as spacetime or electromagnetic response.
+
 ### Z.1.1 Scope and Objectives
+
+This appendix derives the interface count, evaluates a conditional electromagnetic core, and finds the smallest Euclidean carrier that supports the required response pattern. The later sections define the records that identify the carrier with physical spacetime and the electromagnetic core with the measured coupling.
+
+#### Technical scope ledger
+
 - Derivation of the discrete chain to $M=24$ on the stated MPU branches
 - Scheme-specified Thomson-core candidate and complete-remainder gate (Sections Z.24--Z.27)
 - Least-feasible Euclidean response-carrier value $D=4$ on the mode-channel contract, with spacetime promotion separately certificate-gated (Theorems Z.10--Z.11)
@@ -26,6 +33,11 @@ The core arithmetic is deductive after its independent model and normalization i
 
 
 ### Z.1.2 The Seven-Stage Derivation Roadmap
+
+The argument proceeds from the finite predictive foundation through information structure and carrier geometry to electromagnetic response, verification, experimental tests, and synthesis.
+
+#### Technical roadmap
+
 - **Part I (Z.1–Z.5):** Foundations — MPU invariants, SPAP structure, algebraic constraints, and the ordered $(12,24)$ Ramanujan-PU-Leech ledger
 - **Part II (Z.6–Z.8):** Information Structure — PCE-Attractor, QFI spectrum, capacity saturation
 - **Part III (Z.9–Z.14):** Dimensional Emergence — Operational distinguishability, mode-channel correspondence, dimensional selection, over-determination
@@ -1789,7 +1801,7 @@ are elementary arithmetic. PU may compare their factors with independently regis
 
 **Proposition Z.2 (Factorization Compatibility of the Minimal-Branch Ledger).** On branches where the independently established values are
 $$
-(d_0,N_{\mathrm{gen}},D,b,a,k)=(8,3,4,6,2,12),
+(d_0,N_g,D,b,a,k)=(8,3,4,6,2,12),
 $$
 the interface count $M=24$ satisfies
 $$
@@ -1976,11 +1988,7 @@ remains a ledger remainder unless a separate residual-sector certificate is supp
 
 **Step 4 (Verification).** $6 + 12 + 6 = 24$. ✓ ∎
 
-**Remark Z.9a: Epistemological Status.** This theorem establishes a correspondence, not a decomposition:
-- The 24 internal QFI modes live in $\mathcal{H}_0 = \mathbb{C}^8$
-- The Lorentz and gauge generators act on emergent spacetime and field spaces
-- The correspondence shows independently derived quantities are numerically consistent
-- The framework does not claim internal modes "encode" spacetime symmetries
+**Remark Z.9a: Epistemological Status.** Proposition Z.14a establishes a dimensional correspondence among independently defined structures: the 24 internal QFI modes live in $\mathcal{H}_0 = \mathbb{C}^8$, while the Lorentz and gauge generators act on emergent spacetime and field spaces. Their independently derived dimensions are numerically consistent. Definition Z.9c gives the response-map certificate required for physical identification between the generators.
 
 **Remark Z.9b: Status of the Residual.** The residual $R = 6$ is defined by arithmetic closure: $R := M - \dim[\mathfrak{so}(3,1)] - \dim[\mathfrak{g}_{\mathrm{SM}}] = 24 - 6 - 12 = 6$. This equals the inactive dimension $b = 6$ (Corollary Z.6a), which may reflect deeper structure. Possible interpretations include gravitational polarizations (a symmetric rank-2 tensor in $D = 4$ has $10 - 4 = 6$ physical degrees of freedom) or internal flavor structure. The significance of $R = b$ remains an open question.
 
@@ -2032,6 +2040,10 @@ $$
 Adding gives $24=3(2+4+2)=3\cdot8$. A physical generational interpretation would additionally require three specified subspaces and maps showing how the Lorentz, gauge, and residual actions restrict to them; no such maps are supplied by the arithmetic. ∎
 
 #### Z.12.3.6 Summary of Consistency Relations
+
+The independently derived Lorentz, gauge, coding, and carrier counts agree on the minimal branch. Their role is cross-branch consistency.
+
+##### Technical consistency ledger
 
 **Corollary Z.6c (Numerical Coincidences from Independent Derivations).**
 
@@ -3537,11 +3549,11 @@ $$
 
 **Proposition Z.3b (Arithmetic Decomposition).** The identity $bM = k^2 = 144$ admits factorization involving the generation count:
 
-$$144 = 3 \times 48 = N_{\text{gen}} \times (b \times d_0)$$
+$144 = 3 \times 48 = N_g \times (b \times d_0)$
 
 | Factor | Value | Origin | Reference |
 |:-------|:-----:|:-------|:----------|
-| 3 | $N_{\text{gen}}$ | Fermion generations | Appendix R |
+| 3 | $N_g$ | Fermion generations | Appendix R |
 | $b$ | 6 | Inactive dimension | $d_0 - a = 8 - 2$ |
 | $d_0$ | 8 on the minimal branch | MPU Hilbert dimension | Theorem 23; Theorem Z.2 |
 
@@ -3549,11 +3561,11 @@ $$144 = 3 \times 48 = N_{\text{gen}} \times (b \times d_0)$$
 
 **Step 1 (Arithmetic).** $3 \times 6 \times 8 = 3 \times 48 = 144$. ✓
 
-**Step 2 (Generation Count).** Appendix R gives the smallest admissible count $N_{\min}=3$ in the declared SM15 linear-plus-cubic or SM16 linear-plus-primitive-norm family-redundancy candidate class when a nonzero CKM-type rephasing invariant is required. Realized $N_{\text{gen}}=3$ additionally requires Proposition R.3.5.1a's displayed additive-monotone objective as the realized family-count objective. Section R.4.2 records the $D_4$ triality and $E_8$/Leech structures as compatibility checks rather than independent count proofs. This is a conditional least-family selector, not a branch-independent derivation of the observed generation count.
+**Step 2 (Generation Count).** Appendix R gives the smallest admissible count $N_{\min}=3$ in the declared SM15 linear-plus-cubic or SM16 linear-plus-primitive-norm family-redundancy candidate class when a nonzero CKM-type rephasing invariant is required. Realized $N_g=3$ additionally requires Proposition R.3.5.1a's displayed additive-monotone objective as the realized family-count objective. Section R.4.2 records the $D_4$ triality and $E_8$/Leech structures as compatibility checks rather than independent count proofs. This is a conditional least-family selector, not a branch-independent derivation of the observed generation count.
 
 **Step 3 (Compatibility).** The factorization $144 = 3 \times 48$ is compatible with organizing the constraint structure into three generational sectors, with $48 = b \times d_0$ constraints per generation. ∎
 
-**Remark Z.8e: Interpretive Status.** The $3\times48$ factorization is an arithmetic fact consistent with $N_{\text{gen}}=3$ as independently selected on the stated Appendix R family-count branch. It neither derives that count nor establishes a physical decomposition of the constraint structure. Any relation to CKM/PMNS mixing requires the separate flavor and spectral certificates stated in Appendices R and T.
+**Remark Z.8e: Interpretive Status.** The $3\times48$ factorization is an arithmetic fact consistent with $N_g=3$ as independently selected on the stated Appendix R family-count branch. It neither derives that count nor establishes a physical decomposition of the constraint structure. Any relation to CKM/PMNS mixing requires the separate flavor and spectral certificates stated in Appendices R and T.
 
 #### Z.13.5.5.5 Computational Verification
 
@@ -3679,6 +3691,10 @@ $$\left| \langle u_i, P_i \rangle \right| > 0.9$$
 ---
 
 #### Z.13.5.7 Summary: Arithmetic Identity and Certificate Boundary
+
+The discrete equalities fit together across the registered structural branches. When their independent certificates coexist, they connect predictive recovery, the lattice, the Euclidean carrier, and the vacuum exponent.
+
+##### Technical synthesis ledger
 
 **Theorem Z.13f (Branch-Separated Synthesis Ledger).** The numerical identities $k^2=bM=144$ and $\kappa_{\mathrm{ref}}=141.5<144$ organize compatible records, not one implication chain:
 
@@ -4034,12 +4050,7 @@ $$
 $$
 Both coefficients are positive, so $\kappa_{\mathrm{eff}}\le\kappa_{\mathrm{bulk}}$ and $\delta\kappa\le0$. Because the two kernels are scalar multiples of the same positive-definite operator, equality of coefficients is equivalent to equality of kernels; otherwise the scalar inequality is strict. ∎
 
-**Summary of Remark Z.9: A Priori Nature.** This proof determines the sign of δκ BEFORE computing any numerical magnitude. The sign follows from:
-- The Legendre structure (Appendix X)
-- The concentration property of ρ₀
-- Basic properties of correlation functions
-
-No knowledge of the final numerical value is required. This eliminates the "post-hoc" concern from the original derivation.
+**Summary of Remark Z.9: A Priori Nature.** The Legendre-response ordering established in Appendix X, the reference-state concentration, and the correlation structure fix the sign before any numerical magnitude is calculated.
 
 ### Z.17.3 Uniqueness of the Multiplicative Structure
 
@@ -4210,6 +4221,10 @@ This scheme-specified candidate is distinct from the first-order expansion of Th
 ---
 
 ## Z.19 Summary of Derivation Chain
+
+The derivation fixes a finite structural backbone before adding separately gated carrier, response, and coupling results. The corresponding declared branches supply the four-dimensional response and electromagnetic-core conclusions.
+
+### Technical derivation ledger
 
 | Step | Principle | Result | Reference |
 |------|-----------|--------|-----------|
@@ -5037,6 +5052,10 @@ $$\operatorname{sinc}(u) = \frac{\sin u}{u} = \sum_{n=0}^{\infty} \frac{(-1)^n u
 At $u^*\approx0.0905077$, the exact value is $\sin(u^*)/u^*=0.9986353$, the $O(u^2)$ approximation is $1-u^{*2}/6=0.9986347$, and the truncation error is less than $10^{-6}$. The fourth-order term is $u^{*4}/120\approx5.6\times10^{-7}$, which is negligible compared with the other theoretical uncertainties and confirms that truncating at $O(u^2)$ is justified.
 
 ### Z.27.10 Fine-Structure Derivation Chain Summary
+
+The electromagnetic core combines a fixed capacity coordinate with independently registered normalization, interface, curvature, projection, and transport responses. Its numerical value is exact within that package. An accepted residual record supplies the comparison interval for the measured coupling.
+
+#### Technical branch ledger
 
 **Branch ledger for the Thomson-limit core value $\alpha^{-1}_{0}=137.03609205522863\ldots$.** The formula displayed below is exact arithmetic on the canonical Appendix Z normalization branch package, before adding the residual entry $R_\alpha$. The package comprises:
 
@@ -6929,6 +6948,10 @@ This is a conditional finite minimization theorem inside the declared tangent-sh
 
 ## Z.34 Summary of Falsifiable Predictions
 
+The appendix makes separate tests of carrier dimension, electromagnetic response, error-correction structure, relaxation, and coordination. Each test applies on its named branch. An accepted residual certificate supplies the electromagnetic comparison interval.
+
+### Technical prediction ledger
+
 | Prediction | Value | Source |
 |------------|-------|--------|
 | Euclidean response-carrier dimension and spacetime promotion | $D=4$ on the faithful tangent-shell branch; $3+1$ interpretation separately certificate-gated | Definition Z.9a; Theorems Z.10-Z.11; Corollary P.8.3 |
@@ -7006,7 +7029,7 @@ Relative = 0.677765 ppm
 
 
 
-# SUMMARY: 
+# TECHNICAL STATUS LEDGER 
 
 ## From M = 24 to Two Fundamental Constants
 
@@ -7030,7 +7053,7 @@ Relative = 0.677765 ppm
    - Source accounting: $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$ are the only retained non-exact post-core Ward sources; the exact, obstructed, bulk, interface, electromagnetic-projection, curvature, sinc-transport, and future residual entries are excluded from double counting by Definition Z.27.11k.12 and Corollary Z.27.11k.21.1
    - Falsifier: a measurement outside the certified residual interval for the accepted branch refutes the Appendix Z normalization branch (Corollary Z.26c); separately, Corollary Z.27.11e.1 obstructs any same-branch theorem fixing $R_\alpha=0$ at the recorded CODATA comparison value
 
-## No Continuous Fitting Within the Declared Branch Package
+## Fixed Inputs of the Declared Branch Package
 
 The final formulas use the following distinct input classes:
 - $d_0\ge8$ from Theorem 23, with $d_0=8$ on the minimal Hilbert-carrier branch of Theorem Z.2;
@@ -7038,7 +7061,7 @@ The final formulas use the following distinct input classes:
 - the Ward, interface-response, visible-response, curvature-response, projection, transport, and residual-certificate branches stated in Sections Z.17 and Z.24–Z.27;
 - the geometric constant $\pi$.
 
-No coefficient is adjusted to comparison data after this branch package is registered. The Thomson-limit $\alpha^{-1}$ expression is conditional on the symmetric-space, normalized Chern-flux, response, projection, and transport hypotheses of Lemma Z.14 and Theorems Z.24–Z.26. The dimensional selection $D=4$ is separately conditional on the faithful minimal tangent-shell realization of Definition Z.9a and Theorems Z.10–Z.11.
+The declared branch package fixes these inputs before comparison. The Thomson-limit $\alpha^{-1}$ expression is conditional on the symmetric-space, normalized Chern-flux, response, projection, and transport hypotheses of Lemma Z.14 and Theorems Z.24–Z.26. The dimensional selection $D=4$ is separately conditional on the faithful minimal tangent-shell realization of Definition Z.9a and Theorems Z.10–Z.11.
 
 ---
 

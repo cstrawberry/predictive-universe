@@ -2,6 +2,10 @@
 
 ## X.0 Overview and Scope
 
+This appendix connects PU's account of prediction and coarse-graining to the standard effective-action description of quantum and statistical systems. It follows that connection through matter, gauge fields, gravity, and open-system dynamics.
+
+### Technical scope and conventions
+
 This appendix establishes the precise relationship between the Predictive Universe (PU) framework and the quantum/statistical **effective action** formalism. We connect the **predictive free energy** and its **natural‑gradient RG** flow (Appendix D) to **Wilsonian coarse‑graining**, the **1PI effective action** $\Gamma$, and the **functional RG** (FRG), including the **gauge** and **gravitational** sectors and the open‑system (Schwinger–Keldysh) structure required for ND‑RID. Throughout we use natural units $c=\hbar=k_B=1$, spacetime signature $(-,+,+,+)$, and Heaviside–Lorentz electromagnetic conventions.
 
 
@@ -691,6 +695,10 @@ For $a/d_0=1/4$ and $c_{\mathrm{int}}=1$, the displayed constant correction is $
 
 
 ## X.8 Summary of Correspondences
+
+PU's predictive geometry, coarse-graining, gauge normalization, gravitational response, open dynamics, and capacity constraint each have a corresponding effective-action description.
+
+### Technical correspondence ledger
 
 * **Predictive geometry ↔ response:** Fisher metric $\mathcal{G}$ (Appendix D) ↔ connected kernel $\mathcal{G}=\delta^2 W$; $\Gamma^{(2)}=\mathcal{G}^{-1}$ (X.3).
 * **PU RG ↔ FRG:** KL‑monotone $c(b)$ (Appendix D) ↔ $\Gamma_k$ flow (X.4); relevant/irrelevant classification aligned via stability eigenvalues.

@@ -2,6 +2,10 @@
 
 ## M.1 Introduction
 
+This appendix models how quantum records depend on the perspective from which they are registered. Its central result identifies when one perspective may use another's record.
+
+**Technical ledger.**
+
 This appendix gives a mathematical formalism for the Perspectival State ($S_{(s)}(t)$, Definition 24) and the registered `Evolve` instruments of Definition 27. It constructs a conditional perspective-update model, proves its stated finite-dimensional properties, analyzes Wigner's-Friend-type records, and isolates a certificate-scoped obstruction to one cross-perspective import. It does not claim a proof of every extended Wigner's-Friend protocol.
 
 We use POP, PCE, the MPU of Definition 23, the full-context response closure of Principle 5b, the invariant SPAP response ledger of Principle 11b, and the quantum closure of Principles 8.0b–8.0c and Theorem 8.0d. Theorem 8.0d supplies $\mathcal H_0\cong\mathbb C^8$, the Born trace law, and a normalized quantum instrument for every registered verification; Principle 8.0c supplies the single retained outcome of each registered run. This appendix develops the remaining perspective dynamics of those registered instruments; its kernels do not re-postulate the carrier, Born weights, or actualization law.
@@ -769,6 +773,10 @@ Dependence of $G_{\mathrm{persp}}(s'|s,k,N,\Delta t)$ on the registered context 
 Theorems 39, 39a, and 51 constrain a nominated response after it exists; they do not construct its carrier, sign, or magnitude. Appendix L supplies conditional electromagnetic and gravitational carrier models but derives no universal dominance ratio for an aggregate. Thus perspective dynamics provides a mathematical interface for the CC hypothesis, not its physical realization. G9CC in the completion program is the finite closure obligation.
 
 ### M.6.9 Synthesis
+
+Quantum facts in this model are indexed to the perspective that records them, much as simultaneity is indexed to a frame. Consistency between perspectives depends on shared records and compatible readout dynamics.
+
+**Technical ledger.**
 
 The perspectival resolution of quantum measurement represents not a retreat from realism but its appropriate generalization. Just as Einstein taught us that certain spatiotemporal facts require frame specification, the PU framework teaches that certain quantum facts require perspective specification.
 
@@ -1655,7 +1663,7 @@ Neither $\mu_{S_n'}=1/\alpha_{SPAP}$ nor $C_{\mathrm{refl}}(S_n',W_n)=0$ supplie
 | Integrated-information quantities | A specified version of an IIT model | Definition-, state-, and system-dependent | Bounds and computability depend on the selected formulation |
 | SPAP proximity $\mu_S(E)$ | A receiver-pattern pair and the maps in (M.18) | Receiver- and pattern-dependent; may equal $\infty$ on the conditional diagonal branch | Evaluation and cost conclusions require the certificates in Theorems M.10.3, M.10.5, M.10.6, and M.10.7 |
 
-**Summary of Results (§M.6.10).**
+**Technical result ledger (§M.6.10).**
 
 | Result | Statement | Basis |
 |--------|-----------|-------|
@@ -2391,6 +2399,10 @@ $$
 with $r=\operatorname{rank}J(\Phi)$ yields $r$ Kraus operators and hence a Stinespring environment of dimension $r$. Conversely, tracing an environment of dimension $m$ gives at most $m$ linearly independent Kraus operators, so $m\ge\operatorname{rank}J(\Phi)$. This proves minimality. The standard minimal-Stinespring uniqueness argument identifies two minimal Kraus spans by a unitary; a nonminimal Kraus family is related by an isometry. The same argument applied to $\widetilde\Phi$ proves the instrument statement. Strict PCE monotonicity removes only the stipulated response-null refinements. ∎
 
 ## M.7 Conclusion
+
+The appendix provides a conditional model of perspective-dependent quantum records, their interactions, and their costs. Its conclusions apply when the stated state, readout, and physical-response assumptions hold.
+
+**Technical ledger.**
 
 This appendix provides a conditional mathematical model for Perspectival State and Dual Dynamics.
 

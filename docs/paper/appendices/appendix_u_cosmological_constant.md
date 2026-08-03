@@ -2,6 +2,10 @@
 
 ## U.1 Introduction
 
+This appendix studies two very different cosmic scales: the tiny vacuum-energy scale and the larger seed fluctuations from which structure grew. It connects both to one finite coding geometry while keeping their calculations, assumptions, and evidential status separate.
+
+### Technical cosmology introduction
+
 The cosmological constant $\Lambda$ and primordial perturbation amplitude $Q$ represent the two fundamental scales of cosmology. Observationally:
 
 $$\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}, \qquad Q \sim 10^{-5}$$
@@ -1851,6 +1855,8 @@ which is not a Fredholm evaluation.
 
 ## U.12 Structural Summary
 
+Two finite geometric designs play different roles in the vacuum calculation. One fixes the base normalization and the other controls the sampled fluctuation directions; the resulting five-mode reference and four-mode theorem branches must remain distinct.
+
 ### U.12.1 Two Design Roles
 
 The derivation employs two distinct but related design structures:
@@ -1983,6 +1989,10 @@ Near-saturation occurs in either branch because:
 
 
 ## U.15 Introduction to the Primordial Sector
+
+The primordial sector describes the small early fluctuations that later grew into cosmic structure. It uses the signal part of the coding geometry, separately from the vacuum calculation and its unresolved normalization.
+
+### Technical primordial-sector introduction
 
 The preceding sections derived the Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ from the Golay-Steiner counting convention, yielding the reference suppression $\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}$ (Corollary U.17). With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives the branch-dependent reference value
 
@@ -3731,6 +3741,8 @@ until an accepted $\mathfrak P_{\mathrm{prim}}$ is entered. The displayed values
 
 ## U.26 Structural Summary
 
+The vacuum and primordial sectors draw on the same coding structure but use different spaces and suppression mechanisms. Their shared origin organizes the comparison without merging their branch conditions or numerical certificates.
+
 ### U.26.1 Dual Complexity Hierarchy
 
 **Summary U.70 (Complexity Parameters).**
@@ -4090,6 +4102,10 @@ with the closed exponential coefficient (U.73f.3) retained for any future accept
 *Proof.* Theorem U.13b fixes exactly four translation zero modes and excludes an additional null mode under its stated false-vacuum spectral hypotheses; Theorem U.8c prevents transfer of the pure-coordinate dilatation tangent to a zero-mode slot. Definition U.73e lists every factor entering the Fredholm magnitude on the four-mode quotient Hilbert space: false-vacuum Hessian, bounce Hessian, zero-mode projection, negative-mode audit, determinant-line orientation, collective-coordinate and finite-volume Jacobian, ghost factor, measure normalization, common zeta finite part, optional Bismut-Lebeau transfer, and spectral tail. Formula (U.73e.5) is exactly the Callan-Coleman/Fredholm determinant magnitude with the negative phase separated. Multiplying by $8\pi e^{-284}$ gives (U.73f.2), and direct evaluation gives $8\pi e^{-284}=1.1497594801473928\times10^{-122}$. Because the current manuscript supplies schemas and branch audits but not all numerical determinant, ghost, Jacobian, measure, and tail entries on the same four-mode branch, (U.73f.4) is the certified status. Reusing the five-mode prefactor would change $\Pi_0$, $J_4$, and the determinant complement, hence would be a different branch rather than a four-mode evaluation. ∎
 
 ## U.27 Conclusion
+
+The appendix links both vacuum suppression and primordial fluctuations to one finite coding structure. The vacuum calculation currently provides a reference branch and a separately gated four-mode expression, while the primordial branch provides a testable comparison set whose full certificate remains open.
+
+### Technical conclusion ledger
 
 This appendix derives the cosmological constant reference scale and the primordial observables from the Golay-Steiner structure at $M = 24$, but with different logical status in the two sectors.
 

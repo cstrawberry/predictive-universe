@@ -2,6 +2,10 @@
 
 **E.1 Introduction**
 
+This appendix separates three questions: the heat required to reset a physical record, the information that an interaction channel can carry, and the amount of information that can be supported across a boundary. Under additional density and calibration conditions, the boundary count produces the familiar horizon-area relation used later in the gravity argument.
+
+**Technical ledger.**
+
 This appendix develops branch-qualified information-theoretic and thermodynamic bounds for Non-Deterministic Reflexive Interaction Dynamics (ND–RID, Definition 6, Definition A.2.2) governing the MPU 'Evolve' process (Definition 27). Registered reset ledgers and refresh/minorization channels give distinct capacity statements. Geometric link counting gives an area-scaling upper bound, while the saturated Horizon Entropy Area Law of Theorem 49 additionally requires the density certificate, capacity-achieving code, entropy-saturating response distribution, additive channel ledger, and operational calibration stated in Theorem E.6. The gravity derivation in Section 12 consumes that complete horizon branch together with its own local-equilibrium hypotheses.
 
 The derivation proceeds logically:
@@ -750,7 +754,11 @@ For Gibbs states in any dimension, a distribution-free boundary law holds for mu
 
 ### E.6.3 Theorem E.5 (Operational Horizon Entropy Bound and Calibrated Saturation)
 
-**Summary of Theorem E.5 (Operational area bound and saturated coupling).** Let $\mathcal H$ be a causal-horizon cross-section of area $\mathcal A$ on the branch of Theorem E.3, and let $S_{\mathrm{rel}}(\mathcal A)$ denote the reliable thermodynamic response entropy of the boundary channels crossing $\mathcal H$, as in Theorem E.6. Boundary-channel counting gives
+**Summary of Theorem E.5 (Operational area bound and saturated coupling).** A boundary can carry only as much reliable information as its available channels allow. When those channels are fully used and their density is calibrated, the resulting entropy grows with area and defines the effective gravitational coupling used by the model.
+
+**Technical ledger.**
+
+Let $\mathcal H$ be a causal-horizon cross-section of area $\mathcal A$ on the branch of Theorem E.3, and let $S_{\mathrm{rel}}(\mathcal A)$ denote the reliable thermodynamic response entropy of the boundary channels crossing $\mathcal H$, as in Theorem E.6. Boundary-channel counting gives
 $$
 S_{\mathrm{rel}}(\mathcal A)
 \le
@@ -1408,6 +1416,10 @@ Thus equality holds. A converse is asserted only on the Petz or Blackwell branch
 ## E.8.3 Holographic Saturation as PCE Attractor
 
 ### E.8.3.1 Introduction
+
+This section asks why a network might fully use its available boundary information capacity. It introduces a cost-and-benefit model in which leaving useful channels idle is costly, and shows that deterministic adaptation reaches full use under the stated assumptions.
+
+**Technical ledger.**
 
 The preceding sections establish $S\leq\mathcal A/(4G)$ on the geometric-regularity, density-certificate, reset-support, and calibration branches of Theorem 49. Proposition E.2a supplies the residual channel budget on its completed binary reset-support branch, while Theorem E.2 supplies strict contractivity on its refresh/minorization branch. This section introduces an additional phenomenological utilization model. Under a registered positive idle-maintenance cost, additive channel accounting, a nondecreasing benefit function, and projected deterministic gradient dynamics, Theorem E.8.3.4 proves that the scalar utilization coordinate reaches $S_{max}=\mathcal A/(4G)$ in finite time. The theorem makes no point-convergence claim for nonzero stochastic forcing and does not prove capacity-achieving channel codes.
 
@@ -3154,7 +3166,11 @@ This is a conditional cost lower bound. It does not establish kinematic locality
 
 ### E.10.2 Serialized Propagation-Speed Bound and Conditional Attainment
 
-**Summary of Theorem E.10.2 (Serialized Propagation-Speed Bound and Conditional Attainment).** Assume that (i) propagation between non-adjacent MPUs is implemented by serialized nearest-neighbor ND-RID traversals, (ii) each traversed edge has length at most $\delta$ in the retained propagation metric, and (iii) each edge traversal takes at least a separately registered time $\tau_{\min}>0$. Then every serialized propagation path satisfies
+**Summary of Theorem E.10.2 (Serialized Propagation-Speed Bound and Conditional Attainment).** Information that must cross neighboring links one after another has a maximum speed set by the longest allowed link and the shortest allowed traversal time. Matching that limit to the speed of light needs an actual one-link process that reaches both bounds and a separate scale identification.
+
+**Technical ledger.**
+
+Assume that (i) propagation between non-adjacent MPUs is implemented by serialized nearest-neighbor ND-RID traversals, (ii) each traversed edge has length at most $\delta$ in the retained propagation metric, and (iii) each edge traversal takes at least a separately registered time $\tau_{\min}>0$. Then every serialized propagation path satisfies
 $$
 v_{\mathrm{ser}}\le \frac{\delta}{\tau_{\min}}.
 $$
@@ -3213,6 +3229,10 @@ The scale identification converts this into the numerical upper bound $c$; equal
 
 ### E.10.3 Summary
 
+Long-distance reset costs and propagation speed come from different assumptions. Reset cost depends on actual erasures along the route; the speed limit depends on link length, traversal time, and serial transfer. Equality with the speed of light requires further attainment and spacetime conditions.
+
+**Technical ledger.**
+
 | Result | Statement | Origin |
 |:-------|:----------|:-------|
 | Theorem E.10.1 | Linear long-range cost holds only under its registered reset-operation and benefit certificates | Conditional PCE ledger |
@@ -3228,6 +3248,10 @@ The registered serialized branch yields a finite operational speed upper bound f
 
 
 ## E.11 Conclusion
+
+The appendix derives a conditional boundary-area information law and separates it from reset heat and propagation speed. Full area-law equality needs channels that reach capacity plus density and calibration data; a speed bound needs independent link-length and clock assumptions. Together these results supply the thermodynamic input used by the later gravity construction.
+
+**Technical ledger.**
 
 This appendix gives a conditional operational area-law construction, bulk and horizon refinements, and the two scoped results of Section E.10: registered reset operations can carry a linear implementation cost, while independent serialized edge-length and edge-time hypotheses give a propagation-speed upper bound. The area-law argument has two branch-qualified stages:
 

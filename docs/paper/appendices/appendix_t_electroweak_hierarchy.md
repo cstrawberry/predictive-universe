@@ -2,6 +2,10 @@
 
 ## T.1 Introduction
 
+This appendix studies three electroweak questions: why the weak scale is so small, why the weak mixing angle has its observed size, and why the Higgs mass lies near its measured value. It separates exact structural results from matching assumptions, validation inputs, and still-open spectral calculations.
+
+### Technical electroweak introduction
+
 The electroweak sector presents three fundamental puzzles:
 
 1. **The Hierarchy Problem**: Why is $v/M_{Pl} \sim 10^{-17}$?
@@ -2238,7 +2242,13 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 
 # Part V: Summary
 
+This part gathers the electroweak results and separates exact structural values from model outputs, validation targets, and imposed inputs. The following section records the detailed statuses.
+
 ## T.19 Complete Electroweak Parameter Summary
+
+The tables below collect the electroweak, Higgs, flavor, and mixing outputs and state what kind of evidence supports each one. Exact structural values, model results, validation targets, and imposed inputs remain separate categories.
+
+### Technical summary conventions
 
 **Convention T.19.0 (Branch Ledger for Appendix T Summary Tables).** All branch entries in the Appendix T summary tables (T.19.1, T.20, T.24.26, T.25.8 and parallel rows) are interpreted relative to the controlling branch package of Theorem T.79: a fixed PU structural branch, the completed flag-lift spectral data $\Delta$, the flavor-geometric residual data $(\mathcal{T}_{E_8},\mathcal V)$, the CP-profile data $\mathcal B$, and every conversion record consumed by the requested output. For a Higgs-pole row the required record is
 $$
@@ -2984,6 +2994,10 @@ Substitution of $M=24$ and the additional calibration $\chi_U=1/2$ gives the fin
 # Section T.21: Derivation of the Universal Hierarchy Parameter
 
 ## T.21.1 Introduction and Statement of Result
+
+This section models mass differences between particle families as the effect of their geometric separation. One shared suppression coefficient controls the leading ratios, while physical labels, low-energy corrections, and absolute scales require additional records.
+
+### Technical statement and notation
 
 The inter-generation mass hierarchy arises from geometric suppression of Yukawa couplings on the generation vacuum manifold. This suppression is controlled by a single coefficient multiplying squared distances in the $E_8$ root space.
 
@@ -3944,6 +3958,10 @@ so that $E_8$ distances ${2, 4, 6, 8}$ map to ${4, 8, 12, 16}$ in the Leech embe
 
 ## T.21.11 Summary
 
+The hierarchy model uses one geometric suppression rule across the charged-lepton, neutrino, and quark sectors. It reproduces several leading ratios once the sector labels and normalizations are supplied, while the absolute mass scale and higher corrections remain separately calibrated.
+
+### Technical results ledger
+
 1. The hierarchy of inter-generation masses is governed by
 
 $$
@@ -4394,7 +4412,7 @@ $$
 \ln(m_\tau/m_\mu) + \ln(m_\mu/m_e) = 2.8212 + 5.3306 = 8.1518 = \ln(m_\tau/m_e) \quad \checkmark
 $$
 
-Path additivity (Theorem T.42.2a) guarantees this identity is satisfied exactly by construction, with no internal inconsistency.
+Path additivity (Theorem T.42.2a) guarantees this identity is satisfied exactly by construction.
 
 -----
 
@@ -5284,7 +5302,7 @@ CKM and PMNS outputs may be compared only after their distinct triads, transport
 
 ## T.22.11 Calibration and Validation Status
 
-Agreement on observables used to choose the triads or continuous response data is calibration, not independent statistical evidence. A significance calculation requires a fixed likelihood, covariance, alternative family, and held-out data. No no-fit or anti-numerology claim is made before those entries close.
+Agreement on observables used to choose the triads or continuous response data is calibration, not independent statistical evidence. A significance calculation requires a fixed likelihood, covariance, alternative family, and held-out data. Before those entries close, the separate evidential records govern statistical significance, while the CKM-sector evidence supports internal overdetermination.
 
 
 
@@ -5313,6 +5331,10 @@ Therefore, the framework's anti-numerology content is the rigidity of a shared c
 ## T.23 Unified Exponential Suppression: The Master Mechanism for Hierarchies
 
 ### T.23.1 Introduction
+
+This section compares several large hierarchies that share an exponential form. Each sector supplies its own action, prefactor, normalization, and residual record, so the common form organizes the results without making them one mechanism.
+
+#### Technical cross-sector introduction
 
 The cosmological and electroweak branches use a common exponential template only after each sector separately identifies a counting index with an action and that action with a physical observable. The reusable branch template is
 
@@ -5951,6 +5973,10 @@ On the stated Majorana-normalization branch, the recomputed spectrum is $(m_1,m_
 # Section T.24: Neutrino Mass Hierarchy and PMNS Matrix from $E_8$ Geometry
 
 ## Abstract
+
+This part develops a three-neutrino mass and mixing model from a chosen geometric arrangement. The model gives definite values after its labels and response inputs are fixed, but its internally normalized mass splittings miss the cited measurements.
+
+### Technical abstract
 
 This part develops a conditional neutrino and PMNS model on declared $E_8$/Grassmannian triads. The charged-lepton triple is geometrically realizable but not selected by error correction; the neutrino labels and continuous response data likewise require independent certificates. Numerical agreement after calibration does not constitute a zero-external-parameter derivation.
 
@@ -7301,6 +7327,8 @@ $$
 
 ## Part VII: Summary and Predictions
 
+The neutrino branch gives a normal mass ordering, three mixing angles, a phase, and two laboratory mass combinations once its labels and calibrations are fixed. Its ratio structure is more successful than its internally normalized mass splittings, so the final tables keep those outcomes separate.
+
 ### T.24.26 Complete Parameter Table
 
 **Table T.24.4**
@@ -8027,6 +8055,8 @@ The near-unity ratio follows from identical SU(3) charges for $u_R$ and $d_R$; t
 -----
 
 ## T.25.8 Conditional Status Summary
+
+The flavor program currently contains conditional ratio models, calibrated mixing results, and open absolute normalizations. Its present precision claims cover named ratios and diagnostic comparisons.
 
 ### T.25.8.1 Certificate Status Table
 

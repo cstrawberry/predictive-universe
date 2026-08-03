@@ -1762,6 +1762,10 @@ Each row tests its named theorem and certificate package. Agreement or disagreem
 
 ### 13.9.11 Summary
 
+On the model's twenty-four-mode branch, one added selection rule picks the extended binary Golay code within a specific family of codes. Known engineering successes supply external comparison data for the selected code.
+
+**Technical ledger.**
+
 On the minimal $M=24$ interface branch, the predictive-recovery rate gate gives $k=12$ and the binary-linear distance converse gives $d\le8$. If a separate construction/selection certificate supplies a retained binary linear code with minimum distance $8$, Theorem U.1 selects the extended binary Golay code up to coordinate permutation. This is uniqueness within the binary linear $[24,12,8]$ parameter class, not uniqueness among all code families or physical fault-tolerance architectures. The following external benchmarks are comparison data:
 
 | Finding | Source | Status | PU Interpretation |
@@ -1802,7 +1806,7 @@ The predictions fall into three epistemic categories that must be distinguished 
 
 *Theorem-level quantitative predictions* are numerical values obtained from the framework without validation targets, phenomenological kernels, empirical inversions, uncomputed spectral inputs, transferred prefactors, or unclosed residual records. *Branch-level quantitative rows* are numerical values obtained after named branch hypotheses, bridge laws, finite-part conventions, or matching conventions are fixed. *Certificate-pending rows* are deterministic only after their finite certificates are accepted. *Validation and model rows* use validation targets, phenomenological response kernels, transferred prefactors, or status-limited spectral data; these rows are falsifiable as stated branch/model claims but are not counted as theorem-level PU predictions unless their status-carrying inputs are derived from prior PU structure, supplied by an accepted certificate, proved output-null, or removed by a no-go theorem. Thus $D_{\rm car}=4$ is theorem-level only as the Euclidean response-carrier value on the Appendix Z Bures tangent-cell branch; its $3+1$ spacetime interpretation remains certificate-gated, the Appendix Z alpha core $\alpha^{-1}_{0}=137.03609205522863\ldots$ is a theorem-level closed-form core value on its stated branch, the Thomson comparison interval is certificate-pending on $R_\alpha$, the cosmological-constant prefactor is certificate-pending on an accepted canonical $\mathfrak F_U^{(4)}$ of Definition U.73e; the earlier $\mathfrak F_U+\mathfrak I_U^{(4)}$ representation is equivalent only when supplemented by the canonical $H_4$, $\mathcal T_4$, and remaining U.73e entries, Appendix T matching-scale observables remain validation-level before an accepted flag-lift spectral certificate, and flavor/baryogenesis/nuclear rows inherit their own certificate gates. A measured value outside an accepted theorem-level interval refutes the corresponding theorem stack; outside a branch/model interval it refutes the named branch, bridge law, certificate record, or model layer rather than silently upgrading the row.
 
-*Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated finite-response principles. These include the uniform operational causal-speed upper bound of Theorem 46 and, only on the complete Corollary 46a/Appendix O promotion branch, Lorentzian signature and local Lorentz invariance; the Standard Model gauge algebra $\mathfrak g_{\mathrm{SM}}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ on the Appendix G finite-response block-frame positive-marginal capacity branch (Theorem G.8.4b and Corollary G.8.4c, conditional on Proposition G.M1); the Born rule (Proposition 7); and $N_{\mathrm{gen}}=3$ on the intersection of Appendix R's connected regular anomaly-descent, uniform-family-charge, CP-capability, global/torsion-cancellation, and additive-monotone family-selection branches; and chronology protection from SPAP (Theorem 14.1). Falsification is branch-resolved: for example, observed fundamental Lorentz violation refutes the local-Lorentz conclusion only after the attained-frontier and full Appendix O inputs have been independently accepted, while an additional low-energy response-changing gauge generator, a family-count outcome outside the declared Appendix R selection class, or an intervention-stable retrocausal contradiction protocol refutes the respective accepted branch.
+*Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated finite-response principles. These include the uniform operational causal-speed upper bound of Theorem 46 and, only on the complete Corollary 46a/Appendix O promotion branch, Lorentzian signature and local Lorentz invariance; the Standard Model gauge algebra $\mathfrak g_{\mathrm{SM}}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ on the Appendix G finite-response block-frame positive-marginal capacity branch (Theorem G.8.4b and Corollary G.8.4c, conditional on Proposition G.M1); the Born rule (Proposition 7); and $N_g=3$ on the intersection of Appendix R's connected regular anomaly-descent, uniform-family-charge, CP-capability, global/torsion-cancellation, and additive-monotone family-selection branches; and chronology protection from SPAP (Theorem 14.1). Falsification is branch-resolved: for example, observed fundamental Lorentz violation refutes the local-Lorentz conclusion only after the attained-frontier and full Appendix O inputs have been independently accepted, while an additional low-energy response-changing gauge generator, a family-count outcome outside the declared Appendix R selection class, or an intervention-stable retrocausal contradiction protocol refutes the respective accepted branch.
 
 *Diagnostic reclassifications* are branch-dependent interpretations of formal features of existing theories. The curvature-singularity and UV entries retain the hypotheses of Section 14.2.4, Appendix K.5, and Theorem K.10.4. Appendix O supplies an arrow-of-time reinterpretation only on the conjunction of its synchronization branch and its probability-arrow branch: the former requires a declared positive desynchronization penalty, connected finite dynamics, and the Appendix D selection hypotheses, while the latter requires forward and reverse path measures on a common event algebra and an independent positive pathwise entropy-production certificate. These rows are not predictions of new observations. Evidence contradicting an accepted branch refutes that branch-level reinterpretation; SPAP ordering or registered-reset heat alone does not establish it.
 
@@ -1810,7 +1814,11 @@ The predictions fall into three epistemic categories that must be distinguished 
 
 **Conditional structural result:** On Definition Z.9a's faithful least-feasible tangent-shell branch with $M_{\mathrm{int}}=24$ and a verified response-preserving regular-$24$-cell injection, the Euclidean response-carrier dimension is $D_{\rm car}=4$. Identifying this carrier with observed $3+1$ spacetime requires the separate operational-continuum, principal-symbol, time-orientation, and metric-reconstruction certificates.
 
-**Derivation Summary:** Definition Z.9a requires a response-preserving injection of all $M_{\mathrm{int}}=24$ modes into distinct tangent cells and assigns positive cost to response-null surplus dimensions. Theorem Z.10 gives the necessary capacity inequality $24\le K(D)$. The exact values $K(1)=2$, $K(2)=6$, and $K(3)=12$ exclude $D\le3$, while the regular $24$-cell supplies a feasible $24$-point contact configuration in $D=4$. With the strict least-feasible support cost,
+**Derivation Summary:** Within the selected branch, three dimensions cannot accommodate all retained modes, while four dimensions can. Identifying that four-dimensional carrier with observed spacetime is a separate task.
+
+**Technical ledger.**
+
+Definition Z.9a requires a response-preserving injection of all $M_{\mathrm{int}}=24$ modes into distinct tangent cells and assigns positive cost to response-null surplus dimensions. Theorem Z.10 gives the necessary capacity inequality $24\le K(D)$. The exact values $K(1)=2$, $K(2)=6$, and $K(3)=12$ exclude $D\le3$, while the regular $24$-cell supplies a feasible $24$-point contact configuration in $D=4$. With the strict least-feasible support cost,
 $$
 D_{\min}
 =
@@ -1862,7 +1870,11 @@ $$
 =137.03599917753023\ldots.
 $$
 
-**Derivation Summary:** Theorem Z.26 combines the bulk Ward term, interface derivative, democratic-curvature response, separable-curvature response, and exact $SU(2)$ sinc transport:
+**Derivation Summary:** The model first produces a fixed baseline value for the fine-structure constant. A proposed correction brings it close to the measured value. Its current role is a diagnostic comparison, and the paper treats its physical origin as an open task.
+
+**Technical ledger.**
+
+Theorem Z.26 combines the bulk Ward term, interface derivative, democratic-curvature response, separable-curvature response, and exact $SU(2)$ sinc transport:
 $$
 \alpha^{-1}_{0}
 =
@@ -1916,9 +1928,13 @@ This comparison is certificate-retrodictive for already published values unless 
 
 ### 13.10.3 Generation Number
 
-**Prediction:** On the connected regular source branch with $Z_x[J]\ne0$, uniform nonzero family charges, nontrivial CP capability, and cancellation of every admitted global/torsion anomaly, the smallest locally anomaly-free family pattern has $N_{\min}=3$. Exact selection of $N_{\mathrm{gen}}=3$ additionally requires the additive-monotone family objective of Proposition R.3.5.1a.
+**Prediction:** On the connected regular source branch with $Z_x[J]\ne0$, uniform nonzero family charges, nontrivial CP capability, and cancellation of every admitted global/torsion anomaly, the smallest locally anomaly-free family pattern has $N_{\min}=3$. Exact selection of $N_g=3$ additionally requires the additive-monotone family objective of Proposition R.3.5.1a.
 
-**Derivation Summary:** Effective Theorem R.3.4 reduces the local family-anomaly ledger to $\sum_gF_g=\sum_gF_g^3=0$ under its regular descent hypotheses and gives $\{a,-a,0\}$, $a\ne0$, as the smallest CP-capable pattern in that class. Effective Proposition R.3.5.1a assumes $L_{\mathrm{fam}}(N)=L_0+NL_{\mathrm{block}}+L_{\mathrm{mix}}(N)$ with $L_{\mathrm{block}}>0$ and nondecreasing $L_{\mathrm{mix}}$, and therefore selects the smallest admissible count $N=3$. Corollary P.6.1b.8 separately quotients response-null labels. The $D_4$ triality orbit, $M=24=8\times3$, and Leech/$E_8$ constructions are compatibility records rather than family-count proofs.
+**Derivation Summary:** Within the stated family of candidates, the smallest pattern that supports the required charge balance and mixing has three generations. Choosing exactly that smallest pattern also depends on a separate cost rule.
+
+**Technical ledger.**
+
+Effective Theorem R.3.4 reduces the local family-anomaly ledger to $\sum_gF_g=\sum_gF_g^3=0$ under its regular descent hypotheses and gives $\{a,-a,0\}$, $a\ne0$, as the smallest CP-capable pattern in that class. Effective Proposition R.3.5.1a assumes $L_{\mathrm{fam}}(N)=L_0+NL_{\mathrm{block}}+L_{\mathrm{mix}}(N)$ with $L_{\mathrm{block}}>0$ and nondecreasing $L_{\mathrm{mix}}$, and therefore selects the smallest admissible count $N=3$. Corollary P.6.1b.8 separately quotients response-null labels. The $D_4$ triality orbit, $M=24=8\times3$, and Leech/$E_8$ constructions are compatibility records rather than family-count proofs.
 
 **Falsification Conditions:**
 - Discovery of fourth-generation quarks or leptons at colliders
@@ -1939,7 +1955,7 @@ $$
 
 These are indirect consistency checks for the three-generation claim under the identification "one light active neutrino per generation," provided every counted species has $m_\nu<M_Z/2$ and Standard-Model-strength coupling to the $Z$, and no additional species satisfying those conditions exists.
 
-Indirectly consistent with $N_{\mathrm{gen}}=3$ under the stated identification of $N_\nu$ with light active neutrino flavors. In the ATLAS $13\ \mathrm{TeV}$ pair-production benchmark with $140\ \mathrm{fb}^{-1}$ and $\mathcal B(Q\to Wq)=1$, vectorlike-quark masses below $1530\ \mathrm{GeV}$ are excluded at $95\%$ confidence (ATLAS Collaboration 2024); that mass limit does not apply unchanged to other decay-branching assignments.
+Indirectly consistent with $N_g=3$ under the stated identification of $N_\nu$ with light active neutrino flavors. In the ATLAS $13\ \mathrm{TeV}$ pair-production benchmark with $140\ \mathrm{fb}^{-1}$ and $\mathcal B(Q\to Wq)=1$, vectorlike-quark masses below $1530\ \mathrm{GeV}$ are excluded at $95\%$ confidence (ATLAS Collaboration 2024); that mass limit does not apply unchanged to other decay-branching assignments.
 
 
 ---
@@ -1954,7 +1970,11 @@ $$
 $$
 is uniquely selected inside the determinant-compatible block-frame/interface family. At the connected-cover notation level this is written as $SU(3)_C\times SU(2)_L\times U(1)_Y$; the determinant-compatible global form is fixed by the interface data rather than by an arbitrary $U(6)$-subgroup classification.
 
-**Derivation Summary:** The PU gauge-search space is the determinant-compatible block-frame/interface family acting faithfully on a direct-sum inactive-sector certificate $\mathcal B\cong\mathbb C^6$ induced by the $b=6$ Landauer partition, with response-null exact global phases quotiented and determinant-compatible anomaly-admissibility imposed. Within this finite block-frame search space, the sharp generator bound is $n_G\le12$ (Theorem G.8.2e). In the positive-marginal regime of Equation (G.8.5), every admissible non-null block-frame generator below the bound lowers finite-protocol regret, so the PCE optimum saturates $n_G=12$ whenever attainable. The exhaustive block-partition analysis has a unique saturating row, $(3,2,1)$, and hence the gauge algebra is
+**Derivation Summary:** Within the model's restricted search space, dividing six available sectors into groups of three, two, and one is the only arrangement that uses the full allowed symmetry capacity. That arrangement has the symmetry structure used by the Standard Model.
+
+**Technical ledger.**
+
+The PU gauge-search space is the determinant-compatible block-frame/interface family acting faithfully on a direct-sum inactive-sector certificate $\mathcal B\cong\mathbb C^6$ induced by the $b=6$ Landauer partition, with response-null exact global phases quotiented and determinant-compatible anomaly-admissibility imposed. Within this finite block-frame search space, the sharp generator bound is $n_G\le12$ (Theorem G.8.2e). In the positive-marginal regime of Equation (G.8.5), every admissible non-null block-frame generator below the bound lowers finite-protocol regret, so the PCE optimum saturates $n_G=12$ whenever attainable. The exhaustive block-partition analysis has a unique saturating row, $(3,2,1)$, and hence the gauge algebra is
 $$
 \mathfrak g=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)_Y,
 \qquad
@@ -1985,7 +2005,11 @@ $$
 \mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}
 $$
 
-**Derivation Summary:** Equation R.17 records the geometric candidate $\mathcal{R}=d^2_{31}/d^2_{32}$ when a sector-specific hierarchy bridge identifies the relevant mass-log differences with $E_8$ squared distances in $\{2,4,6,8\}$ (Section R.5). Effective Theorem N.9 supplies that bridge only for the ordered charged-lepton path $\tau\to\mu\to e$, on $\mathfrak B_{mass}$ and the Appendix T charged-lepton calibration branch. It supplies no direct quark-sector pairwise law; quark ratios retain the separate Appendix T root assignment, threshold, running, matching, and remainder hypotheses. For the Majorana neutrino sector the triad $(a,b,b)=(2,6,6)$ is not path-additive, and Lemma T.24.10a rules out a three-edge pairwise reading. The anchored candidate $\mathcal{R}_\nu=\Delta_1/\Delta_2=b/a=3$ is the conditional result of Theorem T.24.11, while the $1\leftrightarrow2$ $A_2$ edge is only a PMNS mixing-geometry input. Thus the displayed discrete set is a sector-dependent geometric candidate; Theorem N.9 establishes it only for the ordered charged-lepton ratios.
+**Derivation Summary:** The proposed mass pattern treats some ratios as distances in a fixed geometry. The ordered charged-lepton case supplies the derived link, while the quark and neutrino cases remain separate conditional models.
+
+**Technical ledger.**
+
+Equation R.17 records the geometric candidate $\mathcal{R}=d^2_{31}/d^2_{32}$ when a sector-specific hierarchy bridge identifies the relevant mass-log differences with $E_8$ squared distances in $\{2,4,6,8\}$ (Section R.5). Effective Theorem N.9 supplies that bridge only for the ordered charged-lepton path $\tau\to\mu\to e$, on $\mathfrak B_{mass}$ and the Appendix T charged-lepton calibration branch. It supplies no direct quark-sector pairwise law; quark ratios retain the separate Appendix T root assignment, threshold, running, matching, and remainder hypotheses. For the Majorana neutrino sector the triad $(a,b,b)=(2,6,6)$ is not path-additive, and Lemma T.24.10a rules out a three-edge pairwise reading. The anchored candidate $\mathcal{R}_\nu=\Delta_1/\Delta_2=b/a=3$ is the conditional result of Theorem T.24.11, while the $1\leftrightarrow2$ $A_2$ edge is only a PMNS mixing-geometry input. Thus the displayed discrete set is a sector-dependent geometric candidate; Theorem N.9 establishes it only for the ordered charged-lepton ratios.
 
 **Falsification Conditions:**
 - Precision mass measurements yielding $\mathcal{R}$ values unambiguously between discrete predictions
@@ -2013,6 +2037,10 @@ No theory-consistency interval follows from these central values alone. A compar
 ---
 
 ### 13.10.6 Summary Table
+
+The table below separates exact branch results from conditional bridges, diagnostic comparisons, and open experimental tests. A row counts as a forward test only when its protocol, inputs, uncertainty, and failure rule were fixed before comparison.
+
+**Technical ledger.**
 
 **Experimental row for metered events.** If a protocol claims a $\ln 2$ actualization timing threshold, the protocol must identify the binary interface register, the no-early-firing margin, the overwrite bound, and the process-tensor no-future-to-past causality audit. Otherwise the observation tests the broader $\mathfrak C_{\mathrm{act}}$ branch and not the sharper metered branch.
 
@@ -2091,10 +2119,10 @@ after the Blackwell-PCE record channel and entropy-production ledger have been f
 |:-----------|:---------------------------|:--------------------|
 | $\alpha^{-1}$ | exact sinc-core arithmetic plus diagnostic-only finite Ward hypercharge-recoil (operator realization open) residual; no residual contribution is shared with the bulk, interface, electromagnetic-projection, curvature, sinc-transport, or future residual ledgers | candidate branch: degenerate residual interval $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$ and $\alpha^{-1}_{\mathrm{cand}}=137.03599917753023\ldots$; passive-complement downgrade interval width $3.759913047\times10^{-9}$; $\pm0.000060$ remains only a diagnostic budget |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
-| $N_{\mathrm{gen}}$ | Minimal admissible count $3$ on the connected regular uniform-charge anomaly/CP branch with global/torsion cancellation; exact selected count $3$ only under the additive-monotone objective of Proposition R.3.5.1a; $D_4$ triality and $E_8$/Leech are compatibility checks | branch-discrete |
+| $N_g$ | Minimal admissible count $3$ on the connected regular uniform-charge anomaly/CP branch with global/torsion cancellation; exact selected count $3$ only under the additive-monotone objective of Proposition R.3.5.1a; $D_4$ triality and $E_8$/Leech are compatibility checks | branch-discrete |
 | $D$ | Exact in the Appendix Z Bures tangent-cell mode-channel contract | branch-discrete |
 
-The prediction for $D$ is exact within its Bures tangent-cell contract. The selected value $N_{\mathrm{gen}}=3$ is exact only on the stated Appendix-R anomaly and additive-selection intersection. A deviation tests the corresponding declared branch package; detailed flavor values remain downstream model data.
+The prediction for $D$ is exact within its Bures tangent-cell contract. The selected value $N_g=3$ is exact only on the stated Appendix-R anomaly and additive-selection intersection. A deviation tests the corresponding declared branch package; detailed flavor values remain downstream model data.
 
 **Proper-Acceleration Entropy Drag Test.**
 On the proper-acceleration UCT branch, after ordinary loss channels are subtracted, the residual excess power should obey

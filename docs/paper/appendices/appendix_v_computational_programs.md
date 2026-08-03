@@ -405,6 +405,10 @@ This diagnostic inversion is not a derivation and may not be used to select any 
 
 ### V.3.7 Audit Conclusion
 
+The finite checks confirm the arithmetic that can be evaluated from the present data. The spectral audit remains open because its block, minimization, finite-part, and tail records are absent. Separate finite cardinality and arithmetic checks remain closed at their own audit level.
+
+#### Technical audit ledger
+
 The finite audit ladder verifies only the displayed mechanical calculations. It does not verify Algorithm T.78.6a because the required RHG block data, spectrahedral minimizer, finite-part computation, and tail constants are absent. Therefore the RHG gate remains in the pre-certificate negative-closure status of Theorem T.78.2 and Corollary T.78.5.1.
 
 Three additional closed auxiliary audits are recorded as Sections V.3.8–V.3.10 below. They reduce to finite cardinality or exact arithmetic rather than to missing spectral certificates, and are therefore closed at the audit level even though the spectral-certificate ladder of V.3.1–V.3.6 remains as stated.

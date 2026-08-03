@@ -935,6 +935,10 @@ or near-identity generators whose logarithms are proved to span $\mathfrak{su}(2
 
 ### Q.0.7.18 Summary
 
+This section shows that repeatedly adding the registered binary phase step fills the circle densely. Physical gauge symmetry and interference still require the separately stated dynamics and calibration records.
+
+#### Technical binary-phase results ledger
+
 This section has established:
 
 1. **Landauer Irrationality:** $\alpha_L = \ln 2/(2\pi) \notin \mathbb{Q}$ (Lemma Q.0.7b), proven via Gelfond–Schneider transcendence
@@ -1162,6 +1166,10 @@ Integer event counting does not supply either canonical-action identification. �
 
 #### Q.0.8.7 Summary
 
+This section keeps event counting, action calibration, geometric shell values, mass interpretation, and orbital quantization as separate results. They combine only on the stated calibration branches.
+
+##### Technical event-and-action results ledger
+
 This section has established:
 
 1. **Discrete Integrality:** $N \in \mathbb{Z}$ at the fundamental (MPU network) level (Proposition Q.0.3)
@@ -1294,6 +1302,10 @@ $$
 ---
 
 #### Q.0.9.7 Summary
+
+Under four independent calibration conditions, the model assigns one acceleration-based duration to a uniform one-bit reset cycle. The result is a consistency relation between the registered scales.
+
+##### Technical status ledger
 
 Under the full independent hypotheses of Theorem Q.0.10—uniform binary reset, exact Landauer saturation, cyclic energy balance, and the action-duration calibration with $\kappa_A=\hbar$—the conditional timescale is $\tau_U=2\pi c/a$.
 
@@ -1491,6 +1503,10 @@ after inserting the declared comparison scales. Equality requires separate satur
 ---
 
 #### Q.0.9.8.7 Summary
+
+The horizon and computation constructions use matching thermal, information, and rate ingredients on a joint branch. Their agreement is a compatibility result; none alone generates the others.
+
+##### Technical compatibility ledger
 
 | Result | Statement | Significance |
 |:-------|:----------|:-------------|
@@ -2133,6 +2149,10 @@ Published photon time-of-flight limits therefore constrain only appended LIV bra
 *Derivation.* The first formula defines the appended branch coefficient $\xi_n$. Rewriting $|\xi_n|(E/\Lambda_{\mathrm{MPU}})^n$ as $(E/E_{\mathrm{QG},n})^n$ gives $E_{\mathrm{QG},n}=\Lambda_{\mathrm{MPU}}|\xi_n|^{-1/n}$. The observational inequality follows by monotonicity. Since the PCE-attractor branch has no leading Lorentz-violating coefficient in Prediction Q.6.1, setting $\xi_n=0$ makes $E_{\mathrm{QG},n}=\infty$ in this parametrization and evades finite lower-bound exclusions. $\square$
 
 ### Q.6.5 Summary
+
+The branch fixes a spatial resolution of a little more than two Planck lengths. The same numerical time scale appears only after an added propagation calibration, while the capacity and geometric inputs remain separate branch choices.
+
+#### Technical dependency ledger
 
 | Quantity | Symbol | Value | Origin |
 |:---------|:-------|:------|:-------|

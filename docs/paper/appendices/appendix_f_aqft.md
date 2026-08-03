@@ -515,6 +515,10 @@ Lorentz/AQFT compatibility is maintained on the exact marginal-invariant and sha
 
 **F.8 Conclusion: AQFT as Arena for Verification and Locality**
 
+Algebraic quantum field theory provides the continuum setting in which the model can describe local observables, states, dynamics, stress and energy, and spacelike locality. That setting is available only after the discrete network is shown to converge with the required causal and stability properties. A late choice that changes a remote pre-lightcone outcome distribution lies outside this causal setting.
+
+**Technical ledger.**
+
 AQFT provides a robust mathematical framework for analyzing the properties of the hypothesized continuum limit of the MPU network. The analysis presented here is strictly conditional on the validity of Theorem F.0 (the convergence to a stable AQFT) and Theorem 43 (geometric regularity). Subject to these assumptions, AQFT allows for:
 *   Precise definition of emergent physical states and dynamics.
 *   Rigorous definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Definition F.4).
@@ -549,7 +553,11 @@ The spin-statistics theorem requires four ingredients, available in the PU frame
 | **Positive Energy** | Independent Wightman/AQFT joint spectrum condition for the translation representation | Theorem F.2 hypothesis 3 |
 | **Local Field Algebra** | Emergent net $\mathfrak{A}(\mathcal{O})$ under the continuum bridge | Theorem F.0, Definition F.2 |
 
-**Summary.** Conditional on Theorem F.0, the discrete MPU algebras converge to the stable local $C^*$-net stated there and Corollary F.1 yields spacelike commutativity. A Haag--Kastler/Wightman promotion additionally requires Definition F.0h. Theorem 46 supplies only a uniform operational causal-speed upper bound; an attained frontier and the Appendix O signature package are separate. Theorem 29 identifies an internal operational generator but does not establish the relativistic spectrum condition.
+**Summary.** Under the continuum assumptions, the discrete local descriptions approach a stable local theory whose spacelike observables commute. A full relativistic field theory still requires additional covariance, vacuum, energy, and field regularity conditions.
+
+**Technical ledger.**
+
+Conditional on Theorem F.0, the discrete MPU algebras converge to the stable local $C^*$-net stated there and Corollary F.1 yields spacelike commutativity. A Haag--Kastler/Wightman promotion additionally requires Definition F.0h. Theorem 46 supplies only a uniform operational causal-speed upper bound; an attained frontier and the Appendix O signature package are separate. Theorem 29 identifies an internal operational generator but does not establish the relativistic spectrum condition.
 
 ---
 
@@ -828,6 +836,10 @@ Finally, if (F.9.5c.2) holds, then the internally selected Appendix G capacity g
 ---
 
 ### F.9.6 Summary
+
+Spin-statistics and CPT follow only after the continuum theory also satisfies the standard relativistic field assumptions. The later reconstruction results can recover the compact gauge response group when the observable sectors and their tensor structure are fully supplied.
+
+**Technical ledger.**
 
 The spin-statistics connection and CPT theorem are available in the PU manuscript only after imposing the conditional continuum bridge together with the additional Wightman/Jost realization hypotheses used in Theorems F.2 and F.4.
 

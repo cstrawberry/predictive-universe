@@ -925,6 +925,10 @@ $$
 
 ### N.10.5 Conceptual Summary
 
+Relativistic motion and increasingly demanding prediction targets consume different resources. They can be compared in one work budget without treating them as the same physical limit.
+
+**Technical ledger.**
+
 The Unified Cost of Transgression places two distinct resource effects in one frame-consistent work ledger:
 
 |Domain |Limit |Resource statement |Status |
@@ -2318,6 +2322,10 @@ $$
 where $R_{\mathrm{com}}(\tau)=R(C_{\mathrm{req}}(\tau),T_{\mathrm{eff}}(\tau))$. The first term uses the conditional mass substitution, while the second is the laboratory energy of the comoving exported-loss ledger.
 
 ### N.11.10 Summary
+
+On the relational-information branch, mass measures the information that maintains a system's physical relations, rest energy is its maintenance rate, and inertia is resistance to changing those relations.
+
+**Technical ledger.**
 
 This section has established:
 

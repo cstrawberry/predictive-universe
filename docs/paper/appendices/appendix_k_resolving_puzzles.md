@@ -2,6 +2,10 @@
 
 ## K.1 Introduction
 
+This appendix reviews how the framework approaches major puzzles in physics. It separates proved results, conditional models, calibrated comparisons, and open work.
+
+**Technical ledger.**
+
 This appendix gives a status-resolved audit of how the Predictive Universe (PU) framework addresses long-standing puzzles in fundamental physics and cosmology. Each section pairs a problem with the strongest available PU mechanism and records whether the result is an exact finite theorem, a conditional branch theorem with explicit certificates, a calibrated or validation-level numerical model, or an open construction. A puzzle is called resolved here only when the cited branch supplies every required realization, normalization, and comparison certificate; otherwise the section identifies the remaining finite obstruction or completion route.
 
 The framework's core insight—that operational prediction, finite response, and registered resource ledgers constrain admissible physical descriptions—produces exact structural identities on specified branches and concrete forward tests when their realization certificates are fixed before comparison. Numerical agreement is evidential only at the status of its inputs: a retrospective root assignment, determinant convention, matching tuple, or observed-data anchor is not promoted by small residuals. In the quark sector, the common-scheme and $A_2/D_4$ constructions provide explicit conditional mechanisms and T1/T2/T3 budgets; their sub-percent evaluations test those registered model branches rather than establishing an input-free derivation.
@@ -134,7 +138,7 @@ Appendix T (Section T.25) establishes status-labeled hierarchy comparisons with 
 
 The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log ratio ($|\Delta\ln|=0.0012$), with zero adjustable parameters, representing the single most precise test of the geometric hierarchy mechanism.
 
-**Branch-Separated Summary of Derived Constants:**
+**Branch-Separated technical ledger of derived constants:**
 
 | Quantity | Derivation chain | Branch class |
 |---|---|---|
@@ -2384,6 +2388,10 @@ Explicitly:
 
 ### K.6.16 Summary
 
+The strong-interaction phase vanishes only on the branch that supplies both the gauge-side selection and the mass-side orientation data. Weak-sector phases may remain.
+
+**Technical ledger.**
+
 **Conditional Result (Theorem K.6.11):**
 $$
 \boxed{
@@ -3210,7 +3218,7 @@ Thus the theorem-level PU content is:
 
 5. the requirement of a diffusion certificate before any spectral-dimension endpoint can be claimed.
 
-This is an operational finite-substrate result, not a metaphysical simulation postulate.
+This is an operational finite-substrate result.
 
 **Corollary K.10.6 (Certificate-Gated Divergent Complexity Cost).** On a declared task class carrying certificate $\mathfrak C_{B.2}$, let
 $$
@@ -3330,7 +3338,7 @@ The black-hole specialization additionally uses Theorem Q.0.12; an MPU-substrate
 
 Application of finite information bounds to ultraviolet physics separately requires the ultraviolet lattice or bandlimit and matching certificate of Theorem K.10.4. The horizon protocol and gravity-bridge hypotheses do not supply that certificate.
 
-**Summary.** Within the Predictive Universe framework, renormalization extracts operational predictions from continuum approximations that, if extrapolated literally, would describe operationally inaccessible physics. The finite reset-support channel budget, the Appendix Q spacing branch, and the complexity bounds show that a fixed registered finite protocol cannot certify an unbounded family of independent response distinctions. A hard ultraviolet retained-mode boundary follows only on Theorem K.10.4's lattice or bandlimit and matching certificate. Theorem K.5.4 proves only exit from one framed Fermi-expansion certificate; neither theorem proves the underlying microscopic theory finite or excludes curvature or field singularities.
+**Technical synthesis.** Within the Predictive Universe framework, renormalization extracts operational predictions from continuum approximations that, if extrapolated literally, would describe operationally inaccessible physics. The finite reset-support channel budget, the Appendix Q spacing branch, and the complexity bounds show that a fixed registered finite protocol cannot certify an unbounded family of independent response distinctions. A hard ultraviolet retained-mode boundary follows only on Theorem K.10.4's lattice or bandlimit and matching certificate. Theorem K.5.4 proves only exit from one framed Fermi-expansion certificate; neither theorem proves the underlying microscopic theory finite or excludes curvature or field singularities.
 
 Theorems K.10.10--K.10.12 give a conditional thermodynamic interpretation of the macroscopic metric equation while leaving effective quantization of perturbations open. Perturbative nonrenormalizability of the Einstein--Hilbert action is compatible with low-energy quantum gravity and does not prove that gravity is not a QFT. A hard retained-mode cutoff and finite matched observables follow only from Theorem K.10.4's microscopic lattice/bandlimit and matching certificate; finite reset-support capacity or the gravity bridge alone proves neither UV finiteness nor absence of singularities.
 
@@ -3500,7 +3508,7 @@ Monotone convergence of the number $C_{\mathrm{pred}}(k)$ does not imply converg
 
 ## K.11 Outlook and Future Directions
 
-The Predictive Universe framework has successfully resolved several fundamental puzzles through rigorous derivations. This section summarizes established results, identifies active development areas, and outlines priority theoretical work and experimental validation strategies.
+This section records established branch results, active development areas, and priorities for theory and experimental validation.
 
 ### K.11.1 Established Results
 
