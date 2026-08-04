@@ -1411,6 +1411,8 @@ Non-overlap requires $|x-y|\ge 2$, hence $\sin(\theta/2)\ge 1/2$ and therefore $
 
 **Step 3 (Kissing number equality).** The largest $N$ for which unit balls can be tangent to a central unit ball in $\mathbb R^D$ is, by definition, the kissing number $K(D)$. Thus the maximal completed first-shell distinguishable channel count in the tangent regime is $M_{\mathrm{phys}}=K(D)$. ∎
 
+**Remark Z.7a.1 (Scope).** Hypothesis (iii) is independent global-maximality branch data; local noninsertability does not establish it. Theorem Z.7a is not an input to Definition Z.9a, Theorem Z.10, or Theorem Z.11. The dimensional-selection route uses the capacity bound $M_{\mathrm{int}}\le K(D)$, the exact values $K(1),K(2),K(3)$, an explicit response-labeled regular $24$-cell realization, and strict surplus-dimension cost; it neither assumes nor concludes $M=K(D)$ (Remark Z.11.1).
+
 **Remark Z.4: Information-Geometry Descent.** This theorem establishes the finite-response descent from quantum information geometry to classical discrete geometry. The metric side is fixed by PCE selection of the Bures/SLD member of the Petz family (Corollary X.8a.2c); the packing side is fixed by non-overlap, equal-radius minimal Landauer channels, and tangent saturation. The information-theoretic constraint ($\epsilon_{\rm dist}$-distinguishability) therefore translates into a geometric constraint (minimum angular separation) once $\theta_{\rm cap}(\epsilon_{\rm dist})$ is fixed by the propagation model $T$.
 
 ---
@@ -1499,6 +1501,8 @@ M_{\mathrm{phys}}(\rho_{\mathrm{eq}})=K(D).
 $$
 ∎
 
+**Remark Z.9.1 (Scope).** As in Remark Z.7a.1, the displayed equality holds only under the additional global-capacity and full-kissing-class equivalence premises stated in the theorem. It is not an input to Definition Z.9a, Theorem Z.10, or Theorem Z.11, and the fixed-count entropy argument alone does not supply it.
+
 ### Z.10.4 Mode-Channel Mismatch Cost
 
 **Lemma Z.5 (Conditional Mode-Channel Mismatch Penalty).** Let $D\ge2$, let $K(D)>0$, and assume positive coefficients $c_{\mathrm{dark}},c_{\mathrm{dim}}>0$. Define the mismatch-sector penalty by
@@ -1517,6 +1521,8 @@ V_{\mathrm{mc}}(m,D)\ge0,
 V_{\mathrm{mc}}(m,D)=0\Longleftrightarrow m=K(D).
 $$
 This statement concerns the mismatch sector alone. A minimizer of the complete PCE potential requires the dependence of every other term on $(m,D)$ to be specified.
+
+**Scope (not a cost term of the faithful-shell branch).** $V_{\mathrm{mc}}$ belongs to the saturation branch of Theorems Z.7a and Z.9, on which $K(D)$ is identified with the attained physical channel count. Definition Z.9a does not include $V_{\mathrm{mc}}$ among its cost terms, and neither Theorem Z.10 nor Theorem Z.11 uses it. On the faithful-shell branch, Definition Z.9a assigns no $V_{\mathrm{mc}}$ mismatch penalty to the undershoot case $m<K(D)$; this is consistent with Remark P.8.2 and with the common cost ledger used by Corollary Z.11.0a for $13\le M_{\mathrm{int}}\le24$. By contrast, the overshoot case $m>K(D)$ is priced finitely here, whereas Theorem Z.10 makes it infeasible under Definition Z.9a; the finite price applies only where unassigned modes are admitted in the sense of Corollary Z.4a. Importing $V_{\mathrm{mc}}$ into Definition Z.9a would conflict with Remark P.8.2's no-frustration interpretation and would require the cost comparison underlying Corollary Z.11.0a to be re-established; the two branch ledgers therefore must not be combined without an additional theorem.
 
 *Proof.* If $m>K(D)$, every factor in the first branch is positive and $(m-K(D))^2>0$, so $V_{\mathrm{mc}}>0$. If $m<K(D)$, then $D(D-1)>0$ and $K(D)-m>0$, so the third branch is positive. At $m=K(D)$, the middle branch is zero. These three exhaustive cases prove the equivalence. ∎
 

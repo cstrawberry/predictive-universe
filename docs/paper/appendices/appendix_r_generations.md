@@ -799,7 +799,7 @@ $$
 | $7$ | $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D$ | R.1.1; minimal Hilbert branch; additive family selection; dimension branch |
 | $8$ | $N_{\mathrm{vis}}^{\min}=2^{K_0}=d_0=8$ | Theorem 15; Theorem 23; Theorem Z.2 minimal branch |
 | $12$ | $12=M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)$ | The cited interface, code, Grassmannian, and gauge branches |
-| $24$ | $24=M=K(4)$ | Theorem Z.5 and Theorem Z.11 branches |
+| $24$ | $24=M=2ab$, with $K(4)=24$ recorded as a separately sourced value | Theorem Z.5 interface branch supplies $M=24$; $K(4)=24$ is imported mathematics [Musin 2008]. Theorem Z.11 uses only $24\le K(D)$ with $K(3)=12$ and the regular $24$-cell, and asserts no equality $M=K(D)$ (Remark Z.11.1) |
 
 *Proof.* Each row follows by substituting the values supplied by its listed source branches. The ledger records cross-branch numerical identities; it does not derive one source branch from another. ∎
 

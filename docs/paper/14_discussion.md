@@ -28,7 +28,7 @@ The thermodynamic equilibrium branch combines ND-RID stationarity with a separat
 
 
 
-The Consciousness Complexity program introduces context dependence as Assumption 1 and a physical influence mechanism as Hypothesis 3. For an aggregate with $C_{agg}>C_{op}$, effective Theorem 34 yields nonzero operational CC only on the branch containing a reachable Born reference, a reachable representable non-Born context with strictly lower PCE potential than every Born-realizing minimizer, and an attained stable global minimizer. Definition 30 quantifies the resulting map. The endpoint bound $\alpha_{CC,max}<0.5$ prevents deterministic endpoint forcing but does not establish no-signaling; Theorem 39c requires exact pre-lightcone marginal invariance and classifies a late-randomized marginal anomaly as a falsifier of the causal branch.
+The Consciousness Complexity program introduces context dependence as Assumption 1 and a physical influence mechanism as Hypothesis 3. For an aggregate with $C_{agg}>C_{op}$, effective Theorem 34 yields nonzero operational CC only on the branch containing a reachable Born reference, a reachable representable non-Born context with strictly lower PCE potential than every Born-realizing minimizer, and an attained stable global minimizer. Definition 30 quantifies the resulting map. PU takes exact quantum no-signaling and relativistic causality as the baseline supplied by current physics. The endpoint bound $\alpha_{CC,max}<0.5$ prevents deterministic endpoint forcing but does not establish no-signaling; Theorem 39c requires exact pre-lightcone marginal invariance. PU proposes a late-randomized Bob-marginal shift as its QCP/statistical-FTL hypothesis. A certified and replicated shift would establish a noisy statistical-FTL channel, support that hypothesis, and show that the current causal baseline is incomplete.
 
 Conditional on Necessary Emergence of Geometric Regularity (Theorem 43) and the operational-continuum branch of Section 11, Theorem 46 supplies a uniform operational causal-speed upper bound. Frontier attainment is separate, and promotion to a Lorentzian metric $g_{\mu\nu}$ requires Corollary 46a and the full Appendix O signature package. On that joint branch, the Einstein-equation result (Theorem 50) is obtained thermodynamically in Section 12 using the Appendix E area-law branch, the Appendix F local Rindler/KMS modular input, and the MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B).
 
@@ -1684,17 +1684,11 @@ Leech rootlessness then supplies the separate geometric statement $|v|_{\min}^2=
 
 On the substrate-aligned residual branch this claim becomes experimentally sharper than ordinary code-performance benchmarking. The prediction is not merely that Golay codes perform well; standard coding theory already explains much of that. The discriminating prediction is that after ordinary device noise is modeled away, the irreducible residual correlated syndrome spectrum of a clean 24-mode interface should carry the Golay shell geometry itself: the leading nontrivial residual shell is the 759-octad shell, and its incidence statistics obey $253:77:21:5:1$.
 
-On the substrate-aligned residual branch, the registered classical code supplies a finite redundancy and syndrome ledger. Physical stability still requires a Hamiltonian or error-channel certificate.
-
-Leech rootlessness supplies only the geometric norm gap $|v|_{min}^2=4$. It does not establish vacuum, thermal, tunneling, or quantum-noise stability. The Golay minimum distance supplies a classical coding statement; any physical spectroscopy or stability reading requires the separate response and dynamics certificates.
+For this branch, the Golay minimum distance supplies the classical redundancy and syndrome ledger, while Leech rootlessness supplies the geometric norm gap $|v|_{min}^2=4$. Physical stability and spectroscopy additionally require the Hamiltonian, response, dynamics, and error-channel certificates stated above.
 
 #### Separation of Mixing, Norm, Action, and Mass Gaps
 
-The following are distinct certificate-gated quantities rather than independent derivations of one gap:
-
-
-
-The three distinct ledgers are:
+The three certificate-gated ledgers are:
 
 **Route 1 (Dynamical mixing).** On an active refresh branch, strict one-cycle contraction gives a discrete mixing gap and, with a registered cycle-time bridge, a relaxation rate. It does not by itself equal a relativistic particle mass gap.
 

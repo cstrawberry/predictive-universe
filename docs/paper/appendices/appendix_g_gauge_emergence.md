@@ -3827,7 +3827,7 @@ $$
 $$
 where $\hat{\phi}_t$ is the stored prediction. The NOT operation defines a $\mathbb{Z}_2$ involution $\iota: \{0,1\} \to \{0,1\}$ satisfying $\iota^2 = \text{id}$.
 
-This involution is the logical foundation of the entire framework. The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ operates on binary states $\phi \in \{0,1\}$, and NOT is the unique non-trivial involution on this set, generating the cyclic group $\mathbb{Z}_2 = \{e, \iota\}$ with $\iota \circ \iota = e$.
+This involution is the logical foundation of the retained SPAP diagonal construction. The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ operates on binary states $\phi \in \{0,1\}$, and NOT is the unique non-trivial involution on this set, generating the cyclic group $\mathbb{Z}_2 = \{e, \iota\}$ with $\iota \circ \iota = e$.
 
 **Lemma G.10.1a (Irreducibility of $\mathbb{Z}_2$).** The $\mathbb{Z}_2$ structure of the SPAP involution cannot be reduced to the trivial group.
 

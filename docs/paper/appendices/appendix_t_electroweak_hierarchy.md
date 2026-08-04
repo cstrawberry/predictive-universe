@@ -3479,10 +3479,10 @@ This accounts for the $5.5%$ reduction from $\alpha_{\mathrm{UV}} = 3/2$ to $\al
 
 The complete hierarchy formula including $\mathcal{O}(d^4)$ corrections is derived in Section T.21.8 **(Theorem T.42.6)**. The fourth-order coefficient $\beta_{\mathrm{geom}}$ arises from the Van Vleck–Morette determinant in the Gaussian overlap integral on Riemannian manifolds [DeWitt 1965], applied to the Grassmannian $\mathrm{Gr}(2,8)$ with Bures metric. On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, the effective curvature is $K_{\mathrm{eff}}=2$. Together with the Bures variance $\sigma_B^2=1/24$ (Lemma T.41.2) and the Van Vleck coefficient $1/12$, this gives the conditional curvature coefficient $\beta_{\mathrm{geom}}=1/144=1/C$.
 
-The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ encodes the tangent space structure at each geodesic separation, with two regimes determined by the Golay decoding geometry:
+The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ uses two declared phenomenological assignments at $d^2_{\mathrm{th}}=4$:
 
-- **Sub-threshold** ($d^2 < d^2_{\mathrm{th}} = 4$): Inside unique-decoding basin
-- **Threshold** ($d^2 = d^2_{\mathrm{th}} = 4$): On decoding boundary
+- **Lower-distance assignment** ($d^2<d^2_{\mathrm{th}}=4$): $D_{\mathrm{eff}}=3/8$
+- **Boundary-value assignment** ($d^2=d^2_{\mathrm{th}}=4$): $D_{\mathrm{eff}}=13/6$
 
 *Remark: Conditional Hamming-Chordal Calibration.* The inclusion $\sqrt2E_8\hookrightarrow\Lambda_{24}$ scales Euclidean squared distances but does not canonically assign Golay supports to root pairs. On the marked calibration branch of Lemma T.42.4, the two registered charged-lepton pairs satisfy $h_{ij}=2d_{ij}^2$, so the pair with $d^2=4$ is assigned $h=8=d_{\min}$. This is a branch coordinate assignment. It is not a theorem that $d^2=4$ is a geometric decoding boundary; the Golay unique-decoding radius is $t=3$, and Hamming ties can occur at radius $4$.
 
@@ -3498,7 +3498,7 @@ The few-percent deviations in Table T.21.1 arise from the $\mathcal{O}(d^4)$ cur
 
 1. The Van Vleck–Morette determinant for Gaussian overlaps on curved manifolds [DeWitt 1965]
 1. The intrinsic Bures curvature of $\mathrm{Gr}(2,8)$ together with the democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$, which yields $K_{\mathrm{eff}}=2$ in Theorem Z.24 (Theorem Z.24; Lemma Z.24a)
-1. The Golay decoding partition structure [MacWilliams & Sloane 1977]
+1. The Golay parameters $(t,d_{\min},k)=(3,8,12)$ [MacWilliams & Sloane 1977] and the separately registered assignments $D_{\mathrm{eff}}(2)=3/8$ and $D_{\mathrm{eff}}(4)=13/6$
 1. The path-additivity principle for generation triangles
 
 ### T.21.8.1 Normalized Overlap-Certificate Requirement
@@ -3675,12 +3675,12 @@ $$
 
 The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ quantifies how many independent directions contribute to the quartic curvature correction.
 
-**Theorem T.42.5** (Effective Geodesic Dimension on the Golay assignment branch). *On the Golay effective-dimension branch, the effective dimension $D_{\mathrm{eff}}(d^2)$ entering the Van Vleck curvature correction is assigned by the Golay decoding-structure rule:*
+**Theorem T.42.5** (Effective Geodesic Dimension on the Golay assignment branch). *On the Golay effective-dimension branch, the effective dimension $D_{\mathrm{eff}}(d^2)$ entering the Van Vleck curvature correction is assigned by the following model rule built from registered Golay parameter ratios:*
 
 $$
 D_{\mathrm{eff}}(d^2) = \begin{cases}
-\displaystyle\frac{t}{d_{\min}} = \frac{3}{8} & \text{if } d^2 < d^2_{\mathrm{th}} \quad \text{(sub-threshold)} \\[12pt]
-\displaystyle\frac{k+1}{b} = \frac{13}{6} & \text{if } d^2 = d^2_{\mathrm{th}} \quad \text{(threshold)}
+\displaystyle\frac{t}{d_{\min}} = \frac{3}{8} & \text{for the registered } d^2=2 \text{ assignment} \\[12pt]
+\displaystyle\frac{k+1}{b} = \frac{13}{6} & \text{for the registered } d^2=4 \text{ assignment}
 \end{cases}
 $$
 
@@ -3688,9 +3688,9 @@ $$
 
 -----
 
-**Regime I: Sub-threshold** ($d^2 < d^2_{\mathrm{th}}$, exemplified by $d^2 = 2$).
+**Registered pair I** ($d^2=2<d^2_{\mathrm{th}}=4$ on the marked calibration branch).
 
-**Theorem T.42.5a** (Sub-threshold Effective Dimension). *For $d^2 = 2 < 4$, the geodesic lies within the unique-decoding basin of the Golay code. The effective dimension is:*
+**Theorem T.42.5a** (Sub-threshold Effective Dimension). *For the declared $d^2=2<4$ branch, the effective dimension is:*
 
 $$
 D_{\mathrm{eff}} = \frac{t}{d_{\min}} = \frac{3}{8}
@@ -3716,7 +3716,7 @@ The Golay parameters determine the numerical ratio, while its use as a Van Vleck
 
 -----
 
-**Regime II: Threshold** ($d^2 = d^2_{\mathrm{th}}$, exemplified by $d^2 = 4$).
+**Registered pair II** ($d^2=d^2_{\mathrm{th}}=4$ on the marked calibration branch).
 
 **Theorem T.42.5b** (Threshold-Branch Effective-Dimension Assignment). On the Golay effective-dimension branch, define
 $$
@@ -3742,7 +3742,7 @@ No tangent-rank conclusion follows from the binary syndrome-map rank without an 
 
 **Remark T.42.5.2 (Branch Dependence of the Golay-to-Van-Vleck Assignment).** The numerical values $D_{\mathrm{eff}}(2) = 3/8$ and $D_{\mathrm{eff}}(4) = 13/6$ depend on the Golay assignment branch introduced in Theorem T.42.5. The named supporting theorems (Theorem Z.13 for the Golay parameters, Lemma T.42.4 for the Hamming-chordal correspondence, Lemma T.42.1a for the universal Van Vleck coefficient, Theorem T.42.2 for $\beta_{\mathrm{geom}}$, Theorem Z.5 for QFI isotropy) supply the constituent quantities but do not uniquely force the identification of $t/d_{\min}$ and $(k+1)/b$ as the Van Vleck effective dimensions in the two regimes. An alternative assignment branch $D_{\mathrm{eff}}(d^2) \equiv 1$ for both regimes would respect the same named helper results while changing the curvature-correction weighting. A change $\delta D_{\mathrm{eff}} \sim 0.03$ shifts the $\mu/e$ log prediction by approximately $0.005$, comparable to the stated theory uncertainty.
 
-**Remark T.42.5.1: Physical Interpretation.** *The $\mu/e$ mass ratio ($d^2 = 4$) probes the Golay decoding boundary—the critical stratum where error-correction ambiguity first appears. This boundary position amplifies the effective dimension, explaining why the curvature correction is largest for the $\mu/e$ ratio despite it being intermediate in the hierarchy.*
+**Remark T.42.5.1: Physical Interpretation.** *The $\mu/e$ mass ratio uses the declared branch assignment $D_{\mathrm{eff}}(4)=13/6$. Under the marked calibration, $d^2=4$ maps to Hamming separation $h=8=d_{\min}$; the Golay unique-decoding radius is $t=3$, with possible ties beginning at radius $4$. The larger curvature correction follows from the assigned effective dimension.*
 
 ### T.21.8.6 Conditional Hierarchy Model
 
@@ -3765,10 +3765,10 @@ $$
 
 **Zero-Remainder Central Truncation:**
 
-|Ratio |$d^2$|Assigned regime |$D_{\mathrm{eff}}$|$d^4$|Quartic term|Central value with $\mathcal R_6=0$|
+|Ratio |$d^2$|Assignment |$D_{\mathrm{eff}}$|$d^4$|Quartic term|Central value with $\mathcal R_6=0$|
 |:--------:|:---:|:-----------:|:----------------:|:---:|:--------:|:--------:|
-|$\tau/\mu$|$2$ |Marked sub-threshold branch|$3/8$ |$4$ |$0.0148$ |$2.8212$ |
-|$\mu/e$ |$4$ |Marked threshold branch|$13/6$ |$16$ |$0.3414$ |$5.3306$ |
+|$\tau/\mu$|$2$ |Marked-calibration $d^2=2$ assignment|$3/8$ |$4$ |$0.0148$ |$2.8212$ |
+|$\mu/e$ |$4$ |Marked-calibration $d^2=4$ assignment|$13/6$ |$16$ |$0.3414$ |$5.3306$ |
 |$\tau/e$ |— |Path sum |— |— |— |$8.1518$ |
 
 Setting the uncalibrated remainder to zero gives
@@ -3946,7 +3946,7 @@ Homothety alone does not prove even unimodularity, rootlessness, family labels, 
 
 The Leech lattice $\Lambda_{24}$ is constructed via Construction A as a union of cosets of the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, with coset representatives determined by the extended binary Golay code $\mathcal{G}_{24}$ (Conway–Sloane, *Sphere Packings, Lattices and Groups*).
 
-The scaling by $\sqrt{2}$ maps $E_8$ roots (squared norm $2$) to Leech minimal vectors (squared norm $4$), ensuring even unimodularity and minimal norm $4$. This homothety is consistent with Lemma T.41.4 when expressed in a common physical normalization:
+On the registered gluing branch, scaling by $\sqrt{2}$ maps $E_8$ roots of squared norm $2$ to scaffold vectors of squared norm $4$. The gluing and coset-minimum certificate establishes even unimodularity and minimum norm $4$, and the homothety is consistent with Lemma T.41.4 in a common physical normalization:
 
 $$
 d^2_{E_8} \xrightarrow{\times\sqrt{2}} d^2_{\sqrt{2}E_8} = 2 d^2_{E_8},
@@ -4333,12 +4333,12 @@ Path additivity is exact once adjacent-edge values are supplied. It does not der
 | :----- | :----------: | :----: |
 | Two-loop SM RGE + electroweak-threshold matching (scheme: $\mu_{\rm EW}\in[m_t,v_{\rm PU}]$) | $\eta_\tau = 1.1127 \pm 0.0033$ | Computed (scheme-defined) |
 | Two-loop threshold matching at $\mu_G$ in the absolute normalization | not yet computed | TBD |
-| $E_8$ log-ratio theory uncertainty ($d^2/M$ expansion) | $\le 0.005$ in $\ln$ per ratio | Theorem T.42.6 bound |
+| $E_8$ log-ratio theory uncertainty ($d^2/M$ expansion) | $0.005$ in $\ln$ per ratio | Labeled model allowance; remainder certificate open |
 
 1. The Leech lattice connection via $\sqrt{2}E_8$ and the Golay code aligns with the $M = 24$ interface mode structure.
-1. The Golay threshold $d^2_{\mathrm{th}} = d_{\min}/2 = 4$ determines two geodesic regimes on $\mathrm{Gr}(2,8)$ (Theorem T.42.5):
-- **Sub-threshold** ($d^2 < 4$): Inside unique-decoding basin; $D_{\mathrm{eff}} = t/d_{\min} = 3/8$.
-- **Threshold** ($d^2 = 4$): On decoding boundary; $D_{\mathrm{eff}} = (k+1)/b = 13/6$.
+1. Theorem T.42.5 registers two effective-dimension assignments at $d^2_{\mathrm{th}}=d_{\min}/2=4$ for the $\mathrm{Gr}(2,8)$ model:
+- **Lower-distance assignment** ($d^2<4$): $D_{\mathrm{eff}}=t/d_{\min}=3/8$.
+- **Boundary-value assignment** ($d^2=4$): $D_{\mathrm{eff}}=(k+1)/b=13/6$.
 
 Path additivity (Theorem T.42.2a) ensures $\ln(m_\tau/m_e) = \ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$ exactly. On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, the conditional value $K_{\mathrm{eff}}=2$ gives $\beta_{\mathrm{geom}}=K_{\mathrm{eff}}\sigma_B^2/12=1/144$ in the declared Van Vleck model. The displayed sub-$0.05\%$ comparisons are conditional on that response input, the registered hierarchy coefficient, the effective-dimension assignments, and controlled higher-order remainders; they are not zero-adjustable-parameter consequences of the PU axioms.
 
@@ -4352,9 +4352,9 @@ A valid forward test must lock the two-value assignment and at least one alterna
 
 
 
-All quantities trace to established theorems:
+The following ledger separates theorem inputs, branch assignments, and model-layer entries:
 
-|Quantity |Value |Source |Derivation |
+|Quantity |Value |Source / locator |Role / status |
 |:-----------------------------------|:--------------------|:----------------|:---------------------------------------------------------|
 |$K_0$ |$3$ |Theorem 15 |Horizon Constant (SPAP encodability) |
 |$N_{\mathrm{vis}}^{\min}$ |$8$ |Theorem 15 |$2^{K_0}$ |
@@ -4372,9 +4372,9 @@ All quantities trace to established theorems:
 |$t$ |$3$ |Definition T.1a |$\lfloor(d_{\min}-1)/2\rfloor$ (Golay correction capacity)|
 |$d_{\min}$ |$8$ |Definition T.1a |Golay minimum distance |
 |$k$ |$12$ |Definition T.1a |Golay code dimension |
-|$d^2_{\mathrm{th}}$ |$4$ |Lemma T.42.4 |$d_{\min}/2$ (Hamming-chordal correspondence) |
-|$D_{\mathrm{eff}}(d^2 = 2)$ |$3/8$ |Theorem T.42.5a |$t/d_{\min}$ (sub-threshold) |
-|$D_{\mathrm{eff}}(d^2 = 4)$ |$13/6$ |Theorem T.42.5b |$(k+1)/b$ (threshold) |
+|$d^2_{\mathrm{th}}$ |$4$ |Definition T.42.3a; Lemma T.42.4 |Marked-coordinate label $d_{\min}/2$; not a decoding or geometric threshold |
+|$D_{\mathrm{eff}}(d^2 = 2)$ |$3/8$ |Theorem T.42.5a |Registered assignment $t/d_{\min}$; no unique-decoding-basin inference |
+|$D_{\mathrm{eff}}(d^2 = 4)$ |$13/6$ |Theorem T.42.5b |Registered assignment $(k+1)/b$; no decoder-boundary inference |
 
 **Derivation chain:**
 
@@ -4391,7 +4391,11 @@ K_{\mathrm{eff}}=2
 $$
 
 $$
-\mathcal{G}_{24}[24,12,8] \to (t, d_{\min}, k) = (3, 8, 12) \xrightarrow{\text{Hamming-chordal}} d^2_{\mathrm{th}} = 4 \to D_{\mathrm{eff}}(d^2)
+\mathcal{G}_{24}[24,12,8]\to(t,d_{\min},k)=(3,8,12),
+\qquad
+\underbrace{d^2_{\mathrm{th}}:=d_{\min}/2=4,\;h_{ij}=2d_{ij}^2}_{\text{marked calibration}},
+\qquad
+\underbrace{D_{\mathrm{eff}}(2):=t/d_{\min},\;D_{\mathrm{eff}}(4):=(k+1)/b}_{\text{effective-dimension assignments}}
 $$
 
 **Results:**
@@ -4426,7 +4430,7 @@ The CKM construction is a geometric flavor model whose triads, packet widths, se
 
 
 
-The Cabibbo-Kobayashi-Maskawa (CKM) matrix parametrizes quark flavor mixing in the Standard Model, encoding the mismatch between mass and weak interaction eigenstates (Cabibbo 1963; Kobayashi & Maskawa 1973). Its elements exhibit a striking hierarchical pattern: diagonal elements near unity, off-diagonal elements suppressed by powers of the Cabibbo angle λ ≈ 0.22. This section derives all CKM matrix elements from the $E_8$ Grassmannian geometry established in Section T.21, completing **Problem T.3**.
+The Cabibbo-Kobayashi-Maskawa (CKM) matrix parametrizes quark flavor mixing in the Standard Model, encoding the mismatch between mass and weak interaction eigenstates (Cabibbo 1963; Kobayashi & Maskawa 1973). Its elements exhibit a striking hierarchical pattern: diagonal elements near unity, off-diagonal elements suppressed by powers of the Cabibbo angle λ ≈ 0.22. This section computes the CKM matrix elements within the branch-qualified $E_8$ Grassmannian model of Section T.21, completing **Problem T.3** at the model layer.
 
 The derivation proceeds through a unified framework with two limiting regimes:
 
@@ -7467,7 +7471,7 @@ No precision or zero-parameter claim is valid until the corresponding row is clo
 
 
 
-This section consolidates the fermion mass predictions derived from the geometric hierarchy on the generation manifold Gr(2,8). The framework connects all mass ratios to $E_8$ root distances through a single derived coefficient $\alpha_{\text{IR}}$, which traces ultimately to the foundational constant $K_0 = 3$.
+This section consolidates conditional fermion-mass comparisons from the geometric hierarchy model on $\mathrm{Gr}(2,8)$. The structural value $K_0=3$ supplies the upstream minimal-branch ledger; the hierarchy-response ansatz separately connects registered $E_8$ root distances to mass ratios through $\alpha_{\mathrm{IR}}$, built from $\alpha_{\mathrm{UV}}=3/2$ and the declared sinc factor.
 
 The primary result is the mass hierarchy formula (Theorem T.39):
 
@@ -7479,7 +7483,7 @@ where $d^2_{E_8} \in \{2, 4, 6, 8\}$ are squared distances between $E_8$ roots r
 
 ## T.25.2.1 Derived Parameters
 
-All parameters trace to $K_0 = 3$ through the established derivation chain:
+The structural backbone traces to $K_0=3$ through its stated branch gates; response, flavor, threshold, and remainder entries retain their independent model or certificate status:
 
 $$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 24$$
 
@@ -7525,7 +7529,7 @@ Lattice angles and distances are geometric inputs. Turning them into masses or m
 
 ### T.25.3.4 Triad Assignments
 
-PCE selection (Section T.21.9) determines unique $E_8$ root triads for each fermion sector:
+The registered model assignments use the following $E_8$ root triads for each fermion sector:
 
 |Sector |$(d^2_{32}, d^2_{31}, d^2_{21})$|$\mathcal{R} = d^2_{31}/d^2_{32}$|
 |:---------------|:-------------------------------|:--------------------------------|
@@ -8087,15 +8091,15 @@ The open inputs include root-label selection, continuous response coefficients, 
 
 The quark-sector entries are same-scale hierarchy invariants under a common-scheme reduction (Section T.25.5.4). The down-sector value includes the $A_2/D_4$ frustration correction (Section T.25.6a) with its matching uncertainty budget (Section T.25.6a.11).
 
-The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log ratio ($|\Delta\ln|=0.0012$), with zero adjustable parameters, representing the single most precise test of the geometric hierarchy mechanism.
+The τ/μ log ratio agrees at approximately $0.04\%$ ($|\Delta\ln|=0.0012$) after the registered triad, coefficient, effective-dimension, and remainder inputs are fixed. Its registered status is a conditional geometric-hierarchy model comparison.
 
 ### T.25.8.4 Parameter Count
 
-|Sector |Free Parameters|Notes |
+|Sector |Parameter status|Notes |
 |:------------|:-------------:|:------------------------|
-|Lepton ratios|0 |All from $K_0 = 3$ |
-|Cabibbo angle|0 |From frustration geometry|
-|Quark ratios |0 |From $E_8$ triads |
+|Lepton ratios|Registered model inputs; certificates open|Triad, coefficient, effective-dimension, and remainder records |
+|Cabibbo angle|Registered model inputs; forward validation open|Frustration geometry and stiffness/response records|
+|Quark ratios |Registered retrospective inputs; certificates open|Triad, scheme, threshold, frustration, and remainder records |
 
 -----
 
@@ -8146,13 +8150,13 @@ A quantitative truncation interval must therefore be supplied by the registered 
 
 
 
-The leading PU Yukawa exponent admits a controlled curvature/Van-Vleck expansion on $\text{Gr}(2,8)$ in the small parameter $u^2 = \sigma_B^2 = 1/24$:
+The declared PU Yukawa model uses a curvature/Van-Vleck expansion on $\text{Gr}(2,8)$ in the small parameter $u^2=\sigma_B^2=1/24$:
 
 $$\ln\left(\frac{m_j}{m_i}\right) = \alpha_{IR} d^2_{ij} + \alpha_2(d_{ij}) d^4_{ij} + \mathcal{O}(d^6)$$
 
 where $\alpha_2(d_{ij})$ is computed from the same Bures-geometry inputs used elsewhere in Appendix T. The full derivation appears in Section T.21.8: the Van Vleck–Morette determinant (Lemma T.42.1a) combined with the effective curvature $K_{\text{eff}} = 2$ (Theorem Z.24) yields the geometric coefficient $\beta_{\text{geom}} = 1/144$ (Theorem T.42.2).
 
-For the charged-lepton triad, the two-regime structure (sub-threshold for $d^2 = 2$, threshold for $d^2 = 4$) gives effective dimensions $D_{\text{eff}} = 3/8$ and $D_{\text{eff}} = 13/6$ respectively (Theorem T.42.5), producing:
+For the charged-lepton triad, Theorem T.42.5's two branch assignments use $D_{\text{eff}}=3/8$ at $d^2=2$ and $D_{\text{eff}}=13/6$ at $d^2=4$, producing:
 
 $$\ln(m_\tau/m_\mu) = 2.8212, \quad \ln(m_\mu/m_e) = 5.3306, \quad \ln(m_\tau/m_e) = 8.1518$$
 
@@ -8163,7 +8167,7 @@ $$\ln(m_\tau/m_\mu) = 2.8212, \quad \ln(m_\mu/m_e) = 5.3306, \quad \ln(m_\tau/m_
 |$\ln(m_\tau/m_e)$ |8.508 |8.1518 |8.1540 |−0.03% |
 |$R_\ell$ |3.000 |2.889 |2.889 |exact |
 
-**Controlled remainder / uncertainty.** With $M = 24$ and $d^2 \in \{2, 4\}$ for the charged-lepton links, the expansion parameter is $d^2/M \le 1/6$; the next omitted term contributes a conservative bound $|\Delta\ln| \lesssim 0.005$ to any single logarithm. This bound is the dominant T1 truncation/control uncertainty for the charged-lepton logarithms.
+**Model allowance / uncertainty.** With $M=24$ and $d^2\in\{2,4\}$ for the charged-lepton links, the ratio $d^2/M\le1/6$ motivates the displayed truncation scale. Pending the registered remainder certificate for the next coefficient or analytic remainder, $0.005$ is the labeled T1 model allowance for a single charged-lepton logarithm.
 
 ## T.26 Flag-Lift Threshold Compression and Parameter Rigidity
 

@@ -2373,17 +2373,17 @@ The unified entropy framework provides a natural dissolution of the black hole i
 
 1. **Horizon entropy is channel capacity.** The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ is the total information capacity of the ND-RID channels crossing the horizon—the maximum information that can be encoded on the boundary (Theorems E.3, E.5).
 
-2. **Infalling information is encoded.** When matter crosses the horizon, its quantum state information is encoded in the correlations among the horizon channels. The encoding is scrambled by PCE-driven dynamics but not destroyed.
+2. **Infalling information is encoded.** On the finite retained-algebra branch of Theorem E.9.5e, an injective microscopic horizon update does not merge distinct retained finite-response classes. Recovery from the exterior coarse algebra additionally requires an accepted exterior-recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ and is controlled by its certified error $\epsilon_n$.
 
-3. **Evaporation transfers capacity.** As the horizon shrinks ($\mathcal{A} \to 0$), the channel capacity of the horizon decreases. PCE optimization drives the encoded information to be transferred to the outgoing Hawking radiation field, which has increasing channel capacity as more radiation is emitted.
+3. **Evaporation transfers capacity.** On a horizon branch satisfying the time-indexed geometric, density-certificate, saturation, additive-ledger, and calibration hypotheses of Theorem E.6, the retained boundary budget is proportional to $\mathcal A_H(t)/(4G_{\mathrm{op}})$ and tends to zero if $\mathcal A_H(t)\to0$. Interpreting the changing tensor factors as transfer to radiation and horizon-radiation correlations additionally requires the closed retained-algebra and compatible-factorization hypotheses of Corollary E.9.5.2.
 
-4. **Unitarity is preserved.** The total channel capacity—horizon plus radiation—is conserved throughout the process. The S-matrix connecting initial infalling state to final radiation state is unitary.
+4. **Unitarity is preserved.** If the retained black-hole-plus-radiation algebra is closed and satisfies every finite-layer automorphism hypothesis of Theorem E.9.5 throughout evaporation, with the factorization required by Corollary E.9.5.2, the total fine-grained entropy is invariant. If the initial total state is pure and complete evaporation leaves a one-dimensional black-hole factor with no remnant or untracked sector, the final radiation state is pure.
 
-**Technical restatement of Theorem K.3 (Page Curve).** *The entanglement entropy between the Hawking radiation and the remaining black hole, computed from PCE-driven scrambling dynamics that approximate a unitary k-design, follows the Page curve: initially increasing as radiation is emitted, reaching a maximum at the Page time (when half the initial entropy has been radiated), then decreasing to zero as evaporation completes.*
+**Technical restatement of Theorem K.3 (Page Curve).** *On a finite evaporation branch with $d_E(t)\ge2$ and $d_L(t)$, an accepted trace-coupled horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ places the expected early-radiation von Neumann entropy within $\varepsilon_t\ln(d_E(t)-1)+h_2(\varepsilon_t)$ of the exact Haar Page average. On that branch the leading behavior rises for $d_E\ll d_L$, turns over near $d_E\approx d_L$, and falls for $d_E\gg d_L$. Identifying turnover with half the initial entropy additionally requires the coarse thermodynamic bookkeeping in which $S_{\mathrm{rad}}+S_{BH}$ is conserved.*
 
-The Page curve is a signature of unitary evolution. Its emergence from PCE dynamics—without being assumed—provides evidence that the framework naturally incorporates unitarity. The full derivation is provided in Appendix K.3.
+The Page-entropy conclusion is a trace-continuity-branch result. A bare accepted $t_{\mathrm{des}}=2$ moment-design certificate supplies only the Haar Page-purity law of Corollary K.3.1. Appendix K.3 supplies the separate design and trace-continuity gates.
 
-**Scope of Resolution:** This dissolution of the information problem operates within the framework's assumptions. It demonstrates that *if* the PU foundations hold, *then* black hole evaporation is unitary and the information problem does not arise. The resolution is not an independent proof of unitarity but a consistency check showing that the framework's structure is compatible with (and indeed implies) unitary evolution. The PCE-driven scrambling dynamics satisfy the assumptions required for Page curve derivation without additional input.
+**Scope of Resolution:** The finite-layer automorphism branch conditionally establishes global retained unitarity, while the finite KMS-descent and injective-update branch establishes no fundamental merging of retained response classes. Exterior recovery, Page-purity, and full von Neumann Page-curve behavior require the separate certificates named above. These results give a branch-qualified black-hole information resolution; a unitary evaporation S-matrix follows only when the complete closed-algebra realization and final-state hypotheses are accepted.
 
 ---
 
@@ -2538,7 +2538,7 @@ The Prediction Optimization Problem (POP, Definition 5) drives all predictive sy
 
 **Physics as Thermodynamic Instantiation**
 
-The Principle of Physical Instantiation (PPI, Definition P.6.2) completes the bridge: physical laws are the thermodynamically optimal embodiment of the logical necessities derived from prediction. Quantum mechanics instantiates self-referential logic under irreducible cost ($\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)\quad\text{on a registered reset branch}$). Gauge theory instantiates coherence under bandwidth constraints. General relativity instantiates geometric consistency under thermodynamic equilibrium.
+The Principle of Physical Instantiation (PPI, Definition P.6.2) registers the bridge from abstract operational structures to declared finite physical realizations. Quantum mechanics uses the registered carrier, frame, composition, continuity, and measurement hypotheses, while a registered physical reset separately obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$. Gauge theory uses the registered phase-closure, locality, representation, and anomaly branches. General relativity uses the operational-continuum, local-equilibrium, area-density, Raychaudhuri, conserved-source, and normalization hypotheses.
 
 Where mathematics articulates what prediction *can* do in principle, physics specifies what prediction *does* do under finite resources. 
 
@@ -2916,8 +2916,8 @@ The emergence thesis resolves classical puzzles by transforming metaphysical que
 | Why does spacetime have this geometry? | Unknown; perhaps anthropic | PU answer remains branch-conditional: causal-diamond responses and continuum regularity determine the effective metric, while the Golay, registered Leech-gluing, and $24$-cell ledgers provide separate finite cross-checks |
 
 
-| Why is spacetime 4-dimensional? | Unknown; perhaps necessary for stable structures | Because $K(4) = 24$ is the unique kissing number matching $M = 2ab = 24$ |
-| Why is there an arrow of time? | Boundary conditions; low-entropy initial state | Because the predictive cycle is logically ordered and thermodynamically irreversible via $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ |
+| Why is spacetime 4-dimensional? | Unknown; perhaps necessary for stable structures | Because a faithful response-preserving shell for $M = 2ab = 24$ requires $24\le K(D)$: the exact value $K(3)=12$ excludes $D\le3$, the response-labeled regular $24$-cell realizes a feasible shell at $D=4$, and strict surplus-carrier cost selects that least feasible dimension (Theorem P.8.3). No equality $M=K(D)$ is asserted and no value of $K(5)$ is used |
+| Why is there an arrow of time? | Boundary conditions; low-entropy initial state | The predictive cycle supplies protocol order. A registered reset obeys $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$, with a positive floor only when $H_q(P\mid R)\ge h_{\min}>0$; a physical probability arrow additionally requires the common forward/reverse event algebra and positive pathwise entropy-production certificate of Appendix O. |
 | Why does information obey locality? | Spacetime constrains physics | Reversed: information constraints produce spacetime; locality reflects finite propagation cost |
 | What is spacetime "made of"? | Unknown; perhaps fundamental | On PU's operational branch, spacetime is an emergent response geometry of predictive relations; no classical code, graviton field, or fundamental metric substrate is identified as its material constituent |
 
@@ -3740,7 +3740,7 @@ The genetic-code comparison is compatible with a PCE interpretation only after t
 
 ## P.8.9a.7 Consciousness Complexity in Biological Systems
 
-The PU framework's treatment of consciousness provides a natural extension of the error-correction perspective to neural systems. Consciousness Complexity (CC) emerges when biological aggregates exceed the operational threshold $C_{op}$ (Definition 13).
+The PU framework's treatment of consciousness provides a conditional extension of the error-correction perspective to neural systems. For biological aggregates with $C_{\mathrm{agg}}>C_{op}$, the threshold identifies the eligible aggregate class; nonzero Consciousness Complexity follows on Theorem 34's strict-improvement branch with a reachable Born reference, a lower-potential reachable non-Born context, Born-level minimality, operational representability, attainment, and asymptotic stability, together with Hypothesis 3's context-to-control realization.
 
 ### P.8.9a.7.1 The CC Threshold in Biology
 
@@ -3753,15 +3753,17 @@ $$\mathrm{CC}(S) = \alpha_\infty \cdot \mathcal{G}\left(\frac{C_{agg} - C_{op}}{
 - $C_{op}$ is the operational threshold (Definition 13)
 - $\mathcal{G}$ is a concave, monotone scaling function
 - $\Theta$ is the Heaviside step function enforcing threshold behavior
-- $\alpha_\infty \leq \alpha_{CC,max} < 0.5$ (Theorem 39)
+- $0\leq\alpha_\infty\leq\alpha_{CC,max}<0.5$ (Theorems 35 and 39)
 
-**Theorem P.8.9a.7 (Emergence of Biological CC).** For biological MPU aggregates with $C_{agg} > C_{op}$, the emergent biasing capability (Theorem 34) manifests through the aggregate's capacity to modulate ND-RID probabilities via organized internal states.
+The branch $\alpha_\infty=0$ is admissible and gives $\mathrm{CC}(S)=0$ at every aggregate complexity. For a realized biological aggregate, crossing $C_{op}$ alone does not select a positive branch; nonzero operational CC requires Theorem 34's Born-reference, strict-improvement, representability, attainment, and stability hypotheses together with Hypothesis 3's context-to-control realization.
 
-*Mechanism.* From Hypothesis 3 and the analysis in Appendix L:
-1. The biological aggregate develops a coherent internal state ($\text{context}_S$)
-2. This state manifests physically through bioelectric patterns, neural activity, or other organized structures
-3. These patterns modulate local ND-RID parameters within the aggregate
-4. The modulation biases 'Evolve' outcomes in directions favorable to the aggregate's POP
+**Theorem P.8.9a.7 (Emergence of Biological CC).** Let a biological MPU aggregate satisfy $C_{agg}>C_{op}$ and Assumption 1's context-dependent ND-RID premise. On Theorem 34's strict-improvement branch, assume a reachable reference context $u_0$ with $P_{obs}(\cdot\mid u_0)=P_{Born}$; a reachable context $u_+$ with $V(u_+)<V(u_0)$ and $P_{obs}(\cdot\mid u_+)\ne P_{Born}$; $V(u)\ge V(u_0)$ for every reachable Born-realizing context; Definition 30's Hermitian-preserving, trace-annihilating complex-linear representation for every retained non-Born deviation; and an attained global minimum with an asymptotically stable minimizing attractor. If Hypothesis 3's separately nominated context-to-control realization is accepted for the biological system, then the resulting nonzero operational CC is realized as modulation of retained ND-RID probabilities through organized internal states.
+
+*Mechanism.* On a biological branch satisfying the theorem above and an accepted Appendix L implementation package, including its carrier, source, coupling, target-response, coherence, noise, likelihood, continuity, compactness, stability, and cost-benefit records:
+1. The biological aggregate maintains a registered context state $\text{context}_S$
+2. A declared bioelectric, neural, or other physical carrier realizes the context-to-signal map
+3. The accepted response map couples that signal to local ND-RID control parameters
+4. The selected non-Born context produces the Definition 30 probability shift and has lower registered PCE potential than every Born-realizing context
 
 ### P.8.9a.7.2 Neural Systems and Predictive Processing
 
@@ -5442,7 +5444,7 @@ Definition P.8.2 navigates between traditional positions:
 
 **Against Pure Relationalism:** Spacetime is not merely relations between pre-existing objects. The "objects" (persistent patterns of predictive coherence) and the "spacetime" (structure of that coherence) emerge together from the same MPU network dynamics. Neither is ontologically prior.
 
-**Against Conventionalism:** Spacetime is not an arbitrary descriptive choice among equally valid alternatives. The geometry is uniquely determined by PCE optimization: there is exactly one way to optimally error-correct 24 predictive modes, and that determines the emergent structure.
+**Against Conventionalism:** Spacetime is an operationally selected causal and metric response structure. Within a registered 24-mode candidate class, PCE selects a geometry uniquely up to operational equivalence when the causal-response, continuum, metric-reconstruction, and applicable scalar or lexicographic strictness certificates are accepted; equal-cost distinct quotient points otherwise remain a branch degeneracy.
 
 ---
 
@@ -5557,14 +5559,14 @@ $$
 \tau(x,t) = \tau_{\mathrm{medium}}\left[1 + \delta\tau_{\mathrm{CC}}(x,t)\right]
 $$
 
-*Terminological Note:* Terms like 'attention' and 'intention' are used illustratively to connect abstract mathematics to familiar experience. The framework does not require human-like phenomenology—any MPU aggregate with $C_{\mathrm{agg}} > C_{op}$ exhibits the operational capability (CC), regardless of associated qualia. These terms denote mathematical structures in the optimization dynamics, not necessary phenomenological states.
+*Terminological Note:* 'Attention' and 'intention' connect the abstract mathematics to familiar experience and denote structures in the optimization dynamics. On Theorem 34's registered strict-improvement branch, an MPU aggregate with $C_{\mathrm{agg}}>C_{op}$ exhibits the operational CC capability; its phenomenological association remains a separate interpretive convention.
 
 This modulation represents awareness exercising optimized control over its own operational tempo. The frequency decomposition corresponds to:
 
 - **High frequencies:** Rapid modulation of processing rates creating electromagnetic fields (Appendix O, Definition O.1)
 - **Low frequencies:** Sustained energy density contributions creating gravitational time dilation (Appendix L, Theorem L.3)
 
-These are not metaphors—the actual electromagnetic and gravitational effects (Theorems L.2, L.3) emerge from controlled modulation of temporal processing rates, unified through the temporal wave framework (Appendix O, Remark O.4).
+On the separately registered Appendix L response branches, controlled modulation of temporal processing rates sources the electromagnetic and gravitational effects described by Theorems L.2 and L.3. Appendix O, Remark O.4 supplies their common temporal-wave representation, while each effect retains its carrier, conserved-source, response, and calibration records.
 
 ### P.11.5 The Thermodynamics of Awareness
 
@@ -7923,7 +7925,7 @@ The exponent is theorem-level on the stated branch; the numerical value is certi
 
 ### P.14.5 Theoretical Predictions and Experimental Comparison
 
-The framework generates theoretical predictions from the PCE-selected minima ($\varepsilon_0=\ln2$, $K_0 = 3$). These predictions are compared against independent experimental measurements.
+The following tables compare theorem-, branch-, certificate-, model-, validation-, and illustrative-level framework values with measurements. The structural values $\varepsilon_0=\ln2$ and $K_0=3$ retain their theorem-level status on the stated minimal branch, while every other row retains the status recorded in the strict-certificate ledger.
 
 **Fundamental Constants:**
 
@@ -9004,8 +9006,6 @@ Substituting this estimate into the bound of Theorem P.15.6a gives the claim. �
 **Remark P.15.5 (Renewal and Heat Quality).** What is renewed is not a stock of usable work but the logical possibility of further self-model-engaging updates above the SPAP-flat baseline. Once emitted, Source Energy is ordinary heat and obeys the ordinary second law. Any recovery of usable work from it requires a maintained temperature gradient and is correspondingly efficiency-limited.
 
 ### P.15.7 Speculative: Civilizational Implications
-
-*This subsection is speculative. It extrapolates from the derived machinery above and should not be read as a theorem-level prediction.*
 
 If a civilization could systematically implement the Source Principle, three qualitative features would follow.
 

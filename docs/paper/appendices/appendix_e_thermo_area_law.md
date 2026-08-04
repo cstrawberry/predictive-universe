@@ -3101,7 +3101,7 @@ $$
 \end{cases}
 $$
 
-demonstrates that the causal capacity bounds, refresh-branch contraction, and global unitarity are complementary level-distinct consequences of a single source: the thermodynamic cost of self-referential prediction.
+shows that the causal capacity bounds and refresh-branch contraction remain tied to their registered channel branches, while global unitarity follows separately on the closed retained-ledger branch carrying the response-product-preserving $*$-automorphism certificate. These are complementary, level-distinct results.
 
 **Remark E.9.5.5: Role of Closed-System Assumption.** The derivation of global retained unitarity (Theorem E.9.5) critically depends on the closed retained-ledger reading of Hypothesis 1. Closedness alone means that no retained information is exchanged with degrees of freedom accessible to internal systems; PPI completeness further requires the total retained response algebra on a complete Cauchy surface to carry the full internal response ledger. These conditions are necessary, but not sufficient, to make a general CPTP update unitary. The missing load-bearing condition is the pairwise response-product preservation certificate stated in Remark E.9.5.3a, i.e. that the complete retained pair update is a $*$-automorphism rather than merely an injective CPTP map.
 

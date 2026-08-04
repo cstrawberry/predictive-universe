@@ -1598,7 +1598,7 @@ The shared exponent is therefore conditional on the stated branch data, while ev
 
 On the joint Appendix T/Y branch carrying Theorem T.5's Steiner response action, Lemma Y.8.1's nonzero midpoint readout, Lemma Y.8.2's noncancelling parallel-family saddles, and Theorem Y.11's factorization, transport, and prefactor hypotheses, the same $\kappa_{EW}$ enters both suppressions and yields the conditional square-root relation. Theorem T.5 alone does not constrain $\eta_B$. ∎
 
-**Corollary Y.11.4a (Hierarchy Bridge Ratio).** *The prefactor $\mathcal{P}_{\mathrm{eff}}$ has two determinations, one from the adopted Appendix T/Y model branch and one from observational inversion, and their unrounded values agree at approximately the $0.65\%$ level.*
+**Corollary Y.11.4a (Hierarchy Bridge Ratio).** *The illustrative Appendix T/Y model-prefactor product and the observational inversion differ by approximately $0.65\%$ using the unrounded values. Because the transport factors retain open model status, this is a model-branch/inversion comparison.*
 
 *Proof.* Theorem Y.11 gives
 $$
@@ -1608,7 +1608,7 @@ On the registered binary-quotient branch of Definition 28, Definition J.1, and T
 $$
 e^{-\varepsilon_0/N_g} = e^{-\ln 2/3} = 2^{-1/3}.
 $$
-Using the branch-fixed values $\mathcal{C}_{eff} = 0.282$, $\mathcal{F}_{CP} = 0.9997$, $f_{wash} = 0.63$, and $A_{EW} = 1.084$ gives
+Using the illustrative model values $\mathcal{C}_{eff}=0.282$, $\mathcal{F}_{CP}=0.9997$, $f_{wash}=0.63$, and $A_{EW}=1.084$ gives
 $$
 \mathcal{P}_{\mathrm{eff}}^{(\mathrm{th})}
 =

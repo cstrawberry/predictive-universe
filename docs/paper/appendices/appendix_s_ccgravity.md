@@ -1,6 +1,6 @@
 # Appendix S: Resource Cost, Stress-Energy, and the Gravitational Self-Limitation of CC
 
-The Predictive Universe framework predicts that any sustained context capable of biasing quantum outcome statistics (operational CC) carries a resource cost that manifests as stress-energy, producing a gravitational self-dephasing effect that limits its own efficacy. This appendix provides the quantitative analysis of this gravitational feedback mechanism, complementing the primary influence mechanisms (electromagnetic, biological) detailed in Appendix L. On the analyzed parameter range of Proposition L.5, electromagnetic coupling dominates by a baseline factor of approximately $10^{36}$, with conservative range $10^{33}$–$10^{39}$; the gravitational feedback analyzed here provides universal self-limitation and connects CC to fundamental spacetime structure.
+On the global quadratic-cost, retained-source, weak-field, dephasing, and coherence-response branches analyzed here, a sustained context capable of biasing quantum outcome statistics carries a registered resource cost whose retained energy contributes to stress-energy and produces gravitational self-dephasing that limits efficacy. This appendix quantifies that conditional feedback mechanism, complementing the electromagnetic and biological models in Appendix L. Proposition L.5 defines the electromagnetic-to-gravitational comparison, with dominance fixed by the registered carrier, target, geometry, retention, and common uncertainty inputs.
 
 ## S.1 Resource Cost of the Context State
 
