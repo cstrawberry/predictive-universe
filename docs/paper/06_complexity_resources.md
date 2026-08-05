@@ -97,7 +97,7 @@ $$
 \xrightarrow{\text{Lem E.1}} f_{RID}<1
 \xrightarrow{\text{Thm E.2}} C_{\max}<\ln d_0.
 $$
-SPAP supplies the diagonal prediction obstruction but does not imply either physical channel branch. A geometric or gravitational conclusion additionally requires the area-density, capacity-saturation, and local Clausius hypotheses of Theorems E.3 and E.5.
+SPAP supplies the diagonal prediction obstruction but does not imply either physical channel branch. An operational boundary-area conclusion additionally requires the density certificate of Theorem E.3 and the saturation hypotheses of Theorem E.6; a gravitational equation-of-state conclusion separately requires the local Rindler/KMS, Clausius, source-conservation, Raychaudhuri, and remainder hypotheses of Theorem 50.
 
 **Remark 6.0.2: Residual-Budget Saturation Branch.** The declared reusable binary SPAP register has structural log-cardinality $\varepsilon_0=\ln2$ (Proposition 5; Theorem J.1), while Definition 28 and Theorem 31 govern only a registered physical reset ledger. The completed binary reset gives
 $$
@@ -225,9 +225,13 @@ $$
 $$
 The contrapositive gives $\mathbb E[PP(f_\mu)]>\alpha\Rightarrow C_P(\mu)>C_{op}$. ∎
 
-**6.2.4 Physical Nature of Complexity Transformations (Thermodynamic Irreversibility)**
+**6.2.4 Physical Nature of Complexity Transformations (Conditional Thermodynamic Ledger)**
 
-The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31), any logically irreversible operation that must be physically instantiated and cyclically reset incurs irreducible entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
+The adaptation process involves changing the system's complexity $C(t)\to C(t+1)$ (Section 6.4), corresponding to a physical transformation within the system's representational medium (Theorem 7) and potentially contributing transient Adaptation Costs to the SC ledger of Definition 15. If a registered implementation merges or overwrites retained logical distinctions and then performs a cyclic isothermal reset satisfying Definition 28, Theorem 31 gives
+$$
+\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R).
+$$
+A positive implementation-independent floor additionally requires a registered bound $H_q(P\mid R)\ge h_{\min}>0$. A complexity transformation alone does not imply logical erasure, cyclic reset, or positive conditional entropy; reversible and reset-free implementations are therefore not shown to be thermodynamically irreversible by Theorem 31.
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
@@ -359,7 +363,7 @@ C(PP)=C_{op}+C_s\ln\!\frac{\beta-\alpha}{\beta-PP}.
 \tag{22c}
 $$
 
-**Proposition 19a (Interior Equilibrium Form of $C_s$).** Assume the exponential branch of Theorem 19 and let $C^*>C_{op}$ be an interior stationary PCE point with $PP^*\in(\alpha,\beta)$. Then
+**Proposition 19a (Interior Equilibrium Form of $C_s$).** Assume the exponential branch of Theorem 19, assume $\Gamma_0>0$, and let $C^*>C_{op}$ be an interior stationary PCE point with $PP^*\in(\alpha,\beta)$. Then
 $$
 C_s=\frac{\Gamma_0(\beta-PP^*)}{\lambda R'(C^*)+R_I'(C^*)}.
 \tag{22d}
@@ -984,7 +988,39 @@ $$
 \qquad
 \lambda_1\lambda_2=\det J_*.
 $$
-If the eigenvalues are real, negative trace and positive determinant are equivalent to both being negative. If they are nonreal, they are conjugates, their common real part is $\operatorname{tr}J_*/2$, and their product is positive. Thus both eigenvalues have negative real part exactly when the trace is negative and determinant positive, proving (38f)–(38g). ∎
+If the eigenvalues are real, negative trace and positive determinant are equivalent to both being negative. If they are nonreal, they are conjugates, their common real part is $\operatorname{tr}J_*/2$, and their product is positive. Thus both eigenvalues have negative real part exactly when the trace is negative and determinant positive.
+
+It remains to connect this spectral condition to the nonlinear system. Translate the equilibrium to the origin and write the vector field as
+$$
+\dot z=J_*z+r(z),
+\qquad
+\frac{\|r(z)\|}{\|z\|}\longrightarrow0
+\quad(z\to0),
+$$
+which follows from the stated $C^1$ hypothesis. If $J_*$ is Hurwitz, there are $M,\omega>0$ such that $\|e^{tJ_*}\|\le Me^{-\omega t}$ for $t\ge0$. For any $\epsilon\in(0,\omega/M)$, choose a neighborhood on which $\|r(z)\|\le\epsilon\|z\|$. While the solution remains in that neighborhood, variation of constants gives
+$$
+\|z(t)\|
+\le
+Me^{-\omega t}\|z(0)\|
++M\epsilon\int_0^t e^{-\omega(t-s)}\|z(s)\|\,ds.
+$$
+Put $y(t):=e^{\omega t}\|z(t)\|$ and
+$$
+F(t):=M\|z(0)\|+M\epsilon\int_0^t y(s)\,ds.
+$$
+Then $y(t)\le F(t)$ and $F'(t)=M\epsilon y(t)\le M\epsilon F(t)$. Hence
+$$
+\frac{d}{dt}\left(e^{-M\epsilon t}F(t)\right)\le0,
+$$
+so $F(t)\le M\|z(0)\|e^{M\epsilon t}$ and therefore
+$$
+\|z(t)\|
+\le
+M e^{-(\omega-M\epsilon)t}\|z(0)\|.
+$$
+Choosing the initial ball small enough makes this estimate invariant under the flow, so the equilibrium is locally exponentially stable.
+
+Conversely, if the equilibrium is locally exponentially stable, differentiability of the flow with respect to initial data gives $D\varphi_t(0)=e^{tJ_*}$. Differentiating the local exponential estimate at the origin yields $\|e^{tJ_*}\|\le Ke^{-ct}$ for some $K,c>0$, so every eigenvalue of $J_*$ has negative real part. Therefore local exponential stability is equivalent to (38f)–(38g). ∎
 
 **6.6 Viability Enforcement**
 
@@ -1125,5 +1161,5 @@ $$
 
 *Proof.* Strict monotonicity of $\phi$ reverses the two risk inequalities and is injective, proving (40f). Equation (40g) is direct substitution. The physical budget may constrain $R_B$, but no dimensionless chance score follows from the entropy cost $\varepsilon_0$ without a task and calibration map. ∎
 
-*   **The Upper Bound $\beta$:** This is the threshold of adaptability, where the marginal cost of further predictive improvement becomes prohibitive under PCE. Its value is set by a dynamic stability condition: the system must be able to afford the resource cost of achieving the next increment of performance without entering a regime of runaway costs or instability. This constrains the relationship between the marginal cost functions ($R'$, $R_I'$) and the performance gap $(\beta - PP)$ at the limit of high complexity. Deriving $\beta$ requires a full, self-consistent solution of the PCE optimization problem at its upper boundary, likely yielding a value for $\beta$ that is a complex function of the framework's core cost and efficiency parameters ($r_p$, $\gamma_p$, $r_I$, $\kappa_{eff}$, $\lambda$, $\Gamma_0$).
+*   **Upper endpoint $\beta$.** A Space-of-Becoming branch registers $\beta$ taskwise with $\alpha<\beta<1$ and proves attainable performance below it. On the joint Theorem-9/Theorem-19 branch it must also satisfy $\beta\le\beta_0$ and is the response-law asymptote. PCE marginal-cost stability may supply one independently proved realization, but it does not determine $\beta$ from the listed cost parameters without an explicit optimizer-to-score bridge.
 

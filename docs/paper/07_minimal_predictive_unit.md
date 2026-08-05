@@ -1,11 +1,11 @@
 # 7. The Minimal Predictive Unit (MPU) Framework
 
-Having established the foundational principles governing adaptive prediction, complexity, self-reference, and dynamics, we now introduce the core MPU model. The role of MPUs is fixed by the Cogito-to-PPI/PCE bridge developed in the Introduction and Appendix P: the framework first isolates the certified process-root, models its operational content as prediction, and then asks for a least nontrivial finite physical carrier on branches where the qualifying infimum is attained. This section defines those carriers, details their Hilbert and perspectival representations on the stated branches, specifies deterministic internal and stochastic interaction dynamics, and separates structural register size from the distribution-sensitive thermodynamic reset ledger.
+Having established the foundational principles governing adaptive prediction, complexity, self-reference, and dynamics, we now introduce the core MPU model. The role of MPUs is fixed by the Cogito-to-PPI/PCE bridge developed in the Introduction and Appendix P: the framework first isolates the certified process-root, models its operational content as prediction, and then asks for a least nontrivial finite physical carrier on branches where the qualifying infimum is attained. This section defines those carriers, details their Hilbert and perspectival representations on the stated branches, specifies reset-free internal dynamics and branch-dependent interaction/update dynamics, and separates structural register size from the distribution-sensitive thermodynamic reset ledger.
 
 **7.1 Hypothesis 1 (Hyp 1): The Nominated MPU Reality Model**
 
 PU nominates a network of interacting Minimal Predictive Units (MPUs), as defined below, as its foundational physical realization. The nomination preserves the Cogito-certified process root while imposing finite implementation, verifiability, maintenance, update use, and response-null compression. These constraints motivate the MPU as a minimal nontrivial predictive carrier. Hypothesis 1 supplies the substrate premise; the quantum, field, matter, and spacetime conclusions additionally require their declared realization and bridge certificates. Appendix P's singleton result assumes the separately supplied chiral-matter and anomaly package and therefore remains downstream of this substrate premise. The nominated dynamics obey:
-*   The Dual Dynamics of internal prediction (unitary evolution) and 'Evolve' interaction (stochastic ND-RID) (Section 7.3.3).
+*   The Dual Dynamics of reset-free Internal Prediction and registered `Evolve` interaction/update (Section 7.3.3); unitary and stochastic representations require their separately stated branch hypotheses.
 *   Optimization via the Prediction Optimization Problem (Axiom 1) and the Principle of Compression Efficiency (Definition 15).
 *   Constraints arising from self-reference limits (SPAP, Theorem 10, Theorem 11) and reflexive interaction dynamics (RID, Definition 6).
 * The registered binary Commit Snapshot quotient has structural log-cardinality $\varepsilon_0=\ln2$. The reusable full-context return channel $\mathcal G$ merges that label at fixed retained data. If the actual input ensemble is separately certified to be conditionally invariant under input-fibre exchange $\phi\mapsto1-\phi$, Theorem 31a gives $H(\Phi\mid R)=\ln2$ and $\varepsilon_{\mathrm{reset}}\ge\ln2$ on Definition 28's registered thermal branch. The separate CNOT diagnostic remains reversible and carries no such floor. Spacetime coupling uses the independent Appendix E/O bridge certificates.
@@ -24,7 +24,7 @@ The operational-context result is separate from this program-complexity minimum.
 An MPU's state and dynamics are characterized by:
 
 1. **State representation.** Its perspectival state is $S_{(s)}(t)=(\rho(t),s)$, where $\rho(t)$ is a density operator on $\mathcal H_0$ and $s\in\Sigma$; $(|\psi\rangle,s)$ is the pure-state shorthand fixed in Definition 24.
-2. **Dual dynamics.** Internal prediction evolution and the stochastic `Evolve` law are the branch dynamics specified in Definitions 26–27. Capacity-triggered actualization is used only when the certificate $\mathfrak C_{\mathrm{act}}$ is present.
+2. **Dual dynamics.** Definitions 26--27 distinguish reset-free Internal Prediction from the nominated `Evolve` interaction/update law. Their unitary and stochastic representations require the hypotheses of Theorem 8.7 and Proposition 28, respectively. Capacity-triggered actualization is used only when $\mathfrak C_{\mathrm{act}}$ is accepted.
 3. **Minimal qualifying complexity.** The equality $C_P(\mu_*)=C_{op}$ holds by the attainment hypothesis and this definition, not by Theorem 16. Suppose the task and evaluation window are those of Axiom 3, a registered order-preserving score bridge identifies Definition 13's accuracy functional and matched random baseline with $PP_W$ and $\alpha$, and a registered same-state complexity bridge sends $\mu_*$ to Definition 19's coordinate $C=C_{op}$. Then membership in $\mathcal Q$ gives $PP_W(\mu_*)>\alpha$. Hence that attained MPU cannot be identified with Definition 19's $\alpha$-valued analytic endpoint; the latter belongs to a separate nonattained boundary branch.
 
 **Metered actualization certificate.** The actualization certificate may be sharpened by an accepted metered actualization subcertificate $\mathfrak C_{\mathrm{meter}}(R)$ (Definition E.2a.8) for an interface register $R$. The certificate specifies the register alphabet, the capacity increment assigned to the retained record, a monotone acquisition interval, an overwrite bound, a no-early-firing comparison against PCE/PPI, and the process-tensor no-future-to-past causality record for the interventions used to read the meter. For a certified binary one-register interface the timing threshold is
@@ -35,7 +35,7 @@ with the residual-budget branch still using the paper's default link-cycle thres
 
 **7.1.2 Interpretive Convention: Minimal Awareness**
 
-The ongoing, cyclical operation of an MPU (Definition 23)—prediction ($P_{int}$), verification ($V$), update ($D_{cyc}$) under the imperative of the POP (Axiom 1)—represents the minimal instance of a system actively navigating uncertainty through self-referential prediction and interaction. This operational cycle is *interpreted* within this framework as corresponding to the most basic, elemental form of awareness. Crucially, this elemental awareness is intrinsically tied to the MPU's full operational cycle, including the 'Evolve' interaction (Definition 27), which is the process responsible for the actualization of quantum states (Proposition 9). Therefore, within this framework, every quantum actualization event is underpinned by at least this minimal, operational form of awareness. This postulate serves primarily to connect the operational dynamics of the $C_{op}$ cycle to phenomenal concepts. The subsequent physical derivations rely on the MPU's operational prediction, ND-RID, and POP/PCE characteristics, on separately certified Effective Operational Property R where required, and on each cited logical or thermodynamic result only under its own hypotheses. The relation $C_{op}\ge K_0$ is used only on Theorem 15 and Corollary 3's (O1)–(O3), (FC), Hilbert-distinguishability, and complexity-capacity branch. The subsequent physical derivations use the certified MPU operational cycle and their named branch hypotheses; the Minimal Awareness convention assigns phenomenal language to that cycle without adding a separate physical-realization claim.
+The ongoing MPU cycle—prediction ($P_{int}$), verification ($V$), and update ($D_{cyc}$) under POP—is interpreted here as the most basic operational form of awareness. On the independently accepted Hilbert/Born/instrument/single-outcome branch, Proposition 9 represents an ideal registered verification as an `Evolve` instrument; the convention then assigns its outcome event this same minimal-awareness language. This is an interpretive assignment, not a theorem that Definition 27 makes every interaction an actualization or that phenomenal status supplies any physical premise. All subsequent derivations use the MPU's operational prediction, ND-RID, and POP/PCE properties together with each named branch hypothesis. In particular, $C_{op}\ge K_0$ is used only on Theorem 15 and Corollary 3's (O1)–(O3), (FC), Hilbert-distinguishability, and complexity-capacity branch.
 
 **7.1.3 Example: An Explicit Three-Qubit Register Carrier**
 
@@ -289,7 +289,7 @@ is surjective, and the explicit eight-state construction attains the least conte
 **Theorem 23a (Minimal Faithful Realization is 3-Qubit).**
 Assume the hypotheses of the lemma above, and let
 $$
-\mathfrak{A}_{\min}:=C^*(\mathfrak{A}_Q,\mathfrak{A}_P,\mathfrak{A}_R).
+\mathfrak{A}_{\min}:=C^*(\mathfrak{A}_M,\mathfrak{A}_P,\mathfrak{A}_I).
 $$
 Then every faithful representation of $\mathfrak{A}_{\min}$ on a Hilbert space of smallest possible dimension is unitarily equivalent to the standard tensor-product representation of $M_2(\mathbb{C})^{\otimes 3}$ on $(\mathbb{C}^2)^{\otimes 3}$.
 
@@ -298,7 +298,7 @@ $$
 \Phi: M_2(\mathbb{C}) \otimes M_2(\mathbb{C}) \otimes M_2(\mathbb{C}) \to \mathfrak{A}_{\min},\qquad
 a \otimes b \otimes c \mapsto abc
 $$
-is an injective *-homomorphism. Its image is a C*-subalgebra of $\mathfrak{A}_{\min}$ containing the three distinguished subalgebras $\mathfrak{A}_Q,\mathfrak{A}_P,\mathfrak{A}_R$. Because $\mathfrak{A}_{\min}$ is the C*-algebra generated by these three subalgebras, $\operatorname{im}\Phi=\mathfrak{A}_{\min}$. Hence
+is an injective *-homomorphism. Its image is a C*-subalgebra of $\mathfrak{A}_{\min}$ containing the three distinguished subalgebras $\mathfrak{A}_M,\mathfrak{A}_P,\mathfrak{A}_I$. Because $\mathfrak{A}_{\min}$ is the C*-algebra generated by these three subalgebras, $\operatorname{im}\Phi=\mathfrak{A}_{\min}$. Hence
 $$
 \mathfrak{A}_{\min}\cong M_2(\mathbb{C})^{\otimes 3}\cong M_8(\mathbb{C}).
 $$
@@ -811,11 +811,35 @@ Here $\hat H(t)$ is self-adjoint and is defined up to the usual scalar phase gau
 
 **7.3.3.2 Theorem 29 (Generator and Conditional Energy Calibration)**
 
-Let the internal evolution be generated by a self-adjoint Hamiltonian $\hat H$ bounded below by $E_0$. Then $\langle\hat H-E_0\rangle$ is a mean excitation energy. To relate it to the baseline power $R(C_{op})$, assume a registered cycle rate $\nu>0$ and the calibration
+Let the internal evolution be generated by a self-adjoint Hamiltonian $\hat H$ bounded below by $E_0$, and let $\rho$ be a density operator satisfying
 $$
-R(C_{op})=\nu\langle\hat H-E_0\rangle.
+\operatorname{Tr}\!\left(\rho(\hat H-E_0I)\right)<\infty.
+$$
+Then
+$$
+\langle\hat H-E_0\rangle_\rho
+:=
+\operatorname{Tr}\!\left(\rho(\hat H-E_0I)\right)
+$$
+is a finite nonnegative mean excitation energy. To relate it to the baseline power $R(C_{op})$, assume a registered cycle rate $\nu>0$ and the calibration
+$$
+R(C_{op})=\nu\langle\hat H-E_0\rangle_\rho.
 $$
 Equivalently, for cycle duration $\tau=1/\nu$, the calibrated energy per cycle is $R(C_{op})\tau$.
+
+*Proof.* The spectral lower bound $\hat H\ge E_0I$ gives $\hat H-E_0I\ge0$. Positivity of $\rho$ therefore gives
+$$
+\operatorname{Tr}\!\left(\rho(\hat H-E_0I)\right)\ge0,
+$$
+and the stated trace-domain hypothesis makes it finite. The registered calibration gives the power identity. Multiplication by $\tau=1/\nu$ yields
+$$
+R(C_{op})\tau
+=
+\nu\langle\hat H-E_0\rangle_\rho\frac1\nu
+=
+\langle\hat H-E_0\rangle_\rho.
+$$
+∎
 
 For a specified orthogonalization task with positive mean excitation, Corollary 29.1 gives a characteristic time. No state-independent positive duration for every distinguishable transition, stochastic update, edge traversal, or channel use follows from finite Hilbert dimension or a bounded spectrum alone.
 
@@ -839,7 +863,7 @@ t_\perp\ge\frac{\pi\hbar}{2\bar E}
 $$
 for the first time at which the evolved state is orthogonal to the initial state. These hypotheses concern that orthogonalization task and do not imply a positive duration for arbitrary stochastic updates or nonorthogonal transitions. ∎
 
-**7.3.3.3 Definition 27 (Def 27): Interaction and Perspectival Actualization ('Evolve'/ND-RID)**
+**7.3.3.3 Definition 27 (Def 27): Registered Interaction/Update Instrument Branch ('Evolve'/ND-RID)**
 
 Upon an interaction $N(t)$ satisfying the branch's arming predicate, the nominated `Evolve` law applies. On a branch carrying $\mathfrak C_{\mathrm{act}}$, arming means that the retained link ledger reaches its certified threshold; otherwise arming remains explicit branch data. A normalized instrument $\{\mathcal I_i^N\}$ and a conditional perspective kernel determine
 $$
@@ -860,14 +884,15 @@ The post-event state is therefore $(\rho_i',s')$, with $(|i\rangle_s,s')$ permit
 
 **7.3.4 Theorem 28a (Conditional Born-Rule Representation on the Hilbert Branch).**
 
-Assume the retained state space is the complex Hilbert branch of dimension at least three, outcome weights are noncontextual functions of effects, and the finite-response ledger is normalized and additive on every finite effect decomposition of the identity. Then there is a density operator $\rho$ such that
+Let $\omega:[0,I]\to[0,1]$ be defined on every effect of a finite-dimensional complex Hilbert space, with $\omega(I)=1$, and suppose it is noncontextual and satisfies
+$$
+\sum_i\omega(E_i)=1
+$$
+for every finite POVM $\{E_i\}$ with $\sum_iE_i=I$. Then there is a unique density operator $\rho$ such that
 $$
 \omega(E)=\operatorname{tr}(\rho E)
 $$
-for every retained effect $E$. For a pure state $\rho=|\psi\rangle\langle\psi|$ and rank-one outcome $E_i=|i\rangle\langle i|$,
-$$
-\omega(E_i)=|\langle i|\psi\rangle|^2.
-$$
+for every effect $E$. For a certified pure state $\rho=|\psi\rangle\langle\psi|$ and retained rank-one outcome $E_i=|i\rangle\langle i|$, one has $\omega(E_i)=|\langle i|\psi\rangle|^2$.
 
 *Proof.* Theorem 8.2 supplies the noncontextual quotient only on its stated PPI/PCE branch. Finite additivity on arbitrary POVM effects is an explicit hypothesis of the present theorem, stronger than Lemma 8.2a's orthogonal-refinement conclusion. Under that effect-level affine/additive hypothesis, the Busch selector represents the functional by a unique positive trace-one operator $\rho$, giving the trace formula. Substitution of $\rho=|\psi\rangle\langle\psi|$ and $E_i=|i\rangle\langle i|$ gives
 $$
@@ -878,15 +903,15 @@ $$
 $$
 SPAP can motivate the search for a nonclassical probabilistic representation, but it does not establish the Hilbert, noncontextuality, or additivity hypotheses used here. ∎
 
-**7.4 Thermodynamic Grounding of the 'Evolve' Process**
+**7.4 Conditional Thermodynamic Ledger for an 'Evolve' Implementation**
 
 The thermodynamic ledger of an 'Evolve' implementation depends on its physical operations. On a branch satisfying Definition 28, a registered reset obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$, and a positive uniform floor additionally requires $H_q(P\mid R)\ge h_{\min}>0$. Neither $C_P\ge K_0$ nor the structural alphabet value $\varepsilon_0=\ln2$ activates a reset or proves irreversibility. The relation $C_{op}\ge K_0$ is available only under the realization and complexity-capacity bridge hypotheses of Corollary 3.
 
 **7.4.1 Theorem 30 (Physical State Change from a Retained Distinguishable Record)**
 
-Suppose an `Evolve` event writes a nontrivial retained finite-response record: there is an admitted finite protocol whose response distinguishes the pre-event record class $x$ from the post-event record class $x'$. Then every faithful physical implementation undergoes a transition from a representative $s(x)$ to a physically distinguishable representative $s(x')$. This conclusion supplies no positive lower bound on the transition duration.
+Suppose an `Evolve` event writes a nontrivial retained finite-response record: there is an admitted finite protocol whose response distinguishes the pre-event record class $x$ from the post-event record class $x'$. Then every faithful physical implementation undergoes a transition from a representative $\sigma_x$ to a physically distinguishable representative $\sigma_{x'}$. This conclusion supplies no positive lower bound on the transition duration.
 
-*Proof.* PPI identifies two physical configurations only when every admitted finite protocol has the same response on them. By hypothesis, one admitted protocol distinguishes $x$ and $x'$. Hence their faithful physical representatives cannot lie in the same PPI equivalence class, so $s(x')\ne s(x)$ in the retained physical state space. An implementation that writes the record therefore changes physical state. The argument uses retained distinguishability; SPAP alone does not require every acquired datum to alter a particular internal variable. ∎
+*Proof.* PPI identifies two physical configurations only when every admitted finite protocol has the same response on them. By hypothesis, one admitted protocol distinguishes $x$ and $x'$. Hence their faithful physical representatives cannot lie in the same PPI equivalence class, so $\sigma_{x'}\ne\sigma_x$ in the retained physical state space. An implementation that writes the record therefore changes physical state. The argument uses retained distinguishability; SPAP alone does not require every acquired datum to alter a particular internal variable. ∎
 
 **7.4.2 Proposition 5 (Structural Binary Register and Reset Alternative)**
 
@@ -984,7 +1009,7 @@ The specialization $P_{\mathrm{reset}}\ge n_{\mathrm{reset}}k_BT\ln2/\tau_{\math
 
 The registered reachable binary quotient has structural log-cardinality $\varepsilon_0=\ln2$ (Definition 28; Definition J.1; Theorem J.1). A physical heat ledger arises only on a branch satisfying Definition 28, where Theorem 31 gives $\varepsilon_{\mathrm{reset}}=H_q(P\mid R)+\varepsilon_{\mathrm{diss}}\ge H_q(P\mid R)$ with $\varepsilon_{\mathrm{diss}}\ge0$. A positive uniform physical floor requires an independent ensemble bound. Structural log-cardinality, ensemble entropy, bath heat, channel capacity, and horizon entropy remain distinct quantities.
 
-**Theorem 7.5.1 (Conditional Structural-to-Horizon Chain).** *Assume a reachable binary record, a completed tensor-factor reset, the density certificate of Theorem E.3, capacity saturation of the counted boundary channels, and the local-horizon Clausius hypotheses of Theorem E.5. Then:*
+**Theorem 7.5.1 (Conditional Structural-to-Horizon Chain).** *Assume a reachable binary record, a completed tensor-factor reset, the density certificate of Theorem E.3, and the capacity-achieving, entropy-saturating, additive-ledger hypotheses of Theorem E.6. Then:*
 
 $$
 \boxed{
@@ -993,12 +1018,22 @@ $$
 C_{\max}\le\ln d_0-\ln2
 \xrightarrow{\text{density certificate}}
 N_{eff}=\sigma_{link}\mathcal A+o(\mathcal A)
-\xrightarrow{\text{saturation and Clausius calibration}}
-\frac{S_{BH}}{k_B}=\frac{c^3\mathcal A}{4G\hbar}
+\xrightarrow{\text{E.6 saturation}}
+\frac{S_{\mathrm{rel}}}{k_B}
+=\frac{c^3\mathcal A}{4G_{\mathrm{op}}\hbar}+o(\mathcal A)
 }
 $$
 
-The first arrow uses reset-support hypotheses rather than heat. The last arrow uses the additional equality and local-thermodynamic assumptions; it does not follow from the capacity upper bound alone. On the separate refresh/minorization branch, Lemma E.1 and Theorem E.2 give $f_{RID}<1$ and $C_{\max}<\ln d_0$.
+If a separate horizon-entropy identification gives $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$ and an external calibration gives $G_{\mathrm{op}}=G$, this reproduces the leading Bekenstein--Hawking law. The local KMS/Clausius theorem stack beginning with Theorem 48a is a separate equation-of-state branch; it proves neither identification.
+
+The first arrow uses reset-support hypotheses rather than heat. The final operational equality uses all three saturation entries and retains its $o(\mathcal A)$ remainder. The measured-$G$ horizon statement requires the two separate calibrations stated in the theorem. On the separate refresh/minorization branch, Lemma E.1 and Theorem E.2 give $f_{RID}<1$ and $C_{\max}<\ln d_0$.
+
+*Proof.* The registered binary quotient gives $\varepsilon_0=\ln2$. Proposition E.2a gives the capacity upper bound under the completed tensor-factor reset hypothesis. Theorem E.3 supplies the effective-channel asymptotics. Theorem E.6 turns their entropy upper bound into
+$$
+\frac{S_{\mathrm{rel}}}{k_B}
+=\frac{c^3\mathcal A}{4G_{\mathrm{op}}\hbar}+o(\mathcal A)
+$$
+only under capacity achievement, entropy saturation, and additive accounting. The two additional calibrations then give the leading horizon form, still with its asymptotic remainder. Independently, Lemma E.1 and Theorem E.2 prove the refresh/minorization statement. ∎
 
 ---
 
@@ -1127,7 +1162,11 @@ which is a numerical state-counting identity for the specified maximally mixed a
 
 The active kernel dimension $a = 2$ initiates the canonical chain:
 
-$$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{predictive-recovery MacWilliams}} [24, 12, 8]$$
+$$
+a=2\xrightarrow{b=d_0-a}b=6\xrightarrow{M=2ab}M=24
+\xrightarrow{\text{predictive-recovery rate gate}}k=12
+\xrightarrow{\text{accepted }\mathfrak C_{\mathrm{dist}}}\mathcal G_{24}=[24,12,8].
+$$
 
 On the predictive-recovery MacWilliams Golay branch of Theorem Z.13b—namely Definition Z.13b.0, Theorem Z.13b.0a, and the fixed-rate maximum-distance criterion—the endpoint is a binary linear $[24,12,8]$ code, unique up to coordinate permutation by Theorem U.1. The dual-asymmetry gate alone fixes only $k=12$; it proves neither distance-eight attainment nor Golay uniqueness.
 
@@ -1159,33 +1198,39 @@ $$
 \le N_{eff}C_{\max}
 =\sigma_{link}C_{\max}\mathcal A.
 $$
-Assume the capacity-saturation branch on which every counted effective channel attains this bound and assume the local-horizon Clausius hypotheses of Theorem E.5. The Bekenstein-Hawking entropy in SI units is
+Assume the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6. With $S_{\mathrm{boundary}}:=S_{\mathrm{rel}}$, Theorem E.6 defines the positive operational coefficient by
+$$
+\sigma_{\mathrm{link}}C_{\max}
+=\frac{c^3}{4G_{\mathrm{op}}\hbar}
+$$
+and gives
+$$
+\frac{S_{\mathrm{boundary}}}{k_B}
+=\frac{c^3\mathcal A}{4G_{\mathrm{op}}\hbar}+o(\mathcal A).
+$$
+If an independent horizon-entropy bridge identifies $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$ and an external calibration sets $G_{\mathrm{op}}=G$, this becomes the leading Bekenstein--Hawking relation
 $$
 \frac{S_{BH}}{k_B}
-=\frac{c^3\mathcal A}{4G\hbar}.
+=\frac{c^3\mathcal A}{4G\hbar}+o(\mathcal A).
 $$
-Equating the two saturated entropy densities gives
+Using $\sigma_{\mathrm{link}}=\chi/(\eta\delta^2)$ gives
 $$
-\sigma_{link}C_{\max}
-=\frac{c^3}{4G\hbar}.
-$$
-Using $\sigma_{link}=\chi/(\eta\delta^2)$ and solving for $G$ yields
-$$
-G=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}.
+G_{\mathrm{op}}
+=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}.
 \quad \text{(Equation E.9)}
 $$
 The dimensions agree:
 $$
 \left[\frac{\delta^2c^3}{\hbar}\right]
-=L^3M^{-1}T^{-2}=[G].
+=L^3M^{-1}T^{-2}=[G_{\mathrm{op}}].
 $$
-Without capacity saturation, channel counting supplies only the entropy upper bound and does not determine an equality for $G$.
+Without the three saturation entries, channel counting supplies only the entropy upper bound. It supplies neither the horizon-entropy identification nor the calibration $G_{\mathrm{op}}=G$.
 
 ---
 
 ### 7.5.3 The Complete Derivation Chain
 
-**Theorem 7.5.2 (Conditional Entropy and Horizon-Calibration Chain).** *Assume the following branch data: a reachable binary verification record, a completed reset to a ready state, the thermodynamic hypotheses of Definition 28, the tensor-factor reset hypotheses of Proposition E.2a, the geometric density certificate of Theorem E.3, capacity saturation, and the local-horizon Clausius hypotheses of Theorem E.5. Then:*
+**Theorem 7.5.2 (Conditional Entropy and Horizon-Calibration Chain).** *Assume the following branch data: a reachable binary verification record, a completed reset to a ready state, the thermodynamic hypotheses of Definition 28, the tensor-factor reset hypotheses of Proposition E.2a, the geometric density certificate of Theorem E.3, the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6, an independent identification $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$, and the external calibration $G_{\mathrm{op}}=G$. Then:*
 
 | Step | Source | Statement | Role |
 |:-----|:-------|:----------|:-----|
@@ -1193,37 +1238,37 @@ Without capacity saturation, channel counting supplies only the entropy upper bo
 | 2 | Theorem J.1 | Its log-cardinality is $\varepsilon_0=\ln2$ | Structural register size |
 | 3 | Conditional Landauer theorem | $\langle Q_{bath}\rangle/(k_BT)\ge H_q(P\mid R)$ | Distribution-sensitive heat bound |
 | 4 | Proposition E.2a | The completed binary reset gives $C_{\max}\le\ln d_0-\ln2$ | Support-capacity deficit |
-| 5 | Theorem E.3 | $N_{eff}=\sigma_{link}\mathcal A$ on the density-certificate branch | Channel counting |
-| 6 | Saturation hypothesis | $S_{boundary}/k_B=\sigma_{link}C_{\max}\mathcal A$ | Converts the upper bound to equality |
-| 7 | Theorem E.5 | Local Clausius calibration gives $\sigma_{link}C_{\max}=c^3/(4G\hbar)$ | Gravitational coefficient |
+| 5 | Theorem E.3 | $N_{eff}=\sigma_{link}\mathcal A+o(\mathcal A)$ on the density-certificate branch | Channel counting |
+| 6 | Theorem E.6 | $S_{\mathrm{rel}}/k_B=\sigma_{link}C_{\max}\mathcal A+o(\mathcal A)$ and $\sigma_{link}C_{\max}=c^3/(4G_{\mathrm{op}}\hbar)$ on its saturation branch | Operational area coefficient |
+| 7 | Independent bridges | $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$ and $G_{\mathrm{op}}=G$ | Horizon identification and measured coupling |
 
-*Proof.* Steps 1–2 give the structural number $\ln2$ without assigning heat. Step 3 applies only to the registered ensemble and reset implementation. Step 4 is a separate support-rank statement. Step 5 counts effective boundary channels. Under Step 6, their entropy density is $k_B\sigma_{link}C_{\max}$. Equating this with the SI Bekenstein-Hawking density $k_Bc^3/(4G\hbar)$ under Step 7 yields
+*Proof.* Steps 1–2 give the structural number $\ln2$ without assigning heat. Step 3 applies only to the registered ensemble and reset implementation. Step 4 is a separate support-rank statement, and Step 5 counts effective boundary channels. Step 6 is Theorem E.6 on its three-entry saturation branch. Applying the two independent bridges in Step 7 gives the leading Bekenstein--Hawking density and
 $$
-G=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}},
+G
+=G_{\mathrm{op}}
+=\frac{\eta\delta^2c^3}{4\hbar\chi C_{\max}}.
 $$
-using $\sigma_{link}=\chi/(\eta\delta^2)$. Each implication is conditional on the hypotheses listed in its row. ∎
+The local KMS/Clausius and Einstein-equation conclusions require the separate hypotheses of Theorems 48a and 12.1. ∎
 
 ---
 
-### 7.5.4 The Coefficient $1/(4L_P^2)$
+### 7.5.4 The Operational Coefficient $1/(4L_{P,\mathrm{op}}^2)$
 
-On the capacity-saturated area-law calibration branch, use the dimensionless entropy $S/k_B$. Since
+On the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6, define
 $$
-L_P^2=\frac{G\hbar}{c^3},
+L_{P,\mathrm{op}}^2
+:=\frac{G_{\mathrm{op}}\hbar}{c^3}.
 $$
-the Bekenstein-Hawking density is
+Then the dimensionless operational response-entropy density is
 $$
-\frac1{k_B}\frac{S_{BH}}{\mathcal A}
-=\frac1{4L_P^2}
-=\frac{c^3}{4G\hbar}.
+\frac1{k_B}\frac{S_{\mathrm{rel}}}{\mathcal A}
+=\frac1{4L_{P,\mathrm{op}}^2}
+=\frac{c^3}{4G_{\mathrm{op}}\hbar}
+=\sigma_{\mathrm{link}}C_{\max}
+=\frac{\chi C_{\max}}{\eta\delta^2}
++o(1).
 $$
-Channel saturation and $\sigma_{link}=\chi/(\eta\delta^2)$ give
-$$
-\frac1{4L_P^2}
-=\sigma_{link}C_{\max}
-=\frac{\chi C_{\max}}{\eta\delta^2}.
-$$
-Here $\sigma_{link}$ is the effective channel density per area and $C_{\max}$ is the per-use capacity in nats. The reset-support and refresh bounds constrain $C_{\max}$ but do not establish saturation. A rate interpretation additionally requires a registered use frequency.
+After the independent bridges $S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$ and $G_{\mathrm{op}}=G$, one has $L_{P,\mathrm{op}}=L_P$ and recovers the leading Bekenstein--Hawking density. The reset-support and refresh bounds constrain $C_{\max}$ but do not establish saturation. A rate interpretation additionally requires a registered use frequency.
 
 **Conditional MPU Spacing Calibration:** Assume the residual-capacity saturation branch
 $$
@@ -1233,20 +1278,20 @@ together with $d_0=8$, $\varepsilon_0=\ln2$, and the Appendix Q equilibrium valu
 $$
 C_{\max}^*=\ln8-\ln2=2\ln2.
 $$
-From Equation E.9 and $L_P^2=G\hbar/c^3$,
+From Equation E.9 and $L_{P,\mathrm{op}}^2=G_{\mathrm{op}}\hbar/c^3$,
 $$
-L_P^2
+L_{P,\mathrm{op}}^2
 =\frac{\eta^*\delta^2}{4\chi^*C_{\max}^*},
 $$
 so
 $$
-\frac{\delta}{L_P}
+\frac{\delta}{L_{P,\mathrm{op}}}
 =\sqrt{\frac{4\chi^*C_{\max}^*}{\eta^*}}
 =\sqrt{8\ln2}
 \approx2.35482.
 \quad \text{(Equation Q.18)}
 $$
-The value is conditional on all listed saturation and equilibrium hypotheses. The capacity ratio $C_{\max}^*/\varepsilon_0=2$ may be used by Proposition T.60 only on its separately stated branch.
+The value is conditional on all listed saturation and equilibrium hypotheses. On the external calibration branch $G_{\mathrm{op}}=G$, one has $L_{P,\mathrm{op}}=L_P$. The capacity ratio $C_{\max}^*/\varepsilon_0=2$ may be used by Proposition T.60 only on its separately stated branch.
 
 ---
 
@@ -1264,7 +1309,9 @@ On the conjunction of the structural and active-kernel branches,
 $$
 \varepsilon_0=\ln2
 \xrightarrow{\text{record/capacity/no-surplus gates}}
-a=2\to M=24\to[24,12,8].
+a=2\to M=24
+\xrightarrow{\text{predictive-recovery rate gate}}k=12
+\xrightarrow{\text{accepted }\mathfrak C_{\mathrm{dist}}}\mathcal G_{24}=[24,12,8].
 $$
 The physical reset inequality is a separate implementation statement. Neither it nor the Golay code follows from SPAP alone, and physical error correction requires a registered encoder, channel, syndrome instrument, decoder, and non-double-counted resource ledger.
 
@@ -1282,27 +1329,50 @@ contradicting the minimum distance $d=8$. Thus radius-three decoding is unique. 
 $$
 \left\lfloor\frac{8-1}{2}\right\rfloor=3
 $$
-is uniquely correctable by minimum-distance decoding. No universal conclusion follows for patterns of larger weight. Their failure probability, residual uncertainty, and any thermodynamic cost depend on the channel law, decoder, failure record, and physical reset ledger. Such costs are distinct from the conditional Landauer bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$.
+is uniquely correctable by minimum-distance decoding. Minimum distance alone gives no universal unique-decoding guarantee at weight four or above. Failure probability, residual uncertainty, and thermodynamic cost additionally depend on the channel law, decoder, failure record, and physical reset ledger. Such costs are distinct from the conditional Landauer bound $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$.
+
+*Proof.* Let $c$ be the transmitted codeword and $r=c+e$ with $\operatorname{wt}(e)\le3$. If a distinct codeword $c'$ also satisfied $d_H(r,c')\le3$, then
+$$
+d_H(c,c')\le d_H(c,r)+d_H(r,c')\le6,
+$$
+contradicting the minimum distance $8$. Thus decoding is unique through radius three.
+
+Sharpness is witnessed by an octad: take codewords $c=0$ and $c'$ whose support has weight $8$, and let $r$ be the indicator of any four-point subset of that support. Then $d_H(r,c)=d_H(r,c')=4$, so minimum-distance decoding has a tie. The code parameter therefore supplies no universal weight-four guarantee and contains no thermodynamic reset premise. ∎
 
 ---
 
 ### 7.5.6 Connection to Emergent Gravity
 
-The entropy unification chain provides the thermodynamic foundation for deriving Einstein's Field Equations (Section 12). The key steps are:
+The operational channel ledger and the local-horizon equation-of-state ledger
+are distinct and meet only on an explicitly certified common branch:
 
-1. **Area Law (Theorem 49)**: Horizon entropy $S = \mathcal{A}/4G$ follows from the channel capacity chain (Section 7.5.2, Stage 5).
+1. **Operational area budget (Theorems E.3 and E.6).** On the
+capacity-achieving, entropy-saturating, additive-ledger branch,
+$$
+\frac{S_{\mathrm{rel}}}{k_B}
+=\frac{c^3\mathcal A}{4G_{\mathrm{op}}\hbar}+o(\mathcal A).
+$$
+The leading Bekenstein--Hawking form requires the separate bridges
+$S_{\mathrm{rel}}=S_{BH}+o(\mathcal A)$ and $G_{\mathrm{op}}=G$.
 
-2. **Clausius Relation**: For local Rindler horizons, $\delta Q = T \, dS$ with $T$ the Unruh temperature.
+2. **Physical horizon bridge.** The entropy identification and measured-coupling
+   calibration are independent of the channel count.
 
-3. **Raychaudhuri Equation**: Relates area change $\delta\mathcal{A}$ to stress-energy flux through the horizon.
+3. **Local equation-of-state branch.** The local Rindler KMS/Unruh record,
+   Clausius relation, Raychaudhuri focusing equation, conserved stress-energy
+   source, and all-horizon quantifier are the independent premises used in
+   Section 12.
 
-4. **Einstein Field Equations**: The unique tensor equation ensuring the Clausius relation holds for all local causal horizons (Theorem 50, Section 12).
+4. **Conditional Einstein equation.** The tensor conclusion follows only on
+   the joint local-equilibrium, focusing, source, conservation, and
+   normalization branch; channel counting alone supplies none of those gates.
 
-The gravitational constant $G$ appearing in the EFE is the same $G$ determined by the entropy coefficient:
-
-$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}(f_{RID})} \quad \text{(Equation E.9)}$$
-
-This identification connects the microscopic MPU parameters to macroscopic gravitational dynamics on the horizon-saturation, local-thermodynamic, and stress-energy-source branches used in Section 12. The emergence of gravity from thermodynamics (Jacobson 1995) is thus grounded in the information-theoretic structure of the predictive substrate.
-
-The full derivation of the Einstein Field Equations from these thermodynamic principles is provided in Section 12.
+The operational coefficient is
+$$
+G_{\mathrm{op}}
+=\frac{\eta\delta^2c^3}{4\hbar\chi C(\mathcal E_N)}.
+$$
+It equals the measured gravitational constant only on the external calibration
+branch. Section 12 records the conditional Einstein-equation derivation and
+its independent source and conservation gates.
 

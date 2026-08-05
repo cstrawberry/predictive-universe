@@ -325,6 +325,7 @@
 *   Halsey, T. C., Jensen, M. H., Kadanoff, L. P., Procaccia, I., & Shraiman, B. I. (1986). Fractal measures and their singularities: The characterization of strange sets. *Physical Review A*, *33*(2), 1141–1151. DOI: 10.1103/PhysRevA.33.1141
 *   Hardy, G. H., Littlewood, J. E., & Pólya, G. (1952). *Inequalities* (2nd ed.). Cambridge University Press.
 *   Hardy, G. H., & Wright, E. M. (1979). *An Introduction to the Theory of Numbers* (5th ed.). Oxford University Press.
+*   Harvey, J. A., & Turner, M. S. (1990). Cosmological baryon and lepton number in the presence of electroweak fermion-number violation. *Physical Review D*, *42*(10), 3344–3349. DOI: 10.1103/PhysRevD.42.3344
 *   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012
 *   Hardy, J. C., & Towner, I. S. (2020). Superallowed 0⁺→0⁺ nuclear β decays: 2020 critical survey. *Physical Review C*, *102*, 045501.
 *   Håstad, J. (1986). Almost optimal lower bounds for small depth circuits. In *Proceedings of the Eighteenth Annual ACM Symposium on Theory of Computing*, 6–20. DOI: 10.1145/12130.12132
@@ -401,6 +402,7 @@
 *   Karimi, H., Nutini, J., & Schmidt, M. (2016). Linear convergence of gradient and proximal-gradient methods under the Polyak–Łojasiewicz condition. In A. Appice et al. (Eds.), *Machine Learning and Knowledge Discovery in Databases* (ECML PKDD 2016), Lecture Notes in Computer Science, Vol. 9851, pp. 795–811. Springer. DOI: 10.1007/978-3-319-46128-1_50
 *   Karp, R. M. (1972). Reducibility among combinatorial problems. In R. E. Miller & J. W. Thatcher (Eds.), *Complexity of Computer Computations*, 85–103. Springer. DOI: 10.1007/978-1-4684-2001-2_9
 *   Kastoryano, M. J., & Temme, K. (2013). Quantum logarithmic Sobolev inequalities and rapid mixing. *Journal of Mathematical Physics*, *54*(5), 052202. DOI: 10.1063/1.4804995
+*   Kato, T. (1966). *Perturbation Theory for Linear Operators*. Springer. DOI: 10.1007/978-3-662-12678-3
 *   Kesten, H. (1973). Random difference equations and renewal theory for products of random matrices. *Acta Mathematica*, *131*, 207–248. DOI: 10.1007/BF02392040
 *   Kastrup, B. (2018). The Universe in Consciousness. *Journal of Consciousness Studies*, *25*(5–6), 125–155.
 *   Keith, S. (2004). A differentiable structure for metric measure spaces. *Advances in Mathematics*, *183*(2), 271–315. DOI: 10.1016/S0001-8708(03)00089-6
@@ -619,7 +621,7 @@
 *   Riess, A. G., et al. (2022). A comprehensive measurement of the local value of the Hubble constant with $1\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$ uncertainty from the Hubble Space Telescope and the SH0ES Team. *The Astrophysical Journal Letters*, *934*, L7. DOI: 10.3847/2041-8213/ac5c5b. arXiv:2112.04510.
 *   Rindler, W. (1966). Kruskal space and the uniformly accelerated frame. *American Journal of Physics*, *34*(12), 1174–1178.
 *   Ritchie, S. J., Wiseman, R., & French, C. C. (2012). Failing the future: Three unsuccessful attempts to replicate Bem's 'retroactive facilitation of recall' effect. *PLoS ONE*, *7*(3), e33423. DOI: 10.1371/journal.pone.0033423
-*   Roberts, D. A., & Yoshida, B. (2017). Chaos and complexity by design. *Journal of High Energy Physics*, *2017*(04), 121. DOI: 10.1007/JHEP04(2017)1211007/JHEP04(2017)121
+*   Roberts, D. A., & Yoshida, B. (2017). Chaos and complexity by design. *Journal of High Energy Physics*, *2017*(04), 121. DOI: 10.1007/JHEP04(2017)121
 *   Robertson, H. P. (1929). The Uncertainty Principle. *Physical Review*, *34*(1), 163–164. DOI: 10.1103/PhysRev.34.163
 *   Rosenfeld, L. (1940). Sur le tenseur d'impulsion‐énergie. *Mémoires de l'Académie Royale de Belgique, Classe des Sciences*, *18*(6), 1–30.
 *   Rockafellar, R. T. (1970). *Convex Analysis*. Princeton University Press.
@@ -648,6 +650,7 @@
 *   Schrödinger, E. (1944). *What is Life? The Physical Aspect of the Living Cell*. Cambridge University Press.
 *   Schumacher, B., & Westmoreland, M. D. (1997). Sending classical information via noisy quantum channels. *Physical Review A*, *56*(1), 131–138. DOI: 10.1103/PhysRevA.56.131
 *   Searle, J. R. (1992). *The Rediscovery of the Mind*. MIT Press.
+*   Seeley, R. T. (1967). Complex powers of an elliptic operator. In *Singular Integrals*, Proceedings of Symposia in Pure Mathematics, Vol. 10, 288–307. American Mathematical Society. DOI: 10.1090/pspum/010/0237943
 *   Segal, I. E. (1947). Irreducible representations of operator algebras. *Bulletin of the American Mathematical Society*, *53*(2), 73–88. DOI: 10.1090/S0002-9904-1947-08742-5
 *   Sekino, Y., & Susskind, L. (2008). Fast scramblers. *Journal of High Energy Physics*, *2008*(10), 065. DOI: 10.1088/1126-6708/2008/10/065
 *   Serre, J.-P. (1973). *A Course in Arithmetic*. Springer.

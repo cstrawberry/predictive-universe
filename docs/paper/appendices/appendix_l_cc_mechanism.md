@@ -370,27 +370,17 @@ Thus a diffusive model supplies only the scale $R=O(\sqrt{D_{\mathrm{eff}}\tau_c
 
 ### **L.4.1.5 Relationship to Orchestrated Objective Reduction**
 
-The Penrose-Hameroff Orch OR theory provides crucial substrate characterization (Penrose & Hameroff, 2011; Hameroff & Penrose, 2014), though differing in ontological interpretation:
+The Penrose--Hameroff Orch OR proposal supplies a comparison class of substrate hypotheses, not a PU derivation. The comparison is status-sensitive:
 
-| **Aspect** | **Orch OR** | **PU Framework** |
-|------------|-------------|------------------|
-| **Consciousness Origin** | Emerges from OR events | Fundamental (awareness primary) |
-| **Quantum Mechanics** | Fundamental with OR modification | Emerges from MPU dynamics |
-| **Gravity's Role** | Triggers consciousness via OR | Limits CC via energy feedback |
-| **Timescale** | $E \cdot t = \hbar$ (OR threshold) | $\tau_{\text{min}} = \hbar/\langle H_{\text{eff}}\rangle$ |
-| **Anesthetic Action** | Disrupts tubulin quantum states | Reduces $C_{\text{agg}}$ below $C_{op}$ |
+| **Aspect** | **Orch OR** | **PU status** |
+|------------|-------------|---------------|
+| **Consciousness origin** | associated with OR events | minimal-awareness language is an interpretive convention, not a physical theorem |
+| **Quantum mechanics** | fundamental with an OR modification | reconstructed only on the explicit quantum-closure branches |
+| **Gravity's role** | proposed OR trigger | a CC feedback or resource ceiling exists only on Appendix S's registered carrier, retained-source, and response branch |
+| **Timescale** | $E t=\hbar$ as an OR threshold | $\tau_{\mathrm{medium}}=\hbar/E_{\mathrm{eff}}$ is a registered characteristic convention on the L.0 branch, not a minimum-update theorem |
+| **Anesthetic action** | proposed disruption of tubulin states | change of $C_{\mathrm{agg}}$, crossing of $C_{op}$, and any CC response are empirical hypotheses |
 
-The following are empirical comparison targets rather than consequences established in this appendix:
-- Whether a specified microtubule degree of freedom remains coherent at 310 K, measured with an operational coherence observable
-- Whether any registered event distribution has a 25–40 ms timescale
-- Whether an anesthetic changes that observable through the proposed substrate
-
-The illustrative input $E=10^{-30}$ J in the OR relation $E\tau=\hbar$ gives $\tau=0.105$ ms and therefore does not predict a 25–40 ms interval.
-
-PU additionally predicts:
-- Measurable metabolic signature (Theorem L.6)
-- Endpoint-bias bound $\text{CC} < 0.5$ (Theorem 39); exact causality uses Theorem 39c
-- Gravitational self-limitation (Appendix S)
+The following remain empirical comparison targets: coherence of a specified microtubule observable at $310\,\mathrm K$; any registered $25$--$40\,\mathrm{ms}$ event timescale; anesthetic transfer to that observable; a nonzero aggregate carrier; and a metabolic or gravitational response discriminating the carrier from ordinary physiology. The illustrative input $E=10^{-30}\,\mathrm J$ in $E\tau=\hbar$ gives $\tau=1.05\times10^{-4}\,\mathrm s$, not a $25$--$40\,\mathrm{ms}$ interval. Theorem L.6 can audit a measured metabolic ledger but predicts no nonzero signature; Theorem 39 proves only its endpoint-gate consequence on the independently declared bounded-bias branch; Appendix S's self-limitation statement remains conditional on its complete physical realization certificates.
 
 ### **L.4.1.6 Critical Amplification for Non-Local Influence**
 
@@ -567,25 +557,21 @@ This calculation applies only on the stated local-equilibrium horizon branch. Th
 
 ### **Remark L.7.1 (Consistency Check vs. Independent Derivation)**
 
-Theorem L.7 is a consistency check demonstrating that both electromagnetic and gravitational CC contributions maintain the same thermodynamic foundation (Clausius relation $\delta Q = T\delta S$ on causal horizons) used to derive Einstein's equations in Section 12 (Theorem 50). This is not circular reasoning; rather, it validates that:
+Theorem L.7 is a conditional algebraic compatibility check. On its complete conserved-source, local-equilibrium, area-law, Unruh-temperature, and Clausius branch, it verifies that independently registered electromagnetic and retained-matter entries may occur in the same stress-energy ledger used by the horizon derivation of Einstein's equation. It constructs neither carrier and proves neither contribution nonzero. More precisely:
 
-(i) The EM contribution (Thm L.2) properly enters $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8)
+(i) a certified electromagnetic contribution enters $T_{\mu\nu}^{(\mathrm{MPU})}$ through Definition B.8;
 
-(ii) The matter contribution (Thm L.3) properly enters $T_{\mu\nu}^{(\text{MPU})}$
+(ii) a certified retained-matter contribution enters through the same complete-source ledger;
 
-(iii) Together they source Einstein equations without contradiction
+(iii) their sum is admissible as an Einstein source only when every exchange sector is included and covariant conservation holds; and
 
-(iv) Energy conservation (Thm L.6) is maintained
+(iv) Theorem L.6 supplies first-law bookkeeping for declared disjoint channels, not existence of a CC source.
 
-The independent derivation of EFE from horizon thermodynamics occurs in Section 12 (Theorem 50) using the Area Law (Theorem 49) derived from ND-RID limits (Appendix E). Theorem L.7 shows that CC energy contributions fit within this already-established structure without requiring modification. This internal consistency is a non-trivial requirement; failure would indicate either:
+Theorem 50's horizon argument remains conditional on its own local-equilibrium and calibrated area-law premises. Failure of a proposed CC carrier to meet these source and conservation gates rejects that carrier branch; it does not by itself require modifying Einstein's equation or contradict the upstream PU structure.
 
-    CC violates the thermodynamic derivation of gravity (framework inconsistency)
+On the stated joint branch, standard EFE accepts any independently constructed conserved aggregate stress-energy contribution. This proves compatibility only; it supplies neither evidence nor a construction of a CC carrier.
 
-    CC requires modification to EFE (new physics)
-
-The fact that standard EFE with standard $T_{\mu\nu}^{(\text{MPU})}$ accommodates CC influence is evidence of framework coherence, not circular argumentation.
-
-## **L.7 Unification Through Temporal Wave Framework**
+## **L.7 Conditional Temporal-Modulation Channel Decomposition**
 
 The electromagnetic and gravitational models of Theorems L.2 and L.3 can be represented as frequency-labeled projections of one temporal-modulation variable only on the joint branch stated in Theorem L.8. Fourier decomposition alone neither constructs either carrier nor proves that their source maps have a common physical origin.
 
@@ -1012,7 +998,7 @@ $$
 
 Expected Outcome:
 
-A null result is expected because the declared sensitivity is many orders of magnitude above the predicted gravitational signal. Such a result is consistent with Proposition L.5 but does not confirm electromagnetic dominance. A discriminating test would require sensitivity to a range on which the competing models predict different detectable outcomes.
+For the separately imported comparator $\Delta\tau_d=6.6\times10^{-54}\,\mathrm s$, the declared apparatus is many orders of magnitude too insensitive; a null result is therefore non-identifying. Such a result is consistent with Proposition L.5 but does not confirm electromagnetic dominance. A discriminating test would require sensitivity to a range on which the competing models predict different detectable outcomes.
 
 ### **Prediction L.1 (Conditional Electromagnetic-to-Gravitational Comparison)**
 
@@ -1064,7 +1050,7 @@ PU branch prediction: $C_{agg}\leq C_{op}$ implies zero operational CC. For $C_{
 
 Observable 2: Endpoint and Causality Gates
 
-PU branch prediction: $\mathrm{CC}<0.5$ excludes endpoint-complete deterministic forcing by Theorem 39. Finite-window zero-error and exact causal conclusions require Theorems 39a and 39c, respectively. This does not predict saturation at $0.5$.
+Bounded-bias branch gate: the branch independently declares $\alpha_{CC,\max}<0.5$, and Theorem 39 proves that this excludes endpoint-complete forcing of both outcomes of every binary coarse-graining. Finite-window zero-error and exact causal conclusions require Theorems 39a and 39c, respectively. This does not predict saturation at $0.5$.
 
 Observable 3: Complete Energy Accounting
 
@@ -1088,7 +1074,7 @@ Every physical implementation on the emergent metric branch must satisfy the ene
 
 (ii) Stress-Energy ledger: Every measured CC-associated matter, field, and boundary-flux contribution must be entered exactly once in a complete covariantly conserved $T_{\mu\nu}^{(\mathrm{MPU})}$. If the local-equilibrium horizon, area-law, Unruh-temperature, and Clausius hypotheses are also satisfied, Theorem L.7 verifies that this independently specified complete source is compatible with the Einstein equation up to a cosmological constant.
 
-(iii) Endpoint, zero-error, and causality constraints: On the bounded-bias branch, $\text{CC}(S)<0.5$ excludes deterministic endpoint-complete forcing by Theorem 39. Finite-window zero-error exclusion additionally requires all regular-branch hypotheses of Theorem 39a. These are reliability statements. Exact operational causality requires the pre-lightcone context-independence hypothesis and conclusion of Theorem 39c.
+(iii) Endpoint, zero-error, and causality constraints: On the branch independently satisfying $\alpha_{CC,\max}<0.5$, Theorem 39 excludes endpoint-complete forcing of both outcomes of every binary coarse-graining. Finite-window zero-error exclusion additionally requires all regular-branch hypotheses of Theorem 39a. These are reliability statements. Exact operational causality requires the pre-lightcone context-independence hypothesis and conclusion of Theorem 39c.
 
 (iv) POP/PCE Optimization (Lemma L.1, Theorem L.1): The context-to-control mapping $\mathcal{M}: \text{context}_S \to$ control parameters must be:
 
@@ -1229,7 +1215,20 @@ $$
 
 *Proof.* Proposition L.9.3 applied at every time in the interval gives the pointwise power lower bound. Integrating it over $[0,\tau_c]$ gives the energy lower bound. ∎
 
-**Connection to Appendix S: Gravitational self-limitation (Appendix S) provides upper bound on achievable $R_{\text{eff}}$ for given $C_{\text{agg}}$: attempting too large $R_{\text{eff}}$ creates gravitational dephasing that disrupts $\text{context}_S$, reducing CC effectiveness.
+**Remark L.9.5a (Conditional Appendix-S Self-Limitation Gate).** Appendix S does not by itself bound $R_{\mathrm{eff}}$. Suppose an overlap certificate identifies $P_{\mathrm{context}}=\chi P_{\mathrm{agg}}$ with $\chi>0$, supplies the applicable Appendix-S coefficient $K_{\mathrm{eff}}>0$, and verifies that context retention over $\tau_c$ requires
+$$
+\Gamma_{\mathrm{deco}}\tau_c
+=\frac{|\Delta E|}{\hbar}K_{\mathrm{eff}}\chi P_{\mathrm{agg}}\tau_c
+\le\Lambda_{\max}.
+$$
+Combining this upper power bound with Proposition L.9.5 gives the independently checkable range bound
+$$
+R_{\mathrm{eff}}^2
+\le
+\frac{K_{\mathrm{impl}}\Lambda_{\max}\hbar}
+{\epsilon_{\mathrm{detect}}|\Delta E|K_{\mathrm{eff}}\chi\tau_c}.
+$$
+Without the power-identification, decoherence, retention-threshold, and no-double-counting records, Appendix S supplies compatibility only and no self-limitation theorem.
 
 ## **L.10 Internal Consistency and Theoretical Validation**
 
@@ -1247,7 +1246,7 @@ Assume one nonempty branch simultaneously satisfies the hypotheses of Theorems L
 
 (e) Conditional temporal-wave representation: If the common cycle-rate modulation and the separate high-frequency electromagnetic and low-frequency gravitational response hypotheses of Theorem L.8 are jointly supplied, the two responses can be represented as frequency sectors of that modulation. This is a branch compatibility statement, not a derivation of the carriers from one scalar field.
 
-(f) Endpoint, zero-error, and causal scope: On the bounded-bias branch, $\text{CC}<0.5$ excludes endpoint-complete deterministic forcing by Theorem 39. Finite-window zero-error exclusion additionally requires the regularity hypotheses of Theorem 39a. Exact operational causality is supplied only on the pre-lightcone context-independence branch of Theorem 39c.
+(f) Endpoint, zero-error, and causal scope: On the branch independently satisfying $\alpha_{CC,\max}<0.5$, Theorem 39 excludes endpoint-complete forcing of both outcomes of every binary coarse-graining. Finite-window zero-error exclusion additionally requires the regularity hypotheses of Theorem 39a. Exact operational causality is supplied only on the pre-lightcone context-independence branch of Theorem 39c.
 
 (g) Spatiotemporal Bounds: Influence regions satisfy finite extent (Propositions L.9.3-L.9.5), with energy-range-time trade-offs emerging from resource constraints.
 
@@ -1304,20 +1303,19 @@ This section provides detailed implementation of the AC Stark mechanism introduc
 
 Assume a registered electromagnetic-source branch on which $\mathcal M(\text{context}_S(t))$ controls a conserved current $J^\mu$ with a nonzero time-dependent radiating multipole. Solving Maxwell's equations with the stated geometry and boundary conditions then defines $\vec E_{\text{rad}}(t)$ and its frequency, amplitude, phase, and polarization. The existence and normalization of this current are implementation data, not consequences of Theorem L.1.
 
-On the separately registered interaction-clock branch, assume $\tau_{\mathrm{int}}\ge\tau_{\min}>0$. In a suitable interaction picture the dipole coupling is
+On the separately registered interaction-clock branch, assume $\tau_{\mathrm{int}}\ge\tau_{\min}>0$. In a suitable interaction picture the dispersive dipole coupling is
 $$
 H_{\text{int}}(t)
-=
--\vec d_{\text{TLS}}\cdot\vec E_{\text{rad}}(t)
 \approx
-\hbar\delta_{\text{Stark}}(t)\sigma_z.
+\frac{\hbar}{2}\delta_{\text{Stark}}(t)\sigma_z.
 \tag{L.86}
 $$
-For $|\Delta|\gg\max(\Omega_R,\Gamma)$ on the two-level perturbative branch,
+For $|\Delta|\gg\max(\Omega_R,\Gamma)$ on the two-level perturbative branch, the transition-frequency shift is
 $$
 \delta_{\text{Stark}}(t)
-\simeq
-\frac{\Omega_R^2(t)}{4\Delta(t)},
+=
+\frac{\Omega_R^2(t)}{2\Delta(t)}
++O\left(\frac{\Omega_R^4(t)}{\Delta^3(t)}\right),
 \qquad
 \Omega_R(t)
 =
@@ -1414,7 +1412,7 @@ On the joint Appendix S branch, the feedback construction requires:
 5. a calibrated law mapping coherence loss to $\text{CC}_{\text{eff}}$; and
 6. a specified PCE objective whose minimizer exists in the feasible domain.
 
-The deterministic endpoint-forcing bound of Theorem 39 is independent of those gravitational hypotheses, and operational causality additionally requires Theorem 39c. Resource, weak-field, and collapse ceilings bound only the branches satisfying their respective assumptions; they do not establish a universal no-runaway theorem for all CC implementations.
+The bounded-bias ceiling is independent of those gravitational hypotheses, Theorem 39 supplies only its endpoint-complete consequence, and operational causality additionally requires Theorem 39c. Resource, weak-field, and collapse ceilings bound only the branches satisfying their respective assumptions; they do not establish a universal no-runaway theorem for all CC implementations.
 
 ### **Quantitative Connection:**
 

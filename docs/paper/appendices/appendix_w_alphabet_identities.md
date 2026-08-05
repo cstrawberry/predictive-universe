@@ -404,7 +404,31 @@ Y_L=-N_cY_Q,\quad Y_e=-2N_cY_Q,\quad Y_u=(N_c+1)Y_Q,\quad Y_d=-(N_c-1)Y_Q.
 \tag{W.4.3}
 $$
 
-This simultaneously cancels the mixed gravitational–$U(1)_Y$ anomaly $\sum Y= -N_cY_Q+Y_H=0$. (This sum is over the left‑chiral fermion content; the Higgs doublet, being a scalar, does not contribute to this chiral gravitational anomaly.)
+This simultaneously cancels the mixed gravitational–$U(1)_Y$ anomaly $\sum Y=-N_cY_Q+Y_H=0$. This sum is over the left-chiral fermion content; the Higgs doublet, being a scalar, does not contribute.
+
+*Proof.* Write $q=Y_Q$, $\ell=Y_L$, and $h=Y_H$. The $SU(2)^2U(1)_Y$ anomaly condition gives $N_cq+\ell=0$, hence $\ell=-N_cq$. The Yukawa relations give
+$$
+Y_u=q+h,\qquad Y_d=q-h,\qquad Y_e=\ell-h.
+$$
+Therefore
+$$
+\begin{aligned}
+\mathcal A_{Y^3}
+&=N_c\left(2q^3-(q+h)^3-(q-h)^3\right)
+ +2\ell^3-(\ell-h)^3\\
+&=-6N_cqh^2+\ell^3+3\ell^2h-3\ell h^2+h^3\\
+&=-N_c^3q^3+3N_c^2q^2h-3N_cqh^2+h^3\\
+&=-(N_cq-h)^3.
+\end{aligned}
+$$
+Thus $\mathcal A_{Y^3}=0$ implies $h=N_cq$. The mixed gravitational anomaly is
+$$
+N_c(2q-Y_u-Y_d)+(2\ell-Y_e)
+=0+(\ell+h)
+=-N_cq+h
+=0.
+$$
+Substitution of $h=N_cq$ and $\ell=-N_cq$ into the Yukawa relations yields Equation (W.4.3). ∎
 
 **Corollary W.15 (SM normalization and $N_c$).**
 Using the **canonical** SM relation $Q=T_3+\tfrac{Y}{2}$ and $Q(\nu_L)=+\tfrac12+\tfrac{Y_L}{2}=0\Rightarrow Y_L=-1$, we obtain $Y_Q=\tfrac{1}{N_c}$ and $Y_H=1$. Matching $Q(u_L)=+\tfrac23$, $Q(d_L)=-\tfrac13$ fixes $N_c=3$ and

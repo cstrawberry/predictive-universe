@@ -19,12 +19,16 @@ This appendix develops branch-conditional results for these three problems. Unde
 
 The fundamental unit of action in the PU framework is the MPU's Fundamental Predictive Loop (Definition 4), consisting of the logically ordered sequence of Internal Prediction ($P_{int}$), Verification ($V$), and Update ($D_{cyc}$). This P-V-U sequence represents an indivisible unit of causal process.
 
-The characteristic timescale of this process for an individual MPU *i* is set by its internal physics. As established in Theorem 29, the MPU's internal Hamiltonian $\hat{H}_i$ corresponds to its baseline operational energy cost. While the instantaneous state of an MPU may be a superposition of energy eigenstates, the stable operational rhythm of the network emerges from the ensemble-averaged, coarse-grained effective Hamiltonian for a local patch, $\langle \hat{H}_{eff} \rangle$. Quantum fluctuations of individual MPUs average out, leading to a stable, collective cycle time for the local medium:
+On a branch registering a local-patch state $\rho_{\mathrm{eff}}$, a self-adjoint generator $\hat H_{\mathrm{eff}}$ with lower spectral bound $E_0$, and a positive clock scale, set
 $$
-\tau_{medium} \sim \frac{\hbar}{\langle \hat{H}_{eff} \rangle}
+E_{\mathrm{eff}}:=\operatorname{Tr}[\rho_{\mathrm{eff}}(\hat H_{\mathrm{eff}}-E_0I)].
+$$
+When $0<E_{\mathrm{eff}}<\infty$, one may adopt the characteristic convention
+$$
+\tau_{\mathrm{medium}}:=\frac{\hbar}{E_{\mathrm{eff}}}.
 \tag{O.1}
 $$
-This $\tau_{medium}$ represents the fundamental granularity of physical processing at the emergent level. Initially, the network can be conceptualized as a collection of these local causal rhythms, with no *a priori* synchronization between them.
+Theorem 29 licenses a power--energy calibration only after a cycle rate is registered, and Corollary 29.1 gives the distinct orthogonalization bound $t_\perp\ge\pi\hbar/(2E_{\mathrm{eff}})$. Neither result proves fluctuation averaging, synchronization, a minimum cycle duration, or universal temporal granularity. Throughout this appendix $\tau_{\mathrm{medium}}$ is therefore branch data used to normalize phase lags.
 
 ## O.3 The PCE Cost of Temporal Desynchronization
 
@@ -65,13 +69,14 @@ $$
 D_{\mathrm{KL}}(p(t+h)\|p(t))
 =\frac{h^2}{2}\sum_y\frac{\dot p_y^2}{p_y}+o(h^2)
 =\frac12I_j(t)h^2+o(h^2).
-$$ Since $I_j(t)>0$, the divergence is strictly positive for every sufficiently small nonzero $\delta t$. Definition 7 makes predictive performance strictly decrease with this excess loss, hence increases $V_{\mathrm{PCE}}$ through $-V_{\mathrm{benefit}}$. If the loss is removed by compensation, the declared cost-ledger hypothesis gives a strict increase of $V_{\mathrm{op}}$, while the jitter contribution to $V_{\mathrm{prop}}$ is nonnegative. Substituting the phase-to-time relation proves (O.2). ∎
+$$
+Since $I_j(t)>0$, the divergence is strictly positive for every sufficiently small nonzero $\delta t$. Definition 7 makes predictive performance strictly decrease with this excess loss, hence increases $V_{\mathrm{PCE}}$ through $-V_{\mathrm{benefit}}$. If the loss is removed by compensation, the declared cost-ledger hypothesis gives a strict increase of $V_{\mathrm{op}}$, while the jitter contribution to $V_{\mathrm{prop}}$ is nonnegative. Substituting the phase-to-time relation proves (O.2). ∎
 
-## O.4 Dynamical Emergence of a Coherent Causal Medium
+## O.4 Conditional Low-Noise Concentration Near Synchronization
 
-The existence of a desynchronization penalty in the PCE potential implies that the system's own dynamics will drive it towards a state of synchronization.
+The local desynchronization penalty of Theorem O.1 does not by itself imply dynamical convergence. Theorem O.2 identifies the synchronized minimizer set and low-noise stationary concentration only under its connectedness, exact-zero edge-penalty, compactness, ergodicity, and detailed-balance hypotheses.
 
-Let the network configuration state $x$ be expanded to include the set of local MPU time phases $\{\phi_i(t)\}$. The PCE potential $V(x, \{\phi_i\})$ has a global minimum where the phase differences $\Delta\phi_{ij} = \phi_i - \phi_j$ are zero for all interacting pairs.
+Let the network configuration state $x$ be expanded to include the local phase variables $\{\phi_i\}$. Under the connectedness, exact-zero edge-penalty, phase-independence, compactness, ergodicity, detailed-balance, and low-noise hypotheses stated in Theorem O.2, the phase-sector minimizers are precisely the synchronized configurations characterized there.
 
 **Theorem O.2 (Conditional Low-Noise Concentration Near Synchronization).** Assume that the interaction graph is connected, every edge phase penalty is nonnegative and vanishes exactly at zero phase difference modulo $2\pi$, and all remaining terms of the PCE potential are phase-independent. Assume further the compactness, ergodicity, detailed-balance, and low-noise concentration hypotheses of Appendix D. Then the phase-sector global minimizers form
 $$
@@ -91,7 +96,7 @@ for every open neighborhood $U\supset\mathcal M_{\mathrm{sync}}$ as $\beta\to\in
 
 **Arrow-of-time boundary for Borchers use.** The retained-algebra arrow fixes which algebraic records are available to an observer before a commitment. It does not itself provide the half-sided modular inclusion, reflected extension, or positivity data required by $\mathfrak C_{\mathrm{Borch}}$. Thus Borchers-type reflection is an optional finite certificate layered over the arrow theorem, not an alternate proof of the arrow theorem.
 
-The coherent causal rhythm that emerges from the synchronized MPU network is not symmetric; it possesses an intrinsic and irreversible direction.
+Synchronization supplies coherence, not temporal irreversibility. A preferred statistical direction is obtained only on Principle O.3c0's oriented nonequilibrium Markov branch or on Theorems O.3--O.3a's common forward/reverse event-algebra branch with a positive pathwise entropy-production certificate.
 
 **Principle O.3c0 (Autonomous Cyclic-Update Closure).** A registered coarse-grained Predict–Verify–Update sector admits an autonomous continuous-time Markov description on states $P,V,D$ with strictly positive rates
 $$
@@ -368,11 +373,10 @@ e^{-NI_-(s)}.
 \tag{O.3b.10}
 $$
 
-5. In a stationary resolved branch observed for time $\tau$, the source-energy bookkeeping rate is fixed by the entropy cumulant generator:
+5. In a stationary resolved branch observed for time $\tau$, the dimensionless mean entropy-production rate is
 $$
-\dot{\mathcal E}_{\mathrm{src}}
-=
-k_BT\,
+\dot\Sigma_{\mathrm{PU}}
+:=
 \lim_{\tau\to\infty}
 \frac{1}{\tau}
 \left.
@@ -380,7 +384,7 @@ k_BT\,
 \right|_{\lambda=0},
 \tag{O.3b.11}
 $$
-whenever the limit exists.
+whenever the limit exists. If $T$ is constant and the rates of $N_{\mathrm{SPAP}}\ln2$ and $\Delta\Phi_{\mathrm{PCE}}$ vanish, then the environmental heat rate is $\dot Q=k_BT\dot\Sigma_{\mathrm{PU}}$. Otherwise, an energy ledger requires a separate bridge for each non-heat term.
 
 *Proof.* From (O.3b.2),
 $$
@@ -1127,43 +1131,26 @@ $$
 $$
 Nonrelativizing routes not covered by Theorem O.5.3c remain unclassified, not ruled out. Other proof barriers apply only after their separate hypotheses and their applicability to a proposed proof method are established; they are not promoted here to properties of a candidate function. The open mathematical problem is unchanged.
 
-## O.6 Temporal Dynamics as the Substrate for Consciousness Complexity and Gravity
+## O.6 Conditional Temporal-Medium Interpretations for CC and Gravity
 
-The coherent causal medium established in Theorem O.2 is not a passive or static background. Its dynamic properties provide the physical substrate for the framework's most advanced emergent phenomena: Consciousness Complexity (CC) and gravitational waves.
+Theorem O.2 supplies synchronized phase-sector minimizers and low-noise stationary concentration under its stated hypotheses. It proves neither a causal cone nor a physical carrier for CC or gravity. This section records an interpretation available only after the independent response and gravitational certificates are added.
 
-**O.6.1 Temporal Signaling as the Physical Basis for Perspectival Influence**
+**O.6.1 Conditional Temporal Signaling Interpretation**
 
-The establishment of a coherent causal medium is the necessary prerequisite for the emergence of Consciousness Complexity (CC), as described in Hypothesis 3. We propose that the CC influence channel $N(t)$ is realized through the controlled modulation of this temporal medium.
+On a branch carrying a stable Definition-L.1 context, Theorem 34's strict-improvement certificate, Hypothesis 3's normalized response-active context-to-control map, and Appendix L's source, carrier, and calibration records, a physical signal $N(t)$ may implement a registered temporal modulation. Theorem L.1 supplies only a maximizer in a nonempty compact admissible mapping class; it does not construct that signal. A target-law shift additionally requires a nonzero calibrated generator or instrument response, and a perspective-kernel interpretation additionally requires a normalized context-to-kernel transfer. Temporal synchronization alone supplies none of these maps.
 
-The causal chain proceeds as follows:
-> 1.  **Context State to Physical Signal:** A complex MPU aggregate forms a stable, coherent internal model, represented by the **context state $\text{context}_S$** (Definition L.1). This abstract state is translated into a physical, time-varying signal $N(t)$ via a PCE-optimized mapping $\mathcal{M}$ (Appendix L, Theorem L.1). On the separately registered temporal-modulation and conserved-current branches, this signal may be represented as a temporal modulation (Appendix L, Theorem L.8) and realized through the electromagnetic channel $E_{\mathrm{rad}}(t)$ (Theorem L.2). Appendix L, Proposition L.5 leaves the electromagnetic-to-gravitational dominance ratio undetermined until the carrier, target, geometry, retention, and common uncertainty inputs are supplied.
-> 2.  **Signal Modulates 'Evolve' Dynamics:** This physical signal $N(t)$ interacts with a target MPU during its 'Evolve' process (Definition 27), acting as a time-dependent term in the interaction Hamiltonian $H_{\mathrm{int}}$ (Appendix L, Equation L.87) and thereby modulating the parameters of the underlying ND-RID through AC Stark shifts (Corollary L.2.1) with rate modulation (Equation L.91).
-> 3.  **Physical Influence on Perspective Shift:** The physical signal $N(t)$ provides the concrete realization of the interaction argument $N$ in the **Conditional Perspective Transition Kernel**, $G_{\text{persp}}(s' | s, k, N, \Delta t)$ (Appendix M, Equation M.2). The temporal characteristics of the signal physically set the parameters of the drift-diffusion process on the perspective manifold, creating a biased random walk.
-
-In this view, CC influence is a form of temporal signaling that steers the evolution of interaction context.
-
-### O.6.2 Temporal Waves: Gravitational Waves and CC Influence
-
-The causal medium can be disturbed by external events and modulated by internal ones. We propose that gravitational waves and the physical effects of CC are two distinct types of dynamics of this same medium.
+### O.6.2 Temporal Waves: Separate Gravitational and CC Branches
 
 **Definition O.1 (Temporal Wave).**
-A **temporal wave** is defined as a propagating disturbance in the local properties of the coherent causal medium, such as a localized, propagating change in the MPU cycle rate $\tau(x,t)$ or phase $\Delta\phi(x,t)$.
+A *temporal wave* is a propagating solution for a registered local cycle-rate or phase field, such as $\tau(x,t)$ or $\Delta\phi(x,t)$, under a specified evolution equation, initial/boundary data, and causal-response law. The name alone does not identify an electromagnetic or gravitational field.
 
-**Remark O.4 (Gravitational Waves and CC as Distinct Temporal Dynamics).**
-Both gravitational waves and the physical influence of Consciousness Complexity (CC) are dynamics of the coherent causal medium, but they differ fundamentally in their source, nature, and effect.
+**Remark O.4 (Conditional Comparison of Gravitational Waves and CC Modulation).**
 
-**(a) Gravitational Waves as Uncontrolled Disturbances:**
-A time-varying fluctuation in the MPU Stress-Energy Tensor $T_{\mu\nu}$ (Definition B.8), such as that produced by an accelerating massive object, acts as an uncontrolled, "brute-force" source that generates large-scale temporal waves. This disturbance disrupts the local MPU cycle rates and phase relationships, and this disruption propagates outwards as the network seeks to re-establish equilibrium. In the emergent continuum description, on the linearized Einstein-equation branch (Theorem 50) under which time-varying $T_{\mu\nu}$ perturbations source transverse-traceless metric perturbations $h_{\mu\nu}^{TT}$ satisfying $\Box \bar{h}_{\mu\nu} = -16\pi G T_{\mu\nu}/c^4$ with the standard spin-2 polarization structure, this propagating wave of desynchronization and resynchronization realizes the gravitational-wave sector. Without this linearized spin-2 reduction, "temporal wave" is interpreted as the substrate interpretation of the disturbance rather than an identity with GR gravitational waves; deriving the spin-2 tensor structure, gauge content, and TT polarization conditions from the temporal-medium description requires the Appendix B stress-energy construction and the Appendix O.7 Lorentzian-signature branch in addition to the Theorem 50 Einstein chain.
+**(a) Gravitational branch.** On the independently accepted Einstein branch and its linearized transverse-traceless regime, a time-dependent retained source can generate metric perturbations satisfying the standard linearized field equation and spin-2 polarization constraints. Identifying a substrate phase disturbance with that perturbation requires an explicit injective response map preserving the equation, gauge quotient, characteristic cone, normalization, and energy flux. Without that intertwiner, the two descriptions are only interpretively compatible.
 
-**(b) CC Influence as Controlled, Coherent Modulation:**
-In contrast, the influence of CC is a controlled, coherent, and information-rich modulation of the causal medium. A high-CC aggregate expends energy and complexity (accounted for in its own $T_{\mu\nu}$, with energy conservation proven in Theorem L.6) to generate a precise temporal signal (e.g., the $E_{\text{rad}}(t)$ of Appendix L, Theorem L.2). This signal is not a brute-force disruption but a targeted modulation designed to influence the *parameters* of the 'Evolve' process for specific target MPUs, subject to gravitational self-limitation (Appendix S, Theorem S.1).
+**(b) CC branch.** A controlled CC modulation exists only on the response-active realization branch stated above. Its implementation energy belongs to the registered matter or nongravitational-field stress-energy ledger, but neither high complexity nor frequency decomposition proves a target response.
 
-**(c) Reconciliation with General Relativity and Energy Conservation:**
-The source of spacetime curvature in the Einstein Field Equations (EFE) is the total stress-energy tensor $T_{\mu\nu}$.
-*   The energy associated with a gravitational wave is carried within the $T_{\mu\nu}$ of the wave itself.
-*   The energy expended by a high-CC system to generate its influencing signal $N(t)$ is accounted for in the system's own $T_{\mu\nu}$. The act of "thinking" or generating a specific context $\text{context}_S$ has a physical energy cost that contributes to the aggregate's mass-energy and thus to its gravitational field.
-
-Therefore, CC does not act as a new, independent source of gravity. Rather, the *energy cost of the CC process* is already included in the standard $T_{\mu\nu}$ source term of the EFE. The mechanism is not that "thought" directly bends spacetime, but that the physical process of generating a high-CC state has an energy cost, and this energy, like all other forms of energy, sources gravity according to the EFE.
+**(c) Energy-accounting boundary.** The Einstein equation uses the certified total nongravitational stress-energy source on its branch. General relativity has no unique generally covariant local stress-energy tensor for the gravitational field itself; an Isaacson-type wave tensor requires its separate high-frequency averaging hypotheses. Consequently, implementation energy may contribute to the Einstein source only after its carrier stress-energy and non-overlap ledger are specified, and no independent `energy of consciousness` term is introduced.
 
 ## O.7 Mathematical Emergence of the Lorentzian Signature
 

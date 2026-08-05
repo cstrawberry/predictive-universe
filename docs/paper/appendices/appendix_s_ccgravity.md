@@ -1,6 +1,6 @@
 # Appendix S: Resource Cost, Stress-Energy, and the Gravitational Self-Limitation of CC
 
-On the global quadratic-cost, retained-source, weak-field, dephasing, and coherence-response branches analyzed here, a sustained context capable of biasing quantum outcome statistics carries a registered resource cost whose retained energy contributes to stress-energy and produces gravitational self-dephasing that limits efficacy. This appendix quantifies that conditional feedback mechanism, complementing the electromagnetic and biological models in Appendix L. Proposition L.5 defines the electromagnetic-to-gravitational comparison, with dominance fixed by the registered carrier, target, geometry, retention, and common uncertainty inputs.
+On the global quadratic-cost, retained-source, weak-field, dephasing, and coherence-response branches analyzed here, a sustained context capable of biasing quantum outcome statistics carries a registered resource cost whose retained energy contributes to stress-energy and produces gravitational self-dephasing that limits efficacy. This appendix quantifies that conditional feedback mechanism, complementing the electromagnetic and biological models in Appendix L. Proposition L.5 proves that the electromagnetic-to-gravitational response ratio remains undetermined until the carrier, target, geometry, retention, normalization, likelihood, covariance, and uncertainty inputs are registered in common units.
 
 ## S.1 Resource Cost of the Context State
 
@@ -120,7 +120,7 @@ $$
 \tag{S.10}
 $$
 
-Higher available energy density raises the operational cap, while the bounded-bias branch additionally imposes $\text{CC}<\alpha_{CC,max}$ (Theorem 39), while exact causal compliance requires Theorem 39c.
+Higher available energy density raises the operational cap. Independently, the bounded-bias branch declares $\text{CC}<\alpha_{CC,max}<0.5$; Theorem 39 supplies its endpoint-complete consequence, while exact causal compliance requires Theorem 39c.
 
 **Theorem S.1 (Local CPTP CC Branch: No-Signaling and Gravitational Bound).**
 
@@ -185,13 +185,14 @@ Taking the smaller of the two bounds proves (S.12). A microscopic phase or depha
 
 ## S.3 Gravitational Self-Disruption
 
-In the weak-field limit of General Relativity (Misner et al., 1973; Carroll, 2004), the effective source density for the Newtonian gravitational field is derived from the $00$-component of Einstein's equations (Theorem 50). From the trace of the stress-energy tensor in Einstein's equations (Misner et al., 1973; Wald, 1984), the gravitational mass density is:
+On the uniform spherical perfect-fluid source model assumed in Theorem S.3, and only after the complete conserved stress tensor—including any confinement or boundary stresses—is fixed, the weak-field active-density term is modeled as
 $$
-\rho_{source} = \frac{u_{context} + 3p_{context}}{c^2} = (1 + 3w_c) \frac{u_{context}}{c^2}
+\rho_{\mathrm{source}}
+=\frac{u_{\mathrm{context}}+3p_{\mathrm{context}}}{c^2}
+=(1+3w_c)\frac{u_{\mathrm{context}}}{c^2}.
 \tag{S.13}
 $$
-
-This follows from the $00$-component of Einstein's field equations in the Newtonian limit (Weinberg, 1972; Wald, 1984), where pressure contributes to gravitational mass. For $w_c = 1/3$:
+Equation (S.13) is a constitutive branch input for the calculation below, not a consequence of Theorem 50 for an arbitrary localized context-energy distribution. For $w_c = 1/3$:
 $$
 \rho_{source} = \frac{2u_{context}}{c^2}
 \tag{S.14}
@@ -309,7 +310,7 @@ for $\mathrm{CC}\ge0$, so this root is the unique maximizer of the truncated uti
 
 ## S.5 Schwarzschild Interpretation of the CC Endpoint-Bias Bound
 
-The endpoint-bias constraint $\text{CC}<0.5$ (Theorem 39) is weaker than exact causality and admits a separate gravitational interpretation; causal compliance still requires Theorem 39c. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The supplied work over the coherence interval is
+The independently declared bounded-bias constraint $\alpha_{CC,\max}<0.5$ is weaker than exact causality and admits a separate gravitational interpretation. Theorem 39 supplies its endpoint-complete consequence; causal compliance still requires Theorem 39c. From Equation S.5, as $\text{CC} \to \alpha_{CC,\max}$, the required context power diverges: $P_{context} \to \infty$. The supplied work over the coherence interval is
 $$
 E_{\mathrm{context}}
 =P_{\mathrm{context}}\tau_c.
@@ -346,7 +347,7 @@ $$
 
 where $R_S=(3V_S/4\pi)^{1/3}$ is the characteristic radius of the aggregate. On the global quadratic-cost branch, $r_s\to\infty$ as $\mathrm{CC}\uparrow\alpha$. Two distinct restrictions apply:
 
-1. Theorem 39 supplies the bounded-bias endpoint $\alpha_{CC,max}<1/2$ on its operational branch; exact pre-lightcone causality separately requires Theorem 39c.
+1. The bounded-bias branch independently declares $\alpha_{CC,max}<1/2$. Theorem 39 proves that this gate excludes endpoint-complete binary forcing and that endpoint completion requires $\alpha_{CC,max}\ge1/2$; exact pre-lightcone causality separately requires Theorem 39c.
 2. The inequality $r_s<R_S$ supplies a system-dependent collapse ceiling determined by $A$, $V_S$, $\tau_c$, and $\eta_{\mathrm{ret}}$.
 
 Thus $\mathrm{CC}<\alpha$ does not by itself prevent collapse. The gravitational ceiling is the solution of S.31 for the declared source parameters and lies below $\alpha$ whenever those parameters are finite and positive. The weak-field calculation imposes the stronger perturbative requirement:
@@ -365,10 +366,11 @@ Together with collapse avoidance $r_s<R_S$ (Equation S.31), these conditions enf
 
 **Theorem S.2 (Unified Bounded-Bias and Gravity Ceiling).**
 
-On the bounded-bias CC branch of Theorem 39, deterministic endpoint forcing is excluded by
+On the bounded-bias CC branch, independently impose
 $$
 \alpha_{CC,\max}<0.5.
 $$
+Theorem 39 then excludes endpoint-complete forcing of both outcomes of any binary coarse-graining.
 Independently, for any finite aggregate with the context-power law of Equation S.5 and finite positive $A,\tau_c,R_S,\eta_{\mathrm{ret}}$, assume a nondegenerate weak-field geometry with $K_{\mathrm{eff}}>0$, a declared tolerance $0<\delta_{\mathrm{WF}}\ll1$, and the strict perturbative requirement $K_{\mathrm{eff}}P_{\mathrm{context}}<\delta_{\mathrm{WF}}$. Together with collapse avoidance, these hypotheses impose
 $$
 \mathrm{CC}<\mathrm{CC}_{BH}<\alpha,
@@ -384,7 +386,7 @@ $$
 $$
 with $\alpha_{CC,\max}<0.5$ on the bounded-bias branch.
 
-*Proof.* Theorem 39 proves that $\alpha_{CC,\max}<0.5$ is a sufficient branch gate excluding deterministic endpoint forcing for arbitrary binary coarse-grainings. It is the endpoint-forcing gate for the bounded-bias CC branch.
+*Proof.* The strict ceiling is independent branch data. Theorem 39 proves that it is sufficient to exclude endpoint-complete forcing of both outcomes of any binary coarse-graining; it does not derive the ceiling or exclude every one-endpoint protocol.
 
 For the gravitational-collapse ceiling, assume a spherically symmetric aggregate of areal radius $R_S$ and use Equations S.30–S.31:
 $$
@@ -457,11 +459,11 @@ Combining the independent endpoint, collapse, and weak-field requirements gives 
 **Corollary S.2.1 (No arbitrary CC enhancement on the bounded-bias branch).**
 
 On the bounded-bias CC branch, no finite system can increase operational CC without encountering at least one of the following gates:
-- the endpoint-forcing gate $\alpha_{CC,\max}<0.5$ from Theorem 39;
+- the independently declared bounded-bias gate $\alpha_{CC,\max}<0.5$, whose endpoint-complete consequence is Theorem 39;
 - the collapse-avoidance ceiling $\mathrm{CC}<\mathrm{CC}_{BH}$;
 - the nondegenerate weak-field perturbative ceiling $\mathrm{CC}<\mathrm{CC}_{WF}$.
 
-Thus arbitrary CC enhancement is excluded by the combined branch and finite-system ceilings. The endpoint gate controls deterministic outcome forcing, while the gravitational ceilings control physical viability and perturbative validity.
+Thus arbitrary CC enhancement is excluded on the intersection of the independently bounded-bias branch and the two finite-system branches. The endpoint gate excludes endpoint-complete binary forcing, while the gravitational ceilings control physical viability and perturbative validity.
 
 ## S.6 Non-Local Gravitational Influence via Entanglement
 
@@ -571,13 +573,7 @@ For $\text{CC}=0.1$, the power-law factor is $\text{CC}^{-8}=10^8$. The absolute
 - Post-selected and compared (requiring classical communication afterward)
 - Statistically aggregated (individual outcomes remain random)
 
-**Distinguishing feature:** This mechanism is unique to gravity among fundamental interactions because:
-
-- **Universal coupling:** Gravity couples to all systems via energy-momentum, requiring no specific quantum numbers or susceptibilities
-- **Phase coherence preservation:** Gravitational time dilation modifies phase evolution without direct dissipation
-- **Entanglement compatible:** Effect operates through phase shifts on individual subsystems, compatible with quantum coherence
-
-Alternative mechanisms (e.g., electromagnetic, analyzed in Appendix L) can also create non-local correlations through entanglement, but require specific coupling structures (dipole moments, charge distributions). The gravitational channel provides a universal substrate for statistical influence that applies to any quantum system.
+**Conditional carrier comparison.** A gravitational carrier couples through a certified stress-energy and metric response, while an electromagnetic carrier couples through a certified current, field, and target susceptibility. Universal stress-energy coupling does not prove that the nominated gravitational phase channel is realizable, dominant, or uniquely attributable. The result below assumes a two-level energy gap, a retained source, and a local CPTP phase response; it does not apply automatically to every quantum system. Distinguishing carriers requires preregistered response surfaces, matched geometry and retention data, and nuisance-controlled likelihood comparison.
 
 **Theorem S.3 (Conditional Gravitational Joint-Correlation Estimate).** Assume the uniform spherical perfect-fluid source model of S.3, the retained-energy law with $0<\eta_{\mathrm{ret}}\le1$, the global quadratic cost branch S.5, and a two-level subsystem $A$ with energy gap $\Delta E_A$. Assume that the gravitational interaction is represented by a local CPTP phase channel on $A$, that the chosen joint measurement has the response S.40, and that both the weak-field and weak-phase conditions hold. Define
 $$
@@ -611,11 +607,7 @@ P_{context}^2
 $$
 Substitution proves S.45. Trace preservation of the local channel gives the unchanged Bob marginal by Theorem S.1. ∎
 
-**Experimental implications:** This provides a concrete test distinguishing gravitational vs. purely electromagnetic CC mechanisms:
-
-- **Pure EM prediction** (Appendix L): Non-local effects scale with radiated field strength $\propto P_{EM}$
-- **Gravitational contribution** (this section): Non-local effects scale with total energy density $\propto P_{context}^2$
-- **Test protocol:** Vary the ratio of radiated power to total power while maintaining constant CC capability; gravitational mechanism predicts correlation with total energy budget, EM mechanism predicts correlation with radiated power.
+**Conditional carrier-discrimination protocol.** Preregister the electromagnetic and gravitational carrier response functions, nuisance controls, uncertainty model, and identifiability criterion. Vary radiated power and total retained power independently over a domain on which the two predicted response surfaces are distinguishable. Attribute support to one carrier branch only if the matched likelihood rejects the competing registered surface at the declared uncertainty level while ordinary electromagnetic, thermal, mechanical, and instrumental channels are controlled. Appendix L/S does not prove that the two carrier families are exhaustive or that correlation with raw power alone identifies either mechanism.
 
 **Definition S.6.1a (Causally Implemented Metric-Phase Entanglement Certificate).** Fix the input $|+\rangle_A|+\rangle_B$, diagonal phase intervals, a causal mediator implementation, an ideal controlled-phase output $\sigma_\Phi$, and an actual output $\rho_{\mathrm{out}}$ satisfying
 $$
@@ -944,7 +936,7 @@ K_{\Gamma}^{(ij)}
 :=
 \frac{|\Delta E_{ij}|}{\hbar}K_{\mathrm{eff}}\tau_{coh}^0
 =
-\frac{4\pi G}{3c^4}(1+3w_c)\frac{|\Delta E_{ij}|}{\hbar}\frac{rL_q\tau_c\tau_{coh}^0}{V_S}.
+\frac{4\pi G}{3c^4}(1+3w_c)\frac{|\Delta E_{ij}|}{\hbar}\frac{\eta_{\mathrm{ret}}rL_q\tau_c\tau_{coh}^0}{V_S}.
 \tag{S.60}
 $$
 
@@ -1013,16 +1005,16 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
 
 **Appendix L provides:**
 
-1. **Primary influence mechanisms**
-   - Electromagnetic coupling via AC Stark shifts (Theorem L.2, Corollary L.2.1)
-   - Coherent charge oscillation mechanism (Section L.11)
-   - Biological implementation pathways (Section L.4.1, speculative)
-   - Universal temporal wave framework (Theorem L.8)
+1. **Conditional carrier models**
+   - Electromagnetic coupling via AC Stark level shifts only on the conserved-current, Maxwell-transfer, and target-response branches of Theorem L.2 and Corollary L.2.1
+   - Coherent charge oscillation as a candidate source model (Section L.11)
+   - Biological implementation pathways as certificate-pending hypotheses (Section L.4.1)
+   - Conditional temporal-modulation channel decomposition (Theorem L.8)
 
-2. **Electromagnetic dominance**
-   - Quantitative demonstration on the analyzed range: baseline $\mathcal{R}\sim10^{36}$ and conservative range $10^{33}$–$10^{39}$ (Proposition L.5)
-   - Worked example with realistic parameters (Section L.11.4)
-   - Detection achievable in ~6 seconds with modern ion trap arrays
+2. **Carrier-comparison obligation**
+   - Proposition L.5 proves that the registered scaling data do not determine a numerical or positive electromagnetic-to-gravitational response ratio
+   - Any comparison requires one common carrier, target, geometry, retention, normalization, covariance, and uncertainty ledger fixed before evaluation
+   - Worked examples and detection times are protocol diagnostics until those entries and a nonzero response interval are accepted
 
 3. **Conditional energy accounting**
    - Channel decomposition: $P_{agg}=P_{EM}+P_{other}$ under the mutually exclusive ledger hypothesis of Equation L.36
@@ -1036,9 +1028,9 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
    - POP/PCE optimization conditions (Lemma L.1, Theorem L.1)
 
 5. **Experimental protocols**
-   - Protocol L.1: Electromagnetic channel detection (feasible, 6-second integration)
-   - Protocol L.2: Energy conservation verification (calorimetry)
-   - Protocol L.3: Gravitational channel test (expects null result, confirming dominance)
+   - Protocol L.1: registered electromagnetic source/field/target transfer test; its displayed integration time is branch-parameter arithmetic, not a feasibility certificate
+   - Protocol L.2: source-exhaustive energy-conservation and calorimetry test
+   - Protocol L.3: conditional gravitational-response test; no null or dominance expectation is defined before a common response/covariance certificate
 
 **This appendix (Appendix S) provides:**
 
@@ -1047,10 +1039,10 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
    - Self-limiting feedback loop quantification (Section S.4)
    - PCE optimization including feedback (Equation S.27)
 
-2. **Unique gravitational phenomena**
-   - Entanglement non-local influence mechanism (Section S.6)
-   - Schwarzschild interpretation of CC bound (Section S.5)
-   - Detailed decoherence mechanism (Section S.7)
+2. **Conditional gravitational branches**
+   - retained-source metric-phase model (Section S.6)
+   - Schwarzschild comparison on its localization and weak-field branch (Section S.5)
+   - decoherence model on its declared noise and response branch (Section S.7)
 
 3. **Theoretical bounds and interpretations**
    - Unified causality-gravity constraint (Theorem S.2)
@@ -1092,38 +1084,11 @@ B_{net}
 $$
 The resulting maximizer belongs to this phenomenological composition and is not an unconditional PCE equilibrium.
 
-### S.8.3 Channel Hierarchy and Frequency Decomposition
+### S.8.3 Conditional Frequency Decomposition and Carrier Separation
 
-From Appendix L (Theorem L.8), the aggregate's temporal modulation of the causal medium admits frequency decomposition:
-$$
-\delta\tau(x,t) = \int_{-\infty}^{\infty} d\omega \, \tilde{\delta\tau}(x,\omega) e^{-i\omega t}
-\tag{S.66}
-$$
+For any registered temporal variable with the required integrability, Fourier decomposition is a mathematical representation. High- and low-frequency components do not identify electromagnetic and gravitational carriers. An electromagnetic reading requires Appendix L's conserved-current, multipole, field, target-susceptibility, geometry, and calibration records. A gravitational reading requires Appendix S's complete retained stress-energy, metric response, target phase map, localization, and calibration records.
 
-Different frequency regimes couple through different emergent channels:
-
-**High-frequency regime** ($\omega \gg 1/\tau_{medium}$):
-- Rapid phase modulation requires compensating gauge fields (Appendix G)
-- Manifests as electromagnetic radiation on the coherent-charge carrier branch (Appendix L, Theorem L.2)
-- Coupling strength: $\alpha_{em} \sim 10^{-2}$ (Appendix Z)
-- Dominates on the parameter range analyzed in Proposition L.5, with baseline $\mathcal{R}\sim10^{36}$ and range $10^{33}$–$10^{39}$
-
-
-**Low-frequency regime** ($\omega \ll 1/\tau_{medium}$):
-- Quasi-static energy density modification
-- Sources gravitational potential (this appendix, Section S.3)
-- Coupling strength: $\alpha_{grav} \sim 10^{-45}$ for electron mass (Appendix L, Equation (L.84))
-- Provides universal energy accounting and feedback limit
-
-Both channels draw from the same power budget $P_{agg}$ and both contribute to the total stress-energy $T_{\mu\nu}^{(MPU)}$ (Theorem L.6). The hierarchy reflects the information-theoretic structure of the predictive substrate:
-- EM coupling: local phase coherence (high information bandwidth, $\sim \alpha_{em}$)
-- Gravitational coupling: global boundary entropy (low information bandwidth, $\sim \alpha_{grav}$)
-
-The ratio $\alpha_{em}/\alpha_{grav} \sim 10^{43}$ (Appendix L, Equation (L.85)) is the displayed coupling-ratio estimate:
-$$
-\frac{\alpha_{em}}{\alpha_{grav}} \sim \frac{\text{gauge coherence optimization (App G, Z)}}{\text{horizon information density (App E)}}
-\tag{S.67}
-$$
+If one implementation carries both packages, their source and power ledgers must be non-overlapping and source-exhaustive. Proposition L.5 proves no value or positive lower bound for an electromagnetic-to-gravitational response ratio from the framework constants alone. Consequently, no $10^{33}$--$10^{43}$ dominance range, bandwidth hierarchy, or common microscopic origin follows from frequency labels or coupling constants without a common source, target, geometry, retention, and uncertainty model.
 
 ### S.8.4 Experimental Complementarity
 
@@ -1143,41 +1108,21 @@ The experimental programs in Appendix L and this appendix address different aspe
 
 Both programs are necessary for complete framework validation. Appendix L establishes how CC works; this appendix establishes why CC is bounded and self-limiting.
 
-### S.8.4a Experimental Discrimination: EM vs. Gravitational Channels
+### S.8.4a Experimental Discrimination of Registered Carrier Models
 
-To distinguish electromagnetic from gravitational CC mechanisms, the following differential tests apply:
+Fix common source, target, geometry, retention, timing, and uncertainty data. Preregister an electromagnetic response surface and a gravitational response surface, including all nuisance channels and the domain on which the two are identifiable. Vary radiated power, retained total power, distance, modulation frequency, and electromagnetic screening independently when feasible. Electromagnetic screening is a differential control for the declared EM path; the equivalence principle does not prove that every gravitational response is unshieldable in every effective or engineered model.
 
-**Test 1 (Power Partitioning):** Vary the ratio $P_{EM}/P_{agg}$ while maintaining constant $P_{context}$:
-- EM prediction on the constant-detuning, constant-target, constant-polarization, and constant-geometry AC-Stark branch: $|\Delta P|\propto E_0^2\propto P_{EM}$ (Theorem L.2 and Corollary L.2.1)
-- Gravitational prediction: $|\Delta P| \propto P_{context}^2$ (Equation S.42)
-- Protocol: Use variable-efficiency radiators; measure correlation of CC effect with radiated vs. total power
-
-**Test 2 (Distance Scaling):** Measure $|\Delta P(r)|$ at varying target distances:
-- EM far-field on the constant-detuning AC-Stark branch: $|\Delta P| \propto 1/r^2$ (Equation (L.79))
-- EM near-field: $|\Delta P| \propto 1/r^3$ (evanescent regime)
-- Gravitational: $|\Delta P| \propto 1/r^2$ in the displayed model, with a baseline coefficient $\sim10^{-36}$ of the electromagnetic coefficient and analyzed inverse-ratio range $10^{-39}$–$10^{-33}$ (Proposition L.5)
-- Protocol: Logarithmic distance scan; fit scaling exponent and amplitude
-
-**Test 3 (Frequency Dependence):** Vary modulation frequency $\omega$ of context state:
-- EM prediction: Strong resonance at $\omega \approx \omega_{TLS}$ (AC Stark, Corollary L.2.1)
-- Gravitational prediction: a quasi-static low-frequency response may be tested for $\omega\ll1/\tau_{medium}$; frequency independence is an additional response-model hypothesis, not a conclusion of Theorem L.8
-- Protocol: Sweep $\omega_{rad}$ through target resonance; measure $|\Delta P(\omega)|$
-
-**Test 4 (Shielding Response):** Apply selective shielding:
-- EM shielding (Faraday cage): Should eliminate EM contribution
-- Gravitational shielding: Not possible (equivalence principle)
-- Protocol: Compare CC effect with/without EM shielding at constant $P_{context}$
-
-**Expected Outcome:** EM dominance (Proposition L.5) predicts Tests 1-3 follow EM scaling, Test 4 shows strong shielding effect. Observation of gravitational-dominated behavior would require $\mathcal{R} \lesssim 1$, contradicting Proposition L.5 and indicating new physics.
+Compare the two models by a declared likelihood or finite-distance statistic with a stopping rule and multiplicity correction. A result supports one registered model only if it rejects the other within the shared uncertainty ledger. Proposition L.5 supplies neither a dominance expectation nor a numerical response ratio; nonidentifiability or rejection of both leaves the carrier question open.
 
 ### S.8.5 Theoretical Integration Points
 
 Several framework elements require both appendices for complete understanding:
 
-**1. CC deterministic endpoint-forcing bound ($\alpha_{CC,\max} < 0.5$)**
-- Information-theoretic derivation: Theorem 39 (Section 10)
-- Gravitational interpretation: Section S.5 (this appendix)
-- Both perspectives necessary; neither sufficient alone
+**1. Bounded-bias premise and endpoint-complete consequence**
+- Branch premise: $\alpha_{CC,\max}<0.5$
+- Endpoint-complete consequence: Theorem 39 (Section 10)
+- Conditional gravitational interpretation: Section S.5 (this appendix)
+- The branch premise, theorem consequence, and gravitational model remain logically distinct
 
 **2. Context power requirement**
 - Scaling law: Equation S.5 (this appendix)
@@ -1219,7 +1164,7 @@ This appendix develops a conditional gravitational-feedback model for operationa
 2. **Source term:** The context contribution to stress-energy uses the retained instantaneous energy $\eta_{\mathrm{ret}}P_{context}\tau_c$ and a specified perfect-fluid closure.
 3. **Proper-time response:** $\Delta\tau_d=KP_{context}$ follows for the uniform spherical, weak-field geometry, with $K$ carrying $\eta_{\mathrm{ret}}$.
 4. **Utility maximizer:** S.27 is the unique interior maximizer of the truncated phenomenological utility when its small-CC and weak-response conditions hold. Appendix-D concentration requires an additional potential-identification and detailed-balance package.
-5. **Collapse ceiling:** $r_s<R_S$ gives a system-dependent ceiling distinct from the universal bounded-bias endpoint.
+5. **Collapse ceiling:** $r_s<R_S$ gives a system-dependent ceiling distinct from the independently declared bounded-bias endpoint.
 6. **Entangled statistics:** A local gravitational phase channel can change selected joint correlations while preserving Bob's marginal. It does not realize a late-randomized Bob-marginal anomaly.
 7. **Phase and dephasing:** Deterministic time dilation gives coherent phase rotation. Dephasing requires unresolved noise, a source trace, or the saturated chronometric ND-RID response law.
 8. **Appendix-L composition:** Electromagnetic and gravitational maps compose only for an implementation satisfying both source, partition, response, and causal certificates.

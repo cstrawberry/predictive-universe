@@ -35,7 +35,7 @@ A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Pr
 
 An MPU is a qualifying full-loop implementation that attains $C_P=C_{op}$ on the declared nonempty implementation class. It has the dual Internal Prediction and 'Evolve'/ND-RID dynamics of Definitions 26–27. The inequalities $C_{op}\ge K_0=3$ and $d_0\ge8$ apply only when the MPU additionally satisfies Theorem 15's (O1)–(O3), (FC) SPAP-register conditions, represents the eight contexts as mutually perfectly distinguishable Hilbert alternatives, and obeys Corollary 3's complexity-capacity bridge.
 
-**Recall of Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
+**Recall of Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. On a registered cyclic-reset branch satisfying Definition 28, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$, with a positive uniform floor only when $H_q(P\mid R)\ge h_{\min}>0$. Independently, when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$. Neither physical branch follows from the definition of ND-RID alone.
 
 ### A.0.2 Foundation I: Conditional Property R from Predictive Closure Structure
 
@@ -281,6 +281,8 @@ K_0=3,
 [[23,1,7]]\ \text{CSS witness}
 \Longrightarrow
 \mathfrak C_{\mathrm{QEC}}
++
+\text{robustness, working-memory, protected-gate, and circuit-execution certificates}
 \Longrightarrow
 \text{Effective Operational Property R on covered windows}.
 \tag{A.0.2a.1}
@@ -458,24 +460,47 @@ where $\gamma_p>1$ and $r_p(T_{\text{eff}})>0$ (Definition 3a), with $T_{\text{e
 
 **Lemma A.0.2 (Divergence of Reliability Cost in the Exact Power-Law Model):** Assume
 $$
-C_{\text{err}}(p)=A\ln\!\left(\frac{p_{\text{err},0}}p\right),
+p_{\mathrm{err},0}>0,
 \qquad
-R(C)=r_p(T_{\mathrm{eff}})C^{\gamma_p},
+A>0,
 \qquad
-\gamma_p>1.
+\lambda>0,
+\qquad
+r_p(T_{\mathrm{eff}})>0,
+\qquad
+\gamma_p>1,
 $$
-Then
+and, for $0<p<p_{\mathrm{err},0}$,
 $$
-V_{\text{rel}}'(p)
+C_{\mathrm{err}}(p)=A\ln\!\left(\frac{p_{\mathrm{err},0}}p\right),
+\qquad
+R(C)=r_p(T_{\mathrm{eff}})C^{\gamma_p}.
+$$
+Then, for every $0<p<p_{\mathrm{err},0}$,
+$$
+V_{\mathrm{rel}}'(p)
 =
 -\lambda r_p(T_{\mathrm{eff}})\gamma_pA^{\gamma_p}
 \frac{[\ln(p_{\mathrm{err},0}/p)]^{\gamma_p-1}}p
 <0
 \tag{A.0.5}
 $$
-and $\lim_{p\to0^+}V_{\text{rel}}'(p)=-\infty$.
+and $\lim_{p\to0^+}V_{\mathrm{rel}}'(p)=-\infty$.
 
-*Proof.* Substitute the two assumed functions into $V_{\mathrm{rel}}=\lambda R(C_{\mathrm{err}})$ and apply the chain rule. Both $p^{-1}$ and the nonnegative logarithmic factor diverge as $p\to0^+$, giving the limit. ∎
+*Proof.* Put $L(p):=\ln(p_{\mathrm{err},0}/p)$. On the declared domain, $L(p)>0$ and $L'(p)=-1/p$. Substitution gives
+$$
+V_{\mathrm{rel}}(p)
+=
+\lambda r_p(T_{\mathrm{eff}})A^{\gamma_p}L(p)^{\gamma_p}.
+$$
+Therefore
+$$
+V_{\mathrm{rel}}'(p)
+=
+\lambda r_p(T_{\mathrm{eff}})A^{\gamma_p}\gamma_p
+L(p)^{\gamma_p-1}\left(-\frac1p\right),
+$$
+which is Equation (A.0.5). Every factor preceding the minus sign is strictly positive, proving $V_{\mathrm{rel}}'(p)<0$. As $p\downarrow0$, both $p^{-1}$ and $L(p)^{\gamma_p-1}$ tend to $+\infty$, so the derivative tends to $-\infty$. ∎
 
 **Stage 3: Penalty for Allowing Errors**
 Errors degrade predictive performance, reducing benefit term $V_{\text{benefit}}$, equivalent to adding error penalty $V_{\text{err}}$.
@@ -493,7 +518,20 @@ P_{\text{succ}}
 (1-p_{\text{err}})^T.
 \tag{A.0.6}
 $$
-Equality in the final inequality holds when every $\mathbb P(F_t)=p_{\text{err}}$.
+If $0\le p_{\mathrm{err}}<1$, equality in the final inequality holds exactly when every $\mathbb P(F_t)=p_{\mathrm{err}}$. At the excluded endpoint $p_{\mathrm{err}}=1$, equality with the zero lower bound requires only that at least one gate fail almost surely.
+
+*Proof.* Let $F_t$ be the event that gate $t$ fails. Then
+$$
+P_{\mathrm{succ}}
+=1-\mathbb P\!\left(\bigcup_{t=1}^TF_t\right)
+\ge1-\sum_{t=1}^T\mathbb P(F_t)
+\ge1-Tp_{\mathrm{err}}
+$$
+by the union bound. If the $F_t$ are independent, their complements are independent, so
+$$
+P_{\mathrm{succ}}=\prod_{t=1}^T(1-\mathbb P(F_t))\ge(1-p_{\mathrm{err}})^T.
+$$
+For $p_{\mathrm{err}}<1$, every factor is at least the positive number $1-p_{\mathrm{err}}$, and equality of the product holds exactly when every factor equals it. The endpoint statement follows because a finite product of nonnegative factors is zero exactly when one factor is zero. ∎
 
 **Lemma A.0.4c (Success Probability Lower Bound Without Independence).**
 Let $F_t$ be the event that the $t$-th logical gate fails, with $\mathbb P(F_t)\le p_{\text{err}}$ for each $t=1,\dots,T$. Then
@@ -519,12 +557,18 @@ $$
 
 *Proof.* The first bound is the union bound. Under independence, the complement events are independent, so their intersection probability is the displayed product. Each factor is at least $1-p_{\text{err}}$, proving the second bound. ∎
 
-**Definition A.0.4 (Effective Complexity):** Errors reduce effective complexity contributing to performance:
+**Definition A.0.4 (Effective Complexity on the Independent Equal-Error Branch):** Assume the $T$ logical-gate failure events are mutually independent and each has probability exactly $p_{\text{err}}$. Define
 $$
-C_{\text{eff}}(p_{\text{err}}) := C_{\text{alloc}} P_{\text{succ}}(T, p_{\text{err}}) = C_{\text{alloc}} (1 - p_{\text{err}})^T \quad \text{(A.0.7)}
+C_{\text{eff}}(p_{\text{err}})
+:=
+C_{\text{alloc}}P_{\text{succ}}(T,p_{\text{err}})
+=
+C_{\text{alloc}}(1-p_{\text{err}})^T
+\quad \text{(A.0.7)}
 $$
+On branches without independence or equal failure probabilities, $P_{\text{succ}}$ is the actual joint success probability and Theorem A.0.4 supplies only the corresponding lower bounds.
 
-**Proposition A.0.5 (Error-Induced Benefit Loss):** Let $T\ge1$, $\Gamma_0>0$, $C_{\mathrm{alloc}}>0$, and assume $PP$ is differentiable with $PP'(c)>0$ on $0<c\le C_{\mathrm{alloc}}$. Define
+**Proposition A.0.5 (Error-Induced Benefit Loss):** On the independent equal-error branch of Definition A.0.4, let $T\ge1$, $\Gamma_0>0$, $C_{\mathrm{alloc}}>0$, and assume $PP$ is differentiable with $PP'(c)>0$ on $0<c\le C_{\mathrm{alloc}}$. Define
 $$
 V_{\text{err}}(p_{\text{err}})
 :=\Gamma_0[PP(C_{\text{alloc}})-PP(C_{\text{eff}}(p_{\text{err}}))].
@@ -812,25 +856,25 @@ and let $\mathcal G_r$ be the $\sigma$-algebra generated by the admissible histo
 $$
 \mathbb P(C_r\mid\mathcal G_r)=p_{err}
 $$
-almost surely. Put $K_0:=\Omega$ and, for $j\ge1$,
+almost surely. Put $E_0:=\Omega$ and, for $j\ge1$,
 $$
-K_j:=\bigcap_{i=0}^{j-1}C_{t+i}.
+E_j:=\bigcap_{i=0}^{j-1}C_{t+i}.
 $$
-Since $K_j\in\mathcal G_{t+j}$, the tower property gives
+Since $E_j\in\mathcal G_{t+j}$, the tower property gives
 $$
 \begin{aligned}
-\mathbb P(K_{j+1})
+\mathbb P(E_{j+1})
 &=
 \mathbb E\!\left[
-\mathbf 1_{K_j}\mathbb P(C_{t+j}\mid\mathcal G_{t+j})
+\mathbf 1_{E_j}\mathbb P(C_{t+j}\mid\mathcal G_{t+j})
 \right] \\
 &=
-p_{err}\mathbb P(K_j).
+p_{err}\mathbb P(E_j).
 \end{aligned}
 $$
-Induction from $\mathbb P(K_0)=1$ yields
+Induction from $\mathbb P(E_0)=1$ yields
 $$
-\mathbb P(K_k)=p_{err}^{k}.
+\mathbb P(E_k)=p_{err}^{k}.
 $$
 Thus the probability of remaining correct for $k$ consecutive diagonal cycles is $p_{err}^{k}$, which tends to zero because $0<p_{err}<1/2$. ∎
 
@@ -1039,9 +1083,9 @@ Physical use of Theorems A.2.3–A.2.4 therefore requires a scalable coded RID f
 
 * **Logical Indeterminacy:** SPAP excludes a single universally exact predictor on its stated diagonal-closed class. RUD excludes a total uniform $\mathsf{TERM}$ decider on the stated coded terminal-simulation class, with the separately qualified bounded probabilistic extension of Theorem A.2.4.
 * **Physical Stochastic Closure:** Principle 11b requires the PPI-complete convex invariant response ledger when the registered finite reflexive map has no pure fixed point. For binary negation, Theorem 11b proves $q(\phi\mid R)=1/2$ and $H_{\mathrm{Sh}}(\Phi\mid R)=\ln2$. Principle 8.0c identifies that ledger with the registered single-run outcome probabilities; a frequency law additionally requires an i.i.d., exchangeable, or stationary-ergodic repeated-trial certificate.
-* **Quantum Reconstruction:** Principle 8.0b supplies the sharp homogeneous carrier certificate and Theorem 8.0d fixes $\mathcal H_0\cong\mathbb C^8$. Theorem 8.2 and Lemma 8.2a give quotient noncontextuality and finite additivity; Theorem 8.3 proves the Born trace rule.
+* **Quantum Reconstruction:** Principle 8.0b supplies the sharp homogeneous carrier certificate and Theorem 8.0d fixes $\mathcal H_0\cong\mathbb C^8$. Theorem 8.2 removes response-null labels, and Lemma 8.2a supplies retained-refinement additivity. Definition 8.2b's independently accepted $\mathfrak C_{\mathrm{Born}}$ then supplies full projection/effect coverage or a finite informationally complete positive reconstruction; Theorem 8.3 proves the Born trace rule only on that certified domain.
 * **Complexity Costs of Prediction:** On a task class carrying the certificate $\mathfrak C_{B.2}$, Theorem 14 supplies the log-enhanced quadratic lower bound $C_{\mathrm{uni}}(\delta_{\mathrm{SPAP}})=\Omega\!\left(\log(1/\delta_{\mathrm{SPAP}})/\delta_{\mathrm{SPAP}}^{2}\right)$, so verification and update complexity on that class diverges as the gap $\delta_{\mathrm{SPAP}}$ to $\alpha_{SPAP}$ closes (Appendix B.3; Theorem B.2). Transfer of that bound to $C_P$ uses its declared domination bridge.
-*   **Limits on Interaction:** RUD theorems A.2.3-A.2.4 exclude a total uniform decider for $\mathsf{TERM}$ on the stated effectively coded pointed RID class. The probabilistic result additionally requires a computable finite runtime bound, computable complete finite support lists with rational probabilities, and fixed positive advantage. This complements the thermodynamic channel capacity bounds ($C_{\max} < \ln d_0$) derived in Appendix E from the irreversibility ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$) of ND-RID.
+*   **Limits on Interaction:** RUD theorems A.2.3-A.2.4 exclude a total uniform decider for $\mathsf{TERM}$ on the stated effectively coded pointed RID class. The probabilistic result additionally requires a computable finite runtime bound, computable complete finite support lists with rational probabilities, and a specified positive advantage. This complements two independent Appendix E capacity branches: a completed tensor-factor reset-support certificate gives $C_{\max}\le\ln d_0-\ln r$, while an input-independent refresh/minorization component gives $C_{\max}<\ln d_0$. Theorem 31 separately gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ on its registered cyclic-reset branch, with a positive floor only when $H_q(P\mid R)\ge h_{\min}>0$. None of these physical branch conditions follows from the definition of ND-RID alone.
 
 These core logical and computational limitations, derived rigorously under the assumption of Effective Operational Property R (motivated by POP/PCE dynamics), are foundational constraints shaping the emergent quantum mechanics, thermodynamics, information processing limits, and gravitational dynamics within the Predictive Universe framework.
 

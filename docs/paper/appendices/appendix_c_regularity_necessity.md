@@ -70,12 +70,19 @@ $$
 $$
 
 ### C.3.2 Bound on Spatial $C_P$ Variation Across Links
-The adaptation dynamics driven by PCE (e.g., Law of Prediction, main text Section 6, and the global minimization of $V(x)$ as per main text Appendix D) lead to a spatially correlated complexity distribution. For neighboring vertices $v, u$ (connected by a single ND-RID link, $d(v,u)=1$), the difference in instantaneous Predictive Physical Complexity $C_P$ is bounded:
+Assume the common bounded operating range stated in Section C.3.1:
 $$
-|C_P(v)-C_P(u)| \;\le\; L_{C_P},
+C_P(v)\in[C_{op},C_{\max,\mathrm{phys}}]
+\qquad\text{for every }v.
+$$
+Then neighboring vertices $v,u$ satisfy
+$$
+|C_P(v)-C_P(u)|
+\le C_{\max,\mathrm{phys}}-C_{op}
+=:L_{C_P}<\infty.
 \tag{C.5}
 $$
-where $L_{C_P} < \infty$ is an effective Lipschitz constant for the spatial variation of $C_P$ between adjacent MPUs. This bound arises because PCE disfavors excessively sharp spatial gradients in $C_P$, which would incur high propagation costs (part of $V_{prop}$ in main text Def D.1) or lead to inefficient resource allocation. The finite rate of complexity adaptation (main text Equation 30) and the local nature of MPU interactions contribute to this emergent spatial smoothness.
+This is the uniform diameter bound of the assumed operating interval. PCE, locality, and the finite temporal adaptation rate of Equation (30) do not by themselves establish a smaller edgewise spatial modulus or spatial correlation; any such strengthened estimate requires an additional registered gradient or comparison certificate.
 
 ### C.3.3 Bounding Total Variation and Deriving the Ricci Lower Bound
 The difference between the probability distributions $P_{v\bullet}$ and $P_{u\bullet}$ is primarily driven by the difference in the exponential weighting terms $\exp(-\lambda_{R} I'(C_P(x)))$. Applying the Mean Value Inequality to these exponential factors:
@@ -158,8 +165,9 @@ $$
 \le\operatorname{Lip}(w)W_1(\mu_v,\mu_u)
 \le\lambda_RML_{C_P}C_{geom}.
 $$
-Substituting this bound into the previous display proves the general estimate and, under the additional baseline-row discrepancy hypothesis, Equation (C.7). ∎ Define
+Substituting this bound into the previous display proves the general estimate and, under the additional baseline-row discrepancy hypothesis, Equation (C.7). ∎
 
+Define
 $$
 \eta_{R} \;:=\; \frac32 e^{\lambda_R B}
 \left(\delta_\mu+C_{geom}\lambda_R M L_{C_P}\right).
@@ -405,19 +413,19 @@ Thus RE fails for all sufficiently large $L$ on the registered non-amortized tra
 
 This section derives two conditional penalties from curvature fluctuations. The resource-efficiency estimate requires the curvature-load and external-innovation certificates together with uniform strong convexity of the operational cost. The local-viability estimate requires mutually independent failure events and an external tracking bound relating their mean probability to complexity variance. Curvature variance or absence of a positive curvature lower bound alone implies neither penalty.
 
-**Theorem C.3 (Predictive Load Volatility on the Curvature-Load Coupling Branch).** Under this branch, regions $R_{fluct} \subset \mathcal V$ exhibiting large curvature fluctuations have high volatility in the external load $\hat C_{actual}(v)$. High volatility of the internal coordinate $\hat C_{target}(v)$ follows only on a branch carrying an external innovation certificate that identifies $\hat C_{target}$ with $\hat C_{actual}$ within registered error; Equation (38) alone supplies no such identification.
+**Theorem C.3 (Scope of the Curvature–Load Coupling Branch).** Let $\hat C_{\mathrm{actual}}:\mathcal V\to[0,\infty)$ be a registered external-load field. Equations (C.1)–(C.14) and Equation (38) do not by themselves imply a lower bound on $\operatorname{Var}(\hat C_{\mathrm{actual}})$ from curvature variance or from the absence of a positive curvature lower bound. Such an inference requires an independently registered quantitative curvature-to-load transfer certificate. An inference for $\operatorname{Var}(\hat C_{\mathrm{target}})$ additionally requires an external innovation or tracking certificate relating $\hat C_{\mathrm{target}}$ to $\hat C_{\mathrm{actual}}$ within a stated error.
 
-
-
-*Proof:* The curvature-load coupling branch supplies the physical premise that discrete Ricci curvature controls not only geometric transport rates (Wasserstein contractivity) but also the complexity of the local predictive task through its effect on information propagation pathways. Under this coupling: positive curvature ($\kappa_R > 0$) implies pathways converge locally, simplifying the task of integrating information from neighbors and predicting local dynamics (lower actual complexity $\hat{C}_{\text{actual}}$). Negative or highly fluctuating curvature implies pathways diverge unpredictably, making local prediction harder due to rapid information dispersion or unstable focusing (higher or more volatile $\hat{C}_{\text{actual}}$). On this branch, large spatial variations $\operatorname{Var}(\kappa_{\mathcal{N}})$ or the absence of a uniform positive lower bound correspond to large spatial variations or volatility $\operatorname{Var}(\hat{C}_{\text{actual}}(v))$ in the local predictive environment's complexity. Equation (38) homeostatically regulates $\hat C_{target}(v)$ but does not by itself prove tracking of $\hat C_{actual}(v)$. On a branch carrying an external innovation certificate that identifies those scales within error, high $\operatorname{Var}(\hat C_{actual}(v))$ transfers to the certified target-scale variance; without that certificate this tracking step remains a branch hypothesis.
-
- The curvature-to-load coupling itself is a physical input supplied by this branch, not a mathematical deduction from the synthetic Ricci definition alone; a branch-independent derivation of the coupling strength is a separate derivation requirement. QED
+*Proof.* Equations (C.1)–(C.14) define the graph metric, transition kernels, synthetic curvature, and their dependence on $C_P$ and $I'$. None contains $\hat C_{\mathrm{actual}}$. Fix any graph, kernel, and $C_P$ data satisfying those equations and assign the constant external-load field $\hat C_{\mathrm{actual}}(v)=c$. This assignment leaves every preceding equation and every curvature value unchanged while giving
+$$
+\operatorname{Var}(\hat C_{\mathrm{actual}})=0.
+$$
+Hence curvature variance alone cannot imply positive external-load variance. Equation (38) supplies an internal target-update law but no quantitative comparison between $\hat C_{\mathrm{target}}$ and $\hat C_{\mathrm{actual}}$, so the corresponding target-variance inference also requires an independent tracking certificate. ∎
 
 **Theorem C.4 (Operational Cost and Stability Penalty for Curvature Fluctuations).** On the curvature-load branch together with the external innovation certificate required by Theorem C.3, MPU networks $\mathcal N_{unbounded}$ whose curvature fluctuations induce high certified spatial variance $\operatorname{Var}(\hat C_{target}(v))$ incur the following conditional resource-efficiency (RE) and local-viability (LV) penalties:
 
 
 
-* **(i) Excess Operational Cost (RE Violation):** Assume that a registered adaptation/tracking estimate supplies a quantitative lower bound $\operatorname{Var}(C_v)\geq s_C^2$ for the configuration under study. The curvature-load coupling and Equation (30) alone do not supply this variance-transfer bound. Let $f(C_v) = \langle \lambda \hat{R}(C_v) + \hat{R}_I(C_v) \rangle_{\rho^{(v)}}$ represent the local expected operational cost rate associated with complexity $C_v$. The physical cost function $R(C)$ is strictly convex ($\gamma_p>1$), while $R_I(C)$ is concave (Definition 3). For the total cost $f(C)$ to be convex ($f''(C) > 0$), we require $\lambda R''(C) > |R_I''(C)|$. This condition is satisfied if the **Dominance of Stabilizing Costs (DSC)** condition (introduced in the statement of Theorem 22, Section 6.5.2) holds, ensuring $f''(C) \ge f''_{min} > 0$. In addition, since $f$ is increasing, any locally forced increase in $C$ (needed to match local targets under curvature fluctuations) raises $V_{op}$ pointwise; combined with convexity this yields the quantitative variance penalty $\Delta V_{op}\ge \frac{N}{2}f''_{min}\,\text{Var}(C_v)$ (Equation C.15). This convexity reflects that fundamental costs increase super-linearly with complexity. The total operational cost across the network is $V_{op} = \sum_{v=1}^N f(C_v)$. By Jensen's inequality for convex functions, $\frac{1}{N}\sum f(C_v) \ge f(\frac{1}{N}\sum C_v)$, or $V_{op} \ge N f(\bar{C})$, where $\bar{C}$ is the average complexity. Assume that every $C_v$ lies in an interval on which $f\in C^2$ and $f''(C)\geq f''_{min}>0$. Taylor's theorem with integral remainder gives, for $x=C_v-\bar C$,
+* **(i) Excess Operational Cost (conditional RE penalty):** Assume that a registered adaptation/tracking estimate supplies a quantitative lower bound $\operatorname{Var}(C_v)\geq s_C^2$ for the configuration under study. The curvature-load coupling and Equation (30) alone do not supply this variance-transfer bound. Let $f(C_v) = \langle \lambda \hat{R}(C_v) + \hat{R}_I(C_v) \rangle_{\rho^{(v)}}$ represent the local expected operational cost rate associated with complexity $C_v$. The physical cost function $R(C)$ is strictly convex ($\gamma_p>1$), while $R_I(C)$ is concave (Definition 3). For the total cost $f(C)$ to be convex ($f''(C) > 0$), we require $\lambda R''(C) > |R_I''(C)|$. This condition is satisfied if the **Dominance of Stabilizing Costs (DSC)** condition (introduced in the statement of Theorem 22, Section 6.5.2) holds, ensuring $f''(C) \ge f''_{min} > 0$. In addition, since $f$ is increasing, any locally forced increase in $C$ (needed to match local targets under curvature fluctuations) raises $V_{op}$ pointwise; combined with convexity this yields the quantitative variance penalty $\Delta V_{op}\ge \frac{N}{2}f''_{min}\,\text{Var}(C_v)$ (Equation C.15). This convexity reflects that fundamental costs increase super-linearly with complexity. The total operational cost across the network is $V_{op} = \sum_{v=1}^N f(C_v)$. By Jensen's inequality for convex functions, $\frac{1}{N}\sum f(C_v) \ge f(\frac{1}{N}\sum C_v)$, or $V_{op} \ge N f(\bar{C})$, where $\bar{C}$ is the average complexity. Assume that every $C_v$ lies in an interval on which $f\in C^2$ and $f''(C)\geq f''_{min}>0$. Taylor's theorem with integral remainder gives, for $x=C_v-\bar C$,
 $$
 f(\bar C+x)
 =f(\bar C)+f'(\bar C)x
@@ -432,7 +440,7 @@ $$
 =\frac N2f''_{min}\operatorname{Var}(C_v).
 \tag{C.15}
 $$
-Since $f''_{min} > 0$, large Var$(C_v)$ (driven by large Var$(\kappa_{\mathcal{N}})$ or absence of uniform positive bound) leads to a significant excess operational cost $\Delta V_{op}$. This excess $\Delta V_{op}$ directly contributes to a higher $V_{op}(x)$ component in the PCE Potential (Definition D.1), representing an inefficient allocation of resources penalized by PCE, thus violating RE.
+Since $f''_{min}>0$, a certified lower bound on $\operatorname{Var}(C_v)$ gives a positive excess operational cost $\Delta V_{op}$. This excess directly contributes to the $V_{op}(x)$ component of the PCE Potential (Definition D.1), representing a resource penalty relative to the uniform configuration at the same mean. It constitutes an RE violation only when the resulting lower bound on $V_{\mathrm{total}}$ exceeds $V_{\max}$, as required in Theorem C.5(3); Equation (C.15) alone does not establish that inequality.
 * **(ii) Reduced Local Stability (conditional LV penalty):** Let $F_v$ be the event that MPU $v$ violates the viability bounds $(\alpha,\beta)$ during the registered adaptation interval, and write $p_v:=\mathbb P(F_v)$. Assume on this branch that the events $F_1,\ldots,F_N$ are mutually independent and that an external tracking estimate supplies the quantitative bound
 $$
 \bar p:=\frac1N\sum_{v=1}^Np_v

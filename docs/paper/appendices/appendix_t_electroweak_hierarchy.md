@@ -12,7 +12,7 @@ The electroweak sector presents three fundamental puzzles:
 2. **The Weinberg Angle**: Why is $\sin^2\theta_W(M_Z) \approx 0.231$?
 3. **The Higgs Mass**: Why is $m_H \approx 125$ GeV (near the metastability boundary)?
 
-Within the Predictive Universe framework, the electroweak exponent and the target-shift-dependent fixed-point quartic formula are derived from the Golay-Steiner/Grassmannian branch, while the numerical zero-slack value additionally requires the accepted moment-map datum of Definition T.22a. The quantitative gauge-threshold hierarchy is formulated on the minimal flag lift
+Within the Predictive Universe framework, Theorem T.5 derives the exact marked-pair Steiner incidence action $\kappa_{\mathrm{St}}=77/2$. Calling it the electroweak exponent requires the independently accepted active-response-to-marked-pair, unit-clock, observable-intertwining, and action-normalization record $\mathfrak C_{A\to\mathrm{St}}$ of Principle T.13a. The target-shift-dependent quartic formula is a separate Grassmannian branch, and its numerical zero-slack value additionally requires Definition T.22a's accepted moment-map datum. The quantitative gauge-threshold hierarchy is formulated on the minimal flag lift
 $$
 \pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to \mathrm{Gr}(2,8)
 $$
@@ -21,7 +21,7 @@ characterized by Theorem G.8.4e.1 in Appendix G. This appendix therefore uses a 
 $$
 \boxed{
 \begin{aligned}
-v &= A_{EW} \, e^{-\kappa_{EW}} \, M_{Pl}, \quad \kappa_{EW} = 38.5 \\[6pt]
+v &= A_{EW}e^{-\kappa_{EW}}M_{Pl},\quad \kappa_{EW}=\kappa_{\mathrm{St}}=77/2\quad\text{on the joint T.13a/T.6a branch} \\[6pt]
 \sin^2\theta_W^{(0)} &= \frac{3}{8},\quad \sin^2\theta_W(\mu_G) = \frac{3 Z_2}{3 Z_2 + 5 Z_1} \quad \text{(Definition T.17; Definition T.17a)} \\[6pt]
 \lambda_{\mathrm{PU}}(\mathfrak{A}_{PU};\gamma) &= \frac{\gamma^2-1}{36},\qquad
 \lambda_{\mathrm{PU}}(\mathfrak{A}_{PU})=0\ \text{only on the accepted }\gamma=1\text{ branch}
@@ -310,14 +310,14 @@ In particular, no row of $P$ sums to 1, so $P\mathbf{1}_{12} \neq \mathbf{1}_{12
 
 ### T.2.3 The Signal-Parity Decomposition
 
-**Proposition T.1c** (Signal-Parity Structure on the Predictive-Recovery MacWilliams Branch). On the predictive-recovery MacWilliams branch — the same branch supplied by Definition Z.13b.0 and Theorem Z.13b.0a (Appendix Z), and propagated to Theorem P.13.12 (Appendix P) and Theorem R.4.4 (Appendix R) — the $M = 24$ QFI interface modes decompose into:
+**Proposition T.1c** (Signal-Parity Structure on the Predictive-Recovery MacWilliams Branch). On the predictive-recovery MacWilliams rate branch of Definition Z.13b.0 and Theorem Z.13b.0a, supplemented by an accepted $\mathfrak C_{\mathrm{dist}}$ and a chosen marked systematic Golay representative, the abstract binary code-coordinate carrier decomposes into:
 
-- **Signal subspace** $\mathcal{S}$: $k = 12$ information-carrying modes
-- **Parity subspace** $\mathcal{P}$: $k = 12$ redundancy modes
+- **signal-coordinate block** $\mathcal S_{\mathrm{code}}\cong\mathbb F_2^{12}$;
+- **parity-coordinate block** $\mathcal P_{\mathrm{code}}\cong\mathbb F_2^{12}$.
 
-with the parity modes determined by $p = Ps$ for signal vector $s$.
+For a binary signal word $s$, the systematic representative is $(s,Ps)$. Convention T.2.1 also reuses the $0/1$ array $P$ with ordinary real multiplication, but this basis-dependent matrix model is not a scalar extension or linear lift of the $\mathbb F_2$ code: no field embedding $\mathbb F_2\hookrightarrow\mathbb R$ exists. Identifying codewords with QFI interface records requires an independently accepted finite/set encoder together with a response-preserving map that is injective on the retained quotient and intertwines declared updates and observables.
 
-*Proof.* On the predictive-recovery MacWilliams branch, Theorem Z.13b.0a fixes the split of the $M=24$ interface modes into $k=M/2=12$ information modes and $M-k=12$ redundancy modes, and Theorem Z.13b then selects the extended binary Golay code $[24,12,8]$. The generator matrix $G=[I_{12}\mid P]$ maps 12-bit signals to 24-bit codewords, establishing the decomposition. ∎
+*Proof.* Theorem Z.13b.0a fixes only the binary code dimension $k=12$ at length $24$. On an accepted $\mathfrak C_{\mathrm{dist}}$, Theorem Z.13b selects the Golay coordinate-permutation equivalence class; choosing the displayed systematic representative gives the binary map $s\mapsto(s,Ps)$ and hence the two coordinate blocks. No step maps the $2$-torsion group $\mathbb F_2^{24}$ linearly into a torsion-free real or complex carrier. If a separate finite encoder and response intertwiner are accepted, their finite injectivity, update-commutation, and observable-preservation tests transport the labeled decomposition to the covered physical records; otherwise the conclusion remains purely coding-theoretic. ∎
 
 -----
 
@@ -327,15 +327,15 @@ with the parity modes determined by $p = Ps$ for signal vector $s$.
 
 The connected-cover notation $SU(3)_C\times SU(2)_L\times U(1)_Y$ represents the twelve-dimensional gauge algebra selected in Appendix G. The global form, including a possible quotient by $\mathbb Z_6$, requires the determinant/global-form certificate. The electroweak sector $SU(2)_L \times U(1)_Y$ has dimension 4 and acts on left-chiral fermions.
 
-**Definition T.3a** (Left-Chiral Information Modes on the Weak-Left Projection Branch). On the weak-left projection branch — under which the $SU(2)_L$ chiral interaction selects exactly $k/2 = 6$ of the $k = 12$ Golay signal modes — the left-chiral projection $\Pi_L: \mathbb{R}^{12} \to \mathbb{R}^6$ is the rank-6 projection onto these directions:
+**Definition T.3a** (Left-Chiral Information Modes on the Weak-Left Projection Branch). Let $\mathcal S_{\mathbb R}\cong\mathbb R^{12}$ be a separately postulated real response carrier with twelve marked coordinates; it is not obtained from $\mathbb F_2^{12}$ by scalar extension. A weak-left projection record consists of a rank-$6$ partial isometry $\Pi_L:\mathcal S_{\mathbb R}\to\mathbb R^6$, a finite/set encoder from selected code records when code labels are used, a response-preserving carrier map injective on the retained quotient, and an $SU(2)_L$ action whose chiral response subspace is the image of $\Pi_L$. The record must verify update commutation and equality of the declared response observables. On that record, the left-chiral coordinates are
 $$
 x = \Pi_L s, \quad x \in \mathbb{R}^6, \quad s \in \mathbb{R}^{12}
 $$
 where $\Pi_L \in \mathbb{R}^{6 \times 12}$ satisfies $\Pi_L \Pi_L^T = I_6$.
 
-The factor $k/2 = 6$ reflects the chiral asymmetry of the weak interaction on the weak-left projection branch. On the signal-pair Lagrangian branch below, the rank-six statement is forced by maximal isotropy of the signal symplectic form; the remaining choice is the weak-left orientation line fixed by the $SU(2)_L$ chirality label.
+The number $6$ is not inferred from code rate or chirality alone. It is part of the weak-left realization record and is independently reproduced on the signal-pair Lagrangian branch when a nondegenerate symplectic form on the realized $12$-dimensional response carrier makes a maximal isotropic subspace six-dimensional; the weak-left orientation line remains supplied by the registered $SU(2)_L$ chirality action.
 
-**Definition T.3a.1** (Signal-Pair Symplectic Datum). On the signal-pair branch, the Golay signal space $\mathcal S\simeq\mathbb R^{12}$ carries the factorization
+**Definition T.3a.1** (Signal-Pair Symplectic Datum). On the signal-pair branch, the separately postulated real response carrier $\mathcal S_{\mathbb R}\simeq\mathbb R^{12}$ carries the additional factorization
 $$
 \mathcal S=\mathcal G_6\otimes\mathbb R^2,
 \tag{T.3a.1}
@@ -390,7 +390,7 @@ $$
 \widetilde\kappa_{\mathrm{G}}
 =bn_L+n_{\mathrm{coset}}^{\mathbb C}-\frac m2.
 $$
-This comparator controls a prefactor power on that fluctuation model. It is not the electroweak action $\kappa_{EW}$ of Definition T.13, which is fixed by the Steiner incidence minimization of Theorem T.5.
+This comparator controls a prefactor power on that fluctuation model. It is not the native marked-pair action $\kappa_{\mathrm{St}}$ proved by Theorem T.5. The electroweak quantity $\kappa_{EW}$ is defined from $\kappa_{\mathrm{St}}$ only on an accepted $\mathfrak C_{A\to\mathrm{St}}$ of Principle T.13a.
 
 **Proposition T.2b** (Equivalent Forms of $N_0$). The base complexity $N_0 = 36$ admits equivalent expressions:
 $$
@@ -584,228 +584,173 @@ $$
 
 -----
 
-## T.6 Derivation of $\kappa_{EW}$
+## T.6 Marked-Pair Steiner Action and Electroweak Realization Gate
 
 ### T.6.1 Complexity Counting
-**Definition T.13 (Steiner Incidence Electroweak Action).** Let $\mathcal P_2([24])$ be the $276$ unordered pairs of interface labels and let $\mathcal O_8$ be the octads of the Steiner system $S(5,8,24)$. Define
+**Definition T.13 (Marked-Pair Steiner Quadratic Action).** Let $\mathcal P_2([24])$ be the unordered pairs of interface labels and $\mathcal O_8$ the octads of $S(5,8,24)$. Define
 $$
 B_{O,p}:=\mathbf1_{\{p\subset O\}},
-\qquad
-N:=B^{\mathsf T}B.
+\qquad N:=B^{\mathsf T}B.
 \tag{T.13.1}
 $$
-The active kernel selects one pair $p_A$. A registered unit electroweak update is an absolutely continuous path
+A marking selects $p_A$. Let $\Gamma_{\mathrm{St}}(p_A)$ be the absolutely continuous paths $x:[0,1]\to\mathbb R^{\mathcal P_2([24])}$ with $x(0)=0$ and $x(1)=e_{p_A}$, and put
 $$
-x:[0,1]\longrightarrow\mathbb R^{\mathcal P_2([24])},
-\qquad
-x(0)=0,\quad x(1)=e_{p_A},
-$$
-with dimensionless response action
-$$
-\mathcal I_{EW}[x]
-:=
-\frac12\int_0^1\|B\dot x(t)\|_2^2\,dt.
+\mathcal I_{\mathrm{St}}[x]
+:=\frac12\int_0^1\|B\dot x(t)\|_2^2\,dt,
 \tag{T.13.2}
 $$
-Define the electroweak structural exponent by
+Define
 $$
-\kappa_{EW}
-:=
-\inf_x\mathcal I_{EW}[x].
+\kappa_{\mathrm{St}}
+:=\inf_{x\in\Gamma_{\mathrm{St}}(p_A)}\mathcal I_{\mathrm{St}}[x].
 \tag{T.13.3}
 $$
-The interval and endpoints are fixed by the registered unit update; reparameterizations that do not preserve this unit-response clock are different implementations.
+The endpoints and unit clock are part of this finite variational problem. It does not itself describe a physical electroweak saddle.
 
-**Principle T.13a (Electroweak Response-Action Closure).** On the fundamental active-pair branch, the least registered response action (T.13.3) is the semiclassical suppression exponent of that update. Fluctuation determinants, gauge volumes, and the residual $U(1)$ orbit multiply the saddle weight and do not alter $\kappa_{EW}$. This is a falsifiable physical closure principle, separate from the Steiner counting theorem.
+**Principle T.13a (Electroweak Action-Transport Certificate).** An action-transport record
+$$
+\mathfrak C_{A\to\mathrm{St}}
+=(\Gamma_{EW},\mathcal S_{EW}^{(0)},\Phi_A,\gamma_*,\mathcal E_A,\chi_A)
+$$
+is accepted only if $\Gamma_{EW}$ fixes the physical path class, endpoints, domain, units, gauge quotient, and unit clock; $\mathcal S_{EW}^{(0)}$ is its dimensionless classical action; $\Phi_A:\Gamma_{EW}\to\Gamma_{\mathrm{St}}(p_A)$ preserves endpoints and clock; the checkable proof object $\mathcal E_A$ verifies
+$$
+\mathcal S_{EW}^{(0)}[\gamma]
+\ge\mathcal I_{\mathrm{St}}[\Phi_A(\gamma)]
+\quad\text{for every }\gamma\in\Gamma_{EW};
+$$
+the supplied witness satisfies $\Phi_A(\gamma_*)=x_*$, where $x_*(t):=te_{p_A}$, and
+$$
+\mathcal S_{EW}^{(0)}[\gamma_*]=\mathcal I_{\mathrm{St}}[x_*];
+$$
+and $\chi_A=1$ locks the record before comparison. Then
+$$
+\kappa_{EW}:=\inf_{\gamma\in\Gamma_{EW}}\mathcal S_{EW}^{(0)}[\gamma]
+=\kappa_{\mathrm{St}}.
+\tag{T.13a.1}
+$$
+Theorem T.5 proves $\mathcal I_{\mathrm{St}}[x_*]=\kappa_{\mathrm{St}}$; therefore the lower bound gives $\kappa_{EW}\ge\kappa_{\mathrm{St}}$ and the witness gives $\kappa_{EW}\le\kappa_{\mathrm{St}}$. Thus equality is proved by the certificate rather than assumed. Fluctuation determinants and gauge volumes remain outside both classical actions.
 
 ### T.6.2 Main Result
-**Theorem T.5 (Steiner Electroweak Action).** For the action of Definition T.13,
+**Theorem T.5 (Marked-Pair Steiner Action).** For the action of Definition T.13,
 $$
 N=72I+16A_1+5J,
 \tag{T.5.1}
 $$
-where $A_1$ is the adjacency matrix of the Johnson graph $J(24,2)$ and $J$ is the all-ones matrix. Its spectrum is
+where $A_1$ is the adjacency matrix of $J(24,2)$, and
 $$
-\operatorname{Spec}(N)
-=
-\{2156^{(1)},\,392^{(23)},\,40^{(252)}\},
+\operatorname{Spec}(N)=\{2156^{(1)},392^{(23)},40^{(252)}\}.
 \tag{T.5.2}
 $$
-so $N$ is positive definite. The unique minimizing path is
+Thus $N$ is positive definite, the unique minimizing path is
 $$
-x_*(t)=t e_{p_A},
+x_*(t)=te_{p_A},
 \tag{T.5.3}
 $$
 and
 $$
-\boxed{\kappa_{EW}=\mathcal I_{EW}[x_*]=\frac{77}{2}=38.5.}
+\boxed{\kappa_{\mathrm{St}}=\mathcal I_{\mathrm{St}}[x_*]=77/2=38.5.}
 \tag{T.5.4}
 $$
 
-*Proof.* A fixed pair lies in $77$ octads. Two distinct pairs sharing one point have a three-point union and lie together in $21$ octads; disjoint pairs have a four-point union and lie together in $5$ octads. Hence
+*Proof.* A fixed pair lies in $77$ octads. Two distinct pairs sharing one point lie together in $21$ octads and disjoint pairs in $5$, hence
 $$
 N=77I+21A_1+5(J-I-A_1)=72I+16A_1+5J.
 $$
-The Johnson adjacency spectrum is
-$$
-44^{(1)},\quad20^{(23)},\quad(-2)^{(252)},
-$$
-and $J$ has eigenvalue $276$ on the constant vector and zero on its orthogonal complement. This gives (T.5.2).
-
-For every admissible path, Cauchy–Schwarz in the positive inner product $\langle u,v\rangle_N=u^{\mathsf T}Nv$ gives
+The Johnson spectrum $44^{(1)},20^{(23)},(-2)^{(252)}$ and the action of $J$ give (T.5.2). For every admissible path, Cauchy--Schwarz in the positive $N$-inner product gives
 $$
 \int_0^1\dot x^{\mathsf T}N\dot x\,dt
 \ge
 \left(\int_0^1\dot x\,dt\right)^{\mathsf T}
-N
-\left(\int_0^1\dot x\,dt\right)
+N\left(\int_0^1\dot x\,dt\right)
 =e_{p_A}^{\mathsf T}Ne_{p_A}.
 $$
-Equality holds exactly when $\dot x$ is constant, proving (T.5.3) and uniqueness. Finally,
-$$
-e_{p_A}^{\mathsf T}Ne_{p_A}
-=\sum_O B_{O,p_A}^2
-=77,
-$$
-so (T.13.2) gives $\kappa_{EW}=77/2$. ∎
+Equality holds exactly for constant velocity, proving attainment and uniqueness. The last quadratic form counts the $77$ octads through $p_A$, so the factor $1/2$ gives the conclusion. ∎
 
-**Corollary T.5c (Steiner Incidence Diagonal Identity).** For every active pair $p$,
+**Corollary T.5c (Steiner Incidence Diagonal Identity).** For every marked pair $p$,
 $$
-2\kappa_{EW}
+2\kappa_{\mathrm{St}}
 =e_p^{\mathsf T}B^{\mathsf T}Be_p
 =\lambda_2(S(5,8,24))
 =77.
 $$
 
-*Proof.* The quadratic action contributes the factor $1/2$. The diagonal matrix element counts octads containing $p$, and the Steiner parameter is
-$$
-\lambda_2
-=\frac{\binom{22}{3}}{\binom63}
-=77.
-$$
-Theorem T.5 proves that the straight unit-update path attains this diagonal action. ∎
+*Proof.* The diagonal counts octads containing $p$ and $\lambda_2=\binom{22}{3}/\binom63=77$. Theorem T.5 proves unique attainment. ∎
 
-**Remark T.5d (Status of the Steiner–Electroweak Identity).** The equality is not a coincidence between an electroweak zero-mode count and an unrelated design number. Definition T.13 constructs the electroweak response action directly from the pair-octad incidence operator, and Principle T.13a is the explicit, testable action-to-suppression bridge. A different response operator, endpoint, or unit-update clock defines a different branch.
+**Remark T.5d (Native and Transported Status).** The value $77/2$ is a theorem of the marked Steiner variational problem. It becomes the physical electroweak action only through accepted $\mathfrak C_{A\to\mathrm{St}}$. A changed incidence operator, endpoint, or clock defines a different native branch; a changed physical path class or transport map defines a different electroweak branch.
 
-**Definition T.5d.1 (Active-Pair Steiner Incidence Projector).** Let $\mathcal O_8$ be the set of octads of the Steiner system $S(5,8,24)$ and let
+**Definition T.5d.1 (Marked-Pair Steiner Incidence Projector).** Let $\mathcal O_8$ and $\mathcal P_2([24])$ be as in Definition T.13, and define
 $$
-\mathcal P_2([24])=\{\{i,j\}:1\le i<j\le24\}
-$$
-be the set of unordered pairs of interface labels. Define the pair-octad incidence matrix
-$$
-B_{O,p}
-=
-\begin{cases}
-1,& p\subset O,\\
-0,& p\not\subset O,
-\end{cases}
-\qquad
-O\in\mathcal O_8,\ p\in\mathcal P_2([24]).
+B_{O,p}=\begin{cases}1,&p\subset O,\\0,&p\not\subset O,\end{cases}
+\qquad O\in\mathcal O_8,\ p\in\mathcal P_2([24]).
 \tag{T.5d.1}
 $$
-The Golay-Steiner pair-incidence operator is
+Define
 $$
-\mathcal N_{\mathrm{GS}}:=B^TB
+\mathcal N_{\mathrm{GS}}:=B^{\mathsf T}B.
 \tag{T.5d.2}
 $$
-on $\mathbb R^{\mathcal P_2([24])}$. On the active-kernel branch $a=2$, the active MPU kernel selects one unordered active pair $p_A\in\mathcal P_2([24])$. The associated electroweak active-pair projector is
+For the marked pair, set
 $$
-P_{\mathrm{EW}}^{(2)}
-=
-|e_{p_A}\rangle\langle e_{p_A}|.
+P_{\mathrm{St}}^{(2)}:=|e_{p_A}\rangle\langle e_{p_A}|.
 \tag{T.5d.3}
 $$
-Since the Golay-Steiner automorphism group is pair-transitive, the trace below is independent of the representative active pair.
+The superscript records that $p_A$ is a two-label endpoint; $P_{\mathrm{St}}^{(2)}$ has rank one.
+Pair transitivity makes the trace below independent of the representative pair.
 
-**Theorem T.5d.2 (Steiner Pair-Projector Electroweak Identity).** On the active-pair weak-left branch of Definition T.3a and Definition T.5d.1,
+**Theorem T.5d.2 (Steiner Pair-Projector Trace Identity).**
 $$
-\operatorname{Tr}\!\left(P_{\mathrm{EW}}^{(2)}\mathcal N_{\mathrm{GS}}\right)
-=
-\lambda_2(S(5,8,24))
-=
-77.
+\operatorname{Tr}\!\left(P_{\mathrm{St}}^{(2)}\mathcal N_{\mathrm{GS}}\right)
+=\lambda_2(S(5,8,24))=77,
 \tag{T.5d.4}
 $$
-Consequently the registered fixed-time electroweak response action satisfies the projector identity
+and hence
 $$
-\boxed{
-\kappa_{EW}
-=
-\frac12
-\operatorname{Tr}\!\left(P_{\mathrm{EW}}^{(2)}\mathcal N_{\mathrm{GS}}\right)
-=
-\frac{77}{2}.
-}
+\boxed{\kappa_{\mathrm{St}}
+=\frac12\operatorname{Tr}\!\left(P_{\mathrm{St}}^{(2)}\mathcal N_{\mathrm{GS}}\right)
+=\frac{77}{2}.}
 \tag{T.5d.5}
 $$
 
-*Proof.* By Definition T.5d.1,
-$$
-\operatorname{Tr}\!\left(P_{\mathrm{EW}}^{(2)}\mathcal N_{\mathrm{GS}}\right)
-=
-\langle e_{p_A},B^TBe_{p_A}\rangle
-=
-\sum_{O\in\mathcal O_8}B_{O,p_A}^2.
-$$
-Because $B_{O,p_A}\in\{0,1\}$, this sum is exactly the number of octads containing the active pair $p_A$. In a Steiner system $S(5,8,24)$, the number of blocks containing a fixed pair is
-$$
-\lambda_2
-=
-\frac{\binom{24-2}{5-2}}{\binom{8-2}{5-2}}
-=
-\frac{\binom{22}{3}}{\binom{6}{3}}
-=
-\frac{1540}{20}
-=
-77.
-$$
-This proves (T.5d.4). The factor $1/2$ in (T.5d.5) is the quadratic-action normalization in Equation (T.13.2); Theorem T.5 proves that the unit active-pair path has squared incidence length $77$. Therefore Theorem T.5 and (T.5d.4) give
-$$
-\kappa_{EW}=\frac{77}{2}.
-$$
-∎
+*Proof.* The trace is $\sum_{O\in\mathcal O_8}B_{O,p_A}^2$, which counts the $77$ octads through $p_A$. The factor $1/2$ is the normalization in Definition T.13. ∎
 
-**Corollary T.5d.3 (Closure of the Active-Pair Steiner-Electroweak Gate).** On the active-pair weak-left branch, the equality $2\kappa_{EW}=77$ is not an independent numerical coincidence: it is the diagonal trace of the canonical Golay-Steiner pair-incidence operator against the active two-mode MPU projector.
-
-*Proof.* Theorem T.5d.2 derives the value $77$ from the pair-incidence structure of $S(5,8,24)$ and identifies the electroweak complexity with one half of that trace. The active projector is fixed by the $a=2$ MPU kernel, while $\mathcal N_{\mathrm{GS}}$ is fixed by the Steiner octad system. No validation datum or adjustable continuous parameter enters the identity. ∎
+**Corollary T.5d.3 (Closure of the Native Active-Pair Gate).** The equality $2\kappa_{\mathrm{St}}=77$ is the diagonal trace of the canonical pair-incidence operator against the marked rank-one projector. On accepted $\mathfrak C_{A\to\mathrm{St}}$ it transports to $2\kappa_{EW}=77$; that transport is not part of the finite trace theorem.
 
 -----
 
 ## T.7 Numerical Verification of Electroweak Scale
 
 ### T.7.1 Scale Prediction
-**Principle T.6a (Semiclassical Scale Bridge).** On the registered electroweak branch, the order-parameter scale responds to the least unit-update action by
+**Principle T.6a (Same-Saddle Electroweak Scale Record).** A scale record $\mathfrak S_{EW}$ is accepted only if it fixes before comparison the unreduced $M_{Pl}$ convention and units; the same saddle $\gamma_*$ used by $\mathfrak C_{A\to\mathrm{St}}$; the renormalized effective functional and order-parameter observable whose stationary value is $v$; the gauge/ghost quotient and collective-coordinate measure; a determinant and matching interval $I_A\subset\mathbb R_{>0}$ on that saddle; a quantitative remainder interval $I_R\subset\mathbb R$ with $1+I_R\subset\mathbb R_{>0}$; source exhaustion; and a forward lock. Its verification must derive
 $$
-\frac v{M_{Pl}}=A_{EW}e^{-\kappa_{EW}},
+\frac v{M_{Pl}}
+\in I_Ae^{-\kappa_{EW}}(1+I_R).
 \tag{T.6a.1}
 $$
-where $M_{Pl}$ uses the unreduced convention and $A_{EW}$ is the forward determinant, gauge-volume, and matching prefactor computed on the same saddle. The relation is a physical scale-bridge principle: it is testable and is not inferred from a Gaussian power count.
+The specialization $I_A=\{A_{EW}\}$ and $I_R=\{0\}$ gives the leading central formula. This is a physical scale gate, not a consequence of the finite Steiner theorem or a Gaussian dimension count.
 
-**Theorem T.6 (Electroweak Scale on the Response-Action Branch).** Principles T.13a and T.6a and Theorem T.5 give
+**Theorem T.6 (Electroweak Scale on the Full Action-Transport Branch).** If $\mathfrak C_{A\to\mathrm{St}}$ and $\mathfrak S_{EW}$ are accepted, then
 $$
-\boxed{
-v=A_{EW}e^{-77/2}M_{Pl}.
-}
+\frac v{M_{Pl}}\in I_Ae^{-77/2}(1+I_R).
 $$
-
-*Proof.* Theorem T.5 gives $\kappa_{EW}=77/2$. Substitution in (T.6a.1) proves the formula. The exponent is fixed by the Steiner response action; the numerical scale is a forward prediction once $A_{EW}$ is evaluated rather than fitted. ∎
-**Proposition T.3** (Baseline Scale from Complexity).
+On the leading central specialization,
 $$
-e^{-\kappa_{EW}} = e^{-38.5} \approx 1.90 \times 10^{-17}.
+\boxed{v=A_{EW}e^{-77/2}M_{Pl}.}
 $$
 
-With $M_{Pl} = 1.2209 \times 10^{19}$ GeV, the complexity-suppressed baseline scale (prior to the one-loop determinant) is:
+*Proof.* Theorem T.5 gives $\kappa_{\mathrm{St}}=77/2$, and $\mathfrak C_{A\to\mathrm{St}}$ gives $\kappa_{EW}=\kappa_{\mathrm{St}}$. Substitution into the verified interval law of $\mathfrak S_{EW}$ proves the result. ∎
+**Proposition T.3** (Baseline Arithmetic on the Accepted Electroweak Scale Branch). On the intersection of an accepted $\mathfrak C_{A\to\mathrm{St}}$ and Principle T.6a with the unreduced Planck convention,
 $$
-\boxed{
-v_0 := e^{-\kappa_{EW}} M_{Pl} \approx 232\ \mathrm{GeV}.
-}
+e^{-\kappa_{EW}}=e^{-38.5}=1.90398028328645\ldots\times10^{-17}.
 $$
-
-The full electroweak prediction is then
+With $M_{Pl}=1.2209\times10^{19}\,\mathrm{GeV}$, the prefactor-free branch value is
 $$
-v = A_{EW}\, v_0,
+\boxed{v_0:=e^{-\kappa_{EW}}M_{Pl}=232.4569527864\ldots\,\mathrm{GeV}.}
 $$
-with $A_{EW}$ specified by the determinant-model branch of Theorem T.29.
+A full forward value is
+$$
+v=A_{EW}v_0(1+\epsilon_{EW})
+$$
+only when $A_{EW}$ is evaluated on the same saddle with the normalization, units, no-double-counting audit, and quantitative remainder required by Principle T.6a. Theorem T.29 supplies a model central value, not a proved remainder.
 
 **Corollary T.6b (Planck-Normalization Non-Exchangeability).** The exponent $\kappa_{EW}=38.5$ in Theorem T.6 is calibrated to the unreduced Planck mass $M_{Pl}$ used throughout Appendix T. Since
 $$
@@ -827,16 +772,16 @@ Thus the electroweak branch cannot exchange $M_{Pl}$ for $\bar M_{Pl}$ without e
 
 ### T.7.2 Prefactor Determination
 
-**Proposition T.4** (Prefactor Consistency). The determinant model of Theorem T.29 gives the central value $A_{EW}=1.08407\ldots$ from the SU(2) link factor, the rank-one Schur-complement factor, and the homogeneous-space Jacobian factor. With the separate model allowance recorded in Theorem T.29, the working value is
+**Proposition T.4** (Prefactor-Model Arithmetic and Scale-Gate Scope). Theorem T.29's determinant model gives
 $$
-A_{EW}=1.084\pm0.005,
+A_{EW}=1.08406869\ldots
 $$
-and hence
+from its link, Schur-complement, and homogeneous-space Jacobian factors. The separate $0.005$ allowance is not a proved remainder bound. If $\mathfrak C_{A\to\mathrm{St}}$, $\mathfrak S_{EW}$, and the same-saddle identification are accepted, the central specialization is
 $$
-v = 1.084 \times 232 \text{ GeV} = 252 \text{ GeV}.
+v=1.08406869\ldots e^{-77/2}(1.2209\times10^{19}\ \mathrm{GeV})
+=251.9993043\ldots\ \mathrm{GeV},
 $$
-
-This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV. The agreement is a determinant-model consistency check: the central value is fixed once the model is fixed, but the $\pm0.005$ allowance is not a theorem-level remainder bound.
+$2.3472\ldots\%$ above $246.22\ \mathrm{GeV}$. This is a model diagnostic; no theory pull exists until a certified determinant remainder and all scale-gate intervals are supplied.
 
 -----
 
@@ -844,21 +789,18 @@ This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV. The agreement is a det
 
 ### T.8.1 Structural Parallel
 
-**Theorem T.7** (Mechanism-Separated Hierarchy Ledger). The vacuum and electroweak hierarchies use the same registered $M=24$ discrete backbone but different action operators:
+**Theorem T.7** (Mechanism-Separated Hierarchy Ledger). The vacuum and electroweak sectors have distinct native carriers and successive gates:
 
-|Quantity |Vacuum branch (Appendix U) |Electroweak branch (Appendix T) |
+|Stage |Vacuum branch (Appendix U) |Electroweak branch (Appendix T) |
 |:--|:--|:--|
-|Carrier |$\operatorname{Gr}_{\mathbb C}(12,24)$ Hessian problem |$S(5,8,24)$ pair-to-octad incidence response |
-|Discrete action |$\kappa_\Lambda=(288-m_\Lambda)/2$ |$\kappa_{EW}=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |
-|Registered value |$141.5$ for $m_\Lambda=5$; $142$ for $m_\Lambda=4$ |$77/2=38.5$ |
-|Zero modes |They enter $m_\Lambda$ in the vacuum Hessian ledger |Gaussian zero modes enter the determinant/prefactor ledger, not $\kappa_{EW}$ |
-|Scale law |$\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa_\Lambda}$ |$v/M_{Pl}=A_{EW}e^{-\kappa_{EW}}$ |
+|native object |independent $(E_U,S_U)$ and radially continuous, sampled-angular Hessian |marked-pair incidence operator $B^{\mathsf T}B$ |
+|native theorem |$m_4=4$ under U.13b's spectral hypotheses |$\kappa_{\mathrm{St}}=77/2$ by T.5 |
+|transport/index |$\mathfrak C_{U,\mathrm{mark}}\Rightarrow\kappa_{\mathrm{idx}}=142$ |$\mathfrak C_{A\to\mathrm{St}}\Rightarrow\kappa_{EW}=\kappa_{\mathrm{St}}$ |
+|action/scale |U.14 $\Rightarrow S_U=284$ |$\mathfrak S_{EW}\Rightarrow v/M_{Pl}\in I_Ae^{-\kappa_{EW}}(1+I_R)$ |
+|prefactor |$\mathfrak F_U^{(4)}\Rightarrow w_4$ |same-saddle determinant interval $I_A$ |
+|physical realization |$\mathfrak R_\Lambda^{(4)}\Rightarrow\Lambda_4L_P^2=8\pi w_4$ |order-parameter map and units inside $\mathfrak S_{EW}$ |
 
-*Proof.* Appendix U supplies the vacuum Hessian dimension $288$, the branch value $m_\Lambda$, and the stated exponent. Definition T.13 and Theorem T.5 give
-$$
-e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=77
-$$
-and the fixed-time response action $77/2$; Principle T.13a identifies that action with the electroweak exponent. The determinant and Gaussian-mode records enter $A_{\mathrm{eff}}$ and $A_{EW}$ on their respective branches. Therefore the two rows share discrete inputs but not a zero-mode action formula. ∎
+*Proof.* Each implication is the conclusion of the named theorem or certificate. U.13b implies neither the U index nor action, and T.5 implies neither the electroweak action nor scale. Reuse of $12$, $24$, or $77$ supplies no map between operators. ∎
 
 -----
 
@@ -866,11 +808,12 @@ and the fixed-time response action $77/2$; Principle T.13a identifies that actio
 
 ### T.9.1 Quantization Signature
 
-**Prediction T.1** (Electroweak Action Rigidity). On the registered Steiner branch, relabeling the active pair leaves $\kappa_{EW}=77/2$ invariant. A different response endpoint $u$ or incidence operator $B'$ changes the exponent only by the computed action difference
+**Prediction T.1** (Marked-Pair Action Rigidity and Conditional Electroweak Signature). On the marked Steiner branch, relabeling the preregistered pair leaves $\kappa_{\mathrm{St}}=77/2$ invariant. A different endpoint $u$ or incidence operator $B'$ changes the native action by
 $$
-\Delta\kappa_{EW}=\frac12\left(u^{\mathsf T}{B'}^{\mathsf T}B'u-e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}\right).
+\Delta\kappa_{\mathrm{St}}
+=\frac12\left(u^{\mathsf T}{B'}^{\mathsf T}B'u-e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}\right).
 $$
-At fixed prefactor the scale changes by $e^{-\Delta\kappa_{EW}}$. Electroweak Gaussian zero modes alter the prefactor ledger and do not shift this action.
+Only on an accepted $\mathfrak C_{A\to\mathrm{St}}$ is this the covered electroweak shift $\Delta\kappa_{EW}$; only on the further T.6a same-saddle scale branch with fixed prefactor does the scale ratio change by $e^{-\Delta\kappa_{EW}}$. Gaussian zero modes remain in the prefactor ledger.
 
 ### T.9.2 No Fourth Generation
 
@@ -912,28 +855,34 @@ W_5
 =\widetilde Q_C\oplus\widetilde Q_W
 \cong\mathbb C^3\oplus\mathbb C^2.
 $$
-The color and weak blocks carry their fundamental complex $SU(3)$ and $SU(2)$ actions. A block-scalar hypercharge endomorphism has the form
+The color and weak blocks carry their fundamental complex $SU(3)$ and $SU(2)$ actions. Throughout Appendix T, $Y$ denotes hypercharge in the convention $Q_{\mathrm{em}}=T_3+Y$; Appendix W uses the doubled generator $Y_W=2Y$ in $Q_{\mathrm{em}}=T_3+Y_W/2$. A block-scalar hypercharge endomorphism has the form
 $$
 Y=\operatorname{diag}(y_cI_3,y_wI_2).
 $$
 
 ### T.10.2 Hypercharge Structure
 
-**Theorem T.9** (Traceless Hypercharge). Let $Y$ be the diagonal hypercharge generator on $W_5$:
+**Theorem T.9** (Traceless Hypercharge). Let
 $$
-Y = \operatorname{diag}(y_c, y_c, y_c, y_w, y_w)
+Y=\operatorname{diag}(y_c,y_c,y_c,y_w,y_w)
 $$
-The tracelessness constraint enforces:
+be a diagonal hypercharge generator on $W_5$. Assume that $Y$ lies in the embedded $\mathfrak{su}(5)$, equivalently that $Y$ is Hilbert–Schmidt orthogonal to the identity. Then
 $$
-3y_c + 2y_w = 0
+3y_c+2y_w=0.
 $$
 
-*Proof.* The $U(1)$ generator is taken as the diagonal element of the embedded $SU(5)$ acting on $W_5$, hence it must lie in $\mathfrak{su}(5)$ and therefore be traceless. Equivalently, $Y$ must be orthogonal to the identity operator in the Hilbert–Schmidt inner product on $\operatorname{End}(W_5)$, which is exactly $\operatorname{Tr}(Y)=0$, giving $3y_c+2y_w=0$. ∎
+*Proof.* Since $Y\in\mathfrak{su}(5)$ is Hermitian in the physics convention, its matrix trace vanishes. Thus
+$$
+0=\operatorname{Tr}Y=3y_c+2y_w.
+$$
+The Hilbert–Schmidt condition is equivalent because $\langle I_5,Y\rangle_{\mathrm{HS}}=\operatorname{Tr}Y$. ∎
 
-**Corollary T.9.1** (Hypercharge Ratio).
+**Corollary T.9.1** (Hypercharge Ratio). If $y_c\ne0$, then
 $$
-\frac{y_w}{y_c} = -\frac{3}{2}
+\frac{y_w}{y_c}=-\frac32.
 $$
+
+*Proof.* Theorem T.9 gives $2y_w=-3y_c$. Division by $2y_c\ne0$ gives the displayed ratio. ∎
 
 -----
 
@@ -1524,10 +1473,39 @@ $$
 b_1 = \frac{41}{10}, \quad b_2 = -\frac{19}{6}, \quad b_3 = -7
 $$
 
-**Theorem T.15** (RG Evolution). The gauge couplings evolve according to:
+**Theorem T.15** (One-Loop RG Evolution). Assume that the particle content and the one-loop coefficients $b_i$ of Definition T.15b remain unchanged on the scale interval between $\mu_G$ and $\mu$. Then
 $$
-\alpha_i^{-1}(\mu) = \alpha_i^{-1}(\mu_G) + \frac{b_i}{2\pi}\ln\frac{\mu_G}{\mu}
+\alpha_i^{-1}(\mu)
+=
+\alpha_i^{-1}(\mu_G)
++\frac{b_i}{2\pi}\ln\frac{\mu_G}{\mu}.
 $$
+
+*Proof.* The one-loop gauge equation is
+$$
+\frac{dg_i}{d\ln\mu}
+=
+\frac{b_i}{16\pi^2}g_i^3.
+$$
+Since $\alpha_i=g_i^2/(4\pi)$,
+$$
+\frac{d\alpha_i^{-1}}{d\ln\mu}
+=
+\frac{d}{d\ln\mu}\left(\frac{4\pi}{g_i^2}\right)
+=
+-\frac{8\pi}{g_i^3}\frac{dg_i}{d\ln\mu}
+=
+-\frac{b_i}{2\pi}.
+$$
+Integration from $\ln\mu_G$ to $\ln\mu$ gives
+$$
+\alpha_i^{-1}(\mu)-\alpha_i^{-1}(\mu_G)
+=
+-\frac{b_i}{2\pi}\ln\frac{\mu}{\mu_G}
+=
+\frac{b_i}{2\pi}\ln\frac{\mu_G}{\mu}.
+$$
+∎
 
 ### T.13.2 Running to the Z Pole
 
@@ -1902,7 +1880,7 @@ The elastic sector involves:
 
 ### T.15.2 Canonical Normalization
 
-**Lemma T.5b** (Canonical Basis). Equip $\mathbb{R}^{12}$ with the positive-definite inner product $\langle s,s'\rangle_{info}:=s^T L_{info} s'$ from Theorem T.1. Choose an $L_{info}$-orthonormal coordinate system (equivalently, perform the change of variables $s=L_{info}^{-1/2}\tilde s$ and drop tildes), so that $L_{info}=I_{12}$ in these coordinates. Let $\Pi_L$ denote the orthogonal projection onto the left-chiral 6-plane with respect to this inner product, and set $P_L:=\Pi_L^T\Pi_L$. Then $P_L$ is an orthogonal projector, hence $P_L^2=P_L$, and
+**Lemma T.5b** (Information-Metric Canonical Basis). Equip $\mathbb{R}^{12}$ with the positive-definite inner product $\langle s,s'\rangle_{info}:=s^T L_{info} s'$ from Theorem T.1. Choose an $L_{info}$-orthonormal coordinate system (equivalently, perform the change of variables $s=L_{info}^{-1/2}\tilde s$ and drop tildes), so that $L_{info}=I_{12}$ in these coordinates. Let $\Pi_L$ denote the orthogonal projection onto the left-chiral 6-plane with respect to this inner product, and set $P_L:=\Pi_L^T\Pi_L$. Then $P_L$ is an orthogonal projector, hence $P_L^2=P_L$, and
 $$
 K=I_{12}+P_L,\quad K^{-1}=I_{12}-\frac{1}{2}P_L.
 $$
@@ -1919,7 +1897,7 @@ where $\gamma > 0$ is a dimensionless target-shift normalization. The reduced en
 $$
 V[s; u] = \frac{1}{2} s^T s + \frac{1}{2} |\Pi_L s - x(u)|^2.
 $$
-The moment-map-normalized target-shift branch has $\gamma=1$; Theorem T.22b gives the gate under which this value is fixed only after the even-displacement condition (T.22a.2) and the $L_{\mathrm{info}}$-norm datum (T.22a.3) are verified in the reservoir coordinates of Lemma T.5b. Remark T.22c shows that the raw linear-subtracted Pauli-coordinate remainder has a nonzero cubic term and quadratic-coefficient norm $1/4$; the even projection and normalized reservoir map are separate gates.
+The moment-map-normalized target-shift branch has $\gamma=1$ only after the even-displacement condition (T.22a.2) and the $L_{\mathrm{info}}$-norm datum (T.22a.3) are verified in the reservoir coordinates of Lemma T.5b. Remark T.22c shows that the raw linear-subtracted Pauli-coordinate remainder has a nonzero cubic term and quadratic-coefficient norm $1/4$; the even projection and normalized reservoir map are separate gates.
 
 *Proof.* The SU(2) rotation on each of six left-chiral links produces a coherent $O(u^2)$ shift in the reservoir, establishing the scaling order and the existence of a unit direction $v$. The magnitude coefficient $\gamma$ is the target-shift normalization of the SU(2)-coherent action on the reservoir coordinates. ∎
 
@@ -2134,10 +2112,19 @@ The second hypothesis supplies $\lambda(\mu_G)=0$ and the third hypothesis suppl
 
 ### T.17.1 RG Evolution of the Quartic
 
-**Theorem T.27** (Quartic Running). The one-loop beta function is:
+**Theorem T.27** (One-Loop Standard Model Quartic Running). Assume the one-Higgs-doublet Standard Model in the $\overline{\mathrm{MS}}$ scheme, set $t=\ln\mu$, use the Standard Model normalization of $g'$, and neglect all Yukawa couplings except the top coupling $y_t$. On a scale interval containing no additional threshold, the one-loop quartic beta function is
 $$
-16\pi^2 \frac{d\lambda}{dt} = 24\lambda^2 - 6y_t^4 + \lambda(12y_t^2 - 9g^2 - 3(g')^2) + \frac{9}{8}g^4 + \frac{3}{8}g'^4 + \frac{3}{4}g^2 (g')^2
+16\pi^2\frac{d\lambda}{dt}
+=
+24\lambda^2
+-6y_t^4
++\lambda\left(12y_t^2-9g^2-3(g')^2\right)
++\frac98g^4
++\frac38(g')^4
++\frac34g^2(g')^2.
 $$
+
+*Proof.* The general one-loop scalar-quartic beta function of Machacek and Vaughn (1985) applies to a renormalizable gauge theory in the $\overline{\mathrm{MS}}$ scheme. Appendix T's retained field content on this interval is one complex $SU(2)_L$ doublet of hypercharge $1/2$, with gauge couplings $g$ and $g'$. Specializing the scalar self-interaction term gives $24\lambda^2$. The color multiplicity of the retained top Yukawa gives $12\lambda y_t^2-6y_t^4$. The Higgs quadratic Casimir and hypercharge contributions give $-\lambda(9g^2+3(g')^2)$, while the pure-gauge terms are $9g^4/8$, $3(g')^4/8$, and $3g^2(g')^2/4$. Summing these contributions gives the displayed equation. ∎
 
 ### T.17.2 Numerical Verification
 
@@ -2169,11 +2156,12 @@ The present manuscript does not supply an accepted $\mathfrak M_\lambda$ connect
 
 *Proof.* Once the completed threshold ledger and every member of the displayed tuple are fixed, the external SM RG calculation and deterministic decoupling/pole maps send the selected metastability trajectory to one pole mass. Proposition T.5 records the SM crossing scale $\mu_\lambda\sim10^{10}$--$10^{11}$ GeV, whereas the adopted matching scale is $\mu_G\approx1.5\times10^{15}$ GeV. Definition T.25.2 forbids identifying either scale with the abstract fixed point without a matching record. The conditional map is therefore valid, while current PU-internal closure is absent. QED
 
-**Corollary T.28.1** (Experimental Agreement).
+**Corollary T.28.1** (Central-Value Validation Comparison).
+The external comparison datum is
 $$
-m_H^{\text{obs}} = 125.25 \pm 0.17 \text{ GeV}
+m_H^{\mathrm{obs}}=125.25\pm0.17\,\mathrm{GeV}.
 $$
-Agreement: $< 1%$.
+Its central value differs from the rounded external-RG validation value $125\,\mathrm{GeV}$ by about $0.20\%$. This is not a PU agreement interval or pull: those require an accepted $\mathfrak M_\lambda$, the complete Theorem-T.28 forward tuple, a theory remainder, and the joint comparison covariance fixed before evaluation.
 
 -----
 
@@ -2188,7 +2176,7 @@ $$
 \mathfrak{g}_{SM} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1) \cong \mathbb{R}^8 \oplus \mathbb{R}^3 \oplus \mathbb{R}^1 = \mathbb{R}^{12}
 $$
 
-**Definition T.18.2** (Canonical Basis). Orthonormal generators with Golay-Bures inner product:
+**Definition T.18.2** (Golay--Bures Gauge-Generator Basis). Orthonormal generators with Golay-Bures inner product:
 
 - $SU(3)$: $\mathrm{tr}(G_A G_B) = \frac{1}{2}\delta_{AB}$ for $A, B = 1, \ldots, 8$
 - $SU(2)$: $\mathrm{tr}(T_a T_b) = \frac{1}{2}\delta_{ab}$ for $a, b = 1, 2, 3$
@@ -2258,7 +2246,7 @@ fixed before comparison and used together with the completed threshold record. A
 
 - "Exact" — exact arithmetic consequence once every stated branch datum is fixed (e.g., $\sin^2\theta_W^{(0)}=3/8$ on the primitive-$(1/6)$-quantized hypercharge branch; $\lambda_{\mathrm{elastic}}(\gamma)=\gamma^2/36$ for a declared target shift). The special value $\lambda_{\mathrm{elastic}}=1/36$ is exact only inside the accepted Definition T.22a unit branch. A summary convention propagates status; it does not supply a missing target-shift or fixed-point-to-SM matching datum.
 
-- "Derived" — derived within the adopted Appendix T branches (predictive-recovery MacWilliams Golay rate-$\tfrac12$, weak-left projection, row-pair, Bures-gauge holonomy normalization or the Kostant-Souriau prequantization gate, Toeplitz-Kraus Yukawa probability-overlap, $E_8$ triad selection, generation-internal tensor factorization, Takagi-Weyl Majorana $A_2$, triplet-projection exponent, the PMNS CP-phase branch of Theorem T.24.22, and the controlling branch package of Theorem T.79), not necessarily unconditional theorem-level output from the foundational PU axioms alone.
+- "Derived" — proved from every antecedent of the owning Appendix T branch, not necessarily from the foundational PU axioms alone. Examples include the predictive-recovery MacWilliams Golay rate-$\tfrac12$, weak-left projection, row-pair, Bures-gauge holonomy normalization or Kostant-Souriau prequantization gate, Toeplitz-Kraus Yukawa probability overlap, $E_8$ triad realizations and finite alignment selection, generation-internal tensor factorization, triplet-projection exponent, and the controlling branch package of Theorem T.79, each with its stated hypotheses. The retained Majorana $A_2$ result additionally requires an accepted marked $\mathfrak C_{\mathrm{TW}}$, and the finite alignment theorem becomes a complete-PCE selector only on an accepted $\mathfrak C_{\mathrm{align}}$. Theorem T.24.22 derives the exact convention arithmetic $31\pi/24$ unconditionally, but its Berry-holonomy and physical-PMNS readings are derived only on the accepted certificates stated there. An unpopulated certificate schema or convention-level candidate is not "Derived."
 
 - "Validation" — validation-run output produced by the displayed validation tuple $\Delta^{\mathrm{val}}$ in conjunction with SM running. Such entries remain validation targets rather than derived predictions under the canonical minimal ledger. Theorem T.78.5 closes the current-framework flag-lift gate negatively, and Theorem T.78.14 closes the current RHG, torsion, spectral-action, and equivalent electroweak source class negatively for theorem-level $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, and gauge/Higgs finite-part intervals. Only a separately appended spectral branch extension fixed before validation comparison and evaluated by Theorem T.78, Definition T.78.10, and the relevant source theorem can supply a positive theorem-level tuple.
 
@@ -2272,9 +2260,10 @@ Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, Theorem T.78.14, and Theorem T
 
 |Parameter |PU construction / dependency |Framework value or status |Observed |Status |
 |------------------------------------------|------------------------------------------------------------------------|---------------------------------|------------|----------|
-|$\kappa_{EW}$ |$\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ with $B$ the pair--octad incidence matrix of $S(5,8,24)$ |$77/2=38.5$ |— |Exact on the registered Steiner response-action branch |
-|$A_{EW}$ |One-loop determinant model |1.084 |— |Model layer |
-|$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
+|$\kappa_{\mathrm{St}}$ |$\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ with $B$ the pair--octad incidence matrix of $S(5,8,24)$ |$77/2=38.5$ |— |Exact finite Steiner theorem |
+|$\kappa_{EW}$ |Accepted $\mathfrak C_{A\to\mathrm{St}}$ identifying the covered electroweak saddle action with $\kappa_{\mathrm{St}}$ |$77/2=38.5$ |— |Exact on the accepted action-transport branch; not supplied by incidence alone |
+|$A_{EW}$ |Same-saddle determinant model with accepted convention record $\mathfrak S_{EW}$ |$1.08406869\ldots$ |— |Model central value; no certified remainder interval |
+|$v$ |$A_{EW}e^{-\kappa_{EW}}M_{Pl}(1+\epsilon_{EW})$ on the joint action/scale/same-saddle branch |$252\ \mathrm{GeV}$ diagnostic central value |$246.22\ \mathrm{GeV}$ |$2.35\%$ central-value comparison; not a certified theory interval |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
 |$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ on a completed branch; current PU-internal threshold interval $\varnothing_{\mathrm{cert}}$ |(matching-scale input) |Conditional on completed spectral input; current source class negatively closed by Theorem T.78.14 |
 |$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ validation tuple reproducing the previous matching outputs if obtained forward; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$, so the tuple must be compared against the global sector-resolving $\mathrm{MS2}_{\mu_G}$ block functional rather than inserted as input; Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent source class supplies no certified interval for $\Delta_i$ or $Z_i$ |— |Validation target; current-framework electroweak source class closed negatively |
@@ -2293,39 +2282,45 @@ Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, Theorem T.78.14, and Theorem T
 
 |Quantity |Central (PU) |$\sigma_{T1}$ |$\sigma_{T2}$ |$\sigma_{T3}$ |$1\sigma$ theory |Dominant category and term |What shrinks it |
 |---------------------|----------------:|----------------:|----------------:|----------------:|----------------:|---------------------------|-------------------------------------------------------------------------------------------------------------|
-|$A_{EW}$ |$1.084$ |$0.005$ model allowance |$0$ |$0$ |$0.005$ |determinant-model curvature / Schur / Jacobian allowance; not a proved remainder bound |derive the determinant construction with explicit remainder bounds or replace it by a theorem-level prefactor |
-|$v$ |$252\ \text{GeV}$|$1.2\ \text{GeV}$|$5\ \text{GeV}$ |$0$ |$5\ \text{GeV}$ |T2 matching and threshold dependence at $\mu_G$ |full 2-loop matching and threshold accounting at $\mu_G$ on an accepted threshold branch |
+|$A_{EW}$ |$1.08406869\ldots$ model central value |—; the quoted $0.005$ is an unproved model allowance |— |— |$\varnothing_{\mathrm{cert}}$ |same-saddle determinant, Schur, Jacobian, gauge-volume, and normalization choices |supply $\mathfrak S_{EW}$ with a forward determinant evaluation and a rigorous remainder bound |
+|$v$ |$252\ \mathrm{GeV}$ diagnostic central value |— |— |— |$\varnothing_{\mathrm{cert}}$ |action transport $\mathfrak C_{A\to\mathrm{St}}$, scale record $\mathfrak S_{EW}$, same-saddle prefactor, and controlled remainders |accept and verify those records jointly, then propagate their certified intervals |
 |$\sin^2\theta_W(M_Z)$|$0.2312$ validation-run value |negligible ($O(M^{-1})$ anisotropy) |$0.0015$ validation/threshold scale; current certificate interval $\varnothing_{\mathrm{cert}}$ |$0$ |$0.0015$ diagnostic only |T2 lifted thresholds, matching, and RG propagation; current source class negatively closed by Theorem T.78.14 |accepted $\Delta_i$ and $Z_i$ intervals from $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, or an equivalent spectral tuple |
 |$m_H$ |$125\ \text{GeV}$ conditional external-RG value |negligible |$2.5\ \text{GeV}$ (T2+T3 combined; diagnostic only while $\mathfrak M_\lambda$ is open) |included in T2 column |$2.5\ \text{GeV}$ conditional diagnostic |T2 completed-threshold, target-shift, PU-to-SM matching, marginality, RG, and decoupling inputs combined with T3 pole-mass conversion at the present working order (Theorem T.28); no current accepted $\mathfrak M_\lambda$ or spectral-action Higgs interval |a completed threshold record plus accepted $\mathfrak H_T$, higher-order residual control, and an accepted spectral-action Higgs finite-part ledger if such a claim is made |
 |$A_{\text{eff}}$ |$0.923$ |$0.004$ |$0.010$ |$0$ at fixed forward-evaluation convention |$0.011$ |T2 bounce-determinant / zero-mode / finite-volume prefactor convention |compute ghost/zero-mode normalization under a fixed vacuum convention and derive the prefactor internally |
 
-The $1\sigma$ theory column is the diagonal quadrature sum
+For a row whose T1, T2, and T3 entries are certified standard-deviation bounds with an explicitly stated covariance convention, the displayed diagonal rule is
 $$
-\sqrt{\sigma_{T1}^2+\sigma_{T2}^2+\sigma_{T3}^2}
+\sigma_{\mathrm{diag}}=\sqrt{\sigma_{T1}^2+\sigma_{T2}^2+\sigma_{T3}^2}.
 $$
-at the stated working order. The $A_{EW}$ entry is a determinant-model allowance, not a controlled theorem-level remainder estimate. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from that allowance via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $\sin^2\theta_W(M_Z)$, the displayed $0.0015$ remains a validation/threshold diagnostic unless an accepted threshold source supplies $\Delta_i$ and $Z_i$ before comparison; by Theorem T.78.14 the current RHG, torsion, spectral-action, and equivalent source class supplies no such interval. For $m_H$, the $2.5\ \text{GeV}$ entry is a conditional diagnostic rather than a closed PU interval: the required forward pipeline consumes a completed threshold record together with $\mathfrak H_T=(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}})$ as recorded in Theorem T.28 and Theorem T.79.2. An independent spectral-action claim for $\mu_H^2$ or $\lambda_H$ additionally requires Definition X.9.6h.4 and does not replace any member of $\mathfrak H_T$ without an explicit matching map. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
+That rule does not convert an unproved allowance into a confidence interval. Consequently the present $A_{EW}$ and $v$ rows have no certified theory interval: $0.005$ is only the determinant model's allowance, and the former $1.2\ \mathrm{GeV}$ and $5\ \mathrm{GeV}$ entries cannot be combined into a PU error bar without accepted input intervals and a covariance record. For $A_{\mathrm{eff}}$, the stated diagnostic convention gives $\sqrt{0.004^2+0.010^2}=0.01077\ldots$, but this remains transferred vacuum-prefactor bookkeeping until its source intervals and covariance law are certified. For $\sin^2\theta_W(M_Z)$, the displayed $0.0015$ remains a validation/threshold diagnostic unless an accepted threshold source supplies $\Delta_i$ and $Z_i$ before comparison; by Theorem T.78.14 the current source class supplies no such interval. For $m_H$, the $2.5\ \mathrm{GeV}$ entry is a conditional diagnostic rather than a closed PU interval: the required forward pipeline consumes a completed threshold record together with $\mathfrak H_T=(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}})$. An independent spectral-action claim for $\mu_H^2$ or $\lambda_H$ additionally requires Definition X.9.6h.4 and does not replace any member of $\mathfrak H_T$ without an explicit matching map.
 
 ### T.19.2 Dependency-Separated Chain
 
+Let $\mathcal B_{\mathrm{St}}$ denote the finite Steiner-incidence branch, $\mathcal B_{A\to\mathrm{St}}$ acceptance of $\mathfrak C_{A\to\mathrm{St}}$, $\mathcal B_{\mathrm{scale}}$ acceptance of $\mathfrak S_{EW}$ and Principle T.6a, and $\mathcal B_{\det}$ the same-saddle determinant model of Theorem T.29. The electroweak scale chain is
 $$
-\boxed{
-\text{Golay } [24,12,8] \xrightarrow{b=6, k=12}
-\begin{cases}
-\kappa_{EW} = \tfrac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=\tfrac{77}{2} \text{ (Steiner response-action branch)} \\[3pt]
-A_{EW} = 1.084 \text{ (separate determinant-model branch)} \\[3pt]
-v = A_{EW} e^{-\kappa_{EW}} M_{Pl} = 252 \text{ GeV} \text{ (model-conditional)} \\[3pt]
-\sin^2\theta_W^{(0)} = 3/8;\quad \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (completed-threshold branch)} \\[3pt]
-\lambda_{\mathrm{PU}}(\mathfrak A_{PU};\gamma)=\lambda_{\mathrm{block}}+\lambda_{\mathrm{elastic}}(\gamma)=\tfrac{\gamma^2-1}{36} \\[3pt]
-\bigl[\text{completed threshold record and accepted }\mathfrak H_T\bigr]
-\longrightarrow \lambda_{\mathrm{SM}}(\mu_G)=0
-\longrightarrow m_H\approx125\ \mathrm{GeV}\quad\text{(conditional forward map)} \\[3pt]
-g_i(\mu_G)=g_U/\sqrt{Z_i} \text{ (matching)} \\[3pt]
-y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = |P_3 \mathbf{h}|_B = 1 \text{ (}S_3\text{-invariant projector)}
-\end{cases}
-}
+\mathcal B_{\mathrm{St}}\Longrightarrow \kappa_{\mathrm{St}}=\frac{77}{2},
+\qquad
+\mathcal B_{\mathrm{St}}\cap\mathcal B_{A\to\mathrm{St}}
+\Longrightarrow \kappa_{EW}=\kappa_{\mathrm{St}},
 $$
+$$
+\mathcal B_{\mathrm{St}}\cap\mathcal B_{A\to\mathrm{St}}
+\cap\mathcal B_{\mathrm{scale}}\cap\mathcal B_{\det}
+\Longrightarrow
+v=A_{EW}e^{-77/2}M_{Pl}(1+\epsilon_{EW}).
+$$
+The last formula yields the diagnostic central value $252\ \mathrm{GeV}$ only after the unreduced-Planck, unit, normalization, and same-saddle conventions are fixed. None of these arrows follows merely from the parameters $[24,12,8]$.
 
-Separately, Proposition T.5 records the observed-input validation trajectory $\lambda_{\mathrm{SM}}(\mu_\lambda)=0$. That crossing neither identifies $\mu_\lambda$ with $\mu_G$ nor supplies the completed threshold record or any member of $\mathfrak H_T$, so it is not an arrow in the Golay derivation chain.
+The gauge-matching, quartic, Higgs-mass, and Yukawa statements belong to distinct ledgers:
+$$
+\begin{aligned}
+&\mathcal B_Z &&\Longrightarrow &&\sin^2\theta_W(\mu_G)=\frac{3Z_2}{3Z_2+5Z_1},\quad g_i(\mu_G)=g_U/\sqrt{Z_i},\\
+&\mathcal B_\gamma &&\Longrightarrow &&\lambda_{\mathrm{PU}}(\mathfrak A_{PU};\gamma)=\frac{\gamma^2-1}{36},\\
+&\mathcal B_Z\cap\mathcal B_H &&\Longrightarrow &&\lambda_{\mathrm{SM}}(\mu_G)=0\Longrightarrow m_H\ \text{by the certified forward RG and pole map},\\
+&\mathcal B_Y &&\Longrightarrow &&y_t^{\mathrm{PU}}(\mathfrak A_{PU})=|P_3\mathbf h|_B=1.
+\end{aligned}
+$$
+Here $\mathcal B_Z$ is a completed threshold record, $\mathcal B_\gamma$ fixes the target-shift datum, $\mathcal B_H$ contains every member of $\mathfrak H_T$, and $\mathcal B_Y$ is the stated $S_3$-projector branch. Their intersection is not inferred from shared numerical inputs. Separately, Proposition T.5 records the observed-input validation trajectory $\lambda_{\mathrm{SM}}(\mu_\lambda)=0$; that crossing identifies neither $\mu_\lambda$ with $\mu_G$ nor any missing certificate.
 
 ## T.20 Problems
 
@@ -2383,22 +2378,17 @@ A_{EW}=1.06496178\ldots\times1.00716802\ldots\times1.01069671\ldots
 $$
 Rounding the central value to three decimals gives $A_{EW}=1.084$. The additional $\pm0.005$ quoted in later numerical sections is the manuscript's model allowance for omitted higher-order determinant and Jacobian terms; it is not produced by the multiplication above and is not a proved remainder bound. ∎
 
-**Corollary T.29.1** (Complete Electroweak Scale within the determinant model). Fix the determinant prescriptions of Theorem T.29. Then no further continuously tuned parameter enters the evaluation
+**Corollary T.29.1** (Electroweak Scale on the Joint Action-Transport and Same-Saddle Branch). Accept $\mathfrak C_{A\to\mathrm{St}}$, the scale record $\mathfrak S_{EW}$ of Principle T.6a, and the same-saddle determinant prescriptions of Theorem T.29. At the central remainder convention $\epsilon_{EW}=0$,
 $$
-v = A_{EW} \cdot e^{-\kappa_{EW}} \cdot M_{Pl}
-    = 1.084 \times e^{-38.5} \times 1.221 \times 10^{19}\,\text{GeV}
-    = 252\,\text{GeV}.
+v=A_{EW}e^{-\kappa_{EW}}M_{Pl}
+=1.08406869\ldots\,e^{-77/2}(1.2209\times10^{19}\ \mathrm{GeV})
+=251.9993042886\ldots\ \mathrm{GeV}.
 $$
-Compared with $v_{\text{obs}} = 246.22\,\text{GeV}$, this is a $2.35\%$ deviation.
+Relative to $v_{\mathrm{obs}}=246.22\ \mathrm{GeV}$ this central value differs by $2.35\%$. The comparison is diagnostic because the present determinant allowance is not a proved remainder bound.
 
-**Remark T.29.1: Parameter scope.** The inputs used here are:
+*Proof.* The finite Steiner theorem gives $\kappa_{\mathrm{St}}=77/2$. The accepted certificate $\mathfrak C_{A\to\mathrm{St}}$ gives $\kappa_{EW}=\kappa_{\mathrm{St}}$; $\mathfrak S_{EW}$ fixes the scale law, unreduced Planck convention, units, common saddle, and remainder convention; and Theorem T.29 supplies the displayed model central value of $A_{EW}$. Direct substitution gives the formula. ∎
 
-- $u_0^2 = 1/24$ from PCE equipartition over $M = 24$ interface modes (Theorem Z.5, Section Z.8),
-- the rank-one Schur-complement prescription of Theorem T.29,
-- the homogeneous-space Jacobian factor $(24/23)^{1/4}$,
-- the previously fixed normalization conventions.
-
-Accordingly, this subsection introduces no additional continuous fit parameter once the determinant model of Theorem T.29 is fixed. The numerical value of $v$ is therefore conditional on that model, not an unconditional consequence of the earlier sections alone.
+**Remark T.29.1 (Parameter and certificate scope).** The determinant evaluation additionally uses $u_0^2=1/24$, the rank-one Schur prescription, and the Jacobian factor $(24/23)^{1/4}$. Once those model choices are fixed there is no further continuously fitted parameter in the displayed arithmetic. This does not prove the action-transport certificate, the physical scale bridge, the same-saddle identification, or a remainder interval; each remains an independently falsifiable gate recorded above.
 
 **Theorem T.29.2 (Model-Conditional Status of the Electroweak Prefactor).** In the current Appendix T theorem stack, the statement
 $$
@@ -2810,11 +2800,7 @@ $$
 $$
 Verification: $8(1.140)+3(0.729)+0.695 = 9.12+2.19+0.70 = 12.01 \approx 12$ ✓; $21(0.695)+55(0.729)-48(1.140) = 14.60+40.10-54.72 = -0.02 \approx 0$ ✓. The small residuals are rounding artifacts of three-decimal reporting. This is the unique minimizer (strict convexity of $x\ln x$ on $x > 0$ combined with the two linear constraints leaving a one-parameter family, on which the objective has a unique minimum).
 
-**Remark T.34.1: Physical Interpretation.** The factor $8/3$ arises because:
-
-- Quarks carry color charge ($C_2(SU(3)) = 4/3$, $N_c = 3$)
-- Leptons do not ($C_2(SU(3)) = 0$)
-- The SU(3) contribution to the Bures curvature suppresses the quark prefactor relative to leptons
+**Remark T.34.1: Conditional Interpretation.** On the imposed normalization branch, or after an accepted $\mathcal V_{\ell d}=0$ certificate fixes the required Bures weights, the color and hypercharge Casimir entries evaluate the stated lepton--quark tilt. Quarks and leptons have different color data, but that difference alone does not derive the numerical factor $8/3$; Theorem T.34.1b gives the exact additional certificate equation.
 
 -----
 
@@ -2842,26 +2828,28 @@ These branch-resolved boundary formulas determine downstream observables only af
 
 ### T.20.11 Yukawa Sector Status
 
-**Theorem T.36** (Yukawa Compression). The 21 Standard Model Yukawa couplings reduce to:
+**Theorem T.36** (Yukawa-Model Compression Ledger). On the declared flavor-model branch, the following data form a compact parameter ledger:
 
 |Component |Status |Source |
-|------------------------------------------|----------|-------------------------------------------------------------|
-|$y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = 1$|Exact |$S_3$ projector (Theorem T.32) |
-|$\mathcal{R}$ values |Derived |$E_8$ triads: discrete set ${4/3, 3/2, 2, 3, 4}$ |
-|$c_\ell/c_d = 8/3$ |Constraint|Normalization constraint (Corollary T.34.1) |
-|$\kappa_1, \kappa_2, \kappa_3$ |Fixed |PCE optimum under constraints $\mathcal{W}$ and $\mathcal{N}$: Corollary T.34.2|
-|$\alpha = 3/2$ |Derived |Capacity saturation (Corollary T.41.3) |
-|$c_d/c_u \approx 1.00$–$1.02$ |Derived |Right-handed hypercharge (Theorem T.38) |
+|:--|:--|:--|
+|$y_t^{\mathrm{PU}}(\mathfrak A_{PU})=1$ | Conditional branch identity | Theorem T.32 |
+|Selected $E_8$ distance ratios | Finite model labels | Definition T.42 and preregistered triads |
+|$c_\ell/c_d=8/3$ | Conditional branch datum | Imposed normalization, or output of an accepted $\mathcal V_{\ell d}=0$ Bures-weight certificate (Corollary T.34.1; Theorem T.34.1b) |
+|$(\kappa_1,\kappa_2,\kappa_3)$ | Conditional optimizer on that normalization branch | Corollary T.34.2 |
+|$\alpha=3/2$ | Unit-radius branch value | Lemma T.41.2 and Corollary T.41.3 |
+|$c_d/c_u$ | Conditional response ratio | Theorem T.38 |
 
-**Compression factor**: $21 \to 1$ continuous parameter + 3 discrete choices once the lifted threshold data are supplied. At the threshold layer, Remark T.17a.4 and Proposition T.17a.5 rule out the sector-independent local affine truncation, while the operative threshold data are the sector-resolving $\mathrm{MS2}_{\mu_G}$ block sums on $\widetilde X$.
+This is a model-data compression, not a proof that the 21 physical Yukawa parameters are uniquely reconstructible from one continuous parameter and three discrete choices. Such a claim would require a declared comparison class, an injective reconstruction map modulo a stated equivalence, existence and strict minimality of the optimum, and the complete complex-matrix, matching, and singular-value certificate of Theorem T.39. Lifted threshold data remain separate sector-resolving inputs.
 
-**Theorem T.37** ($E_8$ Triad Assignment). The optimal sector assignment is:
+**Theorem T.37** (Retrospective Sector-Triad Candidate Ledger). The following selected root-distance pairs are retrospective candidates:
 
-|Sector |$(d_{31}^2, d_{32}^2)$|$\mathcal{R}_{E_8}$|$\mathcal{R}_{\text{obs}}$|Agreement|
-|-----------|----------------------|-------------------|--------------------------|---------|
-|Up quarks |$(8, 4)$ |$2$ |$2.30$ |87% |
-|Down quarks|$(4, 2)$ |$2$ |$1.79$ |88% |
-|Leptons |$(6, 2)$ |$3$ |$2.89$ |96% |
+|Sector |$(d_{31}^2,d_{32}^2)$|$\mathcal R_{E_8}$|Quoted diagnostic $\mathcal R_{\mathrm{obs}}$|
+|:--|:--:|:--:|:--:|
+|Up quarks |$(8,4)$ |$2$ |$2.30$ |
+|Down quarks |$(4,2)$ |$2$ |$1.79$ |
+|Charged leptons |$(6,2)$ |$3$ |$2.89$ |
+
+The displayed ratios follow by exact division. Because the assignments were selected using the quoted hierarchy data, the comparison is calibration evidence only. No optimality or uniqueness conclusion follows without a preregistered candidate class, selection score, tie rule, and held-out test; physical mass ratios additionally require Theorem T.39's full-matrix gate.
 
 **Theorem T.38** (Up-Down Sector Prefactor). The prefactor ratio $c_d/c_u$ is determined by right-handed hypercharge normalization. Including the color multiplicity factor consistently with Theorem T.34, the right-handed normalization factors are
 $$
@@ -2895,16 +2883,33 @@ ds^2_B = \frac{1}{2a}\sum_{i\le a,\,j>a}|dz_{ij}|^2 = \frac{1}{4}\sum_{i,j}|dz_{
 $$
 where $a = 2$ and $z_{ij}$ are complex coordinates on $T_{x_0}\mathrm{Gr}(2,8)\cong\mathrm{Hom}(\mathbb{C}^2,\mathbb{C}^6)$. The associated Bures connection 1-form $\mathcal{A}_B$ is the Levi-Civita connection of this Kähler metric. On a holomorphic 2-plane $\mathbb{CP}^1\hookrightarrow\mathrm{Gr}(2,8)$ (the minimal geodesic submanifold), the holonomy around a geodesic loop of area $\mathcal{A}$ is $\Phi = K_{\mathrm{hol}}\cdot\mathcal{A}$, where $K_{\mathrm{hol}}$ is the holomorphic sectional curvature.
 
-**Step 2 (Holomorphic sectional curvature).** For the Fubini-Study metric on $\mathrm{Gr}(a,d_0)$ with the Bures normalization $1/(2a)$, the holomorphic sectional curvature is (Kobayashi–Nomizu 1969):
+**Step 2 (Holomorphic sectional curvature).** The Bures-normalized Grassmannian
+$\operatorname{Gr}(2,8)$ does not have constant holomorphic sectional
+curvature.  For a $g_B$-unit rank-one tangent $X$ to the Schubert
+$\mathbb{CP}^1$, Proposition Z.23b gives
 $$
-K_{\mathrm{hol}} = 2a = 4.
+R(iX,X)X=8iX.
 $$
-This equals the effective curvature $K_{\mathrm{eff}} = 4/a = 2$ scaled by $2a/(4/a) = a^2 = 4$ — or equivalently, $K_{\mathrm{hol}} = 2a$ directly from the metric normalization. (Theorem Z.24 gives $K_{\mathrm{eff}} = 4/a = 2$ for the *average* over all tangent 2-planes; the holomorphic sectional curvature is $2a = 4$ for the specific $\mathbb{CP}^1$ 2-planes.)
+Since $iX$ is $g_B$-unit and orthogonal to $X$, this rank-one plane has
+$$
+K_{\mathrm{hol}}(X)=g_B(R(iX,X)X,iX)=8.
+$$
+The value $4$ in Proposition Z.23b belongs to an equal-singular-value
+rank-two tangent and is not the curvature of the minimal rank-one Schubert
+$\mathbb{CP}^1$ used in Step 1.
 
-**Step 3 (Holonomy per mode).** At capacity saturation, the $M = 24$ interface modes are utilized democratically (PCE isotropy). The total holonomy $2\pi$ distributed equally across $M$ modes gives holonomy per mode $2\pi/M$. The area of the minimal geodesic loop corresponding to one mode is
+**Step 3 (Registered holonomy per mode).** On the democratic-holonomy branch
+of Theorem T.39a, each of the $M=24$ registered mode loops has Bures
+Levi--Civita holonomy $2\pi/M$.  On the rank-one Schubert $\mathbb{CP}^1$, a
+geodesic loop with that registered holonomy has area
 $$
-\mathcal{A}_1 = \frac{(2\pi/M)}{K_{\mathrm{hol}}} = \frac{(2\pi/24)}{4} = \frac{\pi}{48}.
+\mathcal A_1
+=\frac{(2\pi/M)}{K_{\mathrm{hol}}}
+=\frac{(2\pi/24)}8
+=\frac{\pi}{96}.
 $$
+This is a Levi--Civita holonomy ledger.  It neither fixes nor replaces the
+determinant-line Berry curvature of Lemmas T.53.1--T.53.2.
 
 **Step 4 (Gauge-coupling identification on the canonical Bures-gauge holonomy-normalization branch).** On the canonical Bures-gauge holonomy-normalization branch — under which the Bures connection $\mathcal{A}_B$ is identified with the gauge connection at matching with calibration constant $1/2$ — the holonomy $\oint_\gamma \mathcal{A}_B$ around a minimal mode loop equals $g_U^2/2$. The factor $1/2$ is motivated by the gauge kinetic term $-\frac{1}{4}F^2$ relative to the geometric connection in the standard normalization $\alpha = g^2/(4\pi)$, but its derivation from the PU effective action is a separate theorem: with a general calibration constant $\chi_U$, one would have $\oint_\gamma \mathcal{A}_B = \chi_U \cdot g_U^2$, giving $g_U^2 = (2\pi/M)/\chi_U$ and $\alpha_U^{-1} = 2M\chi_U$. The branch choice $\chi_U = 1/2$ yields:
 $$
@@ -2985,13 +2990,28 @@ $$
 $$
 Substitution of $M=24$ and the additional calibration $\chi_U=1/2$ gives the final displayed values. The trace normalization $\operatorname{tr}(T_aT_b)=\delta_{ab}/2$ fixes the Lie-algebra basis but does not by itself fix $\chi_U$. ∎
 
-**Problem T.3** (CKM/PMNS). *Solved for CKM sector in Section T.22 and PMNS sector in Section T.24.* The CKM matrix elements emerge from two limiting regimes of a unified overlap formula on the generation manifold $\mathrm{Gr}(2,8)$:
+**Problem T.3** (CKM/PMNS Status Ledger). Sections T.22 and T.24 construct
+mixing-model kernels on the generation manifold $\operatorname{Gr}(2,8)$.
+Physical CKM entries require one common accepted full-matrix realization
+certificate $\mathfrak C_{\mathrm{mix}}$ of Theorem T.45; the PMNS sector has
+its separately stated realization gates.
 
-1. **Heavy-generation mixing** (3↔1, 3↔2): Gaussian overlap suppression $\exp(-\alpha d^2_{E_8})$ yields $|V_{cb}| = \sqrt{2/3} \cdot e^{-3} = 0.0407$ and $|V_{ub}| = 0.00392$ (Theorems T.46–T.48).
-1. **Light-generation mixing** (1↔2): Geometric frustration between $D_4$ (cubic, $\theta_u = 90°$) and $A_2$ (hexagonal, $\theta_d = 120°$) symmetries, with stiffness-weighted vacuum at $\theta_{\mathrm{vac}} = 105.15°$, yields the Cabibbo angle $|V_{us}| = (\sqrt{3}/2)\sin(15.15°) \times f_{\mathrm{curv}} = 0.2261$ (Theorems T.49–T.52).
-1. **CP violation**: On the minimal Berry-area branch, Berry holonomy around the flavor loop gives the base phase $\delta_{\mathrm{flat}}=70.53°$ (Theorems T.53–T.54). The symmetric average of Theorem T.55 changes visibility but not phase; the value $\delta=66.7°$ is conditional on the independent nonlinear response ansatz of Theorem T.56.
+1. **Heavy-generation model kernel** (3↔1, 3↔2): the declared Gaussian
+   response gives $K_{cb}=\sqrt{2/3}\,e^{-3}=0.0406509711\ldots$ and the
+   two-channel $K_{ub}$ of Theorem T.48.  Neither is a CKM entry before
+   $\mathfrak C_{\mathrm{mix}}$ is accepted.
+1. **Light-generation model kernel** (1↔2): the registered frustration and
+   curvature convention gives $K_{us}=0.2260684703\ldots$.  Its physical
+   interpretation and coexistence with the heavy entries require the same
+   common certificate.
+1. **CP violation**: Theorem T.53 maps the geometric holonomy to the CKM phase
+through a preregistered $R_\phi$ on its accepted full-matrix and rephasing
+branch. Convention T.54 assigns the base value
+$\delta_{\mathrm{flat}}=70.53°$, while Theorem T.54b is the independent
+area-and-lift gate. The value $\delta=66.7°$ additionally requires Theorem
+T.56's nonlinear response map.
 
-# Section T.21: Derivation of the Universal Hierarchy Parameter
+# Section T.21: Hierarchy-Kernel Coefficient and Mass-Realization Gate
 
 ## T.21.1 Introduction and Statement of Result
 
@@ -2999,38 +3019,89 @@ This section models mass differences between particle families as the effect of 
 
 ### Technical statement and notation
 
-The inter-generation mass hierarchy arises from geometric suppression of Yukawa couplings on the generation vacuum manifold. This suppression is controlled by a single coefficient multiplying squared distances in the $E_8$ root space.
+The hierarchy-model kernel assigns geometric suppression factors to selected
+generation pairs.  A single coefficient multiplies squared $E_8$ distances in
+its leading exponent.  Physical Yukawa matrices and mass ratios require the
+separate assembly and realization certificate of Theorem T.39.
 
 **Notation (to avoid symbol overload).** In Appendix T, the symbol $\alpha$ (and derived quantities such as $\alpha_{\mathrm{IR}}$) denotes the *hierarchy coefficient* controlling Yukawa scaling. The electromagnetic fine-structure constant is denoted $\alpha_{\mathrm{em}}$ (Appendix Z); in particular, $\alpha_{\mathrm{em}}^{-1}\approx 137$ should not be conflated with the hierarchy coefficient.
 
-**Theorem T.39** (Universal hierarchy coefficient at the PU fixed point).
-Let $d^2_{E_8}(r_i,r_j)$ denote the squared Euclidean distance between generation roots $r_i,r_j$ in the $E_8$ root system, where $d^2_{E_8} \in \{0, 2, 4, 6, 8\}$ for distinct roots. The hierarchy coefficient $\alpha = 3/2$ controls Yukawa suppression via $Y_{ij} \propto \exp(-\alpha d^2_{E_8}(r_i, r_j))$. This value coincides with the unique Hessian eigenvalue at a $K$-invariant PCE-Attractor minimum (Corollary T.41.3), providing a geometric interpretation of the mass hierarchy mechanism. Then, at the PCE-attractor,
-
+**Theorem T.39** (Certified Hierarchy Exponent and Mass-Realization Gate).
+Let $r_i\ne r_j$ be selected $E_8$ roots, put $q_{ij}:=d_{E_8}(r_i,r_j)^2\in\{2,4,6,8\}$, and assume the Toeplitz--Kraus branch of Definition T.41.4a, the local Schur-heat certificate of Theorem T.41.4e, and an accepted embedding certificate $\mathfrak C_{B/E_8}$ from Lemma T.41.4. For $\tau_*=\sigma_B^2/2$, let the heat-kernel certificate supply $\epsilon_{ij}>-1$ with a verified interval bound such that
 $$
-\boxed{\ln\!\left(\frac{m_j}{m_i}\right) = \alpha \, d^2_{E_8}(r_i,r_j), \qquad \alpha = \frac{1}{16\,\sigma_B^2}}
+K_{ij}^{\mathrm{mag}}
+=
+\mathcal N_f(4\pi\tau_*)^{-12}
+\Delta_{\mathrm{VVM}}(r_i,r_j)^{1/2}
+\exp\!\left[-\frac{q_{ij}}{16\sigma_B^2}\right]
+(1+\epsilon_{ij}).
+\tag{T.39.1}
 $$
-
-**Scope.** For Dirac-type generation sectors this equation is used as a pairwise mass-ratio law on path-additive triads. In the Majorana self-conjugate neutrino sector, the same geometric suppression is applied in the anchored form of Theorem T.24.11; the third $A_2$ edge controls mixing geometry and is not an independent mass-ratio equation.
-
-where $\sigma_B^2$ is the variance (per Bures-orthonormal direction) of the generation-localizing Gaussian on the interface orbit $\mathrm{Gr}(2,8)$ at the attractor. Isotropy and capacity equipartition across the $M=24$ interface directions fix
+Then the two-channel model kernel is
 $$
-\sigma_B^2 = \frac{1}{24} \quad\Longrightarrow\quad \alpha_{\mathrm{UV}} = \frac{24}{16} = \frac{3}{2},
+\log K_{ij}^{\mathrm{mag}}
+=C_f-\alpha q_{ij}
++\frac12\log\Delta_{\mathrm{VVM}}(r_i,r_j)
++\log(1+\epsilon_{ij}),
+\qquad
+\alpha:=\frac{1}{16\sigma_B^2},
+\tag{T.39.2}
 $$
-with $\sigma_B^2 = 1/24$ established explicitly in Lemma T.41.2.
+where $C_f:=\log\mathcal N_f-12\log(4\pi\tau_*)$. On the unit-radius convention of Lemma T.41.2, $\sigma_B^2=1/24$ and hence $\alpha=3/2$.
 
-At low scales, the effective exponent extracted from data satisfies
-
+An exact mass-ratio statement requires a separate finite realization certificate
 $$
-\alpha_{\mathrm{IR}} = \frac{\ln(m_\tau/m_\mu)}{2} = 1.411,
+\mathfrak C_{Y\to m}
+=
+(K_f,\Theta_f,Y_f,\mathcal R_{\mathrm{match}},U_L,U_R,m_1,m_2,m_3,\ell),
 $$
-
-in excellent agreement with $\alpha_{\mathrm{IR}}\approx \sqrt{2}$, while the $\alpha$-independent ratio invariant
-
+where $K_f$ is the complete matrix of model magnitudes assembled from (T.39.1), $\Theta_f$ is the separately certified phase matrix, $Y_f$ is the candidate sector Yukawa matrix assembled inside this certificate, $\mathcal R_{\mathrm{match}}$ is the declared matching and renormalization map, $U_L,U_R$ are unitary matrices, $m_1,m_2,m_3>0$ are ordered singular values after that map, and $\ell$ fixes the root-to-mass labels before comparison. The symbol $Y_f$ is reserved for this accepted assembly and is not assigned to an isolated pre-realization kernel entry. The certificate is accepted only if exact arithmetic or outward-rounded interval arithmetic verifies, for every entry,
 $$
-\mathcal{R} = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} = \frac{d^2_{31}}{d^2_{32}} = 3
+(K_f)_{ab}
+=\mathcal N_f(4\pi\tau_*)^{-12}
+\Delta_{\mathrm{VVM}}(a,b)^{1/2}
+e^{-q_{ab}/(16\sigma_B^2)}(1+\epsilon_{ab}),
+\qquad
+(Y_f)_{ab}=(K_f)_{ab}e^{i(\Theta_f)_{ab}},
+\tag{T.39.3a}
 $$
+and then verifies unitarity, the full-matrix diagonalization after $\mathcal R_{\mathrm{match}}$, the label assignment, and every residual
+$$
+R_{ij}:=\log\!\left(\frac{m_j}{m_i}\right)-\alpha q_{ij}.
+\tag{T.39.3}
+$$
+The mass law $\log(m_j/m_i)=\alpha q_{ij}$ holds for a claimed pair if and only if its accepted certificate verifies $R_{ij}=0$; otherwise (T.39.3), with its certified interval, is the theorem-level conclusion.
 
-matches observation at the $3.8%$ level for the charged lepton triad described below.
+*Proof.* The heat kernel uses the intrinsic geodesic distance $d_{g_B}$, not the chordal fidelity distance $D_B$. Lemma T.41.4 converts its certified exponent exactly to $q_{ij}/(16\sigma_B^2)$. Taking the logarithm of (T.39.1), which is permitted because $\epsilon_{ij}>-1$, gives (T.39.2). Lemma T.41.2 gives the unit-radius value. Equation (T.39.3a) prevents an unrelated matrix from entering the mass gate. Singular values of that assembled full matrix, rather than an isolated entry, determine the ordered masses after matching; the final claim is exactly the verification rule (T.39.3), with no entrywise-to-mass inference. ∎
+
+**Scope.** Equations (T.39.1)--(T.39.2) determine a certified Yukawa-kernel exponent and retain the Van Vleck and heat-kernel residuals. A Dirac-sector pairwise mass law is available only through the complete matrix, matching, diagonalization, anchoring, and label certificate $\mathfrak C_{Y\to m}$. The Majorana sector retains the separate anchored construction of Theorem T.24.11; its third $A_2$ edge controls mixing geometry and is not an independent mass-ratio equation.
+
+Here $\sigma_B^2$ is the variance per Bures-orthonormal direction.  On Lemma
+T.41.2's independently declared centered isotropic unit-radius convention
+$\langle r_B^2\rangle=1$,
+$$
+\sigma_B^2=\frac1{24},
+\qquad
+\alpha_{\mathrm{UV}}:=\frac1{16\sigma_B^2}=\frac32.
+$$
+The Predictive Ward identity fixes the quadratic kernel and isotropy fixes the
+covariance shape; neither it nor capacity saturation selects this radius.
+
+The observational extraction
+$$
+\alpha_{\mathrm{IR}}^{\mathrm{obs}}
+:=\frac{\ln(m_\tau/m_\mu)}2
+=1.411\ldots
+$$
+is a diagnostic, not a derivation of the model coefficient.  Likewise
+$$
+\mathcal R_{\mathrm{obs}}
+:=\frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)}
+=2.889\ldots,
+$$
+whereas the selected leading quadratic distance ratio is
+$d_{31}^2/d_{32}^2=3$.  Equality of these quantities is neither asserted nor
+used as a mass-realization proof.
 
 -----
 
@@ -3075,9 +3146,14 @@ $$
 
 -----
 
-## T.21.3 Derivation of $\sigma_B^2 = 1/24$
+## T.21.3 Unit-Radius Normalization of $\sigma_B^2$
 
-The generation-localizing fluctuations at the attractor are Gaussian on the interface orbit $(\mathrm{Gr}(2,8), g_B)$, with covariance $\sigma_B^2 I$ in the Bures-orthonormal frame of the 24 interface directions. We derive $\sigma_B^2 = 1/24$ from the Predictive Ward identity, isotropy, and capacity saturation.
+The generation-localizing model uses an isotropic Gaussian on
+$(\operatorname{Gr}(2,8),g_B)$ with covariance $\sigma_B^2I$ in 24
+Bures-orthonormal directions.  The Ward identity fixes the quadratic kernel,
+isotropy fixes covariance shape, and Lemma T.41.2's independent unit-radius
+convention fixes the remaining scale.
+Capacity saturation alone does not fix that scale or the unit radius.
 
 **Theorem T.41.1** (Quadratic action and isotropic covariance).
 At the PCE-attractor, the quadratic 1PI kernel on the interface orbit equals the Bures metric (Predictive Ward identity), and in the Hilbert–Schmidt normalized basis the metric is $g_B = (1/4) I_{24}$. Passing to the Bures-orthonormal frame $\xi \in \mathbb{R}^{24}$ defines the canonical quadratic action
@@ -3086,7 +3162,7 @@ $$
 S_{\mathrm{quad}}(\xi) = \frac{1}{2} |\xi|^2,
 $$
 
-so that the Gaussian density is $p(\xi) \propto \exp\!\left(-\frac{S_{\mathrm{quad}}(\xi)}{\sigma_B^2}\right)=\exp\!\left(-\frac{|\xi|^2}{2\sigma_B^2}\right)$ for some isotropic scale $\sigma_B^2$ fixed by capacity saturation (Lemma T.41.2).
+so that the Gaussian density is $p(\xi)\propto\exp[-S_{\mathrm{quad}}(\xi)/\sigma_B^2]=\exp[-|\xi|^2/(2\sigma_B^2)]$ for an isotropic scale $\sigma_B^2$. Lemma T.41.2 fixes that scale only after imposing its independent unit mean-squared-radius convention.
 
 *Proof.* By the QFI calculation of Section T.21.2.2, $F_Q(\rho_0; G) = 1$ for each interface generator, and $g_B = F_Q/4 = (1/4) I_{24}$. The Predictive Ward identity identifies $\Gamma^{(2)} = g_B$. The Bures-orthonormal frame rescales the tangent basis by a factor $2$, delivering $\Gamma^{(2)} = I_{24}$ and $S_{\mathrm{quad}} = (1/2) \xi^T \xi$. ∎
 
@@ -3109,44 +3185,97 @@ $$
 $$
 QED
 
-**Corollary T.41.3** (Universal hierarchy coefficient at UV).
-With $\sigma_B^2 = 1/24$ and $\alpha = 1/(16\,\sigma_B^2)$,
-
+**Corollary T.41.3** (Unit-Radius Hierarchy Exponent).
+On a branch on which the Gaussian exponent is defined by $\alpha=1/(16\sigma_B^2)$, the unit-radius convention $\sigma_B^2=1/24$ gives
 $$
-\alpha_{\mathrm{UV}} = \frac{24}{16} = \frac{3}{2}.
+\alpha=\frac{24}{16}=\frac32.
 $$
 
-*Proof.* Substituting $\sigma_B^2=1/24$ (Lemma T.41.2) into $\alpha=1/(16\,\sigma_B^2)$ yields $\alpha_{\mathrm{UV}}=24/16=3/2$. ∎
+*Proof.* This is direct substitution. The unit-radius convention fixes the scale of the Gaussian exponent; it is not a Hessian-eigenvalue or capacity-saturation theorem. ∎
 
 -----
 
 ## T.21.4 Bures–$E_8$ Conversion and Gaussian Suppression
 
-**Lemma T.41.4** (Bures–$E_8$ conversion).
-For a small SU(2) rotation of angle $u$ in a single AB block at $\rho_0$, the Bures and $E_8$ distances satisfy
-
+**Lemma T.41.4** (Exact Single-Block Intrinsic Bures–$E_8$ Conversion on a Certified Embedding).
+Let $\rho_i\in\mathcal O_{\rho_0}$ and let $G=G^\dagger$ be a Hilbert--Schmidt-unit generator supported on one active--inactive pair relative to $\rho_i$. Define
 $$
-d_B^2 = \frac{1}{4}u^2 = \frac{1}{8}d^2_{E_8} + \mathcal{O}(u^4), \qquad d_{E_8}^2 = 2u^2.
+\rho(u):=e^{-iuG}\rho_i e^{iuG}.
+$$
+Write $d_{g_B}$ for the intrinsic geodesic distance of the Bures Riemannian metric restricted to $\mathcal O_{\rho_0}$, and retain
+$$
+D_B(\rho,\sigma)^2:=2-2\operatorname{Tr}\sqrt{\sqrt\rho\,\sigma\sqrt\rho}
+$$
+for the chordal fidelity distance of the glossary. For $|u|<\pi/\sqrt2$, the orbit curve is minimizing and
+$$
+d_{g_B}(\rho_i,\rho(u))=\frac{|u|}{2},
+\qquad
+D_B(\rho_i,\rho(u))^2
+=1-\cos\!\left(\frac{|u|}{\sqrt2}\right).
 $$
 
-**Definition T.41.4a (Toeplitz-Kraus Yukawa Transition Branch).** Let
+Let a finite selected root set carry a registered embedding certificate
+$$
+\mathfrak C_{B/E_8}
+=
+\left(\iota,\{G_{ij},u_{ij}\}_{(i,j)\in\mathcal P}\right),
+$$
+where $\iota(r_i)\in\mathcal O_{\rho_0}$, every $G_{ij}$ is Hilbert--Schmidt unit and supported on one active--inactive pair relative to $\iota(r_i)$, and
+$$
+\iota(r_j)=e^{-iu_{ij}G_{ij}}\iota(r_i)e^{iu_{ij}G_{ij}},
+\qquad
+d_{E_8}(r_i,r_j)^2=2u_{ij}^2.
+$$
+For every certified pair with
+$$
+d_{E_8}(r_i,r_j)^2\in\{2,4,6,8\},
+$$
+one has $|u_{ij}|\le2<\pi/\sqrt2$ and therefore
+$$
+\boxed{
+d_{g_B}(\iota(r_i),\iota(r_j))^2
+=
+\frac18d_{E_8}(r_i,r_j)^2.
+}
+$$
+For the chordal distance the exact finite relation is instead
+$$
+\boxed{
+D_B(\iota(r_i),\iota(r_j))^2
+=1-\cos\!\left(\frac{d_{E_8}(r_i,r_j)}2\right).
+}
+$$
+
+*Proof.* A single active--inactive generator lies in the symmetric-space tangent component of
+$$
+U(8)/(U(2)\times U(6)).
+$$
+Its exponential orbit is therefore a Grassmannian geodesic. Proposition Z.23a gives its constant Bures speed squared as $g_B(G,G)=1/4$. Hilbert--Schmidt normalization makes its sole nonzero principal angle $\vartheta=|u|/\sqrt2$, so the curve remains minimizing until $\vartheta=\pi/2$ and has length $|u|/2$. For $\rho_i=P_i/2$ and $\rho(u)=P(u)/2$, the two principal angles are $0$ and $\vartheta$, hence the root fidelity is
+$$
+\operatorname{Tr}\sqrt{\sqrt{\rho_i}\rho(u)\sqrt{\rho_i}}
+=\frac{1+\cos\vartheta}{2}.
+$$
+This proves the chordal formula. Finally $d_{E_8}^2=2u^2$ gives $d_{g_B}^2=d_{E_8}^2/8$ and $\vartheta=d_{E_8}/2$. Thus the two globally distinct distance functions are never silently interchanged. ∎
+
+**Definition T.41.4a (Toeplitz--Kraus Model-Kernel Transition Branch).** Let
 $$
 P_i=|\psi_i\rangle\langle\psi_i|,\qquad P_j=|\psi_j\rangle\langle\psi_j|
 $$
-be generation-localized rank-one coherent projectors on the retained flavor Kähler branch over $(\mathrm{Gr}(2,8),g_B)$. A Yukawa magnitude kernel is on the Toeplitz-Kraus transition branch when the Yukawa interaction is represented operationally by the positive PPI-admissible measurement superoperator
+be generation-localized rank-one coherent projectors on the retained flavor Kähler branch over $(\mathrm{Gr}(2,8),g_B)$. A model Yukawa magnitude kernel is on the Toeplitz--Kraus transition branch when its response is defined by the positive PPI-admissible measurement superoperator
 $$
 \mathcal Y_j(\rho)=P_j\rho P_j
 \tag{T.41.4a.1}
 $$
-acting on the source generation density operator, up to a sector prefactor and a Berry phase factor carried separately by the connection on the flavor bundle. The physical Yukawa magnitude on this branch is the transition probability
+acting on the source generation density operator, up to a sector prefactor and a Berry phase factor carried separately by the connection on the flavor bundle. The resulting model magnitude kernel is the transition probability
 $$
-Y_{ij}^{\mathrm{mag}}\propto\operatorname{Tr}\!\big(\mathcal Y_j(P_i)\big)=\operatorname{Tr}\!\big(P_jP_iP_j\big)=\operatorname{Tr}(P_iP_j).
+K_{ij}^{\mathrm{mag}}\propto\operatorname{Tr}\!\big(\mathcal Y_j(P_i)\big)=\operatorname{Tr}\!\big(P_jP_iP_j\big)=\operatorname{Tr}(P_iP_j).
 \tag{T.41.4a.2}
 $$
+Here $K_{ij}^{\mathrm{mag}}$ is a pre-realization model kernel; $Y_f$ is reserved for the candidate sector matrix assembled and tested in Theorem T.39.
 
-**Theorem T.41.4b (Toeplitz-Kraus Probability-Overlap Gate).** On the Toeplitz-Kraus Yukawa transition branch of Definition T.41.4a,
+**Theorem T.41.4b (Toeplitz--Kraus Probability-Overlap Gate).** On the model-kernel transition branch of Definition T.41.4a,
 $$
-Y_{ij}^{\mathrm{mag}}\propto|\langle\psi_i|\psi_j\rangle|^2.
+K_{ij}^{\mathrm{mag}}\propto|\langle\psi_i|\psi_j\rangle|^2.
 \tag{T.41.4b.1}
 $$
 The amplitude-overlap magnitude $|\langle\psi_i|\psi_j\rangle|$ is not an admissible replacement on this branch.
@@ -3163,17 +3292,20 @@ which establishes (T.41.4b.1) via Definition T.41.4a.
 
 The complex amplitude $\langle\psi_i|\psi_j\rangle$ is a section-level quantity whose phase depends on the local section choice $\psi_i\mapsto e^{i\theta_i}\psi_i$, $\psi_j\mapsto e^{i\theta_j}\psi_j$. Its modulus $|\langle\psi_i|\psi_j\rangle|$ is gauge-invariant, but it is the square root of the transition probability, not the expectation value of the positive Toeplitz-Kraus measurement map $\mathcal Y_j(\cdot)=P_j(\cdot)P_j$ on the projector state $P_i$. The probability overlap $|\langle\psi_i|\psi_j\rangle|^2=\operatorname{Tr}(P_iP_j)$ is the scalar selected by the positive operational transition branch. Thus the amplitude-overlap magnitude is not mathematically impossible in another model, but it is not the admissible kernel on the Toeplitz-Kraus branch defined in Definition T.41.4a. ∎
 
-**Corollary T.41.4c (Berry-Phase Separation for Complex Yukawas).** On the Toeplitz-Kraus branch, complex Yukawa entries factor locally as
+**Corollary T.41.4c (Berry-Phase Separation for Complex Model Kernels).** On the Toeplitz--Kraus branch, define the complex model kernel locally by
 $$
-Y_{ij}=|Y_{ij}|\,e^{i\theta_{ij}^{\mathrm{Berry}}},\qquad|Y_{ij}|\propto\operatorname{Tr}(P_iP_j).
+K_{ij}:=K_{ij}^{\mathrm{mag}}e^{i\theta_{ij}^{\mathrm{Berry}}},
+\qquad
+K_{ij}^{\mathrm{mag}}\propto\operatorname{Tr}(P_iP_j).
 \tag{T.41.4c.1}
 $$
-The magnitude is determined by Theorem T.41.4b; the phase $\theta_{ij}^{\mathrm{Berry}}$ is the holonomy of the retained flavor Berry connection along the chosen generation path, as in Theorems T.53–T.54 and Appendix Y. The numerical value $66.7°$ requires the additional response ansatz of Theorem T.56. The full Berry-phased matrix does not inherit the reality or determinant orientation of its positive magnitude matrix. Any strong-CP use therefore requires a common-convention absolute full-mass determinant-line certificate, such as a positively oriented reference pair together with determinant-one full complex transport; determinant-one holonomy without the base orientation, and entrywise magnitude positivity, are insufficient.
+It becomes an entry of a candidate $Y_f$ only through Theorem T.39's common entrywise assembly and full-matrix checks.
+The model magnitude is determined by Theorem T.41.4b; the phase $\theta_{ij}^{\mathrm{Berry}}$ is the holonomy of the retained flavor Berry connection along the chosen generation path, as in Theorem T.53 and Appendix Y. Convention T.54 assigns the base-area value, while Theorem T.54b provides the independent area-evaluation gate. The numerical value $66.7°$ requires Theorem T.56's additional response ansatz. Only an accepted Theorem-T.39 assembly promotes the kernels to a candidate sector matrix $Y_f$. Such a full Berry-phased matrix does not inherit the reality or determinant orientation of its positive magnitude kernel. Any strong-CP use therefore requires a common-convention absolute full-mass determinant-line certificate, such as a positively oriented reference pair together with determinant-one full complex transport; determinant-one holonomy without the base orientation, and entrywise magnitude positivity, are insufficient.
 
-*Proof.* The probability overlap $\operatorname{Tr}(P_iP_j)$ is a gauge-invariant nonnegative real scalar, so it can determine only the magnitude $|Y_{ij}|$. A transported Yukawa section between $P_i$ and $P_j$ on the flavor bundle acquires an additional phase equal to the holonomy of the Berry connection along the generation path; this phase is gauge-invariant modulo $2\pi$ on closed loops by Lemma T.53.2 and supplies the base CKM/PMNS phase of Theorems T.53–T.54 and the Appendix Y CP-odd response datum. The numerical CKM phase $66.7°$ additionally requires the response ansatz of Theorem T.56, and baryon production additionally requires the driven gate of Theorem Y.6.1i. Combining the magnitude from Theorem T.41.4b with the Berry phase gives (T.41.4c.1). ∎
+*Proof.* The probability overlap $\operatorname{Tr}(P_iP_j)$ is a gauge-invariant nonnegative real scalar, so it determines only the model magnitude $K_{ij}^{\mathrm{mag}}$. Parallel transport supplies the separate phase of the complex model kernel; Lemma T.53.2 gives its gauge-invariant closed-loop class. Convention T.54 and Theorem T.54b separate the assigned and independently evaluated CKM base areas. The numerical CKM response phase additionally requires Theorem T.56, and baryon production requires Theorem Y.6.1i's driven gate. This proves the stated model-kernel factorization without promoting any conventional area or pre-realization entry to a physical Yukawa matrix. ∎
 
 
-**Definition T.41.4d (Schur-Heat Realization of the Yukawa Magnitude Kernel).** On the retained flavor boundary branch, let the quadratic predictive operator split into visible flavor-boundary and internal blocks,
+**Definition T.41.4d (Schur--Heat Realization of the Magnitude Model Kernel).** On the retained flavor boundary branch, let the quadratic predictive operator split into visible flavor-boundary and internal blocks,
 $$
 L=
 \begin{pmatrix}
@@ -3196,12 +3328,12 @@ $$
 K_\tau^{\mathrm{fl}}:=e^{-\tau\Lambda_{\mathrm{fl}}}
 \tag{T.41.4d.3}
 $$
-be its heat kernel on the retained generation manifold. The Schur-heat Yukawa branch is the specialization of the Toeplitz-Kraus probability-overlap branch for which
+be its heat kernel on the retained generation manifold. The Schur--heat model branch is the specialization of the Toeplitz--Kraus probability-overlap branch for which
 $$
-|Y_{ij}|
+K_{ij}^{\mathrm{mag}}
 =
 \mathcal N_f
-\left\langle r_j\middle|K_{\tau_*}^{\mathrm{fl}}\middle|r_i\right\rangle
+\left\langle r_j\middle|K_{\tau_*}^{\mathrm{fl}}\middle|r_i\right\rangle.
 \tag{T.41.4d.4}
 $$
 with sector normalization $\mathcal N_f$ carried by the Bures/gauge normalization factors of Sections T.20.8-T.20.11, and with the attractor heat time
@@ -3211,93 +3343,89 @@ $$
 $$
 Berry phases remain separated as in Corollary T.41.4c.
 
-**Theorem T.41.4e (Schur-Heat Kernel Gives the Universal Hierarchy Exponent).** On the local Schur-heat branch of Definition T.41.4d, assume the retained heat-kernel certificate of Corollary X.8k.4a on $(\mathrm{Gr}(2,8),g_B)$. Then
+**Theorem T.41.4e (Certified Schur-Heat Hierarchy Model Kernel).** On the local Schur-heat branch of Definition T.41.4d, assume the retained heat-kernel certificate of Corollary X.8k.4a on $(\mathrm{Gr}(2,8),g_B)$. Write $d_{g_B}$ for its intrinsic geodesic distance. Then
 $$
-|Y_{ij}|
+K_{ij}^{\mathrm{mag}}
 =
 \mathcal N_f
 (4\pi\tau_*)^{-12}
 \Delta_{\mathrm{VVM}}(r_i,r_j)^{1/2}
-\exp\left[-\frac{d_B(r_i,r_j)^2}{4\tau_*}\right]
+\exp\left[-\frac{d_{g_B}(r_i,r_j)^2}{4\tau_*}\right]
 \left(1+O(\tau_*)\right).
 \tag{T.41.4e.1}
 $$
 Using $\tau_*=\sigma_B^2/2$ gives
 $$
-\log |Y_{ij}|
+\log K_{ij}^{\mathrm{mag}}
 =
 \log\mathcal N_f
--
-12\log(4\pi\tau_*)
--
-\frac{d_B(r_i,r_j)^2}{2\sigma_B^2}
-+
-\frac12\log\Delta_{\mathrm{VVM}}(r_i,r_j)
-+
-O(\sigma_B^2).
+-12\log(4\pi\tau_*)
+-\frac{d_{g_B}(r_i,r_j)^2}{2\sigma_B^2}
++\frac12\log\Delta_{\mathrm{VVM}}(r_i,r_j)
++O(\sigma_B^2).
 \tag{T.41.4e.2}
 $$
-In the flat local constant-Van-Vleck truncation this reduces to Theorem T.41.5 and, after Lemma T.41.4,
+The distance in these heat-kernel expressions is not the chordal fidelity distance $D_B$.
+On an accepted finite embedding certificate from Lemma T.41.4, write the certified heat-kernel remainder as $\epsilon_{ij}>-1$. Then the non-exponential terms remain explicit:
 $$
-\log |Y_{ij}|
-=
+\log K_{ij}^{\mathrm{mag}}
+=C_f
 -\frac{d_{E_8}^2(r_i,r_j)}{16\sigma_B^2}
-+
-\text{sector constant},
++\frac12\log\Delta_{\mathrm{VVM}}(r_i,r_j)
++\log(1+\epsilon_{ij}),
 \tag{T.41.4e.3}
 $$
-so the hierarchy coefficient is
+where $C_f=\log\mathcal N_f-12\log(4\pi\tau_*)$. Thus the certified exponential coefficient is
 $$
 \alpha=\frac{1}{16\sigma_B^2}.
 \tag{T.41.4e.4}
 $$
+The Van Vleck and remainder terms cannot be absorbed into one sector constant unless a pair-independent certificate proves that fact.
 
-*Proof.* Definition T.41.4d defines the Yukawa magnitude as the Schur-heat matrix element of the finite boundary operator. Corollary X.8k.4a gives the local heat-kernel expansion
+*Proof.* Definition T.41.4d defines the model magnitude kernel as the Schur-heat matrix element of the finite boundary operator. Corollary X.8k.4a gives the local heat-kernel expansion
 $$
 K_{\tau}^{\mathrm{fl}}(r_i,r_j)
 =
 (4\pi\tau)^{-12}
 \Delta_{\mathrm{VVM}}(r_i,r_j)^{1/2}
-\exp\left[-\frac{d_B(r_i,r_j)^2}{4\tau}\right]
+\exp\left[-\frac{d_{g_B}(r_i,r_j)^2}{4\tau}\right]
 \left(1+O(\tau)\right),
 $$
-because $\dim_{\mathbb R}\mathrm{Gr}(2,8)=24$. Substitution of $\tau=\tau_*=\sigma_B^2/2$ gives (T.41.4e.1) and (T.41.4e.2). If the local chart is taken in the flat Gaussian truncation used by Theorem T.41.5, then $\Delta_{\mathrm{VVM}}=1+O(d_B^2)$ and the heat-kernel prefactor together with $\mathcal N_f$ is absorbed into the sector constant, leaving
-$$
-\log |Y_{ij}|
-=
--\frac{d_B(r_i,r_j)^2}{2\sigma_B^2}
-+
-\text{sector constant}.
-$$
-Lemma T.41.4 gives $d_B^2=d_{E_8}^2/8+O(u^4)$, hence (T.41.4e.3) at quadratic order. Matching the exponent to $\log(m_j/m_i)=\alpha d_{E_8}^2$ gives (T.41.4e.4). ∎
+because $\dim_{\mathbb R}\mathrm{Gr}(2,8)=24$. Substitution of $\tau=\tau_*=\sigma_B^2/2$ gives (T.41.4e.1) and (T.41.4e.2). For a certified pair, record the exact heat-kernel ratio to the displayed parametrix as $1+\epsilon_{ij}$ with $\epsilon_{ij}>-1$ and an outward-rounded error interval. The heat kernel uses the intrinsic distance $d_{g_B}$, and Lemma T.41.4 gives $d_{g_B}^2=d_{E_8}^2/8$ exactly on its finite embedding certificate. Substitution and logarithms give (T.41.4e.3) and identify the coefficient (T.41.4e.4). The chordal fidelity distance $D_B$ has the separate nonlinear formula stated in that lemma. The theorem determines a model-kernel exponent; converting the full matrix to ordered masses requires the independent realization certificate of Theorem T.39. ∎
 
-**Theorem T.41.5** (Gaussian Overlap and Yukawa Suppression on the Toeplitz-Kraus Probability-Overlap Branch).
-Let $\psi_i,\psi_j$ be generation-localizing wavepackets modeled as isotropic Gaussians on $(\mathrm{Gr}(2,8),g_B)$ with common variance $\sigma_B^2$. The amplitude overlap is
-
+**Theorem T.41.5** (Gaussian Overlap Model Kernel on the Toeplitz--Kraus Probability-Overlap Branch).
+Let $\psi_i,\psi_j$ be generation-localizing wavepackets modeled as isotropic Gaussians on $(\mathrm{Gr}(2,8),g_B)$ with common variance $\sigma_B^2$. With $d_{g_B}$ denoting the intrinsic geodesic distance, the model amplitude overlap is
 $$
-\langle \psi_i \mid \psi_j \rangle \propto \exp\!\left(-\frac{d_B^2}{4\,\sigma_B^2}\right).
+\langle \psi_i \mid \psi_j \rangle
+\propto
+\exp\!\left(-\frac{d_{g_B}^2}{4\sigma_B^2}\right).
 $$
-
-On the Toeplitz-Kraus probability-overlap branch of Definition T.41.4a and Theorem T.41.4b, the physical Yukawa magnitude is the squared wavefunction overlap:
-
+On the Toeplitz--Kraus probability-overlap branch, the defined model magnitude kernel is
 $$
-Y_{ij}\propto\left|\langle\psi_i\mid\psi_j\rangle\right|^2\propto\exp\!\left(-\frac{d_B^2}{2\,\sigma_B^2}\right).
+K_{ij}^{\mathrm{mag}}
+\propto
+\left|\langle\psi_i\mid\psi_j\rangle\right|^2
+\propto
+\exp\!\left(-\frac{d_{g_B}^2}{2\sigma_B^2}\right).
 $$
+Physical Yukawa realization remains gated by Theorem T.39.
 
-The amplitude-overlap magnitude would give $Y_{ij}\propto\exp(-d_B^2/(4\sigma_B^2))$, halving the exponent and yielding $\alpha_{\mathrm{amp}}=1/(32\sigma_B^2)=3/4$ rather than $\alpha_{\mathrm{prob}}=1/(16\sigma_B^2)=3/2$. Theorem T.41.4b rules out the amplitude-overlap replacement on the positive Toeplitz-Kraus transition branch by Definition T.41.4a; complex Berry phases remain in the separate holonomy factor of Corollary T.41.4c. The CKM base holonomy is treated in Theorems T.53–T.54, its optional nonlinear response in Theorem T.56, and the PMNS construction in Theorems T.24.19–T.24.22.
+The alternative amplitude-overlap kernel would use $\exp[-d_{g_B}^2/(4\sigma_B^2)]$, halving the intrinsic Gaussian exponent and giving tangent coefficient $3/4$ on the unit-radius convention. Definition T.41.4a selects the squared-overlap response by branch definition; positivity alone does not exclude other positive response models. Complex phases remain in Corollary T.41.4c's separate holonomy factor.
 
-Combining with Lemma T.41.4 gives
-
+On a pair carrying the accepted embedding certificate of Lemma T.41.4, the exact Gaussian model gives
 $$
-\ln(Y_{ij}) = -\frac{d_B^2}{2\,\sigma_B^2} = -\frac{1}{2\,\sigma_B^2}\cdot\frac{d^2_{E_8}}{8} = -\frac{d^2_{E_8}}{16\,\sigma_B^2}.
+\log\!\left(\frac{K_{ij}^{\mathrm{mag}}}{A_f}\right)
+=-\frac{d_{g_B}^2}{2\sigma_B^2}
+=-\frac{d_{E_8}^2}{16\sigma_B^2},
 $$
+where $A_f>0$ is a positive multiplicative normalization, distinct from the additive log constant $C_f$ of Theorem T.39.
 
 **Corollary T.41.6** (Hierarchy coefficient).
-Matching $\ln(m_j/m_i)=\alpha\,d^2_{E_8}(r_i,r_j)$ yields
-
+On that certified Gaussian branch, the exponential coefficient is
 $$
-\boxed{\alpha = \frac{1}{16\,\sigma_B^2}}.
+\boxed{\alpha=\frac{1}{16\sigma_B^2}}.
 $$
+An equality involving ordered physical masses follows only for pairs whose $\mathfrak C_{Y\to m}$ certificate in Theorem T.39 verifies zero residual.
 
 -----
 
@@ -3305,57 +3433,65 @@ $$
 
 ### T.21.5.1 Admissible Triads and $\mathcal{R}$-Values
 
-**Definition T.42** (Admissible triads).
-An admissible $E_8$ triad $(r_1, r_2, r_3)$ is a triple of roots with $d^2_{ij} \in \{2, 4, 6, 8\}$. For a given triad, define
-
+**Definition T.42** (Admissible ordered triads).
+An admissible ordered $E_8$ triad $(r_1,r_2,r_3)$ is a triple of roots with
 $$
-\mathcal{R} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}.
+d_{ij}^2\in\{2,4,6,8\}
+$$
+and $d_{31}^2>d_{32}^2$. Define
+$$
+\mathcal R=\frac{d_{31}^2}{d_{32}^2}\in\left\{\frac43,\frac32,2,3,4\right\}.
 $$
 
 **Triad calibration boundary.** The condition $\mathcal R=3$ together with the allowed set $\{2,4,6,8\}$ has the unique arithmetic solution $(d_{32}^2,d_{31}^2)=(2,6)$. This is conditional on first selecting $\mathcal R=3$ and assigning the generation labels. Error-correcting properties of $E_8$, $D_4$, Golay, or Hamming codes do not make that physical selection. A predictive test must preregister the candidate triads and selection score.
 
 
 
-### T.21.5.2 Uniqueness of the Charged-Lepton Triad
+### T.21.5.2 Unique Hierarchy-Distance Pair and a Triad Witness
 
-**Theorem T.42.1** (Charged-lepton triad by minimal $d^2_{32}$).
-Among $\mathcal{R} = 3$ triads, the constraint $d^2_{31} = 3 d^2_{32}$ with $d^2 \in \{2,4,6,8\}$ has a unique solution:
-
-|$d^2_{32}$|$d^2_{31} = 3 \times d^2_{32}$|Valid $E_8$ distance?|
-|:--------:|:----------------------------:|:-------------------:|
-|2 |6 |✓ |
-|4 |12 |✗ |
-|6 |18 |✗ |
-|8 |24 |✗ |
-
-The unique solution is
-
+**Theorem T.42.1** (Unique Hierarchy-Distance Pair and a Charged-Lepton Triad Witness).
+If the registered hierarchy diagnostic is $\mathcal R=3$ and
 $$
-d^2_{31} = 6, \qquad d^2_{32} = 2, \qquad d^2_{21} = 4.
+d_{32}^2,d_{31}^2\in\{2,4,6,8\},
+\qquad
+d_{31}^2=3d_{32}^2,
 $$
-
-Up to the Weyl group, this triad is represented by
-
+then the ordered pair is uniquely
 $$
-r_3 = (1,1,0,0,0,0,0,0), \quad r_2 = (1,0,1,0,0,0,0,0), \quad r_1 = (-1,0,1,0,0,0,0,0),
+(d_{32}^2,d_{31}^2)=(2,6).
+\tag{T.42.1a}
 $$
+The third edge is not fixed by (T.42.1a). If the additional registered condition $\langle r_1,r_2\rangle=0$ is imposed, then $d_{21}^2=4$, and the roots
+$$
+r_3=(1,1,0,0,0,0,0,0),
+\quad
+r_2=(1,0,1,0,0,0,0,0),
+\quad
+r_1=(-1,0,1,0,0,0,0,0)
+$$
+give an explicit witness for the triad $(d_{32}^2,d_{31}^2,d_{21}^2)=(2,6,4)$. This proves existence, not Weyl uniqueness of the full triad or its physical labels.
 
-which satisfies $|r_k|^2 = 2$ for all $k$ and the stated pairwise distances.
-
-*Proof.* $\mathcal{R} = 3$ requires $d^2_{31} = 3 d^2_{32}$. Since available squared distances are ${2,4,6,8}$, the only possibility with $d^2_{32}$ minimized is $(d^2_{32}, d^2_{31}) = (2, 6)$. The remaining edge closes at $d^2_{21} = 4$ for the explicit triple above. ∎
+*Proof.* Testing $d_{32}^2\in\{2,4,6,8\}$ in $3d_{32}^2\in\{2,4,6,8\}$ leaves only $d_{32}^2=2$, with $d_{31}^2=6$. For roots of squared norm $2$, $d_{21}^2=4-2\langle r_1,r_2\rangle$, so the additional orthogonality condition gives $4$. Direct subtraction verifies all three distances for the displayed roots. ∎
 
 -----
 
 ## T.21.6 Hierarchy Invariant and Phenomenology
 
-**Corollary T.42.2** (Leading-order hierarchy invariant).
-At quadratic order in the hierarchy law,
+**Corollary T.42.2** (Leading-order hierarchy diagnostic).
+On a branch whose Theorem-T.39 full-matrix certificate verifies a common leading coefficient and residuals satisfying
 $$
-\mathcal{R}_{\mathrm{LO}}
-= \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)}
-= \frac{d^2_{31}}{d^2_{32}}
-= 3.
+\frac{\mathcal R_{31}}{d_{31}^2}
+=
+\frac{\mathcal R_{32}}{d_{32}^2}
 $$
+(in particular, both residuals may vanish),
+$$
+\mathcal R_{\mathrm{LO}}
+=\frac{\log(m_3/m_1)}{\log(m_3/m_2)}
+=\frac{d_{31}^2}{d_{32}^2}
+=3.
+$$
+Without that realization certificate, the final value is the discrete model diagnostic selected in Theorem T.42.1, not a mass theorem.
 
 Experimentally, using charged-lepton masses,
 $$
@@ -3379,51 +3515,62 @@ $$
 
 This observed value is within $0.21\%$ of $\sqrt{2}=1.41421356\ldots$.
 
-### T.21.6.2 Phenomenological Predictions with $\alpha_{\mathrm{IR}}^{\mathrm{pred}} = 1.418$
+### T.21.6.2 Registered IR-Coefficient Model with $\alpha_{\mathrm{IR}}=(3/2)\operatorname{sinc}(1/\sqrt3)$
 
-From Theorem T.24.2.1, the sinc-corrected model prediction is
+The registered IR-coefficient prescription of Theorem T.24.2.1 is
 $$
-\alpha_{\mathrm{IR}}^{\mathrm{pred}}
-= \alpha_{\mathrm{UV}} \times f_{\mathrm{sinc}}
-= \frac{3}{2} \times \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}}
-= 1.418.
+\alpha_{\mathrm{IR}}
+:=\alpha_{\mathrm{UV}}\operatorname{sinc}(1/\sqrt3)
+=\frac32\frac{\sin(1/\sqrt3)}{1/\sqrt3}
+=1.41804458\ldots .
+$$
+The sinc average multiplies a retained amplitude; identifying that multiplier with a Gaussian exponent coefficient is an independent model prescription, not a derived renormalization law.
+
+For the charged-lepton triad, define the leading model exponents
+$$
+L_{\tau\mu}^{(2)}:=2\alpha_{\mathrm{IR}}
+=2.836089167011252\ldots,
+\qquad
+L_{\mu e}^{(2)}:=4\alpha_{\mathrm{IR}}
+=5.672178334022503\ldots.
+$$
+On the declared adjacent-edge composition rule,
+$$
+L_{\tau e}^{(2)}:=L_{\tau\mu}^{(2)}+L_{\mu e}^{(2)}
+=8.508267501033755\ldots.
 $$
 
-For the charged-lepton triad at leading order,
-$$
-\begin{aligned}
-\ln\!\left(\frac{m_\tau}{m_\mu}\right) &= \alpha_{\mathrm{IR}}^{\mathrm{pred}} \cdot 2 = 2.836, \\[4pt]
-\ln\!\left(\frac{m_\mu}{m_e}\right) &= \alpha_{\mathrm{IR}}^{\mathrm{pred}} \cdot 4 = 5.672, \\[4pt]
-\ln\!\left(\frac{m_\tau}{m_e}\right) &= \ln\!\left(\frac{m_\tau}{m_\mu}\right) + \ln\!\left(\frac{m_\mu}{m_e}\right) = 8.508.
-\end{aligned}
-$$
+**Remark T.21.6.2a: Declared Path Composition.** The selected roots have
+$(d_{\tau\mu}^2,d_{\mu e}^2,d_{\tau e}^2)=(2,4,6)$. The equality
+$L_{\tau e}^{(2)}=L_{\tau\mu}^{(2)}+L_{\mu e}^{(2)}$ is therefore exact on
+the common-coefficient leading model. It neither proves that the adjacent
+route is dynamically dominant nor realizes physical masses. Ordinary
+log-mass additivity holds for any positive masses and cannot select the path.
 
+**Table T.21.1** (Charged-lepton leading model-exponent diagnostic).
 
-**Remark T.21.6.2a: Path Additivity.** *The $\tau/e$ ratio is computed as the sum of adjacent ratios, reflecting the physical structure of the $E_8$ generation triad. The generations $(\tau, \mu, e)$ form a triangle in $E_8$ root space. Using standard $E_8$ normalization where roots have squared norm $|r|^2 = 2$, the inner products are $\langle r_\tau, r_\mu \rangle = 1$, $\langle r_\mu, r_e \rangle = 0$, $\langle r_\tau, r_e \rangle = -1$, corresponding to squared distances $d^2 = 2|r|^2 - 2\langle r_i, r_j \rangle = 4 - 2\langle r_i, r_j \rangle$, yielding $(d^2_{\tau\mu}, d^2_{\mu e}, d^2_{\tau e}) = (2, 4, 6)$. The dominant Yukawa tunneling path is $\tau \to \mu \to e$, not the direct $\tau \to e$ geodesic. This path structure ensures that logarithmic mass ratios satisfy the mathematical identity $\ln(m_\tau/m_e) = \ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$ automatically.*
+|Quantity|Model exponent|Quoted log ratio|Residual|
+|:--|:--:|:--:|:--:|
+|$\tau/\mu$|$2.8360891670\ldots$|$2.8224$|$+0.0136891670\ldots$|
+|$\mu/e$|$5.6721783340\ldots$|$5.3316$|$+0.3405783340\ldots$|
+|$\tau/e$|$8.5082675010\ldots$|$8.1540$|$+0.3542675010\ldots$|
 
-**Table T.21.1** (Charged leptons: leading-order prediction vs observation).
-
-|Quantity |Prediction|Conservative model allowance|Observation|Residual divided by allowance |
-|:-----------------:|:--------:|:---------:|:---------:|:----------:|
-|$\ln(m_\tau/m_\mu)$|$2.836$ |$\pm 0.06$ |$2.822$ |$+0.23$|
-|$\ln(m_\mu/m_e)$ |$5.672$ |$\pm 0.12$ |$5.332$ |$+2.83$|
-|$\ln(m_\tau/m_e)$ |$8.508$ |$\pm 0.18$ |$8.154$ |$+1.97$|
-
-*Note on allowances: The values $(\pm 0.06, \pm 0.12, \pm 0.18)$ are conservative linear allowances obtained from $0.5\%+1\%+0.5\%=2\%$, rounded at the displayed precision. They are not standard deviations and carry no probabilistic coverage statement. A statistical uncertainty requires probability models and a covariance matrix for the sinc truncation, higher-order curvature terms, and RG contribution. Experimental mass uncertainties from Particle Data Group 2024 contribute $<0.01\%$ and are negligible at this precision.*
-
-The $\tau/\mu$ splitting is reproduced at sub-percent level. The systematic deviations for $\mu/e$ and $\tau/e$ are reduced after adopting the conditional fourth-order coefficient and effective-dimension assignments of Section T.21.8; the agreement does not derive those inputs.
+This is a retrospective model-kernel comparison. No probabilistic allowance
+or theory interval is supplied at leading order, and physical log-mass ratios
+require Theorem T.39's accepted full-matrix realization and common-scale
+matching certificate.
 
 
 
-**Table T.21.2** (Charged leptons: predictions including $\mathcal{O}(d^4)$ curvature correction).
+**Table T.21.2** (Charged-lepton zero-remainder model exponents on the exact packet-coefficient subbranch).
 
-|Quantity |$d^2$|$D_{\mathrm{eff}}$|Corrected|Observation|Deviation|
+|Quantity |$d^2$|$D_{\mathrm{eff}}$|Model exponent|Quoted log ratio|Residual|
 |:-----------------:|:---:|:----------------:|:-------:|:---------:|:-------:|
-|$\ln(m_\tau/m_\mu)$|$2$ |$3/8$ |$2.8212$ |$2.8224$ |$-0.042%$|
-|$\ln(m_\mu/m_e)$ |$4$ |$13/6$ |$5.3306$ |$5.3316$ |$-0.019%$|
-|$\ln(m_\tau/m_e)$ |— |(path sum) |$8.1518$ |$8.1540$ |$-0.027%$|
+|$\tau/\mu$|$2$ |$3/8$ |$2.8256725003$ |$2.8224$ |$+0.0032725003$|
+|$\mu/e$ |$4$ |$13/6$ |$5.4314375933$ |$5.3316$ |$+0.0998375933$|
+|$\tau/e$ |— |path composition |$8.2571100936$ |$8.1540$ |$+0.1031100936$|
 
-With the registered model inputs, all three displayed ratios lie within $0.05%$ of the quoted observations. Theorem T.42.6 makes these conditional model outputs and requires a separate remainder certificate. The $\tau/e$ value is the path sum $\ln(m_\tau/m_\mu)+\ln(m_\mu/m_e)$, so logarithmic additivity is exact by construction.
+These are retrospective zero-remainder model diagnostics obtained from the registered prescription $\alpha_{\mathrm{IR}}=(3/2)\operatorname{sinc}(1/\sqrt3)=1.4180445835\ldots$ and, on the exact packet-coefficient subbranch, $\beta_{\mathrm{pkt}}=1/C=1/144$. They are not physical mass predictions without the common packet/VVM record and Theorem T.39's full-matrix realization certificate. The path value is algebraically dependent on the two adjacent exponents.
 
 
 
@@ -3433,13 +3580,13 @@ With the registered model inputs, all three displayed ratios lie within $0.05%$ 
 
 ### T.21.7.1 Decomposition of the Effective Exponent
 
-The UV prediction $\alpha_{\mathrm{UV}} = 3/2$ and the IR extraction $\alpha_{\mathrm{IR}} = 1.411$ differ by approximately $6%$. This reduction decomposes as
-
-$$
-\alpha_{\mathrm{IR}} = \alpha_{\mathrm{UV}} - \delta_{\mathrm{geom}} - \delta_{\mathrm{RG}},
-$$
-
-where $\delta_{\mathrm{geom}}$ arises from subleading geometric corrections and $\delta_{\mathrm{RG}}$ from renormalization group running.
+The unit-radius branch value $\alpha_{\mathrm{UV}}=3/2$ and the empirical
+extraction $\alpha_{\mathrm{IR}}^{\mathrm{obs}}=1.411$ differ by about six
+percent. No source-exhaustive decomposition of that difference into geometric
+and renormalization-group terms is proved. Any such split requires a
+separately computed common-scheme ledger with controlled thresholds,
+remainders, and covariance; the registered value $1.41804458\ldots$ is a
+distinct coefficient prescription, not that decomposition.
 
 ### T.21.7.2 RG Contribution
 
@@ -3469,15 +3616,21 @@ Numerical agreement obtained after adopting those values validates that model br
 
 
 
-The dominant UV-to-IR reduction arises from the sinc correction (Theorem T.24.2.1):
-
+Theorem T.24.2.1 registers the prescription
 $$
-\alpha_{\mathrm{IR}} = \alpha_{\mathrm{UV}} \times f_{\mathrm{sinc}} = \frac{3}{2} \times \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = 1.418.
+\alpha_{\mathrm{IR}}:=\alpha_{\mathrm{UV}}\operatorname{sinc}(1/\sqrt3)=1.41804458\ldots .
 $$
+Because coherent averaging acts on amplitudes and does not by itself rescale a Gaussian exponent, this is a calibrated IR-coefficient branch. Its proximity to the empirical extraction $1.411$ is a diagnostic, not a causal derivation of running.
 
-This accounts for the $5.5%$ reduction from $\alpha_{\mathrm{UV}} = 3/2$ to $\alpha_{\mathrm{IR}} = 1.418$, matching the empirical extraction $\alpha_{\mathrm{IR}}^{\mathrm{emp}} = 1.411$ within $0.5%$.
-
-The complete hierarchy formula including $\mathcal{O}(d^4)$ corrections is derived in Section T.21.8 **(Theorem T.42.6)**. The fourth-order coefficient $\beta_{\mathrm{geom}}$ arises from the Van Vleck–Morette determinant in the Gaussian overlap integral on Riemannian manifolds [DeWitt 1965], applied to the Grassmannian $\mathrm{Gr}(2,8)$ with Bures metric. On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, the effective curvature is $K_{\mathrm{eff}}=2$. Together with the Bures variance $\sigma_B^2=1/24$ (Lemma T.41.2) and the Van Vleck coefficient $1/12$, this gives the conditional curvature coefficient $\beta_{\mathrm{geom}}=1/144=1/C$.
+The complete fourth-order hierarchy formula is the certificate-gated
+common-kernel re-expansion of Theorem T.42.6. Its base coefficient is the
+common fourth-derivative output of the charged-lepton packet/VVM certificate
+of Theorem T.42.2. The electromagnetic visible-response coefficient
+$K_{\mathrm{eff}}$ of Theorem Z.24 has a different response-functional type
+and does not supply that flavor-packet output. If the packet/VVM certificate
+returns $\beta_{\mathrm{pkt}}=1/144$, then
+$\beta_{\mathrm{pkt}}=1/C$ follows arithmetically from $C=144$; capacity does
+not derive the coefficient.
 
 The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ uses two declared phenomenological assignments at $d^2_{\mathrm{th}}=4$:
 
@@ -3494,117 +3647,234 @@ The following section separates exact path additivity from model inputs. A norma
 
 
 
-The few-percent deviations in Table T.21.1 arise from the $\mathcal{O}(d^4)$ curvature correction on $\mathrm{Gr}(2,8)$. This section provides a conditional derivation using:
+The fourth-order rows in Table T.21.1 are evaluations of a certificate-gated
+packet model. Their inputs are:
 
-1. The Van Vleck–Morette determinant for Gaussian overlaps on curved manifolds [DeWitt 1965]
-1. The intrinsic Bures curvature of $\mathrm{Gr}(2,8)$ together with the democratic visible-response input $L_{\mathrm{vis}}=1/(ad_0)$, which yields $K_{\mathrm{eff}}=2$ in Theorem Z.24 (Theorem Z.24; Lemma Z.24a)
-1. The Golay parameters $(t,d_{\min},k)=(3,8,12)$ [MacWilliams & Sloane 1977] and the separately registered assignments $D_{\mathrm{eff}}(2)=3/8$ and $D_{\mathrm{eff}}(4)=13/6$
-1. The path-additivity principle for generation triangles
+1. the Bures metric, Schur--heat operator, measure, packet normalization, Van
+   Vleck determinant, and heat-kernel remainder used by Theorem T.39;
+1. an independently registered infrared transport and a finite
+   derivative-and-remainder certificate on the two charged-lepton geodesics;
+1. the Golay parameters $(t,d_{\min},k)=(3,8,12)$ [MacWilliams & Sloane 1977]
+   together with the separate assignments $D_{\mathrm{eff}}(2)=3/8$ and
+   $D_{\mathrm{eff}}(4)=13/6$; and
+1. the path-composition rule for the generation triangle.
 
 ### T.21.8.1 Normalized Overlap-Certificate Requirement
 
-### T.21.8.2 Geometric Coefficient Status
+### T.21.8.2 Packet/VVM Fourth-Order Coefficient Status
 
-**Lemma T.42.1a** (Conditional Packet-Overlap Expansion). Let $\mathcal I(d)$ be a specified normalized packet-overlap kernel. Assume that, for $0\le d<d_*$,
+**Lemma T.42.1a** (Conditional Packet-Overlap Expansion). Let
+$d_{\max}>0$, let
+$\alpha_{\mathrm{UV}},\alpha_{\mathrm{IR}},\beta\in\mathbb R$, let $D>0$,
+and let $G\in C^6([0,d_{\max}])$. Assume
 $$
-\mathcal I(d)
-=
-e^{-\alpha_{\mathrm{flat}}d^2}
-\left(
-1+\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4+R_6(d)
-\right),
+G(0)=0,
 \qquad
-|R_6(d)|\le C_6d^6,
+G^{(1)}(0)=G^{(3)}(0)=G^{(5)}(0)=0,
 $$
-and that the factor in parentheses is positive. Then
 $$
--\ln\mathcal I(d)
-=
-\alpha_{\mathrm{flat}}d^2
--
-\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4
-+
-O(d^6)
+G^{(2)}(0)=2(\alpha_{\mathrm{UV}}-\alpha_{\mathrm{IR}}),
+\qquad
+G^{(4)}(0)=24\beta D,
 $$
-as $d\to0$.
-
-*Proof.* Put
+and assume that a verified constant $B_6\ge0$ satisfies
 $$
-x(d)=\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4+R_6(d).
+\sup_{0\le d\le d_{\max}}|G^{(6)}(d)|\le720B_6.
 $$
-The assumptions give $x(d)=O(d^4)$. Taylor's theorem for $\log(1+x)$, on a sufficiently small interval where $1+x>0$, gives
+Define the normalized positive kernel
 $$
-\log(1+x(d))=x(d)+O(x(d)^2)
-=
-\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4+O(d^6),
+\mathcal I(d):=\exp\!\left[-\alpha_{\mathrm{UV}}d^2+G(d)\right].
 $$
-because $R_6(d)=O(d^6)$ and $x(d)^2=O(d^8)$. Therefore
+Then
 $$
 -\log\mathcal I(d)
-=
-\alpha_{\mathrm{flat}}d^2-\log(1+x(d))
-=
-\alpha_{\mathrm{flat}}d^2
--
-\frac{K_{\mathrm{sec}}}{12}\sigma_B^2d^4
-+
-O(d^6).
+=\alpha_{\mathrm{IR}}d^2-\beta Dd^4+\mathcal R_6(d),
+\qquad |\mathcal R_6(d)|\le B_6d^6
+\tag{T.42.1a.1}
 $$
-The packet-specific expansion and a bound placing $d^2=2,4$ within its controlled regime must be supplied separately before numerical use. ∎
+for every $d\in[0,d_{\max}]$.
 
-**Remark T.42.1.1: Universality of 1/12.** *The coefficient $1/12$ is universal across all Riemannian manifolds and appears in:*
-
-- *Gray–Vanhecke geodesic ball volume expansions [Gray & Vanhecke 1979, Theorem 3.1]*
-- *Heat kernel short-time asymptotics [Berger, Gauduchon & Mazet 1971, §E.III]*
-- *Synge's world-function expansion [Synge 1960, §2.3]*
-
-*It does not depend on any framework-specific assumptions beyond the choice of metric.*
-
-### T.21.8.2a Effective Curvature and the Geometric Coefficient
-
-**Theorem T.42.2** (Conditional Geometric Curvature Coefficient). *Assume the normalized overlap model of Lemma T.42.1a and the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24. Then the fourth-order geometric correction coefficient is:*
-
+*Proof.* Taylor's theorem through order five gives
 $$
-\boxed{\beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\,\sigma_B^2 = \frac{1}{C} = \frac{1}{bM} = \frac{1}{144}}
+G(d)=(\alpha_{\mathrm{UV}}-\alpha_{\mathrm{IR}})d^2
++\beta Dd^4+E_6(d),
+\qquad |E_6(d)|\le B_6d^6.
 $$
+Therefore
+$$
+-\log\mathcal I(d)
+=\alpha_{\mathrm{UV}}d^2-G(d)
+=\alpha_{\mathrm{IR}}d^2-\beta Dd^4-E_6(d).
+$$
+Setting $\mathcal R_6(d):=-E_6(d)$ proves (T.42.1a.1). ∎
 
-*Here $K_{\mathrm{eff}}=2$ follows from Theorem Z.24 under the stated visible-response assumption, $\sigma_B^2=1/24$ is the Bures variance (Lemma T.41.2), and $C=bM=144$ is the vacuum capacity (Theorem Z.13a).*
+**Remark T.42.1.1: Scope of the $1/12$ Coefficient.** *A numerical factor
+$1/12$ occurs in several local tensor expansions, including the cited
+geodesic-volume, heat-kernel, and world-function formulas. It does not by
+itself identify a scalar fourth-order coefficient for a normalized flavor
+packet. That identification additionally requires the metric, geodesic,
+packet measure and width, Van Vleck contraction, heat remainder, infrared
+transport, and normalization used by the common certificate of Theorem
+T.42.2.*
 
-*Proof.*
+### T.21.8.2a Common Packet/VVM Certificate and Its Fourth-Order Coefficient
 
-**Step 1** (Effective curvature on the democratic visible-response branch). Theorem Z.24 defines
+**Theorem T.42.2** (Conditional Packet/VVM Fourth-Order Coefficient). Put
 $$
-K_{\mathrm{eff}}=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L_{\mathrm{vis}}.
+\mathcal E_\ell:=\{p_{\tau\mu},p_{\mu e}\},
+\qquad d_{\tau\mu}:=\sqrt2,
+\qquad d_{\mu e}:=2,
+\qquad D_p:=D_{\mathrm{eff}}(d_p^2).
 $$
-The symmetric-space geometry fixes $K_{\mathrm{avg}}^{\mathrm{Bures}}=32/23$, while the declared democratic response model supplies $L_{\mathrm{vis}}=1/(ad_0)=1/16$. Therefore
+A common charged-lepton packet/VVM certificate is the finite record
 $$
-K_{\mathrm{eff}}=23\times\frac{32}{23}\times\frac1{16}=2.
+\mathfrak C_{\mathrm{pkt/VVM}}^\ell
+=\left(
+g_B,\mu,\Lambda_{\mathrm{fl}},\mathcal D_{\mathrm{op}},\tau_*,
+\{\gamma_p,A_p,\Delta_p,\epsilon_p,\mathcal T_p,
+\mathcal Q_p,B_p\}_{p\in\mathcal E_\ell},
+\alpha_{\mathrm{UV}},\alpha_{\mathrm{IR}},
+\chi_{\mathrm{src}},\chi_{\mathrm{pre}}
+\right),
 $$
-By Lemma Z.24a, the response factor $L_{\mathrm{vis}}$ is an independent branch input and is not implied by Grassmannian isotropy.
+with the following types and acceptance tests.
 
-**Step 2** (Bures variance from Lemma T.41.2). Capacity saturation at the PCE-attractor yields:
-$$
-\sigma_B^2 = \frac{1}{M} = \frac{1}{24}
-$$
+1. $\Lambda_{\mathrm{fl}}$ is the same positive self-adjoint Schur--heat
+   operator used by Theorem T.39, with declared domain
+   $\mathcal D_{\mathrm{op}}\subset L^2(\mathrm{Gr}(2,8),\mu)$ and
+   $\tau_*=\sigma_B^2/2$.
 
-**Step 3** (Direct calculation). Applying Lemma T.42.1a:
-$$
-\beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\,\sigma_B^2 = \frac{2}{12} \times \frac{1}{24} = \frac{1}{6} \times \frac{1}{24} = \frac{1}{144}
-$$
+2. For each $p\in\mathcal E_\ell$,
+   $\gamma_p:[0,d_p]\to\mathrm{Gr}(2,8)$ is a minimizing geodesic in the same
+   Bures metric and embedding normalization, parameterized by
+   $$
+   d_{g_B}(\gamma_p(0),\gamma_p(s))=\frac{s}{\sqrt8}.
+   $$
+   Writing
+   $$
+   K_p^{\mathrm{mag}}(s)
+   :=\mathcal N_\ell
+   \left\langle\gamma_p(s)\middle|
+   e^{-\tau_*\Lambda_{\mathrm{fl}}}
+   \middle|\gamma_p(0)\right\rangle,
+   \qquad A_p:=K_p^{\mathrm{mag}}(0)>0,
+   $$
+   the certificate supplies
+   $\Delta_p,\mathcal T_p\in C^6([0,d_p];\mathbb R_{>0})$ and
+   $\epsilon_p\in C^6([0,d_p];(-1,\infty))$, with
+   $\mathcal T_p(0)=1$, and verifies the exact normalized Theorem-T.39 identity
+   $$
+   \widehat{\mathcal I}^{\mathrm{UV}}_p(s)
+   :=\frac{K_p^{\mathrm{mag}}(s)}{A_p}
+   =e^{-\alpha_{\mathrm{UV}}s^2}
+   \left(\frac{\Delta_p(s)}{\Delta_p(0)}\right)^{1/2}
+   \frac{1+\epsilon_p(s)}{1+\epsilon_p(0)}.
+   \tag{T.42.2.1}
+   $$
 
-**Step 4** (Vacuum capacity identification). From Theorem Z.13a, the vacuum capacity is $C = bM = 6 \times 24 = 144$. The identity
+3. The independently registered infrared packet kernel is
+   $$
+   \mathcal I_p(s):=\mathcal T_p(s)
+   \widehat{\mathcal I}^{\mathrm{UV}}_p(s),
+   $$
+   where $\chi_{\mathrm{pre}}$ verifies that
+   $\Lambda_{\mathrm{fl}}$, the paths, normalizations, and transport functions
+   were fixed before comparison with charged-lepton masses.
+
+4. Define the complete non-Gaussian logarithmic correction
+   $$
+   G_p(s):=\log\mathcal T_p(s)
+   +\frac12\log\frac{\Delta_p(s)}{\Delta_p(0)}
+   +\log\frac{1+\epsilon_p(s)}{1+\epsilon_p(0)}.
+   $$
+   Exact arithmetic or outward-rounded singleton intervals must verify
+   $$
+   G_p(0)=0,
+   \qquad G_p^{(1)}(0)=G_p^{(3)}(0)=G_p^{(5)}(0)=0,
+   $$
+   $$
+   G_p^{(2)}(0)=2(\alpha_{\mathrm{UV}}-\alpha_{\mathrm{IR}}).
+   $$
+   Define
+   $$
+   \beta_p:=\frac{G_p^{(4)}(0)}{24D_p}.
+   $$
+   The certificate is common only if it verifies
+   $\beta_{\tau\mu}=\beta_{\mu e}$; denote this common value by
+   $\beta_{\mathrm{pkt}}$.
+
+5. $\mathcal Q_p$ is a finite rational subdivision of $[0,d_p]$ carrying
+   outward-rounded interval enclosures that verify positivity of every
+   logarithm argument and
+   $$
+   |G_p^{(6)}(s)|\le720B_p
+   \qquad(0\le s\le d_p).
+   $$
+
+6. The signed source ledger $\chi_{\mathrm{src}}$ assigns
+   $\log\mathcal T_p$, $\frac12\log(\Delta_p/\Delta_p(0))$, and
+   $\log((1+\epsilon_p)/(1+\epsilon_p(0)))$ exactly once. No VVM, heat,
+   transport, or remainder term may occur in a second ledger slot.
+
+On an accepted certificate, Lemma T.42.1a gives
 $$
-\beta_{\mathrm{geom}} = \frac{1}{C}
+-\log\mathcal I_p(s)
+=\alpha_{\mathrm{IR}}s^2
+-\beta_{\mathrm{pkt}}D_ps^4+\mathcal R_{6,p}(s),
+\qquad |\mathcal R_{6,p}(s)|\le B_ps^6.
 $$
-demonstrates that the curvature correction is naturally scaled by the vacuum capacity—the same quantity governing the Golay code constraint structure. ∎
+Consequently,
+$$
+|\mathcal R_{6,\tau\mu}(\sqrt2)|\le8B_{\tau\mu},
+\qquad
+|\mathcal R_{6,\mu e}(2)|\le64B_{\mu e}.
+$$
+If the exact fourth-derivative output satisfies
+$$
+G_p^{(4)}(0)=\frac{D_p}{6}
+\qquad\text{for both }p\in\mathcal E_\ell,
+$$
+then
+$$
+\boxed{\beta_{\mathrm{pkt}}=\frac1{144}=\frac1C}
+\tag{T.42.2.2}
+$$
+because Theorem Z.13a independently gives $C=bM=144$.
 
-**Remark T.42.2.1: Conditional Coefficient Identity.** *On the democratic visible-response branch, the identity $\beta_{\mathrm{geom}}=1/C$ combines three inputs:*
+*Proof.* Items 1--3 give
+$\mathcal I_p(s)=\exp[-\alpha_{\mathrm{UV}}s^2+G_p(s)]$ with
+$\mathcal I_p(0)=1$. Items 4--5 satisfy Lemma T.42.1a for each path and give
+the displayed remainder bounds. Equality of the two fourth-derivative
+quotients establishes one common coefficient. If
+$G_p^{(4)}(0)=D_p/6$, then
+$$
+\beta_{\mathrm{pkt}}=\frac{D_p/6}{24D_p}=\frac1{144}.
+$$
+The equality with $1/C$ is arithmetic. Item 6 proves that the two
+representations use one source ledger rather than two multiplied correction
+packages. ∎
 
-- *$K_{\mathrm{eff}}=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L_{\mathrm{vis}}=2$ when $L_{\mathrm{vis}}=1/(ad_0)$ (Theorem Z.24)*
-- *$\sigma_B^2=1/M$ is determined by capacity saturation (Lemma T.41.2)*
-- *$C=bM$ is the vacuum capacity from Golay structure (Theorem Z.13a)*
+**Remark T.42.2.1: Conditional Coefficient Identity.** *The electromagnetic
+visible-response coefficient $K_{\mathrm{eff}}$ of Theorem Z.24 is not a
+field of $\mathfrak C_{\mathrm{pkt/VVM}}^\ell$ and cannot replace its
+fourth-derivative test. The phrase “Van Vleck coefficient” applies to
+$\beta_{\mathrm{pkt}}$ alone only if $\chi_{\mathrm{src}}$ additionally
+verifies that the fourth derivatives of the infrared-transport and normalized
+heat-remainder terms vanish; otherwise $\beta_{\mathrm{pkt}}$ is the combined
+packet/VVM coefficient. The assignments $D_{\mathrm{eff}}(2)=3/8$ and
+$D_{\mathrm{eff}}(4)=13/6$ remain separate model inputs.*
 
-*The discrete constants are $(K_0,d_0,a,b,M)=(3,8,2,6,24)$; $L_{\mathrm{vis}}$ is a separate response-model input.*
+**Coefficient type boundary.** Theorem Z.24's electromagnetic coefficient
+$K_{\mathrm{eff}}=2$ and Theorem T.42.2's flavor-packet coefficient
+$\beta_{\mathrm{pkt}}$ belong to different response functionals. They may not
+be substituted for one another. On the exact fourth-derivative subbranch,
+$\beta_{\mathrm{pkt}}=1/144$; Theorem Z.13a independently gives $C=144$.
+Thus $\beta_{\mathrm{pkt}}=1/C$ is an exact numerical identity on the
+intersection of those two branches, not a causal derivation from capacity or
+from the electromagnetic visible-response model.
+Likewise, the packet width $\sigma_B^2=1/24$ comes from Lemma T.41.2's
+independent centered isotropic unit-radius convention, not from capacity
+saturation.
 
 ### T.21.8.3 $E_8$ Generation Triangle and Path Additivity
 
@@ -3613,38 +3883,40 @@ $$
 (d^2_{\tau\mu}, d^2_{\mu e}, d^2_{\tau e}) = (2, 4, 6)
 $$
 
-*The corresponding $E_8$ inner products are $\langle r_\tau, r_\mu \rangle = 1$, $\langle r_\mu, r_e \rangle = 0$, $\langle r_\tau, r_e \rangle = -1$, via the relation $d^2 = 4 - 2\langle r_i, r_j \rangle$ for unit roots.*
+*The corresponding $E_8$ inner products are $\langle r_\tau, r_\mu \rangle = 1$, $\langle r_\mu, r_e \rangle = 0$, $\langle r_\tau, r_e \rangle = -1$, via the relation $d^2 = 4 - 2\langle r_i, r_j \rangle$ for roots of squared norm $2$.*
 
-**Theorem T.42.2a** (Path Additivity Principle). *The physical mass ratio $\ln(m_\tau/m_e)$ is computed as the path sum of adjacent-edge predictions along the dominant tunneling path $\tau \to \mu \to e$, not by applying the curvature formula (Theorem T.42.6) directly at $d^2_{\tau e} = 6$:*
+**Theorem T.42.2a** (Path Composition of Model Suppression Factors). *Let $\ell_{\tau\mu},\ell_{\mu e}\in\mathbb R$ be any two supplied adjacent-edge model exponents. Define*
+$$
+S_{\tau\mu}:=e^{-\ell_{\tau\mu}},
+\qquad
+S_{\mu e}:=e^{-\ell_{\mu e}}.
+$$
+*On the dominant-path composition branch, define the long-transition model factor by $S_{\tau e}:=S_{\tau\mu}S_{\mu e}$. Then*
+$$
+-\log S_{\tau e}=\ell_{\tau\mu}+\ell_{\mu e}.
+\tag{T.42.2a.1}
+$$
+*No independent direct value at $d^2_{\tau e}=6$ is introduced.*
 
+A physical mass-ratio conclusion additionally requires one anchored realization certificate, fixed before comparison, that verifies
 $$
-\ln\!\left(\frac{m_\tau}{m_e}\right) = \ln\!\left(\frac{m_\tau}{m_\mu}\right) + \ln\!\left(\frac{m_\mu}{m_e}\right).
+S_{\tau\mu}=\frac{m_\mu}{m_\tau},
+\qquad
+S_{\mu e}=\frac{m_e}{m_\mu}
+\tag{T.42.2a.2}
 $$
-
-*where each term on the right is evaluated using Theorem T.42.6 with its own $D_{\mathrm{eff}}(d^2)$. This is the manuscript's dominant-path prescription for the generation triangle.*
-
-*Proof.* Let
+for consistently defined masses and one common $m_\mu$. On that certificate,
 $$
-L_{\tau\mu}:=\ln\!\left(\frac{m_\tau}{m_\mu}\right),\qquad
-L_{\mu e}:=\ln\!\left(\frac{m_\mu}{m_e}\right)
-$$
-be the adjacent-edge logarithmic suppressions obtained from Theorem T.42.6 at $d^2_{\tau\mu}=2$ and $d^2_{\mu e}=4$. The dominant-path prescription in the theorem statement says that the effective long-range transition $\tau\to e$ is represented, at the order retained in this model, by composing the two adjacent channels rather than by introducing an independent direct $d^2_{\tau e}=6$ formula. Therefore the corresponding suppression factors multiply:
-$$
-e^{-L_{\tau e}} = e^{-L_{\tau\mu}}\,e^{-L_{\mu e}}.
-$$
-Taking negative logarithms gives
-$$
-L_{\tau e}=L_{\tau\mu}+L_{\mu e}.
-$$
-Substituting back the definitions of the $L_{ij}$ yields
-$$
-\ln\!\left(\frac{m_\tau}{m_e}\right)
+S_{\tau e}=\frac{m_e}{m_\tau},
+\qquad
+\log\!\left(\frac{m_\tau}{m_e}\right)
 =
-\ln\!\left(\frac{m_\tau}{m_\mu}\right)
+\log\!\left(\frac{m_\tau}{m_\mu}\right)
 +
-\ln\!\left(\frac{m_\mu}{m_e}\right).
+\log\!\left(\frac{m_\mu}{m_e}\right).
 $$
-The role of the $E_8$ triangle geometry is only to explain why the adjacent edges use the already-defined values $D_{\mathrm{eff}}(2)$ and $D_{\mathrm{eff}}(4)$, while no separate value at $d^2=6$ is introduced. ∎
+
+*Proof.* Positivity of the two model factors permits taking $-\log$ of their defining product, which gives (T.42.2a.1). Under (T.42.2a.2), cancellation of the common positive mass $m_\mu$ gives the long factor and the displayed logarithmic identity. The algebraic identity does not itself verify the realization certificate. ∎
 
 **Remark T.42.2.1a: Consistency Check.** *Path additivity ensures internal consistency: the $\tau/e$ prediction is uniquely determined by the adjacent-edge predictions, with no additional parameters or choices required for the longest-range ratio.*
 
@@ -3675,7 +3947,7 @@ $$
 
 The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ quantifies how many independent directions contribute to the quartic curvature correction.
 
-**Theorem T.42.5** (Effective Geodesic Dimension on the Golay assignment branch). *On the Golay effective-dimension branch, the effective dimension $D_{\mathrm{eff}}(d^2)$ entering the Van Vleck curvature correction is assigned by the following model rule built from registered Golay parameter ratios:*
+**Theorem T.42.5** (Effective Geodesic Dimension on the Golay assignment branch). *On the Golay effective-dimension branch, the effective dimension $D_{\mathrm{eff}}(d^2)$ entering the packet-model quartic term is assigned by the following model rule built from registered Golay parameter ratios:*
 
 $$
 D_{\mathrm{eff}}(d^2) = \begin{cases}
@@ -3712,7 +3984,9 @@ D_{\mathrm{eff}}(2)
 =
 \frac38.
 $$
-The Golay parameters determine the numerical ratio, while its use as a Van Vleck effective dimension is an independent branch rule. ∎
+The Golay parameters determine the numerical ratio, while its use as the
+effective dimension in the packet-model quartic term is an independent branch
+rule. ∎
 
 -----
 
@@ -3740,102 +4014,171 @@ No tangent-rank conclusion follows from the binary syndrome-map rank without an 
 
 
 
-**Remark T.42.5.2 (Branch Dependence of the Golay-to-Van-Vleck Assignment).** The numerical values $D_{\mathrm{eff}}(2) = 3/8$ and $D_{\mathrm{eff}}(4) = 13/6$ depend on the Golay assignment branch introduced in Theorem T.42.5. The named supporting theorems (Theorem Z.13 for the Golay parameters, Lemma T.42.4 for the Hamming-chordal correspondence, Lemma T.42.1a for the universal Van Vleck coefficient, Theorem T.42.2 for $\beta_{\mathrm{geom}}$, Theorem Z.5 for QFI isotropy) supply the constituent quantities but do not uniquely force the identification of $t/d_{\min}$ and $(k+1)/b$ as the Van Vleck effective dimensions in the two regimes. An alternative assignment branch $D_{\mathrm{eff}}(d^2) \equiv 1$ for both regimes would respect the same named helper results while changing the curvature-correction weighting. A change $\delta D_{\mathrm{eff}} \sim 0.03$ shifts the $\mu/e$ log prediction by approximately $0.005$, comparable to the stated theory uncertainty.
+**Remark T.42.5.2 (Branch Dependence of the Golay-to-Van-Vleck Assignment).** The numerical values $D_{\mathrm{eff}}(2)=3/8$ and $D_{\mathrm{eff}}(4)=13/6$ are registered branch assignments; the cited Golay, overlap, curvature, and isotropy results do not select them uniquely. On an accepted Theorem-T.42.2 certificate whose exact output is $\beta_{\mathrm{pkt}}=1/144$, a change $\delta D_{\mathrm{eff}}(4)=0.03$ changes the $\mu/e$ model exponent by exactly
+$$
+\frac{4^2}{144}(0.03)=0.0033333333\ldots,
+$$
+not $0.005$. No comparison with a theory uncertainty is justified until the same certificate supplies a remainder interval.
 
-**Remark T.42.5.1: Physical Interpretation.** *The $\mu/e$ mass ratio uses the declared branch assignment $D_{\mathrm{eff}}(4)=13/6$. Under the marked calibration, $d^2=4$ maps to Hamming separation $h=8=d_{\min}$; the Golay unique-decoding radius is $t=3$, with possible ties beginning at radius $4$. The larger curvature correction follows from the assigned effective dimension.*
+**Remark T.42.5.1: Physical Interpretation.** *The $\mu/e$ model exponent uses the declared branch assignment $D_{\mathrm{eff}}(4)=13/6$. Under the marked calibration, $d^2=4$ maps to Hamming separation $h=8=d_{\min}$; the Golay unique-decoding radius is $t=3$, with possible ties beginning at radius $4$. The larger quartic term follows from the assigned effective dimension only on an accepted packet certificate; a physical mass ratio retains Theorem T.39's independent full-matrix and matching gate.*
 
 ### T.21.8.6 Conditional Hierarchy Model
 
-**Theorem T.42.6 (Conditional Fourth-Order Charged-Lepton Model).** Assume the six branch entries of Theorem T.42.7, including a specified normalized packet kernel with expansion radius $d_*$ and certified logarithmic remainder $\mathcal R_6(d)$; assume $\sqrt2<d_*$ and $2<d_*$ for the two registered separations; and assume the marked pair assignments $d_{\tau\mu}^2=2$, $d_{\mu e}^2=4$. Then
+**Theorem T.42.6 (Conditional Fourth-Order Charged-Lepton Model).** Assume an
+accepted common packet/VVM certificate
+$\mathfrak C_{\mathrm{pkt/VVM}}^\ell$ of Theorem T.42.2 and the registered
+assignments
 $$
-\ln\!\left(\frac{m_j}{m_i}\right)
-=\alpha_{\mathrm{IR}}d_{ij}^2
--\frac{\alpha_{\mathrm{IR}}}{C}
-D_{\mathrm{eff}}(d_{ij}^2)d_{ij}^4
-+\mathcal R_6(d_{ij}),
+d_{\tau\mu}^2=2,
+\qquad d_{\mu e}^2=4.
 $$
-where $C=144$, $D_{\mathrm{eff}}(2)=3/8$, and $D_{\mathrm{eff}}(4)=13/6$ are the declared branch values. Path additivity gives
+For $p\in\mathcal E_\ell$, define
 $$
-\ln\!\left(\frac{m_\tau}{m_e}\right)
-=\ln\!\left(\frac{m_\tau}{m_\mu}\right)
-+\ln\!\left(\frac{m_\mu}{m_e}\right).
+L_p:=\alpha_{\mathrm{IR}}d_p^2
+-\beta_{\mathrm{pkt}}D_pd_p^4
++\mathcal R_{6,p}(d_p).
+\tag{T.42.6.1}
 $$
+Theorem T.42.2a gives
+$$
+S_{\tau e}:=e^{-L_{\tau\mu}}e^{-L_{\mu e}},
+\qquad -\log S_{\tau e}=L_{\tau\mu}+L_{\mu e}.
+\tag{T.42.6.2}
+$$
+Writing
+$$
+L_p^{(0)}:=\alpha_{\mathrm{IR}}d_p^2
+-\beta_{\mathrm{pkt}}D_pd_p^4,
+$$
+the certified endpoint bounds are
+$$
+|L_{\tau\mu}-L_{\tau\mu}^{(0)}|\le8B_{\tau\mu},
+\qquad
+|L_{\mu e}-L_{\mu e}^{(0)}|\le64B_{\mu e},
+$$
+$$
+\left|(L_{\tau\mu}+L_{\mu e})
+-(L_{\tau\mu}^{(0)}+L_{\mu e}^{(0)})\right|
+\le8B_{\tau\mu}+64B_{\mu e}.
+\tag{T.42.6.3}
+$$
+The same certificate gives the exact common-kernel identity
+$$
+e^{-L_p}=\mathcal I_p(d_p)
+=\mathcal T_p(d_p)\frac{K_p^{\mathrm{mag}}(d_p)}{A_p}.
+\tag{T.42.6.4}
+$$
+Equations (T.42.6.1) and (T.42.6.4) are two decompositions of one normalized
+kernel. A ledger may use either decomposition, but it may not add the VVM,
+heat, transport, or remainder terms from one decomposition to those already
+contained in the other.
 
-*Proof.* The effective Lemma T.42.1a gives the logarithmic expansion inside $d<d_*$. Theorem T.42.2 supplies the registered quartic coefficient $1/C$ on its packet-normalization branch, and the effective T.42.5 results supply the two model assignments for $D_{\mathrm{eff}}$. The two radius hypotheses license evaluation at $d=\sqrt2$ and $d=2$. Substitution gives the adjacent-pair equations, and the logarithmic identity of Theorem T.42.2a gives the path sum. ∎
+On the exact certificate subbranch
+$\beta_{\mathrm{pkt}}=1/144=1/C$, equation (T.42.6.1) becomes
+$$
+L_p=\alpha_{\mathrm{IR}}d_p^2
+-\frac1C D_pd_p^4+\mathcal R_{6,p}(d_p),
+\qquad C=144.
+$$
+Without an accepted $\mathfrak C_{\mathrm{pkt/VVM}}^\ell$, this remains a
+forward-locked exponent model. An equality $e^{-L_p}=m_i/m_j$ additionally
+requires the full-matrix certificate $\mathfrak C_{Y\to m}$ of Theorem T.39
+to verify the same normalized kernel, root labels, and anchors and to prove
+that its matching map $\mathcal R_{\mathrm{match}}$ induces the registered
+endpoint transport $\mathcal T_p(d_p)$. The common packet certificate alone
+does not identify a mass ratio.
 
-**Zero-Remainder Central Truncation:**
+*Proof.* Theorem T.42.2 applies Lemma T.42.1a to both registered paths and
+supplies (T.42.6.1), the bounds in (T.42.6.3), and the kernel identity
+(T.42.6.4). Theorem T.42.2a gives (T.42.6.2). Its source-exhaustion test
+establishes the no-double-counting statement. The final physical
+identification requires the separate matrix assembly, matching,
+diagonalization, and label checks of Theorem T.39. ∎
 
-|Ratio |$d^2$|Assignment |$D_{\mathrm{eff}}$|$d^4$|Quartic term|Central value with $\mathcal R_6=0$|
-|:--------:|:---:|:-----------:|:----------------:|:---:|:--------:|:--------:|
-|$\tau/\mu$|$2$ |Marked-calibration $d^2=2$ assignment|$3/8$ |$4$ |$0.0148$ |$2.8212$ |
-|$\mu/e$ |$4$ |Marked-calibration $d^2=4$ assignment|$13/6$ |$16$ |$0.3414$ |$5.3306$ |
-|$\tau/e$ |— |Path sum |— |— |— |$8.1518$ |
-
-Setting the uncalibrated remainder to zero gives
+**Diagnostic zero-remainder specialization on the exact
+$\beta_{\mathrm{pkt}}=1/144$ branch.** For arithmetic comparison only, set
+the two endpoint remainders to zero and use
+$\alpha_{\mathrm{IR}}=(3/2)\operatorname{sinc}(1/\sqrt3)
+=1.4180445835\ldots$. A nonzero certified bound does not imply this
+specialization.
 $$
 \begin{aligned}
-\ln(m_\tau/m_\mu)_{\mathrm{central}}
-&=1.418\cdot2-\frac{1.418}{144}\frac38\cdot4=2.8212,\\
-\ln(m_\mu/m_e)_{\mathrm{central}}
-&=1.418\cdot4-\frac{1.418}{144}\frac{13}{6}\cdot16=5.3306,\\
-\ln(m_\tau/m_e)_{\mathrm{central}}
-&=2.8212+5.3306=8.1518.
+L_{\tau\mu}^{(0)}
+&=\alpha_{\mathrm{IR}}\cdot2-\frac1{144}\frac38\cdot4
+=2.8256725003\ldots,\\
+L_{\mu e}^{(0)}
+&=\alpha_{\mathrm{IR}}\cdot4-\frac1{144}\frac{13}{6}\cdot16
+=5.4314375933\ldots,\\
+L_{\tau e}^{(0)}&=8.2571100936\ldots .
 \end{aligned}
 $$
-
-**Retrospective comparison with the quoted mass inputs:**
-
-|Quantity |Central truncation|Quoted value|Difference|
-|:-----------------:|:--------:|:---------:|:-------:|
-|$\ln(m_\tau/m_\mu)$|$2.8212$ |$2.8224$ |$-0.04\%$ |
-|$\ln(m_\mu/m_e)$ |$5.3306$ |$5.3316$ |$-0.02\%$ |
-|$\ln(m_\tau/m_e)$ |$8.1518$ |$8.1540$ |$-0.03\%$ |
-
-These are calibration residuals of the zero-remainder central truncation. Prediction intervals require a preregistered marked map, effective-dimension assignment, coefficient, and certified bounds for $\mathcal R_6(\sqrt2)$ and $\mathcal R_6(2)$. Path additivity is an exact logarithmic identity once the two adjacent values are supplied. ∎
-
-**Corollary T.42.6a** (Electron Mass from Tau Mass). *Given the tau mass $m_\tau = 1776.86$ MeV, the electron mass is:*
-
+Against the quoted logarithms $(2.8224,5.3316,8.1540)$, the arithmetic
+residuals are respectively
 $$
-m_e = m_\tau \times \exp\!\left(-8.1518\right) = 1776.86 \times 2.8821610 \times 10^{-4}\,\mathrm{MeV} = 0.5121197\,\mathrm{MeV}.
++0.0032725003\ldots,
+\qquad +0.0998375933\ldots,
+\qquad +0.1031100936\ldots .
 $$
+These comparisons validate arithmetic only. The accepted packet certificate
+is required for controlled intervals, and an accepted
+$\mathfrak C_{Y\to m}$ is separately required for a physical interval.
 
-*Relative to the PDG value $m_e = 0.510998950$ MeV, the branch value is higher by $0.219\%$.*
+**Corollary T.42.6a** (Zero-Remainder Tau-Anchored Model Candidate). Under Theorem T.42.6's zero-remainder evaluation, anchoring the composed model factor at $m_\tau=1776.86\,\mathrm{MeV}$ gives
+$$
+m_e^{\mathrm{model}}
+:=m_\tau e^{-L_{\tau e}^{(0)}}
+=1776.86e^{-8.2571100936\ldots}\,\mathrm{MeV}
+=0.4609309395\ldots\,\mathrm{MeV}.
+$$
+This is a retrospective model candidate, not a certified electron mass. It becomes physical only if Theorem T.39's full-matrix realization and matching certificate accepts the same anchor and exponent.
 
 ### T.21.8.7 Parameter and Certificate Ledger
 
-**Theorem T.42.7** (Conditional Hierarchy-Parameter Ledger). Once the following branch entries are specified before comparison,
+**Theorem T.42.7** (Conditional Hierarchy-Parameter Ledger). Once the
+following branch entries are fixed before comparison,
 
 1. the structural tuple $(K_0,d_0,a,b,M)=(3,8,2,6,24)$;
-2. the Bures metric and packet-width normalization;
-3. the hierarchy response coefficient $\alpha_{\mathrm{IR}}$;
-4. a normalized packet-overlap expansion with controlled remainder;
+2. the Bures metric, Schur--heat operator and domain, measure, packet
+   normalization, and finite Bures--$E_8$ embedding data;
+3. the registered coefficient $\alpha_{\mathrm{IR}}$ and infrared transport
+   functions $\mathcal T_p$;
+4. an accepted common packet/VVM certificate
+   $\mathfrak C_{\mathrm{pkt/VVM}}^\ell$, including its coefficient output,
+   finite interval covers, source-exhaustion ledger, and endpoint remainder
+   bounds;
 5. a marked Hamming-chordal correspondence; and
-6. the effective-dimension assignments $D_{\mathrm{eff}}(2)=3/8$ and $D_{\mathrm{eff}}(4)=13/6$,
+6. the effective-dimension assignments $D_{\mathrm{eff}}(2)=3/8$ and
+   $D_{\mathrm{eff}}(4)=13/6$,
 
-the displayed charged-lepton logarithms are determined with no further continuous fit.
+Theorem T.42.6 determines certified intervals for the two adjacent model
+exponents and their path sum. Exact exponent values follow only when the
+certificate supplies exact endpoint remainders.
 
-*Proof.* Substitution of the registered entries into Theorem T.42.6 fixes each term in
+*Proof.* The accepted certificate fixes $\beta_{\mathrm{pkt}}$,
+$B_{\tau\mu}$, $B_{\mu e}$, and the two endpoint kernels. Substitution into
 $$
-\ln(m_j/m_i)
-=
-\alpha_{\mathrm{IR}}d_{ij}^2
--
-\frac{\alpha_{\mathrm{IR}}}{144}
-D_{\mathrm{eff}}(d_{ij}^2)d_{ij}^4
-+
-R_6(d_{ij}).
+L_p=\alpha_{\mathrm{IR}}d_p^2
+-\beta_{\mathrm{pkt}}D_pd_p^4+\mathcal R_{6,p}(d_p)
 $$
-If the remainder certificate fixes $R_6$, no free coefficient remains in this formula. The theorem is conditional on the six entries and does not derive them solely from $K_0$ and $\varepsilon_0$. ∎
+gives the intervals of Theorem T.42.6. The coefficient
+$\alpha_{\mathrm{IR}}$, transport functions, effective-dimension rule, and
+root labels remain registered branch inputs. Ordered physical masses still
+require Theorem T.39's independent full-matrix and matching certificate. ∎
 
 ### T.21.8.8 Conditional Extension to the Quark Sector
 
-**Theorem T.42.8** (Quark Sector Hierarchy). *The same geometric framework applies to quarks with sector-specific triads and prefactors:*
-
+**Theorem T.42.8** (Quark-Sector Model Exponents and Realization Gate). For each quark sector $f$, register a sector response coefficient $c_f$, a root-label map, a packet remainder $\mathcal R_{6,f}$, and the appropriate $D_{\mathrm{eff},f}$ branch. Define
 $$
-\ln\!\left(\frac{m_j}{m_i}\right)_f = c_f \cdot \left[\alpha_{\mathrm{IR}}\,d^2_{ij,f} - \frac{\alpha_{\mathrm{IR}}}{C} \cdot D_{\mathrm{eff}}(d^2_{ij,f}) \cdot d^4_{ij,f}\right] + \mathcal{O}(d^6)
+L^f_{ij}
+:=c_f\left[
+\alpha_{\mathrm{IR}}d_{ij,f}^2
+-\frac1C D_{\mathrm{eff},f}(d_{ij,f}^2)d_{ij,f}^4
+\right]
++\mathcal R_{6,f}(d_{ij,f}),
+\qquad C=144.
+\tag{T.42.8.1}
 $$
-
-*where $c_f$ is the sector prefactor (Theorem T.38) and $(d^2_{32,f}, d^2_{21,f})$ are the adjacent-generation $E_8$ distances for sector $f$.*
+This is a quark-sector model exponent. An equality $L^f_{ij}=\log(m_j/m_i)$ requires one accepted Theorem-T.39 certificate built from the complete complex Yukawa matrix at a declared common scale, followed by the specified threshold matching and RG evolution with certified remainder intervals. Sector prefactors and root distances alone do not supply that gate.
 
 **Remark T.42.8.1: QCD Corrections.** *Quark-sector predictions apply to short-distance Yukawa eigenvalues (or $\overline{\text{MS}}$ masses) at the matching scale $\mu_G$. A precision comparison to quoted masses requires SM RG evolution to $\mu_{\mathrm{EW}}$, QCD decoupling at heavy thresholds, and multi-loop running in a specified scheme; the explicit protocol and T1/T2/T3 uncertainty decomposition are given in Section T.25.5.3. Same-scale hierarchy invariants provide a controlled intermediate diagnostic under common-scheme reduction (Section T.25.5.4), and the down-sector $A_2/D_4$ frustration correction is derived in Section T.25.6a with a matching uncertainty budget (Section T.25.6a.11).*
 
@@ -3875,14 +4218,13 @@ Each triple comprises valid $E_8$ roots of type $(\pm 1, \pm 1, 0, \ldots, 0)$, 
 
 ### T.21.9.2 Sector Prefactors
 
-**Theorem T.44** (Sector prefactors).
-Let $c_\ell, c_d, c_u$ denote sector prefactors for charged leptons, down-type quarks, and up-type quarks, respectively. At the matching scale $\mu_G$, the prefactors satisfy:
-
+**Theorem T.44** (Sector Prefactors on the Registered Normalization Branch). Let $c_\ell,c_d,c_u$ denote the charged-lepton, down-quark, and up-quark sector prefactors at $\mu_G$. Assume either the imposed normalization branch $c_\ell/c_d=8/3$ or an independently accepted Bures-weight representation-variance certificate $\mathcal V_{\ell d}=0$ of Theorem T.34.1b, and take the corresponding positive weights from Corollary T.34.2. Then
 $$
-\frac{c_\ell}{c_d} = \frac{8}{3}, \qquad \frac{c_d}{c_u} \approx 1.02,
+\frac{c_\ell}{c_d}=\frac83,
+\qquad
+\frac{c_d}{c_u}=1.0246746\ldots
 $$
-
-with $c_\ell/c_d$ fixed by the normalization constraint (Corollary T.34.1) and $c_d/c_u$ controlled by right-handed hypercharge dependence (Theorem T.38).
+under Theorem T.38's declared right-handed hypercharge convention. The first ratio is not a consequence of raw Casimir or McKay data, and the second is a prefactor ratio, not a stiffness ratio.
 
 *Proof.* In the prefactor ratio computation one uses the PU-normalized gauge coefficient $g_U$ for canonical generators (Theorem T.13); the SM-canonical matching factors $Z_i$ control the gauge-boson kinetic terms but do not alter the fermion-sector prefactor ratios set by the Bures weights $\kappa_i$ (Theorem T.34). The sector normalization entering the prefactor tilt is
 
@@ -3944,15 +4286,15 @@ Homothety alone does not prove even unimodularity, rootlessness, family labels, 
 
 
 
-The Leech lattice $\Lambda_{24}$ is constructed via Construction A as a union of cosets of the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, with coset representatives determined by the extended binary Golay code $\mathcal{G}_{24}$ (Conway–Sloane, *Sphere Packings, Lattices and Groups*).
+On Lemma R.4.5's abstract-gluing branch, the Leech candidate $L_H$ is the union of cosets of $L_0=(\sqrt2E_8)^3$ selected by a registered maximal isotropic subgroup together with explicit glue representatives. This discriminant-form route is distinct from the explicit Golay coordinate construction; the Golay code parameters alone determine neither the isotropic marking nor the glue representatives.
 
-On the registered gluing branch, scaling by $\sqrt{2}$ maps $E_8$ roots of squared norm $2$ to scaffold vectors of squared norm $4$. The gluing and coset-minimum certificate establishes even unimodularity and minimum norm $4$, and the homothety is consistent with Lemma T.41.4 in a common physical normalization:
+On the registered gluing branch, scaling by $\sqrt{2}$ maps $E_8$ roots of squared norm $2$ to scaffold vectors of squared norm $4$. The gluing and coset-minimum certificate establishes even unimodularity and minimum norm $4$, and the homothety supplies a separate lattice-distance scaling. It becomes compatible with Lemma T.41.4 only when the finite Bures--$E_8$ embedding certificate and the lattice marking refer to the same preregistered root pairs:
 
 $$
 d^2_{E_8} \xrightarrow{\times\sqrt{2}} d^2_{\sqrt{2}E_8} = 2 d^2_{E_8},
 $$
 
-so that $E_8$ distances ${2, 4, 6, 8}$ map to ${4, 8, 12, 16}$ in the Leech embedding. This aligns with the interface dimension $M = 24$ and the Golay error-correction structure at the PU fixed point $\mathfrak{A}_{PU}$.
+so that $E_8$ distances ${2,4,6,8}$ map to ${4,8,12,16}$ in the marked lattice scaffold. This is only lattice norm scaling; it supplies no map to interface modes, Golay decoding data, generation labels, or physical flavor observables.
 
 -----
 
@@ -3962,20 +4304,24 @@ The hierarchy model uses one geometric suppression rule across the charged-lepto
 
 ### Technical results ledger
 
-1. The hierarchy of inter-generation masses is governed by
+1. On the declared scalar hierarchy-model branch, define the quadratic model exponent by
 
 $$
-\ln\!\left(\frac{m_j}{m_i}\right) = \alpha\,d^2_{E_8}(r_i,r_j), \qquad \alpha = \frac{1}{16\,\sigma_B^2}.
+E_{ji}^{\mathrm{model}}:=\alpha\,d^2_{E_8}(r_i,r_j),
+\qquad
+\alpha:=\frac{1}{16\,\sigma_B^2}.
 $$
 
-1. At the PU fixed point $\mathfrak{A}_{PU}$, the Predictive Ward identity fixes the quadratic kernel, isotropy fixes the covariance structure, and capacity saturation fixes the normalization $\langle r_B^2 \rangle = 1$. Together these yield
+Identifying $E_{ji}^{\mathrm{model}}$ with a physical same-scale logarithm $\ln(m_j/m_i)$ requires an accepted Theorem-T.39 full-matrix realization, common renormalization scheme and scale, threshold map, labels, and residual certificate.
+
+1. At the PU fixed point $\mathfrak{A}_{PU}$, the Predictive Ward identity fixes the quadratic kernel and isotropy fixes the covariance shape. On the independently declared centered isotropic unit-radius convention $\langle r_B^2\rangle=1$, these yield
 
 $$
 \sigma_B^2 = \frac{1}{24}, \qquad \alpha_{\mathrm{UV}} = \frac{3}{2}.
 $$
 
-1. The effective infrared exponent from charged leptons is $\alpha_{\mathrm{IR}} = 1.411 \approx \sqrt{2}$, reproducing $\ln(m_\tau/m_\mu)$ at the $0.2%$ level.
-1. The leading ratio invariant $\mathcal{R}:=d^2_{31}/d^2_{32}=3$ is a statement about the declared distance triad. The sub-$0.05%$ numerical agreement occurs only after the model coefficient and $D_{eff}$ assignments of Theorem T.42.6 are supplied; it does not derive those entries.
+1. The observation-derived diagnostic $\ln(m_\tau/m_\mu)/2=1.411$ is distinct from the registered model coefficient $\alpha_{\mathrm{IR}}^{\mathrm{model}}=(3/2)\operatorname{sinc}(1/\sqrt3)=1.4180445\ldots$. Their numerical proximity is a comparison diagnostic, not a derivation of the model coefficient or its physical bridge.
+1. The leading ratio invariant $\mathcal{R}:=d^2_{31}/d^2_{32}=3$ is a statement about the declared distance triad. On the exact packet-coefficient subbranch $\beta_{\mathrm{pkt}}=1/144$, the registered zero-remainder inputs give the $\tau/\mu$ model exponent $2.8256725003\ldots$, differing from the quoted $2.8224$ comparison by $+0.0032725003\ldots$ or $+0.11595\%$. This arithmetic does not discharge the common packet/VVM certificate, effective-dimension assignments, remainders, or the Theorem-T.39 physical bridge.
 
 
 1. On the declared triad-selection model, $(d^2_{32},d^2_{31})=(2,6)$ is the minimal-$d^2_{32}$ candidate with $\mathcal R=3$; no Golay or Leech theorem fixes that physical assignment.
@@ -3986,8 +4332,8 @@ $$
 - Neutrinos: $(d^2_{32}, d^2_{31}, d^2_{21}) = (2, 6, 6)$, formula $(a, b, b)$, $\mathcal{R} = 3$
 - Down-type quarks: $(d^2_{32}, d^2_{31}) = (2, 4)$, $\mathcal{R} = 2$
 - Up-type quarks: $(d^2_{32}, d^2_{31}) = (4, 8)$, $\mathcal{R} = 2$
-1. Sector prefactors satisfy structural constraints at matching: $c_\ell/c_d = 8/3$ (normalization constraint, Corollary T.34.1) and $c_d/c_u \approx 1.02$ (right-handed hypercharge tilt, Theorem T.38 with Corollary T.34.2).
-1. **Absolute mass scale anchor.** The tau lepton mass is determined by the universal normalization $\mathcal{N}_{PU}$ connecting Bures geometry to Yukawa eigenvalues:
+1. On the imposed $c_\ell/c_d=8/3$ normalization branch, or after an accepted $\mathcal V_{\ell d}=0$ certificate, Corollary T.34.2 fixes the positive Bures weights and Theorem T.38 gives the conditional prefactor ratio $c_d/c_u=1.0246746\ldots$. Neither ratio is an unconditional structural output, and neither fixes the Cabibbo stiffness ratio.
+1. **Absolute mass scale candidate.** On the declared leading-order normalization-input branch, the tau Yukawa candidate uses the defined product $\mathcal{N}_{PU}$ together with independently registered sector weights, gauge normalization, electroweak scale, matching convention, and RG factor:
 $$
 \mathcal{N}_{PU} = \frac{1}{N_g} \cdot \frac{1}{M} \cdot \frac{1}{\sqrt{n_G}} = \frac{1}{3 \cdot 24 \cdot \sqrt{12}} = \frac{1}{72\sqrt{12}} \approx 0.00401
 $$
@@ -4051,7 +4397,12 @@ $$
  m_e = m_\tau\,e^{-\ln(m_\tau/m_e)}.
 }
 $$
-*Here $\ln(m_\tau/m_\mu)=2.8212$ and $\ln(m_\tau/m_e)=8.1518$ are conditional hierarchy-model values from Theorem T.42.6, while $v_{\rm PU}=252\ \text{GeV}$ is itself branch-conditional under Theorems T.6 and T.29.*
+*Here Theorem T.42.6's zero-remainder model exponents are
+$L_{\tau\mu}^{(0)}=2.8256725003\ldots$ and
+$L_{\tau e}^{(0)}=8.2571100936\ldots$.  They become logarithmic physical mass
+ratios only if Theorem T.39's full-matrix realization certificate is accepted;
+$v_{\rm PU}=252\ \text{GeV}$ is itself branch-conditional under Theorems T.6
+and T.29.*
 
 
 
@@ -4237,28 +4588,33 @@ $$
 $$
 which *defines* the self-consistent $y_\tau(\mu_G)$ required to match $m_\tau^{\rm obs}$ for a given $(v_{\rm PU},\eta_\tau)$.
 
-**Step 4 (Muon and electron masses from conditional ratio inputs).** After the Theorem T.42.6 model values are supplied,
-
-
+**Step 4 (Tau-anchored zero-remainder model candidates).** Theorem T.42.6
+supplies model exponents, not physical mass ratios.  For the retrospective
+diagnostic obtained by setting both registered remainders to zero and anchoring
+at $m_\tau^{\rm obs}=1776.86\,\mathrm{MeV}$, define
 $$
-\frac{m_\mu}{m_\tau}=e^{-\ln(m_\tau/m_\mu)}=e^{-2.8212},\qquad
-\frac{m_e}{m_\tau}=e^{-\ln(m_\tau/m_e)}=e^{-8.1518}.
+m_\mu^{\rm model}:=m_\tau^{\rm obs}e^{-L_{\tau\mu}^{(0)}},
+\qquad
+m_e^{\rm model}:=m_\tau^{\rm obs}e^{-L_{\tau e}^{(0)}}.
 $$
-Using $m_\tau=m_\tau^{\rm obs}$ as the overall anchor, the implied masses are
+Direct evaluation gives
 $$
- m_\mu = 1776.86\times e^{-2.8212}=105.78\ \text{MeV},\qquad
- m_e = 1776.86\times e^{-8.1518}=0.51212\ \text{MeV}.\quad\square
+m_\mu^{\rm model}=105.3123336\ldots\,\mathrm{MeV},
+\qquad
+m_e^{\rm model}=0.4609309395\ldots\,\mathrm{MeV}.\quad\square
 $$
 
-**Numerical verification**
+**Numerical diagnostic**
 
-| Quantity |  Predicted  |   Observed (Particle Data Group (2024))  | Deviation | Status (⊘ = consistency check) |
-| :------- | :---------: | :---------------------: | :-------: | :----------------------------: |
-| $m_\tau$ | 1776.86 MeV | 1776.86 MeV |    $0$    |                ⊘               |
-| $m_\mu$  | 105.78 MeV | 105.6583755 MeV |  $+0.12\%$ |                ✓               |
-| $m_e$    | 0.51212 MeV | 0.51099895 MeV |  $+0.22\%$ |                ✓               |
+|Quantity|Zero-remainder anchored model|Quoted comparison value|Relative residual|Status|
+|:--|:--:|:--:|:--:|:--:|
+|$m_\tau$|$1776.86\,\mathrm{MeV}$|$1776.86\,\mathrm{MeV}$|$0$|anchor $\oslash$|
+|$m_\mu$|$105.3123336\,\mathrm{MeV}$|$105.6583755\,\mathrm{MeV}$|$-0.3275\%$|model diagnostic|
+|$m_e$|$0.4609309395\,\mathrm{MeV}$|$0.51099895\,\mathrm{MeV}$|$-9.7981\%$|model diagnostic|
 
-*The $m_\tau$ row is a self-consistency check because $y_\tau(\mu_G)$ was extracted from observation. The $m_\mu$ and $m_e$ rows compare the conditional Theorem T.42.6 ratio model after the overall scale and its phenomenological entries are fixed; they are not parameter-free tests.*
+These rows validate the declared arithmetic only.  A physical comparison
+requires the common-scale matching, full complex matrix, singular-value, label,
+and residual checks of $\mathfrak C_{Y\to m}$ in Theorem T.39.
 
 
 
@@ -4270,7 +4626,8 @@ $$
 $$
 \mathfrak N_\ell
 =
-(\Delta_{\mathrm{thr}},\Delta_{\mathrm{VVM}}^{\mathrm{abs}},\Delta_{\mathrm{aniso}},I_\ell,\chi_\ell)
+(\Delta_{\mathrm{thr}},\Delta_{\mathrm{VVM}}^{\mathrm{abs}},\Delta_{\mathrm{aniso}},I_\ell,\chi_\ell,
+\mathfrak C_{Y\to m})
 \tag{T.45.1b.1}
 $$
 fixed at the matching scale $\mu_G$, where:
@@ -4280,6 +4637,7 @@ fixed at the matching scale $\mu_G$, where:
 3. $\Delta_{\mathrm{aniso}}$ is the finite PCE-anisotropy factor relating the isotropic normalization $1/(72\sqrt{12})$ to the retained lepton-sector block.
 4. $I_\ell=[L_\ell^-,L_\ell^+]$ is a certified residual interval for omitted higher-order matching and curvature terms in logarithmic units.
 5. $\chi_\ell=1$ records that no entry of the ledger is selected using $m_\tau$, $m_\mu$, or $m_e$.
+6. $\mathfrak C_{Y\to m}$ is the accepted Theorem-T.39 certificate for the same normalization, matching scale, complex matrix assembly, diagonalization, ordered singular values, lepton labels, and residual intervals used by this ledger. Its tau interval must agree with $I_\ell$ under the declared matching map.
 
 Write
 $$
@@ -4290,7 +4648,7 @@ $$
 $$
 A scalar Van Vleck-Morette multiplier is admissible in the absolute mass anchor only as the entry $\Delta_{\mathrm{VVM}}^{\mathrm{abs}}$ of such a ledger; the geodesic angle, retained dimension, and full determinant convention are part of the datum.
 
-**Theorem T.45.1c (Absolute Mass Anchor Determinacy from a Normalization Ledger).** If $\mathfrak N_\ell$ is accepted, then the forward absolute charged-lepton anchor is
+**Theorem T.45.1c (Certificate-Gated Absolute Charged-Lepton Intervals).** If every entry of $\mathfrak N_\ell$, including $\mathfrak C_{Y\to m}$, is accepted, then the forward absolute charged-lepton anchor is
 $$
 y_{\tau,\mathrm{abs}}(\mu_G)
 =
@@ -4308,9 +4666,9 @@ $$
 [L_\ell^-,L_\ell^+].
 \tag{T.45.1c.2}
 $$
-The muon and electron absolute intervals are obtained by subtracting the ratio exponents of Theorem T.42.6 from the same tau interval. If $\mathfrak N_\ell$ is absent, the displayed leading-order value $m_\tau^{(0)}\approx0.94\ \mathrm{GeV}$ remains only the flat-isotropic anchor, while the charged-lepton ratios remain governed by Theorem T.42.6.
+The muon and electron absolute intervals are obtained by interval subtraction using the residual-bearing exponents accepted inside the same $\mathfrak C_{Y\to m}$. If that full certificate is absent, (T.45.1c.1)--(T.45.1c.2) define only an absolute model-anchor interval; the displayed leading value $m_\tau^{(0)}\approx0.94\,\mathrm{GeV}$ and the corresponding muon/electron values are not physical mass intervals.
 
-*Proof.* Once $\mathfrak N_\ell$ is accepted, every multiplicative correction to the absolute Yukawa normalization is fixed before comparison. Multiplying the flat-isotropic source $\mathcal N_{\rm PU}c_\ell$ by the ledger product (T.45.1b.2) gives (T.45.1c.1). The physical tau mass is obtained from the standard matching relation $m_\tau=(v_{\rm PU}/\sqrt2)\eta_\tau y_{\tau,\mathrm{abs}}(\mu_G)$; taking logarithms and adding the certified residual interval gives (T.45.1c.2). The ratio formulas of Theorem T.42.6 are independent of the common absolute prefactor, so $\log m_\mu=\log m_\tau-\log(m_\tau/m_\mu)$ and $\log m_e=\log m_\tau-\log(m_\tau/m_e)$ use the same interval. Without the ledger, at least one of the threshold, Van Vleck-Morette, anisotropy, residual, or forward-lock entries is undefined, so no scalar normalization correction is determined by the theorem stack. ∎
+*Proof.* The scalar entries fix the multiplicative normalization and give (T.45.1c.1). The matching relation and $I_\ell$ give the model interval (T.45.1c.2). The accepted $\mathfrak C_{Y\to m}$ separately verifies that this normalization belongs to the same complex sector matrix, matching convention, ordered singular values, and labels, and that its residual intervals contain the tau, muon, and electron logarithms. Only that conjunction promotes the model interval to physical mass intervals. If any scalar entry or the full-matrix certificate is absent, the corresponding promotion does not follow. ∎
 
 **Status ledger (parametric / scheme):**
 
@@ -4340,7 +4698,7 @@ Path additivity is exact once adjacent-edge values are supplied. It does not der
 - **Lower-distance assignment** ($d^2<4$): $D_{\mathrm{eff}}=t/d_{\min}=3/8$.
 - **Boundary-value assignment** ($d^2=4$): $D_{\mathrm{eff}}=(k+1)/b=13/6$.
 
-Path additivity (Theorem T.42.2a) ensures $\ln(m_\tau/m_e) = \ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$ exactly. On the democratic visible-response branch $L_{\mathrm{vis}}=1/(ad_0)$ of Theorem Z.24, the conditional value $K_{\mathrm{eff}}=2$ gives $\beta_{\mathrm{geom}}=K_{\mathrm{eff}}\sigma_B^2/12=1/144$ in the declared Van Vleck model. The displayed sub-$0.05\%$ comparisons are conditional on that response input, the registered hierarchy coefficient, the effective-dimension assignments, and controlled higher-order remainders; they are not zero-adjustable-parameter consequences of the PU axioms.
+Path composition (Theorem T.42.2a) gives the exact model identity $L_{\tau e}=L_{\tau\mu}+L_{\mu e}$ once the adjacent-edge exponents are supplied; it does not derive them. On Theorem T.42.2's exact fourth-derivative subbranch, the common packet coefficient is $\beta_{\mathrm{pkt}}=1/144=1/C$. Theorem Z.24's electromagnetic visible-response coefficient is not an input to this flavor-packet result. With zero endpoint remainders, the three residuals against the quoted log comparisons are $+0.0032725003\ldots$, $+0.0998375933\ldots$, and $+0.1031100936\ldots$, respectively. Controlled intervals require the accepted common packet/VVM certificate; physical mass interpretation separately requires Theorem T.39's accepted full-matrix realization and matching certificate.
 
 -----
 
@@ -4364,10 +4722,10 @@ The following ledger separates theorem inputs, branch assignments, and model-lay
 |$g_U^2$ |$\pi/6$ |Theorem T.39a |Holonomy per mode $2\pi/M$ |
 |$\mathcal{N}_{PU}$ |$1/(72\sqrt{12})$ |Section T.21.11 |Democratic × capacity × isotropy |
 |$M$ |$24$ |Theorem Z.5 |$2ab$ (QFI-active modes) |
-|$K_{\mathrm{eff}}$ |$2$ on the democratic visible-response branch |Theorem Z.24; Lemma Z.24a |$(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L_{\mathrm{vis}}$ with the independent input $L_{\mathrm{vis}}=1/(ad_0)$ |
-|$\sigma_B^2$ |$1/24$ |Lemma T.41.2 |Capacity saturation |
-|$1/12$ |Universal |Van Vleck–Morette|World-function expansion coefficient |
-|$\beta_{\mathrm{geom}}$ |$1/144$ |Theorem T.42.2 |$(K_{\mathrm{eff}}/12)\sigma_B^2 = 1/C$ |
+|$\sigma_B^2$ |$1/24$ |Lemma T.41.2 |Independently declared centered isotropic unit-radius convention |
+|$\mathfrak C_{\mathrm{pkt/VVM}}^\ell$ |accepted finite record or absent |Theorem T.42.2 |Common Schur--heat packet, infrared transport, derivative, interval, and source-exhaustion gate |
+|$\beta_{\mathrm{pkt}}$ |certificate output; $1/144$ only on the exact derivative subbranch |Theorem T.42.2 |Common fourth-derivative quotient for both charged-lepton paths |
+|$(B_{\tau\mu},B_{\mu e})$ |nonnegative certified bounds |Theorem T.42.2 |Finite sixth-derivative remainder control at the two endpoints |
 |$C$ |$144$ |Theorem Z.13a |$bM = 6 \times 24$ (vacuum capacity) |
 |$t$ |$3$ |Definition T.1a |$\lfloor(d_{\min}-1)/2\rfloor$ (Golay correction capacity)|
 |$d_{\min}$ |$8$ |Definition T.1a |Golay minimum distance |
@@ -4379,16 +4737,34 @@ The following ledger separates theorem inputs, branch assignments, and model-lay
 **Derivation chain:**
 
 $$
-K_0 = 3 \to d_0 = 8 \to (a,b) = (2,6) \to M = 24 \to \sigma_B^2 = \frac{1}{24} \to \alpha_{\mathrm{UV}} = \frac{3}{2} \to \alpha_{\mathrm{IR}} = 1.418
+\begin{aligned}
+\mathfrak B_{15}&\Longrightarrow (K_0,N_{\mathrm{vis}}^{\min})=(3,8),\\
+\mathfrak B_{23}\cap\mathfrak B_{Z2}&\Longrightarrow d_0=8,\\
+\mathfrak B_{\mathrm{bin}}\cap\mathfrak B_{Z1}&\Longrightarrow a=2,\\
+(d_0,a)=(8,2)&\Longrightarrow (b,M)=(6,24),\\
+\mathfrak B_{\mathrm{rad}}&\Longrightarrow \sigma_B^2=1/24,\\
+\alpha_{\mathrm{UV}}:=\frac1{16\sigma_B^2}&\Longrightarrow \alpha_{\mathrm{UV}}=3/2,\\
+\mathfrak B_{\mathrm{sinc}}&\Longrightarrow
+\alpha_{\mathrm{IR}}=\frac32\operatorname{sinc}(1/\sqrt3)=1.4180445\ldots .
+\end{aligned}
 $$
+Here $\mathfrak B_{15}$ is Theorem 15's visited-context branch; $\mathfrak B_{23}\cap\mathfrak B_{Z2}$ combines the Hilbert lower bound with the independent same-class comparator/minimality gate; $\mathfrak B_{\mathrm{bin}}$ is the Definition-28/Definition-J.1/Theorem-J.1 binary-support branch; $\mathfrak B_{Z1}$ contains the sharp active record, capacity, quotient, and no-surplus gates; $\mathfrak B_{\mathrm{rad}}$ is the centered-isotropic unit-mean-squared-radius convention; and $\mathfrak B_{\mathrm{sinc}}$ is the separate sinc-coefficient prescription. The displays are branch intersections, not a single causal chain.
 
+The charged-lepton quartic coefficient follows instead through the typed
+common-kernel route
 $$
-L_{\mathrm{vis}}=\frac1{ad_0}
-\xrightarrow{\text{Thm Z.24}}
-K_{\mathrm{eff}}=2
-\xrightarrow{\text{Van Vleck; Thm T.42.2}}
-\beta_{\mathrm{geom}}=\frac{K_{\mathrm{eff}}}{12}\sigma_B^2=\frac1{144}=\frac1C
+\mathfrak C_{\mathrm{pkt/VVM}}^\ell
+\longrightarrow
+\{G_p^{(4)}(0),B_p\}_{p\in\mathcal E_\ell}
+\longrightarrow
+\beta_{\mathrm{pkt}}
+\longrightarrow
+\{L_p,\mathcal R_{6,p}\}_{p\in\mathcal E_\ell}.
 $$
+The equality $\beta_{\mathrm{pkt}}=1/144=1/C$ is available only when the
+certificate returns the exact fourth derivatives required by Theorem T.42.2.
+Theorem Z.24's electromagnetic visible-response coefficient is not an input
+to this flavor-packet route.
 
 $$
 \mathcal{G}_{24}[24,12,8]\to(t,d_{\min},k)=(3,8,12),
@@ -4398,25 +4774,28 @@ $$
 \underbrace{D_{\mathrm{eff}}(2):=t/d_{\min},\;D_{\mathrm{eff}}(4):=(k+1)/b}_{\text{effective-dimension assignments}}
 $$
 
-**Results:**
+**Zero-remainder model results:**
 
-|Observable |Leading Order|Corrected |Observed |Agreement|
-|:--------------------|:-----------:|:---------:|:---------:|:-------:|
-|$\ln(m_\tau/m_\mu)$ |$2.836$ |$2.8212$ |$2.8224$ |$0.04%$ |
-|$\ln(m_\mu/m_e)$ |$5.672$ |$5.3306$ |$5.3316$ |$0.02%$ |
-|$\ln(m_\tau/m_e)$ |$8.508$ |$8.1518$ |$8.1540$ |$0.03%$ |
-|$m_e$ (from $m_\tau$)|— |$0.512$ MeV|$0.511$ MeV|$0.2%$ |
+|Quantity|Leading quadratic term|Fourth-order model exponent|Quoted comparison|Arithmetic residual|
+|:--|:--:|:--:|:--:|:--:|
+|$L_{\tau\mu}$|$2.8360892\ldots$|$2.8256725003\ldots$|$2.8224$|$+0.0032725003\ldots$|
+|$L_{\mu e}$|$5.6721783\ldots$|$5.4314375933\ldots$|$5.3316$|$+0.0998375933\ldots$|
+|$L_{\tau e}$|$8.5082675\ldots$|$8.2571100936\ldots$|$8.1540$|$+0.1031100936\ldots$|
+|$m_e^{\rm model}$ from the tau anchor|—|$0.4609309395\ldots\,\mathrm{MeV}$|$0.51099895\,\mathrm{MeV}$|$-9.7981\%$|
 
 -----
 
 ## T.21.13 Internal Consistency Check
 
-**Logarithmic Additivity:**
+**Model-exponent additivity:**
 $$
-\ln(m_\tau/m_\mu) + \ln(m_\mu/m_e) = 2.8212 + 5.3306 = 8.1518 = \ln(m_\tau/m_e) \quad \checkmark
+L_{\tau\mu}^{(0)}+L_{\mu e}^{(0)}
+=2.8256725003\ldots+5.4314375933\ldots
+=8.2571100936\ldots
+=L_{\tau e}^{(0)}.
 $$
-
-Path additivity (Theorem T.42.2a) guarantees this identity is satisfied exactly by construction.
+This equality is exact by the definition of the composed model factor.  It is
+not an independent mass prediction.
 
 -----
 
@@ -4442,7 +4821,7 @@ The model uses the following prior branch entries:
 - hierarchy coefficient $\alpha=3/2$ on the packet-width and Schur-normalization branch of Corollary T.41.3;
 - registered $E_8$ triad distances from Section T.21.9.1;
 - $N_g=3$ from the anomaly/CP minimality class of Theorem R.3.4 together with the additive-monotone selection branch of Proposition R.3.5.1a; and
-- sector stiffness ratio $\kappa_d/\kappa_u=1.02$ on the normalization branch of Theorem T.38.
+- independently registered sector stiffness ratio $\kappa_d/\kappa_u=1.02$; Theorem T.38 determines a distinct prefactor ratio and does not derive this stiffness input.
 
 Proposition R.4.2 supplies triality/$E_8$/Leech compatibility, not an independent family-count derivation.
 
@@ -4511,43 +4890,63 @@ The 90° angle corresponds to D₄ (cubic) lattice symmetry, while 120° corresp
 
 ### T.22.3.1 The Master Formula
 
-**Theorem T.45** (Unified Mixing Amplitude). *The CKM matrix element between generations i and j is given by the overlap integral on Gr(2,8):*
+**Theorem T.45** (Unified Mixing Kernel and Physical-Realization Gate). Fix a selected pair of generation labels $(i,j)$ carrying the finite embedding certificate $\mathfrak C_{B/E_8}$ of Lemma T.41.4. Let $q_{ij}=d_{E_8}(r_i,r_j)^2$, let $\mathcal P_{ij}\ge0$ be a registered geometric-response coefficient, and let $\Theta_{ij}$ be a registered orientation angle. Define the model kernel
+$$
+K_{ij}
+:=
+\mathcal P_{ij}\exp(-\alpha q_{ij})
+\left|\sin\frac{\Theta_{ij}}2\right|,
+\qquad
+\alpha:=\frac{1}{16\sigma_B^2}.
+\tag{T.45.1}
+$$
+On the unit-radius convention $\sigma_B^2=1/24$, one has $\alpha=3/2$. Equation (T.45.1) is a nonnegative response kernel; it is not, by itself, a CKM matrix element.
 
-$$|V_{ij}| = \mathcal{P}_{ij} \times \mathcal{O}_{ij}$$
+A finite unitary-realization witness requires a mixing certificate
+$$
+\mathfrak C_{\mathrm{mix}}
+=
+\bigl(M_u,M_d,U_u,U_d,W,b,\{K_{ij}^{(b_{ij})}\},
+\varepsilon_U,\eta^{\max},\mathcal I\bigr),
+\tag{T.45.2}
+$$
+where all objects are recorded at the same scale and in the same renormalization scheme, and the verifier checks:
 
-*where:*
+1. $U_f^\dagger U_f=I_3$ and $U_f^\dagger M_fM_f^\dagger U_f$ equals the certified diagonal matrix of ordered squared singular values for $f\in\{u,d\}$, with outward-rounded residuals; the relevant singular values are pairwise distinct, or the certificate replaces entrywise claims inside a degenerate subspace by explicitly invariant subspace claims;
+2. $W=U_u^\dagger U_d$, $\varepsilon_U\ge0$, and
+   $\|W^\dagger W-I_3\|_{\mathrm{op}}\le\varepsilon_U$;
+3. the preregistered provenance map $b:(i,j)\mapsto b_{ij}$ names exactly
+   one source branch for each modeled entry, records that branch's premise
+   hash, and verifies that all selected branches use one family count, scale,
+   scheme, row/column labeling, and phase convention; incompatible
+   common-reference, sector-local, down-only, and two-channel prescriptions
+   cannot be combined silently;
+4. each modeled entry has a preregistered maximum tolerance
+   $\eta_{ij}^{\max}$ and an outward-rounded interval $\mathcal I_{ij}$ for
+   which the verifier proves
+   $$
+   |W_{ij}|,K_{ij}^{(b_{ij})}\in\mathcal I_{ij},
+   \qquad
+   \operatorname{diam}(\mathcal I_{ij})\le\eta_{ij}^{\max},
+   \qquad
+   \operatorname{dist}(|W_{ij}|,K_{ij}^{(b_{ij})})
+   \le\eta_{ij}^{\max};
+   $$
+   an interval wider than its preregistered tolerance is rejected rather
+   than used to certify unrelated values; and
+5. $M_u,M_d$, the labels, provenance map, response data, tolerances, and
+   every error interval were fixed independently of the CKM comparison.
 
-- *𝒫_ij is the geometric prefactor from representation theory*
-- *𝒪_ij is the wavefunction overlap factor*
+If the certificate is accepted with $\varepsilon_U=0$ and singleton intervals,
+then $|W_{ij}|=K_{ij}^{(b_{ij})}$ for the certified entries. With nonzero
+intervals it yields only the corresponding interval statement.  The witness
+must occur as the same CKM subrecord inside one accepted forward-locked global
+flavor certificate $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4, accepted
+by Algorithm T.79.5, before $W$ is promoted to the physical CKM matrix.
+Without that global certificate, $K_{ij}^{(b_{ij})}$ and $W$ remain a model
+kernel and a finite unitary-realization witness.
 
-*The overlap decomposes into radial and angular components:*
-
-$$\mathcal{O}_{ij} = \exp\left(-\alpha \cdot d^2_{\mathrm{eff}}\right) \times |\sin(\Theta_{ij}/2)|$$
-
-*where:*
-
-- *$d^2_{\mathrm{eff}}$ is the effective $E_8$ root-distance squared between generation centers (Lemma T.41.4 conversion from Bures to $E_8$ distance has been applied)*
-- *$\Theta_{ij}$ is the angular mismatch between vacuum orientations*
-- *$\alpha=3/2$ on the Toeplitz-Kraus probability-overlap branch of Theorem T.41.4b and Theorem T.41.5 (Corollary T.41.3)*
-
-*Convention.* The exponent is $-\alpha \cdot d^2_{\mathrm{eff}}$ (no factor of $1/2$), consistent with the proof below and with the form used in Theorems T.46–T.47 and the heavy-generation calculations $|V_{cb}| = \sqrt{2/3} \cdot e^{-3}$ (Theorem T.47, with $d^2 = 2$ and $\alpha = 3/2$).
-
-*Proof.* The mixing amplitude is the overlap of generation wavefunctions:
-$$V_{ij} = \langle\psi_i|\psi_j\rangle = \int_{\mathrm{Gr}(2,8)} \psi_i^*(P)\psi_j(P),d\mu_B(P)$$
-
-On the Grassmannian, this decomposes into:
-
-**Radial overlap:** Following Theorem T.41.5, the mixing amplitude is proportional to the probability overlap $|\langle\psi_i|\psi_j\rangle|^2$. For Gaussian wavefunctions with variance $\sigma^2_B = 1/24$ (Lemma T.41.2):
-$$\exp\left(-\frac{d^2_B}{2\sigma^2_B}\right)$$
-
-Converting to $E_8$ distance via Lemma T.41.4 ($d^2_B = d^2_{E_8}/8$):
-$$\exp\left(-\frac{d^2_{E_8}}{16\sigma^2_B}\right) = \exp(-\alpha d^2_{E_8})$$
-
-with $\alpha = 1/(16\sigma^2_B) = 3/2$ (Corollary T.41.6).
-
-**Angular overlap:** For vacuum orientations misaligned by angle Θ, the transition amplitude between orthogonal states is sin(Θ/2).
-
-The prefactor 𝒫_ij accounts for normalization and projection effects specific to each regime. ∎
+*Proof.* Lemma T.41.4 gives $d_{g_B}^2=q_{ij}/8$ exactly for the certified pair, so the intrinsic Gaussian probability-overlap exponent $d_{g_B}^2/(2\sigma_B^2)$ equals $q_{ij}/(16\sigma_B^2)$. The chordal distance $D_B$ is not used in this heat/Gaussian kernel. Multiplication by the two registered response factors proves (T.45.1). Item 1 verifies unitary left singular bases and removes basis ambiguity for distinct singular values; item 2 then constructs their relative unitary matrix. Items 3--5 make provenance, compatibility, and entrywise residuals finite acceptance tests. Definition T.79.4 and Algorithm T.79.5 supply the separate forward-lock, source-exhaustion, and cross-sector gates needed for physical promotion. ∎
 
 ### T.22.3.2 Regime Classification and Boundary
 
@@ -4557,20 +4956,33 @@ $$\lambda_g = \alpha \cdot d^2_g$$
 
 *where α = 3/2 is the hierarchy coefficient.*
 
-**Proposition T.45.2** (Model regime boundary). *Within the Gaussian-overlap model adopted in Section T.22, the crossover between the tunneling and frustration regimes occurs when the vacuum separation is comparable to the localization width:*
+**Proposition T.45.2** (Registered Model-Regime Classifier).  For a retained
+pair with certified localization width $\ell_g>0$, define the dimensionless
+ratio
 $$
-d_{2,\mathrm{vac}} \sim \ell_g.
+\nu_{ij}:=\frac{d_{ij,\mathrm{vac}}}{\ell_g}
 $$
+and preregister a tolerance $\tau\in(0,1)$.  The model labels
+$\nu_{ij}\ge1+\tau$ tunneling, $\nu_{ij}\le1-\tau$ shared-valley response,
+and leaves $|\nu_{ij}-1|<\tau$ unresolved.  These are branch-classification
+labels; no mechanism or physical mixing value follows until $\ell_g$, the
+distance, tolerance, response kernels, and common flavor certificate are
+accepted.
 
-*Proof.* In the Gaussian-overlap model, tunneling amplitudes are controlled by the ratio of the vacuum separation to the localization width. Overlaps are unsuppressed when $d_{2,\mathrm{vac}} \lesssim \ell_g$ and exponentially small when $d_{2,\mathrm{vac}} \gg \ell_g$. The regime boundary therefore occurs parametrically at $d_{2,\mathrm{vac}} \sim \ell_g$. QED
+*Proof.* The three sets are disjoint and cover $\nu_{ij}>0$. The labels are
+therefore a well-defined finite rule once their inputs are registered. The
+qualitative Gaussian crossover motivates the rule but does not determine its
+tolerance or realize either response. ∎
 
-**Corollary T.45.3** (Regime Classification Summary).
+**Corollary T.45.3** (Certificate-Gated Regime Assignment Summary). Suppose an accepted localization record fixes $\ell_g>0$, $\tau\in(0,1)$, and all three vacuum separations, and verifies $\nu_{32},\nu_{31}\ge1+\tau$ and $\nu_{12}\le1-\tau$. Suppose also that the heavy-pair Gaussian kernel and the light-pair shared-valley/frustration response record are accepted. Then the registered assignments are:
 
-|Transition|d²_ref|λ = αd²|Regime |Dominant Mechanism |
-|:---------|:----:|:-----:|:---------:|:----------------------|
-|3↔2 |2 |3 |Tunneling |Exponential suppression|
-|3↔1 |4 |6 |Tunneling |Exponential suppression|
-|1↔2 |— |— |Frustration|Angular mismatch |
+| Transition | Registered distance diagnostic | Classifier inequality | Model label | Required response record |
+|:--|:--:|:--:|:--|:--|
+| $3\leftrightarrow2$ | $d_{32}^2=2$ | $\nu_{32}\ge1+\tau$ | tunneling | Gaussian-overlap kernel |
+| $3\leftrightarrow1$ | $d_{31}^2=4$ | $\nu_{31}\ge1+\tau$ | tunneling | Gaussian-overlap kernel |
+| $1\leftrightarrow2$ | branch-specific | $\nu_{12}\le1-\tau$ | shared-valley/frustration | accepted stiffness, vacuum-selector, and angular-response record |
+
+If any width, separation, tolerance, or inequality is missing, Proposition T.45.2 leaves that pair unresolved; the distance labels alone do not prove the table.
 
 -----
 
@@ -4578,27 +4990,46 @@ $$
 
 ### T.22.4.1 Mixing Amplitude Formula
 
-**Theorem T.46 (Conditional Heavy-Generation Mixing Amplitude).** Assume the additive-monotone family-count branch of Proposition R.3.5.1a, the registered sector distances, the CKM geometric-prefactor convention $\sin^2\theta=d^2/N_g$, and the Gaussian-overlap response branch with coefficient $\alpha$. Then
+**Theorem T.46 (Conditional Heavy-Generation Sector Amplitudes).** Assume the additive-monotone family-count branch of Proposition R.3.5.1a, the registered sector distances, the independently declared nonnegative response-weight convention
 $$
-|V_{3j}|
-=\sqrt{\frac{d_{3j,f}^2}{N_g}}
-\exp(-\alpha d_{\mathrm{ref}}^2),
+w_{3j,f}:=\frac{d_{3j,f}^2}{N_g},
+\qquad
+P_{3j,f}:=\sqrt{w_{3j,f}},
 $$
-where $d_{\mathrm{ref}}^2=\min(d_{3j,d}^2,d_{3j,u}^2)$. On the selected family branch $N_g=3$; on the Corollary-T.41.3 normalization branch $\alpha=3/2$.
+the Gaussian-overlap response branch with coefficient $\alpha$, and the common-reference prescription
+$$
+d_{\mathrm{ref}}^2
+=
+\min(d_{3j,d}^2,d_{3j,u}^2).
+$$
+Assume also a coherent two-channel realization on common initial and final states with transition operator
+$$
+T=T_d+T_u,
+\qquad
+A_{3j,f}:=\langle\mathrm{out}|T_f|\mathrm{in}\rangle.
+\tag{T.46.1}
+$$
+Then
+$$
+|A_{3j,f}|=P_{3j,f}\exp(-\alpha d_{\mathrm{ref}}^2),
+$$
+and linearity gives
+$$
+K^{\mathrm{mix}}_{3j}
+=A_{3j,d}+A_{3j,u}
+=|A_{3j,d}|e^{i\phi_d}+|A_{3j,u}|e^{i\phi_u}.
+$$
+On the selected family branch $N_g=3$; on the unit-radius and certified-embedding branch $\alpha=3/2$.
 
-*Proof.*
+*Proof.* The declared response convention gives $P_{3j,f}$.  Because
+$d_{3j,f}^2/N_g$ can exceed one, $P_{3j,f}$ is neither a probability nor the
+sine of a real angle; a bounded trigonometric interpretation would require a
+different normalization and recomputed numerics. The accepted Gaussian and
+Bures--$E_8$ certificates give the common exponential response at
+$d_{\mathrm{ref}}^2$. Their product is the displayed sector magnitude.
+Equation (T.46.1) and linearity give the coherent sum.
 
-**Step 1 (Geometric prefactor on the CKM geometric-prefactor branch).** On the CKM geometric-prefactor branch, the geometric prefactor arises from rotation generators in $N_g$-dimensional generation space. For an $SU(N_g)$ rotation by angle $\theta$ in the $i$-$j$ plane, the mixing element is proportional to $\sin\theta$. Two related conventions appear in the literature: (a) $\sin^2\theta = d^2/N_g$, giving $|V| \propto \sqrt{d^2/N_g}$ (the convention adopted in the displayed formula and used numerically in Theorems T.47–T.48); (b) $\sin^2\theta = d^2/(2N_g)$, giving $|V| \propto \sqrt{d^2/(2N_g)}$ (which would absorb an additional factor of $1/\sqrt{2}$ relative to the displayed numerical results). This appendix uses convention (a) throughout, so $|V_{cb}| = \sqrt{d^2_{32,d}/N_g} \cdot e^{-\alpha d^2_{32,d}} = \sqrt{2/3} \cdot e^{-3}$. The choice between (a) and (b) is the CKM geometric-prefactor branch; convention (b) would multiply both $|V_{cb}|$ and $|V_{ub}|$ by $1/\sqrt{2}$ relative to the convention (a) values used here.
-
-**Step 2 (Exponential suppression).** The exponential factor exp(−αd²) comes from Gaussian wavefunction overlap. From Theorem T.41.5, the Yukawa coupling (and hence mixing amplitude) satisfies:
-$$Y_{ij} \propto \exp\left(-\frac{d^2_{E_8}}{16\sigma^2_B}\right) = \exp(-\alpha d^2_{E_8})$$
-
-**Step 3 (Reference distance selection).** When both up and down sectors contribute to the transition amplitude, the total amplitude is:
-$$V_{3j} = A_d e^{i\phi_d} + A_u e^{i\phi_u}$$
-
-The exponential suppression $\exp(-\alpha d^2_{\mathrm{ref}})$ represents tunneling through the dominant path connecting generations, with $d^2_{\mathrm{ref}} = \min(d^2_{3j,d}, d^2_{3j,u})$. Both sector amplitudes share this tunneling factor because the weak vertex couples to both mass eigenstate bases through the common generation transition. The sector-specific geometric weights $\sqrt{d^2_{3j,f}/N_g}$ encode the projection onto each sector's $E_8$ configuration.
-
-For $|V_{cb}|$, where $d^2_{32,d} = 2 \ll d^2_{32,u} = 4$, the ratio of tunneling factors $e^{-3}/e^{-6} \approx 20$ renders the up-sector negligible. For $|V_{ub}|$, the shared reference $d^2_{\mathrm{ref}} = 4$ admits comparable sector amplitudes whose interference generates the observed magnitude and CP phase. ∎
+Under the common-reference prescription, the two retained sector amplitudes have identical exponential factors, so their exponential-factor ratio is $1$. A down-only model is a separate channel-selection branch. Under a different sector-local-exponent prescription the $32$ factors would be $e^{-3}$ and $e^{-6}$, but that prescription cannot be mixed with the common-reference two-channel calculation. Identifying $K^{\mathrm{mix}}_{3j}$ with a physical CKM entry requires one accepted $\mathfrak C_{\mathrm{fl}}$ containing this same $\mathfrak C_{\mathrm{mix}}$ subrecord. ∎
 
 **Convention T.CKM.1 (Single Comparison Ledger).** Unless a row explicitly names a direct channel or another fit, CKM comparisons in this branch use the PDG-2024 global-fit tuple
 $$
@@ -4617,9 +5048,14 @@ Pulls use the uncertainty on the side of the central value toward the prediction
 
 ### T.22.4.2 Calculation of $\vert V_{cb}\vert$
 
-**Theorem T.47** ($\vert V_{cb}\vert$ from $E_8$ Geometry). *The CKM element $\vert V_{cb}\vert$ is:*
-
-$$|V_{cb}| = \sqrt{\frac{2}{3}} \times e^{-3} = 0.0407$$
+**Theorem T.47** (Down-Only Heavy-Generation Model Kernel). Assume independently a down-only realization $T=T_d$, the selected-family value $N_g=3$, the registered down-sector distance $d_{32,d}^2=2$, the geometric-prefactor rule $\mathcal P_{32,d}=\sqrt{d_{32,d}^2/N_g}$, and the unit-radius Gaussian branch $\alpha=3/2$. Then the down-only model kernel is
+$$
+K_{cb}^{(d)}
+:=\mathcal P_{32,d}e^{-\alpha d_{32,d}^2}
+=\sqrt{\frac23}\,e^{-3}
+=0.0406509711\ldots .
+$$
+This theorem does not assume Theorem T.46's two-channel conclusion. The identification $K_{cb}^{(d)}=|V_{cb}|$ requires one accepted global $\mathfrak C_{\mathrm{fl}}$ containing Theorem T.45's same full-matrix witness $\mathfrak C_{\mathrm{mix}}$.
 
 *Proof.*
 
@@ -4629,10 +5065,10 @@ $$|V_{cb}| = \sqrt{\frac{2}{3}} \times e^{-3} = 0.0407$$
 - d²_{32,u} = 4 (up-sector distance)
 - d²_ref = min(2, 4) = 2
 
-On the branch hypotheses of Theorem T.46:
+On the independent down-only branch of Theorem T.47:
 
-- $N_g=3$ follows from Theorem R.3.4 together with the additive-monotone selection branch of Proposition R.3.5.1a;
-- $\alpha=3/2$ is the Corollary-T.41.3 packet-width and Schur-normalization assignment.
+- $N_g=3$ is the selected-family input from Proposition R.3.5.1a;
+- $\alpha=3/2$ follows from the centered isotropic unit-radius convention and the definition $\alpha=1/(16\sigma_B^2)$; applying it to the selected root pair additionally requires the finite embedding certificate.
 
 **Step 2 (Geometric prefactor).**
 $$\sqrt{\frac{d^2_{32,d}}{N_g}} = \sqrt{\frac{2}{3}} = 0.81650$$
@@ -4640,17 +5076,12 @@ $$\sqrt{\frac{d^2_{32,d}}{N_g}} = \sqrt{\frac{2}{3}} = 0.81650$$
 **Step 3 (Exponential suppression).**
 $$e^{-\alpha d^2_{\mathrm{ref}}} = e^{-(3/2)(2)} = e^{-3} = 0.04979$$
 
-**Step 4 (Final result).**
-$$|V_{cb}| = 0.81650 \times 0.04979 = 0.0407$$
-
-**Experimental comparison** (Particle Data Group 2024):
-$$|V_{cb}|_{\mathrm{PDG24}}=0.04183^{+0.00079}_{-0.00069}$$
-
-|Quantity|Theory|Experiment |Deviation|
-|:-------|:----:|:-------------:|:-------:|
-|$\lvert V_{cb}\rvert$ | $0.0407$ | $0.04183^{+0.00079}_{-0.00069}$ | $-1.6\sigma$ |
-
-∎
+**Step 4 (Model evaluation).**
+$$
+K_{cb}^{(d)}=0.81649658\ldots\times0.04978707\ldots
+=0.0406509711\ldots .
+$$
+The PDG comparison is an empirical diagnostic of this down-only kernel. It becomes a CKM prediction only if one common-scale $\mathfrak C_{\mathrm{mix}}$ verifies the complete up/down mass matrices, their diagonalizers, unitarity, labels, and simultaneous entry intervals. ∎
 
 ### T.22.4.3 Calculation of $\vert V_{ub}\vert$
 
@@ -4661,9 +5092,12 @@ For the 1→3 transition:
 
 Both sectors contribute with a relative CP phase.
 
-**Theorem T.48** ($\vert V_{ub}\vert$ on the Declared Interference-Phase Branch). *Assume the relative sector phase is registered as $\phi_u-\phi_d=\pi-\delta$. Then:*
-
-$$|V_{ub}|^2 = |A_d|^2 + |A_u|^2 - 2|A_d||A_u|\cos\delta$$
+**Theorem T.48** (Two-Channel $K_{ub}$ Model on the Declared Interference-Phase Branch). Assume all hypotheses of Theorem T.46 for $j=1$ and independently register $\phi_u-\phi_d=\pi-\delta$. Then the two-channel model kernel satisfies
+$$
+|K_{ub}^{\mathrm{mix}}|^2
+=|A_d|^2+|A_u|^2-2|A_d||A_u|\cos\delta.
+$$
+It gives $|W_{ub}|^2$ only on Theorem T.45's accepted unitary witness $\mathfrak C_{\mathrm{mix}}$ and the physical $|V_{ub}|^2$ only when that same witness is contained in an accepted $\mathfrak C_{\mathrm{fl}}$.
 
 *where the sector amplitudes at common reference are:*
 $$A_d = \sqrt{\frac{d^2_{31,d}}{N_g}} \times e^{-\alpha d^2_{\mathrm{ref}}} = \sqrt{\frac{4}{3}} \times e^{-6} = 0.00286$$
@@ -4671,37 +5105,70 @@ $$A_u = \sqrt{\frac{d^2_{31,u}}{N_g}} \times e^{-\alpha d^2_{\mathrm{ref}}} = \s
 
 *Proof.*
 
-**Step 1 (Berry phases of sector paths).** Each sector amplitude A_f acquires a Berry phase from the geodesic path in Gr(2,8) from generation 1 to generation 3:
-$$A_f = |A_f| e^{i\gamma_f}$$
-where γ_f = ∫_{path_f} 𝒜 is the Berry phase along the sector-f geodesic.
-
-**Step 2 (Phase difference from enclosed area).** The relative phase between sectors is:
-$$\Delta\gamma = \gamma_d - \gamma_u = \int_{\Sigma_{1\to3}} \mathcal{F}$$
-where Σ_{1→3} is the region bounded by the up-sector and down-sector paths from generation 1 to generation 3.
+**Steps 1--2 (Optional geometric realization obligation).**  A geometric
+realization of the relative phase would require one retained determinant-line
+connection, two oriented piecewise-$C^1$ sector paths with common endpoints,
+an oriented spanning chain, and an accepted T.53/T.54b lift-and-curvature
+certificate verifying
+$$
+\gamma_d-\gamma_u\equiv\int_{\Sigma_{1\to3}}\mathcal F\pmod{2\pi}.
+$$
+The existence or value of those data does not follow from the two distances.
+The present theorem therefore uses only the independent interference-phase
+hypothesis in Step 3; these geometric data are a separate promotion gate.
 
 **Step 3 (Independent interference-phase hypothesis).** The half-surface relation would give $\Delta\gamma=\delta/2$ under the stated geometric partition; it does not imply $\pi-\delta$. The numerical branch therefore adopts $\phi_u-\phi_d=\pi-\delta$ as a separate interference-phase hypothesis.
 
 **Step 4 (Interference formula).** The total amplitude is:
-$$V_{ub} = A_d + A_u e^{i(\phi_u - \phi_d)} = A_d + A_u e^{i(\pi - \delta)} = A_d - A_u e^{-i\delta}$$
+$$
+K_{ub}^{\mathrm{mix}}
+=A_d+A_ue^{i(\pi-\delta)}
+=A_d-A_ue^{-i\delta}.
+$$
+Taking the modulus squared gives the theorem's interference identity. A CKM symbol is introduced only after $\mathfrak C_{\mathrm{mix}}$ is accepted.
 
-Taking the modulus squared:
-$$|V_{ub}|^2 = |A_d|^2 + |A_u|^2 - 2\mathrm{Re}[A_d^* A_u e^{-i\delta}] = |A_d|^2 + |A_u|^2 - 2|A_d||A_u|\cos\delta$$
-
-**Step 5 (Numerical evaluation on the nonlinear phase-response branch).** With $\delta=66.7°$ under the independently registered ansatz of Theorem T.56:
-$$|A_d|^2 = (0.00286)^2 = 8.19 \times 10^{-6}$$
-$$|A_u|^2 = (0.00405)^2 = 1.64 \times 10^{-5}$$
-$$-2|A_d||A_u|\cos(66.7°) = -2(0.00286)(0.00405)(0.3955) = -9.15 \times 10^{-6}$$
-$$|V_{ub}|^2 = 8.19 \times 10^{-6} + 1.64 \times 10^{-5} - 9.15 \times 10^{-6} = 1.54 \times 10^{-5}$$
-$$|V_{ub}| = \sqrt{1.54 \times 10^{-5}} = 0.00392$$
+**Step 5 (Numerical evaluation on the registered conventional-response branch).** Apply Theorem T.56's response map to Convention T.54's assigned lift:
+$$
+\delta^{\mathrm{conv}}
+=2\arctan(1/\sqrt2)\operatorname{sinc}(1/\sqrt3)
+=66.6753023736826\ldots^\circ.
+$$
+Using the unrounded amplitudes
+$$
+A_d=\sqrt{4/3}\,e^{-6}=0.002862216472905386\ldots,
+\qquad
+A_u=\sqrt{8/3}\,e^{-6}=0.004047785354430481\ldots,
+$$
+gives
+$$
+2A_dA_u\cos\delta^{\mathrm{conv}}
+=9.174466622441\ldots\times10^{-6},
+$$
+$$
+|K_{ub}^{\mathrm{mix}}|^2
+=1.54023827908721\ldots\times10^{-5},
+\qquad
+|K_{ub}^{\mathrm{mix}}|
+=0.003924586957996\ldots.
+$$
+Thus the conventional-response model rounds to $0.00392$. The input is a
+geometric phase only if Theorem T.54b independently certifies the assigned
+area, and the model kernel is a physical $|V_{ub}|$ only if the common
+$\mathfrak C_{\mathrm{mix}}$ and exact-identity T.53 subrecord occur inside
+one accepted forward-locked $\mathfrak C_{\mathrm{fl}}$.  An interval-residual
+T.53 branch supplies only the corresponding physical phase interval.
 
 **Experimental comparison** (Particle Data Group 2024):
 $$|V_{ub}|_{\mathrm{PDG24}}=0.003732^{+0.000090}_{-0.000085}$$
 
-|Quantity|Theory |Experiment |Deviation|
+|Quantity|Model kernel |Comparison value |Difference in quoted standard-error units|
 |:-------|:-----:|:---------------:|:-------:|
-|$\lvert V_{ub}\rvert$ | $0.00392$ | $0.003732^{+0.000090}_{-0.000085}$ | $+2.1\sigma$ |
+|$|K_{ub}^{\mathrm{mix}}|$ | $0.00392$ | $0.003732^{+0.000090}_{-0.000085}$ | $+2.1$ |
 
-∎
+This is an empirical comparison of a registered phase-response model. It is
+not a physical CKM entry until the same $\mathfrak C_{\mathrm{mix}}$ and exact
+T.53 phase subrecord are accepted inside one forward-locked
+$\mathfrak C_{\mathrm{fl}}$. ∎
 
 **Corollary T.48.1** (Interference Sign on the Declared Phase Branch). Once the independent hypothesis $\phi_u-\phi_d=\pi-\delta$ is declared, $e^{i(\pi-\delta)}=-e^{-i\delta}$ and the cross term is $-2|A_d||A_u|\cos\delta$. The minus sign follows algebraically on that branch; the present construction does not derive the phase hypothesis from the Berry half-surface relation. ∎
 
@@ -4711,98 +5178,172 @@ $$|V_{ub}|_{\mathrm{PDG24}}=0.003732^{+0.000090}_{-0.000085}$$
 
 ### T.22.5.1 The Geometric Frustration Mechanism
 
-The perturbative tunneling formula predicts $\vert V_{us}\vert_{\mathrm{pert}}$ ~ exp(−αd²) ~ 0.002 for d² = 4, severely underpredicting the observed value of 0.225. This two-orders-of-magnitude discrepancy signals a qualitatively different mechanism.
+The corresponding heavy-channel response evaluated at $d^2=4$ is a model
+kernel of order $e^{-6}$.  Its numerical difference from the empirical
+$|V_{us}|$ motivates, but does not derive, the separate light-generation
+frustration-response model below.
 
-**Theorem T.49** (Geometric Frustration). *The light generations (1 and 2) inhabit a shared vacuum valley where the physical state must reconcile two incompatible geometric constraints from the $E_8$ root lattice:*
+**Theorem T.49** (Quadratic Frustration-Model Minimizer).  Work on the
+unwrapped convex angular chart
+$$
+I:=\left[\frac\pi2,\frac{2\pi}3\right]\subset\mathbb R,
+$$
+with $\theta_u:=\pi/2$, $\theta_d:=2\pi/3$, and independently registered
+stiffnesses $\kappa_u,\kappa_d>0$ in one common energy-per-radian-squared
+normalization.  Define
+$$
+V_{\mathrm{fr}}(\theta)
+:=\frac{\kappa_u}{2}(\theta-\theta_u)^2
++\frac{\kappa_d}{2}(\theta-\theta_d)^2.
+\tag{T.49.1}
+$$
+Then $V_{\mathrm{fr}}$ has the unique global minimizer on $I$
+$$
+\theta_{\mathrm{vac}}
+=\frac{\kappa_u\theta_u+\kappa_d\theta_d}
+{\kappa_u+\kappa_d}.
+\tag{T.49.2}
+$$
+On the independently registered branch $\kappa_d/\kappa_u=1.02=51/50$,
+$$
+\theta_{\mathrm{vac}}=\frac{59\pi}{101}
+=105.148514851485\ldots^\circ.
+\tag{T.49.3}
+$$
 
-- *Up-sector: d²₁₂ = 4 → θ_u = 90° (Cubic/D₄ symmetry)*
-- *Down-sector: d²₁₂ = 6 → θ_d = 120° (Hexagonal/A₂ symmetry)*
-
-*The vacuum minimizes elastic energy by aligning with the stiffness-weighted geometric bisector.*
-
-*Proof.*
-
-**Step 1 (Constraint incompatibility).** From Lemma T.44a, the up-sector enforces orthogonal generation alignment (90°) while the down-sector enforces hexagonal alignment (120°). These constraints are incompatible—no single vacuum orientation satisfies both.
-
-**Step 2 (PCE energy functional).** Each sector f contributes an elastic energy cost when the vacuum deviates from its preferred lattice angle:
-$$V_f(\theta) = \frac{\kappa_f}{2}(\theta - \theta_f)^2$$
-where κ_f is the sector stiffness, determined by the Yukawa coupling strength.
-
-The total vacuum energy is:
-$$V_{\mathrm{PCE}}(\theta) = V_u(\theta) + V_d(\theta) = \frac{\kappa_u}{2}(\theta - 90°)^2 + \frac{\kappa_d}{2}(\theta - 120°)^2$$
-
-**Step 3 (Stationarity condition).** Setting dV/dθ = 0:
-$$\kappa_u(\theta - 90°) + \kappa_d(\theta - 120°) = 0$$
-$$\theta_{\mathrm{vac}} = \frac{\kappa_u \cdot 90° + \kappa_d \cdot 120°}{\kappa_u + \kappa_d}$$
-
-**Step 4 (Stiffness ratio from Theorem T.38).** From Theorem T.38, the sector prefactor ratio is:
-$$\frac{c_d}{c_u} = \sqrt{\frac{4\kappa_3 + \frac{4}{9}\kappa_1}{4\kappa_3 + \frac{1}{9}\kappa_1}} \approx 1.02$$
-
-for κ₃ in the phenomenologically relevant range. Since stiffness scales as $\kappa\propto c^2$, $c_d/c_u=1.02$ would give $\kappa_d/\kappa_u=1.0404$. The numerical branch below instead registers $\kappa_d/\kappa_u=1.02$ as an independent model input, corresponding to $c_d/c_u=\sqrt{1.02}\approx1.00995$.
-
-**Step 5 (Vacuum position).** With κ_d/κ_u = 1.02 (central value from Theorem T.38):
-$$\theta_{\mathrm{vac}} = \frac{1 \times 90° + 1.02 \times 120°}{1 + 1.02} = \frac{90° + 122.4°}{2.02} = 105.15°$$
-
-**Step 6 (Stability verification).** The second derivative:
-$$\left.\frac{\partial^2 V_{\mathrm{PCE}}}{\partial \theta^2}\right|_{\theta_{\mathrm{vac}}} = \kappa_u + \kappa_d > 0$$
-
-confirms the weighted bisector is a stable minimum. ∎
+*Proof.* Differentiating (T.49.1) gives
+$V_{\mathrm{fr}}'(\theta)=\kappa_u(\theta-\theta_u)
++\kappa_d(\theta-\theta_d)$ and
+$V_{\mathrm{fr}}''=\kappa_u+\kappa_d>0$.  Thus the stationary point
+(T.49.2) is the unique global minimizer on the convex chart; positivity of
+the weights places it between the two endpoints.  Substitution of $51/50$
+gives (T.49.3).  Theorem T.38 separately gives
+$c_d/c_u=1.0246746160\ldots$ on its stated branch; it supplies no stiffness
+law and does not imply $\kappa_d/\kappa_u=1.02$.  Equations (T.49.1)--(T.49.3)
+are a stipulated model optimization, not a physical vacuum theorem. ∎
 
 ### T.22.5.2 The Mismatch Angle
 
-**Definition T.50** (Sector Tilt Angles). *Each sector deviates from the vacuum by:*
-
-$$\theta_{\mathrm{tilt},u} = \theta_{\mathrm{vac}} - \theta_u = 105.15° - 90° = 15.15°$$
-$$\theta_{\mathrm{tilt},d} = \theta_d - \theta_{\mathrm{vac}} = 120° - 105.15° = 14.85°$$
-
-*The physical mixing is determined by the up-sector tilt, as the weak interaction couples left-handed up-type quarks to down-type quarks.*
+**Definition T.50** (Sector Tilt Angles).  On Theorem T.49's registered
+$51/50$ stiffness branch define
+$$
+\theta_{\mathrm{tilt},u}
+:=\theta_{\mathrm{vac}}-\theta_u
+=\frac{17\pi}{202}
+=15.148514851485\ldots^\circ,
+$$
+$$
+\theta_{\mathrm{tilt},d}
+:=\theta_d-\theta_{\mathrm{vac}}
+=\frac{25\pi}{303}
+=14.851485148515\ldots^\circ.
+$$
+Theorem T.52 uses the up-sector tilt in its declared scalar response model.
+No physical mixing identification follows before the common flavor
+realization certificate is accepted.
 
 ### T.22.5.3 The A₂ Projection Factor
 
-The $E_8$ roots occupy 8-dimensional space, but physical mass eigenstates are defined in the A₂ (SU(3) flavor) subspace. The observable mixing angle is the projection of the $E_8$ mismatch onto this physical manifold.
+The scalar-response hypothesis formalized in Theorem T.51 projects the
+registered mismatch into an $A_2$ root--weight model.  The $E_8$ geometry
+alone neither identifies physical mass eigenstates with this subspace nor
+constructs an observable mixing angle.
 
-**Theorem T.51** (Root-Weight Duality in A₂). *The geometric projection from constraint directions (roots) to mass eigenstates (weights) introduces a factor:*
+**Theorem T.51** (Conditional Root-to-Weight Projection in $A_2$). *Assume that the retained mismatch response is directed along an $A_2$ root and that the physical mixing response is its Euclidean scalar component along the nearest weight direction in the union of the fundamental and antifundamental weight orbits. Then*
 
-$$\mathcal{P} = \cos(30°) = \frac{\sqrt{3}}{2}$$
+$$
+\mathcal P
+=
+\cos(30^\circ)
+=
+\frac{\sqrt3}{2}.
+$$
 
-*Proof.*
-
-**Step 1 (A₂ root system).** The A₂ Lie algebra admits two natural bases related by duality:
-
-**Simple roots {α₁, α₂}:** Define the adjoint action and constraint geometry. These generate gauge transformations that cost energy, determining the “stiff” directions (vacuum constraints). The angle between simple roots is 120°.
-
-**Fundamental weights {ω₁, ω₂}:** Define matter representations. Fermion generations transform in the fundamental representation **3**, with states labeled by weights. Mass eigenstates correspond to weight eigenstates.
-
-**Step 2 (Duality relation).** The relation connecting roots and weights is:
-$$\frac{2\langle\omega_i, \alpha_j\rangle}{\langle\alpha_j, \alpha_j\rangle} = \delta_{ij}$$
-
-In the standard A₂ geometry with ||α||² = 2:
-
-- Roots lie at angles: 0°, 60°, 120°, 180°, 240°, 300°
-- Weights lie at angles: 30°, 90°, 150°, 210°, 270°, 330°
-
-**Step 3 (Angular offset).** The angular offset between any root and the nearest weight is exactly 30°. This follows from the duality condition, which geometrically requires weights to bisect the angles between adjacent roots.
-
-**Step 4 (Physical interpretation).** The vacuum tilt θ_tilt is defined along root directions (constraint geometry), while physical mixing is measured in the weight basis (mass eigenstates). The observable mixing is:
-
-$$|V_{us}|_{\mathrm{obs}} = \cos(30°) \times \sin(\theta_{\mathrm{tilt},u})$$
-
-The factor cos(30°) = √3/2 is uniquely determined by A₂ Lie algebra structure—it is not a fitted parameter (Humphreys 1972, §13). ∎
+*Proof.* Choose normalized simple roots
+$$
+\alpha_1=\sqrt2(1,0),
+\qquad
+\alpha_2=\sqrt2\left(-\frac12,\frac{\sqrt3}{2}\right).
+$$
+They satisfy
+$$
+\lVert\alpha_1\rVert^2
+=
+\lVert\alpha_2\rVert^2
+=
+2,
+\qquad
+\alpha_1\cdot\alpha_2=-1.
+$$
+The fundamental weights are determined by
+$$
+\frac{2\langle\omega_i,\alpha_j\rangle}
+{\langle\alpha_j,\alpha_j\rangle}
+=
+\delta_{ij},
+$$
+which gives
+$$
+\omega_1
+=
+\left(\frac1{\sqrt2},\frac1{\sqrt6}\right),
+\qquad
+\omega_2
+=
+\left(0,\sqrt{\frac23}\right).
+$$
+Thus $\omega_1$ and $\omega_2$ have directions $30^\circ$ and $90^\circ$. Their Weyl orbits, equivalently the union of the weight sets of $\mathbf3$ and $\overline{\mathbf3}$, have directions
+$$
+30^\circ,\ 90^\circ,\ 150^\circ,\ 210^\circ,\ 270^\circ,\ 330^\circ.
+$$
+The six roots have directions
+$$
+0^\circ,\ 60^\circ,\ 120^\circ,\ 180^\circ,\ 240^\circ,\ 300^\circ.
+$$
+Hence every root direction is separated from either nearest weight direction by $30^\circ$. Under the scalar-projection response hypothesis, the component of a unit root-direction response along the nearest weight direction is therefore
+$$
+\cos(30^\circ)=\frac{\sqrt3}{2}.
+$$
+The angular factor is determined after the scalar-projection response hypothesis is imposed; $A_2$ duality alone does not select that physical response rule. ∎
 
 ### T.22.5.4 Bures Curvature Effect
 
-**Lemma T.51.1** (Curvature correction in the local Gaussian-overlap model). *In the local Gaussian-overlap approximation on the generation manifold, the first curvature correction to the overlap amplitude is taken to be*
+**Assumption T.51.1** (Local Curvature-Response Factor). *On the unit-total-generation-variance branch of Theorem T.54.2, let*
 $$
-f_{\mathrm{curv}} = 1 - \frac{K_{\mathrm{eff}}}{6M}\sigma_B^4 + \mathcal{O}(\sigma_B^6).
+\sigma_{\mathcal G}^2=\frac1{N_g}=\frac13.
 $$
-
-*Justification.* This is the leading Van Vleck–Morette/Jacobi-field correction for the isotropic Gaussian-overlap model used throughout Section T.22, with $K_{\mathrm{eff}}$ the effective sectional-curvature contraction and $M$ the interface-mode count. The precise coefficient is the same model coefficient used in the charged-lepton sector (Theorem T.42.2a and subsequent discussion). A full derivation from the Bures heat kernel is not supplied here and remains external to the present appendix.
+*The numerical Cabibbo branch assumes the dimensionless curvature-response factor*
+$$
+f_{\mathrm{curv}}
+:=1-\frac{K_{\mathrm{avg}}^{\mathrm{Bures}}}{6M}\sigma_{\mathcal G}^4,
+\qquad K_{\mathrm{avg}}^{\mathrm{Bures}}=\frac{32}{23},\quad M=24.
+$$
+Thus, exactly,
+$$
+f_{\mathrm{curv}}=1-\frac{32/23}{144}\frac19=\frac{1861}{1863}
+\approx0.998926462694579.
+$$
+This response coefficient and the identification of its width with
+$\sigma_{\mathcal G}$ are model inputs. Theorem Z.23 supplies the intrinsic
+average curvature, but it does not derive this response formula or its use of
+the generation width. The symbol $K_{\mathrm{eff}}$ is reserved for the
+distinct response-projected quantity of Theorem Z.24.
 
 ### T.22.5.5 The Cabibbo Angle
 
-**Theorem T.52** (Cabibbo Angle from Geometric Frustration). *The CKM element $\vert V_{us}\vert$ is the projection of the geometric tilt onto the mass eigenbasis:*
+**Theorem T.52** (Cabibbo Angle on the Conditional Frustration-Response Branch). *Assume the independently registered stiffness ratio $\kappa_d/\kappa_u=1.02$ of Theorem T.49, the scalar-projection response hypothesis of Theorem T.51, and the curvature-response factor of Assumption T.51.1. Then the scalar model kernel is*
 
-$$|V_{us}| = \mathcal{P} \times \sin(\theta_{\mathrm{tilt},u}) \times f_{\mathrm{curv}} = \frac{\sqrt{3}}{2} \sin(15.15°) \times 0.9989 = 0.2261$$
+$$
+|K_{us}^{\mathrm{fr}}|
+=\frac{\sqrt3}{2}
+\sin\!\left(\frac{17\pi}{202}\right)
+\frac{1861}{1863}
+=0.226068470311764\ldots .
+$$
+It gives a finite unitary-realization witness only if the same
+$\mathfrak C_{\mathrm{mix}}$ of Theorem T.45 realizes it with the other
+entries of one unitary matrix, and it equals physical $|V_{us}|$ only when
+that witness is contained in an accepted forward-locked $\mathfrak C_{\mathrm{fl}}$.
 
 *Proof.*
 
@@ -4810,104 +5351,198 @@ $$|V_{us}| = \mathcal{P} \times \sin(\theta_{\mathrm{tilt},u}) \times f_{\mathrm
 $$\theta_u = \arccos\left(\frac{4-d^2_{21,u}}{4}\right) = \arccos\left(\frac{4-4}{4}\right) = \arccos(0) = 90°$$
 $$\theta_d = \arccos\left(\frac{4-d^2_{21,d}}{4}\right) = \arccos\left(\frac{4-6}{4}\right) = \arccos\left(-\frac{1}{2}\right) = 120°$$
 
-**Step 2 (Vacuum position from stiffness weighting).** From Theorem T.49 with κ_d/κ_u = 1.02:
-$$\theta_{\mathrm{vac}} = 105.15°$$
+**Step 2 (Exact model minimizer).** Theorem T.49 with
+$\kappa_d/\kappa_u=51/50$ gives
+$$
+\theta_{\mathrm{vac}}=\frac{59\pi}{101}
+=105.148514851485\ldots^\circ.
+$$
 
-**Step 3 (Tilt angle).** From Definition T.50:
-$$\theta_{\mathrm{tilt},u} = 105.15° - 90° = 15.15°$$
+**Step 3 (Exact tilt).** Definition T.50 gives
+$$
+\theta_{\mathrm{tilt},u}=\frac{17\pi}{202}
+=15.148514851485\ldots^\circ.
+$$
 
-**Step 4 (A₂ root-weight projection).** From Theorem T.51:
-$$\mathcal{P} = \cos(30°) = \frac{\sqrt{3}}{2} = 0.86603$$
+**Step 4 ($A_2$ scalar response).** Theorem T.51 gives
+$$\mathcal P=\cos(\pi/6)=\frac{\sqrt3}{2}.$$
 
-**Step 5 (Evaluation of sin(15.15°)).**
-$$\sin(15.15°) = 0.26134$$
+**Step 5 (Trigonometric evaluation).** Retain
+$\sin(17\pi/202)$ without rounding inside the branch calculation.
 
-**Step 6 (Curvature correction).** From Lemma T.51.1:
-$$f_{\mathrm{curv}} = 0.9989$$
+**Step 6 (Declared curvature response).** Assumption T.51.1 gives
+$$
+f_{\mathrm{curv}}
+=1-\frac{32/23}{144}\frac19
+=\frac{1861}{1863}
+\approx0.998926462694579 .
+$$
 
-**Step 7 (Final result).**
-$$|V_{us}| = 0.86603 \times 0.26134 \times 0.9989 = 0.2261$$
+**Step 7 (Model-kernel evaluation).**
+$$
+|K_{us}^{\mathrm{fr}}|
+=\frac{\sqrt3}{2}\sin(17\pi/202)\frac{1861}{1863}
+=0.226068470311764\ldots .
+$$
 
-**Experimental comparison** (Particle Data Group 2024, CKM global fit):
-$$|V_{us}|_{\mathrm{PDG24}}=0.22501\pm0.00068$$
+**Empirical diagnostic** (Particle Data Group 2024, CKM global fit):
+$$|V_{us}|_{\mathrm{PDG24}}=0.22501\pm0.00068.$$
 
-|Quantity|Theory|Experiment |Deviation|
-|:-------|:----:|:-------------:|:-------:|
-|$\lvert V_{us}\rvert$ | $0.2261$ | $0.22501\pm0.00068$ | $+1.6\sigma$ |
+|Quantity|Model kernel|Experiment|Scalar deviation|
+|:--|:--:|:--:|:--:|
+|$|K_{us}^{\mathrm{fr}}|$|$0.2260684703\ldots$|$0.22501\pm0.00068$|$+1.56\sigma$|
 
-∎
+The last column is a one-dimensional arithmetic comparison. It is a physical
+$|V_{us}|$ comparison only after the common $\mathfrak C_{\mathrm{mix}}$
+subrecord is accepted inside the forward-locked $\mathfrak C_{\mathrm{fl}}$
+required in the theorem statement. ∎
 
-**Remark T.52.1: Sensitivity to Stiffness Ratio.** *The branch value $\vert V_{us}\vert$ depends on the independently registered stiffness ratio $\kappa_d/\kappa_u$. The following table scans $c_d/c_u$ over $[1.00,1.02]$ and uses $\kappa_d/\kappa_u=(c_d/c_u)^2$:*
+**Remark T.52.1: Sensitivity to Stiffness Ratio.** *The model value
+$|K_{us}^{\mathrm{fr}}|$ depends on the independently registered stiffness
+ratio $\kappa_d/\kappa_u$. The following scan lists
+$\sqrt{\kappa_d/\kappa_u}$ only as an algebraic label; it is not the
+Theorem-T.38 prefactor ratio:*
 
-| $c_d/c_u$ | $\kappa_d/\kappa_u$ | $\theta_{\text{vac}}$ | $\theta_{\text{frustration}}$ | $\lvert V_{us}\rvert$ |
-|:---------:|:-------------------:|:---------------------:|:-----------------------------:|:----------:|
-| 1.00 | 1.00 | 105.00° | 15.00° | 0.2241 |
-| 1.01 | 1.02 | 105.15° | 15.15° | 0.2261 |
-| 1.02 | 1.04 | 105.29° | 15.29° | 0.2280 |
+|$\sqrt{\kappa_d/\kappa_u}$|$\kappa_d/\kappa_u$|$\theta_{\mathrm{vac}}$|$\theta_{\mathrm{frustration}}$|$|K_{us}^{\mathrm{fr}}|$|
+|:--:|:--:|:--:|:--:|:--:|
+|1.00|1.00|105.000000°|15.000000°|0.2239032412|
+|$\sqrt{1.02}$|1.02|105.148515°|15.148515°|0.2260684703|
+|$\sqrt{1.04}$|1.04|105.294118°|15.294118°|0.2281897695|
 
-*The isotropic scan point $c_d/c_u=1.00$ gives $\vert V_{us}\vert=0.2241$, which is $0.40\%$ below the quoted PDG fit value. The registered $\kappa_d/\kappa_u=1.02$ branch gives $0.2261$, which is $0.48\%$ above the quoted value, or $+1.6\sigma$ using the quoted $0.00068$ uncertainty. The PDG value lies within the displayed sensitivity band; the scan is not an independent determination of the stiffness input.*
+*The empirical $|V_{us}|$ lies inside this displayed model-sensitivity band.
+The scan neither selects the stiffness ratio nor realizes a physical CKM
+entry; both require their independently declared data and an accepted
+forward-locked $\mathfrak C_{\mathrm{fl}}$ containing the same
+$\mathfrak C_{\mathrm{mix}}$ subrecord.*
 
-### T.22.5.6 Derivation of $\vert V_{ud}\vert$
+### T.22.5.6 Unitary Model Completion
 
-From CKM unitarity (first row):
+**Theorem T.52.2** (Unitary First-Row Model-Completion Diagnostic).  For the
+registered nonnegative model-entry magnitudes
+$$
+\delta^{\mathrm{conv}}
+:=2\arctan(1/\sqrt2)\operatorname{sinc}(1/\sqrt3),
+\qquad
+a_d:=\sqrt{4/3}\,e^{-6},\quad a_u:=\sqrt{8/3}\,e^{-6},
+$$
+$$
+k_{us}:=\frac{\sqrt3}{2}\sin(17\pi/202)\frac{1861}{1863},
+\qquad
+k_{ub}:=\sqrt{a_d^2+a_u^2-2a_da_u\cos\delta^{\mathrm{conv}}},
+$$
+define
+$$
+k_{ud}^{\mathrm{unit}}
+:=\sqrt{1-k_{us}^2-k_{ub}^2}
+\approx0.974103508025769 .
+\tag{T.52.2.1}
+$$
+Then $(k_{ud}^{\mathrm{unit}},k_{us},k_{ub})$ has unit Euclidean norm,
+$k_{ud}^{\mathrm{unit}}$ is its unique nonnegative first component, and this
+row admits a unitary $3\times3$ completion.
 
-$$|V_{ud}|^2 + |V_{us}|^2 + |V_{ub}|^2 = 1$$
+*Proof.* The radicand in (T.52.2.1) is positive, and direct substitution gives
+$(k_{ud}^{\mathrm{unit}})^2+k_{us}^2+k_{ub}^2=1$.  The nonnegative square root
+is unique.  Extending this unit vector to an orthonormal basis by
+Gram--Schmidt and taking those vectors as rows constructs a unitary matrix.
+Neither the completion nor its remaining rows are unique.  The number in
+(T.52.2.1) is the physical $|V_{ud}|$ only if an accepted forward-locked
+$\mathfrak C_{\mathrm{fl}}$ contains the same $\mathfrak C_{\mathrm{mix}}$
+and realizes all three first-row entries in $V=U_u^\dagger U_d$ with the
+registered labels and matching convention. ∎
 
-**Theorem T.52.2** ($\vert V_{ud}\vert$ from Unitarity).
-
-*Using the derived $\vert V_{us}\vert = 0.2261$ and $\vert V_{ub}\vert = 0.00392$:*
-
-$$|V_{ud}| = \sqrt{1 - |V_{us}|^2 - |V_{ub}|^2} = \sqrt{1 - 0.2261^2 - 0.00392^2}$$
-$$= \sqrt{1 - 0.05112 - 0.00002} = \sqrt{0.94886} = 0.9741$$
-
-**Experimental comparison** (Hardy & Towner 2020; see also Seng et al. 2018; Particle Data Group 2024):
-$$|V_{ud}|_{\mathrm{direct,PDG24}}=0.97367\pm0.00032$$
-
-|Quantity|Theory|Experiment|Deviation|
-|:-------|:----:|:--------:|:-------:|
-| $\lvert V_{ud}\rvert$ | $0.974096$ | $0.97367\pm0.00032$ (direct) | $+1.3\sigma$ |
-
-∎
+For comparison, the quoted direct value is
+$$
+|V_{ud}|_{\mathrm{direct,PDG24}}=0.97367\pm0.00032.
+$$
+The difference is a scalar model diagnostic, not a unitary-matrix fit before
+the common certificate is accepted.
 
 -----
 
-*This construction is on the accepted common-range isometric carrier branch (T.79.9.4); otherwise the complement defect of Theorem T.79.9 is response-active.*
+The abstract Gram--Schmidt completion above needs no physical-carrier
+hypothesis.  Identifying it with a common physical flavor carrier additionally
+requires acceptance of the common-range isometric carrier branch T.79.9.4;
+otherwise Theorem T.79.9's complement defect remains response-active.
 
 ## T.22.6 CP Violation from Berry Holonomy
 
 ### T.22.6.1 Berry Connection on Gr(2,8)
 
-**Lemma T.53.1** (Berry Connection on the Generation Manifold). *Let ℳ_gen = Gr(2,8) be the generation manifold (Section T.21.2.1) with Bures metric g_B = (1/4)g_KE (Lemma Z.12). The Berry connection 1-form on ℳ_gen is:*
+**Lemma T.53.1** (Berry Connection on the Positive Determinant Line). *Let
+$\mathcal S\to\operatorname{Gr}(2,8)$ be the tautological rank-two bundle and
+fix, before any phase comparison, the positive Berry line*
+$$
+\mathcal L_+:=\det(\mathcal S)^*.
+$$
+*On a standard graph chart write $Z\in\operatorname{Hom}(\mathbb C^2,\mathbb C^6)$,
+$h:=I_2+Z^\dagger Z$, and $K:=\log\det h$.  In the unitary frame induced from
+the local holomorphic frame of $\mathcal L_+$, the real connection one-form is*
+$$
+\boxed{
+\mathcal A
+=\frac{i}{2}(\bar\partial K-\partial K)
+=\frac{i}{2}\operatorname{Tr}\!\left[
+h^{-1}(dZ^\dagger Z-Z^\dagger dZ)
+\right].
+}
+\tag{T.53.1a}
+$$
+*Under a unitary frame change of phase $e^{i\vartheta}$, one has
+$\mathcal A\mapsto\mathcal A+d\vartheta$; hence
+$\exp(i\oint_\gamma\mathcal A)$ is gauge invariant for every closed loop.*
 
-$$\mathcal{A} = \frac{i}{2}\sum_{\alpha \in A, \beta \in B} \left( \bar{z}_{\alpha\beta}, dz_{\alpha\beta} - z_{\alpha\beta}, d\bar{z}_{\alpha\beta} \right)$$
+*Proof.* Jacobi's identity gives
+$$
+\partial K=\operatorname{Tr}(h^{-1}Z^\dagger dZ),
+\qquad
+\bar\partial K=\operatorname{Tr}(h^{-1}dZ^\dagger Z),
+$$
+which proves (T.53.1a).  The Chern connection of the dual determinant line has
+this positive real connection form.  The unitary-frame transformation law is
+the usual determinant-frame gauge law, and its integral around a closed loop
+changes by an integer multiple of $2\pi$.  Near $Z=0$,
+$$
+\mathcal A
+=\frac{i}{2}\operatorname{Tr}(dZ^\dagger Z-Z^\dagger dZ)
++O(\lVert Z\rVert^3).
+$$
+Thus the linear expression is only the chart-origin expansion, not a global
+connection formula. ∎
 
-*where z_αβ = ⟨β|ψ⟩/⟨α|ψ⟩ are inhomogeneous coordinates on Gr(2,8).*
+**Lemma T.53.2** (Berry Curvature on $\operatorname{Gr}(2,8)$). *For the fixed
+line $\mathcal L_+$ and connection of Lemma T.53.1,*
+$$
+\boxed{
+\mathcal F:=d\mathcal A
+=i\partial\bar\partial\log\det(I_2+Z^\dagger Z)
+=-i\operatorname{Tr}\!\left[
+h^{-1}dZ^\dagger\wedge(I_6+ZZ^\dagger)^{-1}dZ
+\right]
+=:\omega_{\mathrm{KE}}.
+}
+\tag{T.53.2a}
+$$
+*The last equality fixes the normalization of $\omega_{\mathrm{KE}}$ used in
+the flavor-holonomy branch.  The tautological determinant line
+$\det(\mathcal S)$ has the opposite curvature.*
 
-*Proof.*
-
-**Step 1 (Bundle structure).** The Grassmannian Gr(2,8) ≅ U(8)/[U(2) × U(6)] carries a natural U(1) determinant line bundle ℒ → Gr(2,8) whose fiber at a 2-plane W is det(W) = ⋀² W. The Berry connection is the natural connection on this bundle induced by the Fubini-Study structure (Nakahara 2003).
-
-**Step 2 (Connection from QFI structure).** From Definition G.8.2a, the interface generators are:
-$$X_{\alpha\beta} = |\alpha\rangle\langle\beta| + |\beta\rangle\langle\alpha|, \quad Y_{\alpha\beta} = -i(|\alpha\rangle\langle\beta| - |\beta\rangle\langle\alpha|)$$
-
-The symplectic form (Definition G.8.2b) is ω(H₁, H₂) = -i \operatorname{Tr}(\rho_0[H_1, H_2]). For a closed curve $\Gamma$ on the orbit, the Berry phase is:
-$$\gamma = \oint_{\Gamma} \mathcal{A}$$
-
-**Step 3 (Local coordinates).** Introducing complex coordinates z_αβ corresponding to the ab = 12 complex dimensions, the connection 1-form in the Bures-orthonormal frame becomes:
-$$\mathcal{A} = \frac{i}{2}\sum_{\alpha,\beta} \left( \bar{z}_{\alpha\beta}\, dz_{\alpha\beta} - z_{\alpha\beta}\, d\bar{z}_{\alpha\beta} \right)$$
-
-This is the canonical U(1) connection on the determinant bundle, compatible with the Kähler structure. ∎
-
-**Lemma T.53.2** (Berry Curvature on Gr(2,8)). *The Berry curvature 2-form is:*
-
-$$\mathcal{F} = d\mathcal{A} = i\sum_{\alpha,\beta} dz_{\alpha\beta} \wedge d\bar{z}_{\alpha\beta} = \omega_{\mathrm{KE}}$$
-
-*where ω_KE is the Kähler form of the Kähler-Einstein metric on Gr(2,8).*
-
-*Proof.* Taking the exterior derivative of Lemma T.53.1:
-$$\mathcal{F} = d\mathcal{A} = \frac{i}{2}\sum_{\alpha,\beta} \left( d\bar{z}_{\alpha\beta} \wedge dz_{\alpha\beta} - dz_{\alpha\beta} \wedge d\bar{z}_{\alpha\beta} \right) = i\sum_{\alpha,\beta} dz_{\alpha\beta} \wedge d\bar{z}_{\alpha\beta}$$
-
-This equals the Kähler form ω_KE = ig_{ij̄}dz^i ∧ dz̄^{j̄} for the Fubini-Study metric on the Grassmannian (Kobayashi–Nomizu 1969, Vol. II). ∎
+*Proof.* Since $\partial^2=\bar\partial^2=0$ and
+$\bar\partial\partial=-\partial\bar\partial$,
+$$
+d\mathcal A=i\partial\bar\partial K.
+$$
+Differentiating $h^{-1}$ and using the Woodbury identity gives the middle
+matrix formula in (T.53.2a).  At the chart origin it reduces to
+$$
+\mathcal F
+=i\sum_{\alpha,\beta}
+dz_{\alpha\beta}\wedge d\bar z_{\alpha\beta}
++O(\lVert Z\rVert^2),
+$$
+which also checks the sign.  Dualizing a Hermitian line reverses its Chern
+curvature, so the positive and negative determinant lines cannot be exchanged
+after the phase convention is fixed. ∎
 
 ### T.22.6.2 The CP-Violating Loop
 
@@ -4918,82 +5553,171 @@ This equals the Kähler form ω_KE = ig_{ij̄}dz^i ∧ dz̄^{j̄} for the Fubini
 1. *d₂ → u₂: Weak transition at generation 2 (down→up)*
 1. *u₂ → u₃: Propagation within up sector (generation 2→3)*
 
-*Each leg is a geodesic on the appropriate sector submanifold, with length determined by the $E_8$ distances from Section T.21.9.1.*
+*Each leg is a nominated geodesic on the corresponding sector submanifold. Its endpoints, existence, orientation, and Bures length require the flavor-realization certificate of Theorem T.53; the scalar $E_8$ distances alone do not construct the loop.*
 
-### T.22.6.3 QFT Path Integral Derivation
+### T.22.6.3 Flavor-Realization Bridge
 
-**Theorem T.53** (CP Phase from QFT Path Integral). *The CP-violating phase δ arises as the Berry holonomy of the flavor-changing amplitude in the quantum field theory path integral.*
+**Theorem T.53** (Conditional Flavor-Realization and Phase-Response Bridge). *Fix a Theorem-T.45 full-matrix realization certificate supplying complex quark mass matrices $M_u,M_d$, pairwise distinct singular values within each sector, their left diagonalizers $U_u,U_d$, and the unitary matrix $V=U_u^\dagger U_d$. The strict within-sector separation makes the mixing matrix well-defined up to the declared diagonal rephasings. Assume an additional finite Berry-realization record supplies:*
 
-*Proof.*
+1. *six labelled points of $\operatorname{Gr}(2,8)$ represented by rank-two
+Hermitian projectors, their coherent rank-one flavor-fiber projectors, a
+certified incidence map between the two layers, and the Berry connection
+$\mathcal A$ of Lemma T.53.1;*
+2. *the oriented loop $\gamma=(u_3,d_3,d_2,u_2,u_3)$ with certified geodesic edges and transition transports;*
+3. *a response-faithful charged-current transport map whose normalized geometric transition amplitudes equal the corresponding parallel-transport matrix elements, with outward-rounded residual intervals;*
+4. *a lift interval $I_{\mathrm{hol}}$ of length less than $2\pi$ selecting one
+representative $\delta_{\mathrm{hol}}$ of the geometric holonomy, a
+preregistered phase-response map $R_\phi:I_{\mathrm{hol}}\to\mathbb R$, and
+the lifted CP action $c_I(x)=-x+2\pi n$ on the relevant domain.  The record
+verifies*
+$$
+R_\phi(c_I(x))\equiv-R_\phi(x)\pmod{2\pi}.
+\tag{T.53.0}
+$$
+*If $R_\phi$ is claimed to depend only on the holonomy class, it also verifies
+$R_\phi(x+2\pi)\equiv R_\phi(x)\pmod{2\pi}$.  Otherwise it is explicitly a
+history/lift-dependent response branch; and*
+5. *explicit diagonal quark-field rephasings that put the independently
+computed $V$ in the declared standard CKM convention, together with either an
+exact symbolic phase identity or an outward-rounded circular-residual interval
+$I_\phi\subseteq[0,\varepsilon_\phi]$, where $\varepsilon_\phi$ is fixed before
+comparison with CKM data, verifying*
+$$
+e^{i\delta_{\mathrm{hol}}}
+=\operatorname{Hol}_\gamma(\mathcal A),
+\qquad
+\operatorname{dist}_{\mathbb R/(2\pi\mathbb Z)}
+\!\left(\delta_{\mathrm{CKM}},R_\phi(\delta_{\mathrm{hol}})\right)
+\in I_\phi.
+\tag{T.53.1}
+$$
 
-**Step 1 (Flavor-changing amplitude in QFT).** In the Standard Model, the flavor-changing amplitude from quark q_i to quark q_j via W boson exchange is:
+*All phase-map inputs, lift intervals, areas, and circular residuals are stored
+in radians; degree values are presentation conversions only.*
 
-$$\mathcal{A}(q_i \to q_j) = \sum_k V_{ik}^* V_{jk} \cdot \mathcal{M}_k$$
+*Then*
+$$
+\delta_{\mathrm{hol}}
+\equiv\oint_\gamma\mathcal A
+\pmod{2\pi}.
+$$
+*If $\gamma=\partial\Sigma$ on a certified trivialization, then*
+$$
+\delta_{\mathrm{hol}}
+\equiv\int_\Sigma\mathcal F
+\pmod{2\pi},
+\tag{T.53.2}
+$$
+On the exact-identity subbranch, one also has
+$\delta_{\mathrm{CKM}}\equiv R_\phi(\delta_{\mathrm{hol}})\pmod{2\pi}$.
+On the interval subbranch, the theorem-level conclusion is instead the
+certified circular bound
+$$
+\operatorname{dist}_{\mathbb R/(2\pi\mathbb Z)}
+\!\left(\delta_{\mathrm{CKM}},R_\phi(\delta_{\mathrm{hol}})\right)
+\le\varepsilon_\phi.
+\tag{T.53.3}
+$$
+*The direct-holonomy branch is $R_\phi=\operatorname{id}$.  The distinct
+Theorem-T.56 response branch is the history/lift-dependent map
+$R_\phi(x)=x\operatorname{sinc}(1/\sqrt3)$ on its registered symmetric local
+lift.  It is odd there but, because its slope is not an integer, it is not a
+global map of the phase circle.  These
+branches cannot be combined as simultaneous direct and nonlinear
+identifications unless their two outputs agree modulo $2\pi$.*
+*In the standard three-angle CKM parametrization, the resulting Jarlskog invariant is*
+$$
+J_{CP}
+=c_{12}c_{23}c_{13}^2s_{12}s_{23}s_{13}\sin\delta_{\mathrm{CKM}}.
+$$
+*Thus this branch is CP-active exactly when every displayed mixing factor is nonzero and the independently computed standard phase $\delta_{\mathrm{CKM}}$ is not in $\pi\mathbb Z$. On the exact-identity subbranch this is equivalent to $R_\phi(\delta_{\mathrm{hol}})\notin\pi\mathbb Z$. On the interval subbranch, a sufficient finite certificate is that the closed circular $\varepsilon_\phi$-neighborhood of $R_\phi(\delta_{\mathrm{hol}})$ be disjoint from $\pi\mathbb Z$; if that test fails, the residual bound alone does not decide CP activity. Without the full-matrix, response-faithful transport, response-map, rephasing, and residual records, Lemmas T.53.1--T.53.2 construct only a geometric holonomy and do not identify an observable CKM phase.*
 
-where V is the CKM matrix and ℳ_k is the amplitude for intermediate state k. The phase of V_ij contributes to CP violation.
+*The symbols $V$ and $\delta_{\mathrm{CKM}}$ in this local certificate are
+a unitary flavor-model witness and its standard response phase. They are the
+physical CKM matrix and phase only when this exact Theorem-T.45/Theorem-T.53
+record occurs as one source-identified subrecord of an accepted
+forward-locked $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4. The global
+record must verify common scale, scheme, RG and decoupling maps, source
+exhaustion, and absence of overlap with every other flavor contribution.*
 
-**Step 2 (Geometric interpretation).** In the PU framework, quark flavor states correspond to positions on the generation manifold Gr(2,8). The weak interaction vertex corresponds to parallel transport from the up-sector submanifold to the down-sector submanifold.
-
-The flavor-changing path integral becomes:
-
-$$\mathcal{A} = \int \mathcal{D}\phi , e^{iS[\phi]} = \int_{\mathrm{paths}} e^{i\int_\gamma \mathcal{A}}$$
-
-where γ is the path on the generation manifold and 𝒜 is the Berry connection.
-
-**Step 3 (Holonomy from enclosed area).** For a closed flavor loop γ enclosing area Σ, the Berry phase is:
-
-$$\delta = \oint_\gamma \mathcal{A} = \int_\Sigma \mathcal{F}$$
-
-by Stokes' theorem. The Berry curvature ℱ = ω_KE is the Kähler form, so the phase equals the symplectic area enclosed by the loop.
-
-**Step 4 (Connection to CP violation).** The physical CP phase δ in the CKM parametrization corresponds to the Berry holonomy because:
-
-- Both are geometric phases invariant under reparametrization
-- Both arise from the non-commutativity of flavor rotations
-- The Jarlskog invariant J ∝ sin δ measures the symplectic area enclosed by the flavor quadrilateral
-
-This establishes the QFT origin of the geometric CP phase. ∎
+*Proof.* The response-faithful transport map identifies the ordered geometric product around the registered loop with $\operatorname{Hol}_\gamma(\mathcal A)$, and the lift interval selects $\delta_{\mathrm{hol}}$.  The independently computed $V$, explicit response map, and quark-field rephasings make the CKM convention and its phase reproducible.  An exact residual gives the response congruence; an interval residual gives exactly (T.53.3), with no promotion to equality. On the certified trivialization, the holonomy--curvature identity gives (T.53.2). The Jarlskog formula is the exact standard-parametrization identity; its product is nonzero precisely when the mixing factors are nonzero and the independently computed standard phase is outside $\pi\mathbb Z$. Every certificate entry is a finite matrix, incidence, transport, map-evaluation, or interval-residual check and can fail independently. ∎
 
 ### T.22.6.4 Base Phase from Sector Mismatch
 
-**Theorem T.54** (Base CP Phase on the Minimal Berry-Area Branch). *On the minimal Berry-area branch — under which the flavor quadrilateral $(u_3, d_3, d_2, u_2)$ on $\mathrm{Gr}(2, 8)$ is assigned the minimal Kähler-Einstein area $2 \arctan(d_{32,d}/d_{32,u})$ via the Simon (1983) solid-angle identification — the CP-violating phase in the flat (infinitesimal wavefunction) limit is:*
+**Convention T.54** (Base CP Phase on the Minimal Berry-Area Branch). *On the minimal Berry-area branch, assign the flavor quadrilateral $(u_3,d_3,d_2,u_2)$ the Kähler--Einstein area $2\arctan(d_{32,d}/d_{32,u})$ through the declared Simon-inspired solid-angle convention. Simon's geometric-phase framework motivates the construction but does not prove this PU-specific Grassmannian area formula. The corresponding assigned flat-profile phase is*
+$$
+\delta_{\mathrm{flat}}^{\mathrm{conv}}
+:=2\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right)
+=2\arctan\left(\frac{\sqrt2}{2}\right)
+=70.528779\ldots^\circ.
+$$
 
-$$\delta_{\mathrm{flat}} = 2\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right) = 2\arctan\left(\frac{\sqrt{2}}{2}\right) = 70.53°.$$
+*This is a branch convention, not a computed Grassmannian area. The word “minimal” is a branch-selection label, not a proved minimizer; an actual minimum claim requires a declared comparison class, existence, and area comparisons. Definition T.54a and Theorem T.54b independently evaluate $A_\gamma$; the conventional number becomes theorem-level only if that certificate output proves $A_\gamma=\delta_{\mathrm{flat}}^{\mathrm{conv}}$. The value $66.7^\circ$ additionally requires Theorem T.56's nonlinear response ansatz.*
 
-*A theorem-level derivation requires an explicit computation of the geodesic-quadrilateral Kähler-Einstein area on $\mathrm{Gr}(2,8)$ with the Bures normalization (specifying vertices, geodesic edges, interior angles, and Gauss-Bonnet defect); this theorem reads this area off via the Simon-style identification rather than deriving it. The downstream value $\delta_{CKM} = 66.7°$ in Theorem T.56 inherits this branch.*
+*Evaluation.*
 
-*Proof.*
+**Step 1 (Registered sector-distance data).** The convention uses the following selected $E_8$ distance data from Section T.21.9.1:
 
-**Step 1 (Sector submanifolds).** Each quark sector f ∈ {u, d} defines a geodesic submanifold of Gr(2,8) parametrized by its $E_8$ triad (r₁^f, r₂^f, r₃^f). From Section T.21.9.1:
+- Down quarks: $(d^2_{32,d},d^2_{31,d})=(2,4)$, so $d_{32,d}=\sqrt2$
+- Up quarks: $(d^2_{32,u},d^2_{31,u})=(4,8)$, so $d_{32,u}=2$
 
-- Down quarks: (d²_{32,d}, d²_{31,d}) = (2, 4), giving d_{32,d} = √2
-- Up quarks: (d²_{32,u}, d²_{31,u}) = (4, 8), giving d_{32,u} = 2
+These scalar distances do not by themselves construct the four Grassmannian vertices, their geodesic edges, or the oriented spanning area.
 
-**Step 2 (Geodesic orientations).** The geodesic connecting generations i and j in sector f has tangent direction determined by the $E_8$ root difference r_i^f − r_j^f. The mismatch angle between up and down geodesic orientations at the 3↔2 interface is:
+**Step 2 (Convention parameter).** Convention T.54 maps the registered distance ratio to
+$$
+\theta_{\mathrm{mismatch}}^{\mathrm{conv}}
+:=\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right)
+=\arctan\left(\frac{\sqrt2}{2}\right)
+=35.264389\ldots^\circ.
+$$
+This definition does not infer a tangent-space angle from the two lengths.
 
-$$\theta_{\mathrm{mismatch}} = \arctan\left(\frac{d_{32,d}}{d_{32,u}}\right) = \arctan\left(\frac{\sqrt{2}}{2}\right) = 35.26°$$
+**Step 3 (Assigned base phase).** The same convention sets
+$$
+\delta_{\mathrm{flat}}^{\mathrm{conv}}
+:=2\theta_{\mathrm{mismatch}}^{\mathrm{conv}}
+=70.528779\ldots^\circ.
+$$
 
-**Step 3 (Holonomy from solid angle).** The Berry holonomy around a closed loop equals the solid angle enclosed on the projective space. For the flavor quadrilateral (u₃, d₃, d₂, u₂), the enclosed solid angle is twice the mismatch angle (Simon 1983):
-
-$$\delta_{\mathrm{flat}} = 2\theta_{\mathrm{mismatch}} = 2 \times 35.26° = 70.53°$$
-
-**Step 4 (Stokes verification on the minimal Berry-area branch).**
-$$\delta_{\mathrm{flat}} = \int_\Sigma \mathcal{F} = \int_\Sigma \omega_{\mathrm{KE}} = \mathrm{Area}_{\mathrm{KE}}(\Sigma)$$
-
-where $\Sigma$ is the geodesic quadrilateral bounded by $\gamma$. On the minimal Berry-area branch, the Kähler-Einstein area is identified with $2 \arctan(d_{32,d}/d_{32,u})$ via the Simon-style solid-angle identification of Step 3. A direct application of the Gauss-Bonnet theorem to the geodesic quadrilateral on $\mathrm{Gr}(2, 8)$ requires explicit computation of interior angles and curvature integrals; that computation is not supplied here. The displayed area formula is therefore the minimal Berry-area branch identification via the Berry-holonomy prescription. ∎
+**Step 4 (Independent geometric gate).** For an accepted certificate of Definition T.54a, the holonomy--curvature identity gives
+$$
+e^{i\delta_{\mathrm{flat}}}
+=\exp\!\left(i\int_{\Sigma_\gamma}\omega_{\mathrm{KE}}\right)
+=e^{iA_\gamma}.
+$$
+The convention and the distinct distance tuples do not determine $A_\gamma$. The conventional number becomes a geometric theorem only if the independently computed output of Theorem T.54b proves $A_\gamma=\delta_{\mathrm{flat}}^{\mathrm{conv}}$ in the registered lift; nonzero CP requires its certified interval to be disjoint from $\pi\mathbb Z$ modulo $2\pi$. ∎
 
 **Definition T.54a** (Grassmannian Gauss-Bonnet CP-Area Certificate). A Grassmannian Gauss-Bonnet CP-area certificate for the loop $\gamma=(u_3,d_3,d_2,u_2,u_3)$ is a finite record
 $$
 \mathfrak G_{\mathrm{CP}}
 =
-(\Sigma_\gamma,g_\Sigma,q_\Sigma,\{\alpha_j\}_{j=1}^4,K_\Sigma)
+(\Sigma_\gamma,g_\Sigma,q_\Sigma,\{\alpha_j\}_{j=1}^4,K_\Sigma,
+\mathfrak N_\gamma),
 \tag{T.54a.1}
 $$
-where:
+where the finite numerical ledger is
+$$
+\mathfrak N_\gamma
+:=(I_A,I_{GB},E_A,E_{GB},
+\varepsilon_A,\varepsilon_{GB},\mathcal M_A,\mathcal M_{GB},I_{\mathrm{lift}}).
+\tag{T.54a.1a}
+$$
+Here $I_A$ and $I_{GB}$ are outward-rounded intervals for the Kähler area and
+Gauss--Bonnet residual, $E_A$ and $E_{GB}$ are separately proved total
+quadrature-and-truncation error bounds, $\varepsilon_A$ and
+$\varepsilon_{GB}$ are preregistered tolerances, $\mathcal M_A$ and
+$\mathcal M_{GB}$ specify the terminating quadrature or exact symbolic methods,
+and $I_{\mathrm{lift}}$ is either a preregistered
+interval of length less than $2\pi$ or the marker $\varnothing$ when only a
+phase class is claimed.
+The geometric entries satisfy:
 
 1. $\Sigma_\gamma$ is an oriented piecewise-geodesic two-surface in $\mathrm{Gr}(2,8)$ with $\partial\Sigma_\gamma=\gamma$;
 
-2. $g_\Sigma$ is the induced Bures/Kähler-Einstein metric on $\Sigma_\gamma$;
+2. $g_\Sigma$ is induced from the Lemma-T.53.2 Kähler--Einstein
+normalization.  If the calculation is performed with the Bures metric, the
+ledger records the conversion $g_{\mathrm{KE}}=4g_B$ and the corresponding
+conversion of $q_\Sigma$ and $dA_\Sigma$ before evaluating the Kähler area;
 
 3. $q_\Sigma$ is the Kähler calibration density defined by
 $$
@@ -5016,48 +5740,79 @@ $$
 $$
 holds for the disk topology of $\Sigma_\gamma$;
 
-7. the calibrated Kähler area evaluates to
+7. the ledger methods $\mathcal M_A$ and $\mathcal M_{GB}$ terminate and the
+certificate verifies
 $$
-\int_{\Sigma_\gamma}q_\Sigma\,dA_\Sigma
-=
-2\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right).
+A_\gamma:=\int_{\Sigma_\gamma}q_\Sigma\,dA_\Sigma,
+\qquad
+R_{GB}:=\int_{\Sigma_\gamma}K_\Sigma\,dA_\Sigma
++\sum_{j=1}^4(\pi-\alpha_j)-2\pi,
 \tag{T.54a.4}
 $$
-
-The certificate is accepted only when the vertices, geodesic edges, induced curvature, corner angles, and calibration density are fixed before comparison with CKM data.
-
-**Theorem T.54b** (Gauss-Bonnet Closure of the Base CP Phase). If the minimal flavor loop $\gamma$ carries an accepted Grassmannian Gauss-Bonnet CP-area certificate $\mathfrak G_{\mathrm{CP}}$, then the flat Berry phase of Theorem T.54 is theorem-level on that certified branch:
+together with the interval containments and error tests
 $$
-\delta_{\mathrm{flat}}
-=
-\int_{\Sigma_\gamma}\omega_{\mathrm{KE}}
-=
-2\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right)
-=
-70.53^\circ.
+A_\gamma\in I_A,
+\qquad
+R_{GB}\in I_{GB},
+\qquad
+0\in I_{GB},
+$$
+$$
+\operatorname{rad}(I_A)\le E_A\le\varepsilon_A,
+\qquad
+\operatorname{rad}(I_{GB})\le E_{GB}\le\varepsilon_{GB}.
+\tag{T.54a.5}
+$$
+An exact symbolic result is represented by a singleton interval and zero error.
+Acceptance requires every displayed containment and inequality.
+
+When a real representative rather than a class in $\mathbb R/(2\pi\mathbb Z)$ is claimed, the certificate additionally records a lift interval $I_{\mathrm{lift}}\subset\mathbb R$ of length less than $2\pi$. Acceptance then also requires the certified interval for $A_\gamma$ to lie in $I_{\mathrm{lift}}$. The Gauss--Bonnet residual checks the induced surface geometry and corner ledger; it does not determine $A_\gamma$ without an additional proved relation between $K_\Sigma$ and $q_\Sigma$.
+
+The vertices, geodesic edges, induced curvature, corner angles, calibration density, orientation, tolerances, and numerical method must be fixed before comparison with CKM data. The target value $2\arctan(d_{32,d}/d_{32,u})$ is not an input to the certificate.
+
+**Theorem T.54b** (Certified Kähler-Area Evaluation of the Base CP Phase). If the registered flavor loop $\gamma$ carries an accepted Grassmannian Gauss--Bonnet CP-area certificate $\mathfrak G_{\mathrm{CP}}$, then its Berry holonomy obeys
+$$
+e^{i\delta_{\mathrm{flat}}}
+=\exp\!\left(i\int_{\Sigma_\gamma}\omega_{\mathrm{KE}}\right)
+=e^{iA_\gamma},
+$$
+so
+$$
+\delta_{\mathrm{flat}}\equiv A_\gamma\pmod{2\pi}
 \tag{T.54b.1}
 $$
-The following numerical CKM phase is available only on the additional nonlinear response ansatz of Theorem T.56:
-$$
-\delta_{CKM}=\delta_{\mathrm{flat}}\,\mathrm{sinc}(1/\sqrt3).
-\tag{T.54b.2}
-$$
+Here $\delta_{\mathrm{flat}}$ is the geometric lift
+$\delta_{\mathrm{hol}}$ of Theorem T.53; it is not
+$\delta_{\mathrm{CKM}}$ unless the registered response map is the identity.
+The certified interval and error bound are recorded in (T.54a.4)--(T.54a.5).
+If the certificate also supplies the registered lift interval of Definition
+T.54a, the unique representative in that interval satisfies
+$\delta_{\mathrm{flat}}=A_\gamma$. A geometric phase with nonzero sine is
+certified only when the outward-rounded interval for $A_\gamma$ is disjoint
+from $\pi\mathbb Z$ modulo $2\pi$. Physical CP activity additionally requires
+Theorem T.53's full-matrix flavor realization, registered phase-response map,
+and nonzero mixing factors.
 
-*Proof.* By Definition T.54a,
+If an exact symbolic evaluation independently proves
 $$
-\omega_{\mathrm{KE}}|_{\Sigma_\gamma}=q_\Sigma dA_\Sigma
+A_\gamma
+=2\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right)
 $$
-and the calibrated area is fixed by (T.54a.4). Stokes' theorem, already used in Theorem T.74, gives
+in the registered lift, then
 $$
 \delta_{\mathrm{flat}}
-=
-\oint_\gamma\mathcal A
-=
-\int_{\Sigma_\gamma}\omega_{\mathrm{KE}}
-=
-\int_{\Sigma_\gamma}q_\Sigma dA_\Sigma.
+=70.5287793655\ldots^\circ.
 $$
-Substituting (T.54a.4) gives (T.54b.1). The Gauss-Bonnet identity (T.54a.3) is the certificate's independent check that the area is obtained from the induced curvature and geodesic corner data rather than from the Simon-style solid-angle branch. Equation (T.54b.2) is the independent nonlinear phase-response ansatz of Theorem T.56; Theorem T.55 changes visibility but leaves the base phase unchanged. ∎
+The convention-level response value $\delta_{\mathrm{CKM}}^{\mathrm{conv}}=\delta_{\mathrm{flat}}^{\mathrm{conv}}\operatorname{sinc}(1/\sqrt3)$ additionally requires Theorem T.56's nonlinear response map; a physical CKM reading requires Theorem T.53's flavor-realization gate.
+
+*Proof.* Because $\Sigma_\gamma$ is a disk, the pullback of the complex line bundle to $\Sigma_\gamma$ is trivial. Choose a trivialization there. The holonomy--curvature identity gives
+$$
+\operatorname{Hol}_\gamma(\mathcal A)
+=\exp\!\left(i\oint_\gamma\mathcal A\right)
+=\exp\!\left(i\int_{\Sigma_\gamma}\omega_{\mathrm{KE}}\right)
+=e^{iA_\gamma}.
+$$
+This proves (T.54b.1); the registered interval of length less than $2\pi$ fixes the unique lift. The Gauss--Bonnet residual checks the consistency of the induced curvature and corner data but does not insert or determine the Kähler area. The numerical specialization follows only from the separately proved exact evaluation. ∎
 
 ### T.22.6.5 Generation Subspace Variance
 
@@ -5092,35 +5847,32 @@ This matches the left-chiral tensor decomposition of Theorem T.30: ℝ⁶ ≅ �
 
 $$\sigma^2_{\mathcal{G}} = \frac{1}{N_g} = \frac{1}{3}.$$
 
-*A general parameterization $\sigma^2_{\mathcal{G}}=\chi_G/N_g$ with branch coefficient $\chi_G$ would rescale the visibility factor $f_{\mathrm{sinc}}=\operatorname{sinc}(\sqrt{\chi_G/N_g})$ in Theorem T.55. A corresponding change of $\delta_{\mathrm{CKM}}$ or of the PMNS predictions requires an independently stated nonlinear phase-response prescription, such as the conditional ansatz of Theorem T.56.*
+*A general parameterization $\sigma^2_{\mathcal{G}}=\chi_G/N_g$ with branch coefficient $\chi_G$ would rescale the visibility factor $f_{\mathrm{sinc}}=\operatorname{sinc}(\sqrt{\chi_G/N_g})$ in Theorem T.55. A corresponding change of $\delta_{\mathrm{CKM}}$ or of a PMNS model output requires its independently stated nonlinear phase-response prescription and does not bypass the owning full-matrix and physical-realization gates.*
 
 *yielding angular width parameter:*
 
 $$u = \sqrt{\sigma^2_{\mathcal{G}}} = \frac{1}{\sqrt{N_g}} = \frac{1}{\sqrt{3}}$$
 
-*Proof.*
+*Proof.* By the theorem's isotropy hypothesis, the generation covariance has
+the form
+$$
+\operatorname{Cov}_{\mathcal G}=cI_{N_g}
+$$
+for some $c\ge0$. The independently declared unit-total-generation-variance
+hypothesis gives
+$$
+1=\operatorname{Tr}(\operatorname{Cov}_{\mathcal G})=N_gc.
+$$
+Hence $c=1/N_g=1/3$, and therefore
+$u=\sqrt c=1/\sqrt3$. This proof uses neither the interface unit-radius
+convention $\sigma_B^2=1/24$ nor a capacity or Ward normalization. ∎
 
-**Step 1 (Interface variance from capacity saturation).** From Lemma T.41.2, at the PCE-attractor:
-$$\sigma^2_B = \frac{1}{24} = \frac{1}{M}$$
-where M = 24 is the interface mode count.
-
-**Step 2 (Total variance normalization).** The Predictive Ward identity (Appendix X) fixes the total interface variance:
-$$\langle r_B^2 \rangle = \mathrm{Tr}(\mathrm{Cov}\,\xi) = M \cdot \sigma^2_B = 24 \times \frac{1}{24} = 1$$
-
-**Step 3 (Isotropy and tensor factorization).** The Bures metric is isotropic on the interface (Section T.21.2.2): g_B = (1/4)I₂₄. By Lemma T.54.1, the tangent space factors as 𝒢_{N_g} ⊗ ℐ_{d₀}.
-
-**Step 4 (Equipartition over generation directions).** The generation subspace 𝒢 carries the physically relevant variance for flavor mixing. By the equipartition principle (which follows from the isotropy of g_B), variance distributes equally among the N_g generation directions. With unit total generation variance:
-
-$$\sigma^2_{\mathcal{G}} = \frac{1}{N_g} = \frac{1}{3}$$
-
-**Step 5 (Angular width).** The characteristic angular spread of the generation wavefunction is:
-$$u = \sqrt{\sigma^2_{\mathcal{G}}} = \sqrt{1/3} = \frac{1}{\sqrt{N_g}} = \frac{1}{\sqrt{3}} = 0.5774$$
-
-∎
-
-**Remark T.54.3: Consistency Check.** *The relation u² = 1/N_g connects generation number to interface variance:*
-$$N_g = \frac{1}{u^2} = 3$$
-*confirming internal consistency with Theorem R.3.4 (three generations from anomaly + CP).*
+**Remark T.54.3: Branch-Normalization Identity.** On this branch,
+$$
+N_g=\frac1{u^2}=3.
+$$
+This restates the unit-total-generation-variance normalization after the
+independent input $N_g=3$; it does not confirm or rederive Theorem R.3.4.
 
 ### T.22.6.5a Sinc Correction Factor
 
@@ -5133,11 +5885,20 @@ For $0<u<\pi$, the sinc factor is positive, so it reduces visibility but leaves 
 
 ### T.22.6.6 Conditional CKM CP Phase
 
-**Theorem T.56 (Open Phase-Response Gate).** The symmetric phase-noise model of Theorem T.55 preserves the base phase $\delta_0=70.53^\circ$; it does not derive $70.53^\circ\operatorname{sinc}(1/\sqrt3)=66.7^\circ$. The value $66.7^\circ$ is available only on an additional nonlinear response ansatz
+**Theorem T.56 (Open Phase-Response Gate).** For any registered real lift
+$\delta_{\mathrm{hol}}$, Theorem T.55's symmetric phase-noise average preserves
+that phase; it does not derive multiplication of the phase by
+$\operatorname{sinc}(1/\sqrt3)$.  A distinct nonlinear branch may preregister
+the response map
 $$
-\delta_{\mathrm{CKM}}:=\delta_0\operatorname{sinc}(1/\sqrt3),
+R_\phi(x):=x\operatorname{sinc}(1/\sqrt3),
+\qquad
+\delta_{\mathrm{CKM}}:=R_\phi(\delta_{\mathrm{hol}}).
 $$
-which must be registered independently. Subsequent numerical rows using $66.7^\circ$ are conditional on that ansatz. ∎
+Applied to Convention T.54's assigned input, this gives
+$66.6753023736826\ldots^\circ$. The same value is a geometric response only if
+T.54b certifies that input lift and is a physical CKM phase only if Theorem
+T.53's flavor-realization certificate is accepted. ∎
 
 ## T.22.7 The Jarlskog Invariant
 
@@ -5147,53 +5908,124 @@ $$J = c_{12}s_{12}c_{23}s_{23}c_{13}^2 s_{13}\sin\delta$$
 
 where s_ij = sin θ_ij and c_ij = cos θ_ij in the standard parametrization.
 
-**Theorem T.57** (Conditional Jarlskog Invariant from Branch Parameters).
+**Theorem T.57** (Certificate-Gated Jarlskog Invariant and Branch Diagnostic).
 
-*Assume the CKM-magnitude branches supplying $s_{12}$, $s_{23}$, and $s_{13}$ and the independently registered nonlinear phase-response ansatz of Theorem T.56. Then:*
+Let the registered matrix-entry model branches supply
+$$
+\delta_{\mathrm{CKM}}^{\mathrm{conv}}
+:=2\arctan(1/\sqrt2)\operatorname{sinc}(1/\sqrt3),
+\quad a_d:=\sqrt{4/3}\,e^{-6},\quad a_u:=\sqrt{8/3}\,e^{-6},
+$$
+$$
+k_{us}:=\frac{\sqrt3}{2}\sin(17\pi/202)\frac{1861}{1863},
+\quad k_{cb}:=\sqrt{2/3}\,e^{-3},
+\quad k_{ub}:=\sqrt{a_d^2+a_u^2-2a_da_u
+\cos\delta_{\mathrm{CKM}}^{\mathrm{conv}}}.
+$$
+Set
+$$
+s_{13}:=k_{ub},\qquad c_{13}:=\sqrt{1-s_{13}^2},\qquad
+s_{12}:=\frac{k_{us}}{c_{13}},\qquad
+s_{23}:=\frac{k_{cb}}{c_{13}},
+$$
+and $c_{12}:=\sqrt{1-s_{12}^2}$, $c_{23}:=\sqrt{1-s_{23}^2}$. These definitions distinguish standard-parameterization angle sines from the matrix-entry magnitudes $|V_{us}|=s_{12}c_{13}$ and $|V_{cb}|=s_{23}c_{13}$. The exact conventional phase evaluates to
+$\delta_{\mathrm{CKM}}^{\mathrm{conv}}
+\approx66.6753023736826^\circ$.
+Then the branch diagnostic
+$$
+J^{\mathrm{conv}}
+:=c_{12}c_{23}c_{13}^2s_{12}s_{23}s_{13}
+\sin\delta_{\mathrm{CKM}}^{\mathrm{conv}}
+\approx3.22349741786247\times10^{-5}.
+\tag{T.57.1}
+$$
+Here $\sin\delta_{\mathrm{CKM}}^{\mathrm{conv}}
+\approx0.918275794195143$.
 
-- *$s_{12} = \vert V_{us}\vert = 0.2261$ → $c_{12} = \sqrt{1 - 0.2261^2} = 0.9741$*
-- *$s_{23} = \vert V_{cb}\vert = 0.0407$ → $c_{23} = \sqrt{1 - 0.0407^2} = 0.9992$*
-- *$s_{13} = \vert V_{ub}\vert = 0.00392$ → $c_{13} = \sqrt{1 - 0.00392^2} = 0.99999$*
-- *$\delta = 66.7°$ → $\sin\delta = 0.9187$*
+If one accepted forward-locked $\mathfrak C_{\mathrm{fl}}$ contains the same
+Theorem-T.45/Theorem-T.53 subrecords, supplies
+pairwise distinct within-sector singular values, realizes the three displayed
+mixing magnitudes in its single matrix $V=U_u^\dagger U_d$, and verifies its
+standard phase exactly as the displayed response, then
+$J^{\mathrm{conv}}$ is the physical Jarlskog invariant of that realized
+matrix. The exact conventional input is geometric only if Theorem T.54b
+independently certifies
+$A_\gamma=2\arctan(1/\sqrt2)$ in the registered lift. Without these common
+matrix, nondegeneracy, phase, and area gates, (T.57.1) is a finite model
+diagnostic and separately supplied magnitudes may not be assembled into a
+physical CKM matrix.
 
-*Calculation:*
-$$J = (0.9741)(0.2261)(0.9992)(0.0407)(0.99999)^2(0.00392)(0.9187)$$
-$$= 3.22 \times 10^{-5}$$
-
-**Experimental comparison** (Particle Data Group 2024):
-$$J_{\mathrm{PDG24}}=(3.12^{+0.13}_{-0.12})\times10^{-5}$$
-
-|Quantity|Theory |Experiment |Deviation|
-|:-------|:---------:|:------------------:|:-------:|
-|$J$ |$3.22\times10^{-5}$|$(3.12^{+0.13}_{-0.12})\times10^{-5}$|$+0.8\sigma$ |
-
-∎
+For comparison, the empirical value quoted in this paper is
+$$
+J_{\mathrm{PDG24}}=(3.12^{+0.13}_{-0.12})\times10^{-5}.
+$$
+The often-quoted $+0.8\sigma$ scalar comparison is conditional on the accepted
+common realization and on treating the quoted empirical interval as the
+operative one-dimensional uncertainty; it is not a covariance-level fit. ∎
 
 -----
 
-## T.22.8 Complete CKM Matrix
+## T.22.8 Unitary CKM Model-Completion Diagnostic
 
-### T.22.8.1 Derived Matrix Elements
+### T.22.8.1 Standard-Parameterization Representative
 
-The modulus matrix on the declared CKM model branch is
+Let the model-entry data be
 $$
-|V_{\mathrm{CKM}}| \approx
+\delta^{\mathrm{conv}}
+:=2\arctan(1/\sqrt2)\operatorname{sinc}(1/\sqrt3),
+\quad a_d:=\sqrt{4/3}\,e^{-6},\quad a_u:=\sqrt{8/3}\,e^{-6},
+$$
+$$
+k_{us}:=\frac{\sqrt3}{2}\sin(17\pi/202)\frac{1861}{1863},
+\quad k_{cb}:=\sqrt{2/3}\,e^{-3},
+\quad k_{ub}:=\sqrt{a_d^2+a_u^2-2a_da_u\cos\delta^{\mathrm{conv}}},
+$$
+and define
+$$
+s_{13}:=k_{ub},\quad c_{13}:=\sqrt{1-s_{13}^2},\quad
+s_{12}:=\frac{k_{us}}{c_{13}},\quad
+s_{23}:=\frac{k_{cb}}{c_{13}},\quad
+c_{ij}:=\sqrt{1-s_{ij}^2}.
+$$
+Insert these exact symbolic parameters in the standard CKM parameterization.
+The resulting complex matrix $V_{\mathrm{model}}$ is unitary identically.
+Its numerically evaluated modulus matrix is
+$$
+|V_{\mathrm{model}}|
+=
 \begin{pmatrix}
-0.9741 & 0.2261 & 0.00392 \\
-0.2260 & 0.9732 & 0.0407 \\
-0.0087 & 0.0399 & 0.9992
+0.974103508026 & 0.226068470312 & 0.003924586958 \\
+0.225944918533 & 0.973291524846 & 0.040650971097 \\
+0.008440938389 & 0.039958158028 & 0.999165700055
 \end{pmatrix}.
+\tag{T.22.8.1}
 $$
+The displayed real modulus matrix is not itself unitary; its off-diagonal
+inner products are not unitarity tests.  Direct double-precision multiplication
+of the phase-bearing complex representative gives
+$\|V_{\mathrm{model}}^\dagger V_{\mathrm{model}}-I\|_{\max}
+\le2.3\times10^{-16}$.  Unitarity alone does not determine the second and
+third rows from three magnitudes; (T.22.8.1) additionally uses the standard
+ordering, the displayed phase convention, and the standard parameterization.
+It becomes a physical CKM matrix only if one accepted forward-locked
+$\mathfrak C_{\mathrm{fl}}$ contains the same $\mathfrak C_{\mathrm{mix}}$
+and realizes these entries, phase, labels, and nondegenerate singular-vector
+bases in $V=U_u^\dagger U_d$.
 
-The entries in the second and third rows are obtained by imposing row and column unitarity on the directly predicted values of $|V_{us}|$, $|V_{cb}|$, and $|V_{ub}|$, with the standard CKM ordering convention.
-
-**Statistical Diagnostic:**
-
-Using the four displayed one-dimensional pulls $(-1.6,+2.1,+1.6,+0.7)$ gives the arithmetic sum
+**Statistical diagnostic.**  For the exact-kernel tuple
+$(k_{us},k_{cb},k_{ub},J^{\mathrm{conv}})$ and the sides of the four quoted
+one-dimensional errors pointing toward the corresponding model values, the
+pulls are
 $$
-D_{\mathrm{diag}}:=\sum_i z_i^2=10.02.
+(1.5565739879,-1.7087375409,2.1398550888,0.7961339836).
 $$
-This is a diagonal, correlation-ignoring diagnostic, not a calibrated $\chi^2$ or a degrees-of-freedom statement. A likelihood claim requires preregistered theory uncertainties, the PDG covariance, the fitted-parameter count, and the nonlinear phase/stiffness branch treatment.
+Their arithmetic squared sum is
+$$
+D_{\mathrm{diag}}:=\sum_i z_i^2=10.5555156845\ldots .
+$$
+This is not a calibrated $\chi^2$: a joint likelihood additionally requires
+the common realization certificate, preregistered theory errors, empirical
+covariance, fitted-parameter count, and branch treatment.
 
 -----
 
@@ -5207,7 +6039,7 @@ The core counting parameters trace to the foundational derivation, while the qua
 |d₀ |8 |Hilbert space dimension 2^K₀ |§3.2 |
 |(a, b) |(2, 6) |Spectral split from ε0 = ln 2 |§3.3 |
 |M |24 |Interface modes 2ab |§6.4 |
-|σ²_B |1/24 |Capacity saturation |T.41.2 |
+|σ²_B |1/24 |Centered isotropic unit-radius convention |T.41.2 |
 |α |3/2 |Hierarchy coefficient 1/(16σ²_B) |T.41.3 |
 |$N_g$ |$3$ |Conditional least-family selector on the declared SM15 linear-plus-cubic or SM16 linear-plus-primitive-norm family-redundancy candidate class, with a nonzero CKM-type rephasing invariant and the realized additive-monotone family-count objective |R.3.4; R.3.4a; R.3.5.1a; R.8.5b; R.8.5d |
 |d²_{32,d} |2 |$E_8$ triad (down) |T.21.9.1|
@@ -5222,7 +6054,7 @@ The core counting parameters trace to the foundational derivation, while the qua
 |K_avg |32/23 |Bures curvature |Z.23 |
 |c_d/c_u |1.02 |Hypercharge normalization (PCE weights, Cor. T.34.2) |T.38 |
 |$g_U^2$ |$\pi/6$ |Holonomy per mode |T.39a |
-|$\mathcal{N}_{PU}$|$1/(72\sqrt{12})$|Universal normalization |T.21.11 |
+|$\mathcal{N}_{PU}$|$1/(72\sqrt{12})$|Declared common leading-order normalization factor; absolute physical normalization remains certificate-gated |T.21.11; T.45.1b--T.45.1c |
 |$m_\tau$ |$\approx 0.94$ GeV (LO) |Absolute mass anchor; factor $\approx 1.9$ gap (Remark T.45.1)|T.21.11; Lemma T.45.1a |
 
 **Status:** The CKM matrix is a conditional model output depending on the triad, stiffness-ratio, Berry-area, nonlinear phase-response, interference-phase, normalization, and remainder branch data.
@@ -5238,25 +6070,39 @@ The distinction between tunneling and frustration regimes reflects the structure
 - **Generation 3** occupies a localized position (heavy mass, λ₃ = αd² ≫ 1) serving as a reference anchor
 - **Generations 1, 2** occupy a delocalized valley (light masses) where vacuum geometry dominates
 
-The valley-sharing criterion 𝒱_ij (Proposition T.45.2) determines which mechanism controls mixing:
-
-- 𝒱_ij > 1: Wavefunction overlap through a barrier (tunneling)
-- 𝒱_ij ≤ 1: Geometric alignment in a shared valley (frustration)
+Proposition T.45.2 supplies only the registered ratio $\nu_{ij}$ and its
+tolerance band.  Outside that band it labels the chosen response branch as
+tunneling or shared-valley; inside it the mechanism is unresolved.  A label
+does not by itself determine a physical mixing entry.
 
 ### T.22.10.2 Why CKM is Hierarchical
 
-The CKM hierarchy $\vert V_{us}\vert \gg \vert V_{cb}\vert \gg \vert V_{ub}\vert$ arises from distinct mechanisms:
-
-1. **$\vert V_{us}\vert \sim 0.22$**: Geometric frustration angle—non-exponential, O(1) mixing from vacuum misalignment
-1. **$\vert V_{cb}\vert \sim 0.04$**: Single exponential suppression e⁻³ from tunneling with d²_ref = 2
-1. **$\vert V_{ub}\vert \sim 0.004$**: Double exponential suppression e⁻⁶ from tunneling with d²_ref = 4
+The registered scalar kernels have the hierarchy
+$k_{us}\gg k_{cb}\gg k_{ub}$ because the light-generation branch uses the
+frustration-response formula, the down-only $cb$ branch uses an $e^{-3}$
+factor, and the two-channel $ub$ branch uses $e^{-6}$ amplitudes with the
+independently registered interference phase. This is an exact statement
+about those formulas, not a unique dynamical explanation. The symbols become
+the physical CKM hierarchy only when one accepted forward-locked
+$\mathfrak C_{\mathrm{fl}}$ contains the same full matrices, diagonalizers,
+response kernels, phase record, labels, scale maps, and residual intervals.
 
 ### T.22.10.3 Why CP Violation Exists
 
-CP violation requires the up and down sectors to have different orientations in the generation manifold. On the stated triad and minimal Berry-area branches:
+On the registered Berry/CKM branch, a nonzero modeled Jarlskog invariant
+requires nonzero mixing factors and a certified response phase outside
+$\pi\mathbb Z$. Distinct sector orientations motivate the retained loop but
+are not sufficient to prove either condition. On the stated triad and
+Berry-area convention branches:
 
 - Different $d^2_{32}$ values (2 vs 4) create orientation mismatch.
-- The base Berry phase around the flavor loop is nonzero: $\delta_{\mathrm{flat}}=70.53°$ (Theorems T.53–T.54).
+- Theorem T.53 supplies the Berry-holonomy formula and the independently gated
+  phase-response bridge. Convention T.54 assigns
+  $\delta_{\mathrm{flat}}=70.53°$; a theorem-level nonzero-sine geometric value
+  requires an accepted Theorem-T.54b area output whose interval is disjoint
+  from $\pi\mathbb Z$ modulo $2\pi$. Physical CKM CP activity additionally
+  requires the accepted T.53 flavor-realization/response certificate and
+  nonzero mixing factors.
 - The numerical value $\delta=66.7°$ is conditional on the independent nonlinear phase-response ansatz of Theorem T.56.
 
 On either nonzero-phase branch, the Jarlskog invariant satisfies $J\propto\sin\delta\neq0$ when the remaining CKM factors are nonzero.
@@ -5265,35 +6111,56 @@ On either nonzero-phase branch, the Jarlskog invariant satisfies $J\propto\sin\d
 
 The CP-violating phases of the Standard Model are organized by two distinct conditional mechanisms. CKM and PMNS relative phases use the Berry-holonomy branch on $\mathrm{Gr}(2,8)$ described as Type II CP violation in Remark T.57a.1. The strong sector uses the separate Appendix K implication requiring a constructed equivariant $\sigma$-CP map, an accepted QCD gauge-topology bridge, a $\sigma$-invariant vacuum, an operative first-harmonic QCD selection functional with a globally minimizing realized vacuum, and determinant- or Pfaffian-orientation data. The synthesis below identifies the mechanism in each sector:
 
-|Observable |Berry or branch mechanism |Predicted value|Reference |
+|Observable |Berry or branch mechanism |Model or conditional value|Reference |
 |:--------------------|:----------------------------------------------------|:--------------|:--------------|
-|CKM base phase $\delta_{\mathrm{flat}}$ |Holonomy around $u_3 \to d_3 \to d_2 \to u_2 \to u_3$ on the minimal Berry-area branch |$70.53°$ |Theorems T.53–T.54 |
+|CKM base phase $\delta_{\mathrm{flat}}$ |Holonomy around $u_3 \to d_3 \to d_2 \to u_2 \to u_3$ |$70.53°$ by Convention T.54; theorem-level only if the Theorem-T.54b certificate outputs that area |Theorem T.53; Convention T.54; Theorem T.54b |
 |CKM response phase $\delta$ |Independent nonlinear response ansatz applied to the base phase |$66.7°$ conditionally |Theorem T.56 |
-|PMNS $\delta_{CP}$ |Holonomy with D₄-A₂ sector mismatch |$232.5°$ |Theorem T.24.22|
+|PMNS $\delta_{CP}$ |Registered baseline plus PMNS Berry-loop response; physical promotion requires the same exact $\mathfrak C_{\mathrm{PMNS}}^{CP}$ inside an accepted $\mathfrak C_{\mathrm{fl}}$ |$232.5°$ as a convention-level candidate; exact or interval-valued according to the certificate |Theorem T.24.22|
 |Strong $\bar\theta$|Constructed equivariant $\sigma$-CP map, accepted QCD gauge-topology bridge, $\sigma$-invariant vacuum, operative first-harmonic QCD selection functional with a globally minimizing realized vacuum, and determinant- or Pfaffian-orientation certificate |$0$ modulo $2\pi$ on the complete conditional Appendix K branch |Theorem K.6.1; Proposition K.6.4; Theorems K.6.2, K.6.5-K.6.6, K.6.10b-K.6.11 |
-**Theorem T.57a (CP from Holonomy).** *On the stated flavor-bundle branch, the CKM and PMNS relative phases arise as Berry-Simon holonomy on the generation manifold; the absolute strong-sector phase is governed by the independent Appendix K certificate branch* [Berry 1984; Simon 1983].
-
-*Proof.*
-
-
-**Step 1 (Berry connection).** From Lemma T.53.1, the Berry connection on $\text{Gr}(2,8)$ is:
+**Theorem T.57a (Certificate-Gated CP Holonomy Synthesis).** *Fix the positive
+Berry line $\mathcal L_+=\det(\mathcal S)^*$ of Lemma T.53.1.  If the complete
+flavor-realization and phase-response certificate of Theorem T.53 is accepted,
+then its geometric phase satisfies*
 $$
-\mathcal{A} = \frac{i}{2}\sum_{\alpha \in A, \beta \in B} \left( \bar{z}_{\alpha\beta}, dz_{\alpha\beta} - z_{\alpha\beta}, d\bar{z}_{\alpha\beta} \right)
+e^{i\delta_{\mathrm{hol}}}
+=\operatorname{Hol}_\gamma(\mathcal A)
+=e^{i\int_\Sigma\mathcal F}
+\tag{T.57a.1}
 $$
-where $z_{\alpha\beta} = \langle\beta|\psi\rangle/\langle\alpha|\psi\rangle$ are inhomogeneous coordinates on $\text{Gr}(2,8)$ as defined in Lemma T.53.1, with curvature $\mathcal{F} = d\mathcal{A} = \omega_{KE}$ (Lemma T.53.2).
+*whenever $\gamma=\partial\Sigma$ on a certified trivialization.  On T.53's
+exact-identity subbranch,
+$$
+e^{i\delta_{\mathrm{CKM}}}
+=e^{iR_\phi(\delta_{\mathrm{hol}})};
+$$
+on its interval subbranch, the circular residual is bounded by the registered
+$\varepsilon_\phi$.  A real-valued
+equality is obtained only after a preregistered interval of length less than
+$2\pi$ selects the holonomy lift.  Convention T.54's number becomes that
+geometric lift only if Theorem T.54b's independent area interval proves the
+required equality.  The direct branch takes $R_\phi=\operatorname{id}$; the
+distinct T.56 branch takes
+$R_\phi(x)=x\operatorname{sinc}(1/\sqrt3)$ on its registered lift. A PMNS
+phase requires Theorem T.24.22's accepted
+$\mathfrak C_{\mathrm{PMNS}}^{CP}$, including its full-matrix, line,
+connection, loop, surface, orientation, lift, source-exhaustion, and circular
+residual tests, as the same subrecord of an accepted
+$\mathfrak C_{\mathrm{fl}}$. The absolute strong-sector phase remains
+governed by the independent Appendix K certificate branch* [Berry 1984;
+Simon 1983].
 
-**Step 2 (CKM phase).** For the flavor loop $\gamma: u_3 \to d_3 \to d_2 \to u_2 \to u_3$ (Definition T.53.3), the holonomy is:
-$$
-\delta_{CKM} = \oint_\gamma \mathcal{A} = \int_\Sigma \omega_{KE}
-$$
-The $E_8$ sector mismatch $(d^2_{32,d}, d^2_{32,u}) = (2, 4)$ yields base phase $\delta_{flat} = 2\arctan(\sqrt{2}/2) = 70.53°$ (Theorem T.54). The symmetric average of Theorem T.55 changes visibility but not phase. On the separate nonlinear phase-response ansatz of Theorem T.56 one defines:
-$$
-\delta_{CKM} = 70.53° \times 0.9454 = 66.7°
-$$
-
-**Step 3 (PMNS phase).** The leptonic sector involves D₄ (charged leptons) and A₂ (neutrinos) geometries. The additional holonomy from the D₄-A₂ mismatch contributes $75°$ (Theorem T.24.22, Steps 3-4), yielding $\delta_{CP} = 232.5°$.
-
-**Step 4 (Strong CP on the separate conditional Appendix K branch).** A constructed equivariant parameter map satisfying Theorem K.6.1 and an accepted QCD gauge-topology bridge satisfying Proposition K.6.4 identify the invariant strong-CP coordinate. A $\sigma$-invariant vacuum plus the operative global-minimizer record selects the gauge-angle representative on the first-harmonic route of Theorem K.6.6, or the all-harmonic positive-sector route of Theorem K.6.2a selects $\bar\theta=0$ directly when its stronger sector-partition hypotheses hold. Because Steps 1–3 retain Berry-phased full Yukawa matrices, the strong-CP branch must additionally supply the common-convention absolute determinant-line certificate of Theorem K.6.11, such as a positive-oriented nondegenerate reference plus determinant-one full complex flavor transport. Positive magnitude data alone do not fix the quark determinant phase. ∎
+*Proof.* Lemmas T.53.1–T.53.2 define the exact chart connection and curvature
+on the fixed positive determinant line; no linear chart formula is used as a
+global identity.  The abelian holonomy--curvature identity gives the geometric
+equalities in (T.57a.1) modulo $2\pi$, and the lift interval selects at most one
+real representative.  Theorem T.53's full-matrix, response-faithful transport,
+response-map, and explicit-rephasing entries either identify the CKM invariant
+with the final response output exactly or certify its stated circular residual.
+Theorem T.54b, Theorem T.56, and Theorem T.24.22
+are independent area, nonlinear-response, and leptonic gates.  Appendix K's equivariant
+gauge-topology, vacuum-selection, and determinant-orientation records address
+an absolute determinant-line phase and therefore are not consequences of the
+relative flavor loop. ∎
 
 **Remark T.57a.1: Type I vs Type II.** The framework distinguishes Type I CP violation in absolute strong-sector parameters from Type II relative Berry holonomy. Type I vanishes only conditionally on the complete Appendix K branch carrying a constructed equivariant $\sigma$-CP map, accepted QCD gauge-topology bridge, $\sigma$-invariant vacuum, operative first-harmonic QCD selection functional with a globally minimizing realized vacuum, and determinant- or Pfaffian-orientation certificate. Type II remains permitted on its separately certified flavor-holonomy branch.
 
@@ -5310,11 +6177,17 @@ Agreement on observables used to choose the triads or continuous response data i
 
 
 
-The same framework predicts large PMNS mixing angles because:
-
-- Charged leptons have triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (2, 6, 4)$ from D₄ cubic geometry
-- Neutrinos have triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (2, 6, 6)$ from A₂ hexagonal geometry on the Majorana A₂ generation-geometry branch (Theorem T.24.5)
-- The D₄–A₂ mismatch between charged lepton and neutrino sectors generates large PMNS mixing
+The charged-lepton and neutrino triads do not by themselves predict PMNS
+angles. On an accepted Takagi-to-Weyl certificate, they register the lifted
+distance patterns $(2,6,4)$ and $(2,6,6)$ and their distinct root-geometry
+labels. Proposition T.24.9 then proves a unique triad only within its finite
+positive-Gram alignment-cost comparison class; it does not select a unique
+embedding or a mixing matrix. Physical PMNS angles require the full
+charged-lepton and neutrino matrices, diagonalizers, labeling and rephasing
+data, residual intervals, and forward lock of the accepted PMNS subrecord
+inside the same $\mathfrak C_{\mathrm{fl}}$. The $D_4$--$A_2$ mismatch is
+therefore structural input to that certified model, not a sufficient cause of
+large mixing.
 
 The complete conditional PMNS model calculation appears in Section T.24. Its displayed one-dimensional residuals do not define $\chi^2/\mathrm{dof}$ because no predeclared row set, joint likelihood, covariance matrix, theory-error model, fitted-parameter count, or profiling rule is supplied.
 
@@ -5322,15 +6195,40 @@ The complete conditional PMNS model calculation appears in Section T.24. Its dis
 
 ## T.22.12 Statistical Significance
 
-**Proposition T.58 (Anti-Numerology Argument).** The PU framework's CKM-sector outputs are overdetermined by multiple constraints within the same discrete geometric construction, providing an internal consistency check against post-hoc numerological fitting.
+**Proposition T.58 (Joint Forward-Test Criterion).**  Let
+$$
+\mathfrak C_{58}
+=(\mathfrak C_{\mathrm{fl}},\mathcal O,\mathcal H,
+\Sigma_{\mathrm{emp}},\Sigma_{\mathrm{th}},\mathcal L,
+\mathcal A_{\mathrm{alt}},\chi_{58})
+$$
+be fixed before inspecting the holdout data, where
+$\mathfrak C_{\mathrm{fl}}$ is one accepted flavor certificate,
+$\mathcal O$ is the finite list of outputs computed from that same record,
+$\mathcal H\subseteq\mathcal O$ is a nonempty holdout set,
+$\Sigma_{\mathrm{emp}}$ and $\Sigma_{\mathrm{th}}$ are the empirical and
+theory covariance ledgers, $\mathcal L$ is the joint likelihood or loss,
+$\mathcal A_{\mathrm{alt}}$ is any declared alternative-model class used for
+a significance claim, and $\chi_{58}$ proves that neither the certificate,
+output list, holdout, covariances, nor loss was selected from the holdout
+values.
 
-*Proof.* Consider the following:
+Then evaluating $\mathcal L$ on $\mathcal H$ is a finite forward test of the
+single certified branch.  Failure of a preregistered acceptance threshold
+rejects that branch rather than licensing retuning of one kernel.  A p-value,
+Bayes factor, or chance-coincidence probability follows only if
+$\mathcal A_{\mathrm{alt}}$ and its measure or priors are also specified.
+Shared discrete constants, a count of displayed agreements, or the absence of
+one fit parameter do not by themselves prove statistical overdetermination.
 
-1. The framework produces multiple CKM-sector outputs (e.g., a Cabibbo-angle scale, quark-mass-ratio constraints, and a CP-phase prediction) from distinct constraints tied to the same underlying discrete geometry.
-1. These outputs are generated without introducing independent continuous fit parameters tuned separately for each observable.
-1. Because the outputs share a common construction, the appropriate interpretation is internal overdetermination: a failure of any one output constitutes a direct falsification of the shared mechanism. Assigning a frequentist “chance coincidence” probability is not meaningful without specifying an explicit alternative-model ensemble, priors, and a multiple-comparisons procedure.
-
-Therefore, the framework's anti-numerology content is the rigidity of a shared constrained construction, not a standalone p-value claim. ∎
+*Proof.*  Acceptance of $\mathfrak C_{\mathrm{fl}}$ makes all entries of
+$\mathcal O$ outputs of one forward-locked record.  The condition $\chi_{58}$
+keeps the holdout independent of construction, while the two covariance
+ledgers and $\mathcal L$ define one reproducible joint comparison.  Therefore
+the threshold test is well defined and a failure falsifies the registered
+branch.  Without an alternative-model probability space, no probability of
+coincidence is defined; without forward locking, the same displayed
+agreements can be produced by post-comparison selection. ∎
 
 ## T.23 Unified Exponential Suppression: The Master Mechanism for Hierarchies
 
@@ -5379,16 +6277,16 @@ The backbone values are assembled from distinct structural gates:
 |Step|Quantity |Value |Origin |Reference |
 |:---|:----------------------------------|:-----------------------|:------------------------------------------------------------------|:---------------|
 |1 |$K_0$ |3 bits |Minimum visited-context capacity under the Theorem 15 hypotheses |Theorem 15 |
-|2 |$d_0$ |$8$ on the minimal Appendix Z branch |Hilbert distinguishability lower bound plus active-dimension saturation |Theorem 23; Theorem Z.2 |
-|3 |$\varepsilon_0$ |$\ln 2$ on the registered binary-record branch |Structural binary log-cardinality, independent of the Hilbert-carrier chain |Definition 28; Theorem J.1 |
-|4 |$a$ |$2$ |Active kernel dimension on the attractor-saturating branch |Theorem Z.1 |
-|5 |$b$ |$d_0 - a = 6$ |Inactive subspace dimension |Definition |
-|5a |$\dim_{\mathbb{C}}(\text{Gr}(2,8))$|$ab = 12$ |Attractor orbit complex dimension; equals Golay $k$ |Theorem Z.6.3a |
-|5b |$\dim_{\mathbb{R}}(\text{Gr}(2,8))$|$2ab = 24$ |Attractor orbit real dimension; equals Golay $n$ and mode count $M$|Theorem Z.6.3a |
+|2 |$d_0$ |$8$ on the minimal Appendix Z branch |Theorem-23 Hilbert distinguishability lower bound plus the independent Theorem-Z.2 same-class comparator/minimality gate |Theorem 23; Theorem Z.2 |
+|3 |$\varepsilon_0$ |$\ln 2$ on the registered binary-record branch |Structural binary log-cardinality, independent of the Hilbert-carrier chain |Definition 28; Definition J.1; Theorem J.1 |
+|4 |$a$ |$2$ |Sharp binary active record, entropy-capacity, quotient, and strict no-surplus gates |Theorem Z.1 |
+|5 |$b$ |$d_0-a=6$ |Peirce complement on the joint $d_0=8,a=2$ branch |Definition; Theorem Z.2.5b |
+|5a |$\dim_{\mathbb C}\mathrm{Gr}(2,8)$ |$ab=12$ |Tangent half-mode count $k_{\mathrm{tan}}$; numerical equality to code $k$ needs the separate MacWilliams gate |Theorem Z.6.3a; Definition Z.13b.0 |
+|5b |$\dim_{\mathbb R}\mathrm{Gr}(2,8)$ |$2ab=24$ |Tangent real dimension and mode count $M$; code length $n=24$ is separately registered |Theorem Z.6.3a; Theorem Z.5; Definition Z.13b.0 |
 |6 |$M$ |$2ab = 24$ |QFI interface modes |Theorem Z.5 |
 |7 |$k$ |$M/2 = 12$ |Golay code dimension on the predictive-recovery MacWilliams branch |Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13 |
 |8 |$D$ |4 |Euclidean response-carrier dimension; $3+1$ spacetime interpretation separately certificate-gated |Definition Z.9a; Theorems Z.10-Z.11; Corollary P.8.3 |
-|9 |$\sigma_B^2$ |$1/M = 1/24$ |Bures variance from capacity saturation |Lemma T.41.2 |
+|9 |$\sigma_B^2$ |$1/M=1/24$ |Centered isotropic tangent variable with the independently declared unit mean-squared-radius normalization; capacity saturation alone does not set the radius |Lemma T.41.2 |
 |10 |$\alpha$ |$1/(16\sigma_B^2) = 3/2$|Hierarchy coefficient |Corollary T.41.3|
 
 
@@ -5416,10 +6314,11 @@ The Peirce-Grassmann tangent count of Theorem Z.5 (equivalently Theorem Z.2.5b) 
 $$
 M=2a(d_0-a)=24.
 $$
-On the predictive-recovery MacWilliams branch (Definition Z.13b.0; Theorem Z.13b.0a), Theorem Z.13 selects
+On the predictive-recovery MacWilliams rate branch, Definition Z.13b.0 and Theorem Z.13b.0a give
 $$
 k=M/2=12.
 $$
+This backbone count does not require or select a distance-$8$ code; that is the separate $\mathfrak C_{\mathrm{dist}}$ branch of Theorem Z.13b.
 The faithful Bures tangent-shell contract of Definition Z.9a and Theorems Z.10--Z.11 gives
 $$
 24=M\le K(D),\qquad K(3)=12,
@@ -5462,72 +6361,60 @@ $$\frac{C_{\max}}{\varepsilon_0} = \frac{\ln(d_0) - \varepsilon_0}{\varepsilon_0
 
 Substitution into the independently assumed action--complexity bridge of Proposition U.14 gives $S_{\mathrm{inst}}=2\kappa$. ∎
 
-This correspondence connects the information-theoretic complexity parameter $\kappa$ to the Euclidean action governing tunneling amplitudes.
+This proposition is an action-quantization gate, not a consequence of the residual-budget identity alone. It applies to an Appendix-U index only after an accepted $\mathfrak C_{U,\mathrm{mark}}$ places that index in the normal-response carrier, and it supplies neither a Fredholm weight nor a physical observable.
 
 -----
 
 ### T.23.4 The Cosmological Constant: Appendix U Reference Branch
 
-**Configuration Space.** Vacuum fluctuations correspond to deformations of the Golay code subspace within the 24-mode interface:
+**Independent Appendix-U carrier.** Appendix U registers a complex carrier-plane pair $(E_U,S_U)$ independently of the binary Golay code and the QFI carrier:
+$$
+\dim_{\mathbb C}E_U=24,
+\qquad
+\dim_{\mathbb C}S_U=12,
+\qquad
+\mathcal M_U=\operatorname{Gr}_{\mathbb C}(12,E_U).
+$$
+Thus $\dim_{\mathbb C}\mathcal M_U=144$ and $\dim_{\mathbb R}T_{S_U}\mathcal M_U=288$. Equality with code or interface counts is numerical compatibility, not a carrier map.
 
-$$\mathcal{M}_\Lambda = \text{Gr}(k, M) = \text{Gr}(12, 24)$$
+**Four-mode closure ledger.** The stages are noninterchangeable:
 
-**Complexity Calculation.**
+|Stage |Conclusion |Independent gate |
+|:--|:--|:--|
+|radially continuous, sampled-angular Hessian |$m_4=4$ |Theorem U.13b and its spectral hypotheses |
+|marked normal-response index |$\kappa_{\mathrm{idx}}=(288-4)/2=142$ |accepted $\mathfrak C_{U,\mathrm{mark}}$ |
+|Euclidean action |$S_{\mathrm{inst}}=2\kappa_{\mathrm{idx}}=284$ |the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 |
+|Euclidean weight magnitude |$w_4=A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ |complete $\mathfrak F_U^{(4)}$ |
+|physical cosmological term |$\Lambda_4L_P^2=8\pi w_4$ |$\mathfrak R_\Lambda^{(4)}$ |
 
-|Component |Formula |Value |
-|:-------------|:----------------------------------|:--------|
-|Base dimension|$k(M-k) = k^2$ |144 |
-|Extra DOF |— |0 |
-|Zero modes |$D + 1$ on the Appendix U five-mode reference branch |5 |
-|**$\kappa_{\mathrm{ref}}$** |$144 - 5/2$ |**141.5**|
-
-**Summary of Appendix U Theorem U.16.** Under the Appendix U leading-order five-mode reference-counting convention, the reference exponent is
-
-$$\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
-
-where Theorem U.3 proves the Grassmannian dimension $k^2=144$, Convention U.14a identifies that complex normal-direction count with the base exponent, and the deficit $(D+1)/2=5/2$ arises from the Appendix U reference-counting convention summarized in Theorem U.15 and recorded in Theorem U.16. Theorem U.8c shows that the pure-coordinate dilatation tangent needed to realize that five-mode branch is obstructed in the Definition U.4 continuum action.
-
-**Result.**
-
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} = (2.88 \pm 0.03)\times 10^{-122}$$
-
-on the Appendix U five-mode reference branch. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives the branch-dependent five-mode reference evaluation. On the Definition U.6 four-mode branch, Theorem U.13b fixes only the exponent $\kappa=142$ under its stated false-vacuum spectral hypotheses; the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains $\varnothing_{\mathrm{cert}}$ until the canonical record $\mathfrak F_U^{(4)}$ of Definition U.73e is accepted. Reusing the five-mode working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor diagnostic, not as a four-mode Fredholm evaluation.
+Theorem U.13b alone proves only the first row. No accepted complete instance of the remaining records is present, so
+$$
+w_4=\varnothing_{\mathrm{cert}},
+\qquad
+\Lambda_4L_P^2=\varnothing_{\mathrm{cert}}.
+$$
+The five-mode number $141.5$ and working conversion $(2.88\pm0.03)\times10^{-122}$ remain reference-convention data. Theorem U.8c excludes the proposed dilatation tangent from the current continuum kernel. Reusing the five-mode prefactor in the four-mode formula is only a same-number diagnostic.
 
 -----
 
-### T.23.5 The Electroweak Scale: $\kappa_{EW} = 38.5$
+### T.23.5 The Steiner Action and Electroweak Scale Gates
 
-**Configuration Space.** Electroweak symmetry breaking involves alignment between left-chiral modes and reservoir coordinates on the coset:
+The coset $\mathcal M_{EW}\cong S^3$ specifies symmetry-breaking geometry; it does not identify a suppression action. The native finite calculation is the marked-pair Steiner ledger:
 
-$$\mathcal{M}_{EW} = \frac{SU(2)_L \times U(1)_Y}{U(1)_{em}} \cong S^3$$
+|Stage |Formula or value |Independent gate |
+|:--|:--|:--|
+|Steiner incidence action |$\kappa_{\mathrm{St}}=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=77/2$ |Theorem T.5 |
+|electroweak action |$\kappa_{EW}=\kappa_{\mathrm{St}}$ |accepted $\mathfrak C_{A\to\mathrm{St}}$ |
+|scale interval |$v/M_{Pl}\in I_Ae^{-\kappa_{EW}}(1+I_R)$ |accepted $\mathfrak S_{EW}$ |
+|central prefactor |$A_{EW}=1.08406869\ldots$ |Theorem T.29's same-saddle determinant model |
 
-**Complexity Calculation.**
-
-|Component |Formula |Value |
-|:----------------|:------------------|:-------|
-|Registered endpoint |$x(1)=e_{p_A}$ |one active pair |
-|Pair-incidence norm |$e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |77 |
-|Quadratic-action normalization |$\tfrac12$ |$1/2$ |
-|**$\kappa_{EW}$** |$\tfrac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |**38.5** |
-
-**Summary (Electroweak Response Action).** Theorem T.5 proves
+On the leading central specialization of all four branches,
 $$
-\kappa_{EW}
-=\frac12\lambda_2(S(5,8,24))
-=\frac{77}{2}
-=38.5.
+v
+=1.08406869\ldots e^{-77/2}(1.2209\times10^{19}\ \mathrm{GeV})
+=251.9993043\ldots\ \mathrm{GeV}.
 $$
-This is the exact least action of the registered fixed-time unit update. The older alignment/coset/zero-mode expression may be retained only as a separate Gaussian-prefactor comparator and is not used to derive the action exponent.
-
-**Result.**
-
-$$v = A_{EW} \cdot e^{-\kappa_{EW}} \cdot M_{Pl} = A_{EW} \cdot e^{-38.5} \cdot M_{Pl}$$
-
-With $e^{-38.5} \approx 1.90 \times 10^{-17}$ and $M_{Pl} = 1.22 \times 10^{19}$ GeV:
-
-$$v \approx 252 \text{ GeV}$$
-
-with the prefactor $A_{EW} = 1.084 \pm 0.005$ obtained in Theorem T.29 within the three-factor determinant model via SU(2) block curvature, the rank-one Schur factor, and the homogeneous-space Jacobian factor. Once that model is fixed, no further continuous tuning enters this subsection. By Theorem T.29.2 the value is model-conditional rather than a theorem-level prefactor derivation. The resulting value is $2.3\%$ above $v_{obs} = 246.22$ GeV.
+This is $2.3472\ldots\%$ above $v_{\mathrm{obs}}=246.22\ \mathrm{GeV}$. It is a diagnostic model comparison, not a certified PU interval: the determinant allowance is not a proved remainder and neither transport record follows from the incidence theorem. Gaussian zero modes and the coset comparator remain in the prefactor ledger.
 
 -----
 
@@ -5567,30 +6454,35 @@ A Yukawa hierarchy may be modeled by suppression along a registered geometric tr
 
 
 
-The fermion mass hierarchy employs a different configuration space—the $E_8$ root lattice—rather than Grassmannian dimension:
+The fermion hierarchy branch uses selected $E_8$ root separations together with the independent Toeplitz--Kraus, heat-kernel, embedding, and mass-realization certificates of Theorem T.39. Its exponential coefficient has the following exact normalization statement.
 
-$$Y_{ij} \propto \exp\left(-\alpha \cdot d^2_{E_8}\right)$$
-
-where $\alpha = 3/2$ (Theorem T.39b) and $d^2_{E_8} \in \{2, 4, 6, 8\}$ are the allowed squared distances between roots in $E_8$.
-
-**Theorem T.39b** (Universal Hierarchy Coefficient). *At the PCE-attractor, under the same mode-equipartition assumption used in Theorem T.29:*
-
+**Theorem T.39b** (Unit-Radius Hierarchy-Coefficient Ledger). Assume the centered isotropic tangent distribution of Lemma T.41.2 has unit mean-squared Bures radius and that the selected root pairs carry the finite embedding certificate of Lemma T.41.4. Define
 $$
-\alpha = \frac{1}{16\sigma_B^2} = \frac{24}{16} = \frac{3}{2}
+\alpha:=\frac{1}{16\sigma_B^2}.
 $$
+Then $\sigma_B^2=1/24$ and
+$$
+\alpha=\frac{1}{16(1/24)}=\frac32.
+$$
+This fixes the coefficient of the certified Gaussian or heat-kernel exponent. It does not remove the Van Vleck and heat-kernel remainders, select physical root labels, turn Yukawa entries into ordered masses, or derive the separate registered IR prescription.
 
-*where $\sigma_B^2 = 1/24$ is the per-mode variance obtained by distributing the unit Bures variance isotropically across the $M=24$ interface modes of Theorem Z.5. The UV value $\alpha_{UV}=3/2$ evolves to $\alpha_{IR}\approx 1.41$ at low scales due to geometric curvature corrections on $\mathrm{Gr}(2,8)$, with negligible RG contributions for leptons.*
+*Proof.* Lemma T.41.2 gives $\sigma_B^2=1/24$ under its explicitly normalized isotropy hypotheses, and direct substitution gives $\alpha=3/2$. Theorem T.39 displays the remaining factors and the independent mass-realization test, so none is cancelled by this arithmetic identity. ∎
 
-**Effective $\kappa$ Values for Yukawa Suppression.**
+**Leading Unit-Radius Model-Kernel Factors.**
 
-|$d^2_{E_8}$|$\kappa_Y = \alpha \cdot d^2$|$e^{-\kappa_Y}$ |Application |
-|:---------:|:---------------------------:|:------------------:|:-------------------|
-|2 |3 |0.050 |$V_{cb}$, $\tau/\mu$|
-|4 |6 |0.0025 |$V_{ub}$, $\mu/e$ |
-|6 |9 |$1.2 \times 10^{-4}$|$t/c$ ratio |
-|8 |12 |$6.1 \times 10^{-6}$|$t/u$ ratio |
+|$q=d^2_{E_8}$|$\kappa(q)=(3/2)q$|$K^{\mathrm{mag}}(q)/A_f=e^{-\kappa(q)}$|Status|
+|:--:|:--:|:--:|:--|
+|2|3|$0.04978706837\ldots$|leading model kernel|
+|4|6|$0.002478752177\ldots$|leading model kernel|
+|6|9|$0.0001234098041\ldots$|leading model kernel|
+|8|12|$0.000006144212353\ldots$|leading model kernel|
 
-**Remark.** Although the Yukawa mechanism shares the foundational constants ($M = 24$, $\sigma_B^2 = 1/24$) with the instanton mechanism, the suppression arises from geodesic distances on $E_8$ rather than from configuration space dimensionality. This represents a complementary realization of the Golay-Steiner structure.
+**Remark.** The shared value $\sigma_B^2=1/24$ is registered through the
+independent centered isotropic unit-radius branch, not as a foundational
+constant or as an instanton-to-flavor implication. The table omits the IR
+coefficient prescription, Van Vleck and heat-kernel remainders, sector
+normalization, matrix assembly, physical labels, and Theorem T.39 realization;
+it therefore contains no mass or mixing prediction.
 
 **Nonformal $E_8$ branch summary.** The external sphere-packing theorem establishes the optimality of the $E_8$ lattice within eight-dimensional Euclidean packing, while Appendix R records the additional even-unimodular lattice hypotheses under which $E_8$ is the unique rank-eight lattice. Octonionic and 240-root observations provide algebraic context but do not prove information-theoretic selection. The fermion triads used in this appendix are registered model assignments; Proposition T.58 establishes only internal overdetermination of the shared CKM construction and does not prove $E_8$ optimality or unique triad selection.
 
@@ -5598,17 +6490,17 @@ $$
 
 ### T.23.8 The Unified Hierarchy Table
 
-**Theorem T.62** (Compiled hierarchy table). *The previously derived hierarchy relations organize into the following two classes.*
+**Theorem T.62** (Typed Conditional Hierarchy Ledger). *The relations below are valid only on the intersection of the completion gates named in their rows; sharing an exponential form or integer does not identify carriers, actions, or observables.*
 
 **Registered sector-specific exponent ledger**
 
 |Quantity |Registered carrier/action |Exponent rule |Independent completion |$\kappa$ or exponent |Scaling |
 |:--|:--|:--|:--|:--:|:--|
-|$\Lambda$ |$\operatorname{Gr}_{\mathbb C}(12,24)$ vacuum Hessian |$(288-m_\Lambda)/2$ |vacuum branch and determinant certificate |$141.5$ for $m_\Lambda=5$; $142$ for $m_\Lambda=4$ |$\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa_\Lambda}$ |
-|$v$ |Steiner active-pair response |$\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}$ |Principle T.13a and $A_{EW}$ |$77/2=38.5$ |$v/M_{Pl}=A_{EW}e^{-38.5}$ |
-|$\eta_B$ |CP half-path plus binary/family share |$77/4+\ln2/3$ |midpoint readout, parallel-family saddles, transport certificate |$19.481049\ldots$ |$\eta_B=\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}e^{-(77/4+\ln2/3)}$ |
-|$M_R$ |registered $E_8$ distance branch |$\alpha_{UV}d_{31}^2$ |scale-map and neutrino branch |$9$ for $(\alpha_{UV},d_{31}^2)=(3/2,6)$ |$M_R/M_{Pl}=e^{-9}$ |
-|$G_F$ |derived from the electroweak scale |$2\kappa_{EW}=77$ in the squared scale |electroweak prefactor and matching convention |$77$ |$G_F=A_{EW}^{-2}e^{77}/(\sqrt2M_{Pl}^2)$ |
+|$w_4$ and $\Lambda_4$ |independent Appendix-U carrier and sampled Hessian |$m_4=4\xrightarrow{\mathfrak C_{U,\mathrm{mark}}}\kappa_{\mathrm{idx}}=142\xrightarrow{\mathrm{U.14}}S_{\mathrm{inst}}=284$ |$\mathfrak F_U^{(4)}$ for $w_4$; $\mathfrak R_\Lambda^{(4)}$ for $\Lambda_4$ |$284$ only on the marked exact exponent-calibration branch |$w_4=A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$; $\Lambda_4L_P^2=8\pi w_4$ only on realization |
+|$v$ |marked-pair Steiner action |$\kappa_{\mathrm{St}}=77/2$ |$\mathfrak C_{A\to\mathrm{St}}$, $\mathfrak S_{EW}$, same-saddle determinant |$\kappa_{EW}=77/2$ only on transport |$v/M_{Pl}\in I_Ae^{-77/2}(1+I_R)$ |
+|$\eta_B$ |CP half-path plus binary/family share |$\kappa_B=\kappa_{EW}/2+\ln2/3$ |electroweak transport, midpoint, family, and baryogenesis records |$77/4+\ln2/3$ only jointly |conditional transport law |
+|$M_R$ |registered $E_8$ distance branch |$\alpha_{UV}d_{31}^2$ |scale map and neutrino branch |$9$ on the stated branch |$M_R/M_{Pl}=e^{-9}$ |
+|$G_F$ |tree consequence of physical $v$ |$2\kappa_{EW}$ in squared scale |all $v$ gates plus tree SM matching |$77$ only on transport |conditional inverse-square law |
 
 **Remark T.62.1: QCD Confinement Scale.** The matching scale $\mu_G = M_{Pl} \cdot e^{-\kappa_{\text{QCD}}}$ with $\kappa_{\text{QCD}} = \text{rank}(E_8) + 1 = 9$ yields:
 
@@ -5635,108 +6527,33 @@ consistent with the world average $\Lambda_{\text{QCD}}^{(5)} = 210 \pm 14$ MeV 
 |$Y_{tc}$ |6 |9 |$1.2 \times 10^{-4}$ |
 |$M_R/M_{Pl}$ |6 |9 |$1.23 \times 10^{-4}$|
 
-*Proof.* The vacuum row is Theorem U.16:
-$$
-\kappa_{\Lambda,\mathrm{ref}} = 144 - \frac{5}{2} = 141.5,
-$$
-so $\Lambda L_P^2 \propto e^{-2\kappa_{\Lambda,\mathrm{ref}}}=e^{-283}$ at fixed prefactor on the Appendix U five-mode reference branch. Theorem U.8c shows that this row is branch-dependent rather than a theorem-level consequence of the current Definition U.4 continuum action. The electroweak row is the Steiner response-action result of Definition T.13 and Theorem T.5:
-$$
-\kappa_{EW}
-=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
-=\frac{77}{2}
-=38.5,
-$$
-hence Principle T.6a gives $v/M_{Pl}=A_{EW}e^{-38.5}$. The baryogenesis row is Theorem Y.8:
-$$
-\kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon_0}{N_g}=19.25+0.23=19.48.
-$$
-The seesaw row is Theorem T.64:
-$$
-\kappa_R=\alpha_{UV}d^2_{31}=\frac32\cdot6=9,
-\qquad
-M_R/M_{Pl}=e^{-9}.
-$$
-Finally, Proposition T.61 gives
-$$
-G_F=\frac1{\sqrt2\,v^2}.
-$$
-Since $v\propto e^{-\kappa_{EW}}M_{Pl}$, it follows that
-$$
-G_F\propto e^{2\kappa_{EW}}M_{Pl}^{-2}=e^{77}M_{Pl}^{-2}.
-$$
-Thus the $G_F$ row is a derived inverse-square consequence of the electroweak scale rather than an additional direct suppression. The $E_8$-distance rows follow from $\kappa_Y=\alpha d^2$ with $\alpha=3/2$ from Theorem T.39b. ∎
+*Proof.* Theorem U.13b proves $m_4=4$ only in its sampled Hessian. Accepted $\mathfrak C_{U,\mathrm{mark}}$ transports that kernel to the independent $288$-direction carrier; Convention U.14a gives $\kappa_{\mathrm{idx}}=142$; and the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 gives $S_{\mathrm{inst}}=284$. Definition U.73e supplies the Fredholm magnitude, while Definition U.73e.6 separately supplies its Einstein realization. Theorem T.5 proves only $\kappa_{\mathrm{St}}=77/2$. Accepted $\mathfrak C_{A\to\mathrm{St}}$ gives $\kappa_{EW}$, and only $\mathfrak S_{EW}$ with the same-saddle determinant gives $v$. The baryogenesis row additionally consumes its Appendix-Y records; the seesaw row consumes its scale map; and $G_F$ inherits every gate of $v$. The $E_8$ rows follow only on their registered distance-to-action branches. ∎
 
-**Corollary T.62a** (Five-Mode Reference Vacuum–Electroweak Sum Rule). Within the Appendix U five-mode reference branch of Theorem U.16,
+**Corollary T.62a** (Five-Mode Reference--Steiner Arithmetic Identity). The independent five-mode Appendix-U comparison index and finite Steiner action obey
 $$
-2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 360 = \binom{D+2}{2}M.
+2\kappa_{\mathrm{ref}}+2\kappa_{\mathrm{St}}
+=283+77=360=\binom{D+2}{2}M
 $$
+at $(D,M)=(4,24)$.
 
-*Proof.* Theorem U.16 gives $\kappa_{\Lambda,\mathrm{ref}}=141.5$, so $2\kappa_{\Lambda,\mathrm{ref}}=283$. Corollary T.5c gives $2\kappa_{EW}=77$. Hence
-$$
-2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 283+77=360.
-$$
-Theorem Z.11 gives $D=4$ and Theorem Z.5 gives $M=24$, so
-$$
-\binom{D+2}{2}M=\binom{6}{2}\cdot 24 = 15\cdot 24 = 360.
-$$
-Therefore the two expressions agree on that reference branch. Theorem U.8c shows that this identity is branch-specific rather than a theorem-level vacuum closure for the current Definition U.4 continuum action. ∎
+*Proof.* Theorem U.16 gives the arithmetic reference value $283$, Theorem T.5 gives $77$, and $\binom62\,24=360$. ∎
 
-**Remark T.62b (Scope of the Vacuum–Electroweak Numerical Identity).** On the Appendix U five-mode reference branch,
-$$
-2\kappa_{\Lambda,\mathrm{ref}}+2\kappa_{EW}
-=283+77
-=360
-=\binom{D+2}{2}M
-$$
-at $(D,M)=(4,24)$. The first term is the vacuum reference Hessian ledger and the second is the independent Steiner response action. The equality to $15M$ is exact arithmetic on the intersection of those registered branches; it neither derives $D=4$ nor supplies a common vacuum/electroweak mechanism. Changing the independently determined $D$, $M$, vacuum branch, or electroweak response operator changes the identity. The Moonshine dimensions $196883$ and $196884$ enter neither ledger.
+**Remark T.62b (Scope of the Arithmetic Identity).** The first term is an independently registered reference count, the second a Steiner incidence theorem, and the right side a separate response-carrier ledger. Exact numerical equality supplies no carrier map, action transport, determinant, physical scale law, or common mechanism. Theorem U.8c prevents the five-mode count from being read as the current continuum kernel.
 
-**Corollary T.62c (Vacuum–Electroweak Complexity Product Lock).** On the Appendix U five-mode reference branch, together with the electroweak hierarchy branch of Theorem T.5 and the determinant normalization of Theorem T.29, the measured dimensionless vacuum/electroweak product satisfies
+**Corollary T.62c (Four-Mode Vacuum--Electroweak Product on the Full Certificate Intersection).** Assume Theorem U.13b's hypotheses, accepted $\mathfrak C_{U,\mathrm{mark}}$, exact $\mathfrak C_{U,\mathrm{act}}$, and complete $\mathfrak F_U^{(4)}$. Assume in addition that accepted $\mathfrak R_\Lambda^{(4)}$ derives
 $$
-\boxed{
-(\Lambda L_P^2)\left(\frac{v}{M_{Pl}}\right)^2
-=
-8\pi A_{\mathrm{eff}}A_{EW}^2e^{-360}.
-}
+w_4^{\mathrm{real}}=w_4^{\mathrm{dec}}
+=A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}
+$$
+in the same normalization; acceptance of $\mathfrak R_\Lambda^{(4)}$ without this equality is insufficient. Independently assume accepted $\mathfrak C_{A\to\mathrm{St}}$, accepted $\mathfrak S_{EW}$ with zero central remainder, and Theorem T.29's same-saddle central determinant branch. Then
+$$
+\boxed{(\Lambda_4L_P^2)\left(\frac v{M_{Pl}}\right)^2
+=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}A_{EW}^2e^{-361}.}
 \tag{T.62c}
 $$
-Equivalently,
-$$
--\ln\left[
-\frac{
-(\Lambda L_P^2)(v/M_{Pl})^2
-}{
-8\pi A_{\mathrm{eff}}A_{EW}^2
-}
-\right]
-=
-360
-=
-15M.
-$$
-The product relation is a branch-level cross-domain lock: the cosmological constant and the electroweak scale use different observables and different prefactors, but their leading exponential ledger closes on the same $D=4$, $M=24$ count.
+Equivalently the normalized negative logarithm is $361=15M+1$. No complete U certificate intersection is accepted, so this is a forward-verifiable branch law rather than a current numerical prediction.
 
-*Proof.* On the Appendix U five-mode reference branch,
-$$
-\Lambda L_P^2
-=
-8\pi A_{\mathrm{eff}}e^{-2\kappa_{\Lambda,\mathrm{ref}}}.
-$$
-On the electroweak determinant branch,
-$$
-\frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}}.
-$$
-Therefore
-$$
-(\Lambda L_P^2)\left(\frac{v}{M_{Pl}}\right)^2
-=
-8\pi A_{\mathrm{eff}}A_{EW}^2
-e^{-2\kappa_{\Lambda,\mathrm{ref}}-2\kappa_{EW}}.
-$$
-Corollary T.62a gives
-$$
-2\kappa_{\Lambda,\mathrm{ref}}+2\kappa_{EW}=360.
-$$
-Substitution proves Equation T.62c. Since Theorem U.8c identifies the five-mode vacuum count as a reference branch rather than an unconditional continuum closure, the product lock inherits that status. ∎
+*Proof.* The stated realization equality and Definition U.73e.6 give $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$, while the independent electroweak gates give $v/M_{Pl}=A_{EW}e^{-77/2}$. Multiplication gives exponent $284+77=361$. No carrier, decay-to-real identification, or prefactor is transferred between sectors. ∎
 
 -----
 
@@ -5744,15 +6561,15 @@ Substitution proves Equation T.62c. Since Theorem U.8c identifies the five-mode 
 
 The following relationships emerge from the unified framework and provide internal consistency checks.
 
-**Branch-arithmetic cross-check.** On the branches carrying $M=24$, $\kappa_{EW}=77/2$, and $\kappa_Q=11$,
+**Branch-arithmetic cross-check.** On the branches carrying $M=24$, the native Steiner value $\kappa_{\mathrm{St}}=77/2$, and the independent primordial reference index $\kappa_Q=11$,
 $$
 284+77=361=15M+1,
 \qquad
-\frac{\kappa_Q}{\kappa_{EW}}=\frac{22}{77}=\frac27,
+\frac{\kappa_Q}{\kappa_{\mathrm{St}}}=\frac{22}{77}=\frac27,
 \qquad
 e^{-11}=1.670170079\ldots\times10^{-5}.
 $$
-If, in addition,
+If, in addition, $\mathfrak C_{A\to\mathrm{St}}$, $\mathfrak S_{EW}$, and the same-saddle prefactor branch are accepted so that
 $$
 \frac{v}{M_{Pl}}=A_{EW}e^{-77/2},
 \qquad
@@ -5767,35 +6584,35 @@ Q
 $$
 The identity relates the two named branch parameterizations; it does not determine both prefactors. Likewise, changing a vacuum exponent from $283$ to $284$ changes the exponential weight by a factor $e^{-1}$ only when its prefactor is held fixed. Prefactors inferred by fitting the same observed target cannot then be used as independent evidence for that factor. No universal normal form for every exponent is asserted.
 
-**Proposition T.63a** (Reference Complexity Ratio). *On the Appendix U five-mode reference branch, the ratio of cosmological to electroweak complexity is*
-
-$$\frac{\kappa_{\Lambda,\mathrm{ref}}}{\kappa_{EW}} = \frac{141.5}{38.5} \approx 3.68.$$
-
-*The corresponding corrected four-mode branch value, under the explicit false-vacuum spectral hypotheses of Theorem U.13b, is*
-
-$$\frac{\kappa_{\Lambda,\mathrm{trans}}}{\kappa_{EW}} = \frac{142}{38.5} \approx 3.69.$$
-
-**Corollary T.63.1** (Dimensionless Vacuum–Electroweak Quotient). On the five-mode reference branch and the electroweak scale branch,
+**Proposition T.63a** (Reference-Index--Steiner Ratios). The independent arithmetic values satisfy
 $$
-\kappa_{\Lambda,\mathrm{ref}}-\kappa_{EW}=103
-$$
-and the dimensionless quotient is
-$$
-\frac{\Lambda L_P^2}{(v/M_{Pl})^2}
-=\frac{8\pi A_{\mathrm{eff}}}{A_{EW}^2}
-e^{-2(\kappa_{\Lambda,\mathrm{ref}}-\kappa_{EW})}
-=\frac{8\pi A_{\mathrm{eff}}}{A_{EW}^2}e^{-206}.
-$$
-Here $e^{-206}=3.43\times10^{-90}$. On the four-mode theorem branch,
-$$
-\frac{\Lambda L_P^2}{(v/M_{Pl})^2}
-=\frac{8\pi A_{\mathrm{eff}}^{(4)}}{A_{EW}^2}e^{-207},
+\frac{\kappa_{\mathrm{ref}}}{\kappa_{\mathrm{St}}}
+=\frac{283}{77},
 \qquad
-e^{-207}=1.26\times10^{-90}.
+\frac{\kappa_{\mathrm{idx}}}{\kappa_{\mathrm{St}}}
+=\frac{284}{77}
 $$
-The prefactor ratio is part of the equality and cannot be omitted.
+when $\mathfrak C_{U,\mathrm{mark}}$ fixes the four-mode index. The denominator becomes a physical electroweak action only on accepted $\mathfrak C_{A\to\mathrm{St}}$; neither ratio supplies an action, scale, or common carrier.
 
-**Corollary T.63.2** (Electroweak–Baryon Square-Root Lock). On the Appendix Y branch carrying Lemma Y.8.1's midpoint half-history, Lemma Y.8.2's noncancelling parallel-family saddles, the structural binary value of Definition J.1 and Theorem J.1, and the accepted transport certificate,
+**Corollary T.63.1** (Arithmetic Differences and Conditional Vacuum--Electroweak Quotients). The native values obey
+$$
+\kappa_{\mathrm{ref}}-\kappa_{\mathrm{St}}=103,
+\qquad
+\kappa_{\mathrm{idx}}-\kappa_{\mathrm{St}}=207/2.
+$$
+On a complete five-mode physical and electroweak certificate intersection,
+$$
+\frac{\Lambda_5L_P^2}{(v/M_{Pl})^2}
+=\frac{8\pi A_{\mathrm{eff}}^{\mathrm{Fred},5}}{A_{EW}^2}e^{-206};
+$$
+on the complete four-mode intersection,
+$$
+\frac{\Lambda_4L_P^2}{(v/M_{Pl})^2}
+=\frac{8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}}{A_{EW}^2}e^{-207}.
+$$
+Neither full U realization package is accepted, so these are conditional laws and the prefactor ratios cannot be omitted.
+
+**Corollary T.63.2** (Electroweak–Baryon Exponent-Elimination Lock). On the Appendix Y branch carrying Lemma Y.8.1's midpoint half-history, Lemma Y.8.2's noncancelling parallel-family saddles, the structural binary value of Definition J.1 and Theorem J.1, and the accepted transport certificate,
 $$
 \kappa_B=\frac{\kappa_{EW}}2+\frac{\ln2}{3}.
 $$
@@ -5824,57 +6641,43 @@ $$
 $$
 The equality is exact on that joint branch; its transport and determinant factors remain the independently evaluated prefactor.
 
-**Proposition T.64a** (Registered Dimensionless Ledger Ratios). The vacuum branches satisfy
+**Proposition T.64a** (Typed Reference-Ledger Ratios). Let $q_U:=\dim_{\mathbb C}\mathcal M_U=144$. Then
 $$
-\frac{\kappa_{\Lambda,\mathrm{ref}}}{k^2}
-=\frac{141.5}{144}
-=1-\frac{5}{288},
+\frac{\kappa_{\mathrm{ref}}}{q_U}=1-\frac5{288},
 \qquad
-\frac{\kappa_{\Lambda,\mathrm{trans}}}{k^2}
-=\frac{142}{144}
-=1-\frac1{72}.
+\frac{\kappa_{\mathrm{idx}}}{q_U}=1-\frac1{72}
 $$
-The independent electroweak response action satisfies the numerical comparison
-$$
-\frac{\kappa_{EW}}{b^2}
-=\frac{77}{72}.
-$$
-The first two equalities encode the Appendix U zero-mode deficits. The last compares the Steiner pair-incidence action with $b^2=36$ and is not a zero-mode formula.
+on the respective reference and marked-index branches. Independently, $\kappa_{\mathrm{St}}/b^2=77/72$ when $b=6$. These compare distinct typed invariants: $q_U$ is not binary $k^2$, and no ratio is a carrier or physical-scale theorem.
 
 -----
 
 ### T.23.10 Sector-Resolved Hierarchy Composition
 
-**Theorem T.63** (Sector-Resolved Hierarchy Composition). On the intersection of the registered Appendix U and Appendix T branches,
+**Theorem T.63** (Sector-Resolved Hierarchy Composition). Assume a U branch with exact sampled-Hessian nullity $m_U$, accepted $\mathfrak C_{U,\mathrm{mark}}$, and the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14. Let its complete Fredholm record output
 $$
-\Lambda L_P^2
-=8\pi A_{\mathrm{eff}}e^{-2\kappa_\Lambda},
+w_U=A_U^{\mathrm{Fred}}e^{-(288-m_U)},
+\qquad A_U^{\mathrm{Fred}}>0,
+$$
+and let its accepted Einstein-realization record output $\Lambda_U$ and verify $\Lambda_UL_P^2=8\pi w_U$. Independently assume accepted $\mathfrak C_{A\to\mathrm{St}}$ and accepted $\mathfrak S_{EW}$ with the exact singleton specialization $I_A=\{A_{EW}\}$ and $I_R=\{0\}$. Then
+$$
+\Lambda_UL_P^2=8\pi A_U^{\mathrm{Fred}}e^{-(288-m_U)},
 \qquad
-\frac v{M_{Pl}}
-=A_{EW}e^{-\kappa_{EW}},
+\frac v{M_{Pl}}=A_{EW}e^{-77/2},
 $$
-where $\kappa_\Lambda=(288-m_\Lambda)/2$ is the vacuum Hessian-counting exponent and
+and hence
 $$
-\kappa_{EW}
-=\frac12e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}
-=\frac{77}{2}
+(\Lambda_UL_P^2)\left(\frac v{M_{Pl}}\right)^2
+=8\pi A_U^{\mathrm{Fred}}A_{EW}^2e^{-(365-m_U)}.
 $$
-is the Steiner response action. Hence the two sector laws compose into the exact cross-ledger product
-$$
-(\Lambda L_P^2)\left(\frac v{M_{Pl}}\right)^2
-=8\pi A_{\mathrm{eff}}A_{EW}^2
-e^{-[(288-m_\Lambda)+77]}.
-$$
+For the four-mode branch the exponent is $361$.
 
-*Proof.* Substitute the two registered scale laws and collect exponents. Convention U.14a gives $2\kappa_\Lambda=288-m_\Lambda$, while Theorem T.5 gives $2\kappa_{EW}=77$. No common fluctuation operator is required or asserted. ∎
+*Proof.* The U marking gives the index, Proposition U.14 gives action $288-m_U$, and the Fredholm and realization records give the first law. Theorem T.5 gives the native value $77/2$, while the transport and scale records give the second law. Multiplication proves the formula without identifying carriers. ∎
 
-**Corollary T.65.1** (Discrete Action Data on the Registered Branches). Once a vacuum branch fixes $m_\Lambda$ and an electroweak branch fixes $(B,p_A)$, the two leading exponents are discrete:
+**Corollary T.65.1** (Discrete Native Data and Their Transport Gates). Theorem U.13b proves $m_4=4$ in its sampled Hessian, while Theorem T.5 proves
 $$
-2\kappa_\Lambda=288-m_\Lambda,
-\qquad
-2\kappa_{EW}=e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=77.
+2\kappa_{\mathrm{St}}=e_{p_A}^{\mathsf T}B^{\mathsf T}Be_{p_A}=77.
 $$
-The vacuum exponent changes only when its certified Hessian kernel changes, and the electroweak action changes only when the registered incidence operator, endpoint, or action normalization changes. Determinants, matching, threshold corrections, and renormalized stability remain in their named certificates and prefactors.
+Accepted $\mathfrak C_{U,\mathrm{mark}}$ separately yields $(N_{\mathrm{idx}},\kappa_{\mathrm{idx}})=(284,142)$, and accepted $\mathfrak C_{A\to\mathrm{St}}$ separately yields $\kappa_{EW}=\kappa_{\mathrm{St}}$. The U action remains a further gate beyond the U index. The accepted electroweak transport is the distinct action gate; both prefactors, both observable maps, and all remainders remain separately required.
 
 -----
 
@@ -5886,43 +6689,39 @@ The vacuum exponent changes only when its certified Hessian kernel changes, and 
 |**Extra dimensions** |Geometric dilution |Model-dependent |Model-dependent |
 |**Anthropic/landscape** |Environmental selection |Selection statement |Selection statement |
 |**Technical naturalness**|Symmetry protection |Model-dependent |Partial |
-|**PU Framework** |Sector-resolved registered actions |Appendix U five-mode reference exponent $141.5$ or certified four-mode exponent $142$ |Steiner response action $\kappa_{EW}=77/2$ plus the scale bridge and forward prefactor |
+|**PU Framework** |Sector-resolved native calculations plus explicit transport gates |U.13b fixes sampled nullity; marking, action, Fredholm, and Einstein-realization records remain necessary for physical $\Lambda$ |T.5 fixes $\kappa_{\mathrm{St}}=77/2$; action transport, scale, same-saddle determinant, and remainder records remain necessary for $v$ |
 
-The PU entry is a constructive two-operator result: Appendix U fixes the vacuum exponent on its accepted Hessian branch, while Definition T.13 and Theorem T.5 fix the electroweak response action. Theorem T.63 proves their product composition. Radiative stability and the numerical scale remain controlled by the renormalized matching and determinant certificates rather than by a false shared zero-mode count.
+The PU entry consists of two constructive native results followed by noninterchangeable certificate chains. Theorem T.63 proves their exact product only on the full branch intersection. Failure of a physical bridge does not alter its upstream finite theorem or the unrelated sector.
 
 -----
 
 ### T.23.12 Predictions and Extensions
 
-**Prediction T.3** (Registered Discrete-Action Spectrum). For any accepted scale branch
+**Prediction T.3** (Certificate-Gated Discrete-Action Spectrum). For a completed scale branch
 $$
-\frac E{M_{Pl}}=A_Ee^{-\kappa_E},
+\frac E{M_{Pl}}=A_Ee^{-S_E},
 \qquad
-\log_{10}\frac E{M_{Pl}}
-=\log_{10}A_E-\frac{\kappa_E}{\ln10}.
+\log_{10}\frac E{M_{Pl}}=\log_{10}A_E-\frac{S_E}{\ln10}.
 $$
-Its allowed values are computed from that branch's registered action: Appendix U uses the Grassmannian Hessian ledger; the electroweak branch uses $\frac12e_p^{\mathsf T}B^{\mathsf T}Be_p$; and the flavor branches use registered $E_8$ distance actions. A new scale tests PU only after its operator, endpoint or saddle, scale bridge, and prefactor interval are fixed before comparison.
+A native dimension or finite action enters $S_E$ only through its typed transport certificate. Appendix U requires the sampled-Hessian, marking, action, Fredholm, and realization chain; the electroweak row requires the Steiner theorem, action transport, scale record, and same-saddle prefactor; flavor rows require their distance-to-action and observable maps. A new scale tests PU only after the complete record and interval are fixed before comparison.
 
-**Prediction T.4** (Steiner Relabeling and Operator-Change Signature). For the $S(5,8,24)$ incidence operator, every unit pair endpoint obeys
+**Prediction T.4** (Steiner Relabeling and Transported Operator-Change Signature). For $S(5,8,24)$ every marked unit-pair endpoint obeys
 $$
 e_p^{\mathsf T}B^{\mathsf T}Be_p=77,
 $$
-so relabeling the active pair leaves $\kappa_{EW}=77/2$ invariant. Replacing the registered endpoint $e_p$ by $u$ or the operator $B$ by $B'$ changes the action by the computable amount
+so relabeling leaves $\kappa_{\mathrm{St}}=77/2$ invariant. Replacing $(B,e_p)$ by $(B',u)$ changes the native action by
 $$
-\Delta\kappa_{EW}
-=\frac12\left(
-u^{\mathsf T}{B'}^{\mathsf T}B'u
--e_p^{\mathsf T}B^{\mathsf T}Be_p
-\right),
+\Delta\kappa_{\mathrm{St}}
+=\frac12\left(u^{\mathsf T}{B'}^{\mathsf T}B'u-e_p^{\mathsf T}B^{\mathsf T}Be_p\right).
 $$
-and, at fixed prefactor, rescales $v$ by $e^{-\Delta\kappa_{EW}}$. Electroweak Gaussian zero modes alter the separate prefactor ledger and do not shift this response action.
+If accepted transport certificates for both operators preserve this difference, then $\Delta\kappa_{EW}=\Delta\kappa_{\mathrm{St}}$; if the scale record and prefactor are held fixed, $v$ rescales accordingly. Neither physical conclusion follows from incidence alone. Gaussian zero modes remain in the prefactor ledger.
 **Theorem T.64 (Seesaw Scale).** Assume the scale map
 $$
 \frac{M_R}{M_{Pl}}
 =
 e^{-\alpha_{UV}d_{31}^2}.
 $$
-Corollary T.41.3 gives the UV hierarchy coefficient $\alpha_{UV}=3/2$ from $\sigma_B^2=1/24$, and the Majorana $A_2$ neutrino triad $(d^2_{32},d^2_{31},d^2_{21})=(2,6,6)$ of Section T.24.5 selects $d_{31}^2=6$. Then
+Corollary T.41.3 gives the branch coefficient $\alpha_{UV}=3/2$ from $\sigma_B^2=1/24$. Proposition T.24.9 proves that the positive-stiffness alignment cost uniquely minimizes at $(d^2_{32},d^2_{31},d^2_{21})=(2,6,6)$ on its exhaustive full-rank comparison class; its complete-PCE and physical-label readings require the accepted $\mathfrak C_{\mathrm{align}}$ and $\mathfrak C_{\mathrm{fl}}$ gates. On that registered label branch, $d_{31}^2=6$. Then
 $$
 M_R
 =
@@ -5956,11 +6755,11 @@ Exponential suppression is a reusable model form, not one universal derivation o
 
 The sector-resolved exponential ledger demonstrates that:
 
-1. **The discrete backbone fixes common inputs:** The registered chain $K_0\to d_0\to(a,b)\to M$ fixes the carrier and interface data used by the sector models.
-1. **Each exponent has its own action:** The vacuum exponent is a certified Hessian-counting action, the electroweak exponent is the Steiner response action, and flavor exponents use their registered distance kernels.
-1. **Cross-sector identities are exact compositions:** Theorem T.63 and Corollary T.63.2 follow by eliminating the registered exponentials without identifying their operators.
-1. **Prefactors remain calculable obligations:** Determinants, matching, transport, thresholds, and remainders are fixed by the named forward certificates.
-1. **Falsification is branch-local and quantitative:** A failed exponent, scale bridge, or prefactor interval rejects the corresponding registered branch without altering unrelated theorem stacks.
+1. **The discrete backbone supplies typed inputs:** its code, QFI, shell, and design values are not automatically Appendix-U or physical-action carriers.
+1. **Native results precede transport:** U.13b gives sampled nullity and T.5 gives $\kappa_{\mathrm{St}}$; marked indices and physical actions require different certificates.
+1. **Cross-sector identities require branch intersections:** T.63 follows only after complete action and observable packages coexist, without identifying operators.
+1. **Prefactors remain calculable obligations:** determinants, matching, transport, thresholds, realization maps, covariance, and remainders are fixed by named forward records.
+1. **Falsification is branch-local:** a failed transport, scale, prefactor, or observable interval rejects that branch without altering an upstream finite theorem.
 
 The reusable scale form is
 $$
@@ -5997,10 +6796,10 @@ This part develops a conditional neutrino and PMNS model on declared $E_8$/Grass
 |Atmospheric Angle |$\theta_{23} = 47.4^\circ$ |
 |Solar Angle |$\theta_{12} = 33.7^\circ$ |
 |Reactor Angle |$\theta_{13} = 8.7^\circ$ |
-|Neutrino CP Phase |$\delta_{CP} = 232.5^\circ$ |
-|Jarlskog Invariant |$J_{CP} = -0.0268414$ |
+|Neutrino CP Phase |$\delta_{CP}^{\mathrm{conv}}=232.5^\circ$ as a convention-level diagnostic; geometric and physical promotion require Theorem T.24.22's certificates |
+|Jarlskog Invariant |$J_{CP}^{\mathrm{conv}}=-0.0268414$ on the same model branch; physical promotion requires the common full PMNS matrix certificate |
 
-All parameters connect directly to geometry and PCE. Any quoted $\chi^2/\text{dof}$ should be read only as a diagnostic (it depends on the uncertainty model and ignores correlations), not as a standalone goodness-of-fit proof.
+The table combines structural geometry, registered response models, and certificate-gated physical identifications. In particular, the PMNS phase and Jarlskog rows remain convention-level diagnostics until their common geometric and full-matrix records are accepted. Any quoted $\chi^2/\text{dof}$ should be read only as a diagnostic (it depends on the uncertainty model and ignores correlations), not as a standalone goodness-of-fit proof.
 
 -----
 
@@ -6014,17 +6813,29 @@ The derivation chain from Sections T.1–T.21 establishes the complete set of fo
 
 **Recall from Theorem 23 (MPU Dimension).** Theorem 15 gives $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, and Theorem 23 gives $d_0 \ge N_{\mathrm{vis}}^{\min}$ on the Hilbert-carrier branch; on the minimal PCE branch used throughout the Appendix Z backbone one has $d_0 = 8$ (Theorem Z.2).
 
-**Recall from Theorem Z.1 (Active Dimension).** On the attractor-saturating branch $\varepsilon_0=\ln2$, Theorem Z.1 fixes the active kernel dimension to $a = 2$.
+**Recall from Theorem Z.1 (Active Dimension).** On the registered binary-support branch with $\varepsilon_0=\ln2$, and only after the sharp match/mismatch record, entropy-capacity, quotient, and strict no-surplus gates of Theorem Z.1 are accepted, the active kernel dimension is $a=2$.
 
 **Definition (Inactive Dimension).** The inactive subspace dimension is $b = d_0 - a = 6$.
 
 **Recall from Theorem Z.5 (Interface Modes).** The quantum Fisher information interface has $M = 2ab = 24$ active modes.
 
-The complete derivation chain:
+The foundational inputs form the following forked branch ledger:
 
-$$K_0 = 3 \xrightarrow{\text{Thm 15}} N_{\mathrm{vis}}^{\min}=2^{K_0}=8 \xrightarrow{\text{Thm 23/Z.2}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
+$$
+\begin{aligned}
+&\{\text{Theorem 15 hypotheses}\}
+&&\Longrightarrow (K_0,N_{\mathrm{vis}}^{\min})=(3,8),\\
+&\{\text{Theorem 23 distinguishability bound; Theorem Z.2 comparator/minimality}\}
+&&\Longrightarrow d_0=8,\\
+&\{\text{registered binary support; Theorem Z.1 active-record/capacity/quotient/no-surplus gates}\}
+&&\Longrightarrow a=2,\\
+&\{d_0=8,a=2;\ \text{Peirce--QFI tangent count}\}
+&&\Longrightarrow (b,M)=(6,24).
+\end{aligned}
+$$
+No displayed row supplies the independent premises of another merely because their numerical values coexist.
 
-**Summary (Bures Variance).** *Assume that the Bures-orthonormal tangent variable $\xi\in\mathbb R^{24}$ is centered, has isotropic covariance $\operatorname{Cov}(\xi)=\sigma_B^2I_{24}$, and is normalized by capacity saturation so that $\langle r_B^2\rangle:=\mathbb E\lVert\xi\rVert^2=1$. Then*
+**Summary (Bures Variance).** *Assume that the Bures-orthonormal tangent variable $\xi\in\mathbb R^{24}$ is centered, has isotropic covariance $\operatorname{Cov}(\xi)=\sigma_B^2I_{24}$, and independently satisfies the unit mean-squared-radius convention $\langle r_B^2\rangle:=\mathbb E\lVert\xi\rVert^2=1$. Then*
 $$
 \langle r_B^2\rangle
 =\operatorname{Tr}(\operatorname{Cov}\xi)
@@ -6089,9 +6900,16 @@ Thus $1.418$ must be registered as an ansatz or calibration and is not derived b
 
 Theorem T.55 supplies a sinc visibility factor while preserving phase; both numerical multiplications above require their separately registered model prescriptions.
 
-**Remark T.24.2.3: Connection to $\sqrt{2}$.** *The sinc-corrected value $\alpha_{\text{IR}} = 1.418$ is remarkably close to $\sqrt{2} = 1.414$. The approximate relation $\alpha_{\text{IR}} \approx \sqrt{a}$ (where $a = 2$ is the active dimension from Theorem Z.1) may reflect deeper structure connecting the Landauer cost to the effective hierarchy.*
+**Remark T.24.2.3: Numerical Proximity to $\sqrt2$.** The registered value
+$\alpha_{\mathrm{IR}}=1.41804458\ldots$ is numerically close to
+$\sqrt2=1.41421356\ldots$. This coincidence does not derive either value or a
+map from the active dimension $a=2$ to the hierarchy coefficient.
 
-**Remark T.24.2.4: RG Running.** *The one-loop RG evolution contributes negligibly for leptons. The Yukawa self-term gives $\delta_{\text{RG}} \approx 7 \times 10^{-5}$, which is $< 0.01%$ of $\alpha_{\text{UV}}$ and absorbed within the theoretical uncertainty of the sinc derivation.*
+**Remark T.24.2.4: Separate RG Ledger.** Any RG contribution must be computed
+in a declared scheme with thresholds, matching scale, input couplings, and
+truncation error. It cannot be absorbed into an uncertainty of the sinc
+prescription because no derivation or certified uncertainty interval for that
+prescription has been proved.
 
 **Remark T.24.2.5: Neutrino-Sector UV Branch.** *For the neutrino sector, the seesaw model is evaluated at the scale $M_R\sim10^{15}$ GeV. On the separately registered triplet-projection exponent branch, the hierarchy coefficient is*
 
@@ -6216,44 +7034,97 @@ $$
 
 -----
 
-### T.24.5 Neutrino Triad: A₂ Constraint for Majorana Fermions
+### T.24.5 Registered Takagi--Weyl $A_2$ Neutrino-Triad Branch
 
-The neutrino triad differs from the charged lepton triad because of Majorana structure.
+A complex symmetric Majorana operator permits Takagi diagonalization but does not select an $A_2$ root triad. The different triad is obtained only on the marked Takagi--Weyl $A_2$ datum and alignment-cost branch of Definition T.24.5a and Proposition T.24.9.
 
-**Definition T.24.5a** (Takagi-Weyl Majorana Geometry Datum). A Takagi-Weyl Majorana geometry datum consists of:
+**Definition T.24.5a** (Takagi-Weyl Majorana Geometry Datum). A Takagi-Weyl Majorana geometry datum is a finite record
+$$
+\mathfrak C_{\mathrm{TW}}
+=
+\left(
+M_\nu,U,D,\mathcal P_D,\mathfrak s_D,\{P_B\}_{B\in\mathcal P_D},
+H_\nu^{\mathrm{gen}},g_\nu,\beta_\nu,\{v_{ij}\}_{i\ne j},
+\iota_\nu,\jmath_\nu,\pi,\chi_{\mathrm{TW}}
+\right)
+$$
+at one declared scale and in one declared scheme, with the following fields and acceptance tests.
 
-1. a complex symmetric three-generation Majorana mass operator $M_\nu=M_\nu^T$;
-
-2. its Autonne-Takagi diagonalization
+1. $M_\nu=M_\nu^T$ is a complex symmetric three-generation Majorana mass operator, $U\in U(3)$, and
 $$
 U^TM_\nu U=D,
 \qquad
 D=\operatorname{diag}(m_1,m_2,m_3),
 \qquad
-m_i\ge0;
+m_i\ge0.
 \tag{T.24.5a.1}
 $$
+Exact arithmetic or outward-rounded intervals verify symmetry, unitarity, and the Takagi residual. The certified multiplicity partition $\mathcal P_D$ groups exactly equal Takagi values, and
+$$
+P_B:=\sum_{i\in B}u_iu_i^\dagger
+$$
+is the corresponding invariant projector. If the zero block has size $k_0$ and a positive repeated-value block has size $k_\lambda$, the stabilizer ledger records the full Takagi freedom
+$$
+\mathfrak s_D
+=
+U(k_0)\times\prod_{\lambda>0}O(k_\lambda)
+$$
+and its induced label permutations. A labeled entrywise datum is accepted only when the certified intervals for the three $m_i$ are pairwise disjoint, in which case $P_i=u_iu_i^\dagger$ is invariant under the residual column freedom. If a degeneracy is certified, only the block projectors $P_B$ and statements invariant under $\mathfrak s_D$ survive; no ordered $i\leftrightarrow j$ root claim is accepted.
 
-3. the traceless eigenvalue-difference plane
+2. The reference Weyl plane and its roots are
 $$
 \mathfrak h_0
 =
-\{x\in\mathbb R^3:x_1+x_2+x_3=0\};
+\{x\in\mathbb R^3:x_1+x_2+x_3=0\},
 \tag{T.24.5a.2}
 $$
-
-4. the standard $A_2$ roots
 $$
 \alpha_{ij}=e_i-e_j,
 \qquad
 i\ne j,
 \tag{T.24.5a.3}
 $$
-with $|\alpha_{ij}|^2=2$;
+with $|\alpha_{ij}|^2=2$.
 
-5. the identification of the retained Majorana $1\leftrightarrow2$ generation geometry with the Weyl plane $\mathfrak h_0/S_3$.
+3. $(H_\nu^{\mathrm{gen}},g_\nu)$ is a declared two-dimensional real inner-product space of retained generation displacements. The finite lookup map $\beta_\nu$ from ordered pairs of the labeled Takagi projectors supplies
+$$
+v_{ij}:=\beta_\nu(P_i,P_j)\in H_\nu^{\mathrm{gen}}
+$$
+and verifies
+$$
+v_{ji}=-v_{ij},
+\qquad
+v_{ij}+v_{jk}=v_{ik}
+$$
+for distinct labels.
 
-**Theorem T.24.5b** (Takagi-$A_2$ Weyl-Alcove Closure). On a branch carrying the Takagi-Weyl Majorana geometry datum, the Majorana $1\leftrightarrow2$ sector has $A_2$ angle geometry. When the retained generation displacement is restricted to adjacent non-opposite $A_2$ primitive roots,
+4. $\pi\in S_3$ is a fixed label map and
+$$
+\iota_\nu:(H_\nu^{\mathrm{gen}},g_\nu)
+\longrightarrow(\mathfrak h_0,\langle\cdot,\cdot\rangle)
+$$
+is a linear isometry satisfying
+$$
+\iota_\nu(v_{ij})=\alpha_{\pi(i)\pi(j)}.
+$$
+The map
+$$
+\jmath_\nu:\mathfrak h_0\longrightarrow\mathbb R^8
+$$
+is an isometric root embedding on the $A_2$ span and maps every retained $\alpha_{ij}$ to an explicitly listed $E_8$ root. Rational coordinate and Gram-matrix checks verify both maps.
+
+The standard map
+$$
+\jmath_0(x_1,x_2,x_3)
+:=(x_1,x_2,x_3,0,0,0,0,0)
+$$
+is an explicit existence witness: it sends $e_i-e_j$ to an integer-coordinate $E_8$ root and preserves the $A_2$ Gram matrix. A different marked embedding must pass the same finite tests.
+
+5. $\chi_{\mathrm{TW}}$ records that the scale, scheme, multiplicity and stabilizer data, projectors, labels, lookup map, metric, isometry, and $E_8$ embedding were fixed before comparison with neutrino masses or PMNS data. A physical generation-label claim requires this exact record as a subrecord of an accepted forward-locked flavor certificate $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4.
+
+The datum is accepted only when all displayed finite identities and interval tests pass. Complex symmetry and Takagi diagonalization alone supply the permutation action on the three Takagi values; they do not supply the metric bridge or root marking. The quotient $\mathfrak h_0/S_3$ records only the relabeling class; every angle and distance is computed in the certified marked lift before quotienting.
+
+**Theorem T.24.5b** (Takagi-$A_2$ Weyl-Alcove Closure). On a branch carrying an accepted labeled Takagi-Weyl Majorana geometry datum $\mathfrak C_{\mathrm{TW}}$, the retained Majorana generation-displacement vectors have $A_2$ angle geometry. When the $1\leftrightarrow2$ displacement is represented by adjacent non-opposite primitive roots,
 $$
 d^2_{21,\nu}\in\{2,6\},
 \qquad
@@ -6261,35 +7132,19 @@ d^2_{21,\nu}\ne4.
 \tag{T.24.5b.1}
 $$
 
-*Proof.* Since $M_\nu$ is complex symmetric, its physical diagonalization is Takagi diagonalization, not an independent left-right singular-value decomposition. The residual relabeling of the three nonnegative Takagi values is the permutation group $S_3$. On the traceless diagonal plane $\mathfrak h_0$, this is the Weyl group of the $A_2$ root system with roots $\alpha_{ij}=e_i-e_j$.
+*Proof.* Takagi diagonalization supplies three nonnegative values and their permutation action, but does not by itself identify a physical displacement metric with a Weyl plane. Items 3–4 of Definition T.24.5a supply that bridge: $\iota_\nu$ is an isometry taking the retained labeled displacements to $\alpha_{ij}=e_i-e_j$, and $\jmath_\nu$ embeds the retained $A_2$ roots isometrically as explicitly listed $E_8$ roots.
 
-The roots satisfy
+The roots satisfy $|\alpha_{ij}|^2=2$. Adjacent non-opposite primitive roots have inner product $+1$ or $-1$, hence angle $60^\circ$ or $120^\circ$. No two such roots are orthogonal. Lemma T.24.4 gives
 $$
-|\alpha_{ij}|^2=2.
+\cos\theta=\frac{4-d^2}{4}
 $$
-For adjacent primitive roots,
-$$
-\alpha_{12}\cdot\alpha_{23}=-1,
-$$
-so the angle is $120^\circ$. For oppositely oriented adjacent choices,
-$$
-\alpha_{12}\cdot\alpha_{13}=1,
-$$
-so the angle is $60^\circ$. No two nonzero $A_2$ roots are orthogonal: distinct non-opposite roots have normalized inner products $\pm1/2$, while opposite roots have normalized inner product $-1$. Therefore the $90^\circ$ case required for the $D_4$ distance $d^2=4$ is not present in the Takagi-Weyl $A_2$ plane.
+for their $E_8$ images. Therefore $60^\circ$ gives $d^2=2$, $120^\circ$ gives $d^2=6$, and the absent $90^\circ$ case would give $d^2=4$. Opposite roots would give $d^2=8$ and are excluded by hypothesis. ∎
 
-For $E_8$ roots with $|r|^2=2$, the angle-distance relation from Lemma T.24.4 is
-$$
-\cos\theta=\frac{4-d^2}{4}.
-$$
-Thus $\theta=60^\circ$ gives $d^2=2$, while $\theta=120^\circ$ gives $d^2=6$. The opposite-root case would give $\theta=180^\circ$ and $d^2=8$, so it is excluded by the adjacent non-opposite generation-displacement clause, not by the $A_2$ root system itself. The excluded $\theta=90^\circ$ case would give $d^2=4$, which is not an $A_2$ root angle. ∎
-
-**Theorem T.24.5** (Conditional Majorana $A_2$ Consequence). On a branch carrying the Takagi-Weyl datum of Definition T.24.5a and the adjacent non-opposite primitive-root restriction of Theorem T.24.5b, the retained generation displacement has $A_2$ angle geometry. Majorana bilinearity alone does not select that datum.
-
-
+**Theorem T.24.5** (Conditional Majorana $A_2$ Consequence). On a branch carrying an accepted datum $\mathfrak C_{\mathrm{TW}}$ of Definition T.24.5a and the adjacent non-opposite primitive-root restriction of Theorem T.24.5b, the retained generation displacement has $A_2$ angle geometry. Majorana bilinearity alone does not select or certify that datum.
 
 $$d^2_{21,\nu} \in \{2, 6\} \quad \text{(not } d^2 = 4 \text{)}$$
 
-*Proof.* The hypotheses of Theorem T.24.5 are exactly the Takagi--Weyl datum and the adjacent non-opposite primitive-root restriction of Theorem T.24.5b. That theorem gives
+*Proof.* The accepted datum supplies the typed Takagi-to-generation bridge and $E_8$ root embedding. Theorem T.24.5b then gives
 $$
 d_{21,\nu}^2\in\{2,6\}
 $$
@@ -6320,17 +7175,17 @@ Theorem T.24.5 verifies that the last entry is allowed by the retained $A_2$ geo
 |:--------|:--------------|:----------|:--------------------------|
 |3↔2 |$a = 2$ |$a = 2$ |Minimal $E_8$ distance |
 |3↔1 |$b = 6$ |$b = 6$ |Full hierarchy span |
-|1↔2 |$2a = 4$ |$b = 6$ |D₄ (Dirac) vs A₂ (Majorana)|
+|1↔2 |$2a = 4$ |$b = 6$ |separately marked D₄ and A₂ branches|
 |**Triad**|$(a, b, 2a)$ |$(a, b, b)$|Conditional root-geometry model data |
 
-**Remark T.24.5.2: Derivation Status.** *The A₂ constraint on Majorana fermions is not an independent assumption on branches carrying the Takagi-Weyl datum of Definition T.24.5a. It is the Weyl geometry of the Takagi eigenvalue-difference plane:*
+**Remark T.24.5.2: Derivation Status.** The Takagi factorization of a Majorana mass matrix supplies its nonnegative spectrum, invariant projectors, and permutation and stabilizer data. It does not by itself supply an $A_2$ displacement metric or a physical pair-to-root marking. On an accepted $\mathfrak C_{\mathrm{TW}}$, the lookup map $\beta_\nu$, isometry $\iota_\nu$, and root embedding $\jmath_\nu$ provide that finite bridge:
 
-|Fermion Type|Mass Term |Diagonalization Geometry |Compatible Lattice |
+|Fermion type|Mass term|Diagonalization data|Marked lattice branch|
 |:-----------|:--------------------|:-------------------------|:-------------------|
-|Dirac |$\bar{\psi}_L \psi_R$|left-right singular-value geometry |D₄ (90°, cubic) |
-|Majorana |$\nu^T C \nu$ |Takagi eigenvalue-difference Weyl plane |A₂ (60°/120°, hexagonal)|
+|Dirac|$\bar{\psi}_L\psi_R$|left-right singular-value data|$D_4$ only on its separate marked bridge|
+|Majorana|$\nu^TC\nu$|Takagi spectrum and stabilizer data|$A_2$ only on an accepted $\mathfrak C_{\mathrm{TW}}$|
 
-*This is a conditional model distinction; Theorem T.24.3 supplies only geometric realizability of one charged-lepton candidate
+This is a conditional model distinction. Theorem T.24.3 supplies only geometric realizability of one charged-lepton candidate, while Theorems T.24.5b and T.24.5 prove the retained $A_2$ restriction only after the marked bridge is accepted.
 
 
 
@@ -6375,9 +7230,17 @@ Thus $G$ is positive semidefinite, all its eigenvalues are nonnegative, and thei
 
 ### T.24.7 Systematic Search
 
-**Theorem T.24.7** (Complete Enumeration). *All $(d^2_{32}, d^2_{31}, d^2_{21})$ triads satisfying Constraints 1–4 are enumerated below with their Gram determinants.*
+**Theorem T.24.7** (Complete Discrete Candidate Enumeration). *All triads $(d^2_{32},d^2_{31},d^2_{21})$ satisfying*
+$$
+d^2_{32},d^2_{31}\in\{2,4,6,8\},
+\qquad
+d^2_{21}\in\{2,6\},
+\qquad
+d^2_{31}\ge d^2_{32},
+$$
+*are enumerated below with their Gram determinants. No atmospheric-angle filter is imposed at this stage, because Corollary T.24.8.1 shows that the distances alone do not determine $\theta_{23}$.*
 
-*Proof.* We enumerate all combinations with $d^2_{ij} \in \{2, 4, 6, 8\}$, $d^2_{21} \in \{2, 6\}$ (A₂ constraint for neutrinos), and $d^2_{31} \geq d^2_{32}$ (Constraint 4):
+*Proof.* There are $4+3+2+1=10$ ordered pairs $(d^2_{32},d^2_{31})$ satisfying the displayed ordering condition. Each pair admits the two declared values $d^2_{21}\in\{2,6\}$, so the candidate domain contains exactly $20$ triads:
 
 **Table T.24.3** (Complete Triad Enumeration)
 
@@ -6442,43 +7305,113 @@ For $\Delta=0$ and $B\ne0$, one has $2\theta_{23}=\pi/2$ modulo the eigenvector-
 
 -----
 
-### T.24.9 PCE-Optimal Selection
+### T.24.9 Exhaustive Alignment Selection and PCE Gate
 
-**Definition T.24.9a** (Alignment Cost). *The PCE cost for misalignment between neutrino and charged lepton triads:*
+**Definition T.24.9a** (Alignment Cost). For labeled triads in one common objective unit, define
+$$
+V_{\mathrm{align}}(T_\nu,T_\ell)
+=
+\sum_{i<j}\kappa_{ij}
+\sin^2\left(
+\frac{\theta^{(\nu)}_{ij}-\theta^{(\ell)}_{ij}}2
+\right),
+\qquad
+\theta^{(f)}_{ij}
+=
+\arccos\left(\frac{4-d^2_{ij,f}}4\right),
+$$
+where $\kappa_{ij}=\kappa_{ji}>0$. Any additional stiffness ordering is an independent input; the strict selection below uses only positivity.
 
-$$V_{\text{align}}(T_\nu, T_\ell) = \sum_{i<j} \kappa_{ij} \sin^2\left(\frac{\theta^{(\nu)}_{ij} - \theta^{(\ell)}_{ij}}{2}\right)$$
+Let
+$$
+\mathcal T_\nu^{\mathrm{fr}}
+=
+\left\{
+\begin{array}{c}
+(2,2,2),(2,4,2),(2,4,6),(2,6,6),\\
+(4,4,2),(4,4,6),(4,6,2),(4,6,6),(6,6,2)
+\end{array}
+\right\}
+$$
+be the nine positive-Gram rows of Table T.24.3. A finite PCE-promotion record is
+$$
+\mathfrak C_{\mathrm{align}}
+=
+\left(
+T_\ell,\{\kappa_{ij}\},J_{\mathrm{PCE}},R,
+\chi_{\mathrm{src}},\chi_{\mathrm{pre}}
+\right).
+$$
+It is accepted only when $T_\ell=(2,6,4)$ is the same labeled charged-lepton record used by the flavor-matrix assembly, exact arithmetic or outward-rounded enclosures prove positive lower bounds for all stiffnesses, and on the whole displayed finite class the complete declared objective satisfies
+$$
+J_{\mathrm{PCE}}(T)
+=V_{\mathrm{align}}(T,T_\ell)+R(T),
+\qquad
+R(T)=R_0
+$$
+for one certified constant $R_0$. The source ledger $\chi_{\mathrm{src}}$ verifies that every $T$-dependent PCE term is included exactly once; $\chi_{\mathrm{pre}}$ verifies that the stiffnesses, objective, comparison class, and tolerances were fixed before comparison with neutrino or PMNS data. Without this record, the result below is an exact alignment-cost theorem but not a theorem about a complete PCE objective or a physical flavor selector.
 
-*where $\theta^{(f)}_{ij} = \arccos[(4-d^2_{ij,f})/4]$ and stiffness weights satisfy $\kappa_{23} > \kappa_{12} > \kappa_{13}$ from the mass hierarchy.*
+**Proposition T.24.9** (Preferred neutrino triad within the alignment-cost model). Let $T_\ell=(2,6,4)$ and $\kappa_{ij}=\kappa_{ji}>0$. On the exhaustive full-rank comparison class $\mathcal T_\nu^{\mathrm{fr}}$, the unique minimizer of $V_{\mathrm{align}}$ is
+$$
+T_\nu=(2,6,6),
+$$
+and its strict gap from every other tuple is at least
+$$
+\min\{\kappa_{23},\kappa_{31}\}\sin^2(15^\circ)
+=
+\min\{\kappa_{23},\kappa_{31}\}\frac{2-\sqrt3}{4}
+>0.
+$$
+On an accepted $\mathfrak C_{\mathrm{align}}$, the same tuple uniquely minimizes $J_{\mathrm{PCE}}$ on that class. This is uniqueness of a labeled distance tuple, not uniqueness of its $E_8$ embedding. Physical generation labels additionally require the same $\mathfrak C_{\mathrm{TW}}$ and $\mathfrak C_{\mathrm{align}}$ subrecords inside an accepted forward-locked $\mathfrak C_{\mathrm{fl}}$.
 
-**Proposition T.24.9** (Preferred neutrino triad within the alignment-cost model). Within Definition T.24.9a, let the charged-lepton triad be $T_\ell=(2,6,4)$ and let all stiffnesses be positive. Among the candidates
+*Proof.* Theorem T.24.7 exhausts the twenty tuples allowed by the $A_2$ last-entry restriction and the hierarchy convention; its nine positive determinants give exactly $\mathcal T_\nu^{\mathrm{fr}}$. Positive determinant is only a full-rank feasibility gate, so realizability is verified independently. Fix $r_3=e_1-e_2$ and put
 $$
-(2,2,2),\quad(2,4,2),\quad(2,4,6),\quad(2,6,6),
+h_-:=-\frac12\sum_{a=1}^8e_a,
+\qquad
+h_{++}:=\frac12(e_1+e_2-e_3-e_4-e_5-e_6-e_7-e_8).
 $$
-the unique minimizer is
-$$
-T_\nu=(2,6,6).
-$$
+The following table gives $(r_2,r_1)$ for each tuple:
 
-*Proof.* The angle map gives
+|$T$|$r_2$|$r_1$|
+|:--|:--|:--|
+|$(2,2,2)$|$e_1-e_3$|$e_1-e_4$|
+|$(2,4,2)$|$e_1-e_3$|$e_1+e_2$|
+|$(2,4,6)$|$e_1-e_3$|$-e_1-e_2$|
+|$(2,6,6)$|$e_1-e_3$|$-e_1-e_4$|
+|$(4,4,2)$|$-e_1-e_2$|$h_-$|
+|$(4,4,6)$|$-e_1-e_2$|$h_{++}$|
+|$(4,6,2)$|$-e_1-e_2$|$-e_1-e_3$|
+|$(4,6,6)$|$-e_1-e_2$|$e_2-e_3$|
+|$(6,6,2)$|$-e_1-e_3$|$-e_1-e_4$|
+
+Every listed vector is a standard $E_8$ root, and direct dot products give the displayed tuple $(|r_3-r_2|^2,|r_3-r_1|^2,|r_2-r_1|^2)$. Thus all nine rows are realized.
+
+The angle map gives
 $$
-\theta(2)=60^\circ,\qquad
-\theta(4)=90^\circ,\qquad
+\theta(2)=60^\circ,
+\qquad
+\theta(4)=90^\circ,
+\qquad
 \theta(6)=120^\circ.
 $$
-All four candidates match the $23$ angle. Their costs are
+Put $s:=\sin^2(15^\circ)=(2-\sqrt3)/4$. The alignment costs are
 $$
 \begin{aligned}
 V(2,2,2)
-&=\frac14\kappa_{31}+\sin^2(15^\circ)\kappa_{12},\\
+&=\frac14\kappa_{31}+s\kappa_{12},\\
 V(2,4,2)
-&=\sin^2(15^\circ)(\kappa_{31}+\kappa_{12}),\\
-V(2,4,6)
-&=\sin^2(15^\circ)(\kappa_{31}+\kappa_{12}),\\
+&=V(2,4,6)=s(\kappa_{31}+\kappa_{12}),\\
 V(2,6,6)
-&=\sin^2(15^\circ)\kappa_{12}.
+&=s\kappa_{12},\\
+V(4,4,2)
+&=V(4,4,6)=s(\kappa_{23}+\kappa_{31}+\kappa_{12}),\\
+V(4,6,2)
+&=V(4,6,6)=s(\kappa_{23}+\kappa_{12}),\\
+V(6,6,2)
+&=\frac14\kappa_{23}+s\kappa_{12}.
 \end{aligned}
 $$
-Since $\kappa_{31}>0$ and $\sin^2(15^\circ)>0$, the last value is strictly smaller than each of the first three. ∎
+Because $0<s<1/4$, every difference from $V(2,6,6)$ is at least $s\min\{\kappa_{23},\kappa_{31}\}>0$. If $\mathfrak C_{\mathrm{align}}$ is accepted, the constant $R_0$ cancels in every comparison, so the same tuple uniquely minimizes $J_{\mathrm{PCE}}$ on the declared class. The positive-Gram restriction is essential: the determinant-zero tuple $(2,6,2)$ has the same alignment cost as $(2,6,6)$. ∎
 
 -----
 
@@ -6553,11 +7486,11 @@ Contradiction. ∎
 
 ### T.24.11 Hierarchy from $E_8$ Geometry
 
-**Theorem T.24.11** (Anchored Majorana Neutrino Hierarchy). *On the minimal PU branch,*
+**Theorem T.24.11** (Certificate-Gated Anchored Majorana Neutrino Hierarchy). *Assume the Theorem-15 visited-context branch, the Theorem-23 lower bound plus Theorem-Z.2 comparator/minimality gate, and Theorem-Z.1's registered binary active-record/capacity/no-surplus gate, so that*
 $$
-d_0=8,\qquad a=2,\qquad b=6,
+d_0=8,\qquad a=2,\qquad b=d_0-a=6.
 $$
-*and the selected Majorana triad is*
+*Independently assume the Takagi--Weyl datum of Definition T.24.5a, the adjacent non-opposite primitive-$A_2$ restriction of Theorem T.24.5b, the candidate class and positive stiffness ledger of Definition T.24.9a, Proposition T.24.9's unique minimizer inside that class, and a forward-locked generation-label record. Then the selected model triad is*
 $$
 T_\nu=(d^2_{32},d^2_{31},d^2_{21})=(a,b,b)=(2,6,6).
 $$
@@ -7033,12 +7966,14 @@ $$
 $$
 No truncated Baker-Campbell-Hausdorff series is used in this conditional arithmetic. ∎
 
-**Experimental Comparison** (Particle Data Group 2024 listing, Normal Ordering):
+**Marginal comparison diagnostic** (Particle Data Group 2024 listing, Normal Ordering):
 
-|Quantity |Theory|Experiment |Pull |
-|:------------------|:-----|:------------|:-----|
-|$\theta_{23}$ |47.36340764° |$48.33^{+0.87}_{-1.21}$° |$-0.80\sigma$|
-|$\sin^2\theta_{23}$|0.54120247 |$0.558^{+0.015}_{-0.021}$|$-0.80\sigma$|
+| Quantity | Conditional branch output | Listed marginal comparison | Standardized marginal residual |
+|:--|:--|:--|:--|
+| $\theta_{23}$ | $47.36340764^\circ$ | $48.33^{+0.87}_{-1.21}\,{}^\circ$ | $-0.80$ |
+| $\sin^2\theta_{23}$ | $0.54120247$ | $0.558^{+0.015}_{-0.021}$ | $-0.80$ |
+
+Each final column entry is the displayed one-dimensional residual divided by the corresponding displayed lower marginal uncertainty because the branch value lies below the central value. It is neither a calibrated pull nor a joint likelihood statistic: covariance, theory uncertainty, nuisance parameters, and the fitted-parameter count are not included. Promotion of the conditional branch output to a physical PMNS prediction requires the accepted common flavor certificate of Definition T.79.4.
 
 ∎
 
@@ -7159,12 +8094,14 @@ $$
 $$
 ∎
 
-**Experimental Comparison** (Particle Data Group 2024):
+**Marginal comparison diagnostic** (Particle Data Group 2024):
 
-|Quantity |Theory|Experiment |Pull |
-|:------------------|:-----|:------------|:-----|
-|$\theta_{12}$ |33.7° |33.6° ± 0.8° |+0.12σ|
-|$\sin^2\theta_{12}$|0.30780973 |0.307 ± 0.013|+0.06σ|
+| Quantity | Conditional branch output | Listed marginal comparison | Standardized marginal residual |
+|:--|:--|:--|:--|
+| $\theta_{12}$ | $33.7^\circ$ | $33.6^\circ\pm0.8^\circ$ | $+0.12$ |
+| $\sin^2\theta_{12}$ | $0.30780972$ | $0.307\pm0.013$ | $+0.06$ |
+
+Each final column entry is the displayed one-dimensional residual divided by the displayed marginal uncertainty. It is neither a calibrated pull nor a joint likelihood statistic: covariance, theory uncertainty, nuisance parameters, and the fitted-parameter count are not included. Promotion of the conditional branch output to a physical PMNS prediction requires the accepted common flavor certificate of Definition T.79.4.
 
 ∎
 
@@ -7199,67 +8136,221 @@ The zero baseline, $J_{\mathrm{geom}}$, and the capacity-sharing equation are mo
 
 ## Part V: Leptonic CP Violation
 
-### T.24.22 CP Phase from Berry Holonomy
+### T.24.22 Certificate-Gated CP Phase from Berry Holonomy
 
-**Theorem T.24.22** (Leptonic CP Phase on the PMNS Berry-Loop Branch). *On the PMNS Berry-loop branch adopted in Section T.24, where the baseline phase, one hexagonal wedge, the tilt contribution, and the spin-1 Berry factor of the Weinberg operator combine as specified in the proof, the PMNS CP phase is*
+**Theorem T.24.22** (Leptonic CP Phase on the PMNS Berry-Loop Branch). Register the convention-level inputs, in radians,
 $$
-\delta_{CP} = 232.5^\circ.
+\Delta\theta_{21}^{\mathrm{conv}}=\frac\pi6,
+\qquad
+\theta_{\mathrm{tilt}}^{\mathrm{conv}}=\frac\pi{24},
+\qquad
+\Omega_{\mathrm{hex}}^{\mathrm{conv}}=\frac\pi3,
+\qquad
+\Omega_{\mathrm{tilt}}^{\mathrm{conv}}=\frac\pi{12}.
+$$
+They define the model values
+$$
+\delta_{\mathrm{base}}^{\mathrm{conv}}
+:=
+\left(\pi-\Delta\theta_{21}^{\mathrm{conv}}\right)
++\theta_{\mathrm{tilt}}^{\mathrm{conv}}
+=\frac{7\pi}{8},
+$$
+$$
+\Delta\gamma^{\mathrm{conv}}
+:=
+\Omega_{\mathrm{hex}}^{\mathrm{conv}}
++\Omega_{\mathrm{tilt}}^{\mathrm{conv}}
+=\frac{5\pi}{12},
+$$
+and hence the convention-level phase candidate
+$$
+\delta_{CP}^{\mathrm{conv}}
+:=
+\delta_{\mathrm{base}}^{\mathrm{conv}}
++\Delta\gamma^{\mathrm{conv}}
+=\frac{31\pi}{24}
+=232.5^\circ.
+\tag{T.24.22.1}
 $$
 
-*Proof.* The model prescriptions yield
+A finite PMNS phase certificate is a record
 $$
-\delta_{\text{base}} = (180^\circ-\Delta\theta_{21})+\theta_{\text{tilt}} = 157.5^\circ,
+\mathfrak C_{\mathrm{PMNS}}^{CP}
+=
+\left(
+M_e,M_\nu,U_e,U_\nu,U_{\mathrm{PMNS}},
+\mathfrak C_{\mathrm{TW}},\mathfrak C_{\mathrm{align}},
+\mathfrak C_{\mathrm{base}},
+\mathcal B_{\mathrm{PMNS}},
+X_{\mathrm{PMNS}},H_{\mathrm{PMNS}},P_{\mathrm{PMNS}},g_{\mathrm{PMNS}},
+q_{\mathrm{PMNS}},
+\mathcal L_{\mathrm{PMNS}},\mathcal A_{\mathrm{PMNS}},
+\gamma_{\mathrm{PMNS}},S_{\mathrm{PMNS}},
+b_{\mathrm{PMNS}},h_{\mathrm{PMNS}},
+I_{\mathrm{base}},I_{\mathrm{hol}},I_{\mathrm{mat}},
+R_{\mathrm{PMNS}},\varepsilon_{\mathrm{unit}},\varepsilon_{\mathrm{mat}},
+\chi_{\mathrm{PMNS}}
+\right)
 $$
-and the Berry contribution is
+fixed before comparison with PMNS data. It is accepted only if all of the following tests pass.
+
+1. At one declared scale and in one scheme, outward-rounded residuals verify
+   $$
+   U_e^\dagger M_eM_e^\dagger U_e
+   =\operatorname{diag}(m_e^2,m_\mu^2,m_\tau^2),
+   \qquad
+   U_\nu^TM_\nu U_\nu
+   =\operatorname{diag}(m_1,m_2,m_3),
+   $$
+   together with unitarity of both diagonalizers and
+   $$
+   U_{\mathrm{PMNS}}=U_e^\dagger U_\nu.
+   $$
+   The singular-value and Takagi-value intervals are pairwise disjoint. If a degeneracy is certified, only invariant-subspace claims survive and the record is not accepted as a PMNS Dirac-phase certificate. Allowed charged-lepton rephasings, Majorana sign choices, and explicit separation of the Majorana column phases put $U_{\mathrm{PMNS}}$ in the declared standard convention. To extract a rephasing-invariant Dirac phase, set
+   $$
+   s_{13}=|U_{e3}|,
+   \qquad
+   s_{12}=\frac{|U_{e2}|}{c_{13}},
+   \qquad
+   s_{23}=\frac{|U_{\mu3}|}{c_{13}},
+   $$
+   $$
+   J=\operatorname{Im}
+   (U_{e1}U_{\mu2}U_{e2}^*U_{\mu1}^*),
+   \qquad
+   s_\delta
+   =\frac{J}{c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}},
+   $$
+   $$
+   c_\delta
+   =
+   \frac{|U_{\mu1}|^2-s_{12}^2c_{23}^2-c_{12}^2s_{23}^2s_{13}^2}
+   {2s_{12}c_{12}c_{23}s_{23}s_{13}}.
+   $$
+   Outward-rounded bounds keep every denominator away from zero and prove
+   $$
+   |c_\delta^2+s_\delta^2-1|
+   \le\varepsilon_{\mathrm{unit}},
+   $$
+   where $\varepsilon_{\mathrm{unit}}$ was fixed before comparison. Circular interval evaluation of $\operatorname{atan2}(s_\delta,c_\delta)$ gives a nonempty $I_{\mathrm{mat}}\subset\mathbb R/(2\pi\mathbb Z)$. If a denominator can vanish or the unit-circle bound fails, no Dirac-phase value is certified.
+
+2. The exact accepted $\mathfrak C_{\mathrm{TW}}$ and $\mathfrak C_{\mathrm{align}}$ subrecords supply the same generation labels and root embeddings used in the two mass matrices. The independently sourced record $\mathfrak C_{\mathrm{base}}$ supplies outward-rounded intervals $I_{\Delta\theta}$ and $I_{\mathrm{tilt}}$ for the baseline angle and tilt, together with their derivation identifiers and residual bounds. The finite functional is the fixed rule
+   $$
+   \mathcal B_{\mathrm{PMNS}}(\Delta\theta,\theta_{\mathrm{tilt}})
+   :=\pi-\Delta\theta+\theta_{\mathrm{tilt}}.
+   $$
+   It has no access to $I_{\mathrm{mat}}$, the CP-odd matrix invariants, the Berry holonomy, or PMNS comparison data. Outward-rounded evaluation proves
+   $$
+   b_{\mathrm{PMNS}}
+   \in
+   \mathcal B_{\mathrm{PMNS}}
+   (I_{\Delta\theta},I_{\mathrm{tilt}})
+   \subseteq I_{\mathrm{base}}\subset\mathbb R.
+   $$
+
+3. $X_{\mathrm{PMNS}}$ is a compact flavor-configuration complex with a finite piecewise-smooth atlas. The registered Weinberg-operator representation supplies a $C^2$ finite-dimensional Hermitian family $H_{\mathrm{PMNS}}(x)$ on $X_{\mathrm{PMNS}}$. A certified gap $g_{\mathrm{PMNS}}>0$ isolates one simple band, $P_{\mathrm{PMNS}}(x)$ is its rank-one spectral projector, and the positive integer representation weight $q_{\mathrm{PMNS}}$ defines
+   $$
+   \mathcal L_{\mathrm{PMNS}}
+   :=(\operatorname{im}P_{\mathrm{PMNS}})^{\otimes q_{\mathrm{PMNS}}},
+   \qquad
+   \nabla_{\mathrm{PMNS}}
+   :=(P_{\mathrm{PMNS}}\circ d)^{\otimes q_{\mathrm{PMNS}}}
+   $$
+   define the Hermitian Berry line and its unitary connection. In a registered normalized frame $\psi$ of the simple band, the real connection form is
+   $$
+   \mathcal A_{\mathrm{PMNS}}
+   =q_{\mathrm{PMNS}}\,i\langle\psi,d\psi\rangle.
+   $$
+   The certificate supplies an oriented piecewise-$C^1$ closed loop $\gamma_{\mathrm{PMNS}}$, an oriented piecewise-smooth two-chain $S_{\mathrm{PMNS}}$ with $\partial S_{\mathrm{PMNS}}=\gamma_{\mathrm{PMNS}}$, a trivialization over that chain, a lift interval of length less than $2\pi$, and outward-rounded evaluation proving
+   $$
+   \oint_{\gamma_{\mathrm{PMNS}}}\mathcal A_{\mathrm{PMNS}}
+   \equiv
+   \int_{S_{\mathrm{PMNS}}}d\mathcal A_{\mathrm{PMNS}}
+   \equiv h_{\mathrm{PMNS}}
+   \in I_{\mathrm{hol}}
+   \pmod{2\pi}.
+   $$
+   The line, connection, loop, chain, and trivialization have finite exact or interval encodings. Each integral enclosure is certified either by exact symbolic evaluation or by a declared validated quadrature together with a proved remainder bound. Any second registered filling is accepted only when its curvature integral differs by a certified $2\pi\mathbb Z$ period. The representation weight, orientation, loop, chain, and normalization are part of the record; the phrase “spin-1 Berry factor” does not replace these tests.
+
+4. $R_{\mathrm{PMNS}}(b,h):=b+h$ modulo $2\pi$ is the registered phase-composition map. Outward-rounded circular arithmetic verifies
+   $$
+   I_{\mathrm{mat}}
+   \subseteq
+   \left\{
+   \delta:
+   \operatorname{dist}_{\mathbb R/(2\pi\mathbb Z)}
+   \!\left(
+   \delta,
+   R_{\mathrm{PMNS}}(I_{\mathrm{base}},I_{\mathrm{hol}})
+   \right)
+   \le\varepsilon_{\mathrm{mat}}
+   \right\},
+   $$
+   where $R_{\mathrm{PMNS}}(I_{\mathrm{base}},I_{\mathrm{hol}})$ denotes the circular interval image and $\varepsilon_{\mathrm{mat}}\ge0$ was fixed before comparison.
+
+5. $\chi_{\mathrm{PMNS}}$ verifies the Weinberg-operator-to-Hermitian-family construction, source exhaustion, distinct origin tags for the baseline tilt and Berry-area tilt, absence of double counting between the baseline and holonomy terms, and compatibility with the common flavor scale and scheme. Its finite dependency graph is acyclic: the structural, baseline, mass-matrix, and operator-family inputs precede diagonalization and holonomy, which precede the circular residual test; no comparison datum or extracted CP phase points back to an upstream input. Every label, operator family, path, surface, response map, tolerance, and numerical method is forward-locked.
+
+If an accepted certificate gives singleton outputs
 $$
-\Delta\gamma = \Omega_{\text{hex}}+\Omega_{\text{tilt}} = 60^\circ+15^\circ=75^\circ.
+I_{\mathrm{base}}=\left\{\frac{7\pi}{8}\right\},
+\qquad
+I_{\mathrm{hol}}=\left\{\frac{5\pi}{12}\right\},
+\qquad
+q_{\mathrm{PMNS}}=1,
+\qquad
+\varepsilon_{\mathrm{mat}}=0,
 $$
-Adding these model contributions gives
+then every $\delta\in I_{\mathrm{mat}}$ satisfies $\delta\equiv31\pi/24\pmod{2\pi}$. This is the physical PMNS Dirac phase only when this exact $\mathfrak C_{\mathrm{PMNS}}^{CP}$ is the PMNS subrecord of an accepted forward-locked $\mathfrak C_{\mathrm{fl}}$ of Definition T.79.4. Non-singleton intervals give only the corresponding circular phase interval. Without the accepted operator, geometric, and full-matrix records, (T.24.22.1) is a convention-level model diagnostic, not a derived Berry holonomy or physical PMNS phase.
+
+*Proof.* The first three displayed equalities are exact arithmetic and give
 $$
-\delta_{CP} = 157.5^\circ + 75^\circ = 232.5^\circ.
+\frac{7\pi}{8}+\frac{5\pi}{12}
+=\frac{21\pi+10\pi}{24}
+=\frac{31\pi}{24}.
 $$
-QED
+Items 1–3 construct the full matrix, typed baseline, and Berry holonomy independently. Item 4 is the finite bridge from those geometric data to the standard PMNS phase, while item 5 excludes source overlap and target-dependent selection. Singleton substitution proves the exact congruence; outward-rounded interval propagation proves only the stated interval conclusion. ∎
 
 -----
 
 ### T.24.23 Jarlskog Invariant
 
-**Theorem T.24.23** (Leptonic Jarlskog Invariant). *On the conditional mixing branch of Theorems T.24.19–T.24.22, the leptonic Jarlskog invariant is*
+**Theorem T.24.23** (Leptonic Jarlskog Invariant). On the conditional mixing models of Theorems T.24.19–T.24.21 and the convention-level phase of Theorem T.24.22, define
 $$
-J_{CP}
-=
-c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}\sin\delta_{CP}
-=
--0.0268414194.
+J_{CP}^{\mathrm{conv}}
+:=
+c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}
+\sin\delta_{CP}^{\mathrm{conv}}.
 $$
+For the displayed eight-decimal branch values
+$$
+(\theta_{12},\theta_{23},\theta_{13},\delta_{CP}^{\mathrm{conv}})
+=
+(33.69735528^\circ,47.36340764^\circ,8.65607149^\circ,232.5^\circ),
+$$
+one has
+$$
+\boxed{J_{CP}^{\mathrm{conv}}=-0.0268414194049}.
+$$
+This value is the physical leptonic Jarlskog invariant only when one accepted forward-locked $\mathfrak C_{\mathrm{fl}}$ realizes the same three angles and contains an accepted exact $\mathfrak C_{\mathrm{PMNS}}^{CP}$ with the same full PMNS matrix and phase convention. Non-singleton angle or phase intervals propagate to an interval for $J_{CP}$.
 
-*Proof.* Use the unrounded upstream angle outputs
-$$
-(\theta_{12},\theta_{23},\theta_{13},\delta_{CP})
-=
-(33.69735528^\circ,47.36340764^\circ,8.65607149^\circ,232.5^\circ).
-$$
-They give
+*Proof.* The displayed angles give
 $$
 c_{12}s_{12}c_{23}s_{23}c_{13}^2s_{13}
 =0.0338328687127,
 $$
 and
 $$
-\sin\delta_{CP}
+\sin\delta_{CP}^{\mathrm{conv}}
 =\sin(232.5^\circ)
 =-0.793353340291.
 $$
-Therefore
-$$
-\boxed{J_{CP}=-0.0268414194049}.
-$$
-Using the displayed comparison value $-0.030\pm0.010$, the diagonal standardized residual is
+Their product is the displayed value. Using the comparison value $-0.030\pm0.010$, the diagonal standardized residual of the convention-level diagnostic is
 $$
 \frac{-0.0268414194-(-0.030)}{0.010}
 =+0.315858\ldots,
 $$
-which rounds to $+0.32\sigma$. This comparison is subject to the likelihood and covariance caveat of Section T.24.26. ∎
+which rounds to $+0.32\sigma$. This comparison is subject to the likelihood and covariance caveat of Section T.24.26. The physical statement follows only through the accepted common full-matrix certificate. ∎
 
 -----
 
@@ -7276,7 +8367,7 @@ $$
 
 ### T.24.25 Effective Majorana Mass
 
-**Theorem T.24.25 (Effective Majorana Mass).** Under the phase assignment of Proposition T.24.24,
+**Theorem T.24.25 (Effective Majorana Mass).** Under the phase assignment of Proposition T.24.24, define
 $$
 m_{\beta\beta}
 =\left|
@@ -7285,11 +8376,11 @@ m_1c_{12}^2c_{13}^2
 +m_3s_{13}^2e^{i(\alpha_{31}-2\delta)}
 \right|.
 $$
-Using the internally normalized masses, the unrounded angle outputs $\theta_{12}=33.69735528^\circ$ and $\theta_{13}=8.65607149^\circ$, the assignment $\alpha_{21}=0$, $\alpha_{31}=\pi$, and the existing branch value $\delta=232.5^\circ$ gives
+Using the internally normalized masses, the unrounded conditional angle outputs $\theta_{12}=33.69735528^\circ$ and $\theta_{13}=8.65607149^\circ$, the model assignment $\alpha_{21}=0$, $\alpha_{31}=\pi$, and the convention-level candidate $\delta_{CP}^{\mathrm{conv}}=232.5^\circ$ gives
 $$
-\boxed{m_{\beta\beta}=1.71723393\,\mathrm{meV}}.
+\boxed{m_{\beta\beta}^{\mathrm{conv}}=1.71723393\,\mathrm{meV}}.
 $$
-This value is conditional on the Majorana-phase assignment and the internal absolute-scale branch.
+This is a CP-convention-level model output. It equals the physical effective Majorana mass only when one accepted forward-locked $\mathfrak C_{\mathrm{fl}}$ realizes the same masses, angles, Majorana-phase convention, and exact $\mathfrak C_{\mathrm{PMNS}}^{CP}$; non-singleton input intervals propagate to an interval for $m_{\beta\beta}$.
 
 *Proof.* With the unrounded masses of Theorem T.24.15, the three summand magnitudes are
 $$
@@ -7303,7 +8394,7 @@ m_3s_{13}^2=0.58462408\,\mathrm{meV}.
 $$
 The first two phases vanish, while
 $$
-\alpha_{31}-2\delta
+\alpha_{31}-2\delta_{CP}^{\mathrm{conv}}
 =180^\circ-465^\circ
 =-285^\circ
 \equiv75^\circ\pmod{360^\circ}.
@@ -7321,17 +8412,17 @@ $$
 $$
 Thus
 $$
-m_{\beta\beta}
+m_{\beta\beta}^{\mathrm{conv}}
 =\sqrt{(1.62172819)^2+(0.56470350)^2}\,\mathrm{meV}
 =1.71723393\,\mathrm{meV}.
 $$
-∎
+The interval statement follows by outward-rounded evaluation of the same continuous modulus formula. ∎
 
 -----
 
 ## Part VII: Summary and Predictions
 
-The neutrino branch gives a normal mass ordering, three mixing angles, a phase, and two laboratory mass combinations once its labels and calibrations are fixed. Its ratio structure is more successful than its internally normalized mass splittings, so the final tables keep those outcomes separate.
+Once its labels, continuous response inputs, and normalization records are fixed, the neutrino model evaluates a normal ordering, three angles, a convention-level phase, and two laboratory mass-combination candidates. The phase and CP-dependent mass combination become physical only through their common accepted PMNS and flavor certificates. The ratio structure is more successful than the internally normalized mass splittings, so the final tables keep those outcomes separate.
 
 ### T.24.26 Complete Parameter Table
 
@@ -7348,16 +8439,16 @@ The neutrino branch gives a normal mass ordering, three mixing angles, a phase, 
 |$\Delta m^2_{31}$|$6.66132\times10^{-4}$ eV²|$(2.453\pm0.033)\times10^{-3}$ eV²|Not matched|Conditional branch output|
 |$\Delta m^2_{31}/\Delta m^2_{21}$|31.9781|$32.6\pm0.7$|Diagonal residual only|Conditional ratio|
 |$\theta_{23}$ |47.4° |$48.33^{+0.87}_{-1.21}$° |Diagonal residual only|Conditional calibrated model|
-|$\sin^2\theta_{23}$ |0.542 |$0.558^{+0.015}_{-0.021}$ |Diagonal residual only|Conditional calibrated model|
+|$\sin^2\theta_{23}$ |0.541 |$0.558^{+0.015}_{-0.021}$ |Diagonal residual only|Conditional calibrated model|
 |$\theta_{12}$ |33.7° |33.6° ± 0.8° |Diagonal residual only|Conditional calibrated model|
 |$\sin^2\theta_{12}$ |0.308 |0.307 ± 0.013 |Diagonal residual only|Conditional calibrated model|
 |$\theta_{13}$ |8.7° |8.54° ± 0.12° |Diagonal residual only|Conditional calibrated model|
 |$\sin^2\theta_{13}$ |0.0226 |0.0220 ± 0.0007 |Diagonal residual only|Conditional calibrated model|
-|$\delta_{CP}$ |232.5° |230° ± 36° |Diagonal residual only|Conditional holonomy model|
-|$J_{CP}$ |$-0.0268414$ |−0.030 ± 0.010 |Diagonal residual only|Conditional mixing/phase model|
+|$\delta_{CP}^{\mathrm{conv}}$|$232.5^\circ$|$230^\circ\pm36^\circ$|Diagonal residual only|Convention-level candidate; geometric and physical gates open|
+|$J_{CP}^{\mathrm{conv}}$|$-0.0268414$|$-0.030\pm0.010$|Diagonal residual only|Convention-level mixing/phase diagnostic; common full-matrix gate open|
 |$\sum m_\nu$|0.030519194 eV|<0.12 eV|Bound comparison|Conditional branch output|
 |$m_\beta$|4.62340 meV|—|—|Conditional branch output|
-|$m_{\beta\beta}$|1.71723 meV|<50 meV|Bound comparison|Conditional Majorana-phase model|
+|$m_{\beta\beta}^{\mathrm{conv}}$|$1.71723\,\mathrm{meV}$|$<50\,\mathrm{meV}$|Bound comparison|Convention-level CP-dependent model output; physical promotion requires the common PMNS/flavor certificate|
 
 **Statistical Summary:** The displayed standardized residual sum is a diagonal, correlation-ignoring diagnostic. It is not an inferential $\chi^2$ statistic, and no degrees-of-freedom claim is made, unless a predeclared row set, joint likelihood, covariance matrix, theory-error model, fitted-parameter count, and profiling rule are supplied.
 
@@ -7380,7 +8471,7 @@ K_0=3
 $$
 The equalities use the minimal Hilbert-carrier, active-kernel, and QFI-interface branches cited above.
 
-**Response branch:** The assignments $\sigma_B^2=1/24$, $\alpha_{UV}=3/2$, $u=1/\sqrt3$, and $\alpha_{IR}=1.418$ additionally require the packet-width, Schur, angular-profile, and sinc-response models.
+**Separated response gates:** The centered isotropic unit-radius convention gives $\sigma_B^2=1/24$; the definition $\alpha_{\mathrm{UV}}:=1/(16\sigma_B^2)$ then gives $3/2$. The generation--internal factorization plus unit-total-generation variance gives $u=1/\sqrt3$. The value $\alpha_{\mathrm{IR}}=1.41804458\ldots$ is a further independent sinc-coefficient prescription. None of these gates supplies the others.
 
 **Label branch:**
 $$
@@ -7388,33 +8479,35 @@ T_\ell=(2,6,4),
 \qquad
 T_\nu=(2,6,6)
 $$
-are registered Dirac and Majorana triads. Code and root geometry establish realizability or compatibility; physical label selection is independent branch data. Effective Proposition T.24.9 selects the neutrino triad only within its declared alignment-cost model.
+are registered Dirac and Majorana triads. Code and root geometry establish realizability or compatibility. Proposition T.24.9 proves that the alignment cost uniquely selects the neutrino distance tuple within its exhaustive full-rank comparison class. An accepted $\mathfrak C_{\mathrm{align}}$ is required to identify that cost with the complete PCE objective. Neither statement selects a unique $E_8$ embedding; physical labels require the same $\mathfrak C_{\mathrm{TW}}$ and $\mathfrak C_{\mathrm{align}}$ records inside an accepted $\mathfrak C_{\mathrm{fl}}$.
 
 **Scale and spectrum branch:** The values $\kappa_R=9$, $M_R=1.5\times10^{15}\,\mathrm{GeV}$, the three neutrino masses, and their splittings require the seesaw normalization, matching-scale, mixing, phase, scheme, and remainder entries of the T.79 flavor certificate.
 
 |Fermion type |Registered triad |Formula |Status |
 |:----------------------|:----------|:-----------|:-----------------------------------------------------------------------|
 |Charged leptons (Dirac)|$(2,6,4)$|$(a,b,2a)$|Geometrically realizable model label; not selected by error correction alone|
-|Neutrinos (Majorana)|$(2,6,6)$|$(a,b,b)$|Conditional symmetric-bilinear and alignment-cost branch|
+|Neutrinos (Majorana)|$(2,6,6)$|$(a,b,b)$|Unique finite alignment-cost tuple on the accepted marked-$A_2$ branch; complete-PCE and physical-label promotion require $\mathfrak C_{\mathrm{align}}\subset\mathfrak C_{\mathrm{fl}}$|
 
 No numerical flavor observable in this chain is a consequence of $K_0=3$ alone. Theorem-level numerical promotion requires closure of the corresponding T.79 certificate row before comparison with data.
 
-The Majorana structure introduces four geometric factors absent in the Dirac sector:
+The registered Majorana branch combines four separately gated geometric or response factors absent from the displayed Dirac branch; Majorana bilinearity alone does not derive them:
 
 |Factor |Theorem|Effect |Quantity Affected |
 |:-----------------------|:------|:-------------------------------------------------|:------------------|
-|A₂ replaces D₄ |T.24.5 |$d^2_{21}: 2a \to b$ |Triad structure |
+|Marked $A_2$ branch replaces the registered $D_4$ branch|T.24.5|$d^2_{21}:2a\to b$ only on an accepted $\mathfrak C_{\mathrm{TW}}$|Triad structure|
 |SU(2) triplet projection|T.24.12|$\alpha_\nu = \alpha_{\text{UV}}/\sqrt{3}$ |Mass hierarchy |
 |Seesaw from $E_8$ distance |T.24.13|$\kappa_R = \alpha_{\text{UV}} \cdot d^2_{31} = 9$|Absolute mass scale|
-|Spin-1 Berry phase |T.24.22|$+75°$ |$\delta_{CP}$ |
+|Registered PMNS Berry-loop contribution |T.24.22|$+75°$ as a convention-level value; theorem-level only on an accepted line/connection/loop/surface certificate |$\delta_{CP}$ |
 
 -----
 
 ### T.24.28 Open Input Inventory
 
-**Proposition T.24.28** (Input inventory for the neutrino sector). *The neutrino sector uses no continuously fitted parameters within the adopted model once the following inputs are fixed:* the PU discrete data $(d_0,a,M)$, the canonical Bures/Fisher normalization with unit-radius convention, the type-I seesaw identification, the Majorana-instanton ansatz for $M_R$, and the Berry-loop prescriptions used for the PMNS angles and phase.
+**Proposition T.24.28** (Input inventory for the neutrino sector). Once one record fixes the PU discrete data $(d_0,a,M)$, an accepted $\mathfrak C_{\mathrm{TW}}$, the alignment cost, every PMNS response coefficient, the Bures/Fisher normalization and radius convention, the type-I seesaw and $M_R$ prescriptions, the RG scheme and scale maps, all remainder intervals, and the phase records $\mathfrak C_{\mathrm{PMNS}}^{CP}\subset\mathfrak C_{\mathrm{fl}}$, the Appendix T formulas determine their branch outputs without a further optimization step.
 
-*Summary.* Under those assumptions, the neutrino masses, orderings, and mixing observables are determined without further continuous fitting inside the model.
+This is not a no-fitting conclusion unless the record also proves that every continuous coefficient and tolerance was fixed before comparison with neutrino data. The mass, ordering, angle, and phase outputs retain the theorem, model, interval, or physical-certificate status of their owning results; determinism after fixing inputs does not promote those inputs or outputs.
+
+*Summary.* The proposition gives a deterministic finite evaluation map on a fully specified record. The existence, forward lock, and physical acceptance of that record remain separate obligations.
 
 -----
 
@@ -7426,18 +8519,24 @@ Before testing, register the charged and neutrino triads, every continuous coeff
 
 
 
-**Primary Prediction:** Normal Hierarchy ($\Delta m^2_{31} > 0$)
+**Primary registered-branch test:** The retained neutrino model has normal
+ordering, $\Delta m_{31}^2>0$. A confirmed inverted ordering excludes that
+registered branch only after its Takagi, root-lift, mass-scale, RG, labeling,
+and residual subrecords were forward-locked inside one accepted
+$\mathfrak C_{\mathrm{fl}}$; it does not falsify the upstream discrete
+backbone.
 
-Falsified if: Inverted Hierarchy confirmed at > 5σ significance.
-
-**Secondary Predictions:**
+**Secondary registered-branch diagnostics.** Each row becomes a forward
+prediction only when the same accepted flavor certificate fixes its full
+matrix realization, observable map, and propagated interval before
+comparison:
 
 |Observable |Prediction|3σ Range |Falsification |
 |:------------------|:---------|:------------------------------------|:-------------------------------------------|
 |$\sin^2\theta_{23}$|$0.5412$|$0.478$–$0.604$|Falsified if the measured value lies outside this range at $>3\sigma$; the branch value currently lies inside it|
-|$\delta_{CP}$|$232.5^\circ$|$160^\circ$–$305^\circ$|Falsified if the measured value lies outside this range at $>3\sigma$; the branch value currently lies inside it|
+|$\delta_{CP}$|$232.5^\circ$ convention-level candidate|$160^\circ$–$305^\circ$|A measurement tests this numerical branch only after an accepted forward-locked $\mathfrak C_{\mathrm{PMNS}}^{CP}$ and $\mathfrak C_{\mathrm{fl}}$ fix its propagated interval before comparison|
 |$\sum m_\nu$|$0.0305192\,\mathrm{eV}$|$<0.10\,\mathrm{eV}$|Conditional absolute-scale projection, falsified by an established $\sum m_\nu>0.10\,\mathrm{eV}$; the internal splittings remain nonclosing|
-|$m_{\beta\beta}$|$1.71723\,\mathrm{meV}$|$<10\,\mathrm{meV}$|Conditional Majorana-phase output, falsified by a confirmed $m_{\beta\beta}$ signal at LEGEND-1000 or nEXO sensitivity|
+|$m_{\beta\beta}^{\mathrm{conv}}$|$1.71723\,\mathrm{meV}$|$<10\,\mathrm{meV}$|This CP-dependent candidate becomes a forward-test interval only when the same accepted $\mathfrak C_{\mathrm{PMNS}}^{CP}\subset\mathfrak C_{\mathrm{fl}}$ fixes its masses, angles, Majorana phases, and remainders before comparison|
 **Experimental Timeline:**
 
 |Experiment |Years |Sensitivity |
@@ -7452,7 +8551,12 @@ Falsified if: Inverted Hierarchy confirmed at > 5σ significance.
 
 ## T.25.1 Conditional Flavor-Model Status
 
-This section compares fermion data with a geometric hierarchy model. The distance triads, sector prefactors, $\alpha_{IR}$, $\beta_{geom}$, effective dimensions, matching maps, and remainders must be fixed before a forward comparison. Arithmetic evaluation after those choices is deterministic, but the full parameter set is not derived from $K_0=3$.
+This section compares fermion data with a geometric hierarchy model. The
+distance triads, sector prefactors, $\alpha_{\mathrm{IR}}$, common
+packet/VVM coefficient and endpoint bounds, effective dimensions, matching
+maps, and remainders must be fixed before a forward comparison. Arithmetic
+evaluation after those choices is deterministic, but the full parameter set
+is not derived from $K_0=3$.
 
 ## T.25.2 Input and Certificate Ledger
 
@@ -7462,7 +8566,7 @@ This section compares fermion data with a geometric hierarchy model. The distanc
 | generation count | anomaly/CP branch |
 | fermion-to-root labels and triads | calibration candidates pending a forward selector |
 | $\alpha_{IR}$ | model/calibration entry on the declared transport branch |
-| $\beta_{geom}$ and $D_{eff}$ | model inputs under T.42.2 and T.42.5 |
+| $\beta_{\mathrm{pkt}}$ and $D_{\mathrm{eff}}$ | packet-certificate output under T.42.2; $1/144$ only on its exact derivative subbranch; effective-dimension model inputs under T.42.5 |
 | sector prefactors | branch inputs with their gauge/Bures certificates |
 | RG and threshold maps | scheme-dependent computations |
 | sixth-order and mapping remainders | open certificate intervals |
@@ -7471,13 +8575,16 @@ No precision or zero-parameter claim is valid until the corresponding row is clo
 
 
 
-This section consolidates conditional fermion-mass comparisons from the geometric hierarchy model on $\mathrm{Gr}(2,8)$. The structural value $K_0=3$ supplies the upstream minimal-branch ledger; the hierarchy-response ansatz separately connects registered $E_8$ root distances to mass ratios through $\alpha_{\mathrm{IR}}$, built from $\alpha_{\mathrm{UV}}=3/2$ and the declared sinc factor.
+This section consolidates conditional fermion-model comparisons on $\mathrm{Gr}(2,8)$. The structural value $K_0=3$ supplies the upstream minimal-branch ledger; the hierarchy-response ansatz separately connects registered $E_8$ root distances to a model-kernel exponent through $\alpha_{\mathrm{IR}}$, built from the unit-radius value $\alpha_{\mathrm{UV}}=3/2$ and the declared sinc prescription.
 
-The primary result is the mass hierarchy formula (Theorem T.39):
-
-$$\ln\left(\frac{m_j}{m_i}\right) = \alpha_{\text{IR}} \cdot d^2_{E_8}(r_i, r_j)$$
-
-where $d^2_{E_8} \in \{2, 4, 6, 8\}$ are squared distances between $E_8$ roots representing fermion generations.
+Theorem T.39 gives the residual-bearing kernel identity
+$$
+\log K_{ij}^{\mathrm{mag}}
+=C_f-\alpha q_{ij}
++\frac12\log\Delta_{\mathrm{VVM}}(i,j)
++\log(1+\epsilon_{ij}),
+$$
+with an outward-rounded bound on $\epsilon_{ij}>-1$. Theorem T.39 then assembles candidate $Y_f$ matrices and supplies the separate full-matrix realization test. A displayed mass-ratio law in this section is exact only on a branch whose certificate $\mathfrak C_{Y\to m}$ verifies its stated residual as zero; otherwise it is a numerical candidate or an interval comparison. The allowed root separations $q_{ij}\in\{2,4,6,8\}$ do not select their physical labels.
 
 -----
 
@@ -7485,18 +8592,25 @@ where $d^2_{E_8} \in \{2, 4, 6, 8\}$ are squared distances between $E_8$ roots r
 
 The structural backbone traces to $K_0=3$ through its stated branch gates; response, flavor, threshold, and remainder entries retain their independent model or certificate status:
 
-$$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 24$$
+$$
+\begin{aligned}
+\{\text{Theorem 15 hypotheses}\}&\Longrightarrow K_0=3,\\
+\{\text{Theorem 23 bound; Theorem Z.2 comparator/minimality}\}&\Longrightarrow d_0=8,\\
+\{\text{registered binary support; Theorem Z.1 active-record/capacity/quotient/no-surplus}\}&\Longrightarrow a=2,\\
+\{d_0=8,a=2;\ \text{Theorem Z.5 Peirce--QFI count}\}&\Longrightarrow (b,M)=(6,24).
+\end{aligned}
+$$
 
 |Parameter |Value |Derivation |Reference |
 |:-------------------|:-----|:------------------------------------------|:----------------|
 |$K_0$ |3 |Self-reference minimum |Theorem 15 |
 |$N_{\mathrm{vis}}^{\min}$ |8 |$2^{K_0}$ |Theorem 15 |
 |$d_0$ |8 |$d_0=N_{\mathrm{vis}}^{\min}$ on the minimal Hilbert-carrier branch |Theorem 23; Theorem Z.2 |
-|$a$ |2 |Landauer partition (see Theorem Z.1) |Theorem Z.1 |
+|$a$ |2 |Sharp binary active-record, entropy-capacity, quotient, and no-surplus branch; not a physical-reset partition |Theorem Z.1 |
 |$b$ |6 |$d_0 - a$ |Definition |
 |$M$ |24 |$2ab$ |Theorem Z.5 |
 |$N_g$ |3 |Anomaly+CP minimality with additive-monotone family-count selection |Theorem R.3.4; Proposition R.3.5.1a|
-|$\sigma^2_B$ |$1/24$|Capacity saturation |Lemma T.41.2 |
+|$\sigma^2_B$ |$1/24$|Centered isotropic unit-radius convention |Lemma T.41.2 |
 |$\alpha_{\text{UV}}$|$3/2$ |$1/(16\sigma^2_B)$ |Corollary T.41.3 |
 |$f_{\text{sinc}}$ |0.9454|$\sin(u)/u$, $u = 1/\sqrt{N_g}$ |Theorem T.24.2.1 |
 |$\alpha_{\text{IR}}$|1.418 |$\alpha_{\text{UV}} \times f_{\text{sinc}}$|Theorem T.24.2.1 |
@@ -7515,7 +8629,7 @@ $$\alpha_{\text{IR}} := \frac{3}{2} \times 0.9454 = 1.418.$$
 
 ### T.25.3.1 Calibration Status
 
-The displayed sector triads are admissible root triples chosen during model development. Neither PCE nor error correction currently supplies a data-independent unique selector.
+The displayed sector triads are admissible root triples chosen during model development. Proposition T.24.9 unconditionally supplies a unique neutrino distance-tuple minimizer for every positive-stiffness alignment cost on its exhaustive full-rank comparison class. Promotion to a complete PCE selector requires an accepted $\mathfrak C_{\mathrm{align}}$ with a source-exhaustive constant-remainder ledger; error correction supplies no separate unique selector. Even on the accepted PCE branch, the $E_8$ embedding and physical labels retain their separate gates.
 
 ### T.25.3.2 Realizability Witnesses
 
@@ -7582,15 +8696,19 @@ The 1↔2 sector angles from $d^2_{21}$:
 
 ### T.25.4.1 Leading-Order Ratio Diagnostic
 
-**Theorem T.25.1** (Lepton Ratio Invariant). *The charged lepton mass ratio invariant equals:*
+**Theorem T.25.1** (Residual-Bearing Charged-Lepton Ratio Diagnostic). On a Theorem-T.39 full-matrix realization branch with $d_{31}^2=6$ and $d_{32}^2=2$, write
+$$
+R_{3i}:=\log\!\left(\frac{m_3}{m_i}\right)-\alpha d_{3i}^2.
+$$
+Then the physical ratio invariant satisfies the exact identity
+$$
+\mathcal R_\ell
+=\frac{6\alpha+R_{31}}{2\alpha+R_{32}}.
+\tag{T.25.1}
+$$
+It equals $3$ exactly if and only if the accepted residual intervals prove $R_{31}-3R_{32}=0$ and the denominator is nonzero. In particular, zero residuals imply $\mathcal R_\ell=3$.
 
-$$\mathcal{R}_\ell = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} = \frac{d^2_{31}}{d^2_{32}} = \frac{6}{2} = 3$$
-
-*Proof.* From the hierarchy formula $\ln(m_j/m_i) = \alpha \cdot d^2_{ij}$:
-
-$$\mathcal{R}_\ell = \frac{\alpha \cdot d^2_{31}}{\alpha \cdot d^2_{32}} = \frac{d^2_{31}}{d^2_{32}} = \frac{6}{2} = 3$$
-
-The ratio is independent of $\alpha$ and tests pure $E_8$ geometry. ∎
+*Proof.* Substitute the two residual definitions into the numerator and denominator. Cross-multiplication shows that equality with $3$ is equivalent to $R_{31}=3R_{32}$. The discrete geometry fixes the model distances; it does not discharge the full-matrix residual gate. ∎
 
 **Experimental Comparison** (Particle Data Group 2024):
 
@@ -7606,30 +8724,49 @@ $$\ln(m_\tau/m_e) = \ln(3477.4) = 8.1540$$
 
 $$\mathcal{R}_{\text{obs}} = \frac{8.1540}{2.8224} = 2.889$$
 
-**Conditional fourth-order model comparison.** Adopt $\alpha_{IR}$, $\beta_{geom}=1/144$, and the two $D_{eff}$ values as forward-locked model entries. Denote the adjacent-edge outputs by
+**Conditional fourth-order model comparison.** Adopt the registered
+$\alpha_{\mathrm{IR}}$, Theorem T.42.2's exact-certificate subbranch
+$\beta_{\mathrm{pkt}}=1/144$, and the two $D_{\mathrm{eff}}$ assignments.
+With zero endpoint remainders,
 $$
-(L_{32},L_{21}):=(2.8212,5.3306).
+(L_{32}^{(0)},L_{21}^{(0)})
+:=(2.8256725003\ldots,5.4314375933\ldots),
 $$
-Exact path addition then sets $L_{31}:=L_{32}+L_{21}=8.1518$.
-Thus the conditional ratio invariant is $R_\ell=8.1518/2.8212\approx2.889$. The agreement with the quoted observed value is descriptive model validation. It does not establish the overlap coefficient, the effective-dimension assignment, or a controlled uncertainty interval. The value $0.005$ is a model allowance until T.25.10's remainder certificate is supplied.
+and exact path composition gives
+$$
+L_{31}^{(0)}:=L_{32}^{(0)}+L_{21}^{(0)}
+=8.2571100936\ldots,
+\qquad
+R_\ell^{\rm model}:=\frac{L_{31}^{(0)}}{L_{32}^{(0)}}
+=2.9221751964\ldots .
+$$
+The comparison with the quoted mass-log ratio is retrospective.  It does not
+establish the kernel, effective-dimension assignments, remainder, or
+full-matrix mass realization.  No $0.005$ error bar is asserted before the
+T.25.10 certificate is supplied.
 
-### T.25.4.2 Individual Logarithmic Ratios
+### T.25.4.2 Individual Model Exponents
 
-| Ratio | Declared geometry input | Conditional model output |
-|:--|:--|:--|
-| $\ln(m_\tau/m_\mu)$ | $d^2=2$ | $2.8212$ |
-| $\ln(m_\mu/m_e)$ | $d^2=4$ | $5.3306$ |
-| $\ln(m_\tau/m_e)$ | adjacent-edge path sum | $8.1518$ |
+|Model factor|Declared geometry input|Zero-remainder exponent|
+|:--|:--|:--:|
+|$S_{\tau\mu}$|$d^2=2$|$L_{32}^{(0)}=2.8256725003\ldots$|
+|$S_{\mu e}$|$d^2=4$|$L_{21}^{(0)}=5.4314375933\ldots$|
+|$S_{\tau e}=S_{\tau\mu}S_{\mu e}$|adjacent-edge path|$L_{31}^{(0)}=8.2571100936\ldots$|
 
-The last row is not an independent prediction: it is fixed exactly by path additivity. No truncation-error bar is asserted without the missing sixth-order bound.
+The last row is algebraically dependent.  Physical logarithmic mass ratios
+require Theorem T.39's accepted realization certificate.
 
 
 
-**Numerical Comparison (curvature-corrected):**
+**Zero-remainder packet-model diagnostic:**
 
-|Ratio |Predicted |Observed|Deviation |
-|--------|-----------------|--------|----------|
-|$R_\ell$|$2.889 \pm 0.002$|$2.889$ |consistent|
+|Ratio |Model value |Quoted mass-log value |Residual |
+|:--|:--:|:--:|:--:|
+|$R_\ell$|$2.9221751964\ldots$|$2.8890355116\ldots$|$+0.0331396848\ldots$ ($+1.1471\%$ relative to the quoted value)|
+
+This row has no certified uncertainty before the endpoint remainder bounds of
+Theorem T.42.2 are accepted. It becomes a physical mass-ratio comparison only
+through Theorem T.39's common-scale full-matrix realization.
 
 ### T.25.4.3 Empirical Extraction of α
 
@@ -7642,11 +8779,17 @@ $$\alpha = \frac{\ln(m_j/m_i)}{d^2_{ij}}$$
 |$\ln(m_\tau/m_\mu)/2$ |1.411 |
 |$\ln(m_\tau/m_e)/6$ |1.359 |
 |$\ln(m_\mu/m_e)/4$ |1.333 |
-|**Theoretical** $\alpha_{\text{IR}}$|**1.418** |
+|Registered coefficient prescription $\alpha_{\mathrm{IR}}$|$1.4180445835\ldots$ |
 
-The τ/μ extraction yields $\alpha_{\text{emp}} = 1.411$, agreeing with the theoretical prediction $\alpha_{\text{IR}} = 1.418$ within **0.5%**.
+The $\tau/\mu$ empirical extraction is about $0.5\%$ below the registered
+coefficient prescription. This is a retrospective diagnostic because the
+sinc multiplier is not derived as the physical exponent-running map.
 
-The spread in extracted values (1.333 to 1.411, approximately 6%) reflects higher-order corrections that become more significant at larger $E_8$ distances. This systematic variation is consistent with the geometric expansion discussed in Section T.25.10.
+The spread of the three empirical extractions does not by itself identify a
+higher-order geometric correction. Such an attribution requires the accepted
+common packet/VVM certificate, its endpoint remainder bounds, the registered
+effective-dimension assignments, and Theorem T.39's full-matrix matching
+bridge.
 
 -----
 
@@ -7671,28 +8814,34 @@ The following comparisons are diagnostic checks using PDG central values at thei
 
 $$\mathcal{R}_d = \frac{\ln(m_b/m_d)}{\ln(m_b/m_s)} = \frac{6.79}{3.80} = 1.79$$
 
-|Quantity |Predicted|Observed|Deviation|
-|:--------------|:-------:|:------:|:-------:|
-|$\mathcal{R}_d$|2.00 |1.79 |11% |
+| Quantity | Leading model value | Cross-scheme diagnostic | Deviation |
+|:--|:--:|:--:|:--:|
+| $\mathcal{R}_d$ | $2.00$ | $1.79$ | $11\%$ |
 
 **Up-type quarks** $(d^2_{32}, d^2_{31}) = (4, 8)$:
 
 $$\mathcal{R}_u = \frac{\ln(m_t/m_u)}{\ln(m_t/m_c)} = \frac{11.29}{4.91} = 2.30$$
 
-|Quantity |Predicted|Observed|Deviation|
-|:--------------|:-------:|:------:|:-------:|
-|$\mathcal{R}_u$|2.00 |2.30 |15% |
+| Quantity | Leading model value | Cross-scheme diagnostic | Deviation |
+|:--|:--:|:--:|:--:|
+| $\mathcal{R}_u$ | $2.00$ | $2.30$ | $15\%$ |
 
 ### T.25.5.2 QCD and Scheme Effects
 
-The quark sector deviations (11–15%) exceed the lepton sector (3.7%) due to several effects:
+The quark-sector diagnostics differ from their leading model values by
+$11$--$15\%$. The following effects can contribute, but their existence does
+not establish that they exhaust or explain either residual:
 
 1. **Renormalization scale mixing:** The PDG quark masses are defined at different scales ($m_b$ at $\mu = m_b$; light quarks at $\mu = 2$ GeV). A rigorous comparison fixes a target scheme (here $\overline{\text{MS}}$) and runs all masses to a common reference scale $\mu_{\text{ref}}$ using SM RG evolution above $\mu_{\mathrm{EW}}$ and QCD decoupling + running below $\mu_{\mathrm{EW}}$ (Section T.25.5.3). Reported comparisons should state loop order, threshold conventions, and mapping systematics (T1/T2/T3).
 1. Scheme dependence: The direct $m_t$ is extracted from event kinematics and is sensitive to the mass parameter used in Monte Carlo generators; mapping it to a well-defined pole or $\overline{\text{MS}}$ mass introduces additional theoretical uncertainty.
 1. **QCD threshold effects:** Heavy quark decoupling introduces scale-dependent corrections at flavor thresholds.
 1. Experimental and theory uncertainties: Light-quark $\overline{\text{MS}}$ masses carry percent-level uncertainties at $\mu = 2$ GeV (CL = 90%), and additional systematic uncertainty enters through RG running and scheme conversions; these effects are non-negligible compared to the observed 10–15% deviations.
 
-The agreement at the 10–15% level for quarks, compared to 3.7% for leptons, is consistent with these QCD-induced corrections.
+These observations establish neither the sign nor the magnitude of a QCD
+correction to either hierarchy invariant. A causal attribution requires the
+common-scheme RG, decoupling, threshold, covariance, and residual certificate
+specified below, together with source exhaustion excluding an independent
+flavor-kernel or labeling contribution.
 
 ### T.25.5.3 Common-Scale Protocol and Uncertainty Decomposition
 
@@ -7727,7 +8876,7 @@ With this protocol, the quark-sector ratios in Section T.25.5.1 become a control
 
 ### T.25.5.4 Common-Scale Reduction at $\mu = M_Z$ (SM $\overline{\text{MS}}$)
 
-This section reports a worked common-scale reduction to $\mu=M_Z$ in the SM $\overline{\text{MS}}$ convention. The parameter set in the table below is a consistent $\overline{\text{MS}}$ input at $\mu=M_Z$ (VEV and Yukawa eigenvalues) and is used here to define the observed same-scale hierarchy invariants for comparison with PU predictions. Any standard SM parameter-extraction pipeline that outputs $(v(\mu),y_q(\mu))$ at $\mu=M_Z$ under a stated convention yields an equivalent input set within the quoted uncertainties.
+This section reports a worked common-scale reduction to $\mu=M_Z$ in the SM $\overline{\text{MS}}$ convention. The parameter set in the table below is a consistent $\overline{\text{MS}}$ input at $\mu=M_Z$ (VEV and Yukawa eigenvalues) and is used here to define observed same-scale hierarchy invariants for comparison with the registered model kernels. Calling a kernel a physical PU prediction additionally requires the accepted full-matrix, matching, threshold, and residual certificates stated in Theorem T.39. Any standard SM parameter-extraction pipeline that outputs $(v(\mu),y_q(\mu))$ at $\mu=M_Z$ under a stated convention yields an equivalent input set within the quoted uncertainties.
 
 |Quantity |Value at $\mu = M_Z$|Source |
 |:---------------------------|:------------------:|:----------------|
@@ -7783,22 +8932,23 @@ is an additional model response. Its numerical value is not derived from the obs
 
 
 
-Let $\mathcal{R}^{(0)}_f$ denote the PU prediction for the same-scale hierarchy invariant in sector $f$ computed from the PU exponent formula through the $d^4$ term (including the computed $D_{\mathrm{eff}}$ curvature correction at that order). For the up sector, no frustration correction applies ($\kappa_u=0$), hence
+Let $\mathcal R_f^{(0),\mathrm{model}}$ denote the residual-bearing scalar-kernel baseline defined by Theorem T.25.6a.5 after its coefficient, effective-dimension, triad, and remainder entries are fixed. On the stipulated $\kappa_u=0$ branch, exact algebra gives
 $$
-\mathcal{R}_u^{\text{pred}}=\mathcal{R}_u^{(0)}.
-$$
-
-For the down sector, the $A_2/D_4$ lattice asymmetry induces a frustration correction derived in Section T.25.6a. Writing the down-sector correction in overlap form,
-$$
-\mathcal{R}_d^{\text{pred}}
-=\mathcal{R}_d^{(0)}\cdot \frac{1-\Phi^{(d)}_{31}}{1-\Phi^{(d)}_{32}},
-$$
-Lemma T.25.6a.4 gives $(1-\Phi^{(d)}_{31})/(1-\Phi^{(d)}_{32})=5/6$ at the PU point, hence
-$$
-\mathcal{R}_d^{\text{pred}}=\mathcal{R}_d^{(0)}\cdot \frac{5}{6}.
+\mathcal R_u^{\mathrm{model}}=\mathcal R_u^{(0),\mathrm{model}}.
 $$
 
-The same-scale quark hierarchy invariants can be compared at sub-percent precision once a common-scheme reduction is used and the down-sector $A_2/D_4$ frustration correction is included with its stated uncertainty budget.
+For the down sector, the conditional overlap rule of Section T.25.6a defines
+$$
+\mathcal R_d^{\mathrm{model}}
+=\mathcal R_d^{(0),\mathrm{model}}
+\frac{1-\Phi^{(d)}_{31}}{1-\Phi^{(d)}_{32}}.
+$$
+Lemma T.25.6a.4 evaluates the stipulated overlap functional at the registered point and gives
+$$
+\mathcal R_d^{\mathrm{model}}
+=\frac56\mathcal R_d^{(0),\mathrm{model}}.
+$$
+These are scalar model identities, not yet physical same-scale quark invariants. That identification requires an accepted Theorem-T.39 full-matrix realization and a common scheme, scale, threshold, label, and residual record. No sub-percent precision claim is defined before the uncertainty intervals of Section T.25.6a.10 are accepted.
 
 -----
 
@@ -7812,7 +8962,7 @@ A valid interval must include truncation, overlap-functional, vacuum-selection, 
 
 
 
-The down-quark sector is distinguished by its $1\leftrightarrow 2$ transition angle $\theta_{21,d}=120^\circ=2\pi/3$ (Section T.25.3.6), whereas the up-quark and charged-lepton sectors have $\theta_{21}=\pi/2$. This $A_2$ (hexagonal) mismatch induces a frustration strain on the generation manifold that modifies the relative suppression exponents along the $3\leftrightarrow 1$ and $3\leftrightarrow 2$ geodesic paths, and hence modifies the down-sector hierarchy invariant under same-scale comparison.
+The down-quark sector is distinguished by its $1\leftrightarrow 2$ transition angle $\theta_{21,d}=120^\circ=2\pi/3$ (Section T.25.3.6), whereas the up-quark and charged-lepton sectors have $\theta_{21}=\pi/2$. This $A_2$ (hexagonal) mismatch motivates the stipulated frustration-strain ansatz below. The discrete angle mismatch alone neither derives the strain tensor nor fixes its screening, stiffness, response map, or physical same-scale mass interpretation.
 
 **Definition T.25.6a.1 (Frustration angle parameter).** For a fermion sector $f$, define
 $$
@@ -7895,48 +9045,58 @@ $$
 $$
 ∎
 
-**Theorem T.25.6a.5 (Frustration correction to the down-sector hierarchy invariant).** Let the sector-$f$ hierarchy exponents be defined by the PU formula (Sections T.21.9 and T.25.3) as
+**Theorem T.25.6a.5 (Frustration correction to a down-sector hierarchy-model invariant).** For a sector $f$, define the residual-bearing model exponents
 $$
-E_{3i,f}^{(0)} := \ln\!\left(\frac{y_{3,f}}{y_{i,f}}\right)
-= c_f\left[\alpha_{\mathrm{IR}}\,d^2_{3i,f} - \frac{\alpha_{\mathrm{IR}}}{C} D_{\mathrm{eff}}(d^2_{3i,f})\,d^4_{3i,f}\right] + \mathcal{O}(d^6),
+E_{3i,f}^{(0)}
+:=c_f\left[
+\alpha_{\mathrm{IR}}d_{3i,f}^2
+-\frac{1}{C}D_{\mathrm{eff},f}(d_{3i,f}^2)d_{3i,f}^4
+\right]+\mathcal R_{6,f}(d_{3i,f}).
+\tag{T.25.6a.5a}
 $$
-and define the same-scale hierarchy invariant
+When $E_{32,f}^{(0)}\ne0$, set
+$\mathcal R_f^{(0),\mathrm{model}}:=E_{31,f}^{(0)}/E_{32,f}^{(0)}$.
+Under the declared frustration-overlap rule
 $$
-\mathcal{R}_f(\mu)=\frac{\ln(m_{3,f}(\mu)/m_{1,f}(\mu))}{\ln(m_{3,f}(\mu)/m_{2,f}(\mu))}=\frac{E_{31,f}}{E_{32,f}}.
+E_{3i,f}:=(1-\Phi_{3i}^{(f)})E_{3i,f}^{(0)},
 $$
-Under the frustration perturbation $h^{(f)}$, define corrected exponents by the overlap rule
+with nonzero denominator, exact algebra gives
 $$
-E_{3i,f}:=(1-\Phi^{(f)}_{3i})\,E^{(0)}_{3i,f}.
+\mathcal R_f^{\mathrm{model}}
+=\mathcal R_f^{(0),\mathrm{model}}
+\frac{1-\Phi_{31}^{(f)}}{1-\Phi_{32}^{(f)}}.
+\tag{T.25.6a.5b}
 $$
-Then the corrected invariant is
+Thus the $\kappa_u=0$ branch has
+$\mathcal R_u^{\mathrm{model}}=\mathcal R_u^{(0),\mathrm{model}}$, while
+Lemma T.25.6a.4 gives
 $$
-\mathcal{R}_f(\mu)=\mathcal{R}_f^{(0)}\cdot \frac{1-\Phi^{(f)}_{31}}{1-\Phi^{(f)}_{32}},
-\qquad
-\mathcal{R}_f^{(0)}:=\frac{E^{(0)}_{31,f}}{E^{(0)}_{32,f}}.
+\mathcal R_d^{\mathrm{model}}
+=\frac56\mathcal R_d^{(0),\mathrm{model}}.
 $$
-In particular, for up-type quarks $\kappa_u=0$ so $\Phi^{(u)}_{3i}=0$ and $\mathcal{R}_u=\mathcal{R}^{(0)}_u$. For down-type quarks, Lemma T.25.6a.4 yields
+These are model-kernel identities. They equal the same-scale physical invariant
 $$
-\mathcal{R}_d=\mathcal{R}^{(0)}_d\cdot \frac{5}{6}.
+\frac{\log(m_{3,f}/m_{1,f})}{\log(m_{3,f}/m_{2,f})}
 $$
-∎
+only if an accepted Theorem-T.39 full-matrix realization and common-scale
+matching certificate identifies the two relevant physical logarithms with the
+model exponents. The quartic coefficient is $1/C$; no additional factor of
+$\alpha_{\mathrm{IR}}$ multiplies it. ∎
 
 **Corollary T.25.6a.6 (The 5/6 factor).** For down quarks at the PU point,
 $$
 \frac{1-\Phi^{(d)}_{31}}{1-\Phi^{(d)}_{32}}=\frac{5}{6}=\frac{b-1}{b}\qquad (b = 6 \text{ at the PU point}).
 $$
 
-**Corollary T.25.6a.7 (Numerical prediction for the invariant).** With $\mathcal{R}_d^{(0)}$ computed from the PU exponent formula through the $d^4$ term (including the computed curvature correction),
+**Corollary T.25.6a.7 (Conditional Baseline Diagnostic).** If an independently certified baseline model invariant has the exact value $\mathcal R_d^{(0),\mathrm{model}}=2.11$, then the stipulated frustration factor gives
 $$
-\mathcal{R}_d^{\text{pred}}=\mathcal{R}_d^{(0)}\cdot \frac{5}{6}.
+\mathcal R_d^{\mathrm{model}}=\frac56(2.11)=\frac{211}{120}=1.75833\ldots.
 $$
-If $\mathcal{R}_d^{(0)}=2.11$ at that truncation order, then
-$$
-\mathcal{R}_d^{\text{pred}}=\frac{211}{120}\approx1.75833.
-$$
+The value $2.11$ is not derived by the preceding theorem. This is conditional model arithmetic, not a physical prediction without the sector-specific coefficient, $D_{\mathrm{eff}}$, remainder, frustration, common-scale matching, and Theorem-T.39 certificates.
 
 **Remark T.25.6a.8: Interpretation of $s_b$ and $N_g$.** The screening factor $s_b=b/(b+1)$ encodes the stipulated competition between one frustrated edge direction and $b$ inactive relaxation directions in this strain model. The value $N_g=3$ is imported from the completed Appendix R family-selection branch; it is not fixed by $(a,b)=(2,6)$ alone. Consequently, the displayed correction is conditional on both the strain-response model and the accepted family-count objective.
 
-**Remark T.25.6a.9: Connection to Cabibbo mixing.** The same $A_2/D_4$ mismatch that shifts $\mathcal{R}_d$ also determines the Cabibbo angle via the vacuum position $\theta_{\text{vac}}=105.15^\circ$ (Section T.25.6.1). Both effects arise from a single geometric source: incompatibility between hexagonal (down) and cubic (up) lattice structures in the $1\leftrightarrow 2$ sector.
+**Remark T.25.6a.9: Connection to the Cabibbo response model.** The same $A_2/D_4$ mismatch is used as an input to both the conditional hierarchy-strain ansatz and the Cabibbo response model of Section T.25.6.4. It does not by itself determine either effect: the strain functional, stiffness ratio, vacuum selector, projection, curvature factor, and CKM realization gates remain separate certificate data.
 
 
 #### T.25.6a.11 Uncertainty budget for the frustration correction (T1/T2/T3)
@@ -7983,32 +9143,54 @@ The frustration angle is:
 
 $$\theta_{\text{frustration}} = \theta_{\text{vac}} - \theta_u = 15.15°$$
 
-### T.25.6.4 Cabibbo Angle Prediction
+### T.25.6.4 Conditional Cabibbo Response-Model Evaluation
 
-**Summary (Cabibbo Mixing).** *The Cabibbo angle emerges from frustration-induced tunneling:*
+**Summary (Cabibbo Mixing Model).** *On the registered stiffness, projection, and curvature inputs, define the scalar response kernel:*
 
 $$|V_{us}| = \mathcal{P} \times \sin(\theta_{\text{frustration}}) \times f_{\text{curv}}$$
 
 where:
 
-- $\mathcal{P} = \sqrt{3}/2 = \cos(30°)$ is the A₂ root-weight projection factor (Theorem T.51)
-- $f_{\text{curv}} = 0.9989$ is the Bures curvature correction (Lemma T.51.1)
+- $\mathcal P=\sqrt3/2=\cos(30^\circ)$ is the conditional scalar-projection factor of Theorem T.51;
+- $f_{\mathrm{curv}}=1861/1863$ is the curvature-response factor of Assumption T.51.1.
 
-The factor $\sqrt{3}/2$ arises from the A₂ root-weight duality (Theorem T.51): the angular offset between any root and the nearest weight in the hexagonal lattice is exactly 30°, a consequence of Lie algebra geometry (Humphreys 1972, §13).
+The $A_2$ root and weight directions have a $30^\circ$ offset. On the
+scalar-projection response branch of Theorem T.51, this gives
+$\mathcal P=\cos(30^\circ)=\sqrt3/2$.
 
-The curvature correction from Lemma T.51.1:
+Assumption T.51.1 gives
 
-$$f_{\text{curv}} = 1 - \frac{K_{\text{avg}}}{6M}\sigma^4_{\mathcal{G}} = 1 - \frac{32/23}{144} \times \frac{1}{9} = 0.9989$$
+$$
+f_{\mathrm{curv}}
+=
+1-\frac{K_{\mathrm{avg}}^{\mathrm{Bures}}}{6M}\sigma_{\mathcal G}^4
+=
+1-\frac{32/23}{144}\frac19
+=
+\frac{1861}{1863}
+=
+0.998926462694579\ldots .
+$$
+
+Here $K_{\mathrm{avg}}^{\mathrm{Bures}}=32/23$ is the intrinsic average
+Bures sectional curvature of Theorem Z.23. Its insertion into this scalar
+response formula and the use of $\sigma_{\mathcal G}$ are the independent
+model assumptions of T.51.1; this quantity is not Theorem Z.24's
+$K_{\mathrm{eff}}$.
 
 where $K_{\text{avg}} = 32/23$ is the average Bures sectional curvature on Gr(2,8) (Theorem Z.23).
 
-**Numerical evaluation:**
+**Conditional model evaluation:**
 
-$$|V_{us}|_{\text{pred}} = \frac{\sqrt{3}}{2} \times \sin(15.15°) \times 0.9989 = 0.8660 \times 0.2613 \times 0.9989 = 0.2261$$
+$$
+k_{us}^{\mathrm{model}}
+:=\frac{\sqrt3}{2}\sin(15.15^\circ)(0.9989)
+=0.2261.
+$$
 
-| Quantity | Predicted | Observed (Particle Data Group 2024) | Deviation |
-|:---------|:---------:|:-----------------------------------:|:---------:|
-| $\vert V_{us}\vert$ | 0.2261 | $0.22501\pm0.00068$ | 0.5% |
+| Quantity | Conditional scalar-kernel output | Comparison datum (Particle Data Group 2024) | Status |
+|:--|:--:|:--:|:--|
+| $k_{us}^{\mathrm{model}}$ | $0.2261$ | $0.22501\pm0.00068$ | $0.5\%$ central-value diagnostic; not a physical $|V_{us}|$ before the accepted common flavor certificate |
 
 ### T.25.6.5 Sensitivity to Stiffness Ratio
 
@@ -8044,7 +9226,7 @@ $$\frac{c_\ell}{c_d} = \sqrt{\frac{Z_d}{Z_\ell}} = \sqrt{\frac{64}{9}} = \frac{8
 
 ∎
 
-The sector prefactors $c_f$ set absolute mass scales for each fermion sector; they cancel in the ratio invariants $\mathcal{R}$, which test pure $E_8$ geometry independently of normalization.
+Sector prefactors cancel algebraically from ratios of entries only when the same prefactor multiplies the compared entries. Physical mass invariants additionally depend on full-matrix diagonalization, matching, threshold evolution, and the certified residuals; they are not pure-$E_8$ observables without those gates.
 
 ### T.25.7.2 Up-Down Ratio
 
@@ -8081,17 +9263,17 @@ The open inputs include root-label selection, continuous response coefficients, 
 
 |Test |Prediction|Observation |Deviation|Status |
 |:-----------------------|:--------:|:---------------:|:-------:|:----------------------------------:|
-|$m_\tau$ |$\approx 0.94$ GeV (LO); 1776.86 MeV (anchored ⊘) |1.77686 GeV |factor $\approx 1.9$ (LO); 0% (anchored) |⚠ (LO normalization open; Remark T.45.1)|
-|$m_\mu$ |105.78 MeV (anchored to $m_\tau^{\rm obs}$) |105.65838 MeV |0.12% |✓ (ratio test; Lemma T.45.1a) |
-|Lepton $\mathcal{R}$ |3.000 |2.889 |3.7% |✓ |
-|$\ln(m_\tau/m_\mu)$ |2.8212 |2.8224 |$\approx 0.04\%$ |✓ |
+|$m_\tau$|$\approx0.94\,\mathrm{GeV}$ at leading order; $1776.86\,\mathrm{MeV}$ as anchor|$1.77686\,\mathrm{GeV}$|factor $\approx1.9$ at leading order; anchor is tautological|normalization open|
+|$m_\mu^{\rm model}$|$105.3123336\,\mathrm{MeV}$ from the tau-anchored zero-remainder model|$105.65838\,\mathrm{MeV}$|$-0.3275\%$|model diagnostic|
+|$R_\ell^{\rm model}$|$2.9221752$|$2.889$|$+1.15\%$|model diagnostic|
+|$L_{\tau\mu}^{(0)}$|$2.8256725003$|$2.8224$|$+0.11595\%$|model diagnostic|
 |$\vert V_{us}\vert$ |0.2261 |0.22501 |0.5% |✓ |
-|Up quark $\mathcal{R}$ |2.11 |$2.111 \pm 0.007$|**0.0%** |✓ |
-|Down quark $\mathcal{R}$|1.758 |$1.752 \pm 0.007$|**0.3%** |✓ |
+|Up-quark baseline|$2.11$ if independently supplied|$2.111\pm0.007$|conditional diagnostic|baseline/remainder certificate open|
+|Down-quark response|$1.75833\ldots$ if the same baseline and $5/6$ rule are supplied|$1.752\pm0.007$|conditional diagnostic|frustration/coexistence/T.39 gates open|
 
-The quark-sector entries are same-scale hierarchy invariants under a common-scheme reduction (Section T.25.5.4). The down-sector value includes the $A_2/D_4$ frustration correction (Section T.25.6a) with its matching uncertainty budget (Section T.25.6a.11).
+The quark entries are supplied model diagnostics. No physical same-scale hierarchy invariant follows until the coefficient, effective dimension, remainder, frustration, matching, labels, and Theorem-T.39 full-matrix certificate coexist.
 
-The τ/μ log ratio agrees at approximately $0.04\%$ ($|\Delta\ln|=0.0012$) after the registered triad, coefficient, effective-dimension, and remainder inputs are fixed. Its registered status is a conditional geometric-hierarchy model comparison.
+The registered zero-remainder $\tau/\mu$ model exponent differs from the quoted logarithm by $|\Delta\ln|=0.0032725003\ldots$, or $0.11595\%$. Its status is a model-kernel comparison; a physical mass-ratio statement additionally requires a certified remainder interval and Theorem T.39's common-scale full-matrix realization.
 
 ### T.25.8.4 Parameter Count
 
@@ -8118,27 +9300,36 @@ Failure on held-out data outside the propagated interval rejects that registered
 
 
 
-The framework makes specific, testable predictions:
+The following are forward-test obligations only after one certificate fixes
+the comparison class, labels, scale and scheme maps, residual intervals,
+likelihood, and covariance before examining the held-out data.
 
-**Condition 1** (Discrete Spectrum). Mass hierarchy ratios must satisfy:
+**Condition 1** (Discrete Spectrum). The retained root-distance ratios lie in
+the finite set
+$$
+\left\{\frac{4}{3},\frac{3}{2},2,3,4\right\}.
+$$
+A physical mass-hierarchy ratio need not equal one of these bare ratios after
+packet, matching, and residual terms are included. The leading value $3$ and
+the quoted lepton ratio $2.889\ldots$ are therefore a discrete-model
+diagnostic, not an equality prediction.
 
-$$\mathcal{R} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
+**Condition 2** (Hierarchy Coefficient). The empirical extraction
+$\log(m_\tau/m_\mu)/2=1.411\ldots$ is compared retrospectively with the
+registered prescription $\alpha_{\mathrm{IR}}=1.41804458\ldots$. Their
+proximity does not derive the sinc response or a physical running law.
 
-corresponding to $E_8$ distance ratios. The lepton value $\mathcal{R}_\ell = 2.889$ lies within 4% of the discrete prediction $\mathcal{R} = 3$.
+**Condition 3** (Frustration Angle). Inverting the scalar response at the
+quoted $|V_{us}|$ yields an empirical angle near $15^\circ$. The exact model
+tilt $17\pi/202$ is a forward CKM test only when the stiffness, projection,
+curvature-response, full-matrix, and flavor-certificate gates are fixed
+without using that entry.
 
-**Condition 2** (Hierarchy Coefficient). The coefficient extracted from τ/μ must equal:
-
-$$\alpha = \frac{\ln(m_\tau/m_\mu)}{2} = 1.411 \pm 5%$$
-
-The theoretical prediction $\alpha_{\text{IR}} = 1.418$ agrees within 0.5%.
-
-**Condition 3** (Frustration Angle). The Cabibbo angle constrains:
-
-$$\theta_{\text{frustration}} = \arcsin\left(\frac{2|V_{us}|}{\sqrt{3} \cdot f_{\text{curv}}}\right) = 15.0° \pm 2°$$
-
-The geometric prediction $\theta_{\text{frustration}} = 15.15°$ lies within this window.
-
-**Condition 4** (Sector Ratio). A measurement of the lepton-quark bridge inconsistent with $c_\ell/c_d = 8/3$ at the 10% level would falsify the gauge/Bures normalization constraint at matching.
+**Condition 4** (Sector Ratio). The matching-scale relation
+$c_\ell/c_d=8/3$ tests its gauge/Bures normalization branch only after a
+common-scale certificate realizes both sector prefactors and propagates its
+uncertainty. A failed test rejects that branch, not the upstream discrete
+backbone.
 
 -----
 
@@ -8150,24 +9341,54 @@ A quantitative truncation interval must therefore be supplied by the registered 
 
 
 
-The declared PU Yukawa model uses a curvature/Van-Vleck expansion on $\text{Gr}(2,8)$ in the small parameter $u^2=\sigma_B^2=1/24$:
+The declared hierarchy model uses the expansion parameter
+$\sigma_B^2=1/24$ from the independent interface unit-radius convention.
+It is distinct from Theorem T.54.2's generation-width parameter $u^2=1/3$.
+On an accepted common packet/VVM certificate, the residual-bearing model
+exponent is
+$$
+L_p
+=\alpha_{\mathrm{IR}}d_p^2
+-\beta_{\mathrm{pkt}}D_{\mathrm{eff}}(d_p^2)d_p^4
++\mathcal R_{6,p}(d_p).
+$$
+The coefficient becomes $1/C=1/144$ only on Theorem T.42.2's exact
+fourth-derivative subbranch.
+This is a model-kernel exponent, not a physical mass law without Theorem
+T.39's accepted full-matrix and common-scale matching certificate.
 
-$$\ln\left(\frac{m_j}{m_i}\right) = \alpha_{IR} d^2_{ij} + \alpha_2(d_{ij}) d^4_{ij} + \mathcal{O}(d^6)$$
+The preceding packet formula replaces the untyped shorthand
+$\alpha_2(d_{ij})$. Its coefficient and endpoint remainder bounds are
+outputs of the common packet/VVM certificate of Theorem T.42.2. The value
+$\beta_{\mathrm{pkt}}=1/144$ occurs only on that theorem's exact
+fourth-derivative subbranch. Theorem Z.24's electromagnetic
+$K_{\mathrm{eff}}$ has a different response-functional type and is not an
+input to this charged-lepton packet coefficient.
 
-where $\alpha_2(d_{ij})$ is computed from the same Bures-geometry inputs used elsewhere in Appendix T. The full derivation appears in Section T.21.8: the Van Vleck–Morette determinant (Lemma T.42.1a) combined with the effective curvature $K_{\text{eff}} = 2$ (Theorem Z.24) yields the geometric coefficient $\beta_{\text{geom}} = 1/144$ (Theorem T.42.2).
+For the charged-lepton triad, Theorem T.42.5's branch assignments use
+$D_{\mathrm{eff}}=3/8$ at $d^2=2$ and $D_{\mathrm{eff}}=13/6$ at $d^2=4$.
+On Theorem T.42.2's exact fourth-derivative subbranch
+$\beta_{\mathrm{pkt}}=1/144$, setting both endpoint remainders to zero gives
+$$
+L_{\tau\mu}^{(0)}=2.8256725003\ldots,
+\quad
+L_{\mu e}^{(0)}=5.4314375933\ldots,
+\quad
+L_{\tau e}^{(0)}=8.2571100936\ldots .
+$$
 
-For the charged-lepton triad, Theorem T.42.5's two branch assignments use $D_{\text{eff}}=3/8$ at $d^2=2$ and $D_{\text{eff}}=13/6$ at $d^2=4$, producing:
+|Model exponent|Leading quadratic|Fourth-order value|Quoted log ratio|Relative residual|
+|:--|:--:|:--:|:--:|:--:|
+|$L_{\tau\mu}^{(0)}$|$2.8360892\ldots$|$2.8256725003\ldots$|$2.8224$|$+0.11595\%$|
+|$L_{\mu e}^{(0)}$|$5.6721783\ldots$|$5.4314375933\ldots$|$5.3316$|$+1.87256\%$|
+|$L_{\tau e}^{(0)}$|$8.5082675\ldots$|$8.2571100936\ldots$|$8.1540$|$+1.26453\%$|
+|$R_\ell^{\rm model}$|$3.000$|$2.9221752\ldots$|$2.889$|$+1.15\%$|
 
-$$\ln(m_\tau/m_\mu) = 2.8212, \quad \ln(m_\mu/m_e) = 5.3306, \quad \ln(m_\tau/m_e) = 8.1518$$
-
-|Ratio |Leading (Gaussian)|Curvature-corrected|Observed|Deviation|
-|:------------------|:----------------:|:-----------------:|:------:|:-------:|
-|$\ln(m_\tau/m_\mu)$|2.836 |2.8212 |2.8224 |−0.04% |
-|$\ln(m_\mu/m_e)$ |5.672 |5.3306 |5.3316 |−0.02% |
-|$\ln(m_\tau/m_e)$ |8.508 |8.1518 |8.1540 |−0.03% |
-|$R_\ell$ |3.000 |2.889 |2.889 |exact |
-
-**Model allowance / uncertainty.** With $M=24$ and $d^2\in\{2,4\}$ for the charged-lepton links, the ratio $d^2/M\le1/6$ motivates the displayed truncation scale. Pending the registered remainder certificate for the next coefficient or analytic remainder, $0.005$ is the labeled T1 model allowance for a single charged-lepton logarithm.
+**Model allowance / uncertainty.** The ratio $d^2/M\le1/6$ is only an
+expansion diagnostic.  A numerical error interval requires the registered
+analytic or coefficient bound for $\mathcal R_6$; $0.005$ is not an error bar
+until that certificate is accepted.  Physical mass claims additionally
+require Theorem T.39.
 
 ## T.26 Flag-Lift Threshold Compression and Parameter Rigidity
 
@@ -8660,7 +9881,7 @@ can be used in Appendix T only after the paper explicitly replaces the canonical
 
 ## T.27 RG Rigidity and Yukawa Cancellation
 
-**Theorem T.71 (RG Uniqueness Conditional on a Complete Boundary Record).** Fix a loop-order Standard Model RG system and a complete matching-scale input record in the sense of Theorem T.79.2. In particular, besides the threshold triplet $(\Delta_1,\Delta_2,\Delta_3)$ and flavor data, the record must contain every Higgs target-shift, PU-to-SM quartic matching, marginality, decoupling, RG-scheme, and pole-conversion datum used by the requested outputs. Assume that the resulting RG initial-value problem has a solution that remains in the smooth perturbative domain throughout the closed scale interval between the matching scale and every requested output scale. Then the low-energy observable vector is uniquely determined conditional on that record. The threshold triplet alone fixes only the gauge-matching coordinates and does not determine the Higgs or full Yukawa vector.
+**Theorem T.71 (RG Uniqueness Conditional on a Complete Boundary Record).** Fix a loop-order Standard Model RG system and a complete matching-scale input record containing every boundary datum used by the requested outputs. In particular, besides the threshold triplet $(\Delta_1,\Delta_2,\Delta_3)$ and flavor data, the record must contain every Higgs target-shift, PU-to-SM quartic matching, marginality, decoupling, RG-scheme, and pole-conversion datum used by the requested outputs. Assume that the resulting RG initial-value problem has a solution that remains in the smooth perturbative domain throughout the closed scale interval between the matching scale and every requested output scale. Then the low-energy observable vector is uniquely determined conditional on that record. The threshold triplet alone fixes only the gauge-matching coordinates and does not determine the Higgs or full Yukawa vector.
 
 *Proof.* The completed spectral threshold record fixes $(\Delta_1,\Delta_2,\Delta_3)$ and hence the gauge-matching entries. The other components of the complete record fix the Higgs, flavor, decoupling, and observable-conversion boundary data. Put $t=\log\mu$; the RG equations become
 $$
@@ -8688,16 +9909,24 @@ with $\mathcal N_{\mathrm{PU}}$ the universal normalization, $c_f$ the sector pr
 $$
 \ln\frac{y_{f,b}}{y_{f,a}} \;=\; -\alpha\,(\ell_{f,b}-\ell_{f,a}) + \ln\frac{D_{f,b}}{D_{f,a}}. \tag{T.72.1}
 $$
-In particular, the absolute normalizations $\mathcal N_{\mathrm{PU}}$ and $c_f$ cancel exactly from all intrasector mass ratios.
+In particular, the absolute normalizations $\mathcal N_{\mathrm{PU}}$ and $c_f$ cancel exactly from ratios of the displayed Yukawa entries. A mass-ratio statement additionally requires Theorem T.39's accepted full-matrix diagonalization and matching certificate.
 
 *Proof.* Take logarithms of both sides of $y_{f,a}=\mathcal N_{\mathrm{PU}}c_f D_{f,a}e^{-\alpha\ell_{f,a}}$ and subtract the $a$- and $b$-equations. ∎
 
-**Corollary T.72.1 (Pure $E_8$ Hierarchy Law as the Triad-Symmetric Branch).** If $D_{f,a}=D_f$ for all $a$ in the chosen generation orbit, then $\ln(y_{f,b}/y_{f,a})=-\alpha(\ell_{f,b}-\ell_{f,a})$. If moreover $\ell_{f,a}=d^2_{E_8}(r_{f,a},r_{H,f})$, setting $i\leftrightarrow a$, $j\leftrightarrow b$ gives the exact distance law
+**Corollary T.72.1 (Yukawa-Entry Distance Law on the Triad-Symmetric Branch).** If $D_{f,a}=D_f$ for all $a$ in the chosen generation orbit, then
 $$
-\ln\frac{m_j}{m_i} \;=\; \alpha\,\bigl(d^2_{E_8}(r_{i},r_{H})-d^2_{E_8}(r_{j},r_{H})\bigr). \tag{T.72.2}
+\log\frac{y_{f,b}}{y_{f,a}}
+=-\alpha(\ell_{f,b}-\ell_{f,a}).
 $$
+If moreover $\ell_{f,a}=d^2_{E_8}(r_{f,a},r_{H,f})$, then
+$$
+\log\frac{y_{f,b}}{y_{f,a}}
+=\alpha\bigl(d^2_{E_8}(r_{f,a},r_{H,f})-d^2_{E_8}(r_{f,b},r_{H,f})\bigr).
+\tag{T.72.2}
+$$
+A formula with ordered masses in place of the displayed Yukawa entries follows only if an accepted Theorem-T.39 full-matrix certificate verifies that ratio after diagonalization and matching.
 
-*Proof.* Set $D_{f,b}/D_{f,a}=1$ in Theorem T.72 and relabel. The sign in (T.72.2) is fixed by the direct substitution: if $\ell_b=d^2(r_j,r_H)$ and $\ell_a=d^2(r_i,r_H)$, then $-\alpha(\ell_b-\ell_a)=\alpha(\ell_a-\ell_b)=\alpha(d^2(r_i,r_H)-d^2(r_j,r_H))$, so $\ln(m_j/m_i)=\alpha(d^2(r_i,r_H)-d^2(r_j,r_H))$. With $\alpha>0$ this predicts $m_j>m_i$ whenever $d^2(r_i,r_H)>d^2(r_j,r_H)$, matching the Yukawa $y\propto e^{-\alpha\ell}$ convention: smaller distance to $r_H$ ↔ larger Yukawa ↔ heavier fermion. ∎
+*Proof.* Set $D_{f,b}/D_{f,a}=1$ in Theorem T.72 and substitute the distance labels. This proves the entrywise identity. Replacing entries by singular values is precisely the independent realization step recorded in the final sentence. ∎
 
 **Theorem T.73 (Conditional Van Vleck Symmetry Reduction).** Fix a Higgs reference point $r_H$ and a generation branch $\{r_a\}\subset E_8$. Assume that the relevant flavor manifold admits an isometry group whose isotropy subgroup at $r_H$ acts transitively on each subset of the chosen branch with the same geometric invariants entering the Jacobi equation along geodesics out of $r_H$ (for example, on each fixed-distance shell in an isotropy-symmetric model branch). Let $\gamma_a$ be the geodesic connecting $r_H$ to $r_a$, and let $\mathcal V_a$ be the corresponding Van Vleck–Morette determinant factor entering the complete Yukawa value. Then $\mathcal V_a$ depends only on the isotropy orbit of the initial tangent of $\gamma_a$. In particular, if orbit type on the chosen branch is completely indexed by the discrete squared-distance class $d^2_{E_8}(r_a,r_H)$, then
 $$
@@ -8706,11 +9935,13 @@ $$
 
 *Proof.* Any isometry preserving $r_H$ maps geodesics out of $r_H$ to geodesics out of $r_H$ and conjugates the Jacobi equation along them. The Van Vleck determinant is built from the associated Jacobi map and is invariant under that conjugation. Hence it is constant on isotropy orbits of the initial tangent. If, on the chosen branch, those orbits are indexed by the discrete squared-distance classes, the displayed reduction follows. ∎
 
-**Corollary T.73.1 (Ratio-Level Yukawa Formula on an Isotropy-Symmetric Branch).** On a branch satisfying the distance-class reduction of Theorem T.73, within any fixed flavor sector,
+**Corollary T.73.1 (Ratio-Level Yukawa Formula on an Isotropy-Symmetric Branch).** On a branch satisfying the distance-class reduction of Theorem T.73, the unit-radius normalization and finite embedding certificate of Theorem T.39, and a full-matrix realization certificate with zero additional residual, one has within a fixed flavor sector
 $$
-\frac{y_b}{y_a} \;=\; \frac{F(d_b^2)}{F(d_a^2)}\,\exp\!\bigl[\tfrac32\,(d_a^2-d_b^2)\bigr],
+\frac{y_b}{y_a}
+=\frac{F(d_b^2)}{F(d_a^2)}
+\exp\!\bigl[\tfrac32(d_a^2-d_b^2)\bigr].
 $$
-using $\alpha=3/2$ of Theorem T.41.5. Within such a branch, intrasector mass ratios are determined by the discrete $E_8$ distance data together with the orbit-reduced Van Vleck factor.
+Thus the ratio is determined by the selected distance data and the orbit-reduced Van Vleck factor only on their joint certificate branch.
 
 *Proof.* Exponentiating Equation (T.72.1) gives
 $$
@@ -9226,7 +10457,7 @@ with $\delta_i^{\mathrm{min}}=0$ on the canonical minimal residual ledger.
 
 Thus the certificate is a completed spectral problem in the sense of Theorem T.78. Theorem T.78 then gives unique sector finite parts $F_s^{\mathrm{tor}}$, the fixed Dynkin-index map gives $\Delta^{\mathrm{tor}}=TF^{\mathrm{tor}}$, and Definition T.17a gives $Z_i^{\mathrm{tor}}=1+\Delta_i^{\mathrm{tor}}/24$. Since no separate heavy-threshold ledger is appended, Definition T.19a gives $\delta_i^{\mathrm{min}}=0$. ∎
 
-**Remark T.78.6.0 (Anchor to the Global Ledger).** Definition T.78.6 supplies the local strict PPI/PCE certificate of the electroweak threshold row in Convention P.14.1k. Algorithm T.78.6a is the acceptance test, Theorem T.78.7 is the local determinacy theorem, Definition T.78.10 fixes the threshold-vector entries, and Theorem T.78.11 is the non-contamination theorem. An accepted $\mathfrak R_{\mathrm{RHG}}$ filling Definition T.78.6 and Definition T.78.10 closes the row by Theorem D.8.9b.
+**Remark T.78.6.0 (Anchor to the Global Threshold Ledger).** Definition T.78.6 supplies the local strict PPI/PCE certificate of the electroweak threshold row in Convention P.14.1k. Algorithm T.78.6a is the acceptance test, Theorem T.78.7 is the local determinacy theorem, Definition T.78.10 fixes the threshold-vector entries, and Theorem T.78.11 is the non-contamination theorem. An accepted $\mathfrak R_{\mathrm{RHG}}$ filling Definition T.78.6 and Definition T.78.10 closes the row by Theorem D.8.9b.
 
 **Definition T.78.6 (RHG Flag-Lift Spectral Certificate).** An RHG flag-lift spectral certificate is a finite record
 $$
@@ -9694,48 +10925,42 @@ No validation value, raw octad sum, Steiner incidence count, Golay identity, tar
 *Proof.* Theorem T.78.12 proves finite-data necessity for the RHG threshold route. Theorem T.78.5b proves that the torsion route is positive only after the finite torsion certificate supplies the determinant, finite-part, index, scheme, matching, and tail data listed there. Theorem X.9.6h.5 proves that the spectral-action route is positive only after an accepted spectral-action ledger supplies the Dirac certificate, cutoff, projections, heat coefficients, finite-part prescription, tail, normalization map, and interval ledger. Definition P.14.1m and Algorithm P.14.1m.0 allow a non-closed numerical sector to be promoted only by an accepted finite certificate, an all-completions equivalence theorem, or a no-go theorem excluding the candidate class. The current PU-internal ledger contains the acceptance schemas but not the finite matrices, torsion data, Dirac certificate, heat coefficients, finite-part scale, tail constants, normalization intervals, or master-ledger descent maps needed by any positive source. By Theorem P.14.1f, omitting any such finite datum permits distinct admissible completions with different finite parts, so no unique theorem-level value is determined. This proves (T.78.14.1)--(T.78.14.3). The no-retuning and no-double-counting clauses follow from Theorem X.9.6g.4, Definition P.14.1m, and the forward-lock clauses in Definition T.78.10 and Definition X.9.6h.4. ∎
 
 **Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with a fixed-loop-order SM RG system, suppose:
-1. the determinant-model branch fixes $A_{EW}$ before comparison whenever $v$ or a quantity depending on $v$ is requested;
+1. accepted $\mathfrak C_{A\to\mathrm{St}}$ and $\mathfrak S_{EW}$, together with a same-saddle forward determinant record for $A_{EW}$, are fixed before comparison whenever $v$ or a $v$-dependent quantity is requested;
 2. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
 3. the flavor-geometric residual data $(\mathcal T_{E_8},\mathcal V)$ are fixed on the selected branch;
 4. the CP-profile data $\mathcal B$ are fixed;
 5. the accepted moment-map datum of Definition T.22a fixes $\gamma=1$ wherever the unit target-shift branch is used;
 6. an accepted quartic matching record $\mathfrak M_\lambda$ fixes the map from $\lambda_{\mathrm{PU}}(\mathfrak A_{PU})$ to a renormalized SM boundary at a declared scale and scheme; and
-7. every marginality, decoupling, and pole/observable conversion convention used in the Higgs row is fixed before comparison.
-Then the quantitative Appendix-T parameter vector
-$$
-\Pi_T \;=\; \bigl(\sin^2\theta_W(M_Z),\,g_i(\mu_G),\,v,\,m_H,\,Y_u,\,Y_d,\,Y_e,\,m_{\nu_a},\,V_{\mathrm{CKM}},\,U_{\mathrm{PMNS}}\bigr)
-$$
-is uniquely determined on that fully specified branch.
+7. every marginality, decoupling, pole/observable, unit, and remainder convention used in the requested rows is fixed before comparison.
+Then the requested quantitative vector $\Pi_T$ is uniquely determined up to the certified residual intervals on that fully specified branch.
 
-*Proof.* The fixed determinant-model input $A_{EW}$ determines $v=A_{EW}e^{-\kappa_{EW}}M_{Pl}$ on its stated branch. Theorem T.78 fixes $\Delta$ once the spectral problem is completed; Theorem T.71 then fixes the gauge/RG sector. Theorems T.72–T.73 fix the Yukawa ratios on the chosen flavor branch, and Theorems T.74–T.76 fix the CP sector. The moment-map datum fixes the elastic quartic, while $\mathfrak M_\lambda$ and the declared criticality/RG/pole conventions fix the Higgs boundary and its observable conversion. Combining these inputs determines every component of $\Pi_T$. Omitting item 1 leaves $v$ open; omitting items 5–7 leaves the Higgs component open. ∎
+*Proof.* Theorem T.5 fixes only $\kappa_{\mathrm{St}}$. The accepted action transport gives $\kappa_{EW}=\kappa_{\mathrm{St}}$, and $\mathfrak S_{EW}$ together with same-saddle $A_{EW}$ fixes the interval for $v$. Theorem T.78 fixes $\Delta$ once the spectral problem is completed; Theorem T.71 fixes the gauge/RG sector; Theorems T.72--T.73 fix the Yukawa ratios on the chosen flavor branch; and Theorems T.74--T.76 fix the CP sector. The target-shift, quartic-matching, criticality, RG, decoupling, and pole records fix the Higgs conversion. Every component is therefore a deterministic function of the complete declared input record. Omitting the action transport or scale record leaves $v$ open; omitting any output-specific record leaves that component open. ∎
 
-**Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector).** On a fixed PU structural branch, the deterministic machinery contains no further continuous ambiguity only after $A_{EW}$ and its determinant-model convention when $v$ is requested, the completed spectral input $\Delta$, any residual heavy-threshold ledger $\delta$, the residual flavor-profile data $(\mathcal T_{E_8},\mathcal V,\mathcal B)$, the moment-map target-shift datum, the quartic matching record $\mathfrak M_\lambda$, and all criticality, decoupling, and pole/observable conventions used by the requested outputs are fixed. In the canonical minimal $\mathrm{MS2}_{\mu_G}$ ledger, $\delta_i=0$ and the gauge-threshold input is exactly the completed flag-lift spectral output of Theorem T.78; this closes neither the determinant-model $v$ row nor the independent Higgs or flavor gates. ∎
+**Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector).** The deterministic machinery closes only after every input consumed by the requested output is fixed before comparison. In particular, a $v$ row requires accepted $\mathfrak C_{A\to\mathrm{St}}$, accepted $\mathfrak S_{EW}$, and a same-saddle forward determinant/remainder record for $A_{EW}$; threshold, flavor, target-shift, quartic, criticality, RG, decoupling, and pole rows retain their own named records. A completed flag-lift threshold tuple closes neither the action-transport/scale branch nor any independent Higgs or flavor gate. ∎
 
 **Theorem T.79.2 (Appendix-T Deterministic Matching Functor).** Fix an Appendix-T input record
 $$
 \mathfrak I_T
 =
-(A_{EW},\mathfrak S_{\widetilde X},\delta^{\mathrm{heavy}},\mathcal T_{E_8},\mathcal V,\mathcal N_\nu,\mathcal B,\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}),
+(A_{EW},\mathfrak C_{A\to\mathrm{St}},\mathfrak S_{EW},\mathfrak S_{\widetilde X},\delta^{\mathrm{heavy}},\mathcal T_{E_8},\mathcal V,\mathcal N_\nu,\mathcal B,\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}).
 $$
-where $A_{EW}$ is the forward-locked determinant-model prefactor of Theorem T.29.2 when $v$ or a $v$-dependent output is requested, $\mathfrak S_{\widetilde X}$ is a completed flag-lift spectral tuple in the sense of Theorem T.78, $\delta^{\mathrm{heavy}}$ is either the empty minimal residual ledger or an explicitly listed nonminimal heavy-threshold ledger, $(\mathcal T_{E_8},\mathcal V)$ are the selected flavor-geometric normalization and Van Vleck data, $\mathcal N_\nu$ is the neutrino/Majorana branch record of Proposition T.24.28, $\mathcal B$ is the selected CKM/PMNS CP-profile data, $\mathcal M_\gamma$ is the accepted target-shift datum of Definition T.22a when the unit branch is used, $\mathfrak M_\lambda$ is the quartic matching record of Definition T.25.2, $\mathcal C_{\mathrm{crit}}$ records any independently imposed marginal-trajectory condition, $\mathcal R_{\mathrm{RG}}$ is the fixed loop-order SM RG system with matching scale $\mu_G$, $\mathcal C_{\mathrm{dec}}$ is the fixed decoupling convention, and $\mathcal C_{\mathrm{pole}}$ is the fixed pole/observable conversion convention. Then there is a deterministic map
+Here $A_{EW}$ is a forward-locked same-saddle determinant-model prefactor when $v$ is requested; $\mathfrak C_{A\to\mathrm{St}}$ is the accepted action transport; and $\mathfrak S_{EW}$ fixes the unreduced Planck convention and units, common saddle, determinant/gauge-volume/matching normalization, no-double-counting audit, observable map, quantitative remainder, and forward lock. The remaining entries are respectively the completed flag-lift spectral tuple, residual threshold ledger, flavor normalization and Van Vleck data, neutrino/Majorana record, CP profile, target-shift datum, quartic match, criticality condition, RG system, decoupling map, and pole/observable map. Then there is a deterministic map
 $$
-\mathfrak F_T:\mathfrak I_T\longmapsto \Pi_T
+\mathfrak F_T:\mathfrak I_T\longmapsto\Pi_T
 $$
-defined by the following ordered operations:
+defined by:
 
-1. evaluate $v=A_{EW}e^{-\kappa_{EW}}M_{Pl}$ on the registered determinant-model branch when that output is requested;
-2. evaluate the sector finite parts $F_s$ from $\mathfrak S_{\widetilde X}$ and set $\Delta=TF$ and $Z_i=1+\Delta_i/24$;
-3. append the residual ledger by setting $\delta_i=0$ on the canonical minimal ledger and otherwise adding only the explicitly listed heavy-threshold shifts;
-4. form the gauge boundary data at $\mu_G$ from Theorems T.13--T.17 and T.35, and form a Higgs boundary only from the separately fixed tuple $(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}})$ together with Theorems T.25--T.28;
-5. form the charged-fermion and neutrino Yukawa boundary data from $(\mathcal T_{E_8},\mathcal V,\mathcal N_\nu)$;
-6. form the CKM and PMNS matrices from the fixed CP-profile record $\mathcal B$;
-7. evolve the boundary vector by the fixed RG system $\mathcal R_{\mathrm{RG}}$, apply $\mathcal C_{\mathrm{dec}}$, and convert to the requested pole or observable convention using $\mathcal C_{\mathrm{pole}}$.
+1. for a $v$-dependent output, use $\mathfrak C_{A\to\mathrm{St}}$ to set $\kappa_{EW}=\kappa_{\mathrm{St}}=77/2$ and evaluate the interval $v=A_{EW}e^{-\kappa_{EW}}M_{Pl}(1+\epsilon_{EW})$ from $\mathfrak S_{EW}$;
+2. evaluate the sector finite parts from $\mathfrak S_{\widetilde X}$ and set $\Delta=TF$ and $Z_i=1+\Delta_i/24$;
+3. append exactly the registered residual heavy-threshold ledger;
+4. form gauge and Higgs boundary data only from their declared threshold, target-shift, quartic, and criticality records;
+5. form charged-fermion and neutrino Yukawa data from $(\mathcal T_{E_8},\mathcal V,\mathcal N_\nu)$;
+6. form CKM and PMNS matrices from $\mathcal B$; and
+7. evolve with $\mathcal R_{\mathrm{RG}}$, apply $\mathcal C_{\mathrm{dec}}$, and convert with $\mathcal C_{\mathrm{pole}}$.
 
-The map is functorial only with respect to isomorphisms preserving every component of $\mathfrak I_T$. In particular, such an isomorphism preserves $A_{EW}$ and its determinant-model convention, the completed spectral and heavy-threshold records, and the full pole-level tuple $(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}},\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}})$. It may relabel equivalent flavor bases and CP-profile representatives, inducing the corresponding relabeling of Yukawa and mixing matrices, but it cannot manufacture or retune a scalar input and leaves every basis-invariant component of $\Pi_T$ unchanged.
+The map is functorial only for isomorphisms preserving every component of $\mathfrak I_T$. Such an isomorphism may relabel equivalent flavor bases but cannot manufacture or retune a scalar input and leaves every basis-invariant component unchanged.
 
-*Proof.* In Step 1, the specified entries $A_{EW}$, $\kappa_{EW}$, and the Planck normalization determine one value of $v$. The completed spectral tuple determines one $F$, hence one $\Delta=TF$, by Theorem T.78. Definition T.19a and Proposition T.19c then determine the residual-threshold operation in Step 3. In Step 4, $(Z_i,\delta_i)$ determine the gauge boundary algebraically, while the explicitly supplied tuple $(\mathcal M_\gamma,\mathfrak M_\lambda,\mathcal C_{\mathrm{crit}})$ determines the Higgs boundary. Theorems T.72--T.76 make Steps 5 and 6 deterministic after the flavor, neutrino, and profile records are supplied.
-
-For Step 7, the complete record includes the specified RG system and, on every requested output interval, the full-interval perturbative-solution hypothesis of Theorem T.71. That theorem gives a unique RG trajectory from the specified boundary vector. The maps $\mathcal C_{\mathrm{dec}}$ and $\mathcal C_{\mathrm{pole}}$ are supplied functions in the input record, so their composition with that trajectory is unique. Thus every ordered step is a function of the preceding supplied data, and their composition defines the deterministic map $\mathfrak F_T$. An isomorphism preserving every input commutes with each of these operations, which proves the stated functoriality and leaves no ambiguity beyond the complete input record. ∎
+*Proof.* Step 1 is a function because the native action, its accepted transport, the scale record, the same-saddle prefactor, units, and remainder are all supplied. The completed spectral tuple determines $F$ and hence $\Delta$; the threshold rule then fixes Step 3. The explicit target-shift, quartic, and criticality tuple fixes the Higgs boundary. The flavor, neutrino, and CP records fix Steps 5 and 6. For Step 7, the full-interval perturbative-solution hypothesis of Theorem T.71 gives one RG trajectory, and the supplied decoupling and pole maps are functions. Composition proves determinacy and functoriality without any input beyond the complete record. ∎
 
 **Proposition T.79.3 (Electroweak, Higgs, Flavor, Neutrino, Majorana, and Common-Scale Dependency Ledger).** The dependency record for the Appendix-T matching, Higgs, flavor, and neutrino sectors is the following finite ledger.
 
@@ -9760,7 +10985,7 @@ No empirical mass, mixing, or pole value is permitted to enter the derivation si
 
 *Proof.* The threshold rows follow from Theorem T.78, Definition T.19a, Proposition T.19c, and Corollary T.78.3. The target-shift row follows from Definition T.22a and Theorem T.22b; the quartic-matching and marginality row follows from Definition T.25.2 and Theorem T.26; and the RG, decoupling, and pole row is the explicit observable-conversion gate of Theorem T.79.2. The matching-scale and common-scale rows follow from the stated RG/matching conventions and Section T.25.5.3. The $A_{EW}$ row follows from Theorem T.29.2. The flavor-geometric rows follow from Theorems T.72–T.73 and Proposition R.3.5f; the Majorana, seesaw, and anchored-reading rows follow from Theorems T.24.11–T.24.15 and Proposition T.24.28. The CKM/PMNS row follows from Theorems T.74–T.76, and the baryogenesis row inherits the Appendix Y model inputs. Each role and uncertainty class is therefore explicit and propagates by the meet rule of Convention P.14.1d without importing empirical comparison values into the derivation side. ∎
 
-**Remark T.79.4.0 (Anchor to the Global Ledger).** Definition T.79.4 supplies the local strict PPI/PCE certificate of the flavor parameter row in Convention P.14.1k. Algorithm T.79.5 is the acceptance test and Theorem T.79.6 the local determinacy theorem. Definition T.79.8a packages the joint RHG-flavor-Higgs certificate together with the forward-locked $A_{EW}$ scale input, and Theorem T.79.8b is its joint determinacy theorem. An accepted $\mathfrak C_{\mathrm{fl}}$ closes only the flavor row; $\mathfrak J_{\mathrm{RHG-fl}}$ closes each additional component only because its threshold, scale, and Higgs slots are explicit.
+**Remark T.79.4.0 (Anchor to the Joint Flavor Ledger).** Definition T.79.4 supplies the local strict PPI/PCE certificate of the flavor parameter row in Convention P.14.1k. Algorithm T.79.5 is the acceptance test and Theorem T.79.6 the local determinacy theorem. Definition T.79.8a packages the joint RHG-flavor-Higgs certificate together with the forward-locked $A_{EW}$ scale input, and Theorem T.79.8b is its joint determinacy theorem. An accepted $\mathfrak C_{\mathrm{fl}}$ closes only the flavor row; $\mathfrak J_{\mathrm{RHG-fl}}$ closes each additional component only because its threshold, scale, and Higgs slots are explicit.
 
 **Definition T.79.4 (Flavor Completion Certificate).** A flavor completion certificate is a finite record
 $$
@@ -9774,6 +10999,8 @@ $$
 \mathcal B_{\mathrm{fl}},
 \mathcal N_{\mathrm{fl}},
 \mathcal R_{\mathrm{fl}},
+\mathfrak K_{\mathrm{QCD}},
+\mathfrak h_{\mathrm{src}},
 \chi_{\mathrm{fl}}
 \right)
 \tag{T.79.4.1}
@@ -9783,13 +11010,57 @@ fixed before comparison with charged-lepton, quark, neutrino, CKM, PMNS, strong-
 1. $\mathcal X_{\mathrm{fl}}$ is the retained finite flavor cell, generation-vacuum locations, residual symmetry ledger, positive-orientation real-Yukawa determinant branch, Majorana/seesaw branch, and sterile-response status.
 2. $\mathcal A_{\mathrm{fl}}$ is the specified finite PCE-compatible flavor action, including all stationary actions and the rule assigning those stationary actions to charged-lepton, quark, Dirac-neutrino, and Majorana entries.
 3. $\mathcal H_{\mathrm{fl}}$ is the finite Hessian, Van Vleck, and Quillen determinant package for the retained stationary points, computed as the second variation of $\mathcal A_{\mathrm{fl}}$ on the same Bures/Kähler-Einstein flavor metric and finite measure used for normalization. A Ricci identity for the homogeneous metric fixes metric scale only; it does not replace the action Hessian.
-4. $\mathcal V_{\mathrm{fl}}$ is the Berry/holonomy package for relative determinant-line phases, including determinant-line connection, loop representatives, surface choices where used, CKM and PMNS phase profiles, strong-CP determinant orientation, and, whenever a real Yukawa determinant orientation is claimed, either the nonzero-path data of Theorem K.6.9 or the ordered heat-kernel chamber data of Corollary K.6.9a.1.
+4. $\mathcal V_{\mathrm{fl}}$ is the Berry/holonomy and mixing package.  It
+   contains the exact $\mathfrak C_{\mathrm{mix}}$ provenance subrecord used
+   by Theorem T.45, the same full $Y_u,Y_d$ matrices and diagonalizers, the
+   T.53 determinant-line connection, loops, surfaces, lifts, response map,
+   rephasing data, and exact-identity or interval-residual branch, and the
+   corresponding full PMNS/Majorana record.  If T.42 kernels are used it also
+   contains their accepted common packet/VVM record.  A conventional T.54 or
+   T.56 datum is kept as such unless the exact T.54b and T.53 identity gates
+   are both accepted.  Strong-CP orientation additionally uses the nonzero
+   path of Theorem K.6.9 or the ordered heat-kernel chamber of Corollary
+   K.6.9a.1. These certify determinant orientation only. Any claimed
+   $\bar\theta$ additionally requires the complete Appendix-K gauge-angle
+   record $\mathfrak K_{\mathrm{QCD}}$ listed below.
 5. $\mathcal B_{\mathrm{fl}}$ is the finite threshold bridge from an accepted electroweak spectral record to the flavor scale, including the common-scale convention, top-normalization branch, $M_R=\mu_G$ branch or its replacement, decoupling map, and compatibility with any shared master zeta-index ledger.
 6. $\mathcal N_{\mathrm{fl}}$ is the absolute Yukawa normalization and measure convention, including the Quillen norm, Van Vleck-Morette determinant, finite measure normalization, RG scheme, loop order, pole/running conversion convention, Majorana phases, seesaw normalization, and the convention for reporting charged-fermion and quark masses.
 7. $\mathcal R_{\mathrm{fl}}$ is a rigorous residual and truncation interval for every listed flavor observable: charged-fermion masses, quark masses, neutrino masses, CKM entries and phase, PMNS entries and phases, determinant orientation, and $\bar\theta$.
-8. $\chi_{\mathrm{fl}}$ records that no component, normalization, holonomy loop, Majorana phase, $M_R$ value, top normalization, threshold bridge, or residual interval was selected using the observed flavor data being predicted.
+8. $\mathfrak K_{\mathrm{QCD}}$ is empty when no $\bar\theta$ output is
+   requested. Otherwise it is the complete Appendix-K record containing the
+   equivariant CP map, accepted QCD gauge-topology bridge, invariant vacuum,
+   operative QCD selection functional, proved global minimum, and determinant
+   or Pfaffian orientation. Determinant orientation alone does not fill this
+   slot.
+9. $\mathfrak h_{\mathrm{src}}$ enumerates every flavor source and overlap.
+   It verifies source exhaustion, no double counting, and identity of every
+   shared metric, spectral ledger, matching scale, RG system, decoupling map,
+   pole convention, T.42 packet record, T.45 mixing record, and T.53 phase
+   record. In particular, its hashes must equal the external entries of
+   $\mathfrak I_T$ whenever Theorem T.79.2 is invoked.
+10. $\chi_{\mathrm{fl}}$ records that no component, normalization, holonomy
+   loop, Majorana phase, $M_R$ value, top normalization, threshold bridge,
+   source allocation, or residual interval was selected using the observed
+   flavor data being predicted.
 
-**Algorithm T.79.5 (Acceptance Test for the Flavor Completion Certificate).** The certificate $\mathfrak C_{\mathrm{fl}}$ is accepted if and only if each generation-vacuum location, stationary point, stationary action, and holonomy path is generated by the finite branch data already fixed in Appendices G, R, and T; the PCE-compatible action $\mathcal A_{\mathrm{fl}}$ is specified before comparison; the Hessian, Van Vleck, and Quillen determinants are computed with the same Bures/Kähler-Einstein metric, finite measure, and normalization convention as $\mathcal N_{\mathrm{fl}}$; the Berry holonomies and CP profiles are computed from the listed determinant-line connection and loops; every determinant-orientation and strong-CP claim is certified either by the nonzero-path condition of Theorem K.6.9 or by the ordered heat-kernel chamber condition of Corollary K.6.9a.1; the threshold inputs are taken only from an accepted $\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, accepted $\mathfrak S_{\mathrm{SA}}(P)$ where Higgs finite parts are claimed, accepted joint $\mathfrak J_{\mathrm{RHG-fl}}$, or another completed spectral tuple satisfying Theorem T.78; the top normalization, $M_R=\mu_G$ or its replacement, Majorana phases, seesaw branch, RG system, decoupling convention, and pole/running map are fixed before comparison; the residual interval $\mathcal R_{\mathrm{fl}}$ is bounded before empirical comparison; and $\chi_{\mathrm{fl}}$ is satisfied. If any one of these entries is inferred from masses, mixings, phases, or $\bar\theta$, the certificate is rejected.
+**Algorithm T.79.5 (Acceptance Test for the Flavor Completion Certificate).** The certificate $\mathfrak C_{\mathrm{fl}}$ is accepted if and only if each generation-vacuum location, stationary point, stationary action, and holonomy path is generated by the finite branch data already fixed in Appendices G, R, and T; the PCE-compatible action $\mathcal A_{\mathrm{fl}}$ is specified before comparison; the Hessian, Van Vleck, and Quillen determinants are computed with the same Bures/Kähler-Einstein metric, finite measure, and normalization convention as $\mathcal N_{\mathrm{fl}}$; the Berry holonomies and CP profiles are computed from the listed
+determinant-line connection and loops; the embedded $\mathfrak C_{\mathrm{mix}}$
+passes all provenance, compatibility, diagonalization, unitarity, labeling,
+and residual tests of Theorem T.45 using these same matrices; the T.53
+subrecord passes its declared exact-identity or interval-residual branch;
+every determinant-orientation claim passes Theorem K.6.9 or Corollary
+K.6.9a.1, and every $\bar\theta$ claim passes the complete Appendix-K record
+$\mathfrak K_{\mathrm{QCD}}$; the threshold inputs are taken only from an independently accepted
+$\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, accepted
+$\mathfrak S_{\mathrm{SA}}(P)$ where Higgs finite parts are claimed, or
+another completed spectral tuple satisfying Theorem T.78; the top normalization, $M_R=\mu_G$ or its replacement, Majorana phases,
+seesaw branch, RG system, decoupling convention, and pole/running map are fixed
+before comparison; $\mathfrak h_{\mathrm{src}}$ proves source exhaustion,
+no-double-counting, and equality of all shared records; a requested
+$\bar\theta$ output has a complete $\mathfrak K_{\mathrm{QCD}}$; the residual
+interval $\mathcal R_{\mathrm{fl}}$ is bounded before empirical comparison;
+and $\chi_{\mathrm{fl}}$ is satisfied. If any entry is inferred from masses,
+mixings, phases, or $\bar\theta$, the certificate is rejected.
 
 **Theorem T.79.6 (Certified Flavor Determinacy).** If $\mathfrak C_{\mathrm{fl}}$ is accepted, then the charged-lepton, quark, neutrino, CKM, PMNS, determinant-orientation, and $\bar\theta$ outputs assigned to that certificate are uniquely determined up to the certified interval $\mathcal R_{\mathrm{fl}}$. If no accepted $\mathfrak C_{\mathrm{fl}}$ exists, those outputs remain model-layer, validation-layer, or branch-classification statements.
 
@@ -9810,6 +11081,8 @@ $$
 \left(
 \mathfrak R_{\mathrm{RHG}},
 \mathfrak C_{\mathrm{fl}},
+\mathfrak C_{A\to\mathrm{St}},
+\mathfrak S_{EW},
 A_{EW},
 \mathfrak H_T,
 \mathfrak Z_{\mathrm{PU}},
@@ -9829,7 +11102,7 @@ where:
 
 2. $\mathfrak C_{\mathrm{fl}}$ is an accepted flavor completion certificate of Definition T.79.4.
 
-3. $A_{EW}$ is the forward-locked determinant-model prefactor of Theorem T.29.2 whenever $v$ or a $v$-dependent observable is included.
+3. Whenever $v$ or a $v$-dependent observable is included, $\mathfrak C_{A\to\mathrm{St}}$ is accepted, $\mathfrak S_{EW}$ fixes the unreduced Planck convention, units, common saddle, normalization, no-double-counting audit, forward lock, and quantitative remainder, and $A_{EW}$ is the same-saddle determinant-model prefactor of Theorem T.29.2.
 
 4. $\mathfrak H_T$ is the independently accepted Higgs target-shift, PU-to-SM quartic-matching, marginality, RG, decoupling, and pole-conversion tuple. The threshold and flavor certificates do not supply it by implication.
 
@@ -9844,7 +11117,7 @@ $$
 $$
 on every common chamber used by the certificate.
 
-7. $\mathcal R_{\mathrm{joint}}$ is the joint residual interval after propagating the $A_{EW}$ model allowance, RHG tail bounds, flavor Hessian/Van Vleck bounds, holonomy bounds, Higgs matching, RG truncation, decoupling, and pole-conversion bounds.
+7. $\mathcal R_{\mathrm{joint}}$ is the joint residual interval after propagating the $\mathfrak S_{EW}$ scale remainder, the evaluated $A_{EW}$ determinant remainder or explicitly labeled model allowance, RHG tail bounds, flavor Hessian/Van Vleck bounds, holonomy bounds, Higgs matching, RG truncation, decoupling, and pole-conversion bounds. An unproved allowance remains branch dependence and is not a probabilistic theory interval.
 
 8. $\chi_{\mathrm{joint}}$ records that no component is selected using observed $v$, Higgs, charged-lepton, quark, neutrino, CKM, PMNS, baryogenesis, or validation-threshold data.
 
@@ -9861,13 +11134,13 @@ V_{\mathrm{CKM}},U_{\mathrm{PMNS}},
 \bigr)
 \tag{T.79.8b.1}
 $$
-is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. The $v$ component is included only because the joint record explicitly contains forward-locked $A_{EW}$, and the $m_H$ component only because it contains $\mathfrak H_T$; neither is inferred from $\mathfrak R_{\mathrm{RHG}}$ or $\mathfrak C_{\mathrm{fl}}$. If an accepted spectral-action branch is also linked, its Higgs finite parts $(\mu_H^2,\lambda_H)$ are included only through the separately recorded spectral-action-to-$\mathfrak H_T$ matching map. Any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the identities in $\mathcal I_{\mathrm{mix}}$.
+is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. The $v$ component is included only because the joint record contains accepted $\mathfrak C_{A\to\mathrm{St}}$ and $\mathfrak S_{EW}$ together with same-saddle $A_{EW}$; the $m_H$ component is included only because it contains $\mathfrak H_T$. Neither is inferred from $\mathfrak R_{\mathrm{RHG}}$ or $\mathfrak C_{\mathrm{fl}}$. If an accepted spectral-action branch is also linked, its Higgs finite parts $(\mu_H^2,\lambda_H)$ are included only through the separately recorded spectral-action-to-$\mathfrak H_T$ matching map. Any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the identities in $\mathcal I_{\mathrm{mix}}$.
 
-*Proof.* Theorem T.78.11 fixes the RHG threshold outputs, Theorem T.79.6 fixes the flavor outputs, $A_{EW}$ fixes the determinant-model scale $v$, and $\mathfrak H_T$ fixes the independent Higgs boundary and observable-conversion gates. The deterministic functor of Theorem T.79.2 therefore maps the complete record to one $\Pi_T$. For the common-ledger condition, shared chamber dependence is represented by finite smooth determinant or zeta functions, whose mixed partial derivatives commute. Failure of (T.79.8a.1), of the spectral-action-to-$\mathfrak H_T$ matching map when invoked, or of any forward lock rejects the joint certificate. Otherwise the remaining uncertainty is exactly $\mathcal R_{\mathrm{joint}}$. ∎
+*Proof.* Theorem T.78.11 fixes the RHG threshold outputs and Theorem T.79.6 fixes the flavor outputs. Theorem T.5 supplies only $\kappa_{\mathrm{St}}$; $\mathfrak C_{A\to\mathrm{St}}$ supplies $\kappa_{EW}$, and $\mathfrak S_{EW}$ together with same-saddle $A_{EW}$ fixes the interval for $v$. The record $\mathfrak H_T$ fixes the independent Higgs boundary and observable-conversion gates. The deterministic functor of Theorem T.79.2 therefore maps the complete record to one $\Pi_T$. For the common-ledger condition, shared chamber dependence is represented by finite smooth determinant or zeta functions, whose mixed partial derivatives commute. Failure of (T.79.8a.1), of the spectral-action-to-$\mathfrak H_T$ matching map when invoked, or of any forward lock rejects the joint certificate. Otherwise the remaining uncertainty is exactly $\mathcal R_{\mathrm{joint}}$. ∎
 
-**Corollary T.79.8c (No Independent RHG-Flavor-Higgs Refit).** Once $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, changing $A_{EW}$, RHG block matrices, heat/zeta tail bounds, stationary flavor cells, Hessian determinants, holonomy paths, neutrino branch data, $\mathcal M_\gamma$, $\mathfrak M_\lambda$, marginality, RG/decoupling/pole conventions, or residual intervals after comparison defines a new joint branch and cannot confirm the original one.
+**Corollary T.79.8c (No Independent RHG-Flavor-Higgs Refit).** Once $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, changing $\mathfrak C_{A\to\mathrm{St}}$, $\mathfrak S_{EW}$, $A_{EW}$, RHG block matrices, heat/zeta tail bounds, stationary flavor cells, Hessian determinants, holonomy paths, neutrino branch data, $\mathcal M_\gamma$, $\mathfrak M_\lambda$, marginality, RG/decoupling/pole conventions, or residual intervals after comparison defines a new joint branch and cannot confirm the original one.
 
-*Proof.* Each listed object is either the explicit $A_{EW}$ slot or an entry of $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak H_T$, $\mathfrak Z_{\mathrm{PU}}$, $\mathcal I_{\mathrm{mix}}$, or $\mathcal R_{\mathrm{joint}}$. The forward-lock condition $\chi_{\mathrm{joint}}$ forbids selecting any such entry from validation targets. ∎
+*Proof.* Each listed object is an explicit action/scale/prefactor slot or an entry of $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak H_T$, $\mathfrak Z_{\mathrm{PU}}$, $\mathcal I_{\mathrm{mix}}$, or $\mathcal R_{\mathrm{joint}}$. The forward-lock condition $\chi_{\mathrm{joint}}$ forbids selecting any such entry from validation targets. ∎
 
 **Corollary T.79.8d (Electroweak-Flavor-Higgs Row Closure Criterion).** The electroweak threshold tuple and flavor parameter vector are theorem-level numerical rows exactly on branches carrying one of the following records fixed before comparison:
 

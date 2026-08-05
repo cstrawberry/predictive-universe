@@ -32,7 +32,7 @@ For each MPU $v$, its operational complexity is represented by a Hermitian, posi
 
  For an MPU with a finite-dimensional Hilbert space $\mathcal{H}_v$ of dimension $d_0$ (Theorem 23), the sum in Equation (B.1) is understood to be effectively finite. Only a finite number of distinct, non-zero orthogonal projectors $\hat{P}_d$ corresponding to achievable complexity levels can exist, or for $d$ beyond a certain $d_{max}$, the projectors $\hat{P}_d$ become zero or the eigenvalues $\lambda(d)$ cease to increase, reflecting the capacity limit of the $d_0$-dimensional space.
 
-The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity on the chosen coarse-graining. The justification for this coarse-grained observable serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is rigorously provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in **Appendix D**. Different admissible coarse-grainings define equivalent proxies in the sense of Theorem 2 up to the tracking noise floor established there.
+The expectation value $\langle\psi|\hat C_v|\psi\rangle$ is the operational complexity proxy for this chosen coarse-graining. Theorem 2 identifies that proxy with $C_P(v)$ only at a true stable equilibrium on its faithful per-MPU force/cost-identifiability branch. Proposition D.1 and Corollary D.2 give a separate expected mean-square upper bound when the chosen proxy is driven by the registered quadratic potential. Neither result proves that arbitrary admissible coarse-grainings are equivalent; such an equivalence requires an explicit response- and cost-preserving map between their proxy coordinates.
 
 The proxy can be used for exact PCE selection only on branches where the tracking noise is dominated by the PCE gap. Let $x^*$ be the $C_P$-selected representative in an admissible finite-response class $\mathcal A$, and suppose the proxy satisfies
 $$
@@ -53,7 +53,7 @@ $$
 \ge C_P(x)-C_P(x^*)-2\varepsilon
 \ge \Delta_P-2\varepsilon>0.
 $$
-Thus proxy-based minimization is theorem-preserving precisely on the gap-dominating branch $\Delta_P>2\varepsilon$. If this inequality is not certified, the proxy remains an operational tracker and not an exact selector.
+Thus proxy-based minimization is guaranteed to preserve the selected PPI/PCE class on the gap-dominating branch $\Delta_P>2\varepsilon$. If this inequality is not certified, the displayed uniform-error argument does not establish exact selection, and the proxy remains an operational tracker.
 
 *Proof.* Let
 $$
@@ -287,6 +287,14 @@ where $\rho_{\mathcal N[v]}$ is the reduced state on that support. This expectat
 
 **Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$)**
 
+For every undirected interaction edge $\{v,v'\}$, let $\hat V_{vv'}$ be a registered self-adjoint operator supported on $\mathcal H_v\otimes\mathcal H_{v'}$ or on an explicitly registered enlargement by local auxiliary degrees of freedom, and impose
+$$
+\hat V_{vv'}^\dagger=\hat V_{vv'},
+\qquad
+\hat V_{vv'}=\hat V_{v'v}.
+$$
+Its matrix elements and coupling scale are branch data; neither the ND-RID kernel nor the entropy ledger determines them. When reduced ND-RID dynamics is dissipative, $\hat V_{vv'}$ denotes the self-adjoint system–auxiliary interaction on the enlarged support, not a non-Hermitian dissipator inserted into $\hat H_{total}$.
+
 Let $r_{int}(t)$ be the realized completed reset-support update rate on this edge. The ND-RID per-update constraint gives the activity-conditioned ledger
 $$
 \dot S_{tot}(t)\ge k_B\epsilon\,r_{int}(t),
@@ -354,7 +362,7 @@ The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ f
 *   $\hat{T}^{00}_{(can)}(v) = \hat{\rho}_v$ (Energy Density, Eq B.6)
 *   $\hat{T}^{0j}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Energy flux density)
 *   $\hat{T}^{j0}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Momentum density scaled)
-*   $\hat{T}^{jk}_{(can)}(v) = \hat{p}_{v,jk}$ (Stress)
+*   $\hat{T}^{jk}_{(can)}(v) = \hat{p}_{v,kj}$ (Stress)
 
 (By definition $\hat{\pi}_{v,j}:=\hat{q}_{v,j}/c^2$, one has $\hat{T}^{0j}_{(can)}(v)=\hat{T}^{j0}_{(can)}(v)$.)
 
@@ -373,8 +381,8 @@ $$
 by (B.11) and $\hat{q}_{v,j}=c^2\hat{\pi}_{v,j}$ (Definition B.5). For $\nu = k$, one has
 $$
 \sum_{\mu=0}^{3} \partial_\mu^{(v)} \hat{T}^{\mu k}_{(can)}
-= \partial_0^{(v)}(c\hat{\pi}_{v,k}) + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk}
-= \frac{d\hat{\pi}_{v,k}}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk} = 0
+= \partial_0^{(v)}(c\hat{\pi}_{v,k}) + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,kj}
+= \frac{d\hat{\pi}_{v,k}}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,kj} = 0
 $$
 by (B.12). ∎
 
@@ -448,7 +456,7 @@ We identify the symmetric, conserved tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ f
 
 ## B.8 Macroscopic Stress–Energy Tensor $T_{\mu\nu}^{(MPU)}$
 
-The macroscopic tensor sourcing emergent gravity is the unique regular-branch source tensor obtained from the same coarse-grained MPU operator field and the same metric variation of the continuum MPU action.
+On a regular continuum branch, each convergent subsequence has a macroscopic source tensor obtained from the corresponding coarse-grained MPU operator field. When the metric-variation identification hypotheses of Theorem B.8c hold for that limit, variation of the continuum MPU action gives the same tensor. Existence of one such limit does not prove uniqueness across subsequences; uniqueness requires the separate continuum-uniqueness hypotheses of Theorem B.8c.
 
 **Definition B.8 (Macroscopic MPU Stress-Energy Tensor $T_{\mu\nu}^{(MPU)}$)**
 

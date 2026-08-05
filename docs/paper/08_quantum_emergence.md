@@ -1,8 +1,8 @@
 # 8. Emergence of Quantum Mechanical Formalism
 
-**Formal closure boundary.** The results in this section are effective-formalism results on the MPU Hilbert branch. The SPAP-to-Born route has three separate layers: response-null context labels quotient away by PPI/PCE; finite-response payoff refinement gives additivity on the quotient; and the Born selector theorem fixes the only normalized positive additive quotient measure to the trace form. These results do not remove the separate finite-response instantiation certificates used later to identify particular information-geometric structures with Standard Model fields or measured constants. When such a later certificate is absent or incomplete, the later sector keeps its branch, model, convention, validation, or open-target status without weakening the Hilbert/Born/GKSL closure proved here.
+**Formal closure boundary.** The results in this section are effective-formalism results on the MPU Hilbert branch. The SPAP-to-Born route has four separate layers: response-null context labels quotient away by PPI/PCE; finite-response payoff refinement gives additivity on the retained quotient; Definition 8.2b supplies either full projection/effect coverage or a finite informationally complete positive reconstruction; and Theorem 8.3 then fixes the trace representation on that certified domain. Quotienting and retained-context additivity alone do not imply global Born uniqueness. Later physical sectors retain their separate realization certificates and status labels.
 
-This section constructs a consistent effective quantum description on a declared finite-response branch. The construction assumes a complex operational $C^*$-algebra with a positive normalized state, a response-null quotient with finite-effect additivity and noncontextual weights, the local-tomography and minimal-phase package used to select the complex carrier, the tensor-product and local-CPTP package used for composites, and the continuous transition-probability-preserving ray dynamics used for time evolution. Under those hypotheses, the results recover the Hilbert representation, Born weights, superposition interpretation, Robertson inequality, entanglement formalism, and Schrödinger dynamics.
+This section constructs a consistent effective quantum description on a declared finite-response branch. It assumes a complex operational $C^*$-algebra with a positive normalized state, response-null quotienting, retained-effect additivity and noncontextuality, an accepted Born-domain completeness certificate, the carrier-selection package, the tensor-product/local-CPTP package, and continuous transition-probability-preserving ray dynamics. Under that conjunction, the results recover the Hilbert representation, certified-domain Born weights, superposition interpretation, Robertson inequality, entanglement formalism, and Schrödinger dynamics.
 
 **Principle 8.0b (Fundamental Predictive Carrier Closure).** Every fundamental MPU on this physical closure branch, after finite-response quotienting, carries the Sharp Homogeneous Carrier Certificate $\mathfrak C_{\mathrm{car}}$ of Definition G.1.8a. Its retained finite-dimensional ordered state space has: (i) a closed, pointed, generating state cone and a separating effect cone; (ii) a symmetric positive-definite predictive pairing with respect to which the cone is self-dual; (iii) a cost-bounded reversible group acting transitively on the cone interior; (iv) locally tomographic composition within one scalar/Jordan family, with multiplicative sizes $mn$ for all nontrivial factors $m,n\ge2$; (v) full retained scalar phase redundancy whose connected group is exactly one-dimensional $U(1)$; and (vi) a finite Jordan-exclusion record that certifies simplicity and irreducibility and excludes simplex, real, quaternionic, spin-factor, exceptional, and every additional response-active central summand. Principle 5b supplies eight response triples; the present certificate separately makes them one sharp jointly perfectly distinguishable context. A faithful $M_8(\mathbb C)$ representative realizes the complete retained response presheaf, and after response-null quotienting every higher-dimensional representative of that same presheaf has strictly larger total PCE potential.
 
@@ -28,15 +28,15 @@ $$
 $$
 almost surely. In particular, when two block weights are positive, no such retained record is a deterministic selector. This excludes accessible retained selectors on the PPI quotient; it does not exclude mathematically equivalent latent-variable completions whose extra variables are inaccessible to every admitted response.
 
-**Theorem 8.0d (Closed MPU Quantum Representation).** Principles 5b, 8.0b, and 8.0c, together with Theorem 8.2 and Lemma 8.2a, imply:
+**Theorem 8.0d (Closed MPU Quantum Representation).** Principles 5b, 8.0b, and 8.0c, together with Theorem 8.2, Lemma 8.2a, and an accepted Born-domain completeness certificate $\mathfrak C_{\mathrm{Born}}$ of Definition 8.2b, imply:
 
 1. $\mathcal H_0\cong\mathbb C^8$;
-2. every normalized, positive, noncontextual, finitely additive quotient projection ledger satisfying Theorem 8.2 and Lemma 8.2a has a unique density operator $\rho$ such that
+2. the certified probability ledger has a unique density operator $\rho$ such that
    $$
-   \omega(P)=\operatorname{tr}(\rho P)
+   \omega(E)=\operatorname{tr}(\rho E)
    \tag{8.0d.1}
    $$
-   for every projection $P$;
+   for every retained effect $E$ on the informationally complete route, and for every projection or effect on the corresponding full-domain route;
 3. every registered verification is an instrument with completely positive trace-nonincreasing maps $\mathcal I_k$ and trace-preserving sum;
 4. for $E_k:=\mathcal I_k^*(I)$,
    $$
@@ -57,7 +57,7 @@ almost surely. In particular, when two block weights are positive, no such retai
 
 *Proof.* Principle 8.0b supplies the symmetric self-dual homogeneous cone, same-family local tomography, exact $U(1)$ scalar-phase, simplicity, and finite exclusion data used by Theorem G.1.8 to select the single complex matrix branch. Principle 5b supplies eight response triples, while Principle 8.0b makes them sharply jointly distinguishable, so $d_0\ge8$. The faithful $M_8(\mathbb C)$ representative realizes the complete response presheaf, and the strict same-presheaf total-cost comparison excludes every larger representative; hence $d_0=8$.
 
-Under Theorem 8.2's response-completeness and global-minimizer hypotheses, $\omega$ descends to quotient events. Under Lemma 8.2a's normalization, positivity, affine-payoff, and refinement hypotheses, its restriction to projections is finitely additive. Since $d_0\ge3$, the projection form of Theorem 8.3 gives (8.0d.1).
+Theorem 8.2 descends $\omega$ to quotient events, and Lemma 8.2a supplies additivity only on retained orthogonal refinements. Definition 8.2b adds the missing domain gate. Theorem 8.3 then gives (8.0d.1) globally on the full-domain route or on the retained informationally complete operator system on the finite route.
 
 Principle 8.0c makes $\Gamma$ preparation-equivalent, spectator-stable, and normalized. Theorem 8.3b gives its CPTP linear extension. Define
 $$
@@ -239,83 +239,66 @@ $$
 $$
 Setting $E=I$ and using $\omega(I)=1$ gives normalization on every complete finite resolution. Nonnegativity gives $\omega(P_i)\ge0$, and finite additivity gives $\omega(P_i)\le\sum_j\omega(P_j)=1$. On the finite-dimensional MPU branch, only finite additivity is required below. An infinite-dimensional extension additionally requires countable additivity, or a stated continuity hypothesis from which it follows. ∎
 
-**Theorem 8.3 (Born Selector Theorem on the Quotient Hilbert Ledger).**
-Let $\mathcal H_\omega$ be the complex Hilbert carrier selected on the branch under consideration, and let $\omega$ be a normalized, positive, non-contextual, finitely additive predictive ledger on the quotient projection lattice supplied by Theorem 8.2 and Lemma 8.2a. On the finite-dimensional MPU branch this is sufficient; on an infinite-dimensional protocol envelope, assume the corresponding directed-refinement-continuous/countably additive extension.
+**Definition 8.2b (Born-Domain Completeness Certificate).** Let $\mathcal H$ be a finite-dimensional complex Hilbert space and let $\mathsf E_{\mathrm{ret}}\subseteq[0,I]$ be the retained quotient effects. A Born-domain completeness certificate $\mathfrak C_{\mathrm{Born}}$ uses one of the following independently checkable routes.
 
-1. If $\dim\mathcal H_\omega\ge3$, there exists a unique density operator $\rho$ on $\mathcal H_\omega$ such that
+1. **Full-domain route.** If $\dim\mathcal H\ge3$, $\mathsf E_{\mathrm{ret}}$ contains every orthogonal projection and every finite orthogonal resolution of $I$, and the quotient ledger is normalized, nonnegative, and finitely additive on all such resolutions. If $\dim\mathcal H=2$, the retained domain instead contains every effect and the ledger is normalized and affine-additive on all finite POVMs.
+
+2. **Finite informationally complete route.** The retained effects contain a real basis $F_1,\ldots,F_{d^2}$ of $\operatorname{Herm}(\mathcal H)$, where $d=\dim\mathcal H$. Every real linear relation among retained effects and $I$ is respected by the weights, so the assignment defines a well-defined real-linear functional $\ell$ on their span. The certificate supplies the trace-dual basis $D_1,\ldots,D_{d^2}$, verifies
+$$
+\operatorname{tr}(D_aF_b)=\delta_{ab},
+\qquad
+\rho_{\mathfrak C}:=\sum_{a=1}^{d^2}\omega(F_a)D_a\succeq0,
+\qquad
+\operatorname{tr}\rho_{\mathfrak C}=1,
+\tag{8.2b.1}
+$$
+and records the expansion coefficients of every retained effect. Equivalently, the $d^2\times d^2$ coordinate matrix has full rank and the reconstructed Hermitian matrix in (8.2b.1) is positive semidefinite and trace one.
+
+The full-domain route is falsified by a missing projection, resolution, or additivity relation. The finite route is falsified by rank deficiency, relation inconsistency, a negative eigenvalue of $\rho_{\mathfrak C}$, or failure on any retained effect. A single projective basis is not informationally complete: density matrices with the same diagonal and different admissible off-diagonal entries give an explicit uniqueness counterexample.
+
+**Theorem 8.3 (Born Selector Theorem on the Quotient Hilbert Ledger).** Let $\mathcal H_\omega$ be the selected complex Hilbert carrier, let $\omega$ be a normalized positive quotient ledger satisfying Theorem 8.2 and Lemma 8.2a on its retained domain, and assume an accepted $\mathfrak C_{\mathrm{Born}}$.
+
+1. On the full-domain route with $\dim\mathcal H_\omega\ge3$, there is a unique density operator $\rho$ such that
 $$
 \omega(P)=\operatorname{tr}(\rho P)
 $$
-for every orthogonal projection $P$.
-2. If $\dim\mathcal H_\omega=2$ and $\omega$ extends to a normalized additive ledger on POVM effects, then there exists a unique density operator $\rho$ such that
+for every projection $P$.
+
+2. On the full-effect route in dimension $2$, there is a unique density operator $\rho$ such that $\omega(E)=\operatorname{tr}(\rho E)$ for every effect $E$.
+
+3. On the finite informationally complete route in any finite dimension, $\rho_{\mathfrak C}$ of (8.2b.1) is the unique density operator satisfying
 $$
-\omega(E)=\operatorname{tr}(\rho E)
+\omega(E)=\operatorname{tr}(\rho_{\mathfrak C}E)
+\tag{8.3.1}
 $$
-for every effect $E$.
-3. For a pure predictive ray $[\psi]$ with the calibration $\omega(P_\psi)=1$, where $P_\psi=|\psi\rangle\langle\psi|$, the density operator is forced to be $\rho=P_\psi$. Hence every rank-one outcome $P_i=|i\rangle_s\langle i|_s$ has the unique weight
+for every retained effect $E$. The trace formula defines the unique positive linear extension of that informationally complete ledger, but it does not assert that every unretained context was operationally available.
+
+4. If the certified domain contains a pure predictive ray event $P_\psi=|\psi\rangle\langle\psi|$ with $\omega(P_\psi)=1$, then $\rho=P_\psi$. Hence every retained rank-one outcome $P_i=|i\rangle_s\langle i|_s$ has weight
 $$
-\omega(P_i)=\operatorname{tr}(P_\psi P_i)=|\langle i|\psi\rangle_s|^2.
+\omega(P_i)=|\langle i|\psi\rangle_s|^2.
 $$
 
-*Proof.* In finite dimension $\dim\mathcal H_\omega\ge3$, Theorem 8.2 removes idle context labels and Lemma 8.2a gives a normalized nonnegative frame function on projections: for every orthogonal resolution of the identity $I=\sum_i P_i$,
-$$
-\sum_i\omega(P_i)=\omega(I)=1,
-\qquad
-\omega(P_i)\ge0.
-$$
-Gleason's theorem [Gleason 1957] therefore applies and yields a positive trace-class operator $\rho$ such that
-$$
-\omega(P)=\operatorname{tr}(\rho P)
-$$
-for every projection $P$. Evaluating at $P=I$ gives $\operatorname{tr}\rho=1$, so $\rho$ is a density operator.
+On an infinite-dimensional protocol envelope, the full-domain route additionally requires countable additivity or a stated continuity hypothesis; the finite informationally complete route asserted here is finite-dimensional.
 
-In dimension $2$, projection-valued frame functions alone do not exclude all dispersion-free assignments. Under the stated POVM-level additivity hypothesis, Busch's extension theorem applies and yields the same trace representation on effects [Busch 2003]. Effective two-dimensional PU sectors also inherit the trace rule by conditional descent from the global MPU ledger when they are embedded in the $d_0\ge8$ branch, as in Lemma G.1.6a.
+*Proof.* On the full-domain route with $\dim\mathcal H_\omega\ge3$, the certificate—not Theorem 8.2 alone—supplies a normalized nonnegative frame function on the entire projection lattice and every orthogonal resolution. Gleason's theorem therefore gives a positive trace-class operator $\rho$ with $\omega(P)=\operatorname{tr}(\rho P)$ for all projections. Evaluation at $I$ gives $\operatorname{tr}\rho=1$. In dimension $2$, the certificate supplies the full effect algebra and affine POVM additivity, so Busch's theorem gives the same conclusion on all effects.
 
-The density operator is unique. If $\rho$ and $\sigma$ agree on all rank-one projectors, then for every unit vector $|\phi\rangle$,
+For the finite informationally complete route, relation consistency makes
 $$
-\langle\phi,(\rho-\sigma)\phi\rangle
-=
-\operatorname{tr}\big((\rho-\sigma)|\phi\rangle\langle\phi|\big)
-=0.
+\ell\!\left(\sum_ax_aF_a\right):=\sum_ax_a\omega(F_a)
 $$
-The polarization identity gives every matrix element of $\rho-\sigma$, hence $\rho=\sigma$.
+well defined. Nondegeneracy of the trace pairing and the dual-basis identities give
+$$
+\ell(X)=\operatorname{tr}(\rho_{\mathfrak C}X)
+$$
+for every $X\in\operatorname{Herm}(\mathcal H_\omega)$. The certificate's matrix test gives $\rho_{\mathfrak C}\succeq0$ and trace one. Every retained effect has a recorded expansion in the basis, so (8.3.1) follows. If another density operator $\sigma$ agrees on the retained basis, then $\operatorname{tr}[(\rho_{\mathfrak C}-\sigma)F_a]=0$ for every $a$; spanning and the nondegenerate trace pairing imply $\sigma=\rho_{\mathfrak C}$.
 
-For a pure predictive ray, the sharp ray-identification event $P_\psi$ is certain by the calibration $\omega(P_\psi)=1$. The trace representation gives
+On either route, if $\omega(P_\psi)=1$, then
 $$
-1=\omega(P_\psi)=\operatorname{tr}(\rho P_\psi),
-\qquad
-0=\omega(I-P_\psi)=\operatorname{tr}(\rho(I-P_\psi)).
+\operatorname{tr}[\rho(I-P_\psi)]=0.
 $$
-Since $\rho\ge0$ and $I-P_\psi\ge0$, the second equality forces the support of $\rho$ to lie in $\operatorname{Ran}(P_\psi)$. With $\operatorname{tr}\rho=1$, this implies $\rho=P_\psi$. Therefore
-$$
-\omega(P_i)
-=
-\operatorname{tr}(P_\psi P_i)
-=
-\operatorname{tr}(|\psi\rangle\langle\psi|i\rangle_s\langle i|_s)
-=|\langle i|\psi\rangle_s|^2.
-$$
-This is the squared-amplitude Born weight.
+Positivity forces the support of $\rho$ into $\operatorname{Ran}P_\psi$, and trace one gives $\rho=P_\psi$. Substitution for a retained rank-one $P_i$ yields $|\langle i|\psi\rangle_s|^2$.
 
-No alternative normalized additive quotient measure remains. Gleason/Busch already excludes any non-trace-form assignment. For the common power-family alternative
-$$
-p_i^{(\gamma)}=\frac{|c_i|^\gamma}{\sum_j |c_j|^\gamma},
-$$
-finite-response refinement consistency kills every $\gamma\ne2$ directly. In a three-dimensional context take
-$$
-|\psi\rangle=\frac{1}{\sqrt2}|e_1\rangle+\frac12|e_2\rangle+\frac12|e_3\rangle,
-\qquad
-B=\operatorname{span}\{e_2,e_3\}.
-$$
-The coarse context $\{P_{e_1},P_B\}$ gives $p^{(\gamma)}(B)=1/2$ by symmetry. The refined context $\{P_{e_1},P_{e_2},P_{e_3}\}$ gives
-$$
-p^{(\gamma)}(P_{e_2})+p^{(\gamma)}(P_{e_3})
-=
-\frac{2(1/2)^\gamma}{(1/\sqrt2)^\gamma+2(1/2)^\gamma}
-=
-\frac{2}{2^{\gamma/2}+2}.
-$$
-Additivity requires $2/(2^{\gamma/2}+2)=1/2$, hence $2^{\gamma/2}=2$ and $\gamma=2$. Thus even this explicit family preserves the quotient refinement ledger only at the Born exponent. ∎
+The uniqueness conclusion is domain-qualified. In particular, quotienting and additivity on one retained basis do not exclude other density matrices or arbitrary assignments on unregistered contexts. On a certified full-domain branch, Gleason--Busch excludes non-trace assignments globally. On a certified informationally complete branch, finite linear algebra excludes alternatives on the retained operator system and fixes its unique positive extension. The familiar power family $p_i^{(\gamma)}\propto|c_i|^\gamma$ fails the certified coarse/refined relations unless $\gamma=2$, but that example is not a substitute for domain completeness. ∎
 
 **Definition 8.3a (Preparation Equivalence and Spectator Stability).** For finite-dimensional complex Hilbert spaces $\mathcal H_A$ and $\mathcal H_B$, an operational update $F:\mathcal D(\mathcal H_A)\to\mathcal D(\mathcal H_B)$ respects preparation equivalence when
 $$
@@ -447,7 +430,21 @@ Let the predictive state space be a complete finite-dimensional inner-product sp
 
 (i) **Multiplicative compositional closure:** there exist two admissible systems of scalar dimensions $m,n\ge2$, and their composite is an admissible system of the same scalar type with scalar dimension $mn$;
 
-(ii) **Local tomography:** the state of that composite is determined by local outcome statistics and their correlations;
+(ii) **Product-effect isomorphism certificate:** writing $V_{\mathbb D}(k)$ for the real unnormalized span of the $k$-level state space, the canonical product-effect map
+$$
+T_{m,n}:V_{\mathbb D}(m)^*\otimes_{\mathbb R}V_{\mathbb D}(n)^*
+\longrightarrow
+V_{\mathbb D}(mn)^*,
+\qquad
+e\otimes f\longmapsto e\boxtimes f,
+$$
+is an isomorphism. Equivalently, a registered matrix of product effects has full rank on both sides. Hence
+$$
+N_{\mathbb D}(mn)+1
+=
+\bigl(N_{\mathbb D}(m)+1\bigr)
+\bigl(N_{\mathbb D}(n)+1\bigr);
+$$
 
 (iii) **Connected phase transport:** the active predictive kernel supports a nontrivial connected scalar phase transport compatible with the gauge-coherence construction of Appendix G.2;
 
@@ -629,7 +626,7 @@ A change of orthonormal basis changes the coefficients by the corresponding unit
 
 **Proposition 7 (Emergence of the Born Rule)**
 
-By Principle 8.0b and Theorem 8.0d, the fundamental MPU has carrier $\mathcal H_0\cong\mathbb C^8$. Theorem 8.2 and Lemma 8.2a make its predictive weights response-quotiented, normalized, positive, and finitely additive; Theorem 8.3 represents them in Born trace form. Principle 8.0c separately identifies those weights with registered single-run probabilities. For a Perspectival State $(\rho,s)$ and the rank-one projective context $P_i^{(s)}=|i\rangle_s\langle i|_s$,
+By Principle 8.0b and Theorem 8.0d, the fundamental MPU has carrier $\mathcal H_0\cong\mathbb C^8$. Theorem 8.2 and Lemma 8.2a supply quotienting and retained-refinement additivity; an accepted $\mathfrak C_{\mathrm{Born}}$ supplies the missing full-domain or informational-completeness gate; and Theorem 8.3 gives the trace representation on that certified domain. Principle 8.0c separately identifies those weights with registered single-run probabilities. For a retained rank-one projective context $P_i^{(s)}=|i\rangle_s\langle i|_s$,
 $$
 \sum_iP_i^{(s)}=I,
 \qquad
@@ -638,40 +635,32 @@ P(i|\rho,s)=\operatorname{tr}(\rho P_i^{(s)}).
 $$
 On the pure-state shorthand $\rho=|\psi\rangle\langle\psi|$, this reduces to $P(i|\rho,s)=|\langle i|\psi\rangle_s|^2$. General mixed and reduced states retain the trace form.
 
-*Proof.* Because $d_0=8\ge3$, Theorem 8.3 applies to the normalized, positive, non-contextual, finitely additive quotient ledger. Hence there exists a unique density operator $\rho$ such that
-$$
-\omega(P)=\operatorname{tr}(\rho P)
-$$
-for every projection $P$ on $\mathcal H_0$. For a pure predictive state $\rho(t)=|\psi\rangle\langle\psi|$, the ray-calibration clause of Theorem 8.3 fixes the same density operator independently of the unit-vector phase. Let
+*Proof.* The accepted $\mathfrak C_{\mathrm{Born}}$, not the inequality $d_0\ge3$ by itself, activates Theorem 8.3. It supplies a unique density operator $\rho$ representing every retained effect on the informationally complete route and every projection or effect on the full-domain route. For a certified pure predictive state $\rho(t)=|\psi\rangle\langle\psi|$, the ray-calibration clause fixes the same density operator independently of unit-vector phase. Let
 $$
 P_i:=|i\rangle_s\langle i|_s.
 $$
-Equation (49) is a complete orthogonal resolution of the identity, so the probability assigned to outcome $i$ is
+The first identity in Equation (49--50) is a complete orthogonal resolution of the identity, so the probability assigned to outcome $i$ is
 $$
 P(i|\rho(t),s)=\omega(P_i)=\operatorname{tr}(\rho(t)P_i)
 =\operatorname{tr}\big(|\psi\rangle\langle\psi|\,|i\rangle_s\langle i|_s\big)
 =\langle\psi|i\rangle_s\langle i|\psi\rangle_s
 =|\langle i|\psi\rangle_s|^2.
 $$
-This is Equation (50). Theorem 8.3 also excludes non-Born additive alternatives on the quotient ledger. ∎
+This is the second identity in Equation (49--50). Theorem 8.3 excludes non-Born alternatives only on the accepted full-domain or informationally complete certificate route; quotienting and one retained context alone do not suffice. ∎
 
 **Theorem 8.6 (SPAP-to-Quantum Dependency Separation and Born Uniqueness).** The complete PU route has five logically distinct steps:
 
 1. Theorems 10–11 exclude a universally exact predictor on their diagonal-closed classes.
 2. Principle 11b selects the invariant convex response completion, and Theorem 11b proves the unique binary law $(1/2,1/2)$.
 3. Principle 8.0b supplies the carrier certificate, and Theorems G.1.8 and 8.0d select $\mathcal H_0\cong\mathbb C^8$.
-4. Theorem 8.2 and Lemma 8.2a make the predictive projection ledger response-quotiented, normalized, positive, and finitely additive. Theorem 8.3 then uniquely gives
-   $$
-   \omega(P)=\operatorname{tr}(\rho P)
-   $$
-   for every projection $P$; full-effect statements require the separately stated POVM affine-additivity hypothesis.
+4. Theorem 8.2 and Lemma 8.2a make the retained predictive ledger response-quotiented, normalized, positive, and finitely additive. Definition 8.2b then requires either full projection/effect coverage or a finite informationally complete operator-system certificate with positive density reconstruction. Theorem 8.3 uniquely gives $\omega(E)=\operatorname{tr}(\rho E)$ on that certified domain; global projection or effect statements require the corresponding full-domain route.
 5. Principle 8.0c identifies the instrument block weights with registered single-run outcome probabilities. Frequency convergence requires the repeated-trial certificate stated in Principle 8.0c.
 
 For a pure state and a rank-one sharp outcome,
 $$
 \Pr(i\mid\psi)=|\langle i|\psi\rangle|^2.
 $$
-No normalized positive finitely additive alternative exists on the same quotient projection ledger in dimension at least three. Steps 1--2 do not logically imply Steps 3--5: Principles 8.0b and 8.0c are independent, falsifiable physical closure principles, and every conclusion using them is conditional on that closure branch.
+No normalized positive alternative exists on the same accepted full-domain or informationally complete ledger. Sparse retained subledgers may admit multiple density extensions. Steps 1--2 do not logically imply Steps 3--5: the carrier, Born-domain, and actualization certificates are independent, falsifiable closure data.
 
 *Proof.* Steps 1–3 are the cited theorems and principles. Step 4 is Theorems 8.2–8.3; in dimension $8\ge3$, the Gleason representation on projections is unique, and the normalized power alternatives $p_i^{(\gamma)}\propto|c_i|^\gamma$ fail coarse/refined additivity unless $\gamma=2$. Step 5 is Principle 8.0c and the instrument conclusion of Theorem 8.0d. ∎
 
@@ -739,9 +728,9 @@ $$
 Thus Equation (53) is conditional on an infinite-dimensional effective representation of the canonical commutation relations and the stated common-domain hypothesis.
 
 
-**8.5 Explaining the Measurement Process and the 'Collapse' Phenomenon**
+**8.5 Registered Measurement Instruments and Conditional State Updates**
 
-The PU framework explains quantum measurement, including the apparent wavefunction collapse, by identifying measurement as a specific instance of the universal 'Evolve' interaction dynamics, eliminating the need for a separate collapse postulate.
+On Principles 8.0b--8.0c and Theorem 8.0d, a registered verification is represented by a normalized quantum instrument, and conditioning on its unique registered outcome gives the corresponding state update. This is a branch-qualified operational account of measurement. Definition 27 alone does not make every interaction a measurement, derive the Born ledger, select a single outcome, or exclude alternative response-equivalent outcome ontologies.
 
 **8.5.1 Proposition 9 (Ideal Measurement as a Registered `Evolve` Instrument)**
 
@@ -784,7 +773,7 @@ Consider an MPU qubit in perspectival state $S_{(s_{initial})}(t) = (|\psi\rangl
     *   *Shift:* Perspective shifts $s_{initial} \to s'_{X,+}$.
     *   *Post-Measurement State:* $S'_{X,+} = (|+\rangle, s'_{X,+})$. System described by $|+\rangle$ relative to $s'_{X,+}$.
 
-*   **Relative Actuality:** The outcome $|0\rangle$ is actual relative to perspective $s'_{Z,0}$. From the incompatible perspective $s'_{X,+}$, state $|0\rangle$ remains a superposition. There is no absolute collapsed state; actuality is relative to the post-interaction perspective, consistent with causality constraints (Section 10).
+*   **Conditional perspective-indexed record:** On the accepted instrument and single-outcome branch, the registered result $0$ is stored relative to $s'_{Z,0}$. Re-expansion of $|0\rangle$ in the incompatible $X$ basis is a mathematical basis change, not a second outcome record. The proposition establishes the conditioned record and update within this calculus; it does not by itself prove that no absolute or latent response-equivalent completion exists.
 
 **8.5.3 Corollary 4 (Operational Measurement Closure)**
 
@@ -831,7 +820,7 @@ For a bipartite MPU state $\rho_{AB}$ on $\mathcal H_A\otimes\mathcal H_B$, enta
 
 3.  **Nonclassical correlations.** Suitable local measurements on entangled states can yield correlations unattainable from any single product state, and for appropriate states and settings they can violate Bell inequalities. This is an existential statement about suitable entangled configurations, not a claim about every entangled state.
 
-4.  **Causality.** The local marginals remain $\rho_A=\operatorname{tr}_B\rho_{AB}$ and $\rho_B=\operatorname{tr}_A\rho_{AB}$, so entanglement does not by itself create deterministic signaling. Consistency with Theorem 39 and Theorem 42 is therefore preserved.
+4.  **Causality.** The local marginals remain $\rho_A=\operatorname{tr}_B\rho_{AB}$ and $\rho_B=\operatorname{tr}_A\rho_{AB}$, so entanglement does not by itself create a signaling channel. This exact marginal invariance satisfies Theorem 39c directly; no bounded-bias or regular-window CC premise is needed.
 
 Hence entanglement is the mathematical representation of nonclassical predictive coupling, while maximal predictive coupling in the mutual-information sense is realized by maximally entangled pure states. ∎
 
@@ -848,7 +837,7 @@ $$
 P(b\mid y)=\sum_a P(a,b\mid x,y)
 =\operatorname{tr}\!\big((I\otimes F_b^y)\rho_{AB}\big),
 $$
-which is independent of Alice's setting $x$. The same calculation shows that Alice's marginal is independent of Bob's setting $y$. Therefore Bell-nonclassical correlations do not by themselves define a superluminal signaling channel. In the PU framework, Theorem 39 excludes deterministic forcing of local outcomes and Theorem 42 excludes paradox-inducing causal loops. ∎
+which is independent of Alice's setting $x$. The same calculation shows that Alice's marginal is independent of Bob's setting $y$. Therefore Bell-nonclassical correlations do not by themselves define a superluminal signaling channel. In the PU framework, an independently declared bounded-bias ceiling together with Theorem 39 excludes endpoint-complete forcing of both outcomes of a binary coarse-graining, and Theorem 42 excludes finite-window zero-error contradiction protocols only on its regular branch. Exact causal compliance separately requires Theorem 39c. ∎
 
 **8.7 Derivation of Schrödinger Equation (Proposition 11)**
 

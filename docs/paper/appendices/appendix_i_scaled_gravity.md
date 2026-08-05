@@ -14,7 +14,7 @@ The emergence of gravity in the PU framework is a multi-step process (Sections 1
 
 *   **MPU network and ND-RID:** The fundamental substrate is an adaptive network of Minimal Predictive Units (MPUs) coupled by Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition A.2.2).
 *   **Information limits:** On a registered reset branch, Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$; a positive floor requires a separate bound $H_q(P\mid R)\ge h_{\min}>0$, while $\varepsilon_0=\ln2$ is the structural binary reference and becomes a physical reset floor only for a conditionally uniform binary record. A completed binary reset-support event gives $C_{\max}\le\ln d_0-\ln2$ (Proposition E.2a in Appendix E). Separately, on refresh/minorization branches, a nonzero input-independent full-state refresh component gives strict trace-distance contraction $f_{\mathrm{RID}}<1$ (Lemma E.1) and the refresh-branch capacity bound $C_{\max}(f_{\mathrm{RID}})<\ln d_0$ (Theorem E.2).
-*   **Emergent geometry:** Prediction-Optimization (POP) and PCE drive the network toward geometrically regular configurations (Theorem 43). Theorem 46 adds a uniform operational causal-speed upper bound under its stated clock and propagation hypotheses; an attained frontier and a Lorentzian manifold $(M,g_{\mu\nu})$ require the complete Corollary 46a/Appendix O promotion branch.
+*   **Emergent geometry:** On Theorem 43's registered strict-comparator/global-minimum branch, irregular configurations cannot be global minimizers. A continuum manifold requires the independent noncollapse, interpolation, curvature-transfer, Mosco, and rigidity entries of Theorem 43.5 and Theorems 44–45; Lorentzian promotion additionally requires Corollary 46a and Appendix O.
 *   **Area law:** Geometric regularity and Lemma E.5.1 give an area-scaling entropy upper bound. The sharper density coefficient requires Theorem E.3's density certificate, and equality $S=k_B\mathcal A/(4L_{P,\mathrm{op}}^2)$ requires the capacity-achieving, entropy-saturating, additive-ledger branch of Theorem E.6.
 *   **Operational gravitational scale:** On that positive saturated branch, define $L_{P,\mathrm{op}}^2=G_{\mathrm{op}}\hbar/c^3$ by
     $$
@@ -64,9 +64,27 @@ The coordinate $\hat C_{\mathrm{target}}$ is the internal task scale of Definiti
 *   **Hypothesis I.1:** On a branch carrying an external innovation certificate for Definition 21, low-density sparse regions have a lower externally measured exploitable-pattern scale than high-density regions, and the certificate identifies this difference with a lower effective $\hat C_{\mathrm{target}}(R)$ within its registered error. Without that certificate, sparsity alone does not determine the internal target coordinate.
 
 
-**Corollary I.2 (Conditional Target-Scale Comparative Statics).** Write $B(C;\theta)=\Gamma_0\partial_CPP(C,\theta)$ with $\theta=\hat C_{\mathrm{target}}$, and let the marginal-cost function $M(C)$ be common across the compared environments. In addition to Proposition I.2, assume that $\theta_1\le\theta_2$ implies $B(C;\theta_1)\le B(C;\theta_2)$ for every $C$, with strict inequality at any interior crossing. Then the unique saturation optimizers obey $C^*(\theta_1)\le C^*(\theta_2)$.
+**Corollary I.2 (Conditional Target-Scale Comparative Statics).** Write $B(C;\theta)=\Gamma_0\partial_CPP(C,\theta)$ with $\theta=\hat C_{\mathrm{target}}$, and let the marginal-cost function $M(C)$ be common across the compared environments. In addition to Proposition I.2, assume that $\theta_1\le\theta_2$ implies $B(C;\theta_1)\le B(C;\theta_2)$ for every $C$. Then the unique saturation optimizers obey $C^*(\theta_1)\le C^*(\theta_2)$.
 
-*Proof.* At $C^*(\theta_2)$ one has $B(C^*(\theta_2);\theta_1)\le M(C^*(\theta_2))$. Since $B(\cdot;\theta_1)-M$ is strictly decreasing, its zero cannot lie to the right. Without this monotone-differences premise, Hypothesis I.1 and Equation (23) do not order the PCE optimizers. ∎
+*Proof.* First suppose $C^*(\theta_2)=K_0$. Proposition I.2 gives
+$$
+B(K_0;\theta_2)\le M(K_0).
+$$
+The monotone-differences hypothesis gives
+$$
+B(K_0;\theta_1)\le B(K_0;\theta_2)\le M(K_0),
+$$
+so Proposition I.2 yields $C^*(\theta_1)=K_0=C^*(\theta_2)$.
+
+For the second case, suppose $C^*(\theta_2)>K_0$. Then
+$$
+B(C^*(\theta_2);\theta_2)=M(C^*(\theta_2)),
+$$
+and hence
+$$
+B(C^*(\theta_2);\theta_1)\le M(C^*(\theta_2)).
+$$
+If $B(K_0;\theta_1)\le M(K_0)$, Proposition I.2 gives $C^*(\theta_1)=K_0<C^*(\theta_2)$. Otherwise Proposition I.2 gives a unique zero of $B(\cdot;\theta_1)-M$; strict decrease and the displayed nonpositive value at $C^*(\theta_2)$ place that zero at or to the left of $C^*(\theta_2)$. Thus $C^*(\theta_1)\le C^*(\theta_2)$ in every case. Without the monotone-differences premise, Hypothesis I.1 and Equation (23) do not order the PCE optimizers. ∎
 
 **I.5 Conditional Parameter-Relaxation Mechanism after Early Saturation**
 
@@ -79,7 +97,7 @@ On this branch, the two variations raise $\eta(\delta^*)^2/C(\mathcal E_{p^*})$ 
 
 **I.5.1 Crossover Scale from Information Resolution Limits**
 
-The parameter relaxation described in Section I.5 implies that the MPU network's equilibrium structure depends on the local information environment. We derive the transition scale $a_0$ from the resolution limits of the MPU in the cosmic vacuum.
+On Proposition I.3's independently registered detector-and-relaxation certificate, equality of the selected Unruh and de Sitter detector temperatures defines an acceleration crossover $a_0$. Resolution limits or MPU status alone do not derive that threshold.
 
 **Proposition I.3 (Detector-Calibrated Crossover Threshold).**
 
@@ -91,13 +109,13 @@ This is an algebraic threshold calibration; temperature equality alone does not 
 
 **Physical Setup:**
 
-**1. Cosmic Resolution Floor:** In a universe dominated by cosmological constant $\Lambda>0$, the de Sitter horizon defines a minimum resolvable energy quantum. The associated de Sitter temperature is [Gibbons & Hawking 1977]:
+**1. De Sitter detector temperature:** In a de Sitter background with $\Lambda>0$, the selected detector has the Gibbons--Hawking temperature [Gibbons & Hawking 1977]:
 $$
 T_{dS} = \frac{\hbar c}{2\pi k_B}\sqrt{\frac{\Lambda}{3}}
 \tag{I.3.1}
 $$
 
-**2. Local Gradient Detection:** An MPU experiencing proper acceleration $a$ behaves as a thermal detector at Unruh temperature [Unruh 1976]:
+**2. Registered accelerated probe:** On the detector certificate, the selected uniformly accelerated probe has Unruh temperature [Unruh 1976]:
 $$
 T_U(a) = \frac{\hbar a}{2\pi c k_B}
 \tag{I.3.2}
@@ -132,11 +150,11 @@ a_0 \approx 5.4 \times 10^{-10} \text{ m/s}^2
 \tag{I.3.4}
 $$
 
-**Connection to Empirical Scale:** The relationship to the empirical MOND scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ involves an efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ fixed once the bridge-law normalization of Appendix H (Definition H.0 and Equation H.4b) is adopted. Within that normalization the factor arises from the product of four terms:
-- Active participation fraction $a/d_0 = 1/4$ (isotropy theorem)
-- Repetition multiplier $C/\varepsilon = 2$ (QFI additivity for i.i.d.)
-- Spatial projection $(D-1)/D = 3/4$ (rotational invariance)
-- Democratic normalization $1/\sqrt{K_0} = 1/\sqrt{3}$ (QFI additivity for generators)
+**Connection to Empirical Scale:** The relationship to the empirical MOND scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ involves an efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ on the factor-certified bridge-law class of Appendix H, Definition H.4.2.8a. Within that class the factor is the product of four separately registered terms:
+- Active-tangent contraction $a/d_0 = 1/4$, supplied by the active contraction certificate
+- Repetition multiplier $w_{\mathrm{cmp}}(2\varepsilon_0)=N_{\mathrm{cmp}}=2$, supplied by the structural bridge convention and the registered two-copy i.i.d. realization
+- Spatial-tangent contraction $(D-1)/D = 3/4$, supplied by the spatial contraction certificate
+- Generator-amplitude normalization $1/\sqrt{K_0} = 1/\sqrt{3}$, recorded separately from the $1/K_0$ scaling of SLD QFI
 
 **Corollary I.3a (Cosmological Acceleration Lock in the Dark-Sector Branch).** On the Appendix H operating-point bridge representative,
 $$
@@ -362,7 +380,7 @@ for fixed $v_-,v_+>0$ on retained local scales;
 
 5. the Dirichlet forms $\mathcal E_n$ converge to the limit Cheeger energy in the Mosco sense;
 
-6. on each retained cosmological averaging domain $D$ with spectral gap $\lambda_1(D)>0$, the emergent metric/channel-capacity field equation admits an elliptic gauge and a dimensionless source-control certificate
+6. on each retained cosmological averaging domain $D$ with spectral gap $\lambda_1(D)>0$, the emergent metric/channel-capacity field equation admits an elliptic gauge and a source-control certificate of dimension $L^{-2}$
 $$
 \frac{1}{\lambda_1(D)}\mathrm{Ch}_D(\theta)
 +
@@ -377,9 +395,9 @@ $$
 \right],
 \tag{I.3h.2}
 $$
-where $\mathcal B_D^{\mathrm{ell}}$ is a finite dimensionless bound in the declared normalization.
+where $\mathcal B_D^{\mathrm{ell}}$ is a finite bound of dimension $L^{-2}$ in the declared physical-length normalization.
 
-**Theorem I.3i (RCD Elliptic Scale-Bridge Completion).** Let a branch carry the datum of Definition I.3h and, in addition, a discrete-to-continuum stability certificate proving that its measured Gromov-Hausdorff limit satisfies $\mathrm{RCD}^*(K,4)$ and that the Mosco limit of $\mathcal E_n$ is the Cheeger energy of $(X,d,m)$. Then the limit Cheeger energy is quadratic and
+**Theorem I.3i (RCD Elliptic Scale-Bridge Completion).** Let a branch carry the datum of Definition I.3h and, for every retained averaging domain $D$ used below, items 1--3 of Definition I.3e. Assume, in addition, a discrete-to-continuum stability certificate proving that its measured Gromov-Hausdorff limit satisfies $\mathrm{RCD}^*(K,4)$ and that the Mosco limit of $\mathcal E_n$ is the Cheeger energy of $(X,d,m)$. Then the limit Cheeger energy is quadratic and
 $$
 |\mathcal Q_D^{\mathrm{PU}}|
 \le
@@ -411,14 +429,14 @@ $$
 \langle\sigma^2\rangle_D
 \right).
 $$
-Applying the dimensionless certificate (I.3h.2) proves (I.3i.1). ∎
+Applying the source-control certificate (I.3h.2) proves (I.3i.1). ∎
 
-**Corollary I.3j (Scale-Bridge Scope).** The predictive-stress backreaction estimate (I.3i.1) is established only on branches satisfying Definition I.3h and the discrete-to-continuum stability certificate of Theorem I.3i. If that package is unavailable, the local estimate (I.3f.1) remains available only on domains carrying items 1--3 of Definition I.3e, including the stated positive spectral gap. No estimate in terms of predictive stress and defect budgets follows without the elliptic source-control estimate.
+**Corollary I.3j (Scale-Bridge Scope).** The predictive-stress backreaction estimate (I.3i.1) is established only on branches satisfying Definition I.3h, items 1--3 of Definition I.3e for every retained averaging domain, and the discrete-to-continuum stability certificate of Theorem I.3i. If that package is unavailable, the local estimate (I.3f.1) remains available only on domains carrying items 1--3 of Definition I.3e, including the stated positive spectral gap. No estimate in terms of predictive stress and defect budgets follows without the elliptic source-control estimate.
 
 *Proof.* Theorem I.3i requires its entire branch package to derive (I.3i.1). Independently, the proof of Theorem I.3f derives (I.3f.1) from the definition of $\mathcal Q_D^{\mathrm{PU}}$ and the spectral-gap inequality; it derives (I.3f.2) only after applying (I.3e.2). Therefore the local bound has exactly the scope stated here, and the predictive-stress bound additionally requires elliptic source control. ∎
 
 
-**Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The RCD elliptic-regularity step is not presently a computed numerical closure in Appendix I. The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and a dimensionless elliptic scale-bridge estimate
+**Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The RCD elliptic-regularity step is not presently a computed numerical closure in Appendix I. The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and an elliptic scale-bridge estimate of dimension $L^{-2}$
 $$
 \frac{1}{\lambda_1(D)}\mathrm{Ch}_D(\theta)
 +
@@ -448,7 +466,7 @@ The system dynamically adjusts its effective local parameters $\delta$ and $C_{\
 
 *   **Analysis of Cost and Benefit:**
     *   **Structural Cost $V_{cost}$:** This term records the declared physical resources needed to maintain the network infrastructure. A denser network may carry a specified spacing cost. Channel fidelity is parametrized independently by the registered refresh decomposition $\mathcal E_N=(1-p)\Psi+pT_\sigma$: Lemma E.1 gives $f_{RID}\le1-p$, and Theorem E.2 supplies the associated strict capacity record. Appendix A.0.4's $V_{rel}$ is a reliability/error-correction cost as a function of the declared error model; it does not prove that $C_{\max}$ is monotone in reset heat. Accordingly, a constructive branch must enter an explicit increasing maintenance function $V_{\mathrm{chan}}(p)$ or $V_{\mathrm{chan}}(C_{\max})$ and verify its derivative on the admitted interval. With that registered function, $V_{cost}=V_{\mathrm{spacing}}(\delta)+V_{\mathrm{chan}}(C_{\max})$ has the monotonicity used below.
-    *   **Predictive Benefit $V_{benefit}$:** The benefit arises from the network's ability to form complex predictive models of the local environment. This ability, $PP_{agg}$, depends on having a dense (small $\delta$) and high-fidelity (large $C_{\max}$) network. The total benefit is proportional to the amount of "stuff to predict," which is directly related to $\rho_b$. Thus, $V_{benefit}$ generally increases as $\delta$ decreases, increases as $C_{\max}$ increases, and increases with $\rho_b$.
+    *   **Predictive Benefit $V_{benefit}$:** The monotonicities used by the crossover model are a registered response ansatz: on the admitted domain, $V_{benefit}$ is assumed to increase as $\delta$ decreases, as $C_{\max}$ increases, and as $\rho_b$ increases. A constructive branch must specify this function, its units, and derivative-sign certificates; predictive terminology alone proves none of the three monotonicities.
 
 *   **Conditional crossover behavior:** If $V_{struct}(\delta,C_{\max};\rho_b)$ is coercive on the admissible parameter domain, has a unique minimizer for each retained value of $\rho_b$, and its minimizer moves from a small-$\delta$, large-$C_{\max}$ regime at high $\rho_b$ to a large-$\delta$, small-$C_{\max}$ regime at low $\rho_b$, then the equilibrium pair depends on $\rho_b$ and exhibits the stated crossover.
     *   **High $\rho_b$ (e.g., galactic cores):** The assumed minimizer lies in the high-cost, high-performance regime with small spacing $\delta_0$ and large channel capacity $C_{\max,0}$.
@@ -459,9 +477,9 @@ The qualitative cost-benefit tendencies motivate these branch hypotheses but do 
 
 **I.6 Scale-Dependent Newton Constant**
 
-The variation of the microscopic parameters $\delta$ and $C_{\max}$ with the scale $R$ (associated with the density of predictive information and effective $\hat C_{\mathrm{target}}(R)$) due to the PCE-driven parameter relaxation mechanism (Section I.5) leads to a scale-dependent emergent Newton constant $G(R)$, as given by Equation (I.1). We model this scale dependence using a minimal phenomenological interpolation function (consistent with the robustness discussion in Section 6.7), where $G_0$ is the value approached at small scales $R \ll L_0$, $A_G$ is the total fractional enhancement ($A_G = G_{\mathrm{large}}/G_0 - 1$), $L_0$ is a characteristic transition scale at which $G$ begins to increase, and $m \ge 1$ (typically $m \gtrsim 2$) is a parameter determining the steepness of the transition.
+Equation I.4 is a phenomenological scale-dependent kernel, not a consequence of PCE relaxation alone. Its inputs are $G_0$, the length $L_0$, the fractional enhancement $A_G=G_{\mathrm{large}}/G_0-1$, and the dimensionless steepness $m>0$. A constructive relaxation derivation must supply an admissible microscopic dynamics, a map from $(\delta,C_{\max})$ to these parameters, existence and stability of the required response, and a residual bound against the kernel.
 
-This yields the explicit running of the Newton constant with scale $R$; as a robustness check, replacing the exponential by a logistic or Hill-type transition function preserves the qualitative baryon-tracking behavior for the same $(L_0,A_G,m)$ scale hierarchy:
+The exponential below defines the nominated Equation-I.4 model. A logistic or Hill replacement is a different kernel; it preserves any claimed quantitative conclusion only after a common-domain approximation bound and propagated observable residual are certified:
 
 $$
 \boxed{\,G(R)=G_0
@@ -472,14 +490,14 @@ $$
 The parameter roles in Equation I.4 are:
 $$
 G_0:\text{ local normalization},\qquad
-L_0:\text{ coarse-graining transition scale tied to }g_\Lambda,\qquad
+L_0:\text{ independent phenomenological spatial transition scale},\qquad
 (A_G,m):\text{ phenomenological-kernel parameters},
 $$
 where
 $$
 g_\Lambda:=\frac{c^2\sqrt{\Lambda}}{8}.
 $$
-Within the present manuscript, only the crossover scale $L_0$ is directly tied to the Appendix H acceleration scale, and that tie is conditional on Definition H.0 and Equation H.4b. The amplitude $A_G$ and steepness $m$ remain phenomenological parameters pending either rotation-curve fits or a first-principles closure of the relaxation sector. Thus $(L_0,A_G,m)$ should be tested for universality, but only $L_0$ currently has a framework-internal bridge relation. On the acceleration-lock branch, all low-acceleration transition plots should be expressed using
+Definition H.0 and Equation H.4b fix the acceleration variable $g_\Lambda$ only on their bridge branch. They do not determine the length $L_0$: a dimensionally valid relation $L_0=\mathcal L(g_\Lambda,\text{system data})$, with its geometry, mass or velocity data, units, and validation certificate, is not supplied. Thus $L_0$, $A_G$, and $m$ remain phenomenological Equation-I.4 parameters. On the acceleration-lock branch, all low-acceleration transition plots should be expressed using
 $$
 \chi_b=\frac{|\nabla\Phi_b|}{g_\Lambda}
 $$
@@ -649,7 +667,7 @@ $$
 The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomical observations.
 
 *   **Galaxy dynamics:** Observed rotation curves and galaxy scaling relations (e.g., baryonic Tully-Fisher Relation [McGaugh 2012], Radial Acceleration Relation [McGaugh et al. 2016]) indicate that the effective gravitational field requires an enhancement over Newtonian gravity by factors of $2$ to $10$ on scales $R \sim 1$–$100\,\mathrm{kpc}$. For $R\gg L_0$, the local coupling satisfies $G(R)\to G_0(1+A_G)$, while for a bounded baryonic system the asymptotic field enhancement is $1+\langle\varepsilon_G\rangle_b \le 1 + A_G$, where $\langle\varepsilon_G\rangle_b$ is the baryon‑mass‑weighted average of $\varepsilon_G(R)$. This requires $A_G = 1$ to $9$, consistent with $A_G = \mathcal O(1)$.
-*   **Transition scale:** The transition scale $L_0$ corresponds to the acceleration scale $g_0$ (Proposition H.1, Appendix H). The empirical $g_0 \sim 1.2 \times 10^{-10}\,\mathrm{m\,s}^{-2}$ aligns with scales of galactic discs (few kpc). Thus, $L_0$ is expected to be of order a few kiloparsecs, consistent with Equation (H.4) if $\Lambda$ and $\eta'$ are of the expected magnitude.
+*   **Transition scale:** Choosing $L_0$ of order a few kiloparsecs is an empirical fit or prior for Equation I.4, not a consequence of the acceleration candidate in Appendix H. Acceleration and length have different dimensions; a system-dependent conversion remains an open bridge.
 *   **Steepness:** The sharpness of the transition in the Radial Acceleration Relation suggests $m \gtrsim 2$.
 *   **Cosmological variation:** If the fundamental parameters $(\delta, C_{\max})$ that determine $(L_0, A_G, m)$ evolve on cosmological timescales (e.g., Hubble time), current bounds on temporal variation of $G$ (e.g., $|\dot G/G|\!\lesssim\!10^{-12}\,\mathrm{yr}^{-1}$ from cosmology and solar system) can still be met, provided the cosmological evolution is slow (Section I.14, [Uzan 2011]).
 
@@ -657,17 +675,15 @@ The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomic
 
 Within the status classes of Convention P.14.1a, the scale-dependent gravity framework gives model-level predictions whose parameters must be tested with a common T1/T2/T3 ledger:
 
-1.  **Model-level force law:** The enhancement factor $\varepsilon_G(R)$ is modeled as a function of scale and baryonic environment through Equation I.4 and Hypothesis I.1. Tight baryon-tracking relations such as the baryonic Tully-Fisher Relation and the Radial Acceleration Relation are therefore predictions of the phenomenological kernel $(L_0,A_G,m)$, not theorem-level consequences of Appendix H alone.
-2.  **Acceleration-lock test:** The acceleration variable controlling the transition is fixed by
+1.  **Model-level force laws:** Equation I.4 predicts a finite-window scale-dependent enhancement but approaches a constant coupling at $R\gg L_0$; for a bounded baryonic mass it is therefore asymptotically Keplerian. The baryonic Tully-Fisher and deep-RAR scalings follow only on the separate capacity-elastic branch of Definition I.5a and Corollary I.7a, under the constitutive asymptotic $\mu(g/g_\Lambda)\sim g/g_\Lambda$. Neither behavior is a theorem-level consequence of Appendix H alone.
+2.  **Capacity-elastic acceleration-lock test:** On the separate Definition-I.5a branch, the constitutive variable is
 $$
-g_\Lambda=\frac{c^2\sqrt{\Lambda}}{8}.
+\chi_b=\frac{|\nabla\Phi_b|}{g_\Lambda},
+\qquad
+g_\Lambda=\frac{c^2\sqrt{\Lambda}}8.
 $$
-Galaxy acceleration data should therefore collapse when plotted against
-$$
-\chi_b=\frac{|\nabla\Phi_b|}{g_\Lambda}
-$$
-without fitting an independent MOND scale.
-3.  **Parameter-universality test:** The parameter set $(L_0,A_G,m)$ should be approximately universal across the galaxy class to which Equation I.4 is applied. $L_0$ inherits the bridge-normalization status of $g_\Lambda$; $A_G$ and $m$ remain phenomenological until derived from the relaxation sector or inferred with a hierarchical population model.
+After the acceleration normalization and capacity-elastic response law are certified, galaxy acceleration data test collapse against $\chi_b$ without an independent MOND acceleration. Equation I.4 instead depends on $R/L_0$; no dimensionally valid $L_0\leftrightarrow g_\Lambda$ map follows from either formula.
+3.  **Parameter-universality test:** The phenomenological parameter set $(L_0,A_G,m)$ may be tested for approximate universality across a preregistered galaxy class. None inherits the acceleration-lock status: $L_0$ awaits a dimensionally valid system map, while $A_G$ and $m$ await relaxation-sector derivation or hierarchical inference.
 4.  **Surface-density lock:** Thin-disk transition data should be consistent with
 $$
 \Sigma_\dagger
@@ -685,7 +701,7 @@ $$
 {\Lambda_{\mathrm{eff}}(0)}
 }.
 $$
-6.  **Absence of particle DM in the modeled branch:** The observed phenomena are explained without conventional particle dark matter in this branch, predicting null results for direct detection experiments searching for conventional dark matter particles if this branch is the correct explanation of the relevant anomalies.
+6.  **Particle-DM comparison test:** Equation I.4 and the capacity-elastic branch are candidate gravity-only fits; writing them without a particle-DM term neither proves that they explain the anomalies nor that particle dark matter is absent. A direct-detection null is an independent empirical outcome. Exclusion of a particle-DM competitor requires a common likelihood, nuisance and covariance model, calibrated gravity-only forward map, and a declared model-selection rule.
 7.  **Cosmological signatures:** The scale dependence of gravity could influence structure growth and cosmological observables. Deviations from $\Lambda$CDM predictions might be observable in cosmic microwave background (CMB) or large-scale structure surveys if $G$ varies with local density or cosmic time.
 8.  **Transient stresses:** The dynamics of complexity adaptation and parameter relaxation may lead to transient effects, such as $\rho_\Pi$ in Equation I.7, in highly dynamic events like galaxy cluster mergers. These effects would be tested through discrepancies between baryonic matter distribution and gravitational lensing maps under the same kernel and conservation assumptions.
 
@@ -795,6 +811,23 @@ g_{\mathrm{obs}}\sim\sqrt{g_{\mathrm{bar}}g_0}\quad(y\downarrow0),
 $$
 Nonzero residuals give only the propagated interval.
 
+*Proof.* For $x\ge0$, two integrations of $d^2(e^{-x})/dx^2=e^{-x}$ give the exact identity
+$$
+e^{-x}=1-x+x^2\int_0^1(1-s)e^{-sx}\,ds.
+$$
+The integral lies in $[0,1/2]$, so, with $x=\sqrt y$,
+$$
+1-e^{-\sqrt y}=\sqrt y+O(y)
+\qquad(y\downarrow0).
+$$
+Since $g_{\mathrm{bar}}=yg_0$,
+$$
+g_{\mathrm{obs}}
+=\frac{yg_0}{\sqrt y+O(y)}
+=\sqrt{g_{\mathrm{bar}}g_0}\,[1+O(\sqrt y)].
+$$
+As $y\to\infty$, $e^{-\sqrt y}\to0$, so $f_{\mathrm{res}}\to1$ and $g_{\mathrm{obs}}/g_{\mathrm{bar}}=1/f_{\mathrm{res}}\to1$. If $R(y)\in I_R(y)$, only the interval obtained by applying $g_{\mathrm{bar}}/f$ to the admissible positive values of $f$ is certified. ∎
+
 **Theorem I.6 (Well-posed generalized Poisson law).** Let $\Omega\subset\mathbb R^3$ be bounded and Lipschitz, let $1<p<\infty$, and define
 $$
 F(\xi):=\frac12\Psi(|\xi|^2),
@@ -807,59 +840,31 @@ c_1|\xi|^p-c_0\le F(\xi)\le c_2(1+|\xi|^p),
 \qquad
 |a(\xi)|\le c_3(1+|\xi|^{p-1}).
 $$
-Let $\rho\in W^{-1,p'}(\Omega)$, where $p'=p/(p-1)$, and let the Dirichlet datum have a lifting $g\in W^{1,p}(\Omega)$. Then
+Let $\rho\in W^{-1,p'}(\Omega)=(W_0^{1,p}(\Omega))^*$, where $p'=p/(p-1)$, and let the Dirichlet datum have a lifting $g\in W^{1,p}(\Omega)$. For $u\in W_0^{1,p}(\Omega)$ define
 $$
-\mathcal E[\Phi]
+\mathcal E_g[u]
 =
-\frac{1}{4\pi G}\int_\Omega F(\nabla\Phi)\,d^3x
-+
-\langle\rho,\Phi\rangle
+\frac{1}{4\pi G}\int_\Omega F(\nabla(g+u))\,d^3x
++\langle\rho,u\rangle.
 $$
-has a unique minimizer in $g+W_0^{1,p}(\Omega)$. This minimizer is the unique weak solution of
+Then $\mathcal E_g$ has a unique minimizer $u_*$, and $\Phi=g+u_*$ is the unique weak solution with trace $g$ in the sense that, for every $\eta\in W_0^{1,p}(\Omega)$,
 $$
-\nabla\cdot\bigl(\mu(|\nabla\Phi|)\nabla\Phi\bigr)=4\pi G\rho,
+\int_\Omega \mu(|\nabla\Phi|)\nabla\Phi\cdot\nabla\eta\,d^3x
+=-4\pi G\langle\rho,\eta\rangle,
 \qquad
 \mu(s):=\Psi'(s^2).
 $$
-For $p=2$ and $g=0$, the solution lies in $H_0^1(\Omega)$.
+Equivalently, $\nabla\cdot(\mu(|\nabla\Phi|)\nabla\Phi)=4\pi G\rho$ distributionally. For $p=2$ and $g=0$, $\Phi\in H_0^1(\Omega)$.
 
-*Proof.* Write $\Phi=g+u$ with $u\in W_0^{1,p}(\Omega)$. The lower growth bound, Hölder's inequality, the dual estimate, and Poincaré's inequality give
-$$
-\mathcal E[g+u]
-\ge
-\frac{c_1}{4\pi G}\|\nabla(g+u)\|_p^p
--\frac{c_0|\Omega|}{4\pi G}
--\|\rho\|_{W^{-1,p'}}\|g+u\|_{W^{1,p}}.
-$$
-The inequality $|u|^p\le 2^{p-1}(|u+g|^p+|g|^p)$ and Poincaré's inequality show that the positive $p$-power term dominates the linear dual term as $\|u\|_{W^{1,p}}\to\infty$. Thus every minimizing sequence is bounded in the reflexive space $W_0^{1,p}(\Omega)$.
+*Proof.* The lower growth bound, the inequality $|\nabla u|^p\le2^{p-1}(|\nabla(g+u)|^p+|\nabla g|^p)$, Poincaré's inequality, and the dual estimate $|\langle\rho,u\rangle|\le\|\rho\|\|u\|_{W_0^{1,p}}$ make $\mathcal E_g$ coercive on the reflexive space $W_0^{1,p}(\Omega)$. A minimizing sequence therefore has a weakly convergent subsequence. Convex-integral weak lower semicontinuity and weak continuity of the dual term give a minimizer. Strict convexity of $F$ gives equality of gradients for two minimizers; their zero trace difference then gives uniqueness.
 
-Choose a weakly convergent subsequence $u_n\rightharpoonup u$. The integral of the convex continuous function $F$ is weakly lower semicontinuous, and $\langle\rho,g+u_n\rangle\to\langle\rho,g+u\rangle$ by weak continuity of a bounded linear functional. Hence $g+u$ minimizes $\mathcal E$. Strict convexity of $F$, together with equality of the Dirichlet traces, makes the minimizer unique.
-
-For $\eta\in W_0^{1,p}(\Omega)$, the derivative-growth bound and Hölder's inequality justify differentiation under the integral at the minimizer:
+The derivative-growth bound justifies the first variation in every $\eta\in W_0^{1,p}$ and yields the displayed weak equation. Conversely, subtracting the weak equations for two solutions and testing by their difference gives
 $$
-0
-=
-\frac{d}{dt}\mathcal E[\Phi+t\eta]\Big|_{t=0}
-=
-\frac{1}{4\pi G}\int_\Omega a(\nabla\Phi)\cdot\nabla\eta,d^3x
-+
-\langle\rho,\eta\rangle.
-$$
-Therefore
-$$
-\int_\Omega
-\mu(|\nabla\Phi|)\nabla\Phi\cdot\nabla\eta,d^3x
-=-4\pi G\langle\rho,\eta\rangle,
-$$
-which is the weak form of the displayed equation. Conversely, strict monotonicity of $a=\nabla F$ implies that two weak solutions $\Phi_1,\Phi_2$ with the same trace satisfy
-$$
-0
-=
 \int_\Omega
 \bigl(a(\nabla\Phi_1)-a(\nabla\Phi_2)\bigr)
-\cdot\nabla(\Phi_1-\Phi_2),d^3x.
+\cdot\nabla(\Phi_1-\Phi_2)\,d^3x=0.
 $$
-The nonnegative integrand vanishes only when $\nabla\Phi_1=\nabla\Phi_2$ almost everywhere. Their equal traces then give $\Phi_1=\Phi_2$. ∎
+Strict monotonicity of $a=\nabla F$ and equality of traces imply $\Phi_1=\Phi_2$. $\square$
 
 **Theorem I.7 (Flat-curve asymptotics).** Let $\Phi$ be a spherically symmetric weak solution for a point source of mass $M>0$ whose outward flux is normalized by
 $$
@@ -960,7 +965,7 @@ The analysis must account for potential systematic errors. Robustness can be gau
 $$
 y_{PU}(\theta_{PU},\nu),\qquad y_{NFW}(\theta_{NFW},\nu),
 $$
-where the same baryonic data, distance priors, inclination priors, stellar mass-to-light priors, and covariance conventions are used for both families. The whitened residuals are
+where the same baryonic data, nuisance domains, distance/inclination/mass-to-light calibration data, and covariance conventions are used for both families. No prior density enters the statistic below. The whitened residuals are
 $$
 r_M(\theta_M,\nu)=C^{-1/2}\bigl(y-y_M(\theta_M,\nu)\bigr),
 \qquad
@@ -972,11 +977,11 @@ for $M\in\{PU,NFW\}$.
 $$
 \mathcal D_{PU/NFW}
 =
-\min_{\theta_{NFW},\nu\in\mathcal N}\chi^2_{NFW}(\theta_{NFW},\nu)
+\inf_{\theta_{NFW},\nu\in\mathcal N}\chi^2_{NFW}(\theta_{NFW},\nu)
 -
-\min_{\theta_{PU},\nu\in\mathcal N}\chi^2_{PU}(\theta_{PU},\nu),
+\inf_{\theta_{PU},\nu\in\mathcal N}\chi^2_{PU}(\theta_{PU},\nu),
 $$
-with both minima computed under the same masking, covariance, nuisance priors, and baryonic preprocessing. Positive $\mathcal D_{PU/NFW}$ favors the PU scaled-gravity family at the matched-residual level; negative $\mathcal D_{PU/NFW}$ favors the NFW family.
+with both infima taken under the same masking, covariance, nuisance domains, calibration data, and baryonic preprocessing. Positive $\mathcal D_{PU/NFW}$ favors the PU scaled-gravity family at the matched-residual level; negative $\mathcal D_{PU/NFW}$ favors the NFW family. No prior factor or attainment is implied by this definition.
 
 For a sample of systems $s=1,\dots,N$, the universality residual for the galaxy-scale triple $\Theta_G=(L_0,A_G,m)$ is
 $$
@@ -984,7 +989,16 @@ $$
 $$
 where $\Theta_{G,s}$ and $\Sigma_{G,s}$ are the system-level posterior mean and covariance under the same inference convention, and $\bar\Theta_G$ is the pooled inverse-covariance weighted mean.
 
-**Proposition I.12a.3 (Nuisance-Matched Likelihood Separation).** Under Gaussian observational errors with one shared covariance $C$ and one shared nuisance domain $\mathcal N$, $\mathcal D_{PU/NFW}$ is exactly twice the maximized log-likelihood ratio in favor of PU over NFW. It is a profile-likelihood statistic and contains no prior factor. The shared domain prevents unequal nuisance-domain freedom, although the common nuisance variables may interact differently with the two model maps.
+**Proposition I.12a.3 (Nuisance-Matched Likelihood Separation).** Under Gaussian observational errors with one shared covariance $C$ and one shared nuisance domain $\mathcal N$,
+$$
+\mathcal D_{PU/NFW}
+=2\left(
+\sup_{\theta_{PU},\nu\in\mathcal N}\log L_{PU}
+-
+\sup_{\theta_{NFW},\nu\in\mathcal N}\log L_{NFW}
+\right).
+$$
+This identity uses suprema and requires no attainment. If both suprema are attained, it is twice the maximized profile-log-likelihood difference. It contains no prior factor. The shared domain prevents unequal nuisance-domain freedom, although the common nuisance variables may interact differently with the two model maps.
 
 *Proof.* For either model family $M$,
 $$
@@ -995,15 +1009,12 @@ where
 $$
 K_C=-\frac12\log\det(2\pi C)
 $$
-is identical for the two families because both use the same data vector and covariance. Therefore
+is common to both families. The order-reversing affine identity gives, in the extended real numbers,
 $$
-2\left(\max_{\theta_{PU},\nu\in\mathcal N}\log L_{PU}
--\max_{\theta_{NFW},\nu\in\mathcal N}\log L_{NFW}\right)
-=\min_{\theta_{NFW},\nu\in\mathcal N}\chi^2_{NFW}
--\min_{\theta_{PU},\nu\in\mathcal N}\chi^2_{PU}
-=\mathcal D_{PU/NFW}.
+\sup_{\theta_M,\nu\in\mathcal N}\log L_M
+=K_C-\frac12\inf_{\theta_M,\nu\in\mathcal N}\chi_M^2.
 $$
-No prior appears in this identity. A prior-weighted MAP or marginal-likelihood discriminator would require adding the log-prior or integrating it explicitly. ∎
+Subtracting the two identities cancels $K_C$ and proves the proposition with no attainment assumption. No prior appears. A MAP or marginal-likelihood discriminator would require adding or integrating the prior explicitly. ∎
 
 **Corollary I.12a.4 (Dark-Sector Failure Criteria).** The galaxy-scale PU branch fails on a matched sample if any one of the following holds under Definition I.12a.1:
 
@@ -1303,18 +1314,27 @@ $$
 \det\mathcal L_x=-\frac{884736}{15625}\ne0.
 \tag{I.13f.3c}
 $$
-The record also contains the nine responses
+The record also contains a specified linear harmonic-to-null-response map
+$$
+\mathscr Q_x:
+\ker\Delta_1
+\longrightarrow
+\operatorname{Quad}(\mathcal N_x),
+\qquad
+h\longmapsto\mathcal Q_h,
+$$
+where $\operatorname{Quad}(\mathcal N_x)$ denotes the real homogeneous quadratic functions on the retained null cone, with values of dimension $L^{-2}$. Its nine recorded responses satisfy
 $$
 8\pi G\,T^{\mathrm{DS}}_{\mu\nu}k_i^\mu k_i^\nu
 =
 \mathcal Q_h(k_i),
-\qquad i=1,\ldots,9;
+\qquad i=1,\ldots,9.
 \tag{I.13f.3}
 $$
 
 4. a tenth scalar datum $\tau_{\mathrm{DS}}=g^{\mu\nu}T^{\mathrm{DS}}_{\mu\nu}$ compatible with the conservation law (I.13d.3) and the cosmological boundary ledger.
 
-Then Theorem 12.1g and the trace datum determine a unique symmetric tensor $T^{\mathrm{DS}}_{\mu\nu}$. The metric equation on this branch is
+Then the rank-nine null-tomography map and the trace datum determine a unique symmetric tensor $T^{\mathrm{DS}}_{\mu\nu}$. The metric equation on this branch is
 $$
 G_{\mu\nu}+\Lambda g_{\mu\nu}
 =

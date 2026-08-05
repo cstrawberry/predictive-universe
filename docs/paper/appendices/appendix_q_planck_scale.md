@@ -1016,9 +1016,9 @@ For consecutive integer labels, the orbit $\{e^{iN\ln2}\}$ is equidistributed in
 
 The Leech shell ledger is available only on a branch that independently registers an even unimodular rootless rank-$24$ lattice, or supplies the full discriminant-form and coset-minimum datum of Lemma R.4.5. The predictive-recovery selection of $\mathcal G_{24}$ alone does not construct that lattice.
 
-**Proposition Q.0.5 (Conditional Leech Shell Structure).** Assume a registered discriminant-form, marking, and coset-minimum certificate of Lemma R.4.5 constructs an even unimodular rootless rank-$24$ lattice. Then the lattice is the Leech lattice $\Lambda_{24}$, its nonzero minimum squared norm is $4$, and its first shell norms are $4,6,8,\ldots$.
+**Proposition Q.0.5 (Conditional Leech Shell Structure).** Assume a registered discriminant-form, marking, and coset-minimum certificate of Lemma R.4.5 constructs an even unimodular rootless rank-$24$ lattice $\Lambda$. Then $\Lambda\cong\Lambda_{24}$ by a Euclidean isometry, its nonzero minimum squared norm is $4$, and its first shell norms are $4,6,8,\ldots$. The certificate fixes the marked representative; classification alone fixes only its isometry class.
 
-*Proof.* The registered certificate supplies evenness, unimodularity, rank $24$, and rootlessness. Niemeier's classification identifies the unique lattice with those properties as $\Lambda_{24}$. In the convention used here, its theta series is [Conway & Sloane 1999]
+*Proof.* The registered certificate supplies evenness, unimodularity, rank $24$, and rootlessness. Niemeier's classification identifies the unique Euclidean-isometry class with those properties as the class represented by $\Lambda_{24}$. In the convention used here, its theta series is [Conway & Sloane 1999]
 $$
 \Theta_{\Lambda_{24}}(q)
 =
@@ -1026,7 +1026,7 @@ $$
 $$
 The first nonconstant term therefore occurs at squared norm $4$, and the displayed subsequent terms give shell norms $6$ and $8$. Golay parameters alone do not supply the registered gluing or coset-minimum certificate. ∎
 
-**Theorem Q.0.5a (Mass--Action Correspondence on the Canonical Norm--Information and $\mathfrak B_{mass}$ Branches).** On the canonical Leech norm--information calibration branch, where $\mathcal I_{rel}(v)=|v|$, and on the joint saturated-boundary/activity completed-reset and accepted action--entropy branch $\mathfrak B_{mass}$ of Appendix N, a vacuum excitation labeled by $v\in\Lambda_{24}$ satisfies
+**Theorem Q.0.5a (Mass--Action Correspondence on the Canonical Norm--Information and $\mathfrak B_{mass}$ Branches).** On the canonical Leech norm--information calibration branch, where $\mathcal I_{rel}(v)=|v|$, and on the canonical mass--action branch $\mathfrak B_{mass}=\mathfrak B_{\mathrm{mass}}(1)$ of Appendix N, whose independent records include the certified relational-cut decomposition, additive concurrent saturated activity, $C_*^{\mathrm{rel}}=2\varepsilon_0$, stationarity on the integration interval (or the pointwise reading), the same-cycle action/update map, and the clock/spacing calibration, a vacuum excitation labeled by $v\in\Lambda_{24}$ satisfies
 $$
 m^2(v)=(\mu_0^{alg})^2|v|^2,
 \qquad
@@ -1325,7 +1325,7 @@ The branch-conditional Rindler–Landauer timescale $\tau_U=2\pi c/a$ shares for
 
 | Jacobson construction | Conditional Rindler–Landauer construction | Shared formal ingredient |
 |:--------------------|:----------------------------|:--------------|
-| Unruh temperature $T = \kappa/(2\pi)$ | Unruh temperature $T_U = \hbar a/(2\pi k_B c)$ | Horizon thermal character |
+| Unruh temperature $T = \hbar\kappa/(2\pi k_B c)$ for acceleration $\kappa$ | Unruh temperature $T_U = \hbar a/(2\pi k_B c)$ | Horizon thermal character |
 | Area-law entropy $\delta S = \eta \, \delta\mathcal{A}$ | Registered reset: $\langle Q_{\mathrm{bath}}\rangle/(k_BT)\ge H_q(P\mid R)$; $\ln2$ equality only under the uniform-binary, no-copy, and zero-overhead hypotheses | Conditional reset ledger |
 | Heat flux $\delta Q = T \, \delta S$ | Calibrated event step: $\mathcal S=\kappa_A\ln2$ only under the independently assumed action calibration | Conditional action ledger |
 
@@ -1465,7 +1465,7 @@ which is Equation (E.9). This is a consistency substitution, not an independent 
 
 These are compatible projections of the stated joint hypothesis package. No implication among items 1--4 is asserted after removing the hypotheses used to establish the target item.
 
-*Proof.* Items 1 and 2 follow from the local-Rindler, Clausius, horizon-saturation, density-certificate, and stress-energy hypotheses by Theorem 12.1 and Theorems E.5--E.6. Substitution of the calibrated entropy density into Definition (E.6c) gives item 3 algebraically. Under the independent reset, saturation, energy-balance, action-duration, real-protocol, and $a=\kappa$ hypotheses, Theorem Q.0.10 and Corollary Q.0.10c give item 4. Each conclusion therefore follows from the union of the hypotheses declared in the theorem, without using any conclusion to prove one of its own antecedents. $\square$
+*Proof.* Items 1 and 2 follow from the local-Rindler, Clausius, horizon-saturation, density-certificate, and stress-energy hypotheses by Theorem 12.1 and Theorems E.5--E.6. Substitution of the calibrated entropy density into Equation (E.6c) gives item 3 algebraically. Under the independent reset, saturation, energy-balance, action-duration, real-protocol, and $a=\kappa$ hypotheses, Theorem Q.0.10 and Corollary Q.0.10c give item 4. Each conclusion therefore follows from the union of the hypotheses declared in the theorem, without using any conclusion to prove one of its own antecedents. $\square$
 
 **Corollary Q.0.15a (No Closed Implication Loop).** On the hypotheses of Theorem Q.0.15, the gravity, area-law, coupling-calibration, and computational-rate ledgers are mutually consistent. The computational-rate identity alone implies neither the horizon entropy density nor the Einstein equations. $\square$
 
@@ -1696,7 +1696,7 @@ $$
 $$
 x_{N,m}:=N\ln2+2\pi m,
 $$
-*then the corresponding physical frequencies obey*
+*and $\varepsilon_{\mathrm{peak}}<x_{N,m}$, then the corresponding physical frequencies obey*
 $$
 \left|\frac{\omega_{N,m}^{(1)}}{\omega_{N,m}^{(2)}}-\frac{T_{H,1}}{T_{H,2}}\right|
 \le
@@ -1925,7 +1925,7 @@ $$
 $$
 The next point is $10\ln2\bmod2\pi\approx0.6483$. In sector $k=1$, the positive-overhead Beatty value is $N_1^+=9$ and $\Delta_1^+=2\pi-9\ln2\approx0.0449$.
 
-**Remark Q.0.19.2 (Status Boundary).** Proposition Q.0.19 is a conditional phase-grid statement. It should not be read as a theorem that the full greybody correction is a universal function of $x$ alone. Standard greybody factors also carry angular-momentum, spin, polarization, dimension, and barrier-shape data. The framework-level prediction is the parameter-free phase grid on the closed-loop transfer branch.
+**Remark Q.0.19.2 (Status Boundary for Landauer Horizon Spectroscopy).** Proposition Q.0.19 is a conditional phase-grid statement. It should not be read as a theorem that the full greybody correction is a universal function of $x$ alone. Standard greybody factors also carry angular-momentum, spin, polarization, dimension, and barrier-shape data. The framework-level prediction is the parameter-free phase grid on the closed-loop transfer branch.
 
 ## Q.1 Foundational Relation and the Optimization Goal
 

@@ -18,7 +18,8 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 
 | Quantity                      | Symbol(s)                                                                        | Dimension                                            | Comment                                              |
 | :---------------------------- | :------------------------------------------------------------------------------- | :--------------------------------------------------- | :--------------------------------------------------- |
-| Predictive Physical Complexity | $C_{P}, K_{0}, C_{\text{agg}}, \hat{C}_{\text{target}}, \hat{C}_{v}$             | $[\text{Complexity}]$                                | structural / resource capacity                       |
+| Predictive Physical Complexity | $C_{P}, C_{\text{agg}}, \hat{C}_{\text{target}}, \hat{C}_{v}$                    | $[\text{Complexity}]$                                | structural / resource capacity                       |
+| Discrete register count        | $K_0$                                                                            | $1$                                                   | dimensionless count; $K_0=3$ on the minimal branch   |
 | Probability / Performance     | $PP, Q, \alpha, \beta, \alpha_{\text{SPAP}}, \alpha_{CC,max}, \mathrm{CC}$ | $1$                                                  | dimensionless                                        |
 | Information / Capacity        | $\Delta I, C_{\max}(f_{\text{RID}})$                                             | $1$                                                  | dimensionless (nats)                                 |
 | Structural/reset entropy | $\varepsilon_0=\ln2$; $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on a registered reset branch | $1$ | structural log-cardinality versus ensemble-dependent physical nats |
@@ -46,11 +47,11 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Temperature                   | $T, T_{dS}$                                                                      | $[\Theta]$                                           |                                                      |
 | Boltzmann constant            | $k_{B}$                                                                          | $[E][\Theta]^{-1}$                                   | energy–temperature conversion                        |
 | Cosmological constant         | $\Lambda$                                                                        | $[L]^{-2}$                                           | vacuum curvature                                     |
-| Galactic acceleration scale   | $g_{0}$                                                                          | $[L][T]^{-2}$                                        | Derived: $g_0 = \eta' a_0$ (Eq. H.6)                 |
-| Efficiency factor             | $\eta'$                                                                          | $1$                                                  | $3/(8\sqrt{3}) \approx 0.2165$ (Eq. H.4b)            |
-| Cosmic acceleration floor     | $a_0$                                                                            | $[L][T]^{-2}$                                        | $c^2\sqrt{\Lambda/3}$ (Eq. H.3)                      |
-| Per-channel modes             | $M_{\mathrm{sp}}$                                                                | $1$                                                  | $M/(D-1) = 8$ (Eq. H.4.BL)                           |
-| Transition-length scale       | $L_{0}$                                                                          | $[L]$                                                | scale at which $G(R)$ changes                        |
+| Bridge-law acceleration candidate | $g_0$                                                                       | $[L][T]^{-2}$                                        | Conditional under Definition H.0 and Equation H.4b   |
+| Efficiency factor             | $\eta'$                                                                          | $1$                                                  | $3/(8\sqrt{3})\approx0.2165$ on the bridge branch   |
+| Detector-calibrated crossover | $a_0$                                                                            | $[L][T]^{-2}$                                        | Conditional under Proposition I.3's detector certificate |
+| Per-channel modes             | $M_{\mathrm{sp}}$                                                                | $1$                                                  | $M/(D-1)=8$ on its registered mode branch            |
+| Phenomenological spatial transition scale | $L_0$                                                               | $[L]$                                                | Independent Equation-I.4 kernel parameter pending a dimensionally valid bridge |
 | Simulation steps / Horizon    | $\mathcal{T}$                                                                | $1$                                                  | Dimensionless count                                  |
 
 **Entropy-role convention for Sections H.4.2–H.4.7.** The structural reference $\varepsilon_0=\ln2$ and the physical reset entropy $\varepsilon_{\mathrm{phys}}$ have distinct roles. Define
@@ -98,7 +99,7 @@ $C_{\text{uni}}$ is the dimensionless count of the registered verification/updat
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
-The empirical acceleration scale therefore arises from the same structural sector as the cosmological-constant bridge, but with status separation. The five-mode Appendix U working-prefactor evaluation gives the reference value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. The Definition U.6 four-mode false-vacuum branch fixes only the exponent $\kappa=142$ under Theorem U.13b, so the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains prefactor-certificate-pending until an accepted $\mathfrak F_U^{(4)}$ of Definition U.73e is supplied. The earlier Definition U.15d certificate $\mathfrak F_U$ together with the interval audit $\mathfrak I_U^{(4)}$ is not automatically equivalent to the canonical record; it discharges the canonical gate only through an accepted embedding that additionally supplies $H_4$, $\mathcal T_4$, and every remaining field of Definition U.73e on the same four-mode branch.
+The empirical acceleration scale is compared with the cosmological sector only through a staged bridge. The five-mode Appendix-U working-prefactor value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$ is a reference conversion. On the four-mode route, Theorem U.13b proves only sampled-angular Hessian nullity $m_4=4$; $\mathfrak C_{U,\mathrm{mark}}$ gives the independent carrier index $142$, Proposition U.14's premise gives action $284$, $\mathfrak F_U^{(4)}$ gives a Euclidean weight, and $\mathfrak R_\Lambda^{(4)}$ alone gives a physical $\Lambda_4L_P^2$. No complete instance is accepted. Any claim for $g_0$ additionally requires its own acceleration/dark-response realization, unit, and covariance certificate.
 
 ### H.4.1 de Sitter temperature
 
@@ -123,7 +124,7 @@ a_0 = c^2\sqrt{\frac{\Lambda}{3}}
 \tag{H.3}
 $$
 
-*Proof.* The de Sitter horizon defines a minimum resolvable energy quantum with Gibbons–Hawking temperature [Gibbons & Hawking 1977]:
+*Proof.* On the de Sitter branch, the selected detector has the Gibbons--Hawking temperature [Gibbons & Hawking 1977]:
 $$
 T_{dS} = \frac{\hbar c}{2\pi k_B}\sqrt{\frac{\Lambda}{3}}
 $$
@@ -230,12 +231,11 @@ $$
 $$
 Taking $P=P_a$ and $r=a$ proves the theorem. ∎
 
-**Application:** The coarse-graining $\Pi_{\mathrm{act}}$ that restricts to the active subspace rescales the expected squared norm by:
+**Application to carrier vectors:** For a Haar-random unit carrier vector, projection to the active subspace gives
 $$
-\frac{a}{d_0} = \frac{2}{8} = \frac{1}{4}
+\frac{a}{d_0} = \frac{2}{8} = \frac{1}{4}.
 $$
-
-This is the unique isotropy-invariant scalar measuring "how much of a random direction overlaps the support" at the attractor.
+Applying the same coefficient to the QFI tangent map $\Pi_{\mathrm{act}}$ requires the contraction certificate stated in Definition H.0a; it does not follow from the carrier-vector Haar average alone.
 
 #### H.4.2.3 Factor 2: Structural Comparison Weight and Registered Repetition ($w_{\mathrm{cmp}}=2$)
 
@@ -297,7 +297,7 @@ Thus the factor $2$ is exact inside the adopted structural-slot plus two-copy br
 #### H.4.2.4 Factor 3: Spatial Projection ($(D-1)/D = 3/4$)
 
 **Theorem H.2 (Isotropic Projection Efficiency).**
-*Let $v$ be isotropically distributed in $\mathbb{R}^D$ with finite second moment. Let $P$ project onto a $(D-1)$-dimensional hyperplane. Then:*
+*Let $v$ be isotropically distributed in $\mathbb{R}^D$ with $0<\mathbb{E}[|v|^2]<\infty$. Let $P$ project onto a $(D-1)$-dimensional hyperplane. Then:*
 $$
 \frac{\mathbb{E}[|Pv|^2]}{\mathbb{E}[|v|^2]} = \frac{D-1}{D}
 $$
@@ -466,13 +466,14 @@ $$
 2\cdot\frac14\cdot\frac34\cdot\frac1{\sqrt3}
 =\frac{3}{8\sqrt3}.
 $$
+Condition 8 makes this value a pre-validation output of the bridge class: it is not chosen from galaxy rotation, lensing, or cosmological acceleration data.
 
 *Proof.* The two-copy record gives the factor $2$ by QFI additivity. Conditions 3 and 4 give the two displayed contraction ratios. Condition 5 cancels the equal per-channel mode count in Definition H.0. Condition 7 supplies the generator-amplitude coefficient, and condition 6 permits multiplication of the four scalar stages. Their product is the displayed formula. Substitution gives
 $$
 2\cdot\frac14\cdot\frac34\cdot\frac1{\sqrt3}
 =\frac{3}{8\sqrt3}.
 $$
-The theorem is a uniqueness statement only within the factor-certified class just defined; it does not derive conditions 3–7 from unitary or rotational invariance alone. ∎
+Condition 8 records that none of these coefficients was selected from galaxy rotation, lensing, or cosmological acceleration data, so the resulting value is a pre-validation output within this class. The theorem is a uniqueness statement only within the factor-certified class just defined; it does not derive conditions 3–7 from unitary or rotational invariance alone. ∎
 
 **Corollary H.4.2.8c (Acceleration Lock).** In the admissible QFI-gravity bridge-law class,
 $$
@@ -562,11 +563,11 @@ The approximately $2\%$ central-value difference is within the quoted empirical 
 
 **Remark H.1.** Writing $H_\Lambda=c\sqrt{\Lambda/3}$ gives $a_0=cH_\Lambda$. On the adopted Definition H.0 branch, $g_0^{\mathrm{branch}}=\eta'cH_\Lambda$ with $\eta'=3/(8\sqrt3)$. This supplies a candidate acceleration--vacuum relation; no realized galactic connection follows without an independently accepted observable and response certificate.
 
-**Remark H.2 (Factor ledger).** Equation (H.4b) follows by multiplying the four factors $a/d_0$, $w_{\mathrm{cmp}}(C)$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorems H.1a, H.1b, H.2, H.1c and the multiplicative structure theorem H.3 justify the mathematical factors once the structural-slot and two-copy bridge entries are adopted. Together with Proposition H.1, this yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
+**Remark H.2 (Factor ledger).** Equation (H.4b) follows on the factor-certified bridge-law class of Definition H.4.2.8a by multiplying $a/d_0$, $w_{\mathrm{cmp}}(C)$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorem H.1b supplies QFI additivity for the two-copy realization, Theorem H.1c supplies the product-mixed-register amplitude normalization, and Theorem H.3 supplies multiplication under factorized scalar action. Theorems H.1a and H.2 establish the corresponding Haar-vector and Euclidean-projection identities but do not replace the active- and spatial-tangent contraction certificates. Together with Proposition H.1, the complete factor-certified record yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
 
-**Remark H.3 (Shared geometric input).** The same attractor geometry $\mathrm{Gr}(2,8)$ that fixes the factors in Equation (H.4b) also determines the QFI spectrum used in Appendix Z and enters the electroweak matching analysis in Appendix T.
+**Remark H.3 (Shared geometric input).** The attractor geometry $\mathrm{Gr}(2,8)$ supplies the rank data $a=2$ and $d_0=8$ and determines the QFI spectrum used in Appendix Z; it also enters the electroweak matching analysis in Appendix T. The structural comparison weight, the value $D=4$, the register count $K_0=3$, the two tangent-contraction certificates, the equal-channel decomposition, and the generator-amplitude convention are separate inputs to Equation (H.4b).
 
-**Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal structural capacity $C=C_{\mathrm{max}}^*=2\varepsilon_0$ (Appendix Q, Equation Q.10) and remains on the registered two-copy bridge branch, then Equation (H.4a) fixes $\eta'$ near its attractor value, and hence $g_0$ is approximately universal across such systems.
+**Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal structural capacity $C=C_{\mathrm{max}}^*=2\varepsilon_0$ (Appendix Q, Equation Q.10), remains in the factor-certified class $\mathcal B_H$ of Definition H.4.2.8a, and retains the same non-$C$ contraction, equal-channel, factorization, and amplitude records, then Equation (H.4a) fixes $\eta'$ near its attractor value. On that common branch, $g_0$ is approximately universal across such systems.
 
 **Corollary H.1 (Bridge-Conditional Galactic Scale and Cosmological Acceleration Lock).**
 Under Proposition H.1, Definition H.0, and Equation H.4b, the acceleration scale entering the Appendix I galaxy-sector model is fixed by
@@ -859,20 +860,20 @@ The formulas are dimensionally consistent. The acceleration value follows only a
 
 Through careful dimensional analysis, all core PU equations are shown to be homogeneous according to the defined units. The Unruh–de Sitter temperature matching criterion (Proposition H.1) yields the cosmic acceleration floor $a_0 = c^2\sqrt{\Lambda/3}$.
 
-The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed once the QFI linear-response bridge law of Definition H.0, its structural comparison weight, and its registered two-copy operating-point realization are adopted and the four normalized factors are inserted into that bridge-law formula:
+The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ takes this value within the hybrid, factor-certified bridge-law class of Definition H.4.2.8a after its four registered coefficients are inserted:
 
 | Factor | Value | Source |
 |--------|-------|--------|
-| Active participation | $a/d_0 = 1/4$ | Isotropy theorem |
+| Active-tangent contraction | $a/d_0 = 1/4$ | active contraction certificate; Theorem H.1a supplies the analogous Haar-vector identity |
 | Structural comparison weight / registered repetition | $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ at $C=2\varepsilon_0$ | bridge registration plus QFI additivity for two i.i.d. copies |
-| Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance |
-| Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | Democratic generator normalization (Theorem H.1c) |
+| Spatial-tangent contraction | $(D-1)/D = 3/4$ | spatial contraction certificate; Theorem H.2 supplies the Euclidean isotropic identity |
+| Generator-amplitude normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | product-mixed-register calculation and independent amplitude convention of Theorem H.1c |
 
-The resulting branch value $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry enters the Appendix Z Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, whose arithmetic offset from the NIST/CODATA comparison central value is about $0.678$ ppm before residual closure.
+The resulting branch value $g_0\approx1.18\times10^{-10}\,\mathrm{m/s^2}$ is about $2\%$ below the representative empirical central value $1.2\times10^{-10}\,\mathrm{m/s^2}$. This is central-value proximity only. Coverage requires a named galactic extraction likelihood, its calibration and astrophysical nuisance covariance, the cosmological-input covariance, and the bridge-law uncertainty in one preregistered comparison record. The same Grassmannian geometry enters the Appendix Z Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, whose arithmetic offset from the NIST/CODATA comparison central value is about $0.678$ ppm before residual closure.
 
-The derivation is conditional on Definition H.0, the structural interpolation $w_{\mathrm{cmp}}(C)$, and the registered two-copy operating-point realization. Physical reset entropy remains a separate implementation ledger.
+The derivation is conditional on every record in Definition H.4.2.8a, including the structural interpolation, registered two-copy realization, two tangent contractions, equal-channel decomposition, factorized scalar action, and generator-amplitude convention. Physical reset entropy remains a separate implementation ledger.
 
-With that bridge-law normalization fixed, the Appendix H acceleration scale $g_0=c^2\sqrt{\Lambda}/8$ is fixed on the stated branch, and of the Appendix I model parameters only the crossover scale $L_0$ is tied to it. The amplitude $A_G$ and steepness $m$ of the Equation (I.4) interpolation remain phenomenological parameters, and the response kernel, background-subtraction prescription, covariant completion, and matching data of Appendix I remain independent model inputs or certificate entries.
+Under that bridge-law normalization, the Appendix H acceleration scale $g_0=c^2\sqrt{\Lambda}/8$ is determined on the stated branch. The Appendix I length $L_0$ requires an independently registered baryonic profile or mass scale before it can be related to this acceleration. The parameters $L_0$, $A_G$, and $m$ of the Equation (I.4) interpolation remain phenomenological, and the response kernel, background-subtraction prescription, covariant completion, and matching data of Appendix I remain independent model inputs or certificate entries.
 
 
 

@@ -6,7 +6,7 @@ This appendix asks why the framework uses three particle families. It separates 
 
 ### Technical family-count introduction
 
-This appendix separates generation topology, $D_4$ triality, binary coding, and lattice gluing. On SM15, linear and cubic anomaly cancellation plus a registered CP-active realization supplies the smallest admissible three-charge orbit; on SM16, the linear anomaly equation must be supplemented by primitive charge-norm minimization. The additive-monotone family objective separately selects the realized count. Triality and the factorization $24=3\cdot8$ are compatibility records. The Golay code is selected only on the predictive-recovery branch. From a marked Golay copy, the explicit coordinate construction following Lemma R.4.5 produces a mathematical Leech lattice; the separate $(\sqrt2E_8)^3$ realization still requires the registered discriminant-form and norm-certificate routes of Lemma R.4.5 and Corollary R.4.2b. None of these finite structures alone supplies masses, vacuum dynamics, or spacetime.
+This appendix separates generation topology, $D_4$ triality, binary coding, and lattice gluing. On SM15, linear and cubic anomaly cancellation plus a registered CP-active realization supplies the smallest admissible three-charge orbit; on SM16, the linear anomaly equation must be supplemented by primitive charge-norm minimization. The additive-monotone family objective separately selects the realized count. Triality and the factorization $24=3\cdot8$ are compatibility records. The predictive-recovery rate branch fixes $k=12$; retained Golay selection additionally requires the fixed-rate certificate $\mathfrak C_{\mathrm{dist}}$. From a marked Golay copy, the explicit coordinate construction following Lemma R.4.5 produces a mathematical Leech lattice; the separate $(\sqrt2E_8)^3$ realization still requires the registered discriminant-form and norm-certificate routes of Lemma R.4.5 and Corollary R.4.2b. None of these finite structures alone supplies masses, vacuum dynamics, or spacetime.
 
 
 
@@ -190,7 +190,7 @@ In eight dimensions, the **$E_8$ root system** emerges as the natural coordinati
 
 1. **Packing optimality:** The $E_8$ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017). This supplies a canonical discrete scaffold on the 8D real subspace that can organize internal "positions" efficiently.
 
-2. **Division algebra structure:** The framework's $d_0 = 8$ is related to octonionic structure via the Radon-Hurwitz theorem (**Appendix Z, Theorem Z.3**), which constrains division algebras to dimensions $\{1, 2, 4, 8\}$. **Appendix Z (Corollary Z.2)** establishes the octonionic connection: the existence of octonions (dimension 8) is tied to the maximal value $\rho(8) = 8$ in the Radon-Hurwitz function, providing a secondary coherence check on the 8-dimensional branch rather than the proof of necessity for $d_0 = 8$. The $E_8$ root system naturally encodes this octonionic structure.
+2. **Division-algebra and vector-field compatibility:** Hurwitz's normed-division-algebra theorem gives the real dimensions $\{1,2,4,8\}$ and places the octonions in dimension $8$. The separate Radon–Hurwitz theorem controls independent vector fields and Clifford-module data through the function $\rho(n)$; $\rho(8)=8$ is a compatible eight-dimensional fact, not the division-algebra classification. Appendix Z uses these results only as secondary coherence checks on the branch $d_0=8$, not as a proof that the MPU dimension is necessary. Any $E_8$–octonion identification additionally requires the chosen octavian lattice model.
 
 3. **Maximal symmetry:** The 240 roots of $E_8$ provide maximal symmetry for uniform local neighborhoods, consistent with PCE's preference for high-symmetry configurations that minimize descriptive complexity.
 
@@ -282,7 +282,7 @@ The Weyl group of $E_8$ acts transitively on the roots, so it suffices to choose
 
 ### R.2.3 Pedagogical Example: $E_8$ Root Distances and Mass Ratios
 
-To make the $E_8$ geometry concrete, we provide an explicit example of root distances and their implications for mass ratios.
+To make the $E_8$ geometry concrete, the following example computes root distances and then records the mass-ratio diagnostic available only on the declared realization branch.
 
 **Example R.2.1 (Squared Distances Between $E_8$ Roots).**
 Consider three roots in the $E_8$ root system expressed in the standard orthonormal basis of $\mathbb{R}^8$:
@@ -574,7 +574,7 @@ $$
 f=(1,-1,0).
 \tag{R.11e}
 $$
-Consequently both the SM15 anomaly branch and the primitive minimal-norm SM16 branch have the same minimal CP-capable charge pattern (R.11d). The anomaly equations admit larger-family solutions; exact realized family count still uses the additive-monotone selection branch of Proposition R.3.5.1a.
+Consequently both the SM15 anomaly branch and the primitive minimal-norm SM16 branch have the same minimal CP-capable charge pattern (R.11d). The anomaly equations admit larger-family solutions; exact realized family count additionally requires a specified objective on the admissible family counts.
 
 *Proof.* In the left-handed ledger, the $SU(3)^2F$ coefficient is
 $$
@@ -745,13 +745,13 @@ $$
 
 **Remark R.3.5.1d (Status of the Exact Selector).** Theorem R.3.5.1c gives the mathematical closure after its exhaustive quotient, descended functional, and strict-gap certificate have been supplied; it is not itself a derivation of those inputs. Proposition R.3.5.1a proves the conclusion only inside the additive-monotone surrogate class. The present framework has not supplied the finite family-selection certificate above.
 
-**Corollary R.3.5a (Golay Radius and Selected Family Count).** Assume both the predictive-recovery branch on which Theorem Z.13 selects the $[24,12,8]$ Golay code and the additive-monotone family-selection branch of Proposition R.3.5.1a. Then
+**Corollary R.3.5a (Golay Radius and Selected Family Count).** Assume both the predictive-recovery rate branch with an accepted $\mathfrak C_{\mathrm{dist}}$, on which Theorem Z.13b selects the $[24,12,8]$ Golay equivalence class, and the additive-monotone family-selection branch of Proposition R.3.5.1a. Then
 $$
 
 t=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor=3=N_g.
 $$
 
-*Proof.* Theorem Z.13 gives $d_{\min}=8$, hence $t=\lfloor(8-1)/2\rfloor=3$. Proposition R.3.5.1a gives $N_g=3$ under its additive-monotone objective. Therefore $t=N_g=3$ on the intersection of the two branches. ∎
+*Proof.* On the accepted $\mathfrak C_{\mathrm{dist}}$ branch, Theorem Z.13b gives $d_{\min}=8$, hence $t=\lfloor(8-1)/2\rfloor=3$. Proposition R.3.5.1a independently gives $N_g=3$ under its additive-monotone objective. Therefore $t=N_g=3$ on the intersection of the two branches; neither equality supplies the other's premise. ∎
 
 **Corollary R.3.5a.1 (Conditional Code-Radius Family Ledger).** Under the hypotheses of Corollary R.3.5a,
 $$
@@ -824,10 +824,19 @@ $$
 $$
 The downstream tangent branch is
 $$
-\mathcal C_{\mathrm{tan}}:\quad (a,d_0)=(2,8)\to b=6\to k=12\to M=24,
+\mathcal C_{\mathrm{tan}}:\quad
+(a,d_0)=(2,8)
+\longrightarrow
+(b,k_{\mathrm{tan}},M)=(6,12,24),
 \tag{R.3.5e.2.2}
 $$
-and the mode--channel branch is
+where $k_{\mathrm{tan}}=ab$ is a tangent half-mode count. The separately gated coding implication is
+$$
+\{M=24;\ \text{predictive-recovery MacWilliams gate}\}
+\Longrightarrow k=M/2=12.
+\tag{R.3.5e.2.2a}
+$$
+Thus equality of $k_{\mathrm{tan}}$ and the interface-code dimension is a checked numerical compatibility on the branch intersection, not an identification of their proofs. The mode--channel branch is
 $$
 \mathcal C_{\mathrm{kis}}:\quad M=24,\quad D_{\min}=\min\{D:K(D)\ge24\}=4.
 \tag{R.3.5e.2.3}
@@ -925,7 +934,7 @@ k_{\mathrm{tan}}=\dim_{\mathbb C}\operatorname{Hom}(pE,(1-p)E)=ab=12,
 \qquad
 M=2k_{\mathrm{tan}}=24.
 $$
-On the predictive-recovery MacWilliams branch, Definition Z.13b.0 and Theorem Z.13b.0a select the interface-code dimension $k=M/2=12$, and Theorem Z.13 realizes the corresponding $[24,12,8]$ Golay code. Thus the shared value $k=12$ is consistent with the tangent half-mode count, but the coding-theoretic selection uses the named MacWilliams gate. The invariant $I_{\mathrm{kis}}$ follows from Definition Z.9a and Theorems Z.10--Z.11: $M=24\le K(D)$, $K(3)=12$, and the explicit regular-$24$-cell realization make four the least feasible dimension under the registered support cost. The downstream invariants retain their separately cited sources.
+On the predictive-recovery MacWilliams rate branch, Definition Z.13b.0 and Theorem Z.13b.0a select the interface-code dimension $k=M/2=12$. Theorem Z.13 proves the distance bound, witness, and attainer classification, while retained selection of the corresponding $[24,12,8]$ Golay equivalence class additionally requires $\mathfrak C_{\mathrm{dist}}$. Thus the shared value $k=12$ is consistent with the tangent half-mode count, but the Golay selection uses a separate fixed-rate distance certificate. The invariant $I_{\mathrm{kis}}$ follows from Definition Z.9a and Theorems Z.10--Z.11: $M=24\le K(D)$, $K(3)=12$, and the explicit regular-$24$-cell realization make four the least feasible dimension under the registered support cost. The downstream invariants retain their separately cited sources.
 
 It remains to check that no source role replaces all the others inside $G$. The role $\mathcal C_{\mathrm{cap}}$ supplies $I_{\mathrm{cap}}$ and feeds $\mathcal C_{\mathrm{tan}}$ through $(a,d_0)$, but it contains no family-anomaly proof of $N_g=3$, no Golay correction-radius argument, and no kissing-number bridge. Thus it does not determine $I_3$ or $I_{\mathrm{kis}}$.
 
@@ -1235,7 +1244,7 @@ The shared integer $24$ alone does not identify a code with a lattice. The secti
 
 
 
-The predictive-recovery theorem selects $\mathcal G_{24}$ but does not identify code coordinates with interface modes or a physical vacuum. The explicit coordinate construction below does, however, functorially construct a mathematical Leech lattice from a marked Golay copy. The separate scaled-triple realization $L_0=(\sqrt2E_8)^3\subset\Lambda_{24}$ still requires the finite-quadratic-module marking, maximal isotropic subgroup, glue representatives, and one of the norm certificates stated in Lemma R.4.5 and Corollary R.4.2b.
+The predictive-recovery rate theorem plus an accepted $\mathfrak C_{\mathrm{dist}}$ selects $\mathcal G_{24}$ up to coordinate permutation but does not identify code coordinates with interface modes or a physical vacuum. The explicit coordinate construction below does, however, functorially construct a mathematical Leech lattice from a marked Golay copy. The separate scaled-triple realization $L_0=(\sqrt2E_8)^3\subset\Lambda_{24}$ still requires the finite-quadratic-module marking, maximal isotropic subgroup, glue representatives, and one of the norm certificates stated in Lemma R.4.5 and Corollary R.4.2b.
 
 ---
 
@@ -1272,61 +1281,11 @@ These 240 roots provide maximal symmetric discrete structure, ensuring uniform l
 
 #### R.4.2.1.2 Golay Code from PCE Error Optimization
 
-**Theorem R.4.4 (Golay Code from PCE Error Optimization on the Predictive-Recovery MacWilliams Branch).**
+**Theorem R.4.4 (Golay Code from PCE Error Optimization on the Predictive-Recovery MacWilliams Branch).** On the $M=24$ predictive-recovery MacWilliams rate branch, Theorem Z.13b.0a gives $k=12$, and every binary linear $[24,12,d]$ code satisfies $d\le8$. If the same branch carries an accepted fixed-rate certificate $\mathfrak C_{\mathrm{dist}}$ of Theorem Z.13b, then the retained PCE minimizer exists and is the extended binary Golay code $\mathcal G_{24}=[24,12,8]$ up to coordinate permutation.
 
-On the predictive-recovery MacWilliams branch — under which the $M=24$ interface modes at the PCE-Attractor (Definition 15a) split into $k=12$ information-carrying modes and $n-k=12$ redundancy modes by Theorem Z.13b.0a (the same branch supplied by Theorem P.13.12 in Appendix P) — coding theory uniquely selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24,12,8]$ as the PCE-optimal error-correcting structure.
+*Proof.* The rate conclusion is Theorem Z.13b.0a. The Hamming-bound converse, the explicit distance-$8$ witness, strict distance selection, attainment on the finite comparison class, and classification up to coordinate permutation are exactly the separate steps of Theorems Z.13 and Z.13b. No rate identity is used as a distance-attainment premise. ∎
 
-*Proof.*
-
-**Step 1 (Block length constraint).** The block length is $n = M = 24$, determined by the QFI mode count (Theorem Z.5): $M = 2ab = 2 \times 2 \times 6 = 24$.
-
-**Step 2 (Rate selection on the predictive-recovery MacWilliams branch).** Under interface isotropy (Appendix Z, Theorem Z.5), Appendix Z (Definition Z.13b.0 and Theorem Z.13b.0a) identifies prediction payload and recovery syndrome as MacWilliams-dual PCE roles. The strict dual-asymmetry penalty is minimized only when $k=n-k$, giving $k=12$ and rate $R=1/2$ for $n=24$. The proof proceeds on this predictive-recovery branch.
-
-**Step 3 (Distance maximization).** With constraints $(n, k) = (24, 12)$ and symmetric noise, minimizing $L[C]$ reduces to maximizing the minimum distance $d$.
-
-Among binary linear $[24, 12]$ codes:
-
-- The Singleton bound gives
-  $$
-  d \leq n - k + 1 = 24 - 12 + 1 = 13.
-  $$
-
-- The Griesmer bound for binary linear codes (Griesmer 1960),
-  $$
-  n \geq \sum_{i=0}^{k-1} \left\lceil \frac{d}{2^i} \right\rceil,
-  $$
-  rules out $d \geq 9$ when $n = 24$, $k = 12$. For $d = 9$:
-  $$
-  \sum_{i=0}^{11} \left\lceil \frac{9}{2^i} \right\rceil = 9 + 5 + 3 + 2 + \underbrace{1 + \cdots + 1}_{8} = 27 > 24,
-  $$
-  so no binary linear $[24, 12, 9]$ code exists, establishing $d \leq 8$.
-
-- The Hamming (sphere-packing) bound (MacWilliams & Sloane 1977) independently confirms this. For $d = 9$ the correction radius is $t = 4$, and the Hamming bound requires
-  $$
-  \sum_{i=0}^{4} \binom{24}{i} \leq 2^{24-12} = 4096.
-  $$
-  But
-  $$
-  \sum_{i=0}^{4} \binom{24}{i} = 1 + 24 + 276 + 2024 + 10626 = 12951 > 4096,
-  $$
-  so the inequality is violated and no binary linear $[24, 12, 9]$ code can exist. Again we conclude $d \leq 8$.
-
-The extended binary Golay code attains this bound exactly, achieving $d = 8$.
-
-**Step 4 (Uniqueness at the bound).** The extended binary Golay code is the unique binary linear code achieving parameters $[24, 12, 8]$ (Pless 1968). No other code matches this performance.
-
-**Step 5 (PCE selection).** PCE coordinate-label neutrality requires the selection rule to be invariant under relabeling of candidate coordinates; it does not require the selected code to be fixed by all of $S_{24}$. The extended Golay code is unique up to permutation equivalence, while its actual permutation automorphism group is $M_{24}$. Thus the fixed $(n,k,d)$ comparison selects its equivalence class, not an $S_{24}$-invariant code.
-
- Among codes achieving the distance bound, the Golay code is unique up to equivalence. Therefore, PCE optimization uniquely selects the Golay $[24, 12, 8]$ structure. ∎
-
-**Remark: Error Correction Properties.** The minimum distance $d = 8$ implies the Golay code can:
-
-- Detect up to $d - 1 = 7$ errors without misidentification
-- Correct up to $\lfloor(d-1)/2\rfloor = 3$ errors with certainty
-
-This is the maximum possible for any binary linear code of length 24 with rate 1/2.
-
----
+**Remark (Classical and Physical Scope).** On the accepted distance-certified branch, $d=8$ implies detection through binary weight $7$ and unique nearest-codeword correction through weight $3$, which is maximal in the binary linear $[24,12]$ class. A physical protection claim additionally requires a registered encoder, noise channel, syndrome instrument, recovery map, performance norm, and resource ledger.
 
 #### R.4.2.1.3 Leech Lattice Construction via Golay Gluing
 
@@ -1433,7 +1392,7 @@ Assume the admissible 24-dimensional vacuum lattice is required to be:
 3. unimodular, and
 4. rootless, i.e. to have no vectors of squared norm $2$,
 
-with rootlessness independently included in the admissibility ledger. QFI isotropy fixes an inner product but does not exclude norm-$2$ vectors. Under these stated criteria, the unique compatible lattice is the Leech lattice $\Lambda_{24}$.
+with rootlessness independently included in the admissibility ledger. QFI isotropy fixes an inner product but does not exclude norm-$2$ vectors. Under these stated criteria, the unique compatible Euclidean-isometry class is the class of the Leech lattice $\Lambda_{24}$.
 
 
 
@@ -1443,12 +1402,12 @@ with rootlessness independently included in the admissibility ledger. QFI isotro
 
 **Step 2 (Root-system characterization).** Each Niemeier lattice is characterized by its root system, namely the set of vectors of squared norm $2$. Twenty-three of the Niemeier lattices have nonempty root system. Exactly one has empty root system.
 
-**Step 3 (Rootless branch).** The unique Niemeier lattice with empty root system is the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969a).
+**Step 3 (Rootless branch).** The unique Niemeier isometry class with empty root system is represented by the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969a).
 
-**Step 4 (Application of the admissibility criteria).** Under the stated criteria, the admissible lattice must lie in the positive-definite rank-$24$ even unimodular class and must be rootless. By Steps 1–3, there is exactly one such lattice, namely $\Lambda_{24}$.
+**Step 4 (Application of the admissibility criteria).** Under the stated criteria, the admissible lattice must lie in the positive-definite rank-$24$ even unimodular class and must be rootless. By Steps 1--3, there is exactly one such Euclidean-isometry class, represented by $\Lambda_{24}$. A marked embedded representative is additional coordinate data.
 
 
-Therefore the admissibility criteria select the Leech lattice uniquely. ∎
+Therefore the admissibility criteria select the Leech Euclidean-isometry class uniquely. ∎
 
 ---
 
@@ -1544,7 +1503,7 @@ Common length/rank $24$ and separate extremality do not make the coding and latt
 
 | Domain | Optimization Problem | Result | Role of $\mathcal{G}_{24}$ | Reference |
 |--------|---------------------|--------|---------------------------|-----------|
-| Information theory | Maximize $d$ for $[24, 12, d]$ codes | $d_{\max} = 8$ | Unique optimal code | Theorem R.4.4 |
+| Information theory | Maximize $d$ for binary linear $[24,12,d]$ codes | $d_{\max}=8$ | Unique coordinate-permutation equivalence class of attainers; retained selection requires $\mathfrak C_{\mathrm{dist}}$ | Theorems R.4.4 and Z.13b |
 | Lattice geometry | Find rootless even unimodular $\Lambda \subset \mathbb{R}^{24}$ | $\Lambda_{24}$ | Gluing code for $\sqrt{2}E_8^3 \to \Lambda_{24}$ | Lemma R.4.5 |
 
 **Why the two ledgers can be compared but do not coincide automatically:**
@@ -1565,7 +1524,7 @@ Thus the Golay bridge is the registered construction and its norm certificate, n
 
 The integer $M=24$ enters the predictive-recovery, registered-gluing, and mode-channel branches as a shared input; it does not define a causal chain from the Golay code through the Leech lattice to spacetime. The licensed branchwise implications are the following.
 
-The predictive-recovery branch selects the code. The explicit coordinate construction following Lemma R.4.5 then constructs $\Lambda_C\cong\Lambda_{24}$; the abstract $(\sqrt2E_8)^3$ scaffold reaches the same class only with its registered marking and norm certificate. Independently, the faithful tangent-shell branch uses $M=24\le K(D)$, the $K(3)=12$ obstruction, the regular $24$-cell, and least-feasible support cost to select $D=4$. Neither lattice construction is a premise of that dimensional proof.
+The predictive-recovery rate branch plus an accepted $\mathfrak C_{\mathrm{dist}}$ selects the Golay equivalence class. The explicit coordinate construction following Lemma R.4.5 then constructs $\Lambda_C\cong\Lambda_{24}$; the abstract $(\sqrt2E_8)^3$ scaffold reaches the same class only with its registered marking and norm certificate. Independently, the faithful tangent-shell branch uses $M=24\le K(D)$, the $K(3)=12$ obstruction, the regular $24$-cell, and least-feasible support cost to select $D=4$. Neither lattice construction is a premise of that dimensional proof.
 
 Consequently the licensed diagram is
 $$
@@ -1626,7 +1585,7 @@ This support is fixed-dimension support only. It does not derive $d_0=8$, $M=24$
 
 **Proposition R.4.2c (Branchwise $M=24$ Compatibility Ledger for Code, Lattice, Gauge, and Generation Records).** On the conjunction of the separately registered branches:
 
-1. the predictive-recovery branch selects the extended binary Golay code $[24,12,8]$;
+1. the predictive-recovery rate branch plus an accepted $\mathfrak C_{\mathrm{dist}}$ selects the extended binary Golay code $[24,12,8]$ up to coordinate permutation;
 2. the retained arithmetic identities give $M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)=12$ on their cited branches;
 3. the explicit coordinate construction following Lemma R.4.5 sends the selected Golay copy to an even unimodular rootless rank-$24$ lattice $\Lambda_C\cong\Lambda_{24}$;
 4. independently, the $(\sqrt2E_8)^3$ scaffold yields the same isometry class only after items 1–2 of Lemma R.4.5 and either its complete minimum ledger or $m_0^{\times}=4$ together with Equation (R.4.2a.1); and
@@ -1639,7 +1598,7 @@ These statements share branch-selected integers and a compatible lattice isometr
 
 ### R.4.2.4 Niemeier Classification and Conditional Selection
 
-**Theorem R.4.10 (Unique Rootless Positive-Definite Niemeier Lattice; Conditional PCE Selection).** Among positive-definite even unimodular lattices of rank $24$, exactly one has no norm-$2$ vectors: the Leech lattice $\Lambda_{24}$. Therefore any already-registered PCE branch whose admissibility conditions independently require a positive-definite even unimodular rootless rank-$24$ lattice selects $\Lambda_{24}$ uniquely. PCE alone does not supply positive definiteness, rootlessness, or physical-vacuum stability.
+**Theorem R.4.10 (Unique Rootless Positive-Definite Niemeier Lattice; Conditional PCE Selection).** Among Euclidean-isometry classes of positive-definite even unimodular lattices of rank $24$, exactly one has no norm-$2$ vectors: the class of the Leech lattice $\Lambda_{24}$. Therefore any already-registered PCE branch whose admissibility conditions independently require a positive-definite even unimodular rootless rank-$24$ lattice selects the Leech isometry class uniquely. PCE alone does not supply positive definiteness, rootlessness, a marked embedded representative, or physical-vacuum stability.
 
 *Proof.* The Niemeier classification theorem (Niemeier 1973; Conway and Sloane 1999) applies to positive-definite even unimodular lattices of rank $24$. It gives exactly 24 isometry classes. Twenty-three classes have a nonempty root system consisting of their norm-$2$ vectors, and the remaining class has no norm-$2$ vectors. The classification identifies that remaining class as the Leech lattice $\Lambda_{24}$. Restricting any independently certified admissible class to the stated positive-definite, even, unimodular, rank-$24$, rootless conditions therefore leaves exactly the isometry class of $\Lambda_{24}$. ∎
 
@@ -1950,7 +1909,7 @@ Here $\kappa$ is an inverse-width parameter. It is not determined by the potenti
 
 **Higgs Alignment:**
 
-The largest Yukawa coupling arises when the Higgs vacuum lies nearest to a generation vacuum. Empirically, the top Yukawa $y_t \approx 1$ suggests the Higgs aligns with the heaviest generation: $r_H \approx r_3$. This defines $Y_3$ as the overall scale ($Y_3 = Y_{\max}$). We adopt the convention that generation 3 (the heaviest) has its vacuum at the origin of the Cartan subalgebra, or equivalently, at the point where the Higgs field is localized.
+This model convention places the Higgs profile at the point labelled $r_3$ and uses the corresponding diagonal kernel as the normalization anchor. The empirical top Yukawa motivates that convention but does not derive the label or prove that the physical heaviest singular vector is aligned with it. Such an identification requires Theorem T.39's independent full-matrix, label, and matching certificate.
 
 **Overlap Integrals:**
 
@@ -1962,21 +1921,22 @@ $$
 $$
 with $a,b>0$. Completing the square in
 $$
-Y_{gg'}
-=
+K_{gg'}
+:=
 y_0\int_{\mathbb R^8}d^8r\,\psi_g(r)\phi_H(r)\psi_{g'}(r)
 $$
-gives the exact overlap
+gives the exact pre-realization model kernel
 $$
-Y_{gg'}
+K_{gg'}
 =
-Y_0
+K_0
 \exp\left[
 -\frac{ab}{2(2a+b)}\bigl(D_{g3}+D_{g'3}\bigr)
 -\frac{a^2}{2(2a+b)}D_{gg'}
 \right].
 \tag{R.15}
 $$
+The symbol $Y_f$ is introduced only by Theorem T.39's accepted matrix assembly.
 Hence the two coefficients are not independent:
 $$
 \alpha_1=\frac{ab}{2(2a+b)},
@@ -1985,21 +1945,17 @@ $$
 \qquad
 \frac{\alpha_2}{\alpha_1}=\frac ab.
 $$
-For wavepackets transplanted to the curved flag target, write the certified result as the right-hand side of (R.15) multiplied by $(1+\rho_{gg'})$, with a forward-locked bound $|\rho_{gg'}|\le\epsilon_G<1$. The local small-angle Bures identity of Lemma T.41.4 controls only its tangent expansion; the finite-triad comparison is supplied by $\mathfrak C_{E_8}$ and the residual bound, not by extrapolating that local identity globally.
+For wavepackets transplanted to the curved flag target, write the certified result as the right-hand side of (R.15) multiplied by $(1+\rho_{gg'})$, with a forward-locked bound $|\rho_{gg'}|\le\epsilon_G<1$. Lemma T.41.4 gives an exact distance conversion only for root pairs explicitly listed in its single-block certificate $\mathfrak C_{B/E_8}$. The flag-target transplantation, finite-triad comparison, and residual bound remain the separate obligations of $\mathfrak C_{E_8}$; neither certificate may be substituted for the other.
 
 ### R.5.4 The ξ-Free Mass Invariant
 
-**Definition R.5.1 (Mass Hierarchy Invariant in the diagonal-alignment approximation).** Assume:
-
-1. the Higgs is localized near the heaviest generation vacuum $p_3$ as in Section R.5.3;
-2. the mass eigenstates are approximately aligned with the generation minima, so diagonal entries dominate; and
-3. the same diagonal suppression coefficient $\alpha_1$ governs generations 1 and 2 in the Gaussian overlap model.
-
-Define the ratio
+**Definition R.5.1 (Diagonal Model-Kernel Invariant and Physical Gate).** Assume the registered Higgs anchor of Section R.5.3, the common Gaussian coefficient $A=ab/(2a+b)>0$, and nonzero denominator below. Define
 $$
-\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{\ln(Y_3/Y_1)}{\ln(Y_3/Y_2)}.
+\mathcal R_{\mathrm{model}}
+:=\frac{\log(K_{33}/K_{11})}{\log(K_{33}/K_{22})}.
 \tag{R.16}
 $$
+Approximate diagonal dominance is not enough to identify this ratio with a physical mass invariant. That identification requires an accepted Theorem-T.39 certificate for the same kernel which verifies exact diagonal alignment after matching, pairwise ordered singular values, physical labels, and the displayed residual intervals.
 
 Put
 $$
@@ -2007,37 +1963,31 @@ A:=\frac{ab}{2a+b}>0.
 $$
 The diagonal specialization of (R.15), including the certified curved-target remainder, is
 $$
-Y_{gg}=Y_0e^{-A D_{g3}}(1+\rho_{gg}),
+K_{gg}=K_0e^{-A D_{g3}}(1+\rho_{gg}),
 \qquad
-Y_{33}=Y_0(1+\rho_{33}).
+K_{33}=K_0(1+\rho_{33}).
 $$
-Under the diagonal-alignment identification $m_g\propto Y_{gg}$, define
+Define
 $$
-\varepsilon_g
-:=
-\log\frac{1+\rho_{33}}{1+\rho_{gg}}.
+\varepsilon_g:=\log\frac{1+\rho_{33}}{1+\rho_{gg}}.
 $$
-Then
+Then exact model-kernel algebra gives
 $$
-\log\frac{m_3}{m_g}
-=
-A D_{3g}+\varepsilon_g,
+\log\frac{K_{33}}{K_{gg}}=AD_{3g}+\varepsilon_g,
 \qquad g=1,2,
 $$
-and therefore the exact certified relation is
+and hence
 $$
-\mathcal R
-=
-\frac{A D_{31}+\varepsilon_1}{A D_{32}+\varepsilon_2}.
+\mathcal R_{\mathrm{model}}
+=\frac{AD_{31}+\varepsilon_1}{AD_{32}+\varepsilon_2}.
 \tag{R.17}
 $$
+On an accepted physical gate described in Definition R.5.1, the same expression equals $\log(m_3/m_1)/\log(m_3/m_2)$.
 On the flat Gaussian branch, or whenever the two logarithmic residuals vanish, (R.17) reduces to
 $$
-\mathcal R
-=
-\frac{D_{31}}{D_{32}}
-=
-\frac{d_\Sigma^2(p_3,p_1)}{d_\Sigma^2(p_3,p_2)}.
+\mathcal R_{\mathrm{model}}
+=\frac{D_{31}}{D_{32}}
+=\frac{d_\Sigma^2(p_3,p_1)}{d_\Sigma^2(p_3,p_2)}.
 $$
 If $|\rho_{gg}|\le\epsilon_G<1$ for $g=1,2,3$, then
 $$
@@ -2047,14 +1997,14 @@ $$
 $$
 so the same certificate gives an explicit interval around the zero-residual ratio rather than an unquantified approximation.
 
-**Scope.** The equality to a distance ratio is the common-response, diagonal-alignment, zero/common-residual reading for Dirac-type sectors. In the Majorana neutrino sector, the selected triad $T_\nu=(2,6,6)$ is instead read in the anchored form $\mathcal R_\nu=\Delta_1/\Delta_2=3$ of Theorem T.24.11; the $1\leftrightarrow2$ $A_2$ edge belongs to the PMNS mixing geometry.
+**Scope.** The equality to a distance ratio is the common-response, diagonal-alignment, proportional-residual reading for Dirac-type sectors: it requires $\varepsilon_{31}/D_{31}=\varepsilon_{32}/D_{32}$, with the zero-residual case included. In the Majorana neutrino sector, the selected triad $T_\nu=(2,6,6)$ is instead read through the separately gated Takagi--Weyl/alignment and anchored construction of Theorem T.24.11; the $1\leftrightarrow2$ $A_2$ edge belongs to the PMNS mixing geometry.
 
-**Discrete prediction on the exact triad branch.** If $\mathfrak C_{E_8}$ is fixed, $\varepsilon_1=\varepsilon_2=0$, and $m_3>m_2>m_1$, then $D_{31}>D_{32}$ with both values in $\{2,4,6,8\}$, so
+**Finite model set on the exact triad branch.** If $\mathfrak C_{E_8}$ is fixed, $\varepsilon_1=\varepsilon_2=0$, and $D_{31}>D_{32}>0$, then
 $$
-\boxed{\mathcal R\in\left\{\frac43,\frac32,2,3,4\right\}}.
+\boxed{\mathcal R_{\mathrm{model}}\in\left\{\frac43,\frac32,2,3,4\right\}}.
 \tag{R.18}
 $$
-The common metric scale, Gaussian normalization, and coefficient $A$ cancel exactly on this branch. With nonzero certified residuals, the interval derived above replaces the exact finite set.
+The common metric scale, Gaussian normalization, and coefficient $A$ cancel. With nonzero certified residuals, the explicit interval above replaces the finite set. A physical mass invariant belongs to that set only after the Definition-R.5.1/Theorem-T.39 gate is accepted.
 
 ## R.6 Phenomenological Comparison with Observed Fermion Masses
 
@@ -2093,13 +2043,20 @@ Charged leptons are free from color confinement and provide a clean test. Using 
 
 Computing the invariant:
 $$
-\ln(m_\tau/m_e) = \ln(1776.86/0.51099895) = \ln(3477.15) \approx 8.154
+\frac{m_\tau}{m_e}=3477.228280\ldots,
+\qquad
+\ln(m_\tau/m_e)=8.153991\ldots,
 $$
 $$
-\ln(m_\tau/m_\mu) = \ln(1776.86/105.6583745) = \ln(16.816) \approx 2.823
+\frac{m_\tau}{m_\mu}=16.817029\ldots,
+\qquad
+\ln(m_\tau/m_\mu)=2.822392\ldots,
 $$
+and therefore
 $$
-\mathcal{R}_\ell = \frac{8.154}{2.823} \approx 2.889
+\mathcal R_\ell
+=\frac{8.153991\ldots}{2.822392\ldots}
+=2.889036\ldots.
 \tag{R.19}
 $$
 
@@ -2125,7 +2082,7 @@ Further precision requires detailed analysis of renormalization group evolution 
 
 ### R.6.2 Mixing Angles and CKM Matrix
 
-The off-diagonal Yukawa couplings determine mixing angles. From the Gaussian overlap formula (R.15):
+Within a fully specified mass-matrix texture, off-diagonal entries contribute to the left diagonalizers and hence to mixing. The illustrative Gaussian entry model (R.15) gives:
 $$
 Y_{12} \propto \exp\left[-\alpha_1(d^2_{13} + d^2_{23}) - \alpha_2 d^2_{12}\right]
 $$
@@ -2146,7 +2103,7 @@ For three mixing entries, a hierarchy follows only if their complete suppression
 
 **PMNS vs. CKM:**
 
-The same mechanism explains why lepton mixing (PMNS) is large while quark mixing (CKM) is small: if lepton generation vacua have smaller separations $d^2_{\ell} < d^2_q$ or different Hessian ratios $\kappa_\ell < \kappa_q$, then lepton mixing angles can be $O(1)$ even with the same geometric structure.
+The same entry model can accommodate larger PMNS than CKM mixing if the complete lepton and quark textures, labels, phases, and response coefficients yield the required singular-vector rotations. Smaller selected separations or coefficients are compatible mechanisms, not a proof of the observed contrast.
 
 ### R.6.3 Status of Phenomenological Comparisons
 
@@ -2196,14 +2153,14 @@ The theorem/model status is:
 
 The framework does not yet fully determine:
 
-1. **Absolute Yukawa values:** Under $K$-invariance, the single Hessian eigenvalue $\alpha = 3/2$ is fixed (Corollary T.41.3); absolute values require the overall normalization scale and potential $K$-breaking effects
+1. **Absolute Yukawa values:** The unit-radius convention fixes the kernel coefficient $\alpha=3/2$, but absolute values additionally require the full heat-kernel normalization, Van Vleck and remainder records, physical labels, common-scale matching, and the full-matrix realization certificate of Theorem T.39
 2. **Specific vacuum locations:** Requires minimizing $V_q$ with explicit $E_8$ embedding
 3. **CP phase $\delta_{CP}$:** Obtained conditionally in Section T.22 as $\delta = 66.7^\circ$ from the Berry-holonomy model
 4. **Running to low energies:** Requires RG evolution (standard QFT)
 
 Item 3 is resolved within that Berry-holonomy model. Items 1-2 require explicit construction of the PCE potential $V_{PCE}$ on the attractor orbit.
 
-**Baryogenesis Complexity (Conditional Appendix Y Reduction).** Holonomy supplies CP-odd data; a net yield additionally requires the driven transport, freeze-out, and residual certificates of Theorems Y.6.1i--Y.6.1k. The baryon asymmetry $\eta_B \approx 6 \times 10^{-10}$ is derived from the anomaly-holonomy coupling mechanism where Berry holonomy on $\text{Gr}(2,8)$ provides an effective CP-odd $\theta$ datum whose production effect is conditional on certified driven transport for electroweak sphalerons. The baryogenesis complexity is:
+**Baryogenesis Complexity (Conditional Appendix Y Reduction).** Holonomy supplies a candidate CP-odd datum; a net yield additionally requires the independent $C$-odd response witness and the driven source, transport, freeze-out, washout, normalization, residual, and overlap certificates of Appendix Y. The displayed value near $6\times10^{-10}$ is therefore illustrative arithmetic, not a derived baryon asymmetry. The exact exponent ledger on the stated branch is:
 
 $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = \frac{38.5}{2} + \frac{\ln 2}{3} = 19.25 + 0.2310\dots = 19.4810\dots$$
 On the explicit complement-equivariant active-pair path of Theorem Y.8 and the symmetric three-family sharing branch,

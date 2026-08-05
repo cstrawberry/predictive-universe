@@ -1,6 +1,6 @@
 # Appendix V: Computational Programs and Numerical Consistency Checks
 
-This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the Appendix U five-mode reference branch $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the reference exponent $\kappa=141.5$ (Appendix U, Theorem U.16) and the Appendix U working prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so the forward value is branch-dependent rather than theorem-level vacuum closure. By contrast, after the corrected Definition U.6 normalization, Theorem U.13b establishes the corrected four-mode exponent branch $\kappa=142$ under the explicit false-vacuum spectral hypotheses stated there. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap with no continuous fitting after the baseline MPU invariants and stated projection/matching conventions are fixed. Section V.3 records a finite audit ladder: reproducibility checks that can be performed independently from the displayed PU formulas and finite combinatorial data. Passing those audits strengthens the manuscript's internal numerical discipline, but it does not by itself promote the RHG flag-lift, Bismut-Lebeau determinant transfer, or other certificate-level branches to theorem-level closure.
+This appendix provides arithmetic programs and observational inversions for the cosmological constant $\Lambda$, together with the parametric fine-structure program. The Appendix-U five-mode calculation is a declared reference conversion using $\kappa_{\mathrm{ref}}=141.5$ and the working convention $A_{\mathrm{eff}}=0.923\pm0.011$; it is not a realized false-vacuum theorem. On the four-mode route, Theorem U.13b supplies only sampled-angular Hessian nullity. The successive gates are $\mathfrak C_{U,\mathrm{mark}}$ for the independent $288$-direction carrier index, the exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$ of Proposition U.14 for action $284$, $\mathfrak F_U^{(4)}$ for the Euclidean weight, and $\mathfrak R_\Lambda^{(4)}$ for the physical quantity $\Lambda_4L_P^2$. No accepted complete instance is present. The inversion formulas remain numerical diagnostics under stipulated action placements. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap with no continuous fitting after its baseline invariants and projection/matching conventions are fixed. Passing the finite audits strengthens reproducibility but does not promote missing physical certificates.
 
 **Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=e^2/(4\pi)$.
 
@@ -8,7 +8,7 @@ This appendix provides computational programs for two constants within the Predi
 
 This appendix is intended to be mechanically reproducible from the displayed equations. An independent check should verify the following items without access to any unpublished derivations:
 
-1. **Input ledger.** Fixed PU inputs: $K_0=3$, $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, $d_0=8$ on the minimal complex Hilbert carrier, $\varepsilon_0=\ln2$, $a=2$, $b=d_0-a=6$, $M=2a(d_0-a)=24$, and (for the semiclassical vacuum sector) $S_{\mathrm{inst}}=(C_{\max}/\varepsilon_0)\kappa=2\kappa$.
+1. **Input ledger.** Fixed finite inputs for the displayed arithmetic are $K_0=3$, $N_{\mathrm{vis}}^{\min}=8$, $d_0=8$, $\varepsilon_0=\ln2$, $a=2$, $b=6$, and $M=24$ on their declared branches. Appendix U independently registers $(N_U,r_U)=(24,12)$ and hence the real tangent count $288$. The equality $S_{\mathrm{inst}}=2\kappa_{\mathrm{idx}}$ is not a fixed backbone input: it additionally requires the carrier/Hessian marking and Proposition U.14's exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$.
 2. **$\Lambda$ forward evaluation + inversion check.** Using Equation (V.2) with the registered reference-branch inputs $(\kappa,A_{\text{eff}})$ to compute the corresponding $\Lambda L_P^2$ value, and using Equations (V.4)–(V.5) together with Equation (V.3) to infer either $A_{\text{eff}}^{(\text{obs})}$ (holding $\kappa$ fixed) or an effective $\kappa$ (holding $A_{\text{eff}}$ fixed) from observational inputs $(H_0,\Omega_\Lambda,c,L_P)$.
 3. **$\alpha_{\mathrm{em}}$ forward program.** Using Equation (V.8) to compute $u^*$ from $(M,\lambda,d_0)$ and Equation (V.10) to compute $\alpha^{-1}$ from $(u^*,K_0)$ including the explicit interface corrections.
 4. **Uncertainty accounting.** Reported $1\sigma$ uncertainties separate (i) observational inputs, (ii) controlled truncation terms, and (iii) PU-to-physics mapping/systematic terms; when combined, they are combined in quadrature unless otherwise stated.
@@ -20,11 +20,11 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 | Quantity | PU program | Central value | $1\sigma$ budget | Dominant contributions |
 |:--|:--|:--|:--|:--|
 | $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$; certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ | branch comparison budget $\pm0.000060$ before residual closure | exact sinc-core arithmetic plus Section Z.27.9 comparison budget; theorem-level interval requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1 |
-| $\Lambda L_P^2$ (vacuum sector) | Eq. (V.2) with $\kappa_{\mathrm{ref}}=141.5$ and $A_{\text{eff}}=0.923\pm0.011$ on the Appendix U five-mode reference branch | $(2.88\times10^{-122})$ | $\pm 0.03\times10^{-122}$ | branch-dependent reference evaluation on the five-mode branch; Theorem U.8c blocks the pure-coordinate dilatation realization in the current continuum action, while Theorem U.13b establishes the corrected four-mode exponent branch $\kappa=142$ under the explicit false-vacuum spectral hypotheses stated there. Eq. (V.5) gives $(\Lambda L_P^2)_{\text{obs}}=(2.86599\pm0.04849)\times10^{-122}$, implying $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ on the five-mode branch and $A_{\text{eff}}^{(\text{obs},4)}=2.49\pm0.04$ on the four-mode branch |
+| $\Lambda L_P^2$ (vacuum sector) | five-mode reference conversion and observational inversions; four-mode route $m_4\to\kappa_{\mathrm{idx}}\to S_{\mathrm{inst}}\to w_4\to\Lambda_4L_P^2$ | five-mode reference $(2.88\times10^{-122})$ | $\pm0.03\times10^{-122}$ reference budget | U.13b proves only sampled-Hessian nullity; $\mathfrak C_{U,\mathrm{mark}}$, Proposition U.14, $\mathfrak F_U^{(4)}$, and $\mathfrak R_\Lambda^{(4)}$ remain successive gates. Equation (V.5) gives the observational input and the displayed prefactor values are inversions, not forward evaluations |
 
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
 
-### V.1.1 Foundational PU Equations for $\Lambda$
+### V.1.1 Registered Vacuum-Model Equations and Gates for $\Lambda$
 
 1. **Instanton action on the equal-contribution branch.** Assume the Appendix U action-complexity map that assigns the same dimensionless action contribution $C_{\max}/\varepsilon_0$ to every unit of $\kappa$. Then
 
@@ -34,15 +34,16 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
    on the residual-budget branch, where Appendix E, Equation E.14 and Appendix Q, Equation Q.10 give $C_{\max}/\varepsilon_0=2$. The cited equations determine the ratio; the equal-contribution action map is a separate branch hypothesis. Here $\varepsilon_0=\ln2$ is the structural binary reference and is not a claim that every physical reset has cost $\ln2$. Every value proportional to $e^{-2\kappa}$ in this section is conditional on both the residual-budget ratio and the action-complexity map.
 
-2. **Vacuum energy density.** The dimensionless combination $\Lambda L_P^2$ is
-
+2. **Euclidean vacuum weight and conditional Einstein realization.** On an accepted action and Fredholm branch, define
    $$
-   \boxed{\Lambda L_P^2 \;\simeq\; 8\pi\,A_{\text{eff}}\,e^{-S_{\mathrm{inst}}}} \tag{V.2}
+   w:=A_{\mathrm{eff}}e^{-S_{\mathrm{inst}}}.
    $$
-
-   with $A_{\text{eff}} := K\cdot N_{\text{eff}}$ an $O(1)$, **dimensionless** prefactor aggregating one‑loop determinants and extensivity (Appendix U, Section U.1).
-
-   **Normalization note.** Using the Einstein equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$ and $L_P^2=\hbar G/c^3$, the ratio $\Lambda L_P^2$ is dimensionless while the conventional $8\pi$ remains as a pure numerical factor multiplying the semiclassical instanton amplitude. All dimensionful contributions in the one-loop determinant and finite-volume counting are normalized by $L_P$, so the aggregated prefactor $A_{\text{eff}}$ is a **dimensionless** $O(1)$ constant.
+   This is a dimensionless Euclidean weight. Only an accepted vacuum-weight-to-Einstein record $\mathfrak R_\Lambda$ permits
+   $$
+   \boxed{\Lambda L_P^2=8\pi w=8\pi A_{\mathrm{eff}}e^{-S_{\mathrm{inst}}}}.
+   \tag{V.2}
+   $$
+   The record fixes analytic continuation, finite-volume/extensivity normalization, the convention $L_P^2=\hbar G/c^3$, metric variation of the cosmological term, and source exhaustion. A determinant prefactor without that record does not define a physical $\Lambda$.
 
 3. **Inversion for $\kappa$.** Solving Equation (V.2) using Equation (V.1),
 
@@ -84,13 +85,13 @@ The quoted uncertainty uses diagonal propagation of the declared hybrid $H_0$ an
 
 ### V.1.4 Consistency Check via Inversion
 
-Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16, five-mode reference-counting convention) and the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b, prefactor convention), Equation (V.2) gives the corresponding five-mode reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so this agreement with the observed value (V.5) is branch-dependent rather than theorem-level vacuum closure. On the Definition U.6 four-mode branch, Theorem U.13b fixes the exponent $\kappa=142$ under the stated spectral hypotheses, so the forward expression is
+Using the Appendix U five-mode comparison input $\kappa_{\mathrm{ref}}=141.5$ and the working convention $A_{\mathrm{eff}}=0.923\pm0.011$, Equation (V.2) gives the reference value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. Theorem U.8c excludes the current pure-coordinate dilatation tangent as the required fifth zero mode, so this agreement with (V.5) is not a false-vacuum closure.
 
+On the four-mode route, Theorem U.13b gives only $m_4=4$ under its sampled-angular spectral hypothesis. An accepted $\mathfrak C_{U,\mathrm{mark}}$ gives $\kappa_{\mathrm{idx}}=142$, and exact $\mathfrak C_{U,\mathrm{act}}$ then gives $B_U=284$. A complete canonical $\mathfrak F_U^{(4)}$ supplies a regulated false-vacuum decay magnitude; a legacy Definition-U.15d Fredholm record and U.15f.1 interval audit are admissible only through an accepted same-branch embedding supplying every actual U.73e field. The same working-prefactor substitution gives $(1.06\pm0.01)\times10^{-122}$ only as an arithmetic diagnostic. A physical forward interval requires $\mathfrak R_\Lambda^{(4)}$ to derive $w_4^{\mathrm{real}}$ and
 $$
-\Lambda_4 L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}.
+\Lambda_4L_P^2=8\pi w_4^{\mathrm{real}}.
 $$
-
-Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference evaluation. A theorem-level four-mode forward interval requires an accepted canonical closure record $\mathfrak F_U^{(4)}$ of Definition U.73e. The earlier Definition U.15d Fredholm certificate together with the Definition U.15f.1 interval audit is not automatically equivalent to the canonical record; it discharges the canonical gate only through an accepted embedding that additionally supplies $H_4$, $\mathcal T_4$, and every remaining field of Definition U.73e on the same four-mode branch.
+No accepted complete instance of the marking, exponent, decay, or real-stress record is present.
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):
 
@@ -104,13 +105,13 @@ $$
 A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa_{\mathrm{ref}}}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
 $$
 
-consistent with the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b) on that five-mode reference branch. On the translational branch $m=4$, the same observation would require
+numerically close to the Appendix U working convention $A_{\text{eff}}=0.923\pm0.011$ on the five-mode reference row. This is an observational-inversion diagnostic. Under the separately stipulated four-mode action placement $S=284$, the same observation would require
 
 $$
 A_{\text{eff}}^{(\text{obs},4)} := \frac{\Lambda L_P^2}{8\pi e^{-284}} = 2.49 \pm 0.04.
 $$
 
-For the Appendix U reference value $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16), the corresponding reference instanton action from Equation (V.1) is
+On the separately declared five-mode equal-contribution action convention, the reference action value is
 
 $$
 S_{\mathrm{inst}} = 2\kappa_{\mathrm{ref}} = 283~\text{nats} = 408.3~\text{bits}. \tag{V.7}
@@ -261,7 +262,16 @@ with the ratios used in the residual-shell prediction extracted from these count
 **Target.** Verify the finite symbolic chain
 
 $$
-K_0=3\to d_0=8\to (a,b)=(2,6)\to k=12\to M=24\to D=4
+\begin{aligned}
+&\{K_0=3;\ \text{Theorems 15 and 23 plus the Z.2 same-class comparator}\}
+   &&\Longrightarrow d_0=8,\\
+&\{d_0=8;\ \text{Z.1 active-record, capacity, quotient, and no-surplus gates}\}
+   &&\Longrightarrow (a,b,k_{\mathrm{tan}},M)=(2,6,12,24),\\
+&\{M=24;\ \text{predictive-recovery MacWilliams gate}\}
+   &&\Longrightarrow k=12,\\
+&\{M=24;\ \text{mode-to-cell injection, feasibility, and least-support gate}\}
+   &&\Longrightarrow D=4.
+\end{aligned}
 $$
 
 using only the cited PU branch gates: the horizon-error selection of $K_0$, the operational-context floor $N_{\mathrm{vis}}^{\min}=2^{K_0}=8$, the minimal Hilbert carrier $d_0=8$, the active rank $a=2$ from the match/mismatch plus entropy-capacity gates, the Peirce decomposition of the rank-$2$ projector in $\mathbb C^8$, the predictive-recovery MacWilliams gate for $k=12$, and the channel-complete kissing/mode-channel condition for $D=4$.
@@ -547,7 +557,7 @@ $$
 
 10. $\mathcal C_{\circlearrowleft}$ is the circular-angle convention. It records whether a periodic coefficient is represented by a real lift, a unit complex moment, or a finite cyclic label, and fixes the angle unit before comparison. Strong-CP, Berry, and theta-like symbols must use this entry.
 
-11. $\mathcal O_*$ is the overlap map to parent sectors. It lists the accepted local records from which the calibration symbols descend, including where claimed the electroweak threshold record, flavor record, four-mode Fredholm prefactor, primordial determinant, vacuum determinant, gravitational coupling symbol, Higgs symbols, Yukawa symbols, neutrino operator symbol, baryogenesis source, dark-susceptibility kernel, horizon recovery/design record, and strong-CP determinant orientation.
+11. $\mathcal O_*$ is the overlap map to parent sectors. It lists the accepted local records from which the calibration symbols descend, including where claimed the electroweak threshold record, flavor record, four-mode Hessian/carrier marking, Proposition-U.14 action premise, Fredholm weight, vacuum-to-Einstein realization, primordial determinant, vacuum determinant, gravitational coupling symbol, Higgs symbols, Yukawa symbols, neutrino operator symbol, baryogenesis source, dark-susceptibility kernel, horizon recovery/design record, and strong-CP determinant orientation.
 
 12. $\chi_*$ is the forward-lock record. It asserts that no empirical comparison value, validation target, post-comparison residual, fitted phenomenological kernel, or dependent-row output enters $\mathcal A_*$, $\Omega_*$, $\mathcal Q_{\mathrm{null}}$, $\nu_*$, $\nu_*^{\mathrm{fs}}$, $m_a$, $c_a^*$, $\mathcal Q_{\mathrm{ind}}$, $\widehat O_B$, $\sigma_B$, $s_B$, $\mathcal R^*_{\mu\leftarrow\mu_*}$, $\mathcal C_{\circlearrowleft}$, or $\mathcal O_*$ unless it is explicitly registered as an EmpiricalInput. Such an entry blocks theorem-level final calibration for every sector depending on it.
 
@@ -1152,7 +1162,7 @@ where $\mathcal A_*$ is the finite calibration algebra, $\Omega_*$ its finite at
 
 The record may project accepted local certificates from a common spectral source. It cannot replace a missing local certificate, supply an unrecorded finite part, alter a projector, change a tail bound, change a grading, change a normalization, import a comparison value as a moment, or infer a sector symbol from validation data.
 
-**Theorem V.3.11k (Global Calibration Non-Replacement and Full-Vector Classification).** A numerical row is final-calibrated by $\mathfrak S_*^{\mathrm{glob}}$ only if its local parent certificate is accepted or explicitly registered as branch input, and its symbol, unit bridge, finite-part convention, tail bound, circular-angle convention when relevant, determinant orientation, normalization, and overlap map are entries of (V.3.11j.1). The current PU ledger contains no single accepted $\mathfrak S_*^{\mathrm{glob}}$ covering simultaneously the Thomson residual, electroweak threshold, flavor, four-mode Fredholm prefactor, primordial determinant, baryogenesis, horizon transfer, AQFT/Einstein, and dark-response sectors. Therefore a claim that all such rows are final calibrated is certificate-pending unless it supplies $\mathfrak S_*^{\mathrm{glob}}$ and the cross-sector record $\mathfrak N_{\mathrm{PU}}$ of Definition X.9.6g.7.
+**Theorem V.3.11k (Global Calibration Non-Replacement and Full-Vector Classification).** A numerical row is final-calibrated by $\mathfrak S_*^{\mathrm{glob}}$ only if its local parent certificate is accepted or explicitly registered as branch input, and its symbol, unit bridge, finite-part convention, tail bound, circular-angle convention when relevant, determinant orientation, normalization, and overlap map are entries of (V.3.11j.1). The current PU ledger contains no single accepted $\mathfrak S_*^{\mathrm{glob}}$ covering simultaneously the Thomson residual, electroweak threshold, flavor, the four-mode Hessian/carrier, action, Fredholm-weight, and vacuum-to-Einstein realization records, the primordial determinant, baryogenesis, horizon transfer, AQFT/Einstein, and dark-response sectors. Therefore a claim that all such rows are final calibrated is certificate-pending unless it supplies $\mathfrak S_*^{\mathrm{glob}}$ and the cross-sector record $\mathfrak N_{\mathrm{PU}}$ of Definition X.9.6g.7.
 
 *Proof.* Definition V.3.11a fixes one calibrated expectation only after the algebra, atom set, reference measure, constraints, symbols, units, routes, circular conventions, overlap maps, and residuals are fixed. The sectors named here also have determinant, zero-mode, boundary, transport, covariance, or tail entries in their local certificates. Changing any such entry after another dependent row is fixed changes the finite branch by Definition P.14.1m and Theorem P.14.1f. Thus the global record compresses accepted local certificates only by projection; it does not promote absent certificates. ∎
 

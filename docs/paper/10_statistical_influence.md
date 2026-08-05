@@ -65,7 +65,7 @@ with equality only at $p=\frac12$. Therefore every endpoint-complete determinist
 $$
 \alpha_{CC,max}\ge\frac12.
 $$
-Taking the strict bounded-bias condition $\alpha_{CC,max}<\frac12$ excludes all such endpoint-complete binary alphabets and therefore excludes one-shot deterministic endpoint forcing. The strict inequality is used because $p=\frac12$ is an admissible balanced binary coarse-graining; equality would not leave a finite margin against endpoint completion. ∎
+Taking the strict bounded-bias condition $\alpha_{CC,max}<\frac12$ excludes all such endpoint-complete binary alphabets and therefore excludes one-shot deterministic selection between both endpoints. It does not exclude forcing one endpoint when the baseline is sufficiently biased. The strict inequality is used because $p=\frac12$ is an admissible balanced binary coarse-graining; equality would not leave a finite margin against endpoint completion. ∎
 
 Theorem 39 is an endpoint gate, not the whole statistical-FTL consistency theorem. The additional step needed for branch (iii) is supplied by Theorem 39a: on the regular finite-window statistical branch, Bob's transcript distributions retain overlapping support under the two Alice contexts, so the zero-error FTL capacity is zero even when the ordinary finite-error information rate of Theorem 41 is positive.
 
@@ -141,11 +141,10 @@ Both components preserve total normalization. Branch (i) of Postulate 3 requires
 $$
 \Pi_B\ell_C=0
 $$
-for every late-randomized Alice context, while branch (iii) requires that there exist $C,y,b$ for which
+for every late-randomized Alice context relative to the neutral baseline, while branch (iii) requires two independently selectable late contexts $C,C'$ and settings and outcomes $x,y,b$ for which
 $$
-\sum_a\ell_C(a,b\mid x,y)\ne0
-$$
-under late randomization of $C$. If one also wants to isolate the pure joint-correlation component with both local marginals removed, apply the usual double-centering projector
+\sum_a\bigl(\ell_C(a,b\mid x,y)-\ell_{C'}(a,b\mid x,y)\bigr)\ne0.
+$$ If one also wants to isolate the pure joint-correlation component with both local marginals removed, apply the usual double-centering projector
 $$
 \Pi_{\mathrm{joint}}\ell
 =
@@ -167,7 +166,7 @@ The Bob marginal of the full deformation is
 $$
 \sum_a\ell_C(a,b\mid x,y),
 $$
-and the displayed identity shows that this entire marginal shift lies in $\Pi_B\ell_C$. Since $\sum_{a,b}\ell_C=0$, summing the Bob-marginal component over $(a,b)$ also gives zero, and therefore both $\Pi_B\ell_C$ and $\ell_C^{B0}$ preserve total normalization. A local CPTP operation on Alice's side cannot change Bob's reduced state, so it lies in the $\Pi_B\ell_C=0$ branch. Conversely, a nonzero Bob-marginal component under late randomization is exactly a branch-(iii) marginal anomaly. ∎
+and the displayed identity shows that this entire marginal shift lies in $\Pi_B\ell_C$. Since $\sum_{a,b}\ell_C=0$, summing the Bob-marginal component over $(a,b)$ also gives zero, and therefore both $\Pi_B\ell_C$ and $\ell_C^{B0}$ preserve total normalization. A local CPTP operation on Alice's side cannot change Bob's reduced state, so it lies in the $\Pi_B\ell_C=0$ branch. Conversely, a nonzero difference between the Bob-marginal components of two independently selectable late contexts is exactly a branch-(iii) marginal anomaly. ∎
 
 **Lemma 10.2.1 (Radon-Nikodym Characterization of the Bob-Marginal-Preserving Branch).** Restrict attention to the branch-(i) Bob-marginal-preserving condition of Postulate 3, namely $\Pi_B\ell_C=0$ on the Bob transcript algebra for every late-randomized Alice context $C$. Let $\mathbb P_0$ be the baseline joint history law over the finite pre-lightcone transcript $\Gamma=(A,B,o_A,o_B)_{1:n}$ in the finite transcript window used by Lemma 10.3, and let $\mathbb P_C$ be the branch-(i) deformed history law associated with Alice's context $C$. Assume $\mathbb P_C\ll\mathbb P_0$ on the transcript algebra, and define the Radon-Nikodym history weight
 $$
@@ -790,11 +789,11 @@ For two outcomes, $\Delta_1=-\Delta_2$, so $\|\Delta\|_2^2=B_{01}^2/2$; substitu
 
 **10.4.3 Theorem 42 (Finite-Window Zero-Error Loop Exclusion and Shannon-Causality Boundary)**
 
-The hypothesized statistical FTL influence (Postulate 3), when constrained by the endpoint bound of Theorem 39, the zero-error gate of Theorem 39a on the regular finite-window branch (Definition 10.2a), the predictive-current no-loop and precision-cost gate of Theorem 39b whenever a current certificate is asserted, and the finite-window sampling bounds of Theorems 40–41, cannot realize a finite-window zero-error contradiction protocol. This is weaker than Postulate 2: if its freely selected context changes a pre-lightcone marginal, Theorem 39c classifies it as signaling despite the nonzero decoder error. This holds for any decoder $\mathcal D$ acting on a finite pre-lightcone transcript in the regular operating regime.
+The hypothesized statistical FTL influence (Postulate 3), when constrained by the independently declared bounded-bias ceiling and Theorem 39's endpoint-complete consequence, the zero-error gate of Theorem 39a on the regular finite-window branch (Definition 10.2a), the predictive-current no-loop and precision-cost gate of Theorem 39b whenever a current certificate is asserted, and the finite-window sampling bounds of Theorems 40–41, cannot realize a finite-window zero-error contradiction protocol. This is weaker than Postulate 2: if its freely selected context changes a pre-lightcone marginal, Theorem 39c classifies it as signaling despite the nonzero decoder error. This holds for any decoder $\mathcal D$ acting on a finite pre-lightcone transcript in the regular operating regime.
 
 *Proof:*
 1.  **Requirement for a Zero-Error Contradiction Protocol (Weaker than Postulate 2):** The construction of a logical causal paradox requires controllable deterministic information, equivalently a zero-error FTL decoding step in a finite pre-lightcone window. A finite-error statistical estimate is insufficient: if the estimate is wrong with nonzero probability, no contradiction follows from Alice choosing otherwise.
-2.  **Endpoint exclusion (Theorem 39):** CC cannot force a binary coarse-grained outcome to both deterministic endpoints. Thus a one-shot deterministic message alphabet cannot be obtained from CC bias.
+2.  **Endpoint exclusion (bounded-bias branch and Theorem 39):** The branch independently declares $\alpha_{CC,max}<1/2$, and Theorem 39 proves that this excludes forcing both deterministic endpoints of a binary coarse-graining. Thus an endpoint-complete one-shot message alphabet cannot be obtained on this branch; the theorem does not exclude every one-endpoint protocol.
 3.  **Finite-window zero-error exclusion (Theorem 39a, regular branch):** On branch (iii), Bob's marginal may depend on Alice's late context, so the ordinary Shannon information of Bob's record may be positive. However, on the regular finite-window branch (Definition 10.2a), every finite pre-lightcone transcript retains positive overlap between the two context-conditioned laws, so every decoder has strictly positive error probability:
     $$
     P_{\mathrm{err}}\ge\Omega_n/2>0.
@@ -814,7 +813,7 @@ The branches of Postulate 3 have distinct causal statuses under Theorem 39c: bra
 
 Appendix F supplies the conditional AQFT setting for the marginal-invariant and shared-past branches. Corollary F.1 formulates operator-level Einstein causality under Theorem F.0's continuum-bridge hypotheses. On the local CPTP branch, the prepared state $\omega_{C_A}$ may depend on Alice's context through the map $\mathcal M$ and ND-RID dynamics, so joint expectations such as $\omega_{C_A}(A\otimes B)$ in Equation (F.4) may vary while Bob's unconditional statistics $\omega_{C_A}(\mathbf{1}_A\otimes B)$ remain invariant. Thus operator locality, Equation (F.2), and state-mediated joint or conditional dependence coexist on the Bob-marginal-preserving branch.
 
-A late-randomized branch-(iii) Bob-marginal shift is PU's statistical-FTL hypothesis and the Theorem 39c/Corollary 39c.1 falsifier of exact pre-lightcone context independence. On the regular finite-window model, Theorems 39a–42 bound reliability, sample complexity, information rate, and zero-error accessibility. Implementation remains subject to ND-RID irreversibility, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on the registered reset branch, with a positive floor requiring $H_q(P\mid R)\ge h_{\min}>0$ (Theorem 31), and to finite channel capacity, $f_{RID}<1$ and $C_{\max}<\ln d_0$ (Theorem E.2); mechanisms (b) and (c) of Definition 10.2a connect the regularity hypothesis to those bounds. The conditional Lorentz-invariant description applies to the exact marginal-invariant and shared-past branches, while branch (iii) supplies PU's statistical-FTL experimental alternative outside the exact Lorentz/AQFT causal branch.
+A late-randomized branch-(iii) Bob-marginal shift is PU's statistical-FTL hypothesis and the Theorem 39c/Corollary 39c.1 falsifier of exact pre-lightcone context independence. On the regular finite-window model, Theorems 39a–42 bound reliability, sample complexity, information rate, and zero-error accessibility. Implementation remains subject to ND-RID irreversibility, $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on the registered reset branch, with a positive floor requiring $H_q(P\mid R)\ge h_{\min}>0$ (Theorem 31). On the separate refresh/minorization branch, Lemma E.1 gives $f_{RID}<1$ and Theorem E.2 gives $C_{\max}<\ln d_0$. These contraction and capacity results do not establish the common-support condition of Definition 10.2a, which remains an independent finite-window regularity hypothesis. The conditional Lorentz-invariant description applies to the exact marginal-invariant and shared-past branches, while branch (iii) supplies PU's statistical-FTL experimental alternative outside the exact Lorentz/AQFT causal branch.
 
 **Measurement-independence guardrail.** For experimental settings $x,y$ and a past variable $\lambda$, measurement independence is the separate condition
 $$

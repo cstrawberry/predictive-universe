@@ -6,7 +6,7 @@ This appendix connects PU's account of prediction and coarse-graining to the sta
 
 ### Technical scope and conventions
 
-This appendix establishes the precise relationship between the Predictive Universe (PU) framework and the quantum/statistical **effective action** formalism. We connect the **predictive free energy** and its **natural‑gradient RG** flow (Appendix D) to **Wilsonian coarse‑graining**, the **1PI effective action** $\Gamma$, and the **functional RG** (FRG), including the **gauge** and **gravitational** sectors and the open‑system (Schwinger–Keldysh) structure required for ND‑RID. Throughout we use natural units $c=\hbar=k_B=1$, spacetime signature $(-,+,+,+)$, and Heaviside–Lorentz electromagnetic conventions.
+This appendix states conditional bridges from the Predictive Universe framework to quantum and statistical effective-action formalisms. It relates predictive free energy and natural-gradient flow to Wilsonian coarse-graining, the 1PI effective action $\Gamma$, and functional RG on their registered branches, including gauge and gravitational sectors. Its Schwinger--Keldysh construction applies only when retained macroscopic variables form an open reduced subsystem; ND--RID alone does not supply that reduction. Throughout we use natural units $c=\hbar=k_B=1$, spacetime signature $(-,+,+,+)$, and Heaviside--Lorentz electromagnetic conventions.
 
 
 ## X.1 From Predictive Statistics to Generating Functionals
@@ -219,9 +219,9 @@ which is invariant under (X.4a.2). Therefore no local normalized modular or null
 
 
 
-## X.5 Open‑System Structure for ND‑RID: Schwinger–Keldysh $\Gamma_{\rm CTP}$
+## X.5 Conditional Open-System ND--RID Branch: Schwinger--Keldysh $\Gamma_{\rm CTP}$
 
-ND‑RID implies intrinsically **open** macroscopic dynamics. Introduce doubled fields $\Phi_\pm$ on the closed‑time path and define
+On a branch where the retained macroscopic variables form a proper subsystem and tracing over a registered complement yields a CPTP reduced law, the macroscopic dynamics are open. The CTP construction below is conditional on that reduced-state branch; ND--RID alone does not imply it. Introduce doubled fields $\Phi_\pm$ on the closed-time path and define
 
 $$
 e^{\,i W_{\rm CTP}[J_+,J_-]}
@@ -1363,10 +1363,10 @@ Finally, if the transformation is not an arrow of $\mathcal R$, the quotient con
 $$
 [\mathcal A^{\mathrm{bulk}}]+[\mathcal A^{\partial}]+[\mathcal A^{\mathrm{int}}]=0;
 $$
-4. a claim of vanishing total anomaly, including global or torsion classes, additionally requires the bordism-valued gate of Theorem X.8d.3; and
+4. a claim of vanishing total anomaly, including global or torsion classes, lies outside the local/free conclusion of Theorem X.8d and requires an independently established bordism-valued anomaly criterion; and
 5. the electroweak $B+L$ anomaly is an admissible physical update channel when $B+L$ is a retained global current rather than a declared redundancy.
 
-*Proof.* Items 1–3 apply Theorem X.8d on its effective source domain. Item 4 is the global refinement of Theorem X.8d.3. For item 5, no quotient identification is imposed for $B+L$, so its anomalous Ward identity records physical charge transport rather than failure of a gauge quotient. ∎
+*Proof.* Items 1–3 apply Theorem X.8d on its effective source domain. Item 4 records the scope of Definition X.8d.0: its Cech class is local/free and contains no torsion-bordism datum. For item 5, no quotient identification is imposed for $B+L$, so its anomalous Ward identity records physical charge transport rather than failure of a gauge quotient. ∎
 
 **Definition X.8d.2 (Bordism-Valued PU Anomaly Class).** Let $\mathsf B$ be a regular $d$-dimensional effective-action branch whose declared predictive redundancies are represented by a tangential and internal structure
 $$
@@ -2865,7 +2865,11 @@ $$
 $$
 with resonance continuation understood only on branches where the exterior finite channel map has been specified.
 
-5. Two confined interiors with the same meromorphic boundary impedance map give the same colorless boundary protocol responses and are PPI-equivalent for those protocols. PCE selects the minimal retained representative inside that equivalence class.
+5. Two confined interiors with the same meromorphic boundary impedance map give the same colorless boundary protocol responses and are PPI-equivalent for those protocols. This response-class quotient is unconditional under the preceding hypotheses. For a concrete PCE selection, let $\mathcal I_{\Lambda}$ be a specified nonempty comparison class of such interiors and let $C_{\Lambda}:\mathcal I_{\Lambda}\to(-\infty,+\infty]$ be the complete descended cost, finite somewhere. If $\mathcal I_{\Lambda}$ is finite, or is compact with $C_{\Lambda}$ lower semicontinuous, then
+$$
+\operatorname*{argmin}_{I\in\mathcal I_{\Lambda}}C_{\Lambda}(I)\ne\varnothing.
+$$
+PCE selects this argmin; a unique retained representative follows only when the argmin is a singleton.
 
 *Proof.* Let $u=u_I\oplus b$. The eigenvalue equation $(H_{\mathrm{conf}}-E)u=0$ is the block system
 $$
@@ -2898,7 +2902,7 @@ $$
 $$
 A nonzero matched boundary amplitude exists exactly when (X.8k.11) holds. This proves item 4.
 
-Finally, Theorem X.8k.2 states that complete boundary protocols determine the Schur response operator and that identical boundary response classes are PPI-equivalent. Applying that theorem at each energy $E$ gives equality of the meromorphic impedance maps as equality of all colorless boundary responses. PCE removes surplus interior representatives that do not change this map. ∎
+Finally, Theorem X.8k.2 states that complete boundary protocols determine the Schur response operator and that identical boundary response classes are PPI-equivalent. Applying that theorem at each energy $E$ gives equality of the meromorphic impedance maps as equality of all colorless boundary responses. On a finite comparison class the complete cost attains a minimum directly; on a compact class lower semicontinuity gives attainment. PCE therefore selects the nonempty argmin under item 5's declared alternatives, while uniqueness requires that argmin to be a singleton. Without those selection data, only the PPI response-equivalence class is proved. ∎
 
 **Definition X.8k.6a (Finite Nuclear Aggregate Operator Package).** For a fixed proton-neutron sector $A=(Z,N)$, a finite nuclear aggregate operator package is a finite record
 $$
@@ -3032,7 +3036,7 @@ $$
 $$
 with phase-space and current normalizations supplied by the same package. The certified interval for any listed nuclear observable is the image of $\mathcal U_A$ under the corresponding finite spectral or matrix-element map.
 
-*Proof.* The defining constraints make $\mathcal K_A$ a closed subset of the assumed compact admissible family because the Schur impedance map and all finite operator-ledger entries are continuous; hence $\mathcal K_A$ is compact. Lower semicontinuity of $V_A^{\mathrm{PCE}}$ gives a minimizer, proving (X.8k.17). If two minimizers represented distinct PPI response classes, strictness would assign different costs, contradicting equality at the minimum. Thus the minimizing PPI class is unique. When the accepted package also identifies PPI equivalence in $\mathcal K_A$ with boundary-preserving unitary equivalence, any two minimizing representatives are related by such a unitary, and the registered protocol responses and transported matrix elements are invariant by that certificate.
+*Proof.* Compactness and nonemptiness of $\mathcal K_A$ are theorem hypotheses. Since $V_A^{\mathrm{PCE}}$ is lower semicontinuous on this compact set, the extreme-value theorem gives a minimizer, proving (X.8k.17). If two minimizers represented distinct PPI response classes, strictness would assign different costs, contradicting equality at the minimum. Thus the minimizing PPI class is unique. When the accepted package also identifies PPI equivalence in $\mathcal K_A$ with boundary-preserving unitary equivalence, any two minimizing representatives are related by such a unitary, and the registered protocol responses and transported matrix elements are invariant by that certificate.
 
 Equations (X.8k.18) and (X.8k.19) are Theorem X.8k.6 applied to the selected aggregate Hamiltonian $H_A^{\mathrm{PU}}$ and to the accepted exterior impedance. Since $J_A^{\mathrm{spin}}$, $\mathcal T_A$, and $\mathcal D_A$ are operators on the same finite retained Hilbert space, the spectral theorem fixes their matrix elements between eigenvectors. The uncertainty ledger $\mathcal U_A$ is a finite list of intervals and covariance entries, so its image under the finite algebraic spectral maps gives the certified observable intervals. ∎
 
@@ -3275,7 +3279,7 @@ Operationally, "duality-symmetric sector" means the MPU-accessible observable se
 On the unit Predictive-Ward branch of Theorem X.3 and Appendix Z, Theorem Z.14 fixes $\kappa^*_{\mathrm{bulk}}=1$ at the PCE-Attractor, so the quadratic gauge-sector kernel carries no PCE bias between duality-related normalizations at the operational scale. Under that branch condition and the source/boundary conditions above, exchanging electric/magnetic descriptive variables is an MPU-equivalence (Definition X.9.1) and therefore PCE-degenerate (Definition X.9.2).
 
 **(ii) Bulk–Boundary Equivalence from Capacity Saturation (Operational Holography).**
-Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), Appendix E derives an area-law boundary budget from the reset-support capacity deficit (Proposition E.2a), with effective channel count scaling as area on the density-certificate branch (Theorem E.3). Refresh/minorization branches add strict contractivity when mixing or fidelity decay is needed. At saturation, boundary encoding becomes a PCE minimum (Theorem E.8.3.2).
+Conditional on Theorem 43's verified strict-comparator geometric-regularity branch, Appendix E derives an area-law boundary budget from the reset-support capacity deficit of Proposition E.2a, with effective channel count scaling as area on Theorem E.3's density-certificate branch. Refresh/minorization branches add strict contractivity when mixing or fidelity decay is needed. At saturation, boundary encoding becomes a PCE minimum only on Theorem E.8.3.2's declared comparison branch.
 
 For bulk and boundary descriptions to be MPU-equivalent (Definition X.9.1), capacity saturation alone is insufficient; one additionally requires a compatible reconstruction map preserving operational distributions. Theorem E.8.2 supplies the capacity-compatible non-AdS boundary-reconstruction gate, while Definition E.8.1b and Theorem E.8.1c supply exact retained-response reconstruction on Petz-sufficient nested encoding branches. Under these reconstruction conditions, a bulk geometric description and a boundary channel description are MPU-equivalent for exterior observables; this is the PU form of finite-response holographic equivalence [Susskind 1995; Bousso 2002]. The duality arises because capacity saturation together with Petz-sufficient reconstruction implies both descriptions yield identical outcome distributions for all retained exterior measurements at the coarse-graining scale $\delta$.
 
@@ -4368,7 +4372,7 @@ where:
 2. $\mathfrak Z_{\mathrm{PU}}$ is the master zeta-index ledger of Definition X.9.6g.
 3. $\mathfrak M_{\mathrm{det}}$ is the strict determinant-sector ledger of Definition X.9.6g.5.
 4. $\mathfrak R_\alpha$ is the accepted fine-structure residual gate, with the same Thomson-limit normalization as Appendix Z.
-5. $\mathfrak F_U^{(4)}$ is the accepted canonical four-mode Fredholm-prefactor record of Definition U.73e, including its $H_4$ and $\mathcal T_4$ entries and its internal prefactor interval. A legacy $\mathfrak F_U+\mathfrak I_U^{(4)}$ pair is admissible in this slot only through an accepted embedding that supplies every field of Definition U.73e on the same branch.
+5. $\mathfrak F_U^{(4)}$ is the accepted canonical four-mode Fredholm-prefactor record of Definition U.73e, including $\mathfrak M_4$, $\mathcal G_4$, the single relative determinant $\mathcal D_4$, and $\mathcal R_{\ge2}$ on its declared decay branch. A legacy $\mathfrak F_U+\mathfrak I_U^{(4)}$ pair is admissible in this slot only through an accepted same-branch embedding that supplies every actual field of Definition U.73e. A real cosmological term additionally requires $\mathfrak R_\Lambda^{(4)}$.
 6. $\mathfrak D_Q$ is the accepted primordial determinant and branch certificate, or the branch-classification record replacing it.
 7. $\mathfrak R_{\mathrm{EW}}$ is an accepted electroweak threshold record: RHG, torus, spectral-action, or equivalent.
 8. $\mathfrak C_{\mathrm{fl}}^{\circ}$ is an accepted flavor certificate, accepted joint threshold-flavor projection, or accepted flavor-independent CP substitute when used by baryogenesis.
@@ -4376,7 +4380,7 @@ where:
 10. $\mathfrak C_B^{\bullet}$ is either an accepted $\mathfrak C_B$, accepted $\mathfrak C_B^{\mathrm{tr}}$, or accepted $\mathfrak C_B^{\mathrm{APSK}}$.
 11. $\mathfrak C_{\mathrm{EH}}$ is the accepted finite Einstein/AQFT/KMS/metric-response completion record.
 12. $\mathfrak X_{\mathrm{DS}}$ is the accepted covariant dark-susceptibility or effective-action certificate of Definition I.13d.
-13. $\mathfrak H_{\mathrm{hor}}$ is the horizon recovery and transfer slot, consisting of the accepted exterior recovery certificate $\mathfrak S_{\mathrm{hor},n}$ when deterministic exterior recovery is claimed, the accepted Page/design promotion certificate when a Page curve is claimed, and the accepted horizon transfer record $\mathfrak T_{\mathrm{hor}}$ when Landauer phase-grid spectroscopy is claimed.
+13. $\mathfrak H_{\mathrm{hor}}$ is the horizon recovery and transfer slot. It contains the accepted exterior recovery certificate $\mathfrak S_{\mathrm{hor},n}$ when deterministic exterior recovery is claimed, an accepted moment-design or frame-potential certificate when Page purity is claimed, the accepted trace-coupled continuity certificate $\mathfrak C_{\mathrm{PageTV}}$ when a von Neumann Page curve is claimed, and the accepted horizon transfer record $\mathfrak T_{\mathrm{hor}}$ when Landauer phase-grid spectroscopy is claimed. Each absent subrecord is marked separately.
 14. $\mathfrak O_{\mathrm{PU}}$ is the overlap-commutativity audit proving that all shared projectors, finite parts, threshold maps, RG conventions, determinant ratios, unit normalizations, circular-angle conventions, and residual intervals descend from the same parent branch.
 15. $\chi_{\mathrm{num}}=1$ records that all entries are fixed before numerical comparison.
 
@@ -4763,7 +4767,7 @@ u^*
 =
 2^{1/8}-1
 =
-0.09050773266525769\ldots,
+0.090507732665257659207\ldots,
 \tag{X.9.6.38}
 $$
 $$
@@ -4794,7 +4798,7 @@ $$
 1.0612280001760434\ldots\times10^{-122},
 \tag{X.9.6.41}
 $$
-with status: reference-convention value used only as a purely algebraic same-prefactor diagnostic obtained by reusing the five-mode working convention $A_{\mathrm{eff}}=0.923$; it is not the four-mode forward row, which is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}=\varnothing_{\mathrm{cert}}$ until an accepted canonical $\mathfrak F_U^{(4)}$ is supplied;
+with status: reference-convention value used only as a purely algebraic same-prefactor diagnostic obtained by reusing the five-mode working convention $A_{\mathrm{eff}}=0.923$; it is neither a four-mode decay output nor a physical cosmological row. The current values satisfy $w_4^{\mathrm{dec}}=w_4^{\mathrm{real}}=\Lambda_4L_P^2=\varnothing_{\mathrm{cert}}$: $\mathfrak C_{U,\mathrm{mark}}$, exact $\mathfrak C_{U,\mathrm{act}}$, and complete $\mathfrak F_U^{(4)}$ are required for the decay magnitude, while $\mathfrak R_\Lambda^{(4)}$ must independently derive the real coefficient and any claimed decay-to-real equality;
 $$
 A_{\mathrm{eff}}^{(\mathrm{obs},4)}
 =
@@ -4803,13 +4807,13 @@ A_{\mathrm{eff}}^{(\mathrm{obs},4)}
 2.49\pm0.04,
 \tag{X.9.6.42}
 $$
-with status: observational inversion for the corrected four-mode exponent branch, not a forward Fredholm evaluation; a separately accepted canonical $\mathfrak F_U^{(4)}$ may supply an independent interval for comparison but cannot convert the inversion itself into a prediction;
+with status: observational inversion under the independently stipulated action placement $S=284$, not a forward Fredholm evaluation; a separately accepted carrier-marking/action record and canonical $\mathfrak F_U^{(4)}$ may supply an independent interval for comparison, while $\mathfrak R_\Lambda^{(4)}$ is still required for a physical cosmological constant; none converts the inversion itself into a prediction;
 $$
 Q
 =
 \sqrt{\frac12}\,e^{-11}
 =
-1.1809885886131427\ldots\times10^{-5},
+1.180988588613142529148\ldots\times10^{-5},
 \tag{X.9.6.43}
 $$
 with status: leading primordial branch value at $A_Q=1$;
@@ -4825,14 +4829,15 @@ with status: leading primordial product-lock value at $A_Q=1$;
 $$
 \eta_B
 =
-0.282\cdot0.9997\cdot0.63\cdot3.47\times10^{-9}
+0.282\cdot0.9997\cdot0.63\cdot
+\exp\left[-\left(19.25+\frac{\ln2}{3}\right)\right]
 =
-6.1629525594\ldots\times10^{-10},
+6.151021447823927981\ldots\times10^{-10},
 \tag{X.9.6.45}
 $$
-with status: Appendix Y transport-branch value, theorem-level only after acceptance of the baryogenesis transport certificate.
+with status: Appendix Y illustrative transport-branch factor product. It is theorem-level only when one forward-locked common record proves the Theorem-Y.11.2 additive-action/complement/readout package, the independent $\varepsilon_0=\ln2$ and $N_g=3$ branches, the exact values of all displayed prefactors, and the product's evaluated equality to an accepted finite transport interval under Corollary Y.6.1e or Corollary Y.11.7g; the displayed point equality additionally requires a singleton residual interval.
 
-*Proof.* Each entry is a deterministic image of fixed branch quantities under ordinary arithmetic. Equation (X.9.6.38) follows from the capacity-saturation value $u^*=2^{1/8}-1$. Substituting (X.9.6.38) and $K_0=3$ into the sinc-improved Thomson certificate-core expression of Definition Z.27.11a with $R_lpha=0$ gives (X.9.6.39). Substituting the Appendix U reference prefactor $A_{\mathrm{eff}}=0.923$ into
+*Proof.* Each entry is a deterministic image of fixed branch quantities under ordinary arithmetic. Equation (X.9.6.38) follows from the capacity-saturation value $u^*=2^{1/8}-1$. Substituting (X.9.6.38) and $K_0=3$ into the sinc-improved Thomson certificate-core expression of Definition Z.27.11a with $R_\alpha=0$ gives (X.9.6.39). Substituting the Appendix U reference prefactor $A_{\mathrm{eff}}=0.923$ into
 $$
 \Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa}
 $$

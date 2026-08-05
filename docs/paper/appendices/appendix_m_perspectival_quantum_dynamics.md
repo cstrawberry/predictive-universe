@@ -354,7 +354,7 @@ This generates an apparent contradiction: $F$ asserts a definite outcome occurre
 
 At least one assumption must fail. The logical structure of their argument proceeds through a chain of inferences where observer $\bar{F}$ reasons about $F$'s observation, $W$ reasons about $\bar{F}$'s reasoning, and $\bar{W}$ reasons about $W$'s reasoning, ultimately deriving $\bar{W}$'s certainty about an outcome that contradicts the quantum-mechanical prediction.
 
-### M.6.2 Resolution via Perspectival States
+### M.6.2 Conditional Record Semantics via Perspectival States
 
 On the registered perspectival-instrument branch, the two descriptions are typed as follows.
 
@@ -382,23 +382,16 @@ Equations (M.10) and (M.11) are propositions with different perspective indices.
 
 **Remark M.6.1: Idealized Isolation.** The Wigner's Friend scenario stipulates idealized isolation of $F$'s laboratory—no decoherence channels connect $F+Q$ to $W$'s environment during the intermediate period. In realistic settings, environmental decoherence would establish shared perspective records through uncontrolled 'Evolve' events before $W$ deliberately opens the laboratory [Zurek 2003; Schlosshauer 2007]. The paradox arises precisely because the gedanken experiment suppresses these channels.
 
-**Lemma M.6.1 (Correlated Perspective Dynamics Under Certified Strong Readout).** Let $W$ and $F$ have perspectives $s_W,s_F\in\Sigma$. Condition on a realized record value $k$ and suppose: (a) the two post-actualization noises are conditionally independent given $k$; (b) each one-perspective kernel $G_\lambda(s,\cdot)$ satisfies $G_\lambda(s,\cdot)\Rightarrow\delta_{s_k}$ as $\lambda\to\infty$ for the retained initial states; and (c) on the contractive branch,
+**Lemma M.6.1 (Correlated Perspective Dynamics Under Certified Strong Readout).** Let $W$ and $F$ have perspectives $s_W,s_F\in\Sigma$ and condition on a registered record value $k$. Suppose: (a) the two post-registration noises are conditionally independent given $k$; (b) each one-perspective kernel $G_\lambda(s,\cdot)$ satisfies $G_\lambda(s,\cdot)\Rightarrow\delta_{s_k}$ as $\lambda\to\infty$ for the retained initial states; and (c) on the global contractive branch,
 $$
-\operatorname{Ric}_\Sigma+\operatorname{Hess}_\Sigma V_k
-\succeq\kappa_{\mathrm{eff}}g_\Sigma
+G_\lambda(s,\cdot)=P_{\Delta t,\lambda}^{(k)}(s,\cdot),\quad P_{t,\lambda}^{(k)}=e^{t\mathcal L_{\Sigma,\lambda}^{(k)}},\quad \mathcal L_{\Sigma,\lambda}^{(k)}=\Delta_\Sigma-\langle\nabla V_{k,\lambda},\nabla(\cdot)\rangle,
 $$
-globally on $\Sigma$, or the corresponding bound holds for a separately defined invariant stopped process. Then
+and one common $\kappa_{\mathrm{eff}}$ satisfies $\operatorname{Ric}_\Sigma+\operatorname{Hess}_\Sigma V_{k,\lambda}\succeq\kappa_{\mathrm{eff}}g_\Sigma$ globally for every retained $\lambda$. Alternatively, a separately defined stopped or reflected product process may be used only when its accepted boundary-condition record directly verifies the same Wasserstein estimate below. Then
 $$
-G_{\mathrm{persp}}^{(WF)}((s'_W,s'_F)\mid(s_W,s_F),k,N,\Delta t)
-=G_\lambda(s_W,ds'_W)G_\lambda(s_F,ds'_F),
-\tag{M.12}
+G_{\mathrm{persp}}^{(WF)}((s'_W,s'_F)\mid(s_W,s_F),k,N,\Delta t)=G_\lambda(s_W,ds'_W)G_\lambda(s_F,ds'_F),\tag{M.12}
 $$
-the joint strong-readout law converges weakly to $\delta_{(s_k,s_k)}$, and, with the product metric,
-$$
-W_2(\mu^{(WF)}G^{(WF)},\nu^{(WF)}G^{(WF)})
-\le e^{-\kappa_{\mathrm{eff}}\Delta t}W_2(\mu^{(WF)},\nu^{(WF)}).
-\tag{M.13}
-$$
+the joint strong-readout law converges weakly to $\delta_{(s_k,s_k)}$, and, with product metric,
+$$W_2(\mu^{(WF)}G^{(WF)},\nu^{(WF)}G^{(WF)})\le e^{-\kappa_{\mathrm{eff}}\Delta t}W_2(\mu^{(WF)},\nu^{(WF)}).\tag{M.13}$$
 
 *Proof.* Conditional independence gives the product kernel (M.12). If $\varphi$ is bounded and continuous on $\Sigma^2$, product weak convergence gives
 $$
@@ -406,63 +399,59 @@ $$
 \longrightarrow
 \varphi(s_k,s_k),
 $$
-which is precisely convergence to $\delta_{(s_k,s_k)}$. For the product potential $V_k^{(WF)}(x,y)=V_k(x)+V_k(y)$ and product metric,
+which is precisely convergence to $\delta_{(s_k,s_k)}$. On the global diffusion branch, the product kernel is the time-$\Delta t$ semigroup of the product generator with potential
 $$
-\operatorname{Ric}_{\Sigma^2}+\operatorname{Hess}_{\Sigma^2}V_k^{(WF)}
-=
-(\operatorname{Ric}_\Sigma+\operatorname{Hess}_\Sigma V_k)
-\oplus
-(\operatorname{Ric}_\Sigma+\operatorname{Hess}_\Sigma V_k)
-\succeq
-\kappa_{\mathrm{eff}}g_{\Sigma^2}.
+V_{k,\lambda}^{(WF)}(x,y)=V_{k,\lambda}(x)+V_{k,\lambda}(y).
 $$
-The Bakry–Émery Wasserstein contraction theorem therefore gives (M.13). ∎
+Its Bakry--Émery tensor is
+$$
+\operatorname{Ric}_{\Sigma^2}+\operatorname{Hess}_{\Sigma^2}V_{k,\lambda}^{(WF)}=(\operatorname{Ric}_\Sigma+\operatorname{Hess}_\Sigma V_{k,\lambda})\oplus(\operatorname{Ric}_\Sigma+\operatorname{Hess}_\Sigma V_{k,\lambda})\succeq\kappa_{\mathrm{eff}}g_{\Sigma^2}.
+$$
+The Bakry--Émery Wasserstein contraction theorem gives (M.13). On the stopped/reflected alternative, (M.13) is exactly the independently verified product-process certificate required in clause (c). ∎
 
-**Theorem M.6.1 (Wigner's Friend Resolution for Record-Reading Interactions).** Let $F$ and $W$ be observers with initial perspectives $s_F, s_W \in \Sigma$. Suppose that at time $t_1$ the observer $F$ undergoes an 'Evolve' interaction with system $Q$, yielding record value $k$ and updated perspective $s'_F$. Assume that at a later time $t_2>t_1$, $W$ performs a record-reading interaction on the $F+Q$ system in the same outcome basis, and that the strong-readout hypotheses of Lemma M.6.1 hold for the resulting joint kernel. Then:
+**Theorem M.6.1 (Conditional Same-Basis Record Consistency for Wigner--Friend Readout).** Work on a branch carrying an accepted normalized instrument, a certified Born selector on its retained effects, a registered single-outcome rule, and the declared perspective-indexed record semantics. Let $F$ and $W$ have initial perspectives $s_F,s_W\in\Sigma$. Suppose that at time $t_1$ a registered `Evolve` instrument event on $F+Q$ registers value $k$ for $F$ and updates its perspective to $s'_F$. Assume that at a later time $t_2>t_1$, $W$ performs a record-reading interaction on $F+Q$ in the same outcome basis and that the resulting joint kernel satisfies every strong-readout hypothesis of Lemma M.6.1. Then:
 
-(i) For $t_1 < t < t_2$, outcome $k$ is actual relative to $s'_F$, while no definite outcome need be actual relative to $s_W$.
+(i) For $t_1<t<t_2$, the declared semantics assigns the registered record proposition $k$ to $s'_F$; the event at $t_1$ alone forces no corresponding record proposition for $s_W$.
 
-(ii) After the readout interaction at $t_2$, the joint post-interaction perspective law on $\Sigma_W\times\Sigma_F$ becomes concentrated near configurations encoding the same record value $k$; in the ideal strong-readout limit it converges to a configuration with shared outcome label $k$.
+(ii) After the readout at $t_2$, the joint post-interaction perspective law on $\Sigma_W\times\Sigma_F$ is driven toward configurations encoding the same record value $k$; in the ideal strong-readout limit it converges weakly to the common $k$-flag configuration.
 
-No contradiction arises because actuality is indexed by perspective throughout.
+Thus the differently indexed pre-readout record propositions and the later correlated record proposition are jointly satisfiable within the declared semantics. The theorem neither selects that semantics as a unique ontology nor resolves protocols outside its same-basis strong-readout class.
 
 *Proof.*
 
-**Part (i).** By Definition 27, actualization occurs only relative to the perspective participating in the interaction. At $t_1$, $F$ interacts with $Q$, so the pair $(Q,F)$ undergoes amplitude actualization with Born probability in the measurement basis and a perspective transition
+**Part (i).** By the theorem's accepted instrument, Born-selector, and single-outcome hypotheses, the event at $t_1$ registers $k$ for the participating $F+Q$ record and conditions the perspective transition
 $$
 s_F\to s'_F.
 $$
-Since $W$ does not interact with the $F+Q$ system during $(t_1,t_2)$, no corresponding actualization relative to $s_W$ is forced by this event alone. Hence $k$ is actual relative to $s'_F$ but not necessarily relative to $s_W$.
+Because no registered readout by $W$ occurs during $(t_1,t_2)$, the event at $t_1$ forces no corresponding $s_W$-indexed record. Hence the semantics assigns $k$ to $s'_F$ without assigning it to $s_W$.
 
-**Part (ii).** By assumption, the interaction at $t_2$ is a readout of the same record basis. Conditioned on the record value $k$, Lemma M.6.1 supplies a joint kernel on $\Sigma_W\times\Sigma_F$ whose strong-readout limit is concentrated on configurations encoding that same value $k$ for both observers. Therefore the post-interaction perspectives become correlated to the same record, and in the ideal limit they converge to a common outcome-labeled configuration. This is exactly the sense in which the later interaction produces inter-perspective consistency.
+**Part (ii).** Conditioned on $k$, Lemma M.6.1 supplies the joint kernel whose strong-readout limit is concentrated on configurations encoding $k$ for both records. Therefore the later same-basis readout correlates the two registered records and converges in the ideal limit to the common $k$-flag configuration.
 
-Because the two assertions are indexed to different perspectives before $t_2$ and to a later correlated interaction after $t_2$, there is no contradiction. ∎
+The pre-readout propositions carry different perspective indices, and the post-readout proposition follows from a later certified correlation. They are therefore jointly satisfiable in the declared typed calculus. No claim about a unique outcome ontology or a protocol outside the theorem's hypotheses is used. ∎
 
 ### M.6.3 Worked Example: Explicit Perspective Tracking
 
-**Example M.6.1 (Wigner's Friend with Perspective Indices).** Consider a qubit $Q$ initially in state $|\psi\rangle = (|0\rangle + |1\rangle)/\sqrt{2}$ and two observers $F$, $W$ with initial perspectives $s_F^{(0)}$, $s_W^{(0)}$.
+**Example M.6.1 (Same-Basis Wigner--Friend Record Tracking).** Assume the instrument, Born-selector, single-outcome, external-state-assignment, and strong same-basis readout hypotheses of Theorem M.6.1 and Lemma M.6.1. Let $Q$ begin in $|\psi\rangle=(|0\rangle+|1\rangle)/\sqrt2$, and consider the registered run with $F$-record $k=0$.
 
-**Phase 1: $F$ measures $Q$ at $t_1$.**
+**Phase 1: $F$ registers $Q$ at $t_1$.**
 
-- Pre-measurement state relative to $s_F^{(0)}$: $S_{(s_F^{(0)})}(t_1^-) = (|\psi\rangle, s_F^{(0)})$
-- 'Evolve' occurs with outcome $k=0$ (probability $1/2$)
-- Post-measurement: $S_{(s_F^{(1)})}(t_1^+) = (|0\rangle, s_F^{(1)})$ where $s_F^{(1)} \sim G_{\text{persp}}(\cdot|s_F^{(0)}, 0, N_{FQ}, \Delta t)$
-- Outcome 0 is *actual* relative to $s_F^{(1)}$
+- Before the interaction, the declared $F$-indexed state is $S_{(s_F^{(0)})}(t_1^-)=(|\psi\rangle,s_F^{(0)})$.
+- The accepted instrument registers $k=0$ with probability $1/2$ on this ideal branch and conditions the perspective transition.
+- After registration, $S_{(s_F^{(1)})}(t_1^+)=(|0\rangle,s_F^{(1)})$, where $s_F^{(1)}\sim G_{\mathrm{persp}}(\cdot\mid s_F^{(0)},0,N_{FQ},\Delta t)$.
 
-**Phase 2: Intermediate period $t_1 < t < t_2$.**
+**Phase 2: $t_1<t<t_2$.**
 
-- Relative to $s_F^{(1)}$: System is in state $|0\rangle$ — definite
-- Relative to $s_W^{(0)}$ (unchanged, as $W$ has not interacted): System is in state $|\Psi\rangle_{FQ} = (|F_0\rangle|0\rangle + |F_1\rangle|1\rangle)/\sqrt{2}$ — superposition
-- No contradiction: different perspectives, different actualities
+- The retained $F$-indexed ledger contains the definite record $k=0$.
+- No $W$-indexed record has yet been registered. If the accepted external unitary representation is used, $W$ assigns $|\Psi\rangle_{FQ}=(|F_0\rangle|0\rangle+|F_1\rangle|1\rangle)/\sqrt2$.
+- These statements are jointly satisfiable in the declared typed calculus because one is an $F$-indexed record proposition and the other is a $W$-indexed pre-readout state assignment. This is not a theorem that two incompatible unindexed actualities coexist.
 
-**Phase 3: $W$ opens laboratory at $t_2$.**
+**Phase 3: $W$ performs the certified same-basis record readout at $t_2$.**
 
-- $W$ interacts with $F+Q$ system
-- Joint 'Evolve' on $\Sigma_W \times \Sigma_F$ governed by $G_{\text{persp}}^{(WF)}$ correlates perspectives
-- Post-interaction: $(s_W^{(1)}, s_F^{(2)})$ such that both encode outcome 0
-- Both observers now share a common factual record
+- The interaction is the nondemolition same-record-basis readout required by Lemma M.6.1, not an arbitrary superposition-basis Wigner measurement.
+- The joint kernel $G_{\mathrm{persp}}^{(WF)}$ correlates the $W$ and $F$ record flags.
+- In the ideal strong-readout limit, the post-interaction law is supported on configurations for which both retained flags equal $0$.
 
-The apparent paradox dissolves because we never assert both "outcome is definite" and "outcome is indefinite" relative to the *same* perspective.
+Thus the example proves conditional same-basis record consistency. It does not resolve arbitrary Wigner--Friend protocols, select a unique outcome ontology, or cover external superposition-basis measurements outside Theorem M.6.1's hypotheses.
 
 ### M.6.4 Certificate-Scoped Frauchiger--Renner Import Obstruction
 
@@ -515,14 +504,14 @@ The PU resolution bears surface similarity to Rovelli's Relational Quantum Mecha
 | **Mathematical structure** | No explicit perspective space formalism | Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ with Riemannian structure (Definition 25, Theorem 25) |
 | **Dynamics** | No quantitative mechanism for perspective change | Explicit drift-diffusion realization of $G_{\text{persp}}$ on $\Sigma$ (Equations M.5a–b) |
 | **Consistency criterion** | Interactions establish relations (qualitative) | Bakry-Émery control yields $W_2$-contractive convergence for the constructed class (Equation M.5c) |
-| **Origin of probability** | Born rule assumed | On the accepted carrier branch, Principle 11b fixes the invariant response ledger, Principle 8.0b and $\mathfrak C_{\mathrm{car}}$ fix the complex carrier, and Theorems 8.2–8.3 give its unique Born trace representation from normalized additive/noncontextual effect probabilities; Principle 8.0c separately supplies irreducible registered single outcomes |
+| **Origin of probability** | Born rule assumed | On the accepted carrier branch, Principle 11b fixes the invariant response ledger, Principle 8.0b and $\mathfrak C_{\mathrm{car}}$ fix the complex carrier, Theorem 8.2 and Lemma 8.2a give quotienting and retained additivity, and Definition 8.2b plus Theorem 8.3 give the unique trace representation on the accepted full-domain or finite informationally complete positive-reconstruction route; Principle 8.0c separately supplies irreducible registered single outcomes |
 | **Temporal structure** | Time assumed | Directed order is required by Theorem 4; a thermodynamic arrow follows only on the independently certified Appendix O branch |
 
 **Remark M.6.3: RQM as Limiting Case.** Relational Quantum Mechanics can be understood as capturing the interpretive content of the PU perspectival formalism when the underlying derivational structure (SPAP, PCE, MPU dynamics) is suppressed and only the relational consequences retained. The distinction is one of derivational route rather than certified necessity: on the declared response branch, PU represents prediction perspectivally (Corollary 1) and supplies an explicit perspective-space formalism and dynamics, while RQM takes the relational character as an interpretive starting point. PU's route is conditional on its stated branch records; it does not prove that quantum mechanics must be relational.
 
 ### M.6.6 Toward Completing the Relativistic Program
 
-The perspectival resolution of Wigner's Friend extends a conceptual program initiated by Einstein's 1905 analysis of simultaneity.
+The conditional same-basis record-consistency construction admits a structural comparison with Einstein's operational treatment of simultaneity. The comparison does not transfer the Lorentzian relativity theorem to outcome ontology or select perspectival semantics uniquely.
 
 **The Relativistic Insight.** Einstein's key move was recognizing that "simultaneity" had no absolute meaning—it was operationally defined relative to reference frames. What appeared to be an objective, frame-independent fact (whether two events are simultaneous) was revealed to be frame-dependent once the operational content was examined carefully. This was not a retreat from objectivity but its proper relativization.
 
@@ -752,7 +741,7 @@ The certificate-scoped perspectival analysis of Wigner's Friend has the followin
 
 **1. No Primitive Heisenberg Cut on the Registered Instrument Branch.** On the separately assumed Hilbert/instrument/Born and actualization branch, a registered verification/update event is represented by the `Evolve` instrument of Definition 27 and Proposition 9. The same representation can be used across the qualifying implementations without inserting a size- or consciousness-based cut. This does not make every MPU interaction an actualization event and does not derive the instrument or outcome ontology from SPAP or PCE.
 
-**2. No Privileged Observers.** All perspectives $s \in \Sigma$ are equally valid; none occupies a "God's eye view" from which actuality is absolute. This democratic structure parallels the equivalence of inertial frames in special relativity. Just as no inertial frame is privileged for determining "true" simultaneity, no perspective is privileged for determining "true" outcome actuality.
+**2. No Distinguished Registered Perspective.** The declared perspective space and transition rules assign the same formal type to every $s\in\Sigma$ and contain no distinguished element. This is an internal symmetry of the registered semantics; it does not by itself exclude an absolute or response-equivalent latent ontology.
 
 **3. Certificate-Scoped Extended Wigner's-Friend Imports.** Definition M.6.2 requires a record-sharing or perspective-invariance certificate for an actualized record imported across distinct perspectives, and Lemma M.6.2a gives the corresponding import normal form. Theorem M.6.2b proves that the displayed Frauchiger–Renner-style import is ill typed when neither certificate exists. Any extended Wigner's-Friend argument containing an import that satisfies those hypotheses is blocked at that import; analysis of the complete Frauchiger–Renner protocol requires a separate formalization.
 
@@ -778,13 +767,13 @@ Quantum facts in this model are indexed to the perspective that records them, mu
 
 **Technical ledger.**
 
-The perspectival resolution of quantum measurement represents not a retreat from realism but its appropriate generalization. Just as Einstein taught us that certain spatiotemporal facts require frame specification, the PU framework teaches that certain quantum facts require perspective specification.
+The perspectival construction is a conditional semantics for registered quantum records. It establishes typed consistency on its accepted instrument and readout branches; it does not prove that perspective indexing is the unique ontology.
 
-The key elements of the resolution are:
+The key elements of the construction are:
 
 1. **Complete operational state specification** includes both the density operator and the registered perspective: $S_{(s)}(t)=(\rho(t),s)$.
 
-2. **Actuality is perspective-relative**: Outcomes are actual relative to the perspective participating in the 'Evolve' interaction
+2. **Registered outcomes are perspective-indexed**: on the accepted instrument, Born-selector, and single-outcome branch, an outcome record is indexed to the perspective participating in the registered `Evolve` event
 
 3. **Certified readout kernels correlate perspectives**: under every hypothesis of Lemma M.6.1, the joint strong-readout law converges to a common outcome flag; normalization alone does not imply consistency.
 
@@ -1377,7 +1366,7 @@ No value or divergence law for $\mu_S(w)$ follows without evaluating (M.18), and
 
 A register permutation alone does not establish (M.10.9d.2). The receiver-role certificate must prove that off-target addressing lies in the external Fisher component and that indirect propagation does not return a nonzero component to the self-model subspace.
 
-### M.10.10 Measurement as Entropic Perspective Transport
+### M.10.10 Static Entropic Perspective Coupling with Prescribed Endpoint Marginals
 
 **Definition M.10.10a (Entropic Perspective-Transport Problem).** Let $(\Sigma,d_\Sigma)$ be the compact perspective space of Appendix M and let $c(s,s')=d_\Sigma(s,s')^2$ be the quadratic perspective-transport cost. For a measurement partition $\{P_k\}$ and pre-measurement state $\rho$, let
 $$
@@ -1862,9 +1851,9 @@ The deterministic quotient map $q(r)=[r]$ satisfies $\mathcal M_{\min}=q\circ\ma
 
 The observables of the finite classical quotient are all bounded functions on $R/{\sim}$, giving item 4. Finally, every exactly sufficient post-processing determines $[R]$ by item 3; any additional retained distinction is a refinement that changes none of the listed risks. Strict PCE monotonicity excludes every strict such refinement, leaving only relabelings of $R/{\sim}$. This proves item 5. ∎
 
-**Corollary M.6.11c (Pointer Classicality Without Extra Ontology).** In a finite measurement context, the classical pointer record is the PCE-minimal sufficient statistic of the interaction channel. Its commutativity follows from minimal record status, not from adding a separate classical substance.
+**Corollary M.6.11c (Classical-Record Quotient and Conditional PCE Minimality).** Given an independently registered classical finite record channel $\mathcal M:\Theta\to\Delta(R)$, its risk-equivalence quotient is exactly sufficient and has commutative output algebra $\ell^\infty(R/{\sim})$. If PCE cost is strictly increasing under every sufficient refinement that changes none of the registered task risks, the quotient is also the unique PCE-minimal sufficient record up to relabeling. A quantum interaction supplies such a classical record only after an independent instrument, dephasing, and readout bridge is registered.
 
-*Proof.* Apply Theorem M.6.11b to the finite record alphabet produced by the measurement interaction. The selected quotient output algebra is $\ell^\infty(R/{\sim})$, hence commutative. ∎
+*Proof.* Items 1--3 of Theorem M.6.11b give exact sufficiency. Item 4 identifies the quotient algebra as $\ell^\infty(R/{\sim})$, whose commutativity is inherited from the assumed classical record alphabet rather than derived from minimality. Under the strict-cost hypothesis, item 5 gives PCE minimality and uniqueness up to relabeling. ∎
 
 **Definition M.6.11d (PPI-Objective Fragment Family).** Let $S$ be a finite system with PCE-minimal classical record alphabet $X$ selected by Theorem M.6.11b, and let $E_1,\dots,E_N$ be disjoint finite environmental fragments. A state on
 $$
@@ -1914,13 +1903,13 @@ $$
 \tag{M.6.11.9}
 $$
 
-**Theorem M.6.11e (Spectrum-Broadcast PPI Objectivity on the Dephased Branch).** Let $X$ satisfy Definition M.6.11d and assume that the PCE-compressed joint state is invariant under dephasing in the selected record basis:
+**Theorem M.6.11e (Spectrum-Broadcast PPI Objectivity on the Dephased Branch).** Let $X$ be the risk-equivalence quotient output of $\mathcal M_{\min}$ in Theorem M.6.11b, and assume that PCE cost is strictly increasing under every sufficient record refinement that changes none of the registered risks. Assume also that the PCE-compressed joint state is invariant under dephasing in the selected record basis:
 $$
 (\Delta_X\otimes\operatorname{id}_{E_1\cdots E_N})(\rho)=\rho,
 \qquad
 \Delta_X(Y)=\sum_x|x\rangle\langle x|Y|x\rangle\langle x|.
 $$
-Then $X$ is exactly PPI-objective if and only if the joint state has the spectrum-broadcast form (M.6.11.8)–(M.6.11.9).
+Then $X$ is exactly PPI-objective in the sense of Definition M.6.11d if and only if the joint state has the spectrum-broadcast form (M.6.11.8)–(M.6.11.9).
 
 Thus the layered structure is:
 
@@ -1965,9 +1954,9 @@ Because $0\le M_i^x\le1$, this forces $M_i^x$ to act as the identity on $\operat
 
 The three-layer statement is only a restatement of the roles of Theorem G.1.7, Theorem M.6.11b, and the present theorem. ∎
 
-**Corollary M.6.11f (Objectivity Without Perspective-Independent Ontology).** A classical fact shared by many perspectives is a PCE-minimal broadcast record. It is objective because many disjoint fragments independently recover the same minimal statistic $X$, not because the framework adds a perspective-free state of affairs.
+**Corollary M.6.11f (Objectivity Without Perspective-Independent Ontology).** Under Theorem M.6.11e's strict-cost and dephasing hypotheses, a classical fact shared by many perspectives is a PCE-minimal broadcast record. It is objective because many disjoint fragments independently recover the same minimal statistic $X$, not because the framework adds a perspective-free state of affairs.
 
-*Proof.* Theorem M.6.11e says that exact public objectivity is equivalent to redundant fragment recovery with conditional independence in the spectrum-broadcast form. The record $X$ is selected by PCE minimality through Theorem M.6.11b. Hence objectivity is redundancy plus minimal sufficient record structure. ∎
+*Proof.* Theorem M.6.11e identifies exact public objectivity with redundant fragment recovery and conditional independence in spectrum-broadcast form. Its strict-cost premise and Theorem M.6.11b(5) select $X$ as the unique PCE-minimal sufficient record up to relabeling. ∎
 
 ### M.6.12 PCE Information-Bottleneck Universality
 
@@ -2386,17 +2375,23 @@ $$
 $$
 between finite-dimensional $C^*$-algebras containing those operator systems. If outcome-resolved maps are retained, assume CP maps $\Phi_r:\mathcal A_Y\to\mathcal A_X$ with $\sum_r\Phi_r=\Phi$; these form the instrument. Without outcome-resolved data, the conclusion is the one-outcome channel $\Phi$.
 
-The channel has a minimal Stinespring dilation whose environment dimension is $\operatorname{rank}J(\Phi)$. For an instrument, apply this statement to the channel
+Assume for the Choi-rank statement that $\mathcal A_X=\mathcal B(\mathcal H_X)$ and $\mathcal A_Y=\mathcal B(\mathcal H_Y)$. The channel has a minimal Stinespring dilation whose environment dimension is $\operatorname{rank}J(\Phi_*)$, where $\Phi_*$ is the Schrödinger adjoint. For an instrument, define the flagged Schrödinger channel
 $$
-\widetilde\Phi(a)=\bigoplus_r\Phi_r(a)
+\widehat\Phi_*(\rho)
+:=
+\sum_r\Phi_{r,*}(\rho)\otimes|r\rangle\langle r|.
 $$
-including the classical outcome register. Minimal dilations are unique up to a unitary on equal minimal environments, and every nonminimal dilation contains the minimal one through an isometry. If the PCE ledger assigns strictly greater cost to response-null environmental refinements, it selects this minimal dilation up to that unitary equivalence. No multi-time minimal-memory conclusion follows without a separately stated comb-memory optimization theorem.
+It is completely positive, and it is trace preserving because $\sum_r\Phi_r(I)=I$. Its Heisenberg dual is
+$$
+\widehat\Phi\big((a_r)_r\big)=\sum_r\Phi_r(a_r).
+$$
+The minimal environment dimension is $\operatorname{rank}J(\widehat\Phi_*)$. Minimal dilations are unique up to a unitary on equal minimal environments, and every nonminimal dilation contains the minimal one through an isometry. If the PCE ledger assigns strictly greater cost to response-null environmental refinements, it selects this minimal dilation up to that unitary equivalence. No multi-time minimal-memory conclusion follows without a separately stated comb-memory optimization theorem.
 
 *Proof.* The CP extension between $\mathcal A_Y$ and $\mathcal A_X$ is a hypothesis, so the finite-dimensional Choi matrix $J(\Phi)$ is positive. A rank decomposition
 $$
 J(\Phi)=\sum_{a=1}^r|v_a\rangle\langle v_a|
 $$
-with $r=\operatorname{rank}J(\Phi)$ yields $r$ Kraus operators and hence a Stinespring environment of dimension $r$. Conversely, tracing an environment of dimension $m$ gives at most $m$ linearly independent Kraus operators, so $m\ge\operatorname{rank}J(\Phi)$. This proves minimality. The standard minimal-Stinespring uniqueness argument identifies two minimal Kraus spans by a unitary; a nonminimal Kraus family is related by an isometry. The same argument applied to $\widetilde\Phi$ proves the instrument statement. Strict PCE monotonicity removes only the stipulated response-null refinements. ∎
+with $r=\operatorname{rank}J(\Phi)$ yields $r$ Kraus operators and hence a Stinespring environment of dimension $r$. Conversely, tracing an environment of dimension $m$ gives at most $m$ linearly independent Kraus operators, so $m\ge\operatorname{rank}J(\Phi)$. This proves minimality. The standard minimal-Stinespring uniqueness argument identifies two minimal Kraus spans by a unitary; a nonminimal Kraus family is related by an isometry. The same argument applied to the flagged channel $\widehat\Phi_*$ proves the instrument statement. Strict PCE monotonicity removes only the stipulated response-null refinements. ∎
 
 ## M.7 Conclusion
 

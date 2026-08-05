@@ -314,7 +314,7 @@ Such a chain is impossible in $\mathcal{R}$ by Corollary 4.2.6b. This regress in
 
 Theorem 4.2.6c is a representational impossibility result: it demonstrates that perfect self-prediction at a time $t^*$, when the prediction is instantiated as part of the operational state under an unfolded description requirement, leads to structural contradiction. The obstruction is representational, not computational: it persists regardless of available resources, depending solely on the well-foundedness of proper components for finite unfolded representations.
 
-**Applicability to PU.** Within the Predictive Universe framework, any prediction that is concretely instantiated—written to a register, stored in memory, or otherwise encoded in classical degrees of freedom accessible to verification—falls within Theorem 4.2.6c at the operational level. The theorem does not directly diagonalize the full Perspectival State $S_{(s)}(t)=(\rho(t),s)$ of Definition 24, whose quantum component may be mixed and need not be available as a finite classical register. It establishes that an embedded predictor's operational output cannot be a complete unfolded description of a state that contains that very output.
+**Applicability to PU.** Within the Predictive Universe framework, a concretely instantiated prediction falls within Theorem 4.2.6c at the operational level only when its operational description satisfies assumptions (i)–(iii), including the strict unfolded-containment condition $\mathrm{Out}(s)\prec\mathrm{Desc}(s)$. Writing a prediction to a register, storing it in memory, or encoding it in classical degrees of freedom accessible to verification does not by itself establish that condition. The theorem does not directly diagonalize the full Perspectival State $S_{(s)}(t)=(\rho(t),s)$ of Definition 24, whose quantum component may be mixed and need not be available as a finite classical register. It establishes that, under assumptions (i)–(iii), an embedded predictor's operational output cannot be a complete unfolded description of a state that contains that very output.
 
 **Two representation regimes.** The theorem's premises distinguish:
 
@@ -448,13 +448,27 @@ Consequently, a finite budget excludes $\delta_{SPAP}\downarrow0$ only on this c
 
 *Proof.* Theorem 13 gives $C(M_n)\ge c_0+nk$; comparison with $B_C(T)$ yields the depth bound. Under $\mathfrak C_{B.2}$, Theorem 14 gives the displayed lower bound for $C_{\mathrm{uni}}$. The budget bridge gives $B_C(T)\ge C_{\mathrm{uni}}$, completing the second implication. ∎
 
-**Corollary 14.1a (Conditional Operational Self-Modeling Hierarchy).** Predictive systems are stratified by sustainable reflexive depth. Choose an operational horizon and an accounting branch on which each additional functionally distinct self-modeling level contributes the non-shared overhead $k>0$ of Theorem 13 to a physical implementation budget that is strictly increasing in retained operational complexity. On that branch, higher sustainable reflexive depth requires strictly greater physical implementation budget.
+**Corollary 14.1a (Conditional Operational Self-Modeling Lower-Bound Hierarchy).** Choose an operational horizon and a strictly increasing registered physical-budget lower-bound map $b$ from retained operational complexity to physical implementation budget. If the depth-$n$ implementation budget obeys
+$$
+B_{\mathrm{phys}}(M_n)\ge b(C(M_n)),
+$$
+then Theorem 13 gives the certified lower bound
+$$
+B_{\mathrm{phys}}(M_n)\ge b(c_0+nk).
+$$
+For $n_2>n_1$, these certified lower bounds are strictly ordered. A strict ordering of the actual depth-constrained infima additionally requires tightness or an independent comparison theorem.
 
-*Proof.* Theorem 13 gives
+*Proof.* Theorem 13 gives $C(M_n)\ge c_0+nk$. Monotonicity of $b$ yields
 $$
-C(M_n)\ge c_0+nk.
+B_{\mathrm{phys}}(M_n)
+\ge b(C(M_n))
+\ge b(c_0+nk).
 $$
-If $n_2>n_1$, then the lower bounds differ by $(n_2-n_1)k>0$. The stated accounting hypothesis maps this non-shared increase strictly monotonically into physical implementation budget at the chosen horizon. Hence the minimum physical budget for depth $n_2$ is strictly greater than the corresponding minimum for depth $n_1$. ∎
+If $n_2>n_1$, then $c_0+n_2k>c_0+n_1k$ because $k>0$, and strict monotonicity gives
+$$
+b(c_0+n_2k)>b(c_0+n_1k).
+$$
+This compares the certified lower bounds and makes no infimum-attainment claim. ∎
 
 
 
@@ -475,7 +489,11 @@ $$
 $$
 is the certified distance of the self-model task family from the SPAP boundary. The ledger is task- and horizon-relative: it does not assert that every bit of self-modeling competes with every external task, and it does not identify shared representation cost with a separate resource unless the additivity audit does so.
 
-**Proposition 14.1e (Predictive Complementarity as a Budget Frontier).** Suppose $\mathfrak C_{\mathrm{SW}}$ is accepted and $\mathcal T_{\mathrm{self}}$ contains an SPAP-limited self-model verification/update task to gap $\delta_{\mathrm{self}}\in(0,\delta_0]$. Then there is a branch constant $c_{\mathrm{SPAP}}>0$ from the Theorem 14 lower-bound comparison such that
+**Proposition 14.1e (Predictive Complementarity as a Budget Frontier).** Suppose $\mathfrak C_{\mathrm{SW}}$ is accepted, $\mathcal T_{\mathrm{self}}$ contains an SPAP-limited self-model verification/update task to gap $\delta_{\mathrm{self}}\in(0,\delta_0]$, the certificate $\mathfrak C_{B.2}$ of Theorem 14 covers that task, and the additivity audit contains a no-double-counting bridge satisfying
+$$
+C_{\mathrm{self}}\ge C_{\mathrm{uni}}(\delta_{\mathrm{self}}).
+$$
+Then there is a branch constant $c_{\mathrm{SPAP}}>0$ from the Theorem 14 lower-bound comparison such that
 $$
 C_{\mathrm{world}}
 \le

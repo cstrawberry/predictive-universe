@@ -14,7 +14,7 @@ The foundational substrate, according to Hypothesis 1, is a dynamic network $\ma
 
 **11.2 Metric Distance from ND-RID Propagation Costs**
 
-The fundamental interaction process, ND-RID ('Evolve', Definition 27), is thermodynamically irreversible ($\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$, Theorem 31) and information-limited by the completed reset-support deficit of Proposition E.2a. On refresh/minorization branches it is additionally strictly contractive ($f_{RID} < 1$, Lemma E.1). Propagating information incurs costs related to these limitations.
+Definition 27 nominates ND-RID (`Evolve`) as an interaction/update law. On a cycle that separately implements a registered reset, Theorem 31 gives $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$; a positive floor requires $H_q(P\mid R)\ge h_{\min}>0$, and Proposition E.2a's completed reset-support deficit belongs to the same reset ledger. On a refresh/minorization branch Lemma E.1 additionally gives strict contraction $f_{RID}<1$. Definition 27 alone implies neither thermodynamic irreversibility, a positive reset cost, nor strict contraction; propagation costs may use these entries only on their accepted branches.
 
 **11.2.1 Definition 35 (Def 35): Propagation Cost Metric $d_{\mathcal{N}}$**
 
@@ -110,7 +110,7 @@ $$
 
 **Corollary 35b.1 (Causal-Speed and Area-Capacity Scope).** The emergent causal speed is calibrated from the latency/length branch, whereas the horizon entropy density and $G$ are calibrated from the cut-capacity/area branch. They are projections of one edge ledger but no theorem identifies either from the other without an additional response-active constitutive relation.
 
-*Proof.* Theorem 35b(1) composes path latency from the edge values $\tau_e$, while Theorem 35b(2) composes cut capacity from the edge values $C_e$. Item 3 of that theorem supplies one-edge ledgers having equal latency and unequal capacity and ledgers having equal capacity and unequal latency. Hence neither functional determines the other. The causal-speed calibration uses path length divided by path latency, whereas the horizon entropy and $G$ calibration uses capacity per cut area. An implication between those calibrations would therefore require an additional relation between $\tau_e$ and $C_e$, which is not present in Theorem 35b. ∎
+*Proof.* Theorem 35b(1) composes path latency from the edge values $\ell_e$, while Theorem 35b(2) composes cut capacity from the edge values $u_e$. Item 3 of that theorem supplies one-edge ledgers having equal latency and unequal capacity and ledgers having equal capacity and unequal latency. Hence neither functional determines the other. The causal-speed calibration uses path length divided by path latency, whereas the horizon entropy and $G$ calibration uses capacity per cut area. An implication between those calibrations would therefore require an additional relation between $\ell_e$ and $u_e$, which is not present in Theorem 35b. ∎
 
 For finite diagnostic comparisons on a fixed connected MPU population graph with $2\le |\mathcal V|<\infty$, the corresponding dimensionless propagation-efficiency observable is
 $$
@@ -141,15 +141,38 @@ K_1\left(\frac{R}{\delta_{eff,n}}\right)^D
 $$
 Here $B_R(v)$ is the propagation-metric ball and $\delta_{eff,n}$ is a declared characteristic microscopic cost length. For an infinite network the upper scale may be infinite. This condition defines a uniform effective dimension only on the registered scale windows.
 
-**11.3.2 Definition 37 (Def 37): Uniformly Bounded Synthetic Ricci Curvature**
+**11.3.2 Definition 37 (Def 37): Uniform Synthetic-Ricci/Bochner Transfer Package**
 
 A network $\mathcal{N}$ has uniformly bounded synthetic Ricci curvature if it belongs to a class for which there exists a constant $K$ and a discrete curvature-dimension / Bochner control, or an equivalent radius-2 curvature-transfer theorem, yielding $\text{Ric}_N \ge -K$ uniformly and, together with Definition 36, uniform volume-doubling and a (1,2) Poincaré-type inequality for the associated counting measure on $(\mathcal{V}, d_{\mathcal{N}})$. This controls local divergence/convergence of geodesics in the sense required for the measured compactness and rectifiability statements used in Theorem 44. A stand-alone one-step Ollivier-Ricci lower bound counts here only when accompanied by such a transfer mechanism.
 
-**Theorem 43 (Necessary Emergence of Geometric Regularity)**
+**Theorem 43 (Geometric Regularity under a Verified Strict Comparator)**
 
-Assume the regularity-penalty hypotheses established in Appendix C and the variational/stochastic hypotheses of Appendix D, including the existence of the PCE potential $V$, the coercivity/compactness hypotheses used in Theorem D.3, and, when stationary concentration is invoked, the low-noise detailed-balance hypotheses of Theorem D.5. Then geometric regularity, encompassing both uniform $D$-dimensional polynomial volume growth (Definition 36) and uniformly bounded synthetic Ricci curvature (Definition 37), is a necessary condition for membership in the global-minimum sector of $V$. In particular, every global minimum of the PCE potential is geometrically regular, and in the low-noise detailed-balance regime the invariant measure of Theorem D.5 concentrates near that regular low-potential sector.
+Let $V=V_{\mathrm{core}}+V_{\mathrm{proxy}}$. Assume a registered regular-comparator certificate
+$$
+\mathfrak C_{\mathrm{reg}}=(\mathcal R,\delta,\mathcal V)
+$$
+for the declared admissible class. Its verifier $\mathcal V$ must terminate on every encoded irregular configuration $x$ and certify, by exact or outward-rounded evaluation,
+$$
+\mathcal R(x)\text{ is admissible and geometrically regular},
+\qquad
+V_{\mathrm{proxy}}(\mathcal R(x))=V_{\mathrm{proxy}}(x),
+$$
+$$
+\delta(x)>0,
+\qquad
+V_{\mathrm{core}}(\mathcal R(x))
+\le V_{\mathrm{core}}(x)-\delta(x).
+\tag{11.43.1}
+$$
+For an infinite encoded class, acceptance additionally requires a machine-checked termination and coverage proof for $\mathcal V$. Then every global minimizer of $V$ is geometrically regular. If assumptions (A1)--(A6) and the reversible low-noise subbranch of Theorem D.5 also hold, the invariant measures concentrate near this regular global-minimum sector.
 
-*Proof.* Appendix C provides the necessity estimates: anomalous dimension destroys viability/coherence (Theorem C.2), large curvature fluctuations raise operational cost and destabilize local dynamics (Theorem C.4), and Theorem C.6 packages these requirements as local doubling/Poincaré control. Appendix D incorporates these penalties into the optimization dynamics: Lemma D.3 quantifies the geometric penalty, Theorem D.2 shows that irregular configurations incur a strict increase in the core potential, and Theorem D.3 concludes that every global minimizer of $V$ is geometrically regular. Under the additional low-noise detailed-balance hypotheses (A1)–(A6) of Appendix D, Theorem D.5 yields the invariant-measure concentration statement. Combining these results proves the theorem. ∎
+*Proof.* If a global minimizer $x^*$ were irregular, (11.43.1) would give
+$$
+V(\mathcal R(x^*))-V(x^*)
+=V_{\mathrm{core}}(\mathcal R(x^*))-V_{\mathrm{core}}(x^*)
+\le-\delta(x^*)<0,
+$$
+contradicting minimality. The last statement is exactly the additional concentration conclusion of Theorem D.5. Lemma D.3 supplies a finite implementation of the comparison verifier on registered families; the bare PCE grammar does not supply $\mathfrak C_{\mathrm{reg}}$. ∎
 
 **Theorem 43.5 (Operational Continuum Branch Package).** On the minimal $M=24$, $D=4$ mode-channel branch, let the microscopic adaptation dynamics use the continuum-control PCE potential $V_n^{\mathrm{cont}}$ of Theorem D.6e. Assume an independent continuum-bridge certificate supplies a competitor sequence with $\mathfrak d_n^*\to0$ in the global core-minimum class. Separately assume the D.6e weak-liminf, strong-recovery, and Cheeger-identification hypotheses; the C.6c generator-core/$\Gamma_2$, domain-closure, ambient, and Sobolev-to-Lipschitz hypotheses; fixed-radius geometric noncollapse and interpolation; and $\mu=\mathcal H^4$ whenever strict noncollapse is claimed. Then the low-noise detailed-balance adaptation dynamics concentrate on the asymptotically defect-free operational-continuum branch, and every selected subsequential limit with $\mathfrak D_n\to0$ satisfies:
 
@@ -241,7 +264,7 @@ equipped with normalized counting measures $\mu_n$ such that $\mu_n(B_1(o_n))=1$
 $$
 (M,d_\infty,\mu_\infty,o_\infty).
 $$
-Moreover, $(M,d_\infty,\mu_\infty)$ is a doubling PI space, the limit Cheeger energy is quadratic, and hence the limit is infinitesimally Hilbertian. Under assumption (4), there exists a Borel regular set $M_{reg}\subseteq M$ with $\mu_\infty(M\setminus M_{reg})=0$ such that for every $p\in M_{reg}$ the tangent cones are Euclidean $\mathbb{R}^D$; on the PU branch selected by Theorem Z.11, this means $\mathbb{R}^4$. The Euclidean tangent is unique $\mu_\infty$-a.e.
+Moreover, $(M,d_\infty,\mu_\infty)$ is a doubling PI space, the limit Cheeger energy is quadratic, and hence the limit is infinitesimally Hilbertian. Under the tangent-cone regularity hypotheses carried from Theorem 43.5 and discharged on the Theorem 44a subbranch, there exists a Borel regular set $M_{reg}\subseteq M$ with $\mu_\infty(M\setminus M_{reg})=0$ such that for every $p\in M_{reg}$ the tangent cones are Euclidean $\mathbb{R}^D$; on the PU branch selected by Theorem Z.11, this means $\mathbb{R}^4$. The Euclidean tangent is unique $\mu_\infty$-a.e.
 
 *Proof:* Theorem 43.5 supplies the selected sequence with $\mathfrak D_n\to 0$ from microscopic adaptation dynamics. Theorem C.6e supplies first-shell tensor isotropy only. Fixed-radius geometric noncollapse, D.6e liminf/recovery/Cheeger identification, and the C.6c generator-core/$\Gamma_2$ passage are separate hypotheses; defect convergence records a selected branch but proves none of them. Theorem D.6e gives the finite-core, recovery, and Mosco–Cheeger closure once the corresponding defects vanish. Theorem C.6c gives the stable noncollapsed $\mathrm{RCD}^*(K,4)$ limit because $\mathfrak B_n\to 0$ supplies the required uniform curvature-transfer input. Theorem 44a gives the regular-branch Euclidean-rigidity conclusion when $\mathfrak H_n\to0$. Therefore the family is precompact, the limit Cheeger energy is quadratic, the limit is infinitesimally Hilbertian, and the full-measure regular set has Euclidean $\mathbb R^4$ tangents on the PU branch selected by Theorem Z.11, with the stronger $C^{1,\alpha}$ regularity available on the Theorem 44a subbranch. ∎
 
@@ -554,28 +577,28 @@ $$
 $$
 Letting $\epsilon\to0$ gives $\Omega(p)=1$ for almost every regular point. Thus the causal-diamond inclusion order fixes the conformal geometry, and the predictive capacity valuation fixes the conformal scale. ∎
 
-**Corollary 46c (Spacetime as the Regular Representation of Predictive Inclusion).** On the regular PU branch, the data
+**Corollary 46c (Spacetime as the Regular Representation of Predictive Inclusion).** Assume the complete branch package of Theorem 46b: connected, time-oriented, past- and future-distinguishing globally hyperbolic Lorentzian representatives; inclusion-faithful operational diamond algebras; an inclusion-preserving diamond bijection extending to the generated topological frame and point map; preservation of time orientation, unless equivalence up to global time reversal is intended; and one common positive small-diamond capacity-density normalization. On that class, the data
 $$
 (\mathcal D_{\mathrm{op}},\subseteq,V_{\mathrm{cap}})
 $$
-determine the emergent Lorentzian metric-measure structure up to the explicitly stated capacity-density normalization.
+determine the Lorentzian metric-measure structure up to the declared operational equivalence and the explicitly fixed capacity normalization.
 
-*Proof.* This is exactly Theorem 46b applied to the identity class of operationally equivalent diamond-poset representations. ∎
+*Proof.* The inclusion and extension hypotheses invoke Theorem 46b's causal reconstruction and fix the conformal class. The common small-diamond capacity density fixes the conformal scale. Orientation preservation fixes the time orientation; omitting it leaves the stated global time-reversal ambiguity. ∎
 
-**Corollary 46d (Landauer-Count Form of Causal-Diamond Reconstruction).** Suppose each operational causal diamond $D$ carries an effective Landauer update-cell count
+**Corollary 46d (Landauer-Count Form of Causal-Diamond Reconstruction).** Suppose each operational causal diamond $D$ on each of two connected, time-oriented, past-and-future distinguishing, globally hyperbolic regular Lorentzian branches carries an effective Landauer update-cell count
 $$
 N_L(D)\in\mathbb N
 $$
-and a fixed cell valuation $\nu_L>0$ such that
+and the same specified cell valuation $\nu_L>0$ such that
 $$
-V_{\mathrm{cap}}(D)=\nu_L N_L(D)
+V_{\mathrm{cap}}(D)=\nu_L N_L(D).
 \tag{46d.1}
 $$
-on the branch under consideration. If two regular Lorentzian branches have an inclusion-preserving bijection of operational diamonds and the same Landauer counts,
+Assume a bijection $\Phi$ of the operational diamonds preserves and reflects inclusion, extends to an isomorphism of the generated topological frames with induced point map, and preserves the future/past orientation of diamond tips. Assume also the common small-diamond capacity-density normalization of Theorem 46b. If
 $$
-N_L(D)=N_L'(\Phi(D)),
+N_L(D)=N_L'(\Phi(D))
 $$
-with the same $\nu_L$, then they determine the same emergent metric-measure structure up to the operational equivalence of Theorem 46b.
+for every operational diamond, then the two branches determine the same emergent metric-measure structure up to the operational equivalence of Theorem 46b.
 
 *Proof.* Equation (46d.1) converts equality of Landauer counts into equality of predictive capacity valuations:
 $$
@@ -592,7 +615,7 @@ I_s(\mathfrak A_s(D):\mathfrak A_s(\bar D)\mid B_D)_\rho=0,
 $$
 or, on the classical branch, $X_D^{(s)}\perp E_{\bar D}^{(s)}\mid B_D$;
 
-2. the branch is species-separating: if two diamond assignments produce the same $s$-sector responses for every retained species and the same boundary syndrome responses, then they are equal in the PPI quotient;
+2. the branch is specieswise separating: for every retained species $s$, if two diamond assignments produce the same $s$-sector responses and the same boundary syndrome responses, then they are equal in the PPI quotient;
 
 3. the boundary capacity normalization is common,
 $$
@@ -611,7 +634,7 @@ V_s=V_{\mathrm{cap}},
 $$
 and the common capacity normalization fixes $g_s=g$ almost everywhere on the regular set. A species-dependent metric that changes no finite protocol response is PPI-null; a species-dependent metric that changes a retained response is a different finite-response branch and must carry its own certificate.
 
-*Proof.* By Theorem F.10.6b, condition (46e.1) is equivalent to exact recovery of every exterior $s$-sector response from the same boundary datum $B_D$. By Corollary F.10.6c, any additional species label at the boundary that changes no exterior response is PCE-degenerate and removed from the quotient. Hence the inclusion test on $s$-sector protocols can differ from the full operational inclusion test only if some retained exterior response distinguishes the two assignments. Condition 2 excludes such an undetected difference: a response-distinct assignment is visible to at least one retained species or to the common boundary syndrome, while a response-indistinct assignment is the same PPI object. Therefore $\subseteq_s=\subseteq$ for every retained species.
+*Proof.* By Theorem F.10.6b, condition (46e.1) is equivalent to exact recovery of every exterior $s$-sector response from the same boundary datum $B_D$. By Corollary F.10.6c, any additional species label at the boundary that changes no exterior response is PCE-degenerate and removed from the quotient. Fix a retained species $s$. The inclusion test on $s$-sector protocols can differ from the full operational inclusion test only if two diamond assignments have the same $s$-sector and boundary responses but represent different PPI objects. Condition 2 excludes exactly that possibility. Hence $\subseteq_s=\subseteq$. Since $s$ was arbitrary, this equality holds for every retained species.
 
 Equation (46e.2) gives equality of the species capacity valuation with the common predictive capacity valuation. Theorem 46b applied to the identity bijection of the common diamond poset then fixes the conformal metric reconstructed by each species, and the shared valuation fixes the conformal scale. Thus every retained species sees the same metric tensor on the regular branch. If a proposed $g_s$ differs while preserving all finite responses, it is precisely a response-null relabeling in the protocol-response presheaf. If it changes a finite response, it violates the same-branch hypotheses and is a separate branch. ∎
 
