@@ -18,7 +18,7 @@ $$
 $$
 The Cogito supplies the process-root: there exists awareness/process $\mathcal{C}$, and this cannot be coherently denied because denial already enacts it. The remaining steps are operational and model-theoretic rather than additional Cogito-level certainties. PU first distills the indubitable process into its minimal knowledge-bearing operation—prediction, verification, and update—and then uses PPI and PCE to ask how that operation can be finitely, physically, and efficiently instantiated.
 
-We begin from the Cogito-certified occurrence of awareness and model knowledge-bearing activity by the finite predictive normal form on the class specified in Definition P.6.1c.1. This is an operational representation theorem on that class, not a theorem that every conscious occurrence has prediction as its metaphysical essence. The resulting finite logical and informational structures are branch-relative model data.
+We begin from the Cogito-certified occurrence of awareness and model knowledge-bearing activity by the finite predictive normal form on the class specified in Definition P.6.1c.1. This is an operational representation theorem on that class. The predictive structure it identifies is constitutive for every occurrence in the class: distinctions are drawn, the drawing is ordered, and information is carried forward so that it bears on what follows. What the theorem does not fix is the class boundary, and that boundary is settled by the admission conditions of Definition P.6.1c.1 rather than by a prior commitment about essence. The resulting finite logical and informational structures are branch-relative model data.
 
 Idealism and the Distinction Framework provide an interpretive consciousness-first reading. They reframe the hard problem by taking awareness as primitive; they do not derive phenomenal character from an operational response structure or prove the reading uniquely parsimonious. The simulation language below is likewise a finite-process modeling framework, not a probabilistic claim about origin.
 
@@ -81,7 +81,7 @@ The first option faces what Chalmers [1996] termed the *hard problem of consciou
 
 The second option—treating consciousness as outside physics—renders any physical theory fundamentally incomplete. A theory that cannot account for the one phenomenon we know with certainty exists fails to be a complete description of reality.
 
-The consciousness-first thesis proposes to address both problems by treating conscious process as explanatory bedrock rather than deriving it from non-conscious matter. That move removes one emergence question from the starting ontology, but it does not by construction prove a complete physical theory, select one external-world model, or derive the realized universe. Its claimed parsimony is therefore a philosophical comparison criterion to be tested against the framework's explicit physical constructions and empirical record.
+The consciousness-first thesis proposes to address both problems by treating conscious process as explanatory bedrock rather than deriving it from non-conscious matter. That move removes one emergence question from the starting ontology. The obligations it leaves are explicit and are discharged elsewhere: a complete physical theory, a selected external-world model, and a derivation of the realized universe are separate constructions, each carrying its own realization and empirical certificates. Its claimed parsimony is a comparison of predictive yield per declared structural cost, settled against the framework's explicit physical constructions and empirical record.
 
 ### The Historical Marginalization of Consciousness in Physics
 
@@ -96,7 +96,7 @@ The historical trajectory of interpretations of quantum mechanics reveals this p
 
 This framework provides a worked formal candidate challenging that methodological assumption. It shows that a consciousness-first starting point can be combined with explicit mathematical branches and empirical proposals; scientific viability and physical identification remain questions for proof and experiment. In that qualified sense, the framework establishes that:
 
-1. **Operational ledgers can be mathematically formalized:** POP/PCE, MPUs, perspectival states, SPAP, and reset bounds are explicit axioms, definitions, and branch theorems. Consciousness-first ontology is the stated interpretive starting convention, not a theorem proved by those ledgers.
+1. **Operational ledgers can be mathematically formalized:** POP/PCE, MPUs, perspectival states, SPAP, and reset bounds are explicit axioms, definitions, and branch theorems. Consciousness-first ontology is the framework's starting point, adopted on the epistemic ground of Foundational Certainty P.2.1. The ledgers are built from it, and what they establish is what follows from it.
 
 2. **Such formalization can contain conditional structures analogous to known physics:** The quantum, Lorentzian-spacetime, Einstein-equation, and Standard-Model branches in Sections 8, 11, and 12 and Appendices G and R are mathematical implications of their declared reconstruction and realization hypotheses.
 
@@ -107,7 +107,7 @@ This framework provides a worked formal candidate challenging that methodologica
 
 5. **Broad explanatory program:** PU formulates branchwise treatments of foundational puzzles from the information paradox to the arrow of time (Appendix K). Their physical success is determined by the premises and certificate status of each branch, not by breadth alone.
 
-6. **A changed explanatory starting point:** Taking consciousness as foundational removes the specific task of deriving awareness from a stipulated non-conscious substrate, but does not prove idealism, derive phenomenal character, or discharge PU's physical realization obligations.
+6. **A changed explanatory starting point:** Taking consciousness as foundational removes the specific task of deriving awareness from a stipulated non-conscious substrate. Two obligations remain and are tracked separately: an account of why experience carries the particular structure it carries, and the physical realization certificates required to identify PU's constructions with the observed world.
 
 ### The Fundamental Advancement
 
@@ -117,7 +117,7 @@ The framework therefore turns the question "Can a consciousness-first physics be
 
 **Conceptually:** A theory accounting for both the external world and conscious observation has to place consciousness somewhere. PU places it first, so nothing has to be derived from non-consciousness and no interaction between two realms has to be arranged. Completeness still requires the missing physical realization and empirical closure theorems.
 
-On PU's consciousness-first convention, the hard problem is not posed as the emergence of experience from a wholly non-experiential primitive. This is a philosophical relocation of the explanatory burden, not a theorem that competing ontologies fail or that PU's physical and phenomenal bridges are complete.
+On PU's consciousness-first convention, the hard problem is not posed as the emergence of experience from a wholly non-experiential primitive. The explanatory burden moves rather than disappearing. What replaces it is the requirement to derive the stability, lawfulness, and shareability of experience, together with the physical and phenomenal bridges, each of which carries its own certificate status.
 
 ## P.2 The Primacy of Consciousness and the Certainty of the Cogito
 
@@ -138,7 +138,7 @@ Traditional attempts to resolve the hard problem often fall into:
 *   **Materialism:** Asserts that consciousness emerges from complex physical processes (e.g., brain activity). However, it has yet to provide a satisfactory mechanism for *how* purely physical interactions produce the subjective quality of experience. How does any arrangement of neurons create the taste of chocolate or the feeling of joy? This explanatory gap remains stubbornly opaque.
 *   **Dualism:** Proposes that reality consists of two distinct realms: mind and matter. By positing consciousness as separate from the physical, dualism treats the mind as an independent, non-material entity. Yet dualism struggles to explain how mind and matter interact. How does a non-physical mind influence physical muscles when you decide to raise your hand?
 
-Materialism and dualism carry familiar explanatory burdens. PU therefore adopts consciousness-first idealism as a comparative modeling stance: awareness is the indubitable epistemic root, while claims about an external world's ontology remain additional hypotheses. Occam's Razor is a criterion of comparison, not a proof that idealism is uniquely true.
+Materialism and dualism carry familiar explanatory burdens. PU therefore adopts consciousness-first idealism as a comparative modeling stance: awareness is the indubitable epistemic root, while claims about an external world's ontology remain additional hypotheses. Occam's Razor is applied here as a comparison of declared structural cost. Materialism carries matter defined without a felt side together with a bridge from such matter to felt states; dualism carries two substances together with an interaction law; consciousness-first idealism carries awareness together with the requirement that its structure be lawful and shareable. The comparison is settled by predictive yield per declared structural cost on a shared empirical domain, which is the criterion PU submits to in Section 14.6.8.
 
 All claims about a physical world, other persons, and scientific theories are accessed through conscious experience. That epistemic fact does not entail that the physical world is constituted by one mind or that experience creates external reality. Dreams witness the capacity of conscious processes to present internally coherent apparent environments; they do not by themselves establish an ontology, other minds, or the generation of a physically realized universe. PU's physical-world identification must instead pass the explicit PPI, realization, and empirical certificate gates stated below.
 
@@ -444,7 +444,7 @@ This fits a broader pattern already present in the manuscript. At the minimal le
 
 Expert intuition presents three well-documented properties that are difficult to hold simultaneously under standard accounts: it operates holistically (the judgment arrives as a single apprehension, not a sequential chain), it is precise (in domains with sufficient regularity and feedback, intuitive judgments reliably match or exceed deliberate analysis), and it resists verbal transfer (experts cannot articulate the basis for their judgments in a way that enables novices to reproduce the performance). [de Groot 1965; Klein 1998; Kahneman & Klein 2009]
 
-Within PU, these properties can be interpreted as consequences of how predictive structure is stored and accessed. At the minimal level, a geometric assembly is specified globally rather than serially. At the aggregate level, Definition L.1 describes a compressed context state that coordinates many predictively relevant variables at once. The proposal below is therefore an interpretation of expert performance in PU terms, not a separately proved theorem of the framework.
+Within PU, these properties can be interpreted as consequences of how predictive structure is stored and accessed. At the minimal level, a geometric assembly is specified globally rather than serially. At the aggregate level, Definition L.1 describes a compressed context state that coordinates many predictively relevant variables at once. The proposal below reads expert performance through those structures. It carries the status of the results it rests on, Thesis P.2.6.3a and Thesis P.2.6.3b, and is tested by whether the three documented properties follow from them.
 
 *Simultaneity.* A geometric assembly (Definition P.2.6.2) is a global ray $[\psi] \in \mathbb{P}(\mathcal{H})$ that specifies subsystem form jointly. At aggregate scale, the analogous idea is that one context state coordinates many variables at once. Recognizing a familiar situation is then not naturally modeled as traversing an explicit verbal chain, but as matching the present context against previously stabilized patterns encoded in the aggregate's predictive organization.
 
@@ -749,7 +749,7 @@ This is not a claim that any specific technology is inevitable; it is a structur
 
 ### P.3.1 From "I Think" to "I Predict"
 
-PU models finite knowledge-bearing activity by prediction, registered verification, and update on the class specified by Definitions 1--4 and P.6.1c.1. This is an operational representation thesis, not a theorem that every conscious act, memory, self, or creative event is constitutively predictive. Perceptual and cognitive predictive-processing accounts are candidate empirical bridges to that formal class.
+PU models finite knowledge-bearing activity by prediction, registered verification, and update on the class specified by Definitions 1--4 and P.6.1c.1. The predictive structure is constitutive on that class: any occurrence in it draws distinctions, the drawing is ordered, and information is carried forward so that it bears on what follows. Two stronger readings are not asserted. The first is that every conscious act is a forecasting task in the ordinary sense, which is a claim about what an act is directed at rather than about its structure. The second is that every conscious act instantiates the full Definition 4 loop with its registered verification and update phases, which holds where the admission conditions of Definition P.6.1c.1 are met. Perceptual and cognitive predictive-processing accounts are candidate empirical bridges to that formal class.
 
 **Definition P.3.1 (Predictive Operation).** A predictive system is any process implementing a map $\pi : \mathcal{H}_t \to \mathcal{O}_{t+1}$, where $\mathcal{H}_t$ denotes informational histories accessible at time $t$ and $\mathcal{O}_{t+1}$ denotes equivalence classes of anticipated outcomes at $t+1$. The awareness/process $\mathcal{C}$ established by Foundational Certainty P.2.1 is modeled as predictive when it performs state updates $s_{t+1} = U(s_t, e_t)$ with $U$ chosen to minimize predictive error under finite resource constraints. This formal structure is operationalized by the Fundamental Predictive Loop (Definition 4) and the Prediction Optimization Problem (Axiom 1).
 
@@ -885,7 +885,7 @@ PU stipulates a totality-reading in which the questioner lies in $\mathcal U$. O
 
 The analysis of the fundamental question begins where all secure knowledge must begin: with the Cogito. As established in Section P.2.1, Descartes' methodical skepticism reveals that while we can question everything else—external perceptions, memories, even logical deductions—the existence of doubt itself, and thus consciousness, is self-verifying. The doubter must exist to doubt. *Cogito ergo sum* provides the sole unshakeable premise from which inquiry can proceed.
 
-For PU's finite operational model, a questioner is represented by state distinction, forecasting, verification, and update. This is a class-relative modeling assignment, not a theorem that every conscious or epistemic process is exhaustively predictive.
+For PU's finite operational model, a questioner is represented by state distinction, forecasting, verification, and update. The assignment is class-relative in the sense fixed by Definition P.6.1c.1: it applies wherever the registered forecast, verification, and update data are present, and the questioner is admitted as a knowledge system under Definition P.3.5.1 on those grounds.
 
 **Definition P.3.5.1 (Knowledge System).** For this subsection, a *knowledge system* is a system equipped with a finite self-verifying operational presentation $\mathfrak T=(\mathsf S,\mathsf P,\Omega,E,U,V)$ in the sense of Definition P.6.1c.1, with at least one registered protocol representing a question--response task. Its finite expected-response laws, realized outcomes, verification statistic, and update kernels are part of the admission certificate. The Cogito certifies the occurrence of an awareness/process; it does not by itself supply this finite presentation.
 
@@ -1449,7 +1449,7 @@ Subsequent interpretations manage the gap without filling it:
 
 *Objective Collapse.* New dynamical laws (e.g., GRW spontaneous localization [Ghirardi, Rimini & Weber 1986]) produce definite outcomes without observers. The collapse parameters (rate and localization scale) are phenomenological and empirically constrained, but are not derived from any deeper principle.
 
-The comparison identifies the specific finite prediction--verification--update structure PU chooses to call an observer. Other interpretations use different criteria; the table below is therefore a model comparison, not a theorem that they lack formal resources or that PU's criterion is uniquely necessary.
+The comparison identifies the specific finite prediction--verification--update structure PU chooses to call an observer. Other interpretations use different criteria; the table below compares them on one stated axis, namely what each framework requires an observer to carry. Which criterion is preferable on a shared empirical domain is decided by predictive yield per declared structural cost in Section 14.6.8.
 
 ### P.5.8.2 The PU Operational Definition: Observer as Predictive System
 
@@ -5394,7 +5394,7 @@ On the Minimal Awareness interpretive convention, accepted physical laws may be 
 
 ### P.11.8 Interpretive Unity and Its Certificate Boundary
 
-On the Minimal Awareness convention, PU uses a common vocabulary for awareness, operational cycle order, a branch-realized CC capacity, and temporal-control modulation. This is an interpretive synthesis, not a theorem identifying consciousness with physical time or deriving matter from consciousness. The hard problem and mind--matter questions are not mathematically eliminated by the operational definitions.
+On the Minimal Awareness convention, PU uses a common vocabulary for awareness, operational cycle order, a branch-realized CC capacity, and temporal-control modulation. The common vocabulary records that these four are described by one operational structure on the accepted branch. Identifying consciousness with physical time, and deriving matter from consciousness, are separate constructions requiring their own realization certificates. On the consciousness-first convention the emergence form of the hard problem is not posed, and the questions replacing it concern the structure, stability, and shareability of experience.
 
 A temporal-engineering realization exists only on Theorem 34's strict-improvement branch together with Hypothesis 3's accepted normalized response-active context-to-control map and the applicable Appendix L/S source, carrier, resource, and feedback certificates. Theorem L.1 proves only existence of a maximizer on a nonempty compact admissible mapping class; it does not construct the carrier, prove a nonzero response, or describe acquisition of a capability.
 

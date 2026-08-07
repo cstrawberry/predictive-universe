@@ -66,7 +66,7 @@ Therefore, the framework supplies a layered defense rather than one common deriv
 
 *   **Predictive Information, Optimization, and Ephemeralization:** Information (Definition 1), defined by its potential to improve prediction relative to POP (Axiom 1), shapes dynamics via PCE (Definition 15). PCE mandates minimizing costs (operational, propagation, adaptation) for acquiring and utilizing predictive information. This drive towards maximum predictive utility with minimal cost can be seen as the microscopic engine realizing Ephemeralization (Fuller 1938)—"doing more with less"—suggesting efficient information processing is a foundational principle.
 
-*   **Perspectival Realism:** This is an interpretive convention built on the perspective-indexed state formalism. Definition 24 indexes descriptions by $s$; it does not prove that every `Evolve` event selects a definite outcome or that perspective-indexed properties are ontologically fundamental.
+*   **Perspectival Realism:** This is an interpretive convention built on the perspective-indexed state formalism. Definition 24 indexes descriptions by $s$; it does not establish that every `Evolve` event selects a definite outcome, and the standing of perspective-indexed properties is fixed by the realization certificates rather than by the indexing.
 
 *   **Graduated Consciousness and Emergent Self:** the Minimal Awareness interpretive convention of Section 7.1.2 proposes a link between minimal awareness and the $C_{op}$ cycle. High aggregate complexity is a necessary threshold in Theorem 34 but is not sufficient for nonzero CC: the strict-improvement, attainment, and representability hypotheses must also hold. Correlations among CC, integration, sophisticated prediction, subjective awareness, and narrative self-modeling remain interpretive or empirical hypotheses. The resulting program is non-teleological and permits zero-CC high-complexity branches when the relevant benefit does not exceed its registered cost.
 
@@ -84,7 +84,7 @@ $$
 $$
 This is a heat ledger, not a state-disturbance inequality. Proposition 16 excludes a static context only on a further branch where high CC entails repeated fresh introspection and every such acquisition has nonzero displacement in a specified context metric. Claims about subjective experience, extreme computational density, and future information horizons remain speculative.
 
-In summary, PU supplies structural predictive results and branch-relative physical reconstructions. Quantum, continuum, geometric, thermodynamic, conserved-source, causal-cone, and observable packages must be registered together before physical laws or spacetime follow; the predictive core alone supplies none of those bridges. Awareness is the framework's interpretive starting point, not a theorem identifying phenomenal character with an operational response class.
+In summary, PU supplies structural predictive results and branch-relative physical reconstructions. Quantum, continuum, geometric, thermodynamic, conserved-source, causal-cone, and observable packages must be registered together before physical laws or spacetime follow; the predictive core alone supplies none of those bridges. Awareness is the framework's starting point, and the predictive core is what is built from it. Identifying phenomenal character with an operational response class is a separate construction and is not undertaken here.
 
 **Entropy-Ledger Comparison.** Appendix P.6.5 compares several mathematically distinct ledgers. A correspondence requires the stated state space, probability law, thermodynamic implementation, quantum state, or horizon bridge; equality of numerical values on one branch does not identify the ledgers generally.
 
@@ -1788,7 +1788,7 @@ is exact on the minimal geometric branch. On its intersection with the separatel
 $$
 A_1\subset A_2\subset A_3\subset D_4\subset E_8
 $$
-is a compatible mathematical scaffold. Neither fact alone derives a physical encoder, spacetime realization, flavor map, or common optimization functional. The resulting perspective on Wigner's puzzle is therefore a structured compatibility proposal rather than a theorem identifying mathematical and physical optimization.
+is a compatible mathematical scaffold. Neither fact alone derives a physical encoder, spacetime realization, flavor map, or common optimization functional. The resulting perspective on Wigner's puzzle is a structured compatibility result on the stated scaffold; identifying mathematical with physical optimization requires the encoder, realization, flavor-map, and common-functional certificates named above.
 
 ### 14.5.4 Information Density and Dimensional Selection
 
