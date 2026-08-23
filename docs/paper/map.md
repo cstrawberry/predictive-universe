@@ -2308,7 +2308,6 @@ Consider an MPU qubit in state $|\psi\rangle = c_0|0\rangle + c_1|1\rangle$:
 *Conditional perspective-indexed record:* On the accepted instrument and single-outcome branch, result $0$ is registered relative to $s'_{Z,0}$. Re-expanding $|0\rangle$ in the $X$ basis is a basis change, not a second outcome record. The example does not by itself exclude every absolute or latent response-equivalent ontology.
 
 **Summary of Theorem G.1.8 (Complex Hilbert-Space Uniqueness on the Carrier-Certified Branch)**
-**Summary of Corollary G.1.10 (Conditional Non-Simplex Exclusion).** A finite-dimensional branch with a certified pair of response-active sharp observables that are not jointly measurable cannot be a classical simplex theory carrying the full affine effect set. SPAP alone does not supply the incompatibility premise, and complex-Hilbert reconstruction requires the separate carrier certificate.
 
 1. **Local tomography:** For a scalar branch $\mathbb D$ with single-system parameter count $N_{\mathbb D}(d)$, compositional closure under joint-system tomography requires
 $$
@@ -2321,6 +2320,8 @@ The complex branch has $N_{\mathbb C}(d)=d^2-1$, so $N_{\mathbb C}(mn)+1=(mn)^2=
 3. **PPI/PCE quotient:** Quaternionic extra generators are either response-changing, hence a different gauge branch, or response-null, hence removed by PPI/PCE. Other Euclidean-Jordan branches are excluded only by the $\mathcal J_{\mathrm{excl}}$ record inside $\mathfrak C_{\mathrm{car}}$.
 
 Complex amplitudes are not assumed on the carrier-certified branch; they are the unique retained Hilbert scalar branch satisfying compositional closure, local tomography, connected phase transport, and minimal phase redundancy after the carrier certificate has supplied the ordered-cone reconstruction.
+
+**Summary of Corollary G.1.10 (Conditional Non-Simplex Exclusion).** A finite-dimensional branch with a certified pair of response-active sharp observables that are not jointly measurable cannot be a classical simplex theory carrying the full affine effect set. SPAP alone does not supply the incompatibility premise, and complex-Hilbert reconstruction requires the separate carrier certificate.
 
 ### Detailed Balance and Gibbs Structure
 
@@ -2850,6 +2851,7 @@ $$
 }
 $$
 SPAP alone supplies none of the representation, Lorentzian, or AQFT hypotheses.
+
 **Summary of Theorem G.10.2 (Projective Realization of SPAP Involution and SU(2) Lift)**
 The logical involution $\iota$ is realized as a nontrivial projective unitary involution:
 $$
@@ -5281,6 +5283,27 @@ $$
 $$
 No accepted complete instance of these four records is present; the displayed same-prefactor value remains an arithmetic diagnostic.
 
+**Summary of Proposition U.12.4a (Appendix U Branch-Status Registry)**
+Appendix U separates the following roles:
+
+| Quantity | Registered status |
+|:---------|:------------------|
+| $m_{\mathrm{ref}}=5$ and $\kappa_{\mathrm{ref}}=141.5$ | five-mode reference convention |
+| four translational zero modes | theorem-level on the stated false-vacuum spectral branch |
+| a fifth scale zero mode | conditional on an exact scale family |
+| negative pure-dilatation direction | local conditional obstruction |
+| $\kappa_{\mathrm{trans}}=142$ | exponent theorem on the four-mode branch |
+| $A_{\mathrm{eff}}^{(\mathrm{obs})}$ | empirical inversion on the named reference branch |
+| $A_{\mathrm{eff}}^{(4)}$ | undetermined until the four-mode Fredholm prefactor certificate is accepted |
+
+Consequently, the four-mode forward formula is
+$$
+\Lambda_4L_P^2
+=
+8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284},
+$$
+with no numerical interval until the prefactor record is supplied.
+
 ### Zero Mode Structure
 
 **Summary of Theorem U.8 (Translation Zero Modes)**
@@ -7297,6 +7320,8 @@ On an accepted nonequilibrium transport branch, the Berry data may enter a regis
 
 **Imported definition (Y.4.1): Registered CP Transport Affinity**
 
+$A_{CP}(t)$ is the dimensionless signed affinity supplied by a specified nonequilibrium transport calculation; the lattice sphaleron rate and a static flavor phase do not determine it.
+
 **Imported definition (Y.4.2): Two-Rate Response Branch**
 $$
 \Gamma_\pm(t)=\Gamma_0(t)e^{\pm A_{CP}(t)}
@@ -7573,161 +7598,6 @@ $$
 **Imported result (Theorem Q.0.1): Calibrated Continuum-Action Limit**
 
 Given an independent action scale $\kappa_A>0$ and the stated $\Gamma$-convergence hypotheses, multiplying the dimensionless ledger by $\kappa_A$ transfers the limit. The limit does not derive $\kappa_A=\hbar$.
-
-**Imported result (Corollary Q.0.1): Conditional Action--Entropy Calibration**
-
-The representation $\mathcal S=\hbar\mathcal L$ holds only after the independent calibration $\kappa_A=\hbar$.
-
-**Summary of Theorem D.6 (Conditional Gamma-Convergence Fundamental Theorem)**
-
-**Summary of Theorem D.6b (Cell-Averaged Curvature Closure)**
-**Summary of Corollary D.6b.1 (Volume-Term Closure)**
-**Summary of Theorem D.6c (Cell-Averaged Matter Closure)**
-**Summary of Corollary D.6c.1 (Predictive-Action Additive Closure)**
-**Summary of Theorem D.6d (Closed Einstein–Hilbert + MPU Γ-Limit)**
-**Summary of Theorem D.6e (Mosco–Cheeger Closure of the Spatial Sector)**
-**Summary of Theorem 44a (Regular-Branch Manifold Closure)**
-
-**Summary of Theorem G.3a (Connection–Compression)**
-**Summary of Corollary G.3a.1 (Covariant First-Order Comparison)**
-**Summary of Theorem G.4a (Holonomy–Flatness)**
-**Summary of Corollary G.4a.1 (Flatness Equals Pure Gauge on Simply Connected Regions)**
-**Summary of Theorem G.5a (Plaquette–Maxwell Limit)**
-**Summary of Corollary G.5a.1 (Universality of the Quadratic Gauge Limit)**
-**Summary of Theorem G.6a (Minimal-Coupling Continuum Limit)**
-**Summary of Theorem G.6b (Variational Closure and Noether Current)**
-**Summary of Corollary G.6b.1 (Non-Abelian Lift)**
-
-**Summary of Theorem O.7a (Hyperbolic Signature Closure)**
-**Summary of Corollary O.7a.1 (Entropy-Orthogonal Normal Form)**
-**Summary of Theorem O.7b (Operational Speed Normalization)**
-**Summary of Corollary O.7b.1 (Derived Tangent-Frame Lorentz Group and Local Lorentz Kinematics)**
-
-**Summary of Theorem 45a (Relabeling–Covariance Closure)**
-**Summary of Corollary 45a.1 (Derived Noether Identity for the Matter Sector)**
-
-**Map entry: Corollary 46a (Local Lorentz Kinematics)**
-
-**Summary of Theorem 12.1a (Wald-Normalized Einstein–Hilbert Action Uniqueness)**
-**Summary of Theorem 12.3a (Uniqueness of the Free Worldline Functional)**
-**Summary of Theorem 12.3b (Proper-Time Extremals Are Metric Geodesics)**
-**Summary of Corollary 12.3b.1 (Action–Entropy–Geodesic Equivalence)**
-
-**Summary of Theorem B.8b (Belinfante Continuum Limit and Conservation)**
-**Summary of Corollary B.8b.1 (Independence of Admissible Coarse-Graining)**
-**Summary of Theorem B.8c (Variational Identification of the Continuum Source Tensor)**
-**Summary of Theorem B.8d (Horizon-Flux Closure)**
-**Summary of Corollary B.8d.1 (Source-Term Identity)**
-**Summary of Corollary B.8d.2 (Vacuum Normalization and Λ-Absorption)**
-
-**Summary of Theorem C.6c (Conditional Noncollapsed $\mathrm{RCD}^*(K,4)$ Bridge)**
-
-**Summary of Theorem F.10.1 (Discrete Net-Convergence)**
-**Summary of Theorem F.10.2 (Emergent Haag–Kastler Net)**
-**Summary of Theorem F.10.3 (Local Rindler KMS)**
-**Imported result (Theorem F.10.4): Finite-Regulator Entanglement First Law**
-**Summary of Corollary F.10.4.1 (A1 and A2 Reduce to Wedge AQFT)**
-
-**Summary of Theorem T.67 (Flag-Lift Threshold Compression)**
-**Summary of Corollary T.67.1 (Pairwise-Coupling Rigidity at the Matching Scale)**
-**Summary of Theorem T.68 (Homogeneous Peter–Weyl Block Reduction)**
-**Summary of Corollary T.68.1 (Exact Threshold Functionals Reduce to Block Sums)**
-**Summary of Theorem T.69 (Canonical Local/Global Threshold Split)**
-**Summary of Corollary T.69.1 (Finite-Representation Closure Criterion)**
-**Summary of Theorem T.70 (Sector/Parity Spectrum of the Lifted Threshold Operator)**
-**Summary of Corollary T.70.1 (Homogeneous Golay-Parity Obstruction)**
-**Summary of Theorem T.70.2 (Admissibility Test for Scalar One-Block Parity Closures)**
-**Summary of Corollary T.70.3 (Status of One-Block Ratio Completions)**
-**Summary of Theorem T.71 (RG Uniqueness Conditional on a Complete Boundary Record)**
-**Summary of Theorem T.72 (Sector-Normalization Cancellation)**
-**Summary of Corollary T.72.1 (Pure $E_8$ Hierarchy Law as the Triad-Symmetric Branch)**
-**Summary of Theorem T.73 (Conditional Van Vleck Symmetry Reduction)**
-**Summary of Corollary T.73.1 (Ratio-Level Yukawa Formula on an Isotropy-Symmetric Branch)**
-**Summary of Theorem T.74 (Geometric Berry-Area for Flavor CP)**
-**Summary of Theorem T.75 (Coherent-Averaging Factorization)**
-**Summary of Theorem T.76 (Maximum-Entropy Coherent Packet)**
-**Summary of Corollary T.76.1 (Structural / Profile Split)**
-**Summary of Theorem T.77 (Relative Uniqueness from the Complete Appendix-T Input Record)**
-**Summary of Corollary T.77.1 (No Hidden Tuning After Input Closure)**
-**Summary of Corollary T.77.2 (Absolute Uniqueness After Complete Record Closure)**
-
-**Summary of Theorem U.16a (Marked Index Dichotomy with an Exponent Gate)**
-**Summary of Theorem U.8d (Persistence of a Negative Pure-Dilatation Direction)**
-**Summary of Corollary U.8d.1 (Generic Small Deformations Do Not Create a Fifth Zero Mode at the Reference Action)**
-**Summary of Corollary U.17a (Four-Mode Index, Decay, and Real-Stress Gates)**
-
-**Summary of Theorem X.5a (Conditional Derived Generally Covariant Coarse-Grained Effective Action from ND-RID / PCE)**
-**Summary of Corollary X.5a.1 (Matter–Gravity Decomposition of the Derived Action)**
-
-**Summary of Proposition R.3.5f (Theorem–Model Boundary for the Generation Sector)**
-
-**Summary of Proposition T.17a.3a (Conditional Base-to-Lift Matching Map)**
-
-**Summary of Convention P.14.1a (Manuscript-Wide Status Classes and Parameter Roles)**
-
-**Summary of Convention P.14.1a.1 (Blinded-Derivation Provenance Record)**
-
-The auxiliary class **derived under blinding** requires a populated record fixing the exact claim, source snapshot, hash algorithm and serialization, prompt and derivation hashes, seal time, withheld-data boundary, unblinding time, and immutable lock witness. It preserves primary status. Mathematical proof remains with the cited theorem, and forward prediction additionally requires Definition 13.0d.
-
-**Summary of Corollary P.14.1b (Threshold–Scaling Parameter Ontology)**
-**Summary of Convention P.14.1c (Paper-Wide T1/T2/T3 Uncertainty Protocol)**
-
-**Summary of Theorem G.4b (Joint Covariant Derivative)**
-**Summary of Corollary G.4b.1 (Holonomy and Curvature Factorization)**
-
-**Summary of Theorem 48b (Global Product-Bundle Gluing)**
-**Summary of Corollary 48b.1 (Exact Obstruction)**
-**Summary of Theorem 48c (Conditional Global CPTP Transport Closure)**
-
-**Summary of Corollary U.9.1 (Virial Stationarity Is Not Enough)**
-**Summary of Remark U.9.2 (Exact-Scale-Family Dichotomy)**
-
-**Summary of Theorem T.78 (Determinacy of a Completed Flag-Lift Spectral Problem)**
-**Summary of Corollary T.78.1 (No Ambiguity Inside a Completed Spectral Problem)**
-**Summary of Theorem T.78.2 (Current Non-Closure of the Global Flag-Lift Spectral Gate)**
-**Summary of Corollary T.78.3 (Airtight Status of the Lifted Threshold Computation)**
-**Summary of Definition T.78.4 (Current-Framework PU-Internal Spectral Branch Package)**
-**Summary of Theorem T.78.5 (Negative Completion of the Current-Framework Flag-Lift Spectral Gate)**
-**Summary of Corollary T.78.5.1 (Pre-Certificate Disposition of the Flag-Lift Spectral Gate)**
-**Summary of Definition T.78.6 (RHG Flag-Lift Spectral Certificate)**
-**Summary of Algorithm T.78.6a (RHG Certificate Verification)**
-**Summary of Lemma T.78.6b (Finite Verification and Uniqueness)**
-**Summary of Lemma T.78.6c (Existence and Uniqueness of the RHG Structural Triple)**
-**Summary of Theorem T.78.7 (Certified RHG Completion of the Global Flag-Lift Spectral Gate)**
-**Summary of Corollary T.78.8 (Flag-Lift Threshold Closure Criterion)**
-**Summary of Corollary T.78.9 (No Fractal-Ontology Claim for RHG Closure)**
-**Summary of Definition T.78.10 (Forward-Locked RHG Acceptance Record)**
-**Summary of Theorem T.78.11 (RHG Electroweak Certificate Non-Contamination)**
-**Summary of Theorem T.78.12 (RHG Finite-Data Necessity)**
-**Summary of Remark T.78.13 (Definite Answer to the RHG-Certificate Question)**
-**Summary of Theorem T.78.14 (Finite No-Go Classification for PU-Internal Electroweak Gauge-Higgs Source Records)**
-**Summary of Theorem T.79 (Certificate-Gated Closure of the Quantitative Parameter Sector)**
-**Summary of Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector)**
-**Summary of Theorem T.79.2 (Appendix-T Deterministic Matching Functor)**
-**Summary of Proposition T.79.3 (Electroweak, Higgs, Flavor, Neutrino, Majorana, and Common-Scale Dependency Ledger)**
-**Summary of Theorem T.79a (Nuclear Extension Determinacy Boundary)**
-**Summary of Corollary T.79a.1 (Boundary-Impedance Closure of Nuclear Extension Data)**
-
-**Summary of Proposition U.12.4a (Appendix U Branch-Status Registry).**
-Appendix U separates the following roles:
-
-| Quantity | Registered status |
-|:---------|:------------------|
-| $m_{\mathrm{ref}}=5$ and $\kappa_{\mathrm{ref}}=141.5$ | five-mode reference convention |
-| four translational zero modes | theorem-level on the stated false-vacuum spectral branch |
-| a fifth scale zero mode | conditional on an exact scale family |
-| negative pure-dilatation direction | local conditional obstruction |
-| $\kappa_{\mathrm{trans}}=142$ | exponent theorem on the four-mode branch |
-| $A_{\mathrm{eff}}^{(\mathrm{obs})}$ | empirical inversion on the named reference branch |
-| $A_{\mathrm{eff}}^{(4)}$ | undetermined until the four-mode Fredholm prefactor certificate is accepted |
-
-Consequently, the four-mode forward formula is
-$$
-\Lambda_4L_P^2
-=
-8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284},
-$$
-with no numerical interval until the prefactor record is supplied.
 
 **Imported result (Corollary Q.0.1): Conditional Action--Entropy Calibration**
 
@@ -9348,6 +9218,12 @@ The manuscript distinguishes definitional consequences from physical implementat
 | **Category 2: Physical bridge claims** | Claims requiring PPI, dynamics, calibration, or empirical identification | Physical causal cones, information carriers, speed of light, particle masses, gravitational coupling | Branch-specific derivation and empirical test |
 
 An operational temporal order does not by itself derive physical causality or discreteness; those conclusions retain their bridge hypotheses.
+
+**Summary of Convention P.14.1a (Manuscript-Wide Status Classes and Parameter Roles)**
+Every major claim carries a primary status label, and every numerical or symbolic quantity used in a reported output carries a parameter-role label. A compressed table label never overrides the full dependency statement in the cited source.
+
+**Summary of Convention P.14.1a.1 (Blinded-Derivation Provenance Record)**
+The auxiliary class **derived under blinding** requires a populated record fixing the exact claim, frozen source snapshot, hash algorithm and canonical serialization, prompt and derivation hashes, seal time, withheld-data boundary, unblinding time, and immutable lock witness. It establishes chronology and declared data separation while preserving the claim's primary status. Mathematical proof remains with the cited theorem, and forward prediction additionally requires Definition 13.0d.
 
 **Constraint Rigidity and Minimality (Section P.9)**
 The tuple $(d_0,a,b,M,k,D)$ is fixed only on the conjunction of the minimal complex-carrier, sharp-record/capacity, predictive-recovery, and channel-complete branches. The code entry requires the MacWilliams branch. The Leech entry additionally requires either the registered Golay-to-Leech construction or the fixed-normalization even-unimodular carrier together with the finite Gaussian-cost certificate of Selection Principles P.13.7–P.13.9. These conditional finite outputs leave no modulus within their accepted quotient, but they are not universal consequences of prediction or Landauer thermodynamics.
