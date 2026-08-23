@@ -428,6 +428,66 @@ K_0=\log_2d_0=3=1+2\log_2a,
 $$
 If the additional active-entropy saturation $\varepsilon_0=\ln a$ is imposed, the numerical identity $K_0=1+2\varepsilon_0/\ln2=3$ also holds. These are consistency identities at the selected point; they do not define a law $d_0=2a^2$ or $K_0=1+2\varepsilon/\ln2$ for counterfactual values of $a$ or $\varepsilon$.
 
+**Theorem Z.2.5e (Null-Extension Classifications for Binary Active Rank and Eight-Context Carrier).** Define $\mathcal C_{\mathrm{bin,null}}^{(8)}$ to be the fixed-$d_0=8$ comparison class with $1\le a<8$, two sharp retained match/mismatch values represented by labeled orthogonal nonzero rays in the active space $A$, and a nonzero inactive complement. After a label-preserving unitary identification of their span $A_0$ with a fixed copy of $\mathbb C^2$, freeze one label-resolved response $R_0:\mathbb C^2\to\mathcal Y$, let $P_{A_0}:A\to A_0$ be the orthogonal projection, and require every member's response to be
+$$
+R_a=R_0\circ P_{A_0}.
+$$
+Put $A_{\mathrm{null}}:=A\ominus A_0$. Consequently,
+$$
+R_a(x+v)=R_a(x)
+\qquad
+(x\in A,\ v\in A_{\mathrm{null}}),
+$$
+so every direction in $A_{\mathrm{null}}$ is response-null. Predictive performance and every non-support ledger entry are fixed across the class. Then:
+
+1. the feasible active ranks are exactly
+   $$
+   a\in\{2,3,4,5,6,7\};
+   \tag{Z.2.5e.1}
+   $$
+2. every feasible member has the same canonical response quotient $A/A_{\mathrm{null}}\cong\mathbb C^2$;
+3. any strictly increasing maintained-support cost has the unique minimizer $a=2$.
+
+Define $\mathcal C_{\mathrm{ctx,null}}$ to be the finite Hilbert-carrier class in which the eight full-context labels are represented by eight mutually orthogonal nonzero rays. Choose unit representatives and a label-preserving unitary carrying their span to the first $\mathbb C^8\subseteq\mathbb C^d$. Freeze one response $R_8:\mathbb C^8\to\mathcal Y$ and, in these aligned coordinates, require
+$$
+R_d=R_8\circ p_d,
+$$
+where $p_d:\mathbb C^d\to\mathbb C^8$ is the orthogonal projection. Thus every complementary direction is response-null, while predictive performance and every non-support ledger entry are fixed. Then:
+
+4. a carrier of dimension $d$ is feasible exactly when $d\ge8$;
+5. for every $d\ge8$, the standard inclusion and projection obey
+   $$
+   \mathbb C^8\xrightarrow{\ i_d\ }\mathbb C^d
+   \xrightarrow{\ p_d\ }\mathbb C^8,
+   \qquad
+   p_di_d=I_8;
+   \tag{Z.2.5e.2}
+   $$
+6. any strictly increasing maintained-support cost has the unique minimizer $d_0=8$.
+
+*Proof.* A one-dimensional complex space cannot contain two orthogonal nonzero rays. Every $a\in\{2,\ldots,7\}$ contains the standard pair $(e_1,e_2)$, and quotienting the response-null span of $e_3,\ldots,e_a$ leaves their two-dimensional span. Strict increase of the support cost then orders the complete finite feasible list and selects $a=2$.
+
+Eight mutually orthogonal nonzero vectors are linearly independent, so they require $d\ge8$. Conversely, for every $d\ge8$ the first eight standard basis vectors give a witness, with $i_d$ the standard inclusion and $p_d$ the projection onto their span. Their composite is $I_8$, and the defining response identity gives
+$$
+R_di_d=R_8,
+\qquad
+R_8p_d=R_d.
+$$
+For an arbitrary member, normalize the eight representatives and extend them to an orthonormal basis; the resulting label-preserving unitary reduces it to these aligned coordinates. Hence every larger member has an explicit response-preserving eight-dimensional comparator, and strict support cost selects $d_0=8$. ∎
+
+**Resolution record Z.2.5e-R1 (`TV-Z-01/02`, null-extension components).** The registered outcomes are `positive-discharge` for the complete classes $\mathcal C_{\mathrm{bin,null}}^{(8)}$ and $\mathcal C_{\mathrm{ctx,null}}$. Equivalence is unitary change of basis preserving the two output labels or the eight context labels and preserving the declared response-null complement. The exact budget is all seven candidate ranks $1\le a<8$ plus the parametric inclusion/projection proof for every $d\ge8$; Proposition V.3.12b additionally instantiates (Z.2.5e.2) for $8\le d\le32$. A faithful two-value member at $a=1$, eight orthogonal rays at $d<8$, failure of $p_di_d=I_8$, or an equal/lower-cost larger null extension falsifies the corresponding conclusion. The standard $\mathbb C^2$ and $\mathbb C^8$ basis witnesses prove nonvacuity.
+
+**Corollary Z.2.5f (Exhaustion of Split Same-Response Extensions).** Let $E=E_0\oplus N$ be any finite-dimensional split extension of a retained carrier $E_0$, with inclusion $i$, projection $p$, base response $R_0$, and candidate response $R$. Exactly one of the following alternatives holds:
+
+1. $R=R_0\circ p$ on every retained finite protocol input. Then $N$ is response-null, the candidate is a member of the corresponding null-extension class of Theorem Z.2.5e, and strictly increasing support cost selects the least feasible rank.
+2. $R\ne R_0\circ p$ on some retained finite protocol input. Then the candidate is outside the base response-equivalence class and cannot be a same-response PCE comparator under Definition D.8.9a.
+
+Consequently, response-active extra directions and changes of performance or another retained ledger entry do not furnish missing competitors to the same-response minimality conclusions for $a=2$ and $d_0=8$.
+
+*Proof.* Equality in item 1 is exactly the factorization that makes every vector in $N=\ker p$ response-null. The active-rank case then lies in $\mathcal C_{\mathrm{bin,null}}^{(8)}$ and the eight-context case lies in $\mathcal C_{\mathrm{ctx,null}}$, so Theorem Z.2.5e applies. If the equality fails, its negation supplies a retained protocol input on which the two response functions differ. Definition D.8.9a quotients by equality of all retained finite protocol-response presheaves, so that candidate belongs to a different quotient class. The two alternatives are exhaustive by excluded middle. ∎
+
+**Resolution record Z.2.5f-R1 (`TV-Z-01/02`, same-response closure).** Corollary Z.2.5f supplies `positive-discharge` for every finite split rank or carrier extension: null extensions are completely classified by Theorem Z.2.5e, while response-active or ledger-changing extensions are formally outside the frozen response-equivalence class. The falsifier is a split extension that both differs from $R_0\circ p$ on a retained protocol and remains equal to it on every retained protocol. Physical realization of the selected quotient is a separate carrier record and does not reopen either same-response minimality theorem.
+
 ## Z.4 Algebraic Constraints on d_0
 
 ### Z.4.1 Division Algebra Structure
@@ -563,6 +623,19 @@ $$
 *Proof.* Equation (Z.3a.2) is functorial under equivalent presentations of $V_\Lambda$. The marked Golay data and sector projections are fixed finite matrices once the marked branch is fixed. Each summand in (Z.3a.3) has the form $B^*B$, so $\mathcal K_b$ is positive self-adjoint on a finite-dimensional space. Therefore it has a lowest eigenvalue and a nonzero orthogonal spectral projection.
 
 Data-preserving unitary changes of basis conjugate all matrices in (Z.3a.3), so they conjugate $\mathcal K_b$ and preserve its lowest eigenspace. If the common compatibility equations are solvable, the simultaneous kernel of all commutators is nonzero and equals $\ker\mathcal K_b$. Then the lowest eigenvalue is $0$ and $\Pi_b^{\mathrm{RHG}}$ is the exact compatible projection. If the common kernel is zero, the Rayleigh quotient of $\mathcal K_b$ is the total squared compatibility defect, and the lowest spectral subspace is the uniquely determined eigenspace on which that quotient attains its minimum. Calling this subspace PCE-selected additionally requires a registered comparison class in which the protocol role and every non-defect ledger entry are fixed and the defect term is strictly ordered. ∎
+
+**Corollary Z.3a.2 (Complete RHG Defect and Minimizer Classification).** For a populated finite block $b$, set
+$$
+\delta_b:=\lambda_{\min}(\mathcal K_b),
+\qquad
+m_b:=\operatorname{rank}\Pi_b^{\mathrm{RHG}}.
+\tag{Z.3a.2.1}
+$$
+Then the exact RH/Golay compatibility equations have a common nonzero solution exactly when $\delta_b=0$. If $\delta_b>0$, their least total squared compatibility defect is $\delta_b$. In either case, all normalized least-defect vectors form the unit sphere in $\operatorname{ran}\Pi_b^{\mathrm{RHG}}$; their phase-quotient is $\mathbb{CP}^{m_b-1}$. The minimizing ray is unique exactly when $m_b=1$, while the minimizing orthogonal projector is unique for every $m_b\ge1$.
+
+*Proof.* Theorem Z.3a.1 identifies the total squared defect with the Rayleigh quotient of the positive self-adjoint matrix $\mathcal K_b$. The Rayleigh--Ritz principle gives minimum $\delta_b$ and says equality holds exactly on its lowest eigenspace, whose projector and dimension are $\Pi_b^{\mathrm{RHG}}$ and $m_b$. A zero minimum is equivalent to a nonzero common kernel of all summands $B^*B$, hence to exact compatibility. Normalized vectors in an $m_b$-dimensional complex eigenspace form its unit sphere, and quotienting by phase gives $\mathbb{CP}^{m_b-1}$. This space is one point exactly at $m_b=1$; the spectral projector onto the full lowest eigenspace is unique independently of multiplicity. ∎
+
+**Resolution record Z.3a.2-R1 (`TV-Z-22`, analytic component).** Corollary Z.3a.2 gives `positive-discharge` of the exact residual, vector nonuniqueness, ray uniqueness, and projector uniqueness classification for every populated finite RHG block. The remaining obligation is to supply the actual finite block matrices and execute (Z.3a.2.1) for each retained block; abstract ranks or names do not determine $\delta_b$ or $m_b$.
 
 ---
 
@@ -1560,7 +1633,34 @@ $$
 $$
 K(1)=2,\qquad K(2)=6,\qquad K(3)=12,
 $$
-so Theorem Z.10 excludes $D\le3$. The regular $24$-cell supplies $24$ unit spheres tangent to a central unit sphere in $\mathbb R^4$, and the theorem's verified injection supplies their response labels; hence a faithful realization is feasible in $D=4$. Definition Z.9a selects the least feasible dimension, so $D=4$. No assertion about a globally saturated packing or about $K(D)$ for $D\ge5$ is needed. ∎
+so Theorem Z.10 excludes $D\le3$.
+
+For the $M_{\mathrm{int}}=24$ conclusion, an independent elementary audit needs no exact value of $K(3)$. In $D=1$, at most two contact directions exist. In $D=2$, angular separation by at least $\pi/3$ gives $K(2)\le6$. In $D=3$, the open spherical caps of angular radius $\pi/6$ centered on the contact directions are pairwise disjoint. Each cap has area $2\pi(1-\cos(\pi/6))$, so any such configuration of $N$ directions satisfies
+$$
+N\,2\pi\bigl(1-\cos(\pi/6)\bigr)\le4\pi,
+$$
+and hence
+$$
+N\le
+\left\lfloor\frac{2}{1-\sqrt3/2}\right\rfloor
+=14<24.
+$$
+Thus Theorem Z.10 again excludes $D\le3$.
+
+Four-dimensional feasibility also has a finite integer witness. Let
+$$
+\mathcal V_{24}
+:=
+\{\epsilon_i e_i+\epsilon_j e_j:
+1\le i<j\le4,\ \epsilon_i,\epsilon_j\in\{-1,1\}\}.
+$$
+Then $|\mathcal V_{24}|=\binom{4}{2}2^2=24$, every $v\in\mathcal V_{24}$ has $\lVert v\rVert^2=2$, and distinct $u,v\in\mathcal V_{24}$ satisfy $u\cdot v\le1$. Therefore
+$$
+\lVert u-v\rVert^2
+=4-2u\cdot v
+\ge2.
+$$
+After scaling by $\sqrt2$, these are $24$ centers at distance $2$ from the origin and pairwise distance at least $2$, so they give $24$ unit spheres tangent to a central unit sphere in $\mathbb R^4$. They are the vertices of the regular $24$-cell, and the theorem's verified injection supplies their response labels. Hence a faithful realization is feasible in $D=4$. Definition Z.9a selects the least feasible dimension, so $D=4$. No assertion about a globally saturated packing or about $K(D)$ for $D\ge5$ is needed. ∎
 
 **Corollary Z.11.0a (Minimal-Feasible Robustness).** Every faithful shell with
 $$
@@ -1574,7 +1674,9 @@ has least feasible dimension $4$, provided the mode-to-cell injection uses a cor
 $$
 (K_0,d_0,a,M)=(3,8,2,24)
 $$
-and proves uniqueness of the least feasible dimension inside Definition Z.9a's faithful-shell class. The proof uses only $K(1)=2$, $K(2)=6$, $K(3)=12$, and an explicit regular-$24$-cell realization in $\mathbb R^4$. It does not assert $K(D)=24$, global kissing saturation, or a counterfactual function $M(K_0)$.
+and proves uniqueness of the least feasible dimension inside Definition Z.9a's faithful-shell class. Its exact-value route uses $K(1)=2$, $K(2)=6$, and $K(3)=12$. For the theorem's $M=24$ conclusion, the elementary bounds $K(1)=2$, $K(2)\le6$, and $K(3)\le14<24$ already exclude lower dimensions, and the integer coordinate set $\mathcal V_{24}$ explicitly proves four-dimensional feasibility. The exact value $K(3)=12$ remains the input that gives Corollary Z.11.0a its full robustness interval $13\le M_{\mathrm{int}}\le24$.
+
+The logical roles are separate. Theorem Z.10 supplies the exclusion inequality, the verified response-preserving injection supplies the finite physical-realization bridge, and Definition Z.9a's strict surplus-dimension cost supplies the least-feasible PCE selection. None of these clauses substitutes for another. The result does not assert $K(D)=24$, global kissing saturation, or a counterfactual function $M(K_0)$.
 
 **Corollary Z.11.1 (Conditional Geometric Uniqueness).** *On the registered minimal Appendix-Z branch and the faithful least-feasible tangent-shell contract, $M=24$ forces $D=4$. No exclusion of an alternative $K_0$ branch follows without separately constructing its carrier, active-kernel, mode-count, shell injection, and support-cost comparison.*
 
@@ -1661,6 +1763,51 @@ $$
 K(9)\le363<504<510\le K(10)
 $$
 give $D_{\min}(504)=10$ [Machado & de Oliveira Filho 2018; Ganzhinov 2025]. Determining $D_{\min}(1016)$ requires adjacent certified kissing bounds or an explicit realization at the first feasible dimension; the broad bracket $840\le K(12)\le1356$ alone does not decide it [Conway & Sloane 1999; Machado & de Oliveira Filho 2018]. These counterfactual calculations neither assign $M'$ from $K_0$ nor alter the proved $(M,D)=(24,4)$ branch.
+
+**Remark Z.11.3b (Counterfactual Backbone Spacing of the Thomson-Limit Core).** Fix the arithmetic family
+$$
+d_0(K)=2^K,
+\qquad
+b(K)=d_0(K)-2,
+\qquad
+M(K)=4(2^K-2),
+$$
+$$
+u^*(K)=\exp\left(\frac{\ln d_0(K)}{M(K)}\right)-1,
+\qquad
+K\in\mathbb Z, K\ge2,
+$$
+and
+$$
+\alpha_0^{-1}(K)
+=\frac{4\pi}{u^*(K)}-\frac{\pi}{\sqrt K}
++\frac{\pi u^*(K)}{M(K)\sqrt K}\operatorname{sinc}(u^*(K)).
+\tag{Z.11.3b.1}
+$$
+This family retains the registered relations $a=2$, $b=d_0-a$, $M=2ab$, and the saturation equation while varying the pair $(K_0,d_0)$. Direct 50-decimal evaluation gives
+$$
+\begin{array}{c|c}
+K&\alpha_0^{-1}(K)\\ \hline
+2&64.24673639682346562060880484000636\ldots\\
+3&137.03609205522862693132497074859155\ldots\\
+4&246.01145458728026891307679425083697\ldots\\
+5&427.44901221504339423932541470026527\ldots
+\end{array}
+\tag{Z.11.3b.2}
+$$
+The adjacent gaps in this displayed range exceed $72$ and the adjacent ratios exceed $1.73$. The $K=3$ member reproduces $u^*=2^{1/8}-1$ and the Theorem Z.26 core value.
+
+Equation (Z.11.3b.1) is a stipulated counterfactual family. Physical admission of a member with $K\ne3$ requires its carrier, active kernel, shell injection, comparison cost, and realization records.
+
+**Remark Z.11.3c (Reproducible Finite Arithmetic Audit).** Independent exact and high-precision checks on the fixed registered inputs give:
+
+| Object | Check | Result | Residual |
+|---|---|---|---|
+| Theorem Z.7 saturation | $24\ln(1+2^{1/8}-1)-\ln8$ | $0$ exactly | $0$ |
+| Proposition T.59 integer chain | $(b,M,k,k^2-6M)$ at $(d_0,a)=(8,2)$ | $(6,24,12,0)$ | $0$ |
+| Theorem Z.26 core | 100-decimal evaluation from fixed inputs | $137.0360920552286269313249707485915548866\ldots$ | below $10^{-68}$ against an independent 70-decimal reevaluation |
+
+These checks certify arithmetic on the displayed inputs. The branch hypotheses, physical Thomson identification, and residual gate retain their owning certificate requirements.
 
 **Remark Z.11.2a (Interpretive Status and Scope).** The staircase is a closure statement on the minimal branch, not a second dynamical derivation of every rung from packing alone. The top equality $|\Phi(D_4)|=M=24$ is a compatibility identity between the independently fixed mode count and the regular-$24$-cell realization used by Theorems Z.10--Z.11; it is not a second source of the mode count. The lower steps $|\Phi(A_1)|=a$, $|\Phi(A_2)|=b$, and $|\Phi(A_3)|=q_{\mathrm{geom}}$ are exact geometric identities once $(a,b,q_{\mathrm{geom}})=(2,6,12)$ is fixed. Equality with the binary code dimension $k$ occurs only on the separately accepted predictive-recovery rate branch and supplies no carrier identification. Its content is that the full discrete backbone lands on the canonical low-rank chain $A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8$. This places the Appendix Z closure directly inside the root-system machinery already used elsewhere: $D_4$ reappears in the Dirac-sector geometry of Theorem T.24.3, $A_2$ reappears in Theorem T.24.5 and in the geometric mismatch between $A_2$ and $D_4$ of Theorems T.49-T.52, and the terminal inclusion $D_4 \subset E_8$ lands in the Appendix R $E_8$ scaffold. The staircase is therefore a low-dimensional closure of existing project geometry. The higher-count structures $|\Phi(E_8)|=240$ and the Leech-lattice data in dimension 24 enter the framework through their own later roles and are not additional rungs of this minimal-branch identity.
 
@@ -3962,6 +4109,34 @@ which together with (Z.14f.3) proves (Z.14f.2). The final statement follows beca
 
 **Remark Z.14f.1 (Certificate Scope).** Proposition Z.14f is a finite spectral identity. It neither identifies $O$ with the operational electromagnetic current nor supplies the current normalization, source-exhaustion, retained-bandwidth, or PCE-null tail conditions of Definition Z.14d.
 
+**Proposition Z.14g (Ward-Scalar Modulus before the Operational Current Bridge).** Fix the QFI kernel $\mathcal K$, invertible on the registered active subspace, and the capacity value $u^*$ in their registered QFI-natural units, but do not assume the operational current and equal-spectral-weight identities of Definition Z.14d and Theorem Z.14e. For every $c>0$,
+$$
+\mathcal G_c=c^{-1}\mathcal K^{-1},
+\qquad
+\Gamma_c^{(2)}=\mathcal G_c^{-1}=c\mathcal K,
+\qquad
+\kappa_{\mathrm{bulk},c}=c
+\tag{Z.14g.1}
+$$
+satisfies Legendre duality with the same $(\mathcal K,u^*)$. Therefore QFI normalization and capacity saturation alone do not force $c_{\mathrm W}=1$.
+
+If one common linear spectral functional $I_T$ additionally satisfies
+$$
+I_T(\chi_{JJ}^{\mathrm{op}})=Q,
+\qquad
+I_T(\chi_{\mathcal K})=Q,
+\qquad
+\chi_{JJ}^{\mathrm{op}}=c^{-1}\chi_{\mathcal K},
+\qquad
+Q>0,
+\tag{Z.14g.2}
+$$
+then $Q=c^{-1}Q$ and hence $c=1$, recovering exactly the independent positive route of Theorem Z.14e.
+
+*Proof.* Inverting $c^{-1}\mathcal K^{-1}$ gives $c\mathcal K$, so (Z.14g.1) is valid for every positive $c$. The upstream objects are unchanged while the bulk coefficient varies, proving nonentailment. Linearity of $I_T$ gives the last assertion. ∎
+
+**Resolution record Z.14g-R1 (`TV-Z-10`, upstream unit-coefficient obstruction).** This is `negative-refutation` of the proposition that the QFI/capacity data alone force the unit Ward coefficient. The exact comparison class is the positive family (Z.14g.1), modulo response-preserving basis changes of $\mathcal K$; distinct $c$ remain response-distinct. Proposition V.3.12b executes the witnesses $c\in\{1,3/2,2\}$ and the positive-$Q$ closure check. A proof that all three members have the same bulk coefficient falsifies the no-go; a populated (Z.14g.2) record instead closes a narrower, premise-enlarged branch. The $c=1$ and $c=2$ members prove nonvacuity. `TV-Z-10` retains the physical current/operator, unit bridge, bandwidth/tail exhaustion, and accepted spectral-weight certificate.
+
 **Remark Z.14a (Comparison with Standard QFT).** In standard QFT, $\kappa$ in $S_{\mathrm{Maxwell}}$ carries no empirical content because a constant field rescaling can be absorbed into a redefinition of the free gauge coupling. In PU, the coupling $u^*$ is fixed by capacity saturation in QFI-natural units (Theorem Z.7) and the QFI normalization $\lambda=1$ is fixed by state-space geometry (Theorem Z.5), which removes the ordinary $U(1)$ rescaling freedom. On the unit Predictive-Ward branch of Theorem Z.14, $\kappa^*_{\mathrm{bulk}}=1$ is a theorem. On a branch carrying the Thomson-Ward spectral-weight certificate of Definition Z.14d, Theorem Z.14e closes the unit Jacobian $c_{\mathrm W}=1$ from the operational $f$-sum/TRK identity (Z.14d.4) together with the QFI-canonical evaluation (Z.14e.2), rather than taking $c_{\mathrm W}=1$ as an independent branch input.
 
 
@@ -4900,6 +5075,30 @@ because $(M-1)(32/23)/(2\cdot8)=2$. The value $1/(ad_0)$ is a branch input, not 
 
 **Remark Z.24a.1 (Response Status).** The curvature calculation and the response projection are separate ledgers. A future operator-realized electromagnetic certificate may compute $L_{\mathrm{vis}}$; until then $K_{\mathrm{eff}}=2$ is a conditional model value.
 
+**Proposition Z.24b (Complete Isotropy-Modulus Classification for the Visible Response).** On the irreducible stabilizer module
+$$
+T_{[A]}\operatorname{Gr}(2,8)\cong\operatorname{Hom}(\mathbb C^2,\mathbb C^6),
+$$
+every positive invariant Hermitian response form is
+$$
+g_L=L g_B,
+\qquad
+L>0.
+\tag{Z.24b.1}
+$$
+Consequently the intrinsic values $M=24$ and $K_{\mathrm{avg}}^{\mathrm{Bures}}=32/23$ give the full isotropic response family
+$$
+K_{\mathrm{eff}}(L)
+=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}L
+=32L.
+\tag{Z.24b.2}
+$$
+Both $L=1$ and $L=1/16$ are positive and invariant, but they give $K_{\mathrm{eff}}=32$ and $K_{\mathrm{eff}}=2$, respectively. Thus isotropy alone cannot force the democratic coefficient $L_{\mathrm{vis}}=1/(ad_0)=1/16$.
+
+*Proof.* Schur's lemma makes the space of invariant Hermitian forms one-dimensional. Positivity restricts its scalar to $L>0$ but supplies no preferred positive value. Substitution gives (Z.24b.2) and the two exact witnesses. ∎
+
+**Resolution record Z.24b-R1 (`TV-Z-11`, isotropy-only coefficient obstruction).** This is `negative-refutation` of the proposition that intrinsic isotropy determines $L_{\mathrm{vis}}=1/16$. The domain is the stated irreducible tangent module with fixed $g_B$, $M$, and intrinsic Ricci trace; equivalence is stabilizer-equivariant unitary basis change, which preserves but does not identify different $L$. Proposition V.3.12b verifies both rational witnesses exactly. A proof that every positive invariant form has $L=1/16$ falsifies the no-go; an operator-realized electromagnetic projection that computes $L$ adds the missing premise rather than contradicting it. Both displayed forms prove nonvacuity. `TV-Z-11` retains the determinant-compatible electromagnetic current, visible averaging, unit bridge, and physical response realization.
+
 ### Z.27.6 Minimal Holonomy and Second-Order Correction Formula
 
 **Lemma Z.14 (Conditional Normalized Chern-Flux Branch).** The group $\pi_2(\mathrm{Gr}(a,d_0))\cong\mathbb Z$ is generated by the standard Schubert $\mathbb{CP}^1$. Topology alone does not define a holonomy around a two-cycle. Let $L$ be a separately chosen Hermitian line bundle with unitary connection of curvature $F_\nabla$, adopt the convention
@@ -5280,7 +5479,7 @@ $$
 \operatorname{sinc}(u^*)=\frac{\sin u^*}{u^*}.
 $$
 7. $R_\alpha$ is a certified residual entry, possibly a degenerate interval, for all finite Ward, threshold, recoil, projection, and operator-realized post-core sources not already included in the bulk Ward term, interface term, electromagnetic projection, democratic-curvature response, separable-curvature response, or exact $SU(2)$ sinc factor. A nondegenerate interval is allowed only when supplied by an accepted Definition Z.27.11g bound or by an accepted Definition Z.27.11j operator record; an exact value is recorded as $[R_\alpha,R_\alpha]$.
-8. $\chi_\alpha$ points to an auditable provenance record showing when every formula, coefficient, source menu, normalization, and bound was fixed and which comparison data were inaccessible at that time. A self-declared bit does not establish forward locking. Because the Thomson value was already public, a construction made with access to it is classified as post-comparison unless validated on a genuinely held-out observable or supported by immutable prior provenance.
+8. $\chi_\alpha$ points to an auditable provenance record showing when every formula, coefficient, source menu, normalization, and bound was fixed and which comparison data were inaccessible at that time. A derivation carrying the auxiliary class **derived under blinding** cites a populated Convention P.14.1a.1 record. A self-declared bit does not establish forward locking. Because the Thomson value was already public, a construction made with access to it is classified as post-comparison unless validated on a genuinely held-out observable or supported by immutable prior provenance.
 
 The certified Thomson value is
 $$
@@ -5574,7 +5773,7 @@ $$
 
 6. $\mathcal A_\alpha$ is a proof-carrying physical-origin, source-exhaustion, and overlap ledger. It derives $E_\alpha$ from the same certified electromagnetic current-response dynamics as Definition Z.27.11a after subtracting every core term, proves absence of double counting, and proves that every remaining post-core source is included in $E_\alpha$ or in its rigorous tail. Merely defining an analytic function with convenient coefficients does not satisfy this item.
 
-7. $\chi_\alpha^{\mathrm{AO}}$ points to auditable provenance for the current-response derivation, coefficients, radius, and bound. Acceptance also requires a realization map from the certified physical current/operator response to $E_\alpha$ and proof that the regularization and coefficient bounds use that map. Pre-comparison locking is necessary but not sufficient; without immutable prior provenance or genuinely held-out validation, a construction made with access to $\alpha_{\mathrm{obs}}$ remains post-comparison.
+7. $\chi_\alpha^{\mathrm{AO}}$ points to auditable provenance for the current-response derivation, coefficients, radius, and bound. A derivation carrying the auxiliary class **derived under blinding** cites a populated Convention P.14.1a.1 record. Acceptance also requires a realization map from the certified physical current/operator response to $E_\alpha$ and proof that the regularization and coefficient bounds use that map. Pre-comparison locking is necessary but not sufficient; without immutable prior provenance or genuinely held-out validation, a construction made with access to $\alpha_{\mathrm{obs}}$ remains post-comparison.
 
 A named realization for the finite-order sinc-tail diagnostic — the SPAP-reflexive sinc-tail audit certificate $\mathfrak R_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}$ constructed in Definition Z.27.11L below — supplies a forward-locked sub-instance of $\mathfrak R_\alpha^{\mathrm{AO}}$ specialized to the third-order Taylor truncation of the sinc factor already included in the core (Definition Z.27.11a). Because that exact factor is already present in the core expression, the SR certificate is strictly an internal consistency audit of the truncation and does not tighten the residual entry $R_\alpha$. It is not by itself an electromagnetic, threshold, curvature, or finite Ward residual closure for $R_\alpha$.
 
@@ -5644,7 +5843,7 @@ where:
 4. $\mathcal E_{\mathrm{src}}$ proves source exhaustion, so every post-core contribution is included in $\mathcal R_\alpha$ or in the rigorous tail $\mathcal B_\alpha$;
 5. $\mathcal E_{\mathrm{ov}}$ proves overlap consistency and absence of double counting with the core and every other residual record;
 6. the operator domain, regularization or renormalization prescription, and rigorous error bound are fixed; and
-7. $\chi_\alpha$ is an auditable provenance record showing when every formula, coefficient, source menu, normalization, and bound was fixed and which comparison data were inaccessible. A self-declared bit does not prove forward locking; a construction made with access to the published Thomson value is post-comparison unless supported by immutable prior provenance or validated on a genuinely held-out observable.
+7. $\chi_\alpha$ is an auditable provenance record showing when every formula, coefficient, source menu, normalization, and bound was fixed and which comparison data were inaccessible. A derivation carrying the auxiliary class **derived under blinding** cites a populated Convention P.14.1a.1 record. A self-declared bit does not prove forward locking; a construction made with access to the published Thomson value is post-comparison unless supported by immutable prior provenance or validated on a genuinely held-out observable.
 
 The closed residual is
 $$
@@ -6584,6 +6783,453 @@ Conversely the endpoints are admissible in the downgraded record: $P=0$ gives $\
 **Corollary Z.27.11k.21.1 (Conditional Hypercharge-Recoil Candidate).** If an independently constructed post-core Thomson operator realizes every source, differential, evaluation, exhaustion, regularization, and no-remainder clause of Definition Z.27.11k.12, its candidate residual is the value computed in Theorem Z.27.11k.20. The stipulated finite complex does not prove that realization. Strict-certificate status remains open and the numerical value remains diagnostic. ∎
 
 **Remark Z.27.11k.22 (Status Boundary for Operator Realization).** No matrix reduction is promoted to exact physical closure until the independent operator-realization certificate is supplied.
+
+**Definition Z.27.11k.22a (FQ7 Finite Thomson-Carrier Candidate).** Retain $W_5$, $Y$, $T_3$, $P_C$, and $P_W$ from Definition Z.27.11k.12, extend $T_3$ by zero on $\mathbb C_C^3$, and put
+$$
+V=\mathbb C^3,
+\qquad
+\mathcal H_{\mathrm{FQ7}}=V\otimes W_5,
+\qquad
+Q_{\mathrm{em}}=T_3+Y,
+\qquad
+\mathcal J_{\mathrm{FQ7}}=\frac12 I_V\otimes Q_{\mathrm{em}}.
+\tag{Z.27.11k.22a.1}
+$$
+Let
+$$
+\Pi_{\mathrm{act}}=\operatorname{diag}(1,1,0),
+\qquad
+\Pi_{\perp}=\operatorname{diag}(0,0,1)
+\tag{Z.27.11k.22a.2}
+$$
+on $V$. If $F_C=E_{12}+E_{21}$ on $\mathbb C_C^3$ and zero on $\mathbb C_W^2$, define
+$$
+\begin{aligned}
+S_1&=I_V\otimes Y^2,
+&S_2&=\Pi_{\mathrm{act}}\otimes Y^2,\\
+S_3&=\Pi_{\mathrm{act}}\otimes T_3^2,
+&S_4&=\Pi_{\perp}\otimes T_3^2,\\
+S_5&=E_{11}\otimes F_C,
+&S_6&=E_{22}\otimes F_C,
+&S_7&=E_{33}\otimes F_C,
+\end{aligned}
+\tag{Z.27.11k.22a.3}
+$$
+and let
+$$
+C_y:\mathbb R^7\longrightarrow\operatorname{Herm}(\mathcal H_{\mathrm{FQ7}}),
+\qquad
+C_ye_j=S_j,
+\tag{Z.27.11k.22a.4}
+$$
+with Euclidean and real Hilbert--Schmidt inner products.
+
+Let $(E_1,\ldots,E_5)$ be the coordinate rank-one resolution of $I_{W_5}$ subordinate to $P_C$ and $P_W$, set $\widehat E_j=I_V\otimes E_j$, and define
+$$
+\mathcal D_{\mathrm{FQ7}}:
+\operatorname{Herm}(\mathcal H_{\mathrm{FQ7}})
+\longrightarrow
+\operatorname{Herm}(\mathcal H_{\mathrm{FQ7}}),
+\qquad
+\mathcal D_{\mathrm{FQ7}}(X)=\sum_{j=1}^5\widehat E_jX\widehat E_j,
+\qquad
+\operatorname{Herm}_{\mathrm{bd}}(\mathcal H_{\mathrm{FQ7}})
+=\operatorname{Ran}\mathcal D_{\mathrm{FQ7}}.
+\tag{Z.27.11k.22a.5}
+$$
+Fix any real basis $\mathcal P_{\mathrm{FQ7}}$ of $\operatorname{Herm}_{\mathrm{bd}}(\mathcal H_{\mathrm{FQ7}})$ and, for $X,X'\in\operatorname{Herm}(\mathcal H_{\mathrm{FQ7}})$, set
+$$
+X\sim_{\mathrm{FQ7}}X'
+\Longleftrightarrow
+\operatorname{Tr}(AX)=\operatorname{Tr}(AX')
+\text{ for every }A\in\mathcal P_{\mathrm{FQ7}},
+\qquad
+V_{\mathrm{off}}(X)=\|X-\mathcal D_{\mathrm{FQ7}}X\|_{\mathrm{HS}}^2.
+\tag{Z.27.11k.22a.6}
+$$
+Finally, let $C^0_{\mathrm{op}}=\mathbb R^3$ with basis $(f_{\parallel},f_0,f_1)$, $C^1_{\mathrm{op}}=\operatorname{im}C_y$, and $C^2_{\mathrm{op}}=\mathbb R\Theta_{\mathrm{op}}$. Define
+$$
+\widetilde\delta_0f_{\parallel}=S_3,
+\qquad
+\widetilde\delta_0f_0=S_5,
+\qquad
+\widetilde\delta_0f_1=S_6,
+\tag{Z.27.11k.22a.7}
+$$
+$$
+\widetilde\delta_1S_7=\Theta_{\mathrm{op}},
+\qquad
+\widetilde\delta_1S_j=0\quad(1\le j\le6).
+\tag{Z.27.11k.22a.8}
+$$
+The ordered maps $\kappa^0,\kappa^1,\kappa^2$ send $(f_{\parallel},f_0,f_1)$ to $(\lambda_{\parallel},\lambda_0,\lambda_1)$, $(S_1,\ldots,S_7)$ to $(\omega_Y,\omega_5,\sigma_{\parallel},\sigma_{\perp},\nu_0,\nu_1,\theta)$, and $\Theta_{\mathrm{op}}$ to $\Theta$, respectively.
+
+**Theorem Z.27.11k.22b (Exact Finite Closure of the FQ7 Carrier Candidate).** The data of Definition Z.27.11k.22a satisfy all of the following.
+
+1. The current is Hilbert--Schmidt normalized and has charged support of complex rank $12$:
+$$
+\operatorname{Tr}_{\mathcal H_{\mathrm{FQ7}}}(\mathcal J_{\mathrm{FQ7}}^2)=1,
+\qquad
+\operatorname{rank}_{\mathbb C}s(\mathcal J_{\mathrm{FQ7}}^2)=12.
+\tag{Z.27.11k.22b.1}
+$$
+
+2. The seven sources are real-linearly independent. Their exact Gram matrix is
+$$
+C_y^*C_y=
+\begin{pmatrix}
+35/72&35/108&1/4&1/8&0&0&0\\
+35/108&35/108&1/4&0&0&0&0\\
+1/4&1/4&1/4&0&0&0&0\\
+1/8&0&0&1/8&0&0&0\\
+0&0&0&0&2&0&0\\
+0&0&0&0&0&2&0\\
+0&0&0&0&0&0&2
+\end{pmatrix},
+\qquad
+\det(C_y^*C_y)=\frac1{1458}>0.
+\tag{Z.27.11k.22b.2}
+$$
+
+3. The maps in (Z.27.11k.22a.7)--(Z.27.11k.22a.8) form a cochain complex, $\kappa^\bullet$ is a basis-preserving cochain isomorphism to the stipulated complex of Definition Z.27.11k.12, and
+$$
+H^1(C^\bullet_{\mathrm{op}})
+=\operatorname{span}\{[S_1],[S_2],[S_4]\}.
+\tag{Z.27.11k.22b.3}
+$$
+
+4. The map $\mathcal D_{\mathrm{FQ7}}$ is the Hilbert--Schmidt orthogonal projection onto $\operatorname{Herm}_{\mathrm{bd}}(\mathcal H_{\mathrm{FQ7}})$. Every $X\in\operatorname{Herm}(\mathcal H_{\mathrm{FQ7}})$ is $\sim_{\mathrm{FQ7}}$-equivalent to $\mathcal D_{\mathrm{FQ7}}X$, and $\mathcal D_{\mathrm{FQ7}}X$ is the unique minimizer of $V_{\mathrm{off}}$ in the response fiber of $X$.
+
+5. Every positive normalized real-linear functional on $\operatorname{Herm}(\mathcal H_{\mathrm{FQ7}})$ invariant under the natural $U(3)_V\times U(3)_C\times U(2)_W$ action has the unique form
+$$
+\Lambda_s(X)=\operatorname{Tr}(D_sX),
+\qquad
+D_s=\frac{I_V}{3}\otimes\left(\frac{s}{3}P_C+\frac{1-s}{2}P_W\right),
+\qquad
+0\le s\le1.
+\tag{Z.27.11k.22b.4}
+$$
+The equal-channel equations $\Lambda_s(\widehat E_j)=1/5$ select $s=3/5$ and hence the unique normalized trace $\tau_{15}=\operatorname{Tr}/15$. In particular,
+$$
+\tau_{15}(\Pi_{\mathrm{act}}\otimes I_{W_5})=\frac23,
+\qquad
+\tau_{15}(\Pi_{\perp}\otimes I_{W_5})=\frac13.
+\tag{Z.27.11k.22b.5}
+$$
+For every positive $A$ and orthogonal projection $P$,
+$$
+15\tau_{15}(PAP)=\|PA^{1/2}\|_{\mathrm{HS}}^2,
+\tag{Z.27.11k.22b.6}
+$$
+so $\tau_{15}(PAP)>0$ exactly when $Ps(A)\ne0$. The determinant-compatible trace arithmetic is
+$$
+\operatorname{Tr}_{W_5}(Y^2)=\frac56,
+\qquad
+\operatorname{Tr}_{\mathbb C^2}(T_3^2)=\frac12,
+\qquad
+\frac{\operatorname{Tr}_{W_5}(Y^2)}{\operatorname{Tr}_{\mathbb C^2}(T_3^2)}=\frac53,
+\qquad
+\frac23\frac53=\frac{10}{9}.
+\tag{Z.27.11k.22b.7}
+$$
+
+*Proof.* On $W_5$,
+$$
+Q_{\mathrm{em}}=\operatorname{diag}(-1/3,-1/3,-1/3,1,0),
+$$
+so $\operatorname{Tr}_{W_5}(Q_{\mathrm{em}}^2)=4/3$. Tensoring by $V$ and multiplying by $1/4$ proves (Z.27.11k.22b.1). Direct Hilbert--Schmidt products give (Z.27.11k.22b.2). The positive determinant proves injectivity of $C_y$. The only images of $\widetilde\delta_0$ are $S_3,S_5,S_6$, and the only nonzero value of $\widetilde\delta_1$ is on $S_7$; hence $\widetilde\delta_1\widetilde\delta_0=0$, the two cochain squares for $\kappa^\bullet$ commute, and (Z.27.11k.22b.3) follows.
+
+The mutually orthogonal $\widehat E_j$ make $\mathcal D_{\mathrm{FQ7}}$ an orthogonal projection. Response equivalence fixes its block-diagonal component because $\mathcal P_{\mathrm{FQ7}}$ spans the range, and orthogonal decomposition then gives the unique minimizer. For claim 5, the trace pairing represents $\Lambda$ by a positive unit-trace density. Invariance and Schur's lemma make that density scalar on $V\otimes\mathbb C_C^3$ and $V\otimes\mathbb C_W^2$, giving (Z.27.11k.22b.4). The five equal-channel equations give $s/3=(1-s)/2=1/5$. Cyclicity proves (Z.27.11k.22b.6), and direct traces prove (Z.27.11k.22b.7). ∎
+
+**Definition Z.27.11k.22c (FQ7 Physical-Realization Certificate and Verifier).** An FQ7 physical-realization certificate is a finite proof-carrying record
+$$
+\mathfrak C_{\mathrm{FQ7}}^{\mathrm{phys}}
+=(\mathfrak I_{\mathrm{Th}},\mathsf{Build}_{\mathrm{FQ7}},P,U_J,
+U^\bullet,\mathfrak S_{\mathrm{phys}},
+D_0^{\mathrm{phys}},D_1^{\mathrm{phys}},r^{\mathrm{phys}},
+\Phi^{\mathrm{phys}},\mathcal E_{\mathrm{ov}},\mathcal B_{\mathrm{FQ7}},\pi,\chi).
+\tag{Z.27.11k.22c.1}
+$$
+Its input $\mathfrak I_{\mathrm{Th}}$ is an independently certified presentation of the same Appendix Z Thomson current-response theory. It contains the physical operator domain, normalized current, current-response dynamics, units, measure, core-subtraction map, regulator or renormalization rule, ambient symmetry/degree/support source-generation rules, and error norm required by Definition Z.27.11j. The input and constructor source exclude as axioms, literal outputs, or branch-selection constants: $\alpha_{\mathrm{obs}}$; the source frame $(S_1,\ldots,S_7)$; the matrices $D_0,D_1$; the residual coordinate $e_1+e_2+e_4$; the candidate contraction data $G_{\ge7},A_{\ge7},\eta_7$; the constants $-5/3,10/9,-1/3$ in their candidate roles; and the coordinate row (Z.27.11k.12l). Those candidate objects occur only in the external acceptance comparator after the constructor input and source hashes are frozen. The source code, version, canonical input serialization, and hashes of the deterministic constructor $\mathsf{Build}_{\mathrm{FQ7}}$ belong to $\chi$.
+
+From the frozen physical theory and its ambient generation rules, the constructor outputs a response-active projection $P$, the normalized physical current, a physical carrier/gauge/block datum
+$$
+\mathfrak S_{\mathrm{phys}}
+=
+(P_C^{\mathrm{phys}},P_W^{\mathrm{phys}},Y^{\mathrm{phys}},
+T_3^{\mathrm{phys}},\Pi_{\mathrm{act}}^{\mathrm{phys}},
+\Pi_{\perp}^{\mathrm{phys}},F_C^{\mathrm{phys}},
+G_{\ge7}^{\mathrm{phys}},A_{\ge7}^{\mathrm{phys}},
+\eta_7^{\mathrm{phys}}),
+$$
+the physical Ward complex $C^\bullet_{\mathrm{phys}}$, its complete source basis, residual class, Thomson functional, overlap ledger, tagged remainder package $\mathcal B_{\mathrm{FQ7}}$, a finite proof object $\pi$, and an expression/proof dependency DAG for every output. The remainder package contains either the exact-zero record or the complete referenced Definition-Z.27.11g/j record, including its proof and provenance artifacts. In particular,
+$$
+C^1_{\mathrm{phys}}
+\subseteq
+\operatorname{Herm}(P\mathcal H_{\mathrm{phys}})
+$$
+is the finite core-subtracted response-active Hermitian source space derived by the constructor. The external verifier checks a unitary $U_J:\mathcal H_{\mathrm{FQ7}}\to P\mathcal H_{\mathrm{phys}}$ and a cochain isomorphism
+$$
+U^\bullet=(U^0,U^1,U^2):
+C^\bullet_{\mathrm{op}}\longrightarrow C^\bullet_{\mathrm{phys}},
+\qquad
+U^1(X)=U_JXU_J^*.
+$$
+The degree-zero and degree-two maps are the maps induced by the same frozen response/source functor on the derived Ward-domain and obstruction generators. A post-output change of basis that is not induced by this functor fails the verifier. The verifier assigns one of the disjoint statuses $\textsf{point\mbox{-}accepted}$, $\textsf{interval\mbox{-}accepted}$, or $\textsf{rejected}$ by the tests below.
+
+1. **Carrier, current, and structural intertwining test.** The domain, normalization, units, and Thomson limit are derived from $\mathfrak I_{\mathrm{Th}}$, and
+$$
+U_J\mathcal J_{\mathrm{FQ7}}U_J^*=P\mathcal J_{\mathrm{em}}P.
+$$
+Writing the Appendix-Z carrier operators on $\mathcal H_{\mathrm{FQ7}}$ with their identity tensor factors understood, the checker also verifies
+$$
+\begin{aligned}
+U_JP_CU_J^*&=P_C^{\mathrm{phys}},
+&U_JP_WU_J^*&=P_W^{\mathrm{phys}},
+&U_JYU_J^*&=Y^{\mathrm{phys}},\\
+U_JT_3U_J^*&=T_3^{\mathrm{phys}},
+&U_J\Pi_{\mathrm{act}}U_J^*&=\Pi_{\mathrm{act}}^{\mathrm{phys}},
+&U_J\Pi_{\perp}U_J^*&=\Pi_{\perp}^{\mathrm{phys}},\\
+U_JF_CU_J^*&=F_C^{\mathrm{phys}}.
+\end{aligned}
+\tag{Z.27.11k.22c.2}
+$$
+Every operator on the right is independently generated from $\mathfrak I_{\mathrm{Th}}$ before this external comparison.
+
+2. **Source-realization and exhaustion test.** The constructor applies the ambient symmetry, degree, support, and current-response generation rules to enumerate the complete core-subtracted physical source space without receiving the seven-source candidate as a cutoff. The checker verifies
+$$
+C^1_{\mathrm{phys}}=U^1(C^1_{\mathrm{op}}),
+\qquad
+U^1(S_j)=U_JS_jU_J^*\quad(1\le j\le7),
+$$
+and matches these seven unitary-induced operators to the independently generated physical basis. It verifies preservation of the real Hilbert--Schmidt pairing, support, filtration degree, symmetry/block label, and source ownership. The proof object $\pi$ must show that this is the complete finite source space outside the separately bounded remainder, with every internal source classified exactly once as retained closed, exact, or obstructed. An omitted generated source, a source list introduced without the ambient derivation, or a freely chosen seven-dimensional relabeling fails this test.
+
+3. **Ward cochain test.** The physical response-coordinate and obstruction maps are derived from the Ward identity encoded in $\mathfrak I_{\mathrm{Th}}$. The checker verifies both cochain squares
+$$
+\delta_0^{\mathrm{phys}}U^0=U^1\widetilde\delta_0,
+\qquad
+\delta_1^{\mathrm{phys}}U^1=U^2\widetilde\delta_1.
+$$
+In the derived ordered bases their matrices satisfy
+$$
+D_0^{\mathrm{phys}}=D_0,
+\qquad
+D_1^{\mathrm{phys}}=D_1,
+\qquad
+D_1^{\mathrm{phys}}D_0^{\mathrm{phys}}=0,
+\tag{Z.27.11k.22c.3}
+$$
+and the corresponding squares with $\kappa^\bullet$ commute.
+
+4. **Residual-class test.** Core subtraction and exact-source reduction, performed by the frozen constructor, give
+$$
+r^{\mathrm{phys}}=U^1(S_1+S_2+S_4),
+\qquad
+[r^{\mathrm{phys}}]_{U^1(S_1),\ldots,U^1(S_7)}
+=e_1+e_2+e_4.
+\tag{Z.27.11k.22c.4}
+$$
+
+5. **Same-current evaluation and passive-complement test.** The constructor derives from the same normalized current and regulator as item 1 the determinant-compatible block trace, the active/reference rank fraction, the ordered seventh-order source plane, its positive contraction, its exact active line, its retained passive line, and its physical sign. The checker verifies
+$$
+\frac{\operatorname{Tr}((Y^{\mathrm{phys}})^2)}
+{\operatorname{Tr}((T_3^{\mathrm{phys}})^2)}
+=\frac53,
+\qquad
+\frac{\operatorname{rank}\Pi_{\mathrm{act}}^{\mathrm{phys}}}
+{\operatorname{rank}P}
+\frac53=\frac{10}{9},
+$$
+$$
+G_{\ge7}^{\mathrm{phys}}
+=\begin{pmatrix}2/3&0\\0&1/3\end{pmatrix},
+\qquad
+A_{\ge7}^{\mathrm{phys}}
+=\begin{pmatrix}1&0\\0&0\end{pmatrix},
+\qquad
+\eta_7^{\mathrm{phys}}=-1,
+$$
+and
+$$
+\delta_0^{\mathrm{phys}}U^0(f_{\parallel})=U^1(S_3),
+\qquad
+\operatorname{Tr}\!\left(
+G_{\ge7}^{\mathrm{phys}}
+\begin{pmatrix}0&0\\0&1\end{pmatrix}
+\right)=\frac13,
+$$
+while $[U^1(S_4)]$ is the retained non-exact passive class. The functional $\Phi^{\mathrm{phys}}$ descends through $D_0^{\mathrm{phys}}$, and its independently generated symbolic row is
+$$
+\Phi^{\mathrm{phys}}U^1=
+\begin{pmatrix}
+-\frac53c_1(u^*)^3&
+\frac{10}{9}c_1(u^*)^5&
+0&
+-\frac13c_1(u^*)^7&
+0&0&0
+\end{pmatrix}.
+\tag{Z.27.11k.22c.5}
+$$
+The checker compares exact symbolic expressions and outward-rounded interval enclosures. A copied coefficient, a sign imposed without the physical source rule, or a contraction not derived from the same current-response package fails the test.
+
+6. **Overlap and no-double-counting test.** The ledger $\mathcal E_{\mathrm{ov}}$ contains a common pre-subtraction audit space $\mathcal V_{\mathrm{audit}}$ carrying the core-source presentations and every residual presentation before ownership subtraction. It supplies a finite family of ownership projections $\{\mathsf O_\lambda\}_\lambda$ for the bulk Ward, interface, electromagnetic-projection, democratic-curvature, separable-curvature, exact-sinc, FQ7, and separately registered residual sectors. The checker verifies
+$$
+\mathsf O_\lambda^2=\mathsf O_\lambda,
+\qquad
+\mathsf O_\lambda\mathsf O_\mu=0\quad(\lambda\ne\mu),
+\qquad
+\sum_\lambda\mathsf O_\lambda=I_{\mathcal V_{\mathrm{audit}}}.
+$$
+When raw sector labels intersect, the constructor must first compute their common refinement and checked equalizer subtraction; the displayed projections are the resulting response-disjoint refined cells. Every refinement square commutes, every extracted source has exactly one refined owner, and the Thomson functional satisfies
+$$
+\Phi^{\mathrm{phys}}(X)
+=\sum_\lambda\Phi^{\mathrm{phys}}(\mathsf O_\lambda X)
+\qquad(X\in\mathcal V_{\mathrm{audit}}).
+$$
+If $\Lambda_{\mathrm{core}}$ denotes the six already-counted core owners, the post-core space is
+$$
+\mathcal V_{\mathrm{post}}
+=
+\left(I-\sum_{\lambda\in\Lambda_{\mathrm{core}}}\mathsf O_\lambda\right)
+\mathcal V_{\mathrm{audit}},
+\qquad
+C^1_{\mathrm{phys}}=\mathsf O_{\mathrm{FQ7}}\mathcal V_{\mathrm{audit}}.
+$$
+On the point branch, every other post-core residual-owner cell is zero; on an interval branch, each such cell is included exactly once in the accepted remainder record. These projection and additivity identities, rather than the owner names alone, certify core subtraction, source exhaustion, and absence of double counting.
+
+7. **Remainder and acceptance-status test.** The regulator, trace-class tail, discretization error, and analytic tail are bounded in the declared norm. Status $\textsf{point\mbox{-}accepted}$ requires items 1--6 and 8 together with
+$$
+\mathcal B_{\mathrm{FQ7}}=(\textsf{point},\{0\}).
+\tag{Z.27.11k.22c.6}
+$$
+A nonzero interval gives status $\textsf{interval\mbox{-}accepted}$ only when items 1--6 and 8 pass and
+$$
+\mathcal B_{\mathrm{FQ7}}=(\textsf{interval},\mathfrak C_{\mathrm{rem}}),
+$$
+where the embedded $\mathfrak C_{\mathrm{rem}}$ is a complete accepted record satisfying Definition Z.27.11g or Definition Z.27.11j. It then licenses only the interval conclusion of that record. Every other outcome has status $\textsf{rejected}$.
+
+8. **Proof, dependency, and provenance test.** The finite proof object $\pi$ verifies the domain, convergence, ambient source generation, source-presentation, Ward, evaluation, and remainder claims in the named checking kernel. The checker verifies an acyclic expression/proof dependency DAG in which every physical output traces only to $\mathfrak I_{\mathrm{Th}}$ and the frozen general constructor rules. The candidate source frame, Ward matrices, residual coordinate, coefficient constants, coordinate row, and $\alpha_{\mathrm{obs}}$ occur only at the external comparison nodes. The record $\chi$ verifies immutable input, source, proof, dependency-DAG, and output hashes together with the forward or held-out provenance requirement of Definition Z.27.11j.
+
+Every failed equality, noncommuting square, unowned source, unregistered tail, rejected proof object, or target leak is a finite rejection witness.
+
+**Conjecture Z.27.11k.22d (FQ7 Physical Realization).** The Appendix Z Thomson branch admits an independently constructed record $\mathfrak C_{\mathrm{FQ7}}^{\mathrm{phys}}$ with status $\textsf{point\mbox{-}accepted}$ under the verifier of Definition Z.27.11k.22c. Such a record establishes that the response-active post-core physical source quotient is carried by the seven-source FQ7 frame with the displayed Ward complex, same-current evaluation, response-disjoint overlap ledger, zero unregistered remainder, and accepted provenance. The certificate inputs, constructor, proof object, and provenance record make this conjecture independently verifiable or falsifiable.
+
+**Theorem Z.27.11k.22e (Closure from an Accepted FQ7 Physical-Realization Certificate).** Suppose the verifier of Definition Z.27.11k.22c assigns $\mathfrak C_{\mathrm{FQ7}}^{\mathrm{phys}}$ status $\textsf{point\mbox{-}accepted}$. Define the transported Ward data on the stipulated complex by
+$$
+\delta_0^{\mathrm{FQ7}}
+=\kappa^1\widetilde\delta_0(\kappa^0)^{-1},
+\qquad
+\delta_1^{\mathrm{FQ7}}
+=\kappa^2\widetilde\delta_1(\kappa^1)^{-1},
+\tag{Z.27.11k.22e.0a}
+$$
+$$
+r_{\alpha,YR\perp}^{\mathrm{FQ7}}
+=
+[\kappa^1(S_1+S_2+S_4)]_{B^1}
+=e_1+e_2+e_4,
+\qquad
+\Phi_{\alpha,YR\perp}^{\mathrm{FQ7}}
+=
+\Phi^{\mathrm{phys}}U^1(\kappa^1)^{-1}.
+\tag{Z.27.11k.22e.0b}
+$$
+Let
+$$
+\mathfrak O_{\alpha,YR\perp}^{\mathrm{FQ7}}
+=
+\left(
+\mathfrak S_{\alpha,YR\perp},
+C_W^\bullet,
+\delta_0^{\mathrm{FQ7}},
+\delta_1^{\mathrm{FQ7}},
+r_{\alpha,YR\perp}^{\mathrm{FQ7}},
+\Phi_{\alpha,YR\perp}^{\mathrm{FQ7}},
+\mathcal A_{\alpha,YR\perp}^{\mathrm{FQ7}},
+\chi_{\alpha,YR\perp}^{\mathrm{FQ7}}
+\right),
+\tag{Z.27.11k.22e.0c}
+$$
+where $C_W^\bullet=\kappa^\bullet(C_{\mathrm{op}}^\bullet)$. The audit tuple
+$$
+\mathcal A_{\alpha,YR\perp}^{\mathrm{FQ7}}
+=(\mathcal A_0^{\mathrm{FQ7}},\ldots,
+\mathcal A_8^{\mathrm{FQ7}})
+\tag{Z.27.11k.22e.0d}
+$$
+is extracted from the accepted certificate as follows:
+
+1. $\mathcal A_0^{\mathrm{FQ7}}$ is the core-subtraction, ownership-projection, and zero-remainder record from tests 6--8.
+2. $\mathcal A_1^{\mathrm{FQ7}}$ is the carrier, determinant-line, and current intertwining record from tests 1 and 8.
+3. $\mathcal A_2^{\mathrm{FQ7}}$ is the primitive determinant-compatible hypercharge record from tests 1 and 5.
+4. $\mathcal A_3^{\mathrm{FQ7}}$ is the rank-$2$ active/reference and rank-$1$ passive-complement record from tests 1 and 5.
+5. $\mathcal A_4^{\mathrm{FQ7}}$ is the complete source-generation and exhaustion record from tests 2, 6, 7, and 8.
+6. $\mathcal A_5^{\mathrm{FQ7}}$ is the transported Ward-map record from test 3 and (Z.27.11k.22e.0a).
+7. $\mathcal A_6^{\mathrm{FQ7}}$ is the same-current Thomson evaluation record from tests 1 and 5 and (Z.27.11k.22e.0b).
+8. $\mathcal A_7^{\mathrm{FQ7}}$ is the residual-class record from test 4 and (Z.27.11k.22e.0b).
+9. $\mathcal A_8^{\mathrm{FQ7}}$ is the point-remainder, dependency, target-exclusion, and forward-lock record from tests 6--8.
+
+The checker bit $\chi_{\alpha,YR\perp}^{\mathrm{FQ7}}$ records the following exact correspondence with Definition Z.27.11k.12: source-origin equality is supplied by tests 2 and 6--8; differential-origin equality by test 3; evaluation-origin equality by tests 1, 5, and 8; passive-complement equality by tests 3 and 5; regularization and error-bound equality by tests 6--8 and point acceptance; source-exhaustion equality by tests 2 and 6--8; determinant-compatible hypercharge equality by tests 1 and 5; active-recoil lift equality by tests 1, 3, and 5; and the forward lock by test 8 and the frozen hashes in $\chi$.
+
+Then Algorithm Z.27.11k.13 accepts $\mathcal A_{\alpha,YR\perp}^{\mathrm{FQ7}}$, so $\mathfrak O_{\alpha,YR\perp}^{\mathrm{FQ7}}$ satisfies all nine clauses of Definition Z.27.11k.12. Consequently Theorem Z.27.11k.20 applies and gives
+$$
+R_{\alpha}^{YR\perp}
+=-\frac53c_1(u^*)^3
++\frac{10}{9}c_1(u^*)^5
+-\frac13c_1(u^*)^7
+=-0.00009287769839723537\ldots,
+\tag{Z.27.11k.22e.1}
+$$
+$$
+\alpha^{-1}_{YR\perp}=137.03599917753023\ldots.
+\tag{Z.27.11k.22e.2}
+$$
+If the verifier assigns $\textsf{interval\mbox{-}accepted}$ through a Definition Z.27.11g record, Theorem Z.27.11h gives that record's certified Thomson interval. If it assigns $\textsf{interval\mbox{-}accepted}$ through a Definition Z.27.11j record, the result is the interval specified by that operator record.
+
+*Proof.* Theorem Z.27.11k.22b makes $\kappa^\bullet$ a cochain isomorphism and proves the displayed FQ7 carrier identities. Tests 1--5 identify the independently generated physical current, carrier operators, complete source space, Ward maps, residual class, and Thomson functional with their transported FQ7 counterparts, which proves (Z.27.11k.22e.0a)--(Z.27.11k.22e.0b). Tests 6--8 supply response-disjoint source ownership, zero unregistered remainder, proof validity, target exclusion, and frozen provenance on the point-accepted branch. The nine extracted records in (Z.27.11k.22e.0d) are therefore exactly the nine finite witnesses checked by Algorithm Z.27.11k.13, and the correspondence recorded by $\chi_{\alpha,YR\perp}^{\mathrm{FQ7}}$ discharges every clause of Definition Z.27.11k.12. This proves acceptance of the explicitly constructed record (Z.27.11k.22e.0c), so Theorem Z.27.11k.20 gives (Z.27.11k.22e.1)--(Z.27.11k.22e.2). On an interval branch the point-remainder witness is absent; the accepted Definition-Z.27.11g/j record supplies exactly its registered interval. ∎
+
+**Definition Z.27.11k.22f (FQ7 Odd-Grade Extension Certificate).** An odd-grade extension certificate is a finite record
+$$
+\mathfrak C_{\mathrm{FQ7}}^{(9)}
+=\bigl(\mathfrak I_{\mathrm{Th}},\mathsf{Build}_9,
+(L_d,x_d,j_d,\Psi_d,m_d)_{d=3,5,7,9},
+K,(T_d)_{d=3,5,7},\ell,\pi_9,\chi_9\bigr),
+\tag{Z.27.11k.22f.1}
+$$
+where $\mathfrak I_{\mathrm{Th}}$ is the independently frozen physical response theory of Definition Z.27.11k.22c, $K=\mathbb Rk$ is oriented, $\ell(k)=1$, every $j_d$ and $T_d$ is an isomorphism, and every $m_d>0$. The deterministic constructor $\mathsf{Build}_9$ applies one frozen physical grade, source, support, transport, phase, orientation, and same-current evaluation rule to derive every source line $L_d=\mathbb Rx_d$, orientation map $j_d:L_d\to K$, grade shift $T_d:L_d\to L_{d+2}$, functional $\Psi_d$, and positive factor $m_d$. It supplies their expression/proof dependency DAG $\pi_9$. The builder input and source contain neither the candidate sign row nor a degree-nine orientation or evaluation outcome as a literal or branch-selection constant. The checker first verifies those derivations and then verifies
+$$
+L_3=\mathbb R[\omega_Y],
+\qquad
+L_5=\mathbb R[\omega_5],
+\qquad
+L_7=\mathbb R[\sigma_{\perp}],
+\tag{Z.27.11k.22f.2}
+$$
+under the accepted source identification. It separately verifies that the derived degree-nine source line is response-active and nonzero and checks
+$$
+T_dx_d=x_{d+2},
+\qquad
+j_{d+2}T_dj_d^{-1}=-\operatorname{id}_K,
+\qquad
+\Psi_d(x_d)=m_d\ell(j_dx_d),
+\qquad
+\ell(j_3x_3)=-1.
+\tag{Z.27.11k.22f.3}
+$$
+The degree-nine line has its own source-owner, overlap, remainder, and current-evaluation entries. In a two-stage record, $\chi_9$ commits the physical theory, constructor, carrier, source/support rule, grade maps, phase, orientation, subtraction rule, and dependency DAG before the degree-nine evaluation is accessed; it then hashes the evaluation output and verifies that the expected sign row was unavailable to the constructor. A degree-nine magnitude enters the Thomson residual through a separately accepted residual certificate.
+
+**Corollary Z.27.11k.22g (Certificate-Gated Odd-Sign Continuation).** If $\mathfrak C_{\mathrm{FQ7}}^{(9)}$ is accepted, then
+$$
+\bigl(\operatorname{sign}\Psi_3(x_3),\operatorname{sign}\Psi_5(x_5),
+\operatorname{sign}\Psi_7(x_7),\operatorname{sign}\Psi_9(x_9)\bigr)
+=(-1,+1,-1,+1).
+\tag{Z.27.11k.22g.1}
+$$
+Thus the independently realized nonzero degree-nine coefficient has positive sign. A negative sign, a failed transport square, or target-dependent orientation falsifies this FQ7 extension certificate; failure leaves the accepted degree-three through degree-seven arithmetic unchanged.
+
+*Proof.* Equation (Z.27.11k.22f.3) sends $j_dx_d$ to its negative at each grade shift. Since every $m_d$ is positive and the degree-three orientation is negative, induction gives $\operatorname{sign}\Psi_d(x_d)=(-1)^{(d-1)/2}$ for $d=3,5,7,9$. ∎
+
+**Remark Z.27.11k.22h (Exact Boundary and Preserved Objective).** Theorem Z.27.11k.22b closes the finite carrier, source-frame, cohomology, dephasing, invariant-trace, support, and rational trace arithmetic. Conjecture Z.27.11k.22d is the remaining physical-realization objective, and Definition Z.27.11k.22c gives its finite acceptance and rejection tests. The separation is strict: adjoining a closed generator $\zeta_9$ to $C^1_{\mathrm{op}}$ preserves Theorem Z.27.11k.22b while defeating seven-source exhaustion; replacing the fourth entry of a descended row by $q c_1(u^*)^7$ preserves $\Phi D_0=0$ for every $q$; and adding $\varepsilon z^9$ with $\varepsilon>0$ preserves all coefficients through degree seven while defeating zero remainder. A failure of the physical-realization or odd-grade certificate rejects the corresponding FQ7 bridge and preserves Lemma Z.27.11k.17, Theorem Z.27.11k.16b, Theorem Z.27.11k.22b, and the conditional arithmetic of Theorem Z.27.11k.20.
 
 **Definition Z.27.11L (SPAP-Reflexive Sinc-Tail Audit Certificate).** On the canonical Appendix Z exact-sinc core branch, the SPAP-reflexive sinc-tail audit certificate is the record
 $$

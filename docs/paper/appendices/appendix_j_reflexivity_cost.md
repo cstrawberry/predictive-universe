@@ -87,6 +87,36 @@ For a conditionally uniform binary displaced label with no retained copy, the ri
 
 *Proof.* Injectivity forces distinct auxiliary outputs for distinct inputs that share the same accessible output. Conditional Landauer applies only to a subsequent registered reset and uses its actual joint law with all retained side information. ∎
 
+**Theorem J.1b (Complete Finite Fiber--Garbage Classification).** Let $A$ and $B$ be finite sets and let $f:A\to B$ be the accessible map on the exact reachable domain. Among all auxiliary alphabets $G$ and label maps $g:A\to G$ for which
+$$
+x\longmapsto(f(x),g(x))
+\tag{J.3a}
+$$
+is injective, the minimum auxiliary cardinality is
+$$
+|G|_{\min}=\max_{b\in f(A)}|f^{-1}(b)|.
+\tag{J.3b}
+$$
+For any actual joint law $q(X,R)$ supported on $A$, every injective extension obeys
+$$
+H_q(G\mid f(X),R)=H_q(X\mid f(X),R),
+\tag{J.3c}
+$$
+where $G=g(X)$. If $G$ is subsequently reset while $f(X)$ and $R$ are retained and unchanged, the registered isothermal reset satisfies
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+\ge
+H_q(X\mid f(X),R).
+\tag{J.3d}
+$$
+No entropy or heat lower bound follows when the reachable law makes $X$ a function of $(f(X),R)$, even if another fiber of $f$ has more than one element.
+
+*Proof.* On each fiber $f^{-1}(b)$, injectivity of (J.3a) requires distinct $G$ labels, so $|G|$ is at least the largest fiber size. Conversely, enumerate every fiber and assign its elements distinct labels in one common alphabet of that largest size; labels may be reused across different fibers because $b$ is also retained. This proves (J.3b) and constructs a minimizing embedding for every reachable-domain variant.
+
+For fixed values of $(f(X),R)$, the maps $X\mapsto G$ and $G\mapsto X$ are inverse on the conditional support, so their conditional probability vectors differ only by relabeling. Their entropies are therefore equal, giving (J.3c). Conditional Landauer with all unchanged side information gives (J.3d). If $X$ is already determined by $(f(X),R)$, the right side vanishes. ∎
+
+**Resolution TV-JREF-01-R1.** Equations (J.3b)--(J.3d) give `positive-discharge` of the exhaustive finite reachable-domain embedding, minimal-garbage, ensemble-entropy, and registered-reset classification. Lemma J.1 and Lemma J.1a are its binary cardinality slices.
+
 **Theorem J.4a (Finite Registered-Reset Ledger).** Let $D$ contain a finite set $\mathcal E_{\mathrm{ref}}(D)$ of registered classical resets. For event $e$, let $P_e$ be the reset record, $R_e$ all classical information retained and unchanged through that reset, $q_e$ their actual law, and $T_e>0$ the bath temperature. Under the cyclic, degenerate-register hypotheses of Theorem J.1, define
 $$
 \varepsilon_{\mathrm{reset}}(e)
@@ -215,6 +245,42 @@ which proves (J.4b.4). ∎
 
 **Remark J.4b.1 (Scope Boundary).** The result assigns no cost to an unrecorded projection. It becomes void if $b=0$, if no registered reset is executed, or if no positive uniform conditional-entropy bound is certified.
 
+**Theorem J.4c (Exact Zeno Survival and Record-Erasure Scaling Classification).** Let a qubit start in $|0\rangle$, evolve under $H=\hbar\omega\sigma_x$, and be projectively interrogated in the $\{|0\rangle,|1\rangle\}$ basis at $N$ equal intervals over a fixed time $T$. Put
+$$
+c_N=\cos^2\!\left(\frac{\omega T}{N}\right).
+\tag{J.4c.1}
+$$
+Then the all-survival probability is $P_N=c_N^N$. If a single optimally compressed record stores the first failure time $J\in\{1,\ldots,N,\infty\}$, then
+$$
+\Pr(J=j)=c_N^{j-1}(1-c_N),
+\qquad
+\Pr(J=\infty)=c_N^N,
+\tag{J.4c.2}
+$$
+and its Shannon entropy is exactly
+$$
+H(J)=h_2(c_N)\sum_{j=0}^{N-1}c_N^j
+=
+h_2(c_N)\frac{1-c_N^N}{1-c_N},
+\tag{J.4c.3}
+$$
+where $h_2$ uses natural logarithms. For fixed $0<|\omega T|<\infty$,
+$$
+P_N=1-\frac{(\omega T)^2}{N}+O(N^{-2}),
+\qquad
+H(J)=\Theta\!\left(\frac{\log N}{N}\right).
+\tag{J.4c.4}
+$$
+
+Thus an optimally compressed degenerate register erased once per completed run, with no retained side information about $J$, has Landauer floor $k_BT_bH(J)$, which tends to zero. A raw architecture that instead closes $N$ distinct resets with a uniform conditional-entropy floor $h_{\min}>0$ has the linear lower bound of Theorem J.4b. An architecture with no reset has no Landauer reset term but retains its record or side information and is not a closed cyclic reset. Zeno survival alone therefore fixes none of these three work scalings; the physical record architecture does.
+
+*Proof.* One interval has survival amplitude $\cos(\omega T/N)$, giving (J.4c.1) and independence under projection gives $P_N=c_N^N$. Equation (J.4c.2) is the truncated geometric law. Revealing the successive survival/failure bit only while the run remains active gives the entropy chain rule
+$$
+H(J)=\sum_{j=0}^{N-1}\Pr(J>j)h_2(c_N)
+=h_2(c_N)\sum_{j=0}^{N-1}c_N^j,
+$$
+which proves (J.4c.3). With $a=\omega T$, $1-c_N=a^2N^{-2}+O(N^{-4})$, $c_N^N=1-a^2N^{-1}+O(N^{-2})$, and $h_2(1-\epsilon)=\epsilon(1-\log\epsilon)+O(\epsilon^2)$. Substitution gives (J.4c.4). The three work statements follow respectively from conditional Landauer, Theorem J.4b, and the definition of a closed reset cycle. ∎
+
 **J.5 Distinction from Existing Bounds**
 
 The structural value $\varepsilon_0=\ln2$ counts a binary alphabet. The physical bath-heat ledger depends on $H_q(P\mid R)$, and the total entropy production is the excess $k_B\varepsilon_{\mathrm{diss}}$. Measurement, feedback, finite-time, and reservoir costs may be added only through compatible implementation theorems with an explicit no-double-counting rule.
@@ -227,7 +293,197 @@ The structural value $\varepsilon_0=\ln2$ counts a binary alphabet. The physical
 4. No area-law, gravitational, reflexivity, arrow-of-time, or locality conclusion follows from $\varepsilon_0=\ln2$ alone; each requires the independent bridge cited in its theorem.
 
 
-**J.7 Conclusion**
+---
+
+## J.8 Finite-Time Dissipation on a Certified Markov-Jump Implementation
+
+The excess $\varepsilon_{\mathrm{diss}}$ in Equation (J.3) is nonnegative and may vanish in a quasistatic limit. A strict finite-time statement requires implementation data beyond Definition J.1 and must distinguish an exact logical reset from a finite-rate physical approximation.
+
+**Definition J.8.1 (Markov-Jump Implementation Certificate).** A certificate $\mathfrak M_{\mathrm{LDB}}$ specifies, for every retained side-information value $r$ of positive probability:
+
+1. a finite-state, continuously differentiable Markov jump law $p_r(t)$ on $0\le t\le\tau$, with nonnegative rates locally bounded on the closed interval;
+2. local detailed balance with respect to the registered bath temperature and instantaneous control Hamiltonian, together with the degenerate register Hamiltonian, fixed ready label, and cyclic endpoint control of Theorem J.1;
+3. no transitions between distinct $r$-sectors and no change in the law of $R$;
+4. the input law $p_r^{\mathrm{in}}=q(P\mid R=r)$ and a registered physical output law $p_r^{\mathrm{out}}=p_r(\tau)$, including its ready-state error $1-p_r^{\mathrm{out}}(\mathrm{ready})$; and
+5. the standard stochastic entropy-production integral $\Sigma_r$ and activity integral
+$$
+N_r=\int_0^\tau A_r(t)\,dt.
+\tag{J.8.1}
+$$
+
+Local detailed balance then gives the heat identity
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+=H_q(P\mid R)-\sum_rq(r)H(p_r^{\mathrm{out}})+\sum_rq(r)\Sigma_r.
+\tag{J.8.2}
+$$
+Thus $\sum_rq(r)\Sigma_r$ is the irreversible entropy production. It equals the $\varepsilon_{\mathrm{diss}}$ of Equation (J.3) on an exact ready-state endpoint.
+
+Definition J.1 and the existence of a discrete Markov kernel do not populate $\mathfrak M_{\mathrm{LDB}}$: a discrete-time kernel need not be embeddable as a finite-rate continuous-time jump process, and single-bath isothermal operation alone does not imply local detailed balance.
+
+**Imported Result J.8.2 (Classical Stochastic Speed Limit; Shiraishi, Funo, and Saito 2018).** For each finite Markov-jump process satisfying the local-detailed-balance branch above,
+$$
+\|p_r(\tau)-p_r(0)\|_1^2\le2\Sigma_rN_r.
+\tag{J.8.3}
+$$
+With the total-variation convention $\|p-p'\|_{\mathrm{TV}}=\tfrac12\|p-p'\|_1$, this is
+$$
+\Sigma_r\ge\frac{2L_r^2}{N_r},
+\qquad
+L_r=\|p_r^{\mathrm{out}}-p_r^{\mathrm{in}}\|_{\mathrm{TV}},
+\tag{J.8.4}
+$$
+whenever $L_r>0$.
+
+**Definition J.8.3 (Total-Activity and Displacement Data).** A total-activity certificate $\mathfrak A_N$ supplies $N_{\max}<\infty$ such that $N_r\le N_{\max}$ for every retained $r$. Define
+$$
+L^2=\sum_rq(r)L_r^2.
+\tag{J.8.5}
+$$
+The condition $L>0$ is independent implementation data; a logical alphabet with more than one symbol does not imply it for the actual conditional input law.
+
+**Theorem J.8.4 (Positive Entropy-Production Floor at Bounded Total Activity).** If $\mathfrak M_{\mathrm{LDB}}$ and $\mathfrak A_N$ are populated and $L>0$, then
+$$
+\sum_rq(r)\Sigma_r
+\ge\frac{2L^2}{N_{\max}}
+>0.
+\tag{J.8.6}
+$$
+
+*Proof.* Equation (J.8.4) and $N_r\le N_{\max}$ give $\Sigma_r\ge2L_r^2/N_{\max}$ for every sector with $L_r>0$; sectors with $L_r=0$ contribute the nonnegative bound $\Sigma_r\ge0$. Average over $r$ and use (J.8.5). ∎
+
+**Lemma J.8.5 (Exact Finite-Rate Erasure Obstruction).** Under item 1 of Definition J.8.1, if $p_r^{\mathrm{in}}(x)>0$ for a non-ready state $x$, then $p_r(\tau)(x)>0$. Hence an exact ready-state endpoint cannot be reached in finite time on that sector.
+
+*Proof.* Let $\lambda_x(t)$ be the total exit rate from $x$. The probability of starting at $x$ and making no jump is at least
+$$
+p_r^{\mathrm{in}}(x)\exp\!\left(-\int_0^\tau\lambda_x(t)\,dt\right)>0,
+$$
+because local boundedness on the compact interval makes the integral finite. This event contributes to $p_r(\tau)(x)$. ∎
+
+**Remark J.8.6 (Scope).** Theorem J.8.4 applies to finite-error physical resets. An exact logical reset in finite time requires a singular-rate or limiting idealization outside Definition J.8.1; transferring Theorem J.8.4 to Equation (J.3) requires a certified limit theorem. The bound is independent of $\tau$ because it assumes an upper bound on integrated activity. An activity-rate cap $A_r(t)\le A_{\max}$ gives
+$$
+\sum_rq(r)\Sigma_r\ge\frac{2L^2}{A_{\max}\tau},
+$$
+which vanishes as $\tau\to\infty$. A strict channel-capacity deficit additionally requires a theorem connecting dissipative excess to the certified achievable boundary-channel rate.
+
+**Construction J.8.7 (Bounded Two-State LDB Erasure Witness).** Let the ready state be $0$, let $R$ be a singleton, and put $p_1(0)=p_0(0)=1/2$. Fix $\beta,\gamma,\Delta,\tau>0$ and define
+$$
+E_0(t)=0,
+\qquad
+E_1(t)=\Delta\sin^2\!\left(\frac{\pi t}{\tau}\right),
+\tag{J.8.7a}
+$$
+$$
+w_{0\leftarrow1}(t)=\gamma e^{\beta E_1(t)/2},
+\qquad
+w_{1\leftarrow0}(t)=\gamma e^{-\beta E_1(t)/2}.
+\tag{J.8.7b}
+$$
+The register is degenerate at $t=0$ and $t=\tau$. The rates are positive, continuously differentiable and bounded, and
+$$
+\log\frac{w_{0\leftarrow1}(t)}{w_{1\leftarrow0}(t)}
+=\beta(E_1(t)-E_0(t)),
+\tag{J.8.7c}
+$$
+so the process obeys local detailed balance for the displayed cyclic control Hamiltonian. Write
+$$
+k(t)=w_{0\leftarrow1}(t)+w_{1\leftarrow0}(t),
+\qquad
+c=\frac{\beta\Delta}{2}.
+$$
+
+**Theorem J.8.8 (Explicit Nonempty Bounded-Activity Erasure Branch).** Construction J.8.7 populates Definition J.8.1 and Definition J.8.3. Its final error $\epsilon_\tau=p_1(\tau)$ satisfies
+$$
+0<\epsilon_\tau<\frac12,
+\qquad
+L=\frac12-\epsilon_\tau
+=\int_0^\tau
+\exp\!\left(-\int_s^\tau k(u)\,du\right)
+\gamma\sinh\!\left(\frac{\beta E_1(s)}2\right)ds>0.
+\tag{J.8.8a}
+$$
+Moreover
+$$
+N\le N_{\max}=2\gamma\tau\cosh c,
+\tag{J.8.8b}
+$$
+and hence
+$$
+\Sigma\ge\frac{2L^2}{N_{\max}}>0.
+\tag{J.8.8c}
+$$
+The completely explicit estimates
+$$
+L\ge \frac{\gamma\tau}{2}e^{-2\gamma\tau\cosh c}\sinh\!\left(\frac c2\right)
+\tag{J.8.8d}
+$$
+and
+$$
+\Sigma\ge
+\frac{\gamma\tau}{4\cosh c}
+e^{-4\gamma\tau\cosh c}
+\sinh^2\!\left(\frac c2\right)>0
+\tag{J.8.8e}
+$$
+follow. The bath heat therefore obeys
+$$
+\frac{\langle Q_{\rm bath}\rangle}{k_BT}
+=\log2-h_2(\epsilon_\tau)+\Sigma,
+\tag{J.8.8f}
+$$
+where $h_2(x)=-x\log x-(1-x)\log(1-x)$.
+
+*Proof.* The master equation is
+$$
+\dot p_1=w_{1\leftarrow0}(1-p_1)-w_{0\leftarrow1}p_1.
+$$
+For $y=1/2-p_1$ this becomes
+$$
+\dot y+k(t)y=\gamma\sinh\!\left(\frac{\beta E_1(t)}2\right),
+\qquad y(0)=0.
+$$
+Variation of constants gives (J.8.8a); its integrand is nonnegative and is positive on $0<s<\tau$. Bounded rates and Lemma J.8.5 give $\epsilon_\tau>0$. The dynamical activity is at most $w_{0\leftarrow1}+w_{1\leftarrow0}=2\gamma\cosh(\beta E_1/2)\le2\gamma\cosh c$, proving (J.8.8b), and Theorem J.8.4 gives (J.8.8c). Since $k\le2\gamma\cosh c$ and $E_1(s)\ge\Delta/2$ on $\tau/4\le s\le3\tau/4$, (J.8.8d) follows by restricting the integral in (J.8.8a) to that interval. Substitution into (J.8.8c) gives (J.8.8e). Equation (J.8.8f) is (J.8.2). ∎
+
+**Remark J.8.9 (Witness Scope).** The witness proves nonemptiness of the finite-error, bounded-rate, cyclic-control LDB branch and supplies a strictly positive computable entropy-production floor. Exact finite-time erasure is governed by the singular-rate or limiting certificate identified in Remark J.8.6. Quantum ND-RID transfer, a channel-capacity deficit, and horizon saturation or strictness are governed by their separately named transfer certificates.
+
+**Definition J.8.10 (Reset-to-Capacity Transfer Certificate).** A transfer certificate $\mathfrak C_{\Sigma C}$ contains:
+
+1. a physical boundary channel $\Phi_{\rm phys}$ induced by the same registered reset carrier, clock and protocol as $\mathfrak M_{\rm LDB}$, and an ideal comparator $\Phi_{\rm id}$ with the same input/output alphabets, code constraints and number of uses;
+2. achievable-rate lower certificates and converse upper certificates for the regularized classical capacities, with a convergence modulus or an additive/single-letter theorem that makes each stated bound valid for arbitrary block length;
+3. a proved implementation-class inequality
+   $$
+   C(\Phi_{\rm phys})\le C(\Phi_{\rm id})-g(\Sigma),
+   \tag{J.8.10a}
+   $$
+   where $g:[0,\infty)\to[0,\infty)$ is fixed by the channel family, is nondecreasing on the certified entropy-production interval, satisfies $g(s)>0$ for $s>0$ in that interval, and is fixed independently of the desired horizon coefficient;
+4. an overlap map proving that the entropy-production record and the channel law in (J.8.10a) arise from the same physical implementation, plus a source-partition table preventing the reset-support deficit, refresh deficit and dissipative deficit from being counted twice; and
+5. the density, additivity, coding, unit and error records required to use the resulting capacity in Theorem E.9.1.
+
+The verifier evaluates the channels and witnesses, checks complete positivity and normalization, checks every code and converse inequality at its declared block length, checks the convergence modulus, evaluates (J.8.10a) at the certified $\Sigma$ interval, and checks every overlap square and source partition. Failure of any check rejects the transfer; a positive entropy-production number by itself never populates this certificate.
+
+**Theorem J.8.11 (Strict Leading Horizon-Capacity Coefficient on the Transfer Branch).** Suppose Theorem J.8.4 gives $\Sigma\ge\sigma_{\min}>0$, $\mathfrak C_{\Sigma C}$ is accepted, and $\Delta_C:=g(\sigma_{\min})>0$. If $C(\Phi_{\rm id})=2\log2$ and the density/additivity hypotheses of Theorem E.9.1 hold, then
+$$
+\limsup_{\mathcal A\to\infty}
+\frac{S_\Sigma^{\rm op}}{\mathcal A}
+\le
+\frac{\chi(2\log2-\Delta_C)}{\eta\delta^2}
+<
+\frac{2\chi\log2}{\eta\delta^2}.
+\tag{J.8.11}
+$$
+On the additional branch $\chi=\eta=1$ and $\delta^2=8\log2\,L_P^2$, the rightmost coefficient is $1/(4L_P^2)$. This is strictness of the leading area-density coefficient; a finite-area strict inequality additionally requires a quantitative remainder bound.
+
+*Proof.* Monotonicity of $g$ on the certified interval gives $C(\Phi_{\rm phys})\le2\log2-\Delta_C$. Substitute this capacity in (E.9.1a), divide by $\mathcal A$, and use $o(\mathcal A)/\mathcal A\to0$. The final substitution is arithmetic. ∎
+
+**Definition J.8.12 (Observer-Algebra/Trace Realization Certificate).** An observer-algebra certificate specifies a represented von Neumann algebra $\mathcal M$, a faithful normal state or semifinite weight $\varphi$, the modular action $\sigma^\varphi$, and, when invoked, a represented crossed product $\mathcal N=\mathcal M\rtimes_{\sigma^\varphi}\mathbb R$. It supplies the domains and self-adjointness data of the observer clock, a faithful semifinite trace $\tau$ or finite-trace corner $p\mathcal Np$, a normalized density $h$, and the convention
+$$
+S_\tau(h)=-\tau(h\log h)
+$$
+with units, additive constant, regulator, convergence proof and error bound. A restriction claim additionally supplies a normal channel from the retained full algebra to the accessible algebra and the state/code family on which data processing is applied; strict loss requires a certified strict data-processing or capacity-gap constant. A cosmological interpretation additionally supplies on the same branch the Lorentzian continuum, state-selection, stress-tensor, horizon, Einstein-equation and cosmological-constant maps, with a source-exhaustion/no-double-counting table.
+
+**Remark J.8.13 (Algebraic Scope).** An accepted Definition J.8.12 certificate proves its represented algebraic trace and entropy statements. A declared normal restriction channel adds the corresponding data-processing inequality, and a certified strictness constant adds the stated strict loss. Horizon and cosmological conclusions follow when the same certificate also carries the listed continuum, state, stress-tensor, gravitational, observable, and source-exhaustion maps.
+
+**J.9 Conclusion**
 
 A reset dissipates heat when its physical implementation erases uncertain information. The implementation's actual erasures determine that dissipation.
 

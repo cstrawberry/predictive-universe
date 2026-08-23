@@ -112,6 +112,51 @@ $$
 
 *Proof.* Theorem 35b(1) composes path latency from the edge values $\ell_e$, while Theorem 35b(2) composes cut capacity from the edge values $u_e$. Item 3 of that theorem supplies one-edge ledgers having equal latency and unequal capacity and ledgers having equal capacity and unequal latency. Hence neither functional determines the other. The causal-speed calibration uses path length divided by path latency, whereas the horizon entropy and $G$ calibration uses capacity per cut area. An implication between those calibrations would therefore require an additional relation between $\ell_e$ and $u_e$, which is not present in Theorem 35b. ∎
 
+**Proposition 35b.2 (Propagation-Metric Representative Stability and Fixed-Scale Counterexample).** Let $d_n$ and $d'_n$ be the path metrics on the same connected weighted graph, with the same microscopic factor $\delta_n$, induced by positive edge weights $w_{n,e}$ and $w'_{n,e}$. If $0\le\epsilon_n<1$ and
+$$
+(1-\epsilon_n)w_{n,e}\le w'_{n,e}\le(1+\epsilon_n)w_{n,e}
+\qquad\text{for every }e,
+\tag{64g}
+$$
+then
+$$
+(1-\epsilon_n)d_n\le d'_n\le(1+\epsilon_n)d_n.
+\tag{64h}
+$$
+When $\epsilon_n\to0$ and the rescaled diameters are uniformly bounded on each tested ball, the identity correspondences have vanishing distortion, so the two sequences have the same metric subsequential limits on those balls.
+
+A fixed bi-Lipschitz constant does not suffice. On the path with vertices $0,\ldots,n$, take $\delta_n=1/n$, $w_{n,e}=1$, and $w'_{n,e}=2$. The two metrics are uniformly $2$-bi-Lipschitz, but their endpoint distances are respectively $1$ and $2$ and their limits are $([0,1],|\cdot|)$ and $([0,1],2|\cdot|)$. Thus uniform bi-Lipschitz equivalence alone does not prove representative-independent metric limits. Equality of retained response limits additionally requires the response intertwiners and form convergence declared by the continuum certificate.
+
+*Proof.* Every path length satisfies the two inequalities in (64g); taking the infimum over paths gives (64h). Under the stated boundedness, the identity distortion is at most $\epsilon_n$ times the tested diameter and tends to zero. The path example has $d'_n=2d_n$ exactly, proving the negative statement. ∎
+
+**Proposition 35b.3 ($\Gamma$-Stability and Retained-Response Intertwining).** Let $\mathcal F_n,\mathcal F'_n:X_n\to[0,\infty]$ be nonnegative propagation forms on one declared varying-space topology. Suppose $\mathcal F_n$ $\Gamma$-converges to $\mathcal F$, is equicoercive, and, for some $\epsilon_n\to0$ with $0\le\epsilon_n<1$,
+$$
+(1-\epsilon_n)\mathcal F_n
+\le
+\mathcal F'_n
+\le
+(1+\epsilon_n)\mathcal F_n.
+\tag{64i}
+$$
+Then $\mathcal F'_n$ $\Gamma$-converges to the same $\mathcal F$ and is equicoercive. If $R_n,R'_n:X_n\to Y$ are retained-response maps into a metric space and, on every common energy sublevel,
+$$
+\sup_{\mathcal F_n(x)\le C}d_Y(R_nx,R'_nx)\longrightarrow0,
+\tag{64j}
+$$
+then every bounded-energy sequence has the same response limit through $R_n$ and $R'_n$ whenever either limit exists.
+
+*Proof.* If $x_n\to x$, (64i) gives
+$$
+\liminf_n\mathcal F'_n(x_n)
+\ge
+\liminf_n(1-\epsilon_n)\mathcal F_n(x_n)
+\ge
+\mathcal F(x).
+$$
+For a recovery sequence $x_n\to x$ of $\mathcal F_n$, its energies are bounded whenever $\mathcal F(x)<\infty$, and the upper inequality in (64i) gives $\limsup_n\mathcal F'_n(x_n)\le\mathcal F(x)$. The infinite-value case is automatic. For large $n$, a bounded $\mathcal F'_n$ sublevel lies in a bounded $\mathcal F_n$ sublevel by the lower inequality, so equicoercivity transfers. Finally, (64j) and the triangle inequality show that the two response sequences have vanishing mutual distance on every bounded-energy sequence. ∎
+
+**Resolution TV-CONT-01-R2.** Equation (64i) gives `positive-discharge` of form/$\Gamma$ representative invariance on the vanishing relative-form class, and (64j) is the exact retained-response intertwiner gate on that class. Proposition 35b.2 continues to refute replacement of the vanishing distortion by a fixed bi-Lipschitz constant.
+
 For finite diagnostic comparisons on a fixed connected MPU population graph with $2\le |\mathcal V|<\infty$, the corresponding dimensionless propagation-efficiency observable is
 $$
 E_{\mathcal N}
@@ -173,6 +218,16 @@ V(\mathcal R(x^*))-V(x^*)
 \le-\delta(x^*)<0,
 $$
 contradicting minimality. The last statement is exactly the additional concentration conclusion of Theorem D.5. Lemma D.3 supplies a finite implementation of the comparison verifier on registered families; the bare PCE grammar does not supply $\mathfrak C_{\mathrm{reg}}$. ∎
+
+**Proposition 43a (Bare-PCE Nonentailment of Regular Global Minima).** There is a nonempty finite admissible class satisfying the bare decomposition $V=V_{\mathrm{core}}+V_{\mathrm{proxy}}$ whose global-minimum set contains an irregular configuration and admits no strict regular comparator of the form (11.43.1).
+
+*Proof.* Take the admissible class $X=\{r,i\}$, declare $r$ regular and $i$ irregular, and set
+$$
+V_{\mathrm{core}}(r)=V_{\mathrm{core}}(i)=0,
+\qquad
+V_{\mathrm{proxy}}(r)=V_{\mathrm{proxy}}(i)=0.
+$$
+Both configurations are global minimizers. The only regular image available to a comparator at $i$ is $r$, but $V_{\mathrm{core}}(r)=V_{\mathrm{core}}(i)$, so no $\delta(i)>0$ can satisfy (11.43.1). The class is nonempty and consistent, and therefore negatively refutes regular-minimum selection from the bare PCE decomposition alone. Theorem 43 remains valid because its strict-comparator certificate excludes this countermodel. ∎
 
 **Theorem 43.5 (Operational Continuum Branch Package).** On the minimal $M=24$, $D=4$ mode-channel branch, let the microscopic adaptation dynamics use the continuum-control PCE potential $V_n^{\mathrm{cont}}$ of Theorem D.6e. Assume an independent continuum-bridge certificate supplies a competitor sequence with $\mathfrak d_n^*\to0$ in the global core-minimum class. Separately assume the D.6e weak-liminf, strong-recovery, and Cheeger-identification hypotheses; the C.6c generator-core/$\Gamma_2$, domain-closure, ambient, and Sobolev-to-Lipschitz hypotheses; fixed-radius geometric noncollapse and interpolation; and $\mu=\mathcal H^4$ whenever strict noncollapse is claimed. Then the low-noise detailed-balance adaptation dynamics concentrate on the asymptotically defect-free operational-continuum branch, and every selected subsequential limit with $\mathfrak D_n\to0$ satisfies:
 
@@ -247,6 +302,46 @@ $$
 \le\varepsilon_n\to0.
 $$
 Theorem 43.5 therefore applies with its previously independent competitor and convergence entries explicitly supplied by the finite stability record. ∎
+
+**Proposition 43.5b (Componentwise Certificates Do Not Assemble a Common Sequence).** Separate existential certificates for continuum defects do not imply a joint operational-continuum certificate. At each refinement level let the admissible set be $X_n=\{a_n,b_n\}$ and define two nonnegative defects by
+$$
+(d_n^{(1)}(a_n),d_n^{(2)}(a_n))=(0,1),
+\qquad
+(d_n^{(1)}(b_n),d_n^{(2)}(b_n))=(1,0).
+\tag{43.5b.1}
+$$
+The sequence $(a_n)$ makes the first defect vanish, and $(b_n)$ makes the second defect vanish, but every common choice $x_n\in X_n$ obeys
+$$
+d_n^{(1)}(x_n)+d_n^{(2)}(x_n)=1.
+$$
+Hence no common selected sequence makes both defects vanish. This finite abstract record is a countermodel to every assembly rule whose premises retain only the separate existential-vanishing statements for two slots. A valid joint continuum certificate must therefore place noncollapse, curvature transfer, Mosco convergence, recovery, and rigidity on one frozen refinement sequence; coexistence of those physical entries remains the constructive target.
+
+*Proof.* The displayed values verify each separate witness directly. Their sum is identically one for both admissible choices at every level, which excludes joint convergence to zero. ∎
+
+**Theorem 43.5c (Finite Convex Joint-Certificate Criterion).** At refinement level $n$, let $X_n\subseteq\mathbb R^d$ be a common finite-dimensional parameter envelope and let
+$$
+K_{n,j}\subseteq X_n,
+\qquad j=1,\ldots,m_n,
+\tag{43.5c.1}
+$$
+be the convex feasible set for the $j$th certificate slot at its registered tolerance. There is one parameter $x_n$ satisfying every slot exactly when every subfamily of at most $d+1$ sets in (43.5c.1) has nonempty intersection. Consequently, if the sets are sublevel sets
+$$
+K_{n,j}=\{x\in X_n:d_{n,j}(x)\le\varepsilon_n\},
+\qquad \varepsilon_n\downarrow0,
+\tag{43.5c.2}
+$$
+then the subfamily test at every $n$ constructs a common sequence satisfying
+$$
+\max_{1\le j\le m_n}d_{n,j}(x_n)\le\varepsilon_n\longrightarrow0.
+\tag{43.5c.3}
+$$
+This criterion is complete for a supplied finite convex certificate envelope. Nonconvex slots, changing semantic identifications, and the population of the continuum records remain outside that envelope.
+
+*Proof.* Necessity is immediate. For sufficiency, suppose a finite family of convex sets has empty total intersection and choose an inclusion-minimal empty subfamily $K_1,\ldots,K_m$. For every $i$, minimality supplies
+$$
+x_i\in\bigcap_{j\ne i}K_j.
+$$
+If $m>d+1$, the $m$ points are affinely dependent, so there are real coefficients $\alpha_i$, not all zero, with $\sum_i\alpha_i=0$ and $\sum_i\alpha_ix_i=0$. The coefficients have both signs. After normalizing their positive and negative parts, one point $y$ is expressed both as a convex combination of the $x_i$ with $\alpha_i>0$ and as a convex combination of those with $\alpha_i<0$. For each $K_j$, one of these two representations omits $x_j$, while every other $x_i$ lies in $K_j$; convexity therefore gives $y\in K_j$. This contradicts empty total intersection. Hence every minimal empty subfamily has at most $d+1$ members, proving the criterion by contraposition. Applying it to (43.5c.2) at each level and choosing $x_n$ in the total intersection gives (43.5c.3). ∎
 
 **11.4 Geometric Convergence to an Operational Continuum Manifold**
 
@@ -353,6 +448,25 @@ h^{sp}(v,v)=\lambda_{\mathrm{QFI}}g^{sp}(v,v)
 $$
 for every quotient vector $v\in S$. Polarization gives equality of the associated symmetric bilinear forms. Equation (45b.3) and nondegeneracy of $g^{sp}$ give $B=\lambda_{\mathrm{QFI}}\mathbb 1_S$, and unit calibration gives $B=\mathbb 1_S$. ∎
 
+**Proposition 45e (Commutant Criterion for Fisher-Propagation Scalarization).** At a point of the spatial response quotient $(S,g^{sp})$, let $\mathcal G$ be the group generated by the accepted finite-response intertwiners, acting by $g^{sp}$-orthogonal maps. Naturality of (45b.3) is the condition
+$$
+BU=UB\qquad(U\in\mathcal G).
+\tag{45e.1}
+$$
+Every positive $g^{sp}$-self-adjoint natural comparison is of the form $B=\lambda\mathbb 1_S$ if and only if
+$$
+\{A=A^{*_{g}}:AU=UA\text{ for every }U\in\mathcal G\}
+=\mathbb R\mathbb 1_S.
+\tag{45e.2}
+$$
+The full orthogonal group satisfies (45e.2). If (45e.2) fails, naturality permits an anisotropic positive comparison. This criterion fixes the shape of $B$ but leaves the positive scale $\lambda$ to the independent unit bridge in $\mathfrak C_{\mathrm{geo}}$.
+
+*Proof.* If (45e.2) holds, a positive self-adjoint $B$ satisfying (45e.1) belongs to the displayed commutant and is scalar. Conversely, if (45e.2) fails, choose a non-scalar self-adjoint $A$ in the commutant. For sufficiently small nonzero $\epsilon$, the operator
+$$
+B=\mathbb 1_S+\epsilon A
+$$
+is positive, self-adjoint, commutes with every $U\in\mathcal G$, and is not scalar. For the full orthogonal group, commuting with every reflection forces every unit vector to be an eigenvector with one common eigenvalue, proving (45e.2). ∎
+
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
 The emergent manifold branch of Theorems 44–45 admits coordinate charts without making a chart label an observable. Discrete vertex-relabeling invariance motivates coordinate redundancy, but it does not by itself establish invariance under the full group of smooth diffeomorphisms of the limiting manifold.
@@ -408,6 +522,15 @@ S[\varphi^*\Psi,\varphi^*g]
 S[\Psi,g].
 $$
 This proves (67d). ∎
+
+**Proposition 45a.2 (Finite Relabeling Does Not Select the Continuum Transformation Law).** Invariance under simultaneous relabeling of a finite vertex set does not entail diffeomorphism covariance of a continuum action. The permutation-invariant functional
+$$
+F_n(z)=\sum_{v\in V_n}z_v
+\tag{67f}
+$$
+admits a covariant continuum dictionary in which $z_v$ is a scalar multiplied by its metric cell volume and $F_n\to\int_M\phi\,d\operatorname{vol}_g$. The same finite arrays also admit a fixed-chart dictionary in which $z_v$ is a scalar multiplied by coordinate cell volume and the limiting prescription is $\int\phi(x)\,d^4x$ while $\phi$ is transformed as a scalar and the coordinate measure is kept as fixed background data. The latter prescription changes under a diffeomorphism with nonunit Jacobian.
+
+*Proof.* Equation (67f) is unchanged by every simultaneous permutation of the labels and array entries. Both continuum prescriptions are ordinary Riemann-sum limits of (67f) after the corresponding meaning of $z_v$ is chosen. The metric-volume prescription is covariant by change of variables. For the fixed-chart prescription, a coordinate change $x'=\chi(x)$ gives the transformed scalar $\phi'(x')=\phi(\chi^{-1}(x'))$; re-evaluation against fixed $d^4x'$ differs by the missing factor $|\det D\chi^{-1}|$ whenever that Jacobian is not one. Thus the finite symmetry does not select the field type or density weight. Hypotheses 11.5.3.1–11.5.3.3 supply exactly those missing data. ∎
 
 **Corollary 45a.1 (Derived Noether Identity for the Matter Sector).** Let $S[\Psi,g]=S_{\mathrm{geom}}[g]+S_{\mathrm{MPU}}[\Psi,g]$ with $S_{\mathrm{MPU}}$ of the scalar-density form of Theorem 45a. With covariant metric variations, define the matter stress-energy tensor by
 $$
@@ -495,6 +618,42 @@ Division yields the displayed uniform bound. The hypotheses give no lower bound 
 **Corollary 46a (Lorentzian Signature and Local Lorentz Kinematics from Theorem 46 and Appendix O).** The uniform operational causal-speed bound of Theorem 46, together with a separately accepted attained operational frontier and the positive-definite spatial $\Gamma$-limit of §O.7.1, the entropy-selected time coordinate of Hypothesis O.7.2.2, the second-order continuum principal symbol supplied directly by Hypothesis O.7.2.3 or, for covered sectors, by an accepted second-order positivity certificate $\mathfrak C_2$ (Definition O.7.2.3a), and either the cone-coincidence/nondegeneracy clause of Hypothesis O.7.2.4 or an accepted cone-saturation certificate $\mathfrak C_{\mathrm{cone}}$ supplying that clause for the covered retained sectors (Definition O.7.2.5), supplies the four hypotheses of Theorem O.7a. When the latter two inputs are supplied by finite sector certificates, the well-posedness/signature audit is recorded by $\mathfrak C_{\mathrm{sig}}$ (Definition 46a.1). By Theorems O.7a and O.7b and Corollary O.7b.1 of Appendix O, this package forces a Lorentzian principal symbol on the emergent manifold and derives local Lorentz invariance with structure group $SO^+(1,3)$. Premise (A5) of §12 is therefore a theorem on precisely this branch or certificate package. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle $G=\mathrm{Spin}(1,3)\times U(d_0)$ of Theorem 48 is structurally forced only on the spin-admissible branch $w_2(M_{\mathrm{reg}})=0$ or on a strict-spin tangential-structure certificate $\mathfrak C_{\mathrm{tan}}$ (Definition 48b.2). Charged or twisted fermionic sectors may instead require a $\mathrm{Spin}^c$ or gauge-twisted tangential structure, in which case Theorem 48 must be read with the corresponding replacement bundle rather than as the global product $\mathrm{Spin}(1,3)\times U(d_0)$. The $D_4$ continuum gluing certificate supplies local regular-continuum data used by the branch, but it does not by itself assert global frame triviality, remove the spin obstruction, or discharge the second-order, cone-coincidence, and signature gates for uncovered sectors.
 
 *Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (tangent-frame Lorentz group and local kinematics) to the separately accepted attained frontier, the upper-bound output of Theorem 46, and §O.7.1, with the second-order input supplied either by Hypothesis O.7.2.3 or by $\mathfrak C_2$, and with the fourth cone input supplied either by Hypothesis O.7.2.4 or by $\mathfrak C_{\mathrm{cone}}$ as stated. When the finite certificate route is used, $\mathfrak C_{\mathrm{sig}}$ records the well-posedness exclusion of non-Lorentzian representatives. Definition Z.9a and Theorem Z.11 supply only the four-dimensional Euclidean response carrier. The rank-three spatial subspace follows only after the rank-four continuum realization and the nonvanishing time covector of Hypotheses O.7.2.1–O.7.2.2 are accepted. The global spin-bundle clause is then exactly the obstruction statement of Theorem 48b and Corollary 48b.1, optionally discharged by $\mathfrak C_{\mathrm{tan}}$ on the strict-spin branch. Full matter-dynamical Lorentz covariance additionally requires common-cone and covariant interaction certificates. ∎
+
+**Proposition 46a.2 (Cone-Only Signature and Order Nonentailment).** On a four-dimensional cotangent space, the quadratic symbols
+$$
+q_L(\xi)=-\xi_0^2+\xi_1^2+\xi_2^2+\xi_3^2,
+\qquad
+q_U(\xi)=-\xi_0^2-\xi_1^2+\xi_2^2+\xi_3^2
+\tag{46a.2.1}
+$$
+are both nondegenerate and have nonempty real characteristic cones, but their inertia is respectively Lorentzian and ultrahyperbolic. Moreover, the fourth-order symbol $q_L(\xi)^2$ has exactly the same characteristic set as $q_L$. Therefore the existence or attainment of one nonempty nondegenerate characteristic cone, even when shared by all retained sectors, does not by itself exclude an ultrahyperbolic index or a higher-order representative. The one-time Cauchy well-posedness and second-order entries of $\mathfrak C_{\mathrm{sig}}$ are independent necessary gates for those exclusions.
+
+*Proof.* The matrices of $q_L$ and $q_U$ are diagonal with no zero eigenvalues and inertia $(1,3)$ and $(2,2)$. Each displayed polynomial vanishes on nonzero real covectors. Finally, $q_L^2=0$ if and only if $q_L=0$, while its polynomial degree is four. ∎
+
+**Theorem 46a.3 (Second-Order Lorentz-Cone Rigidity).** Let $V$ be a real vector space of dimension $n\ge3$, let $q$ be a nondegenerate Lorentzian quadratic form on $V$, and let $q'$ be a nonzero real quadratic form. If
+$$
+\{\xi\in V\setminus\{0\}:q'(\xi)=0\}
+=
+\{\xi\in V\setminus\{0\}:q(\xi)=0\},
+\tag{46a.3.1}
+$$
+then $q'=cq$ for a unique $c\ne0$. Thus, after one retained second-order sector has passed the one-time Lorentzian well-posedness gate, every other second-order sector with exactly the same characteristic cone is conformally proportional to it. A common cone still does not exclude the higher-order representative $q^2$ of Proposition 46a.2; the second-order hypothesis is indispensable.
+
+*Proof.* Choose coordinates in which
+$$
+q(t,x)=-t^2+|x|^2,
+\qquad x\in\mathbb R^{n-1},
+$$
+and write
+$$
+q'(t,x)=at^2+2t\,b^{\mathsf T}x+x^{\mathsf T}Cx
+$$
+with $C=C^{\mathsf T}$. Every $(1,u)$ with $|u|=1$ is $q$-null, so (46a.3.1) gives
+$$
+a+2b^{\mathsf T}u+u^{\mathsf T}Cu=0
+\qquad(|u|=1).
+$$
+Replacing $u$ by $-u$ gives $b=0$. Hence $u^{\mathsf T}Cu=-a$ on the unit sphere. Homogeneity and polarization give $C=-aI$, so $q'=-a q$. If $a=0$, then $q'$ is the zero form and its null set is all of $V$, contrary to the hypothesis. Therefore $c=-a\ne0$, and uniqueness follows because $q$ is nonzero. ∎
 
 ### 11.6.3 Causal-Diamond Reconstruction from Predictive Inclusion
 
@@ -742,6 +901,14 @@ $$
 \longrightarrow \Omega_c(p)^4.
 $$
 Capacity preservation with the common normalization makes the limit equal to $1$, so positivity gives $\Omega_c=1$ almost everywhere. Finally, injectivity of $\mathcal A_\Omega$ invokes Theorem F.10.4a.4.3 and yields the displayed frame reconstruction. Theorems K.10.3a and K.10.4 exclude an independently physical exact subresolution carrier; exclusion above $\Omega$ is limited to the response problem declared by this certificate. ∎
+
+**Corollary 46g.1 (Finite-Diamond Global-Reconstruction No-Go).** On the nonempty class of connected globally hyperbolic static four-manifolds, a finite operational-diamond record is not a globally injective invariant. There exist two members with nonhomeomorphic Cauchy surfaces and a common relatively compact causally convex diamond $U$ such that every finite family of subdiamonds of $U$ has identical inclusion order, tip orientation, local volume, and every capacity valuation fixed by the same local density in both members.
+
+*Proof.* Take product spacetimes $\mathbb R\times\Sigma$ and $\mathbb R\times\Sigma'$, where $\Sigma=\mathbb R^3$ and $\Sigma'=\mathbb R^3\mathbin{\#}(S^1\times S^2)$. Choose complete spatial metrics that are isometric on a ball $B_R(o)$ and place the added handle outside that ball. Equip the products with the corresponding static metrics $-dt^2+h$ and $-dt^2+h'$. These spacetimes are connected and globally hyperbolic. Choose $0<T<R/4$ and the common diamond
+$$
+U=I^+((-T,o))\cap I^-((T,o)).
+$$
+The static causal-distance criterion keeps $U$ inside $(-T,T)\times B_T(o)$, so the spatial isometry identifies $U$ in the two products; as a diamond, $U$ is causally convex. Every finite family of its subdiamonds consequently has the same inclusion, orientation, volume, and local-density capacity record. The Cauchy surfaces are not homeomorphic because their fundamental groups are respectively trivial and $\mathbb Z$. Theorem 46g avoids this counterexample by requiring the completed diamond basis and its topological-frame extension; each physical finite subrecord remains a test of that completion rather than a replacement for it. ∎
 
 **Definition 46h (Finite Metric-Response Conditioning Certificate).** Fix one causal-order/inclusion stratum; the discrete inclusion record selects this stratum and is not differentiated. On a compact regular branch, let $\theta\in U\subset\mathbb R^p$ parameterize a declared finite-dimensional local metric envelope $g(\theta)$. Let
 $$
@@ -1111,6 +1278,56 @@ X^mL_q^n+L_q^mX^n,
 $$
 and contraction with the symmetric tensor $R_{0m0n}$ gives $2R_{0m0n}X^mL_q^n$, hence the centered-pair formula after the prefactor $\frac12$. ∎
 
+**Corollary 47d (Geometry-Reversal Complement to the Clock-Gap Law).** On the saturated chronometric branch of Theorem 47c, perform a registered exchange of the two branch geometries,
+$$
+(\tau_0,\tau_1)\mapsto(\tau_1,\tau_0),
+\qquad
+\Theta_{ij}\mapsto-\Theta_{ij},
+\qquad
+\Gamma_{\mathrm{ch}}^{(ij)}\mapsto\Gamma_{\mathrm{ch}}^{(ij)}.
+\tag{47d.1}
+$$
+In the retained weak-field notation this exchange sends $\Delta\Phi\mapsto-\Delta\Phi$. Thus a forward-locked exchange test separates the odd signed coherent phase from the even saturated dephasing envelope. Together with Theorem S.7.3a's exact same-geometry multi-gap ratio, this gives a two-axis chronometric signature without rederiving the owner theorem.
+
+*Proof.* The definition $\Theta_{ij}=-(\Delta E_{ij}/\hbar)(\tau_1-\tau_0)$ makes the first transformation exact under branch exchange. The saturated identification $\Gamma_{\mathrm{ch}}^{(ij)}=|\dot\Theta_{ij}|$ makes the rate invariant. Equation S.54 gives the stated weak-field potential reversal, and Theorem S.7.3a supplies the independent clock-gap ratio. ∎
+
+**Theorem 47e (Covariant Commuting-Dephasing Bundle Normal Form).** Let $\mathcal W\to M$ be a finite-rank Hermitian bundle. Suppose a common connection supplies smooth Hermitian endomorphism sections $H,L_1,\ldots,L_r$ satisfying
+$$
+[H,L_a]=[L_a,L_b]=0,
+\tag{47e.1}
+$$
+and suppose their local representatives transform by conjugation on every bundle overlap. For a fixed real symmetric matrix $C\succeq0$, define
+$$
+\mathcal L(\rho)
+=-\frac{i}{\hbar}[H,\rho]
++\sum_{a,b=1}^r C_{ab}
+\left(L_a\rho L_b-\frac12\{L_bL_a,\rho\}\right).
+\tag{47e.2}
+$$
+Then (47e.2) is a globally defined covariant GKSL generator. In a common local eigenframe,
+$$
+H|i\rangle=E_i|i\rangle,
+\qquad
+L_a|i\rangle=\ell_{a i}|i\rangle,
+$$
+its exact solution is
+$$
+\rho_{ij}(t)
+=
+\exp\!\left[
+-\frac{i}{\hbar}(E_i-E_j)t
+-\frac t2(\ell_i-\ell_j)^{\mathsf T}C(\ell_i-\ell_j)
+\right]\rho_{ij}(0).
+\tag{47e.3}
+$$
+Hence a signed branch exchange that reverses $E_i-E_j$ and $\ell_i-\ell_j$ makes the coherent phase odd and the dephasing rate even. Positivity of $C$ is sufficient for complete positivity. If the coefficient matrix is tested without that sufficient gate, nonnegative decay of the displayed coherences is equivalent exactly to nonnegativity of its quadratic form on every realized difference vector $\ell_i-\ell_j$; this weaker rate test need not imply complete positivity away from those vectors.
+
+*Proof.* Diagonalize $C=R^{\mathsf T}\operatorname{diag}(\gamma_s)R$ with $\gamma_s\ge0$ and set $M_s=\sum_aR_{sa}L_a$. The dissipator in (47e.2) becomes
+$$
+\sum_s\gamma_s\left(M_s\rho M_s-\frac12\{M_s^2,\rho\}\right),
+$$
+which is GKSL. Conjugation covariance of every $H,L_a$ makes the complete superoperator agree on overlaps. Equation (47e.1) gives a simultaneous eigenframe locally. Direct evaluation of (47e.2) on the matrix unit $|i\rangle\langle j|$ yields the exponent in (47e.3). The parity statement follows because the Hamiltonian term is linear in the signed differences while the dissipative term is quadratic. The final equivalence follows by reading the sign of each realized exponent; it is explicitly weaker than positivity of $C$ when those difference vectors do not test every direction. ∎
+
 **Testable PU discriminator against self-gravity collapse models.**
 The deterministic chronometric phase-rate invariant and the saturated chronometric ND-RID dephasing branch both scale linearly with the internal energy splitting $\Delta E_{ij}$ at fixed geometry. For two-branch interferometers engineered so that the branches have the same mass-density distribution but differ by internal clock splitting, the PU chronometric branch predicts
 $$
@@ -1192,6 +1409,58 @@ A $\mathrm{Spin}^c$ target instead records the corresponding lift condition, for
 
 *Proof.* Fermionic parallel transport is a response datum, so an obstruction to defining it globally is not removable by a coordinate relabeling. The Čech and anomaly entries of $\mathfrak C_{\mathrm{tan}}$ supply the finite obstruction calculation for the selected tangential target. In the strict-spin case, vanishing $w_1$ and $w_2$ are exactly the orientation and spin-lift conditions, so Corollary 48b.1 applies. In the $\mathrm{Spin}^c$ or twisted cases, the obstruction is cancelled only after including the specified auxiliary gauge data, yielding the corresponding replacement bundle rather than the strict spin product. ∎
 
+**Proposition 48b.4 (Finite Čech Decision Procedure for Tangential Lifts).** Fix a finite good-cover nerve $K$ for a supplied time-oriented Lorentzian branch, its integer and $\mathbb F_2$ coboundary matrices, and cocycle representatives $w_1\in Z^1(K;\mathbb F_2)$ and $w_2\in Z^2(K;\mathbb F_2)$. In the systems below, $b_0\in C^0(K;\mathbb F_2)$ and $b_1\in C^1(K;\mathbb F_2)$. Then:
+
+1. the strict-spin obstruction vanishes exactly when the finite systems
+   $$
+   \delta_0b_0=w_1,
+   \qquad
+   \delta_1b_1=w_2
+   \tag{48b.4.1}
+   $$
+   are solvable over $\mathbb F_2$;
+2. a $\mathrm{Spin}^c$ lift exists exactly when $\delta_0b_0=w_1$ is solvable and there are an integral cocycle $c\in Z^2(K;\mathbb Z)$ and $b_1\in C^1(K;\mathbb F_2)$ such that
+   $$
+   c\bmod2=w_2+\delta_1b_1;
+   \tag{48b.4.2}
+   $$
+3. for a supplied twist cocycle $\alpha\in Z^2(K;\mathbb F_2)$, the corresponding oriented twisted obstruction vanishes exactly when $\delta_0b_0=w_1$ is solvable and
+   $$
+   \delta_1b_1=w_2+\alpha
+   \tag{48b.4.3}
+   $$
+   is solvable.
+
+Gaussian elimination over $\mathbb F_2$ decides (48b.4.1) and (48b.4.3), and Smith normal form together with mod-two reduction decides (48b.4.2). These tests decide existence of the stated cohomological lifts for the supplied finite cover. The anomaly, bordism, matter-realization, cost, and forward-lock records remain independent entries of $\mathfrak C_{\mathrm{tan}}$.
+
+*Proof.* A cocycle represents the zero cohomology class exactly when it lies in the image of the preceding coboundary, which proves the orientation, strict-spin, and supplied-twist tests. On the oriented branch, the obstruction to a $\mathrm{Spin}^c$ lift vanishes exactly when $w_2$ has an integral degree-two lift, which is the finite cochain statement (48b.4.2). The stated normal-form algorithms decide membership in these finite images and kernels. ∎
+
+**Corollary 48b.5 (Finite Lift-Moduli Torsor and Exact Count).** Work on an oriented finite good-cover nerve $K$ for which either the strict-spin equation
+$$
+\delta_1b=w_2
+\tag{48b.5.1}
+$$
+or the equation for a fixed supplied twist
+$$
+\delta_1b=w_2+\alpha
+\tag{48b.5.2}
+$$
+is solvable over $\mathbb F_2$. Modulo the gauge relation $b\sim b+\delta_0c$, the solution classes form an affine torsor for
+$$
+H^1(K;\mathbb F_2)=\ker\delta_1/\operatorname{im}\delta_0.
+\tag{48b.5.3}
+$$
+In particular, their exact number is
+$$
+2^{\beta_1(K)},
+\qquad
+\beta_1(K)=\dim_{\mathbb F_2}\ker\delta_1-\operatorname{rank}_{\mathbb F_2}\delta_0.
+\tag{48b.5.4}
+$$
+The same row-reduction pass that decides existence therefore classifies and counts every strict-spin or fixed-twist lift on the supplied nerve. Anomaly cancellation, matter coupling, and physical selection among these classes remain separate entries of $\mathfrak C_{\mathrm{tan}}$.
+
+*Proof.* Fix one solution $b_*$. Every other solution has the form $b_*+z$ with $z\in\ker\delta_1$, and every such $z$ gives a solution. Gauge changes identify $z$ and $z+\delta_0c$, so the quotient is the affine space modeled on (48b.5.3). A vector space of dimension $\beta_1(K)$ over $\mathbb F_2$ has $2^{\beta_1(K)}$ elements. Gaussian elimination computes both dimensions and supplies representatives. ∎
+
 **11.8.3 Theorem 48c (Conditional Global CPTP Transport Closure).** Let $P(M_{\mathrm{reg}},\mathrm{Spin}(1,3)\times U(d_0))$ be the principal bundle of Theorem 48 (globally exact under Theorem 48b), and let $\mathcal W=S\otimes E$ be the associated spin-internal bundle (Theorem G.4b). Assume:
 
 (i) *Bundle-respecting Stinespring dilation.* The local CPTP transport maps $\Phi_\gamma$ admit Stinespring dilations whose system-side unitary factor lifts the parallel transport of the product connection on $\mathcal W=S\otimes E$ (Theorem G.4b); equivalently, the dilation environment is chosen so that the system-side unitary $U_\gamma|_{\mathcal W}$ commutes with the bundle gauge action and reduces to the product-connection holonomy in the closed-system limit $\mathcal H_{\mathrm{env}}\to\mathbb C$.
@@ -1228,7 +1497,21 @@ Hypothesis (ii) gives a strongly continuous completely positive trace-preserving
 
 Theorem 48c closes the gap between Theorem 47 (predictive holonomy as curvature) and Theorem 48 (fibre-bundle representation): under the stated open-system hypotheses, the CPTP transport law is a completion of the same underlying bundle transport.
 
+**Resolution ledger 48d-R1 (Finite Operational-Continuum Classifications).** Each row registers the exact mathematical artifact shown; the physical continuum, carrier, calibration, or experiment named by the target remains an independent required record.
+
+| Target | Exact domain and premises | Equivalence and budget | Registered polarity | Verifier, falsifier and nonvacuity | Provenance and downstream consumers |
+|:--|:--|:--|:--|:--|:--|
+| `TV-CONT-01` | Sequences of connected weighted graphs with common $\delta_n$ and positive edge weights; the positive branch assumes (64g), $\epsilon_n\to0$, and bounded tested-ball diameters, while the negative branch is the displayed path family. | Metrics are compared by the identity correspondence on the same vertices and by equality of metric subsequential limits on tested balls. Budget: every edge at each submitted level and the symbolic path sequence. | Asymptotically unit edge comparison is `positive-discharge`; fixed-constant bi-Lipschitz comparison forcing equal limits is `negative-refutation`. | Check (64g)--(64h), identity distortion, and $d'_n=2d_n$. A violated metric bound or equal endpoint limits in the displayed path family falsifies the corresponding artifact. The unit path family proves nonvacuity. | Source-internal finite metric geometry. Consumers: Theorem 35b, propagation representatives, and `RT-T8`. |
+| `TV-CONT-02` | The two-point admissible class of Proposition 43a with one regular point, one irregular point, and the displayed decomposed potential. | Equality preserves the regular/irregular labels and both potential components. Budget: both points and the sole candidate regular comparator. | Bare-PCE regular-minimum selection is `negative-refutation`. | Evaluate both total costs and the strict-comparator inequality (11.43.1). A strict regular comparator in this class falsifies the artifact. The displayed two-point class proves nonvacuity. | Source-internal finite optimization countermodel. Consumers: Theorem 43 and the regular-global-core gate. |
+| `TV-CONT-03` | The refinement family $X_n=\{a_n,b_n\}$ with the two defects in (43.5b.1); premises retain only separate existential-vanishing sequences. | Witnesses are equivalent only when one selected refinement sequence carries both defect records. Budget: two candidates per level over the symbolic countable family. | Separate componentwise convergence forcing a common sequence is `negative-refutation`. | Evaluate both constant witness sequences and exhaust the two choices at each level. A sequence on which both defects vanish falsifies the artifact. The two supplied sequences prove nonvacuity. | Source-internal finite-per-level convergence countermodel. Consumers: Theorem 43.5 and the joint continuum certificate. |
+| `TV-CONT-04` | The permutation-invariant finite functional (67f) together with its scalar/metric-volume and fixed-chart/density continuum dictionaries. | Finite arrays are equivalent under simultaneous vertex relabeling; continuum outputs are compared under their declared field type and measure. Budget: every submitted finite array plus the two symbolic Riemann-limit dictionaries. | Finite relabeling entailing a unique diffeomorphism-covariant continuum law is `nonentailment`. | Check permutation invariance and the Jacobian under a non-unit coordinate change. If both dictionaries acquire the same transformation law without extra typing data, the artifact is falsified. A nonconstant-Jacobian chart proves nonvacuity. | Source-internal finite-to-continuum countermodel. Consumers: Hypotheses 11.5.3.1--11.5.3.3 and the continuum action. |
+| `TV-CONT-05` | Four-dimensional cotangent space with the nondegenerate symbols $q_L$, $q_U$, and $q_L^2$ of Proposition 46a.2. | Symbols are compared by characteristic set, inertia, and polynomial order; sharing a cone does not identify different inertia or degree. Budget: the three displayed exact symbols. | Cone-only signature index and differential-order selection are `negative-refutation`. | Compute both inertia pairs and verify $q_L^2=0\iff q_L=0$. Forced Lorentzian inertia or second order from those common zeros falsifies the artifact. The three symbols prove nonvacuity. | Source-internal exact quadratic-form algebra. Consumers: Definition 46a, the one-time Cauchy gate, and `RT-T8`. |
+| `TV-CONT-06` | Two connected globally hyperbolic static four-manifolds locally isometric on the common causally convex diamond $U$ but with the nonhomeomorphic Cauchy surfaces of Corollary 46g.1. | Records are equivalent when every retained subdiamond has the same inclusion, tip orientation, local volume, and fixed-density capacity valuation; global spaces remain distinguished by homeomorphism type. Budget: any finite subdiamond family inside $U$ and the two explicit completions. | Global injectivity of an arbitrary finite diamond subrecord is `negative-refutation`. | Verify the local isometry, causal convexity, and fundamental groups $0$ and $\mathbb Z$. A differing retained local record or homeomorphic Cauchy surfaces falsifies the witness. The two products prove nonvacuity. | Source-internal Lorentzian/topological countermodel. Consumers: Theorems 46b and 46g and $\mathfrak C_{\mathrm{TB}}^\Omega$. |
+| `TV-CONT-07` | One finite-dimensional tangent response space, its supplied $g^{sp}$-orthogonal intertwiner group $\mathcal G$, and positive $g^{sp}$-self-adjoint comparisons $B$. | Comparisons are equivalent under the declared $\mathcal G$ action; budget is the complete finite matrix commutant. | The exact commutant test for scalarization is `positive-discharge`, with anisotropic positive witnesses when the self-adjoint commutant is larger than $\mathbb RI$. | Solve (45e.1), take the self-adjoint commutant, and shift a nonscalar member by $cI$ when needed. A nonscalar positive natural comparison with self-adjoint commutant $\mathbb RI$, or failure to construct one in the larger case, falsifies the artifact. Scalar and reducible representations prove nonvacuity. | Source-internal finite representation theory. Consumers: (45b.3), Fisher/propagation naturality, and the scale certificate. |
+| `TV-CONT-08` | A supplied finite good-cover nerve with integer and $\mathbb F_2$ coboundary matrices, cocycles $w_1,w_2$, and, where applicable, an integral lift or supplied twist $\alpha$. | Cocycles are equivalent modulo the stated coboundaries; budget is every finite cochain entry and the three finite systems (48b.4.1)--(48b.4.3). | Exact strict-spin, $\mathrm{Spin}^c$, and supplied-twist existence decisions are `positive-discharge`. | Run Gaussian elimination and Smith normal form with mod-two reduction. A solver answer disagreeing with the represented cohomology class falsifies the artifact. Zero and nonzero finite cocycles prove nonvacuity. | Source-internal finite cohomology. Consumers: $\mathfrak C_{\mathrm{tan}}$, Theorem 48b, and matter gluing. |
+| `TV-CONT-09` | The saturated chronometric branch of Theorem 47c under the registered geometry exchange, together with Theorem S.7.3a's same-geometry gap comparison. | Runs are equivalent after preserving branch labels, gap labels, orientation, and the common geometry ledger. Budget: two exchanged geometries and every submitted finite transition pair. | Odd coherent phase, even saturated dephasing, and the owner theorem's multi-gap ratio are `positive-discharge` on this branch. | Reverse the branches in (47d.1) and evaluate the same-geometry rate ratio. An even signed phase, odd saturated rate, or failed owner ratio falsifies the artifact. Any nonzero proper-time difference and two nonzero gaps prove nonvacuity. | Source-internal conditional chronometric algebra consuming owner Theorem S.7.3a. Consumers: CPTP transport and the reversal/multi-gap protocol. |
+| `TV-CONT-10` | Definition 46e.1's iid flat-uniform Alexandrov-interval sample conditioned on $N$ at $D=4$, and Definition 46h's finite metric chart with $\sigma_*>0$, radius, derivative-Lipschitz, and metric-chart bounds. | Samples are equivalent by their causal comparability record; chart candidates are compared in the certificate-fixed response and tensor norms. Budget: all $\binom N2$ pair indicators and the complete finite Jacobian/chart record inside (46i.1). | The exact mean $1/10$, concentration bound, and conditional inverse-stability estimate are `positive-discharge`. | Recompute (46e.1.2)--(46e.1.4) and the singular-value/Taylor bounds (46i.1)--(46i.3). Wrong expectation, tail, or inverse bound falsifies the artifact. The flat $D=4$ model and any full-column-rank chart prove nonvacuity. | Source-internal probability and finite-dimensional analysis. Consumers: the dimension cross-certificate, metric conditioning, and the forward-locked sampling test. |
+
 **11.9 Role of MPU Stress-Energy Tensor**
 
 Theorem 47 and the connection dynamics of Theorem 48 identify non-frame-removable inhomogeneity of predictive transport with curvature of the predictive connection. A macroscopic MPU stress-energy source $T_{\mu\nu}^{(MPU)}$ is available on the separate Appendix B branch carrying admissible bounded-variation coarse-graining, a paired or unique continuum limit, the momentum-flux and Belinfante derivative certificates, variational first-variation consistency, local equilibrium, and the global horizon-flux consistency and quadrature record of Theorem B.8d. On the operational-continuum, local-horizon, area-law, KMS/Clausius, and finite Einstein-closure branch of Section 12, that same certified tensor is the source on the right-hand side of the emergent field equation. Theorem 46 supplies only a uniform operational causal-speed upper bound. The identification $c=\delta/\tau_{\min}$ additionally requires the separately accepted normalized uniform-weight one-link-attainment branch of Appendix E, Theorem E.10.2; only on that branch is the attained value tied to the registered costs and timing of information propagation. Its promotion to a Lorentzian light cone is the Appendix O branch imported by Corollary 46a, and the exact values of $\delta$ and $\tau_{\min}$ inherit the Appendix Q discretization branches.
-

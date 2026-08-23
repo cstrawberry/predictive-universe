@@ -223,6 +223,35 @@ Then no protocol in $\mathcal P_{\mathrm{seq}}$ recovers the complete initial-st
 
 The fractional-update growth of Proposition K.1 may enter a future derivation of the timing hypothesis, but it does not supply that derivation by itself.
 
+**Theorem K.2a (Exact Three-Qutrit Sequential-Retrieval Threshold).** Fix any encoder $V_c$ in the frozen class of Theorem E.8.1i. Regard its three output qutrits $E_1,E_2,E_3$ as emitted in that order, one per clock cycle of duration $\tau>0$, and define the exterior channel after cycle $j$ by
+$$
+\mathcal N_j(\rho)
+=\operatorname{Tr}_{E_{j+1}\cdots E_3}
+\bigl(V_c\rho V_c^\dagger\bigr),
+\qquad 0\le j\le3.
+\tag{K.2a.1}
+$$
+Let $C_{\mathrm{rec}}(j)$ be the logarithm of the largest logical subspace dimension on which $\mathcal N_j$ has an exact CPTP left inverse. Then
+$$
+C_{\mathrm{rec}}(0)=C_{\mathrm{rec}}(1)=0,
+\qquad
+C_{\mathrm{rec}}(2)=C_{\mathrm{rec}}(3)=\ln3.
+\tag{K.2a.2}
+$$
+
+Let $\mathcal P_{\mathrm{seq}}^{(3)}$ contain every finite adaptive comparator which, after each emission, applies arbitrary CPTP instruments to the emitted qutrits and an input-independent finite memory, with later choices conditioned on its earlier classical outcomes. Every comparator stopped before the second emission has an output law independent of the logical input. At the second emission, the basis change (E.8.1i.3), followed by discarding its uniform garbage qutrit, recovers the input exactly. Thus, for the boundary-crossing cost that counts emitted qutrit pipes,
+$$
+B_{\min}=2,
+\qquad
+t_{\min}=2\tau,
+\tag{K.2a.3}
+$$
+against the entire declared comparator class. The realizing decoder uses one reversible affine basis change and one discard. No heat cost is inferred unless a cyclic reset of the discarded or classical record is separately registered.
+
+*Proof.* Theorem E.8.1i proves that every zero- or one-share channel is constant on the full logical matrix algebra, while every two-share channel becomes $\rho\otimes I/3$ under (E.8.1i.3). This gives (K.2a.2) and the explicit recovery at cycle two. An arbitrary adaptive comparator before that cycle is a superchannel whose only input-dependent slot is the constant channel $\mathcal N_0$ or $\mathcal N_1$. Composition with a constant channel remains constant, even with finite memory and outcome-dependent feed-forward. Hence no such comparator distinguishes two logical inputs. The exhibited recovery uses two emitted shares, proving both attainment and the boundary-crossing lower bound. The clock identity follows from one emission per cycle. ∎
+
+**Resolution TV-K-01-R1 (Metadata).** Exact domain: all six encoders of Theorem E.8.1i, the fixed three-cycle emission order, and every adaptive local comparator in $\mathcal P_{\mathrm{seq}}^{(3)}$. Premises: the exact erasure/recovery classification, an input-independent comparator memory and a positive per-emission clock $\tau$. Equivalence: protocols are compared by their complete logical input/output channels and boundary-crossing count. Budget: all logical density operators, all adaptive finite instruments and all four stopping cycles. Verifier: channel constancy, the exact two-share decoder, superchannel factorization and the clock/count ledger. Falsifier: input-dependent output before emission two, failure of the two-share left inverse, or a one-crossing exact retriever. Provenance class: source-internal finite channel construction; no horizon data are fitted. Downstream consumers: Proposition K.2, Theorem E.8.1i and `TV-K-01`. This gives `positive-discharge` of the capacity, crossing-count and timing predicates on the frozen three-qutrit evaporation/comparator branch. It does not construct a physical horizon PIC, a live SPAP self-prediction, the complete physical comparator class, or a calibrated extraction-energy ledger, so `TV-K-01` remains open.
+
 ### K.3.2 Thermodynamic Cost and the Perspectival Information Channel
 
 Suppose each of $N$ horizon measurements closes one registered cyclic reset satisfying Definition 28 and suppose its conditional entropy obeys $H_{q_j}(P_j\mid R_j)\ge h_{\min}>0$. Theorem 31 and Theorem J.4a then give
@@ -2853,6 +2882,42 @@ and using the branch convergence $s_N\to s_{bg}$ gives (K.9.26), which is the la
 
 Finally, Corollary K.9.3b derived (K.9.14)-(K.9.19) from the homogeneous coupling law and the standard background continuity equations. Since the entropic-bridge branch changes only the selection rule for $(A_c,n)$ and not the Bianchi identity or the definitions of $\rho_{ad}$ and $p_{ad}$, the effective-fluid form remains unchanged. ∎
 
+**Theorem K.9.5a (Response-Observable Nonidentifiability of the Homogeneous Entropic Bridge).** Fix all data entering the minimization (K.9.21), together with the sparsity observable $s_N$, and let $\mathbb P_{*,N}$ be its unique bridge. The response observable $G_N/G_0-1$ does not occur in that minimization. For every bounded function $h$ on the finite support of $s_N$ satisfying
+$$
+-1<h(s)\le H<\infty
+\tag{K.9.5a.0}
+$$
+and any additional registered owner bounds, the physically positive completion
+$$
+\frac{G_N^{(h)}}{G_0}-1:=h(s_N)
+\tag{K.9.5a.1}
+$$
+has the same bridge, endpoints, reference generator, running cost and sparsity measure, but its selected response curve is exactly
+$$
+g_{*,N}^{(h)}(s)=h(s).
+\tag{K.9.5a.2}
+$$
+Therefore the entropic-bridge data preceding the response assignment do not entail the exponential family (K.9.23), its parameters, or any other constitutive family.
+
+The nonentailment persists in a regular-limit sequence. On a sparsity interval containing $0$, take two bounded response completions
+$$
+h_{\exp}(s)=1-e^{-s},
+\qquad
+h_{\mathrm{rat}}(s)=\frac{s}{1+s}.
+\tag{K.9.5a.3}
+$$
+The second is not equal on any neighborhood of $0$ to $A(1-e^{-s^n})$ for any $A\ge0$ and $n\ge1$.
+
+*Proof.* Substitution of (K.9.5a.1) into the conditional expectation (K.9.22) gives
+$$
+\mathbb E_{\mathbb P_{*,N}}[h(s_N)\mid s_N=s]=h(s)
+$$
+on every positive-weight sparsity bin, proving (K.9.5a.2). Because neither the objective nor its endpoint constraints change, strict convexity gives the same unique bridge for every $h$.
+
+For the final claim, $h_{\mathrm{rat}}'(0)=1$. If $n>1$, the right derivative at zero of $A(1-e^{-s^n})$ is $0$, so equality is impossible. If $n=1$, equality of first derivatives forces $A=1$, but the second derivatives at zero are respectively $-2$ and $-1$. Thus no member of the exponential family equals $h_{\mathrm{rat}}$ near zero. ∎
+
+**Resolution TV-K-11-R1 (Metadata).** Exact domain: the finite homogeneous bridge of Definition K.9.4 with its response observable left outside the variational objective, plus regular-limit sequences whose limiting sparsity support contains a neighborhood of zero. Premises: feasibility and strict positivity as in Definition K.9.4 and bounded response assignments satisfying (K.9.5a.0) and every registered owner bound. Equivalence: completions share every bridge datum and differ only in their retained response observable. Budget: every finite sparsity bin and the exact local regular-limit functions (K.9.5a.3). Verifier: conditional expectation, inspection of the variational objective and the derivative comparison at zero. Falsifier: dependence of (K.9.21) on the response assignment or an exponential representation of $s/(1+s)$ on a neighborhood of zero. Provenance class: source-internal logical independence construction. Downstream consumers: Definition K.9.4, Theorem K.9.5 and `TV-K-11`. This gives `nonentailment` of the exponential law from the entropic-bridge data alone. A microdynamic equation jointly selecting the response observable, its parameters, and perturbation/lensing/screening projection maps remains open, so the target is not closed.
+
 
 ## K.10 Renormalization from Operational Finiteness
 
@@ -3261,6 +3326,84 @@ Thus the theorem-level PU content is:
 
 This is an operational finite-substrate result.
 
+**Theorem K.10.5f (Exact Four-Torus Diffusion and Scale-Uniform Heat-Trace Limit).** For $N\ge3$, let
+$$
+X_N=(\mathbb Z/N\mathbb Z)^4,
+\qquad
+\delta_N=N^{-1},
+\qquad
+m_N(x)=N^{-4},
+\tag{K.10.5f.1}
+$$
+and define the positive nearest-neighbor graph Laplacian
+$$
+(\Delta_Nf)(x)
+=N^2\sum_{a=1}^4
+\bigl(2f(x)-f(x+e_a)-f(x-e_a)\bigr).
+\tag{K.10.5f.2}
+$$
+Then $K_{N,\sigma}=e^{-\sigma\Delta_N}$ preserves positivity and mass, and its diagonal kernel with respect to $m_N$ is independent of $x$ and equals
+$$
+P_N(\sigma)
+=\sum_{k\in\mathbb Z_N^4}e^{-\sigma\lambda_N(k)},
+\qquad
+\lambda_N(k)=4N^2\sum_{a=1}^4
+\sin^2\!\left(\frac{\pi k_a}{N}\right).
+\tag{K.10.5f.3}
+$$
+Its exact spectral-dimension flow is
+$$
+D_{s,N}(\sqrt\sigma)
+=2\sigma
+\frac{\sum_k\lambda_N(k)e^{-\sigma\lambda_N(k)}}
+     {\sum_k e^{-\sigma\lambda_N(k)}}.
+\tag{K.10.5f.4}
+$$
+For every $0<\sigma_0<\sigma_1<\infty$, both $P_N$ and $\partial_\sigma P_N$ converge uniformly on $[\sigma_0,\sigma_1]$ to the unit flat four-torus heat trace
+$$
+P_\infty(\sigma)
+=\sum_{k\in\mathbb Z^4}e^{-4\pi^2\sigma|k|^2},
+\tag{K.10.5f.5}
+$$
+and $D_{s,N}\to D_{s,\infty}$ uniformly there. Moreover,
+$$
+\lim_{\substack{\sigma_N\downarrow0\\N^2\sigma_N\to\infty}}
+D_{s,N}(\sqrt{\sigma_N})=4,
+\tag{K.10.5f.6}
+$$
+while for every fixed finite $N$,
+$$
+\lim_{\sigma\downarrow0}D_{s,N}(\sqrt\sigma)=0,
+\qquad
+\lim_{\sigma\to\infty}D_{s,N}(\sqrt\sigma)=0.
+\tag{K.10.5f.7}
+$$
+Thus this fully specified finite graph has an exact zero-dimensional ultraviolet endpoint, a four-dimensional mesoscopic window, and a zero-dimensional compact-volume infrared endpoint. No monotonicity is asserted.
+
+*Proof.* Fourier characters diagonalize (K.10.5f.2) and give (K.10.5f.3). The matrix $Q_N:=-\Delta_N$ has nonnegative off-diagonal entries, zero row sums and nearest-neighbor support, so $e^{\sigma Q_N}=e^{-\sigma\Delta_N}$ is a Markov semigroup. Differentiating the finite heat trace gives (K.10.5f.4).
+
+Choose symmetric representatives $|k_a|\le N/2$. For such representatives,
+$$
+16|k|^2\le\lambda_N(k)\le4\pi^2|k|^2,
+$$
+and $\lambda_N(k)\to4\pi^2|k|^2$ for every fixed $k$. Gaussian domination therefore applies simultaneously to the trace and its derivative, uniformly for $\sigma\in[\sigma_0,\sigma_1]$, proving (K.10.5f.5) and the uniform quotient limit.
+
+For $N^{-2}\ll\sigma_N\ll1$, split the sum at $|k|=R/\sqrt{\sigma_N}$. On the inner part,
+$$
+\lambda_N(k)=4\pi^2|k|^2
++O(|k|^4/N^2)
+$$
+uniformly, and $N^2\sigma_N\to\infty$ makes the exponent error vanish after first fixing $R$. The outer part is uniformly Gaussian-small. Poisson summation for the limiting lattice sum gives
+$$
+P_N(\sigma_N)=(4\pi\sigma_N)^{-2}(1+o(1)),
+\qquad
+\sigma_N\partial_{\sigma}P_N(\sigma_N)
+=-2P_N(\sigma_N)(1+o(1)),
+$$
+which proves (K.10.5f.6). At fixed $N$, the finite numerator in (K.10.5f.4) is multiplied by $\sigma$ as $\sigma\downarrow0$, while as $\sigma\to\infty$ every positive eigenmode is exponentially suppressed and only the zero mode remains. This proves (K.10.5f.7). ∎
+
+**Resolution TV-K-13-R1 (Metadata).** Exact domain: the full family of periodic four-dimensional nearest-neighbor graphs (K.10.5f.1)--(K.10.5f.2), all diffusion times and the stated joint mesoscopic limit. Premises: the normalized cell measure, positive graph Laplacian and periodic marking. Equivalence: graph points are identified by translations and continuum modes by the standard torus Fourier marking. Budget: all $N^4$ eigenmodes for every finite $N$; no spectral truncation is used. Verifier: finite Fourier diagonalization, exact differentiation, Gaussian domination, the Taylor/Gaussian split and endpoint limits. Falsifier: a wrong eigenvalue, loss of Markov mass, failure of either uniform limit or either endpoint. Provenance class: source-internal finite diffusion construction. Downstream consumers: Definition K.10.5b, Theorem K.10.5c, Corollary K.10.5d and `TV-K-13`. This gives `positive-discharge` of the discrete-generator, complete heat-trace, mathematical convergence and endpoint subcomponents. Identification of this torus family with the realized MPU network and clock, a calibrated cutoff-scale endpoint, and an exported physical flow prediction remain open, so the target is not closed.
+
 **Corollary K.10.6 (Certificate-Gated Divergent Complexity Cost).** On a declared task class carrying certificate $\mathfrak C_{B.2}$, let
 $$
 \delta_{\mathrm{SPAP}}:=\alpha_{\mathrm{SPAP}}-\alpha\in(0,1).
@@ -3303,6 +3446,39 @@ $$
 F_\mu\simeq \operatorname{Lan}_{q_{\Lambda\to\mu}}F_\Lambda
 $$
 whenever the left Kan extension exists in the finite stochastic category being used. In this reading, universality classes are natural-isomorphism classes of lower-resolution prediction functors. This is an organizing language for Theorem K.10.7, not an independent derivation of the MPU-to-RG correspondence.
+
+**Theorem K.10.7b (Exact Finite Linear FRG–Gradient Conjugacy Criterion).** Let a finite operator truncation near a scaling solution have real coefficient vector $x\in\mathbb R^n$ and linearized dimensionless flow
+$$
+\dot x=B(x-x_*),
+\tag{K.10.7b.1}
+$$
+where the real matrix $B$ includes all anomalous mixing in the retained truncation. The following are equivalent:
+
+1. there are an invertible response map $A\in GL(n,\mathbb R)$ and a symmetric positive-definite matrix $Q$ such that $y=A(x-x_*)$ conjugates (K.10.7b.1) to the Euclidean gradient flow
+   $$
+   \dot y=-\nabla V(y),
+   \qquad
+   V(y)=\frac12y^{\mathsf T}Qy;
+   \tag{K.10.7b.2}
+   $$
+2. there is a symmetric positive-definite matrix $H$ such that
+   $$
+   HB=B^{\mathsf T}H,
+   \qquad
+   z^{\mathsf T}HBz<0
+   \quad(z\ne0).
+   \tag{K.10.7b.3}
+   $$
+
+Thus the finite configuration-to-action response is injective exactly when $A$ has full rank, and a strictly convex PCE-gradient conjugacy exists exactly when the complete mixing matrix is self-adjoint and negative in some positive metric. A complex eigenvalue, a nontrivial Jordan block, or a nonnegative eigenvalue of $B$ is an exact obstruction in this class.
+
+*Proof.* If item 1 holds, then $ABA^{-1}=-Q$. Set $H=A^{\mathsf T}A$. Direct multiplication gives
+$$
+HB=B^{\mathsf T}H=-A^{\mathsf T}QA,
+$$
+which is symmetric negative definite. Conversely, factor $H=A^{\mathsf T}A$ with $A$ invertible. Equation (K.10.7b.3) makes $ABA^{-1}$ symmetric, and its quadratic form is negative definite. Hence $Q:=-ABA^{-1}$ is symmetric positive definite and (K.10.7b.2) follows. Similarity preserves spectrum and Jordan structure, so each listed obstruction is incompatible with similarity to $-Q$. ∎
+
+The theorem completely classifies the finite linearized truncation, including anomalous mixing. A nonlinear configuration-to-$\Gamma_k$ map, control of discarded operators, and an MPU realization of the selected coefficient coordinates remain the separate bridge data required by Theorem K.10.7.
 
 **Corollary K.10.8 (Conditional RG Universality).** Suppose a dimensionless RG flow has a hyperbolic scaling solution with a controlled eigenoperator decomposition and a stable manifold. Perturbations along irrelevant eigenoperators decay toward the infrared according to their full scaling exponents, including anomalous dimensions, while relevant directions require a finite set of macroscopic coordinates. This gives the usual conditional universality statement. Interpreting that decay as PCE selection additionally requires the bridge data of Theorem K.10.7.
 
@@ -3357,6 +3533,29 @@ Separately, on the finite-substrate cutoff branch of Theorem K.10.4 and Corollar
 
 *Proof.* Under assumptions (a)--(c), linearization of $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}$ gives the vacuum linearized Einstein equations. Their gauge quotient leaves the two transverse-traceless helicity-$2$ modes, and the faithful perturbation map identifies those modes with collective network excitations. Theorem K.10.4 and Corollary K.10.5a separately identify $k\sim k_{\mathrm{MPU}}=\delta^{-1}$ as the conditional cutoff boundary. They do not determine whether an effective quasiparticle description persists at that boundary. ∎
 
+**Theorem K.10.13a (Uniqueness of the Local Metric-Only Two-Derivative Operator).** On four-dimensional Minkowski space, let $L$ be a constant-coefficient Lorentz-covariant linear operator from a symmetric tensor $h_{\mu\nu}$ to a symmetric tensor, containing exactly two derivatives and no additional field. Up to one overall coefficient, write its most general parity-even form as
+$$
+\begin{aligned}
+(Lh)_{\mu\nu}={}&a\Box h_{\mu\nu}
++b(\partial_\mu\partial^\alpha h_{\alpha\nu}
++\partial_\nu\partial^\alpha h_{\alpha\mu})
++c\partial_\mu\partial_\nu h\\
+&+d\eta_{\mu\nu}\partial^\alpha\partial^\beta h_{\alpha\beta}
++e\eta_{\mu\nu}\Box h.
+\end{aligned}
+\tag{K.10.13a.1}
+$$
+If $L$ is invariant under $h_{\mu\nu}\mapsto h_{\mu\nu}+\partial_\mu\xi_\nu+\partial_\nu\xi_\mu$ and obeys $\partial^\mu(Lh)_{\mu\nu}=0$ identically, then
+$$
+(a,b,c,d,e)=a(1,-1,1,1,-1),
+\tag{K.10.13a.2}
+$$
+so $L=-2a\,G^{(1)}$, where $G^{(1)}$ is the linearized Einstein tensor. For $a\ne0$, its vacuum plane-wave solution space modulo the gauge relation has exactly the two transverse-traceless helicity-$2$ polarizations.
+
+*Proof.* Substitution of a pure gauge perturbation into (K.10.13a.1) gives $a+b=0$, $b+c=0$, and $d+e=0$. Taking the divergence and requiring an identity for every $h$ adds $b+d=0$ and $c+e=0$. Solving gives (K.10.13a.2), which is the coefficient pattern of $-2aG^{(1)}$. For a null plane wave, harmonic gauge reduces the equation to $\Box\bar h_{\mu\nu}=0$; residual gauge transformations remove the longitudinal and trace components, leaving the two independent transverse-traceless components. ∎
+
+This is a coverage-complete operator classification only for the declared metric-only, local, parity-even, two-derivative class. Populating the microscopic perturbation map and excluding additional retained fields or higher-derivative operators remain independent gates in Corollary K.10.13.
+
 **Proposition K.10.14 (Conditional Cutoff-Matching Status of Parameters).** In a regulated QFT, bare parameters depend on the regulator, cutoff, and renormalization prescription; they may diverge, vanish, or approach finite values as the cutoff is removed. On a PU branch carrying the ultraviolet lattice or bandlimit and matching certificate of Theorem K.10.4:
 
 1. coefficients assigned above the certified operational bandlimit are not independent retained observables;
@@ -3364,6 +3563,26 @@ Separately, on the finite-substrate cutoff branch of Theorem K.10.4 and Corollar
 3. parameters below the matching scale encode operational predictions together with threshold and truncation residuals.
 
 *Proof.* The ultraviolet certificate specifies the microscopic regulator and the map from its finite data to the lower-scale effective action. Modes removed by that map can affect low-energy observables through matched Wilson coefficients, so they cannot simply be declared consequence-free. Finiteness and predictive meaning therefore follow from the certificate's microscopic parameter bounds and matching estimates, not from the existence of a length scale alone. ∎
+
+**Proposition K.10.14a (Finite Gauge-Spectral Checks Do Not Imply a Uniform Mass Gap).** For every $L\ge1$, let the gauge-reduced Hilbert space of a finite $\mathbb Z_2$ holonomy sector be
+$$
+\mathcal H_L^{\mathrm{phys}}=\operatorname{span}\{|0_L\rangle,|1_L\rangle\},
+$$
+and let
+$$
+H_L=\frac1L|1_L\rangle\!\langle1_L|.
+\tag{K.10.14a.1}
+$$
+Each $H_L$ is a positive gauge-invariant Hamiltonian with a unique vacuum and a strictly positive finite-volume gap $\Delta_L=1/L$. Nevertheless,
+$$
+\inf_{L\ge1}\Delta_L=0.
+\tag{K.10.14a.2}
+$$
+Consequently no collection of separate finite-volume positivity checks, without a volume-uniform lower bound and a controlled infinite-volume embedding, proves the mass-gap component of a Yang–Mills bridge.
+
+*Proof.* Equation (K.10.14a.1) is diagonal on the gauge-reduced sector, with eigenvalues $0$ and $1/L$. This proves uniqueness and positivity at every finite $L$. Taking the infimum gives (K.10.14a.2). The family is nonempty for every $L$, so the obstruction is not vacuous. ∎
+
+The proposition refutes only the inference from pointwise finite-volume gaps to a uniform gap. It neither constructs the physical Yang–Mills Hamiltonian nor decides confinement or the continuum limit.
 
 **Remark K.10.15 (Distinction from Wilsonian Effective Field Theory).**
 
@@ -3432,6 +3651,36 @@ Substitution yields (K.10.21). PCE enters by justifying the absence of additiona
 **Corollary K.10.16.1 (Finite-Resolution Status of the Turbulent Cascade).** PU does not require an exact continuum Navier-Stokes cascade extending to arbitrarily large $k$. The $-5/3$ exponent holds only on the finite operational band $k_0\ll k\ll k_d$, with deviations expected near forcing, dissipation, boundaries, anisotropic constraints, or $k_d\sim k_{\mathrm{MPU}}$.
 
 *Proof.* Theorem K.10.16 assumes a finite inertial interval. If $k$ approaches $k_0$, forcing details become operationally relevant and assumption 2 fails. If $k$ approaches $k_d$, dissipation or MPU-scale discreteness becomes operationally relevant and assumption 3 fails. Therefore the exponent is a finite-band universality statement, not a claim about an exact all-scale continuum. ∎
+
+**Theorem K.10.16.2 (Exact Nonlinear Finite-Shell Cascade and Constant Map).** Fix shells $k_n=k_0\lambda^n$, $0\le n\le N$, with $\lambda>1$, positive shell weights $w_n$, injection $\varepsilon_T>0$, and a dimensionless transfer coefficient $A>0$. For nonnegative shell spectra $E_n(t)$ define
+$$
+J_n(E_n)=A k_n^{5/2}E_n^{3/2}
+\tag{K.10.16.2.1}
+$$
+and the finite cascade
+$$
+\begin{aligned}
+w_0\dot E_0&=\varepsilon_T-J_0(E_0),\\
+w_n\dot E_n&=J_{n-1}(E_{n-1})-J_n(E_n),
+\qquad 1\le n\le N.
+\end{aligned}
+\tag{K.10.16.2.2}
+$$
+The last flux $J_N$ is the registered dissipative sink. The nonnegative orthant is invariant, and (K.10.16.2.2) has the unique stationary state
+$$
+E_n^*=A^{-2/3}\varepsilon_T^{2/3}k_n^{-5/3}.
+\tag{K.10.16.2.3}
+$$
+Every solution with finite nonnegative initial data converges componentwise to this state. At the limit, every interior balance residual, the injection residual $\varepsilon_T-J_0$, and the sink residual $J_N-\varepsilon_T$ vanish exactly. Thus this selected nonlinear finite dynamics has
+$$
+C_K=A^{-2/3}
+\tag{K.10.16.2.4}
+$$
+as its exact constant map.
+
+*Proof.* At a zero component the right-hand side of (K.10.16.2.2) is nonnegative, proving invariance. Stationarity first gives $J_0=\varepsilon_T$ and then recursively $J_n=J_{n-1}=\varepsilon_T$; strict monotonicity of each $J_n$ gives uniqueness and (K.10.16.2.3). The first equation is a scalar autonomous equation whose vector field points toward its unique equilibrium, so $E_0(t)\to E_0^*$. Inductively, if $J_{n-1}(E_{n-1}(t))\to\varepsilon_T$, comparison with the scalar equations having constant inputs $\varepsilon_T\pm\epsilon$ traps the liminf and limsup of $E_n$ between roots that converge to $E_n^*$ as $\epsilon\downarrow0$. This proves componentwise convergence. Substitution gives the residual and constant statements. ∎
+
+The model resolves flux, boundary residuals, exponent, and constant on its complete finite shell class. It contains no velocity-increment distribution or higher moment, so it makes no intermittency claim and does not replace a Navier–Stokes realization.
 
 ### K.10.17 Finite Operational Theory-Space
 
@@ -3543,9 +3792,91 @@ $$
 $$
 which proves the sequence statement. ∎
 
+**Proposition K.10.18e (Endpoint Central Normalization Is Independent of Data Processing).** Let the endpoint predictive data in Definition K.10.18a be finite and positive,
+$$
+C_i=C_{\mathrm{pred}}(k_i)>0,
+\qquad C_2\le C_1.
+$$
+For arbitrary positive constants $\alpha_i$ and $\beta_i$, the assignments
+$$
+c_i=\alpha_iC_i,
+\qquad
+a_i=\beta_iC_i
+\tag{K.10.18e.1}
+$$
+preserve the same state families, coarse-graining channel, relative entropies, and data-processing inequality. The endpoint ratios
+$$
+\frac{c_i}{a_i}=\frac{\alpha_i}{\beta_i}
+\tag{K.10.18e.2}
+$$
+therefore range independently over all positive values while the predictive record is fixed. Even an endpoint-independent choice $\alpha_1=\alpha_2$ fixes neither the $a$ normalization nor a relation between the two central data.
+
+*Proof.* The constants in (K.10.18e.1) do not occur in the definition of $C_i$ or in the CPTP channel. Hence changing them leaves every premise and conclusion of Theorem K.10.18b unchanged. Given any prescribed positive endpoint ratios $r_i$, choose $\alpha_i=r_i$ and $\beta_i=1$ to obtain (K.10.18e.2). ∎
+
+Thus data processing supplies the ordered dimensionless predictive datum, while a common $c/a$ normalization requires an independent response-complete calibration. Equality conditions and Petz recovery do not remove this positive calibration modulus.
+
+**Resolution TV-K-18-R1 (Metadata).** Exact domain: finite positive endpoint predictive records joined by the fixed response-complete coarse-graining channel of Definition K.10.18a, with arbitrary positive endpoint conversion constants. Premises: $C_2\le C_1$ and the accepted data-processing theorem. Equivalence: completions are identified only when their state families, channel, relative entropies and endpoint $c/a$ ratios agree. Budget: every positive pair $(\alpha_i,\beta_i)$ at both endpoints. Verifier: substitution in (K.10.18e.1)--(K.10.18e.2) and the unchanged-channel check. Falsifier: a consequence of the fixed predictive record that restricts either positive ratio $\alpha_i/\beta_i$. Provenance class: source-internal logical-independence construction. Downstream consumers: Theorem K.10.18b and `TV-K-18`. Proposition K.10.18e gives `nonentailment` of a common endpoint $c/a$ normalization from bare data processing. The target remains live on a branch carrying an independent response-complete calibration, its strict/equality conditions and its physical realization.
+
 **Common-monotone comparison protocol.** A claim that PCE descent, geometric flow, generalized entropy, and RG flow are representations of one scalar monotone must provide: maps from a common state space into each sector; equality or a stated monotone reparameterization of the four functionals on the image; control of every additional cost term; compatible flow parameters and orientations; and residual bounds. Without these entries, data processing proves only (K.10.24).
 
 Monotone convergence of the number $C_{\mathrm{pred}}(k)$ does not imply convergence of the state, existence or uniqueness of an RG fixed point, or finiteness of the EFT operator set. Such conclusions require, respectively, a topology and precompact orbit, an invariance or LaSalle-type condition, uniqueness data, and a separate operator-basis/power-counting theorem. Finite operational distinguishability at fixed resolution gives a finite atlas of response cells, not generic renormalizability.
+
+**Theorem K.10.19a (Exact Relational Clock on the Deparametrizable Constraint Class).** Let
+$$
+\mathcal M=T^*\mathbb R\times\mathcal P
+$$
+carry canonical coordinates $(T,p_T,z)$ and the single first-class constraint
+$$
+\mathcal C=p_T+H(z)=0,
+\tag{K.10.19a.1}
+$$
+where the Hamiltonian flow $\Phi_H^s$ is complete on $\mathcal P$. Then $T$ is a global phase-space clock because
+$$
+\{T,\mathcal C\}=1,
+\tag{K.10.19a.2}
+$$
+and every gauge orbit meets each slice $T=s$ exactly once. For every phase-space function $f$ on $\mathcal P$, the relational observable
+$$
+O_f(s)(T,p_T,z)=f\!\left(\Phi_H^{\,s-T}(z)\right)
+\tag{K.10.19a.3}
+$$
+is gauge invariant and restricts to $f(z)$ on $T=s$.
+
+More generally, a differentiable candidate clock $\tau$ fails to be a local clock wherever $\{\tau,\mathcal C\}=0$. It is a global clock on a chosen orbit class exactly when its restriction to every orbit is strictly monotone, has the declared common range, and each level set intersects each orbit once.
+
+*Proof.* The constraint flow advances $T$ by the gauge parameter and advances $z$ by the same Hamiltonian time. These two changes cancel in (K.10.19a.3), so $\{O_f(s),\mathcal C\}=0$. Completeness and (K.10.19a.2) give one intersection with every slice. If $\{\tau,\mathcal C\}=0$, the inverse-function condition fails along the orbit, producing a turning or stationary point. Strict monotonicity plus the common-range condition is sufficient and necessary for unique intersection with every declared level. ∎
+
+This theorem supplies the clock, Dirac observables, and complete turning-point/global-domain test for the deparametrizable class. A PU continuum branch must still construct its constraint in the form (K.10.19a.1), or supply a different globally covered clock atlas.
+
+**Theorem K.10.19b (Projective Cosmological Measure and Regulator-Independence Criterion).** Let $(\Omega_n,\pi_{n+1,n})$ be nonempty finite sample spaces with surjective coarse-graining maps, and let $\mu_n$ be probability measures. There is a unique probability measure on the inverse-limit cylinder algebra with marginals $\mu_n$ exactly when
+$$
+(\pi_{n+1,n})_*\mu_{n+1}=\mu_n
+\quad\text{for every }n.
+\tag{K.10.19b.1}
+$$
+On the compact inverse limit this cylinder measure extends uniquely to the generated Borel sigma-algebra. Hence the probability of every finite-level event is regulator independent precisely when its values are compatible under (K.10.19b.1).
+
+Let $w_n:\Omega_n\to[0,\infty)$ be observer-selection weights with $0<Z_n:=\sum_{\omega}w_n(\omega)\mu_n(\omega)<\infty$. The conditioned measures
+$$
+\nu_n(A)=\frac1{Z_n}\sum_{\omega\in A}w_n(\omega)\mu_n(\omega)
+\tag{K.10.19b.2}
+$$
+are regulator independent exactly when the normalized densities
+$$
+\bar w_n:=\frac{w_n}{Z_n}
+\quad\text{satisfy}\quad
+\bar w_n
+=\mathbb E_{\mu_{n+1}}
+\!\left[\bar w_{n+1}\mid\pi_{n+1,n}\right]
+\quad\mu_n\text{-almost surely}.
+\tag{K.10.19b.3}
+$$
+
+*Proof.* Necessity of (K.10.19b.1) follows by evaluating the same cylinder event at two adjacent levels. Consistency makes the cylinder assignment well defined and finitely additive; the finite spaces and compact inverse limit give the unique countably additive extension. Applying the same pushforward calculation to the weighted measures gives (K.10.19b.3), and conditional expectation proves sufficiency. Conversely, equality of all weighted cylinder probabilities is the defining integral identity for (K.10.19b.3). ∎
+
+The theorem completely resolves normalization, regulator independence, conditioning, and observer weighting for the declared projective finite class. Selecting and realizing the physical cosmological sample spaces, transition weights, and observer weight remains independent data.
+
+**Resolution TV-K-21-R1 (Metadata).** Exact domain: nonempty finite projective sample spaces with surjective bonding maps, compatible probability measures and finite nonzero observer normalizations. Premises: (K.10.19b.1) and, for conditioned measures, the normalized-density relation (K.10.19b.3). Equivalence: measures agree when all finite-level cylinder probabilities agree. Budget: every finite-level event and every bonding step; no sampled-event restriction is used. Verifier: exact pushforward of the unweighted and normalized weighted measures and the finite conditional-expectation identities. Falsifier: incompatible adjacent marginals, a cylinder with level-dependent probability, or a violation of (K.10.19b.3) by regulator-independent conditioned measures. Provenance class: source-internal projective-measure classification. Downstream consumers: the cosmological-measure program and `TV-K-21`. Theorem K.10.19b gives `positive-discharge` of the mathematical normalization, regulator-independence, conditioning and observer-weighting component on this projective finite class. Populating the physical sample spaces, transition maps, measures, observer weights and observable extractor remains the independent `C+R+O` work.
 
 ## K.11 Outlook and Future Directions
 

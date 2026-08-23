@@ -183,7 +183,60 @@ $$
 $$
 A point mass is not invariant because negation exchanges the two points. ∎
 
-**Status.** Theorems 10–11 prove the prediction obstruction. Principle 11b is the additional physical rule selecting the convex invariant completion, Theorem 11b proves its unique binary law, and Principle 8.0c separately identifies that law with the registered single-run outcome probabilities; convergence of empirical frequencies requires a repeated-trial certificate.
+**Theorem 11c (Complete Invariant-Measure Classification for a Finite Response Map).** Let $X$ be finite and $\tau:X\to X$. Its functional digraph has directed cycles $C_1,\ldots,C_m$ and transient vertices feeding those cycles. The complete set of invariant probability laws is
+$$
+\left\{
+\sum_{j=1}^m w_j u_{C_j}:
+w_j\ge0,\ \sum_{j=1}^m w_j=1
+\right\},
+\tag{11c.1}
+$$
+where $u_{C_j}$ is uniform on $C_j$. Consequently, the invariant law is unique exactly when the functional graph contains one directed cycle. If $\tau$ is fixed-point-free, every cycle has length at least two, but fixed-point-freedom alone does not imply uniqueness.
+
+*Proof.* If any transient vertex had positive invariant mass, choose among the positive-mass transient vertices one, $x$, of maximal distance from a cycle. Invariance would give
+$$
+0<q(x)=\sum_{y:\tau(y)=x}q(y).
+$$
+At least one predecessor $y$ would therefore have positive mass, and every such predecessor is transient at distance one greater than $x$, a contradiction. Hence every transient vertex has zero invariant mass. On a cycle, invariance gives equal mass to successive vertices, so the conditional law on that cycle is uniform. The total mass assigned to each cycle is otherwise arbitrary, giving (11c.1). The simplex is a singleton exactly when $m=1$. ∎
+
+**Resolution TV-SPAP-01-R1 (Metadata).** Exact domain: deterministic maps on nonempty finite retained response sets. Premises: Principle 11b's invariant-completion equation. Equivalence: equality of probability laws on the labeled retained set. Budget: one full functional-graph decomposition of $|X|$ vertices. Verifier: exact cycle/transient decomposition and simplex membership. Falsifier: invariant transient mass, nonuniform cycle mass, or a law outside (11c.1). Provenance class: source-internal finite dynamical classification. Downstream consumers: Principle 11b, Theorem 11b and `TV-SPAP-01`. Nonvacuity: the binary NOT map and two disjoint transpositions. This is `positive-discharge` of the finite mathematical component.
+
+**Theorem 11d (Finite Single-Run Channel Realization of the Invariant Simplex).** In the notation of Theorem 11c, fix any invariant law $q=\sum_jw_ju_{C_j}$. Let $\mathcal H_X$ have the orthonormal basis $\{|x\rangle:x\in X\}$ and define the classical channel
+$$
+\mathcal E_\tau(\rho)
+=
+\sum_{x\in X}
+\langle x|\rho|x\rangle
+|\tau(x)\rangle\langle\tau(x)|.
+\tag{11d.1}
+$$
+Prepare
+$$
+\rho_q=\sum_{x\in X}q(x)|x\rangle\langle x|
+\tag{11d.2}
+$$
+and use the normalized single-run instrument
+$$
+\mathcal J_x(\rho)=|x\rangle\langle x|\rho|x\rangle\langle x|
+\qquad(x\in X).
+\tag{11d.3}
+$$
+Its branch sum is the trace-preserving basis-dephasing channel and $\operatorname{tr}\mathcal J_x(\rho_q)=q(x)$. Hence its retained readout law is $q$ before and after the response channel. More strongly, a retained cycle record $R$ is realized by
+$$
+\rho_{RX}
+=
+\sum_j\frac{w_j}{|C_j|}
+\sum_{x\in C_j}
+|j\rangle\langle j|\otimes|x\rangle\langle x|,
+\tag{11d.4}
+$$
+with $\mathcal E_\tau$ acting on $X$ and the identity acting on $R$. For every $j$ with $w_j>0$, conditioning on $R=j$ gives the invariant single-run response $u_{C_j}$.
+
+*Proof.* Equation (11d.1) is a measure-and-prepare completely positive trace-preserving map. The maps (11d.3) are completely positive and their branch sum is trace preserving; evaluating their traces on (11d.2) gives $q$, while evaluation after the channel gives $\tau_*q=q$. On each cycle, $\tau$ permutes its basis states transitively, so it preserves the uniform conditional state in (11d.4); leaving $R$ unchanged proves the positive-weight conditional claim. ∎
+
+**Resolution TV-SPAP-01-R2 (Metadata).** Exact domain: every invariant law of a deterministic map on a nonempty finite retained response set, with the positive-weight cycle records of Theorem 11c. Premises: the finite functional graph, its invariant weights, the declared basis labels, and Principle 8.0c's single-run response identification. Equivalence: equality of the labeled retained single-run law. Budget: the full finite carrier, one normalized outcome branch per response, every cycle record and the response channel. Verifier: complete positivity, trace preservation, exact branch probabilities and the invariance/intertwining identities. Falsifier: an unnormalized instrument, a retained law different from $q$, or a positive-weight conditional record different from $u_{C_j}$. Provenance class: source-internal finite channel realization. Downstream consumers: Principle 11b, Theorems 11b--11c and `TV-SPAP-01`. Theorem 11d constructs the response map, normalized single-run instrument and retained cycle record for every classified law and gives `positive-discharge` of `TV-SPAP-01`; repeated-trial frequency remains separately owned by `TV-QM-03`.
+
+**Status.** Theorems 10–11 prove the prediction obstruction. Principle 11b is the additional physical rule selecting the convex invariant completion, Theorem 11b proves its unique binary law, and Theorem 11d realizes the full finite invariant simplex as registered single-run response probabilities; convergence of empirical frequencies requires a repeated-trial certificate.
 
 **4.2.4 Corollary 1 (Uniform Prediction Limit)**
 
@@ -398,6 +451,26 @@ C(M_n)\ge C(M_0)+nk=c_0+nk,\qquad c_0:=C(M_0). \tag{12}
 $$
 Hence $C(M_n)=\Omega(n)$. ∎
 
+**Proposition 13a (Exact Shared-Support Accounting and Compression Counterexample).** Fix a finite operation alphabet $\Omega$ with positive weights $w:\Omega\to(0,\infty)$. Let $A_j\subseteq\Omega$ be the operations needed to realize the registered level-$j$ response, and charge shared operations once. Put
+$$
+U_n:=\bigcup_{j=0}^n A_j,
+\qquad
+C_n:=\sum_{\omega\in U_n}w(\omega),
+\qquad
+\Delta_n:=A_n\setminus U_{n-1}.
+\tag{13a.1}
+$$
+Then
+$$
+C_n-C_{n-1}=\sum_{\omega\in\Delta_n}w(\omega),
+\tag{13a.2}
+$$
+so $C_n>C_{n-1}$ exactly when level $n$ needs at least one operation not already charged. When this support ledger is the registered complexity measure, $C(M_j)=C_j$, Theorem 13's recurrence is recovered if every $\Delta_n$ has weight at least $k>0$. If a level is represented by a pointer or code decoded entirely by operations in $U_{n-1}$, then $\Delta_n=\varnothing$ and $C_n=C_{n-1}$; strict depth ordering therefore does not follow from nesting alone.
+
+*Proof.* The disjoint union $U_n=U_{n-1}\sqcup\Delta_n$ gives (13a.2). Positive weights give the strictness equivalence. The two stated specializations follow by substitution. ∎
+
+**Resolution TV-SPAP-03-R1 (Metadata).** Exact domain: finite weighted operation alphabets and registered depth-indexed operation supports. Premises: positive weights and one-time charging of shared operations. Equivalence: identity of operation labels after the declared shared-operation quotient. Budget: all supports through the registered depth $n$. Verifier: exact set union, difference and weighted summation. Falsifier: a charged operation outside the union, a duplicate shared charge, or a strict increment with $\Delta_n=\varnothing$. Provenance class: source-internal finite ledger identity and countermodel. Downstream consumers: Theorem 13 and `TV-SPAP-03`. Nonvacuity: the constant-support compression branch and the unit-weight strict branch. This is `positive-discharge` of the support identity and `negative-refutation` of strict ordering from nesting alone; the full implementation quotient, its depthwise minima and physical realization remain `M+R`-open.
+
 **4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{SPAP}$)**
 
 Let $\delta_{\mathrm{SPAP}}:=\alpha_{SPAP}-\alpha\in(0,1/8]$. Assume a certificate $\mathfrak C_{B.2}$ proves that every admissible strategy in the declared task class contains the Bernoulli hard subfamily of Theorem B.2, preserves independent observations and the sample-cost ledger, and meets the error/confidence requirements uniformly under either Bernoulli law. Then
@@ -558,6 +631,53 @@ f(\delta_w)
 $$
 and $c_w>0$ by Definition 14.1g. Injectivity gives at most one admissible $\delta_w$. Because one scalar equation leaves $\delta_s$ free, it does not select a unique pair or imply an optimization stationarity condition. ∎
 
+**Proposition 14.1h.a (Complete Finite Self/World Pareto Census).** Let $\mathcal A$ be a nonempty finite census of architectures. For each $a\in\mathcal A$, freeze exact response utilities $(u_s(a),u_w(a))$, a no-double-count cost triple $(c_s(a),c_w(a),c_{sh}(a))$, and a budget $B$. Let
+$$
+\mathcal F
+=
+\{a\in\mathcal A:c_s(a)+c_w(a)+c_{sh}(a)\le B\}.
+\tag{14.1h.a.1}
+$$
+The exact Pareto set is
+$$
+\mathcal P
+=
+\left\{a\in\mathcal F:
+\nexists b\in\mathcal F\text{ with }
+u_s(b)\ge u_s(a),\ u_w(b)\ge u_w(a)
+\text{ and at least one strict inequality}
+\right\}.
+\tag{14.1h.a.2}
+$$
+Exhaustive pairwise comparison terminates and returns all and only the Pareto-optimal candidates. If $\mathcal F\ne\varnothing$, a scalar objective $U(u_s,u_w,c_s,c_w,c_{sh})$ selects an attained strict optimum modulo response equivalence exactly when all of its maximizing candidates lie in one response-equivalence class in $\mathcal F$.
+
+*Proof.* Finiteness makes the budget and dominance predicates decidable by exhaustive comparison. Equation (14.1h.a.2) is precisely the definition of nondominance, so the returned candidate set is exact. A real function on nonempty finite $\mathcal F$ attains its maximum; the optimum is unique modulo response equivalence exactly when its maximizing set is contained in one equivalence class. ∎
+
+**Resolution TV-SPAP-04-R1 (Metadata).** Exact domain: nonempty finite architecture censuses with exact two-task utilities, no-double-count costs and budget. Premises: a populated common-unit ledger and declared response equivalence; a nonempty feasible set for the scalar-optimizer clause. Equivalence: equality in the declared complete retained response table. Budget: every feasible candidate and every ordered dominance pair. Verifier: exhaustive budget filtering, pairwise dominance and exact scalar-objective comparison. Falsifier: an omitted nondominated candidate, an included dominated candidate, or a strict optimizer tied by an inequivalent candidate. Provenance class: source-internal finite optimization schema. Downstream consumers: Definition 14.1d and `TV-SPAP-04`. Nonvacuity: two feasible candidates with utility pairs $(1,0)$ and $(0,1)$. This is `positive-discharge` of the finite classifier.
+
+**Proposition 14.1h.b (Populated Three-Architecture Allocation Record).** Register two binary success protocols $T_s,T_w$, one self task and one world task, and compare response tables by equality of their two success probabilities. Let
+$$
+\begin{array}{c|c|c}
+a&(u_s(a),u_w(a))&(c_s(a),c_w(a),c_{sh}(a))\\ \hline
+a_s&(1,0)&(1,0,0)\\
+a_w&(0,1)&(0,1,0)\\
+a_b&(3/4,3/4)&(1,1,1).
+\end{array}
+\tag{14.1h.b.1}
+$$
+The common unit is one finite stochastic-circuit operation and $B=3$. The operations for $a_s$ and $a_w$ are their respective response gates. Architecture $a_b$ uses those two gates and one shared clock/dispatch gate, which is charged once in $c_{sh}$. All three architectures are feasible and Pareto optimal. For the forward-locked scalar objective
+$$
+U(u_s,u_w,c_s,c_w,c_{sh})=u_su_w,
+\tag{14.1h.b.2}
+$$
+$a_b$ is the unique strict optimizer modulo response equivalence.
+
+Each row has a finite formal realization: a registered rational-coin channel emits the two success bits with the probabilities in (14.1h.b.1), and the joint architecture uses the common dispatch gate before its two output channels. The complete operation list is $\{s,w,h\}$, so the displayed costs exhaust the used operations and count $h$ once.
+
+*Proof.* The costs are respectively $1,1,3$, so every row is feasible. Neither specialist dominates $a_b$, because its retained utility vanishes on one task, and $a_b$ does not dominate either specialist because $3/4<1$ on that specialist's task. The specialists do not dominate one another. Thus the Pareto set is the full census. Equation (14.1h.b.2) has values $0,0,9/16$, proving strict selection. Rational-coin stochastic matrices realize the displayed response laws exactly, and direct inspection proves the operation census and no-double-count claim. ∎
+
+**Resolution TV-SPAP-04-R2 (Metadata).** Exact domain: the three generic two-task stochastic architectures and operation ledger in (14.1h.b.1). Premises: the displayed response tables, costs, budget, response equivalence and forward-locked scalar objective. Equivalence: equality of both retained success probabilities. Budget: all three candidates and the complete operation list $\{s,w,h\}$. Verifier: exhaustive feasibility/dominance comparison, exact objective values and rational-channel realization. Falsifier: an omitted candidate in the declared census, a hidden operation, a duplicated shared cost or a tied inequivalent maximizer. Provenance class: source-internal finite allocation witness. Downstream consumers: Proposition 14.1h.a and the generic finite-census component of `TV-SPAP-04`. This gives `positive-discharge` of one populated generic Pareto/optimizer instance. The Definition-14.1d target remains `C+R`-open until one finite Property-R predictor, horizon, self-model verification/update task, $\delta_{\mathrm{self}}$, forward lock and PPI-shared operation audit are populated on the same formal realization.
+
 **Remark 3: Conceptual Synthesis—Branch-Separated Prediction Relativity.**
 
 Theorems 10–11 establish a diagonal obstruction to a universally exact predictor on their declared model classes. They do not determine a system-independent scalar $\alpha_{SPAP}<1$. A quantitative **Prediction Coherence Boundary** requires a registered task, performance functional, model class, and a uniform quantitative bound such as the certified lower-bound branch of Theorem 14. Comparison with the relativistic causal frontier is therefore a structural analogy, not an identification.
@@ -565,6 +685,5 @@ Theorems 10–11 establish a diagonal obstruction to a universally exact predict
 Appendix N's **Unified Cost of Transgression (UCT)** introduces a conditional bookkeeping bridge. When an operational detector has the stated Unruh response, temperatures are additive in the specified effective-bath model, predictive records are actively refreshed, and exported energy obeys the registered frame rule, the incremental predictive-refresh work may be added to a distinct endpoint kinetic-work ledger. Proper acceleration, not velocity alone, activates that modeled increment; inertial high-speed coasting has no Unruh term.
 
 The UCT does not prove that a registered predictive-performance boundary and the relativistic frontier share a microscopic origin. **Prediction Relativity** names the comparison of these separate limits and, on the UCT branch, the optimization problem that trades trajectory smoothness against predictive-refresh resources. Temporal-horizon and predictive-resolution contraction remain conditional consequences of that optimization.
-
 
 

@@ -389,6 +389,17 @@ If $\mathfrak C_{\mathrm{loc\mbox{-}grav}}$ is absent, the minimal finite no-hid
 
 *Proof.* Theorem F.0 gives the stable local-net conclusion from locality, Lieb-Robinson, tightness, state convergence, and compatibility hypotheses. Definitions F.0a, F.0c, and F.0e give finite discharge routes for generator and operational-continuum data. Definition F.10.12a and Theorem F.10.12c give the KMS descent and emergent-metric closure only when their finite records are accepted. The Wightman realization additionally requires wedge, spectrum, Jost, locality, and local field domain data. The Einstein and thermodynamic conclusions require entropy, null-variation, metric-action, and gravitational-channel data. With the overlap audit, the component theorems compose. If any response-active entry is absent, admissible completions can preserve the prior structural branch but differ in local-net, Wightman, thermodynamic, or metric response, so Theorem P.14.1f prevents the stronger claim. ∎
 
+**Theorem F.0j (Finite Reversibility Gate for Local Completely Positive Dynamics).** Let $\mathcal A$ be a finite-dimensional $C^*$-algebra and let $\Phi:\mathcal A\to\mathcal A$ be unital and completely positive. If $\Phi$ has a unital completely positive inverse, then $\Phi$ is a $*$-automorphism. Consequently, every strongly continuous one-parameter group $(\Phi_t)_{t\in\mathbb R}$ of such maps fixes the center componentwise and, on each matrix factor in the identity component, has the form
+$$
+\Phi_t(A)=e^{itH}Ae^{-itH}
+\tag{F.0j.1}
+$$
+for a self-adjoint $H$, unique up to a central scalar.
+
+*Proof.* Kadison's inequality gives $\Phi(A^*A)\succeq\Phi(A)^*\Phi(A)$. Apply the positive inverse and then Kadison's inequality for $\Phi^{-1}$ to obtain the reverse inequality; hence equality holds for every $A$. The polarization identity puts every $A$ in the multiplicative domain, so $\Phi(AB)=\Phi(A)\Phi(B)$ and $\Phi(A^*)=\Phi(A)^*$. Bijectivity makes it an automorphism. A continuous path of automorphisms cannot permute the discrete minimal central projections. Automorphisms in the identity component of a full matrix algebra are inner, and a strongly continuous one-parameter inner group has the form (F.0j.1). ∎
+
+This theorem completely separates the reversible finite-carrier branch from genuinely dissipative contraction dynamics. It does not supply a continuum vacuum, spectrum condition, spacetime covariance, or Wightman field domain.
+
 *   **Definition F.3 (Emergent Local Net and Promotion Conditions).** On a branch satisfying Theorem F.0, Theorem F.0d, or Theorem F.0f, the limit is a local $C^*$-net $\mathcal O\mapsto\mathfrak A(\mathcal O)$ on $(M,g_{\mu\nu})$ with the properties proved by the invoked theorem. A standard relativistic Haag--Kastler or Wightman promotion additionally requires the reversible representation, invariant vacuum, spectrum, covariance, and field-domain entries stated in Definition F.0h; a dissipative contraction semigroup is not itself a Haag--Kastler dynamics.
 
 **F.4 Admissible States and Dynamics**
@@ -466,6 +477,42 @@ $$
 \nabla_\mu T^{\mu}{}_{\nu\,(\mathrm{MPU})}=0.
 $$
 Thus the variationally defined stress-energy tensor is covariantly conserved on shell. ∎
+
+**Theorem F.1b (Finite Variational Stress Identification and Counterterm Fiber).** Let $g=(g^1,\ldots,g^m)$ be finite regulator metric coordinates, let $H(g)$ be a differentiable finite Hamiltonian, and let $\rho(g)$ be a differentiable stationary state for
+$$
+\Gamma(g,\rho)=\operatorname{tr}[\rho H(g)]+\mathcal R(g,\rho),
+\qquad
+D_\rho\Gamma(g,\rho(g))[\dot\rho]=0
+\quad\text{for every admissible tangent }\dot\rho.
+\tag{F.1b.1}
+$$
+Assume also that every parameter derivative $\partial_a\rho(g)$ is an admissible tangent.
+Then the on-shell effective action $\Gamma_{\mathrm{os}}(g)=\Gamma(g,\rho(g))$ obeys the exact Hellmann--Feynman identity
+$$
+\partial_a\Gamma_{\mathrm{os}}
+=
+\operatorname{tr}[\rho(g)\partial_aH(g)]
++
+\partial_a\mathcal R(g,\rho(g)).
+\tag{F.1b.2}
+$$
+Thus microscopic expectation and metric variation coincide on the regulator exactly when the explicit regularization term in (F.1b.2) is included in the microscopic stress record.
+
+If a finite symmetry acts infinitesimally as $\delta g=R\xi$ and leaves $\Gamma_{\mathrm{os}}$ invariant, its exact Ward identity is
+$$
+R^{\mathsf T}\nabla_g\Gamma_{\mathrm{os}}=0.
+\tag{F.1b.3}
+$$
+If admissible local counterterms form a finite vector space $\mathcal C$ and $V:C\mapsto\nabla_gC$ is their stress-variation map, all renormalized stresses compatible with one bare record form the affine fiber
+$$
+T_0+\operatorname{im}V.
+\tag{F.1b.4}
+$$
+An additional linear normalization map $N$ on the stress space selects a unique stress exactly when $N$ is injective on $\operatorname{im}V$; otherwise two counterterms preserve every normalization and change the stress.
+
+*Proof.* Differentiate $\Gamma(g,\rho(g))$. Because $\partial_a\rho(g)$ is an admissible tangent, its chain-rule term vanishes by stationarity, giving (F.1b.2). Differentiating symmetry invariance in $\xi$ gives (F.1b.3). Counterterms add their gradients linearly, proving (F.1b.4). Linearity of $N$ makes two points in that affine fiber have the same normalization exactly when their difference lies in $\ker N\cap\operatorname{im}V$, which is zero exactly under the stated injectivity condition. ∎
+
+The theorem is exact at a fixed finite regulator. Operator-valued-distribution convergence, local covariance, and removal of the regulator remain the independent continuum requirements in Definition F.0h.
 
 **F.6 Rigorous Formulation of Locality and Statistical FTL**
 
@@ -615,7 +662,23 @@ $$
 \quad\Rightarrow\quad
 |a,a\rangle=0.
 $$
-The tangent-cell packing result of Theorem Z.10 is a distinct finite-response statement about non-overlapping operational distinguishability cells in QFI/Bures geometry. It is compatible with the Pauli exclusion logic, because both remove operationally redundant over-occupation of a finite distinguishability structure, but Theorem Z.10 is not a substitute for the AQFT spin-statistics derivation. A derivation of Pauli exclusion from channel packing alone would require an additional branch map identifying identical-fermion occupation cells with the tangent cells of Theorem Z.10; that map is not assumed here.
+A common semidefinite proof primitive can be stated without identifying the two mechanisms. For any positive state $\omega$ on a unital $*$-algebra and any finite family $\{a_i\}$, the matrix
+$$
+G_{ij}:=\omega(a_i^*a_j)
+$$
+is positive semidefinite because, for $a(z):=\sum_i z_i a_i$,
+$$
+z^*Gz=\omega\!\left(a(z)^*a(z)\right)\ge0.
+$$
+On a CAR realization with $\{c_i,c_j^*\}=\delta_{ij}\mathbf1$ and one-particle matrix $\gamma_{ij}:=\omega(c_i^*c_j)$, positivity applied to $a(z):=\sum_i z_i c_i$ gives
+$$
+z^*\gamma z=\omega(a(z)^*a(z))\ge0,
+\qquad
+z^*(I-\gamma)z=\omega(a(z)a(z)^*)\ge0,
+$$
+and therefore $0\preceq\gamma\preceq I$. In a Delsarte-type spherical-code certificate, a positive-definite zonal kernel likewise gives a positive-semidefinite matrix on the code points, while its normalized constant component and the off-diagonal sign constraint produce the scalar ceiling [Delsarte, Goethals & Seidel 1977].
+
+This identifies positivity plus normalization as a shared proof pattern. The CAR unit term and the constant component of a spherical kernel have different types and supply no physical mode-to-cell map. The tangent-cell packing result of Theorem Z.10 remains a distinct finite-response statement about non-overlapping operational distinguishability cells in QFI/Bures geometry. A derivation of Pauli exclusion from channel packing requires an additional branch map identifying identical-fermion occupation cells with the tangent cells of Theorem Z.10; that map is not assumed here.
 
 **Theorem F.3 (Conditional Removal of Response-Null Permutation Multiplicity).**
 Let one retained $N$-particle sector decompose as
@@ -714,6 +777,28 @@ If the modular cocycle obstruction class is nonzero, the branch fails the modula
 *Proof.* Assumptions 1 and 2 give the finite retained DHR tensor category of localized, transportable sectors. Assumptions 3--5 give the Bisognano--Wichmann modular geometry on the retained wedge net: modular automorphisms act as boosts and modular conjugations act as wedge reflections. The modular spin-statistics theorem identifies the sector univalence with the DHR statistics sign, so $\kappa_\rho=(-1)^{2s_\rho}$. For an irreducible finite-statistics DHR sector with conjugate, the statistics parameter satisfies $|\lambda_\rho|=d_{\mathrm{stat}}(\rho)^{-1}$ and $\operatorname{sgn}(\lambda_\rho)=\kappa_\rho$, proving (F.9.5a.1). Hence the rotation fixes the sign but not the statistical dimension. Doplicher--Roberts reconstruction converts the corresponding para-Bose or para-Fermi sector into an ordinary Bose or Fermi charged-field multiplet carrying the gauge multiplicity. This is the precise modular replacement for the spin-statistics conclusion of Theorem F.2.
 
 The modular conjugations implement wedge reflections. Products of the wedge reflection with the internal charge conjugation on the corresponding conjugate DHR sector give the antiunitary strong-reflection action on local fields, hence the CPT operator of Theorem F.4 on the retained algebra. Assumption 6 guarantees that these local modular implementations glue consistently across the wedge/diamond cover. If the obstruction class is nonzero, Theorem F.10.11b says the modular flows do not glue to a single descent automorphism group; then the sector-transport argument above is not globally defined, so the branch is rejected by the gate. ∎
+
+**Proposition F.5a.1 (Fusion and Dimension Data Do Not Fix Exchange Sign).** The symmetric unitary tensor categories $\operatorname{Rep}(\mathbb Z_2)$ and $\mathrm{sVec}$ have the same simple-object census
+$$
+\{\mathbf1,x\},
+\qquad
+x\otimes x\cong\mathbf1,
+\qquad
+d_{\mathrm{stat}}(\mathbf1)=d_{\mathrm{stat}}(x)=1,
+\tag{F.9.5a.1.1}
+$$
+and the same conjugation rule $\bar x=x$, but their self-exchange morphisms differ:
+$$
+c_{x,x}=+\operatorname{id}_{\mathbf1}
+\quad\hbox{in }\operatorname{Rep}(\mathbb Z_2),
+\qquad
+c_{x,x}=-\operatorname{id}_{\mathbf1}
+\quad\hbox{in }\mathrm{sVec}.
+\tag{F.9.5a.1.2}
+$$
+Therefore fusion rules, conjugates, and statistical dimensions alone cannot derive a Bose/Fermi sign. A retained exchange or modular-reflection datum is logically necessary.
+
+*Proof.* Both categories have the two displayed simples and fusion table. In the ordinary representation category the symmetric flip acts as $+1$ on the tensor square of the nontrivial one-dimensional representation. In super-vector spaces the graded flip contributes $(-1)^{1\cdot1}=-1$ on the odd line. Hence every datum in (F.9.5a.1.1) agrees while (F.9.5a.1.2) differs. ∎
 
 **Definition F.5b (Finite DHR-Tannaka Response Datum).** On a regular AQFT branch satisfying the Mosco-Bochner bridge of Definition F.0c and Theorem F.0d, a finite DHR-Tannaka response datum is a tuple
 $$
@@ -836,6 +921,24 @@ The DHR field-algebra reconstruction applied to the localized transportable sect
 If a compact gauge label is physical, then some finite local protocol distinguishes its charge transport or fusion behavior. Such a distinguishable label defines a localized transportable sector, hence an object of $\mathcal C_{\mathrm{resp}}$. This proves item 3. Conversely, if an additional gauge factor has no representation in $\mathcal C_{\mathrm{resp}}$, it acts trivially on all reconstructed localized sectors and on all observables in $\mathfrak A_{\mathrm{obs}}$. It therefore changes no protocol-response presheaf. By PPI it is the same physical description, and by PCE the surplus label is removed. This proves item 4.
 
 Finally, if (F.9.5c.2) holds, then the internally selected Appendix G capacity group and the externally reconstructed DHR-Tannaka response group have equivalent finite representation categories on the retained branch. A compact response group acting faithfully on the reconstructed sectors is then fixed up to the usual quotient by the common center invisible to all retained representations. ∎
+
+**Theorem F.5d (Finite-Group Fiber-Functor Reconstruction and Response Kernel).** Let $G$ be a finite group and let $\omega:\operatorname{Rep}(G)\to\mathrm{Hilb}_{\mathrm{fin}}$ be the forgetful symmetric tensor functor. Evaluation of a group element in every representation gives an isomorphism
+$$
+G\cong\operatorname{Aut}^{\otimes}(\omega).
+\tag{F.9.5d.1}
+$$
+If only the full tensor subcategory generated by retained representations $\mathcal S$ is supplied, the reconstructed group is
+$$
+G/N_{\mathcal S},
+\qquad
+N_{\mathcal S}:=\bigcap_{\rho\in\mathcal S}\ker\rho.
+\tag{F.9.5d.2}
+$$
+Thus the precise residual ambiguity is the normal subgroup invisible to every retained sector, and the finite response group is unique exactly when the retained representations are jointly faithful.
+
+*Proof.* Each $g\in G$ defines the natural monoidal family $(\rho(g))_\rho$. Conversely, a unitary monoidal natural automorphism acts on the regular representation compatibly with every intertwiner and tensor product. Naturality with the left-regular intertwiners identifies it with right translation by one unique $g$, yielding (F.9.5d.1). On the retained subcategory, two elements induce the same natural transformation exactly when $\rho(g^{-1}h)=I$ for every $\rho\in\mathcal S$, equivalently $g^{-1}h\in N_{\mathcal S}$. This proves (F.9.5d.2). ∎
+
+This exact finite reconstruction does not itself construct localized transportable endomorphisms or a continuum field net; those remain the premises of Definition F.5b and Theorem F.5c.
 
 ---
 
@@ -1549,6 +1652,32 @@ t=\lambda_L^{-1}\ln\frac{q_*}{g(0)},
 $$
 the lower growth estimate reaches $q_*$, so the first threshold time is no larger. Use $g(0)\ge c_0/N_{\mathrm{eff}}$ and the lower bound on $\lambda_L$ to obtain the displayed inequality. A horizon-area interpretation of $N_{\mathrm{eff}}$ and any Page-entropy conclusion require their separate capacity and entropy-continuity certificates. ∎
 
+**Theorem F.10.4b.7b (No Exact Exponential OTOC Window on a Finite Closed Carrier).** Let $\mathcal H$ be finite-dimensional, let $H=H^*$, and let $A,B$ and a faithful density matrix $\rho$ be fixed with $[H,\rho]=0$. Every correlation function obtained by taking a finite product of the matrix entries of
+$$
+A(t)=e^{itH}Ae^{-itH}
+$$
+and then tracing against fixed matrices is an exponential polynomial
+$$
+P(t)=\sum_{k=1}^N c_ke^{i\nu_kt},
+\qquad \nu_k\in\mathbb R.
+\tag{F.10.4b.7b.1}
+$$
+Let $P$ be the connected OTOC numerator and let $Q$ be a nonzero disconnected normalization of this form. If $Q$ is nonzero on a real open interval $I$, there are no constants $c>0$ and $\lambda>0$ for which
+$$
+1-\frac{P(t)}{Q(t)}=ce^{\lambda t}
+\tag{F.10.4b.7b.2}
+$$
+throughout $I$. Consequently a strictly finite closed Hamiltonian carrier cannot exactly saturate the positive-exponent chaos differential bound on an open time interval. Approximate exponential windows, open-system generators, refining carrier limits, and the mixing and tail entries of $\mathfrak C_{\mathrm{scr}}$ are not classified by this obstruction.
+
+*Proof.* Diagonalize $H$. Every matrix entry of $A(t)$ is a finite sum of phases $e^{i(E_j-E_k)t}$, and multiplication and tracing preserve the form (F.10.4b.7b.1). If (F.10.4b.7b.2) held on $I$, then
+$$
+Q(t)-P(t)=ce^{\lambda t}Q(t)
+\tag{F.10.4b.7b.3}
+$$
+there. Both sides extend to entire exponential polynomials, so the identity theorem extends (F.10.4b.7b.3) to all complex $t$. The exponents on the left have real part zero, whereas every exponent on the right has real part $\lambda>0$. Linear independence of finitely many exponentials with distinct exponents forces every coefficient on both sides to vanish. This would give $Q=0$, contrary to the premise. Exact equality in the chaos differential bound with positive rate integrates to (F.10.4b.7b.2), so it is excluded on this class. ∎
+
+Theorem F.10.4b.7b is a scoped negative resolution artifact for the exact-saturation route in `TV-F-10`. The general analytic-strip bound and the approximate uniform mixing, prefactor, tail, and logarithmic-scrambling classification remain open.
+
 ### F.10.4c Reflection-Positivity Gate for Lorentzian Reconstruction
 
 **Definition F.10.4c.1 (Finite PU Reflection Positivity).** Let $\mathfrak A_E$ be a finite Euclidean predictive history algebra with an antilinear reflection involution $\Theta$ and positive-time subalgebra $\mathfrak A_+$. A normalized Euclidean functional $\Omega_E:\mathfrak A_E\to\mathbb C$ is reflection positive when
@@ -2154,6 +2283,71 @@ such that:
 
 *Proof.* Items 3-5 give the Mosco-core, curvature-transfer, finite-core, and recovery-map hypotheses of Theorem D.6e on $O$. Item 7 supplies the noncollapse and compactness hypotheses of Theorem C.6c. Item 8 fixes the branch dimension at four together with noncollapse, so dimension drop is not permitted on the retained branch. The conclusion is therefore the local restriction of the D.6e/C.6c closure. A response-active non-quadratic direction would violate the quadratic Cheeger-energy conclusion; if the direction is response-null, it is removed by the PPI quotient rather than retained as a distinct continuum energy. ∎
 
+**Theorem F.10.4g.4a (Response-Active Finsler Mosco Countermodel).** Let $\mathbb T^4=(\mathbb R/\mathbb Z)^4$, let $h=n^{-1}$, let $V_h=(h\mathbb Z/\mathbb Z)^4$, and set
+$$
+\mathcal X_h=
+\left(h^2\mathbb Z\cap[-h^{-1},h^{-1}]\right)^{V_h}.
+$$
+Thus every approximating carrier has finitely many configurations. For $u\in\mathcal X_h$, write
+$$
+D_{j,h}u(x)=\frac{u(x+he_j)-u(x)}h
+$$
+and define the finite, translation-invariant, nearest-neighbor propagation cost
+$$
+\mathcal E_h(u)
+=
+\frac{h^4}{2}\sum_{x\in V_h}
+\left(\sum_{j=1}^4|D_{j,h}u(x)|\right)^2.
+\tag{F.10.4g.4a.1}
+$$
+Extend $\mathcal E_h$ by $+\infty$ off $\mathcal X_h$. Under the piecewise-affine embeddings into $L^2(\mathbb T^4)$, the functionals $\mathcal E_h$ Mosco-converge to
+$$
+\mathcal E(u)
+=
+\begin{cases}
+\displaystyle\frac12\int_{\mathbb T^4}
+\left(\sum_{j=1}^4|\partial_ju(x)|\right)^2dx,
+&u\in W^{1,2}(\mathbb T^4),\\[6pt]
++\infty,&u\notin W^{1,2}(\mathbb T^4).
+\end{cases}
+\tag{F.10.4g.4a.2}
+$$
+This is the Cheeger energy of the flat Finsler torus whose tangent norm is $\ell^\infty$ and whose cotangent norm is $\ell^1$. It is not quadratic. Indeed, for
+$$
+f(x)=\sin(2\pi x_1),
+\qquad
+g(x)=\sin(2\pi x_2),
+$$
+one has
+$$
+\mathcal E(f+g)+\mathcal E(f-g)-2\mathcal E(f)-2\mathcal E(g)
+=
+2\int_{\mathbb T^4}|\partial_1f\,\partial_2g|\,dx
+>0.
+\tag{F.10.4g.4a.3}
+$$
+For pairs $(u,v)$ for which $u,v,u+v,u-v\in\mathcal X_h$, the finite response map
+$$
+\mathfrak r_h(u,v)
+=
+\bigl(\mathcal E_h(u),\mathcal E_h(v),
+\mathcal E_h(u+v)+\mathcal E_h(u-v)-2\mathcal E_h(u)-2\mathcal E_h(v)\bigr)
+\tag{F.10.4g.4a.4}
+$$
+is a sum of radius-one terms and is target-independent. On the finite carrier Hilbert space with basis $|u,v\rangle$, each coordinate of $\mathfrak r_h$ is realized by the diagonal self-adjoint observable having that coordinate as its eigenvalue; the basis readout is a normalized finite PVM. Quantizing the samples of $f$ and $g$ to $h^2\mathbb Z$ makes the third coordinate converge to the strictly positive value in (F.10.4g.4a.3), whereas every quadratic Dirichlet or RCD Cheeger energy gives zero. The nonquadratic directions therefore survive the registered response quotient.
+
+*Proof.* Boundedness of $\mathcal E_h(u_h)$ bounds every coordinate difference in discrete $L^2$. If the piecewise-affine embeddings converge weakly in $L^2$, discrete compactness and the periodic Poincaré inequality give, after removal of the mean, a weakly convergent $W^{1,2}$ subsequence. Its discrete gradients converge weakly to the distributional gradient of the limit. The integrand
+$$
+\Phi(\xi)=\frac12\left(\sum_{j=1}^4|\xi_j|\right)^2
+$$
+is convex and continuous, so weak lower semicontinuity gives the Mosco liminf inequality. For bounded smooth $u$, sample on $V_h$ and round every value to the nearest multiple of $h^2$. The rounding changes each forward difference by at most $2h$, while the amplitude cutoff is inactive for all sufficiently small $h$; uniform finite-difference convergence therefore gives $\mathcal E_h(u_h)\to\mathcal E(u)$. Smooth density in $W^{1,2}(\mathbb T^4)$ and a diagonal choice give a quantized recovery sequence for every finite-energy $u$. This proves Mosco convergence for the finite configuration carriers. Equation (F.10.4g.4a.3) follows pointwise from
+$$
+(|a|+|b|)^2+(|a|+|-b|)^2-2a^2-2b^2=4|ab|
+$$
+and the factor $1/2$ in (F.10.4g.4a.2). Finite-difference convergence then proves the response claim. ∎
+
+Theorem F.10.4g.4a is the response-active Finsler/nonquadratic alternative registered by `TV-F-15`. It resolves that target negatively with respect to unconditional quadratic-RCD rigidity; Corollary F.10.4g.4 remains valid on branches carrying its stronger Bochner-Mosco certificate.
+
 **Definition F.10.4g.5 (Coherent Hamiltonian Handling Certificate).** Let $H_{n,O}$ be the coherent Hamiltonian part of the local generator on $O$. A coherent Hamiltonian handling certificate is a finite record
 
 $$
@@ -2201,6 +2395,84 @@ $$
 No coherent term is silently discarded: it is either transported by an accepted convergence witness, removed by an accepted response-null or defect-filling witness, or left as an open bridge condition.
 
 *Proof.* The retention witness supplies self-adjoint strong-resolvent convergence, the common graph core, the uniform relative bound with constant $a<1$, and convergence of the commutators on every convergent core sequence. These are exactly the coherent hypotheses of Theorem F.10.4g.2; the Kato perturbation theorem therefore makes the summed generator closable and passes the commutator part to the local limit together with the dissipative generator. The cancellation witness removes the response-active coherent term either by the response quotient or by exact defect filling in the obstruction complex. If neither witness is present, the hypotheses of this corollary are absent and no closure is asserted. ∎
+
+**Proposition F.10.4g.7 (GKLS Response Does Not Canonically Split Coherent and Dissipative Parts).** On a finite matrix carrier, write the one-channel Schrödinger-picture generator as
+$$
+\mathcal L_{H,L}(\rho)
+=-i[H,\rho]
++L\rho L^\dagger
+-\frac12\{L^\dagger L,\rho\}.
+\tag{F.10.4g.7.1}
+$$
+For every $c\in\mathbb C$, the transformation
+$$
+L'=L+cI,
+\qquad
+H'=H+\frac{1}{2i}\bigl(\bar cL-cL^\dagger\bigr)
+\tag{F.10.4g.7.2}
+$$
+obeys $\mathcal L_{H',L'}=\mathcal L_{H,L}$ on the full matrix algebra. The response generator therefore does not canonically determine its coherent/dissipative decomposition.
+
+The ambiguity is nonempty already on a qubit. With $H=0$, $L=\sigma_x$, and $c=i$, equation (F.10.4g.7.2) gives
+$$
+L'=\sigma_x+iI,
+\qquad
+H'=-\sigma_x\ne H,
+\qquad
+\mathcal L_{H',L'}=\mathcal L_{H,L}.
+\tag{F.10.4g.7.3}
+$$
+
+*Proof.* Expanding the dissipator after $L\mapsto L+cI$ cancels the $|c|^2$ terms and adds
+$$
+\frac12[\bar cL-cL^\dagger,\rho].
+$$
+The Hamiltonian increment in (F.10.4g.7.2) contributes the negative of this commutator, proving equality for every matrix $\rho$. Substitution gives (F.10.4g.7.3). Proposition F.10.12h independently checks equality on the four matrix units, which form a basis of $M_2(\mathbb C)$, and rejects the opposite Hamiltonian-sign mutation. ∎
+
+Thus a traceless-jump, orthogonality, minimal-noise, or comparable gauge can define a representative when included as additional branch data. Definition F.10.4g.5 must carry that gauge choice when it transports separate coherent and dissipative pieces to the continuum; the carrier and convergence records required there remain independent of the finite noncanonicity result.
+
+**Proposition F.10.4g.8 (Exact Gauge-Fixed Qubit Dephasing Certificate).** On $M_2(\mathbb C)$ fix the normalized traceless Pauli basis $F_j=\sigma_j/\sqrt2$ and the traceless-Hamiltonian gauge. For $\omega\in\mathbb R$ and $\gamma\ge0$, the Heisenberg generator
+$$
+\mathcal L^*(A)
+=
+i\left[\frac\omega2\sigma_z,A\right]
++
+\gamma(\sigma_zA\sigma_z-A)
+\tag{F.10.4g.8.1}
+$$
+has the gauge-fixed GKLS record
+$$
+H=\frac\omega2\sigma_z,
+\qquad
+C=\operatorname{diag}(0,0,2\gamma)
+\tag{F.10.4g.8.2}
+$$
+in the ordered basis $(F_x,F_y,F_z)$. It generates the explicit completely positive unital semigroup
+$$
+\Phi_t^*(\sigma_z)=\sigma_z,
+\qquad
+\Phi_t^*(\sigma_x+i\sigma_y)
+=e^{(-2\gamma+i\omega)t}(\sigma_x+i\sigma_y).
+\tag{F.10.4g.8.3}
+$$
+Under the constant refinement system $M_2\xrightarrow{\mathrm{id}}M_2$, set
+$$
+H_{n,O}^{\mathrm{res}}=H,
+\quad
+V_{n,O}^{\mathrm{null}}=0,
+\quad
+\Theta_O=1,
+\quad
+\Psi_O=\operatorname{id},
+\quad
+\mathcal C_O=M_2(\mathbb C).
+\tag{F.10.4g.8.4}
+$$
+The coherent operators, dissipators, common cores, and semigroups then have identically zero convergence defect, and the relative bound in Definition F.10.4g.5 holds with $a=0$ and $b=|\omega|$. Hence (F.10.4g.8.1)--(F.10.4g.8.4) explicitly populate the finite-carrier and separate-convergence slots of that definition on this branch.
+
+*Proof.* Substituting $L=\sqrt\gamma\,\sigma_z$ into the GKLS formula gives the dissipative term in (F.10.4g.8.1); in the normalized basis its only nonzero Kossakowski entry is $2\gamma$. Direct evaluation on the Pauli basis gives (F.10.4g.8.3), which is a phase rotation composed with dephasing and is completely positive and unital. Identity embeddings make every comparison difference zero, and $\|[H,A]\|\le2\|H\|\|A\|=|\omega|\|A\|$ gives the declared relative bound. ∎
+
+This finite certificate fixes a representative because the basis and gauge are declared data. It does not make the split canonical from the full response generator, nor does it provide a nonconstant continuum approximation.
 
 ### F.10.5 Golay Self-Duality and Finite-Resolution Haag Duality
 
@@ -2377,6 +2649,45 @@ $$
 $$
 ∎
 
+**Proposition F.10.6e (Gauge-Split Center Need Not Be State-Minimal).** Let $\mathcal H_R$ and $\mathcal H_{\bar R}$ be nonzero finite Hilbert spaces and set
+$$
+\mathcal H_{\mathrm{phys}}
+=
+\bigoplus_{z=0}^1
+\mathcal H_R\otimes\mathcal H_{\bar R},
+$$
+$$
+\mathfrak A_R
+=
+\bigoplus_{z=0}^1
+B(\mathcal H_R)\otimes I,
+\qquad
+\mathfrak A_{\bar R}
+=
+\bigoplus_{z=0}^1
+I\otimes B(\mathcal H_{\bar R}).
+\tag{F.10.6.8}
+$$
+This is a locally complete finite gauge-split datum with common center $Z\cong\mathbb C^2$. Under the equal-block identification, choose
+$$
+\rho_{RZ\bar R}
+=
+\rho_R\otimes\frac{I_Z}{2}\otimes\rho_{\bar R}.
+\tag{F.10.6.9}
+$$
+Then
+$$
+I(R:\bar R\mid Z)_\rho=0,
+\qquad
+I(R:\bar R)_\rho=0.
+\tag{F.10.6.10}
+$$
+Hence both the two-valued center and its strict coarsening $Z\to *$ are sufficient for every exterior protocol generated by $\mathfrak A_{\bar R}$. For log-cardinality cost the coarsening reduces the boundary cost from $\ln2$ to $0$, so the common gauge-split center is not PCE-minimal on this state and protocol class.
+
+*Proof.* On each central block, the two algebras in (F.10.6.8) are mutual commutants and generate the full block matrix algebra, so Definition F.10.4d.1 gives local completeness and common center $\mathbb C^2$. The state (F.10.6.9) is a product across $R$, $Z$, and $\bar R$, which makes both conditional and unconditional mutual information in (F.10.6.10) vanish. Theorem F.10.6b therefore makes $Z$ sufficient, while discarding $Z$ leaves the product state $\rho_R\otimes\rho_{\bar R}$ and makes the trivial datum sufficient. Exterior channels cannot create dependence on a discarded independent label. The strict cost inequality is immediate. ∎
+
+**Resolution TV-F-12-R1.** Proposition F.10.6e is a target-exact `negative-refutation` of minimality from local gauge splitting, common-center structure, and Markov sufficiency alone. Corollary F.10.6d's no-sufficient-coarsening condition is therefore necessary; a classification of a specified nontrivial state family proceeds by its sufficient-center response quotient.
+
 ### F.10.7 Modular-Inclusion Reconstruction of Local Time
 
 **Definition F.10.7a (Standard Half-Sided Modular Inclusion Branch).** Let
@@ -2410,6 +2721,28 @@ $$
 Thus modular prediction time dilates the algebraic inclusion parameter. The two flows are compatible through this covariance relation but are not identical. A geometric translation or dilation of the diamond labels follows only from a separate modular-covariance certificate of the kind required by Theorem F.10.7b.
 
 *Proof.* Definition F.10.7a supplies a common vector cyclic and separating for both von Neumann algebras and the future half-sided invariance condition (F.10.7.1). These are the hypotheses of the positive half-sided modular-inclusion theorem of Borchers (1992) and Wiesbrock (1993). That theorem constructs $U(s)=e^{isP}$ with $P\geq0$ and proves the displayed dilation covariance relation. If $U(s)$ and $\Delta_{D_2}^{is}$ were the same nontrivial one-parameter group, conjugation by $\Delta_{D_2}^{it}$ would leave $U(s)$ unchanged, whereas the covariance relation sends it to $U(e^{-2\pi t}s)$. Hence the groups are distinct. The cited theorem supplies only the algebraic relation; the geometric interpretation retains the independent certificate stated in Theorem F.10.7b. ∎
+
+**Theorem F.10.7e (Finite-Dimensional Half-Sided Modular Triviality).** Let $\mathfrak N\subseteq\mathfrak M$ be unital finite-dimensional von Neumann algebras and let $(\sigma_t)_{t\in\mathbb R}$ be an automorphism group of $\mathfrak M$. If
+$$
+\sigma_t(\mathfrak N)\subseteq\mathfrak N
+\qquad(t\ge0),
+\tag{F.10.7e.1}
+$$
+then $\sigma_t(\mathfrak N)=\mathfrak N$ for every $t\in\mathbb R$. If a finite-dimensional standard half-sided modular inclusion also supplies the Borchers covariance
+$$
+\Delta^{it}U(s)\Delta^{-it}=U(e^{-2\pi t}s),
+\qquad U(s)=e^{isP},\quad P\ge0,
+\tag{F.10.7e.2}
+$$
+then $P=0$ and $U(s)=I$. Moreover, every strongly continuous action of $\mathbb R$ on a finite discrete set of diamond labels is trivial. Thus a nontrivial modular reconstruction of geometric translations requires an infinite-dimensional algebraic limit and a nondiscrete geometric label space; it cannot be supplied by a strictly finite matrix inclusion or a continuous permutation of finitely many diamonds.
+
+*Proof.* For $t\ge0$, the injective linear map $\sigma_t|_{\mathfrak N}$ has image of dimension $\dim\mathfrak N$. Containment in the same finite-dimensional space therefore implies equality. Applying $\sigma_{-t}$ gives equality for negative $t$ as well. Differentiating (F.10.7e.2) at $s=0$ gives
+$$
+\Delta^{it}P\Delta^{-it}=e^{-2\pi t}P.
+$$
+The two sides have the same finite spectrum, so the finite set $\operatorname{sp}(P)$ is invariant under multiplication by every positive number $e^{-2\pi t}$. This is possible only when $\operatorname{sp}(P)=\{0\}$; positivity then gives $P=0$. Finally, a continuous homomorphism from the connected group $\mathbb R$ to a finite permutation group has connected image and is therefore constant. ∎
+
+Theorem F.10.7e resolves the strictly finite-algebra and finite-label routes of `TV-F-21` negatively. The target remains live for infinite-factor half-sided inclusions equipped with a populated modular-covariance and cone/overlap certificate.
 
 ### F.10.8 Predictive Decoupling and Cluster Locality
 
@@ -2567,6 +2900,53 @@ C^*\left(\bigcup_i\mathfrak A_{\mathcal G}(U_i)\right)
 \subseteq\mathfrak A_{\mathcal G}(U).
 $$
 The universal colimit of the Čech diagram maps onto this concrete algebra; its kernel consists of additional ambient overlap, Weyl, and commutation relations not already imposed by the diagram. Thus (F.10.9.5) is the image of the universal colimit, and it equals that colimit only when the comparison map is proved injective. Under Theorems F.10.1 and F.10.2, convergence of these concrete images requires the same coherent comparison and boundary hypotheses used for the local net. ∎
+
+**Proposition F.10.9c (Nonzero Universal-Colimit Comparison Kernel).** The universal-to-concrete comparison map in Theorem F.10.9b need not be injective on the declared class of Golay-compatible local carrier assignments.
+
+*Proof.* Choose a symplectic plane $S=\operatorname{span}_{\mathbb F_2}\{x,z\}\le V_{24}$ with $\omega(x,z)=1$. Take a finite causal site with a declared two-member cover $\mathcal U=\{U_1\to U,U_2\to U\}$ whose overlap is $O=U_1\cap U_2$, with region inclusions
+$$
+\varnothing\subset O=U_1\cap U_2\subset U_1,U_2\subset U,
+$$
+declare no nonempty pair in this diagram causally disjoint, and set
+$$
+S_\varnothing=S_O=0,
+\qquad
+S_{U_1}=S_{U_2}=S_U=S,
+\tag{F.10.9c.1}
+$$
+with both maps $S_{U_i}\hookrightarrow S_U$ equal to the identity on $S$. The transitivity and symplectic-injectivity clauses of Definition F.10.9a hold, its disjoint-family clause is vacuous, and the recovery quotient can be taken to be the identity. Hence (F.10.9c.1) is an admitted nonempty assignment.
+
+In the canonical Pauli representation,
+$$
+\mathfrak A_{\mathcal G}(O)=\mathbb C,
+\qquad
+\mathfrak A_{\mathcal G}(U_1)
+=\mathfrak A_{\mathcal G}(U_2)
+=\mathfrak A_{\mathcal G}(U)=M_2(\mathbb C).
+$$
+The universal Čech colimit is the unital amalgamated free product
+$$
+M_2(\mathbb C)*_{\mathbb C}M_2(\mathbb C),
+$$
+whereas the concrete completion is the single ambient $M_2(\mathbb C)$. Let $\iota_1,\iota_2$ denote the two universal inclusions and let $q$ be the comparison map. For
+$$
+a=\operatorname{diag}(1,-1),
+\qquad
+w=\iota_1(a)-\iota_2(a),
+$$
+the identical ambient inclusions give $q(w)=0$. The unital maps
+$$
+M_2(\mathbb C)\longrightarrow M_4(\mathbb C),
+\qquad
+b\longmapsto b\otimes I_2,
+\qquad
+b\longmapsto I_2\otimes b
+$$
+agree on the amalgamated scalars and therefore induce a representation of the free product. It sends $w$ to
+$$
+a\otimes I_2-I_2\otimes a,
+$$
+whose squared Frobenius norm is $8$. Thus $w\ne0$ while $q(w)=0$. Proposition F.10.12h executes both exact norm calculations. This is the terminal nonzero-kernel alternative for the universal-colimit claim; the concrete-image and prefactorization statements of Theorem F.10.9b are unchanged. ∎
 
 ### F.10.10 Predictive Jones Index
 
@@ -2780,6 +3160,48 @@ C_J(R;\tau_R)
 \tau_R(\log d_J(E_R)),
 $$
 which proves (F.10.10.7). Off the calibration branch of Definition F.10.10a.1, the equation holds only up to the calibration map of items (i)–(iv); the algebraic identity $C_J=\tau_R(\log d_J(E_R))$ continues to hold but its identification with horizon entropy is conditional on the channel calibration. ∎
+
+**Theorem F.10.10c (Response-Equivalent Spectator Index No-Go).** Fix $m\ge2$. For each $n\ge1$, let
+$$
+\mathfrak A_{\mathrm{raw}}^{(n)}=M_m(\mathbb C)\otimes M_n(\mathbb C),
+\qquad
+\mathfrak A_{\mathrm{obs}}^{(n)}=M_m(\mathbb C)\otimes I_n,
+$$
+and let
+$$
+E_n=\operatorname{id}_{M_m}\otimes\operatorname{tr}_n.
+\tag{F.10.10c.1}
+$$
+These are standard one-block PCE split inclusions. Their full visible response theories are naturally identical. The restriction of every state $\psi$ of $\mathfrak A_{\mathrm{raw}}^{(n)}$ is the state
+$$
+\varphi_\psi(b)=\psi(b\otimes I_n)
+$$
+of $M_m$, every state $\varphi$ of $M_m$ has the lift $\varphi\otimes\operatorname{tr}_n$, and every finite visible POVM $\{F_a\}\subset M_m$ obeys
+$$
+(\varphi\otimes\operatorname{tr}_n)(F_a\otimes I_n)=\varphi(F_a),
+\tag{F.10.10c.2}
+$$
+Every finite adaptive sequence of visible completely positive instruments lifts by tensoring each subchannel with the identity spectator channel, and its complete joint outcome law and reduced visible post-instrument states depend only on $\varphi_\psi$. Nevertheless,
+$$
+d_J(E_n)=n,
+\qquad
+\operatorname{Ind}(E_n)=n^2,
+\qquad
+C_J(E_n)=\log n
+\tag{F.10.10c.3}
+$$
+for the normalized one-block central weight. In particular, $n=1$ and $n=2$ have the same exhaustive visible protocol responses but index capacities $0$ and $\log2$. Hence neither $d_J$, $C_J$, nor a horizon-area coefficient identified with $C_J$ descends to the exterior-response quotient on the unrestricted standard split-inclusion class.
+
+*Proof.* Restriction is positive and normalized, and the displayed product lift proves surjectivity onto the visible state space. Equation (F.10.10c.2) proves equality of all visible POVM laws. If a visible Schrödinger-picture instrument has subchannels $\mathcal I_a$, then the probability of a finite outcome word $a_1\ldots a_k$ from an arbitrary raw state $\psi$ is
+$$
+\psi\!\left(
+\bigl(\mathcal I_{a_1}^*\circ\cdots\circ\mathcal I_{a_k}^*\bigr)(I_m)
+\otimes I_n
+\right),
+$$
+which depends only on $\varphi_\psi$. The same identity with a final visible effect proves equality of every reduced conditional post-instrument response. Thus the identification covers arbitrary raw states and the complete finite visible instrument category, not only product-state probes. Definition F.10.10a and Theorem F.10.10b give (F.10.10c.3). The two displayed values therefore differ on one response-equivalence class, which precludes any response-invariant calibration function with value $C_J$. ∎
+
+Theorem F.10.10c supplies the exact same-response/different-coefficient falsifier registered by `TV-F-19`. It negatively resolves that target on the stated unrestricted standard split-inclusion comparison class. A positive horizon identification can survive only on the strictly finer channel-counting branch of Definition F.10.10a.1, whose channel and unit data are additional response-active inputs.
 
 ### F.10.11 Modular Connes Cocycle and Thermodynamic Gluing
 
@@ -3391,10 +3813,277 @@ $$
 $$
 which proves (F.10.12g.2). Equation (F.10.12g.3) follows by subtracting the two overlap residuals and tracing $g_{\mu\nu}$, whose trace is four. The cycle statement is the finite exact-one-form criterion: incidence gradients have zero circulation, and a zero-circulation edge field can be integrated from one root vertex independently of path. ∎
 
-**Corollary F.10.12g.1 (Local/Global Cosmological Split).** Theorems X.4b and F.10.12g together show that local horizon thermodynamics determines the Einstein response up to one global constant response class and that finite descent controls only the consistency of its local representatives. Neither theorem determines the remaining global mean $\bar\Lambda_n$.
+**Corollary F.10.12g.1 (Local/Global Cosmological Split and Exact Mean Nonselection).** Theorems X.4b and F.10.12g together show that local horizon thermodynamics determines the Einstein response up to one global constant response class and that finite descent controls only the consistency of its local representatives. More strongly, no deterministic selector that factors only through the descent record $d_n=B_n\Lambda_n$ can determine the global mean $\bar\Lambda_n$.
 
-*Proof.* Theorem X.4b leaves one cosmological integration constant in each local Einstein-response representative. Theorem F.10.12g controls the edge differences $d_n=B_n\Lambda_n$. Because the cover graph is connected, $\ker B_n=\operatorname{span}\{\mathbf1\}$, so replacing $\Lambda_n$ by $\Lambda_n+c\mathbf1$ leaves every edge difference unchanged. This replacement shifts $\bar\Lambda_n$ by $c$. Hence finite descent determines the representatives only modulo their common mean, and neither cited theorem determines $\bar\Lambda_n$. ∎
+*Proof.* Theorem X.4b leaves one cosmological integration constant in each local Einstein-response representative. Theorem F.10.12g controls the edge differences $d_n=B_n\Lambda_n$. Because the cover graph is connected,
+$$
+\ker B_n=\operatorname{span}\{\mathbf1\},
+\qquad
+B_n(\Lambda_n+c\mathbf1)=B_n\Lambda_n.
+\tag{F.10.12g.1.1}
+$$
+Any selector factoring through $d_n$ therefore has the same value on the entire common-shift orbit, while $\overline{\Lambda_n+c\mathbf1}=\bar\Lambda_n+c$. It cannot equal the mean on more than one member of that orbit. The exact three-vertex path witness
+$$
+\Lambda=(0,1,3),
+\qquad
+\Lambda'=(5,6,8)
+\tag{F.10.12g.1.2}
+$$
+has the same oriented edge differences $(1,2)$ and distinct means $4/3$ and $19/3$. Thus finite descent determines representatives only modulo their common mean. An independent global boundary or normalization law is necessary to select one orbit representative. ∎
 
+**Proposition F.10.12h (Executed Finite Operator-and-Descent Obstruction Audit).** The exact Node.js program below audits the four finite witnesses used by Theorem D.8.9c.3, Propositions F.10.4g.7 and F.10.9c, and Corollary F.10.12g.1. Its admitted inputs are: the four matrix units of $M_2(\mathbb C)$ for the qubit GKLS equality; the displayed $M_4(\mathbb C)$ representation of the free-product word; the displayed flat and obstructed $S_3$ triangles; and the displayed three-vertex path. The program uses exact Gaussian-integer, integer-matrix, and permutation arithmetic. The corpus-wide atlas, coherent continuum carrier/convergence record, and AQFT descent record remain the independent inputs of Definition X.9.6i.3, Definition F.10.4g.5, and Theorems F.10.1 and F.10.2, respectively.
+
+**Audit source SHA-256 (F.10.12h-v1):** `f587eaea799fd88f79359c39f878cc225e7917f49a1f32afc0bc0431984b0e93`.
+
+**Node runtime SHA-256 (F.10.12h-v1):** `1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31`.
+
+**Run-log SHA-256 (F.10.12h-v1):** `9d7c195bc987f4a5952bc2f671bd2ce601a0cecb7a9c4d909dcc0e8e6fe8e5a6`.
+
+**Canonical run output (F.10.12h-v1):** `{"checks":4,"colimit":{"ambient_image_norm_squared":"0","witness_norm_squared":"8"},"fixtures_passed":4,"gkls":{"basis_checks":4,"hamiltonians_equal":false,"mutation_rejected":true},"holonomy":{"flat_triangle":"PASS","obstructed_triangle":"REJECT"},"mean_descent":{"constant_kernel_dimension":1,"edge_differences":[1,2],"mean_denominator":3,"mean_numerators":[4,19]},"node":"v22.22.0","result":"PASS","runtime_sha256":"1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31","source_sha256":"f587eaea799fd88f79359c39f878cc225e7917f49a1f32afc0bc0431984b0e93","version":"F.10.12h-finite-global-obstruction-audit-v1"}`.
+
+~~~~javascript
+// PU-F10.12h-SOURCE-BEGIN
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+const VERSION = "F.10.12h-finite-global-obstruction-audit-v1";
+
+function invariant(condition, message) {
+  if (!condition) throw new Error(message);
+}
+
+function sha256(bytes) {
+  return createHash("sha256").update(bytes).digest("hex");
+}
+
+// Exact Gaussian-integer arithmetic for the doubled GKLS generator.
+const z = (re = 0n, im = 0n) => [BigInt(re), BigInt(im)];
+const zadd = (a, b) => [a[0] + b[0], a[1] + b[1]];
+const zsub = (a, b) => [a[0] - b[0], a[1] - b[1]];
+const zmul = (a, b) => [a[0] * b[0] - a[1] * b[1], a[0] * b[1] + a[1] * b[0]];
+const zconj = (a) => [a[0], -a[1]];
+const zeq = (a, b) => a[0] === b[0] && a[1] === b[1];
+
+function zeroMatrix(n) {
+  return Array.from({ length: n }, () => Array.from({ length: n }, () => z()));
+}
+
+function identity(n) {
+  const out = zeroMatrix(n);
+  for (let i = 0; i < n; i += 1) out[i][i] = z(1n);
+  return out;
+}
+
+function madd(a, b) {
+  return a.map((row, i) => row.map((value, j) => zadd(value, b[i][j])));
+}
+
+function msub(a, b) {
+  return a.map((row, i) => row.map((value, j) => zsub(value, b[i][j])));
+}
+
+function mscale(a, scalar) {
+  return a.map((row) => row.map((value) => zmul(scalar, value)));
+}
+
+function mmul(a, b) {
+  const out = zeroMatrix(a.length);
+  for (let i = 0; i < a.length; i += 1) {
+    for (let j = 0; j < b.length; j += 1) {
+      for (let k = 0; k < b.length; k += 1) out[i][j] = zadd(out[i][j], zmul(a[i][k], b[k][j]));
+    }
+  }
+  return out;
+}
+
+function dagger(a) {
+  return a.map((_, i) => a.map((row) => zconj(row[i])));
+}
+
+function meq(a, b) {
+  return a.every((row, i) => row.every((value, j) => zeq(value, b[i][j])));
+}
+
+function doubledGKLS(H, L, rho) {
+  const commutator = msub(mmul(H, rho), mmul(rho, H));
+  const LdL = mmul(dagger(L), L);
+  return madd(
+    mscale(commutator, z(0n, -2n)),
+    msub(mscale(mmul(mmul(L, rho), dagger(L)), z(2n)), madd(mmul(LdL, rho), mmul(rho, LdL))),
+  );
+}
+
+function matrixUnit(i, j) {
+  const out = zeroMatrix(2);
+  out[i][j] = z(1n);
+  return out;
+}
+
+function gklsAudit() {
+  const I = identity(2);
+  const X = [[z(), z(1n)], [z(1n), z()]];
+  const H0 = zeroMatrix(2);
+  const L0 = X;
+  const H1 = mscale(X, z(-1n));
+  const L1 = madd(X, mscale(I, z(0n, 1n)));
+  const wrongH = X;
+  const basis = [matrixUnit(0, 0), matrixUnit(0, 1), matrixUnit(1, 0), matrixUnit(1, 1)];
+  const exact = basis.every((rho) => meq(doubledGKLS(H0, L0, rho), doubledGKLS(H1, L1, rho)));
+  const mutationRejected = basis.some((rho) => !meq(doubledGKLS(H0, L0, rho), doubledGKLS(wrongH, L1, rho)));
+  invariant(exact, "GKLS gauge-equivalent decompositions differ");
+  invariant(mutationRejected, "GKLS Hamiltonian-sign mutation was not rejected");
+  return { basis_checks: basis.length, hamiltonians_equal: meq(H0, H1), mutation_rejected: mutationRejected };
+}
+
+function kron(a, b) {
+  const out = zeroMatrix(a.length * b.length);
+  for (let i = 0; i < a.length; i += 1) for (let j = 0; j < a.length; j += 1) {
+    for (let k = 0; k < b.length; k += 1) for (let l = 0; l < b.length; l += 1) {
+      out[i * b.length + k][j * b.length + l] = zmul(a[i][j], b[k][l]);
+    }
+  }
+  return out;
+}
+
+function frobeniusSquared(a) {
+  let total = 0n;
+  for (const row of a) for (const value of row) total += value[0] * value[0] + value[1] * value[1];
+  return total;
+}
+
+function colimitAudit() {
+  const I2 = identity(2);
+  const x = [[z(1n), z()], [z(), z(-1n)]];
+  const representedWord = msub(kron(x, I2), kron(I2, x));
+  const ambientImage = msub(x, x);
+  const witnessNormSquared = frobeniusSquared(representedWord);
+  invariant(witnessNormSquared === 8n, "free-product witness vanished");
+  invariant(frobeniusSquared(ambientImage) === 0n, "comparison image is nonzero");
+  return { ambient_image_norm_squared: "0", witness_norm_squared: witnessNormSquared.toString() };
+}
+
+// Permutations use compose(a,b)=a after b.
+const pid = [0, 1, 2];
+const peq = (a, b) => a.every((value, i) => value === b[i]);
+const pcompose = (a, b) => b.map((value) => a[value]);
+function pinverse(a) {
+  const out = Array(a.length);
+  for (let i = 0; i < a.length; i += 1) out[a[i]] = i;
+  return out;
+}
+
+function solveHolonomy(vertices, edges) {
+  const incident = new Map(vertices.map((vertex) => [vertex, []]));
+  for (const edge of edges) {
+    incident.get(edge.src).push({ dst: edge.dst, g: edge.g });
+    incident.get(edge.dst).push({ dst: edge.src, g: pinverse(edge.g) });
+  }
+  const h = new Map([[vertices[0], pid]]);
+  const queue = [vertices[0]];
+  while (queue.length > 0) {
+    const src = queue.shift();
+    for (const edge of incident.get(src)) {
+      const candidate = pcompose(edge.g, h.get(src));
+      if (!h.has(edge.dst)) {
+        h.set(edge.dst, candidate);
+        queue.push(edge.dst);
+      } else if (!peq(h.get(edge.dst), candidate)) {
+        return { accepted: false, vertices_reached: h.size };
+      }
+    }
+  }
+  return { accepted: h.size === vertices.length, vertices_reached: h.size };
+}
+
+function holonomyAudit() {
+  const swap01 = [1, 0, 2];
+  const swap12 = [0, 2, 1];
+  const flat02 = pcompose(swap12, swap01);
+  const flat = solveHolonomy([0, 1, 2], [
+    { src: 0, dst: 1, g: swap01 },
+    { src: 1, dst: 2, g: swap12 },
+    { src: 0, dst: 2, g: flat02 },
+  ]);
+  const obstructed = solveHolonomy([0, 1, 2], [
+    { src: 0, dst: 1, g: swap01 },
+    { src: 1, dst: 2, g: swap12 },
+    { src: 0, dst: 2, g: pid },
+  ]);
+  invariant(flat.accepted, "flat S3 triangle rejected");
+  invariant(!obstructed.accepted, "nontrivial S3 holonomy accepted");
+  return { flat_triangle: "PASS", obstructed_triangle: "REJECT" };
+}
+
+function matVec(a, x) {
+  return a.map((row) => row.reduce((sum, value, index) => sum + value * x[index], 0));
+}
+
+function difference(x) {
+  return [x[1] - x[0], x[2] - x[1]];
+}
+
+function meanAudit() {
+  const laplacian = [[1, -1, 0], [-1, 2, -1], [0, -1, 1]];
+  const ones = [1, 1, 1];
+  const lambda = [0, 1, 3];
+  const shifted = [5, 6, 8];
+  invariant(matVec(laplacian, ones).every((value) => value === 0), "constant mode is not null");
+  invariant(JSON.stringify(difference(lambda)) === JSON.stringify(difference(shifted)), "shift changed descent data");
+  invariant(lambda.reduce((a, b) => a + b, 0) !== shifted.reduce((a, b) => a + b, 0), "shift did not change mean");
+  const principalMinor = laplacian[0][0] * laplacian[1][1] - laplacian[0][1] * laplacian[1][0];
+  invariant(principalMinor === 1, "connected Laplacian rank certificate failed");
+  return { constant_kernel_dimension: 1, edge_differences: difference(lambda), mean_numerators: [4, 19], mean_denominator: 3 };
+}
+
+function canonical(value) {
+  if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
+  if (value && typeof value === "object") return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${canonical(value[key])}`).join(",")}}`;
+  return JSON.stringify(value);
+}
+
+function main() {
+  const source = readFileSync(fileURLToPath(import.meta.url));
+  const result = {
+    checks: 4,
+    colimit: colimitAudit(),
+    fixtures_passed: 4,
+    gkls: gklsAudit(),
+    holonomy: holonomyAudit(),
+    mean_descent: meanAudit(),
+    node: process.version,
+    result: "PASS",
+    runtime_sha256: sha256(readFileSync(process.execPath)),
+    source_sha256: sha256(source),
+    version: VERSION,
+  };
+  process.stdout.write(`${canonical(result)}\n`);
+}
+
+try {
+  main();
+} catch (error) {
+  process.stderr.write(`${VERSION} FAIL: ${error instanceof Error ? error.message : String(error)}\n`);
+  process.exitCode = 1;
+}
+// PU-F10.12h-SOURCE-END
+~~~~
+
+| Resolution-record field | `F.10.12h-v1` record |
+|---|---|
+| Catalog bindings and polarity | `TV-F-04` and `TV-F-18`: `negative-refutation`, respectively of response-canonicity from the full generator alone and universal-colimit injectivity; `TV-DYN-09` and `TV-X-22`: `positive-discharge` of the finite selected-overlap subcases at the stated affine/finite-group scope; `TV-F-22` and `TV-X-23`: `nonentailment` of a global mean from finite descent-only data |
+| Exact domains and equivalences | Full $M_2(\mathbb C)$ linear response for the qubit equality; the explicit Golay-compatible four-region diagram of Proposition F.10.9c; selected overlap labels modulo one global right $S_3$ action; cosmological representatives modulo $\Lambda\mapsto\Lambda+c\mathbf1$ |
+| Premises | Equations (F.10.4g.7.1)--(F.10.4g.7.2), the free-product universal property, exact permutation composition in $S_3$, and the connected incidence/Laplacian hypotheses of Theorem F.10.12g |
+| Exhaustive budget and coverage | All four matrix units spanning $M_2(\mathbb C)$; the complete displayed comparison word and its two exact images; every edge of one flat and one obstructed triangle; every vertex and edge of the displayed three-vertex path |
+| Verifier | The displayed 225-line, 7,634-byte program under Node.js 22.22.0; exact assertions precede canonical recursively key-sorted JSON output |
+| Integrity invalidator | A mismatch in the displayed source, runtime, or run-log SHA-256; a noncanonical output; or omission of any asserted finite input invalidates the execution record |
+| Falsifier | A GKLS basis-image mismatch, survival of the Hamiltonian-sign mutation, a zero represented free-product word, a nonzero ambient image, rejection of the flat triangle, acceptance of the obstructed triangle, failure of the constant-kernel rank certificate, changed edge data under the common shift, or equal means |
+| Provenance class | Exact source-derived finite computation supporting separately proved algebraic statements; physical realization, continuum, and empirical statuses remain with their owning records |
+| Nonvacuity disposition | All four displayed domains are nonempty; the run reports four checks and four passing finite fixtures, including two explicit obstruction witnesses |
+| Target consequence | The `negative-refutation` records close the response-canonicity proposition in `TV-F-04` while retaining its continuum carrier/realization work and place `TV-F-18` at its terminal nonzero-kernel guardrail; the `positive-discharge` records close the finite selected-overlap subcases of `TV-DYN-09` and `TV-X-22`, while their broader population and lift obligations remain live; the `nonentailment` records for `TV-F-22` and `TV-X-23` retain the independent global-law and AQFT-continuum obligations |
+| Regression result | `PASS` for exactly the four finite propositions enumerated above |
+
+*Proof.* The program reads and hashes its own source before emitting output. Exact equality on the four matrix units proves equality of the two qubit superoperators. The $M_4(\mathbb C)$ image has squared Frobenius norm $8$ while the ambient comparison image has norm zero. Tree propagation accepts the flat $S_3$ triangle and rejects the nonidentity fundamental-cycle fixture. The path Laplacian has a nonzero principal $2\times2$ minor and annihilates $\mathbf1$, so its kernel is exactly one-dimensional; the common shift preserves both edge differences and changes the mean. The sealed execution returned the displayed `PASS` record. ∎
 
 
 

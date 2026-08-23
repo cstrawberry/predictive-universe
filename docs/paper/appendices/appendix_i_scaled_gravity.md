@@ -55,6 +55,42 @@ for $C\ge C_2$. Hence $J$ decreases on $[C_2,\infty)$, so its supremum on $[K_0,
 
 Because $B$ is strictly decreasing and $M$ is nondecreasing, $B-M$ is strictly decreasing. If $B(K_0)\le M(K_0)$, then $J'(C)<0$ for every $C>K_0$, and the maximizer is $K_0$. If $B(K_0)>M(K_0)$, continuity and the negative tail give a zero $C^*>K_0$ of $B-M$ by the intermediate value theorem. Strict decrease makes this zero unique; $J'>0$ before $C^*$ and $J'<0$ after $C^*$, so $C^*$ is the unique global maximizer and satisfies (I.2). ∎
 
+**Theorem I.2a (Finite Microscopic PCE Census and Parametric Optimizer).** Let $X$ be a finite set of microscopic realizations, let $x\sim x'$ mean equality of every retained protocol response, and assume the recorded coefficients and capacity below are constant on each response class. Let
+$$
+J_t(x)=a_x+t b_x,
+\qquad t\in[t_-,t_+],
+\tag{I.2a.1}
+$$
+be an exactly specified PCE score, with a recorded capacity $c_x$. Exhaustive evaluation on the finite quotient $X/\!\sim$ terminates and returns the complete optimizer set. At a fixed $t$, the optimizer is unique up to response equivalence exactly when the winning quotient class has strict gap
+$$
+\Delta_t
+=
+\max_{[x]}J_t(x)
+-
+\max_{[y]\ne[x_*]}J_t(y)
+>0.
+\tag{I.2a.2}
+$$
+Here $[x_*]$ is a winning class and $\max\varnothing:=-\infty$, so a singleton response quotient has $\Delta_t=+\infty$ and is uniquely optimized by convention.
+For each class $[x]$, its winning region is the finite intersection
+$$
+\mathcal R_x
+=
+[t_-,t_+]
+\cap
+\bigcap_y\{t:(a_x-a_y)+t(b_x-b_y)\ge0\}.
+\tag{I.2a.3}
+$$
+Consequently the optimizer class and its capacity are piecewise constant, with possible changes only at the finitely many in-range crossings
+$$
+t_{xy}=\frac{a_y-a_x}{b_x-b_y}
+\qquad(b_x\ne b_y).
+\tag{I.2a.4}
+$$
+This is a complete optimizer, uniqueness, comparative-statics, and capacity census for a supplied finite microscopic potential. It does not populate $X$, the response relation, or the coefficients in (I.2a.1).
+
+*Proof.* A real function on a finite quotient attains its maximum, and direct enumeration terminates. Exactly one maximizing response class is equivalent to the strict-gap condition. Pairwise comparison with every $y$ gives (I.2a.3). Between consecutive crossing values, every pairwise score ordering is fixed, so the optimizer set and every class-dependent quantity, including $c_x$, are constant. Evaluating the finitely many crossings and open intervals gives the complete census. ∎
+
 **I.4 Predictive-Information Saturation in Sparse Regimes**
 
 The coordinate $\hat C_{\mathrm{target}}$ is the internal task scale of Definition 21. It represents the complexity of externally exploitable patterns only on a branch with an innovation certificate that compares the coordinate with external records.
@@ -276,6 +312,39 @@ The reality condition makes both the static limit and the infinite-frequency lim
 
 *Proof.* Equation (I.3c.4) determines the difference $\chi_g(0,\mathbf k)-\chi_g(\infty,\mathbf k)$ only after the spectral density and high-frequency normalization are fixed. It is therefore a dispersion constraint on an already specified susceptibility datum, not a substitute for the operating-point normalization of Appendix H. ∎
 
+**Theorem I.3c.5 (Finite Passive Rational-Susceptibility Reconstruction).** Fix distinct rates $\lambda_1,\ldots,\lambda_N>0$ and the passive rational class
+$$
+\chi(s)=\chi_\infty+\sum_{j=1}^N\frac{a_j}{s+\lambda_j},
+\qquad a_j\ge0,
+\qquad s>0.
+\tag{I.3c.5.1}
+$$
+If $\chi_\infty$ and $\chi(s_k)$ are supplied at $N$ distinct positive sample points $s_1,\ldots,s_N$, then the residues $a_j$ are unique. They are obtained from the Cauchy system
+$$
+\chi(s_k)-\chi_\infty
+=
+\sum_{j=1}^N\frac{a_j}{s_k+\lambda_j},
+\tag{I.3c.5.2}
+$$
+whose determinant is
+$$
+\det\!\left[\frac1{s_k+\lambda_j}\right]_{k,j=1}^N
+=
+\pm
+\frac{\prod_{k<\ell}(s_\ell-s_k)\prod_{j<\ell}(\lambda_\ell-\lambda_j)}
+{\prod_{k,j}(s_k+\lambda_j)}
+\ne0.
+\tag{I.3c.5.3}
+$$
+The sampled record belongs to the passive class exactly when the reconstructed residues are nonnegative, and then
+$$
+\chi(0)=\chi_\infty+\sum_{j=1}^N\frac{a_j}{\lambda_j}
+\tag{I.3c.5.4}
+$$
+is fixed. By contrast, pole locations and a normalized line shape without one absolute-amplitude datum leave the scaling modulus $a\mapsto ca$, $c>0$, and do not fix (I.3c.5.4).
+
+*Proof.* The Cauchy determinant formula gives (I.3c.5.3), so (I.3c.5.2) has exactly one solution. The class definition makes nonnegativity of that solution necessary and sufficient for passivity within the declared finite family. Setting $s=0$ proves (I.3c.5.4). Positive common rescaling preserves pole locations and normalized residue ratios while changing the static susceptibility, proving the final statement. ∎
+
 **Definition I.3e (RCD-Buchert-Cheeger Backreaction Datum).** On a regular emergent metric/channel-capacity thermodynamic branch, let $D$ be a compact averaging domain in the noncollapsed $\mathrm{RCD}^*(K,4)$ limit of Theorem C.6c, with normalized measure $\langle f\rangle_D$. A backreaction datum consists of:
 
 1. an expansion scalar $\theta\in W^{1,2}(D)$ and shear magnitude $\sigma\in L^2(D)$ for the retained cosmological congruence;
@@ -435,6 +504,32 @@ Applying the source-control certificate (I.3h.2) proves (I.3i.1). ∎
 
 *Proof.* Theorem I.3i requires its entire branch package to derive (I.3i.1). Independently, the proof of Theorem I.3f derives (I.3f.1) from the definition of $\mathcal Q_D^{\mathrm{PU}}$ and the spectral-gap inequality; it derives (I.3f.2) only after applying (I.3e.2). Therefore the local bound has exactly the scope stated here, and the predictive-stress bound additionally requires elliptic source control. ∎
 
+
+**Theorem I.3j.1 (Exact Finite Graph Elliptic Source and Covariance).** Let $L$ be the symmetric weighted Laplacian of a finite connected graph, let $\mathbf1^\perp$ be the mean-zero subspace, and let $s\in\mathbf1^\perp$. The mean-zero equation
+$$
+L\phi=s,
+\qquad \phi\perp\mathbf1,
+\tag{I.3j.1.1}
+$$
+has the unique solution $\phi=L^+s$, with exact energy and spectral-gap bounds
+$$
+\phi^{\mathsf T}L\phi=s^{\mathsf T}L^+s,
+\qquad
+\|\phi\|_2\le\frac{\|s\|_2}{\lambda_2(L)}.
+\tag{I.3j.1.2}
+$$
+If $s$ is a mean-zero random source with covariance $\Sigma_s$, then
+$$
+\operatorname{Cov}(\phi)=L^+\Sigma_sL^+,
+\qquad
+\operatorname{tr}\operatorname{Cov}(\phi)
+\le
+\frac{\operatorname{tr}\Sigma_s}{\lambda_2(L)^2}.
+\tag{I.3j.1.3}
+$$
+Thus a supplied finite RCD approximant has a completely computable elliptic source-control and fluctuation record. Passing these quantities uniformly to an RCD limit still requires the convergence and source-identification entries of Definition I.3h.
+
+*Proof.* Connectedness gives $\ker L=\operatorname{span}\{\mathbf1\}$ and makes $L$ positive definite on $\mathbf1^\perp$. Spectral inversion there gives $L^+$, uniqueness, the energy identity, and $\|L^+\|_{\mathbf1^\perp}=1/\lambda_2(L)$. Linearity gives the covariance identity. Diagonalizing $L$ on $\mathbf1^\perp$ and using $0\preceq(L^+)^2\preceq\lambda_2(L)^{-2}I$ proves the trace bound. ∎
 
 **Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The RCD elliptic-regularity step is not presently a computed numerical closure in Appendix I. The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and an elliptic scale-bridge estimate of dimension $L^{-2}$
 $$
@@ -961,6 +1056,24 @@ The analysis must account for potential systematic errors. Robustness can be gau
 
 **I.12a Dark-Sector Discriminator Protocol**
 
+**Theorem I.12a.0 (Smooth Galaxy-Kernel Moduli under Finite Locks).** Let $\mathcal M$ be the class of $C^1$ functions $\mu:(0,\infty)\to(0,1]$ satisfying $\mu'(y)\ge0$ and
+$$
+\frac{\mu(y)}y\longrightarrow1\quad(y\downarrow0),
+\qquad
+\mu(y)\longrightarrow1\quad(y\to\infty),
+\tag{I.12a.0.1}
+$$
+and suppose $\mu_0\in\mathcal M$ obeys $\mu_0'(y)>0$ on a nonempty open interval $U$ disjoint from a finite list of registered value and derivative locks. If $\mu_0$ stays a positive distance from $0$ and $1$ on some compact $K\subset U$, then there are infinitely many distinct $\mu\in\mathcal M$ obeying all locks exactly and sharing both asymptotics.
+
+More precisely, for every nonzero $b\in C_c^\infty(K)$ and all sufficiently small real $\epsilon$,
+$$
+\mu_\epsilon=\mu_0+\epsilon b
+\tag{I.12a.0.2}
+$$
+is admissible, agrees with $\mu_0$ outside $K$, and hence preserves every registered lock and both endpoint laws. Therefore finitely many asymptotic, value, and derivative constraints cannot uniquely derive a smooth galaxy interpolation kernel. They consequently cannot select a unique joint kernel-and-length pair either, although an independent normalization could still fix the length coordinate alone. A unique kernel requires a response-active functional, evolution law, or infinite determining record.
+
+*Proof.* Compactness gives positive lower bounds for $\mu_0$, $1-\mu_0$, and $\mu_0'$ on a smaller compact support for $b$. Taking $|\epsilon|$ below the corresponding bounds divided by $\|b\|_\infty$ and $\|b'\|_\infty$ preserves the range and monotonicity. Because $b$ is supported away from every lock and both endpoints, all registered data remain unchanged. The vector space $C_c^\infty(K)$ is infinite-dimensional, giving infinitely many distinct admissible perturbations. Since joint uniqueness would imply kernel uniqueness, the joint kernel-and-length conclusion follows. ∎
+
 **Definition I.12a.1 (Matched Residual Experiment).** A matched dark-sector comparison consists of a data vector $y$, covariance matrix $C>0$, shared nuisance parameter vector $\nu$, shared nuisance domain $\mathcal N$, and two model families
 $$
 y_{PU}(\theta_{PU},\nu),\qquad y_{NFW}(\theta_{NFW},\nu),
@@ -1131,6 +1244,25 @@ $$
 \nabla^\mu T_{\mu\nu}^{\mathrm{mf}}=0
 $$
 after imposing the Euler-Lagrange equations for the retained variables $\chi$. If the package support condition sets the multifractal response to zero on the early homogeneous branch, then no universal early-time shift of $G$ is induced. The result is an emergent metric/channel-capacity thermodynamic response law, not a microscopic gravitational Hilbert sector. ∎
+
+**Theorem I.12b.2a (Finite Homogeneous Cascade Classification and Identifiability).** Let a homogeneous $b$-ary cascade have positive branch weights $p_1,\ldots,p_b$ with $\sum_ip_i=1$. At depth $n$ and scale $\ell_n=b^{-n}$, its exact partition function and mass exponent are
+$$
+Z_n(q)=\left(\sum_{i=1}^bp_i^q\right)^n,
+\qquad
+\tau(q)=-\log_b\left(\sum_{i=1}^bp_i^q\right).
+\tag{I.12b.2a.1}
+$$
+The constant-branch local exponents are $\alpha_i=-\log_bp_i$. Moreover, the finite record
+$$
+s_q:=\sum_{i=1}^bp_i^q,
+\qquad q=1,\ldots,b,
+\tag{I.12b.2a.2}
+$$
+determines the unordered weight multiset $\{p_1,\ldots,p_b\}$ uniquely. Thus two positive homogeneous $b$-ary cascades have identical integer moments through order $b$ exactly when they differ only by a permutation of branches.
+
+*Proof.* At each depth, every word contributes the product of its branch weights, so summing the $q$th powers factorizes at every level and proves (I.12b.2a.1). The local scaling exponent along a constant branch is the logarithmic ratio shown. Newton's identities recover the elementary symmetric polynomials of the $p_i$ recursively from the power sums $s_1,\ldots,s_b$. These coefficients determine the monic polynomial $\prod_i(t-p_i)$ and hence its multiset of roots. The converse follows because permutation changes none of the power sums. ∎
+
+This theorem closes the inverse problem only within the declared finite homogeneous cascade class. It neither chooses that class over the simpler kernel nor supplies the covariant action and projection package of Definition I.12b.1.
 
 **I.13 Expected Parameter Ranges**
 
@@ -1371,6 +1503,50 @@ $$
 be preregistered before cluster or lensing comparison. Suppose its variation supplies a conserved retained boundary current $J_\partial$, its anomaly variation cancels a retained boundary/interface anomaly without converting a gauge redundancy into a physical anomaly, and its retarded boundary-to-bulk map $\mathcal G_{\mathrm{ret}}$ supplies the susceptibility-kernel entry $\mathcal K_{\mathrm{DS}}$ of Definition I.13d. Then $\mathfrak C_{\mathrm{CS}}$ is an admissible subcertificate for those entries only. Theorem I.13e applies if and only if the same branch also supplies every remaining entry and every acceptance condition in Definition I.13d, including bulk conservation (I.13d.3), the local, CMB, homogeneous, and backreaction projections, the residual ledger, the strict PCE minimizer, and the validation lock. A Chern-Simons term alone determines neither the cluster kernel $K$ nor the exponent $q$ in Equation I.7.
 
 *Proof.* The stated variation and anomaly hypotheses provide a boundary current and a retarded boundary-to-bulk map. They do not provide the remaining entries enumerated in Definition I.13d. If those entries and acceptance conditions are independently supplied, their union with $\mathfrak C_{\mathrm{CS}}$ is an accepted $\mathfrak X_{\mathrm{DS}}$, so Theorem I.13e applies. If any required entry is absent, the antecedent of Theorem I.13e is false and the theorem cannot be invoked. ∎
+
+**Theorem I.13h (Finite Common Quadratic-Action Realizability and No-Retuning Test).** Let $Y$ be a finite real source space, let $X$ be a finite real field space, let $K:X\to X$ be symmetric positive definite, and let $B:X\to Y$. For the common static action
+$$
+\Gamma(x;y)=\frac12\langle x,Kx\rangle-\langle Bx,y\rangle,
+\tag{I.13h.1}
+$$
+the unique stationary field and conjugate output are
+$$
+x_y=K^{-1}B^*y,
+\qquad
+o_y=Bx_y=Ry,
+\qquad
+R:=BK^{-1}B^*\succeq0.
+\tag{I.13h.2}
+$$
+Conversely, every symmetric positive-semidefinite response $R:Y\to Y$ has such a realization, for example $X=Y$, $K=I$, and $B=R^{1/2}$. Hence a collection of finite galaxy, cluster, lensing, homogeneous, and thin-sheet/source projections is generated without retuning by one convex quadratic action exactly when its assembled static response matrix is symmetric positive semidefinite. Its blocks necessarily obey reciprocity and
+$$
+|\langle u,Rv\rangle|^2
+\le
+\langle u,Ru\rangle\langle v,Rv\rangle.
+\tag{I.13h.3}
+$$
+For a source covariance $\Sigma_y$, the same action predicts $\operatorname{Cov}(o)=R\Sigma_yR$ with no new parameter. This is a complete finite static quadratic test; retarded causality, spacetime covariance, stress conservation, and the physical projection maps remain separate entries of Definition I.13d.
+
+*Proof.* Strict convexity gives the unique stationary equation $Kx=B^*y$, and substitution gives (I.13h.2). The response is symmetric positive semidefinite because $\langle y,Ry\rangle=\|K^{-1/2}B^*y\|^2$. The square-root construction proves the converse. Applying Cauchy--Schwarz to $K^{-1/2}B^*u$ and $K^{-1/2}B^*v$ proves (I.13h.3). The covariance identity follows from linearity. ∎
+
+**Theorem I.13i (Exact Finite Harmonic-Recoverability Census).** Let
+$$
+C^0\xrightarrow{d_0}C^1\xrightarrow{d_1}C^2,
+\qquad d_1d_0=0,
+\tag{I.13i.1}
+$$
+be a finite cochain complex over $\mathbb Q$ with rational positive-definite inner-product matrices, and let $\delta_0$ be the adjoint of $d_0$. Then
+$$
+\mathcal H^1=\ker d_1\cap\ker\delta_0,
+\qquad
+\dim\mathcal H^1=\dim C^1-\operatorname{rank}d_0-\operatorname{rank}d_1,
+\tag{I.13i.2}
+$$
+and an exact rational basis and Hodge projector are obtained by Gaussian elimination. A current is simultaneously closed and coclosed exactly when it equals its harmonic projection.
+
+If a rational self-adjoint operator $\Lambda_h$ is supplied on $\mathcal H^1$, the compressed static kernel $\Lambda_h^{-1}$ exists and is positive exactly when every leading principal minor of the quadratic-form matrix $[\langle e_i,\Lambda_he_j\rangle]$ in any fixed rational basis is positive. These rank and minor tests terminate and, together with the nine-vector quotient tomography and trace datum of Theorem I.13f, decide the entire finite algebraic harmonic-recoverability subcertificate. They do not create the covariant, causal, or physical projection entries of Definition I.13d.
+
+*Proof.* Finite Hodge decomposition gives $C^1=\operatorname{im}d_0\oplus\mathcal H^1\oplus\operatorname{im}\delta_1$ orthogonally. Rank-nullity and $\operatorname{im}d_0\subseteq\ker d_1$ give (I.13i.2). All matrices are rational, so exact elimination constructs the kernels, their intersection, and the orthogonal projector. The stationary equations are precisely $d_1J=0=\delta_0J$. Sylvester's criterion gives the final positive-definiteness equivalence and is a finite rational computation. ∎
 
 **I.14 Timescale Separation (Quasistatic Local-Relaxation Branch)**
 

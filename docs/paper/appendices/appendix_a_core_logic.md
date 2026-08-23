@@ -151,6 +151,26 @@ By Theorem A.0.1, for every Turing machine $M$ and bound $T$, the model class co
 
 For an unbounded partial computation, each finite search stage is represented by its time bound $T$ and the corresponding bounded circuit; no claim of terminating an undecidable infinite search is required. Thus all representation, bounded-simulation, and finite predicate-evaluation clauses of Definition 10 hold. ∎
 
+**Arithmetic-envelope scope.** Corollary A.0.1 is representational: it assumes that $\mathcal F$ can code finite strings, circuits, and bounded computations, and it does not identify the functions whose totality $\mathcal F$ proves with physically affordable updates. Any later inference from proof-theoretic totality to PPI implementability requires a declared update and certificate-verification envelope together with a response-faithful realization bridge. Choosing a bounded arithmetic matched to a nominated feasible class is an additional branch convention; Foundation I selects no unique theory–envelope pair. Selecting among such pairs requires a nonempty comparison class, a complete commensurate cost, attainment, and the strictness claimed for the selection. A bounded object theory also does not replace the stronger arithmetic $\mathcal F$ used by Definition A.5.6a.1 unless it separately discharges that definition's primitive-recursive representation, finite-trace, and Gödel-coding requirements.
+
+**Theorem A.0.1a (Ablation and Irredundant Core of the Property-R Circuit Route).** The hypotheses used by Theorem A.0.1 have the following exact roles.
+
+1. Effective arithmetic coding and an unbounded family of finite description capacities are necessary for that theorem's uniform representation of arbitrarily long machine, input, and history records.
+2. Scalable depth is necessary on every fixed finite-fan-in gate route: if the maximum fan-in is $k$ and all circuits have depth at most $d$, one output depends on at most $k^d$ input coordinates, so parity on more than $k^d$ inputs is excluded.
+3. The named $\{\mathrm{NOT},\mathrm{AND},\mathrm{OR}\}$ basis is not necessary: the single NAND operation is functionally complete and gives the same circuit construction under composition.
+4. Composition closure is necessary for this gate route: a class containing primitive NAND gates but forbidding every output-to-input composition computes only projections and one-gate NAND functions, so it cannot compute the three-input parity transition function.
+5. Cross-cycle logical memory is not necessary for an abstract finite simulation: for each fixed $(M,T)$, unrolling the $T$ transition layers gives one acyclic combinational circuit. It is necessary only for the sequential implementation used in Theorem A.0.1 and for a physical executor that reuses bounded hardware across layers.
+6. Uniform specification is not an independent hypothesis on this bounded machine-simulation route. Given effective coding and a fixed functionally complete finite basis closed under unrestricted finite composition, exhaustive synthesis derives a uniform compiler $(\ulcorner M\urcorner,T)\mapsto\ulcorner C_{M,T}\urcorner$.
+7. Effective coding/decoding and a fixed functionally complete finite gate basis with unrestricted finite composition form an irredundant sufficient package for the uniform bounded-simulation route. Unrestricted finite composition is the single scalable condition: it permits arbitrarily large finite circuits and has no uniform depth bound. Working memory is an additional implementation requirement exactly when the circuit is executed sequentially rather than supplied as an unrolled acyclic object.
+
+*Proof.* A class with at most $N$ distinguishable description states cannot inject the words of every length over an alphabet of size at least two. A coding map without an effective decoder fails the representation clause of Definition 10 because the represented machine, input, and history cannot be uniformly recovered inside $\mathcal F$. Moreover, if a finite basis has maximum fan-in $k$ and circuit size is bounded by $s$, an output can depend on at most $ks$ input occurrences; parity on more than $ks$ inputs therefore cannot be represented. This proves item 1. At depth zero an output depends on one input, and a fan-in-$k$ gate applied to depth-$(d-1)$ outputs can depend on at most $k^d$ inputs. Induction therefore proves item 2 and gives the required bounded-depth counterfamily. NAND realizes $\neg x=x\mathbin{\mathrm{NAND}}x$ and
+$$
+x\wedge y=\neg(x\mathbin{\mathrm{NAND}}y),
+$$
+so it realizes the basis of Proposition A.0.2 and proves item 3. Without composition, a primitive two-input gate has no path of length two and hence cannot depend essentially on three inputs; three-input parity supplies the claimed explicit missing transition function and proves item 4. For item 5, take $T$ disjoint copies of the next-configuration circuit and wire the output of layer $t$ to the input of layer $t+1$; the resulting finite directed acyclic circuit has no state retained across execution cycles. A sequential evaluator of the same graph must retain the current configuration and intermediate gates, giving the stated boundary.
+
+For item 6, compute from $(\ulcorner M\urcorner,T)$ the finite truth table of the bounded transition simulation, enumerate composed circuits over the fixed basis by increasing size and lexicographic code, and compare their finite truth tables. Functional completeness guarantees a match, so the search halts and returns a uniform compiler. Conversely, effective coding/decoding, a universal finite gate basis, and unrestricted finite composition reproduce every step of Theorem A.0.1 and Corollary A.0.1. Removing coding destroys representation; replacing unrestricted composition by a uniform size or depth cap excludes the parity family by the $ks$ or $k^d$ bound, and removing composition altogether already excludes three-input parity; removing gate universality excludes at least one finite Boolean transition function. Each of the three package members is therefore indispensable, proving item 7 and the asserted irredundancy for this route. ∎
+
 **Significance:** This derivation is independent of the Self-Referential Paradox of Accurate Prediction. Property R is established before SPAP is invoked, providing a non-circular foundation. The logical sequence is:
 
 $$
@@ -638,6 +658,50 @@ V_{\mathrm{tot}}\!\left(\frac{p_1+p_2}{2}\right)
 $$
 contradicting minimality. Thus the minimizer is unique. At an interior differentiability point, Fermat's elementary difference-quotient argument gives $V_{\mathrm{tot}}'(p_{\mathrm{err}}^*)=0$. ∎
 
+**Theorem A.0.5a (Exact Three-Bit Reliability Converse and Unique Nonzero Optimum).** Encode a uniform source bit as $b\mapsto(b,b,b)$, transmit the three coordinates through independent binary symmetric channels of crossover probability $p\in(0,p_0]$, where $p_0<1/2$, and decode by majority. Then the exact logical error probability is
+$$
+P_3(p)=3p^2(1-p)+p^3=3p^2-2p^3.
+\tag{A.0.10a.1}
+$$
+Among all decoders from the received word to one bit, majority is the unique Bayes-optimal decoder and every decoder has error at least $P_3(p)$.
+
+Let $A,B>0$ have common cost-rate units and define the registered reliability objective
+$$
+V_{A,B}(p)
+=A\log\!\frac{p_0}{p}+B P_3(p).
+\tag{A.0.10a.2}
+$$
+If
+$$
+0<A<6Bp_0^2(1-p_0),
+\tag{A.0.10a.3}
+$$
+then $V_{A,B}$ has a unique minimizer $p^*\in(0,p_0)$, characterized exactly by
+$$
+A=6B(p^*)^2(1-p^*).
+\tag{A.0.10a.4}
+$$
+It is strictly nonzero and obeys
+$$
+\sqrt{\frac{A}{6B}}
+<p^*
+<\sqrt{\frac{A}{6B(1-p_0)}},
+\tag{A.0.10a.5}
+$$
+so, because $P_3$ is strictly increasing on $(0,1/2)$, substitution of the two endpoints in (A.0.10a.1) gives explicit strict lower and upper residual-error bounds.
+
+*Proof.* Conditional on a received word of Hamming weight $j$, the likelihood ratio of source bit $1$ to source bit $0$ is $((1-p)/p)^{2j-3}$. Since $p<1/2$ and $3$ is odd, this ratio is never one: the unique Bayes decision is $1$ exactly for $j\ge2$, which is majority. Under source bit $0$, an error is therefore exactly the event of two or three flips, giving (A.0.10a.1); symmetry gives the same error under source bit $1$. Pointwise Bayes optimality proves the converse for every decoder and its uniqueness.
+
+Differentiation gives
+$$
+V_{A,B}'(p)=-\frac Ap+6Bp(1-p),
+\qquad
+V_{A,B}''(p)=\frac A{p^2}+6B(1-2p)>0
+$$
+on $(0,p_0]$. Thus the objective is strictly convex. Its derivative tends to $-\infty$ as $p\downarrow0$, while (A.0.10a.3) makes $V_{A,B}'(p_0)>0$. The intermediate-value theorem and strict convexity give one interior critical point and make it the unique global minimizer. Rearranging its stationarity equation gives (A.0.10a.4). Since $1-p^*<1$ and $1-p^*>1-p_0$, that identity gives (A.0.10a.5). Finally $P_3'(p)=6p(1-p)>0$, so the stated residual bounds follow. ∎
+
+The encoder, iid physical bit-flip kernel, majority recovery map, exact converse, cost units, optimizer, and residual interval are all part of this fixed comparison class. The result does not supply a Golay quantum fault-tolerance threshold or cover correlated noise.
+
 **Corollary A.0.2 (Scaling of the Reduced Stationarity Model)**
 Let $a:=\gamma_p-1>0$ and let $K,p_0>0$. Suppose that, for all sufficiently large $T$, a reduced stationarity model has a solution $p_T\in(0,p_0)$ satisfying
 $$
@@ -1079,6 +1143,34 @@ $$
 $$
 Physical use of Theorems A.2.3–A.2.4 therefore requires a scalable coded RID family that realizes every finite prefix requested during the computation of a purported total decider; no single fixed finite window realizes the unbounded reduction.
 
+**Theorem A.2.5 (RUD Decision-Boundary Classification).** For the registered terminal-reachability property, the following branches are exact.
+
+1. If a computable horizon $B(\ulcorner S,x_0\urcorner)$ is promised to bound the first possible terminal visit, deterministic reachability is decidable by simulation through $B$.
+2. If the deterministic state space $X$ is finite and explicitly listed, reachability is decidable after at most $|X|$ transitions: either a terminal state appears or a state repeats.
+3. For an explicitly listed finite Markov chain with rational transition probabilities, positive-probability reachability is decidable from the directed support graph. Its exact reachability probability and comparison with a rational threshold are decidable by rational linear algebra after the nonterminal closed classes are assigned value zero.
+4. Without a finite-state or computable-horizon restriction, every effectively coded class containing the instances $\mathbf S_{e,w}$ remains undecidable by Theorem A.2.3, even though each transition and each finite support list is computable.
+5. Replacing rational probabilities by uniformly computable real probabilities preserves approximation with a supplied computable error modulus, but exact equality with a threshold is undecidable in general. Uniformly in a machine code $e$, define
+   $$
+   r_e=
+   \begin{cases}
+   2^{-t},&e\text{ first halts at step }t,\\
+   0,&e\text{ never halts}.
+   \end{cases}
+   \tag{A.2.5.1}
+   $$
+   Then $r_e$ is a uniformly computable real, while deciding $r_e=0$ decides nonhalting.
+6. If a computable approximation to a reachability probability $p$ is accompanied by a rational threshold $\theta$ and a promised gap $|p-\theta|\ge\delta>0$, the threshold comparison is decidable by approximating $p$ within $\delta/3$.
+
+*Proof.* Items 1 and 2 are the stated finite searches. For item 3, support-graph reachability decides whether a terminal state is reachable with positive probability. Delete states that cannot reach the terminal set, set their reachability value to zero, set terminal values to one, and solve the remaining finite linear system
+$$
+p_x=\sum_yP(x,y)p_y.
+$$
+After removal of closed nonterminal classes, the solution is unique; rational coefficients give exact rational values and exact threshold comparison. Item 4 is Theorem A.2.3.
+
+For item 5, to approximate $r_e$ within $2^{-n}$, simulate $e$ for $n$ steps. If it first halts at $t\le n$, output $2^{-t}$; otherwise output zero. A later first halt has $t>n$ and changes the value by less than $2^{-n}$, proving uniform computability. Equality with zero is equivalent to nonhalting and is therefore undecidable. For item 6, an approximation error below $\delta/3$ cannot cross a threshold separated from $p$ by at least $\delta$. ∎
+
+The theorem classifies the finite-state, computable-horizon, rational finite-support, uniformly computable-real approximation, and Turing-complete branches of the registered reachability problem. Countably infinite support without an effective tail modulus and noncomputable transition data remain outside these decision classes.
+
 ## A.3 Significance and Relation to Logical Indeterminacy
 
 * **Logical Indeterminacy:** SPAP excludes a single universally exact predictor on its stated diagonal-closed class. RUD excludes a total uniform $\mathsf{TERM}$ decider on the stated coded terminal-simulation class, with the separately qualified bounded probabilistic extension of Theorem A.2.4.
@@ -1171,6 +1263,23 @@ If $\mathsf V$ encodes an admissible PU finite-response verifier transformer, th
 This is an existence theorem for fixed-point presentations. It does not prove minimality of the verifier, does not remove the machine-dependent constants in ordinary Kolmogorov or Levin complexity, does not identify $c_{\min}$ with $K_0$, does not replace the hierarchy defining $C_P$, and does not replace the Appendix D or Theorem 2 alignment conditions for $\hat C_v$.
 
 *Proof.* Apply Theorem A.4.1a to the total computable operator $\mathsf V$. The fixed-point index $\beta$ gives (A.4.1b). The remaining statements are scope restrictions: the recursion theorem supplies self-reference of a presentation, not an optimality theorem, an invariance theorem, or a physical branch certificate. ∎
+
+**Theorem A.4.1c (Finite LITE Verifier Circuit and Explicit Resource Envelope).** Fix a binary proof encoding for which syntactic proof verification of a word of length at most $G$ is performed by a uniform Boolean circuit of size $q(G,L)$ and workspace $s(G,L)$, where $L$ is the length of the target-formula code and $q,s$ are explicit polynomials for the chosen encoding. For input $n$, put $G=g(n)$ and let $L_n$ be the maximum length of the two substituted formula codes in (A.4.1). Let $q_{\mathrm{prep}}(n)$ and $s_{\mathrm{prep}}(n)$ be the finite circuit size and workspace used by the chosen implementations to compute $G$, the two substituted codes, and $H_1(n),H_2(n)$. Then the two bounded proof predicates and the prioritized three-way branch in (A.4.1) are computed by a uniform finite circuit with
+$$
+\operatorname{size}
+\le q_{\mathrm{prep}}(n)+2(2^{G+1}-1)q(G,L_n)+O(2^GG+L_n),
+\tag{A.4.1c.1}
+$$
+and by a sequential implementation with workspace
+$$
+O\bigl(s_{\mathrm{prep}}(n)+G+L_n+s(G,L_n)\bigr).
+\tag{A.4.1c.2}
+$$
+The circuit returns exactly one of $n+H_1(n)$, $n+H_2(n)$, and $n+1$ for every $n$; the self-index $\beta$ is the fixed constant supplied by Theorem A.4.1a.
+
+*Proof.* Total computability makes the recorded preparation costs finite for every $n$. There are $2^{G+1}-1$ binary words of length at most $G$. For each of the two target formulas, run the verifier circuit on every candidate and OR the acceptance bits. This gives the proof-search term in (A.4.1c.1); preparation contributes $q_{\mathrm{prep}}(n)$, while enumeration, comparison, OR trees, and the prioritized multiplexer contribute the displayed lower-order term. A sequential counter reuses one verifier workspace, giving (A.4.1c.2). The first branch is selected when its proof-search bit is one, the second only when the first is zero and the negated-formula search bit is one, and the third otherwise, so totality is circuit-level and does not rely on consistency. The recursion theorem makes $\beta$ a constant in this uniform family. ∎
+
+On a branch already carrying the protected universal-gate, memory, execution, and QEC certificate of Theorem A.0.6, standard reversible compilation maps each such finite Boolean circuit into the protected response system with the certificate's recorded overhead. Equations (A.4.1c.1)--(A.4.1c.2) do not themselves populate that physical certificate.
 
 ### A.4.3 LITE's Instantiation of Property R Capabilities
 
@@ -1944,6 +2053,32 @@ This is a local proof-access gain for the fixed diagonal task; it does not asser
 
 *Proof.* The formal proof exists by Equation A.5.6a.20. Active miss and historical recovery are Equations A.5.6a.19 and A.5.6a.21. The values of $Q_{B,t,e,N}$ follow directly from its definition. ∎
 
+**Theorem A.5.6a.10 (Time-Locked Two-Register Diagonal Implementation and Reset Ledger).** Let $P$ and $O$ be two physical binary registers with basis states $|p,o\rangle$. Before a registered commit time $t_c$, a nominated predictor writes $p\in\{0,1\}$ into $P$ and a one-way clock gate locks $P$ against subsequent writes by that predictor. Initialize $O=0$. At $t_c$, apply
+$$
+U_{\mathrm{diag}}:=X_O\operatorname{CNOT}_{P\to O}.
+\tag{A.5.6a.10.1}
+$$
+Then
+$$
+U_{\mathrm{diag}}|p,0\rangle=|p,1-p\rangle,
+\tag{A.5.6a.10.2}
+$$
+so the committed outcome is never the locked prediction. The implementation is insulated: $U_{\mathrm{diag}}$ leaves $P$ unchanged, acts only after its write gate closes, and uses no post-commit value to alter the earlier register.
+
+The map on the admitted subspace is injective and is implemented by a unitary, so the diagonal operation has no Landauer lower bound merely from its logical form. For a cyclic reuse:
+
+1. if $P$ is retained, applying $U_{\mathrm{diag}}^{-1}$ restores $O=0$ reversibly;
+2. if $O$ is reset while all side information correlated with it is discarded, the registered reset obeys
+   $$
+   Q_{\mathrm{bath}}\ge k_BT H(O\mid R),
+   \tag{A.5.6a.10.3}
+   $$
+   and gives $k_BT\ln2$ only for a conditionally uniform output with $H(O\mid R)=\ln2$.
+
+*Proof.* The CNOT sends $|p,0\rangle$ to $|p,p\rangle$ and $X_O$ sends this to $|p,1-p\rangle$, proving (A.5.6a.10.2). If a predictor were correct on this registered challenge, its locked bit would obey $p=1-p$, which has no Boolean solution. Neither gate targets $P$, and the clock ordering excludes a later write to it, proving insulation and the same-cycle reduction. A unitary is bijective and preserves the input information, so logical irreversibility is absent. The inverse recovers the ready state when $P$ remains available. When that correlation is discarded, Theorem 31 applied to the separately registered cyclic reset gives (A.5.6a.10.3) and its equality conditions. ∎
+
+This construction is an exact two-qubit, or reversible two-bit, live-register realization. Protected operation on an MPU substrate inherits the finite gate from a branch carrying Theorem A.0.6's gate/QEC execution certificate; the logical construction does not create that independent substrate certificate.
+
 ---
 
 ## A.6 Generative Non-Closure and Axiom Stabilization
@@ -2060,3 +2195,39 @@ $$
 L_S>U_{PU}.
 $$
 Every representative of $[S]$ has cost at least $L_S$, while the certificate supplies a PU representative of cost at most $U_{PU}$. Hence every stabilizing class distinct from the PU class has strictly greater cost. The PU class is therefore the unique minimal stabilizing response-equivalence class in the declared finite comparison set. Because the certificate is exhaustive only for $\mathfrak S_{\mathrm{stab}}$, no conclusion follows for mechanisms outside that set. ∎
+
+**Theorem A.6.8a (Budget-Indexed Exhaustion and the No-Finite-Global-Manifest Boundary).** Assume the retained specification language is scalable: for infinitely many budgets $B_1<B_2<\cdots$ it admits stable finite response roles that are pairwise inequivalent under the retained response quotient. Then no single finite manifest of response-equivalence classes is exhaustive over all budgets. For a fixed budget $B$, however, if the program alphabet is finite, code length is bounded by $B$, and stabilization, response equivalence, and cost comparison are decidable on each code, the complete normal-form quotient is finite and effectively enumerable; Proposition A.6.8 then gives uniqueness exactly when its strict cost-separation hypotheses hold.
+
+*Proof.* A finite manifest contains finitely many response-equivalence classes, while the scalability hypothesis supplies infinitely many pairwise inequivalent stable roles. At least one class is therefore absent, so the manifest is not exhaustive.
+
+At fixed $B$, only finitely many words over a finite alphabet have length at most the code-length bound. Enumerate them, discard ill-formed and unstable codes with the assumed decider, compute the finite response-equivalence relation pairwise, and retain one normal form per class. Exact cost comparison on this finite quotient terminates. Definition A.6.7 records the resulting exhaustive table, and Proposition A.6.8 proves the stated conditional uniqueness. ∎
+
+Thus unrestricted axiom-stabilizer uniqueness receives `negative-refutation` on every scalable language. The mathematically complete successor is the budget-indexed finite certificate of Definition A.6.7; mechanisms outside one frozen budget are different comparison domains rather than omitted members of that certificate.
+
+### A.6.3 Response-free domain exclusion
+
+**Corollary A.6.9 (Domain Exclusion for Response-Free Candidate Judgments).** Let
+$$
+\mathfrak A_{S,B}=(D_{S,B},J_{S,B},\vdash_{S,B},V_{S,B},q_{S,B})
+$$
+be a stable axiom-stabilizer. If a represented candidate judgment $\jmath$ has no finite protocol response with processing cost bounded by $B$, then
+$$
+\jmath\notin D_{S,B}.
+\tag{A.6.9.1}
+$$
+Consequently the local-soundness, retained-composition, verification, and response-quotient clauses of Definition A.6.3 apply to $\jmath$ only after an enlarged stabilizer admits it and all stability clauses are checked again. If PCE minimality is asserted for the enlarged stabilizer, clause 5 must also be checked on its enlarged response-equivalence class.
+
+*Proof.* Stability clause 1 of Definition A.6.3 requires every member of $D_{S,B}$ to have a finite protocol response and processing cost bounded by $B$. The hypothesis on $\jmath$ is the negation of that necessary membership condition, so $\jmath\notin D_{S,B}$. The remaining assertions follow because $V_{S,B}$, $q_{S,B}$, and the retained relation $\vdash_{S,B}$ are components of the stabilizer on $D_{S,B}$, while clauses 2--5 are conditions on that declared tuple. ∎
+
+**Remark A.6.9.1 (Finite Admission Certificate for a Pending Judgment).** Absence of a numerical interval or a falsification rule does not by itself prove that a candidate judgment is response-free. Admission of $\jmath$ to an enlarged retained domain is independently checkable from a finite record
+$$
+\mathfrak C_{\mathrm{adm}}(\jmath;S,B)
+=
+(\mathfrak A'_{S,B},R,A,\pi,r,c,\Pi_{\mathrm{stab}},\Pi_{\mathrm{PCE}}),
+\tag{A.6.9.2}
+$$
+where
+$$
+\mathfrak A'_{S,B}=(D'_{S,B},J'_{S,B},\vdash'_{S,B},V'_{S,B},q'_{S,B})
+$$
+is the proposed enlarged tuple, $\jmath\in D'_{S,B}$, $R$ is a finite response set, $A\subseteq R$ is the acceptance set, $\pi$ is an executable protocol returning $r\in R$, $c\le B$ is a verified processing-cost bound, and $V'_{S,B}(\jmath)=\mathbf 1_A(r)$. The finite proof object $\Pi_{\mathrm{stab}}$ verifies finite response for every member of $D'_{S,B}$, local soundness, retained composition, the declared response quotient, and the live-diagonal guard on the enlarged tuple. When PCE minimality is claimed, $\Pi_{\mathrm{PCE}}$ additionally verifies clause 5 on the enlarged response-equivalence class; otherwise that field carries the explicit status $\textsf{not-claimed}$. Until this record or an equivalent checked derivation supplies the listed fields, the admission claim remains certificate-pending; a proof that no finite protocol response of processing cost at most $B$ exists invokes Corollary A.6.9.

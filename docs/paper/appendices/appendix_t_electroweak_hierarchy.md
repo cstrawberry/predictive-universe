@@ -1980,6 +1980,107 @@ x_{\mathrm{even}}(u)
 $$
 and removes the odd term. In the raw Euclidean target coordinates its quadratic coefficient has norm $1/4$, so it does not by itself verify the unit $L_{\mathrm{info}}$-norm condition (T.22a.3). The unit branch $\gamma=1$ remains conditional on a response-preserving map into the $L_{\mathrm{info}}$-orthonormal reservoir coordinates that sends this coefficient to unit norm. Separately, Theorem T.24 proves the exact minimization identity $\min_sV[s;u]=|x(u)|^2/4$ for a declared target shift. This identity does not identify $u$ with the transverse variable $\xi$ of Definition T.12a and does not alter the positive $\mu I_3$ block or the zero-mode count of Theorems T.2–T.5.
 
+**Theorem T.22d (Fixed-$u$ Homogeneous Pauli Target-Shift Classification).** Hold fixed the physical parameter $u$ used in Theorems T.19–T.25, the projective base state $q_0=(0,1)^T$, the Pauli generators $S_a=\sigma_a/2$, and the standard coherent-state moment map of Remark T.22c. In the Euclidean reservoir norm induced by the $L_{\mathrm{info}}$-orthonormal coordinates of Lemma T.5b, define
+$$
+\mathcal H_{\mathrm{Pauli}}
+:=
+\left\{
+(\upsilon,\phi,\iota):
+\upsilon>0,
+\ \phi\in\mathbb R/2\pi\mathbb Z,
+\ \iota:\mathbb R^3\hookrightarrow\mathbb R^6,
+\ \iota^T\iota=I_3
+\right\},
+$$
+with
+$$
+S_\phi:=\cos\phi\,S_1+\sin\phi\,S_2,
+\qquad
+q_{\upsilon,\phi}(u):=e^{i\upsilon uS_\phi}q_0.
+$$
+Let $h_\theta=e^{-i\theta S_3}$, let $R_\theta\in SO(3)$ be its coadjoint rotation, and let
+$$
+\mathcal G_{T05}:=U(1)_{q_0}\times O(6)
+$$
+act by
+$$
+(\theta,O)\cdot(\upsilon,\phi,\iota)
+=
+\left(\upsilon,\phi+\theta,O\iota R_{-\theta}\right).
+$$
+This is the exact equivalence relation: $U(1)_{q_0}$ is the projective stabilizer of $q_0$, $O(6)$ changes the orthonormal reservoir marking, and neither factor rescales $u$ or changes $\upsilon$.
+
+For every $(\upsilon,\phi,\iota)\in\mathcal H_{\mathrm{Pauli}}$, the even displacement is
+$$
+\iota\Delta\mu_{\mathrm{even}}^{\upsilon,\phi}(u)
+=
+\frac{1-\cos(\upsilon u)}{2}\,\iota e_3
+=
+\frac{\upsilon^2}{4}u^2\iota e_3+O(u^4),
+$$
+so
+$$
+\gamma(\upsilon,\phi,\iota)=\frac{\upsilon^2}{4}.
+\tag{T.22d.1}
+$$
+The quotient is classified exactly by $\upsilon$:
+$$
+\mathcal H_{\mathrm{Pauli}}/\mathcal G_{T05}
+\cong
+\mathbb R_{>0},
+\qquad
+[(\upsilon,\phi,\iota)]\longmapsto\upsilon.
+\tag{T.22d.2}
+$$
+Consequently, $\gamma=1$ holds exactly for $\upsilon=2$, whereas the unit-speed Pauli curve of Remark T.22c has $\upsilon=1$ and $\gamma=1/4$. At fixed symplectic form and fixed Hamiltonian $SU(2)$ action, the equivariant moment map itself has no additive or multiplicative normalization modulus; the surviving $\upsilon$ is the speed of the response curve relative to the fixed parameter $u$.
+
+*Proof.* Remark T.22c gives the displayed identity for $\phi=0$ after replacing $u$ by $\upsilon u$. Since $h_\theta$ stabilizes $q_0$ projectively and sends $S_\phi$ to $S_{\phi+\theta}$, moment-map equivariance gives the formula for every $\phi$. Taylor expansion yields
+$$
+\frac{1-\cos(\upsilon u)}{2}
+=
+\frac{\upsilon^2}{4}u^2-\frac{\upsilon^4}{48}u^4+O(u^6),
+$$
+which proves (T.22d.1). The stabilizer rotation fixes $e_3$, and $O\in O(6)$ preserves the reservoir norm, so
+$$
+\left\|O\iota R_{-\theta}e_3\right\|
+=
+\left\|O\iota e_3\right\|
+=
+\left\|\iota e_3\right\|
+=1.
+$$
+Thus the quadratic norm and $\upsilon$ are invariants of the declared equivalence. Stabilizer rotation removes $\phi$, and any two isometric embeddings $\mathbb R^3\hookrightarrow\mathbb R^6$ are related by an element of $O(6)$, proving (T.22d.2).
+
+For completeness, two equivariant moment maps for the same Hamiltonian action and symplectic form differ by a constant in $\mathfrak{su}(2)^*$; equivariance makes that constant coadjoint-invariant, and $(\mathfrak{su}(2)^*)^{SU(2)}=\{0\}$. A multiplicative rescaling would rescale the symplectic form and lies outside the fixed class. Finally, Lemma T.3 gives $F_Q=1$ for $\upsilon=1$, while $F_Q(q_{\upsilon,\phi};u)=4\operatorname{Var}_{q_0}(\upsilon S_\phi)=\upsilon^2$. Thus the fixed-$u$ equivalence retains $\upsilon$ as an invariant. ∎
+
+**Theorem T.22e (Same-$u$ Isometric Unit-QFI Target-Shift No-Go).** Let $q_{1,\phi}(u)$ be the unit-QFI Pauli curve of Theorem T.22d, and let $L$ be a linear carrier intertwiner that preserves the declared response norm on the moment-map response span and leaves the physical parameter $u$ fixed. Then the even quadratic target coefficient after applying $L$ has norm $1/4$ and cannot satisfy Definition T.22a.3. Any linear map sending that coefficient to unit norm has operator norm at least $4$ on its span and changes the response normalization; the reparameterization $u\mapsto2u$ instead selects the distinct $F_Q=4$ branch.
+
+*Proof.* Theorem T.22d gives the unit-QFI coefficient
+$$
+c_{1,\phi}=\frac14\,\iota e_3,
+\qquad \|c_{1,\phi}\|=\frac14.
+$$
+Norm preservation on the response span gives $\|Lc_{1,\phi}\|=1/4$, whereas Definition T.22a.3 requires norm one in the same reservoir coordinates. If $\|Lc_{1,\phi}\|=1$, then
+$$
+\|L\|\ge\frac{\|Lc_{1,\phi}\|}{\|c_{1,\phi}\|}=4,
+$$
+so $L$ is not norm preserving on that response span. Theorem T.22d separately gives $F_Q=\upsilon^2$, so replacing $u$ by $2u$ is the $\upsilon=2$, $F_Q=4$ member rather than the realized unit-QFI member. ∎
+
+*Certificate boundary.* Theorem T.19 consumes the natural $\upsilon=1$ unit-QFI curve. Theorem T.22e gives `negative-refutation` of a same-$u$, linear response-norm-preserving intertwiner that turns its coefficient $1/4$ into the unit coefficient. The $\upsilon=2$ curve supplies the formal unit coefficient with $F_Q=4$ and is a distinct branch. A $\gamma=1$ datum may therefore enter Definition T.22a only through an independently admitted normalization branch whose metric and response conventions are checked directly, rather than through the excluded unit-QFI isometric transport.
+
+**Resolution record T.22d-R1 (`TV-T-05`, fixed-$u$ rigidity component).**
+
+- **Registered proposition and outcome.** Let $P_{T05}^{\mathrm{rig}}$ be the proposition that every member of $\mathcal H_{\mathrm{Pauli}}$ has $\gamma=1$ modulo $\mathcal G_{T05}$, and let $P_{T05}^{\mathrm{iso}}$ be the existence of a same-$u$, linear response-norm-preserving intertwiner from the realized unit-QFI member to a unit target coefficient. Theorem T.22d gives `negative-refutation` of $P_{T05}^{\mathrm{rig}}$ by the complete classification $\gamma=\upsilon^2/4$ and the counterexample $\upsilon=1$; Theorem T.22e gives `negative-refutation` of $P_{T05}^{\mathrm{iso}}$ by norm preservation.
+- **Domain.** The full analytic germ at $u=0$ of every triple $(\upsilon,\phi,\iota)\in\mathcal H_{\mathrm{Pauli}}$, with $\upsilon>0$, $\phi\in\mathbb R/2\pi\mathbb Z$, and $\iota^T\iota=I_3$ in the six-dimensional reservoir norm. The physical parameter $u$ is fixed and is not part of the quotient.
+- **Premises.** The projective state $q_0=(0,1)^T$, Pauli normalization $S_a=\sigma_a/2$, the standard equivariant moment map of Remark T.22c at its fixed symplectic normalization, and the $L_{\mathrm{info}}$-orthonormal reservoir convention of Lemma T.5b.
+- **Equivalence relation.** The exact orbit relation of $\mathcal G_{T05}=U(1)_{q_0}\times O(6)$ defined in Theorem T.22d. It permits stabilizer rotation and orthonormal reservoir remarking and forbids a rescaling of $u$, a change of $\upsilon$, a nonisometric reservoir scaling, or a change of symplectic normalization.
+- **Budget.** Closed-form symbolic classification over all $\upsilon>0$, all $\phi$ modulo $2\pi$, and all isometric $\iota$; zero target queries, no search cutoff, no regulator, no numerical tolerance, and no empirical comparison.
+- **Verifier.** Substitute $\upsilon u$ into Remark T.22c's exact cosine formula, take the even part, check $\frac12\frac{d^2}{du^2}\mu(q_{\upsilon,\phi}(u))|_{u=0}=\frac{\upsilon^2}{4}e_3$, and verify $R_\theta e_3=e_3$, $\iota^T\iota=I_3$, and $O^TO=I_6$. Acceptance requires the quotient map in (T.22d.2) to be bijective and the QFI audit $F_Q=\upsilon^2$ at fixed $u$.
+- **Falsifier.** A well-typed member of $\mathcal H_{\mathrm{Pauli}}$ whose exact even quadratic norm differs from $\upsilon^2/4$, or an allowed $\mathcal G_{T05}$ transformation that changes $\upsilon$ or that norm, falsifies this record. A nonisometric marking, rescaled symplectic form, or rescaled physical parameter belongs to a different candidate class.
+- **Provenance class.** `proved-classification` from Lemma T.3, Theorem T.19, Definition T.22a, and Remark T.22c by target-independent exact $SU(2)$ algebra; Higgs-mass values, threshold validation tuples, and their proxies are absent from the inputs.
+- **Nonvacuity.** With $\iota_0(x_1,x_2,x_3)=(x_1,x_2,x_3,0,0,0)$, both $(1,0,\iota_0)$ and $(2,0,\iota_0)$ lie in the class. The natural unit-QFI member $\upsilon=1$ gives $\gamma=1/4$ and is the non-rigidity counterexample. The $\upsilon=2$ member gives the formal coefficient $\gamma=1$ but has $F_Q=4$ in the same $u$.
+- **Downstream consumers.** Theorems T.22d–T.22e resolve the homogeneous-Pauli rigidity component of `TV-T-05` and exclude its same-$u$, linear response-isometric unit-QFI transport route. Definition T.22a and Theorem T.22b retain their accepted-datum antecedent for any separately admitted normalization branch or response-preserving carrier map outside that classified linear-isometric route, so the target remains `C`-open. Theorems T.24–T.25 retain their exact $\gamma$-dependent formulas, while Theorem T.26, Theorem T.79, and `RT-T2` retain every threshold, matching, RG, decoupling, pole, and spectral-source gate.
+
 **Theorem T.23** (Optimal Signal Configuration). Under the target-shift normalization of Theorem T.22, the stationary $s(u)$ satisfies:
 $$
 \frac{\partial V}{\partial s} = s + \Pi_L^T(\Pi_L s - \gamma u^2 v) = 0
@@ -2749,6 +2850,60 @@ which is an additional codimension-one condition on the scale vector unless a se
 
 Thus the definite answer to the McKay question is negative in the McKay-only sense: $c_\ell/c_d=8/3$ remains an imposed normalization branch, or else the output of a separate Bures-weight representation-variance certificate. A raw McKay quiver, even if correctly computed, is not sufficient to promote Corollary T.34.1 to an unconditional theorem.
 
+**Theorem T.34.1e (Complete Positive Weight Classification at Fixed Total Weight).** In the fixed Standard Model representation and Casimir table of Theorem T.34, impose positivity and only the total-weight normalization used in Corollary T.34.2:
+$$
+\mathcal K_W
+=
+\{(\kappa_1,\kappa_2,\kappa_3)\in\mathbb R_{>0}^3:
+\kappa_1+3\kappa_2+8\kappa_3=12\}.
+$$
+Then
+$$
+\mathcal K_W
+=
+\{(12-3s-8t,s,t):s>0,\ t>0,\ 3s+8t<12\}.
+\tag{T.34.1e.1}
+$$
+Its exact $c_\ell/c_d=8/3$ locus is the open line segment
+$$
+\mathcal K_{8/3}
+=
+\left\{
+\left(\frac{72-73s}{27},\ s,\ \frac{63-2s}{54}\right):
+0<s<\frac{72}{73}
+\right\}.
+\tag{T.34.1e.2}
+$$
+Consequently positivity, the fixed Casimir table, and total-weight normalization do not force the tilt normalization. For example,
+$$
+(\kappa_1,\kappa_2,\kappa_3)=(1,1,1)\in\mathcal K_W,
+\qquad
+\mathcal V_{\ell d}=28,
+\qquad
+\frac{c_\ell}{c_d}=\frac{\sqrt{43}}3\ne\frac83.
+\tag{T.34.1e.3}
+$$
+
+*Proof.* Put $s=\kappa_2$ and $t=\kappa_3$. The total-weight equation gives $\kappa_1=12-3s-8t$, and positivity gives exactly (T.34.1e.1). On this triangle,
+$$
+\mathcal V_{\ell d}
+=21(12-3s-8t)+55s-48t
+=252-8s-216t.
+$$
+Theorem T.34.1b makes $c_\ell/c_d=8/3$ equivalent to $\mathcal V_{\ell d}=0$, hence $s+27t=63/2$. Solving for $t$ and then $\kappa_1$ gives (T.34.1e.2); its three positivity inequalities reduce to $0<s<72/73$. At $(1,1,1)$, $z_\ell/g_U^2=1$ and $z_d/g_U^2=43/9$, proving (T.34.1e.3). ∎
+
+| Resolution-artifact field | `T.34.1e-R1` record |
+|---|---|
+| Catalog binding and outcome | `TV-T-08`; `negative-refutation` of the proposition that the fixed representation/Casimir data, positivity, and $\mathcal W$ force $c_\ell/c_d=8/3$, together with `positive-discharge` of that fixed representation's complete normalized-weight classification; compatible alternative representation/source classes remain `M`-open and a new physical variance-certificate branch remains `C+R`-open |
+| Exact domain | All positive real triples in $\mathcal K_W$ for the fixed lepton/down-quark representations and trace conventions of Theorem T.34 |
+| Premises | Theorem T.34's exact $z_\ell,z_d$ formulas, Theorem T.34.1b, and the total-weight equation $\mathcal W$; the variance equation $\mathcal N$ is tested, not assumed |
+| Equivalence relation | Internal basis changes preserving each labeled gauge factor and its trace form; these leave the ordered weight triple fixed. The normalization $\mathcal W=12$ removes common positive rescaling |
+| Budget and verifier | Closed-form exhaustive real-semialgebraic classification with no cutoff or tolerance; eliminate $\kappa_1$, solve one affine equation, and verify all strict positivity bounds by exact rational arithmetic |
+| Falsifier | A positive $\mathcal W$-normalized triple outside (T.34.1e.1), a target-locus point outside (T.34.1e.2), or failure of the exact counterexample (T.34.1e.3) |
+| Provenance class | Target-independent symbolic algebra from the pre-existing representation table; no lepton/quark mass or tilt measurement enters |
+| Nonvacuity | $(1,1,1)$ lies in the full class and misses the target; every rational $s$ with $0<s<72/73$ supplies a positive target-locus member |
+| Downstream consumers | Theorems T.33--T.34.2, `TV-T-08`, `TV-V-07`, `RT-T3`, and every flavor row using $c_\ell/c_d$; the fixed-table forcing route has negative closure, while alternative compatible representation/source classes remain to be classified and Corollary T.34.2 still consumes an independently populated representation-variance certificate and realization |
+
 **Corollary T.34.2** (PCE-Optimal Bures Weights on the $c_\ell/c_d = 8/3$ Normalization Branch). On the lepton-to-quark tilt normalization branch $c_\ell/c_d = 8/3$ (Corollary T.34.1), equivalently on a branch carrying the Bures-weight certificate of Theorem T.34.1b, minimize the strictly convex PCE objective
 $$
 S(\kappa)=8\kappa_3\ln\kappa_3 + 3\kappa_2\ln\kappa_2 + \kappa_1\ln\kappa_1
@@ -2989,6 +3144,39 @@ $$
 2M\chi_U.
 $$
 Substitution of $M=24$ and the additional calibration $\chi_U=1/2$ gives the final displayed values. The trace normalization $\operatorname{tr}(T_aT_b)=\delta_{ab}/2$ fixes the Lie-algebra basis but does not by itself fix $\chi_U$. ∎
+
+**Theorem T.39a.2a (Complete Scalar Calibration Fiber at Fixed Bures and Trace Data).** Fix $M\in\mathbb Z_{>0}$ and items 1--4 of Definition T.39a.1, including the exact loop holonomy $2\pi/M$ and trace normalization $\operatorname{tr}(T_aT_b)=\delta_{ab}/2$. The complete positive scalar solution set of item 5 is
+$$
+\mathcal C_U(M)
+=
+\{(\chi_U,g_U^2)\in\mathbb R_{>0}^2:
+\chi_Ug_U^2=2\pi/M\}
+=
+\left\{\left(\chi,\frac{2\pi}{M\chi}\right):\chi>0\right\}.
+\tag{T.39a.2a.1}
+$$
+Under prequantum bundle/connection isomorphisms and trace-orthogonal gauge-basis changes that preserve the numerical gauge coefficient, the map
+$$
+\mathbb R_{>0}\longrightarrow\mathcal C_U(M),
+\qquad
+\chi\longmapsto\left(\chi,\frac{2\pi}{M\chi}\right)
+\tag{T.39a.2a.2}
+$$
+is a bijection of inequivalent scalar records. Thus the fixed Bures/prequantum and trace data leave one positive scale modulus and do not select $\chi_U=1/2$.
+
+*Proof.* Items 3 and 5 of Definition T.39a.1 give the single equation $\chi_Ug_U^2=2\pi/M$. Positivity permits division by either scalar and yields (T.39a.2a.1), proving surjectivity and injectivity of (T.39a.2a.2). The declared equivalences preserve $g_U^2$ and the fixed trace form, so two distinct values of $\chi$ are not identified. ∎
+
+| Resolution-artifact field | `T.39a.2a-R1` record |
+|---|---|
+| Catalog binding and outcome | `TV-T-07`; `negative-refutation` of the proposition that Definition T.39a.1 items 1--4 uniquely force $\chi_U=1/2$, by complete classification of their positive scalar fiber; a new calibration source and its physical response realization remain `C+R`-open |
+| Exact domain | Every positive scalar pair $(\chi_U,g_U^2)$ satisfying item 5 for fixed positive integer $M$ and fixed items 1--4 |
+| Premises | The exact prequantum curvature, loop holonomy, and generator trace normalization of Definition T.39a.1; no measured coupling or threshold tuple |
+| Equivalence relation | Connection-preserving prequantum isomorphism and trace-orthogonal generator-basis change, with the numerical gauge coefficient preserved; scalar rescaling of generators or $g_U$ is outside the quotient |
+| Budget and verifier | Closed-form all-positive-real classification with no search cutoff, regulator, or tolerance; multiply each pair and check $\chi_Ug_U^2=2\pi/M$ |
+| Falsifier | A positive solution outside (T.39a.2a.1), two distinct $\chi$ values identified by an allowed equivalence, or a derivation of $\chi_U=1/2$ from only the frozen premises |
+| Provenance class | Target-independent symbolic consequence of Definition T.39a.1 and Theorem T.39a.2 |
+| Nonvacuity | $(\chi_U,g_U^2)=(1/2,4\pi/M)$ and $(1,2\pi/M)$ are distinct members with identical fixed items 1--4 |
+| Downstream consumers | Theorems T.39a/T.39a.2, Appendix K's coupling summary, `TV-T-07`, `TV-G-13`, and `RT-T7`; $g_U^2=\pi/6$ remains conditional on a separately selected $M=24$, $\chi_U=1/2$ calibration branch |
 
 **Problem T.3** (CKM/PMNS Status Ledger). Sections T.22 and T.24 construct
 mixing-model kernels on the generation manifold $\operatorname{Gr}(2,8)$.

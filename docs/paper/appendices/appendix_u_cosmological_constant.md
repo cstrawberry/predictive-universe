@@ -2697,40 +2697,117 @@ This yields one scalar constraint per degree $\ell$, as the only $SO(4)$-invaria
 $$
 N_{\mathrm{budget}}=|\mathcal L_{12}|\,t=12\cdot5=60.
 $$
-The $24$-cell design proves $t=5$ and Definition U.32 proves the line count. Their product does not prove independence; the exact independence condition is the rank certificate below.
+The $24$-cell design proves $t=5$ and Definition U.32 proves the line count; their product supplies the reference count. Definition U.41a assigns independence to a typed rank certificate and distinguishes a block direct sum with five independently degree-tagged copies of $\mathcal S_{\mathrm{line}}$ from five tests acting on one shared copy. A theorem-level count of $60$ requires the declared-field block rank and the degree-tagged carrier/intertwiner gate below.
 
-**Definition U.41a (24-Cell Line-Amplitude Harmonic-Moment Rank Certificate).** Fix an orthonormal basis $\{s_a\}_{a=1}^{12}$ of $\mathcal S_{\mathrm{line}}$ and use the even lift $E_{\pm}$ of (U.32.1). For each $\ell=1,\ldots,5$, fix before evaluation a real spherical harmonic test function $h_\ell$ of degree $\ell$, including its normalization and restriction to $V_{24}$. Define
+**Definition U.41a (24-Cell Line-Amplitude Harmonic-Moment Rank Certificate).** Use the declared field $\mathbb F=\mathbb C$ for the Definition-U.32 carrier $\mathcal S_{\mathrm{line}}=\mathbb C^{\mathcal L_{12}}$. A real-scalar record may instead declare a twelve-dimensional real form $\mathcal S_{\mathrm{line}}^{\mathbb R}$ whose complexification is $\mathcal S_{\mathrm{line}}$ and on which the basis and even lift below are real. Write $\mathcal S_{\mathrm{line}}^{\mathbb F}$ for the selected form. Fix an orthonormal basis $\{s_a\}_{a=1}^{12}$ of $\mathcal S_{\mathrm{line}}^{\mathbb F}$ and use the even lift $E_{\pm}$ of (U.32.1). For each $\ell=1,\ldots,5$, fix before evaluation a real spherical harmonic test function $h_\ell$ of degree $\ell$, including its normalization and restriction to $V_{24}$. Define
 $$
-\mathcal M_\ell(v,a):=(E_{\pm}s_a)(v)h_\ell(v),
+\mathcal M_\ell^{\mathbb F}(v,a):=(E_{\pm}s_a)(v)h_\ell(v),
 \qquad v\in V_{24},\quad a=1,\ldots,12,
 \tag{U.41a.1}
 $$
-and
+and regard $\mathcal M_\ell^{\mathbb F}$ as a linear map from $\mathcal S_{\mathrm{line}}^{\mathbb F}$ to $\mathbb F^{V_{24}}$. The block-direct-sum map is
 $$
-\mathcal M_{\mathrm{HM}}:=\bigoplus_{\ell=1}^5\mathcal M_\ell.
+\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}
+:=
+\bigoplus_{\ell=1}^5\mathcal M_\ell^{\mathbb F}
+:
+\bigoplus_{\ell=1}^5\mathcal S_{\mathrm{line}}^{\mathbb F}
+\longrightarrow
+\bigoplus_{\ell=1}^5\mathbb F^{V_{24}}.
 \tag{U.41a.2}
 $$
-The certificate records the exact entries, field of arithmetic, row/column order, and a row-reduction witness proving
+Its block-rank record fixes the exact entries, field of arithmetic, row/column order, and a row-reduction or nonzero-minor witness for
 $$
-\operatorname{rank}\mathcal M_{\mathrm{HM}}=60.
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}=60.
 \tag{U.41a.3}
 $$
-If $S_U$ is used, it also records the unitary $J_{12}$. If Golay coordinate data are used, it records $\beta$ and the finite encoder/intertwiner of Definition U.32. A rank computed after choosing an unregistered identification is not accepted.
 
-**Theorem U.41b (Constraint Budget from Harmonic-Moment Rank).** On a branch carrying an accepted 24-cell harmonic-moment rank certificate,
+For five tests acting on one shared line-amplitude vector, define the diagonal embedding and shared-carrier map
 $$
-N_{\mathrm{budget}}=60
+\Delta_5^{\mathbb F}:
+\mathcal S_{\mathrm{line}}^{\mathbb F}
+\longrightarrow
+\bigoplus_{\ell=1}^5\mathcal S_{\mathrm{line}}^{\mathbb F},
+\qquad
+\Delta_5^{\mathbb F}f=(f,f,f,f,f),
+$$
+$$
+\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}
+:=
+\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}\circ\Delta_5^{\mathbb F}.
+\tag{U.41a.4}
+$$
+
+A typed harmonic-rank record $\mathfrak H_{24}$ declares its field and whether its domain is shared or degree-tagged. A degree-tagged physical use supplies a retained $60$-dimensional $\mathbb F$-linear harmonic carrier $\mathcal S_{Q,\mathrm{HM}}^{\mathrm{deg},\mathbb F}$, a response-preserving isomorphism, and the physical harmonic-response map
+$$
+J_{\mathrm{HM}}^{\mathbb F}:
+\mathcal S_{Q,\mathrm{HM}}^{\mathrm{deg},\mathbb F}
+\xrightarrow{\;\cong\;}
+\bigoplus_{\ell=1}^5\mathcal S_{\mathrm{line}}^{\mathbb F},
+\qquad
+\mathcal R_{Q,\mathrm{HM}}^{\mathbb F}
+=
+\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}\circ J_{\mathrm{HM}}^{\mathbb F}.
+\tag{U.41a.5}
+$$
+On this branch $\mathfrak H_{24}$ records (U.41a.3), (U.41a.5), and the overlap with the physical carrier later entered as $\mathfrak C_{Q,\mathrm{car}}$. On the shared branch it records (U.41a.4) and the exact rank of $\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}$. An accepted rank-$60$ record is a degree-tagged record satisfying (U.41a.3)--(U.41a.5). Interpreting those directions as $60$ independent real scalar constraints additionally requires $\mathbb F=\mathbb R$ and the registered real form above.
+
+If $S_U$ is used, $\mathfrak H_{24}$ also records the unitary $J_{12}$ and, on the real degree-tagged branch, its compatibility with the registered real form and the independent physical realization of every invoked factor. If Golay coordinate data are used, it records $\beta$ and the finite encoder/intertwiner of Definition U.32. A rank computed after choosing an unregistered identification is not accepted.
+
+**Theorem U.41b (Constraint Budget from Harmonic-Moment Rank).** On a degree-tagged branch carrying an accepted $\mathfrak H_{24}$ over its declared field $\mathbb F$,
+$$
+r_{\mathrm{HM}}^{\mathrm{deg},\mathbb F}
+:=
+\operatorname{rank}_{\mathbb F}\mathcal R_{Q,\mathrm{HM}}^{\mathbb F}
+=
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}
+=60.
 \tag{U.41b.1}
 $$
-is an exact finite-rank result rather than a product-count assumption.
-
-*Proof.* The matrix $\mathcal M_{\mathrm{HM}}$ has one column for each mode-degree pair $(a,\ell)$ with $a=1,\ldots,12$ and $\ell=1,\ldots,5$, hence it has $12\cdot5=60$ columns. The accepted certificate states that these columns have rank $60$. Therefore all mode-degree constraints are linearly independent, and the number of independent scalar constraints is exactly
+The value $N_{\mathrm{budget}}^{\mathrm{deg}}=60$ follows when the registered budget counts these declared-field directions; a count of independent real scalar constraints uses the real-form clause of Definition U.41a. For five harmonic tests acting on the single shared carrier,
 $$
-N_{\mathrm{budget}}=\operatorname{rank}\mathcal M_{\mathrm{HM}}=60.
+r_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}
+:=
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}
+\le
+\operatorname{rank}_{\mathbb F}\Delta_5^{\mathbb F}
+=12.
+\tag{U.41b.2}
 $$
-∎
+Thus the Definition-U.32 complex shared-carrier branch has complex rank at most $12$ for this harmonic-response map; a registered twelve-dimensional real form has the same real-rank upper bound. The degree-tagged carrier/intertwiner of (U.41a.5) is a necessary antecedent of the rank-$60$ conclusion on this route.
 
-*Remark.* The constraint budget $N_{\text{budget}} = 60$ will constrain the number of inflationary e-folds in Section U.23. Without the rank certificate, Assumption U.41 remains a leading branch count.
+*Proof.* The map $\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}$ has one column for each mode-degree pair $(a,\ell)$ and therefore has $60$ columns. On the degree-tagged branch, $J_{\mathrm{HM}}^{\mathbb F}$ is an isomorphism, so
+$$
+\operatorname{rank}_{\mathbb F}\mathcal R_{Q,\mathrm{HM}}^{\mathbb F}
+=
+\operatorname{rank}_{\mathbb F}\left(\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}J_{\mathrm{HM}}^{\mathbb F}\right)
+=
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}.
+$$
+The accepted block-rank witness gives the value $60$, proving (U.41b.1).
+
+On the shared branch, (U.41a.4) gives
+$$
+\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}
+=
+\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}\Delta_5^{\mathbb F}.
+$$
+The diagonal embedding $\Delta_5^{\mathbb F}$ is injective on the $12$-dimensional space $\mathcal S_{\mathrm{line}}^{\mathbb F}$, hence $\operatorname{rank}_{\mathbb F}\Delta_5^{\mathbb F}=12$. The rank inequality for a composite gives (U.41b.2). ∎
+
+*Remark.* A theorem-level use of $N_{\mathrm{budget}}=60$ in Section U.23 requires an accepted degree-tagged $\mathfrak H_{24}$ over the field used by the budget and the independent e-fold conversion ledger. On the shared-carrier route, (U.41b.2) supplies a matrix-rank bound; the e-fold conversion rule and e-fold interval remain separate entries of Definition U.56a. Assumption U.41 remains the leading reference count on branches where those records are not accepted.
+
+**Resolution record U.41b-R1 (Shared-carrier rank-$60$ obstruction).**
+
+- **Registered proposition and outcome.** Let $P_{\mathrm{sh},60}$ be the proposition that five registered harmonic tests acting on one shared twelve-dimensional line-amplitude carrier have rank $60$. Theorem U.41b gives `negative-refutation` of $P_{\mathrm{sh},60}$ by proving $\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}\le12$.
+- **Domain.** $\mathbb F\in\{\mathbb R,\mathbb C\}$, $\mathcal S_{\mathrm{line}}^{\mathbb F}\cong\mathbb F^{12}$, and five linear maps $\mathcal M_\ell^{\mathbb F}:\mathcal S_{\mathrm{line}}^{\mathbb F}\to\mathbb F^{V_{24}}$ evaluated on the same source vector. Definition U.32 instantiates $\mathbb F=\mathbb C$. A real-scalar interpretation uses the separately registered real form of Definition U.41a.
+- **Premises.** The source has dimension $12$, the common-source embedding is $\Delta_5^{\mathbb F}f=(f,f,f,f,f)$, and the shared response factors as $\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}=\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}\Delta_5^{\mathbb F}$.
+- **Equivalence relation.** Records are equivalent under one common orthogonal or unitary source-basis change and registered row reorderings in each $V_{24}$ block: $\mathcal M_\ell'=P_\ell\mathcal M_\ell U^{-1}$. Shared and degree-tagged domains remain distinct equivalence classes.
+- **Budget.** The proof uses the exact finite dimensions $(12,5)$, zero target queries, no search cutoff, no regulator, and no empirical comparison.
+- **Verifier.** The exact verifier checks the source and codomain types, the displayed factorization, $\operatorname{rank}_{\mathbb F}\Delta_5^{\mathbb F}=12$, and $\operatorname{rank}_{\mathbb F}(AB)\le\operatorname{rank}_{\mathbb F}B$. Acceptance requires all four identities over the declared field.
+- **Falsifier.** A well-typed shared-carrier record satisfying the stated factorization and having $\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}>12$ falsifies this resolution artifact. A map with an enlarged source domain is assigned to its separately typed candidate class.
+- **Provenance class.** `proved-lemma` from Definitions U.32 and U.41a by target-independent exact linear algebra; cosmological comparison values and their proxies are absent from the inputs.
+- **Nonvacuity.** The class is nonempty: the normalized coordinate indicators give an orthonormal basis of $\mathcal S_{\mathrm{line}}$, and for each $\ell=1,\ldots,5$ a normalized restriction of $\operatorname{Re}(x_1+ix_2)^\ell$ is a nonzero real spherical harmonic supplying an admissible $\mathcal M_\ell$.
+- **Downstream consumers.** Definition U.56a, Result U.60 and Theorems U.61--U.68 retain their assumption/certificate-gated statuses; Definition U.69a, Theorem U.69b, `RT-T6`, and `TV-U-05` record the shared-route refutation while leaving the degree-tagged carrier, positive rank certificate, e-fold conversion, and remaining primordial records open.
 
 ---
 
@@ -3125,7 +3202,7 @@ $$
 \mathfrak E_N
 =
 \left(
-\mathcal M_{\mathrm{HM}},
+\mathfrak H_{24},
 \rho_N,
 \mathcal Q_{\mathrm{tr}},
 \phi_0,
@@ -3135,18 +3212,23 @@ I_N,
 \right),
 \tag{U.56a.1}
 $$
-where $\mathcal M_{\mathrm{HM}}$ is the harmonic-moment matrix of Definition U.41a, $\rho_N$ is the fixed rule converting independent harmonic-moment registrations to e-folds, $\mathcal Q_{\mathrm{tr}}$ is the trans-horizon quotient and pivot-registration convention, $\phi_0$ and $\phi_{\mathrm{end}}$ are the finite initial-field and end-of-inflation branch entries, $I_N$ is the certified interval for $N_e$, and $\chi_N=1$ records that none of these entries is selected from the observed values of $n_s$, $r$, $A_s$, $n_t$, running, or local non-Gaussianity.
+where $\mathfrak H_{24}$ is the typed harmonic-rank record of Definition U.41a, $\rho_N$ is the fixed rule converting independent harmonic-moment registrations to e-folds, $\mathcal Q_{\mathrm{tr}}$ is the trans-horizon quotient and pivot-registration convention, $\phi_0$ and $\phi_{\mathrm{end}}$ are the finite initial-field and end-of-inflation branch entries, $I_N$ is the certified interval for $N_e$, and $\chi_N=1$ records that none of these entries is selected from the observed values of $n_s$, $r$, $A_s$, $n_t$, running, or local non-Gaussianity.
 
 The rule (U.56.1) is theorem-level exactly when an accepted ledger satisfies
 $$
-\operatorname{rank}\mathcal M_{\mathrm{HM}}=60,
+\mathfrak H_{24}\text{ is accepted on its degree-tagged branch},
+\qquad
+\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\oplus,\mathbb F}
+=
+\operatorname{rank}_{\mathbb F}\mathcal R_{Q,\mathrm{HM}}^{\mathbb F}
+=60,
 \qquad
 \rho_N(j)=j,
 \qquad
 I_N=\{60\}
 \tag{U.56a.2}
 $$
-before the fiducial field value and trans-horizon quotient are used. Otherwise $N_e$ is branch data and the observables derived in Theorems U.62-U.63, Lemma U.64, Theorem U.65, Corollaries U.65a-U.65b, and Theorems U.66-U.68 are functions of the interval $I_N$ rather than closed scalar predictions.
+before the fiducial field value and trans-horizon quotient are used. If $\rho_N$ counts real scalar registrations, the ledger also supplies the $\mathbb F=\mathbb R$ form required by Definition U.41a. On the Definition-U.32 shared-carrier route, Theorem U.41b gives $\operatorname{rank}_{\mathbb F}\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}\le12$, so that route fails the degree-tagged rank antecedent in (U.56a.2). The rank upper bound has matrix-rank type; an e-fold value still requires the independent entries $\rho_N$ and $I_N$. Otherwise $N_e$ is branch data and the observables derived in Theorems U.62-U.63, Lemma U.64, Theorem U.65, Corollaries U.65a-U.65b, and Theorems U.66-U.68 are functions of the interval $I_N$ rather than closed scalar predictions.
 
 ### U.23.2 Geometric Bound
 
@@ -3794,7 +3876,7 @@ $$
 $$
 together with circular Gaussianity or a stated replacement law, the real-projection map, and its unit normalization. This is the independent action-weight-to-variance bridge of Corollaries U.22--U.24.
 4. $\mathfrak D_Q$ is the entire determinant/index-consistency record of Definition U.26b, including $\operatorname{Dom}\mathcal O_Q$, $P_Q$, every $q_\ell$, $r_Q^{\mathrm{extra}}$, strict positivity, $\mathcal J_Q$, $\mu_Q$, the tail interval, and the forward lock. A reference choice $A_Q=1$ is recorded separately unless the determinant proves it.
-5. $\mathfrak H_{24}$ is Definition U.41a's exact line-amplitude harmonic-rank certificate, including all markings used in its entries.
+5. $\mathfrak H_{24}$ is Definition U.41a's typed harmonic-rank record, including its field, all markings used in its entries, and its overlap with $\mathfrak C_{Q,\mathrm{car}}$. Its positive rank-$60$ branch contains the exact block-rank witness, the retained degree-tagged physical carrier, $J_{\mathrm{HM}}^{\mathbb F}$, and the response-intertwining equation (U.41a.5); a claim of $60$ real scalar constraints also contains the registered real form. A shared-carrier classification branch instead records $\mathcal M_{\mathrm{HM}}^{\mathrm{sh},\mathbb F}$ and its exact rank, which Theorem U.41b bounds by $12$, and propagates that status through $\mathfrak E_N$.
 6. $\mathfrak K_{\mathrm{HR}}$ is the Hopf--Rayleigh kinetic datum of Definition U.44b, including the scalar geodesic normalization and Theorem U.44c's no-rescaling test.
 7. $\mathfrak M_s$ is the scalaron-mass map of Definition U.51a; $\mathfrak L_{\mathrm{LE}}$ is Definition U.48a's local-equilibrium truncation ledger, including $c_2$ and $c_W$; and $\mathfrak E_N$ is Definition U.56a's e-fold registration ledger.
 8. $\phi_0$ fixes the initial-field branch. The curvature-observable record $\mathfrak C_{\mathcal R}$ fixes the gauge-invariant curvature perturbation, pivot, horizon-crossing and trans-horizon transfer, scalar/tensor normalizations, units, and the likelihood/covariance map into each reported observable.
@@ -4041,6 +4123,41 @@ $$
 Promoting that index to a saddle exponent requires the marking certificate $\mathfrak C_{U,\mathrm{mark}}$ of Convention U.14a and its exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$. A numerical weight additionally requires $\mathfrak F_U^{(4)}$, and a cosmological constant additionally requires $\mathfrak R_\Lambda^{(4)}$.
 
 *Proof.* Proposition U.73 requires quartic homogeneity, which Theorem U.73a refutes on this false-vacuum branch. Theorem U.13b fixes the four-mode nullity in its declared Hessian space. Convention U.14a states the independent carrier and action gates needed for exponent transport, and Definitions U.73e and U.73e.6 state the further weight and Einstein-realization gates. ∎
+
+**Resolution record U.73b-R1 (`TV-U-01`, false-vacuum fifth-mode obstruction).** Let $P_{U,5}^{\mathrm{fv}}$ be the proposition that the exact sampled-angular Hessian on the Theorem-U.13b false-vacuum branch has a fifth zero mode. Corollary U.73b gives `negative-refutation` of $P_{U,5}^{\mathrm{fv}}$: its nullity is exactly four. The conformal candidate is independently excluded by the universal argument of Theorem U.73a: $V_{\mathrm{eff}}''(0)>0$ gives a nonzero $t^2$ Taylor coefficient at every nonzero attained field value, whereas quartic homogeneity has zero $t^2$ coefficient. Proposition V.3.12b executes only a representative exact-rational regression of that coefficient mismatch; it is not the universal proof owner.
+
+The domain is the same radially continuous, sampled-angular Hessian, boundary conditions, false-vacuum spectral hypotheses, and nontrivial bounce as Theorem U.13b. Equivalence permits orthogonal changes of the four translation basis vectors and registered vertex reorderings but not a change of Hessian domain or potential branch. The audit uses the exact nullity theorem and the two symbolic degrees $(2,4)$, with no cutoff, regulator, target query, or empirical datum. A fifth linearly independent kernel vector for that same operator falsifies the conclusion; setting $V_{\mathrm{eff}}''(0)=0$ instead invalidates applicability and opens a different action class. The nontrivial bounce and its four translation modes supply nonvacuity.
+
+This record closes the current false-vacuum branch only. `TV-U-01` retains its wider classification of other critical scale families and admissible conformal actions, including an explicitly massless or otherwise altered action, and no carrier, action, determinant, or cosmological realization follows from this obstruction.
+
+**Theorem U.73b.2 (Canonical Homogeneous Scale-Invariance Classification).** Let $D>2$ and, after collecting equal powers, consider a canonical scalar action
+$$
+S[\phi]
+=\int_{\mathbb R^D}
+\left(\frac12|\nabla\phi|^2+\sum_{j=1}^m\lambda_j|\phi|^{p_j}\right)d^Dx,
+\qquad \lambda_j\ne0,
+\tag{U.73b.2.1}
+$$
+on a domain preserved by the weighted dilation
+$$
+(T_\rho\phi)(x)=\rho^{-\alpha}\phi(x/\rho).
+$$
+The action is invariant for every $\rho>0$ exactly when
+$$
+\alpha=\frac{D-2}{2},
+\qquad
+p_j=\frac{2D}{D-2}\quad\text{for every }j.
+\tag{U.73b.2.2}
+$$
+On this branch, every nontrivial critical point generates an exact critical scale family and its dilation tangent lies in the Hessian kernel. In $D=4$, every nonzero potential term must therefore be quartic; a mass term or any other nonquartic homogeneous term excludes this canonical scale-zero-mode mechanism.
+
+*Proof.* Under $T_\rho$, the kinetic term scales by
+$$
+\rho^{D-2-2\alpha},
+$$
+so its nonzero coefficient forces $D-2-2\alpha=0$. The $j$th potential term scales by $\rho^{D-\alpha p_j}$, and invariance for all field amplitudes and all $\rho$ forces $D-\alpha p_j=0$ for each distinct nonzero term. Solving these equations gives (U.73b.2.2), and substitution proves sufficiency. An invertible symmetry maps critical points to critical points; differentiating that exact family at $\rho=1$ places its tangent in the Hessian kernel. Setting $D=4$ gives $\alpha=1$ and $p_j=4$. ∎
+
+The theorem exhausts canonical kinetic actions with finite sums of homogeneous local potential terms. Higher-derivative conformal actions, nonlocal actions, boundary-anomalous domains, and a PU carrier realization are outside this classified action family.
 
 **Remark U.73b.1 (24-Cell Orthogonality Boundary for the Dilatation Gate).** Let $X=V_{24}\subset S^3$ be the 24-cell vertex set and let $d(r,i)=r\varphi'(r)$ be the sampled pure-coordinate dilatation tangent of Theorem U.13. For fixed $r$, $d(r,i)$ is constant in the vertex label $i$. By the explicit coordinate enumeration of Definition U.28 and Lemma U.29 — equivalently the degree-$1$ case of the spherical-design identity of Theorem U.30 — each coordinate sum
 $$

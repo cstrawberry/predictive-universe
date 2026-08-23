@@ -221,6 +221,70 @@ d_{\mathsf P_I}\!\left(I,I^{r\leftarrow0}\right).
 $$
 Hence support membership is transported by $\tau$; the inverse hypotheses give equality rather than one-sided inclusion. Score invariance transports qualification of the original and every null-replaced implementation, which proves preservation of irreducibility. ∎
 
+**Theorem 5a.2 (Complete Finite Response-Table Support Audit).** Fix the finite protocols, outcome alphabets, score datum and three typed-null contracts of Definition 5a. For a submitted finite implementation $I$, form the exact table
+$$
+\mathsf T(I)
+=
+\left(
+(\operatorname{Resp}_I(P))_{P\in\mathsf P},
+(\operatorname{Resp}_{I^{r\leftarrow0}}(P))_{
+r\in\mathsf R_{\mathrm{loop}},\,P\in\mathsf P},
+\mathcal A_{\mathsf P},A_0,\epsilon
+\right).
+\tag{5a.2.1}
+$$
+Exact finite comparison of this table returns all of the following without inspecting an implementation's internal decomposition:
+
+1. the support is exactly the set of rows for which at least one original/null response-law entry differs;
+2. functional irreducibility holds exactly when the original score exceeds $A_0+\epsilon$ and every null-row score is at most $A_0+\epsilon$;
+3. two implementations with the same table, up to the typed protocol, outcome and role bijections of Corollary 5a.1, have the same support cardinality and the same irreducibility status; and
+4. no response-equivalent implementation preserving the entire intervention table can have a smaller protocol-relative support.
+
+*Proof.* Item 1 is Proposition 5a(1), applied to each of the three finite rows. Item 2 is the definition of functional irreducibility, and all inequalities are exact finite comparisons. Corollary 5a.1 proves item 3. If a table-preserving implementation had smaller support, item 3 would give equal support cardinalities, a contradiction; this proves item 4. The audit terminates because the protocol, outcome and role sets are finite. ∎
+
+**Resolution TV-BEC-01-R1 (Metadata).** Exact domain: the finite typed protocol/outcome/role tables of Definition 5a. Premises: exact response laws, the registered score datum and all three typed-null rows. Equivalence: Corollary 5a.1's typed protocol, outcome and role bijections. Budget: every submitted original and null table cell. Verifier: exact table equality and score comparison. Falsifier: equal complete tables with different support, or an audit result disagreeing with a registered score inequality. Provenance class: source-internal finite classification. Downstream consumers: Definition 5a's support/irreducibility claims and `TV-BEC-01`. Nonvacuity: a one-protocol binary table with baseline null rows and an original row above the margin. This is `positive-discharge` of the mathematical response-table component.
+
+**Theorem 5a.3 (Finite Typed-Null Full Loop and Exact Response Transport).** Let the memory, prediction, task-outcome and verification registers all be $\{0,1\}$. Freeze one protocol with initial current-state datum $1$ and task outcome $y=1$. Realize the three Definition-5 roles by the typed maps
+$$
+M_m(*)=1,
+\qquad
+M_p(m)=m,
+\qquad
+M_v(m,p,y)=\bigl(mp\mathbf1_{\{p=y\}},y\bigr),
+\tag{5a.3.1}
+$$
+where the first output of $M_v$ is the retained verification response and the second is the next-cycle memory. Thus $M_m$ encodes the current state, $M_p$ generates its prediction, and $M_v$ acquires the outcome, compares it with the prediction and initiates the update.
+
+Register the typed nulls
+$$
+0_m(*)=0,
+\qquad
+0_p(m)=0,
+\qquad
+0_v(m,p,y)=(0,0).
+\tag{5a.3.2}
+$$
+Each isolated replacement leaves every other module, register, initialization, task, protocol, timing convention and readout unchanged. The original and three null-intervened response laws are respectively
+$$
+\delta_1,
+\qquad
+\delta_0,\ \delta_0,\ \delta_0.
+\tag{5a.3.3}
+$$
+For the score $\mathcal A(\nu)=\nu(\{1\})$, baseline $A_0=0$ and margin $\epsilon=1/2$, the full loop is functionally irreducible and all three roles form its protocol-relative support.
+
+The same typed loop has an exact diagonal quantum realization. For every deterministic map $f:X\to Y$ between the finite registers above, define the measure-and-prepare channel
+$$
+\mathcal E_f(\rho)
+=\sum_{x\in X}\langle x|\rho|x\rangle|f(x)\rangle\langle f(x)|.
+\tag{5a.3.4}
+$$
+Use $\mathcal E_f$ for each map in (5a.3.1)--(5a.3.2), tensor computational-basis carriers for the inputs of $M_v$, and read the verification register in its computational basis. Diagonal preparation and basis readout are inverse response maps and intertwine every original and null channel, so the complete table (5a.3.3), its score, support and irreducibility transport exactly.
+
+*Proof.* On the original loop, $m=p=y=1$, so $M_v$ returns response $1$ and next memory $1$. Replacing $M_m$ or $M_p$ makes $mp=0$; replacing $M_v$ sets its first output to zero. This proves (5a.3.3). The score inequalities are $1>1/2$ for the original and $0\le1/2$ for every null row, so Theorem 5a.2 gives support $\{b_m,b_p,b_v\}$ and irreducibility. Each map in (5a.3.4) is completely positive and trace preserving, sends diagonal point states according to $f$, and returns the corresponding classical law under basis measurement. Therefore all original and null diagrams required by Corollary 5a.1 commute. ∎
+
+**Resolution TV-BEC-01-R2 (Metadata).** Exact domain: the one-protocol binary full loop (5a.3.1)--(5a.3.3) and its complete diagonal-channel transport (5a.3.4). Premises: the frozen initial state and outcome, the displayed typed modules and nulls, and the registered score datum. Equivalence: the typed protocol, outcome and role bijections of Corollary 5a.1. Budget: three role maps, three isolated null maps and both finite carrier presentations. Verifier: exact evaluation of all four response rows, CPTP normalization and the classical--diagonal intertwining identities. Falsifier: any ill-typed null, changed non-target module, noncommuting response square or score/support mismatch. Provenance class: source-internal finite construction. Downstream consumers: Definition 5, Definition/Proposition 5a, Corollary 5a.1 and `TV-BEC-01`. Together with Theorem 5a.2, Theorem 5a.3 gives `positive-discharge` of `TV-BEC-01`.
+
 **Remark 5a.1 (Scope of Knockout and Conservation Claims).** Definition 5a supplies a common intervention form, not one universal physical experiment. Component ablation, gene knockout, and counterfactual deletion instantiate it only when the typed isolated-null contract is certified in the relevant domain. Distributed realization, redundancy, compensation, inadmissible null maps, and collateral changes can prevent role localization. A performance drop certifies loss of qualification only at the registered margin. Collapse to the registered baseline requires the stronger Proposition 5a inequality, and that baseline is chance only when $A_0$ has separately been fixed as the matched-chance score. Corollary 5a.1 requires transport of original and null-intervened response laws, intervention types, and score data; performing the same task, sharing a score, or exceeding chance does not by itself establish functional conservation across carriers.
 
 #### 3.2 Reflexive Interaction Dynamics (RID)
@@ -325,6 +389,94 @@ $$
 $$
 when $\hat C_{\mathrm{target}}/\kappa_{\mathrm{eff}}>0$. ∎
 
+**Theorem 9a (Exact Endpoints for a Finite Locked Task).** Fix one finite outcome space, task law, evaluation window, proper score $S$, scale $k_{PP}>0$, and a nonempty finite set $\mathcal A$ of attainable predictive laws supplied by the registered dynamics. For $a\in\mathcal A$, let
+$$
+R(a):=\mathbb E[S(a,Y)],
+\qquad
+P(a):=\frac{1}{1+k_{PP}R(a)}.
+\tag{9a.1}
+$$
+Assume each registered risk $R(a)$ is finite and nonnegative. Then the attainable performance endpoints are attained and equal
+$$
+P_{\min}=\frac{1}{1+k_{PP}\max_{a\in\mathcal A}R(a)},
+\qquad
+P_{\max}=\frac{1}{1+k_{PP}\min_{a\in\mathcal A}R(a)}.
+\tag{9a.2}
+$$
+For two branches on the same locked task, score, normalization and window, inclusion $\mathcal A_1\subseteq\mathcal A_2$ implies
+$$
+P_{\max}(\mathcal A_1)\le P_{\max}(\mathcal A_2),
+\qquad
+P_{\min}(\mathcal A_1)\ge P_{\min}(\mathcal A_2).
+\tag{9a.3}
+$$
+No ordering between two interior numerical endpoints is invariant under independently chosen score calibrations. Replacing $P$ by any strictly increasing bijection $h:(0,1]\to(0,1]$ preserves each within-branch ordering while moving every interior endpoint; two independently chosen such maps can reverse an interior cross-branch comparison. The universal endpoint $P=1$ is fixed.
+
+*Proof.* A real function on a nonempty finite set attains its minimum and maximum. The map $r\mapsto(1+k_{PP}r)^{-1}$ is strictly decreasing, giving (9a.2). Set inclusion can only decrease the minimum risk and increase the maximum risk, which gives (9a.3) after applying the decreasing map. Strictly increasing recalibrations preserve order inside each branch, fix $1$, and can send any nominated interior value to any nominated interior value; choosing the two images in reverse order proves the final interior statement. ∎
+
+**Resolution TV-BEC-02-R1 (Metadata).** Exact domain: nonempty finite attainable-law sets under one locked task, score, window and positive scale. Premises: nonnegative finite risks under Definition 7's registered score. Equivalence: equality of predictive laws on the locked outcome distribution. Budget: all laws in the submitted finite attainable sets. Verifier: exact risk evaluation, endpoint enumeration and set-inclusion comparison. Falsifier: an endpoint outside (9a.2) or a same-task inclusion violating (9a.3). Provenance class: source-internal finite optimization. Downstream consumers: Theorems 8--9b, Definition 8 and `TV-BEC-02`. Nonvacuity: the singleton zero-risk task and a two-law task with $0<r_1<r_2$. This is `positive-discharge` for the finite locked-data component and `nonentailment` of interior cross-branch ordering under independent calibrations. Theorem 9b and Resolution TV-BEC-02-R2 below discharge the arbitrary-class mathematical extension; physical identification of the locked task and its attainable dynamics remains `R`-open.
+
+**Theorem 9b (Arbitrary Attainable-Class Endpoints and Generator-Only Obstruction).** Retain the locked outcome space, task law, evaluation window, proper score $S$, and scale $k_{PP}>0$ of Theorem 9a, but let $\mathcal A$ be any nonempty, possibly infinite set of attainable predictive laws. Assume that every risk $R(a)=\mathbb E[S(a,Y)]$ is finite and nonnegative, and define
+$$
+r_-:=\inf_{a\in\mathcal A}R(a),
+\qquad
+r_+:=\sup_{a\in\mathcal A}R(a)\in[0,\infty],
+\tag{9b.1}
+$$
+$$
+P_{\inf}(\mathcal A):=\inf_{a\in\mathcal A}\frac{1}{1+k_{PP}R(a)},
+\qquad
+P_{\sup}(\mathcal A):=\sup_{a\in\mathcal A}\frac{1}{1+k_{PP}R(a)}.
+\tag{9b.2}
+$$
+With $(1+k_{PP}\infty)^{-1}:=0$, the exact extended endpoints are
+$$
+P_{\inf}(\mathcal A)=\frac{1}{1+k_{PP}r_+},
+\qquad
+P_{\sup}(\mathcal A)=\frac{1}{1+k_{PP}r_-}.
+\tag{9b.3}
+$$
+The upper performance endpoint is attained exactly when some $a\in\mathcal A$ attains $r_-$. The lower performance endpoint is attained exactly when $r_+<\infty$ and some $a\in\mathcal A$ attains $r_+$; when $r_+=\infty$, it equals $0$ and is not attained. If $\mathcal A$ is compact in a registered topology and $R$ is real-valued and continuous, both endpoints are attained. For two classes on the same locked task, score, normalization, and window, $\mathcal A_1\subseteq\mathcal A_2$ implies
+$$
+P_{\sup}(\mathcal A_1)\le P_{\sup}(\mathcal A_2),
+\qquad
+P_{\inf}(\mathcal A_1)\ge P_{\inf}(\mathcal A_2).
+\tag{9b.4}
+$$
+Independently chosen strictly increasing recalibrations can reverse the numerical order of any two interior cross-class endpoints, so such an order is invariant only after the calibration is shared.
+
+There is no total algorithm that, from a code for an arbitrary uniformly computable sequence of attainable laws on a locked task, always decides whether $P_{\sup}=1$. This obstruction holds even for one deterministic binary task, the binary squared score, $k_{PP}=1$, and risks in $\{0,1\}$.
+
+*Proof.* Extend $f(r)=(1+k_{PP}r)^{-1}$ continuously to $[0,\infty]$ by $f(\infty)=0$. The function is strictly decreasing. Applying it to sequences approaching $r_-$ and $r_+$ gives (9b.3), and strict monotonicity gives the two attainment criteria. Compactness and continuity give attained finite risk extrema. Set inclusion can only decrease the risk infimum and increase the risk supremum, which proves (9b.4). The recalibration claim follows by choosing independent increasing bijections of $(0,1]$ that send the two nominated interior endpoints to values in the reverse order.
+
+For the algorithmic claim, fix a program/input pair $(e,w)$ and let $Y=0$ almost surely. At index $n$, simulate $e(w)$ for $n$ steps and output the predictive law with Bernoulli parameter $p_n=0$ if the computation has halted and $p_n=1$ otherwise. This is a uniformly computable sequence. Under $S(p,y)=(p-y)^2$, every risk belongs to $\{0,1\}$. If $e(w)$ never halts, every attainable performance is $1/2$; if it halts, the sequence contains a law of performance $1$. A total decision procedure for $P_{\sup}=1$ would therefore decide the halting problem. ∎
+
+**Resolution TV-BEC-02-R2 (Arbitrary-Class Classification).** Exact domain: nonempty finite or infinite attainable-law sets under one locked task, score, window, and positive scale, with finite nonnegative risk for every admitted law. Premises: Theorems 9a and 9b's frozen task and risk hypotheses. Equivalence: equality of predictive laws on the locked outcome distribution. Budget: the submitted census for the finite case; the full abstract class for the order theorem; and submitted extremum, continuity, or compactness proofs for a concrete nonfinite application. Verifier: exact finite enumeration under Theorem 9a or checked risk bounds and extremum witnesses under Theorem 9b. Falsifier: an endpoint violating (9b.3), an attainment claim without the corresponding risk extremum, a same-task inclusion violating (9b.4), or a total generator-only equality decider succeeding on the halting-coded family. Provenance class: source-internal exact analysis and computability. Downstream consumers: Theorems 8--9b, Definition 8, and `TV-BEC-02`. Nonvacuity: Theorem 9a's finite examples, every nonempty compact continuous-risk class, and the halting-coded binary family. Theorems 9a and 9b give `positive-discharge` of the mathematical endpoint, attainment, and same-task ordering classification and `negative-refutation` of uniform exact extraction from a generator alone.
+
+**Theorem 9c (Populated Two-Law Endpoint Realization).** Freeze a one-cycle window, the deterministic binary task law $Y=0$, the proper binary squared score $S(p,Y)=(p-Y)^2$, and $k_{PP}=1$. Let a two-state classical control register $X=\{x_0,x_1\}$ have controls $a_0,a_1$ with
+$$
+T(x,a_i)=x_i,
+\qquad
+\widehat p(x_0)=0,
+\qquad
+\widehat p(x_1)=\frac12.
+\tag{9c.1}
+$$
+The registered attainable-law class is exactly $\mathcal A=\{\operatorname{Bern}(0),\operatorname{Bern}(1/2)\}$, since either state is reached in one control step and the readout has no other value. Its risks and performance values are
+$$
+R_0=0,
+\quad R_1=\frac14,
+\qquad
+P_0=1,
+\quad P_1=\frac45.
+\tag{9c.2}
+$$
+Thus the realized endpoints are attained and equal $P_{\min}=4/5$ and $P_{\max}=1$.
+
+*Proof.* Equation (9c.1) proves reachability and exhausts the two-state carrier. Direct expectation under $Y=0$ gives $R(p)=p^2$, and Definition 7 gives $P(p)=(1+R(p))^{-1}$. Substitution yields (9c.2), which agrees with Theorem 9a. ∎
+
+**Resolution TV-BEC-02-R3 (Metadata).** Exact domain: the one-cycle binary task, two-state control register and two-law attainable class in (9c.1). Premises: the deterministic outcome law, squared score, $k_{PP}=1$, and the two exhaustive controls. Equivalence: equality of predictive laws on the frozen task. Budget: both states, controls, laws, risks and endpoint comparisons. Verifier: one-step reachability, census exhaustion, direct risk evaluation and Definition-7 normalization. Falsifier: any additional attainable readout, incorrect risk, unattained endpoint or task/score drift. Provenance class: source-internal finite realization. Downstream consumers: Theorems 8--9b, Definition 8 and `TV-BEC-02`. Theorem 9c populates the task, score, window, scale, attainable dynamics and both certified risk extrema on one carrier; together with Theorems 9a--9b it gives `positive-discharge` of `TV-BEC-02`.
+
 #### 3.3.4 Remark 1 (Distinct Roles of $\beta_0$, $\beta$, and $\alpha_{SPAP}$)
 
 Theorem 9 supplies the task-relative pathwise ceiling $\beta_0$. Definition 8 uses a registered analytic upper endpoint $\beta$; on a branch that also carries Theorem 9 and Theorem 19, consistency requires $\alpha<\beta\le\beta_0$. The logarithmic divergence at $\beta$ follows only from Theorem 19's exact multiplicative residual-composition hypothesis.
@@ -381,4 +533,38 @@ $$
 $$
 Thus the unregulated process exits almost surely. Any implementation satisfying perpetual operational viability must alter the uncontrolled dynamics through regulation or protection so that the uniform exit-risk premise no longer holds. ∎
 
+**Theorem 1a (Finite Response-Preserving Safety Kernel and Minimum Controller).** Let $X$ be a finite registered state set, $V\subseteq X$ the states whose performance lies in $(\alpha,\beta)$, and $A(x)$ a finite nonempty set of response-preserving admissible controls at $x$. Let $P(\cdot\mid x,a)$ be an exact transition law. Define
+$$
+W_0:=V,
+\qquad
+W_{n+1}:=
+\left\{x\in W_n:\exists a\in A(x),\ 
+\operatorname{supp}P(\cdot\mid x,a)\subseteq W_n\right\}.
+\tag{1a.1}
+$$
+The descending sequence stabilizes after at most $|V|$ strict deletions at a greatest fixed point $W_*$. A controller keeps the process in $V$ almost surely from $x$ for every cycle if and only if $x\in W_*$. When $x\in W_*$, one deterministic stationary controller is obtained by choosing at each state a witnessing action in (1a.1). If $W_*\ne\varnothing$, the deterministic stationary selectors whose transition supports stay in $W_*$ form a nonempty finite safe-controller census. When that census carries an exact cost $J(\pi)$, its minimum is attained; it is strict exactly when one controller has cost smaller than every other controller modulo the declared response equivalence.
+
+*Proof.* Finiteness makes the decreasing sequence stabilize. At a fixed point, choose a witnessing action at every $x\in W_*$. Its transition support stays in $W_*$, so induction gives almost-sure safety for all times. Conversely, if $x\notin W_*$, let $n$ be the first deletion stage. Every admissible action at $x$ has positive probability of entering $X\setminus W_{n-1}$; backward induction on deletion rank shows that no policy can guarantee perpetual membership in $V$. A real-valued function on the nonempty finite safe-controller set attains its minimum, and the strictness criterion is the definition of a unique minimizing equivalence class. ∎
+
+**Resolution TV-BEC-03-R1 (Metadata).** Exact domain: finite registered controlled Markov kernels with a finite viable set and response-preserving action sets. Premises: exact transition supports and nonempty admissible actions; $W_*\ne\varnothing$ for the minimum-controller clause. Equivalence: equality of retained task responses, with controller uniqueness taken modulo that declared response equivalence. Budget: at most $|V|$ strict kernel deletions plus exhaustive comparison of the finite deterministic-stationary safe-controller census. Verifier: fixed-point iteration (1a.1), support checks and exact cost comparison. Falsifier: a selected action leaving $W_*$ or an almost-sure safe policy from a deleted state. Provenance class: source-internal finite control classification. Downstream consumers: Proposition 1, Axiom 3 and `TV-BEC-03`. Nonvacuity: a one-state viable self-loop system. The theorem is `positive-discharge` of the finite mathematical controller component.
+
+**Theorem 1b (Two-State Regulator with a Strict Safe Optimum).** Take $X=\{v,o\}$, $\alpha=1/3$, $\beta=2/3$, and registered performance values $PP(v)=1/2$, $PP(o)=1/4$, so $V=\{v\}$. Let the response-preserving admissible sets be $A(v)=\{h_0,h_1\}$ and $A(o)=\{h_o\}$. Their deterministic transition laws are
+$$
+P(v\mid v,h_0)=P(v\mid v,h_1)=1,
+\qquad
+P(o\mid o,h_o)=1.
+\tag{1b.1}
+$$
+Register the complete controlled-cycle response as the next-state/performance pair. The two hold controls both return $(v,1/2)$ on every cycle, so $h_0$ and $h_1$ are response-equivalent safe realizations; $h_o$ returns $(o,1/4)$ on its separate state fiber. For comparison, the uncontrolled transition $u$ with $P(o\mid v,u)=1$ is recorded outside $A(v)$ and is not an admissible response-preserving selector. The safety iteration gives $W_*=\{v\}$. Its deterministic stationary safe-controller census consists exactly of the selectors $h_0$ and $h_1$. With exact retained costs
+$$
+J(h_0)=1,
+\qquad
+J(h_1)=2,
+\tag{1b.2}
+$$
+$h_0$ is the unique strict minimum modulo response equivalence. The matrices defined by (1b.1), the two-state register and the selected feedback wire form a finite formal transition-loop realization.
+
+*Proof.* Both admissible hold actions at $v$ have support in $V$, so Equation (1a.1) stabilizes at $\{v\}$. The separately recorded uncontrolled transition leaves $V$ but does not enter the admissible-action quantifier. A stationary admissible selector is safe exactly when it chooses one of the two hold actions at $v$. Equation (1b.2) makes $h_0$ its strict minimum, and induction on cycles proves perpetual retention of $v$. ∎
+
+**Resolution TV-BEC-03-R2 (Metadata).** Exact domain: the two-state controlled kernel (1b.1), its complete next-state/performance response, the external uncontrolled comparator and deterministic stationary admissible selectors. Premises: the displayed viable band, action supports, response equivalence and exact costs. Equivalence: equality of the retained controlled-cycle response, with controller uniqueness modulo that equality. Budget: both states, every admissible action, the one uncontrolled comparator and the complete two-member safe-controller census. Verifier: fixed-point iteration, transition-support checks, response equality and exact cost comparison. Falsifier: admitting the uncontrolled comparator into $A(v)$, an omitted safe selector, unequal hold responses or a cost tie/reversal. Provenance class: source-internal finite control realization. Downstream consumers: Proposition 1, Axiom 3 and `TV-BEC-03`. Theorem 1b populates the transition law, response-preserving safe-action audit, viable kernel and strict minimum controller on one formal carrier; together with Theorem 1a it gives `positive-discharge` of `TV-BEC-03`.
 

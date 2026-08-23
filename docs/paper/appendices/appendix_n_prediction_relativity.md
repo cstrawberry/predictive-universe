@@ -21,6 +21,48 @@ dx_t=-\eta(x_t)\operatorname{grad}_gV(x_t)\,dt+\sigma(x_t)\,dW_t,
 $$
 only on a branch fixing a finite-dimensional smooth state manifold $X$ (a vector space is allowed), a Riemannian metric $g$, tangent mobility $\eta_x:T_xX\to T_xX$, Brownian dimension $m$, a filtered probability space with an $m$-dimensional Brownian motion, a diffusion factor $\sigma_x:\mathbb R^m\to T_xX$ satisfying $\sigma_x\sigma_x^*=2D_x$, coefficient domains and regularity, boundary behavior, and either a Stratonovich convention or an Itô convention with the required connection/chart data. A common unit/metering record is also required. If a reset entropy enters a cost term, a registered reset frequency is required to make an entropy rate; physical power additionally requires the declared temperature/energy conversion. The equation alone proves neither well-posedness nor existence, attainment, or uniqueness of a global minimizer, and it does not prove convergence to one. Those conclusions require the separate existence, stability, ergodicity, low-noise, or attractor certificates stated in Appendix D. The principles below are therefore conditional inputs to this branch model rather than an unconditional evolution law of a frozen joint PU theory.
 
+**Theorem N.1a (Complete Anisotropic Quadratic PCE Diffusion Package).** Fix $d\ge1$, the domain $X=\mathbb R^d$ with Euclidean metric and no boundary, $b\in\mathbb R^d$, symmetric positive-definite matrices $H,M\in\mathbb R^{d\times d}$, and $\beta>0$. Give $V$ the common declared cost unit and choose the time unit so that $MH$ has units of inverse time. Set
+$$
+V(x)=\frac12(x-b)^{\mathsf T}H(x-b),
+\qquad
+dX_t=-MH(X_t-b)\,dt+\sqrt{2\beta^{-1}M}\,dW_t.
+\tag{N.1a.1}
+$$
+This is Equation D.8 with $g=I$, $\eta=M$, $D=\beta^{-1}M$ and the Itô convention. It has the following complete conclusions.
+
+1. For every square-integrable initial law independent of $W$, Equation (N.1a.1) has a unique nonexplosive strong solution.
+2. The deterministic mobility-gradient flow $\dot x=-MH(x-b)$ is globally defined, and $b$ is the unique global minimizer of $V$ and its globally exponentially attracting equilibrium.
+3. With
+   $$
+   A=M^{1/2}HM^{1/2},
+   \qquad \lambda_*:=\lambda_{\min}(A)>0,
+   \tag{N.1a.2}
+   $$
+   the exact transformed solution $Y_t=M^{-1/2}(X_t-b)$ is
+   $$
+   Y_t=e^{-At}Y_0+\sqrt{2\beta^{-1}}
+   \int_0^te^{-A(t-s)}\,dW_s.
+   \tag{N.1a.3}
+   $$
+4. The unique invariant law is
+   $$
+   \pi_\beta=\mathcal N\!\left(b,\beta^{-1}H^{-1}\right),
+   \tag{N.1a.4}
+   $$
+   and synchronous coupling gives, for the Wasserstein distance induced by
+   $\|x\|_{M^{-1}}:=\|M^{-1/2}x\|_2$,
+   $$
+   W_{2,M^{-1}}(\mu P_t,\nu P_t)
+   \le e^{-\lambda_*t}W_{2,M^{-1}}(\mu,\nu).
+   \tag{N.1a.5}
+   $$
+   Hence every finite-second-moment law converges to $\pi_\beta$, and the stationary process obeys the ergodic time-average theorem for every $f\in L^1(\pi_\beta)$.
+5. In the low-noise limit, $\pi_\beta\Rightarrow\delta_b$ as $\beta\to\infty$.
+
+*Proof.* The drift and diffusion coefficients are globally Lipschitz, so the standard Itô existence and pathwise-uniqueness theorem gives item 1. Positive definiteness of $H$ gives the unique minimizer. Applying $M^{-1/2}$ to (N.1a.1) gives the symmetric Ornstein--Uhlenbeck equation $dY_t=-AY_tdt+\sqrt{2\beta^{-1}}dW_t$, whose variation-of-constants formula is (N.1a.3). Since $A\succeq\lambda_*I$, its deterministic flow contracts by $e^{-\lambda_*t}$, proving item 2 after transforming back. The stationary covariance in $Y$ coordinates is $\beta^{-1}A^{-1}$ because it solves $A\Sigma+\Sigma A=2\beta^{-1}I$. Transforming back gives $\beta^{-1}H^{-1}$. The same Brownian path cancels in the difference of two solutions, proving (N.1a.5); uniqueness, convergence and ergodicity follow. Finally, the covariance in (N.1a.4) tends to zero, proving weak convergence to $\delta_b$. ∎
+
+**Resolution TV-N-01-R1 (Metadata).** Exact domain: every finite dimension and every constant positive-definite quadratic-potential/mobility package in Theorem N.1a on $\mathbb R^d$ with the Euclidean metric and no boundary. Premises: the displayed cost/time-unit convention, Itô interpretation and square-integrable initial law. Equivalence: orthogonal coordinate changes together with the induced conjugation of $H$ and $M$. Budget: all initial laws with finite second moment and all positive noise parameters; there is no finite-time or sampling cutoff. Verifier: positive-definiteness checks, the linear change of variables, the Lyapunov covariance identity and synchronous coupling. Falsifier: explosion or nonuniqueness, a second invariant law, failure of the minimizer statement, or violation of (N.1a.5). Provenance class: source-internal exact stochastic construction. Downstream consumers: Equation D.8, Appendix D's stochastic-PCE branch and `TV-N-01`. The theorem gives `positive-discharge` of well-posedness, attainment, gradient-flow convergence and ergodic/low-noise convergence on this frozen linear-quadratic package. A formal MPU-state realization and coefficient/source derivation, and nonlinear, state-dependent-mobility or bounded-domain packages, remain open, so the target is not closed.
+
 ## N.2 Divergence Laws for Hardware and Software Limits
 
 The PCE Potential incorporates costs that diverge as the system approaches fundamental physical or logical limits. Two such divergences are critical:
@@ -1024,6 +1066,52 @@ The budgets $C_i^{\mathrm{rel}}$ are registered relational-cut normalizations, n
 
 *Proof.* Product-state additivity proves the first route. The quantum chain rule proves the second route, and strong subadditivity gives $I_i\ge0$. The source-exhaustion audit prevents a term from appearing twice. The definitions $I_i=q_iC_i^{\mathrm{rel}}$ give the second equality in (N.21), and common $C_i^{\mathrm{rel}}$ and $q_i$ give the specialization. This is a finite certificate theorem, not a PCE saturation theorem. Indeed, a maximally entangled $d\times d$ pure state has $I(S:E)=2\ln d$, while the unassisted classical capacity of the noiseless $d$-level identity channel is $\ln d$. Therefore the former cannot generally be bounded or decomposed by the latter. ∎
 
+**Proposition N.4.0a (Exact Two-Channel Additivity and Split-Order Criterion).** For every finite-dimensional state $\rho_{SE_1E_2}$,
+$$
+\begin{aligned}
+&I(S:E_1)+I(S:E_2)-I(S:E_1E_2)\\
+&\hspace{2em}=I(E_1:E_2)-I(E_1:E_2\mid S).
+\end{aligned}
+\tag{N.4.0a.1}
+$$
+Consequently, the two marginal channel contributions are additive exactly when
+$$
+I(E_1:E_2)=I(E_1:E_2\mid S).
+\tag{N.4.0a.2}
+$$
+The chain-rule allocations to the named channel $E_1$ in the two orders are
+$$
+I(S:E_1)
+\quad\text{and}\quad
+I(S:E_1\mid E_2),
+\tag{N.4.0a.3}
+$$
+and they agree exactly under the same condition (N.4.0a.2); the statement is symmetric for $E_2$.
+
+Marginal independence of the carriers is insufficient. Let $E_1,E_2$ be independent uniform classical bits and let $S=E_1\mathbin{\mathrm{XOR}}E_2$, represented as a diagonal quantum state. Then
+$$
+I(E_1:E_2)=0,
+\quad I(S:E_1)=I(S:E_2)=0,
+\quad I(S:E_1E_2)=\ln2,
+\tag{N.4.0a.4}
+$$
+whereas
+$$
+I(S:E_2\mid E_1)=I(S:E_1\mid E_2)=\ln2.
+\tag{N.4.0a.5}
+$$
+Thus the ordered chain rule always preserves the total but assigns the entire contribution to whichever carrier is second. A split-independent concurrent-channel attribution requires a condition at least strong enough to exclude this synergy; absence of a shared marginal carrier alone does not do so.
+
+*Proof.* Expanding both sides of (N.4.0a.1) in von Neumann entropies gives
+$$
+S(S)+S(E_1)+S(E_2)-S(SE_1)-S(SE_2)-S(E_1E_2)+S(SE_1E_2)
+$$
+on each side. The chain-rule identity
+$I(S:E_1)-I(S:E_1\mid E_2)=I(E_1:E_2)-I(E_1:E_2\mid S)$
+then proves the order criterion. In the XOR state, each single bit is independent of $S$, while the pair determines $S$; the displayed values follow directly. ∎
+
+**Resolution TV-N-06-R1 (Metadata).** Exact domain: all finite-dimensional tripartite quantum states and the two named channel splits of Proposition N.4.0a. Premises: standard von Neumann mutual and conditional mutual information. Equivalence: local isometries and relabelings that preserve the named split. Budget: every density matrix on the declared finite carrier; the XOR witness is exact. Verifier: entropy expansion and the four-atom diagonal probability table. Falsifier: a state violating (N.4.0a.1), or equality of the named-channel allocations in a state violating (N.4.0a.2). Provenance class: source-internal exact classification and counterexample. Downstream consumers: Proposition N.4 and `TV-N-06`. This gives `positive-discharge` of the exact two-channel additivity/order criterion and `nonentailment` of split-independent attribution from marginal carrier independence. General multi-channel split independence, capacity-normalization selection and a populated no-shared-server physical realization remain open, so the target is not closed.
+
 
 ### N.11.2 Open-System Thermodynamics and the KMS Condition
 
@@ -1280,7 +1368,68 @@ $$
 $$
 Equality is exactly the additional reversible-limit overlap condition. The final expression substitutes the already accepted mass coefficient and therefore proves compatibility only. ∎
 
+**Proposition N.6a (Mechanical Scale Modulus before Response Calibration).** Fix any nonempty relational-pattern history, its source-exhaustive update ledger, and a positive relational mass coefficient $m_{\mathrm{rel}}$. Let $Q$ be a finite-dimensional worldline configuration space and let $U:Q\to\mathbb R$ be continuously differentiable. For every dimensionless $\lambda>0$, define the mechanical realization
+$$
+L_\lambda(q,\dot q)
+=\lambda\left(\frac{m_{\mathrm{rel}}}{2}\|\dot q\|^2-U(q)\right).
+\tag{N.6a.1}
+$$
+All members have exactly the same Euler--Lagrange trajectories for the same initial data,
+$$
+m_{\mathrm{rel}}\ddot q=-\nabla U(q),
+\tag{N.6a.2}
+$$
+and leave every fixed relational state, mutual-information value and update count unchanged, but their canonical momenta are
+$$
+p_\lambda=\lambda m_{\mathrm{rel}}\dot q.
+\tag{N.6a.3}
+$$
+Hence the relational ledger and the worldline trajectories do not determine the momentum-response coefficient: the fiber over the same relational and trajectory data contains the full modulus $\lambda\in\mathbb R_{>0}$. A unit coefficient is selected only by an independent momentum/source calibration or an axiom that removes this scaling fiber.
+
+*Proof.* Multiplication of a Lagrangian by a positive constant multiplies every term of its Euler--Lagrange equation by that constant and therefore leaves the solution set unchanged. Differentiation with respect to $\dot q$ gives (N.6a.3). The relational records were fixed before $L_\lambda$ was appended and contain no $\lambda$ coordinate, so they are identical for all members. The cases $\lambda=1$ and $\lambda=2$ give two explicit inequivalent nonempty realizations. ∎
+
+**Resolution TV-N-07-R1 (Metadata).** Exact domain: the nonempty finite-dimensional mechanical-realization class (N.6a.1) over any fixed positive relational ledger and differentiable potential. Premises: the relational state/update data do not already include a momentum or force-unit calibration. Equivalence: realizations are response-equivalent only when their momentum response agrees; multiplying the action is not quotiented out. Budget: every $\lambda>0$ and every classical solution. Verifier: Euler--Lagrange differentiation and canonical-momentum evaluation. Falsifier: a relational datum depending on $\lambda$, or equality of (N.6a.3) for two distinct $\lambda$ at nonzero velocity. Provenance class: source-internal scale-modulus countermodel. Downstream consumers: Theorem N.6 and `TV-N-07`. This is `nonentailment` of the universal unit coefficient from relational patterns, update counts and trajectories alone. A scale-fixing mechanical/source certificate and a common formal response realization remain open, so the target is not closed.
+
 **Remark N.11.1: Scope of the Machian Interpretation.** Quantum mutual information satisfies $\mathcal I_{\mathrm{rel}}=0$ exactly when the state is a product across the declared split. On $\mathfrak B_{\mathrm{mass}}^{\mathrm{rate}}(q)$, Equation (N.26) then assigns zero to this particular relational mass coefficient. It does not follow that the system is vacuum, that every retained observable vanishes, or that no other mass/source ledger is present. Operational indistinguishability from a specified vacuum requires a separate certificate proving equality of all retained response functionals. Thus the Machian reading is a branch interpretation of the certified relational contribution, not an unconditional ontology theorem.
+
+**Theorem N.11.4a (Complete Finite Retained-Algebra Response Test and Zero-MI Vacuum Refutation).** Let $\mathcal H$ be finite-dimensional, let $\mathfrak A\subseteq\mathcal B(\mathcal H)$ be a unital $*$-subalgebra, and let $\mathbb E_{\mathfrak A}$ be the trace-preserving Hilbert--Schmidt conditional expectation onto $\mathfrak A$. For density operators $\rho$ and $\omega$, the following are equivalent:
+$$
+\begin{aligned}
+&\operatorname{Tr}(E\rho)=\operatorname{Tr}(E\omega)
+&&\text{for every retained effect }0\le E\le I, E\in\mathfrak A;\\
+&\mathbb E_{\mathfrak A}(\rho)=\mathbb E_{\mathfrak A}(\omega).
+\end{aligned}
+\tag{N.11.4a.1}
+$$
+Moreover,
+$$
+\sup_{\substack{0\le E\le I\\E\in\mathfrak A}}
+\left|\operatorname{Tr}E(\rho-\omega)\right|
+=\frac12\left\|\mathbb E_{\mathfrak A}(\rho-\omega)\right\|_1.
+\tag{N.11.4a.2}
+$$
+Thus $\mathfrak A$ is response-complete for all finite states exactly when $\mathfrak A=\mathcal B(\mathcal H)$; on that branch equality of every retained response is equivalent to $\rho=\omega$.
+
+Zero relational information does not imply this equivalence. On two qubits $S,E$, take
+$$
+\rho_{SE}=|1,0\rangle\!\langle1,0|,
+\qquad
+\omega_{SE}=|0,0\rangle\!\langle0,0|.
+\tag{N.11.4a.3}
+$$
+Both states are product states and hence have $I(S:E)=0$, but the retained two-outcome instrument with effect
+$$
+E_1=|1\rangle\!\langle1|_S\otimes I_E
+\tag{N.11.4a.4}
+$$
+has response probabilities $1$ and $0$. Therefore the universal proposition that zero relational mass implies operational equivalence to a specified vacuum is false even on a finite response-complete carrier.
+
+*Proof.* For $A\in\mathfrak A$, orthogonality of the conditional expectation gives
+$\operatorname{Tr}[A(\rho-\omega)]=\operatorname{Tr}[A\mathbb E_{\mathfrak A}(\rho-\omega)]$.
+This proves the reverse implication in (N.11.4a.1), and the forward implication follows because the linear span of effects in a unital finite-dimensional $*$-algebra is the whole algebra. Put $\Delta=\mathbb E_{\mathfrak A}(\rho-\omega)$. Its positive spectral projection $P_+$ belongs to $\mathfrak A$, and since $\operatorname{Tr}\Delta=0$,
+$\operatorname{Tr}(P_+\Delta)=\frac12\|\Delta\|_1$; the variational characterization of trace norm gives (N.11.4a.2). If $\mathfrak A$ is proper, choose a nonzero traceless Hermitian $K\in\ker\mathbb E_{\mathfrak A}$ and sufficiently small $\epsilon>0$; $I/\dim\mathcal H\pm\epsilon K$ are distinct states with identical retained responses, proving the response-completeness criterion. Equations (N.11.4a.3)--(N.11.4a.4) are evaluated directly. ∎
+
+**Resolution TV-N-12-R1 (Metadata).** Exact domain: every finite-dimensional retained unital $*$-algebra and all density operators on its carrier, including the explicit two-qubit system--environment/vacuum pair. Premises: standard trace-rule effects and the trace-preserving conditional expectation. Equivalence: equality on every retained effect; for a response-complete carrier this is ordinary state equality. Budget: all effects in the algebra, compressed exactly by the spectral witness in (N.11.4a.2). Verifier: conditional-expectation orthogonality, spectral decomposition and direct evaluation of the two-outcome instrument. Falsifier: a pair violating (N.11.4a.1), a larger retained response gap than (N.11.4a.2), or failure of the effect (N.11.4a.4) to distinguish the displayed states. Provenance class: source-internal complete finite classification and exact counterexample. Downstream consumers: Definition N.6, Remark N.11.1 and `TV-N-12`. Equation (N.11.4a.1) gives `positive-discharge` of the response-algebra characterization, while (N.11.4a.3)--(N.11.4a.4) give `negative-refutation` of operational vacuum equivalence from zero relational mass. This resolves the target negatively; it does not assert that a different physically restricted observable algebra distinguishes every zero-information state.
 
 ### N.11.5 The Weak Equivalence Principle
 
@@ -1955,6 +2104,31 @@ The value $3$ occurs only in the leading quadratic subbranch with one common
 coefficient and zero quartic and higher residuals. The information scale
 cancels, but the physical equality remains gated by the common Proposition-N.5
 and Theorem-T.39 certificate package. ∎
+
+**Proposition N.9a (Information-Invariant Flavor-Mass Modulus).** Fix a three-dimensional flavor-label carrier $F$ with basis $e,\mu,\tau$ and one common finite system--environment carrier. Fix $p\in(0,1)$ and, for each flavor $f$, let
+$$
+|\Psi_f\rangle
+=|f\rangle_F\otimes
+\left(\sqrt p\,|00\rangle_{SE}+\sqrt{1-p}\,|11\rangle_{SE}\right),
+\tag{N.9a.1}
+$$
+so all three relational informations equal
+$$
+I_f=2h(p),
+\qquad
+h(p)=-p\ln p-(1-p)\ln(1-p)>0.
+\tag{N.9a.2}
+$$
+Independently choose any positive ordered triple $(m_e,m_\mu,m_\tau)$ and define the flavor mass operator
+$$
+M_{\mathrm{fl}}=\operatorname{diag}(m_e,m_\mu,m_\tau).
+\tag{N.9a.3}
+$$
+Every relational state, reduced spectrum, mutual information and same-scale information ratio is unchanged as the positive triple varies, while both mass ratios vary freely. More generally, local unitaries on either side of the split preserve all $I_f$ and can change the displayed wavefunction representatives. Therefore accepted flavor wavefunctions and relational mutual information do not determine a mass hierarchy without a separately fixed common-scale map from those states to $M_{\mathrm{fl}}$ and its RG transport.
+
+*Proof.* The reduced $S$ and $E$ eigenvalues of (N.9a.1) are $p,1-p$, so purity gives $I_f=2h(p)$ for each flavor. Equation (N.9a.3) is an independent positive operator on the flavor-label factor and imposes no constraint on those reduced eigenvalues. Choosing, for example, $(1,2,3)$ and $(1,4,16)$ yields response-distinct mass ratios over identical information data. Mutual information is invariant under local unitaries, proving the final statement. ∎
+
+**Resolution TV-N-10-R1 (Metadata).** Exact domain: the finite three-flavor bipartite carrier (N.9a.1) and every positive diagonal flavor-mass operator (N.9a.3). Premises: relational information is Definition N.6's mutual information and no independent state-to-mass/RG map has been appended. Equivalence: local unitaries and common positive mass rescaling; distinct mass ratios remain inequivalent. Budget: every positive mass triple and every $p\in(0,1)$. Verifier: two-level entropy evaluation and diagonal ratio comparison. Falsifier: a constraint on (N.9a.3) derived from the fixed states alone, or unequal mutual informations in (N.9a.2). Provenance class: source-internal exact nonidentifiability countermodel. Downstream consumers: Proposition N.5, Theorem N.9 and `TV-N-10`. This is `nonentailment` of particle-mass ratios from flavor wavefunctions and relational mutual information alone. The affirmative same-scale state-to-mass map, its physical realization and RG/remainder propagation remain open, so the target is not closed.
 
 ### N.11.8 Typed Dependency Chain and Independent Gates
 

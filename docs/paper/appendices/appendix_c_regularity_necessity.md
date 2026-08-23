@@ -421,6 +421,51 @@ $$
 $$
 Hence curvature variance alone cannot imply positive external-load variance. Equation (38) supplies an internal target-update law but no quantitative comparison between $\hat C_{\mathrm{target}}$ and $\hat C_{\mathrm{actual}}$, so the corresponding target-variance inference also requires an independent tracking certificate. ∎
 
+**Theorem C.3a (Finite Linear Curvature--Load--Controller Classification).** Freeze a finite intervention class
+$$
+\ell_t=T\kappa_t,
+\qquad
+z_{t+1}=Az_t+B\ell_t+Gu_t,
+\qquad
+y_t=Cz_t,
+\tag{C.14a}
+$$
+where the curvature features $\kappa_t\in\mathbb R^p$ and interventions $u_t$ are registered inputs, $\ell_t\in\mathbb R^m$ is the external-load vector, and all matrices except the transfer $T$ are fixed. Then:
+
+1. From directly registered pairs $(\kappa_j,\ell_j)$, $T$ is uniquely identifiable exactly when the intervention design matrix $K=[\kappa_1\ \cdots\ \kappa_N]$ has rank $p$. When it has full row rank,
+   $$
+   T=LK^{\mathsf T}(KK^{\mathsf T})^{-1},
+   \qquad
+   L=[\ell_1\ \cdots\ \ell_N].
+   \tag{C.14b}
+   $$
+2. With the registered inputs subtracted, the controller state is observable from $y_0,\ldots,y_{n-1}$ exactly when
+   $$
+   \operatorname{rank}
+   \begin{bmatrix}
+   C\\CA\\\vdots\\CA^{n-1}
+   \end{bmatrix}
+   =n,
+   \qquad n=\dim z.
+   \tag{C.14c}
+   $$
+3. For the feedback $u_t=K_c(r-y_t)$ and constant $(\kappa,r)$, put $A_c=A-GK_cC$. If $\rho(A_c)<1$, every initial state converges to the unique equilibrium
+   $$
+   z_*=(I-A_c)^{-1}(BT\kappa+GK_cr).
+   \tag{C.14d}
+   $$
+   Exact tracking $y_*=r$ for every constant $(\kappa,r)$ in the declared full input spaces holds if and only if
+   $$
+   C(I-A_c)^{-1}BT=0,
+   \qquad
+   C(I-A_c)^{-1}GK_c=I.
+   \tag{C.14e}
+   $$
+
+*Proof.* The data equation is $L=TK$. If $K$ has full row rank, right multiplication by $K^{\mathsf T}(KK^{\mathsf T})^{-1}$ gives (C.14b). If $K$ is rank deficient, choose nonzero $v\in\ker K^{\mathsf T}$ and any nonzero $a\in\mathbb R^m$; then $T$ and $T+av^{\mathsf T}$ give the same $L$, proving necessity. Iterating the state equation and subtracting the known forced terms gives the standard linear map from $z_0$ to the output stack with matrix (C.14c); injectivity is equivalent to full column rank. Under feedback, the recurrence is $z_{t+1}=A_cz_t+BT\kappa+GK_cr$. The spectral-radius condition makes $A_c^t\to0$ and sums the geometric series, proving (C.14d). Multiplication by $C$ shows that $y_*=r$ for every independent $\kappa,r$ exactly when the two coefficient identities (C.14e) hold. ∎
+
+**Resolution TV-REG-03-R1.** The frozen finite linear intervention class (C.14a) has a complete `positive-discharge`: (C.14b) classifies curvature-to-load identifiability, (C.14c) classifies observability, and (C.14d)--(C.14e) classify stable exact target tracking. Admission of a physical curvature/load/controller family to this class remains a separate realization record.
+
 **Theorem C.4 (Operational Cost and Stability Penalty for Curvature Fluctuations).** On the curvature-load branch together with the external innovation certificate required by Theorem C.3, MPU networks $\mathcal N_{unbounded}$ whose curvature fluctuations induce high certified spatial variance $\operatorname{Var}(\hat C_{target}(v))$ incur the following conditional resource-efficiency (RE) and local-viability (LV) penalties:
 
 
@@ -546,6 +591,25 @@ $$
 N\bar p>\ln(1/P_{min}).
 $$
 Each threshold invokes Theorem C.5; outside these branches no threshold has been proved. ∎
+
+**Proposition C.5a (Sparse Irregularity Is Amortized by Density-Normalized Ledgers).** Let $G_n=C_n$ be the $n$-cycle and let $G_n^+$ be obtained by attaching one pendant vertex to a fixed cycle vertex. Fix a radius $R$ and let $p_R(v,G)$ be any nonnegative local irregularity penalty depending only on the rooted radius-$R$ ball, bounded by $P_R<\infty$. If the two penalties agree whenever the rooted balls are isomorphic, then
+$$
+\left|
+\frac1{|V(G_n^+)|}\sum_{v\in V(G_n^+)}p_R(v,G_n^+)
+-
+\frac1{|V(G_n)|}\sum_{v\in V(G_n)}p_R(v,G_n)
+\right|
+=O_R(n^{-1}).
+\tag{C.16a.1}
+$$
+
+For uniform all-pairs traffic, route by shortest paths and charge one unit per traversed edge. The pendant modification changes the total ordered-pair route cost by $O(n^2)$ while the cycle total is $\Theta(n^3)$; hence its relative propagation surcharge is $O(n^{-1})$. It affects only $O(n)$ of the $\Theta(n^2)$ ordered pairs by an additional single edge. The same $O(n^{-1})$ conclusion holds for any bounded per-vertex LV loss averaged over vertices and supported in a fixed-radius neighborhood of the defect.
+
+*Proof.* Only the pendant vertex and the at most $2R+1$ cycle vertices within distance $R$ of the attachment can have changed rooted radius-$R$ balls. Their total contribution is bounded by $(2R+2)P_R$, and the difference between the normalizing factors $n^{-1}$ and $(n+1)^{-1}$ is $O(n^{-2})$ times an $O(n)$ sum, proving (C.16a.1).
+
+Distances between two original cycle vertices are unchanged. Each ordered pair involving the new vertex has distance one plus the distance from the attachment vertex, so the extra total over those $2n$ ordered pairs is $O(n^2)$. The cycle's ordered-pair distance sum is $\Theta(n^3)$, because a positive fraction of its $n^2$ ordered pairs have distance $\Theta(n)$. The relative surcharge is therefore $O(n^{-1})$. The LV statement is the same bounded-support count as the first claim. ∎
+
+Thus no size-independent strict GC/RE/LV exclusion gap follows from density-normalized or uniformly amortized penalties alone. The non-amortized worst-case traffic, synchronization, contraction, or independent-failure hypotheses in Theorem C.5 are genuine and cannot be dropped.
 
 **Theorem C.6 (Conditional coarse-grained doubling and $(1,2)$-Poincaré bounds).**
 
@@ -751,6 +815,33 @@ $$
 \frac1M\sum_\xi(\xi^1)^4(\xi^2)^2=\frac4{24}=\frac16,
 $$
 by the same counts, while the isotropic values at $|\xi|^2=2$ are $15c_6=5/8$ and $3c_6=1/8$ with $c_6=8/192=1/24$. Subtraction gives the displayed defects $-1/8=-1/d_0$ and $+1/24=+1/M$, whose ratio is $-3$; the second defect is nonzero, so the sixth-moment tensor is not proportional to the isotropic tensor. All arithmetic is exact rational arithmetic on the finite shell. The scope sentences restate which continuum-chain hypotheses this lemma does and does not touch. ∎
+
+**Theorem C.6g (No Weighted $D_4$ Root Shell Has an Isotropic Sixth Moment).** Let $\Xi_{D_4}$ be the $24$ roots $\pm e_i\pm e_j$ and let arbitrary real weights $w_\xi$ satisfy only
+$$
+\sum_{\xi\in\Xi_{D_4}}w_\xi=1.
+\tag{C.6g.1}
+$$
+Then the weighted sixth moment cannot equal the rotationally isotropic sixth moment of any measure supported on the sphere $|x|^2=2$. This remains impossible for nonnegative weights, antipodally symmetric weights, and every full-rank weighted second moment.
+
+*Proof.* Every $D_4$ root has exactly two coordinates equal to $\pm1$ and the other two equal to zero. Hence pointwise on the shell
+$$
+\sum_{i=1}^4\xi_i^6=2,
+$$
+and therefore every normalized weighting satisfies
+$$
+\sum_\xi w_\xi\sum_{i=1}^4\xi_i^6=2.
+\tag{C.6g.2}
+$$
+For a rotationally invariant measure on the radius-$\sqrt2$ sphere in $D=4$, the sixth-moment formula gives
+$$
+\mathbb E[x_i^6]
+=\frac{15|x|^6}{D(D+2)(D+4)}
+=\frac{15\cdot8}{4\cdot6\cdot8}
+=\frac58.
+$$
+Summing over four coordinates gives $5/2$, contradicting (C.6g.2). The argument used neither positivity, antipodal symmetry, nor the rank of the second moment, so none of those restrictions removes the obstruction. ∎
+
+Thus reweighting the fixed $24$-point root shell cannot cancel its sixth-order anisotropy. A higher-moment-isotropic branch must enlarge or change the support, and global atlas-transition data remain a separate obligation for any such replacement.
 
 ## C.7 Conclusion and status boundary
 

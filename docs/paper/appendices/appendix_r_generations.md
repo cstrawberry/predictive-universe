@@ -404,6 +404,37 @@ Its induced $SU(3)$ and $SU(2)$ center characters are therefore trivial. This is
 
 *Proof.* If $q \in L_{\rm light}$, then $v_{c_1} \cdot q = v_{c_2} \cdot q = 0$ by Definition R.3.2. Hence $\tau(q)\equiv (v_{c_1}\cdot q + 2\,v_{c_2}\cdot q)\pmod 3 = 0$. ∎
 
+**Theorem R.3.3a (Full Singlet Classifier from Root Actions).** Let $G$ be a compact connected Lie group, let $V$ be a finite-dimensional unitary $G$-representation, and fix a maximal torus and simple-root generators $E_{\pm\alpha_i}$ for the semisimple derived algebra. If
+$$
+V=\bigoplus_\lambda V_\lambda
+$$
+is the weight decomposition, then
+$$
+V^G
+=V_0\cap
+\bigcap_i\ker d\rho(E_{\alpha_i})
+\cap
+\bigcap_i\ker d\rho(E_{-\alpha_i}).
+\tag{R.3.3a.1}
+$$
+Equivalently, if $\Omega$ is the positive quadratic Casimir in the registered representation, then
+$$
+V^G=\ker d\rho(\Omega),
+\qquad
+\Pi_{\mathrm{sing}}=\int_G\rho(g)\,dg,
+\tag{R.3.3a.2}
+$$
+where normalized Haar integration is a finite-matrix orthogonal projector. Thus every registered candidate representation $V_q$ attached to $q\in L_{\rm light}$ has the exact decomposition
+$$
+V_q=\Pi_{\mathrm{sing}}V_q\oplus(I-\Pi_{\mathrm{sing}})V_q,
+\tag{R.3.3a.3}
+$$
+and Cartan neutrality promotes to a full singlet exactly when the candidate vector lies in the first summand.
+
+*Proof.* A $G$-fixed vector has zero weight and is killed by every root generator, so it lies in the right side of (R.3.3a.1). Conversely, the full torus algebra together with the simple positive/negative root spaces generates the compact reductive Lie algebra, so a vector in the right side is killed by every infinitesimal generator. Connectedness then makes it $G$-fixed. In a unitary representation the positive Casimir is a sum of adjoint-square terms over an invariant orthonormal Lie-algebra basis; its expectation vanishes exactly when every infinitesimal generator kills the vector, proving the kernel identity. Haar invariance gives $\rho(h)\Pi_{\mathrm{sing}}=\Pi_{\mathrm{sing}}$, self-adjointness and idempotence, so its range is exactly $V^G$ and (R.3.3a.3) follows. ∎
+
+**Resolution TV-R-01-P1 (Metadata).** Exact domain: finite-dimensional unitary representations of compact connected Lie groups, including every registered $SU(3)\times SU(2)\times U(1)$ candidate representation $V_q$. Premises: explicit representation matrices or an equivalent weight/root-action record. Equivalence: unitary representation equivalence. Budget: the zero-weight space and every simple positive/negative root generator. Verifier: (R.3.3a.1), the Casimir kernel or exact Haar projector. Falsifier: a vector classified as singlet with a nonzero torus weight or on which a root generator acts nontrivially. Provenance class: standard compact-group representation theory specialized to the marked candidate ledger. Downstream consumers: Definition R.3.2 and `TV-R-01`. The theorem gives `positive-discharge` of the full-singlet classification method. Population of the representation record $q\mapsto V_q$ for every marked topological candidate remains the target's formal-realization component.
+
 ### R.3.4 Index theory and anomaly constraints
 
 **Definition R.3.3 (Predictive block).** A predictive block $\mathrm{Rep}$ is a representation of $G_{\mathrm{SM}}$ on a finite-dimensional Hilbert space, corresponding to a collection of chiral fermions with specified gauge quantum numbers. For the Standard Model, a single generation forms one predictive block.
@@ -745,6 +776,18 @@ $$
 
 **Remark R.3.5.1d (Status of the Exact Selector).** Theorem R.3.5.1c gives the mathematical closure after its exhaustive quotient, descended functional, and strict-gap certificate have been supplied; it is not itself a derivation of those inputs. Proposition R.3.5.1a proves the conclusion only inside the additive-monotone surrogate class. The present framework has not supplied the finite family-selection certificate above.
 
+**Proposition R.3.5.1e (Response-Active Extension Countermodels to the Weakened Selector).** Let $V$ be any anomaly-free CP-active chiral family block. Each of the following operations preserves the stated weakened admissibility data while permitting a response-active extension.
+
+1. Adjoin any number of gauge-singlet Weyl fields with distinct registered Majorana masses or singlet couplings. They contribute zero to every gauge and mixed gauge-gravitational anomaly coefficient.
+2. For any nontrivial finite-dimensional gauge representation $W$, adjoin the vectorlike pair $W\oplus W^*$. Its perturbative odd anomaly traces cancel because the conjugate representation contributes the opposite trace, while a gauge-invariant Dirac mass can give a retained threshold response.
+3. Adjoin localized topological sectors in charge pairs $(q,-q)$. Theorem R.3.0's global neutrality is preserved, while distinct local linking-sphere or defect-energy responses can retain both sectors.
+
+Consequently anomaly cancellation, existence of a CP-active subblock and global topological neutrality do not select a unique family count or exclude sterile, non-Abelian vectorlike or paired-defect extensions. A PPI quotient removes one of these additions only when all of its registered responses agree with the unextended model.
+
+*Proof.* A gauge singlet has zero representation matrices, hence zero anomaly traces. For a conjugate representation, the generators are $-T_a^T$; every symmetrized odd trace changes sign, so the pair's perturbative gauge and mixed anomaly polynomial vanishes. A nonzero invariant Dirac mass or coupling produces a distinct threshold response. Charge additivity gives $q+(-q)=0$, while local linking spheres distinguish the two nonzero charges. These operations leave the original CP witness in the $V$ subblock unchanged. Thus each construction is an admissible response-active competitor unless its added response is explicitly quotiented as null. ∎
+
+**Resolution TV-R-02-N1 (Metadata).** Exact domain: extensions of a fixed anomaly-free CP-active block by gauge singlets, perturbatively anomaly-free vectorlike pairs, or globally neutral defect pairs. Premises: the displayed mass/coupling or local-defect response is retained. Equivalence: equality of the complete registered gauge, mass/coupling and defect response profile. Budget: every finite number of additions and every finite-dimensional $W$. Verifier: anomaly traces, CP-subblock retention, total defect charge and response separation. Falsifier: a claimed extension with an uncancelled anomaly, lost CP witness or response-null added sector. Provenance class: source-internal infinite countermodel family. Downstream consumers: Theorem R.3.5.1c and `TV-R-02`. The proposition gives `negative-refutation` of uniqueness from the weakened anomaly/CP/global-neutrality data. A complete selector may still be supplied by an exhaustive descended PCE functional with a strict gap.
+
 **Corollary R.3.5a (Golay Radius and Selected Family Count).** Assume both the predictive-recovery rate branch with an accepted $\mathfrak C_{\mathrm{dist}}$, on which Theorem Z.13b selects the $[24,12,8]$ Golay equivalence class, and the additive-monotone family-selection branch of Proposition R.3.5.1a. Then
 $$
 
@@ -951,6 +994,22 @@ $$
 K_0=3=\#\{\mathbb C,\mathbb H,\mathbb O\}
 $$
 remains a numerical coherence check and not a categorical source. The finite list above exhausts the current source roles of $G$, so no current-source compression exists. ∎
+
+**Resolution record R.3.5e.3-R1 (`TV-R-03`, finite current-graph no-parent certificate).** Freeze the four source roles
+$$
+\mathcal C_3,
+\quad
+\mathcal C_{\mathrm{cap}},
+\quad
+\mathcal C_{\mathrm{tan}},
+\quad
+\mathcal C_{\mathrm{kis}},
+$$
+their three value-only arrows labeled $K_0$, $(a,d_0)$, and $M$. Let $P_{R,\mathrm{cur}}$ assert that one of these four already supplied roles, using only its own source invariant and the current value arrows, determines every source invariant in $(I_3,I_{\mathrm{cap}},I_{\mathrm{tan}},I_{\mathrm{kis}})$. Theorem R.3.5e.3 gives `negative-refutation` of $P_{R,\mathrm{cur}}$.
+
+The analytic owner is the exhaustive four-case proof of Theorem R.3.5e.3: it separately tests $\mathcal C_{\mathrm{cap}}$, $\mathcal C_{\mathrm{tan}}$, $\mathcal C_{\mathrm{kis}}$, and $\mathcal C_3$ against the other source invariants and proves that the displayed arrows transmit only $K_0$, $(a,d_0)$, and $M$, not a replacement proof of the receiving source invariant. Proposition V.3.12b rechecks only this four-role/three-edge finite manifest. Equivalence is a relabeling preserving each source-invariant tuple and edge type. A fifth current source role omitted by the theorem, one of the four roles proved there to determine all four source invariants, or a displayed arrow proved to transport the missing source proof rather than only its value falsifies the record. All four roles and all three arrows are present, so the comparison class is nonempty.
+
+This closes the finite-class no-go requested by `TV-R-03` for the present proof graph. It does not prove that no new target-independent parent invariant can exist. Any Bott-theoretic or other future parent satisfying Remark R.3.5e.5 is a new source outside the exhausted class and remains the positive successor.
 
 **Corollary R.3.5e.4 (No Single-Source Reduction from the Current Inputs Alone).** Assume the intersection of the source branches of Proposition R.3.5e, the marked-arena hypotheses of Definition Z.35d and Theorem Z.35e, and the branch hypotheses of Corollary T.59a and Corollary 23a.1. On this common branch, the present proof graph does not reduce
 $$
@@ -1286,6 +1345,23 @@ These 240 roots provide maximal symmetric discrete structure, ensuring uniform l
 *Proof.* The rate conclusion is Theorem Z.13b.0a. The Hamming-bound converse, the explicit distance-$8$ witness, strict distance selection, attainment on the finite comparison class, and classification up to coordinate permutation are exactly the separate steps of Theorems Z.13 and Z.13b. No rate identity is used as a distance-attainment premise. ∎
 
 **Remark (Classical and Physical Scope).** On the accepted distance-certified branch, $d=8$ implies detection through binary weight $7$ and unique nearest-codeword correction through weight $3$, which is maximal in the binary linear $[24,12]$ class. A physical protection claim additionally requires a registered encoder, noise channel, syndrome instrument, recovery map, performance norm, and resource ledger.
+
+**Proposition R.4.4a (Fixed-Rate Equal-Correction-Radius Competitor).** Let $\mathcal G_{24}$ be the extended binary Golay $[24,12,8]$ code. Puncture one coordinate to obtain $C_{23}$ and append an identically zero coordinate to obtain
+$$
+D:=\{(c,0):c\in C_{23}\}\subset\mathbb F_2^{24}.
+$$
+Then
+$$
+D\text{ has parameters }[24,12,7],
+\qquad
+t(D)=\left\lfloor\frac{7-1}{2}\right\rfloor=3=t(\mathcal G_{24}).
+\tag{R.4.4a.1}
+$$
+Thus $D$ and $\mathcal G_{24}$ have the same block length, rate and guaranteed unique correction of every error of weight at most three, but they are not coordinate-permutation equivalent because their minimum distances differ. Under any declared cost and adversarial-noise performance record depending only on $(n,k,t)$, they are equal competitors. Hence fixed rate and three-error correction performance do not yield a strict Golay gap; distance-eight detection data or a finer noise/cost functional is indispensable.
+
+*Proof.* Puncturing is injective on $\mathcal G_{24}$ because its kernel would contain a nonzero word supported on the deleted coordinate, contradicting minimum distance eight; hence $\dim C_{23}=12$. Puncturing lowers distance by at most one. The Steiner $S(5,8,24)$ property gives an octad containing the deleted coordinate; it punctures to weight seven, so $C_{23}$ has distance seven. Appending a zero coordinate preserves dimension and distance, proving the parameters of $D$. Both correction radii equal three, while minimum distance is invariant under coordinate permutation, proving inequivalence. ∎
+
+**Resolution TV-R-04-R1 (Metadata).** Exact domain: binary linear length-$24$, dimension-$12$ codes compared under guaranteed correction of all errors of weight at most three and costs that factor through $(n,k,t)$. Premises: the extended Golay code and standard puncture/zero-extension operations. Equivalence: coordinate permutation for codes and equality of the declared adversarial-weight-three decoder performance. Budget: every error vector of weight at most three. Verifier: rank, minimum distance, correction radius, decoder success and cost equality. Falsifier: a permutation equivalence between the two codes, failure of $D$ to correct some weight-three error, or a strict cost difference under a cost declared to factor through $(n,k,t)$. Provenance class: source-internal explicit linear-code counterexample. Downstream consumers: Theorem R.4.4, $\mathfrak C_{\mathrm{dist}}$ and `TV-R-04`. Proposition R.4.4a gives `negative-refutation` of strict Golay selection from fixed rate plus three-error performance/cost alone by returning an equal competitor. A selector using distance-eight detection, nonzero-coordinate utilization or a finer physical noise channel is a strictly stronger successor proposition.
 
 #### R.4.2.1.3 Leech Lattice Construction via Golay Gluing
 

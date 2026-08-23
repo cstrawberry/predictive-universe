@@ -80,7 +80,7 @@ $$
 \chi_{\mathrm{pred}}
 \right)
 $$
-where $\mathcal P$ is the list of predicted observables, $\mathcal C$ is the accepted certificate or theorem branch for each observable, $\mathcal I$ is the predicted numerical interval or qualitative falsifier, $\mathcal E$ is the evidence protocol, $\mathcal F$ is the falsification rule, and $\chi_{\mathrm{pred}}$ records that no entry was chosen from the validation data used to test it.
+where $\mathcal P$ is the list of predicted observables, $\mathcal C$ is the accepted certificate or theorem branch for each observable, $\mathcal I$ is the predicted numerical interval or qualitative falsifier, $\mathcal E$ is the evidence protocol, $\mathcal F$ is the falsification rule, and $\chi_{\mathrm{pred}}$ records that no entry was chosen from the validation data used to test it. A populated Convention P.14.1a.1 record establishes derivation chronology and declared data separation; it preserves every branch, evidence-protocol, and forward-registration requirement in this definition.
 
 **Theorem 13.0e (No Validation Contamination).** A prediction listed in $\mathfrak R_{\mathrm{pred}}$ may be counted as forward PU evidence only if its branch or certificate was fixed before the validation data used to test it. If any branch entry, residual interval, normalization, or certificate component is selected after seeing the validation data, the entry remains a post-selection consistency check rather than forward evidence.
 
@@ -239,6 +239,50 @@ Because $\operatorname{ran}B=\operatorname{ran}A$, one has $BB^+=AA^+$ and $I-BB
 **Corollary 13.0n (No Double Counting and Singular-Branch Rule).** When rank-$r$ branch coordinates are fitted or profiled from the same $m$-observable block, that block contributes $m-r$, not $m$, independent model-relation residual directions. If $\theta_*$ is specified independently before the block is observed, the full affine Gaussian point-prediction statistic $\lVert\mathsf C^{-1/2}(Y-F(\theta_*))\rVert^2$ has $m$ degrees of freedom; $\chi_\perp^2$ tests only its $m-r$ cross-observable normal relations. Registered residual intervals thicken the prediction manifold by their prespecified Minkowski set before the normal-distance statistic is evaluated. If the rank changes, a parameter lies on a boundary, the covariance is singular, or a discrete branch is selected after inspection, the $\chi^2_{m-r}$ calibration is not licensed; the branches must be profiled or tested separately under their preregistered mixture law.
 
 *Proof.* Theorem 13.0m shows that profiling the $r$ tangent coordinates leaves the rank-$(m-r)$ normal projector $\Pi_\perp$, so the same observable block cannot contribute both those $r$ fitted directions and $m$ independent residual directions. If $\theta_*$ is specified without using the block, the full whitened residual is $N(0,I_m)$ on the affine Gaussian branch, and its squared norm is $\chi_m^2$; applying $\Pi_\perp$ retains only the $m-r$ normal coordinates. If the allowed residual set is $R$, the allowed prediction set is $F(\Theta)+R$, the Minkowski sum, so distance must be taken to that enlarged set. Rank change invalidates the constant-rank chart, a boundary point invalidates the interior localization, singular covariance invalidates $\mathsf C^{-1/2}$, and post-inspection branch selection invalidates the preregistered single-branch law. Theorem 13.0m therefore supplies no $\chi^2_{m-r}$ conclusion in any of those four cases. ∎
+
+**Definition 13.0o (Coefficient Sensitivity Ledger).** Let a registered scalar row have the affine form
+$$
+X_{\mathrm{pred}}=X_{\mathrm{base}}+\sum_{j=1}^{J}r_jS_j,
+\tag{13.0o.1}
+$$
+where $X_{\mathrm{base}}$, $S_j\ne0$, and finite coefficient classes $\mathcal A_j\subset\mathbb Q$ are fixed before the comparison to $X_{\mathrm{obs}}\pm\sigma$, $\sigma>0$. Define
+$$
+\rho_j=\frac{|S_j|}{\sigma}.
+\tag{13.0o.2}
+$$
+The number $\rho_j$ is the change in the predicted observable, in registered standard-uncertainty units, produced by a unit change in $r_j$. The condition $\rho_j\le1$ is the **unit-displacement bound at registered uncertainty $\sigma$**; it means that the same unit change moves the prediction by at most one registered standard uncertainty. Statistical distinguishability additionally depends on the declared coefficient separation, likelihood, covariance, and decision rule.
+
+**Theorem 13.0p (Coefficient Displacement and Finite Packing Bound).** Holding all coefficients other than $r_j$ fixed gives
+$$
+|X_{\mathrm{pred}}(r_j)-X_{\mathrm{pred}}(r_j')|
+=\rho_j\sigma|r_j-r_j'|.
+\tag{13.0p.1}
+$$
+The set
+$$
+I_j=\{r\in\mathbb R:|X_{\mathrm{pred}}(r)-X_{\mathrm{obs}}|\le\sigma\}
+$$
+is a closed interval of length $2/\rho_j$. If the finite class $\mathcal A_j$ has minimum gap $g_j>0$, then
+$$
+\#(\mathcal A_j\cap I_j)
+\le\left\lfloor\frac{2}{\rho_jg_j}\right\rfloor+1.
+\tag{13.0p.2}
+$$
+
+*Proof.* Equation (13.0p.1) follows by subtracting (13.0o.1). The affine map has nonzero slope $S_j$, so the preimage of $[X_{\mathrm{obs}}-\sigma,X_{\mathrm{obs}}+\sigma]$ has length $2\sigma/|S_j|=2/\rho_j$. Points separated by at least $g_j$ in an interval of length $2/\rho_j$ obey (13.0p.2). ∎
+
+**Corollary 13.0q (Finite Selection Count).** For a declared finite comparison class, set
+$$
+N_{\mathrm{tot}}=\prod_{j=1}^{J}|\mathcal A_j|,
+\qquad
+N_{1\sigma}=\#\left\{r\in\prod_j\mathcal A_j:|X_{\mathrm{pred}}(r)-X_{\mathrm{obs}}|\le\sigma\right\}.
+$$
+When $N_{1\sigma}>0$, define
+$$
+\mathcal I_{\mathrm{sel}}=\log_2\frac{N_{\mathrm{tot}}}{N_{1\sigma}}.
+\tag{13.0q.1}
+$$
+This finite count quantifies the contraction of the declared comparison class by the one-standard-uncertainty window. Its value depends on that class and uncertainty source. Evidential and prediction status remain governed by the registered branch and the forward-prediction record of Definition 13.0d.
 
 **13.1 Conditional Branch 1: Potential Born-Rule Deviations**
 
@@ -790,6 +834,71 @@ The Consciousness Complexity mechanism (Hypothesis 3) is consistent with Postula
 
 *Protocol attribution:* Protocol 3 tests PU's branch-(iii) anomaly hypothesis. A certified late-randomized Bob-marginal shift would support the nonlocal/state-mediated branch and falsify the exact causal branch; a null result constrains branch (iii) without falsifying the local-CPTP or shared-past branches.
 
+**Definition 53a (CC Dependency-Cut Certificate).** Fix a source snapshot and an accepted strict-certificate registry
+$$
+\mathfrak G_{\mathrm{PU}}
+=(\mathcal R,\mathcal E,\kappa_{\mathcal R},\sigma,
+\rho,\beta,\theta,\gamma,\delta,\zeta),
+\qquad
+G=(\mathcal R,\mathcal E),
+\tag{53a.1}
+$$
+where every edge is oriented from a direct parent to its child. Let $\mathcal C_{\mathrm{CC}}\subseteq\mathcal R$ be the seed set of adopted premises and branch declarations asserting a nonzero response-active CC map. A **CC dependency-cut certificate** is a finite record
+$$
+\mathfrak C_{\mathrm{CCcut}}
+=
+(\mathfrak G_{\mathrm{PU}},\mathcal C_{\mathrm{CC}},
+\mathfrak K_{\mathrm{CC}},\eta_{\mathrm{CC}},
+\sigma^{\mathrm{CC}},\mathcal D_{\mathrm{reaudit}},
+\mathcal D_{\mathrm{dem}},\mathcal D_{\mathrm{drop}},\lambda,\chi),
+\tag{53a.2}
+$$
+where $\mathfrak K_{\mathrm{CC}}$ is an accepted complete alternative-artifact status datum in the sense of Definition P.14.1m.6 for the same registry snapshot and
+$$
+\eta_{\mathrm{CC}}(C)=\bot_{\mathrm{unavailable}}
+\qquad(C\in\mathcal C_{\mathrm{CC}}).
+\tag{53a.3}
+$$
+The map $\lambda$ assigns every vertex and artifact its source file, exact span, source hash, status, and artifact hash. Write $\operatorname{Anc}_G$ and $\operatorname{Desc}_G$ for reflexive ancestor and descendant sets and define
+$$
+\mathcal R_{\mathrm{core}}
+=
+\{R\in\mathcal R:
+\operatorname{Anc}_G(R)\cap\mathcal C_{\mathrm{CC}}=\varnothing\}.
+\tag{53a.4}
+$$
+
+The certificate is accepted only when $\chi$ verifies all of the following.
+
+1. Every formal declaration and status-bearing summary in the frozen registry occurs exactly once at its recorded source span and hash.
+2. $\mathcal C_{\mathrm{CC}}$ contains every adopted premise used to assert $\mathrm{CC}(S)>0$, a nonzero CC bias, or a response-active realization of Hypothesis 3.
+3. $\mathfrak K_{\mathrm{CC}}$ contains every accepted alternative proof-and-status artifact, with the exact direct parents and intrinsic status ceiling required by Definition P.14.1m.6; an omitted artifact, proof dependency, or status dependency rejects the certificate.
+4. Algorithm P.14.1m.7 applied to $(\mathfrak K_{\mathrm{CC}},\eta_{\mathrm{CC}})$ returns the displayed $\sigma^{\mathrm{CC}}$ and exactly
+   $$
+   \mathcal D_{\mathrm{reaudit}}
+   =\operatorname{Desc}_G(\mathcal C_{\mathrm{CC}}),
+   \quad
+   \mathcal D_{\mathrm{dem}}
+   =\{R:\sigma^{\mathrm{CC}}(R)\prec\sigma(R)\},
+   \quad
+   \mathcal D_{\mathrm{drop}}
+   =\{R:\sigma^{\mathrm{CC}}(R)=\bot_{\mathrm{unavailable}}\}.
+   \tag{53a.5}
+   $$
+5. Every changed status row and every unavailable vertex is listed, and the prospective registry update supplies the corresponding changed fields and passes Algorithm P.14.1m.0 after unavailable vertices are removed.
+
+**Proposition 53b (Certified CC Severability).** If $\mathfrak C_{\mathrm{CCcut}}$ is accepted, rejection and removal of $\mathcal C_{\mathrm{CC}}$ leave the recorded derivations and statuses of every $R\in\mathcal R_{\mathrm{core}}$ unchanged. Every potentially changed vertex lies in $\mathcal D_{\mathrm{reaudit}}$, and the rejection demotes exactly $\mathcal D_{\mathrm{dem}}$; the vertices in $\mathcal D_{\mathrm{drop}}$ lose every accepted support artifact. For
+$$
+R\in\mathcal D_{\mathrm{reaudit}}\setminus\mathcal D_{\mathrm{dem}},
+$$
+at least one seed-independent accepted artifact retains the original strongest status. For
+$$
+R\in\mathcal D_{\mathrm{dem}}\setminus\mathcal D_{\mathrm{drop}},
+$$
+at least one accepted artifact survives, but only at the explicitly recalculated weaker status. An interpretive or simulation thesis is certified severable without status loss exactly when its vertex is outside $\mathcal D_{\mathrm{dem}}$; membership in $\mathcal R_{\mathrm{core}}$ is sufficient for that conclusion without descendant re-audit.
+
+*Proof.* Apply Theorem P.14.1m.8 to $\eta_{\mathrm{CC}}$. A vertex in $\mathcal R_{\mathrm{core}}$ is not a descendant of a removed seed, so its complete artifact equations and all their ancestors are unchanged and its recalculated status equals $\sigma(R)$. The theorem also proves that no vertex outside $\operatorname{Desc}_G(\mathcal C_{\mathrm{CC}})$ changes, that $\mathcal D_{\mathrm{dem}}$ contains every strict status decrease, and that $\mathcal D_{\mathrm{drop}}$ contains exactly the vertices whose artifact join is unavailable. The two alternative-artifact assertions are the corresponding equality and strict-inequality cases of the join in (P.14.1m.7c). Applying those cases to the nominated interpretive or simulation vertex proves the final assertion. ∎
+
 ## 13.8 High-Precision Falsification Windows
 
 Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
@@ -817,6 +926,107 @@ $$
 \alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
 $$
 The residual $R_\alpha$ is structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b); it is not adjustable and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. The displayed $\pm0.000060$ budget in the Appendix Z ledger is a canonical branch comparison budget; it is not a replacement for $R_\alpha$. On a candidate finite-Ward branch carrying an independently supplied hypercharge-recoil operator-realization certificate, Definition Z.27.11k.12 specifies the required operator-realization certificate and Theorem Z.27.11k.20 fixes $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$, giving $\alpha^{-1}_{YR\perp}=137.03599917753023\ldots$; Corollary Z.27.11k.21.1 enters this as the conditional diagnostic registry residual. The three non-exact contributions are assigned to $[\omega_Y]$, $[\omega_5]$, and $[\sigma_{\perp}]$, while exact, obstructed, already-counted, and future residual sources are excluded by the stipulated-source-menu and overlap audit. If the seventh-order passive-complement source is downgraded to the positive-contraction bound, Corollary Z.27.11k.21 gives $[137.03599917502362\ldots,137.03599917878353\ldots]$. Corollary Z.27.11e.1 still excludes a same-branch theorem with $R_\alpha=0$. Standard QED running from a candidate Thomson certificate is a downstream consistency ledger and does not close or modify the residual gate.
+
+**Proposition 13.8.1a (Sensitivity Audit of the Hypercharge-Recoil Candidate).** Let
+$$
+c_1=\frac{\pi}{24\sqrt3},
+\qquad
+u^*=2^{1/8}-1,
+$$
+and write the candidate residual as
+$$
+R_{\alpha}^{YR\perp}
+=r_3c_1(u^*)^3+r_5c_1(u^*)^5+r_7c_1(u^*)^7,
+\qquad
+(r_3,r_5,r_7)=\left(-\frac53,\frac{10}{9},-\frac13\right).
+\tag{13.8.1a.1}
+$$
+For the finite comparison below, define
+$$
+\alpha^{-1}(r_3,r_5,r_7)
+=\alpha_0^{-1}+r_3c_1(u^*)^3+r_5c_1(u^*)^5+r_7c_1(u^*)^7,
+$$
+where $\alpha_0^{-1}$ is the Theorem Z.26 core displayed immediately above. Against the registered comparison center $\alpha^{-1}_{\mathrm{cmp}}=137.035999177$ and its standard uncertainty $\sigma=2.1\times10^{-8}$, the scales and sensitivities are
+$$
+\begin{array}{c|c|c}
+n&S_n=c_1(u^*)^n&\rho_n=|S_n|/\sigma\\ \hline
+3&5.6031862648597466\times10^{-5}&2668.1839356475\ldots\\
+5&4.5899338929846094\times10^{-7}&21.8568280618\ldots\\
+7&3.7599130469913430\times10^{-9}&0.1790434784\ldots
+\end{array}
+\tag{13.8.1a.2}
+$$
+These values quantify arithmetic sensitivity.
+
+For the diagnostic height class
+$$
+\mathcal Q_{10}=\left\{\frac pq:\gcd(p,q)=1,\ q\ge1,\ \max(|p|,q)\le10\right\},
+$$
+one has $|\mathcal Q_{10}|=127$. Exhaustive enumeration of $\mathcal Q_{10}^3$ gives
+$$
+N_{\mathrm{tot}}=2\,048\,383,
+\qquad
+N_{1\sigma}
+=\#\left\{r\in\mathcal Q_{10}^3:
+|\alpha^{-1}(r)-\alpha^{-1}_{\mathrm{cmp}}|\le\sigma\right\}
+=468,
+\qquad
+\mathcal I_{\mathrm{sel}}=12.0956893407\ldots\ \text{bits},
+\tag{13.8.1a.3}
+$$
+and the third-order marginal is
+$$
+\mathcal A_3^{\mathrm{adm}}=\left\{-\frac53,-\frac85\right\}.
+\tag{13.8.1a.4}
+$$
+The same enumeration gives
+$$
+|\mathcal A_5^{\mathrm{adm}}|=7,
+\qquad
+|\mathcal A_7^{\mathrm{adm}}|=125,
+\tag{13.8.1a.5}
+$$
+and hence the marginal contractions
+$$
+\log_2\frac{127}{|\mathcal A_3^{\mathrm{adm}}|}
+=5.988684686772\ldots,
+\quad
+\log_2\frac{127}{|\mathcal A_5^{\mathrm{adm}}|}
+=4.181329764715\ldots,
+\quad
+\log_2\frac{127}{|\mathcal A_7^{\mathrm{adm}}|}
+=0.022900402110\ldots
+\tag{13.8.1a.6}
+$$
+bits. Holding $(r_3,r_5)=(-5/3,10/9)$ fixed leaves exactly $118$ admissible $r_7\in\mathcal Q_{10}$, with extrema $-6$ and $5$; the corresponding conditional contraction is
+$$
+\log_2\frac{127}{118}=0.106041637410\ldots\ \text{bits}.
+\tag{13.8.1a.7}
+$$
+The class $\mathcal Q_{10}$ is an explicitly declared diagnostic comparator; changing it changes the count.
+
+*Proof.* Direct evaluation of $c_1(u^*)^n$ and division by $\sigma$ give (13.8.1a.2). Reduction of all fractions with the displayed height bound gives $127$ elements. Testing the finite set of $127^3$ triples against the one-standard-uncertainty interval gives (13.8.1a.3)--(13.8.1a.7). ∎
+
+**Corollary 13.8.1b (Determinant-Compatible Third-Order Filter).** If
+$$
+Y=\operatorname{diag}(y_3,y_3,y_3,y_2,y_2),
+\qquad
+3y_3+2y_2=0,
+\qquad
+y_3\in\mathbb Q,
+$$
+and $\operatorname{Tr}(T_3^2)=1/2$, define
+$$
+r_3=-\frac{\operatorname{Tr}(Y^2)}{\operatorname{Tr}(T_3^2)}.
+$$
+Then
+$$
+r_3=-15y_3^2.
+\tag{13.8.1b.1}
+$$
+Hence a negative rational value $-t$ occurs exactly when $15t$ is a rational square. Of the two diagnostic marginal values in (13.8.1a.4), $-5/3$ occurs at $y_3=\pm1/3$, whereas $-8/5$ does not occur. The determinant-compatible rational block-scalar condition therefore selects $r_3=-5/3$ within that two-element diagnostic marginal.
+
+*Proof.* Tracelessness gives $y_2=-3y_3/2$, whence $\operatorname{Tr}(Y^2)=15y_3^2/2$. Division by $1/2$ gives (13.8.1b.1). Finally, $15(5/3)=25$ is a rational square and $15(8/5)=24$ is not. ∎
 
 ### 13.8.2 The Multi-Scale Gravity / Dark Sector Window
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. On the acceleration-lock branch the relevant threshold is fixed before galaxy fitting:
@@ -1392,6 +1602,39 @@ For $\tau=0.1\,\mathrm s$, the strong-overlap endpoint is $6.943\times10^{-3}\,\
 - R3: on the declared visibility law, if the lower confidence bound for $\Gamma$ exceeds the upper propagated bound on $-\ln V_{\mathrm{crit}}/\tau$ while the mean-confidence interval remains entirely negative, that visibility model is rejected.
 
 **Remark 13.8.5h (Scope of the Exact-Control PSD Certificate).** The quantum calculation uses Born-rule statistics of the declared postselected Gaussian ensemble. The witness does not require a PU-specific modification. Its classical exclusion is only as broad as the explicit premises of Definition 13.8.5a.
+
+**Proposition 13.8.5i (Complete Classical Postselection Mean Classification).** Let $\mathfrak G_{\mathrm{all}}$ be the full classical joint-law class with $\lambda\in\{A,B\}$, $P(\lambda=A)=\alpha^2$, $P(\lambda=B)=\beta^2$, $p=\delta_\lambda+\xi$, and $P(a=1)>0$, with no independence or conditional-noise restriction on acceptance. Put
+$$
+w_\lambda=P(\lambda\mid a=1),
+\qquad
+m_\lambda=\mathbb E[\xi\mid\lambda,a=1],
+$$
+whenever $w_\lambda>0$, and set $m_\lambda=0$ when $w_\lambda=0$ (equivalently, define $w_\lambda m_\lambda=\mathbb E[\xi\mathbf 1_{\{\lambda\}}\mid a=1]$). Assume the accepted first moment is finite. Then
+$$
+\langle p\rangle_{\mathrm{ps}}
+=
+w_A\delta_A+w_B\delta_B+w_Am_A+w_Bm_B.
+\tag{13.8.5i.1}
+$$
+Consequently the accepted mean lies in $[\delta_B,\delta_A]$ exactly when
+$$
+\delta_B-(w_A\delta_A+w_B\delta_B)
+\le
+w_Am_A+w_Bm_B
+\le
+\delta_A-(w_A\delta_A+w_B\delta_B),
+\tag{13.8.5i.2}
+$$
+and it is negative exactly when
+$$
+w_Am_A+w_Bm_B<-(w_A\delta_A+w_B\delta_B).
+\tag{13.8.5i.3}
+$$
+Every real accepted mean occurs in $\mathfrak G_{\mathrm{all}}$ whenever at least one source branch has positive probability. For example, if $\beta>0$, accept exactly the $\lambda=B$ runs and set $\xi=m-\delta_B$ on those runs; then $P(a=1)=\beta^2>0$ and $p=m$ on every accepted run. If instead $\beta=0$, the same construction uses the necessarily positive-probability $A$ branch.
+
+*Proof.* Conditional total expectation gives (13.8.5i.1). Subtracting its baseline convex combination gives (13.8.5i.2), and comparison with zero gives (13.8.5i.3). The displayed deterministic construction proves attainability of every $m\in\mathbb R$. ∎
+
+**Resolution TV-EXP-10-R1.** Proposition 13.8.5i is `positive-discharge` of the exhaustive classical source-and-postselection mean classification and `negative-refutation` of a universal classical sign bound. Theorem 13.8.5b remains exact on $\mathfrak G_{\mathrm{cl}}$, whose zero-conditional-noise premise is precisely the restriction that removes the offset in (13.8.5i.1). The coherent Gaussian response map and its exact visibility threshold remain Lemma 13.8.5c and Theorem 13.8.5d; apparatus realization is an empirical record.
 
 ## 13.9 Prediction 4: Conditional Golay Alignment from PCE Structure
 

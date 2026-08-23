@@ -275,6 +275,36 @@ $$
 $$
 which visits every element of $\{0,1\}^3$ and therefore satisfies (FC) for the coordinate readouts. On each reflex step the first output coordinate is $1-p=\mathrm{NOT}(p_{stored})$, so the SPAP update is implemented. ∎
 
+**Remark 5.2.2c (Architecture Enumeration and the Independence of (FC)).** Fix the two-phase form used in Theorem 15(2),
+$$
+T(\phi,p,0)=(\phi,W(\phi,p),1),
+\qquad
+T(\phi,p,1)=(1-p,U(\phi,p),0),
+$$
+with $W,U:\{0,1\}^2\to\{0,1\}$. Exhaustive enumeration of the $256$ pairs $(W,U)$ gives the following finite certificate.
+
+1. Exactly $16$ pairs make $T$ injective on all eight configurations. Each has the unique form
+$$
+W(\phi,p)=p\oplus k(\phi),
+\qquad
+U(\phi,p)=\phi\oplus h(p)
+$$
+for Boolean maps $k,h:\{0,1\}\to\{0,1\}$.
+2. Exactly $4$ of those $16$ pairs have a single eight-element orbit and hence satisfy (FC).
+3. When verification is evaluated at the Commit Snapshot states $c_{phase}=1$, every two- or four-element orbit has constant match/mismatch outcome, whereas each of the eight six-element orbits contains both outcomes. Thus informative verification does not imply (FC).
+
+For example, $k(0)=k(1)=0$, $h(0)=0$, and $h(1)=1$ gives the informative orbit
+$$
+(0,0,0)\to(0,0,1)\to(1,0,0)\to(1,0,1)\to(1,1,0)\to(1,1,1)\to(0,0,0).
+$$
+It satisfies (O1)--(O3), implements $\phi_{t+1}=\operatorname{NOT}(p_{stored})$ at every reflex state, and has
+$$
+N_{\mathrm{vis}}=6,
+\qquad
+\log_2N_{\mathrm{vis}}=\log_2 6<3.
+$$
+Consequently (FC) is independent of (O1)--(O3), the displayed SPAP sub-dynamics, and informative Commit Snapshot verification. The value $K_0=3$ remains the attained floor on Theorem 15's full-context class; the larger informative class contains the six-state witness above.
+
 This completes the three-bit sufficiency construction for SPAP encodability. The next part addresses a separate claim: using the same three-bit register size, one can also implement a predictive mode with super-chance performance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. The present construction proves encodability of the SPAP reflex rule; the next one proves basic predictive success.
 
 **(3) Minimal Predictive Success.** Let $\hat X_{t+1}:=X_t$ and define
@@ -308,6 +338,18 @@ N_{\mathrm{vis}}^{\min}=8.
 $$
 On the Hilbert-carrier branch, Convention 1 translates representation of these eight contexts as mutually perfectly distinguishable alternatives into $d_0\ge8$. The explicit construction shows that $d_0=8$ is admissible for this register model. Selecting that saturating value by PCE requires a separately stated optimization domain and objective, and relating this capacity bound to $C_P$ requires the bridge hypothesis of Corollary 3.
 
+**Theorem 15b (Complete O1--O3/FC Cardinality-Ablation Classification).** Consider all $2^4$ subsets of the displayed hypotheses (O1), (O2), (O3), and (FC), with the conclusion restricted to the visited-state cardinality bound $|\mathcal S_{\mathrm{vis}}|\ge8$.
+
+1. Every subset containing (FC) forces the bound, because the joint readout is a surjection onto $\{0,1\}^3$; (O1)--(O3) are unused in that count.
+2. Every subset omitting (FC) fails to force the bound. The six-state orbit in Remark 5.2.2c satisfies all of (O1)--(O3), implements the reflex rule and has informative Commit Snapshot verification, yet has $|\mathcal S_{\mathrm{vis}}|=6$.
+3. The eight-state construction of Theorem 15(2) satisfies all four hypotheses and attains the bound.
+
+Thus, among the sixteen displayed axiom-ablation classes, exactly the eight containing (FC) force the eight-state cardinality conclusion. Within this hypothesis family, (FC) is necessary and sufficient for that conclusion, while (O1)--(O3) govern transition semantics rather than the count.
+
+*Proof.* Item 1 is the cardinality theorem for a surjection. The single six-state witness satisfies the strongest FC-omitting subset and therefore every weaker FC-omitting subset, proving item 2. Theorem 15(2) proves item 3. These cases exhaust the sixteen subsets. ∎
+
+**Resolution TV-HC-01-R1 (Metadata).** Exact domain: all sixteen subsets of the displayed axioms (O1), (O2), (O3) and (FC), for the sole conclusion $|\mathcal S_{\mathrm{vis}}|\ge8$. Premises: the literal four hypotheses and Theorem 15's registered six- and eight-state witnesses. Equivalence: equality of hypothesis subsets; no automaton-isomorphism claim is used. Budget: $2^4=16$ ablation classes. Verifier: the FC surjection count and the strongest FC-omitting countermodel. Falsifier: an FC model with fewer than eight states or failure of the six-state witness to satisfy one of (O1)--(O3). Provenance class: source-internal exhaustive finite axiom ablation. Downstream consumers: Theorem 15's cardinality boundary and `TV-HC-01`. Nonvacuity: the six- and eight-state constructions. This is `positive-discharge` of the registered force-the-eight-state Phase-A proposition; the exact theorem is retained as a regression boundary and does not enlarge Theorem 15's physical class.
+
 **5.2.3 Corollary 3 (Conditional Relation Between Thresholds $C_{op}\ge K_0$)**
 
 Let $\mathcal Q$ be the qualifying set inside the infimum in Definition 13. Assume that every $\mu\in\mathcal Q$ satisfies (O1)–(O3) and (FC), is represented on the Hilbert-carrier branch, and obeys the complexity-capacity bridge
@@ -330,6 +372,60 @@ $$
 C_{op}=\inf_{\mu\in\mathcal Q}C_P(\mu)\ge3=K_0.
 $$
 ∎
+
+**Proposition 5.2.3a (Integer Attainment and the Exact Equality Gate).** Assume $\mathcal Q\ne\varnothing$ and every $\mu\in\mathcal Q$ is full-constraint-realizable under the finite-alphabet, integer-length hypotheses of Theorem 2.4.1b. Then
+$$
+C_P(\mathcal Q):=\{C_P(\mu):\mu\in\mathcal Q\}
+\subseteq\mathbb N
+$$
+has a least element. Hence Definition 13's infimum is attained without a compactness hypothesis:
+$$
+C_{op}=\min_{\mu\in\mathcal Q}C_P(\mu).
+\tag{17a}
+$$
+On the additional bridge branch of Corollary 3,
+$$
+C_{op}=K_0=3
+\quad\Longleftrightarrow\quad
+(\exists\mu\in\mathcal Q)\ C_P(\mu)=3.
+\tag{17b}
+$$
+At the retained numerical-consequence level, a nonempty image $\{4\}$ satisfies the lower bound and has $C_{op}=4>K_0$. This observation alone does not construct that image in the fixed universal-machine hierarchy.
+
+*Proof.* Theorem 2.4.1b identifies every domain-defined $C_P(\mu)$ with an attained integer program length. The well-ordering principle gives a least element of the nonempty image, and a preimage state attains it, proving (17a). Corollary 3 gives $C_{op}\ge3$; equality holds exactly when the minimum image contains $3$, proving (17b). Proposition 5.2.3b below treats $\{4\}$ as a numerical-projection model without promoting it to a fixed-hierarchy qualifying class. ∎
+
+**Resolution TV-HC-02-R1 (Metadata).** Exact domain: nonempty Definition-13 qualifying classes whose $C_P$ values are domain-defined natural numbers. Premises: Theorem 2.4.1b's hierarchy conditions and, for (17b), Corollary 3's bridge. Equivalence: equality of qualifying states only through their registered $C_P$ image for the attainment claim. Budget: the complete natural-valued image, handled by well-ordering rather than finite enumeration. Verifier: integer-image minimum and the exact membership test at value $3$. Falsifier: a nonempty natural-valued image without a least element, or equality without a complexity-$3$ member. Provenance class: source-internal exact order theory. Downstream consumers: Definition 13, Corollary 3 and `TV-HC-02`. Nonvacuity of this fixed-hierarchy scope is not established by the numerical singleton images; those witnesses belong only to Proposition 5.2.3b's projection. This is `positive-discharge` of attainment and the exact equality criterion conditional on nonemptiness. Projection-level `nonentailment` is supplied separately by Proposition 5.2.3b. `TV-HC-02` retains `N+R`: the attainable image spectrum of the fixed hierarchy and a physical complexity-$3$ saturating witness remain live.
+
+**Proposition 5.2.3b (Complete Numerical Equality-Completion Fiber).** Forget the program hierarchy and physical-realization fields while retaining Theorem 15(2)'s response register, the Hilbert-capacity value $\log_2d_0=3$, the declared task, score and positive margin, and the numerical consequences
+$$
+\varnothing\ne\mathcal Q,
+\qquad
+c:\mathcal Q\longrightarrow\mathbb N,
+\qquad
+c(\mu)\ge3.
+\tag{17c}
+$$
+Define $c_{op}:=\min c(\mathcal Q)$. Up to equality of the retained complexity image, the complete class of such numerical completions is
+$$
+\left\{
+S\subseteq\{3,4,\ldots\}:S\ne\varnothing
+\right\},
+\qquad
+c_{op}=\min S.
+\tag{17d}
+$$
+Consequently,
+$$
+c_{op}=K_0=3
+\quad\Longleftrightarrow\quad
+3\in S.
+\tag{17e}
+$$
+Every displayed image is nonvacuous at this numerical-projection level: take $\mathcal Q_S=S$ and $c(s)=s$. In particular, the singleton models $S=\{3\}$ and $S=\{4\}$ have identical retained response/capacity entries and give equality and strict inequality, respectively. This projection classification makes no claim that an arbitrary $S$, or either singleton, is the complexity image of a microstate class under the fixed universal machine and full admissible hierarchy of Definition 2.4.1.
+
+*Proof.* Equation (17c) makes $S=c(\mathcal Q)$ a nonempty subset of $\{3,4,\ldots\}$, so well-ordering supplies the minimum in (17d). Conversely, the displayed identity model realizes every such $S$ in the numerical language. Since every member of $S$ is at least $3$, its minimum is $3$ exactly when $3$ belongs to $S$, proving (17e). The two singleton choices prove nonentailment of equality and of strict inequality from the retained numerical projection. ∎
+
+**Resolution TV-HC-02-R2 (Metadata).** Exact domain: the numerical projection obtained by retaining only nonemptiness, natural-valued complexity, the lower bound $3$, and the fixed response/capacity entries. Premises: exactly (17c), with no hidden universal-machine or hierarchy realization premise. Equivalence: equality of the retained complexity image $S$. Budget: every nonempty subset of $\{3,4,\ldots\}$, handled by the symbolic image classifier. Verifier: well-ordering, the membership test $3\in S$ and the identity models. Falsifier: an omitted nonempty image, an image without the displayed minimum, or equality with $3\notin S$. Provenance class: source-internal exact order-theoretic model classification. Downstream consumers: Proposition 5.2.3a and `TV-HC-02`. Nonvacuity: the explicit numerical models $\{3\}$ and $\{4\}$. This is `nonentailment` of equality and of strict inequality from the numerical response/capacity projection only. Classifying the fixed-machine attainable image spectrum and physically admitting a qualifying complexity-$3$ realizer remain `N+R`-open.
 
 **Remark (Scope of the Threshold Relation).** Under the realization-class and complexity-capacity bridge hypotheses of Corollary 3, $C_{op}\ge K_0=3$. Separately, under the multiplicative-composition hypothesis of Theorem 19 and for a held task scale $\hat C_{target}$, Equation (23) gives
 $$
@@ -376,6 +472,5 @@ No implication from $PP>\alpha$ to membership in $\mathcal Q$ is asserted withou
 | :------: | :-------------------- | :------------------------------------------------------------------------------------------------------------ | :---------------- | :------------------------------------------- |
 |   $K_0$  | Horizon Constant      | Least visited-context capacity in the SPAP realization class satisfying (O1)–(O3) and (FC); the same register size admits a basic super-chance mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ | Exactly 3 within that class | $d_0=8$ Hilbert carrier, SPAP two-phase map |
 | $C_{op}$ | Operational Threshold | Infimum of $C_P$ for the declared task and margin $\epsilon_{acc}>0$                                          | $\ge K_0=3$ only under Corollary 3's bridge hypotheses | The three-bit carrier alone does not establish equality |
-
 
 

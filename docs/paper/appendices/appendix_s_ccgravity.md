@@ -25,6 +25,24 @@ R(C_{op}+x)-R(C_{op})=r_px^2,
 $$
 This is a constitutive branch assumption. Convexity alone would give only a local Taylor formula with a remainder.
 
+**Proposition S.1a (Nonquadratic Definition-3 Cost Counterexample).** Fix $T_{\mathrm{eff}}$ and choose $\gamma_p=3$ in the admissible family of Definition 3a. With $x=C-C_{op}\ge0$, its excess cost is
+$$
+\Delta R_3(x):=R(C_{op}+x)-R(C_{op})=r_p x^3,
+\qquad r_p>0.
+\tag{S.3a}
+$$
+This is a nonempty, nonnegative, strictly increasing and strictly convex full-domain cost branch, but it is not globally quadratic. Consequently, Definition 3a's general cost hypotheses do not imply S.3; the global quadratic law is an independent constitutive branch.
+
+*Proof.* On $x\ge0$, $\Delta R_3(0)=0$ and $\Delta R_3(x)>0$ for $x>0$. Moreover,
+$$
+\Delta R_3'(x)=3r_px^2\ge0,
+\qquad
+\Delta R_3''(x)=6r_px>0\quad(x>0),
+$$
+so Definition 3a's monotonicity and strict-convexity requirements hold. If $\Delta R_3(x)=r x^2$ for one constant $r$ and every $x>0$, division by $x^2$ would give $r=r_px$ for every $x>0$, a contradiction. Within Definition 3a's power family, the excess law is globally quadratic exactly when $\gamma_p=2$. Thus $\gamma_p=3$ is an admissible counterexample to quadratic forcing. ∎
+
+**Resolution TV-S-01-R1 (Global Quadratic-Cost Nonforcing).** Exact domain: Definition 3a's full half-line $C\ge C_{op}$ power-cost family at fixed $T_{\mathrm{eff}}$, with $\gamma_p>1$ and $r_p(T_{\mathrm{eff}})>0$. Premises: the registered monotonicity and strict-convexity cost conditions without the separate S.3 constitutive assumption. Equivalence: pointwise equality of excess-cost functions on $[0,\infty)$. Exhaustive budget: the registered universal implication from those general conditions to the S.3 quadratic law. Verifier: differentiate (S.3a) and compare it at two distinct positive values of $x$ with an arbitrary fixed quadratic coefficient. Falsifier: failure of Definition 3a admissibility for $\gamma_p=3$ or one constant $r$ satisfying $r_px^3=rx^2$ for every $x>0$. Provenance class: source-internal explicit full-domain countermodel. Downstream consumers: S.4--S.5 and every Appendix-S result using the global quadratic branch. Nonvacuity: every $r_p>0$ supplies the displayed branch. This is `negative-refutation` of global quadratic forcing from the registered general cost hypotheses; S.3 and its downstream consequences remain valid on the independently adopted quadratic branch.
+
 Using $x=C_{context}=C_{scale}\mathrm{CC}/(\alpha_{CC,max}-\mathrm{CC})$, the additional maintenance power is
 $$
 P_{context}
@@ -1160,7 +1178,7 @@ This appendix develops a conditional gravitational-feedback model for operationa
 
 **Branch-qualified results:**
 
-1. **Power law:** S.5 follows on the global quadratic operational-cost branch. A local Taylor law does not imply endpoint divergence.
+1. **Power law:** S.5 follows on the global quadratic operational-cost branch. Proposition S.1a negatively resolves derivation of that global law from Definition 3a's general cost hypotheses by an admissible $\gamma_p=3$ counterexample. A local Taylor law does not imply endpoint divergence.
 2. **Source term:** The context contribution to stress-energy uses the retained instantaneous energy $\eta_{\mathrm{ret}}P_{context}\tau_c$ and a specified perfect-fluid closure.
 3. **Proper-time response:** $\Delta\tau_d=KP_{context}$ follows for the uniform spherical, weak-field geometry, with $K$ carrying $\eta_{\mathrm{ret}}$.
 4. **Utility maximizer:** S.27 is the unique interior maximizer of the truncated phenomenological utility when its small-CC and weak-response conditions hold. Appendix-D concentration requires an additional potential-identification and detailed-balance package.

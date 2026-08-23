@@ -360,6 +360,57 @@ $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in that orthono
 
 **Step 4.** In a basis orthonormal with respect to this inherited metric, every basis vector has the same norm and therefore the same single-generator QFI weight $\lambda_0$. This is the sense in which PCE isotropy enforces equal per-generator capacity. The theorem does not equate gauge couplings or gauge-kinetic coefficients; that conclusion requires Proposition W.13's common-stiffness pullback premise. $\square$
 
+**Theorem W.3a.3a (Invariant Gauge-Kinetic Forms and Flat-QFI Embedding Moduli).** Write
+$$
+\mathfrak g_{\mathrm{SM}}
+=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)
+$$
+and fix on its three labeled ideals the positive trace forms $b_3,b_2,b_1$ in the generator normalization of Proposition W.13. Every positive-definite symmetric $\operatorname{Ad}$-invariant bilinear form on $\mathfrak g_{\mathrm{SM}}$ is uniquely
+$$
+B_{\mathbf c}
+=c_3b_3\oplus c_2b_2\oplus c_1b_1,
+\qquad
+(c_3,c_2,c_1)\in\mathbb R_{>0}^3.
+\tag{W.3a.3a.1}
+$$
+Let $(E,g_0,\omega_0)$ be the flat $24$-dimensional QFI interface of Proposition W.3a.2 with its compatible symplectic form. For every $B_{\mathbf c}$ there exists an injective linear map
+$$
+R_{\mathbf c}:\mathfrak g_{\mathrm{SM}}\longrightarrow E,
+\qquad
+R_{\mathbf c}^*g_0=B_{\mathbf c},
+\qquad
+\omega_0|_{R_{\mathbf c}(\mathfrak g_{\mathrm{SM}})}=0.
+\tag{W.3a.3a.2}
+$$
+After fixing one $B_{\mathbf c}$-orthonormal ordered domain frame, all maps satisfying (W.3a.3a.2) form a $U(12)$ torsor; if the isotropy condition is dropped, all metric injections form the Stiefel manifold
+$$
+V_{12}(\mathbb R^{24})\cong O(24)/O(12).
+\tag{W.3a.3a.3}
+$$
+In particular, flat ambient QFI permits every coefficient triple in (W.3a.3a.1). The electroweak common-stiffness premise of Proposition W.13 is the proper sublocus $c_1=c_2$ in these fixed trace normalizations, so it is not forced by flatness. Nor does the unmarked metric/symplectic data select a canonical injection: the full target-frame group acts nontrivially and transitively on the corresponding frame family.
+
+*Proof.* If $i\ne j$, invariance and $[\mathfrak g_i,\mathfrak g_j]=0$ give
+$$
+B([x,y],z)=B(x,[y,z])=0
+\qquad
+(x,y\in\mathfrak g_i,\ z\in\mathfrak g_j).
+$$
+Each simple ideal is perfect, so all cross terms with another ideal, including the central $\mathfrak u(1)$ ideal, vanish. On each compact simple ideal an invariant symmetric form is a scalar multiple of its fixed trace form; the one-dimensional central restriction is also a scalar. Positive definiteness is exactly $c_i>0$, proving (W.3a.3a.1).
+
+Choose a $B_{\mathbf c}$-orthonormal ordered basis $(e_1,\ldots,e_{12})$ and a $g_0$-orthonormal Lagrangian frame $(v_1,\ldots,v_{12})$ in $E$. The rule $R_{\mathbf c}e_i=v_i$ proves (W.3a.3a.2). The compatible unitary group acts simply transitively on ordered orthonormal Lagrangian frames, giving the $U(12)$ torsor. Without the Lagrangian condition, ordered orthonormal $12$-frames are exactly $O(24)/O(12)$. Taking, for example, $c_1\ne c_2$ supplies a retained positive invariant form and an exact flat-QFI embedding outside the common-stiffness locus. ∎
+
+| Resolution-artifact field | `W.3a.3a-R1` record |
+|---|---|
+| Catalog binding and outcome | `TV-W-03`: `negative-refutation` of flat-QFI forcing of common stiffness and complete classification of the invariant-form/bare-linear-isotropic-embedding component; typed response, update, and observable intertwiner classification remains `M`-open, followed by its `C+R` population and realization gates. `TV-G-11`: `nonentailment` of a canonical unmarked metric-linear injection; its marked code, Lie-bracket, update, polarization, and response equivariance gates remain open |
+| Exact domain | Positive invariant forms on the labeled compact reductive algebra $\mathfrak g_{\mathrm{SM}}$ and injective linear metric maps into the exact flat $24$-dimensional interface, with the optional stated Lagrangian condition |
+| Premises | Fixed trace normalization $b_i$, Proposition W.3a.2's flat metric, and the canonical interface symplectic form; no physical gauge-response map is presumed |
+| Equivalence relation | Factor-preserving gauge-algebra automorphisms and target $U(12)$ transformations for Lagrangian frames, or $O(24)$ for metric-only frames; the three stiffness coefficients remain labeled invariants |
+| Budget and verifier | Closed-form all-coefficient and all-frame classification; verify invariance identities, positivity, pullback Gram matrices, isotropy, and the two homogeneous-space stabilizers exactly |
+| Falsifier | A positive invariant form with a cross term or non-scalar simple-ideal restriction, a coefficient triple with no displayed injection, or a canonical injection fixed by the full unmarked target-frame action |
+| Provenance class | Target-independent compact-Lie-algebra and finite-dimensional metric/symplectic linear algebra |
+| Nonvacuity | $\mathbf c=(1,1,1)$ gives the common form, while $\mathbf c=(1,2,1)$ gives an anisotropic positive form; both embed into any fixed standard Lagrangian $12$-plane |
+| Downstream consumers | Proposition W.13, Corollary G.8.2f, Theorems G.8.7b/G.8.7f, `TV-W-03`, `TV-G-11`, `RT-T1`, and `RT-T7`; a positive coupling claim still needs a populated physical response map selecting $c_1=c_2$ and preserving the registered dynamics and observables |
+
 ### W.3a.4 Mode Ratio and Electroweak Structure
 
 **Remark W.3a.4: Mode Ratio.** At the PCE-Attractor with uniform per-generator capacity, the mode ratio is:
@@ -429,6 +480,92 @@ N_c(2q-Y_u-Y_d)+(2\ell-Y_e)
 =0.
 $$
 Substitution of $h=N_cq$ and $\ell=-N_cq$ into the Yukawa relations yields Equation (W.4.3). ∎
+
+**Theorem W.14a (Complete One-Sterile Local Anomaly--Yukawa Moduli).** Enlarge Theorem W.14's one-family matter content by one right-handed neutrino
+$$
+\nu_R:(\mathbf1,\mathbf1)_{Y_\nu}
+$$
+and require its Dirac Yukawa coupling to the same Higgs doublet. For fixed $N_c$, every real hypercharge assignment satisfying all Yukawa relations and all perturbative local gauge and mixed-gravitational anomaly equations is, and only is,
+$$
+\begin{aligned}
+Y_Q&=q,&Y_L&=-N_cq,&Y_H&=h,\\
+Y_u&=q+h,&Y_d&=q-h,&Y_e&=-N_cq-h,&Y_\nu&=-N_cq+h,
+\end{aligned}
+\qquad(q,h)\in\mathbb R^2.
+\tag{W.14a.1}
+$$
+The $SU(2)$ global anomaly additionally requires $N_c+1$ even. Modulo a nonzero common real rescaling, the nonzero local-charge solutions form $\mathbb{RP}^1$. For $N_c=3$ the two parameters are equivalently the coefficients of Standard Model hypercharge and $B-L$:
+$$
+Y(q,h)=hY_{\mathrm{SM}}+(3q-h)(B-L).
+\tag{W.14a.2}
+$$
+Thus adding one Dirac-coupled sterile neutrino removes the local-anomaly uniqueness of Theorem W.14. A compact global $U(1)$ form and primitive character lattice restrict (W.14a.1) to their allowed lattice directions but are additional data and are not classified by this local theorem.
+
+*Proof.* Yukawa invariance gives
+$$
+Y_u=q+h,
+\quad Y_d=q-h,
+\quad Y_e=\ell-h,
+\quad Y_\nu=\ell+h.
+$$
+The pure $SU(N_c)^3$ coefficient is $2-1-1=0$, and the perturbative $SU(2)^3$ anomaly vanishes by pseudoreality.
+The $SU(N_c)^2U(1)$ equation is then $2q-Y_u-Y_d=0$, and the $SU(2)^2U(1)$ equation is $N_cq+\ell=0$, hence $\ell=-N_cq$. The cubic anomaly becomes
+$$
+\begin{aligned}
+\mathcal A_{Y^3}
+&=N_c\bigl(2q^3-(q+h)^3-(q-h)^3\bigr)\\
+&\quad+2\ell^3-(\ell-h)^3-(\ell+h)^3\\
+&=-6h^2(N_cq+\ell)=0.
+\end{aligned}
+$$
+The mixed gravitational anomaly vanishes identically:
+$$
+N_c(2q-Y_u-Y_d)+(2\ell-Y_e-Y_\nu)=0.
+$$
+Thus $q$ and $h$ are free and (W.14a.1) is both necessary and sufficient for the perturbative local equations. The number of left-handed $SU(2)$ doublets is $N_c+1$, giving the stated Witten parity condition. Equation (W.14a.2) follows by comparing the $(Y_Q,Y_H)$ pairs $(1/3,1)$ and $(1/3,0)$ of $Y_{\mathrm{SM}}$ and $B-L$. ∎
+
+| Resolution-artifact field | `W.14a-R1` record |
+|---|---|
+| Catalog binding and outcome | `TV-W-05`; `negative-refutation` of unique hypercharge on the exact one-Higgs, one-Dirac-sterile local-anomaly branch and `positive-discharge` of that branch's complete real solution moduli; broader sterile, family, Higgs, defect, and global-form classification remains `M`-open |
+| Exact domain | One $Q_L,u_R,d_R,L_L,e_R,\nu_R$ family, one Higgs doublet, all four displayed Yukawa couplings, fixed $N_c$, and perturbative local plus mixed-gravitational anomalies; Witten parity is recorded separately |
+| Premises | Standard left-chiral anomaly signs and Theorem W.14's doubled-hypercharge convention $Q=T_3+Y/2$ |
+| Equivalence relation | Nonzero common real charge rescaling on the local Lie-algebra branch; compact character-lattice and center-quotient equivalence is excluded from this scope |
+| Budget and verifier | Symbolic exhaustion of every $(q,\ell,h,Y_u,Y_d,Y_e,Y_\nu)\in\mathbb R^7$ satisfying the displayed linear relations and anomaly polynomials; substitute (W.14a.1) and reverse-eliminate the equations |
+| Falsifier | A real solution of the frozen equations outside (W.14a.1), or a member of (W.14a.1) with a nonzero perturbative local or mixed-gravitational anomaly |
+| Provenance class | Target-independent exact anomaly algebra with no measured charge value used as an input |
+| Nonvacuity | At $N_c=3$, $(q,h)=(1/3,1)$ is the Standard Model-hypercharge point and $(q,h)=(1/3,0)$ is the distinct $B-L$ point |
+| Downstream consumers | Theorem W.14, `TV-W-05`, the hypercharge-lattice component of `TV-G-07/08`, and `RT-T1`; physical charge quantization and a unique matter/EWSB branch still require the global-form, primitive-lattice, anomaly-bordism, response, and PCE-gap records |
+
+**Theorem W.14b (Complete Common-Higgs Multiple-Family Local Moduli).** Fix $N_c$ and $F\ge1$ fermion families, each containing $Q_{L,f},u_{R,f},d_{R,f},L_{L,f},e_{R,f},\nu_{R,f}$. Let one Higgs doublet of hypercharge $h$ supply the four family-diagonal Dirac Yukawa couplings in every family. Then every real assignment satisfying all Yukawa relations and perturbative local gauge and mixed-gravitational anomaly equations is, and only is,
+$$
+\begin{aligned}
+Y_{Q_f}&=q_f,&Y_{L_f}&=\ell_f,
+&Y_{u_f}&=q_f+h,&Y_{d_f}&=q_f-h,\\
+Y_{e_f}&=\ell_f-h,&Y_{\nu_f}&=\ell_f+h,
+&&\sum_{f=1}^F(N_cq_f+\ell_f)=0.
+\end{aligned}
+\tag{W.14b.1}
+$$
+The real solution space has dimension $2F$. The $SU(2)$ global anomaly additionally requires $F(N_c+1)$ even. If several Higgs doublets are all required to couple to the same fixed up- or down-type fermion fields, their hypercharges are equal. Higgs doublets absent from the retained Yukawa graph are scalars and add unconstrained local-Lie-algebra hypercharge moduli; compact character lattices and global form remain separate.
+
+*Proof.* Family-diagonal Yukawa invariance gives the four displayed charge relations. The $SU(N_c)^2U(1)$ anomaly cancels in each family. The only remaining linear nonabelian condition is
+$$
+\sum_f(N_cq_f+\ell_f)=0.
+$$
+For family $f$, direct substitution gives cubic contribution
+$$
+-6h^2(N_cq_f+\ell_f),
+$$
+so the total cubic anomaly vanishes exactly on the same linear equation. The mixed gravitational contribution is
+$$
+N_c(2q_f-Y_{u_f}-Y_{d_f})
++2\ell_f-Y_{e_f}-Y_{\nu_f}=0
+$$
+in every family. Thus (W.14b.1) is necessary and sufficient. It has $2F+1$ variables $(q_f,\ell_f,h)$ and one independent linear equation, giving dimension $2F$. There are $F(N_c+1)$ left-handed doublets, proving the parity condition. Finally, two Yukawa equations $Y_{u_f}=q_f+h_j=q_f+h_{j'}$, or their down-type analogues, force $h_j=h_{j'}$. A scalar absent from all such equations contributes to no fermion anomaly polynomial, proving the inert-Higgs statement. ∎
+
+This theorem discharges the arbitrary-family common-Higgs branch and the all-active-multiple-Higgs reduction. General Yukawa graphs with different Higgs assignments, additional sterile or defect representations, and compact primitive-lattice/global-form classification remain separate branches.
+
+**Resolution record W.14b-R1 (`TV-W-05`, common-Higgs family component).** Theorem W.14b gives `positive-discharge` of every finite family count $F\ge1$ with family-diagonal Dirac Yukawa couplings to one common Higgs, including family-nonuniversal charges, and proves that any additional Higgs coupled to the same fixed fermion fields has the same hypercharge. Equivalence is nonzero common real rescaling on the local Lie-algebra branch. The verifier substitutes (W.14b.1) into every perturbative anomaly polynomial and checks the one remaining linear equation; any solution outside (W.14b.1), or any member with a nonzero listed anomaly, falsifies the record. General Yukawa assignment graphs, extra representations, compact primitive lattices, and global form remain outside this component.
 
 **Corollary W.15 (SM normalization and $N_c$).**
 Using the **canonical** SM relation $Q=T_3+\tfrac{Y}{2}$ and $Q(\nu_L)=+\tfrac12+\tfrac{Y_L}{2}=0\Rightarrow Y_L=-1$, we obtain $Y_Q=\tfrac{1}{N_c}$ and $Y_H=1$. Matching $Q(u_L)=+\tfrac23$, $Q(d_L)=-\tfrac13$ fixes $N_c=3$ and
@@ -557,5 +694,4 @@ has a topological integral up to boundary contributions, so $R_{\mu\nu\rho\sigma
 * (E) **Deterministic pipeline** from the preregistered probe, QFI spectrum, global constants, and branch classification of W.6 to numerical outputs.
 * (F) **Transparent variance dependence** via $F_\lambda$ (W.2.4), quantifying robustness.
 * (G) **Predictive Power:** As shown in **Appendix Z**, this formalism, when combined with the framework's fundamental constants, yields the Thomson-limit fine-structure calculation through the displayed third-order formula of Theorems Z.24–Z.26. This fixes the low-energy boundary condition in the sense used there. The lifted threshold tuple of Appendix T belongs to the separate PU-to-SM matching problem at $\mu_G$ and later RG flow to $M_Z$, not the Thomson-limit formula itself. No continuously adjustable fit parameter enters the displayed Appendix Z Thomson-limit expression once its stated inputs are fixed.
-
 

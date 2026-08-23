@@ -55,6 +55,37 @@ $$
 $$
 Thus proxy-based minimization is guaranteed to preserve the selected PPI/PCE class on the gap-dominating branch $\Delta_P>2\varepsilon$. If this inequality is not certified, the displayed uniform-error argument does not establish exact selection, and the proxy remains an operational tracker.
 
+**Theorem B.1a (Complete Spectral-Proxy Reparameterization and Canonical-Coordinate No-Go).** Suppose the nonzero coarse bins in Definition B.1 are $P_0,\ldots,P_N$ with distinct ordered eigenvalues
+$$
+\lambda_0<\cdots<\lambda_N.
+$$
+A Hermitian proxy has exactly the same projective response bins and preserves their order if and only if it has the form
+$$
+\widehat C_h=h(\widehat C)=\sum_{d=0}^Nh(\lambda_d)P_d
+\tag{B.2a.1}
+$$
+for a uniquely determined strictly increasing function $h$ on the finite spectrum. For every cost function $R$ on the original spectrum, define
+$$
+R_h(z):=R(h^{-1}(z)).
+$$
+Then
+$$
+R_h(\widehat C_h)=R(\widehat C),
+\tag{B.2a.2}
+$$
+so all projective response probabilities and all registered functional-calculus costs are unchanged.
+
+In particular, $h_{a,b}(z)=az+b$ with $a>0$ gives an uncountable two-parameter family of response- and cost-preserving coordinates. Therefore the response bins and cost operator do not select a canonical numerical complexity coordinate. Fixing two distinct calibrated bin values removes the affine freedom, but a general monotone freedom is removed only by fixing the value of every retained bin or by an equivalent full functional convention.
+
+*Proof.* If the response projectors are the same, the spectral theorem writes the second proxy uniquely as $\sum_d\mu_dP_d$. Order preservation is exactly $\mu_0<\cdots<\mu_N$. Defining $h(\lambda_d)=\mu_d$ gives the unique strictly increasing function on the finite spectrum and proves (B.2a.1); the converse is immediate. Functional calculus gives
+$$
+R_h(\widehat C_h)
+=\sum_dR_h(h(\lambda_d))P_d
+=\sum_dR(\lambda_d)P_d
+=R(\widehat C),
+$$
+which proves (B.2a.2). Projective response probabilities depend only on the $P_d$ and are unchanged. The affine family proves nonuniqueness. Two calibration equations determine $a,b$, whereas arbitrary values $h(\lambda_d)$ at the remaining bins remain free unless those values or an equivalent convention are fixed. ∎
+
 *Proof.* Let
 $$
 \mathcal D(\hat C_v)
@@ -189,6 +220,56 @@ $$
 N\ge\frac{3}{128\delta^2}\ln\left(\frac1{4\beta}\right).
 $$
 Multiplication by $c_s$ and the infimum over the uniformly certified strategies give (B.5). ∎
+
+**Theorem B.2a (Matching Upper Construction on the Frozen Bernoulli Task).** For $0<\delta\le1/8$, let
+$$
+N_+(\delta)
+:=
+\left\lceil
+\frac{\ln(2/\delta)}{2\delta^2}
+\right\rceil.
+\tag{B.5e}
+$$
+From $N_+(\delta)$ independent Bernoulli observations, the sample mean $\widehat p$ satisfies
+$$
+\Pr_p(|\widehat p-p|\ge\delta)\le\delta
+\tag{B.5f}
+$$
+for every $p\in[0,1]$. In particular it is a $\delta$-accurate estimator under both hard laws $p_\pm=1/2\pm2\delta$, and thresholding $\widehat p$ at $1/2$ gives both testing errors at most $\delta$. If acquisition and updating use at most $c_u>0$ registered elementary operations per observation plus a fixed $c_0$, the construction costs at most
+$$
+c_0+c_uN_+(\delta)
+=O\!\left(\frac{\log(1/\delta)}{\delta^2}\right).
+\tag{B.5g}
+$$
+On a registered estimator class that contains this sample-mean algorithm, obeys the displayed upper operation ledger, and satisfies Theorem B.2's lower-cost certificate with $\beta(\delta)=\delta$, the frozen Bernoulli minimax operation rate is
+$$
+\Theta\!\left(\frac{\log(1/\delta)}{\delta^2}\right).
+\tag{B.5h}
+$$
+
+*Proof.* Hoeffding's inequality gives
+$$
+\Pr_p(|\widehat p-p|\ge\delta)
+\le2e^{-2N_+(\delta)\delta^2}
+\le\delta.
+$$
+Under $p_-$, the event $\widehat p\ge1/2$ implies $\widehat p-p_-\ge2\delta>\delta$; under $p_+$, the event $\widehat p\le1/2$ implies $p_+-\widehat p\ge2\delta>\delta$. Thus both test errors obey the same bound. Counting operations gives (B.5g), and Theorem B.2 supplies the matching asymptotic lower bound. ∎
+
+**Resolution TV-SPAP-02-R1 (Metadata).** Exact domain: independent Bernoulli observations with $0<\delta\le1/8$ and failure budget $\beta(\delta)=\delta$. Premises: Theorem B.2's frozen hard pair and lower-cost certificate, admission of the sample-mean algorithm, and its declared $c_u$ per-observation upper ledger. Equivalence: estimators are compared by their induced output/error law on the two registered parameters. Budget: $N_+(\delta)$ observations and their declared finite operation ledger. Verifier: Hoeffding's exact tail substitution together with Theorem B.2's converse. Falsifier: failure of (B.5f), an exceeded operation ledger, or an admissible algorithm below the certified converse. Provenance class: source-internal probabilistic construction. Downstream consumers: Theorem 14, Corollary B.2.1 and `TV-SPAP-02`. Nonvacuity: the two independent Bernoulli laws and the sample-mean algorithm. This is `positive-discharge` of the frozen hard-family rate. Theorem B.2b and Resolution TV-SPAP-02-R2 below negatively resolve SPAP-only entailment; the task-specific reduction, populated certificate, and physical operation bridge remain `M+C+R`-open.
+
+**Theorem B.2b (SPAP Does Not Entail a Nonvacuous Bernoulli Hard-Family Certificate).** The diagonal-closure hypotheses and conclusions of Theorems 10--11 do not imply the existence of a reduction certificate $\mathfrak C_{B.2}$ admitting any $\delta$-accurate strategy. More precisely, there is a nonempty coded model class carrying the deterministic and rational-probabilistic SPAP diagonal constructions and an admissible protocol registry for which no such nonvacuous B.2 certificate exists.
+
+*Proof.* Take a standard coded class of finite deterministic and rational-probabilistic programs closed under self-description, finite composition, Boolean negation, the rational threshold test $p>1/2$, and the diagonal wrappers of Theorems 10--11. This is a nonempty model class satisfying those theorems' logical hypotheses. Register for each nominated system only the single read-before-commit interaction used by the diagonal construction, and admit one-shot Bernoulli observations at every rational parameter. The registry contains no reset, restart, product, or repeated-trial operation, so it contains no protocol producing two independent observations of one parameter.
+
+The SPAP proofs are unchanged: each uses one prediction query followed by one diagonal commit and assumes no repetition axiom. Suppose nevertheless that a nonvacuous B.2 certificate existed on this registry with $\delta=1/8$ and $\beta(\delta)\le\delta$, and choose one $\delta$-accurate strategy covered by it. Theorem B.2 would require that strategy's integer observation count to satisfy
+$$
+N\ge
+\frac{3}{128(1/8)^2}\ln\!\left(\frac{1}{4(1/8)}\right)
+=\frac32\ln2>1,
+$$
+hence $N\ge2$. That contradicts the one-shot protocol registry. Thus the registered class satisfies SPAP while failing the B.2 certificate premise. ∎
+
+**Resolution TV-SPAP-02-R2 (Logical Nonentailment Boundary).** Exact domain: coded model classes satisfying Theorems 10--11 and protocol registries not assumed closed under restart, products, or independent repetition. Premises: only the stated SPAP representation, simulation, threshold, Boolean, and diagonal-closure hypotheses. Equivalence: equality of the admitted interaction protocols and induced response laws. Budget: the one prediction query and one diagonal commit in the countermodel. Verifier: replay the diagonal wrapper, audit absence of repeated-trial morphisms, and check the displayed B.2 integer lower bound. Falsifier: a derivation of an admitted two-sample independent protocol from the frozen one-shot registry. Provenance class: source-internal logical countermodel. Downstream consumers: Theorem 14, Corollary B.2.1, `TV-SPAP-02`, and alias `TV-BSR-02`. Nonvacuity: the coded finite-program class and its rational one-shot Bernoulli laws. This is `nonentailment` of a nonvacuous $\mathfrak C_{B.2}$ from SPAP alone, not a no-go for a task-specific reduction after independent repeated-trial, hard-law, confidence, and cost records are supplied. The SPAP-only route therefore carries `N`; the task-specific reduction proof, populated certificate, and physical-operation bridge remain `M+C+R`-open, so the owner and alias both retain `N+M+C+R`.
 
 **Corollary B.2.1 (Conditional Pattern-Specific Cost Inheritance).** Let $\mathcal S_E$ be the admissible strategies integrating pattern $E$ at margin $\delta_S(E)>0$. Assume a certificate maps every $S\in\mathcal S_E$ to a $\delta_S(E)$-accurate strategy in Definition B.2, preserves the two hard Bernoulli laws and their confidence requirement, and proves
 $$
@@ -548,6 +629,29 @@ $$
 $$
 Passing to the paired limits gives $\langle\mathbf T-\widetilde{\mathbf T},\phi\rangle=0$ for all such $\phi$, hence equality as Radon measures. Radon–Nikodym uniqueness gives equality of densities. Uniqueness of a cluster point upgrades subsequential convergence to convergence of the family. ∎
 
+**Proposition B.8b.2 (Admissibility Does Not Imply Source or Horizon-Flux Uniqueness).** On a flat compact coordinate box with periodic boundary conditions, fix a nonzero constant symmetric tensor $S^{\mu\nu}$ and a sequence $h_n\downarrow0$. Let the $h_n$-lattices use exact cell volumes and consistent finite-difference gradients. Define discrete tensors by the cell averages of
+$$
+T_n^{\mu\nu}
+=
+\begin{cases}
+0,&n\text{ even},\\
+S^{\mu\nu},&n\text{ odd}.
+\end{cases}
+\tag{B.20a.1}
+$$
+This is an admissible coarse-graining in the sense of Definition B.8a, but it has the two distinct weak-$*$ cluster points $0$ and $S^{\mu\nu}dV$. Hence admissibility, symmetry, and exact discrete conservation do not force full-family convergence or a unique continuum source.
+
+Moreover, choose a local null horizon patch and $S$ with $S_{\mu\nu}k^\mu k^\nu\ne0$. The two cluster-point horizon quadratures in Theorem B.8d are respectively zero and
+$$
+-\kappa\int_{\mathcal H}\lambda S_{\mu\nu}k^\mu k^\nu\,d\lambda\,dA,
+\tag{B.20a.2}
+$$
+so horizon flux is not unique either.
+
+*Proof.* Both constant tensors are symmetric and divergence-free. Exact cell averaging gives a uniform total-variation bound on each compact set. Summation by parts with periodic boundary conditions gives the discrete weak-conservation identity, and the consistent finite-difference gradients satisfy Definition B.8a(iii). Thus the family is admissible. Even indices converge exactly to the zero measure; odd indices are Riemann sums converging to $S^{\mu\nu}dV$. Since $S\ne0$, the cluster points differ. The horizon quadrature is linear in the limiting tensor, and the displayed choice of $S$ makes the second value nonzero on a patch of nonzero measure. ∎
+
+Therefore a uniqueness theorem must add a common-action/variation limit, a Cauchy or unique-cluster-point condition, or paired $o(1)$ equivalence strong enough to invoke Corollary B.8b.1. The current admissibility class by itself refutes the universal all-coarse-grainings premise.
+
 **Theorem B.8c (Variational Identification of the Continuum Source Tensor).** Let
 $$
 S_{(\mathrm{MPU})}[g,\Phi]
@@ -803,6 +907,5 @@ This appendix gives a typed construction pathway for $T_{\mu\nu}^{(MPU)}$:
 6. Theorem B.6 identifies vacuum and perfect-fluid forms after the corresponding symmetry, renormalization, and local-equilibrium hypotheses are supplied.
 
 The resulting tensor is suitable as the source in Equation (76) only on a branch that also carries the metric-continuum, variational, horizon-flux, normalization, and overlap certificates required by the gravity derivation. This pathway preserves the finite MPU energy ledger without identifying an abstract processing cost with physical stress-energy in the absence of an implementation map.
-
 
 

@@ -33,6 +33,34 @@ $$
 $$
 with the residual-budget branch still using the paper's default link-cycle threshold unless this one-register subledger is explicitly present.
 
+**Theorem 23d (Finite Registered MPU-Census Classifier).** Freeze a finite candidate set $\mathcal A$ of typed predictive architectures, their exact original and null-intervened response tables, PPI-admissibility predicates, and one source-exhausted cost $V$ in common units. Assume at least one candidate is admissible, and quotient the admissible candidates by equality of the complete retained response table. For each response class define
+$$
+v([a]):=\min_{b\in[a]}V(b).
+$$
+Exact enumeration returns every quotient class, its least-cost representatives, the global minimizer set of $v$, and any strict interclass gap. A unique minimal MPU class exists in this census exactly when one response class has strictly smaller $v$ than every other class.
+
+*Proof.* Every predicate, response equality and cost comparison is decidable on the frozen finite set. Partitioning by table equality is exhaustive. Each response class attains its candidate-cost minimum, and the nonempty finite quotient attains the minimum of $v$. The global class is unique exactly under the displayed strict comparison. ∎
+
+**Resolution TV-MPU-01-R1 (Metadata).** Exact domain: populated finite typed predictive-architecture censuses with a nonempty admissible subcensus, exact original/null response tables, PPI predicates and common-unit costs. Premises: decidability of every supplied predicate and comparison. Equivalence: equality of the complete retained response table, with class cost given by the least representative cost $v$. Budget: every candidate, quotient class and representative in the supplied census. Verifier: exhaustive admissibility, partition and exact cost comparison. Falsifier: an omitted response class, lower-cost omitted representative or claimed strict gap in a tie. Provenance class: source-internal finite classifier schema. Downstream consumers: Definition 23 and `TV-MPU-01`. Nonvacuity: one admissible architecture and a two-class equal-cost census. This is scoped `positive-discharge` for every populated finite census. Theorem 23d alone supplies no exhaustive physical census, common PPI realization or source-exhausted physical cost, so its finite-census result leaves `M+C+R`. Theorem 23e below closes `M` for every frozen bounded total decoder; accepting one decoder and bound as physically exhaustive, populating its records, and realizing them remain `C+R`.
+
+**Theorem 23e (Bounded Description-Census Exhaustion).** Fix an integer $B\ge0$, a finite binary description alphabet, and a total deterministic decoder
+$$
+\operatorname{Dec}_B:\{w\in\{0,1\}^*:|w|\le B\}
+\longrightarrow \mathcal A_{\mathrm{type}}\sqcup\{\bot\}.
+$$
+Assume that equality of decoded typed architectures, every PPI-admissibility predicate, every retained original and null-intervened response, and the common-unit cost $V$ are decidable. Then exhaustive enumeration of the $2^{B+1}-1$ input words, rejection of $\bot$, and exact deduplication produces the complete decoded architecture class
+$$
+\mathcal A_B
+=
+\{\operatorname{Dec}_B(w):|w|\le B,\ \operatorname{Dec}_B(w)\ne\bot\}.
+\tag{23e.1}
+$$
+If its admissible subcensus is nonempty, Theorem 23d returns every retained-response quotient class, every least-cost representative, the complete global minimizer set, and the exact strict-gap decision on $\mathcal A_B$.
+
+*Proof.* The input domain of $\operatorname{Dec}_B$ is finite and is exhausted by length-lexicographic enumeration. Totality assigns one decoded value or $\bot$ to every word. Exact equality removes repeated descriptions without removing a decoded architecture, so (23e.1) contains every architecture admitted by the frozen decoder and bound. The remaining claims are Theorem 23d applied to this proved-complete finite census. ∎
+
+**Resolution TV-MPU-01-R2.** Exact domain: all architectures decoded by one frozen total decoder at description length at most $B$. Premises: the displayed finiteness, totality and decidability conditions and a nonempty admissible subcensus. Equivalence: equality of complete retained response tables, with duplicate descriptions removed first. Budget: all $2^{B+1}-1$ binary words. Verifier: length-lexicographic enumeration, decoder-totality check, exact deduplication and Theorem 23d. Falsifier: an admitted word not enumerated, a decoded architecture absent from $\mathcal A_B$, or an incorrect quotient/minimum/gap result. Nonvacuity is supplied by any decoder admitting the explicit three-register architecture of Section 7.1.3. This gives `positive-discharge` of the mathematical coverage and classifier component for every frozen bounded description universe. Selecting a physically exhaustive decoder and bound, populating the physical response tables, and accepting the common PPI/cost realization remain the `C+R` components.
+
 **7.1.2 Interpretive Convention: Minimal Awareness**
 
 The ongoing MPU cycle—prediction ($P_{int}$), verification ($V$), and update ($D_{cyc}$) under POP—is interpreted here as the most basic operational form of awareness. On the independently accepted Hilbert/Born/instrument/single-outcome branch, Proposition 9 represents an ideal registered verification as an `Evolve` instrument; the convention then assigns its outcome event this same minimal-awareness language. This is an interpretive assignment, not a theorem that Definition 27 makes every interaction an actualization or that phenomenal status supplies any physical premise. All subsequent derivations use the MPU's operational prediction, ND-RID, and POP/PCE properties together with each named branch hypothesis. In particular, $C_{op}\ge K_0$ is used only on Theorem 15 and Corollary 3's (O1)–(O3), (FC), Hilbert-distinguishability, and complexity-capacity branch.
@@ -878,7 +906,7 @@ $$
 for outcomes with nonzero probability.
 
 1. **Registered instrument update:** $p_i=\operatorname{tr}\mathcal I_i^N(\rho)$ and $\sum_i\mathcal I_i^N$ is trace preserving. Only the nondegenerate sharp repeatability branch gives $\rho_i'=|i\rangle_s\langle i|_s$.
-2. **Conditional perspective shift:** given $i$, $s'$ is drawn from the normalized kernel $G_{\mathrm{persp}}(s'|s,i,N,\Delta t)$.
+2. **Conditional perspective shift:** given $i$, $s'$ is drawn from the normalized kernel $G_{\mathrm{persp}}(s'|s,i,N,\Delta t)$. Its drift data are either interaction-model data (Appendix M.3.3.1) or derived on the interrogative-efficiency branch (Appendix M.3.3.2).
 
 The post-event state is therefore $(\rho_i',s')$, with $(|i\rangle_s,s')$ permitted only as the pure-state shorthand of Definition 24. Theorem 27 does not derive eventwise stochasticity, and Theorem 28a does not derive the physical instrument or single-run selector. A physical reset cost follows only under Definition 28 and Theorem 31; $\varepsilon_0=\ln2$ alone is not a heat bound.
 
@@ -1376,3 +1404,328 @@ It equals the measured gravitational constant only on the external calibration
 branch. Section 12 records the conditional Einstein-equation derivation and
 its independent source and conservation gates.
 
+## 7.6 Finite-Carrier and MPU-Dynamics Resolution Records
+
+The following results resolve finite mathematical components of `TV-MPU-03`--`TV-MPU-08`. They preserve the distinction between a response representation and a physical implementation.
+
+**Theorem 7.6a (Multiplicity Classification and the Surplus-Dynamics Gate).** Let $\pi:M_8(\mathbb C)\to\mathcal B(\mathcal H)$ be a nonzero unital finite-dimensional representation. There is a finite-dimensional multiplicity space $\mathcal K$ and a unitary identification
+$$
+\mathcal H\cong\mathbb C^8\otimes\mathcal K,
+\qquad
+\pi(A)=A\otimes I_{\mathcal K}.
+\tag{7.6a.1}
+$$
+Consequently every finite representation of the three commuting labeled qubit factors has dimension $8m$, where $m=\dim\mathcal K\ge1$. If the retained response algebra is contained in $M_8(\mathbb C)\otimes I_{\mathcal K}$, partial trace over $\mathcal K$ and the embedding $\rho\mapsto\rho\otimes|0\rangle\!\langle0|$ give same-response comparators between every multiplicity-$m$ representative and the multiplicity-one representative.
+
+The static representation data do not force surplus-sector decoupling or convergence. On the same carrier, self-adjoint $H_0\otimes I+I\otimes H_{\mathcal K}$ gives decoupled unitary dynamics, whereas $H_0\otimes I+I\otimes H_{\mathcal K}+A\otimes B$ with nonscalar self-adjoint $A$ and $B$ couples the factors. A response-preserving convergence claim therefore requires a dynamical intertwiner showing that the coupled term is absent or response-null and a Lyapunov or mixing estimate on the same carrier.
+
+*Proof.* The matrix units of $M_8(\mathbb C)$ decompose $\mathcal H$ into eight mutually isomorphic subspaces exactly as in Theorem 23a, giving (7.6a.1). Every retained observable $A\otimes I$ has expectation $\operatorname{tr}(A\operatorname{tr}_{\mathcal K}\rho)$, proving the comparator statement. The two displayed Hamiltonian classes share the same static representation, while the commutator of $A\otimes B$ with a generic $C\otimes I$ is $[A,C]\otimes B\ne0$. Thus the static algebra admits both dynamical behaviors and entails neither decoupling nor convergence. ∎
+
+**Theorem 7.6b (Finite Stochastic Laws Admit Deterministic Response-Null Refinements).** Let a finite `Evolve` model have finite state set $X$, finite outcome set $O$, and normalized kernel $K(o,x'\mid x)$. There is a deterministic refinement on
+$$
+X\times[0,1]^{\mathbb N}
+$$
+whose marginal finite-history law on $(X,O)$ is exactly the law generated by $K$.
+
+*Proof.* Order the finitely many pairs $(o,x')$ for each $x$ and partition $[0,1)$ into half-open intervals of lengths $K(o,x'\mid x)$. The deterministic update reads the first seed coordinate, selects its unique interval, emits $o$, updates to $x'$, and left-shifts the seed sequence. Product Lebesgue measure on the seed sequence gives the prescribed conditional probability at every step; induction gives equality of every finite cylinder probability. ∎
+
+Therefore no admitted finite response that omits the seed distinguishes intrinsic stochasticity from this hidden deterministic refinement. A separating operational axiom must either expose a seed-dependent response, impose a certified independence condition that the refinement violates, or exclude response-null hidden refinements as primitive branch data.
+
+**Theorem 7.6c (Clock--Generator Gauge Classification).** Let a ray evolution be
+$$
+[\psi(t)]=[e^{-iHt/\hbar}\psi(0)].
+$$
+For every $\lambda>0$ and $c\in\mathbb R$, the transformed clock and generator
+$$
+t'=\lambda t,
+\qquad
+H'=\frac{H+cI}{\lambda}
+\tag{7.6c.1}
+$$
+produce the same ray history. Conversely, once a projective one-parameter group and its parameter are fixed, its self-adjoint generators differ only by a scalar multiple of the identity.
+
+*Proof.* Substitution gives
+$$
+e^{-iH't'/\hbar}=e^{-ict/\hbar}e^{-iHt/\hbar},
+$$
+so the rays agree. The converse is the uniqueness of the generator of a fixed strongly continuous unitary lift, together with the scalar phase freedom of a lift of a projective group. ∎
+
+Thus the ray law fixes neither the zero of energy nor the conversion between its abstract parameter and physical time. Theorem 29's registered clock and work/power calibration must fix those two gauges before energy per cycle, power, or a dimensionful action ledger is physically identified.
+
+**Theorem 7.6d (Exact Abstract Golay Encoder and Radius-Three Recovery).** Let $\mathcal G_{24}\subset\mathbb F_2^{24}$ be a binary linear $[24,12,8]$ code on the accepted predictive-recovery branch, let
+$$
+G:\mathbb F_2^{12}\xrightarrow{\cong}\mathcal G_{24}
+$$
+be any linear encoder, and let $H:\mathbb F_2^{24}\to\mathbb F_2^{12}$ have kernel $\mathcal G_{24}$. For every syndrome $s$ arising from an error $e$ of Hamming weight at most three, that error is unique. On the correctable received-word set
+$$
+\mathcal R_3:=\{c+e:c\in\mathcal G_{24},\ \operatorname{wt}(e)\le3\},
+$$
+the finite lookup
+$$
+D:\mathcal R_3\to\mathcal G_{24},
+\qquad
+D(r)=r-e(Hr)
+\tag{7.6d.1}
+$$
+recovers every transmitted codeword.
+
+*Proof.* If $He=He'$ with $\operatorname{wt}(e),\operatorname{wt}(e')\le3$, then $e-e'\in\ker H=\mathcal G_{24}$ and $\operatorname{wt}(e-e')\le6$. Minimum distance eight forces $e=e'$. Equation (7.6d.1) then returns the transmitted codeword. ∎
+
+This is a complete finite algebraic encoder/syndrome/recovery map. A physical record must additionally identify the 24 binary coordinates, realize $G$ and $H$, specify the noise law and syndrome instrument, and account for preparation, storage, recovery, failure, and reset resources without importing the structural $\ln2$ ledger as heat.
+
+**Theorem 7.6e (Source-Exhaustive Binary Reset Classification).** For a binary record $\Phi$ and retained side information $R$, write $p_r=q(\Phi=1\mid R=r)$. Then
+$$
+H_q(\Phi\mid R)=\sum_rq(r)h_2(p_r),
+\qquad
+0\le H_q(\Phi\mid R)\le\ln2.
+\tag{7.6e.1}
+$$
+The upper equality holds exactly when $p_r=1/2$ for every $r$ of positive probability, and the lower equality holds exactly when $p_r\in\{0,1\}$ for every such $r$. Under Definition 28,
+$$
+\varepsilon_{\mathrm{reset}}
+=H_q(\Phi\mid R)+\varepsilon_{\mathrm{diss}},
+\qquad
+\varepsilon_{\mathrm{diss}}\ge0,
+\tag{7.6e.2}
+$$
+Conditional uniformity together with zero excess implies $\varepsilon_{\mathrm{reset}}=\ln2$; on the separately certified conditionally uniform branch, that reset equality is equivalent to zero excess. The numerical reset equality alone does not imply conditional uniformity.
+
+*Proof.* The binary entropy $h_2(p)$ lies in $[0,\ln2]$, reaches its unique maximum at $p=1/2$, and vanishes exactly at $p=0,1$. Averaging proves (7.6e.1); Definition 28 gives (7.6e.2). ∎
+
+In particular, $p_r=\epsilon$ with $0<\epsilon<1/2$ supplies nonempty reset ensembles with arbitrarily small positive conditional entropy as $\epsilon\downarrow0$. Certifying the $\ln2$ equality as Theorem 31a's uniform-source, zero-excess case therefore requires its exchange-invariant source condition and a separately measured zero-excess implementation.
+
+**Theorem 7.6f (Real and Cayley Marking Moduli on $\mathbb C^8$).** Fix the Hermitian complex carrier $V=\mathbb C^8$.
+
+1. Antiunitary involutions on $V$ form one $U(8)$-orbit with stabilizer $O(8)$, and hence their marking space is $U(8)/O(8)$.
+2. After an involution selects the real carrier $V_{\mathbb R}\cong\mathbb R^8$, positive Cayley four-forms form the $GL^+(8,\mathbb R)$-orbit with stabilizer $\mathrm{Spin}(7)$. With an orientation and Euclidean metric fixed, the compatible forms comprise the corresponding $SO(8)/\mathrm{Spin}(7)$ orbit.
+3. The complex matrix algebra and its three labeled tensor factors select no canonical point in either orbit.
+
+*Proof.* Every antiunitary involution is a conjugation in some orthonormal basis. Changing that basis by $U\in U(8)$ changes the conjugation, and exactly the real orthogonal changes preserve it, proving the first quotient. The second statement is the homogeneous-orbit and stabilizer classification of a positive Cayley form. For the final statement, a carrier real structure commuting with all complex scalar unitaries would satisfy both $J(e^{i\theta}v)=e^{-i\theta}Jv$ by antilinearity and $J(e^{i\theta}v)=e^{i\theta}Jv$ by invariance, which fails for generic $\theta$. A Cayley form requires the already unselected real carrier plus its own orbit point. ∎
+
+Compatibility with the three labeled factors can restrict these moduli only after the admissible normalizer and equivalence relation are frozen. That factor-compatible sub-classification and any physical selector remain open.
+
+**Theorem 7.6g (Exact Normalizer Classification for Surplus Dynamics).** Let $\mathcal K$ be finite-dimensional, put $\mathcal A=M_8(\mathbb C)\otimes I_{\mathcal K}$, and let $H=H^*$ on $\mathbb C^8\otimes\mathcal K$. The following are equivalent:
+
+1. $e^{-itH/\hbar}\mathcal A e^{itH/\hbar}=\mathcal A$ for every $t\in\mathbb R$;
+2. $[H,\mathcal A]\subseteq\mathcal A$;
+3. there are self-adjoint $H_0$ on $\mathbb C^8$ and $H_{\mathcal K}$ on $\mathcal K$ such that
+   $$
+   H=H_0\otimes I_{\mathcal K}+I_8\otimes H_{\mathcal K}.
+   \tag{7.6g.1}
+   $$
+
+On these and exactly these Hamiltonian branches, partial trace intertwines the full response dynamics with the multiplicity-one dynamics:
+$$
+\operatorname{tr}_{\mathcal K}
+\bigl(e^{-itH/\hbar}\rho e^{itH/\hbar}\bigr)
+=
+e^{-itH_0/\hbar}\operatorname{tr}_{\mathcal K}(\rho)e^{itH_0/\hbar}.
+\tag{7.6g.2}
+$$
+
+On the split branch, the surplus channel
+$$
+\Gamma_t=\operatorname{Ad}_{e^{-itH_{\mathcal K}/\hbar}}
+\tag{7.6g.3}
+$$
+converges in operator norm as $t\to\infty$ if and only if $H_{\mathcal K}$ is scalar, in which case $\Gamma_t$ is the identity channel for every $t$. Thus a nontrivial finite-dimensional Hamiltonian surplus has no asymptotic channel limit, while the retained response already descends exactly by (7.6g.2).
+
+*Proof.* Differentiating item 1 at $t=0$ gives item 2. Under item 2, $A\mapsto i[H,A\otimes I]$ is a $*$-derivation of $M_8(\mathbb C)$. Every $*$-derivation of a full matrix algebra is inner, so a self-adjoint $H_0$ satisfies
+$$
+i[H,A\otimes I]=i[H_0,A]\otimes I
+$$
+for all $A$. Hence $H-H_0\otimes I$ commutes with $M_8(\mathbb C)\otimes I$. The commutant is $I_8\otimes\mathcal B(\mathcal K)$, which gives (7.6g.1) with $H_{\mathcal K}=H_{\mathcal K}^*$. Item 3 implies item 1 by exponentiation. Factorization of the exponential and unitary invariance of partial trace prove (7.6g.2).
+
+If $\Gamma_t$ has an operator-norm limit $L$, then for every fixed $s$ the group law and continuity of composition give
+$$
+\Gamma_s
+=\lim_{t\to\infty}\Gamma_{t+s}\Gamma_t^{-1}
+=LL^{-1}=I.
+$$
+Hence $\Gamma_t$ is constant. In finite dimension, $\operatorname{Ad}_{e^{-itH_{\mathcal K}/\hbar}}=I$ for every $t$ exactly when $H_{\mathcal K}$ is scalar. The converse is immediate. ∎
+
+Thus (7.6g.1) is the complete finite same-response dynamics class for the representation in Theorem 7.6a, and (7.6g.3) gives the complete finite Hamiltonian convergence classification. A Hamiltonian outside the split class changes at least one retained $M_8(\mathbb C)\otimes I$ response at infinitesimal order. Physical admission of one carrier and generator remains a realization record.
+
+**Theorem 7.6h (Finite-History Response-Quotient Stochasticity Classification).** Let two `Evolve` models with finite retained state and output alphabets be response-equivalent when they induce the same probability for every finite retained history in $(X,O)$. Every normalized kernel on those alphabets is response-equivalent to the deterministic seed refinement of Theorem 7.6b, whose auxiliary seed space need not be finite. Consequently every predicate invariant under retained finite-history response equivalence has the same truth value on the kernel and on that deterministic refinement.
+
+Conversely, a predicate separating the two models must use at least one of the following additions: a retained response whose finite-history law differs; access to an implementation-level variable or observable outside the retained history, such as the seed, hidden memory, or an architecture label; or an admissibility/equivalence premise that structurally excludes the deterministic refinement, such as an exogeneity requirement. These three cases exhaust separator classes on the retained finite-history quotient.
+
+*Proof.* Theorem 7.6b proves equality of every finite cylinder probability. Any invariant predicate is constant on an equivalence class and therefore agrees on the two representatives. If a predicate separates them while every retained cylinder law agrees, it either consumes additional implementation data not measurable in the retained finite-history ledger or changes the admissible representative/equivalence class by a structural premise. If a retained cylinder law differs, the first case applies. These alternatives exhaust whether the separator changes the retained response, extends the observation algebra, or restricts the admissible model class. ∎
+
+The nontrivial Bernoulli kernel and its inverse-transform refinement give a nonempty stochastic/deterministic pair. The theorem gives a coverage-complete `nonentailment` result for intrinsic stochasticity on the retained finite-history quotient and a complete classification of separator types for that pair. The response-only route therefore retains `N`; a physical `Evolve` realization must populate and justify one separator class.
+
+**Theorem 7.6i (Complete Clock--Energy Calibration Fiber).** For a fixed nontrivial projective one-parameter evolution, the set of clock-and-generator presentations is one orbit of the two-parameter action
+$$
+(\lambda,c):(t,H)\longmapsto
+\left(\lambda t,\frac{H+cI}{\lambda}\right),
+\qquad \lambda>0,\ c\in\mathbb R.
+\tag{7.6i.1}
+$$
+There is no further finite-dimensional presentation ambiguity. If a registered ray recurrence has abstract period $T>0$ and independently measured physical period $T_{\mathrm{phys}}>0$, then
+$$
+\lambda=\frac{T_{\mathrm{phys}}}{T}.
+\tag{7.6i.2}
+$$
+If a normalized reference state $\rho_{\mathrm{ref}}$ independently has registered physical energy $E_{\mathrm{ref}}$ for the calibrated generator, then
+$$
+c=\lambda E_{\mathrm{ref}}-\operatorname{tr}(\rho_{\mathrm{ref}}H).
+\tag{7.6i.3}
+$$
+Equations (7.6i.2)--(7.6i.3) select one presentation in the complete fiber.
+
+*Proof.* Theorem 7.6c proves that (7.6i.1) preserves the ray history and that two generators of one fixed projective parameterization differ by a scalar. A change between two positive parameter units is multiplication by one $\lambda>0$, so these are all presentations. Period comparison gives (7.6i.2). Substitution of $H'=(H+cI)/\lambda$ into $E_{\mathrm{ref}}=\operatorname{tr}(\rho_{\mathrm{ref}}H')$ and $\operatorname{tr}\rho_{\mathrm{ref}}=1$ gives (7.6i.3). ∎
+
+This theorem completes the mathematical modulus and normalization classification. Physical clock, reference-energy, work/power and uncertainty records remain the realization and observable components.
+
+**Theorem 7.6j (Finite Golay Encoding, Syndrome-Instrument and Recovery Certificate).** On the accepted $[24,12,8]$ branch of Theorem 7.6d, let
+$$
+\mathcal H_{12}=(\mathbb C^2)^{\otimes12},
+\qquad
+\mathcal H_{24}=(\mathbb C^2)^{\otimes24},
+\qquad
+V_G:\mathcal H_{12}\longrightarrow\mathcal H_{24},
+\qquad
+V_G|u\rangle=|Gu\rangle,
+$$
+and for $s\in\mathbb F_2^{12}$ define
+$$
+P_s=\sum_{x:Hx=s}|x\rangle\!\langle x|.
+\tag{7.6j.1}
+$$
+The maps $\mathcal S_s(\rho)=P_s\rho P_s$ form a projective syndrome instrument. For every syndrome $s$ having a weight-at-most-three representative, let $e(s)$ be the unique such representative and define
+$$
+\mathcal R_s(\rho)=X^{e(s)}\rho X^{e(s)}.
+\tag{7.6j.2}
+$$
+For the remaining syndromes, write a failure flag and apply any fixed trace-preserving fallback. The resulting conditional recovery is completely positive and its sum over all syndrome and failure records is trace preserving. For every density operator $\rho$ on $\mathcal H_{12}$ and every bit-flip error $X^e$ with $\operatorname{wt}(e)\le3$,
+$$
+\mathcal R_{He}\!\circ\mathcal S_{He}
+\bigl(X^eV_G\rho V_G^*X^e\bigr)
+=V_G\rho V_G^*.
+\tag{7.6j.3}
+$$
+
+*Proof.* The projectors in (7.6j.1) are orthogonal and sum to the identity, so the syndrome maps form a normalized instrument. Theorem 7.6d gives uniqueness of $e(s)$ in the stated radius. Every encoded basis vector has zero syndrome, and $X^e$ shifts it to syndrome $He$; the same statement holds coherently on the code subspace. Applying $X^{e(He)}=X^e$ gives (7.6j.3). Unitary conditional corrections and the fixed fallback make the complete recorded map CPTP. Gaussian elimination over $\mathbb F_2$ decomposes $V_G$ and the parity computation into a finite CNOT network with initialized ancillas. ∎
+
+The displayed carrier, encoder, correctable noise class, syndrome instrument, decoder and failure record populate a finite model-level recovery certificate. The physical coordinate, implemented gate/instrument, preparation/reset and resource fields remain unpopulated; together with substrate realization and a held-out error experiment, they retain `C+R+E`.
+
+**Theorem 7.6k (Finite Binary Return-Map Exhaustion).** Let $\Phi\in\{0,1\}$ be a pre-return record and let $R$ contain every retained classical side record. A completed classical return map preserves $R$ and sends both inputs to the ready value $0$:
+$$
+(\phi,r)\longmapsto(0,r).
+\tag{7.6k.1}
+$$
+For each $r$ with both conditional inputs present, (7.6k.1) is noninjective. Every injective or reversible extension of (7.6k.1) therefore writes a record $E$ from which $\phi$ is recoverable conditional on $r$. Exactly one branch in the following priority-ordered accounting partition applies:
+
+1. for every retained $r$, at most one value of $\Phi$ occurs, in which case $H(\Phi\mid R)=0$ before the return;
+2. otherwise, a copy of $E$ remains in the retained side-information ledger, in which case $H(\Phi\mid R,E)=0$;
+3. otherwise, a persistent-export certificate tracks $E$, or the information it carries, outside the retained ledger, in which case global injectivity may be preserved and no reset-heat conclusion follows for the ready register alone;
+4. otherwise, $E$ is restored to its registered initial state by a cyclic isothermal implementation satisfying all premises of Definition 28, in which case that definition gives the conditional Landauer ledger;
+5. otherwise, $E$ leaves the retained accounting boundary without a persistent-export certificate or a complete Definition-28 reset certificate, in which case the return map alone assigns no reset heat.
+
+*Proof.* If no conditional pair exists, $\Phi$ is already a function of $R$, which is item 1. Otherwise noninjectivity follows from the reachable inputs $(0,r)$ and $(1,r)$. An injective extension must map those inputs to distinct total outputs; because their ready-register and retained-$R$ outputs agree, the distinction lies in $E$, which makes $\Phi$ a function of $(R,E)$. First test whether a copy of that distinguishing information is retained; if not, test whether it has a persistent certified export; if not, test whether its restoration carries the complete Definition-28 certificate. Failure of all three tests is uncertified removal. These successive complements make items 2--5 disjoint and exhaustive. Only item 4 carries the Definition-28 Landauer conclusion. ∎
+
+Together with Theorem 7.6e, this classifies every finite reachable-source and return-map branch relevant to the binary entropy floor without identifying record export or uncertified removal with erasure heat. A positive $\ln2$ heat equality still requires a populated conditionally uniform source and a cyclic isothermal zero-excess implementation satisfying Definition 28.
+
+**Theorem 7.6l (Labeled Three-Factor Real-Structure Orbits).** Put $V=(\mathbb C^2)^{\otimes3}$ and let
+$$
+\mathcal A_j=I\otimes\cdots\otimes M_2(\mathbb C)\otimes\cdots\otimes I
+$$
+be the three labeled matrix factors. Up to conjugation by unitaries preserving every $\mathcal A_j$, antiunitary involutions $J$ satisfying $J\mathcal A_jJ^{-1}=\mathcal A_j$ are classified by the four sign triples
+$$
+(\epsilon_1,\epsilon_2,\epsilon_3)
+\in\{(+,+,+),(+, -,-),(-,+,-),(-,-,+)\}.
+\tag{7.6l.1}
+$$
+Here $J$ has a factorization $J=J_1\otimes J_2\otimes J_3$ up to phase, $J_j^2=\epsilon_jI$, and $J^2=I$ is equivalent to $\epsilon_1\epsilon_2\epsilon_3=1$.
+
+*Proof.* Fix product-basis conjugation $K$. Writing $J=UK$, preservation of every labeled factor implies that $U$ lies in the labeled-factor normalizer, whose unitary elements are product unitaries up to a scalar. Thus $J$ factors into three antiunitaries. From $J^2=I$, each $J_j^2$ is scalar and their scalar product is one. In complex dimension two an antiunitary square is $+I$ or $-I$; under unitary conjugacy each sign has one class, represented by ordinary conjugation and by $i\sigma_yK$, respectively. The even-minus sign triples in (7.6l.1) are therefore the complete orbit list. ∎
+
+The stated involution and labeled-factor-preservation conditions admit all four inequivalent classes and therefore select none. After a global real carrier is selected, a Cayley form remains a point of the separate $SO(8)/\mathrm{Spin}(7)$ marking orbit. The following theorem completes its quotient by every sign-triple stabilizer.
+
+**Theorem 7.6m (Factor-Compatible Cayley Quotients Have No Selected Orbit).** Fix one sign triple $\epsilon=(\epsilon_1,\epsilon_2,\epsilon_3)$ in (7.6l.1), choose the corresponding factor antiunitaries $J_j$, and let $H_\epsilon\le SO(V_{\mathbb R})$ be the image on the fixed real carrier of
+$$
+\left\{U_1\otimes U_2\otimes U_3:
+U_jJ_j=J_jU_j\right\}.
+\tag{7.6m.1}
+$$
+The factor-compatible Cayley markings modulo the complete declared equivalence are exactly the compact double quotient
+$$
+\mathcal Q_\epsilon
+=H_\epsilon\backslash SO(8)/\mathrm{Spin}(7).
+\tag{7.6m.2}
+$$
+For every allowed $\epsilon$, $\mathcal Q_\epsilon$ contains more than one point. Consequently no labeled-factor-compatible real-structure class selects a Cayley marking without an additional premise.
+
+*Proof.* The compatible positive Cayley forms form $X=SO(8)/\mathrm{Spin}(7)$ by Theorem 7.6f. The left action of the complete factor stabilizer identifies exactly the markings related by (7.6m.1), which proves (7.6m.2). The double cover $\mathrm{Spin}(8)\to SO(8)$ identifies the pullback homogeneous space with the unit-spinor sphere $S^7$ and its central two-point quotient with $X$; hence $X\cong\mathbb {RP}^7$ and has dimension seven and fundamental group $\mathbb Z_2$.
+
+For a plus factor, the connected commutant of $J_j$ has dimension one; for a minus factor it is $\mathrm{Sp}(1)$ and has dimension three. The tensor-product map has finite kernel. Thus $\dim H_{(+,+,+)}=3$, so that group cannot act transitively on the seven-dimensional $X$. Each even-minus stabilizer has connected component locally isomorphic to $SO(2)\times\mathrm{Sp}(1)\times\mathrm{Sp}(1)$ and dimension seven. If the full stabilizer acted transitively, its identity component would also act transitively on the connected manifold $X$. Its stabilizer would be discrete and finite, so the orbit map would be a finite covering. The fundamental group of the identity component contains the infinite cyclic factor from $SO(2)$, whereas a covering injects it into $\pi_1(X)=\mathbb Z_2$, a contradiction. None of the four complete stabilizers is transitive, so every orbit quotient in (7.6m.2) has at least two points. ∎
+
+**Resolution TV-MPU-08-R2 (Metadata).** Exact domain: the four sign triples in (7.6l.1) and the full compatible Cayley-form orbit of Theorem 7.6f after the real carrier, orientation and Euclidean metric are fixed. Premises: labeled-factor preservation and no selector outside the corresponding complete stabilizer $H_\epsilon$. Equivalence: the left $H_\epsilon$ action on $SO(8)/\mathrm{Spin}(7)$. Budget: all four stabilizer classes and their complete compact orbit spaces. Verifier: compute the factor-commutant dimensions, the finite tensor-product kernels and the fundamental groups in the proof. Falsifier: a transitive $H_\epsilon$ action for any allowed sign triple or a Cayley marking absent from (7.6m.2). Provenance class: source-internal compact-group and homogeneous-space classification. Downstream consumers: Corollary 23a.1 and every real/$\mathrm{Spin}(7)$ carrier use. Nonvacuity: $SO(8)/\mathrm{Spin}(7)\cong\mathbb {RP}^7$ is nonempty. This is `negative-refutation` of Cayley-marking selection from the complete labeled-factor stabilizer class and discharges the remaining mathematical component of `TV-MPU-08`.
+
+**Theorem 7.6n (Explicit Clock--Energy--Work Calibration Record).** Fix $E>0$ and the eight-dimensional MPU carrier with orthonormal basis $|0\rangle,\ldots,|7\rangle$,
+$$
+\mathcal H_E=\mathbb C^8,
+\qquad
+H_E=E\sum_{j=0}^{7}j|j\rangle\!\langle j|,
+\qquad
+|+\rangle=\frac{|0\rangle+|1\rangle}{\sqrt2}.
+\tag{7.6n.1}
+$$
+Declare the parameter $t$ of $U_E(t)=e^{-itH_E/\hbar}$ to be the registered clock in seconds and use $|0\rangle$ and $|1\rangle$ as the zero- and reference-energy preparations. Then
+$$
+T_E=\frac{2\pi\hbar}{E},
+\qquad
+t_\perp=\frac{\pi\hbar}{E},
+\qquad
+\langle H_E\rangle_+=\Delta_+H_E=\frac E2.
+\tag{7.6n.2}
+$$
+The survival response is
+$$
+\operatorname{tr}\!\left(
+U_E(t)|+\rangle\!\langle+|U_E(t)^*|+\rangle\!\langle+|
+\right)
+=\cos^2\!\left(\frac{Et}{2\hbar}\right),
+\tag{7.6n.3}
+$$
+Registering $T_E$ as the period in seconds and the two energy values $0,E$ fixes the scale and additive presentation gauges by (7.6i.2)--(7.6i.3).
+
+For a differentiable driven record $(\rho(t),H(t))$, define the work and power extractors
+$$
+W[0,\tau]=\int_0^\tau
+\operatorname{tr}(\rho(t)\dot H(t))\,dt,
+\qquad
+P(t)=\operatorname{tr}(\rho(t)\dot H(t)).
+\tag{7.6n.4}
+$$
+On the commuting stroke $H(t)=(t/\tau)H_E$, $\rho(t)=|1\rangle\!\langle1|$, they give $P(t)=E/\tau$ and $W[0,\tau]=E$. For the recurrent ray in (7.6n.1), the registered cycle rate $\nu_E=T_E^{-1}$ gives
+$$
+R_E=\nu_E\langle H_E\rangle_+
+=\frac{E^2}{4\pi\hbar},
+\qquad
+R_ET_E=\frac E2,
+\qquad
+\Delta_+H_E\,t_\perp=\frac{\pi\hbar}{2}.
+\tag{7.6n.5}
+$$
+Equations (7.6n.1)--(7.6n.5), the two preparation labels, and the binary projector response form a finite formal calibration record: every state, update, response, clock value and extractor is finite-dimensional and exactly verifiable. Energy is in joules, $t$ and $T_E$ are in seconds, $P$ and $R_E$ are in watts, and the two products in (7.6n.5) have energy and action units respectively.
+
+*Proof.* Direct exponentiation gives
+$$
+U_E(t)|+\rangle
+=\frac{|0\rangle+e^{-iEt/\hbar}|1\rangle}{\sqrt2},
+$$
+which proves (7.6n.2)--(7.6n.3). The registered zero and reference preparations fix the additive gauge by $\langle1|H_E|1\rangle=E$ and $\langle0|H_E|0\rangle=0$; the registered response period fixes the multiplicative clock gauge. Equation (7.6n.4) gives the displayed commuting-stroke values by substitution. The remaining identities follow from $\nu_E=E/(2\pi\hbar)$ and (7.6n.2). ∎
+
+**Resolution TV-MPU-05-R2 (Metadata).** Exact domain: the eight-dimensional MPU carrier (7.6n.1), its active two-level sector and driven commuting stroke. Premises: a declared clock/energy presentation with $E>0$, standard unit dimensions and the displayed preparations. Equivalence: unitary relabeling preserving the registered preparations and response. Budget: two preparations, one binary response, one full-carrier recurrence and one work stroke. Verifier: Equations (7.6n.2)--(7.6n.5), including recurrence, work, power, cycle and uncertainty identities. Falsifier: a wrong recurrence, work integral, unit or displayed identity. Provenance class: source-internal finite model record. Downstream consumers: Theorem 29, Corollary 29.1 and `TV-MPU-05`. Closure still requires independently sourced clock and reference-energy response records and a response-faithful unit/covariance map that selects one point of the complete presentation fiber; `TV-MPU-05` therefore retains `R+O`.
+
+**Resolution ledger 7.6-R1.** All entries below are analytic campaign-resolution artifacts on the displayed finite-dimensional carriers, finite retained alphabets and histories, code blocks, or ensembles. The response-null inverse-transform refinement of Theorems 7.6b and 7.6h may use a standard-Borel auxiliary seed space. Equivalence means equality of the named retained responses or unitary equivalence preserving them, as specified by each row.
+
+| Target | Exact scoped proposition and polarity | Verifier and falsifier | Downstream consumers |
+|:--|:--|:--|:--|
+| `TV-MPU-03` | The finite representation/multiplicity class and the exact response-autonomous Hamiltonian class (7.6g.1) are `positive-discharge`; nontrivial finite surplus-channel convergence receives `negative-refutation`, while static algebra alone still does not select the split branch. | Check (7.6a.1), the derivation-normalizer equivalence, partial-trace intertwining (7.6g.2), and the group-limit argument for (7.6g.3); a preserving Hamiltonian outside the split form or a convergent nonscalar surplus channel falsifies the classification. | Theorems 23a, Z.2 and every $d_0=8$ dynamics promotion. |
+| `TV-MPU-04` | Intrinsic stochasticity from the retained finite-history law alone is `nonentailment`, so the response-only route carries `N`; Theorem 7.6h gives `positive-discharge` of the separator classification for the kernel/refinement pair into changed retained response, added implementation observable, or structural admissibility restriction. | Compare every finite cylinder law with the inverse-transform refinement and type every proposed separator for that pair; a retained-equivalent invariant predicate that distinguishes the representatives, or a separator outside the three registered classes, falsifies the result. | Proposition 28, Definition 27 and single-outcome branches. |
+| `TV-MPU-05` | Absolute energy zero and time/energy scale from ray dynamics alone are `nonentailment`; the complete two-parameter presentation fiber and its unique selection by one independent period and reference-energy record are `positive-discharge`. | Substitute (7.6c.1) and verify (7.6i.1)--(7.6i.3); an additional presentation modulus or two calibrated presentations with the same registered period and reference energy falsifies the classification. | Theorem 29, Corollary 29.1 and action/power ledgers. |
+| `TV-MPU-06` | The finite model-level carrier, encoder, bit-flip noise class, syndrome instrument, conditional recovery and failure record are `positive-discharge`; the populated physical certificate, realization and held-out test remain open. | Exhaust the weight-$\le3$ error set, verify (7.6j.1)--(7.6j.3), complete positivity and trace preservation; a correctable syndrome collision, recovery failure, or unnormalized recorded map falsifies the result. | Golay recovery, Appendix-U uniqueness and substrate protocols. |
+| `TV-MPU-07` | Conditional-entropy, equality and finite return-map branches are `positive-discharge`; record export or uncertified removal alone has no erasure-heat implication, and universal $\ln2$ without a conditionally uniform source and Definition-28 zero-excess implementation is `nonentailment`. | Evaluate (7.6e.1)--(7.6e.2), classify the retained, persistent-export, certified-reset, uncertified-removal and deterministic cases of Theorem 7.6k, and audit every Definition-28 premise; a missing branch or an uncertified Landauer conclusion falsifies the result. | Theorems 31--33 and thermodynamic/reset ledgers. |
+| `TV-MPU-08` | Unconstrained real/Cayley marking moduli and the four factor-compatible real-structure orbits are `positive-discharge`; selection of one sign class is `nonentailment`; Theorem 7.6m gives `negative-refutation` of Cayley-marking selection for every complete sign-triple stabilizer quotient. | Verify the two unconstrained stabilizers, factor-normalizer reduction, four sign triples in (7.6l.1), and the dimension/fundamental-group obstruction of Theorem 7.6m; an omitted compatible orbit or a transitive complete stabilizer action falsifies the classification. | Corollary 23a.1 and every real/$\mathrm{Spin}(7)$ carrier use. |

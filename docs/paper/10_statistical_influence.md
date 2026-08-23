@@ -430,6 +430,50 @@ Thus a deterministic zero-variance current signal with nonzero mean is inadmissi
 
 Assume now that the branch also supplies (61h). If $0<\Sigma_\Omega<\infty$ and $\langle Q\rangle\ne0$, multiplying (61h) by $\langle Q\rangle^2/\Sigma_\Omega$ gives (61i). Therefore a nonzero mean current at finite entropy cost cannot have zero variance. If $\Sigma_\Omega=0$, (61h) is incompatible with $\langle Q\rangle\ne0$; if $\Sigma_\Omega=\infty$, the event is not in the finite-cost branch. These alternatives exhaust the finite-current certificate cases. ∎
 
+**Proposition 39d (Canonical Finite Algebraic Current Realization and Independence of the Support/KMS Gates).** Let $p$ and $q$ be probability laws on a finite alphabet $Y$, and put $\Delta(y)=q(y)-p(y)$. Write
+$$
+Y_+=\{y:\Delta(y)>0\},
+\qquad
+Y_-=\{y:\Delta(y)<0\},
+\qquad
+s=\sum_{y\in Y_+}\Delta(y).
+$$
+If $s=0$, set $J=0$. If $s>0$, orient the complete bipartite graph from $Y_-$ to $Y_+$ and set
+$$
+J_{xy}:=\frac{[-\Delta(x)]\Delta(y)}{s}
+\qquad(x\in Y_-,\ y\in Y_+).
+\tag{61k}
+$$
+With divergence defined as inflow minus outflow, $\nabla\!\cdot J=\Delta$. Thus every finite marginal displacement has a nonnegative algebraic divergence-current realization, and any two such realizations of the same displacement differ by a signed divergence-free circulation after extension to a common edge set.
+
+Algebraic current realizability does not imply common support. For
+$$
+p=(1,0),\qquad q=(0,1),
+$$
+Equation (61k) gives one unit of current from the first symbol to the second, while the supports are disjoint. Nor do a stationary law and its zero marginal displacement select a Markov clock: for every $a>0$,
+$$
+L_a=a
+\begin{pmatrix}
+-1&1\\
+1&-1
+\end{pmatrix}
+$$
+is reversible with stationary law $(1/2,1/2)$, but its physical relaxation rate is $2a$. Consequently an algebraic current certificate cannot by itself establish Definition 10.2a common support, select the physical Markov/KMS generator, or supply the thermodynamic precision relation (61h).
+
+*Proof.* Since $\sum_y\Delta(y)=0$, the total positive and negative masses are both $s$. For $y\in Y_+$,
+$$
+\sum_{x\in Y_-}J_{xy}
+=\frac{\Delta(y)}s\sum_{x\in Y_-}[-\Delta(x)]
+=\Delta(y).
+$$
+For $x\in Y_-$,
+$$
+-\sum_{y\in Y_+}J_{xy}
+=-[-\Delta(x)]
+=\Delta(x),
+$$
+and the divergence vanishes on the remaining symbols. The difference of two solutions has zero divergence by linearity. The displayed two-point laws prove the support counterexample. Direct multiplication gives $(1/2,1/2)L_a=0$ and detailed balance for every $a>0$, while the nonzero eigenvalue is $-2a$; hence the stationary/algebraic-current record does not fix the clock normalization. ∎
+
 **Lemma 10.3 (Pre-Lightcone Information Budget and Sampling Gate).** Let
 $$
 N_{\mathrm{pre}}:=\left\lfloor r_{\max}\frac{L}{c}\right\rfloor
@@ -809,6 +853,42 @@ The hypothesized statistical FTL influence (Postulate 3), when constrained by th
 
 The branches of Postulate 3 have distinct causal statuses under Theorem 39c: branch (i) by Lemma 10.2 and the standard no-signaling theorem (Bob's marginal is invariant); branch (ii) by absence of any late controllable Alice variable after the shared causal past, so no pre-lightcone message channel exists at all; branch (iii) is outside Postulate 2 whenever a freely selectable late context changes Bob's pre-lightcone marginal, although Theorems 39a and 39b still bound its finite-window zero-error reliability and current representation. Therefore branches (i) and (ii) can satisfy Postulate 2 for the stated reasons; branch (iii) is a causal-branch falsifier despite its finite-window zero-error limitation. ∎
 
+**Proposition 42c (Finite Stochastic Feedback Has a Distributional Fixed Point).** Let $W(y\mid x)$ be a finite channel and let $P(x'\mid y)$ be a finite feedback policy. Closing the output through the policy gives the stochastic transition matrix
+$$
+T(x'\mid x)=\sum_yP(x'\mid y)W(y\mid x).
+\tag{63b}
+$$
+There exists at least one probability law $\pi$ satisfying $\pi=T\pi$. Hence positive Shannon capacity of $W$ does not by itself create a probabilistic inconsistency. A deterministic-symbol contradiction requires the stronger condition that the closed loop occupy a point mass $\delta_x$ while the deterministic transition has no fixed symbol.
+
+The binary bit-flip channel $W(y\mid x)=\mathbf 1_{y=1-x}$ with the identity feedback policy has capacity one bit and has no deterministic fixed symbol, yet $\pi=(1/2,1/2)$ is stationary. This class is therefore chronology-consistent at the distributional level while failing the point-mass consistency test. Intervention-stable prediction of a receiver policy is a stronger object governed by Theorem 14.1.
+
+*Proof.* Equation (63b) is stochastic because its entries are nonnegative and
+$$
+\sum_{x'}T(x'\mid x)
+=\sum_yW(y\mid x)\sum_{x'}P(x'\mid y)
+=1.
+$$
+The affine map $\mu\mapsto T\mu$ sends the finite probability simplex continuously into itself, so it has a fixed point. For a deterministic $T$, a point mass is fixed exactly when its supporting symbol is fixed. The bit-flip calculation gives the stated separation. ∎
+
+**Proposition 42c.1 (Finite-Memory and Continuous-Policy Loop Classification).** Let $H$ be a finite history alphabet. Every fixed finite-memory channel-policy closure induces a stochastic matrix on $H$ and therefore has a stationary history law. More generally, if an adaptive policy induces a continuous map
+$$
+F:\Delta(H)\longrightarrow\Delta(H),
+$$
+then it has a distributional fixed point. Continuity is a substantive gate: on $H=\{0,1\}$, writing $q=\Pr(1)$, the policy map
+$$
+F(q)=
+\begin{cases}
+1,&q<1/2,\\
+0,&q\ge1/2
+\end{cases}
+\tag{63f}
+$$
+has no fixed point.
+
+*Proof.* A finite-memory closure becomes first-order after lifting the state to the finite history alphabet. Its transition matrix maps the compact probability simplex continuously into itself, so Proposition 42c applies. An adaptive continuous $F$ has a fixed point by the finite-dimensional Brouwer theorem. For (63f), a putative fixed point with $q<1/2$ would satisfy $q=1$, while one with $q\ge1/2$ would satisfy $q=0$; both are contradictions. ∎
+
+**Resolution TV-QCP-05-R2.** Fixed finite memory and every distribution-dependent continuous policy are `positive-discharge` for distributional loop consistency. Equation (63f) is an exact separator showing that unrestricted discontinuous policy dependence does not inherit the fixed-point theorem. Intervention-stable receiver-policy prediction remains governed by Theorem 14.1.
+
 **10.5 Relation to Emergent Locality and AQFT Framework**
 
 Appendix F supplies the conditional AQFT setting for the marginal-invariant and shared-past branches. Corollary F.1 formulates operator-level Einstein causality under Theorem F.0's continuum-bridge hypotheses. On the local CPTP branch, the prepared state $\omega_{C_A}$ may depend on Alice's context through the map $\mathcal M$ and ND-RID dynamics, so joint expectations such as $\omega_{C_A}(A\otimes B)$ in Equation (F.4) may vary while Bob's unconditional statistics $\omega_{C_A}(\mathbf{1}_A\otimes B)$ remain invariant. Thus operator locality, Equation (F.2), and state-mediated joint or conditional dependence coexist on the Bob-marginal-preserving branch.
@@ -820,6 +900,45 @@ $$
 P(x,y\mid\lambda)=P(x,y).
 $$
 Logical indeterminacy, stochastic outcomes, no-signaling, and absence of a deterministic hidden variable do not imply this equality. Stochastic settings may remain correlated with $\lambda$, and no-signaling constrains outcome marginals rather than the setting distribution. Every Bell-type PU protocol must therefore either assume measurement independence or bound its failure with an explicit causal and statistical model; CC is not presumed to be the only possible common-cause channel.
+
+**Theorem 42b (Sharp CHSH Robustness on the Uniform Setting-Contamination Class).** Let $z=(x,y)\in\{0,1\}^2$ be uniformly selected settings, let $a,b\in\{0,1\}$, and fix $0\le\mu\le1$. Consider the causal-model class
+$$
+P(a,b\mid x,y)
+=(1-\mu)P_{mathrm{MI}}(a,b\mid x,y)
++\mu P_{mathrm{SD}}(a,b\mid x,y),
+\tag{63c}
+$$
+where $P_{mathrm{MI}}$ is a measurement-independent local hidden-variable model and $P_{mathrm{SD}}$ is a local-response model whose hidden-variable distribution may depend arbitrarily on the full setting pair. If $S_{mathrm{CHSH}}$ is the usual absolute CHSH value, then
+$$
+S_{mathrm{CHSH}}\le 2+2\mu.
+\tag{63d}
+$$
+The bound is sharp for every $\mu$. Therefore an observed value $S\in[2,4]$ requires
+$$
+\mu\ge\frac{S-2}{2}
+\tag{63e}
+$$
+within this class; in particular, reproducing $2\sqrt2$ requires $\mu\ge\sqrt2-1$.
+
+*Proof.* The signed CHSH functional is affine in the conditional law. Its absolute value therefore obeys
+$$
+S_{\mathrm{CHSH}}(P)
+\le
+(1-\mu)S_{\mathrm{CHSH}}(P_{\mathrm{MI}})
++\mu S_{\mathrm{CHSH}}(P_{\mathrm{SD}})
+\le 2+2\mu,
+$$
+where the first inequality is the triangle inequality, the local bound is $2$, and the algebraic bound is $4$. To attain it, choose a measurement-independent deterministic local model with signed CHSH value $2$. In the setting-dependent component, choose for each setting pair a hidden-variable value carrying deterministic local outputs whose parity obeys $a\oplus b=xy$ on that pair. This component has signed CHSH value $4$ in the same convention, so the mixture has value $(1-\mu)2+4\mu=2+2\mu$. Rearrangement proves (63e). ∎
+
+Theorem 42b is a complete robustness result for the explicitly frozen mixture class (63c). Total-variation, mutual-information, min-entropy, retrocausal, and common-cause bounds define different measurement-dependence classes and retain their own classification and realization obligations.
+
+**Resolution ledger 42d-R1 (Finite QCP Classifications).** Each row registers the exact mathematical artifact on the finite domain and premises shown; the target's physical carrier and experiment remain independent required records.
+
+| Target | Exact domain and premises | Equivalence and budget | Registered polarity | Verifier, falsifier and nonvacuity | Provenance and downstream consumers |
+|:--|:--|:--|:--|:--|:--|
+| `TV-QCP-02` | Normalized laws $p,q$ on one finite alphabet; for the clock clause, the displayed faithful two-state stationary law and reversible generators $L_a$, $a>0$. | Currents are equivalent modulo signed divergence-free circulation after extension to a common edge set; supports are compared literally and distinct $a$ remain clock-inequivalent. Budget: every alphabet symbol and bipartite edge, plus the symbolic positive one-parameter generator family. | Algebraic divergence-current existence is `positive-discharge`; current $\Rightarrow$ common support is `negative-refutation`; clock normalization from the stationary law is `nonentailment`. | Verify (61k), both supports, stationarity and the eigenvalue $-2a$. A finite displacement without such a current, overlapping supports in the displayed counterexample, or an $a$-independent relaxation rate falsifies the corresponding artifact. The two-point laws and any $a\ne a'$ prove nonvacuity. | Source-internal finite probability and Markov linear algebra. Consumers: Theorem 39b, Definition 10.2a, (61h), and the common-support/KMS carrier. |
+| `TV-QCP-03` | The exact four-setting, binary-outcome mixture (63c), with uniform settings, a measurement-independent local component, an arbitrarily setting-dependent local-response component, and $0\le\mu\le1$. | Equality of the complete conditional outcome table in the fixed signed-CHSH convention. Budget: four setting pairs and the finite deterministic local-response assignments used at the two extremal values. | The bound $S_{\mathrm{CHSH}}\le2+2\mu$ and its sharp threshold are `positive-discharge` on this mixture class. | Evaluate the affine CHSH functional and the aligned value-$2$/value-$4$ witnesses. A member exceeding (63d), or failure of the witness to attain it, falsifies the artifact. The deterministic endpoint models prove nonvacuity. | Source-internal finite causal-model analysis. Consumers: Bell/CC setting-independence audits and the held-out causal comparison. |
+| `TV-QCP-05` | One fixed finite channel $W$ and one fixed finite feedback policy $P$, both normalized; the point-mass clause uses deterministic $T$, and the separator is the binary bit-flip with identity feedback. | Closed loops are compared by the induced stochastic matrix $T$ and stationary-law set; distributional fixed points are not identified with deterministic point-mass fixed symbols. Budget: the complete finite matrix (63b), its simplex, and the two-symbol separator. | Existence of a stationary distribution for every fixed finite closure is `positive-discharge`; positive capacity forcing a deterministic-symbol fixed point is `negative-refutation`. | Check stochasticity, solve $\pi=T\pi$, and evaluate the bit-flip capacity and symbols. A finite stochastic $T$ with no stationary law, or a fixed symbol for the displayed bit-flip, falsifies the corresponding artifact. The bit-flip law proves nonvacuity. | Source-internal finite stochastic-matrix analysis. Consumers: Theorems 42 and 14.1 and the chronology discussion. |
 
 **Theorem 42a (Relational Decoding Principle: No Actionable Capacity Without Shared Decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. For each message $x$, let Alice apply a local CPTP channel $\Phi_x$ on $A$, equivalently the nonselective trace-preserving sum of a local instrument with its outcome discarded. Bob's detector is keyed by a classical variable $K$ with distribution $\pi(K)$ independent of $x$. For each $K$, let $\Lambda_K^*$ be a unital CP Heisenberg map and let $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume
 $$
@@ -857,3 +976,31 @@ Revealing the key $K$ alone does not unlock $C$ from Bob's stream because the av
 The Consciousness Complexity (CC) extension admits a conditional gravitational-feedback branch. On that branch, the physical context contributes to the stress-energy source through the retained-energy relation of Appendix S. The model additionally assumes a constitutive power law that grows as CC approaches its branch ceiling, a weak-field geometry converting retained source energy into differential proper time, and a calibrated unresolved-phase or stochastic response converting that proper-time spread into attenuation.
 
 If the same branch also supplies the Appendix S PCE objective and its coercivity or boundary-growth conditions, optimization can yield a finite interior operating point balancing predictive utility, direct resource cost, and gravitational attenuation. A tracked deterministic phase alone does not dephase, and POP/PCE without the constitutive and response certificates does not prove a universal gravitational ceiling. Theorem 39's endpoint-completeness bound remains a separate constraint.
+
+## 10.7 Finite Global Context-Channel Witness
+
+**Theorem 10.7a (Normalized Positive Branch-(iii) Replacement Family).** Let $\tau_A$ be a density operator on $A$, let $\sigma_B^{(0)},\sigma_B^{(1)}$ be density operators on $B$, and let $0<\epsilon<1$. Define
+$$
+\Phi_x(X)
+=(1-\epsilon)X
++\epsilon\operatorname{tr}(X)\,\tau_A\otimes\sigma_B^{(x)},
+\qquad x\in\{0,1\}.
+\tag{10.7a.1}
+$$
+Each $\Phi_x$ is CPTP as a global map, and for every input $\rho_{AB}$,
+$$
+\rho_B^{(x)}
+=(1-\epsilon)\rho_B+\epsilon\sigma_B^{(x)},
+\qquad
+\delta_B
+=\frac{\epsilon}{2}
+\left\|\sigma_B^{(1)}-\sigma_B^{(0)}\right\|_1.
+\tag{10.7a.2}
+$$
+Orthogonal pure target states give $\delta_B=\epsilon>0$. If $\rho_B$ is full rank, both output states have common support for every $0<\epsilon<1$.
+
+*Proof.* Equation (10.7a.1) is a convex combination of the identity channel and a trace-and-prepare channel, so it is CPTP. Partial trace gives (10.7a.2), and homogeneity of the trace norm gives the formula for $\delta_B$. Orthogonal pure states have trace distance one. The positive $(1-\epsilon)\rho_B$ summand makes both outputs full rank when $\rho_B$ is full rank. ∎
+
+The family is an explicit finite normalized positive witness for the global-map component nominated by Postulate 3(iii). Each map acts globally because its target state on $B$ depends directly on $x$. Assigning $x$ by a freely selected spacelike-late apparatus would supply the physical nonlocal law that `TV-QCP-01` asks to realize; entanglement and local CPTP dynamics supply no such assignment. Admission to the Postulate-3 physical branch additionally requires its endpoint-bias, finite-resource, chronology, and no-loop gates, while Definition 10.2a's finite-transcript common-support condition requires a repeated-law certificate beyond the one-shot state-support statement above.
+
+**Resolution record 10.7a-R1 (`TV-QCP-01`).** The exact registered proposition is existence of a finite normalized positive global context family with nonzero Bob-marginal separation; Theorem 10.7a supplies `positive-discharge` on finite-dimensional $AB$ modulo equality of the two global channels on all density operators. The budget is two contexts, one finite input carrier, and $0<\epsilon<1$; provenance is analytic. The verifier checks Choi positivity, trace preservation, both partial traces, and the trace norm in (10.7a.2). A negative Choi eigenvalue, trace defect, or zero separation for orthogonal targets falsifies the artifact. Physical spacelike timing, source-to-map realization, locked nonzero interval, finite-transcript support, causal artifact controls, and replication remain open. The result feeds Theorems 39a--42, QCP, and Protocol 3.

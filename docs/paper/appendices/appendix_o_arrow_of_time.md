@@ -92,6 +92,45 @@ for every open neighborhood $U\supset\mathcal M_{\mathrm{sync}}$ as $\beta\to\in
 
 *Proof.* Nonnegativity and exact vanishing show that a phase configuration minimizes the phase-sector potential exactly when every edge difference is zero. Connectedness then implies $\phi_i=\phi_j$ modulo $2\pi$ for every pair of vertices, leaving only one global phase. The phase-independent terms do not change this minimizer set. Under the stated Appendix D hypotheses, its low-noise detailed-balance concentration theorem applies to the global minimizer set and gives the displayed limit. ∎
 
+**Theorem O.2a (Complete Weighted Lifted-Phase Minimizer and Frustration Classification).** Let $G=(V,E)$ be a finite graph with an arbitrary orientation, incidence matrix $B\in\mathbb R^{|V|\times|E|}$, positive diagonal edge-weight matrix $W$, lifted vertex phases $\phi\in\mathbb R^{|V|}$ and registered edge offsets $\theta\in\mathbb R^{|E|}$. Define
+$$
+V_{G,\theta}(\phi)
+=\frac12\left\|W^{1/2}(B^{\mathsf T}\phi-\theta)\right\|_2^2,
+\qquad
+L=BWB^{\mathsf T}.
+\tag{O.2a.1}
+$$
+Then the complete global-minimizer set and minimum are
+$$
+\operatorname*{argmin}V_{G,\theta}
+=L^\dagger BW\theta+\ker B^{\mathsf T},
+\tag{O.2a.2}
+$$
+$$
+\min V_{G,\theta}
+=\frac12\left\|\bigl(I-P_W\bigr)W^{1/2}\theta\right\|_2^2,
+\quad
+P_W:=W^{1/2}B^{\mathsf T}L^\dagger BW^{1/2}.
+\tag{O.2a.3}
+$$
+Here $P_W$ is the orthogonal projector onto $\operatorname{ran}(W^{1/2}B^{\mathsf T})$. Thus the branch is unfrustrated exactly when $W^{1/2}\theta$ lies in that range, equivalently when every weighted cycle-space component in (O.2a.3) vanishes. Each connected component contributes one independent global phase shift through $\ker B^{\mathsf T}$. The edge-gradient dynamics
+$$
+\dot\phi=-\nabla V_{G,\theta}(\phi)=-L\phi+BW\theta
+\tag{O.2a.4}
+$$
+converges to (O.2a.2), and its component orthogonal to $\ker L$ contracts at rate at least the smallest positive eigenvalue of $L$.
+
+Even an unfrustrated connected graph need not synchronize. On the directed triangle with unit weights and offsets
+$$
+\theta=(2\pi/3,2\pi/3,-4\pi/3)=B^{\mathsf T}(0,2\pi/3,4\pi/3)^{\mathsf T},
+\tag{O.2a.5}
+$$
+the displayed nonsynchronous phase has zero cost, whereas every synchronized lift has strictly positive cost. Hence a universal synchronization conclusion fails once nonzero admitted edge offsets are allowed.
+
+*Proof.* The normal equation is $L\phi=BW\theta$. Its right-hand side is orthogonal to $\ker L=\ker B^{\mathsf T}$, so solutions exist and the Moore--Penrose formula gives (O.2a.2). Weighted least squares gives the orthogonal residual and (O.2a.3). Spectral decomposition of the positive semidefinite $L$ solves (O.2a.4) and proves the convergence rate. Equation (O.2a.5) is exact, so its indicated phase has zero residual; a synchronized lift has $B^{\mathsf T}\phi=0\ne\theta$. ∎
+
+**Resolution TV-O-01-R1 (Metadata).** Exact domain: every finite weighted graph with real lifted phases, positive edge weights and fixed offsets as in (O.2a.1). Premises: the quadratic edge potential and Euclidean gradient dynamics. Equivalence: independent constant phase shifts on connected components and orientation changes accompanied by the corresponding sign changes of $B$ and $\theta$. Budget: every phase and every edge offset; the calculation is exact finite linear algebra. Verifier: incidence-matrix ranks, Moore--Penrose identities, projector checks and the triangle substitution. Falsifier: an omitted minimizer, an incorrect minimum, failure of the spectral flow, or a synchronized zero-cost state for (O.2a.5). Provenance class: source-internal complete subclass classification and counterexample. Downstream consumers: Theorems O.1--O.2 and `TV-O-01`. This gives `positive-discharge` of minimization, disconnected-component and frustration classification for the complete lifted quadratic class, and `negative-refutation` of universal synchronization when registered offsets are admitted. Periodic nonlinear phase penalties, a source-complete MPU edge law and its formal physical realization remain open, so the target is not closed.
+
 ## O.5 The Physical Origin of the Arrow of Time
 
 **Arrow-of-time boundary for Borchers use.** The retained-algebra arrow fixes which algebraic records are available to an observer before a commitment. It does not itself provide the half-sided modular inclusion, reflected extension, or positivity data required by $\mathfrak C_{\mathrm{Borch}}$. Thus Borchers-type reflection is an optional finite certificate layered over the arrow theorem, not an alternate proof of the arrow theorem.
@@ -537,6 +576,54 @@ $$
 *Proof.* Multiplication of the current by the positive calibration $\gamma_T$ multiplies both the mean and standard deviation by $\gamma_T$, so the relative variance is unchanged. Substitution into Theorem D.8.7f gives (O.3g.2). ∎
 
 **Remark O.3h (Closed-System and Two-Sector Reading).** In a closed total branch $R\cup\bar R$, the retained clock-flow law is a subsystem statement, not a violation of global closure. The total branch may conserve its accepted fine-grained invariant while a retained sector obtains an arrow and an internal clock from entropy/update exchange with its complement. When the exchange ledger is null, $\mathcal T_R$ stalls unless another retained clock certificate has been independently fixed. Thus two-sector analogue clocks test the PU chronometric projection only when the retained sector, complement controls, retained entropy-increment estimator, guarantee-level subset when used, and null windows are locked before comparison. Cold-atom bright/dark-sector entropic-time experiments such as Barontini [2026] are external analogue precedents for this two-sector operational architecture; they are not forward PU evidence for the $\ln2$ unit bridge unless the PU unit, retained entropy-increment estimator, null windows, guarantee-level subset when used, and witness locks are fixed before comparison.
+
+**Theorem O.3i (Complete Finite Bidirectional Markov Arrow and Source Decomposition).** Let $Q=(q_{ij})$ be the generator of an irreducible continuous-time Markov chain on a finite set, with
+$$
+q_{ij}>0\quad\Longleftrightarrow\quad q_{ji}>0
+\qquad(i\ne j),
+\tag{O.3i.1}
+$$
+and stationary law $\pi_i>0$. Let $E:=\{\{i,j\}:q_{ij}>0\}$ be its undirected edge set. Start the chain in $\pi$, let $P_F^{[0,T]}$ be its path law, and let $P_R^{[0,T]}$ be the stationary time-reversed path law on the same càdlàg event space. Then the two measures are mutually absolutely continuous and the path entropy production is
+$$
+\Sigma_T(\gamma)
+=\log\frac{dP_F^{[0,T]}}{dP_R^{[0,T]}}(\gamma)
+=\sum_{i\to j\text{ in }\gamma}
+\log\frac{\pi_iq_{ij}}{\pi_jq_{ji}}.
+\tag{O.3i.2}
+$$
+Its stationary mean rate is
+$$
+\sigma
+=\sum_{\substack{i<j\\\{i,j\}\in E}}J_{ij}\log\frac{a_{ij}}{a_{ji}},
+\quad
+a_{ij}:=\pi_iq_{ij},
+\quad
+J_{ij}:=a_{ij}-a_{ji},
+\tag{O.3i.3}
+$$
+and obeys the exact strictness classification and quantitative bound
+$$
+\sigma\ge
+\sum_{\substack{i<j\\\{i,j\}\in E}}\frac{2J_{ij}^2}{a_{ij}+a_{ji}}\ge0,
+\qquad
+\sigma=0\Longleftrightarrow
+\pi_iq_{ij}=\pi_jq_{ji}\ \text{on every edge}.
+\tag{O.3i.4}
+$$
+If the undirected edges are partitioned before evaluation into disjoint source-owner classes $E=\bigsqcup_{r=1}^kE_r$, then
+$$
+\Sigma_T=\sum_r\Sigma_T^{(r)},
+\qquad
+\sigma=\sum_r\sigma_r,
+\quad
+\sigma_r:=\sum_{\{i,j\}\in E_r}J_{ij}\log\frac{a_{ij}}{a_{ji}}\ge0.
+\tag{O.3i.5}
+$$
+This is a source-exhaustive, no-double-counted decomposition because each realized jump has one undirected edge and hence one owner.
+
+*Proof.* Bidirectional support makes every finite-jump forward path and its reversal possible. Multiplying the jump densities and holding-time factors shows that the latter cancel in the likelihood ratio, yielding (O.3i.2). Stationarity and the compensator formula give (O.3i.3). Each summand is nonnegative because $(a-b)\log(a/b)\ge2(a-b)^2/(a+b)$ for $a,b>0$, with equality exactly at $a=b$. Partitioning the jump sum and the undirected-edge sum proves (O.3i.5). ∎
+
+**Resolution TV-O-02-R1 (Metadata).** Exact domain: every finite irreducible stationary continuous-time Markov chain with bidirectional support and every preregistered partition of its undirected transition edges. Premises: exact rates, stationary initialization and time reversal on the common càdlàg event algebra. Equivalence: state relabelings preserving rates and source-owner edge classes. Budget: all finite-time paths and every edge; no trajectory sampling is used. Verifier: path-density cancellation, stationary flow calculation, the scalar logarithmic inequality and edge-partition recomposition. Falsifier: a support-matched path lacking its reverse, a negative source term, nonzero current at zero total production, or a jump assigned to zero or multiple owners. Provenance class: source-internal complete finite stochastic classification. Downstream consumers: Theorems O.3--O.3b, `TV-O-02`, and the stochastic branch of `TV-M-02`. This gives `positive-discharge` of the common path laws, absolute continuity, source-separated decomposition and strict positive-production bound for the complete finite bidirectional Markov class. A formal MPU event/source/bath realization and non-Markov or infinite-state classes remain open, so the target is not closed. The equilibrium perspective-diffusion predicate of `TV-M-02` remains distinct: detailed balance makes (O.3i.4) vanish, while `TV-M-02` separately requires $V=\beta H$ and a bath/work/heat/reset realization.
 
 ### O.5.1 The Perspectival Arrow: Complexity-Relative Temporal Asymmetry
 
@@ -1131,6 +1218,21 @@ $$
 $$
 Nonrelativizing routes not covered by Theorem O.5.3c remain unclassified, not ruled out. Other proof barriers apply only after their separate hypotheses and their applicability to a proposed proof method are established; they are not promoted here to properties of a candidate function. The open mathematical problem is unchanged.
 
+**Theorem O.5.3j (Exact Uniform Reversible Compilation of PPT Inverters).** Let $\mathcal I$ be any fixed uniform probabilistic Turing machine which, on inputs $(1^n,y)$ and $r(n)$ independent fair random bits, halts within $T(n)$ steps and uses at most $S(n)$ tape cells, where $T,S,r$ are polynomials. There is a log-space-uniform family of reversible Boolean circuits $R_n$, over NOT, CNOT and Toffoli gates, with polynomial size and polynomially many clean ancillas, such that
+$$
+R_n:\ |1^n,y,r,0,0\rangle
+\longmapsto
+|1^n,y,r,\mathcal I(1^n,y;r),0\rangle.
+\tag{O.5.3j.1}
+$$
+The last zero denotes all work ancillas after uncomputation. Sampling $r\leftarrow U_{r(n)}$, applying $R_n$, and reading the output register reproduces the classical output law of $\mathcal I$ exactly, with total-variation error zero. The encoder $(1^n,y)\mapsto|1^n,y,0,0,0\rangle$, random-bit register, computational-basis decoder, gate count, workspace and uniform circuit generator are therefore an explicit polynomial-overhead abstract compiler packet.
+
+This theorem does not populate $\mathfrak C_{\mathrm{PPT}\to\mathrm{PU}}$: that certificate additionally requires a response-faithful PU carrier realizing the gates and scalable fair coins, together with a proof that the complete implementing microstate has polynomial $C_P$ and preserves the any-preimage success probability after physical errors.
+
+*Proof.* Unroll the time-$T(n)$ deterministic computation of $\mathcal I$ with its random tape fixed to $r$ into a uniform polynomial-size Boolean circuit. Replace each Boolean gate by a reversible NOT/CNOT/Toffoli gadget with fresh ancillas, compute the output, copy it into a clean output register with CNOT gates, and apply all gadgets in reverse order. This restores every work ancilla while retaining the input, coins and copied output, proving (O.5.3j.1). The construction is uniform because the machine and polynomial clock are fixed. For each fixed $r$, the decoded output is identical to the Turing-machine output; averaging over the same uniform coin law gives exact equality of distributions. ∎
+
+**Resolution TV-O-05-R1 (Metadata).** Exact domain: every fixed uniform PPT classical inverter with an explicit polynomial clock, space bound and fair-coin count. Premises: the standard reversible Boolean gate set and exact abstract fair bits. Equivalence: circuits are identified by their decoded input/coin/output relation and polynomial resource bounds. Budget: every input, challenge and random string at every length. Verifier: gate-table reversibility, compute-copy-uncompute simulation and uniformity/resource accounting. Falsifier: one input/coin string with a different decoded output, a dirty terminal ancilla, or superpolynomial generated size. Provenance class: source-internal exact compiler construction. Downstream consumers: Definition O.5.3h and `TV-O-05`. This gives `positive-discharge` of the uniform abstract encoder/decoder/reversible-simulation and exact-randomness-transport subcomponent. The PU gate/coin carrier, polynomial-$C_P$ realization and physical error/success bridge remain open, so the target is not closed.
+
 ## O.6 Conditional Temporal-Medium Interpretations for CC and Gravity
 
 Theorem O.2 supplies synchronized phase-sector minimizers and low-noise stationary concentration under its stated hypotheses. It proves neither a causal cone nor a physical carrier for CC or gravity. This section records an interpretation available only after the independent response and gravitational certificates are added.
@@ -1151,6 +1253,126 @@ A *temporal wave* is a propagating solution for a registered local cycle-rate or
 **(b) CC branch.** A controlled CC modulation exists only on the response-active realization branch stated above. Its implementation energy belongs to the registered matter or nongravitational-field stress-energy ledger, but neither high complexity nor frequency decomposition proves a target response.
 
 **(c) Energy-accounting boundary.** The Einstein equation uses the certified total nongravitational stress-energy source on its branch. General relativity has no unique generally covariant local stress-energy tensor for the gravitational field itself; an Isaacson-type wave tensor requires its separate high-frequency averaging hypotheses. Consequently, implementation energy may contribute to the Einstein source only after its carrier stress-energy and non-overlap ledger are specified, and no independent `energy of consciousness` term is introduced.
+
+**Theorem O.6a (Exact Bounded Temporal-Wave to Qubit-Response Intertwiner).** Fix Minkowski spacetime with speed $c$, a baseline cycle rate $\nu_0>0$, and a real scalar cycle-rate perturbation $\phi\in C^2$ satisfying
+$$
+\nu=\nu_0+\phi>0,
+\qquad
+\Box_c\phi=J,
+\qquad
+|\kappa\phi|\le1-\epsilon
+\tag{O.6a.1}
+$$
+on the declared domain, where $\kappa\ne0$ has the inverse units of $\phi$ and $0<\epsilon<1$. At each spacetime point define the qubit state, retained effect and response
+$$
+\rho_\phi=\frac12(I+\kappa\phi\,\sigma_z),
+\qquad
+E_+=\frac12(I+\sigma_z),
+\qquad
+p_\phi(+)=\operatorname{Tr}(E_+\rho_\phi)=\frac{1+\kappa\phi}{2}.
+\tag{O.6a.2}
+$$
+Then $\rho_\phi$ is a normalized positive state, $0<p_\phi(+)<1$, and the pointwise response map is injective with
+$$
+\phi=\frac{2p_\phi(+)-1}{\kappa},
+\qquad
+\Box_c\bigl(2p_\phi(+)-1\bigr)=\kappa J.
+\tag{O.6a.3}
+$$
+Thus it preserves the field equation and its characteristic cone exactly. The scalar branch has no gauge quotient; on the response side the measured probability fixes the scalar representative by (O.6a.3).
+
+For a normalized channel realization, set
+$$
+\Phi_\phi(X)=\operatorname{Tr}(X)\rho_\phi,
+\qquad
+L_\phi:=\Phi_\phi-\Phi_0.
+\tag{O.6a.4}
+$$
+Writing $r_0(\phi)=p_\phi(+)$ and $r_1(\phi)=1-p_\phi(+)$, an explicit local Kraus realization is
+$$
+K_{ab}(\phi)=\sqrt{r_a(\phi)}\,|a\rangle\!\langle b|,
+\qquad a,b\in\{0,1\},
+\tag{O.6a.4a}
+$$
+for which $\sum_{a,b}K_{ab}^\dagger K_{ab}=I$ and
+$\sum_{a,b}K_{ab}XK_{ab}^\dagger=\Phi_\phi(X)$. Hence each $\Phi_\phi$ is CPTP, and $L_\phi$ is complex-linear, Hermitian-preserving and trace-annihilating as required by Definition 30. Its operational norm and retained response are
+$$
+\|L_\phi\|_{\mathrm{op}}=\frac{|\kappa\phi|}{2},
+\qquad
+\operatorname{Tr}\!\left(E_+L_\phi(\rho)\right)=\frac{\kappa\phi}{2}
+\tag{O.6a.4b}
+$$
+for every input state $\rho$, so they are nonzero exactly when $\phi\ne0$. A local source/control realization is obtained by assigning $J$ to the scalar carrier equation and assigning preparation of $\rho_\phi$ to a separate controller with degenerate qubit Hamiltonian $H_Q=0$. With scalar Lagrangian
+$$
+\mathcal L_\phi
+=-\frac12\partial_\mu\phi\,\partial^\mu\phi-J\phi,
+\tag{O.6a.5}
+$$
+the carrier stress tensor and source-work identity are the standard scalar ones,
+$$
+T_{\mu\nu}^{(\phi)}
+=\partial_\mu\phi\partial_\nu\phi
+-\frac12\eta_{\mu\nu}(\partial\phi)^2,
+\qquad
+\partial^\mu T_{\mu\nu}^{(\phi)}=J\partial_\nu\phi.
+\tag{O.6a.6}
+$$
+The owner tags `scalar-source/work` and `qubit-preparation/control` are disjoint and recombine only by addition; no qubit control work is counted as scalar-wave energy. Pointwise preparation depends only on $\phi(x)$, so the response adds no propagation edge outside the cone already fixed by (O.6a.1). The class is nonempty: any plane wave of sufficiently small amplitude with $J=0$ and $\nu_0>\|\phi\|_\infty$ supplies a nonconstant witness.
+
+*Proof.* The eigenvalues of $\rho_\phi$ are $(1\pm\kappa\phi)/2$, which lie in $(0,1)$ by (O.6a.1), proving positivity and normalization. Direct trace evaluation gives (O.6a.2), and $\kappa\ne0$ gives the inverse and wave equation in (O.6a.3). Direct multiplication verifies the two Kraus identities after (O.6a.4a), so $\Phi_\phi$ is CPTP. Equation (O.6a.4) is therefore a difference of trace-preserving Hermiticity-preserving linear maps and is trace-annihilating and Hermiticity preserving. The trace-norm variational formula gives (O.6a.4b). Varying (O.6a.5) gives (O.6a.1), and direct differentiation gives (O.6a.6). Local dependence and the hyperbolic domain-of-dependence theorem preserve the characteristic cone. ∎
+
+**Resolution TV-O-06-R1 (Metadata).** Exact domain: every bounded $C^2$ scalar temporal-wave solution satisfying (O.6a.1), its pointwise qubit replacement channel and the fixed two-outcome instrument. Premises: the Minkowski cone, $\kappa\ne0$, the strict positivity margin and the disjoint scalar-source/qubit-control ownership ledger. Equivalence: scalar solutions are identified only when their normalized retained response fields agree; the scalar gauge quotient is trivial. Budget: every spacetime point and every solution in the bounded class; there is no mode truncation or sampled grid. Verifier: state eigenvalues, CPTP replacement-channel form, operational norm, trace-annihilation, the explicit inverse, the wave equation, stress divergence and owner-tag recomposition. Falsifier: a nonpositive state, nonnormalized instrument, two distinct $\phi$ fields with the same response, a cone-changing response equation, source-owner overlap, or failure of (O.6a.6). Provenance class: source-internal exact formal field/channel construction. Downstream consumers: Definition O.1, Remark O.4, Definition 30 and `TV-O-06`. Equations (O.6a.1)--(O.6a.6) give `positive-discharge` of the registered CC alternative: an injective cycle-rate-field to normalized response map with equation, trivial-gauge, characteristic-cone, source and energy-owner controls. This resolves `TV-O-06` on its explicit CC branch. It does not supply the simultaneous arrow--CC--gravity coexistence certificate of `TV-O-10`, whose common-carrier, history and gravity-source predicates remain independent.
+
+**Theorem O.6.3 (Explicit Arrow--CC--Gravity Coexistence Witness).** Fix $p>q>0$ with $p+q<1$ and a registered step duration $\tau_{\mathrm{arr}}>0$. On the three-state ring $\mathbb Z/3\mathbb Z$, let
+$$
+P(i,i+1)=p,
+\qquad
+P(i,i-1)=q,
+\qquad
+P(i,i)=1-p-q.
+\tag{O.6.3.1}
+$$
+Its stationary law is uniform. For a finite history $\gamma$, let $N_+(\gamma)$ and $N_-(\gamma)$ count clockwise and counterclockwise moves and define
+$$
+\Sigma_{\mathrm{arr}}(\gamma)
+:=(N_+(\gamma)-N_-(\gamma))\ln\frac pq.
+\tag{O.6.3.2}
+$$
+Then, for the stationary path law, $\log(\Pr\gamma/\Pr\gamma^R)=\Sigma_{\mathrm{arr}}(\gamma)$, the mean production per step is $(p-q)\ln(p/q)>0$, and its registered rate is this quantity divided by $\tau_{\mathrm{arr}}$.
+
+Take, on a disjoint factor, the finite source, control, carrier, target, battery and instrument construction of Theorem L.12.8b with $0<g\tau_{\mathrm{int}}<\pi$. It has retained aggregate source $S$, control encoder $U_{\mathrm{ctx}}$, actuation battery $B$, and response
+$$
+\mathfrak A_{\mathrm{G9CC}}=\sin^2(g\tau_{\mathrm{int}})>0.
+\tag{O.6.3.3}
+$$
+On a third factor take Minkowski spacetime with $x^0=ct$ and a spatial three-torus. Independently choose a nonzero torus Fourier covector $k$ and an energy-density amplitude $\rho_0\ne0$, and register the static conserved source perturbation
+$$
+T^{\mathrm{src}}_{00}=\rho_0\cos(k\cdot x),
+\qquad
+T^{\mathrm{src}}_{0i}=T^{\mathrm{src}}_{ij}=0.
+\tag{O.6.3.4}
+$$
+It is a signed perturbation about a separately owned homogeneous reference and is defined before the gravitational response. Set
+$$
+\bar h_{00}
+=\frac{16\pi G\rho_0}{c^4|k|^2}\cos(k\cdot x),
+\qquad
+\bar h_{0i}=\bar h_{ij}=0.
+\tag{O.6.3.4a}
+$$
+Then $\partial^\mu T^{\mathrm{src}}_{\mu\nu}=0$, $\partial^\mu\bar h_{\mu\nu}=0$, and the linearized Lorenz-gauge equation
+$$
+\Box\bar h_{\mu\nu}
+=-\frac{16\pi G}{c^4}T^{\mathrm{src}}_{\mu\nu}
+\tag{O.6.3.5}
+$$
+holds. Here $\bar h$ is dimensionless, $k$ has inverse-length units and $T^{\mathrm{src}}$ has energy-density units.
+
+Place all three factors on the common time coordinate $t$: update the ring at multiples of $\tau_{\mathrm{arr}}$, execute the finite Theorem-L.12.8b operation in its registered cycle time $\tau_{\mathrm{cyc}}$, and evaluate the field (O.6.3.4) continuously. Their product is a nonempty common model because the three maps act on disjoint factors and commute; no equality between $\tau_{\mathrm{arr}}$ and $\tau_{\mathrm{cyc}}$ is assumed. Its source and unit ledger has three nonoverlapping rows: $(p,q,\tau_{\mathrm{arr}})$ owns the dimensionless history likelihood ratio and its inverse-time rate, $(S,B)$ own the dimensionless CC response and actuation energy, and $T^{\mathrm{src}}$ owns the energy-density-valued linearized gravitational response. The time orientation is the sign convention selected by (O.6.3.2); it is not an argument of $U_{\mathrm{ctx}}$ and is not a term in $T^{\mathrm{src}}$. Changing $(p,q)$ while holding the other two factors fixed changes the arrow record without changing either physical source map.
+
+*Proof.* Translation invariance of (O.6.3.1) gives the uniform stationary law. Every clockwise step contributes $\ln(p/q)$ to the forward/reverse likelihood ratio, every counterclockwise step contributes its negative, and holds cancel, proving (O.6.3.2); stationary averaging gives the positive mean. Equation (O.6.3.3) is Theorem L.12.8b. The source is time independent and has no component with a spatial first index, so it is conserved. The response is time independent and has only a $00$ component, so it is in Lorenz gauge. Since $\Box\cos(k\cdot x)=-|k|^2\cos(k\cdot x)$, substitution proves (O.6.3.5). Tensor-factor extension makes the three evolutions commute, and the displayed owner rows are disjoint by construction. ∎
+
+**Resolution TV-O-10-P1 (Metadata).** Exact domain: the biased three-state history chain, the finite Theorem-L.12.8b G9CC witness and the source-first single Fourier perturbation of Theorem O.6.3. Premises: $p>q>0$, $p+q<1$, $\tau_{\mathrm{arr}}>0$, $0<g\tau_{\mathrm{int}}<\pi$, the Theorem-L.12.8b energy/reset/locality premises, a nonzero torus Fourier covector $k$, and $\rho_0\ne0$. Equivalence: relabeling of the three-state ring, unitary equivalence of the finite CC factors, and torus translations preserving $(k,\rho_0)$. Budget: every ring transition, both CC contexts and outcomes, every registered operation time, and every component of (O.6.3.4)--(O.6.3.4a). Verifier: stochastic normalization, the path-ratio identity and rate, the G9CC response, the common-time schedule, Lorenz gauge, source conservation, units, tensor-factor commutation and source-owner disjointness. Falsifier: nonpositive mean arrow production, a zero CC response, violation of (O.6.3.5), source nonconservation, overlapping owners, or use of the time orientation as a CC or gravity source. Provenance class: source-internal finite/product construction with a source-first linearized-gravity perturbation. Downstream consumers: Remark O.4, Appendix L and `TV-O-10`. Theorem O.6.3 gives `positive-discharge` of this finite kinematic coexistence subclass. It does not populate the full Appendix-B nongravitational source universe or recomposition map, identify the engineered CC register with a biological system, or promote the linearized response to the nonlinear Einstein branch; those target-level coexistence entries remain open.
 
 ## O.7 Mathematical Emergence of the Lorentzian Signature
 
@@ -1262,6 +1484,47 @@ $$
 \left(\frac{\delta}{L_{\mathrm{obs}}}\right)^{m-2},
 $$
 where the last inequality uses $m\ge3$ and $|k|\le L_{\mathrm{obs}}^{-1}$. No probability limit follows from these symbol inequalities alone. ∎
+
+**Theorem O.7.2.3e (Lévy-Class Trichotomy and Quantitative Diffusive Residual).** Let a retained translation-invariant scaling limit be stochastically continuous with independent increments. Its characteristic exponent has the unique Lévy--Khintchine form
+$$
+\Psi(k)
+=i b\cdot k-\frac12 k^TAk
++\int_{\mathbb R^d\setminus\{0\}}
+\left(e^{ik\cdot z}-1-ik\cdot z\,\mathbf1_{|z|\le1}\right)\nu(dz),
+\tag{O.7.2.3e.1}
+$$
+where $A\succeq0$ and $\int(1\wedge|z|^2)\nu(dz)<\infty$. The limit is a local diffusion exactly when $\nu=0$; it retains a jump or nonlocal part exactly when $\nu\ne0$. The isotropic symmetric fractional branch of index $0<\alpha<2$ is the special case $A=0$ and $\nu(dz)=c_{d,\alpha}|z|^{-d-\alpha}dz$, for which $\Psi(k)=-C_{d,\alpha}|k|^\alpha$. In particular, the generator of a conservative positivity-preserving translation-invariant Markov semigroup, if it is a finite-order local differential operator, has order at most two: a polynomial exponent from (O.7.2.3e.1) has degree at most two.
+
+For a quantitative local branch, let $Y_1,Y_2,\ldots$ be independent identically distributed centered increments with covariance $\Sigma\succ0$ and $\mathbb E|Y_1|^{2+\delta}=M_{2+\delta}<\infty$ for some $0<\delta\le1$, and put
+$$
+X_n(t):=n^{-1/2}\sum_{j=1}^{\lfloor nt\rfloor}Y_j.
+$$
+Then $X_n$ converges in the Skorokhod space $D([0,T],\mathbb R^d)$ to Brownian motion with covariance $\Sigma$. Its Lindeberg tail has the explicit bound
+$$
+n\,\mathbb E\!\left[
+\left|\frac{Y_1}{\sqrt n}\right|^2
+\mathbf1_{|Y_1|>\epsilon\sqrt n}
+\right]
+\le
+\frac{M_{2+\delta}}{\epsilon^\delta n^{\delta/2}},
+\tag{O.7.2.3e.2}
+$$
+and the increment sequence's strong-mixing coefficients vanish at every positive lag. If $\mathbb E|Y_1|^3<\infty$, every unit projection $u\cdot X_n(1)$ satisfies the Berry--Esseen estimate
+$$
+\sup_x\left|
+\Pr\{u\cdot X_n(1)\le x\}
+-\Phi_{u^T\Sigma u}(x)
+\right|
+\le
+\frac{C_{\mathrm{BE}}\,\mathbb E|u\cdot Y_1|^3}
+{(u^T\Sigma u)^{3/2}\sqrt n}.
+\tag{O.7.2.3e.3}
+$$
+Whenever cumulants through order $m$ exist, the order-$m$ cumulant of $X_n(1)$ is $n^{1-m/2}\kappa_m(Y_1)$ and therefore vanishes for every $m\ge3$. Thus (O.7.2.3e.2)--(O.7.2.3e.3) populate the tail, mixing and Gaussian-residual fields for this finite-moment independent-increment class; a retained $\nu\ne0$ instead certifies the jump or fractional alternatives rather than a second-order closure.
+
+*Proof.* The Lévy--Khintchine theorem gives (O.7.2.3e.1) and uniqueness of $(b,A,\nu)$. The integral term is absent exactly for continuous Gaussian-plus-drift paths and is nonlocal when $\nu\ne0$; the stated stable Lévy measure has Fourier symbol proportional to $-|k|^\alpha$. If a local generator has finite differential order, its exponent is polynomial. The unique representation then forces $\nu=0$, leaving only the affine and quadratic terms. For (O.7.2.3e.2), on $|Y_1|>\epsilon\sqrt n$ one has $|Y_1|^2\le |Y_1|^{2+\delta}/(\epsilon\sqrt n)^\delta$; substitution gives the bound. Independence makes every positive-lag mixing coefficient zero. The functional central-limit theorem and the one-dimensional Berry--Esseen theorem applied to $u\cdot Y_j$ give the remaining convergence statements. Additivity and homogeneity of cumulants under independent summation give $\kappa_m(X_n(1))=n(n^{-1/2})^m\kappa_m(Y_1)$. ∎
+
+**Resolution TV-O-07-P1 (Metadata).** Exact domain: stochastically continuous independent-increment limits and the finite-moment iid diffusive subclass displayed in Theorem O.7.2.3e. Premises: the stated Lévy and moment hypotheses. Equivalence: equality of Lévy triplets, and equality in the iid subclass up to increment law. Budget: every Lévy-triplet component, every $0<\alpha<2$, every unit projection and every finite cumulant that exists. Verifier: Lévy-integrability, covariance positivity, (O.7.2.3e.2), the Berry--Esseen hypotheses and cumulant scaling. Falsifier: a conservative positivity-preserving translation-invariant Markov generator that is local finite-order above degree two, a nonzero retained Lévy measure classified as local diffusion, or failure of any displayed quantitative bound. Provenance class: standard probability-theory classification specialized to the retained continuum ledger. Downstream consumers: $\mathfrak C_2$, Hypothesis O.7.2.3 and `TV-O-07`. The theorem gives `positive-discharge` for the independent-increment classification and finite-moment iid Gaussian-residual subclass. Dependent, long-range, state-dependent and quantum off-diagonal sectors remain within `TV-O-07`'s broader coverage requirement.
 
 **Hypothesis O.7.2.4 (Nondegenerate causal cone).** Assume a separately established attained operational frontier whose speed obeys the uniform upper bound of Theorem 46 and whose discrete propagation compatibility is recorded by Proposition F.1. This frontier is nondegenerate at every point of $M_{\mathrm{reg}}$ and coincides with the characteristic cone of $p_x$: for every nonzero spatial covector $k_i$, the polynomial
 $$

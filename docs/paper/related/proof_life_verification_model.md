@@ -12,7 +12,9 @@ O_{\psi,N}:=\mathsf{BProof}_{\mathcal F_0}(\psi,N),
 $$
 whose truth is decided by a finite verifier over a canonical finite candidate-certificate set. The diagonal sector contains finite protocol targets induced by the phase-indexed diagonal package of Appendix A.5.6a. No diagonal protocol target is identified with an arithmetic proof target unless an explicit coding extension is introduced; the two sectors are typed separately.
 
-Each cell executes prediction, verification, retained update, and reachability growth. A proof target is retained only when a positive certificate or a negative exhaustion trace passes the finite verifier and the associated register has positive expected predictive gain in the PCE quotient. Neighbor propagation is certificate-gated: a positive proof-object may spread only after each receiving cell independently verifies the certificate. Negative bounded facts may be retained by verified exhaustion, but they do not propagate in the minimal positive-certificate broadcast rule unless a separate exhaustion-transmission protocol is added.
+Each cell executes prediction, verification, retained update, and reachability growth. A proof target is retained only when a positive certificate or a negative exhaustion trace passes the finite verifier and the associated register has positive expected predictive gain in the PCE quotient. Neighbor propagation is certificate-gated: a positive proof-object may spread only after each receiving cell independently verifies the certificate. The extended negative channel of Theorem PL.3 transmits a complete canonical exhaustion message; each receiver independently recomputes the bounded truth and verifies every trace field before novelty-gated retention or relay.
+
+Theorem PL.4 supplies a canonical tagged codec for the proof/diagonal coproduct. It preserves each sector tag and every target field. Its declared cross-sector bridge admits target-selection links only: selection may schedule a target in the other sector, but it imports no truth value or evidence and never identifies the proof verifier with the diagonal access verifier.
 
 The model connects directly to the PU Fundamental Predictive Loop (Definition 4), PCE (Definition 15), finite-response PPI (Definition P.6.2), the SPAP three-role register $(\phi,p_{stored},c_{phase})$ in Theorem 15, and the phase-indexed diagonal access theorem-package of Appendix A.5.6a. In the diagonal sector, the object $E_{B,t}$ realizes the operational separation
 $$
@@ -450,9 +452,17 @@ D_j(t+1)=D_j(t)\cup\{(O_{\psi,N},1,p)\}
 $$
 only after local verification and positive gain in the recipient's quotient. A false certificate may be transmitted as a string, but it cannot become retained knowledge.
 
-Negative bounded facts may be retained locally when an exhaustion trace passes. They are not propagated by the minimal positive-certificate broadcast rule unless the communication protocol is extended to transmit and verify the full exhaustion trace. This keeps the base model conservative: positive proof-objects reproduce by checkable witnesses, while negative bounded targets require local or explicitly transmitted finite exhaustion.
+Negative bounded facts may be retained locally when an exhaustion trace passes. The minimal positive-certificate channel does not carry them. The extended channel of Theorem PL.3 instead transmits
+$$
+m^-_{\psi,N}
+=
+\bigl(\operatorname{code}(O_{\psi,N}),\operatorname{Exh}_{\mathcal F_0}(\psi,N)\bigr).
+$$
+A recipient resolves the target code, independently recomputes the bounded truth, checks formula and bound identity, runs the full exhaustion verifier, and applies the same duplicate-target novelty quotient. A novel accepted negative message is retained and queued for relay; an accepted duplicate is recorded but has zero gain, and an invalid message is recorded as failed and is not relayed.
 
-Diagonal-sector targets do not propagate by the positive proof-certificate broadcast rule. They may be shared only by a protocol that transmits the required trace-certified register and history data for the selected diagonal access mode.
+Write $\mathsf{Step}_{\min}$ for the local transitions of Section 4 together with the positive-certificate channel above, and write $\mathsf{Step}_{\pm}$ for the extension that also contains these negative-message transitions. Theorem PL.1 requires only $\mathsf{Step}_{\min}$. The displayed extended program and Theorem PL.2 use $\mathsf{Step}_{\pm}$; Theorem PL.3 proves the added negative subrelation and its communication-cost classification.
+
+Diagonal-sector targets do not propagate by either proof-evidence channel. The tagged codec of Theorem PL.4 permits proof and diagonal sectors to nominate one another's next target while preserving the coproduct tag. Beyond the unchanged source and destination target codes, a cross-sector selection carries no certificate, exhaustion trace, diagonal evidence label, register value, or history datum. Diagonal evidence may be shared only by a separate protocol that transmits the trace-certified register and history data required by the selected access mode.
 
 ## 6. Reachability horizons
 
@@ -692,7 +702,7 @@ for every sufficiently large $N$, with the returned label equal to $y^*_{B,t}$. 
 
 ## 10. Reference implementation
 
-The following reference implementation is a finite executable instance of the Proof-Life construction. It implements the bounded certificate calculus, complete finite exhaustion verification, verification-gated retention, positive-certificate propagation, and the A.5.6a diagonal access triality.
+The following reference implementation is a finite executable instance of the Proof-Life construction. It implements the bounded certificate calculus, complete finite exhaustion verification, verification-gated retention, independently verified positive-certificate and negative-exhaustion propagation, the typed proof/diagonal target codec, the selection-only cross-sector bridge, and the A.5.6a diagonal access triality.
 
 Save as `proof_life.py` and run:
 
@@ -705,6 +715,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
+import json
 import math
 import random
 
@@ -751,7 +762,28 @@ class ExhaustionTrace:
         return f"EXH[{self.formula};<= {self.bound}; checked={len(self.checked)}]"
 
 
+DIAGONAL_MODES = ("act", "ext", "hist", "lite-act", "lite-hist")
+
+
+@dataclass(frozen=True)
+class DiagonalTarget:
+    predictor: str
+    time: int
+    mode: str
+    bound: int
+
+    def code(self) -> str:
+        return f"DIAG[{self.predictor};t={self.time};mode={self.mode};N={self.bound}]"
+
+
+@dataclass(frozen=True)
+class ExhaustionMessage:
+    target_code: str
+    trace: ExhaustionTrace
+
+
 Evidence = Union[Certificate, ExhaustionTrace, None]
+Target = Union[ProofTarget, DiagonalTarget]
 
 
 class ToyProofSystem:
@@ -764,8 +796,23 @@ class ToyProofSystem:
     """
 
     def raw_verify(self, formula: Formula, cert: Certificate) -> bool:
+        # Python bool is a subclass of int and compares equal to 0 or 1.
+        # Exact type checks must precede dataclass/tuple equality.
+        if (
+            type(formula) is not Formula
+            or type(formula.kind) is not str
+            or type(formula.args) is not tuple
+            or type(cert) is not Certificate
+            or type(cert.rule) is not str
+            or type(cert.args) is not tuple
+        ):
+            return False
         k = formula.kind
         a = formula.args
+        if not all(type(x) is int for x in a):
+            return False
+        if not all(type(x) is int for x in cert.args):
+            return False
 
         if k == "ADD" and cert.rule == "ADD_EVAL":
             x, y, z = a
@@ -780,19 +827,14 @@ class ToyProofSystem:
             if len(cert.args) != 1:
                 return False
             (w,) = cert.args
-            return isinstance(w, int) and 2 * w == n
+            return 2 * w == n
 
         if k == "COMP" and cert.rule == "FACTOR":
             (n,) = a
             if len(cert.args) != 2:
                 return False
             u, v = cert.args
-            return (
-                all(isinstance(x, int) for x in (u, v))
-                and 1 < u < n
-                and 1 < v < n
-                and u * v == n
-            )
+            return 1 < u < n and 1 < v < n and u * v == n
 
         if k == "PRIME" and cert.rule == "PRIME_TRIAL":
             (n,) = a
@@ -865,6 +907,25 @@ class ToyProofSystem:
         return ExhaustionTrace(formula=formula, bound=bound, checked=checked)
 
     def verify_exhaustion_trace(self, trace: ExhaustionTrace) -> bool:
+        if (
+            type(trace) is not ExhaustionTrace
+            or type(trace.formula) is not Formula
+            or type(trace.formula.kind) is not str
+            or type(trace.formula.args) is not tuple
+            or not all(type(x) is int for x in trace.formula.args)
+            or type(trace.bound) is not int
+            or trace.bound < 0
+            or type(trace.checked) is not tuple
+            or any(
+                type(cert) is not Certificate
+                or type(cert.rule) is not str
+                or type(cert.args) is not tuple
+                or not all(type(x) is int for x in cert.args)
+                for cert in trace.checked
+            )
+        ):
+            return False
+
         expected = self.candidate_certificates(trace.formula, trace.bound)
         if trace.checked != expected:
             return False
@@ -879,6 +940,197 @@ class ToyProofSystem:
     def bounded_theorem_truth(self, target: ProofTarget) -> bool:
         truth, _ = self.decide_target(target)
         return truth
+
+
+def valid_proof_target(target: Any, L: int, N_max: int) -> bool:
+    arities = {"ADD": 3, "MUL": 3, "EVEN": 1, "COMP": 1, "PRIME": 1}
+    return (
+        type(L) is int
+        and L >= 0
+        and type(N_max) is int
+        and N_max >= 0
+        and type(target) is ProofTarget
+        and type(target.formula) is Formula
+        and type(target.formula.kind) is str
+        and target.formula.kind in arities
+        and type(target.formula.args) is tuple
+        and len(target.formula.args) == arities[target.formula.kind]
+        and all(type(x) is int and 0 <= x <= L for x in target.formula.args)
+        and type(target.bound) is int
+        and 0 <= target.bound <= N_max
+    )
+
+
+class ExhaustionTraceCodec:
+    """Minimax fixed-width codec for a frozen nonempty negative target library."""
+
+    def __init__(
+        self,
+        targets: Tuple[ProofTarget, ...],
+        system: ToyProofSystem,
+        L: int,
+        N_max: int,
+    ) -> None:
+        if (
+            type(targets) is not tuple
+            or type(system) is not ToyProofSystem
+            or not all(valid_proof_target(target, L, N_max) for target in targets)
+        ):
+            raise ValueError("invalid exhaustion-codec domain")
+        by_code = {target.code(): target for target in targets}
+        if len(by_code) != len(targets):
+            raise ValueError("duplicate target code")
+        self.system = system
+        self.negative_targets = tuple(
+            sorted(
+                (target for target in targets if not system.bounded_theorem_truth(target)),
+                key=lambda target: target.code(),
+            )
+        )
+        if not self.negative_targets:
+            raise ValueError("negative target library is empty")
+        self.by_code = {target.code(): target for target in self.negative_targets}
+        self.index_by_code = {
+            target.code(): index for index, target in enumerate(self.negative_targets)
+        }
+        self.width = (len(self.negative_targets) - 1).bit_length()
+
+    def encode(self, message: ExhaustionMessage) -> str:
+        if (
+            type(message) is not ExhaustionMessage
+            or type(message.target_code) is not str
+            or type(message.trace) is not ExhaustionTrace
+            or message.target_code not in self.by_code
+        ):
+            raise ValueError("invalid exhaustion message")
+        target = self.by_code[message.target_code]
+        if (
+            message.trace.formula != target.formula
+            or message.trace.bound != target.bound
+            or not self.system.verify_exhaustion_trace(message.trace)
+        ):
+            raise ValueError("noncanonical exhaustion message")
+        index = self.index_by_code[message.target_code]
+        return "" if self.width == 0 else format(index, f"0{self.width}b")
+
+    def decode(self, bits: str) -> ExhaustionMessage:
+        if (
+            type(bits) is not str
+            or len(bits) != self.width
+            or any(bit not in "01" for bit in bits)
+        ):
+            raise ValueError("invalid fixed-width codeword")
+        index = 0 if self.width == 0 else int(bits, 2)
+        if index >= len(self.negative_targets):
+            raise ValueError("unused fixed-width codeword")
+        target = self.negative_targets[index]
+        return ExhaustionMessage(
+            target_code=target.code(),
+            trace=self.system.exhaustion_trace(target.formula, target.bound),
+        )
+
+
+class TypedTargetCodec:
+    """Canonical tagged codec and safe cross-sector selection bridge."""
+
+    def __init__(
+        self,
+        L: int,
+        N_max: int,
+        time_max: int,
+        predictors: Tuple[str, ...],
+    ) -> None:
+        if (
+            type(L) is not int
+            or L < 0
+            or type(N_max) is not int
+            or N_max < 0
+            or type(time_max) is not int
+            or time_max < 0
+            or type(predictors) is not tuple
+            or not predictors
+            or any(
+                type(name) is not str
+                or not name
+                or not name.isascii()
+                or not name.replace("_", "a").isalnum()
+                for name in predictors
+            )
+            or len(set(predictors)) != len(predictors)
+        ):
+            raise ValueError("invalid typed-target-codec domain")
+        self.L = L
+        self.N_max = N_max
+        self.time_max = time_max
+        self.predictors = predictors
+
+    def valid_diagonal_target(self, target: Any) -> bool:
+        return (
+            type(target) is DiagonalTarget
+            and type(target.predictor) is str
+            and target.predictor in self.predictors
+            and type(target.time) is int
+            and 0 <= target.time <= self.time_max
+            and type(target.mode) is str
+            and target.mode in DIAGONAL_MODES
+            and type(target.bound) is int
+            and 0 <= target.bound <= self.N_max
+        )
+
+    def encode(self, target: Target) -> str:
+        if valid_proof_target(target, self.L, self.N_max):
+            payload = ["proof", target.formula.kind, list(target.formula.args), target.bound]
+        elif self.valid_diagonal_target(target):
+            payload = [
+                "diag",
+                target.predictor,
+                target.time,
+                target.mode,
+                target.bound,
+            ]
+        else:
+            raise ValueError("target is outside the typed codec domain")
+        return json.dumps(payload, ensure_ascii=True, separators=(",", ":"))
+
+    def decode(self, code: str) -> Target:
+        if type(code) is not str:
+            raise ValueError("target code is not a string")
+        try:
+            payload = json.loads(code)
+        except (TypeError, ValueError, json.JSONDecodeError) as error:
+            raise ValueError("invalid target code") from error
+        if json.dumps(payload, ensure_ascii=True, separators=(",", ":")) != code:
+            raise ValueError("noncanonical target code")
+        if type(payload) is not list or not payload:
+            raise ValueError("invalid target payload")
+        if payload[0] == "proof" and len(payload) == 4:
+            kind, args, bound = payload[1:]
+            if type(args) is not list:
+                raise ValueError("invalid proof payload")
+            target: Target = ProofTarget(Formula(kind, tuple(args)), bound)
+            if not valid_proof_target(target, self.L, self.N_max):
+                raise ValueError("proof payload is outside the codec domain")
+            return target
+        if payload[0] == "diag" and len(payload) == 5:
+            predictor, time, mode, bound = payload[1:]
+            target = DiagonalTarget(predictor, time, mode, bound)
+            if not self.valid_diagonal_target(target):
+                raise ValueError("diagonal payload is outside the codec domain")
+            return target
+        raise ValueError("unknown target-sector tag")
+
+    def sector(self, code: str) -> str:
+        target = self.decode(code)
+        return "proof" if type(target) is ProofTarget else "diag"
+
+    def cross_sector_link_allowed(self, source_code: str, target_code: str, role: str) -> bool:
+        if type(role) is not str or role not in ("select", "evidence"):
+            return False
+        source = self.decode(source_code)
+        target = self.decode(target_code)
+        if (type(source) is ProofTarget) == (type(target) is ProofTarget):
+            return False
+        return role == "select"
 
 
 @dataclass
@@ -899,10 +1151,11 @@ class Cell:
     known: Dict[str, Tuple[bool, Evidence]] = field(default_factory=dict)
     history: List[VerificationRegister] = field(default_factory=list)
     broadcasts: List[Tuple[str, Certificate]] = field(default_factory=list)
+    exhaustion_broadcasts: List[ExhaustionMessage] = field(default_factory=list)
     score: int = 0
 
     # PU role triad.
-    phi: Optional[ProofTarget] = None
+    phi: Optional[Target] = None
     p_stored: Any = None
     c_phase: str = "idle"
 
@@ -942,7 +1195,7 @@ class Cell:
         note: str,
     ) -> VerificationRegister:
         self.c_phase = "verify"
-        truth, canonical_evidence = system.decide_target(target)
+        truth, _ = system.decide_target(target)
 
         positive_pass = (
             prediction == 1
@@ -963,14 +1216,16 @@ class Cell:
         passed = positive_pass or negative_pass
         expected_gain_positive = passed and target.code() not in self.known
 
-        retained_evidence: Evidence = evidence if passed else canonical_evidence
-
         if passed and expected_gain_positive:
-            self.known[target.code()] = (truth, retained_evidence)
+            self.known[target.code()] = (truth, evidence)
             self.score += 1
 
-            if truth and isinstance(retained_evidence, Certificate):
-                self.broadcasts.append((target.code(), retained_evidence))
+            if truth and isinstance(evidence, Certificate):
+                self.broadcasts.append((target.code(), evidence))
+            elif not truth and isinstance(evidence, ExhaustionTrace):
+                self.exhaustion_broadcasts.append(
+                    ExhaustionMessage(target_code=target.code(), trace=evidence)
+                )
 
         reg = VerificationRegister(
             target_code=target.code(),
@@ -978,7 +1233,7 @@ class Cell:
             truth=truth,
             passed=passed,
             expected_gain_positive=expected_gain_positive,
-            evidence=retained_evidence,
+            evidence=evidence,
             note=note,
         )
 
@@ -992,15 +1247,72 @@ class Cell:
         cert: Certificate,
         system: ToyProofSystem,
     ) -> bool:
-        if target.code() in self.known:
-            return False
+        self.c_phase = "verify"
+        truth, _ = system.decide_target(target)
+        passed = (
+            truth
+            and isinstance(cert, Certificate)
+            and system.verify_certificate(target.formula, target.bound, cert)
+        )
+        expected_gain_positive = passed and target.code() not in self.known
 
-        if system.verify_certificate(target.formula, target.bound, cert):
+        if expected_gain_positive:
             self.known[target.code()] = (True, cert)
             self.score += 1
-            return True
+            self.broadcasts.append((target.code(), cert))
 
-        return False
+        self.history.append(
+            VerificationRegister(
+                target_code=target.code(),
+                prediction=1,
+                truth=truth,
+                passed=passed,
+                expected_gain_positive=expected_gain_positive,
+                evidence=cert,
+                note="independently verified positive-certificate broadcast",
+            )
+        )
+        self.c_phase = "update"
+        return expected_gain_positive
+
+    def import_exhaustion(
+        self,
+        target: ProofTarget,
+        message: ExhaustionMessage,
+        system: ToyProofSystem,
+    ) -> bool:
+        self.c_phase = "verify"
+        truth, _ = system.decide_target(target)
+        passed = (
+            not truth
+            and type(message) is ExhaustionMessage
+            and type(message.target_code) is str
+            and message.target_code == target.code()
+            and type(message.trace) is ExhaustionTrace
+            and message.trace.formula == target.formula
+            and message.trace.bound == target.bound
+            and system.verify_exhaustion_trace(message.trace)
+        )
+        expected_gain_positive = passed and target.code() not in self.known
+
+        if expected_gain_positive:
+            self.known[target.code()] = (False, message.trace)
+            self.score += 1
+            self.exhaustion_broadcasts.append(message)
+
+        self.history.append(
+            VerificationRegister(
+                target_code=target.code(),
+                prediction=0,
+                truth=truth,
+                passed=passed,
+                expected_gain_positive=expected_gain_positive,
+                evidence=message.trace if type(message) is ExhaustionMessage else None,
+                note="independently verified negative-exhaustion broadcast",
+            )
+        )
+        self.c_phase = "update"
+        return expected_gain_positive
 
 
 class ProofLifeGrid:
@@ -1055,11 +1367,15 @@ class ProofLifeGrid:
                 )
 
         outgoing: List[Tuple[Tuple[int, int], str, Certificate]] = []
+        exhaustion_outgoing: List[Tuple[Tuple[int, int], ExhaustionMessage]] = []
 
         for pos, cell in self.cells.items():
             for code, cert in cell.broadcasts:
                 outgoing.append((pos, code, cert))
+            for message in cell.exhaustion_broadcasts:
+                exhaustion_outgoing.append((pos, message))
             cell.broadcasts.clear()
+            cell.exhaustion_broadcasts.clear()
 
         target_by_code = {target.code(): target for target in self.targets}
 
@@ -1075,6 +1391,20 @@ class ProofLifeGrid:
                     events.append(
                         f"t={t} {neighbor.name}: imported verified {code} "
                         f"from {self.cells[pos].name}"
+                    )
+
+        for pos, message in exhaustion_outgoing:
+            target = target_by_code.get(message.target_code)
+            if target is None:
+                continue
+
+            for npos in self.neighbors(pos):
+                neighbor = self.cells[npos]
+
+                if neighbor.import_exhaustion(target, message, self.system):
+                    events.append(
+                        f"t={t} {neighbor.name}: imported verified negative "
+                        f"{message.target_code} from {self.cells[pos].name}"
                     )
 
         return events
@@ -1194,6 +1524,31 @@ def run_self_checks() -> None:
     invalid_cert = Certificate("EVEN_WITNESS", (4,))
     assert not system.verify_certificate(negative_target.formula, negative_target.bound, invalid_cert)
 
+    message = ExhaustionMessage(negative_target.code(), valid_exh)
+    recipient = Cell(name="NEG-RX", search_budget=0)
+    assert recipient.import_exhaustion(negative_target, message, system)
+    assert not recipient.import_exhaustion(negative_target, message, system)
+    assert recipient.known[negative_target.code()] == (False, valid_exh)
+
+    negative_library = (
+        negative_target,
+        ProofTarget(Formula("COMP", (17,)), 1),
+        ProofTarget(Formula("PRIME", (0,)), 1),
+    )
+    exhaustion_codec = ExhaustionTraceCodec(negative_library, system, L=17, N_max=1)
+    bits = exhaustion_codec.encode(message)
+    assert exhaustion_codec.decode(bits) == message
+    assert len(bits) == exhaustion_codec.width == 2
+
+    target_codec = TypedTargetCodec(L=17, N_max=3, time_max=1, predictors=("A", "B"))
+    diagonal_target = DiagonalTarget("B", 0, "act", 3)
+    proof_code = target_codec.encode(negative_target)
+    diagonal_code = target_codec.encode(diagonal_target)
+    assert target_codec.decode(proof_code) == negative_target
+    assert target_codec.decode(diagonal_code) == diagonal_target
+    assert target_codec.cross_sector_link_allowed(proof_code, diagonal_code, "select")
+    assert not target_codec.cross_sector_link_allowed(proof_code, diagonal_code, "evidence")
+
     demo_diagonal_triality()
 
 
@@ -1237,6 +1592,135 @@ if __name__ == "__main__":
     main()
 ```
 
+**Theorem PL.2 (Reference-Implementation Refinement on the Declared Runtime Domain).** Fix finite $L,N_{\max}\in\mathbb N$. Let $\mathcal D_{\mathrm{run}}(L,N_{\max})$ be the following partial runtime domain of the displayed Python program.
+
+1. A `Formula` is an exact instance of the displayed dataclass. Its kind is one of `ADD`, `MUL`, `EVEN`, `COMP`, `PRIME`; its arity is respectively $3,3,1,1,1$; and every argument lies in $\{0,\ldots,L\}$.
+2. A `ProofTarget` is an exact instance of the displayed dataclass whose formula satisfies item 1 and whose bound satisfies $0\le N\le N_{\max}$. Formula arguments, proof bounds, search budgets, grid dimensions, and every other integer-valued runtime entry $x$ satisfy the exact Python predicate `type(x) is int`. Thus `bool`, floating-point numbers, and integer-like foreign scalar types are outside the integer entries of $\mathcal D_{\mathrm{run}}$. Python `bool` remains the type of the internal truth, pass, and gain-flag slots produced by the program. Budgets are nonnegative, and a grid step uses positive dimensions and a nonempty prevalidated target library.
+3. A `Certificate` is an exact instance of the displayed dataclass, with an exact-string rule and a tuple of exact Python integers. Unsupported rules and wrong certificate arities are verifier inputs and must be rejected. An `ExhaustionTrace` is an exact instance with a formula and bound satisfying items 1--2 and a tuple of exact `Certificate` objects. Predictions are the exact integer values $0,1$ or the literal abstention value $\bot$ used by the program.
+4. A reachable cell state starts empty or satisfies the verifier-generated invariant: every `known` entry was installed by a passing nonduplicate local register or a passing nonduplicate recipient verification; every broadcast contains the certificate of a verified positive target; histories contain the submitted evidence, including the evidence of a failed register; and `score == len(known)`.
+
+Any `Formula` with an unknown kind, a wrong arity, or a nonexact or out-of-range argument is outside $\mathcal D_{\mathrm{run}}$, as is any target with a nonexact or out-of-range bound. This is a partial-domain refinement theorem: the target library is validated before execution, so malformed and unknown formula branches are unreachable in $\mathcal D_{\mathrm{run}}$.
+
+Define $\rho$ by mapping `Formula`, `Certificate`, `ProofTarget`, and `ExhaustionTrace` to $\psi$, $p$, $O_{\psi,N}$, and $\operatorname{Exh}_{\mathcal F_0}(\psi,N)$ of Sections 2--4; map `known` to the duplicate-target quotient $[D_i]_Q$ used by the executable novelty functional, a `VerificationRegister` to $R_i$, `broadcasts` to the positive-certificate message multiset, and `score` to $|[D_i]_Q|$. Then, on every local call in $\mathcal D_{\mathrm{run}}$, the reference implementation and Sections 2--3 have identical candidate enumeration, raw and bounded verifier value, bounded decision, and exhaustion-verifier value under $\rho$. Every prediction, verification, novelty-gated retained update, and positive-certificate recipient update produced by the program maps under $\rho$ to a transition permitted by Sections 4--5. Every formal candidate, bounded decision, and accepted exhaustion trace has its displayed Python representative. Hence the finite certificate calculus is extensionally equivalent on the declared domain and the executable state machine is a forward refinement of the formal transition system; `ProofLifeGrid.step` supplies one finite scheduler and prediction/broadcast policy rather than all transitions permitted by that system. The three branches of `demo_diagonal_triality` also equal the three-value access truth table stated in Section 8.
+
+*Proof.* For `ADD`, `MUL`, `EVEN`, `COMP`, and `PRIME`, direct substitution into `candidate_certificates` gives exactly the five ordered candidate families in Section 2.1. The candidate filter incorporates the displayed cost bound. After the exact-object and exact-integer guards, the five branches of `raw_verify` are precisely the five clauses of $V^{raw}_{\mathcal F_0}$; unsupported certificate rules and wrong certificate arities return false. The guards precede tuple and dataclass equality, so Python's identities `True == 1` and `False == 0` cannot create a valid certificate.
+
+The bounded verifier is candidate membership followed by the raw verifier. `search_proof` returns the first accepting member of the finite canonical order. If no member accepts, `exhaustion_trace` returns that complete order. Before comparing a submitted trace to the canonical tuple, `verify_exhaustion_trace` checks the exact trace, formula, bound, tuple, certificate, rule, argument-container, and integer types. It then checks tuple equality and rejection of every member. This is exactly Section 2.3 and prevents Boolean aliases from forging either a canonical member, the bound, or the formula arguments. Hence `decide_target` returns the formal truth value with a valid positive certificate or the complete negative exhaustion object.
+
+Under the state invariant, `predict` first returns an already verified retained value and its evidence. For a fresh target it searches at $\min(\text{search budget},N)$: a found certificate gives prediction $1$; absence of a certificate with budget at least $N$ gives prediction $0$ and the complete target-bound exhaustion trace; and absence with smaller budget gives $\bot$. These are exactly the retained, positive, complete-negative, and abstention branches of Section 4.2.
+
+For a local register, `verify_and_update` compares the exact prediction branch with the decided truth and verifies the submitted evidence. It records that submitted evidence whether the register passes or fails, changes `known` and `score` exactly for a passing nonduplicate, and queues a broadcast exactly for a newly retained positive certificate. These are the pass and novelty rules of Sections 4.3--4.4. For an incoming positive certificate, `import_broadcast` enters the verification phase, recomputes the bounded truth, verifies the submitted certificate, records the recipient register, updates on positive novelty, and requeues an accepted new positive certificate. This is Section 5's positive-certificate branch. `TV-PL-02` owns negative-exhaustion transmission.
+
+The proof-sector cases are exhausted by five formula constructors, retained versus fresh prediction, sufficient versus insufficient search budget, the three prediction values, positive-certificate versus negative-exhaustion evidence, duplicate versus novel records, and accepted versus rejected recipient certificates. The prevalidated-library hypothesis excludes malformed and unknown formula branches, while unsupported or malformed certificates take the explicit rejection branch. These transitions preserve the invariant in item 4. Finally, `demo_diagonal_triality` enumerates $1,0,\bot$ and asserts the self, external, and historical outcomes in each case. No further declared verification or transition branch occurs on $\mathcal D_{\mathrm{run}}$. ∎
+
+**Resolution record PL.2-R1 (`TV-PL-01`).**
+
+| Regression artifact field | Record |
+|---|---|
+| Catalog binding and polarity | `TV-PL-01`; `positive-discharge` of exact finite-calculus equivalence and executable forward refinement on $\mathcal D_{\mathrm{run}}$ |
+| Domain and equivalence | The exact partial domain above and the refinement map $\rho$; object identity uses the displayed typed fields and canonical tuple order, and database records are equivalent exactly when they have the same typed target code for the executable novelty quotient |
+| Premises | Sections 2--5, the embedded source, the prevalidated-library/state invariant, and no unregistered coercion of Python scalar types |
+| General verifier | Theorem PL.2's exhaustive constructor-and-declared-local-transition case proof establishes the all-input result on $\mathcal D_{\mathrm{run}}$; the finite regression is its independent execution witness |
+| PL.2-stage finite regression budget | $L=12$, $N_{\max}=6$: $4433$ formulas, $31031$ bounded targets, $29285$ canonical candidates, $215459$ certificate cases checked against both raw and bounded specifications, $30021$ negative exhaustion decisions, $31031$ target decisions, $60$ retained-transition truth-table cases, $3$ positive-propagation cases, and all $3$ diagonal register values; Theorems PL.3--PL.4 and their records below audit the extension branches |
+| Adversarial and provenance fixtures | Five Boolean-certificate cases and four Boolean exhaustion aliases were rejected, yielding $0$ admitted invalid aliases. The paired $60$-case register fixture yielded $0$ submitted-evidence mismatches. Five malformed-kind, arity, Boolean-argument, or negative-argument formulas were checked as outside the declared domain. |
+| Current source integrity | Section-10 extraction SHA-256 `5fa09968745ba19adfb4925c251a9e4aef7be7bfe1814928eb0fde0f6329d2b1`; core projection SHA-256 `bb6854ec6c62159150e6e4cfc69d4185a42fea48b428a764467c22e501dfabf9`. PL.3-R1 and PL.4-R1 own the added negative-message and codec/bridge branches. |
+| Audit artifacts | Independent audit-source SHA-256 `85f9997b2f5b1e6f72e492c3b1e8b7dd247beff7c4acd40b194b509265f7f48c`; compact lexicographically key-sorted UTF-8 JSON without terminal LF input `{"L":12,"N_max":6}` SHA-256 `5985d40be9ac1ae860ea01201d2ca3b51facd30e4223286301ad9ffeab4ff1b3`; deterministic demo-output SHA-256 `291aa33d69f8cd208bd25604796488dbcee1e5afb69766130a3fb4cbffb23749` |
+| Independent executions | Python 3.13.12, executable SHA-256 `a38f63d2b8843820b59746250911cd203dbd76c8dc53693007aaa3bda2007232`, compact lexicographically key-sorted UTF-8 JSON audit-record SHA-256 `80059a6299a7f1328f985fc13f2476399ba914a87d2683e1cb4d862226cdb998`; Python 3.12.3, executable SHA-256 `1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118`, corresponding audit-record SHA-256 `26788b6c60a51957667ae1a49382702a28cddc792f7c1001fe70bf819f940fbb`; both returned the displayed semantic counts |
+| Integrity invalidator | A source/input hash mismatch, a nonexact runtime integer admitted to the formal domain, incomplete enumeration, fixture omission, or disagreement between the proof specification and an executed branch |
+| Falsifier | An input in $\mathcal D_{\mathrm{run}}$ on which a finite verifier value differs or a code transition has no permitted formal image, an admitted Boolean alias, an accepted incomplete or reordered exhaustion trace, a failed register that substitutes evidence, or a retained or imported fact without passing verification and novelty |
+| Provenance class | `proved-lemma` for all $\mathcal D_{\mathrm{run}}$ transitions plus a source-derived exhaustive finite regression on the stated budget |
+| Nonvacuity | The regression contains positive and negative targets, nonempty and empty candidate sets, novel and duplicate records, valid and invalid evidence, accepted and rejected propagation, and every diagonal register value |
+| Extension boundary | Theorems PL.3 and PL.4 own negative-exhaustion transmission/cost and the tagged proof/diagonal scheduling functor. Theorem PL.1 retains its LITE, horizon, and physical-instantiation hypotheses. |
+| Regression result | Pass for the exact `TV-PL-01` proposition on the declared runtime domain |
+
+**Theorem PL.3 (Negative-Exhaustion Transmission and Fixed-Width Cost).** Fix $L,N_{\max}\in\mathbb N$ and a finite tuple $\mathcal L$ of distinct-code proof targets in $\mathcal D_{\mathrm{run}}(L,N_{\max})$. Let
+$$
+\mathcal L_-:=\{T\in\mathcal L:\operatorname{val}_{\mathcal F_0}(T)=0\},
+\qquad
+q:=|\mathcal L_-|>0,
+$$
+where $\operatorname{val}_{\mathcal F_0}(O_{\psi,N})\in\{0,1\}$ is the bounded truth value decided by Section 2 and $\mathcal L_-$ is ordered lexicographically by the exact target code. For each $T=O_{\psi,N}\in\mathcal L_-$ define the complete negative message
+$$
+m_T^-:=\bigl(\operatorname{code}(T),\operatorname{Exh}_{\mathcal F_0}(\psi,N)\bigr).
+$$
+The extended reference implementation has the following properties.
+
+1. `import_exhaustion` accepts $m_T^-$ exactly when the code resolves to $T$, independent bounded decision returns false, the trace has the same formula and bound, and the full exhaustion verifier accepts. A novel accepted target is retained with truth value false, increments the novelty score once, and is queued for relay. An accepted duplicate creates a passing zero-gain history register and is not requeued. Every rejected message creates a failed history register and changes neither retained knowledge, score, nor relay queue.
+2. Every $T\in\mathcal L_-$ has one accepted canonical message, and every accepted message represents a negative bounded fact. Thus negative propagation is complete and sound on the frozen library. On a finite connected grid with reliable per-step neighbor delivery, if one cell newly queues $m_T^-$ while every other cell initially lacks $T$, the message reaches each cell after at most its graph distance from the source; novelty prevents indefinite requeue around a cycle.
+3. Suppose sender and receiver share $\mathcal F_0$, $L$, $N_{\max}$, the exact ordered tuple $\mathcal L_-$, and the decoder; suppose also that the channel is already identified as the negative-exhaustion subchannel. Excluding the outer polarity tag, addressing, framing, error correction, and the shared library/decoder, any injective fixed-width binary payload whose decoder returns one of the $q$ literal objects $m_T^-$ has width at least
+$$
+b_{\min}=\lceil\log_2q\rceil.
+$$
+`ExhaustionTraceCodec` attains this bound by the canonical library index. Its decoder returns an `ExhaustionMessage` whose `trace` field is the complete `ExhaustionTrace`, including the canonical tuple of every candidate, rather than a count or an unexpanded index. The receiver still runs the independent verifier. If the target identity is separately supplied as side information, the conditional message family has $q=1$ and the corresponding payload bound is zero; a mixed-polarity channel requires its outer tag in addition to the displayed negative-subchannel cost.
+
+*Proof.* Exact type guards reject Boolean aliases, nonexact containers, and malformed message fields before semantic acceptance. For a well-typed message, `decide_target` recomputes bounded truth and `verify_exhaustion_trace` reconstructs the canonical candidate tuple and verifies rejection of every member. The remaining code, formula, and bound comparisons bind that trace to the nominated target. The update branch is reached exactly for a valid negative message, while the duplicate quotient makes the second accepted copy gain-null. This proves item 1. Section 2.3 supplies the canonical trace for every negative target, and the same verifier excludes a positive target or an incomplete, reordered, or altered trace, proving item 2. Under the stated all-other-cells-uninformed initial condition, relay advances one graph edge per delivery step and occurs at first retention, so distance induction proves the finite-grid statement. For item 3, $b$ fixed binary positions have at most $2^b$ codewords; injectivity on $q$ messages forces $2^b\ge q$. The codec assigns the integer indices $0,\ldots,q-1$ in exactly $\lceil\log_2q\rceil$ bits and reconstructs the target and its entire deterministic canonical trace, so the lower bound is attained. ∎
+
+**Resolution record PL.3-R1 (`TV-PL-02`).**
+
+| Regression artifact field | Record |
+|---|---|
+| Catalog binding and polarity | `TV-PL-02`; `positive-discharge` of negative-exhaustion transmission, independent recipient verification/retention, and the fixed-width payload optimum on the declared finite channel |
+| Domain and equivalence | Theorem PL.3's exact runtime domain and shared-library cost model; messages are equivalent exactly when their decoded target code, formula, bound, and complete ordered candidate tuple agree |
+| Premises and side information | Exact $\mathcal F_0$, $L$, $N_{\max}$, ordered nonempty $\mathcal L_-$, decoder and negative-subchannel identity are shared; polarity tag, addressing, framing, error correction, and shared-description cost are outside $b_{\min}$ and must be added by any enclosing channel |
+| General verifier | Exact recipient type/code/formula/bound/truth/exhaustion checks plus the counting lower bound and canonical-index upper construction in Theorem PL.3 |
+| Finite regression budget | $L=8$, $N_{\max}=4$: $7425$ proof targets, $7051$ negative and $374$ positive; all $7051$ negative messages round-tripped; $5741$ candidate entries occurred in their complete traces; $14102$ novel/duplicate recipient registers, $28228$ mutated-message rejections, $1141$ unused-word rejections and $5$ malformed-word rejections; $q=7051$ gives the attained optimum $13$ bits |
+| Source and audit integrity | Extended embedded Python: `30107` bytes, `879` lines and SHA-256 `5fa09968745ba19adfb4925c251a9e4aef7be7bfe1814928eb0fde0f6329d2b1`; independent audit source SHA-256 `10734aabca5b2924f513a3231688074d70a06b97067269e3a156916a302b32ca`; compact sorted ASCII input SHA-256 `c869f2c871ec0d8357fa391b17a8943f63b3c8c1a3df5f21fa5c0d2bdbf53f51`; deterministic demo-output SHA-256 `0040bfba7961bd35103d464215d03f1dc225a4788dff733c87e3363beac8a027` |
+| Independent executions | Python 3.13.12 runtime SHA-256 `a38f63d2b8843820b59746250911cd203dbd76c8dc53693007aaa3bda2007232`, audit-record SHA-256 `f9685cd244fcd76385fe92691fd0a403ba6be512ca0ea68f432a086c9bcaa3ef`; Python 3.12.3 runtime SHA-256 `1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118`, audit-record SHA-256 `a4bad5329975f65f8e7baf740953669d71fb24769cb7151d7dcc6f5284884fac` |
+| Integrity invalidator | A source/runtime/input/output hash mismatch, incomplete target enumeration, noncanonical library order, omitted fixture, or an uncharged change to the side-information/framing convention |
+| Falsifier | A malformed or positive message retained as negative, a valid canonical negative message rejected, a recipient retaining without independent verification and novelty, a decoder returning less than the literal complete trace, a fixed-width code shorter than the counting bound, or a valid code not attaining that bound |
+| Provenance class | `proved-lemma` plus source-derived exhaustive finite regression on the stated budgets |
+| Nonvacuity | The audited library contains $7051$ negative targets, including empty and nonempty canonical candidate tuples, and $374$ positive controls; accepted, duplicate, malformed, altered and unused-codeword branches all execute |
+| Scope | Finite Proof-Life messages only; no physical communication rate, thermodynamic cost, noisy-channel capacity, or negative-exhaustion protocol outside the frozen library follows |
+| Regression result | Pass for the exact `TV-PL-02` proposition on the declared runtime and cost domain |
+
+**Theorem PL.4 (Tagged Proof/Diagonal Coding Functor and Safe Bridge Classification).** Fix finite $L,N_{\max},T_{\max}\in\mathbb N$ and a nonempty finite tuple $\mathcal B$ of distinct exact ASCII predictor labels. Let $\mathcal D_{\mathrm{codec}}$ contain the exact proof targets of $\mathcal D_{\mathrm{run}}(L,N_{\max})$ and the exact diagonal targets
+$$
+\mathsf{Diag}(B,t,\eta,N),
+\qquad
+B\in\mathcal B,\qquad 0\le t\le T_{\max},\qquad
+\eta\in\{\mathrm{act},\mathrm{ext},\mathrm{hist},\mathrm{lite\text{-}act},\mathrm{lite\text{-}hist}\},\qquad
+0\le N\le N_{\max}.
+$$
+`TypedTargetCodec` encodes a proof target as the canonical JSON array
+$$
+[\texttt{"proof"},\texttt{kind},[\texttt{args}],N]
+$$
+and a diagonal target as
+$$
+[\texttt{"diag"},B,t,\eta,N].
+$$
+All integers have exact Python type `int`; Boolean aliases are rejected. Formula kind, arity and argument range, predictor label, time, access mode and bound are checked exactly, and decoding is accepted only when re-encoding reproduces the input bytes.
+
+Let $\Sigma$ be the finite ASCII-byte alphabet used by this canonical JSON grammar. The encoding and decoding maps are inverse on $\mathcal D_{\mathrm{codec}}$, their images are disjoint by the first tag, and they preserve every target field. Hence the object map, together with identity arrows, is an injective functor
+$$
+\mathcal C_{\mathrm{tag}}:
+\operatorname{Disc}(\mathcal T_0^{\mathrm{proof}}\sqcup\mathcal T_0^{\mathrm{diag}})
+\longrightarrow
+\operatorname{Disc}(\Sigma^*)
+$$
+onto its canonical image.
+
+Define the declared cross-sector bridge class $\mathcal B_{\mathrm{sel/ev}}$ to contain an ordered pair of valid target codes and a role in $\{\texttt{select},\texttt{evidence}\}$. `cross_sector_link_allowed` accepts exactly the links whose decoded tags differ and whose role is `select`. An accepted selection link may nominate or schedule the decoded destination target; beyond the unchanged source and destination target codes, it carries no target truth, proof certificate, exhaustion trace, diagonal evidence label, register value or history datum. Every cross-sector `evidence` link is rejected. Therefore this bridge permits proof/diagonal scheduling interaction while preserving the two verifiers and all active, external, historical and LITE access modes. In particular it supplies no proof-to-diagonal or diagonal-to-proof semantic identification and cannot convert an active diagonal target into processed evidence. This is a complete classification of $\mathcal B_{\mathrm{sel/ev}}$, not a classification of every conceivable cross-sector protocol.
+
+*Proof.* The proof and diagonal validators exhaust their displayed finite constructors. Canonical JSON decoding followed by byte-for-byte re-encoding excludes alternate serializations, while exact object and integer guards exclude subclass and Boolean aliases. Direct case analysis on the first array entry proves disjointness, and field reconstruction proves both inverse identities. Discrete source and target categories have identity arrows only, so the injective object map preserves all identities and composition. For a bridge link there are two tag relations and two registered roles. Equal tags fail the cross-sector premise; unequal tags with `select` return true; unequal tags with `evidence` return false. Since the accepted branch returns only permission to schedule the unchanged decoded target and invokes neither evidence verifier, the diagonal phase mode and proof/diagonal semantic separation are invariant. These cases exhaust $\mathcal B_{\mathrm{sel/ev}}$. ∎
+
+**Resolution record PL.4-R1 (`TV-PL-03`).**
+
+| Regression artifact field | Record |
+|---|---|
+| Catalog binding and polarity | `TV-PL-03`; `positive-discharge` of an explicit type-preserving coding functor and the exact safe-link classification in $\mathcal B_{\mathrm{sel/ev}}$ |
+| Domain and equivalence | $\mathcal D_{\mathrm{codec}}$ and the canonical arrays above; targets are equal exactly when their coproduct tag and every typed field agree; code equality is exact canonical JSON byte equality |
+| Premises | Finite bounds, a nonempty exact predictor-label tuple, the disjoint proof/diagonal constructors, canonical JSON, and selection/evidence as the complete registered role set of $\mathcal B_{\mathrm{sel/ev}}$ |
+| General verifier | Exact runtime/type/domain guards, canonical decode/re-encode, exhaustive two-tag/two-role analysis, and the inverse/functor proof of Theorem PL.4 |
+| Finite regression budget | $L=2$, $N_{\max}=2$, $T_{\max}=1$, $\mathcal B=(\texttt{A},\texttt{B})$: all $189$ proof and $60$ diagonal targets, $249$ unique round trips and sector-tag checks, $45360$ ordered cross-sector role checks, $78642$ same-sector cross-API rejections, $12$ malformed-code rejections, $5$ malformed-role rejections, and all $3$ diagonal register values in the separate access triality |
+| Source and audit integrity | The same extended source, independent audit source, input, demo-output and dual-runtime hashes recorded in PL.3-R1; the PL.4 counters are fields of those exact audit records |
+| Integrity invalidator | A source/runtime/input/output hash mismatch, a missing finite constructor, a code collision, a noncanonical decode, an admitted Boolean alias, or a role omitted from the declared bridge census |
+| Falsifier | A failed valid round trip, a proof/diagonal code collision, a field or tag changed by decoding, an accepted cross-sector evidence link, a rejected valid selection link, or a selection link that changes evidence, truth, phase or history state |
+| Provenance class | `proved-lemma` plus source-derived exhaustive finite regression on the stated domain |
+| Nonvacuity | The audit contains $189$ proof targets and $60$ diagonal targets covering every access mode, both directions of cross-sector selection, rejected evidence links, malformed codes and the three-value diagonal triality |
+| Scope | The functor acts on discrete typed target objects, and the bridge class permits scheduling while preserving evidence isolation and distinct proof/diagonal access semantics. Physical instantiation remains conditional on Theorem PL.1's hypotheses and the main framework's realization ledgers. |
+| Regression result | Pass for the exact `TV-PL-03` proposition on the declared codec and bridge domain |
+
 ## 11. What the implementation demonstrates
 
 The diagonal demo evaluates all three possible values of $B$'s targeted register:
@@ -1276,7 +1760,7 @@ A positive bounded target is retained only when a valid proof-certificate is sup
 $$
 p^{stored}_i(t)=\bot.
 $$
-A verified proof-certificate may propagate to neighbors, but each neighbor must check it before import.
+A verified positive proof-certificate or complete negative-exhaustion message may propagate to neighbors, but each neighbor must check the received evidence independently before import. The tagged proof/diagonal codec may separately schedule a target across sectors; that selection transmits neither truth nor evidence.
 
 Thus Proof-Life implements the toy identities
 $$
@@ -1305,11 +1789,13 @@ Proof-Life uses the following internal PU dependencies.
 | External and historical accessibility | Theorem A.5.6a.4 |
 | Labeled active miss and historical proof recovery | Definition A.5.6a.7; Theorem A.5.6a.8; Corollary A.5.6a.9 |
 | Verification-gated reachability growth | Theorem A.5.6a.6 |
+| Complete negative-exhaustion transmission and fixed-width cost | Theorem PL.3 |
+| Tagged proof/diagonal target codec and selection-only bridge | Theorem PL.4 |
 | Physical thermodynamic reading of irreversible reset, when physically instantiated | Theorem 31; Landauer [1961]; Bennett [1973] |
 
 ## 13. Final statement
 
-Proof-Life is a finite, runnable PU toy universe whose proof-sector objects are bounded proof-existence claims and whose diagonal-sector objects are phase-indexed protocol targets. Its cells do not merely hold beliefs. They make predictions about typed finite targets, verify those predictions through finite certificates, complete finite exhaustion traces, or trace-certified diagonal access data, retain only validated predictive information, and propagate positive proof-certificates only after independent verification.
+Proof-Life is a finite, runnable PU toy universe whose proof-sector objects are bounded proof-existence claims and whose diagonal-sector objects are phase-indexed protocol targets. Its cells do not merely hold beliefs. They make predictions about typed finite targets, verify those predictions through finite certificates, complete finite exhaustion traces, or trace-certified diagonal access data, retain only validated predictive information, and propagate positive proof-certificates and complete negative-exhaustion messages only after independent verification. Its tagged proof/diagonal bridge schedules typed targets without transporting evidence or identifying the sectors' access semantics.
 
 The model realizes the PU structure
 $$

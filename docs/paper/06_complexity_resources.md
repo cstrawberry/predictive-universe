@@ -109,6 +109,72 @@ C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2.
 $$
 This equality is the branch-specific partition of the MPU information budget between the structural binary register cost and the residual external communication capacity; the reset-support theorem alone supplies only the preceding inequality.
 
+**Theorem 6.0.2 (Exact Capacity and Saturating Ensembles for the Completed-Reset Normal Form).** Let $\Phi$ be exactly the channel of Proposition E.2a on
+$$
+\mathcal H_{d_0}=\mathcal H_K\otimes\mathcal H_R,
+\qquad
+D:=\dim\mathcal H_K=d_0/r,
+$$
+with the entire retained output equal to
+$$
+\Phi(\rho)=\operatorname{Tr}_R(U\rho U^\dagger)\otimes|0\rangle\langle0|_R.
+$$
+Then
+$$
+C(\Phi)=\ln D=\ln d_0-\ln r.
+\tag{6.0.2.1}
+$$
+Moreover, a one-shot ensemble $\{p_m,\rho_m\}$ attains $\ln D$ exactly when, after discarding the fixed ready factor, every positive-weight output is pure and their average is $I_K/D$.
+
+*Proof.* Proposition E.2a gives the upper bound $C(\Phi)\le\ln D$. For an orthonormal basis $\{|k\rangle\}_{k=1}^D$ of $\mathcal H_K$, use the uniform input ensemble
+$$
+\rho_k
+=
+U^\dagger
+\bigl(|k\rangle\langle k|_K\otimes|0\rangle\langle0|_R\bigr)
+U.
+$$
+Its outputs are $D$ orthogonal pure states, so its Holevo information is $\ln D$. This gives the matching lower bound and (6.0.2.1). For any output ensemble,
+$$
+\chi
+=S(\bar\sigma)-\sum_m p_mS(\sigma_m)
+\le\ln D.
+$$
+Equality holds exactly when $S(\bar\sigma)=\ln D$, equivalently $\bar\sigma=I_K/D$, and every positive-weight $\sigma_m$ has zero entropy, equivalently is pure. ∎
+
+**Resolution TV-PCE-01-R1 (Metadata).** Exact domain: Proposition E.2a's completed-reset normal-form channels on $\mathcal H_K\otimes\mathcal H_R$. Premises: the whole retained output is exactly the displayed partial-trace channel with fixed ready factor. Equivalence: output ensembles are compared by their positive-weight states and probabilities after discarding that factor. Budget: one-shot ensembles for the equality classifier and arbitrary blocklengths for the inherited capacity upper bound. Verifier: the orthogonal input construction and the exact Holevo equality conditions. Falsifier: a normal-form channel with different capacity or an attaining ensemble violating those conditions. Provenance class: source-internal quantum-information proof. Downstream consumers: Theorem 6.0.1, Appendix E's residual-capacity branch and `TV-PCE-01`. Nonvacuity: the displayed orthogonal ensemble. This is `positive-discharge` of the exact normal-form capacity and ensemble component. The horizon-density, entropy-saturation, additive-ledger, gravity-calibration and common-family records remain `C+R`-open.
+
+**Theorem 6.0.3 (Algebraic Horizon Witness and Capacity-Projection Nonentailment).** Assume the completed-reset normal form of Theorem 6.0.2 with $D\ge2$. For every integer $N\ge1$ and every formal area $\mathcal A>0$, the $N$-fold product channel has an explicit product ensemble of $D^N$ equiprobable orthogonal pure outputs with
+$$
+\chi_{\mathrm{Hol},N}=N\ln D,
+\qquad
+\sigma_{link}:=\frac{N}{\mathcal A},
+\qquad
+S_{boundary}^{\mathrm{alg}}=k_B\sigma_{link}\mathcal A\ln D.
+\tag{6.0.3.1}
+$$
+Thus the capacity, per-channel entropy-saturation and additive-product entries have a nonempty simultaneous algebraic witness.
+
+The projection to the channel $\Phi$ does not determine the remaining horizon entries. At fixed $\Phi$, changing $N/\mathcal A$ changes $\sigma_{link}$; choosing a one-state ensemble instead of the orthogonal ensemble changes the utilized Holevo information from $\ln D$ to $0$; and the positive geometric data satisfying
+$$
+\sigma_{link}=\frac{\chi}{\eta\delta^2}
+\tag{6.0.3.2}
+$$
+retain a continuous scale fiber. On the formal saturated branch, Equation E.9 consequently gives
+$$
+G_{op}
+=\frac{\eta\delta^2c^3}{4\hbar\chi\ln D}
+=\frac{c^3}{4\hbar\sigma_{link}\ln D},
+\tag{6.0.3.3}
+$$
+so the same normal-form channel admits distinct density and operational-coupling completions. Identifying the product ensemble in (6.0.3.1) with the channels counted by a realized horizon remains the common-family realization entry.
+
+Here $\chi_{\mathrm{Hol},N}$ is the product ensemble's Holevo information. The symbol $\chi$ in (6.0.3.2)--(6.0.3.3) is Appendix E's independently registered geometric coefficient and is not identified with $\chi_{\mathrm{Hol},N}$.
+
+*Proof.* Tensoring the $D$ orthogonal outputs of Theorem 6.0.2 gives $D^N$ orthogonal pure outputs with maximally mixed average on $\mathcal H_K^{\otimes N}$, so their Holevo information is $\ln D^N=N\ln D$. The definitions of $\sigma_{link}$ and $S_{boundary}^{\mathrm{alg}}$ give (6.0.3.1). A one-state ensemble has zero Holevo information on the same channel. For any prescribed $\sigma_{link}>0$, Equation (6.0.3.2) has positive solutions, for example $\eta=\chi=1$ and $\delta=\sigma_{link}^{-1/2}$. Substitution into Equation E.9 gives (6.0.3.3). Hence neither the selected ensemble, density, geometric scale nor operational coupling is a function of $\Phi$ alone. ∎
+
+**Resolution TV-PCE-01-R2 (Metadata).** Exact domain: $N$-fold products of a fixed completed-reset normal-form channel with $D\ge2$, together with formal positive area/density/calibration extensions. Premises: Theorem 6.0.2 and the displayed product, density and Equation-E.9 formulas. Equivalence: equality of the retained channel under projection; horizon density, selected ensemble and calibration entries are not quotiented. Budget: every $N\ge1$, $\mathcal A>0$ and positive solution of (6.0.3.2). Verifier: exact tensor-product entropy and direct substitution. Falsifier: failure of the orthogonal product ensemble to attain $N\ln D$, or uniqueness of density or $G_{op}$ at fixed $\Phi$. Provenance class: source-internal construction and formal nonentailment. Downstream consumers: Theorem 6.0.1, Theorem E.6 and `TV-PCE-01`. Nonvacuity: the product ensemble, the one-state ensemble and two distinct positive densities. This is `positive-discharge` of a simultaneous algebraic product witness and `nonentailment` of the horizon realization/calibration package from normal-form capacity. The channel-projection-only route therefore carries `N`; the populated same-family horizon, source/additivity, geometric-density and physical calibration records remain `C+R`-open, so `TV-PCE-01` retains `N+C+R`.
+
 ---
 
 ## 6.1 Principle of Compression Efficiency (PCE)
@@ -190,7 +256,7 @@ Any $P_{\mathrm{phys}}$ in this intersection gives
 $$
 C_{P,n}(\mu)\le K(P_{\mathrm{phys}})
 $$
-for every $n$, so the monotone limit $C_P(\mu)$ is finite. The converse from finite stagewise minima to a common realizer is used only under the declared finite program alphabet, integer-valued program length, nested admissible sets, and attained-minimum hypotheses of Theorem 2.4.1a; under those hypotheses the descending finite minimizer sets have a nonempty intersection.
+for every $n$, so the monotone limit $C_P(\mu)$ is finite. Theorem 2.4.1b gives the converse under the declared finite program alphabet, integer-valued program length, nested-admissible-set, and attained-minimum convention: a uniform finite bound on the stagewise minima makes the descending bounded candidate sets nonempty, and their full intersection contains a common realizer. Relative to an independently accepted target-blind hierarchy registration and its declared sound trust base, Definition 2.4.1d and Theorem 2.4.1e verify a supplied minimum realizer, compute its exact value and a valid instance cutoff, and certify the complete supplied minimizer family when the exact-minimizer certificate passes. Acceptance of the baseline-identity extension with physical-constraint inventory coverage identifies the stagewise and extended hierarchy values for every submitted target and identifies $C_P^{(h_H)}$ with the baseline $C_P$ on the full-constraint-realizable domain.
 
 **6.2.2 Definition 18 (Def 18): PPC Requirement $C_{PPC}(PP_{target})$**
 
@@ -344,6 +410,166 @@ e^{-\kappa_{\mathrm{eff}}(C-C_{op})/\hat C_{\mathrm{target}}}
 =\frac{\beta-PP}{\beta-\alpha},
 $$
 and taking logarithms yields Equation (23). ∎
+
+**Theorem 19b (Continuity Redundancy and Composition-Ablation Counterfamily).** In Theorem 19, continuity is redundant once $g:[0,\infty)\to(0,1]$ is strictly decreasing and satisfies
+$$
+g(x+y)=g(x)g(y),
+\qquad
+g(0)=1.
+\tag{19b.1}
+$$
+Those hypotheses alone force $g(x)=e^{-\kappa x}$ for a unique $\kappa>0$. If multiplicative composition is removed while the boundary, monotonicity and concavity conditions of Definition 19 are retained, the response law is not unique: for every $q>0$,
+$$
+g_q(x)=(1+x)^{-q},
+\qquad
+G_q(x)=\beta-(\beta-\alpha)g_q(x)
+\tag{19b.2}
+$$
+is a distinct admissible saturation curve.
+
+*Proof.* Put $h=\ln g$. Equation (19b.1) makes $h$ additive. Strict decrease of $g$ makes $h$ monotone, and every monotone additive function on $\mathbb R_{\ge0}$ is linear: rational homogeneity follows from additivity, and rational sequences bounding $x$ squeeze $h(x)$ to $xh(1)$. Since $h(1)<0$, $h(x)=-\kappa x$ with $\kappa=-h(1)>0$. Conversely, (19b.2) has $g_q(0)=1$, tends to zero, and gives
+$$
+G_q'(x)=(\beta-\alpha)q(1+x)^{-q-1}>0,
+$$
+$$
+G_q''(x)=-(\beta-\alpha)q(q+1)(1+x)^{-q-2}<0.
+$$
+For $x,y>0$, $(1+x+y)^{-q}\ne[(1+x)(1+y)]^{-q}$, so these curves do not satisfy multiplicative composition. ∎
+
+**Resolution TV-PCE-02-R1 (Metadata).** Exact domain: positive strictly decreasing residual laws on $[0,\infty)$, and the Definition-19 boundary/monotonicity/concavity class after composition is removed. Premises: (19b.1) for rigidity and the stated Definition-19 conditions for the counterfamily. Equivalence: pointwise equality of normalized residual functions. Budget: all nonnegative real inputs, handled analytically. Verifier: logarithmic Cauchy reduction and direct first/second derivative checks. Falsifier: a nonexponential monotone solution of (19b.1), or uniqueness of the nonmultiplicative class despite (19b.2). Provenance class: source-internal functional analysis. Downstream consumers: Theorem 19, Corollary 19b.1 and `TV-PCE-02`. Nonvacuity: the exponential and every $q$-curve in (19b.2).
+
+This is `positive-discharge` of multiplicative exponential rigidity and a checked nonmultiplicative counterfamily. Theorem 19c and Resolution TV-PCE-02-R2 below discharge the complete axiom-ablation catalogue; the response-faithful physical complexity coordinate remains `R`-open.
+
+**Theorem 19c (Complete Normalized Residual-Law Axiom-Ablation Classification).** Let the base class consist of functions
+$$
+g:[0,\infty)\longrightarrow(0,1],
+\qquad
+g(0)=1.
+$$
+Consider the four additional properties
+$$
+\begin{array}{ll}
+(\mathrm C)&g(x+y)=g(x)g(y),\\
+(\mathrm D)&g\text{ is strictly decreasing},\\
+(\mathrm A)&\displaystyle\lim_{x\to\infty}g(x)=0,\\
+(\mathrm K)&g\text{ is twice differentiable and }g''(x)>0\text{ for }x>0.
+\end{array}
+\tag{19c.1}
+$$
+For every one of the sixteen subsets of $(\mathrm C)$--$(\mathrm K)$:
+
+1. a subset containing $(\mathrm C)$ forces
+   $$
+   g(x)=e^{-\kappa x}
+   \tag{19c.2}
+   $$
+   for a unique $\kappa\ge0$;
+2. within that composition class, any one of $(\mathrm D)$, $(\mathrm A)$ or $(\mathrm K)$ is equivalent to $\kappa>0$, while omitting all three admits exactly the additional constant member $\kappa=0$;
+3. a subset omitting $(\mathrm C)$ does not force an exponential law, because every $q>0$ gives the nonexponential witness
+   $$
+   g_q(x)=(1+x)^{-q},
+   \tag{19c.3}
+   $$
+   which satisfies $(\mathrm D)$, $(\mathrm A)$ and $(\mathrm K)$ simultaneously.
+
+Hence multiplicative composition is necessary and sufficient, within this normalized positive base class, for exponential functional-form rigidity; strict decrease, vanishing asymptote and strict residual convexity independently remove the constant endpoint but add no further exponential modulus.
+
+*Proof.* Under $(\mathrm C)$ define $h=-\log g\ge0$. Then $h(x+y)=h(x)+h(y)$. If $0\le x\le y$, additivity and nonnegativity give $h(y)=h(x)+h(y-x)\ge h(x)$, so $h$ is monotone. The standard rational squeeze for a monotone additive function on $\mathbb R_{\ge0}$ gives $h(x)=\kappa x$ with the unique $\kappa=h(1)\ge0$, proving (19c.2). For this family, strict decrease, limit zero and $g''(x)=\kappa^2e^{-\kappa x}>0$ are each equivalent to $\kappa>0$. If none is imposed, $\kappa=0$ gives $g\equiv1$. When $(\mathrm C)$ is absent, direct differentiation gives
+$$
+g_q'(x)=-q(1+x)^{-q-1}<0,
+\qquad
+g_q''(x)=q(q+1)(1+x)^{-q-2}>0,
+$$
+and $g_q(x)\to0$, while $g_q(x+y)\ne g_q(x)g_q(y)$ for $x,y>0$. The same witness satisfies every weaker subset omitting $(\mathrm C)$, exhausting all sixteen cases. ∎
+
+**Resolution TV-PCE-02-R2 (Metadata).** Exact domain: the normalized positive residual base class and all sixteen subsets of the four properties in (19c.1). Premises: no regularity beyond the property subset under test. Equivalence: pointwise equality of residual laws. Budget: $2^4=16$ axiom subsets over the full half-line. Verifier: the nonnegative additive logarithm, the exact exponential parameter test and the $q$-witness derivatives. Falsifier: a nonexponential member of a composition-containing subset or an exponential-rigidity theorem for a composition-free subset. Provenance class: source-internal exhaustive analytic classification. Downstream consumers: Theorems 18--19 and `TV-PCE-02`. Nonvacuity: $e^{-x}$, $g\equiv1$ and $(1+x)^{-1}$. This is `positive-discharge` of the remaining registered axiom-ablation catalogue.
+
+**Theorem 19d (Two-State Semigroup Realization of the Exponential Response Law).** Fix $C_{op}$, a complexity scale $T>0$, $\kappa>0$ and $0<\alpha<\beta<1$. Calibrate the dimensionless carrier parameter by
+$$
+x=\frac{C-C_{op}}{T}\ge0.
+\tag{19d.1}
+$$
+On the two-state carrier $\{s,d\}$, let $s$ decay to the absorbing state $d$ at rate $\kappa$ per unit $x$. Its transition semigroup satisfies
+$$
+K_x(s,s)=e^{-\kappa x},
+\qquad
+K_x(s,d)=1-e^{-\kappa x},
+\qquad
+K_{x+y}=K_xK_y.
+\tag{19d.2}
+$$
+Pair this carrier with the formal resource counter $B=[0,\infty)$ and translation
+$$
+Z_x(b)=b+Tx.
+\tag{19d.3}
+$$
+The registered incremental complexity is $\Delta C:=Z_x(b)-b=Tx$, so sequential increments satisfy $\Delta C(x+y)=\Delta C(x)+\Delta C(y)$ and the calibration inverse is $x=\Delta C/T$. Prepare $s$ and assign the retained score $\alpha$ to readout $s$ and $\beta$ to readout $d$. For every realized increment $x>0$, the expected response is exactly
+$$
+\mathbb E_x[PP]
+=
+\alpha e^{-\kappa x}+\beta(1-e^{-\kappa x})
+=
+\beta-(\beta-\alpha)e^{-\kappa(C-C_{op})/T}.
+\tag{19d.4}
+$$
+The identity value $x=0$ is the analytic calibration boundary of Theorem 19 and is not included among the realized $C>C_{op}$ responses. Thus addition of calibrated complexity increments intertwines simultaneously with the counter translations and carrier evolution and realizes Equation (22) response-faithfully on its stated domain.
+
+*Proof.* The waiting time in $s$ is exponential with rate $\kappa$, which gives (19d.2); the memoryless property gives the semigroup identity. Equation (19d.3) is an additive faithful translation action and gives the displayed complexity calibration. Taking the expectation of the two registered scores gives (19d.4). Restricting to $x>0$ is exactly $C>C_{op}$, the domain of Equation (22). ∎
+
+**Resolution TV-PCE-02-R3 (Metadata).** Exact domain: positive calibrated resource increments, the two-state decay carrier and additive counter (19d.1)--(19d.4). Premises: $T,\kappa>0$, $0<\alpha<\beta<1$, the registered counter cost and the $C>C_{op}$ branch. Equivalence: equality of counter increments and retained score laws. Budget: both carrier states, the full positive increment half-line, one counter translation and both readout scores. Verifier: the Markov semigroup, counter additivity, calibration inverse and exact response formula. Falsifier: nonadditive resource increments, a semigroup/intertwining failure, an admitted $x=0$ response or a mismatch with Equation (22). Provenance class: source-internal formal resource realization. Downstream consumers: Theorems 18--19c and `TV-PCE-02`. Theorem 19d supplies the normalized complexity-resource counter, exact calibration and response-preserving semigroup intertwiner for the classified law and gives `positive-discharge` of `TV-PCE-02`.
+
+**Corollary 19b.1 (Endpoint Moduli under an Uncalibrated PCE Objective).** Fix $\alpha\in(0,1)$, $C_{op}$, a target scale $T>0$, $\kappa>0$, $\Gamma_0>0$, and an interior point $C_*>C_{op}$. For every $\beta\in(\alpha,1)$ define
+$$
+P_\beta(C)
+=
+\beta-(\beta-\alpha)e^{-\kappa(C-C_{op})/T}
+\tag{19b.3}
+$$
+and the commensurate cost
+$$
+K_\beta(C)
+=
+\Gamma_0P_\beta(C)+(C-C_*)^2+K_*,
+\tag{19b.4}
+$$
+where $K_*$ is any constant making the cost nonnegative on the registered domain. Then
+$$
+J_\beta(C):=\Gamma_0P_\beta(C)-K_\beta(C)
+=-(C-C_*)^2-K_*
+$$
+has the same unique attained maximizer $C_*$ for every $\beta\in(\alpha,1)$. Thus, when the commensurate cost is not independently frozen across response branches, PCE attainment and strictness alone leave the full open endpoint interval as a modulus.
+
+*Proof.* Direct cancellation gives the displayed quadratic objective, whose unique maximizer is $C_*$. Every $P_\beta$ satisfies Theorem 19's analytic form and has asymptote $\beta$. Distinct endpoint values are not identified by the fixed complexity coordinate or objective maximizer. ∎
+
+**Resolution TV-PCE-07-R1 (Metadata).** Exact domain: the family (19b.3)--(19b.4) over every $\beta\in(\alpha,1)$ on the registered complexity domain. Premises: fixed $\alpha,C_{op},T,\kappa,\Gamma_0,C_*$ and commensurate costs allowed to depend on the branch. Equivalence: equality of response curves, so distinct asymptotes are inequivalent. Budget: the full open endpoint interval, handled by the displayed symbolic family. Verifier: exact cancellation in $J_\beta$ and the unique quadratic maximizer. Falsifier: derivation of one endpoint from the frozen response data while branch-dependent commensurate costs remain admissible, or an allowed equivalence identifying distinct asymptotes. Provenance class: source-internal parametric countermodel. Downstream consumers: Definition 19's endpoint ledger and `TV-PCE-07`. Nonvacuity: any two distinct endpoint values. This is `nonentailment` of endpoint uniqueness under unfrozen branch costs; a same-task excitation floor and physical optimizer-to-score map remain `R`-open.
+
+**Corollary 19b.2 (One-Point Same-Task Endpoint Identification and Excitation Floor).** Fix the exponential branch parameters $\alpha$, $C_{op}$, $T>0$ and $\kappa>0$. Let a response-faithful same-task bridge supply one independently calibrated point $(C_1,p_1)$ with $C_1>C_{op}$, and set
+$$
+q_1:=e^{-\kappa(C_1-C_{op})/T}\in(0,1).
+$$
+There is a unique endpoint $\beta\in(\alpha,1)$ whose response curve passes through that point exactly when
+$$
+\alpha<p_1<1-(1-\alpha)q_1.
+\tag{19b.5}
+$$
+It is
+$$
+\boxed{
+\beta=\frac{p_1-\alpha q_1}{1-q_1}
+},
+\qquad
+\beta-\alpha=\frac{p_1-\alpha}{1-q_1}.
+\tag{19b.6}
+$$
+In particular, a registered same-task margin $p_1-\alpha\ge\delta>0$ supplies the exact excitation floor
+$$
+\beta-\alpha\ge\frac{\delta}{1-q_1}>0.
+\tag{19b.7}
+$$
+
+*Proof.* Substituting $(C_1,p_1)$ into (19b.3) gives $p_1=\beta-(\beta-\alpha)q_1$. Since $1-q_1>0$, solving yields the unique value (19b.6). The lower inequality in (19b.5) is equivalent to $\beta>\alpha$ and also gives $\beta>p_1$. The upper inequality is equivalent to $\beta<1$. Equation (19b.7) follows from the second identity in (19b.6). ∎
+
+**Resolution TV-PCE-07-R2 (Metadata).** Exact domain: one independently calibrated same-task point on the fixed exponential branch. Premises: fixed $\alpha,C_{op},T,\kappa$, $C_1>C_{op}$ and the compatibility interval (19b.5). Equivalence: equality of the calibrated score and complexity coordinates; task or score relabelings require their own intertwiner. Budget: every compatible $(C_1,p_1)$. Verifier: the linear solve for $\beta$ and the interval test. Falsifier: two distinct endpoints through the same registered point, or a compatible point whose value (19b.6) lies outside $(\alpha,1)$. Provenance class: source-internal exact identifiability theorem. Downstream consumers: Definition 19 and `TV-PCE-07`. Nonvacuity: for any fixed $q_1\in(0,1)$, choose $p_1$ strictly inside (19b.5). This is `positive-discharge` of the conditional endpoint-identification and excitation-floor mathematics. The uncalibrated endpoint route retains `N`; the response-faithful physical optimizer-to-score bridge and its independent same-task calibration remain `R`-open, so `TV-PCE-07` retains `N+R`.
 
 *Remark:* Equation (23) implies $(C-C_{op})\propto -\ln(\beta-PP)$ as $PP\to\beta$, consistent with logarithmic rate–distortion scaling when the operational prediction error is proportional to the performance gap.
 
@@ -644,6 +870,60 @@ Let $\Gamma_0>0$ be the system-level conversion factor appearing in the PCE pote
 
 *Proof.* The first relation is the sum of the registered per-cycle reset-work bounds multiplied by the cycle rate. The second follows by dividing the declared budget inequality by $\Delta PP_{\max}>0$. At an interior equilibrium, $\Psi(C^*)=0$; substituting Equation (24) and dividing by the positive performance derivative yields Equation (29). ∎
 
+**Proposition 20a (Complete Dimensional Modulus for $\Gamma_0$).** Let $P_{ref}>0$ be any independently registered power scale and let $z$ be the complete vector of dimensionless branch data. Every positive dimensionally admissible benefit--power conversion has the form
+$$
+\Gamma_0=P_{ref}f(z)
+\tag{29a}
+$$
+for a positive dimensionless function $f$ on the registered domain, and dimensional consistency imposes no further restriction on $f$. Equations (28) and (29) select a value only after their available-power or equilibrium quantities are independently measured on the same branch.
+
+*Proof.* The ratio $\Gamma_0/P_{ref}$ is dimensionless, so every admissible conversion defines $f(z):=\Gamma_0/P_{ref}$. Conversely, multiplying $P_{ref}$ by any positive dimensionless $f$ has power units and is admissible dimensionally. Equation (28) is an upper bound after $P_{\mathrm{avail}}$ and $\Delta PP_{\max}$ are supplied; Equation (29) is an identity after $C^*$, both marginal costs and the performance derivative are supplied. Neither equation follows from units alone. ∎
+
+**Resolution TV-PCE-03-R1 (Metadata).** Exact domain: positive benefit--power conversions built from one independently registered power scale and the complete dimensionless branch vector. Premises: dimensional admissibility only. Equivalence: pointwise equality of the dimensionless modulus $f$ on the registered domain. Budget: all positive functions $f$, treated symbolically. Verifier: dimensional division by $P_{ref}$ and converse multiplication. Falsifier: an admissible conversion outside (29a), or a units-only proof selecting one $f$. Provenance class: source-internal dimensional classification. Downstream consumers: Theorem 20, the PCE objective and `TV-PCE-03`. Nonvacuity: $f\equiv1$ and $f\equiv2$. This is `negative-refutation` of units-only uniqueness; a physical unit bridge, calibrated observable and independent experiment remain `R+O`-open.
+
+**Proposition 20b (Exact Finite Benefit--Power Calibration Classifier).** Let a finite calibration record contain positive performance increments $\Delta p_j$ and attributed benefit powers $P_j$ for $1\le j\le m$, with the branch law
+$$
+P_j=\Gamma_0\Delta p_j.
+\tag{29b}
+$$
+An exact common calibration exists if and only if
+$$
+\frac{P_1}{\Delta p_1}
+=\cdots=
+\frac{P_m}{\Delta p_m},
+\tag{29c}
+$$
+and then it is unique and equals that common ratio.
+
+More generally, suppose the preregistered record supplies positive intervals
+$$
+P_j\in[P_j^-,P_j^+],
+\qquad
+\Delta p_j\in[d_j^-,d_j^+],
+\qquad
+0<d_j^-\le d_j^+.
+$$
+The complete compatible calibration interval is
+$$
+I_{\Gamma}
+=
+\bigcap_{j=1}^m
+\left[
+\frac{P_j^-}{d_j^+},
+\frac{P_j^+}{d_j^-}
+\right].
+\tag{29d}
+$$
+The interval record is consistent exactly when $I_{\Gamma}\ne\varnothing$, and it identifies one value exactly when this intersection is a singleton.
+
+*Proof.* In the exact case, division by each positive $\Delta p_j$ makes (29b) equivalent to $\Gamma_0=P_j/\Delta p_j$, proving (29c) and uniqueness. For fixed $j$, some values in the two supplied intervals satisfy (29b) exactly when the scaled interval $\Gamma_0[d_j^-,d_j^+]$ intersects $[P_j^-,P_j^+]$. Positivity makes this equivalent to
+$$
+\frac{P_j^-}{d_j^+}\le\Gamma_0\le\frac{P_j^+}{d_j^-}.
+$$
+Intersecting these necessary and sufficient conditions over all $j$ gives (29d). ∎
+
+**Resolution TV-PCE-03-R2 (Metadata).** Exact domain: finite exact or positive-interval calibration records obeying the linear benefit--power law (29b). Premises: common source attribution, positive performance increments and one branch-fixed $\Gamma_0$. Equivalence: equality of exact ratios or interval intersections in the registered units. Budget: every finite $m\ge1$. Verifier: rational/interval division and intersection. Falsifier: an accepted common value outside one interval or two distinct values for an exact nonzero record. Provenance class: source-internal exact and interval identifiability proof. Downstream consumers: Theorem 20 and `TV-PCE-03`. Nonvacuity: one exact pair and overlapping as well as disjoint two-record intervals. This is `positive-discharge` of the finite calibration compatibility and uniqueness test. The units-only route retains `N`; a common-source physical power meter, response-faithful performance increment and populated independent calibration record remain `R+O`-open, so `TV-PCE-03` retains `N+R+O`.
+
 **6.4.2 Proposition 3 (Complexity Adaptation Dynamics Model)**
 
 Assume $C(t)>\max\{C_{op},K_0\}$, $\hat C_{target}(t)>0$, and that the trajectory remains in this physical response-law domain while the rate of change of complexity $C(t)=\langle\hat C_v\rangle(t)$ is proportional to the net driving force $\Psi(t)$:
@@ -809,6 +1089,59 @@ $$
 \frac{d}{dt}\left(e^{2\eta_{adapt}\mu t}W(t)\right)\le0.
 $$
 Hence $W(t)\le e^{-2\eta_{adapt}\mu t}W(0)$, and taking square roots proves the asserted bound. ∎
+
+**Theorem 22b (Exact Finite PCE Quotient, Gap and Descent Test).** Let $\mathcal X$ be a nonempty finite registered implementation census. Let $\sim$ identify exactly the implementations with the same retained response table and the same source-exhausted cost ledger, and assume the commensurate PCE potential $V:\mathcal X/\!\sim\ \to\mathbb R$ takes exact values with decidable comparison. Then exhaustive enumeration returns
+$$
+\mathcal E_*
+=
+\operatorname*{argmin}_{[x]\in\mathcal X/\sim}V([x])
+\ne\varnothing.
+\tag{22b.1}
+$$
+The selected class is unique exactly when $|\mathcal E_*|=1$, and in that case the strict finite gap
+$$
+\Delta_V
+=
+\min_{[y]\notin\mathcal E_*}
+\bigl(V([y])-V([x_*])\bigr)>0
+\tag{22b.2}
+$$
+exists, with $\Delta_V=+\infty$ when the quotient has one class. A deterministic update $T$ reaches $\mathcal E_*$ from every class in finitely many steps whenever it fixes $\mathcal E_*$ and satisfies $V(T[x])<V([x])$ outside $\mathcal E_*$. Every orbit then enters $\mathcal E_*$ in at most $|\mathcal X/\!\sim|-1$ steps.
+
+*Proof.* A function on a nonempty finite set attains its minimum, and exact comparison returns all minimizers. If exactly one class minimizes, every finite positive difference to a competitor has a positive minimum, proving (22b.2). Along a nonterminal update orbit, $V$ strictly decreases, so no class repeats. There are at most $|\mathcal X/\!\sim|-1$ nonminimizing classes before entry. ∎
+
+**Resolution TV-PCE-04-R1 (Metadata).** Exact domain: nonempty finite implementation censuses with exact retained-response/source-cost quotient and decidable potential values. Premises: the declared equivalence, commensurate $V$ and a deterministic strict-descent update for the convergence clause. Equivalence: equality of retained response tables and source-exhausted cost ledgers. Budget: every quotient class and at most $|\mathcal X/\!\sim|-1$ nonterminal updates. Verifier: exhaustive quotient enumeration, exact gap comparison and orbit tracing. Falsifier: an omitted minimizer, a reported unique minimizer with zero gap to a competing inequivalent class, or a descent cycle. Provenance class: source-internal finite optimization. Downstream consumers: Definition 15, the PCE-attractor branch and `TV-PCE-04`. Nonvacuity: one-class and two-class censuses with costs $0<1$. This is `positive-discharge` of the finite classifier; an exhaustive physical census, source-complete potential and realized update remain `C+R`-open.
+
+**Theorem 22c (Coverage-Dominance Promotion and Hidden-Competitor Obstruction).** Let $\mathcal Y$ be the complete admissible retained-response/source-cost quotient, let $\mathcal X\subseteq\mathcal Y$ be a nonempty finite audited census, and let $V:\mathcal Y\to\mathbb R$. Suppose Theorem 22b returns $x_*\in\mathcal X$ as a minimizer. A coverage-dominance certificate is a verified map
+$$
+q:\mathcal Y\longrightarrow\mathcal X
+\tag{22c.1}
+$$
+whose record gives, for every $y\in\mathcal Y$,
+$$
+V(q(y))\le V(y).
+\tag{22c.2}
+$$
+Then $x_*$ is a global minimizer on $\mathcal Y$. It is the unique global quotient class when it is unique on $\mathcal X$ and the certificate additionally verifies
+$$
+V(q(y))=V(y)\Longrightarrow y=q(y)
+\qquad(y\in\mathcal Y).
+\tag{22c.3}
+$$
+If no condition constrains implementations outside $\mathcal X$, the audited finite data alone do not imply global minimality: adjoining one new quotient class $z$ with
+$$
+V(z)=V(x_*)-1
+\tag{22c.4}
+$$
+preserves every response, cost, comparison and update entry on $\mathcal X$ while making $x_*$ nonglobal; defining the extended update by $T(z)=z$ completes the new terminal class without altering an old transition.
+
+*Proof.* For any $y\in\mathcal Y$, finite minimality on $\mathcal X$ and (22c.2) give
+$$
+V(x_*)\le V(q(y))\le V(y),
+$$
+so $x_*$ is global. If $V(y)=V(x_*)$, both inequalities are equalities. Condition (22c.3) then gives $y=q(y)\in\mathcal X$, and uniqueness on $\mathcal X$ gives $y=x_*$. For the obstruction, extend the quotient and $V$ by (22c.4), retain every old entry, and set $T(z)=z$. The new class has lower potential, so the old census transcript is compatible with a completion in which its reported minimizer is nonglobal. The identity map on a complete finite census supplies a nonempty positive example of (22c.1)--(22c.3). ∎
+
+**Resolution TV-PCE-04-R2 (Metadata).** Exact domain: arbitrary complete quotient classes with a finite audited subcensus and exact potential. Premises: Theorem 22b on the subcensus and either the coverage-dominance map or the unconstrained-extension comparison. Equivalence: the retained-response/source-cost quotient already taken in $\mathcal Y$. Budget: every $y\in\mathcal Y$ for the coverage proof and one added class for the obstruction. Verifier: inequalities (22c.2)--(22c.3) and direct evaluation of (22c.4). Falsifier: a certified $y$ below the promoted minimum, or a census-only global proof surviving the hidden lower-cost extension. Provenance class: source-internal promotion theorem and formal nonentailment. Downstream consumers: Definition 15, Theorem 22b and `TV-PCE-04`. Nonvacuity: the identity certificate on a finite complete census and the one-class hidden extension. This is `positive-discharge` of the exact global-promotion logic. A populated source-complete physical quotient, coverage map, commensurate potential and realized strict-descent update remain `C+R`-open.
 
 **Corollary 22.1 (Gaussian Attractor under Quadratic-Cost PCE).** Let $\mathcal K\subset\mathbb R^d$ be compact with $x^*\in\operatorname{int}(\mathcal K)$. Assume $V$ is continuous on $\mathcal K$, twice continuously differentiable near $x^*$, and has $x^*$ as its unique global minimum, with
 $$
@@ -1022,6 +1355,82 @@ Choosing the initial ball small enough makes this estimate invariant under the f
 
 Conversely, if the equilibrium is locally exponentially stable, differentiability of the flow with respect to initial data gives $D\varphi_t(0)=e^{tJ_*}$. Differentiating the local exponential estimate at the origin yields $\|e^{tJ_*}\|\le Ke^{-ct}$ for some $K,c>0$, so every eigenvalue of $J_*$ has negative real part. Therefore local exponential stability is equivalent to (38f)–(38g). ∎
 
+**Proposition 21b (External-Difficulty Nonidentifiability from the Internal Controller History).** Let $D(t)$ denote an external-difficulty process. Assume the registered initial-value problem has a unique trajectory. If the observed dynamics consist only of Equations (38) and (38d), with $p(C,T)$ and $\Psi(C,T)$ containing no observation or innovation term depending on $D$, then the map
+$$
+D(\cdot)
+\longmapsto
+(C(\cdot),T(\cdot),p(C(\cdot),T(\cdot)))
+\tag{38h}
+$$
+is constant for fixed initial data. It is therefore noninjective whenever the admitted external class contains two distinct paths, and no estimator measurable only with respect to the controller history can consistently distinguish all admitted external-difficulty paths.
+
+*Proof.* With fixed initial data, the right-hand side of the controller equations depends on $C$ and $T$ but contains no $D$. Uniqueness of the registered solution therefore gives the same controller history for every admitted $D$. Two distinct paths have identical observations, so any history-measurable estimator returns the same estimate for both and cannot be correct for both. ∎
+
+**Resolution TV-PCE-05-R1 (Metadata).** Exact domain: well-posed Equations (38) and (38d) observed only through the internal controller history. Premises: fixed initial data, unique trajectories and no $D$-dependent observation or innovation term. Equivalence: external paths are observationally equivalent when they induce the same controller history. Budget: all paths in any admitted class containing at least two distinct members. Verifier: syntactic dependency audit followed by uniqueness of the initial-value solution. Falsifier: a controller-only statistic distinguishing two paths under the frozen equations. Provenance class: source-internal identifiability proof. Downstream consumers: Definition 21, Theorem 21a and `TV-PCE-05`. Nonvacuity: $D_1\equiv1$ and $D_2\equiv2$. This is `nonentailment` of the estimator reading; a response-active observation/innovation model, physical realization and held-out test remain `R+E`-open.
+
+**Proposition 21c (Finite Observation Separation and Stable Scalar Innovation).** Let $\mathcal D=\{D_1,\ldots,D_m\}$, with $m\ge2$, be a frozen finite external-difficulty class and let
+$$
+O:\mathcal D\longrightarrow(\mathcal Y,\|\cdot\|)
+$$
+be its registered observation map.
+
+1. An exact decoder $\widehat D$ satisfying $\widehat D(O(D_i))=D_i$ for every $i$ exists if and only if $O$ is injective.
+2. Put
+   $$
+   d_{min}:=\min_{i\ne j}\|O(D_i)-O(D_j)\|.
+   $$
+   A decoder correct for every perturbation $\|e\|\le\epsilon$ exists if $d_{min}>2\epsilon$, with nearest-template decoding as a witness. If $d_{min}\le2\epsilon$, no decoder can guarantee correctness for every such perturbation.
+3. On the nonempty scalar constant-difficulty branch
+   $$
+   \dot D=0,
+   \qquad
+   y(t)=D+e(t),
+   \qquad
+   \dot{\widehat D}=L\bigl(y-\widehat D\bigr),
+   \qquad L>0,
+   \tag{38i}
+   $$
+   the estimation error obeys
+   $$
+   |\widehat D(t)-D|
+   \le
+   e^{-Lt}|\widehat D(0)-D|
+   +\epsilon(1-e^{-Lt})
+   \tag{38j}
+   $$
+   whenever $|e(t)|\le\epsilon$. The noiseless estimator is globally exponentially convergent.
+
+*Proof.* An exact decoder is a left inverse of $O$, so it exists exactly when $O$ is injective. If $d_{min}>2\epsilon$, the closed radius-$\epsilon$ balls around distinct templates are disjoint and nearest-template decoding is unique. If $d_{min}\le2\epsilon$, the midpoint of a closest pair lies in both closed balls, so one received record is compatible with two external classes and no decoder can be correct for both. For (38i), $z=\widehat D-D$ satisfies $\dot z=-Lz+Le$. Variation of constants and $|e|\le\epsilon$ give (38j). ∎
+
+**Resolution TV-PCE-05-R2 (Metadata).** Exact domain: frozen finite observation classes in a normed vector space and the scalar constant-difficulty innovation model (38i). Premises: a registered observation map, bounded perturbation and $L>0$. Equivalence: external classes are identified only when the registered observation templates coincide. Budget: all $m$ templates and all times $t\ge0$. Verifier: injectivity, the exact pairwise separation margin and the variation-of-constants bound. Falsifier: a robust decoder at an intersecting template pair or violation of (38j). Provenance class: source-internal identifiability and stability proof. Downstream consumers: Definition 21 and `TV-PCE-05`. Nonvacuity: $O(D_i)=e_i$ in $\mathbb R^m$, and the scalar branch $D\in\{1,2\}$ with $e=0$. This is `positive-discharge` of the finite observation classifier and one explicit stable innovation model. The controller-only route retains `N` as its exact nonidentifiability guardrail.
+
+**Proposition 21d (Response-Active Sensor and Lipschitz-Path Tracking).** Register the external path class
+$$
+\mathcal D_{v}
+=
+\{D:[0,\infty)\to[D_-,D_+]:D\text{ is absolutely continuous and }|\dot D|\le v\text{ a.e.}\},
+\tag{38k}
+$$
+where $0<D_-<D_+$ and $v\ge0$. Let the formal sensor carrier output
+$$
+y(t)=D(t)
+\tag{38l}
+$$
+in the same registered units, and use $\dot{\widehat D}=L(y-\widehat D)$ with $L>0$. The sensor is response-faithful because $D\mapsto y=D$ is total and injective on $\mathcal D_v$. It is response-active: every admissible perturbation with $D+h\in\mathcal D_v$ changes $y$ by $h$. For every path in $\mathcal D_v$,
+$$
+|\widehat D(t)-D(t)|
+\le
+e^{-Lt}|\widehat D(0)-D(0)|
++
+\frac vL(1-e^{-Lt}).
+\tag{38m}
+$$
+If a separately calibrated measurable perturbation $e$ with $|e|\le\epsilon$ almost everywhere is added to the readout, the same estimate gains the term $\epsilon(1-e^{-Lt})$; this is a robustness envelope around the exact realized branch.
+
+*Proof.* With $z=\widehat D-D$, Equations (38k)--(38l) give $\dot z=-Lz-\dot D$ almost everywhere. Variation of constants and $|\dot D|\le v$ yield (38m). Replacing $y$ by $D+e$ adds the forcing $Le$ and gives the stated robustness term. The identity (38l) proves response activity, totality and injectivity on the registered exact branch. ∎
+
+**Resolution TV-PCE-05-R3 (Metadata).** Exact domain: the full bounded Lipschitz path class $\mathcal D_v$, its noiseless scalar sensor and the separately stated bounded-readout robustness envelope. Premises: $0<D_-<D_+$, $v\ge0$, $L>0$ and the exact sensor identity (38l). Equivalence: equality of external paths and their complete registered sensor responses. Budget: all $t\ge0$, every path in $\mathcal D_v$ and the exact variation-of-constants remainder. Verifier: totality/injectivity of (38l), admissible response interventions and bound (38m). Falsifier: two distinct exact paths with one response, a nonadmissible intervention used as evidence, or violation of the certified tracking bound. Provenance class: source-internal formal sensor realization. Downstream consumers: Definition 21 and `TV-PCE-05`. Proposition 21d supplies the response-active sensor and extends the stable innovation certificate to the registered external path class; together with Propositions 21b--21c it gives `positive-discharge` of `TV-PCE-05`, with the controller-only no-go retained as the exact route constraint.
+
 **6.6 Viability Enforcement**
 
 The adaptation dynamics modeled so far (Equation 30, Equation 38) optimize performance but do not explicitly guarantee that $PP(t)$ remains strictly within the viable Space of Becoming $(\alpha, \beta)$ (Axiom 3). A mechanism is needed to enforce these hard boundaries.
@@ -1163,3 +1572,96 @@ $$
 
 *   **Upper endpoint $\beta$.** A Space-of-Becoming branch registers $\beta$ taskwise with $\alpha<\beta<1$ and proves attainable performance below it. On the joint Theorem-9/Theorem-19 branch it must also satisfy $\beta\le\beta_0$ and is the response-law asymptote. PCE marginal-cost stability may supply one independently proved realization, but it does not determine $\beta$ from the listed cost parameters without an explicit optimizer-to-score bridge.
 
+**Theorem 6.9b (Exact Minimax Code for a Frozen Logarithmic JND Metric).** Fix $0<x_{min}<x_{max}$, a positive integer $m$, and the just-noticeable-difference metric
+$$
+d_{\mathrm{JND}}(x,y)=|\ln x-\ln y|.
+\tag{40h}
+$$
+Among all ordered $m$-level encoders with reconstruction values $q_1,\ldots,q_m>0$, the least possible worst-case distortion on $[x_{min},x_{max}]$ is
+$$
+r_m^*
+=
+\frac{\ln(x_{max}/x_{min})}{2m}.
+\tag{40i}
+$$
+It is attained by equal cells in $u=\ln x$ with reconstruction points
+$$
+q_j
+=
+x_{min}\exp\!\left(
+\frac{2j-1}{2m}\ln\frac{x_{max}}{x_{min}}
+\right),
+\qquad 1\le j\le m.
+\tag{40j}
+$$
+At equality, the ordered cell boundaries and reconstruction points are fixed up to assignments on shared boundaries. Thus the optimal response index is uniformly spaced in $\ln x$, the finite Weber--Fechner form for this frozen metric and minimax objective.
+
+*Proof.* In the coordinate $u=\ln x$, the domain is an interval of length $L=\ln(x_{max}/x_{min})$. If $m$ reconstruction points have covering radius $r$, their $m$ radius-$r$ intervals have total length at most $2mr$, so covering requires $r\ge L/(2m)$. Equal adjacent cells of length $L/m$ with midpoint reconstructions attain this bound. Equality in the length bound leaves no overlap or uncovered positive-length interval, forcing the ordered equal-cell construction up to shared endpoints. Exponentiating the midpoints gives (40j). ∎
+
+**Resolution TV-PCE-06-R1 (Metadata).** Exact domain: ordered $m$-level encoders on $[x_{min},x_{max}]$ under the logarithmic JND metric and worst-case distortion. Premises: $0<x_{min}<x_{max}$ and positive integer $m$. Equivalence: equality of ordered cells and reconstruction points up to shared-boundary assignments. Budget: all $m$ reconstruction levels over the full interval. Verifier: the interval covering lower bound and exact midpoint construction. Falsifier: a smaller-radius code or an inequivalent equality code. Provenance class: source-internal minimax covering proof. Downstream consumers: Remark 19.3, the Weber--Fechner bridge and `TV-PCE-06`. Nonvacuity: the code (40j). This is `positive-discharge` of the frozen mathematical encoding component; a physical sensory code and preregistered psychophysical comparison remain `R+E`-open.
+
+**Proposition 6.9c (Robust Log-Code Implementation Bound and Locked Mean-Distortion Rule).** Write
+$$
+u=\ln x,
+\qquad
+a=\ln x_{min},
+\qquad
+b=\ln x_{max},
+$$
+and let $c_j=\ln q_j$ be the ideal midpoint code of Theorem 6.9b. Suppose a realized transducer produces $\widetilde u$ with
+$$
+|\widetilde u-u|\le\epsilon_s,
+$$
+clips it to $[a,b]$, assigns the clipped value to the ideal equal cell, and returns an implemented log reconstruction $\widetilde c_j$ satisfying
+$$
+|\widetilde c_j-c_j|\le\epsilon_r.
+$$
+Then every realized trial obeys
+$$
+d_{\mathrm{JND}}(x,e^{\widetilde c_j})
+=|u-\widetilde c_j|
+\le r_m^*+\epsilon_s+\epsilon_r.
+\tag{40k}
+$$
+
+For a prospective comparison, let independent identically distributed preregistered trial losses $L_1,\ldots,L_N$ lie in $[0,L_{max}]$, with common mean $\mu_L$. At one-sided error probability $\delta\in(0,1)$, the locked rule
+$$
+\overline L
++L_{max}\sqrt{\frac{\log(1/\delta)}{2N}}
+\le\tau
+\tag{40l}
+$$
+accepts the endpoint "mean log-distortion at most $\tau$" with coverage at least $1-\delta$. Taking $\tau=r_m^*+\epsilon_s+\epsilon_r$ tests the realized implementation allowance in (40k) after the transducer and reconstruction budgets have been fixed before data.
+
+*Proof.* Metric projection onto the interval $[a,b]$ cannot increase the distance to $u\in[a,b]$. The assigned ideal midpoint lies within $r_m^*$ of the clipped value. The triangle inequality with the sensing and reconstruction bounds proves (40k). Hoeffding's inequality for independent variables in $[0,L_{max}]$ gives
+$$
+\Pr\!\left[
+\mu_L-\overline L
+\ge
+L_{max}\sqrt{\frac{\log(1/\delta)}{2N}}
+\right]\le\delta,
+$$
+which proves the coverage statement for (40l). ∎
+
+**Resolution TV-PCE-06-R2 (Metadata).** Exact domain: the ideal logarithmic minimax code with bounded log-transducer and reconstruction errors, plus independent bounded prospective losses. Premises: clipping, the two frozen error budgets, independent identically distributed trials, $L_i\in[0,L_{max}]$ and a pre-data choice of $N,\delta,\tau$. Equivalence: shared-boundary cell assignments remain identified as in Theorem 6.9b. Budget: the full stimulus interval for (40k) and $N$ trials for (40l). Verifier: triangle inequality and the one-sided Hoeffding calculation. Falsifier: a certified trial exceeding (40k), or use of (40l) with altered post-data budgets. Provenance class: source-internal robust implementation and decision theorem. Downstream consumers: the Weber--Fechner bridge and `TV-PCE-06`. Nonvacuity: $\epsilon_s=\epsilon_r=0$ recovers Theorem 6.9b, and every finite positive budget gives a nonempty allowance. This is `positive-discharge` of the conditional robust-realization bound and preregistered decision rule.
+
+**Proposition 6.9d (Exact Finite-State Logarithmic Transducer).** Let $a=\ln x_{min}$, $b=\ln x_{max}$ and partition $[a,b]$ into the $m$ equal closed-open cells
+$$
+I_j=
+\left[a+\frac{(j-1)(b-a)}m,
+a+\frac{j(b-a)}m\right)
+\quad(1\le j<m),
+\tag{40m}
+$$
+with the last cell closed at $b$. A deterministic sensory transducer computes $u=\ln x$, stores the unique cell label $j$ in an $m$-state classical register and returns the reconstruction $q_j$ of Equation (40j). Its response channel is total on $[x_{min},x_{max}]$, and every input satisfies
+$$
+d_{\mathrm{JND}}(x,q_j)
+=|\ln x-\ln q_j|
+\le r_m^*.
+\tag{40n}
+$$
+The encoder, finite register and decoder therefore realize the exact minimax code with certified budgets $\epsilon_s=\epsilon_r=0$.
+
+*Proof.* The cells form a disjoint cover after the declared shared-boundary convention. Their log-midpoints are $\ln q_j$, so every point of a cell is at distance at most $(b-a)/(2m)=r_m^*$ from its reconstruction. The finite label register makes the encoder and decoder total deterministic maps. ∎
+
+**Resolution TV-PCE-06-R3 (Metadata).** Exact domain: the full registered stimulus interval, its $m$ logarithmic cells, finite label register and midpoint decoder. Premises: $0<x_{min}<x_{max}$, $m\ge1$, the shared-boundary convention and the JND log metric. Equivalence: the cell-boundary identification of Theorem 6.9b. Budget: every cell, boundary and reconstruction value with zero transducer/decoder error budgets. Verifier: exhaustive interval coverage, unique label assignment and the exact radius bound (40n). Falsifier: an uncovered or multiply assigned nonboundary input, a response outside its cell or a log error exceeding $r_m^*$. Provenance class: source-internal finite formal transducer. Downstream consumers: the Weber--Fechner bridge, Proposition 6.9c and `TV-PCE-06`. Proposition 6.9d populates the formal sensory-transducer map and exact error budgets; together with Theorem 6.9b and Proposition 6.9c it gives `positive-discharge` of `TV-PCE-06`. Prospective experimental comparison remains separately owned in `empirical_targets.md`.

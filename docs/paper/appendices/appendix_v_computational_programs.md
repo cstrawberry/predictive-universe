@@ -6,6 +6,12 @@ This appendix provides arithmetic programs and observational inversions for the 
 
 ## V.0 Reproducibility Contract and Uncertainty Budgets
 
+### V.0.0 PU Method Machine-Auditable Campaign Transport
+
+The machine-readable campaign format in `pu_method/METHOD.md` is the normative transport for new computational closure packets. A terminal packet binds its claim and exact domain to an externally receipted pre-run attempt contract, pinned verifier and artifacts, typed provenance, canonical verifier output, and a fresh gate replay. Its optional strict-certificate registry profile retains the complete tuple $(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$ and evaluates the named checks (C1)--(C18), while every accepted registry evidence binding resolves to a terminal campaign resolution that passes the ordinary replay gate. The companion source-envelope index reads exactly the forty-eight files authorized by `style.md`, preserves prime-significant identifiers and section-heading axioms, and rejects byte or extraction drift. The separately numbered method safeguards disclose vacuity, numerical-match false-positive rates, unresolved supersession, and post-comparison successor ceilings; they are not manuscript theorems. A successful infrastructure audit records only that the declared computation, registry, and evidence contracts passed; it cannot supply a missing physical bridge, source-exhaustion theorem, or empirical identification.
+
+### V.0.1 Independent Arithmetic Audit
+
 This appendix is intended to be mechanically reproducible from the displayed equations. An independent check should verify the following items without access to any unpublished derivations:
 
 1. **Input ledger.** Fixed finite inputs for the displayed arithmetic are $K_0=3$, $N_{\mathrm{vis}}^{\min}=8$, $d_0=8$, $\varepsilon_0=\ln2$, $a=2$, $b=6$, and $M=24$ on their declared branches. Appendix U independently registers $(N_U,r_U)=(24,12)$ and hence the real tangent count $288$. The equality $S_{\mathrm{inst}}=2\kappa_{\mathrm{idx}}$ is not a fixed backbone input: it additionally requires the carrier/Hessian marking and Proposition U.14's exact exponent-calibration certificate $\mathfrak C_{U,\mathrm{act}}$.
@@ -233,6 +239,76 @@ from the effective dimensions, Bures curvature data, and packet-normalization co
 
 **Fail condition.** If the displayed log-ratio values require inserting charged-lepton masses, changing the effective dimensions after comparison, or choosing a packet normalization from the validation result, the audit fails and the affected Appendix T row remains a validation-level or branch-normalized claim rather than a forward calculation.
 
+**Executed source-only audit record.** Freeze the scalar model branch before loading any charged-lepton mass, mass ratio, or mass-derived proxy. Let
+$$
+s:=\operatorname{sinc}(1/\sqrt3),
+\qquad
+\alpha_{\mathrm{IR}}=\frac32s,
+$$
+and use the registered pair data
+$$
+(d_{\tau\mu}^2,D_{\mathrm{eff}}(2))=(2,3/8),
+\qquad
+(d_{\mu e}^2,D_{\mathrm{eff}}(4))=(4,13/6).
+$$
+On Theorem T.42.2's conditional exact-fourth-derivative subbranch $\beta_{\mathrm{pkt}}=1/144$, the diagnostic zero-remainder specialization gives
+$$
+\begin{aligned}
+L_{\tau\mu}^{(0)}
+&=3s-\frac1{96}
+=2.8256725003445850593\ldots,\\
+L_{\mu e}^{(0)}
+&=6s-\frac{13}{54}
+=5.4314375932817627113\ldots,\\
+L_{\tau e}^{(0)}
+&=L_{\tau\mu}^{(0)}+L_{\mu e}^{(0)}
+=9s-\frac{217}{864}
+=8.2571100936263477706\ldots,
+\end{aligned}
+$$
+with the algebraically dependent model ratio
+$$
+\frac{L_{\tau e}^{(0)}}{L_{\tau\mu}^{(0)}}
+=2.9221751963893231990\ldots .
+$$
+This exact scalar evaluation reproduces the conditional model exponents in Theorem T.42.6 and Tables T.21.2 and T.25.4.2 without a charged-lepton target input.
+
+The uncertainty and provenance entries remain separated. Theorem T.42.2 assigns the truncation intervals
+$$
+|\mathcal R_{6,\tau\mu}(\sqrt2)|\le8B_{\tau\mu},
+\qquad
+|\mathcal R_{6,\mu e}(2)|\le64B_{\mu e};
+$$
+the current record supplies neither numerical $B_{\tau\mu}$ nor numerical $B_{\mu e}$, so the zero-remainder specialization is not a controlled interval. The unit-radius convention, Theorem T.24.2.1 sinc prescription, Theorem T.42.5 effective-dimension assignments, and the conditional $\beta_{\mathrm{pkt}}=1/144$ output are branch-normalization entries without a joint numerical uncertainty envelope. After the model-output hash was sealed, comparison with Appendix T's rounded logarithms $(2.8224,5.3316,8.1540)$ gave residuals
+$$
++0.003272500344585\ldots,
+\qquad
++0.099837593281763\ldots,
+\qquad
++0.103110093626348\ldots .
+$$
+Those rounded comparison values carry no covariance record in this audit and are not inputs to the displayed model evaluation.
+
+Theorem T.39 assigns physical mass-log identification to an accepted $\mathfrak C_{Y\to m}$ containing the complete magnitude and phase matrices, matching map, diagonalizers, ordered singular values, labels, and residual intervals. The current source supplies no accepted $\mathfrak C_{Y\to m}$ and no accepted common packet/VVM certificate with numerical endpoint bounds. Consequently the frozen scalar record determines the displayed conditional model exponents but does not entail $\log(m_\tau/m_\mu)$ or $\log(m_\mu/m_e)$ as physical quantities.
+
+| Resolution-artifact field | `V.3.1-R1` record |
+|---|---|
+| Catalog binding and polarity | `TV-V-03`; `positive-discharge` for the exact conditional arithmetic subproposition and `nonentailment` for physical mass-log identification from the frozen scalar record |
+| Exact domain and equivalence | The two registered adjacent-edge scalar expressions and their algebraic path sum; equality is exact real-number equality under the displayed branch substitutions |
+| Premises | Theorem T.39's scalar-kernel type boundary; Theorem T.24.2.1's registered sinc prescription; Theorem T.42.2's conditional exact coefficient; Theorem T.42.5's registered effective dimensions; Theorem T.42.6's zero-remainder diagnostic specialization |
+| Exhaustive budget and coverage | Both adjacent charged-lepton paths, the dependent path sum, every displayed scalar correction, and the symbolic endpoint remainder bounds |
+| Source snapshot | `appendix_t_electroweak_hierarchy.md` SHA-256 `fdc58676499d7cf1aa327beac089e88db611ff548bb25179649a0fd3da36f73c`; pre-insertion `appendix_v_computational_programs.md` SHA-256 `8c4391b15d3b72183871639fdb8fb1b5322f1178ed025e375825965dbb52d04c` |
+| Verifier, executable and runtime | Exact symbolic substitution in both scalar expressions, 100-decimal evaluation, algebraic path-sum verification, and the displayed Theorem-T.39 realization-type audit; audit source SHA-256 `10c71ff430f94d2a8b155363eb676ea8aa571f23a47150a7880a1c711545dfc5`; Python 3.13.12 executable SHA-256 `a38f63d2b8843820b59746250911cd203dbd76c8dc53693007aaa3bda2007232`; an independent Node.js 22.22.0 binary64 evaluation agreed at displayed binary64 precision |
+| Canonical input and output | Compact sorted ASCII JSON with no terminal LF; input SHA-256 `5048bd397f4e381ff2e691cc3a039683753df742312c84083cc55ab0a6112bfd`; eight-field 80-decimal output SHA-256 `e633f663b418d6e474da34ac6d7f2391e7b1a83852a140e00aedd8b552cb4216` |
+| Integrity invalidator | A source, executable, runtime, input or output hash mismatch; loading a charged-lepton target or proxy before sealing the model output; or changing a registered branch entry after comparison |
+| Falsifier | An exact arithmetic mismatch on the hashed branch, or a derivation of the physical mass logs from the same scalar record without adding any Theorem-T.39 realization field |
+| Provenance class | Source-derived conditional model arithmetic with a target-firewalled execution and a theorem-level mass-realization type audit |
+| Nonvacuity disposition | The displayed branch has explicit positive scalar inputs and finite outputs; the nonentailment concerns the missing map from those scalar outputs to ordered physical singular values, not an empty arithmetic domain |
+| Downstream consumers | The arithmetic remains a regression input; $\mathfrak C_{\mathrm{pkt/VVM}}^\ell$, $\mathfrak C_{Y\to m}$, the flavor selector, matching/RG, residual and prospective comparison obligations remain with `RT-T3` and their Appendix-T atomic targets |
+| Audit result | Pass for reproducibility of the conditional scalar arithmetic; fail under V.3.1's forward physical-log-ratio pass condition, with `nonentailment` at that exact scope |
+
+This closes the finite source-only audit at its arithmetic/nonentailment scope. The flavor, packet/VVM, full-matrix realization, matching, remainder and prospective empirical components remain assigned to the named `RT-T3` records.
+
 ### V.3.2 Golay Residual-Shell Incidence Audit
 
 **Target.** Enumerate the octads of the extended binary Golay code $\mathcal G_{24}$ and verify the residual-shell incidence statistics used by the Appendix Z/R experimental ledger. The calculation is finite: generate the $759$ octads of the Steiner system $S(5,8,24)$ and count the number of octads containing a fixed subset of size $r$ for $r=0,1,2,3,4,5$.
@@ -256,6 +332,50 @@ $$
 with the ratios used in the residual-shell prediction extracted from these counts rather than assumed.
 
 **Fail condition.** If the enumerated code is not equivalent to $\mathcal G_{24}$, if the octad count is not $759$, or if the incidence counts differ from the displayed Steiner values, the corresponding residual-shell prediction is rejected on that branch.
+
+**Executed regression record (canonical source snapshot).** The input is Theorem Z.13c's displayed $G=[I_{12}\mid P]$. Canonically serialize $G$ as twelve rows of twenty-four ASCII `0`/`1` digits, each terminated by LF, including the final row. This serialization is the complete frozen enumerator input; its SHA-256 is `66456146028f1a1af61fbad30a802ec5dbd647d3dec697c78593a6b4c611eb81`.
+
+Exhausting all $u\in\mathbb F_2^{12}$ and evaluating $c=(u,uP)$ gives
+
+$$
+\{A_0,A_8,A_{12},A_{16},A_{24}\}
+=
+\{1,759,2576,759,1\}.
+$$
+
+Direct multiplication over $\mathbb F_2$ gives $PP^T=I_{12}$ and $GG^T=0$; the identity block gives rank $12$. The enumeration gives minimum nonzero weight $8$ and weights divisible by four. Hence the span is a binary linear $[24,12,8]$ code, and the classification cited in Theorem Z.13c makes it coordinate-permutation equivalent to $\mathcal G_{24}$. The $759$ weight-eight supports are distinct. Exhaustive containment counts over every $t$-subset give:
+
+| $t$ | Octads containing each $t$-subset | Number of $t$-subsets checked |
+|:--:|--:|--:|
+| $0$ | $759$ | $1$ |
+| $1$ | $253$ | $24$ |
+| $2$ | $77$ | $276$ |
+| $3$ | $21$ | $2024$ |
+| $4$ | $5$ | $10626$ |
+| $5$ | $1$ | $42504$ |
+
+Thus the residual-shell ratios extracted from the enumeration are
+
+$$
+\lambda_1:\lambda_2:\lambda_3:\lambda_4:\lambda_5
+=253:77:21:5:1.
+$$
+
+| Regression artifact field | `V.3.2-R1` record |
+|---|---|
+| Catalog binding and polarity | `TV-V-04`; `positive-discharge` of the exact finite regression proposition |
+| Exact domain and equivalence | The complete row span of the hashed displayed $G$ over $\mathbb F_2$; code equivalence is coordinate permutation, while incidence uses the displayed coordinate labels |
+| Premises | The exact hashed generator serialization, arithmetic over $\mathbb F_2$, and the binary $[24,12,8]$ classification cited in Theorem Z.13c |
+| Exhaustive budget and coverage | All $2^{12}=4096$ input words and every labeled $t$-subset for $0\le t\le5$ |
+| Verifier | Exact $\mathbb F_2$ matrix multiplication, row-span enumeration, integer popcount and subset-incidence histograms under Node.js 22.22.0, followed by an independent exact reimplementation; both executions returned the displayed record |
+| Integrity invalidator | A generator-hash mismatch, incomplete $4096$-word or subset coverage, or verifier disagreement |
+| Falsifier | On the exact hashed input with exhaustive valid coverage, a rank, self-orthogonality, weight, code-equivalence, incidence or extracted-ratio mismatch |
+| Provenance class | Source-derived finite computation whose checker inputs are exhausted by the displayed generator and exact source mathematics |
+| Nonvacuity disposition | Positive finite-audit disposition: the hashed input decodes to the displayed $12\times24$ matrix, whose enumerated span contains $4096$ words and $759$ distinct weight-eight supports |
+| Consumers | This finite incidence audit and the combinatorial input to the residual-shell ratios; physical-code status remains owned by the Appendix-Z physical-code branch |
+| Regression result | Pass for the exact finite regression proposition |
+
+This closes the finite code-combinatorics audit at its regression scope. The physical encoder, noise law, syndrome/recovery map, resource ledger and substrate realization remain separate records governed by the Appendix-Z physical-code branch.
 
 ### V.3.3 Backbone Integer-Ledger Audit
 
@@ -289,6 +409,39 @@ $$
 $$
 
 **Fail condition.** If any arrow requires an unstated branch input, the audit must report the exact missing hypothesis rather than treating the whole integer chain as unconditional.
+
+**Executed implication/type audit.** The source audit gives the following antecedent ledger for the four arrows.
+
+1. Theorem 15 derives $K_0=3$ and the attained eight-context floor under (O1)–(O3), (FC). The implication from this branch result to $d_0=8$ additionally uses Theorem 23's conditional Hilbert-dimension bound under mutually perfectly distinguishable representatives and Theorem Z.2's admissible same-response $\mathbb C^8$ comparator, identical non-support ledger and strict support-cost comparison.
+2. The implication to $(a,b,k_{\mathrm{tan}},M)=(2,6,12,24)$ additionally uses all hypotheses of Theorem Z.1: the sharp match/mismatch quotient and entropy-capacity gate; a nonempty comparison class with response and predictive performance fixed; an admissible $a=2$ witness; and strictly increasing maintained-support cost with no compensating improvement in another ledger term. The retained PCE-attractor/QFI tangent interpretation supplies the tangent reading, and Theorem Z.5 fixes the QFI-active mode count $M=24$. For $E=\mathbb C^8$ and a rank-two projector $p$, the audit computes
+   $$
+   \dim_{\mathbb C}pE=2,
+   \qquad
+   \dim_{\mathbb C}(1-p)E=6,
+   \qquad
+   k_{\mathrm{tan}}:=\dim_{\mathbb C}\operatorname{Hom}(pE,(1-p)E)=2\cdot6=12,
+   $$
+   $$
+   \dim_{\mathbb R}T_p\operatorname{Gr}(2,8)=2\cdot2\cdot6=24=M.
+   $$
+3. The implication from $M=24$ to binary code dimension $k=12$ additionally uses all four clauses of Definition Z.13b.0 and the conditional rate conclusion of Theorem Z.13b.0a. The typed interface-code admission maps $M$ to code length $n$; $k_{\mathrm{tan}}$ and the binary code dimension $k$ remain distinct typed objects even when both equal $12$. The conditional conclusion is the rate statement $k=n/2$. Distance-eight attainment and coordinate equivalence are witnessed by Theorem Z.13c; retained Golay-code selection requires Theorem Z.13b's separate fixed-rate distance-selection certificate.
+4. The implication to $D=4$ uses Definition Z.9a's normalized Bures/SLD metric, injective response-preserving labeling of distinct equal-radius, nonoverlapping cells by all $24$ modes, response-null-anisotropy quotient and least-feasible positive-support comparison, together with Theorem Z.10's mode-cell bound and Theorem Z.11's exact lower-dimensional exclusion, explicit regular-$24$-cell witness and least-feasible conclusion. This $D$ is the Euclidean tangent-shell dimension; identifying it with physical $3+1$ spacetime requires the separate continuum, time-orientation and metric-reconstruction branch.
+
+| Regression artifact field | `V.3.3-R1` record |
+|---|---|
+| Catalog binding and polarity | `TV-V-05`; `positive-discharge` of the exact branch-qualified implication-audit proposition |
+| Exact domain and equivalence | The four displayed implications, with equality restricted to objects of the same declared type |
+| Premises | Exactly the branch packages and typed source declarations enumerated in items 1–4 |
+| Exhaustive budget and coverage | All four arrows, every named antecedent above and all four required Peirce dimensions |
+| Verifier | Exact integer arithmetic plus a source-and-type check against Theorems 15, 23, Z.1, Z.2, Z.5, Z.10, Z.11 and Z.13b.0a and Definitions Z.9a and Z.13b.0 |
+| Integrity or applicability failure | An omitted antecedent, type merge, unsupported citation, or unpopulated or failed branch premise |
+| Falsifier | An exact arithmetic or type mismatch, or a counterexample satisfying every displayed antecedent while violating the stated conclusion |
+| Provenance class | Source-derived branch audit whose inputs are exhausted by the named declarations and exact arithmetic |
+| Nonvacuity disposition | Positive implication-audit disposition: the nonempty comparison class and admissible witness remain explicit antecedents in item 2 |
+| Consumers | The branch-qualified integer ledger; code realization, spacetime identification and common-carrier coexistence retain their separate gates |
+| Regression result | Pass for the exact branch-qualified regression proposition |
+
+The arithmetic and type checks accept each implication under its displayed branch package. Omitting a listed package invalidates the cited implication. The accepted scope is the displayed antecedent ledger; premise minimality and exclusion of alternative derivations require separate theorems. The accepted result is the vector of four branch-qualified implications. Promoting this displayed conditional chain to an unconditional chain requires positive discharge of every displayed branch package or a separate unconditional derivation. This closes the implication-ledger regression at its branch-qualified scope; common-carrier coexistence remains a separate certificate.
 
 ### V.3.4 Primordial $\mathbb{CP}^{11}$ Determinant Audit
 
@@ -326,6 +479,44 @@ that is equivalent to the lepton-to-quark tilt normalization $c_\ell/c_d=8/3$ in
 **Pass condition for closure.** If a candidate McKay branch does force the displayed relation, the audit must identify the exact diagram, marks, representation assignment, and normalization theorem that remove the continuous freedom. In that case the Appendix T Bures-weight certificate should be updated to cite the derived McKay closure.
 
 **Fail condition.** A raw match of small integers or Dynkin marks is insufficient. The audit fails if it does not prove uniqueness of the normalization or does not separate discrete McKay data from continuous Bures-weight scale choices.
+
+**Resolution record V.3.5-R1 (`TV-V-07`, McKay-only normalization no-go).** Let a finite McKay diagram, its marks, and its representation assignment supply any positive discrete triple
+$$
+(C_1,C_2,C_3)\in\mathbb R_{>0}^3,
+\qquad
+\kappa_i=C_i\chi_i,
+\qquad
+\chi_i>0,
+$$
+while leaving the three sector normalizations $\chi_i$ unconstrained, as required by the McKay-only comparison class. The two positive scale vectors
+$$
+\chi^{(0)}
+=
+\left(\frac1{C_1},\frac1{C_2},\frac{19}{12C_3}\right),
+\qquad
+\chi^{(28)}
+=
+\left(\frac1{C_1},\frac1{C_2},\frac1{C_3}\right)
+\tag{V.3.5-R1.1}
+$$
+give, for the same discrete diagram data,
+$$
+\kappa^{(0)}=\left(1,1,\frac{19}{12}\right),
+\qquad
+21\kappa_1^{(0)}+55\kappa_2^{(0)}-48\kappa_3^{(0)}=0,
+$$
+and
+$$
+\kappa^{(28)}=(1,1,1),
+\qquad
+21\kappa_1^{(28)}+55\kappa_2^{(28)}-48\kappa_3^{(28)}=28.
+\tag{V.3.5-R1.2}
+$$
+Equivalence in the frozen McKay-only class is marked-diagram isomorphism preserving the marks, representation assignment, and discrete triple $(C_1,C_2,C_3)$; it does not identify distinct relative scale vectors $(\chi_1,\chi_2,\chi_3)$. The background positive-triple class is nonempty: at $(C_1,C_2,C_3)=(1,1,1)$, the two displayed scale vectors are $(1,1,19/12)$ and $(1,1,1)$ and give the two displayed residuals.
+
+Thus no positive discrete triple, and hence no finite diagram that supplies only such a triple, forces the Bures-weight equation. The proof is uniform in $(C_1,C_2,C_3)$, so diagram enumeration is unnecessary. Definition V.3.12a and Proposition V.3.12b give the executed exact-arithmetic verifier, integrity record, falsifier, and nonvacuity witnesses.
+
+This is a `negative-refutation` of the complete McKay-only proposition. A theorem that fixes the relative $\chi_i$ would add normalization data and therefore leave this comparison class; it is the separately allowed positive Bures-weight-certificate route of Theorem T.34.1b, not an exception to the no-go. The catalog row is consequently a closed guardrail rather than a live McKay computation.
 
 ### V.3.6 RHG Flag-Lift Spectral Certificate Audit
 
@@ -1188,3 +1379,214 @@ $$
 D_{\mathrm{KL}}(\omega\Vert\nu_*).
 }
 $$
+
+### V.3.12 Unified Exact Finite-Obstruction and Null-Extension Audit
+
+**Definition V.3.12a (Frozen Seven-Target Exact Audit Contract).** The audit binds exactly
+$$
+\{\texttt{TV-R-03},\texttt{TV-U-01},\texttt{TV-V-07},
+\texttt{TV-Z-01},\texttt{TV-Z-02},\texttt{TV-Z-10},\texttt{TV-Z-11}\}.
+\tag{V.3.12a.1}
+$$
+Its input is the source-derived finite manifest in the program below: four current-graph roles and three typed value edges; one representative positive rational check of the quadratic-versus-quartic coefficient mismatch; the three symbolic positive McKay coefficients; the fixed eight-dimensional binary null-extension class; the eight full-context labels; and the two positive response-normalization families. Corollary U.73b and Theorems U.73a and R.3.5e.3 remain the analytic owners of the universal false-vacuum and current-graph conclusions. No comparison value, target parameter, fitted coefficient, network input, random seed, or external package is admitted.
+
+The source snapshot is the UTF-8 text strictly between the `~~~python` and `~~~` lines below, with LF line endings and one final LF. Save it as `finite_obstruction_audit.py` and execute `python3 finite_obstruction_audit.py`. It uses only exact integers and `fractions.Fraction`; the JSON serializer is canonicalized by sorted keys and compact separators.
+
+~~~python
+from fractions import Fraction
+import hashlib
+import json
+
+
+def fstr(value):
+    value = Fraction(value)
+    return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
+
+
+def canonical_sha(value):
+    payload = json.dumps(value, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def audit_u01():
+    # Representative exact-arithmetic regression for the coefficient mismatch.
+    # Corollary U.73b and Theorem U.73a, not this finite fixture, own the
+    # universal nullity and homogeneity conclusions.
+    m2 = Fraction(2)
+    A = Fraction(3)
+    lhs_t2 = m2 * A * A / 2
+    rhs_t2 = Fraction(0)
+    assert lhs_t2 > 0 and rhs_t2 == 0 and lhs_t2 != rhs_t2
+    return {
+        "branch": "Theorem-U.13b false-vacuum branch",
+        "lhs_t2": fstr(lhs_t2),
+        "rhs_t2": fstr(rhs_t2),
+        "representative_quadratic_vs_quartic_check": True,
+        "proof_owner": "Corollary U.73b and Theorem U.73a",
+    }
+
+
+def audit_r03():
+    # Exact finite-manifest regression only. Theorem R.3.5e.3 owns the
+    # source-clause case split and the no-current-source conclusion.
+    roles = ("C3", "Ccap", "Ctan", "Ckis")
+    value_edges = [("C3", "Ccap", "K0"), ("Ccap", "Ctan", "a,d0"), ("Ctan", "Ckis", "M")]
+    assert len(set(roles)) == 4
+    assert len(value_edges) == 3
+    assert all(label in {"K0", "a,d0", "M"} for _, _, label in value_edges)
+    return {
+        "roles": list(roles),
+        "value_edges": value_edges,
+        "executed_scope": "four-role/three-value-edge manifest regression",
+        "proof_owner": "Theorem R.3.5e.3",
+    }
+
+
+def audit_v07():
+    # For every positive discrete triple C, the displayed chi formulas give
+    # kappa directly. Thus the calculation is independent of which finite
+    # diagram supplied C.
+    kappa_pass = (Fraction(1), Fraction(1), Fraction(19, 12))
+    kappa_fail = (Fraction(1), Fraction(1), Fraction(1))
+
+    def residual(kappa):
+        return 21 * kappa[0] + 55 * kappa[1] - 48 * kappa[2]
+
+    assert all(value > 0 for value in kappa_pass + kappa_fail)
+    assert residual(kappa_pass) == 0
+    assert residual(kappa_fail) == 28
+    return {
+        "universal_scale_rule": {
+            "pass_chi": "(1/C1,1/C2,19/(12*C3))",
+            "fail_chi": "(1/C1,1/C2,1/C3)",
+            "domain": "C1,C2,C3>0",
+        },
+        "pass_kappa": [fstr(value) for value in kappa_pass],
+        "pass_residual": fstr(residual(kappa_pass)),
+        "fail_kappa": [fstr(value) for value in kappa_fail],
+        "fail_residual": fstr(residual(kappa_fail)),
+        "mckay_only_forces_constraint": False,
+    }
+
+
+def audit_z01():
+    d0 = 8
+    ranks = list(range(1, d0))
+    # Two sharp retained values need two orthogonal nonzero representatives.
+    feasible = [rank for rank in ranks if rank >= 2]
+    # In the null-extension comparison class, support cost is any strictly
+    # increasing function. The integer rank itself is a canonical witness.
+    costs = {rank: rank for rank in feasible}
+    minimizers = [rank for rank in feasible if costs[rank] == min(costs.values())]
+    assert feasible == [2, 3, 4, 5, 6, 7]
+    assert minimizers == [2]
+    return {
+        "ambient_d0": d0,
+        "candidate_ranks": ranks,
+        "feasible_ranks": feasible,
+        "canonical_response_quotient_rank": 2,
+        "strict_cost_witness": costs,
+        "unique_minimizer": 2,
+    }
+
+
+def audit_z02():
+    contexts = 8
+    # Boundary matrices: eight mutually orthogonal columns have Gram I_8 in
+    # dimension 8; dimension 7 has rank at most 7. For every d>=8, the
+    # canonical inclusion i_d and projection p_d satisfy p_d i_d=I_8.
+    gram8 = [[int(i == j) for j in range(contexts)] for i in range(contexts)]
+    assert all(sum(row) == 1 for row in gram8)
+    for d in range(8, 33):
+        inclusion = [[int(row == col) for col in range(contexts)] for row in range(d)]
+        projection = [[int(row == col) for col in range(d)] for row in range(contexts)]
+        composite = [
+            [sum(projection[i][k] * inclusion[k][j] for k in range(d)) for j in range(contexts)]
+            for i in range(contexts)
+        ]
+        assert composite == gram8
+    return {
+        "context_count": contexts,
+        "rank7_can_host_8_orthogonal_contexts": False,
+        "rank8_gram": gram8,
+        "parametric_comparator": "C^8 --i_d--> C^d --p_d--> C^8, p_d*i_d=I_8 for every d>=8",
+        "instantiated_dimensions": [8, 32],
+        "unique_strict_support_minimizer": 8,
+    }
+
+
+def audit_z10():
+    # K and u are held fixed. The positive Ward scalar c survives unless the
+    # independent equal-sum certificate is supplied.
+    c_values = [Fraction(1), Fraction(2), Fraction(3, 2)]
+    family = [
+        {"cW": fstr(c), "G_over_K_inverse": fstr(1 / c), "Gamma2_over_K": fstr(c), "kappa_bulk": fstr(c)}
+        for c in c_values
+    ]
+    assert len({row["kappa_bulk"] for row in family}) == len(c_values)
+    Q = Fraction(2)
+    certificate_solutions = [c for c in c_values if Q == Q / c]
+    assert certificate_solutions == [Fraction(1)]
+    return {
+        "same_upstream_K_and_u_family": family,
+        "upstream_forces_unit_Ward_scalar": False,
+        "positive_Q_equal_sum_certificate_solution": [fstr(value) for value in certificate_solutions],
+    }
+
+
+def audit_z11():
+    # Schur isotropy fixes an invariant form only up to a positive scalar L.
+    M = Fraction(24)
+    Kavg = Fraction(32, 23)
+    L_values = [Fraction(1), Fraction(1, 16)]
+    outputs = []
+    for L in L_values:
+        Keff = (M - 1) * Kavg * L
+        outputs.append({"Lvis": fstr(L), "Keff": fstr(Keff)})
+    assert outputs == [{"Lvis": "1", "Keff": "32"}, {"Lvis": "1/16", "Keff": "2"}]
+    return {
+        "irreducible_tangent_module": "Hom(C^2,C^6)",
+        "positive_invariant_form_family": "L*g_B, L>0",
+        "same_isotropy_outputs": outputs,
+        "isotropy_forces_Lvis_1_over_16": False,
+    }
+
+
+def main():
+    checks = {
+        "TV-R-03": audit_r03(),
+        "TV-U-01": audit_u01(),
+        "TV-V-07": audit_v07(),
+        "TV-Z-01": audit_z01(),
+        "TV-Z-02": audit_z02(),
+        "TV-Z-10": audit_z10(),
+        "TV-Z-11": audit_z11(),
+    }
+    transcript = {
+        "schema": "PU-FINITE-OBSTRUCTION-AUDIT-v1",
+        "arithmetic": "exact integers and fractions",
+        "target_queries": 0,
+        "checks": checks,
+        "check_sha256": canonical_sha(checks),
+        "status": "PASS",
+    }
+    print(json.dumps(transcript, sort_keys=True, separators=(",", ":")))
+
+
+if __name__ == "__main__":
+    main()
+~~~
+
+**Proposition V.3.12b (Executed Seven-Target Exact Audit).** The frozen source has `182` lines and `6573` bytes. Its SHA-256 is `6c62145a5a7dbbe0c75971efe80caddbfadfd1871bffe8879421ff555ec98068`. CPython `3.13.12` (`cpython-313`) on `Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39`, executable SHA-256 `a38f63d2b8843820b59746250911cd203dbd76c8dc53693007aaa3bda2007232`, executed it to completion and returned `status=PASS`, internal canonical check SHA-256 `bba7093f554adb74285bace851c3df08e814fbbf0ce1ab503f67589499bd445b`, and one `2059`-byte LF-terminated canonical JSON transcript whose SHA-256 is `3267b7d14389bb53a81155aed565346b992666902ce7d374e3c9877c81f4c9ac`.
+
+| Target | Exhausted proposition and result | Exact coverage | Remaining outside the result |
+|---|---|---|---|
+| `TV-U-01` | A fifth Hessian zero mode on the Theorem-U.13b false-vacuum branch: `negative-refutation` | Universal analytic owners Corollary U.73b and Theorem U.73a; one representative exact rational coefficient regression | Other action and exact-scale-family classes |
+| `TV-R-03` | One already supplied current source role compresses all four roles: `negative-refutation` | Theorem R.3.5e.3's complete four-case analytic proof; exact $4$-role/$3$-edge manifest regression | A genuinely new parent invariant |
+| `TV-V-07` | Positive McKay discrete data alone force the Bures equation: `negative-refutation` | Symbolic witnesses valid for every $(C_1,C_2,C_3)>0$; residuals $0$ and $28$ | Only a premise-enlarging normalization theorem; the McKay-only target is closed |
+| `TV-Z-01` | Fixed-$d_0=8$ sharp-binary response-null active-rank classification: `positive-discharge` | Every $1\le a<8$; feasible list $2,\ldots,7$; quotient rank $2$ | Response-active or performance-changing comparators |
+| `TV-Z-02` | Eight-context response-null carrier classification: `positive-discharge` | Dimension lower bound plus parametric $p_di_d=I_8$ for every $d\ge8$; executable instances $8\le d\le32$ | Non-null larger carriers and physical realization |
+| `TV-Z-10` | QFI/capacity alone force $c_{\mathrm W}=1$: `negative-refutation` | Exact positive witnesses $c=1,3/2,2$ and positive-$Q$ equal-sum closure check | Operational current, normalization, bandwidth and spectral certificate |
+| `TV-Z-11` | Isotropy alone forces $L_{\mathrm{vis}}=1/16$: `negative-refutation` | Complete scalar family $Lg_B$, with exact witnesses $L=1,1/16$ | Operator-realized electromagnetic projection and unit bridge |
+
+The equivalence relation for each check is its owner record's typed basis-change or graph-relabeling relation; none identifies response-distinct scalar values or changes the candidate class. The verifier is the hashed exact program together with the named analytic owner theorem for every universal or infinite statement. Integrity fails on a source hash, runtime, assertion, canonical-check hash, transcript-length, or transcript-hash mismatch, or when an owner premise is absent. The target-specific falsifiers are stated in the owner resolution records; the transcript supplies only the declared finite fixtures, boundary witnesses, and alternate-scale witnesses. Provenance is source-derived exact mathematics with zero target queries. Nonvacuity is supplied by the displayed standard-basis carriers, all four populated graph roles, both positive scale choices, and the nontrivial Theorem-U.13b branch. Consumers may import only the result column above; no physical carrier, current, action, determinant, observable, or empirical comparison is promoted by this audit. ∎

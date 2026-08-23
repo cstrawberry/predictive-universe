@@ -14,7 +14,7 @@ The appendix is organized as follows:
 
 - **Section M.2** formalizes the Perspectival State $S_{(s)}(t)=(\rho(t),s)$, with pure vectors as a special case, and equips the complete-flag Perspective Space $\Sigma\cong U(d_0)/U(1)^{d_0}$ with its declared Riemannian metric.
 
-- **Section M.3** decomposes a registered quantum instrument from the conditional perspective kernel $G_{\text{persp}}(s'|s,k,N,\Delta t)$ and gives an explicit drift-diffusion realization on $\Sigma$.
+- **Section M.3** decomposes a registered quantum instrument from the conditional perspective kernel $G_{\text{persp}}(s'|s,k,N,\Delta t)$, gives an explicit drift-diffusion realization on $\Sigma$, and registers an interrogative-efficiency branch (Section M.3.3.2) on which the realization's drift data are derived rather than supplied.
 
 - **Section M.4** applies that conditional instrument model to measurement records. The Born selector and single-run actualization remain inputs from the cited quantum branch rather than consequences of perspective diffusion.
 
@@ -87,7 +87,7 @@ Here $\mu$ is the normalized $U(d_0)$-invariant quotient probability measure on 
 
 ### M.3.3 Properties and an Explicit Drift-Diffusion Realization of the Conditional Perspective Kernel $G_{persp}$
 
-The detailed interaction dependence of the conditional kernel $G_{persp}(s' | s, k, N, \Delta t)$ is not fixed uniquely at the present level of the framework: it encodes the physics of the interaction $N$ and may vary across admissible interaction models. What is fixed here is the structural decomposition (M.2), the normalization requirement (M.3), the ideal projective limit (M.4), and an explicit drift-diffusion realization whose short-time behavior matches the Gaussian-with-drift heuristic form and whose semigroup satisfies the robustness conditions used below. We therefore begin by stating the generic properties and then present that constructive realization.
+The detailed interaction dependence of the conditional kernel $G_{persp}(s' | s, k, N, \Delta t)$ is not fixed uniquely at the present level of the framework: it encodes the physics of the interaction $N$ and may vary across admissible interaction models. What is fixed here is the structural decomposition (M.2), the normalization requirement (M.3), the ideal projective limit (M.4), and an explicit drift-diffusion realization whose short-time behavior matches the Gaussian-with-drift heuristic form and whose semigroup satisfies the robustness conditions used below. We therefore begin by stating the generic properties and then present that constructive realization. Section M.3.3.2 then registers an interrogative-efficiency branch on which the realization's drift data are derived rather than supplied.
 
 *   **Dependence on Interaction $N$:** The kernel $G_{persp}$ depends fundamentally on the nature of the interaction $N$. Different interactions will induce different perspective dynamics.
 *   **Ideal Projective Measurement Limit:** Let the apparatus record a complete outcome flag $s_k\in\Sigma$ whose distinguished ray is $[|k\rangle]$. A ray alone is not a point of the complete-flag manifold. In the idealized sharp limit the conditional kernel is required to converge weakly to
@@ -122,7 +122,7 @@ Equip $\Sigma$ with the quotient Riemannian metric $g_\Sigma$ of Definition 25. 
 
 **(b) Interaction-biased Markov diffusion generator**
 
-Fix a complete target perspective $s_k\in\Sigma$, namely an ordered orthonormal flag selected by the measurement apparatus and carrying outcome label $k$. A single outcome ray is not sufficient to determine $s_k$. In a convex normal neighborhood of this complete flag, define
+Fix a complete target perspective $s_k\in\Sigma$, namely an ordered orthonormal flag selected by the measurement apparatus and carrying outcome label $k$. A single outcome ray is not sufficient to determine $s_k$. On the interrogative-efficiency branch of Section M.3.3.2, the pair $(s_k,\lambda_{\mathrm{drift}})$ is instead supplied by Definition M.3.3f and Proposition M.3.3h; either supply is admissible interaction-model data. In a convex normal neighborhood of this complete flag, define
 $$
 V_k^{\mathrm{loc}}(s')
 =
@@ -220,6 +220,131 @@ $$
 \end{aligned}
 $$
 Thus $H(\mu_0\mid\pi_k)-H(\mu_{\Delta t}\mid\pi_k)\ge0$ is a dimensionless relative-entropy decrease. It is not, by itself, heat or entropy exported to a physical environment. A thermodynamic interpretation requires a separately accepted local-detailed-balance certificate identifying $V_k=\beta H_k$ and recording the work and heat conventions. The registered-reset inequality $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ applies only when a physical reset with the stated conditional entropy is independently present; it does not follow from the diffusion identity.
+
+#### M.3.3.2 The interrogative-efficiency branch: derived drift data
+
+The drift data $(s_k,\lambda_{\mathrm{drift}})$ entering items (b)–(e) of Section M.3.3.1 may be supplied directly by the interaction model, as above, or derived on the registered branch constructed in this subsection, the interrogative-efficiency branch; the selection rule it registers is referred to as the Principle of Interrogative Efficiency (PIE). Throughout, fix the setting of Corollary 23c.1: a finite-dimensional smooth chart $\Theta$ of MPU protocol-response states and a $C^2$ family $\rho:\Theta\to\mathcal D(\mathcal H_0)$ on the retained Hilbert branch, read on the retained identifiable support stratum with the usual lower-semicontinuous SLD extension at rank-change boundary points, together with a registered operating point $\theta\in\Theta$ and a registered tangent direction $v$ with symmetric logarithmic derivative $L_v=v^aL_a$ there, so that $F^Q(v,v)=\operatorname{tr}(\rho(\theta)L_v^2)$ as recorded in the proof of Corollary 23c.1. When the kernel is conditioned on a registered outcome $k$, the registered operating point is the post-outcome retained state, so the derived drift data inherit the outcome dependence displayed in (M.2). Unlabeled state symbols $\rho$ below denote $\rho(\theta)$.
+
+**Definition M.3.3c (Interrogative Benefit).** For $s\in\Sigma$ represented by an ordered orthonormal basis $\{|i\rangle_s\}_{i=1}^{d_0}$ (Theorem 24), with projectors $P_i^s=|i\rangle_s\langle i|_s$ and $p_i(\theta)=\operatorname{tr}(\rho(\theta)P_i^s)$, the interrogative benefit at the registered operating point and direction is
+$$
+B_{\mathrm{int}}(s):=\sum_{i:\,p_i(\theta)>0}\frac{\big(\partial_v p_i(\theta)\big)^2}{p_i(\theta)},
+\tag{M.5d}
+$$
+with the same lower-semicontinuous convention as Equation (23c.1). Contracting (23c.1) twice with $v$ gives $B_{\mathrm{int}}(s)=v^aF^{(E(s))}_{ab}(\theta)v^b$ for the labeled complete rank-one projective context $E(s)=\{P_i^s\}$. On a retained-protocol branch containing these contexts, for instance on the full projection/effect coverage route of Definition 8.2b, $B_{\mathrm{int}}(s)$ is the directional classical Fisher information attainable by interrogating in context $s$.
+
+**Lemma M.3.3d (Descent to $\Sigma$).** $B_{\mathrm{int}}$ is well defined on $\Sigma$: it depends on the representing ordered basis only through the projectors $P_i^s$ and is invariant under per-vector phases and outcome-label permutations.
+
+*Proof.* Each $p_i(\theta)$ and $\partial_v p_i(\theta)$ depends only on $P_i^s$, which is unchanged by $|i\rangle_s\mapsto e^{i\phi_i}|i\rangle_s$, and the sum in (M.5d) is invariant under permutations of the index $i$. Theorem 24 identifies this invariant data with the point $s\in\Sigma$. ∎
+
+**Theorem M.3.3e (Attainable Interrogative Benefit).** Let $L_v$ be any symmetric logarithmic derivative for the registered direction $v$ at the registered operating point. Then
+$$
+\sup_{s\in\Sigma}B_{\mathrm{int}}(s)=F^Q(v,v)=\operatorname{tr}(\rho L_v^2),
+\tag{M.5e}
+$$
+the value is independent of the admissible choice of $L_v$, and the supremum is attained at every eigenflag of $L_v$, that is, at every $s\in\Sigma$ represented by an ordered orthonormal eigenbasis of $L_v$.
+
+*Proof.* Upper bound. Each labeled complete rank-one projective context is a POVM on the $C^2$ family, so the Braunstein–Caves information inequality, invoked in the proof of Corollary 23c.1 for every POVM on such a family, gives $F^{(E(s))}(\theta)\preceq F^Q(\theta)$; contracting twice with $v$ yields $B_{\mathrm{int}}(s)=v^aF^{(E(s))}_{ab}v^b\le v^aF^Q_{ab}v^b=F^Q(v,v)$ for every $s\in\Sigma$.
+
+Attainment. Let $\{|l_i\rangle\}_{i=1}^{d_0}$ be an orthonormal eigenbasis of $L_v$ with $L_v|l_i\rangle=\lambda_i|l_i\rangle$, $\lambda_i\in\mathbb R$, and let $s_\star\in\Sigma$ be a flag it represents. Write $p_i=\langle l_i|\rho|l_i\rangle$. Hermiticity of $L_v$ gives $\langle l_i|L_v\rho|l_i\rangle=\lambda_i p_i=\langle l_i|\rho L_v|l_i\rangle$, so the defining relation $\partial_v\rho=\tfrac12(L_v\rho+\rho L_v)$ yields
+$$
+\partial_v p_i=\langle l_i|\partial_v\rho|l_i\rangle=\lambda_i p_i.
+$$
+Every index with $p_i=0$ therefore has $\partial_v p_i=0$ and contributes nothing under the stated convention, while the remaining indices give
+$$
+B_{\mathrm{int}}(s_\star)=\sum_{i:\,p_i>0}\lambda_i^2p_i=\sum_{i=1}^{d_0}\lambda_i^2\langle l_i|\rho|l_i\rangle=\operatorname{tr}(\rho L_v^2)=F^Q(v,v).
+$$
+
+Choice independence. If $L_v'$ also satisfies the defining relation, then $D:=L_v-L_v'$ obeys $D\rho+\rho D=0$. Multiplying on the right by $D$ and taking the trace gives $\operatorname{tr}(D\rho D)+\operatorname{tr}(\rho D^2)=0$, while cyclicity gives $\operatorname{tr}(D\rho D)=\operatorname{tr}(\rho D^2)$, so $\operatorname{tr}(D\rho D)=0$. Since $\operatorname{tr}(D\rho D)=\operatorname{tr}\big((\rho^{1/2}D)^\dagger(\rho^{1/2}D)\big)$, this forces $\rho^{1/2}D=0$, hence $\rho D=0$ and, taking adjoints, $D\rho=0$. Expanding $\operatorname{tr}(\rho L_v'^2)=\operatorname{tr}\big(\rho(L_v-D)^2\big)$, the terms $\operatorname{tr}(\rho DL_v)$, $\operatorname{tr}(\rho L_vD)=\operatorname{tr}(D\rho L_v)$, and $\operatorname{tr}(\rho D^2)$ all vanish because $\rho D=D\rho=0$, so $\operatorname{tr}(\rho L_v'^2)=\operatorname{tr}(\rho L_v^2)$, and the attainment computation applies verbatim to any admissible choice. ∎
+
+**Definition M.3.3f (Interrogative-Efficiency Potential).** The interrogative-efficiency branch registers: a conversion factor $\gamma_{\mathrm{int}}>0$ carrying the reciprocal dimension of $B_{\mathrm{int}}$, playing for the interrogative sector the role the power conversion factor $\Gamma_0$ (Definition 20) plays for the complexity sector; a $C^\infty$ execution-cost profile $v_{\mathrm{exec}}:\Sigma\to[0,\infty)$, constant when no context-dependent execution cost is registered; and, optionally, on a branch carrying criterion (M.18)–(M.19) together with the correspondence of Remark M.10.2, a lower-semicontinuous self-model cost profile $v_{\mathrm{self}}:\Sigma\to[0,\infty]$, with $v_{\mathrm{self}}\equiv0$ when unregistered. The interrogative-efficiency potential is
+$$
+V_{\mathrm{PIE}}(s'):=-\gamma_{\mathrm{int}}B_{\mathrm{int}}(s')+v_{\mathrm{exec}}(s')+v_{\mathrm{self}}(s'),
+\tag{M.5f}
+$$
+defined up to an additive constant, which the Gibbs normalization of item (e) removes. A smooth interrogative sub-branch additionally registers a function $V_{\mathrm{PIE}}^{\mathrm{sm}}\in C^\infty(\Sigma,\mathbb R)$ agreeing with $V_{\mathrm{PIE}}$ on a neighborhood of a registered minimizer $s_\star$ of $V_{\mathrm{PIE}}$; this mirrors the global smooth-potential choice of item (b). No separate transition-cost term enters (M.5f): at interaction duration $\Delta t$ the geometric transition cost is carried by the short-time Gaussian factor $e^{-d_\Sigma^2(s,s')/(4\Delta t)}$ of the kernel expansion in item (c).
+
+**Corollary M.3.3g (Kernel Well-Posedness on the Smooth Interrogative Sub-Branch).** With $V_k:=V_{\mathrm{PIE}}^{\mathrm{sm}}$, the generator (M.5a) and kernel (M.5b) satisfy all conclusions of items (c) and (e): the positive-time kernel is smooth, strictly positive, and normalized, the invariant density is $Z^{-1}e^{-V_{\mathrm{PIE}}^{\mathrm{sm}}}d\mu$, and the relative-entropy decrease of item (e) holds. Item (d) holds under the corresponding bound $\operatorname{Ric}_\Sigma+\operatorname{Hess}_\Sigma V_{\mathrm{PIE}}^{\mathrm{sm}}\succeq\kappa_{\mathrm{eff}}g_\Sigma$.
+
+*Proof.* The proofs of items (c), (d), and (e) use, respectively: smoothness of the coefficients and uniform ellipticity of (M.5a) on the compact connected manifold $\Sigma$ together with the Minakshisundaram–Pleijel expansion; the stated Bakry–Émery curvature-dimension bound; and reversibility of (M.5a) with respect to the Gibbs weight together with smoothness, positivity, and compactness. Each input holds verbatim with $V_k=V_{\mathrm{PIE}}^{\mathrm{sm}}\in C^\infty(\Sigma,\mathbb R)$. ∎
+
+**Proposition M.3.3h (Second-Order Normal Form and Derived Drift Data).** Let $V\in C^2$ on a neighborhood of $s_\star\in\Sigma$ with $\nabla_\Sigma V(s_\star)=0$ and Riemannian Hessian $H:=\operatorname{Hess}_\Sigma V(s_\star)$. Then, for $v$ in a normal ball about $s_\star$,
+$$
+V(\exp_{s_\star}v)=V(s_\star)+\tfrac12H(v,v)+o\big(\|v\|_{g_\Sigma}^2\big),
+\qquad
+d_\Sigma(s_\star,\exp_{s_\star}v)=\|v\|_{g_\Sigma}.
+\tag{M.5g}
+$$
+If moreover $H=\lambda_{\mathrm{drift}}\,g_\Sigma|_{s_\star}$ with $\lambda_{\mathrm{drift}}>0$, then
+$$
+V(s')=V(s_\star)+\frac{\lambda_{\mathrm{drift}}}{2}d_\Sigma^2(s',s_\star)+o\big(d_\Sigma^2(s',s_\star)\big),
+$$
+so the local model $V_k^{\mathrm{loc}}$ of item (b) with $s_k=s_\star$ is the second-order normal form of $V$ at $s_\star$. In particular, on a smooth interrogative sub-branch whose registered potential $V_{\mathrm{PIE}}^{\mathrm{sm}}$ has a unique global minimizer $s_\star$ that is nondegenerate with isotropic Hessian $\lambda_{\mathrm{drift}}\,g_\Sigma|_{s_\star}$: the drift data of items (b)–(e) are derived rather than supplied, with $s_k:=s_\star$ and $\lambda_{\mathrm{drift}}$ the stated isotropy scale; the substitution $V_k:=V_{\mathrm{PIE}}^{\mathrm{sm}}$ in (M.5a)–(M.5b) is admissible by Corollary M.3.3g; and when $v_{\mathrm{exec}}$ and $v_{\mathrm{self}}$ are constant on the agreement neighborhood, $V_{\mathrm{PIE}}^{\mathrm{sm}}$ and $-\gamma_{\mathrm{int}}B_{\mathrm{int}}$ differ there by a constant, so $s_\star$ is a local maximizer of $B_{\mathrm{int}}$ and $\lambda_{\mathrm{drift}}$ equals $\gamma_{\mathrm{int}}$ times the isotropy scale of the Hessian of $-B_{\mathrm{int}}$ at $s_\star$ computed through the smooth representative.
+
+*Proof.* Work in geodesic normal coordinates $(x^1,\dots,x^m)$ centered at $s_\star$, $m=\dim\Sigma$; these exist on a normal ball because $(\Sigma,g_\Sigma)$ is a smooth Riemannian manifold. At the center, $g_{ij}(0)=\delta_{ij}$ and the Christoffel symbols vanish, so for the coordinate representation $\widetilde V(x):=V(\exp_{s_\star}(x^ie_i))$ the Riemannian Hessian at the critical point coincides with the coordinate Hessian: $H_{ij}=\partial_i\partial_j\widetilde V(0)-\Gamma_{ij}^k(0)\,\partial_k\widetilde V(0)=\partial_i\partial_j\widetilde V(0)$. Since $\nabla_\Sigma V(s_\star)=0$, $\partial_i\widetilde V(0)=0$, and the second-order Taylor theorem with Peano remainder for the $C^2$ function $\widetilde V$ gives the expansion in (M.5g). Radial geodesics from $s_\star$ are minimizing within the normal ball, so $d_\Sigma(s_\star,\exp_{s_\star}v)=\|v\|_{g_\Sigma}$ there. If $H=\lambda_{\mathrm{drift}}g_\Sigma|_{s_\star}$, then $H(v,v)=\lambda_{\mathrm{drift}}\|v\|_{g_\Sigma}^2=\lambda_{\mathrm{drift}}d_\Sigma^2(s_\star,\exp_{s_\star}v)$, giving the second display, whose right-hand side is $V(s_\star)+V_k^{\mathrm{loc}}(s')+o(d_\Sigma^2)$ with $s_k=s_\star$. Applying the expansion to $V=V_{\mathrm{PIE}}^{\mathrm{sm}}$ at its unique global nondegenerate minimizer, where $\nabla_\Sigma V_{\mathrm{PIE}}^{\mathrm{sm}}(s_\star)=0$ because $\Sigma$ is boundaryless, gives the derived identifications; the substitution statement is Corollary M.3.3g; and when the cost profiles are constant on the agreement neighborhood, $V_{\mathrm{PIE}}^{\mathrm{sm}}=-\gamma_{\mathrm{int}}B_{\mathrm{int}}+\mathrm{const}$ there, so the maximizer and Hessian statements follow by sign reversal and bilinearity of the Hessian. ∎
+
+**Corollary M.3.3i (Isotropic Exploration Baseline).** If $B_{\mathrm{int}}$, $v_{\mathrm{exec}}$, and $v_{\mathrm{self}}$ are constant on $\Sigma$, then $\nabla_\Sigma V_{\mathrm{PIE}}=0$ and the generator (M.5a) with $V_k=V_{\mathrm{PIE}}$ reduces to the isotropic heat generator $\Delta_\Sigma$, the $\lambda_{\mathrm{drift}}\to0$ limit noted in item (d). An interaction whose registered benefit landscape is flat therefore contributes no drift beyond the isotropic baseline.
+
+*Proof.* A constant potential is smooth with vanishing gradient, so (M.5a) reduces to $\Delta_\Sigma f$. ∎
+
+**Remark M.3.3j (Scope and Registration).** The branch derives drift data from registered benefit and cost profiles; it does not derive the registration itself. The chart, operating point, direction $v$, conversion factor $\gamma_{\mathrm{int}}$, cost profiles, and smooth representative are registered task data in the sense of Definition 8's task registration, so the branch is task-indexed. The Born trace law, single-run selector, and actualization instrument of Sections M.3.2 and M.4 retain their independent premises; nothing in this subsection derives them. The ideal projective limit, Equation (M.4), and the strong-readout transient limit retain the additional hypotheses stated in items (b) and (d). Multi-MPU consistency of derived kernels retains the descent condition of Corollary G.1.11c, and the self-model cost profile inherits the certificate structure of Theorems M.10.3 and M.10.7, including the divergence behavior recorded after (M.19). The benefit-minus-cost form of (M.5f) parallels the driving-force decomposition of Definition 20; no identification of $\gamma_{\mathrm{int}}$ with $\Gamma_0$ is made.
+
+**Theorem M.3.3k (Complete Regular-Finite Covariant-Kernel Classification).** Let a finite group $G$ act on $\Sigma_G=G$ by left translation. A Markov kernel is $G$-covariant if and only if there is a unique probability law $q$ on $G$ with
+$$
+K_q(g,h)=q(g^{-1}h).
+\tag{M.3.3k.1}
+$$
+Its exact total-variation contraction coefficient is
+$$
+\eta_{\mathrm{TV}}(K_q)=\frac12\max_{a\in G}\sum_{u\in G}|q(u)-q(a^{-1}u)|,
+\tag{M.3.3k.2}
+$$
+and ND--RID realizes it by drawing $U\sim q$ and updating $g\mapsto gU$. For $G=\mathbb Z_2$, $q_p=(p,1-p)$ and $q_{1-p}$ give response-distinct kernels when $p\ne1/2$ but have the same contraction $|2p-1|$, one-step update count and reset entropy $h_2(p)$.
+
+*Proof.* Covariance gives $K(g,h)=K(e,g^{-1}h)$; the converse is immediate. Dobrushin's finite-kernel formula applied to the translated rows gives (M.3.3k.2). The remaining claims follow by direct sampling and substitution. ∎
+
+**Scoped resolution TV-M-01-R1.** This is complete on every finite regular orbit and supplies its ND--RID realization and an equal update/reset-cost nonuniqueness pair. It does not classify the continuous flag-manifold class, so `TV-M-01` remains live.
+
+**Theorem M.3.3l (Local-Detailed-Balance Realization and Source-Separated Reset Ledger).** Fix smooth $H_k:\Sigma\to\mathbb R$, $\beta,D>0$, and clock duration $\Delta t>0$. Put
+$$
+V_k=\beta H_k,
+\quad
+\mathcal L_{k,\beta}=D(\Delta_\Sigma-\beta\langle\nabla H_k,\nabla(\cdot)\rangle),
+\quad
+d\pi_{k,\beta}=Z^{-1}e^{-\beta H_k}d\mu.
+\tag{M.3.3l.1}
+$$
+Its normalized kernel is reversible and hence, wherever the densities are nonzero,
+$$
+\pi(ds)p_t(s,ds')=\pi(ds')p_t(s',ds),
+\qquad
+\log\frac{p_t(s,s')}{p_t(s',s)}=\beta[H_k(s)-H_k(s')].
+\tag{M.3.3l.2}
+$$
+Thus
+$$
+\Delta E_{\mathrm{persp}}=H_k(s')-H_k(s),
+\quad W_{\mathrm{drive}}=0,
+\quad Q_\Theta=H_k(s)-H_k(s'),
+\quad \Delta E_{\mathrm{persp}}+Q_\Theta=0.
+\tag{M.3.3l.3}
+$$
+The fixed-potential source $\mathsf S_H$ owns $H_k$ but performs no work, and $\Theta$ uniquely owns diffusion heat. Populate a separate degenerate record bit $P$, a trivial retained register $R=r_0$, and the exact pre-reset law
+$$
+q(P=0,R=r_0)=q(P=1,R=r_0)=\frac12.
+\tag{M.3.3l.4}
+$$
+During a registered $\tau_{\mathrm{reset}}>0$, a cyclic controller $K_{\mathrm{reset}}$ and work store $\mathsf W_{\mathrm{reset}}$ implement the ready-state CPTP map
+$$
+\mathscr R_P(X)=|0\rangle\!\langle0|_P\otimes\operatorname{Tr}_P X,
+\qquad
+Q_{\Theta_{\mathrm{reset}}}\ge k_BT_{\mathrm{reset}}\ln2,
+\tag{M.3.3l.5}
+$$
+with $\Theta_{\mathrm{reset}}$ the unique reset-heat owner and $\mathsf W_{\mathrm{reset}}$ the unique reset-work owner. The controller and bit Hamiltonians return to their initial values. The diffusion owner set $\{\mathsf S_H,\Theta\}$ and reset owner set $\{K_{\mathrm{reset}},\mathsf W_{\mathrm{reset}},\Theta_{\mathrm{reset}}\}$ are disjoint, so relative-entropy decay is not counted again as reset heat.
+
+*Proof.* The weighted-gradient divergence form is self-adjoint in $L^2(\pi_{k,\beta})$, proving detailed balance. Division gives (M.3.3l.2), and the fixed-Hamiltonian first law gives (M.3.3l.3). The map $\mathscr R_P$ is CPTP and resets both atoms of the displayed actual law; $H_q(P\mid R)=\ln2$, so Definition 28 gives (M.3.3l.5) under the displayed degenerate-bit, cyclic-controller and isothermal-bath premises. ∎
+
+**Resolution TV-M-02-R1 (Metadata).** Exact domain: all smooth time-independent $H_k$ on compact $\Sigma$, all $\beta,D>0$, positive clocks, and the populated uniform binary-reset branch (M.3.3l.4)--(M.3.3l.5). Premises: the reversible diffusion generator and invariant law of Theorem M.3.3l, $V_k=\beta H_k$, a fixed-Hamiltonian source, a positive registered duration, the uniform two-atom bit law, a degenerate bit Hamiltonian, an isothermal bath and a cyclic reset controller returning its Hamiltonian. Equivalence: equality of the weighted diffusion kernel, clock, work/heat responses, reset law and complete owner ledger. Budget: every state and time in the compact diffusion, both reset-law atoms, the ready-state map and every diffusion/reset owner row. Verifier: kernel normalization, weighted-generator self-adjointness, first-law signs, both reset-law atoms, CPTP reset, Definition-28 premises and disjoint owners. Falsifier: failed detailed balance, $V_k\ne\beta H_k$, a missing clock/reset atom, noncyclic reset hardware, or heat double counting. Provenance class: source-internal stochastic-thermodynamic construction. Downstream consumers: the equilibrium perspective-diffusion ledger, Appendix O's stochastic arrow comparison and `TV-M-02`. Result: `positive-discharge` of the registered bath/work/heat, clock and source-separated-reset realization.
 
 ## M.4 The Measurement Process Formalized
 
@@ -429,6 +554,36 @@ Because no registered readout by $W$ occurs during $(t_1,t_2)$, the event at $t_
 
 The pre-readout propositions carry different perspective indices, and the post-readout proposition follows from a later certified correlation. They are therefore jointly satisfiable in the declared typed calculus. No claim about a unique outcome ontology or a protocol outside the theorem's hypotheses is used. ∎
 
+**Theorem M.6.1a (Explicit Uniformly Contractive Same-Basis Readout).** Let $\{P_k\}_{k=1}^m$ be orthogonal projectors summing to the identity and let
+$$
+\mathcal I_k(\rho)=P_k\rho P_k
+\tag{M.6.1a.1}
+$$
+be the Lüders outcome maps. They form a normalized CP instrument. Fix complete flags $s_k\in\Sigma$ carrying the corresponding record labels. For $0\le r_\lambda<1$, define
+$$
+G_{\lambda,k}(s,B)
+=(1-r_\lambda)\mathbf1_B(s_k)+r_\lambda\mathbf1_B(s).
+\tag{M.6.1a.2}
+$$
+Then $G_{\lambda,k}$ is normalized and, for all probability laws $\mu,\nu$,
+$$
+W_2(\mu G_{\lambda,k},\nu G_{\lambda,k})
+\le\sqrt{r_\lambda}\,W_2(\mu,\nu).
+\tag{M.6.1a.3}
+$$
+If $r_\lambda\to0$, the convergence to $\delta_{s_k}$ is uniform in the initial perspective. Two conditionally independent receivers using (M.6.1a.2) obey
+$$
+\Pr(S_W'=S_F'=s_k\mid k)\ge(1-r_\lambda)^2,
+\qquad
+\Pr((S_W',S_F')\ne(s_k,s_k)\mid k)\le2r_\lambda-r_\lambda^2.
+\tag{M.6.1a.4}
+$$
+Thus persistent same-basis disagreement is excluded in the strong-readout limit.
+
+*Proof.* Complete positivity is immediate and $\sum_k\operatorname{Tr}(P_k\rho P_k)=\operatorname{Tr}\rho$. Couple the common mass $1-r_\lambda$ at $s_k$ identically and use an optimal coupling of $\mu,\nu$ on the residual mass. Its squared transport cost is at most $r_\lambda W_2(\mu,\nu)^2$, proving (M.6.1a.3). Independence gives (M.6.1a.4). ∎
+
+**Resolution TV-M-03-R1 (Metadata).** Exact domain: every finite same-basis projective readout, every initial perspective pair and every $0\le r_\lambda<1$. Premises: a finite normalized PVM, normalized initial perspective laws and the displayed readout/reset parameter. Equivalence: simultaneous outcome relabeling preserving the projective instrument and equality of the induced perspective endpoint laws. Budget: all outcomes, initial states and receiver pairs. Verifier: Kraus completeness, kernel mass one, the explicit coupling and both bounds in (M.6.1a.4). Falsifier: failed normalization, contraction larger than $\sqrt{r_\lambda}$, or disagreement bounded away from zero as $r_\lambda\to0$. Provenance class: source-internal constructive kernel. Downstream consumers: the G9CC-modulated perspective instrument, the strong-readout ledger and `TV-M-03`. Result: `positive-discharge` of the registered instrument, uniform contraction and quantified-consensus predicates.
+
 ### M.6.3 Worked Example: Explicit Perspective Tracking
 
 **Example M.6.1 (Same-Basis Wigner--Friend Record Tracking).** Assume the instrument, Born-selector, single-outcome, external-state-assignment, and strong same-basis readout hypotheses of Theorem M.6.1 and Lemma M.6.1. Let $Q$ begin in $|\psi\rangle=(|0\rangle+|1\rangle)/\sqrt2$, and consider the registered run with $F$-record $k=0$.
@@ -489,6 +644,74 @@ $$
 is proposed for import as a definite proposition at $s_{\bar W}^{(\mathrm{pre})}$. Assume that the proposed import has neither (a) a record-sharing certificate supplied by an Evolve interaction or another registered channel nor (b) a perspective-invariance certificate in the sense of Definition M.6.2. Then the import is not well typed in the retained perspectival inference calculus.
 
 *Proof.* The proposition $\phi_{s_W^{(\mathrm{post})}}$ asserts an actualized record and is indexed to $s_W^{(\mathrm{post})}$. Definition M.6.2 declares that an import of such a record to a distinct perspective is admitted only by a record-sharing certificate or a perspective-invariance certificate. The two hypotheses exclude those two generating rules. Hence no rule of the retained calculus types the proposed import at $s_{\bar W}^{(\mathrm{pre})}$. This proves the stated obstruction. A claim about every step of the Frauchiger–Renner protocol requires a separate formalization of the complete protocol and is not asserted here. ∎
+
+**Theorem M.6.2c (Complete Typed Certainty Graph of the Four-Laboratory FR Protocol).** Use the standard unitary laboratory state after the two friends have registered their records,
+$$
+|\Psi\rangle
+=
+\frac1{\sqrt3}
+\bigl(
+|\bar h\rangle|d\rangle
++|\bar t\rangle|d\rangle
++|\bar t\rangle|u\rangle
+\bigr),
+\tag{M.6.2c.1}
+$$
+and the superobserver bases
+$$
+|\overline{ok}\rangle=\frac{|\bar h\rangle-|\bar t\rangle}{\sqrt2},
+\quad
+|\overline{fail}\rangle=\frac{|\bar h\rangle+|\bar t\rangle}{\sqrt2},
+$$
+$$
+|ok\rangle=\frac{|d\rangle-|u\rangle}{\sqrt2},
+\quad
+|fail\rangle=\frac{|d\rangle+|u\rangle}{\sqrt2}.
+\tag{M.6.2c.2}
+$$
+Among the eight elementary record propositions
+$$
+\bar F{:}\bar h,\ \bar F{:}\bar t,\ F{:}d,\ F{:}u,
+\ \bar W{:}\overline{ok},\ \bar W{:}\overline{fail},\ W{:}ok,\ W{:}fail,
+$$
+the complete nontrivial probability-one implication graph obtained by conditioning (M.6.2c.1) in the registered measurement bases is
+$$
+\bar h\to d,
+\quad d\to\overline{fail},
+\quad\overline{ok}\to u,
+\quad u\to\bar t,
+\quad\bar t\to fail,
+\quad ok\to\bar h.
+\tag{M.6.2c.3}
+$$
+Moreover,
+$$
+\Pr(\bar W{:}\overline{ok},W{:}ok)
+=
+|\langle\overline{ok},ok|\Psi\rangle|^2
+=
+\frac1{12}.
+\tag{M.6.2c.4}
+$$
+There are exactly two directed certainty routes from this positive-probability event to a complementary record: 
+$$
+\overline{ok}\to u\to\bar t\to fail
+\quad\text{and}\quad
+ok\to\bar h\to d\to\overline{fail}.
+\tag{M.6.2c.5}
+$$
+Every edge in both routes changes the owner perspective. Consequently each route contains three applications of Definition M.6.2. If no record-sharing or perspective-invariance certificate is supplied for those actualized-record imports, neither route is well typed and the contradiction cannot be derived in the retained calculus. Conversely, a well-typed contradiction for this protocol that uses only exact probability-one record implications and avoids both routes would falsify the graph exhaustion.
+
+*Proof.* Direct projection gives
+$$
+\langle\overline{ok}|\Psi\rangle=-\frac{|u\rangle}{\sqrt6},
+\qquad
+\langle ok|\Psi\rangle=\frac{|\bar h\rangle}{\sqrt6},
+\tag{M.6.2c.6}
+$$
+which gives the third and sixth edges in (M.6.2c.3). The absent $|\bar h\rangle|u\rangle$ amplitude gives $u\to\bar t$ and $\bar h\to d$. Conditional on $\bar t$, the second laboratory is $(|d\rangle+|u\rangle)/\sqrt2=|fail\rangle$, while conditional on $d$ the first laboratory is $(|\bar h\rangle+|\bar t\rangle)/\sqrt2=|\overline{fail}\rangle$. These give the remaining two edges. Conditioning on each complementary source $\overline{fail}$ or $fail$ leaves nonzero support on both record alternatives, and the preceding six cases exhaust the eight possible sources; hence (M.6.2c.3) is the complete nontrivial certainty graph. Expanding (M.6.2c.1) in (M.6.2c.2) gives amplitude $1/(2\sqrt3)$ for $(\overline{ok},ok)$, proving (M.6.2c.4). Inspection of the six-edge graph gives exactly the two paths (M.6.2c.5). Their owner labels alternate at every edge, so Lemma M.6.2a applies to every traversal. ∎
+
+**Resolution TV-M-04-R1.** In the already declared perspective-indexed inference semantics, Equations (M.6.2c.1)--(M.6.2c.6) give `positive-discharge` of the complete four-laboratory state, outcome probability, certainty-graph enumeration, import-route exhaustion, and typed obstruction.
 
 **Remark M.6.2.** The PU resolution does not reject any of (Q), (S), (C) outright. Rather, it refines (C): reasoning about others' observations is valid, but only when the perspective context is properly specified. Cross-perspective reasoning requires either explicit interaction (which correlates perspectives) or careful restriction to statements that are perspective-invariant.
 
@@ -759,7 +982,35 @@ Dependence of $G_{\mathrm{persp}}(s'|s,k,N,\Delta t)$ on the registered context 
 4. complete source-energy, reset, and no-double-counting ledgers; and
 5. pre-lightcone marginal invariance, or explicit classification of a response-active marginal as the external branch-(iii) falsifier of the sealed causal branch.
 
-Theorems 39, 39a, and 51 constrain a nominated response after it exists; they do not construct its carrier, sign, or magnitude. Appendix L supplies conditional electromagnetic and gravitational carrier models but derives no universal dominance ratio for an aggregate. Thus perspective dynamics provides a mathematical interface for the CC hypothesis, not its physical realization. G9CC in the completion program is the finite closure obligation.
+**Theorem M.6.8a (G9CC-Modulated Contractive Perspective Instrument).** Consume the complete finite witness of Theorem L.12.8b and write
+$$
+p_c(1)=c\sin^2(g\tau_{\mathrm{int}}),
+\qquad p_c(0)=1-p_c(1).
+\tag{M.6.8a.1}
+$$
+For context-dependent $0\le r_{c,\lambda}<1$, define the conditional perspective kernels and joint outcome-perspective instrument
+$$
+G_{c,\lambda,m}(s,B)
+=(1-r_{c,\lambda})\mathbf1_B(s_m)+r_{c,\lambda}\mathbf1_B(s),
+\qquad
+\mathcal J_{c,\lambda}(m,B\mid s)
+=p_c(m)G_{c,\lambda,m}(s,B).
+\tag{M.6.8a.2}
+$$
+For every $c,s$, $\sum_m\mathcal J_{c,\lambda}(m,\Sigma\mid s)=1$. Conditional on $m$, its Wasserstein contraction coefficient is at most $\sqrt{r_{c,\lambda}}$; two independent readers have disagreement bound $2r_{c,\lambda}-r_{c,\lambda}^2$. If $\max_c r_{c,\lambda}\to0$, both contexts converge uniformly to the appropriate strong-readout flag. Nevertheless the locked intervention response remains
+$$
+\Pr(M=1\mid\operatorname{do}(C=1))
+-\Pr(M=1\mid\operatorname{do}(C=0))
+=\sin^2(g\tau_{\mathrm{int}})>0.
+\tag{M.6.8a.3}
+$$
+All source, carrier, energy, reset, timing and locality owners are exactly those of Theorem L.12.8b; (M.6.8a.2) adds no duplicate physical owner.
+
+*Proof.* Equation (M.6.8a.1) is the normalized CP-instrument law already proved in Theorem L.12.8b. Kernel normalization proves joint normalization. The coupling and product-law arguments of Theorem M.6.1a give contraction and consensus uniformly in $c$. Summing (M.6.8a.2) over the perspective endpoint recovers $p_c(m)$, proving (M.6.8a.3). ∎
+
+**Resolution TV-M-07-R1 (Metadata).** Exact domain: both accepted G9CC contexts/outcomes and all initial perspectives for the family (M.6.8a.2). Premises: Theorem L.12.8b and $\max_cr_{c,\lambda}\to0$. Equivalence: unitary equivalence of the accepted finite G9CC carrier together with equality of the conditional perspective kernel and locked intervention response. Budget: both contexts, both target outcomes, every perspective endpoint, every initial perspective pair and the full strong-readout limit family. Verifier: joint mass one, the explicit coupling, product disagreement bound and (M.6.8a.3). Falsifier: lost normalization, noncontractive conditional kernels, failed strong readout or a nonpositive locked response. Provenance class: source-internal consumption of the accepted finite physical witness. Downstream consumers: the finite CC/perspective coexistence construction, the perspective-instrument ledger and `TV-M-07`. Result: `positive-discharge` of the registered G9CC perspective-instrument modulation. This consumes but is not recovered by `TV-L-07`, whose theorem contains no perspective kernel.
+
+Theorems 39, 39a, and 51 constrain a nominated response after it exists; they do not construct its carrier, sign, or magnitude. Theorem L.12.8b now supplies the accepted finite carrier and instrument used in Theorem M.6.8a; Appendix L's broader electromagnetic and gravitational models still derive no universal dominance ratio for an aggregate.
 
 ### M.6.9 Synthesis
 
@@ -1083,6 +1334,56 @@ N^*(S)
 \right\rceil+1
 $$
 is a sufficient register count for the displayed proof and is not asserted to be least. Neither theorem proves convergence to the endpoint as $N\uparrow N^*(S)$ or realization of any intermediate value in $(1/\alpha_{SPAP},\infty)$. Either conclusion requires a separately registered interpolation-realization theorem. $\square$
+
+**Theorem M.10.4.2 (Exact Attainable Range of Formal SPAP Proximity).** Fix $\alpha=\alpha_{SPAP}>0$. Across the smooth calibrated one-coordinate Fisher geometries admitted by Definition M.10.3 with $g(\delta)=\delta$, the exact attainable range is
+$$
+\left[\frac1\alpha,\infty\right].
+\tag{M.10.4.2a}
+$$
+More precisely, let $\Theta=\mathbb R$ with its Euclidean Fisher metric and choose the candidate target $\theta'=0$. For any finite $\mu>1/\alpha$, put
+$$
+r=\alpha-\frac1\mu\in(0,\alpha),
+$$
+choose $q\in(r,\alpha)$ and
+$$
+0<k<\frac1{2\alpha-r-q},
+\qquad
+h(P)=\alpha-P+k(P-r)(P-q).
+\tag{M.10.4.2b}
+$$
+Then $h$ is positive and strictly decreasing on $[0,\alpha]$. With $d=h(0)$, take the pre-update default $\theta_S=d$ (so the update displacement to $\theta'=0$ is $-d$), put $\tau(P)=h(P)/d$, and define
+$$
+\Pi^{(P)}(\theta)
+=
+(1-\tau(P))\theta+\tau(P)d.
+\tag{M.10.4.2c}
+$$
+This family is smooth, $\Pi^{(0)}$ is the default $d$ independent of $\theta$, and
+$$
+|\Pi^{(P)}(\theta)-\theta|
+=
+\tau(P)|d-\theta|
+\tag{M.10.4.2d}
+$$
+is nonincreasing in $P$ for every target. For $\theta'=0$, the criterion (M.18) is satisfied exactly for $P\in[r,q]$, so its infimum is $r$ and its proximity is the prescribed $\mu$.
+
+The baseline $1/\alpha$ is attained by the zero-displacement construction of Corollary M.10.3.1. The endpoint $\infty$ is already attained with one coordinate: take $h(P)=\alpha-P+c$ for any $c>0$ and use (M.10.4.2c). Then $h(P)>\alpha-P$ for every $P$, the constraint set is empty, and Definition M.10.3 gives $\mu=\infty$.
+
+*Proof.* Definition M.10.3 has $P\in[0,\alpha]$, so $\delta=\alpha-P\in[0,\alpha]$: positive $\delta$ gives $\mu\in[1/\alpha,\infty)$ and $\delta=0$ gives $\infty$. This proves the universal envelope. In (M.10.4.2b),
+$$
+h'(P)=-1+k(2P-r-q)<0
+$$
+by the bound on $k$, and $h(\alpha)=k(\alpha-r)(\alpha-q)>0$, so $h$ is positive and decreasing. Equations (M.10.4.2c)--(M.10.4.2d) verify every smoothness, default, and calibrated-order condition. Finally,
+$$
+h(P)\le\alpha-P
+\quad\Longleftrightarrow\quad
+(P-r)(P-q)\le0
+\quad\Longleftrightarrow\quad
+P\in[r,q].
+$$
+Thus $P^{(E)}=r$ and $1/(\alpha-r)=\mu$. The displayed endpoint function never satisfies the criterion, completing the range proof. ∎
+
+**Resolution TV-M-09-R1.** Theorem M.10.4.2 gives `positive-discharge` of the exact definition-level reachable proximity interval and `negative-refutation` of both an interval gap and any universal multi-register lower bound in that full formal class. Theorem M.10.4's $N^*(S)$ remains a sufficient count for its particular independent binary-diagonal construction; admission of the one-coordinate maps above as physically realized SPAP patterns requires the usual implementation certificate.
 
 **Theorem M.10.5 (Certificate-Relative External Evaluation).** Let $A$ hold an external representation of $B$'s self-model data for a specified pattern $E$. Assume that the representation includes:
 
@@ -1460,6 +1761,53 @@ $$
 $$
 which proves (M.10.10.3). For $p_k>0$, conditioning the endpoint kernel on the sector $A_k$ gives (M.10.10.4). The denominator is positive exactly on the starting perspectives from which the sector has nonzero conditional weight; outside that set the conditioning event has zero probability and does not affect any retained finite response. ∎
 
+**Theorem M.10.10c.1 (Complete Endpoint-Simplex Classification and Born Nonentailment).** Retain pairwise disjoint sectors $A_1,\ldots,A_m$ and normalized component laws $\nu_k$ with $\nu_j(A_k)=\delta_{jk}$. For every probability vector $q\in\Delta_{m-1}$ define
+$$
+\nu_q:=\sum_kq_k\nu_k.
+\tag{M.10.10c.1.1}
+$$
+Then the sector-mixture map $q\mapsto\nu_q$ is affine and injective, with inverse
+$$
+q_k=\nu_q(A_k).
+\tag{M.10.10c.1.2}
+$$
+For every $q$ for which Definition M.10.10a's absolute-continuity feasibility premise holds, the same strict-convexity proof gives a unique entropic transport plan with endpoint-sector weights exactly $q$. Consequently the transport cost, entropy regularizer, sector partition, and component maps do not select Born weights. They force $q=p$ if and only if an independent descent/marginal axiom fixes
+$$
+q_k=\operatorname{Tr}(\rho P_k).
+\tag{M.10.10c.1.3}
+$$
+The registered comparison class contains the following fully populated response-distinct feasible instance. Restrict all transport measures to the two-point finite-resolution carrier $\Sigma_2=\{s_1,s_2\}\subset\Sigma$ and take
+$$
+A_k=\{s_k\},\qquad \nu_k=\delta_{s_k},\qquad
+\mu_0=\tfrac12(\delta_{s_1}+\delta_{s_2}),
+\tag{M.10.10c.1.4}
+$$
+Choose orthonormal $e_1,e_2\in\mathcal H_0$, set $P_1=|e_1\rangle\!\langle e_1|$, $P_2=I-P_1$, and take $\rho=(|e_1\rangle\!\langle e_1|+|e_2\rangle\!\langle e_2|)/2$; then $p=(1/2,1/2)$. Set $q=(1/3,2/3)$ and use the full-support reference and candidate couplings
+$$
+\pi_0=\mu_0\otimes\nu_p,
+\qquad
+\pi_q=\mu_0\otimes\nu_q.
+\tag{M.10.10c.1.5}
+$$
+The reference gives mass $1/4$ to each atom of $\Sigma_2^2$, while $\pi_q$ gives masses $1/6$ and $1/3$ to $(s_i,s_1)$ and $(s_i,s_2)$, respectively. Hence $\pi_q\in\Pi(\mu_0,\nu_q)$, $\pi_q\ll\pi_0$, and, writing $d_{12}=d_\Sigma(s_1,s_2)$,
+$$
+\operatorname{KL}(\pi_q\Vert\pi_0)
+=\frac13\log\frac23+\frac23\log\frac43<\infty,
+\qquad
+\int c\,d\pi_q=\frac12d_{12}^2<\infty.
+\tag{M.10.10c.1.6}
+$$
+It therefore satisfies Definition M.10.10a for every $\varepsilon>0$, while $q\ne p$ and $\nu_q\ne\nu_p$. This refutes a derivation from the transport data alone.
+
+*Proof.* Disjoint support gives $\nu_q(A_k)=q_k$, proving injectivity and (M.10.10c.1.2). The existence/uniqueness proof of Theorem M.10.10b uses only the prescribed second marginal and therefore applies with $\nu$ replaced by $\nu_q$ on the feasible domain. Every coupling has second marginal $\nu_q$, so its sector weights are $q$. Equation (M.10.10c.1.3) is therefore necessary and sufficient for the Born endpoint vector. Equations (M.10.10c.1.4)--(M.10.10c.1.6) verify that the feasible domain contains the displayed non-Born point. ∎
+
+**Resolution TV-M-11-R1 (Metadata).** Exact domain: every finite disjoint sector family with normalized component laws and its feasible set
+$$
+\mathcal Q_{\mathrm{feas}}
+:=\{q\in\Delta_{m-1}:\exists\pi\in\Pi(\mu_0,\nu_q),\ \operatorname{KL}(\pi\Vert\pi_0)<\infty\},
+$$
+including the fully populated two-point package (M.10.10c.1.4)--(M.10.10c.1.6). Premises: finitely many disjoint sectors, normalized component laws, fixed source/reference marginals, finite transport cost and relative entropy on the declared feasible set, with the displayed positive full-support reference for the explicit witness. Equivalence: equality of endpoint laws; disjoint sectors make this equality equivalent to equality of weight vectors. Budget: every $q\in\mathcal Q_{\mathrm{feas}}$, together with both marginals and all eight reference/candidate atom masses of the explicit witness; no claim is made for an infeasible simplex point. Verifier: sector evaluations, coupling marginals, the positive reference and candidate atom masses, finite relative entropy, finite cost and strict convexity. Falsifier: two different feasible vectors with the same endpoint law or transport data selecting one vector without a marginal axiom. Provenance class: source-internal exact classification. Downstream consumers: the endpoint-sector/Born-weight classification, subsequent perspective-role constructions and `TV-M-11`. Result: `negative-refutation` of an independent Born derivation and complete classification of the added axiom that forces it; this is terminal under the target's registered alternative-law clause.
+
 **Theorem M.10.10d (Predictive Role-Position Equivalence).** Let $S$ be a knowledge system on the predictive-function-space branch. Let $\mathsf{Cont}_S$ be its retained content class, and let
 $$
 \mathcal R_c^S:\mathsf P_S^{op}\to\mathbf{Set}
@@ -1533,6 +1881,56 @@ $$
 E_1\sim_{\mathrm{op}}E_2,
 $$
 which is precisely completeness of the invariant. Without that implication as an available premise, the same conclusion cannot be inferred in a downstream proof. This is a certificate-scope statement and makes no claim that the implication is false on an uncertified class. ∎
+
+**Theorem M.10.10d.2a (Profile-Fiber Classification and Global Collision).** Fix a finite retained content class $\mathcal C$ on which $\mathcal P_S$ is defined and invariant under $\equiv_{\mathrm{op}}^S$. Let
+$$
+Q_{\mathcal C}:=\mathcal C/\!\equiv_{\mathrm{op}}^S,
+\qquad
+r:\mathcal C\to Q_{\mathcal C},
+$$
+and let $\overline{\mathcal P}_S:Q_{\mathcal C}\to\mathbb R\times(0,\infty]\times[0,1]$ be the induced profile map. For each attained profile value $z$, write
+$$
+F_z:=\overline{\mathcal P}_S^{-1}(z).
+\tag{M.10.10d.2a.1}
+$$
+Then a subclass $\mathcal E\subseteq\mathcal C$ is separating exactly when
+$$
+|r(\mathcal E)\cap F_z|\le1
+\quad\text{for every attained }z.
+\tag{M.10.10d.2a.2}
+$$
+The inclusion-maximal separating subclasses are exactly the saturated transversals
+$$
+\mathcal E=r^{-1}(T),
+\qquad
+|T\cap F_z|=1
+\quad\text{for every attained }z.
+\tag{M.10.10d.2a.3}
+$$
+
+The full profile map is nonseparating on an admissible finite model. Take an identifiable Fisher stratum whose external tangent summand contains orthonormal vectors $e_1,e_2$, impose the baseline-invariance condition $\Pi_S^{(0)}(\theta_S)=\theta_S$, and register two patterns $E_1,E_2$ with
+$$
+\Delta M_S^{(\mathrm{self})}(E_i)=0,
+\qquad
+\Delta M_S^{(\mathrm{ext})}(E_i)=e_i,
+\qquad
+\Delta Q_S(E_i)=0.
+\tag{M.10.10d.2a.4}
+$$
+Include one retained binary response probe $p$ whose deterministic response is $0$ on $E_1$ and $1$ on $E_2$. Then
+$$
+\mathcal P_S(E_1)=\mathcal P_S(E_2)
+=\left(0,\frac1{\alpha_{SPAP}},0\right),
+\qquad
+E_1\not\equiv_{\mathrm{op}}^S E_2.
+\tag{M.10.10d.2a.5}
+$$
+
+*Proof.* Invariance makes $\overline{\mathcal P}_S$ well defined. Definition M.10.10d.1 says that $\mathcal E$ is separating exactly when two roles represented in $r(\mathcal E)$ cannot lie in the same profile fiber, which is (M.10.10d.2a.2). If a separating class omits a content operationally equivalent to one it contains, adjoining that content preserves separation. If its role image misses a nonempty fiber, adjoining one role from that fiber also preserves separation. Hence every maximal separating class is saturated and meets every fiber. Conversely, a saturated class meeting every fiber in exactly one role obeys (M.10.10d.2a.2), and adjoining any omitted role creates a two-role intersection in its fiber. This proves (M.10.10d.2a.3).
+
+For the displayed model, $\Delta M_S^{(\mathrm{self})}(E_i)=0$ leaves the updated self parameter equal to $\theta_S$. Baseline invariance makes $PP=0$ satisfy (M.18), so the infimum is zero and Definition M.10.3 gives $\mu_S(E_i)=1/\alpha_{SPAP}$. Fisher orthogonality and the nonzero external updates give $\sigma_S(E_i)=0$, while the registered predictive relevance is zero for both. Their profiles therefore agree. Probe $p$ belongs to the retained response presheaf and has different deterministic laws on the two patterns, so Theorem M.10.10d places them in different operational roles. This proves (M.10.10d.2a.5). ∎
+
+**Resolution TV-M-12-R1 (Profile-Completeness Classification).** Exact domain: finite retained content classes on which the profile is defined and operationally invariant, together with the explicit two-pattern Fisher-stratum model in (M.10.10d.2a.4). Premises: Definitions M.10.2--M.10.4, the baseline-invariance condition, and Theorem M.10.10d's response-role quotient. Equivalence: natural isomorphism of retained response presheaves. Exhaustive budget: every operational-role fiber of every attained profile value in the declared finite class. Verifier: quotient the class by $\equiv_{\mathrm{op}}^S$, group the quotient by exact profile equality, and check (M.10.10d.2a.2)--(M.10.10d.2a.3); for the collision, evaluate the three coordinates and probe $p$. Falsifier: a separating subclass whose role image contains two members of one profile fiber, a maximal separating subclass omitting an attained fiber or part of a selected operational class, or operational equivalence of the two displayed probe responses. Provenance class: source-internal finite quotient classification and explicit countermodel. Nonvacuity: the two orthogonal external-update patterns in (M.10.10d.2a.4). Downstream consumers: Definition M.10.10d.1, Corollaries M.10.10d.2--M.10.10d.3, and `TV-M-12`. This is `positive-discharge` of the maximal separating-class classification and `negative-refutation` of global completeness for $(\Delta Q,\mu,\sigma)$.
 
 **Corollary M.10.10d.3 (Compatibility with shape recognition).** Exact shape identity remains typed subdiagram isomorphism plus response-presheaf isomorphism. Predictive role-position equivalence supplies the role-level quotient of that structure; it does not reduce shape identity to equality of the finite tuple $(\Delta Q,\mu,\sigma)$.
 
@@ -1957,6 +2355,33 @@ The three-layer statement is only a restatement of the roles of Theorem G.1.7, T
 **Corollary M.6.11f (Objectivity Without Perspective-Independent Ontology).** Under Theorem M.6.11e's strict-cost and dephasing hypotheses, a classical fact shared by many perspectives is a PCE-minimal broadcast record. It is objective because many disjoint fragments independently recover the same minimal statistic $X$, not because the framework adds a perspective-free state of affairs.
 
 *Proof.* Theorem M.6.11e identifies exact public objectivity with redundant fragment recovery and conditional independence in spectrum-broadcast form. Its strict-cost premise and Theorem M.6.11b(5) select $X$ as the unique PCE-minimal sufficient record up to relabeling. ∎
+
+**Theorem M.6.11g (Finite Process-Tensor Construction of Minimal Spectrum Broadcast).** Let $X=\{1,\ldots,m\}$ be the PCE-minimal classical quotient of Theorem M.6.11b, with system basis $|x\rangle_S$. Prepare one discarded dephasing register $E_0$ and $N\ge1$ public fragments $E_1,\ldots,E_N$, each of dimension $m$, in $|0\rangle$. At successive fixed-order slots apply unitary extensions of
+$$
+U_i|x\rangle_S|0\rangle_{E_i}=|x\rangle_S|x\rangle_{E_i}
+\qquad(i=0,\ldots,N),
+\tag{M.6.11g.1}
+$$
+and discard $E_0$. These channels define a normalized deterministic process tensor by Theorem M.6.14b. For every input $\rho_S$, its retained output is
+$$
+\sum_{x=1}^m\langle x|\rho_S|x\rangle
+|x\rangle\!\langle x|_S
+\otimes
+\bigotimes_{i=1}^N|x\rangle\!\langle x|_{E_i}.
+\tag{M.6.11g.2}
+$$
+Thus the discarded copy derives exact dephasing, and the retained copies derive spectrum-broadcast structure. Every nonempty fragment subset recovers $X$ exactly, so the redundancy is $N$ and any $N-1$ fragments may be lost.
+
+For the registered exact classical storage cost $C_{\log}(R)=\log|R|$, every record sufficient for all point-identification tasks on $X$ has at least $m$ values and cost at least $\log m$. A strict sufficient refinement has at least $m+1$ values and costs at least
+$$
+\log(m+1)-\log m>0
+\tag{M.6.11g.3}
+$$
+more per refined record. Hence total public-fragment cost is at least $N\log m$, and (M.6.11g.2) saturates the bound.
+
+*Proof.* Each displayed rule is an isometry on an $m$-dimensional subspace and extends to a unitary. Before tracing $E_0$, an off-diagonal $|x\rangle\langle x'|$ is accompanied by $|x\rangle\langle x'|_{E_0}$; its trace is zero for $x\ne x'$, giving (M.6.11g.2). Measuring any retained fragment in its displayed basis recovers $x$. Exact point identification requires an injective code and hence at least $m$ record values; a strict refinement splits at least one fiber and has at least $m+1$. ∎
+
+**Resolution TV-M-14-R1 (Metadata).** Exact domain: every finite minimal alphabet $X$, every input state and every $N\ge1$. Premises: initialized environment fragments, the displayed fixed-order unitary copy process, discard of $E_0$, exact pointer-basis decoding and logarithmic record-cardinality cost. Equivalence: simultaneous alphabet permutation and unitary relabeling preserving the decoded statistic and every fragment response. Budget: all matrix units, all fixed-order slots and every nonempty fragment subset. Verifier: unitary extension, comb normalization, the partial trace yielding (M.6.11g.2), exact fragment decoding and integer cardinality bounds. Falsifier: surviving off-diagonal terms, a fragment that fails to decode, or a lower-cost exact sufficient refinement. Provenance class: source-internal finite process-tensor construction. Downstream consumers: the finite objectivity/redundancy ledger, Appendix M's record-cost results and `TV-M-14`. Result: `positive-discharge` of dephasing, spectrum broadcast, strict sufficient-refinement cost and redundancy bounds.
 
 ### M.6.12 PCE Information-Bottleneck Universality
 
@@ -2401,7 +2826,7 @@ The appendix provides a conditional model of perspective-dependent quantum recor
 
 This appendix provides a conditional mathematical model for Perspectival State and Dual Dynamics.
 
-**Formal Foundations (M.2–M.5).** After the flag-manifold perspective space, normalized transition kernel, actualization instrument, drift, diffusion, and boundary data are specified, Equations M.5a–M.5b define a drift-diffusion realization. On the finite-dimensional normalized noncontextual frame-function branch of Theorem G.1.3, the outcome probabilities have Born form. Definite retained outcomes require the declared instrument/readout branch, and Wasserstein contractivity holds for the constructed class only under its curvature and regularity hypotheses.
+**Formal Foundations (M.2–M.5).** After the flag-manifold perspective space, normalized transition kernel, actualization instrument, drift, diffusion, and boundary data are specified, Equations M.5a–M.5b define a drift-diffusion realization. On the interrogative-efficiency branch of Section M.3.3.2, the drift data are derived: Theorem M.3.3e identifies the attainable directional benefit with the quantum Fisher bound, and Proposition M.3.3h recovers the local drift model of Section M.3.3.1 as the second-order normal form of the interrogative-efficiency potential. On the finite-dimensional normalized noncontextual frame-function branch of Theorem G.1.3, the outcome probabilities have Born form. Definite retained outcomes require the declared instrument/readout branch, and Wasserstein contractivity holds for the constructed class only under its curvature and regularity hypotheses.
 
 **Foundational Scenarios (M.6).** Within the stipulated perspective-indexed semantics and interaction kernel:
 

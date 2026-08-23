@@ -272,6 +272,43 @@ Item 4 follows from the definitions. Theorem G.1.7 assigns weights to sharp even
 
 *Proof.* The zero-cost claim is Theorem G.1.7a.2. If $\mathcal M_{\mathrm{PCE}}>0$, no nonnegative global representative exists, so every PPI-equivalent quasiprobability representation has $\lVert q\rVert_1>1$ and therefore carries signed overhead. In finite dimension, a closed PPI class with bounded $\ell^1$ norm is compact, and the continuous function $q\mapsto\log\lVert q\rVert_1$ attains its minimum. Since all representatives have the same operational responses, PCE removes all higher-cost representatives and retains the minimum-cost ledger. ∎
 
+**Theorem G.1.7a.7 (Exact Finite Magic Optimum, Dual, and Uniqueness Test).** Encode the marginal and normalization constraints of a finite protocol cover as
+$$
+Bq=b,
+\qquad
+Bq=(\partial q,\mathbf1^Tq),
+\qquad
+b=(p,1),
+\tag{G.1.7a.7.1}
+$$
+and assume this affine system is feasible. Then
+$$
+\nu(p):=\min_{Bq=b}\lVert q\rVert_1
+=
+\max_{\lVert B^Ty\rVert_\infty\le1}b^Ty,
+\qquad
+\mathcal M_{\mathrm{PCE}}(p)=\log\nu(p),
+\tag{G.1.7a.7.2}
+$$
+and both extrema are attained. Let $q^*$ be a primal optimum, let $S=\{i:q_i^*\ne0\}$, and put $s_i=\operatorname{sgn}(q_i^*)$ on $S$. The optimum $q^*$ is unique if and only if every nonzero $h\in\ker B$ satisfies
+$$
+\sum_{i\in S}s_ih_i+\sum_{i\notin S}|h_i|>0.
+\tag{G.1.7a.7.3}
+$$
+Thus optimum value, an attaining ledger, and uniqueness are decidable by finite linear programming and an exact polyhedral null-cone test for every finite protocol cover.
+
+*Proof.* Write $q=q^+-q^-$ with $q^\pm\ge0$. Minimizing $\mathbf1^T(q^++q^-)$ subject to $B(q^+-q^-)=b$ is a feasible finite linear program. Its sublevel sets are bounded, so a minimum is attained. The linear-programming dual is the maximum in (G.1.7a.7.2), and finite-dimensional strong duality gives equality and dual attainment.
+
+For sufficiently small $t>0$, the signs of $q_i^*+th_i$ on $S$ agree with those of $q_i^*$. Hence
+$$
+\lVert q^*+th\rVert_1-\lVert q^*\rVert_1
+=t\left(\sum_{i\in S}s_ih_i+\sum_{i\notin S}|h_i|\right).
+\tag{G.1.7a.7.4}
+$$
+If (G.1.7a.7.3) fails, a nonzero feasible direction produces another point with no larger norm, contradicting uniqueness. Conversely, if $q'\ne q^*$ is another optimum, set $h=q'-q^*$. Convexity makes the norm constant on the segment from $q^*$ to $q'$, so the right derivative in (G.1.7a.7.4) is zero and (G.1.7a.7.3) fails. ∎
+
+Theorem G.1.7a.7 discharges the finite quasiprobability optimum, attainment, and uniqueness mathematics in `TV-G-03`. A calibrated physical implementation resource whose zero set is this noncontextual class remains the independent certificate and realization problem.
+
 **G.1.8 Hilbert-Space Uniqueness under POP + PCE**
 
 The existence of a well-behaved cost functional satisfying the premises of Theorem G.1.3 leads to the Born rule after the carrier/effect structure is fixed. The carrier itself is a separate finite-response gate: PPI response equivalence and PCE no-surplus selection exclude some alternatives, but they do not by themselves prove cone self-duality, homogeneous reversible steering, or the full Jordan-to-complex-Hilbert reduction.
@@ -291,6 +328,129 @@ where $\Omega_+$ is the retained state cone after the PPI quotient, $E_+$ is the
 5. **Jordan exclusion.** $\mathcal J_{\mathrm{excl}}$ records finite response failures or surplus-cost gaps excluding non-complex Euclidean-Jordan branches not removed by items 3 and 4, including spin-factor and exceptional branches when they are otherwise admissible.
 
 SPAP supplies a diagonal obstruction on its stated class. A non-simplex conclusion requires the separately registered incompatible sharp-observable pair of Corollary G.1.10, and complex-Hilbert selection additionally requires Definition G.1.8a and Theorem G.1.8.
+
+**Definition G.1.8b (Predictive Dynamical Correspondence).** Let $A$ be a finite-dimensional Euclidean Jordan algebra with unit $1$. A predictive dynamical correspondence is a linear map
+$$
+\psi:A\to\operatorname{Der}(A),
+\qquad
+a\mapsto\psi_a,
+$$
+such that
+$$
+\psi_a(a)=0,
+\qquad
+\operatorname{im}\psi=\operatorname{Der}(A),
+\qquad
+\ker\psi=\mathbb R1.
+\tag{G.1.8b.1}
+$$
+The first identity is verification stationarity; the other two state generator coverage and response nondegeneracy. Admission of the retained PU update loop to this definition requires a branch certificate showing that its outcome-conditioned updates act as Jordan derivations.
+
+**Lemma G.1.8c (Dimension Identity).** If $A$ admits a predictive dynamical correspondence, then
+$$
+\dim\operatorname{Der}(A)=\dim A-1.
+\tag{G.1.8c.1}
+$$
+
+*Proof.* The first isomorphism theorem applied to the surjective linear map $\psi$ gives
+$$
+\operatorname{Der}(A)\cong A/\mathbb R1.
+$$
+∎
+
+**Theorem G.1.8d (Simple Euclidean-Jordan Classification at Unit Correspondence Defect).** A finite-dimensional simple Euclidean Jordan algebra admits a predictive dynamical correspondence if and only if it is isomorphic to $H_n(\mathbb C)$ for some $n\ge1$.
+
+*Proof.* The finite-dimensional simple Euclidean-Jordan classification (Faraut and Korányi 1994, Chapter V) and the corresponding derivation-algebra dimensions give
+$$
+\begin{array}{c|c|c}
+A&\dim A&\dim\operatorname{Der}(A)\\ \hline
+H_n(\mathbb R),\ n\ge1&n(n+1)/2&n(n-1)/2\\
+H_n(\mathbb C),\ n\ge1&n^2&n^2-1\\
+H_n(\mathbb H),\ n\ge2&n(2n-1)&n(2n+1)\\
+V_k,\ k\ge3&k+1&k(k-1)/2\\
+H_3(\mathbb O)&27&52.
+\end{array}
+$$
+The identity (G.1.8c.1) holds in the real row only at $n=1$, in the complex row for every $n$, in the spin row only at $k=3$, and in neither the quaternionic nor exceptional row. The coincidences $H_1(\mathbb R)\cong H_1(\mathbb C)$ and $V_3\cong H_2(\mathbb C)$ leave exactly the complex family.
+
+Conversely, on $H_n(\mathbb C)$ define
+$$
+\psi_a(b)=i[a,b].
+$$
+This is a Jordan derivation, $\psi_a(a)=0$, its kernel consists exactly of scalar matrices, and every derivation of $H_n(\mathbb C)$ is of this form. Thus (G.1.8b.1) holds. ∎
+
+**Corollary G.1.8e (Blockwise Correspondence Forces Simplicity).** Let $A=\bigoplus_{j=1}^kA_j$ be semisimple and carry a predictive dynamical correspondence. Assume in addition that each simple ideal with unit $c_j$ carries a linear map
+$$
+\psi^{(j)}:A_j\longrightarrow\operatorname{Der}(A_j)
+$$
+that satisfies verification stationarity, is surjective, and has kernel $\mathbb Rc_j$. Then $k=1$ and $A\cong H_n(\mathbb C)$.
+
+*Proof.* Derivations preserve the simple ideals, so
+$$
+\operatorname{Der}(A)\cong\bigoplus_j\operatorname{Der}(A_j).
+$$
+The blockwise hypothesis and Theorem G.1.8d make every $A_j$ complex and give $\dim A_j-\dim\operatorname{Der}(A_j)=1$. Summing gives
+$$
+\dim A-\dim\operatorname{Der}(A)=k,
+$$
+whereas Lemma G.1.8c makes the left side $1$. Hence $k=1$. ∎
+
+**Construction G.1.8f (Complex Predictive-Carrier Witness).** Fix $n\ge2$ and put
+$$
+A_n=H_n(\mathbb C),
+\qquad
+A_{n,+}=\{x\in A_n:x\succeq0\},
+\qquad
+\langle x,y\rangle=\operatorname{Tr}(xy).
+$$
+States are $\rho\in A_{n,+}$ with $\operatorname{Tr}\rho=1$, and effects satisfy $0\preceq e\preceq I$. Choose a real Hermitian basis $(I,B_1,\ldots,B_{n^2-1})$ with $\|B_k\|_{\rm op}\le1$ and retain the finite effect family
+$$
+\mathcal E_n^{\rm fin}
+=\left\{\frac{I+B_k}{2},\frac{I-B_k}{2}:1\le k<n^2\right\}.
+\tag{G.1.8f.1}
+$$
+For $a\in A_n$, define
+$$
+\psi_a(b)=i[a,b],
+\qquad
+\mathcal U_a(t)b=e^{ita}be^{-ita},
+\qquad
+\mathcal U_a^*(t)\rho=e^{-ita}\rho e^{ita}.
+\tag{G.1.8f.2}
+$$
+For $g\in GL(n,\mathbb C)$, put
+$$
+\widehat g=\frac{g}{\max\{1,\|g\|_{\rm op}\}},
+\qquad
+\mathcal F_g(x)=\widehat g x\widehat g^*.
+\tag{G.1.8f.3}
+$$
+This probabilistic filter is completed to a normalized two-outcome instrument by the failure Kraus operator $(I-\widehat g^*\widehat g)^{1/2}$; its successful conditional state is $\mathcal F_g(\rho)/\operatorname{Tr}\mathcal F_g(\rho)$. For a second carrier $A_m$, take the composite $A_{nm}=H_{nm}(\mathbb C)$ with embeddings $a\mapsto a\otimes I_m$ and $b\mapsto I_n\otimes b$.
+
+**Theorem G.1.8g (Nonempty Dynamical, Verification, Filter and Composite Certificate Class).** Construction G.1.8f has the following properties.
+
+1. $a\mapsto\psi_a$ is a predictive dynamical correspondence, $\frac d{dt}|_{t=0}\mathcal U_a(t)=\psi_a$, and $\mathcal U_a(t)a=a$.
+2. The finite family $\mathcal E_n^{\rm fin}$ separates states. The cone $A_{n,+}$ is self-dual under the displayed trace pairing.
+3. Every $\mathcal U_a^*(t)$ is positive and trace preserving, and
+   $$
+   \operatorname{Tr}(\mathcal U_a^*(t)\rho\,e)
+   =\operatorname{Tr}(\rho\,\mathcal U_a(t)e),
+   $$
+   so state update and verification are response-consistent.
+4. The conditional filters act transitively on the faithful normalized states.
+5. Products of the finite local effect families separate states of $A_{nm}$. Hence the displayed composite is locally tomographic and $\dim A_{nm}=(\dim A_n)(\dim A_m)$.
+6. Unitary conjugation has exact scalar kernel,
+   $$
+   1\longrightarrow U(1)\longrightarrow U(n)\longrightarrow PU(n)\longrightarrow1,
+   \tag{G.1.8g.1}
+   $$
+   so this witness contains a $U(1)$ phase lift of its projective reversible action.
+
+*Proof.* Item 1 is the commutator calculation in Theorem G.1.8d together with differentiation of (G.1.8f.2). The effects in (G.1.8f.1) span $A_n$, so equality of all their probabilities implies equality of states. If $\operatorname{Tr}(xy)\ge0$ for every $y\succeq0$, rank-one choices $y=|v\rangle\langle v|$ give $\langle v,xv\rangle\ge0$, proving self-duality. Cyclicity of trace proves item 3. For $x,y\succ0$, $g=y^{1/2}x^{-1/2}$ satisfies $gxg^*=y$; scalar normalization of $g$ cancels in the successful conditional state, proving item 4. Tensor products of real Hermitian bases form a real basis of $H_{nm}(\mathbb C)$; since each local finite effect family spans its factor, its products span the composite and separate states. The dimension identity follows. Finally, a unitary commuting with every Hermitian matrix is scalar, which proves (G.1.8g.1). ∎
+
+**Remark G.1.8h (Witness Scope).** Theorem G.1.8g proves that the correspondence, finite verification, normalized positive filtering, a standard locally tomographic composite, and a scalar phase lift coexist in one explicit complex carrier. Admission of the retained PU update loop, filters, composite, and phase protocol is governed by Definition G.1.8a and Definition G.1.8b; rank selection and comparison with alternative composite rules remain their separate classification obligations.
+
+**Remark G.1.8i (Closure Boundary).** Theorem G.1.8d discharges the finite classification step for carriers admitted by Definition G.1.8b, and Theorem G.1.8g supplies a common explicit complex witness. The PU-to-correspondence map, composite product, local-tomography record, and physical phase-group selection remain the separate certificate entries of Definition G.1.8a.
 
 **Theorem G.1.8 (Complex Hilbert-Space Uniqueness on the Carrier-Certified Branch).** On a retained finite-response branch carrying $\mathfrak C_{\mathrm{car}}$, the predictive state cone is the cone of squares of a finite-dimensional Euclidean Jordan algebra. If the same certificate includes the local-tomography, connected-phase, and Jordan-exclusion records of Definition G.1.8a, the retained carrier is operationally equivalent to the complex Hilbert branch. Among the real, complex, and quaternionic Hilbert-space branches, the complex branch is uniquely selected by compositional closure, local tomography, connected phase transport, and PCE removal of surplus phase redundancy.
 
@@ -364,7 +524,7 @@ $$
 $$
 Thus every pair of binary effects on a simplex is jointly measurable, so no simplex carries a retained incompatible pair of sharp verification effects. Independently, the cone of a finite simplex is the cone of squares of the Jordan algebra $\mathbb R^n$, which for $n\ge2$ is a direct sum of $n$ proper ideals; item (vi) of Principle 8.0b certifies simplicity and irreducibility of the retained carrier and therefore excludes it. ∎
 
-**Remark G.1.10a (Logical and Physical Steps).** SPAP alone does not exclude a classical simplex. The non-simplex conclusion uses Principle 8.0b's simplicity and irreducibility record, equivalently any retained pair of sharp verification effects that is not jointly measurable; Theorem G.1.8 then uses the remaining carrier certificate to select the complex branch.
+**Remark G.1.10a (Logical and Physical Steps).** SPAP alone does not exclude a classical simplex. The non-simplex conclusion uses Principle 8.0b's simplicity and irreducibility record, equivalently any retained pair of sharp verification effects that is not jointly measurable; Theorem G.1.8 then uses the remaining carrier certificate to select the complex branch. On a branch carrying Definition G.1.8b, a simplex $\mathbb R^k$ with $k\ge2$ is excluded directly because $\operatorname{Der}(\mathbb R^k)=0$ while Lemma G.1.8c requires dimension $k-1>0$. This correspondence argument supplies simplex exclusion after admission to Definition G.1.8b; irreducibility of a general semisimple carrier is supplied by Corollary G.1.8e under its blockwise hypotheses.
 
 **Remark G.1.10b (Connection to the Hilbert Formalism).** On the selected complex carrier, projective sharp observables are jointly measurable exactly when they commute. A certified incompatible pair therefore has noncommuting representatives.
 
@@ -507,6 +667,89 @@ Every system-only effect therefore has the same expectation $\operatorname{tr}(E
 *Proof.* On the rank-$r$ stratum, Theorem G.1.11d identifies every fiber with a free transitive $U(r)$ action and derives the horizontal equation using the invertible density operator on its $r$-dimensional support. If an eigenvalue reaches zero, the support dimension and structure group change from $U(r)$ to $U(r-1)$, so the local trivializations cannot form one principal bundle with one structure group across that point. Restricting to the support on each stratum, or taking a separately specified continuous limit of the horizontal data, preserves the stated equations without asserting a smooth bundle through the rank change. ∎
 
 **Relation to Corollary X.8a.2c.** Corollary X.8a.2c supplies the prior PCE selection of the Bures/SLD metric. Theorem G.1.11d does not duplicate that selector: it proves the minimal-purification principal bundle, its horizontal realization of the selected metric, and the response-null status of surplus ancillary dimensions.
+
+**Theorem G.1.11e (Full-Effect Classification and Qubit Transition Descent).** Let
+$$
+\operatorname{Eff}_d=\{E\in M_d(\mathbb C)_{\mathrm{sa}}:0\le E\le I\}.
+$$
+A map $f:\operatorname{Eff}_d\to[0,1]$ satisfies
+$$
+f(I)=1,
+\qquad
+f(E+F)=f(E)+f(F)
+\quad\text{whenever }E,F,E+F\in\operatorname{Eff}_d
+\tag{G.1.11e.1}
+$$
+if and only if there is a unique density matrix $\rho$ such that
+$$
+f(E)=\operatorname{tr}(\rho E)
+\qquad(E\in\operatorname{Eff}_d).
+\tag{G.1.11e.2}
+$$
+This holds for every $d\ge2$, including the qubit case $d=2$.
+
+On the qubit projection lattice, write
+$$
+P_{\mathbf n}=\frac12(I+\mathbf n\cdot\boldsymbol\sigma),
+\qquad \mathbf n\in S^2.
+$$
+Every normalized orthogonal-frame assignment on rank-one qubit projections has the unique form
+$$
+f(P_{\mathbf n})=\frac12+g(\mathbf n),
+\qquad
+g(-\mathbf n)=-g(\mathbf n),
+\qquad
+|g(\mathbf n)|\le\frac12,
+\tag{G.1.11e.2a}
+$$
+for an arbitrary bounded odd function $g$. Such an assignment extends to a map on $\operatorname{Eff}_2$ satisfying (G.1.11e.1) if and only if
+$$
+g(\mathbf n)=\frac12\mathbf r\cdot\mathbf n
+\tag{G.1.11e.2b}
+$$
+for one $\mathbf r\in\mathbb R^3$ with $|\mathbf r|\le1$; the extending state is $\rho=(I+\mathbf r\cdot\boldsymbol\sigma)/2$.
+
+Let $\mathcal C_d$ be the finite-outcome context cover containing every finite POVM in $M_d(\mathbb C)$. Its transition groupoid identifies occurrences of the same effect in different contexts and includes every outcome relabeling; its refinement functor contains every binary context $(E,I-E)$ and every ternary context $(E,F,I-E-F)$ with $E+F\le I$ and sends coarse-graining to addition of outcome weights. Compatible normalized local weights on $\mathcal C_d$ descend to exactly one $f$ satisfying (G.1.11e.1), and every such $f$ pulls back to compatible local weights. The cover is therefore transition-complete for the full effect algebra.
+
+The descent has a normalized finite instrument realization. For each context $C=(E_1,\ldots,E_r)$ define
+$$
+\mathcal I_i^C(\sigma)=E_i^{1/2}\sigma E_i^{1/2}.
+\tag{G.1.11e.3}
+$$
+Then $\sum_i\mathcal I_i^C$ is trace preserving, its outcome law is $\operatorname{tr}(\rho E_i)$, and occurrences of one effect have the same subchannel in every context. Thus the mathematical assignment, the qubit extension, the full transition cover, and the retained finite observable realization coexist on one typed carrier.
+
+*Proof.* Partial additivity gives $f(0)=0$, rational homogeneity on the effect interval, and monotonicity. For $A\ge0$, choose any integer $n\ge\lVert A\rVert$ and set
+$$
+L(A)=n f(A/n).
+\tag{G.1.11e.4}
+$$
+If $m$ is another admissible integer, refinement to $A/(mn)$ gives
+$$
+nf(A/n)=nmf(A/(nm))=mf(A/m),
+$$
+so $L$ is well defined. Applying (G.1.11e.1) after a common rescaling proves additivity of $L$ on the positive cone. The difference construction first extends $L$ to an additive positive functional on $M_d(\mathbb C)_{\mathrm{sa}}$. Positivity makes this extension monotone. For $c\ge0$, choose rational sequences $r_k\uparrow c$ and $s_k\downarrow c$. Rational homogeneity and monotonicity give
+$$
+r_kL(I)\le L(cI)\le s_kL(I),
+$$
+so the squeeze theorem yields $L(cI)=cL(I)$. Consequently
+$$
+-\lVert X\rVert I\le X\le\lVert X\rVert I
+\quad\Longrightarrow\quad
+|L(X)|\le\lVert X\rVert L(I)=\lVert X\rVert.
+$$
+It is therefore continuous. Additivity gives rational homogeneity, and continuity extends it to real homogeneity. Thus $L$ is positive real-linear on the self-adjoint part and extends complex-linearly to $M_d(\mathbb C)$. Since $L(I)=1$, finite-dimensional trace duality gives a unique $\rho\ge0$ with $\operatorname{tr}\rho=1$ and $L(A)=\operatorname{tr}(\rho A)$. The converse is immediate.
+
+For qubit projections, the only orthogonal complement of $P_{\mathbf n}$ is $P_{-\mathbf n}$, so normalization is exactly the odd-function classification (G.1.11e.2a). If the assignment extends to the full effect algebra, the first part gives a density matrix $\rho=(I+\mathbf r\cdot\boldsymbol\sigma)/2$, and direct evaluation gives (G.1.11e.2b). Conversely, every $|\mathbf r|\le1$ defines that density matrix and hence an effect-algebra extension.
+
+Every effect occurs in a binary context, so transition compatibility makes its local weight independent of context. Every admissible sum occurs in a ternary context, and refinement sends coarse-graining to addition, so local normalization gives (G.1.11e.1). These observations also prove the converse pullback and transition completeness. Finally, each map in (G.1.11e.3) is completely positive and
+$$
+\sum_i\operatorname{tr}(\mathcal I_i^C(\sigma))
+=\operatorname{tr}\!\left(\sigma\sum_iE_i\right)
+=\operatorname{tr}\sigma,
+$$
+which proves normalization and the response formula. ∎
+
+Theorem G.1.11e positively resolves `TV-G-01` on the full finite effect domain, including dimension two and its transition-complete finite-instrument realization.
 
 **Quantum-reconstruction certificate boundary.** A reconstruction assembly must keep its hypotheses typed separately. A finite-dimensional homogeneous self-dual cone yields a Euclidean Jordan algebra only after homogeneity and self-duality are accepted. Selecting complex matrix quantum theory additionally requires a composition rule, local tomography, and explicit exclusion of the real, quaternionic, spin-factor, and exceptional alternatives. The Born rule requires the effect or projection hypotheses of the applicable Gleason--Busch result. Wigner implementation requires preservation of transition probabilities, not merely a continuous transitive action. The value $d_0=8$, logical indeterminacy, and SPAP do not by themselves discharge these entries. Consequently the existing Hilbert/Born branch may consume an accepted reconstruction certificate, but the certificate assumptions must not be relabeled as consequences of $d_0=8$ alone.
 
@@ -1344,6 +1587,61 @@ J^{\mathsf T}J=\frac{(2\sigma^{\mathsf T}+\mathbb 1)(2\sigma+\mathbb 1)}3
 =\frac{4\,\mathbb 1-2\,\mathbb 1+\mathbb 1}3=\mathbb 1 .
 $$
 Finally $\tfrac12(-\mathbb 1+\sqrt3\,J)=\tfrac12(-\mathbb 1+2\sigma+\mathbb 1)=\sigma$, so the induced complex scalar $\omega$ acts as $\sigma$. Existence of the rank-$12$ isometric $\mathbb Z[\omega]$-structure on $\Lambda_{24}$ is the complex Leech lattice construction [Conway and Sloane 1999]. The final scope sentence records that the algebraic candidate is not a common-carrier intertwining certificate. ∎
+
+**Theorem G.8.2h.1 (Real Eisenstein-Orthogonal Orbit Classification).** Let $(V,g)$ be a real Euclidean space of dimension $24$ and define
+$$
+\mathcal E(V)
+=
+\{\sigma\in O(V):\sigma^2+\sigma+\mathbb 1=0\},
+\qquad
+\mathcal J(V)
+=
+\{J\in O(V):J^2=-\mathbb 1\}.
+$$
+The assignments
+$$
+\sigma\longmapsto J_\sigma:=\frac{2\sigma+\mathbb 1}{\sqrt3},
+\qquad
+J\longmapsto \sigma_J:=\frac{-\mathbb 1+\sqrt3J}{2}
+\tag{G.8.2h.1.1}
+$$
+are inverse $O(V)$-equivariant bijections. Moreover, $O(V)$ acts transitively on these sets and the stabilizer of any member is $U(12)$. Hence
+$$
+\mathcal E(V)\cong\mathcal J(V)\cong O(24)/U(12),
+\qquad
+\mathcal E(V)/O(24)=\{*\}.
+\tag{G.8.2h.1.2}
+$$
+Thus the order-three polynomial determines one real orthogonal equivalence class but no canonical representative on an unmarked carrier. Integral structures on a fixed lattice $\Lambda$ instead require the conjugacy classification of
+$$
+\{\sigma\in O(\Lambda):\sigma^2+\sigma+\mathbb 1=0\}/O(\Lambda),
+\tag{G.8.2h.1.3}
+$$
+which is not determined by the real orbit calculation.
+
+*Proof.* Proposition G.8.2h proves that $\sigma\mapsto J_\sigma$ lands in $\mathcal J(V)$. Conversely, $J^T=-J$ and $J^2=-\mathbb 1$ give
+$$
+\sigma_J^T\sigma_J
+=\frac{(-\mathbb 1-\sqrt3J)(-\mathbb 1+\sqrt3J)}4
+=\mathbb 1,
+$$
+and direct substitution gives $\sigma_J^2+\sigma_J+\mathbb 1=0$. Equation (G.8.2h.1.1) shows that the two maps are inverse and commute with orthogonal conjugation. For any $J\in\mathcal J(V)$, choose a unit vector $e_1$, then continue inductively in the orthogonal complement of $\operatorname{span}(e_1,Je_1)$ to obtain an orthonormal $J$-adapted basis
+$$
+(e_1,Je_1,\ldots,e_{12},Je_{12}).
+$$
+An orthogonal map carrying one adapted basis to another conjugates the corresponding complex structures, proving transitivity. The commuting orthogonal transformations are exactly the unitary transformations of the complex Hermitian space $(V,J,g)$, so the stabilizer is $U(12)$. The integral qualification follows because an arbitrary real conjugating map need not preserve $\Lambda$. ∎
+
+| Resolution-artifact field | `G.8.2h.1-R1` record |
+|---|---|
+| Catalog binding and outcome | `TV-G-06`; `positive-discharge` of the complete real $O(24)$-orbit classification and `nonentailment` of a canonical unmarked representative; the integral-lattice classification remains open |
+| Exact domain | Every orthogonal $\sigma$ on a real Euclidean $24$-space satisfying $\sigma^2+\sigma+\mathbb 1=0$ |
+| Premises | Real dimension $24$, positive Euclidean metric, and the exact order-three polynomial; no lattice, target observable, or empirical datum |
+| Equivalence relation | Orthogonal conjugacy by $O(24)$; the integral successor uses only $O(\Lambda)$ and is a strictly finer problem |
+| Budget and verifier | Closed-form all-member classification with no cutoff or tolerance; verify both identities in (G.8.2h.1.1), construct adapted bases, and compute the commuting stabilizer $U(12)$ |
+| Falsifier | An element of $\mathcal E(V)$ not orthogonally conjugate to the standard twelve-block $120^\circ$ rotation, or a stabilizer larger or smaller than $U(12)$ |
+| Provenance class | Target-independent exact real linear algebra extending Proposition G.8.2h |
+| Nonvacuity | The block diagonal operator with twelve copies of the real $120^\circ$ rotation belongs to $\mathcal E(V)$ |
+| Downstream consumers | The real-relaxed child of `TV-G-06` and the unmarked-naturality audit in `TV-G-11`; neither the integral $O(\Lambda)$ orbit, a Golay/Leech marking, nor a physical response intertwiner is supplied |
 
 #### G.8.2.3 Anomaly Cancellation as a PCE Imperative (D‑Sensitive)
 
@@ -2804,6 +3102,65 @@ of the inactive fiber, nor does it determine hypercharge assignments or a chiral
 
 *Proof.* The group $M_{24}$ preserves the marked $24$-coordinate Golay carrier. A permutation action on that carrier is not the same datum as an ordered complex block decomposition of the inactive fiber $\mathcal B\cong\mathbb C^6$. The ordered $3+2+1$ split is supplied in Appendix G by the finite-response partition enumeration and the generator-capacity saturation calculation, which leave one abelian response direction after the $8+3$ nonabelian generators. Hypercharge and chiral matter require the separate anomaly and Yukawa-compatibility data recorded in Theorem G.8.4c.0e. Hence Mathieu symmetry is a compatibility and carrier-stabilizer datum, not a replacement selector for the gauge algebra or matter spectrum. ∎
 
+**Theorem G.8.4g.4 (Integral Symplectic Lift and Characteristic-Two Type Obstruction).** Retain the marked integral carrier
+$$
+\Lambda_{\mathbb Z}=\mathbb Z^{12}\oplus\mathbb Z^{12},
+\qquad
+\omega_{\mathbb Z}((x,y),(x',y'))=x^{\mathsf T}y'-y^{\mathsf T}x',
+$$
+its reduction $q:\Lambda_{\mathbb Z}\twoheadrightarrow\overline V=\Lambda_{\mathbb Z}/2\Lambda_{\mathbb Z}$, and the symmetric Golay matrix $P$ of Theorem G.8.4g. Choose its symmetric $\{0,1\}$-valued integral lift $\widetilde P$. Then
+$$
+\widetilde R_P(x,y)=(x,y+\widetilde P x)
+\tag{G.8.4g.4.1}
+$$
+is an integral symplectic automorphism and the square
+$$
+\begin{array}{ccc}
+\Lambda_{\mathbb Z} & \xrightarrow{\ \widetilde R_P\ } & \Lambda_{\mathbb Z}\\
+{\scriptstyle q}\downarrow && \downarrow{\scriptstyle q}\\
+\overline V & \xrightarrow{\ R_P\ } & \overline V
+\end{array}
+\tag{G.8.4g.4.2}
+$$
+commutes exactly. The primitive integral Lagrangian
+$$
+L_{\widetilde P,\mathbb Z}
+:=\widetilde R_P(\mathbb Z^{12}\oplus0)
+=\{(x,\widetilde P x):x\in\mathbb Z^{12}\}
+\tag{G.8.4g.4.3}
+$$
+reduces to $\mathcal G_{24}$, and its scalar extension is a real Lagrangian in $V_{\mathbb R}$.
+
+There is, however, no additive section
+$$
+s:\overline V\longrightarrow\Lambda_{\mathbb Z}
+\quad\text{or}\quad
+s:\overline V\longrightarrow V_{\mathbb R}
+\tag{G.8.4g.4.4}
+$$
+of reduction, and no nonzero additive injection from the binary Golay group into either torsion-free target. Thus a literal additive binary-to-real intertwiner is impossible. The exact typed relation is the reduction/scalar-extension cospan
+$$
+\overline V\xleftarrow{\ q\ }\Lambda_{\mathbb Z}
+\xrightarrow{\ \iota_{\mathbb R}\ }V_{\mathbb R},
+\tag{G.8.4g.4.5}
+$$
+together with the commuting lift (G.8.4g.4.2), rather than an injection $\overline V\hookrightarrow V_{\mathbb R}$.
+
+*Proof.* Symmetry of $\widetilde P$ gives
+$$
+\begin{aligned}
+\omega_{\mathbb Z}(\widetilde R_P(x,y),\widetilde R_P(x',y'))
+&=x^{\mathsf T}(y'+\widetilde P x')
+ -(y+\widetilde P x)^{\mathsf T}x'\\
+&=x^{\mathsf T}y'-y^{\mathsf T}x',
+\end{aligned}
+$$
+so $\widetilde R_P$ is symplectic; its inverse replaces $\widetilde P$ by $-\widetilde P$. Reduction modulo two gives $R_P$, proving the square. Equation (G.8.4g.4.3) is the symplectic image of a primitive Lagrangian, hence is primitive Lagrangian, and reduction gives $\{(s,Ps)\}=\mathcal G_{24}$.
+
+For the obstruction, every $v\in\overline V$ obeys $2v=0$. If $s$ is additive into $\Lambda_{\mathbb Z}$ or $V_{\mathbb R}$, then $2s(v)=s(2v)=0$. Both targets are torsion-free as additive groups, so $s(v)=0$ for every $v$. Such a map cannot be a section or an injection. ∎
+
+**Resolution TV-G-11-R2 (Metadata).** Exact domain: the marked systematic Golay matrix, the integral symplectic lattice of Theorem G.8.4g, its mod-two reduction and real scalar extension. Premises: the fixed marking and a symmetric integral lift of $P$. Equivalence: maps are compared as typed homomorphisms preserving the displayed alternating forms and the reduction square. Budget: all lattice vectors and all binary residue classes; there is no sampling or cutoff. Verifier: integral matrix multiplication, reduction modulo two, the primitive-Lagrangian check and the torsion argument. Falsifier: failure of (G.8.4g.4.2), a nonzero additive map from a two-torsion group into either torsion-free target, or failure of the reduced graph to equal $\mathcal G_{24}$. Provenance class: source-internal algebraic construction and no-go. Downstream consumers: Theorem G.8.4g and `TV-G-11`. This gives `positive-discharge` of the integral/binary/real symplectic carrier subcomponent and `negative-refutation` of the ill-typed direct additive injection. The Lie-bracket, physical update, QFI-to-gauge, polarization and response-observable intertwining squares remain open, so the target is not closed.
+
 ### G.8.4h Predictive Interface Tensor Category and Global-Symmetry Exclusion
 
 **Definition G.8.4h.1 (Predictive Interface Tensor Category).** Let the PCE-selected inactive-sector decomposition of Theorem G.8.4b be written
@@ -3131,6 +3488,49 @@ The PU framework provides a dependency-locked co-selection theorem on the inters
        \{y_U,y_D\}=\{-4y_q,2y_q\}.
        $$
        The primitive character has $y_q=1$ up to sign. Applying the separate Standard Model convention $y_{e^c}=1$ rescales it by $1/6$ and gives (G.8.5a.1). Reducing any nonzero multiplicity in the stated five-atom support leaves either the color cubic anomaly, the $SU(2)$ global anomaly, the mixed gravitational anomaly, or the cubic abelian anomaly uncancelled. Adding the conjugate of a retained representation produces a vectorlike anomaly-null pair, and adding $(1,1)_0$ changes no gauge response. Therefore the displayed package is the unique primitive anomaly-free element on the specified minimal support. No Hilbert-basis claim for unrestricted supports follows from this calculation. ∎
+
+       **Theorem G.8.5b (Central-Quotient Kernel and Perturbative One-Family Audit).** Normalize hypercharge by $q=6Y$ and let
+       $$
+       \widetilde G=SU(3)\times SU(2)\times U(1)
+       $$
+       act on the left-chiral one-family package and one Higgs doublet
+       $$
+       Q=(3,2)_1,\quad U^c=(\bar3,1)_{-4},\quad D^c=(\bar3,1)_2,\quad
+       L=(1,2)_{-3},\quad E^c=(1,1)_6,\quad H=(1,2)_3.
+       \tag{G.8.5b.1}
+       $$
+       The kernel of this joint representation is exactly
+       $$
+       \langle z\rangle\cong\mathbb Z_6,
+       \qquad
+       z=(e^{2\pi i/3}I_3,-I_2,e^{i\pi/3}).
+       \tag{G.8.5b.2}
+       $$
+       Hence the connected global forms through which every character in (G.8.5b.1) descends are precisely
+       $$
+       G_\Gamma=\widetilde G/\Gamma,
+       \qquad
+       \Gamma\in\{1,\mathbb Z_2,\mathbb Z_3,\mathbb Z_6\},
+       \tag{G.8.5b.3}
+       $$
+       with the indicated subgroups of $\langle z\rangle$. The induced joint matter-Higgs representation is faithful exactly for $\Gamma=\mathbb Z_6$. Its $U(1)$ character is primitive because the charges in (G.8.5b.1) have greatest common divisor one.
+
+       The chiral fermion package $Q\oplus U^c\oplus D^c\oplus L\oplus E^c$ has vanishing perturbative anomalies:
+       $$
+       \begin{array}{c|c}
+       [SU(3)]^3&2-1-1=0\\
+       [SU(3)]^2U(1)&2(1)-4+2=0\\
+       [SU(2)]^2U(1)&3(1)-3=0\\
+       [\mathrm{grav}]^2U(1)&6-12+6-6+6=0\\
+       [U(1)]^3&6-192+24-54+216=0.
+       \end{array}
+       \tag{G.8.5b.4}
+       $$
+       The number of left-chiral $SU(2)$ doublets is $3+1=4$, so the Witten mod-two anomaly also vanishes. Quotient-specific spin-bordism torsion classes and possible boundary/interface inflow are separate entries and are not fixed by (G.8.5b.2)--(G.8.5b.4).
+
+       *Proof.* An element of the joint kernel acts trivially on $D^c$ and $L$. Their defining anti-fundamental and doublet actions force its $SU(3)$ and $SU(2)$ components to be scalar, so it has the form $(e^{2\pi ia/3}I_3,(-1)^bI_2,e^{i\theta})$. Trivial action on $E^c$ gives $\theta=k\pi/3$. Trivial action on $D^c$ gives $a\equiv k\pmod3$, and trivial action on $L$ gives $b\equiv k\pmod2$. These congruences make the action on $Q,U^c$, and $H$ trivial as well, so the kernel consists exactly of the six powers of $z$. The subgroup list follows from the subgroup lattice of the cyclic group of order six. Quotienting by the full kernel is necessary and sufficient for faithfulness. Direct summation of the representation multiplicities and integer charges gives (G.8.5b.4), while four fermionic doublets give the mod-two result. ∎
+
+       Theorem G.8.5b discharges the global central-form, primitive-character, perturbative-anomaly, and $SU(2)$ mod-two components of `TV-G-07` for the fixed one-family package. The unrestricted matter-character census and the quotient-specific torsion/bordism/inflow audit remain open.
 
     *   **Hypercharge Uniqueness with one Higgs doublet.** Let the left‑chiral hypercharges be $y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c}$. Imposing cancellation of all local and mixed gauge and gravitational anomalies in $D=4$ yields the constraints:
         $$
@@ -4278,7 +4678,86 @@ A_\mu A^\mu
 $$
 This expression is not invariant for arbitrary local $\theta$ unless $m=0$ or an additional symmetry-breaking/Stueckelberg/Higgs structure is supplied.
 
-PPI treats gauge transformations as response-equivalent frame relabelings (Theorem X.8d of Appendix X, applied in Appendix G and in constraint C1 of Appendix P, §P.2.5.2; gauge transformations are predictive-frame redundancies, so the predictive functional descends to the gauge quotient). A term that changes under such a relabeling is not a well-defined physical response on the quotient. Therefore an unbroken gauge redundancy forbids a local gauge-boson mass term. Mass acquisition for $W^\pm$ and $Z$ occurs only after the electroweak symmetry-breaking branch supplies the Higgs vacuum structure; the photon remains massless on the unbroken electromagnetic branch. ∎
+PPI treats gauge transformations as response-equivalent frame relabelings (Theorem X.8d of Appendix X, applied in Appendix G and in constraint C1 of Appendix P, §P.2.5.2; gauge transformations are predictive-frame redundancies, so the predictive functional descends to the gauge quotient). A term that changes under such a relabeling is not a well-defined physical response on the quotient. PPI therefore excludes the uncompensated Proca term on this branch. The electroweak-breaking branch supplies the Higgs mechanism for $W^\pm$ and $Z$; a photon zero-mass conclusion additionally consumes the complete exclusion of electromagnetic Higgs, Stückelberg, topological, and other gauge-invariant mass structures stated in the corollary. ∎
+
+**Proposition G.10.6.1a (Stückelberg Countermodel to Redundancy-Alone Masslessness).** On a topologically trivial Lorentzian chart, let $A$ be an abelian gauge connection, let $\vartheta$ be a real Stückelberg scalar, and fix $m>0$. Under
+$$
+A\longmapsto A+d\alpha,
+\qquad
+\vartheta\longmapsto\vartheta+m\alpha,
+\tag{G.10.6.1a.1}
+$$
+both $F=dA$ and $D\vartheta:=d\vartheta-mA$ are invariant. Therefore
+$$
+\mathcal L_{\mathrm{St}}
+=-\frac14F_{\mu\nu}F^{\mu\nu}
+-\frac12(\partial_\mu\vartheta-mA_\mu)
+       (\partial^\mu\vartheta-mA^\mu)
+\tag{G.10.6.1a.2}
+$$
+is a local gauge-invariant quadratic action. The local gauge choice $\vartheta=0$ turns (G.10.6.1a.2) into the Proca action with mass $m$, so its vector excitation is massive although the gauge redundancy (G.10.6.1a.1) is exact. Consequently, unbroken local gauge redundancy alone does not imply zero vector mass; Corollary G.10.6.1's zero-mass conclusion requires the independently stated exclusion of compensating Higgs, Stückelberg, topological, and other gauge-invariant mass structures.
+
+*Proof.* The transformations give
+$$
+d(\vartheta+m\alpha)-m(A+d\alpha)=d\vartheta-mA
+$$
+and $d(A+d\alpha)=dA$, proving exact invariance. On a topologically trivial chart choose $\alpha=-\vartheta/m$. The transformed scalar vanishes and the second term in (G.10.6.1a.2) becomes $-m^2A_\mu A^\mu/2$. This is the standard massive-vector quadratic operator; the scalar supplies the longitudinal mode while the redundancy remains an exact description equivalence. ∎
+
+| Resolution-artifact field | `G.10.6.1a-R1` record |
+|---|---|
+| Catalog binding and outcome | `TV-G-17`; `negative-refutation` of the universal proposition that exact local gauge redundancy by itself forces zero vector mass; the complete mechanism census and the photon-specific exclusion proof remain open |
+| Exact domain | Local quadratic abelian gauge theories on a topologically trivial Lorentzian chart with one real compensator and $m>0$ |
+| Premises | The transformations (G.10.6.1a.1), ordinary exterior calculus, and the action (G.10.6.1a.2) |
+| Equivalence relation | Local gauge equivalence under the displayed $(A,\vartheta)$ transformation; different positive values of $m$ are not quotiented |
+| Budget and verifier | Closed-form action-level check with no regulator or search cutoff; verify $F$ and $D\vartheta$ invariance and substitute the unitary gauge exactly |
+| Falsifier | A nonzero gauge variation of (G.10.6.1a.2), failure of the local unitary gauge for $m>0$, or absence of the Proca mass term after that substitution |
+| Provenance class | Target-independent local field-theory counterconstruction; no observed gauge-boson mass enters |
+| Nonvacuity | Minkowski space with any fixed $m>0$ and smooth compactly supported $(A,\vartheta)$ supplies members of the action domain |
+| Downstream consumers | Corollary G.10.6.1, Table G.10.1, `TV-G-17`, and `RT-T1`; bare-Proca exclusion survives, while a positive masslessness result must exclude every compensating or topological mechanism on the realized branch |
+
+**Theorem G.10.6.1b (Complete Quadratic Scalar-Compensator Mass Classification).** Work on a topologically trivial four-dimensional Lorentzian chart with one abelian connection $A$ and $r$ real scalars $\theta=(\theta_1,\ldots,\theta_r)$. Fix the gauge action
+$$
+A\mapsto A+d\alpha,
+\qquad
+\theta\mapsto\theta+q\alpha,
+\qquad q\in\mathbb R^r.
+\tag{G.10.6.1b.1}
+$$
+In the class of local, parity-even, Lorentz-invariant quadratic Lagrangians with constant coefficients, at most two derivatives, and no background tensors, every vector-mass contribution built from $A$ and first derivatives of $\theta$ is contained in
+$$
+\mathcal L_{mathrm{quad}}
+=-\frac Z4F_{\mu\nu}F^{\mu\nu}
+-\frac12
+(\partial_\mu\theta-qA_\mu)^{\mathsf T}
+K(\partial^\mu\theta-qA^\mu)
++\mathcal L_{\mathrm{neutral}},
+\tag{G.10.6.1b.2}
+$$
+where $Z>0$, $K=K^{\mathsf T}\succeq0$, and $\mathcal L_{\mathrm{neutral}}$ contains only gauge-invariant scalar combinations annihilating $q$. After canonical normalization of $A$, the vector mass is
+$$
+m_A^2=\frac{q^{\mathsf T}Kq}{Z}.
+\tag{G.10.6.1b.3}
+$$
+Consequently,
+$$
+m_A=0
+\quad\Longleftrightarrow\quad
+Kq=0
+\tag{G.10.6.1b.4}
+$$
+throughout this stable quadratic class. The class includes the quadratic Goldstone/Stückelberg sector with any finite number of compensators. It excludes Chern--Simons or other topological masses, boundary-localized terms, nonlocal operators, and nonquadratic Higgs dynamics.
+
+*Proof.* A linear one-form made from the declared fields is $u^{\mathsf T}d\theta-cA$. Its gauge variation is $(u^{\mathsf T}q-c)d\alpha$, so it is invariant exactly when $c=u^{\mathsf T}q$; every invariant one-form is therefore a linear combination of
+$$
+B:=d\theta-qA.
+$$
+The only invariant two-form at this derivative order involving the connection is $F=dA$, since $d^2\theta=0$. Lorentz invariance and parity evenness then make every quadratic one-form contribution $B^{\mathsf T}KB$ and the connection kinetic term $ZF^2$; gauge-invariant neutral-scalar terms cannot contribute an $A_\mu A^\mu$ coefficient. Expanding $B^{\mathsf T}KB$ gives the coefficient $q^{\mathsf T}Kq$, and canonical normalization gives (G.10.6.1b.3). For $K\succeq0$,
+$$
+q^{\mathsf T}Kq=\|K^{1/2}q\|^2,
+$$
+which vanishes exactly when $Kq=0$. ∎
+
+**Resolution TV-G-17-R2 (Metadata).** Exact domain: the complete local parity-even stable quadratic abelian connection/scalar class specified in Theorem G.10.6.1b. Premises: one $U(1)$ connection, finitely many shift compensators, constant coefficients, at most two derivatives, $Z>0$ and $K\succeq0$. Equivalence: local gauge transformations (G.10.6.1b.1), invertible scalar basis changes and canonical normalization of $A$. Budget: every invariant quadratic monomial in the declared field/derivative alphabet. Verifier: solve the linear gauge-invariance equations and test $Kq$; no numerical search is used. Falsifier: a missing invariant quadratic vector-mass monomial in the declared alphabet or a counterexample to (G.10.6.1b.4). Provenance class: source-internal local field classification. Downstream consumers: Corollary G.10.6.1, Proposition G.10.6.1a and `TV-G-17`. This gives `positive-discharge` of the scalar-compensator quadratic-sector census. Topological, boundary, nonlocal and nonlinear mechanisms and the photon-specific physical carrier remain outside the theorem, so complete masslessness is not closed.
 
 ---
 
@@ -4361,7 +4840,7 @@ A binary self-reference structure can support spinor behavior only after separat
 | 7 | Spinor representation | Lift of $2\pi$ rotation acts as $-I$ | Recovered | Corollary G.10.4.1 |
 | 8 | $Spin(1,3)\cong SL(2,\mathbb C)$ | Lorentzian extension | Conditional on Lorentzian branch | Theorem G.10.5 |
 | 9 | Fundamental active-kernel matter spinorial | $\mathcal I_{\text{rel}}$ on active kernel | Branch-derived | Theorem G.10.6 |
-| 10 | Unbroken gauge bosons massless | Gauge-redundancy quotient forbids Proca mass | Derived | Corollary G.10.6.1 |
+| 10 | Bare uncompensated Proca term excluded; zero mass requires the complete mechanism-exclusion branch | Gauge-redundancy quotient plus the separate Higgs/Stückelberg/topological exclusion gate | Bare-Proca result derived; complete masslessness open | Corollary G.10.6.1; Proposition G.10.6.1a |
 | 11 | Fermi-Dirac exchange sign | AQFT/modular spin-statistics branch | Conditional theorem | Proposition G.10.7; Appendix F |
 
 **Status Legend:**

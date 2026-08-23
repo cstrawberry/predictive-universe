@@ -241,6 +241,7 @@
 *   Everett, H. (1957). "Relative State" formulation of quantum mechanics. *Reviews of Modern Physics*, *29*(3), 454–462. DOI: 10.1103/RevModPhys.29.454
 *   Engel, G. S., Calhoun, T. R., Read, E. L., Ahn, T. K., Mančal, T., Cheng, Y. C., ... & Fleming, G. R. (2007). Evidence for wavelike energy transfer through quantum coherence in photosynthetic systems. *Nature*, *446*(7137), 782–786.
 *   Fagnola, F., & Umanità, V. (2007). Generators of detailed balance quantum Markov semigroups. *Infinite Dimensional Analysis, Quantum Probability and Related Topics*, *10*(3), 335–363. DOI: 10.1142/S0219025707002762
+*   Faraut, J., & Korányi, A. (1994). *Analysis on Symmetric Cones*. Clarendon Press.
 *   Falconer, K. J. (1997). *Techniques in Fractal Geometry*. John Wiley & Sons.
 *   Fechner, G. T. (1860). *Elemente der Psychophysik*. Breitkopf und Härtel. [English translation: *Elements of Psychophysics*, Vol. I, H. E. Adler, Trans., Holt, Rinehart and Winston, 1966.]
 *   Fendel, J. C., Tiersch, C., Sölder, P., Gaab, J., & Schmidt, S. (2025). Effects of open-label placebos across populations and outcomes: An updated systematic review and meta-analysis of randomized controlled trials. *Scientific Reports*, *15*, 29940. DOI: 10.1038/s41598-025-14895-z
@@ -340,6 +341,7 @@
 *   Hayden, P., Jozsa, R., Petz, D., & Winter, A. (2004). Structure of states which satisfy strong subadditivity of quantum entropy with equality. *Communications in Mathematical Physics*, *246*(2), 359–374.
 *   Hayden, P., & Preskill, J. (2007). Black holes as mirrors: quantum information in random subsystems. *Journal of High Energy Physics*, *2007*(09), 120. DOI: 10.1088/1126-6708/2007/09/120
 *   Hayward, S. A. (1994). General laws of black-hole dynamics. *Physical Review D*, *49*(12), 6467–6474. DOI: 10.1103/PhysRevD.49.6467
+*   Hefford, J., & Wilson, M. (2026). Decoherence to quantum theory from a causally indefinite post-quantum theory. *Physical Review A*, *113*, 042433. DOI: 10.1103/kmmy-3dy3
 *   Heidegger, M. (1929). *What is Metaphysics?* Inaugural lecture, University of Freiburg.
 *   Heidegger, M. (1959). *An Introduction to Metaphysics* (R. Manheim, Trans.). Yale University Press. (Original work published 1935)
 *   Heinonen, J., & Koskela, P. (1998). Quasiconformal maps in metric spaces with controlled geometry. *Acta Mathematica*, *181*(1), 1–61. DOI: 10.1007/BF02392747
@@ -662,7 +664,7 @@
 *   Simon, B. (1983). Holonomy, the Quantum Adiabatic Theorem, and Berry's Phase. *Physical Review Letters*, *51*(24), 2167–2170. DOI: 10.1103/PhysRevLett.51.2167
 *   Simon, H. A. (1955). On a class of skew distribution functions. *Biometrika*, *42*(3/4), 425–440. DOI: 10.1093/biomet/42.3-4.425
 *   Sornette, D. (1998). Discrete-scale invariance and complex dimensions. *Physics Reports*, *297*(5), 239–270. DOI: 10.1016/S0370-1573(97)00076-8
-*   Shiraishi, N., Funo, K., & Saito, K. (2016). Speed limit for classical stochastic processes. *Physical Review Letters*, *117*(19), 190601. DOI: 10.1103/PhysRevLett.117.190601
+*   Shiraishi, N., Funo, K., & Saito, K. (2018). Speed limit for classical stochastic processes. *Physical Review Letters*, *121*(7), 070601. DOI: 10.1103/PhysRevLett.121.070601. arXiv:1802.06554
 *   Shirokov, M. E. (2006). The Holevo capacity of infinite dimensional quantum channels and the additivity problem. *Communications in Mathematical Physics*, *262*(1), 137–159. DOI: 10.1007/s00220-005-1494-8
 *   Shirokov, M. E. (2017). Continuity of the von Neumann entropy and its applications in quantum information theory. *Izvestiya: Mathematics*, *81*(5), 1058–1092. DOI: 10.1070/IM8672
 *   Shor, P. W. (2002). The quantum channel capacity and coherent information. *MSRI Workshop on Quantum Computation*, lecture notes.
@@ -828,6 +830,10 @@
 *   Yonekura, K. (2019). On the cobordism classification of symmetry protected topological phases. *Communications in Mathematical Physics*, *368*, 1121–1173. DOI: 10.1007/s00220-019-03439-y
 *   Yudkowsky, E., & Herreshoff, M. (2013). Tiling Agents for Self-Modifying AI, and the Löbian Obstacle. Machine Intelligence Research Institute draft.
 *   Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. *Reviews of Modern Physics*, *75*(3), 715–775. DOI: 10.1103/RevModPhys.75.715
+*   Center for Open Science. (2026). *Registrations and preregistrations on the Open Science Framework*. https://help.osf.io/article/330-welcome-to-registrations (accessed 2026-08-22).
+*   Crusoe, M. R., Abeln, S., Iosup, A., Amstutz, P., Chilton, J., Tijanić, N., Ménager, H., Soiland-Reyes, S., Gavrilović, B., Goble, C., & The CWL Community. (2022). Methods included: Standardizing computational reuse and portability with the Common Workflow Language. *Communications of the ACM*, *65*(6), 54–63. DOI: 10.1145/3486897
+*   RO-Crate Community. (2026). *RO-Crate Metadata Specification 1.3*. DOI: 10.5281/zenodo.20720080
+*   World Wide Web Consortium. (2013). *PROV-O: The PROV Ontology*. W3C Recommendation. https://www.w3.org/TR/prov-o/
 
 *   Abajian, J., & Carlip, S. (2018). Dimensional reduction in manifold-like causal sets. *Physical Review D*, *97*, 066007. arXiv:1710.00938. DOI: 10.1103/PhysRevD.97.066007
 

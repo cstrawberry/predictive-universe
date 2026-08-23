@@ -20,7 +20,7 @@ The Cogito supplies the process-root: there exists awareness/process $\mathcal{C
 
 We begin from the Cogito-certified occurrence of awareness and model knowledge-bearing activity by the finite predictive normal form on the class specified in Definition P.6.1c.1. This is an operational representation theorem on that class. The predictive structure it identifies is constitutive for every occurrence in the class: distinctions are drawn, the drawing is ordered, and information is carried forward so that it bears on what follows. What the theorem does not fix is the class boundary, and that boundary is settled by the admission conditions of Definition P.6.1c.1 rather than by a prior commitment about essence. The resulting finite logical and informational structures are branch-relative model data.
 
-Idealism and the Distinction Framework provide an interpretive consciousness-first reading. They reframe the hard problem by taking awareness as primitive; they do not derive phenomenal character from an operational response structure or prove the reading uniquely parsimonious. The simulation language below is likewise a finite-process modeling framework, not a probabilistic claim about origin.
+Idealism and the Distinction Framework provide an interpretive consciousness-first reading. They reframe the hard problem by taking awareness as primitive; they do not derive phenomenal character from an operational response structure or prove the reading uniquely parsimonious. Section P.5 uses simulation as a finite-process modeling framework, not a probabilistic claim about origin. Thesis P.2.3a.1 separately nominates a constitutive-simulation ontology. Construction P.2.3a.2a and Theorem P.2.3a.2b prove its displayed finite coexistence witness, and Corollary P.2.3a.2c proves the fixed-capacity minimum; the further physical, selection, observer/cosmology, CC-attribution, and empirical consequences are governed by the corresponding accepted fields of Definition P.2.3a.2.
 
 From these premises the appendix derives the finite operational constraints stated in its theorem bodies. Time order, causal propagation, carrier structure, physical dynamics, and spacetime geometry require their separately registered reconstruction, locality, continuum, realization, and response certificates.
 
@@ -142,6 +142,210 @@ Materialism and dualism carry familiar explanatory burdens. PU therefore adopts 
 
 All claims about a physical world, other persons, and scientific theories are accessed through conscious experience. That epistemic fact does not entail that the physical world is constituted by one mind or that experience creates external reality. Dreams witness the capacity of conscious processes to present internally coherent apparent environments; they do not by themselves establish an ontology, other minds, or the generation of a physically realized universe. PU's physical-world identification must instead pass the explicit PPI, realization, and empirical certificate gates stated below.
 
+### P.2.3a The Constitutive-Simulation Thesis
+
+**Thesis P.2.3a.1 (Constitutive Simulation).** Fix a nominated collective $\mathsf S$ of finite conscious predictive processes, called the simulators. The constitutive-simulation branch proposes that the retained state and response structure of a shared simulated world is constituted by the jointly realized prediction--verification--update activity of $\mathsf S$. The world is a simulation constituted through the simulators' observation: their jointly realized observing is the world-forming process. Conscious predictive activity is the ontic primitive on this branch. Its logical observation role is the verification phase $V$ of the Fundamental Predictive Loop $P_{int}\to V\to D_{cyc}$ of Definition 4; its physical observation maps require the normalized instruments of Definition P.2.3a.2.
+
+On this branch, the MPU network is the proposed finite physical representation of the simulators' internal model and implementation of that activity. MPU states, interactions, and response presheaves represent the simulators' constitutive activity on branches carrying the existing PPI, PCE, carrier, dynamics, continuum, operator, observable, unit, and empirical certificates. Thesis P.2.3a.1 fixes the branch's ontological interpretation. Definition P.2.3a.2 assigns physical realization, selection, Authentic-boundary, perspective, temporal, observer-algebra, control-coexistence, and empirical conclusions to the separately named certificate fields; each cited PU theorem establishes the branch conclusion stated by its owning declaration under that declaration's hypotheses.
+
+The boundary proposal is topological and operational. A constitutive-simulation model specifies a topological state space $(X,\tau)$, an internal domain $X_{\mathrm{int}}\subseteq X$ invariant under the registered internal operations, its topological boundary
+$$
+\partial X_{\mathrm{int}}
+=\overline{X_{\mathrm{int}}}\setminus\operatorname{int}(X_{\mathrm{int}}),
+$$
+and the admissible state transformations and observation instruments on $X_{\mathrm{int}}$. Hardware, augmentation, memory, and other implementation degrees of freedom belong to the simulators exactly when their states and maps are represented in $X_{\mathrm{int}}$. The branch identifies $X_{\mathrm{int}}$ as the complete world-carrier; a distinct housed-world carrier belongs to the comparator architecture. Construction and physical identification of $(X,\tau,X_{\mathrm{int}})$ are certificate obligations.
+
+The motivating design hypothesis is that a sufficiently advanced civilization with a resource-efficiency objective can obtain greater shared predictive yield by refining its native predictive and observational capacities than by maintaining a response-equivalent housed world. Physical PCE selection from that hypothesis requires a candidate-wide comparison with complete commensurate costs, attained optima, and the strictness required for selection. Principle P.14.9c separately governs theory comparison by predictive yield per structural description cost on a shared empirical domain.
+
+**Definition P.2.3a.2 (Constitutive-Simulation Bridge Certificate).** Fix a finite registered protocol family $\mathfrak P$, an empirical domain $\mathcal E$, and a declared comparison class $\mathcal Q_{\mathrm{CS}}$. A constitutive-simulation bridge certificate is a finite record
+$$
+\mathfrak C_{\mathrm{CS}}
+=
+(\mathfrak M_{\mathrm{CS}},\iota_{\mathrm{MPU}},
+\mathfrak R_{\mathrm{phys}},\mathfrak C_{\mathrm{sel}},
+\mathfrak C_{\mathrm{auth}},\mathfrak C_{\mathrm{persp}},
+\mathfrak D_{\mathrm{CS}},\mathfrak T_{\mathrm{CS}},
+\mathfrak O_{\mathrm{CS}},\mathfrak C_{\mathrm{CS,CC}},
+\mathfrak F_{\mathrm{CS}})
+$$
+with the following independently checkable fields.
+
+1. $\mathfrak M_{\mathrm{CS}}$ supplies a frozen typed constitutive-simulation theory and a constructed nonempty model interpreting $\mathsf S$, $(X,\tau,X_{\mathrm{int}})$, the prediction--verification--update cycles, and their joint dynamics. It lists every imported PU premise and proves that the interpretations coexist in one model.
+2. $\iota_{\mathrm{MPU}}$ is a total response-faithful map from the simulator-activity classes admitted by $\mathfrak M_{\mathrm{CS}}$ to MPU-network states and updates on one common carrier. It includes the equivalence relation, overlap maps, source ownership, and the proof that equal MPU response classes are exactly the identifications declared by the constitutive model.
+3. $\mathfrak R_{\mathrm{phys}}$ maps every retained mathematical response on $\mathfrak P$ to a normalized physical instrument and observable on the same carrier. It supplies domains, clocks, units, calibrations, error laws, source exhaustion, totality and normalization proofs, and the finite recordability, verification, maintenance, and update-use ledger required by Theorem P.6.2c, in the sense of Definition P.14.9g and Corollary P.14.9i.
+4. $\mathfrak C_{\mathrm{sel}}$ states which selection claim is made. A Principle-P.14.9c comparison supplies a shared empirical domain, a common scoring rule, a fixed structural-description language, and $K_{\mathcal E}$ for every comparator. A physical PCE comparison supplies a nonempty candidate-wide realization class and one complete commensurate physical cost fixed without target observations, together with lower boundedness, attainment, and the strictness required for the claimed selection. The comparison class contains the constitutive architecture and every housed architecture against which the conclusion is asserted.
+5. $\mathfrak C_{\mathrm{auth}}=(\mathfrak C_{\mathrm{pred}},\mathfrak C_{\mathrm{write}})$ carries the two independent boundaries of Definition P.5.2. The epistemic record $\mathfrak C_{\mathrm{pred}}$ fixes the coding, query, response, and uniform-closure class on which a SPAP obstruction applies. The causal record $\mathfrak C_{\mathrm{write}}$ proves that every nominated external operation leaves every registered internal response law unchanged. Theorem 4.2.6c discharges the unfolded complete-state subcase under its assumptions (i)--(iii); Theorems 10--11 govern their stated encoded uniform classes.
+6. $\mathfrak C_{\mathrm{persp}}$ supplies the finite perspective cover, local response presheaves, restriction maps, access transformations, and normalized observation instruments. Its world-gluing record constructs one global carrier or response object whose restrictions give all local perspective records and proves uniqueness up to the declared response equivalence. Theorem P.16d.7.2 supplies the path-independent finite-response route when its partial-isomorphism, cycle-holonomy, and triple-overlap hypotheses hold. A claim of zero average disturbance additionally verifies
+   $$
+   \sum_y\mathcal I_y^i(\rho)=\rho
+   $$
+   on the registered state class for every claimed perspective instrument $\{\mathcal I_y^i\}_y$, together with preservation of all subsequent registered protocol responses. A claim that the simulators can occupy every perspective additionally supplies a total access transformation for every perspective in the cover.
+7. $\mathfrak D_{\mathrm{CS}}$ is a **distributed-realization certificate**. It gives finite population and retention data $(N,T,K,\rho_{\rm ret})$, the state space, carrier and update rule of each simulator, an aggregate network update, and overlap/source maps into one response presheaf. It verifies that the aggregate reproduces the records claimed of the MPU. A claim that distribution is selected over a monolithic or housed realization additionally gives a nonempty common comparator class with identical admitted protocols and response obligations, an attained cost on that class, and a verified strict gap. A claim that mutual prediction evades a local diagonal obstruction exhibits the cross-node protocol and proves both that each admitted local query is answered by another node and that the aggregate has not thereby acquired the forbidden complete self-predictor.
+8. $\mathfrak T_{\mathrm{CS}}$ is the time-realization record. It identifies the protocol order of Definition 4, the projection claim of Thesis 2.6, any task-specific internal timescale supplied by Theorem 29, and any pathwise arrow supplied by Appendix O with one common temporal object. It supplies an internal clock or ordered parameter, its domain and calibration, a map from registered prediction--verification--update histories to that parameter, the generator or transition law, and the conditions under which a metric and orientation exist. A claim that incomplete self-description generates time additionally proves, under an explicitly listed dynamics, that the nominated SPAP obstruction entails this temporal object; the obstruction alone is the input to that bridge.
+9. $\mathfrak O_{\mathrm{CS}}$ is an **observer-clock/trace/cosmology realization certificate**. It specifies a faithful embedding of the retained observer algebra into a stated von Neumann algebra $\mathcal M$, a faithful normal state or semifinite weight $\varphi$, its modular action $\sigma^\varphi$, and, when used, a represented crossed product $\mathcal N=\mathcal M\rtimes_{\sigma^\varphi}\mathbb R$. It supplies the domains and self-adjointness data of the clock generator, a faithful semifinite trace $\tau$ or a finite-trace corner $p\mathcal Np$, a normalized density $h$ in that corner, and the entropy convention $S_\tau(h)=-\tau(h\log h)$ with its units, additive normalization, regulator, convergence test and error bound. It then gives response-faithful maps from these objects to the PU clock and observable records on the same carrier. Any cosmological reading adds, on one common branch, the continuum/Lorentzian, state-selection, stress-tensor, horizon, Einstein-equation and cosmological-constant certificates, including source exhaustion and a no-double-counting table.
+10. $\mathfrak C_{\mathrm{CS,CC}}$ is a **constitutive-simulation/control-coexistence certificate**. On one common carrier it supplies an internal context-to-control map, normalized instruments, energy and reset ledgers, a signed response convention, calibrations, and a source-partition table. It distinguishes the internal operations used by the accepted control branch from the nominated external interventions in $\mathfrak C_{\mathrm{write}}$, verifies the no-external-write tests, and verifies commutation or stated compatibility of every shared diagram. The Authentic Simulation label may be used jointly with a CC claim only when both $\mathfrak C_{\mathrm{auth}}$ and this coexistence field pass.
+11. $\mathfrak F_{\mathrm{CS}}$ is a forward-locked empirical record containing the protocol implementation, observable and unit maps, likelihood or hard-support law, artifact model, stopping rule, exclusion region, and the exact realization claim withdrawn on failure.
+
+World gluing and measurement contextuality have different types. The world-gluing component of $\mathfrak C_{\mathrm{persp}}$ concerns restrictions of one shared carrier or response object. A contextuality extension
+$
+\mathfrak X_{\mathrm{ctx}}=(\mathcal M_{\mathrm{ctx}},\Omega,\partial,p)
+$
+uses a finite measurement-context cover $\mathcal M_{\mathrm{ctx}}$ of the type in Definition G.1.7a.1 and concerns positive global outcome assignments across that cover. Theorem G.1.7a.2 certifies protocol contextuality when its hypotheses hold and $\mathcal M_{\mathrm{PCE}}(p)>0$; the event noncontextuality used by the Born reconstruction remains governed by its separate refinement and domain certificates.
+
+A horizon-saturation extension $\mathfrak H_\Sigma$ supplies the boundary surface, physical area and unit maps, the relevant state and trace or entropy construction, the information--entropy bridge, source exhaustion, and a proof of
+$$
+S_\Sigma^{\mathrm{op}}=\frac{\mathcal A}{4L_P^2}.
+$$
+Theorem E.9.1 supplies the upper bound and its equality under its registered density and saturation certificates.
+
+**Construction P.2.3a.2a (Two-Node Constitutive-Simulation Witness).** Put $K_0=3$, $A=\{0,1\}^{K_0}$, $N=\{1,2\}$, and
+$$
+\Omega=A^N.
+\tag{P.2.3a.2a.1}
+$$
+Give $N$ the discrete topology and put $\mathscr R(U)=A^U$ with coordinate restrictions for every $U\subseteq N$. For a nonempty topological boundary, take
+$$
+\overline\Omega=\Omega\sqcup\{\infty\},
+\qquad
+\tau_{\rm amb}=\mathcal P(\Omega)\cup\{\overline\Omega\}.
+\tag{P.2.3a.2a.2}
+$$
+Then $\Omega$ is open and dense in $\overline\Omega$ and $\partial\Omega=\{\infty\}$. Every registered ontic update below is extended by fixing $\infty$.
+
+Join the two nodes by one noiseless edge and define the integer-time update
+$$
+F(x_1,x_2)=(x_2,x_1).
+\tag{P.2.3a.2a.3}
+$$
+Node $1$ predicts node $2$'s next word by $p_{1\to2}(x)=x_1$, and node $2$ predicts node $1$'s next word by $p_{2\to1}(x)=x_2$. Let $\mathfrak M_{\rm fin}$ be the finite predictive-unit response model with state carrier $|\mathfrak M_{\rm fin}|=\Omega$, update $F$, and coordinate protocols $q_{i,k}(x)=(x_i)_k$. The carrier map $\iota:\Omega\to|\mathfrak M_{\rm fin}|$ is the identity.
+
+On probability vectors $\mu\in\mathbb R_+^\Omega$, define the external coordinate-read instrument and internal word flips by
+$$
+(\mathcal I_i^a\mu)(x)=\mathbf1_{\{x_i=a\}}\mu(x),
+\qquad
+(\mathcal U_i^v\mu)(x)=\mu(x_1,\ldots,x_i\oplus v,\ldots,x_2),
+\tag{P.2.3a.2a.4}
+$$
+where $a\in A$ and $0\ne v\in A$. Write $\mathcal F=F_*$ for the swap pushforward on probability vectors.
+
+For the epistemic boundary, fix integers $1\le m\le M$, the finite query set $Q=\{q_1,\ldots,q_M\}$, and the finite predictor class $\mathcal P=\{\pi_1,\ldots,\pi_m\}$ with $\pi_j:Q\to\{0,1\}$. Let $\mathcal D=\{D_1,\ldots,D_m\}$ be a finite formal system sort and define the injective constructor $d(j)=q_j=\ulcorner D_j\urcorner$. A lookup interpreter $U(j,q)=\pi_j(q)$ represents and simulates every nominated predictor; equality of returned bits is decidable; and Boolean negation and finite table composition are admitted. Give each $D_j$ the explicit finite response table
+$$
+r_j(q)=
+\begin{cases}
+1-U(j,d(j)),&q=d(j),\\
+U(j,q),&q\ne d(j).
+\end{cases}
+\tag{P.2.3a.2a.5}
+$$
+Every $d(j)$ is an admitted live query, and the finite model record $\mathfrak M_{\rm fin}$ includes the sorts $Q,\mathcal D$, the tables $U,r_j$, and the displayed Boolean operations.
+The associated deterministic external instrument is
+$$
+(\mathcal D_j^b\mu)(x)
+=\mathbf1_{\{b=r_j(d(j))\}}\mu(x),
+\qquad b\in\{0,1\}.
+\tag{P.2.3a.2a.6}
+$$
+Every outcome subchannel in the $\mathcal I$ and $\mathcal D$ families has the identity ontic transition. The nominated external operations are the normalized whole instruments specified below; the $\mathcal U_i^v$ are nominated internal controls.
+
+Three optional finite response layers are carried on the same $\Omega$. First, for settings $s,t\in\{0,1\}$ and outcomes $a,b\in\{0,1\}$, define the no-write instrument
+$$
+(\mathcal J_{st}^{ab}\mu)(x)
+=\frac12\mathbf1_{\{a\oplus b=st\}}\mu(x).
+\tag{P.2.3a.2a.7}
+$$
+The nominated external-operation class consists of the whole instruments $\{\mathcal I_i^a\}_{a\in A}$, $\{\mathcal D_j^b\}_{b\in\{0,1\}}$, and, when this optional layer is admitted, $\{\mathcal J_{st}^{ab}\}_{a,b\in\{0,1\}}$; it excludes the internal families $\mathcal U$ and $\mathcal K$.
+Second, fix $0<\eta<1/2$, let $c(x)=(x_1)_1$, and put
+$$
+P_\eta(z=1\mid x)=\frac12+\eta(2c(x)-1),
+\qquad
+(\mathcal K_\eta^z\mu)(x)=P_\eta(z\mid x)\mu(x),
+\tag{P.2.3a.2a.8}
+$$
+with $P_\eta(0\mid x)=1-P_\eta(1\mid x)$. A finite ownership ledger assigns every displayed map in the $\mathcal I$, $\mathcal D$, $\mathcal U$, $\mathcal F$, $\mathcal J$, and $\mathcal K$ families exactly once to the respective typed bookkeeping labels coordinate read, diagonal read, internal flip, network update, contextual response, and internal context bias.
+
+Finally, on $\ell^2(\Omega)$ put
+$$
+U_F|x\rangle=|F(x)\rangle,
+\qquad
+P_-:=\frac{I-U_F}{2},
+\qquad
+H_F:=\pi P_-.
+\tag{P.2.3a.2a.9}
+$$
+The clock domain is $\mathbb Z$ with metric $|t-s|$, orientation $t\mapsto t+1$, and calibration one update per unit. On $\ell^\infty(\Omega)$ use the counting trace $\operatorname{Tr}_\Omega(f)=\sum_xf(x)$ and the uniform density $h_*(x)=|\Omega|^{-1}$.
+
+**Theorem P.2.3a.2b (Nonempty Finite Constitutive-Simulation Coexistence Branch).** Construction P.2.3a.2a has the following properties.
+
+1. It is a two-node distributed simulator: for $\{i,j\}=N$,
+   $$
+   p_{i\to j}(x)=\operatorname{pr}_j(Fx),
+   $$
+   where $\operatorname{pr}_j:\Omega\to A$ is coordinate projection. The map $\iota$ is injective, response-faithful, and update-intertwining.
+2. The presheaf $\mathscr R$ has unique global gluing: every compatible family of local words is the restriction of exactly one element of $A^N$. The swap and word-flip state maps extend continuously to $\overline\Omega$, preserve $\Omega$, and fix the invariant nonempty boundary $\partial\Omega=\{\infty\}$.
+3. The reads are normalized, nonvacuous, and ontically no-write:
+   $$
+   \sum_{a\in A}\mathcal I_i^a=\operatorname{id},
+   \qquad
+   \sum_{b\in\{0,1\}}\mathcal D_j^b=\operatorname{id},
+   \qquad
+   \sum_{a,b\in\{0,1\}}\mathcal J_{st}^{ab}=\operatorname{id}.
+   \tag{P.2.3a.2b.1}
+   $$
+   The coordinate outcome separates all eight local words. Every $\mathcal U_i^v$ is a normalized internal control and changes a retained response for some state. The common diagrams are
+   $$
+   \mathcal I_i^a\mathcal U_i^v=\mathcal U_i^v\mathcal I_i^{a\oplus v},
+   \qquad
+   \mathcal I_j^a\mathcal U_i^v=\mathcal U_i^v\mathcal I_j^a\ (i\ne j),
+   \qquad
+   \mathcal F\mathcal U_i^v=\mathcal U_j^v\mathcal F.
+   \tag{P.2.3a.2b.2}
+   $$
+4. For every $j$, the lookup predictor $\pi_j$ fails on its admitted coded system:
+   $$
+   r_j(d(j))\ne U(j,d(j)).
+   \tag{P.2.3a.2b.3}
+   $$
+   Thus the displayed finite coding, interpreter, query, Boolean-closure, and causal no-write records jointly realize Definition P.5.2 for the nominated predictor and external-operation classes.
+5. The optional measurement layer is no-disturbance and has uniform one-site marginals, while it admits no global outcome assignment $(a_0,a_1,b_0,b_1)$. Indeed such an assignment would require
+   $$
+   a_0\oplus b_0=a_0\oplus b_1=a_1\oplus b_0=0,
+   \qquad
+   a_1\oplus b_1=1,
+   \tag{P.2.3a.2b.4}
+   $$
+   whose fourfold XOR is $0=1$. Hence shared-carrier gluing and protocol contextuality coexist here because they concern differently typed objects.
+6. The context-bias instrument is normalized, its displacement from the unbiased response has sup norm $\eta>0$, and every $\mathcal K_\eta^z$ commutes with every coordinate-read subchannel. The finite ownership ledger assigns each displayed map exactly one typed bookkeeping label. Thus the formal context response and external no-write reads coexist with an unambiguous operation inventory.
+7. Since $F^2=I$, $U_F$ is a self-adjoint unitary, $P_-$ is an orthogonal projection, $H_F$ is bounded and self-adjoint, and
+   $$
+   e^{-iH_F}=U_F.
+   \tag{P.2.3a.2b.5}
+   $$
+   Thus the displayed discrete clock, generator, metric, orientation, and calibration are mutually consistent.
+8. The coordinate bits separate all $64$ carrier states and generate $\ell^\infty(\Omega)$ as a unital pointwise algebra. Moreover
+   $$
+   \operatorname{Tr}_\Omega h_*=1,
+   \qquad
+   -\operatorname{Tr}_\Omega(h_*\log h_*)=\log64.
+   \tag{P.2.3a.2b.6}
+   $$
+   A uniform node marginal has entropy $\log|A|=3\log2$, equal to the Shannon capacity of one directed use of the noiseless $A$-valued edge.
+
+*Proof.* The swap gives $\operatorname{pr}_j(Fx)=x_i$ for $\{i,j\}=N$; identity of carriers proves response faithfulness and intertwining. Coordinate restrictions on the discrete two-point cover glue uniquely. The topology (P.2.3a.2a.2) makes $\Omega$ open, gives $\overline\Omega$ as its closure, and leaves $\{\infty\}$ as its boundary. The preimage of every open subset of $\Omega$ under an extended swap or flip is again a subset of $\Omega$, while the preimage of $\overline\Omega$ is $\overline\Omega$; hence the extensions are continuous and fix the boundary. Equations (P.2.3a.2a.4), (P.2.3a.2a.6), and (P.2.3a.2a.7) give (P.2.3a.2b.1), and direct substitution gives (P.2.3a.2b.2). Equation (P.2.3a.2a.5) proves (P.2.3a.2b.3), while the finite lookup and circuit tables verify all nominated closure operations.
+
+Summing (P.2.3a.2a.7) over either remote outcome gives the uniform marginal $1/2$ independently of the remote setting; the XOR contradiction proves contextuality. Equation (P.2.3a.2a.8) is normalized, differs from $1/2$ by exactly $\eta$, and commutes with the coordinate reads because both act by diagonal multiplication. The ownership assertion follows from the displayed one-entry-per-map ledger. The spectral identities for an involutive permutation give claim 7. Finally, coordinate bits separate points, their products generate point indicators, and direct counting gives (P.2.3a.2b.6) and the one-use capacity identity. ∎
+
+**Corollary P.2.3a.2c (Attained Two-Register Minimum in the Fixed-Capacity Class).** Consider architectures whose static carrier is a Cartesian product $R_1\times\cdots\times R_{n_{\mathrm{reg}}}$, where each register satisfies $|R_i|\le2^{K_0}$ with $K_0=3$, and whose encoding of every state of $\Omega$ is injective. Then $n_{\mathrm{reg}}\ge2$, and Construction P.2.3a.2a attains equality.
+
+*Proof.* The Cartesian-product carrier has at most $2^{n_{\mathrm{reg}}K_0}$ distinguishable states. Injectivity therefore requires $2^{n_{\mathrm{reg}}K_0}\ge|\Omega|=2^{2K_0}$, hence $n_{\mathrm{reg}}\ge2$. The displayed coordinate representation into two registers is bijective. ∎
+
+**Remark P.2.3a.2d (Scope of the Finite Witness).** Theorem P.2.3a.2b proves nonemptiness and simultaneous consistency of a distributed constitutive carrier, response-faithful predictive identity, finite Authentic boundaries, normalized no-write reads, internal controls, global world gluing, protocol contextuality, a context-dependent response, an exact discrete clock, a finite trace, and one-use cut saturation. Corollary P.2.3a.2c proves minimal register count on the fixed per-register-capacity exact-injection class. Absolute quantification over unregistered predictors or interventions, selection against monolithic carriers of at least $2K_0$ bits, a thermodynamic arrow, physical CC realization and energy cost, physical source exhaustion and no-double-counting, a cosmological observer trace, and physical horizon identification are governed by the corresponding fields of $\mathfrak C_{\mathrm{CS}}$.
+
+**Proposition P.2.3a.3 (Separated Certificate Consequences).** Theorem P.2.3a.2b proves that the displayed finite constitutive-model class is nonempty and that its architecture, Authentic boundaries, gluing, control, contextual response, clock, trace, and cut records can coexist. Physical realization is supplied separately by an accepted $\mathfrak C_{\mathrm{CS}}$, which establishes a PPI-physicalizable constitutive-simulation candidate on $(\mathfrak P,\mathcal E)$, a response-faithful MPU representation, and one shared world-response object up to the declared equivalence.
+
+If $\mathfrak C_{\mathrm{sel}}$ verifies Principle P.14.9c, it selects the constitutive candidate as the better compression within its named theory class. If it verifies the physical PCE comparison, it selects the constitutive architecture within its named realization class. If both components of $\mathfrak C_{\mathrm{auth}}$ pass, the model is an Authentic Simulation on their declared classes. An accepted $\mathfrak D_{\mathrm{CS}}$ proves the registered distributed realization; its additional selection or mutual-prediction-escape conclusion is supplied by the corresponding extra clause. Perspective access, zero disturbance, and temporal realization follow separately from $\mathfrak C_{\mathrm{persp}}$ and $\mathfrak T_{\mathrm{CS}}$. An accepted $\mathfrak O_{\mathrm{CS}}$ proves its specified observer-algebra, trace, and entropy realization; its cosmological observable is supplied by the complete physical-map package in field 9. An accepted $\mathfrak C_{\mathrm{CS,CC}}$ proves coexistence of the nominated internal context-to-control and external no-write protocols. A constitution-to-control implication requires its own checked implication proof in that field. The accepted extensions $\mathfrak X_{\mathrm{ctx}}$ and $\mathfrak H_\Sigma$ supply protocol contextuality and horizon saturation, respectively. Empirical attribution is the realization claim and exclusion region registered in $\mathfrak F_{\mathrm{CS}}$.
+
+*Proof.* Construction P.2.3a.2a and Theorem P.2.3a.2b prove formal existence and coexistence, and Corollary P.2.3a.2c proves exactly its stated fixed-capacity minimum. Physical model existence and the common response object follow from fields 1, 2, 3, and 6 of Definition P.2.3a.2. Principle P.14.9c and the physical PCE comparison give the two distinct selection conclusions from $\mathfrak C_{\mathrm{sel}}$. Definition P.5.2 requires exactly the two records in $\mathfrak C_{\mathrm{auth}}$. Every remaining conclusion is the acceptance predicate of its separately named field or extension; the independence clauses in Definition P.2.3a.2 keep those predicates separate. ∎
+
 ### P.2.4 Cogito-Relative Binary Epistemic Classification
 
 The certainty derived from the Cogito is not merely existential; it is informational. The self-verification inherent in "I think, therefore I am" establishes a fundamental epistemic distinction:
@@ -193,6 +397,35 @@ A system satisfying (i) alone produces novelty as noise. A system satisfying (i)
 **Thesis P.2.5.1a (Conditional Plurality for Structured Novelty).** Let a candidate model contain at least two outcome processes with positive residual conditional entropy, a response-active coupling producing nonzero cross-perspective mutual information, and a registered coarse-graining for which $\mathcal I(\ell)$ is nonconstant. Then it exhibits structured novelty in the sense of Definition P.2.5.1. A singleton perspective cannot satisfy clause (ii) of that definition.
 
 *Justification.* The conclusion is immediate from the three defining clauses. SPAP alone does not imply positive conditional entropy for each nominated process; coupling alone does not imply nonzero mutual information; and aggregation alone does not imply scale-dependent correlation content. Those are independently falsifiable stochastic and coarse-graining premises. The authentic-simulation reading treats this certified structure as a modeling desideratum, not as a PCE-selected or generic consequence. $\square$
+
+**Theorem P.2.5.1c (Finite Structured-Novelty Witness and Architecture Nonidentifiability).** Let $\{Z_t,N_{1,t},N_{2,t}:t\in\mathbb Z\}$ be independent fair binary variables and set
+$$
+X_i(t)=(Z_t,N_{i,t}),
+\qquad i\in\{1,2\}.
+\tag{P.2.5.1c.1}
+$$
+Take the fine coarse-graining to be the identity and the coarse one to discard the shared coordinate,
+$$
+X_i^{(\ell_{\mathrm c})}(t)=N_{i,t}.
+\tag{P.2.5.1c.2}
+$$
+Then this two-perspective process satisfies Definition P.2.5.1:
+$$
+H(X_i(t+1)\mid\mathcal H_t)=2\ln2,
+\qquad
+I(X_1(t);X_2(t))=\ln2,
+\tag{P.2.5.1c.3}
+$$
+while
+$$
+\mathcal I(\ell_{\mathrm f})=\ln2,
+\qquad
+\mathcal I(\ell_{\mathrm c})=0.
+\tag{P.2.5.1c.4}
+$$
+The same joint response law can be implemented by homogeneous isomorphic carriers or by differently encoded carriers. Definition P.2.5.1 therefore determines neither that architecture label nor an ordering between their attained PCE objectives; such an ordering requires the separately fixed complete cost and value ledger.
+
+*Proof.* Independence across time makes $(Z_{t+1},N_{i,t+1})$ independent of the complete past and uniformly distributed on four outcomes, which proves the entropy identity. The two fine variables share exactly $Z_t$ and have conditionally independent private coordinates, so their mutual information is $H(Z_t)=\ln2$. After the projection in (P.2.5.1c.2), the retained variables $N_{1,t}$ and $N_{2,t}$ are independent and their mutual information is zero. Relabeling or re-encoding a realization without changing these joint laws preserves all four quantities. A PCE order depends additionally on its declared objective ledger, which the response law does not determine. ∎
 
 > **Remark P.2.5.1b (Heterogeneity is an open model outcome).** Different local tasks and resource ledgers permit heterogeneous predictors, but POP/PCE selects a heterogeneous hierarchy only after a complete common comparison class, attained dynamics, and strict cost advantage over homogeneous alternatives are supplied.
 
@@ -650,7 +883,7 @@ $$
 
 This proposition is a general mathematical template rather than a derived law of PU. It shows that Zipf–Mandelbrot statistics follow whenever a system has both a Gibbs-type activation law and logarithmic ranked costs [Shannon 1959; Mandelbrot 1953, 1966; Zipf 1949]. Whether a particular predictive architecture satisfies those extra hypotheses is an empirical and model-specific question.
 
-Section P.8.9a.11 uses a different route: exponential saturation supplies a within-system concentration theorem, while population Pareto tails require the Multiplicative PCE Noise Hypothesis. Thus Proposition P.2.6.3d.2 and Theorem P.8.9a.11.5 are complementary conditional templates rather than interchangeable derivations.
+Section P.8.9a.11 uses a different route: exponential saturation supplies a within-system concentration theorem, while population Pareto tails require the Multiplicative PCE Noise Hypothesis. Thus Proposition P.2.6.3d.2 and Theorem P.8.9a.11.5 are complementary conditional templates rather than interchangeable derivations. Remark P.8.9a.12.1 records the exact dictionary between Proposition P.2.6.3d.2 and the coding route, while Corollary P.8.9a.12.2a proves that the coding and multiplicative-growth exponents occupy disjoint ranges on an unbounded rank population.
 
 ### P.2.6.4 Perspectival Geometry
 
@@ -724,7 +957,7 @@ Externalization can reallocate computation and information flow. It improves a r
 
 A phenomenological capacity model may be written $C_{\mathrm{eff}}=C_{\mathrm{int}}+\eta(C_{\mathrm{ext}})$ after $\eta$ is calibrated for the chosen implementation. Concavity or positivity of $\eta$ is a model assumption, not a consequence of PCE.
 
-Within PU's ontology, externalization is not a category shift: a tool, a computer, or an AI system is itself organized predictive substrate (an MPU aggregate), and coupling to it is coupling to additional structured prediction capacity.
+Within Hypothesis 1's nominated ontology, a tool, computer, or AI system is predictive substrate only when it has an accepted MPU-aggregate realization. For a declared joint task, Thesis P.2.7.1 selects an externalized policy when compatible encoding and decoding maps, a feasible coupled policy, one commensurate objective, attainment, and strict improvement over every agent-only policy after interface and resource costs all hold.
 
 ### P.2.7.3 A Schematic Progression of Externalized Prediction
 
@@ -1219,9 +1452,7 @@ Information is a suitable naturalistic foundation for a consciousness-based real
 
 ### P.5.3 The Simulation Hypothesis — Reframed as a Naturalistic Model
 
-This paper does not use Bostrom's probabilistic simulation argument. If a candidate reference class is infinite, raw cardinalities alone neither define nor invalidate a probability comparison; a normalized measure, sampling rule, and reference-class specification are required. PU instead uses simulation only as a finite-process modeling stance.
-
-PU uses simulation as a finite-process modeling stance. Finitude restricts feasible implementations but does not select an optimizer. A PCE conclusion requires a declared nonempty comparison class, response equivalence, complete commensurate objective, existence or attainment, any strictness needed for uniqueness, and—if attraction is claimed—the independent Appendix-D dynamical package.
+This paper does not use Bostrom's probabilistic simulation argument. If a candidate reference class is infinite, raw cardinalities alone neither define nor invalidate a probability comparison; a normalized measure, sampling rule, and reference-class specification are required. Section P.5 uses simulation as a finite-process modeling stance. The distinct constitutive-simulation ontology is nominated in Thesis P.2.3a.1; its finite witness and fixed-class minimum are Construction P.2.3a.2a through Corollary P.2.3a.2c. Finitude restricts feasible implementations but does not select an optimizer. A PCE conclusion requires a declared nonempty comparison class, response equivalence, complete commensurate objective, existence or attainment, any strictness needed for uniqueness, and—if attraction is claimed—the independent Appendix-D dynamical package.
 
 ### P.5.3a Naturalist Finitude and Default Efficiency in Simulation Architecture
 
@@ -1311,6 +1542,31 @@ Therefore no-surplus selection weakly dominates surplus-retaining selection at e
 
 *Proof.* Proposition P.5.3a.1 gives the strict objective inequality on the stated comparison. An attained minimizer cannot be the strictly dominated member. $\square$
 
+**Theorem P.5.3a.6 (Exact Finite Architecture Classification).** Let $\mathfrak A$ be a nonempty finite architecture class. For each $A\in\mathfrak A$, let $r(A)$ be its exact retained protocol-response table and let $J(A)$ be its complete objective value in an exact ordered field, with neither entry containing a simulation-origin label. Define
+$$
+A\sim_{\mathrm r}B
+\quad\Longleftrightarrow\quad
+r(A)=r(B),
+\qquad
+m(q):=\min_{A\in q}J(A)
+\tag{P.5.3a.6.1}
+$$
+for every response class $q\in\mathfrak A/\!\sim_{\mathrm r}$. Then:
+
+1. every $m(q)$ and the global minimum $m_*=\min_qm(q)$ are attained;
+2. the minimizing representatives of $q$ are exactly $\{A\in q:J(A)=m(q)\}$;
+3. the global complete-objective minimizers are exactly
+   $$
+   \{A\in\mathfrak A:J(A)=m_*\};
+   \tag{P.5.3a.6.2}
+   $$
+4. the quotient has a strict minimizing response class exactly when one class $q_*$ satisfies $m(q_*)<m(q)$ for every $q\ne q_*$; and
+5. a unique architecture is selected exactly when (P.5.3a.6.2) is a singleton.
+
+Exhaustive evaluation of the finite tables and exact comparisons therefore classifies every strict and tied minimizer. Componentwise dominance is a sufficient rejection test, while incomparable cost vectors require the complete objective $J$.
+
+*Proof.* Every nonempty subset of a finite set has an attained minimum in a total order, proving items 1 and 2. Taking the minimum first inside each partition class and then across the finite quotient equals taking it over $\mathfrak A$, which proves item 3. Items 4 and 5 are the corresponding singleton criteria. Finite enumeration decides all equalities and strict inequalities because the response and objective entries belong to exact decidable representations. ∎
+
 **Remark P.5.3a.5 (Relation to PCE).**
 
 This subsection supplies a conditional design comparison. PCE selection requires the declared response-equivalent class, complete objective, attainment, and strictness; an attractor additionally requires Appendix D's dynamics. Finitude or response equivalence alone does not select a realized architecture.
@@ -1397,6 +1653,29 @@ Then:
 Thus (P.5.2b) constructs an observation-channel architecture for the commuting response record. It does not claim a nontrivial exactly nondisturbing readout of arbitrary quantum coherences: for a general $\rho$, the internal marginal is the dephasing $\sum_xp_x\rho p_x$, equal to $\rho$ exactly only under (P.5.2a).
 
 *Proof.* The Kraus operators $V_x=p_x\otimes|x\rangle_E$ satisfy $\sum_xV_x^\dagger V_x=I$, so $\mathcal R$ is CPTP. Taking the two marginals gives the displayed internal and external states. Equation (P.5.2a) proves exact non-intervention on the registered commuting record. Protocol preservation and exclusion of $E$ from the input algebra make every subsequent internal statistic identical with or without the exported copy. Measuring the mutually orthogonal register states gives external accessibility. The final dephasing formula states the precise boundary of the construction and prevents an illicit quantum-broadcasting inference. ∎
+
+**Theorem P.5.2c (Universal Full-State Nonintervention Forces a Constant Readout).** Let $\mathcal H$ and $\mathcal H_E$ be finite-dimensional, and let
+$$
+\mathcal R:\mathcal D(\mathcal H)\longrightarrow
+\mathcal D(\mathcal H\otimes\mathcal H_E)
+$$
+be CPTP. If
+$$
+\operatorname{Tr}_E\mathcal R(\rho)=\rho
+\tag{P.5.2c.1}
+$$
+for every density operator $\rho$ on $\mathcal H$, then there is one fixed density operator $\sigma_E$ such that
+$$
+\mathcal R(\rho)=\rho\otimes\sigma_E
+\tag{P.5.2c.2}
+$$
+for every $\rho$. Hence the external marginal is independent of the internal state. An informative exactly nondisturbing readout must therefore restrict the registered state or response class, as Theorem P.5.2 does for a commuting block-diagonal record.
+
+*Proof.* Let $V:\mathcal H\to\mathcal H\otimes\mathcal H_E\otimes\mathcal H_F$ be a Stinespring isometry for $\mathcal R$. Equation (P.5.2c.1) says that tracing out $\mathcal H_E\otimes\mathcal H_F$ realizes the identity channel on $\mathcal H$. A minimal Stinespring isometry for the identity is $\psi\mapsto\psi\otimes|0\rangle$. Uniqueness of Stinespring dilations therefore gives one unit vector $|\eta\rangle\in\mathcal H_E\otimes\mathcal H_F$ with
+$$
+V|\psi\rangle=|\psi\rangle\otimes|\eta\rangle
+$$
+for every $|\psi\rangle$. Tracing out $\mathcal H_F$ yields (P.5.2c.2) with $\sigma_E=\operatorname{Tr}_F|\eta\rangle\langle\eta|$. Its external marginal is fixed, so it carries no state-dependent response. ∎
 
 **Remark P.5.2: Epistemic Limits.** The physical nature, substrate, or mechanism of the observation channel is inaccessible from the registered internal input algebra. Corollary E.9.5.3 makes a lossless retained automorphism circuit sufficient, not necessary, for persistent predictability. The observation-channel architecture preserves the registered commuting response record while permitting external access, but it does not by itself establish a unitary internal circuit. Internal systems may detect phenomena they cannot explain, or detect nothing at all; those alternatives concern external architecture not encoded in their retained algebra.
 
@@ -1550,7 +1829,7 @@ In the finite-response formulation, PPI is not an additional copy map from pure 
 $$
 X^\Theta=(X,\Pi_X,R_X,V_X,C_X,\tau_X),
 $$
-where $\Pi_X$ is a finite physicalization protocol, $R_X$ is the finite record produced by the protocol, $V_X$ is a finite verifier, $C_X$ is the thermodynamic or resource cost of producing and maintaining the record, and $\tau_X$ is the update-ordering datum of the instantiation.
+where $\Pi_X$ is a finite physicalization protocol, $R_X$ is the finite record produced by the protocol, $V_X$ is a finite verifier, $C_X$ is the thermodynamic or resource cost of producing and maintaining the record, and $\tau_X$ is the update-ordering datum of the instantiation. The protocol and verifier records fix the encoding and decoder for $R_X$, the accepted witness fields, the verification tolerance, and the resource units. When verification is certificate-relative, the witness travels in $R_X$: $\Pi_X$ bears the production or search obligation, while $V_X$ is charged as checking with the supplied witness. A finite verifier-time bound therefore supplies no bound on the discovery cost of $R_X$.
 
 Bare mathematical existence is the condition $X\in\mathfrak M$. PPI-physicalizable existence is the existence of at least one admissible dressing $X^\Theta$ with finite cost.
 
@@ -1579,6 +1858,8 @@ $$
 relative to the retained operational aspect being instantiated.
 
 *Proof.* By Definition P.6.2, physical instantiation is finite-resource implementation shaped by thermodynamic cost and PCE/PPI optimality. If $X$ is physically instantiated, then the instantiation must be carried by some finite protocol, finite record or process, finite verifier, finite maintenance budget, and finite update role; otherwise it is not an MPU-admissible finite physical implementation. Conversely, if such finite data exist, they define a PPI-admissible thermodynamic dressing of the operational aspect of $X$. ∎
+
+**Domain and budget scope.** The biconditional classifies a nominated $X$ once an admissible dressing is supplied; it does not furnish a uniform terminating decision procedure for membership in $\mathfrak P$ over arbitrary $X\in\mathfrak M$. Such a procedure requires a declared presentation of $\mathfrak M$ and a completeness proof for the dressing test. Membership in $\mathfrak P$ is existential at the finiteness level: some finite dressing exists. It does not assert that one predictor or one fixed budget can maintain every member of $\mathfrak P$. A fixed-budget claim uses a declared protocol, outcome, tolerance, verification, and cost restriction such as Definition P.16d.0.1; an object may admit a finite dressing while remaining unavailable at the nominated budget.
 
 **Definition P.6.2d (Operational Latent Mathematics).** The global operational-latent sector at time $t$ is
 $$
@@ -2054,6 +2335,852 @@ The construction is canonical up to the same natural isomorphism used in the ope
 **Corollary P.6.1c.4 (Prediction as Canonical Operational Form).** The predictive primitive used by PU is not an extra ontology beyond finite self-verification. It is the canonical normal form of any finite presentation that contains expectations, updates, and verification statistics.
 
 *Proof.* Apply Theorem P.6.1c.3 to the presentation. The resulting object records exactly expected finite responses, update kernels, and verification statistics. That is the predictive normal form. ∎
+
+### P.6.1d Finite Categorical-Unity Certificate Schedules
+
+This subsection supplies the table-level schedules used by Definition 2.6a, Theorem 2.6b, Definition 2.6c, and Theorem 2.6d. Section 2.6 owns the response restrictions, classifier, completion predicates, and conclusions; the schedules below define their finite serializations and verification obligations.
+
+**Definition P.6.1d.1 (Registered-Datum Table and Audit Schedule).** A datum of Definition 2.6a passes the registered-datum schedule exactly when the following finite tables and audits are present and accepted. Fix a finite protocol budget $B$, a declared exact decidable coefficient domain $\mathbb D_B$, and the six-element index set
+$$
+I_6
+=
+\{\mathsf t,\mathsf s,\mathsf e,\mathsf m,\mathsf f,\mathsf q\}
+\tag{P.6.1d.1.1}
+$$
+for time, space, energy, matter, force, and charge. A registered finite categorical-unity datum $\mathfrak D_{\mathrm{CU},B}$ consists of the following exact finite data.
+
+1. A finite source category $\mathsf S_B$ presents the admitted transformations of the predictive normal form, and a distinguished object $p_B\in\operatorname{Ob}(\mathsf S_B)$ represents the frozen presentation $\mathfrak T$. Let $\mathsf P_B$ be the finite protocol category at budget $B$. A registered finite response-normal-form category $\mathsf{RNF}_B$ has objects
+   $$
+   X=(\mathcal R_X,U_X,V_X),
+   \tag{P.6.1d.1.2}
+   $$
+   where $\mathcal R_X:\mathsf P_B^{op}\to\mathsf{Prob}_{\mathrm{fin}}(\mathbb D_B)$ is a normalized exact response presheaf, $U_X$ is its finite family of post-outcome update maps, and $V_X$ is its finite family of verification maps. A morphism in $\mathsf{RNF}_B$ is a natural transformation of response presheaves together with the registered state map that intertwines every update map and every verification map. All identity, composition, normalization, update-intertwining, and verification-intertwining equations are supplied as exact finite tables.
+
+   The response-normal-form functor
+   $$
+   \mathcal Y_B:\mathsf S_B\longrightarrow\mathsf{RNF}_B
+   \tag{P.6.1d.1.3}
+   $$
+   records these data, and the datum contains a checked isomorphism
+   $$
+   \zeta_B:
+   \mathcal Y_B(p_B)
+   \xRightarrow{\sim}
+   \mathfrak P_0\!\restriction_B
+   \tag{P.6.1d.1.4}
+   $$
+   to the budget-$B$ restriction of the canonical predictive normal form of Definition P.6.1c.2. Here $\mathfrak P_0\!\restriction_B$ denotes the object $(\mathcal R_{\mathfrak T}|_{\mathsf P_B},U_{\mathfrak T}|_{\mathsf P_B},V_{\mathfrak T}|_{\mathsf P_B})$ of $\mathsf{RNF}_B$; the protocol category $\mathsf P_B$ is its ambient indexing category rather than a fourth object field. Thus the response laws, pushed-forward updates, and verification maps are anchored jointly rather than identified from response probabilities alone.
+
+2. For each $i\in I_6$, a registered inclusion
+   $$
+   j_i:\mathsf P_{i,B}\hookrightarrow\mathsf P_B
+   \tag{P.6.1d.1.5}
+   $$
+   fixes the sector protocols. Restriction along $j_i$ acts on all three response-normal-form fields and gives a functor
+   $$
+   \widetilde R_i
+   :=
+   j_i^*\mathcal Y_B:
+   \mathsf S_B\longrightarrow\mathsf{RNF}_{i,B},
+   \tag{P.6.1d.1.6}
+   $$
+   where $\mathsf{RNF}_{i,B}$ is a registered finite response-normal-form category with exact object and morphism tables. Define $\mathsf R_{i,B}$ to be the full subcategory of $\mathsf{RNF}_{i,B}$ whose object set is
+   $$
+   \{\widetilde R_i(s):s\in\operatorname{Ob}(\mathsf S_B)\}.
+   $$
+   The unique corestriction of $\widetilde R_i$ to this finite full image is denoted
+   $$
+   R_i:\mathsf S_B\longrightarrow\mathsf R_{i,B}.
+   \tag{P.6.1d.1.7}
+   $$
+   Write
+   $$
+   \kappa_i:\mathsf R_{i,B}\hookrightarrow\mathsf{RNF}_{i,B}
+   $$
+   for the full-subcategory inclusion. Consequently, $R_i$ is fixed relative to the registered pair $(\mathcal Y_B,j_i)$; the inclusion $j_i$ is a frozen input of this finite classification.
+
+   The semantic-label audit
+   $$
+   \mathfrak A_{\mathrm{sem},B}
+   =
+   \bigl(
+   \{\lambda_i\}_{i\in I_6},
+   \{\mathsf E_{i,B}\}_{i\in I_6},
+   \pi_{\mathrm{sem}}
+   \bigr)
+   \tag{P.6.1d.1.8}
+   $$
+   assigns the six physical names bijectively, gives a decidable typed eligibility predicate $\mathsf E_{i,B}$ for each sector, and proves that the image of $j_i$ contains exactly the protocol objects and morphisms eligible under $\mathsf E_{i,B}$. For every sector and every protocol owner, $\pi_{\mathrm{sem}}$ records inclusion or a checked typed exclusion reason, verifies the operational type against the corresponding row of Section 2.6.1, and verifies that every label, predicate, and inclusion was frozen before access to a quarantined comparison target. Overlap of two sector protocol families is permitted only when it is recorded in the overlap inventory below. The audit licenses the registered sector interpretation; the accepted essential-preimage and PPI fields supply PPI physicalizability.
+
+3. For each $i\in I_6$, a finite operational realization category $\mathsf O_{i,B}$, an enriched response-normal-form functor
+   $$
+   \rho_i:
+   \mathsf O_{i,B}
+   \longrightarrow
+   \mathsf R_{i,B},
+   \tag{P.6.1d.1.9}
+   $$
+   and a decidable natural-isomorphism-invariant predicate $\mathfrak B_i$ encode the category-specific PPI, domain, normalization, unit, source, and finite-cost gates listed in Section 2.6.1. The local-lift groupoid is
+   $$
+   \operatorname{Lift}_i(R_i)
+   :=
+   \left\{
+   (F_i,\alpha_i):
+   \begin{array}{l}
+   F_i:\mathsf S_B\to\mathsf O_{i,B},\\
+   \alpha_i:\rho_iF_i\Rightarrow R_i
+   \text{ is a natural isomorphism},\\
+   \mathfrak B_i(F_i)=1
+   \end{array}
+   \right\},
+   \tag{P.6.1d.1.10}
+   $$
+   whose arrows $u:(F_i,\alpha_i)\to(F_i',\alpha_i')$ are natural isomorphisms $u:F_i\Rightarrow F_i'$ satisfying
+   $$
+   \alpha_i'\circ(\rho_i u)=\alpha_i.
+   \tag{P.6.1d.1.11}
+   $$
+
+4. A finite overlap graph $G_B=(I_6,E_B)$ carries, for every edge $e=\{i,j\}$, a finite overlap category $\mathsf O_{e,B}$ and restriction functors
+   $$
+   r_{e,i}:\mathsf O_{i,B}\to\mathsf O_{e,B},
+   \qquad
+   r_{e,j}:\mathsf O_{j,B}\to\mathsf O_{e,B}.
+   \tag{P.6.1d.1.12}
+   $$
+   Define the finite overlap-decorated groupoid $\mathscr A_B$ as follows. Its objects are tuples
+   $$
+   a
+   =
+   \bigl(
+   (F_i,\alpha_i)_{i\in I_6},
+   (\theta_e)_{e\in E_B}
+   \bigr),
+   \qquad
+   \theta_e:
+   r_{e,i}F_i
+   \xRightarrow{\sim}
+   r_{e,j}F_j,
+   \tag{P.6.1d.1.13}
+   $$
+   and an arrow $a\to a'$ is a componentwise family of local-lift isomorphisms $(u_i)_{i\in I_6}$ satisfying, for every $e=\{i,j\}$,
+   $$
+   \theta_e'\circ(r_{e,i}u_i)
+   =
+   (r_{e,j}u_j)\circ\theta_e.
+   \tag{P.6.1d.1.14}
+   $$
+
+   The overlap-eligibility inventory
+   $$
+   \mathfrak I_{\mathrm{ov},B}
+   =
+   \bigl(
+   \Lambda_B,
+   \{\mathsf E_\lambda^{\mathrm{ov}}\}_{\lambda\in\Lambda_B},
+   \pi_{\mathrm{ov}}
+   \bigr)
+   \tag{P.6.1d.1.15}
+   $$
+   contains a finite decidable predicate for every required edge, cycle, triple-overlap, unit, source-ownership, calibration, and higher coherence cell. The checked coverage proof $\pi_{\mathrm{ov}}$ classifies every overlap obligation generated by the six branch manifests exactly once as included or excluded with a typed reason, and every included predicate is invariant under arrows of $\mathscr A_B$.
+
+   The compatible categorical-lift groupoid is the finite full subgroupoid
+   $$
+   \mathscr J_B
+   :=
+   \mathscr A_B
+   \big|_{
+   \left\{
+   a:
+   \mathsf E_\lambda^{\mathrm{ov}}(a)=1
+   \text{ for every }\lambda\in\Lambda_B
+   \right\}
+   }.
+   \tag{P.6.1d.1.16}
+   $$
+   Its components are compatible-lift natural-isomorphism classes. They are not identified with global physical response classes without the separate common-carrier response-equivalence data of Definition 2.6c.
+
+Every category, functor, predicate, semantic assignment, coefficient, and equality test in $\mathfrak D_{\mathrm{CU},B}$ is supplied by a canonical finite serialization over $\mathbb D_B$. A submitted datum is **table-valid** exactly when its total decidable table checker verifies all types, identities, compositions, normalizations, intertwiners, eligibility predicates, and coverage proofs in this definition. Definition 2.6c assigns its accepted, failed, or pending status.
+
+**Lemma P.6.1d.2 (Enriched Full-Faithfulness Fiber Criterion).** Let
+$$
+(\rho_i)_*^{\mathfrak B_i}:
+[\mathsf S_B,\mathsf O_{i,B}]_{\mathfrak B_i}
+\longrightarrow
+[\mathsf S_B,\mathsf R_{i,B}]
+\tag{P.6.1d.2.1}
+$$
+be postcomposition by $\rho_i$ on the full subcategory of $\mathfrak B_i$-admissible functors. Suppose an accepted proof establishes that $\rho_i$ is fully faithful on the operational realization subcategory containing every such image. Then $\operatorname{Lift}_i(R_i)$ is empty or equivalent to the terminal groupoid.
+
+Theorem P.6.1b.3 supplies the response-presheaf part of this premise only when the datum identifies that realization subcategory with a full sector subcategory of $\mathsf{Inv}_{\mathrm{PPI}}/{\sim_{\mathrm{op}}}$, identifies the response-presheaf forgetful composite of $\rho_i$ with the corresponding restriction and corestriction of $\mathcal Y_{\mathrm{op}}$, and verifies the theorem's separating and protocol-complete hypotheses. The accepted enriched proof additionally supplies a typed forgetful functor
+$$
+\mathsf U_i:
+\mathsf R_{i,B}
+\longrightarrow
+[\mathsf P_{i,B}^{op},\mathsf{Prob}_{\mathrm{fin}}(\mathbb D_B)]
+\tag{P.6.1d.2.2}
+$$
+and proves that every response-presheaf morphism in the relevant image lifts uniquely to a $\rho_i$-morphism intertwining every registered update and verification map.
+
+*Proof.* If $(F_i,\alpha_i)$ and $(F_i',\alpha_i')$ are two lifts, fullness gives a natural isomorphism $u:F_i\Rightarrow F_i'$ lifting $(\alpha_i')^{-1}\alpha_i$, and faithfulness makes it unique. Hence $\alpha_i'\circ(\rho_i u)=\alpha_i$, and the same faithfulness makes every lift automorphism the identity. Thus any nonempty fiber groupoid is equivalent to $\mathbf1$. The response-presheaf theorem supplies only the forgotten morphism; the additional enriched-lifting proof is exactly what transports and uniquely fixes the update and verification intertwiners. ∎
+
+**Theorem P.6.1d.3 (Exhaustive Compatible-Lift Enumeration).** For a datum that passes Definition P.6.1d.1, the compatible-lift groupoid $\mathscr J_B$ is finite. Exhaustive enumeration computes its objects, arrows, components, complete isomorphism and non-isomorphism matrix between component representatives, and complete multiplication tables for every retained automorphism group. The result is exactly one of the four cases in Equation (2.6b.3).
+
+*Proof.* The source, realization, response-normal-form, overlap, and protocol categories are finite. The naturality, branch-admissibility, overlap, eligibility, and higher-coherence predicates are decidable finite equations. Enumerating their solutions constructs the overlap-decorated groupoid and restricting to the objects that pass every audit predicate constructs its full compatible subgroupoid. Exhaustive arrow enumeration then computes connected components and automorphism groups, which determine exactly the four mutually exclusive cases of Equation (2.6b.3). ∎
+
+**Definition P.6.1d.4 (Trust, Local, and Compatibility Schedules).** The accepted trust, local, and compatibility schedules contain the following finite records and proof obligations.
+
+1. The trust record
+   $$
+   \mathfrak T_{\mathrm{CU}}
+   =
+   \bigl(
+   \iota_{\mathsf K},h_{\mathsf K},
+   \Pi_{\mathsf K,\mathrm{tot}},\Pi_{\mathsf K,\mathrm{snd}},
+   \iota_{\mathsf{Check}},h_{\mathsf{Check}},
+   \Pi_{\mathsf{Check,tot}},\Pi_{\mathsf{Check,det}},
+   \Pi_{\mathsf{Check,snd}},
+   \mathsf A_{\log}
+   \bigr)
+   \tag{P.6.1d.4.1}
+   $$
+   fixes a versioned proof kernel, a versioned orchestration checker, their executable hashes, externally accepted kernel-totality and kernel-soundness results, checker totality, deterministic replay and correctness proofs, and a finite response-inert logical trust root. Kernel totality and soundness are external trust-root results; $\iota_{\mathsf K}$ checks every remaining proof object. The map $\iota_{\mathsf{Check}}$ computes coverage, status, and trace fields according to the acceptance predicates below. Let $\mathbb K_B$ be an exact decidable ordered field. The coefficient bridge is either the identity $\mathbb D_B=\mathbb K_B$ or a checked exact order-preserving embedding
+   $$
+   \jmath_B:\mathbb D_B\hookrightarrow\mathbb K_B
+   \tag{P.6.1d.4.2}
+   $$
+   used by every response, probability, normalization, source-ownership, and cost table.
+
+2. The local proof $\Pi_{\mathrm{loc}}$ verifies every finite source, response-normal-form, and realization-category table; every functor law; every response normalization; every branch predicate; every naturality square; every essential-image witness; and every finite-cost PPI dressing required by Definition 2.6a and Corollary P.6.1b.8b. The compatibility proof $\Pi_{\mathrm{comp}}$ verifies the exhaustive finite census of $\mathscr J_B$: all admissible local lifts, all admissible overlap maps, all eligibility and higher-coherence predicates, all lift isomorphisms, every component, and complete multiplication tables for every retained automorphism group. Distinct components are classified as distinct lift classes. A response-distinction label additionally requires a registered protocol that separates the components.
+
+**Definition P.6.1d.5 (Global Candidate and Arrow Census).**
+
+The finite global-admissibility record is
+   $$
+   \mathfrak A_{\Omega,B}
+   =
+   \bigl(
+   T_{\Omega,B},
+   \mathsf P_{\Omega,B},k_B,
+   \Sigma_{\Omega,B},L_{\Omega,B},
+   \mathsf{Parse}_{\Omega,B}^{1},
+   \mathsf{Code}_{\Omega,B}^{0},
+   \mathsf{Code}_{\Omega,B}^{1},
+   \mathsf G_{\Omega,B}^{0},
+   \mathsf G_{\Omega,B}^{1},
+   \operatorname{dec}_{\Omega,B}^{0},
+   \operatorname{dec}_{\Omega,B}^{1},
+   \mathsf{SemEqv}_{\Omega,B},
+   \mathbf Y_{\Omega,B},
+   (\sim_{s,p})_{s,p},
+   Q_\Omega,\sim_\Omega,
+   \mathscr L_{\Omega,B},
+   \Pi_{\mathrm{gen}},\Pi_{\mathrm{arr}},
+   \iota_{\Omega,B}
+   \bigr).
+   \tag{P.6.1d.5.1}
+   $$
+   Here $T_{\Omega,B}$ is a frozen typed finite-scope physical theory with explicit carrier, protocol, outcome, coefficient, and description bounds. Every accepted object code decodes to
+   $$
+   \omega
+   =
+   \bigl(
+   \mathcal M_\omega,\mathfrak P_\omega,
+   \mathsf O_{\Omega,\omega,B},
+   \epsilon_\omega,\rho_{\Omega,\omega},
+   (\pi_{i,\omega},\gamma_{i,\omega})_{i\in I_6},
+   (\theta_{e,\omega})_{e\in E_B},
+   \mathfrak D_\omega^{\mathrm{PPI}},C_\omega
+   \bigr),
+   \qquad
+   C_\omega<+\infty,
+   \tag{P.6.1d.5.2}
+   $$
+   where $\mathcal M_\omega\models T_{\Omega,B}$, $\mathsf P_{\Omega,B}$ is the finite global protocol category,
+   $$
+   \mathfrak P_\omega
+   =
+   (\mathcal N_\omega,\mathcal E_{N,\omega},V_\omega),
+   \qquad
+   \epsilon_\omega:
+   \mathsf S_B\longrightarrow\mathsf O_{\Omega,\omega,B},
+   \qquad
+   \rho_{\Omega,\omega}:
+   \mathsf O_{\Omega,\omega,B}
+   \longrightarrow\mathsf{RNF}_{\Omega,B}
+   \tag{P.6.1d.5.3}
+   $$
+   are one enriched PU carrier, its common realization functor, and its enriched global response-normal-form functor, where $\mathsf{RNF}_{\Omega,B}$ is the registered finite analogue of $\mathsf{RNF}_B$ on $\mathsf P_{\Omega,B}$. The inclusion $k_B:\mathsf P_B\hookrightarrow\mathsf P_{\Omega,B}$ and the sector functors $\pi_{i,\omega}:\mathsf O_{\Omega,\omega,B}\to\mathsf O_{i,B}$ carry checked natural isomorphisms
+   $$
+   k_B^*(\rho_{\Omega,\omega}\epsilon_\omega)
+   \xRightarrow{\sim}
+   \mathcal Y_B,
+   \qquad
+   \kappa_i\rho_i\pi_{i,\omega}\epsilon_\omega
+   \xRightarrow[\ \gamma_{i,\omega}\ ]{\sim}
+   j_i^*k_B^*(\rho_{\Omega,\omega}\epsilon_\omega)
+   \xRightarrow{\sim}
+   \kappa_iR_i,
+   $$
+   for all $i\in I_6$. The cells $\theta_{e,\omega}$ supply the overlap isomorphisms of (P.6.1d.1.13) and satisfy every predicate in the registered overlap inventory. Thus the six local lifts comprising $\operatorname{res}_B(\omega)$ factor through the same enriched carrier. The datum $\mathfrak D_\omega^{\mathrm{PPI}}$ is a checked finite-cost PPI dressing in the sense of Definitions P.6.2a and P.6.2b; it includes the physical protocol, finite record and verifier, cost, maintenance and update-use maps, and the intertwining proof for the complete response, update, and verification normal form. Define the complete global response-normal-form functor
+   $$
+   \mathbf Y_{\Omega,B}^{\omega}
+   :=
+   \rho_{\Omega,\omega}\epsilon_\omega:
+   \mathsf S_B\longrightarrow\mathsf{RNF}_{\Omega,B}
+   $$
+   and, for $s\in\operatorname{Ob}(\mathsf S_B)$ and $p\in\operatorname{Ob}(\mathsf P_{\Omega,B})$, let
+   $$
+   \mathcal R_{\omega,s}(p)
+   :=
+   \mathcal R_{\mathbf Y_{\Omega,B}^{\omega}(s)}(p)
+   \in
+   \mathsf{Prob}_{\mathrm{fin}}(\mathbb K_B),
+   \qquad
+   \sum_o\mathcal R_{\omega,s}(p)(o)=1.
+   \tag{P.6.1d.5.4}
+   $$
+   Thus normalization is checked for every admitted source object and global protocol. For each pair $(s,p)$, the record also fixes an exact decidable equivalence relation $\sim_{s,p}$ on the corresponding normalized response laws and verifies reflexivity, symmetry, and transitivity.
+
+   Define the frozen PPI-filtered expanded-candidate class
+   $$
+   \operatorname{Cand}^{\mathrm{PPI}}_B(T_{\Omega,B})
+   :=
+   \left\{
+   \omega\text{ of the form \emph{(P.6.1d.5.2)}}:
+   \begin{array}{l}
+   \mathcal M_\omega\models T_{\Omega,B},\ \omega\text{ lies within the registered}\\
+   \text{carrier, protocol, coefficient, and description bounds, and}\\
+   \omega\text{ passes every registered finite PPI gate}
+   \end{array}
+   \right\}.
+   $$
+   Isomorphism in this class means isomorphism of the complete registered tuple, including its carrier, protocols, PPI dressing, response, update, verification, overlap, unit, and cost data. The total generator $\mathsf G_{\Omega,B}^{0}$ enumerates the accepted object codes without duplication. The proof $\Pi_{\mathrm{gen}}$ verifies every field in (P.6.1d.5.2)--(P.6.1d.5.4), proves that each decoded code belongs to $\operatorname{Cand}^{\mathrm{PPI}}_B(T_{\Omega,B})$, and proves the coverage statement
+   $$
+   \operatorname{Cand}^{\mathrm{PPI}}_B(T_{\Omega,B})/\cong
+   \ =
+   \operatorname{dec}_{\Omega,B}^{0}
+   \bigl(
+   \operatorname{im}\mathsf G_{\Omega,B}^{0}
+   \bigr)/\cong .
+   \tag{P.6.1d.5.5}
+   $$
+   The same proof verifies that every response law, update, verification, and finite PPI gate is invariant under the displayed expanded-candidate isomorphism. Thus the decoded representatives compute the corresponding candidate quotient, and coverage is a theorem of the frozen finite model language.
+
+   The finite universe $\mathsf{Code}_{\Omega,B}^{1}$ is the canonical exhaustive census of every string over the frozen description alphabet, within the registered length bound, that the versioned total arrow parser accepts as a well-typed candidate PPI transformation. Independently of that syntax, let $\mathsf{SemEqv}_{\Omega,B}(\omega,\omega')$ be the exhaustive finite set obtained by enumerating every tuple of functions between the decoded finite carriers and retaining exactly those tuples that satisfy the complete PPI-dressing, response, update, verification, overlap, unit, inverse, and composition equations of $T_{\Omega,B}$. The proof $\Pi_{\mathrm{arr}}$ verifies the syntax-coverage equality
+   $$
+   \mathsf{Code}_{\Omega,B}^{1}
+   =
+   \left\{
+   s\in\Sigma_{\Omega,B}^{\le L_{\Omega,B}}:
+   \mathsf{Parse}_{\Omega,B}^{1}(s)=1
+   \right\}
+   $$
+   by an exhaustive census of the finite string universe. The total bounded generator $\mathsf G_{\Omega,B}^{1}(\omega,\omega')$ enumerates exactly the codes in that universe satisfying the admissibility equations of $T_{\Omega,B}$ for the ordered pair $\omega,\omega'$. Decoding is required to give a bijection
+   $$
+   \overline{\operatorname{dec}}_{\Omega,B}^{1}:
+   \frac{
+   \operatorname{im}
+   \mathsf G_{\Omega,B}^{1}(\omega,\omega')
+   }{={}_{\mathrm{code}}}
+   \xrightarrow{\ \sim\ }
+   \mathsf{SemEqv}_{\Omega,B}(\omega,\omega')
+   \tag{P.6.1d.5.6}
+   $$
+   onto all semantic PPI equivalences in the frozen finite model class. Thus every such equivalence has a code, and two codes have the same decoded component maps exactly when they are $={}_{\mathrm{code}}$-equivalent. The objects of $\mathscr L_{\Omega,B}$ are the accepted code--decoding pairs
+   $$
+   \widehat\omega
+   =
+   (c_\omega,\omega),
+   \qquad
+   \omega=\operatorname{dec}_{\Omega,B}^{0}(c_\omega),
+   $$
+   and the hat is suppressed when the retained code is clear. The proof $\Pi_{\mathrm{arr}}$ verifies the exhaustive classification of $\mathsf{Code}_{\Omega,B}^{1}$ into admissible and inadmissible codes with checked reasons, the groupoid laws, and bijections
+   $$
+   \operatorname{Hom}_{\mathscr L_{\Omega,B}}(\omega,\omega')
+   \ \cong\
+   \mathsf{SemEqv}_{\Omega,B}(\omega,\omega')
+   \tag{P.6.1d.5.7}
+   $$
+   for every ordered pair. The same proof verifies total decoding, proves that $\operatorname{dec}_{\Omega,B}^{1}$ is constant exactly on $={}_{\mathrm{code}}$ and therefore descends injectively to the displayed quotient, and proves that no bounded canonical well-typed arrow string lies outside $\mathsf{Code}_{\Omega,B}^{1}$. It also proves
+   $$
+   \mathsf{SemEqv}_{\Omega,B}(\omega,\omega')\ne\varnothing
+   \quad\Longleftrightarrow\quad
+   (\mathbf Y_{\Omega,B}^{\omega},\mathfrak D_\omega^{\mathrm{PPI}})
+   \simeq_{\mathrm{PPI}}
+   (\mathbf Y_{\Omega,B}^{\omega'},\mathfrak D_{\omega'}^{\mathrm{PPI}})
+   \tag{P.6.1d.5.8}
+   $$
+   where $\simeq_{\mathrm{PPI}}$ means an isomorphism of the complete response, update, verification, overlap, unit, and dressing data on all retained global protocols. Hence the arrows exhaust the finite semantic PPI equivalences, including every retained automorphism. The semantic enumeration is independent of submitter-chosen syntax.
+
+   Write
+   $$
+   (Q_\Omega/\!\sim_\Omega)_B
+   \tag{P.6.1d.5.9}
+   $$
+   for the full subquotient of the registered ambient global-candidate quotient $Q_\Omega/\!\sim_\Omega$ used by Theorem P.14.1k.3 whose representatives satisfy every axiom of $T_{\Omega,B}$, every finite PPI gate in $\mathfrak D_\omega^{\mathrm{PPI}}$, and the carrier, protocol, coefficient, and description bounds. The equivalence relation $\sim_\Omega$ is registered independently of the finite code census and is checked to agree with the retained global PPI-equivalence semantics on this subquotient. The decoding-induced map is
+   $$
+   \iota_{\Omega,B}:
+   \pi_0(\mathscr L_{\Omega,B})
+   \longrightarrow
+   (Q_\Omega/\!\sim_\Omega)_B,
+   \qquad
+   \iota_{\Omega,B}([\widehat\omega])
+   =
+   [\operatorname{dec}_{\Omega,B}^{0}(c_\omega)]_{\sim_\Omega}.
+   \tag{P.6.1d.5.10}
+   $$
+   The proof $\Pi_{\mathrm{gen}}$ verifies that this map is well defined, injective, and surjective, and that it commutes with restriction and with every claimed descended observable and PPI/PCE cost. Hence it is a bijection induced by the decoded physical candidates rather than an abstract cardinality match. The fixed-budget conclusion ranges over this exact subquotient. An unrestricted global-candidate conclusion requires a separately accepted exhaustive global-extension theorem.
+
+**Definition P.6.1d.6 (Restriction and Essential-Preimage Census).**
+
+The restriction functor
+   $$
+   \operatorname{res}_B:
+   \mathscr L_{\Omega,B}
+   \longrightarrow
+   \mathscr J_B
+   \tag{P.6.1d.6.1}
+   $$
+   is specified on every object and arrow and induces
+   $$
+   \overline{\operatorname{res}}_B:
+   \pi_0(\mathscr L_{\Omega,B})
+   \longrightarrow
+   \pi_0(\mathscr J_B).
+   $$
+   The record also fixes the budget-$B$ compatible-tuple subspace $Q_{\mathrm{comp},B}$ of the $Q_{\mathrm{comp}}$ in the scope clause following Theorem P.14.1k.1, its registered restriction map
+   $$
+   \operatorname{res}^{P.14}_B:
+   (Q_\Omega/\!\sim_\Omega)_B
+   \longrightarrow
+   Q_{\mathrm{comp},B},
+   $$
+   and a decoding-induced bijection
+   $$
+   \eta_B:
+   \pi_0(\mathscr J_B)
+   \xrightarrow{\ \sim\ }
+   Q_{\mathrm{comp},B}.
+   $$
+   The proof $\Pi_{\mathrm{res}}$ verifies functoriality, factorization through the six enriched sector lifts, every sector response, overlap, unit, calibration, and ownership equation, proves that $\eta_B$ preserves every sector coordinate and typed overlap cell, and verifies the commuting identity
+   $$
+   \eta_B\circ\overline{\operatorname{res}}_B
+   =
+   \operatorname{res}^{P.14}_B\circ\iota_{\Omega,B}.
+   \tag{P.6.1d.6.2}
+   $$
+   For each representative $q$ of a component of $\mathscr J_B$, define the unframed essential preimage
+   $$
+   \mathscr E_q
+   :=
+   \mathscr L_{\Omega,B}
+   \big|_{
+   \{\omega:
+   \operatorname{res}_B(\omega)\simeq q\}
+   }.
+   \tag{P.6.1d.6.3}
+   $$
+   This is the full subgroupoid on the displayed objects; a chosen isomorphism $\operatorname{res}_B(\omega)\simeq q$ remains an external membership witness. The record
+   $$
+   \mathfrak E_B
+   =
+   \{(\mathscr E_q,\Pi_{E,q})\}_{
+   q\in\operatorname{Rep}\pi_0(\mathscr J_B)}
+   \tag{P.6.1d.6.4}
+   $$
+   contains the exhaustive object, arrow, component, and automorphism census of every essential preimage.
+
+**Definition P.6.1d.7 (Exhaustive Source Audit).**
+
+The frozen source inventory is
+   $$
+   \mathfrak I_{\mathrm{src}}
+   =
+   \bigl(
+   h_{\mathrm{src}},\mathsf E_{\mathrm{src}},
+   \mathcal I_{\mathrm{src}},\pi_{\mathrm{cov}},
+   \mathsf A_0,\mathsf A_{\mathrm{ind}},
+   \mathcal Q_{\mathrm{src}},
+   \mathsf{Cl}_{\mathrm{src}},
+   \mathcal T_{\mathrm{src}},
+   \Pi_{\mathrm{taint}}
+   \bigr).
+   \tag{P.6.1d.7.1}
+   $$
+   The source hash fixes the exact baseline. The typed eligibility rule $\mathsf E_{\mathrm{src}}$ ranges over every response-active protocol selection, sector-label map, source, operator, coefficient, normalization, unit map, calibration, branch premise, physical transformation, global-admissibility predicate, observable map, and cost term used anywhere in the certificate. It also visits every axiom and semantic clause of $T_{\Omega,B}$ and every branch of $\operatorname{dec}_{\Omega,B}^{0}$ and $\operatorname{dec}_{\Omega,B}^{1}$ as separate owners. The inventory $\mathcal I_{\mathrm{src}}$ classifies every eligible owner as included or excluded exactly once, with its source, type, status, and checked reason. The coverage proof $\pi_{\mathrm{cov}}$ proves that every owner actually consumed by a response-active certificate field is included exactly once, that every excluded owner is inapplicable in the frozen language or has a checked response-inertness proof, that no excluded owner is consumed by any constructor or proof, and that no eligible baseline owner is omitted.
+
+   The finite seed set $\mathcal Q_{\mathrm{src}}$ contains the canonical typed serializations of the prohibited premise forms: a nominated sector lift, common carrier, source-exhaustion tag, selected minimizer, empirical outcome, or a literal equivalent under the registered source language. The finite typed transform grammar $\mathsf{Cl}_{\mathrm{src}}$ lists every admitted renaming, quotation, embedding, abbreviation, and constructor-literal transform. The canonical finite census $\mathcal T_{\mathrm{src}}$ is accompanied by $\Pi_{\mathrm{taint}}$, which proves that it contains $\mathcal Q_{\mathrm{src}}$, is closed under every transform in $\mathsf{Cl}_{\mathrm{src}}$, and gives a derivation of every member from a seed. Thus it is exactly the least closed set in the frozen finite serialization universe, and membership is terminating finite lookup.
+
+   The finite directed graph $\mathcal G_{\mathrm{src}}$ contains every included owner and every derived response-active field. It is acyclic. Its leaves are partitioned into the exact predictive-base inventory $\mathsf A_0$, the response-inert logical trust root $\mathsf A_{\log}$, and the displayed independent sector premises $\mathsf A_{\mathrm{ind}}$. The base inventory is the canonical serialization of the registered predictive normal form and the explicitly named POP, PCE, and PPI premises admitted at this scope; it contains no sector lift, semantic target assignment, common-carrier witness, selected minimizer, or empirical comparison value.
+
+   Every nonleaf vertex $v$ carries a registered total constructor
+   $$
+   g_v:
+   \prod_{u\in\operatorname{Par}(v)}X_u
+   \longrightarrow X_v
+   \tag{P.6.1d.7.2}
+   $$
+   and a checked proof that its stored value is $g_v$ of its parent values. Every response-active literal occurring in constructor source or proof input is traced to a parent or promoted to an inventory leaf. The proof $\Pi_{\mathrm{src}}$ verifies inventory coverage, constructor equations, topological rank, complete proof-dependency manifests, and $\Pi_{\mathrm{taint}}$. A desired lift, common carrier, source-exhaustion tag, selected minimizer, or empirical outcome may occur as a checked nonleaf output node. The canonical serialization of every leaf, constructor literal, and unproved premise must fail membership in $\mathcal T_{\mathrm{src}}$. The source status is
+   $$
+   \mathsf{base\mbox{-}exhausted}
+   \quad\Longleftrightarrow\quad
+   \mathsf A_{\mathrm{ind}}=\varnothing
+   \ \text{and every check in this item passes}.
+   \tag{P.6.1d.7.3}
+   $$
+   Otherwise an accepted source audit is tagged $\mathsf{augmented}$ and lists every member of $\mathsf A_{\mathrm{ind}}$. Base exhaustion is relative to the frozen predictive presentation and leaves the premise status of every member of $\mathsf A_0$ unchanged.
+
+**Definition P.6.1d.8 (No-Double-Counting Ownership Schedule).**
+
+The no-double-counting record is
+   $$
+   \mathfrak W_B
+   =
+   \bigl(
+   \mathbb K_B,W_B,\mathcal A_B,
+   (P_a)_{a\in\mathcal A_B},
+   \mathcal I_{\mathrm{src}}^{\mathrm{act}},
+   \sim_{\mathrm{src}},\mathcal C_{\mathrm{src}},
+   \operatorname{vec}_B,\operatorname{own}_B,
+   L_{\mathrm{resp}},L_{\mathrm{cost}},
+   \Pi_{\mathrm{own}}
+   \bigr),
+   \tag{P.6.1d.8.1}
+   $$
+   where $W_B$ is a finite-dimensional $\mathbb K_B$-contribution space and $\mathcal I_{\mathrm{src}}^{\mathrm{act}}$ is the complete finite set of included response-active source rows from $\mathcal I_{\mathrm{src}}$. The exact decidable relation $\sim_{\mathrm{src}}$ identifies two rows exactly when their checked source semantics denote the same underlying contribution; every genuine partial intersection is split by a checked equalizer refinement before this relation is formed. The canonical contribution set is
+   $$
+   \mathcal C_{\mathrm{src}}
+   :=
+   \mathcal I_{\mathrm{src}}^{\mathrm{act}}/\!\sim_{\mathrm{src}},
+   $$
+   and its disjoint atomic cells are indexed by $\mathcal A_B$. The total maps
+   $$
+   \operatorname{vec}_B:
+   \mathcal C_{\mathrm{src}}\to W_B,
+   \qquad
+   \operatorname{own}_B:
+   \mathcal C_{\mathrm{src}}\to\mathcal A_B
+   $$
+   give each canonical contribution its stored vector and exactly one owner. The ownership projections obey
+   $$
+   P_a^2=P_a,\qquad
+   P_aP_b=0\ (a\ne b),\qquad
+   \sum_{a\in\mathcal A_B}P_a=I_{W_B}.
+   \tag{P.6.1d.8.2}
+   $$
+   Let $\mathsf{Resp}^{\mathrm{lin}}_B$ be the registered finite $\mathbb K_B$-module of response contributions. The ledgers are typed linear maps
+   $$
+   L_{\mathrm{resp}}:W_B\to\mathsf{Resp}^{\mathrm{lin}}_B,
+   \qquad
+   L_{\mathrm{cost}}:W_B\to\mathbb K_B.
+   $$
+   The proof $\Pi_{\mathrm{own}}$ exhaustively checks every pair of source rows, proves that $\sim_{\mathrm{src}}$ is an equivalence relation whose classes are exactly the common-source aliases after the declared equalizer refinements, proves that every active row maps to one class and every class has a row, and proves that $\operatorname{own}_B$ and $\operatorname{vec}_B$ cover every member of $\mathcal C_{\mathrm{src}}$ exactly once. For each $c\in\mathcal C_{\mathrm{src}}$ it checks
+   $$
+   P_a\operatorname{vec}_B(c)
+   =
+   \begin{cases}
+   \operatorname{vec}_B(c),&\operatorname{own}_B(c)=a,\\
+   0,&\operatorname{own}_B(c)\ne a.
+   \end{cases}
+   $$
+   Writing $w_{\mathrm{tot}}=\sum_{c\in\mathcal C_{\mathrm{src}}}\operatorname{vec}_B(c)$, it verifies reconstruction by $w_{\mathrm{tot}}=\sum_aP_aw_{\mathrm{tot}}$, proves that the response and every asserted additive cost equal the corresponding sum of ledger images over the canonical atoms, and proves positivity and normalization of the assembled response law. A nonadditive cost is evaluated once on the assembled candidate.
+
+**Definition P.6.1d.9 (Observable Calibration Schedule).**
+
+The calibration record is
+   $$
+   \mathcal O_B
+   =
+   \bigl(
+   (\mathcal V_{i,B},\mathcal O_{i,B})_{i\in I_6},
+   \mathfrak U_B,\mathfrak N_B,
+   \mathfrak C_B^{\mathrm{std}},
+   \mathfrak R_B^{\mathrm{reg}},
+   \mathfrak E_B^{\mathrm{err}},
+   \Pi_{\mathrm{cal}}
+   \bigr),
+   $$
+   where each $\mathcal V_{i,B}$ is an exact decidable value space and
+   $$
+   \mathcal O_{i,B}:
+   \operatorname{Ob}(\mathscr L_{\Omega,B})
+   \longrightarrow
+   \mathcal V_{i,B}
+   $$
+   is the registered sector observable. The remaining fields give their unit maps, normalization conventions, calibration standards, regulator data, certified enclosures, and error laws. The proof $\Pi_{\mathrm{cal}}$ verifies that every $\mathcal O_{i,B}$ is total on the declared global candidate class, normalized on its declared normalized domain, invariant on every arrow of $\mathscr L_{\Omega,B}$, and compatible with $\operatorname{res}_B$ and every registered overlap diagram. It also checks every typed unit-conversion square, calibration-standard identity, regulator-domain condition, enclosure inclusion, covariance or error-composition rule, and the source and overlap dependencies of those maps. Hence it induces the unique descended map
+   $$
+   \overline{\mathcal O}_{i,B}:
+   \pi_0(\mathscr L_{\Omega,B})
+   \longrightarrow
+   \mathcal V_{i,B},
+   \qquad
+   \overline{\mathcal O}_{i,B}([\omega])
+   =
+   \mathcal O_{i,B}(\omega).
+   $$
+   Every retained rescaling or offset symmetry is either quotiented as response-null or fixed by an independently registered calibration. This includes time--energy rescaling, gauge-potential--charge rescaling, and absolute-energy offsets. Calibration definitions are independent of observed comparison values.
+
+**Definition P.6.1d.10 (Strict Selection Schedule).**
+
+The selection field is either the token $\mathsf{unselected}$ or a tuple $\mathfrak C_{\mathrm{sel}}$ of the following form:
+   $$
+   \mathfrak C_{\mathrm{sel}}
+   =
+   \bigl(
+   \overline V_{\Omega,B},
+   [\omega_*],g_{\Omega,B},
+   \Pi_{\mathrm{desc}},\Pi_{\mathrm{sel}},
+   \Pi_{\mathrm{tuple}}
+   \bigr).
+   \tag{P.6.1d.10.1}
+   $$
+   The proof $\Pi_{\mathrm{desc}}$ verifies that the physical PPI/PCE cost is derived on $\mathcal G_{\mathrm{src}}$, fixed independently of comparison targets, invariant under every arrow of $\mathscr L_{\Omega,B}$, and therefore descends to
+   $$
+   \overline V_{\Omega,B}:
+   \pi_0(\mathscr L_{\Omega,B})
+   \longrightarrow
+   \mathbb K_B\cup\{+\infty\}.
+   \tag{P.6.1d.10.2}
+   $$
+   The proof $\Pi_{\mathrm{sel}}$ compares every component in the exhaustive quotient, verifies finite attainment at $[\omega_*]$, and verifies
+   $$
+   g_{\Omega,B}
+   :=
+   \inf_{[\omega]\ne[\omega_*]}
+   \bigl(
+   \overline V_{\Omega,B}([\omega])
+   -
+   \overline V_{\Omega,B}([\omega_*])
+   \bigr)
+   >0,
+   \tag{P.6.1d.10.3}
+   $$
+   with $\inf\varnothing=+\infty$, together with
+   $$
+   \overline{\operatorname{res}}_B([\omega_*])
+   =
+   [q_*].
+   \tag{P.6.1d.10.4}
+   $$
+   The proof $\Pi_{\mathrm{tuple}}$ verifies
+   $$
+   \eta_B([q_*])=q_\bullet^*,
+   $$
+   where $q_\bullet^*$ is the selected compatible tuple of an accepted Theorem D.8.9c record, verifies its live sector statuses, and verifies that the accepted essential-preimage census contains $\omega_*\in\mathscr E_{q_*}$.
+
+**Definition P.6.1d.11 (Forward-Lock Schedule).**
+
+Let $\mathfrak H_{\mathrm{CU}}^{\mathrm{pre}}$ be the canonical projection of the certificate payload containing the frozen datum, source, generator, protocol, cost, normalization, calibration, checker, hash-algorithm, decision rule, the complete neutralized decision-active payload $\widetilde{\mathfrak H}_{\mathrm{CU}}^{\mathrm{pre}}$, the commitment-scheme identifier, and the sealed hiding commitment $c_\lambda$ to the custodian-only semantic envelope record. It excludes the lock record, semantic unblinding map, envelope plaintext and hash, opening randomness and evidence, custodian signature, status vector, checker trace, and final hash. For a registered hash algorithm $H_{\mathrm{pre}}$, define
+   $$
+   h_{\mathrm{pre}}
+   =
+   H_{\mathrm{pre}}
+   \bigl(
+   \operatorname{ser}(
+   \mathfrak H_{\mathrm{CU}}^{\mathrm{pre}})
+   \bigr).
+   \tag{P.6.1d.11.1}
+   $$
+   The forward-lock field $\mathfrak B_{\mathrm{lock}}$ is a populated Convention P.14.1a.1 record. Its claim identifier is the categorical-unity claim identifier; its source-snapshot and serialization fields are those used by $\mathfrak H_{\mathrm{CU}}^{\mathrm{pre}}$; its hash algorithm is $H_{\mathrm{pre}}$; its prompt hash covers the exact neutral prompt and admitted inputs; and its derivation-specification hash is exactly $h_{\mathrm{pre}}$. Its immutable witness binds those fields and their canonical bytes to a seal time before the registered comparison boundary. These checked fieldwise identities establish the recorded chronology and data separation without treating an untyped reference to $h_{\mathrm{pre}}$ as a commitment.
+
+**Definition P.6.1d.11a (Blind-Provenance Schedule).**
+
+The target-blind field is either $\mathsf{not\mbox{-}claimed}$ or a finite record
+   $$
+   \mathfrak B_{\mathrm{blind}}
+   =
+   \bigl(
+   \widetilde{\mathfrak H}_{\mathrm{CU}}^{\mathrm{pre}},
+   \widetilde I_6,\lambda,
+   \iota_{\mathrm{proc}},\mathsf{Iso}_{\mathrm{proc}},s_{\mathrm{prior}},
+   \mathfrak S_{\mathrm{Com}},c_\lambda,
+   \mathcal Q_{\mathrm{blind}},
+   \mathcal T_{\mathrm{blind}},
+   h_{\mathrm{env}},r_\lambda,\mathsf{Trace}_{r},
+   \sigma_{\mathrm{cust}},
+   t_{\mathrm{commit}},t_{\mathrm{seal}},
+   t_{\mathrm{start}},t_{\mathrm{lock}},t_{\mathrm{open}},
+   \Pi_{\mathrm{blind}}
+   \bigr).
+   \tag{P.6.1d.11a.1}
+   $$
+   Here $\widetilde I_6=\{1,\ldots,6\}$ carries neutral labels and $\lambda:\widetilde I_6\to I_6$ is the semantic unblinding map. The object $\widetilde{\mathfrak H}_{\mathrm{CU}}^{\mathrm{pre}}$ is the canonical neutralization of the complete decision-active precommit payload: it includes the global theory, object and arrow generators, source and ownership data, cost, calibration, checker, and decision rule, with every quarantined semantic name and target-dependent field replaced through the registered neutralization map. The responsible process is identified by $\iota_{\mathrm{proc}}$; $\mathsf{Iso}_{\mathrm{proc}}$ records its authenticated isolation boundary and complete prior-access census; and $s_{\mathrm{prior}}$ is its checked prior-exposure status. The registered commitment record
+   $$
+   \mathfrak S_{\mathrm{Com}}
+   =
+   \bigl(
+   \iota_{\mathrm{Com}},\mathsf{par},
+   \mathsf{Pad},\mathsf{Sec},
+   \Pi_{\mathrm{hide}},\Pi_{\mathrm{bind}}
+   \bigr)
+   \tag{P.6.1d.11a.2}
+   $$
+   fixes the scheme and version, fixed-length injective padding, security model, and accepted hiding and binding theorems. Before $t_{\mathrm{open}}$, the responsible process receives only $\widetilde{\mathfrak H}_{\mathrm{CU}}^{\mathrm{pre}}$ and
+   $$
+   c_\lambda
+   =
+   \mathsf{Com}_{\mathsf{par}}
+   \left(
+   \mathsf{Pad}\left(
+   \operatorname{ser}(
+   \lambda,\mathcal Q_{\mathrm{blind}},
+   \mathcal T_{\mathrm{blind}})
+   \right);
+   r_\lambda
+   \right).
+   \tag{P.6.1d.11a.3}
+   $$
+   The authenticated envelope hash is
+   $$
+   h_{\mathrm{env}}
+   =
+   H_{\mathrm{pre}}\bigl(
+   \operatorname{ser}(\lambda,\mathcal Q_{\mathrm{blind}},
+   \mathcal T_{\mathrm{blind}})\bigr).
+   $$
+   The typed trace $\mathsf{Trace}_r$ records the versioned randomness source, authenticated sampling time, distribution test, custody chain, and proof that $r_\lambda$ was freshly and uniformly sampled under the registered security model before sealing. The custodian signature $\sigma_{\mathrm{cust}}$ binds the scheme identifier, $c_\lambda$, $h_{\mathrm{env}}$, process identifier, authenticated commitment time $t_{\mathrm{commit}}$, and seal time. The append-only timestamp or independently authenticated custodian record proves that $c_\lambda$ existed at $t_{\mathrm{commit}}$. The isolation record identifies $t_{\mathrm{start}}$ as the responsible process's first derivation-active access to the neutralized payload. The custodian withholds $h_{\mathrm{env}}$, $r_\lambda$, $\mathsf{Trace}_r$, and $\sigma_{\mathrm{cust}}$ from the responsible process until $t_{\mathrm{open}}$. The proof $\Pi_{\mathrm{blind}}$ verifies the pre-dispatch commitment, commitment opening, hiding and binding hypotheses, neutral-to-semantic relabeling isomorphism, responsible-process identity and isolation, prior-exposure status, access transcript, and exhaustive finite taint checks over each of the prompt, admitted-input, builder-source-and-literal, generated-field-and-literal, and proof-input domains, together with
+   $$
+   t_{\mathrm{commit}}
+   \le t_{\mathrm{seal}}
+   <t_{\mathrm{start}}
+   \le t_{\mathrm{lock}}
+   <t_{\mathrm{open}}.
+   \tag{P.6.1d.11a.4}
+   $$
+   The set $\mathcal T_{\mathrm{blind}}$ is a finite canonical census. The same proof verifies that it contains $\mathcal Q_{\mathrm{blind}}$, is closed under the registered finite transform grammar, and gives a derivation of every member from the seed set, so it is exactly the least closed set and membership is terminating finite lookup. The label $\mathsf{target\mbox{-}blind}$ requires an accepted perfect-hiding theorem, $s_{\mathrm{prior}}=\mathsf{no\mbox{-}prior\mbox{-}access}$, a passing isolation record, and every displayed transcript, commitment, randomness, and taint check. With the same clean-process conditions and an accepted computational-hiding theorem, the label is $\mathsf{computationally\mbox{-}target\mbox{-}blind}$. Prior exposure, plaintext target access before $t_{\mathrm{open}}$, or a failed or incomplete isolation, transcript, opening, randomness, or taint check gives $\mathsf{dependency\mbox{-}blind}$ status and does not satisfy the blind field.
+
+**Definition P.6.1d.12 (Continuum, Status, Hash, and Replay Schedules).**
+
+The continuum field is either $\mathsf{not\mbox{-}claimed}$ or an accepted record $\mathfrak C_{\mathrm{cont}}$ containing a directed family of finite-budget data and certificates, compatible bonding maps, commuting source and observable squares, a finite-PCE completion datum in the sense of Definition P.6.1b.5, quantitative convergence and remainder control, essential-image witnesses, PPI-physicalizable limiting morphisms, and a globally finite-cost representative as required by Theorem P.6.1b.6.
+
+Let
+$$
+\mathcal K_{\mathrm{CU}}
+=
+\{
+\mathsf{trust},\mathsf{datum},\mathsf{local},
+\mathsf{compatibility},\mathsf{global},
+\mathsf{restriction},\mathsf{source},
+\mathsf{ownership},\mathsf{calibration},
+\mathsf{selected\mbox{-}tuple},
+\mathsf{cost\mbox{-}descent},
+\mathsf{strict\mbox{-}selection},
+\mathsf{lock},\mathsf{blind},\mathsf{continuum}
+\}
+\cup
+\{\mathsf E_q:
+q\in\operatorname{Rep}\pi_0(\mathscr J_B)\}.
+\tag{P.6.1d.12.1}
+$$
+The canonical payload $\mathfrak C_{\mathrm{CU},B}^{\circ}$ contains the fields above but excludes the final hash, status vector, and checker output. The versioned total checker returns
+$$
+\mathsf{Check}_{\mathrm{CU}}
+(\mathfrak C_{\mathrm{CU},B}^{\circ},h)
+=
+(\sigma_{\mathrm{CU}},\chi_{\mathrm{CU}}),
+\qquad
+\sigma_{\mathrm{CU}}(k)
+\in
+\{
+\mathsf{accepted},\mathsf{failed},
+\mathsf{pending},\mathsf{not\mbox{-}claimed}
+\}.
+\tag{P.6.1d.12.2}
+$$
+A field is accepted exactly when every required finite table, proof, dependency, coverage, and hash check passes. A finite counterexample or mismatch gives failed status; an incomplete proof or census gives pending status. The status $\mathsf{not\mbox{-}claimed}$ is available only for the optional cost-descent, strict-selection, blind, and continuum fields.
+
+Choose a registered final hash algorithm $H_{\mathrm{CU}}$ inside the payload and define
+$$
+h_{\mathrm{CU}}
+=
+H_{\mathrm{CU}}
+\bigl(
+\operatorname{ser}(
+\mathfrak C_{\mathrm{CU},B}^{\circ})
+\bigr),
+\qquad
+\mathfrak C_{\mathrm{CU},B}
+=
+\bigl(
+\mathfrak C_{\mathrm{CU},B}^{\circ},
+h_{\mathrm{CU}},
+\sigma_{\mathrm{CU}},
+\chi_{\mathrm{CU}}
+\bigr).
+\tag{P.6.1d.12.3}
+$$
+Acceptance requires recomputation of $h_{\mathrm{CU}}$ followed by deterministic replay of
+$$
+\mathsf{Check}_{\mathrm{CU}}
+(\mathfrak C_{\mathrm{CU},B}^{\circ},h_{\mathrm{CU}}).
+$$
+Neither the final hash nor either checker output occurs in the hashed payload.
+
+The checker computes the completion predicates exactly as Definition 2.6c.
+
+**Theorem P.6.1d.13 (Soundness of the Categorical-Unity Schedules).** Assume the trust schedule of Definition P.6.1d.4 is accepted. The versioned checker terminates on every finite categorical-unity payload and has the following soundness properties.
+
+1. Acceptance of the registered-datum, local, and compatibility schedules constructs exactly the finite groupoids in Definition 2.6a and the exhaustive classifier in Theorem 2.6b.
+2. Acceptance of the global-census and restriction schedules identifies $\pi_0(\mathscr L_{\Omega,B})$ with the registered bounded ambient quotient, intertwines the two restriction maps through the typed bridges, and computes each full essential preimage $\mathscr E_q$ with all of its components and automorphisms.
+3. Acceptance of the source, ownership, and calibration schedules derives every response-active field from its registered leaves, counts every eligible contribution exactly once, and descends every registered observable to the global PPI-equivalence quotient with its stated units, normalization, overlap, regulator, enclosure, and error laws.
+4. Acceptance of the selection schedule proves that the submitted class is the unique minimizer of the descended target-independent cost with the verified positive gap and that its restriction is the accepted compatible sector tuple.
+5. Acceptance of the lock, blind-provenance, or continuum schedule warrants exactly its registered chronology, provenance, or directed-completion conclusion. Manuscript status and empirical realization remain governed by their independent registry and comparison records.
+
+*Proof.* Every source, target, protocol, outcome, coefficient, object code, arrow code, parser range, proof object, dependency manifest, ownership matrix, calibration table, and hash input is finite. Exact equality and every registered predicate are decidable. The accepted kernel-totality theorem makes proof checking terminating, and the accepted checker-totality and deterministic-replay theorems make orchestration and status computation terminating.
+
+For item 1, exhaustive table checking constructs the response restrictions, local lifts, overlap-decorated tuples, and full compatible subgroupoid. Lemma P.6.1d.2 proves the fully faithful fiber statement when its enriched premise is accepted, and Theorem P.6.1d.3 computes the components and stabilizers.
+
+For item 2, object-code coverage supplies one decoded representative of every candidate isomorphism class, arrow-code coverage exhausts every registered semantic PPI equivalence, and the decoded bijection identifies their components with the bounded ambient quotient. Functoriality and the commuting restriction square identify the induced restriction maps. Therefore
+$$
+[\omega]\in\pi_0(\mathscr E_q)
+\quad\Longleftrightarrow\quad
+\operatorname{res}_B(\omega)\simeq q
+\quad\Longleftrightarrow\quad
+\overline{\operatorname{res}}_B([\omega])=[q],
+$$
+which proves the essential-preimage claims of Theorem 2.6d.
+
+For item 3, topological induction over the accepted finite acyclic source graph proves every nonleaf from its checked parent constructor, and coverage visits every response-active field. The exhaustive orthogonal idempotents, owner map, and reconstruction equations prove the no-double-counting identities. PPI-equivalence invariance makes each accepted calibrated observable constant on components, while the registered unit, overlap, regulator, enclosure, and error squares preserve its declared type.
+
+For item 4, the descended cost is constant on every registered global component. Exhaustive finite comparison and the accepted positive gap make the submitted class its unique minimizer; the selected-tuple and essential-preimage checks identify its restriction. Item 5 follows by deterministic replay of the separately typed commitment, isolation, taint, convergence, registry, and comparison checks. ∎
+
+**Lemma P.6.1d.14 (Finite Realization of the Closure Patterns).** Fix an accepted trust record of Definition P.6.1d.4.
+
+(a) There is a classification-complete categorical-unity record $\mathfrak R_{\mathrm{ov}}$ for which every local-lift groupoid is terminal and $\mathscr J_B=\varnothing$.
+
+(b) For every pair of finite groupoids $\mathsf L,\mathsf J$ and every functor $r:\mathsf L\to\mathsf J$, there is a finite categorical-unity record $\mathfrak R(\mathsf L,\mathsf J,r)$ whose datum, local, compatibility, global, restriction, source, ownership, calibration, and every essential-preimage field are accepted and for which
+$$
+\mathscr J_B\simeq\mathsf J,
+\qquad
+\mathscr L_{\Omega,B}\simeq\mathsf L,
+\qquad
+\operatorname{res}_B\simeq r.
+\tag{P.6.1d.14.1}
+$$
+The source status of this realization is $\mathsf{augmented}$ with the frozen finite theory and generator tables listed as its independent leaves. Its selection field may be the token $\mathsf{unselected}$.
+
+(c) For $\mathsf J=\mathbf1$, $\mathsf L$ the discrete two-object groupoid $\{\omega_0,\omega_1\}$, and $r$ the unique functor, the record in (b) admits a selection-complete extension with
+$$
+\overline V_{\Omega,B}([\omega_0])=0,
+\qquad
+\overline V_{\Omega,B}([\omega_1])=1,
+\qquad
+g_{\Omega,B}=1.
+\tag{P.6.1d.14.2}
+$$
+
+*Proof.* Use the exact coefficient field $\mathbb Q$ and a finite protocol category with six discrete objects $p_i$, one for each $i\in I_6$. Take $\mathsf S_B=\mathbf1$, let $\mathcal Y_B$ have the constant one-outcome response law with identity update and verification maps, and let $j_i$ include $p_i$. Every resulting $\mathsf R_{i,B}$ is terminal, so all response, normalization, naturality, semantic-label, and protocol-coverage tables are finite and exact.
+
+For (a), take every $\mathsf O_{i,B}=\mathbf1$, every $\rho_i$ and branch predicate to be the unique accepted choice, and put one edge $\{\mathsf t,\mathsf s\}$ in the overlap graph. Let its overlap category be the discrete two-object groupoid $\{0,1\}$, and let the two restriction functors send the unique time and space lifts to $0$ and $1$, respectively. Both local lifts exist uniquely, as do the other four local lifts, but no isomorphism $0\to1$ exists. The exhaustive overlap table therefore has no compatible tuple. The datum, local, and compatibility checkers accept and return $\operatorname{Lift}_i(R_i)\simeq\mathbf1$ for all $i$ and $\mathscr J_B=\varnothing$. Together with the fixed accepted trust record, this is the claimed classification-complete record.
+
+For (b), use no overlap edges. Set $\mathsf O_{\mathsf t,B}=\mathsf J$ with the unique functor to the terminal $\mathsf R_{\mathsf t,B}$ and accepted constant branch predicate; take the other five realization categories terminal. A functor $\mathbf1\to\mathsf J$ chooses an object of $\mathsf J$, and a natural isomorphism between two such functors is exactly an arrow of $\mathsf J$. Hence the time-sector local-lift groupoid is $\mathsf J$, the other five are terminal, and their product gives $\mathscr J_B\simeq\mathsf J$.
+
+Define a frozen finite theory $T_{\mathsf L,r}$ whose accepted object table is $\operatorname{Ob}(\mathsf L)$, whose accepted arrow table is $\operatorname{Mor}(\mathsf L)$, and whose identity, inverse, and composition tables are those of $\mathsf L$. Decode $x\in\operatorname{Ob}(\mathsf L)$ to a finite carrier with a finite control record labelled by $x$, the six constant sector responses above, and a finite-record PPI dressing whose parser, verifier, maintenance map, update-use map, and cost are explicit finite tables. Add one finite global protocol with outcome set $\{0,1\}$ for each component $C$ of $\mathsf L$; its response law is $\delta_1$ when $x\in C$ and $\delta_0$ otherwise. Thus different components are response-distinct. Within one component, the admissible transformations of the complete control, response, update, verification, overlap, unit, and dressing tuple are declared by, and exhaustively checked against, the arrows of $\mathsf L$. The bounded object and arrow parsers enumerate these tables without duplication, so the semantic PPI-equivalence groupoid is exactly $\mathsf L$.
+
+On decoded objects and arrows, define the time-sector projection by $r$ and the other five projections uniquely. The exhaustive restriction checker then returns $\operatorname{res}_B\simeq r$, and its full-preimage tables return the exact subgroupoids $\mathscr E_q=\mathsf L|_{\{x:r(x)\simeq q\}}$. The source graph takes the neutral serialization of $T_{\mathsf L,r}$ and its generators as displayed independent leaves and derives every decoded field by the registered parsers; no leaf nominates a selected object. The ownership space is the rational coordinate space on the finite active-source set, with its coordinate idempotents, and the calibration maps are the exact constant rational readouts with identity unit and error tables. Their exhaustive finite checks accept. This constructs every field claimed in (b).
+
+For (c), give each of the six sectors the singleton strict certificate of Definition D.8.9a with cost $0$, gap $1$, and the unique overlap maps. Theorem D.8.9c returns the unique compatible tuple. Define the global cost by the frozen table (P.6.1d.14.2); it is invariant on the discrete global groupoid, descends to components, has the unique minimizer $[\omega_0]$, and has verified gap $1$. The restriction of $\omega_0$ is the selected compatible tuple. A forward-lock record commits the theory, generators, cost table, and decision rule before checker execution. The selected-tuple, cost-descent, strict-selection, and lock checks therefore accept, giving the selection-complete extension. ∎
 
 ### P.6.2 Illustrating PPI: From Abstract Requirements to Specific Laws
 
@@ -4602,6 +5729,50 @@ $$
 $$
 converges exactly when the $p$-series $\sum r^{-s}$ converges, namely when $s>1$. For $s=1$ the harmonic comparison diverges. ∎
 
+**Convention P.8.9a.12.1c (Logarithm Base in the Ranked Cost).** In Theorem P.8.9a.12.1 and throughout this subsection, $\log$ in $E_r=E_0+\gamma\log(r+r_0)$ denotes the natural logarithm. Base-two logarithms are written $\log_2$.
+
+**Remark P.8.9a.12.1 (Coding-Cost Reading of the Ranked PCE Cost).** Write
+$$
+Z_N=\sum_{q=1}^{N}(q+r_0)^{-s},
+\qquad
+p_r=\frac{(r+r_0)^{-s}}{Z_N},
+\qquad
+s=\beta\gamma,
+$$
+and let $\ell_r=-\log_2p_r$. Then
+$$
+\ell_r=\frac{s}{\ln2}\ln(r+r_0)+\log_2Z_N
+=\frac{\beta}{\ln2}E_r+c,
+\qquad
+c=\log_2Z_N-\frac{\beta E_0}{\ln2}.
+\tag{P.8.9a.12.1a}
+$$
+Thus $E_r$ is a positive affine reparametrization of the ideal information content of the rank index on this family.
+
+*Proof.* Substitute the normalized weight into $-\log_2p_r$, then use $\ln(r+r_0)=(E_r-E_0)/\gamma$ and $s=\beta\gamma$. Since $\beta>0$, the affine slope is positive. ∎
+
+The real-valued quantity $\ell_r$ is distinct from the integer-valued minimal-description envelope
+$
+D([R])=\min\{L_{\mathrm{desc}}(B):\mathcal R_B\simeq R\}
+$
+defined in the proof of Theorem P.6.1b.8a. The lengths $\lceil\ell_r\rceil$ satisfy the Kraft inequality because
+$$
+\sum_r2^{-\lceil\ell_r\rceil}\le\sum_r2^{-\ell_r}=1,
+$$
+so a prefix code with those lengths exists and has expected length smaller than $H(p)+1$ bit.
+
+Under
+$$
+\beta=\frac1\mu,
+\qquad
+\gamma=a,
+\qquad
+E_0=b,
+\qquad
+r_0=V,
+$$
+Proposition P.2.6.3d.2 is the same Gibbs--log-cost template. This dictionary preserves the logarithmic-cost hypothesis. A numerical concentration ratio additionally requires registered parameter values and a population and likelihood model.
+
 **Theorem P.8.9a.12.2 (Rank-Pareto Zipf Bridge).** Let $X$ be a positive population variable with Pareto upper survival law
 $$
 \mathbb P(X>x)=\left(\frac{x_0}{x}\right)^{\zeta},
@@ -4639,6 +5810,28 @@ $$
 x_r=x_0\left(\frac Nr\right)^{1/\zeta}.
 $$
 Substituting $\zeta=1+2k/\sigma^2$ from Theorem P.8.9a.11.5 gives the displayed PCE specialization. ∎
+
+**Corollary P.8.9a.12.2a (Disjoint Exponent Ranges for the Coding and Growth Routes).** Assume that the ranked activation weights of Theorem P.8.9a.12.1 are identified with the normalized rank-size shares of Theorem P.8.9a.12.2. On an unbounded rank population, normalizability of the coding route requires
+$$
+s=\beta\gamma\in(1,\infty),
+$$
+whereas the multiplicative-growth route of Theorem P.8.9a.11.5 gives
+$$
+\frac1\zeta=\frac1{1+2k/\sigma^2}\in(0,1)
+\qquad(k,\sigma>0).
+\tag{P.8.9a.12.2a}
+$$
+The two exponents are therefore unequal on that branch. Their common boundary value is $1$, attained by neither route; $1/\zeta\uparrow1$ as $\sigma^2/k\to\infty$.
+
+On a finite ranked population or a branch with an upper cutoff, the coding normalization imposes no condition $s>1$. Equality of the two exponents then holds exactly when
+$$
+\beta\gamma\left(1+\frac{2k}{\sigma^2}\right)=1.
+\tag{P.8.9a.12.2b}
+$$
+
+*Proof.* The series $\sum_{r\ge1}(r+r_0)^{-s}$ converges exactly for $s>1$. Since $2k/\sigma^2$ ranges over $(0,\infty)$, its reciprocal shift ranges over $(0,1)$. The finite-cutoff statement follows by algebraic rearrangement. ∎
+
+An exact exponent equal to $1$ is incompatible with both unbounded mechanisms under these strict hypotheses. A measured interval containing $1$ leaves the interior exponents and finite-cutoff branches to be distinguished by the registered population and likelihood model.
 
 **Theorem P.8.9a.12.3 (Conditional $1/f$ Spectrum from Log-Flat PCE Relaxation Modes).** Suppose an observed PCE-adapted aggregate has independent exponential relaxation modes whose unit-variance mode with relaxation rate $\lambda$ has two-sided spectrum
 $$
@@ -6214,6 +7407,14 @@ V_{\mathrm{op}}(K;\delta)=c_0m\ln(1/\delta)+O(1).
 $$
 For $m>0$ and $c_0>0$, the right-hand side tends to $+\infty$. If $G$ is finite, then for resolutions below the minimum separation of its finitely many control labels, $N_G(\delta)=|G|$. The equiprobable label has entropy $\ln|G|$, so the declared reset model charges $c_0\ln|G|$, independently of further refinement. ∎
 
+The divergent branch is equivalently the budget-indexed statement
+$$
+\forall B\in\mathbb R\ \exists\delta_B>0\ \forall\delta\in(0,\delta_B),
+\qquad
+V_{\mathrm{op}}(K;\delta)>B.
+$$
+Each fixed-resolution cycle retains a finite label record and a finite registered cost under the theorem's hypotheses. The $+\infty$ limit is therefore a family of finite-budget exclusions and assigns no infinite heat or cost to one finite-resolution cycle.
+
 
 ### Corollary P.13.19a (Conditional $U(1)^{24}$ Controller Cost)
 
@@ -7100,6 +8301,16 @@ The manuscript uses the following parameter-role classes.
 
 A quantity may have more than one role only when its appearances are different. For example, $A_{\mathrm{eff}}^{(\mathrm{obs})}$ is an empirical inversion on a stated vacuum branch, while the Appendix U working $A_{\mathrm{eff}}$ is a forward-evaluation convention with determinant and zero-mode normalization uncertainty.
 
+**Convention P.14.1a.1 (Blinded-Derivation Provenance Record).** The auxiliary provenance class **derived under blinding** is carried by a populated finite record
+$$
+\mathfrak B_{\mathrm{blind}}
+=(\iota_{\mathrm{claim}},\mathfrak S_{\mathrm{src}},A_{\mathrm{hash}},h_{\mathrm{prompt}},h_{\mathrm{der}},t_{\mathrm{seal}},\mathcal D_{\mathrm{blind}},t_{\mathrm{unblind}},\mathcal W_{\mathrm{lock}}).
+\tag{P.14.1a.1}
+$$
+The fields fix the claim identifier, frozen source snapshot, hash algorithm and canonical byte serialization, exact prompt and derivation hashes, seal time, withheld-data access boundary, unblinding time, and immutable custody or timestamp witness. Acceptance requires $t_{\mathrm{seal}}<t_{\mathrm{unblind}}$ and independent verification of the hashes, chronology, and declared access boundary. Changing a field creates a new record identifier.
+
+A populated record establishes artifact chronology and declared data separation. It preserves the primary status assigned by Convention P.14.1a. Mathematical proof remains the responsibility of the cited theorem, physical realization remains the responsibility of the consuming branch certificate, and forward prediction additionally requires Definition 13.0d.
+
 **Corollary P.14.1b (Threshold–Scaling Parameter Ontology).** The manuscript's parameter roles split as follows.
 
 | Parameter family | Role class | Status class |
@@ -7444,16 +8655,26 @@ $$
 
 The components are as follows.
 
-1. $\mathcal V$ is the finite set of distinct identifiers for every sector row and every theorem, corollary, convention, definition, finite certificate, branch condition, model layer, external input, finite-part prescription, tail bound, bridge normalization, descent obstruction, overlap map, output row, uncertainty contribution, covariance entry, and master-zeta projection whose coverage is required by (C11).
-2. $\mathcal E\subseteq\mathcal V\times\mathcal V$ is the parent-to-child dependency relation. An edge $R\to S$ is present when the certificate or theorem stack of $S$ uses the selected representative, response presheaf, or finite certificate data of $R$. The tuple also carries the total vertex-kind map
+1. $\mathcal V$ is the finite set of distinct identifiers for every sector row and every theorem, corollary, convention, definition, finite certificate, branch condition, model layer, external input, finite prescription, bridge, descent obstruction, overlap map, output row, uncertainty contribution, covariance entry, and master-zeta projection whose coverage is required by (C11).
+2. $\mathcal E\subseteq\mathcal V\times\mathcal V$ is the parent-to-child dependency relation. An edge $R\to S$ is present when the certificate or theorem stack of $S$ uses the selected representative, response presheaf, finite certificate, prescription, or quantitative-control data of $R$. The tuple also carries the total vertex-kind map
    $$
    \kappa_{\mathcal V}:\mathcal V\longrightarrow\mathsf K_{\mathcal V},\qquad
    \mathsf K_{\mathcal V}=
-   \{\textsf{theorem},\textsf{certificate},\textsf{branch},\textsf{model},\textsf{external},\textsf{finitePart},\textsf{tail},\textsf{bridge},\textsf{descent},\textsf{overlap},\textsf{output},\textsf{uncertainty},\textsf{covariance},\textsf{masterZeta}\}.
+   \{\textsf{theorem},\textsf{certificate},\textsf{branch},\textsf{model},\textsf{external},\textsf{finitePart},\textsf{projector},\textsf{grading},\textsf{determinantOrientation},\textsf{tail},\textsf{scheme},\textsf{unitBridge},\textsf{RGRoute},\textsf{normalization},\textsf{bridge},\textsf{descent},\textsf{overlap},\textsf{output},\textsf{uncertainty},\textsf{covariance},\textsf{masterZeta}\}.
    $$
-3. $\sigma:\mathcal V\to\{\textsf{closed},\textsf{certificate-pending},\textsf{open}\}$ records the closure status. The status order is $\textsf{closed}\succ\textsf{certificate-pending}\succ\textsf{open}$; write $\tau_1\preceq\tau_2$ when $\tau_1$ is no stronger than $\tau_2$, so $\textsf{open}\preceq\textsf{certificate-pending}\preceq\textsf{closed}$.
-4. $\rho$ assigns to each vertex a finite list of named residual entries. The empty list is allowed.
-5. $\beta$ assigns to each residual entry a finite residual-control record whose kind is either $\textsf{bound}$ or $\textsf{budget}$. A $\textsf{bound}$ record is an absolute theorem-level or certificate-level residual bound. A $\textsf{budget}$ record is a comparison-budget scale and cannot by itself close a theorem-level interval.
+3. $\sigma:\mathcal V\to\{\textsf{closed},\textsf{certificate-pending},\textsf{open}\}$ records closure or evidential availability. For an $\textsf{output}$ vertex it has the sector-row meaning of Convention P.14.1k. For a support vertex it records whether the exact proposition or datum named by that vertex has accepted evidence in its $\beta_{\mathcal V}$ record. The status order is $\textsf{closed}\succ\textsf{certificate-pending}\succ\textsf{open}$; write $\tau_1\preceq\tau_2$ when $\tau_1$ is no stronger than $\tau_2$, so $\textsf{open}\preceq\textsf{certificate-pending}\preceq\textsf{closed}$.
+4. $\rho$ assigns to each vertex a finite list of distinct quantitative-entry identifiers. Each entry is tagged exactly once as $\textsf{residual}$, $\textsf{budget}$, $\textsf{uncertainty}$, or $\textsf{covariance}$ and names its source vertex, category, and canonical exact value or interval. The empty list is allowed. Write
+   $$
+   \mathcal I_{\rho}:=\{(S,e):S\in\mathcal V,\ e\in\rho(S)\},\qquad
+   \mathcal V_{\mathrm{presc}}:=\{P\in\mathcal V:\kappa_{\mathcal V}(P)\in\mathsf K_{\mathrm{presc}}\},
+   $$
+   where $\mathsf K_{\mathrm{presc}}=\{\textsf{finitePart},\textsf{projector},\textsf{grading},\textsf{determinantOrientation},\textsf{tail},\textsf{scheme},\textsf{unitBridge},\textsf{RGRoute},\textsf{normalization}\}$.
+5. $\beta=(\beta_{\mathcal V},\beta_{\rho})$ is the finite typed semantic-control map, with
+   $$
+   \beta_{\mathcal V}:\mathcal V\longrightarrow\mathsf B_{\mathcal V},\qquad
+   \beta_{\rho}:\mathcal I_{\rho}\sqcup\mathcal V_{\mathrm{presc}}\longrightarrow\mathsf B_{\mathrm{quant}}\sqcup\mathsf B_{\mathrm{presc}}.
+   $$
+   Here $\mathsf B_{\mathcal V}$ is the finite record type for semantic vertex controls; $\mathsf B_{\mathrm{quant}}$ is the disjoint union of residual, budget, uncertainty, and covariance record types; and $\mathsf B_{\mathrm{presc}}$ is the prescription record type, disjoint from $\mathsf B_{\mathrm{quant}}$. The vertex record $\beta_{\mathcal V}(S)$ contains the owning source span and hash, cited vertices, accepted evidence or targeted gate, closure basis, numerical source-origin and residual-exhaustion lists when applicable, every prescription used by $S$, comparison and forward-lock data, local-to-global bridge data, and master-ledger or branch-discharge data when applicable. For every $(S,e)\in\mathcal I_{\rho}$, $\beta_{\rho}(S,e)\in\mathsf B_{\mathrm{quant}}$ has the unique matching tag: a residual or budget control records $\textsf{bound}$ or $\textsf{budget}$ kind, exact value, source, category, evidence, and lock; an uncertainty or covariance control records its statistical, systematic, or covariance class, exact value, source, category, covariance routing, evidence, and lock. For every $P\in\mathcal V_{\mathrm{presc}}$, $\beta_{\rho}(P)\in\mathsf B_{\mathrm{presc}}$ records the same prescription kind as $\kappa_{\mathcal V}(P)$, its exact value or reference, evidence, branch identifier, baseline hash, current hash, and lock. Thus the two summands of the domain map to the indicated disjoint summands of the codomain.
 6. $\theta:\mathcal V\to2^{\{1,2,3\}}$ assigns $\varnothing$ to closed vertices and a nonempty subset to non-closed vertices, where $1$ means an accepted finite certificate, $2$ means an all-completions equivalence theorem, and $3$ means a no-go theorem excluding the sector candidate class, as in Theorem P.14.1f.
 7. $\gamma=(\{\Pi_{S\leftarrow R}\}_{R\to S},\{\Omega_C\}_C)$ is the overlap-commutativity audit of Definition P.14.1k.0, consisting of an overlap map for every edge and an equality check for every directed commutative cell.
 8. $\delta:\mathcal V\to\{0,1\}$ records forward-lock status for comparison rows: $\delta(S)=1$ only when the certified interval or protocol package has been entered into the evidence register of Definition 13.0d before empirical comparison; non-comparison vertices have $\delta(S)=0$.
@@ -7463,50 +8684,52 @@ $$
 $$
 where $\mathfrak S_{*,S}$ is the datum of Definition V.3.11a and $\chi_{\mathrm{USCP},S}$ is the finite acceptance record listing the sealed branch identifier, $\mathcal A_*$, $\Omega_*$, atom multiplicities, automorphism orbits, the response-null quotient, the constraint functions $m_a$ and values $c_a^*$, a full-support feasibility witness for $\mathcal C_*$, the independent-constraint quotient, the accepted unit bridges $s_B$, the RG/threshold route $\mathcal R^*_{\mu\leftarrow\mu_*}$, all operator symbols $\sigma_B$ claimed by $S$, the circular-angle convention when needed, and every overlap map connecting the spectral datum to parent sectors. If $S$ is not a final-calibrated row, then $\zeta(S)=\varnothing$.
 
-A registry is **schema-consistent** when $\kappa_{\mathcal V}$ is total and single-valued with codomain $\mathsf K_{\mathcal V}$, $\mathcal E$ is finite and acyclic, $\sigma$ is meet-monotone along dependency edges except for vertices closed by an independent theorem stack or by an accepted final-calibration record, $\rho$ lists only residuals named by the cited certificates, $\beta$ records only finite expressions in named certificate data and never in validation observables, $\theta$ is nonempty exactly on non-closed vertices, $\gamma$ supplies every required overlap map and cell check, $\delta$ satisfies the forward-lock condition above, and $\zeta(S)$ is nonempty exactly for rows whose asserted status uses final spectral calibration. Each covered identifier carries the registry role declared by its record. A nonempty $\zeta(S)$ is schema-consistent only when every field in $\chi_{\mathrm{USCP},S}$ is fixed before comparison and no field is imported from a validation observable unless the dependent row is explicitly demoted to EmpiricalInput status.
+A registry is **schema-consistent** when $\kappa_{\mathcal V}$ is total and single-valued with codomain $\mathsf K_{\mathcal V}$, $\mathcal E$ is finite and acyclic, $\sigma$ is meet-monotone along dependency edges except for vertices whose accepted $\beta_{\mathcal V}$ record proves an independent closure basis, $\rho$ and $\beta_{\rho}$ satisfy their tag, source, category, and codomain rules, $\beta_{\mathcal V}$ contains every field required by the declared role of each vertex, $\theta$ is nonempty exactly on non-closed vertices, $\gamma$ supplies every required overlap map and cell check, $\delta$ satisfies the forward-lock condition above, and $\zeta(S)$ is nonempty exactly for rows whose asserted status uses final spectral calibration. Each covered identifier carries the registry role declared by its record. A nonempty $\zeta(S)$ is schema-consistent only when every field in $\chi_{\mathrm{USCP},S}$ is fixed before comparison and no field is imported from a validation observable unless the dependent row is explicitly demoted to EmpiricalInput status.
+
+**Branch-scope and discharge semantics.** A closed $\textsf{branch}$ support vertex records accepted evidence for the exact conditional proposition named by its $\beta_{\mathcal V}$ record. Physical occupancy of that branch is a separate branch-discharge claim governed by (C10), with every cited certificate or bridge represented under (C11) and every dependency overlap checked under (C5). Closing the branch-scope vertex therefore does not replace the discharge record. A syntax- or shape-level implementation that does not evaluate the accepted evidence, source hashes, semantic predicates, overlap equalities, and (C18) round trip is a structural diagnostic; it does not satisfy Algorithm P.14.1m.0 or the machine-audited standard of Convention P.14.9a.
 
 **Algorithm P.14.1m.0 (Registry Acceptance Test).** A registry $\mathfrak G_{\mathrm{PU}}$ is accepted exactly when all of the following finite checks pass.
 
-(C1) **Closed-row consistency.** If $\sigma(S)=\textsf{closed}$, then either the local theorem stack of $S$ supplies the seven entries of Definition D.8.9a, or $S$ is final-calibrated and $\zeta(S)$ supplies an accepted finite spectral calibration record in the sense of Definition V.3.11a. Every residual in $\rho(S)$ is either evaluated exactly, controlled by a $\textsf{bound}$ record under $\beta$, or represented by a pre-comparison spectral residual symbol inside $\zeta(S)$.
+(C1) **Closed-row and support consistency.** If $\sigma(S)=\textsf{closed}$ and $\kappa_{\mathcal V}(S)=\textsf{output}$, then either $\beta_{\mathcal V}(S)$ names an accepted local theorem stack supplying the seven entries of Definition D.8.9a, or $S$ is final-calibrated and $\zeta(S)$ supplies an accepted finite spectral calibration record in the sense of Definition V.3.11a. If $\sigma(S)=\textsf{closed}$ and $S$ is a support vertex, the proposition or datum typed by $\kappa_{\mathcal V}(S)$ has an exact accepted proof, certificate, or checker record under $\beta_{\mathcal V}(S)$. Every quantitative entry $e\in\rho(S)$ is exact or has the matching accepted control $\beta_{\rho}(S,e)$; a pre-comparison spectral residual symbol may instead occur inside $\zeta(S)$.
 
-(C2) **Certificate-pending-row consistency.** If $\sigma(S)=\textsf{certificate-pending}$, the finite certificate entries are named, the residual list $\rho(S)$ is enumerated, every residual has a $\textsf{bound}$ or $\textsf{budget}$ record under $\beta$, and at least one closure gate in $\theta(S)$ is targeted.
+(C2) **Certificate-pending-row consistency.** If $\sigma(S)=\textsf{certificate-pending}$, $\beta_{\mathcal V}(S)$ names the missing finite certificate entries and targeted closure basis, $\rho(S)$ enumerates every quantitative entry, $\beta_{\rho}(S,e)$ supplies a matching typed control for each $e\in\rho(S)$, and at least one closure gate in $\theta(S)$ is targeted.
 
-(C3) **Open-row consistency.** If $\sigma(S)=\textsf{open}$, no missing entry is supplied retroactively from a validation observable, and $\theta(S)$ is nonempty.
+(C3) **Open-row consistency.** If $\sigma(S)=\textsf{open}$, $\beta_{\mathcal V}(S)$ names the unresolved entry or proposition and its targeted gate, no missing entry is supplied retroactively from a validation observable, and $\theta(S)$ is nonempty.
 
-(C4) **Status meet rule.** For every edge $R\to S$, $\sigma(S)\preceq\sigma(R)$ unless $S$ is closed by an independent theorem stack that does not use the unresolved data of $R$.
+(C4) **Status meet rule.** For every edge $R\to S$, $\sigma(S)\preceq\sigma(R)$ unless $\beta_{\mathcal V}(S)$ contains an accepted independent closure basis whose proof record uses none of the unresolved data of $R$.
 
 (C5) **Overlap commutativity.** For every edge $R\to S$, $\gamma$ supplies $\Pi_{S\leftarrow R}$; for every directed commutative cell $C$, $\gamma$ supplies an accepted equality check $\Omega_C$ in the sense of Definition P.14.1k.0.
 
-(C6) **No validation import.** For every comparison row $S$, $\delta(S)=1$ is allowed only if the row was entered before empirical comparison; otherwise the comparison remains validation-level under Convention P.14.1d.
+(C6) **No validation import.** For every comparison row $S$, $\delta(S)=1$ is allowed only if $\beta_{\mathcal V}(S)$ contains an accepted evidence-register record fixed before empirical comparison; otherwise the comparison remains validation-level under Convention P.14.1d.
 
-(C7) **No-retuning enforcement.** After $\delta(S)=1$, no certificate entry, residual entry, residual-control record, finite-part convention, projector, grading, determinant-line convention, Dynkin-index normalization, Higgs normalization, matching map, tail bound, or normalization used by $S$ may be modified without changing the vertex identifier and hence defining a new branch.
+(C7) **No-retuning enforcement.** After $\delta(S)=1$, every certificate, quantitative entry, finite prescription, matching map, tail bound, and normalization used by $S$ retains the branch identifier and baseline hash recorded by $\beta_{\mathcal V}(S)$ and $\beta_{\rho}$. A changed value or hash requires a new vertex identifier and hence a new branch.
 
 (C8) **Three-gate exhaustion.** For every non-closed $S$, closing every gate in $\theta(S)$ must either supply an accepted finite certificate, prove all-completions equivalence, or exclude the candidate class by a no-go theorem.
 
-(C9) **Residual-control status.** A $\textsf{bound}$ record may be used as an absolute residual interval only when its proof or certificate is fixed before comparison. A $\textsf{budget}$ record may be reported as a scale diagnostic but cannot promote a row to closed.
+(C9) **Residual-control status.** An entry $e\in\rho(S)$ tagged $\textsf{residual}$ may be used as an absolute interval only when $\beta_{\rho}(S,e)$ has $\textsf{bound}$ kind and cites a proof or certificate fixed before comparison. An entry tagged $\textsf{budget}$ and its matching $\textsf{budget}$ control may be reported as a scale diagnostic but cannot promote a row to closed.
 
-(C10) **Master-ledger and spectral-calibration projection rule.** Whenever multiple numerical sectors cite the same spectral source, the registry attaches the shared master-ledger label and records the bridge-descent obligation of Theorem X.9.6g.4 on every affected sector. An electroweak threshold or spectral-action Higgs finite-part row may cite $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, $\mathfrak J_{\mathrm{RHG-fl}}$, or an equivalent completed spectral tuple only when the row records the threshold vector, $Z_i$ vector, finite-part convention, projectors, grading, tail bound, matching map, normalization map, master-ledger label, and forward-lock indicator. Whenever a sector is labelled final-calibrated, $\zeta(S)$ must contain the full Definition V.3.11a datum, the full-support feasibility witness for $\mathcal C_*$, all unit bridges and RG/threshold routes claimed by $S$, all symbols for coefficients claimed by $S$, and the overlap maps proving that the spectral datum descends from the same accepted parent branch as the sector output. Whenever a sector is labelled branch-discharged, the registry must contain the named discharge record, such as $\mathfrak Z_{\mathrm{cont}}$, $\mathfrak P_{\mathrm{AQFT}}$, $\mathfrak B_{\mathrm{AQFT}}$, or $\mathfrak X_{\mathrm{DS}}$, together with its overlap maps and finite residual interval.
+(C10) **Master-ledger and spectral-calibration projection rule.** Whenever multiple numerical sectors cite the same spectral source, $\beta_{\mathcal V}$ attaches the shared master-ledger label and records the bridge-descent obligation of Theorem X.9.6g.4 on every affected sector. An electroweak threshold or spectral-action Higgs finite-part row may cite $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak S_{\mathrm{SA}}(P)$, $\mathfrak J_{\mathrm{RHG-fl}}$, or an equivalent completed spectral tuple only when $\beta_{\mathcal V}$ records the threshold vector, $Z_i$ vector, prescription identifiers for the finite part, projectors, grading, tail bound, matching map, normalization map, master-ledger label, and forward-lock indicator. Whenever a sector is labelled final-calibrated, $\zeta(S)$ must contain the full Definition V.3.11a datum, the full-support feasibility witness for $\mathcal C_*$, all unit bridges and RG/threshold routes claimed by $S$, all symbols for coefficients claimed by $S$, and the overlap maps proving that the spectral datum descends from the same accepted parent branch as the sector output. Whenever a sector is labelled branch-discharged, $\beta_{\mathcal V}(S)$ must contain the named discharge record, such as $\mathfrak Z_{\mathrm{cont}}$, $\mathfrak P_{\mathrm{AQFT}}$, $\mathfrak B_{\mathrm{AQFT}}$, or $\mathfrak X_{\mathrm{DS}}$, together with its overlap maps and finite residual interval.
 
-(C11) **Vertex coverage and kind discipline.** Every theorem, corollary, convention, definition, finite certificate, branch condition, model layer, external input, finite-part prescription, tail bound, bridge normalization, descent obstruction, overlap map, output row, uncertainty contribution, covariance entry, and master-zeta projection cited by a status row is represented by a vertex $S\in\mathcal V$, and its registry role is the single value $\kappa_{\mathcal V}(S)\in\mathsf K_{\mathcal V}$. The theorem kind covers formal-declaration objects, including theorems, corollaries, conventions, and definitions; every other cited object carries the corresponding kind displayed in Definition P.14.1m. No output row may cite an object absent from $\mathcal V$, and no vertex may omit or multiply encode its kind.
+(C11) **Vertex coverage and kind discipline.** Every theorem, corollary, convention, definition, finite certificate, branch condition, model layer, external input, finite prescription, bridge, descent obstruction, overlap map, output row, uncertainty contribution, covariance entry, and master-zeta projection cited by a status row or by $\beta$ is represented by a vertex $S\in\mathcal V$, and its registry role is the single value $\kappa_{\mathcal V}(S)\in\mathsf K_{\mathcal V}$. The theorem kind covers formal-declaration objects, including theorems, corollaries, conventions, and definitions. A prescription vertex has exactly one of the $\textsf{finitePart}$, $\textsf{projector}$, $\textsf{grading}$, $\textsf{determinantOrientation}$, $\textsf{tail}$, $\textsf{scheme}$, $\textsf{unitBridge}$, $\textsf{RGRoute}$, or $\textsf{normalization}$ kinds. Every other cited object carries the corresponding kind displayed in Definition P.14.1m. Each $\beta_{\mathcal V}$ citation resolves to one vertex, and no vertex may omit or multiply encode its kind.
 
-(C12) **Finite-prescription lock.** Every finite-part convention, projector, grading, determinant orientation, tail bound, scheme, unit bridge, RG route, and normalization used by an accepted or forward-locked row has a prescription identifier under $\beta$ and a parent edge to every row using it. Once $\delta(S)=1$ or a dependent child is closed, changing such a prescription requires a new vertex identifier.
+(C12) **Finite-prescription lock.** Every finite part, projector, grading, determinant orientation, tail bound, scheme, unit bridge, RG route, and normalization used by an accepted or forward-locked row has a prescription vertex of the matching kind, a matching $\beta_{\rho}$ prescription record, and a parent edge to every row using it. Once $\delta(S)=1$ or a dependent child is closed, changing a prescription kind, value, branch identifier, or baseline hash requires a new vertex identifier.
 
-(C13) **Residual-bound, budget, and uncertainty separation.** Residual bounds, comparison budgets, systematic uncertainty components, statistical uncertainty components, and covariance entries are distinct categories in $\rho$ and $\beta$. A category may appear at most once in a row's uncertainty decomposition unless the covariance matrix explicitly records the overlap. A budget cannot be used as a bound, and a residual bound cannot be duplicated as an uncertainty contribution.
+(C13) **Residual-bound, budget, uncertainty, and covariance separation.** Every $e\in\rho(S)$ has exactly one $\textsf{residual}$, $\textsf{budget}$, $\textsf{uncertainty}$, or $\textsf{covariance}$ tag and exactly one matching $\beta_{\rho}(S,e)$ control in the corresponding summand of $\mathsf B_{\mathrm{quant}}$. A category may appear at most once in a row's quantitative decomposition unless a covariance control explicitly records the overlap. A budget cannot be used as a bound, and a residual bound cannot be duplicated as an uncertainty contribution.
 
 (C14) **Bridge-site descent.** Every local-to-global promotion has an explicit bridge-site vertex. A genuine cocycle descent datum must pass the effective-descent and separatedness gate of Theorem X.9.5c.2; its transition class may be nonzero when the output is allowed to be twisted, and must vanish when an untwisted representative is claimed. Cocycle failure or a separately required-trivialization obstruction must carry an accepted response-null quotient or an accepted response-active defect filling in the sense of Definition X.9.5e. A theorem row using local data without such a bridge vertex is rejected.
 
 (C15) **Parent-data transport only through accepted overlaps.** If a child row uses parent data, the record must use the overlap map in $\gamma$ and the corresponding commutative-cell checks. Noncommuting paths into the same child datum reject the registry unless the discrepancy is recorded as a response-active branch split.
 
 
-(C16) **No validation import and no hidden residuals.** Every numerical row has a finite source-origin list and a residual-exhaustion list. A residual contribution not assigned to a named source, proved response-null, or proved absent rejects the row. Any empirical input used as a calibration target is labelled $\textsf{external}$ or $\textsf{model}$ and cannot support a theorem-level status.
+(C16) **No validation import and no hidden residuals.** Every numerical row has finite source-origin and residual-exhaustion lists under $\beta_{\mathcal V}$. A residual contribution not assigned to a named source vertex, proved response-null, or proved absent rejects the row. Any empirical input used as a calibration target is labelled $\textsf{external}$ or $\textsf{model}$ and cannot support a theorem-level status.
 
-(C17) **Shared-source no-double-count and covariance discipline.** Threshold, flavor, RG, pole conversion, determinant, finite-part, and residual categories that share a parent source must be routed through one covariance entry or one master projection. Duplicate uncertainty categories, independent copies of one determinant tail, or separate finite-part choices for a shared source reject the registry.
+(C17) **Shared-source no-double-count and covariance discipline.** Threshold, flavor, RG, pole conversion, determinant, finite-part, and residual categories that share a parent source must be routed through one covariance control or one master projection. Duplicate uncertainty categories, independent copies of one determinant tail, or separate finite-part choices for a shared source reject the registry.
 
-(C18) **Machine-file round trip.** Every markdown, YAML, or JSON implementation claimed as normative for $\mathfrak G_{\mathrm{PU}}$ must round-trip to the tuple $(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$ without losing vertex identifiers, vertex-kind assignments, status labels, parent edges, closure gates, residual kinds, finite prescriptions, overlap maps, covariance entries, master-ledger tags, or forward-lock flags. Generated views make no separate normative claim. The acceptance tests are run on the parsed tuple, not on prose.
+(C18) **Machine-file round trip.** Every markdown, YAML, or JSON implementation claimed as normative for $\mathfrak G_{\mathrm{PU}}$ must round-trip to the tuple $(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$ without losing vertex identifiers, vertex-kind assignments, status labels, parent edges, closure gates, quantitative-entry tags, $\beta_{\mathcal V}$ semantic-control fields, $\beta_{\rho}$ controls, overlap maps, covariance routing, master-ledger tags, or forward-lock flags. Generated views make no separate normative claim. The acceptance tests are run on the parsed tuple, not on prose.
 
-**Theorem P.14.1m.1 (Registry Soundness).** If $\mathfrak G_{\mathrm{PU}}$ is accepted by Algorithm P.14.1m.0, then every status label $\sigma(S)$ is consistent with Convention P.14.1k and the No-Overclaim Discipline of Convention P.14.1l.
+**Theorem P.14.1m.1 (Registry Soundness).** If $\mathfrak G_{\mathrm{PU}}$ is accepted by Algorithm P.14.1m.0, then every output-vertex status $\sigma(S)$ is consistent with Convention P.14.1k and the No-Overclaim Discipline of Convention P.14.1l, and every support-vertex status has the typed evidential availability recorded by $\beta_{\mathcal V}(S)$.
 
-*Proof.* (C1) gives either the strict-certificate hypotheses required for closed rows, invoking Definition D.8.9a with Theorem D.8.9b, or the accepted final-calibration hypotheses, invoking Definition V.3.11a, Theorem V.3.11c, Definition V.3.11e, and Theorem V.3.11f through $\zeta(S)$. (C2) and (C3) keep unresolved finite records in certificate-pending or open status, as required by Theorem P.14.1f and Corollary P.14.1g. (C4) is exactly the meet rule of Convention P.14.1l, with the accepted final-calibration exception already recorded in $\zeta$. (C5) supplies the overlap audit of Definition P.14.1k.0. (C6) and (C7) enforce the forward-lock and no-retuning requirements, including Corollary Z.27.11i in the Thomson row and the analogous branch rules in the other numerical sectors. (C8) is the three-gate exhaustion of Theorem P.14.1f. (C9) prevents comparison budgets from being mislabelled as theorem-level residual intervals. (C10) enforces the one-ledger discipline of Theorem X.9.6g.4 and the USCP acceptance discipline of Definition V.3.11a through the registry field $\zeta$. (C11) prevents hidden theorem or certificate dependencies. (C12) enforces the finite-part, projector, tail, grading, and normalization locks. (C13) and (C17) prevent budget-as-bound substitutions, duplicated uncertainty categories, and no-double-count failures. (C14) blocks silent local-to-global promotions. (C15) blocks parent-data transport except through accepted overlap maps. (C16) blocks validation import and hidden residuals. (C18) makes the registry machine-file implementation equivalent to the mathematical tuple. Therefore the registry cannot assign a stronger status than the finite records justify. ∎
+*Proof.* (C1) checks accepted support evidence by vertex kind and gives a closed output row either the strict-certificate hypotheses required by Definition D.8.9a and Theorem D.8.9b or the accepted final-calibration hypotheses required by Definition V.3.11a, Theorem V.3.11c, Definition V.3.11e, and Theorem V.3.11f through $\zeta(S)$. (C2) and (C3) keep unresolved finite records in certificate-pending or open status, as required by Theorem P.14.1f and Corollary P.14.1g. (C4) is the meet rule of Convention P.14.1l, with every independent-closure exception supplied by an accepted $\beta_{\mathcal V}$ proof record. (C5) supplies the overlap audit of Definition P.14.1k.0. (C6) and (C7) enforce the forward-lock and no-retuning requirements, including Corollary Z.27.11i in the Thomson row and the analogous branch rules in the other numerical sectors. (C8) is the three-gate exhaustion of Theorem P.14.1f. (C9) enforces the typed distinction between residual bounds and comparison budgets. (C10) enforces the one-ledger discipline of Theorem X.9.6g.4 and the USCP acceptance discipline of Definition V.3.11a through $\beta_{\mathcal V}$ and $\zeta$. (C11) prevents hidden theorem, certificate, and prescription dependencies. (C12) enforces the finite-part, projector, tail, grading, and normalization locks through typed prescription vertices and $\beta_{\rho}$ records. (C13) and (C17) prevent budget-as-bound substitutions, duplicated uncertainty categories, and no-double-count failures. (C14) blocks silent local-to-global promotions. (C15) blocks parent-data transport except through accepted overlap maps. (C16) blocks validation import and hidden residuals. (C18) makes the registry machine-file implementation equivalent to the repaired mathematical tuple. Therefore every accepted status has exactly the scope asserted in the theorem. ∎
 
 **Theorem P.14.1m.2 (Canonical Encoding of a Verified Finite Ledger).** A codec certificate for the registry tuple
 $$
@@ -7601,31 +8824,44 @@ Consequently the canonical JSON artifact satisfies (C18), and Algorithm P.14.1m.
 registry: PU
 schema: P.14.1m
 vertices:
-  - id: sector_or_certificate_id
-    kind: theorem|certificate|branch|model|external|finitePart|tail|bridge|descent|overlap|output|uncertainty|covariance|masterZeta
+  - id: sector_or_support_id
+    kind: theorem|certificate|branch|model|external|finitePart|projector|grading|determinantOrientation|tail|scheme|unitBridge|RGRoute|normalization|bridge|descent|overlap|output|uncertainty|covariance|masterZeta
     status: closed|certificate-pending|open
-    sources: [named theorem or definition identifiers]
+    source_span: exact_source_span
+    source_hash: exact_source_hash
+    citations: [vertex ids]
+    closure_basis:
+      kind: support_evidence|strict_certificate|final_calibration|targeted_gate
+      evidence: [proof, certificate, or checker vertex ids]
     parents: [parent vertex ids]
     residuals:
-      - id: residual_id
-        kind: bound|budget|uncertainty|covariance
-        source: named source id
-        value: exact expression or interval id
-        category: determinant|threshold|flavor|RG|pole|finitePart|tail|operator|bridge|statistical|systematic
+      - id: quantitative_entry_id
+        entry_class: residual|budget|uncertainty|covariance
+        source: source_vertex_id
+        value: exact expression or interval
+        category: determinant|threshold|flavor|RG|pole|finitePart|tail|operator|bridge|statistical|systematic|covariance
+        control:
+          kind: bound|budget|statistical|systematic|covariance
+          evidence: evidence_vertex_id
+          locked: true|false
     finite_prescriptions:
-      finite_part: prescription_id
-      projector: prescription_id
-      grading: prescription_id
-      determinant_orientation: prescription_id
-      tail_bound: prescription_id
-      normalization: prescription_id
-      scheme: prescription_id
+      - id: prescription_vertex_id
+        kind: finitePart|projector|grading|determinantOrientation|tail|scheme|unitBridge|RGRoute|normalization
+        value: exact value or reference
+        evidence: evidence_vertex_id
+        branch_id: branch_vertex_id
+        baseline_hash: hash
+        current_hash: hash
+        locked: true|false
+    source_origins: [source vertex ids]
+    residual_exhaustion: [quantitative entry ids]
     closure_gates: [certificate|all_completions_equivalence|no_go]
+    comparison: true|false
     forward_lock: true|false
+    local_to_global: true|false
+    branch_discharged: null or bridge vertex id
+    master_ledger: null or masterZeta vertex id
     zeta: null or master_zeta_record_id
-    outputs: [output row ids]
-    uncertainty_categories: [category ids]
-    covariance_entries: [covariance vertex ids]
 edges:
   - src: parent_id
     dst: child_id
@@ -7655,7 +8891,1441 @@ tests:
   - C18_round_trip
 ~~~~
 
-A populated implementation must parse through a frozen decoder, reconstruct $(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$, and evaluate (C1)--(C18) on those reconstructed records. The checks include totality and single-valuedness of the vertex-kind map and are designed to reject missing or invalid vertex-role assignments, hidden residuals, status mixing, noncommuting overlaps, inadmissible row promotions, budget-as-bound substitutions, duplicate uncertainty categories, silent bridge assumptions, spectral-source sharing without master projection, and finite-part, projector, tail, or normalization changes after a dependent sector is fixed. Finiteness permits finite traversal of the registry records only. Decidability, termination, and soundness of each semantic predicate still require a declared verifier or proof certificate; a finite record may cite an infinite-domain analytic obligation. The template above, by itself, is not a populated instance and assigns no machine-audited status to any manuscript claim. ∎
+A populated implementation must parse through a frozen decoder, reconstruct $(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,\rho,\beta,\theta,\gamma,\delta,\zeta)$, and evaluate (C1)--(C18) on those reconstructed records. The checks include totality and single-valuedness of the vertex-kind map; the disjoint $\beta_{\mathcal V}$ semantic-control and $\beta_{\rho}$ quantitative/prescription records; and rejection of missing or invalid vertex roles, hidden residuals, status mixing, noncommuting overlaps, inadmissible row promotions, budget-as-bound substitutions, duplicate uncertainty categories, silent bridge assumptions, spectral-source sharing without master projection, and prescription changes after a dependent sector is fixed. Finiteness permits finite traversal of the registry records. Decidability, termination, and soundness of each invoked semantic predicate require its declared verifier or proof certificate; a finite record may cite an infinite-domain analytic obligation. The template supplies the field types consumed by such an implementation. Machine-audited status follows only from a populated canonical instance whose semantic evidence passes those declared checkers. ∎
+
+**Proposition P.14.1m.4a (Executed 48-File Source-Envelope Audit).** Let the source envelope be exactly the 48 root Markdown files authorized by `style.md`, with no nonmanifest operational-link exception. The verifier below accepts exactly when: (E1) the manifest is the declared 48-name UTF-8-byte-ordered set; (E2) every manifest member and every referenced local Markdown target is an existing regular nonsymlink whose real path is contained in the supplied root; (E3) every source is fatal-decoded canonical UTF-8 and NFC; (E4) every CommonMark backtick or tilde fence is closed by a same-character fence of sufficient length; (E5) fence-external bold and ATX formal identifiers are unique within $(\text{file},\text{kind},\text{id})$; (E6) every percent-decoded local Markdown target is root-contained and belongs to the manifest; (E7) `targets.md` has exactly eleven distinct `RT-T1`--`RT-T11` rows and 410 distinct `TV-*` rows; (E8) the normalized source inventory is recursively key-sorted canonical NFC JSON with manifest-order arrays and no terminal LF; and (E9) every registered negative mutation is rejected. Source-envelope normalization zeroes the unique `targets.md` v2 snapshot value and the three self-referential seal values below, then hashes `path || NUL || normalized_file_bytes || NUL` in manifest order. These gates are finite and deterministic.
+
+**Audit source SHA-256 (P.14.1m.4a-v2):** `f43881dfb15b2cf1bd8e8fa09753b1ccdb85c67351cb07e02ef64d2a6a70de80`.
+**Node runtime SHA-256 (P.14.1m.4a-v2):** `1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31`.
+**Source-envelope normalized aggregate SHA-256 (P.14.1m.4a-v2):** `01f737aa7c51eab3f4c068e92de4b84eeded7db3eeda024f592d90a3208e04ec`.
+**Canonical source-inventory SHA-256 (P.14.1m.4a-v2):** `bf2a5cff7e1350c230e2eb21334e48fc7737e4421ec609347473194bd7450bd2`.
+**Passing run-log SHA-256 (P.14.1m.4a-v2):** `f2da325b9510fcafefd399b74f32344a33da527c95fab5929e5ef84915c73173`.
+
+The exact executable is 26,765 bytes and 707 lines, including its terminal LF:
+
+~~~~javascript
+// PU-P14.1m.4a-SOURCE-BEGIN
+import {
+  lstatSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  realpathSync,
+  rmSync,
+  symlinkSync,
+  writeFileSync,
+} from "node:fs";
+import { createHash } from "node:crypto";
+import { dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
+import { fileURLToPath } from "node:url";
+import { tmpdir } from "node:os";
+import * as posixPath from "node:path/posix";
+
+const VERSION = "P.14.1m.4a-source-envelope-v2";
+const ZERO64 = "0".repeat(64);
+const EXPECTED_RT = 11;
+const EXPECTED_TV = 410;
+const EXPECTED_CATALOG = EXPECTED_RT + EXPECTED_TV;
+
+const MANIFEST = Object.freeze([
+  "00_abstract.md",
+  "01_introduction.md",
+  "02_foundations.md",
+  "03_space_of_becoming.md",
+  "04_spap.md",
+  "05_horizon_constant.md",
+  "06_complexity_resources.md",
+  "07_minimal_predictive_unit.md",
+  "08_quantum_emergence.md",
+  "09_consciousness_complexity.md",
+  "10_statistical_influence.md",
+  "11_spacetime_emergence.md",
+  "12_gravity_derivation.md",
+  "13_experimental_predictions.md",
+  "14_discussion.md",
+  "15_conclusion.md",
+  "appendix_a_core_logic.md",
+  "appendix_b_complexity_costs.md",
+  "appendix_c_regularity_necessity.md",
+  "appendix_d_variational_convergence.md",
+  "appendix_e_thermo_area_law.md",
+  "appendix_f_aqft.md",
+  "appendix_g_gauge_emergence.md",
+  "appendix_h_dimensions.md",
+  "appendix_i_scaled_gravity.md",
+  "appendix_j_reflexivity_cost.md",
+  "appendix_k_resolving_puzzles.md",
+  "appendix_l_cc_mechanism.md",
+  "appendix_m_perspectival_quantum_dynamics.md",
+  "appendix_n_prediction_relativity.md",
+  "appendix_o_arrow_of_time.md",
+  "appendix_p_philosophical_foundations.md",
+  "appendix_q_planck_scale.md",
+  "appendix_r_generations.md",
+  "appendix_s_ccgravity.md",
+  "appendix_t_electroweak_hierarchy.md",
+  "appendix_u_cosmological_constant.md",
+  "appendix_v_computational_programs.md",
+  "appendix_w_alphabet_identities.md",
+  "appendix_x_effective_action.md",
+  "appendix_y_baryon_asymmetry.md",
+  "appendix_z_fine_structure_constant.md",
+  "contents.md",
+  "glossary.md",
+  "map.md",
+  "proof_life_verification_model.md",
+  "references.md",
+  "targets.md",
+]);
+
+const FORMAL_KINDS = Object.freeze([
+  "Algorithm",
+  "Assumption",
+  "Axiom",
+  "Claim",
+  "Construction",
+  "Constraint",
+  "Convention",
+  "Corollary",
+  "Criterion",
+  "Definition",
+  "Gate",
+  "Hypothesis",
+  "Identification",
+  "Lemma",
+  "Observation",
+  "Postulate",
+  "Prediction",
+  "Principle",
+  "Proposition",
+  "Protocol",
+  "Remark",
+  "Resolution",
+  "Result",
+  "Summary",
+  "Theorem",
+  "Thesis",
+  "Conjecture",
+]);
+
+const P_FIELDS = Object.freeze({
+  source: "Audit source SHA-256 (P.14.1m.4a-v2)",
+  runtime: "Node runtime SHA-256 (P.14.1m.4a-v2)",
+  aggregate: "Source-envelope normalized aggregate SHA-256 (P.14.1m.4a-v2)",
+  inventory: "Canonical source-inventory SHA-256 (P.14.1m.4a-v2)",
+  runLog: "Passing run-log SHA-256 (P.14.1m.4a-v2)",
+});
+
+function fail(message) {
+  throw new Error(message);
+}
+
+function invariant(condition, message) {
+  if (!condition) fail(message);
+}
+
+function sha256(bytes) {
+  return createHash("sha256").update(bytes).digest("hex");
+}
+
+function utf8Compare(a, b) {
+  return Buffer.compare(Buffer.from(a, "utf8"), Buffer.from(b, "utf8"));
+}
+
+function decodeCanonicalUtf8(bytes, label) {
+  let text;
+  try {
+    text = new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch {
+    fail(`${label}: invalid UTF-8`);
+  }
+  invariant(text.normalize("NFC") === text, `${label}: text is not NFC`);
+  invariant(Buffer.from(text, "utf8").equals(bytes), `${label}: noncanonical UTF-8 bytes`);
+  return text;
+}
+
+function canonicalJSON(value) {
+  function normalize(node, where) {
+    if (node === null || typeof node === "boolean" || typeof node === "string") {
+      if (typeof node === "string") {
+        invariant(node.normalize("NFC") === node, `${where}: non-NFC JSON string`);
+      }
+      return node;
+    }
+    if (typeof node === "number") {
+      invariant(Number.isSafeInteger(node), `${where}: JSON number is not a safe integer`);
+      return node;
+    }
+    if (Array.isArray(node)) {
+      return node.map((item, index) => normalize(item, `${where}[${index}]`));
+    }
+    invariant(
+      typeof node === "object" && Object.getPrototypeOf(node) === Object.prototype,
+      `${where}: JSON value is not a plain object`,
+    );
+    const result = {};
+    for (const key of Object.keys(node).sort(utf8Compare)) {
+      invariant(key.normalize("NFC") === key, `${where}: non-NFC JSON key`);
+      result[key] = normalize(node[key], `${where}.${key}`);
+    }
+    return result;
+  }
+  return JSON.stringify(normalize(value, "$"));
+}
+
+function assertCanonicalJSON(bytes, label) {
+  const text = decodeCanonicalUtf8(bytes, label);
+  let parsed;
+  try {
+    parsed = JSON.parse(text);
+  } catch {
+    fail(`${label}: invalid JSON`);
+  }
+  invariant(Buffer.from(canonicalJSON(parsed), "utf8").equals(bytes), `${label}: noncanonical JSON`);
+  return parsed;
+}
+
+function assertManifestSpec(candidate) {
+  invariant(Array.isArray(candidate), "manifest: not an array");
+  invariant(candidate.length === 48, `manifest: expected 48 paths, got ${candidate.length}`);
+  const expected = [...MANIFEST].sort(utf8Compare);
+  const actual = [...candidate].sort(utf8Compare);
+  invariant(new Set(candidate).size === candidate.length, "manifest: duplicate path");
+  for (let index = 0; index < candidate.length; index += 1) {
+    const name = candidate[index];
+    invariant(typeof name === "string" && name.normalize("NFC") === name, "manifest: invalid path text");
+    invariant(name === posixPath.basename(name) && name.endsWith(".md"), `manifest: non-root path ${name}`);
+  }
+  invariant(
+    expected.every((name, index) => name === actual[index]),
+    "manifest: path set differs from the authorized 48-file corpus",
+  );
+  invariant(
+    candidate.every((name, index) => index === 0 || utf8Compare(candidate[index - 1], name) < 0),
+    "manifest: paths are not in canonical UTF-8 byte order",
+  );
+}
+
+function isContained(rootReal, childReal) {
+  const delta = relative(rootReal, childReal);
+  return delta !== "" && delta !== ".." && !delta.startsWith(`..${sep}`) && !isAbsolute(delta);
+}
+
+function assertRegularContainedPath(rootReal, lexicalPath, label) {
+  const stat = lstatSync(lexicalPath, { throwIfNoEntry: false });
+  invariant(stat !== undefined, `${label}: missing path`);
+  invariant(!stat.isSymbolicLink(), `${label}: symbolic link rejected`);
+  invariant(stat.isFile(), `${label}: not a regular file`);
+  const actualReal = realpathSync(lexicalPath);
+  invariant(isContained(rootReal, actualReal), `${label}: real path escapes root`);
+  return actualReal;
+}
+
+function loadCorpus(rootArg) {
+  assertManifestSpec(MANIFEST);
+  const lexicalRoot = resolve(rootArg);
+  const rootStat = lstatSync(lexicalRoot, { throwIfNoEntry: false });
+  invariant(rootStat !== undefined && rootStat.isDirectory(), "root: missing or not a directory");
+  invariant(!rootStat.isSymbolicLink(), "root: symbolic link rejected");
+  const rootReal = realpathSync(lexicalRoot);
+  const rawByPath = new Map();
+  for (const name of MANIFEST) {
+    const lexicalPath = join(lexicalRoot, name);
+    assertRegularContainedPath(rootReal, lexicalPath, name);
+    rawByPath.set(name, readFileSync(lexicalPath));
+  }
+  return { lexicalRoot, rawByPath, rootReal };
+}
+
+function escapeRegExp(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function fieldMatches(text, label) {
+  const pattern = new RegExp(
+    "^\\*\\*" + escapeRegExp(label) + ":\\*\\* `([0-9a-f]{64})`\\.$",
+    "gm",
+  );
+  return [...text.matchAll(pattern)].map((match) => ({ index: match.index, value: match[1] }));
+}
+
+function readPFields(text, mode) {
+  const found = {};
+  let total = 0;
+  for (const [key, label] of Object.entries(P_FIELDS)) {
+    const matches = fieldMatches(text, label);
+    invariant(matches.length <= 1, `appendix P: duplicate ${label} field`);
+    if (matches.length === 1) {
+      found[key] = matches[0].value;
+      total += 1;
+    }
+  }
+  if (mode === "baseline" && total === 0) return null;
+  invariant(total === Object.keys(P_FIELDS).length, "appendix P: incomplete P.14.1m.4a seal fields");
+  return found;
+}
+
+function replaceUniqueField(text, label, replacement) {
+  const matches = fieldMatches(text, label);
+  invariant(matches.length === 1, `appendix P: expected exactly one ${label} field`);
+  const old = matches[0].value;
+  const needle = `**${label}:** \`${old}\`.`;
+  return text.replace(needle, `**${label}:** \`${replacement}\`.`);
+}
+
+function targetSnapshotField(text) {
+  const pattern = /(\*\*Normalized snapshot aggregate SHA-256 \(v2\):\*\*\s*\n`)([0-9a-f]{64})(`\.)/g;
+  const matches = [...text.matchAll(pattern)];
+  invariant(matches.length === 1, "targets.md: expected exactly one v2 snapshot field");
+  return { pattern, value: matches[0][2] };
+}
+
+function normalizeTargetField(text) {
+  const { pattern } = targetSnapshotField(text);
+  return text.replace(pattern, `$1${ZERO64}$3`);
+}
+
+function normalizeSourceBytes(name, raw, mode) {
+  let text = decodeCanonicalUtf8(raw, name);
+  if (name === "targets.md") text = normalizeTargetField(text);
+  if (name === "appendix_p_philosophical_foundations.md") {
+    const fields = readPFields(text, mode);
+    if (fields !== null) {
+      text = replaceUniqueField(text, P_FIELDS.aggregate, ZERO64);
+      text = replaceUniqueField(text, P_FIELDS.inventory, ZERO64);
+      text = replaceUniqueField(text, P_FIELDS.runLog, ZERO64);
+    }
+  }
+  return Buffer.from(text, "utf8");
+}
+
+function scanFences(text, label) {
+  const lines = text.split("\n");
+  const outside = [];
+  let fence = null;
+  let fencedBlocks = 0;
+  for (let index = 0; index < lines.length; index += 1) {
+    const rawLine = lines[index].endsWith("\r") ? lines[index].slice(0, -1) : lines[index];
+    if (fence === null) {
+      const opener = /^( {0,3})(`{3,}|~{3,})([^\r\n]*)$/.exec(rawLine);
+      if (opener !== null && !(opener[2][0] === "`" && opener[3].includes("`"))) {
+        fence = { char: opener[2][0], length: opener[2].length, line: index + 1 };
+        fencedBlocks += 1;
+      } else {
+        outside.push({ line: rawLine, lineNumber: index + 1 });
+      }
+      continue;
+    }
+    const closing = new RegExp(`^ {0,3}${escapeRegExp(fence.char)}{${fence.length},}[ \\t]*$`);
+    if (closing.test(rawLine)) fence = null;
+  }
+  invariant(fence === null, `${label}: unterminated ${fence?.char ?? ""} fence opened at line ${fence?.line ?? 0}`);
+  return { fencedBlocks, outside };
+}
+
+function extractFormalIds(outsideLines, path) {
+  const kinds = FORMAL_KINDS.map(escapeRegExp).join("|");
+  const pattern = new RegExp(
+    `^(?: {0,3}#{1,6}[ \\t]+(?:\\*\\*)?| {0,3}\\*\\*)` +
+      `(${kinds})[ \\t]+` +
+      `([A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])?)` +
+      `(?=[ \\t]*(?:\\(|:|\\.\\*{0,2}(?:[ \\t]|$)))`,
+  );
+  const ids = [];
+  const seen = new Map();
+  for (const { line, lineNumber } of outsideLines) {
+    const match = pattern.exec(line);
+    if (match === null) continue;
+    const record = { id: match[2], kind: match[1], line: lineNumber };
+    const identity = `${record.kind}\0${record.id}`;
+    invariant(!seen.has(identity), `${path}: duplicate ${record.kind} ${record.id}`);
+    seen.set(identity, lineNumber);
+    ids.push(record);
+  }
+  return ids;
+}
+
+function resolveLocalTarget(sourcePath, encodedDestination) {
+  const withoutFragment = encodedDestination.split("#", 1)[0].split("?", 1)[0];
+  let decoded;
+  try {
+    decoded = decodeURIComponent(withoutFragment);
+  } catch {
+    fail(`${sourcePath}: malformed percent-encoding in markdown link`);
+  }
+  invariant(decoded.normalize("NFC") === decoded, `${sourcePath}: non-NFC markdown destination`);
+  invariant(!decoded.includes("\\") && !decoded.includes("\0"), `${sourcePath}: invalid markdown path`);
+  invariant(!decoded.includes("#") && !decoded.includes("?"), `${sourcePath}: encoded delimiter in markdown path`);
+  invariant(!decoded.startsWith("/"), `${sourcePath}: absolute markdown path rejected`);
+  const joined = posixPath.normalize(posixPath.join(posixPath.dirname(sourcePath), decoded));
+  invariant(joined !== ".." && !joined.startsWith("../"), `${sourcePath}: markdown path escapes root`);
+  invariant(joined === posixPath.basename(joined), `${sourcePath}: non-root markdown target rejected`);
+  return joined;
+}
+
+function extractMarkdownLinks(outsideLines, sourcePath) {
+  const links = [];
+  const pattern = /!?\[[^\]\n]*\]\(\s*(?:<([^>\n]+)>|([^\s)\n]+))(?:\s+(?:"[^"]*"|'[^']*'|\([^)]*\)))?\s*\)/g;
+  for (const { line, lineNumber } of outsideLines) {
+    for (const match of line.matchAll(pattern)) {
+      const destination = match[1] ?? match[2];
+      if (destination.startsWith("#")) continue;
+      const scheme = /^([A-Za-z][A-Za-z0-9+.-]*):/.exec(destination);
+      if (scheme !== null) {
+        invariant(
+          ["http", "https", "mailto"].includes(scheme[1].toLowerCase()),
+          `${sourcePath}:${lineNumber}: disallowed markdown URI scheme`,
+        );
+        continue;
+      }
+      const pathPart = destination.split("#", 1)[0].split("?", 1)[0];
+      let decodedPath;
+      try {
+        decodedPath = decodeURIComponent(pathPart);
+      } catch {
+        fail(`${sourcePath}:${lineNumber}: malformed percent-encoding in markdown link`);
+      }
+      if (!decodedPath.toLowerCase().endsWith(".md")) continue;
+      links.push({ line: lineNumber, target: resolveLocalTarget(sourcePath, destination) });
+    }
+  }
+  return links;
+}
+
+function verifyLinks(links, rootReal, lexicalRoot) {
+  const manifestSet = new Set(MANIFEST);
+  for (const link of links) {
+    invariant(
+      manifestSet.has(link.target),
+      `${link.source}:${link.line}: local markdown target is outside manifest: ${link.target}`,
+    );
+    assertRegularContainedPath(rootReal, join(lexicalRoot, link.target), `${link.source}:${link.line} -> ${link.target}`);
+  }
+}
+
+function parseCatalog(text) {
+  const rows = [];
+  const pattern = /^\|\s+`(RT-T(?:[1-9]|1[01])|TV-[A-Z0-9]+(?:-[A-Z0-9]+)+)`\s+\|/gm;
+  for (const match of text.matchAll(pattern)) rows.push(match[1]);
+  return rows;
+}
+
+function assertCatalog(rows) {
+  const rt = rows.filter((id) => id.startsWith("RT-")).length;
+  const tv = rows.filter((id) => id.startsWith("TV-")).length;
+  invariant(rows.length === EXPECTED_CATALOG, `catalog: expected ${EXPECTED_CATALOG} rows, got ${rows.length}`);
+  invariant(rt === EXPECTED_RT, `catalog: expected ${EXPECTED_RT} RT rows, got ${rt}`);
+  invariant(tv === EXPECTED_TV, `catalog: expected ${EXPECTED_TV} TV rows, got ${tv}`);
+  invariant(new Set(rows).size === rows.length, "catalog: duplicate owning row identifier");
+  for (let index = 1; index <= EXPECTED_RT; index += 1) {
+    invariant(rows.includes(`RT-T${index}`), `catalog: missing RT-T${index}`);
+  }
+  return { catalog: rows.length, rt, tv };
+}
+
+function lineCount(bytes) {
+  if (bytes.length === 0) return 0;
+  let count = 0;
+  for (const byte of bytes) if (byte === 0x0a) count += 1;
+  if (bytes[bytes.length - 1] !== 0x0a) count += 1;
+  return count;
+}
+
+function sourceMarkers() {
+  return {
+    begin: "// PU-" + "P14.1m.4a-SOURCE-BEGIN",
+    end: "// PU-" + "P14.1m.4a-SOURCE-END",
+  };
+}
+
+function extractEmbeddedSource(text) {
+  const { begin, end } = sourceMarkers();
+  const beginNeedle = `${begin}\n`;
+  const start = text.indexOf(beginNeedle);
+  invariant(start >= 0, "appendix P: embedded audit source begin marker missing");
+  invariant(text.indexOf(beginNeedle, start + 1) < 0, "appendix P: duplicate embedded source begin marker");
+  const endStart = text.indexOf(`${end}\n`, start + beginNeedle.length);
+  invariant(endStart >= 0, "appendix P: embedded audit source end marker missing");
+  invariant(text.indexOf(`${end}\n`, endStart + 1) < 0, "appendix P: duplicate embedded source end marker");
+  const after = endStart + end.length + 1;
+  invariant(/^ {0,3}~{4,}[ \t]*(?:\n|$)/.test(text.slice(after)), "appendix P: source block has no closing tilde fence");
+  return Buffer.from(text.slice(start, after), "utf8");
+}
+
+function targetSnapshotRoot(rawByPath, pReplacement = null) {
+  const hash = createHash("sha256");
+  for (const name of MANIFEST) {
+    let raw = rawByPath.get(name);
+    if (name === "appendix_p_philosophical_foundations.md" && pReplacement !== null) raw = pReplacement;
+    if (name === "targets.md") {
+      const text = decodeCanonicalUtf8(raw, name);
+      raw = Buffer.from(normalizeTargetField(text), "utf8");
+    }
+    hash.update(Buffer.from(name, "utf8"));
+    hash.update(Buffer.from([0]));
+    hash.update(raw);
+    hash.update(Buffer.from([0]));
+  }
+  return hash.digest("hex");
+}
+
+function aggregateNormalized(normalizedByPath) {
+  const hash = createHash("sha256");
+  for (const name of MANIFEST) {
+    hash.update(Buffer.from(name, "utf8"));
+    hash.update(Buffer.from([0]));
+    hash.update(normalizedByPath.get(name));
+    hash.update(Buffer.from([0]));
+  }
+  return hash.digest("hex");
+}
+
+function expectReject(fn) {
+  try {
+    fn();
+    return false;
+  } catch {
+    return true;
+  }
+}
+
+function catalogFixtureText() {
+  const lines = [];
+  for (let index = 1; index <= EXPECTED_RT; index += 1) lines.push(`| \`RT-T${index}\` | fixture |`);
+  for (let index = 1; index <= EXPECTED_TV; index += 1) {
+    lines.push(`| \`TV-FX-${String(index).padStart(3, "0")}\` | fixture |`);
+  }
+  return `${lines.join("\n")}\n`;
+}
+
+function runFixtures() {
+  const canonicalCatalog = catalogFixtureText();
+  const duplicateCatalog = `${canonicalCatalog}| \`TV-FX-001\` | duplicate |\n`;
+  const missingCatalog = canonicalCatalog.replace(/^\| `TV-FX-410`.*\n/m, "");
+  const aggregateLine = `**${P_FIELDS.aggregate}:** \`${ZERO64}\`.`;
+  const fixtures = {
+    broken_link_rejected: expectReject(() => {
+      const target = resolveLocalTarget("contents.md", "missing.md");
+      invariant(new Set(MANIFEST).has(target), "broken link");
+    }),
+    duplicate_catalog_rejected: expectReject(() => assertCatalog(parseCatalog(duplicateCatalog))),
+    duplicate_formal_rejected: expectReject(() => {
+      const text = "**Theorem FX.1 (first).**\n**Theorem FX.1 (second).**\n";
+      extractFormalIds(scanFences(text, "fixture").outside, "fixture.md");
+    }),
+    duplicate_self_field_rejected: expectReject(() => {
+      const text = `${aggregateLine}\n${aggregateLine}\n`;
+      invariant(fieldMatches(text, P_FIELDS.aggregate).length === 1, "duplicate self field");
+    }),
+    invalid_utf8_rejected: expectReject(() => decodeCanonicalUtf8(Buffer.from([0xc3, 0x28]), "fixture")),
+    manifest_addition_rejected: expectReject(() => assertManifestSpec([...MANIFEST, "extra.md"])),
+    manifest_omission_rejected: expectReject(() => assertManifestSpec(MANIFEST.slice(0, -1))),
+    mismatched_fence_rejected: expectReject(() => scanFences("~~~text\nx\n```\n", "fixture")),
+    missing_catalog_rejected: expectReject(() => assertCatalog(parseCatalog(missingCatalog))),
+    non_nfc_rejected: expectReject(() => decodeCanonicalUtf8(Buffer.from("e\u0301", "utf8"), "fixture")),
+    noncanonical_inventory_rejected: expectReject(() =>
+      assertCanonicalJSON(Buffer.from('{"b":1,"a":2}', "utf8"), "fixture"),
+    ),
+    percent_encoded_escape_rejected: expectReject(() => resolveLocalTarget("contents.md", "%2e%2e%2fescape.md")),
+    markdown_root_escape_rejected: expectReject(() => resolveLocalTarget("contents.md", "../escape.md")),
+    realpath_root_escape_rejected: false,
+    symbolic_link_rejected: false,
+    unterminated_fence_rejected: expectReject(() => scanFences("```text\nx\n", "fixture")),
+  };
+
+  const fixtureBase = mkdtempSync(join(tmpdir(), "pu-p15-fixture-"));
+  try {
+    const fixtureRoot = join(fixtureBase, "root");
+    mkdirSync(fixtureRoot);
+    const real = join(fixtureRoot, "real.md");
+    const outside = join(fixtureBase, "outside.md");
+    const link = join(fixtureRoot, "link.md");
+    writeFileSync(real, "fixture\n", { encoding: "utf8", flag: "wx" });
+    writeFileSync(outside, "fixture\n", { encoding: "utf8", flag: "wx" });
+    symlinkSync(outside, link);
+    fixtures.realpath_root_escape_rejected = expectReject(() =>
+      assertRegularContainedPath(realpathSync(fixtureRoot), outside, "fixture outside file"),
+    );
+    fixtures.symbolic_link_rejected = expectReject(() =>
+      assertRegularContainedPath(realpathSync(fixtureRoot), link, "fixture symlink"),
+    );
+  } finally {
+    rmSync(fixtureBase, { force: true, recursive: true });
+  }
+
+  invariant(Object.values(fixtures).every((value) => value === true), "negative fixture suite did not reject every mutation");
+  return fixtures;
+}
+
+function parseArgs(argv) {
+  let root = process.cwd();
+  let mode = "strict";
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    if (arg === "--baseline") mode = "baseline";
+    else if (arg === "--seal") mode = "seal";
+    else if (arg === "--root") {
+      index += 1;
+      invariant(index < argv.length, "--root requires a path");
+      root = argv[index];
+    } else if (arg.startsWith("--root=")) root = arg.slice("--root=".length);
+    else fail(`unknown argument: ${arg}`);
+  }
+  invariant(["baseline", "seal", "strict"].includes(mode), "invalid mode");
+  return { mode, root };
+}
+
+function main() {
+  const { mode, root } = parseArgs(process.argv.slice(2));
+  const auditSource = readFileSync(fileURLToPath(import.meta.url));
+  const auditSourceSha256 = sha256(auditSource);
+  const runtimeSha256 = sha256(readFileSync(process.execPath));
+  const corpus = loadCorpus(root);
+
+  const normalizedByPath = new Map();
+  const sourceRecords = [];
+  const allLinks = [];
+  let formalTotal = 0;
+  let fencedBlockTotal = 0;
+  let rawBytesTotal = 0;
+  let normalizedBytesTotal = 0;
+
+  for (const name of MANIFEST) {
+    const raw = corpus.rawByPath.get(name);
+    const text = decodeCanonicalUtf8(raw, name);
+    const fenceScan = scanFences(text, name);
+    const formalIds = extractFormalIds(fenceScan.outside, name);
+    const links = extractMarkdownLinks(fenceScan.outside, name).map((link) => ({ ...link, source: name }));
+    const normalized = normalizeSourceBytes(name, raw, mode);
+    normalizedByPath.set(name, normalized);
+    formalTotal += formalIds.length;
+    fencedBlockTotal += fenceScan.fencedBlocks;
+    rawBytesTotal += raw.length;
+    normalizedBytesTotal += normalized.length;
+    allLinks.push(...links);
+    sourceRecords.push({
+      bytes: normalized.length,
+      catalog_rows: name === "targets.md" ? parseCatalog(text).length : 0,
+      fenced_blocks: fenceScan.fencedBlocks,
+      formal_ids: formalIds.length,
+      lines: lineCount(normalized),
+      local_markdown_links: links.length,
+      path: name,
+      sha256: sha256(normalized),
+    });
+  }
+
+  verifyLinks(allLinks, corpus.rootReal, corpus.lexicalRoot);
+  const targetsText = decodeCanonicalUtf8(corpus.rawByPath.get("targets.md"), "targets.md");
+  const catalog = assertCatalog(parseCatalog(targetsText));
+  const aggregateSha256 = aggregateNormalized(normalizedByPath);
+  const inventory = {
+    aggregate_sha256: aggregateSha256,
+    framing: "path || NUL || normalized_file_bytes || NUL",
+    manifest: sourceRecords,
+    version: VERSION,
+  };
+  const inventoryBytes = Buffer.from(canonicalJSON(inventory), "utf8");
+  assertCanonicalJSON(inventoryBytes, "generated inventory");
+  const inventorySha256 = sha256(inventoryBytes);
+  const fixtures = runFixtures();
+  const fixtureBytes = Buffer.from(canonicalJSON(fixtures), "utf8");
+  const fixtureSha256 = sha256(fixtureBytes);
+
+  const pText = decodeCanonicalUtf8(
+    corpus.rawByPath.get("appendix_p_philosophical_foundations.md"),
+    "appendix_p_philosophical_foundations.md",
+  );
+  const pFields = readPFields(pText, mode);
+  if (pFields !== null) {
+    const embeddedSource = extractEmbeddedSource(pText);
+    invariant(sha256(embeddedSource) === auditSourceSha256, "appendix P: embedded audit source hash mismatch");
+    invariant(pFields.source === auditSourceSha256, "appendix P: audit-source field mismatch");
+    invariant(pFields.runtime === runtimeSha256, "appendix P: runtime field mismatch");
+  }
+
+  const runSummary = {
+    aggregate_sha256: aggregateSha256,
+    audit_source_sha256: auditSourceSha256,
+    catalog_rows: catalog.catalog,
+    fixture_sha256: fixtureSha256,
+    fixtures_passed: Object.keys(fixtures).length,
+    fenced_blocks: fencedBlockTotal,
+    formal_ids: formalTotal,
+    inventory_sha256: inventorySha256,
+    local_markdown_links: allLinks.length,
+    manifest_files: MANIFEST.length,
+    node: process.version,
+    normalized_bytes: normalizedBytesTotal,
+    raw_bytes: rawBytesTotal,
+    result: "PASS",
+    rt_rows: catalog.rt,
+    runtime_sha256: runtimeSha256,
+    tv_rows: catalog.tv,
+    version: VERSION,
+  };
+  const runLog = Buffer.from(`${canonicalJSON(runSummary)}\n`, "utf8");
+  const runLogSha256 = sha256(runLog);
+
+  const declaredTargetSnapshot = targetSnapshotField(targetsText).value;
+  if (mode === "baseline") {
+    invariant(
+      targetSnapshotRoot(corpus.rawByPath) === declaredTargetSnapshot,
+      "targets.md: declared v2 snapshot root mismatch",
+    );
+  } else if (mode === "seal") {
+    invariant(pFields !== null, "seal mode requires the five P.14.1m.4a fields");
+    invariant(
+      pFields.aggregate === ZERO64 && pFields.inventory === ZERO64 && pFields.runLog === ZERO64,
+      "seal mode requires zero placeholders in the three self fields",
+    );
+    let sealedP = pText;
+    sealedP = replaceUniqueField(sealedP, P_FIELDS.aggregate, aggregateSha256);
+    sealedP = replaceUniqueField(sealedP, P_FIELDS.inventory, inventorySha256);
+    sealedP = replaceUniqueField(sealedP, P_FIELDS.runLog, runLogSha256);
+    const sealedSnapshot = targetSnapshotRoot(corpus.rawByPath, Buffer.from(sealedP, "utf8"));
+    process.stderr.write(
+      `${P_FIELDS.aggregate}: ${aggregateSha256}\n` +
+        `${P_FIELDS.inventory}: ${inventorySha256}\n` +
+        `${P_FIELDS.runLog}: ${runLogSha256}\n` +
+        `Normalized snapshot aggregate SHA-256 (v2): ${sealedSnapshot}\n`,
+    );
+  } else {
+    invariant(pFields !== null, "strict mode requires the five P.14.1m.4a fields");
+    invariant(pFields.aggregate === aggregateSha256, "appendix P: aggregate seal mismatch");
+    invariant(pFields.inventory === inventorySha256, "appendix P: inventory seal mismatch");
+    invariant(pFields.runLog === runLogSha256, "appendix P: run-log seal mismatch");
+    invariant(
+      targetSnapshotRoot(corpus.rawByPath) === declaredTargetSnapshot,
+      "targets.md: declared v2 snapshot root mismatch",
+    );
+  }
+
+  process.stdout.write(runLog);
+}
+
+try {
+  main();
+} catch (error) {
+  process.stderr.write(`${VERSION} FAIL: ${error instanceof Error ? error.message : String(error)}\n`);
+  process.exitCode = 1;
+}
+// PU-P14.1m.4a-SOURCE-END
+~~~~
+
+**Resolution record P.14.1m.4a-R2.**
+
+| Field | Frozen value |
+|:--|:--|
+| Registered proposition and polarity | The source envelope satisfies (E1)--(E9) on the sealed 48-file snapshot; `positive-discharge` of the source-envelope and source-inventory child of `TV-P-15`. |
+| Domain | The exact 48-file manifest with no nonmanifest link exception, the embedded 26,765-byte verifier, and the recorded Node executable. |
+| Premises | Root access to the frozen snapshot; exact bytes for every manifest file; the displayed normalization, parsing, identity, and canonicalization rules. |
+| Equivalence | Source snapshots are equal exactly when their normalized path/NUL/file-byte frames agree; formal identities use $(\text{file},\text{kind},\text{id})$; local Markdown targets use the decoded root-relative path. |
+| Invocation | `node p15_envelope_v2.mjs --root <sealed-snapshot-root>` after `--seal` generation and seal insertion. |
+| Exhaustive budget and counters | `48` files; `9079904` raw and `9079904` normalized bytes; `3224` formal identifiers; `13` fenced blocks; `5067` local Markdown links; `11` RT and `410` TV rows; `16` negative fixtures. |
+| Negative fixtures | Manifest omission and addition; real-path and Markdown root escape; symlink; invalid UTF-8; non-NFC; duplicate formal ID; broken and percent-escape link; unterminated and mismatched fence; duplicate and missing catalog row; duplicate self field; noncanonical inventory. |
+| Verifier | The exact source, source hash, runtime hash, normalized aggregate, canonical inventory hash, and passing run-log hash displayed above. |
+| Integrity invalidator | A source, runtime, aggregate, inventory, or run-log hash mismatch; a missing manifest member; an incomplete scan; or any counter disagreement. |
+| Falsifier | A gate-violating source envelope accepted by the exact verifier, or a registered negative mutation accepted by its fixture suite. |
+| Provenance class | Source-derived exhaustive finite audit with canonical byte serialization and adversarial mutation testing. |
+| Nonvacuity | The run traverses all 48 nonempty source files and all 421 owning catalog rows; each negative fixture is independently required to reject. |
+| Downstream consumers | The source-envelope child of `TV-P-15`, the Global Strict-Certificate Ledger summary, and the canonical target-catalog snapshot. |
+
+The strict execution returns `PASS` with the frozen counters and hashes above. The accepted artifact has source-envelope and source-inventory scope. `TV-P-15` retains `M+C` for a populated corpus-wide $\mathfrak G_{\mathrm{PU}}$, a passing corpus-wide codec certificate, complete source-to-vertex and status-row coverage, accepted proof objects or sound terminating checkers for every invoked predicate, and a passing (C1)--(C18) execution over the frozen complete dependency and overlap-cell manifest. ∎
+
+**Proposition P.14.1m.4b (Executed Typed Semantic-Kernel Pilot and Conditional Source Indistinguishability).** Let $\mathcal D_{\mathrm{pilot}}$ be the exact canonical registry generated below. Its frozen graph manifest has twenty-four vertices, including seven $\textsf{output}$ status vertices and seventeen typed support vertices; thirty-one parent edges; one declared directed diamond and exactly one required cell for that diamond; four quantitative or prescription controls; nine evidence records; and the eighteen test identifiers (C1)--(C18). The positive instance contains a two-candidate strict-certificate sector with an exactly enumerated cost gap, open and certificate-pending rows, a pre-comparison lock, bound and budget records, a statistical-uncertainty record, a branch-locked scheme prescription, two numerical rows descending from one master source, a bridge-site vertex, and two identity paths through the declared diamond.
+
+On this exact finite domain, the reference kernel implements the following pilot specializations of (C1)--(C18): (C1) separates output-row strict-certificate closure from support-vertex evidential availability; (C2)--(C4) check pending/open records and status meet; (C5) checks the frozen graph manifest contains exactly the declared diamond cell and verifies equality of its two submitted path composites; (C6)--(C9) check the forward lock, prescription hash, three-gate tags, and bound/budget distinction; (C10)--(C13) check the shared master projection, reference coverage, prescription typing, and quantitative-category separation; (C14)--(C17) check bridge presence, parent transport, source/residual exhaustion, and shared-source no-double-counting; and (C18) checks the populated field, identifier, and operator tables, canonical tagged JSON, and exact round trip. Each numbered check has a rejecting mutation; (C5) has separate cell-omission and noncommutativity mutations. Every loop ranges over an explicitly finite array, the dependency check consumes one finite topological traversal, and tagged-value recursion ranges over the finite parsed tree, so the exact execution terminates. Direct inspection of each rejection predicate proves soundness for $\mathcal D_{\mathrm{pilot}}$ and its registered mutations.
+
+Let $\mathfrak B_{\mathrm{2c}}$ be the class of quadruples $(B,p,\nu_-,\nu_+)$ with the following properties: $B$ is a source-only registry packet containing a reference to an acceptance-active semantic atom $p$ but neither a derivation of $p$ in an accepted proof calculus nor bytes for a sound checker deciding $p$; $\nu_-$ and $\nu_+$ are admissible semantic completions of the exact same bytes $B$; they agree on every registered atom other than $p$; and
+$$
+\nu_-(p)=0,\qquad \nu_+(p)=1,\qquad
+\operatorname{Acc}(B,\nu_-)=0,\qquad
+\operatorname{Acc}(B,\nu_+)=1.
+$$
+For any member of $\mathfrak B_{\mathrm{2c}}$, a deterministic accept/reject verifier whose complete input is $B$ returns the same value on both completions. Acceptance is unsound on $\nu_-$, while rejection is incomplete on $\nu_+$. Therefore no such source-only verifier is both sound and complete on $\mathfrak B_{\mathrm{2c}}$. This class is nonempty: take a finite syntactically valid registry shell whose structural gates are fixed true and whose sole acceptance-active external atom is $p$, and equip its identical source bytes with the two displayed valuations. Conditions (C1), (C5), (C10), (C14), and (C15) invoke theorem-stack sufficiency, accepted equality, full-support feasibility, effective descent, or response-preserving transport. Proposition P.14.1m.4a supplies source-envelope bytes and integrity checks; Algorithm P.14.1m.0 assigns semantic acceptance only after checked evidence for each invoked atom. This proves `nonentailment` of semantic registry acceptance from $B$ on the explicitly two-completion class $\mathfrak B_{\mathrm{2c}}$. Application to the sealed corpus source envelope remains pending an exhibited member $(B,p,\nu_-,\nu_+)$ with $B$ equal to that envelope; corpus-wide machine acceptance requires the populated global tuple plus accepted proof objects or sound terminating checkers for every invoked semantic atom.
+
+**Semantic-pilot source SHA-256 (P.14.1m.4b-v1):** `518d9a1287e3ad2305cc631399ae64cee82ab4b7cbde815bc608261abe5bef06`.
+**Node runtime SHA-256 (P.14.1m.4b-v1):** `1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31`.
+**Populated pilot-registry SHA-256 (P.14.1m.4b-v1):** `caf90b93bd1ac9672811b68e6a2c2fdbaf51d460563da1394142ca877d644d8d`.
+**Populated codec-table SHA-256 (P.14.1m.4b-v1):** `6d87a7b8b373d1f45018a05ba007167e06df3387955428e8b765b75eab1ee9a7`.
+**Adversarial-fixture SHA-256 (P.14.1m.4b-v1):** `8750afe1343d1d99104dcf2fc143c8bafd9f62034f5cbdf24f12f3af7e26ec2b`.
+**Passing run-log SHA-256 (P.14.1m.4b-v1):** `de369aad66c9e5ca466a1e50f06d70f85557c8af300239bb78d4f3604a991449`.
+
+The exact executable is 35,735 bytes and 647 lines, including its terminal LF:
+
+~~~~javascript
+// PU-P14.1m.4b-SOURCE-BEGIN
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+const VERSION = "P.14.1m.4b-semantic-pilot-v1";
+const TESTS = Object.freeze(Array.from({ length: 18 }, (_, index) => `C${index + 1}`));
+const STATUS = Object.freeze({ open: 0, "certificate-pending": 1, closed: 2 });
+const KINDS = Object.freeze([
+  "theorem", "certificate", "branch", "model", "external", "finitePart",
+  "projector", "grading", "determinantOrientation", "tail", "scheme",
+  "unitBridge", "RGRoute", "normalization", "bridge", "descent", "overlap",
+  "output", "uncertainty", "covariance", "masterZeta",
+]);
+const PRESCRIPTION_KINDS = new Set([
+  "finitePart", "projector", "grading", "determinantOrientation", "tail",
+  "scheme", "unitBridge", "RGRoute", "normalization",
+]);
+const RESERVED = new Set(["$rat", "$interval", "$set", "$map", "$ref", "$expr"]);
+const ID_PATTERN = /^[A-Za-z][A-Za-z0-9]*(?::[A-Za-z0-9][A-Za-z0-9._-]*)+$/;
+
+function fail(code, message) {
+  throw new Error(`${code}: ${message}`);
+}
+
+function check(condition, code, message) {
+  if (!condition) fail(code, message);
+}
+
+function sha256(bytes) {
+  return createHash("sha256").update(bytes).digest("hex");
+}
+
+function utf8Compare(a, b) {
+  return Buffer.compare(Buffer.from(a, "utf8"), Buffer.from(b, "utf8"));
+}
+
+function gcd(a, b) {
+  let x = Math.abs(a);
+  let y = Math.abs(b);
+  while (y !== 0) [x, y] = [y, x % y];
+  return x;
+}
+
+function canonicalize(value, where = "$") {
+  if (value === null || typeof value === "boolean") return value;
+  if (typeof value === "string") {
+    check(value.normalize("NFC") === value, "C18", `${where} is not NFC`);
+    return value;
+  }
+  if (typeof value === "number") {
+    check(Number.isSafeInteger(value), "C18", `${where} is not a safe integer`);
+    return value;
+  }
+  if (Array.isArray(value)) return value.map((item, index) => canonicalize(item, `${where}[${index}]`));
+  check(typeof value === "object" && Object.getPrototypeOf(value) === Object.prototype, "C18", `${where} is not a plain object`);
+  const keys = Object.keys(value).sort(utf8Compare);
+  const result = {};
+  for (const key of keys) {
+    check(key.normalize("NFC") === key, "C18", `${where} has non-NFC key`);
+    result[key] = canonicalize(value[key], `${where}.${key}`);
+  }
+  return result;
+}
+
+function canonicalBytes(value) {
+  return Buffer.from(JSON.stringify(canonicalize(value)), "utf8");
+}
+
+function parseCanonical(bytes) {
+  let text;
+  try {
+    text = new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch {
+    fail("C18", "invalid UTF-8");
+  }
+  check(text.normalize("NFC") === text, "C18", "non-NFC input");
+  check(Buffer.from(text, "utf8").equals(bytes), "C18", "noncanonical UTF-8 bytes");
+  let value;
+  try {
+    value = JSON.parse(text);
+  } catch {
+    fail("C18", "invalid JSON");
+  }
+  check(canonicalBytes(value).equals(bytes), "C18", "input is not canonical JSON");
+  return value;
+}
+
+function exactKeys(object, expected, where) {
+  check(object !== null && typeof object === "object" && !Array.isArray(object), "C18", `${where} is not an object`);
+  const actual = Object.keys(object).sort(utf8Compare);
+  const wanted = [...expected].sort(utf8Compare);
+  check(actual.length === wanted.length && actual.every((key, index) => key === wanted[index]), "C18", `${where} field table mismatch`);
+}
+
+function validateTagged(node, identifiers, operators, where = "$") {
+  if (node === null || typeof node === "boolean" || typeof node === "string" || typeof node === "number") return;
+  if (Array.isArray(node)) {
+    node.forEach((value, index) => validateTagged(value, identifiers, operators, `${where}[${index}]`));
+    return;
+  }
+  const reservedKeys = Object.keys(node).filter((key) => RESERVED.has(key));
+  if (reservedKeys.length === 0) {
+    Object.entries(node).forEach(([key, value]) => validateTagged(value, identifiers, operators, `${where}.${key}`));
+    return;
+  }
+  check(reservedKeys.length === 1 && Object.keys(node).length === 1, "C18", `${where} malformed tagged value`);
+  const tag = reservedKeys[0];
+  const payload = node[tag];
+  if (tag === "$rat") {
+    check(Array.isArray(payload) && payload.length === 2, "C18", `${where} malformed rational`);
+    const [p, q] = payload;
+    check(Number.isSafeInteger(p) && Number.isSafeInteger(q) && q > 0 && gcd(p, q) === 1, "C18", `${where} nonreduced rational`);
+  } else if (tag === "$interval") {
+    check(Array.isArray(payload) && payload.length === 2, "C18", `${where} malformed interval`);
+    payload.forEach((value, index) => validateTagged(value, identifiers, operators, `${where}.$interval[${index}]`));
+    check(compareRational(payload[0], payload[1]) <= 0, "C18", `${where} reversed interval`);
+  } else if (tag === "$set") {
+    check(Array.isArray(payload), "C18", `${where} malformed set`);
+    const encodings = payload.map((value, index) => {
+      validateTagged(value, identifiers, operators, `${where}.$set[${index}]`);
+      return canonicalBytes(value);
+    });
+    check(encodings.every((value, index) => index === 0 || Buffer.compare(encodings[index - 1], value) < 0), "C18", `${where} unsorted or duplicate set`);
+  } else if (tag === "$map") {
+    check(Array.isArray(payload) && payload.every((entry) => Array.isArray(entry) && entry.length === 2), "C18", `${where} malformed map`);
+    const keys = payload.map((entry, index) => {
+      validateTagged(entry[0], identifiers, operators, `${where}.$map[${index}][0]`);
+      validateTagged(entry[1], identifiers, operators, `${where}.$map[${index}][1]`);
+      return canonicalBytes(entry[0]);
+    });
+    check(keys.every((value, index) => index === 0 || Buffer.compare(keys[index - 1], value) < 0), "C18", `${where} unsorted or duplicate map keys`);
+  } else if (tag === "$ref") {
+    check(typeof payload === "string" && identifiers.has(payload), "C18", `${where} unresolved reference`);
+  } else {
+    check(Array.isArray(payload) && payload.length === 2 && typeof payload[0] === "string" && Array.isArray(payload[1]), "C18", `${where} malformed expression`);
+    const operator = operators.get(payload[0]);
+    check(operator !== undefined && payload[1].length === operator.arity, "C18", `${where} unknown operator or wrong arity`);
+    payload[1].forEach((value, index) => validateTagged(value, identifiers, operators, `${where}.$expr[1][${index}]`));
+  }
+}
+
+function compareRational(a, b) {
+  check(a && b && Array.isArray(a.$rat) && Array.isArray(b.$rat), "C18", "interval endpoints must be rationals");
+  return a.$rat[0] * b.$rat[1] - b.$rat[0] * a.$rat[1];
+}
+
+function rat(p, q = 1) {
+  return { $rat: [p, q] };
+}
+
+const FIELD_TABLE = Object.freeze({
+  cell: ["equality_check", "id", "paths"],
+  codec: ["constructors", "identifiers", "operators"],
+  constructor: ["fields", "name"],
+  control: ["baseline_hash", "branch_id", "category", "class", "evidence", "id", "kind", "locked", "parent_source", "used_as_absolute", "value", "value_hash"],
+  edge: ["dst", "id", "overlap", "src"],
+  evidence: ["accepted", "id", "kind", "payload", "verifier"],
+  operator: ["arity", "input_sorts", "name", "output_sort"],
+  registry: ["cells", "codec", "controls", "edges", "evidence", "registry_id", "schema", "tests", "vertices"],
+  strict_certificate: ["candidate_set", "costs", "equivalence", "evidence", "overlap_maps", "responses", "selected", "separation_gap"],
+  vertex: ["branch_discharged", "citations", "closure_basis", "comparison", "evidence", "forward_lock", "id", "kind", "local_to_global", "master_ledger", "numerical", "prescriptions", "residual_exhaustion", "residuals", "source_hash", "source_origins", "source_span", "status", "strict_certificate", "theta", "uncertainty_entries", "validation_import", "zeta"],
+});
+
+function codecCertificate() {
+  return {
+    constructors: Object.entries(FIELD_TABLE).sort(([a], [b]) => utf8Compare(a, b)).map(([name, fields]) => ({ fields: [...fields], name })),
+    identifiers: { grammar: "^[A-Za-z][A-Za-z0-9]*(?::[A-Za-z0-9][A-Za-z0-9._-]*)+$", normalization: "NFC-UTF8", uniqueness: "global-byte-string" },
+    operators: [{ arity: 2, input_sorts: ["rational", "rational"], name: "addRat", output_sort: "rational" }],
+  };
+}
+
+function makeVertex(overrides) {
+  return {
+    branch_discharged: null,
+    citations: [],
+    closure_basis: null,
+    comparison: false,
+    evidence: [],
+    forward_lock: false,
+    id: "",
+    kind: "output",
+    local_to_global: false,
+    master_ledger: null,
+    numerical: false,
+    prescriptions: [],
+    residual_exhaustion: [],
+    residuals: [],
+    source_hash: sha256(Buffer.from("embedded-pilot-source-v1", "utf8")),
+    source_origins: [],
+    source_span: "embedded:buildPilot:v1",
+    status: "open",
+    strict_certificate: null,
+    theta: [1],
+    uncertainty_entries: [],
+    validation_import: false,
+    zeta: null,
+    ...overrides,
+  };
+}
+
+function support(id, kind, evidence) {
+  return makeVertex({ closure_basis: "support-evidence", evidence: [evidence], id, kind, status: "closed", theta: [] });
+}
+
+function identityOverlap() {
+  return { domain: ["unit"], pairs: [["unit", "unit"]], codomain: ["unit"] };
+}
+
+function makeEdge(id, src, dst) {
+  return { dst, id, overlap: identityOverlap(), src };
+}
+
+function buildPilot() {
+  const evidence = [
+    { accepted: true, id: "evidence:finite-enum", kind: "finite-enumeration", payload: "Q=q0,q1;cost=0,2;selected=q0;gap=2", verifier: "verifyStrictCertificate" },
+    { accepted: true, id: "evidence:forward-lock", kind: "forward-lock", payload: "precomparison=true", verifier: "verifyForwardLock" },
+    { accepted: true, id: "evidence:bound", kind: "exact-bound", payload: "0<=tail<=1/10", verifier: "verifyBound" },
+    { accepted: true, id: "evidence:budget", kind: "budget-scale", payload: "budget=1/5", verifier: "verifyBudget" },
+    { accepted: true, id: "evidence:prescription", kind: "prescription-lock", payload: "scheme=pilot-v1", verifier: "verifyPrescription" },
+    { accepted: true, id: "evidence:bridge", kind: "finite-map-equality", payload: "identity(unit)", verifier: "verifyCell" },
+    { accepted: true, id: "evidence:source", kind: "source-origin", payload: "pilot-source-v1", verifier: "verifySource" },
+    { accepted: true, id: "evidence:master", kind: "master-projection", payload: "pilot-master-v1", verifier: "verifyMaster" },
+    { accepted: true, id: "evidence:uncertainty", kind: "uncertainty-control", payload: "statistical=1/20", verifier: "verifyUncertainty" },
+  ];
+
+  const vertices = [
+    support("evidence:finite-enum", "certificate", "evidence:finite-enum"),
+    support("evidence:forward-lock", "certificate", "evidence:forward-lock"),
+    support("evidence:bound", "certificate", "evidence:bound"),
+    support("evidence:budget", "certificate", "evidence:budget"),
+    support("evidence:prescription", "certificate", "evidence:prescription"),
+    support("evidence:bridge", "certificate", "evidence:bridge"),
+    support("evidence:source", "certificate", "evidence:source"),
+    support("evidence:master", "certificate", "evidence:master"),
+    support("evidence:uncertainty", "certificate", "evidence:uncertainty"),
+    support("source:spectral-pilot", "certificate", "evidence:source"),
+    support("master:pilot-v1", "masterZeta", "evidence:master"),
+    support("bridge:pilot-v1", "bridge", "evidence:bridge"),
+    support("branch:pilot-v1", "branch", "evidence:source"),
+    { ...support("prescription:scheme-v1", "scheme", "evidence:prescription"), citations: ["branch:pilot-v1"] },
+    support("residual:tail", "tail", "evidence:bound"),
+    support("residual:budget", "uncertainty", "evidence:budget"),
+    support("uncertainty:stat", "uncertainty", "evidence:uncertainty"),
+    makeVertex({
+      citations: ["evidence:finite-enum"],
+      closure_basis: "strict-certificate",
+      evidence: ["evidence:finite-enum"],
+      id: "row:finite-sector",
+      status: "closed",
+      strict_certificate: {
+        candidate_set: ["q0", "q1"],
+        costs: [["q0", rat(0)], ["q1", rat(2)]],
+        equivalence: [["q0"], ["q1"]],
+        evidence: "evidence:finite-enum",
+        overlap_maps: [],
+        responses: [["q0", "r0"], ["q1", "r1"]],
+        selected: "q0",
+        separation_gap: rat(2),
+      },
+      theta: [],
+    }),
+    makeVertex({ id: "row:diamond-root" }),
+    makeVertex({ id: "row:diamond-left" }),
+    makeVertex({ id: "row:diamond-right" }),
+    makeVertex({ branch_discharged: "bridge:pilot-v1", citations: ["bridge:pilot-v1", "evidence:bridge"], id: "row:diamond-join", local_to_global: true }),
+    makeVertex({
+      citations: ["source:spectral-pilot", "master:pilot-v1", "prescription:scheme-v1", "residual:tail", "uncertainty:stat", "evidence:bound", "evidence:prescription", "evidence:uncertainty"],
+      closure_basis: "targeted-certificate",
+      id: "row:numeric-a",
+      master_ledger: "master:pilot-v1",
+      numerical: true,
+      prescriptions: ["prescription:scheme-v1"],
+      residual_exhaustion: ["residual:tail"],
+      residuals: ["residual:tail"],
+      source_origins: ["source:spectral-pilot"],
+      status: "certificate-pending",
+      theta: [1],
+      uncertainty_entries: ["uncertainty:stat"],
+    }),
+    makeVertex({
+      citations: ["source:spectral-pilot", "master:pilot-v1", "prescription:scheme-v1", "residual:budget", "evidence:budget", "evidence:forward-lock", "evidence:prescription"],
+      closure_basis: "targeted-certificate",
+      comparison: true,
+      evidence: ["evidence:forward-lock"],
+      forward_lock: true,
+      id: "row:numeric-b",
+      master_ledger: "master:pilot-v1",
+      numerical: true,
+      prescriptions: ["prescription:scheme-v1"],
+      residual_exhaustion: ["residual:budget"],
+      residuals: ["residual:budget"],
+      source_origins: ["source:spectral-pilot"],
+      status: "certificate-pending",
+      theta: [1, 2, 3],
+    }),
+  ].sort((a, b) => utf8Compare(a.id, b.id));
+
+  const controls = [
+    { baseline_hash: null, branch_id: "branch:pilot-v1", category: "tail", class: "residual", evidence: "evidence:bound", id: "residual:tail", kind: "bound", locked: true, parent_source: "source:spectral-pilot", used_as_absolute: true, value: { $interval: [rat(0), rat(1, 10)] }, value_hash: null },
+    { baseline_hash: null, branch_id: "branch:pilot-v1", category: "comparison", class: "residual", evidence: "evidence:budget", id: "residual:budget", kind: "budget", locked: true, parent_source: "source:spectral-pilot", used_as_absolute: false, value: rat(1, 5), value_hash: null },
+    { baseline_hash: null, branch_id: "branch:pilot-v1", category: "statistical", class: "uncertainty", evidence: "evidence:uncertainty", id: "uncertainty:stat", kind: "statistical", locked: true, parent_source: "source:spectral-pilot", used_as_absolute: false, value: rat(1, 20), value_hash: null },
+    { baseline_hash: sha256(Buffer.from("pilot-scheme-v1", "utf8")), branch_id: "branch:pilot-v1", category: "scheme", class: "prescription", evidence: "evidence:prescription", id: "prescription:scheme-v1", kind: "scheme", locked: true, parent_source: "source:spectral-pilot", used_as_absolute: false, value: "pilot-scheme-v1", value_hash: sha256(Buffer.from("pilot-scheme-v1", "utf8")) },
+  ].sort((a, b) => utf8Compare(a.id, b.id));
+
+  const dependencyPairs = [];
+  for (const vertex of vertices) {
+    const refs = new Set([
+      ...vertex.citations,
+      ...vertex.prescriptions,
+      ...vertex.source_origins,
+      ...vertex.evidence,
+      ...(vertex.master_ledger === null ? [] : [vertex.master_ledger]),
+      ...(vertex.branch_discharged === null ? [] : [vertex.branch_discharged]),
+    ]);
+    for (const ref of refs) if (ref !== vertex.id) dependencyPairs.push([ref, vertex.id]);
+  }
+  dependencyPairs.push(
+    ["row:diamond-root", "row:diamond-left"],
+    ["row:diamond-root", "row:diamond-right"],
+    ["row:diamond-left", "row:diamond-join"],
+    ["row:diamond-right", "row:diamond-join"],
+  );
+  const uniquePairs = [...new Map(dependencyPairs.map((pair) => [`${pair[0]}\0${pair[1]}`, pair])).values()]
+    .sort((a, b) => utf8Compare(`${a[0]}:${a[1]}`, `${b[0]}:${b[1]}`));
+  const edges = uniquePairs.map(([src, dst], index) => makeEdge(`edge:e${String(index + 1).padStart(3, "0")}`, src, dst));
+  const edgeId = (src, dst) => edges.find((edge) => edge.src === src && edge.dst === dst).id;
+  const cells = [{
+    equality_check: "evidence:bridge",
+    id: "cell:diamond-v1",
+    paths: [
+      [edgeId("row:diamond-root", "row:diamond-left"), edgeId("row:diamond-left", "row:diamond-join")],
+      [edgeId("row:diamond-root", "row:diamond-right"), edgeId("row:diamond-right", "row:diamond-join")],
+    ],
+  }];
+
+  return {
+    cells,
+    codec: codecCertificate(),
+    controls,
+    edges,
+    evidence: evidence.sort((a, b) => utf8Compare(a.id, b.id)),
+    registry_id: "registry:p15-pilot-v1",
+    schema: VERSION,
+    tests: [...TESTS],
+    vertices,
+  };
+}
+
+function verifyCodec(registry, rawBytes) {
+  exactKeys(registry, FIELD_TABLE.registry, "registry");
+  exactKeys(registry.codec, FIELD_TABLE.codec, "codec");
+  check(Array.isArray(registry.codec.constructors), "C18", "constructor table absent");
+  const submitted = new Map(registry.codec.constructors.map((entry) => {
+    exactKeys(entry, FIELD_TABLE.constructor, `constructor ${entry.name}`);
+    return [entry.name, entry.fields];
+  }));
+  for (const [name, fields] of Object.entries(FIELD_TABLE)) {
+    check(JSON.stringify(submitted.get(name)) === JSON.stringify(fields), "C18", `constructor ${name} is not total/exact`);
+  }
+  exactKeys(registry.codec.identifiers, ["grammar", "normalization", "uniqueness"], "identifier table");
+  check(registry.codec.identifiers.grammar === ID_PATTERN.source && registry.codec.identifiers.normalization === "NFC-UTF8" && registry.codec.identifiers.uniqueness === "global-byte-string", "C18", "identifier table mismatch");
+  const operators = new Map();
+  for (const operator of registry.codec.operators) {
+    exactKeys(operator, FIELD_TABLE.operator, `operator ${operator.name}`);
+    check(!operators.has(operator.name), "C18", "duplicate operator");
+    operators.set(operator.name, operator);
+  }
+  registry.vertices.forEach((value, index) => exactKeys(value, FIELD_TABLE.vertex, `vertex[${index}]`));
+  registry.controls.forEach((value, index) => exactKeys(value, FIELD_TABLE.control, `control[${index}]`));
+  registry.edges.forEach((value, index) => exactKeys(value, FIELD_TABLE.edge, `edge[${index}]`));
+  registry.cells.forEach((value, index) => exactKeys(value, FIELD_TABLE.cell, `cell[${index}]`));
+  registry.evidence.forEach((value, index) => exactKeys(value, FIELD_TABLE.evidence, `evidence[${index}]`));
+  const identifiers = new Set([
+    registry.registry_id,
+    ...registry.vertices.map((item) => item.id),
+    ...registry.edges.map((item) => item.id),
+    ...registry.cells.map((item) => item.id),
+  ]);
+  validateTagged(registry, identifiers, operators);
+  check(canonicalBytes(parseCanonical(rawBytes)).equals(rawBytes), "C18", "round trip failed");
+}
+
+function verifyStrictCertificate(certificate, evidenceById) {
+  exactKeys(certificate, FIELD_TABLE.strict_certificate, "strict certificate");
+  const q = certificate.candidate_set;
+  check(Array.isArray(q) && q.length >= 2 && new Set(q).size === q.length, "C1", "candidate set not finite/distinct/nontrivial");
+  const costs = new Map(certificate.costs.map(([id, value]) => [id, value]));
+  const responses = new Map(certificate.responses);
+  check(costs.size === q.length && responses.size === q.length && q.every((id) => costs.has(id) && responses.has(id)), "C1", "strict-certificate fields not total");
+  const flattened = certificate.equivalence.flat();
+  check(flattened.length === q.length && new Set(flattened).size === q.length && q.every((id) => flattened.includes(id)), "C1", "equivalence is not a partition");
+  check(q.includes(certificate.selected), "C1", "selected representative absent");
+  const selectedCost = costs.get(certificate.selected).$rat;
+  const outside = q.filter((id) => !certificate.equivalence.find((part) => part.includes(certificate.selected)).includes(id));
+  check(outside.length > 0, "C1", "strict gap is vacuous");
+  let minimumGap = null;
+  for (const id of outside) {
+    const cost = costs.get(id).$rat;
+    const numerator = cost[0] * selectedCost[1] - selectedCost[0] * cost[1];
+    const denominator = cost[1] * selectedCost[1];
+    check(numerator > 0, "C1", "selected representative lacks strict cost gap");
+    const gap = numerator / denominator;
+    minimumGap = minimumGap === null ? gap : Math.min(minimumGap, gap);
+  }
+  check(compareRational(certificate.separation_gap, rat(minimumGap)) === 0, "C1", "separation gap mismatch");
+  const evidence = evidenceById.get(certificate.evidence);
+  check(evidence?.accepted === true && evidence.verifier === "verifyStrictCertificate", "C1", "strict-certificate evidence not accepted");
+}
+
+function composeMaps(first, second) {
+  const a = new Map(first.pairs);
+  const b = new Map(second.pairs);
+  check(first.codomain.every((value) => second.domain.includes(value)), "C5", "overlap domains do not compose");
+  return first.domain.map((value) => [value, b.get(a.get(value))]);
+}
+
+function verifyRegistry(registry, rawBytes) {
+  verifyCodec(registry, rawBytes);
+  check(registry.schema === VERSION && JSON.stringify(registry.tests) === JSON.stringify(TESTS), "C18", "schema/test manifest mismatch");
+  const vertexById = new Map();
+  for (const vertex of registry.vertices) {
+    check(ID_PATTERN.test(vertex.id) && !vertexById.has(vertex.id) && KINDS.includes(vertex.kind), "C11", `invalid/duplicate vertex ${vertex.id}`);
+    check(Object.hasOwn(STATUS, vertex.status), "C11", `invalid status ${vertex.id}`);
+    vertexById.set(vertex.id, vertex);
+  }
+  const evidenceById = new Map(registry.evidence.map((entry) => [entry.id, entry]));
+  check(evidenceById.size === registry.evidence.length && registry.evidence.every((entry) => entry.accepted === true && vertexById.get(entry.id)?.kind === "certificate"), "C11", "evidence lacks a unique accepted certificate vertex");
+  const controlById = new Map(registry.controls.map((entry) => [entry.id, entry]));
+  check(controlById.size === registry.controls.length, "C11", "duplicate control identifier");
+  const edgeByPair = new Map();
+  const edgeById = new Map();
+  for (const edge of registry.edges) {
+    check(vertexById.has(edge.src) && vertexById.has(edge.dst) && !edgeById.has(edge.id), "C11", `invalid edge ${edge.id}`);
+    check(edge.overlap.domain.length > 0 && edge.overlap.pairs.length === edge.overlap.domain.length && edge.overlap.codomain.length > 0, "C5", `invalid overlap ${edge.id}`);
+    check(new Set(edge.overlap.pairs.map(([from]) => from)).size === edge.overlap.domain.length, "C5", `nonfunctional overlap ${edge.id}`);
+    edgeById.set(edge.id, edge);
+    edgeByPair.set(`${edge.src}\0${edge.dst}`, edge);
+  }
+  const indegree = new Map(registry.vertices.map((vertex) => [vertex.id, 0]));
+  const children = new Map(registry.vertices.map((vertex) => [vertex.id, []]));
+  for (const edge of registry.edges) {
+    indegree.set(edge.dst, indegree.get(edge.dst) + 1);
+    children.get(edge.src).push(edge.dst);
+  }
+  const queue = [...indegree].filter(([, degree]) => degree === 0).map(([id]) => id);
+  let visited = 0;
+  while (queue.length > 0) {
+    const id = queue.shift();
+    visited += 1;
+    for (const child of children.get(id)) {
+      indegree.set(child, indegree.get(child) - 1);
+      if (indegree.get(child) === 0) queue.push(child);
+    }
+  }
+  check(visited === registry.vertices.length, "C11", "dependency graph is cyclic");
+
+  for (const vertex of registry.vertices) {
+    const refs = new Set([
+      ...vertex.citations, ...vertex.prescriptions, ...vertex.source_origins, ...vertex.evidence,
+      ...(vertex.master_ledger === null ? [] : [vertex.master_ledger]),
+      ...(vertex.branch_discharged === null ? [] : [vertex.branch_discharged]),
+    ]);
+    for (const ref of refs) {
+      check(vertexById.has(ref), "C11", `${vertex.id} cites absent ${ref}`);
+      if (ref !== vertex.id) check(edgeByPair.has(`${ref}\0${vertex.id}`), "C15", `${vertex.id} lacks accepted transport edge from ${ref}`);
+    }
+    if (vertex.status === "closed") {
+      check(vertex.theta.length === 0, "C1", `${vertex.id} closed with gates`);
+      if (vertex.kind === "output") {
+        check(vertex.closure_basis === "strict-certificate" && vertex.strict_certificate !== null, "C1", `${vertex.id} closed without strict certificate`);
+        verifyStrictCertificate(vertex.strict_certificate, evidenceById);
+      } else {
+        check(vertex.closure_basis === "support-evidence" && vertex.evidence.length > 0 && vertex.evidence.every((id) => evidenceById.get(id)?.accepted === true), "C1", `${vertex.id} support closure lacks accepted evidence`);
+      }
+    } else if (vertex.status === "certificate-pending") {
+      check(vertex.theta.length > 0 && vertex.residuals.every((id) => controlById.has(id)), "C2", `${vertex.id} incomplete pending record`);
+    } else {
+      check(vertex.theta.length > 0 && !vertex.validation_import, "C3", `${vertex.id} invalid open record`);
+    }
+    check(vertex.theta.every((gate) => [1, 2, 3].includes(gate)) && new Set(vertex.theta).size === vertex.theta.length, "C8", `${vertex.id} invalid closure gates`);
+    for (const prescription of vertex.prescriptions) {
+      const pVertex = vertexById.get(prescription);
+      const control = controlById.get(prescription);
+      check(pVertex && PRESCRIPTION_KINDS.has(pVertex.kind) && control?.class === "prescription" && control.kind === pVertex.kind, "C12", `${vertex.id} untyped prescription ${prescription}`);
+      check(vertexById.get(control.branch_id)?.kind === "branch", "C12", `${vertex.id} prescription lacks branch identifier`);
+      check(edgeByPair.has(`${prescription}\0${vertex.id}`), "C12", `${vertex.id} prescription has no parent edge`);
+      if (vertex.forward_lock || vertex.status === "closed") check(control.locked && control.baseline_hash === control.value_hash, "C7", `${vertex.id} retuned locked prescription`);
+    }
+    const entries = [...vertex.residuals, ...vertex.uncertainty_entries];
+    check(new Set(entries).size === entries.length, "C13", `${vertex.id} duplicates quantitative entry`);
+    const categories = entries.map((id) => controlById.get(id)?.category);
+    check(categories.every(Boolean) && new Set(categories).size === categories.length, "C13", `${vertex.id} duplicates or omits category`);
+    for (const residual of vertex.residuals) {
+      const control = controlById.get(residual);
+      check(control?.class === "residual" && ["bound", "budget"].includes(control.kind), "C2", `${vertex.id} residual lacks typed control`);
+      check(!(control.kind === "budget" && control.used_as_absolute), "C9", `${vertex.id} uses budget as bound`);
+      if (control.kind === "bound") check(evidenceById.get(control.evidence)?.accepted === true, "C9", `${vertex.id} bound lacks accepted evidence`);
+    }
+    if (vertex.comparison && vertex.forward_lock) {
+      check(vertex.evidence.some((id) => evidenceById.get(id)?.kind === "forward-lock" && evidenceById.get(id)?.payload === "precomparison=true"), "C6", `${vertex.id} has no precomparison lock evidence`);
+    }
+    if (vertex.local_to_global) {
+      check(vertex.branch_discharged !== null && vertexById.get(vertex.branch_discharged)?.kind === "bridge", "C14", `${vertex.id} lacks bridge-site vertex`);
+    }
+    if (vertex.numerical) {
+      check(vertex.source_origins.length > 0 && new Set(vertex.residual_exhaustion).size === vertex.residual_exhaustion.length, "C16", `${vertex.id} lacks source/residual exhaustion`);
+      check(vertex.residuals.every((id) => vertex.residual_exhaustion.includes(id)), "C16", `${vertex.id} has hidden residual`);
+    }
+  }
+
+  for (const edge of registry.edges) {
+    const parent = vertexById.get(edge.src);
+    const child = vertexById.get(edge.dst);
+    check(STATUS[child.status] <= STATUS[parent.status], "C4", `${edge.id} violates status meet`);
+  }
+  if (registry.registry_id === "registry:p15-pilot-v1") {
+    const expectedPaths = [
+      [edgeByPair.get("row:diamond-root\0row:diamond-left")?.id, edgeByPair.get("row:diamond-left\0row:diamond-join")?.id],
+      [edgeByPair.get("row:diamond-root\0row:diamond-right")?.id, edgeByPair.get("row:diamond-right\0row:diamond-join")?.id],
+    ];
+    check(
+      registry.cells.length === 1 &&
+        registry.cells[0].id === "cell:diamond-v1" &&
+        JSON.stringify(registry.cells[0].paths) === JSON.stringify(expectedPaths),
+      "C5",
+      "pilot graph manifest does not contain exactly its frozen diamond cell",
+    );
+  }
+  for (const cell of registry.cells) {
+    check(Array.isArray(cell.paths) && cell.paths.length === 2 && cell.paths.every((path) => path.length > 0), "C5", `${cell.id} malformed cell`);
+    const composed = cell.paths.map((path) => {
+      const edges = path.map((id) => edgeById.get(id));
+      check(edges.every(Boolean), "C5", `${cell.id} cites missing edge`);
+      for (let index = 1; index < edges.length; index += 1) check(edges[index - 1].dst === edges[index].src, "C5", `${cell.id} path not composable`);
+      return edges.slice(1).reduce((map, edge) => ({ domain: map.domain, pairs: composeMaps(map, edge.overlap), codomain: edge.overlap.codomain }), edges[0].overlap).pairs;
+    });
+    check(JSON.stringify(composed[0]) === JSON.stringify(composed[1]) && evidenceById.get(cell.equality_check)?.accepted === true, "C5", `${cell.id} does not commute`);
+  }
+
+  const numerical = registry.vertices.filter((vertex) => vertex.numerical);
+  for (let i = 0; i < numerical.length; i += 1) {
+    for (let j = i + 1; j < numerical.length; j += 1) {
+      const shared = numerical[i].source_origins.filter((source) => numerical[j].source_origins.includes(source));
+      if (shared.length > 0) {
+        check(numerical[i].master_ledger !== null && numerical[i].master_ledger === numerical[j].master_ledger && vertexById.get(numerical[i].master_ledger)?.kind === "masterZeta", "C10", "shared numerical source lacks master projection");
+        const entriesA = [...numerical[i].residuals, ...numerical[i].uncertainty_entries].map((id) => controlById.get(id));
+        const entriesB = [...numerical[j].residuals, ...numerical[j].uncertainty_entries].map((id) => controlById.get(id));
+        for (const left of entriesA) {
+          for (const right of entriesB) {
+            if (left.parent_source === right.parent_source && left.category === right.category) {
+              check(left.id === right.id || left.class === "covariance" || right.class === "covariance", "C17", "shared source/category is independently duplicated");
+            }
+          }
+        }
+      }
+    }
+  }
+  return true;
+}
+
+function clone(value) {
+  return structuredClone(value);
+}
+
+function rejectMutation(base, code, mutate, rawOverride = null) {
+  const candidate = clone(base);
+  mutate(candidate);
+  try {
+    const bytes = rawOverride === null ? canonicalBytes(candidate) : rawOverride(candidate);
+    verifyRegistry(parseCanonical(bytes), bytes);
+    return false;
+  } catch (error) {
+    return error instanceof Error && error.message.startsWith(`${code}:`);
+  }
+}
+
+function runFixtures(base) {
+  const byId = (registry, id) => registry.vertices.find((vertex) => vertex.id === id);
+  const edgeTo = (registry, src, dst) => registry.edges.find((edge) => edge.src === src && edge.dst === dst);
+  const fixtures = {
+    C1: rejectMutation(base, "C1", (r) => { byId(r, "row:finite-sector").strict_certificate = null; }),
+    C2: rejectMutation(base, "C2", (r) => { r.controls = r.controls.filter((control) => control.id !== "residual:tail"); }),
+    C3: rejectMutation(base, "C3", (r) => { byId(r, "row:diamond-left").validation_import = true; }),
+    C4: rejectMutation(base, "C4", (r) => { byId(r, "row:diamond-left").status = "closed"; byId(r, "row:diamond-left").theta = []; byId(r, "row:diamond-left").closure_basis = "strict-certificate"; byId(r, "row:diamond-left").strict_certificate = clone(byId(r, "row:finite-sector").strict_certificate); }),
+    C5_noncommuting: rejectMutation(base, "C5", (r) => { edgeTo(r, "row:diamond-right", "row:diamond-join").overlap.pairs = [["unit", "other"]]; }),
+    C5_omission: rejectMutation(base, "C5", (r) => { r.cells = []; }),
+    C6: rejectMutation(base, "C6", (r) => { byId(r, "row:numeric-b").evidence = []; }),
+    C7: rejectMutation(base, "C7", (r) => { r.controls.find((control) => control.id === "prescription:scheme-v1").value_hash = "f".repeat(64); }),
+    C8: rejectMutation(base, "C8", (r) => { byId(r, "row:diamond-left").theta = [4]; }),
+    C9: rejectMutation(base, "C9", (r) => { r.controls.find((control) => control.id === "residual:budget").used_as_absolute = true; }),
+    C10: rejectMutation(base, "C10", (r) => { byId(r, "row:numeric-b").master_ledger = null; }),
+    C11: rejectMutation(base, "C11", (r) => { byId(r, "row:diamond-left").citations.push("missing:vertex"); }),
+    C12: rejectMutation(base, "C12", (r) => { r.controls.find((control) => control.id === "prescription:scheme-v1").class = "residual"; }),
+    C13: rejectMutation(base, "C13", (r) => { byId(r, "row:numeric-a").residuals.push("residual:tail"); }),
+    C14: rejectMutation(base, "C14", (r) => { byId(r, "row:diamond-join").branch_discharged = null; }),
+    C15: rejectMutation(base, "C15", (r) => { r.edges = r.edges.filter((edge) => !(edge.src === "evidence:source" && edge.dst === "source:spectral-pilot")); }),
+    C16: rejectMutation(base, "C16", (r) => { byId(r, "row:numeric-a").residual_exhaustion = []; }),
+    C17: rejectMutation(base, "C17", (r) => { r.controls.find((control) => control.id === "residual:budget").category = "tail"; }),
+    C18: rejectMutation(base, "C18", () => {}, (r) => Buffer.from(`{ "schema":${JSON.stringify(r.schema)},"x":0}`, "utf8")),
+  };
+  check(Object.values(fixtures).every(Boolean), "FIXTURE", `failed mutations: ${Object.entries(fixtures).filter(([, passed]) => !passed).map(([id]) => id).join(",")}`);
+  return fixtures;
+}
+
+function main() {
+  const sourceBytes = readFileSync(fileURLToPath(import.meta.url));
+  const sourceSha256 = sha256(sourceBytes);
+  const runtimeSha256 = sha256(readFileSync(process.execPath));
+  const pilot = buildPilot();
+  const registryBytes = canonicalBytes(pilot);
+  const decoded = parseCanonical(registryBytes);
+  verifyRegistry(decoded, registryBytes);
+  const fixtures = runFixtures(pilot);
+  const fixtureSha256 = sha256(canonicalBytes(fixtures));
+  const codecSha256 = sha256(canonicalBytes(pilot.codec));
+  const summary = {
+    cells: pilot.cells.length,
+    codec_sha256: codecSha256,
+    controls: pilot.controls.length,
+    edges: pilot.edges.length,
+    evidence: pilot.evidence.length,
+    fixture_sha256: fixtureSha256,
+    fixtures_passed: Object.keys(fixtures).length,
+    node: process.version,
+    registry_sha256: sha256(registryBytes),
+    result: "PASS",
+    runtime_sha256: runtimeSha256,
+    source_sha256: sourceSha256,
+    status_vertices: pilot.vertices.filter((vertex) => vertex.kind === "output").length,
+    support_vertices: pilot.vertices.filter((vertex) => vertex.kind !== "output").length,
+    tests: pilot.tests.length,
+    version: VERSION,
+    vertices: pilot.vertices.length,
+  };
+  const runLog = Buffer.from(`${JSON.stringify(canonicalize(summary))}\n`, "utf8");
+  if (process.argv.includes("--registry")) process.stdout.write(registryBytes);
+  else process.stdout.write(runLog);
+}
+
+try {
+  main();
+} catch (error) {
+  process.stderr.write(`${VERSION} FAIL: ${error instanceof Error ? error.message : String(error)}\n`);
+  process.exitCode = 1;
+}
+// PU-P14.1m.4b-SOURCE-END
+~~~~
+
+**Resolution record P.14.1m.4b-R1.**
+
+| Field | Frozen value |
+|:--|:--|
+| Registered propositions and polarity | The repaired typed schema admits a nonvacuous finite semantic-kernel specialization on $\mathcal D_{\mathrm{pilot}}$; `positive-discharge` of the typed-kernel/codec pilot. Semantic registry acceptance is not entailed by source bytes on the explicitly two-completion class $\mathfrak B_{\mathrm{2c}}$; `nonentailment` on that exact class. A corpus-specific inference is pending an exhibited member whose packet is the sealed corpus source envelope. |
+| Domain | The exact 24-vertex pilot registry generated by the embedded 35,735-byte source, its populated codec tables, the single frozen diamond-cell manifest, and the nineteen registered mutations; for the indistinguishability component, the exact class $\mathfrak B_{\mathrm{2c}}$ defined in Proposition P.14.1m.4b. |
+| Premises | The repaired Definition P.14.1m types; exact source and runtime bytes; canonical NFC JSON; safe-integer scalar domain; the finite pilot candidate, graph, evidence, quantitative-control, and prescription records; for each $\mathfrak B_{\mathrm{2c}}$ member, admissibility of both source-identical completions and their displayed opposite acceptance values. |
+| Equivalence | Registry artifacts are equal exactly when their canonical bytes agree; pilot responses use the displayed equivalence partition; overlap paths are equal when their finite composed maps have identical canonical pair lists; source-only packets in $\mathfrak B_{\mathrm{2c}}$ are source-identical exactly when their complete $B$ bytes agree. |
+| Invocation | `node p15_semantic_pilot_v1.mjs`; `--registry` emits the exact canonical pilot input. |
+| Exhaustive budget and counters | `24` vertices (`7` output status and `17` support), `31` edges, `1` required cell, `4` controls, `9` evidence records, `18` numbered predicates, and `19` rejecting mutations. |
+| Negative fixtures | One mutation for every (C1)--(C18), with separate (C5) omissions of the frozen cell and inequality of submitted path composites. |
+| Verifier | Exact source, runtime, registry, codec-table, fixture, and run-log hashes displayed above. |
+| Integrity invalidator | Any displayed hash or counter mismatch, source/runtime change, canonical round-trip failure, omitted required pilot cell, or accepted registered mutation. |
+| Falsifier | A registered pilot-domain mutation accepted by the exact kernel, or a deterministic verifier whose complete input is $B$ and that is simultaneously sound and complete on a member of $\mathfrak B_{\mathrm{2c}}$. |
+| Provenance class | Exact finite construction, exhaustive two-candidate enumeration, typed reference-kernel execution, adversarial mutation test, and semantic indistinguishability proof. |
+| Nonvacuity | The accepted pilot has two inequivalent candidates with costs $0$ and $2$, strict selected gap $2$, nonempty open and pending rows, one shared numerical source, one locked prescription, and one explicitly checked diamond. The finite one-atom shell constructed in Proposition P.14.1m.4b supplies a member of $\mathfrak B_{\mathrm{2c}}$; sealed-corpus membership has its separate witness gate. |
+| Downstream consumer | The typed-kernel/codec-pilot child of `TV-P-15`; the conditional $\mathfrak B_{\mathrm{2c}}$ lemma is available to a future corpus-specific completion-pair record. |
+
+The strict execution returns
+`{"cells":1,"codec_sha256":"6d87a7b8b373d1f45018a05ba007167e06df3387955428e8b765b75eab1ee9a7","controls":4,"edges":31,"evidence":9,"fixture_sha256":"8750afe1343d1d99104dcf2fc143c8bafd9f62034f5cbdf24f12f3af7e26ec2b","fixtures_passed":19,"node":"v22.22.0","registry_sha256":"caf90b93bd1ac9672811b68e6a2c2fdbaf51d460563da1394142ca877d644d8d","result":"PASS","runtime_sha256":"1bec56ef7cfa9a76f3e0b7c0a87f220eb73f23102b9c0b4c7529a3f7c3ce7c31","source_sha256":"518d9a1287e3ad2305cc631399ae64cee82ab4b7cbde815bc608261abe5bef06","status_vertices":7,"support_vertices":17,"tests":18,"version":"P.14.1m.4b-semantic-pilot-v1","vertices":24}`.
+
+The accepted scope is the repaired type contract, the exact pilot-domain predicates, codec, graph manifest, and mutations, together with source indistinguishability on $\mathfrak B_{\mathrm{2c}}$. A corpus-specific nonentailment claim is owned by a completion-pair record exhibiting the sealed source envelope as a member of that class. `TV-P-15` retains `M+C` for a populated corpus-wide $\mathfrak G_{\mathrm{PU}}$, complete source-to-vertex and status-row coverage, accepted proof objects or sound terminating checkers for every invoked predicate, and the frozen complete manifest and evaluation of every actual dependency and overlap square. ∎
 
 **Remark P.14.1m.5 (Compression-Trajectory Schema for an Accepted Registry Snapshot).** Let $\varnothing\ne\mathcal C^{(0)}$ be the finite set of records in a populated registry instance accepted by Algorithm P.14.1m.0. Registered recovery maps contain identities and are closed under composition. A syntactic record-count compression step chooses $A\subseteq\mathcal C$ with $|A|\ge2$ and replaces it by one fresh record $r_A\notin\mathcal C\setminus A$ carrying maps that recover every member of $A$, while preserving every accepted strict certificate and status assignment. Thus
 $$
@@ -7668,6 +10338,156 @@ $$
 Every maximal trajectory from $\mathcal C^{(0)}$ therefore terminates after at most $|\mathcal C^{(0)}|-1$ steps. Composable recovery maps ensure that each terminal record recovers the initial records below it. The terminal form is singleton when one record recovers the entire initial snapshot, and otherwise is irreducibly plural relative to the declared steps. This is a record-count theorem, not a decrease of information, Kolmogorov complexity, PCE cost, or physical resources; any such interpretation requires its own cost-decrease certificate. Candidate records already named in the manuscript include $\mathfrak L_{\mathrm{PU}}$, $\mathfrak Z_{\mathrm{PU}}$, $\mathfrak C_{\Omega}$ when its projection ledger is accepted, and the marked-arena package; whether any candidate is admissible is a separate recovery-map certificate. The recurrent-ledger non-collapse status of Theorem R.3.5e.3 and the open status of Remark R.3.5e.5 are unchanged.
 
 *Proof.* Freshness of $r_A$ gives the displayed cardinality identity. Each step decreases the positive integer $\mu$ by at least one, so no trajectory contains more than $|\mathcal C^{(0)}|-1$ steps. Induction using identity and composable recovery maps recovers every initial record below each current record. Maximality gives the terminal alternatives. Status preservation is part of admissibility and creates no new physical postulate, strict certificate, operator, bridge condition, or acceptance gate. ∎
+
+**Definition P.14.1m.6 (Complete Alternative-Artifact Status Datum).** Let
+$$
+\mathfrak G_{\mathrm{PU}}
+=(\mathcal V,\mathcal E,\kappa_{\mathcal V},\sigma,
+\rho,\beta,\theta,\gamma,\delta,\zeta)
+$$
+be a registry accepted by Algorithm P.14.1m.0. Put
+$$
+\mathsf T_{\bot}
+=
+\{\bot_{\mathrm{unavailable}},\textsf{open},
+\textsf{certificate-pending},\textsf{closed}\},
+\qquad
+\bot_{\mathrm{unavailable}}
+\prec\textsf{open}
+\prec\textsf{certificate-pending}
+\prec\textsf{closed},
+\tag{P.14.1m.6a}
+$$
+and write $\sqcap$ and $\sqcup$ for meet and join in this finite chain. The value $\bot_{\mathrm{unavailable}}$ records that no accepted artifact supports the vertex after the imposed change. Definition P.14.1m retains its three-element closure-status codomain; the bottom value belongs only to the counterfactual calculation.
+
+A **complete alternative-artifact status datum** for this registry is a finite record
+$$
+\mathfrak K
+=
+(\mathfrak G_{\mathrm{PU}},\{\mathcal A(S)\}_{S\in\mathcal V},
+\operatorname{par},u,\xi),
+\tag{P.14.1m.6b}
+$$
+where $\mathcal A(S)$ is the finite nonempty set of every accepted proof-and-status artifact for $S$, $\operatorname{par}(a)\subseteq\mathcal V$ is the exact direct-parent set of artifact $a$, $u(a)\in\mathsf T_{\bot}\setminus\{\bot_{\mathrm{unavailable}}\}$ is the strongest local closure status justified by the artifact when all its direct parents are closed, and $\xi$ contains the source spans, source hashes, artifact hashes, proof objects, and checker records.
+
+For an adopted, external, or otherwise parentless root, the source declaration together with its owning status record is its empty-parent artifact. This artifact records the root's source status and has no derivational parent.
+
+The datum is accepted only when the finite checker verifies all of the following.
+
+1. The registry, sources, artifacts, and proofs have one common frozen version and source snapshot.
+2. For $a\in\mathcal A(S)$, every $R\in\operatorname{par}(a)$ has the parent-to-child edge $R\to S$. Conversely, every status-bearing edge into $S$ occurs in the direct-parent set of each artifact that uses it, and the union of the recorded artifact-parent relations is the status-bearing part of $\mathcal E$.
+3. The cited theorem stack, certificate fields, residual controls, branch conditions, and owning status rule verify $u(a)$ without using the closure status of a direct parent as an unrecorded premise.
+4. No accepted alternative artifact is omitted, and the original status is reconstructed exactly by
+   $$
+   \sigma(S)
+   =
+   \bigsqcup_{a\in\mathcal A(S)}
+   \left(
+   u(a)\sqcap
+   \bigsqcap_{R\in\operatorname{par}(a)}\sigma(R)
+   \right)
+   \qquad(S\in\mathcal V),
+   \tag{P.14.1m.6c}
+   $$
+   with the empty parent meet equal to $\textsf{closed}$.
+5. Every status-bearing source declaration occurs exactly once at its recorded span and hash, every artifact proof checks, and the dependency graph is finite and acyclic.
+
+**Algorithm P.14.1m.7 (Same-Version Rejection and Status Recalculation).** Let $\mathfrak K$ be accepted, and let
+$$
+\eta:F\longrightarrow\mathsf T_{\bot},
+\qquad
+\eta(S)\preceq\sigma(S),
+\tag{P.14.1m.7a}
+$$
+be a finite forced-status map whose value at every $S\in F$ is supplied by the accepted rejection, no-go, or status rule that owns the imposed change. Process $\mathcal V$ in a topological order of $\mathcal E$. For every artifact put
+$$
+q_\eta(a)
+=
+u(a)\sqcap
+\bigsqcap_{R\in\operatorname{par}(a)}\sigma^\eta(R),
+\tag{P.14.1m.7b}
+$$
+and define
+$$
+\sigma^\eta(S)
+=
+\begin{cases}
+\eta(S),&S\in F,\\[1mm]
+\displaystyle\bigsqcup_{a\in\mathcal A(S)}q_\eta(a),&S\notin F.
+\end{cases}
+\tag{P.14.1m.7c}
+$$
+The algorithm returns
+$$
+\mathcal D_{\mathrm{reaudit}}
+=\operatorname{Desc}_{\mathcal E}(F),
+\qquad
+\mathcal D_{\mathrm{dem}}
+=\{S:\sigma^\eta(S)\prec\sigma(S)\},
+\qquad
+\mathcal D_{\mathrm{drop}}
+=\{S:\sigma^\eta(S)=\bot_{\mathrm{unavailable}}\}.
+\tag{P.14.1m.7d}
+$$
+Here $\operatorname{Desc}_{\mathcal E}(F)$ is the reflexive descendant set of $F$ in the parent-to-child graph.
+A surviving artifact with a weaker value contributes that weaker value to the join in (P.14.1m.7c), so the returned demotion set includes every surviving vertex whose strongest available status decreased.
+
+**Theorem P.14.1m.8 (Termination, Exactness, and Alternative-Artifact Preservation).** Algorithm P.14.1m.7 terminates and gives a unique map $\sigma^\eta$. For every vertex,
+$$
+\sigma^\eta(S)\preceq\sigma(S).
+\tag{P.14.1m.8a}
+$$
+Every vertex outside $\operatorname{Desc}_{\mathcal E}(F)$ retains its original status. The set $\mathcal D_{\mathrm{dem}}$ contains exactly all status-changed vertices, including vertices supported by a surviving weaker alternative, and $\mathcal D_{\mathrm{drop}}$ contains exactly the vertices with no surviving accepted support. Among status maps satisfying the forced values on $F$ and the complete accepted artifact equations at every unforced vertex, $\sigma^\eta$ is the pointwise strongest one.
+
+*Proof.* Acyclicity gives a finite topological order, so (P.14.1m.7b)--(P.14.1m.7c) determine one value at each vertex and terminate. Compare the recalculation with the baseline identity (P.14.1m.6c). The forced values satisfy $\eta(S)\preceq\sigma(S)$. If the inequality holds for every direct parent of an unforced vertex, monotonicity of meet and join gives $q_\eta(a)$ no stronger than its baseline value for every artifact and hence $\sigma^\eta(S)\preceq\sigma(S)$. Induction proves (P.14.1m.8a). If $S$ is not a descendant of $F$, none of its artifact ancestors is forced; the same induction with equality and (P.14.1m.6c) gives $\sigma^\eta(S)=\sigma(S)$. Equation (P.14.1m.7d) then proves the two exact-set assertions. Finally, any status map satisfying the forced values and artifact bounds is no stronger than (P.14.1m.7c) at each successive vertex, so topological induction proves pointwise maximality. A registry snapshot that makes the recalculated status operative must delete the $\mathcal D_{\mathrm{drop}}$ vertices, update every affected $\rho$, $\beta$, $\theta$, $\gamma$, $\delta$, and $\zeta$ field, and pass Algorithm P.14.1m.0; Theorem P.14.1m.8 supplies the exact status calculation, while Algorithm P.14.1m.0 remains the acceptance gate for the resulting registry. ∎
+
+**Convention P.14.1s (Global Adopted-Postulate Ledger).** Fix a versioned typed language $L_*$ and a source snapshot. The adopted-postulate ledger is a finite record whose entries have the form
+$$
+\mathfrak p
+=
+(\iota,\Sigma,\ell,s,\mathcal D,\mathcal B,\mathcal X,\chi),
+\tag{P.14.1s.1}
+$$
+where $\iota$ is a stable identifier, $\Sigma\in\operatorname{Sent}(L_*)$ is the exact adopted statement, $\ell$ is its source file, line span, and source hash, $s\in\{\textsf{adopted},\textsf{proved},\textsf{refuted}\}$ is its status, $\mathcal D$ is its finite direct-dependency set, $\mathcal B$ is the finite set of consuming branches, $\mathcal X$ contains its independently stated evidence, falsifier, and any countermodel, and $\chi$ contains the cited proof, model, source, and checker hashes.
+
+A populated ledger is accepted only when the following finite checks pass.
+
+1. **Coverage and registry agreement.** Every source declaration carrying adopted-premise status in the frozen snapshot has exactly one entry. Its identifier is a vertex of the same snapshot of $\mathfrak G_{\mathrm{PU}}$; every dependency and every status-bearing consumer edge agrees with $\mathcal E$.
+2. **Acyclicity.** The dependency graph on the entries is finite and acyclic. No consumer or descendant of $\mathfrak p$ occurs in a proof used to change the status of $\mathfrak p$.
+3. **Certified deduplication.** The checker partitions entries only within one common frozen language, type convention, and branch context. It places two entries in the same block only when it accepts derivations of both $\Sigma\Rightarrow\Sigma'$ and $\Sigma'\Rightarrow\Sigma$, using neither entry as an undischarged premise and using no descendant of either entry. It then verifies reflexivity, symmetry, and transitivity of the resulting relation and verifies every pairwise mutual-derivability certificate within each block. Entries lacking these certificates remain distinct. After item 4 is checked, a $\textsf{proved}$ or $\textsf{refuted}$ lifecycle tag propagates across its certified-equivalence block; incompatible proved/refuted tags reject the snapshot. Let $s([\mathfrak p])$ denote the resulting common block tag and write
+   $$
+   k_{\mathrm{total}}
+   :=
+   \left|
+   \{[\mathfrak p]_{\sim_{\mathrm{cert}}}:s([\mathfrak p])=\textsf{adopted}\}
+   \right|.
+   \tag{P.14.1s.2}
+   $$
+4. **Discharge and refutation.** Status $\textsf{proved}$ requires a checked derivation of $\Sigma$ from closed non-descendant vertices. Status $\textsf{refuted}$ requires one of: a checked derivation of $\neg\Sigma$ from closed non-descendant vertices; an accepted empirical falsifier under $\Sigma$'s owning status rule; or, when $\Sigma$ is explicitly a universal mathematical assertion over a declared class, a checked counterexample together with a proof that the counterexample belongs to that class. A model of the declared dependencies that falsifies a general adopted premise records non-entailment under that premise set in $\mathcal X$ and leaves its lifecycle tag $\textsf{adopted}$. Every entry not meeting the stated proof or refutation rule remains $\textsf{adopted}$.
+5. **Re-derivation record.** Every new accepted snapshot records, for each standing adopted entry, a declared finite proof search or derivation attempt, its input set, method, bound, and outcome. A successful checked proof invokes item 4. Exhaustion of a bounded search records only that bounded outcome and does not establish independence.
+
+The field $s$ is a premise-lifecycle tag, distinct from the closure-status map $\sigma$ of Definition P.14.1m. A change to $s=\textsf{proved}$ or $s=\textsf{refuted}$ becomes operative only in a same-version registry snapshot that passes Algorithm P.14.1m.0 with the corresponding proof or no-go vertices and status propagation.
+
+This ledger is an auxiliary projection of the strict-certificate registry. Its definition adopts no premise and changes no status until a populated record passes the stated checks.
+
+**Convention P.14.1t (Armed-Falsifier Pairing).** Every numerical or physical-identification branch row whose construction used an already published comparison value is paired, when test readiness is claimed, with a finite prospective record
+$$
+\mathfrak f
+=
+(\iota,S,O,\Omega,\pi,\mathcal L,\mathcal R,
+\mathcal A_{\mathrm{ev}},\tau,\mathfrak K,
+\eta_{\mathrm{rej}},\sigma^{\mathrm{rej}},
+\mathcal D_{\mathrm{dem}},\mathcal D_{\mathrm{drop}},
+\mathfrak T_{\mathrm{rej}},\chi).
+\tag{P.14.1t.1}
+$$
+Here $\iota$ is the stable identifier of the comparison row and its same-snapshot registry vertex; every adopted premise consumed by $S$ is linked separately to its Convention P.14.1s entry. The remaining experiment or formal-test fields are: the exact branch statement $S$; a held-out observable or independent formal obligation $O$ not used in the construction; its outcome space $\Omega$; the calibrated protocol or formal checker $\pi$; the likelihood and covariance model or exact decision relation $\mathcal L$; the rejection region $\mathcal R$; the acceptance/evidence rule $\mathcal A_{\mathrm{ev}}$; and the stopping rule and data cutoff $\tau$. For an empirical record, $\mathcal A_{\mathrm{ev}}$ states the support claim, acceptance region or evidential threshold, registered alternative and effect size, error level, and power or sensitivity target. For a formal obligation, it states the exact acceptance predicate and checking kernel.
+
+The status fields are an accepted complete alternative-artifact datum $\mathfrak K$ for the same frozen registry, the forced map $\eta_{\mathrm{rej}}$ supplied by the owning rejection rule, the recalculated status map $\sigma^{\mathrm{rej}}$, and the exact demotion and unavailability sets returned by Algorithm P.14.1m.7. The prospective transformation $\mathfrak T_{\mathrm{rej}}$ deletes the $\mathcal D_{\mathrm{drop}}$ vertices, restricts the parent-to-child graph, and supplies every changed $\rho$, $\beta$, $\theta$, $\gamma$, $\delta$, and $\zeta$ field. Before the held-out record is accessible, the checker must verify that this transformed counterfactual snapshot passes Algorithm P.14.1m.0.
+
+The pairing is accepted only when every field is frozen before the held-out record is accessible; the observable map, units, error model, and source ownership are complete; and an independent checker can reproduce the decision from the frozen artifacts. The checker runs Algorithm P.14.1m.7 on $(\mathfrak K,\eta_{\mathrm{rej}})$ and verifies that its returned status map, demotion set, and unavailability set are exactly $\sigma^{\mathrm{rej}}$, $\mathcal D_{\mathrm{dem}}$, and $\mathcal D_{\mathrm{drop}}$. It also verifies the prospective registry transformation described above. Rejection activates that accepted transformed snapshot and demotes exactly $\mathcal D_{\mathrm{dem}}$; a vertex in $\mathcal D_{\mathrm{dem}}\setminus\mathcal D_{\mathrm{drop}}$ remains available only at its recalculated weaker status.
+
+Passing an empirical $\mathcal A_{\mathrm{ev}}$ supplies the support claim at its registered error and power or evidential threshold. Passing a formal $\mathcal A_{\mathrm{ev}}$ supplies the stated formal certificate. An adopted premise changes lifecycle status only through Convention P.14.1s item 4 and a same-version registry accepted by Algorithm P.14.1m.0. A post-comparison numerical or physical-identification row without an accepted pairing remains a retrodictive diagnostic and carries no test-readiness status.
 
 
 ### P.14.4 The Derivation Chain
@@ -7826,9 +10646,53 @@ The status ledger above concerns object-level claims: assertions about physical 
 
 **Convention P.14.9a (Object-Level / Meta-Level Separation).** A PU object-level claim is a finite-record assertion about a physical branch, response quotient, operator, sector value, or bridge map. Its manuscript status is assigned by Convention P.14.1a. A populated tuple satisfying Definition P.14.1m and Algorithm P.14.1m.0 has a mathematically accepted registry status. Calling that status **machine-audited** additionally requires a versioned executable verifier or proof kernel, a termination and soundness certificate for every invoked semantic predicate, the exact input artifact and cryptographic hash, and a recorded successful execution result. The schema template alone supplies none of these. A PU meta-level claim is a methodological assertion about the comparison criterion for theories, the role of compression in theory choice, or PU's own positioning under that criterion. Meta-level claims may be recorded in Appendix P, the discussion, or the conclusion, but they do not create new physical sectors, constants, operators, certificates, or validation rows.
 
-**Definition P.14.9b (Structural Description Cost).** For a theory or framework $\mathcal T$ and empirical domain $\mathcal E$, let $K_{\mathcal E}(\mathcal T)$ denote the structural description cost of producing the predictions of $\mathcal T$ on $\mathcal E$ from the admitted initial data, boundary data, and observational protocols. $K_{\mathcal E}$ is a methodological comparison proxy modeled on Kolmogorov description length, not a new physical observable. It is generally not computable exactly and is proxy-dependent in practice; comparisons using it must therefore state the shared domain $\mathcal E$ and the structural inputs counted.
+**Definition P.14.9b (Structural Description Cost).** For a theory or framework $\mathcal T$ and empirical domain $\mathcal E$, let $K_{\mathcal E}(\mathcal T)$ denote the structural description cost of producing the predictions of $\mathcal T$ on $\mathcal E$ from the admitted initial data, boundary data, and observational protocols. Each comparison fixes one versioned structural-description language, decoder, admitted input and witness fields, and cost unit. If multiple encodings are admitted, the comparison supplies certified translation maps and their overhead and either proves that the reported ordering is invariant or labels the result as representation-relative. $K_{\mathcal E}$ is a methodological comparison proxy modeled on Kolmogorov description length, not a new physical observable. It is generally not computable exactly and is proxy-dependent in practice; comparisons using it must therefore state the shared domain $\mathcal E$ and the structural inputs counted. Description length, verifier runtime, thermodynamic dressing cost $C_X$, and registered bath heat remain distinct coordinates unless a physical implementation bridge relates them.
 
 **Principle P.14.9c (Comparative K-Adequacy).** If two frameworks $\mathcal T_1$ and $\mathcal T_2$ are predictively adequate on a shared empirical domain $\mathcal E$, predictive overlap alone does not establish theoretical equivalence. On the shared domain, the framework with greater predictive yield per structural description cost, or with equal yield and lower $K_{\mathcal E}$, is the better compression of the same content. Coverage outside $\mathcal E$ can justify additional structure only when it supplies additional predictive yield on the enlarged domain.
+
+**Theorem P.14.9c.1 (Encoding-Robust K-Adequacy Bounds).** Fix the shared domain $\mathcal E$ and two universal prefix-free description languages $U,V$. Suppose fixed translators give
+$$
+K_{\mathcal E}^U(\mathcal T)
+\le
+K_{\mathcal E}^V(\mathcal T)+c_{V\to U},
+\qquad
+K_{\mathcal E}^V(\mathcal T)
+\le
+K_{\mathcal E}^U(\mathcal T)+c_{U\to V}
+\tag{P.14.9c.1a}
+$$
+for every compared framework, and set $C=\max\{c_{V\to U},c_{U\to V}\}$. Then
+$$
+\left|K_{\mathcal E}^U(\mathcal T)-K_{\mathcal E}^V(\mathcal T)\right|
+\le C
+\tag{P.14.9c.1b}
+$$
+and, for any pair $\mathcal T_1,\mathcal T_2$,
+$$
+\left|
+\bigl(K_{\mathcal E}^U(\mathcal T_1)-K_{\mathcal E}^U(\mathcal T_2)\bigr)
+-
+\bigl(K_{\mathcal E}^V(\mathcal T_1)-K_{\mathcal E}^V(\mathcal T_2)\bigr)
+\right|
+\le2C.
+\tag{P.14.9c.1c}
+$$
+Hence an equal-yield description advantage larger than $2C$ has the same sign in both languages.
+
+Let $Y_{\mathcal E}(\mathcal T)\ge0$ be a language-independent predictive-yield functional and suppose $K_{\mathcal E}^U(\mathcal T)>C$. The score $S^V_{\mathcal E}=Y_{\mathcal E}/K_{\mathcal E}^V$ obeys
+$$
+\frac{Y_{\mathcal E}(\mathcal T)}
+{K_{\mathcal E}^U(\mathcal T)+C}
+\le
+S^V_{\mathcal E}(\mathcal T)
+\le
+\frac{Y_{\mathcal E}(\mathcal T)}
+{K_{\mathcal E}^U(\mathcal T)-C}.
+\tag{P.14.9c.1d}
+$$
+Two such intervals being disjoint in one order certifies that order throughout the declared translator class. Overlapping intervals leave the ranking unresolved by the compiler bounds.
+
+*Proof.* Each inequality in (P.14.9c.1a) rearranges to one side of (P.14.9c.1b). Applying the triangle inequality to the two theorywise differences gives (P.14.9c.1c), and a margin exceeding $2C$ cannot change sign. Positivity of the denominators reverses neither reciprocal bound, so substituting (P.14.9c.1b) into $Y_{\mathcal E}/K_{\mathcal E}^V$ gives (P.14.9c.1d). Disjoint score intervals fix the order for every value allowed by those bounds. When the intervals overlap, these translator bounds alone certify neither order; additional language-specific information is required. ∎
 
 **Remark P.14.9d (Application to PU).** PU is bound by Principle P.14.9c. It cannot dismiss quantum mechanics, general relativity, the Standard Model, or any alternative framework merely by reproducing their predictions. On a shared domain, PU must either derive with lower explicit structural input what the competitor postulates, or supply additional predictive yield that justifies any additional structure. This is the methodological reading of the input-output economy statement in Section 14.6.8.
 
@@ -9212,6 +12076,19 @@ The joint determination is *exclusive* when any proposed value of an output $X_i
 
 **Local refutation rule.** The factorization data $(F_i,\{O_{ij}\})$ make Definition P.16a.2 sectorwise falsifiable. If any sector $i\in\mathfrak X_{\mathrm{PU}}$ admits no admissible map $F_i$ factoring through $(\mathfrak L_0,\mathcal P,\mathfrak C_i)$ — equivalently, if the existing derivation chain for $X_i$ requires a numerical parent datum not contained in $\mathfrak L_0$, in $\mathcal P$, in the registered certificate gate $\mathfrak C_i$ of Convention P.14.1k, or transported through an accepted overlap map — then joint structural determination fails at sector $i$ and Conjecture P.16a.1 is refuted at that sector under the stability clause. If any pair $(i,j)$ has an accepted overlap map $O_{ij}$ but the equality $O_{ij}\circ F_i=F_j$ fails on the common retained parent domain, joint determination fails at the pair $(i,j)$ and the conjecture is refuted at that pair. This local refutation rule is the sectorwise instance of the registry-stability clause of Conjecture P.16a.1 and is recorded here without modifying the conjecture's open status.
 
+**Proposition P.16a.2a (Certificate-Coordinate Circularity Witness).** Let $D$ be any proposed parent domain and $O$ any nonempty output set. If a factorization audit permits the certificate coordinate to contain an unrestricted copy of $O$, then every output assignment factors through the certificate coordinate independently of $D$: take
+$$
+\mathfrak C=O,
+\qquad
+F:D\times\mathfrak C\to O,
+\qquad
+F(d,c)=c.
+\tag{P.16a.2a.1}
+$$
+Thus an informative joint-determination certificate must enforce the existing target-clean condition on every $\mathfrak C_i$: its decision-active numerical fields are frozen independently of the output being explained, and the audit rejects any field that merely stores that output or an invertible recoding of it.
+
+*Proof.* For every nominated output $x\in O$ and every $d\in D$, choosing the certificate value $c=x$ gives $F(d,c)=x$. The same construction works when $D$ is a singleton, so existence of this factorization carries no dependence on the proposed parent. Excluding the output coordinate and its invertible recodings blocks this universal projection witness. ∎
+
 ### P.16a.2 The Population-Tuning Conjecture
 
 **Conjecture P.16a.1 (Population-Parameter Status of Apparent Free Constants).** The apparent free constants of nature — including but not limited to the fine-structure constant $\alpha^{-1}$, the cosmological-constant value $\Lambda L_P^2$, electroweak threshold data, CKM and PMNS mixing entries, the baryon asymmetry $\eta_B$, and determinant-prefactor data — are jointly determined by the population configuration $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ relative to the recurrent minimal-branch ledger $\mathfrak L_0$ in the sense of Definition P.16a.2. Equivalently, no independently free numerical parameter remains in the ledger-routed derivation chain beyond $\mathfrak L_0$, the population configuration $\mathcal P$, and the certificate gates already recorded in Convention P.14.1k.
@@ -10587,7 +13464,20 @@ For every intuitive creative episode:
 
 *Proof.* Item 1 is Theorem P.16b.10.3. For item 2, an approximate match is not an isomorphism, so truth is not preserved by invariance alone. A quantitative conclusion is licensed only after specifying a discrepancy metric $d$ on the retained test family and a modulus $\omega_\sigma$ for the transported structural statement $\sigma$, so that a match with discrepancy at most $\epsilon$ yields an error bound at most $\omega_\sigma(\epsilon)$. Without $d$ and $\omega_\sigma$, there is no well-defined theorem-level error statement. Item 3 is Theorem P.16b.10.4. Definition P.16b.10.2 lists only transported structural consequences, transferred hypotheses, and tests; hence any output lacking one of these statuses is not licensed by the decompression operation. ∎
 
-**Conjecture P.16b.10.7 (Sufficiency for Intuitive Structural Creativity).**
+**Proposition P.16b.10.6a (Bare Decompression Admits Zero-Novelty Episodes).** Shape recognition followed by decompression is not sufficient for genuine new content. Let $A=B$ be the same finite retained model region, let $\varphi=\operatorname{id}_A$, let $\operatorname{Ann}(A)=\varnothing$, and suppose every member of $\operatorname{Str}(A)$ is already retained in $B$. Then $\varphi$ is an exact shape match and Definition P.16b.10.2 executes, but
+$$
+\operatorname{Decomp}_{\varphi}(A\to B)
+\subseteq
+\operatorname{Str}(B)
+\tag{P.16b.10.6a.1}
+$$
+adds no content to the target model. A sufficiency claim therefore requires an additional novelty predicate and a proof that the decompressed output lies outside the target's prior retained closure.
+
+*Proof.* The identity preserves every typed relation, response, and cost, so Theorem P.16b.9.5 recognizes the shape and Theorem P.16b.10.3 transports each structural statement to itself. There are no annotations to generate hypotheses. By hypothesis every transported statement is already retained in $B$, proving (P.16b.10.6a.1) and the zero-novelty conclusion. ∎
+
+The following conjecture has the opposite implication direction: it asks whether every genuinely creative output admits a shape-and-decompression representation. Proposition P.16b.10.6a leaves that representation-exhaustiveness direction open.
+
+**Conjecture P.16b.10.7 (Representation Exhaustiveness for Intuitive Structural Creativity).**
 
 Every instance of intuitive structural creativity that produces genuine new content in a predictive model can be represented as shape recognition followed by decompression.
 
@@ -11814,7 +14704,8 @@ The zero of a profile cost identifies the cogito only on the separating-origin b
 | Corollary P.16b.16.3 | Shannon projection is many-to-one | theorem-level boundary |
 | Theorem P.16b.16.4 | Information projections do not replace role-position equivalence | theorem-level boundary |
 | Corollary P.16b.16.5 | Cogito-zero boundary requires the separating-origin branch | theorem-level boundary |
-| Conjecture P.16b.10.7 | Shape recognition plus decompression suffices for intuitive structural creativity | open conjecture |
+| Proposition P.16b.10.6a | Shape recognition plus decompression permits zero-novelty episodes, so the reverse sufficiency implication fails | theorem-level finite counterexample |
+| Conjecture P.16b.10.7 | Every genuinely creative output admits a shape-recognition and decompression representation | open representation-exhaustiveness conjecture |
 
 ## P.16c Generative Non-Closure: Axioms as Stable Responses to Incompleteness
 
@@ -11906,6 +14797,77 @@ The first claim is formal-system-relative, the second is predictor-and-cycle-rel
 | Existence of a local axiom-stabilizer | Theorem A.6.4 | theorem-level for cycles satisfying every stated finite-cycle hypothesis |
 | Conservative inversion | Theorem P.16c.4 | conditional philosophical theorem |
 | No promotion of physical branch status | Theorem A.6.6 | theorem-level conservativity guard |
+| Response-free candidate exclusion | Corollary A.6.9 | necessary retained-domain condition with a finite admission certificate |
+| Twisted-diagonal obstruction | Lemma P.16c.7.2; Proposition P.16c.7.3 | common fixed-point-free contradiction step on the registered typed instances |
+| Certified finite diagonal ladder | Definition P.16c.8.1; Theorem P.16c.8.2 | finite rungwise accessibility with a fresh same-cycle boundary |
+
+**Remark P.16c.6.1 (Cogito--Diagonal Type Separation).** Foundational Certainty P.2.1 certifies the occurrence of an awareness or process, expressed by the existential $\exists\mathcal C$. Theorem A.6.2 instead quantifies over a trace-certified predictor $S$, a cycle $t$, a represented domain containing $E_{S,t}$, and an $S$-internal closure map. The existential occurrence supplies no closure-map verdict, and the active-register theorem has no occurrence-negation premise. The two results therefore retain their stated statuses without either serving as a premise for the other: Foundational Certainty supplies the epistemic root, while Theorem A.6.2 supplies the scoped same-cycle boundary.
+
+### P.16c.7 Twisted-diagonal schema and adjacent obstruction modes
+
+**Definition P.16c.7.1 (Live Twisted-Valuation Datum).** A live twisted-valuation datum is a tuple
+$$
+\mathfrak V=(X,V,g,o,D,r,\delta)
+$$
+where $X$ and $V$ are nonempty sets, $g:V\to V$ has no fixed point, $o:X\to V$ is the realized-value map, $\varnothing\ne D\subseteq X$, $r:D\to V$ is a candidate valuation row, and $\delta\in D$ satisfies
+$$
+o(\delta)=g(r(\delta)).
+\tag{P.16c.7.1}
+$$
+The row is **veridical** when $r(x)=o(x)$ for every $x\in D$.
+
+**Lemma P.16c.7.2 (Twisted-Diagonal Obstruction).** No live twisted-valuation datum has a veridical row.
+
+*Proof.* If $r$ were veridical, then at the live witness
+$$
+r(\delta)=o(\delta)=g(r(\delta)),
+$$
+so $r(\delta)$ would be a fixed point of $g$, contrary to Definition P.16c.7.1. ∎
+
+**Proposition P.16c.7.3 (Registered Twisted-Diagonal Instances).** The contradiction step in each result listed below is an instance of Lemma P.16c.7.2 on the stated data. All domain, representation, closure, timing, and intervention hypotheses remain those of the owning result.
+
+| Owning result | Value set and twist | Candidate row and live witness |
+|:--|:--|:--|
+| Theorem 10; Theorem A.1.1 | $V=\{0,1\}$ and $g=\operatorname{NOT}$ | the nominated predictor's announced-bit row; $\delta=D(P)$ or $S_{\mathrm{diag}}^{P}$ |
+| Theorem 10a | $V=\{0,1\}$ and $g=\tau$ | $r(x)=\operatorname{eval}(a_d,x)$, $o(x)=d(x)$, and $\delta=a_d$ |
+| Theorem 11; Theorem A.1.3 | $V=[0,1]$ and $g(p)=0$ for $p>1/2$, $g(p)=1$ for $p\le1/2$ | the reported-marginal row; $\delta=S_{\mathrm{diag}}^{P}$ |
+| Theorem A.6.2 | $V=\{0,1\}$ and $g=\operatorname{NOT}$ | a total standard-sound Boolean closure row; $\delta=E_{S,t}$ |
+| Theorem 14.1 | $V=\{0,1\}$ and $g=\operatorname{NOT}$ | the transcript-output row on the support of the diagonal-policy experiment; $\delta$ is any realized transcript under policy (14.1b) |
+| Theorem P.3.5.9, encoded branch | $V=\{0,1\}$ and $g=\operatorname{NOT}$ | the nominated binary-component row of the putative uniformly correct predictive-specification procedure; $\delta$ is the member constructed by Lemma P.3.5.4 |
+
+*Proof.* The deterministic SPAP constructions set the realized bit to the negation of the announced bit at the nominated diagonal member. Predicate-realization closure in Theorem 10a gives $r=o=d$, while $d(a_d)=\tau(\operatorname{eval}(a_d,a_d))=\tau(r(a_d))$. For the probabilistic construction, the displayed $g$ has no fixed point: $p>1/2$ gives $g(p)=0\ne p$, while $p\le1/2$ gives $g(p)=1\ne p$. Equation (A.3) supplies the live witness. In Theorem A.6.2, totality restricts the closure row to $\{0,1\}$ and standard soundness makes it agree with the standard truth value, while Equation A.5.6a.3 supplies the Boolean twist at $E_{S,t}$. Under Theorem 14.1's intervention-stability hypothesis, policy (14.1b) supplies the live equation at every realized transcript in its support. Lemma P.16c.7.2 therefore gives pointwise disagreement throughout that support, so the agreement probability is zero and contradicts (14.1a) for every $\epsilon<1$. Lemma P.3.5.4 supplies the same Boolean diagonal member for the encoded branch of Theorem P.3.5.9. Lemma P.16c.7.2 gives each remaining contradiction after those owning hypotheses are instantiated. ∎
+
+**Remark P.16c.7.4 (Adjacent Obstruction Modes).** Theorem P.14.9h uses a fresh zero-ary predicate and two model expansions to prove model-theoretic underdetermination; it requires no fixed-point-free endomap. The unfolded branch of Theorem P.3.5.9 uses the proper-component well-foundedness obstruction of Theorem P.3.5.5; it requires no valuation row. These two modes remain independently typed and adjacent to the twisted-diagonal schema. Their coexistence does not enlarge the quantifier domain of any of the three arguments.
+
+### P.16c.8 Certified finite diagonal ladder
+
+**Definition P.16c.8.1 (Certified Finite Diagonal Ladder).** A certified finite diagonal ladder of height $N\ge1$ is a finite record
+$$
+\mathfrak L_N
+=
+\left(
+\{(S_n,t_n,E_n)\}_{n=0}^{N},
+\{W_n\}_{n=0}^{N-1}
+\right)
+\tag{P.16c.8.1}
+$$
+with the following properties.
+
+1. Each $S_n$ is trace-certified and $E_n=E_{S_n,t_n}$ is the live diagonal sentence of Definition A.6.1 for the represented cycle $(S_n,t_n)$.
+2. Each $W_n$ is a finite checked witness for one of the two constructions in Theorem A.5.6a.4: either an external processor with the access and evaluation data of Equations A.5.6a.5--A.5.6a.6, or a faithful historical record and later evaluation satisfying Equations A.5.6a.7--A.5.6a.8.
+3. The verified result supplied by $W_n$ is retained and available before the cycle $t_{n+1}$ is evaluated. The next triple $(S_{n+1},t_{n+1},E_{n+1})$ is separately trace-certified; predecessor access does not identify $E_{n+1}$ with $E_n$.
+
+A rung carries a stable axiom-stabilizer only when the independent hypotheses of Theorem A.6.4 are certified for that rung.
+
+**Theorem P.16c.8.2 (Rungwise Accessibility and Persistent Live Boundary).** Every certified finite diagonal ladder satisfies:
+
+1. for each $n<N$, the predecessor sentence $E_n$ is processed by the external or historical witness $W_n$ and its verified result is available at rung $n+1$;
+2. for every $n\le N$, no $S_n$-internal finite-cycle closure map is both total and standard-sound on a domain containing $E_n$;
+3. every rung satisfying all hypotheses of Theorem A.6.4 induces a stable axiom-stabilizer on its retained finite-response domain; and
+4. the final sentence $E_N$ remains subject to item 2. The finite ladder record supplies no total standard-sound closure map on a union domain.
+
+*Proof.* Item 1 is Theorem A.5.6a.4 applied to the checked alternative recorded by $W_n$, together with Definition P.16c.8.1(3). Item 2 is Theorem A.6.2 applied independently to each trace-certified pair $(S_n,t_n)$. Item 3 is Theorem A.6.4 on exactly those rungs carrying its hypotheses. Applying item 2 at $n=N$ proves the first sentence of item 4. Definition P.16c.8.1 records only the finitely many rungwise maps and successor witnesses; it defines no union-domain closure map, so no such map is supplied by the ladder construction. ∎
+
 
 ---
 

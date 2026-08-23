@@ -1740,6 +1740,36 @@ is not divisible by $3$. Thus any free-action assertion must be restricted to th
 
 *Proof.* Conditions 1--5 instantiate the rank-one complex-character case of Theorem Y.11.2b with $|G|=3$, giving the RMS multiplier $1/\sqrt3$. Condition 6 places that multiplier in $\alpha_\nu$, so $\alpha_\nu=(3/2)/\sqrt3=\sqrt3/2$. For the obstruction, a free action of a finite group on a finite CW complex gives a covering $X\to X/G$ of degree $|G|$ and hence $\chi(X)=|G|\chi(X/G)$. Since $\chi(\operatorname{Gr}_{\mathbb C}(2,8))=28$ is not divisible by $3$, no free global $\mathbb Z_3$ action exists. ∎
 
+**Theorem Y.11.2d (Complete Orthogonal Triality-Lift and Projection Classification).** Let $V$ be a finite-dimensional real Euclidean space and let $R\in O(V)$ satisfy $R^3=I$. Up to orthogonal conjugacy there are unique integers $r_0,r_1\ge0$ such that
+$$
+V\cong\mathbb R^{r_0}\oplus(\mathbb R^2_{2\pi/3})^{\oplus r_1},
+\qquad
+\dim_{\mathbb R}V=r_0+2r_1,
+\tag{Y.11.2d.1}
+$$
+where $R$ is the identity on the first summand and a $120^\circ$ rotation on every two-plane. The invariant-point subspace is exactly $V^R\cong\mathbb R^{r_0}$, and complexification contains $r_0$ trivial characters together with $r_1$ copies each of $\chi$ and $\bar\chi$.
+
+If an isotropic fluctuation on $V$ has covariance $C=(\sigma_{\mathrm{tot}}^2/n)I$ with $n=r_0+2r_1$, the RMS fractions retained by the fixed real subspace and the full nontrivial real isotypic subspace are
+$$
+\sqrt{\frac{r_0}{n}},
+\qquad
+\sqrt{\frac{2r_1}{n}},
+\tag{Y.11.2d.2}
+$$
+respectively. A single normalized complex character line or one oriented real response direction has fraction $1/\sqrt n$. For one real regular $\mathbb Z_3$ representation, $(r_0,r_1)=(1,1)$: a complex character line gives $1/\sqrt3$, whereas retaining the full real conjugate pair gives $\sqrt{2/3}$.
+
+*Proof.* The minimal polynomial of $R$ divides
+$$
+x^3-1=(x-1)(x^2+x+1).
+$$
+Orthogonality makes $R$ normal, so the real spectral theorem decomposes $V$ into its $+1$ eigenspace and real planes carrying the conjugate eigenvalues $e^{\pm2\pi i/3}$. A reflection conjugates the two rotation orientations, so the multiplicities $(r_0,r_1)$ completely classify the orthogonal conjugacy class. The fixed vectors are exactly the $+1$ summand, and complexification gives the stated characters. For isotropic covariance and an orthogonal projector $P$ of real rank $r$,
+$$
+\mathbb E\|PX\|^2=\operatorname{tr}(PC)=\frac r n\sigma_{\mathrm{tot}}^2.
+$$
+Taking $r=r_0$, $2r_1$, or $1$ proves (Y.11.2d.2) and the one-direction formula. ∎
+
+**Resolution record Y.11.2d-R1 (`TV-Y-10`, analytic component).** Theorem Y.11.2d gives `positive-discharge` of every finite orthogonal linear triality lift, its invariant subspace, and its real/complex character projection factors. The remaining certificate layer must construct the lift on the retained Majorana saddle support, audit nonlinear fixed loci and measure, and prove that a selected rank-one factor enters the exponent coefficient rather than another ledger slot.
+
 **Corollary Y.11.3** (Certified Half-Step Origin). *On the hypotheses of Theorem Y.11.2, or on the additive-action template of Theorem Y.11.2a specialized to two CP-complementary half-histories, the denominator $2$ in $\kappa_{CP}=\kappa_{EW}/2$ is exact on the corresponding branch. It follows from two-piece action additivity, complement invariance, and the finite nonzero projected readout; it is not a consequence of group order alone.*
 
 *Proof.* Apply Theorem Y.11.2a to the two CP-complementary half-histories. The additive action ledger, transitive action-preserving involution, and nonzero exact projected coefficient give $\kappa_{CP}=\kappa_{EW}/2$. Without any one of those certificates, the theorem supplies no exponent division. ∎

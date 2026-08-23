@@ -374,6 +374,30 @@ C(\Phi)=\lim_{n\to\infty}\frac1n\chi^*(\Phi^{\otimes n})
 $$
 A binary registered reset has $r=2$, giving (E.2a-bin), and the minimal MPU branch has $d_0=8$, giving (E.2a-min). ∎
 
+**Corollary E.2a.0 (Exact Capacity of the Completed-Reset Normal Form).** Under the exact channel hypotheses of Proposition E.2a,
+$$
+C(\Phi)=\ln(d_0/r).
+\tag{E.2a-exact}
+$$
+For any orthonormal basis $\{|k\rangle_K\}_{k=1}^{d_0/r}$ and any unit vector $|r_0\rangle_R$, the input states
+$$
+\rho_k
+=
+U^\dagger
+\bigl(|k\rangle\!\langle k|_K\otimes|r_0\rangle\!\langle r_0|_R\bigr)
+U
+\tag{E.2a-code}
+$$
+produce the mutually orthogonal outputs
+$$
+\Phi(\rho_k)=|k\rangle\!\langle k|_K\otimes|0\rangle\!\langle0|_R.
+$$
+The uniform ensemble is a one-use zero-error code attaining $\ln(d_0/r)$ nats, and its product code attains that rate at every block length.
+
+*Proof.* Substitution of (E.2a-code) into Proposition E.2a's channel gives the displayed orthogonal outputs. Their uniform mixture is maximally mixed on the $d_0/r$-dimensional retained output support and every individual output is pure, so the Holevo information is $\ln(d_0/r)$. Orthogonal measurement decodes with zero error. Hence $C(\Phi)\ge\ln(d_0/r)$, while Proposition E.2a gives the reverse inequality. ∎
+
+**Resolution TV-AREA-02-R1.** Corollary E.2a.0 gives `positive-discharge` of the exact regularized capacity, achieving ensemble, and explicit code for the frozen completed-reset normal form. Exact capacity of a different refresh/minorization channel still depends on its complete channel specification; the refresh weight alone does not determine it.
+
 **Remark E.2a.1 (Scope of the reset-support bound).**
 Proposition E.2a is a support-dimension theorem. It does not assert strict trace-distance contraction on all of $\mathcal H_{d_0}$. Full-state strict contraction is the separate refresh/minorization branch of Lemma E.1. The PCE residual-budget equality
 $$
@@ -497,6 +521,24 @@ For the binary one-register subledger this becomes $\Gamma_{\mathrm{Evolve}}^{(R
 *Proof.* The first metered commit occurs at the first time when the monotone acquisition ledger reaches $C_{\max}^{(R)}$ within the residual tolerance. Under stationary flux this time is $C_{\max}^{(R)}/\dot I_{\mathrm{acq}}^R$, and the reciprocal is the displayed rate. The final sentence is the distinction between the register subledger and the link-cycle ledger of Definition E.2a.4. ∎
 
 **Remark E.2a.10 (Metered Subledger Guardrail).** A $\ln2$ threshold is a certified binary-register acquisition threshold, not a universal per-link ND-RID threshold and not a heat quantum. Reversible writing or acquisition need not dissipate heat. A physical lower bound arises only for a separately registered erase, reset, or overwrite satisfying Theorem 31, in which case the bound is distribution-sensitive through $H_q(P\mid R)$; verification, syndrome, recovery, and implementation overhead remain separate ledger entries.
+
+**Proposition E.2a.11 (Canonical Causal First-Passage Meter).** Let $I_{\mathrm{acq}}^R(t)$ be an adapted, right-continuous, nondecreasing retained-information process on a registered no-overwrite interval, with $I_{\mathrm{acq}}^R(0)=0$, and fix $C_{\max}^{(R)}>0$. Define
+$$
+M_R(t):=\min\{I_{\mathrm{acq}}^R(t),C_{\max}^{(R)}\},
+\qquad
+A_R(t):=\mathbf1\{M_R(t)=C_{\max}^{(R)}\},
+\tag{E.2a.11.1}
+$$
+and
+$$
+\tau_R:=\inf\{t>0:I_{\mathrm{acq}}^R(t)\ge C_{\max}^{(R)}\}.
+\tag{E.2a.11.2}
+$$
+Then $M_R$ and $A_R$ are adapted and nondecreasing. If the threshold set is empty, $A_R$ never fires. Otherwise right-continuity gives $A_R(t)=0$ for every $t<\tau_R$ and $A_R(t)=1$ for every $t\ge\tau_R$. Thus the meter is causal and has no early firing. Under Proposition E.2a.5's renewal-cost hypotheses, committing at its first firing is the unique deterministic cost minimizer.
+
+*Proof.* Equation (E.2a.11.1) uses only the acquisition history available at time $t$, so adaptedness is preserved. Monotonicity of $I_{\mathrm{acq}}^R$ makes both displayed processes nondecreasing. If the threshold set is nonempty, the definition of its infimum gives $I_{\mathrm{acq}}^R(t)<C_{\max}^{(R)}$ before $\tau_R$. A decreasing sequence of threshold times converging to $\tau_R$, right-continuity, and monotonicity give $I_{\mathrm{acq}}^R(\tau_R)\ge C_{\max}^{(R)}$; monotonicity then preserves that inequality. This proves the firing statements. Proposition E.2a.5 supplies the optimization conclusion. ∎
+
+**Resolution TV-EACT-01-R1 (Metadata).** Exact domain: adapted, right-continuous, nondecreasing retained-information processes on a registered no-overwrite interval. Premises: a positive certified threshold and, for cost optimality, Proposition E.2a.5's renewal-cost hypotheses. Equivalence: meters are compared by their firing history on the same acquisition filtration. Budget: the full registered interval through first passage. Verifier: adaptedness, right-continuity and monotonicity checks, exact first-passage comparison and Proposition E.2a.5. Falsifier: early firing, decrease on the interval or dependence on a future acquisition value. Provenance class: source-internal stopping-rule construction. Downstream consumers: Definition 27, `TV-MPU-02` and owner `TV-EACT-01`. Nonvacuity: $I_{\mathrm{acq}}^R(t)=vt$ with $v>0$. This is `positive-discharge` of the mathematical renewal/meter component; population of $\mathfrak C_{\mathrm{meter}}(R)$ and physical realization remain `C+R`-open.
 
 
 
@@ -636,6 +678,42 @@ A two-sided estimate $N_{\partial A}\ge c_-\,\mathcal{A}/\delta^2$ requires an a
 **Remark E.5.1a (Connection to $\eta$ and $\chi$).**
 Lemma E.5.1 supplies the deterministic geometric upper bound behind the scaling used in Theorem E.3. The packing/orientation factor $\eta$ encodes the transversality details of the interaction graph relative to the surface, while the correlation factor $\chi$ encodes the reduction from geometric links to independent ND–RID information channels.
 
+**Theorem E.5.2 (Exact Cubic Refinement Certificate for the Lower Area Law).** Fix $n,L\in\mathbb N$, let $h=1/n$, and take the nearest-neighbor cubic graph on the periodic box
+$$
+\Lambda_{n,L}=(h\mathbb Z/(L\mathbb Z))^3.
+\tag{E.5.2.1}
+$$
+Let $\mathcal H_{n,L}$ be the flat two-torus cut halfway between the lattice planes $x=0$ and $x=h$, of area $\mathcal A=L^2$. Then:
+
+1. every boundary edge is normal to $\mathcal H_{n,L}$ and has length $h$, and the number of crossing edges is exactly
+$$
+N_{\partial}=\frac{\mathcal A}{h^2};
+\tag{E.5.2.2}
+$$
+2. for $h\le r\le L/4$, lattice vertex balls and surface cells satisfy uniform lower and upper Ahlfors counts
+$$
+c_3(r/h)^3\le\#(B_r\cap\Lambda_{n,L})\le C_3(r/h)^3,
+\qquad
+c_2(r/h)^2\le\#(B_r\cap\mathcal H_{n,L})\le C_2(r/h)^2;
+\tag{E.5.2.3}
+$$
+3. assign to each crossing edge an independent binary symmetric channel with crossover $\epsilon\in(0,1/2)$. For independent edge parameters $\vartheta_e$, the joint response Fisher matrix is diagonal with entries
+$$
+I_{ee}=\frac{1}{\epsilon(1-\epsilon)}>0,
+\tag{E.5.2.4}
+$$
+after using the crossover probability as local coordinate. Hence its effective response rank is exactly $N_{\partial}$ and $\chi=1$;
+4. along any sequence $n,L\to\infty$, the normalized count obeys
+$$
+h^2N_{\mathrm{eff}}=\mathcal A,
+\tag{E.5.2.5}
+$$
+so the density remainder is identically zero and in particular is $o(\mathcal A)$.
+
+*Proof.* Each of the $(Ln)^2$ lattice sites in the plane $x=0$ has exactly one nearest-neighbor edge crossing the halfway cut, and no tangential edge crosses it, proving (E.5.2.2) and transversality. Comparing lattice cubes with Euclidean balls and disks proves (E.5.2.3) with constants independent of $n,L$. Product-channel log likelihoods add and their score variables are independent, so cross Fisher terms vanish; the Bernoulli calculation gives (E.5.2.4). Thus no response-rank reduction occurs. Equations (E.5.2.2) and $N_{\mathrm{eff}}=N_{\partial}$ give (E.5.2.5). ∎
+
+**Resolution TV-EAREA-01-R1 (Metadata).** Exact domain: every cubic periodic refinement (E.5.2.1), its registered flat cut and the full product family of crossing BSC responses. Premises: nearest-neighbor edges, $\epsilon\in(0,1/2)$ and the declared geometric embedding. Equivalence: channels are identified only when their labeled edge-response experiments agree. Budget: all lattice vertices, edges, surface cells and response coordinates at every $n,L$. Verifier: exact crossing-edge census, cube/ball comparison and Fisher-rank computation. Falsifier: a nontransverse crossing, violation of either Ahlfors count, a rank defect or a nonzero normalized remainder. Provenance class: source-internal refining-network construction. Downstream consumers: Theorem E.3, Lemma E.5.1, Theorem E.6 and `TV-EAREA-01`. Theorem E.5.2 certifies transversality, matching lower counts, full effective independence/rank and zero $o(\mathcal A)$ remainder on one refining family, giving `positive-discharge` of `TV-EAREA-01`.
+
 ## E.6 Conditional Area Bounds from Local Many-Body and Boundary-Channel Structure
 
 This section separates three statements: rigorous local many-body correlation bounds on their stated hypotheses, a higher-dimensional entanglement ansatz where no general theorem is available, and the operational boundary-channel bound of Theorem E.6. Operational equality additionally requires the capacity-achieving, entropy-saturating, and additive-ledger entries stated below. Identifying $G_{\mathrm{op}}$ with measured Newton $G$ is a separate external calibration, not an antecedent of the channel equality.
@@ -748,6 +826,32 @@ $$
 is a separately declared semiclassical ansatz unless a model-specific area-law theorem is supplied. It is not used as an independent input to the operational channel-counting argument.
 
 *Proof.* The one-dimensional conclusion is the area-law theorem of Hastings (2007, *Journal of Statistical Mechanics* P08024). Its hypotheses match the one-dimensional assumptions above: finite interaction range and strength, finite local dimension, a ground state, and a system-size-independent gap. The higher-dimensional display is labeled as an ansatz and has no theorem-level proof in this appendix. ∎
+
+**Theorem E.4'.1 (Finite-Depth Local-Circuit Area Law and Locality Counterexample).** Let a bounded-degree metric graph carry $q$-dimensional sites, let $|\Omega_0\rangle$ be a product state, and let $U=U_L\cdots U_1$ be a depth-$L$ circuit. In each layer the gates have pairwise disjoint supports, every gate acts on at most $k$ sites, and every support has diameter at most $r$. For every region $A$,
+$$
+S\!\left(\operatorname{tr}_{\bar A}U|\Omega_0\rangle\!\langle\Omega_0|U^*\right)
+\le 2Lk\,|\partial_r A|\ln q,
+\tag{E.4'.1.1}
+$$
+where $\partial_r A$ is the set of sites of $A$ within graph distance $r$ of $\bar A$. This is a theorem-level entanglement area law in every spatial dimension for the declared finite-depth circuit family.
+
+Finite local dimension, bounded interaction degree, uniqueness, and a uniform spectral gap do not imply a geometric area law after metric locality is removed. On $2m$ $q$-level sites divided into $A=\{a_1,\ldots,a_m\}$ and $\bar A=\{b_1,\ldots,b_m\}$, set
+$$
+H_m=\sum_{j=1}^m\left(I-|\Phi_q\rangle\!\langle\Phi_q|_{a_jb_j}\right),
+\qquad
+|\Phi_q\rangle=q^{-1/2}\sum_{s=1}^q|s,s\rangle.
+\tag{E.4'.1.2}
+$$
+The terms commute and have disjoint supports, the ground state is unique, and the gap is one, while
+$$
+S(A)=m\ln q.
+\tag{E.4'.1.3}
+$$
+Embedding the two sets as macroscopic adjacent blocks makes their geometric boundary sublinear in $m$ in dimension greater than one, while the paired interactions have unbounded geometric range. Thus locality is an indispensable hypothesis for a geometric boundary bound.
+
+*Proof.* A gate supported entirely in $A$ or entirely in $\bar A$ does not change the entropy across the cut. A crossing gate can change that entropy by at most twice the logarithm of the Hilbert-space dimension on either side of its support, hence by at most $2k\ln q$. In one layer, disjointness lets each crossing gate be assigned a distinct site in $\partial_r A$, so there are at most $|\partial_r A|$ such gates. The initial entropy is zero; summing the entropy changes over $L$ layers proves (E.4'.1.1).
+
+For (E.4'.1.2), each summand is a projector with eigenvalues zero and one. Disjoint support makes the common zero eigenspace the one-dimensional span of $\bigotimes_j|\Phi_q\rangle_{a_jb_j}$ and makes the first excited energy one. The reduced state on $A$ is $q^{-m}I_{q^m}$, so its entropy is $m\ln q$. The final geometric statement follows because the interaction edges pair bulk sites across distances growing with the block diameter. ∎
 
 **Remark E.6.2a (Rigorous boundary-correlation control at finite temperature).**
 For Gibbs states in any dimension, a distribution-free boundary law holds for mutual information (Theorem E.4a), which already captures the PU requirement that total correlations across $\partial A$ are controlled by boundary interaction terms.
@@ -1281,6 +1385,45 @@ $$
 $$
 By the equality just proved, every retained bulk protocol has the same response on $\rho$ and $\rho'$. The operational Yoneda reconstruction of Theorem P.6.1b.3 therefore identifies the two states in the retained bulk response quotient. ∎
 
+**Theorem E.8.1i (Exhaustive Linear Three-Qutrit Code Search and Recovery Classification).** Let
+$$
+\mathcal C_{lin}
+=\{(c_1,c_2,c_3)\in\mathbb F_3^3:
+\{c_1,c_2,c_3\}=\mathbb F_3\},
+\tag{E.8.1i.1}
+$$
+the frozen six-member class of ordered affine-linear three-share encoders, and define
+$$
+V_c|s\rangle
+=\frac1{\sqrt3}\sum_{r\in\mathbb F_3}
+|r+c_1s,r+c_2s,r+c_3s\rangle.
+\tag{E.8.1i.2}
+$$
+Exhaust the $6\cdot8$ candidates $(c,B)$ with $c\in\mathcal C_{lin}$ and boundary subset $B\subseteq\{1,2,3\}$. For every one of them:
+
+1. if $|B|\ge2$, compression to $B$ exactly recovers the full logical operator algebra $M_3$;
+2. if $|B|\le1$, its exactly recoverable unital operator system is only $\mathbb C I$;
+3. among proper subsets in the frozen class, the minimum carrier dimension for full recovery is $3^2=9$, attained by exactly the three two-share subsets for each of the six encoders;
+4. all two-share recoveries have zero error. On a nested inclusion $B\subset C$ with $|B|\ge2$, the recovered logical channels agree exactly; on overlaps of incomparable minimizing pairs, the common recoverable operator system is $\mathbb C I$, on which they also agree exactly.
+
+Indeed, if shares $i,j$ are retained and $k$ is erased, the invertible basis change
+$$
+|a,b\rangle\longmapsto
+\left|s=\frac{b-a}{c_j-c_i},\ 
+g=a+(c_k-c_i)s\right\rangle
+\tag{E.8.1i.3}
+$$
+maps every compressed encoded state $\rho$ to
+$$
+\rho_s\otimes I_g/3.
+\tag{E.8.1i.4}
+$$
+Discarding $g$ is the exact recovery.
+
+*Proof.* The six triples in (E.8.1i.1) exhaust the pairwise-distinct coefficient triples over $\mathbb F_3$. Thus $c_j-c_i\ne0$ and (E.8.1i.3) is invertible. In the partial trace over share $k$, surviving ket and bra terms have the same lost-share value $g=r+c_ks$, so the displayed change of basis gives (E.8.1i.4). This proves full recovery from every pair for every frozen encoder. Conversely, every single share is uniform and independent of $s$, and all off-diagonal logical matrix units vanish after tracing the other two shares. A constant channel cannot recover two distinct logical states, so only scalar observables are one-share recoverable. This exhausts all 48 candidates, proves the minimum, and makes each compatible recovered channel the logical identity; the overlap claims follow. ∎
+
+**Resolution TV-EHOLO-01-R1 (Metadata).** Exact domain: all 48 encoder/subset candidates in the frozen linear class (E.8.1i.1)--(E.8.1i.2), all logical states and the full logical operator algebra. Premises: qutrit computational bases and erasure as the nominated boundary compression. Equivalence: codes are compared by their complete logical response channels on each labeled boundary subset. Budget: every encoder, subset, logical matrix unit and nested/incomparable overlap. Verifier: exhaustive six-triple census, isometry, the decoupling transform (E.8.1i.3), one-share constancy and the complete $6\cdot8$ table. Falsifier: an omitted linear encoder/subset, a non-scalar one-share recovery, failure of any two-share recovery or a nonzero claimed overlap error. Provenance class: source-internal finite network-code search and classification. Downstream consumers: Definition E.8.1b, Theorem E.8.1c, `TV-EHOR-02` and `TV-EHOLO-01`. Theorem E.8.1i gives `positive-discharge` only of the frozen-linear-class minimization, recoverable-system classification and overlap/error component. It does not close `TV-EHOLO-01` over the target's full finite network-code search class.
+
 **Corollary E.8.1d (Zero Data-Processing Loss on a Petz-Sufficient Branch).** If the branch is Petz-sufficient for $\rho$ and the reference state $\sigma$, then
 $$
 D(\rho\Vert\sigma)
@@ -1727,6 +1870,62 @@ On the additive utilization branch of Hypothesis E.8.3.3 and under the projected
 Theorem E.8.3.4 supplies a conditional deterministic saturation mechanism for the utilization variable. Applying it to the local Rindler horizons used in Section 12 requires an additional bridge showing that each such horizon carries the additive utilization potential and projected dynamics of Hypothesis E.8.3.3. Without that bridge, local equilibrium saturation remains a hypothesis of the Clausius-to-field-equation argument rather than a consequence of Appendix E.
 
 
+**Theorem E.8.3.6 (One-Coordinate Utilization Dynamics and Attained Code Branch).** Let $V\in C^2([0,S_{max}])$ and $\eta>0$. For the projected deterministic gradient dynamics
+$$
+\dot S=\Pi_{T_{[0,S_{max}]}(S)}(-\eta V'(S)),
+\tag{E.8.3w.1}
+$$
+the stationary set is exactly
+$$
+\{S\in(0,S_{max}):V'(S)=0\}
+\cup\{0:V'(0)\ge0\}
+\cup\{S_{max}:V'(S_{max})\le0\}.
+\tag{E.8.3w.2}
+$$
+An interior stationary point $S_*$ is locally asymptotically stable exactly when it is an isolated stationary strict local minimum, equivalently when some $\delta>0$ obeys
+$$
+(S-S_*)V'(S)>0
+\qquad(0<|S-S_*|<\delta).
+\tag{E.8.3w.2a}
+$$
+The sign-reversed condition makes an isolated strict local maximum unstable. In particular, the sufficient condition $V'(S)\le-g<0$ on the whole interval makes every deterministic trajectory reach $S_{max}$ with the uniform bound
+$$
+t_{hit}\le\frac{S_{max}-S(0)}{\eta g}.
+\tag{E.8.3w.3}
+$$
+
+For the reflected stochastic branch
+$$
+dS_t=-\eta V'(S_t)dt+\sqrt{2D}\,dB_t+dL_t^0-dL_t^{max},
+\qquad D>0,
+\tag{E.8.3w.4}
+$$
+the unique invariant law has density
+$$
+\rho_D(S)=Z_D^{-1}e^{-\eta V(S)/D}
+\tag{E.8.3w.5}
+$$
+on the full interval. Hence nonzero reflected noise neither reaches and stays at the capacity endpoint nor makes it a point-mass attractor. If, for example,
+$$
+V_{int}(S)=\kappa(S-S_*)^2,
+\qquad 0<S_*<S_{max},
+\tag{E.8.3w.6}
+$$
+then $S_*$ is the deterministic stable branch and (E.8.3w.5) is a stable stochastic branch concentrated around $S_*$ rather than the boundary.
+
+Capacity attainment is nonempty on the same finite response grammar. For $m\ge1$, take $m$ independent noiseless qutrit boundary pipes and the uniform message ensemble on $\mathbb F_3^m$. The identity product code has
+$$
+S=H(M)=m\ln3
+=\sum_{j=1}^m C_j=S_{max},
+\tag{E.8.3w.7}
+$$
+with zero decoding error. Coupled to any potential with $V'\le-g<0$, this is the attained endpoint of (E.8.3w.1). Under the serial-depth hypotheses of Theorem E.8.3.2, the same endpoint is also the strict boundary-over-bulk optimum.
+
+*Proof.* Projection onto the tangent cone is zero precisely in the cases listed in (E.8.3w.2). For an isolated interior stationary point, the one-dimensional phase-line criterion gives local asymptotic stability exactly when the vector field points strictly toward $S_*$ on both sides, which is (E.8.3w.2a); integrating its sign shows that $S_*$ is a strict local minimum. Conversely, continuity and isolation make $V'$ nonzero with constant sign on each punctured side, and strict minimality forces precisely the signs in (E.8.3w.2a). Reversing both signs gives instability. Under the uniform negative derivative, $\dot S\ge\eta g$ until the endpoint, proving (E.8.3w.3). The zero-flux stationary Fokker--Planck equation for (E.8.3w.4) is
+$D\rho'+\eta V'\rho=0$, whose normalized solution is (E.8.3w.5). Uniform ellipticity on a compact interval gives uniqueness and full support. Equation (E.8.3w.6) has the asserted unique minimum. Finally, a noiseless qutrit pipe has capacity $\ln3$, and the uniform product ensemble attains the additive sum with exact identity decoding, proving (E.8.3w.7). ∎
+
+**Resolution TV-EHOLO-03-R1 (Metadata).** Exact domain: arbitrary $C^2$ scalar utilization potentials on $[0,S_{max}]$, their projected deterministic flow, their constant-noise reflected diffusion, and the finite product-qutrit attainment branch. Premises: $\eta>0$, and $D>0$ on the stochastic branch. Equivalence: implementations are compared by their utilization path law and complete boundary-code response law. Budget: the full interval, both boundaries, every stationary point and all $m$ channel factors. Verifier: tangent-cone signs, isolated-minimum phase-line analysis, the zero-flux Fokker--Planck equation and exact code entropy/decoding. Falsifier: an omitted stationary branch, a stability claim violating (E.8.3w.2a), endpoint absorption under $D>0$, an incorrect invariant density or a capacity deficit in (E.8.3w.7). Provenance class: source-internal dynamical classification, counterbranch and finite code construction. Downstream consumers: Theorems E.8.3.2--E.8.3.4 and `TV-EHOLO-03`. Theorem E.8.3.6 gives `positive-discharge` only of the declared one-coordinate deterministic/reflected-diffusion and noiseless product-qutrit component. It does not close `TV-EHOLO-03` as a whole or prove coexistence of every target predicate in one formal holographic realization.
+
 ### E.8.4 Max-Flow/Min-Cut Form of PU Holography and Shared Reconstruction
 
 **Definition E.8.4a (Finite Predictive Channel Network).** Let $\mathcal N_A=(V,E)$ be a finite directed MPU channel network associated with a region $A$, with source set $S\subset V$, sink set $T\subset V$, and edge capacities
@@ -1763,6 +1962,33 @@ I_{\max}(S:T)\le\min_\Gamma C(\Gamma).
 $$
 
 The finite max-flow/min-cut theorem supplies a feasible flow $f$ of value $\min_\Gamma C(\Gamma)$. If all capacities are rational, choose a common denominator $q$. Over a block of $q$ channel uses, route $qf(e)$ message units through each edge; flow conservation pairs incoming and outgoing units at every intermediate vertex, and the edge constraints $f(e)\le C_e$ make every routing feasible. Independent pipe codes achieve every edge rate below $C_e$, so every network rate below the flow value is achievable. For real capacities, choose rational capacities $C_e^{(n)}<C_e$ converging upward to $C_e$. Their max-flow values converge to the real max-flow value because the minimum ranges over finitely many cuts. Taking the supremum of achievable rates proves the reverse inequality. $\square$
+
+**Theorem E.8.4b.1 (Joint-Use Polytope Classification).** Retain the classical pipes and routing assumptions of Theorem E.8.4b, but let a nonempty compact convex set
+$$
+\mathcal P\subseteq[0,1]^E
+$$
+specify the feasible average edge-use vectors imposed by shared energy, interference, or scheduling. At use vector $u$, edge $e$ has available average capacity $u_eC_e$. If every $u\in\mathcal P$ is achievable by time sharing and pipe codes, then the exact network capacity is
+$$
+I_{\mathcal P}(S:T)
+=\max_{u\in\mathcal P}\min_{\Gamma:S|T}
+\sum_{e\in\Gamma}u_eC_e.
+\tag{E.8.4b.1.1}
+$$
+Writing $C_*:=\min_\Gamma\sum_{e\in\Gamma}C_e$, the unconstrained classical value is retained exactly when there exists $u^*\in\mathcal P$ satisfying
+$$
+\sum_{e\in\Gamma}u_e^*C_e\ge C_*
+\qquad\text{for every }S|T\text{ cut }\Gamma.
+\tag{E.8.4b.1.2}
+$$
+Otherwise the shared-resource constraint strictly lowers the value. For two parallel unit-capacity edges and
+$$
+\mathcal P=\{(u_1,u_2)\in[0,1]^2:u_1+u_2\le1\},
+$$
+Equation (E.8.4b.1.1) gives $I_{\mathcal P}=1$, while the additive unconstrained cut has capacity $2$.
+
+*Proof.* Fix $u\in\mathcal P$. Theorem E.8.4b applied to the capacities $u_eC_e$ gives the inner minimum in (E.8.4b.1.1). Time sharing realizes every feasible $u$, compactness attains the outer maximum, and no schedule has an average use vector outside $\mathcal P$; hence the displayed maximum is exact. Since $0\le u_e\le1$, every constrained cut capacity is at most its unconstrained value, so $I_{\mathcal P}\le C_*$. Equality holds precisely when some feasible $u^*$ makes every cut at least $C_*$, which is (E.8.4b.1.2). In the two-edge example the only cut has capacity $u_1+u_2\le1$, and equality is attainable, proving the strict counterexample. ∎
+
+This theorem exhausts the classical joint-scheduling branch. Coherent quantum channels, broadcast hyperedges, secrecy resources, and nonadditive channel combinations require their own operational capacity functions and are not classified by the polytope formula.
 
 **Corollary E.8.4c (Area Law as Minimum Predictive Cut).** On the independent classical-pipe branch of Theorem E.8.4b, suppose the PCE-attractor branch has approximately uniform boundary channel capacity $C_{\max}^{*}$ and effective channel density $\sigma_{\mathrm{eff}}$ across a smooth cut surface $\gamma$, with boundary correction $o(\mathcal A(\gamma))$. Then
 $$
@@ -1975,6 +2201,41 @@ d_{\mathrm{rec},\epsilon}(p,q)
 \le(\mu+\omega(r_\epsilon))d_g(p,q).
 $$
 The squeeze theorem gives the metric limit. The barrier identity is Corollary E.8.4g under its separate channel and saturation hypotheses. $\square$
+
+**Theorem E.8.4n (Exact Serialized Recovery Chain and Γ-Convergence).** For each $N\ge1$, let
+$\mathcal B_N=\{A_0,\ldots,A_N\}$ and register only adjacent one-step recoveries. Each admissible step $A_i\leftrightarrow A_{i+1}$ is an exact classical forwarding channel for the retained response and has normalized recovery cost $N^{-1}$; nonadjacent one-step operations are inadmissible. The shortest admissible recovery cost is
+$$
+d_N(A_i,A_j)=\frac{|i-j|}{N}.
+\tag{E.8.4n.1}
+$$
+Under $\iota_N(A_i)=i/N$, this is an isometry onto the uniform grid in $[0,1]$. Consequently it obeys the exact bi-Lipschitz estimate
+$$
+|\iota_N(A_i)-\iota_N(A_j)|
+=d_N(A_i,A_j)
+\tag{E.8.4n.2}
+$$
+and the metric spaces converge to $[0,1]$ with Gromov--Hausdorff distance at most $1/(2N)$.
+
+Define the extended endpoint-cost functional on $[0,1]^2$ by
+$$
+\mathcal F_N(x,y)=
+\begin{cases}
+d_N(A_i,A_j),&x=i/N,\ y=j/N,\\
++\infty,&\text{otherwise}.
+\end{cases}
+\tag{E.8.4n.3}
+$$
+Then $\mathcal F_N$ Γ-converges in the ordinary product topology to
+$$
+\mathcal F(x,y)=|x-y|.
+\tag{E.8.4n.4}
+$$
+The construction is no-shortcut complete: every admissible path from $A_i$ to $A_j$ crosses each of the $|i-j|$ intervening cuts at least once, and equality is attained by the monotone chain.
+
+*Proof.* Removing any one of the intervening adjacent transitions disconnects the ordered recovery carrier, so every admissible path must make at least $|i-j|$ steps. The monotone path makes exactly that many, proving (E.8.4n.1)--(E.8.4n.2). Every point of $[0,1]$ lies within $1/(2N)$ of the grid, giving the Gromov--Hausdorff bound. If $(x_N,y_N)\to(x,y)$ and $\mathcal F_N(x_N,y_N)<\infty$, then (E.8.4n.1) gives
+$\mathcal F_N(x_N,y_N)=|x_N-y_N|\to|x-y|$, proving the Γ-liminf. Choosing nearest grid points gives a recovery sequence and the Γ-limsup. ∎
+
+**Resolution TV-EHOLO-05-R1 (Metadata).** Exact domain: the complete adjacent-recovery carrier $\mathcal B_N$ for every $N$ and all endpoint pairs. Premises: exact adjacent forwarding, cost $1/N$ and the declared prohibition of nonlocal one-step recovery. Equivalence: response-identical region labels are identified before computing costs. Budget: every admissible path and endpoint pair at every refinement. Verifier: intervening-cut count, monotone-path attainment, the isometry (E.8.4n.2) and Γ-liminf/recovery-sequence checks. Falsifier: an admissible shortcut, a cost different from (E.8.4n.1), failure of exact adjacent forwarding or a violating Γ sequence. Provenance class: source-internal finite recovery construction and continuum proof. Downstream consumers: Definition E.8.4h, Corollary E.8.4j and `TV-EHOLO-05`. The theorem computes every finite cost and proves exact bi-Lipschitz, Gromov--Hausdorff and Γ convergence under a populated local no-shortcut control. It gives `positive-discharge` of the abstract recovery-cost component; realizing this normalized cost table as the specific predictive min-cut channel family of Definition E.8.4h remains `R`-open.
 
 **Definition E.8.4k (Predictive Update-Current Entropy).** Let $\mathcal N=(V,E)$ be a finite predictive channel network with edge capacities $C_e$ as in Definition E.8.4a. Let
 $$
@@ -2690,6 +2951,41 @@ $$
 $$
 ∎
 
+**Theorem E.9.5.6 (Multiplicative-Domain Classification of Retained Channels).** Let
+$\Phi:M_d\to M_d$ be a unital completely positive Heisenberg channel. Its multiplicative domain is
+$$
+\operatorname{MD}(\Phi)
+=\{X:\Phi(X^*X)=\Phi(X)^*\Phi(X),\ 
+\Phi(XX^*)=\Phi(X)\Phi(X)^*\}.
+\tag{E.9.5.6.1}
+$$
+Then:
+
+1. $\operatorname{MD}(\Phi)$ is the unique largest unital $C^*$-subalgebra on which $\Phi$ preserves every product and adjoint;
+2. a registered retained algebra $\mathfrak A_{reg}\subseteq M_d$ has all products preserved exactly if and only if
+$\mathfrak A_{reg}\subseteq\operatorname{MD}(\Phi)$;
+3. if the reversible response axiom supplies a unital completely positive inverse $\Psi:M_d\to M_d$ with
+$\Psi\Phi=\Phi\Psi=\mathrm{id}$, then
+$\operatorname{MD}(\Phi)=M_d$ and $\Phi(X)=U^*XU$ for a unitary $U$;
+4. when only a proper registered algebra is reversible, residual channels are classified by the proper multiplicative domain. For example, complete dephasing
+$$
+\Delta(X)=\sum_{i=1}^dP_iXP_i
+\tag{E.9.5.6.2}
+$$
+has $\operatorname{MD}(\Delta)$ equal to the diagonal algebra and is not an automorphism for $d>1$; the depolarizing channel with nonzero depolarizing weight has multiplicative domain $\mathbb CI$.
+
+*Proof.* The two Schwarz equalities in (E.9.5.6.1), polarization and the $2\times2$ matrix trick give
+$\Phi(AXB)=\Phi(A)\Phi(X)\Phi(B)$ for $A,B$ in the domain; closure under sums, products and adjoints follows, proving items 1--2. For item 3, Schwarz gives the positive defect
+$Q_X=\Phi(X^*X)-\Phi(X)^*\Phi(X)\ge0$. Applying $\Psi$ and then Schwarz for $\Psi$ gives
+$$
+X^*X=\Psi\Phi(X^*X)
+\ge\Psi(\Phi(X)^*\Phi(X))
+\ge\Psi\Phi(X)^*\Psi\Phi(X)=X^*X.
+$$
+Thus $\Psi(Q_X)=0$. Since $\Psi$ has inverse $\Phi$, it is injective, so $Q_X=0$; applying the same argument to $XX^*$ puts every $X$ in the multiplicative domain. Hence $\Phi$ is a $*$-automorphism, and Lemma E.9.5.3 makes it unitary conjugation. Direct Schwarz-equality evaluation gives the domains claimed for (E.9.5.6.2) and the depolarizing channel. ∎
+
+**Resolution TV-EHOR-01-R1 (Metadata).** Exact domain: every finite full-matrix retained Heisenberg channel and every declared registered $C^*$-subalgebra. Premises: unital complete positivity; the reversible branch adds a unital CP two-sided inverse. Equivalence: channels are compared by their complete retained response maps. Budget: all algebra elements and both Schwarz equalities. Verifier: multiplicative-domain membership, inverse-channel Schwarz squeeze and finite matrix-algebra automorphism representation. Falsifier: a registered product outside the multiplicative domain, a claimed reversible channel with a nonzero Schwarz defect, or a residual classification contradicting (E.9.5.6.1). Provenance class: source-internal exact channel classification. Downstream consumers: Lemma E.9.5.3, Theorem E.9.5 and `TV-EHOR-01`. Theorem E.9.5.6 classifies precisely the product-preserved ledger, proves that full reversible response forces the layer-exhaustive automorphism, and supplies explicit proper-ledger residuals, giving `positive-discharge` of `TV-EHOR-01`.
+
 ### E.9.5.7 Composition Lemmas
 
 **Lemma E.9.5.4 (Composition of Unitary Operations).** *The composition of unitary operations is unitary. If $U_1: \mathcal{H} \to \mathcal{H}$ and $U_2: \mathcal{H} \to \mathcal{H}$ are unitary, then $U_2 U_1$ is unitary.*
@@ -3262,6 +3558,45 @@ $$
 v\le\frac{\delta}{\tau_{\min}}.
 $$
 The scale identification converts this into the numerical upper bound $c$; equality requires the additional one-link-attainment hypothesis. ∎
+
+**Theorem E.10.3 (Conditional Serialized Path, Clock and Reset Ledger).** Fix $N\ge1$, $\delta,\tau>0$, and take the path graph
+$$
+v_0-v_1-\cdots-v_N
+\tag{E.10.5}
+$$
+with every edge assigned propagation length $\delta$. The retained state is a message bit $M$, a token position $j$, a receiver buffer $B_{j+1}$ and an independent clock-work bit $P_j$. At tick $j$, the finite transition
+$$
+(M,j,B_{j+1}=0,P_j)
+\longmapsto
+(M,j+1,B_{j+1}=M,0)
+\tag{E.10.6}
+$$
+copies the classical response into the next buffer, advances the token once, and resets $P_j$. The next tick is disabled until exactly time $\tau$ has elapsed. Register $P_j$ as conditionally uniform with no retained side information, independently for each edge. Register the old message buffer separately with the new exact copy as side information.
+
+Then the unique $v_0$--$v_N$ path is geodesic, has distance $N\delta$, duration $N\tau$, and speed $\delta/\tau$. The one-link case attains both bounds in Theorem E.10.2. With the clock calibration
+$$
+\tau=\delta/c_*,
+\tag{E.10.7}
+$$
+the retained response front has speed exactly $c_*$. Every message response is reproduced with zero error. The complete per-edge reset ledger is
+$$
+H(B_j\mid B_{j+1})=0,
+\qquad
+H(P_j\mid R_j)=\ln2,
+\qquad
+S_{\mathrm{reset}}=N\ln2,
+\tag{E.10.8}
+$$
+and the conditional Landauer ledger gives the lower bound $S_{\mathrm{env}}\ge k_BN\ln2$. Writing any excess explicitly gives
+$$
+S_{\mathrm{env}}=k_BN\ln2+S_{\mathrm{excess}},
+\qquad S_{\mathrm{excess}}\ge0.
+\tag{E.10.9}
+$$
+
+*Proof.* A path graph has only one route between its endpoints, so its length is $N\delta$ and no shortcut exists. Serialization and the exact tick gate give duration $N\tau$; $N=1$ proves one-link attainment, and (E.10.7) gives the calibrated speed. The deterministic copy in (E.10.6) preserves the labeled message response. Given the downstream copy, the old message buffer is known and has zero conditional entropy. The independent uniform work bit has conditional entropy $\ln2$, so Theorem 31 gives the per-edge reset lower bound and additivity gives (E.10.8)--(E.10.9). ∎
+
+**Resolution TV-EHOR-03-R1 (Metadata).** Exact domain: every uniform finite path length $N$ in the state machine (E.10.5)--(E.10.9), including the one-link member. Premises: exact serialization, common edge length $\delta$, tick duration $\tau$, independent uniform clock-work bits and the declared classical-copy response. Equivalence: realizations are compared by the joint message, clock and reset-ledger responses. Budget: every edge, tick, buffer and reset entry along the full path. Verifier: unique-path census, transition-table evaluation, clock calibration and conditional-entropy calculation. Falsifier: a shortcut, early tick, message error, unattained one-link bound or missing/miscalculated reset lower-bound entry. Provenance class: source-internal finite conditional construction. Downstream consumers: Definition E.10.1, Theorems E.10.1--E.10.2 and `TV-EHOR-03`. Theorem E.10.3 gives `positive-discharge` only of the uniform-path geodesic, one-link, clock-calibration and conditional reset-ledger component. The general weighted-graph path problem and a response-faithful formal cyclic reset realization, including attainment of the Landauer lower bound, remain open; `TV-EHOR-03` is therefore partial.
 
 ### E.10.3 Summary
 

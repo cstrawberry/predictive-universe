@@ -21,7 +21,7 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Predictive Physical Complexity | $C_{P}, C_{\text{agg}}, \hat{C}_{\text{target}}, \hat{C}_{v}$                    | $[\text{Complexity}]$                                | structural / resource capacity                       |
 | Discrete register count        | $K_0$                                                                            | $1$                                                   | dimensionless count; $K_0=3$ on the minimal branch   |
 | Probability / Performance     | $PP, Q, \alpha, \beta, \alpha_{\text{SPAP}}, \alpha_{CC,max}, \mathrm{CC}$ | $1$                                                  | dimensionless                                        |
-| Information / Capacity        | $\Delta I, C_{\max}(f_{\text{RID}})$                                             | $1$                                                  | dimensionless (nats)                                 |
+| Information / Capacity        | $\Delta I, C_{\max}(f_{\text{RID}}), C_{\mathrm{ch}}$                            | $1$                                                  | dimensionless (nats)                                 |
 | Structural/reset entropy | $\varepsilon_0=\ln2$; $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on a registered reset branch | $1$ | structural log-cardinality versus ensemble-dependent physical nats |
 | Reflexivity constant          | $\kappa_{r}$                                                                     | $1$                                                  | dimensionless                                        |
 | Physical cost rate            | $R(C), P_{\min}$                                                                 | $[E][T]^{-1}$                                        | power                                                |
@@ -54,11 +54,11 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Phenomenological spatial transition scale | $L_0$                                                               | $[L]$                                                | Independent Equation-I.4 kernel parameter pending a dimensionally valid bridge |
 | Simulation steps / Horizon    | $\mathcal{T}$                                                                | $1$                                                  | Dimensionless count                                  |
 
-**Entropy-role convention for Sections H.4.2–H.4.7.** The structural reference $\varepsilon_0=\ln2$ and the physical reset entropy $\varepsilon_{\mathrm{phys}}$ have distinct roles. Define
+**Entropy-role convention for Sections H.4.2–H.4.7.** The structural reference $\varepsilon_0=\ln2$ and the physical reset entropy $\varepsilon_{\mathrm{phys}}$ have distinct roles. The bridge coordinate $C_{\mathrm{ch}}$ is a dimensionless structural channel-capacity coordinate measured in nats, distinct from the $[\text{Complexity}]$-valued operational variable $C(t)$ used in the adaptation dynamics. Define
 $$
-w_{\mathrm{cmp}}(C):=\frac{C}{\varepsilon_0}
+w_{\mathrm{cmp}}(C_{\mathrm{ch}}):=\frac{C_{\mathrm{ch}}}{\varepsilon_0}
 $$
-as the dimensionless comparison-slot weight of the adopted bridge law. It is not, in general, an integer count of physical resets. At the operating point $C=C_{\max}^*=2\varepsilon_0$, the acceleration-lock branch additionally registers an actual two-copy i.i.d. realization, so $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ and QFI additivity applies. Any irreversible physical reset separately obeys $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on its registered reset branch; Landauer accounting alone neither fixes $\varepsilon_{\mathrm{phys}}=\varepsilon_0$ nor supplies the two-copy realization.
+as the dimensionless comparison-slot weight of the adopted bridge law. It is not, in general, an integer count of physical resets. At the operating point $C_{\mathrm{ch}}=C_{\max}^*=2\varepsilon_0$, the acceleration-lock branch additionally registers an actual two-copy i.i.d. realization, so $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ and QFI additivity applies. Any irreversible physical reset separately obeys $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on its registered reset branch; Landauer accounting alone neither fixes $\varepsilon_{\mathrm{phys}}=\varepsilon_0$ nor supplies the two-copy realization.
 
 
 ## H.3 Dimensional Consistency Checks
@@ -176,23 +176,23 @@ Define the hybrid bridge response by
 $$
 F_{\mathrm{grav}}
 :=
-w_{\mathrm{cmp}}(C)
+w_{\mathrm{cmp}}(C_{\mathrm{ch}})
 \mathbb E\!\left[\|\Pi_{\mathrm{sp}}\Pi_{\mathrm{act}}\hat X\|^2\right]
 \frac{1}{\sqrt{K_0}}M_{\mathrm{sp}},
 \tag{H.4.F}
 $$
-where $w_{\mathrm{cmp}}(C):=C/\varepsilon_0$, and where $1/\sqrt{K_0}$ is the declared amplitude normalization of the discrete generator. If the generator itself parameterizes a unitary statistical family, its SLD QFI scales by $1/K_0$ under $G\mapsto G/\sqrt{K_0}$; the hybrid ledger above does not identify its amplitude factor with that QFI scaling.
+where $w_{\mathrm{cmp}}(C_{\mathrm{ch}}):=C_{\mathrm{ch}}/\varepsilon_0$, and where $1/\sqrt{K_0}$ is the declared amplitude normalization of the discrete generator. If the generator itself parameterizes a unitary statistical family, its SLD QFI scales by $1/K_0$ under $G\mapsto G/\sqrt{K_0}$; the hybrid ledger above does not identify its amplitude factor with that QFI scaling.
 
 Substitution gives
 $$
-\eta'(C)
+\eta'(C_{\mathrm{ch}})
 =
-w_{\mathrm{cmp}}(C)
+w_{\mathrm{cmp}}(C_{\mathrm{ch}})
 \left(\frac{a}{d_0}\right)
 \left(\frac{D-1}{D}\right)
 \left(\frac{1}{\sqrt{K_0}}\right),
 \qquad
-w_{\mathrm{cmp}}(C)=\frac{C}{\varepsilon_0}.
+w_{\mathrm{cmp}}(C_{\mathrm{ch}})=\frac{C_{\mathrm{ch}}}{\varepsilon_0}.
 \tag{H.4a}
 $$
 The numerical value in this bridge law is therefore conditional on the two displayed projection identities, the equal-channel decomposition, and the independent generator-amplitude convention.
@@ -381,19 +381,19 @@ Iterating this identity across the active-subspace projection, spatial projectio
 1. **$\Pi_{\mathrm{act}}$ (active participation):** Scalar factor $a/d_0$ by Theorem H.1a
 2. **$\Pi_{\mathrm{sp}}$ (spatial projection):** Scalar factor $(D-1)/D$ by Theorem H.2
 3. **Normalization:** Factor $1/\sqrt{K_0}$ by Theorem H.1c
-4. **Comparison-slot/repetition factor:** Structural weight $w_{\mathrm{cmp}}(C)=C/\varepsilon_0$ by the bridge convention; at the operating point $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$, and Theorem H.1b applies to the registered i.i.d. realization
+4. **Comparison-slot/repetition factor:** Structural weight $w_{\mathrm{cmp}}(C_{\mathrm{ch}})=C_{\mathrm{ch}}/\varepsilon_0$ by the bridge convention; at the operating point $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$, and Theorem H.1b applies to the registered i.i.d. realization
 
 The chain $\Pi_{\mathrm{sp}} \circ \Pi_{\mathrm{act}}$ is multiplicative once the scalar-action hypothesis is imposed:
 $$
 \mathbb{E}[|\Pi_{\mathrm{sp}} \Pi_{\mathrm{act}} \hat{X}|^2] = \frac{a}{d_0} \cdot \frac{D-1}{D}\,\mathbb{E}[|\hat X|^2].
 $$
 
-At the operating point, the registered integer repetition count multiplies by QFI additivity in the i.i.d. setting. The structural weight $w_{\mathrm{cmp}}(C)$ is a bridge coordinate; away from the integer operating point its continuous use is a T2 interpolation rather than a consequence of the tensor-product QFI theorem. The normalization factor is multiplicative by construction.
+At the operating point, the registered integer repetition count multiplies by QFI additivity in the i.i.d. setting. The structural weight $w_{\mathrm{cmp}}(C_{\mathrm{ch}})$ is a bridge coordinate; away from the integer operating point its continuous use is a T2 interpolation rather than a consequence of the tensor-product QFI theorem. The normalization factor is multiplicative by construction.
 
 **Therefore:** the product structure holds under:
 1. scalar action on the already coarse-grained quadratic form at each stage,
 2. the registered two-copy i.i.d. realization at the operating point,
-3. the structural interpolation convention for $w_{\mathrm{cmp}}(C)$ away from that point, and
+3. the structural interpolation convention for $w_{\mathrm{cmp}}(C_{\mathrm{ch}})$ away from that point, and
 4. multiplicative generator normalization.
 
 #### H.4.2.7 Why Only These Four Factors (Completeness)
@@ -411,7 +411,7 @@ The value of $F_{ij}$ at one parameter point does not determine derivatives of t
 
 #### H.4.2.8 Combined Result
 
-Combining the four factors within the bridge-law normalization and the factorized scalar coarse-graining ansatz of Theorem H.3 at the operating point $C=C_{\mathrm{max}}^*=2\varepsilon_0$, with the registered two-copy realization $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$:
+Combining the four factors within the bridge-law normalization and the factorized scalar coarse-graining ansatz of Theorem H.3 at the operating point $C_{\mathrm{ch}}=C_{\mathrm{max}}^*=2\varepsilon_0$, with the registered two-copy realization $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$:
 $$
 \eta'(2\varepsilon_0)
 =
@@ -434,7 +434,7 @@ $$
 A member of $\mathcal B_H$ carries all of the following records:
 
 1. a dimensionless deformation coordinate and the hybrid response ledger of Definitions H.0–H.0a;
-2. two i.i.d. comparison copies at $C=C_{\max}^*=2\varepsilon_0$;
+2. two i.i.d. comparison copies at $C_{\mathrm{ch}}=C_{\max}^*=2\varepsilon_0$;
 3. an active-tangent contraction certificate
    $$
    \mathbb E\|\Pi_{\rm act}\hat X\|^2
@@ -452,15 +452,15 @@ A member of $\mathcal B_H$ carries all of the following records:
 
 **Theorem H.4.2.8b (Normalization on the Factor-Certified Bridge Class).** Every bridge law in $\mathcal B_H$ has
 $$
-\eta(C)=
-w_{\mathrm{cmp}}(C)
+\eta(C_{\mathrm{ch}})=
+w_{\mathrm{cmp}}(C_{\mathrm{ch}})
 \left(\frac{a}{d_0}\right)
 \left(\frac{D-1}{D}\right)
 \left(\frac1{\sqrt{K_0}}\right),
 \qquad
-w_{\mathrm{cmp}}(C)=\frac{C}{\varepsilon_0}.
+w_{\mathrm{cmp}}(C_{\mathrm{ch}})=\frac{C_{\mathrm{ch}}}{\varepsilon_0}.
 $$
-At $C=C_{\max}^*=2\varepsilon_0$, $a=2$, $d_0=8$, $D=4$, and $K_0=3$,
+At $C_{\mathrm{ch}}=C_{\max}^*=2\varepsilon_0$, $a=2$, $d_0=8$, $D=4$, and $K_0=3$,
 $$
 \eta'=
 2\cdot\frac14\cdot\frac34\cdot\frac1{\sqrt3}
@@ -486,6 +486,44 @@ $$
 The coefficient has no free fit parameter once the upstream PU structural data and the QFI bridge-law class are fixed. This corollary fixes only the acceleration scale. It does not determine a galaxy response kernel, a cluster/lensing kernel, anisotropic stress, homogeneous late-time law, or backreaction constants; those require the separate covariant dark-susceptibility/effective-action certificate of Definition I.13d.
 
 *Proof.* Substitute the unique value of $\eta'$ from Theorem H.4.2.8b into $g_0=\eta'c^2\sqrt{\Lambda/3}$. Since $\sqrt{\Lambda/3}/\sqrt3=\sqrt\Lambda/3$, the coefficient is $(3/8)(1/3)=1/8$. The remaining response kernels require a conserved stress tensor or susceptibility map and are not arguments of the scalar bridge-law normalization. ∎
+
+**Theorem H.4.2.8d (Invariant Quadratic Bridge Moduli and Minimal Calibration).** Let a compact group $G$ act orthogonally on a finite-dimensional real response space $V$, and fix a $G$-invariant inner product. Every $G$-invariant quadratic bridge law has the form
+$$
+q_A(v)=\langle v,Av\rangle,
+\qquad
+A=A^*\in\operatorname{End}_G(V),
+\tag{H.4.2.8d.1}
+$$
+and it is nonnegative exactly when $A\succeq0$. Hence invariance alone leaves the positive cone in the self-adjoint commutant as the complete finite quadratic modulus. On a multiplicity-free real-type decomposition $V=\bigoplus_{\lambda=1}^rV_\lambda$, this reduces to
+$$
+q_A(v)=\sum_{\lambda=1}^r a_\lambda\|v_\lambda\|^2,
+\qquad a_\lambda\ge0.
+\tag{H.4.2.8d.2}
+$$
+
+Let $L_1,\ldots,L_m$ be linear calibration functionals on the finite-dimensional space $\operatorname{End}_G(V)_{\mathrm{sa}}$, and let $L_\star$ be the scalar response to be predicted. The value $L_\star(A)$ is unique on every nonempty feasible calibration fiber exactly when
+$$
+L_\star\in\operatorname{span}\{L_1,\ldots,L_m\}.
+\tag{H.4.2.8d.3}
+$$
+For a fixed calibration vector $b$, put
+$$
+\mathcal F_b:=\{A\succeq0:\mathcal L(A)=b\},
+\qquad
+\mathcal D_b:=\operatorname{span}\{A-A':A,A'\in\mathcal F_b\}.
+$$
+On this particular nonempty fiber, the response is unique exactly when
+$$
+L_\star|_{\mathcal D_b}=0.
+\tag{H.4.2.8d.4}
+$$
+If (H.4.2.8d.3) fails, a fiber through an interior positive point contains two positive invariant laws obeying every retained calibration and giving different scalar responses.
+
+For the factor-certified subclass of Definition H.4.2.8a, this criterion gives a sharp ablation statement. Once active contraction, spatial contraction, equal-channel normalization, amplitude normalization, and scalar factorization are all retained, Theorem H.4.2.8b fixes the coefficient. Removing any one scalar normalization while leaving its positive value unconstrained makes the coefficient range over a nontrivial positive interval; removing factorization leaves any self-adjoint commutant direction not killed by the remaining calibrations, with uniqueness decided by (H.4.2.8d.3). Thus rotational or unitary invariance does not recover an omitted bridge datum.
+
+*Proof.* Averaging an arbitrary inner product over $G$ gives the fixed invariant inner product. A quadratic form is represented by a unique self-adjoint $A$, and $G$-invariance is equivalent to $Ag=gA$ for every $g\in G$; nonnegativity is equivalent to $A\succeq0$. Schur's lemma gives (H.4.2.8d.2) on the stated special decomposition.
+
+Let $\mathcal L(A)=(L_1(A),\ldots,L_m(A))$. Two points of $\mathcal F_b$ have the same response exactly when $L_\star$ annihilates their difference, so taking the span of all feasible differences proves (H.4.2.8d.4). If $L_\star$ lies in the span in (H.4.2.8d.3), it is constant on every calibration fiber. Conversely, if it is not in that span, finite-dimensional duality gives $D\in\ker\mathcal L$ with $L_\star(D)\ne0$. Choose any $A_0\succ0$ and set $b=\mathcal L(A_0)$. Both $A_0\pm\epsilon D$ remain positive for sufficiently small $\epsilon$, belong to $\mathcal F_b$, and have different responses. This proves the universal equivalence and the interior counterpair. In the scalar-factorized subclass, an unconstrained positive factor changes the product while every other factor remains fixed; without factorization, the same kernel argument applies to surviving commutant directions. ∎
 
 ### H.4.3 Bridge-Conditional Numerical Evaluation
 
@@ -525,7 +563,7 @@ The algebraic factors in Equation H.4b are exact inside the adopted bridge law:
 Numerical rounding gives $\delta\eta'/\eta' \lesssim 10^{-5}$, so the T1 contribution is negligible at the displayed precision.
 
 **T2 (bridge/branch/convention):**
-Definition H.0 is the active bridge-law normalization connecting the QFI linear-response coefficient to the galactic acceleration channel. Its T2 data include the structural interpolation $w_{\mathrm{cmp}}(C)=C/\varepsilon_0$ and the registered two-copy i.i.d. realization at $C=C_{\mathrm{max}}^*=2\varepsilon_0$. Conditional on those entries,
+Definition H.0 is the active bridge-law normalization connecting the QFI linear-response coefficient to the galactic acceleration channel. Its T2 data include the structural interpolation $w_{\mathrm{cmp}}(C_{\mathrm{ch}})=C_{\mathrm{ch}}/\varepsilon_0$ and the registered two-copy i.i.d. realization at $C_{\mathrm{ch}}=C_{\mathrm{max}}^*=2\varepsilon_0$. Conditional on those entries,
 $$
 \eta'=\frac{3}{8\sqrt3}.
 $$
@@ -563,11 +601,11 @@ The approximately $2\%$ central-value difference is within the quoted empirical 
 
 **Remark H.1.** Writing $H_\Lambda=c\sqrt{\Lambda/3}$ gives $a_0=cH_\Lambda$. On the adopted Definition H.0 branch, $g_0^{\mathrm{branch}}=\eta'cH_\Lambda$ with $\eta'=3/(8\sqrt3)$. This supplies a candidate acceleration--vacuum relation; no realized galactic connection follows without an independently accepted observable and response certificate.
 
-**Remark H.2 (Factor ledger).** Equation (H.4b) follows on the factor-certified bridge-law class of Definition H.4.2.8a by multiplying $a/d_0$, $w_{\mathrm{cmp}}(C)$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorem H.1b supplies QFI additivity for the two-copy realization, Theorem H.1c supplies the product-mixed-register amplitude normalization, and Theorem H.3 supplies multiplication under factorized scalar action. Theorems H.1a and H.2 establish the corresponding Haar-vector and Euclidean-projection identities but do not replace the active- and spatial-tangent contraction certificates. Together with Proposition H.1, the complete factor-certified record yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
+**Remark H.2 (Factor ledger).** Equation (H.4b) follows on the factor-certified bridge-law class of Definition H.4.2.8a by multiplying $a/d_0$, $w_{\mathrm{cmp}}(C_{\mathrm{ch}})$, $(D-1)/D$, and $1/\sqrt{K_0}$, with $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ on the registered operating-point branch. Theorem H.1b supplies QFI additivity for the two-copy realization, Theorem H.1c supplies the product-mixed-register amplitude normalization, and Theorem H.3 supplies multiplication under factorized scalar action. Theorems H.1a and H.2 establish the corresponding Haar-vector and Euclidean-projection identities but do not replace the active- and spatial-tangent contraction certificates. Together with Proposition H.1, the complete factor-certified record yields $g_0$ via Equations (H.4)–(H.6) with no additional fitted numerical parameter inside that branch.
 
 **Remark H.3 (Shared geometric input).** The attractor geometry $\mathrm{Gr}(2,8)$ supplies the rank data $a=2$ and $d_0=8$ and determines the QFI spectrum used in Appendix Z; it also enters the electroweak matching analysis in Appendix T. The structural comparison weight, the value $D=4$, the register count $K_0=3$, the two tangent-contraction certificates, the equal-channel decomposition, and the generator-amplitude convention are separate inputs to Equation (H.4b).
 
-**Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal structural capacity $C=C_{\mathrm{max}}^*=2\varepsilon_0$ (Appendix Q, Equation Q.10), remains in the factor-certified class $\mathcal B_H$ of Definition H.4.2.8a, and retains the same non-$C$ contraction, equal-channel, factorization, and amplitude records, then Equation (H.4a) fixes $\eta'$ near its attractor value. On that common branch, $g_0$ is approximately universal across such systems.
+**Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal structural capacity $C_{\mathrm{ch}}=C_{\mathrm{max}}^*=2\varepsilon_0$ (Appendix Q, Equation Q.10), remains in the factor-certified class $\mathcal B_H$ of Definition H.4.2.8a, and retains the same non-$C_{\mathrm{ch}}$ contraction, equal-channel, factorization, and amplitude records, then Equation (H.4a) fixes $\eta'$ near its attractor value. On that common branch, $g_0$ is approximately universal across such systems.
 
 **Corollary H.1 (Bridge-Conditional Galactic Scale and Cosmological Acceleration Lock).**
 Under Proposition H.1, Definition H.0, and Equation H.4b, the acceleration scale entering the Appendix I galaxy-sector model is fixed by
@@ -776,13 +814,13 @@ for every $r<\pi$ and all $|\sqrt{K}t|\le r$, where $C_r<\infty$ depends only on
 
 The bridge coefficient $\eta'$ is the quadratic-response coefficient evaluated at $t=0$. Consequently the $K^2t^4/180$ term and $R_6(K,t)$ contribute only to finite-deviation corrections and do not enter $\eta'$ at the attractor.
 
-**Conditional environmental interpolation.** Off-operating-point behavior may be modeled at leading order by evaluating the T2 bridge interpolation $w_{\mathrm{cmp}}(C)=C/\varepsilon_0$ at $C\neq C_{\mathrm{max}}$, with (H.18) governing higher-order finite-deviation effects when needed. Fractional values of $w_{\mathrm{cmp}}$ are susceptibility weights, not fractional physical reset or sample counts.
+**Conditional environmental interpolation.** Off-operating-point behavior may be modeled at leading order by evaluating the T2 bridge interpolation $w_{\mathrm{cmp}}(C_{\mathrm{ch}})=C_{\mathrm{ch}}/\varepsilon_0$ at $C_{\mathrm{ch}}\neq C_{\mathrm{max}}$, with (H.18) governing higher-order finite-deviation effects when needed. Fractional values of $w_{\mathrm{cmp}}$ are susceptibility weights, not fractional physical reset or sample counts.
 
 ### H.4.7 Conditional Environmental Bridge Benchmarks
 
 For systems assigned an off-operating structural weight, the following values are conditional interpolation benchmarks rather than consequences of the integer-copy QFI theorem.
 
-**Void-galaxy benchmark.** If a branch assigns $C_{\mathrm{void}}=\varepsilon_0$, so $w_{\mathrm{cmp}}=1$:
+**Void-galaxy benchmark.** If a branch assigns $C_{\mathrm{ch},\mathrm{void}}=\varepsilon_0$, so $w_{\mathrm{cmp}}=1$:
 $$
 \eta'_{\mathrm{void}} = 1 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} \approx 0.108, \quad g_{0,\mathrm{void}} \approx 5.9 \times 10^{-11}\,\mathrm{m/s^2}
 \tag{H.27}
@@ -792,7 +830,7 @@ The ratio to the registered operating-point branch is $g_{0,\mathrm{void}}/g_0 \
 
 *Conditional observable:* Such a branch would make void galaxies appear more Newtonian than field galaxies, requiring less "dark matter" enhancement.
 
-**Ultra-diffuse-galaxy benchmark.** If a branch assigns $C_{\mathrm{UDG}}=\varepsilon_0/2$, so $w_{\mathrm{cmp}}=0.5$:
+**Ultra-diffuse-galaxy benchmark.** If a branch assigns $C_{\mathrm{ch},\mathrm{UDG}}=\varepsilon_0/2$, so $w_{\mathrm{cmp}}=0.5$:
 $$
 \eta'_{\mathrm{UDG}} = 0.5 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} \approx 0.054, \quad g_{0,\mathrm{UDG}} \approx 2.9 \times 10^{-11}\,\mathrm{m/s^2}
 \tag{H.28}
@@ -800,7 +838,39 @@ $$
 
 *Conditional observable:* This interpolation would make UDGs exhibit nearly Newtonian dynamics to larger radii. Some ultra-diffuse galaxies have been reported to be "dark matter deficient" (e.g., DF2) [van Dokkum et al. 2018], but that observation does not derive the structural weight; it can only test a weight fixed independently before comparison.
 
-Determining $C$ for a specific system requires an independently specified operational bridge from the system to its structural per-cycle information budget in the sense of Appendix Q. Once that T2 bridge is fixed, Equations (H.4a) and (H.27)–(H.28) give the corresponding conditional $g_0(C)$.
+Determining $C_{\mathrm{ch}}$ for a specific system requires an independently specified operational bridge from the system to its structural per-cycle information budget in the sense of Appendix Q. Once that T2 bridge is fixed, Equations (H.4a) and (H.27)–(H.28) give the corresponding conditional $g_0(C_{\mathrm{ch}})$.
+
+**Theorem H.4.7a (Finite Environmental-Interpolation Identifiability).** Let $E$ be a finite environment set and let $z:E\to\mathbb R^p$ be a target-clean structural feature fixed independently of gravitational response data. Consider the affine channel-capacity bridge
+$$
+C_{\mathrm{ch},\theta}(e)=\theta_0+\sum_{j=1}^p\theta_jz_j(e),
+\qquad
+r(e):=(1,z(e))\in\mathbb R^{p+1}.
+\tag{H.4.7a.1}
+$$
+If training environments $e_1,\ldots,e_m$ supply the exact values $y_k=C_{\mathrm{ch},\theta}(e_k)$, write $A_{k\bullet}=r(e_k)$ and $y=(y_k)$. Provided $A\theta=y$ is consistent, all admissible coefficients form
+$$
+\theta_*+\ker A.
+\tag{H.4.7a.2}
+$$
+The untouched prediction at $e\in E$ is unique exactly when
+$$
+r(e)\in\operatorname{row}(A).
+\tag{H.4.7a.3}
+$$
+When (H.4.7a.3) holds, any vector $u$ satisfying $A^{\mathsf T}u=r(e)$ gives the parameter-free prediction $C_{\mathrm{ch},\theta}(e)=u^{\mathsf T}y$. When it fails, two affine bridges fit every training environment exactly and disagree at $e$. The corresponding bridge-law predictions
+$$
+\eta_\theta(e)=
+\frac{C_{\mathrm{ch},\theta}(e)}{\varepsilon_0}
+\left(\frac{a}{d_0}\right)
+\left(\frac{D-1}{D}\right)
+\frac1{\sqrt{K_0}},
+\qquad
+g_\theta(e)=\eta_\theta(e)c^2\sqrt{\frac\Lambda3},
+\tag{H.4.7a.4}
+$$
+inherit the same uniqueness classification. No response datum may be inserted into $z$ without changing the theorem's target-clean premise.
+
+*Proof.* Equation (H.4.7a.2) is the general solution of a consistent finite linear system. The value $r(e)\theta$ is constant on that affine set exactly when $r(e)$ annihilates $\ker A$. By the finite-dimensional fundamental theorem of linear algebra, $(\ker A)^\perp=\operatorname{row}(A)$, proving (H.4.7a.3). If $r(e)=A^{\mathsf T}u$, then $r(e)\theta=u^{\mathsf T}A\theta=u^{\mathsf T}y$. Otherwise choose $v\in\ker A$ with $r(e)v\ne0$; $\theta_*$ and $\theta_*+v$ have identical training values and different untouched predictions. Equation (H.4.7a.4) is a fixed nonzero scalar multiple, so it preserves the classification. ∎
 
 ## H.8 Derivation Summary: The Bridge Law
 
@@ -812,7 +882,7 @@ The bridge law combines four independent factors into one conditional accelerati
 
 | Step | Factor | Value | Theorem | Source |
 |:-----|:-------|:------|:--------|:-------|
-| 1 | Structural comparison weight / registered repetition | $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ at $C=2\varepsilon_0$ | bridge registration plus QFI additivity for two i.i.d. copies | Definition H.0a; Theorem H.1b |
+| 1 | Structural comparison weight / registered repetition | $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ at $C_{\mathrm{ch}}=2\varepsilon_0$ | bridge registration plus QFI additivity for two i.i.d. copies | Definition H.0a; Theorem H.1b |
 | 2 | Active participation | $a/d_0 = 1/4$ | Isotropy (Haar average) | Representation theory |
 | 3 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance | Linear algebra |
 | 4 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | Variance normalization (H.1c) | Discrete generator normalization |
@@ -865,7 +935,7 @@ The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ takes this value wi
 | Factor | Value | Source |
 |--------|-------|--------|
 | Active-tangent contraction | $a/d_0 = 1/4$ | active contraction certificate; Theorem H.1a supplies the analogous Haar-vector identity |
-| Structural comparison weight / registered repetition | $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ at $C=2\varepsilon_0$ | bridge registration plus QFI additivity for two i.i.d. copies |
+| Structural comparison weight / registered repetition | $w_{\mathrm{cmp}}=N_{\mathrm{cmp}}=2$ at $C_{\mathrm{ch}}=2\varepsilon_0$ | bridge registration plus QFI additivity for two i.i.d. copies |
 | Spatial-tangent contraction | $(D-1)/D = 3/4$ | spatial contraction certificate; Theorem H.2 supplies the Euclidean isotropic identity |
 | Generator-amplitude normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | product-mixed-register calculation and independent amplitude convention of Theorem H.1c |
 

@@ -213,7 +213,7 @@ which is invariant under (X.4a.2). Therefore no local normalized modular or null
 
 *Proof.* The cancellation in (X.4b.2) uses $T_{\mu\nu}^{\mathrm{vac}}=-\rho_{\mathrm{vac}}g_{\mu\nu}$ with constant $\rho_{\mathrm{vac}}$, and the normalized generating-functional cancellation uses a source-independent scalar factor. Each listed nonconstant, state-dependent, curvature-dependent, or boundary-sensitive term violates at least one of those hypotheses and therefore is not identified by Theorem X.4b. That theorem is finite or trace-class, so it has no type-III conclusion without a descent theorem. Finally, (X.4a.2) is invariant under simultaneous shifts and hence cannot select one value of $\Lambda_{\mathrm{eff}}$. ∎
 
-**Relation to Corollary B.8d.2.** Corollary B.8d.2 already proves that additive metric-proportional vacuum normalization is absorbed into $\Lambda$ and records how the PCE-attractor convention can fix a representative. Definition X.4a and Theorem X.4b identify the corresponding local operational quotient and its modular/null-flux scope; Theorem F.10.12g adds the quantitative finite-cover descent.
+**Relation to Corollary B.8d.2.** Corollary B.8d.2 already proves that additive metric-proportional vacuum normalization is absorbed into $\Lambda$ and records how the PCE-attractor convention can fix a representative. Definition X.4a and Theorem X.4b identify the corresponding local operational quotient and its modular/null-flux scope; Theorem F.10.12g adds the quantitative finite-cover descent. Corollary F.10.12g.1 proves that every selector depending only on that descent record is constant on the common-shift orbit and therefore cannot determine its mean. Selecting a global $\Lambda_{\mathrm{eff}}$ requires the independent representative law named there, while type-III modular/KMS applicability retains the AQFT descent certificate required by Corollary X.4c.
 
 
 
@@ -801,6 +801,46 @@ Thus the SLD quantum Fisher metric is the pointwise minimal normalized CPTP-mono
 
 PCE compression is an admissible Markov/CPTP quotient, so monotonicity and quotient compatibility force the compressed metric to be the pushforward of the same metric. Therefore the response Hessian, FRG/PCE compression kernel, and perspective drift-diffusion generator cannot choose independent control metrics. Condition 7 makes the sector images quotient-pushforward functors on the branch domain. Applying such a sector image after composing $C$ and $K$ therefore gives the same pushed-forward metric and generator as first applying the update image and then the coarse-graining image, proving (X.8a.2b.1). ∎
 
+**Proposition X.8a.2d (Monotonicity and Naturality Admit Distinct Quantum Metrics).** The normalized symmetric Petz functions
+$$
+f_{\mathrm{SLD}}(t)=\frac{1+t}{2},
+\qquad
+f_{\mathrm{BKM}}(t)=\frac{t-1}{\ln t},
+\qquad
+f_{\mathrm{BKM}}(1)=1,
+\tag{X.8a.2d.1}
+$$
+define distinct CPTP-monotone natural metrics. For
+$$
+\rho=\operatorname{diag}\!\left(\frac14,\frac34\right),
+\qquad
+X=
+\begin{pmatrix}
+0&1\\
+1&0
+\end{pmatrix},
+\tag{X.8a.2d.2}
+$$
+Equation (X.8a.2b.2) gives
+$$
+g_\rho^{\mathrm{SLD}}(X,X)=4,
+\qquad
+g_\rho^{\mathrm{BKM}}(X,X)=4\ln3.
+\tag{X.8a.2d.3}
+$$
+Thus CPTP monotonicity and functorial transport do not imply quantum-metric uniqueness. Definition X.8a.2a obtains uniqueness from its additional pointwise PCE-minimality condition, which selects the SLD member.
+
+*Proof.* Both functions in (X.8a.2d.1) are normalized symmetric operator-monotone Petz functions. Their Morozova--Čencov kernels at $(x,y)=(1/4,3/4)$ are
+$$
+c_{\mathrm{SLD}}(x,y)=\frac{2}{x+y}=2,
+\qquad
+c_{\mathrm{BKM}}(x,y)
+=
+\frac{\ln x-\ln y}{x-y}
+=2\ln3.
+$$
+The tangent $X$ has two unit off-diagonal entries, so summing the two ordered pairs in (X.8a.2b.2) proves (X.8a.2d.3). Since $\ln3\ne1$, the metrics differ on the same retained tangent. The ordering argument in Theorem X.8a.2b then supplies the separate minimality selection. ∎
+
 **Corollary X.8a.2c (PCE Selection of the SLD Quantum Fisher Metric).** On any retained quantum finite-response branch satisfying Definition X.8a.2a, the SLD quantum Fisher metric is the unique PCE-minimal normalized symmetric CPTP-monotone metric on the QFI-active response quotient. In the conventional distance normalization, the selected Bures line element is one quarter of this metric.
 
 *Proof.* The Petz classification and maximality of the arithmetic mean give
@@ -969,6 +1009,35 @@ for every PPI-admissible coarse-graining $C$ and update kernel $K$ in the retain
 **Corollary X.8a.5c (No Additional Independent Operator Sector from the Same Datum).** Let a competing bridge law assign one of the four sector operators by data not derivable as projection, regulator-resolvent calculus, sign convention, or natural-gradient passage applied to $\mathfrak L_W$ on the same branch. Then the competing law is not a consequence of the predictive free-energy inverse-Hessian datum alone. It is admissible only as a different branch datum, or else it fails the form-compatibility hypothesis of Theorem X.9.6b or the naturality square (X.8a.5b.1).
 
 *Proof.* By Theorem X.9.6b, every retained response, RG, perspective, and PCE operator satisfying the closed-form compatibility hypotheses is an image of the unique self-adjoint operator $\mathfrak L_{\mathrm{PU}}$. By Definition X.8a.5a this operator is $\mathfrak L_W$. Therefore a sector assignment outside the displayed image set is not determined by the same finite datum. If it is retained, it must add or change branch data; if it is not added as new data, it contradicts either the form-compatibility theorem or the functorial naturality condition. ∎
+
+**Corollary X.8a.5d (Quadratic Nonemptiness of the Inverse-Hessian Branch).** Let
+$$
+\mathscr H_{\mathrm{PU}}
+=
+\mathscr H_{\mathrm{field}}\oplus
+\mathscr H_{\mathrm{RG}}\oplus
+\mathscr H_{\Sigma}\oplus
+\mathscr H_{\mathrm{PCE}}
+$$
+be finite-dimensional, and let $\mathfrak L_{\mathrm{PU}}$ be any strictly positive self-adjoint operator satisfying the form-compatibility hypotheses of Theorem X.9.6b. On the inner-product identification of $\mathscr H_{\mathrm{PU}}$ with its dual, set
+$$
+W[J]
+=
+\frac12\langle J,\mathfrak L_{\mathrm{PU}}^{-1}J\rangle,
+\qquad
+J_*=0.
+\tag{X.8a.5d.1}
+$$
+Together with the orthogonal sector projections and any positive finite-dimensional regulator satisfying item 5 of Definition X.8a.5a, this is a predictive free-energy inverse-Hessian datum and
+$$
+(W''[J_*])^{-1}
+=
+\mathfrak L_{\mathrm{PU}}.
+\tag{X.8a.5d.2}
+$$
+Consequently the four constructions in Theorem X.8a.5 have a nonempty quadratic realization for every compatible strictly positive finite branch operator.
+
+*Proof.* Strict positivity makes $\mathfrak L_{\mathrm{PU}}^{-1}$ strictly positive, so (X.8a.5d.1) is a twice differentiable strictly convex functional on the full dual chart. Its constant Hessian is $\mathfrak L_{\mathrm{PU}}^{-1}$, proving (X.8a.5d.2). The direct-sum projections satisfy item 4 of Definition X.8a.5a, and in finite dimension every operator used in the regulator trace is trace class. The assumed form compatibility supplies item 3. All entries of the datum are therefore populated, and Theorem X.8a.5 gives the four sector images. ∎
 
 **Corollary X.8b (Effective-Action Projection of Predictive Curvature).** Assume the regular product-bundle branch of Theorem 47 and Theorem G.4b and the effective-action hypotheses of Theorem X.5a. Then
 $$
@@ -3352,6 +3421,24 @@ Appendix X (Section X.7) already provides a pipeline for connecting PU quantitie
 
 5. **Conclude degeneracy.** Any candidate passing step (4) is PCE-degenerate at the proxy level by Proposition X.9.3.
 
+**Theorem X.9.4a (Finite Exact Duality Classification).** Let $\mathfrak P$ be a finite set of predictive presentations. Suppose each presentation carries:
+
+1. a finite response table over one exact field with decidable equality;
+2. a complete cost vector in one exact ordered field;
+3. a finite table of candidate transforms closed under the declared composition and inverse operations, with those operations decidable; and
+4. a finite obstruction complex whose cochain groups are finitely generated abelian groups and whose coboundaries are given by integer matrices.
+
+Then the following data are computable by exhaustive exact operations:
+
+1. the response-equivalence classes, obtained by equality of every retained response entry;
+2. the PCE-duality classes, obtained by intersecting response equivalence with equality of the complete cost vector;
+3. the subgroupoid generated by the invertible candidate transforms that preserve both tables; and
+4. every obstruction group, its torsion invariants, and a representative of each retained class.
+
+A pair with distinct response tables belongs to different response and PCE-duality classes regardless of cost degeneracy.
+
+*Proof.* The first two equivalence relations are decided by finitely many exact equality comparisons. Filtering the finite transform table by source, target, response, cost, composition, and inverse equations leaves a finite groupoid; breadth-first traversal computes its connected components and multiplication tables. Present each coboundary by its integer matrix. Smith normal form computes kernels, images, free ranks, torsion invariant factors, and explicit representatives, hence the cohomology groups. Exhaustion of the finite input tables proves completeness. A response-distinct pair fails the first equivalence predicate and therefore also the intersected PCE-duality predicate. ∎
+
 ### X.9.5 Predictive Obstruction Complex
 
 **Definition X.9.5a (Finite PU Obstruction Complex).** Let $\mathcal U=\{U_i\}_{i\in I}$ be a finite operational cover of a regular PU branch, where each $U_i$ denotes a local predictive chart, perspective chart, gauge frame, boundary patch, or effective-action chart. Let $\mathcal F_\varepsilon$ be an abelian sheaf of finite-cost predictive correction functionals: for each $U$, $\mathcal F_\varepsilon(U)$ is the abelian group of signed local correction functionals with finite implementation cost, equipped with the filtration that records irreversible update increments satisfying the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)\quad(\text{registered reset branch; a positive floor requires }H_q(P\mid R)\ge h_{\min}>0)$ for admissible positive updates. Define
@@ -4879,3 +4966,7 @@ $$
 then all calibration-internal sector constants are projections of the same flat finite-response record, including its registered flat-holonomy class, and cannot be renormalized independently sector by sector. If $\mathcal F_{\mathrm{cal}}\ne0$, every admitted mismatch must be one of the explicitly registered curvature or holonomy residuals. Changing a transition map, finite part, normalization, regulator, loop, cycle, projection, holonomy class, or residual after comparison with data defines a different branch.
 
 *Proof.* Vanishing curvature is the flatness condition. A flat connection can retain global holonomy on a nonsimply connected overlap complex, so that holonomy class is part of $\mathfrak C_{\mathrm{cal}}$. Each $c_a$ in (X.9.6i.4) is therefore a projection of the single registered connection record. For nonzero retained curvature, its registered cycle pairings and holonomies are the declared obstruction components; no unregistered residual belongs to the branch. Altering any entry changes either the response record or its projection map, and Corollary X.9.6i.2 classifies the result as a different branch. ∎
+
+**Corollary X.9.6i.7 (Finite Fundamental-Cycle Calibration Audit).** Suppose the one-skeleton of a populated finite calibration atlas has selected overlap transitions in a finite group with exact multiplication and equality. Choose a spanning tree. The ordered holonomies of the fundamental cycles associated with the non-tree edges form a complete finite audit inventory for a global vertex gauge on that selected one-skeleton transition record: such a vertex gauge exists exactly when every fundamental-cycle holonomy is the identity. When the calibration record permits nontrivial flat holonomy, the same computation returns its exact generators; each nonidentity result must occur on a registered loop and in the registered holonomy class. An unregistered residual rejects the asserted one-skeleton cross-ledger equivalence on that record. Naturality squares, naturality triangles, and curvature two-cells of the full atlas remain separate typed and populated gates.
+
+*Proof.* Apply Theorem D.8.9c.3 to the selected transition labels. Its tree propagation proves the identity criterion and returns each failed chord with its ordered fundamental-cycle holonomy. Retaining rather than trivializing a flat connection changes the acceptance predicate from identity to membership in the holonomy class fixed by Definition X.9.6i.3; exact computation of the same cycle products decides that predicate. Proposition F.10.12h executes one flat and one obstructed $S_3$ triangle. Theorem D.8.9c.1 supplies the parallel additive Hilbert-valued audit. Naturality squares and triangles of an unpopulated atlas, continuous transition groups, curvature two-cells, and the physical calibration record remain the mathematical and populated inputs required by Definition X.9.6i.3. ∎

@@ -208,6 +208,8 @@ As Section 10 establishes: “Any local operation at Alice’s site is represent
 
 **Application of Theorem 42.** Theorem 42 excludes only its finite-window deterministic or zero-error contradiction protocol. A registered reset separately obeys Theorem 31, and $f_{\mathrm{RID}}<1$ and $C_{\max}<\ln d_0$ require the refresh/minorization branch; none of these statements makes every ND-RID interaction irreversible or excludes every positive-capacity causal-loop construction.
 
+Proposition 42c supplies the exact finite single-loop separation: every fixed stochastic channel-policy composition has a stationary distribution, even when its deterministic transition has no fixed symbol. This distributional fixed point does not satisfy Theorem 14.1's stronger antecedent of an intervention-stable prediction guarantee that survives the receiver's diagonal policy. The two results therefore classify different loop objects.
+
 This application excludes a zero-error contradiction protocol and does not replace Theorem 39c.
 
 
@@ -311,7 +313,7 @@ This contradicts (14.1a) for every $\epsilon<1$. Therefore no intervention-stabl
 
 **Remark 14.1a.1 (Resource-level gates on carrier-mediated implementations).** Independently of the logical impossibility theorem, a completed binary fixed-ready-state reset satisfying Proposition E.2a has the registered support-capacity deficit, and a physical reset satisfying Theorem 31 obeys $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$. Neither statement holds for every SPAP/ND-RID cycle. Refresh/minorization branches additionally satisfy $f_{\mathrm{RID}}<1$ and $C_{\max}<\ln d_0$ under Lemma E.1 and Theorem E.2. On the independent thermodynamic-arrow branch of Theorem O.3, a positive pathwise-production lower bound gives the corresponding fluctuation suppression. These resource statements do not prove chronology protection; Theorem 14.1's diagonal argument is the logical obstruction.
 
-**Remark 14.1a.2 (Where the impossibility lives).** Chronology protection in PU rests on the SPAP diagonal argument applied to intervention-stable predictors. The information-theoretic and thermodynamic bounds in PU constrain how a carrier-mediated channel could be physically implemented; they do not by themselves exclude paradoxes. What excludes paradoxes is the logical impossibility of an intervention-stable self-referential predictor: any channel whose accuracy guarantee survives diagonal use by the receiver triggers SPAP. Theorem 14.1 is therefore a logical theorem about the operational target "intervention-stable carrier-mediated retrocausal control," not a thermodynamic claim about CTC geometries and not a blanket prohibition on finite-error retrocausal correlations.
+**Remark 14.1a.2 (Where the impossibility lives).** Chronology protection in PU rests on the SPAP diagonal argument applied to intervention-stable predictors. The information-theoretic and thermodynamic bounds in PU constrain how a carrier-mediated channel could be physically implemented; they do not by themselves exclude paradoxes. What excludes paradoxes is the logical impossibility of an intervention-stable self-referential predictor: any channel whose accuracy guarantee survives diagonal use by the receiver triggers SPAP. Theorem 14.1 is therefore a logical theorem about the operational target "intervention-stable carrier-mediated retrocausal control," not a thermodynamic claim about CTC geometries and not a blanket prohibition on finite-error retrocausal correlations. Lemma P.16c.7.2 records its fixed-point-free Boolean contradiction step; Theorem 14.1 supplies the distinct causal domain and intervention-stability hypotheses.
 
 **Remark 14.1a (Carrier-Mediated, Shared-Past, and Late-Marginal Branches).** Theorem 14.1 targets carrier-mediated or transcript-mediated control whose predictive guarantee is stable under the receiver's intervention. Branch (ii) of Postulate 3 instead consists of correlations encoded by a shared-past preparation and contains no independently late spacelike input. Branch (iii) is not pre-encoded in that sense: a freely selected post-distribution context changes Bob's pre-lightcone marginal and is therefore a positive-capacity causal-branch falsifier under Theorem 39c. The endpoint, sample, information-rate, and finite-window zero-error bounds of Theorems 39--42 may limit branch-(iii) reliability, but they neither establish no-signaling nor prove a general causal-loop prohibition for it. Accordingly, branch (ii) may remain within the causal comparison, while branch (iii) is retained only as an explicitly noncausal experimental anomaly model.
 
@@ -378,6 +380,71 @@ The right side is causally separable because $\Lambda$ preserves $\mathsf{CSep}$
 
 The final statement follows because Theorem 14.1 excludes carrier-mediated backwards transmission of predictively useful information. A finite higher-order process with $\mathcal C_{\mathrm{ord}}>0$ changes the ordering resource of local instruments but, by hypothesis, still assigns ordinary forward operational probabilities and contains no paradox-inducing carrier loop. ∎
 
+**Corollary 14.1i (Causal-Order Closure Rigidity for Ancilla-Free Sandwiches).** Let $\mathcal H$ be a complex Hilbert space of dimension $d\ge2$ and write
+$$
+\mathcal D(\rho)=\operatorname{tr}(\rho)\frac{I}{\dim\mathcal H}.
+$$
+Consider the declared ancilla-free sandwich class of deterministic superchannels
+$$
+\mathcal S_{G,F}(E):=G\circ E\circ F,
+\qquad F,G\ \mathrm{CPTP},
+\tag{14.1i.1}
+$$
+and impose independent input--output unitary covariance
+$$
+\mathcal S_{G,F}(\operatorname{Ad}_V\circ E\circ\operatorname{Ad}_U^\dagger)
+=
+\operatorname{Ad}_V\circ\mathcal S_{G,F}(E)\circ\operatorname{Ad}_U^\dagger
+\tag{14.1i.2}
+$$
+for every channel $E$ and all $U,V\in U(\mathcal H)$. If $\mathcal S_{G,F}$ is idempotent, its action is exactly one of
+$$
+\begin{array}{c|c|c}
+\text{action}&\mathcal S(E)&\operatorname{im}\mathcal S\\ \hline
+\text{identity}&E&\text{all channels}\\
+\text{input depolarization}&E\circ\mathcal D&\{E_\sigma:\sigma\in\mathcal D(\mathcal H)\}\\
+\text{total collapse}&\mathcal D&\{\mathcal D\},
+\end{array}
+\tag{14.1i.3}
+$$
+where $E_\sigma(\rho)=\operatorname{tr}(\rho)\sigma$. Consequently input depolarization is the unique nonidentity action in this class with nonsingleton image.
+
+*Proof.* For a density operator $\sigma$, let $E_\sigma(X)=\operatorname{tr}(X)\sigma$. Since $E_\sigma\circ F=E_\sigma$, (14.1i.2) with $U=I$ gives
+$$
+G(V\sigma V^\dagger)=VG(\sigma)V^\dagger.
+\tag{14.1i.4}
+$$
+Density operators linearly span $\mathcal B(\mathcal H)$, so $G$ commutes with unitary conjugation. The conjugation representation decomposes as
+$$
+\mathcal B(\mathcal H)=\mathbb CI\oplus\{X:\operatorname{tr}X=0\},
+$$
+with irreducible traceless summand. Schur's lemma, trace preservation, and Hermiticity preservation therefore give
+$$
+G=G_q,
+\qquad
+G_q(X)=qX+(1-q)\operatorname{tr}(X)I/d,
+\qquad
+-\frac1{d^2-1}\le q\le1.
+\tag{14.1i.5}
+$$
+The interval in (14.1i.5) is the complete-positivity range, obtained from the two eigenvalues of the Choi matrix on $\mathbb C|\Omega\rangle$ and its orthogonal complement.
+
+If $q=0$, trace preservation gives $\mathcal S_{G,F}(E)=\mathcal D$ for every $E$. Suppose $q\ne0$. Then $G_q$ is invertible as a linear map. Equation (14.1i.2) with $V=I$, followed by cancellation of $G_q$ and the choice $E=\operatorname{id}$, shows that $F$ also commutes with every unitary conjugation. Hence
+$$
+F=F_p,
+\qquad
+F_p(X)=pX+(1-p)\operatorname{tr}(X)I/d,
+\qquad
+-\frac1{d^2-1}\le p\le1.
+\tag{14.1i.6}
+$$
+Idempotence on any nonmaximally mixed replacer channel gives $G_q^2(\sigma)=G_q(\sigma)$ and therefore $q^2=q$. Thus $q=1$ on the present branch. Idempotence on $E=\operatorname{id}$ then gives $F_p^2=F_p$, hence $p^2=p$. The two possibilities $p=1$ and $p=0$ yield the first two rows of (14.1i.3), while $q=0$ yielded the third. Each displayed action directly satisfies covariance and idempotence. Finally,
+$$
+(E\circ\mathcal D)(\rho)=\operatorname{tr}(\rho)E(I/d),
+$$
+and every $E_\sigma$ occurs by choosing $E=E_\sigma$, proving the image statement. ∎
+
+**Remark 14.1i.1 (Memory-Bearing Classification Obligation).** Corollary 14.1i proves the trichotomy on the complete ancilla-free sandwich class and includes the input-depolarizing closure used by Hefford and Wilson (2026). The corresponding theorem for arbitrary deterministic superchannels requires a finite dilation classifier that retains every input--memory and memory--output representation, quotients dilation equivalence, and proves that covariance plus idempotence eliminates every additional response-active memory block. A single covariant dilation with a fourth response-active image type falsifies that extension while leaving Corollary 14.1i intact.
 **Connection to Theorem 42.** 
 
 **Scope relative to Theorem 42.** Theorem 42 excludes a finite-window deterministic or zero-error contradiction protocol on its regular branch. It does not prove that every positive-capacity statistical FTL channel is causal or incapable of every causal-loop construction. Corollary 14.1c instead concerns valid forward higher-order processes with no carrier-mediated closed timelike curve already assumed. Therefore neither result can be used to reclassify Postulate 3(iii): a late-randomized pre-lightcone marginal shift remains outside operational causality by Theorem 39c, while Theorems 39--42 provide only endpoint, detectability, rate, and zero-error reliability bounds.
@@ -794,6 +861,31 @@ $$
 \mathcal S=\hbar\sum_i\varepsilon_i.
 $$
 Division by $\hbar>0$ gives the displayed equality. Theorem 31 independently gives $\varepsilon_{\mathrm{phys}}\ge H_q(P\mid R)$ on a registered reset. Equality with $\ln2$ additionally requires a conditionally uniform binary record, no retained side information, and zero dissipative overhead, exactly as stated. ∎
+
+**Theorem 14.2b.1 (Complete Dimensional Obstruction to an Action Bound from Rate and Latency Alone).** Let a finite ledger contain only dimensionless information variables $I_1,\ldots,I_r$, rates $\nu_1,\ldots,\nu_s$ with dimension $T^{-1}$, and latencies $\tau_1,\ldots,\tau_t$ with dimension $T$. No nonzero unit-invariant function of these entries has the dimension of action $ET$.
+
+More precisely, suppose one additional bridge $B_*$ supplies one power of the missing energy dimension and has units $[B_*]=ET^r$ for a fixed real $r$. Every dimensionally admissible action expression built from that bridge and the ledger has the form
+$$
+\mathcal A=B_*\tau_*^{1-r}F(I,\nu_i\tau_j,\tau_j/\tau_k),
+\qquad [B_*]=ET^r,
+\tag{14.2b.1.1}
+$$
+with $F$ dimensionless. In particular, $r=1$ is an action calibration $\kappa_A$, $r=0$ is an energy bridge $E_*$ followed by one latency, and $r=-1$ is a power bridge followed by two latencies:
+$$
+\mathcal A=\kappa_AF,
+\qquad
+\mathcal A=E_*\tau_*F,
+\qquad
+\mathcal A=P_*\tau_*^2F.
+\tag{14.2b.1.2}
+$$
+The ledger does not select $B_*$, $\tau_*$, or $F$. Consequently it entails no positive invariant lower bound on physical action. The sharp ledger-only bound is the trivial bound $\mathcal A\ge0$ on branches where action is nonnegative.
+
+*Proof.* Under a change of the energy unit by an arbitrary factor $c>0$, every $I_i$, $\nu_i$, and $\tau_j$ has unchanged numerical value, whereas the numerical value of an action changes by $c^{-1}$. A function of unchanged numbers cannot transform this way unless it is zero. This proves the no-go.
+
+For the classification, the Buckingham-$\Pi$ argument leaves only dimensionless combinations of the ledger entries: $I_i$, products $\nu_i\tau_j$, and latency ratios. A bridge with units $ET^r$ must be multiplied by $T^{1-r}$, and any choice of ledger latency supplies that power up to a dimensionless latency ratio. This proves (14.2b.1.1), and the special cases in (14.2b.1.2) follow directly. Conversely, every displayed expression has action dimension. Since multiplying the bridge by any $c>0$ preserves every original ledger entry while multiplying the proposed bound by $c$, no positive value is selected. A quiescent finite register with Hamiltonian $H_\epsilon=\epsilon H_0$ and a fixed abstract readout ledger has action over latency $\tau$ equal to $O(\epsilon\tau)$; letting $\epsilon\downarrow0$ shows that zero is tight absent a speed, spectral, or reset-energy premise. ∎
+
+Corollary 14.2b is therefore a calibrated route of type (14.2b.1.1), not a consequence of information rate or latency. Any positive physical rate--latency--action inequality must register its energy/action bridge and the dynamical premise tying that bridge to the timed operation before comparison.
 
 #### Implications
 
@@ -1395,6 +1487,36 @@ $$
 
 *Proof.* By Definition D.1, the protocol minimizes $V^{(k)}$. For an interior optimum of a differentiable one-parameter family, $dV^{(k)}/dk = 0$. Differentiating Equation (14.3.7a) gives Equation (14.3.7b). $\square$
 
+**Theorem 14.3.2a (Exact Finite Branch-Precomputation Optimizer).** Let $T$ be a finite rooted reply tree. Each nonroot node $v$ represents one reply prefix, has an integer storage/computation cost $c_v\ge1$, and has a registered net decision value $r_v\in\mathbb R$ equal to its delay-sensitive expected benefit minus every additive operational and coordination cost not already charged by the hard budget. A precomputation policy is a prefix-closed node set of total cost at most $B\in\mathbb Z_{\ge0}$. For a nonroot node $v$, define
+$$
+F_v(b)
+=
+\max\left\{
+0,
+r_v+
+\max_{\substack{b_w\in\mathbb Z_{\ge0}\ (w\in\operatorname{ch}(v))\\
+\sum_w b_w\le b-c_v}}
+\sum_{w\in\operatorname{ch}(v)}F_w(b_w)
+\right\},
+\tag{14.3.7d}
+$$
+where the second entry is omitted when $b<c_v$. At the root $o$, set
+$$
+F_o(B)
+=
+\max_{\substack{b_w\in\mathbb Z_{\ge0}\ (w\in\operatorname{ch}(o))\\
+\sum_wb_w\le B}}
+\sum_{w\in\operatorname{ch}(o)}F_w(b_w).
+\tag{14.3.7e}
+$$
+Then $F_o(B)$ is the maximum net value over the complete finite policy class. Backtracking the maximizing allocations constructs an optimal prefix-closed branch table. Its decoder follows the realized reply path to the deepest selected prefix, uses that node's stored continuation, and invokes the registered fallback when the path contains no selected continuation.
+
+Ranking by reply probability alone is not generally optimal. With two unit-cost sibling branches of probabilities $0.6$ and $0.4$ and conditional saved values $1$ and $10$, a one-slot budget selects the second branch because its expected values are $0.6$ and $4$.
+
+*Proof.* At a leaf, (14.3.7d) compares omission with selection and is exhaustive. Assume the recursion is exact for the children of $v$. Every feasible policy below $v$ either omits $v$, which forces omission of its descendants by prefix closure, or selects $v$ and allocates the remaining integer budget among its child subtrees. The induction hypothesis makes the inner maximum exact for each allocation, and maximizing over all allocations exhausts the policies below $v$. Induction to the root proves (14.3.7e). Stored node labels and the tree order define the stated decoder. The two-branch calculation proves the final separator. ∎
+
+**Resolution TV-DISC-12-R1.** Equations (14.3.7d)--(14.3.7e) and backtracking give `positive-discharge` of optimization and formal task realization on the exhaustive finite prefix-closed delayed-decision policy class. The sibling example is `negative-refutation` of probability-only branch ranking outside equal-value conditions.
+
 A useful special case occurs when $V_{prop}^{(k)}$ is negligible over the relevant range, $B(PP)=PP$, and the protocol improves performance only by reducing an effective delay-sensitive prediction error according to
 
 $$
@@ -1533,7 +1655,35 @@ C_s(\beta-\alpha)xe^{-x},
 $$
 which tends to $0$ as $x\to\infty$. Hence for any fixed $b>0$ there is an admissible finite-complexity value with $C_{\mathrm{self}}A<b$. This contradicts any universal positive lower bound. A separate normalization theorem for $C_{\mathrm{self}}$ could define a different quantity, but that would be an additional hypothesis, not a consequence of the current PU structure. ∎
 
-*Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent. The precise cardinality of the operationally admissible equivalence classes remains to be determined. Appendix U supplies a sharper branch-level discriminator inside this finite class. On the predictive-recovery MacWilliams Golay and Starobinsky branches, the leading quantities obey
+*Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent.
+
+**Theorem 14.4a.1 (Finite Operational Model-Quotient Count and Margin Stability).** Let $\mathcal M=\{m_1,\ldots,m_K\}$ be a coverage-certified finite model census. Fix $r$ finite observable extractors and, for each extractor, a finite resolution quantizer $Q_p$ whose cells form the registered operational partition. Define the response word
+$$
+w(m)=\bigl(Q_1(y_1(m)),\ldots,Q_r(y_r(m))\bigr).
+\tag{14.4a.1.1}
+$$
+Two models are operationally equivalent exactly when their response words agree, and the exact number of equivalence classes is
+$$
+N_{\mathrm{op}}=|w(\mathcal M)|.
+\tag{14.4a.1.2}
+$$
+Thus sorting or hashing the $K$ finite words gives a terminating exact quotient algorithm.
+
+Suppose instead that certified approximations $\widehat y_p(m)$ obey
+$$
+|\widehat y_p(m)-y_p(m)|\le e_p(m).
+$$
+If every error interval lies in the interior of one quantizer cell, every word and the count (14.4a.1.2) are unchanged. More generally, let $B$ be the set of models having at least one error interval meeting a cell boundary, and let $N_{\mathrm{safe}}$ be the number of distinct certified words among $\mathcal M\setminus B$. Then every completion consistent with the error intervals obeys the finite remainder bound
+$$
+N_{\mathrm{safe}}
+\le N_{\mathrm{op}}
+\le N_{\mathrm{safe}}+|B|.
+\tag{14.4a.1.3}
+$$
+
+*Proof.* Equality of finite words is an equivalence relation, and its quotient is in bijection with the image of $w$, proving (14.4a.1.2) and termination. An error interval contained in one cell cannot change its quantized label. The safe models therefore contribute exactly $N_{\mathrm{safe}}$ distinct classes in every consistent completion. Each boundary-ambiguous model can add at most one new class, which proves (14.4a.1.3). ∎
+
+The theorem solves the quotient arithmetic and finite-remainder problem after a finite protocol, quantizer, and coverage-certified census are supplied. The precise inflationary value still requires population of that census, its theory extractors, and its response-faithful realization. Appendix U supplies a sharper branch-level discriminator inside this finite class. On the predictive-recovery MacWilliams Golay and Starobinsky branches, the leading quantities obey
 $$
 A_s^{(0)}r^{(0)}
 =\frac{A_Qe^{-22}}{4\pi^2},
@@ -1884,6 +2034,111 @@ is an anchored common-coefficient suppression-law hypothesis. Under that complet
 
 This viewpoint also records the threefold base-lattice decomposition $(\sqrt2E_8)^3$ used by Lemma R.4.5. Proposition R.4.7 proves only its dimensional compatibility with $24=3d_0$ on the $d_0=8$ branch. A triplication of defect-family or generation sectors requires an independent anomaly, topology, or superselection index and is not derived by this scaffold.
 
+**Theorem 14.5.7a (Finite Stabilizer-Code Vacuum and Gap Construction).** Let $1\le r\le n$, and let $S_1,\ldots,S_r$ be independent commuting Hermitian Pauli operators on $n$ qubits, with $-I$ absent from the generated stabilizer group. The Hamiltonian
+$$
+H_S=\sum_{j=1}^r\frac{I-S_j}{2}
+\tag{14.5.7a.1}
+$$
+is a commuting-projector Hamiltonian whose ground space is exactly the stabilizer code, has dimension $2^{n-r}$, and is separated from the rest of the spectrum by a gap of one. Choose independent commuting logical operators $\overline Z_1,\ldots,\overline Z_{n-r}$ extending the stabilizers to a maximal commuting Pauli family and signs $\zeta_a\in\{\pm1\}$. Then
+$$
+H_{S,\zeta}
+=H_S+\sum_{a=1}^{n-r}\frac{I-\zeta_a\overline Z_a}{2}
+\tag{14.5.7a.2}
+$$
+has a unique marked ground state and gap one. For every self-adjoint perturbation $V$ with $\lVert V\rVert<1/2$, the perturbed Hamiltonian $H_{S,\zeta}+V$ retains a unique ground state and has spectral gap at least
+$$
+1-2\lVert V\rVert>0.
+\tag{14.5.7a.3}
+$$
+
+*Proof.* Every term in (14.5.7a.1) is the projector onto the $-1$ eigenspace of $S_j$, and all terms commute. Their common zero eigenspace is the simultaneous $+1$ stabilizer eigenspace, of dimension $2^{n-r}$ by independence. Every orthogonal joint eigenvector violates at least one projector, so its energy is at least one, and a single violated independent eigenvalue gives energy one. The logical operators split the remaining $2^{n-r}$-dimensional joint eigenspace into one-dimensional simultaneous eigenspaces; the chosen signs select exactly one, with the same unit gap. Weyl's eigenvalue bound moves the ground energy upward by at most $\lVert V\rVert$ and the first excited energy downward by at most $\lVert V\rVert$, giving (14.5.7a.3). ∎
+
+This theorem supplies an exact finite Hamiltonian, vacuum degeneracy/marking classification, gap, and global operator-norm stability bound for every stabilizer code. Local thermodynamic stability, a marked Golay-to-Leech carrier, tunneling under extensive perturbations, and the response-faithful physical realization remain separate requirements.
+
+**Theorem 14.5.7b (Typed $\mathbb Z_2$ Defect, Ribbon, and Response Branch).** Let $\Lambda$ be a finite square cellulation of an oriented torus, put one qubit on each edge, and define
+$$
+A_v:=\prod_{e\ni v}X_e,
+\qquad
+B_p:=\prod_{e\subset\partial p}Z_e,
+\qquad
+H_\Lambda:=\frac{\Delta}{2}\sum_v(I-A_v)+\frac{\Delta}{2}\sum_p(I-B_p),
+\tag{14.5.7b.1}
+$$
+with $\Delta>0$ in energy units. Fix eigenvalues $\omega_x,\omega_y\in\{\pm1\}$ of two commuting noncontractible logical $Z$ loops $\overline Z_x,\overline Z_y$, and use the carrier
+$$
+\mathcal H_\omega:=Q_\omega(\mathbb C^2)^{\otimes E},
+\qquad
+Q_\omega:=\frac{I+\omega_x\overline Z_x}{2}
+\frac{I+\omega_y\overline Z_y}{2}.
+\tag{14.5.7b.2}
+$$
+Choose disjoint contractible probe and reference disks $D,D_{ref}$, each containing a vertex and a plaquette. Require vacuum syndrome outside their interiors and put in $D_{ref}$ the compensating parity charge forced by $\prod_vA_v=\prod_pB_p=I$. Two probe configurations are locally equivalent when an interior-$D$ Pauli followed by stabilizers relates them without changing either annular boundary-loop response. The isolated probe sectors are exactly
+$$
+\mathcal S=\{1,e,m,\epsilon\}\cong\mathbb Z_2\times\mathbb Z_2.
+\tag{14.5.7b.3}
+$$
+Writing $e=(1,0)$, $m=(0,1)$, and $\epsilon=(1,1)$, fusion and full monodromy are
+$$
+(a,b)\otimes(a',b')=(a+a',b+b')\pmod2,
+\qquad
+M((a,b),(a',b'))=(-1)^{ab'+ba'},
+\tag{14.5.7b.4}
+$$
+and a framed exchange-ribbon calculation gives the quadratic refinement
+$$
+q(a,b)=\theta_{(a,b)}=(-1)^{ab},
+\qquad
+q(x+y)=q(x)q(y)M(x,y).
+\tag{14.5.7b.5}
+$$
+Thus $e$ and $m$ are bosonic, $\epsilon$ is fermionic, and the mutual $e$--$m$ monodromy is $-1$.
+
+The configuration response is the quantum instrument on $\mathcal H_\omega$
+$$
+\Pi^\omega_{\mathbf s,\mathbf t}
+:=Q_\omega
+\prod_v\frac{I+s_vA_v}{2}
+\prod_p\frac{I+t_pB_p}{2},
+\qquad
+\mathcal I_{\mathbf s,\mathbf t}(\rho)
+:=\Pi^\omega_{\mathbf s,\mathbf t}\rho\Pi^\omega_{\mathbf s,\mathbf t},
+\tag{14.5.7b.6}
+$$
+for parity-admissible sign strings $(\mathbf s,\mathbf t)$. Its maps are completely positive and trace nonincreasing, and their sum is trace preserving on $\mathcal H_\omega$. For the operator-algebra response, fix a finite Hermitian basis $\mathcal O_\omega$ of $\mathcal B(\mathcal H_\omega)$, rescaled so $\|O\|\le1$, and register for every $O\in\mathcal O_\omega$ the binary POVM
+$$
+E^O_\pm=\frac{Q_\omega\pm O}{2},
+\qquad
+p(\pm\mid O,\rho)=\operatorname{Tr}(\rho E^O_\pm).
+\tag{14.5.7b.7}
+$$
+Choose the basis to contain the two annular charge-detection loops and the registered open and closed ribbon observables. The typed finite protocol response is
+$$
+\mathfrak R_{\Lambda,\omega}(\rho)
+:=
+\left(
+\{\mathcal I_{\mathbf s,\mathbf t}(\rho)\}_{\mathbf s,\mathbf t},
+\{p(\pm\mid O,\rho)\}_{O\in\mathcal O_\omega}
+\right).
+\tag{14.5.7b.8}
+$$
+It records the configuration syndrome and is tomographically complete on the frozen operator algebra.
+
+*Proof.* Every $A_v$ and $B_p$ is a Hermitian involution. A star and plaquette overlap on zero or two edges, so the Hamiltonian terms commute. A primal $Z$ ribbon anticommutes with precisely its endpoint stars, and a dual $X$ ribbon anticommutes with precisely its endpoint plaquettes. The reference disk supplies the second endpoint required by each global parity identity. Ribbon multiplication moves and fuses endpoints, so the two probe parities add modulo two and give the four labels in (14.5.7b.3).
+
+Configurations with the same two parities differ inside the contractible probe disk by star/plaquette boundaries and contractible paired endpoints, so stabilizers and interior Pauli moves relate them. The two annular loops commute with every interior move and have eigenvalues $(-1)^a$ and $(-1)^b$, so different labels cannot be locally equivalent. This proves exhaustion and separation of the isolated sectors.
+
+For oriented primal and dual ribbons $\gamma,\gamma^*$, Pauli reordering gives
+$$
+X(\gamma^*)Z(\gamma)
+=(-1)^{I_2(\gamma^*,\gamma)}
+Z(\gamma)X(\gamma^*),
+\tag{14.5.7b.9}
+$$
+where $I_2$ is the mod-two crossing number. A full braid of $(a,b)$ around $(a',b')$ has crossing parity $ab'+ba'$, proving (14.5.7b.4). To compute exchange independently, compare the framed half-exchange ribbon word with the unexchanged reference word having the same endpoints. Two $e$ ribbons contain only $Z$ factors and give sign $+1$; two $m$ ribbons contain only $X$ factors and also give $+1$. For two composite $\epsilon$ ribbons, the $X$ part of one crosses the $Z$ part of the other once relative to the reference word, and (14.5.7b.9) gives $-1$. Thus $q(e)=q(m)=1$ and $q(\epsilon)=-1$; expanding $(-1)^{(a+a')(b+b')}$ proves (14.5.7b.5).
+
+Finally, the commuting projectors in (14.5.7b.6) resolve the identity on $\mathcal H_\omega$, proving the instrument claim. Since $O=O^*$ and $\|O\|\le1$, both effects in (14.5.7b.7) are positive and sum to $Q_\omega$. A Hermitian operator basis separates density operators, so the POVM table is tomographically complete. ∎
+
+This supplies one fully typed finite $\mathbb Z_2$ stabilizer branch. It neither classifies other defect theories nor identifies these sectors with the Golay/Leech or Standard-Model sectors, and it transfers neither their response algebra nor their energy scale $\Delta$ without a typed intertwiner.
 
 **Clarification on the Discrete-Continuous Correspondence.**
 At MPU resolution, a finite candidate constraint ledger can be represented by stabilizer-like generators and automorphisms (Appendix G, Remark G.8.4g.1a), implementing an abstract operational equivalence relation. Calling these generators physical vacuum constraints requires the separate vacuum configuration, dynamics, ground-state, encoder, and response-realization record. This is consistent with Definition X.9.1 (MPU-equivalence).
@@ -1897,6 +2152,39 @@ On a branch supplying an accepted response-preserving coarse-graining/gauge-subs
 3. **Structural correspondence:** In the capacity-saturating regime of Theorem G.8.4b, the *dimension* of the gauge algebra $\mathfrak{g}_{\mathrm{SM}}$ (12 generators) matches the Lagrangian capacity bound from the symplectic structure on the interface (Theorem G.8.2e). This is a structural/dimensional correspondence, not a literal isomorphism between a finite stabilizer group and a continuous gauge group.
 
 This status is made precise in Remark G.8.4g.2: the classical Golay code provides a *structural analogy* for the gauge organization, with the predictive-recovery MacWilliams partition $k=n-k=12$ matching the same 12+12 organizational split that reappears in the capacity-saturating regime, while the 12-generator gauge budget itself is determined by Theorem G.8.2e. The point is the structure of the 24-mode organization, not a literal identification of classical message/parity degrees of freedom with a continuous gauge group.
+
+**Theorem 14.5.7c (Finite-to-Continuum Gauge-Orbit No-Go and Exact Defect Ledger).** Let $\mathcal G_f$ be a finite groupoid and $F:\mathcal G_f\to\mathcal H$ a functor. Write $\pi_0(\mathcal C)$ for the set of isomorphism classes of objects of a groupoid $\mathcal C$. Then:
+
+1. $|\operatorname{im}\pi_0(F)|\le |\pi_0(\mathcal G_f)|<\infty$;
+2. $F$ is faithful exactly when every map
+   $$
+   F_{x,y}:\operatorname{Hom}_{\mathcal G_f}(x,y)
+   \longrightarrow
+   \operatorname{Hom}_{\mathcal H}(Fx,Fy)
+   $$
+   is injective; its morphism kernel is the family of equalizer relations $g\equiv_Fh\iff Fg=Fh$;
+3. its orbit cokernel is
+   $$
+   \operatorname{coker}_{\pi_0}F
+   :=\pi_0(\mathcal H)\setminus\operatorname{im}\pi_0(F).
+   \tag{14.5.7c.1}
+   $$
+
+Consequently, if $\mathcal H$ has infinitely many gauge orbits, no functor from a finite groupoid is essentially surjective, whether or not it is faithful. In particular, for the groupoid of $U(1)$ connections on $S^1$ modulo gauge transformations, holonomy gives
+$$
+\pi_0(\mathcal H)\cong U(1),
+$$
+so the orbit cokernel of every $F:\mathcal G_f\to\mathcal H$ is uncountable.
+
+*Proof.* A functor sends isomorphic objects to isomorphic objects and hence induces a function $\pi_0(F)$. A function from a finite set has finite image, proving item 1 and the essential-surjectivity obstruction. Item 2 is the definition of faithfulness, and equality after applying $F$ is a congruence on every hom-set because functors preserve composition. Item 3 is the exact set of omitted target orbits.
+
+For the last statement, write a connection on the trivial $U(1)$ bundle as $A=a(\theta)d\theta$. A gauge transformation changes $A$ by an exact form with integral period in $2\pi\mathbb Z$, while
+$$
+\operatorname{Hol}(A)=\exp\!\left(i\int_{S^1}A\right)
+$$
+is gauge invariant. Constant connections $A_\alpha=\alpha d\theta/(2\pi)$ realize every holonomy $e^{i\alpha}$, and two such connections are gauge equivalent exactly when their holonomies agree. Thus the orbit set is $U(1)$. Removing the finite image of $\pi_0(F)$ leaves an uncountable cokernel. ∎
+
+Therefore a literal finite equivalence groupoid cannot be both a faithful finite description and orbit-surjective onto this continuum gauge comparison class. A positive bridge must instead restrict the continuum target to finitely many retained orbits or pass through an infinite limit groupoid and separately prove its response, topology, kernel, and surjectivity properties.
 
 ## 14.5.8 Paradox-Avoidance Residue and the Statistics of Self-Referential Observation
 
@@ -2266,6 +2554,28 @@ The hard-core datum resolves the measure-construction and support-exclusion obst
 
 3. *Invariance obligation.* Corollary 14.5.8g gives exhaustion invariance for cylinder laws preserving the same projectively consistent specification. Observable protocol invariance and no-signaling additionally require proof that the outcome map and every allowed intervention commute with the projective limits and preserve the relevant local marginals.
 
+**Theorem 14.5.8h (Exact Passive/Active Mixture Nonidentifiability).** Let $Y$ be a finite outcome set with $|Y|=m\ge2$, let $P$ lie in the interior of its probability simplex, and fix $0<\lambda<1$. Suppose the retained protocol observes only the mixture
+$$
+P=\lambda P_{\mathrm{act}}+(1-\lambda)P_{\mathrm{pass}}.
+\tag{14.5.8h.1}
+$$
+Then the pair $(P_{\mathrm{act}},P_{\mathrm{pass}})$ is not identifiable from $P$. More precisely, for every nonzero vector $h\in\mathbb R^Y$ satisfying $\sum_yh_y=0$ and small enough that the following coordinates remain nonnegative,
+$$
+P_{\mathrm{act}}^{(h)}=P+(1-\lambda)h,
+\qquad
+P_{\mathrm{pass}}^{(h)}=P-\lambda h
+\tag{14.5.8h.2}
+$$
+are probability laws and give exactly the same mixture $P$. The local fiber of the observation map therefore has dimension at least $m-1$.
+
+*Proof.* The zero-sum condition makes both vectors in (14.5.8h.2) have total mass one. Since $P$ has strictly positive coordinates, every sufficiently small $h$ preserves nonnegativity. Direct substitution gives
+$$
+\lambda[P+(1-\lambda)h]+(1-\lambda)[P-\lambda h]=P.
+$$
+The zero-sum subspace has dimension $m-1$, and a neighborhood of its origin supplies distinct decompositions with identical retained responses. Hence no functional of the mixture law alone can recover either component. ∎
+
+The theorem does not alter the hard-core support construction. It proves that a separately identifiable passive residue requires additional forward-locked information, such as a known active kernel, an intervention family with a proved exclusion restriction, or an orthogonal parametric constraint. Projective consistency and support exclusion alone do not supply that information, so the actualization, reflexive-depth, and no-signaling obligations remain open.
+
 #### Experimental Signature
 
 If both tiers exist, they are in principle distinguishable by their scaling with aggregate complexity. Active-tier effects require $C_{agg}$ sufficient to support CC modulation and, on the bounded-bias branch, remain subject to its independently declared ceiling and Theorem 39's endpoint-complete consequence. Passive-tier effects, if the Residue Conjecture holds, would be independent of $C_{agg}$ and would be present wherever Effective Operational Property R is present. A carefully designed experiment varying aggregate complexity while holding reflexive engagement fixed would therefore be able, in principle, to separate the two tiers — or to falsify the passive tier by establishing that all observed residue effects scale with $C_{agg}$ in the manner predicted by the active tier alone.
@@ -2358,7 +2668,6 @@ A comparison framework that begins with an operator space, signature class, Hilb
 The same economy criterion is formalized methodologically in Appendix P.14.9. It is not a claim that shorter notation or a single master equation wins. It is a shared-domain comparison rule: if two frameworks cover the same empirical domain, the one requiring fewer explicit inputs, free parameters, arena assumptions, bridge assumptions, and validation-selected normalizations has the stronger compression claim on that domain. Additional domains can justify additional structure only when the added predictive yield is carried with its own status ledger.
 
 This is also the correct reading of PU's self-positioning. PU is not exempt from the comparison criterion it recommends. Its meta-level claim is that unified frameworks should be compared by predictive yield per structural description cost, and PU submits to that criterion. The coherence between PU's subject matter and that criterion is a methodological posture, not a certificate gate. It cannot promote the Thomson normalization row, the local generator row, the flavor or baryogenesis rows, or any other open sector listed in Section 14.6.6.
-
 
 
 

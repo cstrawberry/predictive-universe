@@ -105,6 +105,25 @@ T_U=\frac{\kappa}{2\pi}.
 $$
 The omitted terms are second order in the near-horizon perturbation parameter, yielding $\delta S=\delta Q/T_U+O(\lambda^2)$. ∎
 
+**Proposition 48a.1 (KMS State Does Not Fix the Physical Clock Scale).** Let $\rho$ be a faithful finite-dimensional state. If $\beta>0$, $H=H^*$, and
+$$
+\rho=Z^{-1}e^{-\beta H},
+\qquad
+Z:=\operatorname{tr}(e^{-\beta H}),
+$$
+then for every $a>0$ the same state has the representation
+$$
+\rho=Z^{-1}e^{-\beta_aH_a},
+\qquad
+\beta_a=a\beta,
+\qquad
+H_a=H/a.
+\tag{69a}
+$$
+Equivalently, the dimensionless modular generator $-\log\rho$ fixes the product $\beta H$ up to an additive scalar, not the conversion from modular parameter to physical time. Therefore faithful modular/KMS representability, and even a state-level Gibbs characterization, does not by itself normalize the physical boost generator or the Unruh temperature. The physical-time or boost identification required by Theorem 48a.0 is an independent realization entry.
+
+*Proof.* Equation (69a) leaves $\beta_aH_a=\beta H$ and hence leaves $\rho$ unchanged. Adding a scalar multiple of the identity to $H$ changes only $Z$. Since all state expectation values are unchanged throughout this positive one-parameter family while the Hamiltonian clock rate changes, no state-only rule can select the physical normalization. ∎
+
 **12.1.3 Definition 39 (Def 39): Horizon Heat Flux $\delta Q$**
 
 The **heat flux $\delta Q$** flowing across an infinitesimal patch $\delta\mathcal{H}$ of the local causal horizon $\mathcal{H}$ (spanned by area element $dA$ and affine parameter range $d\lambda$) is defined as the boost-energy flow across the patch, measured by the local accelerating observer via the flux of the macroscopic MPU stress-energy tensor $T_{\alpha\beta}^{(MPU)}$ (Appendix B). Using the horizon area element $d\Sigma^\beta = k^\beta\, dA\, d\lambda$ and the approximate Killing vector $\xi^{\alpha} \approx -\,\kappa\,\lambda\,k^{\alpha}$ (with $\lambda<0$ on the portion of the horizon to the past of $p$):
@@ -227,6 +246,25 @@ $$
 S_{boundary}(\mathcal A)=\frac{\mathcal A}{4G}+o(\mathcal A).
 $$
 For the refinement family $S_h(\mathcal A)=\mathcal A/(4G)+r_h(\mathcal A)$, the uniform derivative hypothesis in the theorem statement gives Equation (71). Convergence of $S_h(\mathcal A)/\mathcal A$ alone would not prove this first-variation limit. ∎
+
+**Proposition 49a (Area-Ledger Unit-Scale Nonentailment).** Fix the dimensionless horizon record $\chi$, $\eta$, $C(\mathcal E_N)$ and every finite channel count and saturation identity in Theorem 49. If the physical metric-length realization is uniformly rescaled by
+$$
+\delta_{\mathrm{phys}}\mapsto a\delta_{\mathrm{phys}},
+\qquad
+\mathcal A_{\mathrm{phys}}\mapsto a^2\mathcal A_{\mathrm{phys}},
+\qquad a>0,
+$$
+then the dimensionless record is unchanged, while
+$$
+G_{\mathrm{op}}
+=\frac{\eta\delta_{\mathrm{phys}}^2c^3}
+{4\hbar\chi C(\mathcal E_N)}
+\mapsto a^2G_{\mathrm{op}}.
+\tag{71a}
+$$
+Thus the same-family capacity attainment and entropy first-variation theorem fix the operational area coefficient after a length realization is supplied, but the dimensionless channel ledger cannot select the SI value of $G$. The factor $1/4$ is the declared conversion between that accepted coefficient and $G_{\mathrm{op}}$; identifying $G_{\mathrm{op}}$ with measured Newton $G$ requires the independent unit map.
+
+*Proof.* Channel probabilities, alphabet capacities, and packing ratios are dimensionless. The channel density scales as $\delta_{\mathrm{phys}}^{-2}$ while the realized area scales as $a^2$, so every channel count and saturation identity is unchanged. Direct substitution into the defining equation for $G_{\mathrm{op}}$ gives the factor $a^2$. Since $a$ is arbitrary and positive, the dimensionless ledger has a nontrivial realization fiber and cannot determine one SI coupling. ∎
 
 **12.3 Thermodynamic Derivation of Einstein's Field Equations**
 
@@ -682,6 +720,17 @@ Multiplying this row identity by $u$ proves (12.1g.a.4). ∎
 
 **Operational use.** The nine directions are a minimal reconstruction certificate for the trace-free Clausius defect of Theorem 12.1g; the tenth is an overdetermined falsifier. The pure-trace term remains null-invisible and descends to the cosmological integration term exactly as in Theorem 12.1g. The determinant is frame-coordinate dependent, while injectivity and minimality concern the specified $k^0=1$-normalized null-vector design. Under independent rescaling $k_a\mapsto s_ak_a$, each datum scales as $q_a\mapsto s_a^2q_a$, and the tenth-direction coefficients must be rescaled accordingly.
 
+**Corollary 12.1g.b (Complete Rank Classification of Finite Null Designs).** For any finite normalized null-direction family $\{k(n_a)\}_{a=1}^m$ in the tetrad of Corollary 12.1g.a, form the $m\times9$ matrix $A$ with rows $A(n_a)$ from (12.1g.a.2). Then:
+
+1. the design reconstructs every trace-free symmetric tensor uniquely exactly when $\operatorname{rank}A=9$;
+2. no design with $m<9$ is injective;
+3. a datum $q\in\mathbb R^m$ is generated by a trace-free tensor exactly when $q\in\operatorname{ran}A$;
+4. every vector $c\in\ker A^{\mathsf T}$ gives the exact no-fit consistency relation $c^{\mathsf T}q=0$, and these relations span all linear consistency tests.
+
+Consequently exact row reduction classifies every supplied finite design. Corollary 12.1g.a supplies one minimal full-rank design and one explicit left-kernel sum rule after a tenth row is added. Physical realization of the selected directions as one retained local-horizon protocol family remains a separate certificate entry.
+
+*Proof.* The evaluation map is the linear map $u\mapsto Au$ from a nine-dimensional domain. It is injective exactly when its rank is nine, and rank-nullity excludes injectivity for $m<9$. Its attainable data are its column space. A linear functional vanishes on that column space exactly when its coefficient vector lies in the orthogonal complement $\ker A^{\mathsf T}$, proving items 3 and 4. ∎
+
 **Definition 12.1d (Nondegenerate Finite-Response Gravitational Channel Ensemble).** On a refining sequence of finite operational covers $\{\mathcal U_n\}_{n\ge1}$ carrying an accepted finite KMS-descent certificate $\{\mathfrak C^{\mathrm{KMS}}_n\}$ in the sense of Definition F.10.12a, the nondegenerate finite-response gravitational channel ensemble is the finite tuple
 $$
 \mathfrak G_n
@@ -882,6 +931,15 @@ Applying this positive linear pushforward to the Cramér-Rao lower bound gives (
 
 *Proof.* Theorem 12.1c derives $\delta g_n$ from $D\Gamma_n(q_{\mathrm{grav},n}^*)$ on $\mathcal T_{\mathrm{grav},n}$. Theorem 12.1e derives $\Sigma_n$ from the same derivative, the positive Hessian, and the finite fluctuation scale. If the entries of Definition 12.1d are accepted, every ingredient is fixed by a finite record before comparison; Theorem D.8.9b gives local closure. If any entry is missing, Theorem P.14.1f gives non-identifiability, so the row remains certificate-pending. ∎
 
+**Proposition 12.1e.3 (Static-Record Nonidentifiability of the Metric-Fluctuation Scale).** Fix a nonzero reconstruction derivative $A_n=D\Gamma_n(q^*_{\mathrm{grav},n})$, a positive Hessian $H_n$, and a certified linearization radius. For every $\tau>0$, the deterministic linear response and all of these static entries are unchanged, while Definition 12.1d.4 gives
+$$
+\Sigma_n(\tau)=\tau A_nH_n^{-1}A_n^*.
+\tag{12.1e.6}
+$$
+If $\tau_1\ne\tau_2$, then $\Sigma_n(\tau_1)\ne\Sigma_n(\tau_2)$ on $\operatorname{ran}A_n$. Hence the static KMS state, PCE Hessian, reconstruction derivative, and radius do not determine $\tau_{\mathrm{PCE},n}$. Selecting the scale requires a physical KMS generator with a clock-normalized dynamical correlation or equivalent fluctuation-dissipation time record, together with a bridge identifying that record with the PCE noise coordinate.
+
+*Proof.* The deterministic response $A_n\Delta q$ contains no $\tau$. Equation (12.1e.6) is linear in $\tau$. Since $H_n^{-1}$ is positive and $A_n\ne0$, the operator $A_nH_n^{-1}A_n^*$ is nonzero and positive on its range. Multiplication by two distinct positive scalars therefore gives distinct covariances. ∎
+
 **Theorem 12.1e.a (PCE Contraction Stability of Emergent Metric Responses).** Fix the finite ensemble $\mathfrak G_n$ of Definition 12.1d. Let
 $$
 V_n=\mathcal T_{\mathrm{grav},n},
@@ -982,6 +1040,29 @@ where:
 If any slot of $\mathfrak C_{\mathrm{EAQFT}}$ is absent, the missing slots form the minimal finite no-hidden-physics hypothesis list for the corresponding claim; the accepted subclaims remain valid but are not promoted to the absent output.
 
 *Proof.* The operational-continuum, generator-convergence, and AQFT slots invoke Theorem F.0 or its projective/Mosco discharge branches and give the stable local net. The KMS slot invokes Theorem F.10.12c and supplies modular thermodynamics and the Clausius relation. The Hadamard, split/nuclearity, and Wightman slots supply exactly the field-realization regularity listed in item 3. The area-law, stress-flux, and KMS entries give Theorem 12.1 and Corollary 12.1b; $\mathfrak G$ gives Theorems 12.1c and 12.1e; $\mathfrak C_{\mathrm{PGSL}}$ gives Theorem 12.5.3m; and $\mathfrak C_{\mathrm{NC}}$ gives Proposition 12.5.3o, with zero slack required for the reversible Einstein saturation. The overlap audit ensures that all slots use the same response quotient, units, metric reconstruction, and horizon orientation. If a slot is missing, Theorem P.14.1f permits distinct finite completions agreeing on the accepted slots but differing on the absent output, so the listed missing entries are precisely the irreducible branch hypotheses for that claim. ∎
+
+**Proposition 12.1f.2 (Componentwise and Pairwise Records Do Not Imply a Joint Einstein Record).** Nonempty certificate slots, and even pairwise-compatible slot constraints, do not imply that $\mathfrak C_{\mathrm{EAQFT}}$ or $\mathfrak C_{\mathrm{EH}}$ has a common witness. Let three shared binary branch labels be $x_1,x_2,x_3\in\{0,1\}$ and let three nonempty overlap records impose
+$$
+x_1=x_2,
+\qquad
+x_2=x_3,
+\qquad
+x_1\ne x_3.
+\tag{12.1f.2.1}
+$$
+Every individual constraint is populated, and every pair of constraints has a witness, but their joint fiber product is empty. Therefore a continuum witness, an AQFT/KMS witness, an area witness, a source witness, and a tomography witness cannot be assembled by componentwise acceptance or pairwise checks alone. The common branch maps and full commuting-overlap audit in Definitions 12.1f and 12.5.3k are necessary joint data.
+
+*Proof.* The first two constraints together force $x_1=x_3$, contradicting the third. Any two are satisfied by a suitable binary triple: $(0,0,0)$ for the first two, $(0,0,1)$ for the first and third, and $(1,0,0)$ for the second and third. Thus all stated lower-order records are nonempty while the global compatibility set is empty. ∎
+
+**Resolution ledger 12.1-R1 (Finite Gravity Classifications).** Each row registers the exact mathematical artifact shown; the common physical Einstein branch and its unit, carrier, and observable records remain independently gated.
+
+| Target | Exact domain and premises | Equivalence and budget | Registered polarity | Verifier, falsifier and nonvacuity | Provenance and downstream consumers |
+|:--|:--|:--|:--|:--|:--|
+| `TV-GRAV-01` | One faithful finite-dimensional state with Gibbs representations $Z^{-1}e^{-\beta H}$, $\beta>0$, including positive rescalings and scalar generator shifts. | Representations are equivalent when they give the same density operator and state expectations; different Hamiltonian clock rates remain physically inequivalent. Budget: the complete finite matrix and the symbolic $a>0$, $c\in\mathbb R$ gauge family. | Physical boost/time normalization from the state-level KMS record is `nonentailment`. | Substitute (69a) and the scalar shift. A changed state along the displayed fiber, or a state-only invariant selecting one clock rate, falsifies the artifact. Any faithful nonmaximally mixed state and $a\ne1$ prove nonvacuity. | Source-internal finite operator algebra. Consumers: Theorem 48a.0, local KMS/LTE, and the boost-clock realization. |
+| `TV-GRAV-02` | The dimensionless Theorem-49 channel, packing, capacity, and saturation ledger together with a supplied positive physical length realization. | Realizations are equivalent when all dimensionless channel records agree; different positive uniform length scales remain SI-inequivalent. Budget: the complete finite ledger and symbolic $a>0$ scaling family. | Selection of SI Newton $G$ from the dimensionless area ledger is `nonentailment`. | Rescale length, area, and $G_{\mathrm{op}}$ in (71a). Any changed dimensionless count or scale-invariant SI value falsifies the artifact. Two choices $a\ne a'$ prove nonvacuity. | Source-internal dimensional analysis. Consumers: Theorem 49, Theorem 12.1, and the physical unit/observable calibration. |
+| `TV-GRAV-04` | Three nonempty binary overlap constraints (12.1f.2.1), used as an abstract fiber-product model of certificate slots. | Records are equivalent by equality of their binary slot projections; global compatibility means one triple satisfying every constraint. Budget: all eight triples and all three individual and pairwise constraint sets. | Componentwise or pairwise compatibility forcing a joint Einstein witness is `negative-refutation`. | Exhaust the eight triples and the three displayed pair witnesses. A joint satisfying triple, or an empty individual/pairwise record, falsifies the artifact. The listed pair witnesses prove nonvacuity. | Source-internal finite constraint algebra. Consumers: Definitions 12.1f and 12.5.3k and the full overlap audit. |
+| `TV-GRAV-05` | Trace-free symmetric tensors in one normalized local tetrad and arbitrary finite direction families $k(n_a)=(1,n_a)$, with the explicit nine- and ten-direction designs of Corollary 12.1g.a. | Tensors are equivalent by equality of all nine coordinates; data are compared modulo the complete left-kernel relations of their design matrix. Budget: every row of the submitted finite matrix, exact row reduction, and the displayed determinant/sum-rule designs. | Rank, nine-direction minimality, attainable-range membership, and all linear consistency tests are `positive-discharge`. | Compute (12.1g.a.2)--(12.1g.a.4), $\operatorname{rank}A$, $\operatorname{ran}A$, and $\ker A^{\mathsf T}$. A rank/design conclusion or sum rule disagreeing with exact row reduction falsifies the artifact. The determinant-$8192/27$ design proves nonvacuity. | Source-internal exact linear algebra. Consumers: Theorem 12.1g and the finite-horizon tomography protocol. |
+| `TV-GRAV-06` | A nonzero finite reconstruction derivative $A_n$, positive Hessian $H_n$, certified radius, and the positive family $\tau>0$ in Definition 12.1d.4. | Models are equivalent on the frozen static KMS/PCE state, Hessian, derivative, radius, and deterministic response; distinct covariances remain inequivalent. Budget: the complete finite matrices and symbolic positive one-parameter scale family. | Identification of $\tau_{\mathrm{PCE},n}$ from the static record is `nonentailment`. | Compare $\Sigma_n(\tau)$ in (12.1e.6) on $\operatorname{ran}A_n$. Equal covariances for $\tau_1\ne\tau_2$, with $A_n\ne0$ and $H_n\succ0$, falsify the artifact. Any two positive scales prove nonvacuity. | Source-internal finite covariance algebra. Consumers: Definition 12.1d.4, Theorem 12.1e, and the dynamical fluctuation-scale record. |
 
 ## 12.4 Interpretation: Gravity as Predictive Thermodynamics
 
@@ -1250,6 +1331,36 @@ $$
 a\hbar\,\delta\sum_i\varepsilon_i.
 $$
 Therefore the first variation of the worldline action vanishes if and only if the first variation of the additive ledger vanishes. ∎
+
+**Corollary 12.3b.2 (Affine $\Gamma$-Limit Transfer for Additive History Ledgers).** Let $\mathcal L_n$ be proper additive finite-history ledgers on a metrizable curve topology with one uniform lower bound $\mathcal L_n\ge-B$, and assume that $\mathcal L_n$ $\Gamma$-converges to $\mathcal L$ and is equicoercive. Let
+$$
+\mathcal A_n=C_n+a_n\hbar\mathcal L_n,
+\qquad
+C_n\to C,
+\qquad
+a_n\to a>0.
+\tag{76e.1}
+$$
+Then $\mathcal A_n$ $\Gamma$-converges to
+$$
+\mathcal A=C+a\hbar\mathcal L,
+\tag{76e.2}
+$$
+is equicoercive, its minimum values converge, and every cluster point of approximate minimizers minimizes $\mathcal A$. If the calibrated limit identity is
+$$
+\mathcal A[\gamma]=-mc^2\int_\gamma d\tau,
+\tag{76e.3}
+$$
+then the limiting stationary law is the metric geodesic law by Theorem 12.3b, and Corollary 12.3b.1 gives equality of the first-variation zero sets whenever the affine coefficient is nonzero. Positive $a$ is necessary for a general minimizer-preserving affine rule: $a<0$ exchanges minima with maxima, while $a=0$ erases all path dependence.
+
+*Proof.* Consider a subsequence realizing the finite liminf of $\mathcal A_n(\gamma_n)$. The uniform lower bound and $a_n\to a>0$ make $\mathcal L_n(\gamma_n)$ bounded above on that subsequence, so $(a_n-a)\mathcal L_n(\gamma_n)\to0$. Convergence of $C_n,a_n$ and the $\Gamma$-liminf inequality therefore give
+$$
+\liminf_n\mathcal A_n(\gamma_n)
+\ge C+a\hbar\mathcal L(\gamma).
+$$
+Evaluating (76e.1) on a recovery sequence for $\mathcal L$ gives the matching limsup inequality. A bounded $\mathcal A_n$ sublevel is a bounded $\mathcal L_n$ sublevel for all large $n$ because $a_n$ is bounded away from zero; hence equicoercivity transfers. The fundamental theorem of $\Gamma$-convergence gives convergence of minima and the cluster-point conclusion. Equations (76e.2)--(76e.3) and Theorem 12.3b give the geodesic law, while differentiation of an affine identity gives the first-variation equivalence. The constant-functional and sign-reversal cases prove the final necessity statements. ∎
+
+**Resolution TV-GRAV-08-R1.** The positive affine class (76e.1), including unit conversion, $\Gamma$-limit transfer, minimizer convergence, and first-variation compatibility, is `positive-discharge`. A microscopic realization must still supply the common recovery sequence and calibrated identity (76e.3); neither follows from affine bookkeeping alone.
 
 Theorem 12.3 (universality at fixed scale via boundary-sufficient metric reconstruction, diff-invariance, and stress-energy conservation) and Theorem 12.3b (extremization of the proper-time action) provide two independent derivations of the same geodesic law; both rest on the same underlying metric action at fixed coarse-graining scale.
 
@@ -1963,6 +2074,55 @@ Together with the overlap entry, this supplies the second-variation sign compone
 
 *Proof.* Divide (76aq.2) by $h^2$ and use the twice-differentiability record to take $h\to0$. Equation (76aq.3) gives the sign. The final status distinction is exactly the zero-slack/nonzero-slack split in Definition 12.5.3n and Proposition 12.5.3o. ∎
 
+**Proposition 12.5.3o.3 (Exact Finite BKM Hessian and Zero-Slack Test).** Let $\omega\succ0$ be a faithful state on a finite matrix algebra, write
+$$
+\omega=\sum_i s_i|i\rangle\langle i|,
+\qquad s_i>0,
+$$
+and let $X=X^*$ with $\operatorname{tr}X=0$. Along every sufficiently small faithful path $\rho_t=\omega+tX$,
+$$
+\left.\frac{d^2}{dt^2}D(\rho_t\Vert\omega)\right|_{t=0}
+=
+\sum_{i,j}\kappa(s_i,s_j)|X_{ij}|^2,
+\tag{76aq.5}
+$$
+where
+$$
+\kappa(x,y)
+=
+\begin{cases}
+\dfrac{\log x-\log y}{x-y},&x\ne y,\\[6pt]
+\dfrac1x,&x=y.
+\end{cases}
+\tag{76aq.6}
+$$
+If $s_i\in[m,M]$, then
+$$
+\frac1M\lVert X\rVert_{\mathrm{HS}}^2
+\le
+\left.\frac{d^2}{dt^2}D(\rho_t\Vert\omega)\right|_{t=0}
+\le
+\frac1m\lVert X\rVert_{\mathrm{HS}}^2.
+\tag{76aq.7}
+$$
+Thus the faithful finite BKM quadratic term vanishes exactly for the zero tangent. On the zero-recovery, zero-residual branch, define the canonical admissible normalization
+$$
+F_{\mathrm{can}}^{\mathrm{BKM}}(X)=4\sum_{i,j}\kappa(s_i,s_j)|X_{ij}|^2.
+\tag{76aq.8}
+$$
+Then one quarter of (76aq.8) is the Hessian in (76aq.5), so (76aq.2) holds with $\mathcal D_{\mathrm{rec}}=r^{\mathrm F}=0$, and the resulting quadratic slack vanishes exactly when $X=0$. A record assigning nonzero recovery or residual terms must verify its own fixed normalization and decomposition separately. This classifies the finite-algebra Hessian component; identifying the retained null deformation, conserved slack tensor, and common cut/source ledger remains certificate work.
+
+*Proof.* The Fréchet derivative of the matrix logarithm is
+$$
+D\log(\omega)[X]
+=\int_0^\infty(\omega+uI)^{-1}X(\omega+uI)^{-1}\,du.
+$$
+The second derivative of $\operatorname{tr}(\rho\log\rho)$ in the direction $X$ is $\operatorname{tr}(X D\log(\omega)[X])$; the term $-\operatorname{tr}(\rho\log\omega)$ is affine. Evaluation in the eigenbasis of $\omega$ gives (76aq.5), because
+$$
+\int_0^\infty\frac{du}{(x+u)(y+u)}=\kappa(x,y).
+$$
+The mean-value theorem gives $1/M\le\kappa(x,y)\le1/m$, proving (76aq.7). Every coefficient is strictly positive, so the quadratic form vanishes exactly at $X=0$. The definition in (76aq.8) and the zero-recovery, zero-residual assignment give the final statement. ∎
+
 **Corollary 12.5.3p (Finite Area and Light-Sheet Bounds from P-GSL).** On a branch carrying $\mathfrak C_{\mathrm{PGSL}}$, every covered pair of future horizon cuts satisfies
 $$
 \Delta S_{\mathrm{out}}+\frac{\Delta\mathcal A_{\mathrm{GSL}}}{4G}
@@ -2022,3 +2182,63 @@ $$
 No saturated-core existence or smooth dynamics follows from finite capacity alone.
 
 *Proof.* Serialization requires at least $\lceil\Delta I/C_{\max}^*\rceil$ cycles. Multiply by the minimum duration and apply the residual bound. ∎
+
+**Theorem 12.5.5c (Finite Reversible KMS Response and Ringdown Classification).** Let $\mathcal K$ be a finite-dimensional response space with the GNS/KMS inner product of a faithful stationary state, and let a clock-normalized detailed-balance generator be $\mathcal L=-K$, where
+$$
+K=K^*\succeq0.
+$$
+Let $P_0$ project onto $\ker K$, let $A_\alpha,B_\beta\in(\ker K)^\perp$, and allow a separately typed instantaneous contact matrix $C_{\alpha\beta}$. Assume
+$$
+Ke_a=\lambda_ae_a,
+\qquad 0<\lambda_*\le\lambda_a\le\lambda_{\max}
+$$
+on $(\ker K)^\perp$, where the $e_a$ form an orthonormal eigenbasis. For the registered semigroup-response convention, define the retarded response matrix by
+$$
+\chi_{\alpha\beta}(t)
+=C_{\alpha\beta}\delta(t)
++\mathbf1_{t\ge0}\sum_a
+e^{-\lambda_at}
+\langle A_\alpha,e_a\rangle
+\langle e_a,B_\beta\rangle.
+\tag{12.5.5c.1}
+$$
+Its noncontact Laplace transform is
+$$
+\widehat\chi_{\alpha\beta}(z)
+=\sum_a
+\frac{\langle A_\alpha,e_a\rangle
+\langle e_a,B_\beta\rangle}{z+\lambda_a},
+\qquad \operatorname{Re}z>-\lambda_*,
+\tag{12.5.5c.2}
+$$
+so every visible ringdown pole lies at some $-\lambda_a$. For each distinct positive eigenvalue $\lambda$, let $P_\lambda$ be its spectral projection; the corresponding residue matrix is $\langle A_\alpha,P_\lambda B_\beta\rangle$. The response determines no spectral multiplicity in directions annihilated by every registered $A_\alpha$ or $B_\beta$. The certified tail obeys
+$$
+\left|\chi_{\alpha\beta}(t)\right|
+\le e^{-\lambda_*t}\lVert A_\alpha\rVert\lVert B_\beta\rVert
+\qquad(t>0).
+\tag{12.5.5c.3}
+$$
+For a nonzero centered $B$, its normalized integrated correlation time is
+$$
+\tau_B
+=
+\frac{\int_0^\infty\langle B,e^{-tK}B\rangle\,dt}{\langle B,B\rangle}
+=
+\frac{\sum_a|\langle e_a,B\rangle|^2/\lambda_a}
+{\sum_a|\langle e_a,B\rangle|^2},
+\tag{12.5.5c.4}
+$$
+and therefore
+$$
+\lambda_{\max}^{-1}\le\tau_B\le\lambda_*^{-1}.
+\tag{12.5.5c.5}
+$$
+An invertible hydrodynamic-frame change acts on the response matrix by the corresponding left and right basis changes and leaves its visible pole locations and residue-matrix ranks unchanged. Rescaling $K\mapsto cK$ with $c>0$ preserves the stationary state and detailed balance but sends every pole rate to $c\lambda_a$ and $\tau_B$ to $\tau_B/c$; hence the static KMS record still does not fix the clock scale.
+
+*Proof.* The spectral theorem gives
+$$
+e^{-tK}(I-P_0)=\sum_ae^{-\lambda_at}|e_a\rangle\langle e_a|,
+$$
+which proves (12.5.5c.1). Termwise integration gives (12.5.5c.2) and (12.5.5c.4). The operator norm of $e^{-tK}(I-P_0)$ is $e^{-\lambda_*t}$, so Cauchy--Schwarz gives (12.5.5c.3). Equation (12.5.5c.5) is the weighted-mean bound for $1/\lambda_a$. Invertible changes of observable coordinates multiply the matrix response but do not alter the denominators in (12.5.5c.2). Positive rescaling preserves self-adjointness, positivity, the kernel, and the stationary state, while the displayed formulas give the final scaling laws. ∎
+
+The theorem exhausts finite GNS-self-adjoint detailed-balance generators. Nonnormal generators, continuous spectra, nonlinear response, the physical source/observable map, and the numerical contact and frame records require separate certificates.

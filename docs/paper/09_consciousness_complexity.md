@@ -8,7 +8,7 @@ This section develops the CC hypothesis that sufficiently complex MPU aggregates
 
 **9.1.1 Definition 29 (Def 29): MPU Aggregate**
 
-An **MPU aggregate** is a physical system composed of multiple interacting Minimal Predictive Units (Definition 23). The aggregate's collective state and dynamics implement a predictive model characterized by an aggregate Predictive Physical Complexity $C_{agg} = C_P(\mu_{agg})$, where $C_{agg} \ge C_{op}$. Such aggregates operate adaptively (Section 6) to solve their own potentially more complex Prediction Optimization Problem (Axiom 1), maintaining viability within the Space of Becoming $(\alpha, \beta)$ (Axiom 3). According to Hypothesis 1, macroscopic systems (including biological brains or potentially sophisticated AI) are examples of MPU aggregates.
+An **MPU aggregate** is a physical system composed of multiple interacting Minimal Predictive Units (Definition 23). The aggregate's collective state and dynamics implement a predictive model characterized by an aggregate Predictive Physical Complexity $C_{agg} = C_P(\mu_{agg})$, where $C_{agg} \ge C_{op}$. Such aggregates operate adaptively (Section 6) to solve their own potentially more complex Prediction Optimization Problem (Axiom 1), maintaining viability within the Space of Becoming $(\alpha, \beta)$ (Axiom 3). On Hypothesis 1's nominated branch, a macroscopic system—including a biological brain or AI system—is a candidate MPU aggregate. Identifying it as a Definition 29 aggregate requires a physical realization of its Definition 23 components and aggregate state and dynamics. Theorem 23e exhausts the architectures decoded by a frozen bounded total decoder under its finiteness, totality, and decidability premises; a nonempty admissible subcensus then lets Theorem 23d classify the populated exact response tables using the decidable PPI-admissibility predicates and source-exhausted common-unit cost. Using that bounded classification to identify a concrete system additionally requires accepting the decoder and bound as physically exhaustive, populating those records, and supplying the response-faithful physical realization.
 
 **9.1.2 Assumption 1 (Context-Dependence of ND-RID Probabilities)**
 
@@ -861,4 +861,191 @@ Here $\varepsilon_{\mathrm{reset}}=\langle Q_{\mathrm{bath}}\rangle/(k_BT)$ is a
 
 **Proposition 16 (Dynamic nature of high-CC states).** Assume, in addition to Proposition 15, that a high-CC protocol repeatedly acquires fresh introspective information and that every registered acquisition causes a nonzero displacement in a specified metric on $\mathrm{context}_S$. Then the context cannot remain static while that protocol operates. Without the repeated-acquisition, metric-displacement, and CC-to-protocol hypotheses, Theorem 33 does not exclude a static high-CC state or establish a claim about subjective experience.
 
+## 9.7 Finite CC Resolution Records
+
+**Theorem 9.7a (Nonempty Finite Strict-Improvement Witness).** Fix an MPU aggregate $S$ with $C_{agg}>C_{op}$ and instantiate Assumption 1 on a qubit. Let the retained measurement be $\{P_0,P_1\}$, let
+$$
+p_{\mathrm{Born}}=(1/2,1/2),
+$$
+and take the reachable context set $\mathcal U=\{u_0,u_+\}$. Set
+$$
+P_{\mathrm{obs}}(\cdot\mid u_0)=p_{\mathrm{Born}},
+\qquad
+P_{\mathrm{obs}}(\cdot\mid u_+)
+=\left(\frac{1+\alpha}{2},\frac{1-\alpha}{2}\right),
+\quad 0<\alpha\le\alpha_{CC,max}<1/2,
+\tag{9.7a.1}
+$$
+and take the reduced PCE potential, including every cost admitted in this two-context model, to be $V(u_0)=0$, $V(u_+)=-1$. Let the context dynamics send both points to $u_+$ in one step. Set $L_{u_0}=0$. With $\sigma=|0\rangle\!\langle0|$, the CTB direction
+$$
+L_{u_+}(X)=\alpha\bigl(\operatorname{tr}(X)\sigma-X\bigr)
+\tag{9.7a.2}
+$$
+realizes (9.7a.1) from the maximally mixed input, and $\|L_{u_+}\|_{\mathrm{op}}=\alpha>0$.
+
+*Proof.* The initial states $u_0$ and $u_+$ witness reachability, $u_0$ is the only Born-realizing point, and the finite potential attains its unique strict minimum at $u_+$. That point is the globally attracting fixed point of the stated dynamics. Direct substitution of $I/2$ and $P_0,P_1$ in (9.7a.2) gives (9.7a.1), while $L_{u_0}=0$ represents the reference context. The map in (9.7a.2) is complex-linear, Hermitian-preserving, and trace-annihilating. Lemma 9.1a with pure $\sigma$ gives norm $\alpha$. Thus every finite mathematical antecedent of Theorem 34 has a nonempty witness on the declared aggregate branch. ∎
+
+This witness settles nonvacuity and the complete reduced-PCE comparison on the declared two-context model. The physical aggregate-to-control carrier, source ledger, and distinct measured response remain certificate and realization records.
+
+**Theorem 9.7b (Response-Shape Moduli and Exponential Rigidity).** The endpoint, monotonicity, concavity, and saturation conditions of Definition 31 leave a continuum of response shapes. For every $a>0$,
+$$
+G_a(x)=1-(1+x)^{-a}
+\tag{9.7b.1}
+$$
+obeys $G_a(0)=0$, $G_a'(x)>0$, $G_a''(x)<0$, and $G_a(x)\to1$.
+
+If a continuous response shape additionally obeys the complement-composition law
+$$
+1-G(x+y)=(1-G(x))(1-G(y))
+\qquad(x,y\ge0),
+\tag{9.7b.2}
+$$
+and is nonconstant, then there is a unique $\kappa>0$ such that
+$$
+G(x)=1-e^{-\kappa x}.
+\tag{9.7b.3}
+$$
+A registered slope $G'(0)=\kappa$ or one nontrivial saturation point fixes $\kappa$.
+
+*Proof.* Differentiation proves the claims for (9.7b.1). For (9.7b.2), put $S(x)=1-G(x)$. Then $S$ is continuous, $S(0)=1$, and $S(x+y)=S(x)S(y)$. If $S(x_0)=0$ for some $x_0>0$, repeated halving gives $S(x_0/2^n)=0$, contradicting continuity at $0$; hence $S$ is positive. The continuous Cauchy equation for $-\log S$ gives $-\log S(x)=\kappa x$. Monotonicity and nonconstancy give $\kappa>0$, proving (9.7b.3). ∎
+
+Thus the exponential representative is rigid on the complement-semigroup branch, while Definition 31 alone retains the moduli (9.7b.1). Selection of the composition law and its scale is a separate physical response record.
+
+**Theorem 9.7c (Abstract CC Data Do Not Determine a Physical Control Carrier).** Fix any nonzero finite-dimensional map $L_S$ satisfying Definition 30. The tuple consisting of its operator space, norm, retained states, and retained effects contains no typed map from aggregate sources to a Hamiltonian, field, or instrument. Two source extensions can therefore agree on that complete abstract tuple while assigning respectively
+$$
+H_{\mathrm{ctrl}}(S)=0
+\qquad\text{and}\qquad
+H_{\mathrm{ctrl}}(S)=g(S)A
+\tag{9.7c.1}
+$$
+for an independently supplied nonzero observable $A$ and source function $g$ with $g(S)\ne0$.
+
+*Proof.* Definition 30 constrains $L_S$ as a linear operator on the retained event span and contains none of the source, geometry, energy, Hamiltonian, time, or likelihood types appearing in (9.7c.1). Appending either assignment leaves every equation of Definition 30 unchanged. Hence those equations cannot select between the extensions. ∎
+
+Hypothesis 3 nominates the nonzero extension, but a campaign-resolution artifact for its physical claim must populate the source-to-Hamiltonian-to-instrument chain and its energy, timing, likelihood, and held-out response records.
+
+**Theorem 9.7d (Exact Complete-Positivity Interval for the CTB Replacement Line).** Let $d\ge2$, let $\sigma$ be a density operator, and define
+$$
+\Lambda_\alpha(X)=(1-\alpha)X+\alpha\operatorname{tr}(X)\sigma.
+\tag{9.7d.1}
+$$
+This map is Hermiticity preserving and trace preserving for every real $\alpha$. If $\sigma$ is not full rank, $\Lambda_\alpha$ is completely positive exactly for
+$$
+0\le\alpha\le1.
+\tag{9.7d.2}
+$$
+If $\sigma$ is full rank and $T_\sigma:=\operatorname{tr}(\sigma^{-1})$, the exact interval is
+$$
+0\le\alpha\le\frac{T_\sigma}{T_\sigma-1}.
+\tag{9.7d.3}
+$$
+For $\alpha\ne0$, its covariance group is the unitary stabilizer of $\sigma$, and full $U(d)$ covariance holds exactly when $\sigma=I/d$; at $\alpha=0$ the identity channel is fully covariant independently of $\sigma$.
+
+*Proof.* With $|\Omega\rangle=\sum_je_j\otimes e_j$, the Choi matrix is
+$$
+J(\Lambda_\alpha)
+=(1-\alpha)|\Omega\rangle\!\langle\Omega|
++\alpha\sigma\otimes I.
+\tag{9.7d.4}
+$$
+For $0\le\alpha\le1$ both summands are positive. If $\alpha<0$, the support of $\sigma\otimes I$ contains a nonzero vector orthogonal to $|\Omega\rangle$; its quadratic form in (9.7d.4) is negative. If $\sigma$ has a kernel and $\alpha>1$, a kernel direction with nonzero overlap with $|\Omega\rangle$ gives a negative quadratic form.
+
+Now suppose $\sigma$ is full rank and $\alpha>1$. The rank-one downdate criterion applied to $A=\alpha\sigma\otimes I$ gives positivity exactly when
+$$
+(\alpha-1)\langle\Omega|A^{-1}|\Omega\rangle
+=\frac{\alpha-1}{\alpha}\operatorname{tr}(\sigma^{-1})\le1,
+$$
+which is (9.7d.3). Finally, conjugating (9.7d.1) replaces $\sigma$ by $U\sigma U^\dagger$, proving the covariance statement. ∎
+
+This interval is exact for the algebraic one-parameter replacement line containing the CTB family. Its intersection with Definition 34's declared convex-interpolation branch is $0\le\alpha\le1$; the full-rank segment above $1$ is an algebraic CPTP extension outside that branch. Classification of unrestricted Hermiticity-preserving perturbations and bipartite marginal consistency remain additional family components.
+
+**Theorem 9.7g (Complete Choi Classification of Finite CC Perturbations).** Let $L:\mathcal B(\mathcal H)\to\mathcal B(\mathcal H)$ be complex-linear, Hermiticity preserving, and trace annihilating on a finite-dimensional retained operator algebra, and put
+$$
+\Lambda:=\operatorname{id}+L.
+$$
+With the output--input Choi convention
+$$
+J(\Phi)=\sum_{i,j}\Phi(|i\rangle\!\langle j|)\otimes|i\rangle\!\langle j|,
+$$
+$\Lambda$ is CPTP if and only if
+$$
+J(L)=J(L)^\dagger,
+\qquad
+\operatorname{tr}_{\mathrm{out}}J(L)=0,
+\qquad
+|\Omega\rangle\!\langle\Omega|+J(L)\succeq0.
+\tag{9.7g.1}
+$$
+Thus the complete admissible perturbation class is the affine spectrahedron (9.7g.1). For a unitary group $G$, the channel is $G$-covariant exactly when
+$$
+[J(\Lambda),U\otimes\overline U]=0
+\qquad(U\in G).
+\tag{9.7g.2}
+$$
+
+Let $\Lambda_{AB}$ and $\Lambda_A$ be channels on finite retained operator spaces whose state and effect spans are full trace-dual spaces, and write $K_{AB}=\Lambda_{AB}^*$ and $K_A=\Lambda_A^*$. The bipartite consistency condition
+$$
+K_{AB}(E_A\otimes I_B)=K_A(E_A)\otimes I_B
+\qquad\text{for every retained }E_A
+\tag{9.7g.3}
+$$
+holds if and only if
+$$
+\operatorname{tr}_B\Lambda_{AB}(X)
+=
+\Lambda_A(\operatorname{tr}_B X)
+\qquad\text{for every retained }X.
+\tag{9.7g.4}
+$$
+
+*Proof.* Choi's theorem identifies complete positivity with $J(\Lambda)\succeq0$. Hermiticity preservation makes $J(L)$ Hermitian, and trace preservation is equivalent to $\operatorname{tr}_{\mathrm{out}}J(\Lambda)=I$, hence to the middle condition in (9.7g.1), because $J(\operatorname{id})=|\Omega\rangle\!\langle\Omega|$. This proves the first equivalence and exhausts the finite class. Applying covariance to the matrix units shows that $J(\Lambda)$ is invariant under conjugation by $U\otimes\overline U$, which is (9.7g.2), and reversing the calculation proves the converse.
+
+For every retained $X$ and $E_A$, trace duality gives
+$$
+\operatorname{tr}\!\left[\operatorname{tr}_B\Lambda_{AB}(X)E_A\right]
+=
+\operatorname{tr}\!\left[XK_{AB}(E_A\otimes I_B)\right].
+$$
+Substitution of (9.7g.3) makes the right side equal to $\operatorname{tr}[\Lambda_A(\operatorname{tr}_B X)E_A]$, proving (9.7g.4). The same nondegenerate trace pairing proves the reverse implication. ∎
+
+**Resolution TV-CC-04-R2.** Equations (9.7g.1)--(9.7g.4) give `positive-discharge` of the unrestricted finite-dimensional Hermiticity-preserving perturbation classification, covariance test, and bipartite marginal-consistency classification. Theorem 9.7d is the exact one-parameter slice. A physical aggregate-to-control realization remains a separate record.
+
+**Theorem 9.7e (Operational CC and Internal Mutual Information Are Independent Data).** Let an aggregate have a registered bipartition $AB$ and define the operational integration invariant
+$$
+I_{\mathrm{int}}(A:B)_\eta
+=S(\eta_A)+S(\eta_B)-S(\eta_{AB}).
+\tag{9.7e.1}
+$$
+Here $S$ denotes von Neumann entropy.
+There are finite models with equal nonzero $\mathrm{CC}$ and different $I_{\mathrm{int}}$, and models with equal $I_{\mathrm{int}}$ and different $\mathrm{CC}$.
+
+*Proof.* Attach the same nonzero external retained-event map $L_S$ to the internal product state $|00\rangle\!\langle00|$ and to a Bell state. Their CC norms agree, while (9.7e.1) is respectively $0$ and $2\ln2$. Conversely, keep either internal state fixed and attach $L_S=0$ or the nonzero map; the integration invariant is unchanged while CC changes. ∎
+
+Therefore Definition 30 entails no nontrivial monotone inequality between CC and (9.7e.1). A relation requires a physical coupling law and an identifiable multivariate protocol rather than identification of the two quantities.
+
+**Theorem 9.7f (Fresh Records with Static Response Context).** Let the response context space be the singleton $\{c_*\}$ carrying a fixed admissible nonzero CC map. If the branch declares a nonempty high-CC subrange, choose the map norm in that subrange. At update $n$, append a fresh internal binary record $Z_n$ to a retained tape,
+$$
+R_{n+1}=(R_n,Z_{n+1}),
+$$
+while the minimal sufficient response context remains $c_*$. Then the record process can acquire fresh positive conditional entropy at every step while
+$$
+d_{\mathrm{ctx}}(c_{n+1},c_n)=0
+\tag{9.7f.1}
+$$
+for every metric on the singleton context space.
+
+*Proof.* Choose independent unbiased $Z_n$. Each appended bit has conditional entropy $\ln2$, while the context projection is constant, proving (9.7f.1). The fixed nonzero map keeps the operational CC value unchanged. ∎
+
+Thus, on every branch with a declared nonempty high-CC subrange, fresh acquisition plus a fixed CC value in that subrange do not entail context displacement. Proposition 16 obtains its dynamical conclusion precisely after adding the premise that every registered acquisition displaces the specified context metric.
+
+**Resolution ledger 9.7-R1.** These are analytic finite-model artifacts. Equivalence fixes the retained event map and response probabilities while allowing source extensions or internal aggregate states to vary; budgets are the displayed qubits, two contexts, finite operator spaces, and finite records.
+
+| Target | Exact scoped proposition and polarity | Verifier and falsifier | Downstream consumers |
+|:--|:--|:--|:--|
+| `TV-CC-01` | Finite model-level existence, attainment, strict gap, attraction, and nonzero response are `positive-discharge`; physical realization is open. | Evaluate (9.7a.1)--(9.7a.2), both displayed potential values, and the two-state transition graph; loss of the strict gap or zero norm falsifies it. | Theorem 34 and every nonzero-CC branch. |
+| `TV-CC-02` | Endpoint/concavity rigidity is `nonentailment`; exponential rigidity on (9.7b.2) is `positive-discharge`. | Differentiate (9.7b.1) and check the complement law; a nonexponential continuous solution falsifies rigidity. | Definitions 31--35b and response ceilings. |
+| `TV-CC-03` | A physical source/control carrier from the abstract CC tuple is `nonentailment`. | Type-check the two extensions (9.7c.1); an existing equation that fixes the source map invalidates the scoped independence proof. | Hypothesis 3, Appendices L/S and experimental likelihoods. |
+| `TV-CC-04` | The exact CP interval and covariance class of the algebraic replacement line containing the CTB branch are `positive-discharge`; Definition 34 retains $0\le\alpha\le1$ and the unrestricted perturbation class remains open. | Diagonalize (9.7d.4) or apply the rank-one criterion; any negative Choi eigenvalue inside, or positive one outside, falsifies the interval. | Definitions 33--34, Theorem 37 and bipartite consistency. |
+| `TV-CC-05` | A CC--mutual-information relation from current definitions is `nonentailment`. | Compute the product/Bell invariants and attached map norms; failure to preserve the stipulated retained map or state invalidates a witness. | Proposition 14 and integration/coherence experiments. |
+| `TV-CC-06` | On every branch with a declared nonempty high-CC subrange, fresh acquisition plus a CC value in that subrange forcing context displacement is `nonentailment`. | Check the chosen map norm, fresh conditional entropy, and (9.7f.1); a rule identifying every retained bit with the response context lies outside the frozen class. | Propositions 15--16 and introspection dynamics. |
 
