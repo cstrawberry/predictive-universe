@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetCertifiedStageAssembly
+
+#print axioms PureSFormal.Research.RootResetCertifiedStageAssembly.CertifiedRawStageSegment
+#print axioms PureSFormal.Research.RootResetCertifiedStageAssembly.CertifiedRawStageExists
+#print axioms PureSFormal.Research.RootResetCertifiedStageAssembly.first
+#print axioms PureSFormal.Research.RootResetCertifiedStageAssembly.extend
+#print axioms PureSFormal.Research.RootResetCertifiedStageAssembly.positiveStagesOfRaw
+#print axioms PureSFormal.Research.RootResetCertifiedStageAssembly.positiveStagesOfRaw_preserving

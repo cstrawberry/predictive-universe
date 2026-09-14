@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetMarkedContinuationSpine
+
+#print axioms PureSFormal.Research.RootResetMarkedContinuationSpine.states_length
+#print axioms PureSFormal.Research.RootResetMarkedContinuationSpine.admitted_runs
+#print axioms PureSFormal.Research.RootResetMarkedContinuationSpine.scan_within
+#print axioms PureSFormal.Research.RootResetMarkedContinuationSpine.atRoot_within
+#print axioms PureSFormal.Research.RootResetMarkedContinuationSpine.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetMarkedContinuationSpine.erase_run
+#print axioms PureSFormal.Research.RootResetMarkedContinuationSpine.Peels.endpoint_misses

@@ -1,0 +1,25 @@
+import PureSFormal.Computation.DeterministicTapeCode
+
+#print axioms PureSFormal.Computation.DeterministicTapeCode.eval₂_cantorPair_eq_termPair
+#print axioms PureSFormal.Computation.DeterministicTapeCode.cantorDiagonalValue_eq_unpair_sum
+#print axioms PureSFormal.Computation.DeterministicTapeCode.eval₁_cantorRight_eq_unpair_snd
+#print axioms PureSFormal.Computation.DeterministicTapeCode.eval₁_cantorLeft_eq_unpair_fst
+#print axioms PureSFormal.Computation.DeterministicTapeCode.NatList.decode_encode
+#print axioms PureSFormal.Computation.DeterministicTapeCode.NatList.encode_decode
+#print axioms PureSFormal.Computation.DeterministicTapeCode.ruleDecode_code
+#print axioms PureSFormal.Computation.DeterministicTapeCode.ruleCode_decode
+#print axioms PureSFormal.Computation.DeterministicTapeCode.stateRowDecode_code
+#print axioms PureSFormal.Computation.DeterministicTapeCode.stateRowCode_decode
+#print axioms PureSFormal.Computation.DeterministicTapeCode.machineDecode_code
+#print axioms PureSFormal.Computation.DeterministicTapeCode.machineCode_decode
+#print axioms PureSFormal.Computation.DeterministicTapeCode.bitListDecode_code
+#print axioms PureSFormal.Computation.DeterministicTapeCode.bitListCode_decode
+#print axioms PureSFormal.Computation.DeterministicTapeCode.instanceDecodeCode_code
+#print axioms PureSFormal.Computation.DeterministicTapeCode.instanceCode_decodeCode
+#print axioms PureSFormal.Computation.DeterministicTapeCode.instanceCode_bijective
+#print axioms PureSFormal.PureS.Term.decodeCodeTotal_code
+#print axioms PureSFormal.PureS.Term.code_decodeCodeTotal
+#print axioms PureSFormal.Research.ProtectedTrieDeterministicCompiler.DeterministicTape.Instance.decodeCode_code
+#print axioms PureSFormal.Research.ProtectedTrieDeterministicCompiler.DeterministicTape.Instance.code_decodeCode
+#print axioms PureSFormal.Research.ProtectedTrieDeterministicCompiler.DeterministicTape.Instance.code_bijective
+#print axioms PureSFormal.Computation.codedDeterministicTapeHalts_code_iff

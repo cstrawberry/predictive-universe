@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetCarrierNonemptyRows
+
+#print axioms PureSFormal.Research.RootResetCarrierNonemptyRows.supports_subterm
+#print axioms PureSFormal.Research.RootResetCarrierNonemptyRows.base_matches
+#print axioms PureSFormal.Research.RootResetCarrierNonemptyRows.base_misses_local
+#print axioms PureSFormal.Research.RootResetCarrierNonemptyRows.base_misses_tombstone_path
+#print axioms PureSFormal.Research.RootResetCarrierNonemptyRows.tombstone_sound
+#print axioms PureSFormal.Research.RootResetCarrierNonemptyRows.valid
+#print axioms PureSFormal.Research.RootResetCarrierNonemptyRows.all_input

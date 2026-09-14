@@ -1,0 +1,18 @@
+import PureSFormal.Computation.RogozhinInputComputability
+
+#print axioms PureSFormal.Computation.RogozhinInputComputability.wordDecode_code
+#print axioms PureSFormal.Computation.RogozhinInputComputability.configDecode_code
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_flatMapWithParameter
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_rowLength
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_weight
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_productionExponents
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_exponentCode
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_productionCode
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_programCode
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_dataTail
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_dataCode
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_compileParts
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.compile
+#print axioms PureSFormal.Computation.RogozhinInputComputability.Program.eval_compile
+#print axioms PureSFormal.Computation.RogozhinInputComputability.compile_primitiveRecursive
+#print axioms PureSFormal.Computation.RogozhinInputComputability.compiledInput_decode

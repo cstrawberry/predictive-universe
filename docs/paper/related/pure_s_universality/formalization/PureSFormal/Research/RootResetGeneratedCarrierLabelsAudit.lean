@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetGeneratedCarrierLabels
+
+#print axioms PureSFormal.Research.RootResetGeneratedCarrierLabels.selected_response
+#print axioms PureSFormal.Research.RootResetGeneratedCarrierLabels.first_response
+#print axioms PureSFormal.Research.RootResetGeneratedCarrierLabels.empty_sweep
+#print axioms PureSFormal.Research.RootResetGeneratedCarrierLabels.initial_empty_sweep
+#print axioms PureSFormal.Research.RootResetGeneratedCarrierLabels.marked_completed_empty

@@ -1,0 +1,15 @@
+import PureSFormal.Research.RootResetMixedCompletedFrontHandoff
+
+open PureSFormal.Research.RootResetMixedCompletedFrontHandoff
+
+#print axioms Prefix.addressBeforeFresh_some
+#print axioms Prefix.pendingBeforeFresh_some
+#print axioms Prefix.pending_freshLocal_exit_root
+#print axioms address_prefix_dropLast
+#print axioms completed_noPending_appender_or_frame
+#print axioms pending_completed_selects_C4
+#print axioms pending_nonempty_deleted_emptyAppendant_selects_FRAME
+#print axioms pending_nonempty_deleted_nonemptyAppender_selects_FRAME
+#print axioms pending_empty_deleted_selects_FRAME
+#print axioms pending_deleted_selects_FRAME
+#print axioms completed_C4_FRAME_composition

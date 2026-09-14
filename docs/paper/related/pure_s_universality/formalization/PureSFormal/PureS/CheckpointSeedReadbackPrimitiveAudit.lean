@@ -1,0 +1,13 @@
+import PureSFormal.PureS.CheckpointSeedReadbackPrimitive
+
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.terminal_payload_le
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.chainShape_payload_le
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.chain_payload_le
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.terminalWord_value
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.terminalWord_operations_le
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.seedPrepared_value
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.seedPrepared_operations_le
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.seed_value
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.seed_operations_le
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.decode_value
+#print axioms PureSFormal.PureS.CheckpointSeedReadbackPrimitive.decode_operations_le

@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetParametricNonemptyTraceAgreement
+
+#print axioms PureSFormal.Research.RootResetParametricNonemptyTraceAgreement.bitcons_rawStageAt
+#print axioms PureSFormal.Research.RootResetParametricNonemptyTraceAgreement.bitcons_certifiedPositiveStages
+#print axioms PureSFormal.Research.RootResetParametricNonemptyTraceAgreement.bitcons_selectsEveryContractionRun

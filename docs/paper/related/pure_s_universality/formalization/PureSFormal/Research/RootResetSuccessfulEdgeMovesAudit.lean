@@ -1,0 +1,22 @@
+import PureSFormal.Research.RootResetSuccessfulEdgeMoves
+
+/-! # Axiom inventory for successful edge-traversal bounds -/
+
+namespace PureSFormal.Research.RootResetSelectorContract
+
+#print axioms successfulEdgeMoveCount
+#print axioms runSuccessfulEdgeMoveCount
+#print axioms runSuccessfulEdgeMoveCount_zero
+#print axioms runSuccessfulEdgeMoveCount_succ
+#print axioms successfulEdgeMoveCount_eq_one_iff
+#print axioms successfulEdgeMoveCount_le_moveCount
+#print axioms successfulEdgeMoveCount_le_moveCount_le_one
+#print axioms runSuccessfulEdgeMoveCount_le_runMoveCount
+#print axioms runSuccessfulEdgeMoveCount_le_runMoveCount_le_ticks
+#print axioms runSuccessfulEdgeMoveCount_le_ticks
+#print axioms Contract.successfulEdgeMoves_le
+
+end PureSFormal.Research.RootResetSelectorContract
+
+#print axioms PureSFormal.Research.RootResetEulerWalker.selector_successfulEdgeMoves_linear
+#print axioms PureSFormal.Research.RootResetProgressEulerContract.selector_successfulEdgeMoves_linear

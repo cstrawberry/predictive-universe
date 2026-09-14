@@ -1,0 +1,23 @@
+import PureSFormal.Computation.CookWordPrimitive
+
+#print axioms PureSFormal.Computation.CookWordPrimitive.equalBits_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.equalBits_operations_le
+#print axioms PureSFormal.Computation.CookWordPrimitive.firstTrue_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.firstTrue_operations_le
+#print axioms PureSFormal.Computation.CookWordPrimitive.lookup_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.lookup_operations_le
+#print axioms PureSFormal.Computation.CookWordPrimitive.lookup_prepared_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.oneHot_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.oneHotPrepared_operations_le
+#print axioms PureSFormal.Computation.CookWordPrimitive.oneHot_operations_le
+#print axioms PureSFormal.Computation.CookWordPrimitive.cut_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.cut_operations_le
+#print axioms PureSFormal.Computation.CookWordPrimitive.cut_prefix_length_le
+#print axioms PureSFormal.Computation.CookWordPrimitive.cut_suffix_lt
+#print axioms PureSFormal.Computation.CookWordPrimitive.parse_nil
+#print axioms PureSFormal.Computation.CookWordPrimitive.parse_nil_operations
+#print axioms PureSFormal.Computation.CookWordPrimitive.parse_cons_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.parse_sound
+#print axioms PureSFormal.Computation.CookWordPrimitive.parse_complete
+#print axioms PureSFormal.Computation.CookWordPrimitive.parse_value
+#print axioms PureSFormal.Computation.CookWordPrimitive.parse_operations_le

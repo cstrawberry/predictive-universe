@@ -1,0 +1,7 @@
+import PureSFormal.Computation.TapeStackPrimitive
+
+#print axioms PureSFormal.Computation.TapeStackPrimitive.equalIndex_decide
+#print axioms PureSFormal.Computation.TapeStackPrimitive.parse
+#print axioms PureSFormal.Computation.TapeStackPrimitive.parse_value
+#print axioms PureSFormal.Computation.TapeStackPrimitive.parse_operations_le
+#print axioms PureSFormal.Computation.TapeStackPrimitive.parsed_length_le

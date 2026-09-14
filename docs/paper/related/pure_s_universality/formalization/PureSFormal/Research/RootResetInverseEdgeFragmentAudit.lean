@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetInverseEdgeFragment
+
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.back_runs
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.backTicks_bound
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.backResult_matches
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.backResult_depth
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.backResult_depth_lt
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.backResult_erase
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.backResult_follow
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.backResult_complete
+#print axioms PureSFormal.Research.RootResetInverseEdgeFragment.back_readOnly

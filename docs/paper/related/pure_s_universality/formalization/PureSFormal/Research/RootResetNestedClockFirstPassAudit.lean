@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetNestedClockFirstPass
+
+#print axioms PureSFormal.Research.RootResetNestedClockFirstPass.all_input
+#print axioms PureSFormal.Research.RootResetNestedClockFirstPass.generated
+#print axioms PureSFormal.Research.RootResetNestedClockFirstPass.runMutationCount_zero

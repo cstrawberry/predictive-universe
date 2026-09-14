@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetNestedClockGrowthProbe
+
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.covers
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.core_absorbs
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.core_step
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.core_runs
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.all_input
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.erase_run
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthProbe.done_absorbs

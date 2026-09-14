@@ -1,0 +1,12 @@
+import PureSFormal.PureS.RegisteredMarkerExclusion
+
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.noPostMarkers_nil
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.noPostMarkers_cons
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.noPostMarkers_append
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.registeredEvent_postMarker
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.noEvent_of_sample_exclusion
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.seekMutation_result_unique
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.exactChain_samples_unique
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.responsePairs_noPostMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.normalResponse_chain_noPostMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.selectedResponse_chain_noPostMarkers

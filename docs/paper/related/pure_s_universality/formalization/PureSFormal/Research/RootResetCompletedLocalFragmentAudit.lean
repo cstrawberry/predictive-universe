@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetCompletedLocalFragment
+
+#print axioms PureSFormal.Research.RootResetCompletedLocalFragment.family_runs
+#print axioms PureSFormal.Research.RootResetCompletedLocalFragment.familyTicks_bound
+#print axioms PureSFormal.Research.RootResetCompletedLocalFragment.probe_runs
+#print axioms PureSFormal.Research.RootResetCompletedLocalFragment.parsed_enters
+#print axioms PureSFormal.Research.RootResetCompletedLocalFragment.leave_runs
+#print axioms PureSFormal.Research.RootResetCompletedLocalFragment.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetCompletedLocalFragment.all_input

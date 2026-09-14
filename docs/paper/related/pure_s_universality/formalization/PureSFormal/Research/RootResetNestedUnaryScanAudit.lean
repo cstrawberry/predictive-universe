@@ -1,0 +1,12 @@
+import PureSFormal.Research.RootResetNestedUnaryScan
+
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.valid
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.selected_shape
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.covers
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.scanning_step
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.branch_runs
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.wrap_C0
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.scan_within
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedUnaryScan.done_absorbs

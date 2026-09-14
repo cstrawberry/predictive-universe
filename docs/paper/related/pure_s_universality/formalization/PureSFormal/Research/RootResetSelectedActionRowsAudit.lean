@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetSelectedActionRows
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.row_sound
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.row_complete
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.mixed_matching_addresses_eq
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.edges_matching_addresses_eq
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.all_input
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.generated_initial
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.generated_appender
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.erase_run
+#print axioms PureSFormal.Research.RootResetSelectedActionRows.completed_rejected

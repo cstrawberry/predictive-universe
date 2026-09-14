@@ -1,0 +1,19 @@
+import PureSFormal.Research.RootResetWholeDispatcherSelectedHandoff
+
+namespace PureSFormal.Research.RootResetWholeDispatcherSelectedHandoff
+
+#print axioms shellDispatcherContext_plug
+#print axioms shellDispatcherContext_address
+#print axioms parseMarkedLocal?_fresh_openShell_none
+#print axioms localContinuationContext_address_of_parseLocal?
+#print axioms rewrap_marked_prefix
+#print axioms RouteShape.splice_current
+#print axioms RouteShape.splice_activated
+#print axioms parsedForked_direction_recovered
+#print axioms parsedForked_contracts_target
+#print axioms parsedForked_contracts_exact
+#print axioms parsedForked_selectedNode_exact_handoff
+#print axioms parsedForked_selectedLeaf_exact_handoff
+#print axioms parsedForked_selectedLeaf_nonempty_action_to_firstPush
+
+end PureSFormal.Research.RootResetWholeDispatcherSelectedHandoff

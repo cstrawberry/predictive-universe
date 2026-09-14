@@ -1,0 +1,11 @@
+import PureSFormal.PureS.PhysicalMarkerPhases
+
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.numeral_ne_haltTag
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.numeral_chosen_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.base_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.clockTail_noPostMarkers
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.clock_noPostMarkers
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.fuel_noPostMarkers
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.positivePhase_noPostMarkers
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.handoffFuel_noPostMarkers
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.initialPrelude_noPostMarkers

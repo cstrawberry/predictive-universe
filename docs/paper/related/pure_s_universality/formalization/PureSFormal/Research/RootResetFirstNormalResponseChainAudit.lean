@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetFirstNormalResponseChain
+
+#print axioms PureSFormal.Research.RootResetFirstNormalResponseChain.firstResponseTrace_carrier_arities
+#print axioms PureSFormal.Research.RootResetFirstNormalResponseChain.firstC4_to_return_selectorChain

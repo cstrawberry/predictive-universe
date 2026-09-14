@@ -1,0 +1,7 @@
+import PureSFormal.Computation.CookSeedBoundaryReflection
+
+#print axioms PureSFormal.Computation.CookSeedBoundaryReflection.labelForWeight_le_bound
+#print axioms PureSFormal.Computation.CookSeedBoundaryReflection.labels_map_bounded
+#print axioms PureSFormal.Computation.CookSeedBoundaryReflection.decodeData?_sound
+#print axioms PureSFormal.Computation.CookSeedBoundaryReflection.stripAudit_decomposition
+#print axioms PureSFormal.Computation.CookSeedBoundaryReflection.contextOf_decodeBoundary?_sound

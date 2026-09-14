@@ -1,0 +1,21 @@
+import PureSFormal.Research.RootResetNestedClockSecondPass
+
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.covers
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.core_absorbs
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.core_step
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.core_runs
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.unary_absorbs
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.unary_step
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.unary_runs
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.ascending_step
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.ascending_runs
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.walk_size
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.redex_fields
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.combined_bound
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.all_input
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.clock_pair_walk
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.generated
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.erase_run
+#print axioms PureSFormal.Research.RootResetNestedClockSecondPass.done_absorbs

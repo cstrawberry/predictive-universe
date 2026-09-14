@@ -1,0 +1,29 @@
+import PureSFormal.PureS.SchedulerRecurrence
+
+/-! Logical-basis audit for construction-facing sampled recurrence bridges. -/
+
+#print axioms PureSFormal.PureS.SchedulerCycle.ResponseSamplePairs.length_eq
+#print axioms PureSFormal.PureS.SchedulerCycle.pendingResponseSegment
+#print axioms PureSFormal.PureS.SchedulerCycle.pendingResponseExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.firstC4_holds
+#print axioms PureSFormal.PureS.SchedulerCycle.firstC4_sampledState
+#print axioms PureSFormal.PureS.SchedulerCycle.positiveStageFinal_seekFirstC4
+#print axioms PureSFormal.PureS.SchedulerCycle.firstC4_toFrame_zeroRun
+#print axioms PureSFormal.PureS.SchedulerCycle.positiveStagePendingFirstResponseSegment
+#print axioms PureSFormal.PureS.SchedulerCycle.positiveStagePendingFirstResponseExistentialAdvance
+#print axioms PureSFormal.PureS.CheckpointExclusion.Noncheckpoint.framePreMarker
+#print axioms PureSFormal.PureS.SchedulerCycle.FinalResponseFlags.mapTerm
+#print axioms PureSFormal.PureS.SchedulerCycle.FinalResponseFlags.prependFalse
+#print axioms PureSFormal.PureS.SchedulerCycle.routeEntries_finalFlags
+#print axioms PureSFormal.PureS.SchedulerCycle.routeEntries_wrapped_allFalse
+#print axioms PureSFormal.PureS.SchedulerCycle.actionEntries_finalFlags
+#print axioms PureSFormal.PureS.SchedulerCycle.responseEntries_finalFlags_nil
+#print axioms PureSFormal.PureS.SchedulerCycle.responseEntries_finalFlags_cons
+#print axioms PureSFormal.PureS.SchedulerCycle.responseEntries_finalFlags
+#print axioms PureSFormal.PureS.SchedulerCycle.positivePrefix_freshTerminal
+#print axioms PureSFormal.PureS.SchedulerCycle.ResponseSamplePairs.positiveRootClassifications
+#print axioms PureSFormal.PureS.SchedulerCycle.ResponseSamplePairs.preMarkerRootClassifications
+#print axioms PureSFormal.PureS.SchedulerCycle.positiveRootResponseSegment
+#print axioms PureSFormal.PureS.SchedulerCycle.preMarkerRootResponseSegment
+#print axioms PureSFormal.PureS.SchedulerCycle.firstResponse_preMarkerShape
+#print axioms PureSFormal.PureS.SchedulerCycle.firstResponse_positivePrefix

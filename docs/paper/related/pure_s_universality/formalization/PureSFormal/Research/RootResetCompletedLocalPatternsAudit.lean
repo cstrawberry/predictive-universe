@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetCompletedLocalPatterns
+
+#print axioms PureSFormal.Research.RootResetCompletedLocalPatterns.action_matches
+#print axioms PureSFormal.Research.RootResetCompletedLocalPatterns.action_sound
+#print axioms PureSFormal.Research.RootResetCompletedLocalPatterns.dispatch_matches
+#print axioms PureSFormal.Research.RootResetCompletedLocalPatterns.dispatch_sound
+#print axioms PureSFormal.Research.RootResetCompletedLocalPatterns.local_matches
+#print axioms PureSFormal.Research.RootResetCompletedLocalPatterns.local_sound
+#print axioms PureSFormal.Research.RootResetCompletedLocalPatterns.accepts_iff_parse

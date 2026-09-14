@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetScopedResponseProbes
+#print axioms PureSFormal.Research.RootResetScopedResponseProbes.baseEndpoint_restoring
+#print axioms PureSFormal.Research.RootResetScopedResponseProbes.baseEndpoint_terminal
+#print axioms PureSFormal.Research.RootResetScopedResponseProbes.baseEndpoint_readOnly
+
+#print axioms PureSFormal.Research.RootResetScopedResponseProbes.completed_restoring
+#print axioms PureSFormal.Research.RootResetScopedResponseProbes.base_restoring
+#print axioms PureSFormal.Research.RootResetScopedResponseProbes.endpoint_restoring
+#print axioms PureSFormal.Research.RootResetScopedResponseProbes.endpoint_readOnly

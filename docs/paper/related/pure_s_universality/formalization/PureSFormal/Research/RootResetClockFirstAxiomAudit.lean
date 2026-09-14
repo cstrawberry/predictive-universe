@@ -1,0 +1,18 @@
+import PureSFormal.Research.RootResetResponseClockFuelAgreement
+
+/-! Axiom dependencies of the initial clock classifier. -/
+
+open PureSFormal.Research.RootResetResponseClockFuelAgreement
+
+#print axioms parsePending?_clockFirst_none
+#print axioms fuelActiveContext_clockFirst
+#print axioms responseOuter_clockFirst
+#print axioms activeContext_clockFirst
+#print axioms freshResponseRoot?_clockFirst_none
+#print axioms parseFreshDispatcherCall?_clockFirst_false
+#print axioms currentCarrierDispatcherAddress?_clockFirst_none
+#print axioms selectedActionAddress?_clockFirst_none
+#print axioms PureSFormal.Research.RootResetPersistentClockFuelAgreement.appender_active_clockFirst_none
+#print axioms classify_clockFirst_ne_activatedRoute
+#print axioms completedResponseAddress?_clockFirst_none
+#print axioms prioritiesClear_clockFirst

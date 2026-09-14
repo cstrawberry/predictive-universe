@@ -1,0 +1,36 @@
+import PureSFormal.Cook.CTS
+
+#print axioms PureSFormal.Cook.alphabetSize
+#print axioms PureSFormal.Cook.deletionNumber
+#print axioms PureSFormal.Cook.paddingPhases
+#print axioms PureSFormal.Cook.ctsPeriod
+#print axioms PureSFormal.Cook.symbolIndex
+#print axioms PureSFormal.Cook.symbolIndex_lt
+#print axioms PureSFormal.Cook.alphabet_getElem?_symbolIndex
+#print axioms PureSFormal.Cook.symbolIndex_injective
+#print axioms PureSFormal.Cook.oneHot
+#print axioms PureSFormal.Cook.oneHot_length
+#print axioms PureSFormal.Cook.oneHot_count_true
+#print axioms PureSFormal.Cook.encodeWord
+#print axioms PureSFormal.Cook.encodeWord_nil
+#print axioms PureSFormal.Cook.encodeWord_cons
+#print axioms PureSFormal.Cook.encodeWord_length
+#print axioms PureSFormal.Cook.encodeWord_count_true
+#print axioms PureSFormal.Cook.binaryProduction
+#print axioms PureSFormal.Cook.binaryProduction_length
+#print axioms PureSFormal.Cook.productionAppendants
+#print axioms PureSFormal.Cook.ctsAppendants
+#print axioms PureSFormal.Cook.productionAppendants_length
+#print axioms PureSFormal.Cook.ctsAppendants_length
+#print axioms PureSFormal.Cook.appendantAt
+#print axioms PureSFormal.Cook.rogozhinCookProgram
+#print axioms PureSFormal.Cook.rogozhinCookProgram_period
+#print axioms PureSFormal.Cook.sum_map_mul_left
+#print axioms PureSFormal.Cook.sum_map_comp
+#print axioms PureSFormal.Cook.sum_map_pointwise
+#print axioms PureSFormal.Cook.production_appendant_bit_count
+#print axioms PureSFormal.Cook.sum_append_nat
+#print axioms PureSFormal.Cook.padding_appendant_bit_count
+#print axioms PureSFormal.Cook.total_appendant_bit_count
+#print axioms PureSFormal.Cook.binaryProduction_length_le_7296
+#print axioms PureSFormal.Cook.total_push_contraction_count

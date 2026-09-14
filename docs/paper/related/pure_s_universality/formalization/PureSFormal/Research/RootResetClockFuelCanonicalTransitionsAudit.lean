@@ -1,0 +1,21 @@
+import PureSFormal.Research.RootResetClockFuelCanonicalTransitions
+
+namespace PureSFormal.Research.RootResetClockFuelCanonicalTransitions
+
+#print axioms call_target_eq_first
+#print axioms first_target_eq_second
+#print axioms second_target_eq_third
+#print axioms third_target_eq_fourth
+#print axioms fourth_target_eq_openBase
+#print axioms call_contractAt_eq_first
+#print axioms first_contractAt_eq_second
+#print axioms second_contractAt_eq_third
+#print axioms third_contractAt_eq_fourth
+#print axioms fourth_contractAt_eq_openBase
+#print axioms zeroScript_parser_trace
+#print axioms zeroScript_stepsN_five
+#print axioms zeroScript_stepsN_five_baseCarrier
+#print axioms markedPrefix_zeroScript_stepsN_five
+#print axioms markedPrefix_zeroScript_stepsN_five_baseCarrier
+
+end PureSFormal.Research.RootResetClockFuelCanonicalTransitions

@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetEmptyParityCounterexample
+#print axioms PureSFormal.Research.RootResetEmptyParityCounterexample.zero_accumulator_parity
+#print axioms PureSFormal.Research.RootResetEmptyParityCounterexample.pending_zero_accumulator_handoff
+#print axioms PureSFormal.Research.RootResetEmptyParityCounterexample.initial_empty_completed_handoff

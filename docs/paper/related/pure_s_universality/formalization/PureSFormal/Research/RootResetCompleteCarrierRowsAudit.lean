@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetCompleteCarrierRows
+
+#print axioms PureSFormal.Research.RootResetCompleteCarrierRows.inverse_unique
+#print axioms PureSFormal.Research.RootResetCompleteCarrierRows.inverts
+#print axioms PureSFormal.Research.RootResetCompleteCarrierRows.boundary_misses
+#print axioms PureSFormal.Research.RootResetCompleteCarrierRows.selected_live

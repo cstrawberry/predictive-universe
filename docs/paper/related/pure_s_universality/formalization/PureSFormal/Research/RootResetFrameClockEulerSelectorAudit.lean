@@ -1,0 +1,13 @@
+import PureSFormal.Research.RootResetFrameClockEulerSelector
+
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.states_length
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.states_nodup
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.reaches_boundary
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.invocation_within
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.final_certificate
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.outcome_agrees
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.outcome_mutations
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.selectorContract
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.generated_first_erase
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.generated_second_erase
+#print axioms PureSFormal.Research.RootResetFrameClockEulerSelector.miss_inherits_clock

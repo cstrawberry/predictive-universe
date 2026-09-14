@@ -1,0 +1,3 @@
+import PureSFormal.Research.RootResetFiniteInitialPrelude
+#print axioms PureSFormal.Research.RootResetFiniteInitialPrelude.selectStep?_initial
+#print axioms PureSFormal.Research.RootResetFiniteInitialPrelude.initialPrelude_selectorChain

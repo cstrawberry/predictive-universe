@@ -1,0 +1,81 @@
+replaying PureSFormal.PureS.DovetailRun
+passed PureSFormal.PureS.DovetailRun declarations=12
+replaying PureSFormal.PureS.EncoderPrimitive
+passed PureSFormal.PureS.EncoderPrimitive declarations=74
+replaying PureSFormal.PureS.EncoderPrimitiveAudit
+passed PureSFormal.PureS.EncoderPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.EncoderSize
+passed PureSFormal.PureS.EncoderSize declarations=37
+replaying PureSFormal.PureS.EncoderSizeAudit
+passed PureSFormal.PureS.EncoderSizeAudit declarations=0
+replaying PureSFormal.PureS.ExactCheckpointRun
+passed PureSFormal.PureS.ExactCheckpointRun declarations=43
+replaying PureSFormal.PureS.ExactCheckpointRunAudit
+passed PureSFormal.PureS.ExactCheckpointRunAudit declarations=0
+replaying PureSFormal.PureS.FiniteController
+passed PureSFormal.PureS.FiniteController declarations=152
+replaying PureSFormal.PureS.FiniteControllerBound
+passed PureSFormal.PureS.FiniteControllerBound declarations=63
+replaying PureSFormal.PureS.FiniteControllerBoundAudit
+passed PureSFormal.PureS.FiniteControllerBoundAudit declarations=0
+replaying PureSFormal.PureS.Frame
+passed PureSFormal.PureS.Frame declarations=37
+replaying PureSFormal.PureS.LocalResponse
+passed PureSFormal.PureS.LocalResponse declarations=24
+replaying PureSFormal.PureS.LocalTransition
+passed PureSFormal.PureS.LocalTransition declarations=5
+replaying PureSFormal.PureS.MutableBase
+passed PureSFormal.PureS.MutableBase declarations=107
+replaying PureSFormal.PureS.MutationFreePeriodicity
+passed PureSFormal.PureS.MutationFreePeriodicity declarations=9
+replaying PureSFormal.PureS.MutationFreePeriodicityAudit
+passed PureSFormal.PureS.MutationFreePeriodicityAudit declarations=0
+replaying PureSFormal.PureS.ParentLinkedController
+passed PureSFormal.PureS.ParentLinkedController declarations=297
+replaying PureSFormal.PureS.ParentLinkedControllerAudit
+passed PureSFormal.PureS.ParentLinkedControllerAudit declarations=0
+replaying PureSFormal.PureS.ParserActionPrimitive
+passed PureSFormal.PureS.ParserActionPrimitive declarations=61
+replaying PureSFormal.PureS.ParserActionPrimitiveAudit
+passed PureSFormal.PureS.ParserActionPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserBasePrimitive
+passed PureSFormal.PureS.ParserBasePrimitive declarations=73
+replaying PureSFormal.PureS.ParserBasePrimitiveAudit
+passed PureSFormal.PureS.ParserBasePrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserCarrierPrimitive
+passed PureSFormal.PureS.ParserCarrierPrimitive declarations=61
+replaying PureSFormal.PureS.ParserCarrierPrimitiveAudit
+passed PureSFormal.PureS.ParserCarrierPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserCellPrimitive
+passed PureSFormal.PureS.ParserCellPrimitive declarations=15
+replaying PureSFormal.PureS.ParserCellPrimitiveAudit
+passed PureSFormal.PureS.ParserCellPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserCellSpinePrimitive
+passed PureSFormal.PureS.ParserCellSpinePrimitive declarations=77
+replaying PureSFormal.PureS.ParserCellSpinePrimitiveAudit
+passed PureSFormal.PureS.ParserCellSpinePrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserChainPrimitive
+passed PureSFormal.PureS.ParserChainPrimitive declarations=41
+replaying PureSFormal.PureS.ParserChainPrimitiveAudit
+passed PureSFormal.PureS.ParserChainPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserCheckpointPrimitive
+passed PureSFormal.PureS.ParserCheckpointPrimitive declarations=24
+replaying PureSFormal.PureS.ParserCheckpointPrimitiveAudit
+passed PureSFormal.PureS.ParserCheckpointPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserEnvelopePrimitive
+passed PureSFormal.PureS.ParserEnvelopePrimitive declarations=206
+replaying PureSFormal.PureS.ParserEnvelopePrimitiveAudit
+passed PureSFormal.PureS.ParserEnvelopePrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserLocalPrimitive
+passed PureSFormal.PureS.ParserLocalPrimitive declarations=7
+replaying PureSFormal.PureS.ParserLocalPrimitiveAudit
+passed PureSFormal.PureS.ParserLocalPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserLocalShellPrimitive
+passed PureSFormal.PureS.ParserLocalShellPrimitive declarations=104
+replaying PureSFormal.PureS.ParserLocalShellPrimitiveAudit
+passed PureSFormal.PureS.ParserLocalShellPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserNatDivisionPrimitive
+passed PureSFormal.PureS.ParserNatDivisionPrimitive declarations=18
+replaying PureSFormal.PureS.ParserNatDivisionPrimitiveAudit
+passed PureSFormal.PureS.ParserNatDivisionPrimitiveAudit declarations=0
+checked 1547 declarations

@@ -616,7 +616,7 @@ Holding $M$, $x$, $\tilde A_{\rm PCE}$, and $D$ constant, increasing spectral va
    – If $g_J(u_0)=M_s\ln(1+x_s u_0)< \ln d_0$: **interior** $(u_s^*=u_0)$.
    – If $g_J(u_0)= \ln d_0$: **branch boundary** $(u_s^*=u_0=u_{\mathrm J}^*)$.
    – If $g_J(u_0)> \ln d_0$: **cap‑active** $\bigl(u_s^*=u_{\mathrm J}^*=(a_{\mathrm{cap}}-1)\,M_s/S_1^{(s)}\bigr)$, with $a_{\mathrm{cap}}=d_0^{1/M_s}$.
-4. **Invariants:** $C_{\mathrm{cap}}^{(s)}=\Gamma_0\,S_1^{(s)}$,\quad $C_{\mathrm{cyc}}^{(s)}=\Gamma_0\,[\,2\tilde A_{\mathrm{PCE}}^{(s)}+S_2^{(s)}\,]$.
+4. **Invariants:** $C_{\mathrm{cap}}^{(s)}=\Gamma_0\,S_1^{(s)}$, $C_{\mathrm{cyc}}^{(s)}=\Gamma_0\,[\,2\tilde A_{\mathrm{PCE}}^{(s)}+S_2^{(s)}\,]$.
 5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^*)=u_e^*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^*)\,(C_{\mathrm{cyc}}/C_{\mathrm{cap}})_{e}$ and compare to $K_{\mathrm{alph}}(d_0,M_e)/F_{\lambda,e}$; the identity (W.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W.3.1).
 6. **Weinberg angle:** evaluate (W.3.1); if using GUT normalization, use (W.3.3) with $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$.
 7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)}\}$, $\Gamma_0$, $d_0$, probe specification, and code.

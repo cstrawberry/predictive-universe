@@ -3161,6 +3161,21 @@ For the obstruction, every $v\in\overline V$ obeys $2v=0$. If $s$ is additive in
 
 **Resolution TV-G-11-R2 (Metadata).** Exact domain: the marked systematic Golay matrix, the integral symplectic lattice of Theorem G.8.4g, its mod-two reduction and real scalar extension. Premises: the fixed marking and a symmetric integral lift of $P$. Equivalence: maps are compared as typed homomorphisms preserving the displayed alternating forms and the reduction square. Budget: all lattice vectors and all binary residue classes; there is no sampling or cutoff. Verifier: integral matrix multiplication, reduction modulo two, the primitive-Lagrangian check and the torsion argument. Falsifier: failure of (G.8.4g.4.2), a nonzero additive map from a two-torsion group into either torsion-free target, or failure of the reduced graph to equal $\mathcal G_{24}$. Provenance class: source-internal algebraic construction and no-go. Downstream consumers: Theorem G.8.4g and `TV-G-11`. This gives `positive-discharge` of the integral/binary/real symplectic carrier subcomponent and `negative-refutation` of the ill-typed direct additive injection. The Lie-bracket, physical update, QFI-to-gauge, polarization and response-observable intertwining squares remain open, so the target is not closed.
 
+**Proposition (Tensor Automorphisms of the Syndrome Error Space).** Product unitaries on $\mathbb C^3\otimes\mathbb C^2$ have image
+
+$$
+\frac{U(3)\times U(2)}{\{(\lambda I_3,\lambda^{-1}I_2):|\lambda|=1\}}
+\cong S(U(3)\times U(2)).
+$$
+
+The tensor-product map has the displayed central kernel. For a representative $(A,B)$, set $d=\det A\det B$. The pair $(d^{-1}A,dB)$ has determinant product one, is unchanged when the original representative is centrally rescaled, and has the same tensor product. The determinant-one subgroup intersects the kernel trivially because $\lambda^3\lambda^{-2}=\lambda$. This proves the isomorphism. The map $(A,B,z)\mapsto(z^2A,z^{-3}B)$ from $SU(3)\times SU(2)\times U(1)$ has a six-element kernel and gives the stated $\mathbb Z_6$ quotient.
+
+Its dimension is $9+4-1=12$. Under the additional family relations $K=2a-1$, $b=aK$, equality of the product-unitary dimension $K^2+a^2-1$ with $ab$ gives $2a(a-1)(a-2)=0$. For integers $a\ge2$, equality selects $a=2$. The algebraic root $a=1$ lies outside that domain.
+
+For direct-sum hypercharge convention $(3,1)_{-1/3}\oplus(1,2)_{1/2}$, the tensor representation has weight $1/6$. The normalization and representation fix that statement. Matter chirality, anomalies, charge assignments for other representations, local gauging, and spacetime bundle compatibility remain distinct parts of the physical identification.
+
+**Tensor-symmetry realization.** The finite factorization in Section Z.6 identifies the error space as $\mathbb C^3\otimes\mathbb C^2$. A physical gauge realization registers product-unitary transformations as the admissible continuous symmetry, their local bundle action, and the matter representations. The displayed quotient then supplies the global $\mathbb Z_6$ form. Its determinant-one representative construction uses the $(3,2)$ factor dimensions; other factor dimensions carry their own central-quotient calculation.
+
 ### G.8.4h Predictive Interface Tensor Category and Global-Symmetry Exclusion
 
 **Definition G.8.4h.1 (Predictive Interface Tensor Category).** Let the PCE-selected inactive-sector decomposition of Theorem G.8.4b be written
@@ -4603,6 +4618,20 @@ $$
 A left-handed Weyl spinor $\psi_L$ carries the $(\frac12,0)$ representation of this complexified algebra, equivalently the fundamental complex two-dimensional representation of $Spin^+(1,3)\cong SL(2,\mathbb C)$. A right-handed Weyl spinor $\psi_R$ carries the conjugate $(0,\frac12)$ representation. A Dirac spinor carries their direct sum: $\Psi=(\psi_L,\psi_R)^T$.
 
 ---
+
+**Construction (Euclidean and Lorentzian Real Forms of a Syndrome Block).** For a chosen syndrome block, use the real vector-space decomposition
+
+$$
+M_2(\mathbb C)=\mathbb H\oplus i\mathbb H,
+\quad \mathbb H=\operatorname{span}_{\mathbb R}\{I,i\sigma_1,i\sigma_2,i\sigma_3\},
+\quad \operatorname{Herm}_2=\operatorname{span}_{\mathbb R}\{I,\sigma_1,\sigma_2,\sigma_3\}.
+$$
+
+On $x_0I+i\mathbf x\cdot\boldsymbol\sigma$, determinant is $x_0^2+|\mathbf x|^2$. On $x_0I+\mathbf x\cdot\boldsymbol\sigma$, it is $x_0^2-|\mathbf x|^2$. The intersection is $\mathbb RI$. The left/right $SU(2)$ action on the quaternionic form gives the Euclidean spin action; the congruence action $X\mapsto AXA^\dagger$ of $SL(2,\mathbb C)$ preserves the Hermitian determinant and gives the proper orthochronous Lorentz action with kernel $\{\pm I\}$.
+
+These matrix identities exhibit two four-dimensional real forms within one complex matrix space. Multiplying the spatial basis vectors by $i$ relates their coordinate descriptions. A spacetime reconstruction additionally supplies a field of such carriers, transition maps, time orientation, causal interpretation, and dynamics compatible with the retained response structure. Reflection positivity or analytic-continuation data are separate requirements when a quantum-theoretic Wick rotation is claimed.
+
+The carrier-promotion certificate identifies these finite blocks with transported response carriers, verifies their transition maps, and fixes the causal interpretation of the Hermitian determinant. The two $SU(2)$ actions enter through their specified representations and commuting relations.
 
 ## G.10.6 The Spinor-Mass Correspondence
 

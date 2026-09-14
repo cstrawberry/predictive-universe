@@ -1,0 +1,18 @@
+import PureSFormal.PureS.SchedulerContinuation
+
+#print axioms PureSFormal.PureS.SchedulerContinuation.enterArityThree_zeroRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.eq_redex_of_headArity_three
+#print axioms PureSFormal.PureS.SchedulerContinuation.exists_rdx_of_headArity_three
+#print axioms PureSFormal.PureS.SchedulerContinuation.exists_left_of_headArity_four
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityThreeProbe_zeroRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityFourProbes_zeroRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityThreeDecision_zeroRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityFourDecision_zeroRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityThreeDecision_countedStep
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityFourDecision_zeroStep
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityThreeLaunch_countedRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.arityFourCheckpoint_zeroRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.freshReturnArityThree_countedRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.freshReturnArityFour_zeroRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.markedReturnArityThree_countedRun
+#print axioms PureSFormal.PureS.SchedulerContinuation.markedReturnArityFour_countedRun

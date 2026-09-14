@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetFiniteEmptySweep
+#print axioms PureSFormal.Research.RootResetFiniteEmptySweep.markedOrigin_frame_selectorChain
+#print axioms PureSFormal.Research.RootResetFiniteEmptySweep.markedOrigin_pendingSweep_selectorChain
+#print axioms PureSFormal.Research.RootResetFiniteEmptySweep.markedOrigin_completeSweep_selectorChain

@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetFiniteEmptyResponseChain
+#print axioms PureSFormal.Research.RootResetFiniteEmptyResponseChain.paired_erases
+#print axioms PureSFormal.Research.RootResetFiniteEmptyResponseChain.emptyResponse_body_selectorChain
+#print axioms PureSFormal.Research.RootResetFiniteEmptyResponseChain.emptyResponse_through_marker_selectorChain

@@ -1,0 +1,14 @@
+import PureSFormal.PureS.ParserLocalShellPrimitive
+
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.marked_value
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.marked_tag_le
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.marked_operations_le
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.halt_value
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.halt_operations_bound
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.halt_operations_le
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.view_operations_le
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.view_fields
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.view_weight_le
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.view_field_bounds
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.localWith_value
+#print axioms PureSFormal.PureS.ParserLocalShellPrimitive.localWith_operations_le

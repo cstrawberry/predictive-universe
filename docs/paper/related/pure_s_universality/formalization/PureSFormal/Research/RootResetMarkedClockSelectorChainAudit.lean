@@ -1,0 +1,13 @@
+import PureSFormal.Research.RootResetMarkedClockSelectorChain
+
+open PureSFormal.Research.RootResetMarkedClockSelectorChain
+
+#print axioms clockPostPositive_marked_selectStep?
+#print axioms positiveClock_erase_rebuild
+#print axioms nextClockSample_erase_rebuild
+#print axioms positiveClockMutation_marked_selects_next
+#print axioms clockFirst_marked_selects_first
+#print axioms clockTail_markedSelectorChain
+#print axioms clock_markedSelectorChain
+#print axioms clockCompleted_marked_selects_launch
+#print axioms clockLaunch_exact_selectorChain

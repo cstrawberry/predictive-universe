@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetMixedEmptyCommit
+
+open PureSFormal.Research.RootResetMixedEmptyCommit
+#print axioms registeredAppender_impossible_of_emptyAppendant
+#print axioms selectStep?_mixed_pending_empty_commit
+#print axioms notDeleted_of_zero_tombstones
+#print axioms notDeleted_of_completed_counts
+#print axioms selectStep?_cleanParents_pending_empty_commit

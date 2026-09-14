@@ -1,0 +1,260 @@
+{
+  "flip_false": {
+    "all_observed_rows_equal": false,
+    "growth": [],
+    "horizons": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "000"
+      ],
+      [
+        1,
+        1,
+        "010"
+      ]
+    ],
+    "terminal": {
+      "horizon": 1,
+      "scanned_output": true
+    }
+  },
+  "flip_true": {
+    "all_observed_rows_equal": false,
+    "growth": [],
+    "horizons": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "010"
+      ],
+      [
+        1,
+        1,
+        "000"
+      ]
+    ],
+    "terminal": {
+      "horizon": 1,
+      "scanned_output": false
+    }
+  },
+  "immediate_empty": {
+    "all_observed_rows_equal": true,
+    "growth": [],
+    "horizons": [
+      0,
+      1,
+      2
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "00"
+      ]
+    ],
+    "terminal": {
+      "horizon": 0,
+      "scanned_output": false
+    }
+  },
+  "immediate_false": {
+    "all_observed_rows_equal": true,
+    "growth": [],
+    "horizons": [
+      0,
+      1,
+      2
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "000"
+      ]
+    ],
+    "terminal": {
+      "horizon": 0,
+      "scanned_output": false
+    }
+  },
+  "immediate_true": {
+    "all_observed_rows_equal": true,
+    "growth": [],
+    "horizons": [
+      0,
+      1,
+      2
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "010"
+      ]
+    ],
+    "terminal": {
+      "horizon": 0,
+      "scanned_output": true
+    }
+  },
+  "left_growth": {
+    "all_observed_rows_equal": false,
+    "growth": [
+      "left"
+    ],
+    "horizons": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "000"
+      ],
+      [
+        1,
+        0,
+        "010"
+      ],
+      [
+        2,
+        0,
+        "0110"
+      ]
+    ],
+    "terminal": {
+      "horizon": 2,
+      "scanned_output": false
+    }
+  },
+  "loop_false": {
+    "all_observed_rows_equal": true,
+    "growth": [],
+    "horizons": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "000"
+      ],
+      [
+        0,
+        1,
+        "000"
+      ],
+      [
+        0,
+        1,
+        "000"
+      ],
+      [
+        0,
+        1,
+        "000"
+      ],
+      [
+        0,
+        1,
+        "000"
+      ]
+    ],
+    "terminal": null
+  },
+  "loop_true": {
+    "all_observed_rows_equal": true,
+    "growth": [],
+    "horizons": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "010"
+      ],
+      [
+        0,
+        1,
+        "010"
+      ],
+      [
+        0,
+        1,
+        "010"
+      ],
+      [
+        0,
+        1,
+        "010"
+      ],
+      [
+        0,
+        1,
+        "010"
+      ]
+    ],
+    "terminal": null
+  },
+  "right_growth": {
+    "all_observed_rows_equal": false,
+    "growth": [
+      "right"
+    ],
+    "horizons": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "literal_rows": [
+      [
+        0,
+        1,
+        "010"
+      ],
+      [
+        1,
+        2,
+        "000"
+      ],
+      [
+        2,
+        3,
+        "0010"
+      ]
+    ],
+    "terminal": {
+      "horizon": 2,
+      "scanned_output": false
+    }
+  }
+}

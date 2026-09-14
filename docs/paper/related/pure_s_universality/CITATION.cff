@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: >-
+  Please cite this research package using the metadata below. The manuscript
+  identifies Alexander Filin as project coordinator and describes the human
+  and AI contributions in its contribution statement.
+title: "Pure S Is Computationally Universal Under a Fixed Root-Restarted Finite Controller"
+type: software
+version: 1.0.0
+date-released: 2026-09-14
+repository-code: "https://github.com/cstrawberry/predictive-universe/tree/main/docs/paper/related/pure_s_universality"
+authors:
+  - name: "Cinematic Strawberry"
+contact:
+  - given-names: "Alexander"
+    family-names: "Filin"
+    email: "contact@cinematicstrawberry.com"
+abstract: >-
+  Pure S is computationally universal under one fixed finite controller
+  restarted at the root after each contraction. Only the bare term is retained
+  between invocations. On every finite term the controller terminates within
+  a linear microtick bound and performs exactly one contextual S contraction
+  or reports normality without mutation. Every encoded cyclic-tag input has
+  the exact certified trajectory, with all other samples rejected. The fixed
+  period-912 specialization supplies a complete effective padded tape encoder,
+  literal source rows and terminal scanned-bit output, with measured interface
+  bounds. Supporting theorems characterize confluence limits and
+  permanence of verified histories along every reduction, cofinal recovery,
+  and complete enumeration along one address-complete path in the unrestricted
+  graph; the observer checks the source transition relation on supplied rows.
+keywords:
+  - combinatory logic
+  - S combinator
+  - term rewriting
+  - root-restarted finite controller
+  - exact checkpoint decoder
+  - literal source output
+  - observer-verified history enumeration
+  - formal verification
+  - universal computation
+license: MIT

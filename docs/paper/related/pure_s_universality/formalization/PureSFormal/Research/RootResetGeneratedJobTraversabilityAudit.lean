@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetGeneratedJobTraversability
+
+open PureSFormal.Research.RootResetGeneratedJobTraversability
+
+#print axioms selectedResponseTrace_fresh
+#print axioms selectedNonemptySweepToFreshCheckAt
+#print axioms completeNonemptyJobAt
+#print axioms completeNonfinalAt
+#print axioms completeNonemptyTerminalJobRawAt

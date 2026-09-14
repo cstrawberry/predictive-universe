@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetExactTraceAgreement
+
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.SelectorChain
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.SelectorChain.head
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.SelectorChain.erase_eq_of_zeroMutationRun
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.SelectorChain.prepend
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.SelectorChain.append
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.SelectorChain.selects_contractionRun
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.CertifiedPositiveStages
+#print axioms PureSFormal.Research.RootResetExactTraceAgreement.selectsEveryContractionRun

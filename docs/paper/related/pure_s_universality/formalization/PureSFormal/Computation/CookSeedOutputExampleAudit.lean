@@ -1,0 +1,7 @@
+import PureSFormal.Computation.CookSeedOutputExample
+
+#print axioms PureSFormal.Computation.CookSeedOutputExample.run_one
+#print axioms PureSFormal.Computation.CookSeedOutputExample.final_halted
+#print axioms PureSFormal.Computation.CookSeedOutputExample.exists_actual_terminalRow
+#print axioms PureSFormal.Computation.CookSeedOutputExample.exists_actual_output
+#print axioms PureSFormal.Computation.CookSeedOutputExample.computed_outputs_differ

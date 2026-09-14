@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetFreshResponsePass
+
+#print axioms PureSFormal.Research.RootResetFreshResponsePass.all_input
+#print axioms PureSFormal.Research.RootResetFreshResponsePass.readOnly
+#print axioms PureSFormal.Research.RootResetFreshResponsePass.probeSpec

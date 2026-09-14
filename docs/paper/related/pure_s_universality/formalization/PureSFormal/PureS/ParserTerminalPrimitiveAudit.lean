@@ -1,0 +1,12 @@
+import PureSFormal.PureS.ParserTerminalPrimitive
+
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.equalIndex_value
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.equalIndex_operations_le
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.positivePredecessor_value
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.positivePredecessor_operations_le
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.carrier_count_le
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.terminalFields_value
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.terminalFields_operations_le
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.parse_value
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.parse_operations_bound
+#print axioms PureSFormal.PureS.ParserTerminalPrimitive.parse_operations_le

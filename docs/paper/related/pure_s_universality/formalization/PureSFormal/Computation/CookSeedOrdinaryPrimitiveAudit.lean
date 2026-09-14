@@ -1,0 +1,14 @@
+import PureSFormal.Computation.CookSeedOrdinaryPrimitive
+
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.decodedLabel_le
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.aligned_labels
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.word_labels
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.ordinary_value
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.grammarCoefficient
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.ordinary_operations_le
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.ordinary_length_le
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.ordinary_labels
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.ordinaryBudget_mono
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.passOrdinary_value
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.passOrdinary_operations_le
+#print axioms PureSFormal.Computation.CookSeedOrdinaryPrimitive.passOrdinary_fields

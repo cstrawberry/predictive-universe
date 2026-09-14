@@ -1,0 +1,15 @@
+import PureSFormal.Computation.RogozhinSeedPrimitive
+
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.reverseOnto_value
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.reverseOnto_operations
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.reverse_value
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.reverse_operations
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.frames_value
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.seedBody_value
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.parse_value
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.context_value
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.frames_operations_le
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.seedBody_operations_le
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.parse_cost_bound
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.parse_operations_le
+#print axioms PureSFormal.Computation.RogozhinSeedPrimitive.context_operations_le

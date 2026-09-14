@@ -1,0 +1,14 @@
+import PureSFormal.Computation.DeterministicTapePureSReadback
+
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.termAt
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.checkpointTime
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.withCheckpoint
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.decodeRow?
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.decodeTerminalRow?
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.decodeScannedOutput?
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.withCheckpoint_at_checkpoint
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.termAt_zero
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.exists_literalRow_at_actualPureS
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.exists_terminalRow_of_runFor?
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.exists_terminalRow_at_actualPureS
+#print axioms PureSFormal.Computation.DeterministicTapePureSReadback.bitToggle_at_actualPureS

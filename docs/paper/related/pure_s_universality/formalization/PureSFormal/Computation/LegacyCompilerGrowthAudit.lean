@@ -1,0 +1,19 @@
+import PureSFormal.Computation.LegacyCompilerGrowth
+
+/-! # Retained compiler growth axiom audit -/
+
+namespace PureSFormal.Computation.LegacyCompilerGrowth
+
+#print axioms Stack.encode_replicate_false
+#print axioms Stack.stackBase_replicate_false_add_one
+#print axioms PrimitiveClock.pairClock_eq
+#print axioms PrimitiveClock.transferClock_eq
+#print axioms PrimitiveClock.rightPopClock_eq
+#print axioms PrimitiveClock.two_pow_le_rightPopClock_replicate_false
+#print axioms TagMaterialization.dataBlock_length_of_live
+#print axioms TagMaterialization.two_pow_le_dataBlock_length_of_live
+#print axioms TagMaterialization.two_pow_two_pow_le_dataBlock_of_zero_stack
+#print axioms TagMaterialization.right_dataBlock_length_le_encodeState_running
+#print axioms TagMaterialization.two_pow_two_pow_le_compiled_boundary_encodeState
+
+end PureSFormal.Computation.LegacyCompilerGrowth

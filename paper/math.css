@@ -1,0 +1,46 @@
+/* Browser-native equation layout. All fonts are system fonts; no downloads. */
+.math-i, .math-d {
+  color: inherit;
+  font-style: normal;
+  font-weight: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  line-height: normal;
+}
+.math-i {
+  display: inline-block;
+  vertical-align: baseline;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.math-d {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  max-width: 100%;
+  margin: 24px 0;
+  padding: 14px 2px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+}
+.math-i math, .math-d math {
+  font-family: 'Cambria Math', 'STIX Two Math', 'Latin Modern Math', math;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  text-indent: 0;
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin: 0;
+}
+.math-d math { flex: 1 0 auto; }
+.math-d mtd { white-space: nowrap; }
+.math-number { flex: 0 0 auto; color: var(--muted); font-size: .85em; }
+.math-box { border: 1px solid currentColor; padding: .25em .4em; }
+.math-i.is-wide { display: block; overflow-x: auto; padding: 8px 0; margin: 6px 0; }
+.math-i.is-wide math { width: max-content; }
+math annotation { display: none; }
+@media(max-width:760px) { .math-d { font-size: 15px; padding: 12px 0; } }
+@media print { .math-d, .math-i.is-wide { overflow: visible; } }

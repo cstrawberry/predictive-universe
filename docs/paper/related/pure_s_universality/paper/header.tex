@@ -1,0 +1,80 @@
+\usepackage{microtype}
+\usepackage{bookmark}
+\usepackage{xurl}
+\usepackage{tagpdf}
+\usepackage{etoolbox}
+\tagpdfsetup{activate,paratagging}
+% Preserve useful link descriptions independently of the Hyperref driver's
+% defaults. Encode internal destinations as PDF text; URI values are already
+% complete, escaped ASCII PDF strings and must not be encoded a second time.
+\ExplSyntaxOn
+\str_new:N \l__pure_s_link_contents_str
+\hook_gput_code:nnn {pdfannot/link/GoTo/before} {pure-s/descriptive-links}
+  {
+    \__hyp_text_pdfstring:eoN
+      {Go~to~destination~\l_hyp_current_dest_name_tl}
+      {\l__hyp_text_enc_info_print_tl}
+      \l__pure_s_link_contents_str
+    \pdfannot_dict_put:nne {link/GoTo}{Contents}{\l__pure_s_link_contents_str}
+  }
+\hook_gput_code:nnn {pdfannot/link/URI/before} {pure-s/descriptive-links}
+  {
+    \pdfannot_dict_put:nne {link/URI}{Contents}{\l__hyp_uri_tmpa_tl}
+  }
+\ExplSyntaxOff
+% Tagpdf splits output boxes to balance page-local marked content.  The
+% longtable footer filler must stretch without infinite shrink in those boxes.
+\makeatletter
+\AddToHook{package/longtable/after}{%
+  \patchcmd{\LT@output}{\copy\LT@foot\vss}{\copy\LT@foot\vfil}{}%
+    {\PackageError{pure-s-paper}{Longtable footer patch did not match}{} }%
+  \patchcmd{\LT@output}{\copy\LT@foot\vss}{\copy\LT@foot\vfil}{}%
+    {\PackageError{pure-s-paper}{Second longtable footer patch did not match}{} }}
+\makeatother
+% Table bodies use artifact marked content without automatic paragraph tags.
+% Keep tagging active so the output routine balances spans at page breaks.
+\AddToHook{env/longtable/before}{\par\Needspace{8\baselineskip}\tagpdfparaOff\tagmcbegin{artifact}}
+\AddToHook{env/longtable/after}{\par\tagmcend\tagpdfparaOn}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\addtolength{\topmargin}{-2pt}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{needspace}
+\usepackage{array}
+% Center a fine disclosure rule in the existing title-page whitespace.
+% Its zero-height overlay preserves the text's width, baseline and pagination.
+\newsavebox{\disclosurelinebox}
+\newcommand{\disclosureruleline}[2]{%
+  \begingroup
+  \sbox{\disclosurelinebox}{#2}%
+  \makebox[0pt][l]{\makebox[\wd\disclosurelinebox][c]{%
+    \raisebox{#1}[0pt][0pt]{\color{black!45}\rule{1.1in}{0.3pt}}}}%
+  \usebox{\disclosurelinebox}%
+  \endgroup}
+\floatplacement{figure}{H}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{0.5em plus 0.1em minus 0.05em}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\renewcommand{\arraystretch}{1.15}
+\setlength{\extrarowheight}{1.5pt}
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTpre}{0.6\baselineskip}
+\setlength{\LTpost}{0.7\baselineskip}
+\setlength{\belowdisplayskip}{0.8em}
+\setlength{\belowdisplayshortskip}{0.6em}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\providecommand{\papershorttitle}{Pure S persistent-cursor universality}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\papershorttitle}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!55!black,bookmarksnumbered=true,pdfdisplaydoctitle=true}

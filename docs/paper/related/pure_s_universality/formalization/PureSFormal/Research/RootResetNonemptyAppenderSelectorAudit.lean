@@ -1,0 +1,16 @@
+import PureSFormal.Research.RootResetNonemptyAppenderSelector
+
+open PureSFormal.Research.RootResetNonemptyAppenderSelector
+
+#print axioms routeShell_parseLocal_none_of_actionRejected
+#print axioms routeShell_parseLocal_none_of_actionMutation
+#print axioms routeShell_freshCall_false
+#print axioms routeShell_earlyPriorities_none
+#print axioms selectedAction_selects_firstPush
+#print axioms parseFirstWord?_appenderCall_none
+#print axioms parseSecondWord?_appenderCall_none
+#print axioms parseRow?_selectedActionCall_none
+#print axioms validRow_ne_selectedActionCall
+#print axioms selectedActionSelection?_validRow_none
+#print axioms withResponse_contractAt?_append
+#print axioms nonfinalRow_selectStep?

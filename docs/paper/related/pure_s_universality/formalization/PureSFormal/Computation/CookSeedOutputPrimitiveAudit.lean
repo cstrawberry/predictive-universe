@@ -1,0 +1,25 @@
+import PureSFormal.Computation.CookSeedOutputPrimitive
+
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.counterBudget_mono
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.passCounter_value
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.passCounter_operations_le
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.fieldCap_mono
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.passCounter_fields
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.passCounterBudget_mono
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.contextRow_operations_le
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.contextTerminal_operations_le
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.contextScanned_operations_le
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.contextRow_value
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.contextTerminal_value
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.contextScanned_value
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.rowBudget_mono
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.terminalBudget_mono
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.scannedBudget_mono
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.row_value
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.terminal_value
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.scanned_value
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.seedBudget_mono
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.seedRead_operations_le
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.row_operations_le
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.terminal_operations_le
+#print axioms PureSFormal.Computation.CookSeedOutputPrimitive.scanned_operations_le

@@ -1,0 +1,6 @@
+import PureSFormal.PureS.RegisteredMarkerCompleteness
+
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.nonemptyBase_event_of_firstEmpty
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.positiveStageSource_reachable
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.firstEmpty_performs
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.eventuallyEmpty_implies_registeredEvent

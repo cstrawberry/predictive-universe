@@ -1,0 +1,9 @@
+import PureSFormal.Research.FiniteControllerReindexing
+#print axioms PureSFormal.Research.FiniteControllerReindexing.get_locate
+#print axioms PureSFormal.Research.FiniteControllerReindexing.decode_encode
+#print axioms PureSFormal.Research.FiniteControllerReindexing.decode_nextIndex
+#print axioms PureSFormal.Research.FiniteControllerReindexing.nextIndex_self
+#print axioms PureSFormal.Research.FiniteControllerReindexing.project_step
+#print axioms PureSFormal.Research.FiniteControllerReindexing.project_run
+#print axioms PureSFormal.Research.FiniteControllerReindexing.reindex_mutation
+#print axioms PureSFormal.Research.FiniteControllerReindexing.reindex_fixed

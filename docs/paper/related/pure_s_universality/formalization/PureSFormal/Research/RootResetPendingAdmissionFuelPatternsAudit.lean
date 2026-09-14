@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetPendingAdmissionFuelPatterns
+open PureSFormal.Research.RootResetPendingAdmissionFuelPatterns
+#print axioms kind_member
+#print axioms canonical_matches

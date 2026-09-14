@@ -1,0 +1,8 @@
+import PureSFormal.Computation.CookSeedCounterShapePrimitive
+
+#print axioms PureSFormal.Computation.CookSeedCounterShapePrimitive.shape_value
+#print axioms PureSFormal.Computation.CookSeedCounterShapePrimitive.shape_length
+#print axioms PureSFormal.Computation.CookSeedCounterShapePrimitive.shape_length_le
+#print axioms PureSFormal.Computation.CookSeedCounterShapePrimitive.shape_operations_le
+#print axioms PureSFormal.Computation.CookSeedCounterShapePrimitive.shape_materialization
+#print axioms PureSFormal.Computation.CookSeedCounterShapePrimitive.shape_certificate

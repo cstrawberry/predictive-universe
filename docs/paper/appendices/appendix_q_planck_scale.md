@@ -2332,6 +2332,47 @@ is strongly convex, has Hessian $2I$, and has the unique stable minimizer $z_j$.
 
 **Resolution TV-Q-10-N1 (Metadata).** Exact domain: the positive parameter domain and fixed-spacing surfaces (Q.2.4a.1), with smooth strongly convex objective completions. Premises: Equation Q.3 and no independently registered coupled PCE objective. Equivalence: equality of $(C_{\max},\chi,\eta)$ and the spacing response $4\chi C_{\max}/\eta$. Budget: every point of $\mathcal F_r$ and the two explicit completions (Q.2.4a.3). Verifier: substitution, gradients, Hessians and minimizer identities. Falsifier: a derivation from Equation Q.3 alone that forces the same objective and minimizer in both completions. Provenance class: source-internal continuum countermodel. Downstream consumers: Equation Q.18 and `TV-Q-10`. The two completions give `nonentailment` of a coupled optimizer from the scale relation alone. The separate coordinate assignments select $z_0$ only when hard-imposed; they still supply neither a coupled PCE objective nor its dynamics. A target-free feasible set and PCE objective derived from the retained dynamics, followed by complete minimizer and stochastic-stability classification, remain open.
 
+**Conditional Horizon-Cell Spectrum.** On the joint residual-budget and ideal-packing branch, the identities are
+
+$$
+C_{\max}^*=\ln8-\ln2=\ln4,
+\qquad \delta^2=4L_P^2\ln4.
+$$
+
+Section Z.6 gives a four-dimensional syndrome factor whose maximum entropy is $\ln4$. The canonical attractor has syndrome $00$ with certainty, so its actual syndrome entropy is zero. The four-state capacity and the entropy of a specified occupied state are distinct quantities. A horizon state with independent maximally mixed syndrome factors would have $S=N\ln4$; these are the occupancy and independence premises for that entropy.
+
+**Area-spectrum hypothesis.** Assume an integer number of horizon cells, a fixed physical cell area $\delta^2$, an additive area operator, and transitions changing that cell number by one. This supplies an area spacing
+
+$$
+\Delta\mathcal A=4L_P^2\ln4.
+$$
+
+The spacing identity alone supplies an area scale. The integer-cell and transition hypotheses give it a spectral interpretation. Its observable spectrum is specified by allowed transitions, matrix elements, degeneracies and line broadening.
+
+For a Schwarzschild state with $\mathcal A=16\pi G^2M^2/c^4$ and $0<\Delta\mathcal A\le\mathcal A$, loss of one area increment gives the exact emitted energy
+
+$$
+E=Mc^2\left[1-\sqrt{1-\Delta\mathcal A/\mathcal A}\right].
+$$
+
+For $\Delta\mathcal A/\mathcal A\ll1$,
+
+$$
+E=\frac{c^6\Delta\mathcal A}{32\pi G^2M}
+\left[1+O(\Delta\mathcal A/\mathcal A)\right]
+=k_BT_H\ln4\left[1+O(\Delta\mathcal A/\mathcal A)\right].
+$$
+
+The expansion follows from $1-\sqrt{1-x}=x/2+O(x^2)$ and $k_BT_H=\hbar c^3/(8\pi GM)$. Emitted transition energies and ringdown frequencies use distinct observable maps.
+
+The proposed relation
+
+$$
+e^{\delta^2/(4L_P^2)}=(1+u^*)^M/2=d_0/a
+$$
+
+is retained on the conjunction of the spacing, binary active-rank, and saturation branches. It provides a check of shared normalizations.
+
 ## Q.5 Final Result and Interpretation
 
 On the intersection of the residual-capacity, throughput-saturated, channel-independence, and ideal-packing branches, the registered values are:
@@ -2531,11 +2572,15 @@ Thus the Lorentz-invariant choice $b_2=\cdots=b_J=0$ and, for example, any suffi
 
 *Proof.* Translation invariance diagonalizes the operator in Fourier space. Rotation and parity invariance make its spatial polynomial symbol a real polynomial in $|k|^2$; the normalized local time-kinetic premise contributes exactly $-\omega^2$, and the no-mixed-derivative premise excludes momentum-dependent coefficients of that term. Registering the constant and quadratic terms leaves exactly (Q.6.2a.1), and nonnegativity is the modewise stability condition. Expanding the positive square root of (Q.6.2a.1) and differentiating with respect to $|k|$ gives (Q.6.2a.2). The two displayed coefficient choices prove nonuniqueness. ∎
 
-**Resolution TV-Q-12-N1 (Metadata).** Exact domain: real translation-, rotation-, parity- and time-reversal-invariant scalar quadratic operators with a canonically normalized local time-kinetic term, no mixed time--space derivatives and spatial order at most $2J$, on a fixed retained momentum window. Premises: registered $(\delta,c,\mu,J)$ and no microscopic coefficient map. Equivalence: equality of the Fourier response on that window. Budget: every stable real coefficient vector and every retained momentum. Verifier: polynomial-symbol classification, positivity and the group-velocity expansion. Falsifier: a symmetry or cutoff identity that forces the same $(b_2,\ldots,b_J)$ in the zero and nonzero completions. Provenance class: source-internal effective-operator classification and countermodel. Downstream consumers: Predictions Q.6.1--Q.6.2 and `TV-Q-12`. The theorem gives `nonentailment` of MDR coefficients from the cutoff and declared symmetries, while positively classifying this finite operator class. Exhaustion beyond the class and the target-independent astrophysical observable, nuisance and uncertainty maps remain open.
+**Resolution TV-Q-12-N1 (Metadata).** Exact domain: real translation-, rotation-, parity- and time-reversal-invariant scalar quadratic operators with a canonically normalized local time-kinetic term, no mixed time--space derivatives and spatial order at most $2J$, on a fixed retained momentum window. Premises: registered $(\delta,c,\mu,J)$ and no microscopic coefficient map. Equivalence: equality of the Fourier response on that window. Budget: every stable real coefficient vector and every retained momentum. Verifier: polynomial-symbol classification, positivity and the group-velocity expansion. Falsifier: a symmetry or cutoff identity that forces the same $(b_2,\ldots,b_J)$ in the zero and nonzero completions. Provenance class: source-internal effective-operator classification and countermodel. Downstream consumers: Predictions Q.6.1--Q.6.2, Theorem Q.6.2b and `TV-Q-12`. The theorem classifies the finite rotational polynomial propagation class and leaves its MDR coefficients free. Theorem Q.6.2b separately proves that a smooth $\Gamma^+$-invariant scalar symbol has no anisotropic Taylor component below degree six. An astrophysical bound additionally specifies the scalar-to-polarization observable map, nuisance model and uncertainty record.
+
+**Theorem Q.6.2b (Rank-Six Anisotropy Floor for Shell-Symmetric Symbols).** Fix $J\ge1$. Let $\ell$ be a real polynomial of order at most $2J$ on the retained momentum window in $\mathbb R^4$ that is invariant under the group $\Gamma^{+}$ of Proposition C.6h; this polynomial premise holds for a registered Taylor truncation of the symbol of a real translation-invariant operator on the $D_4$ lattice whose coupling function is constant on $\Gamma^{+}$-orbits, in particular for equal-weight root-shell couplings, with finite support, or sufficient absolute moment bounds, and a controlled truncation remainder on the registered window as in Theorem Q.6.2a. Then every homogeneous component of $\ell$ of degree at most $5$ is a real multiple of a power of $|k|^2$, and the degree-$6$ component lies in the span of $|k|^6$ and $T_6(k)$ of (C.6h.1). In the normalization of (Q.6.2a.1), in which the degree-$2j$ stratum carries the prefactor $\delta^{2j-2}$ relative to the quadratic term, no coefficient choice within this class produces a rotation-noninvariant term at relative order $(\delta|k|)^0$ or $(\delta|k|)^2$: the lowest-order rotation-noninvariant contribution enters at relative order $(\delta|k|)^4$, is proportional to the single anisotropic pattern of $T_6$, and its two displayed equal-weight shell moments are the Lemma C.6f defects $-1/d_0$ and $+1/M$. Along every fixed direction $\hat k$ the restriction $\ell(|k|\hat k)$ is a polynomial in $|k|^2$ whose coefficients through $|k|^4$ are direction independent, with direction dependence first possible in the $|k|^6$ coefficient. On the joint branch of Prediction Q.6.1 extended by the registered premise that the retained propagation symbol is $\Gamma^{+}$-invariant, rotation-noninvariant dispersion terms at relative orders $(\delta|k|)^0$ and $(\delta|k|)^2$ are therefore absent, the first admissible one is the $T_6$ stratum at relative order $(\delta|k|)^4$. A propagation experiment tests this exclusion after its Lorentzian, polarization, and observable maps identify the measured coefficient with this scalar symbol. This supplies the anisotropic sector of the microscopic coefficient map of Resolution TV-Q-12-N1 on this branch: below rank six the anisotropic coefficients are not free parameters but vanish identically, while the isotropic coefficients remain nonentailed exactly as in Theorem Q.6.2a.
+
+*Proof.* For a finite-support real coupling function $c$ constant on $\Gamma^{+}$-orbits of the $D_4$ lattice, the exact trigonometric symbol is $\ell(k)=\sum_xc(x)e^{ik\cdot x}$; the product of the four sign changes lies in $\Gamma^{+}$, so $c$ is even and $\ell(k)=\sum_xc(x)\cos(k\cdot x)$ is real, and for $g\in\Gamma^{+}$ the substitution $x=gy$, which permutes the lattice by Proposition C.6h item 1, gives $\ell(gk)=\sum_yc(gy)\cos\left(gk\cdot gy\right)=\sum_yc(y)\cos(k\cdot y)=\ell(k)$ by orthogonality and orbit constancy. Its registered Taylor truncation inherits this invariance term by term. The action of $\Gamma^{+}$ on polynomials is linear and degree preserving, so every homogeneous component of an invariant polynomial is invariant, and Proposition C.6h items 2 and 3 give the stated component structure through degree $6$. The degree-$2$ and degree-$4$ strata are multiples of $|k|^2$ and $|k|^4$ and hence rotation invariant, so with the (Q.6.2a.1) prefactors the relative orders $(\delta|k|)^0$ and $(\delta|k|)^2$ carry no rotation-noninvariant term, and the degree-$6$ stratum at relative order $(\delta|k|)^4$ is the first that can, its rotation-noninvariant direction being spanned by $T_6$ modulo $|k|^6$; its equal-weight shell moments are the Lemma C.6f defects because $\frac1MT_6$ is the full contraction of the equal-weight sixth-moment tensor, by Proposition C.6h. Evenness makes the ray restriction $\ell(|k|\hat k)$ a polynomial in $|k|^2$; its coefficients through $|k|^4$ come from strata that are multiples of powers of $|k|^2$ and are direction independent, while the $|k|^6$ coefficient acquires the direction-dependent contribution proportional to $T_6(\hat k)$, and $T_6$ is nonconstant on the unit sphere by the values $12$ and $18$ recorded in Proposition C.6h. On the extended joint branch the retained propagation symbol lies in the classified class, so the exclusion at relative orders $(\delta|k|)^0$ and $(\delta|k|)^2$ and the identification of the first admissible pattern follow from the classification, and an observation contradicting the exclusion contradicts membership in the class for every coefficient assignment, falsifying the branch. The classification constrains no isotropic coefficient, so the Theorem Q.6.2a nonentailment statement for them is unchanged, while the anisotropic entries of the Resolution TV-Q-12-N1 coefficient map are supplied identically zero below rank six on this branch. ∎
 
 ### Q.6.5 Summary
 
-The branch fixes a spatial resolution of a little more than two Planck lengths. The same numerical time scale appears only after an added propagation calibration, while the capacity and geometric inputs remain separate branch choices.
+The branch fixes a spatial resolution of a little more than two Planck lengths. The same numerical time scale follows under the propagation calibration; capacity and geometry have their separately stated branch inputs.
 
 #### Technical dependency ledger
 

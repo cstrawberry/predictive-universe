@@ -1,0 +1,5 @@
+import PureSFormal.PureS.RegisteredMarkerSampling
+
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.step_eq_sample_of_mutation
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.noEvent_before_zeroMutationRun
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.registeredEvent_post_is_countedSample

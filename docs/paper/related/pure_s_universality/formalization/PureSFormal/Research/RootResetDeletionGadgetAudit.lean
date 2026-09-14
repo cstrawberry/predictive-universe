@@ -1,0 +1,182 @@
+import PureSFormal.Research.RootResetDeletionGadget
+import PureSFormal.Research.RootResetProgressRoles
+import PureSFormal.Research.RootResetProgressSpine
+import PureSFormal.Research.ProtectedTrieAlgebra
+import PureSFormal.Research.ProtectedTrieParser
+import PureSFormal.Research.ProtectedTrieEnumeration
+import PureSFormal.Research.ProtectedTrieSingleOpening
+import PureSFormal.Research.ProtectedTrieBuild
+import PureSFormal.Research.ProtectedTriePrefixBuild
+import PureSFormal.Research.ProtectedTrieConfluence
+import PureSFormal.Research.ProtectedTrieSeed
+import PureSFormal.Research.ProtectedTrieCertificates
+import PureSFormal.Research.ProtectedTrieFinitePrefix
+
+/-!
+Kernel dependency report for the auxiliary Research components: root-reset
+deletion progress, protected-trie opening/parser algebra, exact contextual
+single-opening deltas, canonical finite trie builds, and finite
+certificate-address prefix sets. This module is not imported by the public
+weak-path theorem.
+-/
+
+#print axioms PureSFormal.Research.RootResetDeletionGadget.contractAt?_source_root
+#print axioms PureSFormal.Research.RootResetDeletionGadget.fresh_right_contractRoot?
+#print axioms PureSFormal.Research.RootResetDeletionGadget.contractAt?_fresh_right
+#print axioms PureSFormal.Research.RootResetDeletionGadget.source_stepsN_stable
+#print axioms PureSFormal.Research.RootResetDeletionGadget.parse?_sound
+#print axioms PureSFormal.Research.RootResetDeletionGadget.source_injective
+#print axioms PureSFormal.Research.RootResetDeletionGadget.fresh_injective
+#print axioms PureSFormal.Research.RootResetDeletionGadget.stable_injective
+#print axioms PureSFormal.Research.RootResetDeletionGadget.select?_source
+#print axioms PureSFormal.Research.RootResetDeletionGadget.select?_fresh
+#print axioms PureSFormal.Research.RootResetDeletionGadget.select?_stable
+#print axioms PureSFormal.Research.RootResetDeletionGadget.selectedStep?_source
+#print axioms PureSFormal.Research.RootResetDeletionGadget.selectedStep?_fresh
+#print axioms PureSFormal.Research.RootResetDeletionGadget.selectedStep?_stable
+#print axioms PureSFormal.Research.RootResetDeletionGadget.fresh_ne_stable
+#print axioms PureSFormal.Research.RootResetDeletionGadget.ProgressSpine.decode?_eq_some_iff
+#print axioms PureSFormal.Research.RootResetDeletionGadget.ProgressSpine.decode?_fresh_eq_stable
+#print axioms PureSFormal.Research.RootResetProgressRoles.contractAt?_source_root
+#print axioms PureSFormal.Research.RootResetProgressRoles.contractAt?_openCell_right
+#print axioms PureSFormal.Research.RootResetProgressRoles.source_step_openCell
+#print axioms PureSFormal.Research.RootResetProgressRoles.openCell_step_closedCell
+#print axioms PureSFormal.Research.RootResetProgressRoles.parseOpen?_sound
+#print axioms PureSFormal.Research.RootResetProgressRoles.parseClosed?_sound
+#print axioms PureSFormal.Research.RootResetProgressRoles.openCell_ne_closedCell
+#print axioms PureSFormal.Research.RootResetProgressSpine.decode?_sound
+#print axioms PureSFormal.Research.RootResetProgressSpine.decode?_armed
+#print axioms PureSFormal.Research.RootResetProgressSpine.decode?_openCell
+#print axioms PureSFormal.Research.RootResetProgressSpine.decode?_closedCell
+#print axioms PureSFormal.Research.RootResetProgressSpine.decode?_complete
+#print axioms PureSFormal.Research.RootResetProgressSpine.decode?_eq_some_iff
+#print axioms PureSFormal.Research.RootResetProgressSpine.Decodes.deterministic
+#print axioms PureSFormal.Research.RootResetProgressSpine.opening_deletes
+#print axioms PureSFormal.Research.RootResetProgressSpine.closing_preserves_queue
+#print axioms PureSFormal.Research.RootResetProgressSpine.opening_closing_openCount
+#print axioms PureSFormal.Research.RootResetProgressSpine.clean_iff_openCount?_eq_zero
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.passive_headArity
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.passive_contractRoot?
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.protectedNode_headArity
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.protectedNode_inner_headArity
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.protectedNode_contractRoot?
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.protectedNode_LR
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.protectedNode_RLR
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.C_headArity
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.D_headArity
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.D_contractRoot?
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.D_succ_open_six
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.D_zero_reset_one
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.D_zero_open_seven
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.opened_LR
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.opened_RLR
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.GoodPhase.next
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.goodPhase_phaseAt
+#print axioms PureSFormal.Research.ProtectedTrieAlgebra.phaseAt_second_ge_two
+#print axioms PureSFormal.Research.ProtectedTrieParser.step_app_cases
+#print axioms PureSFormal.Research.ProtectedTrieParser.passive_step_cases
+#print axioms PureSFormal.Research.ProtectedTrieParser.protectedNode_step_cases
+#print axioms PureSFormal.Research.ProtectedTrieParser.parseProtected?_eq_some_iff
+#print axioms PureSFormal.Research.ProtectedTrieParser.openedAt?_eq_true_iff
+#print axioms PureSFormal.Research.ProtectedTrieParser.OpenedAt.step_mono
+#print axioms PureSFormal.Research.ProtectedTrieParser.openedAt?_step_mono
+#print axioms PureSFormal.Research.ProtectedTrieParser.OpenedAt.steps_mono
+#print axioms PureSFormal.Research.ProtectedTrieParser.openedAt?_steps_mono
+#print axioms PureSFormal.Research.ProtectedTrieParser.header_step_preserves
+#print axioms PureSFormal.Research.ProtectedTrieParser.header_steps_preserves
+#print axioms PureSFormal.Research.ProtectedTrieParser.parseHeader?_eq_some_iff
+#print axioms PureSFormal.Research.ProtectedTrieParser.anchoredOpenedAt?_eq_true_iff
+#print axioms PureSFormal.Research.ProtectedTrieParser.anchoredOpenedAt?_step_mono
+#print axioms PureSFormal.Research.ProtectedTrieParser.anchoredOpenedAt?_steps_mono
+#print axioms PureSFormal.Research.ProtectedTrieEnumeration.openedPaths_protectedNode
+#print axioms PureSFormal.Research.ProtectedTrieEnumeration.mem_openedPaths_iff_openedAt?
+#print axioms PureSFormal.Research.ProtectedTrieEnumeration.mem_openedPaths_iff_openedAt
+#print axioms PureSFormal.Research.ProtectedTrieEnumeration.anchoredOpenedPaths_header
+#print axioms PureSFormal.Research.ProtectedTrieEnumeration.mem_anchoredOpenedPaths_iff_anchoredOpenedAt?
+#print axioms PureSFormal.Research.ProtectedTrieEnumeration.mem_anchoredOpenedPaths_header_iff
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.ProtectedFieldContext.step
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.ProtectedFieldContext.openedAt?_eq_of_parse_none
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.ProtectedFieldContext.openedAt?_singleton_delta
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.ProtectedFieldContext.OpenedAt.singleton_delta
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.positiveProper_reachable_in_field
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.positiveProper_parser_stutter
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.positive_last_step_exact_delta
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.positive_final_singleton_delta
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.positive_open_six_in_field
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.positive_final_left_frontier
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.positive_final_right_frontier
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zeroProper_reachable_in_field
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zeroProper_parser_stutter
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zero_last_step_exact_delta
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zero_final_singleton_delta
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zero_open_seven_in_field
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zero_final_left_child
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zero_final_right_child
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zero_final_left_frontier
+#print axioms PureSFormal.Research.ProtectedTrieSingleOpening.zero_final_right_frontier
+#print axioms PureSFormal.Research.ProtectedTrieBuild.phaseGenerator_steps_phaseOpened
+#print axioms PureSFormal.Research.ProtectedTrieBuild.protectedNode_left_steps
+#print axioms PureSFormal.Research.ProtectedTrieBuild.protectedNode_right_steps
+#print axioms PureSFormal.Research.ProtectedTrieBuild.phaseGenerator_steps_buildFrom
+#print axioms PureSFormal.Research.ProtectedTrieBuild.D_phaseAt_steps_buildAt
+#print axioms PureSFormal.Research.ProtectedTrieBuild.openedPaths_phaseGenerator
+#print axioms PureSFormal.Research.ProtectedTrieBuild.openedPaths_buildFrom
+#print axioms PureSFormal.Research.ProtectedTrieBuild.openedPaths_buildAt
+#print axioms PureSFormal.Research.ProtectedTrieBuild.mem_openedPaths_buildAt_iff
+#print axioms PureSFormal.Research.ProtectedTrieBuild.encoder_steps_seededBuild
+#print axioms PureSFormal.Research.ProtectedTrieBuild.anchoredOpenedPaths_seededBuild
+#print axioms PureSFormal.Research.ProtectedTrieBuild.mem_anchoredOpenedPaths_seededBuild_iff
+#print axioms PureSFormal.Research.ProtectedTrieBuild.encoder_reaches_exact_tree
+#print axioms PureSFormal.Research.ProtectedTriePrefixBuild.mem_paths_insertPath_iff
+#print axioms PureSFormal.Research.ProtectedTriePrefixBuild.mem_paths_treeOfGenerators_iff
+#print axioms PureSFormal.Research.ProtectedTriePrefixBuild.buildFrom_steps_insertPath
+#print axioms PureSFormal.Research.ProtectedTriePrefixBuild.buildAt_steps_insertPath
+#print axioms PureSFormal.Research.ProtectedTriePrefixBuild.encoder_steps_seededPrefixBuild
+#print axioms PureSFormal.Research.ProtectedTriePrefixBuild.mem_anchoredOpenedPaths_seededPrefixBuild_iff
+#print axioms PureSFormal.Research.ProtectedTriePrefixBuild.encoder_reaches_exact_prefixSet
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.refl
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.inContext
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.ofStep
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.toSteps
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.develop_s
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.develop_redex
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.twoSpine_source
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.to_develop
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.Parallel.diamond
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.parallel_steps_join
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.steps_confluent
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.anchoredOpenedPaths_steps_mono
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.encoder_reduct_joins_seededBuild
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.encoder_reduct_cofinal_tree
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.encoder_reduct_joins_seededPrefixBuild
+#print axioms PureSFormal.Research.ProtectedTrieConfluence.encoder_reduct_cofinal_prefixSet
+#print axioms PureSFormal.Research.ProtectedTrieSeed.decodeN?_N
+#print axioms PureSFormal.Research.ProtectedTrieSeed.N_injective
+#print axioms PureSFormal.Research.ProtectedTrieSeed.N_stepNormal
+#print axioms PureSFormal.Research.ProtectedTrieSeed.seededHeader_step_preserves
+#print axioms PureSFormal.Research.ProtectedTrieSeed.seededHeader_steps_preserves
+#print axioms PureSFormal.Research.ProtectedTrieSeed.anchoredOpenedAt?_seededHeader_iff
+#print axioms PureSFormal.Research.ProtectedTrieSeed.seededHeader_anchoredOpenedAt?_steps_mono
+#print axioms PureSFormal.Research.ProtectedTrieSeed.parseHeader?_encoder
+#print axioms PureSFormal.Research.ProtectedTrieSeed.encoder_steps_preserves
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.r_append_singleton
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.r_injective
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.pc_eq_replicate
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.pc_prefix_eq
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.a_prefix_iff
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.a_injective
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.a_not_prefix_router
+#print axioms PureSFormal.Research.ProtectedTrieCertificates.a_ne_router
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.wordPrefix_trans
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.FinitePrefixSet.contains_prefix
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.candidateGenerator_mem_cases
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.a_contains_certificatePrefixSet_iff
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.a_not_contains_routerPrefixSet
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.selected_a_contains_protectedPrefixSet
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.a_contains_protectedPrefixSet_iff
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.wordPrefix_antisymm
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.a_not_proper_prefix_a
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.contains_candidateProperPrefixSet_iff
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.a_not_contains_candidateProperPrefixSet
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.preparedContains_prefix
+#print axioms PureSFormal.Research.ProtectedTrieFinitePrefix.a_preparedContains_iff

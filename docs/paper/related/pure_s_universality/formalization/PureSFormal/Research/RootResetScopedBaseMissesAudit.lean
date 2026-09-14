@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetScopedBaseMisses
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.pending_pattern_fuel
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.pending_pattern_local
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.pending_pattern_clock
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.baseEndpoint_missed
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.base_pattern_clock
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.base_pattern_zero
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.base_worker_missed
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.scoped_base_missed
+#print axioms PureSFormal.Research.RootResetScopedBaseMisses.endpoint_after_base_miss

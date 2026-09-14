@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title desc"><title id="title">Proof of the root-restarted computation theorem</title><desc id="desc">Exact cyclic-tag checkpoints, finite root recovery, compiler correctness, literal source readback, and measured interfaces combine in Theorem 1R. The confluence and certificate results are independent.</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0 0 L0 7 L8 3.5Z" fill="#273f54"/></marker><style>.box{fill:white;stroke:#273f54;stroke-width:3}.main{fill:#edf4fa;stroke:#174969;stroke-width:4}.h{font:700 34px 'DejaVu Sans',sans-serif;text-anchor:middle;fill:#172f40}.t{font:30px 'DejaVu Sans',sans-serif;text-anchor:middle;fill:#273f54}.edge{fill:none;stroke:#273f54;stroke-width:3;marker-end:url(#arrow)}</style></defs><rect width="1400" height="920" fill="white"/>
+<rect class="box" x="35" y="25" width="620" height="145" rx="14"/><text class="h" x="345" y="73">Native-S construction</text><text class="t" x="345" y="117">invariant, recurrence, exclusion</text>
+<path class="edge" d="M345 170V225"/>
+<rect class="box" x="35" y="230" width="620" height="145" rx="14"/><text class="h" x="345" y="278">Theorem 1</text><text class="t" x="345" y="322">exact cyclic-tag checkpoints</text>
+<rect class="box" x="745" y="25" width="620" height="145" rx="14"/><text class="h" x="1055" y="73">Finite root recovery</text><text class="t" x="1055" y="117">same contraction at every index</text>
+<path class="edge" d="M1055 170V225"/>
+<rect class="box" x="745" y="230" width="620" height="145" rx="14"/><text class="h" x="1055" y="278">Actual root-restarted path</text><text class="t" x="1055" y="322">all-input linear termination</text>
+<path class="edge" d="M655 302H735"/>
+<rect class="box" x="35" y="440" width="620" height="160" rx="14"/><text class="h" x="345" y="488">Theorem 2 and Corollary 2.1</text><text class="t" x="345" y="532">fixed compiler and literal readback</text><text class="t" x="345" y="574">source rows and returned outputs</text>
+<path class="edge" d="M345 375V430"/>
+<rect class="box" x="745" y="440" width="620" height="160" rx="14"/><text class="h" x="1055" y="488">Measured interfaces</text><text class="t" x="1055" y="532">bounds for the padded encoder</text><text class="t" x="1055" y="574">all-input measured readers</text>
+<path class="edge" d="M1055 375V395H1380V645H1110V665"/>
+<path class="edge" d="M345 600V665"/><path class="edge" d="M1055 600V665"/>
+<rect class="main" x="230" y="675" width="940" height="150" rx="14"/><text class="h" x="700" y="723">Theorem 1R: one complete construction</text><text class="t" x="700" y="767">native S · fixed root restart · exact source outputs</text>
+<text class="t" x="700" y="885">Theorems 4–5 are independent results in Appendix C.</text></svg>

@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-09-14T11:00:54.101907+00:00",
+  "completed_utc": "2026-09-14T11:06:27.356761+00:00",
+  "pdf": "output/pdf/pure_s_universality.pdf",
+  "sha256": "fac4b7822a7c4bc8fdecffa5dd6e0f7b387585ba33da1bb308d2bbc3f1e35cc1",
+  "bytes": 1757240,
+  "pages": 168,
+  "input_hashes": {
+    "CITATION.cff": "290349ea200df47b591e27296c2915b201fadd6fd9ad0de76917e3a00555ef61",
+    "PUBLICATION-TOOLCHAIN.json": "37c43365ed2ba203453c2a705b616c4e2d380ac6e2f40ea4154bce0ff75e8b3e",
+    "TOOLCHAIN.lock": "a4ab86db9ec75864da9509bb269b9fa2b67da1bbabf6890445b677253e89f047",
+    "artifacts/rogozhin46_cook_cts.json": "6a25246ca4d3c04fce206376fd83c4336cce29cae226cdf9bc30b778adea0ccc",
+    "evidence/pdf/environment.json": "6a0f6f367fc500b5fc33a0937e05165c55b0860737d3ddb77c3734069d025a95",
+    "formalization/generated/public_api.json": "de9544838d592a7c9edbfbe58d886d37efbb2164bfcbf0e298a5763596936b5f",
+    "formalization/generated/public_theorem_signatures.md": "f9b8202897f39af30f3cd882984563a3f3d7024f51a989bea291f90bee101210",
+    "paper.md": "4e05cb8aaf214d13484b5f987bf5c181c2a1a5b7ce76ca70eaa1b458d1f389ce",
+    "paper/before_body.tex": "953686e044e52019b4e60a3dd28a2e774ee3c18ef70ac02e0a3d9389adc7f526",
+    "paper/derived_header.tex": "3879512236ff7748eacab442f69485bb30f4f50b38f8f5bc1a51fdf013dbf70b",
+    "paper/figures/queue_cell.png": "7ea22907993263c8a4bea52b51637aa62af1f1304fc6e0e66a9804b110c68515",
+    "paper/figures/root_history_roles.png": "a6616b013c50192c63deb3c233c48e961c544825cd45f3c97b9a9c03d40d64d1",
+    "paper/figures/root_reset_control.png": "f577c41684952949ab2bc6e5003217ca0f353b717ea566b3d69d7d51b49479db",
+    "paper/figures/simulation_pipeline.png": "f946d2c53565e8d4ed9c3b35c3286be104b2d0ef44c72d71997ade7a612ebf48",
+    "paper/figures/theorem_dependencies.png": "93098e3c996a265c4c5228bc41a64921c6c4d66feac76d57416417656862f769",
+    "paper/header.tex": "4b125dc3bf220d7adf2874cd2b0b3b9ddc6ecd67386fd3c13768851d3e033900",
+    "paper/references.md": "eb3c0d3e9957e7d767262fed61a03670323169b6796f0174a224bc8c81aedd4a",
+    "paper/table_layout.lua": "3c6cf065389d4bfc325901169efe90ce62ed4a31710a5491332254f0e934d054",
+    "paper/unified_template.md": "2a1db5075f73999dae6161d288cf19124ae61a86c84a46336a480648768cfd7a",
+    "requirements.txt": "2c9495bbb6b0f0a5a968060faa74e1ddfa6c32d1c8dd951752c3098ef7fb183b",
+    "src/build_paper.py": "1dc31c67cb84f9d6c5009995a2bac82ca281cc0f447afb6b65e2aca331823c3c",
+    "src/check_environment.py": "da927a610c55d6be32135040060ff7068539227458b631981ff37ce764c2f320",
+    "src/check_package.py": "b93c056a3fd8c011aac571da6087da664735904ae87f6a9c068ff2f376e454f5",
+    "src/check_paper_claims.py": "2881a1a5ef15bd3ecda9f82556f919cede7ee79d596ddf6fbe9480b3cd6f2784",
+    "src/local_workspace.py": "d5834cb552a484b5b9f6191361581cd619ec5960aedcf5f11c814beaa046955b",
+    "src/publication_checks.py": "f1cd0caca8ec15928a9624c6f77e2562e7f4b70026b0d574702c16ae790b32c7",
+    "src/publication_environment.py": "5ef6194defe310de224bf22a084365bceaea21d69a2c984680ec109dd042130c",
+    "src/toolchain_lock.py": "111c73d1eb31d73ebcb46ec8b81d8c1cc0e13e03ae223954a25cd62a3db00cd0"
+  },
+  "inputs_unchanged": true,
+  "diagnostics": "evidence/pdf/logs",
+  "commands": [
+    [
+      "/usr/bin/python3",
+      "-B",
+      "/publication/package/src/build_paper.py",
+      "--output",
+      "/publication/run/a/paper.pdf"
+    ],
+    [
+      "/usr/bin/python3",
+      "-B",
+      "/publication/package/src/build_paper.py",
+      "--output",
+      "/publication/run/a_deliberately_longer_clean_output_path/paper.pdf"
+    ]
+  ],
+  "scope": "Two clean public build commands at unequal output path lengths produced identical PDF bytes; engine logs retain the second build.",
+  "execution_files": {
+    "evidence/pdf/logs/format.fls": "e7a5569443c9bef6ffb965df27d420bc51a67ef606e41e89bb33b8df64eae393",
+    "evidence/pdf/logs/format.log": "fb5c1a68397149b8818085edd5d5635e2da61538ece25ea5288d4113fff2a2d1",
+    "evidence/pdf/logs/pandoc.stderr.log": "7268d11005bfaf6ad6785b307502c47bd523f401ffe41e3c63747ab17936d57c",
+    "evidence/pdf/logs/pandoc.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/pdf/logs/pass-1.fls": "b7fccf542c9987b3f81c7a55cd7b83caede312c7790de7b7eb98a1af5e2b134b",
+    "evidence/pdf/logs/pass-1.log": "f72e3d6218fdcd0de58dbe6073c3fa7e727bca873644ced30277acbf24209abe",
+    "evidence/pdf/logs/pass-2.fls": "ab87acdc6a8280dc88ed93f8411d81ed6962c23853f825794845acd579b7632b",
+    "evidence/pdf/logs/pass-2.log": "dc84c644b504e00402bb93328046a89e0b72ea4f93bf9b8fabbd125355c03e9e"
+  },
+  "public_copy": "Local locations removed; see evidence/PUBLIC-COPY.md."
+}

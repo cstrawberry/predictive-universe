@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetPriorityReplay
+
+#print axioms PureSFormal.Research.RootResetPriorityReplay.all_input
+#print axioms PureSFormal.Research.RootResetPriorityReplay.probeSpec
+#print axioms PureSFormal.Research.RootResetPriorityReplay.first_selected
+#print axioms PureSFormal.Research.RootResetPriorityReplay.second_selected

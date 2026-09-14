@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetCarrierEdgePatterns
+
+#print axioms PureSFormal.Research.RootResetCarrierEdgePatterns.dispatchRow_sound
+#print axioms PureSFormal.Research.RootResetCarrierEdgePatterns.dispatchRow_complete
+#print axioms PureSFormal.Research.RootResetCarrierEdgePatterns.localRow_sound
+#print axioms PureSFormal.Research.RootResetCarrierEdgePatterns.localRow_complete

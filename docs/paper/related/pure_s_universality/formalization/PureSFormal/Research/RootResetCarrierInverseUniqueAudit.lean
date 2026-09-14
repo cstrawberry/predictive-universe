@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetCarrierInverseUnique
+
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.localEnd_encoded
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.row_edgeEnd
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.inverse_unique
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.family_inverts
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.walks_backs
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.returned_eq_origin
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.all_input_restores
+#print axioms PureSFormal.Research.RootResetCarrierInverseUnique.fresh_admission_restores

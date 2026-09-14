@@ -1,0 +1,12 @@
+import PureSFormal.Research.RootResetInitialEmptySweep
+
+open PureSFormal.Research.RootResetInitialEmptySweep
+
+#print axioms selectStep?_markedPrefix_of_fuelParsed
+#print axioms pending_base_eq_nestedFrames
+#print axioms selectStep?_marked_pending_emptyBase
+#print axioms initialEmpty_frame_selectorChain
+#print axioms exit_admissible
+#print axioms emptyBase_decode
+#print axioms initialEmpty_pendingSweep_selectorChain
+#print axioms initialEmpty_from_fifth_selectorChain

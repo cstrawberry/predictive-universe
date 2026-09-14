@@ -1,0 +1,33 @@
+import PureSFormal.Computation.PrimitiveRecursive
+
+#print axioms PureSFormal.Computation.PRCode.eval
+#print axioms PureSFormal.Computation.PRCode.eval_composeUnary
+#print axioms PureSFormal.Computation.PRCode.eval_composeBinary
+#print axioms PureSFormal.Computation.PRCode.eval_composeTernary
+#print axioms PureSFormal.Computation.PRCode.nodeCount_positive
+#print axioms PureSFormal.Computation.PRCode.eval_constant
+#print axioms PureSFormal.Computation.PRCode.eval₂_addition
+#print axioms PureSFormal.Computation.PRCode.eval₂_multiplication
+#print axioms PureSFormal.Computation.PRCode.eval₂_truncatedSubtraction
+#print axioms PureSFormal.Computation.PRCode.eval₁_positive
+#print axioms PureSFormal.Computation.PRCode.eval₂_lessEqual
+#print axioms PureSFormal.Computation.PRCode.eval₂_equal
+#print axioms PureSFormal.Computation.PRCode.eval_branchIfZero
+#print axioms PureSFormal.Computation.PRCode.succ_mod_recurrence
+#print axioms PureSFormal.Computation.PRCode.eval₂_modulus
+#print axioms PureSFormal.Computation.PRCode.succ_div_recurrence
+#print axioms PureSFormal.Computation.PRCode.eval₂_division
+#print axioms PureSFormal.Computation.PRCode.eval₂_power
+#print axioms PureSFormal.Computation.PRCode.eval₁_cantorDiagonal
+#print axioms PureSFormal.Computation.PRCode.cantorDiagonalValue_bounds
+#print axioms PureSFormal.Computation.PRCode.cantorDiagonal_unique
+#print axioms PureSFormal.Computation.PRCode.eval₁_cantorRight
+#print axioms PureSFormal.Computation.PRCode.eval₁_cantorLeft
+#print axioms PureSFormal.Computation.PRCode.eval₂_cantorPair
+#print axioms PureSFormal.Computation.PrimitiveRecursive.comp
+#print axioms PureSFormal.Computation.PrimitiveRecursive.addition
+#print axioms PureSFormal.Computation.PrimitiveRecursive.multiplication
+#print axioms PureSFormal.Computation.PrimitiveRecursive.truncatedSubtraction
+#print axioms PureSFormal.Computation.PrimitiveRecursive.power
+#print axioms PureSFormal.Computation.PrimitiveRecursive.modulus
+#print axioms PureSFormal.Computation.PrimitiveRecursive.division

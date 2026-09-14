@@ -1,0 +1,3 @@
+import PureSFormal.PureS.PhysicalMarkerNonemptyPrefix
+
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.nonemptyPendingPrefix_excludingMarkers

@@ -1,0 +1,5 @@
+import PureSFormal.Computation.DeterministicTapeTagBoundaryReflection
+
+#print axioms PureSFormal.Computation.DeterministicTapeTagBoundaryReflection.decodeNormalizedTape?_actual_reflects
+#print axioms PureSFormal.Computation.DeterministicTapeTagBoundaryReflection.decodeTape?_factors
+#print axioms PureSFormal.Computation.DeterministicTapeTagBoundaryReflection.decodeTape?_intermediate

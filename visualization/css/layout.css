@@ -1,0 +1,77 @@
+/* Page frame: masthead, shell grid, footer. */
+
+.paper-return { display: inline-block; margin-bottom: 16px; color: var(--text-3); font-size: 12px; text-decoration: none; }
+.paper-return:hover { color: var(--text); }
+.viz-shell[hidden] { display: none; }
+html.embedded, html.embedded body { height: 100%; }
+.embedded .page { width: 100%; height: 100%; padding: 12px; }
+.embedded .masthead, .embedded .page-footer { display: none; }
+.embedded .viz-shell { flex: 1; min-height: 0; height: 100%; }
+.embedded .no-webgl { margin: 20px; }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 22px clamp(12px, 3vw, 32px) 32px;
+}
+
+/* Flex and grid children default to a content-based minimum, which lets the
+   horizontally scrolling scene index push the page wider than the viewport. */
+.page > * {
+  min-width: 0;
+}
+
+.masthead {
+  min-width: 0;
+}
+
+.masthead-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3.4vw, 34px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.masthead-subtitle {
+  margin-top: 4px;
+  font-size: 14.5px;
+  color: var(--text-3);
+  max-width: 68ch;
+}
+
+.page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+  font-size: 12.5px;
+  color: var(--text-4);
+}
+
+.no-webgl {
+  display: none;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--chip-bg);
+  color: var(--text-2);
+  font-size: 14.5px;
+}
+
+.no-webgl.is-visible {
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .page {
+    gap: 14px;
+    padding: 16px 12px 24px;
+  }
+}

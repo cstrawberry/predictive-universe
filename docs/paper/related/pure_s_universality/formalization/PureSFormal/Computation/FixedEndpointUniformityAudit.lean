@@ -1,0 +1,13 @@
+import PureSFormal.Computation.FixedEndpointUniformity
+
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedController
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedInitialControl
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedDecoder
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedDetector
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedEncoder
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedProgram_period
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedController_states_nodup
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedController_covers
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedController_textbookAgreement
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedEndpoint_rawCoverCounts
+#print axioms PureSFormal.Computation.FixedEndpointUniformity.fixedEncoder_eq_generator

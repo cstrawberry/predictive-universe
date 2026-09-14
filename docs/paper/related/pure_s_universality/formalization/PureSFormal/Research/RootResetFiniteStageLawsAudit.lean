@@ -1,0 +1,3 @@
+import PureSFormal.Research.RootResetFiniteStageLaws
+#print axioms PureSFormal.Research.RootResetFiniteStageLaws.laws
+#print axioms PureSFormal.Research.RootResetFiniteStageLaws.bitcons_selectsEveryContractionRun

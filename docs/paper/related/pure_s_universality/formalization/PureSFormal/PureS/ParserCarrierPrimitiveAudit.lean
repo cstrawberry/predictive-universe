@@ -1,0 +1,15 @@
+import PureSFormal.PureS.ParserCarrierPrimitive
+
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.Context.base_value
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.Context.local_accumulator_lt
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.cell_predecessor_lt
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.decode_value
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.base_queue_lt
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.decoded_length_le
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.decode_length_le
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.extend_operations_le
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.base_overhead_le
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.local_overhead_le
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.cell_overhead_le
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.combine_descent
+#print axioms PureSFormal.PureS.ParserCarrierPrimitive.decode_operations_le

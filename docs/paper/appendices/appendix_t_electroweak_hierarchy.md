@@ -63,8 +63,6 @@ The following constants are derived in the main text and Appendix Z:
 | $K_0$ | 3 bits | Least visited-context log-capacity on the (O1)–(O3), (FC) branch | Theorem 15 |
 |$d_0$ |8 on the minimal Appendix Z branch |MPU Hilbert space dimension: lower bound from Theorem 23, equality from Theorem Z.2 |Theorem 23; Theorem Z.2 |
 |$\varepsilon_0$ |$\ln2$ structurally |Log-cardinality of the registered reachable binary verification quotient; no physical heat equality is asserted |Definition 28; Theorem J.1 |
-
-
 |$a$ |2 |Active kernel dimension on the attractor-saturating branch (Theorem Z.1) |Theorem Z.1 |
 |$b$ |6 |Inactive subspace dimension ($d_0 - a$) |Definition |
 |$M$ |24 |QFI interface mode count ($2ab$) |Theorem Z.5 |
@@ -73,7 +71,6 @@ The following constants are derived in the main text and Appendix Z:
 |$n_G$ |12 |Gauge algebra dimension |Corollary G.8.4c|
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|Branch optimum on the imposed $c_\ell/c_d = 8/3$ normalization branch |Corollary T.34.2 (with imposed Corollary T.34.1) |
 |$g_U^2$ |$2\pi/(M\chi_U)$; $\pi/6$ when $M=24$ and $\chi_U=1/2$ |Bures-gauge holonomy coefficient on the specified calibration branch |Theorem T.39a; Theorem T.39a.2 |
-
 |$\alpha_U^{-1}$ |$2M\chi_U$; $24$ when $M=24$ and $\chi_U=1/2$ |Inverse matching-scale gauge coefficient on the same calibration branch |Theorem T.39a; Theorem T.39a.2 |
 |$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple); current theorem-level certificate interval $\varnothing_{\mathrm{cert}}$ |Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger, Theorem T.78.5 proves that no PU-internal branch package supplies them from the current framework, and Theorem T.78.14 proves that the current RHG, torsion, spectral-action, and equivalent spectral-source class supplies no certified $\Delta_i$, $Z_i$, $\mu_H^2$, $\lambda_H$, or gauge/Higgs finite-part intervals |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 / Theorem T.78.5 / Theorem T.78.14 |
 
@@ -6233,7 +6230,6 @@ The core counting parameters trace to the foundational derivation, while the qua
 |d²_{32,d} |2 |$E_8$ triad (down) |T.21.9.1|
 |d²_{31,d} |4 |$E_8$ triad (down) |T.21.9.1|
 |d²_{21,d} |6 |$E_8$ triad (down) |T.21.9.1|
-
 |d²_{32,u} |4 |$E_8$ triad (up) |T.21.9.1|
 |d²_{31,u} |8 |$E_8$ triad (up) |T.21.9.1|
 |d²_{21,u} |4 |$E_8$ triad (up) |T.21.9.1|
@@ -7940,6 +7936,12 @@ $$
 =31.97809660.
 $$
 Rounding gives all three displayed values. ∎
+
+**Corollary (Common-Scale Neutrino Extension).** For the spectrum of Theorem T.24.16 and a common $\lambda>0$, define $m_i'=\lambda m_i$. The oscillation splittings scale by $\lambda^2$, their ratio remains fixed, and the absolute-mass observables $\Sigma_\nu$, $m_\beta$ and $|m_{\beta\beta}|$ scale by $\lambda$ when mixing and phase conventions are held fixed.
+
+*Proof.* Substitute $m_i'$ into $m_i^2-m_j^2$, $\sum_i m_i$, $m_\beta^2=\sum_i|U_{ei}|^2m_i^2$ and $m_{\beta\beta}=\sum_iU_{ei}^2m_i$. ∎
+
+The quoted solar and atmospheric comparisons require scale-squared factors 3.614823 and 3.682451, respectively. The unscaled splitting ratio is 31.978097, compared with 32.576361. Solar calibration gives $\lambda=1.901269$ and $\Sigma_\nu'=58.025188$ meV. The atmospheric ratio is the remaining shape comparison, evaluated with the common oscillation covariance. A structural scale-selection proposal must derive this new input from its declared operator and normalization; a calibrated version records it as calibration.
 
 **Corollary T.24.16a (Conditional $A_2$ Absolute-Scale Projection).** On the internally normalized seesaw branch of Theorems T.24.14--T.24.16,
 $$

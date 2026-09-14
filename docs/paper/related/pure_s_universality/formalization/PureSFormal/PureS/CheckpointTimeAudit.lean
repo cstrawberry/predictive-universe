@@ -1,0 +1,7 @@
+import PureSFormal.PureS.CheckpointTime
+
+#print axioms PureSFormal.PureS.CheckpointTime.totalCost_le_transitionCostBound
+#print axioms PureSFormal.PureS.CheckpointTime.jobCost_le
+#print axioms PureSFormal.PureS.CheckpointTime.stageCost_le_quadratic
+#print axioms PureSFormal.PureS.CheckpointTime.checkpointGap_le_quadratic
+#print axioms PureSFormal.PureS.CheckpointTime.checkpointTime_le_explicit_cubic

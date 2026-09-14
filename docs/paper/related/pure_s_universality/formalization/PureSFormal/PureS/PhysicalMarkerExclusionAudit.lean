@@ -1,0 +1,26 @@
+import PureSFormal.PureS.PhysicalMarkerExclusion
+
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.cursors_nil
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.cursors_cons
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.cursors_append
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.marked_focus
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.tombstone_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.frame_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.chosen_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.compile_ne_s
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.fork_ne_haltTag
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.nodeLeft_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.nodeRight_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.leaf_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.forward_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.appender_ne_haltTag
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.selectedAction_ne_haltTag
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.actionDescent_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.action_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.normalResponse_trace_safe
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.noPostMarkers_nil
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.noPostMarkers_cons
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.noPostMarkers_append
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.normalResponse_exactSafeMutationChain
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.normalResponse_chain_noPostMarkers
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.selectedResponse_chain_noPostMarkers

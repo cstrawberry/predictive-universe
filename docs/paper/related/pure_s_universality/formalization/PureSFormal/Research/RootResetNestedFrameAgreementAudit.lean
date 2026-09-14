@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetNestedFrameAgreement
+
+#print axioms PureSFormal.Research.RootResetNestedFrameAgreement.head_misses_iff
+#print axioms PureSFormal.Research.RootResetNestedFrameAgreement.missed
+#print axioms PureSFormal.Research.RootResetNestedFrameAgreement.generated_first
+#print axioms PureSFormal.Research.RootResetNestedFrameAgreement.generated_second
+#print axioms PureSFormal.Research.RootResetNestedFrameAgreement.generated_first_contracts
+#print axioms PureSFormal.Research.RootResetNestedFrameAgreement.generated_second_contracts

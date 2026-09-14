@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetEmptyTerminalResponse
+
+open PureSFormal.Research.RootResetEmptyTerminalResponse
+
+#print axioms emptySweepRegisters_succ_last
+#print axioms emptySweepCarrier_succ_last
+#print axioms generatedTerminal_frame_selectorChain
+#print axioms initialEmpty_completeResponses_selectorChain

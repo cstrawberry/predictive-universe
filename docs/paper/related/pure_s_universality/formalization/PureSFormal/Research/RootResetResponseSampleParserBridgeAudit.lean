@@ -1,0 +1,33 @@
+import PureSFormal.Research.RootResetResponseSampleParserBridge
+
+/-! Kernel-axiom audit for response-sample parser lifting. -/
+
+open PureSFormal.Research.RootResetResponseSampleParserBridge
+
+#print axioms terminalForkChild_exact_selectedRoute
+#print axioms selectedAction_nonempty_exact_firstPush
+#print axioms responseSamplePairs_head
+#print axioms exactMutationChain_cons
+#print axioms RouteBridge.exists_routeShape_of_not_done
+#print axioms ActionBridge.exists_valid_row
+#print axioms ActionBridge.exists_selected_row_of_not_done
+#print axioms frameFirst_parses_and_contracts
+#print axioms frameSecond_parses_and_contracts
+#print axioms frameFirst_zeroPrefix_reaches_selected
+#print axioms frameSecond_zeroPrefix_reaches_selected
+#print axioms frameThird_zeroPrefix_reaches_dispatcher
+#print axioms RouteBridge.withResponse_contractAt?
+#print axioms frameThird_contracts_firstRoute
+#print axioms routeCompleteNonempty_contracts_firstPush
+#print axioms completedLocalView
+#print axioms responseDone_parsesLocal
+#print axioms responseDone_parses_completeClean
+#print axioms responseDone_parses_completeOpen
+#print axioms routeCompleteEmpty_parses_boundary
+#print axioms actionFinal_parses_boundary
+#print axioms routeIncomplete_parses_dispatcher
+#print axioms routeIncomplete_lifts_through_roles
+#print axioms actionIncomplete_parses_appender
+#print axioms actionIncomplete_lifts_through_roles
+#print axioms ResponseLocalCoverage
+#print axioms responseRootMutation_localCoverage

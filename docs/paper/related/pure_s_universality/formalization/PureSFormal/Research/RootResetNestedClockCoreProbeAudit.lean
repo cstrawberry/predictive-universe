@@ -1,0 +1,18 @@
+import PureSFormal.Research.RootResetNestedClockCoreProbe
+
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.covers
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.descending_step
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.reading_step
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.ascending_step
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.descending_runs
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.reading_runs
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.ascending_runs
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.reverse_runs
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.combined_bound
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.all_input
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.all_input_with_walk
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.erase_run
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.done_absorbs
+#print axioms PureSFormal.Research.RootResetNestedClockCoreProbe.nested_all_input

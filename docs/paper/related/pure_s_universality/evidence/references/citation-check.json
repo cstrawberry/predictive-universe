@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "reference_count": 53,
+  "all_references_cited": true,
+  "formal_sources_match_completed_verification": true,
+  "confluence_source": 2,
+  "normalization_sources": [
+    5,
+    42
+  ],
+  "strategy_source": 43,
+  "unresolved_edition_requirements_for_these_claims": [],
+  "input_hashes": {
+    "paper/unified_template.md": "2a1db5075f73999dae6161d288cf19124ae61a86c84a46336a480648768cfd7a",
+    "paper/references.md": "eb3c0d3e9957e7d767262fed61a03670323169b6796f0174a224bc8c81aedd4a",
+    "paper.md": "4e05cb8aaf214d13484b5f987bf5c181c2a1a5b7ce76ca70eaa1b458d1f389ce",
+    "output/reference-source-check.md": "beb32366779f9dde98951d7c57925b8ae3ea6758b78991d593e82f639868b14b"
+  },
+  "recorded_utc": "2026-09-14T11:13:21.091794+00:00",
+  "source_inspection_notes": "See output/reference-source-check.md. The DLT 2023 publisher record and abstract were inspected; its full conference proof was not. The pinned external Lean sources were inspected but not rebuilt.",
+  "related_work_sources": [
+    51,
+    52,
+    53
+  ]
+}

@@ -1,0 +1,15 @@
+import PureSFormal.PureS.SchedulerStageAssembly
+
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.RawStageSegment.first
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.RawStageSegment.extend
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.positiveStagesOfRaw
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.firstEmptyRawAt
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.emptyRawAt
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.rawStageAt
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.initialExistentialGoodOfPositiveStages
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.initialGoodOfPositiveStages
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.exactCheckpointOfPositiveStages
+#print axioms PureSFormal.PureS.SchedulerRecurrence.positiveStages
+#print axioms PureSFormal.PureS.SchedulerRecurrence.initialGood
+#print axioms PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint

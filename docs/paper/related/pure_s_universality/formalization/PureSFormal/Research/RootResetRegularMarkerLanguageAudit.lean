@@ -1,0 +1,3 @@
+import PureSFormal.Research.RootResetRegularMarkerLanguage
+#print axioms PureSFormal.Research.RootResetRegularMarkerLanguage.member_eq_observer
+#print axioms PureSFormal.Research.RootResetRegularMarkerLanguage.fixed_language_halting_iff

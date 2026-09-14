@@ -1,0 +1,20 @@
+[INFO] Loaded /publication/work/tmp/work-area-1/tagged-pandoc-template.tex from /publication/work/tmp/work-area-1/tagged-pandoc-template.tex
+[INFO] Loaded /publication/package/paper/before_body.tex from /publication/package/paper/before_body.tex
+[INFO] Loaded /publication/package/paper/header.tex from /publication/package/paper/header.tex
+[INFO] Loaded /publication/package/paper/derived_header.tex from /publication/package/paper/derived_header.tex
+[INFO] Running filter /publication/package/paper/table_layout.lua
+[INFO] Completed filter /publication/package/paper/table_layout.lua in 205 ms
+[INFO] Loaded paper/figures/queue_cell.png from /publication/package/paper/figures/queue_cell.png
+[INFO] Loaded paper/figures/root_reset_control.png from /publication/package/paper/figures/root_reset_control.png
+[INFO] Loaded paper/figures/root_history_roles.png from /publication/package/paper/figures/root_history_roles.png
+[INFO] Loaded paper/figures/theorem_dependencies.png from /publication/package/paper/figures/theorem_dependencies.png
+[INFO] Loaded paper/figures/simulation_pipeline.png from /publication/package/paper/figures/simulation_pipeline.png
+[makePDF] temp dir:
+/publication/work/tmp/work-area-2
+[makePDF] Command line:
+xelatex "-halt-on-error" "-interaction" "nonstopmode" "-output-directory" "/publication/work/tmp/work-area-2" "/publication/work/tmp/work-area-2/input.tex"
+
+[makePDF] Environment omitted from public copy.
+
+[Public copy: generated TeX source echo omitted.]
+[Public copy: engine transcripts supplied separately in pass-1.log and pass-2.log.]

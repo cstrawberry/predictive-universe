@@ -1,0 +1,81 @@
+replaying PureSFormal.PureS.ParserNatPowerPrimitive
+passed PureSFormal.PureS.ParserNatPowerPrimitive declarations=27
+replaying PureSFormal.PureS.ParserNatPowerPrimitiveAudit
+passed PureSFormal.PureS.ParserNatPowerPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserNatPrimitive
+passed PureSFormal.PureS.ParserNatPrimitive declarations=26
+replaying PureSFormal.PureS.ParserNatPrimitiveAudit
+passed PureSFormal.PureS.ParserNatPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserPhasePrimitive
+passed PureSFormal.PureS.ParserPhasePrimitive declarations=19
+replaying PureSFormal.PureS.ParserPhasePrimitiveAudit
+passed PureSFormal.PureS.ParserPhasePrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserPositivePrimitive
+passed PureSFormal.PureS.ParserPositivePrimitive declarations=26
+replaying PureSFormal.PureS.ParserPositivePrimitiveAudit
+passed PureSFormal.PureS.ParserPositivePrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserPrimitiveMachine
+passed PureSFormal.PureS.ParserPrimitiveMachine declarations=93
+replaying PureSFormal.PureS.ParserPrimitiveMachineAudit
+passed PureSFormal.PureS.ParserPrimitiveMachineAudit declarations=0
+replaying PureSFormal.PureS.ParserRoutePrimitive
+passed PureSFormal.PureS.ParserRoutePrimitive declarations=72
+replaying PureSFormal.PureS.ParserRoutePrimitiveAudit
+passed PureSFormal.PureS.ParserRoutePrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserRouteShellPrimitive
+passed PureSFormal.PureS.ParserRouteShellPrimitive declarations=71
+replaying PureSFormal.PureS.ParserRouteShellPrimitiveAudit
+passed PureSFormal.PureS.ParserRouteShellPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserTerminalPrimitive
+passed PureSFormal.PureS.ParserTerminalPrimitive declarations=42
+replaying PureSFormal.PureS.ParserTerminalPrimitiveAudit
+passed PureSFormal.PureS.ParserTerminalPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ParserWordPrimitive
+passed PureSFormal.PureS.ParserWordPrimitive declarations=77
+replaying PureSFormal.PureS.ParserWordPrimitiveAudit
+passed PureSFormal.PureS.ParserWordPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.Pattern
+passed PureSFormal.PureS.Pattern declarations=105
+replaying PureSFormal.PureS.PendingFrame
+passed PureSFormal.PureS.PendingFrame declarations=68
+replaying PureSFormal.PureS.PhysicalMarkerExclusion
+passed PureSFormal.PureS.PhysicalMarkerExclusion declarations=43
+replaying PureSFormal.PureS.PhysicalMarkerExclusionAudit
+passed PureSFormal.PureS.PhysicalMarkerExclusionAudit declarations=0
+replaying PureSFormal.PureS.PhysicalMarkerGlobalSoundness
+passed PureSFormal.PureS.PhysicalMarkerGlobalSoundness declarations=8
+replaying PureSFormal.PureS.PhysicalMarkerGlobalSoundnessAudit
+passed PureSFormal.PureS.PhysicalMarkerGlobalSoundnessAudit declarations=0
+replaying PureSFormal.PureS.PhysicalMarkerJobs
+passed PureSFormal.PureS.PhysicalMarkerJobs declarations=5
+replaying PureSFormal.PureS.PhysicalMarkerJobsAudit
+passed PureSFormal.PureS.PhysicalMarkerJobsAudit declarations=0
+replaying PureSFormal.PureS.PhysicalMarkerNonemptyPrefix
+passed PureSFormal.PureS.PhysicalMarkerNonemptyPrefix declarations=3
+replaying PureSFormal.PureS.PhysicalMarkerNonemptyPrefixAudit
+passed PureSFormal.PureS.PhysicalMarkerNonemptyPrefixAudit declarations=0
+replaying PureSFormal.PureS.PhysicalMarkerPhases
+passed PureSFormal.PureS.PhysicalMarkerPhases declarations=13
+replaying PureSFormal.PureS.PhysicalMarkerPhasesAudit
+passed PureSFormal.PureS.PhysicalMarkerPhasesAudit declarations=0
+replaying PureSFormal.PureS.PhysicalMarkerStages
+passed PureSFormal.PureS.PhysicalMarkerStages declarations=5
+replaying PureSFormal.PureS.PhysicalMarkerStagesAudit
+passed PureSFormal.PureS.PhysicalMarkerStagesAudit declarations=0
+replaying PureSFormal.PureS.PrimitiveClock
+passed PureSFormal.PureS.PrimitiveClock declarations=39
+replaying PureSFormal.PureS.PrimitiveFuel
+passed PureSFormal.PureS.PrimitiveFuel declarations=24
+replaying PureSFormal.PureS.PrimitiveInterfaceCertificates
+passed PureSFormal.PureS.PrimitiveInterfaceCertificates declarations=3
+replaying PureSFormal.PureS.PrimitiveInterfaceCertificatesAudit
+passed PureSFormal.PureS.PrimitiveInterfaceCertificatesAudit declarations=0
+replaying PureSFormal.PureS.PrimitiveLocalResponse
+passed PureSFormal.PureS.PrimitiveLocalResponse declarations=19
+replaying PureSFormal.PureS.PrimitiveRoute
+passed PureSFormal.PureS.PrimitiveRoute declarations=86
+replaying PureSFormal.PureS.PrimitiveScripts
+passed PureSFormal.PureS.PrimitiveScripts declarations=97
+replaying PureSFormal.PureS.Probe
+passed PureSFormal.PureS.Probe declarations=122
+checked 1093 declarations

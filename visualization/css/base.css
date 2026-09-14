@@ -1,0 +1,98 @@
+/* Design tokens, reset, and typography. */
+
+:root {
+  color-scheme: dark;
+
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --shell-radius: 16px;
+  --stage-min-height: 540px;
+
+  --bg: #050506;
+  --bg-panel: #000;
+  --stage-bg: radial-gradient(circle at 50% 45%, #080808 0%, #030303 45%, #000 100%);
+  --nav-bg: rgba(0, 0, 0, 0.94);
+  --hud-bg: linear-gradient(180deg, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.9));
+
+  --text: #e8e8e8;
+  --text-2: #d7d9df;
+  --text-3: #aeb4bf;
+  --text-4: #878c96;
+
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.28);
+  --chip-bg: rgba(255, 255, 255, 0.03);
+  --chip-bg-hover: rgba(255, 255, 255, 0.07);
+
+  --control-bg: rgba(120, 126, 138, 0.2);
+  --control-bg-hover: rgba(150, 156, 168, 0.3);
+  --control-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  --hud-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+
+  --accent: #c9c9c9;
+  --marker-bg: rgba(10, 10, 12, 0.86);
+  --marker-border: rgba(255, 255, 255, 0.26);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}

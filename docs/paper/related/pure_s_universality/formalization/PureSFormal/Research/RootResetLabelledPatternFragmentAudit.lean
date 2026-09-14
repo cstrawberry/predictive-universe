@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetLabelledPatternFragment
+
+#print axioms PureSFormal.Research.RootResetLabelledPatternFragment.covers
+#print axioms PureSFormal.Research.RootResetLabelledPatternFragment.finished_answer
+#print axioms PureSFormal.Research.RootResetLabelledPatternFragment.all_input
+#print axioms PureSFormal.Research.RootResetLabelledPatternFragment.finished_absorbs
+#print axioms PureSFormal.Research.RootResetLabelledPatternFragment.runMutationCount_zero

@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetSelectedResponseC4Agreement
+
+open PureSFormal.Research.RootResetSelectedResponseC4Agreement
+
+#print axioms ResponseSelector.selectStep?_eq_some_of_baseWinsAt
+#print axioms selectedResponse_downUpC4_selectorChain_of_eq
+#print axioms selectedResponse_downUpC4_selectorChain

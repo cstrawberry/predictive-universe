@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetAppenderRouteRows
+
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.row_sound
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.row_complete
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.matching_addresses_eq
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.local_all_input
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.local_generated
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.local_generated_runs
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.local_completed_rejected
+#print axioms PureSFormal.Research.RootResetAppenderRouteRows.local_zero_mutations

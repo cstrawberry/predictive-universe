@@ -1,0 +1,15 @@
+import PureSFormal.Computation.RogozhinConcrete
+import PureSFormal.Computation.RogozhinTagInput
+
+#print axioms PureSFormal.Computation.RogozhinConcrete.haltedConfig_halted
+#print axioms PureSFormal.Computation.RogozhinConcrete.absorbingStep_loopConfig
+#print axioms PureSFormal.Computation.RogozhinConcrete.iterate_loopingConfig
+#print axioms PureSFormal.Computation.RogozhinConcrete.loopingConfig_not_eventuallyHalts
+#print axioms PureSFormal.Computation.RogozhinConcrete.compileBool_correct
+#print axioms PureSFormal.Computation.RogozhinConcrete.compileMatrix_correct
+#print axioms PureSFormal.Computation.RogozhinConcrete.matrix_reduces_to_rogozhin
+#print axioms PureSFormal.Computation.RogozhinTagInput.weight_is_succ
+#print axioms PureSFormal.Computation.RogozhinTagInput.dataCode_head
+#print axioms PureSFormal.Computation.RogozhinTagInput.compile_nonempty_shape
+#print axioms PureSFormal.Computation.RogozhinTagInput.split_compile_nonempty
+#print axioms PureSFormal.Computation.RogozhinTagInput.finiteTape_compile_nonempty

@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetNormalResponseSelectorChain
+
+open PureSFormal.Research.RootResetNormalResponseSelectorChain
+
+#print axioms selectStep?_frameFirstRoot
+#print axioms selectStep?_frameSecondRoot

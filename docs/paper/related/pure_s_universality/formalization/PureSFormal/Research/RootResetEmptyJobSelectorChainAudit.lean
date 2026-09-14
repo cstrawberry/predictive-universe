@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetEmptyJobSelectorChain
+
+open PureSFormal.Research.RootResetEmptyJobSelectorChain
+
+#print axioms afterMarker_placement
+#print axioms jobSource_marked_none
+#print axioms initialEmpty_nonterminal_job_selectorChain
+#print axioms initialEmpty_terminal_job_selectorChain
+#print axioms initialEmpty_terminal_job_firstClock_selectorChain

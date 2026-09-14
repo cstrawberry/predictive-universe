@@ -1,0 +1,18 @@
+import PureSFormal.Computation.CookSeedReadbackContext
+
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.frameWeight_productionExponents
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.contextOf_nonhaltingWeight
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.contextOf_weight
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.decodeContext?_encodeBits
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.contextOf_labelForWeight_weight
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.contextOf_decodeData?
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.contextOf_decodeBoundary?
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.contextOf_primitiveLength
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.decodeWord?_sameCount
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.decodeAligned?_sameCount
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.decodeLabel_sameCount
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.contextOf_decodeCounterWord?
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.exists_contextOf_decodeTag?_iterate
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.exists_contextOf_decodeCounter?_iterate
+#print axioms PureSFormal.Computation.CookSeedReadbackContext.exists_literalRow_at_actualCTS
+

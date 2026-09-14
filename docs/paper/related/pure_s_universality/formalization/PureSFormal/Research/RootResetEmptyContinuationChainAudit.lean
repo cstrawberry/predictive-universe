@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetEmptyContinuationChain
+
+open PureSFormal.Research.RootResetEmptyContinuationChain
+
+#print axioms emptyContinuationParents_rebuild
+#print axioms markedExit_placement
+#print axioms markedPending_selects_exit
+#print axioms singleton_sample_erase
+#print axioms nonterminalEmptyHandoff_selectorChain
+#print axioms terminalEmptyHandoff_selectorChain
+#print axioms terminalEmptyHandoff_firstClock_selectorChain

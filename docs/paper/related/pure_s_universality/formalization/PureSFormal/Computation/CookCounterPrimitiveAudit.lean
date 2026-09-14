@@ -1,0 +1,17 @@
+import PureSFormal.Computation.CookCounterPrimitive
+
+#print axioms PureSFormal.Computation.CookCounterPrimitive.digit_value
+#print axioms PureSFormal.Computation.CookCounterPrimitive.digit_operations_le
+#print axioms PureSFormal.Computation.CookCounterPrimitive.step_value
+#print axioms PureSFormal.Computation.CookCounterPrimitive.step_decrease
+#print axioms PureSFormal.Computation.CookCounterPrimitive.step_operations_le
+#print axioms PureSFormal.Computation.CookCounterPrimitive.decode_value_equation
+#print axioms PureSFormal.Computation.CookCounterPrimitive.right_step
+#print axioms PureSFormal.Computation.CookCounterPrimitive.left_step
+#print axioms PureSFormal.Computation.CookCounterPrimitive.right_value
+#print axioms PureSFormal.Computation.CookCounterPrimitive.left_value
+#print axioms PureSFormal.Computation.CookCounterPrimitive.base_overhead_le
+#print axioms PureSFormal.Computation.CookCounterPrimitive.loop_overhead_le
+#print axioms PureSFormal.Computation.CookCounterPrimitive.decode_operations_le
+#print axioms PureSFormal.Computation.CookCounterPrimitive.right_operations_le
+#print axioms PureSFormal.Computation.CookCounterPrimitive.left_operations_le

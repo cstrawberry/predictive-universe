@@ -1,0 +1,11 @@
+PANIC at _private.Lean.Environment.0.Lean.EnvExtension.getStateImpl Lean.Environment:1375:4: invalid environment extension has been accessed
+[Public copy: native stack addresses omitted.]
+PANIC at _private.Lean.Environment.0.Lean.EnvExtension.getStateImpl Lean.Environment:1375:4: invalid environment extension has been accessed
+[Public copy: native stack addresses omitted.]
+replaying InvalidProof
+uncaught exception: at invalidFalse: (kernel) declaration type mismatch, 'invalidFalse' has type
+  [Error pretty printing expression: (`Inhabited.default` for `IO.Error`). Falling back to raw printer.]
+  Prop
+but it is expected to have type
+  [Error pretty printing expression: (`Inhabited.default` for `IO.Error`). Falling back to raw printer.]
+  False

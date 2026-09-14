@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetMixedJobHandoff
+
+#print axioms PureSFormal.Research.RootResetMixedJobHandoff.handoff_selects
+#print axioms PureSFormal.Research.RootResetMixedJobHandoff.handoffFuel_selectorChain
+#print axioms PureSFormal.Research.RootResetMixedJobHandoff.handoffFuel_exact_selectorChain

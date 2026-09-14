@@ -1,0 +1,6 @@
+import PureSFormal.Computation.RogozhinCellComparisonExecution
+
+#print axioms PureSFormal.Computation.RogozhinCellComparisonExecution.trace_lengths
+#print axioms PureSFormal.Computation.RogozhinCellComparisonExecution.symbolEqual_execution
+#print axioms PureSFormal.Computation.RogozhinCellComparisonExecution.equalCells_execution
+#print axioms PureSFormal.Computation.RogozhinCellComparisonExecution.comparison_certificate

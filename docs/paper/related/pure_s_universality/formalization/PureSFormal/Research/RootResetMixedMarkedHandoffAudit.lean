@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetMixedMarkedHandoff
+
+open PureSFormal.Research.RootResetMixedMarkedHandoff
+
+#print axioms noPending_pending_marked
+#print axioms pendingMarked_address_under
+#print axioms fresh_witness_tail
+#print axioms selectStep?_mixed_pending_exit

@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetTermOnlyTransfer
+
+#print axioms PureSFormal.Research.RootResetTermOnlyTransfer.Projects
+#print axioms PureSFormal.Research.RootResetTermOnlyTransfer.run
+#print axioms PureSFormal.Research.RootResetTermOnlyTransfer.run_eq_path
+#print axioms PureSFormal.Research.RootResetTermOnlyTransfer.transferUniform
+#print axioms PureSFormal.Research.RootResetTermOnlyTransfer.transferUniform_run_eq

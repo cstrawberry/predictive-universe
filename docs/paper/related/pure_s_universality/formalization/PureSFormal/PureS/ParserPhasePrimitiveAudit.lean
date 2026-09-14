@@ -1,0 +1,9 @@
+import PureSFormal.PureS.ParserPhasePrimitive
+
+#print axioms PureSFormal.PureS.ParserPhasePrimitive.remainder_value
+#print axioms PureSFormal.PureS.ParserPhasePrimitive.remainder_lt
+#print axioms PureSFormal.PureS.ParserPhasePrimitive.remainder_operations_le
+#print axioms PureSFormal.PureS.ParserPhasePrimitive.expected_value
+#print axioms PureSFormal.PureS.ParserPhasePrimitive.expected_operations_le
+#print axioms PureSFormal.PureS.ParserPhasePrimitive.check_value
+#print axioms PureSFormal.PureS.ParserPhasePrimitive.check_operations_le

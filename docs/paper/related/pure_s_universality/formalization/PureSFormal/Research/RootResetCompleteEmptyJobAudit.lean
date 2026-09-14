@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetCompleteEmptyJob
+
+open PureSFormal.Research.RootResetCompleteEmptyJob
+
+#print axioms fuelTerminal_eq_fifth
+#print axioms fuelPrefix_exact_selectorChain
+#print axioms initialPending_placement
+#print axioms nonterminal_selectorChain
+#print axioms terminal_selectorChain

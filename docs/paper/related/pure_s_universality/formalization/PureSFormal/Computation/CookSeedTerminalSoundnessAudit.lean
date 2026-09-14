@@ -1,0 +1,9 @@
+import PureSFormal.Computation.CookSeedTerminalSoundness
+
+#print axioms PureSFormal.Computation.CookSeedTerminalSoundness.exists_of_bind_eq_some
+#print axioms PureSFormal.Computation.CookSeedTerminalSoundness.decodeCounterWord?_control_lt
+#print axioms PureSFormal.Computation.CookSeedTerminalSoundness.decodeCounter?_control_lt
+#print axioms PureSFormal.Computation.CookSeedTerminalSoundness.sourceState_lt_of_decodedBoundary
+#print axioms PureSFormal.Computation.CookSeedTerminalSoundness.decodeTape?_boundary
+#print axioms PureSFormal.Computation.CookSeedTerminalSoundness.decodeTerminalTape?_halted
+#print axioms PureSFormal.Computation.CookSeedTerminalSoundness.decodeTerminalTape?_padded_halted

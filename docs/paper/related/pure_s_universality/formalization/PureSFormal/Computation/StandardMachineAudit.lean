@@ -1,0 +1,15 @@
+import PureSFormal.Computation.StandardMachine
+
+#print axioms PureSFormal.Computation.StandardMachine.decode_compile
+#print axioms PureSFormal.Computation.StandardMachine.lookup_compile
+#print axioms PureSFormal.Computation.StandardMachine.instructionAt_compile
+#print axioms PureSFormal.Computation.StandardMachine.initial_represents
+#print axioms PureSFormal.Computation.StandardMachine.read_compileState
+#print axioms PureSFormal.Computation.StandardMachine.write_compileState
+#print axioms PureSFormal.Computation.StandardMachine.step_compile
+#print axioms PureSFormal.Computation.StandardMachine.run_compile
+#print axioms PureSFormal.Computation.StandardMachine.acceptsWithin_compile
+#print axioms PureSFormal.Computation.StandardMachine.accepts_compile
+#print axioms PureSFormal.Computation.StandardMachine.universalAccepts_complete
+#print axioms PureSFormal.Computation.StandardMachine.compileUniversalInput_correct
+#print axioms PureSFormal.Computation.StandardMachine.natMachineUniversal_hard

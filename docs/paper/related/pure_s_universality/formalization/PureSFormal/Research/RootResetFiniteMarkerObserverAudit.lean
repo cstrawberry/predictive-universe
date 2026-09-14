@@ -1,0 +1,14 @@
+import PureSFormal.Research.RootResetFiniteMarkerObserver
+
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.markerPattern_iff
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.markerPattern_eq
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.shape_terminal
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.shape_readOnly
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.shape_runs
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.observer_terminal
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.observer_readOnly
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.selection_result_iff
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.observer_all_input
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.accepts_iff
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.accepted_actual_root_event
+#print axioms PureSFormal.Research.RootResetFiniteMarkerObserver.fresh_pass_accepts

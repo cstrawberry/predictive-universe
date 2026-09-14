@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetMarkerPhysicalSoundness
+
+#print axioms PureSFormal.Research.RootResetMarkerPhysicalSoundness.mutation_rdx_cursor
+#print axioms PureSFormal.Research.RootResetMarkerPhysicalSoundness.sampled_pre_mutation
+#print axioms PureSFormal.Research.RootResetMarkerPhysicalSoundness.accepted_sample_native_fresh_focus

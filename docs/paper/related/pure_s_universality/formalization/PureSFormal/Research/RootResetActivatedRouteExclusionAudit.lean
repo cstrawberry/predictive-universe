@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetActivatedRouteExclusion
+
+open PureSFormal.Research.RootResetActivatedRouteExclusion
+
+#print axioms carrier_ne_dispatcherCode
+#print axioms parseCurrent?_selectedLeft_chosen_none
+#print axioms parseCurrent?_selectedRight_chosen_none
+#print axioms parseRouteNode?_withResponse_none

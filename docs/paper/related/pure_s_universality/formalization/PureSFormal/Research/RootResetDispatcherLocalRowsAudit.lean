@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetDispatcherLocalRows
+#print axioms PureSFormal.Research.RootResetDispatcherLocalRows.edge_redex
+#print axioms PureSFormal.Research.RootResetDispatcherLocalRows.matching_addresses_eq
+#print axioms PureSFormal.Research.RootResetDispatcherLocalRows.all_input
+#print axioms PureSFormal.Research.RootResetDispatcherLocalRows.generated_shape
+#print axioms PureSFormal.Research.RootResetDispatcherLocalRows.generated_initial
+#print axioms PureSFormal.Research.RootResetDispatcherLocalRows.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetDispatcherLocalRows.erase_run

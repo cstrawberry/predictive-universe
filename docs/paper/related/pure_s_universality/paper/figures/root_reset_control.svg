@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="545" viewBox="0 0 1400 545" role="img" aria-labelledby="title desc">
+  <title id="title">One invocation of the finite root-restarted selector</title>
+  <desc id="desc">Starting from active history, a fresh root invocation tries fresh response, marked handoff, and active endpoint passes in order, ascending to the root after each declined pass. Each selected redex enters exactly one S contraction and returns the new bare term. A final Euler traversal contracts one redex or reports normality with zero mutations. The temporary cursor and control are discarded; neither passes to the next invocation. All tests preserve the term and every finite input reaches an absorbing result.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0 0 L9 4 L0 8 Z" fill="#29465b"/></marker>
+  </defs>
+  <rect width="1400" height="545" fill="#ffffff"/>
+  <g font-family="DejaVu Sans, sans-serif" text-anchor="middle" fill="#183348">
+    <text x="700" y="42" font-size="30" font-weight="700">Same finite control, fresh root, current bare term</text>
+    <text x="700" y="85" font-size="24">After each declined pass: ascend to the root, then try the next pass.</text>
+  </g>
+  <g fill="#f0f6fb" stroke="#29465b" stroke-width="3">
+    <rect x="20" y="120" width="240" height="130" rx="12"/>
+    <rect x="300" y="120" width="240" height="130" rx="12"/>
+    <rect x="580" y="120" width="240" height="130" rx="12"/>
+    <rect x="860" y="120" width="240" height="130" rx="12"/>
+    <rect x="1140" y="120" width="240" height="130" rx="12"/>
+    <rect x="300" y="350" width="700" height="130" rx="12" fill="#e7f4e9"/>
+    <rect x="1060" y="365" width="320" height="115" rx="12" fill="#f6f1e7"/>
+  </g>
+  <g font-family="DejaVu Sans, sans-serif" text-anchor="middle" fill="#183348">
+    <text x="140" y="157" font-size="24" font-weight="700">Active history</text>
+    <text x="140" y="194" font-size="24">root;</text>
+    <text x="140" y="227" font-size="24">active carrier</text>
+    <text x="420" y="157" font-size="24" font-weight="700">Fresh response</text>
+    <text x="420" y="194" font-size="24">C4 / COMMIT /</text>
+    <text x="420" y="227" font-size="24">handoff</text>
+    <text x="700" y="157" font-size="24" font-weight="700">Marked handoff</text>
+    <text x="700" y="194" font-size="24">next pending</text>
+    <text x="700" y="227" font-size="24">frame</text>
+    <text x="980" y="157" font-size="24" font-weight="700">Active endpoint</text>
+    <text x="980" y="194" font-size="24">FRAME / route /</text>
+    <text x="980" y="227" font-size="24">clock</text>
+    <text x="1260" y="157" font-size="24" font-weight="700">Euler fallback</text>
+    <text x="1260" y="194" font-size="24">complete</text>
+    <text x="1260" y="227" font-size="24">remaining search</text>
+    <text x="650" y="390" font-size="26" font-weight="700">Selected redex: exactly one S contraction</text>
+    <text x="650" y="426" font-size="24">return the new bare term</text>
+    <text x="650" y="459" font-size="24">discard the temporary cursor and control</text>
+    <text x="1220" y="399" font-size="26" font-weight="700">Normal form</text>
+    <text x="1220" y="433" font-size="24">report normality;</text>
+    <text x="1220" y="464" font-size="24">zero mutations</text>
+    <text x="700" y="523" font-size="24">All tests preserve the term. Every finite input reaches an absorbing result.</text>
+  </g>
+  <g fill="none" stroke="#29465b" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M260 185 H296"/>
+    <path d="M540 185 H576"/>
+    <path d="M820 185 H856"/>
+    <path d="M1100 185 H1136"/>
+    <path d="M420 250 V346"/>
+    <path d="M700 250 V346"/>
+    <path d="M980 250 V289 H850 V346"/>
+    <path d="M1200 250 V310 H970 V346"/>
+    <path d="M1300 250 V361"/>
+  </g>
+</svg>

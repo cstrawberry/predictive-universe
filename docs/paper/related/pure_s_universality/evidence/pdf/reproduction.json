@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "pdf_sha256": "fac4b7822a7c4bc8fdecffa5dd6e0f7b387585ba33da1bb308d2bbc3f1e35cc1",
+  "started_utc": "2026-09-14T11:00:54.101907+00:00",
+  "completed_utc": "2026-09-14T11:06:27.356761+00:00",
+  "commands": [
+    [
+      "/usr/bin/python3",
+      "-B",
+      "/publication/package/src/build_paper.py",
+      "--output",
+      "/publication/run/a/paper.pdf"
+    ],
+    [
+      "/usr/bin/python3",
+      "-B",
+      "/publication/package/src/build_paper.py",
+      "--output",
+      "/publication/run/a_deliberately_longer_clean_output_path/paper.pdf"
+    ]
+  ],
+  "dependency_setup": "Existing pinned publication dependencies; public build commands checked executable/resource hashes and required absent font mapping.",
+  "builds": 2,
+  "unequal_path_lengths": true,
+  "full_pdf_bytes_match": true,
+  "inputs_unchanged": true,
+  "optional_font_mappings": {
+    "tex-text.tec": "absent"
+  },
+  "contrary_mapping": {
+    "returncode": 1,
+    "presence_fixture_rejected": true,
+    "diagnostics_location_not_printed_before_preflight_failure": true,
+    "method": "Public build command with a presence-only tex-text.tec fixture in TEXMFHOME/fonts/misc.",
+    "diagnostic": "tex-text.tec must be absent from the XeLaTeX font-mapping search path",
+    "scope": "Presence rejection before typesetting; confirms the qualified diagnostics wording."
+  },
+  "log": "reproduction.log",
+  "log_sha256": "d3dd927a2a5b82dcd9edf073833daed9280506857eed15400f56399403d885b5",
+  "public_copy": "Local locations removed; see evidence/PUBLIC-COPY.md."
+}

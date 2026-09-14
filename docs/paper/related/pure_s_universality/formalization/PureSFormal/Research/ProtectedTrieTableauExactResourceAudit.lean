@@ -1,0 +1,34 @@
+import PureSFormal.Research.ProtectedTrieTableauExactResource
+
+open PureSFormal.Research.ProtectedTrieTableauExactResource
+
+#print axioms runLocalVerifier_ticks_le
+#print axioms runLocalVerifier_peak_le
+#print axioms runLocalVerifier_resourceCertificate
+#print axioms decodeTableauM?_ticks_le_quadratic
+#print axioms decodeTableauM?_peak_le_quadratic
+#print axioms encodeTableauM_ticks_le_linear
+#print axioms encodeTableauM_peak_le_linear
+#print axioms verifyRowsM_ticks_le_bound
+#print axioms verifyRowsM_peak_le_bound
+#print axioms tailRowsMass_le_payload
+#print axioms verifyRowsBound_le_input
+#print axioms encodeRowM_ticks_le_linear
+#print axioms encodeRowM_peak_le_linear
+#print axioms encodeRowsM_ticks_le_linear
+#print axioms encodeRowsM_peak_le_linear
+#print axioms decodeRowM?_ticks_le
+#print axioms decodeRowsNM?_ticks_le
+#print axioms checkTraceM_ticks_le_traceBound
+#print axioms checkTraceM_peak_le_traceBound
+#print axioms rowEqM_ticks_le_right
+#print axioms rowEqM_peak_le_right
+#print axioms PureSFormal.Research.ProtectedTrieTableauExactCost.initialRowM_ticks
+#print axioms PureSFormal.Research.ProtectedTrieTableauExactCost.initialRowM_peak
+#print axioms PureSFormal.Research.ProtectedTrieTableauExactCost.encodeBitsM_ticks_le
+#print axioms PureSFormal.Research.ProtectedTrieTableauExactCost.decodeNatM?_ticks_le
+#print axioms state_succ_le_encodeRow_length
+#print axioms coeff14
+#print axioms add_le_add6
+#print axioms trace_bound_cons_identity
+#print axioms trace_step_chunk_le

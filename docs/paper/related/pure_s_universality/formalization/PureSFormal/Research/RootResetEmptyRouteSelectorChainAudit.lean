@@ -1,0 +1,16 @@
+import PureSFormal.Research.RootResetEmptyRouteSelectorChain
+
+open PureSFormal.Research.RootResetEmptyRouteSelectorChain
+
+#print axioms shell_fuel_none
+#print axioms shell_contexts
+#print axioms selectStep?_routeMutation
+#print axioms selectStep?_initialCall
+#print axioms DispatcherEdge.left_leaf
+#print axioms DispatcherEdge.right_leaf
+#print axioms routeEntries_dispatcherChain
+#print axioms DispatcherChain.selectsSamples
+#print axioms emptyResponse_dispatcher_selectorChain
+#print axioms generatedEmptyResponse_dispatcher_selectorChain
+#print axioms generatedEmptyResponse_through_marker_selectorChain
+

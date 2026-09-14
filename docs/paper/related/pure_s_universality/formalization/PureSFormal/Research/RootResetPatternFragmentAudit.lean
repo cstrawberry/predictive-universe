@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetPatternFragment
+
+#print axioms PureSFormal.Research.RootResetPatternFragment.machine
+#print axioms PureSFormal.Research.RootResetPatternFragment.states_length
+#print axioms PureSFormal.Research.RootResetPatternFragment.compile_runs
+#print axioms PureSFormal.Research.RootResetPatternFragment.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetPatternFragment.erase_run

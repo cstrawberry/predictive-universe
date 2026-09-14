@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetClockEulerPhaseGap
+
+#print axioms PureSFormal.Research.RootResetClockEulerPhaseGap.pending_root_selected
+#print axioms PureSFormal.Research.RootResetClockEulerPhaseGap.fixed_budget_pending
+#print axioms PureSFormal.Research.RootResetClockEulerPhaseGap.pending_frameFirst_disagrees

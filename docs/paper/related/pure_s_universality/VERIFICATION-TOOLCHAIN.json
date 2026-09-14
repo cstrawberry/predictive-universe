@@ -1,0 +1,54 @@
+{
+  "profile": "pure-s-formalization-verification-v1",
+  "lean": {
+    "version": "4.33.1",
+    "commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "release_url": "https://github.com/leanprover/lean4/releases/tag/v4.33.1",
+    "archive_url": "https://github.com/leanprover/lean4/releases/download/v4.33.1/lean-4.33.1-linux.zip",
+    "archive_sha256": "0376ac87487246b40dd077268c097e701f552e94c6d020d2373b50c7444fa22f",
+    "binary_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "lake": {
+    "version": "5.0.0",
+    "binary_sha256": "60330ab6f07dce20f3fa9ebb08e8b984ea9549eac172afeb15d9d2227060e2b3"
+  },
+  "leanchecker": {
+    "distribution": "official Lean release archive",
+    "binary_sha256": "84bc3e7cd6efa5bfecd1e7c37571fed9428fb2b3e16da0ddf62f2163573486d0",
+    "executable": "bin/leanchecker",
+    "mode": "fresh replay of requested modules and their imports; unsafe and partial declarations skipped"
+  },
+  "lean4lean": {
+    "repository": "https://github.com/digama0/lean4lean",
+    "commit": "8223d223ed98661882e95d9d6a7126df7097cd76",
+    "tree": "0b3bc47e6ea1e878e49b45604f3e622de691ec9a",
+    "source_tree_sha256": "53dcc5e834d19730a9989626e80522cd365830e6cab7b48831d1f8f8cbc2b3d0",
+    "verified_git_blobs": 124,
+    "binary_sha256": "7f6941f9b54c7d2f15c104abdc2b4f9a6f2f201025ced5e638aa7833f0ec0a5d",
+    "executable": ".lake/build/bin/lean4lean",
+    "build_recipe_sha256": "cca802e52bbbd40334ee6dfac1fe6635f0afafa94ef509e2e0b24bd9a2ff3905",
+    "upstream_toolchain": "leanprover/lean4:v4.33.0-rc2",
+    "mode": "alternate implementation derived from the C++ kernel; scoped safe-declaration replay, imported declarations assumed",
+    "batteries": {
+      "repository": "https://github.com/leanprover-community/batteries",
+      "commit": "76e1c118b0700b4ceafe99532e887d6431625e1a",
+      "tree": "9d0aee6b2d05b2bb599f5e0c35617ef602f2e6c5",
+      "source_tree_sha256": "865a02b31a4659641883b977d809bc27c6213cc16b3e79f2241dadae841d898f",
+      "verified_git_blobs": 290
+    }
+  },
+  "python": {
+    "version": "3.12.3",
+    "implementation": "CPython",
+    "executable_sha256": "1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118"
+  },
+  "host": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "machine": "x86_64"
+  },
+  "formalization_external_packages": [],
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound"
+  ]
+}

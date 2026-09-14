@@ -1,0 +1,6 @@
+import PureSFormal.PureS.RegisteredMarkerGlobalSoundness
+
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.positiveStages_excludingMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.exactChain_contractionRun_mem
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.registeredEvent_implies_eventuallyEmpty
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.registeredEvent_iff_eventuallyEmpty

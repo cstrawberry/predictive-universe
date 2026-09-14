@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetNestedClockProbe
+
+#print axioms PureSFormal.Research.RootResetNestedClockProbe.all_input
+#print axioms PureSFormal.Research.RootResetNestedClockProbe.runMutationCount_zero

@@ -1,0 +1,15 @@
+import PureSFormal.Research.RootResetMarkedFuelSelectorChain
+
+open PureSFormal.Research.RootResetMarkedFuelSelectorChain
+
+#print axioms fuelRow_headArity_ne_two
+#print axioms selectStep?_markedPrefix_pendingFuelRow
+#print axioms generatedFuelRow_marked_selectStep?
+#print axioms fuelPositiveScriptSource_marked_selects_first
+#print axioms fuelPositiveFirst_marked_selects_second
+#print axioms fuelZeroScriptSource_marked_selects_first
+#print axioms fuelZeroFirst_marked_selects_second
+#print axioms fuelZeroSecond_marked_selects_third
+#print axioms fuelZeroThird_marked_selects_fourth
+#print axioms fuelZeroFourth_marked_selects_fifth
+#print axioms fuel_markedSelectorChain

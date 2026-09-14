@@ -1,0 +1,21 @@
+import PureSFormal.Research.RootResetEmptyResponseSelectorChain
+
+open PureSFormal.Research.RootResetEmptyResponseSelectorChain
+
+#print axioms fuelParse_none_of_localShape
+#print axioms traversableParents_fuelTraversable
+#print axioms selectStep?_rebuild_of_fuelParsed
+#print axioms nestedFrames_parse_empty
+#print axioms selectStep?_nestedFrames_empty
+#print axioms selectStep?_nestedFrames_empty_under_parents
+#print axioms emptyFifth_selectStep_eq_firstFrameRoot
+#print axioms emptyResponse_firstMutation
+#print axioms emptyFifth_firstMutation_agreement
+#print axioms emptyFifth_erase_under_parents
+#print axioms emptyFifth_under_parents_firstMutation_agreement
+#print axioms markedCompleted_responseBit
+#print axioms markedCompleted_phase
+#print axioms emptySweepCarrier_label
+#print axioms emptyBase_label
+#print axioms generatedEmptySweep_label
+#print axioms emptyInitialHandoff_witness

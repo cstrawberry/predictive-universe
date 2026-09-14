@@ -28,6 +28,30 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 | $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$; certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ | branch comparison budget $\pm0.000060$ before residual closure | exact sinc-core arithmetic plus Section Z.27.9 comparison budget; theorem-level interval requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1 |
 | $\Lambda L_P^2$ (vacuum sector) | five-mode reference conversion and observational inversions; four-mode route $m_4\to\kappa_{\mathrm{idx}}\to S_{\mathrm{inst}}\to w_4\to\Lambda_4L_P^2$ | five-mode reference $(2.88\times10^{-122})$ | $\pm0.03\times10^{-122}$ reference budget | U.13b proves only sampled-Hessian nullity; $\mathfrak C_{U,\mathrm{mark}}$, Proposition U.14, $\mathfrak F_U^{(4)}$, and $\mathfrak R_\Lambda^{(4)}$ remain successive gates. Equation (V.5) gives the observational input and the displayed prefactor values are inversions, not forward evaluations |
 
+### V.0.2 Convention Freeze Register
+
+Each numerical model and prospective test carries one versioned record with the following fields:
+
+| Field | Content |
+|---|---|
+| Identity | Row ID, source version, exact source-text or manifest hash |
+| Expression | Formula, algorithm, units, Planck convention and all normalizations |
+| Premises | Mathematical declarations, physical maps, accepted certificates and residual class |
+| Inputs | Fixed values, candidate menu, calibrated quantities and permitted parameter ranges |
+| History | Calibration data and dates, previous comparisons and selection history |
+| Test | Held-out data identity, registration time, likelihood, covariance and decision rule |
+| Outcome | Comparison status, failed conditions and the prospective test assigned to each model version |
+
+The convention inventory includes vacuum nullity and bare $A_{\mathrm{eff}}$, the distinct five-mode reference, primordial $A_Q$ and reheating prescription, electroweak $A_{EW}$ and determinant prefactor, reduced and unreduced Planck masses, and the complete alpha interface/curvature/transport/residual package. Flavor records additionally fix triads, stiffness ratios, effective dimensions, response factors, ordering, phases and the complete selection procedure.
+
+A registration binds a previously fixed source or manifest and records its own identity separately. A date entered after inspecting a comparison leaves that comparison retrospective. New versions retain earlier predictions, calibration choices and failed comparisons.
+
+**PMNS phase row.** The convention-level candidate $\delta_{CP}=232.5^\circ$ can be fixed for a future comparison with proposed circular tolerance $20^\circ$. Its record includes the already quoted phase data, every input used to select the candidate, mass ordering, phase convention, joint covariance, and the geometric and physical certificates of Theorem T.24.22. The circular discrepancy is
+$$
+d_{S^1}(\delta,\delta_0)=\min_{m\in\mathbb Z}|\delta-\delta_0+360^\circ m|.
+$$
+A future likelihood tests the frozen numerical model with that selection history preserved. The registration field is completed by the actual pre-comparison record.
+
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
 
 ### V.1.1 Registered Vacuum-Model Equations and Gates for $\Lambda$
@@ -1590,3 +1614,630 @@ if __name__ == "__main__":
 | `TV-Z-11` | Isotropy alone forces $L_{\mathrm{vis}}=1/16$: `negative-refutation` | Complete scalar family $Lg_B$, with exact witnesses $L=1,1/16$ | Operator-realized electromagnetic projection and unit bridge |
 
 The equivalence relation for each check is its owner record's typed basis-change or graph-relabeling relation; none identifies response-distinct scalar values or changes the candidate class. The verifier is the hashed exact program together with the named analytic owner theorem for every universal or infinite statement. Integrity fails on a source hash, runtime, assertion, canonical-check hash, transcript-length, or transcript-hash mismatch, or when an owner premise is absent. The target-specific falsifiers are stated in the owner resolution records; the transcript supplies only the declared finite fixtures, boundary witnesses, and alternate-scale witnesses. Provenance is source-derived exact mathematics with zero target queries. Nonvacuity is supplied by the displayed standard-basis carriers, all four populated graph roles, both positive scale choices, and the nontrivial Theorem-U.13b branch. Consumers may import only the result column above; no physical carrier, current, action, determinant, observable, or empirical comparison is promoted by this audit. ∎
+
+### V.3.13 Pure-$\mathbf S$ Computation, Observation and Topological Realization Audit
+
+The Pure-S companion supplies two formally proved constructions: the root-restarted computation theorem and persistent observer-verified history enumeration. The stochastic observation model of Section 7.4.4a has finite compression and prediction results. The branch--braid--apply construction of Section 14.5.6 has a nonempty algebraic model and a transition-level history observer. Their realization records have the following distinct responsibilities.
+
+| Package | Constructed or proved object | Completion evidence |
+|---|---|---|
+| Selected computation | Theorem 1R's fixed controller, primitive-recursive encoder, literal readers and regular halting language on one source trajectory | `PureSFormal.RootResetHeadline.sCombinatorIsRootResetUniversal`, its `HeadlineUniversality` contract, and the source-bound complete verification record |
+| Reduction-strategy limits | Cinematic Strawberry (2026), Appendix F.1: autonomous-component and outer-clock obstructions to exact every-maximal-path halting observation | `PureSFormal.AppendixF.AutonomousObstruction.clock_encoder_obstruction`, the computable payload, fixed regular detector and undecidable source set; the obstructing path may be unfair |
+| Persistent histories | Theorem 5's eight clauses, structural-fairness results and observer-access boundary | The frozen source/observer pair, occurrence-history types, fairness record and structural meter |
+| Bounded computation and future prediction | Corollary 2b's terminating trace-query construction and Corollary 2c's undecidable eventual regular observation | The bounded source wrapper, selected-path interfaces and finite observation horizon; the displayed reduction proofs own the unbounded conclusions |
+| History memory and stochastic closure | Reachable finite history families, observation-capacity bounds, exact lumpability and probabilistic structural fairness | The prepared ideals, complete projected transition rows, conditional block hazards, coverage outcomes and full preparation/observer budget |
+| Shared execution | Readback-preserving copying, exact privatization, complete development, supplied-path lifting and the finite-store representation | A concrete navigator and allocator with charged indexed access, pointer-width policy, actual output representation and readback agreement |
+| Stochastic observation | Normalized finite-time laws, history-compression factorization, finite-library attainment and the prediction-loss decomposition | A finite counted policy/channel/predictor, resource cap, clock, distortion task and nondegenerate experiment |
+| Physical reset | Definition 28's register and cyclic operation, with Theorem 31's conditional entropy | The actual complete retained record, calibrated units, source law, dissipation and calorimetric return |
+| Braided rewriting | Typed coupons, the $\mathbf S$ equation, the block braid and its minimal permutation length | A coherence-preserving process interpretation and a compatible transition-level observation map |
+| Ribbon or field-theoretic realization | Framing, closure, represented responses and the selected Chern--Simons/TQFT package | A nontrivial response witness, physical preparation and readout, and the typed maps to any Appendix I or Y consumer |
+
+These are construction packages. A registry separates their independently accepted claims and records the dependency edges between them. A proved local equation, a finite matrix check, a universal coherence theorem and a physical comparison receive their own evidence types.
+
+**Imported Proof and Execution Evidence.** Cinematic Strawberry (2026), Appendix B, identifies the formal correspondences of Theorems 1R and 1--5. The 14 September 2026 release records Lean 4.33.1, 1,239 formal modules and 319 public exports, including 22 for Appendix F. The declaration `PureSFormal.RootResetHeadline.sCombinatorIsRootResetUniversal`, exposed as `PureSFormal.Public.rootResetHeadlineUniversality`, proves `HeadlineUniversality`. This aggregate includes all-program cyclic-tag realization and binds the fixed endpoint computation contract, regular halting language, observer agreement and ordered finite source sampling to the specified source encoding and trajectory. The generated public API records the exact types and axiom sets. The central theorem depends on `propext` and `Quot.sound`; 228 public exports use `Quot.sound`, and seven Appendix F exports additionally use the standard `Classical.choice` axiom. The trusted-definition ledger identifies the rule, source, controller, encoder and observers certified by those declarations. The companion verification guide separates these proof dependencies from command-line and partial runtime declarations. A reproducible import binds the definitions and public signatures to `headline-complete/COMPLETE-VERIFICATION.json`, its verified source manifest and dependency audits. That record covers the complete module inventory and the recorded `leanchecker` and scoped `lean4lean` replays.
+
+Corollaries 2b--2c derive bounded trace computation and the future-event prediction limit from the companion's encoder and output theorems. Appendix A.0.2 derives the history domain from confluence, exact finite range and structural fairness. Section 7.4.4a derives history-capacity, lumpability and probabilistic-fairness results from those constructions and its stated probability laws. These consequences have the mathematical proofs given in their owning sections; the imported Lean results have the declaration bindings specified above.
+
+The companion's actual root-restarted worked trace supplies an execution calibration:
+
+| Two-phase input $101$ | Contraction index | Decoded phase and queue | Unfolded term nodes |
+|---|---:|---|---:|
+| Initial checkpoint | 0 | phase 0, queue $101$ | 171 |
+| First source checkpoint | 22 | phase 1, queue $011$ | 17,057 |
+| Second source checkpoint | 85 | phase 0, queue $11$ | 339,285 |
+
+The 85 root-restarted invocations use 1,324,894 measured microticks; the same contractions use 6,935 microticks in the persistent baseline. The companion records independent occurrence-tree replay of every returned address and contractum, all 86 checkpoint decisions, and the first invocation's local command sequence. Its runtime evidence also covers 720 differential contractions, 394 small-term executions, nine source-machine cases with 37 exact rows, and 880 selector comparisons. These measurements calibrate the declared finite fixtures. The complete padded tape-machine encoder has an all-input proof and construction bound; even its code-zero seed has at least $2^{57207}$ literal bits under the retained compiler, and the full seed was not materialized. Native output and encoder-preflight attempts encountered stack limits; the recorded interpreted checks passed. A finite physical proposal therefore specifies the actual encoder representation and resource envelope used by its experiment.
+
+**Source and Theorem Binding.** A verification record fixes the exact source paths and versions, imported declarations, candidate class, units, meter definitions, input domains and output formats. Raw source hashes identify bytes. A normalized corpus seal uses the owning normalization algorithm and its explicitly enumerated self-reference fields. Each binding identifies its source configuration and distinguishes raw-byte identity from normalized identity.
+
+The source-envelope audit of Proposition P.14.1m.4a and the semantic pilot of Proposition P.14.1m.4b keep their frozen domains. A current global certificate instantiates Definition P.14.1m with the current source-to-vertex map, dependency and overlap manifest, status rows, and the actual semantic evidence required by (C1)--(C18). Successful byte matching establishes source identity; each semantic predicate is discharged by its proof or sound terminating checker.
+
+**Completion Accounting.** Let $\mathcal V$ be the registered claim set, let $\sim$ identify declared aliases, and let $\mathcal A\subseteq\mathcal V/{\sim}$ contain exactly the substantive atomic theory claims. The unresolved count is
+$$
+N_{\mathrm{open}}
+=
+\#\{[v]\in\mathcal A:\operatorname{status}([v])=\textsf{unresolved}\}.
+$$
+Umbrella packages, resolved claims, experimental endpoints and registry-only entries have their own disjoint counts. Each unresolved atomic alias class contributes exactly one to $N_{\mathrm{open}}$. The observation and topology packages contribute through their registered atomic claims and dependency relations. The source-to-vertex and status-row coverage checks compute every summary from the same frozen registry.
+
+**Finite Verification Cases.** The bounded-interpreter audit checks zero-step jobs, early source halting, a looping source at finite bound, empty and nonempty trace serializations, both query modes, out-of-range queries and both terminal bits. It compares the reconstructed trace with the finite source run. The selected-event audit records all samples through its nominated $J$, including the initial sample, and verifies every finite-automaton decision.
+
+The history-memory audit prepares the four $m=2$ ideals displayed in Section 7.4.4a, verifies their exact projections and common final source state, and checks the one-bit and two-bit reconstruction laws. The transition audit tests both equal and unequal projected rows within an ideal fiber. The coverage audit verifies its conditional hazard bounds over every admitted starting state and records the nominated addresses opened by each block, including any budget-stop outcome. A finite collection of observed successes is evaluated under the registered probability law; the infinite liveness conclusion uses the product-bound proof and its nonsummable hazard premise.
+
+The observation audit checks normalization and exact support propagation; normal-form idling and budget stopping; feasible and infeasible one-register compression; the history-statistic factorization; and the KL decomposition including a predictor support failure. The binary examples in Section 7.4.4a provide exact expected values. The store audit checks a root contraction, a nonroot privatized contraction, two unfolded occurrences sharing one node, zero-copy root privatization, pointer-capacity boundaries and exact final readback for a supplied address sequence. A whole-output claim additionally records output cardinality and representation.
+
+The topology audit expands the displayed braid word, verifies its block permutation and $n_yn_z$ inversion count, checks the typed $\mathbf S$ equation in the cartesian term model, and tests the registered copier on its admitted family. The changing-history witness checks that the physical observation is carried by transitions when the algebraic interpretation identifies redex and contractum. A braided or ribbon matrix realization then checks the named coherence identities and response comparisons on its declared domain.
+
+Each finite run records its exact inputs, arithmetic model, observed outputs and acceptance rule. General source, stochastic and categorical conclusions use their owning proofs; the finite cases establish the stated executable instances.
+
+## V.4 Systematic Formalization Program
+
+### V.4.1 Project objective
+
+The formal verification program pairs canonical PU propositions with Lean declarations under a fixed semantic correspondence. Each claim carries independent fields for mathematical kind, formal state, premises, source identity, semantic equivalence and trust evidence. A certified computation may support a theorem; a conditional theorem can carry both mathematical and physical premises.
+
+The report distinguishes specification coverage, kernel-checked proofs, explicit assumptions, model witnesses, counterexamples and empirical comparisons. Complete classification and complete proof coverage are separately measurable outcomes. The inventory begins with the canonical 48-source manifest and records the current source version. Section V.3.13 binds the Pure-S component's checked declarations and resource interfaces. Coverage of the remaining PU propositions is measured claim by claim.
+
+### V.4.2 Success ladder
+
+Seven assurance levels have independent acceptance conditions:
+
+| Level | Meaning | Required evidence |
+|---|---|---|
+| L1 — Specification | PU concepts and statements have precise types and quantifiers | Approved claim cards and Lean declarations |
+| L2 — Derivability | Every claimed mathematical consequence follows from its declared premises | Kernel-checked proofs with zero placeholders |
+| L3 — Nonvacuity | The core and each retained branch have at least one explicit nondegenerate model | `Nonempty` model-construction theorems |
+| L4 — Independence | Important premises are not merely hidden restatements of conclusions | Ablations, countermodels, and two-model nonentailment results |
+| L5 — Compatibility | Branches claimed to coexist have a common model and commuting interfaces | Explicit intersection models and overlap theorems |
+| L6 — Determinacy | The declared axioms select a unique response class where uniqueness is claimed | Categoricity or strict-selection theorems, or formal noncategoricity |
+| L7 — Empirical interface | Derived predictions are separated from calibration and compared prospectively | Certified numerics, provenance, uncertainty, and held-out tests |
+
+L2 alone verifies logical derivations. L3 prevents vacuous universal theorems.
+L5 and L6 are required before claiming that a collection of separately valid
+branches forms one determined PU universe.
+
+### V.4.3 Non-negotiable formalization principles
+
+#### 3.1 Explicit Models and Branch Predicates
+
+Encode PU assumptions as fields or predicates over model data:
+
+A model record supplies state, protocol and outcome types, response and update maps, and separately named predicates for the adopted core assumptions. Each theorem takes the model and its required branch predicates explicitly. Primitive data, axioms and proved consequences occupy distinct fields of the claim record.
+
+Branch assumptions should be separate predicates or structures such as
+`FullContext M`, `HilbertCarrier M`, `BinaryQuotient M`, and
+`OperationalContinuum M`. This prevents an assumption from silently entering
+all theorems and makes branch intersections explicit.
+
+The operational model has a small common core and named branch extensions.
+A coexistence claim requires a joint model satisfying the relevant extensions.
+Canonical mathematical structures may use typeclasses; each PU law appears as
+an explicit model field or theorem hypothesis.
+
+#### 3.2 Semantic Correspondence
+
+Each correspondence record classifies the formal statement as:
+
+- equivalent to the source;
+- stronger;
+- weaker;
+- conditional on a further explicit premise; or
+- refuted by a counterexample.
+
+A conditional result includes every premise required by its proof in the
+branch specification and formal signature. Source and formal definitions must
+have the recorded semantic relationship throughout the dependency graph.
+
+#### 3.3 Explicit Realization Maps
+
+Primitive definitions specify the admitted objects. A dimensional or gauge
+selection result identifies its selection premises and proves the conclusion
+from them. If a carrier's dimension is prescribed as an input, its corresponding
+dimension statement is recorded as a hypothesis-dependent consequence.
+
+#### 3.4 Typed separation of coincident numbers
+
+Use distinct types or named structures for semantically different quantities:
+
+- tangent complex dimension `12`;
+- binary-code dimension `12`;
+- interface-mode count `24`;
+- Euclidean response-carrier dimension `4`;
+- spacetime dimension `3+1`.
+
+Numerical equality is not a carrier map or physical identification. Every
+cross-type identification needs its own theorem or assumption.
+
+#### 3.5 Model existence before scale-up
+
+Construct at least one explicit nondegenerate finite `PUCoreModel` before
+formalizing hundreds of downstream statements. An explicit inhabitant ensures that universal model theorems have a populated
+domain.
+
+### V.4.4 Dependency architecture
+
+~~~mermaid
+flowchart TD
+    A["Charter and claim registry"] --> B["Lean foundation and PU primitives"]
+    B --> C["Explicit finite core model"]
+    C --> D["SPAP and Horizon vertical slice"]
+    D --> E["PCE, RID, complexity and dynamics"]
+    E --> F["Quantum and discrete backbone"]
+    F --> G["Continuum, AQFT and gravity"]
+    F --> H["Certified numerical branches"]
+    G --> I["Global branch compatibility"]
+    H --> I
+    I --> J["Prospective empirical tests"]
+~~~
+
+### Assumption tiers
+
+| Tier | Contents | Permitted downstream label |
+|---:|---|---|
+| 0 | Lean kernel, pinned math library, declared foundational logic | Mathematical theorem |
+| 1 | PU primitive data and definitions | Definition-level result |
+| 2 | PU core axioms | PU-core theorem |
+| 3 | Finite mathematical branch premises | Conditional finite theorem |
+| 4 | Continuum/reconstruction hypotheses | Conditional reconstruction theorem |
+| 5 | Physical realization, units and calibration | Conditional physical theorem |
+| 6 | External measurements and empirical models | Empirical comparison only |
+
+A result inherits the highest tier it uses. A Tier-5 result may not be
+presented as a Tier-2 derivation.
+
+POP (Axiom 1), Predictive Capacity (Axiom 2), Operational Viability (Axiom 3),
+the PPI physicalization condition, and PCE as a law of actual adaptation occupy
+explicit model or branch fields. Their finite mathematical consequences are
+proof targets; physical applicability is assessed through the registered
+realizations and experiments.
+
+### V.4.5 Formalization Architecture
+
+The theorem program is organized by logical responsibility:
+
+| Layer | Mathematical responsibilities |
+|---|---|
+| Mathematical utilities | Finite combinatorics, entropy, probability, linear algebra, information geometry and certified intervals |
+| Operational core | States, protocols, responses, prediction, update, equivalence and admissible resources |
+| PCE and SPAP | Complete comparison costs, finite selection, diagonal models, closure and ablations |
+| Horizon and backbone | Role independence, full context, cardinality, carrier bounds, active rank and typed numerical ledgers |
+| Codes and shells | Golay, Steiner, lattice, moment and response-injection certificates |
+| Quantum | States, channels, Born representation, perspectival imports and no-signaling |
+| Dynamics | Variational convergence, stability, information, reset ledgers and networks |
+| Continuum and AQFT | Graph limits, causal order, Lorentzian structure, nets, KMS and modular data |
+| Gravity | Conserved stress, horizon entropy and the Einstein bridge |
+| Phenomenology | Gauge, flavor, cosmology and consciousness-response packages |
+| Physical realization | Dressing, Hilbert and continuum bridges, calibration and observable maps |
+| Claims and audit | Exact source-to-formal correspondences, premise reports, nonvacuity, coverage and release exports |
+
+Dependencies run from utilities and the operational core toward the physical and empirical layers. Generic mathematics is independent of PU assumptions. A reviewed export contains the dependency closure of its accepted claims; an exploratory declaration remains outside that export until its semantic and proof reviews pass.
+
+### V.4.6 Claim registry and semantic freeze
+
+Before proof work, give every canonical declaration an immutable claim ID. A
+claim card should contain:
+
+- source version and file;
+- exact source span and text hash;
+- proposition label and title;
+- controlled-English statement;
+- domains, quantifiers, units and boundary cases;
+- examples and nonexamples;
+- Lean declaration name and exact proposition;
+- assumption tier and dependency IDs;
+- equivalence/strength relationship to the prose;
+- status: `untriaged`, `specified`, `assumed`, `proved`, `refuted`, `blocked`,
+  `conjecture`, `empirical`, or `interpretive`;
+- proof axiom report and model-field dependency report;
+- semantic reviewer and Lean reviewer; and
+- release in which the claim became stable.
+
+Definitions and axioms have versioned namespaces such as `PU.Core.V1`.
+Each semantic version has its own dependency closure, correspondence proofs and
+acceptance record. A coverage view is a projection of the canonical registry;
+its summaries inherit the definitions and hypotheses of the owning propositions.
+
+### V.4.7 Dependency-ordered theorem program
+
+### Package P0 — Foundation and finite utilities
+
+**Build:** finite types, finite functions, cardinality, finite distributions,
+scores, exact costs, equivalence relations, quotients, typed quantities, and
+basic graph structures.
+
+**Exit gate:** all definitions compile; foundational axiom allowlist is fixed;
+no PU assumption has entered yet.
+
+### Package P1 — Operational response core
+
+**Build:** protocols, histories, outcomes, predictors, verification records,
+updates, response tables, protocol-relative equivalence, response-null
+quotients, and the finite predictive loop.
+
+**Prove:** equivalence laws; quotient well-definedness; retained-response
+invariance; finite compatible-lift classifiers; and exact response transport.
+The operational response package includes Definition 5a,
+Proposition 5a, Corollary 5a.1, and the finite response-table results 5a.2–5a.3
+under their exact registered statements.
+
+**Exit gate:** at least two nonisomorphic finite examples and one
+response-equivalent pair are constructed.
+
+### Package P2 — Finite PCE and selection
+
+**Build:** explicit admissible comparison classes, benefit/cost ledgers, PCE
+objectives, minimizers, strict gaps, and resource budgets.
+
+**Prove:** finite minimizer existence; quotient descent; strict-gap uniqueness;
+bounded integer stabilization; finite hierarchy/common-realizer results; and
+the two-model nonentailment schema.
+
+**Boundary:** PCE as a law of physical adaptation remains a model assumption.
+
+### Package P3 — SPAP
+
+**Build:** same-cycle prediction, live target, verifier, Boolean complement,
+trace-indexed challenge, and scope restrictions.
+
+**Prove:** deterministic diagonal obstruction; explicitly scoped probabilistic
+or score bounds where formal premises suffice; unfolded finite self-containment
+obstruction; and countermodels outside the live-diagonal scope.
+
+**Exit gate:** every use of self-reference has a precise level/encoding and no
+object-language/meta-language collapse.
+
+Start with the finite Boolean diagonal result corresponding most closely to
+Theorem 10a and Corollary 10a.1, then add Theorems 10–11 as scoped operational
+wrappers. Keep any convex invariant-completion or physical realization premise
+as a separate branch hypothesis.
+
+### Package P4 — Horizon Constant vertical slice
+
+**Build:** prediction, verification and update role registers; full-context
+readout; visited-state carrier; and log-cardinality complexity.
+
+**Prove:** a surjection to `Bool × Bool × Bool` requires at least eight visited
+states; construct an explicit eight-state realization; derive the registered
+`K0 = 3` result; formalize assumption-ablation/countermodel cases.
+
+The minimal lemma should expose that full-context surjectivity supplies the
+eight-state cardinality lower bound. Theorem 15's `(O1)`–`(O3)` assumptions
+belong in the broader architecture/interpretation wrapper, not in the minimal
+cardinality lemma. Formalize the stated finite census—16 injective and 4
+full-cycle architectures where the frozen definitions support those counts—and
+the six-state failure-of-full-context counterexample. Keep Theorem 15(3)'s
+stationary-ergodic/Birkhoff branch separate; begin that later with a finite
+irreducible Markov specialization.
+
+**Exit gate:** `Nonempty PUCoreModel`, a nondegenerate eight-state model, and
+zero-placeholder proofs of the SPAP/Horizon slice.
+
+An initial aggregate theorem may have the following shape, with each branch
+record narrow and explicit:
+
+The vertical slice joins three separately proved conclusions: a diagonal-closure model has no universally perfect predictor on its admitted class; a full-context three-role branch visits at least eight states and therefore requires at least three bits of binary encoding capacity; and an exact finite PCE selection branch selects its stated eight-state representative. The conjunction retains the three premise packages explicitly.
+
+### Package P5 — Typed discrete backbone
+
+**Prove conditionally and separately:**
+
+- perfect distinguishability gives `d0 ≥ 8`;
+- the declared minimality/comparator branch gives `d0 = 8`;
+- the active binary/no-surplus branch gives `a = 2` and `b = 6`;
+- Peirce/Grassmannian dimensions give tangent dimension `12` and real mode
+  count `M = 24`;
+- the self-dual code-rate branch gives code dimension `k = 12`; and
+- the mode-cell/least-feasible branch gives Euclidean carrier `D = 4`.
+
+**Exit gate:** no type conflation and no presentation of the conjunction as one
+unconditional implication chain.
+
+### Package P6 — Golay, Steiner and finite audits
+
+**Prove:** the displayed binary generator has rank 12, self-orthogonality,
+minimum distance 8 and weight enumerator `(1,759,2576,759,1)`; radius-3
+recovery; 759 octads; incidence values `(759,253,77,21,5,1)`; relevant matroid
+and syndrome facts; the Appendix-V SPAP readout, Page-purity, McKay/Bures,
+zero-residual and seven-target exact audits.
+
+**Method:** large computations should emit compact proof certificates checked
+by a small Lean verifier. Any non-kernel evaluator must appear in the axiom and
+trust report.
+
+Maintain two trust profiles: a strict kernel profile for public core theorems,
+and a separately labeled computational profile if a large census requires a
+native evaluator. Prefer kernel-reduced decisions, exact tactics, or compact
+certificates. Do not allow a fast evaluator to enter the strict profile merely
+because its result is convenient.
+
+### Package P7 — Finite quantum and information theory
+
+**Build:** finite-dimensional complex spaces, density matrices, effects,
+instruments, channels, Choi matrices, retained perspectives and process
+tensors.
+
+**Prove:** CPTP closure under the declared preparation/spectator assumptions;
+finite informationally complete reconstruction; the conditional Born trace
+representation on its exact domain; no-signaling of local CPTP maps; finite
+capacity distinctions; memory/process-tensor facts; and perspective-import
+typing results.
+
+**Exit gate:** SPAP is not used as a hidden stochasticity axiom, and the full
+Born theorem is separated from the finite informationally complete route.
+
+### Package P8 — Dynamics, thermodynamics and networks
+
+**Build/prove:** RID transition systems, finite Markov chains, Lyapunov and
+stability results, data processing, structural versus reset entropy,
+conditional Landauer inequalities, finite QEC, max-flow/min-cut, entropy cones,
+Hodge decomposition, and finite recovery/locality theorems.
+
+**Boundary:** physical heat, bath temperature and stress-energy identification
+remain explicit realization assumptions.
+
+### Package P9 — Geometry and continuum bridge
+
+Proceed in subpackages: discrete graph regularity; finite causal order;
+metric reconstruction; variational convergence; RCD/noncollapse; Lorentzian
+promotion. Each analytic bridge must have an explicit theorem statement and,
+where claimed, a model witnessing that its premises can coexist.
+
+**Go/no-go review:** perform a library-gap and staffing review before starting
+Gamma/Mosco, Gromov--Hausdorff, RCD or Lorentzian reconstruction work.
+
+### Package P10 — AQFT and gravity
+
+Formalize local nets, controlled generator convergence, KMS/Clausius branches,
+modular theory, stress-energy construction, area-law inputs and the conditional
+Einstein-equation implication.
+
+**Exit gate:** no theorem may call the result “emergent gravity” unless the
+finite-to-continuum, state, horizon, entropy-normalization and source branches
+are all visible in its signature.
+
+### Package P11 — Gauge, matter and phenomenology
+
+Formalize finite gauge-block and anomaly arithmetic first. Treat Lie/tensor
+reconstruction, chiral/index results, electroweak thresholds, flavor,
+baryogenesis, strong CP, cosmology, dark response and consciousness-related
+models as independent branch packages.
+
+**Exit gate:** a numerical coincidence or shared integer never substitutes for
+a map, realization theorem, normalization, RG route, or empirical certificate.
+
+### Package P12 — Certified numerics and empirical interface
+
+Use exact arithmetic or proved directed-rounding intervals for alpha,
+electroweak, cosmological and other numerical rows. Separate derived inputs,
+calibrations, fitted values, held-out validation values and measurements.
+
+**Exit gate:** no measured value is used upstream and later advertised as a
+prediction; every comparison has units, provenance, covariance and a frozen
+decision rule.
+
+### Package P13 — Global integration
+
+Construct the strongest available intersection model of retained branches,
+prove overlap compatibility, and test categoricity. If two models satisfy the
+same core while selecting different response classes, report formal
+noncategoricity rather than hiding it.
+
+### V.4.8 Twelve-week pilot
+
+This pilot measures real proof velocity before committing to a multi-year
+estimate.
+
+| Weeks | Work | Deliverable |
+|---:|---|---|
+| 1–2 | Charter, source freeze, status taxonomy, first 20–30 claim cards | Versioned scope and registry pilot |
+| 3 | Pin the toolchain and verify build and logical dependency layers | Reproducible baseline and initial finite model |
+| 4 | Define finite protocol, response, predictor and update primitives | P0/P1 formal specifications |
+| 5–6 | Response equivalence, quotient and finite PCE lemmas | First reusable theorem library |
+| 7–8 | Deterministic SPAP statement engineering and proof | Reviewed SPAP theorem plus scope counterexamples |
+| 9–10 | Three-role cardinality and explicit eight-state construction | `K0 = 3`, `Nvis = 8` vertical slice |
+| 11 | Extend the early model witness to the pilot branch intersection; run ablations | Relative-consistency/nonvacuity milestone |
+| 12 | Independent proof/semantic audit and backlog re-estimation | Pilot release and scale/no-scale decision |
+
+### Pilot success criteria
+
+- 20–30 representative source claims classified and semantically approved;
+- one explicit nondegenerate finite core model;
+- deterministic SPAP and Horizon results proved without placeholders;
+- every exported theorem has an expected axiom/model-field report;
+- no hidden conclusion-equivalent assumption;
+- at least one useful countermodel or assumption-ablation result;
+- a measured estimate of small/medium/large theorem throughput; and
+- a protocol for tracking source-to-formal discrepancies and their affected dependencies.
+
+### Weekly review agenda
+
+A weekly pilot checkpoint uses the following review agenda:
+
+- summarize progress against the pilot and release milestones;
+- record completed theorem packages and claim-status changes;
+- identify current proof, specification, tooling and staffing blockers;
+- list every newly introduced, removed or modified assumption;
+- flag circularity, vacuity, model-existence and semantic-drift risks;
+- verify that empirical inputs have not entered the deductive core;
+- identify the highest-priority dependency-closed theorem batch; and
+- assign concrete next actions for the following week.
+
+The weekly checkpoint should report counts for claims specified, proved,
+conditionally proved, refuted, blocked and awaiting semantic review. It should
+also record whether the latest verified build, axiom report, model-field
+dependency report and nonvacuity checks pass. Any failed mandatory gate becomes
+a blocker rather than being carried forward silently.
+
+### V.4.9 Continuous workflow for each theorem batch
+
+1. **Select:** choose a dependency-closed batch of 5–10 claims.
+2. **Specify:** create claim cards, examples, nonexamples and boundary cases.
+3. **Check semantics:** the PU semantic reviewer checks the controlled-English
+   and Lean propositions before proof work.
+4. **Model:** construct an instance or countermodel for nonvacuity and premise
+   testing where practical.
+5. **Prove or refute:** formalize the theorem, identify a missing assumption, or
+   produce a counterexample.
+6. **Audit:** run build, placeholder, axiom, dependency, import-layer and
+   numeric-certificate checks.
+7. **Review:** obtain both Lean-proof review and independent semantic/domain
+   review.
+8. **Integrate:** bind the accepted proposition, its evidence class and dependencies in one registry record.
+9. **Release:** publish only dependency-closed, reviewed theorem packages.
+
+### V.4.10 Quality gates
+
+Every release must enforce:
+
+- pinned Lean and mathematical-library revisions;
+- clean reproducible builds;
+- zero `sorry`, `admit`, `sorryAx`, or equivalent proof placeholders;
+- no undeclared global axioms or unsafe proof escapes;
+- an axiom report for every exported theorem;
+- a separate report of the `PUModel` and branch fields used by every theorem;
+- a checked, acyclic claim dependency graph;
+- forbidden upward imports between assumption tiers;
+- exact arithmetic or proved interval bounds for numerical conclusions;
+- kernel-checked certificates for external search/SAT computations;
+- complete traceability from canonical source claim to Lean declaration;
+- explicit nonvacuity for major branch packages; and
+- no orphaned declarations or undocumented semantic changes.
+
+The strict public profile should reject undeclared evaluator axioms and unsafe
+escapes. If a mechanism such as native evaluation expands the trusted base, its
+use must be isolated, declared, and absent from strict-profile exports unless
+the project explicitly approves that trust tradeoff.
+
+Because structure fields appear as hypotheses rather than Lean global axioms,
+an ordinary axiom report is not enough. The project must generate both the Lean
+axiom report and the PU model-field dependency report.
+
+### V.4.11 Review and governance
+
+### Roles
+
+| Role | Responsibility |
+|---|---|
+| PU semantic reviewer | Checks intended semantics, branch boundaries and source-to-formal correspondence |
+| Formalization lead | Owns architecture, coding standards, dependency discipline and releases |
+| Lean formalizers | Specify and prove assigned packages; construct countermodels |
+| Mathematical physicist/domain reviewer | Checks fidelity and physical/mathematical assumptions |
+| Independent Lean reviewer | Reviews proof robustness and trust boundary |
+| Reproducibility reviewer | Audits numerics, certificates, CI and release artifacts |
+
+Each definition or axiom version carries an independent semantic review and a
+dependency-impact record. Theorem acceptance requires both proof review and
+semantic review. Reserve approximately 15–20% of total effort for
+independent review and adversarial searches for vacuity, hidden assumptions,
+unit errors and counterexamples.
+
+### V.4.12 Risks and mandatory responses
+
+| Risk | Detection | Required response |
+|---|---|---|
+| Proving the wrong formal statement | Source/Lean mismatch in semantic review | Correct the statement and invalidate downstream status |
+| Model-existence obligation | A model is not yet constructed, or a contradiction is proved | Record an open existence obligation separately from a proof of emptiness; develop a witness, countermodel or repaired branch |
+| Conceptual circularity | Assumption restates conclusion under new terminology | Downgrade conclusion to assumption or redesign branch |
+| Semantic drift | Definition changed to rescue a proof | RFC, major namespace/version change and full impact review |
+| Type conflation | Equal integers imported as physical identifications | Introduce distinct types and demand an explicit bridge |
+| Finite/continuum conflation | Finite approximation presented as continuum ontology | Separate approximation and reconstruction theorems |
+| Untrusted computation | Floating-point/log-only or opaque search result | Replace with exact proof or checked certificate/interval |
+| Empirical circularity | Validation target used to choose model inputs | Reclassify as fit; design a prospective held-out test |
+| Library gap | Required theory absent or immature | Build a reusable prerequisite library or defer the branch |
+| Scope explosion | Theorem count grows faster than proof throughput | Prioritize dependency-central claims and merge duplicate consequences |
+
+### Branch Acceptance Conditions
+
+A branch remains outside the accepted export while any of the following holds:
+
+- its nondegenerate model witness is absent, with an open existence problem and a proved empty model class recorded separately;
+- a headline theorem requires an assumption equivalent to its conclusion;
+- unresolved dependency cycles remain;
+- axioms proliferate faster than derived consequences;
+- the formal and source statements have an unrecorded difference in logical strength;
+- numerical results depend on uncertified floating-point computation;
+- a physical claim has no distinct falsifiable observable; or
+- projected work exceeds the scientific value of the branch.
+
+A counterexample or failed derivation is a successful formalization result. It
+improves the theory by locating its exact boundary.
+
+### V.4.13 Staffing and realistic scale
+
+The twelve-week pilot measures proof and review throughput. The following
+allocation ranges are prospective planning parameters, recalibrated from those
+measurements:
+
+| Stage | Indicative effort | Scale decision |
+|---|---:|---|
+| Charter and registry pilot | 4–6 weeks | Continue if semantic review converges |
+| Core semantics and explicit model | 2–3 months | Continue if a nondegenerate model exists |
+| SPAP/Horizon finite vertical slice | 3–6 months | Continue if central results survive formalization |
+| Finite core, combinatorics, channels and audits | 9–18 additional months | Scale based on pilot theorem velocity |
+| Continuum, AQFT, gravity and full phenomenology | 2–5+ years | Start sector-by-sector after library/staffing reviews |
+
+One allocation scenario uses 2–4 Lean formalizers, one mathematical physicist,
+a PU semantic reviewer and part-time independent and reproducibility reviewers.
+A single-researcher scenario prioritizes the finite core; the continuum and
+phenomenology packages use the separate resource estimates in the table.
+
+### V.4.14 Release milestones
+
+### `PU-Lean 0.1` — Finite core
+
+- formalization charter and first claim registry;
+- operational response model and finite PCE library;
+- explicit `Nonempty PUCoreModel` witness;
+- deterministic SPAP;
+- three-role/eight-state Horizon result;
+- clean axiom and model-field reports.
+
+### `PU-Lean 0.2` — Discrete backbone
+
+- typed `d0/a/b/M/k/D` branch ledger;
+- Golay/Steiner certificate suite;
+- 24-cell and finite geometry results;
+- Appendix-V exact audits.
+
+### `PU-Lean 0.3` — Quantum operational core
+
+- finite states/effects/channels;
+- CPTP and no-signaling results;
+- informationally complete and conditional Born representation routes;
+- perspectival record calculus and process tensors.
+
+### `PU-Lean 0.4` — Dynamics and thermodynamics
+
+- RID, finite stability and information theory;
+- structural/reset entropy separation;
+- finite QEC, network flow and recovery results.
+
+### `PU-Lean 1.0` — Core formal theory
+
+- 100% classification of canonical core claims;
+- all retained core theorems checked;
+- branch nonvacuity and compatibility report;
+- explicit list of conjectures, counterexamples and physical assumptions;
+- machine-generated formal dependency graph.
+
+Later sector releases should cover continuum/AQFT/gravity, gauge/matter,
+phenomenology and certified empirical interfaces independently rather than
+holding the core release hostage to every research-scale branch.
+
+### V.4.15 Immediate next actions
+
+1. Register the claim set and separate coverage and proof criteria for “verified.”
+2. Fix the source definitions, proposition inventory and hashes for `PU.Core.V1`.
+3. Select the initial 20–30 claims from Chapters 2–5 and Appendix A.
+4. Write controlled-English claim cards for Axioms 1–3, Definitions 4–8,
+   SPAP Theorems 10–11, and the Horizon results.
+5. Decide the approved foundational axiom policy and mathematical-library pin.
+6. Validate the pinned build, premise reports and dependency checks against the existing formalized component.
+7. In the first sprint, define `ResponseSystem`, response equivalence,
+   `FullContext`, and an explicit cube/eight-state architecture.
+8. Prove response equivalence, `FullContext.card_ge_eight`, the
+   Theorem-15 operational statement, and one failed-full-context countermodel.
+9. Formalize P0/P1 and construct the first finite model.
+10. Complete the twelve-week pilot before committing to the full scale.
+
+The first deliverable is a finite nondegenerate model with explicit assumptions and exact SPAP and Horizon statements. The pilot measures proof and review throughput before scaling.

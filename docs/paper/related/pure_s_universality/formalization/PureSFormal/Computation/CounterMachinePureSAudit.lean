@@ -1,0 +1,12 @@
+import PureSFormal.Computation.CounterMachinePureS
+
+/-! Exact logical-basis audit for the final parameterized composition. -/
+
+#print axioms PureSFormal.Computation.CounterMachinePureS.universalAccepts_iff_pureSEvent
+#print axioms PureSFormal.Computation.CounterMachinePureS.universalAccepts_iff_pureSTermEvent
+#print axioms PureSFormal.Computation.CounterMachinePureS.pureSControllerEvent_sigmaOneComplete
+#print axioms PureSFormal.Computation.CounterMachinePureS.pureSTermEvent_sigmaOneComplete
+#print axioms PureSFormal.Computation.CounterMachinePureS.universalAccepts_iff_pureSMarkedSnapshotEvent
+#print axioms PureSFormal.Computation.CounterMachinePureS.universalAccepts_iff_pureSMarkedSnapshotTermEvent
+#print axioms PureSFormal.Computation.CounterMachinePureS.pureSMarkedSnapshotControllerEvent_sigmaOneComplete
+#print axioms PureSFormal.Computation.CounterMachinePureS.pureSMarkedSnapshotTermEvent_sigmaOneComplete

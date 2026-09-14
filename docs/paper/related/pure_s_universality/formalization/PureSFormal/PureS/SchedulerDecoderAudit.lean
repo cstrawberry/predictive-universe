@@ -1,0 +1,6 @@
+import PureSFormal.PureS.SchedulerDecoder
+
+#print axioms PureSFormal.PureS.SchedulerInvariant.EventEvidence.publicAcceptsOnly
+#print axioms PureSFormal.PureS.SchedulerInvariant.SampledGood.contractionRun_publicAcceptsOnly
+#print axioms PureSFormal.PureS.SchedulerInvariant.SampledGood.controllerCertificate
+#print axioms PureSFormal.PureS.SchedulerInvariant.SampledGood.uniformCertificate

@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetScopedCarrierWorker
+
+#print axioms PureSFormal.Research.RootResetScopedCarrierWorker.pending_runs
+#print axioms PureSFormal.Research.RootResetScopedCarrierWorker.restoring
+#print axioms PureSFormal.Research.RootResetScopedCarrierWorker.readOnly
+#print axioms PureSFormal.Research.RootResetScopedCarrierWorker.terminal_stay

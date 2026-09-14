@@ -1,0 +1,27 @@
+import PureSFormal.WeakPathUniversalityExclusion
+
+/-! Kernel-axiom audit for global boundary classification and exclusion. -/
+
+open PureSFormal.WeakPathUniversality
+
+#print axioms fixedRegisteredPath?
+#print axioms fixedRegisteredPath?_isSome_iff_running
+#print axioms fixedRegisteredPath?_tagSteps_strict
+#print axioms arrivalReadable_run_classified_by_fixedRegisteredPath
+#print axioms passDecode?_positive_notArrivalReadable
+#print axioms passDecode?_positive_notArrivalReadable_of_data
+#print axioms passDecode?_unaligned_relative_none
+#print axioms passDecode?_certifiedHalt_after_none
+#print axioms passDecode?_haltedBoundary_positiveMacro_none
+#print axioms fixedRogozhinPassDecoder_none_after_haltedPath
+#print axioms fixedPathAtBound_or_haltingPathBelow
+#print axioms fixedRogozhinPassDecoder_some_classified_before_path
+#print axioms fixedRogozhinPassDecoder_some_only_at_fixedRegisteredBoundary
+#print axioms fixedRogozhinPassDecoder_at_fixedRegisteredBoundary
+#print axioms fixedRogozhinPassDecoder_some_iff_fixedRegisteredBoundary
+#print axioms fixedRogozhinPassDecoder_none_iff_no_fixedRegisteredBoundary
+#print axioms fixedRegisteredBoundary_machineSteps_unique
+#print axioms fixedRogozhinPassDecoder_some_iff_existsUnique_machineSteps
+#print axioms fixedRogozhinBareTermDecoder_some_decompose
+#print axioms fixedRogozhinBareTermDecoder_run_some_iff_fixedRegisteredBoundary
+#print axioms fixedRogozhinBareTermDecoder_run_none_iff_no_fixedRegisteredBoundary

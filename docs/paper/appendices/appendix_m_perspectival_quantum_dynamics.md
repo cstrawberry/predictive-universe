@@ -715,6 +715,58 @@ which gives the third and sixth edges in (M.6.2c.3). The absent $|\bar h\rangle|
 
 **Remark M.6.2.** The PU resolution does not reject any of (Q), (S), (C) outright. Rather, it refines (C): reasoning about others' observations is valid, but only when the perspective context is properly specified. Cross-perspective reasoning requires either explicit interaction (which correlates perspectives) or careful restriction to statements that are perspective-invariant.
 
+### M.6.4a Composable Tolerance Budgets for Certificate-Scoped Imports
+
+**Definition M.6.2d (Registered Tolerance Maps).** A tolerance map is a monotone function $f:[0,\infty]\to[0,\infty]$ with $f(u)\ge u$. A certified unary inference carrying $f$ turns a premise uncertainty bound $u$ into the conclusion bound $f(u)$ in the same registered units. Exact local inferences and perspective-invariance certificates carry identity; record-sharing certificates carry their registered channel bounds. The constant $\top(u)=\infty$ records an unbounded tolerance. In derivation order,
+$$
+f\triangleright g=g\circ f,\qquad
+\langle A_1,c_1\rangle\triangleright\langle A_2,c_2\rangle
+=\langle A_1A_2,c_1A_2+c_2\rangle,
+\tag{M.6.2d.1}
+$$
+where $\langle A,c\rangle(u)=Au+c$, $A\ge1$, $c\ge0$.
+
+**Lemma M.6.2e (Composition on Unary Derivations).** The ordered composition $w_\pi$ of the maps along a well-typed unary path $\pi$ bounds its conclusion uncertainty. Composition is associative, has identity, and an inserted inference cannot decrease the bound. Every cross-perspective link carries the certificate required by Lemma M.6.2a. Multi-premise inferences require a monotone bound on their full tuple of premise uncertainties, or a registered scalar reduction including every side premise.
+
+*Proof.* Induction on path length applies each link certificate to the preceding bound. Associativity and identity are those of function composition. For a prefix $p$, inserted inflationary map $c$, and monotone suffix $q$, $q(c(p(u)))\ge q(p(u))$. The import normal form supplies each cross-perspective certificate. ∎
+
+**Definition M.6.2f (Closed Tolerance).** On a finite directed graph of records with finitely many registered unary rule instances, put
+$$
+D_{xy}(u)=\inf_{\pi:x\to y}w_\pi(u),
+$$
+with value $\infty$ when no path exists.
+
+**Proposition M.6.2g (Pointwise Attainment and Triangle Law).** Every finite value is attained at each fixed $u$ by a path without repeated records. Moreover $D_{xx}(u)=u$ and
+$$
+D_{xz}(u)\le D_{yz}(D_{xy}(u)).
+$$
+For translations, $d(x,y)=D_{xy}(0)$ is a directed extended distance. If every valid link carries identity, $D_{xy}=\mathrm{id}$ exactly when $y$ is derivable from $x$; otherwise it is $\top$.
+
+*Proof.* Delete cycles using Lemma M.6.2e's prefix-cycle-suffix inequality. A finite graph has finitely many simple paths, so their pointwise minimum is attained. The empty path and inflationarity give identity. Concatenate a path minimizing at $u$ with one minimizing at the resulting intermediate bound to obtain the triangle law. Translations compose by addition. Identity-labelled paths have identity weight, proving the final claim. ∎
+
+A minimizing path can depend on $u$: the paths with weights $u+10$ and $2u$ exchange optimality at $u=10$. A well-typed path containing $\top$ remains derivable and carries an unbounded budget.
+
+**Corollary M.6.2h (Certified Acceptance Horizon).** For an affine path of $N$ links,
+$$
+w_\pi(u_0)=u_0\prod_kA_k+\sum_kc_k\prod_{j>k}A_j.
+$$
+If $A_k\le e^{\lambda\tau_k}$, $c_k\le\delta$, $\lambda\ge0$, $\tau_k\ge0$, and $T=\sum_k\tau_k$, then
+$$
+w_\pi(u_0)\le e^{\lambda T}(u_0+N\delta).
+$$
+Thus $e^{\lambda T}(u_0+N\delta)\le B$ suffices for acceptance under budget $B$. For $\lambda>0$ and $u_0+N\delta>0$, this sufficient criterion is
+$$
+T\le\lambda^{-1}\ln\frac{B}{u_0+N\delta}.
+\tag{M.6.2h.1}
+$$
+A necessary bound follows under the different lower-amplification premise $\prod_kA_k\ge e^{\lambda T}$ with $u_0,\lambda>0$: acceptance implies $T\le\lambda^{-1}\ln(B/u_0)$.
+
+*Proof.* Repeated affine composition gives the exact formula. Bound every product by $e^{\lambda T}$ to obtain the upper estimate. For the necessary bound discard the nonnegative additive terms and use the lower product estimate. If $\lambda=0$, the sufficient condition is $u_0+N\delta\le B$; if $u_0+N\delta=0$, the upper bound is zero for every finite $T$. ∎
+
+**Remark M.6.2i (Orbit-Averaging Handoff Test).** A classical comparison can register a finite three-body trajectory, a fine integrator, an orbit-averaged surrogate, a fast-phase uncertainty at handoff, and certified tolerance maps for every transition. Compare uninterrupted fine integration, immediate averaging, and delayed averaging at the same terminal observables and cost. Report the composed bound, measured error, and actual budget decisions. This tests whether the lost phase and subsequent amplification explain an order effect. Application to an Evolve channel uses that channel's own tolerance certificate.
+
+**Perspective Occupancy and Record Import.** Thesis P.2.3.1 describes the realized registration at a perspective as its occupancy. In the Wigner–friend setting, the friend's record event occurs at the friend's perspective; Wigner's later access is a separate readout with the interaction certificate of Definition M.6.2. The occupancy interpretation and the composable import budgets answer complementary questions: what is registered at each perspective, and what another perspective can infer with a specified tolerance. The import calculus derives its conclusions from the stated record-sharing certificates.
+
 ### M.6.5 Distinction from Relational Quantum Mechanics
 
 The PU resolution bears surface similarity to Rovelli's Relational Quantum Mechanics (RQM) [Rovelli 1996], which also holds that quantum states are relative to observers. However, fundamental differences exist:

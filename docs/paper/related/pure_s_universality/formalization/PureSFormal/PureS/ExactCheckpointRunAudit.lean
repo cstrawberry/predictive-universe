@@ -1,0 +1,6 @@
+import PureSFormal.PureS.ExactCheckpointRun
+
+#print axioms PureSFormal.PureS.ExactCheckpointRun.completeJob
+#print axioms PureSFormal.PureS.ExactCheckpointRun.completeStage
+#print axioms PureSFormal.PureS.ExactCheckpointRun.checkpointTime_strictlyIncreasing
+#print axioms PureSFormal.PureS.ExactCheckpointRun.completePositivePrefix

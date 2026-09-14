@@ -1,0 +1,5 @@
+import PureSFormal.CostModel.PointerWordCost
+
+#print axioms PureSFormal.CostModel.FiniteArena.retainedCard_pos
+#print axioms PureSFormal.CostModel.FiniteArena.pointerIndex_lt_pointerCapacity
+#print axioms PureSFormal.CostModel.FiniteArena.pointerWordCertificate

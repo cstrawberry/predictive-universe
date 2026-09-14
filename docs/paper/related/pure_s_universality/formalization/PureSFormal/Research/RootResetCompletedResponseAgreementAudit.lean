@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetCompletedResponseAgreement
+#print axioms PureSFormal.Research.RootResetCompletedResponseAgreement.pending_c4
+#print axioms PureSFormal.Research.RootResetCompletedResponseAgreement.pending_handoff
+#print axioms PureSFormal.Research.RootResetCompletedResponseAgreement.nonpending_commit
+#print axioms PureSFormal.Research.RootResetCompletedResponseAgreement.pending_commit
+#print axioms PureSFormal.Research.RootResetCompletedResponseAgreement.nonpending_nonempty_rejected
+#print axioms PureSFormal.Research.RootResetCompletedResponseAgreement.rejected_notFresh

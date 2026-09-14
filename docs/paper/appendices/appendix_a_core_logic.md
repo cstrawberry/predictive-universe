@@ -10,7 +10,7 @@ Two routes provide the abilities needed for self-reference. One builds them in a
 
 The **Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1.1, A.1.3)** and **Reflexive Undecidability (RUD, Theorems A.2.3, A.2.4)** apply to predictive systems possessing the computational subcapacities collected under **Property R** (Definition 10). This appendix gives two conditional routes:
 
-*   **Foundation I: Logical construction (§A.0.2)** — Composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic representing bounded computations yield Property R for the resulting uniform predictive model class.
+*   **Foundation I: Logical construction (§A.0.2)** — Composition closure, logical memory, uniform specification, arbitrarily large finite memory and composition depth, and a formal arithmetic representing bounded computations yield Property R for the resulting uniform predictive model class. Theorem A.0.1 supplies the uniform circuit/Turing-simulation route. Corollary 2a states the source-trace interface under which the companion pure-$\mathbf S$ construction realizes Proposition 2(ii)'s interpreter clause, while Appendix A.4 supplies bounded self-referential verifier presentations.
 *   **Foundation II: Physical instantiation (§A.0.3–A.0.5)** — On a refresh-branch MPU implementation carrying an accepted QEC compatibility certificate or Golay-QEC bootstrap record, Dominant Cost Convexity, a universal protected gate ledger, and sufficient working-memory and execution resources:
     1. individual MPUs supply the minimal registered carrier capacity;
     2. the certified optimization branch selects a finite protected error rate;
@@ -170,6 +170,118 @@ $$
 so it realizes the basis of Proposition A.0.2 and proves item 3. Without composition, a primitive two-input gate has no path of length two and hence cannot depend essentially on three inputs; three-input parity supplies the claimed explicit missing transition function and proves item 4. For item 5, take $T$ disjoint copies of the next-configuration circuit and wire the output of layer $t$ to the input of layer $t+1$; the resulting finite directed acyclic circuit has no state retained across execution cycles. A sequential evaluator of the same graph must retain the current configuration and intermediate gates, giving the stated boundary.
 
 For item 6, compute from $(\ulcorner M\urcorner,T)$ the finite truth table of the bounded transition simulation, enumerate composed circuits over the fixed basis by increasing size and lexicographic code, and compare their finite truth tables. Functional completeness guarantees a match, so the search halts and returns a uniform compiler. Conversely, effective coding/decoding, a universal finite gate basis, and unrestricted finite composition reproduce every step of Theorem A.0.1 and Corollary A.0.1. Removing coding destroys representation; replacing unrestricted composition by a uniform size or depth cap excludes the parity family by the $ks$ or $k^d$ bound, and removing composition altogether already excludes three-input parity; removing gate universality excludes at least one finite Boolean transition function. Each of the three package members is therefore indispensable, proving item 7 and the asserted irredundancy for this route. ∎
+
+**Remark A.0.1b (Selected-Rewrite Route to the Interpreter Component).** Corollaries 2a--2b realize Proposition 2(ii) using the fixed root-restarted controller and exact source-output interfaces of the Pure-S universality theorem. Corollary 2a uses an intermediate source-trace map; Corollary 2b constructs bounded trace answers through terminating output queries. The selected-computation and persistent-history constructions are developed below, with their separate observation and resource bounds. Coding, finite composition, Boolean closure, arithmetic representation, logical memory and diagonal closure supply the remaining Property-R capabilities on their declared model class. A physical predictive-cycle realization supplies the response, resource and reliability maps for those operations.
+
+#### Conditional Pure-$\mathbf S$ Weak-Path Interpreter Realization
+
+Corollary 2a combines Theorem 1R and the supporting Theorems 1--2 of Cinematic Strawberry (2026) with the model class's source-trace interface
+$$
+\mathcal O_{\mathbf S}
+=
+\left(
+\operatorname{Enc}_{\mathrm{TM}},
+\mathsf{Term}_{\mathbf S},
+\to_{\mathbf S},
+\sigma,
+\operatorname{Dec}_{R}
+\right),
+\qquad
+\mathcal B_{\mathrm{src}}=(a,d).
+$$
+The effective encoder maps a source machine and input through the Rogozhin--Cook 912-phase deletion-one cyclic-tag endpoint to a closed pure-$\mathbf S$ term. Here $\sigma$ is the fixed root-restarted finite controller of Theorem 1R: each invocation begins at the root in the same control state, uses one temporary arbitrary-depth cursor, and returns after one contextual contraction or a report of normality. Only the current term is carried between invocations. On the encoded trajectory its contractions agree with those of the supporting persistent scheduler. The total bare-term decoder returns the fixed Rogozhin-machine trajectory through its first halt, or indefinitely when nonhalting; after a first halt, it rejects every later selected contraction. Its inner cyclic-tag decoder accepts the initial encoding at horizon zero and validates the positive-horizon checkpoints. For every finite source bound, $a$ identifies a finite decoded Rogozhin prefix and $d$ reconstructs the corresponding finite source trace, or the complete source prefix through an earlier halt. The controller is fixed after specialization to the endpoint and remains independent of the source machine and input. Each invocation on $T$ terminates within $K_U(|T|+1)$ microticks. Its finite control and temporary cursor representation have separate storage costs. The pair $(\mathcal O_{\mathbf S},\mathcal B_{\mathrm{src}})$ supplies Proposition 2(ii); Proposition 2(i), (iii), and (iv), logical memory, uniform diagonal closure, and physical realization retain their separate hypotheses.
+
+The source calculus also has exact syntactic ledgers. If $\ell(T)$ counts $\mathbf S$ leaves and $\nu_a(T)$ counts occurrences of an inert label or open variable $a$, one contraction with third argument $Z$ satisfies
+$$
+\ell(\text{contractum})-\ell(\text{redex})=\ell(Z)-1,
+\qquad
+\nu_a(\text{contractum})-\nu_a(\text{redex})=\nu_a(Z)\ge0.
+$$
+The leaf-count difference is nonnegative for ground pure-$\mathbf S$ $Z$, where $\ell(Z)\ge1$; the displayed equality remains the applicable open-term bookkeeping identity when inert labels are present.
+At the root of a displayed contractum, the abstract-syntax-tree map
+$$
+(X,Y,Z)\longmapsto(XZ)(YZ)
+$$
+is injective. Direct counting proves the two displayed identities; parsing the contractum's root and its two application children recovers $X$ and $Y$ as the left children and $Z$ as their common right child, proving injectivity. The bound
+$$
+|G_w|\le18|w|+6{,}103{,}901
+$$
+measures the already compiled binary cyclic-tag word $w$. Outer stage $n$ launches $n$ independent bound-$n$ jobs from the same seed. Lean derives from the exact recurrence a finite program-and-dispatcher coefficient $C_{A,\mathcal D}$ with $\tau_w(n)\le C_{A,\mathcal D}(n+1)^3$. For a contraction whose duplicated third argument is $Z$, Lean proves the exact balance $|T'|+1=|T|+|Z|$, so the node-count change is $|Z|-1$ and can be zero for $Z=\mathbf S$. It also proves the strict upper bound $|T'|<2|T|$ and composes the bounds to obtain
+$$
+|T_{\tau_w(n)}|
+\le 2^{C_{A,\mathcal D}(n+1)^3}|G_w|.
+$$
+Thus stage $n$ uses $O(n^2)$ contractions, the cumulative count is $O(n^3)$, and the term-size bound is $|G_w|2^{O(n^3)}$. The bare-term checkpoint decoder is a total structural algorithm on every finite occurrence tree. Lean proves that it equals the public literal readback and that each decoded snapshot satisfies the literal certificate. The current source's Theorems 1R and 3 give linear per-invocation controller bounds, quadratic measured checkpoint and detector bounds, and quartic complete source-output reading bounds. For a fixed cyclic-tag program $P$ with initial encoding $E_P(w)$ and $j$ selected contractions, the cumulative root-restarted invocation cost is at most $jK_P(2^j|E_P(w)|+1)$; the coefficient belongs to that controller. Shared-store representation, indexed access, allocation and physical elapsed time have the distinct ledgers developed in Section 7.4.4a.
+
+A response-preserving realization map into Theorem 15's $(\mathrm{O1})$--$(\mathrm{O3})$, $(\mathrm{FC})$ class is required before the visited operational roles can enter the $K_0$ ledger. The one-symbol syntax alphabet, tree size, scheduler state, reduction count, and retained inactive syntax do not by themselves determine $K_0$, $C_P$, $\langle\hat C_v\rangle$, $C_{op}$, physical work, heat, or entropy. On Theorem 31's registered-reset branch,
+$$
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+\ge H_q(P\mid R).
+$$
+If $R$ includes the retained term and every unchanged side record needed to reconstruct Definition 28's registered binary record $P$ deterministically, then $H_q(P\mid R)=0$; $P$ may be a declared binary quotient of navigation, history, or controller data. A positive uniform floor requires an independent bound $H_q(P\mid R)\ge h_{\min}>0$; equality with $k_BT\ln2$ requires $P$ to be conditionally uniform binary given the complete retained side record $R$ and requires zero excess dissipation.
+
+#### Selected Computation and Persistent Certificate Enumeration
+
+Theorem 1R of Cinematic Strawberry (2026) fixes the encoder, finite controller, literal readers and regular halting language before the source instance is supplied. Every invocation begins at the root of the current term and either reports normality or performs exactly one contextual $\mathbf S$-contraction. Its temporary control and cursor are reset between invocations. The persistent scheduler of Theorem 1 is the proof device whose contraction sequence the fresh-root controller reproduces. The complete source encoder is primitive recursive; literal source rows, terminal rows and returned bits have the source correspondences stated in Theorem 1R.
+
+Appendix F.1 of the companion gives the autonomous-component obstruction. If $D$ is a fixed finite term admitting an infinite reduction and $x\mapsto A_x$ is computable, no fixed regular tree language $L$ can satisfy
+$$
+\forall x\;\forall\rho\in\operatorname{MaxRuns}(DA_x),\qquad
+x\in\mathcal H\ \Longleftrightarrow\ \exists j\ge0\;[\rho_j\in L]
+$$
+for an undecidable source-halting set $\mathcal H$. Here a maximal path is infinite or ends in a normal form. A path may reduce only $D$, leaving the payload untouched. Along that path, eventual acceptance depends only on the payload's state in the finite observer and a fixed finite acceptance table, which would make $\mathcal H$ decidable. The literal outer-clock encoder $(C_0C_0)A_x$ has such an autonomous component, so the obstruction applies to its exact every-path halting requirement. The fixed controller of Theorem 1R supplies the selected path. The obstructing path can be unfair; the result makes no impossibility claim for all pure-$\mathbf S$ encodings or for every residual-fair policy.
+
+Theorem 5 supplies a complementary construction on the unrestricted reduction graph. For an explicit source instance $I$ with at most two ordered transition occurrences per configuration, write
+$$
+E_I:=\operatorname{strongEncoder}(I),\qquad
+\Pi_I(T):=\operatorname{strongProjection}(T),\qquad
+\Lambda_I(T):=\operatorname{runWholeLabelledObserver}(T).\mathsf{value}.
+$$
+The source is fixed in the encoder's frozen header. $\Pi_I(T)$ is a finite prefix-closed ideal of valid occurrence histories whenever $E_I\to_{\mathbf S}^*T$.
+
+The aggregate `protectedPersistentCertificateEnumeration` has eight fields: all-reduct permanence, decoded-range soundness, exact finite range, cofinal recovery, an embedded history tree, the observer boundary, source-transition agreement, and an address-complete adjacent-step path. In particular:
+$$
+E_I\to_{\mathbf S}^*T\to_{\mathbf S}^*U
+\quad\Longrightarrow\quad
+\Pi_I(T)\subseteq\Pi_I(U).
+$$
+Every finite valid history ideal has an exact reachable representative. From every finite reduct, every such ideal can be included in a further reduct while preserving the histories already present. Each valid history has a distinct checkpoint for its ancestor ideal; one-bit history extensions have nonempty simple target paths with disjoint interiors. The wrappers `allEdgeProtectedPathPersistence`, `protectedExactFiniteRange`, `protectedCofinalExtension` and `protectedDirectedSubdivision` expose these clauses separately.
+
+The declaration `addressCompleteAdjacentStepPath` gives one native-step path that eventually opens every protected address. Along this path, `termAt_eventually_labelledProjection` exposes every valid history as a labelled record. More generally, `ProtectedTrieFairness.StructurallyFair` is the explicit opening-obligation condition under which every valid history is eventually projected and labelled. The complete-prefix macro sequence satisfies it, and `finite_fairness_obligations_extendible` extends any finite list of those obligations from every reduct. Thus permanence applies to every reduction, while complete exposure uses a registered fairness condition or the constructed path.
+
+Across one target contraction, the new projected histories form an ancestor-ready finite batch: every proper prefix of a newly exposed history was already present or is a shorter member of the batch. The declarations `RankOrderedBatch` and `exists_rankOrderedBatch` make this order explicit. The state-merged configuration quotient, terminal-observation equivalences, and finite-branch source adapters retain their separate declarations; the occurrence history records which enabled slot was taken even when distinct histories end in the same source state.
+
+The total current-term observer parses literal records and checks adjacent tableau rows against the frozen source transition relation. The pure-$\mathbf S$ opening dynamics is source-independent. Its contribution is persistent candidate generation; the observer supplies transition validity. The theorem `wholeObserver_resource_certificate` bounds the observer on an unfolded term of size $N$ by $512(N+1)^5$ structural ticks, $512(N+1)^2$ peak structural units and $10(N+1)^2$ materialized output cells.
+
+The observer-boundary results explain the required access. A cone-wide sound and canonically complete observer decides each supplied canonical candidate by the source verifier, and a literal initial-source-step query reduces to that observation. Canonical completeness together with cone-wide literal provenance excludes every fixed-depth prefix observer: the accepted record can occur below the chosen depth. The frozen source can be recovered from every reduct, so encoded cones with different source instances are disjoint. These statements specify the source information and access consumed by the observer.
+
+**Confluence and Accumulating History Records.** Theorem 4 of the Pure-S companion gives the representation principle needed for branching. Suppose a source state $i$ reaches $\ell$ and $r$ with no common source continuation. A total single-valued decoder $d$ from a confluent target cone cannot simultaneously decode its seed as $i$, realize every source descendant, and carry target reachability into source reachability. Completeness would give representatives of $\ell$ and $r$; confluence would join them at a target $W$; soundness would make $d(W)$ a common source continuation. This proves the obstruction.
+
+Theorem 5 implements branching by retaining verified occurrence histories. For a fixed source $I$, let $\mathcal V_I$ be its set of valid finite histories and define
+$$
+\mathcal D_I
+=\{J\subseteq\mathcal V_I:
+       h\in J,\ g\preceq h\ \Longrightarrow\ g\in J\},
+\qquad J\le J'\ \Longleftrightarrow\ J\subseteq J'.
+$$
+Here a history ideal is prefix-closed; it may contain incompatible branch histories. Its interpretation is a record of verified alternatives.
+
+**Proposition (Finite Approximations and Compatible Accumulation).** Every directed family in $\mathcal D_I$ has its union as its least upper bound. Each finite history ideal is compact: if it is contained in the union of a directed family, it is already contained in one family member. Every $J\in\mathcal D_I$ is the directed union of its finite prefix-closed subsets. Thus the finite histories give an algebraic domain of accumulated records.
+
+The Pure-S projection realizes every finite member exactly. If $T$ and $U$ are reducts of the same $E_I$, a common reduct $W$ exists and satisfies
+$$
+\Pi_I(T)\cup\Pi_I(U)\subseteq\Pi_I(W).
+$$
+Along a structurally fair native path $(T_j)$,
+$$
+\bigcup_{j\ge0}\Pi_I(T_j)=\mathcal V_I.
+$$
+
+*Proof.* Unions preserve prefix closure and are least upper bounds under inclusion. For a finite ideal, choose one family member containing each of its finitely many histories; directedness supplies a member containing all of them. Finite prefix closures of finite subsets of $J$ form a directed family with union $J$. Theorem 5 supplies exact finite representatives. Confluence joins $T$ and $U$, and all-reduct permanence includes both projections in the join's projection. Soundness gives the inclusion of every projected history in $\mathcal V_I$; the companion's structural-fairness liveness theorem gives the reverse inclusion in the path union. ∎
+
+This construction supplies PU with a precise model of retained verification: finite current records accumulate compatible evidence about source alternatives, and a declared fair schedule eventually exposes every valid finite history. A branch probability is supplied by the policy and observation law of Section 7.4.4a. Predictive knowledge in Definition 2 additionally requires that an admissible procedure use the records to improve its registered task score; record inclusion by itself measures retained evidence.
+
+Corollary 2a imports the selected execution and source-trace interface for Proposition 2(ii); Corollary 2b constructs a further finite-trace interpreter by compiling terminating output queries. The unrestricted construction supplies persistent verification records. Section 7.4.4a develops stochastic observation and shared-store costs for these records; Section 14.5.6 develops a typed categorical interpretation of contextual rewriting.
 
 **Significance:** This derivation is independent of the Self-Referential Paradox of Accurate Prediction. Property R is established before SPAP is invoked, providing a non-circular foundation. The logical sequence is:
 
@@ -827,6 +939,7 @@ One route establishes the needed logical abilities from closure, memory, and sca
 *   **Derivation:** Binary retained decisions + Boolean composition + logical memory + uniform scalable resources + arithmetic coding → Property R
 *   **Status:** Conditional theorem, independent of any particular physical implementation
 *   **Significance:** Establishes Property R for exactly the predictive model classes satisfying the stated hypotheses
+*   **Concrete witnesses:** The companion pure-$\mathbf S$ operational object supplies exact fixed-universal-machine execution, and Corollary 2a supplies Proposition 2(ii)'s universal-interpreter entry when the stated effective source-trace interface is present; Appendix A.4's LITE construction supplies bounded self-referential verifier presentations. Full Property R and physical realization retain their additional owning hypotheses.
 
 **Foundation II (Physical Instantiation, §A.0.3-A.0.5):**
 *   **Source:** MPU framework under POP/PCE dynamics with ND-RID interactions
@@ -1283,7 +1396,7 @@ On a branch already carrying the protected universal-gate, memory, execution, an
 
 ### A.4.3 LITE's Instantiation of Property R Capabilities
 
-The LITE function $f$, constructed entirely within PA, explicitly demonstrates the core capabilities required by Property R (Definition 10):
+The LITE function $f$, constructed entirely within PA, explicitly demonstrates three bounded logical capabilities associated with Property R (Definition 10):
 
 1.  **Representation:**
     *   PA's Gödel numbering allows $f$ (via its index $\beta$) and statements *about* $f$ (the formula $ϕ_{\beta}(n)$) to be represented as natural numbers, manipulable arithmetically. This directly corresponds to Property R's requirement to encode system states (here, the function's definition via $\beta$) and models/predictions (the assertion $ϕ_{\beta}(n)$) as formal objects.
@@ -1311,6 +1424,8 @@ The construction shows that ordinary arithmetic can represent a total procedure 
 The LITE construction robustly demonstrates that standard Peano Arithmetic, a foundational system of mathematics, possesses sufficient richness to define total computable functions exhibiting dynamic, adaptive self-reference based on bounded internal "proof discovery." It formally shows that capabilities analogous to self-representation, bounded self-simulation/reasoning, and adaptive predicate evaluation—the core components of Property R—are not reliant on exotic computational models but can be realized within a well-understood arithmetical framework.
 
 MPUs are physical entities rather than abstract arithmetical functions. The LITE construction proves that a standard arithmetical framework can realize total computable functions with bounded adaptive self-reference. It therefore supplies an existence example for the logical form used in the later diagonal arguments. Physical realization by an MPU network is the separate conditional result of Theorem A.0.2 (Conditional Effective Property R at a Certified PCE Optimum), whose optimizer, robustness, QEC, protected-gate, memory, and execution certificates are not supplied by LITE. The PU resource quantities $C_P$, $R$, and $R_I$ may be compared with LITE's bounded proof-search function $g(n)$ only at this structural level.
+
+Cinematic Strawberry (2026), Theorem 1R and Theorems 1--3, supplies exact selected computation, literal source-output readback and a fixed regular halting endpoint. Corollary 2a gives the intermediate-trace route to Proposition 2(ii), while Corollary 2b constructs a finite-trace interpreter through terminating output queries and the implementing class's finite orchestration and scalable storage. Theorem A.4.1's LITE construction supplies bounded arithmetical self-reference and proof-conditioned branching. Theorem 5 in the same Pure-S paper proves that verified histories persist along every reduction and that one address-complete path eventually exposes every valid history. *Proof-Life*, Theorem PL.5, supplies typed finite verification for nominated bounded pure-$\mathbf S$ reachability targets. Proposition 2(i), (iii), and (iv), logical memory, uniform diagonal closure, and physical realization remain governed by their owning declarations.
 
 ## A.5 Trace-Certified Diagonal Transcripts and Live-Challenge Scope
 

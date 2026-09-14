@@ -1,0 +1,10 @@
+import PureSFormal.EvaluatorBounds
+
+#print axioms PureSFormal.EvaluatorBounds.withoutContraction
+#print axioms PureSFormal.EvaluatorBounds.withoutContraction_mutationCount_zero
+#print axioms PureSFormal.EvaluatorBounds.withoutContraction_run_eventuallyPeriodic
+#print axioms PureSFormal.EvaluatorBounds.finiteCTSSystem
+#print axioms PureSFormal.EvaluatorBounds.selectNext_on_run_halts_within
+#print axioms PureSFormal.EvaluatorBounds.selectNext_total_decision
+#print axioms PureSFormal.EvaluatorBounds.mutationFree_run_eventuallyPeriodic
+#print axioms PureSFormal.EvaluatorBounds.mutationFree_periodicityBound_eq_linear

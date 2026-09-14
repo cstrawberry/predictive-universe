@@ -1,0 +1,22 @@
+import PureSFormal.Research.RootResetPersistentRouteAFuel
+
+namespace PureSFormal.Research.RootResetPersistentRouteAFuel
+
+#print axioms checkedSelection?_sound
+#print axioms classify_source_and_address
+#print axioms classify_fuel_priority
+#print axioms classify_selected_contracts
+#print axioms classify_selected_step
+#print axioms classify_fuel_of_describes
+#print axioms next?_marked
+#print axioms next?_freshNonempty
+#print axioms classify_fuel_under_marked
+#print axioms classify_fuel_under_freshNonempty
+#print axioms exists_generatedFifthSample_preC4_of_describes
+#print axioms exists_generatedFifthSample_postC4_of_describes
+#print axioms fuelActiveContext_source_and_address
+#print axioms classifyHandoff_selected_contracts
+#print axioms classifyHandoff_selected_step
+#print axioms classifyHandoff_fuel_priority
+
+end PureSFormal.Research.RootResetPersistentRouteAFuel

@@ -1,0 +1,9 @@
+import PureSFormal.Cook.HaltCleanupFirstEmpty
+
+#print axioms PureSFormal.Cook.HaltCleanup.source_length_ge_eight_of_tagStep
+#print axioms PureSFormal.Cook.HaltCleanup.iterate_data_ne_nil_before_input_length
+#print axioms PureSFormal.Cook.HaltCleanup.TagStepsN.certified_cleanup
+#print axioms PureSFormal.Cook.HaltCleanup.TagStepsN.cts_data_ne_nil_before
+#print axioms PureSFormal.Cook.HaltCleanup.Certified.first_empty_at_fullCleanupHorizon
+#print axioms PureSFormal.Cook.HaltCleanup.Certified.empties_after_boundary
+#print axioms PureSFormal.Cook.HaltCleanup.Certified.nonempty_after_boundary_before_fullCleanup

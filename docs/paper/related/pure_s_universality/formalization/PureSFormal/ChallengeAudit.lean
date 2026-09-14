@@ -1,0 +1,6 @@
+import PureSFormal.Challenge
+
+#print axioms PureSFormal.Challenge.ChallengePathUniversality
+#print axioms PureSFormal.Challenge.ChallengePathUniversality.controllerTextbookAgreement
+#print axioms PureSFormal.Challenge.ChallengePathUniversality.ctsEncoderComputable
+#print axioms PureSFormal.Challenge.sCombinatorIsChallengePathUniversal

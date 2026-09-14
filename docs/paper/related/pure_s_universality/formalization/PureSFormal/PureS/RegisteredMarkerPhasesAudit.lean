@@ -1,0 +1,8 @@
+import PureSFormal.PureS.RegisteredMarkerPhases
+
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.clockTail_noPostMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.clock_noPostMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.fuel_noPostMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.positivePhase_noPostMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.handoffFuel_noPostMarkers
+#print axioms PureSFormal.PureS.RegisteredMarkerExclusion.initialPrelude_noPostMarkers

@@ -1,0 +1,14 @@
+import PureSFormal.Research.RootResetFiniteClockFuelSelection
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.clockParents_eq
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.growth
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.launch
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.fuel_after
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.fuel
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.call
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.positiveHalf
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.zero
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.pending_parents
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.pending_rebuild
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.call_pending
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.positiveHalf_pending
+#print axioms PureSFormal.Research.RootResetFiniteClockFuelSelection.zero_pending

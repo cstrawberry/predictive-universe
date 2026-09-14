@@ -1,0 +1,10 @@
+import PureSFormal.PureS.PublicDecoderPrimitive
+
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.phase_value
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.config_value
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.repack_value
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.repack_operations_le
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.positive_horizon_le
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.horizon_le
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.decode_value
+#print axioms PureSFormal.PureS.PublicDecoderPrimitive.decode_operations_le

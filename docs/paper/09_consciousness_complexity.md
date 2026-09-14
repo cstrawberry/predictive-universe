@@ -222,6 +222,12 @@ nats.
 
 **9.3.4d Remark 35a.2 (Status of the Backbone Representative).** Definition 31 and Theorem 35 permit many monotone-concave scaling functions. Definition 32 remains a rational example, while Definition 32a supplies a binary-saturating benchmark representative. The condition $3/8\le\alpha_{CC,max}<1/2$ is an additional branch restriction: Theorem 39 proves that its strict upper inequality excludes endpoint-complete binary forcing and proves the converse only for endpoint-complete branches. It does not derive a universal CC ceiling from endpoint avoidance. The representative therefore applies only to branches on which this restriction is independently registered. The asymptotic value $3/8$ is the same ratio as the sub-threshold Van Vleck effective dimension $D_{\mathrm{eff}}=t/d_{\min}=3/8$ of Theorem T.42.5 on the Golay assignment branch; the scale $K_0\varepsilon_0=3\ln2$ matches the structural binary quantum used in the capacity-floor analysis of Theorem E.6 and Equation E.9. These are cross-sector resonance choices, not a derivation of a unique CC response law. The value $3/8$ and scale $3\ln2$ remain model choices unless a forward-locked response certificate derives them.
 
+**Interface-Fraction Response Hypothesis.** The interface count of Section Z.7 gives $\varphi(a,d)=2a(d-a)/d^2$. Register a physical response map that identifies the asymptotic coefficient with $\varphi(a,8)$ and specifies the admissible active-rank set $\mathcal A$. The endpoint ceiling is then
+$$
+\alpha_{CC,\max}=\max_{a\in\mathcal A}\varphi(a,8).
+$$
+For $\mathcal A=\{2\}$ it is $3/8$; for a class admitting rank four it reaches $1/2$. A strict sub-half ceiling is therefore a statement about the complete admissible rank class. The separate horizontal normalization $C_{scale}=\ln8$ and binary shape of Definition 32a give Proposition 35a's response curve. Hypothesis 3 and the registered CC protocol test this physical response map, its rank-class premise and its scaling behavior.
+
 **Definition 35b (Certified CC Response Shape and Tilt Budget).** A certificate fixes $C_0>0$, $\Delta C_{\mathrm{self}}\ge0$, $\alpha_{CC,max}\ge0$, a residual interval $I_{\mathrm{shape}}$, $C_{\max}^*>0$, and nonnegative $\epsilon_{\mathrm{base}},\epsilon_{\mathrm{tilt}}$. It records
 $$
 P(X>x)=e^{-x/C_0}\quad(x\ge0),

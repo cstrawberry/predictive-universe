@@ -1,0 +1,24 @@
+import PureSFormal.Research.RootResetClockGrowthWalker
+
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.mem_states
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.states_length
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.erase_run
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.run_abort
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.scan_complete
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.probe_complete
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.run_terminal
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.failure_restores
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.never_rejects
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.ready_contracts
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.success_ready
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.success_contracts
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.run_clockWrap
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.clockParents_address
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.run_generated_zero
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.run_generated_positive
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.generated_zero_address
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.generated_positive_address
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.generated_zero_contracts
+#print axioms PureSFormal.Research.RootResetClockGrowthWalker.generated_positive_contracts

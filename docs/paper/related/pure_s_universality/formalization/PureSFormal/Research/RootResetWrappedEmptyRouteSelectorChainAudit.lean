@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetWrappedEmptyRouteSelectorChain
+
+open PureSFormal.Research.RootResetWrappedEmptyRouteSelectorChain
+
+#print axioms DispatcherEdge.shell_local_none
+#print axioms shell_contractAt
+#print axioms marked_pending_contract
+#print axioms DispatcherEdge.selectStep?_marked_pending
+#print axioms DispatcherChain.selectsSamples_marked_pending
+#print axioms emptyResponseSamplePairs_wrapped_erases
+#print axioms emptyResponse_marked_dispatcher_selectorChain

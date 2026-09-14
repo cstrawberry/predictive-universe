@@ -1,0 +1,19 @@
+import PureSFormal.Computation.RogozhinFramePrimitive
+
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.exponentStopObservations_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.exponents_value
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.exponents_suffix_length_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.exponents_operations_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.frameStopObservations_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.frame_value
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.frame_suffix_length_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.frame_operations_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.separator_value
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.separator_operations_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.frames_value
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.frames_operations_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.fuelLength_value
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.fuelLength_operations
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.programStopObservations_le
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.program_value
+#print axioms PureSFormal.Computation.RogozhinFramePrimitive.program_operations_le

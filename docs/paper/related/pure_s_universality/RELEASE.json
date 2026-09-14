@@ -1,0 +1,16 @@
+{
+  "release": "pure-s-universality-lean-4.33.1",
+  "date": "2026-09-14",
+  "toolchain": "TOOLCHAIN.lock",
+  "formal_sources": "evidence/formal/headline-complete/verified-source-manifest.json",
+  "verification": "evidence/formal/headline-complete/COMPLETE-VERIFICATION.json",
+  "public_audit": "evidence/formal/headline-complete/receipt.json",
+  "public_replays": "evidence/formal/headline-complete/receipt.json",
+  "source_modules": 1239,
+  "public_exports": 319,
+  "tests": "evidence/tests/receipt.json",
+  "paper": "output/pdf/pure_s_universality.pdf",
+  "source_review": "output/reference-source-check.md",
+  "remaining_exact_reference_editions": [],
+  "reference_count": 53
+}

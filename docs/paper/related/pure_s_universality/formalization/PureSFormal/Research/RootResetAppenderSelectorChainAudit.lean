@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetAppenderSelectorChain
+
+open PureSFormal.Research.RootResetAppenderSelectorChain
+
+#print axioms actionTail_selections
+#print axioms actionEntries_selections
+#print axioms ActionSelections.selectsSamples

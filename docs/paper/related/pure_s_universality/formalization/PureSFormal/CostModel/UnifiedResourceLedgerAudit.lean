@@ -1,0 +1,6 @@
+import PureSFormal.CostModel.UnifiedResourceLedger
+
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.contractionGap_le_bound
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.sampleTick_le_geometric_envelope
+#print axioms PureSFormal.WeakPathUniversality.finiteCTS_sampleTick_le_explicit
+#print axioms PureSFormal.CostModel.UnifiedResourceLedger.finiteCTS_endToEndLedger

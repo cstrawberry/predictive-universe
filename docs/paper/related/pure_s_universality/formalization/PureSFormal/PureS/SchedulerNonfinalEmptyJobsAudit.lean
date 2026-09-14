@@ -1,0 +1,3 @@
+import PureSFormal.PureS.SchedulerNonfinalEmptyJobs
+
+#print axioms PureSFormal.PureS.SchedulerNonfinalEmptyJobs.completeAt

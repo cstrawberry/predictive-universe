@@ -1,0 +1,15 @@
+import PureSFormal.Research.RootResetReachableActiveContext
+
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.pendingChildContext_plug
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.pendingChildContext_address
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.markedContinuationContext_address
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.parse?_sound
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.parse?_complete
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.parse?_eq_some_iff
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.Describes.source_eq
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.Describes.contextAddress_eq
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.Describes.active_subterm
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.Describes.active_size_lt
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.describes_deterministic
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.existsUnique_of_parse?
+#print axioms PureSFormal.Research.RootResetReachableActiveContext.frameR0_role_is_necessary

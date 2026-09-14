@@ -1,0 +1,9 @@
+import PureSFormal.PureS.CheckpointSeedReflection
+
+#print axioms PureSFormal.PureS.CheckpointSeedReflection.sampleTerm
+#print axioms PureSFormal.PureS.CheckpointSeedReflection.decode?_actual_reflects
+#print axioms PureSFormal.PureS.CheckpointSeedReflection.decode?_actual_iff
+#print axioms PureSFormal.PureS.CheckpointSeedReflection.observe
+#print axioms PureSFormal.PureS.CheckpointSeedReflection.observe_at_checkpoint
+#print axioms PureSFormal.PureS.CheckpointSeedReflection.observe_actual_iff
+#print axioms PureSFormal.PureS.CheckpointSeedReflection.exists_observe_actual_iff

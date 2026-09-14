@@ -1,0 +1,19 @@
+import PureSFormal.Computation.CookRunWordPrimitive
+
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.sameTag_value
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.sameTag_operations_le
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.countTag_value
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.countTag_le_length
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.countTag_operations_le
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.equalTags_value
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.equalTags_operations_le
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.replicateOnto_value
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.replicateOnto_operations
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.encode_value
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.encode_operations
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.parseBody_value
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.parse_value
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.parseBody_counts_le
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.parse_counts_le
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.parseBody_operations_le
+#print axioms PureSFormal.Computation.CookRunWordPrimitive.parse_operations_le

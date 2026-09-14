@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetNestedClockGrowthAgreement
+
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.pair_stops
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.pair_head
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.clock_descent
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.core_generated
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.generated
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.generated_zero_contracts
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.generated_positive_contracts
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.clock_pair_descent
+#print axioms PureSFormal.Research.RootResetNestedClockGrowthAgreement.core_pair_generated

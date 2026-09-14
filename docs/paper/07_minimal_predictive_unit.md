@@ -978,6 +978,322 @@ Because $P$ is binary, $0\le H_q(P\mid R)\le\ln2$. If $H_q(P\mid R)=\ln2$, then 
 
 *Proof.* Definition 28 gives $\varepsilon_{\mathrm{diss}}=\varepsilon_{\mathrm{reset}}-H_q(P\mid R)$, and conditional Landauer gives $\varepsilon_{\mathrm{diss}}\ge0$, proving (45). A classical binary conditional entropy lies in $[0,\ln2]$. When it equals $\ln2$, Equation (45) reads $\varepsilon_{\mathrm{reset}}=\ln2+\varepsilon_{\mathrm{diss}}$, so equality with $\ln2$ is equivalent to zero excess dissipation. Conversely, $\varepsilon_{\mathrm{reset}}=\ln2$ is compatible with any smaller conditional entropy when $\varepsilon_{\mathrm{diss}}=\ln2-H_q(P\mid R)>0$. ∎
 
+**7.4.4a Pure-$\mathbf S$ Observation, Compression and Realized Cost**
+
+Pure-$\mathbf S$ rewriting provides an explicit substrate on which prediction, observation, retained memory and reset can be assigned separate quantities. The selected trajectory supplies execution; the unrestricted construction supplies observer-verified history ideals. A stochastic observation model specifies which histories a finite register retains and how accurately that register predicts its next response.
+
+The pure-$\mathbf S$ root-restarted universality theorem (Cinematic Strawberry, 2026, Theorem 1R) retains syntactic history fields, while its direct checkpoint decoder reads only the current term. The persistent certificate-enumeration theorem (Cinematic Strawberry, 2026, Theorem 5) supplies a fixed total current-term labelled observer on all finite pure-$\mathbf S$ terms. On a term of size $N$, Lean proves at most $512(N+1)^5$ structural ticks, $512(N+1)^2$ abstract recursion/temporary-list peak, and $10(N+1)^2$ materialized output cells. Here $N$ is the size of the unfolded syntax tree. These are source-level structural ledgers.
+
+**Shared-store execution.** A shared-store realization has a separate computational ledger. Let $G$ be a rank-certified rooted acyclic arena over a decidable node-identifier type, with nodes $\mathbf S$ or $\operatorname{app}(u,v)$; let a distinguished node be its root, and let $U(G)$ be its tree readback. The compiled CostModel certificate proves that copying one selected nonroot incoming edge preserves $U(G)$; privatizing a valid root-relative address $p$ uses exactly $|p|$ such copies, uses zero copies at the root, and gives the selected endpoint one root-relative occurrence; and the following concrete shared contraction reads back as exactly the supplied ordinary contraction. Its field `exactCompleteDevelopment`, implemented by `Arena.contract_readback_eq_develop`, proves that a shared contraction at an arbitrary reachable shared redex reads back as the complete development of its finite, pairwise-incomparable unfolded occurrence family. For every addressed ordinary reduction
+$$
+M_0\longrightarrow_{p_0}M_1\longrightarrow_{p_1}\cdots\longrightarrow_{p_{t-1}}M_t
+$$
+from a size-$n$ term, `Arena.lift_addressed_path` constructs, from any rank-certified arena reading back to $M_0$, a `StorePathLift` with exact final readback $M_t$ and mutation count $\sum_{i<t}(|p_i|+1)$. The compiled theorem `AddressedPath.addressMoveCount_le_initial_size` proves
+$$
+\sum_{i<t}(|p_i|+1)\le tn+\frac{t(t-1)}2.
+$$
+The separate `AllocationRun` relation assigns one fresh record to a copy and two to a contraction and proves the abstract ceiling $s+2m$ after $m$ charged mutations from count $s$. A supplied shared-redex contraction may develop exponentially many ordinary redex occurrences. Accordingly, the kernel certificate owns the polynomial lift of supplied ordinary paths to shared-store traces; a reverse comparison with one-redex contraction count belongs to a separate target.
+
+The selected one-cursor controller also has a checked parent-linked semantic realization. `PureSFormal.PureS.ParentLinked.Controller.run_ofZipper`, `runMutationCount_ofZipper`, `ProductiveSystem.run_sampleTick_parentLinked`, and `ProductiveSystem.run_sampleTick_erase` compile each functional zipper state to an unshared rooted node table with literal parent-and-side links and exactly one focused node identifier. Node and incoming-edge observations, left/right/up navigation, contraction, complete runs, sampled erased terms, and successful-contraction counts agree exactly. The node table is obtained structurally from the current finite term; its focused node identifier comes from the retained zipper position. This theorem supplies semantic state-and-trace refinement. Constant-time access, allocation, and bit cost require the finite-store implementation ledger below.
+
+`PureSFormal.CostModel.FiniteArena.interpreterCertificate` certifies a rank-certified arena equipped with a duplicate-free complete retained-identifier list. Navigation executes one addressed edge at a time, the computed rank-bounded live cardinality is no larger than retained cardinality, edge copying costs one structural tick and adds exactly one retained record, and shared contraction costs one structural tick and adds exactly two. For retained cardinality $R$, `PureSFormal.CostModel.FiniteArena.pointerWordCertificate` represents every retained identifier by its duplicate-free-list index in a word of width $\lfloor\log_2R\rfloor+1$; each application record contains one tag and two such fields, and $m$ structural operations have the defined bit charge $m(1+2(\lfloor\log_2R\rfloor+1))$ for that fixed store. The separate direct checker `PureSFormal.CostModel.DAGLocalObserver.runTerminalCertificate` receives one supplied protected terminal history/tableau record. Its proved structural tick bound is the sum of the frozen-seed comparison, protected-address walk, and counted terminal-candidate check; `terminalCertificate?_readback` gives unconditional agreement with the corresponding one-record check on $U(G)$, and `terminalRecordOnTerm?_eq_true_iff_labelledProjection` gives terminal-labelled-projection membership under the explicit source/body header match. The checker evaluates one supplied record.
+
+For the persistent controller of a fixed finite cyclic-tag program $P$, let $q_P$ be its runtime-state-cover length and let $E_P(w)$ be its initial encoding. `PureSFormal.CostModel.UnifiedResourceLedger.finiteCTS_endToEndLedger` places the controller and shared-store charges in one structural certificate. Given an initial arena with the correct readback and a supplied ordinary address list of length $j$ realizing the selected contraction sample, it proves equality of the zipper and parent-linked sampled bare terms, exactly $j$ parent-linked contractions, the controller bound $j\,q_P\,2^j|E_P(w)|$, the shared-arena bound $j|E_P(w)|+j(j-1)/2$, their additive total, and an exact final shared-arena readback. The address list is supplied rather than reconstructed by this theorem.
+
+The root-restarted controller has a separate cumulative ledger. Let $T_x(0)=E(x)$ and let $T_x(i)$ be its selected source trajectory, with fixed endpoint coefficient $K_U$. The declaration `PureSFormal.Research.RootResetCumulativeResources.source_cumulative_bound`, exposed as `PureSFormal.Public.rootResetSourceCumulativeBound`, proves
+$$
+\sum_{i=0}^{j-1}\operatorname{stoppingTime}_U(T_x(i))
+\ \le\ jK_U\bigl(2^j|E(x)|+1\bigr).
+$$
+Each summand is the actual invocation length on the current occurrence tree. The generic `path_cumulative_bound` gives the corresponding estimate for any registered controller contract along a native reduction path. These coefficients belong to the root-restarted controllers; $q_P$ belongs to the persistent controller. The estimates charge unfolded-tree work and do not include seed construction, output reading, or a shared-store navigator unless those costs are added explicitly.
+
+These declarations establish the listed structural and representation results. Their executable cost interpretation registers a word-RAM or sequential-Turing-machine store, indexed access, allocation, pointer-width changes and bit operations. The finite arena's retained list supplies a complete finite enumeration, while its cell map is a mathematical lookup function; the one-tick charge assigned to a structural mutation is the meter being implemented.
+
+For a growing run with $m$ mutations and $R_0$ initial retained records, the allocation theorem gives $R_{\max}\le R_0+2m$. A fixed-width implementation can therefore reserve
+$$
+w=\lfloor\log_2(R_0+2m)\rfloor+1
+$$
+bits per pointer in advance. A dynamic-width implementation instead charges its recoding or segmented-allocation policy. The resulting record-width charge $m(1+2w)$ counts the declared constant-arity record operations; the implementation record adds each indexed access, traversal and allocator operation it actually performs.
+
+The supplied-record DAG checker and a whole-output observer have different output obligations. An arena with $d+1$ nodes defined by $u_0=\mathbf S$, $u_{i+1}=\operatorname{app}(u_i,u_i)$ has an unfolded tree of size $2^{d+1}-1$. Materializing that tree requires at least its output size. A polynomial claim for a shared-arena observer therefore fixes whether it returns distinct histories, occurrence-labelled records, a compressed representation, or one supplied-record verdict, and includes the chosen output size in its bound. A supplied shared redex can develop many unfolded occurrences in one operation; privatization is the construction that recovers exact one-occurrence semantics.
+
+The current root-restarted controller supplies a complete selector on the bare occurrence tree. Its per-invocation linear bound and the supplied-address shared-store lift can be combined only after a store-level navigator is shown to produce the same address and its work is charged on the shared representation. A quantitative reduction to bounded reachability additionally supplies the input encoding, contraction bound, target predicate and polynomial compiler estimates. These records determine any complexity-class comparison.
+
+**Necessary Structural Access.** The companion also proves `no_fixed_depth_sound_complete_selector`: no selector determined by a fixed-depth root prefix can both return only genuine redexes and find a redex in every reducible ground term. For a direct witness, define $B_0(U)=U$ and $B_{d+1}(U)=\mathbf S\,B_d(U)$. The terms
+$$
+B_d(\mathbf S)
+\qquad\hbox{and}\qquad
+B_d(\mathbf S\mathbf S\mathbf S\mathbf S)
+$$
+agree at every node depth less than $d$. The first is normal; the second has a redex below the shared prefix. A sound selector returns no address on the first, while completeness requires an address on the second, so their common visible prefix cannot determine a correct answer.
+
+Theorem 1R meets this requirement by allowing traversal to arbitrary depth in each finite input with fixed finite control. Its linear all-input bound charges those traversals. The obstruction concerns all ground terms under fixed-prefix observation; the companion's separate current-term observer theorem supplies the corresponding unbounded-depth requirement inside the protected certificate cone. Together these results identify structural access as part of the implementing resource, alongside program size and retained output.
+
+**Stochastic source and observation law.** Fix an explicit source instance $I$, put $E_I:=\operatorname{strongEncoder}(I)$, and define the reachable-term subtype
+$$
+\Omega_I:=\{\,T:\mathsf{Term}\mid E_I\to_{\mathbf S}^{*}T\,\}.
+$$
+Let $\mathsf{Idl}_I$ be the extensional subtype of source-valid history ideals for $I$. Cone validity equips the restriction of the strong projection with a map
+$$
+\Pi_I:\Omega_I\longrightarrow\mathsf{Idl}_I.
+$$
+For $T\in\Omega_I$, let $\operatorname{Red}(T)$ be its finite set of redex addresses. Use one uniform action type by putting
+$$
+\operatorname{Act}(T)=
+\begin{cases}
+\{\operatorname{some}(p):p\in\operatorname{Red}(T)\},&\operatorname{Red}(T)\ne\varnothing,\\
+\{\operatorname{none}\},&\operatorname{Red}(T)=\varnothing.
+\end{cases}
+$$
+For $\operatorname{some}(p)\in\operatorname{Act}(T)$, let $C_I(T,\operatorname{some}(p))$ be the reachable subtype obtained by contracting the certified redex $p$; let $C_I(T,\operatorname{none})=T$. The second case is available only at a normal form. Let $\rho_t(\cdot\mid T)$ be a normalized probability mass function on this finite nonempty action set. Take the principal initial law to be $\mu_0=\delta_{E_I}$ and define
+$$
+\mu_{t+1}(T')
+=
+\sum_{T\in\Omega_I}\mu_t(T)
+\sum_{\substack{r\in\operatorname{Act}(T)\\C_I(T,r)=T'}}
+\rho_t(r\mid T).
+$$
+Every finite term has finitely many actions, so induction on $t$ gives finite support and normalization of every $\mu_t$ in this point-start model; all displayed sums are therefore finite. An extension to an arbitrary initial law uses the countable discrete sigma-algebra on $\Omega_I$, normalized probability mass functions, nonnegative extended sums, and Tonelli's theorem. Any expected-size claim additionally assumes the required finite first moment.
+
+Fix a bit budget $B_{\mathrm{obs}}\in\mathbb N_0$. Let $K_t(y\mid T)$ be a normalized observation channel into a finite alphabet $\mathcal Y_{B_{\mathrm{obs}}}$ with $|\mathcal Y_{B_{\mathrm{obs}}}|\le2^{B_{\mathrm{obs}}}$. Let $\widehat{\mathsf{Idl}}_I$ be an extensional reconstruction space and $\widehat\Pi_t:\mathcal Y_{B_{\mathrm{obs}}}\to\widehat{\mathsf{Idl}}_I$. For $D\ge0$ and a declared distortion $d_t:\mathsf{Idl}_I\times\widehat{\mathsf{Idl}}_I\to[0,\infty]$ well-defined on both extensional arguments, define the finite-alphabet history-compression benchmark
+$$
+R_{\mu_t,B_{\mathrm{obs}}}(D)
+:=
+\inf_{\mathcal Y,K,\widehat\Pi}
+\left\{
+I_{\mu_tK}(T;Y):
+\mathbb E_{\mu_tK}
+\bigl[d_t(\Pi_I(T),\widehat\Pi(Y))\bigr]\le D,
+\ |\mathcal Y|\le2^{B_{\mathrm{obs}}}
+\right\}.
+$$
+The benchmark permits the encoder to observe $T$. Since its distortion depends on $T$ only through $\Pi_I(T)$, the factorization proposition below identifies its optimum with the macrostate benchmark when both use the same unrestricted channel and reconstruction classes. The infimum ranges over finite alphabets, normalized channels, and extensional reconstructions; $\inf\varnothing:=+\infty$. The finite-reconstruction proposition below gives an attained minimum for its stated feasible compact problem.
+
+The joint one-cycle law is
+$$
+\Pr_t(T,y,r,y')
+=
+\mu_t(T)K_t(y\mid T)\rho_t(r\mid T)
+K_{t+1}\bigl(y'\mid C_I(T,r)\bigr),
+$$
+which makes $r$ and $y$ conditionally independent given $T$. Put
+$$
+Q_t(y'\mid T)
+=
+\sum_{r\in\operatorname{Act}(T)}
+\rho_t(r\mid T)K_{t+1}\bigl(y'\mid C_I(T,r)\bigr),
+\qquad
+\nu_t(y)=\sum_T\mu_t(T)K_t(y\mid T),
+$$
+and, for $\nu_t(y)>0$,
+$$
+\overline Q_t(y'\mid y)
+=
+\frac{1}{\nu_t(y)}
+\sum_T\mu_t(T)K_t(y\mid T)Q_t(y'\mid T).
+$$
+For a normalized predictive kernel $P_\theta(y'\mid y)$, the macro-predictor mismatch is
+$$
+\mathcal C_{\mathrm{model}}(t)
+=
+\sum_{y:\nu_t(y)>0}\nu_t(y)
+D_{\mathrm{KL}}\!\left(
+\overline Q_t(\,\cdot\mid y)
+\middle\|
+P_\theta(\,\cdot\mid y)
+\right).
+$$
+The stronger microstate-conditioned predictive log-loss decomposes exactly as
+$$
+\sum_{T,y}\mu_t(T)K_t(y\mid T)
+D_{\mathrm{KL}}\!\left(Q_t(\,\cdot\mid T)\middle\|P_\theta(\,\cdot\mid y)\right)
+=I(T;Y'\mid Y)+\mathcal C_{\mathrm{model}}(t).
+$$
+Zero-mass summands are omitted. KL divergence is extended-valued, with $+\infty$ on support mismatch and the usual $0\log(0/q)=0$ convention.
+
+All mutual-information and KL quantities here use $\log_2$ and are dimensionless bit measures. The alphabet bound $|\mathcal Y_{B_{\mathrm{obs}}}|\le2^{B_{\mathrm{obs}}}$ limits only the emitted register; it does not bound program descriptions, clocks, codebooks, arithmetic precision, samplers, or workspace. A finite MPU therefore requires finite descriptions and counted implementations for the initial law, action policy, observation channel, reconstruction, and predictor, with time control, codebook, precision, and workspace charged. A stationary family or a finite-state counted time controller is required; an arbitrary time-indexed kernel is not free external advice.
+
+The exact source-level growth ledger remains the contextual contraction identity
+$$
+|T'|+1=|T|+|Z|,
+\qquad
+|T'|-|T|=|Z|-1\ge0
+$$
+for duplicated third argument $Z$; equality occurs for $Z=\mathbf S$. At each finite time the point-start law has finite support, so expected growth is finite. The countable-law extension requires integrability. Expected growth uses $\mu_t$ and $\rho_t$; $R_{\mu_t,B_{\mathrm{obs}}}$ uses $\mu_t$, $d_t$, and its candidate channel class; predictive loss uses $\mu_t$, $\rho_t$, $K_t$, and $P_\theta$. The finite-window realization and stationary-output conditions below give concrete implementation and entropy-rate branches.
+
+Application of Equation (45) begins with a response-preserving physical realization that identifies Definition 28's registered binary record $P$, the complete retained side information $R$, and an actual cyclic reset. Equation (45) uses natural-log entropy; conversion from a bit quantity multiplies by $\ln2$. When $R$ determines $P$ almost surely under the registered law $q$, $H_q(P\mid R)=0$. A positive uniform floor uses an independent bound $H_q(P\mid R)\ge h_{\min}>0$; the value $\ln2$ uses conditional uniformity of $P$ given the complete $R$ almost surely, and equality of reset heat with $k_BT\ln2$ per bit uses a cyclic isothermal zero-excess realization. The realization record binds the common physical carrier, finite stochastic implementation, distortion and predictive task, calibrated units and weights, and registered reset.
+
+**Proposition (Finite-Time Normalization and Growth).** The point-start law above is a normalized finitely supported probability measure at every finite $t$, and every sampled term lies in $\Omega_I$. Its expected one-step size increment is
+$$
+\mathbb E[|T_{t+1}|-|T_t|]
+=
+\sum_T\mu_t(T)
+\sum_{p\in\operatorname{Red}(T)}
+\rho_t(\operatorname{some}(p)\mid T)(|Z_{T,p}|-1)
+\ge0.
+$$
+An idle normal-form action contributes zero.
+
+*Proof.* The initial support is the singleton $\{E_I\}$. Each term has finitely many redex addresses, and the action set is nonempty by the normal-form convention. A finite union of finite successor sets is finite. Summing the recursion over successors gives one because each action policy is normalized; certified contraction and idle both preserve reachability. The contextual contraction identity gives the displayed increment. Every sum is finite and each ground third argument has at least one node. ∎
+
+**Proposition (The History Statistic Suffices for the Compression Benchmark).** At a fixed finite time put $U=\Pi_I(T)$. When all normalized finite channels and the same reconstructions are admitted, restricting the encoder to factor through $U$ leaves $R_{\mu_t,B_{\mathrm{obs}}}(D)$ unchanged.
+
+*Proof.* Given a channel $K$, define
+$$
+\overline K(y\mid u)
+=\sum_{T:\Pi_I(T)=u}\Pr(T\mid U=u)K(y\mid T)
+$$
+on positive-probability $u$, and assign any normalized row elsewhere. The factorized channel $K^\flat(y\mid T)=\overline K(y\mid\Pi_I(T))$ preserves the joint law of $(U,Y)$, the reconstruction and expected distortion. It obeys
+$$
+I_{K^\flat}(T;Y)=I_{\overline K}(U;Y)\le I_K(T;Y)
+$$
+by the chain rule for the deterministic statistic $U$. Every original feasible channel therefore has a factorized feasible channel of no greater objective, and the reverse inequality follows by inclusion of candidate classes. The equality also covers infeasibility. ∎
+
+A computationally restricted observation class can break this replacement argument when computing $\Pi_I$ or the averaged channel exceeds its registered cost. The mathematical benchmark and its counted implementation then have separate minima. Predicting the next response can also require distinctions within a history-ideal fiber; its loss is measured by the next proposition.
+
+**Proposition (Attainment for a Finite Reconstruction Library).** Fix a finite reconstruction library, finite distortion values on the support of $\mu_t$, and the output cap $L=2^{B_{\mathrm{obs}}}$. If the distortion constraint is feasible, the corresponding benchmark attains a value in $[0,B_{\mathrm{obs}}]$.
+
+*Proof.* Use one alphabet of size $L$ with zero-probability unused letters. There are finitely many reconstruction maps into the fixed library. For each, the channel rows on the finite source support form a compact product of simplices. Expected distortion is continuous and affine in those rows, so the feasible subset is closed. Mutual information is continuous on finite probability simplices with $0\log 0=0$. A minimum is attained on the nonempty finite union of feasible sets. Finally $0\le I(T;Y)\le H(Y)\le\log_2L=B_{\mathrm{obs}}$. ∎
+
+**Proposition (Compression Loss and Predictor Mismatch).** For the joint law above,
+$$
+\mathcal C_{\mathrm{micro}}(t)
+=
+I(T;Y'\mid Y)+\mathcal C_{\mathrm{model}}(t),
+$$
+where $\mathcal C_{\mathrm{micro}}$ is the microstate-conditioned predictive KL expression. The first term is the loss of next-response information in the emitted register; the second measures the predictor's mismatch to the best conditional law available from that register.
+
+*Proof.* The joint law gives $Y'\perp Y\mid T$ and conditional law $Q_t(\cdot\mid T)$. On positive-mass terms, split
+$$
+\log_2\frac{Q_t(y'\mid T)}{P_\theta(y'\mid y)}
+=
+\log_2\frac{Q_t(y'\mid T)}{\overline Q_t(y'\mid y)}
++
+\log_2\frac{\overline Q_t(y'\mid y)}{P_\theta(y'\mid y)}.
+$$
+Averaging the first term gives conditional mutual information; averaging the second gives the displayed model mismatch. If $P_\theta$ assigns zero to a positive conditional event, both the microstate loss and the model mismatch are infinite. Conditional mutual information remains finite because $Y'$ has a finite alphabet. Thus the equality is valid in the extended nonnegative reals. ∎
+
+**Proposition (Exact Closure of the History Transition Law).** Define the probability of the next ideal from a current term by
+$$
+\mathcal P_t(J'\mid T)
+=\sum_{\substack{r\in\operatorname{Act}(T)\\
+                 \Pi_I(C_I(T,r))=J'}}
+  \rho_t(r\mid T).
+$$
+One transition kernel $W_t(J'\mid J)$ describes the next ideal for every preparation of a current term with ideal $J$ if and only if
+$$
+\Pi_I(T)=\Pi_I(U)
+\quad\Longrightarrow\quad
+\mathcal P_t(\,\cdot\mid T)=\mathcal P_t(\,\cdot\mid U)
+$$
+on the registered domain. This is the strong lumpability condition for $\Pi_I$. When it holds at every time on the reachable domain, $J_t=\Pi_I(T_t)$ is a Markov process with transition law $W_t$, for every initial law. All-reduct permanence gives $W_t(J'\mid J)=0$ whenever $J\not\subseteq J'$.
+
+*Proof.* Equality on fibers defines a normalized row $W_t(\cdot\mid J)$ independently of the representative. Conditioning on any past ideal observations averages identical rows for all compatible current terms, so the conditional next-ideal law is $W_t(\cdot\mid J_t)$. Conversely, prepare a point mass at either of two terms in one fiber. A common preparation-independent kernel must equal both next-ideal rows. Permanence excludes every decreasing transition. ∎
+
+When the next observation also factors through the next ideal, $K_{t+1}(y'\mid T')=\kappa_{t+1}(y'\mid\Pi_I(T'))$, lumpability gives
+$$
+Q_t(y'\mid T)=\sum_{J'}W_t(J'\mid\Pi_I(T))\kappa_{t+1}(y'\mid J').
+$$
+Thus an exact current-ideal observation loses no next-response information on this branch. On a finite admitted domain, the criterion is checked by partitioning terms by their exact observer output and comparing the complete projected transition rows inside each part. Two rows that differ are a concrete failure witness. This test separates sufficient compression for a history-reconstruction task from sufficient state information for predictive dynamics.
+
+**Examples (A Nonempty Compression Problem and a Distinct Prediction Loss).** Let the history statistic be an equiprobable bit, with binary reconstruction and Hamming distortion. For $B_{\mathrm{obs}}\ge1$ and $0\le D\le1/2$, a binary symmetric observation channel of crossover $D$ gives
+$$
+R(D)=1-h_2(D),
+\qquad
+h_2(D)=-D\log_2D-(1-D)\log_2(1-D).
+$$
+To prove optimality, let $e$ be the reconstruction error bit. The source bit is determined by the reconstruction and $e$, so
+$H(U\mid Y)\le H(e)\le h_2(D)$; subtract from $H(U)=1$. For $D\ge1/2$, a constant reconstruction attains zero information. With $B_{\mathrm{obs}}=0$, the benchmark is infeasible for $D<1/2$ and equals zero for $D\ge1/2$.
+
+For a different finite kernel, take $T$ to be an equiprobable bit, $\Pi_I(T)$ and $Y$ constant, and $Y'=T$. A constant history reconstruction has zero distortion, but every register-based predictor loses one bit of next-response information. The optimal predictor has probabilities $(1/2,1/2)$ and $\mathcal C_{\mathrm{model}}=0$; a predictor $(3/4,1/4)$ adds
+$$
+D_{\mathrm{KL}}\bigl((1/2,1/2)\,\|\,(3/4,1/4)\bigr)
+=\tfrac12\log_2(4/3)
+=0.207518\ldots
+$$
+bits. This finite-kernel witness establishes the distinction between present-history compression and prediction. Embedding its two microstates in one pure-$\mathbf S$ cone supplies the additional reachability and policy record for that realization.
+
+**Proposition (Reachable History Records Require a Growing Observation Register).** Fix one ordered-binary source with one state, input $0$, and two enabled occurrence slots at each tape symbol. Both slots write the symbol already read, stay at the same head position, and return to that state. Every finite binary occurrence history is valid, while all of them end in the same source configuration.
+
+For any $m\ge1$, choose $m$ distinct binary histories $h_1,\ldots,h_m$ of one common positive length. Let $J_0$ contain all their proper prefixes and, for $z\in\{0,1\}^m$, put
+$$
+J_z=J_0\cup\{h_i:z_i=1\}.
+$$
+Theorem 5's exact finite range supplies a reachable term $T_z\in\Omega_I$ with $\Pi_I(T_z)=J_z$. These $2^m$ terms have distinct history projections. Prepare $T=T_Z$ with $Z$ uniform on $\{0,1\}^m$, and let $Y$ be any observation with at most $2^{B_{\mathrm{obs}}}$ values. Then
+$$
+H(\Pi_I(T)\mid Y)=H(Z\mid Y)\ge\max\{0,m-B_{\mathrm{obs}}\}.
+$$
+Exact reconstruction of every prepared history ideal therefore requires $B_{\mathrm{obs}}\ge m$. For a reconstructed membership vector $\widehat Z(Y)$ with mean per-coordinate Hamming error
+$$
+D=\frac1m\sum_{i=1}^m\Pr[\widehat Z_i(Y)\ne Z_i]\le\frac12,
+$$
+one necessarily has
+$$
+B_{\mathrm{obs}}\ge I(T;Y)
+\ge m\,[1-h_2(D)].
+$$
+The latter is a necessary finite-register bound; attainment remains subject to the admitted alphabet and channel class.
+
+*Proof.* Equal slot rules leave the source configuration unchanged, and their ordered occurrence labels give all binary histories. Each $J_z$ is a finite valid ideal; equal-length leaves are absent from $J_0$, so their membership recovers $z$. Theorem 5 provides the corresponding terms. Consequently $\Pi_I(T)$ and $Z$ determine one another, and $H(Z)=m$. Since $I(Z;Y)\le H(Y)\le B_{\mathrm{obs}}$, the conditional-entropy bound follows. For the distortion inequality, put $E_i=Z_i\mathbin{\mathrm{xor}}\widehat Z_i(Y)$. Then
+$$
+H(Z\mid Y)=H(E\mid Y)
+\le\sum_i H(E_i)
+=\sum_i h_2(\Pr[E_i=1])
+\le m h_2(D)
+$$
+by entropy subadditivity and concavity. Subtracting from $H(Z)=m$ proves the result. ∎
+
+This is a populated construction inside one Pure-S cone. Its random finite preparation is an instance of the initial-law extension above; the $T_z$ need not occur at one common contraction index of the point-start process. A finite preparation can be found by enumerating native paths until the total observer reports each nominated $J_z$, a search that terminates by exact finite range. The retained implementation counts that preparation, its random bits, observer work and codebook. Because every history here ends in the same source configuration, merging histories by final state would erase precisely the distinctions measured by this task.
+
+A finite verification instance takes $m=2$, $h_1=0$, $h_2=1$, and $J_0=\{\epsilon\}$. Its four ideals are $J_0$, $J_0\cup\{0\}$, $J_0\cup\{1\}$, and $J_0\cup\{0,1\}$. One emitted bit can retain the first leaf-membership bit exactly; the independent second bit then contributes one bit of residual entropy and has optimal error $1/2$. The mean membership error is $1/4$. Two emitted bits reconstruct all four ideals exactly.
+
+**Proposition (Probabilistic Structural Fairness and Finite Coverage).** Consider a stochastic genuine native-step path from $E_I$, with filtration $\mathscr F_t$ containing its complete realized past. For each finite protected address $a$, let $H_a$ be the first contraction index at which $a$ occurs literally in `anchoredOpenedPaths`, and put $H_a=\infty$ if it never occurs. Choose deterministic block endpoints $0=t_0<t_1<\cdots$ tending to infinity. Suppose that, whenever $H_a>t_b$,
+$$
+\Pr(H_a\le t_{b+1}\mid\mathscr F_{t_b})
+\ge\varepsilon_{a,b}
+\quad\hbox{almost surely},
+\qquad
+0\le\varepsilon_{a,b}\le1.
+$$
+Then
+$$
+\Pr(H_a>t_n)
+\le\prod_{b<n}(1-\varepsilon_{a,b}).
+$$
+If $\sum_b\varepsilon_{a,b}=\infty$ for every $a$, the path is structurally fair with probability one. Every valid history is then eventually projected and receives its own literal labelled record with probability one.
+
+For a finite address set $A$ and a common bound $\varepsilon_{a,b}\ge\varepsilon>0$, the finite coverage guarantee is
+$$
+\Pr[\exists a\in A:H_a>t_n]\le |A|(1-\varepsilon)^n.
+$$
+
+*Proof.* Let $S_{a,b}=\{H_a>t_b\}$. Conditional expectation gives
+$\Pr(S_{a,b+1})\le(1-\varepsilon_{a,b})\Pr(S_{a,b})$; iteration proves the product bound. A factor with $\varepsilon_{a,b}=1$ forces zero survival, while otherwise the product is at most $\exp(-\sum_{b<n}\varepsilon_{a,b})$. A divergent sum therefore makes $\Pr(H_a=\infty)=0$. Finite binary addresses form a countable set, so all are eventually opened on one probability-one event. Apply the companion's `fair_path_eventually_strongProjection` and `fair_path_eventually_labelledProjection` on each path in that event. The finite-set bound is the union bound. Independence of successive blocks is unnecessary. ∎
+
+The source's finite-obligation extension theorem guarantees a finite continuation opening any nominated finite address set from every reduct. It therefore supplies a constructive reachability witness for a coverage experiment. A random policy additionally supplies the displayed conditional probability bounds. Positive redex probabilities alone do not establish those bounds: for independent opening attempts with $\varepsilon_b=1/(b+2)^2$, the probability of never opening is
+$$
+\prod_{b=0}^{\infty}\left(1-\frac1{(b+2)^2}\right)=\frac12.
+$$
+For a finite experiment with two nominated addresses and a certified per-block bound $1/4$, nineteen blocks give failure probability at most $2(3/4)^{19}<0.01$.
+
+An implementation registers the block horizons, address obligations, policy and coverage checker and counts their navigation, sampling and storage costs. The address-complete path already proved by the companion supplies a deterministic complete schedule; the probabilistic proposition gives a further policy-dependent realization. A store-capped run uses the finite coverage statement and records budget exhaustion as an outcome. Its hazard certificate must include that stopping behavior.
+
+**Finite-Window Realization.** A finite MPU experiment registers an initial encoding, a finite observation horizon $H$, a store budget $B_{\mathrm{store}}$, a finite reconstruction library, and rational or certified finite-precision policy, channel and predictor descriptions. A counted timer stores $0,\ldots,H$ or a registered stationary controller supplies time dependence. All redex selection, observation, codebook lookup, sampling, arithmetic and workspace costs enter the record.
+
+A resource-bounded implementation checks a proposed contraction against the store budget and enters an absorbing budget state before an operation that cannot fit. Its successful prefix agrees with the original transition law; the budget event is reported as its own outcome. There are finitely many admitted terms and controller states under the cap, so this gives a finite stochastic machine. A nondegenerate witness records at least one successful contraction, the distinct emitted outcomes used by the task, and the attained error and cost. This realizes a finite experiment while making the resource boundary observable.
+
+For a registered stationary finite-state implementation, an invariant initial law makes the finite-alphabet output stationary. Then
+$$
+h(Y)=\lim_{n\to\infty}\frac{H(Y_0,\ldots,Y_{n-1})}{n}
+=\lim_{n\to\infty}H(Y_n\mid Y_0,\ldots,Y_{n-1})
+\in[0,B_{\mathrm{obs}}].
+$$
+Indeed, stationarity and conditioning make the conditional-entropy sequence nonincreasing and bounded below; the chain rule and Cesàro averaging give the first limit. A finite transition matrix has an invariant law by taking a convergent subsequence of its Cesàro-averaged iterates. The point-start transient experiment uses its actual finite-time laws; a stationary comparison names the invariant class and initialization.
+
+Pure-S reduction is acyclic: no nonempty sequence of native contractions returns to its starting term. Consequently, an implementation with finitely many admitted terms can perform only finitely many native contractions unless its transition law includes reset or reinjection. Without such transitions, a stationary law assigns zero probability to steps that perform native contractions; controller activity or observation noise may still produce output entropy while the term remains fixed. Sustained computational activity therefore requires an explicit restart mechanism, with its resource costs included. The finite computation experiment is described by its transient laws.
+
+The physical comparison measures the declared distortion and predictive losses together with runtime, peak storage, sampler resources and reset heat. Equation (45) applies to the actual register and complete retained side record. A change of representation or observation policy is evaluated through these same task and cost definitions.
+
 **Theorem 31a (Conditionally Exchange-Invariant Full-Context Reset Bound).** Let $\mathcal G$ be Equation (7.1.3a), let $\Phi$ be the Commit Snapshot label merged by Equation (7.1.3b), and let $R$ contain every record retained and unchanged through closure. Assume the actual pre-closure joint law obeys $q(\phi\mid R=r)=q(1-\phi\mid R=r)$ for every $r$ of positive probability, equivalently invariance under the input-fibre exchange, and assume no retained record resolves $\Phi$. Then
 $$
 q(\phi\mid R)=\frac12,

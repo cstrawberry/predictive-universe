@@ -1,0 +1,11 @@
+import PureSFormal.PureS.ParserNatDivisionPrimitive
+
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.divMod
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.divMod_invariant
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.divMod_zero_radix
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.divMod_value
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.quotient_le
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.remainder_lt
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.divMod_operations_le_positive
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.divMod_zero_operations
+#print axioms PureSFormal.PureS.ParserNatDivisionPrimitive.divMod_operations_le

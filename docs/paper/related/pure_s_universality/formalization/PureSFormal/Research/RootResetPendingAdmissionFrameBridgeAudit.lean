@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetPendingAdmissionFrameBridge
+open PureSFormal.Research.RootResetPendingAdmissionFrameBridge
+#print axioms terminal_layers
+#print axioms completedLocal_terminal
+#print axioms completedLocal_gap
+#print axioms completedLocal_boundary

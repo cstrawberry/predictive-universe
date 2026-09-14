@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetNestedFrameCost
+
+#print axioms PureSFormal.Research.RootResetNestedFrameCost.down_count
+#print axioms PureSFormal.Research.RootResetNestedFrameCost.reverse_count
+#print axioms PureSFormal.Research.RootResetNestedFrameCost.missed_count
+#print axioms PureSFormal.Research.RootResetNestedFrameCost.missed_paid
+#print axioms PureSFormal.Research.RootResetNestedFrameCost.parsed_local_stops
+#print axioms PureSFormal.Research.RootResetNestedFrameCost.miss_implies_guard

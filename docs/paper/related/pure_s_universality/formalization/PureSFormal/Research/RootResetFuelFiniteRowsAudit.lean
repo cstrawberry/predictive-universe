@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetFuelFiniteRows
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.fixedArity_sound
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.edge_redex
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.matching_addresses_eq
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.canonical_selected
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.all_input
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.generated_runs
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetFuelFiniteRows.erase_run

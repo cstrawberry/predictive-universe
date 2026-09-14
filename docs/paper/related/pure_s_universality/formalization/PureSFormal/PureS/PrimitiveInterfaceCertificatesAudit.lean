@@ -1,0 +1,5 @@
+import PureSFormal.PureS.PrimitiveInterfaceCertificates
+
+#print axioms PureSFormal.PureS.PrimitiveInterfaceCertificates.primitivePublicDecoder_resource_certificate
+#print axioms PureSFormal.PureS.PrimitiveInterfaceCertificates.primitiveMarkedDetector_resource_certificate
+#print axioms PureSFormal.PureS.PrimitiveInterfaceCertificates.primitiveSeedReadback_resource_certificate

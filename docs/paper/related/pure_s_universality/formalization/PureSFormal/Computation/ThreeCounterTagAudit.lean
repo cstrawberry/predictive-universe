@@ -1,0 +1,59 @@
+import PureSFormal.Computation.ThreeCounterTag
+
+/-! Exact logical-basis audit for the three-counter to restricted-`T2`
+compiler. -/
+
+#print axioms PureSFormal.Computation.ThreeCounterTag.payload_injective
+#print axioms PureSFormal.Computation.ThreeCounterTag.registerId_lt_three
+#print axioms PureSFormal.Computation.ThreeCounterTag.registerOfId_registerId
+#print axioms PureSFormal.Computation.ThreeCounterTag.payloadControl_payload
+#print axioms PureSFormal.Computation.ThreeCounterTag.payloadRegister_payload
+#print axioms PureSFormal.Computation.ThreeCounterTag.firstSweep_left_positive
+#print axioms PureSFormal.Computation.ThreeCounterTag.positiveLaneSweep
+#print axioms PureSFormal.Computation.ThreeCounterTag.firstSweep_scratch_zero
+#print axioms PureSFormal.Computation.ThreeCounterTag.firstSweep_right_zero
+#print axioms PureSFormal.Computation.ThreeCounterTag.firstSweep_left_zero
+#print axioms PureSFormal.Computation.ThreeCounterTag.zeroLaneSweep
+#print axioms PureSFormal.Computation.ThreeCounterTag.branchWord_increment_left_positive
+#print axioms PureSFormal.Computation.ThreeCounterTag.branchWord_increment_right_positive
+#print axioms PureSFormal.Computation.ThreeCounterTag.branchWord_increment_scratch_positive
+#print axioms PureSFormal.Computation.ThreeCounterTag.macro_increment_left
+#print axioms PureSFormal.Computation.ThreeCounterTag.macro_increment_right
+#print axioms PureSFormal.Computation.ThreeCounterTag.macro_increment_scratch
+#print axioms PureSFormal.Computation.ThreeCounterTag.macro_decrement_left
+#print axioms PureSFormal.Computation.ThreeCounterTag.macro_decrement_right
+#print axioms PureSFormal.Computation.ThreeCounterTag.macro_decrement_scratch
+#print axioms PureSFormal.Computation.ThreeCounterTag.increment_macro_boundary
+#print axioms PureSFormal.Computation.ThreeCounterTag.decrement_macro_boundary
+#print axioms PureSFormal.Computation.ThreeCounterTag.encodeState_step
+#print axioms PureSFormal.Computation.ThreeCounterTag.encodeState_run
+#print axioms PureSFormal.Computation.ThreeCounterTag.live_macro_prefix_ne_halt
+#print axioms PureSFormal.Computation.ThreeCounterTag.tagIterate_head_halt_reflects_source
+#print axioms PureSFormal.Computation.ThreeCounterTag.halts_iff_typedEventuallyHalts
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.ordinaryProgram_productionLabelsValid
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.enumerationProgram_length
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.encodeSymbol_le_count
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.decodeSymbol_bounded
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.control_bounded
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.payload_bounded
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.header_wordBounded
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.laneOutput_wordBounded
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.production_wordBounded
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.encodeWord_labelsValid
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.numericRhs_labelsValid
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.productionAt_of_lt
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.typedEventuallyHalts_iff_numericHaltHead
+#print axioms PureSFormal.Computation.ThreeCounterTag.two_le_encodeState_length
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.live_macro_lengthTwo
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.numeric_live_macro_step
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.encoded_halt_pair_fixed
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.encoded_sink_pair_fixed
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.encodedPair_boundary
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.ordinaryTrajectory_boundary
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.ordinaryTrajectory
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.compileT2_isT2
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.compileT2_wellFormed
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.halts_iff_compileT2_eventuallyHalts
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.compileJob_isT2
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.compileJob_wellFormed
+#print axioms PureSFormal.Computation.ThreeCounterTag.Numeric.universalHalts_iff_compileJob

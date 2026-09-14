@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetBaseQueueProbe
+
+#print axioms PureSFormal.Research.RootResetBaseQueueProbe.base_query
+#print axioms PureSFormal.Research.RootResetBaseQueueProbe.all_input
+#print axioms PureSFormal.Research.RootResetBaseQueueProbe.readOnly

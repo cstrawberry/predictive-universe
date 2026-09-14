@@ -1,0 +1,16 @@
+import PureSFormal.PureS.ParserPrimitiveMachine
+
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.equal
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.EqualityExecution
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.equal_execution
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.equal_value
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.equal_operations_le
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.append
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.append_value
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.append_operations
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.appendBit_value
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.appendBit_operations
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.pattern_value
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.pattern_operations_le
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.subterm_value
+#print axioms PureSFormal.PureS.ParserPrimitiveMachine.subterm_operations_le

@@ -1,0 +1,19 @@
+{
+  "pypdf": "6.10.0",
+  "pypdf-wheel-sha256": "90005e959e1596c6e6c84c8b0ad383285b3e17011751cedd17f2ce8fcdfc86de",
+  "verification-pandoc": "3.1.3",
+  "verification-pandoc-lua": "5.4",
+  "verification-xetex": "3.141592653-2.6-0.999995",
+  "texlive": "2023",
+  "kpathsea": "6.3.5",
+  "locale": "C.UTF-8",
+  "timezone": "UTC",
+  "python-hash-seed": "0",
+  "source-date-epoch": "1789344000",
+  "date": "2026-09-14",
+  "environment_fingerprints": "evidence/pdf/environment.json",
+  "setup": "PUBLICATION.md",
+  "extra_archive_sha256": "db88906dc6c7d814edbb878041d75e389c6d898b76fa5dc2efe71abb9da5f0fd",
+  "format": "fresh private xelatex format on every build",
+  "required_absent_font_mappings": ["tex-text.tec"]
+}

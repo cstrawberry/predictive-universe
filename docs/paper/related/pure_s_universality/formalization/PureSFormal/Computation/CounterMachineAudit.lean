@@ -1,0 +1,23 @@
+import PureSFormal.Computation.CounterMachine
+
+#print axioms PureSFormal.Computation.CounterMachine.universalAccepts_complete
+#print axioms PureSFormal.Computation.CounterMachine.parseOperand_unary
+#print axioms PureSFormal.Computation.CounterMachine.parseInstruction_serialize
+#print axioms PureSFormal.Computation.CounterMachine.program_length_le_serialize
+#print axioms PureSFormal.Computation.CounterMachine.parseProgramAux_serialize
+#print axioms PureSFormal.Computation.CounterMachine.parseProgram_serialize
+#print axioms PureSFormal.Computation.CounterMachine.decodeProgram_encode
+#print axioms PureSFormal.Computation.CounterMachine.acceptsCode_encode
+#print axioms PureSFormal.Computation.CounterMachine.codedUniversalAccepts_complete
+#print axioms PureSFormal.Computation.CounterMachine.Compiler.initial_represents
+#print axioms PureSFormal.Computation.CounterMachine.Compiler.instructionAt_compile
+#print axioms PureSFormal.Computation.CounterMachine.Compiler.step_compile
+#print axioms PureSFormal.Computation.CounterMachine.Compiler.run_compile
+#print axioms PureSFormal.Computation.CounterMachine.Compiler.acceptsWithin_compile
+#print axioms PureSFormal.Computation.CounterMachine.Compiler.accepts_compile
+#print axioms PureSFormal.Computation.CounterMachine.compiler_correct
+#print axioms PureSFormal.Computation.CounterMachine.Compiler.targetCode_eq_sourceCode
+#print axioms PureSFormal.Computation.CounterMachine.standardUniversal_hard
+#print axioms PureSFormal.Computation.CounterMachine.compileUniversalInput_correct
+#print axioms PureSFormal.Computation.CounterMachine.natMachineUniversal_hard
+#print axioms PureSFormal.Computation.CounterMachine.natMachineUniversal_complete

@@ -1,0 +1,7 @@
+import PureSFormal.Computation.RogozhinT2Iteration
+
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.nonhaltingBefore_mono
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.nonhaltingMacroFuel_positive
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.iterate_compileWithPadding_nonhaltingRun
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.horizon_le_boundaryTime
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.safeThrough_compileWithPadding_nonhaltingRun

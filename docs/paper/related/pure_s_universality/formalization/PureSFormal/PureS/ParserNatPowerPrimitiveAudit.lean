@@ -1,0 +1,8 @@
+import PureSFormal.PureS.ParserNatPowerPrimitive
+
+#print axioms PureSFormal.PureS.ParserNatPowerPrimitive.add_execution
+#print axioms PureSFormal.PureS.ParserNatPowerPrimitive.pow2
+#print axioms PureSFormal.PureS.ParserNatPowerPrimitive.pow2_execution
+#print axioms PureSFormal.PureS.ParserNatPowerPrimitive.pow2_value
+#print axioms PureSFormal.PureS.ParserNatPowerPrimitive.pow2_operations_exact
+#print axioms PureSFormal.PureS.ParserNatPowerPrimitive.pow2_operations_le

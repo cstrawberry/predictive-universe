@@ -1,0 +1,14 @@
+import PureSFormal.Computation.CookArrivalReflection
+
+#print axioms PureSFormal.Computation.CookArrivalReflection.decodeArrival?_registered_sound
+#print axioms PureSFormal.Computation.CookArrivalReflection.halted_run_notArrivalReadable
+#print axioms PureSFormal.Computation.CookArrivalReflection.decodeArrival?_actual_reflects
+#print axioms PureSFormal.Computation.CookArrivalReflection.arrivalSnapshot?
+#print axioms PureSFormal.Computation.CookArrivalReflection.arrivalSnapshot?_encoded
+#print axioms PureSFormal.Computation.CookArrivalReflection.arrivalSnapshot?_empty
+#print axioms PureSFormal.Computation.CookArrivalReflection.certified_arrivalSnapshot?_none
+#print axioms PureSFormal.Computation.CookArrivalReflection.halted_arrivalSnapshot?_none
+#print axioms PureSFormal.Computation.CookArrivalReflection.arrivalSnapshot?_actual_reflects
+#print axioms PureSFormal.Computation.CookArrivalReflection.passDecode?_actual_reflects
+#print axioms PureSFormal.Computation.CookArrivalReflection.passDecode?_successor
+#print axioms PureSFormal.Computation.CookArrivalReflection.exists_passDecode?_actual

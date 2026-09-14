@@ -1,0 +1,10 @@
+import PureSFormal.Computation.RogozhinT2Halt
+
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.upperProgramCode_haltLabel
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.upperProgramCode_haltLabel_reverse
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.iterate_compileWithPadding_haltPrefix
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.iterate_haltPrefixEndpoint_one
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.iterate_compileWithPadding_halt
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.haltEndpoint_halted
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.safeBefore_compileWithPadding_halt
+#print axioms PureSFormal.Computation.RogozhinT2Simulation.eventuallyHalts_compileWithPadding_halt

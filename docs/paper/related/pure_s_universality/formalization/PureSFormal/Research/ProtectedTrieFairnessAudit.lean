@@ -1,0 +1,15 @@
+import PureSFormal.Research.ProtectedTrieFairness
+
+/-!
+# Structural fairness and liveness axiom inventory
+-/
+
+#print axioms PureSFormal.Research.ProtectedTrieFairness.EncoderReductionPath.reachable
+#print axioms PureSFormal.Research.ProtectedTrieFairness.fair_path_eventually_strongProjection
+#print axioms PureSFormal.Research.ProtectedTrieFairness.fair_path_eventually_labelledProjection
+#print axioms PureSFormal.Research.ProtectedTrieFairness.mem_completeTree_of_length_lt
+#print axioms PureSFormal.Research.ProtectedTrieFairness.completeTree_le_succ
+#print axioms PureSFormal.Research.ProtectedTrieFairness.fairMacroTerm_steps
+#print axioms PureSFormal.Research.ProtectedTrieFairness.fairMacroTerm_structurallyFair
+#print axioms PureSFormal.Research.ProtectedTrieFairness.fairMacroTerm_eventually_labelled
+#print axioms PureSFormal.Research.ProtectedTrieFairness.finite_fairness_obligations_extendible

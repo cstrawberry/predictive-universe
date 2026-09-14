@@ -1,0 +1,12 @@
+import PureSFormal.Research.RootResetLocalContinuationFragment
+
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.states_length
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.probe_runs
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.probeTicks_bound
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.all_input
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.leave_runs
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.fresh_enters
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.marked_enters
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.generatedBase_misses
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetLocalContinuationFragment.erase_run

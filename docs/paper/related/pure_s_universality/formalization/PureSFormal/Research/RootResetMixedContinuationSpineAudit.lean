@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetMixedContinuationSpine
+
+#print axioms PureSFormal.Research.RootResetMixedContinuationSpine.all_input_atRoot
+#print axioms PureSFormal.Research.RootResetMixedContinuationSpine.runMutationCount_zero

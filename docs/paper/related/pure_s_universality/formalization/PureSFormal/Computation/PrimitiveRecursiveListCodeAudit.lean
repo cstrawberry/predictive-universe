@@ -1,0 +1,32 @@
+import PureSFormal.Computation.PrimitiveRecursiveListCode
+
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.decode_encode
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.encode_decode
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.length_le_encode
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_cons
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_head_encode
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_tail_encode
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_fold
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_length
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_reverse
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_append
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_map
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_drop
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_lookup
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_replicate
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_range
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_tabulate
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_flatMap
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_foldWithParameter
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_mapWithParameter
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.Program.eval_tabulateWithParameter
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.length_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.reverse_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.append_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.map_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.drop_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.lookup_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.replicate_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.range_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.tabulate_primitiveRecursive
+#print axioms PureSFormal.Computation.PrimitiveRecursiveListCode.flatMap_primitiveRecursive

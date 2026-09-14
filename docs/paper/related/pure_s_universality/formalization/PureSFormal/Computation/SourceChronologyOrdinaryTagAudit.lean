@@ -1,0 +1,14 @@
+import PureSFormal.Computation.SourceChronologyOrdinaryTag
+
+/-! Authored declaration axiom queries for SourceChronologyOrdinaryTag. -/
+
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.stepDuration
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.stepDuration_exact
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.stepDuration_positive
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.ordinaryTime
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.ordinaryTime_exact
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.ordinaryTime_strict
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.sourceOrdinaryTime
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.sourceOrdinaryTime_decodes
+#print axioms PureSFormal.Computation.SourceChronologyOrdinaryTag.sourceOrdinaryTime_strict
+

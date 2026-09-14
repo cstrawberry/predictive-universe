@@ -1,0 +1,6 @@
+replaying DefinitelyMissingModule
+uncaught exception: unknown module prefix 'DefinitelyMissingModule'
+
+No directory 'DefinitelyMissingModule' or file 'DefinitelyMissingModule.olean' in the search path entries:
+/verification/run/controls
+/verification/toolchain/lib/lean

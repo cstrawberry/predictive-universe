@@ -2,7 +2,7 @@
 
 ## Technical Scope and Dependency Structure
 
-This appendix derives the minimal interface ledger $M=24$ on the stated Hilbert-carrier, binary-record, active-projector, and PCE-attractor branches. It then:
+This appendix derives the minimal interface ledger $M=24$ on the stated Hilbert-carrier, binary-record, active-projector, and PCE-attractor branches. Propositions C.6i–C.6j give a second route to the 24-point shell: degree-six isotropy maximization on the registered four-dimensional shell class, combined with the stated strict cost-ordering premise. It then:
 - evaluates a scheme-specified Thomson-limit core candidate on the Ward, interface-response, curvature, projection, and transport model branches of Sections Z.24--Z.26;
 - proves the least-feasible Euclidean response-carrier dimension on the Bures tangent-cell branch of Theorems Z.10--Z.11, with physical spacetime promotion separately certificate-gated by Corollary P.8.3.
 
@@ -215,8 +215,6 @@ by Theorem 31.
 |------|--------|---------------|--------|
 | 1 | Structural reference $\varepsilon_0=\ln2$ | Registered binary verification quotient | Definition 28; Theorem J.1 |
 | 2 | $\varepsilon_{\mathrm{reset}}\ge H_q(P\mid R)$ on a registered reset branch | Distribution-sensitive Landauer reset ledger | Theorem 31 |
-
-
 | 3 | $d_0 \ge 8$ | Capacity-dimension link for $K_0=3$ | Theorem 23 |
 | 4 | $d_0=8$ on the registered comparator branch | Hilbert lower bound plus an admissible same-class eight-dimensional comparator, response-preserving quotientability, strict maintained-support cost, and minimality | Theorem Z.2 |
 | 5 | $a = 2$ | Sharp match/mismatch record $a\ge2$ + admissibility $\ln a \ge \varepsilon_0$ + PPI/PCE no-surplus optimality | Theorem Z.1 |
@@ -886,6 +884,31 @@ a-\frac{a^2}{d_0}
 $$
 This depends only on $a$ and $d_0$, not on the point $P\in X$. Hence any $SU(d_0)$-invariant functional of $\|\mu\|^2$ alone is constant on $X$ and cannot select a point or ordered subbundle. The remaining statements follow from Theorem Z.5, Theorem Z.6.3a, and Theorem G.8.4e.1. ∎
 
+**Proposition (Syndrome–Logical Factorization).** For an ordered three-bit register define $s(x)=(x_1\oplus x_2,x_2\oplus x_3)$ and $m(x)=\operatorname{majority}(x)$. Each syndrome has exactly two complementary words, and their majority bits differ. Therefore $x\mapsto(s(x),m(x))$ is a bijection:
+
+| Syndrome | Majority 0 | Majority 1 |
+| --- | --- | --- |
+| $00$ | $000$ | $111$ |
+| $10$ | $100$ | $011$ |
+| $11$ | $010$ | $101$ |
+| $01$ | $001$ | $110$ |
+
+The induced unitary identification gives
+
+$$
+\mathbb C^8\cong\mathbb C^4_{\mathrm{syn}}\otimes\mathbb C^2_{\mathrm{log}},
+\qquad
+\mathcal A\cong|00\rangle\otimes\mathbb C^2,
+\qquad
+\mathcal B\cong\mathbb C^3\otimes\mathbb C^2.
+$$
+
+Thus $\operatorname{Hom}_{\mathbb C}(\mathcal A,\mathcal B)\cong\mathbb C^3\otimes M_2(\mathbb C)$ has complex dimension $12$ and underlying real dimension $24$. This supplies an explicit $3\times8$ organization of the interface modes in the registered basis.
+
+The active subspace is the span of the classical repetition-code words. It corrects the stated bit-flip error family; a general quantum error-correction claim requires its own distance and error model. A common logical factor at this finite carrier supplies a concrete candidate for the rank-two correspondence. Extending it across a response bundle requires compatible transition maps, basis transport, and the registered observables. The global correspondence is certified by those transport data.
+
+The identities $d_0=a(K_0+1)$ and $M=2a^2K_0=K_0d_0$ hold on this $K_0=3,a=2$ construction. A family indexed by other $K$ values requires a separate definition and proof.
+
 ## Z.7 QFI Spectrum at the PCE-Attractor
 
 ### Z.7.1 Generator Classification
@@ -938,6 +961,28 @@ for $a=2$. Each interface generator has QFI eigenvalue $\lambda=1$.
 
 **Step 6: Isotropy and Flatness.** The flatness needed here follows directly from the SLD-QFI formula above, not from transitivity on the full interface unit sphere. For an arbitrary Hilbert–Schmidt-normalized interface generator $G\in AB\oplus BA$, the only nonzero SLD-QFI contributions are the active-inactive matrix entries, and Step 3 gives the same coefficient $1/a$ for each such entry. Hence Step 5 gives $F_Q[\rho_0,G]=2/a$ for every normalized interface generator. With $a=2$, every real interface basis direction has QFI eigenvalue $\lambda=1$, and in the normalized real interface basis the restricted QFI metric is $g_{\mathrm{QFI}}=I_{24}$. ∎
 
+**Proposition (Interface Fisher Sum Rule).** For a rank-$a$ state $\rho=\operatorname{diag}(p_1,\ldots,p_a)\oplus0_b$, $p_i>0$, $\sum_i p_i=1$, use an HS-orthonormal Hermitian generator basis and the QFI normalization of Theorem Z.5. The two interface generators for each active–inactive pair each contribute $2p_i$. Summing gives
+
+$$
+\sum_{\mathrm{interface}}F_Q=4b.
+$$
+
+The active-block contribution is
+
+$$
+2\sum_{i\ne j}\frac{(p_i-p_j)^2}{p_i+p_j}\ge0,
+$$
+
+with equality exactly when the active spectrum is uniform. The total generator sum is minimized at $I_a/a\oplus0_b$. For $a=2,b=6$, each interface mode has QFI one and the sum is $24$.
+
+*Proof.* In the HS-orthonormal basis, the two Hermitian generators of each active–inactive matrix pair each have QFI $2p_i$. Sum over the $b$ inactive indices and then over the active probabilities. Within the active block, the two real generators for each unordered pair give the displayed nonnegative sum. It vanishes exactly when all active eigenvalues coincide. ∎
+
+**Proposition (Complete Active-Readout Closure).** For a two-dimensional active block, invariance under conjugation by $\sigma_x$ and $\sigma_z$ gives $\rho_A=I_2/2$. For rank $a$, invariance under every active-block unitary gives $\rho_A=I_a/a$.
+
+*Proof.* In the qubit Bloch representation, the two conjugations jointly set all three Bloch components to zero. In general, invariance under diagonal phase rotations eliminates off-diagonal entries and invariance under basis permutations equalizes the diagonal entries. Trace one gives $1/a$. ∎
+
+The SPAP route registers closure for the complete stated readout family, or the two qubit conjugations, as its bridge to this invariant density operator. For higher rank, equal rank-one probabilities are $1/a$. At the flat active spectrum, active-block unitary orbits have zero QFI and the interface generators carry the sum $4b$. A dynamically conserved interpretation additionally registers rank-preserving dynamics and this generator normalization.
+
 ### Z.7.3 Factor Structure of M = 24
 
 **Remark Z.3: Three Factors of M = 24.** The mode count factorizes as:
@@ -949,6 +994,19 @@ Each factor has independent origin:
 
 
 - Factor $b = 6$: Inactive subspace dimension (from $d_0 - a = 8 - 2$)
+
+**Proposition (Interface Fraction).** For an active rank $a$ in dimension $d$, the real interface-generator fraction is
+
+$$
+\varphi(a,d)=\frac{2a(d-a)}{d^2}=2x(1-x)\le\frac12,
+\qquad x=a/d.
+$$
+
+The real-variable maximum occurs at $x=1/2$. For integer ranks, equality requires even $d$ and $a=d/2$; for odd $d$ the maximum is $(d^2-1)/(2d^2)$. The registered pair $(a,d)=(2,8)$ gives $3/8$.
+
+This is the interface fraction. It equals the fraction of nonzero-QFI generator directions on the flat active-spectrum branch. A nonuniform active spectrum can also have active-block QFI, so the unrestricted “QFI-active fraction” needs that spectral condition.
+
+*Proof.* Complete the square: $2x(1-x)=1/2-2(x-1/2)^2$. The nearest allowed integer rank to $d/2$ gives the stated even and odd maxima. At a flat active spectrum, Theorem Z.5 identifies the nonzero-QFI generators with the $2a(d-a)$ interface directions. ∎
 
 ### Z.7.4 QFI Complexity Functional
 
@@ -1618,6 +1676,20 @@ Conversely, an explicit kissing configuration of at least $M_{\mathrm{int}}$ con
 
 ---
 
+**Construction (Three Shell Frames and the Syndrome Map).** The $D_4$ root shell has three disjoint signed orthogonal frames:
+
+$$
+F_{12|34},\qquad F_{13|24},\qquad F_{14|23},
+$$
+
+where $F_{ij|kl}$ contains the four roots supported on $\{i,j\}$ and the four supported on $\{k,l\}$. Each frame comprises four antipodal orthogonal pairs. A root's six orthogonal roots form precisely the other three antipodal pairs in its frame, so the root belongs to a unique such eight-point frame. Roots in distinct frames have inner product $\pm1$ at norm squared $2$.
+
+After a registered orthogonal identification and unit normalization, the Hurwitz-quaternion presentation expresses these frames as the three cosets of $Q_8$ in $2T$. This gives an explicit three-family geometry to compare with the three nonzero syndromes of Section Z.6.
+
+**Candidate map.** Choose a bijection from the nonzero syndromes to the three frames and, in each real eight-dimensional syndrome block, choose the ordered basis $q_\mu,iq_\mu$ with $\omega=(-1+i+j+k)/2$ and $q_\mu\in\{I,i\sigma_1,i\sigma_2,i\sigma_3\}$. Map these eight basis labels to $+\omega^{s-1}q_\mu$ and $-\omega^{s-1}q_\mu$, respectively. This is an explicit bijection of 24 mode labels with 24 shell vertices once the choices are registered.
+
+The map is a bijection of finite mode labels. A response-preserving realization registers the observable kernel $K_{\mathrm{mode}}$ and verifies $K_{\mathrm{mode}}(u,v)=K_{\mathrm{shell}}(\iota u,\iota v)$ for every pair of labels. For a nominated group action, its equivariance certificate checks $\iota(g\cdot u)=g\cdot\iota(u)$ on generators. These finite conditions define an explicit route to Theorem Z.11's injection certificate. The full 24-dimensional interface inner product has a different type: the two independent labels $q_\mu,iq_\mu$ map to antipodal, linearly dependent carrier vectors.
+
 ## Z.11 Dimensional Selection
 
 **Theorem Z.11 (Minimal-Feasible Dimensional Selection).** Assume the branch of Definition Z.9a and a verified response-preserving injection of the $24$ retained modes into the labeled vertices of the regular $24$-cell. Theorem Z.5 gives
@@ -1987,6 +2059,35 @@ No comparison class of integers or quantitative richness predicate is specified,
 | Modular structures | Weight or coefficient index | Separate arithmetic record |
 
 These shared integers establish compatibility only. No declared comparison class or richness functional proves that $24$ is the unique meeting point of mathematics and physics, that the records arise from one optimization problem, or that their agreement is non-coincidental. Any stronger unification claim requires an explicit map between the independently certified structures.
+**Theorem (Backbone Completeness Rigidity).** For integers $K\ge1$ and $1\le a\le2^K-1$, the equation
+
+$$
+2a(2^K-a)=K2^K
+$$
+
+has solutions $(K,a)=(1,1),(2,2),(3,2),(3,6)$.
+
+**Proof.** The quadratic discriminant is $2^K(2^K-2K)$. For odd $K\ge5$, its being a square requires $2^{K-1}-K$ to be a square. Put $N=2^{(K-1)/2}$. Since $0<K<2N-1$, this number lies strictly between $(N-1)^2$ and $N^2$. For even $K=2j\ge4$, square discriminant requires $2^K-2K$ to be a square, equivalently $2^{K-2}-K/2=N^2-j$ to be a square with $N=2^{j-1}$. The inequality $0<j<2N-1$ again puts it between consecutive squares. Direct substitution for $K=1,2,3$ gives the four stated solutions.
+
+At $a=2$ and $K\ge3$, the shorter proof is $(4-K)2^K=8$: $K\ge4$ is impossible and $K=3$ works. Thus the jointly registered relations $d=2^K$, $M=2a(d-a)$, and $M=Kd$ select $(K,d,a,b,M)=(3,8,2,6,24)$ on that domain.
+
+The extra completeness relation $M=Kd$ is the premise this theorem tests. The syndrome–logical factorization of Section Z.6 realizes it at the registered point. A counterfactual family in which it holds for every admitted $K$ requires its own construction. This is a compatibility theorem for the jointly registered family equations.
+
+On this conjunction, the saturation equation $M\ln(1+u^*)=\ln d$ gives
+
+$$
+d\ln(1+u^*)=\ln2,\qquad u^*=2^{1/d}-1.
+$$
+
+The “one bit” reading refers to this logarithmic capacity identity. A physical cycle or electromagnetic rate interpretation uses the corresponding saturation and coupling identification. With the first-order response formula,
+
+$$
+\alpha_0^{-1}=\frac{4\pi}{u^*}-\frac\pi{\sqrt{K_0}}
+\left(1-\frac{\sin u^*}{M}\right),
+$$
+
+substitution gives approximately $137.036092055$. This evaluation uses the stated first-order normalization.
+
 ### Z.12.3 Physical Emergence from Interface Mode Structure
 
 The $M=24$ QFI interface modes (Theorem Z.5) are generators in the internal MPU Hilbert space $\mathcal H_0=\mathbb C^8$. Through the faithful minimal tangent-shell realization of Definition Z.9a and Theorems Z.10-Z.11, these internal modes select the least feasible Euclidean response-carrier dimension $D=4$. Relations to physical degrees of freedom in $3+1$ spacetime are asserted only on the separate operational-continuum, principal-symbol, time-orientation, and metric-reconstruction certificate branch.
@@ -2267,6 +2368,26 @@ $$
 =12951>4096=2^{12},
 $$
 so $d\le8$. An explicit extended-Golay generator matrix supplies a binary linear $[24,12,8]$ witness, hence the largest attainable distance is $8$. The binary linear $[24,12,8]$ classification theorem identifies every attainer with the extended Golay code up to coordinate permutation. This proves the rate, converse, mathematical attainment, and classification claims separately. Selection of an attainer by the retained PCE comparison follows only after Theorem Z.13b's finite comparison and strict-distance record is accepted. On that selected branch, minimum distance $8$ implies detection of all error words of weight at most $7$ and unique nearest-codeword correction through weight $3$; a physical correction claim still requires the encoder, channel, syndrome, and recovery package of Section Z.13.3. ∎
+
+**Proposition (Perfect Syndrome Decoding and the Golay Route).** For a binary linear code with parity-check map $H$, require the restriction of $H$ to error vectors of weight at most $t$ to be bijective onto the syndrome space. Surjectivity means every syndrome has such an error representative; injectivity means that representative is unique. Together they are equivalent to radius-$t$ Hamming balls about codewords partitioning the ambient binary space.
+
+This establishes perfectness and gives
+
+$$
+\sum_{i=0}^t\binom ni=2^{n-k}.
+$$
+
+The perfect-code classification [Tietäväinen 1973] supplies the next implication on the nontrivial binary linear class: with $k\ge2$ and $t\ge3$, the perfect code has the binary Golay parameters $[23,12,7]$. The no-surplus branch requires the complete syndrome bijection, and register protection additionally requires a map from the nominated register errors to the corrected Hamming-error family. The arithmetic check for the candidate is exact:
+
+$$
+\sum_{i=0}^3\binom{23}{i}=1+23+253+1771=2048=2^{11}.
+$$
+
+The punctured code has parameters $[23,12,7]$ and its extended candidate has parameters $[24,12,8]$. Perfectness belongs to the 23-coordinate code. The 24-coordinate extension has a different ambient-space packing statement. The interface identification uses the explicit parity extension $c\mapsto(c,\sum_i c_i\bmod2)$, giving $M=n+1=24$.
+
+If the extended distance is $d_{ext}=2^K$ and the correction radius is $t=\lfloor(d_{ext}-1)/2\rfloor=2^{K-1}-1$, the extra equality $t=K$ has the unique positive integer solution $K=3$. This is an arithmetic consequence of that conjunction. The route carries the perfectness, protection and interface-identification premises separately from the existing MacWilliams branch.
+
+*Proof of the syndrome criterion.* Let $E_t$ be the vectors of weight at most $t$. Bijectivity of $H|_{E_t}$ gives, for each received word $y$, a unique $e\in E_t$ with $He=Hy$, hence a unique $c=y-e$ in the code. Conversely, a unique decomposition $y=c+e$ determines one error representative in every syndrome. Counting gives the sphere identity. For the final arithmetic claim, $K=1,2$ fail and $K=3$ works; $2^{K-1}-1-K$ is positive at $K=4$ and strictly increases thereafter. ∎
 
 ### Z.13.2 Connection to PCE
 
@@ -2867,8 +2988,6 @@ Thus the theorem uses the self-dual-rate gate to obtain $k=M/2$; it does not inf
 | Quantity | Value | Source | Derivation |
 |:---------|:-----:|:-------|:-----------|
 | $\varepsilon_0$ | $\ln2$ structurally | Definition 28; Theorem J.1 | Registered binary verification quotient; no physical heat equality is asserted |
-
-
 | $a$ | 2 | Theorem Z.1 | Sharp match/mismatch record $a\ge2$ + admissibility $\ln a \ge \varepsilon$ + PPI/PCE no-surplus selection |
 | $N_{\mathrm{vis}}^{\min}$ | 8 | Theorem 15 | Finite operational-context floor $2^{K_0}$ |
 | $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 | Hilbert-carrier bound $d_0\ge N_{\mathrm{vis}}^{\min}$ plus minimal Appendix Z saturation |
@@ -7739,7 +7858,6 @@ The appendix makes separate tests of carrier dimension, electromagnetic response
 | Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; diagnostic-only hypercharge-recoil (operator realization open) candidate $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$ with $R_{\alpha}^{YR\perp}=-0.00009287769839723537\ldots$; downgraded passive-complement branch $[137.03599917502362\ldots,137.03599917878353\ldots]$; canonical composition audit cross-response $\Delta_{\times}=-\pi (u^*)^2\operatorname{sinc}(u^*)/288$ remains a diagnostic and is not a second residual contribution | Theorem Z.26; Definition Z.27.11a; Corollary Z.27.11e.1; Definition Z.27.11e.3; Proposition Z.27.11e.4; Corollary Z.27.11e.5; Remark Z.27.11e.6; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 |
 | Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
-
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
 | Z-pole coupling | α⁻¹(M_Z) = 127.93 | Corollary Z.8 |
 | Thresholded hot-state QFI support | Static counts $26$ and $42$ for the displayed spectra; the specified relaxation channel is eventually $24$, and if $\lambda_{12}(0)>\tau$ and (Z.28.11) hold, its terminal step is $26\to24$ | Prediction Z.1; Proposition Z.28.1; Theorem Z.28.2 |

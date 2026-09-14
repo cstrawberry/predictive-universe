@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetMixedEmptyResponseChain
+
+open PureSFormal.Research.RootResetMixedEmptyResponseChain
+
+#print axioms DispatcherChain.selectsSamples_mixed_pending
+#print axioms emptyResponse_mixed_dispatcher_selectorChain
+#print axioms emptyResponse_mixed_through_marker_selectorChain

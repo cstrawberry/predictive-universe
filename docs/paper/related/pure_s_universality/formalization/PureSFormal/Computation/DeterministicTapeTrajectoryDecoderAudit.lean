@@ -1,0 +1,10 @@
+import PureSFormal.Computation.DeterministicTapeTrajectoryDecoder
+
+/-! Axiom inventory for the literal tape-boundary inverse layer. -/
+
+#print axioms PureSFormal.Computation.DeterministicTapeCounterCompiler.StackCode.decode?_encode
+#print axioms PureSFormal.Computation.DeterministicTapeCounterCompiler.StackCode.encode_of_decode?_eq
+#print axioms PureSFormal.Computation.DeterministicTapeTrajectoryDecoder.decodeTapeBoundary?_sound
+#print axioms PureSFormal.Computation.DeterministicTapeTrajectoryDecoder.decodeTapeBoundary?_boundaryState_configurationOf
+#print axioms PureSFormal.Computation.DeterministicTapeTrajectoryDecoder.decodeTapeBoundary?_compileInitial
+#print axioms PureSFormal.Computation.DeterministicTapeTrajectoryDecoder.exists_decodedPrimitiveBoundary_of_runFor?_eq_some

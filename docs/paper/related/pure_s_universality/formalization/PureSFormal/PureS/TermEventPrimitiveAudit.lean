@@ -1,0 +1,5 @@
+import PureSFormal.PureS.TermEventPrimitive
+
+#print axioms PureSFormal.PureS.TermEventPrimitive.observeResult_operations_le
+#print axioms PureSFormal.PureS.TermEventPrimitive.observesMarkedCheckpoint_value
+#print axioms PureSFormal.PureS.TermEventPrimitive.observesMarkedCheckpoint_operations_le

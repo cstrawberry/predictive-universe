@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetActiveFrameAgreement
+
+#print axioms PureSFormal.Research.RootResetActiveFrameAgreement.generated_first
+#print axioms PureSFormal.Research.RootResetActiveFrameAgreement.generated_second
+#print axioms PureSFormal.Research.RootResetActiveFrameAgreement.continued
+#print axioms PureSFormal.Research.RootResetActiveFrameAgreement.stopped
+#print axioms PureSFormal.Research.RootResetActiveFrameAgreement.bounded_terminal

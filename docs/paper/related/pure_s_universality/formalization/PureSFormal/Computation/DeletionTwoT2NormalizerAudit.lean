@@ -1,0 +1,28 @@
+import PureSFormal.Computation.DeletionTwoT2Normalizer
+
+/-! Exact logical-basis audit for the deletion-two to `T2` normalizer. -/
+
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.normalize_isT2
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.normalize_wellFormed
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.targetOf_append
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.productionAt_normalize_delay
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.encodeLabel_ne_delay
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.targetHalt_ne_delay
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.delay_ne_targetHalt
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.absorbingStep_pad
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.absorbingStep_data_data
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.absorbingStep_data_pad
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.absorbingStep_pending_pad
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.absorbingStep_pending_data
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.absorbingStep_data_halt
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.QueueState.targetWord_step
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.QueueState.sourceView_step
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.eventuallyHalts_reflects
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.QueueState.advances_finitely
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.represented_halt_reaches
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.simulate_or_halt
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.Represents.step
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.Represents.steps
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.tagIterate_add
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.eventuallyHalts_forward
+#print axioms PureSFormal.Computation.DeletionTwoT2Normalizer.eventuallyHalts_iff

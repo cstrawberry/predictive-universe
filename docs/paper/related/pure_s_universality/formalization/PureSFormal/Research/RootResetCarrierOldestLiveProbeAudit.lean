@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetCarrierOldestLiveProbe
+
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveProbe.unwind
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveProbe.selects
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveProbe.all_input
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveProbe.live_redex
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveProbe.picked_live
+#print axioms PureSFormal.Research.RootResetCellSpineRows.live_sound
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveProbe.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveProbe.erase_run

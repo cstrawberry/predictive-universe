@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetFirstResponseSelectorChain
+
+open PureSFormal.Research.RootResetFirstResponseSelectorChain
+
+#print axioms positiveStageFifth_selectStep_eq_firstC4
+#print axioms positiveStageFifth_firstC4_selectorChain
+#print axioms firstC4_selectStep_eq_firstFrameRoot

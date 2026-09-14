@@ -1,0 +1,20 @@
+import PureSFormal.Research.RootResetFrameSpineWalker
+
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.mem_states
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.states_length
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.rebuild_spineParents
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.run_spine
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.runMutationCount_spine
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.run_wrapped_first
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.run_wrapped_second
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.mutationCount_wrapped_first
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.mutationCount_wrapped_second
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.erase_wrapped_first
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.erase_wrapped_second
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.first_agrees_selector
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.second_agrees_selector
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.spineParents_replicate
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.rebuild_pending_eq_wrap
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.erase_pending_first
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.erase_pending_second
+#print axioms PureSFormal.Research.RootResetFrameSpineWalker.frame_root_requires_other_phase

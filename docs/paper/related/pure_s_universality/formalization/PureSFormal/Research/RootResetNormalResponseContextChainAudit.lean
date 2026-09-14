@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetNormalResponseContextChain
+
+#print axioms PureSFormal.Research.RootResetNormalResponseContextChain.DispatcherChain.selections_marked_pending
+#print axioms PureSFormal.Research.RootResetNormalResponseContextChain.responseEntries_tail_selections_marked_pending
+#print axioms PureSFormal.Research.RootResetNormalResponseContextChain.normalResponse_body_marked_selectorChain

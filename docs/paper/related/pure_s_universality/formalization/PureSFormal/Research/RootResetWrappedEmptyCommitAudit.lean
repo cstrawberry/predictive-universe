@@ -1,0 +1,13 @@
+import PureSFormal.Research.RootResetWrappedEmptyCommit
+
+open PureSFormal.Research.RootResetWrappedEmptyCommit
+
+#print axioms emptyBase_tombstoneCount
+#print axioms markedEmpty_tombstoneCount
+#print axioms emptySweepCarrier_tombstoneCount
+#print axioms generatedEmptySweep_tombstoneCount
+#print axioms withResponse_chosen
+#print axioms completedRoute_chosen
+#print axioms selectStep?_marked_pending_empty_commit
+#print axioms emptyResponse_marked_through_marker_selectorChain
+#print axioms generatedEmptyResponse_marked_through_marker_selectorChain

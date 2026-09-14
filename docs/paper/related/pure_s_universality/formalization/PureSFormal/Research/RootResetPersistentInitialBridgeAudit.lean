@@ -1,0 +1,48 @@
+import PureSFormal.Research.RootResetPersistentInitialBridge
+
+/-! Kernel dependency report for the first persistent/root-reset edge bridge. -/
+
+namespace PureSFormal.Research.RootResetPersistentInitialBridge
+
+#print axioms parseMarkedLocal?_generator_none
+#print axioms parseClockFuel?_generator
+#print axioms peelMarked_generator
+#print axioms dispatcher_parse_generator_none
+#print axioms appender_parse_generator_none
+#print axioms response_parse_generator_none
+#print axioms parseComposite?_generator
+#print axioms parseTwentySeven?_generator
+#print axioms initialRegisteredView_stage
+#print axioms initial_selectedAddress_eq_schedulerSourceCursor
+#print axioms initial_selectedContractum_eq_schedulerTarget
+#print axioms firstPersistentEdge_rootResetAgreement
+#print axioms firstMutation_erase_eq_firstSampleTerm
+#print axioms parseMarkedLocal?_firstSample_none
+#print axioms peelMarked_firstSample
+#print axioms parseClockFuel?_firstSample
+#print axioms dispatcher_parse_firstSample_none
+#print axioms appender_parse_firstSample_none
+#print axioms response_parse_firstSample_none
+#print axioms parseComposite?_firstSample
+#print axioms parseTwentySeven?_firstSample
+#print axioms firstSampleRegisteredView_stage
+#print axioms firstSample_selectedAddress_eq_schedulerSourceCursor
+#print axioms firstSample_selectStep_eq_secondMutation
+#print axioms secondPersistentEdge_rootResetAgreement
+#print axioms secondMutation_erase_eq_secondSampleTerm
+#print axioms parseMarkedLocal?_secondSample_none
+#print axioms peelMarked_secondSample
+#print axioms parseClockFuel?_secondSample
+#print axioms dispatcher_parse_secondSample_none
+#print axioms appender_parse_secondSample_none
+#print axioms response_parse_secondSample_none
+#print axioms parseComposite?_secondSample
+#print axioms parseTwentySeven?_secondSample
+#print axioms secondSampleRegisteredView_stage
+#print axioms secondSample_selectedAddress_eq_schedulerSourceCursor
+#print axioms secondSample_selectStep_eq_zeroClockMutation
+#print axioms secondMutationConfiguration_eq_positiveClockMutation
+#print axioms secondMutation_seekThirdMutation
+#print axioms thirdPersistentEdge_rootResetAgreement
+
+end PureSFormal.Research.RootResetPersistentInitialBridge

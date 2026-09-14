@@ -1,0 +1,26 @@
+import PureSFormal.Research.RootResetClockParityWalker
+
+#print axioms PureSFormal.Research.RootResetClockParityWalker.mem_states
+#print axioms PureSFormal.Research.RootResetClockParityWalker.states_length
+#print axioms PureSFormal.Research.RootResetClockParityWalker.xor_self
+#print axioms PureSFormal.Research.RootResetClockParityWalker.xor_complement
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_numeral
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_numeral_atRoot
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_abort
+#print axioms PureSFormal.Research.RootResetClockParityWalker.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetClockParityWalker.erase_run
+#print axioms PureSFormal.Research.RootResetClockParityWalker.worker_complete
+#print axioms PureSFormal.Research.RootResetClockParityWalker.malformed_numeral_restores
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_liftGrowth
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_firstPass
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_secondPass
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_generated_growth
+#print axioms PureSFormal.Research.RootResetClockParityWalker.run_generated_launch
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_growth_address
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_launch_address
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_growth_contracts
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_launch_contracts
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_positive_schedulerCursor
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_zero_schedulerCursor
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_launch_schedulerCursor
+#print axioms PureSFormal.Research.RootResetClockParityWalker.generated_launch_schedulerTarget

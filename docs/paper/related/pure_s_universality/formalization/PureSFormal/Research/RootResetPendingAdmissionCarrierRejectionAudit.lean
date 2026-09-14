@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetPendingAdmissionCarrierRejection
+open PureSFormal.Research.RootResetPendingAdmissionCarrierRejection
+#print axioms C_s_misses
+#print axioms localPattern_base_misses
+#print axioms fixed_base_misses
+#print axioms childAdmitted_false_of_misses
+#print axioms childAdmitted_base_false
+#print axioms childAdmitted_live_false
+#print axioms childAdmitted_tombstone_false
+#print axioms childAdmitted_path_nonlocal_false
+#print axioms childAdmitted_path_eq_local

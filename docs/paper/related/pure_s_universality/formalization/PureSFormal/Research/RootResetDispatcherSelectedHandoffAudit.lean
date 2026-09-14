@@ -1,0 +1,23 @@
+import PureSFormal.Research.RootResetDispatcherSelectedHandoff
+
+/-!
+Kernel-axiom audit for the exact selected-child dispatcher handoff.
+-/
+
+namespace PureSFormal.Research.RootResetDispatcherSelectedHandoff
+
+#print axioms parseForked?_selected_contracts_exact
+#print axioms parseRouteNode?_selectedTarget_left_node
+#print axioms parseRouteNode?_selectedTarget_right_node
+#print axioms parsedForked_left_node_exact_handoff
+#print axioms parsedForked_right_node_exact_handoff
+#print axioms parseRouteDetailed_selectedTarget_left_leaf
+#print axioms parseRouteDetailed_selectedTarget_right_leaf
+#print axioms parsedForked_left_leaf_exact_handoff
+#print axioms parsedForked_right_leaf_exact_handoff
+#print axioms selectedAction_nonempty_contractRoot?_firstRow
+#print axioms parseRow?_selectedAction_nonempty_first
+#print axioms selectedAction_nonempty_exact_appender_handoff
+#print axioms parseActive?_selectedAction_nonempty_first
+
+end PureSFormal.Research.RootResetDispatcherSelectedHandoff

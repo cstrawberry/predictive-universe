@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetMarkerTreeAutomaton
+#print axioms PureSFormal.Research.RootResetMarkerTreeAutomaton.observer_bound_fixed
+#print axioms PureSFormal.Research.RootResetMarkerTreeAutomaton.automaton_accepts_eq_observer
+#print axioms PureSFormal.Research.RootResetMarkerTreeAutomaton.automaton_cover_complete
+#print axioms PureSFormal.Research.RootResetMarkerTreeAutomaton.automaton_root_trajectory_iff

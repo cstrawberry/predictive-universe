@@ -1,0 +1,81 @@
+replaying PureSFormal.PureS.CarrierActionDecode
+passed PureSFormal.PureS.CarrierActionDecode declarations=5
+replaying PureSFormal.PureS.CarrierDecoder
+passed PureSFormal.PureS.CarrierDecoder declarations=70
+replaying PureSFormal.PureS.CellDeletion
+passed PureSFormal.PureS.CellDeletion declarations=82
+replaying PureSFormal.PureS.CellSpine
+passed PureSFormal.PureS.CellSpine declarations=54
+replaying PureSFormal.PureS.CheckedTransition
+passed PureSFormal.PureS.CheckedTransition declarations=64
+replaying PureSFormal.PureS.CheckpointConstructors
+passed PureSFormal.PureS.CheckpointConstructors declarations=29
+replaying PureSFormal.PureS.CheckpointDecoder
+passed PureSFormal.PureS.CheckpointDecoder declarations=541
+replaying PureSFormal.PureS.CheckpointExclusion
+passed PureSFormal.PureS.CheckpointExclusion declarations=340
+replaying PureSFormal.PureS.CheckpointExclusionAudit
+passed PureSFormal.PureS.CheckpointExclusionAudit declarations=0
+replaying PureSFormal.PureS.CheckpointRun
+passed PureSFormal.PureS.CheckpointRun declarations=95
+replaying PureSFormal.PureS.CheckpointSeedReadback
+passed PureSFormal.PureS.CheckpointSeedReadback declarations=14
+replaying PureSFormal.PureS.CheckpointSeedReadbackAudit
+passed PureSFormal.PureS.CheckpointSeedReadbackAudit declarations=0
+replaying PureSFormal.PureS.CheckpointSeedReadbackPrimitive
+passed PureSFormal.PureS.CheckpointSeedReadbackPrimitive declarations=25
+replaying PureSFormal.PureS.CheckpointSeedReadbackPrimitiveAudit
+passed PureSFormal.PureS.CheckpointSeedReadbackPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.CheckpointSeedReflection
+passed PureSFormal.PureS.CheckpointSeedReflection declarations=8
+replaying PureSFormal.PureS.CheckpointSeedReflectionAudit
+passed PureSFormal.PureS.CheckpointSeedReflectionAudit declarations=0
+replaying PureSFormal.PureS.CheckpointTime
+passed PureSFormal.PureS.CheckpointTime declarations=29
+replaying PureSFormal.PureS.CheckpointTimeAudit
+passed PureSFormal.PureS.CheckpointTimeAudit declarations=0
+replaying PureSFormal.PureS.Clock
+passed PureSFormal.PureS.Clock declarations=25
+replaying PureSFormal.PureS.ClosedTerms
+passed PureSFormal.PureS.ClosedTerms declarations=57
+replaying PureSFormal.PureS.ClosedTermsAudit
+passed PureSFormal.PureS.ClosedTermsAudit declarations=0
+replaying PureSFormal.PureS.CompleteLayer
+passed PureSFormal.PureS.CompleteLayer declarations=2
+replaying PureSFormal.PureS.ContextCursor
+passed PureSFormal.PureS.ContextCursor declarations=50
+replaying PureSFormal.PureS.ControllerProjection
+passed PureSFormal.PureS.ControllerProjection declarations=39
+replaying PureSFormal.PureS.ControllerProjectionAudit
+passed PureSFormal.PureS.ControllerProjectionAudit declarations=0
+replaying PureSFormal.PureS.ControllerStateCount
+passed PureSFormal.PureS.ControllerStateCount declarations=256
+replaying PureSFormal.PureS.ControllerTrajectory
+passed PureSFormal.PureS.ControllerTrajectory declarations=57
+replaying PureSFormal.PureS.ControllerTrajectoryAudit
+passed PureSFormal.PureS.ControllerTrajectoryAudit declarations=0
+replaying PureSFormal.PureS.CountedCheckpointDecoder
+passed PureSFormal.PureS.CountedCheckpointDecoder declarations=131
+replaying PureSFormal.PureS.CountedCheckpointDecoderAudit
+passed PureSFormal.PureS.CountedCheckpointDecoderAudit declarations=0
+replaying PureSFormal.PureS.CountedReduction
+passed PureSFormal.PureS.CountedReduction declarations=16
+replaying PureSFormal.PureS.Cursor
+passed PureSFormal.PureS.Cursor declarations=156
+replaying PureSFormal.PureS.CursorPositions
+passed PureSFormal.PureS.CursorPositions declarations=24
+replaying PureSFormal.PureS.CursorPositionsAudit
+passed PureSFormal.PureS.CursorPositionsAudit declarations=0
+replaying PureSFormal.PureS.DispatchParser
+passed PureSFormal.PureS.DispatchParser declarations=80
+replaying PureSFormal.PureS.DispatchParserPrimitive
+passed PureSFormal.PureS.DispatchParserPrimitive declarations=31
+replaying PureSFormal.PureS.DispatchParserPrimitiveAudit
+passed PureSFormal.PureS.DispatchParserPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.Dispatcher
+passed PureSFormal.PureS.Dispatcher declarations=103
+replaying PureSFormal.PureS.DispatcherAudit
+passed PureSFormal.PureS.DispatcherAudit declarations=0
+replaying PureSFormal.PureS.Dovetail
+passed PureSFormal.PureS.Dovetail declarations=42
+checked 2425 declarations

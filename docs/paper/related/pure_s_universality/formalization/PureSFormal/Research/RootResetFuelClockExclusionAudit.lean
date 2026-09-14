@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetFuelClockExclusion
+#print axioms PureSFormal.Research.RootResetFuelClockExclusion.pattern_clock_pair_missed
+#print axioms PureSFormal.Research.RootResetFuelClockExclusion.clock_pair_missed
+#print axioms PureSFormal.Research.RootResetFuelClockExclusion.growth_missed
+#print axioms PureSFormal.Research.RootResetFuelClockExclusion.launch_missed

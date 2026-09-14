@@ -1,0 +1,81 @@
+replaying PureSFormal.PureS.ProbeCompiler
+passed PureSFormal.PureS.ProbeCompiler declarations=443
+replaying PureSFormal.PureS.PublicDecoder
+passed PureSFormal.PureS.PublicDecoder declarations=46
+replaying PureSFormal.PureS.PublicDecoderAudit
+passed PureSFormal.PureS.PublicDecoderAudit declarations=0
+replaying PureSFormal.PureS.PublicDecoderPrimitive
+passed PureSFormal.PureS.PublicDecoderPrimitive declarations=27
+replaying PureSFormal.PureS.PublicDecoderPrimitiveAudit
+passed PureSFormal.PureS.PublicDecoderPrimitiveAudit declarations=0
+replaying PureSFormal.PureS.ReachableAudit
+passed PureSFormal.PureS.ReachableAudit declarations=85
+replaying PureSFormal.PureS.Reduction
+passed PureSFormal.PureS.Reduction declarations=36
+replaying PureSFormal.PureS.RegisteredMarkerBridge
+passed PureSFormal.PureS.RegisteredMarkerBridge declarations=24
+replaying PureSFormal.PureS.RegisteredMarkerBridgeAudit
+passed PureSFormal.PureS.RegisteredMarkerBridgeAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerCompleteness
+passed PureSFormal.PureS.RegisteredMarkerCompleteness declarations=4
+replaying PureSFormal.PureS.RegisteredMarkerCompletenessAudit
+passed PureSFormal.PureS.RegisteredMarkerCompletenessAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerExclusion
+passed PureSFormal.PureS.RegisteredMarkerExclusion declarations=16
+replaying PureSFormal.PureS.RegisteredMarkerExclusionAudit
+passed PureSFormal.PureS.RegisteredMarkerExclusionAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerGlobalSoundness
+passed PureSFormal.PureS.RegisteredMarkerGlobalSoundness declarations=6
+replaying PureSFormal.PureS.RegisteredMarkerGlobalSoundnessAudit
+passed PureSFormal.PureS.RegisteredMarkerGlobalSoundnessAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerJobs
+passed PureSFormal.PureS.RegisteredMarkerJobs declarations=5
+replaying PureSFormal.PureS.RegisteredMarkerJobsAudit
+passed PureSFormal.PureS.RegisteredMarkerJobsAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerNonemptyPrefix
+passed PureSFormal.PureS.RegisteredMarkerNonemptyPrefix declarations=3
+replaying PureSFormal.PureS.RegisteredMarkerNonemptyPrefixAudit
+passed PureSFormal.PureS.RegisteredMarkerNonemptyPrefixAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerPhases
+passed PureSFormal.PureS.RegisteredMarkerPhases declarations=10
+replaying PureSFormal.PureS.RegisteredMarkerPhasesAudit
+passed PureSFormal.PureS.RegisteredMarkerPhasesAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerSampling
+passed PureSFormal.PureS.RegisteredMarkerSampling declarations=3
+replaying PureSFormal.PureS.RegisteredMarkerSamplingAudit
+passed PureSFormal.PureS.RegisteredMarkerSamplingAudit declarations=0
+replaying PureSFormal.PureS.RegisteredMarkerStages
+passed PureSFormal.PureS.RegisteredMarkerStages declarations=5
+replaying PureSFormal.PureS.RegisteredMarkerStagesAudit
+passed PureSFormal.PureS.RegisteredMarkerStagesAudit declarations=0
+replaying PureSFormal.PureS.RootPath
+passed PureSFormal.PureS.RootPath declarations=23
+replaying PureSFormal.PureS.RouteAction
+passed PureSFormal.PureS.RouteAction declarations=6
+replaying PureSFormal.PureS.RouteExecution
+passed PureSFormal.PureS.RouteExecution declarations=17
+replaying PureSFormal.PureS.RouteGrammar
+passed PureSFormal.PureS.RouteGrammar declarations=17
+replaying PureSFormal.PureS.RouteParser
+passed PureSFormal.PureS.RouteParser declarations=156
+replaying PureSFormal.PureS.SchedulerAllStages
+passed PureSFormal.PureS.SchedulerAllStages declarations=119
+replaying PureSFormal.PureS.SchedulerAllStagesAudit
+passed PureSFormal.PureS.SchedulerAllStagesAudit declarations=0
+replaying PureSFormal.PureS.SchedulerAscent
+passed PureSFormal.PureS.SchedulerAscent declarations=110
+replaying PureSFormal.PureS.SchedulerBound
+passed PureSFormal.PureS.SchedulerBound declarations=101
+replaying PureSFormal.PureS.SchedulerBoundAudit
+passed PureSFormal.PureS.SchedulerBoundAudit declarations=0
+replaying PureSFormal.PureS.SchedulerCompletedContext
+passed PureSFormal.PureS.SchedulerCompletedContext declarations=24
+replaying PureSFormal.PureS.SchedulerCompletedContextAudit
+passed PureSFormal.PureS.SchedulerCompletedContextAudit declarations=0
+replaying PureSFormal.PureS.SchedulerContinuation
+passed PureSFormal.PureS.SchedulerContinuation declarations=32
+replaying PureSFormal.PureS.SchedulerContinuationAudit
+passed PureSFormal.PureS.SchedulerContinuationAudit declarations=0
+replaying PureSFormal.PureS.SchedulerControl
+passed PureSFormal.PureS.SchedulerControl declarations=750
+checked 2068 declarations

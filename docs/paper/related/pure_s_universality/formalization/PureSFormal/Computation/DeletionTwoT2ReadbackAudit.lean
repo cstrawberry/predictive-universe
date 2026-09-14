@@ -1,0 +1,10 @@
+import PureSFormal.Computation.DeletionTwoT2Readback
+
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.decodeLabel_encodeLabel
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.decodeAligned?_targetOf
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.decodeAligned?_pending_none
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.decodeWord?_targetWord
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.tokensValid_step
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.represents_iterate_tokensValid
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.decodeWord?_iterate
+#print axioms PureSFormal.Computation.DeletionTwoT2Readback.decodeWord?_normalizeWord

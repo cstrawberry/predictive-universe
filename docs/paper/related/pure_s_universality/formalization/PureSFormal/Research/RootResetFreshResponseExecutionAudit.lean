@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetFreshResponseExecution
+
+#print axioms PureSFormal.Research.RootResetFreshResponseExecution.nonpending_forwarded
+#print axioms PureSFormal.Research.RootResetFreshResponseExecution.pending_forwarded
+#print axioms PureSFormal.Research.RootResetFreshResponseExecution.candidate_forwarded
+#print axioms PureSFormal.Research.RootResetFreshResponseExecution.candidate_missing

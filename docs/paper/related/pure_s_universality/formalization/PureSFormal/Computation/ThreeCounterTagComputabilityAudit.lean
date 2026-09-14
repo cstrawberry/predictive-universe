@@ -1,0 +1,29 @@
+import PureSFormal.Computation.ThreeCounterTagComputability
+
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.instruction_getD_code
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.payloadControl_eq_div
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.payloadRegister_code
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_instruction
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_field
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_live
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_testedEq
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_scaleCode
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_branch
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_header
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_laneMultiplicity
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_laneOutput
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_payloadLane
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_row
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_selectRows
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.selectedRowValue_decoder
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_tableEntry
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_ordinaryProgram
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_dataBlock
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_canonical
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_initialWord
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_ordinaryJob
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_compileT2
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.sourceT2
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.Program.eval_sourceT2
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.sourceT2_primitiveRecursive
+#print axioms PureSFormal.Computation.ThreeCounterTagComputability.sourceT2_decode

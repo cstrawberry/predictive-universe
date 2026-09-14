@@ -777,7 +777,6 @@ On the fixed-total-budget, parallel, three-family-symmetric, noncancelling branc
 |:----------|:-----:|:----------------|
 | $\kappa_{EW}/2$ | 19.25 | CP-odd complexity of the complement-equivariant half-path (Lemma Y.8.1) |
 | $\varepsilon_0/N_g$ | $\ln2/3$ | Common action on the fixed-budget, parallel, $S_3$-symmetric, noncancelling family-saddle branch |
-
 | $\kappa_B$ | 19.48 | Total baryogenesis complexity |
 
 ---

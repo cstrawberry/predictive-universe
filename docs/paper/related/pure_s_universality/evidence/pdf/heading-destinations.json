@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "section-1",
+    "heading": "Problem and central idea",
+    "page": 1,
+    "target_top": 188.53,
+    "bookmark_top": 191.74,
+    "rendered_heading_top": 179.979736328125,
+    "visible_clearance_points": 8.550263671875001
+  },
+  {
+    "id": "section-2",
+    "heading": "Model and main theorem",
+    "page": 2,
+    "target_top": 472.06,
+    "bookmark_top": 475.39,
+    "rendered_heading_top": 463.5057373046875,
+    "visible_clearance_points": 8.554262695312502
+  },
+  {
+    "id": "section-2-1",
+    "heading": "Terms and native contraction",
+    "page": 2,
+    "target_top": 442.59,
+    "bookmark_top": 447.96,
+    "rendered_heading_top": 436.5024719238281,
+    "visible_clearance_points": 6.08752807617185
+  },
+  {
+    "id": "section-2-2",
+    "heading": "Finite selection from the current term",
+    "page": 2,
+    "target_top": 215.46,
+    "bookmark_top": 218.67,
+    "rendered_heading_top": 209.44619750976562,
+    "visible_clearance_points": 6.013802490234383
+  },
+  {
+    "id": "section-2-3",
+    "heading": "Source instances and returned bits",
+    "page": 3,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.706298828125,
+    "visible_clearance_points": 6.043701171875
+  },
+  {
+    "id": "theorem-1r",
+    "heading": "Theorem 1R. Exact computation by a fixed root-restarted finite controller",
+    "page": 3,
+    "target_top": 609.36,
+    "bookmark_top": 612.7,
+    "rendered_heading_top": 603.34423828125,
+    "visible_clearance_points": 6.015761718750014
+  },
+  {
+    "id": "section-2-5",
+    "heading": "Four clocks",
+    "page": 4,
+    "target_top": 246.91,
+    "bookmark_top": 252.36,
+    "rendered_heading_top": 240.8214569091797,
+    "visible_clearance_points": 6.088543090820309
+  },
+  {
+    "id": "section-3",
+    "heading": "A worked computation",
+    "page": 5,
+    "target_top": 319.94,
+    "bookmark_top": 325.39,
+    "rendered_heading_top": 311.4757995605469,
+    "visible_clearance_points": 8.464200439453123
+  },
+  {
+    "id": "section-3-1",
+    "heading": "Queue cells and cyclic-tag steps",
+    "page": 5,
+    "target_top": 290.48,
+    "bookmark_top": 293.15,
+    "rendered_heading_top": 284.4342956542969,
+    "visible_clearance_points": 6.045704345703143
+  },
+  {
+    "id": "section-3-2",
+    "heading": "Computing 101 \u2192 011 \u2192 11",
+    "page": 6,
+    "target_top": 240.84,
+    "bookmark_top": 241.65,
+    "rendered_heading_top": 234.7942657470703,
+    "visible_clearance_points": 6.045734252929691
+  },
+  {
+    "id": "section-3-3",
+    "heading": "Observed checkpoints",
+    "page": 7,
+    "target_top": 462.94,
+    "bookmark_top": 466.28,
+    "rendered_heading_top": 456.90228271484375,
+    "visible_clearance_points": 6.037717285156248
+  },
+  {
+    "id": "section-3-4",
+    "heading": "Two successive invocations from the root",
+    "page": 7,
+    "target_top": 209.57,
+    "bookmark_top": 212.91,
+    "rendered_heading_top": 203.55618286132812,
+    "visible_clearance_points": 6.013817138671868
+  },
+  {
+    "id": "section-4",
+    "heading": "Representation and exact checkpoints",
+    "page": 8,
+    "target_top": 455.32,
+    "bookmark_top": 458.53,
+    "rendered_heading_top": 446.77374267578125,
+    "visible_clearance_points": 8.546257324218743
+  },
+  {
+    "id": "section-4-1",
+    "heading": "The five fields",
+    "page": 8,
+    "target_top": 425.86,
+    "bookmark_top": 428.53,
+    "rendered_heading_top": 419.8421936035156,
+    "visible_clearance_points": 6.017806396484389
+  },
+  {
+    "id": "section-4-2",
+    "heading": "The checkpoint grammar",
+    "page": 9,
+    "target_top": 541.06,
+    "bookmark_top": 546.19,
+    "rendered_heading_top": 534.9674682617188,
+    "visible_clearance_points": 6.092531738281195
+  },
+  {
+    "id": "section-4-3",
+    "heading": "Literal checkpoint parsing",
+    "page": 12,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.658447265625,
+    "visible_clearance_points": 6.091552734375
+  },
+  {
+    "id": "section-4-4",
+    "heading": "Fresh bounded recomputation",
+    "page": 13,
+    "target_top": 672.78,
+    "bookmark_top": 675.99,
+    "rendered_heading_top": 666.689453125,
+    "visible_clearance_points": 6.090546874999973
+  },
+  {
+    "id": "section-4-5",
+    "heading": "The persistent scheduler used in the proof",
+    "page": 13,
+    "target_top": 475.48,
+    "bookmark_top": 478.7,
+    "rendered_heading_top": 469.4661865234375,
+    "visible_clearance_points": 6.013813476562518
+  },
+  {
+    "id": "theorem-1",
+    "heading": "Theorem 1. Exact cyclic-tag trajectories under a fixed persistent-cursor evaluator",
+    "page": 14,
+    "target_top": 653.23,
+    "bookmark_top": 656.45,
+    "rendered_heading_top": 647.2152099609375,
+    "visible_clearance_points": 6.014790039062518
+  },
+  {
+    "id": "section-4-7",
+    "heading": "Exactness and progress",
+    "page": 15,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.658447265625,
+    "visible_clearance_points": 6.091552734375
+  },
+  {
+    "id": "section-5",
+    "heading": "Selection from a fresh root",
+    "page": 17,
+    "target_top": 472.06,
+    "bookmark_top": 477.27,
+    "rendered_heading_top": 463.591796875,
+    "visible_clearance_points": 8.468203125000002
+  },
+  {
+    "id": "section-5-1",
+    "heading": "The concrete finite passes",
+    "page": 18,
+    "target_top": 157.3,
+    "bookmark_top": 160.64,
+    "rendered_heading_top": 151.27816772460938,
+    "visible_clearance_points": 6.021832275390636
+  },
+  {
+    "id": "section-5-2",
+    "heading": "Recovery, the empty case, and termination",
+    "page": 23,
+    "target_top": 599.03,
+    "bookmark_top": 602.37,
+    "rendered_heading_top": 592.9434204101562,
+    "visible_clearance_points": 6.086579589843723
+  },
+  {
+    "id": "active-copy-exclusion",
+    "heading": "Active roles and historical-copy exclusion",
+    "page": 23,
+    "target_top": 505.83,
+    "bookmark_top": 511.04,
+    "rendered_heading_top": 499.4616394042969,
+    "visible_clearance_points": 6.368360595703109
+  },
+  {
+    "id": "response-decision",
+    "heading": "The response decision and EMPTY",
+    "page": 27,
+    "target_top": 459.14,
+    "bookmark_top": 462.48,
+    "rendered_heading_top": 452.72900390625,
+    "visible_clearance_points": 6.410996093749986
+  },
+  {
+    "id": "section-5-2-3",
+    "heading": "Exact recovery of the contraction path",
+    "page": 30,
+    "target_top": 432.86,
+    "bookmark_top": 436.07,
+    "rendered_heading_top": 426.51446533203125,
+    "visible_clearance_points": 6.345534667968764
+  },
+  {
+    "id": "section-5-2-4",
+    "heading": "All-input termination",
+    "page": 30,
+    "target_top": 311.89,
+    "bookmark_top": 315.11,
+    "rendered_heading_top": 305.5216369628906,
+    "visible_clearance_points": 6.368363037109361
+  },
+  {
+    "id": "whole-term-transition-agreement",
+    "heading": "Whole-term transition and trajectory agreement",
+    "page": 32,
+    "target_top": 730.33,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 723.9219970703125,
+    "visible_clearance_points": 6.408002929687541
+  },
+  {
+    "id": "section-5-3",
+    "heading": "Proof dependencies",
+    "page": 38,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.730224609375,
+    "visible_clearance_points": 6.019775390625
+  },
+  {
+    "id": "section-5-4",
+    "heading": "A fixed regular halting language",
+    "page": 38,
+    "target_top": 238.03,
+    "bookmark_top": 241.3,
+    "rendered_heading_top": 232.01718139648438,
+    "visible_clearance_points": 6.012818603515626
+  },
+  {
+    "id": "section-6",
+    "heading": "Universal compilation and source output",
+    "page": 42,
+    "target_top": 734.89,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 726.3417358398438,
+    "visible_clearance_points": 8.548264160156236
+  },
+  {
+    "id": "section-6-1",
+    "heading": "The conventional source machine",
+    "page": 42,
+    "target_top": 705.43,
+    "bookmark_top": 708.1,
+    "rendered_heading_top": 699.3384399414062,
+    "visible_clearance_points": 6.0915600585937
+  },
+  {
+    "id": "section-6-2",
+    "heading": "The fixed compiler target",
+    "page": 43,
+    "target_top": 686.87,
+    "bookmark_top": 690.21,
+    "rendered_heading_top": 680.8522338867188,
+    "visible_clearance_points": 6.0177661132812545
+  },
+  {
+    "id": "section-6-3",
+    "heading": "Structural input construction",
+    "page": 44,
+    "target_top": 407.58,
+    "bookmark_top": 412.65,
+    "rendered_heading_top": 401.539306640625,
+    "visible_clearance_points": 6.040693359374984
+  },
+  {
+    "id": "theorem-2",
+    "heading": "Theorem 2. One fixed pure-S endpoint for deterministic Turing-machine halting",
+    "page": 45,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.730224609375,
+    "visible_clearance_points": 6.019775390625
+  },
+  {
+    "id": "section-6-4",
+    "heading": "Boundary representations and literal readback",
+    "page": 47,
+    "target_top": 596.87,
+    "bookmark_top": 600.09,
+    "rendered_heading_top": 590.7794799804688,
+    "visible_clearance_points": 6.0905200195312545
+  },
+  {
+    "id": "section-6-5-1",
+    "heading": "Literal tape rows and primitive counter boundaries",
+    "page": 48,
+    "target_top": 379.07,
+    "bookmark_top": 382.27,
+    "rendered_heading_top": 372.6549987792969,
+    "visible_clearance_points": 6.415001220703118
+  },
+  {
+    "id": "section-6-5-2",
+    "heading": "Counter words and the restricted deletion-two adapter",
+    "page": 49,
+    "target_top": 404.78,
+    "bookmark_top": 407.69,
+    "rendered_heading_top": 398.4007263183594,
+    "visible_clearance_points": 6.379273681640598
+  },
+  {
+    "id": "section-6-5-3",
+    "heading": "Rogozhin's represented program and data regions",
+    "page": 50,
+    "target_top": 374.59,
+    "bookmark_top": 377.81,
+    "rendered_heading_top": 368.1829833984375,
+    "visible_clearance_points": 6.407016601562475
+  },
+  {
+    "id": "section-6-5-4",
+    "heading": "Cook arrivals, phase alignment and cleanup",
+    "page": 51,
+    "target_top": 545.96,
+    "bookmark_top": 549.17,
+    "rendered_heading_top": 539.5806884765625,
+    "visible_clearance_points": 6.379311523437536
+  },
+  {
+    "id": "section-6-5-5",
+    "heading": "The observers are partial inverses of present syntax",
+    "page": 52,
+    "target_top": 687.44,
+    "bookmark_top": 690.32,
+    "rendered_heading_top": 681.093505859375,
+    "visible_clearance_points": 6.346494140625055
+  },
+  {
+    "id": "section-6-5-6",
+    "heading": "Composition and the exact order conclusion",
+    "page": 52,
+    "target_top": 217.89,
+    "bookmark_top": 222.89,
+    "rendered_heading_top": 211.50875854492188,
+    "visible_clearance_points": 6.381241455078111
+  },
+  {
+    "id": "section-7",
+    "heading": "Interface bounds and execution evidence",
+    "page": 53,
+    "target_top": 479.21,
+    "bookmark_top": 481.96,
+    "rendered_heading_top": 470.7417907714844,
+    "visible_clearance_points": 8.468209228515605
+  },
+  {
+    "id": "theorem-3",
+    "heading": "Theorem 3. Exact observation and explicit structural bounds",
+    "page": 53,
+    "target_top": 449.74,
+    "bookmark_top": 454.57,
+    "rendered_heading_top": 443.6524658203125,
+    "visible_clearance_points": 6.087534179687509
+  },
+  {
+    "id": "section-7-2",
+    "heading": "What the interfaces do",
+    "page": 55,
+    "target_top": 503.32,
+    "bookmark_top": 506.53,
+    "rendered_heading_top": 497.2972106933594,
+    "visible_clearance_points": 6.022789306640618
+  },
+  {
+    "id": "section-7-3",
+    "heading": "Separate resource units",
+    "page": 57,
+    "target_top": 658.69,
+    "bookmark_top": 664.02,
+    "rendered_heading_top": 652.6463012695312,
+    "visible_clearance_points": 6.043698730468805
+  },
+  {
+    "id": "section-7-4",
+    "heading": "Scope of execution evidence",
+    "page": 58,
+    "target_top": 418.73,
+    "bookmark_top": 421.67,
+    "rendered_heading_top": 412.711181640625,
+    "visible_clearance_points": 6.018818359375018
+  },
+  {
+    "id": "section-8",
+    "heading": "Formal assurance and related work",
+    "page": 59,
+    "target_top": 379.9,
+    "bookmark_top": 382.88,
+    "rendered_heading_top": 371.354736328125,
+    "visible_clearance_points": 8.545263671874977
+  },
+  {
+    "id": "section-8-1",
+    "heading": "Formal statements and trusted definitions",
+    "page": 59,
+    "target_top": 350.44,
+    "bookmark_top": 355.49,
+    "rendered_heading_top": 344.4231872558594,
+    "visible_clearance_points": 6.016812744140623
+  },
+  {
+    "id": "section-8-2",
+    "heading": "Related work",
+    "page": 60,
+    "target_top": 492.78,
+    "bookmark_top": 495.99,
+    "rendered_heading_top": 486.6874694824219,
+    "visible_clearance_points": 6.092530517578098
+  },
+  {
+    "id": "section-8-2-1",
+    "heading": "One-point bases and results specific to S",
+    "page": 60,
+    "target_top": 399.57,
+    "bookmark_top": 402.78,
+    "rendered_heading_top": 393.2274475097656,
+    "visible_clearance_points": 6.342552490234368
+  },
+  {
+    "id": "section-8-2-2",
+    "heading": "Rewrite strategies and evaluator state",
+    "page": 61,
+    "target_top": 312.77,
+    "bookmark_top": 318.11,
+    "rendered_heading_top": 306.3639831542969,
+    "visible_clearance_points": 6.406016845703107
+  },
+  {
+    "id": "section-8-2-3",
+    "heading": "Universal-machine lineage and mechanized computability",
+    "page": 63,
+    "target_top": 730.33,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 723.9219970703125,
+    "visible_clearance_points": 6.408002929687541
+  },
+  {
+    "id": "section-8-2-4",
+    "heading": "Direct comparison and priority scope",
+    "page": 63,
+    "target_top": 463.0,
+    "bookmark_top": 468.33,
+    "rendered_heading_top": 456.5849914550781,
+    "visible_clearance_points": 6.415008544921875
+  },
+  {
+    "id": "section-8-3",
+    "heading": "Consequence",
+    "page": 64,
+    "target_top": 360.46,
+    "bookmark_top": 363.66,
+    "rendered_heading_top": 354.415283203125,
+    "visible_clearance_points": 6.0447167968749795
+  },
+  {
+    "id": "project-context-and-contributions",
+    "heading": "Project context and contributions",
+    "page": 65,
+    "target_top": 734.89,
+    "bookmark_top": 734.89,
+    "rendered_heading_top": 726.3417358398438,
+    "visible_clearance_points": 8.548264160156236
+  },
+  {
+    "id": "appendix-a",
+    "heading": "Glossary",
+    "page": 65,
+    "target_top": 551.24,
+    "bookmark_top": 553.97,
+    "rendered_heading_top": 542.7490844726562,
+    "visible_clearance_points": 8.490915527343759
+  },
+  {
+    "id": "appendix-b",
+    "heading": "Formal declaration map",
+    "page": 67,
+    "target_top": 734.89,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 726.3417358398438,
+    "visible_clearance_points": 8.548264160156236
+  },
+  {
+    "id": "formal-theorem-1r",
+    "heading": "Theorem 1R and the fixed root-reset aggregate",
+    "page": 67,
+    "target_top": 600.15,
+    "bookmark_top": 603.35,
+    "rendered_heading_top": 594.1282348632812,
+    "visible_clearance_points": 6.021765136718727
+  },
+  {
+    "id": "formal-theorem-1",
+    "heading": "Theorem 1",
+    "page": 67,
+    "target_top": 196.94,
+    "bookmark_top": 200.28,
+    "rendered_heading_top": 190.8494415283203,
+    "visible_clearance_points": 6.090558471679685
+  },
+  {
+    "id": "formal-theorem-2",
+    "heading": "Theorem 2",
+    "page": 68,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.658447265625,
+    "visible_clearance_points": 6.091552734375
+  },
+  {
+    "id": "formal-theorem-3",
+    "heading": "Theorem 3",
+    "page": 68,
+    "target_top": 271.18,
+    "bookmark_top": 274.52,
+    "rendered_heading_top": 265.08648681640625,
+    "visible_clearance_points": 6.093513183593757
+  },
+  {
+    "id": "formal-theorem-4",
+    "heading": "Theorem 4",
+    "page": 69,
+    "target_top": 517.78,
+    "bookmark_top": 521.12,
+    "rendered_heading_top": 511.6874694824219,
+    "visible_clearance_points": 6.092530517578098
+  },
+  {
+    "id": "formal-theorem-5",
+    "heading": "Theorem 5",
+    "page": 69,
+    "target_top": 424.57,
+    "bookmark_top": 427.91,
+    "rendered_heading_top": 418.4844665527344,
+    "visible_clearance_points": 6.085533447265618
+  },
+  {
+    "id": "appendix-b-7",
+    "heading": "Supporting declarations",
+    "page": 69,
+    "target_top": 303.19,
+    "bookmark_top": 306.53,
+    "rendered_heading_top": 297.14630126953125,
+    "visible_clearance_points": 6.043698730468748
+  },
+  {
+    "id": "formal-appendix-f",
+    "heading": "Appendix F declarations",
+    "page": 72,
+    "target_top": 151.41,
+    "bookmark_top": 155.0,
+    "rendered_heading_top": 145.39218139648438,
+    "visible_clearance_points": 6.017818603515622
+  },
+  {
+    "id": "appendix-b-9",
+    "heading": "Scheduler grammars and exact sampled execution",
+    "page": 73,
+    "target_top": 235.96,
+    "bookmark_top": 239.3,
+    "rendered_heading_top": 229.91429138183594,
+    "visible_clearance_points": 6.0457086181640705
+  },
+  {
+    "id": "appendix-b-10",
+    "heading": "Worked-example cost declarations",
+    "page": 74,
+    "target_top": 337.77,
+    "bookmark_top": 341.11,
+    "rendered_heading_top": 331.68548583984375,
+    "visible_clearance_points": 6.084514160156232
+  },
+  {
+    "id": "primitive-resource-derivation",
+    "heading": "Primitive resource derivation",
+    "page": 75,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.658447265625,
+    "visible_clearance_points": 6.091552734375
+  },
+  {
+    "id": "appendix-b-11-1",
+    "heading": "Counted clauses behind the 6144 and 5124 bounds",
+    "page": 78,
+    "target_top": 220.61,
+    "bookmark_top": 226.07,
+    "rendered_heading_top": 214.23574829101562,
+    "visible_clearance_points": 6.374251708984389
+  },
+  {
+    "id": "appendix-b-11-2",
+    "heading": "Small recursive machines",
+    "page": 79,
+    "target_top": 730.33,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 723.9547119140625,
+    "visible_clearance_points": 6.375288085937541
+  },
+  {
+    "id": "appendix-b-11-3",
+    "heading": "Parsing the fixed 114-bit Cook alphabet",
+    "page": 79,
+    "target_top": 373.9,
+    "bookmark_top": 376.86,
+    "rendered_heading_top": 367.553466796875,
+    "visible_clearance_points": 6.346533203124977
+  },
+  {
+    "id": "appendix-b-11-4",
+    "heading": "Reading unary run counts and radix-eight stacks",
+    "page": 80,
+    "target_top": 686.87,
+    "bookmark_top": 690.09,
+    "rendered_heading_top": 680.4580078125,
+    "visible_clearance_points": 6.4119921875000045
+  },
+  {
+    "id": "appendix-b-11-5",
+    "heading": "Canonical boundaries and positive-horizon arrivals",
+    "page": 81,
+    "target_top": 730.33,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 723.9547119140625,
+    "visible_clearance_points": 6.375288085937541
+  },
+  {
+    "id": "appendix-b-11-6",
+    "heading": "Program-frame decoding and the full 5124 seed adapter",
+    "page": 81,
+    "target_top": 212.12,
+    "bookmark_top": 217.45,
+    "rendered_heading_top": 205.77346801757812,
+    "visible_clearance_points": 6.3465319824218795
+  },
+  {
+    "id": "appendix-b-11-7",
+    "heading": "Literal 127-phase source table",
+    "page": 89,
+    "target_top": 596.87,
+    "bookmark_top": 602.2,
+    "rendered_heading_top": 590.4580078125,
+    "visible_clearance_points": 6.4119921875000045
+  },
+  {
+    "id": "appendix-b-11-8",
+    "heading": "Typed productions: the coefficient 142",
+    "page": 90,
+    "target_top": 128.22,
+    "bookmark_top": 131.28,
+    "rendered_heading_top": 121.8704605102539,
+    "visible_clearance_points": 6.349539489746093
+  },
+  {
+    "id": "appendix-b-11-9",
+    "heading": "Numeric symbols and the coefficients 7759 and 7999",
+    "page": 91,
+    "target_top": 279.63,
+    "bookmark_top": 282.35,
+    "rendered_heading_top": 273.2794494628906,
+    "visible_clearance_points": 6.3505505371093705
+  },
+  {
+    "id": "appendix-b-11-10",
+    "heading": "Literal register blocks in the emitted initial word",
+    "page": 92,
+    "target_top": 198.88,
+    "bookmark_top": 202.09,
+    "rendered_heading_top": 192.4720001220703,
+    "visible_clearance_points": 6.407999877929683
+  },
+  {
+    "id": "appendix-b-11-11",
+    "heading": "Source-code decoding and the coefficients 138, 246 and 102",
+    "page": 93,
+    "target_top": 516.39,
+    "bookmark_top": 519.14,
+    "rendered_heading_top": 510.04644775390625,
+    "visible_clearance_points": 6.343552246093736
+  },
+  {
+    "id": "appendix-b-11-12",
+    "heading": "Padding and literal initial-stack construction",
+    "page": 94,
+    "target_top": 418.15,
+    "bookmark_top": 423.49,
+    "rendered_heading_top": 411.7439880371094,
+    "visible_clearance_points": 6.406011962890602
+  },
+  {
+    "id": "appendix-b-11-13",
+    "heading": "Deletion-two normalization",
+    "page": 95,
+    "target_top": 267.62,
+    "bookmark_top": 273.08,
+    "rendered_heading_top": 261.2120056152344,
+    "visible_clearance_points": 6.4079943847656295
+  },
+  {
+    "id": "appendix-b-11-14",
+    "heading": "Rogozhin weights, data and program serialization",
+    "page": 96,
+    "target_top": 482.49,
+    "bookmark_top": 485.71,
+    "rendered_heading_top": 476.0780029296875,
+    "visible_clearance_points": 6.411997070312509
+  },
+  {
+    "id": "appendix-b-11-15",
+    "heading": "Cook serialization and the pure-S output",
+    "page": 98,
+    "target_top": 551.74,
+    "bookmark_top": 556.66,
+    "rendered_heading_top": 545.3627319335938,
+    "visible_clearance_points": 6.377268066406259
+  },
+  {
+    "id": "appendix-c",
+    "heading": "Unrestricted reduction and certificate histories",
+    "page": 99,
+    "target_top": 414.28,
+    "bookmark_top": 417.48,
+    "rendered_heading_top": 405.81280517578125,
+    "visible_clearance_points": 8.467194824218723
+  },
+  {
+    "id": "theorem-4",
+    "heading": "Theorem 4. Confluence obstruction to exclusive functional decoding",
+    "page": 99,
+    "target_top": 313.17,
+    "bookmark_top": 316.37,
+    "rendered_heading_top": 307.1501770019531,
+    "visible_clearance_points": 6.019822998046891
+  },
+  {
+    "id": "theorem-5",
+    "heading": "Theorem 5. Persistent exposure and enumeration of observer-verified histories",
+    "page": 100,
+    "target_top": 583.0,
+    "bookmark_top": 576.86,
+    "rendered_heading_top": 576.9832153320312,
+    "visible_clearance_points": 6.01678466796875
+  },
+  {
+    "id": "appendix-c-3",
+    "heading": "Source histories and persistent states",
+    "page": 101,
+    "target_top": 223.01,
+    "bookmark_top": 226.21,
+    "rendered_heading_top": 216.96629333496094,
+    "visible_clearance_points": 6.043706665039053
+  },
+  {
+    "id": "appendix-c-4",
+    "heading": "Source-independent protected generation",
+    "page": 102,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.706298828125,
+    "visible_clearance_points": 6.043701171875
+  },
+  {
+    "id": "appendix-c-5",
+    "heading": "Prefix-free addresses and literal tableaux",
+    "page": 103,
+    "target_top": 610.96,
+    "bookmark_top": 616.29,
+    "rendered_heading_top": 604.9421997070312,
+    "visible_clearance_points": 6.017800292968786
+  },
+  {
+    "id": "appendix-c-6",
+    "heading": "Projection and every-edge persistence",
+    "page": 103,
+    "target_top": 267.23,
+    "bookmark_top": 270.44,
+    "rendered_heading_top": 261.1434631347656,
+    "visible_clearance_points": 6.086536865234393
+  },
+  {
+    "id": "appendix-c-7",
+    "heading": "Exact range and cofinal extension",
+    "page": 105,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.730224609375,
+    "visible_clearance_points": 6.019775390625
+  },
+  {
+    "id": "appendix-c-8",
+    "heading": "Adjacent-step path and history-tree subdivision",
+    "page": 106,
+    "target_top": 568.69,
+    "bookmark_top": 571.89,
+    "rendered_heading_top": 562.6692504882812,
+    "visible_clearance_points": 6.020749511718805
+  },
+  {
+    "id": "appendix-c-9",
+    "heading": "Observer boundary and resources",
+    "page": 107,
+    "target_top": 214.14,
+    "bookmark_top": 217.34,
+    "rendered_heading_top": 208.09629821777344,
+    "visible_clearance_points": 6.043701782226549
+  },
+  {
+    "id": "appendix-c-9-1",
+    "heading": "Structural observer meter clauses",
+    "page": 108,
+    "target_top": 730.33,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 723.9547119140625,
+    "visible_clearance_points": 6.375288085937541
+  },
+  {
+    "id": "appendix-c-9-2",
+    "heading": "Source decoding: the coefficient 50",
+    "page": 108,
+    "target_top": 163.16,
+    "bookmark_top": 166.5,
+    "rendered_heading_top": 156.81546020507812,
+    "visible_clearance_points": 6.344539794921872
+  },
+  {
+    "id": "appendix-c-9-3",
+    "heading": "Tableau parser and literal transition validation",
+    "page": 110,
+    "target_top": 730.33,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 723.9219970703125,
+    "visible_clearance_points": 6.408002929687541
+  },
+  {
+    "id": "appendix-c-9-4",
+    "heading": "Protected paths, candidate parsing and collection",
+    "page": 111,
+    "target_top": 311.77,
+    "bookmark_top": 316.68,
+    "rendered_heading_top": 305.3589782714844,
+    "visible_clearance_points": 6.411021728515607
+  },
+  {
+    "id": "appendix-c-9-5",
+    "heading": "The public 512 and output 10 coefficients",
+    "page": 112,
+    "target_top": 175.53,
+    "bookmark_top": 178.87,
+    "rendered_heading_top": 169.18746948242188,
+    "visible_clearance_points": 6.342530517578126
+  },
+  {
+    "id": "appendix-c-9-6",
+    "heading": "The structural encoder's coefficients 32 and 3",
+    "page": 113,
+    "target_top": 353.35,
+    "bookmark_top": 358.68,
+    "rendered_heading_top": 347.00146484375,
+    "visible_clearance_points": 6.348535156250023
+  },
+  {
+    "id": "appendix-c-10",
+    "heading": "Terminal observation",
+    "page": 113,
+    "target_top": 119.51,
+    "bookmark_top": 122.73,
+    "rendered_heading_top": 113.42445373535156,
+    "visible_clearance_points": 6.085546264648443
+  },
+  {
+    "id": "appendix-d",
+    "heading": "Fixed Rogozhin table and compiler conventions",
+    "page": 114,
+    "target_top": 671.6,
+    "bookmark_top": 674.82,
+    "rendered_heading_top": 663.052734375,
+    "visible_clearance_points": 8.547265625000023
+  },
+  {
+    "id": "app-d-1",
+    "heading": "Fixed machine table and alphabet",
+    "page": 114,
+    "target_top": 642.14,
+    "bookmark_top": 644.71,
+    "rendered_heading_top": 636.0494384765625,
+    "visible_clearance_points": 6.090561523437486
+  },
+  {
+    "id": "app-d-2",
+    "heading": "The finite primitive table",
+    "page": 114,
+    "target_top": 193.8,
+    "bookmark_top": 197.01,
+    "rendered_heading_top": 187.78421020507812,
+    "visible_clearance_points": 6.015789794921886
+  },
+  {
+    "id": "app-d-3",
+    "heading": "Primitive macros and boundary reflection",
+    "page": 117,
+    "target_top": 593.68,
+    "bookmark_top": 596.89,
+    "rendered_heading_top": 587.658203125,
+    "visible_clearance_points": 6.02179687499995
+  },
+  {
+    "id": "app-d-4",
+    "heading": "Ordinary tag sweeps and boundary reflection",
+    "page": 119,
+    "target_top": 224.63,
+    "bookmark_top": 227.84,
+    "rendered_heading_top": 218.61019897460938,
+    "visible_clearance_points": 6.0198010253906205
+  },
+  {
+    "id": "app-d-5",
+    "heading": "Normalized tag transitions and readback",
+    "page": 122,
+    "target_top": 450.5,
+    "bookmark_top": 453.72,
+    "rendered_heading_top": 444.4144592285156,
+    "visible_clearance_points": 6.085540771484375
+  },
+  {
+    "id": "app-d-6",
+    "heading": "Literal Rogozhin frames and boundary inverse",
+    "page": 124,
+    "target_top": 644.6,
+    "bookmark_top": 647.8,
+    "rendered_heading_top": 638.5792236328125,
+    "visible_clearance_points": 6.020776367187523
+  },
+  {
+    "id": "app-d-7",
+    "heading": "Guarded Rogozhin macros",
+    "page": 125,
+    "target_top": 572.58,
+    "bookmark_top": 575.25,
+    "rendered_heading_top": 566.5352783203125,
+    "visible_clearance_points": 6.044721679687541
+  },
+  {
+    "id": "app-d-8",
+    "heading": "Cook's literal passes and their first-arrival property",
+    "page": 129,
+    "target_top": 394.47,
+    "bookmark_top": 399.72,
+    "rendered_heading_top": 388.4552001953125,
+    "visible_clearance_points": 6.014799804687527
+  },
+  {
+    "id": "app-d-9",
+    "heading": "Fixed CTS generator and static terminal lookup",
+    "page": 133,
+    "target_top": 253.67,
+    "bookmark_top": 256.77,
+    "rendered_heading_top": 247.6262664794922,
+    "visible_clearance_points": 6.0437335205078
+  },
+  {
+    "id": "appendix-e",
+    "heading": "Persistent-controller traces and finite-control counts",
+    "page": 135,
+    "target_top": 553.42,
+    "bookmark_top": 558.75,
+    "rendered_heading_top": 544.955810546875,
+    "visible_clearance_points": 8.464189453124959
+  },
+  {
+    "id": "appendix-e-1",
+    "heading": "The complete two-phase input",
+    "page": 135,
+    "target_top": 523.96,
+    "bookmark_top": 529.32,
+    "rendered_heading_top": 517.866455078125,
+    "visible_clearance_points": 6.093544921875036
+  },
+  {
+    "id": "appendix-e-2",
+    "heading": "Persistent microticks before the first contraction",
+    "page": 135,
+    "target_top": 216.76,
+    "bookmark_top": 222.1,
+    "rendered_heading_top": 210.74618530273438,
+    "visible_clearance_points": 6.013814697265616
+  },
+  {
+    "id": "appendix-e-3",
+    "heading": "The persistent 22-contraction response",
+    "page": 136,
+    "target_top": 218.82,
+    "bookmark_top": 222.02,
+    "rendered_heading_top": 212.72645568847656,
+    "visible_clearance_points": 6.093544311523431
+  },
+  {
+    "id": "appendix-e-4",
+    "heading": "The persistent control cover",
+    "page": 139,
+    "target_top": 561.95,
+    "bookmark_top": 565.16,
+    "rendered_heading_top": 555.8624267578125,
+    "visible_clearance_points": 6.0875732421875455
+  },
+  {
+    "id": "appendix-f",
+    "heading": "Comparison of computation models",
+    "page": 140,
+    "target_top": 734.89,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 726.4277954101562,
+    "visible_clearance_points": 8.462204589843736
+  },
+  {
+    "id": "appendix-f-1",
+    "heading": "Selected paths and unrestricted reduction",
+    "page": 140,
+    "target_top": 290.26,
+    "bookmark_top": 293.47,
+    "rendered_heading_top": 284.2203063964844,
+    "visible_clearance_points": 6.039693603515616
+  },
+  {
+    "id": "appendix-f-2",
+    "heading": "Finite observation and preprocessing",
+    "page": 143,
+    "target_top": 364.31,
+    "bookmark_top": 367.64,
+    "rendered_heading_top": 358.21746826171875,
+    "visible_clearance_points": 6.092531738281252
+  },
+  {
+    "id": "appendix-f-3",
+    "heading": "Tagged carriers and regular observation",
+    "page": 144,
+    "target_top": 279.14,
+    "bookmark_top": 282.36,
+    "rendered_heading_top": 273.0494689941406,
+    "visible_clearance_points": 6.090531005859361
+  },
+  {
+    "id": "appendix-f-3-1",
+    "heading": "An effective observation algorithm",
+    "page": 145,
+    "target_top": 730.33,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 723.9874877929688,
+    "visible_clearance_points": 6.342512207031291
+  },
+  {
+    "id": "appendix-f-3-2",
+    "heading": "A regular language of avoiding occurrences",
+    "page": 146,
+    "target_top": 235.84,
+    "bookmark_top": 239.04,
+    "rendered_heading_top": 229.49044799804688,
+    "visible_clearance_points": 6.349552001953128
+  },
+  {
+    "id": "appendix-f-3-3",
+    "heading": "A boundary under every native contraction",
+    "page": 148,
+    "target_top": 644.6,
+    "bookmark_top": 647.8,
+    "rendered_heading_top": 638.2286376953125,
+    "visible_clearance_points": 6.371362304687523
+  },
+  {
+    "id": "appendix-f-4",
+    "heading": "Recursive I/G calls and regular observation",
+    "page": 149,
+    "target_top": 469.68,
+    "bookmark_top": 472.89,
+    "rendered_heading_top": 463.6372985839844,
+    "visible_clearance_points": 6.042701416015632
+  },
+  {
+    "id": "appendix-f-5",
+    "heading": "Exact scope of the claims",
+    "page": 154,
+    "target_top": 494.68,
+    "bookmark_top": 497.9,
+    "rendered_heading_top": 488.66119384765625,
+    "visible_clearance_points": 6.018806152343757
+  },
+  {
+    "id": "root-controller-costs",
+    "heading": "Cost bounds for the root-restarted controller",
+    "page": 156,
+    "target_top": 734.89,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 726.4277954101562,
+    "visible_clearance_points": 8.462204589843736
+  },
+  {
+    "id": "root-cost-patterns",
+    "heading": "Pattern tests and carrier scans",
+    "page": 156,
+    "target_top": 628.33,
+    "bookmark_top": 631.53,
+    "rendered_heading_top": 622.2384643554688,
+    "visible_clearance_points": 6.091535644531291
+  },
+  {
+    "id": "root-cost-frontend",
+    "heading": "The frontend charging argument",
+    "page": 156,
+    "target_top": 249.22,
+    "bookmark_top": 250.5,
+    "rendered_heading_top": 243.2001953125,
+    "visible_clearance_points": 6.019804687499999
+  },
+  {
+    "id": "root-cost-workers",
+    "heading": "Worker contracts and composition",
+    "page": 159,
+    "target_top": 730.75,
+    "bookmark_top": 727.2,
+    "rendered_heading_top": 724.658447265625,
+    "visible_clearance_points": 6.091552734375
+  },
+  {
+    "id": "root-cost-endpoints",
+    "heading": "Literal endpoint rows and CLOCK",
+    "page": 161,
+    "target_top": 423.81,
+    "bookmark_top": 427.03,
+    "rendered_heading_top": 417.769287109375,
+    "visible_clearance_points": 6.040712890625002
+  },
+  {
+    "id": "root-cost-passes",
+    "heading": "The three pass coefficients",
+    "page": 163,
+    "target_top": 604.22,
+    "bookmark_top": 607.43,
+    "rendered_heading_top": 598.2072143554688,
+    "visible_clearance_points": 6.012785644531277
+  },
+  {
+    "id": "root-cost-euler",
+    "heading": "Euler fallback and the final bound",
+    "page": 163,
+    "target_top": 284.18,
+    "bookmark_top": 287.39,
+    "rendered_heading_top": 278.1641845703125,
+    "visible_clearance_points": 6.015815429687507
+  }
+]

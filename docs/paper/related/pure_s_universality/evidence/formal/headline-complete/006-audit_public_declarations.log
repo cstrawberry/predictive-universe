@@ -1,0 +1,2 @@
+PASS automatic public declaration axiom coverage modules=6 declarations=555 empty=96 propext_only=259 quotient_dependent=200
+SCOPE named top-level source declarations only; generated projections, constructors, and transitive environment declarations are not enumerated

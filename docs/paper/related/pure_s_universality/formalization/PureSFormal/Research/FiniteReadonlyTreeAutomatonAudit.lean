@@ -1,0 +1,5 @@
+import PureSFormal.Research.FiniteReadonlyTreeAutomaton
+#print axioms PureSFormal.Research.FiniteReadonlyTreeAutomaton.stationary_run
+#print axioms PureSFormal.Research.FiniteReadonlyTreeAutomaton.negative_prefix
+#print axioms PureSFormal.Research.FiniteReadonlyTreeAutomaton.compiled_agrees
+#print axioms PureSFormal.Research.FiniteReadonlyTreeAutomaton.compiled_agrees_bool

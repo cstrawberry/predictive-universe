@@ -1,0 +1,7 @@
+import PureSFormal.PureS.PhysicalMarkerGlobalSoundness
+
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.positiveStages_excludingMarkers
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.exactChain_contractionRun_mem
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.freshContraction_postMarker
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.physicalEvent_implies_eventuallyEmpty
+#print axioms PureSFormal.PureS.PhysicalMarkerExclusion.physicalEvent_iff_eventuallyEmpty

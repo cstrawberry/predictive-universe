@@ -1,0 +1,24 @@
+import PureSFormal.Research.RootResetPersistentResponseSelector
+
+open PureSFormal.Research.RootResetPersistentResponseSelector
+
+#print axioms checkedAt?_contracts
+#print axioms freshDispatcherSelection?_contracts
+#print axioms dispatcherSelection?_contracts
+#print axioms selectedActionSelection?_contracts
+#print axioms responseBoundarySelection?_contracts
+#print axioms markedHandoffSelection?_contracts
+#print axioms responseCarrierSelection?_contracts
+#print axioms responseAppenderSelection?_contracts
+#print axioms appenderSelection?_contracts
+#print axioms activatedRouteSelection?_contracts
+#print axioms classify_selected_contracts
+#print axioms selectStep?_sound
+#print axioms classify_baseFuel_priority
+#print axioms selectStep?_eq_some_of_baseFuel
+#print axioms classify_dispatcher_priority
+#print axioms classify_appender_priority
+#print axioms classify_activatedRoute_priority
+#print axioms PureSFormal.Research.RootResetResponseSampleParserBridge.terminalForkChild_exact_selectedRoute
+#print axioms PureSFormal.Research.RootResetResponseSampleParserBridge.selectedAction_nonempty_exact_firstPush
+#print axioms PureSFormal.Research.RootResetResponseSampleParserBridge.responseRootMutation_localCoverage

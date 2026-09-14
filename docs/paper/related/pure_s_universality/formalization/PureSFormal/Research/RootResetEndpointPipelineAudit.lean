@@ -1,0 +1,12 @@
+import PureSFormal.Research.RootResetEndpointPipeline
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.dispatcher_restoring
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.action_restoring
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.clock_restoring
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.withTail_restoring
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.all_input
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.terminal_stay
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.erase_run
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.dispatcher_selected
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.action_selected
+#print axioms PureSFormal.Research.RootResetEndpointPipeline.tail_selected

@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetActiveClockEndpointAgreement
+#print axioms PureSFormal.Research.RootResetActiveClockEndpointAgreement.growth_free
+#print axioms PureSFormal.Research.RootResetActiveClockEndpointAgreement.pending_misses_growth
+#print axioms PureSFormal.Research.RootResetActiveClockEndpointAgreement.cleanParents_growth_stops
+#print axioms PureSFormal.Research.RootResetActiveClockEndpointAgreement.cleanParents_launch_stops

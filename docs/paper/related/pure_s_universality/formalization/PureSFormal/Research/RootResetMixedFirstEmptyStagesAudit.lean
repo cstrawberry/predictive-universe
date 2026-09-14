@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetMixedFirstEmptyStages
+
+#print axioms PureSFormal.Research.RootResetMixedFirstEmptyStages.JobSelection
+#print axioms PureSFormal.Research.RootResetMixedFirstEmptyStages.SelectedMixedInvariantAt
+#print axioms PureSFormal.Research.RootResetMixedFirstEmptyStages.completeMixedNonfinalAt
+#print axioms PureSFormal.Research.RootResetMixedFirstEmptyStages.firstEmptyRawAt

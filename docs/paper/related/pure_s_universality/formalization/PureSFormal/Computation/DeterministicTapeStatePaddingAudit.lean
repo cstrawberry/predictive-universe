@@ -1,0 +1,13 @@
+import PureSFormal.Computation.DeterministicTapeStatePadding
+
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.pad_states_length
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.ruleAt?_pad
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.step?_pad
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.runFor?_pad
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.halts_pad_iff
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.ruleAt?_target_lt_tableTargetBound
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.step?_state_lt_allocationSize
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.runFor?_state_lt_padded_length
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.boundary_instruction_live
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.exists_live_decodedPrimitiveBoundary
+#print axioms PureSFormal.Computation.DeterministicTapeStatePadding.undefined_boundary_halts_after_readback

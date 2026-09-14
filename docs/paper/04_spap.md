@@ -27,6 +27,96 @@ Let $\mathcal M$ be a model class equipped with (i) an effective coding of its f
 
 *Proof.* Hypothesis (i) supplies the representation clause. Given a program code $e$, input code $x$, and step bound $n$, hypothesis (ii) supplies the simulation $U(e,x,n)$ of the first $n$ steps, while hypothesis (iv) represents that finite computation relation in $\mathcal F$. If $q$ is a decidable predicate of the finite trace, its characteristic function is computable; hypothesis (iii) therefore permits composition of the simulation with that characteristic function and with the finite Boolean operations used by SPAP. These are exactly the stated finite representation, simulation, and predicate-evaluation capabilities. No step decides a predicate outside the stipulated decidable finite-trace class. ∎
 
+**4.1.4 Corollary 2a (Conditional Pure-$\mathbf S$ Weak-Path Interpreter Realization)**
+
+Let $\mathcal M$ contain an implementation of the complete operational object
+$$
+\mathcal O_{\mathbf S}
+=
+\left(
+\operatorname{Enc}_{\mathrm{TM}},
+\mathsf{Term}_{\mathbf S},
+\to_{\mathbf S},
+\sigma,
+\operatorname{Dec}_{R}
+\right).
+$$
+Identify each valid model-program code $e$ with an effectively decoded deterministic Turing-machine description $M_e$. Here $\operatorname{Enc}_{\mathrm{TM}}(M_e,x)=G_{w_{M_e,x}}$ is the effective source-to-Rogozhin-to-cyclic-tag-to-pure-$\mathbf S$ encoder, $\to_{\mathbf S}$ is contextual contraction of $\mathbf SXYZ\to XZ(YZ)$, and $\sigma$ is the fixed root-restarted finite controller of Theorem 1R, specialized to the 912-phase endpoint. Each invocation begins at the root in the same finite control state, uses one temporary arbitrary-depth cursor, and terminates within $K_U(|T|+1)$ microticks on every finite term $T$, reporting normality or performing exactly one contraction. Only the current term is retained between invocations. On encoded trajectories, the contractions agree with those of the supporting persistent scheduler. The fixed total bare-term decoder $\operatorname{Dec}_{R}=\operatorname{Pass}_{R}\circ\operatorname{Dec}_{\mathbf S}$ returns the compiled Rogozhin-machine trajectory through its first halt, or indefinitely when nonhalting, at its checkpoint subsequence. After a first halt, it rejects every later selected contraction. The inner decoder $\operatorname{Dec}_{\mathbf S}$ accepts the initial encoding at horizon zero and validates positive-horizon snapshots using the matching unary carrier spines and live-constructor labels on the unique canonical path. It receives no earlier reduct, controller state, or source input and does not iterate the cyclic-tag transition map. The outer $\operatorname{Pass}_{R}$ parses the represented Rogozhin boundary; the terminal source-output reader and fixed regular halting detector have the distinct interfaces stated below.
+
+Assume in addition that $\mathcal M$ supplies a total effective source-trace interface $\mathcal B_{\mathrm{src}}=(a,d)$ with the following property. For every valid code $e$, finite input $x$, and source bound $n$, $a(e,x,n)$ gives a finite Rogozhin-trajectory index and
+$$
+d\!\left(e,x,n;c_0,\ldots,c_{a(e,x,n)}\right)
+$$
+returns exactly the first $n$ source transitions, or the complete source prefix through an earlier halt. Then $\mathcal O_{\mathbf S}$ together with $\mathcal B_{\mathrm{src}}$ supplies Proposition 2(ii)'s implementable universal interpreter inside $\mathcal M$. If $\mathcal M$ independently supplies hypotheses (i), (iii), and (iv), Proposition 2 gives the stated finite operational subcapacity of Property R.
+
+*Proof.* Theorem 1R and the supporting Theorems 1--2 of Cinematic Strawberry (2026) supply the exact cyclic-tag and fixed Rogozhin-machine trajectory used by $\mathcal O_{\mathbf S}$. The selected contractions perform the transitions; $\operatorname{Dec}_{\mathbf S}$ and $\operatorname{Pass}_{R}$ parse the present checkpoint and represented boundary. For a source bound $n$, the assumed total interface $a(e,x,n)$ identifies the finite Rogozhin prefix needed by $d(e,x,n;\cdot)$. Execute the selected path until that prefix has been decoded and apply $d$. This implements the finite source simulation required by Proposition 2(ii). Theorem 1R supplies a root-restarted implementation of the same selected contraction sequence and the current source's complete encoder and literal output correspondences. ∎
+
+The rewrite rule and its finite controller give two proved implementations of the same selected contraction sequence. The supporting persistent scheduler retains one cursor between microticks. Theorem 1R's controller instead starts each invocation at the root in the same finite control state, discards its temporary cursor on return, and carries only the current term between invocations. On every finite term $T$, it terminates within $K_P(|T|+1)$ microticks and either reports normality or contracts exactly one redex. On encoded trajectories it selects every contraction of the simulation path. The cursor may reach arbitrary tree depth during an invocation; its temporary address representation is charged separately from finite control.
+
+Each outer stage $n$ launches $n$ bound-$n$ jobs from the same seed. The checkpoint map is strictly increasing, and every other contraction sample is rejected by the checkpoint decoder. Theorem 2 closes the structural compiler from deterministic Boolean-tape instances through the three-counter, deletion-two tag, Rogozhin and fixed 912-phase cyclic-tag stages. The complete publication encoder is primitive recursive, with a construction bound independent of source execution.
+
+Theorem 1R also gives total current-term readers for literal source rows, terminal rows and the scanned terminal bit. Every defined finite source prefix has a strictly increasing sampling in the selected trajectory. Repeated rows can occur at different source times; the sampling theorem gives an ordered occurrence of the requested prefix. The corollary's $\mathcal B_{\mathrm{src}}$ remains the explicit trace interface that the implementing model class must supply.
+
+Theorem 3 measures each checkpoint and detector parser by primitive constructor, field-access, branching and allocation operations on the stated reference representation. Their all-input bounds are quadratic in unfolded term size; complete source-output reading is quartic. Section 7.4.4a supplies the distinct shared-store and physical-cost realization conditions.
+
+The fixed regular tree language $\mathcal L_{\mathrm{halt}}$ detects source halting along the selected path. Its finite tree automaton agrees on every finite tree with the read-only halt-field observer. This is a halting observation during continued reduction. Appendix F.1 of Cinematic Strawberry (2026) proves that the same outer-clock architecture cannot make one fixed regular detector agree exactly with source halting on every maximal reduction path: an infinite path can keep reducing the clock while leaving the encoded payload untouched. The obstruction concerns that architecture and the requirement that every halting-input path accept and no nonhalting-input path accept. Its witness can be unfair, so it does not exclude all encodings or every residual-fair policy. Theorem 5's unrestricted-graph result is a persistent enumeration of observer-verified histories, with its source-step checker and protected-address opening conditions; those conditions do not establish source simulation along arbitrary reductions of Theorem 1R's encoding.
+
+
+Hypotheses (i), (iii), and (iv), the SPAP logical-memory and uniform diagonal-closure data, and every physical-realization condition remain supplied by their owning declarations. [Proof-Life](related/proof_life_verification_model.md), Theorem PL.5, separately turns nominated bounded pure-$\mathbf S$ reachability questions into typed finite targets with exact positive or complete negative evidence.
+
+The companion of Cinematic Strawberry (2026) places root-restarted selected-path universality in Theorem 1R, with Theorems 1--3 supplying its simulation and resource results and persistent certificate enumeration in Theorem 5. Corollary 2a uses the selected trajectory because Proposition 2(ii) asks for an implementable deterministic trace. Theorem 5 supplies complementary all-reduct permanence, exact finite range, cofinal recovery, an embedded history tree, and an adjacent-step address-complete path; its observer verifies supplied source transitions.
+
+**4.1.4a Corollary 2b (Pure-$\mathbf S$ Realization of Bounded Trace Computation)**
+
+Theorem 1R also realizes Proposition 2(ii) by compiling a terminating bounded task. This construction uses the publication encoder $E$, root-restarted controller $F$, and terminal-bit reader $O$ from the Pure-S companion. It fixes the source algorithm before the model code, input and step bound are supplied.
+
+Choose an effective, self-delimiting binary serialization $\operatorname{ser}$ of finite computation traces. For a valid program code $e$, finite input $x$, and $n\in\mathbb N_0$, let $\operatorname{trace}_n(e,x)$ contain the initial row and the first $n$ transitions, stopping at an earlier halt. Define one total source algorithm $B$ on $(e,x,n,k,m)$:
+
+1. Check the program and input encodings; return $0$ on malformed data.
+2. Compute at most $n$ source transitions and serialize the resulting finite trace as a word $v$.
+3. In length mode $m=0$, return $1$ exactly when $k<|v|$. In data mode $m=1$, return the $k$th bit of $v$, with $0$ outside its range. Return $0$ for another mode.
+4. Write the returned bit under the tape head and halt.
+
+Each source transition and each finite encoding check is decidable, so this algorithm has a fixed deterministic Boolean-tape implementation. Let $x_{e,x,n,k,m}$ be that implementation with the displayed arguments as its input, and put
+$$
+T^{e,x,n,k,m}_0=E(x_{e,x,n,k,m}),
+\qquad
+F(T^{e,x,n,k,m}_j)=\operatorname{some}(T^{e,x,n,k,m}_{j+1}).
+$$
+Theorem 1R gives
+$$
+\exists j\;O(T^{e,x,n,k,m}_j)=\operatorname{some}(b)
+\quad\Longleftrightarrow\quad
+b=B(e,x,n,k,m).
+$$
+Executing until the first returned bit therefore computes each query. Querying length mode at $k=0,1,\ldots$ until its first zero determines $|v|$; the finitely many data queries then recover exactly $\operatorname{trace}_n(e,x)$. A model class implementing these fixed interfaces, their finite orchestration, and arbitrarily large finite storage consequently supplies Proposition 2(ii). Together with Proposition 2(i), (iii), and (iv), it has the finite operational Property-R subcapacity used by SPAP.
+
+*Proof.* The bounded source loop terminates even when program $e$ does not halt. Its finite output serialization makes every query a terminating Boolean-tape computation. The complete encoder is total, and Theorem 1R preserves and reflects the terminal scanned bit. Every controller invocation and reader evaluation terminates; the source's halt guarantees that some finite selected sample returns its answer. The length search ends at the finite integer $|v|$, and the data queries recover that word. Effective deserialization finishes the finite-trace interpreter. A decidable Boolean predicate of the trace can instead be evaluated inside one terminating source job before compilation. ∎
+
+This is a derived computability corollary of the companion's checked encoder and output theorem. Corollary 2a gives the existing intermediate-trace route; Corollary 2b constructs bounded answers through terminal output. Its implementation costs include each seed construction, invocation, reader call and retained output. The construction establishes a uniform finite interpreter; a physical execution window uses the resource and reliability conditions of Appendix A.0.6.
+
+**4.1.4b Corollary 2c (Undecidable Future Observation with a Fixed Finite Detector)**
+
+Let $T_x(j)$ be Theorem 1R's selected trajectory for a deterministic Boolean-tape source instance $x$, and let $\mathcal L_{\mathrm{halt}}$ be its fixed regular tree language. Define
+$$
+\mathsf{EVENT}(x)
+\quad\Longleftrightarrow\quad
+\exists j\in\mathbb N_0\;[T_x(j)\in\mathcal L_{\mathrm{halt}}].
+$$
+Then $\mathsf{EVENT}$ is computably enumerable and undecidable. Each finite query
+$$
+\mathsf{EVENT}_{\le J}(x)
+\quad\Longleftrightarrow\quad
+\exists j\le J\;[T_x(j)\in\mathcal L_{\mathrm{halt}}]
+$$
+is decidable. There is no total computable horizon $h(x)$ such that every eventual acceptance occurs at some $j\le h(x)$.
+
+*Proof.* Compute the total encoder, iterate the all-input terminating selector, and evaluate the fixed finite tree automaton at each sample, including zero. Stopping on acceptance enumerates $\mathsf{EVENT}$; stopping after $J$ decides the bounded query. Theorem 1R identifies $\mathsf{EVENT}(x)$ exactly with source halting, whose undecidability therefore transfers through this computable encoding. A total computable $h$ with the stated completeness property would decide source halting by the bounded query at $h(x)$, a contradiction. ∎
+
+PU thus has a concrete computational example in which the update procedure and the present-event detector are fixed and effective, while uniform prediction of whether that event ever occurs is impossible. The obstruction concerns unbounded reachability along the selected trajectory. The scoring and task-distribution hypotheses of Theorems 9 and 11a separately determine positive prediction-error floors.
+
+For bounded verification, register the selector, encoder, automaton and contraction horizon $J$. A complete record of the $J+1$ selected samples decides $\mathsf{EVENT}_{\le J}$. A negative result means absence through $J$; the corollary proves why no computable input-dependent cutoff can turn all such finite negatives into decisions of perpetual absence. Proof-Life's $\mathsf{SReach}$ targets quantify over unrestricted bounded reachability and use their own complete-tree negative evidence.
+
 **4.2 The Self-Referential Paradox of Accurate Prediction (SPAP)**
 
 We now formally establish the core theorems demonstrating the fundamental limitations on guaranteed accurate self-prediction for systems whose formalism can represent coded self-descriptions, simulate the nominated predictor on those descriptions, evaluate the relevant predicates about the predicted outputs, and compose these finite operations with logical memory and Boolean post-processing. Any framework possessing Property R in this finite-program sense satisfies these conditions. These proofs utilize diagonalization arguments, constructing self-referential systems whose behavior logically contradicts the assumption of a perfect predictor. Theorem 10a records the deterministic argument as the Lawvere fixed-point obstruction for the retained prediction-evaluation map; this recharacterizes SPAP without replacing the independent Appendix A.0 derivation of Property R. (Detailed formal proofs in Appendix A.1).
@@ -685,5 +775,3 @@ Theorems 10–11 establish a diagonal obstruction to a universally exact predict
 Appendix N's **Unified Cost of Transgression (UCT)** introduces a conditional bookkeeping bridge. When an operational detector has the stated Unruh response, temperatures are additive in the specified effective-bath model, predictive records are actively refreshed, and exported energy obeys the registered frame rule, the incremental predictive-refresh work may be added to a distinct endpoint kinetic-work ledger. Proper acceleration, not velocity alone, activates that modeled increment; inertial high-speed coasting has no Unruh term.
 
 The UCT does not prove that a registered predictive-performance boundary and the relativistic frontier share a microscopic origin. **Prediction Relativity** names the comparison of these separate limits and, on the UCT branch, the optimization problem that trades trajectory smoothness against predictive-refresh resources. Temporal-horizon and predictive-resolution contraction remain conditional consequences of that optimization.
-
-

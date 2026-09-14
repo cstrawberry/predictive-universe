@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetCompletedResponseProbe
+#print axioms PureSFormal.Research.RootResetProbeBranch.restoring_at
+#print axioms PureSFormal.Research.RootResetCompletedResponseAtoms.commit_runs
+#print axioms PureSFormal.Research.RootResetCompletedResponseAtoms.handoff_runs
+#print axioms PureSFormal.Research.RootResetCompletedResponseProbe.all_input
+#print axioms PureSFormal.Research.RootResetCompletedResponseProbe.erase_run
+#print axioms PureSFormal.Research.RootResetCompletedResponseProbe.bounded_terminal

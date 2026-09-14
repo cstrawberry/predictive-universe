@@ -1,0 +1,12 @@
+% Additional layout rules for the unified paper.
+% xurl supplies legal breakpoints for declaration names and DOI labels. Text
+% traces remain at a readable size within the main text width.
+\AtBeginDocument{%
+  \def\UrlBigBreaks{\do\.\do\_\do\/\do\-\do\?\do\&\do\=}%
+  \mathchardef\UrlBigBreakPenalty=10
+  \mathchardef\UrlBreakPenalty=5000
+  \ifdefined\RecustomVerbatimEnvironment
+    \RecustomVerbatimEnvironment{Highlighting}{Verbatim}{%
+      commandchars=\\\{\},fontsize=\footnotesize}%
+  \fi
+}

@@ -1,0 +1,18 @@
+import PureSFormal.PureS.SchedulerNestedPhase
+
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.growExit_zeroRunAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.clockCompletedToLaunch_zeroRunAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.clockCompleted_seekLaunchAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.positiveStageLaunch_sampledAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.positiveClockMutation_silentAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.zeroClockMutation_silentAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.clockTailSampledAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.positiveClockPhaseInvariantAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.clockExactMutationChainAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.PositiveClockPhaseSampledAt.toIndexed
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.fuelPositiveSampleEvidenceAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.fuelZeroSampleEvidenceAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.fuelExactMutationChainAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.fuelIndexedSampledStatesAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.fuelPhaseInvariantAt
+#print axioms PureSFormal.PureS.SchedulerNestedPhase.positiveStagePhaseInvariantAt

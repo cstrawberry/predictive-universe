@@ -1,0 +1,11 @@
+import PureSFormal.Computation.DeletionTwoNormalizationMachine
+
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.Event.operations_le_four
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.Execution.trans
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.Execution.operations_le
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.comparison_execution
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.comparison_steps_le
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.emit_execution
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.scan_execution
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.count_execution
+#print axioms PureSFormal.Computation.DeletionTwoNormalizationMachine.normalization_execution

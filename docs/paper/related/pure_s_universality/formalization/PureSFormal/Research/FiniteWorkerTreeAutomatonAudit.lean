@@ -1,0 +1,6 @@
+import PureSFormal.Research.FiniteWorkerTreeAutomaton
+#print axioms PureSFormal.Research.FiniteWorkerTreeAutomaton.accept_fixed
+#print axioms PureSFormal.Research.FiniteWorkerTreeAutomaton.initial_projection
+#print axioms PureSFormal.Research.FiniteWorkerTreeAutomaton.run_projection
+#print axioms PureSFormal.Research.FiniteWorkerTreeAutomaton.observed_projection
+#print axioms PureSFormal.Research.FiniteWorkerTreeAutomaton.automaton_agrees

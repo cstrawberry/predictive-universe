@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Active continuation and two kinds of historical occurrence</title>
+<desc id="desc">A completed Local X has left subtree L_X and right subtree K A_k. The active descent follows R then L to K. The ancestor search returns along that path and may test the old X, whose guard declines. A copy inside A_k is outside the candidate path.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#214d70"/></marker><style>text{font-family:'DejaVu Sans',sans-serif;fill:#162b3d;text-anchor:middle}.title{font-size:31px;font-weight:bold}.label{font-size:29px}.small{font-size:25px}.node{font-size:35px}.edge{stroke:#78858d;stroke-width:3;fill:none}.active{stroke:#214d70;stroke-width:6;fill:none;marker-end:url(#arrow)}.history{stroke:#68747e;stroke-width:3;stroke-dasharray:10 7;fill:#f5f5f5}</style></defs>
+<rect width="1200" height="680" fill="white"/>
+<text class="title" x="600" y="48">X = Lₓ (K Aₖ)</text>
+<text class="small" x="600" y="91">old ancestor X: its parent-role / nonempty guard declines</text>
+<circle cx="600" cy="150" r="34" fill="#e7f1f8" stroke="#214d70" stroke-width="3"/><text class="node" x="600" y="162">@</text>
+<path class="edge" d="M570 176L365 295"/>
+<path class="active" d="M630 176L802 292"/>
+<text class="small" x="716" y="223">R</text>
+<rect x="275" y="300" width="165" height="76" rx="13" class="history"/><text class="node" x="357" y="349">Lₓ</text>
+<text class="small" x="320" y="420">response and audits</text>
+<circle cx="835" cy="335" r="36" fill="#e7f1f8" stroke="#214d70" stroke-width="3"/><text class="node" x="835" y="347">@</text>
+<path class="active" d="M808 362L674 477"/>
+<text class="small" x="722" y="414">L</text>
+<path class="edge" d="M864 360L1013 474"/>
+<rect x="565" y="490" width="180" height="81" rx="13" fill="#e7f1f8" stroke="#214d70" stroke-width="4"/><text class="node" x="655" y="542">K</text>
+<text class="label" x="655" y="620">active continuation</text>
+<rect x="895" y="487" width="280" height="137" rx="13" class="history"/><text class="node" x="1035" y="532">Aₖ</text><text class="small" x="1035" y="583">contains X_copy</text>
+<text class="small" x="1030" y="661">outside candidate path</text>
+<text class="label" x="242" y="525">Candidate search:</text><text class="label" x="242" y="573">K → (K Aₖ) → X</text><text class="small" x="242" y="619">only along parent edges</text>
+</svg>

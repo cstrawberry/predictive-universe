@@ -1,0 +1,12 @@
+import PureSFormal.Research.RootResetAppenderFiniteRows
+
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.Spec.sound
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.all_input
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.matching_addresses_eq
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.generated_first
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.generated_second
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.generated_runs
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.final_rejected
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.first_address
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.second_address
+#print axioms PureSFormal.Research.RootResetAppenderFiniteRows.zero_mutations

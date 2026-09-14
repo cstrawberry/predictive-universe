@@ -1,0 +1,40 @@
+import PureSFormal.PureS.SchedulerCycle
+
+/-! Exact logical-basis audit for complete bounded-job scheduler cycles. -/
+
+#print axioms PureSFormal.PureS.SchedulerCycle.selectedResponseTrace
+#print axioms PureSFormal.PureS.SchedulerCycle.firstResponseTrace
+#print axioms PureSFormal.PureS.SchedulerCycle.positiveStageDownUpAtDescent
+#print axioms PureSFormal.PureS.SchedulerCycle.positiveStageFirstResponseTrace
+#print axioms PureSFormal.PureS.SchedulerCycle.pendingNonemptyCycleTrace
+#print axioms PureSFormal.PureS.SchedulerCycle.enterEmptyTrace
+#print axioms PureSFormal.PureS.SchedulerCycle.emptyPendingSweep
+#print axioms PureSFormal.PureS.SchedulerCycle.emptySweepArityThree
+#print axioms PureSFormal.PureS.SchedulerCycle.emptySweepArityFour
+#print axioms PureSFormal.PureS.SchedulerCycle.terminalNonemptyArityThree
+#print axioms PureSFormal.PureS.SchedulerCycle.terminalNonemptyArityFour
+#print axioms PureSFormal.PureS.SchedulerCycle.terminalEmptyArityThree
+#print axioms PureSFormal.PureS.SchedulerCycle.terminalEmptyArityFour
+#print axioms PureSFormal.PureS.SchedulerCycle.finishJobArityFour
+#print axioms PureSFormal.PureS.SchedulerCycle.finishJobArityThree
+#print axioms PureSFormal.PureS.SchedulerCycle.normalResponse_canonicalMutationTrace
+#print axioms PureSFormal.PureS.SchedulerCycle.normalResponse_exactMutationChain_paired
+#print axioms PureSFormal.PureS.SchedulerCycle.script_commandSafe_of_suffixRun
+#print axioms PureSFormal.PureS.SchedulerCycle.ResponseSamplePairs.ofPositioned
+#print axioms PureSFormal.PureS.SchedulerCycle.ResponseSamplePairs.toIndexedSampledStates
+#print axioms PureSFormal.PureS.SchedulerCycle.ExactMutationChain.toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.ClockTailSamples.toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.ClockRootPhaseInvariant.toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.ClockTailSamples.prependExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.ClockRootPhaseInvariant.prependExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.FuelSampledTrace.first
+#print axioms PureSFormal.PureS.SchedulerCycle.fuelPositive_seekNextFirst
+#print axioms PureSFormal.PureS.SchedulerCycle.FuelScriptSamples.afterFirst_toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.FuelPhaseInvariant.toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.sampleIndex_add_positiveStageSampleCount
+#print axioms PureSFormal.PureS.SchedulerCycle.PositiveStagePhaseTrace.toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.PositiveStagePhaseTrace.afterFirst_toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.InitialPositiveStageTrace.toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerCycle.scriptTrace_exactPositionedMutationChain
+#print axioms PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain
+#print axioms PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain

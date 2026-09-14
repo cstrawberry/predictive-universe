@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetFrameClockEulerClockAgreement
+
+#print axioms PureSFormal.Research.RootResetFrameClockEulerClockAgreement.environment_misses
+#print axioms PureSFormal.Research.RootResetFrameClockEulerClockAgreement.clock_shape_misses
+#print axioms PureSFormal.Research.RootResetFrameClockEulerClockAgreement.clock_final_of_terminal_run
+#print axioms PureSFormal.Research.RootResetFrameClockEulerClockAgreement.generated_positive_growth
+#print axioms PureSFormal.Research.RootResetFrameClockEulerClockAgreement.generated_zero_growth
+#print axioms PureSFormal.Research.RootResetFrameClockEulerClockAgreement.generated_launch

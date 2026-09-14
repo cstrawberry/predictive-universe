@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetEmptyStagesSelectorChain
+
+open PureSFormal.Research.RootResetEmptyStagesSelectorChain
+
+#print axioms stage_selectorChain
+#print axioms stages_selectorChain
+#print axioms emptyInput_unbounded_exact_selectorChains
+#print axioms emptyInput_selectsEveryContractionRun

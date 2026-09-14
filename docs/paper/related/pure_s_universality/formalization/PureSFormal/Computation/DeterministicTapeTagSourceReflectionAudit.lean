@@ -1,0 +1,6 @@
+import PureSFormal.Computation.DeterministicTapeTagSourceReflection
+
+#print axioms PureSFormal.Computation.DeterministicTapeTagSourceReflection.decodeNormalizedTape?_nil
+#print axioms PureSFormal.Computation.DeterministicTapeTagSourceReflection.decodeNormalizedTape?_nonempty
+#print axioms PureSFormal.Computation.DeterministicTapeTagSourceReflection.decodeNormalizedTape?_source_reflects
+#print axioms PureSFormal.Computation.DeterministicTapeTagSourceReflection.decodeNormalizedTape?_padded_source_reflects

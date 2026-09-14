@@ -1,0 +1,10 @@
+import PureSFormal.Research.ClosedSetTreeAutomaton
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.allIndex_iff
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.flatMap_member
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.Boundary.mem_cover
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.Decoration.boundary_incoming
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.leafCheck_node
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.branchCheck_shape
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.certificate_run_iff
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.certificate_accepts_iff
+#print axioms PureSFormal.Research.ClosedSetTreeAutomaton.compiled_accepts_iff_no_certificate

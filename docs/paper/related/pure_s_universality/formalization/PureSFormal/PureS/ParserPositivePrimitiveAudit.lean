@@ -1,0 +1,15 @@
+import PureSFormal.PureS.ParserPositivePrimitive
+
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.terminal_horizon_le
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.chainShape_bounds
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.chain_bounds
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.marker_value
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.finish_value
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.finish_operations_le
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.afterPhase_value
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.afterPhase_operations_le
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.phase_check
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.validate_value
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.validate_operations_le
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.parse_value
+#print axioms PureSFormal.PureS.ParserPositivePrimitive.parse_operations_le

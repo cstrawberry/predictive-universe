@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetMixedClockFuelSelectorChain
+
+#print axioms PureSFormal.Research.RootResetMixedClockFuelSelectorChain.selectStep?_mixed_of_recovered
+#print axioms PureSFormal.Research.RootResetMixedClockFuelSelectorChain.selectStep?_mixed_pending
+#print axioms PureSFormal.Research.RootResetMixedClockFuelSelectorChain.selectStep?_mixed_pendingFuelRow
+#print axioms PureSFormal.Research.RootResetMixedClockFuelSelectorChain.selectStep?_mixed_exit
+#print axioms PureSFormal.Research.RootResetMixedClockFuelSelectorChain.selectStep?_mixed_clockPostPositive

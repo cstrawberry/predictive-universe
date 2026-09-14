@@ -1,0 +1,8 @@
+import PureSFormal.Computation.CookRegisteredReadback
+
+#print axioms PureSFormal.Computation.CookRegisteredReadback.decodeRegisteredWord?_registered
+#print axioms PureSFormal.Computation.CookRegisteredReadback.decodeSnapshot?_registered
+#print axioms PureSFormal.Computation.CookRegisteredReadback.exists_decodeSnapshot?_iterate
+#print axioms PureSFormal.Computation.CookRegisteredReadback.decodeTag?_registered_compileWithPadding
+#print axioms PureSFormal.Computation.CookRegisteredReadback.exists_decodeTag?_iterate
+#print axioms PureSFormal.Computation.CookRegisteredReadback.exists_decodeOrdinary?_iterate

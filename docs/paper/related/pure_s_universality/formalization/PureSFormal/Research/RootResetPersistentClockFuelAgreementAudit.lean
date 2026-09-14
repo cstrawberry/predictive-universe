@@ -1,0 +1,52 @@
+import PureSFormal.Research.RootResetPersistentClockFuelAgreement
+
+namespace PureSFormal.Research.RootResetPersistentClockFuelAgreement
+
+#print axioms RouteA.selects_of_root
+#print axioms positiveClockSource_contractAt_cursorAddress
+#print axioms zeroClockSource_contractAt_cursorAddress
+#print axioms clockPostPositive_selects_nextPositive
+#print axioms clockPostPositive_selects_closingZero
+#print axioms positiveStageArity_contractAt_root
+#print axioms clockLaunch_selects_persistentLaunch
+#print axioms zeroClockMutation_selects_launch
+#print axioms zeroStageClosing_selects_stageOnePositive
+#print axioms positiveClockMutation_erase_eq_clockPostPositiveTerm
+#print axioms positiveClockSample_routeA
+#print axioms clockRootTailSampled_routeA
+#print axioms clockRootPhaseSampled_routeA
+#print axioms clockRootPhaseInvariant_routeA
+#print axioms positiveStagePhaseTrace_clock_routeA
+#print axioms clockRootPhase_routeA
+#print axioms parseTwentySeven?_canonicalFuelRow
+#print axioms endpointCandidate?_canonicalFuelRow
+#print axioms canonicalFuelRow_selects
+#print axioms RoutePendingLayers.canonical
+#print axioms parseTwentySeven?_canonicalPendingFuelRow
+#print axioms activeContext_pendingFuelRow
+#print axioms pendingFuelRow_contractAt
+#print axioms pendingFuelRow_selects
+#print axioms parseFuelHandoff?_canonicalPendingFuelRow_none
+#print axioms fuelActiveContext_pendingFuelRow
+#print axioms pendingFuelRow_handoff_selected
+#print axioms pendingFuelRow_selectStep?
+#print axioms generatedPendingLayers_route
+#print axioms rebuild_pendingParents_eq_generatedPendingContext
+#print axioms rebuild_pendingParents_eq_pendingFuelRowTerm
+#print axioms generatedFuelRow_selectStep?
+#print axioms clockFirst_selectStep?
+#print axioms clockPostPositive_selectStep?
+#print axioms clockLaunch_selectStep?
+#print axioms positiveClockMutation_selects_next
+#print axioms clockTailSelectorChain
+#print axioms clockSelectorChain
+#print axioms fuelPositiveScriptSource_selects_first
+#print axioms fuelPositiveFirst_selects_second
+#print axioms fuelZeroScriptSource_selects_first
+#print axioms fuelZeroFirst_selects_second
+#print axioms fuelZeroSecond_selects_third
+#print axioms fuelZeroThird_selects_fourth
+#print axioms fuelZeroFourth_selects_fifth
+#print axioms fuelSelectorChain
+
+end PureSFormal.Research.RootResetPersistentClockFuelAgreement

@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetActiveFrameFrontend
+
+#print axioms PureSFormal.Research.RootResetActiveFrameFrontend.continued_paid
+#print axioms PureSFormal.Research.RootResetActiveFrameFrontend.one_phase
+#print axioms PureSFormal.Research.RootResetActiveFrameFrontend.scan_within
+#print axioms PureSFormal.Research.RootResetActiveFrameFrontend.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetActiveFrameFrontend.all_input_atRoot

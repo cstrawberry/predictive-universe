@@ -3609,8 +3609,6 @@ Long-distance reset costs and propagation speed come from different assumptions.
 | Theorem E.10.1 | Linear long-range cost holds only under its registered reset-operation and benefit certificates | Conditional PCE ledger |
 | Theorem E.10.2 | $v_{\mathrm{ser}}\le\delta/\tau_{\min}$; equality with $c$ only under one-link attainment and scale identification | Registered serialized edge clock + spacing; separate attainment |
 | Corollary E.10.1 | $dS_{\mathrm{env}}/dt\ge r_{\mathrm{upd}}k_B\bar h$ for the registered reset ensemble | Conditional Landauer ledger + realized rate |
-
-
 | Corollary E.10.2 | Serialized locality gives a conditional speed upper bound | Registered serialization, edge clock, spacing, and metric bounds |
 
 The registered serialized branch yields a finite operational speed upper bound from its edge-length and edge-time data. An attained light-cone speed and the equality $c=\delta/\tau_{\min}$ require the separate one-link-attainment, scale-identification, and Corollary 46a/Appendix O Lorentzian hypotheses. They do not follow from entropy cost or PCE optimization alone.

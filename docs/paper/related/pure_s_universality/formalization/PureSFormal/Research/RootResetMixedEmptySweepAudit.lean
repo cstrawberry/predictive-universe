@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetMixedEmptySweep
+
+open PureSFormal.Research.RootResetMixedEmptySweep
+
+#print axioms CountBound.notDeleted
+#print axioms CountBound.marked
+#print axioms markedOrigin_frame_selectorChain
+#print axioms markedOrigin_pendingSweep_selectorChain
+#print axioms markedOrigin_completeSweep_selectorChain

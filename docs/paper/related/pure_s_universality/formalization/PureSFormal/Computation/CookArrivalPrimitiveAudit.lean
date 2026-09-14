@@ -1,0 +1,34 @@
+import PureSFormal.Computation.CookArrivalPrimitive
+
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.selector_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.selector_head
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.selector_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.exponent_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.leftExponent_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.rightExponent_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.exponent_reconstruct
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.leftExponent_reconstruct
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.rightExponent_reconstruct
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.exponent_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.counts_eq
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.leftSpec_reconstruct
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.rightSpec_reconstruct
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.counts_reconstruct
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.raw_reconstruct
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.arrival_eq_raw
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.leftFinish_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.rightFinish_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.leftBody_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.rightBody_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.body_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.arrival_value
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.finish_cost_bound
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.leftFinish_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.rightFinish_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.branch_cost_bound
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.leftBody_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.rightBody_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.body_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.arrival_operations_le
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.normalized_fields
+#print axioms PureSFormal.Computation.CookArrivalPrimitive.arrival_fields

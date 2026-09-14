@@ -1,0 +1,4 @@
+PREFLIGHT_SOURCE,code=0,originalStates=0,paddedStates=1,initialState=0,inputLength=0,decodeOperations=18,paddingOperations=38
+PREFLIGHT_COUNTER,instructions=127,operations=1554635
+PREFLIGHT_T2,productions=3813,productionCells=15831,initialWordLength=18,programTapeCellsLowerBound=19068,seedBitsAtLeastPowerOfTwo=57207
+PREFLIGHT_PASS,decodePaddingAndTable=true,fullSeedAndTermMaterialized=false

@@ -1,0 +1,10 @@
+import PureSFormal.Research.ClosedSetCertificateSoundness
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.Good.valid
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.forget_observations
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.rootClosed_spec
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.upClosed_spec
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.Good.rootClosed
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.safe_not_accepting
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.safe_step
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.safe_run
+#print axioms PureSFormal.Research.ClosedSetCertificateSoundness.certificate_excludes_acceptance

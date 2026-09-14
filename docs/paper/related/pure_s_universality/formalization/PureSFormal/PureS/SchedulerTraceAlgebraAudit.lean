@@ -1,0 +1,9 @@
+import PureSFormal.PureS.SchedulerTraceAlgebra
+
+#print axioms PureSFormal.PureS.SchedulerTraceAlgebra.ExistentialAdvance.prefix
+#print axioms PureSFormal.PureS.SchedulerTraceAlgebra.ExactMutationChain.toExistentialAdvancePrefix
+#print axioms PureSFormal.PureS.SchedulerTraceAlgebra.ExactMutationChain.toStepsN
+#print axioms PureSFormal.PureS.SchedulerTraceAlgebra.LastSample.length_positive
+#print axioms PureSFormal.PureS.SchedulerTraceAlgebra.LastSample.appendLeft
+#print axioms PureSFormal.PureS.SchedulerTraceAlgebra.ExactMutationChain.last_erase_terminal
+#print axioms PureSFormal.PureS.SchedulerTraceAlgebra.ExactMutationChain.contractionRun_eq_last

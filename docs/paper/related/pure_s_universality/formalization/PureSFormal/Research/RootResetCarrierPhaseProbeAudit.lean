@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetCarrierPhaseProbe
+
+#print axioms PureSFormal.Research.RootResetLabelledEdgeProbe.all_input
+#print axioms PureSFormal.Research.RootResetLabelledEdgeProbe.all_input_restores
+#print axioms PureSFormal.Research.RootResetCellSpineRows.inverts
+#print axioms PureSFormal.Research.RootResetCellSpineRows.halt_boundary
+#print axioms PureSFormal.Research.RootResetCarrierPhaseProbe.all_input
+#print axioms PureSFormal.Research.RootResetCarrierPhaseProbe.path_reads
+#print axioms PureSFormal.Research.RootResetCarrierPhaseProbe.generated_path_runs
+#print axioms PureSFormal.Research.RootResetCarrierPhaseProbe.runMutationCount_zero

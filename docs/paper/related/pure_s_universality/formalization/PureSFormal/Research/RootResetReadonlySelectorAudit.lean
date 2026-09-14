@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetReadonlySelector
+
+#print axioms PureSFormal.Research.RootResetReadonlySelector.all_input
+#print axioms PureSFormal.Research.RootResetReadonlySelector.flag_step
+#print axioms PureSFormal.Research.RootResetReadonlySelector.flag_run
+#print axioms PureSFormal.Research.RootResetReadonlySelector.final_result
+#print axioms PureSFormal.Research.RootResetReadonlySelector.mutation_agrees
+#print axioms PureSFormal.Research.RootResetReadonlySelector.selectorContract
+#print axioms PureSFormal.Research.RootResetReadonlySelector.selected_final
+#print axioms PureSFormal.Research.RootResetReadonlySelector.selected_step

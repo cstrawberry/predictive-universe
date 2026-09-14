@@ -1,0 +1,17 @@
+import PureSFormal.Computation.DeletionTwoT2Computability
+
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.programDecode_code
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.programCode_decode
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.jobDecode_code
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.jobCode_decode
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.Program.eval_encodeLabel
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.Program.eval_encodeWord
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.Program.eval_normalizedRhs
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.Program.eval_normalizeProgram
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.Program.eval_normalizeWord
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.Program.normalizeJob
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.Program.eval_normalizeJob
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.normalizeProgram_primitiveRecursive
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.normalizeWord_primitiveRecursive
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.normalizedProgram_decode
+#print axioms PureSFormal.Computation.DeletionTwoT2Computability.normalizedJob_decode

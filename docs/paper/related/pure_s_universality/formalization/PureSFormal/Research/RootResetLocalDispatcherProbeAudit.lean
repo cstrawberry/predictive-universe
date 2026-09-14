@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetLocalDispatcherProbe
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.covers
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.all_input
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.erase_run
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.terminal_absorbs
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.generated_query
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.generated_shape
+#print axioms PureSFormal.Research.RootResetLocalDispatcherProbe.generated_initial

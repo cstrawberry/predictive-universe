@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetNestedFrameClockProbe
+
+#print axioms PureSFormal.Research.RootResetNestedFrameClockProbe.all_input
+#print axioms PureSFormal.Research.RootResetNestedFrameClockProbe.runMutationCount_zero

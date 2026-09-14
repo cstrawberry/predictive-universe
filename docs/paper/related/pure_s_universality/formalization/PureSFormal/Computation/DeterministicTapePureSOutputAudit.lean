@@ -1,0 +1,22 @@
+import PureSFormal.Computation.DeterministicTapePureSOutput
+
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.seed
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.encode
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.termAt
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.decodeRow?
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.decodeTerminalRow?
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.decodeScannedOutput?
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.Returns
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.termAt_zero
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.termAt_step
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.encode_code_primitiveRecursive
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.encode_code_computable
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.decodeRow?_actual_reflects
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.exists_literalRow_iff
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.decodeTerminalRow?_actual_reflects
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.exists_terminalRow_iff
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.halts_iff_exists_terminalRow
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.exists_scannedOutput_iff
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.decodeScannedOutput?_actual_reflects
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.nonhalting_rejects_terminal
+#print axioms PureSFormal.Computation.DeterministicTapePureSOutput.bitToggle_output_iff

@@ -2774,13 +2774,64 @@ $$
 
 **Remark K.9.3b.2 (Relation to Appendix I).** Appendix I uses the same saturating exponential response for quasistatic spatial sparsity, with the environmental proxy written as $R/L_0$. The present section is the homogeneous FLRW analogue, with the non-vacuum enthalpy density $h_{nv}$ supplying the covariant background sparsity variable instead of a radial coordinate.
 
-**Observational Signatures:**
-- Early-universe suppression: $\Upsilon_G-1 = O\!\left((\rho_\Lambda/h_{nv})^n\right)$, so BBN and CMB deviations are parametrically small in the dense regime.
-- Late-time growth modification: linear structure growth is enhanced by the factor $\Upsilon_G(a)$.
-- Effective negative pressure: in matter domination, $p_{ad} = -\dot\Upsilon_G\rho_b/(3H)$.
-- Local gravity tests constrain the slow drift rate $|\dot\Upsilon_G/\Upsilon_G|$ rather than a universal shift of the vacuum sector.
+**Corollary K.9.3c (Closed Dark-Sector Equation of State on the Matter Branch).** On the matter-domination branch $\rho_r=0$ of Corollary K.9.3b, on any time interval with $H(t)\ne0$ and $\rho_b>0$, write $s\equiv s_{bg}$ and $x:=s^n$. Then $\rho_b=\rho_\Lambda/s$, the adaptive sector of (K.9.16) is
+$$
+\rho_{ad}=\frac{A_c\left(1-e^{-x}\right)}{s}\,\rho_\Lambda,
+\qquad
+p_{ad}=-\frac{A_c\,n\,x\,e^{-x}}{s}\,\rho_\Lambda,
+\tag{K.9.3c.1}
+$$
+and the dark-sector fluid $\rho_{DE}:=\rho_\Lambda+\rho_{ad}$, $p_{DE}:=-\rho_\Lambda+p_{ad}$ satisfies $\rho_{DE}\ge\rho_\Lambda>0$, obeys $\dot\rho_{DE}+3H\left(\rho_{DE}+p_{DE}\right)=0$, and has equation of state
+$$
+w_{DE}(s)=\frac{p_{DE}}{\rho_{DE}}
+=-\,\frac{1+A_c\,n\,x\,e^{-x}/s}{1+A_c\left(1-e^{-x}\right)/s},
+\qquad x=s^n,
+\tag{K.9.3c.2}
+$$
+with $w_{DE}(s)\to-1$ as $s\to0^{+}$ and as $s\to\infty$.
 
-**Current Status:** The constitutive law is closed at the homogeneous FLRW level. A finite entropic-bridge branch below gives the precise condition under which $(A_c,n)$ are selected by the Appendix D relaxation potential rather than stipulated. Perturbation-level confrontation with growth, lensing, BAO, and CMB data remains a separate observational branch task.
+*Proof.* Definition K.9.1b with $\rho_r=0$ gives $s=\rho_\Lambda/\rho_b$, hence $\rho_b=\rho_\Lambda/s$. Equation (K.9.13) with $\rho_r=0$ gives $\dot\Upsilon_G=3H\,A_c\,n\,x\,e^{-x}$. Substituting $\Upsilon_G-1=A_c\left(1-e^{-x}\right)$ from (K.9.8), $\rho_{nv}=\rho_b=\rho_\Lambda/s$, and $p_{nv}=0$ into (K.9.16) yields (K.9.3c.1). The vacuum sector is constant with $p_\Lambda=-\rho_\Lambda$, so $\dot\rho_\Lambda+3H\left(\rho_\Lambda+p_\Lambda\right)=0$; adding (K.9.19) proves the displayed conservation law. Since $\rho_{ad}\ge0$, $\rho_{DE}\ge\rho_\Lambda>0$ and $w_{DE}$ is well defined; dividing $p_{DE}$ by $\rho_{DE}$ and factoring out $\rho_\Lambda$ gives (K.9.3c.2). For the limits: as $s\to\infty$, $x\to\infty$, so $x\,e^{-x}\to0$ and $\left(1-e^{-x}\right)/s\to0$, and the numerator and denominator of (K.9.3c.2) both tend to $1$. As $s\to0^{+}$: for $n=1$, $n\,x\,e^{-x}/s=e^{-s}\to1$ and $\left(1-e^{-s}\right)/s\to1$, so the numerator and denominator both tend to $1+A_c$; for $n>1$, $n\,x\,e^{-x}/s\le n\,s^{n-1}\to0$ and $\left(1-e^{-x}\right)/s\le s^{n-1}\to0$, so both tend to $1$. In every case the ratio tends to $1$ and $w_{DE}\to-1$. ∎
+
+**Theorem K.9.3d (Phantom-Divide Classification).** On the matter branch of Corollary K.9.3c, for every $s>0$,
+$$
+\operatorname{sign}\left(w_{DE}(s)+1\right)=\operatorname{sign}\left(e^{x}-1-n\,x\right),
+\qquad x=s^n.
+\tag{K.9.3d.1}
+$$
+Consequently:
+
+1. For $n=1$: $w_{DE}(s)>-1$ for every $s\in(0,\infty)$; the dark sector never enters the phantom regime.
+
+2. For $n>1$: the equation $e^{x}=1+n\,x$ has exactly one root $x_c(n)$ in $(0,\infty)$, and $w_{DE}<-1$ for $0<x<x_c(n)$ while $w_{DE}>-1$ for $x>x_c(n)$. On any expanding interval ($H>0$), $s$ is strictly increasing in cosmic time, so it crosses at most once on that interval, and exactly once when the interval's sparsity range straddles $x_c(n)^{1/n}$, from $w_{DE}<-1$ to $w_{DE}>-1$.
+
+*Proof.* From (K.9.3c.2),
+$$
+w_{DE}+1
+=\frac{A_c\left[\left(1-e^{-x}\right)-n\,x\,e^{-x}\right]/s}{1+A_c\left(1-e^{-x}\right)/s}
+=\frac{A_c\,e^{-x}\left(e^{x}-1-n\,x\right)}{s\left[1+A_c\left(1-e^{-x}\right)/s\right]}.
+$$
+The prefactor $A_c\,e^{-x}/s$ and the denominator are strictly positive, which proves (K.9.3d.1). Set $h_n(x):=e^{x}-1-n\,x$ on $[0,\infty)$. Then $h_n(0)=0$, $h_n'(x)=e^{x}-n$, and $h_n''(x)=e^{x}>0$, so $h_n$ is strictly convex. For $n=1$: $h_1'(x)=e^{x}-1>0$ for $x>0$, so $h_1(x)>0$ for every $x>0$, and item 1 follows from (K.9.3d.1). For $n>1$: $h_n'(0)=1-n<0$, so $h_n<0$ on some interval $(0,\epsilon)$, while $h_n(x)\to+\infty$ as $x\to\infty$. The sublevel set $\{x\ge0:h_n(x)<0\}$ is convex by convexity of $h_n$, hence an interval; it contains points arbitrarily close to $0$, is bounded above, and its supremum $x_c(n)>0$ satisfies $h_n(x_c(n))=0$ by continuity. Thus $h_n<0$ on $(0,x_c(n))$ and $h_n>0$ on $(x_c(n),\infty)$, since a zero in $(x_c(n),\infty)$ together with the zeros at $0$ and $x_c(n)$ would give the strictly convex $h_n$ three zeros. The sign pattern of item 2 follows from (K.9.3d.1). Equation (K.9.12) with $\rho_r=0$ gives $\dot s=3Hs>0$ on expanding intervals, so $x=s^n$ is strictly increasing in cosmic time and the stated interval criterion determines whether the unique crossing is contained in that interval. ∎
+
+**Corollary K.9.3e (Crossing Redshift).** On the matter branch with scale factor normalized to $a_0=1$ and present sparsity $s_{bg,0}=\rho_\Lambda/\rho_{b,0}$, the continuity equation (K.9.11) gives $s_{bg}(a)=s_{bg,0}\,a^{3}$, and for $n>1$ the crossing of Theorem K.9.3d occurs at
+$$
+1+z_\times=\left(\frac{s_{bg,0}}{x_c(n)^{1/n}}\right)^{1/3},
+\tag{K.9.3e.1}
+$$
+where $x_c(n)$ is the unique positive root of $e^{x}=1+n\,x$. The crossing lies in the past, $z_\times>0$, exactly when $s_{bg,0}^{\,n}>x_c(n)$.
+
+*Proof.* With $\rho_r=0$, (K.9.11) gives $\rho_b(a)=\rho_{b,0}\,a^{-3}$, so $s_{bg}(a)=\rho_\Lambda/\rho_b(a)=s_{bg,0}\,a^{3}$. The crossing condition $s_{bg}^{\,n}=x_c(n)$ of Theorem K.9.3d then reads $a_\times^{3}=x_c(n)^{1/n}/s_{bg,0}$, which is (K.9.3e.1) with $1+z_\times=1/a_\times$. Finally $z_\times>0$ is $a_\times<1$, equivalent to $x_c(n)^{1/n}<s_{bg,0}$, equivalent to $s_{bg,0}^{\,n}>x_c(n)$. ∎
+
+**Observational Signatures:**
+- Early-universe suppression: $1-e^{-x}\le\min\{1,x\}$ gives the exact bound $\Upsilon_G-1\le A_c\min\{1,s_{bg}^{\,n}\}$, which bounds the homogeneous response in the dense regime. The radiation and perturbation maps determine the BBN and CMB observables.
+- Late-time growth modification: the background factor $\Upsilon_G(a)$ enters the registered perturbation and lensing equations through their projection certificates.
+- Effective negative pressure: in matter domination, $p_{ad} = -\dot\Upsilon_G\rho_b/(3H)$.
+- Phantom-divide structure: by Theorem K.9.3d, $w_{DE}>-1$ throughout for $n=1$, and for $n>1$ the full power-clock evolution has one phantom-divide crossing, from $w_{DE}<-1$ to $w_{DE}>-1$, at the redshift (K.9.3e.1).
+- Coupling cap: $\Upsilon_G<1+A_c$ at every finite $s_{bg}$, with saturation only in the de Sitter limit (K.9.10); on the capacity-tracking branch of Definition K.9.5e the cap is exactly $2$.
+- Local gravity tests constrain the slow drift rate $|\dot\Upsilon_G/\Upsilon_G|$ rather than a universal shift of the vacuum sector; on the matter branch, $\dot\Upsilon_G/\Upsilon_G=3H\,A_c\,n\,s_{bg}^{\,n}\,e^{-s_{bg}^{\,n}}\big/\left[1+A_c\left(1-e^{-s_{bg}^{\,n}}\right)\right]$.
+- Tensor propagation and density history: Definition K.9.5j and Proposition K.9.5k give the siren ratio with its endpoint-transfer factor; Corollary K.9.5l removes explicit response-shape parameters from the joint consistency relation.
+- Sector selectivity: the background response acts on the registered non-vacuum gravitational sector. Drift of electromagnetic, strong, or weak observables requires its own coupling map and is tested under that map's uncertainty budget.
+
+**Current Status:** The constitutive law is closed at the homogeneous FLRW level. Corollary K.9.3c, Theorem K.9.3d, and Corollary K.9.3e close the matter-branch dark-sector equation of state, its phantom-divide classification, and the crossing redshift. On the response-cost branch below (Definition K.9.5b, Theorem K.9.5c), the exponential response profile is the unique minimizer of the registered quadratic response action. On the capacity-tracking and horizon-bath clock branches below (Definition K.9.5e, Proposition K.9.5f, Definition K.9.5g, Proposition K.9.5h), the amplitude is $A_c=1$, while the dynamical clock has dense-limit exponent $3/2$ and retains $\kappa_\sigma$. Remark K.9.5i distinguishes that ODE from the exact power-clock model. A finite entropic-bridge branch below gives the precise condition under which $(A_c,n)$ are selected by the Appendix D relaxation potential rather than stipulated. Perturbation-level confrontation with growth, lensing, BAO, and CMB data remains a separate observational branch task.
 
 **Definition K.9.4 (Homogeneous Finite Entropic-Bridge Branch).** Let $X_N$ be a finite coarse FLRW predictive state space with detailed-balance reference generator $L_N$ in the sense of Definition D.8.6d. Fix a finite protocol time grid
 $$
@@ -2916,8 +2967,209 @@ on every positive-weight sparsity bin, proving (K.9.5a.2). Because neither the o
 
 For the final claim, $h_{\mathrm{rat}}'(0)=1$. If $n>1$, the right derivative at zero of $A(1-e^{-s^n})$ is $0$, so equality is impossible. If $n=1$, equality of first derivatives forces $A=1$, but the second derivatives at zero are respectively $-2$ and $-1$. Thus no member of the exponential family equals $h_{\mathrm{rat}}$ near zero. ∎
 
-**Resolution TV-K-11-R1 (Metadata).** Exact domain: the finite homogeneous bridge of Definition K.9.4 with its response observable left outside the variational objective, plus regular-limit sequences whose limiting sparsity support contains a neighborhood of zero. Premises: feasibility and strict positivity as in Definition K.9.4 and bounded response assignments satisfying (K.9.5a.0) and every registered owner bound. Equivalence: completions share every bridge datum and differ only in their retained response observable. Budget: every finite sparsity bin and the exact local regular-limit functions (K.9.5a.3). Verifier: conditional expectation, inspection of the variational objective and the derivative comparison at zero. Falsifier: dependence of (K.9.21) on the response assignment or an exponential representation of $s/(1+s)$ on a neighborhood of zero. Provenance class: source-internal logical independence construction. Downstream consumers: Definition K.9.4, Theorem K.9.5 and `TV-K-11`. This gives `nonentailment` of the exponential law from the entropic-bridge data alone. A microdynamic equation jointly selecting the response observable, its parameters, and perturbation/lensing/screening projection maps remains open, so the target is not closed.
+**Resolution TV-K-11-R1 (Metadata).** Exact domain: the finite homogeneous bridge of Definition K.9.4 with its response observable left outside the variational objective, plus regular-limit sequences whose limiting sparsity support contains a neighborhood of zero. Premises: feasibility and strict positivity as in Definition K.9.4 and bounded response assignments satisfying (K.9.5a.0) and every registered owner bound. Equivalence: completions share every bridge datum and differ only in their retained response observable. Budget: every finite sparsity bin and the exact local regular-limit functions (K.9.5a.3). Verifier: conditional expectation, inspection of the variational objective and the derivative comparison at zero. Falsifier: dependence of (K.9.21) on the response assignment or an exponential representation of $s/(1+s)$ on a neighborhood of zero. Provenance class: source-internal logical independence construction. Downstream consumers: Definition K.9.4, Theorem K.9.5, Definition K.9.5b, Theorem K.9.5c, Definition K.9.5e, Proposition K.9.5f, Definition K.9.5g, Proposition K.9.5h and `TV-K-11`. This gives `nonentailment` of the exponential law from the entropic-bridge data alone. Definition K.9.5b and Theorem K.9.5c select the exponential response profile on the response-cost branch, Proposition K.9.5f selects $A_c=1$ on the capacity-tracking branch, and Proposition K.9.5h derives the dense-limit clock exponent $3/2$ on the horizon-bath clock branch; a microdynamic derivation of the quadratic normalization, the capacity-tracking and clock certificates, the timing normalization $\kappa_\sigma$, and the perturbation/lensing/screening projection maps remains open, so the target is not closed.
 
+**Definition K.9.5b (Response-Cost Branch and Registered Quadratic Response Action).** Let $\sigma\ge0$ be the registered response clock. Postulate K.9.2 uses $\sigma=s_{bg}^{\,n}$; Definition K.9.5g below supplies a distinct dynamical clock. The admissible response class is
+$$
+\mathcal U_{\mathrm{resp}}:=\left\{u:[0,\infty)\to\mathbb R\ \middle|\ u\ \text{locally absolutely continuous},\ u(0)=0,\ u-1\in L^{2}(0,\infty),\ u'\in L^{2}(0,\infty)\right\},
+\tag{K.9.5b.1}
+$$
+and the registered quadratic response action is
+$$
+\mathcal S_{\mathrm{resp}}[u]:=\int_0^\infty\left[\tfrac12\left(u'(\sigma)\right)^{2}+\tfrac12\left(1-u(\sigma)\right)^{2}\right]d\sigma
+\ \text{ for }u\in\mathcal U_{\mathrm{resp}},
+\qquad
+\mathcal S_{\mathrm{resp}}[u]:=+\infty\ \text{ otherwise}.
+\tag{K.9.5b.2}
+$$
+A response-cost branch is a homogeneous finite entropic-bridge branch (Definition K.9.4) whose branch datum additionally registers the clock exponent $n\ge1$, the amplitude normalization $A_c>0$, the response profile $u$ as a registered continuum datum with finite response observable $G_N/G_0-1:=A_c\,u(s_N^{\,n})$, and the augmented objective
+$$
+\operatorname{Ent}\left(\mathbb P\mid\mathbb P_{0,N}\right)+\mathbb E_{\mathbb P}\mathcal A_{\mathrm{PCE},N}+\mathcal S_{\mathrm{resp}}[u],
+\tag{K.9.5b.3}
+$$
+minimized on the Cartesian product of the two admissible classes, with no cross-constraint or additional coupling term, over pairs $(\mathbb P,u)$, with $\mathbb P$ ranging over the probability measures on the finite path ledger satisfying (K.9.20).
+
+**Theorem K.9.5c (Variational Selection of the Exponential Response Profile).** On a response-cost branch:
+
+1. Every $u\in\mathcal U_{\mathrm{resp}}$ satisfies $u(\sigma)\to1$ as $\sigma\to\infty$, and
+$$
+\mathcal S_{\mathrm{resp}}[u]=\tfrac12\int_0^\infty\left(u'(\sigma)-\left(1-u(\sigma)\right)\right)^{2}d\sigma+\tfrac12.
+\tag{K.9.5c.1}
+$$
+
+2. $\mathcal S_{\mathrm{resp}}$ is strictly convex on $\mathcal U_{\mathrm{resp}}$ and has the unique minimizer
+$$
+u_*(\sigma)=1-e^{-\sigma},
+\qquad
+\mathcal S_{\mathrm{resp}}[u_*]=\tfrac12,
+\tag{K.9.5c.2}
+$$
+which solves the one-scale closure (K.9.7) and reproduces the coupling law (K.9.8) through (K.9.6) with $u=u_*$.
+
+3. The joint minimization of (K.9.5b.3) separates: its unique minimizer is the pair $\left(\mathbb P_{*,N},u_*\right)$, with $\mathbb P_{*,N}$ the bridge of Theorem K.9.5. The finite response observable of the minimizer is $G_N/G_0-1=A_c\left(1-e^{-s_N^{\,n}}\right)$, its selected response curve (K.9.22) is the one-scale family member $g_{A_c,n}$ of (K.9.23) at the registered $(A_c,n)$, and every registered profile whose finite evaluation differs from that of $u_*$ carries strictly larger augmented cost. On this branch the response freedom exhibited in Theorem K.9.5a is removed.
+
+*Proof.* Item 1. Let $u\in\mathcal U_{\mathrm{resp}}$ and $v:=u-1$, so $v$ is locally absolutely continuous with $v,v'\in L^{2}(0,\infty)$ and $v(0)=-1$. For $0\le\sigma<\tau$,
+$$
+v(\tau)^{2}-v(\sigma)^{2}=2\int_\sigma^\tau v\,v'\,d\sigma',
+\qquad
+\left|\int_\sigma^\tau v\,v'\,d\sigma'\right|\le\|v\|_{L^{2}(\sigma,\infty)}\,\|v'\|_{L^{2}(\sigma,\infty)},
+$$
+and the bound tends to $0$ as $\sigma\to\infty$, so $v(\sigma)^{2}$ converges as $\sigma\to\infty$; since $v\in L^{2}(0,\infty)$, the limit is $0$, hence $u(\sigma)\to1$. Pointwise,
+$$
+\tfrac12\left(u'\right)^{2}+\tfrac12\left(1-u\right)^{2}
+=\tfrac12\left(u'-\left(1-u\right)\right)^{2}+u'\left(1-u\right),
+\qquad
+u'\left(1-u\right)=-\tfrac12\,\frac{d}{d\sigma}\left(1-u\right)^{2},
+$$
+and the cross term is integrable as the product of the $L^{2}$ functions $u'$ and $1-u$. Integrating on $[0,T]$ and letting $T\to\infty$ with $u(T)\to1$ gives
+$$
+\int_0^\infty u'\left(1-u\right)d\sigma=\tfrac12\left(1-u(0)\right)^{2}-\tfrac12\lim_{T\to\infty}\left(1-u(T)\right)^{2}=\tfrac12,
+$$
+which proves (K.9.5c.1).
+
+Item 2. By (K.9.5c.1), $\mathcal S_{\mathrm{resp}}[u]\ge\tfrac12$, with equality exactly when $u'=1-u$ almost everywhere. For such $u$, $\frac{d}{d\sigma}\left[e^{\sigma}\left(u-1\right)\right]=e^{\sigma}\left(u'-\left(1-u\right)\right)=0$ almost everywhere, so local absolute continuity gives $e^{\sigma}\left(u(\sigma)-1\right)=u(0)-1=-1$ and $u=u_*$. Conversely $u_*\in\mathcal U_{\mathrm{resp}}$, $u_*'=e^{-\sigma}=1-u_*$, and $\mathcal S_{\mathrm{resp}}[u_*]=\int_0^\infty e^{-2\sigma}\,d\sigma=\tfrac12$. The affine map $u\mapsto u'-\left(1-u\right)$ is injective on $\mathcal U_{\mathrm{resp}}$: the difference $\varpi$ of two elements satisfies $\varpi(0)=0$, and $\varpi'+\varpi=0$ forces $\varpi=0$. Hence by (K.9.5c.1) the functional is strictly convex on $\mathcal U_{\mathrm{resp}}$ and $u_*$ is its unique minimizer. Equation (K.9.7) is $u'=1-u$ in the variable $\sigma=s_{bg}^{\,n}$ with $u(0)=0$, and (K.9.6) with $u=u_*$ gives (K.9.8).
+
+Item 3. The first two terms of (K.9.5b.3) do not depend on $u$ and the third does not depend on $\mathbb P$, so the infimum over pairs is the sum of the separate infima and is attained exactly at the pair of the separate unique minimizers: $\mathbb P_{*,N}$ by Theorem K.9.5 item 1 and $u_*$ by item 2. The finite evaluation of $u_*$ gives $G_N/G_0-1=A_c\,u_*(s_N^{\,n})=A_c\left(1-e^{-s_N^{\,n}}\right)$, and substitution into the conditional expectation (K.9.22) on every positive-weight sparsity bin gives $g_{*,N}(s)=A_c\left(1-e^{-s^{n}}\right)=g_{A_c,n}(s)$, the member of (K.9.23) at the registered $(A_c,n)$. A registered profile $u$ whose finite evaluation differs from that of $u_*$ satisfies $u\ne u_*$, so its augmented cost exceeds that of $u_*$ by strict convexity when $u\in\mathcal U_{\mathrm{resp}}$ and equals $+\infty$ otherwise. ∎
+
+**Remark K.9.5d (Response Normalization and Clock Choice).** Theorem K.9.5c selects the profile as a function of the registered clock. With positive coefficients $c_1,c_0$, the action $\frac12\int[c_1u'^2+c_0(1-u)^2]\,d\sigma$ instead has unique minimizer $1-e^{-\sqrt{c_0/c_1}\sigma}$ and minimum $\sqrt{c_0c_1}/2$. This follows by completing the square $\frac{c_1}{2}[u'-\sqrt{c_0/c_1}(1-u)]^2$ and integrating its cross term. Thus the coefficient ratio fixes the clock normalization. The capacity certificate fixes the amplitude, and a clock certificate fixes how physical evolution traverses the profile.
+
+**Definition K.9.5e (Capacity-Tracking Branch).** A capacity-tracking branch registers:
+
+1. the identification $G_{eff}\propto C_{\mathrm{trk}}^{-1}$ at fixed, environment-independent channel area, where $C_{\mathrm{trk}}$ is the retained per-cycle channel capacity entering the area-law coefficient of Theorem 49 through the Appendix E calibration (Equation E.9);
+
+2. the dense-limit saturation certificate $C_{\mathrm{trk}}\to C_{\max}^{*}=2\ln 2$ as $s_{bg}\to0^{+}$, on the minimal $d_0=8$ residual-budget and saturation branch of Proposition E.2a;
+
+3. the de Sitter-limit capacity certificate $C_{\mathrm{trk}}\to\varepsilon_0=\ln2$ as $s_{bg}\to\infty$. The registered branch retains a binary response quotient with log-cardinality $\ln2$, identifies its saturated retained capacity with $C_{\mathrm{trk}}$, and assigns positive cost to additional response-null retained structure. On the exact de Sitter branch of Remark K.9.3b.1, non-vacuum enthalpy vanishes and the comoving bath is the horizon bath of Proposition K.9.1. PPI/PCE removes the registered response-null excess. A physical reset interpretation additionally supplies Definition 28's implemented reset and complete retained record, conditional uniformity $H_q(P\mid R)=\ln2$, and the thermodynamic hypotheses of Theorem 31. These reset premises establish the heat floor; the binary-capacity identification supplies the capacity limit used here.
+
+**Proposition K.9.5f (Amplitude Selection).** On a capacity-tracking branch,
+$$
+1+A_c=\frac{C_{\max}^{*}}{\varepsilon_0}=\frac{2\ln 2}{\ln 2}=2,
+\qquad
+A_c=1.
+\tag{K.9.5f.1}
+$$
+
+*Proof.* Item 1 of Definition K.9.5e gives $\Upsilon_G=G_{eff}/G_0=C_{\mathrm{trk}}^{(0)}/C_{\mathrm{trk}}$, where $C_{\mathrm{trk}}^{(0)}$ is the dense-limit value, because (K.9.10) fixes $G_{eff}\to G_0$ in the dense limit $h_{nv}\to\infty$, equivalently $s_{bg}\to0^{+}$ by Definition K.9.1b. Item 2 gives $C_{\mathrm{trk}}^{(0)}=C_{\max}^{*}=2\ln 2$. Item 3 gives $C_{\mathrm{trk}}\to\varepsilon_0=\ln 2$ as $s_{bg}\to\infty$, so $\Upsilon_G\to C_{\max}^{*}/\varepsilon_0=2$ on the de Sitter branch. Theorem K.9.3's limit (K.9.10) gives $\Upsilon_G\to1+A_c$ on the same branch. Equating the two limits gives (K.9.5f.1). ∎
+
+**Definition K.9.5g (Horizon-Bath Relaxation Clock).** On an expanding matter branch $H>0$, $\rho_r=0$, spatially flat $k=0$, define the vacuum fraction
+$$
+\varphi_\Lambda:=\frac{\rho_\Lambda}{\rho_\Lambda+h_{nv}}=\frac{s_{bg}}{1+s_{bg}},
+\tag{K.9.5g.1}
+$$
+and, with $H_\Lambda=\sqrt{\Lambda/3}=\sqrt{8\pi G_0\rho_\Lambda/3}$ the de Sitter rate of Definition Q.7.1 written in the $c=1$ units of this section through (K.9.4), the horizon-bath relaxation clock
+$$
+d\sigma=\kappa_\sigma\,H_\Lambda\,\varphi_\Lambda\,dt,
+\qquad
+\sigma\big|_{s_{bg}=0}=0,
+\tag{K.9.5g.2}
+$$
+with timing normalization $\kappa_\sigma>0$ a branch datum. A horizon-bath clock branch registers (K.9.5g.2) as the sparsity clock and the response profile $u=1-e^{-\sigma}$ of Theorem K.9.5c, so that $\Upsilon_G=1+A_c\left(1-e^{-\sigma}\right)$.
+
+**Proposition K.9.5h (Dynamical Clock and Dense-Limit Exponent).** On a horizon-bath clock branch, write $s\equiv s_{bg}$. Then $\sigma$ is the unique nondecreasing solution of
+$$
+\frac{d\sigma}{ds}=\frac{\kappa_\sigma}{3}\,\frac{\sqrt{s}}{\left(1+s\right)\sqrt{s+\Upsilon_G(s)}},
+\qquad
+\sigma(0)=0,
+\qquad
+\Upsilon_G(s)=1+A_c\left(1-e^{-\sigma(s)}\right),
+\tag{K.9.5h.1}
+$$
+and for every $s>0$,
+$$
+\frac{2\kappa_\sigma}{9}\,\frac{s^{3/2}}{\left(1+s\right)\sqrt{s+\Upsilon_G(s)}}\ \le\ \sigma(s)\ \le\ \frac{2\kappa_\sigma}{9}\,s^{3/2},
+\tag{K.9.5h.2}
+$$
+$$
+\frac{3}{2}\,\frac{1}{\left(1+s\right)\sqrt{s+\Upsilon_G(s)}}\ \le\ n_{\mathrm{clk}}(s):=\frac{d\ln\sigma}{d\ln s}\ \le\ \frac{3}{2},
+\qquad
+\lim_{s\to0^{+}}n_{\mathrm{clk}}(s)=\frac{3}{2},
+\qquad
+\lim_{s\to0^{+}}\frac{\sigma(s)}{s^{3/2}}=\frac{2\kappa_\sigma}{9}.
+\tag{K.9.5h.3}
+$$
+The clock therefore realizes the Postulate K.9.2 identification $\sigma=s_{bg}^{\,n}$ at leading order as $s_{bg}\to0^{+}$ with
+$$
+n=\frac{3}{2},
+\tag{K.9.5h.4}
+$$
+on the registration $\kappa_\sigma=9/2$.
+
+*Proof.* On the matter branch, Definition K.9.1b gives $\rho_{nv}=\rho_b=\rho_\Lambda/s$ and (K.9.12) gives $\dot s=3Hs$. Equation (K.9.14) with $k=0$ and (K.9.4) give
+$$
+H^{2}=\frac{8\pi G_0}{3}\left[\rho_\Lambda+\Upsilon_G\,\frac{\rho_\Lambda}{s}\right]=H_\Lambda^{2}\,\frac{s+\Upsilon_G(s)}{s},
+$$
+so $H=H_\Lambda\sqrt{\left(s+\Upsilon_G(s)\right)/s}$ on expanding intervals. Substituting $dt=ds/(3Hs)$ and (K.9.5g.1) into (K.9.5g.2) gives the differential equation in (K.9.5h.1). Its right-hand side $F(s,\sigma)$ is continuous on $[0,\infty)\times[0,\infty)$ with $F(0,\sigma)=0$, satisfies $0\le F(s,\sigma)\le\frac{\kappa_\sigma}{3}\sqrt{s}$, and is nonincreasing in $\sigma$, because $\Upsilon_G$ is nondecreasing in $\sigma$. Peano's theorem gives local existence from $\sigma(0)=0$, the a priori bound $\sigma\le\frac{2\kappa_\sigma}{9}s^{3/2}$ obtained below gives global extension, and positivity of $F$ gives monotone nondecreasing $\sigma$, hence nondecreasing $\Upsilon_G(s)$ with $\Upsilon_G(0^{+})=1$ and $1\le\Upsilon_G\le1+A_c$. For uniqueness, if $\sigma_1,\sigma_2$ are two solutions, then wherever $\sigma_1>\sigma_2$ the derivative of $\sigma_1-\sigma_2$ is $F(s,\sigma_1)-F(s,\sigma_2)\le0$, so $\left(\sigma_1-\sigma_2\right)_{+}$ is nonincreasing from the initial value $0$ and vanishes identically; by symmetry $\sigma_1=\sigma_2$.
+
+For the bounds, write $g(s):=d\sigma/ds$ and $M(s):=\left(1+s\right)\sqrt{s+\Upsilon_G(s)}$. $M$ is nondecreasing, because both factors are nondecreasing, and $M(s)\ge\sqrt{\Upsilon_G(0^{+})}=1$; hence for $0<s'\le s$,
+$$
+\frac{\kappa_\sigma}{3}\,\frac{\sqrt{s'}}{M(s)}\ \le\ g(s')\ \le\ \frac{\kappa_\sigma}{3}\,\sqrt{s'},
+$$
+and integrating over $\left(0,s\right]$ gives (K.9.5h.2). For (K.9.5h.3): $n_{\mathrm{clk}}(s)=s\,g(s)/\sigma(s)$, well defined since $\sigma(s)>0$ for $s>0$ by the lower bound in (K.9.5h.2). The lower bound in (K.9.5h.3) follows by dividing $s\,g(s)=\frac{\kappa_\sigma}{3}\,s^{3/2}/M(s)$ by the upper bound of (K.9.5h.2). For the upper bound, $g(s')\ge g(s)\sqrt{s'/s}$ for $0<s'\le s$, because $g(s')/g(s)=\sqrt{s'/s}\;M(s)/M(s')\ge\sqrt{s'/s}$; integrating gives $\sigma(s)\ge g(s)\,s^{-1/2}\cdot\frac{2}{3}s^{3/2}=\frac{2}{3}\,s\,g(s)$ and hence $n_{\mathrm{clk}}(s)\le\frac{3}{2}$. As $s\to0^{+}$, $M(s)\to1$, so both bounds in (K.9.5h.3) tend to $\frac{3}{2}$ and the lower bound of (K.9.5h.2) tends to $\frac{2\kappa_\sigma}{9}s^{3/2}$, which gives both limits by the squeeze. Finally, $\sigma=s^{3/2}\left(1+o(1)\right)$ requires $\frac{2\kappa_\sigma}{9}=1$, which is $\kappa_\sigma=9/2$. ∎
+
+**Corollary K.9.5h.1 (Clock-Level Phantom Structure).** On a horizon-bath clock branch, the matter-branch dark-sector fluid of Corollary K.9.3c, evaluated with $\Upsilon_G=1+A_c\left(1-e^{-\sigma(s)}\right)$, satisfies for every $s>0$
+$$
+\operatorname{sign}\left(w_{DE}(s)+1\right)
+=\operatorname{sign}\left(e^{\sigma(s)}-1-s\,\sigma'(s)\right)
+=\operatorname{sign}\left(e^{\sigma(s)}-1-n_{\mathrm{clk}}(s)\,\sigma(s)\right),
+\tag{K.9.5h.5}
+$$
+there exist $0<s_{-}\le s_{+}<\infty$ with $w_{DE}<-1$ on $\left(0,s_{-}\right)$ and $w_{DE}>-1$ on $\left(s_{+},\infty\right)$, and on the separately registered exact power-clock branch $\sigma=\frac{2\kappa_\sigma}{9}s^{3/2}$ Theorem K.9.3d applies with $x=\sigma$ and $n=\frac{3}{2}$: the unique crossing, when covered by the evolution interval, occurs at $x_c(3/2)=0.76268856\ldots$, the unique positive root of $e^{x}=1+\frac{3}{2}x$, with crossing redshift
+$$
+1+z_\times=s_{bg,0}^{1/3}\left(\frac{2\kappa_\sigma}{9\,x_c(3/2)}\right)^{2/9}.
+\tag{K.9.5h.6}
+$$
+
+*Proof.* With $\Upsilon_G-1=A_c\left(1-e^{-\sigma}\right)$ and $\dot\sigma=\sigma'(s)\,\dot s=3Hs\,\sigma'(s)$, (K.9.16) on the matter branch gives $\rho_{ad}=A_c\left(1-e^{-\sigma}\right)\rho_\Lambda/s$ and $p_{ad}=-\left(\dot\Upsilon_G/3H\right)\rho_b=-A_c\,s\,\sigma'(s)\,e^{-\sigma}\,\rho_\Lambda/s$, so
+$$
+w_{DE}+1=\frac{A_c\,e^{-\sigma}\left(e^{\sigma}-1-s\,\sigma'(s)\right)}{s\left[1+A_c\left(1-e^{-\sigma}\right)/s\right]},
+$$
+whose prefactor and denominator are strictly positive; $s\,\sigma'=n_{\mathrm{clk}}\,\sigma$ gives the second equality in (K.9.5h.5). For small $s$: $e^{\sigma}-1\le\sigma+\sigma^{2}$ for $\sigma\le1$, while $n_{\mathrm{clk}}\,\sigma\ge\frac{3}{2}\,\sigma/M(s)$ with $M(s)\to1$ and $\sigma(s)\to0$ by Proposition K.9.5h, so $e^{\sigma}-1-n_{\mathrm{clk}}\,\sigma\le\sigma\left(1+\sigma-\frac{3}{2M(s)}\right)<0$ for all sufficiently small $s$, proving $w_{DE}<-1$ on some $\left(0,s_{-}\right)$. For large $s$: $s\,\sigma'(s)=\frac{\kappa_\sigma}{3}\,s^{3/2}/M(s)\le\frac{\kappa_\sigma}{3}$ for every $s>0$, because $M(s)\ge s^{3/2}$; while for $s'\ge\max\{1,1+A_c\}$ one has $\left(1+s'\right)\le2s'$ and $\sqrt{s'+\Upsilon_G}\le\sqrt{2s'}$, so $\sigma'(s')\ge\frac{\kappa_\sigma}{6\sqrt2\,s'}$ and $\sigma(s)\to\infty$ logarithmically. Hence $e^{\sigma}-1$ exceeds the bounded quantity $s\,\sigma'$ for all sufficiently large $s$, proving $w_{DE}>-1$ on some $\left(s_{+},\infty\right)$. For $\sigma=\frac{2\kappa_\sigma}{9}s^{3/2}$ exactly, $s\,\sigma'=\frac{3}{2}\sigma$, so (K.9.5h.5) becomes $\operatorname{sign}\left(e^{x}-1-\frac{3}{2}x\right)$ with $x=\sigma$; the argument of Theorem K.9.3d depends only on the strict convexity of $h_{3/2}$ and the strict monotonicity of $x$ in cosmic time, both of which hold here, so the divide is crossed exactly once, at the unique positive root $x_c(3/2)$ of $e^{x}=1+\frac{3}{2}x$. The crossing condition $\frac{2\kappa_\sigma}{9}\,s_\times^{3/2}=x_c(3/2)$ with $s_{bg}(a)=s_{bg,0}\,a^{3}$ from Corollary K.9.3e gives $s_\times=\left(9\,x_c(3/2)/\left(2\kappa_\sigma\right)\right)^{2/3}$ and $1+z_\times=\left(s_{bg,0}/s_\times\right)^{1/3}$, which is (K.9.5h.6). ∎
+
+**Remark K.9.5i (Capacity Selection and Two Clock Branches).** Capacity tracking gives $A_c=1$. The horizon-bath ODE retains $\kappa_\sigma$ and determines $\sigma(s)$ over the full matter branch. It gives $\sigma(s)\sim(2\kappa_\sigma/9)s^{3/2}$ near zero and $\sigma(s)\sim(\kappa_\sigma/3)\ln s$ at large $s$: multiply (K.9.5h.1) by $s$ and use $1\le\Upsilon_G\le1+A_c$ to obtain $s\sigma'(s)\to\kappa_\sigma/3$. Integration gives the logarithmic asymptotic.
+
+The exact power-clock branch separately registers $\sigma=c_\sigma s^{3/2}$, $c_\sigma>0$. It has the unique phantom crossing of (K.9.5h.6) with $c_\sigma=2\kappa_\sigma/9$ when that normalization is chosen. Choosing $\kappa_\sigma=9/2$ fixes the dense-limit coefficient to one for the ODE; retaining $\sigma=s^{3/2}$ at finite sparsity is the additional power-clock model. The full ODE has the early phantom and late nonphantom intervals proved in Corollary K.9.5h.1. The static counterpart of the exact power clock is developed in Definition I.13c.1 and Proposition I.13c.2, where $m=2n=3$. The multiplicity menu in Proposition I.13c.3 has $A_G=1$ at its serialized member $j=1$ and $A_G=d_0-1$ at $j=K_0$. Its registered rate modulus and multiplicity are the additional spatial bridge data.
+
+**Definition K.9.5j (Tensor Propagation and Endpoint-Matching Branch).** In the $c=1$ matter background, register a positive twice differentiable tensor coefficient $Q_T(t)=Q_{T,0}\Upsilon_{G,0}/\Upsilon_G(t)$ and the action, per transverse-traceless polarization,
+$$
+S_T=\frac18\int dt\,d^3x\,a^3 Q_T
+\left[\dot h^2-\frac{(\nabla h)^2}{a^2}\right].
+$$
+The covariant realization certificate specifies the field carrying $Q_T$, its background equations, conserved stress, and the reduction to this quadratic action. The source and detector certificate specifies waveform phasing, photon propagation, and the net strain-transfer factor $\mathcal T(z)>0$ across the two endpoint transitions relative to homogeneous propagation. The unit-transfer subbranch requires $\mathcal T(z)=1$ from that calculation.
+
+**Proposition K.9.5k (Tensor Amplitude and Standard-Siren Law).** On this branch,
+$$
+\ddot h_k+(3+\alpha_M)H\dot h_k+\frac{k^2}{a^2}h_k=0,\qquad
+\alpha_M=\frac{d\ln Q_T}{d\ln a}=-3s\frac{\Upsilon_G'(s)}{\Upsilon_G(s)}.
+$$
+The kinetic and gradient terms give unit tensor speed. In conformal time, let $z_T=a\sqrt{Q_T}$ and $v=z_T h_k$. Then $v''+[k^2-z_T''/z_T]v=0$. On a geometric-optics window with a registered bound on $|z_T''/(z_T k^2)|$ and the variation of this quantity, the leading amplitude is $h_k\propto z_T^{-1}$. Consequently,
+$$
+\frac{d_L^{GW}}{d_L^{EM}}(z)
+=\frac1{\mathcal T(z)}
+\sqrt{\frac{\Upsilon_G(s(z))}{\Upsilon_G(s_0)}}.
+\tag{K.9.5k.2}
+$$
+
+*Proof.* Varying the action gives $\partial_t(a^3Q_T\dot h)=aQ_T\nabla^2h$. Division by $a^3Q_T$ gives the mode equation. Substitution of $v=z_T h_k$ in conformal time cancels the first derivative. The certified adiabatic approximation makes $v$ have constant leading amplitude, so propagation scales strain by $z_T^{-1}$. Relative to propagation with constant $Q_T$, this contributes $\sqrt{Q_T(a_e)/Q_T(a_0)}$ to strain. Multiplication by the registered endpoint transfer and inversion of the amplitude-distance relation give (K.9.5k.2). ∎
+
+On the unit-transfer subbranch, an increasing $\Upsilon_G(s)$ gives a decreasing distance ratio with redshift. Its small-$z$ expansion is $1+\alpha_M(s_0)z/2+O(z^2)$ and its matter-branch limit is $\Upsilon_{G,0}^{-1/2}$. Equal screened endpoint coefficients require an explicit transition calculation: adiabatic transport through both screened transitions can cancel the homogeneous factor.
+
+For the illustrative exact power-clock choice $A_c=1$, $\sigma=s^{3/2}$, and $s_0=1.4$, the unit-transfer ratios at $z=0.01,0.1,0.3,1$ are respectively $0.996025$, $0.957876$, $0.879269$, and $0.769253$, with matter-branch limiting value $0.743460$. The full horizon-bath clock instead uses its ODE solution and registered $\kappa_\sigma$. A siren comparison fixes that response, endpoint transfer, waveform, source-selection function, and covariance before testing the joint prediction.
+
+**Corollary K.9.5l (Density-History and Siren Consistency).** On the matter adaptive-fluid and tensor branches,
+$$
+\rho_{DE}-\rho_\Lambda=(\Upsilon_G-1)\rho_b,
+$$
+and therefore
+$$
+\left(\mathcal T(z)\frac{d_L^{GW}}{d_L^{EM}}(z)\right)^2
+=\frac{1+[\rho_{DE}(z)-\rho_\Lambda]/\rho_b(z)}
+{1+[\rho_{DE,0}-\rho_\Lambda]/\rho_{b,0}}.
+\tag{K.9.5l.1}
+$$
+
+*Proof.* Solve the adaptive-density identity for $\Upsilon_G$ at emission and observation, substitute both expressions into (K.9.5k.2), and square. The amplitude, exponent and clock normalization cancel explicitly. ∎
+
+This identity tests the background-density and tensor-response maps across differentiable response profiles. The background reconstruction uses data held separate from the siren amplitudes assigned to the test and carries their common cosmological covariance. For an exact power clock with $n>1$, $\rho_{DE}\to\rho_\Lambda$ as $s\downarrow0$ on the mathematical matter branch; for $n=1$ the limit is $(1+A_c)\rho_\Lambda$. A high-redshift physical reconstruction includes radiation.
 
 ## K.10 Renormalization from Operational Finiteness
 
@@ -3878,6 +4130,57 @@ The theorem completely resolves normalization, regulator independence, condition
 
 **Resolution TV-K-21-R1 (Metadata).** Exact domain: nonempty finite projective sample spaces with surjective bonding maps, compatible probability measures and finite nonzero observer normalizations. Premises: (K.10.19b.1) and, for conditioned measures, the normalized-density relation (K.10.19b.3). Equivalence: measures agree when all finite-level cylinder probabilities agree. Budget: every finite-level event and every bonding step; no sampled-event restriction is used. Verifier: exact pushforward of the unweighted and normalized weighted measures and the finite conditional-expectation identities. Falsifier: incompatible adjacent marginals, a cylinder with level-dependent probability, or a violation of (K.10.19b.3) by regulator-independent conditioned measures. Provenance class: source-internal projective-measure classification. Downstream consumers: the cosmological-measure program and `TV-K-21`. Theorem K.10.19b gives `positive-discharge` of the mathematical normalization, regulator-independence, conditioning and observer-weighting component on this projective finite class. Populating the physical sample spaces, transition maps, measures, observer weights and observable extractor remains the independent `C+R+O` work.
 
+**Theorem K.10.25a (Separation-Entropy Tracking Budget).** Let $K$ be a nonempty compact metric space and $F:K\to K$ continuous. Equip length-$n$ histories with the maximum metric, and let $s_n(K,2\varepsilon)$ be the maximum number of initial states whose histories are pairwise more than $2\varepsilon$ apart. Any fixed-width binary encoder and decoder that approximate every history within $\varepsilon$ require
+
+$$
+B_n\ge\left\lceil\log_2s_n(K,2\varepsilon)\right\rceil.
+$$
+
+**Proof.** Two histories separated by more than $2\varepsilon$ cannot have the same decoded approximation: the triangle inequality would bound their distance by $2\varepsilon$. Encoding is therefore injective on a separated set, and $2^{B_n}\ge s_n$. This proves the bound. Define $h_{sep}=\limsup_{n\to\infty}n^{-1}\ln s_n(K,2\varepsilon)$. Taking limit superiors gives $\limsup B_n/n\ge h_{sep}/\ln2$. Positive fixed-scale separation entropy excludes a fixed bit budget that works for every horizon.
+
+**Example (An Exact Tracking-Cost Witness).** Let $K=\{0,1\}^{\mathbb N_0}$, let $F$ be the left shift, and set
+$$
+d(x,y)=\sum_{j=0}^{\infty}2^{-j-1}|x_j-y_j|.
+$$
+This compact system has $2^n$ initial states formed by an arbitrary length-$n$ binary prefix followed by zeros. Two different prefixes differ at some position $j<n$; after $j$ shifts their distance is at least $1/2$. Thus for $0<\varepsilon<1/4$ these states are more than $2\varepsilon$ separated in the history metric, and Theorem K.10.25a gives $B_n\ge n$.
+
+For an upper bound, transmit the first $n+L$ bits, where $2^{-L-2}\le\varepsilon$, and decode each retained history using a zero tail. At every time $j<n$, the first $n+L-j$ output bits are exact and the remaining metric weight is at most $2^{-L-2}$. Hence $B_n=n+O_\varepsilon(1)$ suffices. The asymptotic tracking cost is exactly one bit per step, even though the shift rule has a fixed finite description. A periodic initial state also has a short description. The uniform cost comes from covering all retained histories.
+
+**Application to Classical Dynamics.** A compact invariant subsystem with a certified positive-entropy symbolic model supplies the hypotheses of Theorem K.10.25a at sufficiently fine resolution. Bolotin and MacKay's restricted-three-body construction provides such symbolic dynamics on its stated small-mass and near-collision regime [Bolotin, MacKay 2006]. Applying the tracking theorem registers that subsystem, its return map and metric, and the time per return. The return count becomes physical time only through this additional timing record.
+
+Three different classical questions then have separate answers. Non-integrability concerns the existence of first integrals in a stated function class; for example, Tsygvintsev proves the absence of a complete set of complex meromorphic first integrals near the Lagrangian solution [Tsygvintsev 2001]. A convergent series represents solutions on its stated domain. The separation bound instead counts how many distinguishable histories a uniformly accurate finite code must represent. Neither an integrability obstruction nor a series representation alone determines that count. For a causal observer receiving continual measurements, the channel and estimation assumptions convert entropy into an information-rate bound [Kawan, Yüksel 2020]. Almost-sure symbolic complexity and uniform history coverage are likewise different quantifiers; the present theorem uses the latter.
+
+**Theorem K.10.25b (Finite Quotient Descent).** For a finite partition with quotient map $q$, exact deterministic descent exists precisely when
+
+$$
+q(x)=q(y)\ \Longrightarrow\ q(Fx)=q(Fy).
+$$
+
+If it exists, each initial quotient state determines its entire itinerary. A partition with $N$ cells of diameter at most $2\varepsilon$ then permits at most $N$ pairwise more than $2\varepsilon$-separated histories, so $h_{sep}(F,K,2\varepsilon)=0$. Positive separation entropy therefore obstructs exact deterministic descent to every finite partition meeting that diameter bound.
+
+**Interpretation.** The obstruction identifies a failure of the chosen finite state description to determine its successor. Exact dynamics supplies the set-valued map $i\mapsto\{q(Fx):x\in P_i\}$. A stochastic kernel additionally specifies a measure and the treatment of memory; a deterministic refinement adds retained distinctions; continual observation supplies new information. Each construction answers a different modeling task. An ontic reading in which the finite quotient exhausts physical state is a separately stated physical principle.
+
+**Physical Finite-Information Hypothesis.** A finite-information interpretation takes the registered finite state as the complete physical state and specifies how previously unresolved quantities become actual. Del Santo and Gisin develop a classical indeterministic model using finite information quantities [Del Santo, Gisin 2019]. Within the present framework, this is a candidate realization of the quotient obstruction: its update law, probability assignment, and response map specify the physical hypothesis. The deterministic and set-valued quotient constructions provide comparison models with the same retained observations. Distinguishing them experimentally requires a predicted difference in an accessible response statistic.
+
+**Corollary K.10.25c (Certified Finite-Time Separation).** For a designated pair with continuous separation and a certified estimate
+
+$$
+c\delta_0e^{\lambda t}\le d(\Phi^t x,\Phi^t y)\le C\delta_0e^{\lambda t},
+\qquad 0<c\le C,\quad\lambda>0,
+$$
+
+valid through the first crossing of $\ell>\delta_0$, the crossing lies between
+
+$$
+\max\left\{0,\lambda^{-1}\ln\frac\ell{C\delta_0}\right\}
+\quad\text{and}\quad
+\lambda^{-1}\ln\frac\ell{c\delta_0}.
+$$
+
+The lower endpoint uses the upper expansion estimate; the upper endpoint uses the lower estimate. The certificate covers that crossing interval. A positive asymptotic Lyapunov exponent alone does not supply uniform finite-time bounds. The logarithmic dependence has the exact sensitivity $\Delta t=-\lambda^{-1}\ln(\delta'_0/\delta_0)$ when the other registered quantities are fixed. This gives the scale sensitivity of the registered horizon.
+
+For example, a registered scale ratio $\ell/\delta_0=e^{100}$ gives a nominal horizon $100/\lambda$. Multiplying the seed by two changes that nominal value by $(\ln2)/\lambda$, or about $0.693\%$; multiplying it by ten changes it by about $2.303\%$. Thus the percentage sensitivity depends on the specified change in the seed. Using a PU spatial cutoff as $\delta_0$ additionally requires a phase-space metric, a coarse-graining map, and a bound on its projection onto the unstable direction. These are the bridge data connecting the operational spacing to the dynamical estimate.
+
 ## K.11 Outlook and Future Directions
 
 This section records established branch results, active development areas, and priorities for theory and experimental validation.
@@ -3893,8 +4196,6 @@ The following ledger mixes exact mathematical results with branch-qualified nume
 | Weinberg angle | $\sin^2\theta_W^{(0)} = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | External-RG validation value near $125$ GeV; a completed threshold record plus accepted $\mathfrak H_T$ is currently open | Appendix T, Definition T.25.2; Theorems T.26, T.28, and T.79.2 |
 | Fermion mass ratios | Retrospective leading-order lepton diagnostic | Appendices R and T; not an independent prediction until the flavor ledger is fixed before comparison |
-
-
 | Gravitational coupling | $G_{\mathrm{op}}$ is defined by the positive saturated channel-capacity area coefficient on the gravity-bridge package of Theorem K.10.12; $G_{\mathrm{op}}=G$ is a separate empirical calibration; $\delta/L_{P,\mathrm{op}}\approx2.355$ holds on the Appendix Q packing branch | Appendices E, Q |
 | Cosmological constant | Appendix U reference evaluation $\Lambda L_P^2 = 8\pi A_{\text{eff}}e^{-283}\sim 10^{-122}$ under the stated counting and prefactor conventions | Appendix U |
 | Primordial observables | $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$, conditional on the Appendix U primordial identifications and assumptions | Appendix U |
@@ -3955,7 +4256,7 @@ The register reports status only; it does not promote any row to theorem level.
 
 2. **Strong CP problem:** Section K.6 gives a conditional implication. Physical closure still requires construction of the equivariant $\sigma$-CP parameter map, the QCD second-Chern-to-holonomy bridge, a derivation of the $\sigma$-invariant vacuum, certification that the positive first-harmonic cost is the operative QCD vacuum-selection functional with the realized vacuum as a global minimizer, and noncircular determinant- or Pfaffian-orientation data. Until those records are supplied, $\bar\theta\equiv0\pmod{2\pi}$ is branch-conditional rather than a solved strong-CP problem.
 
-3. **Modified cosmology:** homogeneous FLRW constitutive law closed at the background level (Section K.9); derivation of $(A_c,n)$ from the relaxation potential and perturbation-level observational tests remain.
+3. **Modified cosmology:** the response action selects the exponential profile; capacity tracking fixes $A_c=1$; the horizon-bath ODE determines the full clock, with dense-limit exponent $3/2$ and logarithmic dilute asymptotics. The separately registered power clock gives the exact one-crossing classification. Section K.9 also derives tensor propagation and endpoint matching from the registered tensor action. Microdynamic realization, the timing normalization, and observable response maps complete the physical comparison.
 
 
 4. **Renormalization-PCE correspondence:** Theorem K.10.7 gives a conditional formal correspondence when an explicit state-space map identifies the Wilsonian flow with a PCE gradient flow and the functionals agree under that map. Those data have not been derived from MPU dynamics, so FRG flow is not presently identified with PCE-selected compression.

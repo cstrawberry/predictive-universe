@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">Machine-checked compiler chain to pure S</title>
+  <desc id="desc">Five numbered equivalences connect an input-dependent deterministic Boolean tape machine, with its table, initial state and input word, to a three-counter job with a compiled primitive counter program, then a restricted deletion-two tag job with a compiled tag table and input word, then Rogozhin's fixed four-state six-symbol machine, the fixed 912-phase cyclic tag program, and the pure-S trajectory with a fixed root-restarted controller. Every arrow preserves the stated halting event.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0 0 L9 4 L0 8 Z" fill="#1f4e79"/></marker>
+  </defs>
+  <rect width="1200" height="660" fill="#ffffff"/>
+  <text x="600" y="36" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#102a43" text-anchor="middle">Input-dependent source and compiled jobs</text>
+  <g fill="#f7fafc" stroke="#1f4e79" stroke-width="3">
+    <rect x="30" y="65" width="320" height="170" rx="14"/>
+    <rect x="440" y="65" width="320" height="170" rx="14"/>
+    <rect x="850" y="65" width="320" height="170" rx="14"/>
+  </g>
+  <g fill="#edf6ff" stroke="#0b6bcb" stroke-width="3">
+    <rect x="850" y="370" width="320" height="220" rx="14"/>
+    <rect x="440" y="370" width="320" height="220" rx="14"/>
+    <rect x="30" y="370" width="320" height="220" rx="14"/>
+  </g>
+  <g font-family="DejaVu Sans, sans-serif" text-anchor="middle" fill="#102a43">
+    <text x="190" y="105" font-size="24" font-weight="700">Deterministic Boolean</text>
+    <text x="190" y="138" font-size="24" font-weight="700">tape machine</text>
+    <text x="190" y="177" font-size="22">table, initial state,</text>
+    <text x="190" y="207" font-size="22">input word</text>
+    <text x="600" y="112" font-size="24" font-weight="700">Three-counter job</text>
+    <text x="600" y="157" font-size="22">compiled primitive</text>
+    <text x="600" y="190" font-size="22">counter program</text>
+    <text x="1010" y="112" font-size="24" font-weight="700">Deletion-two tag job</text>
+    <text x="1010" y="157" font-size="22">compiled tag table</text>
+    <text x="1010" y="190" font-size="22">and input word</text>
+    <text x="1010" y="406" font-size="24" font-weight="700" fill="#0b6bcb">FIXED</text>
+    <text x="1010" y="449" font-size="26" font-weight="700">Rogozhin machine</text>
+    <text x="1010" y="482" font-size="26" font-weight="700">(4,6)</text>
+    <text x="1010" y="540" font-size="22">fixed transition table</text>
+    <text x="600" y="406" font-size="24" font-weight="700" fill="#0b6bcb">FIXED</text>
+    <text x="600" y="449" font-size="26" font-weight="700">Cyclic tag system</text>
+    <text x="600" y="482" font-size="26" font-weight="700">912 phases</text>
+    <text x="600" y="532" font-size="22">appendants and</text>
+    <text x="600" y="562" font-size="22">phase cycle</text>
+    <text x="190" y="406" font-size="22" font-weight="700" fill="#0b6bcb">FIXED CONTROLLER</text>
+    <text x="190" y="449" font-size="26" font-weight="700">Pure-S trajectory</text>
+    <text x="190" y="489" font-size="24">SXYZ → XZ(YZ)</text>
+    <text x="190" y="540" font-size="22">fresh root each step</text>
+    <text x="600" y="640" font-size="22" fill="#243b53">The five numbered equivalences are stated below the figure.</text>
+  </g>
+  <g fill="none" stroke="#1f4e79" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M350 153 H436"/>
+    <path d="M760 153 H846"/>
+    <path d="M1010 235 V366"/>
+    <path d="M850 495 H764"/>
+    <path d="M440 495 H354"/>
+  </g>
+  <g font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" fill="#1f4e79" text-anchor="middle">
+    <text x="395" y="133">(1)</text>
+    <text x="805" y="133">(2)</text>
+    <text x="1051" y="310">(3)</text>
+    <text x="805" y="475">(4)</text>
+    <text x="395" y="475">(5)</text>
+  </g>
+</svg>

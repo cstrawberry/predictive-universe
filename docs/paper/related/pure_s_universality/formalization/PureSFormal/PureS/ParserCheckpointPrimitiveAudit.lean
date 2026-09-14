@@ -1,0 +1,11 @@
+import PureSFormal.PureS.ParserCheckpointPrimitive
+
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.decodePrepared_value
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.decodePrepared_overhead_le
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.generator_operations_le
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.decodePrepared_operations_le
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.decode_value
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.decode_operations_le
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.carrier_operations_le
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.chain_operations_le
+#print axioms PureSFormal.PureS.ParserCheckpointPrimitive.positive_operations_le

@@ -1,0 +1,10 @@
+import PureSFormal.Computation.Simulation
+import PureSFormal.Computation.Enumerable
+import PureSFormal.Computation.TrajectoryEvent
+
+#print axioms PureSFormal.Computation.SourceModel.activeHorizon_zero
+#print axioms PureSFormal.Computation.ExactEffectiveSimulation.decode_compiled
+#print axioms PureSFormal.Computation.ExactEffectiveSimulation.rejectsOther
+#print axioms PureSFormal.Computation.ExactEffectiveSimulation.decoded_unique
+#print axioms PureSFormal.Computation.complete_of_complete_reduces
+#print axioms PureSFormal.Computation.eventually_complete_of_source

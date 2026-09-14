@@ -1,0 +1,13 @@
+import PureSFormal.PureS.ParserChainPrimitive
+
+#print axioms PureSFormal.PureS.ParserChainPrimitive.prepend_value
+#print axioms PureSFormal.PureS.ParserChainPrimitive.prepend_operations_le
+#print axioms PureSFormal.PureS.ParserChainPrimitive.prependOption_value
+#print axioms PureSFormal.PureS.ParserChainPrimitive.prependOption_operations_le
+#print axioms PureSFormal.PureS.ParserChainPrimitive.terminalOption_value
+#print axioms PureSFormal.PureS.ParserChainPrimitive.continuation_lt
+#print axioms PureSFormal.PureS.ParserChainPrimitive.traverse_value
+#print axioms PureSFormal.PureS.ParserChainPrimitive.terminal_overhead_le
+#print axioms PureSFormal.PureS.ParserChainPrimitive.traverse_operations_le
+#print axioms PureSFormal.PureS.ParserChainPrimitive.parse_value
+#print axioms PureSFormal.PureS.ParserChainPrimitive.parse_operations_le

@@ -1,0 +1,9 @@
+import PureSFormal.Computation.DeterministicTapeEffectiveReduction
+
+#print axioms PureSFormal.Computation.DeterministicTapeEffectiveReduction.computableManyOneReduction
+#print axioms PureSFormal.Computation.DeterministicTapeEffectiveReduction.computableManyOneReduction_map
+
+#print axioms PureSFormal.Computation.DeterministicTapeEffectiveReduction.encoder_primitiveRecursive
+#print axioms PureSFormal.Computation.DeterministicTapeEffectiveReduction.encoder_reducesVia
+#print axioms PureSFormal.Computation.DeterministicTapeEffectiveReduction.effectiveReduction
+#print axioms PureSFormal.Computation.DeterministicTapeEffectiveReduction.closedProgramReduction

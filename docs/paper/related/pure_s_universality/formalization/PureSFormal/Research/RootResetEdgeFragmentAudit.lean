@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetEdgeFragment
+
+#print axioms PureSFormal.Research.RootResetEdgeFragment.path_runs
+#print axioms PureSFormal.Research.RootResetEdgeFragment.probe_runs
+#print axioms PureSFormal.Research.RootResetEdgeFragment.selected_runs
+#print axioms PureSFormal.Research.RootResetEdgeFragment.missed_runs
+#print axioms PureSFormal.Research.RootResetEdgeFragment.ticks_bound
+#print axioms PureSFormal.Research.RootResetEdgeFragment.follow_exists
+#print axioms PureSFormal.Research.RootResetEdgeFragment.follow_size_lt
+#print axioms PureSFormal.Research.RootResetEdgeFragment.follow_erase
+#print axioms PureSFormal.Research.RootResetEdgeFragment.runMutationCount_zero

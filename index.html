@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read The Predictive Universe paper and explore its core concepts through 24 interactive visualizations.">
+  <meta name="color-scheme" content="dark light">
+  <title>The Predictive Universe — Paper & Visualizations</title>
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('pu-reader-theme') === 'light' ? 'light' : 'dark'; } catch (_) {}</script>
+  <link rel="stylesheet" href="paper/reader.css">
+  <link rel="stylesheet" href="paper/math.css">
+  <link rel="stylesheet" href="paper/search.css">
+  <script defer src="paper/math-symbols.js"></script>
+  <script defer src="paper/math.js"></script>
+  <script defer src="paper/markdown.js"></script>
+  <script defer src="paper/manifest.js"></script>
+  <script defer src="paper/search-engine.js"></script>
+  <script defer src="paper/search.js"></script>
+  <script defer src="paper/reader.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#paperContent">Skip to paper</a>
+  <header class="site-header">
+    <a class="wordmark" href="#paper/00_abstract" aria-label="The Predictive Universe, abstract"><span>UNIVERSE <span class="binary">00110000</span></span></a>
+    <span class="header-note">A framework in progress</span>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Use light theme" title="Use light theme">
+      <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+      </svg>
+      <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+      </svg>
+    </button>
+  </header>
+  <div class="title-block">
+    <h1>The Predictive Universe</h1>
+    <p class="deck">From finite prediction to the structure of physical reality.</p>
+  </div>
+  <div class="view-bar">
+    <div class="view-bar-inner">
+      <div role="tablist" aria-label="Explore the framework" class="tabs">
+        <button id="paperTab" role="tab" aria-selected="true" aria-controls="paperPanel" tabindex="0" type="button"><span aria-hidden="true">▤</span> Paper</button>
+        <button id="visualizationsTab" role="tab" aria-selected="false" aria-controls="visualizationsPanel" tabindex="-1" type="button"><span aria-hidden="true">✧</span> Visualizations</button>
+      </div>
+      <button id="contentsToggle" class="quiet-button" type="button" aria-expanded="false" aria-controls="contents">Contents <span aria-hidden="true">☰</span></button>
+    </div>
+    <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
+  </div>
+  <main>
+    <section id="paperPanel" role="tabpanel" aria-labelledby="paperTab" class="paper-layout">
+      <aside id="contents" class="contents-panel" aria-label="Paper contents">
+        <div class="contents-heading"><h2>Contents</h2></div>
+        <div class="section-search"><span aria-hidden="true">⌕</span><input id="sectionSearch" type="search" placeholder="Search" aria-label="Search"><button id="searchClear" class="search-clear" type="button" aria-label="Clear search" hidden>×</button></div>
+        <nav id="chapterNav" aria-label="Chapters and appendices"></nav>
+      </aside>
+      <div class="reading-column">
+        <div class="article-meta"><span id="chapterMarker">THE PAPER</span><a id="sourceLink" href="docs/paper/00_abstract.md" target="_blank" rel="noopener">Markdown source <span aria-hidden="true">↗</span></a></div>
+        <article id="paperContent" class="paper-prose" tabindex="-1" aria-busy="true"><p>Loading the paper…</p></article>
+        <nav id="chapterPagination" class="chapter-pagination" aria-label="Previous and next section"></nav>
+      </div>
+      <aside class="reading-rail" aria-label="Section tools">
+        <div id="relatedScenes" class="related-scenes"></div>
+        <details id="pageOutline" class="page-outline" open><summary>ON THIS PAGE</summary><nav id="headingNav" aria-label="Within this section"></nav></details>
+        <a href="#paper/00_abstract" class="back-start">↑ Back to abstract</a>
+      </aside>
+    </section>
+    <section id="visualizationsPanel" role="tabpanel" aria-labelledby="visualizationsTab" hidden>
+      <div class="visualization-intro"><a id="scenePaperLink" href="#paper/01_introduction">Read this in the paper ↗</a></div>
+      <iframe id="visualizationFrame" title="Interactive Predictive Universe concepts" data-src="visualization/index.html?embed=1" allow="fullscreen"></iframe>
+      <p class="visualization-note">Conceptual illustrations of the framework. Each scene’s explanation identifies its assumptions and scope.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-copyright" href="https://cinematicstrawberry.com/" target="_blank" rel="noopener">© 2026 Cinematic Strawberry</a>
+    <p class="footer-credit">Created through human and AI collaboration.</p>
+    <a class="footer-project" href="https://github.com/cstrawberry/predictive-universe" target="_blank" rel="noopener">Project on GitHub ↗</a>
+  </footer>
+  <p id="readerStatus" class="sr-only" role="status"></p>
+  <noscript><div class="noscript-note">Enable JavaScript to use the reader, or <a href="docs/paper/00_abstract.md">read the Markdown manuscript</a>.</div></noscript>
+</body>
+</html>

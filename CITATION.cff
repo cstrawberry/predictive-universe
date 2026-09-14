@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: >-
+  Please cite The Predictive Universe using the metadata below.
+  Created through human and AI collaboration.
+title: "The Predictive Universe"
+type: software
+version: 0.1.0
+date-released: 2026-09-14
+repository-code: "https://github.com/cstrawberry/predictive-universe"
+authors:
+  - name: "Cinematic Strawberry"
+contact:
+  - given-names: "Alexander"
+    family-names: "Filin"
+    email: "contact@cinematicstrawberry.com"
+abstract: >-
+  The Predictive Universe is a theoretical framework exploring how quantum
+  behavior, spacetime, and thermodynamics may arise from finite predictive
+  systems constrained by self-reference and resources. This research release
+  includes the manuscript and appendices, a browser reader with searchable
+  text and mathematical notation, 24 interactive conceptual visualizations,
+  and the Pure S companion paper with its verification package. The reader
+  and visualizations work offline in a modern browser without installation,
+  external dependencies, or external fonts.
+keywords:
+  - predictive systems
+  - self-reference
+  - theoretical physics
+  - quantum emergence
+  - spacetime emergence
+  - computational complexity
+  - interactive visualization
+license: MIT

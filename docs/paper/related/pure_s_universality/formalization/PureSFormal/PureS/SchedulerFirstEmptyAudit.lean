@@ -1,0 +1,23 @@
+import PureSFormal.PureS.SchedulerFirstEmpty
+
+/-! Exact logical-basis audit for mixed nonempty-to-EMPTY bounded jobs. -/
+
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.emptyFrameCost_eq_totalCost
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.emptySweepPhase_eq_iteratePhase
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.emptySweepMutations_eq_nonemptySweepCost
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.emptyCleanupMutations_eq_nonemptySweepCost
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.nonemptySweepCost_add
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.pendingParents_add
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.normalMarker_holdsWith
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.pendingNormalMarker_sampledAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.enteredEmptyRegisters_coherent
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.selectedFirstEmptyEntryAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.selectedNonemptyPrefixKeepingPendingAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.nonterminalEmptySweepToCheckAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.MarkedTerminalData
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.MarkedTerminalData.of_checkpointErase
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.emptyMarkedTerminalDataAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.selectedMarkedTerminalShapesAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.selectedMarkedTerminalRawSegmentAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.completeFirstEmptyJobAt
+#print axioms PureSFormal.PureS.SchedulerFirstEmpty.completeFirstEmptyTerminalJobRawAt

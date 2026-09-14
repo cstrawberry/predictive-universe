@@ -397,25 +397,25 @@ P\in\mathcal L_n^{(h_H)}
 P\in\mathcal L_n^{\mathrm{base}}.
 $$
 These identities give
-$
+$$
 \mathcal M_n^{(h_H)}(\mu)
 =\mathcal M_n^{\mathrm{base}}(\mu),
 \qquad
 C_{P,n}^{(h_H)}(\mu)
 =C_{P,n}^{\mathrm{base}}(\mu)
 \tag{2.4.1d.3c}
-$
+$$
 for every submitted target code $\mu$ and every $n$, and hence
-$
+$$
 C_{P,\mathrm{ext}}^{(h_H)}(\mu)
 =C_{P,\mathrm{ext}}^{\mathrm{base}}(\mu)
 \tag{2.4.1d.3d}
-$
+$$
 for every submitted target code. For a target with a common full-hierarchy realizer, Theorem 2.4.1b identifies both finite extended values with their domain-defined complexities and gives
-$
+$$
 C_P^{(h_H)}(\mu)=C_P^{\mathrm{base}}(\mu).
 \tag{2.4.1d.3e}
-$
+$$
 For an empty full hierarchy, (2.4.1d.3d) remains valid with value $\infty$, while neither side of (2.4.1d.3e) is defined. The record $\chi_{\mathrm{id}}$ verifies the proof dependencies and all snapshot, inventory, generator, and proof hashes.
 
 For a target code $\mu\in\mathsf{Code}_\mu$ submitted after hierarchy commitment, write $\mathcal L_n^{(h_H)}$, $\mathcal M_n^{(h_H)}(\mu)$, $C_{P,n}^{(h_H)}(\mu)$, and $C_{P,\mathrm{ext}}^{(h_H)}(\mu)$ for the hierarchy-relative objects. When an accepted common realizer establishes full-constraint realizability, also write $C_P^{(h_H)}(\mu)$ for the finite value in (2.4.1d.3b). Acceptance of the baseline-identity extension identifies the stagewise and extended objects with their unsuperscripted baseline counterparts for every submitted target and identifies $C_P^{(h_H)}$ with $C_P$ on their common full-realizability domain.

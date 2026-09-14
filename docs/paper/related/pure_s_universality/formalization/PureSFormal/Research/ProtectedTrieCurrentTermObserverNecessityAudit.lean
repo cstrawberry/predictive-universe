@@ -1,0 +1,9 @@
+import PureSFormal.Research.ProtectedTrieCurrentTermObserverNecessity
+
+/-!
+# Current-term observer necessity axiom inventory
+-/
+
+#print axioms PureSFormal.Research.ProtectedTrieCurrentTermObserverNecessity.emits_candidateTerm_iff_verify
+#print axioms PureSFormal.Research.ProtectedTrieCurrentTermObserverNecessity.verifiedCandidate_reducesVia_observer
+#print axioms PureSFormal.Research.ProtectedTrieCurrentTermObserverNecessity.verifiedCandidate_manyOneReduces_observer

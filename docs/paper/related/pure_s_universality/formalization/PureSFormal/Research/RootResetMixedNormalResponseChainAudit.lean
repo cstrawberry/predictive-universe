@@ -1,0 +1,23 @@
+import PureSFormal.Research.RootResetMixedNormalResponseChain
+
+open PureSFormal.Research.RootResetMixedNormalResponseChain
+
+#print axioms earlyPriorities_none
+#print axioms selectedAction_selects_firstPush_mixed_pending
+#print axioms selectedActionSelection?_validRow_mixed_pending_none
+#print axioms nonfinalRow_selectStep?_mixed_pending
+#print axioms AppenderEdge.selectStep?_mixed_pending
+#print axioms AppenderChain.selections_mixed_pending
+#print axioms DispatcherChain.selections_mixed_pending
+#print axioms selectStep?_mixed_pending_frameFirst
+#print axioms selectStep?_mixed_pending_frameSecond
+#print axioms mixed_pending_frame_edges
+#print axioms responseEntries_tail_selections_mixed_pending
+#print axioms normalResponse_body_mixed_selectorChain
+#print axioms normalResponse_body_cleanParents_selectorChain
+#print axioms selectedResponseTrace_body_selectorChain
+#print axioms exactMutationChain_samples_eq_of_length
+#print axioms selectorChain_of_same_exact_length
+#print axioms normalResponse_body_mixed_selectorChain_with_length
+#print axioms selectedResponseTrace_complete_selectorChain
+#print axioms selectedResponseTrace_boundary_erases

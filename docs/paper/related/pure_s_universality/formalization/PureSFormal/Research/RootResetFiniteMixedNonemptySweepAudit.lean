@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetFiniteMixedNonemptySweep
+
+#print axioms PureSFormal.Research.RootResetFiniteMixedNonemptySweep.BoundarySelections
+#print axioms PureSFormal.Research.RootResetFiniteMixedNonemptySweep.selected_complete
+#print axioms PureSFormal.Research.RootResetFiniteMixedNonemptySweep.deleted_base_eq_firstCarrier
+#print axioms PureSFormal.Research.RootResetFiniteMixedNonemptySweep.boundaries_of_base
+#print axioms PureSFormal.Research.RootResetFiniteMixedNonemptySweep.selectedSweepWitness
+#print axioms PureSFormal.Research.RootResetFiniteMixedNonemptySweep.completeJob_selectorChain

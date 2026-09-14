@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetFuelEndpointPipeline
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.fuel_restoring
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.all_input
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.terminal_stay
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.erase_run
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.generated_fuel
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.generated_clock_growth
+#print axioms PureSFormal.Research.RootResetFuelEndpointPipeline.generated_clock_launch

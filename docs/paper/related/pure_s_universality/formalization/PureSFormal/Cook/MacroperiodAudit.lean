@@ -1,0 +1,31 @@
+import PureSFormal.Cook.Macroperiod
+
+#print axioms PureSFormal.Cook.Macroperiod.emitted
+#print axioms PureSFormal.Cook.Macroperiod.iterate_succ_front
+#print axioms PureSFormal.Cook.Macroperiod.iteratePhase_succ_front
+#print axioms PureSFormal.Cook.Macroperiod.scanPrefix
+#print axioms PureSFormal.Cook.Macroperiod.emitted_replicate_false
+#print axioms PureSFormal.Cook.Macroperiod.emitted_false_prefix
+#print axioms PureSFormal.Cook.Macroperiod.productionPhase
+#print axioms PureSFormal.Cook.Macroperiod.iteratePhase_symbolIndex
+#print axioms PureSFormal.Cook.Macroperiod.appendantAt_productionPhase
+#print axioms PureSFormal.Cook.Macroperiod.emitted_oneHot
+#print axioms PureSFormal.Cook.Macroperiod.paddingStart
+#print axioms PureSFormal.Cook.Macroperiod.paddingStart_val
+#print axioms PureSFormal.Cook.Macroperiod.appendantAt_eq_nil_of_padding
+#print axioms PureSFormal.Cook.Macroperiod.padding_phase_val
+#print axioms PureSFormal.Cook.Macroperiod.emitted_padding
+#print axioms PureSFormal.Cook.Macroperiod.padding_returns_zero
+#print axioms PureSFormal.Cook.Macroperiod.run_production_block
+#print axioms PureSFormal.Cook.Macroperiod.run_padding_block
+#print axioms PureSFormal.Cook.Macroperiod.encodeWord_append
+#print axioms PureSFormal.Cook.Macroperiod.tagStep?
+#print axioms PureSFormal.Cook.Macroperiod.tagStep
+#print axioms PureSFormal.Cook.Macroperiod.tagStep?_eight
+#print axioms PureSFormal.Cook.Macroperiod.tagStep?_eq_none_iff
+#print axioms PureSFormal.Cook.Macroperiod.tagStep_eq_self_of_short
+#print axioms PureSFormal.Cook.Macroperiod.macroperiod_eight
+#print axioms PureSFormal.Cook.Macroperiod.macroperiod_of_some
+#print axioms PureSFormal.Cook.Macroperiod.macroperiod_of_length
+#print axioms PureSFormal.Cook.Macroperiod.macroperiod_phase_zero
+#print axioms PureSFormal.Cook.Macroperiod.macroperiod_empty

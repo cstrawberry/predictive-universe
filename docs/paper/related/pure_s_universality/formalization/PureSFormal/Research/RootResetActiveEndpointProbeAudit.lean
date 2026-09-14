@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetActiveEndpointProbe
+
+#print axioms PureSFormal.Research.RootResetActiveEndpointProbe.all_input_atRoot
+#print axioms PureSFormal.Research.RootResetActiveEndpointProbe.readOnly
+#print axioms PureSFormal.Research.RootResetActiveEndpointProbe.probeSpec
+#print axioms PureSFormal.Research.RootResetActiveEndpointProbe.fallbackContract

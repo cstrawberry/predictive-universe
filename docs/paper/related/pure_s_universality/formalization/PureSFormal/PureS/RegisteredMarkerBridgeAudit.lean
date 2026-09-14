@@ -1,0 +1,22 @@
+import PureSFormal.PureS.RegisteredMarkerBridge
+
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.freshHaltPayload_some_iff
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.freshHaltPayload_isSome_iff
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.normalEvent_performs
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.emptyEvent_performs
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.normalEvent_mutationCount
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.emptyEvent_mutationCount
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.performs_iff_configuration
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.performs_mutationCount
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.performs_projects_one_step
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.normalStart_event_after_three
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.emptyStart_event_after_three
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.emptyOutputReturn_event_after_four
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.eventually_of_reaches
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.emptyFrame_event
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.normalReturn_entersMarker_iff_CTS_empty
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.selectedResponse_empty_event
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.exactChain_reachable
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.initialBase_reachable
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.initiallyEmpty_performs
+#print axioms PureSFormal.PureS.RegisteredMarkerBridge.firstSuccessorEmpty_performs

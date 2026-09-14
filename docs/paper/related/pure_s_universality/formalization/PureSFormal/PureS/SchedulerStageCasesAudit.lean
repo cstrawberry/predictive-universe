@@ -1,0 +1,6 @@
+import PureSFormal.PureS.SchedulerStageCases
+
+#print axioms PureSFormal.PureS.SchedulerStageCases.allNonempty_or_firstEmpty
+#print axioms PureSFormal.PureS.SchedulerStageCases.FirstEmpty.index_ne_zero
+#print axioms PureSFormal.PureS.SchedulerStageCases.FirstEmpty.split_nonemptySeed
+#print axioms PureSFormal.PureS.SchedulerStageCases.FirstEmpty.split_positiveStage

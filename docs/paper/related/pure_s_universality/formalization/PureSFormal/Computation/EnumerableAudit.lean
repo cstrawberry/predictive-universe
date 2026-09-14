@@ -1,0 +1,28 @@
+import PureSFormal.Computation.RogozhinBridge
+import PureSFormal.Computation.TrajectoryEvent
+
+#print axioms PureSFormal.Computation.NatMachine.universal_accepts_iff
+#print axioms PureSFormal.Computation.NatMachine.Token.ofDigit?_digit
+#print axioms PureSFormal.Computation.NatMachine.decodeTokens_encode
+#print axioms PureSFormal.Computation.NatMachine.parseOperand_tokens
+#print axioms PureSFormal.Computation.NatMachine.parseInstruction_serialize
+#print axioms PureSFormal.Computation.NatMachine.parseProgram_serialize
+#print axioms PureSFormal.Computation.NatMachine.decodeProgram_encode
+#print axioms PureSFormal.Computation.NatMachine.instructionAt_encode
+#print axioms PureSFormal.Computation.NatMachine.not_accepts_of_decode_none
+#print axioms PureSFormal.Computation.ExtensionalReduces.trans
+#print axioms PureSFormal.Computation.ReducesVia.extensional
+#print axioms PureSFormal.Computation.ManyOneReduces.trans
+#print axioms PureSFormal.Computation.semidecidable_of_reduces
+#print axioms PureSFormal.Computation.complete_of_complete_reduces
+#print axioms PureSFormal.Computation.universalAcceptance_semidecidable
+#print axioms PureSFormal.Computation.universalAcceptance_hard
+#print axioms PureSFormal.Computation.universalAcceptance_complete
+#print axioms PureSFormal.Computation.eventually_complete_of_source
+#print axioms PureSFormal.Computation.natMachineSource_iterate
+#print axioms PureSFormal.Computation.acceptsWithin_eq_true_iff
+#print axioms PureSFormal.Computation.universalAccepts_iff_sourceEventuallyHalts
+#print axioms PureSFormal.Computation.universalAcceptance_iff_rogozhinHalting_of_simulation
+#print axioms PureSFormal.Computation.universalAcceptance_reduces_to_rogozhin_of_simulation
+#print axioms PureSFormal.Computation.rogozhinEventuallyHalts_semidecidable
+#print axioms PureSFormal.Computation.rogozhinEventuallyHalts_complete_of_simulation

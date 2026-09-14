@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetFinitePriorityExecution
+
+#print axioms PureSFormal.Research.RootResetFinitePriorityExecution.fresh_selected
+#print axioms PureSFormal.Research.RootResetFinitePriorityExecution.later_selected
+#print axioms PureSFormal.Research.RootResetFinitePriorityExecution.marked_selected
+#print axioms PureSFormal.Research.RootResetFinitePriorityExecution.endpoint_selected

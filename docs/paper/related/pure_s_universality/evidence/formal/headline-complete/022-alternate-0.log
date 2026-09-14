@@ -1,0 +1,81 @@
+replaying Demo
+passed Demo declarations=286
+replaying PureSFormal
+passed PureSFormal declarations=0
+replaying PureSFormal.AppendixF.AAABoundary
+passed PureSFormal.AppendixF.AAABoundary declarations=98
+replaying PureSFormal.AppendixF.Audit
+passed PureSFormal.AppendixF.Audit declarations=0
+replaying PureSFormal.AppendixF.AutomatonComputability
+passed PureSFormal.AppendixF.AutomatonComputability declarations=29
+replaying PureSFormal.AppendixF.AutonomousObstruction
+passed PureSFormal.AppendixF.AutonomousObstruction declarations=11
+replaying PureSFormal.AppendixF.CallRecognition
+passed PureSFormal.AppendixF.CallRecognition declarations=73
+replaying PureSFormal.AppendixF.Carrier
+passed PureSFormal.AppendixF.Carrier declarations=203
+replaying PureSFormal.AppendixF.CarrierAvoidance
+passed PureSFormal.AppendixF.CarrierAvoidance declarations=38
+replaying PureSFormal.AppendixF.CarrierFeatures
+passed PureSFormal.AppendixF.CarrierFeatures declarations=40
+replaying PureSFormal.AppendixF.CarrierPath
+passed PureSFormal.AppendixF.CarrierPath declarations=38
+replaying PureSFormal.AppendixF.CarrierRecognition
+passed PureSFormal.AppendixF.CarrierRecognition declarations=26
+replaying PureSFormal.AppendixF.CarrierSummaryBound
+passed PureSFormal.AppendixF.CarrierSummaryBound declarations=9
+replaying PureSFormal.AppendixF.CarrierTreeReader
+passed PureSFormal.AppendixF.CarrierTreeReader declarations=68
+replaying PureSFormal.AppendixF.CertificateSearch
+passed PureSFormal.AppendixF.CertificateSearch declarations=29
+replaying PureSFormal.AppendixF.ClassicalSeeds
+passed PureSFormal.AppendixF.ClassicalSeeds declarations=21
+replaying PureSFormal.AppendixF.ClockBoundary
+passed PureSFormal.AppendixF.ClockBoundary declarations=31
+replaying PureSFormal.AppendixF.CodeGraph
+passed PureSFormal.AppendixF.CodeGraph declarations=29
+replaying PureSFormal.AppendixF.ComputabilityCertificates
+passed PureSFormal.AppendixF.ComputabilityCertificates declarations=16
+replaying PureSFormal.AppendixF.DecidablePathObstruction
+passed PureSFormal.AppendixF.DecidablePathObstruction declarations=5
+replaying PureSFormal.AppendixF.FiniteOrbit
+passed PureSFormal.AppendixF.FiniteOrbit declarations=15
+replaying PureSFormal.AppendixF.FinitePathPrograms
+passed PureSFormal.AppendixF.FinitePathPrograms declarations=66
+replaying PureSFormal.AppendixF.FiniteTables
+passed PureSFormal.AppendixF.FiniteTables declarations=42
+replaying PureSFormal.AppendixF.GraphCertificates
+passed PureSFormal.AppendixF.GraphCertificates declarations=34
+replaying PureSFormal.AppendixF.HeadInvariant
+passed PureSFormal.AppendixF.HeadInvariant declarations=60
+replaying PureSFormal.AppendixF.HoldAllData
+passed PureSFormal.AppendixF.HoldAllData declarations=7
+replaying PureSFormal.AppendixF.HoldCarrierExclusion
+passed PureSFormal.AppendixF.HoldCarrierExclusion declarations=39
+replaying PureSFormal.AppendixF.HoldInvariant
+passed PureSFormal.AppendixF.HoldInvariant declarations=10
+replaying PureSFormal.AppendixF.HoldLeaf
+passed PureSFormal.AppendixF.HoldLeaf declarations=25
+replaying PureSFormal.AppendixF.IncomparableBasins
+passed PureSFormal.AppendixF.IncomparableBasins declarations=17
+replaying PureSFormal.AppendixF.IndexedCertificates
+passed PureSFormal.AppendixF.IndexedCertificates declarations=36
+replaying PureSFormal.AppendixF.MaximalPaths
+passed PureSFormal.AppendixF.MaximalPaths declarations=25
+replaying PureSFormal.AppendixF.NativeSuccessors
+passed PureSFormal.AppendixF.NativeSuccessors declarations=54
+replaying PureSFormal.AppendixF.NumericPrograms
+passed PureSFormal.AppendixF.NumericPrograms declarations=44
+replaying PureSFormal.AppendixF.PathConcatenation
+passed PureSFormal.AppendixF.PathConcatenation declarations=28
+replaying PureSFormal.AppendixF.PathFamilies
+passed PureSFormal.AppendixF.PathFamilies declarations=50
+replaying PureSFormal.AppendixF.PathSearchPrograms
+passed PureSFormal.AppendixF.PathSearchPrograms declarations=23
+replaying PureSFormal.AppendixF.PositiveBlocks
+passed PureSFormal.AppendixF.PositiveBlocks declarations=41
+replaying PureSFormal.AppendixF.PrefixPath
+passed PureSFormal.AppendixF.PrefixPath declarations=6
+replaying PureSFormal.AppendixF.PrimitiveMembership
+passed PureSFormal.AppendixF.PrimitiveMembership declarations=28
+checked 1700 declarations

@@ -1,0 +1,10 @@
+import PureSFormal.Computation.CookPassPrimitive
+
+#print axioms PureSFormal.Computation.CookPassPrimitive.word_length_le
+#print axioms PureSFormal.Computation.CookPassPrimitive.atHorizon_value
+#print axioms PureSFormal.Computation.CookPassPrimitive.parse_value
+#print axioms PureSFormal.Computation.CookPassPrimitive.atHorizon_operations_le
+#print axioms PureSFormal.Computation.CookPassPrimitive.parse_overhead_bound
+#print axioms PureSFormal.Computation.CookPassPrimitive.parse_operations_le
+#print axioms PureSFormal.Computation.CookPassPrimitive.atHorizon_fields
+#print axioms PureSFormal.Computation.CookPassPrimitive.parse_fields

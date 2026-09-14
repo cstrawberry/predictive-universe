@@ -76,6 +76,25 @@ This is (J.3). If $H_q(P\mid R)=\ln2$, then $\varepsilon_{\mathrm{reset}}\ge\ln2
 
 **Remark J.1.1 (Distribution-Dependent Reset Cost).** The binary alphabet fixes only $\ln2$ as a log-cardinality. The registered heat uses the actual conditional entropy $H_q(P\mid R)$, and equality at $\ln2$ requires both a conditionally uniform binary law and zero excess dissipation.
 
+**Proposition (Conditional Entropy Floor of Reflexive Cycles).** Let $X$ be finite, $\tau:X\to X$ have no fixed points and all its cycles have length at least $L\ge2$. Let $q$ be $\tau$-invariant and let a retained record satisfy $R\circ\tau=R$. Conditional on any positive-probability record value, $q$ is a mixture of uniform distributions on cycles of length at least $L$. Therefore
+
+$$
+H_{\mathrm{Sh}}(X\mid R=r)\ge\ln L,
+\qquad H_{\min}(X\mid R=r)\ge\ln L.
+$$
+
+Equality in either holds precisely for a uniform distribution on one cycle of length $L$. Invariance puts zero mass on transient vertices of the finite functional graph. On each cycle it makes all masses equal. If the cycle weights are $w_j$, Shannon entropy equals $H(w)+\sum_jw_j\ln|C_j|$, and the largest point mass is $\max_jw_j/|C_j|\le1/L$. These formulas prove the claims and their equality conditions.
+
+The minimum over admissible fixed-point-free systems is $\ln2$, attained by distributions supported uniformly on a two-cycle, including two-cycles embedded in larger systems.
+
+**Corollary (Invariant-Record Reset Floor).** Let the reset register $P$ be swapped by the reflexive involution and let its joint law with every record retained through the reset be invariant. When those records $R$ are unchanged by the involution, $P$ is conditionally uniform: $H(P\mid R)=\ln2$ and $I(P:R)=0$. Under Theorem J.1's cyclic degenerate-register reset hypotheses, with all such retained side information included in $R$,
+$$
+\langle Q_{\mathrm{bath}}\rangle\ge k_BT\ln2.
+$$
+*Proof.* Invariance pairs the two values of $P$ with equal conditional probability in each positive-weight fiber of $R$. Conditional Landauer then applies to their actual joint law. ∎
+
+This gives the reset floor for the invariant-record class. A device test measures conditional bias and correlation on that class. A complete cycle ledger also charges preparation, work and other reversible or irreversible steps.
+
 **Lemma J.1a (Ancilla Extension and Conditional Boundary Displacement).** Let the accessible map in Definition J.1 have a fiber containing two distinct inputs, and let an injective implementation append an auxiliary register $G$ initialized in a fixed state. The two final $G$ states over that fiber must be distinguishable. This is a cardinality statement, not an ensemble-entropy statement.
 
 If $G$ is retained, no reset-heat conclusion follows. If $G$ is reset while classical side information $R$ remains available and unchanged, its registered law obeys

@@ -1,0 +1,23 @@
+import PureSFormal.Computation.CookBoundaryPrimitive
+
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.digit_sound
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.head_sound
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.radixCode_right
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.radixCode_left
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.length_le_radixCode
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.step_reconstruct
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.decode_reconstruct
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.right_reconstruct
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.left_reconstruct
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.run_reconstruct
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonicalRaw_reconstruct
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonical_eq_raw
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.head_value
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.head_operations_le
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonicalSides_value
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonicalBody_value
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonical_value
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonicalSides_operations_le
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonicalBody_operations_le
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonical_operations_le
+#print axioms PureSFormal.Computation.CookBoundaryPrimitive.canonical_fields

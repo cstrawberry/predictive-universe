@@ -1081,8 +1081,6 @@ The derivation of Einstein's equations (Theorem 12.1) applies the Clausius relat
 | Scale | Equilibration Process | Physical Result | Reference |
 |:------|:----------------------|:----------------|:----------|
 | Microscopic (MPU) | Modular KMS representation; physical equilibrium only with an independent selector | Born weights have trace form on Theorem G.1.7's certified domain; time-stationarity requires an independent invariant-state/dynamics certificate | Theorem G.1.7; Theorems G.1.9.3c and G.1.9.5 |
-
-
 | Macroscopic (Rindler) | Clausius relation on local horizons | Einstein field equations | Theorem 12.1 |
 | Cosmological (de Sitter) | Reference semiclassical false-vacuum model; carrier/action, Fredholm-weight, and Einstein-realization gates open | Euclidean weight candidate; no certified physical cosmological constant | Appendix U |
 

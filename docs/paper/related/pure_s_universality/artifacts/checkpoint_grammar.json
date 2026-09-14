@@ -1,0 +1,165 @@
+{
+  "schema": "PURE_S_PAPER_CHECKPOINT_GRAMMAR_V1",
+  "normalization": "Remove Unicode and ASCII whitespace only; retain every LaTeX token, delimiter, and operand order.",
+  "constructors": [
+    {
+      "name": "b",
+      "latex": "b=\\mathbf S\\mathbf S",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "def b : Term := .app .s .s"
+    },
+    {
+      "name": "C_zero",
+      "latex": "C_0=\\mathbf Sbb",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "| 0 => .app (.app .s b) b"
+    },
+    {
+      "name": "C_successor",
+      "latex": "C_{n+1}=bC_n",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "| n + 1 => .app b (C n)"
+    },
+    {
+      "name": "v_zero",
+      "latex": "v_0=\\mathbf S C_0",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "def v0 : Term := .app .s (C 0)"
+    },
+    {
+      "name": "v_one",
+      "latex": "v_1=\\mathbf S(\\mathbf S C_0)",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "def v1 : Term := .app .s (.app .s (C 0))"
+    },
+    {
+      "name": "omega",
+      "latex": "\\Omega=\\mathbf S",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "def omega : Term := .s"
+    },
+    {
+      "name": "live_cell",
+      "latex": "L_i(X)=((\\mathbf S\\mathbf S)v_i)X",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "def live (bit : Bool) : Term := .app b (valueTag bit)"
+    },
+    {
+      "name": "live_cell_contractum",
+      "latex": "L_i(X)\\longrightarrow_{\\mathbf S}\\mathbf S X(v_iX)",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "theorem C4_live_delete"
+    },
+    {
+      "name": "halt_tag",
+      "latex": "\\operatorname{haltTag}=b\\mathbf S",
+      "source": "formalization/PureSFormal/PureS/Frame.lean",
+      "source_witness": "def haltTag : Term := .app b .s"
+    },
+    {
+      "name": "halt_code",
+      "latex": "H^\\star=b\\,\\operatorname{haltTag}",
+      "source": "formalization/PureSFormal/PureS/Frame.lean",
+      "source_witness": "def haltCode : Term := .app b haltTag"
+    },
+    {
+      "name": "action_code",
+      "latex": "\\operatorname{Act}_P=\\mathbf S H^\\star A_P",
+      "source": "formalization/PureSFormal/PureS/Frame.lean",
+      "source_witness": "def actCode (actions : Term) : Term :="
+    },
+    {
+      "name": "seed_code",
+      "latex": "\\operatorname{Seed}_w=\\mathbf S\\operatorname{Word}(w)",
+      "source": "formalization/PureSFormal/PureS/Frame.lean",
+      "source_witness": "def seedCode (bits : List Bool) : Term :="
+    },
+    {
+      "name": "dispatcher_code",
+      "latex": "D^\\star_{P,w}=\\mathbf S\\operatorname{Act}_P\\operatorname{Seed}_w",
+      "source": "formalization/PureSFormal/PureS/Frame.lean",
+      "source_witness": "def dispatcherCode (actions : Term) (bits : List Bool) : Term :="
+    },
+    {
+      "name": "environment_code",
+      "latex": "E^\\star_{P,w}=\\mathbf S D^\\star_{P,w}",
+      "source": "formalization/PureSFormal/PureS/Frame.lean",
+      "source_witness": "def environmentCode (actions : Term) (bits : List Bool) : Term :="
+    },
+    {
+      "name": "generator",
+      "latex": "G_P(w)=(C_0C_0)E^\\star_{P,w}",
+      "source": "formalization/PureSFormal/PureS/Clock.lean",
+      "source_witness": "def generator (actions : Term) (bits : List Bool) : Term :="
+    },
+    {
+      "name": "clock_base",
+      "latex": "U_{n,0}=C_{n+1}C_{n+1}",
+      "source": "formalization/PureSFormal/PureS/Clock.lean",
+      "source_witness": "def clockBase (n : Nat) : Term :="
+    },
+    {
+      "name": "clock_wrapper",
+      "latex": "U_{n,r+1}=\\mathbf S C_nU_{n,r}",
+      "source": "formalization/PureSFormal/PureS/Clock.lean",
+      "source_witness": "def clockWrappers (n : Nat) : Nat → Term"
+    },
+    {
+      "name": "clock_exit",
+      "latex": "\\operatorname{Exit}_{n,r}=U_{n,r}E^\\star_{P,w}",
+      "source": "formalization/PureSFormal/PureS/Dovetail.lean",
+      "source_witness": "def clockExit (n r : Nat) (environment : Term) : Term :="
+    },
+    {
+      "name": "completed_shell",
+      "latex": "\\operatorname{Shell}(H,D,W,A_s,K,A_k)=(((HD)((\\mathbf S W)A_s))(KA_k))",
+      "source": "formalization/PureSFormal/PureS/Carrier.lean",
+      "source_witness": "def shell (bits : List Bool) (haltField dispatcher seedAudit continuation"
+    },
+    {
+      "name": "push",
+      "latex": "\\operatorname{Push}_J(N)=\\mathbf S(\\mathbf S N)J",
+      "source": "formalization/PureSFormal/PureS/Appender.lean",
+      "source_witness": "def push (j next : Term) : Term :="
+    },
+    {
+      "name": "base_alpha",
+      "latex": "\\alpha=(E(bE))B",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "def baseAlpha (e continuation : Term) : Term :="
+    },
+    {
+      "name": "base_beta",
+      "latex": "\\beta=(EB)\\alpha",
+      "source": "formalization/PureSFormal/PureS/ClosedTerms.lean",
+      "source_witness": "def baseBeta (e continuation : Term) : Term :="
+    }
+  ],
+  "required_grammar_tags": ["G1", "G2", "G3", "G4", "G5", "G6", "G7"],
+  "required_source_labels": [
+    "`C`",
+    "`clockWrappers`",
+    "Dovetail.clockExit",
+    "Dovetail.stageSource",
+    "Dovetail.jobSource",
+    "MutableBase.base",
+    "CheckpointDecoder.openBase",
+    "RouteGrammar.ActivatedRoute",
+    "`push`",
+    "`appender`",
+    "`C5_push`",
+    "LocalResponse.completed",
+    "LocalResponse.markedCompleted",
+    "CheckpointDecoder.ChainShape",
+    "PositiveShape",
+    "`generator`"
+  ],
+  "fixed_endpoint": {
+    "artifact": "artifacts/rogozhin46_cook_cts.json",
+    "period": 912,
+    "deletion_number": 8,
+    "tag_alphabet_size": 114,
+    "production_appendants": 114,
+    "empty_appendants": 798
+  }
+}

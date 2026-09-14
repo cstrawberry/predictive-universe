@@ -1,0 +1,21 @@
+import PureSFormal.PureS.ParserRouteShellPrimitive
+
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.chosen
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.chosen_value
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.chosen_operations_le
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.selectedNode
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.selectedNode_value
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.selectedNode_operations_le
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.arityPattern
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.arityPattern_size
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.arityPattern_value
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.arity
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.arity_value
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.arity_operations_le
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.dormant
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.dormant_value
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.dormant_operations_le
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.classify
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.classify_value
+#print axioms PureSFormal.PureS.ParserRouteShellPrimitive.classify_operations_le
+

@@ -1,0 +1,6 @@
+import PureSFormal.Research.FiniteTreeAutomatonEnumeration
+#print axioms PureSFormal.Research.FiniteTreeAutomatonEnumeration.member_index
+#print axioms PureSFormal.Research.FiniteTreeAutomatonEnumeration.indexed_run_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonEnumeration.indexed_accepts_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonEnumeration.deterministic_accepts_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonEnumeration.complement_accepts_iff

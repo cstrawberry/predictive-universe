@@ -1,0 +1,18 @@
+import PureSFormal.PureS.SchedulerResponseInvariant
+
+/-! Exact logical-basis audit for every normal-response contraction sample. -/
+
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.exists_of_mem_map_clean
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.routeEntries_spec
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.actionEntries_spec
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.responseScript_holds
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.responseScript_intermediate_holds
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.responseScript_terminal_holds
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.returnTerminal_holds
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.responseScript_terminal_sampledState
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.returnTerminal_sampledState
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.CursorMutationTrace.of_run
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain.prepend
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.scriptTrace_exactMutationChain
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.normalResponse_exactMutationChain

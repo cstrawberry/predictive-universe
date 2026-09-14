@@ -1,0 +1,17 @@
+import PureSFormal.Research.RootResetResponseCarrierChronology
+
+open PureSFormal.Research.RootResetResponseCarrierChronology
+
+#print axioms seedFront_endpoint
+#print axioms firstCarrier_phase
+#print axioms firstCarrier_localCount
+#print axioms firstCarrier_tombstoneCount
+#print axioms firstCarrier_responseBit
+#print axioms firstCarrier_decode
+#print axioms tombstone_chronology
+#print axioms actionAccumulator_chronology
+#print axioms completedResponse_chronology
+#print axioms firstResponseTrace_carrier
+#print axioms firstResponseTrace_chronology
+#print axioms firstResponseTrace_singletonAppenderDeletion
+#print axioms firstResponseTrace_returnChronology

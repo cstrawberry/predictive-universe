@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetActiveEndpointExecution
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.frontend_selected
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.endpoint_selected
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.bounded_selected
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.after_base_miss
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.generated_zero
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.generated_call
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.generated_positiveHalf
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.generated_clock_growth
+#print axioms PureSFormal.Research.RootResetActiveEndpointExecution.generated_clock_launch

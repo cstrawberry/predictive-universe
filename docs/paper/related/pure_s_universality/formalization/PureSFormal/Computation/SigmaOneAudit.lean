@@ -1,0 +1,16 @@
+import PureSFormal.Computation.SigmaOne
+
+#print axioms PureSFormal.Computation.BoundedSigmaOne.from_to_program
+#print axioms PureSFormal.Computation.BoundedSigmaOne.to_from_program
+#print axioms PureSFormal.Computation.BoundedSigmaOne.initial_represents
+#print axioms PureSFormal.Computation.BoundedSigmaOne.instructionAt_toCounter
+#print axioms PureSFormal.Computation.BoundedSigmaOne.step_toCounter
+#print axioms PureSFormal.Computation.BoundedSigmaOne.run_toCounter
+#print axioms PureSFormal.Computation.BoundedSigmaOne.eval_toCounter
+#print axioms PureSFormal.Computation.BoundedSigmaOne.formula_accepts_iff
+#print axioms PureSFormal.Computation.BoundedSigmaOne.counter_accepts_iff_formula
+#print axioms PureSFormal.Computation.BoundedSigmaOne.predicate_to_encodedRecognizable
+#print axioms PureSFormal.Computation.BoundedSigmaOne.encodedRecognizable_to_predicate
+#print axioms PureSFormal.Computation.BoundedSigmaOne.predicate_iff_encodedCounterRecognizable
+#print axioms PureSFormal.Computation.BoundedSigmaOne.formulaUniversalInput_accepts_iff
+#print axioms PureSFormal.Computation.BoundedSigmaOne.natMachineUniversal_complete

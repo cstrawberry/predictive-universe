@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetCumulativeResources
+
+#print axioms PureSFormal.Research.RootResetCumulativeResources.cumulative_le_uniform
+#print axioms PureSFormal.Research.RootResetCumulativeResources.path_cumulative_bound
+#print axioms PureSFormal.Research.RootResetCumulativeResources.source_cumulative_bound

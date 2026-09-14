@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetInitialEmptyCommitAgreement
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.local_commit
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.generated_local
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.generated_pending
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.initial_empty
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.cleanParents_incoming
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.cleanParents_boundary
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.fresh_pass
+#print axioms PureSFormal.Research.RootResetInitialEmptyCommitAgreement.selectStep?_completed_empty

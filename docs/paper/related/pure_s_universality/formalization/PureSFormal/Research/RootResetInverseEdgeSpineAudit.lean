@@ -1,0 +1,11 @@
+import PureSFormal.Research.RootResetInverseEdgeSpine
+
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.family_runs
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.familyTicks_bound
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.familyResult_sound
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.selected_runs
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.missed_runs
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.scan_within
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.Walks.erase
+#print axioms PureSFormal.Research.RootResetInverseEdgeSpine.Walks.endpoint_misses

@@ -1,0 +1,11 @@
+import PureSFormal.Computation.CookSeedPassSourceReflection
+
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.decodeTape?_actual_reflects
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.decodeTape?_padded_actual_reflects
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.exists_literalRow_iff
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.decodeTerminalTape?_actual_reflects
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.exists_terminalRow_iff
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.halts_iff_exists_terminalRow
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.exists_scannedOutput_iff
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.bitToggle_terminal_unique
+#print axioms PureSFormal.Computation.CookSeedPassSourceReflection.bitToggle_output_iff

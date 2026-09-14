@@ -1,0 +1,26 @@
+{
+  "actual_records": 37,
+  "artifacts": {
+    "coverage.json": "05b47c6aa9a1eed3cdc113b3c08a3bbdd024f1c6b0589b284ce66abd4cbd77c9",
+    "inputs-after.json": "a7ea19473becaf834e9746c92a0bb96fee98c5e7c6881f1dd8fd6301e319c312",
+    "inputs-before.json": "a7ea19473becaf834e9746c92a0bb96fee98c5e7c6881f1dd8fd6301e319c312",
+    "source-rows.log": "5dc4b334a99d9c4dbab7f40c74ed6a4fd638234fb512fa724220850229808c6e"
+  },
+  "cases": 9,
+  "command": [
+    "/verification/toolchain/bin/lake",
+    "env",
+    "lean",
+    "--run",
+    "/verification/run/package/tests/lean/DeterministicTapeSourceExamples.lean"
+  ],
+  "completed_utc": "2026-09-14T09:59:26.230677+00:00",
+  "elapsed_seconds": 0.543,
+  "expected_records": 37,
+  "failures": [],
+  "fresh_transitive_import_rebuild": false,
+  "inputs_stable": true,
+  "scope": "Named deterministic Boolean-source runs and independent signed-head/sparse-tape comparison; no compiled CTS or pure-S execution",
+  "status": "PASS_SOURCE_EXAMPLES",
+  "public_copy": "Local locations removed; see evidence/PUBLIC-COPY.md."
+}

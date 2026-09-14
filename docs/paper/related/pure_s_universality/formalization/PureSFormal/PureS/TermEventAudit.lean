@@ -1,0 +1,17 @@
+import PureSFormal.PureS.TermEvent
+
+#print axioms PureSFormal.PureS.TermEvent.freshHaltPayload?_freshHField
+#print axioms PureSFormal.PureS.TermEvent.performsRegisteredMarkH?_initialTerm
+#print axioms PureSFormal.PureS.TermEvent.emitsMarkH?_positivePrefix
+#print axioms PureSFormal.PureS.TermEvent.emitsMarkH?_eq_true_iff
+#print axioms PureSFormal.PureS.PublicDecoder.exists_internal_of_decode
+#print axioms PureSFormal.PureS.TermEvent.publicDecode_of_emitsMarkH
+#print axioms PureSFormal.PureS.TermEvent.emitsMarkH_of_publicDecode_empty
+#print axioms PureSFormal.PureS.PublicDecoder.decodedConfig_iterate_data
+#print axioms PureSFormal.CTS.absorbingStep_data_eq_empty_of_empty
+#print axioms PureSFormal.PureS.TermEvent.eventuallyEmitsRaw_iff_sampled
+#print axioms PureSFormal.PureS.TermEvent.eventuallyEmits_iff_eventuallyEmpty
+#print axioms PureSFormal.PureS.TermEvent.eventuallyEmitsRaw_iff_eventuallyEmpty
+#print axioms PureSFormal.PureS.TermEvent.eventuallyObservesMarkedCheckpointRaw_iff_sampled
+#print axioms PureSFormal.PureS.TermEvent.eventuallyObservesMarkedCheckpoint_iff_eventuallyEmpty
+#print axioms PureSFormal.PureS.TermEvent.eventuallyObservesMarkedCheckpointRaw_iff_eventuallyEmpty

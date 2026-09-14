@@ -1,0 +1,10 @@
+import PureSFormal.Research.ClosedSetCertificateCompleteness
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.decorate_boundary
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.marking_rootClosed
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.marking_upClosed_left
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.marking_upClosed_right
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.decorate_valid
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.marking_certificate
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.prefixMark_iff
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.prefixMark_closed
+#print axioms PureSFormal.Research.ClosedSetCertificateCompleteness.stabilized_negative_certificate

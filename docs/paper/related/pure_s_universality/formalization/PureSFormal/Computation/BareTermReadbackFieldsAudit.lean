@@ -1,0 +1,8 @@
+import PureSFormal.Computation.BareTermReadbackFields
+
+#print axioms PureSFormal.Computation.BareTermReadbackFields.generator_length_le
+#print axioms PureSFormal.Computation.BareTermReadbackFields.public_fields
+#print axioms PureSFormal.Computation.BareTermReadbackFields.seed_length_le
+#print axioms PureSFormal.Computation.BareTermReadbackFields.decode_fields
+#print axioms PureSFormal.Computation.BareTermReadbackFields.observe_value
+#print axioms PureSFormal.Computation.BareTermReadbackFields.observe_operations_le

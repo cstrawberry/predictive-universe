@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetCarrierInverseBoundary
+
+#print axioms PureSFormal.Research.RootResetCarrierInverseBoundary.anchored_follow
+#print axioms PureSFormal.Research.RootResetCarrierInverseBoundary.rows_anchored
+#print axioms PureSFormal.Research.RootResetCarrierInverseBoundary.inverse_requires_parent
+#print axioms PureSFormal.Research.RootResetCarrierInverseBoundary.boundary_misses
+#print axioms PureSFormal.Research.RootResetCarrierInverseBoundary.root_misses
+#print axioms PureSFormal.Research.RootResetCarrierInverseBoundary.completedContinuation_misses
+#print axioms PureSFormal.Research.RootResetCarrierInverseBoundary.pendingParents_misses

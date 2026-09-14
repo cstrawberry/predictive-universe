@@ -1,0 +1,81 @@
+replaying PureSFormal.Cook.TagTrajectory
+passed PureSFormal.Cook.TagTrajectory declarations=14
+replaying PureSFormal.CostModel.Allocation
+passed PureSFormal.CostModel.Allocation declarations=41
+replaying PureSFormal.CostModel.ConcreteContraction
+passed PureSFormal.CostModel.ConcreteContraction declarations=34
+replaying PureSFormal.CostModel.DAGLocalObserver
+passed PureSFormal.CostModel.DAGLocalObserver declarations=124
+replaying PureSFormal.CostModel.EdgeCopy
+passed PureSFormal.CostModel.EdgeCopy declarations=64
+replaying PureSFormal.CostModel.FiniteArenaMachine
+passed PureSFormal.CostModel.FiniteArenaMachine declarations=115
+replaying PureSFormal.CostModel.PathLift
+passed PureSFormal.CostModel.PathLift declarations=39
+replaying PureSFormal.CostModel.PointerWordCost
+passed PureSFormal.CostModel.PointerWordCost declarations=18
+replaying PureSFormal.CostModel.PointerWordCostAudit
+passed PureSFormal.CostModel.PointerWordCostAudit declarations=0
+replaying PureSFormal.CostModel.Privatization
+passed PureSFormal.CostModel.Privatization declarations=38
+replaying PureSFormal.CostModel.SharedArena
+passed PureSFormal.CostModel.SharedArena declarations=98
+replaying PureSFormal.CostModel.SharedCostTheorem
+passed PureSFormal.CostModel.SharedCostTheorem declarations=16
+replaying PureSFormal.CostModel.SharedCostTheoremAudit
+passed PureSFormal.CostModel.SharedCostTheoremAudit declarations=0
+replaying PureSFormal.CostModel.SharedDevelopment
+passed PureSFormal.CostModel.SharedDevelopment declarations=24
+replaying PureSFormal.CostModel.SharedImplementationAudit
+passed PureSFormal.CostModel.SharedImplementationAudit declarations=0
+replaying PureSFormal.CostModel.SharedImplementationTest
+passed PureSFormal.CostModel.SharedImplementationTest declarations=5
+replaying PureSFormal.CostModel.TreeBounds
+passed PureSFormal.CostModel.TreeBounds declarations=19
+replaying PureSFormal.CostModel.UnifiedResourceLedger
+passed PureSFormal.CostModel.UnifiedResourceLedger declarations=20
+replaying PureSFormal.CostModel.UnifiedResourceLedgerAudit
+passed PureSFormal.CostModel.UnifiedResourceLedgerAudit declarations=0
+replaying PureSFormal.DefinitionAgreement
+passed PureSFormal.DefinitionAgreement declarations=301
+replaying PureSFormal.DefinitionAgreementAudit
+passed PureSFormal.DefinitionAgreementAudit declarations=0
+replaying PureSFormal.EvaluatorBounds
+passed PureSFormal.EvaluatorBounds declarations=20
+replaying PureSFormal.EvaluatorBoundsAudit
+passed PureSFormal.EvaluatorBoundsAudit declarations=0
+replaying PureSFormal.Public
+passed PureSFormal.Public declarations=105
+replaying PureSFormal.PublicAudit
+passed PureSFormal.PublicAudit declarations=0
+replaying PureSFormal.PureS.ActionDecode
+passed PureSFormal.PureS.ActionDecode declarations=9
+replaying PureSFormal.PureS.ActionParser
+passed PureSFormal.PureS.ActionParser declarations=80
+replaying PureSFormal.PureS.ActionTree
+passed PureSFormal.PureS.ActionTree declarations=81
+replaying PureSFormal.PureS.Actions
+passed PureSFormal.PureS.Actions declarations=28
+replaying PureSFormal.PureS.Activation
+passed PureSFormal.PureS.Activation declarations=17
+replaying PureSFormal.PureS.Appender
+passed PureSFormal.PureS.Appender declarations=35
+replaying PureSFormal.PureS.AppenderAudit
+passed PureSFormal.PureS.AppenderAudit declarations=0
+replaying PureSFormal.PureS.Arity
+passed PureSFormal.PureS.Arity declarations=23
+replaying PureSFormal.PureS.BalancedActionTree
+passed PureSFormal.PureS.BalancedActionTree declarations=84
+replaying PureSFormal.PureS.BalancedActionTreeAudit
+passed PureSFormal.PureS.BalancedActionTreeAudit declarations=0
+replaying PureSFormal.PureS.BasePath
+passed PureSFormal.PureS.BasePath declarations=35
+replaying PureSFormal.PureS.BoundedJob
+passed PureSFormal.PureS.BoundedJob declarations=22
+replaying PureSFormal.PureS.CanonicalStep
+passed PureSFormal.PureS.CanonicalStep declarations=227
+replaying PureSFormal.PureS.CanonicalTraversal
+passed PureSFormal.PureS.CanonicalTraversal declarations=170
+replaying PureSFormal.PureS.Carrier
+passed PureSFormal.PureS.Carrier declarations=91
+checked 1997 declarations

@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetContractProjection
+
+#print axioms PureSFormal.Research.RootResetContractProjection.some_result
+#print axioms PureSFormal.Research.RootResetContractProjection.none_result
+#print axioms PureSFormal.Research.RootResetContractProjection.projection_agrees
+#print axioms PureSFormal.Research.RootResetContractProjection.some_iff
+#print axioms PureSFormal.Research.RootResetContractProjection.none_iff
+#print axioms PureSFormal.Research.RootResetContractProjection.none_iff_normal
+#print axioms PureSFormal.Research.RootResetContractProjection.invocation_bound

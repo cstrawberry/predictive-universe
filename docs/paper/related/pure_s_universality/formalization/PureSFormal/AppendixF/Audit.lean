@@ -1,0 +1,33 @@
+import PureSFormal.AppendixF.CarrierPath
+import PureSFormal.AppendixF.RecursiveOrbit
+import PureSFormal.AppendixF.AAABoundary
+import PureSFormal.AppendixF.RegularAvoidance
+import PureSFormal.AppendixF.RecursivePath
+import PureSFormal.AppendixF.HoldAllData
+import PureSFormal.AppendixF.IncomparableBasins
+import PureSFormal.AppendixF.AutonomousObstruction
+import PureSFormal.AppendixF.PathFamilies
+import PureSFormal.AppendixF.CarrierSummaryBound
+import PureSFormal.AppendixF.ClassicalSeeds
+import PureSFormal.AppendixF.CallRecognition
+
+#print axioms PureSFormal.AppendixF.FiniteOrbit.acceptsWithin_iff
+#print axioms PureSFormal.AppendixF.Carrier.eventuallyAccepts_path_iff
+#print axioms PureSFormal.AppendixF.Carrier.Configuration.run_step
+#print axioms PureSFormal.AppendixF.RecursiveCall.Configuration.native
+#print axioms PureSFormal.AppendixF.RecursiveCall.observation_accepts
+#print axioms PureSFormal.AppendixF.RecursiveCall.eventuallyAccepts_correct
+#print axioms PureSFormal.AppendixF.AAABoundary.aaa_boundary
+#print axioms PureSFormal.AppendixF.Carrier.regular_avoidance
+#print axioms PureSFormal.AppendixF.RecursiveCall.eventuallyAccepts_path_iff
+#print axioms PureSFormal.AppendixF.RecursiveCall.hold_all_data
+#print axioms PureSFormal.AppendixF.IncomparableBasins.incomparable
+#print axioms PureSFormal.AppendixF.AutonomousObstruction.autonomous_obstruction
+#print axioms PureSFormal.AppendixF.AutonomousObstruction.clock_encoder_obstruction
+#print axioms PureSFormal.AppendixF.DecidablePathObstruction.decidable_path_obstruction
+#print axioms PureSFormal.AppendixF.PathFamilies.finite_union_obstruction
+#print axioms PureSFormal.AppendixF.ComputabilityCertificates.computable_iff_certificate
+#print axioms PureSFormal.AppendixF.Carrier.Summary.enumeration_bound
+#print axioms PureSFormal.AppendixF.ClassicalSeeds.pp_seven_steps
+#print axioms PureSFormal.AppendixF.ClockBoundary.clock_one_redex_all
+#print axioms PureSFormal.AppendixF.RecursiveCall.recognized_call_has_finite_table

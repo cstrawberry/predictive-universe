@@ -1,0 +1,81 @@
+replaying PureSFormal.PureS.SchedulerCycle
+passed PureSFormal.PureS.SchedulerCycle declarations=270
+replaying PureSFormal.PureS.SchedulerCycleAudit
+passed PureSFormal.PureS.SchedulerCycleAudit declarations=0
+replaying PureSFormal.PureS.SchedulerDecoder
+passed PureSFormal.PureS.SchedulerDecoder declarations=10
+replaying PureSFormal.PureS.SchedulerDecoderAudit
+passed PureSFormal.PureS.SchedulerDecoderAudit declarations=0
+replaying PureSFormal.PureS.SchedulerDescent
+passed PureSFormal.PureS.SchedulerDescent declarations=161
+replaying PureSFormal.PureS.SchedulerDescentAudit
+passed PureSFormal.PureS.SchedulerDescentAudit declarations=0
+replaying PureSFormal.PureS.SchedulerEmpty
+passed PureSFormal.PureS.SchedulerEmpty declarations=31
+replaying PureSFormal.PureS.SchedulerEmptyAudit
+passed PureSFormal.PureS.SchedulerEmptyAudit declarations=0
+replaying PureSFormal.PureS.SchedulerExecution
+passed PureSFormal.PureS.SchedulerExecution declarations=132
+replaying PureSFormal.PureS.SchedulerExecutionAudit
+passed PureSFormal.PureS.SchedulerExecutionAudit declarations=0
+replaying PureSFormal.PureS.SchedulerFirstEmpty
+passed PureSFormal.PureS.SchedulerFirstEmpty declarations=36
+replaying PureSFormal.PureS.SchedulerFirstEmptyAudit
+passed PureSFormal.PureS.SchedulerFirstEmptyAudit declarations=0
+replaying PureSFormal.PureS.SchedulerGlobalRecurrence
+passed PureSFormal.PureS.SchedulerGlobalRecurrence declarations=20
+replaying PureSFormal.PureS.SchedulerGlobalRecurrenceAudit
+passed PureSFormal.PureS.SchedulerGlobalRecurrenceAudit declarations=0
+replaying PureSFormal.PureS.SchedulerInvariant
+passed PureSFormal.PureS.SchedulerInvariant declarations=754
+replaying PureSFormal.PureS.SchedulerJobHandoff
+passed PureSFormal.PureS.SchedulerJobHandoff declarations=22
+replaying PureSFormal.PureS.SchedulerJobHandoffAudit
+passed PureSFormal.PureS.SchedulerJobHandoffAudit declarations=0
+replaying PureSFormal.PureS.SchedulerMixedNonfinalJobs
+passed PureSFormal.PureS.SchedulerMixedNonfinalJobs declarations=4
+replaying PureSFormal.PureS.SchedulerMixedNonfinalJobsAudit
+passed PureSFormal.PureS.SchedulerMixedNonfinalJobsAudit declarations=0
+replaying PureSFormal.PureS.SchedulerNestedEmpty
+passed PureSFormal.PureS.SchedulerNestedEmpty declarations=115
+replaying PureSFormal.PureS.SchedulerNestedEmptyAudit
+passed PureSFormal.PureS.SchedulerNestedEmptyAudit declarations=0
+replaying PureSFormal.PureS.SchedulerNestedPhase
+passed PureSFormal.PureS.SchedulerNestedPhase declarations=131
+replaying PureSFormal.PureS.SchedulerNestedPhaseAudit
+passed PureSFormal.PureS.SchedulerNestedPhaseAudit declarations=0
+replaying PureSFormal.PureS.SchedulerNestedResponse
+passed PureSFormal.PureS.SchedulerNestedResponse declarations=62
+replaying PureSFormal.PureS.SchedulerNestedResponseAudit
+passed PureSFormal.PureS.SchedulerNestedResponseAudit declarations=0
+replaying PureSFormal.PureS.SchedulerNonfinalEmptyJobs
+passed PureSFormal.PureS.SchedulerNonfinalEmptyJobs declarations=4
+replaying PureSFormal.PureS.SchedulerNonfinalEmptyJobsAudit
+passed PureSFormal.PureS.SchedulerNonfinalEmptyJobsAudit declarations=0
+replaying PureSFormal.PureS.SchedulerNonfinalJobs
+passed PureSFormal.PureS.SchedulerNonfinalJobs declarations=4
+replaying PureSFormal.PureS.SchedulerNonfinalJobsAudit
+passed PureSFormal.PureS.SchedulerNonfinalJobsAudit declarations=0
+replaying PureSFormal.PureS.SchedulerProductivity
+passed PureSFormal.PureS.SchedulerProductivity declarations=15
+replaying PureSFormal.PureS.SchedulerProductivityAudit
+passed PureSFormal.PureS.SchedulerProductivityAudit declarations=0
+replaying PureSFormal.PureS.SchedulerRecurrence
+passed PureSFormal.PureS.SchedulerRecurrence declarations=61
+replaying PureSFormal.PureS.SchedulerRecurrenceAudit
+passed PureSFormal.PureS.SchedulerRecurrenceAudit declarations=0
+replaying PureSFormal.PureS.SchedulerResponse
+passed PureSFormal.PureS.SchedulerResponse declarations=87
+replaying PureSFormal.PureS.SchedulerResponseAudit
+passed PureSFormal.PureS.SchedulerResponseAudit declarations=0
+replaying PureSFormal.PureS.SchedulerResponseClassification
+passed PureSFormal.PureS.SchedulerResponseClassification declarations=5
+replaying PureSFormal.PureS.SchedulerResponseClassificationAudit
+passed PureSFormal.PureS.SchedulerResponseClassificationAudit declarations=0
+replaying PureSFormal.PureS.SchedulerResponseInvariant
+passed PureSFormal.PureS.SchedulerResponseInvariant declarations=124
+replaying PureSFormal.PureS.SchedulerResponseInvariantAudit
+passed PureSFormal.PureS.SchedulerResponseInvariantAudit declarations=0
+replaying PureSFormal.PureS.SchedulerRootContinuation
+passed PureSFormal.PureS.SchedulerRootContinuation declarations=69
+checked 2117 declarations

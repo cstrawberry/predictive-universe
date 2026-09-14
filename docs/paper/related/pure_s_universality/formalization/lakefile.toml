@@ -1,0 +1,10 @@
+name = "pure_s_universality"
+version = "1.0.0"
+defaultTargets = ["PureSFormal"]
+
+[[lean_lib]]
+name = "PureSFormal"
+
+[[lean_exe]]
+name = "pure-s-demo"
+root = "Demo"

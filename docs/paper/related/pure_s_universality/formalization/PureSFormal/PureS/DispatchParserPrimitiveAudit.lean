@@ -1,0 +1,14 @@
+import PureSFormal.PureS.DispatchParserPrimitive
+
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.prepareCounts
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.responseAt
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.responseBound
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.responseAt_operations_le
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.responseAt_size
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.responseAt_complete
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.parsePrepared
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.parse
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.parse_value
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.coefficient
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.parsePrepared_operations_le
+#print axioms PureSFormal.PureS.DispatchParserPrimitive.parse_operations_le

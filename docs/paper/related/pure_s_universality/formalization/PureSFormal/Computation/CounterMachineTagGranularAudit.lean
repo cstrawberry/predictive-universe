@@ -1,0 +1,42 @@
+import PureSFormal.Computation.CounterMachineTag
+
+set_option pp.universes false
+
+open PureSFormal.Computation
+
+#print axioms CounterMachineTag.Numeric.block_lt_next
+#print axioms CounterMachineTag.Numeric.block_not_lt_of_le
+#print axioms CounterMachineTag.Numeric.block_sub_lt_count
+#print axioms CounterMachineTag.Numeric.block_lt_ordinaryCount
+#print axioms CounterMachineTag.Numeric.encodeSymbol_lt_count_of_ne_halt
+#print axioms CounterMachineTag.Numeric.encodeSymbol_le_count
+#print axioms CounterMachineTag.Numeric.decode_encode
+#print axioms CounterMachineTag.Numeric.instructionAt_eq_reject_of_length_le
+#print axioms CounterMachineTag.Numeric.index_lt_of_instructionLive
+#print axioms CounterMachineTag.Numeric.wordBounded_append
+#print axioms CounterMachineTag.Numeric.header_wordBounded
+#print axioms CounterMachineTag.Numeric.laneOutput_wordBounded
+#print axioms CounterMachineTag.Numeric.production_wordBounded
+#print axioms CounterMachineTag.Numeric.tagStep_wordBounded
+#print axioms CounterMachineTag.Numeric.tagIterate_wordBounded
+#print axioms CounterMachineTag.Numeric.dataBlock_wordBounded
+#print axioms CounterMachineTag.Numeric.canonical_wordBounded
+#print axioms CounterMachineTag.Numeric.encodeState_wordBounded
+#print axioms CounterMachineTag.Numeric.decodeSymbol_bounded
+#print axioms CounterMachineTag.Numeric.encodeWord_labelsValid
+#print axioms CounterMachineTag.Numeric.numericRhs_labelsValid
+#print axioms CounterMachineTag.Numeric.ordinaryProgram_productionLabelsValid
+#print axioms CounterMachineTag.Numeric.encodeSymbol_eq_haltLabel_iff
+#print axioms CounterMachineTag.Numeric.encodeWord_head_halt_iff
+#print axioms CounterMachineTag.Numeric.absorbingStep_encodeWord
+#print axioms CounterMachineTag.Numeric.iterate_encodeWord_until_halt
+#print axioms CounterMachineTag.Numeric.typedEventuallyHalts_iff_numericHaltHead
+#print axioms CounterMachineTag.Numeric.tagStep_eq_self_of_length_lt_two
+#print axioms CounterMachineTag.Numeric.tagIterate_eq_self_of_length_lt_two
+#print axioms CounterMachineTag.Numeric.live_macro_step
+#print axioms CounterMachineTag.Numeric.live_macro_lengthTwo
+#print axioms CounterMachineTag.Numeric.numeric_live_macro_step
+#print axioms CounterMachineTag.Numeric.iterate_eq_self_of_absorbingStep_eq
+#print axioms CounterMachineTag.Numeric.encoded_halt_pair_fixed
+#print axioms CounterMachineTag.Numeric.encoded_sink_pair_fixed
+#print axioms CounterMachineTag.Numeric.ordinaryTrajectory_boundary

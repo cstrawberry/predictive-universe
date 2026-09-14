@@ -1,0 +1,10 @@
+import PureSFormal.Computation.PureSEvent
+
+#print axioms PureSFormal.Computation.pureSMarkedSnapshotControllerEvent_semidecidable
+#print axioms PureSFormal.Computation.pureSMarkedSnapshotTermEvent_semidecidable
+#print axioms PureSFormal.Computation.pureSRegisteredMarkControllerEvent_semidecidable
+#print axioms PureSFormal.Computation.pureSRegisteredMarkTermEvent_semidecidable
+#print axioms PureSFormal.Computation.pureSMarkedSnapshotControllerEvent_complete_of_cts_source
+#print axioms PureSFormal.Computation.pureSMarkedSnapshotTermEvent_complete_of_cts_source
+#print axioms PureSFormal.Computation.pureSControllerEvent_semidecidable
+#print axioms PureSFormal.Computation.pureSControllerEvent_complete_of_cts_source

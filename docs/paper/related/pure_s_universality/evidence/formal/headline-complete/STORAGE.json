@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "files": {
+    "010-lean4lean-exact-c.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "011-lean4lean-exact-link.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "012-invalid-proof-compile.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "013-leanchecker-valid.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "053-static-library.log": {
+      "file": "053-static-library.log.gz",
+      "encoding": "gzip"
+    },
+    "055-RootResetRuntimeDifferential-c.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "056-RootResetRuntimeDifferential-link.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "058-RootResetArbitraryRuntime-c.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "059-RootResetArbitraryRuntime-link.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "060-RootResetWorkedTrace-lean.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "061-RootResetWorkedTrace-c.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "062-RootResetWorkedTrace-link.log": {
+      "file": "009-lean4lean-exact-lean.log",
+      "encoding": "identity"
+    },
+    "067-worked-trace.log": {
+      "file": "067-worked-trace.log.gz",
+      "encoding": "gzip"
+    },
+    "coverage.json": {
+      "file": "coverage.json.gz",
+      "encoding": "gzip"
+    },
+    "declaration-census.json": {
+      "file": "full-declaration-census.json.gz",
+      "encoding": "gzip"
+    },
+    "full-declaration-census.json": {
+      "file": "full-declaration-census.json.gz",
+      "encoding": "gzip"
+    },
+    "inputs-after.json": {
+      "file": "inputs-before.json.gz",
+      "encoding": "gzip"
+    },
+    "inputs-before.json": {
+      "file": "inputs-before.json.gz",
+      "encoding": "gzip"
+    },
+    "runtime-inputs-after.json": {
+      "file": "inputs-before.json.gz",
+      "encoding": "gzip"
+    },
+    "runtime-inputs-before.json": {
+      "file": "inputs-before.json.gz",
+      "encoding": "gzip"
+    },
+    "verified-source-examples/inputs-after.json": {
+      "file": "verified-source-examples/inputs-before.json",
+      "encoding": "identity"
+    }
+  }
+}

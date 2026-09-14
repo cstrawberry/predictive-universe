@@ -1,0 +1,10 @@
+verification-profile: pure-s-formalization-verification-v1
+lean: 4.33.1
+lean-commit: 819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+lean-toolchain: leanprover/lean4:v4.33.1
+lake: 5.0.0
+lake-external-packages: none
+mathlib: none
+canonical-platform: linux/amd64
+provenance-file: VERIFICATION-TOOLCHAIN.json
+provenance-sha256: a2273697055e606159de5c47392ae1c7cb8a87af7e92af75f256d2be963d882f

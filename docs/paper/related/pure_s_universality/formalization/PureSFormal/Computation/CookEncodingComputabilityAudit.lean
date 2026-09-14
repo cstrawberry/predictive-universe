@@ -1,0 +1,22 @@
+import PureSFormal.Computation.CookEncodingComputability
+
+#print axioms PureSFormal.Computation.CookEncodingComputability.counterValue_left
+#print axioms PureSFormal.Computation.CookEncodingComputability.counterValue_right
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.fold_counterStep
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_counter
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_canonicalWord
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_oneHot
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_encodeWord
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.fold_bitStep
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_bitListCode
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_canonicalBits
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_tagBits
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.sourceBits
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_sourceBits
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.sourceTerm
+#print axioms PureSFormal.Computation.CookEncodingComputability.Program.eval_sourceTerm
+#print axioms PureSFormal.Computation.CookEncodingComputability.sourceBits_primitiveRecursive
+#print axioms PureSFormal.Computation.CookEncodingComputability.sourceTerm_primitiveRecursive
+#print axioms PureSFormal.Computation.CookEncodingComputability.sourceTerm_computable
+#print axioms PureSFormal.Computation.CookEncodingComputability.sourceBits_decode
+#print axioms PureSFormal.Computation.CookEncodingComputability.sourceTerm_decode

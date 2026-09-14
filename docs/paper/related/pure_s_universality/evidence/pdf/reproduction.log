@@ -1,0 +1,4 @@
+PDF diagnostics: /publication/work/publication-logs/build-6u2tfifq
+PDF diagnostics: /publication/work/publication-logs/build-aprdef8c
+PASS two clean builds at unequal output path lengths match byte for byte.
+PASS optional mapping rejected before typesetting and before the diagnostics location was printed.

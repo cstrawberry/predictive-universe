@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetActiveFuelEndpointAgreement
+#print axioms PureSFormal.Research.RootResetActiveFuelEndpointAgreement.FrameFree.missed
+#print axioms PureSFormal.Research.RootResetActiveFuelEndpointAgreement.zero_free
+#print axioms PureSFormal.Research.RootResetActiveFuelEndpointAgreement.canonical_not_pending
+#print axioms PureSFormal.Research.RootResetActiveFuelEndpointAgreement.cleanParents_fuel_stops
+#print axioms PureSFormal.Research.RootResetActiveFuelEndpointAgreement.generated_zero_stops
+#print axioms PureSFormal.Research.RootResetActiveFuelEndpointAgreement.generated_call_stops
+#print axioms PureSFormal.Research.RootResetActiveFuelEndpointAgreement.generated_positiveHalf_stops

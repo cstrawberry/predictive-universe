@@ -1,0 +1,22 @@
+import PureSFormal.Research.RootResetPersistentRouteA
+
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.parseFreshNonempty?_sound
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.parseFreshNonempty?_continuation_size_lt
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.parseFreshNonempty?_none_of_empty
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.parsePendingActive?_sound
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.next?_valid
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.activeContext_sound
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.Describes.source_eq
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.Describes.contextAddress_eq
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.Describes.active_subterm
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.Describes.active_size_lt_of_roles_ne_nil
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.describes_eq_activeContext
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.describes_deterministic
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.responseCandidate?_clean_empty
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.responseCandidate?_clean_nonempty
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.verifiedCandidate?_contracts
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.classify_recoveredPhase
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.classify_source_and_address
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.classify_selected_contracts
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.Reachable.deterministic
+#print axioms PureSFormal.Research.RootResetPersistentRouteA.classify_of_reachable

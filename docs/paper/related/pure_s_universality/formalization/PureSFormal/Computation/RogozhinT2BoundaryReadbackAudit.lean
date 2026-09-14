@@ -1,0 +1,13 @@
+import PureSFormal.Computation.RogozhinT2BoundaryReadback
+
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.weight_lt_of_lt
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.labelForWeight_weight
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.readWidthsAux_ones
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.readWidthsAux_dataTail
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.readWidthsAux_dataCode
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.labelsOfWidths_map_weight
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.decodeData?_dataCode
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.decodeData?_sound
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.decodeBoundary?_compileWithPadding
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.decodeBoundary?_compile
+#print axioms PureSFormal.Computation.RogozhinT2BoundaryReadback.decodeBoundary?_iterate_nonhaltingRun

@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetClockEulerSelector
+
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.states_length
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.states_nodup
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.reaches_boundary
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.invocation_complete
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.probe_success_simulated
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.generated_positive_growth
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.generated_zero_growth
+#print axioms PureSFormal.Research.RootResetClockEulerSelector.generated_launch

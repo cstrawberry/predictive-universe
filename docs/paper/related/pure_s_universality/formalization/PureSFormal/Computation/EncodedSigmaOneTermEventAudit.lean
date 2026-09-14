@@ -1,0 +1,12 @@
+import PureSFormal.Computation.EncodedSigmaOneTermEvent
+
+/-! Exact logical-basis audit for the explicit encoded source interface. -/
+
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.formulaJob_accepts_iff
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.universalJob_accepts_iff_termEvent
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.formula_accepts_iff_termEvent
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.pureSTermEvent_encodedSigmaOneComplete
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.fixedFormula_accepts_iff_termEvent
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.fixedPureSTermEvent_encodedSigmaOneComplete
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.fixedFormula_accepts_iff_markedSnapshotTermEvent
+#print axioms PureSFormal.Computation.EncodedSigmaOneTermEvent.fixedMarkedSnapshotTermEvent_encodedSigmaOneComplete

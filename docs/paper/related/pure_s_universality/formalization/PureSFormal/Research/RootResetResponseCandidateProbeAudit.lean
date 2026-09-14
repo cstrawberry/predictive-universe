@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetResponseCandidateProbe
+
+#print axioms PureSFormal.Research.RootResetResponseCandidateProbe.all_input
+#print axioms PureSFormal.Research.RootResetResponseCandidateProbe.readOnly
+#print axioms PureSFormal.Research.RootResetResponseCandidateProbe.generated

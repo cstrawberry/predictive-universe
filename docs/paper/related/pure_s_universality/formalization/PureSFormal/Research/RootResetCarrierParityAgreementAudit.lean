@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetCarrierParityAgreement
+#print axioms PureSFormal.Research.RootResetCarrierParityAgreement.Value.path
+#print axioms PureSFormal.Research.RootResetCarrierParityAgreement.Value.generated_runs
+#print axioms PureSFormal.Research.RootResetCarrierParityAgreement.generated_runs
+#print axioms PureSFormal.Research.RootResetCarrierParityAgreement.generated_one_excess
+#print axioms PureSFormal.Research.RootResetCarrierParityAgreement.generated_two_excess
+#print axioms PureSFormal.Research.RootResetCarrierParityAgreement.local_one_excess
+#print axioms PureSFormal.Research.RootResetCarrierParityAgreement.local_two_excess

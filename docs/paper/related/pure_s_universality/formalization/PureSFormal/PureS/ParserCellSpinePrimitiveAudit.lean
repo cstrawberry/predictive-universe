@@ -1,0 +1,18 @@
+import PureSFormal.PureS.ParserCellSpinePrimitive
+
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.readView
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.readView_operations_le
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.readView_cell
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.readView_tail_lt
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.readView_cell_budget
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.readView_endpoint
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.readView_invalid
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.finish
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.finish_value
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.parse
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.parse_value
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.decoded_length_le
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.parsed_length_le
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.finish_parse_operations_le
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.cell_overhead_le
+#print axioms PureSFormal.PureS.ParserCellSpinePrimitive.parse_operations_le

@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetFinitePrioritySelector
+
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.same_root_start
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.selected_step

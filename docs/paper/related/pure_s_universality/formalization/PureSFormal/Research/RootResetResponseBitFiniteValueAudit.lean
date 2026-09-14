@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetResponseBitFiniteValue
+
+#print axioms PureSFormal.Research.RootResetResponseBitFiniteValue.marked
+#print axioms PureSFormal.Research.RootResetResponseBitFiniteValue.normal_counts
+#print axioms PureSFormal.Research.RootResetResponseBitFiniteValue.empty_base
+#print axioms PureSFormal.Research.RootResetResponseBitFiniteValue.marked_completed
+#print axioms PureSFormal.Research.RootResetResponseBitFiniteValue.empty_sweep
+#print axioms PureSFormal.Research.RootResetResponseBitFiniteValue.initial_empty_sweep

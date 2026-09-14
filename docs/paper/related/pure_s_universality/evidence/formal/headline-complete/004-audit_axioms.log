@@ -1,0 +1,306 @@
+'PureSFormal.PureS.Term.context_of_subterm' depends on axioms: [propext]
+'PureSFormal.PureS.Term.replace?_self' depends on axioms: [propext]
+'PureSFormal.PureS.Term.replace?_deterministic' does not depend on any axioms
+'PureSFormal.PureS.Term.contractAt?_sound' depends on axioms: [propext]
+'PureSFormal.PureS.Cursor.rdx?_sound' depends on axioms: [propext]
+'PureSFormal.PureS.Script.run_projects_stepsN' depends on axioms: [propext]
+'PureSFormal.PureS.Pattern.matchesBool_eq_true_iff' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.run_spec' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.run_ne_none' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.run_restores' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.run_success_iff' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.run_mismatch_iff' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.runParent_spec' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.runParent_ne_none' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.runParent_restores' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.runParent_success_iff' depends on axioms: [propext]
+'PureSFormal.PureS.Probe.stateBound_pos' does not depend on any axioms
+'PureSFormal.PureS.FiniteController.erase_run_eq_of_mutation_free' depends on axioms: [propext]
+'PureSFormal.PureS.FiniteController.exists_repeat_within_stateBound_of_mutation_free' depends on axioms: [propext,
+ Quot.sound]
+'PureSFormal.PureS.FiniteController.eventually_periodic_of_mutation_free' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.Dispatcher.hasRoute_iff_lookup?' depends on axioms: [propext]
+'PureSFormal.CTS.iterate_phase_val' depends on axioms: [propext]
+'PureSFormal.CTS.iterate_empty' depends on axioms: [propext]
+'PureSFormal.CTS.iterate_empty_period' depends on axioms: [propext]
+'PureSFormal.CTS.iterate_add' depends on axioms: [propext]
+'PureSFormal.PureS.C1_succ' depends on axioms: [propext]
+'PureSFormal.PureS.C1_zero' depends on axioms: [propext]
+'PureSFormal.PureS.C2_frames' depends on axioms: [propext]
+'PureSFormal.PureS.C4_live_delete' does not depend on any axioms
+'PureSFormal.PureS.C5_push' does not depend on any axioms
+'PureSFormal.PureS.C6_appender' depends on axioms: [propext]
+'PureSFormal.PureS.nodeCode_activate' depends on axioms: [propext]
+'PureSFormal.PureS.chosen_ne_dormantCall' depends on axioms: [propext]
+'PureSFormal.PureS.RouteGrammar.nodeAlternatives_disjoint' depends on axioms: [propext]
+'PureSFormal.PureS.RouteExecution.compiledCall_executeRoute_spec' depends on axioms: [propext]
+'PureSFormal.PureS.RouteParser.parse_sound' depends on axioms: [propext]
+'PureSFormal.PureS.RouteParser.parse_complete' depends on axioms: [propext]
+'PureSFormal.PureS.RouteParser.generated_route_unique' depends on axioms: [propext]
+'PureSFormal.PureS.executeAction' depends on axioms: [propext]
+'PureSFormal.PureS.Dispatcher.Tree.leaves_chain' depends on axioms: [propext]
+'PureSFormal.PureS.Dispatcher.Tree.leafCount_chain' depends on axioms: [propext]
+'PureSFormal.PureS.Dispatcher.Tree.leaves_ofList_of_ne_nil' depends on axioms: [propext]
+'PureSFormal.PureS.Dispatcher.Tree.exists_hasRoute_of_mem_leaves' depends on axioms: [propext]
+'PureSFormal.PureS.length_phaseActions' depends on axioms: [propext]
+'PureSFormal.PureS.phase_mem_finRange' depends on axioms: [propext]
+'PureSFormal.PureS.mem_phaseActions_of_mem' does not depend on any axioms
+'PureSFormal.PureS.allActionLabels_ne_nil' depends on axioms: [propext]
+'PureSFormal.PureS.actionTree_leaves' depends on axioms: [propext]
+'PureSFormal.PureS.mem_allActionLabels' depends on axioms: [propext]
+'PureSFormal.PureS.length_allActionLabels' depends on axioms: [propext]
+'PureSFormal.PureS.actionTree_leafCount' depends on axioms: [propext]
+'PureSFormal.PureS.actionTree_complete' depends on axioms: [propext]
+'PureSFormal.PureS.actionTree_lookup_complete' depends on axioms: [propext]
+'PureSFormal.PureS.ActionDispatcher.existsRoute' does not depend on any axioms
+'PureSFormal.PureS.ActionDispatcher.routeLabel_unique' does not depend on any axioms
+'PureSFormal.PureS.Dispatcher.Tree.findRoute?_sound' does not depend on any axioms
+'PureSFormal.PureS.Dispatcher.Tree.findRoute?_complete' depends on axioms: [propext]
+'PureSFormal.PureS.ActionDispatcher.canonicalRoute_valid' depends on axioms: [propext]
+'PureSFormal.PureS.ActionDispatcher.selectedRoute' does not depend on any axioms
+'PureSFormal.PureS.RouteGrammar.ActivatedRoute.reduceResponse' depends on axioms: [propext]
+'PureSFormal.PureS.RouteAction.execute' depends on axioms: [propext]
+'PureSFormal.PureS.ActionParser.parse_eq_some_iff' depends on axioms: [propext]
+'PureSFormal.PureS.ActionParser.parse_actionResult' depends on axioms: [propext]
+'PureSFormal.PureS.ActionParser.ActionShape.accumulator_subterm' depends on axioms: [propext]
+'PureSFormal.PureS.DispatchParser.parse_eq_some_iff' depends on axioms: [propext]
+'PureSFormal.PureS.DispatchParser.dispatchesTo_rightUnique' depends on axioms: [propext]
+'PureSFormal.PureS.framePrefix' depends on axioms: [propext]
+'PureSFormal.PureS.freshLocal_mark' depends on axioms: [propext]
+'PureSFormal.PureS.markH_ne_zeroAction' does not depend on any axioms
+'PureSFormal.PureS.Carrier.QueueStep.deterministic' depends on axioms: [propext]
+'PureSFormal.PureS.Carrier.QueueSegment.word' does not depend on any axioms
+'PureSFormal.PureS.Carrier.baseCarrier_ne_shell' depends on axioms: [propext]
+'PureSFormal.PureS.Carrier.LocalShell.dispatcher_deterministic' depends on axioms: [propext]
+'PureSFormal.PureS.Carrier.Grammar.root_headArity' does not depend on any axioms
+'PureSFormal.PureS.Carrier.CompletedChain.liftStepsN' depends on axioms: [propext]
+'PureSFormal.PureS.CellSpine.decode?_eq_some_iff' depends on axioms: [propext]
+'PureSFormal.PureS.CellSpine.decode?_word' depends on axioms: [propext]
+'PureSFormal.PureS.CellDeletion.canonicalFront' depends on axioms: [propext]
+'PureSFormal.PureS.CellDeletion.IsCanonicalFront.endpoint_decodes' depends on axioms: [propext]
+'PureSFormal.PureS.CellDeletion.IsCanonicalFront.hasLaterLive_iff' depends on axioms: [propext]
+'PureSFormal.PureS.BasePath.word_subterm' depends on axioms: [propext]
+'PureSFormal.PureS.BasePath.validate?_eq_some_iff' depends on axioms: [propext]
+'PureSFormal.PureS.BasePath.validated_not_local' depends on axioms: [propext]
+'PureSFormal.PureS.BasePath.decodeInitial?_base' depends on axioms: [propext]
+'PureSFormal.PureS.MutableBase.queue_subterm' depends on axioms: [propext]
+'PureSFormal.PureS.MutableBase.parse?_eq_some_iff' depends on axioms: [propext]
+'PureSFormal.PureS.MutableBase.parseMutable?_eq_some_iff' depends on axioms: [propext]
+'PureSFormal.PureS.MutableBase.mutableBase_word' does not depend on any axioms
+'PureSFormal.PureS.MutableBase.stepsN_mutableBase_queue' depends on axioms: [propext]
+'PureSFormal.PureS.MutableBase.base_ne_shell' depends on axioms: [propext]
+'PureSFormal.PureS.MutableBase.parsed_not_local' depends on axioms: [propext]
+'PureSFormal.PureS.MutableBase.mutableBase_root_headArity' does not depend on any axioms
+'PureSFormal.PureS.ActionDecode.decode_actionAccumulator' depends on axioms: [propext]
+'PureSFormal.PureS.ActionDecode.decode_actionAccumulator_eq_CTS' depends on axioms: [propext]
+'PureSFormal.PureS.LocalResponse.execute' depends on axioms: [propext]
+'PureSFormal.PureS.LocalResponse.executeZeroMarked' depends on axioms: [propext]
+'PureSFormal.PureS.LocalResponse.completed_continuation' depends on axioms: [propext]
+'PureSFormal.PureS.RootPath.initial_exactBase' depends on axioms: [propext]
+'PureSFormal.PureS.RootPath.Root.headArity' does not depend on any axioms
+'PureSFormal.PureS.RootPath.Path.root_ne_live' depends on axioms: [propext]
+'PureSFormal.PureS.RootPath.Path.root_ne_tombstone' depends on axioms: [propext]
+'PureSFormal.PureS.RootPath.Path.live_ne_tombstone' depends on axioms: [propext]
+'PureSFormal.PureS.RootPath.Path.actionAccumulator' does not depend on any axioms
+'PureSFormal.PureS.RootPath.execute_fromRoot' depends on axioms: [propext]
+'PureSFormal.PureS.RootPath.executeZeroMarked_fromRoot' depends on axioms: [propext]
+'PureSFormal.PureS.RootPath.topLive_delete_path' does not depend on any axioms
+'PureSFormal.PureS.RootPath.Root.deleteBaseFront' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.localAccumulator?_sound' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.localAccumulator?_complete' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.parseCell?_sound' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_sound' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_complete' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_eq_iff' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_eq_base_iff' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_eq_local_iff' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_eq_live_iff' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_eq_tombstone_iff' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_eq_malformed_iff' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.parsedBase_ne_local' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.parsedBase_ne_live' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.parsedBase_ne_tombstone' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.local_ne_live' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.local_ne_tombstone' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.live_ne_tombstone' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_permissiveBase' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_mutableBase' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_base' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_local' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_live' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_tombstone' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_local_fields_independent' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_tombstone_audit_independent' depends on axioms: [propext]
+'PureSFormal.PureS.CanonicalStep.classify_local_of_route_action' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.subterm_size_lt' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.ProperDescendant.trans' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.ProperDescendant.size_lt' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.actionShape_accumulator_descendant' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.activatedRoute_response_descendant' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.dispatchShape_accumulator_descendant' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.localChild_descendant' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.classifiedLocal_descendant' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.classifiedLive_descendant' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.classifiedTombstone_descendant' depends on axioms: [propext]
+'PureSFormal.PureS.CarrierDecoder.decode?_permissiveBase' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_mutableBase' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_local' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_live' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_tombstone' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_sound' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_complete' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_eq_some_iff' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.PathDecodes.deterministic' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.RootDecodes.deterministic' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_initial' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierDecoder.decode?_local_of_route_action' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierActionDecode.decode_appenderAccumulator' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierActionDecode.decode_actionAccumulator' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierActionDecode.decode_actionAccumulator_eq_CTS' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierActionDecode.decode_completed' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.CarrierActionDecode.executeSelectedDecoded' depends on axioms: [propext, Quot.sound]
+'PureSFormal.PureS.PendingFrame.environmentCode_eq_envelope' does not depend on any axioms
+'PureSFormal.PureS.PendingFrame.guard?_eq_some_iff' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.guard?_pending' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.guard?_liveCell' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.tombstone_predecessor_noncollision' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.ActionAscent.parent_subterm' does not depend on any axioms
+'PureSFormal.PureS.PendingFrame.ActionAscent.child_subterm' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.ActionAscent.innermost_or_history' does not depend on any axioms
+'PureSFormal.PureS.PendingFrame.ActionAscent.rejects_guard' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.actionShape_ascent_noncollision' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.guard?_chosenResponse' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.guard?_selectedLeftFork' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.guard?_selectedRightFork' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.guard?_freshLocalDispatcher' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.guard?_markedLocalDispatcher' depends on axioms: [propext]
+'PureSFormal.PureS.PendingFrame.fixedBasePath_noncollision' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.SnapshotRoute.toActivatedRoute' does not depend on any axioms
+'PureSFormal.PureS.ReachableAudit.SnapshotRoute.fresh' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.SnapshotRoute.reduceResponse' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.actionResponse_initial' does not depend on any axioms
+'PureSFormal.PureS.ReachableAudit.actionResponse_shape' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.actionResponse_steps' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.SnapshotDispatchAt.toDispatchesTo' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.SnapshotDispatchAt.execute' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.SnapshotDispatchAt.reduceAccumulator' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Layer.toLocalShell' does not depend on any axioms
+'PureSFormal.PureS.ReachableAudit.Layer.root_headArity' does not depend on any axioms
+'PureSFormal.PureS.ReachableAudit.Layer.reduceAccumulator' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Layer.mark' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Layer.dispatcher_noncollision' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.queueSegment_path' does not depend on any axioms
+'PureSFormal.PureS.ReachableAudit.actionAccumulator_segment' does not depend on any axioms
+'PureSFormal.PureS.ReachableAudit.Holds.toRoot' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Holds.wholeCarrierAudit' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Holds.initial' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Holds.executeLayer' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Holds.markLayer' depends on axioms: [propext]
+'PureSFormal.PureS.ReachableAudit.Holds.markedLocal_dispatcher_noncollision' depends on axioms: [propext]
+'PureSFormal.PureS.CompleteLayer.executeSelected' depends on axioms: [propext]
+'PureSFormal.PureS.CompleteLayer.executeZeroMarked' depends on axioms: [propext]
+'PureSFormal.PureS.clock_diagonal' depends on axioms: [propext]
+'PureSFormal.PureS.clockWrapper_launch' does not depend on any axioms
+'PureSFormal.PureS.generator_staging' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.stage_expand' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.launch_expandJob' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.clockExit_admissible' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.headArity_clockExit_eq_four_iff' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.headArity_clockExit_eq_three_iff' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.clockExit_not_localShell' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.length_stageJobs' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.generator_to_staging' depends on axioms: [propext]
+'PureSFormal.PureS.Dovetail.clockExit_zero_eq_nextStageSource' does not depend on any axioms
+'PureSFormal.PureS.Dovetail.stageExpanded_zero' does not depend on any axioms
+'PureSFormal.WeakPath.Realizes.decode_eq_some_iff' does not depend on any axioms
+'PureSFormal.Rogozhin46.states_length' does not depend on any axioms
+'PureSFormal.Rogozhin46.symbols_length' does not depend on any axioms
+'PureSFormal.Rogozhin46.directions_length' does not depend on any axioms
+'PureSFormal.Rogozhin46.keys_length' does not depend on any axioms
+'PureSFormal.Rogozhin46.table_length' does not depend on any axioms
+'PureSFormal.Rogozhin46.state_mem_states' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.symbol_mem_symbols' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.direction_mem_directions' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.key_mem_keys' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.keys_nodup' does not depend on any axioms
+'PureSFormal.Rogozhin46.table_nodup' does not depend on any axioms
+'PureSFormal.Rogozhin46.mem_map_image' does not depend on any axioms
+'PureSFormal.Rogozhin46.exists_of_mem_map' does not depend on any axioms
+'PureSFormal.Rogozhin46.cell_mem_table_iff' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.lookup_complete' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.lookup_eq_iff_mem' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.lookup_unique' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.result_unique_of_mem' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.transition_eq_halt_iff' does not depend on any axioms
+'PureSFormal.Rogozhin46.blank_is_four' does not depend on any axioms
+'PureSFormal.Rogozhin46.halting_cell_count' does not depend on any axioms
+'PureSFormal.Rogozhin46.running_cell_count' does not depend on any axioms
+'PureSFormal.Rogozhin46.step?_eq_none_iff' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.step?_eq_some_applyTransition' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.absorbingStep_of_step?' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.absorbingStep_of_halted' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.halted_iff' does not depend on any axioms
+'PureSFormal.Rogozhin46.iterate_of_halted' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.iterate_add' depends on axioms: [propext]
+'PureSFormal.Rogozhin46.eventuallyHalts_of_halted' does not depend on any axioms
+'PureSFormal.Rogozhin46.eventuallyHalts_of_step' depends on axioms: [propext]
+'PureSFormal.Cook.Index.toNat_bounds' does not depend on any axioms
+'PureSFormal.Cook.indices_length' does not depend on any axioms
+'PureSFormal.Cook.indexedBlock_length' does not depend on any axioms
+'PureSFormal.Cook.structuredAlphabet_length' does not depend on any axioms
+'PureSFormal.Cook.alphabet_length' does not depend on any axioms
+'PureSFormal.Cook.index_mem_indices' depends on axioms: [propext]
+'PureSFormal.Cook.symbol_mem_alphabet' depends on axioms: [propext]
+'PureSFormal.Cook.alphabet_nodup' does not depend on any axioms
+'PureSFormal.Cook.machineSymbolValue_le_five' does not depend on any axioms
+'PureSFormal.Cook.machineSymbolBar_bounds' does not depend on any axioms
+'PureSFormal.Cook.shiftExponent_le_fifty_six' does not depend on any axioms
+'PureSFormal.Cook.production_head' does not depend on any axioms
+'PureSFormal.Cook.production_rightStar' does not depend on any axioms
+'PureSFormal.Cook.indexedProduction_j1' does not depend on any axioms
+'PureSFormal.Cook.indexedProduction_j7' does not depend on any axioms
+'PureSFormal.Cook.indexedProduction_j8' does not depend on any axioms
+'PureSFormal.Cook.indexedProduction_halt_C3' does not depend on any axioms
+'PureSFormal.Cook.indexedProduction_halt_D3' does not depend on any axioms
+'PureSFormal.Cook.indexedProduction_eq_nil_iff' does not depend on any axioms
+'PureSFormal.Cook.productionTable_length' does not depend on any axioms
+'PureSFormal.Cook.production_complete' depends on axioms: [propext]
+'PureSFormal.Cook.productionEntry_mem_iff' depends on axioms: [propext]
+'PureSFormal.Cook.production_eq_iff_mem' depends on axioms: [propext]
+'PureSFormal.Cook.production_unique' depends on axioms: [propext]
+'PureSFormal.Cook.productionTable_nodup' does not depend on any axioms
+'PureSFormal.Cook.production_rhs_closed' depends on axioms: [propext]
+'PureSFormal.Cook.production_length_le_sixty_four' does not depend on any axioms
+'PureSFormal.Cook.total_rhs_symbol_count' does not depend on any axioms
+'PureSFormal.Cook.empty_production_count' does not depend on any axioms
+'PureSFormal.AppendixF.FiniteOrbit.acceptsWithin_iff' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.Carrier.eventuallyAccepts_path_iff' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.Carrier.Configuration.run_step' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.RecursiveCall.Configuration.native' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.RecursiveCall.observation_accepts' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.RecursiveCall.eventuallyAccepts_correct' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.AAABoundary.aaa_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PureSFormal.AppendixF.Carrier.regular_avoidance' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.RecursiveCall.eventuallyAccepts_path_iff' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.RecursiveCall.hold_all_data' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.IncomparableBasins.incomparable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PureSFormal.AppendixF.AutonomousObstruction.autonomous_obstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PureSFormal.AppendixF.AutonomousObstruction.clock_encoder_obstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PureSFormal.AppendixF.DecidablePathObstruction.decidable_path_obstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PureSFormal.AppendixF.PathFamilies.finite_union_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PureSFormal.AppendixF.ComputabilityCertificates.computable_iff_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PureSFormal.AppendixF.Carrier.Summary.enumeration_bound' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.ClassicalSeeds.pp_seven_steps' depends on axioms: [propext]
+'PureSFormal.AppendixF.ClockBoundary.clock_one_redex_all' depends on axioms: [propext, Quot.sound]
+'PureSFormal.AppendixF.RecursiveCall.recognized_call_has_finite_table' depends on axioms: [propext, Quot.sound]
+'PureSFormal.RootResetHeadline.HeadlineUniversality' depends on axioms: [propext, Quot.sound]
+'PureSFormal.RootResetHeadline.sCombinatorIsRootResetUniversal' depends on axioms: [propext, Quot.sound]
+PASS exact Lean axiom gate declarations=296 default_axioms=propext,Quot.sound; Appendix F classical dependencies match their exact recorded sets

@@ -592,7 +592,7 @@ where
 $$
 g_\Lambda:=\frac{c^2\sqrt{\Lambda}}{8}.
 $$
-Definition H.0 and Equation H.4b fix the acceleration variable $g_\Lambda$ only on their bridge branch. They do not determine the length $L_0$: a dimensionally valid relation $L_0=\mathcal L(g_\Lambda,\text{system data})$, with its geometry, mass or velocity data, units, and validation certificate, is not supplied. Thus $L_0$, $A_G$, and $m$ remain phenomenological Equation-I.4 parameters. On the acceleration-lock branch, all low-acceleration transition plots should be expressed using
+Definition H.0 and Equation H.4b fix the acceleration variable $g_\Lambda$ only on their bridge branch. They do not determine the length $L_0$ by themselves: a dimensionally valid relation $L_0=\mathcal L(g_\Lambda,\text{system data})$, with its geometry, mass or velocity data, units, and validation certificate, is supplied only by the spatial-clock bridge branch of Definition I.13c.1, whose Proposition I.13c.2 map $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$ carries the registered baryonic mass scale $M_b$ and an exterior-Keplerian geometry datum, with the validation certificate a separate obligation. Off that branch, $L_0$, $A_G$, and $m$ remain phenomenological Equation-I.4 parameters. On the acceleration-lock branch, all low-acceleration transition plots should be expressed using
 $$
 \chi_b=\frac{|\nabla\Phi_b|}{g_\Lambda}
 $$
@@ -762,9 +762,10 @@ $$
 The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomical observations.
 
 *   **Galaxy dynamics:** Observed rotation curves and galaxy scaling relations (e.g., baryonic Tully-Fisher Relation [McGaugh 2012], Radial Acceleration Relation [McGaugh et al. 2016]) indicate that the effective gravitational field requires an enhancement over Newtonian gravity by factors of $2$ to $10$ on scales $R \sim 1$–$100\,\mathrm{kpc}$. For $R\gg L_0$, the local coupling satisfies $G(R)\to G_0(1+A_G)$, while for a bounded baryonic system the asymptotic field enhancement is $1+\langle\varepsilon_G\rangle_b \le 1 + A_G$, where $\langle\varepsilon_G\rangle_b$ is the baryon‑mass‑weighted average of $\varepsilon_G(R)$. This requires $A_G = 1$ to $9$, consistent with $A_G = \mathcal O(1)$.
-*   **Transition scale:** Choosing $L_0$ of order a few kiloparsecs is an empirical fit or prior for Equation I.4, not a consequence of the acceleration candidate in Appendix H. Acceleration and length have different dimensions; a system-dependent conversion remains an open bridge.
+*   **Transition scale:** Choosing $L_0$ of order a few kiloparsecs is an empirical fit or prior for Equation I.4 off the Definition I.13c.1 branch, not a consequence of the acceleration candidate in Appendix H alone. Acceleration and length have different dimensions; the Proposition I.13c.2 map $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$ is the system-dependent conversion on its branch, and the bridge remains open off it.
 *   **Steepness:** The sharpness of the transition in the Radial Acceleration Relation suggests $m \gtrsim 2$.
 *   **Cosmological variation:** If the fundamental parameters $(\delta, C_{\max})$ that determine $(L_0, A_G, m)$ evolve on cosmological timescales (e.g., Hubble time), current bounds on temporal variation of $G$ (e.g., $|\dot G/G|\!\lesssim\!10^{-12}\,\mathrm{yr}^{-1}$ from cosmology and solar system) can still be met, provided the cosmological evolution is slow (Section I.14, [Uzan 2011]).
+*   **Redshift invariance of the transition acceleration:** The static branch predicts a fixed transition acceleration $\beta_\chi g_\Lambda$ when $\Lambda$, $\beta_\chi$, the geometry convention, and the response-to-observable map remain fixed. A systematic drift outside the registered nuisance and uncertainty budget excludes that conjunction; $L_0\propto\sqrt{M_b}$ retains the system's mass dependence.
 
 **I.10 Phenomenological Predictions**
 
@@ -777,8 +778,8 @@ $$
 \qquad
 g_\Lambda=\frac{c^2\sqrt{\Lambda}}8.
 $$
-After the acceleration normalization and capacity-elastic response law are certified, galaxy acceleration data test collapse against $\chi_b$ without an independent MOND acceleration. Equation I.4 instead depends on $R/L_0$; no dimensionally valid $L_0\leftrightarrow g_\Lambda$ map follows from either formula.
-3.  **Parameter-universality test:** The phenomenological parameter set $(L_0,A_G,m)$ may be tested for approximate universality across a preregistered galaxy class. None inherits the acceleration-lock status: $L_0$ awaits a dimensionally valid system map, while $A_G$ and $m$ await relaxation-sector derivation or hierarchical inference.
+After the acceleration normalization and capacity-elastic response law are certified, galaxy acceleration data test collapse against $\chi_b$ without an independent MOND acceleration. Equation I.4 instead depends on $R/L_0$; the Definition I.13c.1 branch supplies the dimensionally valid $L_0\leftrightarrow g_\Lambda$ map of Proposition I.13c.2, and off that branch no such map follows from either formula.
+3.  **Parameter-universality test:** The phenomenological parameter set $(L_0,A_G,m)$ may be tested for approximate universality across a preregistered galaxy class. On the Definition I.13c.1 branch, $m=3$ is fixed and $L_0$ inherits the acceleration-lock status through the map $L_0=\mathcal L(g_\Lambda,M_b)$ with per-system datum $M_b$, so universality of $L_0$ is universality of the registered $\beta_\chi$; $A_G$ awaits the Proposition I.13c.3 menu adjudication or hierarchical inference.
 4.  **Surface-density lock:** Thin-disk transition data should be consistent with
 $$
 \Sigma_\dagger
@@ -1281,7 +1282,7 @@ A_G=d_0-1=7,
 m=K_0=3.
 \tag{I.13a.1}
 $$
-The choice $A_G=d_0-1$ and $m=K_0$ is a backbone-motivated guess inside the Section I.13 phenomenological range, not a derivation of the pair from the existing Appendix I equations. The pair is preregistered as a falsifiable benchmark only; it carries test-lock status (the pair cannot be re-chosen after a rotation-curve comparison) but not the kernel-forward-lock status of derived backbone constants. The structural obstruction to a theorem-level derivation of $(A_G,m)$ is recorded in Remark I.13c. The scale $L_0$ remains a phenomenological galaxy-scale parameter, and the cluster parameters $(K,q,A_{\mathrm{PM}})$ remain outside this benchmark.
+The choice $A_G=d_0-1$ and $m=K_0$ is a backbone-motivated benchmark inside the Section I.13 phenomenological range; on the Definition I.13c.1 spatial-clock bridge branch the steepness $m=K_0=3$ and the scale map $L_0=\mathcal L(g_\Lambda,M_b)$ are derived by Proposition I.13c.2, while $A_G=d_0-1$ is the $k=K_0$ endpoint of the Proposition I.13c.3 multiplicity menu rather than a closed theorem-level value. The pair is preregistered as a falsifiable benchmark; it carries test-lock status (the pair cannot be re-chosen after a rotation-curve comparison) but not the kernel-forward-lock status of derived backbone constants. The structural obstruction to a theorem-level derivation of $A_G$ is recorded in Remark I.13c, together with the floor-respecting menu that bounds it. The cluster parameters $(K,q,A_{\mathrm{PM}})$ remain outside this benchmark.
 
 **Proposition I.13b (Benchmark Kernel Form).** On the benchmark branch of Definition I.13a, Equation I.4 becomes
 $$
@@ -1292,7 +1293,53 @@ The branch is falsified if a forward-locked rotation-curve analysis requiring a 
 
 *Proof.* Substitute $A_G=d_0-1=7$ and $m=K_0=3$ from (I.13a.1) into Equation I.4. The final sentence is the direct falsification condition for a benchmark subbranch with a fixed parameter pair. ∎
 
-**Remark I.13c (No Capacity-Floor Derivation of $A_G$).** Equation E.9 has $G\propto\eta\delta^2/(\chi C_{\max})$ only after the remaining substrate parameters are fixed. It does not, by itself, imply $G_{\mathrm{large}}/G_0=d_0$. In particular, setting an effective $C_{\max}$ below the structural floor $\varepsilon_0=\ln2$ is not an admissible theorem-level derivation. The pair $(A_G,m)=(7,3)$ is therefore retained as a benchmark branch rather than a closed dark-sector theorem.
+**Remark I.13c (No Capacity-Floor Derivation of $A_G$).** Equation E.9 has $G\propto\eta\delta^2/(\chi C_{\max})$ only after the remaining substrate parameters are fixed. It does not, by itself, imply $G_{\mathrm{large}}/G_0=d_0$. In particular, setting an effective $C_{\max}$ below the structural floor $\varepsilon_0=\ln2$ is not an admissible theorem-level derivation. The pair $(A_G,m)=(7,3)$ is therefore retained as a benchmark branch rather than a closed dark-sector theorem. Definition I.13c.1 and Propositions I.13c.2--I.13c.3 record the branch-conditional route consistent with this floor: the steepness and the $L_0$ system map are fixed on the spatial-clock bridge branch, while the amplitude is confined to the multiplicative menu $2^j-1$, $1\le j\le K_0$, with no per-direction tracked capacity below $\varepsilon_0$.
+
+**Definition I.13c.1 (Spatial-Clock Bridge Branch).** On the acceleration-lock branch, a spatial-clock bridge branch registers: (1) the local sparsity variable
+$$
+s_{loc}:=\frac{\beta_\chi}{\chi_b}=\frac{\beta_\chi g_\Lambda}{|\nabla\Phi_b|}
+$$
+with a single dimensionless rate modulus $\beta_\chi>0$; (2) adoption of the exact power-clock branch of Remark K.9.5i as the static relaxation clock,
+$$
+\sigma_{loc}:=s_{loc}^{3/2};
+$$
+and (3) the Definition K.9.5b--Theorem K.9.5c response-cost selection for the static coupling, so that the Equation I.4 response is
+$$
+\varepsilon_G=A_G\left(1-e^{-\sigma_{loc}}\right),
+$$
+with the amplitude $A_G$ a separate branch input. The registrations (1)--(3) are branch premises in the sense of Convention P.14.1a; the branch inherits the acceleration-lock status of $g_\Lambda$ and additionally registers $\beta_\chi$ and the amplitude $A_G$.
+
+**Proposition I.13c.2 (Derived Steepness and the $L_0$ System Map).** On a Definition I.13c.1 branch with exterior Keplerian baryonic field $|\nabla\Phi_b|=GM_b/R^2$, where $M_b$ is the registered baryonic mass scale of the system,
+$$
+\sigma_{loc}=\left(\frac{\beta_\chi g_\Lambda R^2}{GM_b}\right)^{3/2}=\left(\frac{R}{L_0}\right)^{3},
+\qquad
+L_0=\sqrt{\frac{GM_b}{\beta_\chi g_\Lambda}}.
+\tag{I.13c.2.1}
+$$
+Hence Equation I.4 holds on this branch with derived steepness
+$$
+m=3=K_0=2n,
+$$
+twice the registered static clock exponent $n=3/2$, and with $L_0=\mathcal L(g_\Lambda,M_b)$ a dimensionally valid system map of the form required in Section I.6, carrying the mass datum $M_b$ and the exterior-Keplerian geometry datum; its validation certificate remains a separate obligation. The doubling $m=2n$ records that $s_{loc}$ is quadratic in $R$ through the Keplerian field, while the temporal clock is evaluated at the sparsity variable directly.
+
+*Proof.* Substituting the Keplerian field into the Definition I.13c.1 registration gives $s_{loc}=\beta_\chi g_\Lambda R^2/(GM_b)$, so
+$$
+\sigma_{loc}=s_{loc}^{3/2}=\left(\frac{\beta_\chi g_\Lambda}{GM_b}\right)^{3/2}R^{3},
+$$
+which equals $(R/L_0)^3$ if and only if $L_0^3=\left(GM_b/(\beta_\chi g_\Lambda)\right)^{3/2}$, that is $L_0=\sqrt{GM_b/(\beta_\chi g_\Lambda)}$; the quantity $GM_b/g_\Lambda$ has the dimensions of an area, so $L_0$ is a length. Comparing with Equation I.4 identifies the argument $(R/L_0)^m$ with $m=3$, and $3=K_0=2\cdot\tfrac32=2n$ by Proposition K.9.5h. ∎
+
+**Proposition I.13c.3 (Floor-Respecting Multiplicity Menu for the Amplitude).** Register the further premise that the sparse static response tracks the inverse product of independently composing per-direction retained distinguishabilities over $j$ participating interface directions, $1\le j\le K_0$, with each direction's tracked capacity running from the dense operating value $C_{\max}^{*}=2\varepsilon_0$ to the de Sitter floor $\varepsilon_0$, both as registered on the Definition K.9.5e capacity-tracking branch. Then the static enhancement is
+$$
+\frac{G_{\mathrm{large}}}{G_0}=\left(\frac{e^{2\varepsilon_0}}{e^{\varepsilon_0}}\right)^{j}=e^{j\varepsilon_0}=2^{j},
+\qquad
+A_G=2^{j}-1\in\{1,3,7\},
+\tag{I.13c.3.1}
+$$
+and no direction's tracked capacity falls below $\varepsilon_0$, so the Remark I.13c inadmissibility is never invoked. The endpoint $j=K_0$ gives $A_G=2^{K_0}-1=d_0-1$, the Definition I.13a benchmark amplitude, since $d_0=2^{K_0}=8$; the serialized case $j=1$ reproduces the temporal amplitude $A_c=1$ of Proposition K.9.5f. The selection of $j$ within the menu is an open adjudication, and a forward-locked universal-$(A_G,m)$ analysis excluding every member of the menu falsifies the product-tracking branch.
+
+*Proof.* Per direction, the ratio of dense to floor distinguishability is $e^{2\varepsilon_0}/e^{\varepsilon_0}=e^{\varepsilon_0}=2$, and the product over $j$ independent directions is $2^j$; with the inverse-distinguishability tracking of the registered premise, $G_{\mathrm{large}}/G_0=2^j$ and $A_G=2^j-1$, taking the values $1$, $3$, $7$ at $j=1,2,3$. Every direction's minimum tracked capacity is $\varepsilon_0$, which is the structural floor, so no sub-floor value occurs. The identities $2^{K_0}=2^3=8=d_0$ and $2^1-1=1=A_c$ give the endpoint and serialized statements by Definition I.13a and Proposition K.9.5f. The falsification sentence restates the exclusion condition for a finite menu. ∎
+
+For a field scaling $|\nabla\Phi_b|\propto R^{-p}$ and a registered power clock $\sigma_{loc}=s_{loc}^{n}$, the same substitution gives $m=pn$. A common $\beta_\chi$ and fixed $g_\Lambda$ therefore predict $L_0\propto\sqrt{M_b}$ in the exterior-Keplerian class. A redshift-invariant transition additionally requires a common, time-independent $\beta_\chi$, the same mass and geometry definitions, and a calibrated observable map. These are tested across the registered galaxy class.
 
 **Definition I.13d (Covariant Dark-Susceptibility and Effective-Action Certificate).** A covariant dark-susceptibility certificate is a finite record
 $$

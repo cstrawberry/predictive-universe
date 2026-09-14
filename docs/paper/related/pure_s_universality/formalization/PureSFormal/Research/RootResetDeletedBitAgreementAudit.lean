@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetDeletedBitAgreement
+
+#print axioms PureSFormal.Research.RootResetDeletedBitRows.valid
+#print axioms PureSFormal.Research.RootResetDeletedBitRows.inverts
+#print axioms PureSFormal.Research.RootResetDeletedBitRows.halt_boundary
+#print axioms PureSFormal.Research.RootResetDeletedBitRows.all_input
+#print axioms PureSFormal.Research.RootResetDeletedBitAgreement.Reads.path
+#print axioms PureSFormal.Research.RootResetDeletedBitAgreement.generated_path_runs

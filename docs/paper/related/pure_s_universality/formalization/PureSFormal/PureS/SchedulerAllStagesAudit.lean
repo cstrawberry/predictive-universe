@@ -1,0 +1,21 @@
+import PureSFormal.PureS.SchedulerAllStages
+
+#print axioms PureSFormal.PureS.SchedulerRecurrence.stageSourceConfiguration_erase
+#print axioms PureSFormal.PureS.SchedulerRecurrence.two_mul_cumulativeLayers
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveCertificateData.ofCompletedParents
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveCertificateData.ofTerminalShape
+#print axioms PureSFormal.PureS.SchedulerRecurrence.positivePrefix_of_exactChain
+#print axioms PureSFormal.PureS.SchedulerRecurrence.positivePrefix_of_terminalShape
+#print axioms PureSFormal.PureS.SchedulerRecurrence.StageSegment.length_positive
+#print axioms PureSFormal.PureS.SchedulerRecurrence.StageSegment.nextSource_erase
+#print axioms PureSFormal.PureS.SchedulerRecurrence.initialPreludeChain
+#print axioms PureSFormal.PureS.SchedulerRecurrence.initialPreludeSampled
+#print axioms PureSFormal.PureS.SchedulerRecurrence.StageSegment.toExistentialAdvance
+#print axioms PureSFormal.PureS.SchedulerRecurrence.StageSegment.contractionRun_checkpoint
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveStages.first
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveStages.extend
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveStages.checkpointDecode
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveStages.nextSource_erase
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveStages.toExistentialAdvancePrefix
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveStages.contractionRun_checkpoint
+#print axioms PureSFormal.PureS.SchedulerRecurrence.PositiveStages.contractionRun_checkpointDecode

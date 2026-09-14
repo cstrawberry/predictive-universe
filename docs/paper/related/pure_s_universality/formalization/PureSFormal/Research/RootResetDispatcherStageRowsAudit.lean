@@ -1,0 +1,12 @@
+import PureSFormal.Research.RootResetDispatcherStageRows
+
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.row_sound
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.row_complete
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.rows_selected_exact
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.rows_sound
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.all_input
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.generated_shape
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.generated_initial
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.generated_route_entry
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetDispatcherStageRows.erase_run

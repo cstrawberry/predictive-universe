@@ -1,0 +1,14 @@
+import PureSFormal.PureS.ParserEnvelopePrimitive
+
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.carrier_value
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.carrier_operations_le
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.environment_value
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.environment_operations_le
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.environment_payload_lt
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.seedWord_value
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.seedWord_operations_le
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.zeroThen_value
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.zeroThen_operations_le
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.generator_value
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.generator_operations_bound
+#print axioms PureSFormal.PureS.ParserEnvelopePrimitive.generator_operations_le

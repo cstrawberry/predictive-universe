@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetEmptySweepSelectorChain
+
+open PureSFormal.Research.RootResetEmptySweepSelectorChain
+
+#print axioms markedExit_false_decode
+#print axioms markedOrigin_frame_selectorChain
+#print axioms markedOrigin_pendingSweep_selectorChain

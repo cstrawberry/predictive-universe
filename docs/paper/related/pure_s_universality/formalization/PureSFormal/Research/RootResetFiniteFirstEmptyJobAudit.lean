@@ -1,0 +1,4 @@
+import PureSFormal.Research.RootResetFiniteFirstEmptyJob
+#print axioms PureSFormal.Research.RootResetFiniteFirstEmptyJob.selected_marked
+#print axioms PureSFormal.Research.RootResetFiniteFirstEmptyJob.selected_empty_cleanup
+#print axioms PureSFormal.Research.RootResetFiniteFirstEmptyJob.selectedSweepWitness

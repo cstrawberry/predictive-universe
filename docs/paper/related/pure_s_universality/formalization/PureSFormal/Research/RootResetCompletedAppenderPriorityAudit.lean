@@ -1,0 +1,10 @@
+import PureSFormal.Research.RootResetCompletedAppenderPriority
+
+open PureSFormal.Research.RootResetCompletedAppenderPriority
+
+#print axioms actionParser_nonfinal_row_none
+#print axioms parseLocal_none_of_nonfinalAppender
+#print axioms completedAppender_stage_final
+#print axioms completedAppender_focus_contract_none
+#print axioms completedAppender_prefixed_contract_none
+#print axioms responseAppenderSelection_none_of_completed_noPending

@@ -1,0 +1,15 @@
+import PureSFormal.Research.RootResetEmptyPostMarkerHandoff
+
+open PureSFormal.Research.RootResetEmptyPostMarkerHandoff
+
+#print axioms pending_succ_innermost
+#print axioms noFresh_pending_marked
+#print axioms noFresh_marked_pending_marked
+#print axioms pendingMarked_address
+#print axioms markedPrefix_pendingMarked_address
+#print axioms exit_not_six
+#print axioms exit_freshCall_false
+#print axioms selectStep?_marked_pending_exit
+#print axioms seekMutation_unique
+#print axioms emptyResponse_first_erase
+#print axioms postMarker_firstFrame_selectorChain

@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetPersistentSelector
+
+#print axioms PureSFormal.Research.RootResetPersistentSelector.selection?
+#print axioms PureSFormal.Research.RootResetPersistentSelector.selectAddress?
+#print axioms PureSFormal.Research.RootResetPersistentSelector.selectStep?
+#print axioms PureSFormal.Research.RootResetPersistentSelector.selection?_contracts
+#print axioms PureSFormal.Research.RootResetPersistentSelector.selectStep?_sound

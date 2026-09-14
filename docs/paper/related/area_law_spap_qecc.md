@@ -1,396 +1,481 @@
-## Derivation of the Bekenstein–Hawking Area Law from a SPAP-Incorporating Holographic Code
-
-**Abstract**
-
-We propose a derivation pathway for the Bekenstein–Hawking Area Law [Bekenstein 1973; Hawking 1975] within the Predictive Universe (PU) framework, utilizing a quantum error-correcting code (QECC) implemented via a hyperbolic tensor network. This SPAP-QECC lattice occupies a (3+1)-dimensional bulk, with spatial slices tiled hyperbolically. Crucially, each bulk tensor incorporates the irreducible $k_B \ln 2$ entropy generation step associated with the logical state merging inherent in the Self-Prediction / Anti-Prediction (SPAP) cycle (derived in PU Appendix J). Analyzing the geometric scaling relating bulk node density to boundary area, we introduce the Capacity-Erasure Balance Hypothesis (Hypothesis 5.1), which posits that the classical capacity of the emergent boundary channel (limited by PU's ND-RID dynamics) must match the information erasure rate density originating from the bulk SPAP events for thermodynamic consistency. Conditional on this hypothesis, the existence of a suitable erasure-tolerant SPAP-QECC (Assumption 2.2) [Pastawski et al. 2015], and idealized geometric factors (Assumption 6.1), we demonstrate that the total entropy associated with the boundary scales linearly with its area $\mathcal{A}$, precisely reproducing the Bekenstein–Hawking formula $S_{\text{BH}} = k_B \mathcal{A} / (4 L_P^2)$, including the factor of $1/4$. This provides a candidate microscopic origin for gravitational entropy rooted in fundamental logical irreversibility and holographic information processing [Susskind 1995; 't Hooft 1993], contingent on the specified hypotheses.
-
-
-
-**0. Notation and Constants**
-
-| Symbol                             | Meaning                                                                           | Base Unit / Type | Reference          |
-| :--------------------------------- | :-------------------------------------------------------------------------------- | :--------------- | :----------------- |
-| $\{p,q,r\}$                        | Regular hyperbolic tiling parameters for 3D spatial slice (e.g., $\{5,3,4\}$).        | Dimensionless    | Section 1        |
-| $\ell$                             | Proper length scale of tiling edges/cells (identified with MPU spacing $\delta$).   | Length           | Section 1        |
-| $\mathcal{A}$                       | Area of a 2D boundary surface segment.                                             | Length$^2$       | Definition 1.1   |
-| $k_B$                              | Boltzmann constant.                                                                 | Energy/Temp      | Standard         |
-| $S_{\text{erase}}$                 | Entropy generated per SPAP erasure cycle at a bulk node ($= k_B \ln 2$).           | Energy/Temp      | Lemma 3.1 |
-| $c_{\text{geom}}^{(3D)}$            | Dimensionless geometric ratio: (Bulk nodes relevant to boundary) / ($\mathcal{A}/\ell^2$). | Dimensionless    | Lemma 1.2        |
-| $C_{\max}$                         | Classical capacity per boundary link of the effective ND-RID channel (nats).         | Dimensionless    | Thm E.2 (App E)  |
-| $L_P$                              | Planck length ($\sqrt{G\hbar/c^3}$).                                               | Length           | Standard         |
-| $\eta, \chi$                       | Geometric packing and correlation factors in PU relation for $G$.                 | Dimensionless    | Equation E.9 (App E)  |
-
-Natural units $\hbar=c=1$ are employed unless otherwise specified, implying $L_P^2 = G$.
-
-
-**1. Geometry of the Hyperbolic Tiling**
-
-We model a constant-time spatial slice of the bulk spacetime using a regular tiling $\{p,q,r\}$ of 3D hyperbolic space $\mathbb{H}^3$. The fundamental lattice scale (edge length) $\ell$ is identified with the characteristic MPU spacing $\delta$ emerging from the PCE optimization (Appendix D).
-
-**Definition 1.1 (Bulk Region and Boundary).** Let $R$ be a connected region within the hyperbolic tiling, composed of $N(R)$ fundamental cells (nodes). Its boundary $\partial R$ is a closed 2D surface whose area is $\mathcal{A}$. The area is discretized into units of $\sim \ell^2$ associated with boundary links or plaquettes.
-
-**Lemma 1.2 (Bulk Node Density Relative to Boundary Area).** For large regions ($\mathcal{A}/\ell^2 \to \infty$), the number of bulk nodes $N(R)$ whose causal future or past intersects the boundary region $\partial R$ (or lie within the entanglement wedge associated with $\partial R$ [Ryu & Takayanagi 2006]) scales linearly with the boundary area $\mathcal{A}$. The constant of proportionality defines the dimensionless geometric density factor $c_{\text{geom}}^{(3D)}$:
-$$
-N(R) = c_{\text{geom}}^{(3D)} \frac{\mathcal{A}}{\ell^2} + o(\mathcal{A}/\ell^2) \quad (1.1)
-$$
-The value $c_{\text{geom}}^{(3D)}$ is an $\mathcal{O}(1)$ constant determined purely by the hyperbolic geometry $\{p,q,r\}$ and the specific bulk-boundary correspondence adopted (e.g., minimal surfaces defining entanglement wedges). Its existence relies on the area-law scaling of entanglement entropy or causal connections in such geometries [Bombelli et al. 1986; Srednicki 1993].
-
-
-
-**2. The SPAP-QECC Lattice**
-
-We hypothesize that the emergent bulk dynamics can be effectively modeled by a tensor network [Orús 2014] where each tensor incorporates the fundamental logical irreversibility of the SPAP cycle.
-
-**Definition 2.1 (SPAP-Incorporating Tensor).** A tensor $T$ associated with a bulk node (cell) is SPAP-Incorporating if its action as a quantum channel includes:
-(i) Unitary evolution corresponding to the reversible logic of the SPAP cycle acting on a dedicated internal subspace (dimension $\ge 2^{K_0}=8$, corresponding to $K_0=3$ bits).
-(ii) A deterministic trace-out (partial trace) operation over the effective ancilla degree(s) of freedom within this subspace, representing the irreversible erasure required for cyclic operation (corresponding to the $\varepsilon \ge \ln 2$ cost derived in PU Appendix J).
-(iii) Standard unitary evolution or identity maps on other input/output legs, consistent with propagating quantum information through the network.
-
-**Assumption 2.2 (SPAP-QECC Existence and Properties).** We assume that a tensor network constructed from SPAP-Incorporating Tensors, tiled according to the hyperbolic geometry $\{p,q,r\}$, can form a valid Quantum Error-Correcting Code (QECC) [Nielsen & Chuang 2010]. Specifically, this **SPAP-QECC** must possess holographic properties:
-(i) Logical information encoded deep within the bulk region $R$ can be decoded or reconstructed by operators acting solely on the boundary region $\partial R$.
-(ii) The code is tolerant to the continuous, local erasure of the SPAP ancilla degrees of freedom occurring at every node in the bulk [Grassl et al. 1997].
-*Justification Note:* While constructing such codes explicitly is complex, the general existence of holographic QECCs (like the HaPPY code [Pastawski et al. 2015]) and codes tolerant to erasure noise is established in quantum information theory. We assume here that the PU framework, driven by PCE optimization which favors robust information processing, leads to emergent structures with these necessary QECC properties. The continuous SPAP erasure represents a specific, structured noise model that the emergent code must handle.
-
-
-
-**3. Entropy Generation from SPAP Erasure**
-
-The irreversible step defined within the SPAP-Incorporating Tensor has direct thermodynamic consequences.
-
-**Lemma 3.1 (Minimal Erasure Entropy).** Each local application of the SPAP-Incorporating tensor at a bulk node, specifically the erasure of the ancilla degree(s) of freedom required by the SPAP cycle logic, generates a minimal thermodynamic entropy $S_{\text{erase}}$ given by Landauer's principle [Landauer 1961] applied to the inherent 2-to-1 logical state merging. As rigorously derived in PU Appendix J (Theorem J.1):
-$$
-S_{\text{erase}} = k_B \ln 2 \quad (3.1)
-$$
-This entropy represents dissipated heat or information transferred to inaccessible degrees of freedom (the environment, or outgoing radiation modes from the node) [Bennett 1973].
-
-**(Computational Verification)**
-The provided Python code simulates the SPAP channel (unitary logic + ancilla reset) acting on a maximally mixed 3-qubit state. The calculation verifies that the von Neumann entropy decreases by exactly 1 bit (i.e., $\ln 2$ nats), confirming the expected information loss and associated Landauer cost for this minimal erasure process.
-```python
-"""
-Apply the SPAP node channel (reversible logic + ancilla reset) to a maximally
-mixed 3-qubit state and show that the von-Neumann entropy decreases by exactly
-one bit – the Landauer cost of erasing one qubit.
-"""
-
-import numpy as np
-from typing import Sequence
-
-# ------------------------------------------------------------------
-# Constants and qubit labels
-# ------------------------------------------------------------------
-N_QUBITS = 3
-QUBIT_S  = 0   # signal
-QUBIT_P  = 1   # predictor
-QUBIT_C  = 2   # ancilla (reset)
-
-# ------------------------------------------------------------------
-# Partial trace utility
-# ------------------------------------------------------------------
-
-def partial_trace(rho: np.ndarray, keep: Sequence[int], dims: Sequence[int]) -> np.ndarray:
-    """Trace out all subsystems not listed in `keep`."""
-    keep       = sorted(keep)
-    trace_list = [i for i in range(len(dims)) if i not in keep]
-    if not trace_list: # No subsystems to trace out
-        return rho
-
-    rho_t  = rho.reshape(dims + dims)
-    num_qubits = len(dims)
-    
-    rho_tensor = rho_t
-    qubits_left = list(range(num_qubits))
-    
-    for qubit_to_trace in sorted(trace_list, reverse=True):
-        # Find the current index of the qubit to trace
-        try:
-            trace_axis = qubits_left.index(qubit_to_trace)
-        except ValueError:
-             # Qubit already traced out in a previous step
-             continue 
-             
-        # Trace out the qubit
-        rho_tensor = np.trace(rho_tensor, axis1=trace_axis, axis2=trace_axis + len(qubits_left))
-        
-        # Update the list of remaining qubits
-        qubits_left.pop(trace_axis)
-
-    final_dim = 1 << len(keep)
-    return rho_tensor.reshape(final_dim, final_dim)
-
-# ------------------------------------------------------------------
-# Embed a k-qubit gate in an n-qubit register
-# ------------------------------------------------------------------
-
-def embed_gate(gate: np.ndarray, targets: Sequence[int], n_total: int) -> np.ndarray:
-    k = len(targets)
-    if gate.shape != (1 << k, 1 << k):
-        raise ValueError(f"Gate size {gate.shape} != {(1<<k, 1<<k)}.")
-
-    targets   = list(targets)
-    other_qs  = [q for q in range(n_total) if q not in targets]
-    perm      = targets + other_qs
-    inv_perm  = np.argsort(perm)
-
-    # Create identity for non-target qubits
-    ident_other = np.eye(1 << (n_total - k), dtype=complex)
-    
-    # Combine gate and identity using Kronecker product in the permuted order
-    if not targets: # Handle case of 0 targets (identity)
-       full_gate_perm = np.eye(1 << n_total, dtype=complex)
-    elif not other_qs: # Handle case where gate acts on all qubits
-       full_gate_perm = gate
-    else:
-       full_gate_perm = np.kron(gate, ident_other)
-    
-    # Permute rows and columns to match original qubit order
-    dim = 1 << n_total
-    full_gate = np.zeros((dim, dim), dtype=complex)
-    
-    # Apply permutation P such that P|psi> = |psi_perm>
-    # We want P G_perm P_dagger, which acts like G on original basis
-    # This is equivalent to P G_perm P^{-1} since P is unitary (permutation)
-    # Row permutation: i -> perm[i]
-    # Column permutation: j -> perm[j]
-    
-    # Simpler way: construct permutation matrix
-    P = np.zeros((dim, dim))
-    for i in range(dim):
-        # Convert i to bitstring, permute bits, convert back to integer j
-        bits_i = [(i >> bit) & 1 for bit in range(n_total)]
-        bits_j_perm = [bits_i[p] for p in perm]
-        j = sum(b << bit for bit, b in enumerate(bits_j_perm))
-        P[j, i] = 1
-
-    # Apply similarity transform: P G_perm P^T (since P is real)
-    full_gate = P.T @ full_gate_perm @ P
-    
-    return full_gate
-
-# ------------------------------------------------------------------
-# Basic gates
-# ------------------------------------------------------------------
-X = np.array([[0, 1],
-              [1, 0]], dtype=complex)
-
-CNOT = np.array([[1, 0, 0, 0],
-                 [0, 1, 0, 0],
-                 [0, 0, 0, 1],
-                 [0, 0, 1, 0]], dtype=complex)
-
-ket0  = np.array([[1], [0]], dtype=complex)
-proj0 = ket0 @ ket0.conj().T                       # |0><0|
-
-# ------------------------------------------------------------------
-# Reversible SPAP unitary   U_rev = U_update @ U_predict
-# U_predict = CNOT_{S→P} (Target P controlled by S)
-# U_update  = X_S          (Apply NOT to S)
-# Note: The original description implied U_update = X_s controlled by Q_p,
-# which realizes phi = NOT(prediction). Let's stick to the code's logic
-# where prediction=phi_t, stored in p, then phi_{t+1} = NOT(phi_t).
-# The *effect* of the sequence U_update @ U_predict is:
-# |s, p, c> -> CNOT -> |s, p XOR s, c> -> X_s -> |NOT s, p XOR s, c>
-# If p starts at 0, |s, 0, c> -> |NOT s, s, c>. Prediction p=s is stored, state becomes NOT s. Matches logic.
-# ------------------------------------------------------------------
-# CNOT with control=S (0), target=P (1)
-U_predict = embed_gate(CNOT, (QUBIT_S, QUBIT_P), N_QUBITS) 
-# NOT on S (0)
-U_update  = embed_gate(X,    (QUBIT_S,),        N_QUBITS)
-# The actual SPAP logic often described is: phi_{t+1} = NOT(prediction), 
-# where prediction = phi_t. So apply CNOT to copy phi_t to prediction qubit p,
-# then apply X to phi_t.
-U_rev     = U_update @ U_predict
-
-# ------------------------------------------------------------------
-# SPAP channel  (unitary then ancilla reset)
-# ------------------------------------------------------------------
-
-def spap_channel(rho_in: np.ndarray) -> np.ndarray:
-    # Apply the reversible unitary part
-    rho_ev = U_rev @ rho_in @ U_rev.conj().T
-    
-    # Trace out the ancilla (QUBIT_C = 2)
-    rho_sp = partial_trace(rho_ev, keep=[QUBIT_S, QUBIT_P], dims=[2]*N_QUBITS)
-    
-    # Tensor product with the reset ancilla state |0><0|
-    reset_ancilla_state = proj0
-    
-    # Ensure rho_sp has the correct dimensions (4x4)
-    dim_sp = 1 << (N_QUBITS - 1)
-    if rho_sp.shape != (dim_sp, dim_sp):
-         raise ValueError(f"Partial trace result has wrong shape: {rho_sp.shape}, expected {(dim_sp, dim_sp)}")
-
-    # Ensure reset_ancilla_state has the correct dimensions (2x2)
-    dim_anc = 1 << 1
-    if reset_ancilla_state.shape != (dim_anc, dim_anc):
-         raise ValueError(f"Reset ancilla state has wrong shape: {reset_ancilla_state.shape}, expected {(dim_anc, dim_anc)}")
-         
-    # Combine using Kronecker product
-    rho_out = np.kron(rho_sp, reset_ancilla_state)
-    
-    return rho_out
-
-# ------------------------------------------------------------------
-# Von-Neumann entropy (bits)
-# ------------------------------------------------------------------
-
-def vN_entropy(rho: np.ndarray, tol=1e-12) -> float:
-    # Ensure rho is Hermitian for eigvalsh
-    rho_herm = (rho + rho.conj().T) / 2
-    eig = np.linalg.eigvalsh(rho_herm)
-    # Filter out eigenvalues very close to zero or negative due to precision
-    eig = eig[eig > tol]
-    if eig.size == 0:
-        return 0.0
-    # Ensure eigenvalues sum to 1 (or close enough) after filtering
-    norm = np.sum(eig)
-    if not np.isclose(norm, 1.0, atol=tol*len(eig)):
-       # This might indicate an issue if the sum is far from 1
-       # print(f"Warning: Eigenvalues after filtering sum to {norm}")
-       pass # Normalize anyway for entropy calculation
-    
-    eig /= norm # Normalize remaining eigenvalues
-    return float(-np.sum(eig * np.log2(eig)))
-
-# ------------------------------------------------------------------
-# Verification
-# ------------------------------------------------------------------
-if __name__ == "__main__":
-    dim     = 1 << N_QUBITS
-    rho_in  = np.eye(dim, dtype=complex) / dim       # maximally mixed input
-    
-    # Apply the channel
-    rho_out = spap_channel(rho_in)
-
-    # Calculate entropies
-    S_in  = vN_entropy(rho_in)
-    S_out = vN_entropy(rho_out)
-
-    # Check the final state of the ancilla qubit
-    anc_state = partial_trace(rho_out, keep=[QUBIT_C], dims=[2]*N_QUBITS)
-    
-    # Use a tolerance for comparing the ancilla state
-    tolerance = 1e-10
-    is_ancilla_reset = np.allclose(anc_state, proj0, atol=tolerance)
-    
-    print(f"SPAP Channel Verification:")
-    print(f"--------------------------")
-    print(f"Initial state entropy S_in  = {S_in:.4f} bits (Expected 3.0 for maximally mixed 3 qubits)")
-    print(f"Final state entropy   S_out = {S_out:.4f} bits (Expected 2.0 after 1 qubit erasure)")
-    print(f"Entropy change        ΔS    = {S_in - S_out:.4f} bits (Expected 1.0000)")
-    print(f"Ancilla reset to |0><0|?    {is_ancilla_reset} (using tolerance {tolerance})")
-    print(f"Trace preserved?             {np.isclose(np.trace(rho_out), 1.0)}")
-
-    # Assertions for automated checking
-    assert np.isclose(S_in, 3.0, atol=1e-10), "Initial entropy calculation failed"
-    assert np.isclose(S_out, 2.0, atol=1e-10), "Final entropy calculation failed"
-    assert np.isclose(S_in - S_out, 1.0, atol=1e-10), "Entropy difference is not 1 bit"
-    assert is_ancilla_reset, f"Ancilla state not close to |0><0|. Got:\n{anc_state}"
-    assert np.isclose(np.trace(rho_out), 1.0), "Trace not preserved"
-    
-    print("\nVerification successful.")
-```
-
-**4. Total Boundary Entropy Flux Calculation**
-
-The entropy continuously generated within the bulk region $R$ must effectively flow across or be accounted for by the degrees of freedom at the boundary $\partial R$.
-
-**Proposition 4.1 (Total Thermodynamic Entropy Flux).** Assuming the entropy $S_{\text{erase}}$ generated at each bulk node within region $R$ effectively contributes to the entropy budget associated with the boundary $\partial R$, the total thermodynamic entropy $S_{therm}$ associated with the boundary area $\mathcal{A}$ scales as:
-$$
-S_{therm}(\mathcal{A}) = N(R) \times S_{\text{erase}} = \left( c_{\text{geom}}^{(3D)} \frac{\mathcal{A}}{\ell^2} \right) k_B \ln 2 \quad (4.1)
-$$
-The entropy per unit area is therefore:
-$$
-\frac{S_{therm}(\mathcal{A})}{\mathcal{A}} = \frac{k_B c_{\text{geom}}^{(3D)} \ln 2}{\ell^2} \quad (4.2)
-$$
-*Proof.* Follows directly by multiplying the number of relevant bulk nodes $N(R)$ from Lemma 1.2 by the entropy generation per node $S_{\text{erase}}$ from Lemma 3.1. This represents the total rate density of entropy generation behind the boundary that needs to be balanced or accounted for by the boundary dynamics for a consistent thermodynamic description.∎
-
-
-**5. Boundary Channel Capacity and Capacity-Erasure Balance**
-
-We connect the bulk entropy generation to the information capacity of the boundary, invoking the fundamental limits derived from the ND-RID dynamics governing interactions in the PU framework.
-
-*   **Boundary Channel Capacity $C_{max}$:** As established in PU Appendix E (Theorem E.2), the underlying ND-RID interactions defining the MPU network have a strictly limited classical information capacity $C_{max}$ (in nats, dimensionless) per effective interaction channel or degree of freedom. This capacity is bounded $C_{max} < \ln d_0$ due to the fundamental irreversibility $\varepsilon \ge \ln 2$ (Theorem 31) leading to strict channel contractivity $f_{RID} < 1$ (Lemma E.1). This $C_{max}$ represents the maximum rate at which distinguishable information can be reliably processed or transmitted across any boundary within the network, per effective channel [Holevo 1998; Schumacher & Westmoreland 1997]. We interpret this as the capacity **per boundary link** (associated with area $\ell^2$).
-
-*   **Hypothesis 5.1 (Capacity-Erasure Balance).** For a consistent holographic description arising from the PCE-optimized SPAP-QECC, the classical information capacity $C_{\max}$ available per boundary link must precisely balance the rate density of information erasure occurring in the corresponding bulk wedge. We hypothesize the equality:
-    $$
-    C_{\max} = c_{\text{geom}}^{(3D)} \ln 2 \quad (5.1)
-    $$
-*   **Justification:** This hypothesis posits a fundamental consistency condition required by the Principle of Compression Efficiency (PCE). The boundary degrees of freedom, operating at their maximum ND-RID limited capacity $C_{max}$ per link, must be able to fully account for or process the information related to the irreducible erasure events ($k_B \ln 2$ entropy, corresponding to $\ln 2$ nats of information loss per event) occurring in the bulk region they encode ($c_{geom}^{(3D)}$ events per boundary link area $\ell^2$). If $C_{max}$ were less than the erasure rate density, information related to bulk processes would be irretrievably lost at the boundary, violating the QECC property (Assumption 2.2) needed for coherent prediction and potentially leading to inconsistencies penalized by PCE. If $C_{max}$ were greater, it would imply excess capacity, an inefficient use of resources disfavored by PCE. Thus, PCE drives the system towards an equilibrium where the boundary channel capacity matches the irreducible information processing load imposed by the bulk dynamics, leading to the balance expressed in Equation (5.1). This hypothesis connects the microscopic irreversibility cost ($\ln 2$) to the macroscopic channel limit ($C_{max}$) via the emergent geometry ($c_{geom}^{(3D)}$). We proceed conditional on this hypothesis.
-
-
-**6. Emergent Planck Length from PU Consistency**
-
-The PU framework provides an independent derivation for the emergent Planck length $L_P^2 = G$ based on the relationship between boundary entropy density and channel capacity. From PU Appendix E (**Equation E.10** in natural units, or the principle leading to **Equation E.7** which relates the microscopic parameter group involving $\sigma_{eff_link}$ and $C_{max}$ to $1/(4L_P^2)$ when combining the Area Law definition $S = k_B \mathcal{A} / (4L_P^2)$ with the microscopic entropy expression $S_{max} = N_{eff_links} S_{channel}^{max}$):
-$$
-\frac{1}{4 L_P^2} = \frac{\sigma_{eff_link} C_{\max}}{k_B} = \frac{1}{k_B} \left(\frac{\chi}{\eta \ell^2}\right) (k_B C_{\max}) = \frac{\chi C_{\max}}{\eta \ell^2} \quad (6.1)
-$$
-where $C_{\max}$ is the dimensionless capacity in nats per effective boundary link, $\ell$ is the MPU spacing ($\delta$), and $\eta, \chi$ are $\mathcal{O}(1)$ geometric packing and correlation factors.
-
-**Assumption 6.1 (Ideal Geometric Factors).** For the highly regular SPAP-QECC lattice model considered here, we assume that the emergent structure is sufficiently optimized by PCE such that effective correlations are minimal ($\chi \approx 1$) and the geometric packing relative to the boundary area is ideal ($\eta \approx 1$). This simplification yields $\eta\chi = 1$.
-*Justification Note:* This assumption posits that PCE, in driving the system towards geometric regularity (Theorem 43), also optimizes local information transfer efficiency at boundaries, suppressing correlations and non-ideal packing effects that would reduce the effective channel density. It is a simplifying assumption for this model.
-
-Under Assumption 6.1, the PU consistency relation becomes:
-$$
-\frac{1}{4 L_P^2} = \frac{C_{\max}}{\ell^2} \quad (6.2)
-$$
-Now, crucially, we substitute the Capacity-Erasure Balance (Hypothesis 5.1, Equation 5.1) into this PU relation:
-$$
-\frac{1}{4 L_P^2} = \frac{c_{\text{geom}}^{(3D)} \ln 2}{\ell^2} \quad (6.3)
-$$
-This equation provides a direct link between the emergent Planck scale $L_P$ (and thus $G$) and the microscopic parameters of the SPAP-QECC model: the fundamental lattice scale $\ell$, the universal SPAP erasure cost $\ln 2$, and the dimensionless geometric factor $c_{geom}^{(3D)}$.
-
-
-
-**7. Derivation of the Bekenstein–Hawking Formula**
-
-The final step is to demonstrate the equality between the thermodynamic entropy density calculated from the bulk SPAP erasures (Proposition 4.1) and the Bekenstein-Hawking entropy density defined via the emergent Planck length determined by Equation (6.3).
-
-From Proposition 4.1 (Equation 4.2), the thermodynamic entropy density is:
-$$
-\frac{S_{therm}(\mathcal{A})}{\mathcal{A}} = \frac{k_B c_{\text{geom}}^{(3D)} \ln 2}{\ell^2} \quad (*)
-$$
-The Bekenstein-Hawking entropy density is universally defined as $S_{BH}/\mathcal{A} = k_B / (4 L_P^2)$. Using Equation (6.3), which fixes $1/(4L_P^2)$ based on Hypothesis 5.1 and Assumption 6.1 within the PU framework:
-$$
-\frac{S_{BH}(\mathcal{A})}{\mathcal{A}} = k_B \left( \frac{1}{4 L_P^2} \right) = k_B \left( \frac{c_{\text{geom}}^{(3D)} \ln 2}{\ell^2} \right) \quad (**)
-$$
-Comparing equations (*) and (**), we find they are identical:
-$$
-\frac{S_{therm}(\mathcal{A})}{\mathcal{A}} = \frac{S_{BH}(\mathcal{A})}{\mathcal{A}}
-$$
-Therefore, the total thermodynamic entropy associated with the boundary matches the Bekenstein-Hawking formula:
-$$
-S_{therm}(\mathcal{A}) = \frac{k_B \mathcal{A}}{4 L_P^2} \quad (7.1)
-$$
-
-**Conclusion of Derivation:** We have shown that, conditional on the Capacity-Erasure Balance Hypothesis (Hypothesis 5.1), the assumed existence and properties of the SPAP-QECC (Assumption 2.2), and the assumption of ideal geometric and correlation factors ($\eta\chi=1$, Assumption 6.1), the thermodynamic entropy arising from the fundamental SPAP logical irreversibility within a holographic QECC structure precisely yields the Bekenstein–Hawking Area Law, including the factor of $1/4$. The derivation connects the microscopic cost of self-prediction ($\ln 2$) to macroscopic gravitational entropy via geometric scaling and information-theoretic consistency conditions imposed by the PU framework.
-
-
-**8. Discussion**
-
-This derivation provides a candidate microscopic explanation for the Bekenstein-Hawking Area Law originating from the core principles of the Predictive Universe framework. It posits that gravitational entropy is fundamentally thermodynamic entropy generated by the irreducible computational cost ($\varepsilon = \ln 2$) associated with the SPAP cycle logic inherent in the underlying MPU substrate, realized within a holographic quantum error-correcting code structure. The factor of $1/4$ emerges naturally from the consistency between the PU framework's definition of the emergent Planck scale (linked to boundary channel capacity $C_{max}$) and the hypothesized equality between this capacity and the density of bulk SPAP erasures.
-
-The derivation's rigor depends critically on establishing the validity of Hypothesis 5.1 (Capacity-Erasure Balance) and Assumption 2.2 (SPAP-QECC Existence/Properties) from more fundamental PU principles or potentially from advances in holographic tensor network theory incorporating dissipation [Almheiri et al. 2015]. Assumption 6.1 ($\eta\chi=1$) represents a simplification for this model, requiring verification or refinement.
-
-Subject to these crucial conditions, the SPAP-QECC model offers a compelling narrative: the fabric of spacetime, emerging from the predictive MPU network, acts like a vast quantum error-correcting code. The thermodynamic cost of the network's fundamental self-predictive processing ($\varepsilon = \ln 2$ per cycle per effective node) manifests as the entropy associated with causal boundaries (horizons), with the relationship dictated by holographic principles [Bousso 2002] and the information capacity limits ($C_{max}$) imposed by the underlying irreversible ND-RID dynamics. This work strongly suggests that the entropy of horizons is directly tied to the fundamental computational and thermodynamic costs of the processes constituting spacetime itself. It provides a concrete mechanism supporting the derivation of the Area Law (Theorem 49) and emergent gravity (Section 12) presented in the main PU paper. Further research is needed to rigorously derive the central Capacity-Erasure Balance hypothesis from POP/PCE optimization principles or demonstrate its necessity for the self-consistency of holographic QECCs with intrinsic dissipation.
-
-
-**References**
-
-*   Almheiri, A., Dong, X., & Harlow, D. (2015). Bulk Locality and Quantum Error Correction in AdS/CFT. *Journal of High Energy Physics*, *2015*(4), 163. DOI: 10.1007/JHEP04(2015)163
-*   Bekenstein, J. D. (1973). Black holes and entropy. *Physical Review D*, *7*(8), 2333–2346. DOI: 10.1103/PhysRevD.7.2333
-*   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
-*   Bombelli, L., Koul, R. K., Lee, J., & Sorkin, R. D. (1986). Quantum source of entropy for black holes. *Physical Review D*, *34*(2), 373–383. DOI: 10.1103/PhysRevD.34.373
-*   Bousso, R. (2002). The holographic principle. *Reviews of Modern Physics*, *74*(3), 825–874. DOI: 10.1103/RevModPhys.74.825
-*   Grassl, M., Beth, T., & Pellizzari, T. (1997). Codes for the quantum erasure channel. *Physical Review A*, *56*(1), 33–38. DOI: 10.1103/PhysRevA.56.33
-*   Hawking, S. W. (1975). Particle creation by black holes. *Communications in Mathematical Physics*, *43*(3), 199–220. DOI: 10.1007/BF02345020
-*   Holevo, A. S. (1998). The capacity of the quantum channel with general signal states. *IEEE Transactions on Information Theory*, *44*(1), 269–273. DOI: 10.1109/18.651037
-*   Landauer, R. (1961). Irreversibility and heat generation in the computing process. *IBM Journal of Research and Development*, *5*(3), 183–191. DOI: 10.1147/rd.53.0183
-*   Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary ed.). Cambridge University Press.
-*   Orús, R. (2014). A practical introduction to tensor networks: Matrix product states and projected entangled pair states. *Annals of Physics*, *349*, 117–158. DOI: 10.1016/j.aop.2014.06.013
-*   Pastawski, F., Yoshida, B., Harlow, D., & Preskill, J. (2015). Holographic quantum error-correcting codes: Toy models for the bulk/boundary correspondence. *Journal of High Energy Physics*, *2015*(6), 149. DOI: 10.1007/JHEP06(2015)149
-*   Ryu, S., & Takayanagi, T. (2006). Holographic derivation of entanglement entropy from AdS/CFT. *Physical Review Letters*, *96*(18), 181602. DOI: 10.1103/PhysRevLett.96.181602
-*   Schumacher, B., & Westmoreland, M. D. (1997). Sending classical information via noisy quantum channels. *Physical Review A*, *56*(1), 131–138. DOI: 10.1103/PhysRevA.56.131
-*   Srednicki, M. (1993). Entropy and area. *Physical Review Letters*, *71*(5), 666–669. DOI: 10.1103/PhysRevLett.71.666
-*   Susskind, L. (1995). The world as a hologram. *Journal of Mathematical Physics*, *36*(11), 6377–6396. DOI: 10.1063/1.531249
-*   't Hooft, G. (1993). Dimensional reduction in quantum gravity. *arXiv preprint gr-qc/9310026*.
-
+# Conditional Holographic-Code Ansatz for the PU Horizon Area Law
+
+## Abstract
+
+A holographic quantum-error-correcting-code ansatz can realize the Predictive Universe (PU) boundary-area mechanism when its encoding, noise, recovery, density, and overlap certificates are supplied on one compatible branch. The local code tensors may carry the three binary response roles used by the restricted SPAP-register architecture, and they may also implement a separately registered cycle-closing reset. These two ingredients have different logical status: SPAP supplies a prediction obstruction and, on Principle 11b's binary invariant-completion branch, a conditionally uniform response law; it does not by itself require a physical reset, heat dissipation, a tensor network, or a quantum code.
+
+The area law follows from boundary-channel counting. On the operational \(D=4\) continuum branch, a smooth horizon cross-section of area \(\mathcal A\) has
+\[
+N_{\mathrm{eff}}
+=
+\frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A)
+\]
+effective independent boundary channels when the density certificate of Appendix E is supplied. If the declared ND--RID channel has classical capacity \(C(\mathcal E_N)\), its reliable boundary response entropy obeys
+\[
+S_{\mathrm{rel}}(\mathcal A)
+\le
+k_B\frac{\chi C(\mathcal E_N)}{\eta\delta^2}\mathcal A
++o(\mathcal A).
+\]
+Equality requires a capacity-achieving code, an entropy-saturating response distribution, and an additive channel ledger. For a positive saturated coefficient, the operational coupling is defined by
+\[
+\frac{\chi C(\mathcal E_N)}{\eta\delta^2}
+=
+\frac{1}{4L_{P,\mathrm{op}}^2}
+=
+\frac{c^3}{4G_{\mathrm{op}}\hbar}.
+\]
+This gives the leading Bekenstein--Hawking form after the separate horizon-entropy and measured-coupling calibrations. The numeral \(1/4\) is the Bekenstein--Hawking normalization of the accepted operational coefficient; it is not obtained by equating boundary capacity to a count of bulk erasures.
+
+## 1. Notation and branch data
+
+| Symbol | Meaning |
+|:--|:--|
+| \(\delta\) | Operational MPU spacing on the accepted geometric branch |
+| \(\mathcal A\) | Area of a smooth two-dimensional horizon cross-section |
+| \(d_0\) | Dimension of the local MPU Hilbert carrier on the complex-carrier branch |
+| \(\mathcal E_N\) | Declared average ND--RID boundary channel |
+| \(C(\mathcal E_N)\) | Regularized classical capacity of that declared channel, in nats per use |
+| \(\varepsilon_0\) | Structural log-cardinality of a binary reset support, \(\ln2\) |
+| \(P\) | Classical record submitted to a registered reset |
+| \(R\) | Every classical record retained and unchanged through that reset |
+| \(\varepsilon_{\mathrm{reset}}\) | Dimensionless bath-heat ledger, \(\langle Q_{\mathrm{bath}}\rangle/(k_BT)\) |
+| \(\varepsilon_{\mathrm{diss}}\) | Total entropy production divided by \(k_B\) for the registered reset |
+| \(\eta\ge1\) | Boundary packing/orientation inefficiency factor |
+| \(0<\chi\le1\) | Effective independence factor for correlated boundary links |
+| \(S_{\mathrm{rel}}\) | Reliable thermodynamic response entropy carried by the retained boundary channels |
+| \(G_{\mathrm{op}}\) | Operational coupling defined from the saturated boundary coefficient |
+| \(L_{P,\mathrm{op}}^2\) | Operational Planck area, \(G_{\mathrm{op}}\hbar/c^3\) |
+
+Core information-theoretic formulas use natural logarithms. Factors of \(c\), \(\hbar\), and \(k_B\) are retained unless natural units are stated explicitly.
+
+## 2. SPAP, carrier size, and physical reset are distinct
+
+### 2.1 The SPAP statement
+
+Theorems 10--11 exclude a universally exact predictor on their declared diagonal-closed model classes. They do not say that every system is unpredictable, nor do they imply logical erasure or thermodynamic dissipation.
+
+Principle 11b adds a convex invariant-completion rule. For the binary reflexive map
+\[
+\tau(\phi)=1-\phi,
+\]
+Theorem 11b gives the unique invariant law
+\[
+q(\phi=0\mid R=r)=q(\phi=1\mid R=r)=\frac12
+\]
+for every unchanged retained record value \(r\) in the scope of that principle with \(q_R(r)>0\) (equivalently, \(q_R\)-almost surely). Consequently,
+\[
+H_q(\Phi\mid R)=\ln2.
+\tag{2.1}
+\]
+This ensemble entropy is not automatically a reset-heat term. The diagonal log-score floor of Theorem 11a, the invariant-response entropy in (2.1), and the structural binary value \(\varepsilon_0=\ln2\) are numerically equal but belong to different ledgers.
+
+### 2.2 The restricted three-role carrier
+
+Theorem 15 proves
+\[
+K_0=3\ \text{bits},
+\qquad
+N_{\mathrm{vis}}^{\min}=8,
+\tag{2.2}
+\]
+only for the SPAP-register realization class satisfying (O1)--(O3) and full-context condition (FC). Its reversible two-phase map can be written
+\[
+T(\phi,p,0)=(\phi,p,1),
+\qquad
+T(\phi,p,1)=(1-p,\phi,0).
+\tag{2.3}
+\]
+This is a permutation of the eight basis labels. It therefore admits a unitary implementation and carries no Landauer floor by itself.
+
+Theorem 15 supplies eight visited contexts on its restricted realization class. If those contexts have mutually perfectly distinguishable Hilbert representatives, Theorem 23 gives \(d_0\ge8\). Equality \(d_0=8\) has two separately gated routes: Principle 8.0b with Theorem 8.0d selects a faithful \(M_8(\mathbb C)\) representative on the sharp homogeneous carrier-closure branch, while Theorem Z.2 uses a same-response comparator, finite-response quotient, strict-cost, and minimal-branch hypotheses. A canonical three-qubit factorization additionally requires the commuting-subalgebra hypotheses of Theorem 23a; it is not a consequence of SPAP alone.
+
+### 2.3 Registered reset ledger
+
+Suppose a physical implementation separately resets a binary record \(P\) to a fixed ready state while \(R\) remains available and unchanged. Under the degenerate-register, isothermal-bath, cyclic-control hypotheses of Definition 28, Theorem 31 and Appendix J give
+\[
+\varepsilon_{\mathrm{reset}}
+:=
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+=
+H_q(P\mid R)+\varepsilon_{\mathrm{diss}},
+\qquad
+\varepsilon_{\mathrm{diss}}\ge0.
+\tag{2.4}
+\]
+The memory entropy change is \(-k_BH_q(P\mid R)\), the bath entropy change is \(k_B\varepsilon_{\mathrm{reset}}\), and the total entropy production is \(k_B\varepsilon_{\mathrm{diss}}\).
+
+If an overlap map identifies \(P\) with the conditionally uniform binary response in (2.1), and no unchanged retained record resolves its value, then
+\[
+\varepsilon_{\mathrm{reset}}
+=
+\ln2+\varepsilon_{\mathrm{diss}}
+\ge\ln2.
+\tag{2.5}
+\]
+Equality in (2.5) requires zero excess dissipation. If the label is retained reversibly, never reset, or determined by \(R\), no positive reset-heat floor follows. SPAP alone does not activate (2.4).
+
+## 3. SPAP-compatible holographic-code ansatz
+
+Consider a finite tensor network on a spatial slice of the accepted \(D=4\) operational-continuum branch. A regular cutoff tiling of \(\mathbb H^3\), such as a \(\{p,q,r\}\) honeycomb, is one possible model geometry; hyperbolicity and a particular honeycomb are additional ansatz data, not outputs of the PU continuum theorem.
+
+A local tensor is SPAP-register-compatible when its retained response sector contains the three roles \((\phi,p,c_{\mathrm{phase}})\) and realizes the injective map (2.3) on the declared code subspace. A cycle-closing reset is a second operation and must be represented by its own CPTP channel and physical ledger.
+
+Let
+\[
+V:\mathcal H_{\mathrm{code}}\longrightarrow\mathcal H_{\mathrm{boundary}}
+\]
+be the proposed encoding isometry, and let \(\mathcal N\) be the composed physical noise channel, including every local reset or discarded subsystem that acts during the encoded process. Exact reconstruction requires a recovery channel \(\mathcal R_{\partial}\) satisfying
+\[
+\mathcal R_{\partial}\circ\mathcal N
+\bigl(V\rho V^\dagger\bigr)
+=\rho
+\qquad
+\text{for every code state }\rho.
+\tag{3.1}
+\]
+An approximate code may supply the uniform state-recovery bound
+\[
+\sup_{\rho\in\mathcal S(\mathcal H_{\mathrm{code}})}
+\frac12
+\left\|
+\mathcal R_{\partial}\mathcal N(V\rho V^\dagger)-\rho
+\right\|_1
+\le\epsilon_{\mathrm{rec}}.
+\tag{3.2}
+\]
+
+Equation (3.2) controls unentangled code states only. An entanglement-preserving recovery claim requires a diamond-norm bound on the induced code channel, or an equivalent trace-norm bound uniform over every reference system. Definition E.8.1b and Theorem E.8.1c give a different exact certificate: one common Petz map must recover every state in \(\operatorname{conv}(\mathcal C_A)\).
+
+Equation (3.1), the appropriately scoped approximate criterion, or the Petz-sufficiency condition is a required reconstruction certificate. A classical capacity count is necessary for carrying distinguishable response labels but is not sufficient for a quantum isometry or a recovery map. Holographic QECC constructions demonstrate that bulk reconstruction by boundary degrees of freedom can exist [Almheiri, Dong & Harlow 2015; Pastawski et al. 2015]; they do not establish that the PU channel, the specific local reset pattern, or simultaneous reset at every bulk tensor is correctable.
+
+Any input-dependent environment or displaced label that remains response-active must be included in the retained output and in the recovery problem. A partial trace describes a reduced subsystem. It does not establish fundamental deletion from the complete retained ledger.
+
+## 4. Boundary geometry: links, not bulk-node erasures
+
+Let \(A\) be a region in a three-dimensional spatial slice and let
+\(\mathcal H=\partial A\) be a smooth compact surface of area \(\mathcal A\).
+The relevant microscopic count is the number of information-carrying links crossing \(\mathcal H\), not the number of all tensors or reset events in the bulk region.
+
+Under bounded degree, finite edge range, quasi-uniform packing, and the geometric hypotheses of Lemma E.5.1,
+\[
+N_{\partial A}
+\le
+c_+\frac{\mathcal A}{\delta^2}.
+\tag{4.1}
+\]
+This is an upper bound. A matching asymptotic density requires the independent transversality/orientation and correlation certificate of Theorem E.3:
+\[
+N_{\mathrm{geom}}
+=
+\frac{\mathcal A}{\eta\delta^2}+o(\mathcal A),
+\qquad
+N_{\mathrm{eff}}
+=
+\chi N_{\mathrm{geom}}+o(\mathcal A),
+\tag{4.2}
+\]
+and hence
+\[
+N_{\mathrm{eff}}
+=
+\frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A).
+\tag{4.3}
+\]
+
+In a hyperbolic cutoff geometry, both bulk volume and cutoff-surface area can have the same leading exponential dependence on radius. That geometric fact does not identify bulk reset heat with boundary entropy, does not establish the density certificate (4.2), and does not prevent double counting of one bulk event through several reconstructing boundary channels.
+
+The operational count does not assume a higher-dimensional von Neumann entanglement-area theorem. Appendix E treats such an entanglement law as a separate model-specific theorem or semiclassical ansatz; the channel-counting route uses (4.1)--(4.3) instead.
+
+## 5. Capacity of the declared boundary channel
+
+### 5.1 General ND--RID capacity
+
+For a declared ND--RID channel \(\mathcal E_N\), write \(C(\mathcal E_N)\) for its regularized classical capacity. The reliable response entropy per independent use obeys
+\[
+S_{\mathrm{channel}}^{\mathrm{rel}}
+\le
+k_B C(\mathcal E_N).
+\tag{5.1}
+\]
+Equality requires a capacity-achieving code, an entropy-saturating response distribution, and an information-to-thermodynamic-entropy identification for the same retained channel family.
+
+On the separate refresh/minorization branch
+\[
+\mathcal E_N=(1-p)\Psi+pT_\sigma,
+\qquad
+T_\sigma(\rho)=\operatorname{Tr}(\rho)\sigma,
+\qquad
+p\in(0,1],
+\tag{5.2}
+\]
+Lemma E.1 and Theorem E.2 give
+\[
+f_{\mathrm{RID}}(\mathcal E_N)\le1-p<1,
+\qquad
+C(\mathcal E_N)\le(1-p)\ln d_0<\ln d_0.
+\tag{5.3}
+\]
+Here
+\[
+f_{\mathrm{RID}}(\mathcal E_N)
+:=
+\sup_{\rho_1\ne\rho_2}
+\frac{\|\mathcal E_N(\rho_1)-\mathcal E_N(\rho_2)\|_1}
+{\|\rho_1-\rho_2\|_1}
+\]
+is the trace-distance contraction coefficient. The contraction factor alone does not determine the exact capacity.
+
+### 5.2 Completed binary-reset normal form
+
+For the registered completed-reset channel of Proposition E.2a,
+\[
+\mathcal H_{d_0}=\mathcal H_K\otimes\mathcal H_R,
+\qquad
+\dim\mathcal H_R=r,
+\qquad
+r\ge2,
+\qquad
+\dim\mathcal H_K=d_0/r,
+\]
+\[
+\mathcal E_{\mathrm{cr}}(\rho)
+=
+\operatorname{Tr}_R(U\rho U^\dagger)
+\otimes|0\rangle\langle0|_R,
+\tag{5.4}
+\]
+where \(U\) is unitary on \(\mathcal H_{d_0}\). The notation \(\mathcal E_{\mathrm{cr}}\) distinguishes the completed-reset channel from the response random variable \(\Phi\) in (2.1).
+
+Corollary E.2a.0 gives the exact classical capacity
+\[
+C(\mathcal E_{\mathrm{cr}})=\ln(d_0/r).
+\tag{5.5}
+\]
+The statement uses the whole retained output: if an auxiliary or environmental factor carries response-active input information, that factor must be included before applying the support-dimension count.
+
+For a binary reset \(r=2\),
+\[
+C(\mathcal E_{\mathrm{cr}})=\ln d_0-\ln2.
+\tag{5.6}
+\]
+On the minimal \(d_0=8\) carrier branch,
+\[
+C(\mathcal E_{\mathrm{cr}})=2\ln2.
+\tag{5.7}
+\]
+Equation (5.7) is the support capacity of the ideal completed-reset normal form, not a heat cost. Lemma J.8.5 and Remark J.8.6 show that an exact ready-state endpoint is unavailable in finite time on the bounded-rate Markov-jump branch except as a singular or limiting realization. A finite-error physical reset needs its own channel and capacity analysis. On the Markov-jump implementation branch its heat ledger is
+\[
+\frac{\langle Q_{\mathrm{bath}}\rangle}{k_BT}
+=
+H_q(P\mid R)
+-\sum_r q(r)H(p_r^{\mathrm{out}})
++\sum_r q(r)\Sigma_r,
+\tag{5.8}
+\]
+and (2.4) is recovered only at an exact ready-state endpoint or through a certified limit.
+
+## 6. Operational boundary area law
+
+Combining the effective channel count (4.3) with the per-channel bound (5.1) gives
+\[
+S_{\mathrm{rel}}(\mathcal A)
+\le
+k_B
+\left(
+\frac{\chi C(\mathcal E_N)}{\eta\delta^2}
+\right)
+\mathcal A
++o(\mathcal A).
+\tag{6.1}
+\]
+This is the conditional operational area bound of Appendix E.
+
+If the same retained horizon-channel branch also has
+
+1. an accepted channel code that achieves \(C(\mathcal E_N)\);
+2. a response distribution whose entropy attains the coding bound; and
+3. an additive thermodynamic ledger for the effective independent channels,
+
+then
+\[
+S_{\mathrm{rel}}(\mathcal A)
+=
+k_B
+\left(
+\frac{\chi C(\mathcal E_N)}{\eta\delta^2}
+\right)
+\mathcal A
++o(\mathcal A).
+\tag{6.2}
+\]
+A QECC recovery certificate such as (3.1) does not by itself supply any of these three saturation entries. Exact max-flow/min-cut equality and an additive edge ledger apply under Theorem E.8.4b only to independent classical pipes that are simultaneously usable. Theorem E.8.4b.1 covers shared energy, interference, or scheduling only when the constraints form a compact convex feasible-use polytope, every feasible use vector is achievable by time sharing, and the remaining classical-pipe and routing assumptions persist. Coherent quantum networks require a separate capacity theorem. The stronger identification of horizon entropy with least sufficient predictive update current additionally requires Theorem E.8.4m's capacity-tight sufficient min-cut and PCE-no-surplus hypotheses.
+
+For a positive saturated coefficient define
+\[
+\frac{\chi C(\mathcal E_N)}{\eta\delta^2}
+=
+\frac{1}{4L_{P,\mathrm{op}}^2}
+=
+\frac{c^3}{4G_{\mathrm{op}}\hbar},
+\qquad
+L_{P,\mathrm{op}}^2
+:=
+\frac{G_{\mathrm{op}}\hbar}{c^3}.
+\tag{6.3}
+\]
+Equation (6.2) then becomes
+\[
+S_{\mathrm{rel}}(\mathcal A)
+=
+\frac{k_B\mathcal A}{4L_{P,\mathrm{op}}^2}
++o(\mathcal A)
+=
+\frac{k_Bc^3\mathcal A}{4G_{\mathrm{op}}\hbar}
++o(\mathcal A).
+\tag{6.4}
+\]
+
+The channel count fixes the operational coefficient in (6.2). Equation (6.3) expresses that coefficient in the standard Bekenstein--Hawking normalization. The factor \(1/4\) is therefore a normalization identity, not an independent consequence of SPAP, Landauer erasure, PCE, or the QECC ansatz.
+
+Identifying \(S_{\mathrm{rel}}\) with thermodynamic horizon entropy and setting \(G_{\mathrm{op}}=G\), the measured Newton coupling, are separate bridges. On those bridges the leading macroscopic term is
+\[
+S_{\mathrm{BH}}
+=
+\frac{k_Bc^3\mathcal A}{4G\hbar}.
+\tag{6.5}
+\]
+
+### 6.1 Minimal residual-capacity specialization
+
+Assume together:
+
+- the \(d_0=8\) carrier branch;
+- a binary completed reset with whole-retained-output support as in (5.4), declared to be the horizon channel \(\mathcal E_N=\mathcal E_{\mathrm{cr}}\) on the same retained family;
+- residual-capacity saturation \(C_{\max}^*=2\ln2\);
+- \(\chi=\eta=1\); and
+- the operational normalization (6.3).
+
+Then the same-family bridge gives
+\[
+C(\mathcal E_N)
+=
+C(\mathcal E_{\mathrm{cr}})
+=
+C_{\max}^*
+=
+2\ln2,
+\]
+and hence
+\[
+\frac{1}{4L_{P,\mathrm{op}}^2}
+=
+\frac{2\ln2}{\delta^2},
+\]
+so
+\[
+\delta^2
+=
+8\ln2\,L_{P,\mathrm{op}}^2,
+\qquad
+\frac{\delta}{L_{P,\mathrm{op}}}
+=
+\sqrt{8\ln2}.
+\tag{6.6}
+\]
+This is the Appendix E/Q conditional spacing calibration. Here \(\chi=\eta=1\) are direct branch assumptions; the equality does not establish a coupled optimizer. It also does not select an SI length scale or measured \(G\) from dimensionless channel data alone.
+
+## 7. What a registered SPAP-linked reset contributes
+
+For a finite operational interval \(D\), let \(\mathcal E_{\mathrm{ref}}(D)\) be the registered reset events. Appendix J assigns
+\[
+\mathcal X_{\mathrm{reset}}(D)
+=
+\sum_{e\in\mathcal E_{\mathrm{ref}}(D)}
+\left[
+H_{q_e}(P_e\mid R_e)
++\varepsilon_{\mathrm{diss}}(e)
+\right].
+\tag{7.1}
+\]
+For sequential events, each \(R_e\) contains every earlier record still retained and unchanged through event \(e\), preventing repeated attribution of the same resolved information.
+
+If \(m\) distinct events are identified with conditionally uniform binary SPAP responses and satisfy the reset hypotheses, then
+\[
+\mathcal X_{\mathrm{reset}}(D)
+\ge
+m\ln2.
+\tag{7.2}
+\]
+
+Equations (7.1)--(7.2) are event and heat ledgers. They are not the static boundary-capacity entropy in (6.1). A microscopic interpretation that assigns reset export to a horizon code must additionally provide:
+
+1. an overlap map identifying the SPAP response, the physically reset record, and the tensor-network register;
+2. an event-to-boundary-channel assignment with a declared time window or use frequency;
+3. a source partition preventing the same displaced label, syndrome, recovery record, or environment record from being counted twice;
+4. the reconstruction certificate (3.1) or (3.2); and
+5. the information-to-horizon-entropy bridge used in (6.5).
+
+No capacity--erasure balance equality is required by the PU area-law theorem, and no such equality is defined without an event-to-use frequency and a transfer certificate. On the minimal completed-reset branch, the capacity is \(2\ln2\) nats per use while a conditionally uniform binary reset has a Landauer bath-heat floor of \(\ln2\) per event in the dimensionless heat ledger. Definition J.8.10 and Theorem J.8.11 permit a separate reset-to-capacity transfer branch only with a positive certified entropy-production floor, an accepted full \(\mathfrak C_{\Sigma C}\), an ideal comparator satisfying \(C(\Phi_{\mathrm{id}})=2\ln2\), and Theorem E.9.1's density and additivity hypotheses. That branch proves a capacity deficit for the same physical implementation; it does not identify capacity with heat.
+
+## 8. Relation to emergent gravity
+
+The code ansatz could realize the boundary channel and reconstruction ingredients after its certificates are supplied, but it does not by itself derive the Einstein equations. Section 12 additionally requires, on one compatible local-horizon branch:
+
+- the Lorentzian operational-continuum and common-cone certificates;
+- the physical boost/time normalization, local KMS/Unruh temperature, and boost-energy flux identification;
+- the horizon-entropy first-variation law with constant \(\eta_{\partial}=1/(4G_{\mathrm{op}})\) on the localization family;
+- the local Clausius relation for every local null direction, with remainders uniform over those directions and shrinking patches satisfying \(\operatorname{diam}(P_\varepsilon)=o(h_\varepsilon)\);
+- the linearized Raychaudhuri equation with vanishing initial expansion and shear; and
+- the symmetric conserved MPU stress-energy tensor supplied by an accepted Appendix-B source certificate.
+
+Under those hypotheses, Theorem 12.1 gives
+\[
+R_{\mu\nu}
+-\frac12Rg_{\mu\nu}
++\Lambda g_{\mu\nu}
+=
+8\pi G_{\mathrm{op}}T_{\mu\nu}^{(\mathrm{MPU})}
+\]
+in natural units. The asymptotic value relation
+\[
+S_{\mathrm{rel}}(\mathcal A)
+=
+\frac{\mathcal A}{4G_{\mathrm{op}}}
++o(\mathcal A)
+\]
+must also have the derivative control required by Theorem 49 before it can be used as the local first-variation input \(\delta S=\delta\mathcal A/(4G_{\mathrm{op}})\).
+
+The constant \(\Lambda\) is the undetermined integration constant of the local Clausius derivation. Identifying it with an Appendix-U vacuum output requires a separate vacuum-weight-to-Einstein realization record. Certificate-complete Einstein-branch closure additionally requires an accepted same-cover \(\mathfrak C_{\mathrm{EH}}\) whose \(\mathfrak Q_{\mathrm{null}}\) entry is the zero-slack ledger; the holographic-code ansatz does not supply it.
+
+## 9. Dependency summary
+
+| Result | Required input | Does not follow from |
+|:--|:--|:--|
+| Binary SPAP invariant entropy \(H(\Phi\mid R)=\ln2\) | Principle 11b and Theorem 11b on the binary NOT branch | Diagonal contradiction alone |
+| Reset heat floor \(\varepsilon_{\mathrm{reset}}\ge\ln2\) | Same-response overlap, conditionally uniform binary law, and Definition 28 reset | SPAP or binary alphabet alone |
+| Capacity \(C=2\ln2\) | Completed binary-reset normal form, whole retained output, \(d_0=8\) | Reset heat or refresh contraction |
+| Strict contraction and strict capacity deficit | Refresh/minorization decomposition | Nonunitarity or completed reset alone |
+| Boundary area upper bound | Boundary-link upper count and per-channel capacity | Bulk-node or bulk-erasure count |
+| Saturated area law | Density, capacity-achievement, entropy-saturation, and additive-ledger certificates | QECC recovery alone |
+| Exact bulk reconstruction | Supplied isometry/recovery or Petz-sufficiency certificate | Classical capacity sufficiency |
+| Bekenstein--Hawking form with measured \(G\) | Horizon-entropy bridge, operational normalization, and \(G_{\mathrm{op}}=G\) calibration | SPAP, PCE, or Landauer alone |
+| Einstein equation | Area first variation plus KMS/Unruh, Clausius, Raychaudhuri, all-null, and conserved-source data | Area scaling or QECC alone |
+
+## Conclusion
+
+A SPAP-compatible holographic code is a conditional candidate for the PU horizon mechanism when its local carrier, reset channel, boundary density, coding rate, recovery map, entropy ledger, and calibrations are supplied on one compatible branch. The boundary-channel area bound and, under saturation, the operational area-law equality then follow from their stated certificates. SPAP can supply the binary response structure used by a registered reset, while the QECC can supply an encoding and recovery architecture; neither replaces the independent conditions that turn boundary capacity into thermodynamic horizon entropy or local horizon thermodynamics into gravity.
+
+## References
+
+- Almheiri, A., Dong, X., and Harlow, D. (2015). Bulk locality and quantum error correction in AdS/CFT. *Journal of High Energy Physics*, 2015(4), 163.
+- Bekenstein, J. D. (1973). Black holes and entropy. *Physical Review D*, 7, 2333--2346.
+- Hawking, S. W. (1975). Particle creation by black holes. *Communications in Mathematical Physics*, 43, 199--220.
+- Holevo, A. S. (1998). The capacity of the quantum channel with general signal states. *IEEE Transactions on Information Theory*, 44, 269--273.
+- Jacobson, T. (1995). Thermodynamics of spacetime: The Einstein equation of state. *Physical Review Letters*, 75, 1260--1263.
+- Landauer, R. (1961). Irreversibility and heat generation in the computing process. *IBM Journal of Research and Development*, 5, 183--191.
+- Pastawski, F., Yoshida, B., Harlow, D., and Preskill, J. (2015). Holographic quantum error-correcting codes: Toy models for the bulk/boundary correspondence. *Journal of High Energy Physics*, 2015(6), 149.
+- Reeb, D., and Wolf, M. M. (2014). An improved Landauer principle with finite-size corrections. *New Journal of Physics*, 16, 103011.
+- Ryu, S., and Takayanagi, T. (2006). Holographic derivation of entanglement entropy from AdS/CFT. *Physical Review Letters*, 96, 181602.
+- Sagawa, T., and Ueda, M. (2009). Minimal energy cost for thermodynamic information processing: Measurement and information erasure. *Physical Review Letters*, 102, 250602.
+- Schumacher, B., and Westmoreland, M. D. (1997). Sending classical information via noisy quantum channels. *Physical Review A*, 56, 131--138.

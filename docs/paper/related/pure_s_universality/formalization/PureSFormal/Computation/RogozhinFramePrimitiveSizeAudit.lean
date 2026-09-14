@@ -1,0 +1,9 @@
+import PureSFormal.Computation.RogozhinFramePrimitiveSize
+
+#print axioms PureSFormal.Computation.RogozhinFramePrimitiveSize.exponents_size
+#print axioms PureSFormal.Computation.RogozhinFramePrimitiveSize.frame_size
+#print axioms PureSFormal.Computation.RogozhinFramePrimitiveSize.frames_size
+#print axioms PureSFormal.Computation.RogozhinFramePrimitiveSize.program_size
+#print axioms PureSFormal.Computation.RogozhinFramePrimitiveSize.seedBody_size
+#print axioms PureSFormal.Computation.RogozhinFramePrimitiveSize.seed_size
+#print axioms PureSFormal.Computation.RogozhinFramePrimitiveSize.context_size

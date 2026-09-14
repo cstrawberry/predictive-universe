@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Configuration-term and checkpoint grammar</title>
+  <desc id="desc">A configuration term has opaque history and seed fields, a unique route through the selected finite branch to the queue accumulator, and a separate continuation path to the next job or a matched checkpoint. Contracting the active front queue cell leaves a consumed-cell residual while the decoder follows its predecessor.</desc>
+  <defs>
+    <marker id="bluearrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#176b87"/>
+    </marker>
+    <marker id="orangearrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b45309"/>
+    </marker>
+    <style>
+      .shell { fill:#edf6ff; stroke:#102a43; stroke-width:3; rx:16; }
+      .node { fill:#ffffff; stroke:#334e68; stroke-width:2.5; rx:12; }
+      .opaque { fill:#eef2f6; stroke:#829ab1; stroke-width:2.5; stroke-dasharray:9 6; rx:12; }
+      .live { fill:#ecfdf5; stroke:#0f766e; stroke-width:2.5; rx:12; }
+      .dead { fill:#fff7ed; stroke:#b45309; stroke-width:2.5; rx:12; }
+      .head { font:700 30px 'DejaVu Sans',sans-serif; fill:#102a43; text-anchor:middle; }
+      .text { font:30px 'DejaVu Sans',sans-serif; fill:#243b53; text-anchor:middle; }
+      .small { font:28px 'DejaVu Sans',sans-serif; fill:#486581; text-anchor:middle; }
+      .blue { stroke:#176b87; stroke-width:5; fill:none; marker-end:url(#bluearrow); }
+      .orange { stroke:#b45309; stroke-width:5; fill:none; marker-end:url(#orangearrow); }
+      .edge { stroke:#829ab1; stroke-width:2.5; fill:none; }
+    </style>
+  </defs>
+  <rect width="1200" height="700" fill="#ffffff"/>
+
+  <rect x="80" y="30" width="1040" height="105" class="shell"/>
+  <text x="600" y="72" class="head">Configuration-term fields</text>
+  <text x="600" y="108" class="small">fixed-shape fields have fixed roles and one canonical active child</text>
+
+  <path d="M220 135 L220 190" class="edge"/>
+  <path d="M490 135 L490 190" class="blue"/>
+  <path d="M760 135 L760 190" class="edge"/>
+  <path d="M1000 135 L1000 190" class="orange"/>
+
+  <rect x="95" y="195" width="250" height="90" class="opaque"/>
+  <text x="220" y="235" class="text">history / audit</text>
+  <text x="220" y="267" class="small">opaque</text>
+
+  <rect x="365" y="195" width="250" height="90" class="node"/>
+  <text x="490" y="235" class="text">selected branch</text>
+  <text x="490" y="267" class="small">unique child</text>
+
+  <rect x="635" y="195" width="250" height="90" class="opaque"/>
+  <text x="760" y="235" class="text">immutable seed</text>
+  <text x="760" y="267" class="small">opaque</text>
+
+  <rect x="905" y="195" width="210" height="90" class="node"/>
+  <text x="1010" y="235" class="text">continuation</text>
+  <text x="1010" y="267" class="small">right-left path</text>
+
+  <path d="M490 285 L490 340" class="blue"/>
+  <rect x="350" y="345" width="280" height="105" class="node"/>
+  <text x="490" y="378" class="text">queue response</text>
+  <text x="490" y="410" class="small">under construction</text>
+  <text x="490" y="439" class="small">or complete</text>
+
+  <path d="M490 450 L490 485" class="blue"/>
+  <rect x="300" y="490" width="380" height="105" class="live"/>
+  <text x="490" y="530" class="text">active front queue cell</text>
+  <text x="490" y="570" class="small">Lᵢ(X) = ((S S) vᵢ) X</text>
+
+  <path d="M680 542 L805 542" class="orange"/>
+  <rect x="810" y="490" width="310" height="105" class="dead"/>
+  <text x="965" y="520" class="text">consumed-cell</text>
+  <text x="965" y="552" class="text">residual</text>
+  <text x="965" y="582" class="small">S X (vᵢ X)</text>
+
+  <path d="M1010 285 L1010 350" class="orange"/>
+  <rect x="835" y="355" width="330" height="80" class="node"/>
+  <text x="1000" y="390" class="text">next response</text>
+  <text x="1000" y="420" class="small">matched unary horizon</text>
+
+  <path d="M490 595 L490 650" class="blue"/>
+  <text x="490" y="681" class="small">decoder follows predecessor X</text>
+  <text x="255" y="655" class="small" fill="#176b87">queue-decoding path</text>
+  <text x="945" y="655" class="small" fill="#b45309">history / continuation path</text>
+</svg>

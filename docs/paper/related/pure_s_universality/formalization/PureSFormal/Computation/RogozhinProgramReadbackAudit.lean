@@ -1,0 +1,13 @@
+import PureSFormal.Computation.RogozhinProgramReadback
+
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.parseExponentsAux_tail
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.parseFrame?_frameCode
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.parseFramesAux_framesCode
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.frames_length_le_code_length
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.flatMap_frameCode_map
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.programCode_frames
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.productionExponents_ne_nil
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.programFrames_nonempty
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.parseProgram?_programCode
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.compile_left_reverse
+#print axioms PureSFormal.Computation.RogozhinProgramReadback.parseSeedFrames?_encodeBits

@@ -903,6 +903,25 @@ at least one accepted artifact survives, but only at the explicitly recalculated
 
 Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
 
+### 13.8.0 Registered Hierarchy Commitments
+
+A hierarchy package fixes four quantitative physical-identification candidates, their complete inputs and their rejection rules. A designated comparison outside its registered joint window rejects that package and triggers withdrawal of that version. The rejection record identifies the failed observable and the premises connecting it to the prediction.
+
+| Quantity | Fixed candidate | Coarse hierarchy window | Owner and required identification |
+|---|---|---|---|
+| Thomson $\alpha^{-1}$ | $137.03609205522863\ldots$ from the Section 13.8.1 core expression | Absolute discrepancy $5\times10^{-4}$ | Appendix Z's interface, Ward, transport and physical projection package |
+| $\Lambda L_P^2$ | $8\pi A_{\mathrm{eff}}e^{-(288-m_U)}$; $m_U=4$, $A_{\mathrm{eff}}=1$ gives $1.14975948\times10^{-122}$ | Factor three about that central value | Appendix U's carrier marking, action placement, Euclidean weight and vacuum map |
+| $m_s/\bar M_{\mathrm{Pl}}$ | $\sqrt{A_Q}e^{-11}/\sqrt2$; $A_Q=1$ gives $1.18098859\times10^{-5}$ | Factor three about that central value | Appendix U's primordial model, normalization and reheating branch |
+| $v/M_{\mathrm{Pl}}$ | $A_{EW}e^{-77/2}$; $A_{EW}=1$ gives $1.90398028\times10^{-17}$ | Factor three for the dimensionless ratio | Appendix T's incidence, scale, running and electroweak map |
+
+The windows in this table define a proposed coarse hierarchy package. Section 13.8.1 retains its precision residual certificate and tighter comparison ledger. A positive central value $x_0$ has factor-three interval $[x_0/3,3x_0]$. The registration specifies whether its decision compares point estimates or a simultaneous uncertainty region, including observational, theoretical and shared-input covariance.
+
+For the vacuum row, the $288$ is the real dimension of the complex Grassmannian $\mathrm{Gr}_{\mathbb C}(12,24)$. The real Grassmannian $\mathrm{Gr}_{\mathbb R}(12,24)$ has dimension $144$. The nullity belongs to Appendix U's nominated Hessian and marking certificate. With the historical comparison $2.87\times10^{-122}$, the four-mode prefactor inversion is approximately $2.496$; five-mode inversions have their own action convention. With unreduced $M_{\mathrm{Pl}}=1.2209\times10^{19}$ GeV, the bare electroweak row gives $v=232.456953$ GeV, compared with the quoted $246.22$ GeV.
+
+**Registration and multiplicity.** Section V.0.2 records the source version, expressions, complete convention inventory, calibration history, comparison data and dates, permitted parameter set, uncertainty model, decision rule and next held-out test. A later registration preserves earlier comparisons as retrospective. Each model version retains its prediction and outcome under its registered identity and has a separate prospective test.
+
+The four rows share inputs and selection history. Their joint evidential assessment therefore uses the registered candidate menu, unsuccessful alternatives, dependence structure and selection procedure. The package's physical rejection rule follows those dependencies; the structural theorems retain their stated mathematical classes.
+
 ### 13.8.1 The Fine-Structure Constant Prediction Window
 The Appendix Z derivation fixes the Thomson-limit certificate-core value
 $$
@@ -2275,6 +2294,52 @@ No theory-consistency interval follows from these central values alone. A compar
 
 ---
 
+#### Joint Primordial Test
+
+The Appendix U inflationary branch predicts a joint scalar-tilt and tensor-ratio curve. Theorems U.62–U.63 give
+$$
+n_s=1-\frac{2}{N_e}+O\!\left(\frac{\log N_e}{N_e^2}\right),
+\qquad
+r=\frac{12}{N_e^2}+O\!\left(\frac{\log N_e}{N_e^3}\right).
+$$
+For the registered comparison window $N_e\in[50,60]$, the leading curve satisfies
+$$
+0.96\le n_s\le0.966667\ldots,\qquad
+0.003333\ldots\le r\le0.0048,\qquad
+r=3(1-n_s)^2.
+$$
+At $N_e=59.4$ it gives $n_s=0.966330\ldots$ and $r=0.00340101\ldots$. The two coordinates share the same $N_e$; their enclosing rectangle is not the predicted curve.
+
+The comparison record fixes the Appendix U potential and kinetic branch, reheating map, allowed $N_e$ interval, pivot scale, joint observational likelihood, and finite-$N_e$ remainder bounds before evaluating the data. Theorem U.69 identifies the complete branch required for the physical comparison. Certified remainder bounds thicken the leading curve into an acceptance region. A joint confidence region disjoint from that region excludes the registered branch at the declared confidence level; an upper limit on $r$ alone is decisive only when it lies below the complete allowed tensor range. Corollary U.65a adds the amplitude–tensor product test using the same normalization record. A new reheating window or remainder model defines a new comparison record.
+
+#### Finite-Response Support and Relaxation Test
+
+Prediction Z.1 counts the two real off-diagonal generators associated with each unordered pair of an eight-level density operator. The ambient family has $2\binom82=56$ generators. The stationary active interface has $24$; this interface count does not limit the number of generators in a prepared nonequilibrium state. For the diagonal spectra specified in Prediction Z.1, the static counts are $26$ and $42$.
+
+The experiment prepares those spectra, measures the pair coefficients
+$$
+\lambda_{ij}=\frac{(p_i-p_j)^2}{p_i+p_j},
+$$
+with the zero-denominator convention of (Z.28.1), and fixes a common threshold $\tau$ before inspecting the results. The generator normalization and basis are those used in Appendix Z. For simultaneous coefficient intervals $[\ell_{ij},u_{ij}]$, the compatible count lies between
+$$
+M_-(t)=2\#\{i<j:\ell_{ij}(t)>\tau\},
+\qquad
+M_+(t)=2\#\{i<j:u_{ij}(t)>\tau\}.
+$$
+The count is resolved when $M_-=M_+$. Preparation error, coefficient estimation, and simultaneous coverage enter the interval construction. Proposition Z.28.1 gives the static margin condition $\eta<\tau<m-\eta$ that recovers an ideal count.
+
+The dynamical test implements the exchange-and-drain Lindblad channel of (Z.28.3), with independently characterized positive rates $\gamma_\perp$ and $\gamma_{\mathrm{ex}}$. Theorem Z.28.2 predicts convergence to $I_2/2\oplus0_6$ and eventual thresholded count $24$. It predicts a terminal $26\to24$ step when (Z.28.11) places the active-active crossing after all passive-passive crossings and the last active-passive upcrossing. The registered record fixes the initial spectrum, rates, threshold, observation times, state-reconstruction method, channel-error bound, and accepted crossing-time intervals. Times on either side of the predicted crossing must be separated enough for their coefficient intervals to resolve the counts. At the crossing itself, finite uncertainty may leave the count unresolved.
+
+Agreement with the static counts tests the prepared-state response calculation. Agreement with the relaxation trajectory additionally tests the implemented channel and its error bounds. The interior staircase is determined by the registered initial state and rates. The theorem supplies the terminal ordering under (Z.28.11), rather than a universal sequence of intermediate counts.
+
+#### Consciousness-Complexity and Context-Response Tests
+
+Hypothesis 3 proposes a relation between consciousness complexity and a response-active context-to-control map. Its carrier comparisons test that relation and its effect-size law using the source, resource, readout, and feedback certificates of Appendix L. The interface-fraction construction in Section 9 supplies a candidate saturation ceiling whose rank premise can be tested separately.
+
+Postulate 3 proposes a branch-(iii) response law in which Alice's late context changes Bob's pre-lightcone outcome distribution. The channel results of Section 10 derive the communication consequences, and Protocol 3 tests the shift using late independent randomization and its timing, attribution, and artifact controls. Positive Shannon capacity gives a noisy faster-than-light communication channel. A certified and replicated shift would support this response law and show that the current local-CPTP/Lorentz-AQFT causal description is incomplete for the observed implementation.
+
+Each experimental record names the mechanism it tests: Hypothesis 3, the relevant branch of Postulate 3, or their stated conjunction. A powered null comparison excludes the response amplitudes covered by its sensitivity and attribution record. The dependency follows the owning proof and physical implementation; the chapter in which a result appears does not determine that dependency.
+
 ### 13.10.6 Summary Table
 
 The table below separates exact branch results from conditional bridges, diagnostic comparisons, and open experimental tests. A row counts as a forward test only when its protocol, inputs, uncertainty, and failure rule were fixed before comparison.
@@ -2317,7 +2382,6 @@ A positive result must show the clock-flow slope, the stall/null condition, and 
 | Fine-structure constant $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ and diagnostic-only branch $\alpha^{-1}_{\mathrm{cand}}=\alpha^{-1}_{0}+R_{\alpha}^{YR\perp}=137.03599917753023\ldots$; passive-complement downgrade interval $[137.03599917502362\ldots,137.03599917878353\ldots]$ | $137.035999177(21)$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1; Definition Z.27.11k.16a; Theorem Z.27.11k.16b; Corollary Z.27.11k.16c; Definition Z.27.11k.12; Theorem Z.27.11k.20; Corollary Z.27.11k.21; Corollary Z.27.11k.21.1 | ◐ open operator-realization gate; current published comparison certificate-retrodictive |
 | Light active neutrino count $N_{\nu}$ | 3 on the pre-flavor family-redundancy branch of Proposition R.3.5.1a, provided each realized light family contributes exactly one active neutrino species with $m_\nu<M_Z/2$ and no additional such species | $2.9963\pm0.0074$ (Janot--Jadach collider extraction; PDG 2026 recommended value) | Proposition R.3.5.1a + stated active-neutrino identification + collider $Z$-width extraction | indirect, branch-conditional |
 | Gauge algebra / connected-cover notation on the finite-response block-frame positive-marginal capacity branch | $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak u(1)$; connected cover $SU(3) \times SU(2) \times U(1)$ | Standard Model gauge algebra; global form fixed by determinant interface | Theorem G.8.4b; Corollary G.8.4c | ◐ finite-response block-frame branch theorem |
-
 | Lepton hierarchy diagnostic $\mathcal{R}_\ell$ | 3 on the preregistered $(d_{31}^2,d_{32}^2)=(6,2)$ leading-response branch with one common coefficient and controlled remainders | 2.889 (3.7% retrospective residual) | Equation R.17; effective Appendix-T flavor ledger | ◐ conditional model diagnostic; physical labels, scale scheme, and remainder interval required |
 | Chronometric curvature phase/dephasing | $\hbar\lvert\dot\Theta\rvert/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/\lvert\Delta E\rvert=\lvert\Delta\Phi\rvert/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
 | Retained entropic clock-flow | On accepted $\mathfrak C_{\mathrm{ECF}}^{(R,q)}$, $\Delta\mathcal T_R=\Delta\Sigma_R^{\mathrm{ECF}}/\ln2$; zero retained entropy/update flow gives $\Delta\mathcal T_R=0$; record-current estimates with nonzero registered mean obey $\operatorname{Var}(\widehat{\Delta\mathcal T_R})\Sigma_T/\langle\widehat{\Delta\mathcal T_R}\rangle^2\ge2$ | Barontini-type cold-atom bright/dark-sector analogue clocks, reservoir-swap quantum simulators, photonic/ion-trap retained-record clocks, and stochastic record-current tests with null-exchange windows | Definition O.3f; Theorem O.3f; Corollary O.3g; Barontini [2026] as analogue only | ◐ certificate-gated finite-record theorem; ○ protocol-specific tests pending |
@@ -2351,6 +2415,35 @@ $$
 after the Blackwell-PCE record channel and entropy-production ledger have been fixed.
 
 ---
+
+#### Numerical Models, Calibration and Held-Out Comparisons
+
+Each numerical row records mathematical status separately from empirical use. A proved formula on a fixed model can have calibrated inputs and a held-out consequence. The row states the expression, source, selected inputs, data used to choose them, propagated uncertainty and remaining test data.
+
+| Family | Registered inputs and comparison obligations |
+|---|---|
+| Weak mixing | Threshold tuple, scale and running; the validation tuple $(15.14,20.94,18.41)$ retains its calibration history |
+| Higgs mass | External RG inputs, matching and the $\mathfrak M_\lambda$ operator record |
+| Charged-lepton ratios | Root triads, transport, effective dimensions, packet terms and joint residuals |
+| Lepton hierarchy statistic | Distance menu, selection rule and dependence on the mass data |
+| CKM magnitudes | Up/down triads, stiffness ratio, prefactors, covariance and unitarity |
+| CKM phase | Angle convention, transport and whether phase data informed selection |
+| PMNS angles and phase | Lepton/neutrino assignments, response factors, ordering, phase convention and shared calibration |
+| Neutrino scale and splittings | Common branch identity, oscillation likelihood and absolute-observable extraction |
+| Baryon asymmetry | Source, transport, washout and the uncertainty of the illustrative product |
+
+The complete numerical rows remain at their owning formulas and comparison tables. Their error budgets and falsification criteria apply to calibrated models as well as prospective models. Numerical agreements such as the charged-lepton logarithm, $\sin15^\circ\cos30^\circ$, and $\sqrt{2/3}e^{-3}$ enter with their full discrete-choice and selection history. A chance probability requires the corresponding null model and candidate menu. Effective-coupling extractions are compared at a common definition and scale with their covariance.
+
+**Fixed neutrino branch and common-scale development.** Corollary T.24.16a's absolute-mass outputs retain the oscillation mismatch in their joint comparison. Section T.24.16's detailed values are
+$$
+\Delta m_{21}^2=2.083089782\times10^{-5},\qquad
+\Delta m_{31}^2=6.661324627\times10^{-4}\quad\mathrm{eV}^2.
+$$
+The cited data are $(7.53\pm0.18)\times10^{-5}$ and $(2.453\pm0.033)\times10^{-3}\,\mathrm{eV}^2$. These comparisons reject the stated fixed scale within those quoted observational errors; the conditional arithmetic remains in the model record.
+
+A common-scale extension sets $m_i'=\lambda m_i$. Then $\Delta m_{ij}'^2=\lambda^2\Delta m_{ij}^2$, while the splitting ratio is unchanged. Calibrating the solar splitting fixes $\lambda$ and leaves the atmospheric splitting as a shape test. At fixed mixing and Majorana phases, $\Sigma_\nu$, $m_\beta$ and $|m_{\beta\beta}|$ all scale by $\lambda$. This extension introduces one scale input and retains the original failed fixed-scale comparison.
+
+The phase candidate $232.5^\circ$ is treated by the full registration in V.0.2, including the already available phase comparison. A future more precise measurement tests that fixed model's circular prediction and its propagated interval.
 
 ### 13.10.7 Theoretical Error Budget
 

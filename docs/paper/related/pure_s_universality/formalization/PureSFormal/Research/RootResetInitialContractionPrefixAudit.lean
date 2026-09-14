@@ -1,0 +1,13 @@
+import PureSFormal.Research.RootResetInitialContractionPrefix
+
+open PureSFormal.Research.RootResetInitialContractionPrefix
+
+#print axioms clockFuelSamples_length
+#print axioms clockFuel_exactMutationChain
+#print axioms clockFuel_selectorChain
+#print axioms nonempty_twelveEdgePrefix
+#print axioms selects_first_eleven
+#print axioms selects_first_twelve_nonempty
+#print axioms run_eq_of_prefix
+#print axioms run_eq_first_eleven
+#print axioms run_eq_first_twelve_nonempty

@@ -1,0 +1,13 @@
+import PureSFormal.PureS.ControllerTrajectory
+
+#print axioms PureSFormal.PureS.FiniteController.seekMutation_exact_run
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.contractionRun_reachable
+#print axioms PureSFormal.PureS.FiniteController.seekMutationDelay_spec
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.run_sampleTick
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.runMutationCount_sampleTick
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.sampleTick_strictMono
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.run_betweenSamples
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.run_countedBetweenSamples
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.run_erase_eq_countedContractionSample
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.run_erase_eq_contractionSample
+#print axioms PureSFormal.PureS.FiniteController.ProductiveSystem.eventually_raw_iff_sampled

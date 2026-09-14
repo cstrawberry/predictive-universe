@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetClockParityTotality
+
+#print axioms PureSFormal.Research.RootResetClockParityTotality.probe_complete
+#print axioms PureSFormal.Research.RootResetClockParityTotality.terminal_answer
+#print axioms PureSFormal.Research.RootResetClockParityTotality.never_rejects
+#print axioms PureSFormal.Research.RootResetClockParityTotality.success_contracts
+#print axioms PureSFormal.Research.RootResetClockParityTotality.failure_restores

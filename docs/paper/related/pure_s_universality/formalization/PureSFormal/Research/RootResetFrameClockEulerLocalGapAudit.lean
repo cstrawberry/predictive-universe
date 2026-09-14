@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetFrameClockEulerLocalGap
+
+#print axioms PureSFormal.Research.RootResetFrameClockEulerLocalGap.clock_marks_freshShell
+#print axioms PureSFormal.Research.RootResetFrameClockEulerLocalGap.final_marks_freshShell
+#print axioms PureSFormal.Research.RootResetFrameClockEulerLocalGap.fresh_clock_disagrees

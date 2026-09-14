@@ -1,0 +1,12 @@
+import PureSFormal.Research.RootResetFiniteResponseEndpointAgreement
+
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.fresh_selected
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.initial
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.route
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.action_call
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.appender
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.of_facts
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.selected_response
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.first_response
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.initial_empty_sweep
+#print axioms PureSFormal.Research.RootResetFiniteResponseEndpointAgreement.empty_sweep

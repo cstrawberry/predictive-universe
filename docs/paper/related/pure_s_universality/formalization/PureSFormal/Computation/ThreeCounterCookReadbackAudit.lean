@@ -1,0 +1,7 @@
+import PureSFormal.Computation.ThreeCounterCookReadback
+
+#print axioms PureSFormal.Computation.ThreeCounterCookReadback.decodeSymbol_encodeSymbol
+#print axioms PureSFormal.Computation.ThreeCounterCookReadback.decodeSymbols_encodeWord
+#print axioms PureSFormal.Computation.ThreeCounterCookReadback.decodeCounterWord?_encodeState
+#print axioms PureSFormal.Computation.ThreeCounterCookReadback.decodeCounter?_registered_compileT2
+#print axioms PureSFormal.Computation.ThreeCounterCookReadback.decodeTape?_registered_boundary

@@ -1,0 +1,12 @@
+import PureSFormal.Research.FiniteTreeAutomatonPowerset
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.Bits.get_tabulate
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.map_member
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.Bits.mem_all
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.Bits.all_length
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.anyIndex_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.subsetBranch_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.determinize_eval_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.determinize_accepts_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.complement_eval
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.complement_accepts_iff
+#print axioms PureSFormal.Research.FiniteTreeAutomatonPowerset.complement_determinize_iff

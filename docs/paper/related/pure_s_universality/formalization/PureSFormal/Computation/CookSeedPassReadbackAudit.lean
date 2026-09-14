@@ -1,0 +1,10 @@
+import PureSFormal.Computation.CookSeedPassReadback
+
+#print axioms PureSFormal.Computation.CookSeedPassReadback.exists_decodePassTag?_iterate
+#print axioms PureSFormal.Computation.CookSeedPassReadback.exists_decodePassCounter?_iterate
+#print axioms PureSFormal.Computation.CookSeedPassReadback.exists_literalRow_at_actualCTS
+#print axioms PureSFormal.Computation.CookSeedPassReadback.decodeTape?_factors
+#print axioms PureSFormal.Computation.CookSeedPassReadback.decodeTape?_boundary
+#print axioms PureSFormal.Computation.CookSeedPassReadback.decodeTerminalTape?_row
+#print axioms PureSFormal.Computation.CookSeedPassReadback.decodeTerminalTape?_halted
+#print axioms PureSFormal.Computation.CookSeedPassReadback.exists_terminalRow_of_runFor?

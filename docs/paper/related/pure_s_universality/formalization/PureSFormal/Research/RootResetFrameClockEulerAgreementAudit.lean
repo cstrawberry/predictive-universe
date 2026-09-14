@@ -1,0 +1,9 @@
+import PureSFormal.Research.RootResetFrameClockEulerAgreement
+
+#print axioms PureSFormal.Research.RootResetFrameClockEulerAgreement.pending_eq_wrap
+#print axioms PureSFormal.Research.RootResetFrameClockEulerAgreement.pending_first_agrees
+#print axioms PureSFormal.Research.RootResetFrameClockEulerAgreement.pending_second_agrees
+#print axioms PureSFormal.Research.RootResetFrameClockEulerAgreement.fresh_frame_of_carrier_misses
+#print axioms PureSFormal.Research.RootResetFrameClockEulerAgreement.fresh_frame_generatedBase
+#print axioms PureSFormal.Research.RootResetFrameClockEulerAgreement.fresh_frame_freshShell
+#print axioms PureSFormal.Research.RootResetFrameClockEulerAgreement.fresh_frame_markedShell

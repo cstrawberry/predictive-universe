@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetCarrierOldestLiveAgreement
+
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveAgreement.Value.picked
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveAgreement.Value.path
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveAgreement.generated_runs
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveAgreement.selected_runs
+#print axioms PureSFormal.Research.RootResetCarrierOldestLiveAgreement.empty_runs

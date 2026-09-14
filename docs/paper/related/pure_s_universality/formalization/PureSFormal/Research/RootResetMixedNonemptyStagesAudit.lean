@@ -1,0 +1,5 @@
+import PureSFormal.Research.RootResetMixedNonemptyStages
+
+#print axioms PureSFormal.Research.RootResetMixedNonemptyStages.SelectedNonfinalInvariantAt
+#print axioms PureSFormal.Research.RootResetMixedNonemptyStages.completeNonfinalAt
+#print axioms PureSFormal.Research.RootResetMixedNonemptyStages.allNonemptyRawAt

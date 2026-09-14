@@ -80,6 +80,8 @@
 *   Blanco, D. D., Casini, H., Hung, L.-Y., & Myers, R. C. (2013). Relative entropy and holography. *Journal of High Energy Physics*, *2013*(8), 60. DOI: 10.1007/JHEP08(2013)060
 *   Bohr, N. (1928). The quantum postulate and the recent development of atomic theory. *Nature*, *121*, 580–590. DOI: 10.1038/121580a0
 *   Bohr, N. (1935). Can quantum-mechanical description of physical reality be considered complete? *Physical Review*, *48*(8), 696–702. DOI: 10.1103/PhysRev.48.696
+*   Bolotin, S. V., & MacKay, R. S. (2006). Nonplanar second species periodic and chaotic trajectories for the circular restricted three-body problem. *Celestial Mechanics and Dynamical Astronomy*, *94*, 433–449. DOI: 10.1007/s10569-006-9006-0
+
 *   Bostrom, N. (2003). Are You Living in a Computer Simulation? *Philosophical Quarterly*, *53*(211), 243–255. DOI: 10.1111/1467-9213.00309
 *   Bong, K.-W., Utreras-Alarcón, A., Ghafari, F., Liang, Y.-C., Tischler, N., Cavalcanti, E. G., Pryde, G. J., & Wiseman, H. M. (2020). A strong no-go theorem on the Wigner's friend paradox. *Nature Physics*, *16*(12), 1199–1205. DOI: 10.1038/s41567-020-0990-x
 *   Borcherds, R. E. (1986). Vertex algebras, Kac-Moody algebras, and the Monster. *Proceedings of the National Academy of Sciences*, *83*, 3068–3071.
@@ -145,11 +147,16 @@
 *   Chiou, D.-W. (2023). Delayed-choice quantum erasers and the Einstein–Podolsky–Rosen paradox. *International Journal of Theoretical Physics*, *62*(6), 120. DOI: 10.1007/s10773-023-05370-4
 *   Choi, M.-D. (1975). Completely positive linear maps on complex matrices. *Linear Algebra and its Applications*, *10*(3), 285–290. DOI: 10.1016/0024-3795(75)90075-0
 *   Church, A. (1936). An Unsolvable Problem of Elementary Number Theory. *American Journal of Mathematics*, *58*(2), 345–363. DOI: 10.2307/2371045
+*   Cinematic Strawberry. (2026). *Pure S Is Computationally Universal Under a Fixed Root-Restarted Finite Controller*. Predictive Universe research package, 14 September 2026.
 *   Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, *36*(3), 181–204. DOI: 10.1017/S0140525X1200047X
 *   Colloca, L., & Barsky, A. J. (2020). Placebo and nocebo effects. *New England Journal of Medicine*, *382*(6), 554–561. DOI: 10.1056/NEJMra1907805
 *   Clauser, J. F., Horne, M. A., Shimony, A., & Holt, R. A. (1969). Proposed experiment to test local hidden-variable theories. *Physical Review Letters*, *23*(15), 880–884.
 *   Clowe, D., Bradač, M., Gonzalez, A. H., Markevitch, M., Randall, S. W., Jones, C., & Zaritsky, D. (2006). A direct empirical proof of the existence of dark matter. *The Astrophysical Journal Letters*, *648*(2), L109–L113. DOI: 10.1086/508162
 *   CMS Collaboration (Tumasyan, A., *et al.*) (2022). Search for new physics in the lepton plus missing transverse momentum final state in proton-proton collisions at $\sqrt{s} = 13$ TeV. *Journal of High Energy Physics*, *2022*(07), 067. DOI: 10.1007/JHEP07(2022)067
+*   Del Santo, F., & Gisin, N. (2019). Physics without determinism: Alternative interpretations of classical physics. *Physical Review A*, *100*, 062107. DOI: 10.1103/PhysRevA.100.062107
+
+*   Kawan, C., & Yüksel, S. (2020). Metric and Topological Entropy Bounds for Optimal Coding of Stochastic Dynamical Systems. *IEEE Transactions on Automatic Control*, *65*(6), 2466–2479.
+
 *   NIST (2024). CODATA recommended values of the fundamental physical constants: 2022 (NIST SP 961, May 2024). 
 *   Cohen, A. G., & Kaplan, D. B. (1987). Thermodynamic generation of the baryon asymmetry. *Physics Letters B*, *199*(2), 251–258. DOI: 10.1016/0370-2693(87)91369-4
 *   Cohen, A. G., & Kaplan, D. B. (1988). Spontaneous baryogenesis. *Nuclear Physics B*, *308*(4), 913–928. DOI: 10.1016/0550-3213(88)90134-4
@@ -165,6 +172,10 @@
 *   LMFDB Collaboration. Newform orbit 1.12.a.a: the discriminant modular form $\Delta=\sum\tau(n)q^n$.
 *   MacTutor History of Mathematics Archive. Srinivasa Aiyangar Ramanujan. University of St Andrews.
 *   OEIS Foundation. Sequence A000594, Ramanujan's tau function.
+*   Tietäväinen, A. (1973). On the Nonexistence of Perfect Codes over Finite Fields. *SIAM Journal on Applied Mathematics*, *24*(1), 88–96. DOI: 10.1137/0124010
+
+*   Tsygvintsev, A. (2001). The meromorphic non-integrability of the three-body problem. *Journal für die reine und angewandte Mathematik*, *537*, 127–149. arXiv:math/0009218.
+
 *   Weisstein, E. W. Dedekind Eta Function. *MathWorld--A Wolfram Web Resource*.
 *   Weisstein, E. W. Leech Lattice. *MathWorld--A Wolfram Web Resource*.
 *   Coleman, S., & Weinberg, E. (1973). Radiative Corrections as the Origin of Spontaneous Symmetry Breaking. *Physical Review D*, *7*(6), 1888–1912. DOI: 10.1103/PhysRevD.7.1888
@@ -757,6 +768,8 @@
 *   Wilson, W. (1915). The quantum-theory of radiation and line spectra. *Philosophical Magazine*, *29*(174), 795–802.
 *   Winter, A. (1999). Coding theorem and strong converse for quantum channels. *IEEE Transactions on Information Theory*, *45*(7), 2481–2485. DOI: 10.1109/18.796385
 *   Witt, E. (1941). Eine Identität zwischen Modulformen zweiten Grades. *Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg*, *14*, 323–337. DOI: 10.1007/BF02940750
+*   Witten, E. (1989). Quantum field theory and the Jones polynomial. *Communications in Mathematical Physics*, *121*(3), 351–399. DOI: 10.1007/BF01217730
+
 *   Witten, E. (1982). An SU(2) anomaly. *Physics Letters B*, *117*(5), 324–328. DOI: 10.1016/0370-2693(82)90728-6
 *   Wittgenstein, L. (1921). *Tractatus Logico-Philosophicus* (D. F. Pears & B. F. McGuinness, Trans.). New York: Humanities Press, 1961.
 *   Wolf, M. M. (2012). *Quantum Channels & Operations: A Guided Tour* (Lecture notes). Technical University of Munich.

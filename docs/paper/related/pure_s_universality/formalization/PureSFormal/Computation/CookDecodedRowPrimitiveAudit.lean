@@ -1,0 +1,14 @@
+import PureSFormal.Computation.CookDecodedRowPrimitive
+
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.guardRow_value
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.guardRow_identity
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.guardRow_operations_le
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.terminal_value
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.terminal_fields
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.terminal_operations_le_cap
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.scannedRow_value
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.scannedRow_operations_le
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.scanned_value
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.scanned_operations_le_cap
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.terminalBudget_mono
+#print axioms PureSFormal.Computation.CookDecodedRowPrimitive.scannedBudget_mono

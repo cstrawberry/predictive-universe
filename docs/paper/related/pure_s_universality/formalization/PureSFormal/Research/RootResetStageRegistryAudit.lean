@@ -1,0 +1,36 @@
+import PureSFormal.Research.RootResetStageRegistry
+
+#print axioms PureSFormal.Research.RootResetStageRegistry.stages_nodup
+#print axioms PureSFormal.Research.RootResetStageRegistry.mem_stages
+#print axioms PureSFormal.Research.RootResetStageRegistry.optionMap_eq_some
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseC?_C
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseC?_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseC?_eq_some_iff
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseClockResidual?_generated
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseClockResidual?_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFuelResidual?_generated
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFuelResidual?_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.parsePending?_pending
+#print axioms PureSFormal.Research.RootResetStageRegistry.parsePending?_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFrameR0?_generated
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFrameR0?_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.pendingFrame_frameR0_overlap
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFrameR1?_independent
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFrameR1?_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFrameR2?_independent
+#print axioms PureSFormal.Research.RootResetStageRegistry.parseFrameR2?_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_stage
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_unique
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_canonicalChild_unique
+#print axioms PureSFormal.Research.RootResetStageRegistry.classified_roles_disjoint
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_different_roles
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_sound
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_route_header
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_action_header
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_commit_header
+#print axioms PureSFormal.Research.RootResetStageRegistry.classifyAt_handoff_header
+#print axioms PureSFormal.Research.RootResetStageRegistry.frameR1_independent_fields
+#print axioms PureSFormal.Research.RootResetStageRegistry.frameR2_independent_fields
+#print axioms PureSFormal.Research.RootResetStageRegistry.action_histories_independent
+#print axioms PureSFormal.Research.RootResetStageRegistry.closeReady_audit_independent
+#print axioms PureSFormal.Research.RootResetStageRegistry.closeDone_audits_independent

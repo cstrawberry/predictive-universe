@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetEmptyResponseCommit
+
+open PureSFormal.Research.RootResetEmptyResponseCommit
+
+#print axioms selectStep?_completed_empty
+#print axioms selectStep?_generatedEmptySweep_commit
+#print axioms generatedEmptySweep_commit_selectorChain

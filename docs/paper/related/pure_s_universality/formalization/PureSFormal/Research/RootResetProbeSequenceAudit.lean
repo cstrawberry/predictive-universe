@@ -1,0 +1,7 @@
+import PureSFormal.Research.RootResetProbeSequence
+#print axioms PureSFormal.Research.RootResetProbeSequence.restoring
+#print axioms PureSFormal.Research.RootResetProbeSequence.readOnly
+#print axioms PureSFormal.Research.RootResetProbeSequence.terminal
+#print axioms PureSFormal.Research.RootResetProbeSequence.terminal_stay
+#print axioms PureSFormal.Research.RootResetProbeSequence.first_selected
+#print axioms PureSFormal.Research.RootResetProbeSequence.second_selected

@@ -1,0 +1,19 @@
+import PureSFormal.Research.RootResetMarkedFrameSelectorProof
+
+open PureSFormal.Research.RootResetMarkedFrameSelectorProof
+
+#print axioms activeContext_markedPrefix
+#print axioms fuelActiveContext_markedPrefix
+#print axioms responseOuter_markedPrefix
+#print axioms noFresh_marked_pending
+#print axioms noPendingMarked_marked_pending
+#print axioms routeAddress_of_recoveredOuter
+#print axioms selectStep?_of_recoveredOuter
+#print axioms selectStep?_marked_pending
+#print axioms selectStep?_marked_pending_frameFirst
+#print axioms selectStep?_marked_pending_frameSecond
+#print axioms markedPrefix_replace
+#print axioms pending_parseMarked_none
+#print axioms marked_pending_frame_edges
+#print axioms pending_rebuild_under_parents
+#print axioms emptyResponse_marked_frameResiduals_selectorChain

@@ -1,0 +1,23 @@
+import PureSFormal.Research.RootResetNestedUnaryParity
+
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.covers
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.scan_absorbs
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.descending_step
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.reading_step
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.ascending_step
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.descending_runs
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.zero_runs
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.reading_runs
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.ascending_runs
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.inverse_successor
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.reverse_prefix
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.count_le_wrap_size
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.all_input
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.wrap_eq_numeral
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.generated
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.first_pass_boundary
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.second_pass_boundary
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.mutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.runMutationCount_zero
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.erase_run
+#print axioms PureSFormal.Research.RootResetNestedUnaryParity.done_absorbs

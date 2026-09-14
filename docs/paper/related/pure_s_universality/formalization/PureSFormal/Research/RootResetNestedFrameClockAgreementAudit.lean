@@ -1,0 +1,6 @@
+import PureSFormal.Research.RootResetNestedFrameClockAgreement
+
+#print axioms PureSFormal.Research.RootResetNestedFrameClockAgreement.generated_first
+#print axioms PureSFormal.Research.RootResetNestedFrameClockAgreement.generated_second
+#print axioms PureSFormal.Research.RootResetNestedFrameClockAgreement.generated_growth
+#print axioms PureSFormal.Research.RootResetNestedFrameClockAgreement.generated_launch

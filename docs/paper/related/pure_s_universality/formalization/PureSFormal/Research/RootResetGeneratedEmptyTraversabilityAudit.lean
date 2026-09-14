@@ -1,0 +1,8 @@
+import PureSFormal.Research.RootResetGeneratedEmptyTraversability
+
+open PureSFormal.Research.RootResetGeneratedEmptyTraversability
+
+#print axioms completeFirstEmptyJobAt
+#print axioms completeFirstEmptyTerminalJobRawAt
+#print axioms completeMixedNonfinalAt
+#print axioms completeEmptyNonfinalAt

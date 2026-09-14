@@ -1,0 +1,3 @@
+import PureSFormal.Computation.RogozhinT2Cook
+
+#print axioms PureSFormal.Computation.RogozhinT2Cook.eventuallyHalts_iff_fixedCookEmpty

@@ -1,0 +1,21 @@
+import PureSFormal.PureS.SchedulerCompletedContext
+
+set_option pp.universes false
+
+#print axioms PureSFormal.PureS.CheckpointExclusion.CompletedPrefix.trans
+#print axioms PureSFormal.PureS.CheckpointExclusion.CompletedPrefix.wrapCompleted
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.prefix
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.wrapCompleted
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.pendingReject
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.contextDepth
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.root
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.pendingParents_eq_append
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.silentOfFailure
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.silentOfLocalFailure
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.pendingSilent
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.rebuild_freshContinuationParents
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.rebuild_markedContinuationParents
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.rebuild_emptyContinuationParents
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.fresh
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.marked
+#print axioms PureSFormal.PureS.SchedulerCompletedContext.CompletedParents.empty
